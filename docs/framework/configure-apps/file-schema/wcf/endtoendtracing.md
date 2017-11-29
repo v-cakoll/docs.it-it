@@ -1,28 +1,34 @@
 ---
-title: "&lt;endToEndTracing&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;endToEndTracing&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1bcd7405c5e3ebf2d1c156ff3bca9f473df9fa35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;endToEndTracing&gt;
-Elemento di configurazione che consente di abilitare e disabilitare aspetti diversi di traccia end\-to\-end durante l'esecuzione di un'applicazione di servizio.  
+# <a name="ltendtoendtracinggt"></a>&lt;endToEndTracing&gt;
+Elemento di configurazione che consente di abilitare e disabilitare aspetti diversi di traccia end-to-end durante l'esecuzione di un'applicazione di servizio.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<diagnostica >  
+\<endToEndTracing >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <system.serviceModel>  
    <diagnostics>  
        <endToEndTracing activityTracing="Boolean"  
@@ -32,10 +38,10 @@ Elemento di configurazione che consente di abilitare e disabilitare aspetti dive
 </system.serviceModel>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
@@ -43,18 +49,18 @@ Elemento di configurazione che consente di abilitare e disabilitare aspetti dive
 |`messageFlowTracing`|Valore booleano che specifica se è abilitata la traccia del flusso di messaggi.|  
 |`propagateActivity`|Valore booleano che specifica se l'attributo di propagazione è impostato su true.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<diagnostica\>](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Definisce le impostazioni WCF per l'ispezione e il controllo in fase di esecuzione da parte dell'amministratore.|  
+|-------------|-----------------|  
+|[\<diagnostica >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Definisce le impostazioni WCF per l'ispezione e il controllo in fase di esecuzione da parte dell'amministratore.|  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>   
- <xref:System.ServiceModel.Configuration.EndToEndTracingElement>   
- [Analisi end\-to\-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>  
+ <xref:System.ServiceModel.Configuration.EndToEndTracingElement>  
+ [Traccia end-to-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

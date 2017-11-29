@@ -1,34 +1,37 @@
 ---
-title: "Entity Data Model: tipi di dati primitivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Entity Data Model: tipi di dati primitivi'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Entity Data Model: tipi di dati primitivi
-Entity Data Model \(EDM\) supporta un set di tipi di dati primitivi astratti \(ad esempio, String, Boolean, Int32 e così via\) usati per definire le [proprietà](../../../../docs/framework/data/adonet/property.md) in un modello concettuale.  Questi tipi di dati primitivi sono proxy per i tipi di dati primitivi effettivi supportati nell'ambiente di archiviazione o host, ad esempio un database SQL Server o Common Language Runtime \(CLR\).  EDM non definisce la semantica di operazioni o conversioni su tipi di dati primitivi. Questa semantica viene definita dall'ambiente di archiviazione o host.  I tipi di dati primitivi in EDM sono in genere associati ai corrispondenti tipi di dati primitivi nell'ambiente di archiviazione o host.  Per informazioni su come Entity Framework esegue il mapping di tipi primitivi in EDM ai tipi di dati di SQL Server, vedere [SqlClient per i tipi Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+# <a name="entity-data-model-primitive-data-types"></a>Entity Data Model: tipi di dati primitivi
+Entity Data Model (EDM) supporta un set di tipi di dati primitivo astratto (ad esempio String, Boolean, Int32 e così via) che vengono usate per definire [proprietà](../../../../docs/framework/data/adonet/property.md) in un modello concettuale. Questi tipi di dati primitivi sono proxy per i tipi di dati primitivi effettivi supportati nell'ambiente di archiviazione o host, ad esempio un database SQL Server o Common Language Runtime (CLR). EDM non definisce la semantica di operazioni o conversioni su tipi di dati primitivi. Questa semantica viene definita dall'ambiente di archiviazione o host. I tipi di dati primitivi in EDM sono in genere associati ai corrispondenti tipi di dati primitivi nell'ambiente di archiviazione o host. Per informazioni su come Entity Framework esegue il mapping di tipi primitivi in EDM ai tipi di dati di SQL Server, vedere [SqlClient per tipi Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
   
 > [!NOTE]
 >  EDM non supporta raccolte di tipi di dati primitivi.  
   
  Per informazioni sui tipi di dati strutturati in EDM, vedere [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) e [tipo complesso](../../../../docs/framework/data/adonet/complex-type.md).  
   
-## Tipi di dati primitivi supportati in Entity Data Model  
- Nella tabella seguente vengono elencati i tipi di dati primitivi supportati da EDM.  Nella tabella vengono inoltre elencati i [facet](../../../../docs/framework/data/adonet/facet.md) applicabili a ogni tipo di dati primitivi.  
+## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Tipi di dati primitivi supportati in Entity Data Model  
+ Nella tabella seguente vengono elencati i tipi di dati primitivi supportati da EDM. La tabella include anche il [facet](../../../../docs/framework/data/adonet/facet.md) che possono essere applicati a ogni tipo di dati primitivi.  
   
 |Tipi di dati primitivi|Descrizione|Facet applicabili|  
-|----------------------------|-----------------|-----------------------|  
+|-------------------------|-----------------|-----------------------|  
 |Binario|Contiene dati binari.|MaxLength, FixedLength, Nullable, Default|  
 |Boolean|Contiene il valore `true` o `false`.|Nullable, Default|  
 |Byte|Contiene un Unsigned Integer a 8 bit.|Precision, Nullable, Default|  
@@ -45,6 +48,6 @@ Entity Data Model \(EDM\) supporta un set di tipi di dati primitivi astratti \(a
 |String|Contiene dati di tipo carattere.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
 |utente|Contiene un'ora del giorno.|Precision, Nullable, Default|  
   
-## Vedere anche  
- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

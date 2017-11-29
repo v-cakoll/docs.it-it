@@ -5,33 +5,31 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorizzazione basata su attestazioni con WIF
 Tramite l'autorizzazione di un'applicazione relying party vengono determinate le risorse di un'identità autenticata a cui è consentito l'accesso e le operazioni eseguibili in queste risorse. Un'autorizzazione non corretta o debole comporta la diffusione di informazioni e l'alterazione dei dati. In questo argomento vengono descritti gli approcci disponibili per implementare l'autorizzazione per i servizi e le applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF (Windows Identity Foundation) e un servizio token di sicurezza (STS), ad esempio il Servizio di controllo di accesso (ACS) di Microsoft Azure.  
   
 ## <a name="overview"></a>Panoramica  
- Fin dalla prima versione, in .NET Framework viene fornito un meccanismo flessibile per implementare l'autorizzazione. Questo meccanismo è basato su due interfacce semplici, ovvero **IPrincipal** e **IIdentity**. Le implementazioni concrete di **IIdentity** rappresentano un utente autenticato. Ad esempio, l'implementazione di **WindowsIdentity** rappresenta un utente autenticato da Active Directory e quella di **GenericIdentity** rappresenta un utente la cui identità viene verificata tramite un processo di autenticazione personalizzato. Le implementazioni concrete di **IPrincipal** consentono di verificare le autorizzazioni usando ruoli in base all'archivio ruoli. **WindowsPrincipal**, ad esempio, verifica l'appartenenza di **WindowsIdentity** ai gruppi di Active Directory. Questo controllo viene eseguito chiamando il metodo **IsInRole** sull'interfaccia **IPrincipal** ed è definito controllo degli accessi in base al ruolo (RBAC). Per altre informazioni, vedere [Controllo degli accessi in base al ruolo](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_1).  Le attestazioni possono essere utilizzate per trasferire le informazioni sui ruoli per supportare i comuni meccanismi dell'autorizzazione basata sui ruoli.  
+ Fin dalla prima versione, in .NET Framework viene fornito un meccanismo flessibile per implementare l'autorizzazione. Questo meccanismo è basato su due interfacce semplici, ovvero **IPrincipal** e **IIdentity**. Le implementazioni concrete di **IIdentity** rappresentano un utente autenticato. Ad esempio, l'implementazione di **WindowsIdentity** rappresenta un utente autenticato da Active Directory e quella di **GenericIdentity** rappresenta un utente la cui identità viene verificata tramite un processo di autenticazione personalizzato. Le implementazioni concrete di **IPrincipal** consentono di verificare le autorizzazioni usando ruoli in base all'archivio ruoli. **WindowsPrincipal**, ad esempio, verifica l'appartenenza di **WindowsIdentity** ai gruppi di Active Directory. Questo controllo viene eseguito chiamando il metodo **IsInRole** sull'interfaccia **IPrincipal** e viene definito controllo dell'accesso basato sui ruoli (RBAC). Per altre informazioni, vedere [Controllo degli accessi in base al ruolo](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_1).  Le attestazioni possono essere utilizzate per trasferire le informazioni sui ruoli per supportare i comuni meccanismi dell'autorizzazione basata sui ruoli.  
   
  Inoltre, possono essere utilizzate per abilitare decisioni di autorizzazione più complesse oltre ai ruoli. Le attestazioni possono essere basate su qualsiasi informazione relativa all'utente, ovvero età, codice postale, numero di scarpe e così via. Un meccanismo di controllo degli accessi basato su attestazioni arbitrarie è definito autorizzazione basata sulle attestazioni. Per altre informazioni, vedere [Autorizzazione basata sulle attestazioni](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_2).  
   
 <a name="BKMK_1"></a>   
-## <a name="role-based-access-control"></a>Controllo degli accessi in base al ruolo  
- Il controllo degli accessi in base al ruolo è un approccio di autorizzazione in cui le autorizzazioni utente vengono gestite e applicate da un'applicazione basata sui ruoli utente. Se un utente dispone di un ruolo necessario per l'esecuzione di un'azione, l'accesso viene consentito; in caso contrario, viene negato.  
+## <a name="role-based-access-control"></a>Controllo dell'accesso basato sui ruoli  
+ Il controllo dell'accesso basato sui ruoli è un approccio di autorizzazione in cui le autorizzazioni utente vengono gestite e applicate da un'applicazione basata sui ruoli utente. Se un utente dispone di un ruolo necessario per l'esecuzione di un'azione, l'accesso viene consentito; in caso contrario, viene negato.  
   
 ### <a name="iprincipalisinrole-method"></a>Metodo IPrincipal.IsInRole  
  Per implementare il controllo degli accessi in base al ruolo nelle applicazioni in grado di riconoscere attestazioni, usare il metodo **IsInRole()** nell'interfaccia **IPrincipal**, proprio come nelle applicazioni che non sono in grado di riconoscere attestazioni. Il metodo **IsInRole()** può essere usato in diversi modi:  
@@ -59,7 +57,7 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>Autorizzazione basata sulle attestazioni  
- L'autorizzazione basata sulle attestazioni è un approccio in cui la decisione di autorizzazione di concedere o negare l'accesso è basata sulla logica arbitraria che utilizza i dati disponibili nelle attestazioni per prendere la decisione. Si tenga presente che nel caso del controllo degli accessi in base al ruolo, l'unica attestazione usata è quella di tipo del ruolo. Per controllare se l'utente appartiene o meno a un ruolo specifico, è stata utilizzata un'attestazione di tipo del ruolo. Per illustrare il processo per prendere decisioni di autorizzazione utilizzando l'approccio basato sulle attestazioni, si tengano in considerazione i passaggi seguenti:  
+ L'autorizzazione basata sulle attestazioni è un approccio in cui la decisione di autorizzazione di concedere o negare l'accesso è basata sulla logica arbitraria che utilizza i dati disponibili nelle attestazioni per prendere la decisione. Si tenga presente che nel caso del controllo dell'accesso basato sui ruoli, l'unica attestazione utilizzata è quella di tipo del ruolo. Per controllare se l'utente appartiene o meno a un ruolo specifico, è stata utilizzata un'attestazione di tipo del ruolo. Per illustrare il processo per prendere decisioni di autorizzazione utilizzando l'approccio basato sulle attestazioni, si tengano in considerazione i passaggi seguenti:  
   
 1.  Dall'applicazione viene ricevuta una richiesta in cui l'utente deve essere autenticato.  
   
@@ -72,4 +70,3 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
 5.  L'accesso viene consentito se il risultato è true e viene negato se è false. Ad esempio, la regola potrebbe essere che l'utente ha 21 anni, o anche di più, e vive nello stato di Washington.  
   
  L'oggetto <xref:System.Security.Claims.ClaimsAuthorizationManager> è utile per esternalizzare la logica delle decisioni per l'autorizzazione basata su attestazioni nelle applicazioni. ClaimsAuthorizationManager è un componente di WIF fornito come parte di .NET 4.5. Con ClaimsAuthorizationManager è possibile intercettare le richieste in ingresso e implementare qualsiasi logica di scelta per prendere decisioni di autorizzazioni basate sulle attestazioni in ingresso. Questo aspetto diventa importante quando è necessario modificare la logica dell'autorizzazione. In tal caso, l'utilizzo di ClaimsAuthorizationManager non influirà sull'integrità dell'applicazione, quindi riducendo la probabilità di un errore di applicazione come risultato della modifica. Per altre informazioni su come usare ClaimsAuthorizationManager per implementare il controllo degli accessi in base alle attestazioni, vedere [Procedura: Implementare mediante WIF e ACS l'autorizzazione delle attestazioni in un'applicazione ASP.NET in grado di riconoscere attestazioni](http://go.microsoft.com/fwlink/?LinkID=247446).
-

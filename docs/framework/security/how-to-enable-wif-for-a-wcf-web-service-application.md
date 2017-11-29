@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7db69de994770e122dd4a4233b9a44d572c32344
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Procedura: Abilitare WIF per un'applicazione del servizio Web WCF
 ## <a name="applies-to"></a>Si applica a  
@@ -267,4 +265,3 @@ ms.lasthandoff: 08/21/2017
     >  Sia **TestService** che **LocalSTS** devono essere in esecuzione prima di premere **INVIO**. Verrà visualizzata una pagina Web per il servizio nella quale è possibile verificare che **LocalSTS** sia in esecuzione esaminando l'area di notifica (barra delle applicazioni).  
   
 3.  La visualizzazione delle attestazioni nella console è la prova dell'avvenuta autenticazione con il servizio STS per la visualizzazione delle attestazioni dal servizio WCF.
-

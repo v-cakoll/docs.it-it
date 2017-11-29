@@ -1,39 +1,38 @@
 ---
-title: "My.Application.Info Object | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Application.Info object"
-  - "My.Application.AssemblyInfo object"
+title: Oggetto My.Application.Info
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.Application.Info object
+- My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a4aa70edbe5de2d2411f62e6dcd7677896585c48
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# My.Application.Info Object
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Fornisce le proprietà per ottenere le informazioni sull'applicazione, ad esempio il numero di versione, la descrizione, gli assembly caricati e così via.  
+# <a name="myapplicationinfo-object"></a>Oggetto My.Application.Info
+Fornisce proprietà per ottenere le informazioni sull'applicazione, ad esempio il numero di versione, descrizione, gli assembly caricati e così via.  
   
-## Note  
- Per informazioni sui metodi e le proprietà di `My.Application.Info` oggetto, vedere <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
+## <a name="remarks"></a>Note  
+ Per informazioni sui metodi e proprietà del `My.Application.Info` , vedere <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
   
 > [!NOTE]
->  È possibile utilizzare le proprietà della classe di <xref:System.Diagnostics.FileVersionInfo?displayProperty=fullName> per ottenere informazioni su un file su disco.  
+>  È possibile utilizzare le proprietà del <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> classe per ottenere informazioni su un file su disco.  
   
-## Requisiti  
- **Spazio dei nomi:** <xref:Microsoft.VisualBasic.ApplicationServices>  
+## <a name="requirements"></a>Requisiti  
+ **Namespace:**<xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Classe:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+ **Classe:**<xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Assembly:** Visual Basic Runtime Library \(in Microsoft.VisualBasic.dll\)  
+ **Assembly:** libreria di Runtime di Visual Basic (in Microsoft.VisualBasic.dll)  
   
-## Vedere anche  
- [My.Application Object](../../../visual-basic/language-reference/objects/my-application-object.md)
+## <a name="see-also"></a>Vedere anche  
+ [Oggetto My.Application](../../../visual-basic/language-reference/objects/my-application-object.md)

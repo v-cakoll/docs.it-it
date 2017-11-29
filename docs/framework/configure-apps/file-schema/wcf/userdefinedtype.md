@@ -1,28 +1,35 @@
 ---
-title: "&lt;tipoDefinitoDaUtente&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;userDefinedType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0baac8dc6a9899261a490a257dbae0e7eb4d2ced
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;tipoDefinitoDaUtente&gt;
-Rappresenta un tipo definito dall'utente \(UDT\) che deve essere incluso nel contratto di servizio.  
+# <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
+Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contratto di servizio.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<comContracts >  
+\<comContract >  
+\<userDefinedTypes >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <comContracts>  
   <comContract>  
       <userDefinedTypes>  
@@ -36,35 +43,35 @@ Rappresenta un tipo definito dall'utente \(UDT\) che deve essere incluso nel con
 </comContracts>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`name`|Attributo facoltativo contenente una stringa che fornisce il nome tipo leggibile.  Non viene usato dal runtime, ma aiuta un reader a distinguere i tipi.|  
+|`name`|Attributo facoltativo contenente una stringa che fornisce il nome tipo leggibile. Non viene usato dal runtime, ma aiuta un reader a distinguere i tipi.|  
 |`TypeDefID`|Stringa GUID che identifica il tipo specifico definito dall'utente all'interno della libreria dei tipi registrati.|  
 |`TypeLibID`|Stringa GUID che identifica la libreria dei tipi registrata che definisce il tipo.|  
 |`TypeLibVersion`|Stringa che identifica la versione della libreria dei tipi che definisce il tipo.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`userDefinedTypes`|Raccolta di elementi `userDefinedType`.|  
   
-## Note  
- Il runtime di integrazione COM\+ crea servizi controllando la libreria dei tipi.  Quando un componente COM\+ contiene metodi che passano una VARIANT, il sistema non può determinare i tipi effettivi da passare prima della fase di esecuzione.  Quando si tenta pertanto di passare un tipo definito dall'utente \(UDT\) all'interno di una VARIANT, l'operazione non riesce perché non è un tipo noto per la serializzazione.  
+## <a name="remarks"></a>Note  
+ Il runtime di integrazione COM+ crea servizi controllando la libreria dei tipi. Quando un componente COM+ contiene metodi che passano una VARIANT, il sistema non può determinare i tipi effettivi da passare prima della fase di esecuzione. Quando si tenta pertanto di passare un tipo definito dall'utente (UDT) all'interno di una VARIANT, l'operazione non riesce perché non è un tipo noto per la serializzazione.  
   
- Per aggirare questo problema, è possibile aggiungere tipi definiti dall'utente al file di configurazione in modo che possano essere inclusi come tipi noti nel contratto di servizio appropriato.  A tale scopo, è necessario identificare in modo univoco i tipi definiti dall'utente e i contratti, ovvero le interfacce COM originali che li usano.  
+ Per aggirare questo problema, è possibile aggiungere tipi definiti dall'utente al file di configurazione in modo che possano essere inclusi come tipi noti nel contratto di servizio appropriato. A tale scopo, è necessario identificare in modo univoco i tipi definiti dall'utente e i contratti, ovvero le interfacce COM originali che li usano.  
   
- L'esempio seguente illustra come aggiungere alla sezione \<`userDefinedTypes`\> del file di configurazione due tipi specifici definiti dall'utente per questo scopo.  
+ L'esempio seguente illustra come aggiungere alla sezione <`userDefinedTypes`> del file di configurazione due tipi specifici definiti dall'utente per questo scopo.  
   
-```  
+```xml  
 <comContracts>  
   <comContract  
       contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
@@ -94,10 +101,10 @@ Rappresenta un tipo definito dall'utente \(UDT\) che deve essere incluso nel con
   
  Quando il servizio viene inizializzato, il runtime di integrazione ricerca i tipi specificati e li aggiunge alla raccolta dei tipi noti per i contratti specificati.  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>   
- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>   
- <xref:System.ServiceModel.Configuration.ComUdtElement>   
- [\<comContracts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)   
- [Integrazione con applicazioni COM\+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [Procedura: configurare le impostazioni del servizio COM\+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
+ <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComUdtElement>  
+ [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [L'integrazione con applicazioni COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Procedura: configurare le impostazioni di servizio COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

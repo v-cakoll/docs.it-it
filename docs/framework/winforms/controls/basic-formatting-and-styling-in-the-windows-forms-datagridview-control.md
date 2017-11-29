@@ -1,70 +1,71 @@
 ---
-title: "Formattazione e stile di base nel controllo DataGridView Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "griglie dei dati, formattazione"
-  - "DataGridView (controllo) [Windows Form], formattazione e stile"
+title: Formattazione e stile di base nel controllo DataGridView Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], formatting and styling
+- data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Formattazione e stile di base nel controllo DataGridView Windows Form
-Il controllo `DataGridView` facilita la definizione dell'aspetto di base delle celle e del formato di visualizzazione dei valori delle celle.  È possibile definire l'aspetto e gli stili di formattazione di singole celle, di celle in specifiche colonne e righe o di tutte le celle del controllo impostando le proprietà degli oggetti `DataGridViewCellStyle` a cui si accede tramite varie proprietà del controllo `DataGridView`.  È possibile inoltre modificare dinamicamente questi stili, ad esempio in base al valore della cella, gestendo l'evento `CellFormatting`.  
+# <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Formattazione e stile di base nel controllo DataGridView Windows Form
+Il `DataGridView` controllo rende più semplice definire l'aspetto delle celle di base e la formattazione di valori di cella. È possibile definire l'aspetto e la formattazione di stili per le singole celle, per le celle in colonne e righe specifiche o per tutte le celle nel controllo impostando le proprietà del `DataGridViewCellStyle` accessibili tramite diversi oggetti `DataGridView` le proprietà del controllo. Inoltre, è possibile modificare gli stili in modo dinamico in base a fattori, ad esempio il valore di cella gestendo il `CellFormatting` evento.  
   
-## In questa sezione  
- [Procedura: modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
- Viene illustrato come impostare le proprietà `DataGridView` che definiscono l'aspetto del bordo del controllo e delle linee di separazione tra celle.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
+ Viene descritto come impostare `DataGridView` le proprietà che definiscono l'aspetto del bordo del controllo e linee di separazione tra le celle.  
   
- [Stili della cella nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- Viene illustrata la classe `DataGridViewCellStyle` e il modo in cui le proprietà di quel tipo interagiscono per definire la modalità di visualizzazione delle celle nel controllo.  
+ [Stili delle celle nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ Viene descritto il `DataGridViewCellStyle` classe e l'interagiscono tra le proprietà di tale tipo per definire la modalità di visualizzazione delle celle nel controllo.  
   
- [Procedura: impostare stili di cella predefiniti per il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- Viene illustrato come utilizzare le proprietà `DataGridViewCellStyle` per stabilire l'aspetto predefinito delle celle in specifiche righe e colonne e nell'intero controllo.  
+ [Procedura: Impostare stili di cella predefiniti per il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ Viene descritto come utilizzare `DataGridViewCellStyle` proprietà per definire l'aspetto predefinito di celle, righe e colonne specifiche in tutto il controllo.  
   
- [Procedura: formattare i dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
- Viene illustrato come formattare i valori di visualizzazione delle celle mediante le proprietà `DataGridViewCellStyle`.  
+ [Procedura: Formattare i dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+ Viene descritto come formattare i valori visualizzati nelle celle utilizzando `DataGridViewCellStyle` proprietà.  
   
- [Procedura: impostare gli stili di carattere e colore nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
- Viene illustrato come utilizzare la proprietà `DefaultCellStyle` per impostare le caratteristiche di visualizzazione di base di tutte le celle del controllo.  
+ [Procedura: Impostare gli stili di carattere e colore nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+ Viene descritto come utilizzare il `DefaultCellStyle` proprietà da impostare base visualizzare caratteristiche per tutte le celle nel controllo.  
   
- [Procedura: impostare stili di righe alterne per il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
- Viene illustrato come creare un effetto di tipo registro nel controllo visualizzando righe alterne in modo diverso.  
+ [Procedura: Impostare stili di righe alterne per il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+ Viene descritto come creare un effetto registro nel controllo con righe alterne che vengono visualizzate in modo diverso.  
   
- [Procedura: utilizzare il modello di riga personalizzare le righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
- Viene illustrato come utilizzare la proprietà `RowTemplate` per impostare proprietà di riga che verranno utilizzate per tutte le righe del controllo.  
+ [Procedura: Usare il modello di riga per personalizzare le righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+ Viene descritto come utilizzare il `RowTemplate` proprietà per impostare le proprietà di riga che verranno utilizzate per tutte le righe nel controllo.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
- Viene fornita la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
+ Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
- Viene fornita la documentazione di riferimento per la classe <xref:System.Windows.Forms.DataGridViewCellStyle>.  
+ Fornisce la documentazione di riferimento per la <xref:System.Windows.Forms.DataGridViewCellStyle> classe.  
   
  <xref:System.Windows.Forms.DataGridView.CellFormatting>  
- Viene fornita la documentazione di riferimento per l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting>.  
+ Fornisce la documentazione di riferimento per il <xref:System.Windows.Forms.DataGridView.CellFormatting> evento.  
   
  <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>  
- Viene fornita la documentazione di riferimento per la proprietà <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>.  
+ Fornisce la documentazione di riferimento per la <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> proprietà.  
   
-## Sezioni correlate  
- [Personalizzazione del controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- Vengono forniti argomenti in cui sono descritti il disegno personalizzato di celle e righe <xref:System.Windows.Forms.DataGridView> e la creazione di tipi di celle, colonne e righe derivati.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Personalizzazione del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ Fornisce argomenti che descrivono come disegnare celle e righe personalizzate di <xref:System.Windows.Forms.DataGridView> e come creare tipi di cella, colonna e riga derivati.  
   
  [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- Vengono forniti argomenti in cui sono descritte le proprietà di celle, righe e colonne utilizzate più frequentemente.  
+ Fornisce argomenti che descrivono comunemente usate le proprietà di cella, riga e colonna.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

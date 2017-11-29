@@ -1,25 +1,28 @@
 ---
-title: "CallbackBehavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CallbackBehavior
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9df9629e280a2aec6acf93773e09384e763280ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# CallbackBehavior
+# <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CallbackBehavior : Behavior  
@@ -34,65 +37,65 @@ class CallbackBehavior : Behavior
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe CallbackBehavior non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe CallbackBehavior dispone delle proprietà seguenti:  
   
-### AutomaticSessionShutdown  
+### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
  Tipo di dati: booleano  
   
- Tipo di accesso: in sola lettura  
+ Tipo di accesso: sola lettura  
   
  Se True, la sessione viene chiusa automaticamente quando un servizio chiude una sessione duplex.  
   
-### ConcurrencyMode  
+### <a name="concurrencymode"></a>ConcurrencyMode  
  Tipo di dati: stringa  
 Tipo di accesso: sola lettura  
   
  Specifica se il servizio supporta un solo thread, più thread o chiamate rientranti.  
   
-### IgnoreExtensionDataObject  
+### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore che specifica se inviare dati di serializzazione sconosciuti in transito.  
   
-### IncludeExceptionDetailInFaults  
+### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Se attivato, i dettagli sulle eccezioni nel callback vengono collegati agli errori restituiti al servizio.  
   
-### MaxItemsInObjectGraph  
+### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Numero massimo di elementi consentiti in un oggetto serializzato.  
   
-### UseSynchronizationContext  
+### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Specifica se utilizzare il contesto di sincronizzazione corrente per scegliere il thread di esecuzione.  
   
-### ValidateMustUnderstand  
+### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Specifica se il sistema o l'applicazione impone l'elaborazione delle intestazioni MustUnderstand SOAP.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.CallbackBehaviorAttribute>

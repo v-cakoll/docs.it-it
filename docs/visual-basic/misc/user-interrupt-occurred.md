@@ -1,24 +1,26 @@
 ---
-title: "Si &#232; verificata un&#39;interruzione dell&#39;utente | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID18"
+title: "Si è verificata un'interruzione dell'utente"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID18
 ms.assetid: 3a1f1297-f3d9-46db-a956-058a1d272047
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8b1df785433a31e005f40f35cd80e360b4843d84
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Si &#232; verificata un&#39;interruzione dell&#39;utente
-L'utente ha premuto CTRL\+INTERR o un altro tasto di interruzione.  
+# <a name="user-interrupt-occurred"></a>Si è verificata un'interruzione dell'utente
+L'utente ha premuto CTRL+INTERR o un altro tasto di interruzione.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
 -   Ripetere l'operazione.  
   
-## Vedere anche  
- [Error Types](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,24 +1,28 @@
 ---
-title: "Creazione di attivit&#224; del flusso di lavoro tramite la classe CodeActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creazione di attività del flusso di lavoro tramite la classe CodeActivity"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f9894926ba93461d332eaac248c71d20ea4e7d30
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Creazione di attivit&#224; del flusso di lavoro tramite la classe CodeActivity
+# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Creazione di attività del flusso di lavoro tramite la classe CodeActivity
 Le attività create ereditando dall'oggetto <xref:System.Activities.CodeActivity> possono implementare il comportamento imperativo di base eseguendo l'override del metodo <xref:System.Activities.CodeActivity.Execute%2A>.  
   
-## Utilizzo di CodeActivityContext  
- L'accesso a funzionalità dell'esecuzione del flusso di lavoro può essere eseguito dall'interno del metodo <xref:System.Activities.CodeActivity.Execute%2A> tramite i membri del parametro `context`, di tipo <xref:System.Activities.CodeActivityContext>.Tra le funzionalità disponibili tramite l'oggetto <xref:System.Activities.CodeActivityContext> sono incluse le seguenti:  
+## <a name="using-codeactivitycontext"></a>Uso di CodeActivityContext  
+ L'accesso a funzionalità dell'esecuzione del flusso di lavoro può essere eseguito dall'interno del metodo <xref:System.Activities.CodeActivity.Execute%2A> tramite i membri del parametro `context`, di tipo <xref:System.Activities.CodeActivityContext>. Tra le funzionalità disponibili tramite l'oggetto <xref:System.Activities.CodeActivityContext> sono incluse le seguenti:  
   
 -   Recupero e impostazione di valori di variabili e di argomenti.  
   
@@ -26,15 +30,15 @@ Le attività create ereditando dall'oggetto <xref:System.Activities.CodeActivity
   
 -   Accesso alle proprietà di esecuzione dell'attività tramite il metodo <xref:System.Activities.CodeActivityContext.GetProperty%2A>.  
   
-#### Per creare un'attività personalizzata che eredita da CodeActivity  
+#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Per creare un'attività personalizzata che eredita da CodeActivity  
   
 1.  Aprire [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Scegliere **File**, **Nuovo**, quindi **Progetto**.Selezionare **Workflow 4.0** sotto **Visual C\#** nella finestra **Tipi progetto** e scegliere il nodo **v2010**.Selezionare **Libreria attività**  nella finestra **Modelli**.Assegnare al nuovo progetto il nome HelloActivity.  
+2.  Selezionare **File**, **nuova**e quindi **progetto**. Selezionare **Workflow 4.0** in **Visual c#** nel **tipi di progetto** window e selezionare il **v2010** nodo. Selezionare **libreria attività** nel **modelli** finestra. Assegnare al nuovo progetto il nome HelloActivity.  
   
-3.  Fare clic con il pulsante destro del mouse su Activity1.xaml nel progetto HelloActivity e selezionare **Elimina**.  
+3.  Fare doppio clic su Activity1 nel progetto HelloActivity e selezionare **eliminare**.  
   
-4.  Fare clic con il pulsante destro del mouse sul progetto HelloActivity e selezionare **Aggiungi**, quindi **Classe**.Assegnare alla nuova classe il nome HelloActivity.cs.  
+4.  Fare clic sul progetto HelloActivity e selezionare **Aggiungi** e quindi **classe**. Assegnare alla nuova classe il nome HelloActivity.cs.  
   
 5.  Nel file HelloActivity.cs aggiungere le seguenti istruzioni `using`.  
   
@@ -58,7 +62,7 @@ Le attività create ereditando dall'oggetto <xref:System.Activities.CodeActivity
     }  
     ```  
   
-8.  Utilizzare l'oggetto <xref:System.Activities.CodeActivityContext> per creare un record di rilevamento.  
+8.  Usare l'oggetto <xref:System.Activities.CodeActivityContext> per creare un record di rilevamento.  
   
     ```csharp  
     protected override void Execute(CodeActivityContext context)  
@@ -68,5 +72,4 @@ Le attività create ereditando dall'oggetto <xref:System.Activities.CodeActivity
         record.Data.Add(new KeyValuePair<String, Object>("ExecutionTime", DateTime.Now));  
         context.Track(record);  
     }  
-  
     ```

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -46,16 +45,15 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c3f93e90c330881ec5002b820569b27416e049a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reliability-best-practices"></a>Procedure consigliate per l'ottimizzazione dell'affidabilità
 Le regole seguenti relative all'affidabilità riguardano specificamente SQL Server, ma sono valide anche per qualsiasi applicazione server basata su host. È molto importante che nei server, ad esempio SQL Server, non si verifichino problemi di perdita di risorse e arresto.  Non è tuttavia possibile ottenere questo risultato scrivendo codice di annullamento per ogni metodo che modifica lo stato di un oggetto.  L'obiettivo da raggiungere non è quello di scrivere codice gestito completamente affidabile, in grado di eseguire il ripristino da qualsiasi errore in qualunque posizione tramite codice di annullamento.  Sarebbe un'attività estremamente impegnativa con scarse probabilità di successo.  Common Language Runtime (CLR) non è sempre in grado di offrire garanzie sufficienti per il codice gestito per consentire di scrivere codice perfetto.  Inoltre, a differenza di ASP.NET, SQL Server usa un solo processo che non può essere riciclato senza disattivare il database per un periodo di tempo eccessivamente lungo.  
@@ -96,7 +94,7 @@ Le regole seguenti relative all'affidabilità riguardano specificamente SQL Serv
   
  La maggior parte delle classi che attualmente hanno un finalizzatore solo per eliminare un handle del sistema operativo non ne avrà più bisogno. Il finalizzatore sarà invece incluso nella classe derivata <xref:System.Runtime.InteropServices.SafeHandle>.  
   
- Si noti che <xref:System.Runtime.InteropServices.SafeHandle> non sostituisce <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>.  L'eliminazione esplicita delle risorse del sistema operativo offre ancora potenziali vantaggi in termini di prestazioni e di risoluzione di conflitti di risorse.  Basta considerare che i blocchi `finally` che eseguono l'eliminazione esplicita delle risorse potrebbero non venire eseguiti completamente.  
+ Si noti che <xref:System.Runtime.InteropServices.SafeHandle> non sostituisce <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.  L'eliminazione esplicita delle risorse del sistema operativo offre ancora potenziali vantaggi in termini di prestazioni e di risoluzione di conflitti di risorse.  Basta considerare che i blocchi `finally` che eseguono l'eliminazione esplicita delle risorse potrebbero non venire eseguiti completamente.  
   
  <xref:System.Runtime.InteropServices.SafeHandle> consente di implementare un metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> che esegue le operazioni appropriate per liberare l'handle, ad esempio passando lo stato a una routine di rilascio degli handle del sistema operativo oppure liberando un set di handle in un ciclo.  L'esecuzione di questo metodo è garantita da CLR.  È responsabilità dell'autore dell'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> garantire che l'handle venga rilasciato in qualsiasi circostanza. In caso contrario, l'handle andrà perso e ciò spesso causa una perdita delle risorse native associate all'handle. È quindi fondamentale strutturare le classi derivate di <xref:System.Runtime.InteropServices.SafeHandle> in modo che l'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> non richieda l'allocazione di alcuna risorsa che potrebbe non essere disponibile al momento della chiamata. Si noti che è consentito chiamare metodi che possono generare errori nell'ambito dell'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, a condizione che il codice possa gestire tali errori e rispettare il contratto per rilasciare l'handle nativo. Ai fini del debug, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> restituisce un valore <xref:System.Boolean>, che può essere impostato su `false` qualora si verifichi un errore irreversibile che impedisce il rilascio della risorsa. In questo modo, verrà attivato l'assistente al debug gestito [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md), se abilitato, per aiutare nell'identificazione del problema. Non ci saranno altri effetti sul runtime. Il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> non verrà chiamato di nuovo per la stessa risorsa e, di conseguenza, l'handle andrà perso.  
   
@@ -289,6 +287,5 @@ public static MyClass SingletonProperty
  In questo modo, il compilatore JIT prepara tutto il codice nel blocco finally prima di eseguire il blocco `try`. Si ha così la garanzia che il codice nel blocco finally venga compilato ed eseguito in tutti i casi. Non è raro che in un'area a esecuzione vincolata sia presente un blocco `try` vuoto. L'uso di un'area di questo tipo garantisce la protezione da interruzioni di thread asincrone ed eccezioni di memoria insufficiente. Per un formato di area a esecuzione vincolata in grado di gestire anche gli overflow dello stack per codice eccessivamente dettagliato, vedere <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.ConstrainedExecution>  
  [Programmazione per SQL Server e attributi di protezione host](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
-

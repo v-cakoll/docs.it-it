@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="method-etw-events"></a>Eventi EWT dei metodi
 <a name="top"></a> Questi eventi raccolgono informazioni specifiche dei metodi. Il payload di questi eventi è necessario per la risoluzione dei simboli. Questi eventi forniscono inoltre informazioni utili, ad esempio il numero di volte in cui un metodo è stato chiamato.  
@@ -173,4 +171,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
-

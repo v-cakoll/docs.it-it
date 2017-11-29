@@ -1,30 +1,34 @@
 ---
-title: "Procedura: creare un archivio di istanze personalizzato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un archivio di istanze personalizzato'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c383d3af92ba2f76f8ba09bc194220c170beaa0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare un archivio di istanze personalizzato
-In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è presente <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un archivio di istanze che usa SQL Server per rendere persistenti i dati del flusso di lavoro.  Se l'applicazione deve rendere persistenti i dati del flusso di lavoro in un altro supporto, ad esempio un altro database o un file system, è possibile implementare un archivio di istanze personalizzato.  L'archivio di istanze personalizzato viene creato estendendo la classe astratta <xref:System.Runtime.DurableInstancing.InstanceStore> e implementando i metodi obbligatori per l'implementazione.  Per un'implementazione completa di un archivio di istanze personalizzato, vedere l'esempio [Processo di acquisto aziendale](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md).  
+# <a name="how-to-create-a-custom-instance-store"></a>Procedura: creare un archivio di istanze personalizzato
+In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è presente <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un archivio di istanze che usa SQL Server per rendere persistenti i dati del flusso di lavoro. Se l'applicazione deve rendere persistenti i dati del flusso di lavoro in un altro supporto, ad esempio un altro database o un file system, è possibile implementare un archivio di istanze personalizzato. L'archivio di istanze personalizzato viene creato estendendo la classe astratta <xref:System.Runtime.DurableInstancing.InstanceStore> e implementando i metodi obbligatori per l'implementazione. Per un'implementazione completa di un archivio di istanze personalizzato, vedere il [processo di acquisto aziendale](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) esempio.  
   
-## Implementazione del metodo BeginTryCommand  
- Il metodo <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> viene inviato all'archivio di istanze dal motore di persistenza.  Il tipo del parametro `command` indica il comando che è in esecuzione; questo parametro può essere dei seguenti tipi:  
+## <a name="implementing-the-begintrycommand-method"></a>Implementazione del metodo BeginTryCommand  
+ Il metodo <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> viene inviato all'archivio di istanze dal motore di persistenza. Il tipo del parametro `command` indica il comando che è in esecuzione; questo parametro può essere dei seguenti tipi:  
   
--   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando occorre rendere persistente un flusso di lavoro nel supporto di archiviazione.  I dati di persistenza del flusso di lavoro vengono forniti al metodo nel membro <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> del parametro `command`.  
+-   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando occorre rendere persistente un flusso di lavoro nel supporto di archiviazione. I dati di persistenza del flusso di lavoro vengono forniti al metodo nel membro <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> del parametro `command`.  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando occorre caricare un flusso di lavoro dal supporto di archiviazione.  L'ID dell'istanza del flusso di lavoro da caricare viene fornito al metodo nel parametro `instanceId` della proprietà <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> del parametro `context`.  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando occorre caricare un flusso di lavoro dal supporto di archiviazione. L'ID dell'istanza del flusso di lavoro da caricare viene fornito al metodo nel parametro `instanceId` della proprietà <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> del parametro `context`.  
   
--   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando occorre registrare un oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost> come proprietario di blocco.  L'ID dell'istanza del flusso di lavoro corrente deve essere fornito all'archivio di istanze usando il metodo <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> del parametro `context`.  
+-   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando occorre registrare un oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost> come proprietario di blocco. L'ID dell'istanza del flusso di lavoro corrente deve essere fornito all'archivio di istanze usando il metodo <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> del parametro `context`.  
   
      Nel frammento di codice riportato di seguito viene illustrato come implementare il comando CreateWorkflowOwner per assegnare un proprietario di blocco esplicito.  
   
@@ -44,10 +48,9 @@ In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è
                                    createCommand,  
                                    TimeSpan.FromSeconds(30)).InstanceOwner;  
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando l'ID di istanza di un proprietario di blocco può essere rimosso dall'archivio di istanze.  Come con <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, l'ID del proprietario di blocco deve essere fornito dall'applicazione.  
+-   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando l'ID di istanza di un proprietario di blocco può essere rimosso dall'archivio di istanze. Come con <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, l'ID del proprietario di blocco deve essere fornito dall'applicazione.  
   
      Nel frammento di codice riportato di seguito viene mostrato come rilasciare un blocco usando <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>.  
   
@@ -72,10 +75,9 @@ In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è
             store.DefaultInstanceOwner = null;  
         }  
     }  
-  
     ```  
   
-     Il metodo sopra indicato deve essere chiamato in un blocco Try\/Catch quando viene eseguita un'istanza figlio.  
+     Il metodo sopra indicato deve essere chiamato in un blocco Try/Catch quando viene eseguita un'istanza figlio.  
   
     ```  
     try  
@@ -90,14 +92,13 @@ In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è
     {  
         FreeHandleAndDeleteOwner(store, ownerHandle);  
     }  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando occorre caricare un'istanza del flusso di lavoro usando la chiave di istanza del flusso di lavoro.  L'ID della chiave di istanza può essere determinato tramite il parametro <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> del comando.  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze quando occorre caricare un'istanza del flusso di lavoro usando la chiave di istanza del flusso di lavoro. L'ID della chiave di istanza può essere determinato tramite il parametro <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> del comando.  
   
--   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze per recuperare i parametri di attivazione per i flussi di lavoro persistenti al fine di creare un host del flusso di lavoro che possa successivamente caricare i flussi di lavoro.  Questo comando viene inviato dal motore in risposta all'archivio di istanze che genera <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> all'host quando individua un'istanza che può essere attivata.  Un archivio di istanze deve essere sottoposto a polling per determinare se sono presenti flussi di lavoro che possono essere attivati.  
+-   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze per recuperare i parametri di attivazione per i flussi di lavoro persistenti al fine di creare un host del flusso di lavoro che possa successivamente caricare i flussi di lavoro. Questo comando viene inviato dal motore in risposta all'archivio di istanze che genera <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> all'host quando individua un'istanza che può essere attivata. Un archivio di istanze deve essere sottoposto a polling per determinare se sono presenti flussi di lavoro che possono essere attivati.  
   
--   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze per caricare le istanze del flusso di lavoro eseguibili.  Questo comando viene inviato dal motore in risposta all'archivio di istanze che genera <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> all'host quando individua un'istanza che può essere eseguita.  L'archivio di istanze deve effettuare il polling dei flussi di lavoro che possono essere eseguiti.  Nel frammento di codice riportato di seguito viene illustrato il polling dei flussi di lavoro che possono essere eseguiti o attivati nell'archivio di istanze.  
+-   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: il comando viene inviato dal motore di persistenza all'archivio di istanze per caricare le istanze del flusso di lavoro eseguibili. Questo comando viene inviato dal motore in risposta all'archivio di istanze che genera <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> all'host quando individua un'istanza che può essere eseguita. L'archivio di istanze deve effettuare il polling dei flussi di lavoro che possono essere eseguiti. Nel frammento di codice riportato di seguito viene illustrato il polling dei flussi di lavoro che possono essere eseguiti o attivati nell'archivio di istanze.  
   
     ```  
     public void PollForEvents()  
@@ -135,10 +136,9 @@ In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è
             }  
         }  
     }  
-  
     ```  
   
-     Nel frammento di codice precedente, viene eseguita una query dall'archivio di istanze sugli eventi disponibili e ciascun evento viene esaminato per determinare se è un evento <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>.  Se viene trovato un evento di questo tipo, viene chiamato il metodo <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> per indicare all'host di inviare un comando all'archivio di istanze.  Nel frammento di codice riportato di seguito viene illustrata un'implementazione di un gestore per questo comando.  
+     Nel frammento di codice precedente, viene eseguita una query dall'archivio di istanze sugli eventi disponibili e ciascun evento viene esaminato per determinare se è un evento <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>. Se viene trovato un evento di questo tipo, viene chiamato il metodo <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> per indicare all'host di inviare un comando all'archivio di istanze.  Nel frammento di codice riportato di seguito viene illustrata un'implementazione di un gestore per questo comando.  
   
     ```  
     If (command is TryLoadRunnableWorkflowCommand)  
@@ -227,19 +227,17 @@ In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è
             break;  
         }  
     }  
-  
     ```  
   
-     Nel frammento di codice precedente, un archivio di istanze esegue una ricerca delle istanze eseguibili.  Se viene trovata un'istanza eseguibile, viene associata al contesto di esecuzione e viene caricata.  
+     Nel frammento di codice precedente, un archivio di istanze esegue una ricerca delle istanze eseguibili. Se viene trovata un'istanza eseguibile, viene associata al contesto di esecuzione e viene caricata.  
   
-## Uso di un archivio di istanze personalizzato  
- Per implementare un archivio di istanze personalizzato, assegnare un'istanza dell'archivio di istanze a <xref:System.Activities.WorkflowApplication.InstanceStore%2A>e implementare il metodo <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>.  Per le specifiche, vedere l'esercitazione [Procedura: creare ed eseguire un flusso di lavoro con esecuzione prolungata](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md).  
+## <a name="using-a-custom-instance-store"></a>Uso di un archivio di istanze personalizzato  
+ Per implementare un archivio di istanze personalizzato, assegnare un'istanza dell'archivio di istanze a <xref:System.Activities.WorkflowApplication.InstanceStore%2A>e implementare il metodo <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>.  Vedere il [procedura: creare ed eseguire un flusso di lavoro in esecuzione lungo](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) esercitazione per informazioni specifiche.  
   
-## Esempio di archivio di istanze  
- Nell'esempio di codice riportato di seguito viene illustrata l'implementazione completa di un archivio di istanze, estratto dall'esempio [Processo di acquisto aziendale](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md).  Questo archivio di istanze rende persistenti i dati del flusso di lavoro a un file mediante XML.  
+## <a name="a-sample-instance-store"></a>Esempio di archivio di istanze  
+ Esempio di codice seguente è un'implementazione di archivio di istanza completa, ricavata il [processo di acquisto aziendale](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) esempio. Questo archivio di istanze rende persistenti i dati del flusso di lavoro a un file mediante XML.  
   
 ```  
-  
 using System;  
 using System.Activities.DurableInstancing;  
 using System.Collections.Generic;  
@@ -400,5 +398,4 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         }  
     }  
 }  
-  
 ```

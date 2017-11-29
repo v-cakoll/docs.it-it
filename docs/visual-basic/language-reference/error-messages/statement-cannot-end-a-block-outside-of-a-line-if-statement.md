@@ -1,35 +1,33 @@
 ---
-title: "Statement cannot end a block outside of a line &#39;If&#39; statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc32005"
-  - "bc32005"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC32005"
+title: "L'istruzione non può terminare un blocco all'esterno di una riga &#39; se &#39; istruzione"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc32005
+- bc32005
+helpviewer_keywords: BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 73fe3eb44e904366db7d505bbe8c5fef461eb78b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Statement cannot end a block outside of a line &#39;If&#39; statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Un'istruzione `If` a riga singola contiene più istruzioni separate da due punti \(:\), una delle quali è un'istruzione `End` per un blocco di controllo all'esterno dell'istruzione `If` a riga singola.  Le istruzioni `If` a riga singola non utilizzano l'istruzione `End If`.  
+# <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>L'istruzione non può terminare un blocco all'esterno di una riga &#39; se &#39; istruzione
+Una riga singola `If` istruzione contiene più istruzioni separate da punti (:), di cui uno è un `End` istruzione per un blocco di controllo esterno a riga singola `If`. Riga singola `If` istruzioni non utilizzano il `End If` istruzione.  
   
  **ID errore:** BC32005  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Spostare l'istruzione `If` a riga singola all'esterno del blocco di controllo che contiene l'istruzione `End If`.  
+-   Spostare il controllo a riga singola `If` istruzione all'esterno del blocco di controllo che contiene il `End If` istruzione.  
   
-## Vedere anche  
- [If...Then...Else Statement](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

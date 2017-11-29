@@ -1,37 +1,29 @@
 ---
-title: 'Procedura: scrivere query in XML negli spazi dei nomi (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: scrivere query in XML negli spazi dei nomi (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5af26b7ec0a2ab465917cd0ee62f65a97f5f0e40
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5708a2a162132262722f390842f59c9c6a6838e4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procedura: scrivere query in XML negli spazi dei nomi (Visual Basic)
-Per scrivere una query su codice XML in uno spazio dei nomi, è necessario utilizzare <xref:System.Xml.Linq.XName>oggetti con lo spazio dei nomi corretto.</xref:System.Xml.Linq.XName>  
+Per scrivere una query su XML inclusa in uno spazio dei nomi, è necessario usare oggetti <xref:System.Xml.Linq.XName> con lo spazio dei nomi corretto.  
   
  In Visual Basic, l'approccio più comune consiste nel definire uno spazio dei nomi globale, quindi usare valori letterali e proprietà XML che usano lo spazio dei nomi globale. È possibile definire uno spazio dei nomi globale predefinito, nel qual caso gli elementi dei valori letterali XML saranno inclusi nello spazio dei nomi per impostazione predefinita. In alternativa, è possibile definire uno spazio dei nomi globale con un prefisso e quindi usare il prefisso come richiesto nei valori letterali e nelle proprietà XML. Come con altri tipi di XML, gli attributi non sono mai inclusi in alcuno spazio dei nomi per impostazione predefinita.  
   
- Il primo set di esempi in questo argomento viene illustrato come creare una struttura ad albero XML in uno spazio dei nomi predefinito. Il secondo set viene illustrato come creare una struttura ad albero XML in uno spazio dei nomi con un prefisso.  
+ Nel primo set di esempi in questo argomento è illustrato come creare un albero XML in uno spazio dei nomi predefinito. Nel secondo set viene illustrato come creare un albero XML in uno spazio dei nomi con un prefisso.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un albero XML incluso in uno spazio dei nomi predefinito. Viene quindi recuperata una raccolta di elementi.  

@@ -1,42 +1,45 @@
 ---
-title: "214 - OperationCompleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 214 - OperationCompleted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a6287eef-023f-4816-813c-1802c82366df
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c6ef1eb398a0146e619cbcb85fe2761306aba4fc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 214 - OperationCompleted
-## Proprietà  
+# <a name="214---operationcompleted"></a>214 - OperationCompleted
+## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
 |ID|214|  
 |Parole chiave|HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |Livello|Informazioni|  
-|Canale|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canale|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descrizione  
+## <a name="description"></a>Descrizione  
  Questo evento viene generato quando l'elemento `OperationInvoker` predefinito del modello di servizi ha completato una chiamata a un metodo senza che quest'ultimo generasse un'eccezione.  
   
-## Messaggio  
- Chiamata al metodo '%1' da parte di OperationInvoker completata.Durata della chiamata al metodo: '%2' ms.  
+## <a name="message"></a>Messaggio  
+ Chiamata al metodo '%1' da parte di OperationInvoker completata. Durata della chiamata al metodo: '%2' ms.  
   
-## Dettagli  
+## <a name="details"></a>Dettagli  
   
 |Nome elemento dati|Tipo elemento dati|Descrizione|  
-|------------------------|------------------------|-----------------|  
+|--------------------|--------------------|-----------------|  
 |Nome metodo|`xs:string`|Nome CLR del metodo richiamato dall'elemento `OperationInvoker`.|  
 |Durata|`xs:long`|Durata, in millisecondi, necessaria all'elemento `OperationInvoker` per richiamare il metodo.|  
-|HostReference|`xs:string`|Per i servizi ospitati su Web, questo campo identifica in modo univoco il servizio nella gerarchia Web.Il formato viene definito come 'Nome sito Web percorso virtuale applicazione&#124;Percorso virtuale servizio&#124;NomeServizio'.Esempio: 'Sito Web predefinito\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
+|HostReference|`xs:string`|Per i servizi ospitati su Web, questo campo identifica in modo univoco il servizio nella gerarchia Web. Il formato viene definito come ' nome sito Web dell'applicazione virtuale percorso &#124; Percorso virtuale servizio &#124; ServiceName'. Esempio: ' Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.|  
 |AppDomain|`xs:string`|Stringa restituita da AppDomain.CurrentDomain.FriendlyName.|

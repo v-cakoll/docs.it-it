@@ -1,35 +1,39 @@
 ---
-title: "Procedura: creare figure da linee, curve e forme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "figure, creazione da righe"
-  - "figure, creazione da forme"
+title: 'Procedura: creare figure da linee, curve e forme'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- figures [Windows Forms], creating from shapes
+- figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b382e0e1a627d7f61ce8ac664ac47d98c3725cad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare figure da linee, curve e forme
-Per creare una figura, costruire un oggetto <xref:System.Drawing.Drawing2D.GraphicsPath> e quindi chiamare i metodi, ad esempio <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, per aggiungere le primitive al percorso.  
+# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Procedura: creare figure da linee, curve e forme
+Per creare una figura, costruire un <xref:System.Drawing.Drawing2D.GraphicsPath>e quindi chiamare i metodi, ad esempio <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, per aggiungere le primitive al percorso.  
   
-## Esempio  
- Negli esempi di codice riportati di seguito vengono creati percorsi contenenti figure:  
+## <a name="example"></a>Esempio  
+ Gli esempi di codice seguenti creano i percorsi contenenti cifre:  
   
--   Nel primo esempio qui di seguito viene creato un percorso con una singola figura.  La figura è composta da un singolo arco.  L'arco ha un angolo di scansione di \-180 gradi, ovvero in senso antiorario nel sistema di coordinate predefinito.  
+-   Nel primo esempio viene creato un percorso che abbia una singola cifra. Nella figura è costituito da un singolo arco. L'arco ha un angolo di apertura di-180 gradi in senso antiorario nel sistema di coordinate predefinito.  
   
--   Nel secondo esempio qui di seguito si crea un percorso con due figure.  La prima figura è un arco seguito da una linea.  La seconda figura è una linea seguita da una curva seguita da una linea.  La prima figura resta aperta, la seconda è chiusa.  
+-   Nel secondo esempio viene creato un percorso con due cifre. La prima figura è un arco seguito da una riga. La seconda figura è una riga seguita da una curva seguita da una riga. La prima figura viene lasciata aperta, e la seconda figura è chiusa.  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  
@@ -37,10 +41,10 @@ Per creare una figura, costruire un oggetto <xref:System.Drawing.Drawing2D.Graph
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#22)]  
   
-## Compilazione del codice  
- Gli esempi precedenti sono progettati per essere utilizzati con Windows Form e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Negli esempi precedenti sono progettati per l'uso con Windows Form e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
-## Vedere anche  
- <xref:System.Drawing.Drawing2D.GraphicsPath>   
- [Costruzione e creazione di percorsi](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)   
- [Utilizzo di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Drawing2D.GraphicsPath>  
+ [Costruzione e creazione di percorsi](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
+ [Uso di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

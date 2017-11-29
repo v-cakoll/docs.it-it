@@ -1,103 +1,107 @@
 ---
-title: "Elemento &lt;add&gt; per &lt;listeners&gt; per &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> (elemento) per <listeners> per <source>"
-  - "add (elemento) per <listeners> per <source>"
-  - "attributo initializeData"
+title: '&lt;aggiungere&gt; elemento per &lt;listener&gt; per &lt;origine&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
+helpviewer_keywords:
+- initializeData attribute
+- add element for <listeners> for <source>
+- <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 69a5f855251f1f2c9c94ae3b571b8b78881631fb
+ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/23/2017
 ---
-# Elemento &lt;add&gt; per &lt;listeners&gt; per &lt;source&gt;
-Consente di aggiungere un listener alla raccolta `Listeners` per un'origine di traccia.  
+# <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;aggiungere&gt; elemento per &lt;listener&gt; per &lt;origine&gt;
+Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.  
   
-## Sintassi  
+ \<configuration>  
+\<System. Diagnostics >  
+\<origini >  
+\<origine >  
+\<listener >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
   initializeData="data"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`type`|Attributo obbligatorio.<br /><br /> Specifica il tipo del listener.  È necessario utilizzare una stringa che soddisfi i requisiti indicati in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Attributo facoltativo.<br /><br /> Stringa passata al costruttore per la classe specificata.  Viene generata un'eccezione <xref:System.Configuration.ConfigurationException> se la classe non dispone di un costruttore che accetta una stringa.|  
+|`type`|Attributo, obbligatorio, a meno che non viene fatto riferimento a un listener di `sharedListeners` insieme, in cui caso è sufficiente farvi riferimento in base al nome (vedere il [esempio](#example)).<br /><br /> Specifica il tipo del listener. È necessario utilizzare una stringa che soddisfi i requisiti indicati in [specifica di nomi di tipo completi](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata. Oggetto <xref:System.Configuration.ConfigurationException> viene generata se la classe non ha un costruttore che accetta una stringa.|  
 |`name`|Attributo facoltativo.<br /><br /> Specifica il nome del listener.|  
-|`traceOutputOptions`|Attributo facoltativo.<br /><br /> Specifica il valore della proprietà <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> per il listener di traccia.|  
-|\[attributi personalizzati\]|Attributi facoltativi.<br /><br /> Specifica il valore degli attributi specifici del listener identificati dal metodo <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> per tale listener.  <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> rappresenta un esempio di attributo aggiuntivo univoco per la classe <xref:System.Diagnostics.DelimitedListTraceListener>.|  
+|`traceOutputOptions`|Attributo facoltativo.<br /><br /> Specifica il <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> valore della proprietà per il listener di traccia.|  
+|[attributi]|Attributi facoltativi.<br /><br /> Specifica il valore di attributi specifico del listener identificati per il <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> metodo per il listener. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>è univoco per un esempio di attributo aggiuntivo la <xref:System.Diagnostics.DelimitedListTraceListener> classe.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Consente di aggiungere un filtro a un listener della raccolta `Listeners` per un'origine di traccia.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
-|`sources`|Contiene le origini di analisi che danno inizio ai messaggi di tracciatura.|  
-|`source`|Specifica un'origine di analisi che dà inizio ai messaggi di tracciatura.|  
-|`listeners`|Specifica i listener per la raccolta, l'archiviazione e l'invio di messaggi.|  
+|-------------|-----------------|  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Aggiunge un filtro a un listener nella raccolta `Listeners` per un'origine di traccia.|  
   
-## Note  
- Le classi di listener fornite con .NET Framework derivano dalla classe <xref:System.Diagnostics.TraceListener>.  
+### <a name="parent-elements"></a>Elementi padre  
   
- Se non viene specificato l'attributo `name` del listener di traccia, l'impostazione predefinita della proprietà <xref:System.Diagnostics.TraceListener.Name%2A> del listener di traccia sarà una stringa vuota \(""\).  Se l'applicazione dispone di un solo listener, è possibile aggiungerlo senza specificarne il nome e rimuoverlo specificando per il nome una stringa vuota.  Se invece l'applicazione dispone di più listener, è necessario specificare un nome univoco per ciascun listener di traccia, al fine di identificare e gestire singolarmente i listener di traccia nella raccolta <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=fullName>.  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
+|`sources`|Contiene le origini di traccia che avviano i messaggi di traccia.|  
+|`source`|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
+|`listeners`|Specifica i listener di raccolgano, archiviano e indirizzare i messaggi.|  
+  
+## <a name="remarks"></a>Note  
+ Le classi di listener fornite con .NET Framework derivano dalla <xref:System.Diagnostics.TraceListener> classe.  
+  
+ Se non si specifica il `name` attributo del listener di traccia, il <xref:System.Diagnostics.TraceListener.Name%2A> valore predefinito di proprietà del listener di traccia in una stringa vuota (""). Se l'applicazione presenta un solo listener, è possibile aggiungerlo senza specificare un nome ed è possibile rimuoverlo specificando una stringa vuota per il nome. Tuttavia, se l'applicazione presenta più di un listener, specificare un nome univoco per ogni listener di traccia, che consente di identificare e gestire singoli traccia nei listener di <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> insieme.  
   
 > [!NOTE]
->  L'aggiunta di più listener di traccia dello stesso tipo e con lo stesso nome implica l'aggiunta di un solo listener di traccia di tale tipo e con tale nome alla raccolta `Listeners`.  È tuttavia possibile aggiungere a livello di codice più listener identici alla raccolta `Listeners`.  
+>  Aggiunta di più di un listener di traccia, dello stesso tipo e con lo stesso nome risultati in un solo listener di traccia di quel tipo e nome viene aggiunto al `Listeners` insieme. Tuttavia, è possibile aggiungere a livello di codice più listener identici per il `Listeners` insieme.  
   
- Il valore dell'attributo `initializeData` dipende dal tipo di listener creato.  Non per tutti i listener di traccia è necessario specificare l'attributo `initializeData`.  
+ Il valore per il `initializeData` attributo dipende dal tipo di listener creato. Non tutti i listener di traccia è necessario specificare `initializeData`.  
   
 > [!NOTE]
->  Quando si utilizza l'attributo `initializeData`, è possibile ottenere l'avviso del compilatore "Attributo 'initializeData' non dichiarato". Questo avviso viene generato perché le impostazioni di configurazione vengono convalidate in base alla classe di base astratta <xref:System.Diagnostics.TraceListener> che non riconosce l'attributo `initializeData`.  In genere, è possibile ignorare questo avviso per implementazioni del listener di traccia che presentano un costruttore che accetta un parametro.  
+>  Quando si utilizza il `initializeData` attributo, è possibile che venga visualizzato l'avviso "l'attributo 'initializeData' non dichiarato." del compilatore Questo avviso viene generato perché le impostazioni di configurazione vengono convalidate in base alla classe base astratta <xref:System.Diagnostics.TraceListener>, che non riconosce il `initializeData` attributo. In genere, è possibile ignorare questo avviso per le implementazioni di listener di traccia che dispone di un costruttore che accetta un parametro.  
   
- Nella tabella riportata di seguito vengono elencati i listener di traccia inclusi in .NET Framework e viene fornita una descrizione del valore dei relativi attributi `initializeData`.  
+ Nella tabella seguente mostra i listener di traccia inclusi in .NET Framework e descrive il valore della loro `initializeData` attributi.  
   
-|Classe di listener di traccia|Valore dell'attributo initializeData|  
-|-----------------------------------|------------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>|Valore `useErrorStream` del costruttore <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>.  Impostare l'attributo `initializeData` su `true` per scrivere l'output di traccia e di debug nel flusso di errori standard. Impostarlo invece su `false` per scrivere nel flusso di output standard.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName>|Nome del file in cui scrive <xref:System.Diagnostics.DelimitedListTraceListener>.|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>|Nome di un'origine del log eventi esistente.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=fullName>|Nome del file in cui <xref:System.Diagnostics.EventSchemaTraceListener> esegue operazioni di scrittura.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=fullName>|Nome del file in cui <xref:System.Diagnostics.TextWriterTraceListener> esegue operazioni di scrittura.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>|Nome del file in cui <xref:System.Diagnostics.XmlWriterTraceListener> esegue operazioni di scrittura.|  
+|Classe di listener di traccia|valore dell'attributo initializeData|  
+|--------------------------|------------------------------------|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|Il `useErrorStream` valore per il <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> costruttore.  Impostare il `initializeData` attributo "`true`"per scrivere output di traccia e debug nel flusso di errore standard; impostarla su"`false`" per scrivere nel flusso di output standard.|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Il nome del file di <xref:System.Diagnostics.DelimitedListTraceListener> scrive.|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Il nome di un'origine di log eventi esistente.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Il nome del file che il <xref:System.Diagnostics.EventSchemaTraceListener> scrive.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Il nome del file che il <xref:System.Diagnostics.TextWriterTraceListener> scrive.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Il nome del file che il <xref:System.Diagnostics.XmlWriterTraceListener> scrive.|  
   
-## File di configurazione  
- È possibile utilizzare questo elemento nei file di configurazione del computer \(Machine.config\) e dell'applicazione.  
+## <a name="configuration-file"></a>File di configurazione  
+ Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e file di configurazione dell'applicazione.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare elementi `<add>` per aggiungere i listener `console` e `textListener` alla raccolta `Listeners` per l'origine di traccia `TraceSourceApp`.  Il listener `textListener` scrive l'output di traccia nel file myListener.log.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare `<add>` elementi per aggiungere i listener `console` e `textListener` per il `Listeners` raccolta per l'origine di traccia `TraceSourceApp`. Il `textListener` listener scrive output di traccia nel file myListener.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -123,8 +127,8 @@ Consente di aggiungere un listener alla raccolta `Listeners` per un'origine di t
 </configuration>   
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

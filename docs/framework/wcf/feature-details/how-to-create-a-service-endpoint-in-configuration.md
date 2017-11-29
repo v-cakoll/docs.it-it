@@ -1,25 +1,28 @@
 ---
-title: "Procedura: creare un endpoint di servizio nella configurazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "2016-06-16"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un endpoint di servizio nella configurazione'
+ms.custom: 
+ms.date: 06/16/2016
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bf9b6eed2ce4270c9faecc27cb4626a155eb4a6c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare un endpoint di servizio nella configurazione
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedura: creare un endpoint di servizio nella configurazione
 Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. È possibile definire uno o più endpoint per un servizio usando una combinazione di indirizzi di endpoint assoluti e relativi. In alternativa, se non si definisce alcun endpoint per il servizio, il runtime ne fornirà automaticamente alcuni per impostazione predefinita. In questo argomento viene illustrato come aggiungere endpoint usando un file di configurazione che contiene indirizzi sia relativi che assoluti.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nella configurazione del servizio seguente vengono specificati un indirizzo di base e cinque endpoint.  
   
 ```xml  
@@ -74,11 +77,10 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un ser
   </system.serviceModel>  
   
 </configuration>  
-  
 ```  
   
-## Esempio  
- L'indirizzo di base viene specificato usando l'elemento `add`, in service\/host\/baseAddresses, come illustrato nell'esempio seguente.  
+## <a name="example"></a>Esempio  
+ L'indirizzo di base viene specificato usando l'elemento `add`, in service/host/baseAddresses, come illustrato nell'esempio seguente.  
   
 ```xml  
 <service   
@@ -90,8 +92,8 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un ser
   </host>  
 ```  
   
-## Esempio  
- La prima definizione dell'endpoint descritta nella configurazione di esempio seguente specifica un indirizzo relativo, che indica che l'indirizzo endpoint è una combinazione dell'indirizzo di base e dell'indirizzo relativo, in base alle regole di composizione URI \(Uniform Resource Identifier\). L'indirizzo relativo è vuoto \(""\), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base. L'indirizzo endpoint effettivo è http:\/\/localhost:8000\/servicemodelsamples\/service.  
+## <a name="example"></a>Esempio  
+ La prima definizione dell'endpoint descritta nella configurazione di esempio seguente specifica un indirizzo relativo, che indica che l'indirizzo endpoint è una combinazione dell'indirizzo di base e dell'indirizzo relativo, in base alle regole di composizione URI (Uniform Resource Identifier). L'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base. L'indirizzo endpoint effettivo è http://localhost:8000/servicemodelsamples/service.  
   
 ```xml  
 <endpoint address=""   
@@ -99,8 +101,8 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un ser
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## Esempio  
- Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente. L'indirizzo relativo, "test", viene accodato all'indirizzo di base. L'indirizzo endpoint effettivo è http:\/\/localhost:8000\/servicemodelsamples\/service\/test.  
+## <a name="example"></a>Esempio  
+ Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente. L'indirizzo relativo, "test", viene accodato all'indirizzo di base. L'indirizzo endpoint effettivo è http://localhost:8000/servicemodelsamples/service/test.  
   
 ```xml  
 <endpoint address="/test"  
@@ -108,8 +110,8 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un ser
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## Esempio  
- La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint effettivo è http:\/\/localhost:8001\/hello\/servicemodelsamples.  
+## <a name="example"></a>Esempio  
+ La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint effettivo è http://localhost:8001/hello/servicemodelsamples.  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -117,8 +119,8 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un ser
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## Esempio  
- Il quarto indirizzo endpoint specifica un indirizzo assoluto e un trasporto diverso, cioè TCP. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo dell'endpoint effettivo è net.tcp:\/\/localhost:9000\/servicemodelsamples\/service.  
+## <a name="example"></a>Esempio  
+ Il quarto indirizzo endpoint specifica un indirizzo assoluto e un trasporto diverso, cioè TCP. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo dell'endpoint effettivo è net.tcp://localhost:9000/servicemodelsamples/service.  
   
 ```xml  
 <endpoint address="net.tcp://localhost:9000/servicemodelsamples/service"  
@@ -126,8 +128,8 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un ser
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## Esempio  
- Per usare gli endpoint predefiniti forniti dal runtime, non specificare alcun endpoint del servizio nel codice né nel file di configurazione. In questo esempio, il runtime crea gli endpoint predefiniti all'apertura del servizio.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] endpoint, associazioni e comportamenti predefiniti, vedere [Configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md) e [Configurazione semplificata per servizi WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+## <a name="example"></a>Esempio  
+ Per usare gli endpoint predefiniti forniti dal runtime, non specificare alcun endpoint del servizio nel codice né nel file di configurazione. In questo esempio, il runtime crea gli endpoint predefiniti all'apertura del servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli endpoint predefiniti, associazioni e comportamenti, vedere [configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ```xml  
 <configuration>  

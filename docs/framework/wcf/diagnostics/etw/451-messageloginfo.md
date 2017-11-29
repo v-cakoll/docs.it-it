@@ -1,40 +1,43 @@
 ---
-title: "451 - MessageLogInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 451 - MessageLogInfo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 485b4b29-dc21-4a35-93f8-5f4726d6aa5a
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 515c95883b1c232f91363a65015c1f90800a7d12
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 451 - MessageLogInfo
-## Proprietà  
+# <a name="451---messageloginfo"></a>451 - MessageLogInfo
+## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
 |ID|451|  
 |Parole chiave|Troubleshooting, WCFMessageLogging|  
 |Livello|Informazioni|  
-|Canale|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canale|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descrizione  
- Questo evento viene generato quando le informazioni sul log dei messaggi vengono inviate.  
+## <a name="description"></a>Descrizione  
+ Questo evento viene generato quando le informazioni del log dei messaggi vengono inviate.  
   
-## Messaggio  
+## <a name="message"></a>Messaggio  
  %1  
   
-## Dettagli  
+## <a name="details"></a>Dettagli  
   
 |Nome elemento dati|Tipo elemento dati|Descrizione|  
-|------------------------|------------------------|-----------------|  
+|--------------------|--------------------|-----------------|  
 |data1|`xs:string`||  
 |AppDomain|`xs:string`|Stringa restituita da AppDomain.CurrentDomain.FriendlyName.|

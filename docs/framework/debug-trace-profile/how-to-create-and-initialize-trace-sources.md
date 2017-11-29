@@ -5,30 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - trace sources
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1df5f06afaf23795a0efd6af763e29193ba82d90
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1fc1e843bb5841fcd5571bb1b57d6fb449336240
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Procedura: creare e inizializzare origini di traccia
 La classe <xref:System.Diagnostics.TraceSource> viene utilizzata dalle applicazioni per produrre tracce associabili all'applicazione. <xref:System.Diagnostics.TraceSource> fornisce metodi di traccia che consentono di tracciare con facilità eventi e dati e di generare tracce informative. L'output di traccia da <xref:System.Diagnostics.TraceSource> può essere creato e inizializzato con o senza l'utilizzo di file di configurazione. In questo argomento vengono fornite istruzioni per entrambe le opzioni. È tuttavia consigliabile utilizzare file di configurazione per semplificare la riconfigurazione delle tracce prodotte dalle origini di traccia in fase di esecuzione.  
@@ -37,7 +33,8 @@ La classe <xref:System.Diagnostics.TraceSource> viene utilizzata dalle applicazi
   
 1.  Creare un progetto di applicazione console di Visual Studio e sostituire il codice fornito con il codice seguente. Il codice registra errori e avvisi e ne restituisce alcuni sulla console e alcuni nel file myListener creato dalle voci del file di configurazione.  
   
-     [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]  [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
+     [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
+     [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
 2.  Aggiungere un file di configurazione dell'applicazione al progetto per inizializzare l'origine della traccia denominata `TraceSourceApp` nell'esempio di codice riportato nel passaggio 1.  
   
@@ -80,18 +77,18 @@ La classe <xref:System.Diagnostics.TraceSource> viene utilizzata dalle applicazi
   
      Il file di configurazione inizializza le impostazioni dell'origine di traccia nel momento in cui l'applicazione viene inizializzata. L'applicazione può modificare dinamicamente le proprietà impostate dal file di configurazione per eseguire l'override delle eventuali impostazioni specificate dall'utente. È possibile, ad esempio, assicurare che i messaggi critici vengano sempre inviati a un file di testo, indipendentemente dalle impostazioni di configurazione correnti. Nell'esempio di codice viene illustrato come eseguire l'override delle impostazioni del file di configurazione per garantire l'invio dei messaggi critici ai listener di traccia.  
   
-     Le eventuali modifiche apportate alle impostazioni del file di configurazione durante l'esecuzione dell'applicazione non vengono applicate immediatamente. Per modificare le impostazioni, è necessario riavviare l'applicazione o aggiornare l'applicazione a livello di codice utilizzando il metodo <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=fullName>.  
+     Le eventuali modifiche apportate alle impostazioni del file di configurazione durante l'esecuzione dell'applicazione non vengono applicate immediatamente. Per modificare le impostazioni, è necessario riavviare l'applicazione o aggiornare l'applicazione a livello di codice utilizzando il metodo <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>.  
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Per inizializzare le origini di analisi, i listener e i filtri senza un file di configurazione  
   
 -   Utilizzare l'esempio di codice seguente per abilitare la traccia in un'origine di traccia senza utilizzare un file di configurazione. Si consiglia, tuttavia, di utilizzare questa tecnica soltanto quando si desidera eseguire la traccia senza dipendere dai file di configurazione.  
   
-     [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]  [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
+     [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
+     [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.EventTypeFilter>   
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.EventTypeFilter>  
  [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-

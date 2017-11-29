@@ -1,99 +1,103 @@
 ---
-title: "Elemento &lt;ThrowUnobservedTaskExceptions&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<ThrowUnobservedTaskExceptions> (elemento)"
-  - "ThrowUnobservedTaskExceptions (elemento)"
+title: '&lt;ThrowUnobservedTaskExceptions&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ThrowUnobservedTaskExceptions element
+- <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d171c2058a79476d99c5952cc6a697f126af81c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;ThrowUnobservedTaskExceptions&gt;
-Specifica se le eccezioni non gestite di attività devono far terminare un processo in esecuzione.  
+# <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt; elemento
+Specifica se le eccezioni di attività non gestite devono comportare l'arresto di un processo in esecuzione.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
+\<ThrowUnobservedTaskExceptions >  
   
-```vb  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <ThrowUnobservedTaskExceptions  
    enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se le eccezioni di attività non gestite devono far terminare il processo in esecuzione.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se le eccezioni di attività non gestite devono comportare l'arresto del processo in esecuzione.|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|Non termina il processo in esecuzione per un'eccezione non gestita di attività.  Questa è l'impostazione predefinita.|  
-|`true`|Termina il processo in esecuzione per un'eccezione non gestita di attività.|  
+|-----------|-----------------|  
+|`false`|Non termina il processo in esecuzione per un'eccezione di attività non gestita. Questa è l'impostazione predefinita.|  
+|`true`|Termina il processo in esecuzione per un'eccezione di attività non gestita.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
 |||  
   
-## Note  
- Se un'eccezione associata a <xref:System.Threading.Tasks.Task> non è stata osservata, non esiste alcuna operazione <xref:System.Threading.Tasks.Task.Wait%2A>, l'elemento padre non è associato e la proprietà di <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=fullName> non è stata letta l'eccezione di attività viene considerata inosservata.  
+## <a name="remarks"></a>Note  
+ Se un'eccezione associata a un oggetto <xref:System.Threading.Tasks.Task> non è stata osservata, non esiste alcuna operazione <xref:System.Threading.Tasks.Task.Wait%2A>, l'elemento padre non è associato, la proprietà <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> non è stata letta e l'eccezione di attività viene considerata non osservata.  
   
- In [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], per impostazione predefinita, se un <xref:System.Threading.Tasks.Task> con un'eccezione inosservata viene raccolto nel garbage collector, il finalizzatore genera un'eccezione e termina il processo.  L'interruzione del processo è determinata dall'intervallo di Garbage Collection e la finalizzazione.  
+ In [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], per impostazione predefinita, se un oggetto <xref:System.Threading.Tasks.Task> con un'eccezione non osservata viene sottoposto a Garbage Collection, tramite il finalizzatore viene generata un'eccezione e il processo viene terminato. L'interruzione del processo è determinata dall'intervallo di Garbage Collection e finalizzazione.  
   
- Per semplificare agli sviluppatori la scrittura del codice asincrono basato sulle attività, [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] modifica questo comportamento predefinito per le eccezioni inosservate.  Le eccezioni inosservate ancora determinano la generazione dell'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, ma per impostazione predefinita, il processo non termina.  Invece, l'eccezione è ignorata dopo che l'evento viene generato, indipendentemente dal fatto che un gestore di eventi rilevi l'eccezione.  
+ Per semplificare la scrittura di codice asincrono basato sulle attività per gli sviluppatori, in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] questo comportamento predefinito viene modificato per le eccezioni non osservate. Le eccezioni non osservate comportano ancora la generazione dell'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, ma, per impostazione predefinita, il processo non viene terminato. Invece, l'eccezione viene ignorata dopo la generazione dell'evento, indipendentemente dal fatto che l'eccezione venga rilevata da un gestore eventi.  
   
- In [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], è possibile utilizzare l'[elemento \<ThrowUnobservedTaskExceptions\>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in un file di configurazione dell'applicazione per abilitare il comportamento di [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] di generare un'eccezione.  
+ Nel [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], è possibile utilizzare il [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in un file di configurazione dell'applicazione per abilitare il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportamento di generare un'eccezione.  
   
- È inoltre possibile specificare il comportamento dell'eccezione in uno dei modi seguenti:  
+ Il comportamento dell'eccezione può anche essere specificato in uno dei modi seguenti:  
   
--   Impostando la variabile di ambiente `COMPlus_ThrowUnobservedTaskExceptions` \(`set COMPlus_ThrowUnobservedTaskExceptions=1`\).  
+-   Impostando la variabile di ambiente `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
--   Impostando il valore DWORD ThrowUnobservedTaskExceptions \= 1 del Registro di sistema nella chiave HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework .  
+-   Tramite l'impostazione del Registro di sistema DWORD valore ThrowUnobservedTaskExceptions = 1 nel HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework chiave.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come abilitare la generazione di eccezioni nelle attività tramite un file di configurazione dell'applicazione.  
   
-```  
+```xml  
 <configuration>   
     <runtime>   
         <ThrowUnobservedTaskExceptions enabled="true"/>   
     </runtime>   
 </configuration>  
-  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come un'eccezione inosservata viene generata da un'attività.  Il codice deve essere eseguito come programma generato per funzionare correttamente.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrata la modalità di generazione di un'eccezione non osservata da parte di un'attività. Il codice deve essere eseguito come programma rilasciato per funzionare correttamente.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

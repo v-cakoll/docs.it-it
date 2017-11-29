@@ -1,30 +1,37 @@
 ---
-title: "Procedura: scrivere metadati in una bitmap | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bitmap, scrittura di metadati in"
-  - "metadati delle immagini"
-  - "metadati, nelle immagini"
-  - "metadati, scrittura in una bitmap"
+title: 'Procedura: scrivere metadati in una bitmap'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- image metadata [WPF]
+- metadata [WPF], writing to a bitmap
+- metadata [WPF], in images
+- bitmaps [WPF], writing metadata to
 ms.assetid: 68f0dc4b-c0fe-43be-94f2-9d7399378fb3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4bd345981e81cc2fec120ba0f33c32e5c8217109
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: scrivere metadati in una bitmap
-In questo esempio viene illustrato come scrivere metadati in una bitmap utilizzando il linguaggio di query dei metadati.  
+# <a name="how-to-write-metadata-to-a-bitmap"></a>Procedura: scrivere metadati in una bitmap
+In questo esempio viene illustrato come scrivere metadati in una bitmap utilizzando il linguaggio di query di metadati.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
  [!code-vb[BitmapMetadata#SetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]

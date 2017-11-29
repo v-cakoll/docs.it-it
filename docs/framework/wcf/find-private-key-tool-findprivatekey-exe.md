@@ -1,53 +1,53 @@
 ---
-title: "Ricerca dello strumento di chiave privata (FindPrivateKey.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: Ricerca dello strumento di chiave privata (FindPrivateKey.exe)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5e2110e129b293ffb04c8e3eb69a5c3bfe83c17b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Ricerca dello strumento di chiave privata (FindPrivateKey.exe)
-Questo strumento da riga di comando può essere usato per recuperare una chiave privata da un archivio certificati.  Ad esempio, FindPrivateKey.exe può essere usato per cercare il percorso e il nome del file di chiave privata associati a un certificato X.509 specifico nell'archivio certificati.  
+# <a name="find-private-key-tool-findprivatekeyexe"></a>Ricerca dello strumento di chiave privata (FindPrivateKey.exe)
+Questo strumento da riga di comando può essere usato per recuperare una chiave privata da un archivio certificati. Ad esempio, FindPrivateKey.exe può essere usato per cercare il percorso e il nome del file di chiave privata associati a un certificato X.509 specifico nell'archivio certificati.  
   
 > [!IMPORTANT]
->  Lo strumento FindPrivateKey viene fornito come esempio WCF.  Per altre informazioni sull'ubicazione dell'esempio e su come compilarlo, vedere  
+>  Lo strumento FindPrivateKey viene fornito come esempio WCF. Per altre informazioni sull'ubicazione dell'esempio e su come compilarlo, vedere  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]  
+FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]  
 ```  
   
-## Note  
- Nelle tabelle seguenti vengono descritti gli argomenti e le opzioni che possono essere usati con lo strumento di Ricerca della Chiave Privata \(FindPrivateKey.exe\).  
+## <a name="remarks"></a>Note  
+ Nelle tabelle seguenti vengono descritti gli argomenti e le opzioni che possono essere usati con lo strumento di Ricerca della Chiave Privata (FindPrivateKey.exe).  
   
 |Argomento|Descrizione|  
-|---------------|-----------------|  
+|--------------|-----------------|  
 |`storeName`|Nome dell'archivio certificati.|  
 |`storeLocation`|Percorso dell'archivio certificati.|  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|`/n <` *subjectName* `>`|Specifica il nome dell’oggetto del certificato.|  
-|`/t <` *Identificazione digitale* `>`|Specifica l'identificazione digitale del certificato.  Usare Certmgr.exe per recuperare l'identificazione digitale del certificato.|  
+|------------|-----------------|  
+|`/n <`*subjectName*`>`|Specifica il nome dell’oggetto del certificato.|  
+|`/t <`*identificazione personale*`>`|Specifica l'identificazione digitale del certificato. Usare Certmgr.exe per recuperare l'identificazione digitale del certificato.|  
 |`/f`|Restituisce soltanto il nome file.|  
 |`/d`|Restituisce soltanto la directory.|  
 |`/a`|Restituisce il nome file assoluto.|  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Il comando seguente consente di recuperare la chiave privata per John Doe.  
   
 ```  

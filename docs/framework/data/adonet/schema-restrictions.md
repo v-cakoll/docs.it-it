@@ -1,50 +1,54 @@
 ---
-title: "Restrizioni di schema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Restrizione dello schema
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c254865800694af8eb754c3e8d4072688fd7e89a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Restrizioni di schema
-Il secondo parametro facoltativo del metodo **GetSchema** è rappresentato dalle restrizioni usate per limitare la quantità di informazioni sullo schema restituite e viene passato al metodo **GetSchema** come matrice di stringhe.  La posizione nella matrice determina i valori che è possibile passare ed equivale al numero della restrizione.  
+# <a name="schema-restrictions"></a>Restrizione dello schema
+Il secondo parametro facoltativo del **GetSchema** il metodo è le restrizioni che vengono usate per limitare la quantità di informazioni sullo schema restituite e viene passato per il **GetSchema** metodo come una matrice di stringhe . La posizione nella matrice determina i valori che è possibile passare ed equivale al numero della restrizione.  
   
- Nella tabella seguente, ad esempio, vengono descritte le restrizioni supportate dalla raccolta di schemi "Tables" usando il provider di dati .NET Framework per SQL Server:  Restrizioni aggiuntive per le raccolte di schemi di SQL Server vengono indicate alla fine di questo argomento.  
+ Nella tabella seguente, ad esempio, vengono descritte le restrizioni supportate dalla raccolta di schemi "Tables" usando il provider di dati .NET Framework per SQL Server: Restrizioni aggiuntive per le raccolte di schemi di SQL Server vengono indicate alla fine di questo argomento.  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|Proprietario|@Owner|TABLE\_SCHEMA|2|  
-|Tabella|@Name|TABLE\_NAME|3|  
-|TableType|@TableType|TABLE\_TYPE|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|Table|@Name|TABLE_NAME|3|  
+|TableType|@TableType|TABLE_TYPE|4|  
   
-## Impostazione dei valori di restrizione  
- Per usare una delle restrizioni della raccolta di schemi "Tables", è sufficiente creare una matrice di stringa con quattro elementi, quindi posizionare un valore nell'elemento che corrisponde al numero della restrizione.  Per limitare, ad esempio, le tabelle restituite dal metodo **GetSchema** solo a quelle incluse nello schema "Sales", impostare il secondo elemento della matrice su "Sales" prima di passarlo al metodo **GetSchema**.  
-  
-> [!NOTE]
->  Le raccolte di restrizioni per `SqlClient` e `OracleClient` includono una colonna `ParameterName` aggiuntiva.  La colonna di restrizione predefinita è ancora disponibile per garantire la compatibilità con le versioni precedenti, ma attualmente è ignorata.  Per ridurre il rischio di attacchi SQL injection quando si specificano i valori di restrizione, si consiglia di usare query con parametri invece di sostituire le stringhe.  
+## <a name="specifying-restriction-values"></a>Impostazione dei valori di restrizione  
+ Per usare una delle restrizioni della raccolta di schemi "Tables", è sufficiente creare una matrice di stringa con quattro elementi, quindi posizionare un valore nell'elemento che corrisponde al numero della restrizione. Ad esempio, per limitare le tabelle restituite dal **GetSchema** metodo solo le tabelle nello schema "Sales", impostare il secondo elemento della matrice su "Sales" prima di passarlo al **GetSchema** metodo.  
   
 > [!NOTE]
->  Il numero di elementi nella matrice deve essere inferiore o uguale al numero di restrizioni supportato per la raccolta di schemi specificato, in caso contrario verrà generato un tipo <xref:System.ArgumentException>.  Il numero di restrizioni può essere inferiore al numero massimo consentito.  Le restrizioni mancanti verranno considerate null \(senza restrizioni\).  
+>  Le raccolte di restrizioni per `SqlClient` e `OracleClient` includono una colonna `ParameterName` aggiuntiva. La colonna di restrizione predefinita è ancora disponibile per garantire la compatibilità con le versioni precedenti, ma attualmente è ignorata. Per ridurre il rischio di attacchi SQL injection quando si specificano i valori di restrizione, si consiglia di usare query con parametri invece di sostituire le stringhe.  
   
- È possibile eseguire una query nel provider gestito .NET Framework per determinare l'elenco delle restrizioni supportate chiamando il metodo **GetSchema** con il nome della raccolta di schemi delle restrizioni, ovvero "Restrictions".  In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco dei nomi delle raccolte, i nomi delle restrizioni, i valori di restrizione predefiniti e i numeri delle restrizioni.  
+> [!NOTE]
+>  Il numero di elementi nella matrice deve essere inferiore o uguale al numero di restrizioni supportato per la raccolta di schemi specificato, in caso contrario verrà generato un tipo <xref:System.ArgumentException>. Il numero di restrizioni può essere inferiore al numero massimo consentito. Le restrizioni mancanti verranno considerate null (senza restrizioni).  
   
-### Esempio  
- Negli esempi seguenti viene illustrato come usare il metodo <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> del provider di dati .NET Framework per la classe <xref:System.Data.SqlClient.SqlConnection> di SQL Server per recuperare informazioni sullo schema relative a tutte le tabelle contenute nel database di esempio **AdventureWorks** e per limitare le informazioni restituite alle sole tabelle incluse nello schema "Sales":  
+ È possibile eseguire query di un provider gestito .NET Framework per determinare l'elenco delle restrizioni supportate chiamando il **GetSchema** metodo con il nome dell'insieme di schemi di restrizioni, ovvero "Restrictions". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco dei nomi delle raccolte, i nomi delle restrizioni, i valori di restrizione predefiniti e i numeri delle restrizioni.  
   
- \[Visual Basic\]  
+### <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> metodo del Provider di dati .NET Framework per SQL Server <xref:System.Data.SqlClient.SqlConnection> classe per recuperare informazioni sullo schema relative a tutte le tabelle contenute nel **AdventureWorks**database di esempio e per limitare le informazioni restituite alle sole tabelle nello schema "Sales":  
   
-```  
+```vb  
 Imports System.Data.SqlClient  
   
 Module Module1  
@@ -76,9 +80,7 @@ End Sub
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -138,136 +140,136 @@ class Program
 }  
 ```  
   
-## Restrizioni per gli schemi di SQL Server  
+## <a name="sql-server-schema-restrictions"></a>Restrizioni per gli schemi di SQL Server  
  Nelle tabelle seguenti sono incluse le restrizioni per le raccolte di schemi di SQL Server.  
   
-### Utenti  
+### <a name="users"></a>Utenti  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|User\_Name|@Name|name|1|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|User_Name|@Name|name|1|  
   
-### Database  
+### <a name="databases"></a>Database  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
+|----------------------|--------------------|-------------------------|------------------------|  
 |Nome|@Name|Nome|1|  
   
-### Tabelle  
+### <a name="tables"></a>Tabelle  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|Proprietario|@Owner|TABLE\_SCHEMA|2|  
-|Tabella|@Name|TABLE\_NAME|3|  
-|TableType|@TableType|TABLE\_TYPE|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|Table|@Name|TABLE_NAME|3|  
+|TableType|@TableType|TABLE_TYPE|4|  
   
-### Colonne  
-  
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|Proprietario|@Owner|TABLE\_SCHEMA|2|  
-|Tabella|@Table|TABLE\_NAME|3|  
-|Colonna|@Column|COLUMN\_NAME|4|  
-  
-### StructuredTypeMembers  
+### <a name="columns"></a>Colonne  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|Proprietario|@Owner|TABLE\_SCHEMA|2|  
-|Tabella|@Table|TABLE\_NAME|3|  
-|Colonna|@Column|COLUMN\_NAME|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|Table|@Table|TABLE_NAME|3|  
+|Colonna|@Column|COLUMN_NAME|4|  
   
-### Visualizzazioni  
-  
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|Proprietario|@Owner|TABLE\_SCHEMA|2|  
-|Tabella|@Table|TABLE\_NAME|3|  
-  
-### ViewColumns  
+### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|VIEW\_CATALOG|1|  
-|Proprietario|@Owner|VIEW\_SCHEMA|2|  
-|Tabella|@Table|VIEW\_NAME|3|  
-|Colonna|@Column|COLUMN\_NAME|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|Table|@Table|TABLE_NAME|3|  
+|Colonna|@Column|COLUMN_NAME|4|  
   
-### ProcedureParameters  
-  
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|SPECIFIC\_CATALOG|1|  
-|Proprietario|@Owner|SPECIFIC\_SCHEMA|2|  
-|Nome|@Name|SPECIFIC\_NAME|3|  
-|Parametro|@Parameter|PARAMETER\_NAME|4|  
-  
-### Procedure  
+### <a name="views"></a>Visualizzazioni  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|SPECIFIC\_CATALOG|1|  
-|Proprietario|@Owner|SPECIFIC\_SCHEMA|2|  
-|Nome|@Name|SPECIFIC\_NAME|3|  
-|Tipo|@Type|ROUTINE\_TYPE|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|Table|@Table|TABLE_NAME|3|  
   
-### IndexColumns  
-  
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|db\_name\(\)|1|  
-|Proprietario|@Owner|user\_name\(\)|2|  
-|Tabella|@Table|o.  name|3|  
-|ConstraintName|@ConstraintName|x.  name|4|  
-|Colonna|@Column|c.  name|5|  
-  
-### Indexes  
+### <a name="viewcolumns"></a>ViewColumns  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|db\_name\(\)|1|  
-|Proprietario|@Owner|user\_name\(\)|2|  
-|Tabella|@Table|o.  name|3|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|VIEW_CATALOG|1|  
+|Owner|@Owner|VIEW_SCHEMA|2|  
+|Table|@Table|VIEW_NAME|3|  
+|Colonna|@Column|COLUMN_NAME|4|  
   
-### UserDefinedTypes  
-  
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|assembly\_name|@AssemblyName|assemblies.  name|1|  
-|udt\_name|@UDTName|types.assembly\_class|2|  
-  
-### ForeignKeys  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|CONSTRAINT\_CATALOG|1|  
-|Proprietario|@Owner|CONSTRAINT\_SCHEMA|2|  
-|Tabella|@Table|TABLE\_NAME|3|  
-|Nome|@Name|CONSTRAINT\_NAME|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|SPECIFIC_CATALOG|1|  
+|Owner|@Owner|SPECIFIC_SCHEMA|2|  
+|Nome|@Name|SPECIFIC_NAME|3|  
+|Parametro|@Parameter|PARAMETER_NAME|4|  
   
-## Restrizioni per gli schemi di SQL Server 2008  
- Nelle tabelle seguenti sono incluse le restrizioni per le raccolte di schemi di SQL Server 2008.  Queste restrizioni sono valide a partire dalla versione 3.5 SP1 di .NET Framework e da SQL Server 2008.  Le restrizioni non sono supportate nelle versioni precedenti di .NET Framework e di SQL Server.  
-  
-### ColumnSetColumns  
+### <a name="procedures"></a>Procedure  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|Proprietario|@Owner|TABLE\_SCHEMA|2|  
-|Tabella|@Table|TABLE\_NAME|3|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|SPECIFIC_CATALOG|1|  
+|Owner|@Owner|SPECIFIC_SCHEMA|2|  
+|Nome|@Name|SPECIFIC_NAME|3|  
+|Tipo|@Type|ROUTINE_TYPE|4|  
   
-### AllColumns  
+### <a name="indexcolumns"></a>IndexColumns  
   
 |Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
-|----------------------------|------------------------|------------------------------------------------|------------------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|Proprietario|@Owner|TABLE\_SCHEMA|2|  
-|Tabella|@Table|TABLE\_NAME|3|  
-|Colonna|@Column|COLUMN\_NAME|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|db_name()|1|  
+|Owner|@Owner|user_name()|2|  
+|Table|@Table|o.name|3|  
+|ConstraintName|@ConstraintName|x.name|4|  
+|Colonna|@Column|c.name|5|  
   
-## Vedere anche  
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+### <a name="indexes"></a>Indexes  
+  
+|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|db_name()|1|  
+|Owner|@Owner|user_name()|2|  
+|Table|@Table|o.name|3|  
+  
+### <a name="userdefinedtypes"></a>UserDefinedTypes  
+  
+|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|assembly_name|@AssemblyName|assemblies.name|1|  
+|udt_name|@UDTName|types.assembly_class|2|  
+  
+### <a name="foreignkeys"></a>ForeignKeys  
+  
+|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
+|Owner|@Owner|CONSTRAINT_SCHEMA|2|  
+|Table|@Table|TABLE_NAME|3|  
+|Nome|@Name|CONSTRAINT_NAME|4|  
+  
+## <a name="sql-server-2008-schema-restrictions"></a>Restrizioni per gli schemi di SQL Server 2008  
+ Nelle tabelle seguenti sono incluse le restrizioni per le raccolte di schemi di SQL Server 2008. Queste restrizioni sono valide a partire dalla versione 3.5 SP1 di .NET Framework e da SQL Server 2008. Le restrizioni non sono supportate nelle versioni precedenti di .NET Framework e di SQL Server.  
+  
+### <a name="columnsetcolumns"></a>ColumnSetColumns  
+  
+|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|Table|@Table|TABLE_NAME|3|  
+  
+### <a name="allcolumns"></a>AllColumns  
+  
+|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|Table|@Table|TABLE_NAME|3|  
+|Colonna|@Column|COLUMN_NAME|4|  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

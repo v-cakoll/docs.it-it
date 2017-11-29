@@ -1,69 +1,73 @@
 ---
-title: "Elemento &lt;clear&gt; per &lt;listeners&gt; per &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> (elemento) per <listeners> per <source>"
-  - "clear (elemento) per <listeners> per <source>"
+title: '&lt;deselezionare&gt; elemento per &lt;listener&gt; per &lt;origine&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
+helpviewer_keywords:
+- <clear> element for <listeners> for <source>
+- clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d5e8518f2ca8a04d91f5bfdd9f6389c741d0278e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;clear&gt; per &lt;listeners&gt; per &lt;source&gt;
+# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;deselezionare&gt; elemento per &lt;listener&gt; per &lt;origine&gt;
 Cancella la raccolta `Listeners` per un'origine di traccia.  
   
-## Sintassi  
+ \<configuration>  
+\<System. Diagnostics >  
+\<origini >  
+\<origine >  
+\<listener >  
+\<Deselezionare >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <clear/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
-|`sources`|Contiene le origini di analisi che danno inizio ai messaggi di tracciatura.|  
-|`source`|Specifica un'origine di analisi che dà inizio ai messaggi di tracciatura.|  
-|`listeners`|Specifica i listener per la raccolta, l'archiviazione e l'invio di messaggi.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
+|`sources`|Contiene le origini di traccia che avviano i messaggi di traccia.|  
+|`source`|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
+|`listeners`|Specifica i listener di raccolgano, archiviano e indirizzare i messaggi.|  
   
-## Note  
- L'elemento `<clear>` consente di rimuovere tutti i listener dalla raccolta `Listeners` per un'origine di traccia, incluso <xref:System.Diagnostics.DefaultTraceListener>.  È possibile utilizzare l'elemento `<clear>` prima dell'elemento `<add>` per essere certi che nella raccolta non vi siano altri listener attivi.  
+## <a name="remarks"></a>Note  
+ Il `<clear>` elemento rimuove tutti i listener dal `Listeners` insieme per un'origine di traccia, inclusi il <xref:System.Diagnostics.DefaultTraceListener>. È possibile utilizzare il `<clear>` elemento prima di utilizzare il `<add>` elemento per essere certi che non sono presenti altri listener attivi nella raccolta.  
   
-## File di configurazione  
- È possibile utilizzare questo elemento nei file di configurazione del computer \(Machine.config\) e dell'applicazione.  
+## <a name="configuration-file"></a>File di configurazione  
+ Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e file di configurazione dell'applicazione.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare l'elemento `<clear>` prima degli elementi `<add>` per l'aggiunta dei listener `console` e `textListener` alla raccolta `Listeners` per l'origine di traccia `TraceSourceApp`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il `<clear>` elemento prima di utilizzare il `<add>` elementi per aggiungere i listener `console` e `textListener` per il `Listeners` raccolta per l'origine di traccia `TraceSourceApp`.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -89,8 +93,8 @@ Cancella la raccolta `Listeners` per un'origine di traccia.
 </configuration>   
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

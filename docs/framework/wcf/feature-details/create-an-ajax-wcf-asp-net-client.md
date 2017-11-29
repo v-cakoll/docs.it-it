@@ -1,22 +1,25 @@
 ---
-title: "Procedura: creare un servizio WCF compatibile con AJAX e un client ASP.NET che accede al servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un servizio WCF compatibile con AJAX e un client ASP.NET che accede al servizio'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a45a186b0d281976f3d6ad554d75742ba0f1cd50
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare un servizio WCF compatibile con AJAX e un client ASP.NET che accede al servizio
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Procedura: creare un servizio WCF compatibile con AJAX e un client ASP.NET che accede al servizio
 In questo argomento viene illustrato come utilizzare Visual Studio 2008 per creare un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] compatibile con AJAX e un client ASP.NET che accede a tale servizio. Il codice per il servizio e per il client viene fornito nella sezione Esempio dopo la descrizione dei passaggi necessari per la creazione del servizio e del client della sezione Procedure.  
   
 ### <a name="to-create-the-aspnet-client-application"></a>Per creare un'applicazione client ASP.NET  
@@ -29,7 +32,7 @@ In questo argomento viene illustrato come utilizzare Visual Studio 2008 per crea
   
 ### <a name="to-create-the-wcf-ajax-enabled-service"></a>Per creare il servizio WCF compatibile con AJAX  
   
-1.  Fare doppio clic sul `SandwichServices` nel progetto di **Esplora** finestra e selezionare **Aggiungi**, quindi **nuovo elemento**e quindi **sevizio WCF compatibile AJAX**.  
+1.  Fare doppio clic sul `SandwichServices` nel progetto di **Esplora** window e selezionare **Aggiungi**, quindi **nuovo elemento**e quindi **sevizio WCF compatibile AJAX** .  
   
 2.  Nome del servizio `CostService` nel **nome** casella e fare clic su **Aggiungi**.  
   
@@ -49,7 +52,7 @@ In questo argomento viene illustrato come utilizzare Visual Studio 2008 per crea
      }  
     ```  
   
-5.  Implementare le operazioni nel servizio. Aggiungere il <xref:System.ServiceModel.OperationContractAttribute> a ciascuna delle operazioni per indicare che fanno parte del contratto. Nell'esempio seguente viene implementato un metodo che restituisce il costo di una determinata quantità di panini.  
+5.  Implementare le operazioni nel servizio. Aggiungere <xref:System.ServiceModel.OperationContractAttribute> a ognuna delle operazioni per indicare che fanno parte del contratto. Nell'esempio seguente viene implementato un metodo che restituisce il costo di una determinata quantità di panini.  
   
     ```  
     public class CostService  
@@ -66,19 +69,19 @@ In questo argomento viene illustrato come utilizzare Visual Studio 2008 per crea
   
 ### <a name="to-configure-the-client-to-access-the-service"></a>Per configurare il client per l'accesso al servizio  
   
-1.  Aprire la pagina default. aspx e selezionare il **progettazione** visualizzazione.  
+1.  Aprire la pagina Default.aspx e selezionare il **progettazione** visualizzazione.  
   
-2.  Dal **visualizzazione** dal menu **della casella degli strumenti**.  
+2.  Dal **vista** dal menu **della casella degli strumenti**.  
   
-3.  Espandere il **AJAX Extensions** nodo e trascinare un **ScriptManager** sulla pagina default. aspx.  
+3.  Espandere il **Estensioni AJAX** nodo e trascinare un **ScriptManager** sulla pagina Default.aspx.  
   
 4.  Fare doppio clic su di **ScriptManager** e selezionare **proprietà**.  
   
-5.  Espandere il **servizi** insieme il **proprietà** per aprire la finestra di **Editor della raccolta ServiceReference** finestra.  
+5.  Espandere il **servizi** insieme il **proprietà** finestra per aprire la **Editor della raccolta ServiceReference** finestra.  
   
 6.  Fare clic su **Aggiungi**, specificare `CostService.svc` come il **percorso** a cui fa riferimento e fare clic su **OK**.  
   
-7.  Espandere il **HTML** nodo il **della casella degli strumenti** e trascinare un **Input (pulsante)** sulla pagina default. aspx.  
+7.  Espandere il **HTML** nodo il **della casella degli strumenti** e trascinare e rilasciare un **Input (pulsante)** sulla pagina Default.aspx.  
   
 8.  Fare doppio clic su di **pulsante** e selezionare **proprietà**.  
   
@@ -86,7 +89,7 @@ In questo argomento viene illustrato come utilizzare Visual Studio 2008 per crea
   
 10. Fare doppio clic su di **pulsante** per accedere al codice JavaScript.  
   
-11. Passare il codice JavaScript seguente all'interno di `script`> elemento.  
+11. Passare il codice JavaScript seguente all'interno di <`script`> elemento.  
   
     ```  
     function Button1_onclick() {  
@@ -101,7 +104,7 @@ In questo argomento viene illustrato come utilizzare Visual Studio 2008 per crea
   
 ### <a name="to-access-the-service-from-the-client"></a>Per accedere al servizio dal client  
   
-1.  Utilizzare Ctrl + F5 per avviare il servizio e il client Web. Fare clic su di **prezzo di 3 panini alla griglia** per generare l'output previsto di "3.75".  
+1.  Utilizzare Ctrl + F5 per avviare il servizio e il client Web. Fare clic su di **prezzo di 3 panini alla griglia** pulsante per generare l'output previsto di "3.75".  
   
 ## <a name="example"></a>Esempio  
  In questo esempio è contenuto il codice del servizio presente nel file WCFService.svc.cs e il codice del client presente nel file Default.aspx.  
@@ -175,7 +178,4 @@ alert(result);
         <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
 </body>  
 </html>  
-  
-```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->
+```     

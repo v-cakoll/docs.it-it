@@ -1,83 +1,77 @@
 ---
-title: "Conditional Compilation in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "conditional compilation, about conditional compilation"
-  - "compilation, conditional"
+title: Compilazione condizionale in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- conditional compilation [Visual Basic], about conditional compilation
+- compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Conditional Compilation in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Nella *compilazione condizionale*, blocchi particolari di codice in un programma vengono compilati in modo selettivo, mentre altri vengono ignorati.  
+# <a name="conditional-compilation-in-visual-basic"></a>Compilazione condizionale in Visual Basic
+In *compilazione condizionale*, determinati blocchi di codice in un programma vengono compilati in modo selettivo, mentre gli altri vengono ignorati.  
   
- È possibile, ad esempio, scrivere istruzioni di debug per confrontare la velocità di metodi diversi per compiere la stessa attività di programmazione o localizzare un'applicazione in più lingue.  Le istruzioni di compilazione condizionale sono progettate per essere eseguite in fase di compilazione, non di esecuzione.  
+ Ad esempio, è possibile scrivere il debug di istruzioni che confrontano la velocità di diversi approcci per la stessa attività di programmazione o si desidera localizzare un'applicazione in più lingue. Le istruzioni di compilazione condizionale sono progettate per l'esecuzione durante la fase di compilazione, non in fase di esecuzione.  
   
- Per indicare blocchi di codice da compilare in modo condizionale, utilizzare la direttiva `#If...Then...#Else`.  Per creare, ad esempio, una versione in francese e in tedesco della stessa applicazione dallo stesso codice sorgente, incorporare segmenti di codice specifici per la piattaforma nelle istruzioni `#If...Then` utilizzando le costanti predefinite `FrenchVersion` e `GermanVersion`.  L'esempio seguente illustra come eseguire questa operazione:  
+ Per indicare i blocchi di codice da compilare in modo condizionale con il `#If...Then...#Else` direttiva. Ad esempio, francese e tedesco creare versioni della stessa applicazione dallo stesso codice sorgente, incorporare per segmenti di codice specifico della piattaforma in `#If...Then` istruzioni che utilizzano costanti predefinite `FrenchVersion` e `GermanVersion`. Nell'esempio seguente viene illustrato come:  
   
  [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
   
- Se si imposta il valore della costante di compilazione condizionale `FrenchVersion` su `True` in fase di compilazione, viene compilato il codice condizionale per la versione francese.  Se si imposta il valore della costante `GermanVersion` su `True`, il compilatore utilizza la versione tedesca.  Se nessuno dei due valori è impostato su `True`, viene eseguito il codice contenuto nell'ultimo blocco `Else`.  
+ Se si imposta il valore di `FrenchVersion` costante di compilazione condizionale a `True` in fase di compilazione, viene compilato il codice condizionale per la versione francese. Se si imposta il valore di `GermanVersion` costante da `True`, il compilatore utilizza la versione tedesca. Se non è impostata su `True`, il codice negli ultimi `Else` blocco viene eseguito.  
   
 > [!NOTE]
->  Il completamento automatico non funziona quando si effettuano operazioni di modifica del codice e si utilizzano direttive di compilazione condizionale se il codice non fa parte della diramazione corrente.  
+>  Completamento automatico verrà non funziona quando la modifica del codice e l'utilizzo di direttive di compilazione condizionale se il codice non fa parte del ramo corrente.  
   
-## Dichiarazione di costanti di compilazione condizionale  
- È possibile impostare le costanti di compilazione condizionale in tre modi:  
+## <a name="declaring-conditional-compilation-constants"></a>Dichiarazione di costanti di compilazione condizionale  
+ È possibile impostare le costanti di compilazione condizionale in uno dei tre modi:  
   
--   In **Progettazione progetti**  
+-   Nel **Progettazione progetti**  
   
 -   Nella riga di comando quando si utilizza il compilatore della riga di comando  
   
 -   Nel codice  
   
- Le costanti di compilazione condizionale hanno un ambito di validità speciale e non è possibile accedere a esse dal codice standard.  L'ambito di validità di una costante di compilazione condizionale dipende dal modo in cui viene impostata.  Nella tabella seguente viene indicato l'ambito di validità delle costanti dichiarate utilizzando ciascuna delle tre modalità menzionate sopra.  
+ Costanti di compilazione condizionale hanno un ambito speciale e non sono accessibili dal codice standard. L'ambito di una costante di compilazione condizionale dipende dal modo in cui è impostata. La tabella seguente elenca l'ambito delle costanti dichiarate utilizzando ciascuna delle tre modalità menzionate sopra.  
   
-|||  
-|-|-|  
-|Modalità di impostazione della costante|Ambito di validità della costante|  
-|**Progettazione progetti**|Pubblico rispetto a tutti i file del progetto|  
-|Riga di comando|Pubblico rispetto a tutti i file passati al compilatore della riga di comando|  
-|Istruzione`#Const` nel codice|Privato rispetto al file nel quale viene dichiarato|  
+|Configurazione (costante)|Ambito di costante|  
+|---|---|  
+|**Progettazione progetti**|Pubblica a tutti i file nel progetto|  
+|Riga di comando|Pubblica a tutti i file passati al compilatore da riga di comando|  
+|`#Const`istruzione nel codice|Private per il file in cui è dichiarato|  
   
-||  
-|-|  
 |Per impostare le costanti in Progettazione progetti|  
-|-   Prima di creare il file eseguibile, impostare le costanti nella finestra di dialogo **Progettazione progetti** seguendo la procedura illustrata nella sezione [Procedura: modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/it-it/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67).|  
+|---|  
+|-Prima di creare il file eseguibile, impostare le costanti **progettazione** seguendo i passaggi forniti nella [gestione dei progetti e le proprietà di soluzione](/visualstudio/ide/managing-project-and-solution-properties).|  
   
-||  
-|-|  
-|Per impostare le costanti sulla riga di comando|  
-|-   Utilizzare l'opzione **\/d** per inserire le costanti di compilazione condizionale, come nell'esempio che segue:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Non è necessario inserire spazi tra l'opzione **\/d** e la prima costante.  Per ulteriori informazioni, vedere [\/define](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Le dichiarazioni sulla riga di comando eseguono l'override delle dichiarazioni inserite nella finestra di dialogo **Progettazione progetti**, ma non le cancellano.  Gli argomenti impostati nella finestra di dialogo **Progettazione progetti** rimangono validi per le compilazioni successive.<br />     Quando le costanti vengono scritte direttamente nel codice, non esistono regole precise circa la loro collocazione, in quanto il loro ambito di validità è l'intero modulo nel quale sono dichiarate.|  
+|Per impostare le costanti nella riga di comando|  
+|---|  
+|-Utilizzare il **/d** commutatore per inserire le costanti di compilazione condizionale, come nell'esempio seguente:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Non è necessario tra spazio il **/d** commutatore e la prima costante. Per ulteriori informazioni, vedere [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Le dichiarazioni della riga di comando eseguire l'override delle dichiarazioni inserite nella **progettazione**, ma non le cancellano. Impostare gli argomenti **progettazione** rimangono valide per le compilazioni successive.<br />     Quando si scrivono costanti nel codice stesso, non esistono strict regole per il posizionamento, poiché l'ambito è l'intero modulo in cui sono dichiarati.|  
   
-||  
-|-|  
 |Per impostare le costanti nel codice|  
-|-   Inserire le costanti nel blocco di dichiarazione del modulo nel quale sono utilizzate.  Questo agevola l'organizzazione e la facilità di lettura del codice.|  
+|---|  
+|-Inserire le costanti nel blocco di dichiarazione del modulo in cui vengono utilizzati. Consente di mantenere il codice organizzati e facili da leggere.|  
   
-## Argomenti correlati  
+## <a name="related-topics"></a>Argomenti correlati  
   
-|||  
-|-|-|  
 |Titolo|Descrizione|  
-|[Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Vengono forniti suggerimenti per semplificare la lettura e la gestione del codice.|  
+|---|---|  
+|[Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Vengono forniti suggerimenti per rendere il codice facili da leggere e gestire.|  
   
-## Riferimento  
- [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)  
+## <a name="reference"></a>Riferimento  
+ [Direttiva #Const](../../../visual-basic/language-reference/directives/const-directive.md)  
   
- [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [Direttive #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [\/define](../../../visual-basic/reference/command-line-compiler/define.md)
+ [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

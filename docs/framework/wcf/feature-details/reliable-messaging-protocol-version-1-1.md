@@ -1,52 +1,54 @@
 ---
-title: "Protocollo Reliable Messaging versione 1.1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Protocollo Reliable Messaging versione 1,1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 98fe8ac04b7ac811802466cf63c58ea4cebd791e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Protocollo Reliable Messaging versione 1.1
-In questo argomento vengono illustrati i dettagli di implementazione di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per il protocollo WS\-ReliableMessaging di febbraio 2007 \(versione 1.1\) necessario per l'interazione con il trasporto HTTP.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segue la specifica WS\-ReliableMessaging con i vincoli e i chiarimenti illustrati in questo argomento.Si noti che il protocollo WS\-Reliable Messaging versione 1.1 viene implementato a partire da [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
+# <a name="reliable-messaging-protocol-version-11"></a>Protocollo Reliable Messaging versione 1,1
+In questo argomento vengono illustrati i dettagli di implementazione di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per il protocollo WS-ReliableMessaging di febbraio 2007 (versione 1.1) necessario per l'interoperatività con il trasporto HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segue la specifica WS-ReliableMessaging con i vincoli e i chiarimenti illustrati in questo argomento. Si noti che il protocollo di versione 1.1 di WS-ReliableMessaging viene implementato a partire dal [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
   
- Il protocollo WS\-ReliableMessaging \(febbraio 2007\) viene implementato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] da <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
+ Il protocollo WS-ReliableMessaging (febbraio 2007) viene implementato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] da <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
   
  Per comodità, nell'argomento vengono utilizzati i ruoli seguenti:  
   
--   Iniziatore: il client che inizia la creazione della sequenza di WS\-Reliable Message.  
+-   Iniziatore: il client che inizia la creazione della sequenza di WS-Reliable Message.  
   
 -   Risponditore: il servizio che riceve le richieste dell'iniziatore.  
   
  In questo documento vengono utilizzati i prefissi e gli spazi dei nomi riportati nella tabella seguente.  
   
-|||  
-|-|-|  
 |Prefisso|Spazio dei nomi|  
-|wsrm|http:\/\/docs.oasis\-open.org\/ws\-rx\/wsrm\/200702|  
-|netrm|http:\/\/schemas.microsoft.com\/ws\/2006\/05\/rm|  
-|s|http:\/\/www.w3.org\/2003\/05\/soap\-envelope|  
-|wsa|http:\/\/schemas.xmlsoap.org\/ws\/2005\/08\/addressing|  
-|wsse|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wssecurity\-secext\-1.0.xsd|  
-|wsrmp|http:\/\/docs.oasis\-open.org\/ws\-rx\/wsrmp\/200702|  
-|netrmp|http:\/\/schemas.microsoft.com\/ws\-rx\/wsrmp\/200702|  
-|wsp|\(WS\-Policy 1.2 o WS\-Policy 1.5\)|  
+|-|-|  
+|wsrm|http://docs.oasis-open.org/ws-rx/wsrm/200702|  
+|netrm|http://schemas.microsoft.com/ws/2006/05/rm|  
+|s|http://www.w3.org/2003/05/soap-envelope|  
+|wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
+|wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
+|wsrmp|http://docs.oasis-open.org/ws-rx/wsrmp/200702|  
+|netrmp|http://schemas.microsoft.com/ws-rx/wsrmp/200702|  
+|wsp|(WS-Policy 1.2 o WS-Policy 1.5)|  
   
-## Messaggistica  
+## <a name="messaging"></a>Messaggistica  
   
-### Creazione sequenza  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa i messaggi `CreateSequence` e `CreateSequenceResponse` per stabilire una sequenza di messaggistica affidabile.Si applicano i vincoli seguenti:  
+### <a name="sequence-creation"></a>Creazione sequenza  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa i messaggi `CreateSequence` e `CreateSequenceResponse` per stabilire una sequenza di messaggistica affidabile. Si applicano i vincoli seguenti:  
   
--   B1101: l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza lo stesso riferimento dell'endpoint di `ReplyTo`, `AcksTo` e `Offer/Endpoint` del messaggio `CreateSequence`.  
+-   B1101: l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza lo stesso riferimento dell'endpoint di `CreateSequence`, `ReplyTo` e `AcksTo` del messaggio `Offer/Endpoint`.  
   
 -   R1102: i riferimenti degli endpoint `AcksTo`, `ReplyTo` e `Offer/Endpoint` nel messaggio `CreateSequence` devono avere valori di indirizzo con rappresentazioni di stringa identiche in modo che corrispondano all'ottetto.  
   
@@ -58,7 +60,7 @@ In questo argomento vengono illustrati i dettagli di implementazione di [!INCLUD
   
 -   B1104: l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non genera l'elemento facoltativo `Expires` o `Offer/Expires` nel messaggio `CreateSequence`.  
   
--   B1105: quando si accede al messaggio `CreateSequence`, il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza il valore `Expires` dell'elemento `CreateSequence` come valore `Expires` dell'elemento `CreateSequenceResponse`.In caso contrario, il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] legge e ignora i valori `Expires` e `Offer/Expires`.  
+-   B1105: quando si accede al messaggio `CreateSequence`, il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza il valore `Expires` dell'elemento `CreateSequence` come valore `Expires` dell'elemento `CreateSequenceResponse`. In caso contrario, il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] legge e ignora i valori `Expires` e `Offer/Expires`.  
   
 -   B1106: quando si accede al messaggio `CreateSequenceResponse`, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] legge il valore facoltativo `Expires`, ma non lo utilizza.  
   
@@ -66,7 +68,7 @@ In questo argomento vengono illustrati i dettagli di implementazione di [!INCLUD
   
 -   B1108: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza solo i valori `DiscardFollowingFirstGap` e `NoDiscard` nell'elemento `IncompleteSequenceBehavior`.  
   
-    -   WS\-ReliableMessaging utilizza il meccanismo `Offer` per stabilire le due sequenze correlate opposte che formano una sessione.  
+    -   WS-ReliableMessaging utilizza il meccanismo `Offer` per stabilire le due sequenze correlate opposte che formano una sessione.  
   
 -   B1109: se `CreateSequence` contiene un elemento `Offer`, il risponditore unidirezionale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] respinge la sequenza offerta rispondendo con un `CreateSequenceResponse` senza un elemento `Accept`.  
   
@@ -78,11 +80,11 @@ In questo argomento vengono illustrati i dettagli di implementazione di [!INCLUD
   
 -   R1113: quando vengono stabilite due sequenze opposte utilizzando il meccanismo `Offer`, tutti i messaggi su entrambe le sequenze dall'iniziatore al risponditore devono essere inviati allo stesso riferimento dell'endpoint.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza WS\-ReliableMessaging per stabilire sessioni affidabili tra l'iniziatore e il risponditore.L'implementazione di WS\-ReliableMessaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre una sessione affidabile per modelli di messaggistica unidirezionali, request\/reply e full duplex.Il meccanismo `Offer` di WS\-Reliable Messaging in `CreateSequence` e `CreateSequenceResponse` consente di stabilire due sequenze opposte correlate e fornisce un protocollo della sessione idoneo per tutti gli endpoint del messaggio.Dato che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce una garanzia di sicurezza per tale sessione, inclusa la protezione end\-to\-end per l'integrità della sessione, è consigliabile assicurarsi che i messaggi destinati alla stessa parte arrivino alla stessa destinazione.Ciò consente anche il "piggy\-backing" degli acknowledgement della sequenza sui messaggi dell'applicazione.A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si applicano pertanto i vincoli R1102, R1112 e R1113.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza WS-ReliableMessaging per stabilire sessioni affidabili tra l'iniziatore e il risponditore. L'implementazione di WS-ReliableMessaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre una sessione affidabile per modelli di messaggistica unidirezionali, request/reply e full duplex. Il meccanismo `Offer` di WS-Reliable Messaging in `CreateSequence` e `CreateSequenceResponse` consente di stabilire due sequenze opposte correlate e fornisce un protocollo della sessione idoneo per tutti gli endpoint del messaggio. Dato che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce una garanzia di sicurezza per tale sessione, inclusa la protezione end-to-end per l'integrità della sessione, è consigliabile assicurarsi che i messaggi destinati alla stessa parte arrivino alla stessa destinazione. Ciò consente anche il "piggy-backing" degli acknowledgement della sequenza sui messaggi dell'applicazione. Pertanto, applicano vincoli R1102 R1112 e R1113 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- Esempio di messaggio `CreateSequence`.  
+ Esempio di un messaggio `CreateSequence`.  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <wsa:Action s:mustUnderstand="1">http://docs.oasis-open.org/ws-rx/wsrm/200702/CreateSequence</wsa:Action>  
@@ -111,7 +113,7 @@ In questo argomento vengono illustrati i dettagli di implementazione di [!INCLUD
   
  Esempio di un messaggio `CreateSequenceResponse`.  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <wsa:Action s:mustUnderstand="1">http://docs.oasis-open.org/ws-rx/wsrm/200702/CreateSequenceResponse</wsa:Action>  
@@ -132,8 +134,8 @@ In questo argomento vengono illustrati i dettagli di implementazione di [!INCLUD
 </s:Envelope>  
 ```  
   
-### Chiusura di una sequenza  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza i messaggi `CloseSequence` e `CloseSequenceResponse` per un arresto iniziato dall'origine di Reliable Messaging.La destinazione di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non inizia l'arresto e l'origine di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta un arresto iniziato dalla destinazione di Reliable Messaging.Si applicano i vincoli seguenti:  
+### <a name="closing-a-sequence"></a>Chiusura di una sequenza  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza i messaggi `CloseSequence` e `CloseSequenceResponse` per un arresto iniziato dall'origine di Reliable Messaging. La destinazione di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non inizia l'arresto e l'origine di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta un arresto iniziato dalla destinazione di Reliable Messaging. Si applicano i vincoli seguenti:  
   
 -   B1201: l'origine di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] invia sempre un messaggio `CloseSequence` per chiudere la sequenza.  
   
@@ -145,9 +147,9 @@ In questo argomento vengono illustrati i dettagli di implementazione di [!INCLUD
   
 -   B1205: al ricevimento di un messaggio `CloseSequence`, l'origine di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] considera la sequenza incompleta e invia un errore.  
   
- Esempio di messaggio `CloseSequence`.  
+ Esempio di un messaggio `CloseSequence`.  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <wsa:Action s:mustUnderstand="1">http://docs.oasis-open.org/ws-rx/wsrm/200702/CloseSequence</wsa:Action>  
@@ -185,20 +187,20 @@ Example CloseSequenceResponse message:
 </s:Envelope>  
 ```  
   
-### Terminazione della sequenza  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza principalmente l'handshake `TerminateSequence/TerminateSequenceResponse` al completamento dell'handshake `CloseSequence/CloseSequenceResponse`.La destinazione di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non inizia la terminazione e l'origine di Reliable Messaging non supporta una terminazione iniziata dalla destinazione di Reliable Messaging.Si applicano i vincoli seguenti:  
+### <a name="sequence-termination"></a>Terminazione della sequenza  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza principalmente l'handshake `TerminateSequence/TerminateSequenceResponse` al completamento dell'handshake `CloseSequence/CloseSequenceResponse`. La destinazione di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non inizia la terminazione e l'origine di Reliable Messaging non supporta una terminazione iniziata dalla destinazione di Reliable Messaging. Si applicano i vincoli seguenti:  
   
 -   B1301: l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] invia il messaggio `TerminateSequence` solo al completamento corretto dell'handshake `CloseSequence/CloseSequenceResponse`.  
   
--   R1302: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che l'elemento `LastMsgNumber` sia coerente in tutti i messaggi `CloseSequence` e `TerminateSequence` per una data sequenza.Ciò significa che `LastMsgNumber` o non è presente in tutti i messaggi `CloseSequence` e `TerminateSequence`, o è presente e identico in tutti i messaggi `CloseSequence` e `TerminateSequence`.  
+-   R1302: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che l'elemento `LastMsgNumber` sia coerente in tutti i messaggi `CloseSequence` e `TerminateSequence` per una data sequenza. Ciò significa che `LastMsgNumber` o non è presente in tutti i messaggi `CloseSequence` e `TerminateSequence`, o è presente e identico in tutti i messaggi `CloseSequence` e `TerminateSequence`.  
   
--   B1303: al ricevimento di un messaggio `TerminateSequence` dopo l'handshake `CloseSequence/CloseSequenceResponse`, la destinazione di Reliable Messaging risponde con un messaggio `TerminateSequenceResponse`.Poiché l'origine di Reliable Messaging dispone dell'acknowledgement finale prima dell'invio del messaggio `TerminateSequence`, la destinazione di Reliable Messaging è a conoscenza della fine della sequenza e richiede immediatamente le risorse.  
+-   B1303: al ricevimento di un messaggio `TerminateSequence` dopo l'handshake `CloseSequence/CloseSequenceResponse`, la destinazione di Reliable Messaging risponde con un messaggio `TerminateSequenceResponse`. Poiché l'origine di Reliable Messaging dispone dell'acknowledgement finale prima dell'invio del messaggio `TerminateSequence`, la destinazione di Reliable Messaging è a conoscenza della fine della sequenza e richiede immediatamente le risorse.  
   
--   B1304: se viene ricevuto un messaggio `TerminateSequence` prima dell'handshake `CloseSequence/CloseSequenceResponse`, la destinazione di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] risponde con un messaggio `TerminateSequenceResponse`.Se la destinazione di Reliable Messaging stabilisce che non vi sono incoerenze nella sequenza, attende per il periodo di tempo specificato dalla destinazione dell'applicazione prima di richiedere le risorse, per offrire al client la possibilità di ricevere l'acknowledgement finale.In caso contrario, la destinazione di Reliable Messaging richiede immediatamente le risorse e indica alla destinazione dell'applicazione che la sequenza termina in modo dubbio generando l'evento `Faulted`.  
+-   B1304: se viene ricevuto un messaggio `TerminateSequence` prima dell'handshake `CloseSequence/CloseSequenceResponse`, la destinazione di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] risponde con un messaggio `TerminateSequenceResponse`. Se la destinazione di Reliable Messaging stabilisce che non vi sono incoerenze nella sequenza, attende per il periodo di tempo specificato dalla destinazione dell'applicazione prima di richiedere le risorse, per offrire al client la possibilità di ricevere l'acknowledgement finale. In caso contrario, la destinazione di Reliable Messaging richiede immediatamente le risorse e indica alla destinazione dell'applicazione che la sequenza termina in modo dubbio generando l'evento `Faulted`.  
   
- Esempio di messaggio `TerminateSequence`.  
+ Esempio di un messaggio `TerminateSequence`.  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <wsa:Action s:mustUnderstand="1">http://docs.oasis-open.org/ws-rx/wsrm/200702/TerminateSequence</wsa:Action>  
@@ -236,55 +238,55 @@ Example TerminateSequenceResponse message:
 </s:Envelope>  
 ```  
   
-### Sequenze  
+### <a name="sequences"></a>Sequenze  
  Di seguito è riportato un elenco di vincoli che si applicano alle sequenze:  
   
--   B1401:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera e accede a numeri di sequenza non superiori al valore massimo di `xs:long`, 9223372036854775807 incluso.  
+-   B1401:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera l'errore e accede a numeri di sequenza non superiori a `xs:long`del valore inclusivo massimo, 9223372036854775807.  
   
  Esempio di intestazione `Sequence`.  
   
-```  
+```xml  
 <wsrm:Sequence s:mustUnderstand="1">  
   <wsrm:Identifier>urn:uuid:656652b8-9af2-4e94-9d07-2dc21c05ed27</wsrm:Identifier>  
   <wsrm:MessageNumber>1</wsrm:MessageNumber>  
 </wsrm:Sequence>  
 ```  
   
-### Acknowledgement della richiesta  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'intestazione `AckRequested` come meccanismo keep\-alive.  
+### <a name="request-acknowledgement"></a>Acknowledgement della richiesta  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'intestazione `AckRequested` come meccanismo keep-alive.  
   
  Esempio di intestazione `AckRequested`.  
   
-```  
+```xml  
 <wsrm:AckRequested>  
   <wsrm:Identifier>urn:uuid:656652b8-9af2-4e94-9d07-2dc21c05ed27</wsrm:Identifier>  
 </wsrm:AckRequested>  
 ```  
   
-### SequenceAcknowledgement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza un meccanismo "piggy\-back" per gli acknowledgement di sequenza forniti in WS\-Reliable Messaging.Si applicano i vincoli seguenti:  
+### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza un meccanismo "piggy-back" per gli acknowledgement di sequenza forniti in WS-Reliable Messaging. Si applicano i vincoli seguenti:  
   
--   R1601: quando vengono stabilite due sequenze opposte utilizzando il meccanismo `Offer`, l'intestazione `SequenceAcknowledgement` può essere inclusa in qualsiasi messaggio dell'applicazione trasmesso al destinatario desiderato.L'endpoint remoto deve essere in grado di accedere a un'intestazione `SequenceAcknowledgement` sottoposta a piggyback.  
+-   R1601: Quando due sequenze vengono stabilite opposte utilizzando il `Offer` meccanismo, il `SequenceAcknowledgement` intestazione può essere incluso nei messaggi dell'applicazione trasmesso al destinatario prescelto. L'endpoint remoto deve essere in grado di accedere a un'intestazione `SequenceAcknowledgement` sottoposta a piggyback.  
   
--   B1602: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non genera intestazioni `SequenceAcknowledgement` che contengono elementi `Nack`.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verifica che ogni elemento `Nack` contenga un numero di sequenza, ma in caso contrario ignora il valore e l'elemento `Nack`.  
+-   B1602: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non genera intestazioni `SequenceAcknowledgement` che contengono elementi `Nack`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verifica che ogni elemento `Nack` contenga un numero di sequenza, ma altrimenti ignora l'elemento e il valore `Nack`.  
   
  Esempio di intestazione `SequenceAcknowledgement`.  
   
-```  
+```xml  
 <wsrm:SequenceAcknowledgement>  
   <wsrm:Identifier>urn:uuid:656652b8-9af2-4e94-9d07-2dc21c05ed27</wsrm:Identifier>  
   <wsrm:AcknowledgementRange Lower="1" Upper="1"></wsrm:AcknowledgementRange>  
 </wsrm:SequenceAcknowledgement>  
 ```  
   
-### Errori WS\-ReliableMessaging  
- Di seguito è riportato un elenco di vincoli che si applicano all'implementazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di errori WS\-ReliableMessaging.Si applicano i vincoli seguenti:  
+### <a name="ws-reliablemessaging-faults"></a>Errori WS-ReliableMessaging  
+ Di seguito è riportato un elenco di vincoli che si applicano all'implementazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di errori WS-ReliableMessaging. Si applicano i vincoli seguenti:  
   
--   B1701: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non genera errori `MessageNumberRollover`.  
+-   B1701: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non genera `MessageNumberRollover` errori.  
   
 -   B1702: su SOAP 1.2 quando l'endpoint del servizio raggiunge il limite di connessione e non è in grado di elaborare nuove connessioni, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera un codice secondario dell'errore `CreateSequenceRefused` annidato, `netrm:ConnectionLimitReached`, come illustrato nell'esempio seguente.  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <wsa:Action>http://docs.oasis-open.org/ws-rx/wsrm/200702/fault</wsa:Action>  
@@ -308,10 +310,10 @@ Example TerminateSequenceResponse message:
 </s:Envelope>  
 ```  
   
-### Errori WS\-Addressing  
- Dato che WS\-ReliableMessaging utilizza WS\-Addressing, l'implementazione WS\-ReliableMessaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] potrebbe generare e trasmettere errori WS\-Addressing.In questa sezione vengono illustrati gli errori WS\-Addressing generati e trasmessi in modo esplicito da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a livello di WS\-ReliableMessaging:  
+### <a name="ws-addressing-faults"></a>Errori WS-Addressing  
+ Dato che WS-ReliableMessaging utilizza WS-Addressing, l'implementazione WS-ReliableMessaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] potrebbe generare e trasmettere errori WS-Addressing. Contenuto della sezione vengono illustrati gli errori WS-Addressing generati e trasmessi in modo esplicito da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a livello di WS-ReliableMessaging:  
   
--   B1801:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera e trasmette l'errore `Message Addressing Header Required` quando si verifica una delle condizioni seguenti:  
+-   B1801:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera e trasmette il `Message Addressing Header Required` di errore quando viene soddisfatta una delle operazioni seguenti:  
   
     -   In un messaggio `CreateSequence`, `CloseSequence` o `TerminateSequence` manca un'intestazione `MessageId`.  
   
@@ -319,67 +321,67 @@ Example TerminateSequenceResponse message:
   
     -   In un messaggio `CreateSequenceResponse`, `CloseSequenceResponse` o `TerminateSequenceResponse` manca un'intestazione `RelatesTo`.  
   
--   B1802:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera e trasmette l'errore `Endpoint Unavailable` a indicare che nessun endpoint in ascolto è in grado di elaborare la sequenza in base all'esame delle intestazioni di indirizzamento nel messaggio `CreateSequence`.  
+-   B1802:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera e trasmette il `Endpoint Unavailable` errore per indicare nessun endpoint di ascolto in grado di elaborare la sequenza in base all'esame delle intestazioni di indirizzamento nel `CreateSequence` messaggio.  
   
-## Composizione del protocollo  
+## <a name="protocol-composition"></a>Composizione del protocollo  
   
-### Composizione con WS\-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta due versioni di WS\-Addressing: WS\-Addressing 2004\/08 \[WS\-ADDR\] e W3C WS\-Addressing 1.0 Recommendation \[WS\-ADDR\-CORE\] e \[WS\-ADDR\-SOAP\].  
+### <a name="composition-with-ws-addressing"></a>Composizione con WS-Addressing  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta due versioni di WS-Addressing: WS-Addressing 2004/08 [WS-ADDR] e W3C WS-Addressing 1.0 Recommendation [WS-ADDR-CORE] e [WS-ADDR-SOAP].  
   
- Anche se la specifica WS\-ReliableMessaging menziona solo WS\-Addressing 2004\/08, non limita la versione WS\-Addressing da utilizzare.Di seguito è riportato un elenco di vincoli che si applicano a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Anche se la specifica WS-ReliableMessaging menziona solo WS-Addressing 2004/08, non limita la versione WS-Addressing da utilizzare. Di seguito è riportato un elenco di vincoli che si applicano a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
--   R2101: sia WS\-Addressing 2004\/08 che WS\-Addressing 1.0 possono essere utilizzati con WS\-Reliable Messaging.  
+-   R2101: sia WS-Addressing 2004/08 che WS-Addressing 1.0 possono essere utilizzati con WS-Reliable Messaging.  
   
--   R2102: è necessario utilizzare una sola versione di WS\-Addressing in una data sequenza di WS\-Reliable Messaging o in una coppia di sequenze opposte correlate tramite il meccanismo `Offer`.  
+-   R2102: è necessario utilizzare una sola versione di WS-Addressing in una data sequenza di WS-Reliable Messaging o in una coppia di sequenze opposte correlate tramite il meccanismo `Offer`.  
   
-### Composizione con SOAP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta l'utilizzo sia di SOAP 1.1 che di SOAP 1.2 con WS\-Reliable Messaging.  
+### <a name="composition-with-soap"></a>Composizione con SOAP  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta l'utilizzo sia di SOAP 1.1 che di SOAP 1.2 con WS-Reliable Messaging.  
   
-### Composizione con WS\-Security e WS\-SecureConversation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce protezione per le sequenze di WS\-Reliable Messaging utilizzando trasporto protetto \(HTTPS\), composizione con WS\-Security e composizione con WS\-SecureConversation.Il protocollo WS\-Reliable Messaging 1.1, WS\-Security 1.1 e il protocollo WS\-SecureConversation 1.3 devono essere utilizzati insieme.Di seguito è riportato un elenco di vincoli che si applicano a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+### <a name="composition-with-ws-security-and-ws-secureconversation"></a>Composizione con WS-Security e WS-SecureConversation  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce protezione per le sequenze di WS-Reliable Messaging utilizzando trasporto protetto (HTTPS), composizione con WS-Security e composizione con WS-SecureConversation. Il protocollo WS-Reliable Messaging 1.1, WS-Security 1.1 e il protocollo WS-SecureConversation 1.3 devono essere utilizzati insieme. Di seguito è riportato un elenco di vincoli che si applicano a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
--   R2301: per proteggere l'integrità di una sequenza di WS\-Reliable Messaging oltre all'integrità e alla riservatezza dei singoli messaggi, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede l'utilizzo di WS\-SecureConversation.  
+-   R2301: per proteggere l'integrità di una sequenza di WS-Reliable Messaging oltre all'integrità e alla riservatezza dei singoli messaggi, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede l'utilizzo di WS-SecureConversation.  
   
--   R2302: prima di stabilire la\(e\) sequenza\(e\) di WS\-Reliable Messaging, è necessario stabilire una sessione WS\-SecureConversation.  
+-   R2302:AWS-Secure Conversation deve essere stabilita prima di stabilire le sequenze di WS-ReliableMessaging.  
   
--   R2303: se la durata della sequenza di WS\-Reliable Messaging supera la durata della sessione WS\-SecureConversation, è necessario rinnovare il `SecurityContextToken` stabilito tramite WS\-SecureConversation utilizzando l'associazione WS\-Secure Conversation Renewal corrispondente.  
+-   R2303: se la durata della sequenza di WS-Reliable Messaging supera la durata della sessione WS-SecureConversation, è necessario rinnovare il `SecurityContextToken` stabilito tramite WS-SecureConversation utilizzando l'associazione WS-Secure Conversation Renewal corrispondente.  
   
--   B2304: la sequenza WS\-ReliableMessaging o una coppia di sequenze opposte sono sempre associate a una singola sessione WS\-SecureConversation.  
+-   B2304:ws-sequenza ReliableMessaging o una coppia di sequenze opposte sono sempre associate a una singola sessione WS-SecureConversation.  
   
--   R2305: in caso di composizione con WS\-SecureConversation, il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che il messaggio `CreateSequence` contenga l'elemento `wsse:SecurityTokenReference` e l'intestazione `wsrm:UsesSequenceSTR`.  
+-   R2305: in caso di composizione con WS-SecureConversation, il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che il messaggio `CreateSequence` contenga l'elemento `wsse:SecurityTokenReference` e l'intestazione `wsrm:UsesSequenceSTR`.  
   
  Esempio di intestazione `UsesSequenceSTR`.  
   
-```  
+```xml  
 <wsrm:UsesSequenceSTR></wsrm:UsesSequenceSTR>  
 ```  
   
-### Composizione con sessioni SSL\/TLS  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta la composizione con sessioni SSL\/TLS:  
+### <a name="composition-with-ssltls-sessions"></a>Composizione con sessioni SSL/TLS  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta la composizione con sessioni SSL/TLS:  
   
 -   B2401: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non genera l'intestazione `wsrm:UsesSequenceSSL`.  
   
 -   R2402: un iniziatore Reliable Messaging non deve inviare un messaggio `CreateSequence` con l'intestazione `wsrm:UsesSequenceSSL` a un risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
-### Composizione con WS\-Policy  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta due versioni di WS\-Policy: WS\-Policy 1.2 e WS\-Policy 1.5.  
+### <a name="composition-with-ws-policy"></a>Composizione con WS-Policy  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta due versioni di WS-Policy: WS-Policy 1.2 e WS-Policy 1.5.  
   
-## Asserzione di WS\-Policy relativa a WS\-ReliableMessaging  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'asserzione di WS\-Policy `wsrm:RMAssertion` relativa a WS\-ReliableMessaging per descrivere le funzionalità degli endpoint.Di seguito è riportato un elenco di vincoli che si applicano a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+## <a name="ws-reliablemessaging-ws-policy-assertion"></a>Asserzione di WS-Policy relativa a WS-ReliableMessaging  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'asserzione di WS-Policy `wsrm:RMAssertion` relativa a WS-ReliableMessaging per descrivere le funzionalità degli endpoint. Di seguito è riportato un elenco di vincoli che si applicano a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
--   B3001: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] collega l'asserzione di WS\-Policy `wsrmn:RMAssertion` agli elementi `wsdl:binding`.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta i collegamenti agli elementi `wsdl:binding` e `wsdl:port`.  
+-   B3001: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] collega l'asserzione di WS-Policy `wsrmn:RMAssertion` agli elementi `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta i collegamenti agli elementi `wsdl:binding` e `wsdl:port`.  
   
 -   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non genera mai il tag `wsp:Optional`.  
   
--   B3003: quando si accede all'asserzione di WS\-Policy `wsrmp:RMAssertion`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignora il tag `wsp:Optional` e considera obbligatorio il criterio WS\-RM.  
+-   B3003: quando si accede all'asserzione di WS-Policy `wsrmp:RMAssertion`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignora il tag `wsp:Optional` e considera obbligatorio il criterio WS-RM.  
   
--   R3004: poiché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non esegue la composizione con sessioni SSL\/TLS, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non accetta il criterio che specifica `wsrmp:SequenceTransportSecurity`.  
+-   R3004: poiché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non esegue la composizione con sessioni SSL/TLS, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non accetta il criterio che specifica `wsrmp:SequenceTransportSecurity`.  
   
 -   B3005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera sempre l'elemento `wsrmp:DeliveryAssurance`.  
   
 -   B3006: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] specifica sempre la garanzia di recapito `wsrmp:ExactlyOnce`.  
   
--   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera e legge le proprietà seguenti dell'asserzione WS\-ReliableMessaging e fornisce un controllo su di esse in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableSessionBindingElement`:  
+-   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera e legge le proprietà seguenti dell'asserzione WS-ReliableMessaging e fornisce un controllo su di esse in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   
@@ -387,7 +389,7 @@ Example TerminateSequenceResponse message:
   
      Esempio di `RMAssertion`.  
   
-    ```  
+    ```xml  
     <wsrmp:RMAssertion>  
       <wsp:Policy>  
         <wsrmp:SequenceSTR/>  
@@ -403,14 +405,14 @@ Example TerminateSequenceResponse message:
     </wsrmp:RMAssertion>  
     ```  
   
-## Estensione di WS\-ReliableMessaging per il controllo del flusso  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'estendibilità di WS\-ReliableMessaging per offrire un controllo facoltativo aggiuntivo più rigido sul flusso di messaggi della sequenza.  
+## <a name="flow-control-ws-reliablemessaging-extension"></a>Estensione di WS-ReliableMessaging per il controllo del flusso  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'estendibilità di WS-ReliableMessaging per offrire un controllo facoltativo aggiuntivo più rigido sul flusso di messaggi della sequenza.  
   
- Per attivare il controllo del flusso, impostare la proprietà `FlowControlEnabled``boolean` di `ReliableSessionBindingElement` su `true`.Di seguito è riportato un elenco di vincoli che si applicano a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Controllo di flusso viene abilitato impostando il `ReliableSessionBindingElement`del `FlowControlEnabled``boolean` proprietà `true`. Di seguito è riportato un elenco di vincoli che si applicano a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
 -   B4001: quando il controllo di flusso di Reliable Messaging è attivato, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera un elemento `netrm:BufferRemaining` nell'estendibilità dell'elemento dell'intestazione `SequenceAcknowledgement`, come illustrato nell'esempio seguente.  
   
-    ```  
+    ```xml  
     <wsrm:SequenceAcknowledgement>  
       <wsrm:Identifier>urn:uuid:656652b8-9af2-4e94-9d07-2dc21c05ed27</wsrm:Identifier>  
       <wsrm:AcknowledgementRange Upper="1" Lower="1"/>             
@@ -422,111 +424,111 @@ Example TerminateSequenceResponse message:
   
 -   B4003: la destinazione di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza `netrm:BufferRemaining` per indicare quanti messaggi nuovi è in grado di memorizzare nel buffer.  
   
--   B4004: quando il controllo di flusso di Reliable Messaging è attivato, l'origine di Reliable Messaging di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza il valore di `netrm:BufferRemaining` per limitare la trasmissione dei messaggi.  
+-   B4004:when affidabili di messaggistica flusso di controllo è abilitato, il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] origine di Reliable Messaging utilizza il valore di `netrm:BufferRemaining` per la trasmissione dei messaggi di limitazione.  
   
--   B4005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera valori integer `netrm:BufferRemaining` tra 0 e 4096 incluso e legge valori integer tra 0 e il valore `maxInclusive` di `xs:int`, 214748364 incluso.  
+-   B4005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera valori integer `netrm:BufferRemaining` tra 0 e 4096 incluso e legge valori integer tra 0 e il valore `xs:int` di `maxInclusive`, 214748364 incluso.  
   
-## Modelli di scambio dei messaggi  
- In questa sezione viene illustrato il comportamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quando WS\-ReliableMessaging è utilizzato per modelli di scambio di messaggi diversi.Per ogni modello di scambio di messaggi, vengono presi in considerazione i due scenari di distribuzione seguenti:  
+## <a name="message-exchange-patterns"></a>Modelli di scambio dei messaggi  
+ Contenuto della sezione viene illustrato il comportamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quando WS-ReliableMessaging è utilizzato per modelli di scambio di messaggi diversi. Per ogni modello di scambio di messaggi, vengono presi in considerazione i due scenari di distribuzione seguenti:  
   
 -   Iniziatore non indirizzabile: l'iniziatore si trova dietro a un firewall; il risponditore può recapitare messaggi all'iniziatore solo su risposte HTTP.  
   
 -   Iniziatore indirizzabile: le richieste HTTP possono essere inviate sia all'iniziatore che al risponditore. In altre parole, è possibile stabilire due connessioni HTTP opposte.  
   
-### Iniziatore unidirezionale, non indirizzabile  
+### <a name="one-way-non-addressable-initiator"></a>Iniziatore unidirezionale, non indirizzabile  
   
-#### Associazione  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello unidirezionale di scambio di messaggi utilizzando una sequenza in un canale HTTP.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi dall'iniziatore alle risposte del risponditore e di HTTP per trasmettere tutti i messaggi dal risponditore all'iniziatore.  
+#### <a name="binding"></a>Binding  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello unidirezionale di scambio di messaggi che utilizza una sola sequenza in un solo canale HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi dall'iniziatore al risponditore e le risposte HTTP per trasmettere tutti i messaggi dal risponditore all'iniziatore.  
   
-#### Scambio CreateSequence  
- L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` senza alcun elemento `Offer` su una richiesta HTTP e attende il messaggio `CreateSequenceResponse` sulla risposta HTTP.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea una sequenza e trasmette il messaggio `CreateSequenceResponse` senza alcun elemento `Accept` sulla risposta HTTP.  
+#### <a name="createsequence-exchange"></a>Scambio CreateSequence  
+ L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` senza alcun elemento `Offer` su una richiesta HTTP e attende il messaggio `CreateSequenceResponse` sulla risposta HTTP. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea una sequenza e trasmette il messaggio `CreateSequenceResponse` senza alcun elemento `Accept` sulla risposta HTTP.  
   
-#### SequenceAcknowledgement  
- L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elabora gli acknowledgement sulla risposta di tutti i messaggi tranne il messaggio `CreateSequence` e i messaggi di errore.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette sempre un acknowledgement autonomo sulla risposta HTTP a tutte le sequenze e ai messaggi `AckRequested`.  
+#### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
+ L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elabora gli acknowledgement sulla risposta di tutti i messaggi tranne il messaggio `CreateSequence` e i messaggi di errore. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette sempre un acknowledgement autonomo sulla risposta HTTP a tutte le sequenze e ai messaggi `AckRequested`.  
   
-#### Scambio CloseSequence  
- L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CloseSequence` su una richiesta HTTP e attende il messaggio `CreateSequenceResponse` sulla risposta HTTP.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette il messaggio `CloseSequenceResponse` sulla risposta HTTP.  
+#### <a name="closesequence-exchange"></a>Scambio CloseSequence  
+ L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CloseSequence` su una richiesta HTTP e attende il messaggio `CreateSequenceResponse` sulla risposta HTTP. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette il messaggio `CloseSequenceResponse` sulla risposta HTTP.  
   
-#### Scambio TerminateSequence  
- L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `TerminateSequence` su una richiesta HTTP e attende il messaggio `TerminateSequenceResponse` sulla risposta HTTP.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette il messaggio `TerminateSequenceResponse` sulla risposta HTTP.  
+#### <a name="terminatesequence-exchange"></a>Scambio TerminateSequence  
+ L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `TerminateSequence` su una richiesta HTTP e attende il messaggio `TerminateSequenceResponse` sulla risposta HTTP. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette il messaggio `TerminateSequenceResponse` sulla risposta HTTP.  
   
-### Iniziatore unidirezionale, indirizzabile  
+### <a name="one-way-addressable-initiator"></a>Iniziatore unidirezionale, indirizzabile  
   
-#### Associazione  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello di scambio di messaggi unidirezionale utilizzando una sequenza su un canale HTTP in ingresso e su uno in uscita.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi.Tutte le risposte HTTP hanno un corpo vuoto e un codice di stato HTTP 202.  
+#### <a name="binding"></a>Binding  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello unidirezionale di scambio di messaggi che utilizza una sola sequenza su un canale HTTP in ingresso e uno in uscita. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi. Tutte le risposte HTTP hanno un corpo vuoto e un codice di stato HTTP 202.  
   
-#### Scambio CreateSequence  
- L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` senza alcun elemento `Offer` su una richiesta HTTP.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea una sequenza e trasmette il messaggio `CreateSequenceResponse` senza alcun elemento `Accept` su una richiesta HTTP.  
+#### <a name="createsequence-exchange"></a>Scambio CreateSequence  
+ L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` senza alcun elemento `Offer` su una richiesta HTTP. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea una sequenza e trasmette il messaggio `CreateSequenceResponse` senza alcun elemento `Accept` su una richiesta HTTP.  
   
-### Iniziatore duplex, indirizzabile  
+### <a name="duplex-addressable-initiator"></a>Iniziatore duplex, indirizzabile  
   
-#### Associazione  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello di scambio di messaggi bidirezionale completamente asincrono utilizzando due sequenze su un canale HTTP in ingresso e su uno in uscita.Questo modello di scambio può essere combinato con il modello di scambio di messaggi `Request/Reply` dell'iniziatore `Addressable` in modo limitato.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza richieste HTTP per trasmettere tutti i messaggi.Tutte le risposte HTTP hanno un corpo vuoto e un codice di stato HTTP 202.  
+#### <a name="binding"></a>Binding  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello di scambio di messaggi bidirezionale completamente asincrono utilizzando due sequenze su un canale HTTP in ingresso e su uno in uscita. Questo modello di scambio può essere combinato con il modello di scambio di messaggi dell'iniziatore `Request/Reply`, `Addressable` in modo limitato. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi. Tutte le risposte HTTP hanno un corpo vuoto e un codice di stato HTTP 202.  
   
-#### Scambio CreateSequence  
- L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` con un elemento `Offer` su una richiesta HTTP.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che `CreateSequence` abbia un elemento `Offer`, quindi crea una sequenza e trasmette il messaggio `CreateSequenceResponse` con un elemento `Accept`.  
+#### <a name="createsequence-exchange"></a>Scambio CreateSequence  
+ L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` con un elemento `Offer` su una richiesta HTTP. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che `CreateSequence` abbia un elemento `Offer`, quindi crea una sequenza e trasmette il messaggio `CreateSequenceResponse` con un elemento `Accept`.  
   
-#### Durata della sequenza  
+#### <a name="sequence-lifetime"></a>Durata della sequenza  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tratta le due sequenze come una sessione completamente duplex.  
   
- Dopo la generazione di un errore che origina errori in una sequenza, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si aspetta che l'endpoint crei errori in entrambe le sequenze.Dopo la lettura di un errore che origina errori in una sequenza, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea errori in entrambe le sequenze.  
+ Dopo la generazione di un errore che origina errori in una sequenza, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si aspetta che l'endpoint crei errori in entrambe le sequenze. Dopo la lettura di un errore che origina errori in una sequenza, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea errori in entrambe le sequenze.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può chiudere la sequenza in uscita e continuare a elaborare i messaggi sulla sua sequenza in ingresso.Per contro, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può elaborare la chiusura della sequenza in ingresso e continuare a inviare i messaggi sulla sua sequenza in uscita.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può chiudere la sequenza in uscita e continuare a elaborare i messaggi sulla sua sequenza in ingresso. Per contro, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può elaborare la chiusura della sequenza in ingresso e continuare a inviare i messaggi sulla sua sequenza in uscita.  
   
-### Iniziatore request\/reply e unidirezionale, non indirizzabile  
+### <a name="request-reply-and-one-way-non-addressable-initiator"></a>Iniziatore request/reply e unidirezionale, non indirizzabile  
   
-#### Associazione  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello di scambio di messaggi request\/reply e unidirezionale utilizzando due sequenze in un canale HTTP.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi dall'iniziatore alle risposte del risponditore e di HTTP per trasmettere tutti i messaggi dal risponditore all'iniziatore.  
+#### <a name="binding"></a>Binding  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello di scambio di messaggi request/reply e unidirezionale che utilizza due sequenze su un canale HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi dall'iniziatore al risponditore e le risposte HTTP per trasmettere tutti i messaggi dal risponditore all'iniziatore.  
   
-#### Scambio CreateSequence  
- L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` con un elemento `Offer` su una richiesta HTTP e attende il messaggio `CreateSequenceResponse` sulla risposta HTTP.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea una sequenza e trasmette il messaggio `CreateSequenceResponse` con un elemento `Accept` sulla risposta HTTP.  
+#### <a name="createsequence-exchange"></a>Scambio CreateSequence  
+ L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` con un elemento `Offer` su una richiesta HTTP e attende il messaggio `CreateSequenceResponse` sulla risposta HTTP. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea una sequenza e trasmette il messaggio `CreateSequenceResponse` con un elemento `Accept` sulla risposta HTTP.  
   
-#### Messaggio unidirezionale  
- Per completare correttamente uno scambio di messaggi unidirezionale, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio della sequenza di richiesta sulla richiesta HTTP e riceve un messaggio `SequenceAcknowledgement` autonomo sulla risposta HTTP.`SequenceAcknowledgement` deve riconoscere il messaggio trasmesso.  
+#### <a name="one-way-message"></a>Messaggio unidirezionale  
+ Per completare correttamente uno scambio di messaggi unidirezionale, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio della sequenza di richiesta sulla richiesta HTTP e riceve un messaggio `SequenceAcknowledgement` autonomo sulla risposta HTTP. `SequenceAcknowledgement` deve riconoscere il messaggio trasmesso.  
   
  Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può rispondere alla richiesta con un acknowledgement, un errore o una risposta con un corpo vuoto e un codice di stato HTTP 202.  
   
-#### Messaggi bidirezionali  
- Per completare correttamente un protocollo di scambio di messaggi bidirezionale, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio della sequenza di richiesta sulla richiesta HTTP e riceve un messaggio della sequenza di risposta sulla risposta HTTP.La risposta deve contenere un `SequenceAcknowledgement` che riconosce che il messaggio della sequenza di richiesta è stato trasmesso.  
+#### <a name="two-way-messages"></a>Messaggi bidirezionali  
+ Per completare correttamente un protocollo di scambio di messaggi bidirezionale, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio della sequenza di richiesta sulla richiesta HTTP e riceve un messaggio della sequenza di risposta sulla risposta HTTP. La risposta deve contenere un `SequenceAcknowledgement` che riconosce che il messaggio della sequenza di richiesta è stato trasmesso.  
   
  Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può rispondere alla richiesta con una risposta dell'applicazione, un errore o una risposta con un corpo vuoto e un codice di stato HTTP 202.  
   
  A causa della presenza di messaggi unidirezionali e del tempo delle risposte dell'applicazione, il numero di sequenza del messaggio della sequenza di richiesta e il numero di sequenza del messaggio di risposta non hanno alcuna correlazione.  
   
-#### Nuovi tentativi di risposte  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si basa sulla correlazione request\/reply HTTP per la correlazione del protocollo di scambio di messaggi bidirezionali.Di conseguenza, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non smette di tentare un messaggio della sequenza di richiesta quando tale messaggio viene riconosciuto, ma piuttosto quando la risposta HTTP contiene un `SequenceAcknowledgement`, una risposta dell'applicazione o un errore.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ritenta le risposte sulla risposta HTTP della richiesta alla quale è correlata la risposta.  
+#### <a name="retrying-replies"></a>Nuovi tentativi di risposte  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si basa sulla correlazione request/reply HTTP per la correlazione del protocollo di scambio di messaggi bidirezionali. Di conseguenza, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non smette di tentare un messaggio della sequenza di richiesta quando tale messaggio viene riconosciuto, ma piuttosto quando la risposta HTTP contiene un `SequenceAcknowledgement`, una risposta dell'applicazione o un errore. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ritenta le risposte sulla risposta HTTP della richiesta alla quale è correlata la risposta.  
   
-#### Scambio CloseSequence  
+#### <a name="closesequence-exchange"></a>Scambio CloseSequence  
  Dopo avere ricevuto tutti i messaggi della sequenza di risposta e gli acknowledgement per tutti i messaggi della sequenza di richiesta unidirezionali, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CloseSequence` per la sequenza di richiesta su una richiesta HTTP e attende la `CloseSequenceResponse` sulla risposta HTTP.  
   
- Se la sequenza di richiesta viene chiusa in modo implicito, viene chiusa anche la sequenza di risposta.Ciò significa che l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include il `SequenceAcknowledgement` finale della sequenza di risposta sul messaggio `CloseSequence` e che la sequenza di risposta non ha uno scambio `CloseSequence`.  
+ Se la sequenza di richiesta viene chiusa in modo implicito, viene chiusa anche la sequenza di risposta. Ciò significa che l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include il `SequenceAcknowledgement` finale della sequenza di risposta sul messaggio `CloseSequence` e che la sequenza di risposta non ha uno scambio `CloseSequence`.  
   
  Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assicura che tutte le risposte vengano riconosciute e trasmette il messaggio `CloseSequenceResponse` sulla risposta HTTP.  
   
-#### Scambio TerminateSequence  
+#### <a name="terminatesequence-exchange"></a>Scambio TerminateSequence  
  Dopo la ricezione del messaggio `CloseSequenceResponse`, l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `TerminateSequence` per la sequenza di richiesta su una richiesta HTTP e attende la `TerminateSequenceResponse` sulla risposta HTTP.  
   
- Analogamente allo scambio `CloseSequence`, la terminazione della sequenza di richiesta in modo implicito termina la sequenza di risposta.Ciò significa che l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include il `SequenceAcknowledgement` finale della sequenza di risposta sul messaggio `TerminateSequence` e che la sequenza di risposta non ha uno scambio `TerminateSequence`.  
+ Analogamente allo scambio `CloseSequence`, la terminazione della sequenza di richiesta in modo implicito termina la sequenza di risposta. Ciò significa che l'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include il `SequenceAcknowledgement` finale della sequenza di risposta sul messaggio `TerminateSequence` e che la sequenza di risposta non ha uno scambio `TerminateSequence`.  
   
  Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette il messaggio `TerminateSequenceResponse` sulla risposta HTTP.  
   
-### Iniziatore request\/reply, indirizzabile  
+### <a name="requestreply-addressable-initiator"></a>Iniziatore request/reply, indirizzabile  
   
-#### Associazione  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello di scambio di messaggi request\/reply utilizzando due sequenze su un canale HTTP in ingresso e su uno in uscita.Questo modello di scambio può essere combinato con il modello di scambio di messaggi `Duplex, Addressable` in modo limitato.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi.Tutte le risposte HTTP hanno un corpo vuoto e un codice di stato HTTP 202.  
+#### <a name="binding"></a>Binding  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modello di scambio di messaggi request/reply utilizzando due sequenze su un canale HTTP in ingresso e su uno in uscita. Questo modello di scambio può essere combinato con il modello di scambio di messaggi dell'iniziatore `Duplex, Addressable` in modo limitato. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le richieste HTTP per trasmettere tutti i messaggi. Tutte le risposte HTTP hanno un corpo vuoto e un codice di stato HTTP 202.  
   
-#### Scambio CreateSequence  
- L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` con un elemento `Offer` su una richiesta HTTP.Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che `CreateSequence` abbia un elemento `Offer`, quindi crea una sequenza e trasmette il messaggio `CreateSequenceResponse` con un elemento `Accept`.  
+#### <a name="createsequence-exchange"></a>Scambio CreateSequence  
+ L'iniziatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trasmette un messaggio `CreateSequence` con un elemento `Offer` su una richiesta HTTP. Il risponditore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che `CreateSequence` abbia un elemento `Offer`, quindi crea una sequenza e trasmette il messaggio `CreateSequenceResponse` con un elemento `Accept`.  
   
-#### Correlazione request\/reply  
+#### <a name="requestreply-correlation"></a>Correlazione request/reply  
  Quanto riportato di seguito si applica a tutte le richieste e le risposte correlate:  
   
 -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che tutti i messaggi di richiesta dell'applicazione contengano un riferimento all'endpoint `ReplyTo` e un `MessageId`.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applica il riferimento dell'endpoint locale come `ReplyTo` di ogni messaggio di richiesta dell'applicazione.Il riferimento dell'endpoint locale è `ReplyTo` del messaggio `CreateSequence` per l'iniziatore e `To` del messaggio `CreateSequence` per il risponditore.  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applica il riferimento dell'endpoint locale come `ReplyTo` di ogni messaggio di richiesta dell'applicazione. Il riferimento dell'endpoint locale è `CreateSequence` del messaggio `ReplyTo` per l'iniziatore e `CreateSequence` del messaggio `To` per il risponditore.  
   
 -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che i messaggi di richiesta in entrata contengano un `MessageId` e un `ReplyTo`.  
   
 -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che l'URI di riferimento dell'endpoint `ReplyTo` di tutti i messaggi di richiesta dell'applicazione corrisponda al riferimento dell'endpoint locale come definito in precedenza.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che tutte le risposte contengano le intestazioni `RelatesTo` e `To`, in conformità con le regole di correlazione request\/reply di  `wsa`.
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] controlla che tutte le risposte contengano le intestazioni `RelatesTo` e `To`, in conformità con le regole di correlazione request/reply di  `wsa`.

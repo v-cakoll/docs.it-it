@@ -1,34 +1,38 @@
 ---
-title: "Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a811609f601e844d55d4173eb94df24701fcc7d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offre una maggiore integrazione tra i servizi Web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro con priorità al contratto.Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice.Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto.  
+# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offre una maggiore integrazione tra i servizi Web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro con priorità al contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto.  
   
 > [!NOTE]
->  In questo argomento vengono fornite le istruzioni dettagliate per la creazione di un servizio del flusso di lavoro con priorità al contratto \("contract\-first"\).[!INCLUDE[crabout](../../../includes/crabout-md.md)]llo sviluppo del servizio del flusso di lavoro con priorità al contratto \("contract\-first"\), vedere [Sviluppo del servizio del flusso di lavoro con priorità al contratto \("contract\-first"\)](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md).  
+>  In questo argomento viene fornito materiale sussidiario dettagliato per la creazione di un servizio del flusso di lavoro con priorità al contratto ("contract-first"). [!INCLUDE[crabout](../../../includes/crabout-md.md)]lo sviluppo del servizio del flusso di lavoro di priorità al contratto, vedere [sviluppo del servizio del flusso di lavoro prima contratto](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
   
-### Creazione del progetto flusso di lavoro  
+### <a name="creating-the-workflow-project"></a>Creazione del progetto flusso di lavoro  
   
-1.  In [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] fare clic su **File**, quindi su **Nuovo progetto**.Selezionare il nodo **WCF** nel nodo **C\#** nell'albero **Modelli** e selezionare il modello **Applicazione di servizi flusso di lavoro WCF**.  
+1.  In [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]selezionare **File**, **nuovo progetto**. Selezionare il **WCF** nodo sotto il **c#** nodo il **modelli** ad albero e selezionare il **applicazione del servizio del flusso di lavoro WCF** modello.  
   
-2.  Assegnare il nome `ContractFirst` al nuovo progetto, quindi fare clic su **OK**.  
+2.  Denominare il nuovo progetto `ContractFirst` e fare clic su **Ok**.  
   
-### Creazione del contratto di servizio  
+### <a name="creating-the-service-contract"></a>Creazione del contratto di servizio  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**, **Nuovo elemento…**.Selezionare il nodo **Codice** a sinistra e il modello **Classe** a destra.Assegnare il nome `IBookService` alla nuova classe e fare clic su **OK**.  
+1.  Fare clic sul progetto in **Esplora** e selezionare **Aggiungi**, **nuovo elemento...** . Selezionare il **codice** nodo a sinistra e **classe** modello sulla destra. Denominare la nuova classe `IBookService` e fare clic su **Ok**.  
   
 2.  Nella parte superiore della finestra del codice visualizzata, aggiungere un'istruzione Using a `System.Servicemodel`.  
   
@@ -50,20 +54,20 @@ caps.handback.revision: 5
         }  
     ```  
   
-4.  Premere **CTRL\+MAIUSC\+B** per compilare il progetto.  
+4.  Compilare il progetto premendo **Ctrl + MAIUSC + B**.  
   
-### Importazione del contratto di servizio  
+### <a name="importing-the-service-contract"></a>Importazione del contratto di servizio  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e selezionare **Importa contratto del servizio**.In **\<Progetto corrente\>** aprire tutti i sottonodi e selezionare **IBookService**.Scegliere **OK**.  
+1.  Fare clic sul progetto in **Esplora** e selezionare **Importa contratto del servizio**. In  **\<progetto corrente >**, aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**.  
   
-2.  Verrà visualizzata una finestra di dialogo indicante che l'operazione è stata completata correttamente e che le attività generate verranno inserite nella casella degli strumenti dopo che il progetto sarà stato compilato.Scegliere **OK**.  
+2.  Verrà visualizzata una finestra di dialogo indicante che l'operazione è stata completata correttamente e che le attività generate verranno inserite nella casella degli strumenti dopo che il progetto sarà stato compilato. Fare clic su **OK**.  
   
-3.  Compilare il progetto premendo **CTRL\+MAIUSC\+B**; in questo modo le attività importate saranno visualizzate nella casella degli strumenti.  
+3.  Compilare il progetto premendo **Ctrl + MAIUSC + B**, in modo che le attività importate saranno visualizzate nella casella degli strumenti.  
   
-4.  In **Esplora soluzioni** aprire il file Service1.xamlx.Il servizio del flusso di lavoro verrà visualizzata nella finestra di progettazione.  
+4.  In **Esplora**, aprire Service1. xamlx. Il servizio del flusso di lavoro verrà visualizzata nella finestra di progettazione.  
   
-5.  Selezionare l'attività **Sequence**.Nella finestra Proprietà fare clic sul pulsante **…** nella proprietà **ImplementedContract**.Nella finestra **Editor raccolta di tipi** che viene visualizzata fare clic sul menu a discesa **Tipo** e selezionare la voce **Cerca tipi**.Nella finestra di dialogo **Cerca e seleziona un tipo .NET**, in **\<Progetto corrente\>**, aprire tutti i sottonodi e selezionare **IBookService**.Scegliere **OK**.Nella finestra di dialogo **Editor raccolta di tipi** fare clic su **OK**.  
+5.  Selezionare il **sequenza** attività. Nella finestra Proprietà fare clic su di **...** pulsante di **ImplementedContract** proprietà. Nel **Editor raccolta di tipi** finestra visualizzata, fare clic su di **tipo** elenco a discesa e selezionare il **Cerca tipi...** voce. Nel **Cerca e seleziona .net tipo** finestra di dialogo, in  **\<progetto corrente >**, aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**. Nel **Editor raccolta di tipi** finestra di dialogo, fare clic su **OK**.  
   
-6.  Selezionare ed eliminare le attività **ReceiveRequest** e **SendResponse**.  
+6.  Selezionare ed eliminare il **ReceiveRequest** e **SendResponse** attività.  
   
-7.  Dalla casella degli strumenti, trascinare un'attività **Buy\_ReceiveAndSendReply** e un'attività **Checkout\_Receive** sull'attività **Sequential Service**.
+7.  Dalla casella degli strumenti, trascinare un **Buy_ReceiveAndSendReply** e **Checkout_Receive** attività sul **servizio sequenziale** attività.

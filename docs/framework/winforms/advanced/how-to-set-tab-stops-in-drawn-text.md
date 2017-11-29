@@ -1,48 +1,52 @@
 ---
-title: "Procedura: impostare punti di tabulazione nel testo disegnato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "schede, testo disegnato"
-  - "testo, disegno con punti di tabulazione"
+title: 'Procedura: impostare punti di tabulazione nel testo disegnato'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [Windows Forms], drawing with tab stops
+- tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e561e8096780301230071e869dac482a6a908a5e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare punti di tabulazione nel testo disegnato
-È possibile impostare i punti di tabulazione nel testo chiamando il metodo <xref:System.Drawing.StringFormat.SetTabStops%2A> di un oggetto <xref:System.Drawing.StringFormat> e quindi passando l'oggetto <xref:System.Drawing.StringFormat> al metodo <xref:System.Drawing.Graphics.DrawString%2A> della classe <xref:System.Drawing.Graphics>.  
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>Procedura: impostare punti di tabulazione nel testo disegnato
+È possibile impostare punti di tabulazione per il testo chiamando il <xref:System.Drawing.StringFormat.SetTabStops%2A> metodo di un <xref:System.Drawing.StringFormat> oggetto e quindi passando il <xref:System.Drawing.StringFormat> dell'oggetto per il <xref:System.Drawing.Graphics.DrawString%2A> metodo la <xref:System.Drawing.Graphics> classe.  
   
 > [!NOTE]
->  L'oggetto <xref:System.Windows.Forms.TextRenderer?displayProperty=fullName> non supporta l'aggiunta di punti di tabulazione al testo disegnato, sebbene sia possibile espandere i punti di tabulazione esistenti utilizzando il flag <xref:System.Windows.Forms.TextFormatFlags?displayProperty=fullName>.  
+>  Il <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> fa uso non supporta l'aggiunta di punti di tabulazione al testo disegnato, sebbene sia possibile espandere una scheda esistente viene interrotto il <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> flag.  
   
-## Esempio  
- Nell'esempio riportato di seguito vengono impostati i punti di tabulazione sui valori 150, 250 e 350.  Viene poi visualizzato un elenco tabulato di nomi e risultati di esami.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente imposta punti di tabulazione in corrispondenza di 150, 250 e 350. Quindi, il codice visualizza un elenco dei nomi e i punteggi di test.  
   
- Nell'illustrazione che segue si mostra il testo tabulato.  
+ Nella figura seguente mostra il testo a schede.  
   
- ![Testo caratteri](../../../../docs/framework/winforms/advanced/media/fontstext4.png "fontstext4")  
+ ![Tipi di carattere testo](../../../../docs/framework/winforms/advanced/media/fontstext4.png "fontstext4")  
   
- Nel codice seguente vengono passati due argomenti al metodo <xref:System.Drawing.StringFormat.SetTabStops%2A>.  Il secondo argomento è una matrice che contiene offset di tabulazione.  Il primo argomento passato a <xref:System.Drawing.StringFormat.SetTabStops%2A> è 0, che indica che il primo offset nella matrice viene misurato dalla posizione 0, ovvero il margine sinistro del rettangolo di delimitazione.  
+ Il codice seguente passa due argomenti per il <xref:System.Drawing.StringFormat.SetTabStops%2A> metodo. Il secondo argomento è una matrice che contiene gli offset di tabulazione. Il primo argomento passato a <xref:System.Drawing.StringFormat.SetTabStops%2A> è 0, che indica che il primo offset nella matrice viene misurato dalla posizione 0, il bordo sinistro del rettangolo di delimitazione.  
   
  [!code-csharp[System.Drawing.FontsAndText#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+-   L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## Vedere anche  
- [Utilizzo di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
- [Procedura: creare testo con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [Procedura: Creare testo con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

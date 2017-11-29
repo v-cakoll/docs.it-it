@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d5e4c5984054ab54e0a6f33c2e1e17b89ca366f6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a32019a99421cdb2b581f1196a0e477c8e5d30a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticazione di Windows integrata con Protezione estesa
 Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate in <xref:System.Net> e negli spazi dei nomi correlati. È stato aggiunto il supporto per la protezione estesa per migliorare la sicurezza.  
@@ -124,7 +118,7 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
 ## <a name="extended-protection-for-client-applications"></a>Protezione estesa per applicazioni client  
  Il supporto della protezione estesa per la maggior parte delle applicazioni client viene applicato automaticamente. Le classi <xref:System.Net.HttpWebRequest> e <xref:System.Net.Mail.SmtpClient> supportano la protezione estesa ogni volta che la versione sottostante di Windows supporta la protezione estesa. Un'istanza <xref:System.Net.HttpWebRequest> invia un SPN costruito da <xref:System.Uri>. Per impostazione predefinita, un'istanza <xref:System.Net.Mail.SmtpClient> invia un SPN costruito dal nome host del server di posta SMTP.  
   
- Per l'autenticazione personalizzata, le applicazioni client possono usare i metodi <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=fullName> e <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=fullName> nella classe <xref:System.Net.HttpWebRequest>, che permettono il recupero di <xref:System.Net.TransportContext> e del token di associazione del canale con il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A>.  
+ Per l'autenticazione personalizzata, le applicazioni client possono usare i metodi <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> e <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> nella classe <xref:System.Net.HttpWebRequest>, che permettono il recupero di <xref:System.Net.TransportContext> e del token di associazione del canale con il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A>.  
   
  L'SPN da usare per l'autenticazione integrata di Windows inviato da un'istanza <xref:System.Net.HttpWebRequest> a un servizio specifico può essere sostituito impostando la proprietà <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A>.  
   
@@ -133,7 +127,7 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
 ## <a name="extended-protection-for-server-applications"></a>Protezione estesa per applicazioni server  
  <xref:System.Net.HttpListener> fornisce automaticamente i meccanismi per la convalida delle associazioni di servizi durante l'autenticazione HTTP.  
   
- Lo scenario più sicuro consiste nell'abilitare la protezione estesa per i prefissi HTTPS://. In questo caso, impostare <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=fullName> su <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> impostato su <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> o <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> e <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> impostato su <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>. Il valore <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> attiva la modalità parzialmente avanzata per <xref:System.Net.HttpListener>, mentre <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> corrisponde alla modalità completamente avanzata.  
+ Lo scenario più sicuro consiste nell'abilitare la protezione estesa per i prefissi HTTPS://. In questo caso, impostare <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> su <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> impostato su <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> o <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> e <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> impostato su <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>. Il valore <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> attiva la modalità parzialmente avanzata per <xref:System.Net.HttpListener>, mentre <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> corrisponde alla modalità completamente avanzata.  
   
  Quando in questa configurazione viene effettuata una richiesta al server tramite un canale sicuro esterno, viene eseguita una query sul canale esterno per ottenere un'associazione di canali. Questa associazione di canali viene passata alle chiamate SSPI di autenticazione, che convalidano la corrispondenza dell'associazione di canali nel BLOB di autenticazione. I risultati possono essere tre:  
   
@@ -145,7 +139,7 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
  Se un'applicazione effettua le proprie chiamate SSPI per eseguire l'autenticazione in base a BLOB scambiati all'interno del corpo di una richiesta HTTP e vuole supportare l'associazione di canali, deve recuperare l'associazione di canali prevista dal canale sicuro esterno usando <xref:System.Net.HttpListener> per passarla alla funzione [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) Win32 nativa. A questo scopo, usare la proprietà <xref:System.Net.HttpListenerRequest.TransportContext%2A> e chiamare il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A> per recuperare il token di associazione del canale. Sono supportate solo le associazioni di endpoint. Se si specifica altro rispetto a <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, viene generata un'eccezione <xref:System.NotSupportedException>. Se il sistema operativo sottostante supporta l'associazione di canali, il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A> restituisce un oggetto <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> che esegue il wrapping di un puntatore a un'associazione di canali adatta per il passaggio alla funzione [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) come membro pvBuffer di una struttura SecBuffer passata nel parametro `pInput`. La proprietà <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> contiene la lunghezza in byte dell'associazione di canali. Se il sistema operativo sottostante non supporta le associazioni di canali, la funzione restituisce `null`.  
   
- Un altro possibile scenario consiste nell'abilitare la protezione estesa per i prefissi HTTP:// quando non si usano proxy. In questo caso, impostare <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=fullName> su <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> impostato su <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> o <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> e <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> impostato su <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>. Il valore <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> attiva la modalità parzialmente avanzata per <xref:System.Net.HttpListener>, mentre <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> corrisponde alla modalità completamente avanzata.  
+ Un altro possibile scenario consiste nell'abilitare la protezione estesa per i prefissi HTTP:// quando non si usano proxy. In questo caso, impostare <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> su <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> impostato su <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> o <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> e <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> impostato su <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>. Il valore <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> attiva la modalità parzialmente avanzata per <xref:System.Net.HttpListener>, mentre <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> corrisponde alla modalità completamente avanzata.  
   
  Viene creato un elenco predefinito dei nomi di servizio consentiti in base ai prefissi registrati con <xref:System.Net.HttpListener>. Questo elenco predefinito può essere esaminato tramite la proprietà <xref:System.Net.HttpListener.DefaultServiceNames%2A>. Se questo elenco non è completo, un'applicazione può specificare una raccolta di nomi di servizio personalizzata nel costruttore per la classe <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>, da usare al posto dell'elenco dei nomi di servizio predefinito.  
   
@@ -164,6 +158,5 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
  Queste funzionalità di protezione estesa possono essere usate dalle applicazioni server anche per l'autenticazione con altri tipi di richieste e quando si usano proxy attendibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Authentication.ExtendedProtection>   
+ <xref:System.Security.Authentication.ExtendedProtection>  
  <xref:System.Security.Authentication.ExtendedProtection.Configuration>
-

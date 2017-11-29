@@ -7,24 +7,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Protocollo PNRP (Peer Name Resolution Protocol)
+# <a name="peer-name-resolution-protocol"></a>Protocollo PNRP (Peer Name Resolution Protocol)
 Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specifici per dedurre l'ubicazione di rete reciproca (indirizzi, protocolli e porte) dai nomi o altri tipi di identificatori. Nel passato, la risoluzione dei nomi peer era complicata dalla transitorietà intrinseca della connettività e da altri inconvenienti nel sistema DNS (Domain Name System).  
   
  La piattaforma di rete Microsoft® Windows® Peer-to-Peer Networking risolve il problema relativo al protocollo di risoluzione del nome del peer (PNRP), offrendo un protocollo sicuro, scalabile e dinamico di registrazione e risoluzione dei nomi sviluppato per la prima volta per Windows XP e quindi aggiornato in Windows Vista™. PNRP funziona in modo molto diverso dai tradizionali sistemi di risoluzione dei nomi, aprendo nuove ed entusiasmanti possibilità per gli sviluppatori di applicazioni.  
@@ -45,7 +39,7 @@ Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specif
   
 -  
   
-## Spazio dei nomi System.Net.PeerToPeer  
+## <a name="the-systemnetpeertopeer-namespace"></a>Spazio dei nomi System.Net.PeerToPeer  
   
 -   Le funzionalità del protocollo PNRP sono definite dallo spazio dei nomi <xref:System.Net.PeerToPeer> all'interno di .NET Framework versione 3.5. È disponibile un set di tipi che può essere usato per registrare e risolvere i nomi di peer con un servizio PNRP disponibile.  
   
@@ -73,9 +67,8 @@ Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specif
   
 -  
   
-## Vedere anche  
- <xref:System.ServiceModel.PeerResolvers>   
- <xref:System.Net.PeerToPeer>   
- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.PeerResolvers>  
+ <xref:System.Net.PeerToPeer>  
+ [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
  [PeerToPeer Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)
-

@@ -1,61 +1,69 @@
 ---
-title: "&lt;activityScheduledQueries&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;activityScheduledQueries&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: ca6e82f1-54f2-48d6-899c-9873065b5547
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 686b58d9efa4420de26fd7be52fe76208af63c6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;activityScheduledQueries&gt;
-Rappresenta una raccolta di query usate per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.  La query è necessaria affinché un partecipante del rilevamento sottoscriva i record pianificati dell'attività.  
+# <a name="ltactivityscheduledqueriesgt"></a>&lt;activityScheduledQueries&gt;
+Rappresenta una raccolta di query usate per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre. La query è necessaria affinché un partecipante del rilevamento sottoscriva i record pianificati dell'attività.  
   
- Per altre informazioni sulle query relative ai profili di rilevamento, vedere [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+ Per ulteriori informazioni sulla query del profilo di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-## Sintassi  
+\<System. ServiceModel >  
+\<rilevamento >  
+\<trackingProfile >  
+\<flusso di lavoro >  
+\<activityScheduledQueries >  
   
-```vb  
+## <a name="syntax"></a>Sintassi  
   
-<tracking>  
-     <trackingProfile name="Name">  
-       <workflow>  
-          <activityScheduledQueries>  
-             <activityScheduledQuery activityName="String"  
-                 childActivityName="String"/>  
-          </activityScheduledQueries>  
-       </workflow>  
-     </trackingProfile>  
+```xml  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <activityScheduledQueries>
+        <activityScheduledQuery activityName="String" 
+                                childActivityName="String" />
+      </activityScheduledQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<activityScheduledQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|Query usata per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.|  
+|-------------|-----------------|  
+|[\<activityScheduledQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|Query usata per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<workflow\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà **activityDefinitionId**.|  
+|-------------|-----------------|  
+|[\<flusso di lavoro >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Un elemento di configurazione che contiene tutte le query per un flusso di lavoro specifico identificato dal **activityDefinitionId** proprietà.|  
   
-## Vedere anche  
- [System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.ActivityScheduledQuery](assetId:///System.Activities.Tracking.ActivityScheduledQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection?displayProperty=nameWithType>       
+ <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>       
+ [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

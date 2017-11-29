@@ -1,29 +1,33 @@
 ---
-title: "Database di persistenza SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Database di persistenza SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 26feff95fb6d6584f487a408566aee089a57ad7f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Database di persistenza SQL Server
-In questa sezione vengono forniti dettagli su viste di database pubbliche supportate dall'archivio di istanze del flusso di lavoro SQL e viene descritto come deserializzare le proprietà di dati di istanza primitive e come eseguire query per istanze non persistenti.  
+# <a name="sql-server-persistence-database"></a>Database di persistenza SQL Server
+Contenuto della sezione vengono forniti dettagli su viste di database pubbliche supportate dall'archivio di istanze del flusso di lavoro SQL e viene descritto come deserializzare le proprietà di dati di istanza primitive e come eseguire query per istanze non persistenti.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Schema di database di persistenza](../../../docs/framework/windows-workflow-foundation//persistence-database-schema.md)  
+-   [Schema del database di persistenza](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
   
--   [Procedura: deserializzare le proprietà dei dati dell'istanza](../../../docs/framework/windows-workflow-foundation//how-to-deserialize-instance-data-properties.md)  
+-   [Procedura: Deserializzare le proprietà dei dati dell'istanza](../../../docs/framework/windows-workflow-foundation/how-to-deserialize-instance-data-properties.md)  
   
--   [Procedura: Eseguire query per istanze non persistenti](../../../docs/framework/windows-workflow-foundation//how-to-query-for-non-persisted-instances.md)  
+-   [Procedura: Eseguire query per istanze non persistenti](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
   
-## Vedere anche  
- [Database di persistenza SQL Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)
+## <a name="see-also"></a>Vedere anche  
+ [Database di persistenza di AppFabric SQL Server](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)

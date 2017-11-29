@@ -1,48 +1,49 @@
 ---
-title: "Controllo ComboBox (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "caselle combinate"
-  - "caselle combinate, controlli Windows Form"
-  - "ComboBox (controllo) [Windows Form]"
-  - "elenchi a discesa, ComboBox (controllo)"
-  - "elenchi a discesa, Windows Form"
-  - "controlli elenco, Windows Form"
-  - "voci elenco, controlli Windows Form che visualizzano"
+title: Controllo ComboBox (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drop-down lists [Windows Forms], Windows Forms
+- list controls [Windows Forms], Windows Forms
+- combo boxes [Windows Forms], Windows Forms controls
+- combo boxes
+- list items [Windows Forms], Windows Forms controls that display
+- drop-down lists [Windows Forms], ComboBox control
+- ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Controllo ComboBox (Windows Form)
-Il controllo `ComboBox` Windows Form viene utilizzato per visualizzare dati in una casella combinata a discesa.  Per impostazione predefinita, il controllo `ComboBox` è costituito da due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco,  la seconda parte è una casella di riepilogo che visualizza un elenco dal quale l'utente può selezionare una o più voci.  
+# <a name="combobox-control-windows-forms"></a>Controllo ComboBox (Windows Form)
+Windows Form `ComboBox` controllo viene utilizzato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il `ComboBox` verrà visualizzato un controllo in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco. La seconda parte è una casella di riepilogo che consente di visualizzare un elenco di elementi da cui l'utente può selezionare uno.  
   
-## In questa sezione  
- [Cenni preliminari sul controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- Viene fornita una definizione del controllo e ne vengono illustrate funzionalità chiave e proprietà.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica sul controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
- [Procedura: creare testo di dimensioni variabili in un controllo ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
- Viene illustrato il disegno personalizzato di testo in un controllo `ComboBox`.  
+ [Procedura: Creare testo di dimensioni variabili in un controllo ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ Viene illustrato il disegno personalizzato di testo in un `ComboBox` controllo.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.ComboBox>  
- Viene descritta la classe e forniti i collegamenti a tutti i relativi membri.  
+ Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Controlli Windows Form usati per elencare opzioni](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Viene fornito un elenco di possibili operazioni eseguibili con caselle di riepilogo, caselle combinate e caselle di riepilogo selezionate.  
+ Fornisce un elenco di operazioni che è possibile eseguire con caselle di riepilogo, caselle combinate e caselle di riepilogo selezionate.  
   
-## Vedere anche  
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

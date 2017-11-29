@@ -1,25 +1,28 @@
 ---
-title: "Autorizzazione personalizzata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Autorizzazione personalizzata
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f90311a-2593-462e-9174-2f7ac78217b9
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d6eaa86880f8c867ecc7d219f5c0c4bc453e893d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Autorizzazione personalizzata
-L'autorizzazione è il processo di controllo dell'accesso a risorse e attività.Negli argomenti di questa sezione viene illustrato come creare e implementare diversi tipi di attestazione o criteri.  
+# <a name="custom-authorization"></a>Autorizzazione personalizzata
+L'autorizzazione è il processo di controllo dell'accesso a risorse e attività. Negli argomenti di questa sezione viene illustrato come creare e implementare diversi tipi di attestazione o criteri.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: creare un criterio di autorizzazione personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
  Descrive come creare un criterio personalizzato.  
   
@@ -32,13 +35,13 @@ L'autorizzazione è il processo di controllo dell'accesso a risorse e attività.
  [Procedura: confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  Descrive come confrontare le attestazioni.  
   
- [Procedura: creare l'identità di un'entità personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
- Illustra lo scenario quando <xref:System.ServiceModel.Description.PrincipalPermissionMode> viene utilizzato in combinazione con un criterio di autorizzazione personalizzato e con un'entità personalizzata.  
+ [Procedura: creare un'identità di entità personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
+ Illustra lo scenario quando <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> viene utilizzato in combinazione con un criterio di autorizzazione personalizzato e con un'entità personalizzata.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.IdentityModel.Claims>  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
  [Estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md)

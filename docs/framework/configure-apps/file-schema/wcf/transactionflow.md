@@ -1,62 +1,70 @@
 ---
-title: "&lt;transactionFlow&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;transactionFlow&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8c40b3a79567ccc1ca5a83631253d3ff6ead0f84
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;transactionFlow&gt;
+# <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
 Specifica il supporto del flusso di transazione per l'associazione personalizzata.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<associazioni >  
+\<customBinding >  
+\<associazione >  
+\<transactionFlow >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|transactionProtocol|Specifica il protocollo di transazione da usare.  Di seguito vengono elencati i valori validi:<br /><br /> -   OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> L'impostazione predefinita è OleTransactions.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.TransactionProtocol>.|  
+|transactionProtocol|Specifica il protocollo di transazione da usare. Di seguito vengono elencati i valori validi:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> L'impostazione predefinita è OleTransactions.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.TransactionProtocol>.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<associazione\>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|-------------|-----------------|  
+|[\<associazione >](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
-## Note  
- Questo elemento consente di abilitare o disabilitare il flusso delle transazioni in arrivo nelle impostazioni di associazione di un endpoint, nonché di specificare il formato del protocollo di transazione desiderato per le transazioni in arrivo.  Per altre informazioni sull'utilizzo di questo elemento di configurazione, vedere [Configurazione delle transazioni ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md) e [Attivazione del flusso delle transazioni](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+## <a name="remarks"></a>Note  
+ Questo elemento consente di abilitare o disabilitare il flusso delle transazioni in arrivo nelle impostazioni di associazione di un endpoint, nonché di specificare il formato del protocollo di transazione desiderato per le transazioni in arrivo. Per ulteriori informazioni sull'utilizzo di questo elemento di configurazione, vedere [configurazione delle transazioni ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md) e [abilitazione del flusso di transazione](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
 > [!CAUTION]
->  Quando viene usato il protocollo `OleTransactions` per propagare transazioni da endpoint a endpoint, il timeout della transazione può essere perso se l'endpoint di destinazione tenta di eseguire nuovamente la propagazione usando un protocollo diverso da `OleTransactions`.  Ciò può provocare un ritardo del timeout di tutti i nodi di livello inferiore dopo l'hop OleTransactions.  
+>  Quando viene usato il protocollo `OleTransactions` per propagare transazioni da endpoint a endpoint, il timeout della transazione può essere perso se l'endpoint di destinazione tenta di eseguire nuovamente la propagazione usando un protocollo diverso da `OleTransactions`. Ciò può provocare un ritardo del timeout di tutti i nodi di livello inferiore dopo l'hop OleTransactions.  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.TransactionFlowElement>   
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Configurazione delle transazioni ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)   
- [Attivazione del flusso delle transazioni](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Configuration.TransactionFlowElement>  
+ <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [Configurazione delle transazioni ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
+ [Attivazione del flusso delle transazioni](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
+ [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
+ [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

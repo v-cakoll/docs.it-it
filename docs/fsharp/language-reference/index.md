@@ -1,6 +1,6 @@
 ---
 title: Riferimenti per il linguaggio F#
-description: Riferimenti per il linguaggio F#
+description: "Trovare informazioni funzionalità del linguaggio F # da questo riferimento a token di lingua, concetti, tipi, espressioni e argomenti costrutto supportati dal compilatore."
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: b1707be1-7b7c-4fdd-a717-d9c190bc5fb5
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: e0b7058513b0487902b2a57b889e77df1abfef98
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 0d26d5a6f47ce8a92aefe338ea8c39295d042794
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
-Questa sezione è un riferimento al linguaggio F#, un linguaggio di programmazione multi-paradigma destinato alla piattaforma .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
+In questa sezione è un riferimento al linguaggio F #, un linguaggio di programmazione multi-paradigma per .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
 
 
 ## <a name="f-tokens"></a>Token F#

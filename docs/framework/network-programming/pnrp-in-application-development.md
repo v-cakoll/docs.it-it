@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f20dd62b5b872b932639a10df1e1636798ba963
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 752b354df897fa37bc45c1bbd1969cf93aac87ed
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="pnrp-in-application-development"></a>PNRP nello sviluppo di applicazioni
 In Windows Vista, le applicazioni di rete possono accedere alle funzioni di risoluzione e pubblicazione dei nomi tramite un'API PNRP semplificata.  
@@ -36,4 +30,3 @@ In Windows Vista, le applicazioni di rete possono accedere alle funzioni di riso
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.PeerToPeer>
-

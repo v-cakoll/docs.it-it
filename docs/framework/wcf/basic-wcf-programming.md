@@ -1,34 +1,34 @@
 ---
-title: "Programmazione WCF di base | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "programmazione di base [WCF]"
-  - "WCF [WCF], programmazione di base"
-  - "WCF [WCF], programmazione"
-  - "Windows Communication Foundation [WCF], programmazione di base"
-  - "Windows Communication Foundation [WCF], programmazione"
+title: Programmazione WCF di base
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- basic programming [WCF]
+- WCF [WCF], basic programming
+- WCF [WCF], programming
+- Windows Communication Foundation [WCF], basic programming
+- Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fa43705fd20a60512ca4c460bb3048220aa1e193
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Programmazione WCF di base
-In questa sezione vengono illustrati i principi per la creazione di applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+# <a name="basic-wcf-programming"></a>Programmazione WCF di base
+Contenuto della sezione vengono illustrati i principi per la creazione di applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Ciclo di vita della programmazione di base](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  Descrive il ciclo di vita relativo alla progettazione, generazione e distribuzione di applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
@@ -38,7 +38,7 @@ In questa sezione vengono illustrati i principi per la creazione di applicazioni
  [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)  
  Descrive come configurare un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per supportare i requisiti del contratto, personalizzare il comportamento in fase di esecuzione locale e indicare l'indirizzo per pubblicare il servizio.  
   
- [Servizi host](../../../docs/framework/wcf/hosting-services.md)  
+ [Servizi di hosting](../../../docs/framework/wcf/hosting-services.md)  
  Descrive le caratteristiche fondamentali dei servizi host in un'applicazione.  
   
  [Creazione di client](../../../docs/framework/wcf/building-clients.md)  
@@ -53,14 +53,14 @@ In questa sezione vengono illustrati i principi per la creazione di applicazioni
  [API Web ASP.NET e WCF](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
  Vengono illustrate le due tecnologie, come interagiscono tra loro e quando utilizzarle.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Description>  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Requisiti di sistema](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
  [Panoramica dei concetti](../../../docs/framework/wcf/conceptual-overview.md)  
@@ -69,12 +69,12 @@ In questa sezione vengono illustrati i principi per la creazione di applicazioni
   
  [Linee guida e procedure consigliate](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
   
- [Windows Communication Foundation Tools](../../../docs/framework/wcf/tools.md)  
+ [Strumenti Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/it-it/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Esempi di Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [Guida introduttiva](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [Introduzione](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   
- [Hosting IIS mediante il codice inline](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [Hosting IIS mediante il codice Inline](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
   
  [Servizio indipendente](../../../docs/framework/wcf/samples/self-host.md)

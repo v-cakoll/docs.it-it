@@ -5,30 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - platform invoke, marshaling data
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70383e7623852935c0192e700b798a5f0ec554aa
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshalling dei dati con platform invoke
 Per chiamare le funzioni esportate da una libreria non gestita, un'applicazione .NET Framework richiede un prototipo di funzione nel codice gestito che rappresenta la funzione non gestita. Per creare un prototipo che abiliti PInvoke per effettuare il marshalling dei dati in modo corretto, è necessario eseguire le operazioni seguenti:  
@@ -46,24 +40,24 @@ Per chiamare le funzioni esportate da una libreria non gestita, un'applicazione 
   
 |Tipo non gestito in Wtypes.h|Tipo non gestito del linguaggio C|Nome della classe gestita|Descrizione|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=fullName>|32 bit nei sistemi operativi Windows a 32 bit, 64 bit nei sistemi operativi Windows a 64 bit.|  
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=fullName>|8 bit|  
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=fullName>|16 bit|  
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=fullName>|16 bit|  
-|**INT**|**int**|<xref:System.Int32?displayProperty=fullName>|32 bit|  
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=fullName>|32 bit|  
-|**LONG**|**long**|<xref:System.Int32?displayProperty=fullName>|32 bit|  
+|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bit nei sistemi operativi Windows a 32 bit, 64 bit nei sistemi operativi Windows a 64 bit.|  
+|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 bit|  
+|**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 bit|  
+|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 bit|  
+|**INT**|**int**|<xref:System.Int32?displayProperty=nameWithType>|32 bit|  
+|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=nameWithType>|32 bit|  
+|**LONG**|**long**|<xref:System.Int32?displayProperty=nameWithType>|32 bit|  
 |**BOOL**|**long**|<xref:System.Byte>|32 bit|  
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 bit|  
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 bit|  
-|**CHAR**|**char**|<xref:System.Char?displayProperty=fullName>|Decorare con ANSI.|  
-|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=fullName>|Decorare con Unicode.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=fullName> o <xref:System.Text.StringBuilder?displayProperty=fullName>|Decorare con ANSI.|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=fullName> o <xref:System.Text.StringBuilder?displayProperty=fullName>|Decorare con ANSI.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=fullName> o <xref:System.Text.StringBuilder?displayProperty=fullName>|Decorare con Unicode.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=fullName> o <xref:System.Text.StringBuilder?displayProperty=fullName>|Decorare con Unicode.|  
-|**FLOAT**|**Float**|<xref:System.Single?displayProperty=fullName>|32 bit|  
-|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=fullName>|64 bit|  
+|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 bit|  
+|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 bit|  
+|**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Decorare con ANSI.|  
+|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Decorare con Unicode.|  
+|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorare con ANSI.|  
+|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorare con ANSI.|  
+|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorare con Unicode.|  
+|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorare con Unicode.|  
+|**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 bit|  
+|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 bit|  
   
  Per i tipi corrispondenti in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++, vedere [Introduzione alla libreria di classi .NET Framework](../../../docs/standard/class-library-overview.md).  
   
@@ -74,4 +68,3 @@ Per chiamare le funzioni esportate da una libreria non gestita, un'applicazione 
  [!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]  
   
  [!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]
-

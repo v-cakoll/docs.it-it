@@ -1,52 +1,58 @@
 ---
-title: "Contatori di prestazioni in ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contatori di prestazioni in ADO.NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 18403ac8237b1e129ec07e0271ff75194d944855
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Contatori di prestazioni in ADO.NET
-In ADO.NET 2.0 è stato introdotto il supporto esteso per i contatori delle prestazioni, che include il supporto per <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>.  I contatori delle prestazioni <xref:System.Data.SqlClient> disponibili nelle versioni precedenti di ADO.NET sono stati deprecati e sostituiti con i nuovi contatori delle prestazioni descritti in questo argomento.  È possibile usare i contatori delle prestazioni di ADO.NET per monitorare lo stato dell'applicazione e le risorse di connessione che usa.  I contatori delle prestazioni possono essere monitorati tramite Performance Monitor di Windows. In alternativa, è possibile accedervi a livello di codice usando la classe <xref:System.Diagnostics.PerformanceCounter> nello spazio dei nomi <xref:System.Diagnostics>.  
+# <a name="performance-counters-in-adonet"></a>Contatori di prestazioni in ADO.NET
+In ADO.NET 2.0 è stato introdotto il supporto esteso per i contatori delle prestazioni, che include il supporto per <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>. I contatori delle prestazioni <xref:System.Data.SqlClient> disponibili nelle versioni precedenti di ADO.NET sono stati deprecati e sostituiti con i nuovi contatori delle prestazioni descritti in questo argomento. È possibile usare i contatori delle prestazioni di ADO.NET per monitorare lo stato dell'applicazione e le risorse di connessione che usa. I contatori delle prestazioni possono essere monitorati tramite Performance Monitor di Windows. In alternativa, è possibile accedervi a livello di codice usando la classe <xref:System.Diagnostics.PerformanceCounter> nello spazio dei nomi <xref:System.Diagnostics>.  
   
-## Contatori delle prestazioni disponibili  
- Attualmente per <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient> sono disponibili 14 contatori delle prestazioni diversi, come descritto nella tabella seguente.  Si noti che i nomi dei singoli contatori non sono localizzati nelle versioni internazionali di Microsoft .NET Framework.  
+## <a name="available-performance-counters"></a>Contatori delle prestazioni disponibili  
+ Attualmente per <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient> sono disponibili 14 contatori delle prestazioni diversi, come descritto nella tabella seguente. Si noti che i nomi dei singoli contatori non sono localizzati nelle versioni internazionali di Microsoft .NET Framework.  
   
 |Contatore delle prestazioni|Descrizione|  
-|---------------------------------|-----------------|  
+|-------------------------|-----------------|  
 |`HardConnectsPerSecond`|Numero di connessioni al secondo eseguite a un server database.|  
 |`HardDisconnectsPerSecond`|Numero di disconnessioni al secondo eseguite a un server database.|  
-|`NumberOfActiveConnectionPoolGroups`|Numero di gruppi univoci di pool di connessioni attivi.  Questo contatore è controllato dal numero di stringhe di connessione univoche disponibili in AppDomain.|  
+|`NumberOfActiveConnectionPoolGroups`|Numero di gruppi univoci di pool di connessioni attivi. Questo contatore è controllato dal numero di stringhe di connessione univoche disponibili in AppDomain.|  
 |`NumberOfActiveConnectionPools`|Numero complessivo di pool di connessioni.|  
-|`NumberOfActiveConnections`|Numero di connessioni attive al momento in uso. **Note:**  Per impostazione predefinita, questo contatore delle prestazioni non è abilitato.  Per abilitarlo, vedere [Attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|Numero di connessioni disponibili per l'uso nei pool di connessioni. **Note:**  Per impostazione predefinita, questo contatore delle prestazioni non è abilitato.  Per abilitarlo, vedere [Attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
-|`NumberOfInactiveConnectionPoolGroups`|Numero di gruppi univoci di pool di connessioni attivi contrassegnati per l'eliminazione.  Questo contatore è controllato dal numero di stringhe di connessione univoche disponibili in AppDomain.|  
+|`NumberOfActiveConnections`|Numero di connessioni attive al momento in uso. **Nota:** questo contatore delle prestazioni non è abilitato per impostazione predefinita. Per abilitare questo contatore delle prestazioni, vedere [attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
+|`NumberOfFreeConnections`|Numero di connessioni disponibili per l'uso nei pool di connessioni. **Nota:** questo contatore delle prestazioni non è abilitato per impostazione predefinita. Per abilitare questo contatore delle prestazioni, vedere [attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
+|`NumberOfInactiveConnectionPoolGroups`|Numero di gruppi univoci di pool di connessioni attivi contrassegnati per l'eliminazione. Questo contatore è controllato dal numero di stringhe di connessione univoche disponibili in AppDomain.|  
 |`NumberOfInactiveConnectionPools`|Numero di pool di connessioni inattivi in cui non si è verificata alcuna attività recente e che sono in attesa di essere eliminati.|  
 |`NumberOfNonPooledConnections`|Numero di connessioni attive che non sono in pool.|  
 |`NumberOfPooledConnections`|Numero di connessioni attive gestite dall'infrastruttura del pool di connessioni.|  
-|`NumberOfReclaimedConnections`|Numero di connessioni che sono state recuperate tramite Garbage Collection laddove per l'applicazione non è stato chiamato `Close` o `Dispose`.  La mancata chiusura o eliminazione esplicita delle connessioni influisce negativamente sulle prestazioni.|  
+|`NumberOfReclaimedConnections`|Numero di connessioni che sono state recuperate tramite Garbage Collection laddove per l'applicazione non è stato chiamato `Close` o `Dispose`. La mancata chiusura o eliminazione esplicita delle connessioni influisce negativamente sulle prestazioni.|  
 |`NumberOfStasisConnections`|Numero di connessioni attualmente in attesa del completamento di un'azione e che non sono pertanto disponibili per l'uso da parte dell'applicazione.|  
-|`SoftConnectsPerSecond`|Numero di connessioni attive rimosse dal pool di connessioni. **Note:**  Per impostazione predefinita, questo contatore delle prestazioni non è abilitato.  Per abilitarlo, vedere [Attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|Numero di connessioni attive restituite al pool di connessioni. **Note:**  Per impostazione predefinita, questo contatore delle prestazioni non è abilitato.  Per abilitarlo, vedere [Attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
+|`SoftConnectsPerSecond`|Numero di connessioni attive rimosse dal pool di connessioni. **Nota:** questo contatore delle prestazioni non è abilitato per impostazione predefinita. Per abilitare questo contatore delle prestazioni, vedere [attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
+|`SoftDisconnectsPerSecond`|Numero di connessioni attive restituite al pool di connessioni. **Nota:** questo contatore delle prestazioni non è abilitato per impostazione predefinita. Per abilitare questo contatore delle prestazioni, vedere [attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
   
-### Gruppi e pool di connessioni e pool di connessioni  
- Quando si usa l'autenticazione di Windows \(sicurezza integrata\), è necessario monitorare i contatori delle prestazioni `NumberOfActiveConnectionPoolGroups` e `NumberOfActiveConnectionPools`.  Il motivo è che questi gruppi di pool di connessioni sono mappati a stringhe di connessione univoche.  Quando si usa la sicurezza integrata, i pool di connessioni vengono mappati a stringhe di connessione e inoltre creano pool distinti per le singole identità di Windows.  Ad esempio, se Fred e Julie, ognuno all'interno dello stesso AppDomain, usano la stessa stringa di connessione `"Data Source=MySqlServer;Integrated Security=true"`, viene creato un gruppo di pool di connessioni per la stringa di connessione e due pool aggiuntivi, uno per Fred e l'altro per Julie.  Se John e Martha usano una stringa di connessione con un account di accesso di SQL Server identico, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, verrà creato un singolo pool per l'identità **lowPrivUser**.  
+### <a name="connection-pool-groups-and-connection-pools"></a>Gruppi e pool di connessioni e pool di connessioni  
+ Quando si usa l'autenticazione di Windows (sicurezza integrata), è necessario monitorare i contatori delle prestazioni `NumberOfActiveConnectionPoolGroups` e `NumberOfActiveConnectionPools`. Il motivo è che questi gruppi di pool di connessioni sono mappati a stringhe di connessione univoche. Quando si usa la sicurezza integrata, i pool di connessioni vengono mappati a stringhe di connessione e inoltre creano pool distinti per le singole identità di Windows. Ad esempio, se Fred e Julie, ognuno all'interno dello stesso AppDomain, usano la stessa stringa di connessione `"Data Source=MySqlServer;Integrated Security=true"`, viene creato un gruppo di pool di connessioni per la stringa di connessione e due pool aggiuntivi, uno per Fred e l'altro per Julie. Se John e Martha usano una stringa di connessione con un accesso di SQL Server identico, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, viene creato un singolo pool per il **lowPrivUser** identità.  
   
 <a name="ActivatingOffByDefault"></a>   
-### Attivazione di contatori disattivati per impostazione predefinita  
- I contatori delle prestazioni `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond` e `SoftConnectsPerSecond` sono disattivati per impostazione predefinita.  Aggiungere le informazioni seguenti al file di configurazione dell'applicazione per abilitarli:  
+### <a name="activating-off-by-default-counters"></a>Attivazione di contatori disattivati per impostazione predefinita  
+ I contatori delle prestazioni `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond` e `SoftConnectsPerSecond` sono disattivati per impostazione predefinita. Aggiungere le informazioni seguenti al file di configurazione dell'applicazione per abilitarli:  
   
-```  
+```xml  
 <system.diagnostics>  
   <switches>  
     <add name="ConnectionPoolPerformanceCounterDetail"  
@@ -55,13 +61,13 @@ In ADO.NET 2.0 è stato introdotto il supporto esteso per i contatori delle pres
 </system.diagnostics>  
 ```  
   
-## Recupero di valori dei contatori delle prestazioni  
- Nell'applicazione console seguente viene illustrato come recuperare i valori dei contatori delle prestazioni nell'applicazione.  Affinché vengano restituite informazioni per tutti i contatori delle prestazioni di ADO.NET, è necessario che le connessioni siano aperte a attive.  
+## <a name="retrieving-performance-counter-values"></a>Recupero di valori dei contatori delle prestazioni  
+ Nell'applicazione console seguente viene illustrato come recuperare i valori dei contatori delle prestazioni nell'applicazione. Affinché vengano restituite informazioni per tutti i contatori delle prestazioni di ADO.NET, è necessario che le connessioni siano aperte a attive.  
   
 > [!NOTE]
->  In questo esempio viene usato il database di esempio **AdventureWorks** incluso in [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  Per le stringhe di connessione indicate nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale con il nome di istanza SqlExpress e che siano stati creati account di accesso di SQL Server corrispondenti a quelli specificati nelle stringhe di connessione.  Può essere necessario abilitare gli account di accesso di SQL Server se il server è stato configurato con le impostazioni di sicurezza predefinite, che consentono solo l'autenticazione di Windows.  Apportare le modifiche necessarie alle stringhe di connessione in base all'ambiente.  
+>  In questo esempio viene utilizzato l'esempio **AdventureWorks** database incluso con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Per le stringhe di connessione indicate nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale con il nome di istanza SqlExpress e che siano stati creati account di accesso di SQL Server corrispondenti a quelli specificati nelle stringhe di connessione. Può essere necessario abilitare gli account di accesso di SQL Server se il server è stato configurato con le impostazioni di sicurezza predefinite, che consentono solo l'autenticazione di Windows. Apportare le modifiche necessarie alle stringhe di connessione in base all'ambiente.  
   
-### Esempio  
+### <a name="example"></a>Esempio  
   
 ```vb  
 Option Explicit On  
@@ -398,10 +404,10 @@ class Program
 }  
 ```  
   
-## Vedere anche  
- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)   
- [Pool di connessioni OLEDB, ODBC e Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)   
- [Performance Counters for ASP.NET](../Topic/Performance%20Counters%20for%20ASP.NET.md)   
- [Profilatura runtime](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)   
- [Introduction to Monitoring Performance Thresholds](http://msdn.microsoft.com/it-it/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [OLE DB, ODBC e Oracle Connection Pooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ [Contatori delle prestazioni per ASP.NET](http://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
+ [Runtime Profiling](../../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Profilatura di runtime)  
+ [Introduzione al monitoraggio delle soglie di prestazioni](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

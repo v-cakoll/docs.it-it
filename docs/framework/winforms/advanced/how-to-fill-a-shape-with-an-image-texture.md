@@ -1,43 +1,47 @@
 ---
-title: "Procedura: riempire una forma con una trama basata su un&#39;immagine | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "bitmap [Windows Form], utilizzo di trame"
-  - "immagini [Windows Form], utilizzo con pennelli"
-  - "forme, riempimento con immagini"
+title: 'Procedura: riempire una forma con una trama basata su un''immagine'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], using with brushes
+- bitmaps [Windows Forms], using texture
+- shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c20562cade6917a3426fe04861a05c4b6b0bd543
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: riempire una forma con una trama basata su un&#39;immagine
-È possibile riempire una forma chiusa con una trama utilizzando le classi <xref:System.Drawing.Image> e <xref:System.Drawing.TextureBrush>.  
+# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Procedura: riempire una forma con una trama basata su un'immagine
+È possibile riempire una forma chiusa con una trama utilizzando il <xref:System.Drawing.Image> classe e <xref:System.Drawing.TextureBrush> classe.  
   
-## Esempio  
- Nell'esempio riportato di seguito si riempie un'ellisse con un'immagine.  Il codice costruisce un oggetto <xref:System.Drawing.Image>, quindi passa l'indirizzo di tale oggetto <xref:System.Drawing.Image> come argomento al costruttore <xref:System.Drawing.TextureBrush.%23ctor%2A>.  Con la terza istruzione vengono adatta le proporzioni dell'immagine, mentre con la quarta si riempie l'ellisse con copie ripetute dell'immagine riproporzionata.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente inserisce un'ellisse con un'immagine. Nel codice viene creata un <xref:System.Drawing.Image> dell'oggetto e quindi passa l'indirizzo di tale <xref:System.Drawing.Image> oggetto come argomento a un <xref:System.Drawing.TextureBrush.%23ctor%2A> costruttore. La terza istruzione consente di ridimensionare l'immagine e la quarta si riempie l'ellisse con le copie ripetute di immagine ridimensionati.  
   
- Nel codice seguente la proprietà <xref:System.Drawing.TextureBrush.Transform%2A> contiene la trasformazione applicata all'immagine prima che venga disegnata.  Si suppone che l'immagine originale abbia una larghezza di 640 pixel e un'altezza di 480 pixel.  Con la trasformazione l'immagine viene ridotta a 75×75 impostando i valori di scala orizzontali e verticali.  
+ Nel codice seguente, la <xref:System.Drawing.TextureBrush.Transform%2A> proprietà contiene la trasformazione applicata all'immagine prima che venga disegnato. Si supponga che l'immagine originale ha una larghezza di 640 pixel e un'altezza di 480 pixel. La trasformazione, l'immagine viene ridotta a 75 × 75 impostando i valori di scalabilità orizzontali e verticali.  
   
 > [!NOTE]
->  Nell'esempio seguente le dimensioni dell'immagine sono pari a 75×75 e quelle dell'ellisse sono pari a 150×250\-  Poiché l'immagine è più piccola dell'ellisse da riempire, viene affiancata più volte nell'ellisse.  L'affiancamento consiste nel ripetere l'immagine in orizzontale e in verticale fino al limite della forma.  Per ulteriori informazioni sull'affiancamento, vedere [Procedura: riempire una forma con immagini affiancate](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md).  
+>  Nell'esempio seguente, le dimensioni dell'immagine sono 75 × 75, e la dimensione di puntini di sospensione è 150 × 250. Perché l'immagine è minore dell'ellisse da riempire, con l'immagine viene affiancata l'ellisse. Affiancamento che l'immagine viene ripetuta orizzontalmente e verticalmente fino al limite della forma viene raggiunto. Per ulteriori informazioni sull'affiancamento, vedere [procedura: riempire una forma con un'immagine](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md).  
   
  [!code-csharp[System.Drawing.UsingABrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingABrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
   
-## Vedere anche  
- [Utilizzo di un oggetto Brush per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso di un oggetto Brush per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

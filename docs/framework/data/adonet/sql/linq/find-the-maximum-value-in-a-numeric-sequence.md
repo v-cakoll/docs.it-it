@@ -1,25 +1,31 @@
 ---
-title: "Cercare il valore massimo in una sequenza numerica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Trovare il valore massimo in una sequenza numerica
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 06c8d2b2eedc2d3684ef44f028cd73e80a8da5cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cercare il valore massimo in una sequenza numerica
+# <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Trovare il valore massimo in una sequenza numerica
 Per trovare il valore massimo in una sequenza di valori numerici, usare l'operatore <xref:System.Linq.Enumerable.Max%2A>.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene cercata l'ultima data di assunzione di qualsiasi dipendente.  
   
  Se si esegue questa query sul database di esempio Northwind, l'output sarà: `11/15/1994 12:00:00 AM`.  
@@ -27,7 +33,7 @@ Per trovare il valore massimo in una sequenza di valori numerici, usare l'operat
  [!code-csharp[DLinqQueryExamples#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#6)]
  [!code-vb[DLinqQueryExamples#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#6)]  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene cercato il maggior numero di unità in magazzino per qualsiasi prodotto.  
   
  Se si esegue questa query sul database di esempio Northwind, l'output sarà: `125`.  
@@ -35,8 +41,8 @@ Per trovare il valore massimo in una sequenza di valori numerici, usare l'operat
  [!code-csharp[DLinqQueryExamples#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#7)]
  [!code-vb[DLinqQueryExamples#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#7)]  
   
-## Esempio  
- Nell'esempio seguente viene usato Max per cercare in `Products` gli elementi con il prezzo unitario più elevato di ogni categoria.  Nell'output vengono quindi elencati i risultati per categoria.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene usato Max per cercare in `Products` gli elementi con il prezzo unitario più elevato di ogni categoria. Nell'output vengono quindi elencati i risultati per categoria.  
   
  [!code-csharp[DLinqQueryExamples#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#8)]
  [!code-vb[DLinqQueryExamples#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#8)]  
@@ -75,6 +81,6 @@ Per trovare il valore massimo in una sequenza di valori numerici, usare l'operat
   
  `Carnarvon Tigers`  
   
-## Vedere anche  
- [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)   
- [Download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Vedere anche  
+ [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
+ [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

@@ -1,29 +1,27 @@
 ---
-title: "Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30686"
-  - "bc30686"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30686"
+title: "Accesso alla proprietà predefinita è ambiguo tra i membri di interfaccia ereditati &#39; &lt;defaultpropertyname&gt;&#39; dell'interfaccia &#39;&lt; nomeinterfaccia1&gt;&#39; e &#39;&lt; defaultpropertyname&gt;&#39; dell'interfaccia &#39;&lt; nomeinterfaccia2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30686
+- bc30686
+helpviewer_keywords: BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Un'interfaccia eredita da due interfacce, ciascuna delle quali dichiara una proprietà predefinita con lo stesso nome.  Il compilatore non è in grado di risolvere un accesso alla proprietà predefinita senza qualificazione.  Questa condizione è illustrata nell'esempio che segue.  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Accesso alla proprietà predefinita è ambiguo tra i membri di interfaccia ereditati &#39; &lt;defaultpropertyname&gt;&#39; dell'interfaccia &#39;&lt; nomeinterfaccia1&gt;&#39; e &#39;&lt; defaultpropertyname&gt;&#39; dell'interfaccia &#39;&lt; nomeinterfaccia2&gt;&#39;
+Un'interfaccia eredita da due interfacce, ognuno dei quali dichiara una proprietà predefinita con lo stesso nome. Il compilatore non è possibile risolvere un accesso alla proprietà predefinita senza qualifica. Questa condizione è illustrata nell'esempio seguente.  
   
 ```  
 Public Interface Iface1  
@@ -43,21 +41,21 @@ Public Class testClass
 End Class  
 ```  
   
- Quando si specifica `testObj(1)`, il compilatore tenta di risolverlo nella proprietà predefinita.  Poiché per la presenza delle interfacce ereditate sono presenti due possibili proprietà predefinite, il compilatore segnala l'errore.  
+ Quando si specifica `testObj(1)`, il compilatore tenta di risolvere il problema per la proprietà predefinita. Tuttavia, esistono due possibili proprietà predefinite a causa di interfacce ereditate, il compilatore segnala l'errore.  
   
  **ID errore:** BC30686  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Evitare di ereditare membri con lo stesso nome.  Nell'esempio precedente, se `testObj` non richiede alcun membro di `Iface2`, è possibile dichiararlo nel modo seguente:  
+-   Evitare di ereditare membri con lo stesso nome. Nell'esempio precedente, se `testObj` non è necessario uno qualsiasi dei membri di, ad esempio, `Iface2`, dichiararla come indicato di seguito:  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     In alternativa  
+     -oppure-  
   
--   Implementare l'interfaccia che eredita in una classe.  È quindi possibile implementare ciascuna delle proprietà ereditate con nomi diversi.  Solo una di tali proprietà, tuttavia, può essere specificata come proprietà predefinita della classe di implementazione.  Questa condizione è illustrata nell'esempio che segue.  
+-   Implementare l'interfaccia che eredita in una classe. È quindi possibile implementare ognuna delle proprietà ereditate con nomi diversi. Tuttavia, solo uno di essi può essere la proprietà predefinita della classe di implementazione. Questa condizione è illustrata nell'esempio seguente.  
   
     ```  
     Public Class useIface3  
@@ -71,5 +69,5 @@ End Class
     End Class  
     ```  
   
-## Vedere anche  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

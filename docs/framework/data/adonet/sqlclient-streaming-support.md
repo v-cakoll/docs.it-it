@@ -1,23 +1,26 @@
 ---
-title: "Supporto del flusso SqlClient | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Supporto del flusso SqlClient
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Supporto del flusso SqlClient
-Il supporto del flusso tra [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] e un'altra applicazione \(nuova funzionalità in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]\) supporta dati non strutturati nel server \(documenti, immagini e file multimediali\).  Un database di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] consente di archiviare oggetti binari di grandi dimensioni \(BLOB\), ma il recupero di BLOB può impegnare una quantità consistente di memoria.  
+# <a name="sqlclient-streaming-support"></a>Supporto del flusso SqlClient
+Il supporto del flusso tra [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] e un'altra applicazione (nuova funzionalità in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supporta dati non strutturati nel server (documenti, immagini e file multimediali). Un database di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] consente di archiviare oggetti binari di grandi dimensioni (BLOB), ma il recupero di BLOB può impegnare una quantità consistente di memoria.  
   
  Il supporto del flusso da e verso [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] semplifica la creazione di applicazioni che trasmettono i dati, senza dover caricare completamente i dati in memoria, con conseguente riduzione del numero di eccezioni di overflow di memoria.  
   
@@ -26,16 +29,16 @@ Il supporto del flusso tra [!INCLUDE[ssNoVersion](../../../../includes/ssnoversi
 > [!WARNING]
 >  Le chiamate asincrone non sono supportate se in un'applicazione viene inoltre usata la parola chiave della stringa di connessione `Context Connection`.  
 >   
->  I membri aggiunti per supportare il flusso sono usati per recuperare i dati dalle query e per passare parametri a query e stored procedure.  La funzionalità di flusso è destinata a scenari di migrazione dei dati e OLTP di base ed è applicabile agli ambienti di migrazione dei dati on\-premise e off\-premise.  
+>  I membri aggiunti per supportare il flusso sono usati per recuperare i dati dalle query e per passare parametri a query e stored procedure. La funzionalità di flusso è destinata a scenari di migrazione dei dati e OLTP di base ed è applicabile agli ambienti di migrazione dei dati on-premise e off-premise.  
   
-## Supporto del flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Il supporto di flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduce la nuova funzionalità nelle classi <xref:System.Data.Common.DbDataReader> e <xref:System.Data.SqlClient.SqlDataReader> per ottenere gli oggetti <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> e <xref:System.IO.TextReader> e rispondere ad essi.  Queste classi vengono usate per recuperare i dati dalle query.  Di conseguenza, il supporto del flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] è destinato agli scenari OLTP e si applica agli ambienti on\-premise e off\-premise.  
+## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>Supporto del flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+ Il supporto di flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduce la nuova funzionalità nelle classi <xref:System.Data.Common.DbDataReader> e <xref:System.Data.SqlClient.SqlDataReader> per ottenere gli oggetti <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> e <xref:System.IO.TextReader> e rispondere ad essi.  Queste classi vengono usate per recuperare i dati dalle query. Di conseguenza, il supporto del flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] è destinato agli scenari OLTP e si applica agli ambienti on-premise e off-premise.  
   
  I seguenti membri sono stati aggiunti a <xref:System.Data.SqlClient.SqlDataReader> per abilitare il supporto del flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=fullName>  
+2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=nameWithType>  
   
 3.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValueAsync%2A>  
   
@@ -53,10 +56,10 @@ Il supporto del flusso tra [!INCLUDE[ssNoVersion](../../../../includes/ssnoversi
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## Supporto del flusso a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Il supporto del flusso a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduce nuove funzionalità nella classe di <xref:System.Data.SqlClient.SqlParameter> pertanto può accettare e rispondere agli oggetti <xref:System.Xml.XmlReader>, a <xref:System.IO.Stream>e <xref:System.IO.TextReader>.  <xref:System.Data.SqlClient.SqlParameter> viene usato per passare i parametri a query e stored procedure.  
+## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>Supporto del flusso a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+ Il supporto del flusso a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduce nuove funzionalità nella classe di <xref:System.Data.SqlClient.SqlParameter> pertanto può accettare e rispondere agli oggetti <xref:System.Xml.XmlReader>, a <xref:System.IO.Stream>e <xref:System.IO.TextReader>. <xref:System.Data.SqlClient.SqlParameter> viene usato per passare i parametri a query e stored procedure.  
   
- L'eliminazione di un oggetto <xref:System.Data.SqlClient.SqlCommand> o la chiamata di <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> deve annullare qualsiasi operazione di flusso.  Se un'applicazione invia <xref:System.Threading.CancellationToken>, l'annullamento non è garantito.  
+ L'eliminazione di un oggetto <xref:System.Data.SqlClient.SqlCommand> o la chiamata di <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> deve annullare qualsiasi operazione di flusso. Se un'applicazione invia <xref:System.Threading.CancellationToken>, l'annullamento non è garantito.  
   
  I seguenti tipi <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> accetteranno <xref:System.Data.SqlClient.SqlParameter.Value%2A> di <xref:System.IO.Stream>:  
   
@@ -74,13 +77,13 @@ Il supporto del flusso tra [!INCLUDE[ssNoVersion](../../../../includes/ssnoversi
   
 -   **Xml**  
   
- Il tipo **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> accetterà <xref:System.Data.SqlClient.SqlParameter.Value%2A> di <xref:System.Xml.XmlReader>.  
+ Il **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> tipo accetterà un <xref:System.Data.SqlClient.SqlParameter.Value%2A> di <xref:System.Xml.XmlReader>.  
   
  <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> può accettare valori di tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream>.  
   
  Gli oggetti <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream> verranno trasferiti fino al valore definito da <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
   
-## Esempio di flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>Esempio di flusso da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
  Usare il seguente codice [!INCLUDE[tsql](../../../../includes/tsql-md.md)] per creare il database di esempio:  
   
 ```  
@@ -110,7 +113,7 @@ GO
   
 -   Recuperare dati da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
--   Trasferire file di grandi dimensioni \(BLOB\) da un database di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a un altro senza esaurire la memoria.  
+-   Trasferire file di grandi dimensioni (BLOB) da un database di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a un altro senza esaurire la memoria.  
   
 ```  
 using System;  
@@ -299,10 +302,9 @@ namespace StreamingFromServer {
       }  
    }  
 }  
-  
 ```  
   
-## Esempio di flusso a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>Esempio di flusso a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
  Usare il seguente codice [!INCLUDE[tsql](../../../../includes/tsql-md.md)] per creare il database di esempio:  
   
 ```  
@@ -456,10 +458,9 @@ namespace StreamingToServer {
       }  
    }  
 }  
-  
 ```  
   
-## Esempio di flusso da un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a un altro [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>Esempio di flusso da un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a un altro [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
  In questo esempio viene illustrato come trasmettere in modo asincrono un BLOB di grandi dimensioni da un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a un altro, con supporto per l'annullamento.  
   
 ```  
@@ -523,8 +524,7 @@ namespace StreamingFromServerToAnother {
       }  
    }  
 }  
-  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

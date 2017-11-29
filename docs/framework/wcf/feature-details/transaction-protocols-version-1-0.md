@@ -1,154 +1,157 @@
 ---
-title: "Protocolli di transazione versione 1.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Protocolli di transazione versione 1.0
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 95bf16a4e243d82b9b8fe83b306284335ae0bd16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Protocolli di transazione versione 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] versione 1 implementa la versione 1.0 dei protocolli WS\-Atomic Transaction e WS\-Coordination.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] versione 1.1, vedere [Protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+# <a name="transaction-protocols-version-10"></a>Protocolli di transazione versione 1.0
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] versione 1 implementa la versione 1.0 dei protocolli WS-Atomic Transaction e WS-Coordination. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]versione 1.1, vedere [protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
-|Specifica\/documento|Collegamento|  
-|--------------------------|------------------|  
-|WS\-Coordination|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-coordination\/|  
-|WS\-AtomicTransaction|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-atomictransaction\/|  
+|Specifica/documento|Collegamento|  
+|-----------------------------|----------|  
+|WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
+|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
   
- Su queste specifiche del protocollo è richiesta l'interoperabilità a due livelli: tra le applicazioni e tra i gestori delle transazioni \(vedere la figura seguente\).Le specifiche descrivono dettagliatamente i formati dei messaggi e lo scambio di messaggi per entrambi i livelli di interoperabilità.Alcune protezioni, affidabilità e codifiche per lo scambio tra le applicazioni si applicano come per il normale scambio tra applicazioni.Perché, tuttavia, sia possibile l'interoperabilità tra i gestori delle transazioni, è necessario che vi sia un accordo sull'associazione interessata dato che in genere non è configurata dall'utente.  
+ Su queste specifiche del protocollo è richiesta l'interoperabilità a due livelli: tra le applicazioni e tra i gestori delle transazioni (vedere la figura seguente). Le specifiche descrivono dettagliatamente i formati dei messaggi e lo scambio di messaggi per entrambi i livelli di interoperabilità. Alcune protezioni, affidabilità e codifiche per lo scambio tra le applicazioni si applicano come per il normale scambio tra applicazioni. Perché, tuttavia, sia possibile l'interoperabilità tra i gestori delle transazioni, è necessario che vi sia un accordo sull'associazione interessata dato che in genere non è configurata dall'utente.  
   
- In questo argomento vengono illustrate una composizione della specifica WS\-Atomic Transaction \(WS\-AT\) con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni.L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS\-AT e WS\-Coordination, compresi IBM, IONA, Sun Microsystems e altri.  
+ In questo argomento vengono illustrate una composizione della specifica WS-Atomic Transaction (WS-AT) con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni. L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS-AT e WS-Coordination, compresi IBM, IONA, Sun Microsystems e altri.  
   
  Nella figura seguente è riportata l'interoperabilità tra due gestori di transazioni, Gestore transazioni 1 e Gestore transazioni 2 e due applicazioni, Applicazione 1 e Applicazione 2.  
   
  ![Protocolli di transazione](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
   
- Si consideri un tipico scenario WS\-Coordination\/WS\-Atomic Transaction con un Iniziatore \(I\) e un Partecipante \(P\).Sia l'Iniziatore che il Partecipante hanno gestori transazioni \(ITM e PTM, rispettivamente\).In questo argomento, il commit in due fasi viene chiamato 2PC.  
+ Si consideri un tipico scenario WS-Coordination/WS-Atomic Transaction con un Iniziatore (I) e un Partecipante (P). Sia l'Iniziatore che il Partecipante hanno gestori transazioni (ITM e PTM, rispettivamente). In questo argomento, il commit in due fasi viene chiamato 2PC.  
   
 |||  
 |-|-|  
-|1.CreateCoordinationContext|12.Risposta al messaggio dell'applicazione|  
-|2.CreateCoordinationContextResponse|13.Commit \(completamento\)|  
-|3.Register \(completamento\)|14.Preparare \(2PC\)|  
-|4.RegisterResponse|15.Preparare \(2PC\)|  
-|5.Messaggio dell'applicazione|16.Prepared \(2PC\)|  
-|6.CreateCoordinationContext con Context|17.Prepared \(2PC\)|  
-|7.Register \(durevole\)|18.Committed \(completamento\)|  
-|8.RegisterResponse|19.Commit \(2PC\)|  
-|9.CreateCoordinationContextResponse|20.Commit \(2PC\)|  
-|10.Register \(durevole\)|21.Committed \(2PC\)|  
-|11.RegisterResponse|22.Committed \(2PC\)|  
+|1. CreateCoordinationContext|12. Risposta al messaggio dell'applicazione|  
+|2. CreateCoordinationContextResponse|13. Commit (completamento)|  
+|3. Register (completamento)|14. Preparare (2PC)|  
+|4. RegisterResponse|15. Preparare (2PC)|  
+|5. Messaggio dell'applicazione|16. Prepared (2PC)|  
+|6. CreateCoordinationContext con Context|17. Prepared (2PC)|  
+|7. Register (durevole)|18. Committed (completamento)|  
+|8. RegisterResponse|19. Commit (2PC)|  
+|9. CreateCoordinationContextResponse|20. Commit (2PC)|  
+|10. Register (durevole)|21. Committed (2PC)|  
+|11. RegisterResponse|22. Committed (2PC)|  
   
- In questo documento vengono illustrate una composizione della specifica WS\-AtomicTransaction con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni.L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS\-AT e WS\-Coordination.  
+ In questo documento vengono illustrate una composizione della specifica WS-AtomicTransaction con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni. L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS-AT e WS-Coordination.  
   
  Nella figura e nella tabella vengono illustrate quattro classi di messaggi dal punto di vista della protezione:  
   
--   Messaggi di attivazione \(CreateCoordinationContext e CreateCoordinationContextResponse\).  
+-   Messaggi di attivazione (CreateCoordinationContext e CreateCoordinationContextResponse).  
   
--   Messaggi di registrazione \(Register e RegisterResponse\)  
+-   Messaggi di registrazione (Register e RegisterResponse)  
   
--   Messaggi di protocollo \(Prepare, Rollback, Commit, Aborted e così via\).  
+-   Messaggi di protocollo (Prepare, Rollback, Commit, Aborted e così via).  
   
 -   Messaggi dell'applicazione.  
   
- Le prime tre classi di messaggi sono considerate messaggi del gestore transazioni e la loro configurazione dell'associazione viene descritta in "Scambio di messaggi dell'applicazione", più avanti in questo argomento.La quarta classe di messaggi riguarda i messaggi da applicazione ad applicazione e viene descritta nella sezione "Esempi di messaggi", più avanti in questo argomento.In questa sezione vengono illustrati i binding del protocollo utilizzati per ognuna di queste classi da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Le prime tre classi di messaggi sono considerate messaggi del gestore transazioni e la loro configurazione dell'associazione viene descritta in "Scambio di messaggi dell'applicazione", più avanti in questo argomento. La quarta classe di messaggi riguarda i messaggi da applicazione ad applicazione e viene descritta nella sezione "Esempi di messaggi", più avanti in questo argomento. Contenuto della sezione vengono illustrati i binding del protocollo utilizzati per ognuna di queste classi da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  In questo documento vengono utilizzati gli spazi dei nomi XML e i relativi prefissi associati seguenti.  
   
 |Prefisso|URI dello spazio dei nomi|  
-|--------------|-------------------------------|  
-|s11|http:\/\/schemas.xmlsoap.org\/soap\/envelope|  
-|wsa|http:\/\/www.w3.org\/2004\/08\/addressing|  
-|wscoor|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wscoor|  
-|wsat|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wsat|  
-|t|http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust|  
-|o|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.0.xsd|  
-|xsd|http:\/\/www.w3.org\/2001\/XMLSchema|  
+|------------|-------------------|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
+|wsa|http://www.w3.org/2004/08/Addressing|  
+|wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
+|wsat|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
+|t|http://schemas.xmlsoap.org/ws/2005/02/trust|  
+|o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
+|xsd|http://www.w3.org/2001/XMLSchema|  
   
-## Associazioni dei gestori transazioni  
- R1001: i gestori transazioni devono utilizzare SOAP 1.1 e WS\-Addressing 2004\/08 per gli scambi di messaggi WS\-Atomic Transaction e WS\-Coordination.  
+## <a name="transaction-manager-bindings"></a>Associazioni dei gestori transazioni  
+ R1001: i gestori transazioni devono utilizzare SOAP 1.1 e WS-Addressing 2004/08 per gli scambi di messaggi WS-Atomic Transaction e WS-Coordination.  
   
  I messaggi dell'applicazione non sono vincolati a queste associazioni e vengono descritti più avanti.  
   
-### Associazione HTTP dei gestori transazioni  
- L'associazione HTTPS dei gestori transazioni si basa unicamente sulla protezione del trasporto per ottenere la protezione e stabilire relazioni di trust tra ogni coppia mittente\-destinatario nella struttura della transazione.  
+### <a name="transaction-manager-https-binding"></a>Associazione HTTP dei gestori transazioni  
+ L'associazione HTTPS dei gestori transazioni si basa unicamente sulla protezione del trasporto per ottenere la protezione e stabilire relazioni di trust tra ogni coppia mittente-destinatario nella struttura della transazione.  
   
-#### Configurazione di trasporto HTTPS  
- I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni.L'autenticazione client\/server è obbligatoria, mentre l'autorizzazione client\/server viene lasciata come dettaglio di implementazione:  
+#### <a name="https-transport-configuration"></a>Configurazione di trasporto HTTPS  
+ I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni. L'autenticazione client/server è obbligatoria, mentre l'autorizzazione client/server viene lasciata come dettaglio di implementazione:  
   
--   R1111: i certificati X.509 presentati sulla rete devono avere un nome soggetto che corrisponde al nome di dominio completo \(FQDN\) del computer di origine.  
+-   R1111: i certificati X.509 presentati sulla rete devono avere un nome soggetto che corrisponde al nome di dominio completo (FQDN) del computer di origine.  
   
--   B1112: perché i controlli del nome soggetto X.509 abbiano esito positivo, il DNS deve essere funzionale tra ogni coppia mittente\-destinatario nel sistema.  
+-   B1112: perché i controlli del nome soggetto X.509 abbiano esito positivo, il DNS deve essere funzionale tra ogni coppia mittente-destinatario nel sistema.  
   
-#### Attivazione e configurazione dell'associazione di registrazione  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede un'associazione duplex request\/reply con correlazione su HTTPS.Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request\/reply, vedere WS\-Atomic Transaction, Sezione 8.  
+#### <a name="activation-and-registration-binding-configuration"></a>Attivazione e configurazione dell'associazione di registrazione  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede un'associazione duplex request/reply con correlazione su HTTPS. Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request/reply, vedere WS-Atomic Transaction, Sezione 8.  
   
-#### Configurazione del binding del protocollo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali \(datagramma\) su HTTPS.La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
+#### <a name="2pc-protocol-binding-configuration"></a>Configurazione del binding del protocollo 2PC  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
- B2131: le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS\-Addressing per ottenere la correlazione dei messaggi 2PC di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]del messaggi 2PC.  
   
-### Associazione di sicurezza mista del gestore transazioni  
- Questa è un'associazione alternativa \(modalità mista\) che utilizza la protezione del trasporto assieme al modello del token emesso WS\-Coordination allo scopo di stabilire l'identità.L'attivazione e la registrazione sono gli unici elementi che differiscono tra le due associazioni.  
+### <a name="transaction-manager-mixed-security-binding"></a>Associazione di sicurezza mista del gestore transazioni  
+ Si tratta di un'associazione che utilizza la protezione del trasporto associata al modello del Token emesso WS-Coordination allo scopo di identità alternativa (modalità mista).  L'attivazione e la registrazione sono gli unici elementi che differiscono tra le due associazioni.  
   
-#### Configurazione di trasporto HTTPS  
- I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni.L'autenticazione client\/server è obbligatoria, mentre l'autorizzazione client\/server viene lasciata come dettaglio di implementazione.  
+#### <a name="https-transport-configuration"></a>Configurazione di trasporto HTTPS  
+ I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni. L'autenticazione client/server è obbligatoria, mentre l'autorizzazione client/server viene lasciata come dettaglio di implementazione.  
   
-#### Configurazione dell'associazione dei messaggi di attivazione  
+#### <a name="activation-message-binding-configuration"></a>Configurazione dell'associazione dei messaggi di attivazione  
  I messaggi di attivazione in genere non partecipano all'interoperabilità perché si verificano normalmente tra un'applicazione e il suo gestore transazioni locale.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza associazioni HTTPS duplex \(descritte in [Protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)\) per i messaggi di attivazione.I messaggi di richiesta e risposta sono correlati utilizzando WS\-Addressing 2004\/08.  
+ B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'associazione HTTPS duplex (descritto in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) per i messaggi di attivazione. I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
   
- Nella specifica WS\-Atomic Transaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
+ Nella specifica WS-Atomic Transaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
   
--   R1222: alla ricezione di un `CreateCoordinationContext`, il coordinatore deve emettere un `SecurityContextToken` con il segreto `STx` associato.Tale token viene restituito in un'intestazione `t:IssuedTokens` dopo la specifica WS\-Trust.  
+-   R1222: alla ricezione di un `CreateCoordinationContext`, il coordinatore deve emettere un `SecurityContextToken` con il segreto `STx` associato. Tale token viene restituito in un'intestazione `t:IssuedTokens` dopo la specifica WS-Trust.  
   
 -   R1223: se l'attivazione si verifica all'interno di un contesto di coordinamento esistente, l'intestazione `t:IssuedTokens` con il `SecurityContextToken` associato al contesto esistente deve propagarsi sul messaggio `CreateCoordinationContext`.  
   
- Per la connessione con il messaggio `wscoor:CreateCoordinationContextResponse` in uscita, è necessario che venga generata una nuova intestazione `t:IssuedTokens`.  
+ Un nuovo `t:IssuedTokens` intestazione deve essere generata per associazione a in uscita `wscoor:CreateCoordinationContextResponse` messaggio.  
   
-#### Configurazione dell'associazione dei messaggi di registrazione  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'associazione HTTPS duplex \(descritta in [Protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)\).I messaggi di richiesta e risposta sono correlati utilizzando WS\-Addressing 2004\/08.  
+#### <a name="registration-message-binding-configuration"></a>Configurazione dell'associazione dei messaggi di registrazione  
+ B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'associazione HTTPS duplex (descritto in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
   
- In WS\-AtomicTransaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
+ In WS-AtomicTransaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
   
- R1232: i messaggi `wscoor:Register` in uscita devono utilizzare la modalità di autenticazione `IssuedTokenOverTransport` descritta in [Protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ R1232: In uscita `wscoor:Register` messaggi è necessario utilizzare il `IssuedTokenOverTransport` modalità di autenticazione descritte [protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- L'elemento `wsse:Timestamp` deve essere firmato utilizzando il `SecurityContextToken``STx` emesso.Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione.Il messaggio RegistrationResponse viene inviato su HTTPS.  
+ Il `wsse:Timestamp` elemento deve essere firmato utilizzando il `SecurityContextToken``STx` rilasciato. Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione. Il messaggio RegistrationResponse viene inviato su HTTPS.  
   
-#### Configurazione del binding del protocollo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali \(datagramma\) su HTTPS.La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
+#### <a name="2pc-protocol-binding-configuration"></a>Configurazione del binding del protocollo 2PC  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
- B2131: le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS\-Addressing per ottenere la correlazione dei messaggi 2PC di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]del messaggi 2PC.  
   
-## Scambio di messaggi dell'applicazione  
+## <a name="application-message-exchange"></a>Scambio di messaggi dell'applicazione  
  Le applicazioni possono utilizzare qualsiasi particolare associazione per i messaggi da applicazione ad applicazione, a condizione che l'associazione soddisfi i requisiti di sicurezza seguenti:  
   
 -   R2001: i messaggi da applicazione ad applicazione devono propagarsi nell'intestazione `t:IssuedTokens` insieme al `CoordinationContext` nell'intestazione del messaggio.  
   
 -   R2002: è necessario fornire l'integrità e la riservatezza di `t:IssuedToken`.  
   
- L'intestazione `CoordinationContext` contiene `wscoor:Identifier`.Mentre la definizione di `xsd:AnyURI` consente di utilizzare URI sia assoluti che relativi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta solo `wscoor:Identifiers` che sono URI assoluti.  
+ L'intestazione `CoordinationContext` contiene `wscoor:Identifier`. Mentre la definizione di `xsd:AnyURI` consente di utilizzare URI sia assoluti che relativi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta solo `wscoor:Identifiers` che sono URI assoluti.  
   
  Se `wscoor:Identifier` del `wscoor:CoordinationContext` è un URI relativo, i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transazionali restituiranno degli errori.  
   
-## Esempi di messaggi  
+## <a name="message-examples"></a>Esempi di messaggi  
   
-### Messaggi di richiesta\/risposta CreateCoordinationContext  
- I messaggi seguenti seguono un modello richiesta\/risposta.  
+### <a name="createcoordinationcontext-requestresponse-messages"></a>Messaggi di richiesta/risposta CreateCoordinationContext  
+ I messaggi seguenti seguono un modello richiesta/risposta.  
   
-#### CreateCoordinationContext  
+#### <a name="createcoordinationcontext"></a>CreateCoordinationContext  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wscoor/CreateCoordinationContext</Action>  
@@ -170,12 +173,11 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContext>  
   </s:Body>  
 </s11:Envelope>  
-  
 ```  
   
-#### CreateCoordinationContextResponse  
+#### <a name="createcoordinationcontextresponse"></a>CreateCoordinationContextResponse  
   
-```  
+```xml  
 <s:Envelope>  
   <!-- Data below is shown in the clear for  
        illustration purposes only. -->  
@@ -253,15 +255,14 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContextResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Messaggi di registrazione  
+### <a name="registration-messages"></a>Messaggi di registrazione  
  I messaggi seguenti sono messaggi di registrazione.  
   
-#### Registro  
+#### <a name="register"></a>Registrazione  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register</a:Action>  
@@ -318,12 +319,11 @@ caps.handback.revision: 3
     </wscoor:Register>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-#### RegisterResponse  
+#### <a name="register-response"></a>RegisterResponse  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>  
@@ -355,15 +355,14 @@ caps.handback.revision: 3
     </wscoor:RegisterResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Messaggi del protocollo di commit a due fasi  
- Il messaggio seguente si riferisce al protocollo di commit a due fasi \(2PC\).  
+### <a name="two-phase-commit-protocol-messages"></a>Messaggi del protocollo di commit a due fasi  
+ Il messaggio seguente si riferisce al protocollo di commit a due fasi (2PC).  
   
-#### Commit  
+#### <a name="commit"></a>Commit  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wsat/Commit</a:Action>  
@@ -382,15 +381,14 @@ caps.handback.revision: 3
     <wsat:Commit />  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Messaggi dell'applicazione  
+### <a name="application-messages"></a>Messaggi dell'applicazione  
  I messaggi seguenti sono messaggi dell'applicazione.  
   
-#### Messaggio dell'applicazione \- Richiesta  
+#### <a name="application-message-request"></a>Messaggio dell'applicazione - Richiesta  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
 <!-- Addressing headers, all signed-->  

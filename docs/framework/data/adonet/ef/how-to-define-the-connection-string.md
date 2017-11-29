@@ -1,42 +1,39 @@
 ---
-title: "Procedura: definire la stringa di connessione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
-  - "jsharp"
+title: 'Procedura: definire una stringa di connessione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 757b70d99a7f2b499d4ad5aab2be2bb61b28af0d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: definire la stringa di connessione
-In questo argomento viene illustrato come definire la stringa di connessione usata per la connessione a un modello concettuale.  Questo argomento è basato sul modello concettuale [Sales di AdventureWorks](http://msdn.microsoft.com/it-it/f16cd988-673f-4376-b034-129ca93c7832).  Il modello Sales di AdventureWorks viene usato in tutti gli argomenti correlati ad attività inclusi nella documentazione di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  In questo argomento si presuppone che [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sia già stato configurato e che il modello Sales di AdventureWorks sia già stato definito.  Per altre informazioni, vedere [How to: Manually Define the Model and Mapping Files](http://msdn.microsoft.com/it-it/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  Le procedure di questo argomento sono incluse anche in [How to: Manually Configure an Entity Framework Project](http://msdn.microsoft.com/it-it/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+# <a name="how-to-define-the-connection-string"></a>Procedura: definire una stringa di connessione
+In questo argomento viene illustrato come definire la stringa di connessione usata per la connessione a un modello concettuale. Questo argomento è basato sul [Sales di AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) modello concettuale. Il modello Sales di AdventureWorks viene usato in tutti gli argomenti correlati ad attività inclusi nella documentazione di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Questo argomento si presuppone che sia già stato configurato il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e definito il modello Sales di AdventureWorks. Per ulteriori informazioni, vedere [procedura: definire manualmente i file di modello e Mapping](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a). Le procedure descritte in questo argomento sono incluse anche in [procedura: configurare manualmente un progetto Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 > [!NOTE]
->  Se si usa la Procedura guidata [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] in un progetto [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)], viene automaticamente generato un file con estensione edmx e il progetto viene configurato per l'uso di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  Per altre informazioni, vedere [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/it-it/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Se si usa la Procedura guidata [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] in un progetto [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)], viene automaticamente generato un file con estensione edmx e il progetto viene configurato per l'uso di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Per ulteriori informazioni, vedere [procedura: utilizzare la procedura guidata Entity Data Model](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d)  
   
-### Per definire la stringa di connessione Entity Framework  
+### <a name="to-define-the-entity-framework-connection-string"></a>Per definire la stringa di connessione Entity Framework  
   
--   Aprire il file di configurazione dell'applicazione \(app.config\) del progetto e aggiungere la stringa di connessione seguente.  
+-   Aprire il file di configurazione dell'applicazione (app.config) del progetto e aggiungere la stringa di connessione seguente.  
   
   
   
-     Se il progetto non dispone di un file di configurazione dell'applicazione, è possibile aggiungerne uno scegliendo **Aggiungi nuovo elemento** dal menu **Progetto**, selezionando la categoria **Generale**, selezionando **File di configurazione dell'applicazione** e quindi facendo clic su **Aggiungi**.  
+     Se il progetto non dispone di un file di configurazione dell'applicazione, è possibile aggiungerne una selezionando **Aggiungi nuovo elemento** dal **progetto** dal menu selezionando il **generale** categoria selezione **File di configurazione applicazione**e quindi fare clic su **Aggiungi**.  
   
-## Vedere anche  
- [Quickstart](http://msdn.microsoft.com/it-it/0bc534be-789f-4819-b9f6-76e51d961675)   
- [How to: Create a New .edmx File](http://msdn.microsoft.com/it-it/beb8189e-e51c-4051-839c-9902c224abf2)   
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/it-it/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>Vedere anche  
+ [Guida rapida](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675)  
+ [Procedura: creare un nuovo File con estensione edmx](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2)  
+ [Strumenti di ADO.NET Entity Data Model](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

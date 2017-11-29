@@ -1,38 +1,42 @@
 ---
-title: "57398 - MaxInstancesExceeded | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 57398 - MaxInstancesExceeded
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f943d209-dfeb-43e5-b572-c9a06217936e
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7417d2e0e850017e65910be32e7449255f0761c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 57398 - MaxInstancesExceeded
-## Proprietà  
+# <a name="57398---maxinstancesexceeded"></a>57398 - MaxInstancesExceeded
+## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
 |ID|57398|  
 |Parole chiave|WFServices|  
 |Livello|Avviso|  
-|Canale|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canale|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descrizione  
+## <a name="description"></a>Descrizione  
  Indica che il sistema ha raggiunto il limite impostato per la velocità 'MaxConcurrentInstances'.  
   
-## Messaggio  
- Il sistema ha raggiunto il limite impostato per la velocità 'MaxConcurrentInstances'.  Il limite per questa velocità è stato impostato su %1.  Il valore della velocità può essere modificato cambiando l'attributo 'maxConcurrentInstances' nell'elemento serviceThrottle o modificando la proprietà 'MaxConcurrentInstances' nel comportamento ServiceThrottlingBehavior.  
+## <a name="message"></a>Messaggio  
+ Il sistema ha raggiunto il limite impostato per la velocità 'MaxConcurrentInstances'. Il limite per questa velocità è stato impostato su %1. Il valore della velocità può essere modificato cambiando l'attributo 'maxConcurrentInstances' nell'elemento serviceThrottle o modificando la proprietà 'MaxConcurrentInstances' nel comportamento ServiceThrottlingBehavior.  
   
-## Dettagli  
+## <a name="details"></a>Dettagli  
   
 |Nome elemento dati|Tipo elemento dati|Descrizione|  
-|------------------------|------------------------|-----------------|  
+|--------------------|--------------------|-----------------|  
 |Nome|xs:string|Nome dell'elemento.|  
 |AppDomain|xs:string|Stringa restituita da AppDomain.CurrentDomain.FriendlyName.|

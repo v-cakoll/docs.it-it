@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8da57c130f8b22a1e2de57678e86f84d00d11aaf
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e7216f14fb0b8da27b870fc8e66b24f6d87fcaad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="serialization-and-metadata"></a>Serializzazione e metadati
 Se l'applicazione serializza e deserializza oggetti, potrebbe essere necessario aggiungere voci al file di direttive di runtime (rd.xml) per assicurarsi che i metadati necessari siano presenti in fase di esecuzione. Esistono due categorie di serializzatori e ciascuna richiede una gestione differente nel file di direttive di runtime:  
@@ -62,7 +60,7 @@ Se l'applicazione serializza e deserializza oggetti, potrebbe essere necessario 
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Analogamente, se si chiama un costruttore come <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=fullName> e si fornisce una matrice di oggetti <xref:System.Type> aggiuntivi da serializzare, come nel codice seguente, il compilatore di [!INCLUDE[net_native](../../../includes/net-native-md.md)] non riesce a risolvere questi tipi.  
+ Analogamente, se si chiama un costruttore come <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> e si fornisce una matrice di oggetti <xref:System.Type> aggiuntivi da serializzare, come nel codice seguente, il compilatore di [!INCLUDE[net_native](../../../includes/net-native-md.md)] non riesce a risolvere questi tipi.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -75,8 +73,7 @@ Se l'applicazione serializza e deserializza oggetti, potrebbe essere necessario 
  Per informazioni sulla sintassi usata in questo esempio, vedere [Elemento \<Type>](../../../docs/framework/net-native/type-element-net-native.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Elemento \<Type>](../../../docs/framework/net-native/type-element-net-native.md)   
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)  
  [Elemento \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)
-

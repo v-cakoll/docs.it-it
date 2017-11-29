@@ -1,44 +1,51 @@
 ---
-title: "Procedura: codificare e decodificare un&#39;immagine WDP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "decodifica di formati di immagine"
-  - "decodifica di immagini WDP"
-  - "codifica di formati di immagine"
-  - "codifica di immagini WDP"
-  - "WDP (decodifica)"
-  - "WDP (codifica)"
+title: 'Procedura: codificare e decodificare un''immagine WDP'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- WDP encoding [WPF]
+- WDP decoding [WPF]
+- encoding image formats [WPF]
+- decoding WDP images [WPF]
+- decoding image formats [WPF]
+- encoding WDP images [WPF]
 ms.assetid: 911777d1-516b-49db-a87b-b54e31b18532
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b97f730da7e2a305ad26b56a6ccdc14851355b5
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: codificare e decodificare un&#39;immagine WDP
-Negli esempi seguenti viene illustrato come decodificare e codificare un'immagine [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] utilizzando gli oggetti <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> e <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> specifici.  
+# <a name="how-to-encode-and-decode-a-wdp-image"></a>Procedura: codificare e decodificare un'immagine WDP
+Nell'esempio seguente viene illustrato come decodificare e codificare un [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] immagine usando la specifica <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> e <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> oggetti.  
   
-## Esempio  
- In questo esempio viene illustrato come decodificare un'immagine [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] utilizzando un oggetto <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> da un oggetto <xref:System.Uri>.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene illustrato come decodificare un [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] immagine usando un <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> da un <xref:System.Uri>.  
   
  [!code-cpp[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#1)]
  [!code-csharp[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#1)]
  [!code-vb[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#1)]  
   
-## Esempio  
- In questo esempio viene mostrato come codificare un oggetto <xref:System.Windows.Media.Imaging.BitmapSource> in un'immagine [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] tramite un oggetto <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene illustrato come codificare un <xref:System.Windows.Media.Imaging.BitmapSource> in un [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] immagine usando un <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.  
   
  [!code-cpp[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#4)]
  [!code-csharp[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#4)]
  [!code-vb[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#4)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

@@ -1,37 +1,28 @@
 ---
-title: 'Procedura: serializzare mediante XmlSerializer (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: serializzare mediante XmlSerializer (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4503774e8d6fc9b0a71c3a4ee390f98b485cc003
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9d137296f6f4006cd222ebfa5e36e04d41f6ab9f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Procedura: serializzare mediante XmlSerializer (Visual Basic)
-In questo argomento viene illustrato un esempio che serializza e deserializza utilizzando <xref:System.Xml.Serialization.XmlSerializer>.</xref:System.Xml.Serialization.XmlSerializer>  
+In questo argomento viene illustrato un esempio in cui viene usato <xref:System.Xml.Serialization.XmlSerializer> per eseguire la serializzazione e la deserializzazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creato un numero di oggetti che contengono <xref:System.Xml.Linq.XElement>oggetti.</xref:System.Xml.Linq.XElement> Tali oggetti vengono quindi serializzati in un flusso di memoria e successivamente deserializzati dallo stesso flusso.  
+ Nell'esempio seguente vengono creati diversi oggetti contenenti oggetti <xref:System.Xml.Linq.XElement>. Tali oggetti vengono quindi serializzati in un flusso di memoria e successivamente deserializzati dallo stesso flusso.  
   
 ```vb  
 Imports System  
@@ -100,4 +91,3 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>Vedere anche  
  [Serializzazione di oggetti grafici contenenti oggetti XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
-

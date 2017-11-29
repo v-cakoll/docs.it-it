@@ -1,47 +1,51 @@
 ---
-title: "Supporto per le query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Supporto per le query
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d4f338f9ae5cc6967885d0518eb573d9f9535fc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Supporto per le query
-L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà note nell'archivio.Gli utenti possono eseguire query per le istanze basate su queste proprietà.Nell'elenco seguente sono contenute alcune di queste proprietà note:  
+# <a name="support-for-queries"></a>Supporto per le query
+L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà note nell'archivio. Gli utenti possono eseguire query per le istanze basate su queste proprietà. Nell'elenco seguente sono contenute alcune di queste proprietà note:  
   
--   **Site Name.** Nome del sito Web che contiene il servizio.  
+-   **Nome del sito.** Nome del sito Web che contiene il servizio.  
   
--   **Relative Application Path.** Percorso dell'applicazione relativo al sito Web.  
+-   **Percorso relativo dell'applicazione.** Percorso dell'applicazione relativo al sito Web.  
   
--   **Relative Service Path.** Percorso del servizio relativo all'applicazione.  
+-   **Percorso relativo del servizio.** Percorso del servizio relativo all'applicazione.  
   
--   **Service Name.** Nome del servizio.  
+-   **Nome del servizio.** Nome del servizio.  
   
--   **Service Namespace.** Nome dello spazio dei nomi utilizzato dal servizio.  
+-   **Servizio Namespace.** Nome dello spazio dei nomi utilizzato dal servizio.  
   
--   **Current Machine.**  
+-   **Computer corrente.**  
   
--   **Last Machine**.Computer su cui l'istanza del servizio flusso di lavoro è stata eseguita l'ultima volta.  
+-   **Ultimo macchina**. Computer su cui l'istanza del servizio flusso di lavoro è stata eseguita l'ultima volta.  
   
 > [!NOTE]
->  Per gli scenari indipendenti che utilizzano l'host del servizio del flusso di lavoro vengono popolate solo le ultime quattro proprietà.Per gli scenari dell'applicazione flusso di lavoro, viene popolata solo l'ultima proprietà.  
+>  Per gli scenari indipendenti che usano l'host del servizio del flusso di lavoro vengono popolate solo le ultime quattro proprietà. Per gli scenari dell'applicazione flusso di lavoro, viene popolata solo l'ultima proprietà.  
   
- L'esecuzione del flusso di lavoro fornisce valori per le prime tre proprietà.L'host del servizio del flusso di lavoro fornisce il valore per la proprietà **Suspend Reason**.L'archivio di istanze del flusso di lavoro SQL fornisce valori per la proprietà **Last Updated Machine**.  
+ L'esecuzione del flusso di lavoro fornisce valori per le prime tre proprietà. L'host del servizio del flusso di lavoro fornisce il valore per il **Suspend Reason** proprietà. L'archivio di istanze del flusso di lavoro SQL stesso fornisce valori per il **Last Updated Machine** proprietà.  
   
- La funzionalità di archivio di istanze del flusso di lavoro SQL consente anche di specificare le proprietà personalizzate per cui si desidera archiviare i valori nel database di persistenza e che si desidera utilizzare nelle query.Per ulteriori informazioni sulle promozioni personalizzate, vedere [Estensibilità dell'archivio](../../../docs/framework/windows-workflow-foundation//store-extensibility.md).  
+ La funzionalità di archivio di istanze del flusso di lavoro SQL consente anche di specificare le proprietà personalizzate per cui si desidera archiviare i valori nel database di persistenza e che si desidera usare nelle query. Per ulteriori informazioni sulle promozioni personalizzate, vedere [archivio Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).  
   
-## Views  
- L'archivio di istanze contiene le visualizzazioni seguenti.Per ulteriori informazioni, vedere [Schema di database di persistenza](../../../docs/framework/windows-workflow-foundation//persistence-database-schema.md).  
+## <a name="views"></a>Visualizzazioni  
+ L'archivio di istanze contiene le visualizzazioni seguenti. Vedere [dello Schema di Database di persistenza](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) per altri dettagli.  
   
-### Visualizzazione Instances  
+### <a name="the-instances-view"></a>Visualizzazione Instances  
  La visualizzazione Instances contiene i campi seguenti:  
   
 1.  **Id**  
@@ -64,13 +68,13 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
   
 10. **Last Machine.**  
   
-11. **ExecutionStatus**  
+11. **ExecutionStatus nel gruppo**  
   
 12. **IsInitialized**  
   
 13. **IsSuspended**  
   
-14. **IsCompleted**  
+14. **Completato**  
   
 15. **EncodingOption**  
   
@@ -82,7 +86,7 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
   
 19. **WriteOnlyComplexDataProperties**  
   
-### Visualizzazione ServiceDeployments  
+### <a name="the-servicedeployments-view"></a>Visualizzazione ServiceDeployments  
  La visualizzazione ServiceDeployments contiene i campi seguenti:  
   
 1.  **SiteName**  
@@ -95,8 +99,8 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
   
 5.  **ServiceNamespace**  
   
-### Visualizzazione InstancePromotedProperties  
- La visualizzazione InstancePromotedProperties contiene i campi seguenti.Per dettagli sulle proprietà promosse, vedere l'argomento [Estensibilità dell'archivio](../../../docs/framework/windows-workflow-foundation//store-extensibility.md).  
+### <a name="the-instancepromotedproperties-view"></a>Visualizzazione InstancePromotedProperties  
+ La visualizzazione InstancePromotedProperties contiene i campi seguenti. Per informazioni dettagliate su proprietà innalzate di livello, vedere il [archivio estendibilità](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) argomento.  
   
 1.  **InstanceId**  
   
@@ -104,4 +108,4 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
   
 3.  **PromotionName**  
   
-4.  **Value\#** \(un intervallo di campi da **Value1** a **Value64**\).
+4.  **Valore #** (un intervallo di campi da **Value1** a **Value64**).

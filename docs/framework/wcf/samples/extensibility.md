@@ -1,25 +1,28 @@
 ---
-title: "Extensibility | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Extensibility
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ff52165ca4ff79d652eb1cd509bcd6898005650b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Extensibility
+# <a name="extensibility"></a>Extensibility
 Contenuto della sezione sono inclusi esempi relativi all'estensibilità personalizzata e ad altre funzionalità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Estensibilità dei canali](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  Vengono illustrati i canali personalizzati.  
   
@@ -56,17 +59,17 @@ Contenuto della sezione sono inclusi esempi relativi all'estensibilità personal
  [Filtro messaggi personalizzato](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
  Viene illustrato come sostituire i filtri dei messaggi usati da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per distribuire messaggi agli endpoint.  
   
- [Host di servizi personalizzati](../../../../docs/framework/wcf/samples/custom-service-host.md)  
+ [Host del servizio personalizzato](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Viene illustrato come usare un derivato personalizzato della classe <xref:System.ServiceModel.ServiceHost> per modificare il comportamento di runtime di un servizio.  
   
  [Surrogato di DataContract](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Viene illustrato in che modo i processi, quali la serializzazione, la deserializzazione, l'esportazione e l'importazione dello schema, possono essere personalizzati usando una classe surrogata del contratto dati.  
   
- [Estensione del controllo sulla gestione e sulla segnalazione degli errori](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [Estensione del controllo sulla gestione degli errori e Reporting](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Viene illustrato come estendere il controllo sulla gestione degli errori e sulla segnalazione errori in un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando l'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
   
  [Controlli messaggi](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Viene illustrato come implementare e configurare i controlli messaggi del client e del servizio.  
   
- [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
+ [Proprietà WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
  Viene illustrato come eseguire il mapping di nuovi tipi di contenuto ai formati del corpo del messaggio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].

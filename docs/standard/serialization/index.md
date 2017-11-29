@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - XML serialization, defined
 - binary serialization
@@ -19,16 +14,15 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 4aaef3337c9ee2464925ed4dc31c075a4e68a9dc
-ms.contentlocale: it-it
-ms.lasthandoff: 09/18/2017
-
+ms.openlocfilehash: 6c97dc9b98f90af31c86af5295a7a4ad9894b428
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-in-net"></a>Serializzazione in .NET
 La serializzazione è il processo di conversione dello stato di un oggetto in un form che può essere mantenuto o trasportato. Il complemento della serializzazione è la deserializzazione, che converte un flusso in un oggetto. Insieme, questi processi consentono di archiviare e trasferire i dati in modo semplice.  

@@ -1,40 +1,42 @@
 ---
-title: "Elemento &lt;httpWebRequest&gt; (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#httpWebRequest"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<httpWebRequest> (elemento)"
-  - "httpWebRequest (elemento)"
+title: '&lt;httpWebRequest&gt; elemento (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#httpWebRequest
+helpviewer_keywords:
+- <httpWebRequest> element
+- httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-caps.latest.revision: 18
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 0a4490870cb12ff221f75b043f01baad9b5c7c96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;httpWebRequest&gt; (Impostazioni di rete)
-Personalizza i parametri delle richieste Web.  
+# <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; elemento (impostazioni di rete)
+Consente di personalizzare i parametri della richiesta Web.  
   
-## Sintassi  
+ \<configuration>  
+\<System.NET >  
+\<Impostazioni >  
+\<httpWebRequest >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-      <httpWebRequest  
+```xml  
+<httpWebRequest  
   maximumResponseHeadersLength="size"  
   maximumErrorResponseLength="size"  
   maximumUnauthorizedUploadLength="size"  
@@ -42,37 +44,37 @@ Personalizza i parametri delle richieste Web.
 />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|Specifica la lunghezza massima, in kilobyte, di un'intestazione di risposta.  Il valore predefinito è 64.  Il valore \-1 indica che non verrà imposto alcun limite di dimensione sulle intestazioni di risposta.|  
-|`maximumErrorResponseLength`|Specifica la lunghezza massima, in kilobyte, di una risposta di errore.  Il valore predefinito è 64.  Il valore \-1 indica che non verrà imposto alcun limite di dimensione sulle risposte di errore.|  
-|`maximumUnauthorizedUploadLength`|Specifica la lunghezza massima, in byte, di un caricamento eseguito in risposta a un codice di errore non autorizzato.  Il valore predefinito è \-1.  Un valore di \-1 indica che non verrà imposto alcun limite di dimensione all'upload.|  
-|`useUnsafeHeaderParsing`|Specifica se l'analisi delle intestazioni non protette è attivata.  Il valore predefinito è `false`.|  
+|`maximumResponseHeadersLength`|Specifica la lunghezza massima di un'intestazione di risposta, in kilobyte. Il valore predefinito è 64. Il valore-1 indica che non verrà imposto alcun limite di dimensione delle intestazioni di risposta.|  
+|`maximumErrorResponseLength`|Specifica la lunghezza massima di una risposta di errore, in kilobyte. Il valore predefinito è 64. Il valore-1 indica che non verrà imposto alcun limite di dimensione nella risposta di errore.|  
+|`maximumUnauthorizedUploadLength`|Specifica la lunghezza massima di un'operazione di caricamento in risposta a un codice di errore non autorizzato, in byte. Il valore predefinito è -1. Il valore-1 indica che non verrà imposto sul caricamento alcun limite di dimensione.|  
+|`useUnsafeHeaderParsing`|Specifica se l'analisi delle intestazioni non sicure è abilitata. Il valore predefinito è `false`.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|-----------------|---------------------|  
+|[Impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
-## Note  
- Per impostazione predefinita, .NET Framework applica in maniera rigida la specifica RFC 2616 per l'analisi URI.  Alcune risposte del server possono includere caratteri di controllo in campi non consentiti, che causeranno la generazione di un'eccezione <xref:System.Net.WebException> da parte del metodo <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=fullName>.  Se l'attributo **useUnsafeHeaderParsing** è impostato su **true**, il metodo <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=fullName> non genererà alcuna eccezione. L'applicazione sarà, tuttavia, vulnerabile a diverse forme di attacchi durante l'analisi URI.  La soluzione migliore consiste nel modificare le impostazioni del server in modo che la risposta non includa caratteri di controllo.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, .NET Framework viene introdotto RFC 2616 per l'analisi di URI. Alcune risposte del server possono includere caratteri di controllo in campi non consentiti, che provoca il <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> metodo consente di generare un <xref:System.Net.WebException>. Se **useUnsafeHeaderParsing** è impostato su **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> non viene generata in questo caso, tuttavia, l'applicazione sarà vulnerabile a diversi tipi di attacchi di analisi URI. La soluzione migliore consiste nel modificare il server in modo che la risposta non include caratteri di controllo.  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a>File di configurazione  
+ Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene illustrato come specificare una lunghezza di intestazione massima maggiore del normale.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come specificare un maggiore rispetto alla lunghezza massima dell'intestazione normale.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -84,6 +86,6 @@ Personalizza i parametri delle richieste Web.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

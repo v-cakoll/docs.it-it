@@ -1,59 +1,62 @@
 ---
-title: "How to: Continue a Windows Service (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceController.Continue"
-helpviewer_keywords: 
-  - "Windows Service applications, pausing"
-  - "pausing Windows Service applications"
+title: 'Procedura: continuare un servizio Windows (Visual Basic)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: ServiceController.Continue
+helpviewer_keywords:
+- Windows Service applications, pausing
+- pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
-caps.latest.revision: 16
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 28dbbf2376416a340ad7853c026b2f763f695dcb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Continue a Windows Service (Visual Basic)
-Nell'esempio riportato di seguito viene utilizzato il componente <xref:System.ServiceProcess.ServiceController> per continuare il servizio di amministrazione di IIS sul computer locale.  
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Procedura: continuare un servizio Windows (Visual Basic)
+Questo esempio viene utilizzato il <xref:System.ServiceProcess.ServiceController> componente di riprendere il servizio di amministrazione di IIS nel computer locale.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   
- Questo esempio di codice è anche disponibile come frammento di codice IntelliSense.  Nella casella di selezione dei frammenti di codice l'esempio è incluso in **Sistema operativo Windows \> Servizi Windows**.  Per ulteriori informazioni, vedere [Frammenti di codice](../Topic/Code%20Snippets.md).  
+ Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. In selezione frammento di codice, si trova in **sistema operativo Windows > Windows Services**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
--   Riferimento di progetto a System.serviceprocess.dll.  
+-   Un riferimento progetto a System.serviceprocess.dll.  
   
--   Accesso ai membri dello spazio dei nomi <xref:System.ServiceProcess>.  Aggiungere un'istruzione `Imports` se i nomi dei membri all'interno del codice non sono specificati in modo completo.  Per ulteriori informazioni, vedere [Imports Statement \(.NET Namespace and Type\)](../../../ocs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+-   Accedere ai membri dello spazio dei nomi <xref:System.ServiceProcess>. Aggiungere un'istruzione `Imports` se i nomi dei membri all'interno del codice non sono specificati in modo completo. Per altre informazioni, vedere [Istruzione Imports (tipo e spazio dei nomi .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
-## Programmazione efficiente  
- Per impostazione predefinita, la proprietà <xref:System.ServiceProcess.ServiceController.MachineName%2A> della classe <xref:System.ServiceProcess.ServiceController> corrisponde al computer locale.  Per fare riferimento a servizi Windows su un altro computer, impostare la proprietà <xref:System.ServiceProcess.ServiceController.MachineName%2A> sul nome del computer specifico.  
+## <a name="robust-programming"></a>Programmazione efficiente  
+ Il <xref:System.ServiceProcess.ServiceController.MachineName%2A> proprietà la <xref:System.ServiceProcess.ServiceController> classe è il computer locale per impostazione predefinita. Per fare riferimento a servizi di Windows in un altro computer, modificare il <xref:System.ServiceProcess.ServiceController.MachineName%2A> proprietà sul nome del computer.  
   
- Non è possibile chiamare il metodo <xref:System.ServiceProcess.ServiceController.Continue%2A> su un servizio fino a quando lo stato del controller servizi non è <xref:System.ServiceProcess.ServiceControllerStatus>.  
+ Non è possibile chiamare il <xref:System.ServiceProcess.ServiceController.Continue%2A> metodo su un servizio fino a quando lo stato del servizio controller è <xref:System.ServiceProcess.ServiceControllerStatus.Paused>.  
   
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il servizio non può essere ripreso  \(<xref:System.InvalidOperationException>\)  
+-   Impossibile riprendere il servizio. (<xref:System.InvalidOperationException>)  
   
--   Si è verificato un errore durante l'accesso a un'API di sistema  \(<xref:System.ComponentModel.Win32Exception>\)  
+-   Si è verificato un errore durante l'accesso a un'API di sistema. (<xref:System.ComponentModel.Win32Exception>)  
   
-## Sicurezza di .NET Framework  
- Il controllo dei servizi sul computer può essere limitato mediante l'enumerazione <xref:System.ServiceProcess.ServiceControllerPermissionAccess> per impostare le autorizzazioni nella classe <xref:System.ServiceProcess.ServiceControllerPermission>.  
+## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
+ Il controllo dei servizi del computer può essere limitato tramite la <xref:System.ServiceProcess.ServiceControllerPermissionAccess> enumerazione come impostare le autorizzazioni di <xref:System.ServiceProcess.ServiceControllerPermission> classe.  
   
- È possibile inoltre limitare l'accesso alle informazioni relative ai servizi mediante l'enumerazione <xref:System.Security.Permissions.PermissionState> per impostare le autorizzazioni nella classe <xref:System.Security.Permissions.SecurityPermission>.  
+ Utilizzando, è possibile limitare l'accesso alle informazioni sul servizio di <xref:System.Security.Permissions.PermissionState> enumerazione come impostare le autorizzazioni di <xref:System.Security.Permissions.SecurityPermission> classe.  
   
-## Vedere anche  
- <xref:System.ServiceProcess.ServiceController>   
- <xref:System.ServiceProcess.ServiceControllerStatus>   
- [How to: Pause a Windows Service \(Visual Basic\)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceProcess.ServiceController>  
+ <xref:System.ServiceProcess.ServiceControllerStatus>  
+ [Procedura: sospendere un servizio di Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

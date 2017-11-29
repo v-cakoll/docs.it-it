@@ -1,29 +1,32 @@
 ---
-title: "Metodi System.DateTime | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Metodi System.DateTime
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e4923be2b9e083129c58d042b1ad3e21897c0346
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Metodi System.DateTime
-I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono disponibili per l'uso nelle query LINQ to SQL.  Quando un metodo, una proprietà o un operatore non è supportato, LINQ to SQL non può eseguire la conversione del membro per l'esecuzione in SQL Server.  Questi membri possono essere usati nel codice, ma devono tuttavia essere valutati prima che la query venga convertita in Transact\-SQL o dopo che i risultati sono stati recuperati dal database.  
+# <a name="systemdatetime-methods"></a>Metodi System.DateTime
+I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono disponibili per l'uso nelle query LINQ to SQL. Quando un metodo, una proprietà o un operatore non è supportato, LINQ to SQL non può eseguire la conversione del membro per l'esecuzione in SQL Server. Questi membri possono essere usati nel codice, ma devono tuttavia essere valutati prima che la query venga convertita in Transact-SQL o dopo che i risultati sono stati recuperati dal database.  
   
-## Membri System.DateTime supportati  
- Una volta eseguito il mapping nel modello a oggetti o nel file di mapping esterno, LINQ to SQL consente di chiamare i membri <xref:System.DateTime?displayProperty=fullName> seguenti nelle query LINQ to SQL.  
+## <a name="supported-systemdatetime-members"></a>Membri System.DateTime supportati  
+ Una volta eseguito il mapping nel modello a oggetti o nel file di mapping esterno, LINQ to SQL consente di chiamare i membri <xref:System.DateTime?displayProperty=nameWithType> seguenti nelle query LINQ to SQL.  
   
 |Metodi <xref:System.DateTime> supportati|Operatori <xref:System.DateTime> supportati|Proprietà <xref:System.DateTime> supportate|  
-|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
+|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Add%2A>|<xref:System.DateTime.op_Addition%2A>|<xref:System.DateTime.Date%2A>|  
 |<xref:System.DateTime.AddDays%2A>|<xref:System.DateTime.op_Equality%2A>|<xref:System.DateTime.Day%2A>|  
 |<xref:System.DateTime.AddHours%2A>|<xref:System.DateTime.op_GreaterThan%2A>|<xref:System.DateTime.DayOfWeek%2A>|  
@@ -38,7 +41,7 @@ I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono 
 |<xref:System.DateTime.Equals%28System.DateTime%29>||<xref:System.DateTime.Today%2A>|  
 |||<xref:System.DateTime.Year%2A>|  
   
-## Membri non supportati da LINQ to SQL  
+## <a name="members-not-supported-by-linq-to-sql"></a>Membri non supportati da LINQ to SQL  
  I membri seguenti non sono supportati nelle query LINQ to SQL.  
   
 |||  
@@ -53,8 +56,8 @@ I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono 
 |<xref:System.DateTime.FromFileTime%2A>|<xref:System.DateTime.FromFileTimeUtc%2A>|  
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
-## Esempio di conversione di metodi  
- Tutti i metodi supportati da LINQ to SQL vengono convertiti in Transact\-SQL prima di essere inviati a SQL Server.  Si consideri, ad esempio, il seguente modello.  
+## <a name="method-translation-example"></a>Esempio di conversione di metodi  
+ Tutti i metodi supportati da LINQ to SQL vengono convertiti in Transact-SQL prima di essere inviati a SQL Server. Si consideri, ad esempio, il seguente modello.  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
   
@@ -62,8 +65,8 @@ I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono 
   
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
-## Metodi SQLMethods relativi a data e ora  
- Oltre ai metodi offerti dalla struttura di <xref:System.DateTime>, LINQ to SQL offre i metodi della classe <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=fullName> elencati nella tabella seguente per l'uso di data e ora.  
+## <a name="sqlmethods-date-and-time-methods"></a>Metodi SQLMethods relativi a data e ora  
+ Oltre ai metodi offerti dalla struttura di <xref:System.DateTime>, LINQ to SQL offre i metodi della classe <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> elencati nella tabella seguente per l'uso di data e ora.  
   
 ||||  
 |-|-|-|  
@@ -71,8 +74,8 @@ I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono 
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## Vedere anche  
- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)   
- [Creazione del modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)   
- [Mapping di tipi SQL\-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)   
- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [Creazione del modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [Mapping dei tipi CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [Funzioni e tipi di dati](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

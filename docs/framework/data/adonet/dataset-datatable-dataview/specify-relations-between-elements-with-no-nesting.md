@@ -1,27 +1,30 @@
 ---
-title: "Definire relazioni tra elementi non annidati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Specifica di relazioni tra elementi senza alcun annidamento
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 036085160e9e4817964754a85db627e4d4ba8654
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Definire relazioni tra elementi non annidati
-Se gli elementi non sono annidati, non viene creata alcuna relazione implicita.  È tuttavia possibile specificare esplicitamente relazioni tra elementi non annidati mediante l'annotazione **msdata:Relationship**.  
+# <a name="specify-relations-between-elements-with-no-nesting"></a>Specifica di relazioni tra elementi senza alcun annidamento
+Se gli elementi non sono annidati, non viene creata alcuna relazione implicita. Tuttavia, è possibile specificare esplicitamente relazioni tra gli elementi non annidati mediante il **msdata: Relationship** annotazione.  
   
- Nell'esempio seguente viene riportato un XML Schema in cui l'annotazione **msdata:Relationship** viene specificata tra gli elementi non annidati **Order** e **OrderDetail**.  L'annotazione **msdata:Relationship** viene specificata come elemento figlio dell'elemento **Schema**.  
+ Nell'esempio seguente viene illustrato un XML Schema in cui il **msdata: Relationship** annotazione viene specificata tra la **ordine** e **OrderDetail** elementi, che non sono annidati. Il **msdata: Relationship** annotazione viene specificata come elemento figlio del **Schema** elemento.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
              xmlns:xs="http://www.w3.org/2001/XMLSchema"   
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -60,7 +63,7 @@ Se gli elementi non sono annidati, non viene creata alcuna relazione implicita. 
 </xs:schema>  
 ```  
   
- Il processo di mapping dello schema XSD \(XML Schema Definition Language\) consente di creare un tipo <xref:System.Data.DataSet> con le tabelle **Order** e **OrderDetail** e con una relazione specificata tra tali tabelle, come illustrato di seguito.  
+ Il processo di mapping dello schema di XML Schema definition language (XSD) crea un <xref:System.Data.DataSet> con **ordine** e **OrderDetail** tabelle e una relazione specificata tra le due tabelle, come illustrato di seguito.  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -71,7 +74,7 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## Vedere anche  
- [Generazione delle relazioni del DataSet da XML Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Mapping dei vincoli di XML Schema \(XSD\) ai vincoli del DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [La generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Vincoli di mapping XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

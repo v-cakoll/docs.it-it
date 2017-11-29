@@ -1,67 +1,68 @@
 ---
-title: "Controlli Windows Form usati per elencare opzioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "elenchi di opzioni in Windows Form"
-  - "controlli Windows Form, opzioni di elenco"
+title: Controlli Windows Form usati per elencare opzioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, listing options
+- option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Controlli Windows Form usati per elencare opzioni
-È possibile aggiungere a un Windows Form diversi controlli per fornire all'utente un elenco di opzioni tra cui scegliere.  In base alle limitazioni che si intendono porre all'input dell'utente, è possibile aggiungere un controllo <xref:System.Windows.Forms.ListBox>, un controllo <xref:System.Windows.Forms.ComboBox> o un controllo <xref:System.Windows.Forms.CheckedListBox>.  Fare clic sui collegamenti che seguono per individuare il controllo più adatto alle proprie esigenze.  
+# <a name="windows-forms-controls-used-to-list-options"></a>Controlli Windows Form usati per elencare opzioni
+Se si desidera fornire agli utenti un elenco di opzioni tra cui scegliere, è possibile aggiungere un'ampia gamma di controlli a un Windows Form. A seconda della quantità si desidera limitare gli utenti di input, è possibile aggiungere un <xref:System.Windows.Forms.ListBox> (controllo), un <xref:System.Windows.Forms.ComboBox> (controllo), o un <xref:System.Windows.Forms.CheckedListBox> controllo. Utilizzare i collegamenti seguenti per determinare quale controllo più adatto alle proprie esigenze.  
   
-## In questa sezione  
- [Quando utilizzare un controllo ComboBox Windows Form anziché un controllo ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- Viene suggerito il controllo basato su elenchi più adatto in base alle necessità e alle limitazioni imposte dal Windows Form.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Quando usare un controllo ComboBox Windows Form anziché un controllo ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
+ Si consiglia un controllo basato su elenchi appropriato a seconda delle esigenze e le restrizioni di Windows Form.  
   
- [Procedura: accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox Windows Form](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
- Vengono fornite le istruzioni per determinare a livello di codice quale voce di un elenco appare in un dato percorso.  
+ [Procedura: Accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox di Windows Form](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ Vengono fornite istruzioni per determinare a livello di programmazione quale elemento in un elenco viene visualizzato in una posizione specificata.  
   
- [Procedura: aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox Windows Form](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
- Vengono fornite le istruzioni per aggiungere o rimuovere elementi dall'elenco di voci di un controllo.  
+ [Procedura: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox di Windows Form](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ Vengono fornite istruzioni per l'aggiunta o rimozione di elementi dall'elenco di un controllo degli elementi.  
   
- [Procedura: creare una tabella di ricerca per un controllo ComboBox, ListBox o CheckedListBox Windows Form](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)  
- Vengono fornite le istruzioni per visualizzare e memorizzare dati di form in più formati.  
+ [Procedura: Creare una tabella di ricerca per un controllo ComboBox, ListBox o CheckedListBox di Windows Form](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)  
+ Vengono fornite indicazioni per la visualizzazione e l'archiviazione dei dati di form in più formati.  
   
- [Procedura: associare a dati un controllo ComboBox o ListBox Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
- Vengono fornite le istruzioni per associare a un controllo basato su un elenco un'origine dati.  
+ [Procedura: Associare a dati un controllo ComboBox o ListBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ Vengono fornite indicazioni per l'associazione di un controllo elenco in base a un'origine dati.  
   
- [Procedura: ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox Windows Form](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- Viene illustrato come ordinare i dati di un elenco nell'origine dati.  
+ [Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Form](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ Viene illustrato come ordinare i dati elenco nell'origine dati.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.CheckedListBox>  
- Viene descritta la classe e forniti i collegamenti a tutti i relativi membri.  
+ Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
  <xref:System.Windows.Forms.ComboBox>  
- Viene descritta la classe e forniti i collegamenti a tutti i relativi membri.  
+ Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
  <xref:System.Windows.Forms.ListBox>  
- Viene descritta la classe e forniti i collegamenti a tutti i relativi membri.  
+ Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
-## Sezioni correlate  
- [Cenni preliminari sul controllo CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- Viene fornita una definizione del controllo e ne vengono illustrate funzionalità chiave e proprietà.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Panoramica sul controllo CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
- [Cenni preliminari sul controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- Viene fornita una definizione del controllo e ne vengono illustrate funzionalità chiave e proprietà.  
+ [Panoramica sul controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
- [Cenni preliminari sul controllo ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- Viene fornita una definizione del controllo e ne vengono illustrate funzionalità chiave e proprietà.  
+ [Panoramica sul controllo ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Viene fornito un elenco completo dei controlli Windows Form, con l'indicazione dei collegamenti alle informazioni sul relativo utilizzo.
+ [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

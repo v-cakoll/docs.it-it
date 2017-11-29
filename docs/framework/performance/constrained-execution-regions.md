@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 81de172df01879af97aa66b0892a97505178c93c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="constrained-execution-regions"></a>aree di esecuzione vincolate
 Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di codice gestito affidabile. Un'area a esecuzione vincolata è un'area in cui Common Language Runtime (CLR) non può generare eccezioni fuori banda che impedirebbero l'esecuzione completa del codice nell'area. All'interno di tale area il codice non può eseguire codice che comporterebbe la generazione di eccezioni fuori banda. Il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve precedere immediatamente un blocco `try` e contrassegna i blocchi `catch`, `finally` e `fault` come aree a esecuzione vincolata. Dopo che è stato contrassegnato come area a esecuzione vincolata, il codice può chiamare solo altro codice con contratto di affidabilità efficace e può allocare o effettuare chiamate virtuali a metodi non preparati o non affidabili solo se è in grado di gestire eventuali errori. Per il codice in esecuzione in un'area a esecuzione vincolata, CLR ritarda le interruzioni di thread.  
@@ -126,4 +124,3 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate per l'ottimizzazione dell'affidabilità](../../../docs/framework/performance/reliability-best-practices.md)
-

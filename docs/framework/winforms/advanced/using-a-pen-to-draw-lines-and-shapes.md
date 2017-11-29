@@ -1,53 +1,54 @@
 ---
-title: "Utilizzo di un oggetto Pen per creare linee e forme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "disegno"
-  - "esempi [Windows Form], disegno di linee e forme"
-  - "esempi [Windows Form], penne"
-  - "penne"
+title: Utilizzo di un oggetto Pen per creare linee e forme
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pens
+- examples [Windows Forms], drawing lines and shapes
+- examples [Windows Forms], pens
+- drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizzo di un oggetto Pen per creare linee e forme
-Utilizzare gli oggetti `Pen` di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare segmenti di linee, curve e contorni di forme.  In questa sezione, il termine *linea* fa riferimento indifferentemente a ognuno di questi elementi, fatta eccezione quando è indicato specificamente solo un segmento di linea.  Impostare le proprietà di un oggetto Pen per controllare il colore, la larghezza, l'allineamento e lo stile delle linee tracciate.  
+# <a name="using-a-pen-to-draw-lines-and-shapes"></a>Utilizzo di un oggetto Pen per creare linee e forme
+Utilizzare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` oggetti per creare segmenti di linea, curve e le strutture delle forme. In questa sezione, *riga* fa riferimento a uno di questi, salvo per indicare solo un segmento di linea. Impostare le proprietà di un oggetto pen per controllare il colore, larghezza, l'allineamento e stile delle linee disegnate con quella penna.  
   
-## In questa sezione  
- [Procedura: utilizzare un oggetto Pen per disegnare linee](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
- Viene illustrato come disegnare linee.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Usare un oggetto Pen per disegnare linee](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
+ Viene descritto come creare linee.  
   
- [Procedura: utilizzare un oggetto Pen per disegnare rettangoli](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
- Viene illustrato come disegnare rettangoli.  
+ [Procedura: Usare un oggetto Pen per disegnare rettangoli](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
+ Viene descritto come disegnare rettangoli.  
   
- [Procedura: impostare la larghezza e l'allineamento di un oggetto Pen](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
- Viene illustrato come modificare la larghezza e l'allineamento di un oggetto `Pen`.  
+ [Procedura: Impostare la larghezza e l'allineamento di un oggetto Pen](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
+ Viene illustrato come modificare la larghezza e l'allineamento di un `Pen` oggetto.  
   
- [Procedura: disegnare una linea con estremità](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-with-line-caps.md)  
- Viene descritto come aggiungere estremità finali nel disegno di una linea.  
+ [Procedura: Disegnare una linea con estremità](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-with-line-caps.md)  
+ Viene descritto come aggiungere i delimitatori finali quando si disegna una linea.  
   
- [Procedura: unire linee](../../../../docs/framework/winforms/advanced/how-to-join-lines.md)  
+ [Procedura: Unire linee](../../../../docs/framework/winforms/advanced/how-to-join-lines.md)  
  Viene illustrato come unire due linee.  
   
- [Procedura: disegnare una linea tratteggiata personalizzata](../../../../docs/framework/winforms/advanced/how-to-draw-a-custom-dashed-line.md)  
- Viene illustrato come disegnare una linea tratteggiata.  
+ [Procedura: Disegnare una linea tratteggiata personalizzata](../../../../docs/framework/winforms/advanced/how-to-draw-a-custom-dashed-line.md)  
+ Viene descritto come disegnare una linea tratteggiata.  
   
- [Procedura: disegnare una linea con riempimento a trama](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
- Viene illustrato come disegnare una linea con una trama di riempimento.  
+ [Procedura: Disegnare una linea con riempimento a trama](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
+ Viene illustrato come disegnare una linea di trama di riempimento.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Drawing.Pen>  
- Viene descritta la classe e forniti i collegamenti a tutti i relativi membri.
+ Descrive la classe e fornisce i collegamenti a tutti i relativi membri.

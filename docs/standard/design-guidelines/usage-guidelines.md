@@ -1,46 +1,43 @@
 ---
-title: "Linee guida di utilizzo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "classe libreria linee guida di progettazione [.NET Framework], linee guida di utilizzo"
+title: Linee guida di utilizzo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Linee guida di utilizzo
-In questa sezione contiene linee guida per l'utilizzo di tipi comuni nell'API pubblicamente accessibile. Deve gestire l'utilizzo diretto di tipi di Framework \(ad esempio, gli attributi di serializzazione\) e l'overload degli operatori comuni predefiniti.  
+# <a name="usage-guidelines"></a>Linee guida di utilizzo
+In questa sezione contiene linee guida per l'utilizzo di tipi comuni nelle API accessibile pubblicamente. Occupa dell'utilizzo diretto dei tipi (ad esempio, gli attributi di serializzazione) incorporati e overload degli operatori comuni.  
   
- Il <xref:System.IDisposable?displayProperty=fullName> interfaccia non è illustrato in questa sezione, ma verrà discusso il [Modello Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) sezione.  
+ Il <xref:System.IDisposable?displayProperty=nameWithType> interfaccia non viene descritta in questa sezione, ma verrà discusso il [modello Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) sezione.  
   
 > [!NOTE]
->  Per ulteriori informazioni su altri usi comuni e linee guida, tipi predefiniti di .NET Framework, vedere gli argomenti di riferimento per gli elementi seguenti: <xref:System.DateTime?displayProperty=fullName>, <xref:System.DateTimeOffset?displayProperty=fullName>, <xref:System.ICloneable?displayProperty=fullName>, <xref:System.IComparable%601?displayProperty=fullName>, <xref:System.IEquatable%601?displayProperty=fullName>, <xref:System.Nullable%601?displayProperty=fullName>, <xref:System.Object?displayProperty=fullName>, <xref:System.Uri?displayProperty=fullName>.  
+>  Per linee guida e ulteriori informazioni su altri tipi predefiniti di .NET Framework, vedere gli argomenti di riferimento per gli elementi seguenti: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.  
   
-## In questa sezione  
- [Matrici](../../../docs/standard/design-guidelines/arrays.md)  
- [Attributi](../../../docs/standard/design-guidelines/attributi.md)  
- [Raccolte](../../../amples/snippets/cpp/VS_Snippets_Misc/cx_collections/cpp/collections.vcxproj)  
- [Serializzazione](../../../docs/standard/design-guidelines/serializzazione.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Array](../../../docs/standard/design-guidelines/arrays.md)  
+ [Attributi](../../../docs/standard/design-guidelines/attributes.md)  
+ [Raccolte](/cpp/mfc/collections)  
+ [Serializzazione](../../../docs/standard/design-guidelines/serialization.md)  
  [Utilizzo di System. Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
  [Operatori di uguaglianza](../../../docs/standard/design-guidelines/equality-operators.md)  
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
-## Vedere anche  
- [Linee guida](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

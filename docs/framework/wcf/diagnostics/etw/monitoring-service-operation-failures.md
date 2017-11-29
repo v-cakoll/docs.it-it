@@ -1,37 +1,39 @@
 ---
-title: "Monitoraggio di errori relativi alle operazioni del servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Monitoraggio di errori relativi alle operazioni del servizio
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 42506f7f32d0174b4f980f4e94d370cf4c137276
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Monitoraggio di errori relativi alle operazioni del servizio
-Se la traccia analitica è abilitata per un'applicazione, è possibile monitorare gli errori del servizio facilmente nel visualizzatore eventi.Questo argomento illustra come determinare quando un'operazione del servizio non riesce e come determinare ciò che ha provocato l'errore.  
+# <a name="monitoring-service-operation-failures"></a>Monitoraggio di errori relativi alle operazioni del servizio
+Se la traccia analitica è abilitata per un'applicazione, è possibile monitorare gli errori del servizio facilmente nel visualizzatore eventi.  Questo argomento illustra come determinare quando un'operazione del servizio non riesce e come determinare ciò che ha provocato l'errore.  
   
-### Informazioni sulla determinazione di errori relativi alle operazioni del servizio  
+### <a name="determining-service-operation-failure-information"></a>Informazioni sulla determinazione di errori relativi alle operazioni del servizio  
   
-1.  Aprire il Visualizzatore eventi facendo clic sul pulsante **Start**, quindi scegliendo **Esegui** e immettendo `eventvwr.exe`.  
+1.  Aprire il Visualizzatore eventi fare clic su **avviare**, **eseguire**e l'immissione di `eventvwr.exe`.  
   
-2.  Se la traccia analitica non è stata abilitata, espandere **Registri applicazioni e servizi**, **Microsoft**, **Windows**, **Server applicazioni\-Applicazioni**.Selezionare **Visualizza**, **Visualizza registri analitici e di debug**.Fare clic con il pulsante destro del mouse su **Analitico** e scegliere **Attiva registro**.Lasciare aperto il Visualizzatore eventi in modo che le tracce possano essere visualizzate dopo la mancata riuscita dell'operazione del servizio.  
+2.  Se è stata abilitata la traccia analitica, espandere **registri applicazioni e servizi**, **Microsoft**, **Windows**, **Server applicazioni-applicazioni** . Selezionare **vista**, **Mostra analitica e registri di Debug**. Fare doppio clic su **analitico** e selezionare **Attiva registro**. Lasciare aperto il Visualizzatore eventi in modo che le tracce possano essere visualizzate dopo la mancata riuscita dell'operazione del servizio.  
   
-3.  Aprire quindi l'esempio creato nell'[Esercitazione introduttiva](../../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] È necessario eseguire [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] come amministratore in modo che sia possibile creare il servizio.Se si dispone degli esempi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] installati, è possibile aprire l'[Guida introduttiva](../../../../../docs/framework/wcf/samples/getting-started-sample.md), che contiene il progetto completato creato nell'esercitazione.  
+3.  Aprire quindi il codice di esempio creato nel [esercitazione introduttiva](../../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] si noti che è necessario eseguire [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] come amministratore in modo che il servizio può essere creato. Se si dispone di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] gli esempi installati, è possibile aprire il [Introduzione](../../../../../docs/framework/wcf/samples/getting-started-sample.md), che contiene il progetto completato, creato nell'esercitazione.  
   
 4.  Nel file Program.cs del progetto Server aggiungere la riga di codice seguente all'inizio del metodo `Divide` nella classe `CalculatorService`:  
   
     ```  
     if (n2 == 0) throw new DivideByZeroException();  
-  
     ```  
   
 5.  Nel file Program.cs nel progetto Client, assegnare a value2 il valore zero:  
@@ -42,17 +44,16 @@ Se la traccia analitica è abilitata per un'applicazione, è possibile monitorar
     value2 = 0.00D;  
     result = client.Divide(value1, value2);  
     Console.WriteLine("Divide({0}, {1}) = {2}", value1, value2, result);  
-  
     ```  
   
-6.  Eseguire l'applicazione server senza debug premendo **Ctrl\+F5**.  
+6.  Eseguire l'applicazione server senza debug premendo **Ctrl + F5**.  
   
-7.  Aprire il prompt dei comandi di Visual Studio.Passare alla directory client ed eseguire il client dalla riga di comando.  
+7.  Aprire il prompt dei comandi di Visual Studio.  Passare alla directory client ed eseguire il client dalla riga di comando.  
   
-8.  Nel Visualizzatore eventi, disabilitare e aggiornare il registro analitico e ordinare gli eventi in base all'ID evento.Cercare un evento con ID evento [219 \- ServiceException](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md), che descrive l'errore del servizio.  
+8.  Nel Visualizzatore eventi, disabilitare e aggiornare il registro analitico e ordinare gli eventi in base all'ID evento.  Cerca un evento con ID evento [ServiceException 219 -](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md), che descrive l'errore di servizio.  
   
     ```Output  
-    Riscontrata un'eccezione non gestita di tipo "System.DivideByZeroException" durante l'elaborazione del messaggio.Eccezione ToString completa: System.DivideByZeroException: Tentativo di divisione per zero.  
+    There was an unhandled exception of type 'System.DivideByZeroException' during message processing.  Full Exception ToString: System.DivideByZeroException: Attempted to divide by zero.  
     ```  
   
     > [!NOTE]

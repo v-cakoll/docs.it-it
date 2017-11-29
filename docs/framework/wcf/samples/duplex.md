@@ -1,33 +1,32 @@
 ---
-title: "Duplex | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Contratto di servizio duplex"
+title: Duplex
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-caps.latest.revision: 40
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 40
+caps.latest.revision: "40"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b0c5b5dc6bff78f06df75f4b5a9c5c3a8647dbf4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Duplex
-Nell'esempio duplex viene illustrato come definire e implementare un contratto duplex.  Una comunicazione duplex ha luogo quando un client stabilisce una sessione con un servizio e fornisce a quest'ultimo un canale usabile per inviare messaggi al client.  Questo esempio è basato sull'[Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  Un contratto duplex è definito come una coppia di interfacce: un'interfaccia principale dal client al servizio e un'interfaccia di callback dal servizio al client.  In questo esempio, l'interfaccia `ICalculatorDuplex` consente al client di eseguire operazioni matematiche, calcolando il risultato in una sessione.  Il servizio restituisce i risultati sull'interfaccia `ICalculatorDuplexCallback`.  Poiché occorre definire un contesto per correlare il set di messaggi scambiati fra il client e il servizio, i contratti duplex richiedono una sessione.  
+# <a name="duplex"></a>Duplex
+Nell'esempio duplex viene illustrato come definire e implementare un contratto duplex. Una comunicazione duplex ha luogo quando un client stabilisce una sessione con un servizio e fornisce a quest'ultimo un canale usabile per inviare messaggi al client. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). Un contratto duplex è definito come una coppia di interfacce: un'interfaccia principale dal client al servizio e un'interfaccia di callback dal servizio al client. In questo esempio, l'interfaccia `ICalculatorDuplex` consente al client di eseguire operazioni matematiche, calcolando il risultato in una sessione. Il servizio restituisce i risultati sull'interfaccia `ICalculatorDuplexCallback`. Poiché occorre definire un contesto per correlare il set di messaggi scambiati fra il client e il servizio, i contratti duplex richiedono una sessione.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- In questo esempio, il client è un'applicazione console \(.exe\) e il servizio è ospitato da Internet Information Services \(IIS\).  Il contratto duplex è definito come segue:  
+ In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS). Il contratto duplex è definito come segue:  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required,  
@@ -53,10 +52,9 @@ public interface ICalculatorDuplexCallback
     [OperationContract(IsOneWay = true)]  
     void Equation(string eqn);  
 }  
-  
 ```  
   
- La classe `CalculatorService` implementa l'interfaccia `ICalculatorDuplex` primaria.  Il servizio usa la modalità di istanza <xref:System.ServiceModel.InstanceContextMode> per gestire il risultato per ogni sessione.  Una proprietà privata denominata `Callback` viene usata per far accedere il canale callback al client.  Il servizio usa il callback per inviare i messaggi al client tramite l'interfaccia callback.  
+ La classe `CalculatorService` implementa l'interfaccia `ICalculatorDuplex` primaria. Il servizio usa la modalità di istanza <xref:System.ServiceModel.InstanceContextMode.PerSession> per gestire il risultato per ogni sessione. Una proprietà privata denominata `Callback` viene usata per far accedere il canale callback al client. Il servizio usa il callback per inviare i messaggi al client tramite l'interfaccia callback.  
   
 ```  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
@@ -93,7 +91,7 @@ public class CalculatorService : ICalculatorDuplex
 }  
 ```  
   
- Il client deve fornire una classe che implementi l'interfaccia callback del contratto duplex per ricevere messaggi dal servizio.  Nell'esempio, viene definita una classe `CallbackHandler` per implementare l'interfaccia `ICalculatorDuplexCallback`.  
+ Il client deve fornire una classe che implementi l'interfaccia callback del contratto duplex per ricevere messaggi dal servizio. Nell'esempio, viene definita una classe `CallbackHandler` per implementare l'interfaccia `ICalculatorDuplexCallback`.  
   
 ```  
 public class CallbackHandler : ICalculatorDuplexCallback  
@@ -108,10 +106,9 @@ public class CallbackHandler : ICalculatorDuplexCallback
       Console.WriteLine("Equation({0}", equation);  
    }  
 }  
-  
 ```  
   
- Il proxy che viene generato per un contratto duplex richiede che venga fornito un <xref:System.ServiceModel.InstanceContext> dopo la costruzione.  La classe <xref:System.ServiceModel.InstanceContext> viene usata come sito per un oggetto che implementa l'interfaccia di callback e gestisce i messaggi restituiti dal servizio.  Una classe <xref:System.ServiceModel.InstanceContext> viene costruita con un'istanza della classe `CallbackHandler`.  Questo oggetto gestisce i messaggi inviati dal servizio al client sull'interfaccia di callback.  
+ Il proxy che viene generato per un contratto duplex richiede che venga fornito un <xref:System.ServiceModel.InstanceContext> dopo la costruzione. La classe <xref:System.ServiceModel.InstanceContext> viene usata come sito per un oggetto che implementa l'interfaccia di callback e gestisce i messaggi restituiti dal servizio. Una classe <xref:System.ServiceModel.InstanceContext> viene costruita con un'istanza della classe `CallbackHandler`. Questo oggetto gestisce i messaggi inviati dal servizio al client sull'interfaccia di callback.  
   
 ```  
 // Construct InstanceContext to handle messages on callback interface.  
@@ -146,12 +143,11 @@ Console.ReadLine();
   
 //Closing the client gracefully closes the connection and cleans up resources.  
 client.Close();  
-  
 ```  
   
- La configurazione è stata modificata in modo da fornire un'associazione che supporta sia la comunicazione della sessione che la comunicazione duplex.  L'elemento `wsDualHttpBinding` supporta la comunicazione della sessione e consente la comunicazione duplex fornendo connessioni HTTP doppie, una per ogni direzione.  Nel servizio, l'unica differenza di configurazione è l'associazione usata.  Nel client, è necessario configurare un indirizzo usabile dal server per la connessione al client, come illustrato nella configurazione di esempio seguente.  
+ La configurazione è stata modificata in modo da fornire un'associazione che supporta sia la comunicazione della sessione che la comunicazione duplex. L'elemento `wsDualHttpBinding` supporta la comunicazione della sessione e consente la comunicazione duplex fornendo connessioni HTTP doppie, una per ogni direzione. Nel servizio, l'unica differenza di configurazione è l'associazione usata. Nel client, è necessario configurare un indirizzo usabile dal server per la connessione al client, come illustrato nella configurazione di esempio seguente.  
   
-```  
+```xml  
 <client>  
   <endpoint name=""  
             address="http://localhost/servicemodelsamples/service.svc"   
@@ -168,23 +164,22 @@ client.Close();
     </binding>  
   </wsDualHttpBinding>  
 </bindings>  
-  
 ```  
   
- Quando si esegue l'esempio, vengono visualizzati i messaggi restituiti al client sull'interfaccia di callback inviata dal servizio.  Una volta completate tutte le operazioni, vengono visualizzati tutti i risultati intermedi, seguiti dall'intera equazione.  Premere INVIO per arrestare il client.  
+ Quando si esegue l'esempio, vengono visualizzati i messaggi restituiti al client sull'interfaccia di callback inviata dal servizio. Una volta completate tutte le operazioni, vengono visualizzati tutti i risultati intermedi, seguiti dall'intera equazione. Premere INVIO per arrestare il client.  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione C\#, C\+\+ o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare l'edizione in c#, C++ o Visual Basic .NET della soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Quando si esegue il client tra più computer, assicurarsi di sostituire "localhost" sia nell'attributo `address` dell'elemento [endpoint](http://msdn.microsoft.com/it-it/13aa23b7-2f08-4add-8dbf-a99f8127c017) che nell'attributo `clientBaseAddress` dell'elemento [\<associazione\>](../../../../docs/framework/misc/binding.md) dell'elemento [\<wsDualHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) con il nome del computer appropriato, come illustrato di seguito:  
+    >  Quando si esegue il client in una configurazione con più computer, assicurarsi di sostituire "localhost" in entrambi i `address` attributo del [endpoint](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento e `clientBaseAddress` attributo del [ \< associazione >](../../../../docs/framework/misc/binding.md) elemento il [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento con il nome del computer appropriato, come illustrato di seguito:  
   
-    ```  
+    ```xml  
     <client>  
     <endpoint name = ""  
     address="http://service_machine_name/servicemodelsamples/service.svc"  
@@ -198,12 +193,12 @@ client.Close();
     ```  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.  Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
   
-## Vedere anche
+## <a name="see-also"></a>Vedere anche

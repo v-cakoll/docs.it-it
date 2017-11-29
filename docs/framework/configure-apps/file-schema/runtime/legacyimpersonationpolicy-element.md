@@ -1,90 +1,121 @@
 ---
-title: "Elemento &lt;legacyImpersonationPolicy&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/legacyImpersonationPolicy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<legacyImpersonationPolicy> (elemento)"
-  - "legacyImpersonationPolicy (elemento)"
+title: '&lt;legacyImpersonationPolicy&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/legacyImpersonationPolicy
+helpviewer_keywords:
+- <legacyImpersonationPolicy> element
+- legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 8f6bed837ab7b0c6a4aebe6116c5ab28bbc62175
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;legacyImpersonationPolicy&gt;
-Specifica che il flusso dell'identità Windows non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso per il contesto di esecuzione nel thread corrente.  
+# <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; elemento
+Specifica che l'identità di Windows non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso per il contesto di esecuzione nel thread corrente.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
+\<legacyImpersonationPolicy >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <legacyImpersonationPolicy    
    enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica che <xref:System.Security.Principal.WindowsIdentity> non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso di <xref:System.Threading.ExecutionContext> nel thread corrente.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Specifica che il <xref:System.Security.Principal.WindowsIdentity> non passa attraverso punti asincroni, indipendentemente dal valore di <xref:System.Threading.ExecutionContext> flusso impostazioni sul thread corrente.|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity> passa attraverso punti asincroni a seconda delle impostazioni di flusso di <xref:System.Threading.ExecutionContext> per il thread corrente.  Questa è l'impostazione predefinita.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity> non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso di <xref:System.Threading.ExecutionContext> nel thread corrente.|  
+|-----------|-----------------|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity>passano attraverso punti asincroni varia a seconda di <xref:System.Threading.ExecutionContext> flusso le impostazioni per il thread corrente. Questa è l'impostazione predefinita.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity>non passa attraverso punti asincroni, indipendentemente dal valore di <xref:System.Threading.ExecutionContext> flusso impostazioni sul thread corrente.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## Note  
- In .NET Framework versione 1.0 e 1.1 <xref:System.Security.Principal.WindowsIdentity> non passa attraverso punti asincroni definiti dall'utente.  In .NET Framework versione 2.0 è disponibile un oggetto <xref:System.Threading.ExecutionContext> contenente informazioni sul thread attualmente in esecuzione e che consente il passaggio del flusso attraverso punti asincroni all'interno di un dominio applicazione.  Anche l'oggetto <xref:System.Security.Principal.WindowsIdentity> è incluso nel flusso delle informazioni che passano attraverso i punti asincroni, pertanto il flusso includerà anche un eventuale contesto di rappresentazione esistente.  Questo elemento viene utilizzato per specificare che l'oggetto <xref:System.Security.Principal.WindowsIdentity> non passa attraverso punti asincroni.  
+## <a name="remarks"></a>Note  
+ In .NET Framework versioni 1.0 e 1.1, il <xref:System.Security.Principal.WindowsIdentity> non passa attraverso punti asincroni definiti dall'utente. A partire da .NET Framework versione 2.0, è un <xref:System.Threading.ExecutionContext> oggetto che contiene informazioni sui thread attualmente in esecuzione e passa attraverso punti asincroni all'interno di un dominio applicazione. Il <xref:System.Security.Principal.WindowsIdentity> è incluso in questo contesto di esecuzione e pertanto anche passano attraverso i punti asincroni, il che significa che se esiste un contesto di rappresentazione, flusso includerà anche.  
+  
+ A partire da .NET Framework 2.0, è possibile utilizzare il `<legacyImpersonationPolicy>` elemento per specificare che <xref:System.Security.Principal.WindowsIdentity> non passa attraverso punti asincroni.  
   
 > [!NOTE]
->  Common Language Runtime \(CLR\) supporta le operazioni di rappresentazione eseguite utilizzando solo codice gestito e non quelle eseguite al di fuori del codice gestito, ad esempio le operazioni tramite pInvoke al codice non gestito o tramite chiamate dirette alle funzioni Win32.  Solo gli oggetti <xref:System.Security.Principal.WindowsIdentity> gestiti possono attraversare i punti asincroni, a meno che l'elemento `alwaysFlowImpersonationPolicy` non sia stato impostato su true \(`<alwaysFlowImpersonationPolicy enabled="true"/>`\).  L'impostazione dell'elemento `alwaysFlowImpersonationPolicy` su true specifica che il flusso dell'identità Windows passa sempre attraverso punti asincroni, indipendentemente dal modo in cui è stata ottenuta la rappresentazione.  Per ulteriori informazioni sul flusso della rappresentazione non gestita attraverso punti asincroni, vedere [Elemento \<alwaysFlowImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
+>  Common language runtime (CLR) è a conoscenza della rappresentazione di operazioni eseguite utilizzando solo codice gestito, non della rappresentazione eseguita all'esterno di codice gestito, ad esempio mediante platform invoke a codice non gestito o tramite chiamate dirette alle funzioni Win32. Solo gestito <xref:System.Security.Principal.WindowsIdentity> oggetti possono attraversare i punti asincroni, a meno che il `alwaysFlowImpersonationPolicy` elemento è stato impostato su true (`<alwaysFlowImpersonationPolicy enabled="true"/>`). L'impostazione di `alwaysFlowImpersonationPolicy` elemento su true specifica che l'identità di Windows è sempre passate attraverso punti asincroni, indipendentemente dalla modalità di rappresentazione. Per ulteriori informazioni sul flusso della rappresentazione non gestita attraverso punti asincroni, vedere [ \<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
   
- L'elemento può essere utilizzato esclusivamente nel file di configurazione dell'applicazione.  
+ È possibile modificare questo comportamento predefinito in altri due modi:  
   
- È possibile modificare questo comportamento predefinito in due diversi modi:  
+1.  Nel codice gestito in base al thread.  
   
-1.  Nel codice gestito in base ai singoli thread.  
+     È possibile eliminare il flusso in base al thread modificando il <xref:System.Threading.ExecutionContext> e <xref:System.Security.SecurityContext> impostazioni utilizzando il <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> o <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> metodo.  
   
-     Per sopprimere il flusso in base al singolo thread, modificare le impostazioni <xref:System.Threading.ExecutionContext> e <xref:System.Security.SecurityContext> utilizzando il metodo <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=fullName>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=fullName> o <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=fullName>.  
+2.  Nella chiamata all'interfaccia di hosting non gestita caricare common language runtime (CLR).  
   
-2.  Nella chiamata all'interfaccia di hosting non gestita per il caricamento di CLR \(Common Language Runtime\).  
+     Se un'interfaccia di hosting non gestita (anziché un semplice eseguibile gestito) viene utilizzata per caricare Common Language Runtime, è possibile specificare un flag speciale nella chiamata al [funzione CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) (funzione). Per abilitare la modalità di compatibilità per l'intero processo, impostare il `flags` parametro per [funzione CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) su STARTUP_LEGACY_IMPERSONATION.  
   
-     Se per il caricamento di CLR viene utilizzata un'interfaccia di hosting non gestita, anziché un semplice eseguibile gestito, è possibile specificare uno speciale flag nella chiamata alla funzione [Funzione CorBindToRuntimeEx](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  Per attivare la modalità di compatibilità per l'intero processo, impostare su STARTUP\_LEGACY\_IMPERSONATION il parametro `flags` per [Funzione CorBindToRuntimeEx](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
+ Per ulteriori informazioni, vedere il [ \<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come specificare il comportamento legacy che non consente il passaggio del flusso dell'identità Windows attraverso punti asincroni.  
+## <a name="configuration-file"></a>File di configurazione  
+ In un'applicazione .NET Framework, questo elemento può essere usato solo nel file di configurazione dell'applicazione.  
+  
+ Per un'applicazione ASP.NET, il flusso delle rappresentazioni può essere configurato nel file Aspnet. config nel \<cartella Windows > directory \Microsoft.NET\Framework\vx.x.xxxx.  
+  
+ ASP.NET per impostazione predefinita disabilita il flusso delle rappresentazioni nel file Aspnet. config utilizzando le impostazioni di configurazione seguenti:  
   
 ```  
+configuration>  
+   <runtime>  
+      <legacyImpersonationPolicy enabled="true"/>  
+      <alwaysFlowImpersonationPolicy enabled="false"/>  
+   </runtime>  
+</configuration>  
+```  
+  
+ In ASP.NET, se si desidera consentire il flusso delle rappresentazioni, invece, è necessario utilizzare in modo esplicito le impostazioni di configurazione seguenti:  
+  
+```xml  
+<configuration>  
+   <runtime>  
+      <legacyImpersonationPolicy enabled="false"/>  
+      <alwaysFlowImpersonationPolicy enabled="true"/>  
+   </runtime>  
+</configuration>  
+```  
+  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come specificare il comportamento legacy che non propaga l'identità Windows attraverso punti asincroni.  
+  
+```xml  
 <configuration>  
    <runtime>  
       <legacyImpersonationPolicy enabled="true"/>  
@@ -92,6 +123,7 @@ Specifica che il flusso dell'identità Windows non passa attraverso punti asincr
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [\<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

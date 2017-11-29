@@ -1,32 +1,35 @@
 ---
-title: "Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Basic2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cb77e794119db2434a38ff7271912f50e483d766
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Basic
-In questa sezione vengono incluse sezioni di esempi che descrivono la funzionalità di base di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="basic"></a>Basic
+Contenuto della sezione vengono incluse sezioni di esempi che descrivono la funzionalità di base di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## In questa sezione  
- [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
  Viene descritto come implementare un servizio tipico e un client tipico utilizzando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
- Viene descritto come utilizzare AJAX \(Asynchronous JavaScript and XML\).  
+ Viene descritto come utilizzare AJAX (Asynchronous JavaScript and XML).  
   
- [Binding](../../../../docs/framework/wcf/samples/binding.md)  
+ [Associazione](../../../../docs/framework/wcf/samples/binding.md)  
  Viene descritto l'utilizzo dell'attributo di associazione di un elemento dell'endpoint.  
   
  [Client](../../../../docs/framework/wcf/samples/client.md)  

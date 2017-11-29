@@ -1,104 +1,105 @@
 ---
-title: "Tipi di colonna nel controllo DataGridView di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "colonne [Windows Form], tipi"
-  - "griglie dei dati, colonne"
-  - "DataGridView (controllo) [Windows Form], tipi di colonna"
+title: Tipi di colonna nel controllo DataGridView di Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], types
+- DataGridView control [Windows Forms], column types
+- data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e45ddcec4459e376a5dab4eec36e51cc2e5e49c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tipi di colonna nel controllo DataGridView di Windows Form
-Il controllo <xref:System.Windows.Forms.DataGridView> utilizza diversi tipi di colonna per visualizzare le informazioni e consentire la modifica o l'aggiunta di informazioni.  
+# <a name="column-types-in-the-windows-forms-datagridview-control"></a>Tipi di colonna nel controllo DataGridView di Windows Form
+Il <xref:System.Windows.Forms.DataGridView> controllo utilizza diversi tipi di colonna per visualizzare le informazioni e consentire agli utenti di modificare o aggiungere informazioni.  
   
- Quando si associa un controllo <xref:System.Windows.Forms.DataGridView> e si imposta la proprietà <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> su `true`, le colonne vengono generate automaticamente in base ai tipi di colonna predefiniti appropriati per i tipi di dati contenuti nell'origine dati associata.  
+ Quando si associa un <xref:System.Windows.Forms.DataGridView> controllo e impostare il <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> proprietà `true`, colonne vengono generate automaticamente in base ai tipi di colonna predefinito appropriati per i tipi di dati contenuti nell'origine dati associata.  
   
- È inoltre possibile creare istanze di qualsiasi classe di colonne e aggiungerle alla raccolta restituita dalla proprietà <xref:System.Windows.Forms.DataGridView.Columns%2A>.  È possibile creare queste istanze per utilizzarle come colonne non associate oppure è possibile associarle manualmente.  Le colonne associate manualmente sono utili, ad esempio, quando si desidera sostituire una colonna generata automaticamente di un tipo con una colonna di un altro tipo.  
+ È anche possibile creare manualmente le istanze di una qualsiasi delle classi di colonna e aggiungerli alla raccolta restituita dal <xref:System.Windows.Forms.DataGridView.Columns%2A> proprietà. È possibile creare queste istanze da utilizzare come colonne non associate oppure è possibile associarli manualmente. Le colonne associate manualmente sono utili, ad esempio, quando si desidera sostituire una colonna di un tipo generata automaticamente con una colonna di un altro tipo.  
   
- Nella tabella seguente vengono descritte le varie classi di colonne disponibili nel controllo <xref:System.Windows.Forms.DataGridView>.  
+ La tabella seguente descrive le varie classi di colonna disponibili da utilizzare per il <xref:System.Windows.Forms.DataGridView> controllo.  
   
 |Classe|Descrizione|  
-|------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Utilizzata con valori basati su testo.  Generata automaticamente quando si esegue l'associazione a numeri e stringhe.|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Utilizzata con i valori <xref:System.Boolean> e <xref:System.Windows.Forms.CheckState>.  Generata automaticamente quando si esegue l'associazione a valori di questi tipi.|  
-|<xref:System.Windows.Forms.DataGridViewImageColumn>|Utilizzata per visualizzare le immagini.  Generata automaticamente quando si esegue l'associazione a matrici di byte, oggetti <xref:System.Drawing.Image> oppure oggetti <xref:System.Drawing.Icon>.|  
-|<xref:System.Windows.Forms.DataGridViewButtonColumn>|Utilizzata per visualizzare i pulsanti nelle celle.  Generata non automaticamente quando si esegue l'associazione.  Usata normalmente come colonna non associata.|  
-|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Utilizzata per visualizzare elenchi a discesa nelle celle.  Generata non automaticamente quando si esegue l'associazione.  Solitamente associata ai dati manualmente.|  
-|<xref:System.Windows.Forms.DataGridViewLinkColumn>|Utilizzata per visualizzare i collegamenti nelle celle.  Generata non automaticamente quando si esegue l'associazione.  Solitamente associata ai dati manualmente.|  
-|Tipo di colonna personalizzato|È possibile creare una classe di colonne personalizzate mediante l'eredità della classe <xref:System.Windows.Forms.DataGridViewColumn> o di qualsiasi classe da essa derivata per personalizzare l'aspetto, il comportamento o i controlli contenuti.  Per ulteriori informazioni, vedere [Procedura: personalizzare celle e colonne nel controllo DataGridView di Windows Form estendendone il comportamento e l'aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|-----------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Utilizzato con i valori basati su testo. Generato automaticamente quando si associa a numeri e stringhe.|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Utilizzato con <xref:System.Boolean> e <xref:System.Windows.Forms.CheckState> valori. Generato automaticamente durante l'associazione a valori di questi tipi.|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn>|Consente di visualizzare immagini. Generato automaticamente durante l'associazione a matrici di byte, <xref:System.Drawing.Image> , oggetti o <xref:System.Drawing.Icon> oggetti.|  
+|<xref:System.Windows.Forms.DataGridViewButtonColumn>|Consente di visualizzare i pulsanti in celle. Non generata automaticamente durante l'associazione. In genere utilizzate come colonne non associate.|  
+|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Consente di visualizzare gli elenchi a discesa nelle celle. Non generata automaticamente durante l'associazione. In genere associati a dati manualmente.|  
+|<xref:System.Windows.Forms.DataGridViewLinkColumn>|Consente di visualizzare i collegamenti nelle celle. Non generata automaticamente durante l'associazione. In genere associati a dati manualmente.|  
+|Tipo di colonna personalizzato|È possibile creare la propria classe di colonna tramite l'eredità di <xref:System.Windows.Forms.DataGridViewColumn> classe o una qualsiasi delle classi derivate per fornire un aspetto personalizzato, il comportamento o controlli ospitati. Per ulteriori informazioni, vedere [procedura: personalizzare celle e colonne nel controllo DataGridView Windows Form dall'estensione di comportamento relativi e l'aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
- Questi tipi di colonna sono descritti nei dettagli nelle sezioni seguenti.  
+ Questi tipi di colonna sono descritti più dettagliatamente nelle sezioni seguenti.  
   
-## DataGridViewTextBoxColumn  
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn> è un tipo di colonna generica da utilizzare con i valori basati su testo quali numeri e stringhe.  Nella modalità di modifica, nella cella attiva, è visualizzato un controllo <xref:System.Windows.Forms.TextBox> che consente di modificare il valore della cella.  
+## <a name="datagridviewtextboxcolumn"></a>DataGridViewTextBoxColumn  
+ Il <xref:System.Windows.Forms.DataGridViewTextBoxColumn> è un tipo di colonna generica per l'utilizzo con i valori basati su testo, ad esempio stringhe e numeri. In modalità di modifica, un <xref:System.Windows.Forms.TextBox> controllo viene visualizzato nella cella attiva, consentendo agli utenti di modificare il valore della cella.  
   
- I valori delle celle vengono convertiti automaticamente in stringhe per la visualizzazione.  I valori immessi o modificati dall'utente vengono automaticamente analizzati per creare un valore della cella del tipo di dati appropriato.  È possibile personalizzare queste conversioni mediante la gestione degli eventi <xref:System.Windows.Forms.DataGridView.CellFormatting> e <xref:System.Windows.Forms.DataGridView.CellParsing> del controllo <xref:System.Windows.Forms.DataGridView>.  
+ I valori delle celle vengono automaticamente convertiti in stringhe per la visualizzazione. I valori immessi o modificati dall'utente vengono analizzati automaticamente per creare un valore di cella del tipo di dati appropriato. È possibile personalizzare queste conversioni gestendo il <xref:System.Windows.Forms.DataGridView.CellFormatting> e <xref:System.Windows.Forms.DataGridView.CellParsing> gli eventi del <xref:System.Windows.Forms.DataGridView> controllo.  
   
- Il tipo di dati del valore della cella di una colonna è specificato nella proprietà <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> della colonna.  
+ Il tipo di dati di valore di cella di una colonna è incluso il <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> proprietà della colonna.  
   
-## DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> viene utilizzato con i valori <xref:System.Boolean> e <xref:System.Windows.Forms.CheckState>.  I valori <xref:System.Boolean> vengono visualizzati sotto forma di caselle di controllo a due o tre stati a seconda del valore della proprietà <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>.  Quando la colonna è associata ai valori <xref:System.Windows.Forms.CheckState>, il valore della proprietà <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> è `true` per impostazione predefinita.  
+## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
+ Il <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> viene utilizzato con <xref:System.Boolean> e <xref:System.Windows.Forms.CheckState> valori. <xref:System.Boolean>i valori vengono visualizzati come caselle di controllo a due o tre stati in base al valore di <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> proprietà. Quando la colonna è associata a <xref:System.Windows.Forms.CheckState> valori, il <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> valore della proprietà è `true` per impostazione predefinita.  
   
- Normalmente i valori delle celle delle caselle di controllo vengono utilizzati per l'archiviazione, come gli altri dati, o per l'esecuzione di operazioni di massa.  Se si desidera rispondere immediatamente quando l'utente fa clic su una cella di casella di controllo, è possibile gestire l'evento <xref:System.Windows.Forms.DataGridView.CellClick>, che tuttavia si verifica prima il valore della cella venga aggiornato.  Se è necessario disporre del nuovo valore al momento del clic, è possibile calcolare il valore previsto in base al valore corrente.  In alternativa, è possibile eseguire immediatamente il commit della modifica e quindi gestire l'evento <xref:System.Windows.Forms.DataGridView.CellValueChanged> per rispondere a tale modifica.  Per eseguire il commit della modifica quando viene fatto clic sulla cella, è necessario gestire l'evento <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged>.  Nel gestore, se la cella corrente è una cella di casella di testo, richiamare il metodo <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> e passare al valore <xref:System.Windows.Forms.DataGridViewDataErrorContexts>.  
+ In genere, i valori di cella di casella di controllo vengono utilizzati per l'archiviazione, come gli altri dati, o per l'esecuzione di operazioni bulk. Se si desidera rispondere immediatamente quando gli utenti di fare clic su una cella di casella di controllo, è possibile gestire il <xref:System.Windows.Forms.DataGridView.CellClick> evento, ma questo evento si verifica prima che il valore della cella viene aggiornato. Se è necessario il nuovo valore al momento della selezione, è possibile calcolare il valore previsto in base al valore corrente. Un altro approccio consiste nell'eseguire immediatamente il commit della modifica e gestire il <xref:System.Windows.Forms.DataGridView.CellValueChanged> eventi per rispondere a esso. Per eseguire il commit della modifica quando la cella è selezionata, è necessario gestire il <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> evento. Nel gestore, se la cella corrente contiene una casella di controllo, chiamare il <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> (metodo) e passare il <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> valore.  
   
-## DataGridViewImageColumn  
- La classe <xref:System.Windows.Forms.DataGridViewImageColumn> consente di visualizzare le immagini.  Le colonne di immagini possono essere compilate automaticamente da un'origine dati, manualmente per le colonne non associate o dinamicamente in un gestore per l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting>.  
+## <a name="datagridviewimagecolumn"></a>DataGridViewImageColumn  
+ Il <xref:System.Windows.Forms.DataGridViewImageColumn> consente di visualizzare immagini. Colonne di tipo image possono essere popolate automaticamente da un'origine dati, popolate manualmente per le colonne non associate o dinamicamente in un gestore per il <xref:System.Windows.Forms.DataGridView.CellFormatting> evento.  
   
- La compilazione automatica di una colonna di immagini da un'origine dati funziona con matrici di byte in una varietà di formati di immagine, compresi tutti i formati supportati dalla classe <xref:System.Drawing.Image> e il formato OLE Picture utilizzato da Microsoft® Access e dal database di esempio Northwind.  
+ La compilazione automatica di una colonna di immagini da un'origine dati funziona con le matrici di byte in una vasta gamma di formati di immagine, inclusi tutti i formati supportati dalla <xref:System.Drawing.Image> classe e il formato di immagine OLE utilizzato da Microsoft® Access e database di esempio Northwind.  
   
- La compilazione manuale di una colonna di immagini è utile quando si desidera fornire la funzionalità di una classe <xref:System.Windows.Forms.DataGridViewButtonColumn>, ma con un aspetto personalizzato.  È possibile gestire l'evento <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=fullName> per rispondere alle selezioni nella cella di un'immagine.  
+ La compilazione di una colonna di tipo image manuale è utile quando si desidera fornire la funzionalità di un <xref:System.Windows.Forms.DataGridViewButtonColumn>, ma con un aspetto personalizzato. È possibile gestire il <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> evento per rispondere alle selezioni nella cella di un'immagine.  
   
- La compilazione delle celle di una colonna di immagini in un gestore per l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting> è utile quando si desidera fornire immagini per i valori calcolati o i valori nei formati non di immagine.  Ad esempio, è possibile disporre di una colonna "Rischio" con valori stringa quali `"high"`, `"middle"` e `"low"` che si desidera visualizzare come icone.  In alternativa è possibile disporre di una colonna"Immagine" che contiene i percorsi delle immagini che devono essere caricate invece del contenuto binario delle immagini.  
+ La compilazione delle celle di una colonna di immagine in un gestore per il <xref:System.Windows.Forms.DataGridView.CellFormatting> evento è utile quando si desidera fornire immagini per i valori calcolati o i valori in formati non di immagine. Ad esempio, è possibile una colonna "A rischio" con valori di stringa, ad esempio `"high"`, `"middle"`, e `"low"` che si desidera visualizzare come icone. In alternativa, potrebbe essere una colonna di "Image" che contiene i percorsi delle immagini che devono essere caricati anziché il contenuto binario delle immagini.  
   
-## DataGridViewButtonColumn  
- La classe <xref:System.Windows.Forms.DataGridViewButtonColumn> consente di visualizzare una colonna di celle contenenti pulsanti.  Ciò è utile quando si desidera consentire agli utenti di eseguire facilmente operazioni con record particolari, ad esempio l'effettuazione di un ordine o la visualizzazione di record figlio in una finestra separata.  
+## <a name="datagridviewbuttoncolumn"></a>DataGridViewButtonColumn  
+ Con il <xref:System.Windows.Forms.DataGridViewButtonColumn>, è possibile visualizzare una colonna di celle che contengono pulsanti. Ciò è utile quando si desidera fornire un modo semplice per gli utenti di eseguire azioni su un record specifico, ad esempio un ordine di inserimento o la visualizzazione di record figlio in una finestra separata.  
   
- Le colonne di pulsanti non vengono generate automaticamente quando si esegue l'associazione ai dati di un controllo<xref:System.Windows.Forms.DataGridView>.  Per utilizzare le colonne di pulsanti, è necessario crearle manualmente e aggiungerle alla raccolta restituita dalla proprietà <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=fullName>.  
+ Colonne di pulsanti non vengono generate automaticamente quando l'associazione a dati un <xref:System.Windows.Forms.DataGridView> controllo. Per utilizzare le colonne di pulsanti, è necessario crearle manualmente e aggiungerli alla raccolta restituita dal <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> proprietà.  
   
- È possibile rispondere alle selezioni nelle celle di pulsanti mediante la gestione dell'evento <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=fullName>.  
+ È possibile rispondere alle selezioni nelle celle a pulsante gestendo il <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> evento.  
   
-## DataGridViewComboBoxColumn  
- La classe <xref:System.Windows.Forms.DataGridViewComboBoxColumn> consente di visualizzare una colonna di celle che contengono le caselle di riepilogo a discesa.  Ciò è utile per l'immissione di dati nei campi che possono contenere solo determinati valori, ad esempio la colonna Category della tabella Products nel database di esempio Northwind.  
+## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
+ Con il <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, è possibile visualizzare una colonna di celle che contengono le caselle di riepilogo a discesa. Ciò è utile per l'immissione di dati nei campi che possono contenere solo valori particolari, ad esempio la colonna Category della tabella Products nel database di esempio Northwind.  
   
- È possibile compilare l'elenco a discesa utilizzato per tutte le celle allo stesso modo in cui si compilerebbe un elenco a discesa <xref:System.Windows.Forms.ComboBox>: manualmente tramite la raccolta restituita dalla proprietà <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> o mediante l'associazione a un'origine dati tramite le proprietà <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> e <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>.  Per ulteriori informazioni, vedere [Controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).  
+ È possibile popolare l'elenco di riepilogo a discesa usato per tutte le celle nello stesso modo è necessario popolare un <xref:System.Windows.Forms.ComboBox> elenco a discesa, sia manualmente tramite la raccolta restituita dal <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> , proprietà o mediante l'associazione a un'origine dati tramite il <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, e <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> proprietà. Per ulteriori informazioni, vedere [controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).  
   
- È possibile associare i valori effettivi delle celle all'origine dati utilizzata dal controllo <xref:System.Windows.Forms.DataGridView> mediante l'impostazione della proprietà <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> della classe <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=fullName>.  
+ È possibile associare i valori di cella effettivo per l'origine dati utilizzata dal <xref:System.Windows.Forms.DataGridView> controllo impostando il <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> proprietà del <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
   
- Le colonne di caselle combinate non vengono generate automaticamente quando si esegue l'associazione ai dati di un controllo<xref:System.Windows.Forms.DataGridView>.  Per utilizzare le colonne di caselle combinate, è necessario crearle manualmente e aggiungerle alla raccolta restituita dalla proprietà <xref:System.Windows.Forms.DataGridView.Columns%2A>.  
+ Colonne di caselle combinate non vengono generate automaticamente quando l'associazione a dati un <xref:System.Windows.Forms.DataGridView> controllo. Per utilizzare le colonne di casella combinata, è necessario crearle manualmente e aggiungerli alla raccolta restituita dal <xref:System.Windows.Forms.DataGridView.Columns%2A> proprietà.  
   
-## DataGridViewLinkColumn  
- La classe <xref:System.Windows.Forms.DataGridViewLinkColumn> consente di visualizzare una colonna di celle contenenti collegamenti ipertestuali.  Ciò è utile per i valori URL nell'origine dati o come alternativa alla colonna di pulsanti per i comportamenti speciali quali l'apertura di una finestra con record figlio.  
+## <a name="datagridviewlinkcolumn"></a>DataGridViewLinkColumn  
+ Con il <xref:System.Windows.Forms.DataGridViewLinkColumn>, è possibile visualizzare una colonna di celle che contengono collegamenti ipertestuali. Ciò è utile per i valori di URL nell'origine dati o un'alternativa alla colonna di pulsanti per i comportamenti speciali, ad esempio aprendo una finestra con record figlio.  
   
- Le colonne di collegamenti non vengono generate automaticamente quando si esegue l'associazione ai dati di un controllo<xref:System.Windows.Forms.DataGridView>.  Per utilizzare le colonne di collegamenti, è necessario crearle manualmente e aggiungerle alla raccolta restituita dalla proprietà <xref:System.Windows.Forms.DataGridView.Columns%2A>.  
+ Le colonne di collegamenti non vengono generate automaticamente quando l'associazione a dati un <xref:System.Windows.Forms.DataGridView> controllo. Per utilizzare le colonne di collegamento, è necessario crearle manualmente e aggiungerli alla raccolta restituita dal <xref:System.Windows.Forms.DataGridView.Columns%2A> proprietà.  
   
- È possibile rispondere alle selezioni dei collegamenti mediante la gestione dell'evento <xref:System.Windows.Forms.DataGridView.CellContentClick>.  Questo evento è diverso dagli eventi <xref:System.Windows.Forms.DataGridView.CellClick> e <xref:System.Windows.Forms.DataGridView.CellMouseClick>, che si verificano quando un utente fa clic in un punto qualsiasi di una cella.  
+ È possibile rispondere alle selezioni dei collegamenti mediante la gestione di <xref:System.Windows.Forms.DataGridView.CellContentClick> evento. Questo evento è diverso da quello di <xref:System.Windows.Forms.DataGridView.CellClick> e <xref:System.Windows.Forms.DataGridView.CellMouseClick> che si verificano quando un utente fa clic in un punto qualsiasi in una cella.  
   
- La classe <xref:System.Windows.Forms.DataGridViewLinkColumn> fornisce diverse proprietà per la modifica dell'aspetto dei collegamenti prima, durante e dopo la selezione.  
+ La <xref:System.Windows.Forms.DataGridViewLinkColumn> classe fornisce diverse proprietà per la modifica dell'aspetto di collegamenti prima, durante e dopo che è stato fatto clic su essi.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewColumn>   
- <xref:System.Windows.Forms.DataGridViewButtonColumn>   
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewImageColumn>   
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewLinkColumn>   
- [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)   
- [Procedura: utilizzare le colonne di immagini nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)   
- [Personalizzazione del controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewColumn>  
+ <xref:System.Windows.Forms.DataGridViewButtonColumn>  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewImageColumn>  
+ <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewLinkColumn>  
+ [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [Procedura: Usare le colonne di immagini nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [Personalizzazione del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)

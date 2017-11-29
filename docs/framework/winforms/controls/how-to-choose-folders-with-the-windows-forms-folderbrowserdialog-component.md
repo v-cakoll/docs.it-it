@@ -1,41 +1,46 @@
 ---
-title: "Procedura: scegliere cartelle con il componente FolderBrowserDialog di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "directory [Windows Form], scelta"
-  - "directory [Windows Form], selezione"
-  - "FolderBrowserDialog (componente) [Windows Form], selezione delle directory"
-  - "cartelle [Windows Form], scelta"
-  - "cartelle [Windows Form], selezione"
+title: 'Procedura: Scegliere cartelle con il componente FolderBrowserDialog di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- directories [Windows Forms], choosing
+- FolderBrowserDialog component [Windows Forms], choosing directories
+- folders [Windows Forms], selecting
+- folders [Windows Forms], choosing
+- directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0824fb70fa67628326af38ff7fb5e6c097a0378c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: scegliere cartelle con il componente FolderBrowserDialog di Windows Form
-Spesso nelle applicazioni Windows create è necessario chiedere agli utenti di selezionare una cartella, nella maggior parte dei casi per salvare un insieme di file.  Il componente <xref:System.Windows.Forms.FolderBrowserDialog> di Windows Form consente di eseguire questa attività in modo semplice e rapido.  
+# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Procedura: Scegliere cartelle con il componente FolderBrowserDialog di Windows Form
+Spesso nelle applicazioni Windows create è necessario chiedere agli utenti di selezionare una cartella, nella maggior parte dei casi per salvare un insieme di file. Windows Form <xref:System.Windows.Forms.FolderBrowserDialog> componente consente di eseguire facilmente questa attività.  
   
-### Per scegliere cartelle con il componente FolderBrowserDialog  
+### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>Per scegliere cartelle con il componente FolderBrowserDialog  
   
-1.  In una procedura controllare la proprietà <xref:System.Windows.Forms.Form.DialogResult%2A> del componente <xref:System.Windows.Forms.FolderBrowserDialog> per sapere se la finestra di dialogo è stata chiusa e ottenere il valore della proprietà <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> del componente <xref:System.Windows.Forms.FolderBrowserDialog>.  
+1.  In una routine, controllare il <xref:System.Windows.Forms.FolderBrowserDialog> del componente <xref:System.Windows.Forms.Form.DialogResult%2A> come è stata chiusa la finestra di dialogo e ottenere il valore della proprietà di <xref:System.Windows.Forms.FolderBrowserDialog> del componente <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> proprietà.  
   
-2.  Per definire la cartella attiva all'interno della visualizzazione della struttura ad albero della finestra di dialogo, impostare la proprietà <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>, che accetta un membro dell'enumerazione [SpecialFolder](frlrfSystemEnvironmentSpecialFolderClassTopic).  
+2.  Se è necessario nella cartella set di primo livello che verrà visualizzato all'interno della visualizzazione albero nella finestra di dialogo, impostare il <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> proprietà, che accetta un membro del <xref:System.Environment.SpecialFolder> enumerazione.  
   
-3.  È inoltre possibile impostare la proprietà <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>, che consente di specificare la stringa di testo visualizzata nella parte superiore della visualizzazione della struttura ad albero del visualizzatore cartelle.  
+3.  Inoltre, è possibile impostare il <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> proprietà che specifica la stringa di testo viene visualizzato nella parte superiore della visualizzazione albero del visualizzatore cartelle.  
   
-     Nell'esempio che segue per selezionare una cartella viene utilizzato il componente <xref:System.Windows.Forms.FolderBrowserDialog> in modo simile a quando si crea un progetto in Visual Studio e viene richiesto di selezionare una cartella in cui salvarlo.  In questo esempio il nome della cartella viene quindi visualizzato in un controllo <xref:System.Windows.Forms.TextBox>del form.  È consigliabile specificare la posizione in un'area modificabile, quale un controllo <xref:System.Windows.Forms.TextBox>, in modo che gli utenti possano modificare la selezione in caso di errori o di altri problemi.  Nell'esempio si presuppone l'esistenza di un form contenente un componente <xref:System.Windows.Forms.FolderBrowserDialog> e un controllo <xref:System.Windows.Forms.TextBox>.  
+     Nell'esempio seguente, il <xref:System.Windows.Forms.FolderBrowserDialog> componente viene utilizzato per selezionare una cartella, simile a quando si crea un progetto in Visual Studio e viene richiesto di selezionare una cartella in cui salvarlo. In questo esempio viene quindi visualizzato il nome della cartella un <xref:System.Windows.Forms.TextBox> controllo nel form. È consigliabile specificare la posizione in un'area modificabile, ad esempio un <xref:System.Windows.Forms.TextBox> controllare, in modo che gli utenti possano modificare la selezione in caso di errore o altri problemi. Questo esempio si presuppone un form con un <xref:System.Windows.Forms.FolderBrowserDialog> componente e un <xref:System.Windows.Forms.TextBox> controllo.  
   
     ```vb  
     Public Sub ChooseFolder()  
@@ -43,7 +48,6 @@ Spesso nelle applicazioni Windows create è necessario chiedere agli utenti di s
             TextBox1.Text = FolderBrowserDialog1.SelectedPath  
         End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -54,7 +58,6 @@ Spesso nelle applicazioni Windows create è necessario chiedere agli utenti di s
             textBox1.Text = folderBrowserDialog1.SelectedPath;  
         }  
     }  
-  
     ```  
   
     ```cpp  
@@ -69,11 +72,11 @@ Spesso nelle applicazioni Windows create è necessario chiedere agli utenti di s
     ```  
   
     > [!IMPORTANT]
-    >  Per utilizzare questa classe, è necessario che l'assembly disponga di un livello di privilegio concesso dalla proprietà [FileIOPermissionAttribute.PathDiscoveryProperty](frlrfSystemSecurityPermissionsFileIOPermissionAttributeClassPathDiscoveryTopic), che fa parte dell'enumerazione <xref:System.Security.Permissions.FileIOPermissionAccess>.  Se l'esecuzione avviene in un contesto parzialmente attendibile, è possibile che il processo generi un'eccezione dovuta a privilegi insufficienti.  Per ulteriori informazioni, vedere [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Per utilizzare questa classe, l'assembly richiede un livello di privilegio concesso per il <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> proprietà, che fa parte di <xref:System.Security.Permissions.FileIOPermissionAccess> enumerazione. Se l'esecuzione avviene in un contesto parzialmente attendibile, è possibile che il processo generi un'eccezione dovuta a privilegi insufficienti. Per altre informazioni, vedere [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
- Per ulteriori informazioni sul salvataggio dei file, vedere [Procedura: salvare file con il componente SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
+ Per informazioni sul salvataggio dei file, vedere [Procedura: Salvare file con il componente SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
   
-## Vedere anche  
- <xref:System.Windows.Forms.FolderBrowserDialog>   
- [Cenni preliminari sul componente FolderBrowserDialog \(Windows Form\)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.FolderBrowserDialog>  
+ [Cenni preliminari sul componente FolderBrowserDialog (Windows Form)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  [Componente FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

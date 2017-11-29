@@ -1,33 +1,39 @@
 ---
-title: "Modifiche di DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modifiche agli oggetti DataTable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d33bd8900c48222142a46ed2c5bd64412d2eaab5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Modifiche di DataTable
-Quando si apportano modifiche ai valori di colonna in <xref:System.Data.DataRow>, le modifiche vengono inserite direttamente nello stato attuale della riga.  Il valore per <xref:System.Data.DataRowState> viene quindi impostato su **Modified** e le modifiche vengono accettate o rifiutate tramite i metodi <xref:System.Data.DataRow.AcceptChanges%2A> o <xref:System.Data.DataRow.RejectChanges%2A> di **DataRow**.  In **DataRow** sono inoltre disponibili tre metodi che consentono di sospendere lo stato di una riga durante la modifica.  Questi metodi sono <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> e <xref:System.Data.DataRow.CancelEdit%2A>.  
+# <a name="datatable-edits"></a>Modifiche agli oggetti DataTable
+Quando si apportano modifiche ai valori di colonna in <xref:System.Data.DataRow>, le modifiche vengono inserite direttamente nello stato attuale della riga. Il <xref:System.Data.DataRowState> viene quindi impostato su **Modified**, e le modifiche vengono accettate o rifiutate tramite il <xref:System.Data.DataRow.AcceptChanges%2A> o <xref:System.Data.DataRow.RejectChanges%2A> metodi del **DataRow**. Il **DataRow** inoltre fornisce tre metodi che è possibile utilizzare per sospendere lo stato della riga durante la modifica. Questi metodi sono <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> e <xref:System.Data.DataRow.CancelEdit%2A>.  
   
- Quando si modificano i valori delle colonne direttamente in un **DataRow**, il **DataRow** gestirà tali valori usando le versioni di riga **Current**, **Default**, and **Original**.  Oltre a tali versioni di riga, nei metodi **BeginEdit**, **EndEdit** e **CancelEdit** viene usata una quarta versione: **Proposed**.  Per altre informazioni sulle versioni delle righe, vedere [Stati delle righe e versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Quando si modificano i valori di colonna in un **DataRow** direttamente, il **DataRow** gestisce i valori di colonna utilizzando il **corrente**, **predefinito**, e **Originale** versioni di riga. Oltre a queste versioni di riga, il **BeginEdit**, **EndEdit**, e **CancelEdit** metodi utilizzano una quarta versione: **proposto**. Per ulteriori informazioni sulle versioni delle righe, vedere [stati delle righe e le versioni di riga](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
- La versione di riga **Proposed** risulta disponibile durante un'operazione di modifica iniziata chiamando **BeginEdit** e terminata tramite **EndEdit** o **CancelEdit** oppure tramite una chiamata ad **AcceptChanges** o **RejectChanges**.  
+ Il **proposto** presente versione di riga durante un'operazione di modifica iniziata chiamando **BeginEdit** e che termina con **EndEdit** o **CancelEdit,**  o chiamando **AcceptChanges** o **RejectChanges**.  
   
- Durante l'operazione di modifica è possibile applicare la logica di convalida a singole colonne valutando **ProposedValue** nell'evento **ColumnChanged** della **DataTable**.  L'evento **ColumnChanged** contiene **DataColumnChangeEventArgs**, che consente di conservare un riferimento alla colonna in fase di modifica e a **ProposedValue**.  Una volta terminata la valutazione del valore proposto, è possibile modificarlo o annullare la modifica.  Al termine della modifica, la riga perde lo stato **Proposed**.  
+ Durante l'operazione di modifica, è possibile applicare la logica di convalida a singole colonne valutando il **ProposedValue** nel **ColumnChanged** evento del **DataTable**. Il **ColumnChanged** evento contiene **DataColumnChangeEventArgs** che mantenere un riferimento per la colonna in fase di modifica e la **ProposedValue**. Una volta terminata la valutazione del valore proposto, è possibile modificarlo o annullare la modifica. Al termine della modifica, la riga perde il **proposto** stato.  
   
- È possibile confermare le modifiche chiamando **EndEdit** o annullarle chiamando **CancelEdit**.  Notare che mentre **EndEdit** consente di confermare le modifiche, **DataSet** non consente l'accettazione delle modifiche fino a quando non viene chiamato **AcceptChanges**.  Notare inoltre che se si chiama **AcceptChanges** prima del completamento della modifica tramite **EndEdit** o **CancelEdit**, l'operazione di modifica viene terminata e i valori di riga **Proposed** vengono accettati sia nella versione di riga **Current** che nella versione di riga **Original**.  Analogamente, la chiamata di **RejectChanges** consente di terminare la modifica ed eliminare le versioni di riga **Current** e **Proposed**.  Chiamando **EndEdit** o **CancelEdit** dopo aver chiamato **AcceptChanges** o **RejectChanges** non si otterrà alcun effetto, poiché l'operazione di modifica è già stata terminata.  
+ È possibile confermare le modifiche chiamando **EndEdit**, o annullarle chiamando **CancelEdit**. Si noti che, sebbene **EndEdit** confermare le modifiche, il **set di dati** effettivamente non accettare le modifiche fino a **AcceptChanges** viene chiamato. Si noti inoltre che se si chiama **AcceptChanges** prima del completamento della modifica tramite **EndEdit** o **CancelEdit**, la modifica viene terminata e il **proposto** vengono accettati i valori di riga per entrambi i **corrente** e **originale** versioni di riga. Allo stesso modo, la chiamata **RejectChanges** termina la modifica ed elimina il **corrente** e **proposto** versioni di riga. La chiamata **EndEdit** o **CancelEdit** dopo la chiamata **AcceptChanges** o **RejectChanges** non ha alcun effetto perché la modifica ha già è terminata.  
   
- Nell'esempio seguente viene mostrato come usare **BeginEdit** con **EndEdit** e **CancelEdit**.  L'esempio consente inoltre di controllare il valore **ProposedValue** nell'evento **ColumnChanged** e di stabilire se annullare la modifica.  
+ Nell'esempio seguente viene illustrato come utilizzare **BeginEdit** con **EndEdit** e **CancelEdit**. Nell'esempio viene inoltre verificato di **ProposedValue** nel **ColumnChanged** evento e decide di annullare la modifica.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -57,7 +63,6 @@ Private Shared Sub OnColumnChanged( _
     End If  
   End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -91,10 +96,10 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## Vedere anche  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataRowVersion>   
- [Modifica dei dati in una DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Gestione degli eventi di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataRowVersion>  
+ [La modifica dei dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Gestione degli eventi di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

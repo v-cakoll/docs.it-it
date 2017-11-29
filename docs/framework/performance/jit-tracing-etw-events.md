@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b33a86eb235524ed9cbe5e07dd6625fedf884411
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="jit-tracing-etw-events"></a>Eventi ETW di traccia JIT
 <a name="top"></a> Questi eventi raccolgono informazioni relative all'esito positivo o negativo dell'incorporamento Just-In-Time (JIT) e delle chiamate tail JIT.  
@@ -161,4 +159,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
-

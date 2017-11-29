@@ -1,102 +1,103 @@
 ---
-title: "Tipi di bitmap | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - ".bmp (file)"
-  - ".gif (file)"
-  - ".jpeg (file)"
-  - "bitmap [Windows Form], formato file"
-  - "Exchangeable Image File"
-  - "EXIF (formato file)"
-  - "gif (file)"
-  - "grafica [Windows Form], formati di file"
-  - "Graphics Interchange Format"
-  - "immagini [Windows Form], formati di file"
-  - "Joint Photographic Experts Group"
-  - "jpeg (file)"
-  - "immagini, formati di file"
-  - "PNG (file)"
-  - "Portable Network Graphics"
-  - "Tag Image File Format"
-  - "TIFF (file)"
+title: Tipi di bitmap
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- jpeg files
+- TIFF files
+- gif files
+- Graphics Interchange Format
+- Joint Photographic Experts Group
+- .jpeg files
+- .gif files
+- graphics [Windows Forms], file formats
+- images [Windows Forms], file formats
+- Portable Network Graphics
+- .bmp files
+- EXIF file format
+- PNG files
+- pictures [Windows Forms], file formats
+- Tag Image File Format
+- bitmaps [Windows Forms], file format
+- Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b33e710e7f57e1a84372dc556d904e32584a75ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tipi di bitmap
-Una bitmap è costituita da una matrice di bit che consentono di specificare il colore di ogni pixel in una matrice rettangolare di pixel.  Il numero di colori che è possibile assegnare a ogni pixel è determinato dal numero di bit destinati al singolo pixel.  Se ad esempio ogni pixel è rappresentato da 4 bit, sarà possibile assegnare a un dato pixel uno dei 16 colori diversi disponibili \(2^4 \= 16\).  Nella tabella seguente vengono riportati alcuni esempi relativi al numero di colori che è possibile assegnare a un pixel rappresentato da un dato numero di bit.  
+# <a name="types-of-bitmaps"></a>Tipi di bitmap
+Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una matrice rettangolare di pixel. Il numero di bit destinati a un singolo pixel determina il numero di colori che possono essere assegnati a tale pixel. Ad esempio, se ogni pixel è rappresentato da 4 bit, quindi un pixel specifico può essere assegnato uno dei 16 colori diversi (2 ^ 4 = 16). La tabella seguente illustra alcuni esempi del numero di colori che possono essere assegnati a un pixel rappresentato da un determinato numero di bit.  
   
-|Bit per pixel|Numero di colori che è possibile assegnare al pixel|  
-|-------------------|---------------------------------------------------------|  
-|1|2^1 \= 2|  
-|2|2^2 \= 4|  
-|4|2^4 \= 16|  
-|8|2^8 \= 256|  
-|16|2^16 \= 65,536|  
-|24|2^24 \= 16,777,216|  
+|Bit per pixel|Numero di colori che possono essere assegnati a un pixel|  
+|--------------------|------------------------------------------------------|  
+|1|2^1 = 2|  
+|2|2^2 = 4|  
+|4|2^4 = 16|  
+|8|2^8 = 256|  
+|16|2^16 = 65,536|  
+|24|2^24 = 16,777,216|  
   
- Nei file su disco in cui vengono memorizzate le bitmap sono solitamente presenti uno o più blocchi di informazioni, in cui vengono memorizzate informazioni quali il numero di bit per pixel, il numero di pixel in ogni riga e il numero di righe della matrice.  È possibile che in tali file sia presente anche una tabella dei colori, definita a volte come tavolozza dei colori.  Una tabella dei colori consente di associare i valori numerici della bitmap a colori specifici.  Nell'immagine seguente viene mostrata un'immagine ingrandita, oltre alla relativa bitmap e tabella dei colori.  Ogni pixel è rappresentato da un numero a 4 bit: Nella tabella dei colori sono quindi disponibili 2^4 \= 16 colori.  Ogni colore della tabella è rappresentato da un numero a 24 bit: 8 bit per il rosso, 8 bit per il verde e 8 bit per il blu.  I numeri vengono mostrati in formato esadecimale \(base 16\): A \= 10, B \= 11, C \= 12, D \= 13, E \= 14, F \= 15.  
+ File di disco che archiviano le bitmap in genere contengono uno o più blocchi di informazioni che archiviano informazioni quali il numero di bit per pixel, numero di pixel in ogni riga e numero di righe nella matrice. Tale file potrebbe contenere anche una tabella a colori (talvolta denominata una tavolozza dei colori). Una tabella di mappa numeri nella bitmap a colori specifici. Nella figura seguente mostra un'immagine ingrandita con la relativa tabella di bitmap e il colore. Ogni pixel è rappresentato da un numero di 4 bit, pertanto vi sono 2 ^ 4 = 16 colori nella tavolozza colori. Ogni colore nella tabella è rappresentato da un numero di 24 bit: 8 bit del rosso, 8 bit del verde e 8 bit del blu. I numeri vengono visualizzati in formato esadecimale (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
- ![Esempio di bitmap](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.png "AboutGdip03\_Art01")  
+ ![Esempio di bitmap](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
- Si osservi il pixel nella riga 3 della colonna 5 dell'immagine.  Il numero corrispondente nella bitmap è 1.  Nella tabella dei colori il valore 1 rappresenta il rosso, quindi il pixel è rosso.  Tutte le voci presenti nella prima riga della bitmap sono pari a 3.  Nella tabella dei colori il valore 3 rappresenta il blu, quindi tutti i pixel della prima riga dell'immagine sono blu.  
+ Esaminare il pixel nella riga 3, colonna 5 dell'immagine. Il numero corrispondente nella bitmap è 1. La tabella dei colori indica che 1 rappresenta il colore rosso, pertanto il pixel è rosso. Tutte le voci nella riga superiore della bitmap sono 3. La tabella dei colori indica che 3 rappresenta blue, pertanto tutti i pixel nella parte superiore dell'immagine sono blu.  
   
 > [!NOTE]
->  Alcune bitmap vengono memorizzate in formato capovolto. I numeri della prima riga della bitmap corrispondono ai pixel dell'ultima riga dell'immagine.  
+>  Alcune bitmap vengono archiviate in formato dal basso in alto. i numeri nella prima riga della bitmap corrispondono ai pixel nella riga inferiore dell'immagine.  
   
- Una bitmap i cui indici sono memorizzati in una tabella dei colori viene definita bitmap indicizzata con tavolozza.  Per alcune bitmap la tabella dei colori non è necessaria.  Se ad esempio in una bitmap vengono utilizzati 24 bit per pixel, è possibile memorizzare i colori stessi anziché memorizzare gli indici in una tabella dei colori.  Nell'immagine seguente viene mostrata una bitmap in cui vengono memorizzati direttamente i colori \(24 bit per pixel\), anziché utilizzare una tabella dei colori.  Viene inoltre mostrato un ingrandimento dell'immagine corrispondente.  Nella bitmap FFFFFF rappresenta il bianco, FF0000 rappresenta il rosso, 00FF00 rappresenta il verde e 0000FF rappresenta il blu.  
+ Bitmap che archivia gli indici in una tabella dei colori viene chiamata una bitmap con tavolozza indicizzate. Alcune bitmap non sono necessari per una tabella a colori. Ad esempio, se una bitmap Usa 24 bit per pixel, tale bitmap possibile archiviare gli stessi colori piuttosto che gli indici in una tabella a colori. Nella figura seguente mostra una bitmap che vengono archiviati direttamente i colori (24 bit per pixel) anziché una tabella a colori. L'illustrazione mostra anche un ingrandimento dell'immagine corrispondente. Nella mappa di bit, FFFFFF rappresenta il bianco, FF0000 rappresenta il rosso, 00FF00 rappresenta il colore verde e 0000FF rappresenta il blu.  
   
- ![Esempio di bitmap](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.png "AboutGdip03\_Art02")  
+ ![Esempio di bitmap](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
-## Formati di file grafici  
- Sono disponibili molti formati standard per il salvataggio delle bitmap nei file su disco.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] supporta i formati di file grafici descritti nei paragrafi seguenti.  
+## <a name="graphics-file-formats"></a>Formati di File di grafica  
+ Esistono numerosi formati standard per il salvataggio di bitmap nei file su disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]supporta la grafica formati di file descritti nei paragrafi seguenti.  
   
-### BMP  
- BMP è un formato standard utilizzato da Windows per la memorizzazione di immagini indipendenti da periferiche e da applicazioni.  Il numero di bit per pixel \(1, 4, 8, 15, 24, 32 o 64\) per un dato file BMP viene specificato nell'intestazione del file.  I file BMP con 24 bit per pixel sono molto comuni.  I file BMP non sono solitamente compressi, quindi non se ne consiglia l'utilizzo per trasferimenti tramite Internet.  
+### <a name="bmp"></a>BMP  
+ BMP è un formato standard utilizzato da Windows per archiviare le immagini indipendenti dal dispositivo e indipendenti dall'applicazione. Il numero di bit per pixel (1, 4, 8, 15, 24, 32 o 64) per un determinato file BMP è specificato in un'intestazione del file. I file BMP con 24 bit per pixel sono comuni. File BMP in genere non vengono compressi e, pertanto, non sono adatti per il trasferimento tramite Internet.  
   
-### GIF \(Graphics Interchange Format\)  
- Il formato GIF viene solitamente utilizzato per immagini visualizzate nelle pagine Web.  Tale formato risulta ottimale per disegni costituiti da linee, per immagini con blocchi di colore a tinta unita e immagini con colori ben definiti e distinti.  I file GIF sono compressi, ma il processo di compressione non comporta alcuna perdita di informazioni: un'immagine decompressa corrisponde esattamente all'immagine originale.  In un file GIF è possibile impostare un colore come trasparente. L'immagine assumerà quindi il colore di sfondo della pagina Web in cui viene visualizzata.  Memorizzando una sequenza di immagini GIF in un unico file, sarà possibile creare un GIF animato.  Nei file GIF è possibile memorizzare al massimo 8 bit per pixel, quindi il limite massimo di colori disponibili è 256.  
+### <a name="graphics-interchange-format-gif"></a>Graphics Interchange Format (GIF)  
+ GIF è un formato comune per le immagini visualizzate nelle pagine Web. GIF funziona anche per le linee, le immagini con blocchi di colore a tinta unita e immagini con limiti acuti tra i colori. GIF sono compresse, senza alcuna perdita di informazioni nel processo di compressione; un'immagine decompressa è esattamente uguale all'originale. È possibile impostare un colore di un'immagine GIF trasparente, in modo che l'immagine assumerà il colore di sfondo di una pagina Web che viene visualizzato. Una sequenza di immagini GIF può essere archiviata in un singolo file in modo da formare un'immagine GIF animata. GIF archiviare al massimo 8 bit per pixel, in modo che sono limitati a 256 colori.  
   
-### JPEG \(Joint Photographic Experts Group\)  
- JPEG è uno schema di compressione particolarmente adatto a immagini reali, quali immagini digitalizzate.  Il processo di compressione comporta la perdita di alcune informazioni, ma tale perdita è solitamente impercettibile per l'occhio umano.  Nei file JPEG è possibile memorizzare 24 bit per pixel, quindi tali file consentono la visualizzazione di 16 milioni di colori.  I file JPEG non supportano la trasparenza o le animazioni.  
+### <a name="joint-photographic-experts-group-jpeg"></a>Joint Photographic Experts Group (JPEG)  
+ JPEG è uno schema di compressione che funziona anche per le scene naturale, ad esempio acquisite. Alcune informazioni vengono persi nel processo di compressione, ma spesso la perdita è impercettibile all'occhio umano. File JPEG memorizzare 24 bit per pixel, in modo che siano in grado di visualizzare più di 16 milioni di colori. File JPEG non supportano la trasparenza o animazione.  
   
- Il livello di compressione delle immagini JPEG è configurabile, ma i livelli di compressione più elevati \(file di dimensioni più ridotte\) comportano una maggiore perdita di informazioni.  Un fattore di compressione pari a 20:1 consente di ottenere un'immagine difficilmente distinguibile dall'originale.  Nell'immagine seguente vengono mostrate un'immagine BMP e due immagini JPEG create tramite la compressione dell'immagine BMP.  Il fattore di compressione della prima immagine JPEG è pari a 4:1 e quello della seconda immagine JPEG è pari a 8:1.  
+ Il livello di compressione immagini JPEG è configurabile, ma i livelli più alti di compressione (i file più piccoli) ottenere maggiore perdita di informazioni. Spesso, un rapporto di compressione di 20:1 produce un'immagine che all'occhio umano ma consente di trovare facilmente distinguibili dai originale. Nella figura seguente mostra un'immagine BMP e due le immagini JPEG che sono stati compressi da quell'immagine BMP. La prima immagine JPEG un rapporto di compressione di 4:1, che la seconda immagine JPEG ha un rapporto di compressione di circa 8:1.  
   
- ![Esempi di Filetype](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03\_Art03")  
+ ![Esempi di FileType](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
- La compressione JPEG non è consigliabile per disegni composti da linee, blocchi di colore a tinta unita e colori ben definiti e distinti.  Nell'immagine seguente viene mostrata un'immagine BMP insieme a due immagini JPEG e un'immagine GIF.  Le immagini JPEG e GIF sono state create tramite la compressione dell'immagine BMP.  Il fattore di compressione è pari a 4:1 per l'immagine GIF, 4:1 per l'immagine JPEG più piccola e 8:3 per l'immagine JPEG più grande.  Si noti che nell'immagine GIF sono state conservate le distinzioni nette tra i colori lungo le linee, mentre nelle immagini JPEG tali margini tendono a risultare sfumati.  
+ La compressione JPEG non funzionerà correttamente per le linee, blocchi di colore a tinta unita e acuto limiti. Nella figura seguente mostra un'immagine BMP con due immagini JPEG e un'immagine GIF. Le immagini JPEG e GIF sono stati compressi dal BMP. Il rapporto di compressione è 4:1 per l'immagine GIF, 4:1 per il più piccolo JPEG e 8:3 per l'immagine JPEG più grande. Si noti che il file GIF mantiene i limiti acuti lungo le righe, ma le immagini JPEG tendono a sfumati.  
   
- ![Filetype](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.png "AboutGdip03\_Art03A")  
+ ![Tipi di file](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
- JPEG è uno schema di compressione, non un formato di file.  JFIF \(JPEG File Interchange Format\) è un formato di file solitamente utilizzato per la memorizzazione e il trasferimento di immagini compresse in base allo schema JPEG.  Per i file JFIF visualizzati dai browser Web viene utilizzata l'estensione JPG.  
+ JPEG è uno schema di compressione non è un formato di file. File JFIF JPEG Interchange Format () è un formato di file utilizzato per l'archiviazione e il trasferimento di immagini che sono state compresse in base allo schema JPEG. I file JFIF visualizzati dai browser Web utilizzano l'estensione jpg.  
   
-### EXIF \(Exchangeable Image File\)  
- EXIF è un formato utilizzato per immagini acquisite con fotocamere digitali.  In un file EXIF è contenuta un'immagine compressa in base alle specifiche JPEG,  oltre a informazioni relative alla fotografia \(data in cui è stata scattata, velocità dell'otturatore, esposizione e così via\) e informazioni relative alla fotocamera \(produttore, modello e così via\).  
+### <a name="exchangeable-image-file-exif"></a>Exchangeable Image File (EXIF)  
+ EXIF è un formato di file utilizzato per immagini acquisite da fotocamere digitali. Un file EXIF contiene un'immagine che viene compresso in base alla specifica JPEG. Un file EXIF contiene inoltre informazioni relative alla fotografia (data di acquisizione, otturatore velocità, il tempo di esposizione e così via) e le informazioni relative alla fotocamera (produttore, modello e così via).  
   
-### PNG \(Portable Network Graphics\)  
- Il formato PNG consente di usufruire di molti dei vantaggi offerti dal formato GIF, ma fornisce anche ulteriori funzionalità rispetto a tale formato.  Analogamente ai file GIF, i file PNG vengono compressi senza alcuna perdita di informazioni.  È possibile memorizzare nei file PNG colori con 8, 24 o 48 bit per pixel e scale di grigi con 1, 2, 4, 8 o 16 bit per pixel.  I file GIF consentono di memorizzare solo 1, 2, 4 o 8 bit per pixel.  È inoltre possibile memorizzare in un file PNG anche un valore alfa per ogni pixel, che consente di specificare il livello di fusione del colore di tale pixel con il colore dello sfondo.  
+### <a name="portable-network-graphics-png"></a>Portable Network Graphics (PNG)  
+ Il formato PNG mantiene molti dei vantaggi del formato GIF, ma fornisce anche funzionalità oltre a quelle di immagine GIF. Analogamente ai file GIF, PNG sono compressi senza perdita di informazioni. File PNG è possono archiviare i colori con 8, 24, o 48 bit per pixel e scale di grigi con 1, 2, 4, 8 o 16 bit per pixel. GIF (file), invece, possono utilizzare solo 1, 2, 4 o 8 bit per pixel. Un file PNG è anche possibile archiviare un valore alfa per ciascun pixel, che specifica il livello a cui il colore del pixel viene sfumato con il colore di sfondo.  
   
- Il formato PNG rappresenta un miglioramento della capacità del formato GIF di visualizzare progressivamente un'immagine, ovvero di visualizzare approssimazioni sempre migliori di un'immagine mentre viene trasmessa attraverso una connessione di rete.  È possibile memorizzare nei file PNG informazioni relative alla correzione gamma e alla correzione dei colori, in modo da consentire il rendering accurato delle immagini su svariate periferiche di visualizzazione.  
+ PNG migliora la possibilità di visualizzare progressivamente un'immagine GIF (ovvero, per visualizzare approssimazioni sempre migliori dell'immagine come arriva tramite una connessione di rete). File PNG possono contenere informazioni di correzione di colore e la correzione gamma in modo che sia possono eseguire il rendering in modo accurato di immagini su una vasta gamma di dispositivi di visualizzazione.  
   
-### TIFF \(Tag Image File Format\)  
- TIFF è un formato di file flessibile ed adattabile, supportato da una vasta gamma di piattaforme e di applicazioni per l'elaborazione di immagini.  È possibile memorizzare nei file TIFF immagini con un numero arbitrario di bit per pixel ed è consentito l'utilizzo di svariati algoritmi di compressione.  In un unico file TIFF a più pagine è possibile memorizzare più immagini.  Le informazioni relative all'immagine \(marca dello scanner, computer host, tipo di compressione, orientamento, campioni per pixel è così via\) possono essere memorizzate nel file e riordinate tramite tag.  L'approvazione e l'aggiunta di nuovi tag consentono di estendere il formato TIFF in base alle necessità.  
+### <a name="tag-image-file-format-tiff"></a>Tag immagine formato TIFF (File)  
+ TIFF è un formato flessibile ed estendibile che è supportato da una vasta gamma di piattaforme e applicazioni di elaborazione delle immagini. File TIFF possono archiviare le immagini con un numero arbitrario di bit per pixel e possono utilizzare un'ampia gamma di algoritmi di compressione. Numerose immagini possono essere archiviate in un file TIFF singolo a più pagine. Le informazioni relative all'immagine (marca dello scanner, il computer host, tipo di compressione, orientamento, i campioni per pixel e così via) possono essere archiviate nel file e disposti tramite l'utilizzo di tag. Il formato TIFF può essere esteso in base alle esigenze di approvazione e l'aggiunta di nuovi tag.  
   
-## Vedere anche  
- <xref:System.Drawing.Image?displayProperty=fullName>   
- <xref:System.Drawing.Bitmap?displayProperty=fullName>   
- <xref:System.Drawing.Imaging.PixelFormat?displayProperty=fullName>   
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Image?displayProperty=nameWithType>  
+ <xref:System.Drawing.Bitmap?displayProperty=nameWithType>  
+ <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>  
+ [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
