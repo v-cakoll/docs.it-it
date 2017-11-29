@@ -1,72 +1,67 @@
 ---
-title: "&lt;backupList&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;backupList&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9f8138f2a2448293e1f26da5f7d0562b1338b7d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;backupList&gt;
-Rappresenta una sezione di configurazione per definire un elenco di backup che enumera un set di endpoint da usare nel servizio di routing quando non è possibile raggiungere l'endpoint primario. Se il primo endpoint dell'elenco non funziona, il servizio di routing eseguirà automaticamente il failover al successivo endpoint dell'elenco. In questo modo è possibile migliorare rapidamente l'affidabilità all'applicazione senza che sia necessario indicare all'applicazione client come gestire modelli complessi o la posizione in cui i servizi sono distribuiti.  
+# <a name="ltbackuplistgt"></a>&lt;backupList&gt;
+Rappresenta una sezione di configurazione per la definizione di un elenco di backup che enumera un set di endpoint che si desidera che il servizio di Routing da utilizzare nel caso in cui l'endpoint primario non è raggiungibile. Se il primo endpoint dell'elenco non funziona, il servizio di routing eseguirà automaticamente il failover nel successivo endpoint dell'elenco.  In questo modo è possibile migliorare rapidamente l'affidabilità all'applicazione senza che sia necessario indicare all'applicazione client come gestire modelli complessi o la posizione in cui i servizi sono distribuiti.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<routing >  
+\<backupLists >  
+\<backupList >  
   
-```vb  
+## <a name="syntax"></a>Sintassi  
   
-<routing>  
-  <backupLists>  
-    <backupList name="String">  
-      <add endpointName="String" />  
-    </backupList>    
-  </backupLists>  
-</routing>  
-  
-```  
-  
-```csharp  
-  
-```  
-  
-## Attributi ed elementi  
+```xml 
+   <routing>  <backupLists>    <backupList name="String">      <add endpointName="String" />    </backupList>    </backupLists></routing>  
+```
+
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |name|Stringa che specifica il nome usato per identificare l'elenco di endpoint.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<filtro\>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
+|-------------|-----------------|  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<routing\>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Elenco di endpoint di backup.|  
+|-------------|-----------------|  
+|[\<routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Elenco di endpoint di backup.|  
   
-## Note  
+## <a name="remarks"></a>Note  
  Questa sezione include una raccolta ordinata di endpoint ai quali verrà trasmesso un messaggio nel caso venga generata un'eccezione di comunicazione durante l'invio all'endpoint primario.  
   
- Se un invio all'endpoint primario elencato nell'attributo `endpointName` di [\<aggiunta\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-entries.md) non riesce e viene generata un'eccezione di comunicazione, il servizio di routing tenterà di inviare il messaggio al primo endpoint incluso in questa sezione di configurazione.  Se anche questo invio non riesce e viene generata un'eccezione di comunicazione, il servizio di routing tenterà di inviare il messaggio all'endpoint successivo incluso in questa sezione fino a quando il tentativo di invio non ha esito positivo, non viene restituito un errore diverso da un'eccezione di comunicazione o tutti gli endpoint inclusi nella raccolta non restituiscono un errore.  
+ Se un invio all'endpoint primario è elencato nella `endpointName` attributo di [ \<aggiungere >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-entries.md) ha esito negativo con un'eccezione di comunicazione, il servizio di Routing tenterà di inviare il messaggio al primo endpoint in questo sezione di configurazione. Se anche questo invio non riesce e viene generata un'eccezione di comunicazione, il servizio di routing tenterà di inviare il messaggio all'endpoint successivo incluso in questa sezione fino a quando il tentativo di invio non ha esito positivo, non viene restituito un errore diverso da un'eccezione di comunicazione o tutti gli endpoint inclusi nella raccolta non restituiscono un errore.  
   
- Nell'esempio seguente, se un invio all'endpoint primario denominato "Destination" restituisce un'eccezione di comunicazione, il servizio tenterà di inviare il messaggio a "alternateServiceQueue".  Se anche questo tentativo restituisce un'eccezione di comunicazione, il servizio di routing tenterà di inviare il messaggio all'endpoint successivo incluso nella raccolta.  
+ Nell'esempio seguente, se un invio all'endpoint primario denominato "Destination" restituisce un'eccezione di comunicazione, il servizio tenterà di inviare il messaggio a "alternateServiceQueue". Se anche questo tentativo restituisce un'eccezione di comunicazione, il servizio di routing tenterà di inviare il messaggio all'endpoint successivo incluso nella raccolta.  
   
-```  
-  
+```xml  
 <filterTables>  
      <filterTable name="filterTable1">  
           <add filterName="MatchAllFilter1" endpointName="Destination" backupList="backupEndpointList"/>  
@@ -80,5 +75,5 @@ Rappresenta una sezione di configurazione per definire un elenco di backup che e
 </backupLists>  
 ```  
   
-## Vedere anche  
- [System.ServiceModel.Routing.Configuration.BackupEndpointCollection](assetId:///System.ServiceModel.Routing.Configuration.BackupEndpointCollection?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    

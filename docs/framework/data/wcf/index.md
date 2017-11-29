@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework-oob
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- HTML
-- VB
-- CSharp
-- C++
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b491d644112137cb24e847439aa133691e5261d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: d1ef95ac84872b2cc39ec3a93abab10c39cd7738
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (precedentemente noto come "ADO.NET Data Services") è un componente di .NET Framework che consente di creare servizi che si basano su [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per esporre e utilizzare dati sul Web o su Intranet tramite la semantica [REST (Representational State Transfer)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] espone i dati come risorse indirizzabili tramite URI. Per accedere ai dati e apportarvi modifiche è possibile utilizzare i verbi HTTP standard GET, PUT, POST e DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usa le convenzioni entità-relazione di [Entity Data Model (EDM)](../../../../docs/framework/data/adonet/entity-data-model.md) per esporre risorse come set di entità correlate da associazioni.  
@@ -140,4 +133,3 @@ ms.lasthandoff: 09/05/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [REST (Representational State Transfer)](http://go.microsoft.com/fwlink/?LinkId=113919)
-

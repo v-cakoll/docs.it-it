@@ -1,28 +1,34 @@
 ---
-title: "Procedura: visualizzare SQL generato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: visualizzare il codice SQL generato'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 523a6cbd0174da4c294e5fd2ab2d0217fc63cb5c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: visualizzare SQL generato
-È possibile visualizzare il codice SQL generato per le query e modificare l'elaborazione usando la proprietà <xref:System.Data.Linq.DataContext.Log%2A>.  Questo approccio può essere utile per comprendere la funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e per eseguire il debug di problemi specifici.  
+# <a name="how-to-display-generated-sql"></a>Procedura: visualizzare il codice SQL generato
+È possibile visualizzare il codice SQL generato per le query e modificare l'elaborazione usando la proprietà <xref:System.Data.Linq.DataContext.Log%2A>. Questo approccio può essere utile per comprendere la funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e per eseguire il debug di problemi specifici.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene usata la proprietà <xref:System.Data.Linq.DataContext.Log%2A> per visualizzare il codice SQL nella finestra della console prima di eseguirlo.  È possibile usare questa proprietà con comandi di query, inserimento, aggiornamento ed eliminazione.  
   
- Le righe nella finestra della console sono le stesse che vengono visualizzate quando si esegue il codice [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] o C\# seguente.  
+ Le righe nella finestra della console sono le stesse che vengono visualizzate quando si esegue il codice [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] o C# seguente.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -46,5 +52,5 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## Vedere anche  
- [Supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Vedere anche  
+ [Supporto del debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

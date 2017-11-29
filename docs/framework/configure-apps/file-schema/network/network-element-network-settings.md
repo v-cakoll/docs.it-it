@@ -1,104 +1,107 @@
 ---
-title: "Elemento &lt;network&gt; (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#network"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp/network"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<network> (elemento)"
-  - "network (elemento)"
+title: '&lt;rete&gt; elemento (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#network
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp/network
+helpviewer_keywords:
+- <network> element
+- network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 679351fd2d6f0727d40bd57c9ef2016738462eb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;network&gt; (Impostazioni di rete)
-Configura le opzioni di rete per un server SMTP \(Simple Mail Transport Protocol\) esterno.  
+# <a name="ltnetworkgt-element-network-settings"></a>&lt;rete&gt; elemento (impostazioni di rete)
+Configura le opzioni di rete per un server SMTP Simple Mail Transport Protocol () esterno.  
   
-## Sintassi  
+ \<configuration>  
+\<System.NET >  
+\<mailSettings >  
+\<SMTP >  
+\<rete >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-      <network  
-  clientDomain="string"   
+```xml  
+<network  
+  clientDomain="string"   
   defaultCredentials="true|false"  
   enableSsl="true|false"  
-  host="string"   
+  host="string"   
   password="string"  
-  port="integer"   
+  port="integer"   
   targetName="string"  
   userName="string"  
 />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`clientDomain`|Specifica il nome di dominio client da utilizzare nella richiesta iniziale di protocollo SMTP per connettersi al server di posta SMTP.  Il valore predefinito è il nome localhost del computer locale che invia la richiesta.|  
-|`defaultCredentials`|Specifica se devono essere utilizzate le credenziali predefinite dell'utente per accedere al server di posta SMTP per transazioni SMTP.  Il valore predefinito è `false`.|  
-|`enableSsl`|Specifica se viene utilizzato SSL per accedere a un server di posta elettronica SMTP.  Il valore predefinito è `false`.|  
-|`host`|Specifica il nome host del server di posta SMTP da utilizzare per transazioni SMTP.  Questo attributo non ha un valore predefinito.|  
-|`password`|Specifica la password da utilizzare per l'autenticazione al server di posta SMTP.  Questo attributo non ha un valore predefinito.|  
-|`port`|Specifica il numero di porta da utilizzare per connettersi al server di posta SMTP.  Il valore predefinito è 25.|  
-|`targetName`|Specifica il nome del provider di servizi \(SPN, Service Provider Name\) da utilizzare per l'autenticazione quando si utilizza la protezione estesa per le transazioni SMTP.  Questo attributo non ha un valore predefinito.|  
-|`userName`|Specifica il nome utente da utilizzare per l'autenticazione al server di posta SMTP.  Questo attributo non ha un valore predefinito.|  
+|`clientDomain`|Specifica il nome di dominio client da utilizzare nella richiesta iniziale di protocollo SMTP per la connessione al server di posta SMTP. Il valore predefinito è il nome host locale del computer locale, l'invio della richiesta.|  
+|`defaultCredentials`|Specifica se le credenziali utente predefinite devono essere utilizzate per accedere al server di posta elettronica SMTP per le transazioni SMTP. Il valore predefinito è `false`.|  
+|`enableSsl`|Specifica se viene utilizzato SSL per accedere a un server di posta elettronica SMTP. Il valore predefinito è `false`.|  
+|`host`|Specifica il nome host del server di posta elettronica SMTP da utilizzare per le transazioni SMTP. Questo attributo non è previsto alcun valore predefinito.|  
+|`password`|Specifica la password da utilizzare per l'autenticazione al server di posta SMTP. Questo attributo non è previsto alcun valore predefinito.|  
+|`port`|Specifica il numero di porta da utilizzare per connettersi al server di posta SMTP. Il valore predefinito è 25.|  
+|`targetName`|Specifica il nome di Provider di servizio (SPN) da utilizzare per l'autenticazione quando si utilizza la protezione estesa per le transazioni SMTP. Questo attributo non è previsto alcun valore predefinito.|  
+|`userName`|Specifica il nome utente da utilizzare per l'autenticazione al server di posta SMTP. Questo attributo non è previsto alcun valore predefinito.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[Elemento \<smtp\> \(Impostazioni di rete\)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configura le opzioni di invio della posta elettronica per il protocollo SMTP \(Simple Mail Transport Protocol\).|  
+|-------------|-----------------|  
+|[\<SMTP > elemento (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configura posta elettronica SMTP Simple Mail Transport Protocol (), le opzioni di invio.|  
   
-## Note  
- In alcuni server SMTP è necessario autenticarsi prima di utilizzare il server.  Per effettuare questa operazione utilizzando le credenziali di rete predefinite sull'host, impostare l'attributo `defaultCredentials` su `true` La proprietà <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=fullName> può essere utilizzata per ottenere il valore corrente dell'attributo `defaultCredentials` dai file di configurazione applicabili.  
+## <a name="remarks"></a>Note  
+ Alcuni server SMTP richiedono autenticarsi al server prima dell'uso. Se si desidera eseguire l'autenticazione utilizzando le credenziali di rete predefinite sull'host, impostare il `defaultCredentials` attributo `true`. Il <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType> utilizzabile per ottenere il valore corrente della proprietà di `defaultCredentials` attributo dal file di configurazione applicabili.  
   
- È inoltre possibile utilizzare l'autenticazione di base, ovvero un nome utente e una password, per autenticarsi nel server SMTP.  Per utilizzare questa opzione, è necessario specificare un nome utente e una password validi per il server SMTP specificato.  
+ È inoltre possibile utilizzare l'autenticazione di base (nome utente e password) per autenticarsi presso il server SMTP. Per utilizzare questa opzione, è necessario specificare un nome utente valido e una password per il server SMTP specificato.  
   
 > [!NOTE]
->  L'autenticazione di base prevede l'invio dei valori `userName` e `password` al server non crittografato.  In tal modo le credenziali possono essere visualizzate da qualsiasi utente effettui il monitoraggio del traffico di rete e utilizzate per la connessione al server.  È pertanto consigliabile prendere in considerazione l'utilizzo di un meccanismo di autenticazione con un livello di protezione più elevato, come Kerberos o NT LAN Manager \(NTLM.\) Se `defaultCredentials` è impostato su `true`, verrà utilizzato Kerberos o NTLM se il server supporta questi protocolli.  
+>  Autenticazione di base invia le `userName` e `password` i valori per il server non crittografato. Chiunque monitoraggio del traffico di rete può visualizzare le credenziali e utilizzarle per connettersi al server. È consigliabile utilizzare un meccanismo di autenticazione più sicuro, ad esempio Kerberos o NT LAN Manager (NTLM). Se `defaultCredentials` è `true`, Kerberos o NTLM da utilizzare se il server supporta questi protocolli.  
   
- L'autenticazione di base e le credenziali di rete predefinite si escludono a vicenda, ovvero se si imposta `defaultCredentials` su `true` e si specifica un nome utente e una password, verrà utilizzata la credenziale di rete predefinita e i dati di autenticazione di base verranno ignorati.  
+ L'autenticazione e l'impostazione predefinita rete credenziali opzioni di base si escludono a vicenda; Se si imposta `defaultCredentials` a `true` e specificare un nome utente e una password, viene utilizzata la credenziale di rete predefinito e i dati di autenticazione di base viene ignorati.  
   
- Per l'autenticazione di base, se si specifica un `userName`, è necessario specificare anche una `password` per autenticarsi sul server di posta.  
+ L'autenticazione di base se si specifica un `userName`, è necessario specificare anche un `password` all'autenticazione per il server di posta elettronica.  
   
- La proprietà <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=fullName> può essere utilizzata per ottenere il valore corrente dell'attributo `userName` dai file di configurazione applicabili.  La proprietà <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=fullName> può essere utilizzata per ottenere il valore corrente dell'attributo `password` dai file di configurazione applicabili.  Di norma, per motivi di sicurezza, l'attributo `password` non viene immesso nei file di configurazione.  
+ Il <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType> utilizzabile per ottenere il valore corrente della proprietà di `userName` attributo dal file di configurazione applicabili. Il <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType> utilizzabile per ottenere il valore corrente della proprietà di `password` attributo dal file di configurazione applicabili. Oggetto `password` attributo non verrebbe normalmente immesso nei file di configurazione per motivi di sicurezza.  
   
- L'attributo `clientDomain` modifica il nome di dominio client utilizzato nella richiesta iniziale di protocollo SMTP per un server di posta SMTP.  È possibile impostare l'attributo `clientDomain` sul nome di dominio completo del computer locale, anziché sul nome del localhost utilizzato per impostazione predefinita.  Fornisce maggiore conformità agli standard del protocollo SMTP.  Il valore predefinito è il nome localhost del computer locale che invia la richiesta.  La proprietà <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=fullName> può essere utilizzata per ottenere il valore corrente dell'attributo `clientDomain` dai file di configurazione applicabili.  
+ Il `clientDomain` attributo modifica il nome di dominio client utilizzato nella richiesta iniziale di protocollo SMTP a un server SMTP. Il `clientDomain` attributo può essere impostato per il nome di dominio completo del computer locale, anziché il nome host locale utilizzato per impostazione predefinita. Questo fornisce maggiore conformità agli standard del protocollo SMTP. Il valore predefinito è il nome host locale del computer locale, l'invio della richiesta. Il <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType> utilizzabile per ottenere il valore corrente della proprietà di `clientDomain` attributo dal file di configurazione applicabili.  
   
- Gli attributi `targetName` vengono utilizzati per l'autenticazione quando si utilizza la protezione estesa.  Il formato del valore predefinito è "SMTPSVC\/\<host\>" dove \<host\> è il nome host del server di posta elettronica SMTP.  La proprietà <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=fullName> può essere utilizzata per ottenere il valore corrente dell'attributo `targetName` dai file di configurazione applicabili.  
+ Il `targetName` attributo viene utilizzato per l'autenticazione quando si utilizza la protezione estesa. Il valore predefinito è nel formato "SMTPSVC /\<host >" dove \<host > è il nome host del server di posta SMTP. Il <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType> utilizzabile per ottenere il valore corrente della proprietà di `targetName` attributo dal file di configurazione applicabili.  
   
- L'attributo `enableSsl` specifica se viene utilizzato SSL per accedere a un server di posta SMTP.  La classe <xref:System.Net.Mail.SmtpClient?displayProperty=fullName> supporta solo l'Estensione del servizio SMTP per il protocollo SMTP protetto su Transport Layer Security come definito in RFC 3207.  In questa modalità, la sessione SMTP inizia in un canale non crittografato, quindi il client invia al server un comando STARTTLS per attivare la protezione delle comunicazioni tramite SSL.  Per ulteriori informazioni vedere RFC 3207 pubblicato da Internet Engineering Task Force \(IETF\).  
+ Il `enableSsl` attributo specifica se viene utilizzato SSL per accedere a un server di posta elettronica SMTP. La <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType> classe supporta solo l'estensione del servizio SMTP per il protocollo SMTP protetto su Transport Layer Security come definito in RFC 3207. In questa modalità, la sessione SMTP inizia in un canale non crittografato, quindi viene eseguito un comando STARTTLS dal client al server per passare alla comunicazione protetta con SSL. Vedere RFC 3207 pubblicato da Internet Engineering Task Force (IETF) per ulteriori informazioni.  
   
- Un metodo di connessione alternativo è quello in cui una sessione SSL viene stabilita in fase iniziale, prima che venga inviato qualsiasi comando di protocollo.  Questo metodo di connessione qualche volta è chiamato SMTPS e per impostazione predefinita utilizza la porta 465.  Questo metodo di connessione alternativo che utilizza SSL non è attualmente supportato.  
+ Un metodo di connessione alternativo è in una sessione SSL viene stabilita in anticipo prima di qualsiasi protocollo di comandi vengono inviati. Questo metodo di connessione, talvolta chiamato SMTPS, per impostazione predefinita utilizza la porta 465. Questo metodo di connessione alternativo tramite SSL non è attualmente supportato.  
   
- La proprietà <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=fullName> può essere utilizzata per ottenere il valore corrente dell'attributo `enableSsl` dai file di configurazione applicabili.  
+ Il <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType> utilizzabile per ottenere il valore corrente della proprietà di `enableSsl` attributo dal file di configurazione applicabili.  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito vengono specificati i parametri SMTP appropriati per l'invio della posta elettronica mediante le credenziali di rete predefinite.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente specifica i parametri appropriati di SMTP per inviare posta elettronica utilizzando le credenziali di rete predefinite.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
@@ -116,8 +119,8 @@ Configura le opzioni di rete per un server SMTP \(Simple Mail Transport Protocol
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=fullName>   
- <xref:System.Net.Configuration.SmtpSection?displayProperty=fullName>   
- <xref:System.Net.Mail.SmtpClient?displayProperty=fullName>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
+ <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
+ <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

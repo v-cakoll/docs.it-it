@@ -1,44 +1,36 @@
 ---
-title: "Annullare un&quot;attività asincrona o un elenco di attività (Visual Basic) | Documenti di Microsoft"
+title: "Annullare un'attività asincrona o un elenco di attività (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe2df73aaf49f1b61dafcad9a6c6e0f3d014f8ec
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 916577107bd65559aed71dc9bb2921969a117e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Annullare un'attività asincrona o un elenco di attività (Visual Basic)
-È possibile impostare un pulsante che consente di annullare un'applicazione async se non si desidera attendere il completamento. Seguendo gli esempi in questo argomento, è possibile aggiungere un pulsante di annullamento di un'applicazione che consente di scaricare il contenuto di un sito Web o un elenco di siti Web.  
+È possibile impostare un pulsante che consenta di annullare un'applicazione asincrona se non si vuole attendere il suo completamento. Seguendo gli esempi in questo argomento, è possibile aggiungere un pulsante di annullamento di un'applicazione che scarica il contenuto di un sito Web o di un elenco di siti Web.  
   
  Negli esempi viene utilizzato l'interfaccia utente che [ottimizzazione Async applicazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) descrive.  
   
 > [!NOTE]
->  Per eseguire gli esempi, è necessario disporre di Visual Studio 2012 o versione successiva e .NET Framework 4.5 o versioni successive installato nel computer in uso.  
+>  Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.  
   
-##  <a name="BKMK_CancelaTask"></a>Annullare un'attività  
- Nel primo esempio associa il **Annulla** pulsante con un'attività di solo download. Se si sceglie il pulsante mentre l'applicazione sta scaricando il contenuto, il download viene annullato.  
+##  <a name="BKMK_CancelaTask"></a> Annullare un'attività  
+ Il primo esempio associa il pulsante **Annulla** con un'attività di download singola. Se si sceglie il pulsante mentre l'applicazione sta scaricando il contenuto, il download viene annullato.  
   
 ### <a name="downloading-the-example"></a>Download dell'esempio  
- È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [esempio asincrono: Fine ottimizzazione dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=255046) e attenersi alla seguente procedura.  
+ È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.  
   
 1.  Decomprimere il file scaricato e quindi avviare Visual Studio.  
   
@@ -46,22 +38,22 @@ ms.lasthandoff: 03/13/2017
   
 3.  Nel **Apri progetto** la finestra di dialogo, aprire la cartella che contiene il codice di esempio che è stato decompresso e quindi aprire il file di soluzione (sln) per AsyncFineTuningVB.  
   
-4.  In **Esplora**, aprire il menu di scelta rapida per il **CancelATask** del progetto, quindi fare clic **imposta come progetto di avvio**.  
+4.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelATask** e scegliere **Imposta come progetto di avvio**.  
   
-5.  Premere il tasto F5 per eseguire il progetto.  
+5.  Premere F5 per eseguire il progetto.  
   
-     Premere i tasti Ctrl + F5 per eseguire il progetto senza eseguirne il debug.  
+     Premere CTRL + F5 per eseguire il progetto senza il debug.  
   
- Se non si desidera scaricare il progetto, è possibile esaminare i file MainWindow.xaml.vb alla fine di questo argomento.  
+ Se non si desidera scaricare il progetto, è possibile esaminare i file. Xaml. vb alla fine di questo argomento.  
   
 ### <a name="building-the-example"></a>Compilazione dell'esempio  
- Aggiungono le seguenti modifiche un **Annulla** pulsante a un'applicazione che esegue il download di un sito Web. Se non si desidera scaricare o compilare l'esempio, è possibile esaminare il prodotto finale nella sezione "Esempi completi" alla fine di questo argomento. Gli asterischi contrassegnare le modifiche nel codice.  
+ Le modifiche seguenti aggiungono un pulsante **Annulla** a un'applicazione che scarica un sito Web. Se non si vuole scaricare o compilare l'esempio, è possibile rivedere il prodotto finale nella sezione "Esempi completi" alla fine di questo argomento. Gli asterischi contrassegnano le modifiche nel codice.  
   
- Per compilare l'esempio è l'utente passo passo, seguire le istruzioni nella sezione "Download di esempio", ma scegliere **StarterCode** come il **progetto di avvio** invece di **CancelATask**.  
+ Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **StarterCode** come **progetto di avvio** anziché **CancelATask**.  
   
- Aggiungere quindi le modifiche seguenti al file MainWindow.xaml.vb del progetto.  
+ Aggiungere quindi le modifiche seguenti al file. Xaml. vb del progetto.  
   
-1.  Dichiarare un `CancellationTokenSource` variabile, `cts`, nell'ambito per tutti i metodi che vi accedono.  
+1.  Dichiarare una variabile `CancellationTokenSource`, `cts`, che sia nell'ambito di accesso di tutti i metodi.  
   
     ```vb  
     Class MainWindow  
@@ -70,7 +62,7 @@ ms.lasthandoff: 03/13/2017
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Aggiungere il seguente gestore eventi per il **Annulla** pulsante. Il gestore eventi utilizza il <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>metodo per notificare `cts` quando l'utente richiede l'annullamento.</xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>  
+2.  Aggiungere il gestore eventi seguente per il pulsante **Annulla**. Il gestore dell'evento usa il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> per inviare notifica a `cts` quando l'utente richiede l'annullamento.  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -82,7 +74,7 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-3.  Apportare le modifiche seguenti nel gestore per il **avviare** pulsante `startButton_Click`.  
+3.  Apportare le modifiche seguenti nel gestore eventi per il pulsante **Avvio**, `startButton_Click`.  
   
     -   Creare un'istanza di `CancellationTokenSource`, `cts`.  
   
@@ -91,7 +83,7 @@ ms.lasthandoff: 03/13/2017
         cts = New CancellationTokenSource()  
         ```  
   
-    -   Nella chiamata a `AccessTheWebAsync`, che consente di scaricare il contenuto di un sito Web specificato, invia la <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName>proprietà di `cts` come argomento.</xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> Il `Token` proprietà propaga il messaggio se viene richiesto l'annullamento. Aggiungere un blocco catch che visualizza un messaggio se l'utente sceglie di annullare l'operazione di download. Il codice seguente mostra le modifiche.  
+    -   Nella chiamata a `AccessTheWebAsync`, che scarica il contenuto di un sito Web specifico, inviare la proprietà <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> di `cts` come argomento. La proprietà `Token` propaga il messaggio se viene richiesto l'annullamento. Aggiungere un blocco catch che visualizzi un messaggio se l'utente sceglie di annullare l'operazione di download. Il codice seguente illustra le modifiche.  
   
         ```vb  
         Try  
@@ -110,9 +102,9 @@ ms.lasthandoff: 03/13/2017
         End Try  
         ```  
   
-4.  In `AccessTheWebAsync`, utilizzare il <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName>Overload dei metodi di `GetAsync` metodo il <xref:System.Net.Http.HttpClient>tipo per scaricare il contenuto di un sito Web.</xref:System.Net.Http.HttpClient> </xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> Passare `ct`, <xref:System.Threading.CancellationToken>parametro di `AccessTheWebAsync`, come secondo argomento.</xref:System.Threading.CancellationToken> Il token contiene il messaggio se l'utente sceglie il **Annulla** pulsante.  
+4.  In `AccessTheWebAsync` usare l'overload <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> del metodo `GetAsync` nel tipo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web. Passare `ct`, il parametro <xref:System.Threading.CancellationToken> di `AccessTheWebAsync`, come secondo argomento. Il token trasporta il messaggio se l'utente sceglie il pulsante **Annulla**.  
   
-     Il codice seguente mostra le modifiche in `AccessTheWebAsync`.  
+     Il codice seguente illustra tutte le modifiche in `AccessTheWebAsync`.  
   
     ```vb  
     ' ***Provide a parameter for the CancellationToken.  
@@ -138,25 +130,25 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-5.  Se non si annulla il programma, produce l'output seguente.  
+5.  Se non si annulla il programma, viene prodotto l'output seguente.  
   
     ```  
     Ready to download.  
     Length of the downloaded string: 158125.  
     ```  
   
-     Se si sceglie il **Annulla** pulsante prima il programma termina il download del contenuto, il programma produce l'output seguente.  
+     Se si sceglie il pulsante **Annulla** prima che il programma termini il download del contenuto, viene prodotto l'output seguente.  
   
     ```  
     Ready to download.  
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a>Annullare un elenco di attività  
- È possibile estendere l'esempio precedente per annullare molte attività associando lo stesso `CancellationTokenSource` istanza con ogni attività. Se si sceglie il **Annulla** pulsante, si annulla tutte le attività che non sono ancora completate.  
+##  <a name="BKMK_CancelaListofTasks"></a> Annullare un elenco di attività  
+ È possibile estendere l'esempio precedente per annullare più attività associando la stessa istanza `CancellationTokenSource` con ogni attività. Se si sceglie il pulsante **Annulla**, vengono annullate tutte le attività che non sono ancora complete.  
   
 ### <a name="downloading-the-example"></a>Download dell'esempio  
- È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [esempio asincrono: Fine ottimizzazione dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=255046) e attenersi alla seguente procedura.  
+ È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.  
   
 1.  Decomprimere il file scaricato e quindi avviare Visual Studio.  
   
@@ -164,18 +156,18 @@ ms.lasthandoff: 03/13/2017
   
 3.  Nel **Apri progetto** la finestra di dialogo, aprire la cartella che contiene il codice di esempio che è stato decompresso e quindi aprire il file di soluzione (sln) per AsyncFineTuningVB.  
   
-4.  In **Esplora**, aprire il menu di scelta rapida per il **CancelAListOfTasks** del progetto, quindi fare clic **imposta come progetto di avvio**.  
+4.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAListOfTasks** e scegliere **Imposta come progetto di avvio**.  
   
-5.  Premere il tasto F5 per eseguire il progetto.  
+5.  Premere F5 per eseguire il progetto.  
   
-     Premere i tasti Ctrl + F5 per eseguire il progetto senza eseguirne il debug.  
+     Premere CTRL + F5 per eseguire il progetto senza il debug.  
   
- Se non si desidera scaricare il progetto, è possibile esaminare i file MainWindow.xaml.vb alla fine di questo argomento.  
+ Se non si desidera scaricare il progetto, è possibile esaminare i file. Xaml. vb alla fine di questo argomento.  
   
 ### <a name="building-the-example"></a>Compilazione dell'esempio  
- Per estendere l'esempio è l'utente passo passo, seguire le istruzioni nella sezione "Download di esempio", ma scegliere **CancelATask** come il **progetto di avvio**. Aggiungere le seguenti modifiche al progetto. Gli asterischi contrassegnare le modifiche nel programma.  
+ Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelATask** come **progetto di avvio**. Aggiungere le modifiche seguenti a tale progetto. Gli asterischi contrassegnano le modifiche nel programma.  
   
-1.  Aggiungere un metodo per creare un elenco di indirizzi web.  
+1.  Aggiungere un metodo per creare un elenco di indirizzi Web.  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -195,14 +187,14 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-2.  Chiamare il metodo `AccessTheWebAsync`.  
+2.  Chiamare il metodo in `AccessTheWebAsync`.  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  Aggiungere il seguente ciclo in `AccessTheWebAsync` per elaborare gli indirizzi web nell'elenco.  
+3.  Aggiungere il ciclo seguente in `AccessTheWebAsync` per elaborare gli indirizzi Web nell'elenco.  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -220,19 +212,21 @@ ms.lasthandoff: 03/13/2017
     Next  
     ```  
   
-4.  Poiché `AccessTheWebAsync` Visualizza le lunghezze, il metodo non è necessario restituire un valore. Rimuovere l'istruzione return e modificare il tipo restituito del metodo per <xref:System.Threading.Tasks.Task>anziché <xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task>  
+4.  Poiché `AccessTheWebAsync` visualizza le lunghezze, il metodo non deve restituire nessun valore. Rimuovere l'istruzione return e modificare il tipo restituito del metodo in <xref:System.Threading.Tasks.Task> anziché <xref:System.Threading.Tasks.Task%601>.  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
-     Chiamare il metodo dal `startButton_Click` utilizzando un'istruzione anziché un'espressione.  
+    ```vb  
+    Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
+    ```  
+  
+     Chiamare il metodo da `startButton_Click` usando un'istruzione anziché un'espressione.  
   
     ```vb  
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  Se non si annulla il programma, produce l'output seguente.  
+5.  Se non si annulla il programma, viene prodotto l'output seguente.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -248,10 +242,9 @@ ms.lasthandoff: 03/13/2017
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
-     Se si sceglie il **Annulla** pulsante prima di aver completato il download, l'output contiene le lunghezze dei download completato prima dell'annullamento.  
+     Se si sceglie il pulsante **Annulla** prima di aver completato i download, l'output contiene le lunghezze dei download completati prima dell'annullamento.  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -261,16 +254,15 @@ ms.lasthandoff: 03/13/2017
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a>Esempi completi  
- Nelle sezioni seguenti contengono il codice per ognuno degli esempi precedenti. Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.</xref:System.Net.Http>  
+##  <a name="BKMK_CompleteExamples"></a> Esempi completi  
+ Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti. Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.  
   
- È possibile scaricare i progetti da [esempio asincrono: Fine ottimizzazione dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione).  
   
-### <a name="cancel-a-task-example"></a>Annullare un'attività di esempio  
- Il codice seguente è il file MainWindow.xaml.vb completo per l'esempio che consente di annullare una singola attività.  
+### <a name="cancel-a-task-example"></a>Esempio di annullamento di un'attività  
+ Il codice seguente è il file di file completo per l'esempio che consente di annullare una singola attività.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -353,8 +345,8 @@ End Class
 ' Download canceled.  
 ```  
   
-### <a name="cancel-a-list-of-tasks-example"></a>Annullare un elenco di esempio di attività  
- Il codice seguente è il file MainWindow.xaml.vb completo per l'esempio che consente di annullare un elenco di attività.  
+### <a name="cancel-a-list-of-tasks-example"></a>Esempio di annullamento di un elenco di attività  
+ Il codice seguente è il file di file completo per l'esempio che consente di annullare un elenco di attività.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -472,8 +464,8 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.CancellationTokenSource></xref:System.Threading.CancellationTokenSource>   
- <xref:System.Threading.CancellationToken></xref:System.Threading.CancellationToken>   
- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Esempio asincrono: Ottimizzazione dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=255046)
+ <xref:System.Threading.CancellationTokenSource>  
+ <xref:System.Threading.CancellationToken>  
+ [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)

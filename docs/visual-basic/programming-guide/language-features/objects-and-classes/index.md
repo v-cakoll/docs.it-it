@@ -1,42 +1,24 @@
 ---
 title: Oggetti e classi in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b71219fff8354497f34930232952262008f6cc78
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: be5e0156b4cacc39e1613e06fe3c138838b02700
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Oggetti e classi in Visual Basic
 Un *oggetto* è una combinazione di codice e dati che è possibile considerare come singola unità. Un oggetto può essere una parte di un'applicazione, ad esempio un controllo o un form. Anche un'intera applicazione può essere un oggetto.
@@ -281,4 +263,3 @@ Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccol
 
  [Procedura: Dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Viene descritto come dedurre nomi e tipi di proprietà nelle dichiarazioni di tipo anonimo. Vengono forniti esempi di inferenze riuscite e non riuscite.
-

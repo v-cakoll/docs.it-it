@@ -1,43 +1,42 @@
 ---
-title: "Memorizzazione nella cache di piani di query (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Memorizzazione nella cache di piani di query (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 814b4451d5e08d5f9df4d370b2127d971f3fdd1d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Memorizzazione nella cache di piani di query (Entity SQL)
-Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di query analizza il proprio piano di query per verificare se la query esatta è già stata compilata ed è disponibile.  In caso affermativo, viene riutilizzato il piano memorizzato nella cache anziché compilarne un nuovo.  Se non viene individuata una corrispondenza nella cache dei piani di query, la query viene compilata e memorizzata nella cache.  Una query è identificata dal testo [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e dalla raccolta di parametri \(nomi e tipi\).  In tutti i confronti di testo viene fatta distinzione tra maiuscole e minuscole.  
+# <a name="query-plan-caching-entity-sql"></a>Memorizzazione nella cache di piani di query (Entity SQL)
+Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di query analizza il proprio piano di query per verificare se la query esatta è già stata compilata ed è disponibile. In caso affermativo, viene riutilizzato il piano memorizzato nella cache anziché compilarne un nuovo. Se non viene individuata una corrispondenza nella cache dei piani di query, la query viene compilata e memorizzata nella cache. Una query è identificata dal testo [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e dalla raccolta di parametri (nomi e tipi). In tutti i confronti di testo viene fatta distinzione tra maiuscole e minuscole.  
   
-## Configurazione  
+## <a name="configuration"></a>Configurazione  
  La memorizzazione nella cache del piano di query può essere configurata tramite <xref:System.Data.EntityClient.EntityCommand>.  
   
- Per abilitare o disabilitare la memorizzazione nella cache del piano di query tramite <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=fullName>, impostare questa proprietà su `true` o su `false`.  Disattivando la memorizzazione nella cache del piano di query per singole query dinamiche che non verranno probabilmente usate più di una volta è possibile migliorare le prestazioni.  
+ Per abilitare o disabilitare la memorizzazione nella cache del piano di query tramite <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, impostare questa proprietà su `true` o su `false`. Disattivando la memorizzazione nella cache del piano di query per singole query dinamiche che non verranno probabilmente usate più di una volta è possibile migliorare le prestazioni.  
   
  È possibile abilitare la memorizzazione nella cache del piano di query tramite <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.  
   
-## Procedure consigliate  
- In genere, è consigliabile evitare le query dinamiche.  L'esempio di query dinamica seguente è vulnerabile ad attacchi SQL injection, in quanto usa direttamente l'input dell'utente senza alcuna convalida.  
+## <a name="recommended-practice"></a>Procedure consigliate  
+ In genere, è consigliabile evitare le query dinamiche. L'esempio di query dinamica seguente è vulnerabile ad attacchi SQL injection, in quanto usa direttamente l'input dell'utente senza alcuna convalida.  
   
  `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
   
  Se si usano query dinamicamente generate, disabilitare la memorizzazione nella cache del piano di query per evitare un consumo di memoria non necessario per le voci della cache con poche probabilità di riutilizzo.  
   
- La memorizzazione nella cache del piano di query per le query statiche e con parametri può offrire vantaggi a livello di prestazioni.  Di seguito è riportato un esempio di query statica:  
+ La memorizzazione nella cache del piano di query per le query statiche e con parametri può offrire vantaggi a livello di prestazioni. Di seguito è riportato un esempio di query statica:  
   
 ```  
 "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
@@ -59,5 +58,5 @@ Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di qu
   
 -   Modifiche del testo nei commenti.  
   
-## Vedere anche  
- [Panoramica su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

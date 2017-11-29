@@ -1,78 +1,83 @@
 ---
-title: "&lt;endpointDiscovery&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;endpointDiscovery&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1716955748c481236a5d23c0592702855356e9e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;endpointDiscovery&gt;
+# <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.  
   
-## Sintassi  
+\<System. ServiceModel >  
+\<i comportamenti >  
+\<endpointBehaviors >  
+\<comportamento >  
+\<endpointDiscovery >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-<behaviors>  
-  <endpointBehaviors>  
-    <behavior name="String">  
-      <endpointDiscovery enabled="Boolean">  
-        <scopes>  
-          <add scope="URI"/>  
-        </scopes>  
-        <extensions>  
-        </extensions>  
-      </endpointDiscovery>  
-    </behavior>  
-  </endpointBehaviors>  
+```xml  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="String">
+      <endpointDiscovery enabled="Boolean">
+        <scopes>
+          <add scope="URI"/>
+        </scopes>
+        <extensions />
+      </endpointDiscovery>
+    </behavior>
+  </endpointBehaviors>
 </behaviors>  
-  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|enabled|Valore booleano che specifica se è abilitata l'individuazione dell'endpoint.  Il valore predefinito è `false`.|  
+|enabled|Valore booleano che specifica se è abilitata l'individuazione dell'endpoint. Il valore predefinito è `false`.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<scopes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Raccolta di URI di ambito per l'endpoint.  A un singolo endpoint è possibile associare più URI di ambito.|  
-|[\<estensioni\>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) \[di \<endpointDiscovery\>\]|Raccolta di elementi XML che consente di specificare metadati personalizzati da pubblicare per un endpoint.|  
-|\<types\>|Raccolta di interfacce da cercare.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<comportamento\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
+|-------------|-----------------|  
+|[\<gli ambiti >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Raccolta di URI di ambito per l'endpoint. A un singolo endpoint è possibile associare più URI di ambito.|  
+|[\<estensioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [di \<endpointDiscovery >]|Raccolta di elementi XML che consente di specificare metadati personalizzati da pubblicare per un endpoint.|  
+|\<tipi >|Raccolta di interfacce da cercare.|  
+  
+### <a name="parent-elements"></a>Elementi padre  
+  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
 |||  
   
-## Note  
- L'aggiunta di questo elemento di configurazione alla configurazione di comportamento dell'endpoint con l'attributo `enabled` impostato su `true` ne determina l'abilitazione dell'individuazione.  È inoltre possibile usare l'elemento figlio [\<scopes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md) per specificare gli URI di ambito personalizzati che è possibile usare per filtrare gli endpoint di servizio durante l'esecuzione di query, nonché l'elemento figlio [\<estensioni\>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) per specificare metadati personalizzati da pubblicare insieme ai metadati individuabili standard \(EPR, ContractTypeName, BindingName, Ambito e ListenURI\).  
+## <a name="remarks"></a>Note  
+ L'aggiunta di questo elemento di configurazione alla configurazione di comportamento dell'endpoint con l'attributo `enabled` impostato su `true` ne determina l'abilitazione dell'individuazione. Inoltre, è possibile utilizzare il [ \<ambiti >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)elemento figlio per specificare l'URI che possono essere usato per filtrare gli endpoint del servizio durante l'esecuzione di query, di ambito personalizzati, nonché [ \<estensioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) elemento figlio di specificare metadati personalizzati che devono essere pubblicati insieme ai metadati individuabili standard (EPR, ContractTypeName, BindingName, ambito e ListenURI).  
   
- Questo elemento di configurazione dipende dall'elemento [\<serviceDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) che fornisce il controllo del livello di servizio dell'individuazione.  Questo comporta che le impostazioni dell'elemento vengono ignorate se [\<serviceDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) non è presente nella configurazione.  
+ Questo elemento di configurazione dipende il [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento che fornisce il controllo a livello di servizio di individuazione. Ciò significa che le impostazioni di questo elemento vengono ignorate se [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) non è presente nella configurazione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente vengono specificati ambiti di filtro e metadati di estensione da pubblicare per un endpoint.  
   
-```  
-  
+```xml  
 <services>  
   <service name="CalculatorService"  
            behaviorConfiguration="CalculatorServiceBehavior">  
@@ -107,8 +112,7 @@ Specifica le varie impostazioni di individuazione per un endpoint, quali l'indiv
     </behavior>  
   </endpointBehaviors>  
 </behaviors>  
-  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

@@ -1,25 +1,31 @@
 ---
-title: "Protezione dei messaggi con un client di certificato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Protezione dei messaggi con un client di certificato
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: 16
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: afc1e0def03040acaa5cffe3f67339a61cda7d5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Protezione dei messaggi con un client di certificato
-Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti tramite la protezione a livello di messaggio.Sia il client che il servizio sono autenticati mediante certificati.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Protezione delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+# <a name="message-security-with-a-certificate-client"></a>Protezione dei messaggi con un client di certificato
+Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti tramite la protezione a livello di messaggio. Sia il client che il servizio sono autenticati mediante certificati. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Protezione applicazione distribuita](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
   
- Per un'applicazione di esempio, vedere [Certificato di sicurezza dei messaggi](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
+ Per un'applicazione di esempio, vedere [certificato di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
  ![Client con certificato](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
   
@@ -27,30 +33,30 @@ Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo
 |--------------------|-----------------|  
 |Modalità di sicurezza|Messaggio|  
 |Interoperabilità|Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
-|Autenticazione \(server\)|Utilizzo del certificato del servizio|  
-|Autenticazione \(client\)|Utilizzo del certificato client|  
+|Autenticazione (server)|Utilizzo del certificato del servizio|  
+|Autenticazione (client)|Utilizzo del certificato client|  
 |Integrità|Sì|  
 |Riservatezza|Sì|  
 |Trasporto|HTTP|  
-|Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
+|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Servizio  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.Eseguire una delle operazioni seguenti:  
+## <a name="service"></a>Servizio  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
--   Creare un servizio autonomo utilizzando il codice senza alcuna configurazione.  
+-   Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
--   Creare un servizio utilizzando la configurazione fornita, ma non definire alcun endpoint.  
+-   Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
   
-### Codice  
+### <a name="code"></a>Codice  
  Nel codice seguente viene illustrato come creare un endpoint del servizio che utilizza la protezione dei messaggi per stabilire un contesto protetto.  
   
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### Configurazione  
- Invece del codice, è possibile utilizzare la configurazione seguente:  
+### <a name="configuration"></a>Configurazione  
+ Invece del codice, è possibile usare la configurazione seguente:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -88,26 +94,26 @@ Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo
 </configuration>  
 ```  
   
-## Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.Eseguire una delle operazioni seguenti:  
+## <a name="client"></a>Client  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
--   Creare un client autonomo utilizzando il codice \(e il codice client\).  
+-   Creare un client autonomo usando il codice (e il codice client).  
   
--   Creare un client che non definisce alcun indirizzo di endpoint.Utilizzare invece il costruttore client che accetta il nome della configurazione come argomento.Ad esempio:  
+-   Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Codice  
- Il codice seguente crea il client.L'associazione riguarda la protezione della modalità messaggio e il tipo di credenziale client è impostato su `Certificate`.  
+### <a name="code"></a>Codice  
+ Il codice seguente crea il client. L'associazione riguarda la protezione della modalità messaggio e il tipo di credenziale client è impostato su `Certificate`.  
   
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### Configurazione  
- Nella configurazione seguente il certificato client è specificato utilizzando un comportamento dell'endpoint.Per ulteriori informazioni sui certificati, vedere [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).Il codice utilizza inoltre un elemento \<`identity`\> per specificare un DNS \(Domain Name System\) dell'identità server prevista.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] sull'identità, vedere [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+### <a name="configuration"></a>Configurazione  
+ Nella configurazione seguente il certificato client è specificato utilizzando un comportamento dell'endpoint. Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Viene inoltre utilizzato un <`identity`> per specificare un sistema DNS (Domain Name) dell'identità del server previste. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]identità, vedere [autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -147,8 +153,8 @@ Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo
 </configuration>  
 ```  
   
-## Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Modello di sicurezza per Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [L'autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

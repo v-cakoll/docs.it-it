@@ -1,65 +1,74 @@
 ---
-title: "&lt;message&gt; di &lt;basicHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;message&gt; di &lt;basicHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 014e7d5ca9d6bc379edb82a71d52dccb73fa23f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;message&gt; di &lt;basicHttpBinding&gt;
-Definisce le impostazioni di sicurezza a livello di messaggio dell'oggetto [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;message&gt; di &lt;basicHttpBinding&gt;
+Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<associazioni >  
+\<basicHttpBinding >  
+\<associazione >  
+\<sicurezza >  
+\<messaggio >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <message   
    algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
       clientCredentialType="UserName/Certificate"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|algorithmSuite|Imposta la crittografia dei messaggi e gli algoritmi di incapsulamento della chiave.  L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, che specifica gli algoritmi e le dimensioni della chiave.  Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza \(WS\-SecurityPolicy\).<br /><br /> Il valore predefinito è `Basic256`.|  
-|clientCredentialType|Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita usando la sicurezza basata sul messaggio.  Il valore predefinito è `UserName`.|  
+|algorithmSuite|Imposta la crittografia dei messaggi e gli algoritmi di incapsulamento della chiave. L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, che specifica gli algoritmi e le dimensioni della chiave. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).<br /><br /> Il valore predefinito è `Basic256`.|  
+|clientCredentialType|Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita usando la sicurezza basata sul messaggio. Il valore predefinito è `UserName`.|  
   
-## Attributo clientCredentialType  
+## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|UserName|-   Richiede che l'autenticazione del client sul server avvenga tramite una credenziale UserName.  La credenziale deve essere specificata mediante [\<credenzialiClient\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] non supporta l'invio di un digest delle password, né la derivazione delle chiavi basata su password, né l'uso di tali chiavi per implementare la sicurezza dei messaggi.  Di conseguenza, quando si usano credenziali UserName, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] impone che il trasporto sia protetto.  Per `basicHttpBinding`, questo richiede l'impostazione di un canale SSL.|  
-|Certificato|Richiede che l'autenticazione del client sul server avvenga mediante un certificato.  In questo caso la credenziale del client deve essere specificata mediante [\<credenzialiClient\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) e [\<certificatoClient\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md).  Inoltre, quando si usa la modalità di sicurezza del messaggio, è necessario eseguire il provisioning del client con il certificato del servizio.  In questo caso la credenziale del servizio deve essere specificata mediante la classe <xref:System.ServiceModel.Description.ClientCredentials> o l'elemento del comportamento `ClientCredentials` e specificando il certificato mediante l'[\<certificatoServizio\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).|  
+|-----------|-----------------|  
+|UserName|-Richiede l'autenticazione del client al server con una credenziale UserName. Questa credenziale deve essere specificata tramite il [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]non supporta l'invio di un digest delle password, né la derivazione delle chiavi tramite password e tali chiavi per la sicurezza dei messaggi. Di conseguenza, quando si usano credenziali UserName, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] impone che il trasporto sia protetto. Per `basicHttpBinding`, questo richiede l'impostazione di un canale SSL.|  
+|Certificato|Richiede che l'autenticazione del client sul server avvenga mediante un certificato. La credenziale client in questo caso deve essere specificata tramite [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) e [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md). Inoltre, quando si usa la modalità di sicurezza del messaggio, è necessario eseguire il provisioning del client con il certificato del servizio. La credenziale del servizio in questo caso deve essere specificata tramite <xref:System.ServiceModel.Description.ClientCredentials> classe o `ClientCredentials` elemento di comportamento e specificando il servizio certificati usando il [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  None  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<sicurezza\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definisce le funzionalità di sicurezza dell'[\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|-------------|-----------------|  
+|[\<sicurezza >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definisce le funzionalità di sicurezza per il [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
   
-## Esempio  
- In questo esempio viene dimostrato come implementare un'applicazione che usa basicHttpBinding e la sicurezza del messaggio.  Nel seguente esempio di configurazione di un servizio, la definizione dell'endpoint specifica basicHttpBinding e fa riferimento a una configurazione di associazione denominata `Binding1`.  Il certificato usato dal servizio per l'autenticazione con il client è impostato nella sezione `behaviors` del file di configurazione sotto l'elemento `serviceCredentials`.  Anche la modalità di convalida applicata al certificato usato dal servizio per l'autenticazione con il client è impostata nella sezione `behaviors` del file di configurazione sotto l'elemento `clientCertificate`.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene dimostrato come implementare un'applicazione che usa basicHttpBinding e la sicurezza del messaggio. Nel seguente esempio di configurazione di un servizio, la definizione dell'endpoint specifica basicHttpBinding e fa riferimento a una configurazione di associazione denominata `Binding1`. Il certificato usato dal servizio per l'autenticazione con il client è impostato nella sezione `behaviors` del file di configurazione sotto l'elemento `serviceCredentials`. Anche la modalità di convalida applicata al certificato usato dal servizio per l'autenticazione con il client è impostata nella sezione `behaviors` del file di configurazione sotto l'elemento `clientCertificate`.  
   
  Gli stessi dettagli sull'associazione e la sicurezza sono specificati nel file di configurazione del client.  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -126,13 +135,13 @@ Definisce le impostazioni di sicurezza a livello di messaggio dell'oggetto [\<ba
 </system.serviceModel>  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.BasicHttpMessageSecurity>   
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>   
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/it-it/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<associazione\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.BasicHttpMessageSecurity>  
+ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>  
+ [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
+ [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<associazione >](../../../../../docs/framework/misc/binding.md)

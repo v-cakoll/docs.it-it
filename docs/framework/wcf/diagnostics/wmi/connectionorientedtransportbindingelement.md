@@ -1,25 +1,28 @@
 ---
-title: "ConnectionOrientedTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ConnectionOrientedTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d28bedb67850b9bb77c25c8d29c6e39b056770a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# ConnectionOrientedTransportBindingElement
+# <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class ConnectionOrientedTransportBindingElement : TransportBindingElement  
@@ -35,73 +38,73 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe ConnectionOrientedTransportBindingElement non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe ConnectionOrientedTransportBindingElement dispone delle proprietà seguenti:  
   
-### ChannelInitializationTimeout  
+### <a name="channelinitializationtimeout"></a>ChannelInitializationTimeout  
  Tipo di dati: DateTime  
   
  Tipo di accesso: sola lettura  
   
  TimeSpan che specifica l'intervallo di tempo per il completamento dell'inizializzazione del canale prima del timeout.  
   
-### ConnectionBufferSize  
+### <a name="connectionbuffersize"></a>ConnectionBufferSize  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  Dimensione del buffer usata per trasmettere un blocco del messaggio serializzato in transito dal client o servizio.  
   
-### HostnameComparisonMode  
+### <a name="hostnamecomparisonmode"></a>HostnameComparisonMode  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Valore che indica se viene usato il nome host per raggiungere il servizio in caso di corrispondenza dell'URI.  
   
-### MaxBufferSize  
+### <a name="maxbuffersize"></a>MaxBufferSize  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  Dimensione massima del buffer da usare.  
   
-### MaxOutputDelay  
+### <a name="maxoutputdelay"></a>MaxOutputDelay  
  Tipo di dati: DateTime  
   
  Tipo di accesso: sola lettura  
   
  Intervallo di tempo massimo per cui un blocco di un messaggio o un messaggio intero può rimanere memorizzato nel buffer prima dell'invio.  
   
-### MaxPendingAccepts  
+### <a name="maxpendingaccepts"></a>MaxPendingAccepts  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  Numero massimo di thread asincroni in sospeso disponibili per l'elaborazione delle connessioni in ingresso del servizio.  
   
-### MaxPendingConnections  
+### <a name="maxpendingconnections"></a>MaxPendingConnections  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  Numero massimo di connessioni in sospeso.  
   
-### TransferMode  
+### <a name="transfermode"></a>TransferMode  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Valore che specifica se i messaggi vengono memorizzati nel buffer o trasmessi con il trasporto orientato alla connessione.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

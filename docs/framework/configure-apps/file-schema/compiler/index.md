@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - configuration settings [.NET Framework], compilers
 - compiler configuration elements, schema
@@ -24,21 +18,20 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb1eb3078714e0de5416fc4c7f9695f52bab3a96
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 3e020fcc63c0eff38dc602aacae31a6e0d2d2fe5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Schema di impostazioni del compilatore e del provider di linguaggi
 Le impostazioni del compilatore e del provider di linguaggi specificano gli elementi di configurazione del compilatore per i provider di linguaggi disponibili. Ogni elemento di configurazione del compilatore specifica il nome del tipo di provider di codice, i parametri del compilatore, i nomi dei linguaggi supportati e le estensioni di file supportate.  
   
- .NET Framework definisce le impostazioni del compilatore iniziali nel file di configurazione del computer (Machine.config). Gli sviluppatori e i fornitori di compilatori possono aggiungere impostazioni di configurazione per una nuova implementazione di <xref:System.CodeDom.Compiler.CodeDomProvider>. Usare il metodo <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName> per enumerare a livello di codice le impostazioni di configurazione dei provider di linguaggi e di configurazione del compilatore in un computer.  
+ .NET Framework definisce le impostazioni del compilatore iniziali nel file di configurazione del computer (Machine.config). Gli sviluppatori e i fornitori di compilatori possono aggiungere impostazioni di configurazione per una nuova implementazione di <xref:System.CodeDom.Compiler.CodeDomProvider>. Usare il metodo <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> per enumerare a livello di codice le impostazioni di configurazione dei provider di linguaggi e di configurazione del compilatore in un computer.  
   
  [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
@@ -74,8 +67,7 @@ Le impostazioni del compilatore e del provider di linguaggi specificano gli elem
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.CodeDom.Compiler.CompilerInfo>   
- <xref:System.CodeDom.Compiler.CodeDomProvider>   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+ <xref:System.CodeDom.Compiler.CompilerInfo>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider>  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) (Elemento <compiler>)
-

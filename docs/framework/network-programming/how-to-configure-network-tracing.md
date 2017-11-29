@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
 - network tracing, configuring
@@ -22,21 +17,20 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a713b9b2d76d6198d035226aaa55be7345b87f1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>Procedura: Configurare la traccia di rete
 Nel file di configurazione del computer o dell'applicazione sono contenute le impostazioni che determinano il formato e il contenuto delle tracce di rete. Prima di eseguire questa procedura, assicurarsi che la funzionalità di traccia sia abilitata. Per informazioni su come abilitare la traccia di rete, vedere [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
- Il file di configurazione del computer, machine.config, è memorizzato nella cartella %Windir%\Microsoft.NET\Framework nella directory in cui è installato Windows. Esiste un file machine.config separato nelle cartelle %Windir%\Microsoft.NET\Framework per ogni versione di .NET Framework installata nel computer, ad esempio C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config.  
+ Il file di configurazione del computer, machine.config, è memorizzato nella cartella %Windir%\Microsoft.NET\Framework nella directory in cui è installato Windows. È presente un file Machine. config separato nelle cartelle in %Windir%\Microsoft.NET\Framework per ogni versione di .NET Framework installata nel computer (ad esempio, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config o c:\WINDOWS\. Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
   
  Queste impostazioni possono essere effettuate anche nel file di configurazione dell'applicazione, che ha la precedenza sul file di configurazione del computer.  
   
@@ -112,8 +106,7 @@ Nel file di configurazione del computer o dell'applicazione sono contenute le im
 |`Tracemode`|Attributo <xref:System.String> facoltativo. Impostare su `includehex` per visualizzare le tracce del protocollo nel formato esadecimale e di testo. Impostare su `protocolonly` per mostrare solo testo. Il valore predefinito è `includehex`.<br /><br /> Questo attributo deve essere impostato per l'elemento \<switches> come mostrato nell'esempio. Viene generata un'eccezione se questo attributo viene impostato per un elemento sotto l'elemento \<source>.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
- [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)   
- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)   
+ [Interpretazione di tracciatura della rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
+ [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [Introduzione alla strumentazione e alla traccia](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
-

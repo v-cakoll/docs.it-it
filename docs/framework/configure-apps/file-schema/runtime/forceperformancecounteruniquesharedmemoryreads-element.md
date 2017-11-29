@@ -1,83 +1,85 @@
 ---
-title: "Elemento &lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<forcePerformanceCounterUniqueSharedMemoryReads> (elemento)"
-  - "forcePerformanceCounterUniqueSharedMemoryReads (elemento)"
+title: '&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- forcePerformanceCounterUniqueSharedMemoryReads element
+- <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 4c90799ed2db061e8f42cde79804789eb8d2da0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;forcePerformanceCounterUniqueSharedMemoryReads&gt;
-Indica se PerfCounter.dll utilizza l'impostazione del registro di sistema di CategoryOptions nell'applicazione .NET Framework versione 1.1 per determinare se caricare dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.  
+# <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a>&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; elemento
+Specifica se PerfCounter.dll usa l'impostazione del Registro di sistema CategoryOptions in un'applicazione di .NET Framework versione 1.1 per determinare se caricare i dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
+\<forcePerformanceCounterUniqueSharedMemoryReads >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <forcePerformanceCounterUniqueSharedMemoryReads   
 enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Indica se PerfCounter.dll utilizza l'impostazione del registro di sistema di CategoryOptions per determinare se caricare dati del contatore delle prestazioni dalla memoria condivisa specifico della categoria o dalla memoria globale.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Indica se PerfCounter utilizza l'impostazione del Registro di sistema CategoryOptions per determinare se caricare i dati dei contatori delle prestazioni da specifiche della categoria di memoria condivisa o la memoria globale.|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|PerfCounter.dll non utilizza l'impostazione del registro di sistema di CategoryOptions Questa è l'impostazione predefinita.|  
-|`true`|PerfCounter.dll utilizza l'impostazione del registro di sistema di CategoryOptions.|  
+|-----------|-----------------|  
+|`false`|PerfCounter non utilizza il CategoryOptions questa impostazione del registro è il valore predefinito.|  
+|`true`|PerfCounter utilizzare l'impostazione del Registro di sistema CategoryOptions.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## Note  
- In versioni di .NET Framework precedenti a [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], la versione di PerfCounter.dll caricata corrisponde al runtime caricato nel processo.  Se un computer dispone sia della versione 1.1 di .NET Framework sia di [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)], un'applicazione di .NET Framework carica la versione 1.1 di .NET Framework di PerfCounter.dll.  Iniziando con [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], la versione installata più recente di PerfCounter.dll viene caricata.  Ciò significa che un'applicazione di .NET Framework 1.1 caricherà la versione [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] di PerfCounter.dll, se [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] è installata nel computer.  
+## <a name="remarks"></a>Note  
+ Nelle versioni di .NET Framework prima di [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], la versione di PerfCounter che è stato caricato corrispondeva al runtime che è stato caricato nel processo. Se un computer dispone sia a .NET Framework versione 1.1 e [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] installato, un'applicazione .NET Framework 1.1 carica la versione di .NET Framework 1.1 di PerfCounter. A partire dal [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], viene caricata la versione installata più recente di PerfCounter. Ciò significa che un'applicazione .NET Framework 1.1 caricherà il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] versione di PerfCounter. Se il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] è installato nel computer.  
   
- Iniziando con [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], in caso di utilizzo di contatori delle prestazioni, PerfCounter.dll controlla che la voce del registro di sistema di CategoryOptions per ogni provider determini se leggere da memoria condivisa specifica della categoria o da memoria condivisa globale.  PerfCounter.dll di .NET Framework 1.1 non legge questa voce del registro di sistema, perché non tiene presente la memoria condivisa specifica della categoria; legge sempre dalla memoria condivisa globale.  
+ A partire dal [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], quando si utilizzano i contatori delle prestazioni, PerfCounter controlla la voce del Registro di sistema CategoryOptions per ogni provider per determinare se è necessario leggere dalla memoria condivisa specifiche della categoria o la memoria globale condivisa. Di PerfCounter 1.1 di .NET Framework non legge la voce del Registro di sistema, perché non è compatibile con di memoria condivisa specifiche della categoria. legge sempre dalla memoria condivisa globale.  
   
- Per compatibilità con le versioni precedenti, non viene effettuato il controllo della voce del Registro di sistema CategoryOptions tramite la libreria PerfCounter.dll di [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], se quest'ultima è in esecuzione in un'applicazione .NET Framework 1.1.  Viene semplicemente utilizzata la memoria condivisa globale, come PerfCounter.dll di .NET Framework 1.1.  Tuttavia, è possibile istruire PerfCounter.dll [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] per controllare l'impostazione del registro di sistema di sistema abilitando l'elemento `<forcePerformanceCounterUniqueSharedMemoryReads>`.  
+ Per garantire la compatibilità con le versioni precedenti, il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter non controlla la voce del Registro di sistema CategoryOptions durante l'esecuzione in un'applicazione .NET Framework 1.1. Usa semplicemente la memoria globale condivisa, come il PerfCounter 1.1 di .NET Framework. Tuttavia, è possibile indicare il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter per controllare l'impostazione del Registro di sistema, consentendo il `<forcePerformanceCounterUniqueSharedMemoryReads>` elemento.  
   
 > [!NOTE]
->  L'abilitazione dell'elemento `<forcePerformanceCounterUniqueSharedMemoryReads>` non garantisce che sarà utilizzata memoria condivisa specifica della categoria.  L'impostazione abilitata su `true` fa in modo soltanto che PerfCounter.dll faccia riferimento all'impostazione del registro di sistema di CategoryOptions.  L'impostazione predefinita per CategoryOptions consente l'utilizzo di memoria condivisa specifica della categoria; tuttavia, è possibile modificare CategoryOptions per indicare che deve essere utilizzata la memoria condivisa globale.  
+>  Abilitazione di `<forcePerformanceCounterUniqueSharedMemoryReads>` elemento non garantisce che verrà utilizzata la memoria condivisa specifiche della categoria. L'impostazione abilitata su `true` solo provoca PerfCounter fare riferimento l'impostazione del Registro di sistema CategoryOptions. L'impostazione predefinita per CategoryOptions consiste nell'utilizzare la memoria condivisa specifiche della categoria. Tuttavia, è possibile modificare CategoryOptions per indicare che la memoria globale condivisa deve essere utilizzata.  
   
- La chiave del Registro di sistema che contiene l'impostazione CategoryOptions è HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\\<categoryName\>\\Performance.  Per impostazione predefinita, CategoryOptions viene impostato su 3, istruendo PerfCounter.dll a utilizzare memoria condivisa specifica della categoria.  Se CategoryOptions viene impostato su 0, PerfCounter.dll utilizza la memoria condivisa globale.  I dati dell'istanza saranno riutilizzati solo se il nome dell'istanza creata è identico a quello dell'istanza riutilizzata.  Tutte le versioni saranno in grado di scrivere nella categoria.  Se CategoryOptions viene impostato su 1, la memoria condivisa globale viene utilizzata, ma i dati dell'istanza possono essere riutilizzati se il nome della categoria ha la stessa lunghezza della categoria riutilizzata.  
+ La chiave del Registro di sistema che contiene l'impostazione CategoryOptions è HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< categoryName\>\Performance. Per impostazione predefinita, CategoryOptions è impostato su 3, che indica di PerfCounter utilizzare memoria condivisa specifiche della categoria. Se CategoryOptions è impostata su 0, PerfCounter utilizza memoria condivisa globale. Dati dell'istanza verranno riutilizzati solo se il nome dell'istanza da creare è identico all'istanza venga riutilizzato. Tutte le versioni sarà in grado di scrivere in tale categoria. Se CategoryOptions è impostato su 1, viene utilizzata la memoria globale condivisa, ma è possibile riutilizzare i dati di istanza se il nome di categoria è uguale alla lunghezza della categoria riutilizzata.  
   
- Le impostazioni 0 e 1 possono condurre a perdite di memoria e al riempimento della memoria del contatore delle prestazioni.  
+ Le impostazioni di 0 e 1 possono causare perdite di memoria e il riempimento di memoria dei contatori delle prestazioni.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come specificare che PerfCounter.dll deve fare riferimento alla voce del registro di sistema di sistema di CategoryOptions, nel caso in cui debba utilizzare memoria condivisa specifica della categoria.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come specificare che PerfCounter devono fare riferimento la voce del Registro di sistema CategoryOptions per determinare se deve utilizzare memoria condivisa specifiche della categoria.  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <forcePerformanceCounterUniqueSharedMemoryReads enabled="true"/>  
@@ -85,6 +87,6 @@ enabled="true|false"/>
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

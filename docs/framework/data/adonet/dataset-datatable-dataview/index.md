@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4ad3bae4c949f0b893b76164a671a3f44fa30a8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 642a81b926262fb8ea95234d90e4c1a0c49ea96c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Oggetti DataSet, DataTable e DataView
 L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati residente in memoria, che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati in esso contenuta. Un <xref:System.Data.DataSet> rappresenta un set completo di dati che include le tabelle in cui sono contenuti, ordinati e vincolati i dati e le relazioni tra le tabelle.  
@@ -91,6 +89,5 @@ L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati 
  Viene descritto come compilare un **DataSet** con informazioni relative alla chiave primaria provenienti da un'origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)   
+ [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
-

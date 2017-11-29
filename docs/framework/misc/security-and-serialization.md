@@ -1,33 +1,34 @@
 ---
-title: "Security and Serialization | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "code security, serialization"
-  - "serialization, security"
-  - "secure coding, serialization"
-  - "security [.NET Framework], serialization"
+title: Sicurezza e serializzazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- code security, serialization
+- serialization, security
+- secure coding, serialization
+- security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 9897bbfff542bf708f8fbbc1ac29f7688a1590ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Security and Serialization
-Poiché la serializzazione può consentire a un altro codice di visualizzare o modificare i dati dell'istanza di un oggetto che sarebbero altrimenti inaccessibili, è necessaria una speciale autorizzazione per il codice che esegue la serializzazione: <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag> specificato. In base ai criteri predefiniti, questa autorizzazione non è concessa a codice scaricato da Internet o a codice Intranet, ma solo al codice presente sul computer locale.  
+# <a name="security-and-serialization"></a>Sicurezza e serializzazione
+Poiché la serializzazione può consentire a un altro codice di visualizzare o modificare i dati dell'istanza di un oggetto che sarebbero altrimenti inaccessibili, è necessaria una speciale autorizzazione per il codice che esegue la serializzazione: <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> specificato. In base ai criteri predefiniti, questa autorizzazione non è concessa a codice scaricato da Internet o a codice Intranet, ma solo al codice presente sul computer locale.  
   
  In genere, tutti i campi dell'istanza di un oggetto vengono serializzati e quindi i dati vengono rappresentati nei dati serializzati per l'istanza. Per un codice in grado di interpretare il formato è possibile determinare quali siano i valori dei dati, indipendentemente dall'accessibilità del membro. Analogamente, la deserializzazione estrae i dati dalla rappresentazione serializzata e imposta direttamente lo stato dell'oggetto, sempre indipendentemente dalle regole di accessibilità.  
   
@@ -38,15 +39,21 @@ Poiché la serializzazione può consentire a un altro codice di visualizzare o m
 -   Il metodo <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> deve essere protetto in modo esplicito richiedendo **SecurityPermission** con l'autorizzazione **SerializationFormatter** specificata o assicurandosi che nessuna informazione riservata venga rilasciata con l'output del metodo. Ad esempio:  
   
     ```vb  
-    Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _ Sub GetObjectData(info As SerializationInfo, context As StreamingContext) End Sub  
-  
+    Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
+    Sub GetObjectData(info As SerializationInfo, context As StreamingContext)  
+    End Sub  
     ```  
   
     ```csharp  
-    [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter =true)] public override void GetObjectData(SerializationInfo info, StreamingContext context) { }  
+    [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter   
+    =true)]  
+    public override void GetObjectData(SerializationInfo info,   
+    StreamingContext context)  
+    {  
+    }  
     ```  
   
 -   Lo speciale costruttore usato per la serializzazione deve anche eseguire la convalida di input approfondita ed essere protetto o privato per salvaguardarsi dal rischio di un uso improprio da parte del malware. È consigliabile che applichi gli stessi controlli e autorizzazioni di sicurezza necessari per ottenere un'istanza di tale classe in qualsiasi altro modo, ad esempio creando la classe esplicitamente oppure indirettamente con alcuni tipi di factory.  
   
-## Vedere anche  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vedere anche  
+ [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
