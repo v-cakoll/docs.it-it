@@ -1,77 +1,79 @@
 ---
-title: "Elemento &lt;PreferComInsteadOfManagedRemoting&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<PreferComInsteadOfManagedRemoting> (elemento)"
-  - "PreferComInsteadOfManagedRemoting (elemento)"
+title: '&lt;PreferComInsteadOfManagedRemoting&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <PreferComInsteadOfManagedRemoting> element
+- PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;PreferComInsteadOfManagedRemoting&gt;
-Specifica se il runtime utilizzerà l'interoperabilità COM anziché i servizi remoti per tutte le chiamate fra i limiti di domini di applicazione.  
+# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; elemento
+Specifica se il runtime utilizzerà l'interoperabilità COM anziché remoti per tutte le chiamate tra i limiti del dominio applicazione.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
+\<PreferComInsteadOfManagedRemoting >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Indica se il runtime utilizzerà l'interoperabilità COM anziché i servizi remoti fra i limiti di domini di applicazione.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Indica se il runtime utilizzerà l'interoperabilità COM anziché remoting limiti del dominio applicazione.|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|Il runtime utilizzerà i servizi remoti fra i limiti di domini di applicazione.  Questa è l'impostazione predefinita.|  
-|`true`|Il runtime utilizzerà l'interoperabilità COM fra i limiti di domini di applicazione.|  
+|-----------|-----------------|  
+|`false`|Il runtime utilizza comunicazione remota di limiti del dominio applicazione. Questa è l'impostazione predefinita.|  
+|`true`|Il runtime utilizzerà l'interoperabilità COM limiti del dominio applicazione.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## Note  
- Quando si imposta l'attributo `enabled` su `true`, il runtime presenta il comportamento seguente:  
+## <a name="remarks"></a>Note  
+ Quando si imposta la `enabled` attributo `true`, il runtime si comporta come segue:  
   
--   Il runtime non chiama [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) per un'interfaccia [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md) quando un'interfaccia [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) fornisce il dominio tramite un'interfaccia COM.  Invece, costruisce un oggetto [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) \(RCW\) attorno all'oggetto.  
+-   Il runtime non chiami [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia quando un [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) interfaccia accede al dominio tramite un'interfaccia COM. Invece, costruisce una [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) attorno all'oggetto.  
   
--   Il runtime restituisce E\_NOINTERFACE quando riceve una chiamata `QueryInterface` per un'interfaccia [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md) per qualsiasi [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) \(CCW\) creato in questo dominio.  
+-   Il runtime restituisce E_NOINTERFACE quando riceve un `QueryInterface` chiamare per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia per qualsiasi [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) che è stato creato in questo dominio.  
   
- Questi due comportamenti garantiscono che tutte le chiamate tramite le interfacce COM tra oggetti gestiti fra i limiti di domini di applicazione utilizzino COM e l'interoperabilità COM anziché i servizi remoti.  
+ Questi due comportamenti assicurarsi che tutte le chiamate tramite COM interfacce tra gli oggetti gestiti attraverso l'utilizzo di limiti di dominio dell'applicazione COM e l'interoperabilità COM anziché servizi remoti.  
   
-## Esempio  
- Nell'esempio seguente viene mostrato come specificare che il runtime deve utilizzare interoperabilità COM fra i limiti di isolamento:  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come specificare che il runtime deve utilizzare COM interoperabilità attraverso i limiti di isolamento:  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <PreferComInsteadOfManagedRemoting enabled="true"/>  
@@ -79,6 +81,6 @@ Specifica se il runtime utilizzerà l'interoperabilità COM anziché i servizi r
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

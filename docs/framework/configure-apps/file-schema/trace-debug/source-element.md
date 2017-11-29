@@ -1,76 +1,73 @@
 ---
-title: "Elemento &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#source"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> (elemento)"
-  - "source (elemento)"
-ms.assetid: ecf86505-735d-4844-aaba-266fdd134218
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+title: '&lt;origine&gt; elemento'
+ms.date: 09/29/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#source
+helpviewer_keywords:
+- <source> element
+- source element
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;source&gt;
-Specifica un'origine di analisi che dà inizio ai messaggi di tracciatura.  
+# <a name="ltsourcegt-element"></a>&lt;origine&gt; elemento
+Specifica un'origine di traccia che avvia i messaggi di traccia.  
   
-## Sintassi  
+ \<configuration>  
+\<System. Diagnostics >  
+\<origini >  
+\<origine >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <source>   
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |`name`|Attributo facoltativo.<br /><br /> Specifica il nome dell'origine di traccia.|  
-|`switchName`|Attributo facoltativo.<br /><br /> Specifica il nome di un'istanza dell'opzione di traccia nell'applicazione.  Se l'opzione non è identificata in un elemento `<switches>`, il valore indica il livello dell'opzione.|  
-|`switchType`|Attributo facoltativo.<br /><br /> Specifica il tipo dell'opzione di traccia.  Se presente, il tipo deve essere un nome di classe valido e non può essere costituito da una stringa vuota.|  
-|`extraAttribute`|Attributo facoltativo.<br /><br /> Specifica il valore di un attributo database di origine\-specifico di traccia identificato dal metodo di <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> per l'origine di traccia.|  
+|`switchName`|Attributo facoltativo.<br /><br /> Specifica il nome di un'istanza di commutatore di traccia nell'applicazione. Se l'opzione non viene identificata un `<switches>` elemento, il valore specifica il livello per il commutatore.|  
+|`switchType`|Attributo facoltativo.<br /><br /> Specifica il tipo di opzione di traccia. Se presente, il tipo deve essere un nome di classe valido e non può essere una stringa vuota.|  
+|`extraAttribute`|Attributo facoltativo.<br /><br /> Specifica il valore per un attributo specifico di origine di traccia identificato dal <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> metodo per l'origine di traccia.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Contiene listener per la raccolta, l'archiviazione e l'invio di messaggi.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
-|`sources`|Contiene le origini di analisi che danno inizio ai messaggi di tracciatura.|  
+|-------------|-----------------|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Contiene i listener di raccolgano, archiviano e indirizzare i messaggi.|  
   
-## Note  
- È possibile utilizzare questo elemento nei file di configurazione del computer \(Machine.config\) e dell'applicazione.  
+### <a name="parent-elements"></a>Elementi padre  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato l'utilizzo dell'elemento `<source>`  per aggiungere l'origine di traccia `mySource` e impostare il livello per l'opzione di origine denominata `sourceSwitch`.  Viene aggiunto un listener di analisi di console che consente di scrivere le informazioni di traccia sulla console.  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
+|`sources`|Contiene le origini di traccia che avviano i messaggi di traccia.|  
   
-```  
+## <a name="remarks"></a>Note  
+ Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e file di configurazione dell'applicazione.  
+  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il `<source>` elemento a cui aggiungere l'origine di traccia `mySource` e impostare il livello per l'opzione di origine denominata `sourceSwitch`. Viene aggiunto un listener di traccia di console che scrive le informazioni di traccia nella console.  
+  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -90,6 +87,6 @@ Specifica un'origine di analisi che dà inizio ai messaggi di tracciatura.
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Switches](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Opzioni di traccia](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

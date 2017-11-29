@@ -1,35 +1,41 @@
 ---
-title: "Implementazione della logica di business (LINQ to SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Implementazione della logica di business (LINQ to SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9cba4c71d895d9398e2444885f4f26bf04433251
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Implementazione della logica di business (LINQ to SQL)
-Il termine "regola business" in questo argomento si riferisce a qualsiasi regola personalizzata o test di convalida applicato ai dati prima che vengano inseriti, aggiornati o eliminati dal database.  La regola business viene talvolta definita anche "regola dominio". Nelle applicazioni a più livelli viene in genere progettata come livello logico in modo da essere modificata indipendentemente dal livello di presentazione o dal livello di accesso ai dati.  La logica di business può essere richiamata dal livello di accesso ai dati prima o dopo l'aggiornamento, l'inserimento o l'eliminazione dei dati dal database.  
+# <a name="implementing-business-logic-linq-to-sql"></a>Implementazione della logica di business (LINQ to SQL)
+Il termine "regola business" in questo argomento si riferisce a qualsiasi regola personalizzata o test di convalida applicato ai dati prima che vengano inseriti, aggiornati o eliminati dal database. La regola business viene talvolta definita anche "regola dominio". Nelle applicazioni a più livelli viene in genere progettata come livello logico in modo da essere modificata indipendentemente dal livello di presentazione o dal livello di accesso ai dati. La logica di business può essere richiamata dal livello di accesso ai dati prima o dopo l'aggiornamento, l'inserimento o l'eliminazione dei dati dal database.  
   
- La regola business è semplice quanto la convalida di uno schema per assicurarsi che il tipo del campo sia compatibile con il tipo della colonna di tabella.  Oppure può essere costituita da un set di oggetti che interagiscono in modalità arbitrariamente complesse.  Le regole possono essere implementate come stored procedure nel database o come oggetti in memoria.  Indipendentemente dal modo in cui la regola business viene implementata, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente l'uso delle classi e dei metodi parziali per separare la regola business dal codice di accesso ai dati.  
+ La regola business è semplice quanto la convalida di uno schema per assicurarsi che il tipo del campo sia compatibile con il tipo della colonna di tabella. Oppure può essere costituita da un set di oggetti che interagiscono in modalità arbitrariamente complesse. Le regole possono essere implementate come stored procedure nel database o come oggetti in memoria. Tuttavia, viene implementata la logica di business, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente l'utilizzo delle classi parziali e i metodi parziali per separare la logica di business dal codice di accesso ai dati.  
   
-## Richiamo della regola business da LINQ to SQL  
- Quando in fase di progettazione si genera una classe di entità manualmente oppure usando la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o SQLMetal, tale processo viene definito classe parziale.  Ciò significa che, in un file di codice separato, è possibile definire un'altra parte della classe di entità contenente la regola business personalizzata.  In fase di compilazione le due parti vengono unite in un'unica classe. È tuttavia possibile rigenerare le classi di entità utilizzando la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o SQLMetal, senza modificare la parte personalizzata della classe.  
+## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Richiamo della regola business da LINQ to SQL  
+ Quando in fase di progettazione si genera una classe di entità manualmente oppure usando la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o SQLMetal, tale processo viene definito classe parziale. Ciò significa che, in un file di codice separato, è possibile definire un'altra parte della classe di entità contenente la regola business personalizzata. In fase di compilazione le due parti vengono unite in un'unica classe. È tuttavia possibile rigenerare le classi di entità utilizzando la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o SQLMetal, senza modificare la parte personalizzata della classe.  
   
- Le classi parziali che definiscono le entità e <xref:System.Data.Linq.DataContext> contengono metodi parziali.  Si tratta di punti di estensibilità che è possibile usare per applicare la regola business prima e dopo un aggiornamento, inserimento o eliminazione di un'entità o di una proprietà dell'entità.  È possibile considerare i metodi parziali come eventi in fase di compilazione.  Il generatore di codice definisce una firma del metodo e chiama i metodi nelle funzioni di accesso alle proprietà get e set nonché il costruttore `DataContext`, e in alcuni casi automaticamente quando viene chiamato <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  Tuttavia, se non si implementa un particolare metodo parziale, tutti i riferimenti relativi e la definizione verranno rimossi in fase di compilazione.  
+ Le classi parziali che definiscono le entità e <xref:System.Data.Linq.DataContext> contengono metodi parziali. Si tratta di punti di estensibilità che è possibile usare per applicare la regola business prima e dopo un aggiornamento, inserimento o eliminazione di un'entità o di una proprietà dell'entità. È possibile considerare i metodi parziali come eventi in fase di compilazione. Il generatore di codice definisce una firma del metodo e chiama i metodi nelle funzioni di accesso alle proprietà get e set nonché il costruttore `DataContext`, e in alcuni casi automaticamente quando viene chiamato <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Tuttavia, se non si implementa un particolare metodo parziale, tutti i riferimenti relativi e la definizione verranno rimossi in fase di compilazione.  
   
- Nella definizione di implementazione scritta nel file di codice separato, è possibile eseguire la regola personalizzata necessaria.  È possibile usare la classe parziale personalizzata come livello del dominio oppure è possibile chiamare dalla definizione di implementazione del metodo parziale in uno o più oggetti separati.  In entrambi i casi, la regola business viene nettamente separata dal codice di accesso ai dati e dal codice del livello di presentazione.  
+ Nella definizione di implementazione scritta nel file di codice separato, è possibile eseguire la regola personalizzata necessaria. È possibile usare la classe parziale personalizzata come livello del dominio oppure è possibile chiamare dalla definizione di implementazione del metodo parziale in uno o più oggetti separati. In entrambi i casi, la regola business viene nettamente separata dal codice di accesso ai dati e dal codice del livello di presentazione.  
   
-## Informazioni dettagliate sui punti di estensibilità  
- Nell'esempio seguente viene illustrata parte del codice generato dalla [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per la classe `DataContext` contenente due tabelle: `Customers` e `Orders`.  Tenere presente che i metodi di inserimento, aggiornamento ed eliminazione vengono definiti per ogni tabella della classe.  
+## <a name="a-closer-look-at-the-extensibility-points"></a>Informazioni dettagliate sui punti di estensibilità  
+ Nell'esempio seguente viene illustrata parte del codice generato dal [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per il `DataContext` classe che dispone di due tabelle: `Customers` e `Orders`. Tenere presente che i metodi di inserimento, aggiornamento ed eliminazione vengono definiti per ogni tabella della classe.  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -73,7 +79,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- Se si implementano i metodi di inserimento, aggiornamento ed eliminazione nella classe parziale, il runtime [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chiamerà tali metodi anziché i metodi predefiniti personalizzati quando viene chiamato <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  In questo modo è possibile eseguire l'override del comportamento predefinito per le operazioni di creazione, lettura, aggiornamento ed eliminazione.  Per altre informazioni, vedere [Procedura dettagliata: personalizzazione del comportamento di Insert, Update e Delete delle classi di entità](../Topic/Walkthrough:%20Customizing%20the%20insert,%20update,%20and%20delete%20behavior%20of%20entity%20classes.md).  
+ Se si implementano i metodi di inserimento, aggiornamento ed eliminazione nella classe parziale, il runtime [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chiamerà tali metodi anziché i metodi predefiniti personalizzati quando viene chiamato <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. In questo modo è possibile eseguire l'override del comportamento predefinito per le operazioni di creazione, lettura, aggiornamento ed eliminazione. Per ulteriori informazioni, vedere [procedura dettagliata: personalizzazione di inserimento, aggiornamento ed eliminazione di comportamento delle classi di entità](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
   
  Il metodo `OnCreated` viene chiamato nel costruttore della classe.  
   
@@ -92,7 +98,7 @@ public MyNorthWindDataContext(string connection) :
         }  
 ```  
   
- Per le classi di entità sono disponibili tre metodi che vengono chiamati dal runtime [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] quando l'entità viene creata, caricata e convalidata \(quando viene chiamato `SubmitChanges`\).  Le classi di entità dispongono inoltre di due metodi parziali per ogni proprietà, uno chiamato prima dell'impostazione della proprietà e l'altro dopo.  Nell'esempio di codice seguente vengono illustrati alcuni metodi generati per la classe `Customer`:  
+ Per le classi di entità sono disponibili tre metodi che vengono chiamati dal runtime [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] quando l'entità viene creata, caricata e convalidata (quando viene chiamato `SubmitChanges`). Le classi di entità hanno anche due metodi parziali per ogni proprietà, che viene chiamato prima che la proprietà è impostata e che viene chiamati dopo. Nell'esempio di codice seguente vengono illustrati alcuni metodi generati per la classe `Customer`:  
   
 ```vb  
 #Region "Extensibility Method Definitions"  
@@ -159,7 +165,7 @@ public string CustomerID
 }  
 ```  
   
- Nella parte personalizzata della classe, scrivere una definizione di implementazione del metodo.  In [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)] dopo avere digitato `parziale`, verrà visualizzato IntelliSense per le definizioni del metodo nell'altra parte della classe.  
+ Nella parte personalizzata della classe, scrivere una definizione di implementazione del metodo. In [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)]dopo avere digitato `partial` , verrà visualizzato IntelliSense per le definizioni del metodo in altra parte della classe.  
   
 ```vb  
 Partial Public Class Customer  
@@ -181,14 +187,14 @@ partial class Customer
   
  Per altre informazioni su come aggiungere la regola business all'applicazione usando i metodi parziali, vedere gli argomenti seguenti:  
   
- [Procedura: aggiungere la convalida a classi di entità](../Topic/How%20to:%20Add%20validation%20to%20entity%20classes.md)  
+ [Procedura: Aggiungere la convalida a classi di entità](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Procedura dettagliata: personalizzazione del comportamento di Insert, Update e Delete delle classi di entità](../Topic/Walkthrough:%20Customizing%20the%20insert,%20update,%20and%20delete%20behavior%20of%20entity%20classes.md)  
+ [Procedura dettagliata: personalizzazione del comportamento di inserimento, aggiornamento ed eliminazione delle classi di entità](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Procedura dettagliata: aggiunta della convalida a classi di entità](../Topic/Walkthrough:%20Adding%20Validation%20to%20Entity%20Classes.md)  
+ [Procedura dettagliata: Aggiunta della convalida alle classi di entità](http://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
-## Vedere anche  
- [Classi e metodi parziali](../Topic/Partial%20Classes%20and%20Methods%20\(C%23%20Programming%20Guide\).md)   
- [Partial Methods](../Topic/Partial%20Methods%20\(Visual%20Basic\).md)   
- [LINQ to SQL Tools in Visual Studio](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio2.md)   
- [SqlMetal.exe \(strumento per la generazione del codice\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classi e metodi parziali](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
+ [Metodi parziali](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
+ [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+ [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

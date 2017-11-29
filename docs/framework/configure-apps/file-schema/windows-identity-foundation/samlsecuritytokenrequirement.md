@@ -1,77 +1,87 @@
 ---
-title: "&lt;samlSecurityTokenRequirement&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;samlSecurityTokenRequirement&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e0d8d467c2636f5ce95cf5fed189ae00c3ca75fb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;samlSecurityTokenRequirement&gt;
-Fornisce la configurazione della classe <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, la classe <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, o una classe derivata di uno di tali classi.  Rappresentato dalla classe <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>.  
+# <a name="ltsamlsecuritytokenrequirementgt"></a>&lt;samlSecurityTokenRequirement&gt;
+Fornisce la configurazione per il <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> (classe), la <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe o una classe derivata di una di queste classi. Rappresentato dalla <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> classe.  
   
-## Sintassi  
+ \<System. IdentityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<add>  
+\<samlSecurityTokenRequirement >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add>  
-        <samlSecurityTokenRequirement   
-            issuerCertificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
-            issuerCertificateRevocationMode="NoCheck||Offline||Online"  
-            issuerCertificateTrustedStoreLocation="CurrentLocation||LocalMachine"  
-            issuerCertificateValidator="Namespace.Class Assembly"  
-            mapToWindows=xs:boolean  
-          <nameClaimType value=xs:string />  
-          <roleClaimType value=xs:string />  
-        </samlSecurityTokenRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add>  
+        <samlSecurityTokenRequirement   
+            issuerCertificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
+            issuerCertificateRevocationMode="NoCheck||Offline||Online"  
+            issuerCertificateTrustedStoreLocation="CurrentLocation||LocalMachine"  
+            issuerCertificateValidator="Namespace.Class Assembly"  
+            mapToWindows=xs:boolean  
+          <nameClaimType value=xs:string />  
+          <roleClaimType value=xs:string />  
+        </samlSecurityTokenRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|mapToWindows|Specifica se il gestore di eseguire il mapping del token convalidante a un account Windows utilizzando la richiesta in arrivo di UPN.  L'impostazione predefinita è “false„.|  
-|issuerCertificateRevocationMode|Un valore <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> che specifica la modalità di revoca da utilizzare per il certificato X.509.  Il valore predefinito è “online„.|  
-|issuerCertificateValidationMode|Un valore <xref:System.ServiceModel.Security.X509CertificateValidationMode> che specifica la modalità di convalida da utilizzare per il certificato X.509.  Il valore predefinito è “PeerOrChainTrust„.|  
-|issuerCertificateTrustedStoreLocation|Un valore <xref:System.Security.Cryptography.X509Certificates.StoreLocation> che specifica archivio certificati X.509.  Il valore predefinito è “LocalMachine„.|  
-|issuerCertificateValidator|Un tipo personalizzato che deriva da <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  Se l'attributo `issuerCertificateValidationMode` è custom, un'istanza di questo tipo consente di convalida del certificato dell'autorità.|  
+|mapToWindows|Specifica se il gestore dei token deve mappare il token di convalida a un account di Windows utilizzando l'attestazione UPN in ingresso. Il valore predefinito è "false".|  
+|issuerCertificateRevocationMode|Un <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> valore che specifica la modalità di revoche di certificati da utilizzare per il certificato x. 509. Il valore predefinito è "Online".|  
+|issuerCertificateValidationMode|Un <xref:System.ServiceModel.Security.X509CertificateValidationMode> valore che specifica la modalità di convalida da utilizzare per il certificato x. 509. Il valore predefinito è "PeerOrChainTrust".|  
+|issuerCertificateTrustedStoreLocation|Oggetto <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valore che specifica l'archivio certificati x. 509. Il valore predefinito è "LocalMachine".|  
+|issuerCertificateValidator|Un tipo personalizzato che deriva da <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Se il `issuerCertificateValidationMode` attributo è "Custom", un'istanza di questo tipo viene usata per la convalida dei certificati dell'autorità di certificazione.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<nameClaimType\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/nameclaimtype.md)|Imposta il tipo di attestazione che specifica la proprietà <xref:System.Security.Principal.IIdentity.Name%2A>.|  
-|[\<roleClaimType\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/roleclaimtype.md)|Specifica il tipo di attestazione che definisce il ruolo di richieste del tipo della raccolta di oggetti <xref:System.Security.Claims.ClaimsIdentity> restituiti dal metodo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> del gestore dei token.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Aggiunge il gestore specificato del token di sicurezza alla raccolta dei token del gestore.|  
+|-------------|-----------------|  
+|[\<nameClaimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/nameclaimtype.md)|Imposta il tipo di attestazione che specifica il <xref:System.Security.Principal.IIdentity.Name%2A> proprietà.|  
+|[\<roleClaimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/roleclaimtype.md)|Specifica il tipo di attestazione che definisce le attestazioni di tipo ruolo nella raccolta di <xref:System.Security.Claims.ClaimsIdentity> gli oggetti restituiti dal <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metodo del gestore di token.|  
   
-## Note  
- L'elemento `<samlSecurityTokenRequirement>` è rappresentato dalla classe <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> nel modello a oggetti e viene utilizzato per configurare la proprietà `SamlSecurityTokenRequirement` su <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> o su <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>.  
+### <a name="parent-elements"></a>Elementi padre  
   
-## Esempio  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Aggiunge il gestore di token di sicurezza specificato alla raccolta di gestori di token.|  
   
-```  
+## <a name="remarks"></a>Note  
+ Il `<samlSecurityTokenRequirement>` elemento è rappresentato dal <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> nel modello a oggetti e viene utilizzata per configurare il `SamlSecurityTokenRequirement` proprietà in un <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>.  
+  
+## <a name="example"></a>Esempio  
+  
+```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
     <samlSecurityTokenRequirement issuerCertificateValidationMode="PeerOrChainTrust"  
                                   issuerCertificateRevocationMode="Online"  

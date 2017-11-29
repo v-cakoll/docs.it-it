@@ -1,60 +1,67 @@
 ---
-title: "&lt;filters&gt; di &lt;routing&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;filters&gt; di &lt;routing&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9dddd9f9ba5f4c2cea7e92c666e8d224ccf21cee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;filters&gt; di &lt;routing&gt;
-Rappresenta una sezione di configurazione per la definizione di un set di filtri di routing che determinano il tipo di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> da usare durante la valutazione di messaggi in arrivo.  
-  
-## Sintassi  
-  
-```vb  
-  
-<routing>  
-      <filters>  
-        <filter customType=”String”  
-                filterData=”String”  
-                filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath"   
-                name="String" />  
-      </filters>  
-</routing>  
-  
-```  
-  
-```csharp  
-  
-```  
-  
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
-  
-### Attributi  
- Nessuno.  
-  
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<filtro\>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)|Contiene un filtro di routing che determina il tipo di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> che verrà usato durante la valutazione di messaggi in arrivo.|  
-  
-### Elementi padre  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<routing\>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Rappresenta una sezione di configurazione per la definizione di un set di filtri di routing che determinano il tipo di <xref:System.ServiceModel.Dispatcher.MessageFilter> di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] da usare durante la valutazione di messaggi in arrivo, nonché di tabelle di routing che definiscono gli endpoint di destinazione ai quali inviare i messaggi quando viene trovata una corrispondenza di filtro.|  
-  
-## Vedere anche  
- [System.ServiceModel.Routing.Configuration.FilterElement](assetId:///System.ServiceModel.Routing.Configuration.FilterElement?qualifyHint=False&amp;autoUpgrade=True)
+# <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;filters&gt; di &lt;routing&gt;
+
+Rappresenta una sezione di configurazione per la definizione di un set di filtri di routing che determinano il tipo di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> da usare durante la valutazione di messaggi in arrivo.
+
+[**\<System. ServiceModel >**](system-servicemodel.md)   
+&nbsp;&nbsp;[**\<routing >**](routing.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<i filtri >**
+
+## <a name="syntax"></a>Sintassi
+
+```xml
+<system.serviceModel>
+  <routing>
+    <filters>
+      <filter customType="String" 
+              filterData="String" 
+              filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath" 
+              name="String" />
+    </filters>
+  </routing>
+</system.serviceModel>
+```
+
+## <a name="attributes-and-elements"></a>Attributi ed elementi
+
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
+
+### <a name="attributes"></a>Attributi
+
+Nessuno
+
+### <a name="child-elements"></a>Elementi figlio
+
+|     | Descrizione |
+| --- | ----------- |
+| [**\<Filtro >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Contiene un filtro di routing che determina il tipo di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> che verrà utilizzato durante la valutazione di messaggi in arrivo. |
+
+### <a name="parent-elements"></a>Elementi padre
+
+|     | Descrizione |
+| --- | ----------- |
+| [**\<routing >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Rappresenta una sezione di configurazione per la definizione di un set di filtri di routing che determinano il tipo di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] di <xref:System.ServiceModel.Dispatcher.MessageFilter> da usare durante la valutazione di messaggi in arrivo, nonché di tabelle di routing che definiscono gli endpoint di destinazione ai quali inviare i messaggi quando viene trovata una corrispondenza di filtro. |
+
+## <a name="see-also"></a>Vedere anche
+
+<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

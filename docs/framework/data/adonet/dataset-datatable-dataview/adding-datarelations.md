@@ -1,29 +1,35 @@
 ---
-title: "Aggiunta di DataRelation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiunta di oggetti DataRelation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31494ee9ac6fc8efc9a041f5d56dbba4a4bddad1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Aggiunta di DataRelation
+# <a name="adding-datarelations"></a>Aggiunta di oggetti DataRelation
 In un <xref:System.Data.DataSet> contenente più oggetti <xref:System.Data.DataTable> è possibile usare gli oggetti <xref:System.Data.DataRelation> per creare relazioni tra le tabelle, navigare tra di esse e restituire le righe padre o figlio da una tabella correlata.  
   
- Gli argomenti necessari per la creazione di un oggetto **DataRelation** sono un nome per l'oggetto **DataRelation** creato e una matrice di uno o più riferimenti <xref:System.Data.DataColumn> alle colonne che fungono da colonne padre e figlio nella relazione.  Una volta creato un oggetto **DataRelation**, è possibile usare tale oggetto per navigare tra le tabelle e recuperare i valori.  
+ Gli argomenti necessari per creare un **DataRelation** sono un nome per il **DataRelation** creato e una matrice di uno o più <xref:System.Data.DataColumn> i riferimenti alle colonne che fungono da padre e figlio colonne nella relazione. Dopo aver creato un **DataRelation**, è possibile utilizzare per navigare tra le tabelle e recuperare i valori.  
   
- Se si aggiunge un oggetto **DataRelation** a un <xref:System.Data.DataSet>, per impostazione predefinita viene aggiunto un vincolo <xref:System.Data.UniqueConstraint> alla tabella padre e un vincolo <xref:System.Data.ForeignKeyConstraint> alla tabella figlio.  Per altre informazioni su questi vincoli predefiniti, vedere [Vincoli di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ Aggiunta di un **DataRelation** per un <xref:System.Data.DataSet> aggiunge, per impostazione predefinita, un <xref:System.Data.UniqueConstraint> alla tabella padre e un <xref:System.Data.ForeignKeyConstraint> alla tabella figlio. Per ulteriori informazioni sui vincoli predefiniti, vedere [vincoli DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
   
- Nell'esempio di codice seguente viene creato un oggetto **DataRelation** usando due oggetti <xref:System.Data.DataTable> in un <xref:System.Data.DataSet>.  In ogni <xref:System.Data.DataTable> è contenuta una colonna denominata **CustID**, che funge da collegamento tra i due oggetti <xref:System.Data.DataTable>.  Nell'esempio viene aggiunto un singolo oggetto **DataRelation** alla raccolta **Relations** del <xref:System.Data.DataSet>.  Il nome dell'oggetto **DataRelation** creato viene specificato dal primo argomento dell'esempio.  Il secondo argomento consente di impostare l'oggetto **DataColumn** padre e il terzo argomento consente di impostare l'oggetto **DataColumn** figlio.  
+ L'esempio di codice seguente crea un **DataRelation** utilizzando due <xref:System.Data.DataTable> gli oggetti in un <xref:System.Data.DataSet>. Ogni <xref:System.Data.DataTable> contiene una colonna denominata **CustID**, che funge da collegamento tra i due <xref:System.Data.DataTable> oggetti. Nell'esempio viene aggiunto un singolo **DataRelation** per il **relazioni** insieme il <xref:System.Data.DataSet>. Il primo argomento dell'esempio specifica il nome del **DataRelation** da creare. Il secondo argomento imposta l'elemento padre **DataColumn** e il terzo argomento imposta l'elemento figlio **DataColumn**.  
   
 ```vb  
 customerOrders.Relations.Add("CustOrders", _  
@@ -37,8 +43,8 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- Un oggetto **DataRelation** dispone anche di una proprietà **Nested** che, se impostata su **true**, provoca l'annidamento delle righe della tabella figlio all'interno della riga associata della tabella padre, nel caso in cui tali righe siano scritte come elementi XML tramite il metodo <xref:System.Data.DataSet.WriteXml%2A>.  Per altre informazioni, vedere [Utilizzo di XML in un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+ A **DataRelation** dispone anche di un **Nested** proprietà che, se impostato su **true**, fa sì che le righe della tabella figlio all'interno della riga associata nella tabella padre Quando scritte come elementi XML tramite <xref:System.Data.DataSet.WriteXml%2A> . Per altre informazioni, vedere [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
-## Vedere anche  
- [DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

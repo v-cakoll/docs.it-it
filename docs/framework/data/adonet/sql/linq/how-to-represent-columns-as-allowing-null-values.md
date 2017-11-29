@@ -1,32 +1,35 @@
 ---
-title: "Procedura: rappresentare le colonne in modo che accettino valori Null | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: rappresentare colonne per l''accettazione di valori Null'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: efa6f9d453940151dfe01d27827760521359ab67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: rappresentare le colonne in modo che accettino valori Null
-Usare la proprietà <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sull'attributo <xref:System.Data.Linq.Mapping.ColumnAttribute> per specificare che la colonna del database associata può contenere valori null.  
+# <a name="how-to-represent-columns-as-allowing-null-values"></a>Procedura: rappresentare colonne per l'accettazione di valori Null
+Utilizzare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> proprietà il <xref:System.Data.Linq.Mapping.ColumnAttribute> attributo per specificare che la colonna di database associata può contenere valori null.  
   
  Per esempi di codice, vedere <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
   
-### Per definire una colonna in modo che accetti valori null  
+### <a name="to-designate-a-column-as-allowing-null-values"></a>Per definire una colonna in modo che accetti valori null  
   
 1.  Aggiungere la proprietà <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> all'attributo <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 2.  Impostare il valore della proprietà <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> su `true`.  
   
-## Vedere anche  
- [Il modello a oggetti LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)   
- [Procedura: personalizzare le classi di entità mediante l'editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [LINQ to SQL modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [Procedura: personalizzare classi di entità utilizzando l'Editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

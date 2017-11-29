@@ -1,66 +1,69 @@
 ---
-title: "Elemento &lt;oidMap&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<oidMap> (elemento)"
-  - "oidMap (elemento)"
+title: '&lt;oidMap&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap
+helpviewer_keywords:
+- <oidMap> element
+- oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eab9be57b6f8fac5f208e39a6aaa8eb7be92558d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;oidMap&gt;
-Contiene i mapping degli identificatori di oggetto \(OID\) ASN.1 sulle classi.  
+# <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; elemento
+Contiene i mapping di ASN. 1 oggetto (OID) identificatore alle classi.  
   
-## Sintassi  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<oidMap >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <oidMap>   
 </oidMap>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<oidEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Esegue il mapping di un identificatore OID ASN.1 su un nome descrittivo.|  
+|-------------|-----------------|  
+|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Esegue il mapping a un nome descrittivo di un OID ASN. 1.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`cryptographySettings`|Contiene le impostazioni di crittografia.|  
-|`mscorlib`|Contiene l'elemento `cryptographySettings` .|  
+|`mscorlib`|Contiene il `cryptographySettings` elemento.|  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare l'elemento **\<oidMap\>** in modo che contenga il mapping di un OID per l'algoritmo hash RIPEMD\-160 su un'implementazione di tale algoritmo.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<oidMap >** per contenere un mapping di un identificatore di oggetto per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo hash.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -80,9 +83,9 @@ Contiene i mapping degli identificatori di oggetto \(OID\) ASN.1 sulle classi.
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)   
- [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)  
+ [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [Mapping di identificatori di oggetti ad algoritmi di crittografia](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

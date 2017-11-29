@@ -1,66 +1,73 @@
 ---
-title: "&lt;etwTracking&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;etwTracking&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 583c5bcb1e864b79f80a9c3095ed8ce7b74a19eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;etwTracking&gt;
-Comportamento del servizio che consente a un servizio di usare il rilevamento ETW mediante un <xref:System.Activities.Tracking.ETWTrackingParticipant>.  
+# <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
+Un comportamento del servizio che consente a un servizio di utilizzare rilevamento ETW usando un <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
-## Sintassi  
+\<System. ServiceModel >  
+\<i comportamenti >  
+\<serviceBehaviors >  
+\<comportamento >  
+\<etwTracking >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-      <etwTracking profileName=”String” />  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <etwTracking profileName="String" />
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |profileName|Stringa che specifica il nome del profilo di rilevamento associato a questo comportamento.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<behavior\> di \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Specifica un elemento di comportamento.|  
+|-------------|-----------------|  
+|[\<comportamento > di \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Specifica un elemento di comportamento.|  
   
-## Note  
+## <a name="remarks"></a>Note  
  Quando viene aggiunto alla configurazione del comportamento del servizio, questo elemento di configurazione configura un partecipante del rilevamento su un servizio flusso di lavoro.  
   
- I partecipanti del rilevamento vengono usati per ottenere i dati di rilevamento generati dal flusso di lavoro e archiviarli in supporti differenti.  Analogamente, è anche possibile eseguire qualsiasi operazione di post\-elaborazione sui record di rilevamento all'interno del partecipante del rilevamento.  
+ I partecipanti del rilevamento vengono usati per ottenere i dati di rilevamento generati dal flusso di lavoro e archiviarli in supporti differenti. Analogamente, è anche possibile eseguire qualsiasi operazione di post-elaborazione sui record di rilevamento all'interno del partecipante del rilevamento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente viene mostrato il partecipante del rilevamento ETW standard configurato nel file Web.config.  
   
- L'ID del provider usato dal partecipante del rilevamento ETW per scrivere i record di rilevamento in ETW è definito nella sezione **\<diagnostics\>**.  Al partecipante di rilevamento è associato un profilo per specificare i record di rilevamento che ha sottoscritto.  Tale profilo è definito dall'attributo **profileName** dell'elemento **\<add\>**.  Dopo aver definito tali elementi, il partecipante del rilevamento viene aggiunto al comportamento del servizio **\<etwTracking\>**,  che aggiungerà i partecipanti del rilevamento selezionati alle estensioni dell'istanza del flusso di lavoro, in modo che inizino a ricevere i record di rilevamento.  
+ L'Id del Provider che utilizza il partecipante del rilevamento ETW per scrivere i record di rilevamento in ETW è definito nel  **\<diagnostica >** sezione. Al partecipante di rilevamento è associato un profilo per specificare i record di rilevamento che ha sottoscritto. Ciò viene definito dal **profileName** attributo del  **\<aggiungere >** elemento. Dopo aver definito tali elementi, il partecipante di rilevamento viene aggiunto per il  **\<etwTracking >** comportamento del servizio. che aggiungerà i partecipanti del rilevamento selezionati alle estensioni dell'istanza del flusso di lavoro, in modo che inizino a ricevere i record di rilevamento.  
   
-```  
-  
+```xml  
 <configuration>   
   <system.web>   
     <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
@@ -85,8 +92,8 @@ Comportamento del servizio che consente a un servizio di usare il rilevamento ET
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>   
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>   
- [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Partecipanti del rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-participants.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
+ <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
+ [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [Partecipanti di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

@@ -1,63 +1,73 @@
 ---
-title: "&lt;states&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;Stati&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73848bd1b8b23d6135572dc7fbb7b5e15b169554
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;states&gt;
+# <a name="ltstatesgt"></a>&lt;Stati&gt;
 Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.  
   
- Per altre informazioni sulle query relative ai profili di rilevamento, vedere [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+ Per ulteriori informazioni sulla query del profilo di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-## Sintassi  
+\<System. ServiceModel >  
+\<rilevamento >  
+\<trackingProfile >  
+\<flusso di lavoro >  
+\<workflowInstanceQueries >  
+\<workflowInstanceQuery >  
+\<stati >  
   
-```vb  
+## <a name="syntax"></a>Sintassi  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <workflowInstanceQueries>  
-             <workflowInstanceQuery>  
-                <states>  
-                   <state name="Name"/>  
-                </states>  
-            </workflowInstanceQuery>  
-         </workflowInstanceQueries>  
-       </workflow>  
-   </trackingProfile>  
+```xml  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="Name"/>
+          </states>
+        </workflowInstanceQuery>
+      </workflowInstanceQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<state\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Stato sottoscritto dell'istanza del flusso di lavoro rilevata che si riferisce al momento della creazione del record.|  
+|-------------|-----------------|  
+|[\<stato >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Stato sottoscritto dell'istanza del flusso di lavoro rilevata che si riferisce al momento della creazione del record.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<workflowInstanceQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Query che rileva modifiche del ciclo di vita dell'istanza del flusso di lavoro, come l'avvio o il completamento di un evento.|  
+|-------------|-----------------|  
+|[\<workflowInstanceQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Query che rileva modifiche del ciclo di vita dell'istanza del flusso di lavoro, come l'avvio o il completamento di un evento.|  
   
-## Note  
+## <a name="remarks"></a>Note  
  I record restituiti vengono filtrati in base agli stati di questa raccolta.  
   
  I valori possibili dello stato sono descritti nella tabella seguente.  
@@ -72,17 +82,16 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 |Resumed|L'istanza del flusso di lavoro viene ripresa.|  
 |Started|L'istanza del flusso di lavoro è avviata.|  
 |UnhandledException|L'istanza del flusso di lavoro ha rilevato un'eccezione non gestita.|  
-|Non caricato|L'istanza del flusso di lavoro viene scaricata.|  
+|Unloaded|L'istanza del flusso di lavoro viene scaricata.|  
 |Annullato|L'istanza del flusso di lavoro viene annullata.|  
 |Suspended|L'istanza del flusso di lavoro è sospesa.|  
 |Terminated|L'istanza del flusso di lavoro è terminata.|  
 |Unsuspended|L'istanza del flusso di lavoro non è sospesa.|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  La configurazione seguente sottoscrive i record di rilevamento a livello di istanza del flusso di lavoro per lo stato dell'istanza `Started` usando questa query.  
   
-```  
-  
+```xml  
 <workflowInstanceQueries>  
     <workflowInstanceQuery>  
       <states>  
@@ -90,12 +99,11 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
       </states>  
     </workflowInstanceQuery>  
 </workflowInstanceQueries>  
-  
 ```  
   
-## Vedere anche  
- [System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement](assetId:///System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?qualifyHint=False&amp;autoUpgrade=True)   
- [System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.WorkflowInstanceQuery](assetId:///System.Activities.Tracking.WorkflowInstanceQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
+ <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
+ [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

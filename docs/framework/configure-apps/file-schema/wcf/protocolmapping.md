@@ -1,72 +1,66 @@
 ---
-title: "&lt;protocolMapping&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;protocolMapping&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 769ca7b96c3671fdd1b154c99516778f7cbd542e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;protocolMapping&gt;
-Rappresenta una sezione di configurazione per la definizione di un set di mapping dei protocolli predefiniti tra gli schemi dei protocolli di trasporto \(ad esempio http, net.tcp, net.pipe e così via\) e le associazioni di WCF.  Durante la creazione di endpoint predefiniti in fase di esecuzione, [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.  
+# <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
+Rappresenta una sezione di configurazione per la definizione di un set di mapping del protocollo predefinito tra gli schemi di protocollo di trasporto (ad esempio, http, net.tcp, NET. pipe, e così via) e le associazioni WCF. Durante la creazione di endpoint predefiniti in fase di esecuzione, [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<protocolMapping >  
   
-```vb  
+## <a name="syntax"></a>Sintassi  
   
-<protocolMapping>  
-    <add binding="String”  
-         bindingConfiguration="String”  
-         scheme="http/net.msmq/net.pipe/net.tcp"/>  
-</protocolMapping>  
-  
-```  
-  
-```csharp  
-  
-```  
-  
-## Attributi ed elementi  
+```xml
+   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>  
+```
+
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<filtri\>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Contiene un mapping del protocollo predefinito tra lo schema di un protocollo di trasporto \(ad esempio http, net.tcp, net.pipe e così via\) e l'associazione di WCF.|  
+|-------------|-----------------|  
+|[\<i filtri >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Contiene un mapping del protocollo predefinito tra una combinazione di protocollo di trasporto (ad esempio, http, net.tcp, NET. pipe, e così via) e un binding WCF.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |system.ServiceModel|Elemento radice di tutti gli elementi di configurazione WCF.|  
   
-## Esempio  
- Nell'esempio di configurazione seguente viene illustrato il mapping del protocollo predefinito nel file machine.config.  È possibile eseguire l'override di questo mapping predefinito al livello di computer modificando il file machine.config.  In alternativa, se si desidera eseguirne l'override solo nell'ambito di un'applicazione, è possibile eseguire l'override di questa sezione all'interno del file di configurazione dell'applicazione e modificare il mapping per i singoli schemi di protocollo.  
+## <a name="example"></a>Esempio  
+ Nell'esempio di configurazione seguente viene illustrato il mapping del protocollo predefinito nel file machine.config. È possibile eseguire l'override di questo mapping predefinito al livello di computer modificando il file machine.config. In alternativa, se si desidera eseguirne l'override solo nell'ambito di un'applicazione, è possibile eseguire l'override di questa sezione all'interno del file di configurazione dell'applicazione e modificare il mapping per i singoli schemi di protocollo.  
   
-```  
-  
+```xml  
 <protocolMapping>  
-        <add scheme="http" binding="basicHttpBinding"/>  
-        <add scheme="net.tcp" binding="netTcpBinding"/>  
-        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
-        <add scheme="net.msmq" binding="netMsmqBinding"/>  
+        <add scheme="http" binding="basicHttpBinding"/>  
+        <add scheme="net.tcp" binding="netTcpBinding"/>  
+        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
+        <add scheme="net.msmq" binding="netMsmqBinding"/>  
 </protocolMapping>  
-  
 ```  
   
-## Vedere anche  
- [System.ServiceModel.Configuration.ProtocolMappingSection](assetId:///System.ServiceModel.Configuration.ProtocolMappingSection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.ServiceModel.Configuration.ProtocolMappingElement](assetId:///System.ServiceModel.Configuration.ProtocolMappingElement?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
+ <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    

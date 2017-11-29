@@ -1,41 +1,44 @@
 ---
-title: "302 - UserDefinedWarningOccurred | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 302 - UserDefinedWarningOccurred
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8d1f0bf1-0151-45e6-be92-573d397b54de
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1913f4b75a9adf63513abe5799d908b6ea1d8182
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 302 - UserDefinedWarningOccurred
-## Proprietà  
+# <a name="302---userdefinedwarningoccurred"></a>302 - UserDefinedWarningOccurred
+## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
 |ID|302|  
 |Parole chiave|Troubleshooting, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
 |Livello|Avviso|  
-|Canale|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canale|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descrizione  
- Questo evento viene generato dal codice utente.Gli sviluppatori possono generare questo evento nel caso in cui si verifichi un evento di avviso definito dal cliente nel servizio.A tale scopo utilizzare le interfacce API <xref:System.Diagnostics.Eventing>.È inoltre disponibile un esempio WCF che esegue il wrapping dell'interfaccia API e illustra come generare correttamente questo evento.  
+## <a name="description"></a>Descrizione  
+ Questo evento viene generato dal codice utente. Gli sviluppatori possono generare questo evento nel caso in cui si verifichi un evento di avviso definito dal cliente nel servizio. A tale scopo utilizzare le interfacce API <xref:System.Diagnostics.Eventing>. È inoltre disponibile un esempio WCF che esegue il wrapping dell'interfaccia API e illustra come generare correttamente questo evento.  
   
-## Messaggio  
+## <a name="message"></a>Messaggio  
  Nome:'%1', riferimento:'%2', payload:%3  
   
-## Dettagli  
+## <a name="details"></a>Dettagli  
   
 |Nome elemento dati|Tipo elemento dati|Descrizione|  
-|------------------------|------------------------|-----------------|  
+|--------------------|--------------------|-----------------|  
 |Nome|`xs:string`|Nome dell'evento definito dall'utente.|  
-|HostReference|`xs:string`|Per i servizi ospitati su Web, questo campo identifica in modo univoco il servizio nella gerarchia Web.Il formato viene definito come 'Nome sito Web percorso virtuale applicazione&#124;Percorso virtuale servizio&#124;NomeServizio'.Esempio: 'Sito Web predefinito\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
+|HostReference|`xs:string`|Per i servizi ospitati su Web, questo campo identifica in modo univoco il servizio nella gerarchia Web. Il formato viene definito come ' nome sito Web dell'applicazione virtuale percorso &#124; Percorso virtuale servizio &#124; ServiceName'. Esempio: ' Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.|  
 |Payload|`xs:string`|Payload dell'evento definito dall'utente.|

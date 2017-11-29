@@ -1,70 +1,72 @@
 ---
-title: "Elemento &lt;clear&gt; per bypasslist (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist>, clear (elemento)"
-  - "<clear> (elemento), bypasslist"
-  - "bypasslist, clear (elemento)"
-  - "clear (elemento), bypasslist"
+title: '&lt;deselezionare&gt; elemento per bypasslist (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, bypasslist
+- <clear> element, bypasslist
+- <bypasslist>, clear element
+- bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 5ee20b9177d519010c40351e335973dce10256f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;clear&gt; per bypasslist (Impostazioni di rete)
-Consente di cancellare l'elenco di esclusione proxy.  
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;deselezionare&gt; elemento per bypasslist (impostazioni di rete)
+Cancella l'elenco proxy da ignorare.  
   
-## Sintassi  
+ \<configuration>  
+\<System.NET >  
+\<defaultProxy >  
+\<BypassList >  
+\<Deselezionare >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un insieme di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
+|-----------------|---------------------|  
+|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
   
-## Note  
- L'elemento `clear` cancella tutte le voci dell'elenco di esclusione.  
+## <a name="remarks"></a>Note  
+ Il `clear` elemento cancella tutte le voci dell'elenco di esclusione.  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a>File di configurazione  
+ Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene cancellato il contenuto dell'elenco di esclusione, a cui vengono quindi aggiunti due indirizzi.  Il primo consente di ignorare il proxy per tutti i server del dominio contoso.com, il secondo, invece, di ignorare il proxy per tutti i server i cui indirizzi IP iniziano con 192.168.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente consente di cancellare l'elenco di esclusione e quindi aggiunge due indirizzi all'elenco di esclusione. Il primo viene ignorato il proxy per tutti i server nel dominio contoso.com. il secondo consente di ignorare il proxy per tutti i server il cui indirizzo IP inizia con 192.168.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -78,6 +80,6 @@ Consente di cancellare l'elenco di esclusione proxy.
 </configuration>   
 ```  
   
-## Vedere anche  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

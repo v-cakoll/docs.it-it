@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - code security, unmanaged code
 - unmanaged code, securing
 - security [.NET Framework], unmanaged code
 - secure coding, unmanaged code
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ebd50589c1ee2710e9d5dfe2c5110554be19ca5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6eec726342381f7e3ec71aeedd2ff012bc6c3e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Linee guida per la creazione di codice sicuro applicabili al codice non gestito
 Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API del codice nativo, come Win32). Poiché questo comporta il superamento del perimetro di sicurezza per il codice gestito, è necessaria la dovuta attenzione. Se il codice è indipendente dalla sicurezza, sia il proprio codice sia il codice da cui viene chiamato devono avere l'autorizzazione per codice non gestito (<xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> specificato).  
@@ -68,4 +61,3 @@ Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
-

@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework], conditional writes based on switches
 - trace statements
@@ -23,16 +20,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: adb4290b517230f26330cf3b4d94a7b3bc7fbf88
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5dd46da24c379a7900dff0dc482577195f5f4c23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: aggiungere istruzioni di traccia al codice dell'applicazione
 I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**. Questi metodi possono essere divisi in due categorie: **Write**, **WriteLine** e **Fail** generano tutti output in modo non condizionale, mentre **WriteIf**, **WriteLineIf** e **Assert** verificano una condizione booleana e scrivono o non scrivono il valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
@@ -84,25 +80,24 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
 1.  Chiamare il metodo <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
-    Dim I As Integer = 4  
-    Trace.Assert(I = 5, "I is not equal to 5.")  
+    Dim i As Integer = 4  
+    Trace.Assert(i = 5, "i is not equal to 5.")  
     ```  
   
     ```csharp  
-    int I = 4;  
-    System.Diagnostics.Trace.Assert(I == 5, "I is not equal to 5.");  
+    int i = 4;  
+    System.Diagnostics.Trace.Assert(i == 5, "i is not equal to 5.");  
     ```  
   
     > [!NOTE]
-    >  È possibile usare **Assert** con operazioni di traccia e debug. In questo esempio viene restituito lo stack di chiamate nella raccolta **Listeners**. Per altre informazioni, vedere [Asserzioni nel codice gestito](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
+    >  È possibile usare **Assert** con operazioni di traccia e debug. In questo esempio viene restituito lo stack di chiamate nella raccolta **Listeners**. Per altre informazioni, vedere [Asserzioni nel codice gestito](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=fullName>   
- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>  
+ [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [Procedura: creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-

@@ -1,23 +1,29 @@
 ---
-title: "Mapping di DataAdapter DataTable e DataColumn | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mapping di DataAdapter, DataTable e DataColumn
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e96eb8e48b5787db5296458af650133747687295
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Mapping di DataAdapter DataTable e DataColumn
-Un oggetto **DataAdapter** contiene una raccolta di zero o più oggetti <xref:System.Data.Common.DataTableMapping> nella proprietà **TableMappings**.  Un **DataTableMapping** fornisce un mapping master tra i dati restituiti da una query eseguita su un'origine dati e una <xref:System.Data.DataTable>.  Al posto del nome della **DataTable** è possibile passare il nome di **DataTableMapping** al metodo **Fill** di **DataAdapter**.  Nell'esempio seguente viene creato un **DataTableMapping** denominato **AuthorsMapping** per la tabella **MyAuthors**.  
+# <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Mapping di DataAdapter, DataTable e DataColumn
+Oggetto **DataAdapter** contiene una raccolta di zero o più <xref:System.Data.Common.DataTableMapping> gli oggetti relativi **TableMappings** proprietà. Oggetto **DataTableMapping** fornisce un mapping master tra i dati restituiti da una query su un'origine dati e un <xref:System.Data.DataTable>. Il **DataTableMapping** nome può essere passato al posto del **DataTable** nome per il **riempimento** metodo il **DataAdapter**. Nell'esempio seguente viene creato un **DataTableMapping** denominato **AuthorsMapping** per il **autori** tabella.  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -27,11 +33,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- Un **DataTableMapping** consente di usare in un **DataTable** nomi di colonne diversi da quelli presenti nel database.  L'oggetto **DataAdapter** usa il mapping per mantenere la corrispondenza delle colonne quando la tabella viene aggiornata.  
+ Oggetto **DataTableMapping** consente di utilizzare nomi di colonna in un **DataTable** diversi da quelli presenti nel database. Il **DataAdapter** utilizza il mapping per la corrispondenza delle colonne quando viene aggiornata la tabella.  
   
- Se non si specifica un nome **TableName** o **DataTableMapping** quando si chiama il metodo **Fill** o **Update** di **DataAdapter**, **DataAdapter** cercherà un **DataTableMapping** denominato "Table".  Se tale **DataTableMapping** non esiste, il **TableName** di **DataTable** sarà "Table".  È possibile specificare un **DataTableMapping** predefinito creando un **DataTableMapping** con il nome "Table".  
+ Se non si specifica un **TableName** o un **DataTableMapping** nome quando si chiama il **riempimento** o **aggiornamento** metodo il  **DataAdapter**, **DataAdapter** Cerca un **DataTableMapping** denominato "Table". Se tale **DataTableMapping** non esiste, il **TableName** del **DataTable** sarà "Table". È possibile specificare un valore predefinito **DataTableMapping** creando un **DataTableMapping** con il nome "Table".  
   
- Nell'esempio di codice seguente viene creato un **DataTableMapping** \(dallo spazio dei nomi <xref:System.Data.Common>\) che viene impostato come mapping predefinito per il **DataAdapter** specificato denominandolo "Table".  Viene quindi eseguito il mapping delle colonne della prima tabella nel set di risultati della query, ovvero la tabella **Customers** del database **Northwind**, a un set di nomi più semplici nella tabella **Northwind Customers** dell'oggetto <xref:System.Data.DataSet>.  Per le colonne di cui non viene eseguito il mapping, viene usato il nome della colonna nell'origine dati.  
+ L'esempio di codice seguente crea un **DataTableMapping** (dal <xref:System.Data.Common> dello spazio dei nomi) e lo rende il mapping predefinito per l'oggetto specificato **DataAdapter** denominandolo "Table". Viene quindi eseguito il mapping di colonne della prima tabella nel risultato della query (il **clienti** tabella il **Northwind** database) a un set di nomi più descrittivi nel **Customers di Northwind**  tabella il <xref:System.Data.DataSet>. Per le colonne di cui non viene eseguito il mapping, viene usato il nome della colonna nell'origine dati.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -41,7 +47,6 @@ mapping.ColumnMappings.Add("ContactName", "Contact")
 mapping.ColumnMappings.Add("PostalCode", "ZIPCode")  
   
 adapter.Fill(custDS)  
-  
 ```  
   
 ```csharp  
@@ -54,11 +59,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- In un contesto più avanzato, può essere necessario che lo stesso oggetto **DataAdapter** supporti il caricamento di diverse tabelle con mapping diversi.  A tale scopo è sufficiente aggiungere altri oggetti **DataTableMapping**.  
+ In situazioni più avanzate, è possibile che si desidera che lo stesso **DataAdapter** per supportare il caricamento di diverse tabelle con mapping diversi. A tale scopo, è sufficiente aggiungere altri **DataTableMapping** oggetti.  
   
- Quando al metodo **Fill** vengono passati un'istanza di un **DataSet** e un nome di **DataTableMapping**, viene usato un mapping con quel nome, se esistente, in caso contrario viene usato un **DataTable** con quel nome.  
+ Quando il **riempimento** metodo verrà passato un'istanza di un **set di dati** e **DataTableMapping** nome, se esiste un mapping con quel nome è utilizzato in caso contrario, un  **DataTable** nome che viene usato.  
   
- Nell'esempio seguente viene creato un **DataTableMapping** con il nome **Customers** e viene assegnato il nome **BizTalkSchema** a una **DataTable**.  Viene quindi eseguito il mapping delle righe restituite dall'istruzione SELECT alla **DataTable** **BizTalkSchema**.  
+ Gli esempi seguenti creano un **DataTableMapping** con un nome di **clienti** e **DataTable** nome di **BizTalkSchema**. Nell'esempio viene quindi eseguito il mapping le righe restituite dall'istruzione SELECT per la **BizTalkSchema** **DataTable**.  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -69,7 +74,6 @@ mapping.ColumnMappings.Add("ContactName", "Contact")
 mapping.ColumnMappings.Add("PostalCode", "ZIP")  
   
 adapter.Fill(custDS, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -84,26 +88,26 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  Se non viene indicato il nome della colonna di origine per il mapping di una colonna o il nome della tabella di origine per il mapping di una tabella, vengono generati automaticamente nomi predefiniti.  Se non viene indicato il nome della colonna di origine, al mapping della colonna viene assegnato il nome predefinito incrementale **SourceColumn** *N*, che inizia con **SourceColumn1**.  Se non viene indicato il nome della tabella di origine, al mapping della tabella viene assegnato il nome predefinito incrementale **SourceTable** *N*, che inizia con **SourceTable1**.  
+>  Se non viene indicato il nome della colonna di origine per il mapping di una colonna o il nome della tabella di origine per il mapping di una tabella, vengono generati automaticamente nomi predefiniti. Se nessuna colonna di origine viene fornita per il mapping di una colonna, il mapping della colonna viene assegnato il nome predefinito incrementale **SourceColumn** *N,* a partire da **SourceColumn1**. Se viene specificato alcun nome di tabella di origine per il mapping di una tabella, il mapping di tabella viene assegnato il nome predefinito incrementale **SourceTable** *N*, a partire da **SourceTable1**.  
   
 > [!NOTE]
->  Si consiglia di evitare la convenzione di denominazione di **SourceColumn** *N* per il mapping di una colonna o di **SourceTable** *N* per il mapping di una tabella, in quanto il nome indicato può entrare in conflitto con il nome predefinito esistente del mapping di una colonna in **ColumnMappingCollection** o con il nome del mapping di una tabella in **DataTableMappingCollection**.  Se il nome specificato esiste già, verrà generata un'eccezione.  
+>  Si consiglia di evitare la convenzione di denominazione **SourceColumn** *N* per il mapping di una colonna, o **SourceTable** *N* per una tabella mapping, poiché il nome sia in conflitto con un nome di mapping di colonna predefinito esistente nel **ColumnMappingCollection** o nome della tabella mapping nel **DataTableMappingCollection** . Se il nome specificato esiste già, verrà generata un'eccezione.  
   
-## Gestione di più set di risultati  
- Se **SelectCommand** restituisce più tabelle, **Fill** genera automaticamente nomi di tabella con valori incrementali per le tabelle contenute nel **DataSet**, che iniziano con il nome specificato e proseguono nel formato **TableName** *N*, che inizia con **TableName1**.  È possibile eseguire il mapping del nome della tabella generato automaticamente sul nome che si desidera specificare per la tabella nel **DataSet**.  Per un **SelectCommand** che restituisce le due tabelle **Customers** e **Orders**, ad esempio, si esegue la chiamata seguente a **Fill**.  
+## <a name="handling-multiple-result-sets"></a>Gestione di più set di risultati  
+ Se il **SelectCommand** restituisce più tabelle, **riempimento** genera automaticamente i nomi di tabella con valori incrementali per le tabelle il **set di dati**, che inizia con il specificato nome di tabella e continuando nel formato **TableName** *N*, a partire da **TableName1**. È possibile utilizzare i mapping di tabella per il mapping del nome della tabella generato automaticamente in un nome che si desidera specificare per la tabella di **DataSet**. Ad esempio, per un **SelectCommand** che restituisce due tabelle, **clienti** e **ordini**, eseguire la chiamata seguente a **riempimento**.  
   
 ```  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- Vengono create due tabelle nell'oggetto **DataSet**: **Customers** e **Customers1**.  È possibile usare i mapping di tabelle per fare in modo che il nome della seconda tabella sia **Orders** anziché **Customers1**.  A tale scopo, eseguire il mapping della tabella di origine di **Customers1** sulla tabella **Orders** del **DataSet**, come illustrato nell'esempio seguente.  
+ Cui vengono create due tabelle di **DataSet**: **clienti** e **Customers1**. È possibile utilizzare i mapping di tabella per assicurarsi che la seconda tabella è denominata **ordini** anziché **Customers1**. A tale scopo, eseguire il mapping di tabella di origine della **Customers1** per il **DataSet** tabella **ordini**, come illustrato nell'esempio seguente.  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## Vedere anche  
- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,23 +1,26 @@
 ---
-title: "Procedura dettagliata: generazione SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura dettagliata: generazione SQL'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8c19c459bf3b62b7e1d7e2917e09717c246e728c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura dettagliata: generazione SQL
-In questo argomento viene illustrata la procedura di generazione SQL nel [provider di esempio](http://go.microsoft.com/fwlink/?LinkId=180616).  Nella query Entity SQL seguente viene usato il modello incluso nel provider di esempio:  
+# <a name="walkthrough-sql-generation"></a>Procedura dettagliata: generazione SQL
+In questo argomento viene illustrato come modalità di generazione SQL nel [Provider di esempio](http://go.microsoft.com/fwlink/?LinkId=180616). Nella query Entity SQL seguente viene usato il modello incluso nel provider di esempio:  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -112,56 +115,56 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## Prima fase della generazione SQL: visita dell'albero delle espressioni  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Prima fase della generazione SQL: visita dell'albero delle espressioni  
  Nella figura seguente viene illustrato lo stato vuoto iniziale del visitatore.  Nell'argomento vengono illustrate solo le proprietà che si riferiscono alla descrizione della procedura dettagliata.  
   
- ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5\-4fb9\-4bc3\-8589\-d566512d9703")  
+ ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
   
- Quando si visita il nodo Project, viene effettuata la chiamata a VisitInputExpression sul relativo input \(Join4\), che attiva la visita di Join4 mediante il metodo VisitJoinExpression.  Poiché si tratta di un join di livello superiore, IsParentAJoin restituisce false e un nuovo oggetto SqlSelectStatement \(SelectStatement0\) viene creato e inserito nello stack di istruzioni SELECT.  Viene inoltre inserito un nuovo ambito \(scope0\) nella tabella dei simboli.  Prima della visita del primo input di sinistra \(Left\) del join, nello stack IsParentAJoin viene inserito "true".  Prima della visita di Join1, ovvero l'input di sinistra di Join4, lo stato del visitatore corrisponde a quello illustrato nella figura che segue.  
+ Quando si visita il nodo Project, viene effettuata la chiamata a VisitInputExpression sul relativo input (Join4), che attiva la visita di Join4 mediante il metodo VisitJoinExpression. Poiché si tratta di un join di livello superiore, IsParentAJoin restituisce false e un nuovo oggetto SqlSelectStatement (SelectStatement0) viene creato e inserito nello stack di istruzioni SELECT. Viene inoltre inserito un nuovo ambito (scope0) nella tabella dei simboli. Prima della visita del primo input di sinistra (Left) del join, nello stack IsParentAJoin viene inserito "true". Prima della visita di Join1, ovvero l'input di sinistra di Join4, lo stato del visitatore corrisponde a quello illustrato nella figura che segue.  
   
- ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f\-6166\-44ea\-8e74\-c5001d5d5d79")  
+ ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
   
- Quando il metodo di visita del join viene richiamato su Join4, IsParentAJoin è true e pertanto riusa l'istruzione Select corrente SelectStatement0.  Viene immesso un nuovo ambito \(scope1\).  Prima di visitare l'elemento figlio di sinistra, Extent1, nello stack IsParentAJoin viene inserito un altro valore true.  
+ Quando il metodo di visita del join viene richiamato su Join4, IsParentAJoin è true e pertanto riusa l'istruzione Select corrente SelectStatement0. Viene immesso un nuovo ambito (scope1). Prima di visitare l'elemento figlio di sinistra, Extent1, nello stack IsParentAJoin viene inserito un altro valore true.  
   
- Poiché IsParentAJoin restituisce true, quando viene visitato Extent1 restituisce un oggetto SqlBuilder contenente "\[dbo\].\[Products\]".  Il controllo viene restituito al metodo che visita Join4.  Viene estratta una voce da IsParentAJoin e viene chiamato l'oggetto ProcessJoinInputResult, con la conseguente aggiunta del risultato della visita di Extent1 alla clausola From di SelectStatement0.  Un nuovo simbolo from, symbol\_Extent1, per il nome dell'associazione di input "Extent1" viene creato e aggiunto all'oggetto FromExtents di SelectStatement0. "As" e symbol\_Extent1 vengono inoltre aggiunti alla clausola from.  Una nuova voce viene aggiunta a AllExtentNames per "Extent1" con il valore 0.  Una nuova voce viene aggiunta all'ambito corrente nella tabella dei simboli per associare "Extent1" al relativo simbolo symbol\_Extent1.  Symbol\_Extent1 viene inoltre aggiunto all'oggetto AllJoinExtents di SqlSelectStatement.  
+ Poiché IsParentAJoin restituisce true, quando viene visitato Extent1 restituisce un oggetto SqlBuilder contenente "[dbo].[Products]". Il controllo viene restituito al metodo che visita Join4. Viene estratta una voce da IsParentAJoin e viene chiamato l'oggetto ProcessJoinInputResult, con la conseguente aggiunta del risultato della visita di Extent1 alla clausola From di SelectStatement0. Un nuovo simbolo from, symbol_Extent1, per il nome dell'associazione di input "Extent1" viene creato e aggiunto all'oggetto FromExtents di SelectStatement0. "As" e symbol_Extent1 vengono inoltre aggiunti alla clausola from. Una nuova voce viene aggiunta a AllExtentNames per "Extent1" con il valore 0. Una nuova voce viene aggiunta all'ambito corrente nella tabella dei simboli per associare "Extent1" al relativo simbolo symbol_Extent1. Symbol_Extent1 viene inoltre aggiunto all'oggetto AllJoinExtents di SqlSelectStatement.  
   
- Prima della visita dell'input di destra \(Right\) di Join1, "LEFT OUTER JOIN" viene aggiunto alla clausola From di SelectStatement0.  Poiché l'input di destra è un'espressione Scan, nello stack IsParentAJoin viene nuovamente inserito il valore true.  Lo stato prima della visita dell'input di destra viene illustrato nella figura che segue.  
+ Prima della visita dell'input di destra (Right) di Join1, "LEFT OUTER JOIN" viene aggiunto alla clausola From di SelectStatement0. Poiché l'input di destra è un'espressione Scan, nello stack IsParentAJoin viene nuovamente inserito il valore true. Lo stato prima della visita dell'input di destra viene illustrato nella figura che segue.  
   
- ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b\-7ff6\-4836\-b209\-e16166304fdc")  
+ ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
   
- L'input di destra viene elaborato esattamente come l'input di sinistra.  Lo stato dopo la visita dell'input di destra viene illustrato nella figura che segue.  
+ L'input di destra viene elaborato esattamente come l'input di sinistra. Lo stato dopo la visita dell'input di destra viene illustrato nella figura che segue.  
   
- ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99\-7256\-4c63\-aaa9\-c2d13f18a3d8")  
+ ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- Il valore "false" successivo viene inserito nello stack IsParentAJoin e la condizione di join Var\(Extent1\).CategoryID \=\= Var\(Extent2\).CategoryID viene elaborata.  Var\(Extenent1\) viene risolto in \<symbol\_Extent1\> dopo una ricerca nella tabella dei simboli.  Poiché l'istanza viene risolta in un simbolo semplice, in seguito all'elaborazione di Var\(Extent1\).CategoryID, viene restituito un oggetto SqlBuilder con \<symbol1\>."CategoryID".  Analogamente, viene elaborato l'altro lato del confronto e il risultato della visita della condizione di join viene aggiunto alla clausola FROM di SelectStatement1 e il valore "false" viene estratto dallo stack IsParentAJoin.  
+ Il valore "false" successivo viene inserito nello stack IsParentAJoin e la condizione di join Var(Extent1).CategoryID == Var(Extent2).CategoryID viene elaborata. Var(Extenent1) viene risolto in <symbol_Extent1> dopo una ricerca nella tabella dei simboli. Poiché l'istanza viene risolto in un simbolo semplice, in seguito all'elaborazione Var(Extent1). CategoryID, un oggetto SqlBuilder con \<symbol1 >. " Viene restituito CategoryID". Analogamente, viene elaborato l'altro lato del confronto e il risultato della visita della condizione di join viene aggiunto alla clausola FROM di SelectStatement1 e il valore "false" viene estratto dallo stack IsParentAJoin.  
   
  A questo punto, l'elaborazione di Join1 è completa e viene estratto un ambito dalla tabella dei simboli.  
   
- Il controllo viene restituito all'elaborazione di Join4, ovvero l'elemento padre di Join1.  Poiché l'elemento figlio ha riutilizzato l'istruzione Select, gli extent di Join1 vengono sostituiti con un singolo simbolo di Join \<joinSymbol\_Join1\>.  Viene inoltre aggiunta una nuova voce alla tabella dei simboli per associare Join1 con \<joinSymbol\_Join1\>.  
+ Il controllo viene restituito all'elaborazione di Join4, ovvero l'elemento padre di Join1. Poiché l'elemento figlio ha riutilizzato l'istruzione Select, gli extent di Join1 vengono sostituiti con un singolo simbolo di Join <joinSymbol_Join1>. Viene inoltre aggiunta una nuova voce alla tabella dei simboli per associare Join1 con <joinSymbol_Join1>.  
   
- Il successivo nodo da elaborare è Join3, il secondo elemento figlio di Join4.  Poiché è un elemento figlio di destra, viene inserito il valore "false" nello stack IsParentAJoin.  Lo stato del visitatore in questa fase viene illustrato nella figura che segue.  
+ Il successivo nodo da elaborare è Join3, il secondo elemento figlio di Join4. Poiché è un elemento figlio di destra, viene inserito il valore "false" nello stack IsParentAJoin. Lo stato del visitatore in questa fase viene illustrato nella figura che segue.  
   
- ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3\-fcdd\-4649\-9089\-24385be7e423")  
+ ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- Per Join3, IsParentAJoin restituisce false e deve avviare un nuovo oggetto SqlSelectStatement \(SelectStatement1\) e inserirlo nello stack.  L'elaborazione continua come per i join precedenti, viene inserito un nuovo ambito nello stack e gli elementi figlio vengono elaborati.  L'elemento figlio di sinistra è un extent \(Extent3\) mentre l'elemento figlio di destra è un join \(Join2\) che deve inoltre avviare un nuovo oggetto SqlSelectStatement: SelectStatement2.  Anche gli elementi figlio di Join2 sono extent e vengono aggregati in SelectStatement2.  
+ Per Join3, IsParentAJoin restituisce false e deve avviare un nuovo oggetto SqlSelectStatement (SelectStatement1) e inserirlo nello stack. L'elaborazione continua come per i join precedenti, viene inserito un nuovo ambito nello stack e gli elementi figlio vengono elaborati. L'elemento figlio di sinistra è un extent (Extent3) mentre l'elemento figlio di destra è un join (Join2) che deve inoltre avviare un nuovo oggetto SqlSelectStatement: SelectStatement2. Anche gli elementi figlio di Join2 sono extent e vengono aggregati in SelectStatement2.  
   
- Lo stato del visitatore subito dopo la visita di Join2, ma prima che ne venga eseguita la post\-elaborazione \(ProcessJoinInputResult\), viene illustrato nella figura che segue:  
+ Lo stato del visitatore subito dopo la visita di Join2, ma prima che ne venga eseguita la post-elaborazione (ProcessJoinInputResult), viene illustrato nella figura che segue:  
   
- ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f\-8b09\-4c99\-b411\-40af239c3c4d")  
+ ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
- Nella figura precedente SelectStatement2 viene illustrato come oggetto mobile in quanto è stato estratto dallo stack, ma non ancora sottoposto alla post\-elaborazione da parte dell'elemento padre.  Deve essere aggiunto alla parte FROM dell'elemento padre, ma non è un'istruzione SQL completa se non include una clausola SELECT.  A questo punto le colonne predefinite, ovvero tutte le colonne prodotte dai relativi input, vengono aggiunte all'elenco di selezione mediante il metodo AddDefaultColumns.  AddDefaultColumns scorre i simboli in FromExtents e per ogni simbolo aggiunge tutte le colonne incluse nell'ambito.  Per un simbolo semplice, analizza il tipo di simbolo per recuperarne tutte le proprietà da aggiungere.  Popola inoltre il dizionario AllColumnNames con i nomi di colonna.  L'oggetto SelectStatement2 completo viene aggiunto alla clausola FROM di SelectStatement1.  
+ Nella figura precedente SelectStatement2 viene illustrato come oggetto mobile in quanto è stato estratto dallo stack, ma non ancora sottoposto alla post-elaborazione da parte dell'elemento padre. Deve essere aggiunto alla parte FROM dell'elemento padre, ma non è un'istruzione SQL completa se non include una clausola SELECT. A questo punto le colonne predefinite, ovvero tutte le colonne prodotte dai relativi input, vengono aggiunte all'elenco di selezione mediante il metodo AddDefaultColumns. AddDefaultColumns scorre i simboli in FromExtents e per ogni simbolo aggiunge tutte le colonne incluse nell'ambito. Per un simbolo semplice, analizza il tipo di simbolo per recuperarne tutte le proprietà da aggiungere. Popola inoltre il dizionario AllColumnNames con i nomi di colonna. L'oggetto SelectStatement2 completo viene aggiunto alla clausola FROM di SelectStatement1.  
   
- Successivamente, viene creato un nuovo simbolo di join per rappresentare Join2. Tale simbolo viene contrassegnato come join annidato, aggiunto all'oggetto AllJoinExtents di SelectStatement1 e infine alla tabella dei simboli.  È ora necessario elaborare la condizione di join di Join3, Var\(Extent3\).OrderID \= Var\(Join2\).Extent4.OrderID.  L'elaborazione del lato sinistro è simile alla condizione di join di Join1.  L'elaborazione del lato destro "Var\(Join2\).Extent4.OrderID" è tuttavia diversa in quanto è richiesta la bidimensionalità del join.  
+ Successivamente, viene creato un nuovo simbolo di join per rappresentare Join2. Tale simbolo viene contrassegnato come join annidato, aggiunto all'oggetto AllJoinExtents di SelectStatement1 e infine alla tabella dei simboli.  È ora necessario elaborare la condizione di join di Join3, Var(Extent3).OrderID = Var(Join2).Extent4.OrderID. L'elaborazione del lato sinistro è simile alla condizione di join di Join1. L'elaborazione del lato destro "Var(Join2).Extent4.OrderID" è tuttavia diversa in quanto è richiesta la bidimensionalità del join.  
   
- Nella figura che segue viene illustrato lo stato del visitatore prima dell'elaborazione dell'oggetto DbPropertyExpression "Var\(Join2\).Extent4.OrderID".  
+ Nella figura che segue viene illustrato lo stato del visitatore prima dell'elaborazione dell'oggetto DbPropertyExpression "Var(Join2).Extent4.OrderID".  
   
- Si consideri il modo in cui viene visitato "Var\(Join2\).Extent4.OrderID".  Viene innanzitutto visitata la proprietà dell'istanza "Var\(Join2\).Extent4", che rappresenta un altro oggetto DbPropertyExpression che visita prima la propria istanza "Var\(Join2\)".  Nell'ambito superiore della tabella dei simboli "Join2" viene risolto in \<joinSymbol\_join2\>.  Nel metodo di visita per l'oggetto DbPropertyExpression che elabora "Var\(Join2\).Extent4" si noterà che è stato restituito un simbolo di join durante la visita dell'istanza e che è necessaria la bidimensionalità.  
+ Si consideri il modo in cui viene visitato "Var(Join2).Extent4.OrderID". Viene innanzitutto visitata la proprietà dell'istanza "Var(Join2).Extent4", che rappresenta un altro oggetto DbPropertyExpression che visita prima la propria istanza "Var(Join2)". Nell'ambito superiore della tabella dei simboli "Join2" viene risolto in <joinSymbol_join2>. Nel metodo di visita per l'oggetto DbPropertyExpression che elabora "Var(Join2).Extent4" si noterà che è stato restituito un simbolo di join durante la visita dell'istanza e che è necessaria la bidimensionalità.  
   
- Poiché si tratta di un join annidato, viene cercata la proprietà "Extent4" nel dizionario NameToExtent del simbolo di join, che viene risolta in \<symbol\_Extent4\>, e viene restituito un nuovo oggetto SymbolPair\(\<joinSymbol\_join2\>, \<symbol\_Extent4\>\).  Poiché viene restituita una coppia di simboli dall'elaborazione dell'istanza di "Var\(Join2\).Extent4.OrderID", la proprietà "OrderID" viene risolta dall'oggetto ColumnPart di tale coppia di simboli \(\<symbol\_Extent4\>\), che include un elenco di colonne dell'extent che rappresenta.  "Var\(Join2\).Extent4.OrderID" viene pertanto risolto in { \<joinSymbol\_Join2\>, ".", \<symbol\_OrderID\>}.  
+ Poiché si tratta di un join annidato, viene cercata la proprietà "Extent4" nel dizionario NameToExtent del simbolo di join, che viene risolta in <symbol_Extent4>, e viene restituito un nuovo oggetto SymbolPair(<joinSymbol_join2>, <symbol_Extent4>). Poiché viene restituita una coppia di simboli dall'elaborazione dell'istanza di "Var(Join2).Extent4.OrderID", la proprietà "OrderID" viene risolta dall'oggetto ColumnPart di tale coppia di simboli (<symbol_Extent4>), che include un elenco di colonne dell'extent che rappresenta. "Var(Join2).Extent4.OrderID" viene pertanto risolto in { <joinSymbol_Join2>, ".", <symbol_OrderID>}.  
   
- La condizione di join di Join4 viene elaborata in modo analogo.  Il controllo viene restituito al metodo VisitInputExpression che ha elaborato il progetto di livello superiore.  Analizzando FromExtents dell'oggetto SelectStatement0 restituito, si noterà che l'input viene identificato come un join e rimuove gli extent originali sostituendoli con un nuovo extent che include solo il simbolo di join.  Viene aggiornata anche la tabella dei simboli e viene quindi elaborata la parte relativa alla proiezione del progetto.  La risoluzione delle proprietà e la bidimensionalità degli extent del join corrispondono a quanto descritto in precedenza.  
+ La condizione di join di Join4 viene elaborata in modo analogo. Il controllo viene restituito al metodo VisitInputExpression che ha elaborato il progetto di livello superiore. Analizzando FromExtents dell'oggetto SelectStatement0 restituito, si noterà che l'input viene identificato come un join e rimuove gli extent originali sostituendoli con un nuovo extent che include solo il simbolo di join. Viene aggiornata anche la tabella dei simboli e viene quindi elaborata la parte relativa alla proiezione del progetto. La risoluzione delle proprietà e la bidimensionalità degli extent del join corrispondono a quanto descritto in precedenza.  
   
- ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9\-ea2e\-40ae\-accc\-a10e18e28b81")  
+ ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
   
  Viene infine prodotto l'oggetto SqlSelectStatement seguente:  
   
@@ -199,12 +202,12 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### Seconda fase della generazione SQL: generazione della stringa di comando  
- Nella seconda fase vengono prodotti i nomi effettivi dei simboli e vengono descritti solo i simboli che rappresentano le colonne denominate "OrderID", in quanto in questo caso è necessario risolvere un conflitto.  Tali nomi sono evidenziati in SqlSelectStatement.  Si noti che i suffissi usati nella figura servono solo a indicare che si tratta di istanze differenti e non per rappresentare nuovi nomi, poiché in questa fase i nomi finali \(probabilmente diversi da quelli originali\) non sono stati ancora assegnati.  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Seconda fase della generazione SQL: generazione della stringa di comando  
+ Nella seconda fase vengono prodotti i nomi effettivi dei simboli e vengono descritti solo i simboli che rappresentano le colonne denominate "OrderID", in quanto in questo caso è necessario risolvere un conflitto. Tali nomi sono evidenziati in SqlSelectStatement. Si noti che i suffissi usati nella figura servono solo a indicare che si tratta di istanze differenti e non per rappresentare nuovi nomi, poiché in questa fase i nomi finali (probabilmente diversi da quelli originali) non sono stati ancora assegnati.  
   
- Il primo simbolo da rinominare è \<symbol\_OrderID\>.  Il nuovo nome assegnato è "OrderID1", dove 1 è contrassegnato come ultimo suffisso usato per "OrderID" e il simbolo è contrassegnato come da non rinominare.  Viene quindi individuato il primo utilizzo di \<symbol\_OrderID\_2\>.  Quest'ultimo viene rinominato in modo da usare il successivo suffisso disponibile \("OrderID2"\) e nuovamente contrassegnato come da non rinominare, in modo che non venga rinominato al successivo utilizzo.  Questa stessa procedura viene eseguita anche per \<symbol\_OrderID\_3\>.  
+ Il primo simbolo da rinominare è <symbol_OrderID>. Il nuovo nome assegnato è "OrderID1", dove 1 è contrassegnato come ultimo suffisso usato per "OrderID" e il simbolo è contrassegnato come da non rinominare. Viene quindi individuato il primo utilizzo di <symbol_OrderID_2>. Quest'ultimo viene rinominato in modo da usare il successivo suffisso disponibile ("OrderID2") e nuovamente contrassegnato come da non rinominare, in modo che non venga rinominato al successivo utilizzo. Questa stessa procedura viene eseguita anche per <symbol_OrderID_3>.  
   
  Alla fine della seconda fase viene generata l'istruzione SQL finale.  
   
-## Vedere anche  
- [Generazione di comandi SQL nel provider di esempio](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Vedere anche  
+ [Generazione SQL nel Provider di esempio](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
