@@ -1,44 +1,43 @@
 ---
-title: "Considerazioni relative alla distribuzione (Entity Framework) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Considerazioni sulla distribuzione (Entity Framework)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Considerazioni relative alla distribuzione (Entity Framework)
-In questo argomento vengono fornite informazioni sulla distribuzione di applicazioni che usano ADO.NET Entity Framework per l'accesso ai dati.  Per altre informazioni su Entity Framework, vedere [Guida introduttiva](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
+# <a name="deployment-considerations-entity-framework"></a><span data-ttu-id="7bae0-102">Considerazioni sulla distribuzione (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="7bae0-102">Deployment Considerations (Entity Framework)</span></span>
+<span data-ttu-id="7bae0-103">In questo argomento vengono fornite informazioni sulla distribuzione di applicazioni che usano ADO.NET Entity Framework per l'accesso ai dati.</span><span class="sxs-lookup"><span data-stu-id="7bae0-103">This topic provides information about deploying applications that use the ADO.NET Entity Framework for data access.</span></span> <span data-ttu-id="7bae0-104">Per ulteriori informazioni su Entity Framework, vedere [Introduzione](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span><span class="sxs-lookup"><span data-stu-id="7bae0-104">For more information about the Entity Framework, see [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span></span>  
   
- Entity Framework fornisce un set di strumenti che si integrano con Visual Studio e semplificano le attività di sviluppo in questo ambiente.  Per altre informazioni, vedere [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/it-it/91076853-0881-421b-837a-f582f36be527).  In questo argomento non viene descritto come usare le tecnologie specifiche per distribuire un'applicazione basata su Entity Framework.  
+ <span data-ttu-id="7bae0-105">Entity Framework fornisce un set di strumenti che si integrano con Visual Studio e semplificano le attività di sviluppo in questo ambiente.</span><span class="sxs-lookup"><span data-stu-id="7bae0-105">The Entity Framework provides a set of tools that integrate with and make it easier to develop in Visual Studio.</span></span> <span data-ttu-id="7bae0-106">Per ulteriori informazioni, vedere [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span><span class="sxs-lookup"><span data-stu-id="7bae0-106">For more information, see [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span></span> <span data-ttu-id="7bae0-107">In questo argomento non viene descritto come usare le tecnologie specifiche per distribuire un'applicazione basata su Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="7bae0-107">This topic does not describe how to use specific technologies to deploy an Entity Framework–based application.</span></span>  
   
- Visual Studio include strumenti per la distribuzione di applicazioni, ad esempio ClickOnce.  Per altre informazioni, vedere [Distribuzione di applicazioni e componenti](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md) nella documentazione di Visual Studio.  
+ <span data-ttu-id="7bae0-108">Visual Studio include strumenti per la distribuzione di applicazioni, ad esempio ClickOnce.</span><span class="sxs-lookup"><span data-stu-id="7bae0-108">Visual Studio provides facilities for distributing and deploying applications, such as ClickOnce deployment.</span></span> <span data-ttu-id="7bae0-109">Per ulteriori informazioni, vedere [distribuzione di applicazioni e componenti](https://msdn.microsoft.com/library/wtzawcsz) nella documentazione di Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="7bae0-109">For more information, see [Deploying Applications and Components](https://msdn.microsoft.com/library/wtzawcsz) in the Visual Studio documentation.</span></span>  
   
- Le considerazioni seguenti riguardano la distribuzione di un'applicazione che usa Entity Framework:  
+ <span data-ttu-id="7bae0-110">Le considerazioni seguenti riguardano la distribuzione di un'applicazione che usa Entity Framework:</span><span class="sxs-lookup"><span data-stu-id="7bae0-110">The following considerations apply when you deploy an application that uses the Entity Framework:</span></span>  
   
--   Entity Framework è un componente di .NET Framework a partire da .NET Framework 3.5 Service Pack 1 \(SP1\).  Quando si distribuisce un'applicazione basata su Entity Framework, è necessario verificare che sia installato .NET Framework 3.5 SP1 o una versione successiva.  
+-   <span data-ttu-id="7bae0-111">Entity Framework è un componente di .NET Framework a partire da .NET Framework 3.5 Service Pack 1 (SP1).</span><span class="sxs-lookup"><span data-stu-id="7bae0-111">The Entity Framework is a component of the .NET Framework starting with the .NET Framework 3.5 Service Pack 1 (SP1).</span></span> <span data-ttu-id="7bae0-112">Quando si distribuisce un'applicazione basata su Entity Framework, è necessario verificare che sia installato .NET Framework 3.5 SP1 o una versione successiva.</span><span class="sxs-lookup"><span data-stu-id="7bae0-112">You must ensure that the .NET Framework 3.5 SP1 or a later version is installed when deploying an Entity Framework–based application.</span></span>  
   
--   Quando viene generato un modello concettuale tramite la procedura guidata Entity Data Model, nel file di configurazione dell'applicazione viene creata una stringa di connessione.  I file di modello e di mapping possono essere incorporati come risorse dell'applicazione oppure essere copiati nella directory di output.  Per impostazione predefinita, questi file vengono distribuiti come risorse dell'applicazione incorporate.  Usare la proprietà `Metadata Artifact Processing` del file di Entity Designer per selezionare una di queste opzioni.  Per altre informazioni, vedere [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/it-it/e2c9820f-1705-457e-9fdb-8b289f3179b4).  
+-   <span data-ttu-id="7bae0-113">Quando viene generato un modello concettuale tramite la procedura guidata Entity Data Model, nel file di configurazione dell'applicazione viene creata una stringa di connessione.</span><span class="sxs-lookup"><span data-stu-id="7bae0-113">When a conceptual model is generated by the Entity Data Model Wizard, a connection string is created in the application configuration file.</span></span> <span data-ttu-id="7bae0-114">I file di modello e di mapping possono essere incorporati come risorse dell'applicazione oppure essere copiati nella directory di output.</span><span class="sxs-lookup"><span data-stu-id="7bae0-114">Model and mapping files can be embedded as application resources or they can be copied to the output directory.</span></span> <span data-ttu-id="7bae0-115">Per impostazione predefinita, questi file vengono distribuiti come risorse dell'applicazione incorporate.</span><span class="sxs-lookup"><span data-stu-id="7bae0-115">By default, they are deployed as embedded application resources.</span></span> <span data-ttu-id="7bae0-116">Usare la proprietà `Metadata Artifact Processing` del file di Entity Designer per selezionare una di queste opzioni.</span><span class="sxs-lookup"><span data-stu-id="7bae0-116">Use the `Metadata Artifact Processing` property of the Entity Designer file to select one of these options.</span></span> <span data-ttu-id="7bae0-117">Per ulteriori informazioni, vedere [procedura: copiare file di modello e Mapping alla Directory di Output](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span><span class="sxs-lookup"><span data-stu-id="7bae0-117">For more information, see [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span></span>  
   
--   Assicurarsi che le informazioni sul modello e sul mapping \(espresse in Conceptual Schema Definition Language \(CSDL\), Store Schema Definition Language \(SSDL\) e Mapping Specification Language \(MSL\)\) vengano distribuite insieme all'applicazione e nella posizione specificata dalla stringa di connessione.  Per altre informazioni, vedere [Stringhe di connessione](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+-   <span data-ttu-id="7bae0-118">Assicurarsi che le informazioni sul modello e sul mapping (espresse in Conceptual Schema Definition Language (CSDL), Store Schema Definition Language (SSDL) e Mapping Specification Language (MSL)) vengano distribuite insieme all'applicazione e nella posizione specificata dalla stringa di connessione.</span><span class="sxs-lookup"><span data-stu-id="7bae0-118">Ensure that the model and mapping information (expressed in conceptual schema definition language (CSDL), store schema definition language (SSDL), and mapping specification language (MSL)) is deployed together with the application and in the location specified by the connection string.</span></span> <span data-ttu-id="7bae0-119">Per ulteriori informazioni, vedere [le stringhe di connessione](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span><span class="sxs-lookup"><span data-stu-id="7bae0-119">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span>  
   
--   Quando si incorporano informazioni sul modello e sul mapping come risorse dell'applicazione, è necessario ricompilare e ridistribuire l'applicazione ogni volta che il modello concettuale viene aggiornato.  
+-   <span data-ttu-id="7bae0-120">Quando si incorporano informazioni sul modello e sul mapping come risorse dell'applicazione, è necessario ricompilare e ridistribuire l'applicazione ogni volta che il modello concettuale viene aggiornato.</span><span class="sxs-lookup"><span data-stu-id="7bae0-120">When you embed model and mapping information as application resources, you must recompile and redeploy the application every time the conceptual model is updated.</span></span>  
   
--   Poiché Entity Framework è un componente di .NET Framework, può essere ridistribuito con l'applicazione, come consentito dal contratto di licenza di .NET Framework.  
+-   <span data-ttu-id="7bae0-121">Poiché Entity Framework è un componente di .NET Framework, può essere ridistribuito con l'applicazione, come consentito dal contratto di licenza di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7bae0-121">Because the Entity Framework is a component of the .NET Framework, it can be redistributed with your application as permitted by the .NET Framework license agreement.</span></span>  
   
-## Vedere anche  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)   
- [Considerazioni sullo sviluppo e sulla distribuzione](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a><span data-ttu-id="7bae0-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7bae0-122">See Also</span></span>  
+ [<span data-ttu-id="7bae0-123">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="7bae0-123">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="7bae0-124">Sviluppo e considerazioni sulla distribuzione</span><span class="sxs-lookup"><span data-stu-id="7bae0-124">Development and Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

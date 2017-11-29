@@ -1,136 +1,117 @@
 ---
 title: Eventi (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 84f8385e1b2f16c4bcfa53ef2c77e1f0cf61e5e3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="events-visual-basic"></a>Eventi (Visual Basic)
-Sebbene sia possibile rappresentare graficamente un progetto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] come una serie di procedure eseguite in sequenza, in realtà, la maggior parte dei programmi è basata su eventi, ovvero il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
+# <a name="events-visual-basic"></a><span data-ttu-id="8f7c5-102">Eventi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f7c5-102">Events (Visual Basic)</span></span>
+<span data-ttu-id="8f7c5-103">Sebbene sia possibile rappresentare graficamente un progetto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] come una serie di procedure eseguite in sequenza, in realtà, la maggior parte dei programmi è basata su eventi, ovvero il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-103">While you might visualize a [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.</span></span>  
   
- Un evento è un segnale che informa un'applicazione che si è verificato qualcosa di importante. Ad esempio, quando un utente fa clic su un controllo in un form, il form può generare un evento `Click` e chiamare una routine che gestisce l'evento. Gli eventi consentono anche le comunicazioni tra attività separate. Si supponga, ad esempio, che un'applicazione esegua un'attività di ordinamento separatamente dall'applicazione principale. Se un utente annulla l'ordinamento, l'applicazione può inviare un evento di annullamento per segnalare la necessità di interrompere il processo di ordinamento.  
+ <span data-ttu-id="8f7c5-104">Un evento è un segnale che informa un'applicazione che si è verificato qualcosa di importante.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-104">An event is a signal that informs an application that something important has occurred.</span></span> <span data-ttu-id="8f7c5-105">Ad esempio, quando un utente fa clic su un controllo in un form, il form può generare un evento `Click` e chiamare una routine che gestisce l'evento.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-105">For example, when a user clicks a control on a form, the form can raise a `Click` event and call a procedure that handles the event.</span></span> <span data-ttu-id="8f7c5-106">Gli eventi consentono anche le comunicazioni tra attività separate.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-106">Events also allow separate tasks to communicate.</span></span> <span data-ttu-id="8f7c5-107">Si supponga, ad esempio, che un'applicazione esegua un'attività di ordinamento separatamente dall'applicazione principale.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-107">Say, for example, that your application performs a sort task separately from the main application.</span></span> <span data-ttu-id="8f7c5-108">Se un utente annulla l'ordinamento, l'applicazione può inviare un evento di annullamento per segnalare la necessità di interrompere il processo di ordinamento.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-108">If a user cancels the sort, your application can send a cancel event instructing the sort process to stop.</span></span>  
   
-## <a name="event-terms-and-concepts"></a>Termini e concetti relativi agli eventi  
- Questa sezione descrive i termini e i concetti usati con gli eventi in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+## <a name="event-terms-and-concepts"></a><span data-ttu-id="8f7c5-109">Termini e concetti relativi agli eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-109">Event Terms and Concepts</span></span>  
+ <span data-ttu-id="8f7c5-110">Questa sezione descrive i termini e i concetti usati con gli eventi in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8f7c5-110">This section describes the terms and concepts used with events in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-### <a name="declaring-events"></a>Dichiarazione di eventi  
- Gli eventi vengono dichiarati all'interno di classi, strutture, moduli e interfacce tramite la parola chiave `Event`, come nell'esempio seguente:  
+### <a name="declaring-events"></a><span data-ttu-id="8f7c5-111">Dichiarazione di eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-111">Declaring Events</span></span>  
+ <span data-ttu-id="8f7c5-112">Gli eventi vengono dichiarati all'interno di classi, strutture, moduli e interfacce tramite la parola chiave `Event`, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="8f7c5-112">You declare events within classes, structures, modules, and interfaces using the `Event` keyword, as in the following example:</span></span>  
   
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
-### <a name="raising-events"></a>Generazione di eventi  
- Un evento può essere paragonato a un messaggio che annuncia che si è verificato qualcosa di importante. L'atto di trasmettere il messaggio viene definito *generazione* dell'evento. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], gli eventi vengono generati con l'istruzione `RaiseEvent`, come nell'esempio seguente:  
+### <a name="raising-events"></a><span data-ttu-id="8f7c5-113">Generazione di eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-113">Raising Events</span></span>  
+ <span data-ttu-id="8f7c5-114">Un evento può essere paragonato a un messaggio che annuncia che si è verificato qualcosa di importante.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-114">An event is like a message announcing that something important has occurred.</span></span> <span data-ttu-id="8f7c5-115">L'atto di trasmettere il messaggio viene definito *generazione* dell'evento.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-115">The act of broadcasting the message is called *raising* the event.</span></span> <span data-ttu-id="8f7c5-116">In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], gli eventi vengono generati con l'istruzione `RaiseEvent`, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="8f7c5-116">In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], you raise events with the `RaiseEvent` statement, as in the following example:</span></span>  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
- Gli eventi devono essere generati nell'ambito della classe, del modulo o della struttura in cui sono dichiarati. Ad esempio, una classe derivata non può generare eventi ereditati da una classe di base.  
+ <span data-ttu-id="8f7c5-117">Gli eventi devono essere generati nell'ambito della classe, del modulo o della struttura in cui sono dichiarati.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-117">Events must be raised within the scope of the class, module, or structure where they are declared.</span></span> <span data-ttu-id="8f7c5-118">Ad esempio, una classe derivata non può generare eventi ereditati da una classe di base.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-118">For example, a derived class cannot raise events inherited from a base class.</span></span>  
   
-### <a name="event-senders"></a>Mittenti di eventi  
- Qualsiasi oggetto in grado di generare un evento è un *mittente di eventi*, noto anche come *origine di eventi*. I form, i controlli e gli oggetti definiti dall'utente sono alcuni esempi di mittenti di eventi.  
+### <a name="event-senders"></a><span data-ttu-id="8f7c5-119">Mittenti di eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-119">Event Senders</span></span>  
+ <span data-ttu-id="8f7c5-120">Qualsiasi oggetto in grado di generare un evento è un *mittente di eventi*, noto anche come *origine di eventi*.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-120">Any object capable of raising an event is an *event sender*, also known as an *event source*.</span></span> <span data-ttu-id="8f7c5-121">I form, i controlli e gli oggetti definiti dall'utente sono alcuni esempi di mittenti di eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-121">Forms, controls, and user-defined objects are examples of event senders.</span></span>  
   
-### <a name="event-handlers"></a>Gestori eventi  
- I *gestori eventi* sono le routine chiamate quando si verifica un evento corrispondente. È possibile usare qualsiasi subroutine valida con una firma corrispondente come gestore eventi. Non è possibile usare una funzione come gestore eventi, tuttavia, perché non può restituire un valore all'origine di eventi.  
+### <a name="event-handlers"></a><span data-ttu-id="8f7c5-122">Gestori eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-122">Event Handlers</span></span>  
+ <span data-ttu-id="8f7c5-123">I *gestori eventi* sono le routine chiamate quando si verifica un evento corrispondente.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-123">*Event handlers* are procedures that are called when a corresponding event occurs.</span></span> <span data-ttu-id="8f7c5-124">È possibile usare qualsiasi subroutine valida con una firma corrispondente come gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-124">You can use any valid subroutine with a matching signature as an event handler.</span></span> <span data-ttu-id="8f7c5-125">Non è possibile usare una funzione come gestore eventi, tuttavia, perché non può restituire un valore all'origine di eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-125">You cannot use a function as an event handler, however, because it cannot return a value to the event source.</span></span>  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usa una convenzione di denominazione standard per i gestori eventi che combina il nome del mittente dell'evento, un carattere di sottolineatura e il nome dell'evento. Ad esempio, il nome dell'evento `Click` per un pulsante denominato `button1` sarebbe `Sub button1_Click`.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="8f7c5-126"> usa una convenzione di denominazione standard per i gestori eventi che combina il nome del mittente dell'evento, un carattere di sottolineatura e il nome dell'evento.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-126"> uses a standard naming convention for event handlers that combines the name of the event sender, an underscore, and the name of the event.</span></span> <span data-ttu-id="8f7c5-127">Ad esempio, il nome dell'evento `Click` per un pulsante denominato `button1` sarebbe `Sub button1_Click`.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-127">For example, the `Click` event of a button named `button1` would be named `Sub button1_Click`.</span></span>  
   
 > [!NOTE]
->  È consigliabile usare questa convenzione di denominazione durante la definizione dei gestori per gli eventi personalizzati, ma non è obbligatorio. Si può usare qualsiasi nome di subroutine valido.  
+>  <span data-ttu-id="8f7c5-128">È consigliabile usare questa convenzione di denominazione durante la definizione dei gestori per gli eventi personalizzati, ma non è obbligatorio. Si può usare qualsiasi nome di subroutine valido.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-128">We recommend that you use this naming convention when defining event handlers for your own events, but it is not required; you can use any valid subroutine name.</span></span>  
   
-## <a name="associating-events-with-event-handlers"></a>Associazione di eventi a gestori eventi  
- Un gestore eventi diventa utilizzabile solo dopo averlo associato a un evento mediante l'istruzione `Handles` o `AddHandler`.  
+## <a name="associating-events-with-event-handlers"></a><span data-ttu-id="8f7c5-129">Associazione di eventi a gestori eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-129">Associating Events with Event Handlers</span></span>  
+ <span data-ttu-id="8f7c5-130">Un gestore eventi diventa utilizzabile solo dopo averlo associato a un evento mediante l'istruzione `Handles` o `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-130">Before an event handler becomes usable, you must first associate it with an event by using either the `Handles` or `AddHandler` statement.</span></span>  
   
-### <a name="withevents-and-the-handles-clause"></a>WithEvents e clausola Handles  
- L'istruzione `WithEvents` e la clausola `Handles` offrono una modalità dichiarativa per specificare i gestori eventi. Un evento generato da un oggetto dichiarato con la parola chiave `WithEvents` può essere gestito da qualsiasi routine con un'istruzione `Handles` per tale evento, come illustrato nell'esempio seguente:  
+### <a name="withevents-and-the-handles-clause"></a><span data-ttu-id="8f7c5-131">WithEvents e clausola Handles</span><span class="sxs-lookup"><span data-stu-id="8f7c5-131">WithEvents and the Handles Clause</span></span>  
+ <span data-ttu-id="8f7c5-132">L'istruzione `WithEvents` e la clausola `Handles` offrono una modalità dichiarativa per specificare i gestori eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-132">The `WithEvents` statement and `Handles` clause provide a declarative way of specifying event handlers.</span></span> <span data-ttu-id="8f7c5-133">Un evento generato da un oggetto dichiarato con la parola chiave `WithEvents` può essere gestito da qualsiasi routine con un'istruzione `Handles` per tale evento, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="8f7c5-133">An event raised by an object declared with the `WithEvents` keyword can be handled by any procedure with a `Handles` statement for that event, as shown in the following example:</span></span>  
   
  [!code-vb[VbVbalrEvents#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_3.vb)]  
   
- L'istruzione `WithEvents` e la clausola `Handles` rappresentano spesso la scelta migliore per i gestori eventi, perché la sintassi dichiarativa che usano semplifica la scrittura del codice, la lettura e il debug per la gestione degli eventi. Tenere presenti, tuttavia, le limitazioni seguenti per l'uso delle variabili `WithEvents`:  
+ <span data-ttu-id="8f7c5-134">L'istruzione `WithEvents` e la clausola `Handles` rappresentano spesso la scelta migliore per i gestori eventi, perché la sintassi dichiarativa che usano semplifica la scrittura del codice, la lettura e il debug per la gestione degli eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-134">The `WithEvents` statement and the `Handles` clause are often the best choice for event handlers because the declarative syntax they use makes event handling easier to code, read and debug.</span></span> <span data-ttu-id="8f7c5-135">Tenere presenti, tuttavia, le limitazioni seguenti per l'uso delle variabili `WithEvents`:</span><span class="sxs-lookup"><span data-stu-id="8f7c5-135">However, be aware of the following limitations on the use of `WithEvents` variables:</span></span>  
   
--   Non è possibile usare una variabile `WithEvents` come variabile oggetto, ovvero non è possibile dichiararla come `Object`, ma è necessario specificare il nome della classe quando si dichiara la variabile.  
+-   <span data-ttu-id="8f7c5-136">Non è possibile usare una variabile `WithEvents` come variabile oggetto,</span><span class="sxs-lookup"><span data-stu-id="8f7c5-136">You cannot use a `WithEvents` variable as an object variable.</span></span> <span data-ttu-id="8f7c5-137">ovvero non è possibile dichiararla come `Object`, ma è necessario specificare il nome della classe quando si dichiara la variabile.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-137">That is, you cannot declare it as `Object`—you must specify the class name when you declare the variable.</span></span>  
   
--   Dato che gli eventi condivisi non sono associati a istanze di classe, non è possibile usare `WithEvents` per gestire in modo dichiarativo eventi condivisi. In modo analogo, non è possibile usare `WithEvents` o `Handles` per gestire gli eventi da `Structure`. In entrambi i casi, è possibile usare l'istruzione `AddHandler` per gestire tali eventi.  
+-   <span data-ttu-id="8f7c5-138">Poiché gli eventi condivisi non sono collegati a istanze della classe, è possibile utilizzare `WithEvents` per gestire in modo dichiarativo eventi condivisi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-138">Because shared events are not tied to class instances, you cannot use `WithEvents` to declaratively handle shared events.</span></span> <span data-ttu-id="8f7c5-139">In modo analogo, non è possibile usare `WithEvents` o `Handles` per gestire gli eventi da `Structure`.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-139">Similarly, you cannot use `WithEvents` or `Handles` to handle events from a `Structure`.</span></span> <span data-ttu-id="8f7c5-140">In entrambi i casi, è possibile usare l'istruzione `AddHandler` per gestire tali eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-140">In both cases, you can use the `AddHandler` statement to handle those events.</span></span>  
   
--   Non è possibile creare matrici di variabili `WithEvents`.  
+-   <span data-ttu-id="8f7c5-141">Non è possibile creare matrici di variabili `WithEvents`.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-141">You cannot create arrays of `WithEvents` variables.</span></span>  
   
- Le variabili `WithEvents` consentono a un unico gestore eventi di gestire uno o più tipi di evento oppure a uno o più gestori eventi di gestire lo stesso tipo di evento.  
+ <span data-ttu-id="8f7c5-142">Le variabili `WithEvents` consentono a un unico gestore eventi di gestire uno o più tipi di evento oppure a uno o più gestori eventi di gestire lo stesso tipo di evento.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-142">`WithEvents` variables allow a single event handler to handle one or more kind of event, or one or more event handlers to handle the same kind of event.</span></span>  
   
- Anche se la clausola `Handles` rappresenta la modalità standard per associare un evento a un gestore eventi, è limitata all'associazione di eventi a gestori eventi in fase di compilazione.  
+ <span data-ttu-id="8f7c5-143">Anche se la clausola `Handles` rappresenta la modalità standard per associare un evento a un gestore eventi, è limitata all'associazione di eventi a gestori eventi in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-143">Although the `Handles` clause is the standard way of associating an event with an event handler, it is limited to associating events with event handlers at compile time.</span></span>  
   
- In alcuni casi, ad esempio con gli eventi associati a form o controlli, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sottopone automaticamente a stub un gestore eventi vuoto e lo associa a un evento. Ad esempio, quando si fa doppio clic su un pulsante di comando in un form in modalità progettazione, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] crea un gestore eventi vuoto e una variabile `WithEvents` per il pulsante di comando, come nel codice seguente:  
+ <span data-ttu-id="8f7c5-144">In alcuni casi, ad esempio con gli eventi associati a form o controlli, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sottopone automaticamente a stub un gestore eventi vuoto e lo associa a un evento.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-144">In some cases, such as with events associated with forms or controls, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically stubs out an empty event handler and associates it with an event.</span></span> <span data-ttu-id="8f7c5-145">Ad esempio, quando si fa doppio clic su un pulsante di comando in un form in modalità progettazione, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] crea un gestore eventi vuoto e una variabile `WithEvents` per il pulsante di comando, come nel codice seguente:</span><span class="sxs-lookup"><span data-stu-id="8f7c5-145">For example, when you double-click a command button on a form in design mode, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] creates an empty event handler and a `WithEvents` variable for the command button, as in the following code:</span></span>  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
-### <a name="addhandler-and-removehandler"></a>AddHandler e RemoveHandler  
- L'istruzione `AddHandler` è simile alla clausola `Handles`, perché entrambe consentono di specificare un gestore eventi. Tuttavia, l'uso di `AddHandler` con `RemoveHandler` offre una maggiore flessibilità rispetto alla clausola `Handles`, perché consente di aggiungere, rimuovere e modificare dinamicamente il gestore eventi associato a un evento. Per gestire eventi condivisi o eventi da una struttura, è necessario usare `AddHandler`.  
+### <a name="addhandler-and-removehandler"></a><span data-ttu-id="8f7c5-146">AddHandler e RemoveHandler</span><span class="sxs-lookup"><span data-stu-id="8f7c5-146">AddHandler and RemoveHandler</span></span>  
+ <span data-ttu-id="8f7c5-147">L'istruzione `AddHandler` è simile alla clausola `Handles`, perché entrambe consentono di specificare un gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-147">The `AddHandler` statement is similar to the `Handles` clause in that both allow you to specify an event handler.</span></span> <span data-ttu-id="8f7c5-148">Tuttavia, l'uso di `AddHandler` con `RemoveHandler` offre una maggiore flessibilità rispetto alla clausola `Handles`, perché consente di aggiungere, rimuovere e modificare dinamicamente il gestore eventi associato a un evento.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-148">However, `AddHandler`, used with `RemoveHandler`, provides greater flexibility than the `Handles` clause, allowing you to dynamically add, remove, and change the event handler associated with an event.</span></span> <span data-ttu-id="8f7c5-149">Per gestire eventi condivisi o eventi da una struttura, è necessario usare `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-149">If you want to handle shared events or events from a structure, you must use `AddHandler`.</span></span>  
   
- `AddHandler` accetta due argomenti: il nome di un evento da un mittente di eventi, ad esempio un controllo e un'espressione che restituisce un delegato. Non è necessario specificare in modo esplicito la classe delegata quando si usa `AddHandler`, perché l'istruzione `AddressOf` restituisce sempre un riferimento al delegato. L'esempio seguente associa un gestore eventi a un evento generato da un oggetto:  
+ <span data-ttu-id="8f7c5-150">`AddHandler` accetta due argomenti: il nome di un evento da un mittente di eventi, ad esempio un controllo e un'espressione che restituisce un delegato.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-150">`AddHandler` takes two arguments: the name of an event from an event sender such as a control, and an expression that evaluates to a delegate.</span></span> <span data-ttu-id="8f7c5-151">Non è necessario specificare in modo esplicito la classe delegata quando si usa `AddHandler`, perché l'istruzione `AddressOf` restituisce sempre un riferimento al delegato.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-151">You do not need to explicitly specify the delegate class when using `AddHandler`, since the `AddressOf` statement always returns a reference to the delegate.</span></span> <span data-ttu-id="8f7c5-152">L'esempio seguente associa un gestore eventi a un evento generato da un oggetto:</span><span class="sxs-lookup"><span data-stu-id="8f7c5-152">The following example associates an event handler with an event raised by an object:</span></span>  
   
  [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
   
- `RemoveHandler`, che disconnette un evento da un gestore eventi, usa la stessa sintassi di `AddHandler`. Ad esempio:  
+ <span data-ttu-id="8f7c5-153">`RemoveHandler`, che disconnette un evento da un gestore eventi, usa la stessa sintassi di `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-153">`RemoveHandler`, which disconnects an event from an event handler, uses the same syntax as `AddHandler`.</span></span> <span data-ttu-id="8f7c5-154">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="8f7c5-154">For example:</span></span>  
   
  [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
   
- Nell'esempio seguente un gestore eventi viene associato a un evento e l'evento viene generato. Il gestore eventi intercetta l'evento e visualizza un messaggio.  
+ <span data-ttu-id="8f7c5-155">Nell'esempio seguente un gestore eventi viene associato a un evento e l'evento viene generato.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-155">In the following example, an event handler is associated with an event, and the event is raised.</span></span> <span data-ttu-id="8f7c5-156">Il gestore eventi intercetta l'evento e visualizza un messaggio.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-156">The event handler catches the event and displays a message.</span></span>  
   
- Il primo gestore eventi viene quindi rimosso e all'evento viene associato un diverso gestore eventi. Quando l'evento viene generato di nuovo, viene visualizzato un messaggio diverso.  
+ <span data-ttu-id="8f7c5-157">Il primo gestore eventi viene quindi rimosso e all'evento viene associato un diverso gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-157">Then the first event handler is removed and a different event handler is associated with the event.</span></span> <span data-ttu-id="8f7c5-158">Quando l'evento viene generato di nuovo, viene visualizzato un messaggio diverso.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-158">When the event is raised again, a different message is displayed.</span></span>  
   
- Infine, il secondo gestore eventi viene rimosso e viene generato l'evento per una terza volta. Dato che all'evento non è più associato un gestore eventi, non viene eseguita alcuna azione.  
+ <span data-ttu-id="8f7c5-159">Infine, il secondo gestore eventi viene rimosso e viene generato l'evento per una terza volta.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-159">Finally, the second event handler is removed and the event is raised for a third time.</span></span> <span data-ttu-id="8f7c5-160">Dato che all'evento non è più associato un gestore eventi, non viene eseguita alcuna azione.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-160">Because there is no longer an event handler associated with the event, no action is taken.</span></span>  
   
  [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
   
-## <a name="handling-events-inherited-from-a-base-class"></a>Gestione degli eventi ereditati da una classe di base  
- *Le classi derivate*, ovvero le classi che ereditano le caratteristiche da una classe di base, possono gestire gli eventi generati dalla rispettiva classe di base usando l'istruzione `Handles``MyBase`.  
+## <a name="handling-events-inherited-from-a-base-class"></a><span data-ttu-id="8f7c5-161">Gestione degli eventi ereditati da una classe di base</span><span class="sxs-lookup"><span data-stu-id="8f7c5-161">Handling Events Inherited from a Base Class</span></span>  
+ <span data-ttu-id="8f7c5-162">*Le classi derivate*, ovvero le classi che ereditano le caratteristiche da una classe di base, possono gestire gli eventi generati dalla rispettiva classe di base usando l'istruzione `Handles``MyBase`.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-162">*Derived classes*—classes that inherit characteristics from a base class—can handle events raised by their base class using the `Handles``MyBase` statement.</span></span>  
   
-#### <a name="to-handle-events-from-a-base-class"></a>Per gestire gli eventi da una classe di base  
+#### <a name="to-handle-events-from-a-base-class"></a><span data-ttu-id="8f7c5-163">Per gestire gli eventi da una classe di base</span><span class="sxs-lookup"><span data-stu-id="8f7c5-163">To handle events from a base class</span></span>  
   
--   Dichiarare un gestore eventi nella classe derivata aggiungendo un'istruzione `Handles MyBase.`*nomeevento* alla riga della dichiarazione della routine del gestore eventi, dove *nomeevento* è il nome dell'evento nella classe di base che si sta gestendo. Ad esempio:  
+-   <span data-ttu-id="8f7c5-164">Dichiarare un gestore eventi nella classe derivata aggiungendo un'istruzione `Handles MyBase.`*nomeevento* alla riga della dichiarazione della routine del gestore eventi, dove *nomeevento* è il nome dell'evento nella classe di base che si sta gestendo.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-164">Declare an event handler in the derived class by adding a `Handles MyBase.`*eventname* statement to the declaration line of your event-handler procedure, where *eventname* is the name of the event in the base class you are handling.</span></span> <span data-ttu-id="8f7c5-165">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="8f7c5-165">For example:</span></span>  
   
      [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
   
-## <a name="related-sections"></a>Sezioni correlate  
+## <a name="related-sections"></a><span data-ttu-id="8f7c5-166">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="8f7c5-166">Related Sections</span></span>  
   
-|Titolo|Descrizione|  
+|<span data-ttu-id="8f7c5-167">Titolo</span><span class="sxs-lookup"><span data-stu-id="8f7c5-167">Title</span></span>|<span data-ttu-id="8f7c5-168">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8f7c5-168">Description</span></span>|  
 |-----------|-----------------|  
-|[Procedura dettagliata: Dichiarazione e generazione di eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Descrizione dettagliata della procedura per dichiarare e generare eventi per una classe.|  
-|[Procedura dettagliata: Gestione di eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Illustra come scrivere una routine di gestore eventi.|  
-|[Procedura: Dichiarare eventi personalizzati per evitare il blocco](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Illustra come definire un evento personalizzato che consente la chiamata asincrona dei gestori eventi.|  
-|[Procedura: Dichiarare eventi personalizzati per proteggere la memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Illustra come definire un evento personalizzato che usa la memoria solo quando viene gestito l'evento.|  
-|[Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Elenca i problemi comuni che si verificano con i gestori eventi nei componenti ereditati.|  
-|[Eventi](../../../../standard/events/index.md)|Panoramica del modello di eventi usato in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
-|[Creazione di gestori eventi in Windows Form](https://msdn.microsoft.com/library/dacysss4.aspx)|Descrive come usare gli eventi associati agli oggetti di Windows Form.|  
-|[Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Panoramica dei delegati in Visual Basic.|
-
+|[<span data-ttu-id="8f7c5-169">Procedura dettagliata: Dichiarazione e generazione di eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-169">Walkthrough: Declaring and Raising Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|<span data-ttu-id="8f7c5-170">Descrizione dettagliata della procedura per dichiarare e generare eventi per una classe.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-170">Provides a step-by-step description of how to declare and raise events for a class.</span></span>|  
+|[<span data-ttu-id="8f7c5-171">Procedura dettagliata: Gestione di eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-171">Walkthrough: Handling Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|<span data-ttu-id="8f7c5-172">Illustra come scrivere una routine di gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-172">Demonstrates how to write an event-handler procedure.</span></span>|  
+|[<span data-ttu-id="8f7c5-173">Procedura: Dichiarare eventi personalizzati per evitare il blocco</span><span class="sxs-lookup"><span data-stu-id="8f7c5-173">How to: Declare Custom Events To Avoid Blocking</span></span>](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|<span data-ttu-id="8f7c5-174">Illustra come definire un evento personalizzato che consente la chiamata asincrona dei gestori eventi.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-174">Demonstrates how to define a custom event that allows its event handlers to be called asynchronously.</span></span>|  
+|[<span data-ttu-id="8f7c5-175">Procedura: Dichiarare eventi personalizzati per proteggere la memoria</span><span class="sxs-lookup"><span data-stu-id="8f7c5-175">How to: Declare Custom Events To Conserve Memory</span></span>](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|<span data-ttu-id="8f7c5-176">Illustra come definire un evento personalizzato che usa la memoria solo quando viene gestito l'evento.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-176">Demonstrates how to define a custom event that uses memory only when the event is handled.</span></span>|  
+|[<span data-ttu-id="8f7c5-177">Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f7c5-177">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|<span data-ttu-id="8f7c5-178">Elenca i problemi comuni che si verificano con i gestori eventi nei componenti ereditati.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-178">Lists common issues that arise with event handlers in inherited components.</span></span>|  
+|[<span data-ttu-id="8f7c5-179">Eventi</span><span class="sxs-lookup"><span data-stu-id="8f7c5-179">Events</span></span>](../../../../standard/events/index.md)|<span data-ttu-id="8f7c5-180">Panoramica del modello di eventi usato in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8f7c5-180">Provides an overview of the event model in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="8f7c5-181">Creazione di gestori eventi in Windows Form</span><span class="sxs-lookup"><span data-stu-id="8f7c5-181">Creating Event Handlers in Windows Forms</span></span>](https://msdn.microsoft.com/library/dacysss4.aspx)|<span data-ttu-id="8f7c5-182">Descrive come usare gli eventi associati agli oggetti di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-182">Describes how to work with events associated with Windows Forms objects.</span></span>|  
+|[<span data-ttu-id="8f7c5-183">Delegati</span><span class="sxs-lookup"><span data-stu-id="8f7c5-183">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|<span data-ttu-id="8f7c5-184">Panoramica dei delegati in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8f7c5-184">Provides an overview of delegates in Visual Basic.</span></span>|

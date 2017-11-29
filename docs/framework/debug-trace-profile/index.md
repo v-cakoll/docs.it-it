@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - debugging [.NET Framework]
 - .NET Framework application configuration, debugging
@@ -26,45 +20,43 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1f7696edacc95dee383a7c7e9256cca3eac44839
-ms.contentlocale: it-it
-ms.lasthandoff: 09/18/2017
-
+ms.openlocfilehash: 21032358c9edb1b79d9e170e477502670f781fc3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="debugging-tracing-and-profiling"></a>Debug, traccia e profilatura
-Per eseguire il debug di un'applicazione .NET Framework, l'ambiente del compilatore e di runtime deve essere configurato per consentire a un debugger di connettersi all'applicazione e di produrre simboli e mappe di linee, se possibile, per l'applicazione e il corrispondente Microsoft Intermediate Language (MSIL). Dopo il debug di un'applicazione gestita, è possibile eseguire la profilatura per migliorare le prestazioni. La profilatura valuta e descrive le righe del codice sorgente che generano il codice eseguito con maggiore frequenza e il tempo richiesto per eseguirle.  
+# <a name="debugging-tracing-and-profiling"></a><span data-ttu-id="d77f8-102">Debug, traccia e profilatura</span><span class="sxs-lookup"><span data-stu-id="d77f8-102">Debugging, Tracing, and Profiling</span></span>
+<span data-ttu-id="d77f8-103">Per eseguire il debug di un'applicazione .NET Framework, l'ambiente del compilatore e di runtime deve essere configurato per consentire a un debugger di connettersi all'applicazione e di produrre simboli e mappe di linee, se possibile, per l'applicazione e il corrispondente Microsoft Intermediate Language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="d77f8-103">To debug a .NET Framework application, the compiler and runtime environment must be configured to enable a debugger to attach to the application and to produce both symbols and line maps, if possible, for the application and its corresponding Microsoft intermediate language (MSIL).</span></span> <span data-ttu-id="d77f8-104">Dopo il debug di un'applicazione gestita, è possibile eseguire la profilatura per migliorare le prestazioni.</span><span class="sxs-lookup"><span data-stu-id="d77f8-104">After a managed application has been debugged, it can be profiled to boost performance.</span></span> <span data-ttu-id="d77f8-105">La profilatura valuta e descrive le righe del codice sorgente che generano il codice eseguito con maggiore frequenza e il tempo richiesto per eseguirle.</span><span class="sxs-lookup"><span data-stu-id="d77f8-105">Profiling evaluates and describes the lines of source code that generate the most frequently executed code, and how much time it takes to execute them.</span></span>  
   
- Il debug delle applicazioni .NET framework viene eseguito facilmente tramite Visual Studio, che gestisce molti dettagli della configurazione. Se Visual Studio non è installato, è possibile esaminare e migliorare le prestazioni delle applicazioni .NET Framework usando le classi di debug nello spazio dei nomi <xref:System.Diagnostics> di .NET Framework. Questo spazio dei nomi include le classi <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.TraceSource> per la traccia del flusso di esecuzione e le classi <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog> e <xref:System.Diagnostics.PerformanceCounter> per il codice di profilatura.  
+ <span data-ttu-id="d77f8-106">Il debug delle applicazioni .NET framework viene eseguito facilmente tramite Visual Studio, che gestisce molti dettagli della configurazione.</span><span class="sxs-lookup"><span data-stu-id="d77f8-106">.NET Framework applications are easily debugged by using Visual Studio, which handles many of the configuration details.</span></span> <span data-ttu-id="d77f8-107">Se Visual Studio non è installato, è possibile esaminare e migliorare le prestazioni delle applicazioni .NET Framework usando le classi di debug nello spazio dei nomi <xref:System.Diagnostics> di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d77f8-107">If Visual Studio is not installed, you can examine and improve the performance of .NET Framework applications by using the debugging classes in the .NET Framework <xref:System.Diagnostics> namespace.</span></span> <span data-ttu-id="d77f8-108">Questo spazio dei nomi include le classi <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.TraceSource> per la traccia del flusso di esecuzione e le classi <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog> e <xref:System.Diagnostics.PerformanceCounter> per il codice di profilatura.</span><span class="sxs-lookup"><span data-stu-id="d77f8-108">This namespace includes the <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug>, and <xref:System.Diagnostics.TraceSource> classes for tracing execution flow, and the <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog>, and <xref:System.Diagnostics.PerformanceCounter> classes for profiling code.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Abilitazione del debug ad associazione JIT](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- Mostra come configurare il Registro di sistema per eseguire l'associazione JIT di un motore di debug in un'applicazione .NET Framework.  
+## <a name="in-this-section"></a><span data-ttu-id="d77f8-109">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="d77f8-109">In This Section</span></span>  
+ [<span data-ttu-id="d77f8-110">Abilitazione del debug ad associazione JIT</span><span class="sxs-lookup"><span data-stu-id="d77f8-110">Enabling JIT-Attach Debugging</span></span>](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
+ <span data-ttu-id="d77f8-111">Mostra come configurare il Registro di sistema per eseguire l'associazione JIT di un motore di debug in un'applicazione .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d77f8-111">Shows how to configure the registry to JIT-attach a debug engine to a .NET Framework application.</span></span>  
   
- [Semplificazione del debug di un'immagine](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- Mostra come attivare il rilevamento JIT e disattivare l'ottimizzazione per rendere più semplice l'esecuzione del debug di un assembly.  
+ [<span data-ttu-id="d77f8-112">Semplificazione del debug di un'immagine</span><span class="sxs-lookup"><span data-stu-id="d77f8-112">Making an Image Easier to Debug</span></span>](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
+ <span data-ttu-id="d77f8-113">Mostra come attivare il rilevamento JIT e disattivare l'ottimizzazione per rendere più semplice l'esecuzione del debug di un assembly.</span><span class="sxs-lookup"><span data-stu-id="d77f8-113">Shows how to turn JIT tracking on and optimization off to make an assembly easier to debug.</span></span>  
   
- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- Descrive come monitorare l'esecuzione dell'applicazione mentre è in esecuzione e come instrumentarla per visualizzare lo stato o gli errori durante l'esecuzione.  
+ [<span data-ttu-id="d77f8-114">Traccia e strumentazione di applicazioni</span><span class="sxs-lookup"><span data-stu-id="d77f8-114">Tracing and Instrumenting Applications</span></span>](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ <span data-ttu-id="d77f8-115">Descrive come monitorare l'esecuzione dell'applicazione mentre è in esecuzione e come instrumentarla per visualizzare lo stato o gli errori durante l'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="d77f8-115">Describes how to monitor the execution of your application while it is running, and how to instrument it to display how well it is performing or whether something has gone wrong.</span></span>  
   
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- Descrive gli assistenti al debug gestito, strumenti di supporto al debug che funzionano in combinazione con Common Language Runtime (CLR) per fornire informazioni sullo stato di runtime.  
+ [<span data-ttu-id="d77f8-116">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="d77f8-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ <span data-ttu-id="d77f8-117">Descrive gli assistenti al debug gestito, strumenti di supporto al debug che funzionano in combinazione con Common Language Runtime (CLR) per fornire informazioni sullo stato di runtime.</span><span class="sxs-lookup"><span data-stu-id="d77f8-117">Describes managed debugging assistants (MDAs), which are debugging aids that work in conjunction with the common language runtime (CLR) to provide information on runtime state.</span></span>  
   
- [Miglioramento del debug tramite gli attributi di visualizzazione del debugger](../../../docs/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes.md)  
- Descrive in che modo lo sviluppatore di un tipo può specificarne l'aspetto quando viene visualizzato in un debugger.  
+ [<span data-ttu-id="d77f8-118">Miglioramento del debug tramite gli attributi di visualizzazione del debugger</span><span class="sxs-lookup"><span data-stu-id="d77f8-118">Enhancing Debugging with the Debugger Display Attributes</span></span>](../../../docs/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes.md)  
+ <span data-ttu-id="d77f8-119">Descrive in che modo lo sviluppatore di un tipo può specificarne l'aspetto quando viene visualizzato in un debugger.</span><span class="sxs-lookup"><span data-stu-id="d77f8-119">Describes how the developer of a type can specify what that type will look like when it is displayed in a debugger.</span></span>  
   
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- Descrive i contatori che è possibile usare per registrare le prestazioni di un'applicazione.  
+ [<span data-ttu-id="d77f8-120">Performance Counters</span><span class="sxs-lookup"><span data-stu-id="d77f8-120">Performance Counters</span></span>](../../../docs/framework/debug-trace-profile/performance-counters.md)  
+ <span data-ttu-id="d77f8-121">Descrive i contatori che è possibile usare per registrare le prestazioni di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d77f8-121">Describes the counters that you can use to track the performance of an application.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Debug di applicazioni ASP.NET e AJAX](http://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
- Fornisce i prerequisiti e le istruzioni su come eseguire il debug di un'applicazione ASP.NET durante lo sviluppo o dopo la distribuzione.  
+## <a name="related-sections"></a><span data-ttu-id="d77f8-122">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="d77f8-122">Related Sections</span></span>  
+ [<span data-ttu-id="d77f8-123">Debug di applicazioni ASP.NET e AJAX</span><span class="sxs-lookup"><span data-stu-id="d77f8-123">Debugging ASP.NET and AJAX Applications</span></span>](http://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ <span data-ttu-id="d77f8-124">Fornisce i prerequisiti e le istruzioni su come eseguire il debug di un'applicazione ASP.NET durante lo sviluppo o dopo la distribuzione.</span><span class="sxs-lookup"><span data-stu-id="d77f8-124">Provides prerequisites and instructions for how to debug an ASP.NET application during development or after deployment.</span></span>  
   
- [Guida di sviluppo](../../../docs/framework/development-guide.md)  
- Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.
-
+ [<span data-ttu-id="d77f8-125">Guida di sviluppo</span><span class="sxs-lookup"><span data-stu-id="d77f8-125">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+ <span data-ttu-id="d77f8-126">Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.</span><span class="sxs-lookup"><span data-stu-id="d77f8-126">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>

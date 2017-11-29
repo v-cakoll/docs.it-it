@@ -1,93 +1,95 @@
 ---
-title: "Generazione degli esempi Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Generazione degli esempi Windows Communication Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: efb45a09fd74d397ceb95fc7e1bad7a0a5f80309
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Generazione degli esempi Windows Communication Foundation
-Gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono essere compilati utilizzando Visual Studio 2010 oppure utilizzando il comando **msbuild** dalla riga di comando.Entrambe le procedure sono descritte in questo argomento.  
+# <a name="building-the-windows-communication-foundation-samples"></a><span data-ttu-id="681c9-102">Generazione degli esempi Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="681c9-102">Building the Windows Communication Foundation Samples</span></span>
+<span data-ttu-id="681c9-103">Il [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] esempi possono essere compilati utilizzando Visual Studio 2010 o tramite il **msbuild** comando dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="681c9-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples can be built using Visual Studio 2010 or using the **msbuild** command from the command line.</span></span> <span data-ttu-id="681c9-104">Entrambe le procedure sono descritte in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="681c9-104">Both procedures are described in this topic.</span></span>  
   
 > [!NOTE]
->  Prima di compilare o eseguire qualsiasi esempio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], verificare di aver eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+>  <span data-ttu-id="681c9-105">Prima di compilare o eseguire uno del [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] esempi, assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="681c9-105">Before building or running any of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples, ensure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-### Per compilare l'esempio utilizzando il prompt dei comandi  
+### <a name="to-build-the-sample-using-a-command-prompt"></a><span data-ttu-id="681c9-106">Per compilare l'esempio utilizzando il prompt dei comandi</span><span class="sxs-lookup"><span data-stu-id="681c9-106">To build the sample using a command prompt</span></span>  
   
-1.  Aprire il prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore, quindi spostarsi nella sottodirectory specifica del linguaggio nel percorso della directory in cui è installato l'esempio.  
+1.  <span data-ttu-id="681c9-107">Aprire il prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore, quindi spostarsi nella sottodirectory specifica del linguaggio nel percorso della directory in cui è installato l'esempio.</span><span class="sxs-lookup"><span data-stu-id="681c9-107">Open the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt with administrator privileges and navigate to the language-specific subdirectory under the directory location where you installed the sample.</span></span>  
   
-2.  Digitare `msbuild` dalla riga di comando.I file di programma client vengono compilati in client\\bin, mentre i file del programma del servizio vengono compilati in service\\bin.Se il servizio viene ospitato in Internet Information Services \(IIS\), i file del programma del servizio vengono inoltre copiati nella directory servicemodelsamples e nella sottodirectory \\bin.  
-  
-> [!NOTE]
->  È necessario impostare ACLs su %systemdrive%\\inetpub\\wwwroot per concedere autorizzazioni di modifica per l'account in esecuzione.In caso contrario vi saranno errori relativi a eventi post\-compilazione.In alternativa, è possibile lasciare le ACL come sono ed eseguire il prompt dei comandi SDK come amministratore.  
-  
-### Per compilare l'esempio utilizzando Visual Studio  
-  
-1.  Se si utilizza [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2 e si esegue [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], è necessario eseguire [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] con privilegi elevati.A tale scopo, fare clic con il pulsante destro del mouse sul menu Start e quindi scegliere **Esegui come amministratore**.  
-  
-2.  Scegliere **Apri** dal menu **File** di [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] e fare clic su **Progetto\/Soluzione**.Passare alla sottodirectory specifica del linguaggio della directory in cui si è installato l'esempio e fare doppio clic sull'icona del file con estensione sln per aprire la soluzione in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
-  
-3.  Scegliere **Ricompila soluzione** dal menu **Compila**.I file di programma client vengono compilati su client\\bin e i file del programma del servizio vengono compilati su service\\bin.Se il servizio viene ospitato su IIS, i file del programma del servizio vengono inoltre copiati nella directory servicemodelsamples e nella sottodirectory \\bin.  
+2.  <span data-ttu-id="681c9-108">Tipo `msbuild` nella riga di comando.</span><span class="sxs-lookup"><span data-stu-id="681c9-108">Type `msbuild` at the command line.</span></span> <span data-ttu-id="681c9-109">I file di programma client vengono compilati in client\bin, mentre i file del programma del servizio vengono compilati in service\bin.</span><span class="sxs-lookup"><span data-stu-id="681c9-109">The client program files are built to client\bin and the service program files are built to service\bin.</span></span> <span data-ttu-id="681c9-110">Se il servizio viene ospitato in Internet Information Services (IIS), i file del programma del servizio vengono inoltre copiati nella directory servicemodelsamples e nella sottodirectory \bin.</span><span class="sxs-lookup"><span data-stu-id="681c9-110">If the service is hosted by Internet Information Services (IIS), the service program files are also copied to the servicemodelsamples directory and its \bin subdirectory.</span></span>  
   
 > [!NOTE]
->  È necessario impostare ACLs su %systemdrive%\\inetpub\\wwwroot per concedere autorizzazioni di modifica per l'account in esecuzione.In caso contrario vi saranno errori relativi a eventi post\-compilazione.In alternativa, è possibile lasciare le ACL come sono ed eseguire il prompt dei comandi SDK o Visual Studio come amministratore.Anche alcune azioni di Visual Studio \(ad esempio allegare un debugger al processo di lavoro ASP.NET\) richiedono privilegi amministrativi.  
+>  <span data-ttu-id="681c9-111">È necessario impostare ACLs su %systemdrive%\inetpub\wwwroot per concedere autorizzazioni di modifica per l'account in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="681c9-111">You must set the ACLs on %systemdrive%\inetpub\wwwroot to grant modify permissions to the account under which you are running.</span></span> <span data-ttu-id="681c9-112">In caso contrario vi saranno errori relativi a eventi post-compilazione.</span><span class="sxs-lookup"><span data-stu-id="681c9-112">Otherwise some post build events fail.</span></span> <span data-ttu-id="681c9-113">In alternativa, è possibile lasciare le ACL come sono ed eseguire il prompt dei comandi SDK come amministratore.</span><span class="sxs-lookup"><span data-stu-id="681c9-113">Alternatively, you can leave the ACLs as they are and run the SDK command prompt as administrator.</span></span>  
   
-## Impostare file batch e script  
- I file batch Setup.exe e Cleanup.exe e gli script devono essere eseguiti da un prompt dei comandi di Visual Studio.Diversi file di installazione e pulizia eseguono attività che richiedono privilegi amministrativi e devono essere avviati con privilegi di questo tipo.  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="681c9-114">Per compilare l'esempio utilizzando Visual Studio</span><span class="sxs-lookup"><span data-stu-id="681c9-114">To build the sample using Visual Studio</span></span>  
   
-## Importanti informazioni di sicurezza sugli endpoint dei metadati  
- Per impedire la rivelazione non intenzionale di metadati del servizio potenzialmente riservati la configurazione predefinita per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] disabilita la pubblicazione dei metadati.Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile utilizzare uno strumento di importazione di metadati \(ad esempio Svcutil.exe\) per generare il codice client necessario per chiamare il servizio a meno che il comportamento del servizio di pubblicazione dei metadati non venga attivato in modo esplicito in fase di configurazione.Per rendere più semplice la sperimentazione con gli esempi, quasi tutti gli esempi espongono un endpoint di pubblicazione dei metadati non protetto.Tali endpoint sono potenzialmente disponibili per utenti anonimi non autenticati anonimi e bisogna fare attenzione prima di distribuirli per garantire che la pubblicazione dei metadati di un servizio sia appropriata.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] pubblicazione dei metadati del servizio, vedere l'esempio [Comportamento di pubblicazione dei metadati](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).Vedere l'esempio [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) per un esempio di protezione di un endpoint di metadati.  
+1.  <span data-ttu-id="681c9-115">Se si utilizza [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2 e si esegue [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], è necessario eseguire [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="681c9-115">If you are using [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7, or Windows Server 2008 R2, and running [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], you must run [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] with elevated permission.</span></span> <span data-ttu-id="681c9-116">A tale scopo, fare doppio clic sull'icona del menu Start e quindi fare clic su **Esegui come amministratore**.</span><span class="sxs-lookup"><span data-stu-id="681c9-116">To do so, right-click the icon on the Start menu and then click **Run as administrator**.</span></span>  
   
-## Gestione delle eccezioni  
- In genere questi esempi non includono la gestione delle eccezioni per fare in modo che il codice sia focalizzato sull'argomento dell'esempio.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] gestione delle eccezioni, vedere l'esempio [Eccezioni previste](../../../../docs/framework/wcf/samples/expected-exceptions.md).  
+2.  <span data-ttu-id="681c9-117">Dal **File** menu [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], fare clic su **aprire**, quindi fare clic su **progetto/soluzione**.</span><span class="sxs-lookup"><span data-stu-id="681c9-117">From the **File** menu in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], click **Open**, then click **Project/Solution**.</span></span> <span data-ttu-id="681c9-118">Passare alla sottodirectory specifica del linguaggio della directory in cui si è installato l'esempio e fare doppio clic sull'icona del file con estensione sln per aprire la soluzione in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="681c9-118">Navigate to the language-specific subdirectory under the directory in which you installed the sample, and double-click the .sln file icon to open the solution in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
   
-## Rigenerazione client e configurazione con Svcutil  
- È possibile utilizzare [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per rigenerare codice client e configurare la maggior parte degli esempi.Alcuni esempi richiedono una configurazione manuale.Ad esempio, se si utilizza Svcutil.exe per rigenerare la configurazione per un esempio che utilizza credenziali del certificato client, si devono specificare manualmente le credenziali precedentemente configurate.Alcuni esempi utilizzano opzioni Svcutil.exe specifiche per influire sul codice generato, queste opzioni sono specificate in argomenti di esempio appositi.  
+3.  <span data-ttu-id="681c9-119">Nel **compilare** dal menu **Ricompila soluzione**.</span><span class="sxs-lookup"><span data-stu-id="681c9-119">In the **Build** menu, select **Rebuild Solution**.</span></span> <span data-ttu-id="681c9-120">I file di programma client vengono compilati in client\bin, mentre i file del programma del servizio vengono compilati in service\bin.</span><span class="sxs-lookup"><span data-stu-id="681c9-120">The client program files are built to client\bin and the service program files are built to service\bin.</span></span> <span data-ttu-id="681c9-121">Se il servizio viene ospitato su IIS, i file del programma del servizio vengono inoltre copiati nella directory servicemodelsamples e nella sottodirectory \bin.</span><span class="sxs-lookup"><span data-stu-id="681c9-121">If the service is hosted in IIS, the service program files are also copied to the servicemodelsamples directory and its \bin subdirectory.</span></span>  
   
-#### Per rigenerare client e file di configurazione  
+> [!NOTE]
+>  <span data-ttu-id="681c9-122">È necessario impostare ACLs su %systemdrive%\inetpub\wwwroot per concedere autorizzazioni di modifica per l'account in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="681c9-122">You must set the ACLs on %systemdrive%\inetpub\wwwroot to grant modify permissions to the account under which you are running.</span></span> <span data-ttu-id="681c9-123">In caso contrario vi saranno errori relativi a eventi post-compilazione.</span><span class="sxs-lookup"><span data-stu-id="681c9-123">Otherwise some post build events fail.</span></span> <span data-ttu-id="681c9-124">In alternativa, è possibile lasciare le ACL come sono ed eseguire il prompt dei comandi SDK o Visual Studio come amministratore.</span><span class="sxs-lookup"><span data-stu-id="681c9-124">Alternatively, you can leave the ACLs as they are and run the SDK command prompt or Visual Studio as administrator.</span></span> <span data-ttu-id="681c9-125">Anche alcune azioni di Visual Studio (ad esempio allegare un debugger al processo di lavoro ASP.NET) richiedono privilegi amministrativi.</span><span class="sxs-lookup"><span data-stu-id="681c9-125">Some Visual Studio actions (such as attaching a debugger to the ASP.Net worker process) also require administrative privileges.</span></span>  
   
-1.  Aprire il prompt dei comandi SDK, quindi spostarsi nella sottodirectory specifica del linguaggio del percorso della directory in cui si è installato l'esempio.  
+## <a name="setup-batch-files-and-scripts"></a><span data-ttu-id="681c9-126">Impostare file batch e script</span><span class="sxs-lookup"><span data-stu-id="681c9-126">Setup Batch Files and Scripts</span></span>  
+ <span data-ttu-id="681c9-127">I file batch Setup.exe e Cleanup.exe e gli script devono essere eseguiti da un prompt dei comandi di Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="681c9-127">Setup.exe and Cleanup.exe batch files and scripts should be run from a Visual Studio command prompt.</span></span> <span data-ttu-id="681c9-128">Diversi file di installazione e pulizia eseguono attività che richiedono privilegi amministrativi e devono essere avviati con privilegi di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="681c9-128">Several set up and clean up files perform tasks that require administrative privileges and should be launched with administrator privileges.</span></span>  
   
-2.  Se il servizio è di tipo ospitato sul Web, utilizzare il comando seguente.  
+## <a name="important-security-information-about-metadata-endpoints"></a><span data-ttu-id="681c9-129">Importanti informazioni di sicurezza sugli endpoint dei metadati</span><span class="sxs-lookup"><span data-stu-id="681c9-129">Important Security Information about Metadata Endpoints</span></span>  
+ <span data-ttu-id="681c9-130">Per impedire la rivelazione non intenzionale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] disabilita la pubblicazione dei metadati.</span><span class="sxs-lookup"><span data-stu-id="681c9-130">To prevent unintentional disclosure of potentially sensitive service metadata, the default configuration for [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services disables metadata publishing.</span></span> <span data-ttu-id="681c9-131">Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione.</span><span class="sxs-lookup"><span data-stu-id="681c9-131">This behavior is secure by default, but also means that you cannot use a metadata import tool (such as Svcutil.exe) to generate the client code required to call the service unless the service’s metadata publishing behavior is explicitly enabled in configuration.</span></span> <span data-ttu-id="681c9-132">Per rendere più semplice la sperimentazione con gli esempi, quasi tutti gli esempi espongono un endpoint di pubblicazione dei metadati non protetto.</span><span class="sxs-lookup"><span data-stu-id="681c9-132">To make experimenting with the samples easier, almost all samples expose an unsecured metadata publishing endpoint.</span></span> <span data-ttu-id="681c9-133">Tali endpoint sono potenzialmente disponibili per utenti anonimi non autenticati e bisogna fare attenzione prima di distribuirli per garantire che la pubblicazione dei metadati di un servizio sia appropriata.</span><span class="sxs-lookup"><span data-stu-id="681c9-133">Such endpoints are potentially available to anonymous unauthenticated consumers and care must be taken before deploying such endpoints to ensure that publicly disclosing a service’s metadata is appropriate.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="681c9-134">pubblicazione dei metadati del servizio, vedere il [il comportamento di pubblicazione dei metadati](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) esempio.</span><span class="sxs-lookup"><span data-stu-id="681c9-134"> publishing service metadata, see the [Metadata Publishing Behavior](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) sample.</span></span> <span data-ttu-id="681c9-135">Vedere il [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio per un esempio di protezione di un endpoint di metadati.</span><span class="sxs-lookup"><span data-stu-id="681c9-135">See the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample for a sample securing a metadata endpoint.</span></span>  
+  
+## <a name="exception-handling"></a><span data-ttu-id="681c9-136">Gestione delle eccezioni</span><span class="sxs-lookup"><span data-stu-id="681c9-136">Exception Handling</span></span>  
+ <span data-ttu-id="681c9-137">In genere questi esempi non includono la gestione delle eccezioni per focalizzare il codice sull'argomento dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="681c9-137">Generally speaking these samples do not include exception handling to keep the code focused on the subject of the sample.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="681c9-138">gestione delle eccezioni, vedere il [previsto eccezioni](../../../../docs/framework/wcf/samples/expected-exceptions.md) esempio.</span><span class="sxs-lookup"><span data-stu-id="681c9-138"> exception handling, see the [Expected Exceptions](../../../../docs/framework/wcf/samples/expected-exceptions.md) sample.</span></span>  
+  
+## <a name="regenerating-clients-and-configuration-with-svcutil"></a><span data-ttu-id="681c9-139">Rigenerazione client e configurazione con Svcutil</span><span class="sxs-lookup"><span data-stu-id="681c9-139">Regenerating Clients and Configuration with Svcutil</span></span>  
+ <span data-ttu-id="681c9-140">È possibile utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per rigenerare il codice client e la configurazione per la maggior parte degli esempi.</span><span class="sxs-lookup"><span data-stu-id="681c9-140">You can use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to regenerate client code and configuration for most of the samples.</span></span> <span data-ttu-id="681c9-141">Alcuni esempi richiedono una configurazione manuale.</span><span class="sxs-lookup"><span data-stu-id="681c9-141">Some samples require manually edited configuration.</span></span> <span data-ttu-id="681c9-142">Ad esempio, se si utilizza Svcutil.exe per rigenerare la configurazione per un esempio che utilizza credenziali del certificato client, si devono specificare manualmente le credenziali precedentemente configurate.</span><span class="sxs-lookup"><span data-stu-id="681c9-142">For example, if you use Svcutil.exe to regenerate the configuration for a sample that uses client certificate credentials, you must manually specify the credentials previously configured.</span></span> <span data-ttu-id="681c9-143">Alcuni esempi utilizzano opzioni Svcutil.exe specifiche per influire sul codice generato, queste opzioni sono specificate in argomenti di esempio appositi.</span><span class="sxs-lookup"><span data-stu-id="681c9-143">Some samples use specific Svcutil.exe options to affect the generated code, these options are specified in the specific sample topics.</span></span>  
+  
+#### <a name="to-regenerate-the-client-and-configuration-files"></a><span data-ttu-id="681c9-144">Per rigenerare client e file di configurazione</span><span class="sxs-lookup"><span data-stu-id="681c9-144">To regenerate the client and configuration files</span></span>  
+  
+1.  <span data-ttu-id="681c9-145">Aprire il prompt dei comandi SDK, quindi spostarsi nella sottodirectory specifica del linguaggio del percorso della directory in cui si è installato l'esempio.</span><span class="sxs-lookup"><span data-stu-id="681c9-145">Open an SDK command prompt and navigate to the language-specific subdirectory under the directory location where you installed the sample.</span></span>  
+  
+2.  <span data-ttu-id="681c9-146">Se il servizio è di tipo ospitato sul Web, utilizzare il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="681c9-146">If the service is a Web-hosted type, use the following command.</span></span>  
   
     ```  
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
     ```  
   
-     Se il servizio è di tipo indipendente, digitare il comando seguente.  
+     <span data-ttu-id="681c9-147">Se il servizio è di tipo indipendente, digitare il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="681c9-147">If the service is a self-hosted type the following command.</span></span>  
   
     ```  
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
     ```  
   
-     Sostituire http:\/\/localhost:8000\/ServiceModelSamples\/service .svc\/mex con l'indirizzo dell'endpoint mex del servizio indipendente.  
+     <span data-ttu-id="681c9-148">Sostituire http://localhost:8000/ServiceModelSamples/service .svc/mex con l'indirizzo dell'endpoint mex del servizio indipendente.</span><span class="sxs-lookup"><span data-stu-id="681c9-148">Replace http://localhost:8000/ServiceModelSamples/service.svc/mex with the address of the self-hosted service's mex endpoint.</span></span>  
   
-     Per generare il client in un tipo Visual Basic, utilizzare il comando seguente.  
+     <span data-ttu-id="681c9-149">Per generare il client in un tipo Visual Basic, utilizzare il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="681c9-149">To generate the client in a Visual Basic type, use the following command.</span></span>  
   
     ```  
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb  
-  
     ```  
   
-     Se il servizio è di tipo indipendente, utilizzare il comando seguente.  
+     <span data-ttu-id="681c9-150">Se il servizio è di tipo indipendente, utilizzare il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="681c9-150">If the service is a self-hosted type, use the following command.</span></span>  
   
     ```  
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb  
     ```  
   
     > [!NOTE]
-    >  Per ignorare la generazione della configurazione client, aggiungere l'opzione **\/noConfig**.  
+    >  <span data-ttu-id="681c9-151">Per ignorare la generazione della configurazione client aggiungere il **/noConfig** opzione.</span><span class="sxs-lookup"><span data-stu-id="681c9-151">To skip the generation of client configuration add the **/noConfig** option.</span></span>  
   
-## Vedere anche  
- [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)   
- [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a><span data-ttu-id="681c9-152">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="681c9-152">See Also</span></span>  
+ [<span data-ttu-id="681c9-153">Esecuzione degli esempi di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="681c9-153">Running the Windows Communication Foundation Samples</span></span>](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [<span data-ttu-id="681c9-154">Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="681c9-154">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

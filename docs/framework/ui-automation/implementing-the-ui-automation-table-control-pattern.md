@@ -1,75 +1,78 @@
 ---
-title: "Implementazione del pattern di controllo Table di automazione interfaccia utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Automazione interfaccia utente, pattern di controllo Table"
-  - "pattern di controllo, tabella"
-  - "Table (pattern di controllo)"
+title: Implementazione del pattern di controllo Table di automazione interfaccia utente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Table control pattern
+- control patterns, Table
+- TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-caps.latest.revision: 19
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 4a1fbe175abf07eaccfd177c6e32f5515e88c4ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Implementazione del pattern di controllo Table di automazione interfaccia utente
+# <a name="implementing-the-ui-automation-table-control-pattern"></a><span data-ttu-id="2059d-102">Implementazione del pattern di controllo Table di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2059d-102">Implementing the UI Automation Table Control Pattern</span></span>
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che desiderano utilizzare gestita [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classi definite nel <xref:System.Windows.Automation> dello spazio dei nomi. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="2059d-103">Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="2059d-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="2059d-104">Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="2059d-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- In questo argomento vengono presentate linee guida e convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.ITableProvider>, comprese informazioni sulle proprietà, metodi ed eventi. Alla fine della panoramica sono elencati collegamenti a ulteriore materiale di riferimento.  
+ <span data-ttu-id="2059d-105">In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.ITableProvider>, incluse le informazioni relative a proprietà, metodi ed eventi.</span><span class="sxs-lookup"><span data-stu-id="2059d-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ITableProvider>, including information about properties, methods, and events.</span></span> <span data-ttu-id="2059d-106">Alla fine della panoramica sono elencati collegamenti a ulteriore materiale di riferimento.</span><span class="sxs-lookup"><span data-stu-id="2059d-106">Links to additional references are listed at the end of the overview.</span></span>  
   
- Il <xref:System.Windows.Automation.TablePattern> pattern di controllo viene utilizzato per supportare i controlli che fungono da contenitori per una raccolta di elementi figlio. Gli elementi figlio di questo elemento devono implementare <xref:System.Windows.Automation.Provider.ITableItemProvider> e devono essere organizzati in un sistema di coordinate logico bidimensionale che può essere attraversato da righe e colonne. Questo modello di controllo è analogo a <xref:System.Windows.Automation.Provider.IgridProvider>, con la differenza che qualsiasi controllo che implementa <xref:System.Windows.Automation.Provider.ITableProvider> deve esporre anche una relazione dell'intestazione di riga e/o di colonna per ogni elemento figlio. Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping per i client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="2059d-107">Il <xref:System.Windows.Automation.TablePattern> pattern di controllo viene utilizzato per supportare i controlli che fungono da contenitori per una raccolta di elementi figlio.</span><span class="sxs-lookup"><span data-stu-id="2059d-107">The <xref:System.Windows.Automation.TablePattern> control pattern is used to support controls that act as containers for a collection of child elements.</span></span> <span data-ttu-id="2059d-108">Gli elementi figlio di questo elemento devono implementare <xref:System.Windows.Automation.Provider.ITableItemProvider> e devono essere organizzati in un sistema di coordinate logico bidimensionale che può essere attraversato da righe e colonne.</span><span class="sxs-lookup"><span data-stu-id="2059d-108">The children of this element must implement <xref:System.Windows.Automation.Provider.ITableItemProvider> and be organized in a two-dimensional logical coordinate system that can be traversed by row and column.</span></span> <span data-ttu-id="2059d-109">Questo pattern di controllo è analogo a <xref:System.Windows.Automation.Provider.IGridProvider>, con la differenza che qualsiasi controllo che implementa <xref:System.Windows.Automation.Provider.ITableProvider> deve esporre anche una relazione di intestazione di riga e/o di colonna per ogni elemento figlio.</span><span class="sxs-lookup"><span data-stu-id="2059d-109">This control pattern is analogous to <xref:System.Windows.Automation.Provider.IGridProvider>, with the distinction that any control implementing <xref:System.Windows.Automation.Provider.ITableProvider> must also expose a column and/or row header relationship for each child element.</span></span> <span data-ttu-id="2059d-110">Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="2059d-110">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
- Quando si implementa il pattern di controllo Table, tenere presenti le linee guida e le convenzioni seguenti:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="2059d-111">Linee guida e convenzioni di implementazione</span><span class="sxs-lookup"><span data-stu-id="2059d-111">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="2059d-112">Quando si implementa il pattern di controllo Table, tenere presenti le linee guida e le convenzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="2059d-112">When implementing the Table control pattern, note the following guidelines and conventions:</span></span>  
   
--   Accesso al contenuto delle singole celle avviene tramite un sistema di coordinate logico bidimensionale o matrice, fornito dall'implementazione simultanea obbligatoria di <xref:System.Windows.Automation.Provider.IGridProvider>.  
+-   <span data-ttu-id="2059d-113">Accesso al contenuto delle singole celle avviene tramite un sistema di coordinate logico bidimensionale o una matrice fornita dall'implementazione simultanea obbligatoria di <xref:System.Windows.Automation.Provider.IGridProvider>.</span><span class="sxs-lookup"><span data-stu-id="2059d-113">Access to the content of individual cells is through a two-dimensional logical coordinate system or array provided by the required concurrent implementation of <xref:System.Windows.Automation.Provider.IGridProvider>.</span></span>  
   
--   Un'intestazione di riga o colonna può essere contenuta all'interno di un oggetto tabella oppure essere un oggetto intestazione distinto associato a un oggetto tabella.  
+-   <span data-ttu-id="2059d-114">Un'intestazione di riga o colonna può essere contenuta all'interno di un oggetto tabella oppure essere un oggetto intestazione distinto associato a un oggetto tabella.</span><span class="sxs-lookup"><span data-stu-id="2059d-114">A column or row header can be contained within a table object or be a separate header object that is associated with a table object.</span></span>  
   
--   Le intestazioni di riga e colonna possono includere un'intestazione principale nonché intestazioni di supporto.  
+-   <span data-ttu-id="2059d-115">Le intestazioni di riga e colonna possono includere un'intestazione principale nonché intestazioni di supporto.</span><span class="sxs-lookup"><span data-stu-id="2059d-115">Column and row headers may include both a primary header as well as any supporting headers.</span></span>  
   
 > [!NOTE]
->  Questo concetto diventa evidente in un [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] foglio di calcolo in cui un utente ha definito una colonna "Nome". Questa colonna contiene ora due intestazioni, ovvero l'intestazione "Nome" definita dall'utente e la designazione alfanumerica per tale colonna assegnata dall'applicazione.  
+>  <span data-ttu-id="2059d-116">Questo concetto diventa evidente in un [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] foglio di calcolo in cui un utente ha definito una colonna "Nome".</span><span class="sxs-lookup"><span data-stu-id="2059d-116">This concept becomes evident in a [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] spreadsheet where a user has defined a "First name" column.</span></span> <span data-ttu-id="2059d-117">Questa colonna contiene ora due intestazioni, ovvero l'intestazione "Nome" definita dall'utente e la designazione alfanumerica per tale colonna assegnata dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2059d-117">This column now has two headers—the "First name" header defined by the user and the alphanumeric designation for that column assigned by the application.</span></span>  
   
--   Vedere [implementazione del Pattern di controllo Grid di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) per la funzionalità della griglia correlata.  
+-   <span data-ttu-id="2059d-118">Vedere [che implementa il Pattern di controllo Grid di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) per la funzionalità griglia correlata.</span><span class="sxs-lookup"><span data-stu-id="2059d-118">See [Implementing the UI Automation Grid Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) for related grid functionality.</span></span>  
   
- ![Tabella con elementi di intestazione complessi.](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
-Esempio di tabella con intestazioni di colonna complesse  
+ <span data-ttu-id="2059d-119">![Tabella con elementi di intestazione complessi. ] (../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")</span><span class="sxs-lookup"><span data-stu-id="2059d-119">![Table with complex header items.](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")</span></span>  
+<span data-ttu-id="2059d-120">Esempio di tabella con intestazioni di colonna complesse</span><span class="sxs-lookup"><span data-stu-id="2059d-120">Example of a Table with Complex Column Headers</span></span>  
   
- ![Tabella con proprietà RowOrColumnMajor ambigua.](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
-Esempio di tabella con la proprietà RowOrColumnMajor definita in modo ambiguo  
+ <span data-ttu-id="2059d-121">![Tabella con proprietà RowOrColumnMajor ambigua. ] (../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")</span><span class="sxs-lookup"><span data-stu-id="2059d-121">![Table with ambiguous RowOrColumnMajor property.](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")</span></span>  
+<span data-ttu-id="2059d-122">Esempio di tabella con la proprietà RowOrColumnMajor definita in modo ambiguo</span><span class="sxs-lookup"><span data-stu-id="2059d-122">Example of a Table with Ambiguous RowOrColumnMajor Property</span></span>  
   
 <a name="Required_Members_for_ITableProvider"></a>   
-## <a name="required-members-for-itableprovider"></a>Membri obbligatori per ITableProvider  
- Le proprietà e i metodi seguenti sono obbligatori per l'interfaccia ITableProvider.  
+## <a name="required-members-for-itableprovider"></a><span data-ttu-id="2059d-123">Membri obbligatori per ITableProvider</span><span class="sxs-lookup"><span data-stu-id="2059d-123">Required Members for ITableProvider</span></span>  
+ <span data-ttu-id="2059d-124">Le proprietà e i metodi seguenti sono obbligatori per l'interfaccia ITableProvider.</span><span class="sxs-lookup"><span data-stu-id="2059d-124">The following properties and methods are required for the ITableProvider interface.</span></span>  
   
-|Membri obbligatori|Tipo di membro|Note|  
+|<span data-ttu-id="2059d-125">Membri obbligatori</span><span class="sxs-lookup"><span data-stu-id="2059d-125">Required members</span></span>|<span data-ttu-id="2059d-126">Tipo di membro</span><span class="sxs-lookup"><span data-stu-id="2059d-126">Member type</span></span>|<span data-ttu-id="2059d-127">Note</span><span class="sxs-lookup"><span data-stu-id="2059d-127">Notes</span></span>|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Metodo|Nessuno|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Metodo|Nessuna|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|<span data-ttu-id="2059d-128">Proprietà</span><span class="sxs-lookup"><span data-stu-id="2059d-128">Property</span></span>|<span data-ttu-id="2059d-129">Nessuna</span><span class="sxs-lookup"><span data-stu-id="2059d-129">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|<span data-ttu-id="2059d-130">Metodo</span><span class="sxs-lookup"><span data-stu-id="2059d-130">Method</span></span>|<span data-ttu-id="2059d-131">Nessuna</span><span class="sxs-lookup"><span data-stu-id="2059d-131">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|<span data-ttu-id="2059d-132">Metodo</span><span class="sxs-lookup"><span data-stu-id="2059d-132">Method</span></span>|<span data-ttu-id="2059d-133">Nessuna</span><span class="sxs-lookup"><span data-stu-id="2059d-133">None</span></span>|  
   
- Questo pattern di controllo non è associato a eventi.  
+ <span data-ttu-id="2059d-134">Questo pattern di controllo non è associato a eventi.</span><span class="sxs-lookup"><span data-stu-id="2059d-134">This control pattern has no associated events.</span></span>  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>Eccezioni  
- Questo pattern di controllo non è associato a eccezioni.  
+## <a name="exceptions"></a><span data-ttu-id="2059d-135">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="2059d-135">Exceptions</span></span>  
+ <span data-ttu-id="2059d-136">Questo pattern di controllo non è associato a eccezioni.</span><span class="sxs-lookup"><span data-stu-id="2059d-136">This control pattern has no associated exceptions.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Supportare pattern di controllo in un Provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Implementazione del Pattern di controllo TableItem di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)   
- [Implementazione del Pattern di controllo Grid di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)   
- [Panoramica di struttura ad albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Utilizzare la memorizzazione nella cache di automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="2059d-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2059d-137">See Also</span></span>  
+ [<span data-ttu-id="2059d-138">Cenni preliminari sui pattern di controllo automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2059d-138">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="2059d-139">Supportare pattern di controllo in un Provider di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2059d-139">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="2059d-140">Pattern di controllo di automazione interfaccia utente per i client</span><span class="sxs-lookup"><span data-stu-id="2059d-140">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="2059d-141">Implementazione del Pattern di controllo TableItem di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2059d-141">Implementing the UI Automation TableItem Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [<span data-ttu-id="2059d-142">Implementa il Pattern di controllo Grid di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2059d-142">Implementing the UI Automation Grid Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
+ [<span data-ttu-id="2059d-143">Panoramica dell'albero di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2059d-143">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="2059d-144">Utilizzare la memorizzazione nella cache in automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2059d-144">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

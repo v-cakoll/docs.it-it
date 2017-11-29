@@ -1,72 +1,74 @@
 ---
-title: "Elemento &lt;ipv6&gt; (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#ipv6"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<ipv6> (elemento)"
-  - "ipv6 (elemento)"
+title: '&lt;IPv6&gt; elemento (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#ipv6
+helpviewer_keywords:
+- <ipv6> element
+- ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-caps.latest.revision: 19
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: dd5366b4110d9ec2290e2669919575e07e8ec98a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;ipv6&gt; (Impostazioni di rete)
-Attiva le risposte di Internet Protocol versione 6 \(IPv6\) da membri obsoleti della classe <xref:System.Net.Dns>.  
+# <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="163ee-102">&lt;IPv6&gt; elemento (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="163ee-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="163ee-103">Abilita protocollo Internet versione 6 (IPv6) risposte da membri obsoleti della <xref:System.Net.Dns> classe.</span><span class="sxs-lookup"><span data-stu-id="163ee-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="163ee-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="163ee-104">\<configuration></span></span>  
+<span data-ttu-id="163ee-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="163ee-105">\<system.net></span></span>  
+<span data-ttu-id="163ee-106">\<Impostazioni ></span><span class="sxs-lookup"><span data-stu-id="163ee-106">\<settings></span></span>  
+<span data-ttu-id="163ee-107">\<IPv6 ></span><span class="sxs-lookup"><span data-stu-id="163ee-107">\<ipv6></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="163ee-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="163ee-108">Syntax</span></span>  
   
-      <ipv6  
+```xml  
+<ipv6  
   enabled="true|false"  
-/ipv6>  
+/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="163ee-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="163ee-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="163ee-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="163ee-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="163ee-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="163ee-111">Attributes</span></span>  
   
-|**Attributo**|**Descrizione**|  
+|<span data-ttu-id="163ee-112">**Attributo**</span><span class="sxs-lookup"><span data-stu-id="163ee-112">**Attribute**</span></span>|<span data-ttu-id="163ee-113">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="163ee-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`enabled`|Specifica se i membri della classe <xref:System.Net.Dns> restituiscono gli indirizzi di Internet Protocol versione 6 \(IPv6\).  Il valore predefinito è `false`.|  
+|`enabled`|<span data-ttu-id="163ee-114">Specifica se i membri del <xref:System.Net.Dns> classe restituiscono Internet Protocol versione 6 (IPv6) indirizzi.</span><span class="sxs-lookup"><span data-stu-id="163ee-114">Specifies whether members of the <xref:System.Net.Dns> class return Internet Protocol version 6 (IPv6) addresses.</span></span> <span data-ttu-id="163ee-115">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="163ee-115">The default value is `false`.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="163ee-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="163ee-116">Child Elements</span></span>  
+ <span data-ttu-id="163ee-117">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="163ee-117">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="163ee-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="163ee-118">Parent Elements</span></span>  
   
-|**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|<span data-ttu-id="163ee-119">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="163ee-119">**Element**</span></span>|<span data-ttu-id="163ee-120">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="163ee-120">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="163ee-121">Impostazioni</span><span class="sxs-lookup"><span data-stu-id="163ee-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="163ee-122">Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="163ee-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## Note  
- Questa impostazione attiva il supporto IPv6 per i membri obsoleti della classe <xref:System.Net.Dns>: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A> e <xref:System.Net.Dns.Resolve%2A>.  Per altri membri dello spazio dei nomi <xref:System.Net?displayProperty=fullName>, gli indirizzi di IPv6 possono essere restituiti se IPv6 è attivato nel sistema operativo.  
+## <a name="remarks"></a><span data-ttu-id="163ee-123">Note</span><span class="sxs-lookup"><span data-stu-id="163ee-123">Remarks</span></span>  
+ <span data-ttu-id="163ee-124">Questa impostazione abilita il supporto IPv6 per i membri obsoleti del <xref:System.Net.Dns> classe: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, e <xref:System.Net.Dns.Resolve%2A>.</span><span class="sxs-lookup"><span data-stu-id="163ee-124">This setting enables IPv6 support for the obsolete members of the <xref:System.Net.Dns> class: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, and <xref:System.Net.Dns.Resolve%2A>.</span></span> <span data-ttu-id="163ee-125">Per altri membri di <xref:System.Net?displayProperty=nameWithType> dello spazio dei nomi, gli indirizzi IPv6 possono essere restituiti se IPv6 è abilitato nel sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="163ee-125">For other members of the <xref:System.Net?displayProperty=nameWithType> namespace, IPv6 addresses may be returned if IPv6 is enabled in the operating system.</span></span>  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="163ee-126">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="163ee-126">Configuration Files</span></span>  
+ <span data-ttu-id="163ee-127">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="163ee-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene illustrato come attivare il supporto IPv6 per la classe <xref:System.Net.Dns>.  
+## <a name="example"></a><span data-ttu-id="163ee-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="163ee-128">Example</span></span>  
+ <span data-ttu-id="163ee-129">Nell'esempio seguente viene illustrato come abilitare il supporto IPv6 per la <xref:System.Net.Dns> classe.</span><span class="sxs-lookup"><span data-stu-id="163ee-129">The following example shows how to enable IPv6 support for the <xref:System.Net.Dns> class.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -76,8 +78,8 @@ Attiva le risposte di Internet Protocol versione 6 \(IPv6\) da membri obsoleti d
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net?displayProperty=fullName>   
- <xref:System.Net.Dns?displayProperty=fullName>   
- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=fullName>   
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="163ee-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="163ee-130">See Also</span></span>  
+ <xref:System.Net?displayProperty=nameWithType>  
+ <xref:System.Net.Dns?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="163ee-131">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="163ee-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
