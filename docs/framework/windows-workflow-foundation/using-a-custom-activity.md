@@ -1,31 +1,35 @@
 ---
-title: "Utilizzo di un&#39;attivit&#224; personalizzata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Utilizzo di un'attività personalizzata"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e534f9a3e8d0a7d675e43bc03266e4863f95d45d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizzo di un&#39;attivit&#224; personalizzata
-Le attività che derivano da <xref:System.Activities.Activity> o le relative sottoclassi possono essere composte in flussi di lavoro più grandi o create direttamente nel codice.In questo argomento viene descritto come utilizzare le attività personalizzate nei flussi di lavoro creati nel codice o nella finestra di progettazione.  
+# <a name="using-a-custom-activity"></a>Utilizzo di un'attività personalizzata
+Le attività che derivano da <xref:System.Activities.Activity> o le relative sottoclassi possono essere composte in flussi di lavoro più grandi o create direttamente nel codice. In questo argomento viene descritto come usare le attività personalizzate nei flussi di lavoro creati nel codice o nella finestra di progettazione.  
   
 > [!NOTE]
->  Le attività personalizzate possono essere utilizzate nel progetto in cui vengono definite, purché sia l'attività personalizzata che l'attività che la utilizza vengono compilate, ovverocaricate da un tipo di creazione di istanza generato dal processo di compilazione. Se l'attività di riferimento viene caricata in modo dinamico \(ad esempioutilizzando ActivityXAMLServices\) l'assembly a cui si fa riferimento deve essere inserito in un progetto diverso o l'XAML generato nella finestra di progettazione deve essere modificato manualmente per abilitarlo.  
+>  Attività personalizzate possono essere usate nello stesso progetto in cui sono definiti, purché sia l'attività personalizzata e l'attività che usa vengono compilate (vale a dire caricati da un tipo di istanza generato dal processo di compilazione) se l'attività di riferimento viene caricato in modo dinamico (ad esempio usando ActivityXAMLServices), quindi l'assembly di riferimento deve essere inserito in un progetto diverso o il codice XAML generato da progettazione deve essere modificato manualmente per abilitare questa opzione.  
   
-#### Utilizzo di un'attività personalizzata per un progetto di flusso di lavoro  
+#### <a name="using-a-custom-activity-to-a-workflow-project"></a>Uso di un'attività personalizzata per un progetto di flusso di lavoro  
   
 1.  Aggiungere un riferimento dal progetto host al progetto della libreria di attività contenente l'attività personalizzata.  
   
 2.  Compilare la soluzione.  
   
-3.  Per utilizzare l'attività personalizzata nella finestra di progettazione, individuare l'attività personalizzata nella casella degli strumenti e trascinare l'attività nell'area di progettazione.  
+3.  Per usare l'attività personalizzata nella finestra di progettazione, individuare l'attività personalizzata nella casella degli strumenti e trascinare l'attività nell'area di progettazione.  
   
-4.  Per utilizzare l'attività personalizzata nel codice, aggiungere un'istruzione Using che fa riferimento al progetto di attività personalizzata e passare una nuova istanza dell'attività a <xref:System.Activities.WorkflowInvoker.Invoke%2A>.
+4.  Per usare l'attività personalizzata nel codice, aggiungere un'istruzione Using che fa riferimento al progetto di attività personalizzata e passare una nuova istanza dell'attività a <xref:System.Activities.WorkflowInvoker.Invoke%2A>.

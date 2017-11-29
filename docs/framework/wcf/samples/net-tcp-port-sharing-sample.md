@@ -1,47 +1,50 @@
 ---
-title: "Esempio di condivisione delle porte Net.TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esempio di condivisione delle porte Net.TCP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1d3ee04dfd400e09e6392e78498d80a59bb88b11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Esempio di condivisione delle porte Net.TCP
-Il protocollo TCP\/IP utilizza un numero a 16 bit, definito porta, per differenziare le connessioni a più applicazioni di rete che sono in esecuzione nello stesso computer.Se un'applicazione è in ascolto su una porta, tutto il traffico TCP per quella porta viene indirizzato a tale applicazione.Sulla porta non possono essere contemporaneamente in ascolto altre applicazioni.  
+# <a name="nettcp-port-sharing-sample"></a>Esempio di condivisione delle porte Net.TCP
+Il protocollo TCP/IP utilizza un numero a 16 bit, definito porta, per differenziare le connessioni a più applicazioni di rete che sono in esecuzione nello stesso computer. Se un'applicazione è in ascolto su una porta, tutto il traffico TCP per quella porta viene indirizzato a tale applicazione. Su quella porta non possono essere contemporaneamente in ascolto altre applicazioni.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
- Molti protocolli utilizzano un numero di porta standard o predefinito.Ad esempio, il protocollo HTTP utilizza in genere la porta TCP 80.Internet Information Services \(IIS\) dispone di un listener per condividere una porta tra più applicazioni HTTP.IIS è in ascolto direttamente sulla porta e inoltra i messaggi all'applicazione appropriata in base alle informazioni presenti all'interno del flusso di messaggi.In questo modo più applicazioni HTTP possono utilizzare lo stesso numero di porta senza dover competere per riservare la porta per la ricezione dei messaggi.  
+ Molti protocolli utilizzano un numero di porta standard o predefinito. Ad esempio, il protocollo HTTP utilizza in genere la porta TCP 80. Internet Information Services (IIS) dispone di un listener per condividere una porta tra più applicazioni HTTP. IIS è in ascolto direttamente sulla porta e inoltra i messaggi all'applicazione appropriata in base alle informazioni presenti all'interno del flusso di messaggi. In questo modo più applicazioni HTTP possono utilizzare lo stesso numero di porta senza dover competere per riservare la porta per la ricezione dei messaggi.  
   
- La condivisione di porte Net.Tcp è una funzionalità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] che, in modo analogo, consente a più applicazioni di rete di condividere una sola porta.Il servizio di condivisione porte Net.Tcp accetta connessioni mediante il protocollo net.tcp e inoltra i messaggi in base al relativo indirizzo di destinazione.  
+ Condivisione delle porte NetTcp è un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]funzionalità che consente allo stesso modo a più applicazioni di rete condividere una singola porta. Il servizio di condivisione porte Net.Tcp accetta connessioni mediante il protocollo net.tcp e inoltra i messaggi in base al relativo indirizzo di destinazione.  
   
- Questo servizio non è abilitato per impostazione predefinitaed è necessario abilitarlo manualmente prima di eseguire questo esempio.Per ulteriori informazioni, vedere [Procedura: attivare il servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).Se il servizio è disabilitato, viene generata un'eccezione all'avvio dell'applicazione server.  
+ Questo servizio non è abilitato per impostazione predefinita ed è necessario abilitarlo manualmente prima di eseguire questo esempio. Per ulteriori informazioni, vedere [procedura: abilitare il servizio di condivisione porta Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Se il servizio è disabilitato, viene generata un'eccezione all'avvio dell'applicazione server.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- La condivisione delle porte può essere abilitata sul server impostando la proprietà <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> dell'associazione <xref:System.ServiceModel.NetTcpBinding> o l'elemento di associazione <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.Il client non deve necessariamente conoscere la modalità di configurazione della condivisione delle porte per poterla utilizzare sul server.  
+ La condivisione delle porte può essere abilitata sul server impostando la proprietà <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> dell'associazione <xref:System.ServiceModel.NetTcpBinding> o l'elemento di associazione <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. Il client non deve necessariamente conoscere la modalità di configurazione della condivisione delle porte per poterla utilizzare sul server.  
   
-## Abilitazione della condivisione delle porte  
- Nel codice seguente viene illustrata l'abilitazione della condivisione delle porte sul server.Viene avviata un'istanza del servizio `ICalculator` su una porta fissa con un percorso URI casuale.Anche se due servizi possono condividere la stessa porta, gli indirizzi degli endpoint complessivi devono comunque essere univoci affinché il servizio di condivisione porte Net.Tcp possa indirizzare i messaggi all'applicazione corretta.  
+## <a name="enabling-port-sharing"></a>Abilitazione della condivisione delle porte  
+ Nel codice seguente viene illustrata l'abilitazione della condivisione delle porte sul server. Viene avviata un'istanza del servizio `ICalculator` su una porta fissa con un percorso URI casuale. Anche se due servizi possono condividere la stessa porta, gli indirizzi degli endpoint complessivi devono comunque essere univoci affinché il servizio di condivisione porte Net.Tcp possa indirizzare i messaggi all'applicazione corretta.  
   
 ```  
 // Configure a binding with TCP port sharing enabled  
@@ -57,13 +60,13 @@ host.AddServiceEndpoint(typeof(ICalculator), binding, address);
 host.Open();  
 ```  
   
- Quando la condivisione delle porte è abilitata, è possibile eseguire più volte il servizio senza generare un conflitto sul numero della porta.Se si modifica il codice per disabilitare la condivisione delle porte, l'avvio di due copie del servizio comporta l'errore della seconda con un'eccezione <xref:System.ServiceModel.AddressAlreadyInUseException>.  
+ Quando la condivisione delle porte è abilitata, è possibile eseguire più volte il servizio senza generare un conflitto sul numero della porta. Se si modifica il codice per disabilitare la condivisione delle porte, l'avvio di due copie del servizio comporta l'errore della seconda con un'eccezione <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
 ```  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
-## Esecuzione dell'esempio  
+## <a name="running-the-sample"></a>Esecuzione dell'esempio  
  È possibile utilizzare il client di prova per verificare che i messaggi vengano indirizzati correttamente ai servizi che condividono la porta.  
   
 ```  
@@ -110,7 +113,7 @@ class client
 }  
 ```  
   
- Ogni istanza del servizio mostra il relativo numero e indirizzo univoco.Ad esempio, è possibile visualizzare il testo seguente quando si esegue service.exe.  
+ Ogni istanza del servizio mostra il relativo numero e indirizzo univoco. Ad esempio, è possibile visualizzare il testo seguente quando si esegue service.exe.  
   
 ```  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
@@ -129,23 +132,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Questo esempio può essere eseguito in una configurazione a più computer modificando l'indirizzo generato che il client utilizza.Nel file Client.cs modificare la stringa di formato dell'indirizzo dell'endpoint affinché corrisponda al nuovo indirizzo del servizio.Sostituire qualsiasi riferimento a "localhost" con l'indirizzo IP del server.È necessario ricompilare l'esempio dopo avere apportato questa modifica.  
+ Questo esempio può essere eseguito in una configurazione a più computer modificando l'indirizzo generato che il client utilizza. Nel file Client.cs modificare la stringa di formato dell'indirizzo dell'endpoint affinché corrisponda al nuovo indirizzo del servizio. Sostituire qualsiasi riferimento a "localhost" con l'indirizzo IP del server. È necessario ricompilare l'esempio dopo avere apportato questa modifica.  
   
-#### Per impostare, compilare ed eseguire l'esempio  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 utilizzando il comando seguente.  
+1.  Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando il comando seguente.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Verificare di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3.  Abilitare il servizio di condivisione porte Net.Tcp come descritto nella sezione dell'introduzione.  
   
-4.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Per eseguire l'esempio su una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).Dettagli specifici per l'esecuzione di questo esempio sono inclusi nella sezione Esecuzione dell'esempio.  
+5.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Dettagli specifici per l'esecuzione di questo esempio sono inclusi nella sezione Esecuzione dell'esempio.  
   
-## Vedere anche
+## <a name="see-also"></a>Vedere anche

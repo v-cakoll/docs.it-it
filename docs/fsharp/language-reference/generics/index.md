@@ -1,6 +1,6 @@
 ---
 title: Generics (F#)
-description: Generics (F#)
+description: "Informazioni sull'utilizzo di F # funzioni e tipi generici, che consentono di scrivere codice che funziona con una varietà di tipi senza codice di ripetizione."
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: a9f2e2ee-bcb1-4ce3-8531-850aa183040f
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 98f65de4f3434aea9ee0b78848b85ba398543974
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: e7a5712fddf4d372d1ada86927f50e394a59a410
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generics"></a>Generics
 
 I valori, i metodi, le proprietà delle funzioni F# e i tipi di aggregazione quali classi, record e unioni discriminate possono essere *generici*. I costrutti generici contengono almeno un parametro di tipo, specificato in genere dall'utente del costrutto generico. Le funzioni e i tipi generici consentono di scrivere codice che può essere usato con un'ampia gamma di tipi senza ripetere il codice per ogni tipo. In F# è possibile rendere generico un codice in maniera semplice, perché spesso il codice viene dedotto in modo implicito come generico dall'inferenza del tipo di compilatore e dai meccanismi di generalizzazione automatica.
@@ -57,33 +56,33 @@ Quando il compilatore F# deduce i tipi nel codice, considera automaticamente com
 
 Nell'esempio di codice seguente, `makeList` è generico, anche se il codice e i relativi parametri non sono dichiarati esplicitamente come generici.
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
 
 La firma della funzione viene dedotta come `'a -> 'a -> 'a list`. Si noti che `a` e `b` in questo esempio vengono considerati come elementi dello stesso tipo. Ciò si verifica perché sono inclusi nello stesso elenco e tutti gli elementi di un elenco devono essere dello stesso tipo.
 
 È anche possibile rendere una funzione generica usando la sintassi con virgoletta singola in un'annotazione di tipo per indicare che un tipo di parametro è un parametro di tipo generico. Nel codice seguente, `function1` è generico perché i parametri vengono dichiarati in questo modo, come parametri di tipo.
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
     
 ## <a name="explicitly-generic-constructs"></a>Costrutti esplicitamente generici
 È anche possibile rendere una funzione generica dichiarando in modo esplicito i parametri di tipo in parentesi acute (`<type-parameter>`). Questa condizione è illustrata nel codice che segue.
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
     
 ## <a name="using-generic-constructs"></a>Uso di costrutti generici
 Quando si usano funzioni o metodi generici, potrebbe non essere necessario specificare gli argomenti di tipo. Il compilatore usa l'inferenza del tipo per dedurre gli argomenti di tipo appropriato. Se c'è ancora ambiguità, è possibile specificare gli argomenti di tipo in parentesi acute, separando più argomenti di tipo con una virgola.
 
 Il codice seguente illustra l'uso delle funzioni definite nelle sezioni precedenti.
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
     
 >[!NOTE]
 Ci sono due modi per fare riferimento a un tipo generico in base al nome. Ad esempio, `list<int>` e `int list` sono due modi per fare riferimento a un tipo generico `list` che ha un solo argomento di tipo `int`. La seconda forma viene comunemente usata solo con i tipi F# predefiniti, ad esempio `list` e `option`. Se ci sono più argomenti di tipo, in genere si usa la sintassi `Dictionary<int, string>` ma è anche possibile usare la sintassi `(int, string) Dictionary`.
 
 ## <a name="wildcards-as-type-arguments"></a>Caratteri jolly come argomenti di tipo
-Per specificare che un argomento di tipo deve essere dedotto dal compilatore, è possibile usare il carattere di sottolineatura o un carattere jolly (`_`), anziché un argomento di tipo denominato. Questo comportamento viene illustrato nel codice seguente.
+Per specificare che un argomento di tipo deve essere dedotto dal compilatore, è possibile usare il carattere di sottolineatura o un carattere jolly (`_`), anziché un argomento di tipo denominato. Questo comportamento viene mostrato nel codice seguente.
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
     
 ## <a name="constraints-in-generic-types-and-functions"></a>Vincoli in funzioni e tipi generici
 In una definizione di funzione o tipo generico, è possibile usare solo questi costrutti disponibili nel parametro di tipo generico. Ciò è necessario per abilitare la verifica delle chiamate di funzioni e metodi in fase di compilazione. Se si dichiarano in modo esplicito i parametri di tipo, è possibile applicare un vincolo esplicito a un parametro di tipo generico per notificare al compilatore che sono disponibili alcuni metodi e funzioni. Se tuttavia si consente al compilatore F# di dedurre i tipi di parametri generici, il compilatore determinerà i vincoli appropriati. Per altre informazioni, vedere [Vincoli](constraints.md).
@@ -94,7 +93,7 @@ Ci sono due tipi di parametri di tipo che possono essere usati in programmi F#. 
 
 
 ## <a name="examples"></a>Esempi
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
     
 ## <a name="see-also"></a>Vedere anche
 [Riferimenti per il linguaggio](../index.md)
@@ -103,7 +102,7 @@ Ci sono due tipi di parametri di tipo che possono essere usati in programmi F#. 
 
 [Parametri di tipo risolti staticamente](statically-resolved-type-parameters.md)
 
-[Generics in .NET Framework](https://msdn.microsoft.com/library/ms172192.aspx)
+[Generics in .NET Framework](~/docs/standard/generics/index.md)
 
 [Generalizzazione automatica](automatic-generalization.md)
 

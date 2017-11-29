@@ -1,25 +1,29 @@
 ---
-title: "Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Basic1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fb0f04b2d0ee053ee2efe7f01ef9f73ed30c6e09
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Basic
-In questa sezione vengono forniti esempi che illustrano la funzionalità di base di [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+# <a name="basic"></a>Basic
+Contenuto della sezione vengono forniti esempi che illustrano la funzionalità di base di [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Attività predefinite](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
- Sono inclusi esempi che utilizzano la libreria attività predefinita.  
+ Sono inclusi esempi che usano la libreria attività predefinita.  
   
  [Compensazione](../../../../docs/framework/windows-workflow-foundation/samples/compensation-samples.md)  
  Sono inclusi esempi che illustrano la compensazione.  
@@ -28,7 +32,7 @@ In questa sezione vengono forniti esempi che illustrano la funzionalità di base
  Sono inclusi esempi che illustrano la creazione di attività personalizzate.  
   
  [Finestra di progettazione](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
- Sono inclusi esempi che illustrano come utilizzare [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
+ Sono inclusi esempi che illustrano come usare [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
   
  [Riallocazione della finestra di progettazione](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
  Sono inclusi esempi che illustrano la riallocazione di ActivityDesigner.  
@@ -46,7 +50,7 @@ In questa sezione vengono forniti esempi che illustrano la funzionalità di base
  Sono inclusi esempi che illustrano il salvataggio in modo permanente dei flussi di lavoro su un supporto durevole.  
   
  [Esempi di regole](../../../../docs/framework/windows-workflow-foundation/samples/rules-samples.md)  
- Sono inclusi esempi che illustrano l'utilizzo del motore per le regole del flusso di lavoro da [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)].  
+ Sono inclusi esempi che illustrano l'uso del motore per le regole del flusso di lavoro da [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)].  
   
  [Servizi](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
  Sono inclusi esempi che illustrano i servizi flusso di lavoro.  
@@ -54,10 +58,10 @@ In questa sezione vengono forniti esempi che illustrano la funzionalità di base
  [Rilevamento](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
  Sono inclusi esempi che illustrano il rilevamento del flusso di lavoro.  
   
- [Transazioni](../../../../docs/framework/windows-workflow-foundation/samples/basic-transactions.md)  
+ [Transazioni](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
  Sono inclusi esempi che illustrano le transazioni del flusso di lavoro.  
   
  [Convalida](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
  Sono inclusi esempi che illustrano la convalida in [!INCLUDE[wf2](../../../../includes/wf2-md.md)].  
   
-## Riferimenti
+## <a name="reference"></a>Riferimento

@@ -1,31 +1,37 @@
 ---
-title: "Procedura: proteggere un servizio con un certificato X.509 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: proteggere un servizio con un certificato X.509'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: ec2800d2b6a910f75366e323b7580afe08de2acb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: proteggere un servizio con un certificato X.509
-La protezione di un servizio con un certificato X.509 è una tecnica di base utilizzata dalla maggior parte delle associazioni in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].In questo argomento vengono illustrati i passaggi di configurazione di un servizio indipendente con un certificato X.509.  
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedura: proteggere un servizio con un certificato X.509
+La protezione di un servizio con un certificato X.509 è una tecnica di base utilizzata dalla maggior parte delle associazioni in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. In questo argomento vengono illustrati i passaggi di configurazione di un servizio indipendente con un certificato X.509.  
   
- Un prerequisito è un certificato valido utilizzabile per autenticare il server.Il certificato deve essere emesso al server da un autorità di certificazione attendibile.Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizzo dei certificati, vedere [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Un prerequisito è un certificato valido utilizzabile per autenticare il server. Il certificato deve essere emesso al server da un autorità di certificazione attendibile. Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzo di certificati, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
-### Per configurare un servizio con un certificato utilizzando codice.  
+### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Per configurare un servizio con un certificato utilizzando codice.  
   
-1.  Creare il contratto di servizio e il servizio implementato.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1.  Creare il contratto di servizio e il servizio implementato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][La progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
-2.  Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostarne la modalità sicura su <xref:System.ServiceModel.SecurityMode>, come illustrato nel codice seguente.  
+2.  Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostarne la modalità sicura su <xref:System.ServiceModel.SecurityMode.Message>, come illustrato nel codice seguente.  
   
      [!code-csharp[C_SecureWithCertificate#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#1)]
      [!code-vb[C_SecureWithCertificate#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#1)]  
@@ -35,7 +41,7 @@ La protezione di un servizio con un certificato X.509 è una tecnica di base uti
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  Creare un'istanza della classe <xref:System.Uri> per l'indirizzo di base del servizio.Dato che `WSHttpBinding` utilizza il trasporto HTTP, l'Uniform Resource Identifier \(URI\) deve iniziare con quello schema. In caso contrario, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genererà un'eccezione all'apertura del servizio.  
+4.  Creare un'istanza della classe <xref:System.Uri> per l'indirizzo di base del servizio. Dato che `WSHttpBinding` utilizza il trasporto HTTP, l'Uniform Resource Identifier (URI) deve iniziare con quello schema. In caso contrario, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genererà un'eccezione all'apertura del servizio.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
@@ -45,33 +51,33 @@ La protezione di un servizio con un certificato X.509 è una tecnica di base uti
      [!code-csharp[C_SecureWithCertificate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#4)]
      [!code-vb[C_SecureWithCertificate#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#4)]  
   
-6.  Aggiungere un <xref:System.ServiceModel.Description.ServiceEndpoint> al servizio utilizzando il metodo <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.Passare il contratto, l'associazione e un indirizzo endpoint al costruttore, come illustrato nel codice seguente.  
+6.  Aggiungere un <xref:System.ServiceModel.Description.ServiceEndpoint> al servizio utilizzando il metodo <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. Passare il contratto, l'associazione e un indirizzo endpoint al costruttore, come illustrato nel codice seguente.  
   
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7.  Facoltativo.Per recuperare metadati dal servizio, creare un nuovo oggetto <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e impostare la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> su `true`.  
+7.  Parametro facoltativo. Per recuperare metadati dal servizio, creare un nuovo oggetto <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e impostare la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> su `true`.  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
   
-8.  Utilizzare il metodo <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> della classe <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> per aggiungere il certificato valido al servizio.Il metodo può utilizzare uno di numerosi metodi per trovare un certificato.Nell'esempio viene utilizzata l'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType>.L'enumerazione specifica che il valore fornito è il nome dell'entità alla quale è stato emesso il certificato.  
+8.  Utilizzare il metodo <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> della classe <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> per aggiungere il certificato valido al servizio. Il metodo può utilizzare uno di numerosi metodi per trovare un certificato. Nell'esempio viene utilizzata l'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName>. L'enumerazione specifica che il valore fornito è il nome dell'entità alla quale è stato emesso il certificato.  
   
      [!code-csharp[C_SecureWithCertificate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#7)]
      [!code-vb[C_SecureWithCertificate#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#7)]  
   
-9. Chiamare il metodo <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> per avviare l'ascolto del servizio.Se si sta creando un'applicazione console, chiamare il metodo <xref:System.Console.ReadLine%2A> per tenere il servizio nello stato di ascolto.  
+9. Chiamare il metodo <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> per avviare l'ascolto del servizio. Se si sta creando un'applicazione console, chiamare il metodo <xref:System.Console.ReadLine%2A> per tenere il servizio nello stato di ascolto.  
   
      [!code-csharp[C_SecureWithCertificate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#8)]
      [!code-vb[C_SecureWithCertificate#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#8)]  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene utilizzato il metodo <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> per configurare un servizio con un certificato X.509.  
   
  [!code-csharp[C_SecureWithCertificate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#9)]
  [!code-vb[C_SecureWithCertificate#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#9)]  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare il codice sono necessari gli spazi dei nomi seguenti:  
   
 -   <xref:System>  
@@ -86,5 +92,5 @@ La protezione di un servizio con un certificato X.509 è una tecnica di base uti
   
 -   <xref:System.Runtime.Serialization>  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

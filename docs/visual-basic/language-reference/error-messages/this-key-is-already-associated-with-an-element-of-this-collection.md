@@ -1,30 +1,28 @@
 ---
-title: "This key is already associated with an element of this collection | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID457"
-dev_langs: 
-  - "VB"
+title: "Questa chiave è già associata a un elemento della raccolta"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID457
 ms.assetid: 52e15795-907e-4b10-acb7-5c37a76ce594
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 04b7d20c7ca0fe8887288158377027b955bc7123
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# This key is already associated with an element of this collection
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-La chiave specificata per un membro della raccolta identifica già un altro membro della stessa raccolta.  Una chiave è una stringa specificata nel metodo `Add` che identifica in modo univoco un membro specifico di una raccolta.  
+# <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>Questa chiave è già associata a un elemento della raccolta
+La chiave specificata per un membro della raccolta definisce già un altro membro della raccolta. Una chiave è una stringa specificata nel `Add` metodo che identifica in modo univoco un membro specifico della raccolta.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Utilizzare una chiave diversa per il membro.  
+-   Utilizzare una chiave diversa per questo membro.  
   
-## Vedere anche  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)

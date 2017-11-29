@@ -1,32 +1,35 @@
 ---
-title: "Pagina della Guida del servizio HTTP Web WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Pagina della Guida del servizio HTTP Web WCF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 96c54320c77de766f00bde1e560eb5b0f0df2671
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Pagina della Guida del servizio HTTP Web WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] include una pagina automatica della Guida per i servizi HTTP WEB WCF.Questa pagina della Guida contiene una descrizione di ogni operazione, formato di richiesta e risposta e schema.Per impostazione predefinita, questa funzionalità è disabilitata.Se un utente passa a un servizio HTTP WEB WCF e aggiunge "\/Help" alla fine dell'URL, ad esempio http:\/\/localhost:8000\/Customers\/Help, viene visualizzata una pagina della Guida come quella indicata di seguito.  
+# <a name="wcf-web-http-service-help-page"></a>Pagina della Guida del servizio HTTP Web WCF
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] include una pagina automatica della Guida per i servizi HTTP WEB WCF. Questa pagina della Guida contiene una descrizione di ogni operazione, formato di richiesta e risposta e schema. Per impostazione predefinita, questa funzionalità è disabilitata. Se un utente passa a un servizio HTTP WEB WCF e aggiunge "/Help" alla fine dell'URL, ad esempio http://localhost:8000/Customers/Help, viene visualizzata una pagina della Guida come quella indicata di seguito.  
   
- ![Pagina della Guida di WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.png "WCFRESTHELPPAGEMAIN")  
+ ![Pagina della Guida di WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
- L'utente può quindi fare clic su qualsiasi metodo elencato nella pagina della Guida e viene visualizzata la pagina dettagliata per l'operazione specificata, contenente ulteriori informazioni sul metodo, quali i formati del messaggio e le risposte di esempio.L'immagine seguente rappresenta un esempio di una pagina della Guida per un metodo.  
+ L'utente può quindi fare clic su qualsiasi metodo elencato nella pagina della Guida e viene visualizzata la pagina dettagliata per l'operazione specificata, contenente ulteriori informazioni sul metodo, quali i formati del messaggio e le risposte di esempio. L'immagine seguente rappresenta un esempio di una pagina della Guida per un metodo.  
   
- ![Dettagli della pagina della Guida di WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.png "WCFRESTHELPPAGEDETAIL2")  
+ ![Dettagli della pagina della Guida WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
-## Utilizzo della pagina della Guida relativa a HTTP Web WCF  
- La pagina della Guida relativa a HTTP WEB WCF contiene una breve descrizione per ogni operazione, a condizione che ne venga specificata una mediante <xref:System.ComponentModel.DescriptionAttribute>.Questo attributo utilizza una stringa che contiene una breve descrizione dell'operazione a cui è applicato.Il codice seguente indica ad esempio come utilizzare l'elemento <xref:System.ComponentModel.DescriptionAttribute> per fornire una breve descrizione.  
+## <a name="using-the-wcf-web-http-help-page"></a>Utilizzo della pagina della Guida relativa a HTTP Web WCF  
+ La pagina della Guida relativa a HTTP WEB WCF contiene una breve descrizione per ogni operazione, a condizione che ne venga specificata una mediante <xref:System.ComponentModel.DescriptionAttribute>. Questo attributo utilizza una stringa che contiene una breve descrizione dell'operazione a cui è applicato. Il codice seguente indica ad esempio come utilizzare l'elemento <xref:System.ComponentModel.DescriptionAttribute> per fornire una breve descrizione.  
   
 ```  
 [OperationContract]  
@@ -35,9 +38,9 @@ caps.handback.revision: 11
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- Per abilitare la pagina della Guida relativa a HTTP WEB WCF, è necessario aggiungere un comportamento dell'endpoint agli endpoint del servizio.Questa operazione può essere eseguita nella configurazione o nel codice.Per abilitare la pagina della Guida relativa a HTTP WEB WCF nella configurazione, aggiungere un comportamento dell'endpoint con un elemento `<webHttp>`, impostare `enableHelp` su `true`, aggiungere un endpoint e configurarlo per fare in modo che utilizzi il comportamento dell'endpoint.A tal fine, osservare il codice di configurazione indicato di seguito.  
+ Per abilitare la pagina della Guida relativa a HTTP WEB WCF, è necessario aggiungere un comportamento dell'endpoint agli endpoint del servizio. Questa operazione può essere eseguita nella configurazione o nel codice. Per abilitare la pagina della Guida relativa a HTTP WEB WCF nella configurazione, aggiungere un comportamento dell'endpoint con un elemento `<webHttp>`, impostare `enableHelp` su `true`, aggiungere un endpoint e configurarlo per fare in modo che utilizzi il comportamento dell'endpoint. A tal fine, osservare il codice di configurazione indicato di seguito.  
   
-```  
+```xml  
 <endpointBehaviors>  
    <behavior name="RESTEndpointBehavior">  
       <webHttp enableHelp="true"/>  
@@ -52,7 +55,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Per abilitare la pagina della Guida relativa a HTTP WEB WCF nel codice, aggiungere un endpoint servizio e un elemento <xref:System.ServiceModel.Description.WebHttpBehavior> all'endpoint impostando <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A> su `true`.A tal fine, osservare il codice indicato di seguito.  
+ Per abilitare la pagina Guida HTTP Web WCF nel codice, aggiungere un endpoint del servizio e aggiungere un <xref:System.ServiceModel.Description.WebHttpBehavior> all'endpoint impostando <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` a `true`. A tale scopo, osservare il codice indicato di seguito.  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -63,12 +66,12 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- La pagina della Guida è basata su XHTML con markup che identifica le varie sezioni della pagina.In questo modo il client può accedere a livello di codice alla pagina utilizzando <xref:System.Xml.Linq.XElement> o altre interfacce API XLinq.  
+ La pagina della Guida è basata su XHTML con markup che identifica le varie sezioni della pagina. In questo modo il client può accedere a livello di codice alla pagina utilizzando <xref:System.Xml.Linq.XElement> o altre interfacce API XLinq.  
   
-## Schemi utilizzati nella pagina della Guida relativa al servizio HTTP Web WCF  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>Schemi utilizzati nella pagina della Guida relativa al servizio HTTP Web WCF  
  Gli schemi seguenti vengono utilizzati nella pagina della Guida relativa al servizio HTTP Web WCF.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:element name="anyType" nillable="true" type="xs:anyType" />  
@@ -245,7 +248,6 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
   </xs:complexType>  
   <xs:element name="ArrayOfQName" nillable="true" type="tns:ArrayOfQName" />  
 </xs:schema>  
-  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] schema di serializzazione del contratto dati, vedere [Riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]lo schema di serializzazione del contratto dati, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
