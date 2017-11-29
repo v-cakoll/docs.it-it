@@ -1,49 +1,52 @@
 ---
-title: "Procedura: disegnare una polilinea utilizzando l&#39;elemento polilinea | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "linee collegate"
-  - "disegno, polilinee"
-  - "grafica [WPF], polilinee"
-  - "linee, collegate (vedere polilinee)"
-  - "polilinee, disegno"
+title: 'Procedura: disegnare una polilinea utilizzando l''elemento polilinea'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connected lines [WPF]
+- polylines [WPF], drawing
+- graphics [WPF], polylines
+- lines [WPF], connected (see polylines)
+- drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5fa8cafdaf7856e95129f648da1d4b4ccb2f54eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: disegnare una polilinea utilizzando l&#39;elemento polilinea
-In questo esempio viene illustrato come disegnare una polilinea, ovvero una serie di righe collegate, utilizzando l'elemento <xref:System.Windows.Shapes.Polyline>.  
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a><span data-ttu-id="1a263-102">Procedura: disegnare una polilinea utilizzando l'elemento polilinea</span><span class="sxs-lookup"><span data-stu-id="1a263-102">How to: Draw a Polyline by Using the Polyline Element</span></span>
+<span data-ttu-id="1a263-103">In questo esempio viene illustrato come disegnare una polilinea, ovvero una serie di linee collegate, utilizzando il <xref:System.Windows.Shapes.Polyline> elemento.</span><span class="sxs-lookup"><span data-stu-id="1a263-103">This example shows how to draw a polyline, which is a series of connected lines, by using the <xref:System.Windows.Shapes.Polyline> element.</span></span>  
   
- Per disegnare una polilinea, creare un elemento <xref:System.Windows.Shapes.Polyline> e utilizzare la relativa proprietà <xref:System.Windows.Shapes.Polyline.Points%2A> per specificare i vertici della forma.  Infine, utilizzare le proprietà <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> per descrivere i contorni della polilinea perché una linea senza un tratto è invisibile.  
+ <span data-ttu-id="1a263-104">Per disegnare una polilinea, creare un <xref:System.Windows.Shapes.Polyline> elemento e utilizzare il relativo <xref:System.Windows.Shapes.Polyline.Points%2A> proprietà per specificare i vertici della forma.</span><span class="sxs-lookup"><span data-stu-id="1a263-104">To draw a polyline, create a <xref:System.Windows.Shapes.Polyline> element and use its <xref:System.Windows.Shapes.Polyline.Points%2A> property to specify the shape vertices.</span></span> <span data-ttu-id="1a263-105">Infine, utilizzare il <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> per descrivere la polilinea spiegare perché una riga senza tratto è invisibile.</span><span class="sxs-lookup"><span data-stu-id="1a263-105">Finally, use the <xref:System.Windows.Shapes.Shape.Stroke%2A> and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> properties to describe the polyline outline because a line without a stroke is invisible.</span></span>  
   
 > [!NOTE]
->  Poiché l'elemento <xref:System.Windows.Shapes.Polyline> non è una forma chiusa, la proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> non produce effetti, anche se si chiudono intenzionalmente i contorni della forma.  Per creare una forma chiusa con una proprietà <xref:System.Windows.Shapes.Shape.Fill%2A>, utilizzare un elemento <xref:System.Windows.Shapes.Polygon>.  
+>  <span data-ttu-id="1a263-106">Poiché il <xref:System.Windows.Shapes.Polyline> l'elemento non è una forma chiusa, la <xref:System.Windows.Shapes.Shape.Fill%2A> proprietà ha effetto, anche se si chiude intenzionalmente il contorno della forma.</span><span class="sxs-lookup"><span data-stu-id="1a263-106">Because the <xref:System.Windows.Shapes.Polyline> element is not a closed shape, the <xref:System.Windows.Shapes.Shape.Fill%2A> property has no effect, even if you deliberately close the shape outline.</span></span> <span data-ttu-id="1a263-107">Per creare una forma chiusa con un <xref:System.Windows.Shapes.Shape.Fill%2A>, utilizzare un <xref:System.Windows.Shapes.Polygon> elemento.</span><span class="sxs-lookup"><span data-stu-id="1a263-107">To create a closed shape with a <xref:System.Windows.Shapes.Shape.Fill%2A>, use a <xref:System.Windows.Shapes.Polygon> element.</span></span>  
   
- Nell'esempio riportato di seguito vengono disegnati due elementi <xref:System.Windows.Shapes.Polyline> all'interno di un oggetto <xref:System.Windows.Controls.Canvas>.  
+ <span data-ttu-id="1a263-108">Nell'esempio seguente disegna due <xref:System.Windows.Shapes.Polyline> elementi all'interno di un <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="1a263-108">The following example draws two <xref:System.Windows.Shapes.Polyline> elements inside a <xref:System.Windows.Controls.Canvas>.</span></span>  
   
-## Esempio  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], la sintassi valida per i punti è un elenco delimitato da spazi di coppie di coordinate x e y separate da virgole.  
+## <a name="example"></a><span data-ttu-id="1a263-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="1a263-109">Example</span></span>  
+ <span data-ttu-id="1a263-110">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], la sintassi valida per i punti di è un elenco delimitato da virgole di coppie di coordinate x e y separate da virgole.</span><span class="sxs-lookup"><span data-stu-id="1a263-110">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], valid syntax for points is a space-delimited list of comma-separated x- and y-coordinate pairs.</span></span>  
   
- [!code-xml[drawingwithshapeelements#PolylineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
+ [!code-xaml[drawingwithshapeelements#PolylineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
   
- Anche se in questo esempio viene utilizzato un oggetto <xref:System.Windows.Controls.Canvas> per contenere le polilinee, è possibile utilizzare elementi polilinea, e tutti gli altri elementi forma, con qualsiasi oggetto <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta contenuto non testuale.  
+ <span data-ttu-id="1a263-111">Sebbene questo esempio viene utilizzato un <xref:System.Windows.Controls.Canvas> per contenere la polilinea, è possibile utilizzare elementi polilinea (e tutti gli altri elementi forma) con qualsiasi <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta il contenuto non di testo.</span><span class="sxs-lookup"><span data-stu-id="1a263-111">Although this example uses a <xref:System.Windows.Controls.Canvas> to contain the polylines, you can use polyline elements (and all the other shape elements) with any <xref:System.Windows.Controls.Panel> or <xref:System.Windows.Controls.Control> that supports non-text content.</span></span>  
   
- Questo esempio è stato estratto da un esempio più ampio; per la versione completa, vedere [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037) \(la pagina potrebbe essere in inglese\).  
+ <span data-ttu-id="1a263-112">In questo esempio fa parte di un esempio più ampio; per l'esempio completo, vedere [esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037).</span><span class="sxs-lookup"><span data-stu-id="1a263-112">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Shapes.Polyline>   
- <xref:System.Windows.Shapes.Polygon>   
- <xref:System.Windows.Shapes.Shape>   
- [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037)   
- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1a263-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1a263-113">See Also</span></span>  
+ <xref:System.Windows.Shapes.Polyline>  
+ <xref:System.Windows.Shapes.Polygon>  
+ <xref:System.Windows.Shapes.Shape>  
+ [<span data-ttu-id="1a263-114">Esempio di elementi forma</span><span class="sxs-lookup"><span data-stu-id="1a263-114">Shape Elements Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160037)  
+ [<span data-ttu-id="1a263-115">Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF</span><span class="sxs-lookup"><span data-stu-id="1a263-115">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)

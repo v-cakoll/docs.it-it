@@ -1,69 +1,73 @@
 ---
-title: "Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], creazione"
-  - "controlli [Windows Form], analisi dello stato di avanzamento"
-  - "FlashTrackBar (controllo personalizzato)"
-  - "avanzamento, visualizzazione [Windows Form]"
+title: 'Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], progress tracking
+- controls [Windows Forms], creating
+- progress [Windows Forms], reporting [Windows Forms]
+- FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55b3879b894658c9a649004348a198d004040af3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento
-Nell'esempio di codice riportato di seguito viene illustrato un controllo personalizzato, denominato `FlashTrackBar`, che può essere utilizzato per visualizzare il livello o lo stato di avanzamento di un'applicazione.  Il controllo utilizza una sfumatura per rappresentare visivamente l'avanzamento.  
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a><span data-ttu-id="a4163-102">Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento</span><span class="sxs-lookup"><span data-stu-id="a4163-102">How to: Create a Windows Forms Control That Shows Progress</span></span>
+<span data-ttu-id="a4163-103">L'esempio di codice seguente visualizza un controllo personalizzato denominato `FlashTrackBar` che può essere usato per visualizzare all'utente il livello o lo stato di avanzamento di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a4163-103">The following code example shows a custom control called `FlashTrackBar` that can be used to show the user the level or the progress of an application.</span></span> <span data-ttu-id="a4163-104">Usa una sfumatura per rappresentare visivamente lo stato di avanzamento.</span><span class="sxs-lookup"><span data-stu-id="a4163-104">It uses a gradient to visually represent progress.</span></span>  
   
- Nel controllo `FlashTrackBar` vengono illustrati i concetti seguenti:  
+ <span data-ttu-id="a4163-105">Il controllo `FlashTrackBar` illustra i concetti seguenti:</span><span class="sxs-lookup"><span data-stu-id="a4163-105">The `FlashTrackBar` control illustrates the following concepts:</span></span>  
   
--   Definizione di proprietà personalizzate.  
+-   <span data-ttu-id="a4163-106">Definizione di proprietà personalizzate.</span><span class="sxs-lookup"><span data-stu-id="a4163-106">Defining custom properties.</span></span>  
   
--   Definizione di eventi personalizzati.  \(`FlashTrackBar` definisce l'evento `ValueChanged`\).  
+-   <span data-ttu-id="a4163-107">Definizione di eventi personalizzati.</span><span class="sxs-lookup"><span data-stu-id="a4163-107">Defining custom events.</span></span> <span data-ttu-id="a4163-108">(`FlashTrackBar` definisce l'evento `ValueChanged`.)</span><span class="sxs-lookup"><span data-stu-id="a4163-108">(`FlashTrackBar` defines the `ValueChanged` event.)</span></span>  
   
--   Esecuzione dell'override del metodo <xref:System.Windows.Forms.Control.OnPaint%2A> per fornire la logica necessaria per la progettazione del controllo.  
+-   <span data-ttu-id="a4163-109">Si esegue l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo per fornire la logica per disegnare il controllo.</span><span class="sxs-lookup"><span data-stu-id="a4163-109">Overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method to provide logic to draw the control.</span></span>  
   
--   Calcolo dell'area disponibile per disegnare il controllo mediante la proprietà <xref:System.Windows.Forms.Control.ClientRectangle%2A>.  `FlashTrackBar` esegue tale operazione nel metodo `OptimizedInvalidate`.  
+-   <span data-ttu-id="a4163-110">Calcolo dell'area disponibile per disegnare il controllo mediante il relativo <xref:System.Windows.Forms.Control.ClientRectangle%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="a4163-110">Computing the area available for drawing the control by using its <xref:System.Windows.Forms.Control.ClientRectangle%2A> property.</span></span> <span data-ttu-id="a4163-111">`FlashTrackBar` esegue questa operazione nel relativo metodo `OptimizedInvalidate`.</span><span class="sxs-lookup"><span data-stu-id="a4163-111">`FlashTrackBar` does this in its `OptimizedInvalidate` method.</span></span>  
   
--   Implementazione della serializzazione o della persistenza per una proprietà quando viene modificata in Progettazione Windows Form.  `FlashTrackBar` definisce i metodi `ShouldSerializeStartColor` e `ShouldSerializeEndColor` per la serializzazione delle proprietà `StartColor` e `EndColor`.  
+-   <span data-ttu-id="a4163-112">Implementazione della serializzazione o del salvataggio permanente per una proprietà quando viene modificata nella Progettazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="a4163-112">Implementing serialization or persistence for a property when it is changed in the Windows Forms Designer.</span></span> <span data-ttu-id="a4163-113">`FlashTrackBar` definisce i metodi `ShouldSerializeStartColor` e `ShouldSerializeEndColor` per la serializzazione delle relative proprietà `StartColor` e `EndColor`.</span><span class="sxs-lookup"><span data-stu-id="a4163-113">`FlashTrackBar` defines the `ShouldSerializeStartColor` and `ShouldSerializeEndColor` methods for serializing its `StartColor` and `EndColor` properties.</span></span>  
   
- Nella tabella riportata di seguito sono illustrate le proprietà personalizzate definite da `FlashTrackBar`.  
+ <span data-ttu-id="a4163-114">La tabella seguente elenca le proprietà personalizzate definite da `FlashTrackBar`.</span><span class="sxs-lookup"><span data-stu-id="a4163-114">The following table shows the custom properties defined by `FlashTrackBar`.</span></span>  
   
-|Proprietà|Descrizione|  
-|---------------|-----------------|  
-|`AllowUserEdit`|Indica se l'utente può modificare il valore del controllo FlashTrackBar selezionandolo e trascinandolo.|  
-|`EndColor`|Specifica il colore finale della barra di avanzamento.|  
-|`DarkenBy`|Specifica di quanto scurire lo sfondo rispetto alla sfumatura in primo piano.|  
-|`Max`|Specifica il valore massimo della barra di avanzamento.|  
-|`Min`|Specifica il valore minimo della barra di avanzamento.|  
-|`StartColor`|Specifica il colore iniziale della sfumatura.|  
-|`ShowPercentage`|Indica se visualizzare una percentuale sulla sfumatura.|  
-|`ShowValue`|Indica se visualizzare il valore corrente sulla sfumatura.|  
-|`ShowGradient`|Indica se sulla barra di avanzamento deve essere visualizzata una sfumatura di colore che indica il valore corrente.|  
-|-   `Value`|Specifica il valore corrente della barra di avanzamento.|  
+|<span data-ttu-id="a4163-115">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a4163-115">Property</span></span>|<span data-ttu-id="a4163-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a4163-116">Description</span></span>|  
+|--------------|-----------------|  
+|`AllowUserEdit`|<span data-ttu-id="a4163-117">Indica se l'utente può modificare il valore del controllo FlashTrackBar tramite selezione e trascinamento.</span><span class="sxs-lookup"><span data-stu-id="a4163-117">Indicates whether the user can change the value of the flash track bar by clicking and dragging it.</span></span>|  
+|`EndColor`|<span data-ttu-id="a4163-118">Specifica il colore finale della barra di avanzamento.</span><span class="sxs-lookup"><span data-stu-id="a4163-118">Specifies the ending color of the track bar.</span></span>|  
+|`DarkenBy`|<span data-ttu-id="a4163-119">Specifica di quanto scurire lo sfondo rispetto alla sfumatura di primo piano.</span><span class="sxs-lookup"><span data-stu-id="a4163-119">Specifies how much to darken the background with respect to the foreground gradient.</span></span>|  
+|`Max`|<span data-ttu-id="a4163-120">Specifica il valore massimo della barra di avanzamento.</span><span class="sxs-lookup"><span data-stu-id="a4163-120">Specifies the maximum value of the track bar.</span></span>|  
+|`Min`|<span data-ttu-id="a4163-121">Specifica il valore minimo della barra di avanzamento.</span><span class="sxs-lookup"><span data-stu-id="a4163-121">Specifies the minimum value of the track bar.</span></span>|  
+|`StartColor`|<span data-ttu-id="a4163-122">Specifica il colore iniziale della sfumatura.</span><span class="sxs-lookup"><span data-stu-id="a4163-122">Specifies the starting color of the gradient.</span></span>|  
+|`ShowPercentage`|<span data-ttu-id="a4163-123">Indica se visualizzare una percentuale sulla sfumatura.</span><span class="sxs-lookup"><span data-stu-id="a4163-123">Indicates whether to display a percentage over the gradient.</span></span>|  
+|`ShowValue`|<span data-ttu-id="a4163-124">Indica se visualizzare il valore corrente sulla sfumatura.</span><span class="sxs-lookup"><span data-stu-id="a4163-124">Indicates whether to display the current value over the gradient.</span></span>|  
+|`ShowGradient`|<span data-ttu-id="a4163-125">Indica se l'indicatore di avanzamento deve visualizzare una sfumatura di colore che indica il valore corrente.</span><span class="sxs-lookup"><span data-stu-id="a4163-125">Indicates whether the track bar should display a color gradient showing the current value.</span></span>|  
+|-   `Value`|<span data-ttu-id="a4163-126">Specifica il valore corrente della barra di avanzamento.</span><span class="sxs-lookup"><span data-stu-id="a4163-126">Specifies the current value of the track bar.</span></span>|  
   
- Nella tabella riportata di seguito sono illustrati i membri aggiuntivi definiti da `FlashTrackBar:` l'evento proprietà modificata e il metodo che genera tale evento.  
+ <span data-ttu-id="a4163-127">La tabella seguente elenca membri aggiuntivi definiti dalla proprietà `FlashTrackBar:`: l'evento proprietà modificata e il metodo che genera tale evento.</span><span class="sxs-lookup"><span data-stu-id="a4163-127">The following table shows additional members defined by `FlashTrackBar:` the property-changed event and the method that raises the event.</span></span>  
   
-|Membro|Descrizione|  
+|<span data-ttu-id="a4163-128">Membro</span><span class="sxs-lookup"><span data-stu-id="a4163-128">Member</span></span>|<span data-ttu-id="a4163-129">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a4163-129">Description</span></span>|  
 |------------|-----------------|  
-|`ValueChanged`|L'evento che viene generato quando la proprietà `Value` della barra di avanzamento viene modificata.|  
-|`OnValueChanged`|Il metodo che genera l'evento `ValueChanged`.|  
+|`ValueChanged`|<span data-ttu-id="a4163-130">L'evento generato quando viene modificata la proprietà `Value` della barra di avanzamento.</span><span class="sxs-lookup"><span data-stu-id="a4163-130">The event that is raised when the `Value` property of the track bar changes.</span></span>|  
+|`OnValueChanged`|<span data-ttu-id="a4163-131">Il metodo che genera l'evento `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="a4163-131">The method that raises the `ValueChanged` event.</span></span>|  
   
 > [!NOTE]
->  `FlashTrackBar` utilizza la classe <xref:System.EventArgs> per i dati dell'evento e <xref:System.EventHandler> come delegato dell'evento.  
+>  <span data-ttu-id="a4163-132">`FlashTrackBar`Usa il <xref:System.EventArgs> classe per i dati dell'evento e <xref:System.EventHandler> delegato dell'evento.</span><span class="sxs-lookup"><span data-stu-id="a4163-132">`FlashTrackBar` uses the <xref:System.EventArgs> class for event data and <xref:System.EventHandler> for the event delegate.</span></span>  
   
- Per gestire gli eventi *NomeEvento* corrispondenti, il controllo `FlashTrackBar` esegue l'override dei seguenti metodi ereditati da <xref:System.Windows.Forms.Control?displayProperty=fullName>:  
+ <span data-ttu-id="a4163-133">Per gestire il corrispondente *EventName* eventi, `FlashTrackBar` esegue l'override di metodi seguenti che eredita da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="a4163-133">To handle the corresponding *EventName* events, `FlashTrackBar` overrides the following methods that it inherits from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span></span>  
   
 -   <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -75,7 +79,7 @@ Nell'esempio di codice riportato di seguito viene illustrato un controllo person
   
 -   <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- Per gestire gli eventi di proprietà modificata corrispondenti, il controllo `FlashTrackBar` esegue l'override dei seguenti metodi ereditati da <xref:System.Windows.Forms.Control?displayProperty=fullName>:  
+ <span data-ttu-id="a4163-134">Per gestire gli eventi di modifica della proprietà corrispondenti, `FlashTrackBar` esegue l'override di metodi seguenti che eredita da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="a4163-134">To handle the corresponding property-changed events, `FlashTrackBar` overrides the following methods that it inherits from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span></span>  
   
 -   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
@@ -83,8 +87,8 @@ Nell'esempio di codice riportato di seguito viene illustrato un controllo person
   
 -   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## Esempio  
- Il controllo `FlashTrackBar` definisce due editor di tipi con interfaccia utente, `FlashTrackBarValueEditor` e `FlashTrackBarDarkenByEditor`, riportati nei seguenti listati di codice.  La classe `HostApp` utilizza il controllo `FlashTrackBar` su un Windows Form.  
+## <a name="example"></a><span data-ttu-id="a4163-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="a4163-135">Example</span></span>  
+ <span data-ttu-id="a4163-136">Il controllo `FlashTrackBar` definisce due editor di tipi dell'interfaccia utente, `FlashTrackBarValueEditor` e `FlashTrackBarDarkenByEditor`, visualizzati negli elenchi di codice seguenti.</span><span class="sxs-lookup"><span data-stu-id="a4163-136">The `FlashTrackBar` control defines two UI type editors, `FlashTrackBarValueEditor` and `FlashTrackBarDarkenByEditor`, which are shown in the following code listings.</span></span> <span data-ttu-id="a4163-137">La classe `HostApp` usa il controllo `FlashTrackBar` in un Windows Form.</span><span class="sxs-lookup"><span data-stu-id="a4163-137">The `HostApp` class uses the `FlashTrackBar` control on a Windows Form.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
@@ -98,6 +102,6 @@ Nell'esempio di codice riportato di seguito viene illustrato un controllo person
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## Vedere anche  
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)   
- [Nozioni fondamentali sullo sviluppo di controlli Windows Form](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="a4163-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a4163-138">See Also</span></span>  
+ [<span data-ttu-id="a4163-139">Estensione del supporto in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="a4163-139">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [<span data-ttu-id="a4163-140">Nozioni fondamentali sullo sviluppo di controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="a4163-140">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

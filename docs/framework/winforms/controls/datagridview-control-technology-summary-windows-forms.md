@@ -1,75 +1,76 @@
 ---
-title: "Riepilogo della tecnologia del controllo DataGridView (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "griglie dei dati, informazioni sulle griglie dei dati"
-  - "DataGridView (controllo) [Windows Form], informazioni sul controllo DataGridView"
+title: Riepilogo della tecnologia del controllo DataGridView (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], about DataGridView control
+- data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f172d28e5f03e1177db6ad1bd9e98f4c68267765
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Riepilogo della tecnologia del controllo DataGridView (Windows Form)
-In questo argomento vengono riepilogate le informazioni sul controllo `DataGridView` e sulle classi che ne supportano l'utilizzo.  
+# <a name="datagridview-control-technology-summary-windows-forms"></a><span data-ttu-id="aab04-102">Riepilogo della tecnologia del controllo DataGridView (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="aab04-102">DataGridView Control Technology Summary (Windows Forms)</span></span>
+<span data-ttu-id="aab04-103">Questo argomento riepiloga le informazioni relative al controllo `DataGridView` e alle classi che ne supportano l'uso.</span><span class="sxs-lookup"><span data-stu-id="aab04-103">This topic summarizes information about the `DataGridView` control and the classes that support its use.</span></span>  
   
- La visualizzazione dei dati in formato tabulare è un'attività che può essere eseguita frequentemente.  Il controllo `DataGridView` è progettato come soluzione completa per la presentazione dei dati in una griglia.  
+ <span data-ttu-id="aab04-104">La visualizzazione dei dati in un formato tabulare è un'attività che spesso eseguite di frequente.</span><span class="sxs-lookup"><span data-stu-id="aab04-104">Displaying data in a tabular format is a task you are likely to perform frequently.</span></span> <span data-ttu-id="aab04-105">Il `DataGridView` controllo è progettato per essere una soluzione completa per la presentazione dei dati in una griglia.</span><span class="sxs-lookup"><span data-stu-id="aab04-105">The `DataGridView` control is designed to be a complete solution for presenting data in a grid.</span></span>  
   
-## Parole chiave  
- DataGridView, BindingSource, tabella, cella, associazione dati, modalità virtuale  
+## <a name="keywords"></a><span data-ttu-id="aab04-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="aab04-106">Keywords</span></span>  
+ <span data-ttu-id="aab04-107">DataGridView BindingSource, tabella, cella, associazione dati, la modalità virtuale</span><span class="sxs-lookup"><span data-stu-id="aab04-107">DataGridView, BindingSource, table, cell, data binding, virtual mode</span></span>  
   
-## Spazi dei nomi  
- <xref:System.Windows.Forms?displayProperty=fullName>  
+## <a name="namespaces"></a><span data-ttu-id="aab04-108">Spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="aab04-108">Namespaces</span></span>  
+ <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
- <xref:System.Data?displayProperty=fullName>  
+ <xref:System.Data?displayProperty=nameWithType>  
   
-## Tecnologie correlate  
+## <a name="related-technologies"></a><span data-ttu-id="aab04-109">Tecnologie correlate</span><span class="sxs-lookup"><span data-stu-id="aab04-109">Related Technologies</span></span>  
  `BindingSource`  
   
-## Background  
- I progettatori dell'interfaccia utente trovano spesso necessario che gli utenti visualizzino i dati in formato tabulare.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornisce diversi metodi per mostrare i dati in una tabella o una griglia.  Il controllo `DataGridView` rappresenta l'evoluzione più avanzata di questo tipo di tecnologia per le applicazioni Windows Form.  
+## <a name="background"></a><span data-ttu-id="aab04-110">Sfondo</span><span class="sxs-lookup"><span data-stu-id="aab04-110">Background</span></span>  
+ <span data-ttu-id="aab04-111">Finestre di progettazione dell'interfaccia utente spesso è necessario visualizzare dati tabulari per gli utenti.</span><span class="sxs-lookup"><span data-stu-id="aab04-111">User interface (UI) designers frequently find it necessary to display tabular data to users.</span></span> <span data-ttu-id="aab04-112">Il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] offre diversi modi per visualizzare i dati in una tabella o una griglia.</span><span class="sxs-lookup"><span data-stu-id="aab04-112">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provides several ways to show data in a table or grid.</span></span> <span data-ttu-id="aab04-113">Il `DataGridView` controllo rappresenta l'evoluzione più recente di questa tecnologia per applicazioni Windows Form.</span><span class="sxs-lookup"><span data-stu-id="aab04-113">The `DataGridView` control represents the latest evolution of this technology for Windows Forms applications.</span></span>  
   
- Il controllo `DataGridView` consente di visualizzare righe di dati contenute in un archivio dati.  Sono supportati molti tipi di archivi dati.  L'archivio dati può contenere dati semplici e non tipizzati, ad esempio matrici unidimensionali, oppure dati tipizzati, ad esempio <xref:System.Data.DataSet>.  Per ulteriori informazioni, vedere [Procedura: associare dati al controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="aab04-114">Il `DataGridView` controllo può visualizzare le righe di dati da un archivio dati.</span><span class="sxs-lookup"><span data-stu-id="aab04-114">The `DataGridView` control can display rows of data from a data store.</span></span> <span data-ttu-id="aab04-115">Sono supportati molti tipi di archivi dati.</span><span class="sxs-lookup"><span data-stu-id="aab04-115">Many types of data stores are supported.</span></span> <span data-ttu-id="aab04-116">L'archivio dati può contenere dati semplici e non tipizzati, ad esempio una matrice unidimensionale, oppure può contenere dati tipizzati, ad esempio un <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="aab04-116">The data store can hold simple, untyped data, such as a one-dimensional array, or it can hold typed data, such as a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="aab04-117">Per ulteriori informazioni, vedere [procedura: associare dati al controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="aab04-117">For more information, see [How to: Bind Data to the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span></span>  
   
- Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visualizzare i dati in formato tabulare.  È possibile utilizzare il controllo per la visualizzazione di serie di dati di qualsiasi dimensione in sola lettura o con possibilità di modifica.  
+ <span data-ttu-id="aab04-118">Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visualizzare i dati in formato tabulare.</span><span class="sxs-lookup"><span data-stu-id="aab04-118">The `DataGridView` control provides a powerful and flexible way to display data in a tabular format.</span></span> <span data-ttu-id="aab04-119">È possibile utilizzare il controllo per la visualizzazione in sola lettura o modificabili di piccole e grandi set di dati.</span><span class="sxs-lookup"><span data-stu-id="aab04-119">You can use the control to show read-only or editable views of small to very large sets of data.</span></span>  
   
- Il controllo `DataGridView` può essere esteso in molti modi per inserire comportamenti predefiniti all'interno delle applicazioni.  È possibile specificare ad esempio propri algoritmi di ordinamento a livello di codice e creare tipi personalizzati di celle.  L'aspetto del controllo `DataGridView` può inoltre essere personalizzato facilmente scegliendo diverse proprietà.  Molti tipi di archivi dati possono essere utilizzati come origine dati. In alternativa, il controllo `DataGridView` può funzionare senza che vi sia associata un'origine dati.  
+ <span data-ttu-id="aab04-120">È possibile estendere il `DataGridView` controllo in diversi modi per compilare un comportamento personalizzato nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="aab04-120">You can extend the `DataGridView` control in several ways to build custom behavior into your applications.</span></span> <span data-ttu-id="aab04-121">Ad esempio, è possibile specificare a livello di codice i propri algoritmi di ordinamento e creare i propri tipi di celle.</span><span class="sxs-lookup"><span data-stu-id="aab04-121">For example, you can programmatically specify your own sorting algorithms, and you can create your own types of cells.</span></span> <span data-ttu-id="aab04-122">È possibile personalizzare facilmente l'aspetto del controllo `DataGridView` scegliendo tra diverse proprietà.</span><span class="sxs-lookup"><span data-stu-id="aab04-122">You can easily customize the appearance of the `DataGridView` control by choosing among several properties.</span></span> <span data-ttu-id="aab04-123">Molti tipi di archivi dati possono essere utilizzati come origine dati, o `DataGridView` controllo può essere utilizzato senza un'origine dati associata.</span><span class="sxs-lookup"><span data-stu-id="aab04-123">Many types of data stores can be used as a data source, or the `DataGridView` control can operate without a data source bound to it.</span></span>  
   
-## Implementazione delle classi DataGridView  
- Le funzioni di Extensibility del controllo `DataGridView` possono essere sfruttate in molti modi.  È possibile personalizzare numerosi aspetti del controllo mediante eventi e proprietà, ma per alcune personalizzazioni è necessario creare nuove classi derivate dalle classi `DataGridView` già presenti.  
+## <a name="implementing-datagridview-classes"></a><span data-ttu-id="aab04-124">Implementazione di classi di DataGridView</span><span class="sxs-lookup"><span data-stu-id="aab04-124">Implementing DataGridView Classes</span></span>  
+ <span data-ttu-id="aab04-125">Esistono diversi modi per poter sfruttare il `DataGridView` funzionalità di estensibilità del controllo.</span><span class="sxs-lookup"><span data-stu-id="aab04-125">There are several ways for you to take advantage of the `DataGridView` control's extensibility features.</span></span> <span data-ttu-id="aab04-126">È possibile personalizzare molti aspetti del controllo tramite proprietà ed eventi, ma alcune personalizzazioni è necessario creare nuove classi derivate da esistente `DataGridView` classi.</span><span class="sxs-lookup"><span data-stu-id="aab04-126">You can customize many aspects of the control through events and properties, but some customizations require you to create new classes derived from existing `DataGridView` classes.</span></span>  
   
- Le classi utilizzate più di frequente sono `DataGridViewCell` e `DataGridViewColumn`.  La classe relativa alla cella può essere derivata da `DataGridViewCell` o da una delle relative classi figlie.  Sebbene sia possibile aggiungere tipi di cella a qualsiasi colonna, verrà in genere utilizzata una classe di colonna associata derivata da `DataGridViewColumn`, in cui per impostazione predefinita vengono inserite le celle del tipo di cella personalizzato.  
+ <span data-ttu-id="aab04-127">Le classi di base utilizzate più di frequente sono `DataGridViewCell` e `DataGridViewColumn`.</span><span class="sxs-lookup"><span data-stu-id="aab04-127">The most typically used base classes are `DataGridViewCell` and `DataGridViewColumn`.</span></span> <span data-ttu-id="aab04-128">È possibile derivare la propria classe di cella da `DataGridViewCell` o le relative classi figlio.</span><span class="sxs-lookup"><span data-stu-id="aab04-128">You can derive your own cell class from `DataGridViewCell` or any of its child classes.</span></span> <span data-ttu-id="aab04-129">Sebbene sia possibile aggiungere qualsiasi tipo di cella per qualsiasi colonna, si verrà in genere anche derivare una classe di colonna correlata da `DataGridViewColumn` che ospita le celle del tipo di cella personalizzato per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="aab04-129">Although you can add any cell type to any column, you will typically also derive a companion column class from `DataGridViewColumn` that hosts cells of your custom cell type by default.</span></span>  
   
- È possibile implementare l'interfaccia `IDataGridViewEditingCell` nella classe di cella derivata per creare un tipo di cella che disponga di funzionalità di modifica ma che non contenga un controllo in modalità di modifica.  Per creare un controllo che sia possibile inserire in una cella in modalità di modifica, è possibile implementare l'interfaccia `IDataGridViewEditingControl` in una classe derivata da <xref:System.Windows.Forms.Control>.  
+ <span data-ttu-id="aab04-130">È possibile implementare il `IDataGridViewEditingCell` interfaccia nella classe di cella derivata per creare un tipo di cella che disponga di funzionalità di modifica, ma non ospita un controllo in modalità di modifica.</span><span class="sxs-lookup"><span data-stu-id="aab04-130">You can implement the `IDataGridViewEditingCell` interface in your derived cell class to create a cell type that has editing functionality but does not host a control in editing mode.</span></span> <span data-ttu-id="aab04-131">Per creare un controllo che è possibile ospitare in una cella in modalità di modifica, è possibile implementare il `IDataGridViewEditingControl` interfaccia in una classe derivata da <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="aab04-131">To create a control that you can host in a cell in editing mode, you can implement the `IDataGridViewEditingControl` interface in a class derived from <xref:System.Windows.Forms.Control>.</span></span>  
   
- Per ulteriori informazioni, vedere [Procedura: personalizzare celle e colonne nel controllo DataGridView di Windows Form estendendone il comportamento e l'aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) e [Procedura: inserire controlli in celle del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ <span data-ttu-id="aab04-132">Per ulteriori informazioni, vedere [procedura: personalizzare celle e colonne nel controllo DataGridView Windows Form dall'estensione di comportamento relativi e l'aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) e [come: i controlli Host nelle celle del controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span><span class="sxs-lookup"><span data-stu-id="aab04-132">For more information, see [How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) and [How to: Host Controls in Windows Forms DataGridView Cells](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span></span>  
   
-## Riepilogo delle classi DataGridView  
+## <a name="datagridview-classes-at-a-glance"></a><span data-ttu-id="aab04-133">Riepilogo delle classi DataGridView</span><span class="sxs-lookup"><span data-stu-id="aab04-133">DataGridView Classes at a Glance</span></span>  
  <xref:System.Windows.Forms>  
   
-|Area tecnologica|Classi\/interfacce\/elementi di configurazione|  
-|----------------------|----------------------------------------------------|  
-|Associazione dati|<xref:System.Windows.Forms.BindingSource>|  
-|Presentazione dei dati|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> e classi derivate<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> e classi derivate<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> e classi derivate<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|Extensibility <xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Forms.DataGridViewCell> e classi derivate<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> e classi derivate<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|<span data-ttu-id="aab04-134">Area tecnologica</span><span class="sxs-lookup"><span data-stu-id="aab04-134">Technology Area</span></span>|<span data-ttu-id="aab04-135">Classi/interfacce/elementi di configurazione</span><span class="sxs-lookup"><span data-stu-id="aab04-135">Classes/interfaces/configuration elements</span></span>|  
+|---------------------|-------------------------------------------------|  
+|<span data-ttu-id="aab04-136">Data binding</span><span class="sxs-lookup"><span data-stu-id="aab04-136">Data Binding</span></span>|<xref:System.Windows.Forms.BindingSource>|  
+|<span data-ttu-id="aab04-137">Presentazione dei dati</span><span class="sxs-lookup"><span data-stu-id="aab04-137">Data Presentation</span></span>|<xref:System.Windows.Forms.DataGridView><br /><br /> <span data-ttu-id="aab04-138"><xref:System.Windows.Forms.DataGridViewCell>e le classi derivate</span><span class="sxs-lookup"><span data-stu-id="aab04-138"><xref:System.Windows.Forms.DataGridViewCell> and derived classes</span></span><br /><br /> <span data-ttu-id="aab04-139"><xref:System.Windows.Forms.DataGridViewRow>e le classi derivate</span><span class="sxs-lookup"><span data-stu-id="aab04-139"><xref:System.Windows.Forms.DataGridViewRow> and derived classes</span></span><br /><br /> <span data-ttu-id="aab04-140"><xref:System.Windows.Forms.DataGridViewColumn>e le classi derivate</span><span class="sxs-lookup"><span data-stu-id="aab04-140"><xref:System.Windows.Forms.DataGridViewColumn> and derived classes</span></span><br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
+|<span data-ttu-id="aab04-141"><xref:System.Windows.Forms.DataGridView>Estendibilità</span><span class="sxs-lookup"><span data-stu-id="aab04-141"><xref:System.Windows.Forms.DataGridView> Extensibility</span></span>|<span data-ttu-id="aab04-142"><xref:System.Windows.Forms.DataGridViewCell>e le classi derivate</span><span class="sxs-lookup"><span data-stu-id="aab04-142"><xref:System.Windows.Forms.DataGridViewCell> and derived classes</span></span><br /><br /> <span data-ttu-id="aab04-143"><xref:System.Windows.Forms.DataGridViewColumn>e le classi derivate</span><span class="sxs-lookup"><span data-stu-id="aab04-143"><xref:System.Windows.Forms.DataGridViewColumn> and derived classes</span></span><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
-## Novità  
- Il controllo <xref:System.Windows.Forms.DataGridView> è progettato come soluzione completa per la visualizzazione dei dati in formato tabulare con Windows Form.  Quando si crea una nuova applicazione, prendere in considerazione l'utilizzo del controllo <xref:System.Windows.Forms.DataGridView> prima di altre soluzioni, come <xref:System.Windows.Forms.DataGrid>.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+## <a name="whats-new"></a><span data-ttu-id="aab04-144">Novità</span><span class="sxs-lookup"><span data-stu-id="aab04-144">What's New</span></span>  
+ <span data-ttu-id="aab04-145">Il <xref:System.Windows.Forms.DataGridView> controllo è progettato per essere una soluzione completa per la visualizzazione dei dati in formato tabulare con Windows Form.</span><span class="sxs-lookup"><span data-stu-id="aab04-145">The <xref:System.Windows.Forms.DataGridView> control is designed to be a complete solution for displaying tabular data with Windows Forms.</span></span> <span data-ttu-id="aab04-146">È consigliabile utilizzare il <xref:System.Windows.Forms.DataGridView> controllo prima di altre soluzioni, ad esempio <xref:System.Windows.Forms.DataGrid>, quando si crea una nuova applicazione.</span><span class="sxs-lookup"><span data-stu-id="aab04-146">You should consider using the <xref:System.Windows.Forms.DataGridView> control before other solutions, such as <xref:System.Windows.Forms.DataGrid>, when you are authoring a new application.</span></span> <span data-ttu-id="aab04-147">Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="aab04-147">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Il controllo <xref:System.Windows.Forms.DataGridView> può interagire con il componente <xref:System.Windows.Forms.BindingSource>.  Questo componente è progettato per rappresentare l'origine dati principale di un form  ed è in grado di gestire l'interazione tra un controllo <xref:System.Windows.Forms.DataGridView> e la relativa origine dati, a prescindere dal tipo di origine dati.  
+ <span data-ttu-id="aab04-148">Il <xref:System.Windows.Forms.DataGridView> controllo può interagire con il <xref:System.Windows.Forms.BindingSource> componente.</span><span class="sxs-lookup"><span data-stu-id="aab04-148">The <xref:System.Windows.Forms.DataGridView> control can work in close conjunction with the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="aab04-149">Questo componente è progettato per essere l'origine dati primaria di un form.</span><span class="sxs-lookup"><span data-stu-id="aab04-149">This component is designed to be the primary data source of a form.</span></span> <span data-ttu-id="aab04-150">È possibile gestire l'interazione tra un <xref:System.Windows.Forms.DataGridView> controllo e la relativa origine dati, indipendentemente dai dati di tipo di origine.</span><span class="sxs-lookup"><span data-stu-id="aab04-150">It can manage the interaction between a <xref:System.Windows.Forms.DataGridView> control and its data source, regardless of the data source type.</span></span>  
   
-## Vedere anche  
- [Cenni preliminari sul controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)   
- [Architettura del controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)   
- [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a><span data-ttu-id="aab04-151">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aab04-151">See Also</span></span>  
+ [<span data-ttu-id="aab04-152">Panoramica sul controllo DataGridView</span><span class="sxs-lookup"><span data-stu-id="aab04-152">DataGridView Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="aab04-153">Architettura del controllo DataGridView</span><span class="sxs-lookup"><span data-stu-id="aab04-153">DataGridView Control Architecture</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [<span data-ttu-id="aab04-154">Protezione delle informazioni di connessione</span><span class="sxs-lookup"><span data-stu-id="aab04-154">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)

@@ -1,36 +1,36 @@
 ---
-title: "Cenni preliminari sul componente PageSetupDialog (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PageSetupDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Imposta pagina (finestra di dialogo), visualizzazione"
-  - "PageSetupDialog (componente)"
+title: Cenni preliminari sul componente PageSetupDialog (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PageSetupDialog
+helpviewer_keywords:
+- Page Setup dialog box [Windows Forms], displaying
+- PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 082dbff66c8a0f06635936011f802c99b88e41df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul componente PageSetupDialog (Windows Form)
-Il componente <xref:System.Windows.Forms.PageSetupDialog> di Windows Form è una finestra di dialogo preconfigurata utilizzata per impostare i dettagli della pagina per la stampa nelle applicazioni basate su Windows  e costituisce una semplice soluzione, utilizzabile nell'applicazione applicazione basata su Windows creata, per consentire agli utenti di impostare le preferenze relative alla pagina anziché configurare una propria finestra di dialogo.  È possibile consentire agli utenti di impostare i bordi e i margini, intestazioni e piè di pagina e l'orientamento verticale o orizzontale.  Basandosi sulle finestre di dialogo standard di Windows è quindi possibile creare applicazioni le cui funzionalità di base sono immediatamente familiari agli utenti.  
+# <a name="pagesetupdialog-component-overview-windows-forms"></a><span data-ttu-id="ec2cb-102">Cenni preliminari sul componente PageSetupDialog (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="ec2cb-102">PageSetupDialog Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="ec2cb-103">Windows Form <xref:System.Windows.Forms.PageSetupDialog> componente è una finestra di dialogo preconfigurata che consentono di impostare i dettagli della pagina per la stampa nelle applicazioni basate su Windows.</span><span class="sxs-lookup"><span data-stu-id="ec2cb-103">The Windows Forms <xref:System.Windows.Forms.PageSetupDialog> component is a pre-configured dialog box used to set page details for printing in Windows-based applications.</span></span> <span data-ttu-id="ec2cb-104">Utilizzarlo all'interno dell'applicazione basate su Windows come una soluzione semplice per gli utenti per impostare preferenze della pagina anziché configurare la propria finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="ec2cb-104">Use it within your Windows-based application as a simple solution for users to set page preferences in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="ec2cb-105">È possibile abilitare l'impostazione bordo e i margini, intestazioni e piè di pagina e l'orientamento verticale o orizzontale.</span><span class="sxs-lookup"><span data-stu-id="ec2cb-105">You can enable users to set border and margin adjustments, headers and footers, and portrait or landscape orientation.</span></span> <span data-ttu-id="ec2cb-106">Basandosi sulle finestre di dialogo standard di Windows è quindi possibile creare applicazioni le cui funzionalità di base sono immediatamente familiari agli utenti.</span><span class="sxs-lookup"><span data-stu-id="ec2cb-106">By relying on standard Windows dialog boxes, you create applications whose basic functionality is immediately familiar to users.</span></span>  
   
-## Proprietà e metodi principali  
- Utilizzare il metodo <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> per visualizzare la finestra di dialogo in fase di esecuzione.  Questo componente dispone di proprietà che è possibile impostare, relative a una singola pagina \(classe <xref:System.Drawing.Printing.PrintDocument>\) o a qualsiasi documento \(classe <xref:System.Drawing.Printing.PageSettings>\).  È inoltre possibile utilizzare il componente <xref:System.Windows.Forms.PageSetupDialog> per determinare impostazioni della stampante specifiche, archiviate nella classe <xref:System.Drawing.Printing.PrinterSettings>.  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="ec2cb-107">Metodi e proprietà chiave</span><span class="sxs-lookup"><span data-stu-id="ec2cb-107">Key Properties and Methods</span></span>  
+ <span data-ttu-id="ec2cb-108">Utilizzare il <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodo per visualizzare la finestra di dialogo in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="ec2cb-108">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog at run time.</span></span> <span data-ttu-id="ec2cb-109">Questo componente è è possibile impostare proprietà relative a una singola pagina (<xref:System.Drawing.Printing.PrintDocument> classe) o a qualsiasi documento (<xref:System.Drawing.Printing.PageSettings> classe).</span><span class="sxs-lookup"><span data-stu-id="ec2cb-109">This component has properties you can set that relate to either a single page (<xref:System.Drawing.Printing.PrintDocument> class) or any document (<xref:System.Drawing.Printing.PageSettings> class).</span></span> <span data-ttu-id="ec2cb-110">Inoltre, il <xref:System.Windows.Forms.PageSetupDialog> componente può essere utilizzato per determinare le impostazioni della stampante specifiche, che vengono archiviate nel <xref:System.Drawing.Printing.PrinterSettings> classe.</span><span class="sxs-lookup"><span data-stu-id="ec2cb-110">Additionally, the <xref:System.Windows.Forms.PageSetupDialog> component can be used to determine specific printer settings, which are stored in the <xref:System.Drawing.Printing.PrinterSettings> class.</span></span>  
   
- Quando viene aggiunto a un form, il componente <xref:System.Windows.Forms.PageSetupDialog> viene visualizzato nella barra nella parte inferiore di Progettazione Windows Form.  
+ <span data-ttu-id="ec2cb-111">Quando viene aggiunto a un modulo, il <xref:System.Windows.Forms.PageSetupDialog> componente viene visualizzato nella barra delle applicazioni nella parte inferiore della finestra di progettazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="ec2cb-111">When it is added to a form, the <xref:System.Windows.Forms.PageSetupDialog> component appears in the tray at the bottom of the Windows Forms Designer.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.PageSetupDialog>   
- [Componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ec2cb-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ec2cb-112">See Also</span></span>  
+ <xref:System.Windows.Forms.PageSetupDialog>  
+ [<span data-ttu-id="ec2cb-113">Componente PageSetupDialog</span><span class="sxs-lookup"><span data-stu-id="ec2cb-113">PageSetupDialog Component</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)

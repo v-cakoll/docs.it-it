@@ -1,49 +1,33 @@
 ---
-title: "File specificato nel nome file non è un file XML valido | Documenti di Microsoft"
-ms.date: 2015-07-20
+title: "Il file specificato in FileName non è un file XML valido"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2fa595ab411fdd300327db9e1fcca1e3156c7eed
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f3275608a1871ac981eb5b3aa39f0be6ab4e758e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>Il file specificato in FileName non è un file XML valido
-Il nome file fornito non è un file XML valido. Per specificare la struttura e il contenuto consentito di un documento XML, è possibile usare una definizione DTD (Document Type Definition), uno schema XDR (XML-Data Reduced) o uno schema XSD (XML Schema Definition Language). Gli schemi XSD sono il modo migliore per specificare le grammatiche XML nel [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+# <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a><span data-ttu-id="e7291-102">Il file specificato in FileName non è un file XML valido</span><span class="sxs-lookup"><span data-stu-id="e7291-102">File specified in FileName is not a valid XML file</span></span>
+<span data-ttu-id="e7291-103">Il nome file fornito non è un file XML valido.</span><span class="sxs-lookup"><span data-stu-id="e7291-103">The file name that you supplied is not a valid XML file.</span></span> <span data-ttu-id="e7291-104">Per specificare la struttura e il contenuto consentito di un documento XML, è possibile usare una definizione DTD (Document Type Definition), uno schema XDR (XML-Data Reduced) o uno schema XSD (XML Schema Definition Language).</span><span class="sxs-lookup"><span data-stu-id="e7291-104">To specify the allowed structure and content of an XML document, you can use a Document Type Definition (DTD), a Microsoft XML-Data Reduced (XDR) schema, or an XML Schema definition language (XSD) schema.</span></span> <span data-ttu-id="e7291-105">Gli schemi XSD rappresentano modo migliore per specificare le grammatiche XML in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e7291-105">XSD schemas are the preferred way to specify XML grammars in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
   
 > [!NOTE]
->  Nelle precedenti versioni di Visual Studio, **Progettazione XML** è la finestra di progettazione per i dataset tipizzati e lo schema XML. È ancora possibile usare **Progettazione XML** per creare e modificare i file di schema XML. Tuttavia, in [!INCLUDE[vs_current_long](../../csharp/misc/includes/vs_current_long_md.md)], la finestra di progettazione per la creazione e modifica di dataset tipizzati il **Progettazione Dataset**. Per ulteriori informazioni, vedere [creazione e modifica di dataset tipizzati](https://docs.microsoft.com/visualstudio/data-tools/creating-and-editing-typed-datasets).  
+>  <span data-ttu-id="e7291-106">Nelle precedenti versioni di Visual Studio, **Progettazione XML** è la finestra di progettazione per i dataset tipizzati e lo schema XML.</span><span class="sxs-lookup"><span data-stu-id="e7291-106">In some earlier versions of Visual Studio, the **XML Designer** is the designer for typed datasets and XML schema.</span></span> <span data-ttu-id="e7291-107">È ancora possibile usare **Progettazione XML** per creare e modificare i file di schema XML.</span><span class="sxs-lookup"><span data-stu-id="e7291-107">The **XML Designer** can still be used to create and edit XML schema files.</span></span> <span data-ttu-id="e7291-108">In [!INCLUDE[vs_current_long](~/includes/vs-current-long-md.md)], tuttavia, la finestra di progettazione per la creazione e la modifica di dataset tipizzati è **Progettazione DataSet**.</span><span class="sxs-lookup"><span data-stu-id="e7291-108">However, in [!INCLUDE[vs_current_long](~/includes/vs-current-long-md.md)], the designer for creating and editing typed datasets is the **Dataset Designer**.</span></span> <span data-ttu-id="e7291-109">Per ulteriori informazioni, vedere [creazione e modifica di dataset tipizzati](/visualstudio/data-tools/creating-and-editing-typed-datasets).</span><span class="sxs-lookup"><span data-stu-id="e7291-109">For more information, see [Creating and Editing Typed Datasets](/visualstudio/data-tools/creating-and-editing-typed-datasets).</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e7291-110">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="e7291-110">To correct this error</span></span>  
   
--   Verificare che il nome file fornito sia corretto.  
+-   <span data-ttu-id="e7291-111">Verificare che il nome file fornito sia corretto.</span><span class="sxs-lookup"><span data-stu-id="e7291-111">Check that you are supplying the correct file name.</span></span>  
   
--   Accertarsi che il file specificato contenga XML valido, caricando il file XML che si vuole verificare in **Progettazione XML**. Scegliere **Convalida dati XML** dal menu **XML**. Gli errori sono visualizzati nell' **Elenco attività**.  
+-   <span data-ttu-id="e7291-112">Accertarsi che il file specificato contenga XML valido, caricando il file XML che si vuole verificare in **Progettazione XML**.</span><span class="sxs-lookup"><span data-stu-id="e7291-112">Check that the specified file contains valid XML by loading the XML file that you want to check into the **XML Designer**.</span></span> <span data-ttu-id="e7291-113">Scegliere **Convalida dati XML** dal menu **XML**.</span><span class="sxs-lookup"><span data-stu-id="e7291-113">From the **XML** menu, click **Validate XML**.</span></span> <span data-ttu-id="e7291-114">Gli errori sono visualizzati nell' **Elenco attività**.</span><span class="sxs-lookup"><span data-stu-id="e7291-114">Errors are displayed in the **Task List**.</span></span>  
   
--   Se il file XML ha uno schema XML associato, verificare che gli elementi appaiano nella struttura definita e che il contenuto dei singoli elementi sia conforme ai tipi di dati dichiarati specificati nello schema.  
+-   <span data-ttu-id="e7291-115">Se il file XML ha uno schema XML associato, verificare che gli elementi appaiano nella struttura definita e che il contenuto dei singoli elementi sia conforme ai tipi di dati dichiarati specificati nello schema.</span><span class="sxs-lookup"><span data-stu-id="e7291-115">If the XML file has an associated XML Schema, check that the elements appear in the defined structure and that the content of the individual elements conforms to the declared data types specified in the schema.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml></xref:System.Xml>   
- [Procedura: analizzare percorsi di file](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a><span data-ttu-id="e7291-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e7291-116">See Also</span></span>  
+ <xref:System.Xml>  
+ [<span data-ttu-id="e7291-117">Procedura: analizzare percorsi di file</span><span class="sxs-lookup"><span data-stu-id="e7291-117">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

@@ -1,85 +1,84 @@
 ---
-title: "Boolean Expressions (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "short-circuiting"
-  - "Boolean expressions"
-  - "logical operators, Boolean expressions"
-  - "expressions [Visual Basic], Boolean"
-  - "expression evaluation, Boolean expressions"
-  - "operators [Visual Basic], short-circuiting"
-  - "Visual Basic code, operators"
-  - "short-circuit evaluation"
-  - "logical operators, short-circuiting"
-  - "operators [Visual Basic], Boolean"
-  - "Visual Basic code, expressions"
+title: Espressioni booleane (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- short-circuiting
+- Boolean expressions
+- logical operators [Visual Basic], Boolean expressions
+- expressions [Visual Basic], Boolean
+- expression evaluation [Visual Basic], Boolean expressions
+- operators [Visual Basic], short-circuiting
+- Visual Basic code, operators
+- short-circuit evaluation
+- logical operators [Visual Basic], short-circuiting
+- operators [Visual Basic], Boolean
+- Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 48071c6833f9841fa42311dda59d6959c0645ff4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Boolean Expressions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Un'*espressione booleana* è un'espressione che restituisce un valore del [tipo di dati Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True` o `False`.  Le espressioni `Boolean` possono presentarsi in diverse forme.  La più semplice è il confronto diretto del valore di una variabile `Boolean` con un valore letterale `Boolean`, come illustrato nell'esempio riportato di seguito.  
+# <a name="boolean-expressions-visual-basic"></a><span data-ttu-id="3319a-102">Espressioni booleane (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3319a-102">Boolean Expressions (Visual Basic)</span></span>
+<span data-ttu-id="3319a-103">A *espressione booleana* è un'espressione che restituisce un valore di [tipo di dati Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` o `False`.</span><span class="sxs-lookup"><span data-stu-id="3319a-103">A *Boolean expression* is an expression that evaluates to a value of the [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` or `False`.</span></span> <span data-ttu-id="3319a-104">`Boolean`espressioni possono assumere varie forme.</span><span class="sxs-lookup"><span data-stu-id="3319a-104">`Boolean` expressions can take several forms.</span></span> <span data-ttu-id="3319a-105">La più semplice è il confronto diretto del valore di un `Boolean` variabile a un `Boolean` letterale, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="3319a-105">The simplest is the direct comparison of the value of a `Boolean` variable to a `Boolean` literal, as shown in the following example.</span></span>  
   
  [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
-## Due significati dell'operatore \=  
- Si noti che l'istruzione di assegnazione `newCustomer = True` sembra uguale all'espressione dell'esempio precedente, ma esegue una funzione diversa e viene usata in modo diverso.  Nell'esempio precedente, l'espressione `newCustomer = True` rappresenta un valore booleano e il segno `=` viene interpretato come un operatore di confronto.  In un'istruzione autonoma, il segno `=` viene interpretato come un operatore di assegnazione e assegna il valore di destra alla variabile di sinistra.  Questa condizione è illustrata nell'esempio che segue.  
+## <a name="two-meanings-of-the--operator"></a><span data-ttu-id="3319a-106">Due significati del = (operatore)</span><span class="sxs-lookup"><span data-stu-id="3319a-106">Two Meanings of the = Operator</span></span>  
+ <span data-ttu-id="3319a-107">Si noti che l'istruzione di assegnazione `newCustomer = True` sembra uguale all'espressione nell'esempio precedente, ma esegue una funzione diversa e viene utilizzato in modo diverso.</span><span class="sxs-lookup"><span data-stu-id="3319a-107">Notice that the assignment statement `newCustomer = True` looks the same as the expression in the preceding example, but it performs a different function and is used differently.</span></span> <span data-ttu-id="3319a-108">Nell'esempio precedente, l'espressione `newCustomer = True` rappresenta un valore booleano e `=` segno viene interpretato come un operatore di confronto.</span><span class="sxs-lookup"><span data-stu-id="3319a-108">In the preceding example, the expression `newCustomer = True` represents a Boolean value, and the `=` sign is interpreted as a comparison operator.</span></span> <span data-ttu-id="3319a-109">In un'istruzione autonoma, il `=` segno viene interpretato come un operatore di assegnazione e assegna il valore a destra alla variabile a sinistra.</span><span class="sxs-lookup"><span data-stu-id="3319a-109">In a stand-alone statement, the `=` sign is interpreted as an assignment operator and assigns the value on the right to the variable on the left.</span></span> <span data-ttu-id="3319a-110">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="3319a-110">The following example illustrates this.</span></span>  
   
  [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
   
- Per ulteriori informazioni, vedere [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) e [Statements](../../../../visual-basic/language-reference/statements/index.md).  
+ <span data-ttu-id="3319a-111">Per ulteriori informazioni, vedere [valore confronti](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) e [istruzioni](../../../../visual-basic/language-reference/statements/index.md).</span><span class="sxs-lookup"><span data-stu-id="3319a-111">For further information, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) and [Statements](../../../../visual-basic/language-reference/statements/index.md).</span></span>  
   
-## Operatori di confronto  
- Gli operatori di confronto come `=`, `<`, `>`, `<>`, `<=` e `>=` producono espressioni booleane tramite il confronto dell'espressione a sinistra dell'operatore con l'espressione a destra dell'operatore e valutando il risultato come `True` o `False`.  Questa condizione è illustrata nell'esempio che segue.  
+## <a name="comparison-operators"></a><span data-ttu-id="3319a-112">Operatori di confronto</span><span class="sxs-lookup"><span data-stu-id="3319a-112">Comparison Operators</span></span>  
+ <span data-ttu-id="3319a-113">Gli operatori di confronto, ad esempio `=`, `<`, `>`, `<>`, `<=`, e `>=` producono espressioni booleane tramite il confronto dell'espressione sul lato sinistro dell'operatore a cui l'espressione a destra l'operatore e valutare il risultato come `True` o `False`.</span><span class="sxs-lookup"><span data-stu-id="3319a-113">Comparison operators such as `=`, `<`, `>`, `<>`, `<=`, and `>=` produce Boolean expressions by comparing the expression on the left side of the operator to the expression on the right side of the operator and evaluating the result as `True` or `False`.</span></span> <span data-ttu-id="3319a-114">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="3319a-114">The following example illustrates this.</span></span>  
   
  `42 < 81`  
   
- Poiché 42 è inferiore a 81, l'espressione booleana nell'esempio riportato in precedenza restituisce `True`.  Per ulteriori informazioni su questo tipo di espressione, vedere [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
+ <span data-ttu-id="3319a-115">Poiché 42 è inferiore a 81, l'espressione booleana nell'esempio precedente restituisce `True`.</span><span class="sxs-lookup"><span data-stu-id="3319a-115">Because 42 is less than 81, the Boolean expression in the preceding example evaluates to `True`.</span></span> <span data-ttu-id="3319a-116">Per ulteriori informazioni su questo tipo di espressione, vedere [valore confronti](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).</span><span class="sxs-lookup"><span data-stu-id="3319a-116">For more information on this kind of expression, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).</span></span>  
   
-### Operatori di confronto combinati con operatori logici  
- Le espressioni di confronto possono essere combinate utilizzando gli operatori logici per produrre espressioni booleane più complesse.  Nell'esempio seguente viene dimostrato l'uso degli operatori di confronto in combinazione con un operatore logico.  
+### <a name="comparison-operators-combined-with-logical-operators"></a><span data-ttu-id="3319a-117">Operatori di confronto combinati con gli operatori logici</span><span class="sxs-lookup"><span data-stu-id="3319a-117">Comparison Operators Combined with Logical Operators</span></span>  
+ <span data-ttu-id="3319a-118">Espressioni di confronto possono essere combinate utilizzando gli operatori logici per produrre le espressioni booleane più complesse.</span><span class="sxs-lookup"><span data-stu-id="3319a-118">Comparison expressions can be combined using logical operators to produce more complex Boolean expressions.</span></span> <span data-ttu-id="3319a-119">Nell'esempio seguente viene illustrato l'utilizzo di operatori di confronto in combinazione con un operatore logico.</span><span class="sxs-lookup"><span data-stu-id="3319a-119">The following example demonstrates the use of comparison operators in conjunction with a logical operator.</span></span>  
   
  `x > y And x < 1000`  
   
- Nell'esempio illustrato in precedenza, il valore dell'espressione generale dipende dai valori delle espressioni su ogni lato dell'operatore `And`.  Se entrambe le espressioni sono `True`, l'espressione totale restituisce `True`.  Se una delle due espressioni è `False`, l'intera espressione restituirà `False`.  
+ <span data-ttu-id="3319a-120">Nell'esempio precedente, il valore dell'espressione generale dipende dai valori delle espressioni ai lati del `And` operatore.</span><span class="sxs-lookup"><span data-stu-id="3319a-120">In the preceding example, the value of the overall expression depends on the values of the expressions on each side of the `And` operator.</span></span> <span data-ttu-id="3319a-121">Se entrambe le espressioni sono `True`, quindi l'espressione complessiva restituisce `True`.</span><span class="sxs-lookup"><span data-stu-id="3319a-121">If both expressions are `True`, then the overall expression evaluates to `True`.</span></span> <span data-ttu-id="3319a-122">Se delle espressioni è `False`, quindi restituisce l'intera espressione `False`.</span><span class="sxs-lookup"><span data-stu-id="3319a-122">If either expression is `False`, then the entire expression evaluates to `False`.</span></span>  
   
-## Operatori short circuit  
- Gli operatori logici `AndAlso` e `OrElse` esibiscono un comportamento noto come *short\-circuit*.  Un operatore di short\-circuit restituisce prima l'operando di sinistra.  Se l'operatore di sinistra determina il valore dell'intera espressione, l'esecuzione del programma procederà senza valutare l'espressione corretta.  Questa condizione è illustrata nell'esempio che segue.  
+## <a name="short-circuiting-operators"></a><span data-ttu-id="3319a-123">Operatori di corto circuito</span><span class="sxs-lookup"><span data-stu-id="3319a-123">Short-Circuiting Operators</span></span>  
+ <span data-ttu-id="3319a-124">Gli operatori logici `AndAlso` e `OrElse` possono presentare un comportamento noto come *corto circuito*.</span><span class="sxs-lookup"><span data-stu-id="3319a-124">The logical operators `AndAlso` and `OrElse` exhibit behavior known as *short-circuiting*.</span></span> <span data-ttu-id="3319a-125">Un operatore di corto circuito valuta innanzitutto l'operando sinistro.</span><span class="sxs-lookup"><span data-stu-id="3319a-125">A short-circuiting operator evaluates the left operand first.</span></span> <span data-ttu-id="3319a-126">Se l'operando di sinistra determina il valore dell'intera espressione, quindi l'esecuzione del programma continua senza valutare l'espressione a destra.</span><span class="sxs-lookup"><span data-stu-id="3319a-126">If the left operand determines the value of the entire expression, then program execution proceeds without evaluating the right expression.</span></span> <span data-ttu-id="3319a-127">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="3319a-127">The following example illustrates this.</span></span>  
   
  [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
   
- Nell'esempio riportato in precedenza, l'operatore restituisce l'espressione di sinistra, `45 < 12`.  Poiché l'espressione di sinistra restituisce `False`, l'intera espressione logica deve restituire `False`.  L'esecuzione del programma salta quindi l'esecuzione del codice all'interno del blocco `If` senza valutare l'espressione di destra, `testFunction(3)`.  Questo esempio non consente di chiamare `testFunction()` in quando l'espressione di sinistra falsifica l'intera espressione.  
+ <span data-ttu-id="3319a-128">Nell'esempio precedente, l'operatore valuta l'espressione a sinistra, `45 < 12`.</span><span class="sxs-lookup"><span data-stu-id="3319a-128">In the preceding example, the operator evaluates the left expression, `45 < 12`.</span></span> <span data-ttu-id="3319a-129">Poiché l'espressione a sinistra restituisce `False`, deve restituire l'intera espressione logica `False`.</span><span class="sxs-lookup"><span data-stu-id="3319a-129">Because the left expression evaluates to `False`, the entire logical expression must evaluate to `False`.</span></span> <span data-ttu-id="3319a-130">Esecuzione del programma salta quindi l'esecuzione del codice all'interno di `If` blocco senza valutare l'espressione a destra, `testFunction(3)`.</span><span class="sxs-lookup"><span data-stu-id="3319a-130">Program execution thus skips execution of the code within the `If` block without evaluating the right expression, `testFunction(3)`.</span></span> <span data-ttu-id="3319a-131">Questo esempio non viene chiamato `testFunction()` perché l'espressione a sinistra quando falsifica l'intera espressione.</span><span class="sxs-lookup"><span data-stu-id="3319a-131">This example does not call `testFunction()` because the left expression falsifies the entire expression.</span></span>  
   
- In modo simile, se l'espressione di sinistra in un'espressione logica che utilizza `OrElse` restituisce `True`, l'esecuzione procederà alla riga di codice successiva senza valutare l'espressione di destra, in quanto l'espressione di sinistra ha già convalidato l'intera espressione.  
+ <span data-ttu-id="3319a-132">Analogamente, se l'espressione a sinistra in un'espressione logica che utilizza `OrElse` restituisce `True`, l'esecuzione procede alla riga successiva del codice senza valutare l'espressione a destra, in quanto l'espressione a sinistra ha già convalidato l'intero espressione.</span><span class="sxs-lookup"><span data-stu-id="3319a-132">Similarly, if the left expression in a logical expression using `OrElse` evaluates to `True`, execution proceeds to the next line of code without evaluating the right expression, because the left expression has already validated the entire expression.</span></span>  
   
-### Confronto con gli operatori di non short\-circuit  
- Entrambi i lati dell'operatore logico invece sono valutati quando vengono utilizzati gli operatori logici `And` e `Or`.  Questa condizione è illustrata nell'esempio che segue.  
+### <a name="comparison-with-non-short-circuiting-operators"></a><span data-ttu-id="3319a-133">Confronto con gli operatori Non Short-circuit</span><span class="sxs-lookup"><span data-stu-id="3319a-133">Comparison with Non-Short-Circuiting Operators</span></span>  
+ <span data-ttu-id="3319a-134">Al contrario, entrambi i lati dell'operatore logico vengono valutati quando gli operatori logici `And` e `Or` vengono utilizzati.</span><span class="sxs-lookup"><span data-stu-id="3319a-134">By contrast, both sides of the logical operator are evaluated when the logical operators `And` and `Or` are used.</span></span> <span data-ttu-id="3319a-135">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="3319a-135">The following example illustrates this.</span></span>  
   
  [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
   
- Nell'esempio elencato in precedenza viene chiamato `testFunction()` anche se l'espressione di sinistra restituisce `False`.  
+ <span data-ttu-id="3319a-136">Nell'esempio precedente viene chiamato `testFunction()` anche se l'espressione a sinistra di restituisce `False`.</span><span class="sxs-lookup"><span data-stu-id="3319a-136">The preceding example calls `testFunction()` even though the left expression evaluates to `False`.</span></span>  
   
-## Espressioni tra parentesi  
- È possibile utilizzare le parentesi per controllare l'ordine di valutazione delle espressioni booleane.  Le espressioni racchiuse tra parentesi vengono valutate per prime.  Nel caso di più livelli di annidamento, la precedenza è accordata alle espressioni annidate più interne.  All'interno delle parentesi, la valutazione viene eseguita in base alle regole di precedenza tra gli operatori.  Per ulteriori informazioni, vedere [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+## <a name="parenthetical-expressions"></a><span data-ttu-id="3319a-137">Espressioni tra parentesi</span><span class="sxs-lookup"><span data-stu-id="3319a-137">Parenthetical Expressions</span></span>  
+ <span data-ttu-id="3319a-138">È possibile utilizzare parentesi per controllare l'ordine di valutazione di espressioni booleane.</span><span class="sxs-lookup"><span data-stu-id="3319a-138">You can use parentheses to control the order of evaluation of Boolean expressions.</span></span> <span data-ttu-id="3319a-139">Valutata prima di espressioni racchiuse tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="3319a-139">Expressions enclosed by parentheses evaluate first.</span></span> <span data-ttu-id="3319a-140">Per più livelli di annidamento, precedenza viene concesso per le espressioni nidificate.</span><span class="sxs-lookup"><span data-stu-id="3319a-140">For multiple levels of nesting, precedence is granted to the most deeply nested expressions.</span></span> <span data-ttu-id="3319a-141">All'interno delle parentesi, valutazione procede secondo le regole di precedenza degli operatori.</span><span class="sxs-lookup"><span data-stu-id="3319a-141">Within parentheses, evaluation proceeds according to the rules of operator precedence.</span></span> <span data-ttu-id="3319a-142">Per ulteriori informazioni, vedere [precedenza degli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).</span><span class="sxs-lookup"><span data-stu-id="3319a-142">For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).</span></span>  
   
-## Vedere anche  
- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)   
- [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
- [Statements](../../../../visual-basic/programming-guide/language-features/statements.md)   
- [Comparison Operators](../../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [Efficient Combination of Operators](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
- [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)
+## <a name="see-also"></a><span data-ttu-id="3319a-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3319a-143">See Also</span></span>  
+ [<span data-ttu-id="3319a-144">Operatori logici e bit per bit in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3319a-144">Logical and Bitwise Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
+ [<span data-ttu-id="3319a-145">Confronto di valori</span><span class="sxs-lookup"><span data-stu-id="3319a-145">Value Comparisons</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [<span data-ttu-id="3319a-146">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="3319a-146">Statements</span></span>](../../../../visual-basic/programming-guide/language-features/statements.md)  
+ [<span data-ttu-id="3319a-147">Operatori di confronto</span><span class="sxs-lookup"><span data-stu-id="3319a-147">Comparison Operators</span></span>](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [<span data-ttu-id="3319a-148">Combinazione efficace di operatori</span><span class="sxs-lookup"><span data-stu-id="3319a-148">Efficient Combination of Operators</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
+ [<span data-ttu-id="3319a-149">Precedenza tra gli operatori in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3319a-149">Operator Precedence in Visual Basic</span></span>](../../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="3319a-150">Tipo di dati Boolean</span><span class="sxs-lookup"><span data-stu-id="3319a-150">Boolean Data Type</span></span>](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)

@@ -1,80 +1,83 @@
 ---
-title: "Procedura: modificare l&#39;aspetto del controllo TabControl Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pulsanti, visualizzazione di schede"
-  - "icone, visualizzazione nelle schede"
-  - "TabControl (controllo) [Windows Form], modifica dell'aspetto di pagine"
-  - "schede, controllo dell'aspetto"
+title: 'Procedura: modificare l''aspetto del controllo TabControl Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- icons [Windows Forms], displaying on tabs
+- TabControl control [Windows Forms], changing page appearance
+- tabs [Windows Forms], controlling appearance
+- buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b244930f0837d3b1d548e0f7a8c77dd80e1ce039
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: modificare l&#39;aspetto del controllo TabControl Windows Form
-L'aspetto delle schede in Windows Form può essere modificato mediante le proprietà degli oggetti <xref:System.Windows.Forms.TabControl> e <xref:System.Windows.Forms.TabPage> che costituiscono le singole schede nel controllo.  L'impostazione di queste proprietà consente di visualizzare immagini sulle schede, di visualizzare le schede in verticale anziché in orizzontale, di visualizzare più righe di schede e di attivare o disabilitare le schede a livello di codice.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a><span data-ttu-id="122b9-102">Procedura: modificare l'aspetto del controllo TabControl Windows Form</span><span class="sxs-lookup"><span data-stu-id="122b9-102">How to: Change the Appearance of the Windows Forms TabControl</span></span>
+<span data-ttu-id="122b9-103">È possibile modificare l'aspetto delle schede in Windows Form utilizzando le proprietà del <xref:System.Windows.Forms.TabControl> e <xref:System.Windows.Forms.TabPage> gli oggetti che costituiscono le singole schede del controllo.</span><span class="sxs-lookup"><span data-stu-id="122b9-103">You can change the appearance of tabs in Windows Forms by using properties of the <xref:System.Windows.Forms.TabControl> and the <xref:System.Windows.Forms.TabPage> objects that make up the individual tabs on the control.</span></span> <span data-ttu-id="122b9-104">L'impostazione di queste proprietà è possibile visualizzare immagini sulle schede, visualizzare le schede in verticale anziché in orizzontale, la visualizzazione di più righe di schede e abilitare o disabilitare le schede a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="122b9-104">By setting these properties, you can display images on tabs, display tabs vertically instead of horizontally, display multiple rows of tabs, and enable or disable tabs programmatically.</span></span>  
   
-### Per visualizzare un'icona sull'etichetta di una scheda  
+### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a><span data-ttu-id="122b9-105">Per visualizzare un'icona nella parte dell'etichetta di una scheda</span><span class="sxs-lookup"><span data-stu-id="122b9-105">To display an icon on the label part of a tab</span></span>  
   
-1.  Aggiungere un controllo <xref:System.Windows.Forms.ImageList> al form.  
+1.  <span data-ttu-id="122b9-106">Aggiungere un <xref:System.Windows.Forms.ImageList> al form.</span><span class="sxs-lookup"><span data-stu-id="122b9-106">Add an <xref:System.Windows.Forms.ImageList> control to the form.</span></span>  
   
-2.  Aggiungere le immagini all'elenco di immagini.  
+2.  <span data-ttu-id="122b9-107">Aggiungere immagini all'elenco di immagini.</span><span class="sxs-lookup"><span data-stu-id="122b9-107">Add images to the image list.</span></span>  
   
-     Per ulteriori informazioni sugli elenchi di immagini, vedere [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [Procedura: aggiungere o rimuovere immagini tramite il componente ImageList Windows Form](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+     <span data-ttu-id="122b9-108">Per ulteriori informazioni sugli elenchi di immagini, vedere [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [procedura: aggiungere o rimuovere immagini con il componente ImageList di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span><span class="sxs-lookup"><span data-stu-id="122b9-108">For more information about image lists, see [ImageList Component](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) and [How to: Add or Remove Images with the Windows Forms ImageList Component](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span>  
   
-3.  Impostare la proprietà <xref:System.Windows.Forms.TabControl.ImageList%2A> del controllo <xref:System.Windows.Forms.TabControl> sul controllo <xref:System.Windows.Forms.ImageList>.  
+3.  <span data-ttu-id="122b9-109">Impostare il <xref:System.Windows.Forms.TabControl.ImageList%2A> proprietà del <xref:System.Windows.Forms.TabControl> per il <xref:System.Windows.Forms.ImageList> controllo.</span><span class="sxs-lookup"><span data-stu-id="122b9-109">Set the <xref:System.Windows.Forms.TabControl.ImageList%2A> property of the <xref:System.Windows.Forms.TabControl> to the <xref:System.Windows.Forms.ImageList> control.</span></span>  
   
-4.  Impostare la proprietà <xref:System.Windows.Forms.TabPage.ImageIndex%2A> dell'oggetto <xref:System.Windows.Forms.TabPage> sull'indice di un'immagine appropriata nell'elenco.  
+4.  <span data-ttu-id="122b9-110">Impostare il <xref:System.Windows.Forms.TabPage.ImageIndex%2A> proprietà del <xref:System.Windows.Forms.TabPage> all'indice di un'immagine appropriata nell'elenco.</span><span class="sxs-lookup"><span data-stu-id="122b9-110">Set the <xref:System.Windows.Forms.TabPage.ImageIndex%2A> property of the <xref:System.Windows.Forms.TabPage> to the index of an appropriate image in the list.</span></span>  
   
-### Per creare più righe di schede  
+### <a name="to-create-multiple-rows-of-tabs"></a><span data-ttu-id="122b9-111">Per creare più righe di schede</span><span class="sxs-lookup"><span data-stu-id="122b9-111">To create multiple rows of tabs</span></span>  
   
-1.  Aggiungere il numero di pagine a schede desiderato.  
+1.  <span data-ttu-id="122b9-112">Aggiungere il numero di schede desiderato.</span><span class="sxs-lookup"><span data-stu-id="122b9-112">Add the number of tab pages you want.</span></span>  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.TabControl.Multiline%2A> del controllo <xref:System.Windows.Forms.TabControl> su `true`.  
+2.  <span data-ttu-id="122b9-113">Impostare il <xref:System.Windows.Forms.TabControl.Multiline%2A> proprietà del <xref:System.Windows.Forms.TabControl> a `true`.</span><span class="sxs-lookup"><span data-stu-id="122b9-113">Set the <xref:System.Windows.Forms.TabControl.Multiline%2A> property of the <xref:System.Windows.Forms.TabControl> to `true`.</span></span>  
   
-3.  Se le schede non sono già visualizzate su più righe, impostare la proprietà <xref:System.Windows.Forms.Control.Width%2A> del controllo <xref:System.Windows.Forms.TabControl> in modo che sia inferiore alla larghezza di tutte le schede.  
+3.  <span data-ttu-id="122b9-114">Se le schede non è già visualizzata in più righe, impostare il <xref:System.Windows.Forms.Control.Width%2A> proprietà del <xref:System.Windows.Forms.TabControl> di larghezza di tutte le schede.</span><span class="sxs-lookup"><span data-stu-id="122b9-114">If the tabs do not already appear in multiple rows, set the <xref:System.Windows.Forms.Control.Width%2A> property of the <xref:System.Windows.Forms.TabControl> to be narrower than all the tabs.</span></span>  
   
-### Per disporre le schede a lato del controllo  
+### <a name="to-arrange-tabs-on-the-side-of-the-control"></a><span data-ttu-id="122b9-115">Per disporre le schede sul lato del controllo</span><span class="sxs-lookup"><span data-stu-id="122b9-115">To arrange tabs on the side of the control</span></span>  
   
--   Impostare la proprietà <xref:System.Windows.Forms.TabControl.Alignment%2A> del controllo <xref:System.Windows.Forms.TabControl> su <xref:System.Windows.Forms.TabAlignment> o <xref:System.Windows.Forms.TabAlignment>.  
+-   <span data-ttu-id="122b9-116">Impostare il <xref:System.Windows.Forms.TabControl.Alignment%2A> proprietà del <xref:System.Windows.Forms.TabControl> a <xref:System.Windows.Forms.TabAlignment.Left> o <xref:System.Windows.Forms.TabAlignment.Right>.</span><span class="sxs-lookup"><span data-stu-id="122b9-116">Set the <xref:System.Windows.Forms.TabControl.Alignment%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAlignment.Left> or <xref:System.Windows.Forms.TabAlignment.Right>.</span></span>  
   
-### Per abilitare o disabilitare a livello di codice tutti i controlli in una scheda  
+### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a><span data-ttu-id="122b9-117">A livello di codice, abilitare o disabilitare tutti i controlli in una scheda</span><span class="sxs-lookup"><span data-stu-id="122b9-117">To programmatically enable or disable all controls on a tab</span></span>  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.TabPage.Enabled%2A> del controllo <xref:System.Windows.Forms.TabPage> su `true` o `false`.  
+1.  <span data-ttu-id="122b9-118">Impostare il <xref:System.Windows.Forms.TabPage.Enabled%2A> proprietà del <xref:System.Windows.Forms.TabPage> a `true` o `false`.</span><span class="sxs-lookup"><span data-stu-id="122b9-118">Set the <xref:System.Windows.Forms.TabPage.Enabled%2A> property of the <xref:System.Windows.Forms.TabPage> to `true` or `false`.</span></span>  
   
     ```vb  
     TabPage1.Enabled = False  
-  
     ```  
   
     ```csharp  
     tabPage1.Enabled = false;  
-  
     ```  
   
     ```cpp  
     tabPage1->Enabled = false;  
     ```  
   
-### Per visualizzare le schede come pulsanti  
+### <a name="to-display-tabs-as-buttons"></a><span data-ttu-id="122b9-119">Per visualizzare le schede come pulsanti</span><span class="sxs-lookup"><span data-stu-id="122b9-119">To display tabs as buttons</span></span>  
   
--   Impostare la proprietà <xref:System.Windows.Forms.TabControl.Appearance%2A> del controllo <xref:System.Windows.Forms.TabControl> su <xref:System.Windows.Forms.TabAppearance> o <xref:System.Windows.Forms.TabAppearance>.  
+-   <span data-ttu-id="122b9-120">Impostare il <xref:System.Windows.Forms.TabControl.Appearance%2A> proprietà del <xref:System.Windows.Forms.TabControl> a <xref:System.Windows.Forms.TabAppearance.Buttons> o <xref:System.Windows.Forms.TabAppearance.FlatButtons>.</span><span class="sxs-lookup"><span data-stu-id="122b9-120">Set the <xref:System.Windows.Forms.TabControl.Appearance%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAppearance.Buttons> or <xref:System.Windows.Forms.TabAppearance.FlatButtons>.</span></span>  
   
-## Vedere anche  
- [Controllo TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)   
- [Cenni preliminari sul controllo TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [Procedura: aggiungere un controllo a un oggetto TabPage](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [Procedura: disabilitare le schede](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)   
- [Procedura: aggiungere e rimuovere schede tramite il controllo TabControl Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="122b9-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="122b9-121">See Also</span></span>  
+ [<span data-ttu-id="122b9-122">Controllo TabControl</span><span class="sxs-lookup"><span data-stu-id="122b9-122">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ [<span data-ttu-id="122b9-123">Panoramica del controllo TabControl</span><span class="sxs-lookup"><span data-stu-id="122b9-123">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="122b9-124">Procedura: Aggiungere un controllo a un oggetto TabPage</span><span class="sxs-lookup"><span data-stu-id="122b9-124">How to: Add a Control to a Tab Page</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [<span data-ttu-id="122b9-125">Procedura: Disabilitare le schede</span><span class="sxs-lookup"><span data-stu-id="122b9-125">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [<span data-ttu-id="122b9-126">Procedura: Aggiungere e rimuovere schede con il controllo TabControl di Windows Form</span><span class="sxs-lookup"><span data-stu-id="122b9-126">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

@@ -1,37 +1,40 @@
 ---
-title: "Procedura: migliorare le prestazioni di rendering memorizzando nella cache un elemento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BitmapCache [WPF], miglioramento delle prestazioni di rendering"
-  - "CacheMode [WPF], miglioramento delle prestazioni di rendering"
-  - "prestazioni [WPF], memorizzazione di un elemento nella cache"
-  - "prestazioni di rendering [WPF], memorizzazione di un elemento nella cache"
-  - "UIElement [WPF], memorizzazione nella cache"
+title: 'Procedura: migliorare le prestazioni di rendering memorizzando nella cache un elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- rendering performance [WPF], caching an element
+- BitmapCache [WPF], improving rendering performance
+- CacheMode [WPF], improving rendering performance
+- performance [WPF], caching an element
+- UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d754d0ed2f3951c39b3eaeae097589adf3510f5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: migliorare le prestazioni di rendering memorizzando nella cache un elemento
-Utilizzare la classe <xref:System.Windows.Media.BitmapCache> per migliorare le prestazioni di rendering di un oggetto <xref:System.Windows.UIElement> complesso.  Per memorizzare un elemento nella cache, creare una nuova istanza della classe <xref:System.Windows.Media.BitmapCache> e assegnarla alla proprietà <xref:System.Windows.UIElement.CacheMode%2A> dell'elemento.  È possibile riutilizzare in modo efficiente un oggetto <xref:System.Windows.Media.BitmapCache> in un oggetto <xref:System.Windows.Media.BitmapCacheBrush>.  
+# <a name="how-to-improve-rendering-performance-by-caching-an-element"></a><span data-ttu-id="7f591-102">Procedura: migliorare le prestazioni di rendering memorizzando nella cache un elemento</span><span class="sxs-lookup"><span data-stu-id="7f591-102">How to: Improve Rendering Performance by Caching an Element</span></span>
+<span data-ttu-id="7f591-103">Utilizzare il <xref:System.Windows.Media.BitmapCache> classe per migliorare le prestazioni di rendering di un oggetto complesso <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="7f591-103">Use the <xref:System.Windows.Media.BitmapCache> class to improve rendering performance of a complex <xref:System.Windows.UIElement>.</span></span> <span data-ttu-id="7f591-104">Per memorizzare nella cache un elemento, creare una nuova istanza di <xref:System.Windows.Media.BitmapCache> classe e assegnarla alla proprietà dell'elemento <xref:System.Windows.UIElement.CacheMode%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="7f591-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span> <span data-ttu-id="7f591-105">È possibile riutilizzare un <xref:System.Windows.Media.BitmapCache> in modo efficiente in un <xref:System.Windows.Media.BitmapCacheBrush>.</span><span class="sxs-lookup"><span data-stu-id="7f591-105">You can reuse a <xref:System.Windows.Media.BitmapCache> efficiently in a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come creare un elemento complesso e memorizzarlo nella cache come bitmap. Questa operazione migliora le prestazioni quando l'elemento è animato.  L'elemento è un'area di disegno che contiene geometrie di forma con numerosi vertici.  Un oggetto <xref:System.Windows.Media.BitmapCache> con valori predefiniti è assegnato alla proprietà <xref:System.Windows.UIElement.CacheMode%2A> dell'area di disegno e un'animazione illustra il ridimensionamento uniforme della bitmap memorizzata nella cache.  
+## <a name="example"></a><span data-ttu-id="7f591-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="7f591-106">Example</span></span>  
+ <span data-ttu-id="7f591-107">Esempio di codice seguente viene illustrato come creare un elemento complesso e memorizzarlo nella cache come una bitmap, che migliora le prestazioni quando l'elemento viene animata.</span><span class="sxs-lookup"><span data-stu-id="7f591-107">The following code example shows how to create a complex element and cache it as a bitmap, which improves performance when the element is animated.</span></span> <span data-ttu-id="7f591-108">L'elemento è un'area di disegno che contiene le geometrie di forma con una quantità eccessiva di vertici.</span><span class="sxs-lookup"><span data-stu-id="7f591-108">The element is a canvas that holds shape geometries with many vertices.</span></span> <span data-ttu-id="7f591-109">Oggetto <xref:System.Windows.Media.BitmapCache> predefinito viene assegnato valori al <xref:System.Windows.UIElement.CacheMode%2A> dell'area di disegno, e un'animazione viene illustrato il ridimensionamento uniforme della bitmap memorizzata nella cache.</span><span class="sxs-lookup"><span data-stu-id="7f591-109">A <xref:System.Windows.Media.BitmapCache> with default values is assigned to the <xref:System.Windows.UIElement.CacheMode%2A> of the canvas, and an animation shows the smooth scaling of the cached bitmap.</span></span>  
   
- [!code-xml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
+ [!code-xaml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
   
-## Vedere anche  
- <xref:System.Windows.Media.BitmapCache>   
- <xref:System.Windows.Media.BitmapCacheBrush>   
- <xref:System.Windows.UIElement.CacheMode%2A>   
- [Procedura: utilizzare un elemento memorizzato nella cache come pennello](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)
+## <a name="see-also"></a><span data-ttu-id="7f591-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7f591-110">See Also</span></span>  
+ <xref:System.Windows.Media.BitmapCache>  
+ <xref:System.Windows.Media.BitmapCacheBrush>  
+ <xref:System.Windows.UIElement.CacheMode%2A>  
+ [<span data-ttu-id="7f591-111">Procedura: Usare un elemento memorizzato nella cache come pennello</span><span class="sxs-lookup"><span data-stu-id="7f591-111">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)

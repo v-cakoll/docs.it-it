@@ -1,89 +1,92 @@
 ---
-title: "Estensione del markup ComponentResourceKey | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ComponentResourceKey"
-  - "ComponentResourceKeyExtension"
-helpviewer_keywords: 
-  - "ComponentResourceKey (estensione di markup)"
-  - "XAML, ComponentResourceKey (estensione di markup)"
+title: Estensione del markup ComponentResourceKey
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ComponentResourceKey
+- ComponentResourceKeyExtension
+helpviewer_keywords:
+- ComponentResourceKey markup extension [WPF]
+- XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b7f959318c5991fea2df92ff8000e85345fb35ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Estensione del markup ComponentResourceKey
-Definisce le chiavi per le risorse caricate da assembly esterni e ne creato un riferimento.  In questo modo viene abilitata una ricerca di risorse per specificare un tipo di destinazione in un assembly, piuttosto che un dizionario di risorse esplicito in un assembly o in una classe.  
+# <a name="componentresourcekey-markup-extension"></a><span data-ttu-id="93917-102">Estensione del markup ComponentResourceKey</span><span class="sxs-lookup"><span data-stu-id="93917-102">ComponentResourceKey Markup Extension</span></span>
+<span data-ttu-id="93917-103">Definisce e fa riferimento a chiavi per le risorse che vengono caricate dagli assembly esterni.</span><span class="sxs-lookup"><span data-stu-id="93917-103">Defines and references keys for resources that are loaded from external assemblies.</span></span> <span data-ttu-id="93917-104">In questo modo una ricerca di risorse specificare un tipo di destinazione in un assembly, anziché un dizionario risorse esplicito in un assembly o in una classe.</span><span class="sxs-lookup"><span data-stu-id="93917-104">This enables a resource lookup to specify a target type in an assembly, rather than an explicit resource dictionary in an assembly or on a class.</span></span>  
   
-## Utilizzo della sintassi XAML per gli attributi \(impostazione chiave, abbreviata\)  
+## <a name="xaml-attribute-usage-setting-key-compact"></a><span data-ttu-id="93917-105">Utilizzo della sintassi XAML per gli attributi (chiave di impostazione, compact)</span><span class="sxs-lookup"><span data-stu-id="93917-105">XAML Attribute Usage (setting key, compact)</span></span>  
   
-```  
-<object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
-```  
-  
-## Utilizzo della sintassi XAML per gli attributi \(impostazione chiave, dettagliata\)  
-  
-```  
-<object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
+```xml  
+<object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
 ```  
   
-## Utilizzo della sintassi XAML per gli attributi \(richiesta risorsa, abbreviata\)  
+## <a name="xaml-attribute-usage-setting-key-verbose"></a><span data-ttu-id="93917-106">Utilizzo della sintassi XAML per gli attributi (impostazione chiave, dettagliata)</span><span class="sxs-lookup"><span data-stu-id="93917-106">XAML Attribute Usage (setting key, verbose)</span></span>  
   
-```  
-<object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
-```  
-  
-## Utilizzo della sintassi XAML per gli attributi \(richiesta risorsa, dettagliata\)  
-  
-```  
-<object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
+```xml  
+<object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
 ```  
   
-## Valori XAML  
+## <a name="xaml-attribute-usage-requesting-resource-compact"></a><span data-ttu-id="93917-107">Utilizzo della sintassi XAML per gli attributi (richiesta risorsa, compact)</span><span class="sxs-lookup"><span data-stu-id="93917-107">XAML Attribute Usage (requesting resource, compact)</span></span>  
+  
+```xml  
+<object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
+```  
+  
+## <a name="xaml-attribute-usage-requesting-resource-verbose"></a><span data-ttu-id="93917-108">Utilizzo della sintassi XAML per gli attributi (richiesta risorsa, dettagliata)</span><span class="sxs-lookup"><span data-stu-id="93917-108">XAML Attribute Usage (requesting resource, verbose)</span></span>  
+  
+```xml  
+<object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
+```  
+  
+## <a name="xaml-values"></a><span data-ttu-id="93917-109">Valori XAML</span><span class="sxs-lookup"><span data-stu-id="93917-109">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`targetTypeName`|Nome del tipo [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] pubblico definito nell'assembly di risorse.|  
-|`targetID`|Chiave della risorsa.  Durante la ricerca delle risorse, `targetID` sarà analogo all'attributo [Direttiva x:Key](../../../../docs/framework/xaml-services/x-key-directive.md) della risorsa.|  
+|`targetTypeName`|<span data-ttu-id="93917-110">Il nome del pubblico [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] tipo definito nell'assembly di risorse.</span><span class="sxs-lookup"><span data-stu-id="93917-110">The name of the public [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] type that is defined in the resource assembly.</span></span>|  
+|`targetID`|<span data-ttu-id="93917-111">La chiave per la risorsa.</span><span class="sxs-lookup"><span data-stu-id="93917-111">The key for the resource.</span></span> <span data-ttu-id="93917-112">Quando le risorse vengono ricercate `targetID` sarà analoga al [direttiva X:Key](../../../../docs/framework/xaml-services/x-key-directive.md) della risorsa.</span><span class="sxs-lookup"><span data-stu-id="93917-112">When resources are looked up, `targetID` will be analogous to the [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) of the resource.</span></span>|  
   
-## Note  
- Come visto negli utilizzi sopra, un utilizzo dell'estensione di markup {`ComponentResourceKey` } viene trovato in due posti:  
+## <a name="remarks"></a><span data-ttu-id="93917-113">Note</span><span class="sxs-lookup"><span data-stu-id="93917-113">Remarks</span></span>  
+ <span data-ttu-id="93917-114">Come illustrato negli utilizzi sopra, un {`ComponentResourceKey`} utilizzo dell'estensione di markup è presente in due posizioni:</span><span class="sxs-lookup"><span data-stu-id="93917-114">As seen in the usages above, a {`ComponentResourceKey`} markup extension usage is found in two places:</span></span>  
   
--   Definizione di una chiave all'interno di un dizionario di risorse del tema, come fornita da un autore dei controlli.  
+-   <span data-ttu-id="93917-115">La definizione di una chiave all'interno di un dizionario, come previsto dall'autore di un controllo.</span><span class="sxs-lookup"><span data-stu-id="93917-115">The definition of a key within a theme resource dictionary, as provided by a control author.</span></span>  
   
--   Accedere a una risorsa del tema dall'assembly, quando si sono applicati nuovamente i modelli il controllo ma si desidera utilizzare valori della proprietà che vengono da risorse fornite dai temi del controllo.  
+-   <span data-ttu-id="93917-116">L'accesso a una risorsa del tema dall'assembly, quando si è applicare nuovamente i modelli del controllo, ma desidera utilizzare valori di proprietà che provengono da risorse fornite da temi del controllo.</span><span class="sxs-lookup"><span data-stu-id="93917-116">Accessing a theme resource from the assembly, when you are retemplating the control but want to use property values that come from resources provided by the control's themes.</span></span>  
   
- Per fare riferimento a risorse del componente che vengono dai temi, generalmente si consiglia di utilizzare `{DynamicResource}` piuttosto che `{StaticResource}`.  Viene mostrato negli utilizzi.  `{DynamicResource}` è raccomandata, perché il tema stesso può essere modificato dall'utente.  Se si desidera la risorsa del componente che più da vicino corrisponde all'intenzione dell'autore dei controlli per supportare un tema, è necessario consentire al riferimento alla risorsa del componente di essere anche dinamico.  
+ <span data-ttu-id="93917-117">Per fare riferimento a risorse del componente che provengono da temi, è consigliabile utilizzare `{DynamicResource}` anziché `{StaticResource}`.</span><span class="sxs-lookup"><span data-stu-id="93917-117">For referencing component resources that come from themes, it is generally recommended that you use `{DynamicResource}` rather than `{StaticResource}`.</span></span> <span data-ttu-id="93917-118">Come illustrato negli utilizzi.</span><span class="sxs-lookup"><span data-stu-id="93917-118">This is shown in the usages.</span></span> <span data-ttu-id="93917-119">`{DynamicResource}`è consigliabile perché il tema stesso può essere modificato dall'utente.</span><span class="sxs-lookup"><span data-stu-id="93917-119">`{DynamicResource}` is recommended because the theme itself can be changed by the user.</span></span> <span data-ttu-id="93917-120">Se si desidera la risorsa del componente che corrisponde maggiormente l'intenzione dell'autore per supportare un tema, è consigliabile abilitare il riferimento di risorsa componente a essere anche dinamico.</span><span class="sxs-lookup"><span data-stu-id="93917-120">If you want the component resource that most closely matches the control author's intent for supporting a theme, you should enable your component resource reference to be dynamic also.</span></span>  
   
- L'oggetto <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifica un tipo esistente nell'assembly di destinazione in cui la risorsa è effettivamente definita.  È possibile definire e utilizzare `ComponentResourceKey` indipendentemente dalla conoscenza della posizione esatta in cui l'oggetto <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> è definito, ma il tipo deve essere risolto tramite gli assembly a cui si fa riferimento.  
+ <span data-ttu-id="93917-121">Il <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifica un tipo presente nell'assembly di destinazione in cui la risorsa viene effettivamente definita.</span><span class="sxs-lookup"><span data-stu-id="93917-121">The <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifies a type that exists in the target assembly where the resource is actually defined.</span></span> <span data-ttu-id="93917-122">A `ComponentResourceKey` possono essere definite e utilizzate in modo indipendente da sapere esattamente dove le <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> è definito, ma deve essere risolto al tipo tramite assembly di riferimento.</span><span class="sxs-lookup"><span data-stu-id="93917-122">A `ComponentResourceKey` can be defined and used independently of knowing exactly where the <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> is defined, but eventually must resolve the type through referenced assemblies.</span></span>  
   
- L'oggetto <xref:System.Windows.ComponentResourceKey> viene comunemente utilizzato per definire le chiavi che vengono quindi esposte come membri di una classe.  A tal fine, si utilizza il costruttore della classe <xref:System.Windows.ComponentResourceKey>, non l'estensione del markup.  Per ulteriori informazioni, vedere <xref:System.Windows.ComponentResourceKey> o la sezione "Chiavi di definizione e riferimento per Risorse dei temi " dell'argomento [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ <span data-ttu-id="93917-123">Un utilizzo comune per <xref:System.Windows.ComponentResourceKey> consiste nel definire le chiavi che vengono quindi esposti come membri di una classe.</span><span class="sxs-lookup"><span data-stu-id="93917-123">A common usage for <xref:System.Windows.ComponentResourceKey> is to define keys that are then exposed as members of a class.</span></span> <span data-ttu-id="93917-124">A tal fine, utilizza il <xref:System.Windows.ComponentResourceKey> costruttore della classe, non l'estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="93917-124">For this usage, you use the <xref:System.Windows.ComponentResourceKey> class constructor, not the markup extension.</span></span> <span data-ttu-id="93917-125">Per ulteriori informazioni, vedere <xref:System.Windows.ComponentResourceKey>, o la sezione "Definizione e riferimento a chiavi per le risorse del tema" dell'argomento [Cenni preliminari sul controllo creazione](../../../../docs/framework/wpf/controls/control-authoring-overview.md).</span><span class="sxs-lookup"><span data-stu-id="93917-125">For more information, see <xref:System.Windows.ComponentResourceKey>, or the "Defining and Referencing Keys for Theme Resources" section of the topic [Control Authoring Overview](../../../../docs/framework/wpf/controls/control-authoring-overview.md).</span></span>  
   
- Per le chiavi di definizione e le risorse con chiave di riferimento, la sintassi degli attributi è di uso comune per l'estensione di markup `ComponentResourceKey`.  
+ <span data-ttu-id="93917-126">Per le chiavi di definizione e riferimento a risorse con chiave, la sintassi degli attributi viene comunemente utilizzato per il `ComponentResourceKey` estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="93917-126">For both establishing keys and referencing keyed resources, attribute syntax is commonly used for the `ComponentResourceKey` markup extension.</span></span>  
   
- La sintassi abbreviata mostrata si basa sulla firma del costruttore <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=fullName> e sull'utilizzo di parametri posizionali nell'estensione di markup.  L'ordine in cui sono elencati `targetTypeName` e `targetID` è fondamentale.  La sintassi dettagliata si basa sul costruttore predefinito <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=fullName> e imposta quindi le proprietà <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> in modo analogo alla sintassi vera e propria dell'attributo su un elemento oggetto.  Nella sintassi dettagliata, l'ordine in cui sono impostate le proprietà non è importante.  La relazione e i meccanismi di queste due alternative \(abbreviata e dettagliata\) sono descritti più approfonditamente nell'argomento [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ <span data-ttu-id="93917-127">La sintassi abbreviata mostrata si basa sul <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> firma del costruttore e l'utilizzo di parametri posizionali di un'estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="93917-127">The compact syntax shown relies on the <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> constructor signature and positional parameter usage of a markup extension.</span></span> <span data-ttu-id="93917-128">L'ordine in cui il `targetTypeName` e `targetID` figurano è importante.</span><span class="sxs-lookup"><span data-stu-id="93917-128">The order in which the `targetTypeName` and `targetID` are given is important.</span></span> <span data-ttu-id="93917-129">La sintassi dettagliata si basa sul <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> costruttore predefinito e quindi viene impostato il <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> in modo analogo a una sintassi di attributo true su un elemento oggetto.</span><span class="sxs-lookup"><span data-stu-id="93917-129">The verbose syntax relies on the <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> default constructor, and then sets the <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> and <xref:System.Windows.ComponentResourceKey.ResourceId%2A> in a way that is analogous to a true attribute syntax on an object element.</span></span> <span data-ttu-id="93917-130">Nella sintassi dettagliata, l'ordine in cui vengono impostate le proprietà non è importante.</span><span class="sxs-lookup"><span data-stu-id="93917-130">In the verbose syntax, the order in which the properties are set is not important.</span></span> <span data-ttu-id="93917-131">La relazione e i meccanismi di queste due alternative (compact e dettagliate) descritto in dettaglio nell'argomento [le estensioni di Markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="93917-131">The relationship and mechanisms of these two alternatives (compact and verbose) is described in more detail in the topic [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
- Tecnicamente, il valore per `targetID` può essere qualsiasi oggetto, non deve essere una stringa.  Tuttavia, l'utilizzo più comune in WPF consiste nell'allineare il valore `targetID` con form che sono stringhe, e dove tali stringhe sono valide nel [Grammatica XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
+ <span data-ttu-id="93917-132">Tecnicamente, il valore per `targetID` può essere qualsiasi oggetto, non deve essere una stringa.</span><span class="sxs-lookup"><span data-stu-id="93917-132">Technically, the value for `targetID` can be any object, it does not have to be a string.</span></span> <span data-ttu-id="93917-133">Tuttavia, l'utilizzo più comune in WPF è per allineare il `targetID` valore con i moduli che sono stringhe e in cui tali stringhe sono valide nel [grammatica XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md).</span><span class="sxs-lookup"><span data-stu-id="93917-133">However, the most common usage in WPF is to align the `targetID` value with forms that are strings, and where such strings are valid in the [XamlName Grammar](../../../../docs/framework/xaml-services/xamlname-grammar.md).</span></span>  
   
- L'oggetto `ComponentResourceKey` può essere utilizzato nella sintassi per gli elementi oggetto.  In questo caso, è richiesta la specifica del valore di entrambe le proprietà <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> per inizializzare correttamente l'estensione.  
+ <span data-ttu-id="93917-134">`ComponentResourceKey`può essere utilizzato nella sintassi dell'elemento oggetto.</span><span class="sxs-lookup"><span data-stu-id="93917-134">`ComponentResourceKey` can be used in object element syntax.</span></span> <span data-ttu-id="93917-135">In questo caso, che specifica il valore di entrambe le <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> proprietà è necessario inizializzare correttamente l'estensione.</span><span class="sxs-lookup"><span data-stu-id="93917-135">In this case, specifying the value of both the <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> and <xref:System.Windows.ComponentResourceKey.ResourceId%2A> properties is required to properly initialize the extension.</span></span>  
   
- Nell'implementazione del lettore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], la gestione di questa estensione di markup viene definita dalla classe <xref:System.Windows.ComponentResourceKey>.  
+ <span data-ttu-id="93917-136">Nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementazione lettore, la gestione di questa estensione di markup viene definita per la <xref:System.Windows.ComponentResourceKey> classe.</span><span class="sxs-lookup"><span data-stu-id="93917-136">In the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reader implementation, the handling for this markup extension is defined by the <xref:System.Windows.ComponentResourceKey> class.</span></span>  
   
- `ComponentResourceKey` è un'estensione di markup.  Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà.  Tutte le estensioni di markup di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilizzano i caratteri { e } nella relativa sintassi degli attributi. Grazie a questa convenzione il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è in grado di rilevare la necessità che l'attributo venga elaborato da un'estensione di markup.  Per ulteriori informazioni, vedere [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ <span data-ttu-id="93917-137">`ComponentResourceKey` è un'estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="93917-137">`ComponentResourceKey` is a markup extension.</span></span> <span data-ttu-id="93917-138">Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà.</span><span class="sxs-lookup"><span data-stu-id="93917-138">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="93917-139">Tutte le estensioni di markup in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usano i caratteri { e } nella sintassi degli attributi, vale a dire la convenzione in base a cui il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] riconosce che l'attributo deve essere elaborato da un'estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="93917-139">All markup extensions in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] use the { and } characters in their attribute syntax, which is the convention by which a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor recognizes that a markup extension must process the attribute.</span></span> <span data-ttu-id="93917-140">Per altre informazioni, vedere [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="93917-140">For more information, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.ComponentResourceKey>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)   
- [Cenni preliminari su XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="93917-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="93917-141">See Also</span></span>  
+ <xref:System.Windows.ComponentResourceKey>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="93917-142">Cenni preliminari sulla modifica di controlli</span><span class="sxs-lookup"><span data-stu-id="93917-142">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [<span data-ttu-id="93917-143">Cenni preliminari su XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="93917-143">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="93917-144">Estensioni di markup e XAML WPF</span><span class="sxs-lookup"><span data-stu-id="93917-144">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

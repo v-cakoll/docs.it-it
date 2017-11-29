@@ -1,217 +1,219 @@
 ---
-title: "URI di tipo pack in WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestione applicazioni [WPF]"
-  - "caricamento di risorse incorporate"
-  - "caricamento di file non di risorse"
-  - "combinazione URI di tipo pack"
-  - "Uniform Resource Identifier (URI)"
-  - "URI (Uniform Resource Identifier)"
+title: URI di tipo pack in WPF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pack URI scheme [WPF]
+- loading embedded resources [WPF]
+- URIs (Uniform Resource Identifiers)
+- Uniform Resource Identifiers (URIs)
+- loading non-resource files
+- application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-caps.latest.revision: 35
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "35"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 05e13b8fc899b5cc6addb6d41db826f39b7528f0
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# URI di tipo pack in WPF
-In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], gli [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] vengono utilizzati per identificare e caricare file in diversi modi, inclusi i seguenti:  
+# <a name="pack-uris-in-wpf"></a><span data-ttu-id="b14a6-102">URI di tipo pack in WPF</span><span class="sxs-lookup"><span data-stu-id="b14a6-102">Pack URIs in WPF</span></span>
+<span data-ttu-id="b14a6-103">In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] vengono utilizzati per identificare e caricare file in diversi modi, inclusi i seguenti:</span><span class="sxs-lookup"><span data-stu-id="b14a6-103">In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] are used to identify and load files in many ways, including the following:</span></span>  
   
--   Specificando l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] da visualizzare al primo avvio di un'applicazione.  
+-   <span data-ttu-id="b14a6-104">Specifica il [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] da visualizzare al primo avvio di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-104">Specifying the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] to show when an application first starts.</span></span>  
   
--   Caricando immagini.  
+-   <span data-ttu-id="b14a6-105">Caricando immagini.</span><span class="sxs-lookup"><span data-stu-id="b14a6-105">Loading images.</span></span>  
   
--   Spostandosi sulle pagine.  
+-   <span data-ttu-id="b14a6-106">Spostandosi sulle pagine.</span><span class="sxs-lookup"><span data-stu-id="b14a6-106">Navigating to pages.</span></span>  
   
--   Caricando file di dati non eseguibili.  
+-   <span data-ttu-id="b14a6-107">Caricando file di dati non eseguibili.</span><span class="sxs-lookup"><span data-stu-id="b14a6-107">Loading non-executable data files.</span></span>  
   
- Inoltre, gli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] possono essere utilizzati per identificare e caricare file da diversi percorsi, inclusi i seguenti:  
+ <span data-ttu-id="b14a6-108">Inoltre, [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] può essere utilizzato per identificare e caricare i file da varie posizioni, tra cui le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="b14a6-108">Furthermore, [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] can be used to identify and load files from a variety of locations, including the following:</span></span>  
   
--   L'assembly corrente.  
+-   <span data-ttu-id="b14a6-109">L'assembly corrente.</span><span class="sxs-lookup"><span data-stu-id="b14a6-109">The current assembly.</span></span>  
   
--   Un assembly a cui si fa riferimento.  
+-   <span data-ttu-id="b14a6-110">Un assembly a cui si fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-110">A referenced assembly.</span></span>  
   
--   Un percorso relativo a un assembly.  
+-   <span data-ttu-id="b14a6-111">Un percorso relativo a un assembly.</span><span class="sxs-lookup"><span data-stu-id="b14a6-111">A location relative to an assembly.</span></span>  
   
--   Il sito di origine dell'applicazione.  
+-   <span data-ttu-id="b14a6-112">L'applicazione del sito di origine.</span><span class="sxs-lookup"><span data-stu-id="b14a6-112">The application's site of origin.</span></span>  
   
- Per fornire un meccanismo coerente di identificazione e caricamento di questi tipi di file dai diversi percorsi, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sfrutta l'estensibilità dello *schema URI di tipo pack*.  In questo argomento vengono fornite informazioni preliminari sullo schema, viene illustrato come costruire [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack per diversi scenari, vengono trattati gli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] assoluti e relativi nonché la risoluzione degli [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], fino a illustrare come utilizzare gli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack dal markup e dal codice.  
+ <span data-ttu-id="b14a6-113">Per fornire un meccanismo uniforme per l'identificazione e il caricamento di questi tipi di file da questi percorsi, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sfrutta l'estensibilità del *schema URI di tipo pack*.</span><span class="sxs-lookup"><span data-stu-id="b14a6-113">To provide a consistent mechanism for identifying and loading these types of files from these locations, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] leverages the extensibility of the *pack URI scheme*.</span></span> <span data-ttu-id="b14a6-114">In questo argomento viene fornita una panoramica dello schema, viene illustrato come costruire pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per un'ampia gamma di scenari, illustra absolute e relative [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] e [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] risoluzione, prima che illustra come utilizzare pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] da entrambi markup e il codice.</span><span class="sxs-lookup"><span data-stu-id="b14a6-114">This topic provides an overview of the scheme, covers how to construct pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] for a variety of scenarios, discusses absolute and relative [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] and [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] resolution, before showing how to use pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] from both markup and code.</span></span>  
   
-   
   
 <a name="The_Pack_URI_Scheme"></a>   
-## Schema URI di tipo pack  
- Lo schema [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack viene utilizzato dalla specifica [Open Packaging Conventions](http://go.microsoft.com/fwlink/?LinkID=71255) \(OPC\) \(la pagina potrebbe essere in inglese\), che descrive un modello di organizzazione e identificazione del contenuto.  Gli elementi principali di questo modello sono i package e le parti, dove un *package* è un contenitore logico per una o più *parti* logiche.  Nella figura che segue viene illustrato questo concetto.  
+## <a name="the-pack-uri-scheme"></a><span data-ttu-id="b14a6-115">Schema URI di tipo pack</span><span class="sxs-lookup"><span data-stu-id="b14a6-115">The Pack URI Scheme</span></span>  
+ <span data-ttu-id="b14a6-116">Il pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] lo schema viene utilizzato il [Open Packaging Conventions](http://go.microsoft.com/fwlink/?LinkID=71255) specifica (OPC), che descrive un modello per l'organizzazione e l'identificazione del contenuto.</span><span class="sxs-lookup"><span data-stu-id="b14a6-116">The pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] scheme is used by the [Open Packaging Conventions](http://go.microsoft.com/fwlink/?LinkID=71255) (OPC) specification, which describes a model for organizing and identifying content.</span></span> <span data-ttu-id="b14a6-117">Gli elementi principali di questo modello sono pacchetti e le parti, in cui un *pacchetto* è un contenitore logico per uno o più logica *parti*.</span><span class="sxs-lookup"><span data-stu-id="b14a6-117">The key elements of this model are packages and parts, where a *package* is a logical container for one or more logical *parts*.</span></span> <span data-ttu-id="b14a6-118">La figura seguente illustra questo concetto.</span><span class="sxs-lookup"><span data-stu-id="b14a6-118">The following figure illustrates this concept.</span></span>  
   
- ![Diagramma di package e parti](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.png "WPFPackURISchemeFigure1")  
+ <span data-ttu-id="b14a6-119">![Diagramma di pacchetti e parti](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")</span><span class="sxs-lookup"><span data-stu-id="b14a6-119">![Package and Parts diagram](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")</span></span>  
   
- Per identificare le parti, la specifica OPC sfrutta l'estensibilità dello standard RFC 2396 \(Uniform Resource Identifier \(URI\): Generic Syntax\) per definire lo schema [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack.  
+ <span data-ttu-id="b14a6-120">Per identificare le parti, la specifica OPC sfrutta l'estensibilità dello standard RFC 2396 (Uniform Resource Identifiers (URI): sintassi generica) per definire il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schema.</span><span class="sxs-lookup"><span data-stu-id="b14a6-120">To identify parts, the OPC specification leverages the extensibility of RFC 2396 (Uniform Resource Identifiers (URI): Generic Syntax) to define the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] scheme.</span></span>  
   
- Lo schema specificato da un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] è definito dal prefisso; http, ftp e file sono esempi noti.  Lo schema [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack utilizza "pack" come schema e contiene due componenti: autorità e percorso.  Di seguito viene riportato il formato di un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack.  
+ <span data-ttu-id="b14a6-121">Lo schema specificato da un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] è definito dal prefisso; http, ftp e file sono esempi noti.</span><span class="sxs-lookup"><span data-stu-id="b14a6-121">The scheme that is specified by a [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] is defined by its prefix; http, ftp, and file are well-known examples.</span></span> <span data-ttu-id="b14a6-122">Il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schema utilizza "pack" come schema e contiene due componenti: autorità e percorso.</span><span class="sxs-lookup"><span data-stu-id="b14a6-122">The pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] scheme uses "pack" as its scheme, and contains two components: authority and path.</span></span> <span data-ttu-id="b14a6-123">Di seguito è riportato il formato per un pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-123">The following is the format for a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
- pack:\/\/*autorità*\/*percorso*  
+ <span data-ttu-id="b14a6-124">Service Pack: / /*autorità*/*percorso*</span><span class="sxs-lookup"><span data-stu-id="b14a6-124">pack://*authority*/*path*</span></span>
   
- L'*autorità* specifica il tipo di package in cui è contenuta una parte, mentre il *percorso* specifica il percorso di una parte all'interno di un package.  
+ <span data-ttu-id="b14a6-125">Il *autorità* specifica il tipo di pacchetto che è contenuta una parte, mentre il *percorso* specifica il percorso di una parte all'interno di un pacchetto.</span><span class="sxs-lookup"><span data-stu-id="b14a6-125">The *authority* specifies the type of package that a part is contained by, while the *path* specifies the location of a part within a package.</span></span>  
   
- Il concetto è illustrato nella figura che segue:  
+ <span data-ttu-id="b14a6-126">Questo concetto è illustrato nella figura seguente:</span><span class="sxs-lookup"><span data-stu-id="b14a6-126">This concept is illustrated by the following figure:</span></span>  
   
- ![Relazione tra package, autorità e percorso](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure2.png "WPFPackURISchemeFigure2")  
+ <span data-ttu-id="b14a6-127">![Relazioni tra pacchetto, autorità e percorso](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")</span><span class="sxs-lookup"><span data-stu-id="b14a6-127">![Relationship among package, authority, and path](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")</span></span>  
   
- Package e parti possono essere paragonati ad applicazioni e file, dove un'applicazione \(package\) può includere uno o più file \(parti\), inclusi:  
+ <span data-ttu-id="b14a6-128">Pacchetti e parti sono analoghi ad applicazioni e file, dove un'applicazione (pacchetto) può includere uno o più file (parti), tra cui:</span><span class="sxs-lookup"><span data-stu-id="b14a6-128">Packages and parts are analogous to applications and files, where an application (package) can include one or more files (parts), including:</span></span>  
   
--   File di risorse compilati nell'assembly locale.  
+-   <span data-ttu-id="b14a6-129">File di risorse compilati nell'assembly locale.</span><span class="sxs-lookup"><span data-stu-id="b14a6-129">Resource files that are compiled into the local assembly.</span></span>  
   
--   File di risorse compilati in un assembly a cui si fa riferimento.  
+-   <span data-ttu-id="b14a6-130">File di risorse compilati in un assembly a cui si fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-130">Resource files that are compiled into a referenced assembly.</span></span>  
   
--   File di risorse compilati in un assembly contenente un riferimento.  
+-   <span data-ttu-id="b14a6-131">File di risorse compilati in un assembly contenente un riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-131">Resource files that are compiled into a referencing assembly.</span></span>  
   
--   File di dati.  
+-   <span data-ttu-id="b14a6-132">File di contenuto.</span><span class="sxs-lookup"><span data-stu-id="b14a6-132">Content files.</span></span>  
   
--   File del sito di origine.  
+-   <span data-ttu-id="b14a6-133">File del sito di origine.</span><span class="sxs-lookup"><span data-stu-id="b14a6-133">Site of origin files.</span></span>  
   
- Per l'accesso a questi tipi di file, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta due autorità: application:\/\/\/ e siteoforigin:\/\/\/.  L'autorità application:\/\/\/ identifica i file di dati dell'applicazione noti in fase di compilazione, inclusi i file di risorse e i file di dati.  L'autorità siteoforigin:\/\/\/ identifica i file del sito di origine.  Nella figura che segue viene illustrato l'ambito di ciascuna autorità.  
+ <span data-ttu-id="b14a6-134">Per accedere a questi tipi di file, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta due autorità: application: / / / e siteoforigin: / / /.</span><span class="sxs-lookup"><span data-stu-id="b14a6-134">To access these types of files, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supports two authorities: application:/// and siteoforigin:///.</span></span> <span data-ttu-id="b14a6-135">L'autorità application:/// identifica i file di dati dell'applicazione noti al momento della compilazione, inclusi file di risorse e di contenuto.</span><span class="sxs-lookup"><span data-stu-id="b14a6-135">The application:/// authority identifies application data files that are known at compile time, including resource and content files.</span></span> <span data-ttu-id="b14a6-136">L'autorità siteoforigin:/// identifica i file del sito di origine.</span><span class="sxs-lookup"><span data-stu-id="b14a6-136">The siteoforigin:/// authority identifies site of origin files.</span></span> <span data-ttu-id="b14a6-137">La figura seguente illustra l'ambito di ciascuna autorità.</span><span class="sxs-lookup"><span data-stu-id="b14a6-137">The scope of each authority is shown in the following figure.</span></span>  
   
- ![Diagramma dell'URI di tipo pack](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ <span data-ttu-id="b14a6-138">![Diagramma dell'URI di tipo pack](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")</span><span class="sxs-lookup"><span data-stu-id="b14a6-138">![Pack URI diagram](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")</span></span>  
   
 > [!NOTE]
->  Il componente autorità di un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack è un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] incorporato che punta a un package e deve essere conforme allo standard RFC 2396.  Inoltre, il carattere "\/" deve essere sostituito con il carattere "," e i caratteri riservati quali "%" e "?" devono essere di tipo escape.  Vedere la specifica OPC per i dettagli.  
+>  <span data-ttu-id="b14a6-139">Il componente autorità di un pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] è incorporato [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] che punta a un pacchetto e deve essere conforme allo standard RFC 2396.</span><span class="sxs-lookup"><span data-stu-id="b14a6-139">The authority component of a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] is an embedded [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that points to a package and must conform to RFC 2396.</span></span> <span data-ttu-id="b14a6-140">Inoltre, il carattere "/" deve essere sostituito con il carattere "," e i caratteri riservati quali "%" e "?" devono essere preceduti da un carattere di escape.</span><span class="sxs-lookup"><span data-stu-id="b14a6-140">Additionally, the "/" character must be replaced with the "," character, and reserved characters such as "%" and "?" must be escaped.</span></span> <span data-ttu-id="b14a6-141">Per informazioni dettagliate, vedere la specifica OPC.</span><span class="sxs-lookup"><span data-stu-id="b14a6-141">See the OPC for details.</span></span>  
   
- Nelle sezioni seguenti viene illustrato come costruire [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack utilizzando queste due autorità insieme ai percorsi appropriati per l'identificazione dei file di risorse, di dati e del sito di origine.  
+ <span data-ttu-id="b14a6-142">Le sezioni seguenti illustrano come costruire pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] utilizzando queste due autorità in combinazione con i percorsi appropriati per l'identificazione delle risorse e il contenuto del sito di origine.</span><span class="sxs-lookup"><span data-stu-id="b14a6-142">The following sections explain how to construct pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] using these two authorities in conjunction with the appropriate paths for identifying resource, content, and site of origin files.</span></span>  
   
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>   
-## URI di tipo pack per i file di risorse  
- I file di risorse vengono configurati come elementi [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` e compilati all'interno di assembly.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta la costruzione di [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack utilizzabili per identificare i file di risorse compilati nell'assembly locale o in un assembly a cui si fa riferimento dall'assembly locale.  
+## <a name="resource-file-pack-uris"></a><span data-ttu-id="b14a6-143">URI di tipo pack di file di risorse</span><span class="sxs-lookup"><span data-stu-id="b14a6-143">Resource File Pack URIs</span></span>  
+ <span data-ttu-id="b14a6-144">File di risorse sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` gli elementi e vengono compilati in assembly.</span><span class="sxs-lookup"><span data-stu-id="b14a6-144">Resource files are configured as [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Resource` items and are compiled into assemblies.</span></span> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="b14a6-145">supporta la creazione del pacchetto [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che può essere utilizzato per identificare i file di risorse che vengono compilati nell'assembly locale o in un assembly cui viene fatto riferimento dall'assembly locale.</span><span class="sxs-lookup"><span data-stu-id="b14a6-145"> supports the construction of pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that can be used to identify resource files that are either compiled into the local assembly or compiled into an assembly that is referenced from the local assembly.</span></span>  
   
 <a name="Local_Assembly_Resource_File"></a>   
-### File di risorse dell'assembly locale  
- L'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di risorse compilato nell'assembly locale utilizza l'autorità e il percorso seguenti:  
+### <a name="local-assembly-resource-file"></a><span data-ttu-id="b14a6-146">File di risorse dell'assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-146">Local Assembly Resource File</span></span>  
+ <span data-ttu-id="b14a6-147">Il pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per una risorsa file compilato nell'assembly locale utilizza autorità e il percorso seguente:</span><span class="sxs-lookup"><span data-stu-id="b14a6-147">The pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a resource file that is compiled into the local assembly uses the following authority and path:</span></span>  
   
--   **Autorità**: application:\/\/\/.  
+-   <span data-ttu-id="b14a6-148">**Autorità**: application:///.</span><span class="sxs-lookup"><span data-stu-id="b14a6-148">**Authority**: application:///.</span></span>  
   
--   **Percorso**: il nome del file di risorse, incluso il percorso relativo alla radice della cartella del progetto dell'assembly locale.  
+-   <span data-ttu-id="b14a6-149">**Percorso**: nome del file di risorse che include il percorso relativo alla radice della cartella del progetto dell'assembly locale.</span><span class="sxs-lookup"><span data-stu-id="b14a6-149">**Path**: The name of the resource file, including its path, relative to the local assembly project folder root.</span></span>  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di risorse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] situato nella radice della cartella del progetto dell'assembly locale.  
+ <span data-ttu-id="b14a6-150">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di risorse che si trova nella radice della cartella di progetto dell'assembly locale.</span><span class="sxs-lookup"><span data-stu-id="b14a6-150">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] resource file that is located in the root of the local assembly's project folder.</span></span>  
   
  `pack://application:,,,/ResourceFile.xaml`  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di risorse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] situato in una sottocartella della cartella del progetto dell'assembly locale.  
+ <span data-ttu-id="b14a6-151">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di risorse che si trova in una sottocartella della cartella del progetto dell'assembly locale.</span><span class="sxs-lookup"><span data-stu-id="b14a6-151">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] resource file that is located in a subfolder of the local assembly's project folder.</span></span>  
   
  `pack://application:,,,/Subfolder/ResourceFile.xaml`  
   
 <a name="Resource_File_Pack_URIs___Referenced_Assembly"></a>   
-### File di risorse dell'assembly a cui si fa riferimento  
- L'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di risorse compilato in un assembly a cui si fa riferimento utilizza l'autorità e il percorso seguenti:  
+### <a name="referenced-assembly-resource-file"></a><span data-ttu-id="b14a6-152">File di risorse dell'assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-152">Referenced Assembly Resource File</span></span>  
+ <span data-ttu-id="b14a6-153">Il pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per una risorsa file che viene compilato in un assembly di riferimento utilizza autorità e il percorso seguente:</span><span class="sxs-lookup"><span data-stu-id="b14a6-153">The pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a resource file that is compiled into a referenced assembly uses the following authority and path:</span></span>  
   
--   **Autorità**: application:\/\/\/.  
+-   <span data-ttu-id="b14a6-154">**Autorità**: application:///.</span><span class="sxs-lookup"><span data-stu-id="b14a6-154">**Authority**: application:///.</span></span>  
   
--   **Percorso**: il nome di un file di risorse compilato in un assembly a cui si fa riferimento.  Il percorso deve rispettare il formato seguente:  
+-   <span data-ttu-id="b14a6-155">**Percorso**: nome di un file di risorse compilato in un assembly a cui si fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-155">**Path**: The name of a resource file that is compiled into a referenced assembly.</span></span> <span data-ttu-id="b14a6-156">Il percorso deve essere conforme al formato seguente:</span><span class="sxs-lookup"><span data-stu-id="b14a6-156">The path must conform to the following format:</span></span>  
   
-     *NomeBreveAssembly*\[*;Versione*\]\[*;ChiavePubblica*\];component\/*Percorso*  
+     <span data-ttu-id="b14a6-157">*AssemblyShortName*{*; Versione*] {*; PublicKey*]; component /*percorso*</span><span class="sxs-lookup"><span data-stu-id="b14a6-157">*AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*</span></span>  
   
-    -   **NomeBreveAssembly**: nome breve dell'assembly a cui si fa riferimento.  
+    -   <span data-ttu-id="b14a6-158">**NomeBreveAssembly**: nome breve dell'assembly a cui si fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-158">**AssemblyShortName**: the short name for the referenced assembly.</span></span>  
   
-    -   **;Versione** \[facoltativo\]: versione dell'assembly a cui si fa riferimento contenente il file di risorse.  Viene utilizzato in caso di caricamento di due o più assembly a cui si fa riferimento aventi lo stesso nome breve.  
+    -   <span data-ttu-id="b14a6-159">**;Versione** [facoltativo]: versione dell'assembly a cui si fa riferimento che contiene il file di risorse.</span><span class="sxs-lookup"><span data-stu-id="b14a6-159">**;Version** [optional]: the version of the referenced assembly that contains the resource file.</span></span> <span data-ttu-id="b14a6-160">Viene usato quando vengono caricati due o più assembly a cui si fa riferimento con lo stesso nome breve.</span><span class="sxs-lookup"><span data-stu-id="b14a6-160">This is used when two or more referenced assemblies with the same short name are loaded.</span></span>  
   
-    -   **;ChiavePubblica** \[facoltativo\]: chiave pubblica utilizzata per firmare l'assembly a cui si fa riferimento.  Viene utilizzato in caso di caricamento di due o più assembly a cui si fa riferimento aventi lo stesso nome breve.  
+    -   <span data-ttu-id="b14a6-161">**;ChiavePubblica** [facoltativo]: chiave pubblica usata per firmare l'assembly a cui si fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-161">**;PublicKey** [optional]: the public key that was used to sign the referenced assembly.</span></span> <span data-ttu-id="b14a6-162">Viene usato quando vengono caricati due o più assembly a cui si fa riferimento con lo stesso nome breve.</span><span class="sxs-lookup"><span data-stu-id="b14a6-162">This is used when two or more referenced assemblies with the same short name are loaded.</span></span>  
   
-    -   **;component**: specifica che il riferimento all'assembly avviene dall'assembly locale.  
+    -   <span data-ttu-id="b14a6-163">**;component**: specifica che il riferimento all'assembly avviene dall'assembly locale.</span><span class="sxs-lookup"><span data-stu-id="b14a6-163">**;component**: specifies that the assembly being referred to is referenced from the local assembly.</span></span>  
   
-    -   **\/Percorso**: nome del file di risorse, incluso il percorso relativo alla radice della cartella del progetto dell'assembly a cui si fa riferimento.  
+    -   <span data-ttu-id="b14a6-164">**/Percorso**: nome del file di risorse, contenente il percorso relativo alla radice della cartella del progetto dell'assembly a cui si fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-164">**/Path**: the name of the resource file, including its path, relative to the root of the referenced assembly's project folder.</span></span>  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di risorse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] situato nella radice della cartella del progetto dell'assembly a cui si fa riferimento.  
+ <span data-ttu-id="b14a6-165">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di risorse che si trova nella radice della cartella di progetto dell'assembly di riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-165">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] resource file that is located in the root of the referenced assembly's project folder.</span></span>  
   
  `pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml`  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di risorse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] situato in una sottocartella della cartella del progetto dell'assembly a cui si fa riferimento.  
+ <span data-ttu-id="b14a6-166">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di risorse che si trova in una sottocartella della cartella del progetto dell'assembly di riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-166">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] resource file that is located in a subfolder of the referenced assembly's project folder.</span></span>  
   
  `pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml`  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di risorse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] situato nella cartella radice della cartella del progetto di un assembly specifico della versione, a cui si fa riferimento.  
+ <span data-ttu-id="b14a6-167">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di risorse che si trova nella cartella radice della cartella di progetto un riferimento, specifici della versione dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="b14a6-167">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] resource file that is located in the root folder of a referenced, version-specific assembly's project folder.</span></span>  
   
  `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`  
   
- La sintassi dell'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per i file di risorse dell'assembly a cui si fa riferimento può essere utilizzata soltanto con l'autorità application:\/\/\/.  L'utilizzo di un'autorità diversa, come nell'esempio che segue, non è supportato in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ <span data-ttu-id="b14a6-168">Si noti che il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] sintassi per i file di risorse di assembly di riferimento può essere utilizzata solo con l'applicazione: / / / autorità.</span><span class="sxs-lookup"><span data-stu-id="b14a6-168">Note that the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] syntax for referenced assembly resource files can be used only with the application:/// authority.</span></span> <span data-ttu-id="b14a6-169">Ad esempio, le operazioni seguenti non sono supportata [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-169">For example, the following is not supported in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span></span>  
   
  `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`  
   
 <a name="Content_File_Pack_URIs"></a>   
-## URI di tipo pack per i file di dati  
- L'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di dati utilizza l'autorità e il percorso seguenti:  
+## <a name="content-file-pack-uris"></a><span data-ttu-id="b14a6-170">URI di tipo pack di file di contenuto</span><span class="sxs-lookup"><span data-stu-id="b14a6-170">Content File Pack URIs</span></span>  
+ <span data-ttu-id="b14a6-171">Il pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un file di contenuto Usa autorità e il percorso seguente:</span><span class="sxs-lookup"><span data-stu-id="b14a6-171">The pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a content file uses the following authority and path:</span></span>  
   
--   **Autorità**: application:\/\/\/.  
+-   <span data-ttu-id="b14a6-172">**Autorità**: application:///.</span><span class="sxs-lookup"><span data-stu-id="b14a6-172">**Authority**: application:///.</span></span>  
   
--   **Percorso**: nome del file di dati, incluso il percorso relativo al file system dell'assembly eseguibile principale dell'applicazione.  
+-   <span data-ttu-id="b14a6-173">**Percorso**: nome del file di contenuto contenente il percorso relativo alla posizione del file system del principale assembly eseguibile dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-173">**Path**: The name of the content file, including its path relative to the file system location of the application's main executable assembly.</span></span>  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di dati [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], situato nella stessa cartella dell'assembly eseguibile.  
+ <span data-ttu-id="b14a6-174">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di contenuto, si trova nella stessa cartella dell'assembly eseguibile.</span><span class="sxs-lookup"><span data-stu-id="b14a6-174">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] content file, located in the same folder as the executable assembly.</span></span>  
   
  `pack://application:,,,/ContentFile.xaml`  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file di dati [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], situato in una sottocartella relativa all'assembly eseguibile dell'applicazione.  
+ <span data-ttu-id="b14a6-175">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di contenuto, si trova in una sottocartella relativo all'assembly eseguibile dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-175">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] content file, located in a subfolder that is relative to the application's executable assembly.</span></span>  
   
  `pack://application:,,,/Subfolder/ContentFile.xaml`  
   
 > [!NOTE]
->  Non è possibile spostarsi su file di dati [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)].  Lo schema [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] supporta unicamente la navigazione in file [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] che si trovano nel sito di origine.  
+>  <span data-ttu-id="b14a6-176">Non è possibile spostarsi su file di contenuto [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-176">[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] content files cannot be navigated to.</span></span> <span data-ttu-id="b14a6-177">Il [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schema supporta solo lo spostamento di [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] file che si trovano nel sito di origine.</span><span class="sxs-lookup"><span data-stu-id="b14a6-177">The [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] scheme only supports navigation to [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] files that are located at the site of origin.</span></span>  
   
 <a name="The_siteoforigin_____Authority"></a>   
-## URI di tipo pack per il sito di origine  
- L'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file del sito di origine utilizza l'autorità e il percorso seguenti:  
+## <a name="site-of-origin-pack-uris"></a><span data-ttu-id="b14a6-178">URI di tipo pack del sito di origine</span><span class="sxs-lookup"><span data-stu-id="b14a6-178">Site of Origin Pack URIs</span></span>  
+ <span data-ttu-id="b14a6-179">Il pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un sito di origine file utilizza autorità e il percorso seguente:</span><span class="sxs-lookup"><span data-stu-id="b14a6-179">The pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a site of origin file uses the following authority and path:</span></span>  
   
--   **Autorità**: siteoforigin:\/\/\/.  
+-   <span data-ttu-id="b14a6-180">**Autorità**: siteoforigin:///.</span><span class="sxs-lookup"><span data-stu-id="b14a6-180">**Authority**: siteoforigin:///.</span></span>  
   
--   **Percorso**: nome del file del sito di origine, incluso il percorso da cui è stato avviato l'assembly eseguibile.  
+-   <span data-ttu-id="b14a6-181">**Percorso**: nome del file del sito di origine contenente il percorso relativo alla posizione da cui è stato avviato l'assembly eseguibile.</span><span class="sxs-lookup"><span data-stu-id="b14a6-181">**Path**: The name of the site of origin file, including its path relative to the location from which the executable assembly was launched.</span></span>  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file del sito di origine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], archiviato nel percorso dal quale viene avviato l'assembly eseguibile.  
+ <span data-ttu-id="b14a6-182">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file sito di origine, archiviato nella posizione da cui viene avviato l'assembly eseguibile.</span><span class="sxs-lookup"><span data-stu-id="b14a6-182">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] site of origin file, stored in the location from which the executable assembly is launched.</span></span>  
   
  `pack://siteoforigin:,,,/SiteOfOriginFile.xaml`  
   
- Nell'esempio seguente viene illustrato l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per un file del sito di origine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], archiviato in una sottocartella relativa al percorso dal quale viene avviato l'assembly eseguibile dell'applicazione.  
+ <span data-ttu-id="b14a6-183">Nell'esempio seguente viene illustrato il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file sito di origine, archiviato in una sottocartella, è relativo al percorso da cui viene avviato l'assembly eseguibile dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-183">The following example shows the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] site of origin file, stored in subfolder that is relative to the location from which the application's executable assembly is launched.</span></span>  
   
  `pack://siteoforigin:,,,/Subfolder/SiteOfOriginFile.xaml`  
   
 <a name="Page_Files"></a>   
-## File di paging  
- I file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] configurati come elementi `Page` [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] vengono compilati all'interno di assembly, esattamente come avviene per i file di risorse.  Di conseguenza, gli elementi `Page` [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] possono essere identificati mediante gli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack per i file di risorse.  
+## <a name="page-files"></a><span data-ttu-id="b14a6-184">File di paging</span><span class="sxs-lookup"><span data-stu-id="b14a6-184">Page Files</span></span>  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<span data-ttu-id="b14a6-185">i file che sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` gli elementi vengono compilati in assembly nello stesso modo come file di risorse.</span><span class="sxs-lookup"><span data-stu-id="b14a6-185"> files that are configured as [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` items are compiled into assemblies in the same way as resource files.</span></span> <span data-ttu-id="b14a6-186">Di conseguenza, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementi possono essere identificati utilizzando pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per i file di risorse.</span><span class="sxs-lookup"><span data-stu-id="b14a6-186">Consequently, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` items can be identified using pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] for resource files.</span></span>  
   
- I tipi di file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] comunemente configurati come elementi `Page` [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] possiedono uno dei seguenti elementi radice:  
+ <span data-ttu-id="b14a6-187">I tipi di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file che sono in genere configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` gli elementi hanno uno dei seguenti elementi radice:</span><span class="sxs-lookup"><span data-stu-id="b14a6-187">The types of [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files that are commonly configured as [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` items have one of the following as their root element:</span></span>  
   
--   <xref:System.Windows.Window?displayProperty=fullName>  
+-   <xref:System.Windows.Window?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Page?displayProperty=fullName>  
+-   <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=fullName>  
+-   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
   
--   <xref:System.Windows.ResourceDictionary?displayProperty=fullName>  
+-   <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.FlowDocument?displayProperty=fullName>  
+-   <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.UserControl?displayProperty=fullName>  
+-   <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
   
 <a name="Absolute_vs_Relative_Pack_URIs"></a>   
-## URI di tipo pack assolutie relativi  
- Un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack completo include lo schema, l'autorità e il percorso e viene considerato un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack assoluto.  Per semplificare il lavoro degli sviluppatori, gli elementi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] consentono in genere di impostare gli attributi appropriati con un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo, il quale include soltanto il percorso.  
+## <a name="absolute-vs-relative-pack-uris"></a><span data-ttu-id="b14a6-188">URI di tipo pack assoluti e relativi</span><span class="sxs-lookup"><span data-stu-id="b14a6-188">Absolute vs. Relative Pack URIs</span></span>  
+ <span data-ttu-id="b14a6-189">Un pacchetto completo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] include lo schema, l'autorità e percorso, e viene considerato un pack assoluto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-189">A fully qualified pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] includes the scheme, the authority, and the path, and it is considered an absolute pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span> <span data-ttu-id="b14a6-190">Per semplificare il lavoro per gli sviluppatori, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementi consentono di impostare gli attributi appropriati con un relativo pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], che include solo il percorso.</span><span class="sxs-lookup"><span data-stu-id="b14a6-190">As a simplification for developers, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elements typically allow you to set appropriate attributes with a relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], which includes only the path.</span></span>  
   
- Ad esempio, si consideri il seguente [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack assoluto per un file di risorse nell'assembly locale.  
+ <span data-ttu-id="b14a6-191">Ad esempio, si consideri il seguente pack assoluto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un file di risorse nell'assembly locale.</span><span class="sxs-lookup"><span data-stu-id="b14a6-191">For example, consider the following absolute pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for a resource file in the local assembly.</span></span>  
   
  `pack://application:,,,/ResourceFile.xaml`  
   
- L'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo che fa riferimento a questo file di risorse sarebbe il seguente.  
+ <span data-ttu-id="b14a6-192">Il relativo pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] che fa riferimento a questa risorsa file potrebbe essere la seguente.</span><span class="sxs-lookup"><span data-stu-id="b14a6-192">The relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that refers to this resource file would be the following.</span></span>  
   
  `/ResourceFile.xaml`  
   
 > [!NOTE]
->  Dal momento che i file del sito di origine non sono associati agli assembly, è possibile farvi riferimento soltanto mediante [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack assoluti.  
+>  <span data-ttu-id="b14a6-193">Poiché il file di origine del sito non sono associati agli assembly, è possibile solo possibile farvi riferimento assoluto Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-193">Because site of origin files are not associated with assemblies, they can only be referred to with absolute pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)].</span></span>  
   
- Per impostazione predefinita, un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo è considerato relativo al percorso del markup o del codice contenente il riferimento.  In caso di utilizzo di una barra rovesciata iniziale, tuttavia, il riferimento dell'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo viene considerato relativo alla radice dell'applicazione.  Si consideri ad esempio la seguente struttura del progetto.  
+ <span data-ttu-id="b14a6-194">Per impostazione predefinita, un Service pack relativo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] viene considerato relativo alla posizione del markup o del codice che contiene il riferimento.</span><span class="sxs-lookup"><span data-stu-id="b14a6-194">By default, a relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] is considered relative to the location of the markup or code that contains the reference.</span></span> <span data-ttu-id="b14a6-195">Se viene utilizzata una barra rovesciata iniziale, tuttavia, il relativo pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] riferimento viene quindi considerato relativo alla radice dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-195">If a leading backslash is used, however, the relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] reference is then considered relative to the root of the application.</span></span> <span data-ttu-id="b14a6-196">Si consideri ad esempio la struttura di progetto seguente.</span><span class="sxs-lookup"><span data-stu-id="b14a6-196">For example, consider the following project structure.</span></span>  
   
  `App.xaml`  
   
@@ -223,123 +225,124 @@ In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], gli [!IN
   
  `+ Page2.xaml`  
   
- Se Page1.xaml contiene un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] che fa riferimento a *Radice*\\SubFolder\\Page2.xaml, il riferimento può utilizzare l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo che segue.  
+ <span data-ttu-id="b14a6-197">Se Page1 contiene un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] che fa riferimento *radice*\SubFolder\Page2.xaml, il riferimento può utilizzare il seguente pack relativo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-197">If Page1.xaml contains a [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that references *Root*\SubFolder\Page2.xaml, the reference can use the following relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
  `Page2.xaml`  
   
- Se Page1.xaml contiene un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] che fa riferimento a *Radice*\\Page2.xaml, il riferimento può utilizzare l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo che segue.  
+ <span data-ttu-id="b14a6-198">Se Page1 contiene un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] che fa riferimento *radice*\Page2.xaml, il riferimento può utilizzare il seguente pack relativo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-198">If Page1.xaml contains a [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that references *Root*\Page2.xaml, the reference can use the following relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
  `/Page2.xaml`  
   
 <a name="Pack_URI_Resolution"></a>   
-## Risoluzione degli URI di tipo pack  
- Il formato degli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack è tale da conferire lo stesso aspetto a [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per tipi di file diversi.  Si consideri ad esempio il seguente [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack assoluto.  
+## <a name="pack-uri-resolution"></a><span data-ttu-id="b14a6-199">Risoluzione degli URI di tipo pack</span><span class="sxs-lookup"><span data-stu-id="b14a6-199">Pack URI Resolution</span></span>  
+ <span data-ttu-id="b14a6-200">Il formato del pacchetto [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] rende possibile per pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per diversi tipi di file abbia lo stesso aspetto.</span><span class="sxs-lookup"><span data-stu-id="b14a6-200">The format of pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] makes it is possible for pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] for different types of files to look the same.</span></span> <span data-ttu-id="b14a6-201">Ad esempio, si consideri il seguente pack assoluto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-201">For example, consider the following absolute pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
  `pack://application:,,,/ResourceOrContentFile.xaml`  
   
- Questo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] potrebbe fare riferimento a un file di risorse nell'assembly locale o a un file di dati.  Lo stesso vale per il seguente [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] relativo.  
+ <span data-ttu-id="b14a6-202">Questo pacchetto assoluto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] potrebbe fare riferimento a un file di risorse nell'assembly locale o un file di contenuto.</span><span class="sxs-lookup"><span data-stu-id="b14a6-202">This absolute pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] could refer to either a resource file in the local assembly or a content file.</span></span> <span data-ttu-id="b14a6-203">Lo stesso vale per il seguente relativo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-203">The same is true for the following relative [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
  `/ResourceOrContentFile.xaml`  
   
- Per determinare il tipo di file al quale un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack fa riferimento, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] risolve gli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per i file di risorse negli assembly locali e per i file di dati mediante la seguente euristica:  
+ <span data-ttu-id="b14a6-204">Per determinare il tipo di file di un pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] fa riferimento, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] risolve [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per i file di risorse negli assembly locali e i file di contenuto utilizzando la seguente euristica:</span><span class="sxs-lookup"><span data-stu-id="b14a6-204">In order to determine the type of file that a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] refers to, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] resolves [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] for resource files in local assemblies and content files by using the following heuristics:</span></span>  
   
-1.  Ricercare nei metadati dell'assembly un attributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> che corrisponda all'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack.  
+1.  <span data-ttu-id="b14a6-205">I metadati dell'assembly per verificare la presenza di un <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> attributo che corrisponda al pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-205">Probe the assembly metadata for an <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> attribute that matches the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
-2.  Se l'attributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> viene trovato, il percorso dell'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack fa riferimento a un file di dati.  
+2.  <span data-ttu-id="b14a6-206">Se il <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> attributo viene trovato, il percorso del pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] fa riferimento a un file di contenuto.</span><span class="sxs-lookup"><span data-stu-id="b14a6-206">If the <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> attribute is found, the path of the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] refers to a content file.</span></span>  
   
-3.  Se l'attributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> non viene trovato, ricercare nei file di risorse fissi compilati nell'assembly locale.  
+3.  <span data-ttu-id="b14a6-207">Se il <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> attributo non viene trovato, esaminare i file di set di risorse che vengono compilati in assembly locale.</span><span class="sxs-lookup"><span data-stu-id="b14a6-207">If the <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> attribute is not found, probe the set resource files that are compiled into the local assembly.</span></span>  
   
-4.  Se viene trovato un file di risorse corrispondente al percorso dell'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack, allora il percorso dell'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] fa riferimento a un file di risorse.  
+4.  <span data-ttu-id="b14a6-208">Se un file di risorse che corrisponde al percorso del pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] viene trovato, il percorso del pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] fa riferimento a un file di risorse.</span><span class="sxs-lookup"><span data-stu-id="b14a6-208">If a resource file that matches the path of the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] is found, the path of the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] refers to a resource file.</span></span>  
   
-5.  Se la risorsa non viene trovata, l'oggetto <xref:System.Uri> internamente creato non è valido.  
+5.  <span data-ttu-id="b14a6-209">Se la risorsa non viene trovato, internamente creato <xref:System.Uri> non è valido.</span><span class="sxs-lookup"><span data-stu-id="b14a6-209">If the resource is not found, the internally created <xref:System.Uri> is invalid.</span></span>  
   
- La risoluzione degli [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] non viene applicata agli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che fanno riferimento a quanto segue:  
+ [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]<span data-ttu-id="b14a6-210">risoluzione non è applicabile per [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che fanno riferimento al seguente:</span><span class="sxs-lookup"><span data-stu-id="b14a6-210"> resolution does not apply for [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that refer to the following:</span></span>  
   
--   File di dati negli assembly a cui si fa riferimento: questi tipi di file non sono supportati da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+-   <span data-ttu-id="b14a6-211">File di dati negli assembly di riferimento: questi tipi di file non supportati da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-211">Content files in referenced assemblies: these file types are not supported by [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span></span>  
   
--   File incorporati negli assembly a cui si fa riferimento: gli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che li identificano sono univoci in quanto includono sia il nome dell'assembly in questione sia il suffisso `;component`.  
+-   <span data-ttu-id="b14a6-212">File incorporati negli assembly di riferimento: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che li identificano sono univoci, perché includono sia il nome dell'assembly di riferimento e `;component` suffisso.</span><span class="sxs-lookup"><span data-stu-id="b14a6-212">Embedded files in referenced assemblies: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that identify them are unique because they include both the name of the referenced assembly and the `;component` suffix.</span></span>  
   
--   File del sito di origine: gli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che li identificano sono univoci in quanto sono gli unici file identificabili dagli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack contenenti l'autorità siteoforigin:\/\/\/.  
+-   <span data-ttu-id="b14a6-213">Sito di origine: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che li identificano sono univoci in quanto sono i soli file che possono essere identificati da pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che contengono il siteoforigin: / / / autorità.</span><span class="sxs-lookup"><span data-stu-id="b14a6-213">Site of origin files: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that identify them are unique because they are the only files that can be identified by pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that contain the siteoforigin:/// authority.</span></span>  
   
- La risoluzione degli [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack consente al codice di essere indipendente dai percorsi dei file di risorse e dei file di dati.  Ad esempio, se un file di risorse nell'assembly locale viene riconfigurato come file di dati, l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack per la risorsa rimane lo stesso, come anche il codice che utilizza tale [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
+ <span data-ttu-id="b14a6-214">Una semplificazione di tipo pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] risoluzione consente al codice di essere indipendente dai percorsi dei file di risorse e dei file.</span><span class="sxs-lookup"><span data-stu-id="b14a6-214">One simplification that pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] resolution allows is for code to be somewhat independent of the locations of resource and content files.</span></span> <span data-ttu-id="b14a6-215">Ad esempio, se si dispone di un file di risorse nell'assembly locale che viene riconfigurato in modo da un file di contenuto, il pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per la risorsa rimane lo stesso, anche il codice che utilizza tale [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-215">For example, if you have a resource file in the local assembly that is reconfigured to be a content file, the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for the resource remains the same, as does the code that uses the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
 <a name="Programming_with_Pack_URIs"></a>   
-## Programmazione con URI di tipo pack  
- Molte classi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementano proprietà che possono essere impostate con [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack, tra cui:  
+## <a name="programming-with-pack-uris"></a><span data-ttu-id="b14a6-216">Programmazione con URI di tipo pack</span><span class="sxs-lookup"><span data-stu-id="b14a6-216">Programming with Pack URIs</span></span>  
+ <span data-ttu-id="b14a6-217">Molti [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] classi implementano proprietà che possono essere impostate con Service pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], tra cui:</span><span class="sxs-lookup"><span data-stu-id="b14a6-217">Many [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] classes implement properties that can be set with pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], including:</span></span>  
   
--   <xref:System.Windows.Application.StartupUri%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Window.Icon%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
   
- Queste proprietà possono essere impostate sia dal markup che dal codice.  In questa sezione vengono illustrate le costruzioni di base per entrambi, quindi vengono riportati alcuni esempi di scenari comuni.  
+ <span data-ttu-id="b14a6-218">Queste proprietà possono essere impostate da markup e codice.</span><span class="sxs-lookup"><span data-stu-id="b14a6-218">These properties can be set from both markup and code.</span></span> <span data-ttu-id="b14a6-219">Questa sezione illustra le costruzioni di base per entrambi e quindi riporta esempi di scenari comuni.</span><span class="sxs-lookup"><span data-stu-id="b14a6-219">This section demonstrates the basic constructions for both and then shows examples of common scenarios.</span></span>  
   
 <a name="Using_Pack_URIs_in_Markup"></a>   
-### Utilizzo degli URI di tipo pack nel markup  
- Un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack viene specificato nel markup impostando l'elemento di un attributo con l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] in questione.  Di seguito è riportato un esempio:  
+### <a name="using-pack-uris-in-markup"></a><span data-ttu-id="b14a6-220">Uso di URI di tipo pack nel markup</span><span class="sxs-lookup"><span data-stu-id="b14a6-220">Using Pack URIs in Markup</span></span>  
+ <span data-ttu-id="b14a6-221">Un pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] viene specificato nel markup impostando l'elemento di un attributo con il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-221">A pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] is specified in markup by setting the element of an attribute with the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span> <span data-ttu-id="b14a6-222">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="b14a6-222">For example:</span></span>  
   
  `<element attribute="pack://application:,,,/File.xaml" />`  
   
- Nella Tabella 1 sono illustrati i vari [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack assoluti che è possibile specificare nel markup.  
+ <span data-ttu-id="b14a6-223">Tabella 1 sono illustrati i vari pack assoluto [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che è possibile specificare nel markup.</span><span class="sxs-lookup"><span data-stu-id="b14a6-223">Table 1 illustrates the various absolute pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that you can specify in markup.</span></span>  
   
- Tabella 1: URI di tipo pack assoluti nel markup  
+ <span data-ttu-id="b14a6-224">Tabella 1: URI di tipo pack assoluti nel markup</span><span class="sxs-lookup"><span data-stu-id="b14a6-224">Table 1: Absolute Pack URIs in Markup</span></span>  
   
-|File|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack assoluto|  
-|----------|----------------------------------------------------------------------------------------|  
-|File di risorse \- assembly locale|`"pack://application:,,,/ResourceFile.xaml"`|  
-|File di risorse in una sottocartella \- assembly locale|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|  
-|File di risorse \- assembly a cui si fa riferimento|`"pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml"`|  
-|File di risorse in una sottocartella dell'assembly a cui si fa riferimento|`"pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|  
-|File di risorse nell'assembly con versione a cui si fa riferimento|`"pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml"`|  
-|File di dati|`"pack://application:,,,/ContentFile.xaml"`|  
-|File di dati in una sottocartella|`"pack://application:,,,/Subfolder/ContentFile.xaml"`|  
-|File del sito di origine|`"pack://siteoforigin:,,,/SOOFile.xaml"`|  
-|File del sito di origine in una sottocartella|`"pack://siteoforigin:,,,/Subfolder/SOOFile.xaml"`|  
+|<span data-ttu-id="b14a6-225">File</span><span class="sxs-lookup"><span data-stu-id="b14a6-225">File</span></span>|<span data-ttu-id="b14a6-226">Pack assoluto[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b14a6-226">Absolute pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]</span></span>|  
+|----------|-------------------------------------------------------------------------------------------------------------------------|  
+|<span data-ttu-id="b14a6-227">File di risorse - assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-227">Resource file - local assembly</span></span>|`"pack://application:,,,/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-228">File di risorse in una sottocartella - assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-228">Resource file in subfolder - local assembly</span></span>|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-229">File di risorse - assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-229">Resource file - referenced assembly</span></span>|`"pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-230">File di risorse in una sottocartella dell'assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-230">Resource file in subfolder of referenced assembly</span></span>|`"pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-231">File di risorse in un assembly a cui si fa riferimento con versione</span><span class="sxs-lookup"><span data-stu-id="b14a6-231">Resource file in versioned referenced assembly</span></span>|`"pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-232">File di contenuto</span><span class="sxs-lookup"><span data-stu-id="b14a6-232">Content file</span></span>|`"pack://application:,,,/ContentFile.xaml"`|  
+|<span data-ttu-id="b14a6-233">File di contenuto in una sottocartella</span><span class="sxs-lookup"><span data-stu-id="b14a6-233">Content file in subfolder</span></span>|`"pack://application:,,,/Subfolder/ContentFile.xaml"`|  
+|<span data-ttu-id="b14a6-234">File del sito di origine</span><span class="sxs-lookup"><span data-stu-id="b14a6-234">Site of origin file</span></span>|`"pack://siteoforigin:,,,/SOOFile.xaml"`|  
+|<span data-ttu-id="b14a6-235">File del sito di origine in una sottocartella</span><span class="sxs-lookup"><span data-stu-id="b14a6-235">Site of origin file in subfolder</span></span>|`"pack://siteoforigin:,,,/Subfolder/SOOFile.xaml"`|  
   
- Nella Tabella 2 sono illustrati i vari [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack relativi che è possibile specificare nel markup.  
+ <span data-ttu-id="b14a6-236">Tabella 2 sono illustrati i vari pack relativi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che è possibile specificare nel markup.</span><span class="sxs-lookup"><span data-stu-id="b14a6-236">Table 2 illustrates the various relative pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that you can specify in markup.</span></span>  
   
- Tabella 2: URI di tipo pack relativi nel markup  
+ <span data-ttu-id="b14a6-237">Tabella 2: URI di tipo pack relativi nel markup</span><span class="sxs-lookup"><span data-stu-id="b14a6-237">Table 2: Relative Pack URIs in Markup</span></span>  
   
-|File|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo|  
-|----------|----------------------------------------------------------------------------------------|  
-|File di risorse nell'assembly locale|`"/ResourceFile.xaml"`|  
-|File di risorse in una sottocartella dell'assembly locale|`"/Subfolder/ResourceFile.xaml"`|  
-|File di risorse nell'assembly a cui si fa riferimento|`"/ReferencedAssembly;component/ResourceFile.xaml"`|  
-|File di risorse in una sottocartella dell'assembly a cui si fa riferimento|`"/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|  
-|File di dati|`"/ContentFile.xaml"`|  
-|File di dati in una sottocartella|`"/Subfolder/ContentFile.xaml"`|  
+|<span data-ttu-id="b14a6-238">File</span><span class="sxs-lookup"><span data-stu-id="b14a6-238">File</span></span>|<span data-ttu-id="b14a6-239">Pack relativo[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b14a6-239">Relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]</span></span>|  
+|----------|-------------------------------------------------------------------------------------------------------------------------|  
+|<span data-ttu-id="b14a6-240">File di risorse nell'assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-240">Resource file in local assembly</span></span>|`"/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-241">File di risorse in una sottocartella dell'assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-241">Resource file in subfolder of local assembly</span></span>|`"/Subfolder/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-242">File di risorse nell'assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-242">Resource file in referenced assembly</span></span>|`"/ReferencedAssembly;component/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-243">File di risorse in una sottocartella dell'assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-243">Resource file in subfolder of referenced assembly</span></span>|`"/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|  
+|<span data-ttu-id="b14a6-244">File di contenuto</span><span class="sxs-lookup"><span data-stu-id="b14a6-244">Content file</span></span>|`"/ContentFile.xaml"`|  
+|<span data-ttu-id="b14a6-245">File di contenuto in una sottocartella</span><span class="sxs-lookup"><span data-stu-id="b14a6-245">Content file in subfolder</span></span>|`"/Subfolder/ContentFile.xaml"`|  
   
 <a name="Using_Pack_URIs_in_Code"></a>   
-### Utilizzo degli URI di tipo pack nel codice  
- Per specificare un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack nel codice, creare un'istanza della classe <xref:System.Uri> e passare l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] al costruttore sotto forma di parametro,  come illustrato nell'esempio riportato di seguito.  
+### <a name="using-pack-uris-in-code"></a><span data-ttu-id="b14a6-246">Uso di URI di tipo pack nel codice</span><span class="sxs-lookup"><span data-stu-id="b14a6-246">Using Pack URIs in Code</span></span>  
+ <span data-ttu-id="b14a6-247">Specificare un pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] nel codice creando il <xref:System.Uri> classe e passare il [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] come parametro al costruttore.</span><span class="sxs-lookup"><span data-stu-id="b14a6-247">You specify a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] in code by instantiating the <xref:System.Uri> class and passing the pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] as a parameter to the constructor.</span></span> <span data-ttu-id="b14a6-248">come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b14a6-248">This is demonstrated in the following example.</span></span>  
   
 ```csharp  
 Uri uri = new Uri("pack://application:,,,/File.xaml");  
 ```  
   
- Per impostazione predefinita, la classe <xref:System.Uri> considera gli [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack come assoluti.  Di conseguenza, quando si crea un'istanza della classe <xref:System.Uri> con un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo viene generata un'eccezione.  
+ <span data-ttu-id="b14a6-249">Per impostazione predefinita, il <xref:System.Uri> classe considera pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] come assoluti.</span><span class="sxs-lookup"><span data-stu-id="b14a6-249">By default, the <xref:System.Uri> class considers pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] to be absolute.</span></span> <span data-ttu-id="b14a6-250">Di conseguenza, viene generata un'eccezione quando un'istanza di <xref:System.Uri> classe viene creata con un relativo pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b14a6-250">Consequently, an exception is raised when an instance of the <xref:System.Uri> class is created with a relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
 ```csharp  
 Uri uri = new Uri("/File.xaml");  
 ```  
   
- Fortunatamente l'overload <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> del costruttore della classe <xref:System.Uri> accetta un parametro di tipo <xref:System.UriKind> che consente di specificare se un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack è assoluto o relativo.  
+ <span data-ttu-id="b14a6-251">Fortunatamente, la <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> overload di <xref:System.Uri> costruttore della classe accetta un parametro di tipo <xref:System.UriKind> consente di specificare se un pacchetto di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] è assoluto o relativo.</span><span class="sxs-lookup"><span data-stu-id="b14a6-251">Fortunately, the <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> overload of the <xref:System.Uri> class constructor accepts a parameter of type <xref:System.UriKind> to allow you to specify whether a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] is either absolute or relative.</span></span>  
   
 ```csharp  
 // Absolute URI (default)  
 Uri absoluteUri = new Uri("pack://application:,,,/File.xaml", UriKind.Absolute);  
 // Relative URI  
-Uri relativeUri = new Uri("/File.xaml", UriKind.Relative);  
+Uri relativeUri = new Uri("/File.xaml",   
+                        UriKind.Relative);  
 ```  
   
- Quando si è certi che l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack fornito sia assoluto o relativo, sarebbe opportuno specificare unicamente <xref:System.UriKind> o <xref:System.UriKind>, a seconda del caso.  Se invece non si conosce il tipo di [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] utilizzato, ad esempio quando un utente immette un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack in fase di esecuzione, utilizzare <xref:System.UriKind>.  
+ <span data-ttu-id="b14a6-252">È necessario specificare solo <xref:System.UriKind.Absolute> o <xref:System.UriKind.Relative> quando si è certi che il pacchetto fornito [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] è uno o l'altro.</span><span class="sxs-lookup"><span data-stu-id="b14a6-252">You should specify only <xref:System.UriKind.Absolute> or <xref:System.UriKind.Relative> when you are certain that the provided pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] is one or the other.</span></span> <span data-ttu-id="b14a6-253">Se non si conosce il tipo di pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] utilizzato, ad esempio quando un utente immette un pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] in fase di esecuzione, utilizzare <xref:System.UriKind.RelativeOrAbsolute> invece.</span><span class="sxs-lookup"><span data-stu-id="b14a6-253">If you don't know the type of pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that is used, such as when a user enters a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] at run time, use <xref:System.UriKind.RelativeOrAbsolute> instead.</span></span>  
   
 ```csharp  
 // Relative or Absolute URI provided by user via a text box  
@@ -347,88 +350,88 @@ TextBox userProvidedUriTextBox = new TextBox();
 Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);  
 ```  
   
- Nella Tabella 3 sono illustrati i vari [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack assoluti che è possibile specificare nel codice utilizzando <xref:System.Uri?displayProperty=fullName>.  
+ <span data-ttu-id="b14a6-254">Tabella 3 sono illustrati i vari pack relativi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che è possibile specificare nel codice utilizzando <xref:System.Uri?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b14a6-254">Table 3 illustrates the various relative pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that you can specify in code by using <xref:System.Uri?displayProperty=nameWithType>.</span></span>  
   
- Tabella 3: URI di tipo pack assoluti nel codice  
+ <span data-ttu-id="b14a6-255">Tabella 3: URI di tipo pack assoluti nel codice</span><span class="sxs-lookup"><span data-stu-id="b14a6-255">Table 3: Absolute Pack URIs in Code</span></span>  
   
-|File|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack assoluto|  
-|----------|----------------------------------------------------------------------------------------|  
-|File di risorse \- assembly locale|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|  
-|File di risorse in una sottocartella \- assembly locale|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|  
-|File di risorse \- assembly a cui si fa riferimento|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Absolute);`|  
-|File di risorse in una sottocartella dell'assembly a cui si fa riferimento|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|  
-|File di risorse nell'assembly con versione a cui si fa riferimento|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml", UriKind.Absolute);`|  
-|File di dati|`Uri uri = new Uri("pack://application:,,,/ContentFile.xaml", UriKind.Absolute);`|  
-|File di dati in una sottocartella|`Uri uri = new Uri("pack://application:,,,/Subfolder/ContentFile.xaml", UriKind.Absolute);`|  
-|File del sito di origine|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|  
-|File del sito di origine in una sottocartella|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-256">File</span><span class="sxs-lookup"><span data-stu-id="b14a6-256">File</span></span>|<span data-ttu-id="b14a6-257">Pack assoluto[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b14a6-257">Absolute pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]</span></span>|  
+|----------|-------------------------------------------------------------------------------------------------------------------------|  
+|<span data-ttu-id="b14a6-258">File di risorse - assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-258">Resource file - local assembly</span></span>|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-259">File di risorse in una sottocartella - assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-259">Resource file in subfolder - local assembly</span></span>|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-260">File di risorse - assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-260">Resource file - referenced assembly</span></span>|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-261">File di risorse in una sottocartella dell'assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-261">Resource file in subfolder of referenced assembly</span></span>|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-262">File di risorse in un assembly a cui si fa riferimento con versione</span><span class="sxs-lookup"><span data-stu-id="b14a6-262">Resource file in versioned referenced assembly</span></span>|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-263">File di contenuto</span><span class="sxs-lookup"><span data-stu-id="b14a6-263">Content file</span></span>|`Uri uri = new Uri("pack://application:,,,/ContentFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-264">File di contenuto in una sottocartella</span><span class="sxs-lookup"><span data-stu-id="b14a6-264">Content file in subfolder</span></span>|`Uri uri = new Uri("pack://application:,,,/Subfolder/ContentFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-265">File del sito di origine</span><span class="sxs-lookup"><span data-stu-id="b14a6-265">Site of origin file</span></span>|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|  
+|<span data-ttu-id="b14a6-266">File del sito di origine in una sottocartella</span><span class="sxs-lookup"><span data-stu-id="b14a6-266">Site of origin file in subfolder</span></span>|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|  
   
- Nella Tabella 4 sono illustrati i vari [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack relativi che è possibile specificare nel codice utilizzando <xref:System.Uri?displayProperty=fullName>.  
+ <span data-ttu-id="b14a6-267">Tabella 4 sono illustrati i vari pack relativi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che è possibile specificare nel codice utilizzando <xref:System.Uri?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b14a6-267">Table 4 illustrates the various relative pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] that you can specify in code using <xref:System.Uri?displayProperty=nameWithType>.</span></span>  
   
- Tabella 4: URI di tipo pack relativi nel codice  
+ <span data-ttu-id="b14a6-268">Tabella 4: URI di tipo pack relativi nel codice</span><span class="sxs-lookup"><span data-stu-id="b14a6-268">Table 4: Relative Pack URIs in Code</span></span>  
   
-|File|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di tipo pack relativo|  
-|----------|----------------------------------------------------------------------------------------|  
-|File di risorse \- assembly locale|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|  
-|File di risorse in una sottocartella \- assembly locale|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|  
-|File di risorse \- assembly a cui si fa riferimento|`Uri uri = new Uri("/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Relative);`|  
-|File di risorse in una sottocartella \- assembly a cui si fa riferimento|`Uri uri = new Uri("/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Relative);`|  
-|File di dati|`Uri uri = new Uri("/ContentFile.xaml", UriKind.Relative);`|  
-|File di dati in una sottocartella|`Uri uri = new Uri("/Subfolder/ContentFile.xaml", UriKind.Relative);`|  
+|<span data-ttu-id="b14a6-269">File</span><span class="sxs-lookup"><span data-stu-id="b14a6-269">File</span></span>|<span data-ttu-id="b14a6-270">Pack relativo[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b14a6-270">Relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]</span></span>|  
+|----------|-------------------------------------------------------------------------------------------------------------------------|  
+|<span data-ttu-id="b14a6-271">File di risorse - assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-271">Resource file - local assembly</span></span>|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|  
+|<span data-ttu-id="b14a6-272">File di risorse in una sottocartella - assembly locale</span><span class="sxs-lookup"><span data-stu-id="b14a6-272">Resource file in subfolder - local assembly</span></span>|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|  
+|<span data-ttu-id="b14a6-273">File di risorse - assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-273">Resource file - referenced assembly</span></span>|`Uri uri = new Uri("/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Relative);`|  
+|<span data-ttu-id="b14a6-274">File di risorse in una sottocartella - assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="b14a6-274">Resource file in subfolder - referenced assembly</span></span>|`Uri uri = new Uri("/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Relative);`|  
+|<span data-ttu-id="b14a6-275">File di contenuto</span><span class="sxs-lookup"><span data-stu-id="b14a6-275">Content file</span></span>|`Uri uri = new Uri("/ContentFile.xaml", UriKind.Relative);`|  
+|<span data-ttu-id="b14a6-276">File di contenuto in una sottocartella</span><span class="sxs-lookup"><span data-stu-id="b14a6-276">Content file in subfolder</span></span>|`Uri uri = new Uri("/Subfolder/ContentFile.xaml", UriKind.Relative);`|  
   
 <a name="Common_Pack_URI_Scenarios"></a>   
-### Scenari comuni di URI di tipo pack  
- Nelle sezioni precedenti è stato illustrato come costruire [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack per identificare i file di risorse, di dati e del sito di origine.  In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] queste costruzioni vengono utilizzate in diversi modi. Nelle sezioni che seguono vengono trattati diversi scenari di utilizzo comuni.  
+### <a name="common-pack-uri-scenarios"></a><span data-ttu-id="b14a6-277">Scenari comuni di URI Pack</span><span class="sxs-lookup"><span data-stu-id="b14a6-277">Common Pack URI Scenarios</span></span>  
+ <span data-ttu-id="b14a6-278">Nelle sezioni precedenti hanno illustrato come costruire pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per identificare risorse e sito di origine.</span><span class="sxs-lookup"><span data-stu-id="b14a6-278">The preceding sections have discussed how to construct pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] to identify resource, content, and site of origin files.</span></span> <span data-ttu-id="b14a6-279">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], queste costruzioni vengono utilizzate in diversi modi e le sezioni seguenti illustrano alcuni utilizzi comuni.</span><span class="sxs-lookup"><span data-stu-id="b14a6-279">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], these constructions are used in a variety of ways, and the following sections cover several common usages.</span></span>  
   
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>   
-#### Specifica dell'interfaccia utente da visualizzare all'avvio di un'applicazione  
- <xref:System.Windows.Application.StartupUri%2A> specifica la prima [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da visualizzare all'avvio di un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Nel caso delle applicazioni autonome, l'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] può essere una finestra, come illustrato nell'esempio che segue.  
+#### <a name="specifying-the-ui-to-show-when-an-application-starts"></a><span data-ttu-id="b14a6-280">Specifica dell'interfaccia utente da visualizzare all'avvio di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="b14a6-280">Specifying the UI to Show When an Application Starts</span></span>  
+ <span data-ttu-id="b14a6-281"><xref:System.Windows.Application.StartupUri%2A>Specifica il primo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da visualizzare quando un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] viene avviata l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-281"><xref:System.Windows.Application.StartupUri%2A> specifies the first [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to show when a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application is launched.</span></span> <span data-ttu-id="b14a6-282">Per le applicazioni autonome di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] può essere una finestra, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b14a6-282">For standalone applications, the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] can be a window, as shown in the following example.</span></span>  
   
- [!code-xml[PackURIOverviewSnippets#StartupUriWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
+ [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
   
- Le applicazioni autonome e le [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] possono specificare anche una pagina come interfaccia utente iniziale, come illustrato nell'esempio che segue.  
+ <span data-ttu-id="b14a6-283">Applicazioni autonome e [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] può specificare anche una pagina come l'interfaccia utente iniziale, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b14a6-283">Standalone applications and [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] can also specify a page as the initial UI, as shown in the following example.</span></span>  
   
- [!code-xml[PackURIOverviewSnippets#StartupUriPage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]  
+ [!code-xaml[PackURIOverviewSnippets#StartupUriPage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]  
   
- Se l'applicazione in questione è un'applicazione autonoma e una pagina viene specificata con <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] apre un oggetto <xref:System.Windows.Navigation.NavigationWindow> per ospitare la pagina.  Nel caso delle applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], la pagina viene visualizzata nel browser host.  
+ <span data-ttu-id="b14a6-284">Se l'applicazione è un'applicazione autonoma e una pagina viene specificata con <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] apre un <xref:System.Windows.Navigation.NavigationWindow> per ospitare la pagina.</span><span class="sxs-lookup"><span data-stu-id="b14a6-284">If the application is a standalone application and a page is specified with <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] opens a <xref:System.Windows.Navigation.NavigationWindow> to host the page.</span></span> <span data-ttu-id="b14a6-285">Per [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], la pagina viene visualizzata nel browser host.</span><span class="sxs-lookup"><span data-stu-id="b14a6-285">For [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], the page is shown in the host browser.</span></span>  
   
 <a name="Navigating_to_a_Page"></a>   
-#### Spostamento su una pagina  
- Nell'esempio seguente viene illustrato come spostarsi su una pagina.  
+#### <a name="navigating-to-a-page"></a><span data-ttu-id="b14a6-286">Spostamento su una pagina</span><span class="sxs-lookup"><span data-stu-id="b14a6-286">Navigating to a Page</span></span>  
+ <span data-ttu-id="b14a6-287">L'esempio seguente illustra come spostarsi su una pagina.</span><span class="sxs-lookup"><span data-stu-id="b14a6-287">The following example shows how to navigate to a page.</span></span>  
   
- [!code-xml[NavigationOverviewSnippets#HyperlinkXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]  
-[!code-xml[NavigationOverviewSnippets#HyperlinkXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]  
-[!code-xml[NavigationOverviewSnippets#HyperlinkXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]  
+ [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]  
+[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]  
+[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]  
   
- Per ulteriori informazioni sulle diverse modalità di spostamento in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ <span data-ttu-id="b14a6-288">Per ulteriori informazioni sulle diverse modalità per spostarsi in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b14a6-288">For more information on the various ways to navigate in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], see [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span></span>  
   
 <a name="Specifying_a_Window_Icon"></a>   
-#### Specifica dell'icona di una finestra  
- Nell'esempio riportato di seguito viene illustrato come utilizzare un URI per specificare l'icona di una finestra.  
+#### <a name="specifying-a-window-icon"></a><span data-ttu-id="b14a6-289">Specifica dell'icona di una finestra</span><span class="sxs-lookup"><span data-stu-id="b14a6-289">Specifying a Window Icon</span></span>  
+ <span data-ttu-id="b14a6-290">L'esempio seguente illustra come usare un URI per specificare l'icona di una finestra.</span><span class="sxs-lookup"><span data-stu-id="b14a6-290">The following example shows how to use a URI to specify a window's icon.</span></span>  
   
- [!code-xml[WindowIconSnippets#WindowIconSetXAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]  
+ [!code-xaml[WindowIconSnippets#WindowIconSetXAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]  
   
- Per ulteriori informazioni, vedere <xref:System.Windows.Window.Icon%2A>.  
+ <span data-ttu-id="b14a6-291">Per altre informazioni, vedere <xref:System.Windows.Window.Icon%2A>.</span><span class="sxs-lookup"><span data-stu-id="b14a6-291">For more information, see <xref:System.Windows.Window.Icon%2A>.</span></span>  
   
 <a name="Loading_Image__Audio__and_Video_Files"></a>   
-#### Caricamento di file di immagini, audio e video  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente alle applicazioni di utilizzare un'ampia varietà di tipi di contenuti multimediali, tutti identificabili e caricabili mediante [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack, come illustrato negli esempi che seguono.  
+#### <a name="loading-image-audio-and-video-files"></a><span data-ttu-id="b14a6-292">Caricamento di file di immagine, audio e video</span><span class="sxs-lookup"><span data-stu-id="b14a6-292">Loading Image, Audio, and Video Files</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="b14a6-293">consente alle applicazioni di utilizzare un'ampia gamma di tipi di supporti, ognuno dei quali possono essere identificati e caricato con Service pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], come illustrato negli esempi seguenti.</span><span class="sxs-lookup"><span data-stu-id="b14a6-293"> allows applications to use a wide variety of media types, all of which can be identified and loaded with pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], as shown in the following examples.</span></span>  
   
- [!code-xml[MediaPlayerVideoSample#VideoPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
+ [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
   
- [!code-xml[MediaPlayerAudioSample#AudioPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerAudioSample/CS/HomePage.xaml#audiopackuriatsoo)]  
+ [!code-xaml[MediaPlayerAudioSample#AudioPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerAudioSample/CS/HomePage.xaml#audiopackuriatsoo)]  
   
- [!code-xml[ImageSample#ImagePackURIContent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]  
+ [!code-xaml[ImageSample#ImagePackURIContent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]  
   
- Per ulteriori informazioni sull'utilizzo di contenuti multimediali, vedere [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md).  
+ <span data-ttu-id="b14a6-294">Per ulteriori informazioni sull'utilizzo di contenuti multimediali, vedere [grafica e contenuti multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md).</span><span class="sxs-lookup"><span data-stu-id="b14a6-294">For more information on working with media content, see [Graphics and Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md).</span></span>  
   
 <a name="Loading_a_Resource_Dictionary_from_the_Site_of_Origin"></a>   
-#### Caricamento di un dizionario risorse dal sito di origine  
- I dizionari risorse \(<xref:System.Windows.ResourceDictionary>\) possono essere utilizzati per supportare i temi dell'applicazione.  Per creare e gestire i temi, è possibile creare più temi sotto forma di dizionari risorse situati nel sito di origine di un'applicazione.  In questo modo sarà possibile aggiungere e aggiornare i temi senza dover ricompilare e ridistribuire l'applicazione.  Questi dizionari risorse possono essere identificati e caricati mediante [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] di tipo pack, come illustrato nell'esempio che segue.  
+#### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a><span data-ttu-id="b14a6-295">Caricamento di un dizionario risorse dal sito di origine</span><span class="sxs-lookup"><span data-stu-id="b14a6-295">Loading a Resource Dictionary from the Site of Origin</span></span>  
+ <span data-ttu-id="b14a6-296">I dizionari risorse (<xref:System.Windows.ResourceDictionary>) può essere utilizzata per supportare i temi dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-296">Resource dictionaries (<xref:System.Windows.ResourceDictionary>) can be used to support application themes.</span></span> <span data-ttu-id="b14a6-297">Un modo per creare e gestire i temi consiste nel creare più temi come dizionari risorse che si trovano nel sito di origine di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-297">One way to create and manage themes is to create multiple themes as resource dictionaries that are located at an application's site of origin.</span></span> <span data-ttu-id="b14a6-298">In questo modo è possibile aggiungere e aggiornare i temi senza ricompilare e ridistribuire un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b14a6-298">This allows themes to be added and updated without recompiling and redeploying an application.</span></span> <span data-ttu-id="b14a6-299">Questi dizionari risorse possono essere identificati e caricati utilizzando pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], mostrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b14a6-299">These resource dictionaries can be identified and loaded using pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], which is shown in the following example.</span></span>  
   
- [!code-xml[ResourceDictionarySnippets#ResourceDictionaryPackURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]  
+ [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]  
   
- Per informazioni preliminari sui temi in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ <span data-ttu-id="b14a6-300">Per una panoramica dei temi in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="b14a6-300">For an overview of themes in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>  
   
-## Vedere anche  
- [File di dati e di risorse dell'applicazione WPF.](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a><span data-ttu-id="b14a6-301">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b14a6-301">See Also</span></span>  
+ [<span data-ttu-id="b14a6-302">File di dati e di risorse dell'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="b14a6-302">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

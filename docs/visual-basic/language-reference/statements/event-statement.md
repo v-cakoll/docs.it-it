@@ -1,58 +1,41 @@
 ---
-title: Istruzione Event | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Istruzione Event
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
-dev_langs:
-- VB
 helpviewer_keywords:
-- Event statement
-- declaring events, syntax
-- Public keyword, Event statements
-- Custom keyword
-- declarations, events
+- Event statement [Visual Basic]
+- declaring events [Visual Basic], syntax
+- Public keyword [Visual Basic], Event statements
+- Custom keyword [Visual Basic]
+- declarations [Visual Basic], events
 - event keyword [Visual Basic]
-- WithEvents keyword, Event statements
+- WithEvents keyword [Visual Basic], Event statements
 - events [Visual Basic], declaring
-- ByVal keyword, Event statements
+- ByVal keyword [Visual Basic], Event statements
 - events [Visual Basic], custom
-- ByRef keyword, Event statements
+- ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b0ea8074f996622df3cd88a7e87fc1156b63dcaf
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="event-statement"></a>Istruzione Event
-Dichiara un evento definito dall'utente.  
+# <a name="event-statement"></a><span data-ttu-id="84f52-102">Istruzione Event</span><span class="sxs-lookup"><span data-stu-id="84f52-102">Event Statement</span></span>
+<span data-ttu-id="84f52-103">Dichiara un evento definito dall'utente.</span><span class="sxs-lookup"><span data-stu-id="84f52-103">Declares a user-defined event.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="84f52-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="84f52-104">Syntax</span></span>  
   
 ```  
 [ <attrlist> ] [ accessmodifier ] _  
@@ -78,78 +61,78 @@ Dichiara un evento definito dall'utente.
 End Event  
 ```  
   
-## <a name="parts"></a>Parti  
+## <a name="parts"></a><span data-ttu-id="84f52-105">Parti</span><span class="sxs-lookup"><span data-stu-id="84f52-105">Parts</span></span>  
   
-|Parte|Descrizione|  
+|<span data-ttu-id="84f52-106">Parte</span><span class="sxs-lookup"><span data-stu-id="84f52-106">Part</span></span>|<span data-ttu-id="84f52-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="84f52-107">Description</span></span>|  
 |---|---|  
-|`attrlist`|Facoltativo. Elenco degli attributi applicabili all'evento. Gli attributi sono separati da una virgola. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) parentesi angolari ("`<`"e"`>`").|  
-|`accessmodifier`|Facoltativo. Specifica il tipo di codice che può accedere all'evento. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md), può accedere qualsiasi codice che può accedere all'elemento che lo dichiara.<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md): solo codice in una classe o una classe derivata può accedervi.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md), ovvero solo può accedere il codice nello stesso assembly.<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md), può accedere solo il codice nell'elemento che lo dichiara.<br /><br /> Si può specificare `Protected Friend` per abilitare l'accesso dal codice incluso nella classe dell'evento, in una classe derivata o nello stesso assembly.|  
-|`Shared`|Facoltativo. Specifica che l'evento non è associato a una specifica istanza di una classe o di una struttura.|  
-|`Shadows`|Facoltativo. Indica che l'evento ridichiara e nasconde un elemento di programmazione omonimo o un insieme di elementi in overload di una classe base. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. Ad esempio, se un elemento `Private` nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere all'elemento `Private` accede invece all'elemento della classe base.|  
-|`eventname`|Obbligatorio. Nome dell'evento, conforme alle convenzioni di denominazione standard delle variabili.|  
-|`parameterlist`|Facoltativo. Elenco di variabili locali che rappresentano i parametri dell'evento. È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
-|`Implements`|Facoltativo. Indica che l'evento implementa un evento di un'interfaccia.|  
-|`implementslist`|Necessario se si fornisce `Implements`. Elenco delle routine `Sub` implementate. Nel caso di più routine, è possibile separarle mediante virgole.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Ogni `implementedprocedure` presenta la sintassi e le parti seguenti:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-Obbligatorio. Nome di un'interfaccia implementata dalla classe o dalla struttura che contiene la routine.<br />-   `Definedname`-Obbligatorio. Nome mediante il quale la routine viene definita in `interface`. Non è necessario che questo nome corrisponda al nome usato dalla routine per implementare la routine definita, ossia `name`.|  
-|`Custom`|Obbligatorio. È necessario che gli eventi dichiarati come `Custom` definiscano funzioni di accesso `AddHandler`, `RemoveHandler` e `RaiseEvent` personalizzate.|  
-|`delegatename`|Facoltativo. Nome del delegato che specifica la firma del gestore eventi.|  
-|`AddHandler`|Obbligatorio. Dichiara una funzione di accesso `AddHandler` che specifica le istruzioni da eseguire quando viene aggiunto un gestore eventi, sia in modo esplicito mediante l'istruzione `AddHandler` che in modo implicito mediante la clausola `Handles`|  
-|`End AddHandler`|Obbligatorio. Termina il blocco `AddHandler`.|  
-|`value`|Obbligatorio. Nome parametro.|  
-|`RemoveHandler`|Obbligatorio. Dichiara una funzione di accesso `RemoveHandler`, che specifica le istruzioni da eseguire quando un gestore eventi viene rimosso mediante l'istruzione `RemoveHandler`.|  
-|`End RemoveHandler`|Obbligatorio. Termina il blocco `RemoveHandler`.|  
-|`RaiseEvent`|Obbligatorio. Dichiara una funzione di accesso `RaiseEvent`, che specifica le istruzioni da eseguire quando l'evento viene generato mediante l'istruzione `RaiseEvent`. In genere, viene richiamato un elenco di delegati gestito dalle funzioni di accesso `AddHandler` e `RemoveHandler`.|  
-|`End RaiseEvent`|Obbligatorio. Termina il blocco `RaiseEvent`.|  
-|`delegatesignature`|Obbligatorio. Elenco di parametri che corrisponde ai parametri richiesti dal delegato `delegatename`. È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
-|`statements`|Facoltativo. Istruzioni che includono i corpi dei metodi `AddHandler`, `RemoveHandler` e `RaiseEvent`.|  
-|`End Event`|Obbligatorio. Termina il blocco `Event`.|  
+|`attrlist`|<span data-ttu-id="84f52-108">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="84f52-108">Optional.</span></span> <span data-ttu-id="84f52-109">Elenco degli attributi applicabili all'evento.</span><span class="sxs-lookup"><span data-stu-id="84f52-109">List of attributes that apply to this event.</span></span> <span data-ttu-id="84f52-110">Gli attributi sono separati da una virgola.</span><span class="sxs-lookup"><span data-stu-id="84f52-110">Multiple attributes are separated by commas.</span></span> <span data-ttu-id="84f52-111">È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").</span><span class="sxs-lookup"><span data-stu-id="84f52-111">You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>|  
+|`accessmodifier`|<span data-ttu-id="84f52-112">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="84f52-112">Optional.</span></span> <span data-ttu-id="84f52-113">Specifica il tipo di codice che può accedere all'evento.</span><span class="sxs-lookup"><span data-stu-id="84f52-113">Specifies what code can access the event.</span></span> <span data-ttu-id="84f52-114">Può essere uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="84f52-114">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="84f52-115">-   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md): può accedere qualsiasi codice che è possibile accedere all'elemento che lo dichiara.</span><span class="sxs-lookup"><span data-stu-id="84f52-115">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)—any code that can access the element that declares it can access it.</span></span><br /><span data-ttu-id="84f52-116">-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md): solo codice nella relativa classe o una classe derivata può accedere.</span><span class="sxs-lookup"><span data-stu-id="84f52-116">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)—only code within its class or a derived class can access it.</span></span><br /><span data-ttu-id="84f52-117">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo può accedere il codice nello stesso assembly.</span><span class="sxs-lookup"><span data-stu-id="84f52-117">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)—only code in the same assembly can access it.</span></span><br /><span data-ttu-id="84f52-118">-   [Privato](../../../visual-basic/language-reference/modifiers/private.md): può accedere solo il codice nell'elemento che lo dichiara.</span><span class="sxs-lookup"><span data-stu-id="84f52-118">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)—only code in the element that declares it can access it.</span></span><br /><br /> <span data-ttu-id="84f52-119">Si può specificare `Protected Friend` per abilitare l'accesso dal codice incluso nella classe dell'evento, in una classe derivata o nello stesso assembly.</span><span class="sxs-lookup"><span data-stu-id="84f52-119">You can specify `Protected Friend` to enable access from code in the event's class, a derived class, or the same assembly.</span></span>|  
+|`Shared`|<span data-ttu-id="84f52-120">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="84f52-120">Optional.</span></span> <span data-ttu-id="84f52-121">Specifica che l'evento non è associato a una specifica istanza di una classe o di una struttura.</span><span class="sxs-lookup"><span data-stu-id="84f52-121">Specifies that this event is not associated with a specific instance of a class or structure.</span></span>|  
+|`Shadows`|<span data-ttu-id="84f52-122">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="84f52-122">Optional.</span></span> <span data-ttu-id="84f52-123">Indica che l'evento ridichiara e nasconde un elemento di programmazione omonimo o un insieme di elementi in overload di una classe base.</span><span class="sxs-lookup"><span data-stu-id="84f52-123">Indicates that this event redeclares and hides an identically named programming element, or set of overloaded elements, in a base class.</span></span> <span data-ttu-id="84f52-124">È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.</span><span class="sxs-lookup"><span data-stu-id="84f52-124">You can shadow any kind of declared element with any other kind.</span></span><br /><br /> <span data-ttu-id="84f52-125">Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile.</span><span class="sxs-lookup"><span data-stu-id="84f52-125">A shadowed element is unavailable from within the derived class that shadows it, except from where the shadowing element is inaccessible.</span></span> <span data-ttu-id="84f52-126">Ad esempio, se un elemento `Private` nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere all'elemento `Private` accede invece all'elemento della classe base.</span><span class="sxs-lookup"><span data-stu-id="84f52-126">For example, if a `Private` element shadows a base-class element, code that does not have permission to access the `Private` element accesses the base-class element instead.</span></span>|  
+|`eventname`|<span data-ttu-id="84f52-127">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-127">Required.</span></span> <span data-ttu-id="84f52-128">Nome dell'evento, conforme alle convenzioni di denominazione standard delle variabili.</span><span class="sxs-lookup"><span data-stu-id="84f52-128">Name of the event; follows standard variable naming conventions.</span></span>|  
+|`parameterlist`|<span data-ttu-id="84f52-129">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="84f52-129">Optional.</span></span> <span data-ttu-id="84f52-130">Elenco di variabili locali che rappresentano i parametri dell'evento.</span><span class="sxs-lookup"><span data-stu-id="84f52-130">List of local variables that represent the parameters of this event.</span></span> <span data-ttu-id="84f52-131">È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="84f52-131">You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.</span></span>|  
+|`Implements`|<span data-ttu-id="84f52-132">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="84f52-132">Optional.</span></span> <span data-ttu-id="84f52-133">Indica che l'evento implementa un evento di un'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="84f52-133">Indicates that this event implements an event of an interface.</span></span>|  
+|`implementslist`|<span data-ttu-id="84f52-134">Necessario se si fornisce `Implements`.</span><span class="sxs-lookup"><span data-stu-id="84f52-134">Required if `Implements` is supplied.</span></span> <span data-ttu-id="84f52-135">Elenco delle routine `Sub` implementate.</span><span class="sxs-lookup"><span data-stu-id="84f52-135">List of `Sub` procedures being implemented.</span></span> <span data-ttu-id="84f52-136">Nel caso di più routine, è possibile separarle mediante virgole.</span><span class="sxs-lookup"><span data-stu-id="84f52-136">Multiple procedures are separated by commas:</span></span><br /><br /> <span data-ttu-id="84f52-137">*implementedprocedure* [, *implementedprocedure* ...]</span><span class="sxs-lookup"><span data-stu-id="84f52-137">*implementedprocedure* [ , *implementedprocedure* ... ]</span></span><br /><br /> <span data-ttu-id="84f52-138">Ogni `implementedprocedure` presenta la sintassi e le parti seguenti:</span><span class="sxs-lookup"><span data-stu-id="84f52-138">Each `implementedprocedure` has the following syntax and parts:</span></span><br /><br /> <span data-ttu-id="84f52-139">`interface`.`definedname`</span><span class="sxs-lookup"><span data-stu-id="84f52-139">`interface`.`definedname`</span></span><br /><br /> <span data-ttu-id="84f52-140">-   `interface`-Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-140">-   `interface` - Required.</span></span> <span data-ttu-id="84f52-141">Nome di un'interfaccia implementata dalla classe o dalla struttura che contiene la routine.</span><span class="sxs-lookup"><span data-stu-id="84f52-141">Name of an interface that this procedure's containing class or structure is implementing.</span></span><br /><span data-ttu-id="84f52-142">-   `Definedname`-Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-142">-   `Definedname` - Required.</span></span> <span data-ttu-id="84f52-143">Nome mediante il quale la routine viene definita in `interface`.</span><span class="sxs-lookup"><span data-stu-id="84f52-143">Name by which the procedure is defined in `interface`.</span></span> <span data-ttu-id="84f52-144">Non è necessario che questo nome corrisponda al nome usato dalla routine per implementare la routine definita, ossia `name`.</span><span class="sxs-lookup"><span data-stu-id="84f52-144">This does not have to be the same as `name`, the name that this procedure is using to implement the defined procedure.</span></span>|  
+|`Custom`|<span data-ttu-id="84f52-145">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-145">Required.</span></span> <span data-ttu-id="84f52-146">È necessario che gli eventi dichiarati come `Custom` definiscano funzioni di accesso `AddHandler`, `RemoveHandler` e `RaiseEvent` personalizzate.</span><span class="sxs-lookup"><span data-stu-id="84f52-146">Events declared as `Custom` must define custom `AddHandler`, `RemoveHandler`, and `RaiseEvent` accessors.</span></span>|  
+|`delegatename`|<span data-ttu-id="84f52-147">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="84f52-147">Optional.</span></span> <span data-ttu-id="84f52-148">Nome del delegato che specifica la firma del gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="84f52-148">The name of a delegate that specifies the event-handler signature.</span></span>|  
+|`AddHandler`|<span data-ttu-id="84f52-149">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-149">Required.</span></span> <span data-ttu-id="84f52-150">Dichiara una funzione di accesso `AddHandler` che specifica le istruzioni da eseguire quando viene aggiunto un gestore eventi, sia in modo esplicito mediante l'istruzione `AddHandler` che in modo implicito mediante la clausola `Handles`</span><span class="sxs-lookup"><span data-stu-id="84f52-150">Declares an `AddHandler` accessor, which specifies the statements to execute when an event handler is added, either explicitly by using the `AddHandler` statement or implicitly by using the `Handles` clause.</span></span>|  
+|`End AddHandler`|<span data-ttu-id="84f52-151">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-151">Required.</span></span> <span data-ttu-id="84f52-152">Termina il blocco `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="84f52-152">Terminates the `AddHandler` block.</span></span>|  
+|`value`|<span data-ttu-id="84f52-153">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-153">Required.</span></span> <span data-ttu-id="84f52-154">Nome parametro.</span><span class="sxs-lookup"><span data-stu-id="84f52-154">Parameter name.</span></span>|  
+|`RemoveHandler`|<span data-ttu-id="84f52-155">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-155">Required.</span></span> <span data-ttu-id="84f52-156">Dichiara una funzione di accesso `RemoveHandler`, che specifica le istruzioni da eseguire quando un gestore eventi viene rimosso mediante l'istruzione `RemoveHandler`.</span><span class="sxs-lookup"><span data-stu-id="84f52-156">Declares a `RemoveHandler` accessor, which specifies the statements to execute when an event handler is removed using the `RemoveHandler` statement.</span></span>|  
+|`End RemoveHandler`|<span data-ttu-id="84f52-157">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-157">Required.</span></span> <span data-ttu-id="84f52-158">Termina il blocco `RemoveHandler`.</span><span class="sxs-lookup"><span data-stu-id="84f52-158">Terminates the `RemoveHandler` block.</span></span>|  
+|`RaiseEvent`|<span data-ttu-id="84f52-159">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-159">Required.</span></span> <span data-ttu-id="84f52-160">Dichiara una funzione di accesso `RaiseEvent`, che specifica le istruzioni da eseguire quando l'evento viene generato mediante l'istruzione `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="84f52-160">Declares a `RaiseEvent` accessor, which specifies the statements to execute when the event is raised using the `RaiseEvent` statement.</span></span> <span data-ttu-id="84f52-161">In genere, viene richiamato un elenco di delegati gestito dalle funzioni di accesso `AddHandler` e `RemoveHandler`.</span><span class="sxs-lookup"><span data-stu-id="84f52-161">Typically, this invokes a list of delegates maintained by the `AddHandler` and `RemoveHandler` accessors.</span></span>|  
+|`End RaiseEvent`|<span data-ttu-id="84f52-162">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-162">Required.</span></span> <span data-ttu-id="84f52-163">Termina il blocco `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="84f52-163">Terminates the `RaiseEvent` block.</span></span>|  
+|`delegatesignature`|<span data-ttu-id="84f52-164">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-164">Required.</span></span> <span data-ttu-id="84f52-165">Elenco di parametri che corrisponde ai parametri richiesti dal delegato `delegatename`.</span><span class="sxs-lookup"><span data-stu-id="84f52-165">List of parameters that matches the parameters required by the `delegatename` delegate.</span></span> <span data-ttu-id="84f52-166">È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="84f52-166">You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.</span></span>|  
+|`statements`|<span data-ttu-id="84f52-167">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="84f52-167">Optional.</span></span> <span data-ttu-id="84f52-168">Istruzioni che includono i corpi dei metodi `AddHandler`, `RemoveHandler` e `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="84f52-168">Statements that contain the bodies of the `AddHandler`, `RemoveHandler`, and `RaiseEvent` methods.</span></span>|  
+|`End Event`|<span data-ttu-id="84f52-169">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="84f52-169">Required.</span></span> <span data-ttu-id="84f52-170">Termina il blocco `Event`.</span><span class="sxs-lookup"><span data-stu-id="84f52-170">Terminates the `Event` block.</span></span>|  
   
-## <a name="remarks"></a>Note  
- Dopo aver dichiarato l'evento, usare l'istruzione `RaiseEvent` per generarlo. Nei frammenti seguenti viene mostrato un esempio tipico di dichiarazione e generazione di un evento:  
+## <a name="remarks"></a><span data-ttu-id="84f52-171">Note</span><span class="sxs-lookup"><span data-stu-id="84f52-171">Remarks</span></span>  
+ <span data-ttu-id="84f52-172">Dopo aver dichiarato l'evento, usare l'istruzione `RaiseEvent` per generarlo.</span><span class="sxs-lookup"><span data-stu-id="84f52-172">Once the event has been declared, use the `RaiseEvent` statement to raise the event.</span></span> <span data-ttu-id="84f52-173">Nei frammenti seguenti viene mostrato un esempio tipico di dichiarazione e generazione di un evento:</span><span class="sxs-lookup"><span data-stu-id="84f52-173">A typical event might be declared and raised as shown in the following fragments:</span></span>  
   
- [!code-vb[13 VbVbalrEvents](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
-  
-> [!NOTE]
->  È possibile dichiarare argomenti per gli eventi analogamente a quanto avviene per gli argomenti di routine, tenendo però conto che non è possibile specificare per gli eventi argomenti denominati, argomenti `ParamArray` o argomenti `Optional`,  né ottenere da essi valori restituiti.  
-  
- Per gestire un evento è necessario associarlo a una subroutine del gestore eventi mediante l'istruzione `Handles` o `AddHandler`. Le firme della subroutine e dell'evento devono corrispondere. Per gestire un evento condiviso è necessario usare l'istruzione `AddHandler`.  
-  
- Si può usare `Event` solo a livello di modulo. Ciò significa che il *contesto della dichiarazione* per un evento deve essere una classe, struttura, modulo o interfaccia e non può essere un file di origine, lo spazio dei nomi, routine o blocco. Per ulteriori informazioni, vedere [contesti delle dichiarazioni e livelli di accesso predefinito](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
-  
- Nella maggior parte dei casi, per dichiarare un evento è possibile usare la prima sintassi nella sezione relativa alla sintassi di questo argomento. In alcuni scenari è tuttavia necessario disporre di un controllo maggiore sui dettagli del comportamento dell'evento. L'ultima sintassi nella sezione relativa alla sintassi di questo argomento, che usa la parola chiave `Custom`, offre questa possibilità consentendo la definizione di eventi personalizzati. In un evento personalizzato si specifica esattamente ciò che accade quando il codice aggiunge o rimuove un gestore eventi a o dall'evento oppure quando il codice genera l'evento. Per esempi, vedere [procedura: dichiarare eventi personalizzati per memoria risparmiare](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) e [procedura: dichiarare personalizzato eventi per evitare il blocco](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
-  
-## <a name="example"></a>Esempio  
- Negli esempi seguenti, gli eventi vengono usati per il conto alla rovescia dei secondi, da 10 a 0. Il codice illustra numerosi metodi, proprietà e istruzioni correlati agli eventi, inclusa l'istruzione `RaiseEvent`.  
-  
- La classe che genera un evento viene definita origine e i metodi che lo elaborano vengono definiti gestori eventi. Un'origine eventi può disporre di più gestori per gli eventi generati. Quando la classe genera l'evento, lo stesso evento viene generato in tutte le classi per cui è stato scelto di gestire eventi per tale istanza dell'oggetto.  
-  
- Nell'esempio vengono usati anche un form (`Form1`) con un pulsante (`Button1`) e una casella di testo (`TextBox1`). Quando si fa clic sul pulsante, nella prima casella di testo viene visualizzato il conto alla rovescia dei secondi da 10 a 0. Al termine dei&10; secondi, nella prima casella di testo viene visualizzato "Done".  
-  
- Il codice di `Form1` specifica gli stati di inizio e fine del form. Contiene inoltre il codice eseguito quando vengono generati gli eventi.  
-  
- Per usare l'esempio, aprire un nuovo progetto Windows Form. Aggiungere quindi un pulsante denominato `Button1` e una casella di testo denominata `TextBox1` al form principale, denominato `Form1`. Quindi fare doppio clic su form e fare clic su **Visualizza codice** per aprire l'editor di codice.  
-  
- Aggiungere una variabile `WithEvents` alla sezione delle dichiarazioni della classe `Form1`:  
-  
- [!code-vb[VbVbalrEvents&#14;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
-  
- Aggiungere il codice seguente al codice per `Form1`: Sostituire eventuali routine duplicate, ad esempio `Form_Load` o `Button_Click`.  
-  
- [!code-vb[VbVbalrEvents&#15;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
-  
- Premere F5 per eseguire l'esempio precedente, quindi fare clic sul pulsante **avviare**. Nella prima casella di testo viene avviato il conto alla rovescia dei secondi. Al termine dei&10; secondi, nella prima casella di testo viene visualizzato "Done".  
+ [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
->  Il metodo `My.Application.DoEvents` non elabora gli eventi allo stesso modo del form. Per consentire al form di gestire direttamente gli eventi, si può ricorrere al multithreading. Per ulteriori informazioni, vedere [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  <span data-ttu-id="84f52-174">È possibile dichiarare argomenti per gli eventi analogamente a quanto avviene per gli argomenti di routine, tenendo però conto che non è possibile specificare per gli eventi argomenti denominati, argomenti `ParamArray` o argomenti `Optional`, </span><span class="sxs-lookup"><span data-stu-id="84f52-174">You can declare event arguments just as you do arguments of procedures, with the following exceptions: events cannot have named arguments, `ParamArray` arguments, or `Optional` arguments.</span></span> <span data-ttu-id="84f52-175">né ottenere da essi valori restituiti.</span><span class="sxs-lookup"><span data-stu-id="84f52-175">Events do not have return values.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [RaiseEvent (istruzione)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)   
- [Implements (istruzione)](../../../visual-basic/language-reference/statements/implements-statement.md)   
- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)   
- [AddHandler (istruzione)](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [RemoveHandler (istruzione)](../../../visual-basic/language-reference/statements/removehandler-statement.md)   
- [Handle](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Delegate (istruzione)](../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [Procedura: dichiarare eventi personalizzati per proteggere la memoria](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)   
- [Procedura: dichiarare eventi personalizzati per evitare il blocco](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)   
- [Condiviso](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+ <span data-ttu-id="84f52-176">Per gestire un evento è necessario associarlo a una subroutine del gestore eventi mediante l'istruzione `Handles` o `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="84f52-176">To handle an event, you must associate it with an event handler subroutine using either the `Handles` or `AddHandler` statement.</span></span> <span data-ttu-id="84f52-177">Le firme della subroutine e dell'evento devono corrispondere.</span><span class="sxs-lookup"><span data-stu-id="84f52-177">The signatures of the subroutine and the event must match.</span></span> <span data-ttu-id="84f52-178">Per gestire un evento condiviso è necessario usare l'istruzione `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="84f52-178">To handle a shared event, you must use the `AddHandler` statement.</span></span>  
+  
+ <span data-ttu-id="84f52-179">Si può usare `Event` solo a livello di modulo.</span><span class="sxs-lookup"><span data-stu-id="84f52-179">You can use `Event` only at module level.</span></span> <span data-ttu-id="84f52-180">Ciò significa che il *contesto della dichiarazione* per un evento deve essere una classe, struttura, modulo o interfaccia e non può essere un file di origine, lo spazio dei nomi, routine o blocco.</span><span class="sxs-lookup"><span data-stu-id="84f52-180">This means the *declaration context* for an event must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block.</span></span> <span data-ttu-id="84f52-181">Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="84f52-181">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
+  
+ <span data-ttu-id="84f52-182">Nella maggior parte dei casi, per dichiarare un evento è possibile usare la prima sintassi nella sezione relativa alla sintassi di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="84f52-182">In most circumstances, you can use the first syntax in the Syntax section of this topic for declaring events.</span></span> <span data-ttu-id="84f52-183">In alcuni scenari è tuttavia necessario disporre di un controllo maggiore sui dettagli del comportamento dell'evento.</span><span class="sxs-lookup"><span data-stu-id="84f52-183">However, some scenarios require that you have more control over the detailed behavior of the event.</span></span> <span data-ttu-id="84f52-184">L'ultima sintassi nella sezione relativa alla sintassi di questo argomento, che usa la parola chiave `Custom`, offre questa possibilità consentendo la definizione di eventi personalizzati.</span><span class="sxs-lookup"><span data-stu-id="84f52-184">The last syntax in the Syntax section of this topic, which uses the `Custom` keyword, provides that control by enabling you to define custom events.</span></span> <span data-ttu-id="84f52-185">In un evento personalizzato si specifica esattamente ciò che accade quando il codice aggiunge o rimuove un gestore eventi a o dall'evento oppure quando il codice genera l'evento.</span><span class="sxs-lookup"><span data-stu-id="84f52-185">In a custom event, you specify exactly what occurs when code adds or removes an event handler to or from the event, or when code raises the event.</span></span> <span data-ttu-id="84f52-186">Per esempi, vedere [procedura: dichiarare eventi personalizzati per memoria risparmiare](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) e [come: dichiarare personalizzato eventi per evitare il blocco](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).</span><span class="sxs-lookup"><span data-stu-id="84f52-186">For examples, see [How to: Declare Custom Events To Conserve Memory](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) and [How to: Declare Custom Events To Avoid Blocking](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="84f52-187">Esempio</span><span class="sxs-lookup"><span data-stu-id="84f52-187">Example</span></span>  
+ <span data-ttu-id="84f52-188">Negli esempi seguenti, gli eventi vengono usati per il conto alla rovescia dei secondi, da 10 a 0.</span><span class="sxs-lookup"><span data-stu-id="84f52-188">The following example uses events to count down seconds from 10 to 0.</span></span> <span data-ttu-id="84f52-189">Il codice illustra numerosi metodi, proprietà e istruzioni correlati agli eventi,</span><span class="sxs-lookup"><span data-stu-id="84f52-189">The code illustrates several of the event-related methods, properties, and statements.</span></span> <span data-ttu-id="84f52-190">inclusa l'istruzione `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="84f52-190">This includes the `RaiseEvent` statement.</span></span>  
+  
+ <span data-ttu-id="84f52-191">La classe che genera un evento viene definita origine e i metodi che lo elaborano vengono definiti gestori eventi.</span><span class="sxs-lookup"><span data-stu-id="84f52-191">The class that raises an event is the event source, and the methods that process the event are the event handlers.</span></span> <span data-ttu-id="84f52-192">Un'origine eventi può disporre di più gestori per gli eventi generati.</span><span class="sxs-lookup"><span data-stu-id="84f52-192">An event source can have multiple handlers for the events it generates.</span></span> <span data-ttu-id="84f52-193">Quando la classe genera l'evento, lo stesso evento viene generato in tutte le classi per cui è stato scelto di gestire eventi per tale istanza dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="84f52-193">When the class raises the event, that event is raised on every class that has elected to handle events for that instance of the object.</span></span>  
+  
+ <span data-ttu-id="84f52-194">Nell'esempio vengono usati anche un form (`Form1`) con un pulsante (`Button1`) e una casella di testo (`TextBox1`).</span><span class="sxs-lookup"><span data-stu-id="84f52-194">The example also uses a form (`Form1`) with a button (`Button1`) and a text box (`TextBox1`).</span></span> <span data-ttu-id="84f52-195">Quando si fa clic sul pulsante, nella prima casella di testo viene visualizzato il conto alla rovescia dei secondi da 10 a 0.</span><span class="sxs-lookup"><span data-stu-id="84f52-195">When you click the button, the first text box displays a countdown from 10 to 0 seconds.</span></span> <span data-ttu-id="84f52-196">Al termine dei 10 secondi, nella prima casella di testo viene visualizzato "Done".</span><span class="sxs-lookup"><span data-stu-id="84f52-196">When the full time (10 seconds) has elapsed, the first text box displays "Done".</span></span>  
+  
+ <span data-ttu-id="84f52-197">Il codice di `Form1` specifica gli stati di inizio e fine del form.</span><span class="sxs-lookup"><span data-stu-id="84f52-197">The code for `Form1` specifies the initial and terminal states of the form.</span></span> <span data-ttu-id="84f52-198">Contiene inoltre il codice eseguito quando vengono generati gli eventi.</span><span class="sxs-lookup"><span data-stu-id="84f52-198">It also contains the code executed when events are raised.</span></span>  
+  
+ <span data-ttu-id="84f52-199">Per usare l'esempio, aprire un nuovo progetto Windows Form.</span><span class="sxs-lookup"><span data-stu-id="84f52-199">To use this example, open a new Windows Forms project.</span></span> <span data-ttu-id="84f52-200">Aggiungere quindi un pulsante denominato `Button1` e una casella di testo denominata `TextBox1` al form principale, denominato `Form1`.</span><span class="sxs-lookup"><span data-stu-id="84f52-200">Then add a button named `Button1` and a text box named `TextBox1` to the main form, named `Form1`.</span></span> <span data-ttu-id="84f52-201">Quindi fare doppio clic su form e fare clic su **Visualizza codice** per aprire l'editor di codice.</span><span class="sxs-lookup"><span data-stu-id="84f52-201">Then right-click the form and click **View Code** to open the code editor.</span></span>  
+  
+ <span data-ttu-id="84f52-202">Aggiungere una variabile `WithEvents` alla sezione delle dichiarazioni della classe `Form1`:</span><span class="sxs-lookup"><span data-stu-id="84f52-202">Add a `WithEvents` variable to the declarations section of the `Form1` class:</span></span>  
+  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+  
+ <span data-ttu-id="84f52-203">Aggiungere il codice seguente al codice per `Form1`:</span><span class="sxs-lookup"><span data-stu-id="84f52-203">Add the following code to the code for `Form1`.</span></span> <span data-ttu-id="84f52-204">Sostituire eventuali routine duplicate, ad esempio `Form_Load` o `Button_Click`.</span><span class="sxs-lookup"><span data-stu-id="84f52-204">Replace any duplicate procedures that may exist, such as `Form_Load` or `Button_Click`.</span></span>  
+  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+  
+ <span data-ttu-id="84f52-205">Premere F5 per eseguire l'esempio precedente, quindi fare clic sul pulsante con etichettato **avviare**.</span><span class="sxs-lookup"><span data-stu-id="84f52-205">Press F5 to run the previous example, and click the button labeled **Start**.</span></span> <span data-ttu-id="84f52-206">Nella prima casella di testo viene avviato il conto alla rovescia dei secondi.</span><span class="sxs-lookup"><span data-stu-id="84f52-206">The first text box starts to count down the seconds.</span></span> <span data-ttu-id="84f52-207">Al termine dei 10 secondi, nella prima casella di testo viene visualizzato "Done".</span><span class="sxs-lookup"><span data-stu-id="84f52-207">When the full time (10 seconds) has elapsed, the first text box displays "Done".</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="84f52-208">Il metodo `My.Application.DoEvents` non elabora gli eventi allo stesso modo del form.</span><span class="sxs-lookup"><span data-stu-id="84f52-208">The `My.Application.DoEvents` method does not process events in the same way the form does.</span></span> <span data-ttu-id="84f52-209">Per consentire al form di gestire direttamente gli eventi, si può ricorrere al multithreading.</span><span class="sxs-lookup"><span data-stu-id="84f52-209">To enable the form to handle the events directly, you can use multithreading.</span></span> <span data-ttu-id="84f52-210">Per ulteriori informazioni, vedere [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).</span><span class="sxs-lookup"><span data-stu-id="84f52-210">For more information, see [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="84f52-211">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="84f52-211">See Also</span></span>  
+ [<span data-ttu-id="84f52-212">Istruzione RaiseEvent</span><span class="sxs-lookup"><span data-stu-id="84f52-212">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
+ [<span data-ttu-id="84f52-213">Istruzione Implements</span><span class="sxs-lookup"><span data-stu-id="84f52-213">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [<span data-ttu-id="84f52-214">Eventi</span><span class="sxs-lookup"><span data-stu-id="84f52-214">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [<span data-ttu-id="84f52-215">Istruzione AddHandler</span><span class="sxs-lookup"><span data-stu-id="84f52-215">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [<span data-ttu-id="84f52-216">Istruzione RemoveHandler</span><span class="sxs-lookup"><span data-stu-id="84f52-216">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [<span data-ttu-id="84f52-217">Handles</span><span class="sxs-lookup"><span data-stu-id="84f52-217">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [<span data-ttu-id="84f52-218">Istruzione Delegate</span><span class="sxs-lookup"><span data-stu-id="84f52-218">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="84f52-219">Procedura: Dichiarare eventi personalizzati per proteggere la memoria</span><span class="sxs-lookup"><span data-stu-id="84f52-219">How to: Declare Custom Events To Conserve Memory</span></span>](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [<span data-ttu-id="84f52-220">Procedura: Dichiarare eventi personalizzati per evitare il blocco</span><span class="sxs-lookup"><span data-stu-id="84f52-220">How to: Declare Custom Events To Avoid Blocking</span></span>](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [<span data-ttu-id="84f52-221">Shared</span><span class="sxs-lookup"><span data-stu-id="84f52-221">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="84f52-222">Shadows</span><span class="sxs-lookup"><span data-stu-id="84f52-222">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)

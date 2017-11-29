@@ -1,53 +1,51 @@
 ---
-title: "Membri virtuali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "membri sottoponibili a override"
-  - "membri virtual"
-  - "membri [.NET Framework] virtuali"
+title: Membri virtuali
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- overridable members
+- virtual members
+- members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 56838fc4c1c1e7cb8723beee3f0e6b23515d43f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Membri virtuali
-Membri virtuali possono essere sottoposto a override, in modo da modificarne il comportamento della sottoclasse. Sono molto simili alle richiamate in termini di estensibilità che forniscono, ma sono migliori in termini di prestazioni di esecuzione e il consumo di memoria. Inoltre, i membri virtuali sembrano più naturali in scenari che richiedono la creazione di uno speciale tipo di un tipo esistente \(specializzazione\).  
+# <a name="virtual-members"></a><span data-ttu-id="9164d-102">Membri virtuali</span><span class="sxs-lookup"><span data-stu-id="9164d-102">Virtual Members</span></span>
+<span data-ttu-id="9164d-103">Membri virtuali possono essere sottoposto a override, modificandone il comportamento della sottoclasse.</span><span class="sxs-lookup"><span data-stu-id="9164d-103">Virtual members can be overridden, thus changing the behavior of the subclass.</span></span> <span data-ttu-id="9164d-104">Sono molto simili ai callback in termini di estensibilità che forniscono, ma sono migliori in termini di prestazioni di esecuzione e il consumo di memoria.</span><span class="sxs-lookup"><span data-stu-id="9164d-104">They are quite similar to callbacks in terms of the extensibility they provide, but they are better in terms of execution performance and memory consumption.</span></span> <span data-ttu-id="9164d-105">Inoltre, i membri virtuali sono più naturali in scenari che richiedono la creazione di un particolare tipo di un tipo esistente (specializzazione).</span><span class="sxs-lookup"><span data-stu-id="9164d-105">Also, virtual members feel more natural in scenarios that require creating a special kind of an existing type (specialization).</span></span>  
   
- Membri virtuali offrono prestazioni migliori rispetto a callback ed eventi, ma non offra prestazioni migliori rispetto ai metodi non virtuali.  
+ <span data-ttu-id="9164d-106">I membri virtuali offrono prestazioni migliori rispetto a callback ed eventi, ma non prestazioni migliori rispetto ai metodi non virtuali.</span><span class="sxs-lookup"><span data-stu-id="9164d-106">Virtual members perform better than callbacks and events, but do not perform better than non-virtual methods.</span></span>  
   
- Lo svantaggio principale di membri virtuali è che il comportamento di un membro virtuale può essere modificato solo in fase di compilazione. Il comportamento di un callback può essere modificato in fase di esecuzione.  
+ <span data-ttu-id="9164d-107">Lo svantaggio principale dei membri virtuali è che il comportamento di un membro virtuale può essere modificato solo in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="9164d-107">The main disadvantage of virtual members is that the behavior of a virtual member can only be modified at the time of compilation.</span></span> <span data-ttu-id="9164d-108">Il comportamento di un callback può essere modificato in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="9164d-108">The behavior of a callback can be modified at runtime.</span></span>  
   
- Membri virtuali, come i callback \(e forse maggiore callback\), sono i costi di progettare, testare e mantenere, in quanto tutte le chiamate a un membro virtuale possono essere sottoposto a override in maniera imprevista e possono eseguire codice arbitrario. Inoltre, molto più complessa in genere è necessario definire chiaramente il contratto di membri virtuali, pertanto il costo di progettazione e la documentazione di essi è superiore.  
+ <span data-ttu-id="9164d-109">I membri virtuali, come i callback (e probabilmente altro rispetto ai callback), sono costosi progettare, testare e mantenere poiché qualsiasi chiamata a un membro virtuale può essere sottoposto a override in modi imprevisti e può eseguire codice arbitrario.</span><span class="sxs-lookup"><span data-stu-id="9164d-109">Virtual members, like callbacks (and maybe more than callbacks), are costly to design, test, and maintain because any call to a virtual member can be overridden in unpredictable ways and can execute arbitrary code.</span></span> <span data-ttu-id="9164d-110">Inoltre, notevolmente più impegnativo in genere è necessario per definire chiaramente il contratto di membri virtuali, pertanto il costo di progettazione e la loro documentazione è elevato.</span><span class="sxs-lookup"><span data-stu-id="9164d-110">Also, much more effort is usually required to clearly define the contract of virtual members, so the cost of designing and documenting them is higher.</span></span>  
   
- **X non** rendere i membri virtuali a meno che non si dispone di un buon motivo per eseguire questa operazione e si è a conoscenza di tutti i costi relativi alla progettazione, test e gestione di tali membri.  
+ <span data-ttu-id="9164d-111">**X non** rendere i membri virtuali a meno che non si dispone di un buon motivo per eseguire questa operazione e di essere a conoscenza di tutti i costi relativi alla progettazione, test e gestione di tali membri.</span><span class="sxs-lookup"><span data-stu-id="9164d-111">**X DO NOT** make members virtual unless you have a good reason to do so and you are aware of all the costs related to designing, testing, and maintaining virtual members.</span></span>  
   
- Membri virtuali sono meno impensabili in termini di modifiche apportate a tali senza compromettere la compatibilità. Inoltre, sono più lenti rispetto ai membri non virtuale, principalmente perché le chiamate a membri virtuali non vengono impostati come inline.  
+ <span data-ttu-id="9164d-112">I membri virtuali sono meno impensabili in termini di modifiche apportate a tali senza interrompere la compatibilità.</span><span class="sxs-lookup"><span data-stu-id="9164d-112">Virtual members are less forgiving in terms of changes that can be made to them without breaking compatibility.</span></span> <span data-ttu-id="9164d-113">Inoltre, sono più lenti rispetto ai membri non virtuali, soprattutto perché le chiamate ai membri virtuali non vengono impostati come inline.</span><span class="sxs-lookup"><span data-stu-id="9164d-113">Also, they are slower than non-virtual members, mostly because calls to virtual members are not inlined.</span></span>  
   
- **✓ PROVARE** limitazione dell'estensibilità solo a quelle strettamente necessario.  
+ <span data-ttu-id="9164d-114">**Provare a ✓** limitazione estendibilità solo a quelle strettamente necessario.</span><span class="sxs-lookup"><span data-stu-id="9164d-114">**✓ CONSIDER** limiting extensibility to only what is absolutely necessary.</span></span>  
   
- **✓ si** preferire l'accessibilità protetta rispetto all'accessibilità pubblica per i membri virtuali. I membri pubblici devono forniscono l'estensibilità \(se richiesto\) effettuando la chiamata a un membro virtuale protetta.  
+ <span data-ttu-id="9164d-115">**✓ SI** preferire accessibilità protetta accessibilità pubblica per i membri virtuali.</span><span class="sxs-lookup"><span data-stu-id="9164d-115">**✓ DO** prefer protected accessibility over public accessibility for virtual members.</span></span> <span data-ttu-id="9164d-116">I membri pubblici devono fornire extensibility (se richiesto) effettuando la chiamata a un membro virtuale protetta.</span><span class="sxs-lookup"><span data-stu-id="9164d-116">Public members should provide extensibility (if required) by calling into a protected virtual member.</span></span>  
   
- I membri pubblici di una classe devono fornire il set corretto di funzionalità per i consumer diretti di tale classe. Membri virtuali sono progettati per essere sottoposto a override nelle sottoclassi e accessibilità protetta è un ottimo modo per definire l'ambito di tutti i punti di estendibilità virtuale a cui possono essere utilizzati.  
+ <span data-ttu-id="9164d-117">I membri pubblici di una classe devono fornire il set corretto di funzionalità per i consumer diretti di tale classe.</span><span class="sxs-lookup"><span data-stu-id="9164d-117">The public members of a class should provide the right set of functionality for direct consumers of that class.</span></span> <span data-ttu-id="9164d-118">I membri virtuali sono progettati per essere sottoposto a override nelle sottoclassi e accessibilità protetta è un ottimo modo per definire l'ambito di tutti i punti di estendibilità virtuale a cui possono essere utilizzati.</span><span class="sxs-lookup"><span data-stu-id="9164d-118">Virtual members are designed to be overridden in subclasses, and protected accessibility is a great way to scope all virtual extensibility points to where they can be used.</span></span>  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ <span data-ttu-id="9164d-119">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="9164d-119">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ <span data-ttu-id="9164d-120">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="9164d-120">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vedere anche  
- [Linee guida](../../../docs/standard/design-guidelines/index.md)   
- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a><span data-ttu-id="9164d-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9164d-121">See Also</span></span>  
+ [<span data-ttu-id="9164d-122">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="9164d-122">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="9164d-123">Progettazione di estendibilità</span><span class="sxs-lookup"><span data-stu-id="9164d-123">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

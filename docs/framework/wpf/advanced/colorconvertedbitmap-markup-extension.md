@@ -1,49 +1,52 @@
 ---
-title: "Estensione del markup ColorConvertedBitmap | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estensione di markup ColorConvertedBitmap"
-  - "XAML, estensione di markup ColorConvertedBitmap"
+title: Estensione del markup ColorConvertedBitmap
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [WPF], ColorConvertedBitmap markup extension
+- ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f1946ec2a5b607d9fce350da0676092d6e0407a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Estensione del markup ColorConvertedBitmap
-Fornisce una modalità per specificare un'origine bitmap priva di profilo incorporato.  Spazi e profili colore sono specificati dall'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], così come l'[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dell'origine dell'immagine.  
+# <a name="colorconvertedbitmap-markup-extension"></a><span data-ttu-id="91294-102">Estensione del markup ColorConvertedBitmap</span><span class="sxs-lookup"><span data-stu-id="91294-102">ColorConvertedBitmap Markup Extension</span></span>
+<span data-ttu-id="91294-103">Fornisce un modo per specificare una bitmap di origine che non dispone di un profilo incorporato.</span><span class="sxs-lookup"><span data-stu-id="91294-103">Provides a way to specify a bitmap source that does not have an embedded profile.</span></span> <span data-ttu-id="91294-104">Colore contesti / specificati dai profili [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], come l'origine dell'immagine [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="91294-104">Color contexts / profiles are specified by [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], as is the image source [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  
   
-## Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="91294-105">Uso della sintassi XAML per gli attributi</span><span class="sxs-lookup"><span data-stu-id="91294-105">XAML Attribute Usage</span></span>  
   
+```xml  
+<object property="{ColorConvertedBitmap imageSource sourceIIC destinationIIC}" .../>  
 ```  
-<object property="{ColorConvertedBitmap imageSource sourceIIC destinationIIC}" .../>  
-```  
   
-## Valori XAML  
+## <a name="xaml-values"></a><span data-ttu-id="91294-106">Valori XAML</span><span class="sxs-lookup"><span data-stu-id="91294-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`imageSource`|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] della bitmap senza profilo.|  
-|`sourceIIC`|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] della configurazione del profilo di origine.|  
-|`destinationIIC`|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] della configurazione del profilo di destinazione|  
+|`imageSource`|<span data-ttu-id="91294-107">Il [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di bitmap senza profilo.</span><span class="sxs-lookup"><span data-stu-id="91294-107">The [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] of the nonprofiled bitmap.</span></span>|  
+|`sourceIIC`|<span data-ttu-id="91294-108">Il [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di configurazione del profilo di origine.</span><span class="sxs-lookup"><span data-stu-id="91294-108">The [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] of the source profile configuration.</span></span>|  
+|`destinationIIC`|<span data-ttu-id="91294-109">Il [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] di configurazione del profilo di destinazione</span><span class="sxs-lookup"><span data-stu-id="91294-109">The [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] of the destination profile configuration</span></span>|  
   
-## Note  
- Questa estensione di markup ha lo scopo di riempire un insieme correlato di valori di proprietà dell'origine dell'immagine, ad esempio <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>.  
+## <a name="remarks"></a><span data-ttu-id="91294-110">Note</span><span class="sxs-lookup"><span data-stu-id="91294-110">Remarks</span></span>  
+ <span data-ttu-id="91294-111">Questa estensione di markup deve compilare un set correlato di valori di proprietà di origine dell'immagine, ad esempio <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>.</span><span class="sxs-lookup"><span data-stu-id="91294-111">This markup extension is intended to fill a related set of image-source property values such as <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>.</span></span>  
   
- La sintassi per gli attributi è quella più comunemente utilizzata con questa estensione di markup.  Non è possibile utilizzare `ColorConvertedBitmap` \(o `ColorConvertedBitmapExtension`\) nella sintassi per gli elementi proprietà, poiché i valori possono essere impostati solo come valori sul costruttore iniziale, che è la stringa successiva all'identificatore dell'estensione.  
+ <span data-ttu-id="91294-112">La sintassi per gli attributi è quella più comunemente utilizzata con questa estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="91294-112">Attribute syntax is the most common syntax used with this markup extension.</span></span> <span data-ttu-id="91294-113">`ColorConvertedBitmap`(o `ColorConvertedBitmapExtension`) non può essere utilizzato nella sintassi degli elementi di proprietà, perché i valori possono essere impostati solo come valori sul costruttore iniziale, ovvero la stringa dopo l'identificatore dell'estensione.</span><span class="sxs-lookup"><span data-stu-id="91294-113">`ColorConvertedBitmap` (or `ColorConvertedBitmapExtension`) cannot be used in property element syntax, because the values can only be set as values on the initial constructor, which is the string following the extension identifier.</span></span>  
   
- `ColorConvertedBitmap` è un'estensione di markup.  Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà.  Tutte le estensioni di markup di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilizzano i caratteri { e } nella relativa sintassi degli attributi. Grazie a questa convenzione il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è in grado di rilevare la necessità che l'attributo venga elaborato da un'estensione di markup.  Per ulteriori informazioni, vedere [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ <span data-ttu-id="91294-114">`ColorConvertedBitmap` è un'estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="91294-114">`ColorConvertedBitmap` is a markup extension.</span></span> <span data-ttu-id="91294-115">Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà.</span><span class="sxs-lookup"><span data-stu-id="91294-115">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="91294-116">Tutte le estensioni di markup in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usano i caratteri { e } nella sintassi degli attributi, vale a dire la convenzione in base a cui il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] riconosce che l'attributo deve essere elaborato da un'estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="91294-116">All markup extensions in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] use the { and } characters in their attribute syntax, which is the convention by which a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor recognizes that a markup extension must process the attribute.</span></span> <span data-ttu-id="91294-117">Per altre informazioni, vedere [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="91294-117">For more information, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>   
- [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
- [Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="91294-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="91294-118">See Also</span></span>  
+ <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>  
+ [<span data-ttu-id="91294-119">Estensioni di markup e XAML WPF</span><span class="sxs-lookup"><span data-stu-id="91294-119">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="91294-120">Cenni preliminari sulla creazione dell'immagine</span><span class="sxs-lookup"><span data-stu-id="91294-120">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

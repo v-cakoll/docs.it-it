@@ -1,40 +1,32 @@
 ---
-title: 'Procedura: controllare i prefissi Namespace (Visual Basic) (LINQ to XML) | Documenti di Microsoft'
+title: 'Procedura: controllare i prefissi dello spazio dei nomi (Visual Basic) (LINQ to XML)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9b559b54ffaa53b2ae5cd3b6c6d2d4db3ebe0a04
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a48feeb25cc8d28d57edc7421f73b2829f8c19ef
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Procedura: controllare i prefissi dello spazio dei nomi (Visual Basic) (LINQ to XML)
-In questo argomento viene descritto come controllare i prefissi di spazio dei nomi.  
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a><span data-ttu-id="45884-102">Procedura: controllare i prefissi dello spazio dei nomi (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="45884-102">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>
+<span data-ttu-id="45884-103">In questo argomento viene descritto come controllare i prefissi di spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="45884-103">This topic describes how you can control namespace prefixes.</span></span>  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="45884-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="45884-104">Example</span></span>  
   
-### <a name="description"></a>Descrizione  
- In questo esempio vengono dichiarati due spazi dei nomi. Specifica che il `http://www.adventure-works.com` dello spazio dei nomi ha il prefisso `aw`e che il `www.fourthcoffee.com` dello spazio dei nomi ha il prefisso `fc`.  
+### <a name="description"></a><span data-ttu-id="45884-105">Descrizione</span><span class="sxs-lookup"><span data-stu-id="45884-105">Description</span></span>  
+ <span data-ttu-id="45884-106">In questo esempio vengono dichiarati due spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="45884-106">This example declares two namespaces.</span></span> <span data-ttu-id="45884-107">Specifica che il `http://www.adventure-works.com` dello spazio dei nomi ha il prefisso `aw`e che il `www.fourthcoffee.com` dello spazio dei nomi ha il prefisso `fc`.</span><span class="sxs-lookup"><span data-stu-id="45884-107">It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a><span data-ttu-id="45884-108">Codice</span><span class="sxs-lookup"><span data-stu-id="45884-108">Code</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -57,8 +49,8 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Commenti  
- Questo esempio produce il seguente output:  
+### <a name="comments"></a><span data-ttu-id="45884-109">Commenti</span><span class="sxs-lookup"><span data-stu-id="45884-109">Comments</span></span>  
+ <span data-ttu-id="45884-110">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="45884-110">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -70,5 +62,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="45884-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="45884-111">See Also</span></span>  
+ [<span data-ttu-id="45884-112">Utilizzo di spazi dei nomi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45884-112">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

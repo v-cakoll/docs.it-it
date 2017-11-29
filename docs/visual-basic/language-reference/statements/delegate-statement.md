@@ -1,99 +1,79 @@
 ---
-title: Istruzione Delegate | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Istruzione Delegate
+ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Delegate
-dev_langs:
-- VB
+f1_keywords: vb.Delegate
 helpviewer_keywords:
-- delegate keyword
-- Delegate statement
+- delegate keyword [Visual Basic]
+- Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ac9e28c82f8a6b5a9c1398961d831c956a649e0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7e79a261f74cbc7aa067af63629e31bedf65d163
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="delegate-statement"></a>Istruzione Delegate
-Utilizzata per dichiarare un delegato. Un delegato è un tipo di riferimento che fa riferimento a un `Shared` metodo di un tipo o a un metodo di istanza di un oggetto. Per creare un'istanza della classe delegata, è possibile utilizzare qualsiasi routine con parametri e tipi restituiti corrispondenti. La procedura può quindi successivamente richiamata tramite l'istanza del delegato.  
+# <a name="delegate-statement"></a><span data-ttu-id="f3004-102">Istruzione Delegate</span><span class="sxs-lookup"><span data-stu-id="f3004-102">Delegate Statement</span></span>
+<span data-ttu-id="f3004-103">Usato per dichiarare un delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-103">Used to declare a delegate.</span></span> <span data-ttu-id="f3004-104">Un delegato è un tipo di riferimento che fa riferimento a un `Shared` metodo di un tipo o a un metodo di istanza di un oggetto.</span><span class="sxs-lookup"><span data-stu-id="f3004-104">A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object.</span></span> <span data-ttu-id="f3004-105">Qualsiasi routine con parametri e tipi restituiti corrispondenti può essere utilizzato per creare un'istanza della classe delegata.</span><span class="sxs-lookup"><span data-stu-id="f3004-105">Any procedure with matching parameter and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="f3004-106">La procedura può quindi in un secondo momento richiamata mediante l'istanza del delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-106">The procedure can then later be invoked by means of the delegate instance.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="f3004-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f3004-107">Syntax</span></span>  
   
 ```  
 [ <attrlist> ] [ accessmodifier ] _  
 [ Shadows ] Delegate [ Sub | Function ] name [( Of typeparamlist )] [([ parameterlist ])] [ As type ]  
 ```  
   
-## <a name="parts"></a>Parti  
+## <a name="parts"></a><span data-ttu-id="f3004-108">Parti</span><span class="sxs-lookup"><span data-stu-id="f3004-108">Parts</span></span>  
   
-|Termine|Definizione|  
+|<span data-ttu-id="f3004-109">Termine</span><span class="sxs-lookup"><span data-stu-id="f3004-109">Term</span></span>|<span data-ttu-id="f3004-110">Definizione</span><span class="sxs-lookup"><span data-stu-id="f3004-110">Definition</span></span>|  
 |---|---|  
-|`attrlist`|Facoltativo. Elenco di attributi che si applicano a questo delegato. Gli attributi sono separati da una virgola. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) parentesi angolari ("`<`"e"`>`").|  
-|`accessmodifier`|Facoltativo. Specifica il codice può accedere al delegato. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md). Qualsiasi codice che può accedere all'elemento che dichiara il delegato può accedervi.<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md). Solo il codice incluso nella classe del delegato o una classe derivata può accedervi.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Solo codice all'interno dello stesso assembly può accedere al delegato.<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md). Può accedere solo codice all'interno dell'elemento che dichiara il delegato.<br /><br /> È possibile specificare `Protected Friend` per abilitare l'accesso dal codice all'interno dello stesso assembly, una classe derivata o nella classe del delegato.|  
-|`Shadows`|Facoltativo. Indica che il delegato ridichiara e nasconde un elemento di programmazione omonimo o un set di elementi in overload, una classe di base. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. Ad esempio, se un `Private` elemento nasconde un elemento di classe di base, il codice che non dispone dell'autorizzazione di accesso di `Private` elemento accede invece all'elemento della classe base.|  
-|`Sub`|Parametro facoltativo, ma uno `Sub` o `Function` deve essere visualizzato. Dichiarare la routine come delegato `Sub` routine che restituisce un valore.|  
-|`Function`|Parametro facoltativo, ma uno `Sub` o `Function` deve essere visualizzato. Dichiarare la routine come delegato `Function` procedure che restituisce un valore.|  
-|`name`|Obbligatorio. Nome del tipo di delegato. segue le convenzioni di denominazione standard variabile.|  
-|`typeparamlist`|Facoltativo. Elenco di parametri di tipo per questo delegato. Più parametri di tipo sono separati da virgole. Facoltativamente, ogni parametro di tipo può essere dichiarato variante mediante `In` e `Out` modificatori generici. È necessario racchiudere il [tipo elenco](../../../visual-basic/language-reference/statements/type-list.md) tra parentesi e introdurre con il `Of` (parola chiave).|  
-|`parameterlist`|Facoltativo. Elenco di parametri passati alla routine quando viene chiamato. È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
-|`type`|Necessario se si specifica un `Function` procedura. Tipo di dati del valore restituito.|  
+|`attrlist`|<span data-ttu-id="f3004-111">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="f3004-111">Optional.</span></span> <span data-ttu-id="f3004-112">Elenco di attributi che si applicano a questo delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-112">List of attributes that apply to this delegate.</span></span> <span data-ttu-id="f3004-113">Gli attributi sono separati da una virgola.</span><span class="sxs-lookup"><span data-stu-id="f3004-113">Multiple attributes are separated by commas.</span></span> <span data-ttu-id="f3004-114">È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").</span><span class="sxs-lookup"><span data-stu-id="f3004-114">You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>|  
+|`accessmodifier`|<span data-ttu-id="f3004-115">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="f3004-115">Optional.</span></span> <span data-ttu-id="f3004-116">Specifica il tipo di codice può accedere al delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-116">Specifies what code can access the delegate.</span></span> <span data-ttu-id="f3004-117">Può essere uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="f3004-117">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="f3004-118">-   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md).</span><span class="sxs-lookup"><span data-stu-id="f3004-118">-   [Public](../../../visual-basic/language-reference/modifiers/public.md).</span></span> <span data-ttu-id="f3004-119">Può accedere qualsiasi codice che è possibile accedere all'elemento che dichiara il delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-119">Any code that can access the element that declares the delegate can access it.</span></span><br /><span data-ttu-id="f3004-120">-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md).</span><span class="sxs-lookup"><span data-stu-id="f3004-120">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md).</span></span> <span data-ttu-id="f3004-121">Solo il codice incluso nella classe del delegato o di una classe derivata può accedervi.</span><span class="sxs-lookup"><span data-stu-id="f3004-121">Only code within the delegate's class or a derived class can access it.</span></span><br /><span data-ttu-id="f3004-122">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md).</span><span class="sxs-lookup"><span data-stu-id="f3004-122">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md).</span></span> <span data-ttu-id="f3004-123">Solo il codice all'interno dello stesso assembly può accedere al delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-123">Only code within the same assembly can access the delegate.</span></span><br /><span data-ttu-id="f3004-124">-   [Privato](../../../visual-basic/language-reference/modifiers/private.md).</span><span class="sxs-lookup"><span data-stu-id="f3004-124">-   [Private](../../../visual-basic/language-reference/modifiers/private.md).</span></span> <span data-ttu-id="f3004-125">Può accedere solo codice all'interno dell'elemento che dichiara il delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-125">Only code within the element that declares the delegate can access it.</span></span><br /><br /> <span data-ttu-id="f3004-126">È possibile specificare `Protected Friend` per abilitare l'accesso dal codice all'interno dello stesso assembly, una classe derivata o nella classe del delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-126">You can specify `Protected Friend` to enable access from code within the delegate's class, a derived class, or the same assembly.</span></span>|  
+|`Shadows`|<span data-ttu-id="f3004-127">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="f3004-127">Optional.</span></span> <span data-ttu-id="f3004-128">Indica che il delegato ridichiara e nasconde un elemento di programmazione omonimo o un set di elementi in overload di una classe di base.</span><span class="sxs-lookup"><span data-stu-id="f3004-128">Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class.</span></span> <span data-ttu-id="f3004-129">È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.</span><span class="sxs-lookup"><span data-stu-id="f3004-129">You can shadow any kind of declared element with any other kind.</span></span><br /><br /> <span data-ttu-id="f3004-130">Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile.</span><span class="sxs-lookup"><span data-stu-id="f3004-130">A shadowed element is unavailable from within the derived class that shadows it, except from where the shadowing element is inaccessible.</span></span> <span data-ttu-id="f3004-131">Ad esempio, se un `Private` elemento nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere il `Private` elemento accede invece all'elemento della classe base.</span><span class="sxs-lookup"><span data-stu-id="f3004-131">For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.</span></span>|  
+|`Sub`|<span data-ttu-id="f3004-132">Parametro facoltativo, ma uno `Sub` o `Function` devono essere visualizzati.</span><span class="sxs-lookup"><span data-stu-id="f3004-132">Optional, but either `Sub` or `Function` must appear.</span></span> <span data-ttu-id="f3004-133">Questa procedura come un delegato dichiara `Sub` routine che restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="f3004-133">Declares this procedure as a delegate `Sub` procedure that does not return a value.</span></span>|  
+|`Function`|<span data-ttu-id="f3004-134">Parametro facoltativo, ma uno `Sub` o `Function` devono essere visualizzati.</span><span class="sxs-lookup"><span data-stu-id="f3004-134">Optional, but either `Sub` or `Function` must appear.</span></span> <span data-ttu-id="f3004-135">Questa procedura come un delegato dichiara `Function` procedure che restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="f3004-135">Declares this procedure as a delegate `Function` procedure that returns a value.</span></span>|  
+|`name`|<span data-ttu-id="f3004-136">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="f3004-136">Required.</span></span> <span data-ttu-id="f3004-137">Nome del tipo delegato. segue le convenzioni di denominazione standard variabile.</span><span class="sxs-lookup"><span data-stu-id="f3004-137">Name of the delegate type; follows standard variable naming conventions.</span></span>|  
+|`typeparamlist`|<span data-ttu-id="f3004-138">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="f3004-138">Optional.</span></span> <span data-ttu-id="f3004-139">Elenco di parametri di tipo per questo delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-139">List of type parameters for this delegate.</span></span> <span data-ttu-id="f3004-140">Più parametri di tipo sono separati da virgole.</span><span class="sxs-lookup"><span data-stu-id="f3004-140">Multiple type parameters are separated by commas.</span></span> <span data-ttu-id="f3004-141">Facoltativamente, ogni parametro di tipo può essere dichiarato variante mediante `In` e `Out` modificatori generici.</span><span class="sxs-lookup"><span data-stu-id="f3004-141">Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers.</span></span> <span data-ttu-id="f3004-142">È necessario racchiudere il [tipo elenco](../../../visual-basic/language-reference/statements/type-list.md) tra parentesi e introdotto con la `Of` (parola chiave).</span><span class="sxs-lookup"><span data-stu-id="f3004-142">You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.</span></span>|  
+|`parameterlist`|<span data-ttu-id="f3004-143">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="f3004-143">Optional.</span></span> <span data-ttu-id="f3004-144">Elenco di parametri che vengono passati alla procedura quando viene chiamato.</span><span class="sxs-lookup"><span data-stu-id="f3004-144">List of parameters that are passed to the procedure when it is called.</span></span> <span data-ttu-id="f3004-145">È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="f3004-145">You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.</span></span>|  
+|`type`|<span data-ttu-id="f3004-146">Necessario se si specifica un `Function` stored procedure.</span><span class="sxs-lookup"><span data-stu-id="f3004-146">Required if you specify a `Function` procedure.</span></span> <span data-ttu-id="f3004-147">Tipo di dati del valore restituito.</span><span class="sxs-lookup"><span data-stu-id="f3004-147">Data type of the return value.</span></span>|  
   
-## <a name="remarks"></a>Note  
- Il `Delegate` istruzione definisce i parametri e tipi restituiti di una classe delegata. Per creare un'istanza della classe delegata, è possibile utilizzare qualsiasi routine con parametri e tipi restituiti corrispondenti. La procedura può quindi successivamente essere richiamata tramite l'istanza del delegato, mediante la chiamata del delegato `Invoke` metodo.  
+## <a name="remarks"></a><span data-ttu-id="f3004-148">Note</span><span class="sxs-lookup"><span data-stu-id="f3004-148">Remarks</span></span>  
+ <span data-ttu-id="f3004-149">Il `Delegate` istruzione definisce i parametri e tipi restituiti di una classe delegata.</span><span class="sxs-lookup"><span data-stu-id="f3004-149">The `Delegate` statement defines the parameter and return types of a delegate class.</span></span> <span data-ttu-id="f3004-150">Qualsiasi routine con parametri e tipi restituiti corrispondenti può essere utilizzato per creare un'istanza della classe delegata.</span><span class="sxs-lookup"><span data-stu-id="f3004-150">Any procedure with matching parameters and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="f3004-151">La procedura può successivamente essere utilizzata in tramite l'istanza del delegato, chiamando il delegato `Invoke` metodo.</span><span class="sxs-lookup"><span data-stu-id="f3004-151">The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.</span></span>  
   
- I delegati possono essere dichiarati di spazio dei nomi, modulo, classe o struttura, ma non all'interno di una routine.  
+ <span data-ttu-id="f3004-152">I delegati possono essere dichiarati a livello di struttura di spazio dei nomi, modulo, classe o, ma non all'interno di una stored procedure.</span><span class="sxs-lookup"><span data-stu-id="f3004-152">Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.</span></span>  
   
- Ogni classe delegata definisce un costruttore a cui viene passata la specifica di un metodo dell'oggetto. Un argomento a un costruttore di delegato deve essere un riferimento a un metodo o un'espressione lambda.  
+ <span data-ttu-id="f3004-153">Ogni classe delegata definisce un costruttore a cui viene passata la specifica di un metodo dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="f3004-153">Each delegate class defines a constructor that is passed the specification of an object method.</span></span> <span data-ttu-id="f3004-154">Un argomento di un costruttore di delegati deve essere un riferimento a un metodo o a un'espressione lambda.</span><span class="sxs-lookup"><span data-stu-id="f3004-154">An argument to a delegate constructor must be a reference to a method, or a lambda expression.</span></span>  
   
- Per specificare un riferimento a un metodo, utilizzare la sintassi seguente:  
+ <span data-ttu-id="f3004-155">Per specificare un riferimento a un metodo, usare la sintassi seguente:</span><span class="sxs-lookup"><span data-stu-id="f3004-155">To specify a reference to a method, use the following syntax:</span></span>  
   
- `AddressOf` [`expression`.]`methodname`  
+ <span data-ttu-id="f3004-156">`AddressOf` [`expression`.]`methodname`</span><span class="sxs-lookup"><span data-stu-id="f3004-156">`AddressOf` [`expression`.]`methodname`</span></span>  
   
- Il tipo in fase di compilazione di `expression` deve essere il nome di una classe o un'interfaccia che contiene un metodo con il nome specificato, la cui firma corrisponde alla firma della classe delegata. Il `methodname` può essere un metodo condiviso o un metodo di istanza. Il `methodname` non è facoltativo, anche se si crea un delegato per il metodo predefinito della classe.  
+ <span data-ttu-id="f3004-157">Il tipo in fase di compilazione dell'elemento `expression` deve essere il nome di una classe o un'interfaccia contenente un metodo con il nome specificato la cui firma corrisponde a quella della classe delegata.</span><span class="sxs-lookup"><span data-stu-id="f3004-157">The compile-time type of the `expression` must be the name of a class or an interface that contains a method of the specified name whose signature matches the signature of the delegate class.</span></span> <span data-ttu-id="f3004-158">Il metodo `methodname` può essere o un metodo condiviso o un metodo di istanza.</span><span class="sxs-lookup"><span data-stu-id="f3004-158">The `methodname` can be either a shared method or an instance method.</span></span> <span data-ttu-id="f3004-159">`methodname` non è un elemento facoltativo, anche se si crea un delegato per il metodo predefinito della classe.</span><span class="sxs-lookup"><span data-stu-id="f3004-159">The `methodname` is not optional, even if you create a delegate for the default method of the class.</span></span>  
   
- Per specificare un'espressione lambda, utilizzare la sintassi seguente:  
+ <span data-ttu-id="f3004-160">Per specificare un'espressione lambda, usare la sintassi seguente:</span><span class="sxs-lookup"><span data-stu-id="f3004-160">To specify a lambda expression, use the following syntax:</span></span>  
   
- `Function`([`parm` As `type`, `parm2` As `type2`, ...])`expression`  
+ <span data-ttu-id="f3004-161">`Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`</span><span class="sxs-lookup"><span data-stu-id="f3004-161">`Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`</span></span>  
   
- La firma della funzione deve corrispondere a quello del tipo di delegato. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ <span data-ttu-id="f3004-162">La firma della funzione deve corrispondere a quella del tipo delegato.</span><span class="sxs-lookup"><span data-stu-id="f3004-162">The signature of the function must match that of the delegate type.</span></span> <span data-ttu-id="f3004-163">Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="f3004-163">For more information about lambda expressions, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
   
- Per ulteriori informazioni sui delegati, vedere [delegati](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
+ <span data-ttu-id="f3004-164">Per ulteriori informazioni sui delegati, vedere [delegati](../../../visual-basic/programming-guide/language-features/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="f3004-164">For more information about delegates, see [Delegates](../../../visual-basic/programming-guide/language-features/delegates/index.md).</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la `Delegate` istruzione per dichiarare un delegato per operazioni su due numeri e restituire un numero. Il `DelegateTest` metodo accetta un'istanza di questo tipo di delegato e lo utilizza per operare su coppie di numeri.  
+## <a name="example"></a><span data-ttu-id="f3004-165">Esempio</span><span class="sxs-lookup"><span data-stu-id="f3004-165">Example</span></span>  
+ <span data-ttu-id="f3004-166">L'esempio seguente usa il `Delegate` istruzione per dichiarare un delegato per operazioni su due numeri e la restituzione di un numero.</span><span class="sxs-lookup"><span data-stu-id="f3004-166">The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number.</span></span> <span data-ttu-id="f3004-167">Il `DelegateTest` metodo accetta un'istanza di questo tipo di delegato e lo usa per operare su coppie di numeri.</span><span class="sxs-lookup"><span data-stu-id="f3004-167">The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.</span></span>  
   
- [!code-vb[VbVbalrDelegates&#14;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [AddressOf (operatore)](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)   
- [Delegati](../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [Procedura: utilizzare una classe generica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)   
- [Tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Covarianza e controvarianza](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)   
- [In uscita](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a><span data-ttu-id="f3004-168">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f3004-168">See Also</span></span>  
+ [<span data-ttu-id="f3004-169">Operatore AddressOf</span><span class="sxs-lookup"><span data-stu-id="f3004-169">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="f3004-170">Of</span><span class="sxs-lookup"><span data-stu-id="f3004-170">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="f3004-171">Delegati</span><span class="sxs-lookup"><span data-stu-id="f3004-171">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [<span data-ttu-id="f3004-172">Procedura: Usare una classe generica</span><span class="sxs-lookup"><span data-stu-id="f3004-172">How to: Use a Generic Class</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [<span data-ttu-id="f3004-173">Tipi generici in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f3004-173">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="f3004-174">Covarianza e controvarianza</span><span class="sxs-lookup"><span data-stu-id="f3004-174">Covariance and Contravariance</span></span>](../../programming-guide/concepts/covariance-contravariance/index.md)  
+ [<span data-ttu-id="f3004-175">In</span><span class="sxs-lookup"><span data-stu-id="f3004-175">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [<span data-ttu-id="f3004-176">Out</span><span class="sxs-lookup"><span data-stu-id="f3004-176">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

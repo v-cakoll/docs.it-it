@@ -1,74 +1,78 @@
 ---
-title: "Procedura: modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "griglie dei dati, modifica degli stili dei bordi"
-  - "griglie dei dati, modifica degli stili delle linee della griglia"
-  - "DataGridView (controllo) [Windows Form], stili dei bordi"
-  - "DataGridView (controllo) [Windows Form], stili delle linee della griglia"
-  - "linee della griglia, modifica degli stili"
+title: 'Procedura: modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- gridlines [Windows Forms], changing styles
+- data grids [Windows Forms], changing gridline styles
+- DataGridView control [Windows Forms], border styles
+- data grids [Windows Forms], changing border styles
+- DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ebe73e0c29a211e3319998ef7acd14e78e4eb14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form
-Il controllo <xref:System.Windows.Forms.DataGridView> consente di personalizzare l'aspetto dei bordi e delle linee della griglia del controllo per migliorare l'interazione degli utenti.  È possibile modificare il colore delle linee della griglia e lo stile del bordo del controllo oltre agli stili dei bordi delle celle all'interno del controllo.  È inoltre possibile applicare stili dei bordi diversi alle celle normali e alle celle di intestazione di riga e di colonna.  
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="3489b-102">Procedura: modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="3489b-102">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="3489b-103">Con il <xref:System.Windows.Forms.DataGridView> (controllo), è possibile personalizzare l'aspetto del bordo del controllo e la griglia per migliorare l'esperienza utente.</span><span class="sxs-lookup"><span data-stu-id="3489b-103">With the <xref:System.Windows.Forms.DataGridView> control, you can customize the appearance of the control's border and gridlines to improve the user experience.</span></span> <span data-ttu-id="3489b-104">È possibile modificare il colore della griglia e lo stile del bordo del controllo oltre gli stili dei bordi per le celle all'interno del controllo.</span><span class="sxs-lookup"><span data-stu-id="3489b-104">You can modify the gridline color and the control border style in addition to the border styles for the cells within the control.</span></span> <span data-ttu-id="3489b-105">È inoltre possibile applicare stili bordo della cella diversi per le celle normali, le celle di intestazione di riga e le celle di intestazione di colonna.</span><span class="sxs-lookup"><span data-stu-id="3489b-105">You can also apply different cell border styles for ordinary cells, row header cells, and column header cells.</span></span>  
   
 > [!NOTE]
->  Il colore delle linee della griglia viene utilizzato solo con i valori <xref:System.Windows.Forms.DataGridViewCellBorderStyle>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle> e <xref:System.Windows.Forms.DataGridViewCellBorderStyle> dell'enumerazione <xref:System.Windows.Forms.DataGridViewCellBorderStyle> e il valore <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> dell'enumerazione <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>.  Gli altri valori delle enumerazioni utilizzano colori specificati dal sistema operativo.  Inoltre, se gli stili visivi sono attivati in Windows XP e nei sistemi della famiglia Windows Server 2003 mediante il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName>, il valore della proprietà <xref:System.Windows.Forms.DataGridView.GridColor%2A> non viene utilizzato.  
+>  <span data-ttu-id="3489b-106">Il colore della griglia viene utilizzato solo con il <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, e <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> valori del <xref:System.Windows.Forms.DataGridViewCellBorderStyle> enumerazione e <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> valore il <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> enumerazione.</span><span class="sxs-lookup"><span data-stu-id="3489b-106">The gridline color is used only with the <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, and <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> values of the <xref:System.Windows.Forms.DataGridViewCellBorderStyle> enumeration and the <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> value of the <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> enumeration.</span></span> <span data-ttu-id="3489b-107">Gli altri valori di queste enumerazioni utilizzano i colori specificati dal sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="3489b-107">The other values of these enumerations use colors specified by the operating system.</span></span> <span data-ttu-id="3489b-108">Inoltre, quando sono abilitati in Windows XP e nella famiglia Windows Server 2003 tramite il <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> (metodo), il <xref:System.Windows.Forms.DataGridView.GridColor%2A> non viene utilizzato il valore di proprietà.</span><span class="sxs-lookup"><span data-stu-id="3489b-108">Additionally, when visual styles are enabled on Windows XP and the Windows Server 2003 family through the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method, the <xref:System.Windows.Forms.DataGridView.GridColor%2A> property value is not used.</span></span>  
   
-### Per modificare il colore delle linee della griglia a livello di codice  
+### <a name="to-change-the-gridline-color-programmatically"></a><span data-ttu-id="3489b-109">Per modificare il colore della griglia a livello di codice</span><span class="sxs-lookup"><span data-stu-id="3489b-109">To change the gridline color programmatically</span></span>  
   
--   Impostare la proprietà <xref:System.Windows.Forms.DataGridView.GridColor%2A>.  
+-   <span data-ttu-id="3489b-110">Impostare la proprietà <xref:System.Windows.Forms.DataGridView.GridColor%2A>.</span><span class="sxs-lookup"><span data-stu-id="3489b-110">Set the <xref:System.Windows.Forms.DataGridView.GridColor%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### Per modificare lo stile dei bordi dell'intero controllo DataGridView a livello di codice  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a><span data-ttu-id="3489b-111">Per modificare lo stile del bordo del controllo DataGridView intera a livello di codice</span><span class="sxs-lookup"><span data-stu-id="3489b-111">To change the border style of the entire DataGridView control programmatically</span></span>  
   
--   Impostare la proprietà <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> su uno dei valori dell'enumerazione <xref:System.Windows.Forms.BorderStyle>.  
+-   <span data-ttu-id="3489b-112">Impostare la proprietà <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> su uno dei valori dell'enumerazione <xref:System.Windows.Forms.BorderStyle>.</span><span class="sxs-lookup"><span data-stu-id="3489b-112">Set the <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> property to one of the <xref:System.Windows.Forms.BorderStyle> enumeration values.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### Per modificare gli stili dei bordi delle celle di DataGridView a livello di codice  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a><span data-ttu-id="3489b-113">Per modificare gli stili dei bordi per le celle di DataGridView a livello di codice</span><span class="sxs-lookup"><span data-stu-id="3489b-113">To change the border styles for DataGridView cells programmatically</span></span>  
   
--   Impostare le proprietà <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A> e <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>.  
+-   <span data-ttu-id="3489b-114">Impostare il <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, e <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="3489b-114">Set the <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, and <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> properties.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  
   
-## Esempio  
+## <a name="example"></a><span data-ttu-id="3489b-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="3489b-115">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#030](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#030)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#030](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#030)]  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="3489b-116">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="3489b-116">Compiling the Code</span></span>  
+ <span data-ttu-id="3489b-117">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="3489b-117">This example requires:</span></span>  
   
--   Un controllo <xref:System.Windows.Forms.DataGridView> denominato`dataGridView1`.  
+-   <span data-ttu-id="3489b-118">Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="3489b-118">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   Riferimenti agli assembly <xref:System?displayProperty=fullName>, <xref:System.Windows.Forms?displayProperty=fullName> e <xref:System.Drawing?displayProperty=fullName>.  
+-   <span data-ttu-id="3489b-119">Riferimenti agli assembly <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> e <xref:System.Drawing?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3489b-119">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, and <xref:System.Drawing?displayProperty=nameWithType> assemblies.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.BorderStyle>   
- <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCellBorderStyle>   
- <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>   
- [Formattazione e stile di base nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="3489b-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3489b-120">See Also</span></span>  
+ <xref:System.Windows.Forms.BorderStyle>  
+ <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCellBorderStyle>  
+ <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>  
+ [<span data-ttu-id="3489b-121">Formattazione e stile di base nel controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="3489b-121">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)

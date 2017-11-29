@@ -1,76 +1,80 @@
 ---
-title: "Utilizzo delle trasformazioni per scalare i colori | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "colori, adattamento"
-  - "trasformazioni, per l'adattamento dei colori"
+title: Utilizzo delle trasformazioni per scalare i colori
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- transformations [Windows Forms], for scaling colors
+- colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4584b74cd7a394f7dd04d0cfba150b907ca7c82
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizzo delle trasformazioni per scalare i colori
-In una trasformazione per adattamento una o più delle quattro componenti di colore viene moltiplicata per un numero.  Le voci della matrice di colore che rappresentano l'adattamento sono indicate nella tabella che segue.  
+# <a name="using-transformations-to-scale-colors"></a><span data-ttu-id="a51e7-102">Utilizzo delle trasformazioni per scalare i colori</span><span class="sxs-lookup"><span data-stu-id="a51e7-102">Using Transformations to Scale Colors</span></span>
+<span data-ttu-id="a51e7-103">Una trasformazione di ridimensionamento Moltiplica uno o più di quattro componenti di colore da un numero.</span><span class="sxs-lookup"><span data-stu-id="a51e7-103">A scaling transformation multiplies one or more of the four color components by a number.</span></span> <span data-ttu-id="a51e7-104">Le voci della matrice di colori che rappresentano l'adattamento sono indicate nella tabella riportata di seguito.</span><span class="sxs-lookup"><span data-stu-id="a51e7-104">The color matrix entries that represent scaling are given in the following table.</span></span>  
   
-|Componente da adattare|Voce della matrice|  
-|----------------------------|------------------------|  
-|Rosso|\[0\]\[0\]|  
-|Verde|\[1\]\[1\]|  
-|Blu|\[2\]\[2\]|  
-|Alfa|\[3\]\[3\]|  
+|<span data-ttu-id="a51e7-105">Componente scalabilità</span><span class="sxs-lookup"><span data-stu-id="a51e7-105">Component to be scaled</span></span>|<span data-ttu-id="a51e7-106">Voce della matrice</span><span class="sxs-lookup"><span data-stu-id="a51e7-106">Matrix entry</span></span>|  
+|----------------------------|------------------|  
+|<span data-ttu-id="a51e7-107">Rosso</span><span class="sxs-lookup"><span data-stu-id="a51e7-107">Red</span></span>|<span data-ttu-id="a51e7-108">[0][0]</span><span class="sxs-lookup"><span data-stu-id="a51e7-108">[0][0]</span></span>|  
+|<span data-ttu-id="a51e7-109">Verde</span><span class="sxs-lookup"><span data-stu-id="a51e7-109">Green</span></span>|<span data-ttu-id="a51e7-110">[1][1]</span><span class="sxs-lookup"><span data-stu-id="a51e7-110">[1][1]</span></span>|  
+|<span data-ttu-id="a51e7-111">Blu</span><span class="sxs-lookup"><span data-stu-id="a51e7-111">Blue</span></span>|<span data-ttu-id="a51e7-112">[2][2]</span><span class="sxs-lookup"><span data-stu-id="a51e7-112">[2][2]</span></span>|  
+|<span data-ttu-id="a51e7-113">Alfa</span><span class="sxs-lookup"><span data-stu-id="a51e7-113">Alpha</span></span>|<span data-ttu-id="a51e7-114">[3][3]</span><span class="sxs-lookup"><span data-stu-id="a51e7-114">[3][3]</span></span>|  
   
-## Adattamento di un colore  
- Nell'esempio che segue viene costruito un oggetto <xref:System.Drawing.Image> dal file ColorBars2.bmp.  Viene quindi adattata la componente blu di ciascun pixel dell'immagine in base a un fattore 2.  L'immagine originale viene disegnata accanto all'immagine trasformata.  
+## <a name="scaling-one-color"></a><span data-ttu-id="a51e7-115">Adattamento di un colore</span><span class="sxs-lookup"><span data-stu-id="a51e7-115">Scaling One Color</span></span>  
+ <span data-ttu-id="a51e7-116">Nell'esempio seguente viene costruito un <xref:System.Drawing.Image> oggetto dal file Colorbars2.</span><span class="sxs-lookup"><span data-stu-id="a51e7-116">The following example constructs an <xref:System.Drawing.Image> object from the file ColorBars2.bmp.</span></span> <span data-ttu-id="a51e7-117">Il codice quindi ridimensiona il componente blu di ciascun pixel nell'immagine di un fattore pari a 2.</span><span class="sxs-lookup"><span data-stu-id="a51e7-117">Then the code scales the blue component of each pixel in the image by a factor of 2.</span></span> <span data-ttu-id="a51e7-118">L'immagine originale viene disegnato accanto all'immagine trasformata.</span><span class="sxs-lookup"><span data-stu-id="a51e7-118">The original image is drawn alongside the transformed image.</span></span>  
   
  [!code-csharp[System.Drawing.RecoloringImages#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
- Nell'illustrazione che segue si mostra l'immagine originale a sinistra e l'immagine adattata a destra.  
+ <span data-ttu-id="a51e7-119">Nella figura seguente mostra l'immagine originale a sinistra e l'immagine adattata a destra.</span><span class="sxs-lookup"><span data-stu-id="a51e7-119">The following illustration shows the original image on the left and the scaled image on the right.</span></span>  
   
- ![Scalatura dei colori](../../../../docs/framework/winforms/advanced/media/colortrans3.png "colortrans3")  
+ <span data-ttu-id="a51e7-120">![Scalare i colori](../../../../docs/framework/winforms/advanced/media/colortrans3.png "colortrans3")</span><span class="sxs-lookup"><span data-stu-id="a51e7-120">![Scale Colors](../../../../docs/framework/winforms/advanced/media/colortrans3.png "colortrans3")</span></span>  
   
- Nella tabella che segue sono elencati i vettori di colore per le quattro barre prima e dopo l'adattamento della componente blu.  Si noti che la componente blu nella quarta barra di colore è passata da 0,8 a 0,6.  Questo perché in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] si conserva solo la parte decimale del risultato.  Ad esempio, \(2\)\(0,8\) \= 1,6; la parte decimale di 1,6 è 0,6.  In questo modo il risultato è sempre compreso nell'intervallo \[0, 1\].  
+ <span data-ttu-id="a51e7-121">Nella tabella seguente sono elencati i vettori di colore per le quattro barre prima e dopo il ridimensionamento blu.</span><span class="sxs-lookup"><span data-stu-id="a51e7-121">The following table lists the color vectors for the four bars before and after the blue scaling.</span></span> <span data-ttu-id="a51e7-122">Si noti che il componente blu nella quarta barra di colore è passato da 0,8 a 0,6.</span><span class="sxs-lookup"><span data-stu-id="a51e7-122">Note that the blue component in the fourth color bar went from 0.8 to 0.6.</span></span> <span data-ttu-id="a51e7-123">Ciò accade perché [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] mantiene solo la parte frazionaria del risultato.</span><span class="sxs-lookup"><span data-stu-id="a51e7-123">That is because [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] retains only the fractional part of the result.</span></span> <span data-ttu-id="a51e7-124">Ad esempio, (2)(0.8) = 1.6, e la parte frazionaria 1.6 è 0,6.</span><span class="sxs-lookup"><span data-stu-id="a51e7-124">For example, (2)(0.8) = 1.6, and the fractional part of 1.6 is 0.6.</span></span> <span data-ttu-id="a51e7-125">Mantenendo solo la parte frazionaria assicura che il risultato è sempre nell'intervallo [0, 1].</span><span class="sxs-lookup"><span data-stu-id="a51e7-125">Retaining only the fractional part ensures that the result is always in the interval [0, 1].</span></span>  
   
-|Originale|Adattato|  
-|---------------|--------------|  
-|\(0.4, 0.4, 0.4, 1\)|\(0.4, 0.4, 0.8, 1\)|  
-|\(0.4, 0.2, 0.2, 1\)|\(0.4, 0.2, 0.4, 1\)|  
-|\(0.2, 0.4, 0.2, 1\)|\(0.2, 0.4, 0.4, 1\)|  
-|\(0.4, 0.4, 0.8, 1\)|\(0.4, 0.4, 0.6, 1\)|  
+|<span data-ttu-id="a51e7-126">Originale</span><span class="sxs-lookup"><span data-stu-id="a51e7-126">Original</span></span>|<span data-ttu-id="a51e7-127">Scala</span><span class="sxs-lookup"><span data-stu-id="a51e7-127">Scaled</span></span>|  
+|--------------|------------|  
+|<span data-ttu-id="a51e7-128">(0.4, 0.4, 0.4, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-128">(0.4, 0.4, 0.4, 1)</span></span>|<span data-ttu-id="a51e7-129">(0.4, 0.4, 0.8, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-129">(0.4, 0.4, 0.8, 1)</span></span>|  
+|<span data-ttu-id="a51e7-130">(0.4, 0.2, 0.2, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-130">(0.4, 0.2, 0.2, 1)</span></span>|<span data-ttu-id="a51e7-131">(0.4, 0.2, 0.4, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-131">(0.4, 0.2, 0.4, 1)</span></span>|  
+|<span data-ttu-id="a51e7-132">(0.2, 0.4, 0.2, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-132">(0.2, 0.4, 0.2, 1)</span></span>|<span data-ttu-id="a51e7-133">(0.2, 0.4, 0.4, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-133">(0.2, 0.4, 0.4, 1)</span></span>|  
+|<span data-ttu-id="a51e7-134">(0.4, 0.4, 0.8, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-134">(0.4, 0.4, 0.8, 1)</span></span>|<span data-ttu-id="a51e7-135">(0.4, 0.4, 0.6, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-135">(0.4, 0.4, 0.6, 1)</span></span>|  
   
-## Adattamento di più colori  
- Nell'esempio che segue viene costruito un oggetto <xref:System.Drawing.Image> dal file ColorBars2.bmp.  Vengono quindi adattate le componenti rossa, verde e blu di ciascun pixel dell'immagine.  Le componenti rosse vengono ridotte del 25%, quelle verdi del 35% e quelle blu del 50%.  
+## <a name="scaling-multiple-colors"></a><span data-ttu-id="a51e7-136">Adattamento dei colori più</span><span class="sxs-lookup"><span data-stu-id="a51e7-136">Scaling Multiple Colors</span></span>  
+ <span data-ttu-id="a51e7-137">Nell'esempio seguente viene costruito un <xref:System.Drawing.Image> oggetto dal file Colorbars2.</span><span class="sxs-lookup"><span data-stu-id="a51e7-137">The following example constructs an <xref:System.Drawing.Image> object from the file ColorBars2.bmp.</span></span> <span data-ttu-id="a51e7-138">Il codice quindi ridimensiona i componenti rossi, verde e blu di ciascun pixel dell'immagine.</span><span class="sxs-lookup"><span data-stu-id="a51e7-138">Then the code scales the red, green, and blue components of each pixel in the image.</span></span> <span data-ttu-id="a51e7-139">I componenti rossi sono ridotte del 25% e vengono ridimensionati i componenti di colore verde del 35% vengono ridimensionati i componenti di colore blu del 50%.</span><span class="sxs-lookup"><span data-stu-id="a51e7-139">The red components are scaled down 25 percent, the green components are scaled down 35 percent, and the blue components are scaled down 50 percent.</span></span>  
   
  [!code-csharp[System.Drawing.RecoloringImages#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
- Nell'illustrazione che segue si mostra l'immagine originale a sinistra e l'immagine adattata a destra.  
+ <span data-ttu-id="a51e7-140">Nella figura seguente mostra l'immagine originale a sinistra e l'immagine adattata a destra.</span><span class="sxs-lookup"><span data-stu-id="a51e7-140">The following illustration shows the original image on the left and the scaled image on the right.</span></span>  
   
- ![Scalatura dei colori](../../../../docs/framework/winforms/advanced/media/colortrans4.png "colortrans4")  
+ <span data-ttu-id="a51e7-141">![Scalare i colori](../../../../docs/framework/winforms/advanced/media/colortrans4.png "colortrans4")</span><span class="sxs-lookup"><span data-stu-id="a51e7-141">![Scale Colors](../../../../docs/framework/winforms/advanced/media/colortrans4.png "colortrans4")</span></span>  
   
- Nella tabella che segue sono elencati i vettori di colore per le quattro barre prima e dopo l'adattamento delle componenti rossa, verde e blu.  
+ <span data-ttu-id="a51e7-142">Nella tabella seguente sono elencati i vettori di colore per le quattro barre prima e dopo il ridimensionamento rosso, verde e blu.</span><span class="sxs-lookup"><span data-stu-id="a51e7-142">The following table lists the color vectors for the four bars before and after the red, green and blue scaling.</span></span>  
   
-|Originale|Adattato|  
-|---------------|--------------|  
-|\(0.6, 0.6, 0.6, 1\)|\(0.45, 0.39, 0.3, 1\)|  
-|\(0, 1, 1, 1\)|\(0, 0.65, 0.5, 1\)|  
-|\(1, 1, 0, 1\)|\(0.75, 0.65, 0, 1\)|  
-|\(1, 0, 1, 1\)|\(0.75, 0, 0.5, 1\)|  
+|<span data-ttu-id="a51e7-143">Originale</span><span class="sxs-lookup"><span data-stu-id="a51e7-143">Original</span></span>|<span data-ttu-id="a51e7-144">Scala</span><span class="sxs-lookup"><span data-stu-id="a51e7-144">Scaled</span></span>|  
+|--------------|------------|  
+|<span data-ttu-id="a51e7-145">(0.6, 0.6, 0.6, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-145">(0.6, 0.6, 0.6, 1)</span></span>|<span data-ttu-id="a51e7-146">(0.45, 0.39, 0.3, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-146">(0.45, 0.39, 0.3, 1)</span></span>|  
+|<span data-ttu-id="a51e7-147">(0, 1, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-147">(0, 1, 1, 1)</span></span>|<span data-ttu-id="a51e7-148">(0, 0.65, 0.5, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-148">(0, 0.65, 0.5, 1)</span></span>|  
+|<span data-ttu-id="a51e7-149">(1, 1, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-149">(1, 1, 0, 1)</span></span>|<span data-ttu-id="a51e7-150">(0.75, 0.65, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-150">(0.75, 0.65, 0, 1)</span></span>|  
+|<span data-ttu-id="a51e7-151">(1, 0, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-151">(1, 0, 1, 1)</span></span>|<span data-ttu-id="a51e7-152">(0.75, 0, 0.5, 1)</span><span class="sxs-lookup"><span data-stu-id="a51e7-152">(0.75, 0, 0.5, 1)</span></span>|  
   
-## Vedere anche  
- <xref:System.Drawing.Imaging.ColorMatrix>   
- <xref:System.Drawing.Imaging.ImageAttributes>   
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a><span data-ttu-id="a51e7-153">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a51e7-153">See Also</span></span>  
+ <xref:System.Drawing.Imaging.ColorMatrix>  
+ <xref:System.Drawing.Imaging.ImageAttributes>  
+ [<span data-ttu-id="a51e7-154">Grafica e disegno in Windows Form</span><span class="sxs-lookup"><span data-stu-id="a51e7-154">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="a51e7-155">Ricolorazione di immagini</span><span class="sxs-lookup"><span data-stu-id="a51e7-155">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)

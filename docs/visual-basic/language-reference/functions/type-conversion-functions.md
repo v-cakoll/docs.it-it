@@ -1,104 +1,103 @@
 ---
-title: "Type Conversion Functions (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.CUShort"
-  - "vb.csng"
-  - "vb.CDate"
-  - "CByte"
-  - "CSng"
-  - "vb.CDec"
-  - "CBool"
-  - "CStr"
-  - "vb.CULng"
-  - "CDec"
-  - "CVErr"
-  - "CDbl"
-  - "CShort"
-  - "vb.CObj"
-  - "vb.CVErr"
-  - "CULng"
-  - "vb.cdbl"
-  - "vb.cbool"
-  - "CObj"
-  - "CDate"
-  - "CLng"
-  - "vb.cstr"
-  - "vb.cbyte"
-  - "vb.clng"
-  - "vb.CChar"
-  - "CUShort"
-  - "vb.CUInt"
-  - "vb.cint"
-  - "vb.CShort"
-  - "CInt"
-  - "CUInt"
-  - "CChar"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CDate function"
-  - "CByte function"
-  - "Integer data type, converting"
-  - "string conversion, conversion functions"
-  - "fractions"
-  - "data types [Visual Basic], converting"
-  - "text, converting"
-  - "CDec function"
-  - "Char data type, converting"
-  - "type conversion, functions for"
-  - "Single data type, converting"
-  - "numbers, rounding"
-  - "rounding numbers, type conversion"
-  - "CUShort function"
-  - "Long data type, converting"
-  - "return values, data types"
-  - "single-precision numbers, converting"
-  - "data type conversion, functions for"
-  - "CStr function"
-  - "times, converting"
-  - "CSng function"
-  - "conversions, type conversion functions"
-  - "CBool function"
-  - "CDbl function"
-  - "CUInt function"
-  - "Currency data type, conversion functions"
-  - "numbers, converting"
-  - "Double data type, converting"
-  - "CLng function"
-  - "CSByte function"
-  - "double-precision numbers"
-  - "Decimal data type, converting"
-  - "Boolean data type, converting"
-  - "integers, type conversion functions"
-  - "dates, converting"
-  - "CULng function"
-  - "CInt function"
-  - "Date data type, converting"
-  - "Byte data type, converting"
-  - "String data type, converting"
-  - "CChar function"
-  - "banker's rounding"
-  - "Short data type, converting"
-  - "rounding numbers, banker's rounding"
-  - "type conversion, Visual Basic vs. .NET Framework"
+title: Funzioni di conversione del tipo (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.CUShort
+- vb.csng
+- vb.CDate
+- CByte
+- CSng
+- vb.CDec
+- CBool
+- CStr
+- vb.CULng
+- CDec
+- CVErr
+- CDbl
+- CShort
+- vb.CObj
+- vb.CVErr
+- CULng
+- vb.cdbl
+- vb.cbool
+- CObj
+- CDate
+- CLng
+- vb.cstr
+- vb.cbyte
+- vb.clng
+- vb.CChar
+- CUShort
+- vb.CUInt
+- vb.cint
+- vb.CShort
+- CInt
+- CUInt
+- CChar
+helpviewer_keywords:
+- CDate function
+- CByte function
+- Integer data type [Visual Basic], converting
+- string conversion [Visual Basic], conversion functions
+- fractions
+- data types [Visual Basic], converting
+- text, converting
+- CDec function
+- Char data type [Visual Basic], converting
+- type conversion [Visual Basic], functions for
+- Single data type [Visual Basic], converting
+- numbers [Visual Basic], rounding
+- rounding numbers [Visual Basic], type conversion
+- CUShort function
+- Long data type [Visual Basic], converting
+- return values [Visual Basic], data types
+- single-precision numbers [Visual Basic], converting
+- data type conversion [Visual Basic], functions for
+- CStr function
+- times [Visual Basic], converting
+- CSng function
+- conversions [Visual Basic], type conversion functions
+- CBool function
+- CDbl function
+- CUInt function
+- Currency data type [Visual Basic], conversion functions
+- numbers [Visual Basic], converting
+- Double data type [Visual Basic], converting
+- CLng function
+- CSByte function
+- double-precision numbers
+- Decimal data type [Visual Basic], converting
+- Boolean data type [Visual Basic], converting
+- integers [Visual Basic], type conversion functions
+- dates [Visual Basic], converting
+- CULng function
+- CInt function
+- Date data type [Visual Basic], converting
+- Byte data type [Visual Basic], converting
+- String data type [Visual Basic], converting
+- CChar function
+- banker's rounding
+- Short data type [Visual Basic], converting
+- rounding numbers [Visual Basic], banker's rounding
+- type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Type Conversion Functions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Queste funzioni vengono compilate inline, ossia il codice di conversione fa parte del codice con cui viene valutata l'espressione.  Talvolta non sono presenti chiamate a una routine per effettuare la conversione e questo contribuisce al miglioramento delle prestazioni.  Ciascuna funzione consente la conversione di un'espressione in un tipo di dati specifico.  
+# <a name="type-conversion-functions-visual-basic"></a><span data-ttu-id="49e58-102">Funzioni di conversione del tipo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49e58-102">Type Conversion Functions (Visual Basic)</span></span>
+<span data-ttu-id="49e58-103">Queste funzioni vengono compilate inline, ovvero che la conversione di codice fa parte del codice che valuta l'espressione.</span><span class="sxs-lookup"><span data-stu-id="49e58-103">These functions are compiled inline, meaning the conversion code is part of the code that evaluates the expression.</span></span> <span data-ttu-id="49e58-104">A volte non sussiste alcuna chiamata a una stored procedure per eseguire la conversione, che migliora le prestazioni.</span><span class="sxs-lookup"><span data-stu-id="49e58-104">Sometimes there is no call to a procedure to accomplish the conversion, which improves performance.</span></span> <span data-ttu-id="49e58-105">Ogni funzione forza un'espressione al tipo di dati specifico.</span><span class="sxs-lookup"><span data-stu-id="49e58-105">Each function coerces an expression to a specific data type.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="49e58-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="49e58-106">Syntax</span></span>  
   
 ```  
 CBool(expression)  
@@ -119,163 +118,163 @@ CULng(expression)
 CUShort(expression)  
 ```  
   
-## Parte  
+## <a name="part"></a><span data-ttu-id="49e58-107">Parte</span><span class="sxs-lookup"><span data-stu-id="49e58-107">Part</span></span>  
  `expression`  
- Obbligatorio.  Qualsiasi espressione del tipo di dati di origine.  
+ <span data-ttu-id="49e58-108">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="49e58-108">Required.</span></span> <span data-ttu-id="49e58-109">Qualsiasi espressione del tipo di dati di origine.</span><span class="sxs-lookup"><span data-stu-id="49e58-109">Any expression of the source data type.</span></span>  
   
-## Tipo di dati del valore restituito  
- Il nome della funzione determina il tipo di dati del valore restituito, come illustrato nella tabella riportata di seguito.  
+## <a name="return-value-data-type"></a><span data-ttu-id="49e58-110">Tipo di dati di valore restituito</span><span class="sxs-lookup"><span data-stu-id="49e58-110">Return Value Data Type</span></span>  
+ <span data-ttu-id="49e58-111">Il nome della funzione determina il tipo di dati del valore che viene restituito, come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="49e58-111">The function name determines the data type of the value it returns, as shown in the following table.</span></span>  
   
-|Nome funzione|Tipo di dati restituito|Intervallo per l'argomento `expression`|  
-|-------------------|-----------------------------|---------------------------------------------|  
-|`CBool`|[Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Qualsiasi espressione `Char`, `String` o numerica valida.|  
-|`CByte`|[Byte Data Type](../../../visual-basic/language-reference/data-types/byte-data-type.md)|Da 0 a 255 \(senza segno\). Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CChar`|[Char Data Type](../../../visual-basic/language-reference/data-types/char-data-type.md)|Qualsiasi espressione `Char` o `String` valida. Viene convertito solo il primo carattere di un'espressione `String`. Il valore può essere compreso tra 0 e 65.535 \(senza segno\).|  
-|`CDate`|[Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md)|Qualsiasi rappresentazione valida di data e ora.|  
-|`CDbl`|[Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md)|Da \-1,79769313486231570E\+308 a \-4,94065645841246544E\-324 per valori negativi; da 4,94065645841246544E\-324 a 1,79769313486231570E\+308 per valori positivi.|  
-|`CDec`|[Decimal Data Type](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|\+\/\-79.228.162.514.264.337.593.543.950.335 per numeri con fattore di divisione zero, ossia numeri senza decimali.  Per numeri con 28 posizioni decimali, l'intervallo è \+\/\-7,9228162514264337593543950335.  Il numero più basso possibile diverso da zero è 0,0000000000000000000000000001 \(\+\/\-1E\-28\).|  
-|`CInt`|[Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)|Da \-2.147.483.648 a 2.147.483.647. Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CLng`|[Long Data Type](../../../visual-basic/language-reference/data-types/long-data-type.md)|Da \-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807. Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CObj`|[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualsiasi espressione valida.|  
-|`CSByte`|[SByte Data Type](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Da \-128 a 127. Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CShort`|[Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md)|Da \-32.768 a 32.767. Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CSng`|[Single Data Type](../../../visual-basic/language-reference/data-types/single-data-type.md)|Da \-3,402823E\+38 a \-1,401298E\-45 per valori negativi; da 1,401298E\-45 a 3,402823E\+38 per valori positivi.|  
-|`CStr`|[String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md)|I valori restituiti da `CStr` variano in base all'argomento `expression`.  Vedere [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
-|`CUInt`|[UInteger Data Type](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Da 0 a 4.294.967.295 \(senza segno\). Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CULng`|[ULong Data Type](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Da 0 a 18.446.744.073.709.551.615 \(senza segno\). Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CUShort`|[UShort Data Type](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Da 0 a 65.535 \(senza segno\). Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
+|<span data-ttu-id="49e58-112">Nome della funzione</span><span class="sxs-lookup"><span data-stu-id="49e58-112">Function name</span></span>|<span data-ttu-id="49e58-113">Tipo di dati restituito</span><span class="sxs-lookup"><span data-stu-id="49e58-113">Return data type</span></span>|<span data-ttu-id="49e58-114">Intervallo per `expression` argomento</span><span class="sxs-lookup"><span data-stu-id="49e58-114">Range for `expression` argument</span></span>|  
+|-------------------|----------------------|-------------------------------------|  
+|`CBool`|[<span data-ttu-id="49e58-115">Tipo di dati Boolean</span><span class="sxs-lookup"><span data-stu-id="49e58-115">Boolean Data Type</span></span>](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<span data-ttu-id="49e58-116">Qualsiasi `Char` o `String` o espressione numerica.</span><span class="sxs-lookup"><span data-stu-id="49e58-116">Any valid `Char` or `String` or numeric expression.</span></span>|  
+|`CByte`|[<span data-ttu-id="49e58-117">Tipo di dati Byte</span><span class="sxs-lookup"><span data-stu-id="49e58-117">Byte Data Type</span></span>](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<span data-ttu-id="49e58-118">da 0 a 255 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="49e58-118">0 through 255 (unsigned); fractional parts are rounded.<sup>1</sup></span></span>|  
+|`CChar`|[<span data-ttu-id="49e58-119">Tipo di dati Char</span><span class="sxs-lookup"><span data-stu-id="49e58-119">Char Data Type</span></span>](../../../visual-basic/language-reference/data-types/char-data-type.md)|<span data-ttu-id="49e58-120">Qualsiasi `Char` o `String` espressione; solo primo carattere di un `String` viene convertito; valore può essere 0 e 65535 (senza segno).</span><span class="sxs-lookup"><span data-stu-id="49e58-120">Any valid `Char` or `String` expression; only first character of a `String` is converted; value can be 0 through 65535 (unsigned).</span></span>|  
+|`CDate`|[<span data-ttu-id="49e58-121">Tipo di dati Date</span><span class="sxs-lookup"><span data-stu-id="49e58-121">Date Data Type</span></span>](../../../visual-basic/language-reference/data-types/date-data-type.md)|<span data-ttu-id="49e58-122">Qualsiasi rappresentazione valida di una data e ora.</span><span class="sxs-lookup"><span data-stu-id="49e58-122">Any valid representation of a date and time.</span></span>|  
+|`CDbl`|[<span data-ttu-id="49e58-123">Tipo di dati Double</span><span class="sxs-lookup"><span data-stu-id="49e58-123">Double Data Type</span></span>](../../../visual-basic/language-reference/data-types/double-data-type.md)|<span data-ttu-id="49e58-124">-1.79769313486231570 e + 308 e - 4, 94065645841246544E-324 per valori negativi. 4, 94065645841246544E-324 e 1.79769313486231570 e + 308 per i valori positivi.</span><span class="sxs-lookup"><span data-stu-id="49e58-124">-1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values; 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values.</span></span>|  
+|`CDec`|[<span data-ttu-id="49e58-125">Tipo di dati Decimal</span><span class="sxs-lookup"><span data-stu-id="49e58-125">Decimal Data Type</span></span>](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<span data-ttu-id="49e58-126">+ /-79.228.162.514.264.337.593.543.950.335 per zero-numeri, ovvero numeri senza cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="49e58-126">+/-79,228,162,514,264,337,593,543,950,335 for zero-scaled numbers, that is, numbers with no decimal places.</span></span> <span data-ttu-id="49e58-127">Per i numeri con 28 cifre decimali, l'intervallo è + /-7,9228162514264337593543950335.</span><span class="sxs-lookup"><span data-stu-id="49e58-127">For numbers with 28 decimal places, the range is +/-7.9228162514264337593543950335.</span></span> <span data-ttu-id="49e58-128">Il minor numero possibile di diverso da zero è 0,0000000000000000000000000001 (+ /-1E-28).</span><span class="sxs-lookup"><span data-stu-id="49e58-128">The smallest possible non-zero number is 0.0000000000000000000000000001 (+/-1E-28).</span></span>|  
+|`CInt`|[<span data-ttu-id="49e58-129">Tipo di dati Integer</span><span class="sxs-lookup"><span data-stu-id="49e58-129">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<span data-ttu-id="49e58-130">tra -2.147.483.648 e 2.147.483.647. parti frazionarie vengono arrotondate. <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="49e58-130">-2,147,483,648 through 2,147,483,647; fractional parts are rounded.<sup>1</sup></span></span>|  
+|`CLng`|[<span data-ttu-id="49e58-131">Tipo di dati Long</span><span class="sxs-lookup"><span data-stu-id="49e58-131">Long Data Type</span></span>](../../../visual-basic/language-reference/data-types/long-data-type.md)|<span data-ttu-id="49e58-132">-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807; parti frazionarie vengono arrotondate. <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="49e58-132">-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807; fractional parts are rounded.<sup>1</sup></span></span>|  
+|`CObj`|[<span data-ttu-id="49e58-133">Tipo di dati Object</span><span class="sxs-lookup"><span data-stu-id="49e58-133">Object Data Type</span></span>](../../../visual-basic/language-reference/data-types/object-data-type.md)|<span data-ttu-id="49e58-134">Qualsiasi espressione valida.</span><span class="sxs-lookup"><span data-stu-id="49e58-134">Any valid expression.</span></span>|  
+|`CSByte`|[<span data-ttu-id="49e58-135">Tipo di dati SByte</span><span class="sxs-lookup"><span data-stu-id="49e58-135">SByte Data Type</span></span>](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<span data-ttu-id="49e58-136">-128 e 127; parti frazionarie vengono arrotondate. <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="49e58-136">-128 through 127; fractional parts are rounded.<sup>1</sup></span></span>|  
+|`CShort`|[<span data-ttu-id="49e58-137">Tipo di dati Short</span><span class="sxs-lookup"><span data-stu-id="49e58-137">Short Data Type</span></span>](../../../visual-basic/language-reference/data-types/short-data-type.md)|<span data-ttu-id="49e58-138">tra -32.768 e 32.767. parti frazionarie vengono arrotondate. <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="49e58-138">-32,768 through 32,767; fractional parts are rounded.<sup>1</sup></span></span>|  
+|`CSng`|[<span data-ttu-id="49e58-139">Tipo di dati Single</span><span class="sxs-lookup"><span data-stu-id="49e58-139">Single Data Type</span></span>](../../../visual-basic/language-reference/data-types/single-data-type.md)|<span data-ttu-id="49e58-140">-3, 402823E + 38 a - 1, 401298E-45 per valori negativi. 1, 401298E-45 a 3, 402823E + 38 per i valori positivi.</span><span class="sxs-lookup"><span data-stu-id="49e58-140">-3.402823E+38 through -1.401298E-45 for negative values; 1.401298E-45 through 3.402823E+38 for positive values.</span></span>|  
+|`CStr`|[<span data-ttu-id="49e58-141">Tipo di dati String</span><span class="sxs-lookup"><span data-stu-id="49e58-141">String Data Type</span></span>](../../../visual-basic/language-reference/data-types/string-data-type.md)|<span data-ttu-id="49e58-142">Restituisce per `CStr` dipendono il `expression` argomento.</span><span class="sxs-lookup"><span data-stu-id="49e58-142">Returns for `CStr` depend on the `expression` argument.</span></span> <span data-ttu-id="49e58-143">Vedere [valori restituiti dalla funzione CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).</span><span class="sxs-lookup"><span data-stu-id="49e58-143">See [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).</span></span>|  
+|`CUInt`|[<span data-ttu-id="49e58-144">Tipo di dati UInteger</span><span class="sxs-lookup"><span data-stu-id="49e58-144">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<span data-ttu-id="49e58-145">da 0 a 4.294.967.295 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="49e58-145">0 through 4,294,967,295 (unsigned); fractional parts are rounded.<sup>1</sup></span></span>|  
+|`CULng`|[<span data-ttu-id="49e58-146">Tipo di dati ULong</span><span class="sxs-lookup"><span data-stu-id="49e58-146">ULong Data Type</span></span>](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<span data-ttu-id="49e58-147">da 0 a 18.446.744.073.709.551.615 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="49e58-147">0 through 18,446,744,073,709,551,615 (unsigned); fractional parts are rounded.<sup>1</sup></span></span>|  
+|`CUShort`|[<span data-ttu-id="49e58-148">Tipo di dati UShort</span><span class="sxs-lookup"><span data-stu-id="49e58-148">UShort Data Type</span></span>](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<span data-ttu-id="49e58-149">tra 0 e 65.535 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="49e58-149">0 through 65,535 (unsigned); fractional parts are rounded.<sup>1</sup></span></span>|  
   
- <sup>1</sup> Alle parti frazionarie può essere applicato uno speciale tipo di *arrotondamento*.  Per ulteriori informazioni, vedere la sezione relativa alle osservazioni.  
+ <span data-ttu-id="49e58-150"><sup>1</sup> parti frazionarie possono essere soggetta a un tipo speciale di arrotondamento chiamato *arrotondamento*.</span><span class="sxs-lookup"><span data-stu-id="49e58-150"><sup>1</sup> Fractional parts can be subject to a special type of rounding called *banker's rounding*.</span></span> <span data-ttu-id="49e58-151">Per ulteriori informazioni, vedere "la sezione Osservazioni".</span><span class="sxs-lookup"><span data-stu-id="49e58-151">See "Remarks" for more information.</span></span>  
   
-## Note  
- Di norma si consiglia di utilizzare le funzioni di conversione dei tipi di Visual Basic anziché i metodi .NET Framework, ad esempio `ToString()`, sulla classe <xref:System.Convert> oppure su una singola classe o struttura di tipi.  Le funzioni di Visual Basic sono state appositamente progettate per l'interazione ottimale con il codice Visual Basic e contribuiscono a rendere il codice sorgente più breve e più facilmente leggibile.  Inoltre, i metodi di conversione .NET Framework non producono sempre gli stessi risultati delle funzioni di Visual Basic, ad esempio quando vengono convertiti valori `Boolean` in `Integer`.  Per ulteriori informazioni, vedere [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+## <a name="remarks"></a><span data-ttu-id="49e58-152">Note</span><span class="sxs-lookup"><span data-stu-id="49e58-152">Remarks</span></span>  
+ <span data-ttu-id="49e58-153">Come regola, utilizzare le funzioni di conversione di tipo Visual Basic anziché i metodi di .NET Framework, ad esempio `ToString()`, entrambi nel <xref:System.Convert> classe o in una classe o struttura di tipo individuale.</span><span class="sxs-lookup"><span data-stu-id="49e58-153">As a rule, you should use the Visual Basic type conversion functions in preference to the .NET Framework methods such as `ToString()`, either on the <xref:System.Convert> class or on an individual type structure or class.</span></span> <span data-ttu-id="49e58-154">Le funzioni di Visual Basic sono progettate per l'interazione ottimale con codice di Visual Basic e rendono il codice sorgente più breve e facile da leggere.</span><span class="sxs-lookup"><span data-stu-id="49e58-154">The Visual Basic functions are designed for optimal interaction with Visual Basic code, and they also make your source code shorter and easier to read.</span></span> <span data-ttu-id="49e58-155">Inoltre, i metodi di conversione di .NET Framework non producono sempre gli stessi risultati di funzioni di Visual Basic, ad esempio durante la conversione `Boolean` a `Integer`.</span><span class="sxs-lookup"><span data-stu-id="49e58-155">In addition, the .NET Framework conversion methods do not always produce the same results as the Visual Basic functions, for example when converting `Boolean` to `Integer`.</span></span> <span data-ttu-id="49e58-156">Per ulteriori informazioni, vedere [risoluzione dei problemi dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="49e58-156">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
   
-## Comportamento  
+## <a name="behavior"></a><span data-ttu-id="49e58-157">Comportamento</span><span class="sxs-lookup"><span data-stu-id="49e58-157">Behavior</span></span>  
   
--   **Coercizione.** In generale, è possibile utilizzare le funzioni di conversione dei tipi di dati per assegnare il risultato di un'operazione a uno specifico tipo di dati anziché al tipo predefinito.  È possibile, ad esempio, utilizzare `CDec` per eseguire operazioni aritmetiche su valori decimali nei casi in cui in genere si effettuano operazioni a precisione singola, a precisione doppia o con valori integer.  
+-   <span data-ttu-id="49e58-158">**Coercizione.**</span><span class="sxs-lookup"><span data-stu-id="49e58-158">**Coercion.**</span></span> <span data-ttu-id="49e58-159">In generale, è possibile utilizzare le funzioni di conversione di tipo di dati per assegnare il risultato di un'operazione a un particolare tipo di dati anziché il tipo di dati predefinito.</span><span class="sxs-lookup"><span data-stu-id="49e58-159">In general, you can use the data type conversion functions to coerce the result of an operation to a particular data type rather than the default data type.</span></span> <span data-ttu-id="49e58-160">Ad esempio, utilizzare `CDec` per forzare l'aritmetica decimale nei casi in cui e con precisione singola e precisione doppia o calcoli di interi normalmente avrà luogo.</span><span class="sxs-lookup"><span data-stu-id="49e58-160">For example, use `CDec` to force decimal arithmetic in cases where single-precision, double-precision, or integer arithmetic would normally take place.</span></span>  
   
--   **Conversioni non riuscite.** Se il valore `expression` passato alla funzione non è compreso nell'intervallo del tipo di dati in cui viene convertito, verrà generata un'eccezione <xref:System.OverflowException>.  
+-   <span data-ttu-id="49e58-161">**Conversioni non riuscite.**</span><span class="sxs-lookup"><span data-stu-id="49e58-161">**Failed Conversions.**</span></span> <span data-ttu-id="49e58-162">Se il `expression` passato alla funzione è compreso nell'intervallo del tipo di dati a cui si desidera convertire, un <xref:System.OverflowException> si verifica.</span><span class="sxs-lookup"><span data-stu-id="49e58-162">If the `expression` passed to the function is outside the range of the data type to which it is to be converted, an <xref:System.OverflowException> occurs.</span></span>  
   
--   **Parti frazionarie.** Quando si converte un valore non integrale in un tipo integrale, le funzioni di conversione dei valori integer \(`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng` e `CUShort`\) rimuovono la parte frazionaria e arrotondano il valore all'integer più vicino.  
+-   <span data-ttu-id="49e58-163">**Parti frazionarie.**</span><span class="sxs-lookup"><span data-stu-id="49e58-163">**Fractional Parts.**</span></span> <span data-ttu-id="49e58-164">Quando si converte un valore non integrale in un tipo integrale tipo, le funzioni di conversione di integer (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, e `CUShort`) rimuovere il frazionari parte e arrotondare il valore all'intero più vicino.</span><span class="sxs-lookup"><span data-stu-id="49e58-164">When you convert a nonintegral value to an integral type, the integer conversion functions (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, and `CUShort`) remove the fractional part and round the value to the closest integer.</span></span>  
   
-     Se la parte frazionaria corrisponde esattamente a 0,5, le funzioni di conversione dei valori integer la arrotondano al valore integer pari più vicino.  Ad esempio, 0,5 si arrotonda a 0, e 1,5 e 2,5 si arrotondano entrambi a 2.  Alcune volte viene chiamato *arrotondamento* e ha lo scopo di compensare la distorsione che potrebbe accumularsi quando si aggiungono molti numeri di questo tipo.  
+     <span data-ttu-id="49e58-165">Se la parte frazionaria è esattamente 0,5, arrotondano le funzioni di conversione di valori integer per l'intero pari più vicino.</span><span class="sxs-lookup"><span data-stu-id="49e58-165">If the fractional part is exactly 0.5, the integer conversion functions round it to the nearest even integer.</span></span> <span data-ttu-id="49e58-166">Ad esempio 0,5 verrà arrotondato a 0 e 1,5 e 2,5 che entrambi arrotondato a 2.</span><span class="sxs-lookup"><span data-stu-id="49e58-166">For example, 0.5 rounds to 0, and 1.5 and 2.5 both round to 2.</span></span> <span data-ttu-id="49e58-167">Talvolta chiamato *arrotondamento*, e il suo scopo consiste nel compensare la distorsione che potrebbero accumularsi quando aggiungono molti tali numeri.</span><span class="sxs-lookup"><span data-stu-id="49e58-167">This is sometimes called *banker's rounding*, and its purpose is to compensate for a bias that could accumulate when adding many such numbers together.</span></span>  
   
-     `CInt` e `CLng` differiscono dalle funzioni <xref:Microsoft.VisualBasic.Conversion.Int%2A> e <xref:Microsoft.VisualBasic.Conversion.Fix%2A> che troncano la parte frazionaria di un numero anziché arrotondarla.  Le funzioni `Fix` e `Int`, inoltre, restituiscono sempre un valore dello stesso tipo di quello passato.  
+     <span data-ttu-id="49e58-168">`CInt`e `CLng` diversi dal <xref:Microsoft.VisualBasic.Conversion.Int%2A> e <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funzioni, che, anziché arrotondare troncano, la parte frazionaria di un numero.</span><span class="sxs-lookup"><span data-stu-id="49e58-168">`CInt` and `CLng` differ from the <xref:Microsoft.VisualBasic.Conversion.Int%2A> and <xref:Microsoft.VisualBasic.Conversion.Fix%2A> functions, which truncate, rather than round, the fractional part of a number.</span></span> <span data-ttu-id="49e58-169">Inoltre, `Fix` e `Int` restituiscono sempre un valore dello stesso tipo di dati di quello passato.</span><span class="sxs-lookup"><span data-stu-id="49e58-169">Also, `Fix` and `Int` always return a value of the same data type as you pass in.</span></span>  
   
--   **Conversioni di data\/ora.** Utilizzare la funzione <xref:Microsoft.VisualBasic.Information.IsDate%2A> per determinare se è possibile convertire un valore in una data e ora.  `CDate` riconosce valori letterali di data e ora, ma non i valori numerici.  Per convertire un valore `Date` di Visual Basic 6.0 in un valore `Date` di Visual Basic 2005 o versioni successive, è possibile utilizzare il metodo <xref:System.DateTime.FromOADate%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="49e58-170">**Conversioni di data e ora.**</span><span class="sxs-lookup"><span data-stu-id="49e58-170">**Date/Time Conversions.**</span></span> <span data-ttu-id="49e58-171">Utilizzare il <xref:Microsoft.VisualBasic.Information.IsDate%2A> funzione per determinare se un valore può essere convertito in una data e ora.</span><span class="sxs-lookup"><span data-stu-id="49e58-171">Use the <xref:Microsoft.VisualBasic.Information.IsDate%2A> function to determine if a value can be converted to a date and time.</span></span> <span data-ttu-id="49e58-172">`CDate`riconosce i valori letterali di data e ora, ma i valori non numerici.</span><span class="sxs-lookup"><span data-stu-id="49e58-172">`CDate` recognizes date literals and time literals but not numeric values.</span></span> <span data-ttu-id="49e58-173">Per convertire un Visual Basic 6.0 `Date` valore un `Date` valore in Visual Basic 2005 o versioni successive, è possibile utilizzare il <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> metodo.</span><span class="sxs-lookup"><span data-stu-id="49e58-173">To convert a Visual Basic 6.0 `Date` value to a `Date` value in Visual Basic 2005 or later versions, you can use the <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> method.</span></span>  
   
--   **Valori di data\/ora neutri.** Il [Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md) contiene sempre informazioni sia sulla data che sull'ora.  Ai fini della conversione del tipo, Visual Basic considera 1\/1\/0001 \(1 gennaio dell'anno 1\) come *valore neutro* per la data e 00:00:00 \(mezzanotte\) come valore neutro per l'ora.  Se si converte un valore `Date` in una stringa, `CStr` non include i valori neutri nella stringa risultante.  Se ad esempio il valore `#January 1, 0001 9:30:00#` viene convertito in una stringa, il risultato sarà "9:30:00 AM" e le informazioni sulla data non verranno visualizzate.  Le informazioni della data, tuttavia, sono comunque presenti nel valore `Date` originale e possono essere recuperate con funzioni quali <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+-   <span data-ttu-id="49e58-174">**Neutro valori data/ora.**</span><span class="sxs-lookup"><span data-stu-id="49e58-174">**Neutral Date/Time Values.**</span></span> <span data-ttu-id="49e58-175">Il [tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md) contiene sempre le informazioni sia data e ora.</span><span class="sxs-lookup"><span data-stu-id="49e58-175">The [Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md) always contains both date and time information.</span></span> <span data-ttu-id="49e58-176">Ai fini della conversione del tipo, Visual Basic considera 1/1/0001 (1 ° gennaio dell'anno 1) da un *valore neutro* per la data e 00:00:00 (mezzanotte) come valore neutro per l'ora.</span><span class="sxs-lookup"><span data-stu-id="49e58-176">For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time.</span></span> <span data-ttu-id="49e58-177">Se si converte un `Date` , una stringa a valore `CStr` non include valori neutri nella stringa risultante.</span><span class="sxs-lookup"><span data-stu-id="49e58-177">If you convert a `Date` value to a string, `CStr` does not include neutral values in the resulting string.</span></span> <span data-ttu-id="49e58-178">Ad esempio, se si converte `#January 1, 0001 9:30:00#` in una stringa, il risultato è "9:30:00 AM"; le informazioni sulla data viene eliminate.</span><span class="sxs-lookup"><span data-stu-id="49e58-178">For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed.</span></span> <span data-ttu-id="49e58-179">Tuttavia, le informazioni sulla data è ancora presente nell'originale `Date` valore e possono essere recuperate con funzioni, ad esempio <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> (funzione).</span><span class="sxs-lookup"><span data-stu-id="49e58-179">However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> function.</span></span>  
   
--   **Sensibilità alle impostazioni cultura.** Le funzioni di conversione dei tipi che riguardano le stringhe eseguono conversioni in base alle impostazioni cultura correnti per l'applicazione.  La funzione `CDate`, ad esempio, riconosce i formati di data in base alle impostazioni locali del sistema.  È necessario specificare il giorno, il mese e l'anno nell'ordine corretto in base alle impostazioni locali utilizzate. In caso contrario, è possibile che la data non venga interpretata correttamente.  Un formato di data esteso contenente la stringa del giorno della settimana, ad esempio "mercoledì", non viene riconosciuto.  
+-   <span data-ttu-id="49e58-180">**Distinzione di impostazioni cultura.**</span><span class="sxs-lookup"><span data-stu-id="49e58-180">**Culture Sensitivity.**</span></span> <span data-ttu-id="49e58-181">Le funzioni di conversione di tipo che riguardano le stringhe eseguono conversioni in base alle impostazioni cultura correnti per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="49e58-181">The type conversion functions involving strings perform conversions based on the current culture settings for the application.</span></span> <span data-ttu-id="49e58-182">Ad esempio, `CDate` riconosce i formati di data in base all'impostazione delle impostazioni locali del sistema.</span><span class="sxs-lookup"><span data-stu-id="49e58-182">For example, `CDate` recognizes date formats according to the locale setting of your system.</span></span> <span data-ttu-id="49e58-183">È necessario specificare il giorno, mese e anno nell'ordine corretto delle impostazioni locali o la data potrebbe non essere interpretata correttamente.</span><span class="sxs-lookup"><span data-stu-id="49e58-183">You must provide the day, month, and year in the correct order for your locale, or the date might not be interpreted correctly.</span></span> <span data-ttu-id="49e58-184">Se contiene una stringa di giorno della settimana, ad esempio "Mercoledì", un formato di data estesa non è riconosciuto.</span><span class="sxs-lookup"><span data-stu-id="49e58-184">A long date format is not recognized if it contains a day-of-the-week string, such as "Wednesday".</span></span>  
   
-     Se è necessario eseguire la conversione in o da una rappresentazione di stringa di un valore in un formato diverso da quello specificato dalle impostazioni locali, non è possibile utilizzare le funzioni di conversione dei tipi di Visual Basic.  A tale scopo, utilizzare i metodi `ToString(IFormatProvider)` e `Parse(String, IFormatProvider)` del tipo di valore.  Utilizzare ad esempio <xref:System.Double.Parse%2A?displayProperty=fullName> per la conversione di una stringa in un tipo `Double` e <xref:System.Double.ToString%2A?displayProperty=fullName> per la conversione di un valore di tipo `Double` in una stringa.  
+     <span data-ttu-id="49e58-185">Se è necessario convertire verso o da una rappresentazione di stringa di un valore in un formato diverso da quello specificato dalle impostazioni locali, è possibile utilizzare le funzioni di conversione di tipo Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="49e58-185">If you need to convert to or from a string representation of a value in a format other than the one specified by your locale, you cannot use the Visual Basic type conversion functions.</span></span> <span data-ttu-id="49e58-186">A tale scopo, utilizzare il `ToString(IFormatProvider)` e `Parse(String, IFormatProvider)` metodi del tipo di valore.</span><span class="sxs-lookup"><span data-stu-id="49e58-186">To do this, use the `ToString(IFormatProvider)` and `Parse(String, IFormatProvider)` methods of that value's type.</span></span> <span data-ttu-id="49e58-187">Ad esempio, utilizzare <xref:System.Double.Parse%2A?displayProperty=nameWithType> quando si converte una stringa in un `Double`e utilizzare <xref:System.Double.ToString%2A?displayProperty=nameWithType> durante la conversione di un valore di tipo `Double` in una stringa.</span><span class="sxs-lookup"><span data-stu-id="49e58-187">For example, use <xref:System.Double.Parse%2A?displayProperty=nameWithType> when converting a string to a `Double`, and use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a string.</span></span>  
   
-## Funzione CType  
- La [funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md) accetta un secondo argomento, `typename`, e assegna `expression` a `typename`. `typename` può essere un qualsiasi tipo di dati, struttura, classe o interfaccia per cui esiste una conversione valida.  
+## <a name="ctype-function"></a><span data-ttu-id="49e58-188">CType Function</span><span class="sxs-lookup"><span data-stu-id="49e58-188">CType Function</span></span>  
+ <span data-ttu-id="49e58-189">Il [CType (funzione)](../../../visual-basic/language-reference/functions/ctype-function.md) accetta un secondo argomento `typename`e assegna `expression` a `typename`, dove `typename` può essere qualsiasi tipo di dati, struttura, classe o interfaccia a cui è presente una conversione valida.</span><span class="sxs-lookup"><span data-stu-id="49e58-189">The [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) takes a second argument, `typename`, and coerces `expression` to `typename`, where `typename` can be any data type, structure, class, or interface to which there exists a valid conversion.</span></span>  
   
- Per un confronto di `CType` con le altre parole chiave di conversione dei tipi, vedere [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) e [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).  
+ <span data-ttu-id="49e58-190">Per un confronto tra `CType` con l'altra tipo parole chiave di conversione, vedere [operatore DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) e [operatore TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md).</span><span class="sxs-lookup"><span data-stu-id="49e58-190">For a comparison of `CType` with the other type conversion keywords, see [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) and [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).</span></span>  
   
-## Esempio di CBool  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CBool` per convertire espressioni in valori `Boolean`.  Se un'espressione restituisce un valore diverso da zero, `CBool` restituisce `True`, altrimenti restituisce `False`.  
+## <a name="cbool-example"></a><span data-ttu-id="49e58-191">Esempio di CBool</span><span class="sxs-lookup"><span data-stu-id="49e58-191">CBool Example</span></span>  
+ <span data-ttu-id="49e58-192">L'esempio seguente usa il `CBool` funzione per convertire le espressioni di `Boolean` valori.</span><span class="sxs-lookup"><span data-stu-id="49e58-192">The following example uses the `CBool` function to convert expressions to `Boolean` values.</span></span> <span data-ttu-id="49e58-193">Se un'espressione restituisce un valore diverso da zero, `CBool` restituisce `True`; in caso contrario, restituisce `False`.</span><span class="sxs-lookup"><span data-stu-id="49e58-193">If an expression evaluates to a nonzero value, `CBool` returns `True`; otherwise, it returns `False`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
   
-## Esempio di CByte  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CByte` per convertire un'espressione in un valore `Byte`.  
+## <a name="cbyte-example"></a><span data-ttu-id="49e58-194">Esempio di CByte</span><span class="sxs-lookup"><span data-stu-id="49e58-194">CByte Example</span></span>  
+ <span data-ttu-id="49e58-195">L'esempio seguente usa il `CByte` funzione per convertire un'espressione in un `Byte`.</span><span class="sxs-lookup"><span data-stu-id="49e58-195">The following example uses the `CByte` function to convert an expression to a `Byte`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
   
-## Esempio di CChar  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CChar` per convertire il primo carattere di un'espressione `String` in un tipo `Char`.  
+## <a name="cchar-example"></a><span data-ttu-id="49e58-196">Esempio di CChar</span><span class="sxs-lookup"><span data-stu-id="49e58-196">CChar Example</span></span>  
+ <span data-ttu-id="49e58-197">L'esempio seguente usa il `CChar` funzione per convertire il primo carattere di un `String` espressione da un `Char` tipo.</span><span class="sxs-lookup"><span data-stu-id="49e58-197">The following example uses the `CChar` function to convert the first character of a `String` expression to a `Char` type.</span></span>  
   
  [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
   
- L'argomento di input per `CChar` deve essere costituito da un tipo di dati `Char` o `String`.  La funzione `CChar` non può essere utilizzata per convertire un numero in un carattere. `CChar` non è infatti in grado di accettare tipi di dati numerici.  Nell'esempio riportato di seguito viene ottenuto un numero che rappresenta un punto di codice \(codice carattere\) e viene convertito nel carattere corrispondente.  È possibile utilizzare la funzione <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> per ottenere la stringa di cifre, `CInt` per convertire la stringa nel tipo `Integer` e `ChrW` per convertire il numero nel tipo `Char`.  
+ <span data-ttu-id="49e58-198">Argomento di input per `CChar` deve essere di tipo di dati `Char` o `String`.</span><span class="sxs-lookup"><span data-stu-id="49e58-198">The input argument to `CChar` must be of data type `Char` or `String`.</span></span> <span data-ttu-id="49e58-199">Non è possibile utilizzare `CChar` per convertire un numero in un carattere, perché `CChar` non può accettare un tipo di dati numerici.</span><span class="sxs-lookup"><span data-stu-id="49e58-199">You cannot use `CChar` to convert a number to a character, because `CChar` cannot accept a numeric data type.</span></span> <span data-ttu-id="49e58-200">Nell'esempio seguente viene ottenuto un numero che rappresenta un punto di codice (codice carattere) e converte il carattere corrispondente.</span><span class="sxs-lookup"><span data-stu-id="49e58-200">The following example obtains a number representing a code point (character code) and converts it to the corresponding character.</span></span> <span data-ttu-id="49e58-201">Usa il <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> funzione per ottenere la stringa di cifre, `CInt` per convertire la stringa al tipo `Integer`, e `ChrW` effettuare la conversione al tipo `Char`.</span><span class="sxs-lookup"><span data-stu-id="49e58-201">It uses the <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> function to obtain the string of digits, `CInt` to convert the string to type `Integer`, and `ChrW` to convert the number to type `Char`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
-## Esempio di CDate  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CDate` per convertire stringhe in valori `Date`.  Non è in genere consigliabile definire a livello di codice le date e le ore come stringhe \(come illustrato in questo esempio\).  Utilizzare invece valori letterali di data e ora, quali \#Feb 12, 1969\# e \#4:35:47 PM\#.  
+## <a name="cdate-example"></a><span data-ttu-id="49e58-202">Esempio di CDate</span><span class="sxs-lookup"><span data-stu-id="49e58-202">CDate Example</span></span>  
+ <span data-ttu-id="49e58-203">L'esempio seguente usa il `CDate` funzione per convertire le stringhe in `Date` valori.</span><span class="sxs-lookup"><span data-stu-id="49e58-203">The following example uses the `CDate` function to convert strings to `Date` values.</span></span> <span data-ttu-id="49e58-204">In generale, non è consigliabile impostare come hardcoded date e ore come stringhe (come illustrato in questo esempio).</span><span class="sxs-lookup"><span data-stu-id="49e58-204">In general, hard-coding dates and times as strings (as shown in this example) is not recommended.</span></span> <span data-ttu-id="49e58-205">Utilizzare valori letterali di data e ora, ad esempio #Feb 12, &#1969; e # 4:45:23 PM # invece.</span><span class="sxs-lookup"><span data-stu-id="49e58-205">Use date literals and time literals, such as #Feb 12, 1969# and #4:45:23 PM#, instead.</span></span>  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
-## Esempio di CDbl  
+## <a name="cdbl-example"></a><span data-ttu-id="49e58-206">Esempio di CDbl</span><span class="sxs-lookup"><span data-stu-id="49e58-206">CDbl Example</span></span>  
  [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
   
-## Esempio di CDec  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CDec` per convertire un valore numerico in `Decimal`.  
+## <a name="cdec-example"></a><span data-ttu-id="49e58-207">Esempio di CDec</span><span class="sxs-lookup"><span data-stu-id="49e58-207">CDec Example</span></span>  
+ <span data-ttu-id="49e58-208">L'esempio seguente usa il `CDec` funzione per convertire un valore numerico per `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="49e58-208">The following example uses the `CDec` function to convert a numeric value to `Decimal`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
   
-## Esempio di CInt  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CInt` per convertire un valore nel tipo `Integer`.  
+## <a name="cint-example"></a><span data-ttu-id="49e58-209">Esempio di CInt</span><span class="sxs-lookup"><span data-stu-id="49e58-209">CInt Example</span></span>  
+ <span data-ttu-id="49e58-210">L'esempio seguente usa il `CInt` funzione per convertire un valore `Integer`.</span><span class="sxs-lookup"><span data-stu-id="49e58-210">The following example uses the `CInt` function to convert a value to `Integer`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
   
-## Esempio di CLng  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CLng` per convertire valori nel tipo `Long`.  
+## <a name="clng-example"></a><span data-ttu-id="49e58-211">Esempio di CLng</span><span class="sxs-lookup"><span data-stu-id="49e58-211">CLng Example</span></span>  
+ <span data-ttu-id="49e58-212">L'esempio seguente usa il `CLng` funzione per convertire i valori per `Long`.</span><span class="sxs-lookup"><span data-stu-id="49e58-212">The following example uses the `CLng` function to convert values to `Long`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
   
-## Esempio di CObj  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CObj` per convertire un valore numerico in `Object`.  La variabile `Object` contiene solo un puntatore a quattro byte che fa riferimento al valore `Double` assegnato.  
+## <a name="cobj-example"></a><span data-ttu-id="49e58-213">Esempio di CObj</span><span class="sxs-lookup"><span data-stu-id="49e58-213">CObj Example</span></span>  
+ <span data-ttu-id="49e58-214">L'esempio seguente usa il `CObj` funzione per convertire un valore numerico per `Object`.</span><span class="sxs-lookup"><span data-stu-id="49e58-214">The following example uses the `CObj` function to convert a numeric value to `Object`.</span></span> <span data-ttu-id="49e58-215">Il `Object` variabile contiene solo un puntatore a quattro byte, che fa riferimento al `Double` valore assegnato a esso.</span><span class="sxs-lookup"><span data-stu-id="49e58-215">The `Object` variable itself contains only a four-byte pointer, which points to the `Double` value assigned to it.</span></span>  
   
  [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
-## Esempio di CSByte  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CSByte` per convertire un valore numerico in `SByte`.  
+## <a name="csbyte-example"></a><span data-ttu-id="49e58-216">Esempio di CSByte</span><span class="sxs-lookup"><span data-stu-id="49e58-216">CSByte Example</span></span>  
+ <span data-ttu-id="49e58-217">L'esempio seguente usa il `CSByte` funzione per convertire un valore numerico per `SByte`.</span><span class="sxs-lookup"><span data-stu-id="49e58-217">The following example uses the `CSByte` function to convert a numeric value to `SByte`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
   
-## Esempio di CShort  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CShort` per convertire un valore numerico in `Short`.  
+## <a name="cshort-example"></a><span data-ttu-id="49e58-218">Esempio di CShort</span><span class="sxs-lookup"><span data-stu-id="49e58-218">CShort Example</span></span>  
+ <span data-ttu-id="49e58-219">L'esempio seguente usa il `CShort` funzione per convertire un valore numerico per `Short`.</span><span class="sxs-lookup"><span data-stu-id="49e58-219">The following example uses the `CShort` function to convert a numeric value to `Short`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
   
-## Esempio di CSng  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CSng` per convertire valori nel tipo `Single`.  
+## <a name="csng-example"></a><span data-ttu-id="49e58-220">Esempio di CSng</span><span class="sxs-lookup"><span data-stu-id="49e58-220">CSng Example</span></span>  
+ <span data-ttu-id="49e58-221">L'esempio seguente usa il `CSng` funzione per convertire i valori per `Single`.</span><span class="sxs-lookup"><span data-stu-id="49e58-221">The following example uses the `CSng` function to convert values to `Single`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
   
-## Esempio di CStr  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CStr` per convertire un valore numerico in `String`.  
+## <a name="cstr-example"></a><span data-ttu-id="49e58-222">Esempio di funzione CStr</span><span class="sxs-lookup"><span data-stu-id="49e58-222">CStr Example</span></span>  
+ <span data-ttu-id="49e58-223">L'esempio seguente usa il `CStr` funzione per convertire un valore numerico per `String`.</span><span class="sxs-lookup"><span data-stu-id="49e58-223">The following example uses the `CStr` function to convert a numeric value to `String`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
   
- Nell'esempio riportato di seguito viene utilizzata la funzione `CStr` per convertire valori `Date` in valori `String`.  
+ <span data-ttu-id="49e58-224">L'esempio seguente usa il `CStr` funzione per convertire `Date` valori `String` valori.</span><span class="sxs-lookup"><span data-stu-id="49e58-224">The following example uses the `CStr` function to convert `Date` values to `String` values.</span></span>  
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- La funzione `CStr` visualizza sempre un valore `Date` nel formato breve standard per le impostazioni locali correnti, ad esempio "6\/15\/2003 4:35:47 PM".  Tuttavia, `CStr` elimina i *valori neutri* 1\/1\/0001 per la data e 00:00:00 per l'ora.  
+ <span data-ttu-id="49e58-225">`CStr`Visualizza sempre un `Date` valore nel formato breve standard per le impostazioni locali correnti, ad esempio, "6/15/2003 4:35:47 PM".</span><span class="sxs-lookup"><span data-stu-id="49e58-225">`CStr` always renders a `Date` value in the standard short format for the current locale, for example, "6/15/2003 4:35:47 PM".</span></span> <span data-ttu-id="49e58-226">Tuttavia, `CStr` Sopprime il *valori neutri* di 1/1/0001 per la data e 00:00:00 per il periodo di tempo.</span><span class="sxs-lookup"><span data-stu-id="49e58-226">However, `CStr` suppresses the *neutral values* of 1/1/0001 for the date and 00:00:00 for the time.</span></span>  
   
- Per informazioni dettagliate sui valori restituiti da `CStr`, vedere [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
+ <span data-ttu-id="49e58-227">Per informazioni dettagliate sui valori restituiti da `CStr`, vedere [valori restituiti dalla funzione CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).</span><span class="sxs-lookup"><span data-stu-id="49e58-227">For more detail on the values returned by `CStr`, see [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).</span></span>  
   
-## Esempio di CUInt  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CUInt` per convertire un valore numerico in `UInteger`.  
+## <a name="cuint-example"></a><span data-ttu-id="49e58-228">Esempio di CUInt</span><span class="sxs-lookup"><span data-stu-id="49e58-228">CUInt Example</span></span>  
+ <span data-ttu-id="49e58-229">L'esempio seguente usa il `CUInt` funzione per convertire un valore numerico per `UInteger`.</span><span class="sxs-lookup"><span data-stu-id="49e58-229">The following example uses the `CUInt` function to convert a numeric value to `UInteger`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
   
-## Esempio di CULng  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CULng` per convertire un valore numerico in `ULong`.  
+## <a name="culng-example"></a><span data-ttu-id="49e58-230">Esempio di CULng</span><span class="sxs-lookup"><span data-stu-id="49e58-230">CULng Example</span></span>  
+ <span data-ttu-id="49e58-231">L'esempio seguente usa il `CULng` funzione per convertire un valore numerico per `ULong`.</span><span class="sxs-lookup"><span data-stu-id="49e58-231">The following example uses the `CULng` function to convert a numeric value to `ULong`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
   
-## Esempio di CUShort  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CUShort` per convertire un valore numerico in `UShort`.  
+## <a name="cushort-example"></a><span data-ttu-id="49e58-232">Esempio di CUShort</span><span class="sxs-lookup"><span data-stu-id="49e58-232">CUShort Example</span></span>  
+ <span data-ttu-id="49e58-233">L'esempio seguente usa il `CUShort` funzione per convertire un valore numerico per `UShort`.</span><span class="sxs-lookup"><span data-stu-id="49e58-233">The following example uses the `CUShort` function to convert a numeric value to `UShort`.</span></span>  
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## Vedere anche  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>   
- <xref:Microsoft.VisualBasic.Strings.Format%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Str%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>   
- [Conversion Functions](../../../visual-basic/language-reference/functions/conversion-functions.md)   
- [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="49e58-234">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="49e58-234">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Format%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
+ [<span data-ttu-id="49e58-235">Funzioni di conversione</span><span class="sxs-lookup"><span data-stu-id="49e58-235">Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [<span data-ttu-id="49e58-236">Conversioni di tipi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="49e58-236">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

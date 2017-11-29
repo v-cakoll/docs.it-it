@@ -1,15 +1,12 @@
 ---
 title: Tipi di dati in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data types [Visual Basic], declaring
 - typing
@@ -17,60 +14,43 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8b90a5e58d135a3769761ca431fd0c05f79e045f
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 20a24c8632e1f2193cfa86319a824dfcc038d9d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-types-in-visual-basic"></a>Tipi di dati in Visual Basic
-Il *tipo di dati* di un elemento di programmazione indica la tipologia di dati che può contenere e la modalità di archiviazione di tali dati. I tipi di dati si applicano a tutti i valori che possono essere archiviati nella memoria del computer o partecipano alla valutazione di un'espressione. Ogni variabile, valore letterale, costante, enumerazione, proprietà, parametro di routine, argomento di routine e valore restituito di routine ha un tipo di dati.  
+# <a name="data-types-in-visual-basic"></a><span data-ttu-id="d93eb-102">Tipi di dati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d93eb-102">Data Types in Visual Basic</span></span>
+<span data-ttu-id="d93eb-103">Il *tipo di dati* di un elemento di programmazione indica la tipologia di dati che può contenere e la modalità di archiviazione di tali dati.</span><span class="sxs-lookup"><span data-stu-id="d93eb-103">The *data type* of a programming element refers to what kind of data it can hold and how it stores that data.</span></span> <span data-ttu-id="d93eb-104">I tipi di dati si applicano a tutti i valori che possono essere archiviati nella memoria del computer o partecipano alla valutazione di un'espressione.</span><span class="sxs-lookup"><span data-stu-id="d93eb-104">Data types apply to all values that can be stored in computer memory or participate in the evaluation of an expression.</span></span> <span data-ttu-id="d93eb-105">Ogni variabile, valore letterale, costante, enumerazione, proprietà, parametro di routine, argomento di routine e valore restituito di routine ha un tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="d93eb-105">Every variable, literal, constant, enumeration, property, procedure parameter, procedure argument, and procedure return value has a data type.</span></span>  
   
-## <a name="declared-data-types"></a>Tipi di dati dichiarati  
- Un elemento di programmazione viene definito con un'istruzione di dichiarazione e il relativo tipo di dati viene specificato con la clausola `As`. La tabella seguente mostra le istruzioni usate per dichiarare i vari elementi.  
+## <a name="declared-data-types"></a><span data-ttu-id="d93eb-106">Tipi di dati dichiarati</span><span class="sxs-lookup"><span data-stu-id="d93eb-106">Declared Data Types</span></span>  
+ <span data-ttu-id="d93eb-107">Un elemento di programmazione viene definito con un'istruzione di dichiarazione e il relativo tipo di dati viene specificato con la clausola `As`.</span><span class="sxs-lookup"><span data-stu-id="d93eb-107">You define a programming element with a declaration statement, and you specify its data type with the `As` clause.</span></span> <span data-ttu-id="d93eb-108">La tabella seguente mostra le istruzioni usate per dichiarare i vari elementi.</span><span class="sxs-lookup"><span data-stu-id="d93eb-108">The following table shows the statements you use to declare various elements.</span></span>  
   
-|Elemento di programmazione|Dichiarazione del tipo di dati|  
+|<span data-ttu-id="d93eb-109">Elemento di programmazione</span><span class="sxs-lookup"><span data-stu-id="d93eb-109">Programming element</span></span>|<span data-ttu-id="d93eb-110">Dichiarazione del tipo di dati</span><span class="sxs-lookup"><span data-stu-id="d93eb-110">Data type declaration</span></span>|  
 |-------------------------|---------------------------|  
-|Variabile|In un'[istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
-|Literal|Con un carattere di tipo letterale. Vedere "Caratteri di tipo letterale" in [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
-|Costante|In un'[istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
-|Enumerazione|In un'[istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
-|Proprietà|In un'[istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
-|Parametro di routine|In un'[istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md), un'[istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md) o un'[istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
-|Argomento di routine|Nel codice chiamante; ogni argomento è un elemento di programmazione già dichiarato o un'espressione che contiene elementi dichiarati<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
-|Valore restituito di routine|In un'[istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md) o un'[istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
+|<span data-ttu-id="d93eb-111">Variabile</span><span class="sxs-lookup"><span data-stu-id="d93eb-111">Variable</span></span>|<span data-ttu-id="d93eb-112">In un'[istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)</span><span class="sxs-lookup"><span data-stu-id="d93eb-112">In a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)</span></span><br /><br /> <span data-ttu-id="d93eb-113">`Dim`   `amount As Double`</span><span class="sxs-lookup"><span data-stu-id="d93eb-113">`Dim`   `amount As Double`</span></span><br /><br /> <span data-ttu-id="d93eb-114">`Static`   `yourName As String`</span><span class="sxs-lookup"><span data-stu-id="d93eb-114">`Static`   `yourName As String`</span></span><br /><br /> <span data-ttu-id="d93eb-115">`Public`   `billsPaid As Decimal = 0`</span><span class="sxs-lookup"><span data-stu-id="d93eb-115">`Public`   `billsPaid As Decimal = 0`</span></span>|  
+|<span data-ttu-id="d93eb-116">Literal</span><span class="sxs-lookup"><span data-stu-id="d93eb-116">Literal</span></span>|<span data-ttu-id="d93eb-117">Con un carattere di tipo letterale. Vedere "Caratteri di tipo letterale" in [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)</span><span class="sxs-lookup"><span data-stu-id="d93eb-117">With a literal type character; see "Literal Type Characters" in [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)</span></span><br /><br /> <span data-ttu-id="d93eb-118">`Dim searchChar As Char = "."`  `C`</span><span class="sxs-lookup"><span data-stu-id="d93eb-118">`Dim searchChar As Char = "."`  `C`</span></span>|  
+|<span data-ttu-id="d93eb-119">Costante</span><span class="sxs-lookup"><span data-stu-id="d93eb-119">Constant</span></span>|<span data-ttu-id="d93eb-120">In un'[istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)</span><span class="sxs-lookup"><span data-stu-id="d93eb-120">In a [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)</span></span><br /><br /> <span data-ttu-id="d93eb-121">`Const`   `modulus As Single = 4.17825F`</span><span class="sxs-lookup"><span data-stu-id="d93eb-121">`Const`   `modulus As Single = 4.17825F`</span></span>|  
+|<span data-ttu-id="d93eb-122">Enumerazione</span><span class="sxs-lookup"><span data-stu-id="d93eb-122">Enumeration</span></span>|<span data-ttu-id="d93eb-123">In un'[istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)</span><span class="sxs-lookup"><span data-stu-id="d93eb-123">In an [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)</span></span><br /><br /> <span data-ttu-id="d93eb-124">`Public`   `Enum`   `colors`</span><span class="sxs-lookup"><span data-stu-id="d93eb-124">`Public`   `Enum`   `colors`</span></span>|  
+|<span data-ttu-id="d93eb-125">Proprietà</span><span class="sxs-lookup"><span data-stu-id="d93eb-125">Property</span></span>|<span data-ttu-id="d93eb-126">In un'[istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)</span><span class="sxs-lookup"><span data-stu-id="d93eb-126">In a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)</span></span><br /><br /> <span data-ttu-id="d93eb-127">`Property`   `region() As String`</span><span class="sxs-lookup"><span data-stu-id="d93eb-127">`Property`   `region() As String`</span></span>|  
+|<span data-ttu-id="d93eb-128">Parametro di routine</span><span class="sxs-lookup"><span data-stu-id="d93eb-128">Procedure parameter</span></span>|<span data-ttu-id="d93eb-129">In un'[istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md), un'[istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md) o un'[istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)</span><span class="sxs-lookup"><span data-stu-id="d93eb-129">In a [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md), [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md), or [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)</span></span><br /><br /> <span data-ttu-id="d93eb-130">`Sub addSale(ByVal`   `amount`   `As Double)`</span><span class="sxs-lookup"><span data-stu-id="d93eb-130">`Sub addSale(ByVal`   `amount`   `As Double)`</span></span>|  
+|<span data-ttu-id="d93eb-131">Argomento di routine</span><span class="sxs-lookup"><span data-stu-id="d93eb-131">Procedure argument</span></span>|<span data-ttu-id="d93eb-132">Nel codice chiamante; ogni argomento è un elemento di programmazione già dichiarato o un'espressione che contiene elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="d93eb-132">In the calling code; each argument is a programming element that has already been declared, or an expression containing declared elements</span></span><br /><br /> <span data-ttu-id="d93eb-133">`subString = Left(`  `inputString`  `,`   `5`  `)`</span><span class="sxs-lookup"><span data-stu-id="d93eb-133">`subString = Left(`  `inputString`  `,`   `5`  `)`</span></span>|  
+|<span data-ttu-id="d93eb-134">Valore restituito di routine</span><span class="sxs-lookup"><span data-stu-id="d93eb-134">Procedure return value</span></span>|<span data-ttu-id="d93eb-135">In un'[istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md) o un'[istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)</span><span class="sxs-lookup"><span data-stu-id="d93eb-135">In a [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md) or [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)</span></span><br /><br /> <span data-ttu-id="d93eb-136">`Function convert(ByVal b As Byte)`   `As String`</span><span class="sxs-lookup"><span data-stu-id="d93eb-136">`Function convert(ByVal b As Byte)`   `As String`</span></span>|  
   
- Per un elenco dei tipi di dati di Visual Basic, vedere [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ <span data-ttu-id="d93eb-137">Per un elenco dei tipi di dati di Visual Basic, vedere [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span><span class="sxs-lookup"><span data-stu-id="d93eb-137">For a list of Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Tuple](tuples.md)     
- [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Riepilogo dei tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Uso efficiente dei tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-
+## <a name="see-also"></a><span data-ttu-id="d93eb-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d93eb-138">See Also</span></span>  
+ [<span data-ttu-id="d93eb-139">Caratteri tipo</span><span class="sxs-lookup"><span data-stu-id="d93eb-139">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="d93eb-140">Tipi di dati elementari</span><span class="sxs-lookup"><span data-stu-id="d93eb-140">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="d93eb-141">Tipi di dati compositi</span><span class="sxs-lookup"><span data-stu-id="d93eb-141">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="d93eb-142">Tipi generici in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d93eb-142">Generic Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="d93eb-143">Tipi valore e tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="d93eb-143">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="d93eb-144">Conversioni di tipi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d93eb-144">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="d93eb-145">Strutture</span><span class="sxs-lookup"><span data-stu-id="d93eb-145">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ <span data-ttu-id="d93eb-146">[Tuple](tuples.md)   </span><span class="sxs-lookup"><span data-stu-id="d93eb-146">[Tuples](tuples.md)   </span></span>  
+ [<span data-ttu-id="d93eb-147">Risoluzione dei problemi relativi ai tipi di dati</span><span class="sxs-lookup"><span data-stu-id="d93eb-147">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="d93eb-148">Tipi di dati</span><span class="sxs-lookup"><span data-stu-id="d93eb-148">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="d93eb-149">Uso efficiente dei tipi di dati</span><span class="sxs-lookup"><span data-stu-id="d93eb-149">Efficient Use of Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

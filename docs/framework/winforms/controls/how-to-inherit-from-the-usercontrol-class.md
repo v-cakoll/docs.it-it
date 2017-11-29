@@ -1,52 +1,53 @@
 ---
-title: "Procedura: ereditare dalla classe UserControl | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli composti, creazione"
-  - "ereditarietà, Windows Form (controlli personalizzati)"
-  - "controlli utente [Windows Form], creazione"
-  - "UserControl (classe), ereditare da"
+title: 'Procedura: ereditare dalla classe UserControl'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inheritance [Windows Forms], Windows Forms custom controls
+- UserControl class [Windows Forms], inheriting from
+- user controls [Windows Forms], creating
+- composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fbeb2712742ae4c500ccd14a19c397d5d411c73a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ereditare dalla classe UserControl
-Per combinare la funzionalità di uno o più controlli Windows Form con codice personalizzato, è possibile creare un *controllo utente*.  I controlli utente combinano lo sviluppo rapido, funzionalità standard dei controlli Windows Form, con la versatilità delle proprietà e dei metodi personalizzati.  Quando si inizia a creare un controllo utente, viene visualizzata una finestra di progettazione in cui è possibile inserire i controlli standard Windows Form  che conservano tutta la funzionalità intrinseca nonché l'aspetto e il comportamento dei controlli standard,  ma, una volta incorporati nel controllo utente, non sono più disponibili mediante codice.  Il controllo utente esegue il proprio disegno e gestisce inoltre tutta la funzionalità di base associata ai controlli.  
+# <a name="how-to-inherit-from-the-usercontrol-class"></a><span data-ttu-id="02a1a-102">Procedura: ereditare dalla classe UserControl</span><span class="sxs-lookup"><span data-stu-id="02a1a-102">How to: Inherit from the UserControl Class</span></span>
+<span data-ttu-id="02a1a-103">Per combinare le funzionalità di uno o più controlli Windows Form con il codice personalizzato, è possibile creare un *controllo utente*.</span><span class="sxs-lookup"><span data-stu-id="02a1a-103">To combine the functionality of one or more Windows Forms controls with custom code, you can create a *user control*.</span></span> <span data-ttu-id="02a1a-104">I controlli utente combinano lo sviluppo rapido del controllo, la funzionalità del controllo standard di Windows Forms e la versatilità di proprietà e metodi personalizzati.</span><span class="sxs-lookup"><span data-stu-id="02a1a-104">User controls combine rapid control development, standard Windows Forms control functionality, and the versatility of custom properties and methods.</span></span> <span data-ttu-id="02a1a-105">Quando si inizia con la creazione di un controllo utente, viene visualizzata una finestra di progettazione in cui è possibile inserire controlli Windows Forms standard.</span><span class="sxs-lookup"><span data-stu-id="02a1a-105">When you begin creating a user control, you are presented with a visible designer, upon which you can place standard Windows Forms controls.</span></span> <span data-ttu-id="02a1a-106">Questi controlli mantengono tutte le funzionalità intrinseche, nonché l'aspetto e il comportamento dei controlli standard.</span><span class="sxs-lookup"><span data-stu-id="02a1a-106">These controls retain all of their inherent functionality, as well as the appearance and behavior (look and feel) of standard controls.</span></span> <span data-ttu-id="02a1a-107">Una volta che questi controlli sono incorporati nel controllo utente, tuttavia, non sono più disponibili tramite codice.</span><span class="sxs-lookup"><span data-stu-id="02a1a-107">Once these controls are built into the user control, however, they are no longer available to you through code.</span></span> <span data-ttu-id="02a1a-108">Il controllo utente esegue il proprio disegno e gestisce anche tutte le funzionalità di base associate ai controlli.</span><span class="sxs-lookup"><span data-stu-id="02a1a-108">The user control does its own painting and also handles all of the basic functionality associated with controls.</span></span>  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="02a1a-109">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="02a1a-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="02a1a-110">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="02a1a-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="02a1a-111">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="02a1a-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Per creare un controllo utente  
+### <a name="to-create-a-user-control"></a><span data-ttu-id="02a1a-112">Per creare un controllo utente</span><span class="sxs-lookup"><span data-stu-id="02a1a-112">To create a user control</span></span>  
   
-1.  Creare un nuovo progetto **Libreria di controlli Windows**.  
+1.  <span data-ttu-id="02a1a-113">Creare un nuovo progetto **Libreria di controlli Windows**.</span><span class="sxs-lookup"><span data-stu-id="02a1a-113">Create a new **Windows Control Library** project.</span></span>  
   
-     Viene creato un nuovo progetto con un controllo utente vuoto.  
+     <span data-ttu-id="02a1a-114">Viene creato un nuovo progetto con un controllo utente vuoto.</span><span class="sxs-lookup"><span data-stu-id="02a1a-114">A new project is created with a blank user control.</span></span>  
   
-2.  Trascinare i controlli dalla scheda **Windows Form** della **Casella degli strumenti** nella finestra di progettazione.  
+2.  <span data-ttu-id="02a1a-115">Trascinare i controlli dalla scheda **Windows Forms** della **Casella degli strumenti** nella finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="02a1a-115">Drag controls from the **Windows Forms** tab of the **Toolbox** onto your designer.</span></span>  
   
-3.  Posizionare e progettare questi controlli nel modo in cui si desidera che vengano visualizzati nel controllo utente finale.  Per consentire agli sviluppatori di accedere ai controlli costitutivi, è necessario dichiararli come Public o esporne le proprietà in modo selettivo.  Per informazioni dettagliate, vedere [Procedura: esporre le proprietà dei controlli costitutivi](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md).  
+3.  <span data-ttu-id="02a1a-116">Questi controlli devono essere posizionati e progettati come si desidera che vengano visualizzati nel controllo utente finale.</span><span class="sxs-lookup"><span data-stu-id="02a1a-116">These controls should be positioned and designed as you want them to appear in the final user control.</span></span> <span data-ttu-id="02a1a-117">Se si desidera consentire agli sviluppatori di accedere ai controlli costitutivi, è necessario dichiararli come public o esporre in modo selettivo le proprietà del controllo che li costituiscono.</span><span class="sxs-lookup"><span data-stu-id="02a1a-117">If you want to allow developers to access the constituent controls, you must declare them as public, or selectively expose properties of the constituent control.</span></span> <span data-ttu-id="02a1a-118">Per informazioni dettagliate, [Procedura: Esporre le proprietà dei controlli costitutivi](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md).</span><span class="sxs-lookup"><span data-stu-id="02a1a-118">For details, see [How to: Expose Properties of Constituent Controls](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md).</span></span>  
   
-4.  Implementare eventuali metodi o proprietà personalizzate da incorporare nel controllo.  
+4.  <span data-ttu-id="02a1a-119">Implementare eventuali metodi o proprietà personalizzati da incorporare nel controllo.</span><span class="sxs-lookup"><span data-stu-id="02a1a-119">Implement any custom methods or properties that your control will incorporate.</span></span>  
   
-5.  Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5.  Per ulteriori informazioni, vedere [Procedura: eseguire il test del comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+5.  <span data-ttu-id="02a1a-120">Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5.</span><span class="sxs-lookup"><span data-stu-id="02a1a-120">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span> <span data-ttu-id="02a1a-121">Per altre informazioni, vedere [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="02a1a-121">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-## Vedere anche  
- [Tipi di controlli personalizzati](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [Procedura: ereditare dalla classe Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)   
- [Procedura: ereditare da controlli di Windows Form esistenti](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)   
- [Procedura: creare controlli per Windows Form](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)   
- [Troubleshooting Inherited Event Handlers in Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)   
- [Procedura: eseguire il test del comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+## <a name="see-also"></a><span data-ttu-id="02a1a-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="02a1a-122">See Also</span></span>  
+ [<span data-ttu-id="02a1a-123">Tipi di controlli personalizzati</span><span class="sxs-lookup"><span data-stu-id="02a1a-123">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [<span data-ttu-id="02a1a-124">Procedura: Ereditare dalla classe Control</span><span class="sxs-lookup"><span data-stu-id="02a1a-124">How to: Inherit from the Control Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [<span data-ttu-id="02a1a-125">Procedura: Ereditare da controlli Windows Form esistenti</span><span class="sxs-lookup"><span data-stu-id="02a1a-125">How to: Inherit from Existing Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [<span data-ttu-id="02a1a-126">Procedura: Creare controlli per Windows Form</span><span class="sxs-lookup"><span data-stu-id="02a1a-126">How to: Author Controls for Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [<span data-ttu-id="02a1a-127">Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="02a1a-127">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ [<span data-ttu-id="02a1a-128">Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl</span><span class="sxs-lookup"><span data-stu-id="02a1a-128">How to: Test the Run-Time Behavior of a UserControl</span></span>](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)

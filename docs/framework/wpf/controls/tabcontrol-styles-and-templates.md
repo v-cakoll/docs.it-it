@@ -1,86 +1,88 @@
 ---
-title: "Stili e modelli di TabControl | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], TabControl"
-  - "parti [WPF], TabControl"
-  - "stati [WPF], TabControl"
-  - "stili [WPF], TabControl"
-  - "TabControl [WPF], stili e modelli"
-  - "modelli [WPF], TabControl"
+title: Stili e modelli di TabControl
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ControlTemplate [WPF], TabControl
+- TabControl [WPF], styles and templates [WPF]
+- parts [WPF], TabControl
+- styles [WPF], TabControl
+- states [WPF], TabControl
+- templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 054d744c9c15f73ef99f9e9df3a775831b1fe148
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stili e modelli di TabControl
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.TabControl>.  È possibile modificare l'oggetto <xref:System.Windows.Controls.ControlTemplate> predefinito per conferire al controllo un aspetto univoco.  Per ulteriori informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="tabcontrol-styles-and-templates"></a><span data-ttu-id="8797e-102">Stili e modelli di TabControl</span><span class="sxs-lookup"><span data-stu-id="8797e-102">TabControl Styles and Templates</span></span>
+<span data-ttu-id="8797e-103">In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.TabControl> controllo.</span><span class="sxs-lookup"><span data-stu-id="8797e-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.TabControl> control.</span></span> <span data-ttu-id="8797e-104">È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco.</span><span class="sxs-lookup"><span data-stu-id="8797e-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="8797e-105">Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="8797e-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Parti del controllo TabControl  
- Nella tabella seguente sono elencate le parti denominate del controllo <xref:System.Windows.Controls.TabControl>.  
+## <a name="tabcontrol-parts"></a><span data-ttu-id="8797e-106">Parti del controllo TabControl</span><span class="sxs-lookup"><span data-stu-id="8797e-106">TabControl Parts</span></span>  
+ <span data-ttu-id="8797e-107">La tabella seguente elenca le parti denominate la <xref:System.Windows.Controls.TabControl> controllo.</span><span class="sxs-lookup"><span data-stu-id="8797e-107">The following table lists the named parts for the <xref:System.Windows.Controls.TabControl> control.</span></span>  
   
-||||  
+|<span data-ttu-id="8797e-108">Parte</span><span class="sxs-lookup"><span data-stu-id="8797e-108">Part</span></span>|<span data-ttu-id="8797e-109">Tipo</span><span class="sxs-lookup"><span data-stu-id="8797e-109">Type</span></span>|<span data-ttu-id="8797e-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8797e-110">Description</span></span>|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Oggetto che mostra il contenuto dell'oggetto <xref:System.Windows.Controls.TabItem> attualmente selezionato.|  
+|<span data-ttu-id="8797e-111">PART_SelectedContentHost</span><span class="sxs-lookup"><span data-stu-id="8797e-111">PART_SelectedContentHost</span></span>|<xref:System.Windows.Controls.ContentPresenter>|<span data-ttu-id="8797e-112">L'oggetto che mostra il contenuto dell'oggetto attualmente selezionato <xref:System.Windows.Controls.TabItem>.</span><span class="sxs-lookup"><span data-stu-id="8797e-112">The object that shows the content of the currently selected <xref:System.Windows.Controls.TabItem>.</span></span>|  
   
- Quando si crea <xref:System.Windows.Controls.ControlTemplate> per un oggetto <xref:System.Windows.Controls.TabControl>, il modello potrebbe contenere <xref:System.Windows.Controls.ItemsPresenter> all'interno di <xref:System.Windows.Controls.ScrollViewer>.  L'oggetto <xref:System.Windows.Controls.ItemsPresenter> visualizza ogni elemento in <xref:System.Windows.Controls.TabControl>; <xref:System.Windows.Controls.ScrollViewer> consente lo scorrimento all'interno del controllo.  Se <xref:System.Windows.Controls.ItemsPresenter> non è l'elemento figlio diretto di <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare a <xref:System.Windows.Controls.ItemsPresenter> il nome `ItemsPresenter`.  
+ <span data-ttu-id="8797e-113">Quando si crea un <xref:System.Windows.Controls.ControlTemplate> per un <xref:System.Windows.Controls.TabControl>, il modello potrebbe contenere un <xref:System.Windows.Controls.ItemsPresenter> all'interno di un <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="8797e-113">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.TabControl>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="8797e-114">(Il <xref:System.Windows.Controls.ItemsPresenter> Visualizza ogni elemento nel <xref:System.Windows.Controls.TabControl>; <xref:System.Windows.Controls.ScrollViewer> Abilita lo scorrimento all'interno del controllo).</span><span class="sxs-lookup"><span data-stu-id="8797e-114">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.TabControl>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="8797e-115">Se il <xref:System.Windows.Controls.ItemsPresenter> non è il figlio diretto del <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare il <xref:System.Windows.Controls.ItemsPresenter> il nome, `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="8797e-115">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## Stati del controllo TabControl  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.TabControl>.  
+## <a name="tabcontrol-states"></a><span data-ttu-id="8797e-116">Stati del controllo TabControl</span><span class="sxs-lookup"><span data-stu-id="8797e-116">TabControl States</span></span>  
+ <span data-ttu-id="8797e-117">Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.TabControl> controllo.</span><span class="sxs-lookup"><span data-stu-id="8797e-117">The following table lists the visual states for the <xref:System.Windows.Controls.TabControl> control.</span></span>  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|<span data-ttu-id="8797e-118">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="8797e-118">VisualState Name</span></span>|<span data-ttu-id="8797e-119">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="8797e-119">VisualStateGroup Name</span></span>|<span data-ttu-id="8797e-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8797e-120">Description</span></span>|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Stato predefinito.|  
-|Disabled|CommonStates|Il controllo è disabilitato.|  
-|Valid|ValidationStates|Il controllo utilizza la classe <xref:System.Windows.Controls.Validation> e la proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `false`.|  
-|InvalidFocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo non ha lo stato attivo.|  
+|<span data-ttu-id="8797e-121">Normale</span><span class="sxs-lookup"><span data-stu-id="8797e-121">Normal</span></span>|<span data-ttu-id="8797e-122">CommonStates</span><span class="sxs-lookup"><span data-stu-id="8797e-122">CommonStates</span></span>|<span data-ttu-id="8797e-123">Lo stato predefinito.</span><span class="sxs-lookup"><span data-stu-id="8797e-123">The default state.</span></span>|  
+|<span data-ttu-id="8797e-124">Disabilitato</span><span class="sxs-lookup"><span data-stu-id="8797e-124">Disabled</span></span>|<span data-ttu-id="8797e-125">CommonStates</span><span class="sxs-lookup"><span data-stu-id="8797e-125">CommonStates</span></span>|<span data-ttu-id="8797e-126">Il controllo è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="8797e-126">The control is disabled.</span></span>|  
+|<span data-ttu-id="8797e-127">Valido</span><span class="sxs-lookup"><span data-stu-id="8797e-127">Valid</span></span>|<span data-ttu-id="8797e-128">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8797e-128">ValidationStates</span></span>|<span data-ttu-id="8797e-129">Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.</span><span class="sxs-lookup"><span data-stu-id="8797e-129">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="8797e-130">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="8797e-130">InvalidFocused</span></span>|<span data-ttu-id="8797e-131">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8797e-131">ValidationStates</span></span>|<span data-ttu-id="8797e-132">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="8797e-132">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="8797e-133">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="8797e-133">InvalidUnfocused</span></span>|<span data-ttu-id="8797e-134">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8797e-134">ValidationStates</span></span>|<span data-ttu-id="8797e-135">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.</span><span class="sxs-lookup"><span data-stu-id="8797e-135">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Parti del controllo TabItem  
- Il controllo <xref:System.Windows.Controls.TabItem> non include parti denominate.  
+## <a name="tabitem-parts"></a><span data-ttu-id="8797e-136">Parti del controllo TabItem</span><span class="sxs-lookup"><span data-stu-id="8797e-136">TabItem Parts</span></span>  
+ <span data-ttu-id="8797e-137">Il <xref:System.Windows.Controls.TabItem> controllo non dispone di parti denominate.</span><span class="sxs-lookup"><span data-stu-id="8797e-137">The <xref:System.Windows.Controls.TabItem> control does not have any named parts.</span></span>  
   
-## Stati del controllo TabItem  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.TabItem>.  
+## <a name="tabitem-states"></a><span data-ttu-id="8797e-138">Stati del controllo TabItem</span><span class="sxs-lookup"><span data-stu-id="8797e-138">TabItem States</span></span>  
+ <span data-ttu-id="8797e-139">Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.TabItem> controllo.</span><span class="sxs-lookup"><span data-stu-id="8797e-139">The following table lists the visual states for the <xref:System.Windows.Controls.TabItem> control.</span></span>  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|<span data-ttu-id="8797e-140">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="8797e-140">VisualState Name</span></span>|<span data-ttu-id="8797e-141">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="8797e-141">VisualStateGroup Name</span></span>|<span data-ttu-id="8797e-142">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8797e-142">Description</span></span>|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Stato predefinito.|  
-|MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
-|Disabled|CommonStates|Il controllo è disabilitato.|  
-|Focused|FocusStates|Il controllo ha lo stato attivo.|  
-|Unfocused|FocusStates|Il controllo non ha lo stato attivo.|  
-|Selezionato|SelectionStates|Il controllo è selezionato.|  
-|Non selezionato|SelectionStates|Il controllo non è selezionato.|  
-|Valid|ValidationStates|Il controllo utilizza la classe <xref:System.Windows.Controls.Validation> e la proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `false`.|  
-|InvalidFocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo non ha lo stato attivo.|  
+|<span data-ttu-id="8797e-143">Normale</span><span class="sxs-lookup"><span data-stu-id="8797e-143">Normal</span></span>|<span data-ttu-id="8797e-144">CommonStates</span><span class="sxs-lookup"><span data-stu-id="8797e-144">CommonStates</span></span>|<span data-ttu-id="8797e-145">Lo stato predefinito.</span><span class="sxs-lookup"><span data-stu-id="8797e-145">The default state.</span></span>|  
+|<span data-ttu-id="8797e-146">MouseOver</span><span class="sxs-lookup"><span data-stu-id="8797e-146">MouseOver</span></span>|<span data-ttu-id="8797e-147">CommonStates</span><span class="sxs-lookup"><span data-stu-id="8797e-147">CommonStates</span></span>|<span data-ttu-id="8797e-148">Il puntatore del mouse è posizionato sul controllo.</span><span class="sxs-lookup"><span data-stu-id="8797e-148">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="8797e-149">Disabilitato</span><span class="sxs-lookup"><span data-stu-id="8797e-149">Disabled</span></span>|<span data-ttu-id="8797e-150">CommonStates</span><span class="sxs-lookup"><span data-stu-id="8797e-150">CommonStates</span></span>|<span data-ttu-id="8797e-151">Il controllo è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="8797e-151">The control is disabled.</span></span>|  
+|<span data-ttu-id="8797e-152">Con stato attivo</span><span class="sxs-lookup"><span data-stu-id="8797e-152">Focused</span></span>|<span data-ttu-id="8797e-153">FocusStates</span><span class="sxs-lookup"><span data-stu-id="8797e-153">FocusStates</span></span>|<span data-ttu-id="8797e-154">Il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="8797e-154">The control has focus.</span></span>|  
+|<span data-ttu-id="8797e-155">Con stato non attivo</span><span class="sxs-lookup"><span data-stu-id="8797e-155">Unfocused</span></span>|<span data-ttu-id="8797e-156">FocusStates</span><span class="sxs-lookup"><span data-stu-id="8797e-156">FocusStates</span></span>|<span data-ttu-id="8797e-157">Il controllo non ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="8797e-157">The control does not have focus.</span></span>|  
+|<span data-ttu-id="8797e-158">Selezionato</span><span class="sxs-lookup"><span data-stu-id="8797e-158">Selected</span></span>|<span data-ttu-id="8797e-159">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="8797e-159">SelectionStates</span></span>|<span data-ttu-id="8797e-160">Il controllo è selezionato.</span><span class="sxs-lookup"><span data-stu-id="8797e-160">The control is selected.</span></span>|  
+|<span data-ttu-id="8797e-161">Deselezionato</span><span class="sxs-lookup"><span data-stu-id="8797e-161">Unselected</span></span>|<span data-ttu-id="8797e-162">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="8797e-162">SelectionStates</span></span>|<span data-ttu-id="8797e-163">Il controllo è deselezionato.</span><span class="sxs-lookup"><span data-stu-id="8797e-163">The control is not selected.</span></span>|  
+|<span data-ttu-id="8797e-164">Valido</span><span class="sxs-lookup"><span data-stu-id="8797e-164">Valid</span></span>|<span data-ttu-id="8797e-165">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8797e-165">ValidationStates</span></span>|<span data-ttu-id="8797e-166">Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.</span><span class="sxs-lookup"><span data-stu-id="8797e-166">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="8797e-167">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="8797e-167">InvalidFocused</span></span>|<span data-ttu-id="8797e-168">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8797e-168">ValidationStates</span></span>|<span data-ttu-id="8797e-169">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="8797e-169">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="8797e-170">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="8797e-170">InvalidUnfocused</span></span>|<span data-ttu-id="8797e-171">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8797e-171">ValidationStates</span></span>|<span data-ttu-id="8797e-172">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.</span><span class="sxs-lookup"><span data-stu-id="8797e-172">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Esempio di ControlTemplate del controllo TabControl  
- Nell'esempio seguente viene illustrato come definire <xref:System.Windows.Controls.ControlTemplate> per i controlli <xref:System.Windows.Controls.TabControl> e <xref:System.Windows.Controls.TabItem>.  
+## <a name="tabcontrol-controltemplate-example"></a><span data-ttu-id="8797e-173">Esempio di ControlTemplate del controllo TabControl</span><span class="sxs-lookup"><span data-stu-id="8797e-173">TabControl ControlTemplate Example</span></span>  
+ <span data-ttu-id="8797e-174">Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.TabControl> e <xref:System.Windows.Controls.TabItem> controlli.</span><span class="sxs-lookup"><span data-stu-id="8797e-174">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.TabControl> and <xref:System.Windows.Controls.TabItem> controls.</span></span>  
   
- [!code-xml[ControlTemplateExamples#TabControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tabcontrol.xaml#tabcontrol)]  
+ [!code-xaml[ControlTemplateExamples#TabControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tabcontrol.xaml#tabcontrol)]  
   
- Nell'esempio precedente vengono utilizzate una o più delle risorse seguenti.  
+ <span data-ttu-id="8797e-175">L'esempio precedente usa una o più delle seguenti risorse.</span><span class="sxs-lookup"><span data-stu-id="8797e-175">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Per l'esempio completo, vedere          [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="8797e-176">Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="8797e-176">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="8797e-177">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8797e-177">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="8797e-178">Stili e modelli di Control</span><span class="sxs-lookup"><span data-stu-id="8797e-178">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="8797e-179">Personalizzazione dei controlli</span><span class="sxs-lookup"><span data-stu-id="8797e-179">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="8797e-180">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="8797e-180">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="8797e-181">Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="8797e-181">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

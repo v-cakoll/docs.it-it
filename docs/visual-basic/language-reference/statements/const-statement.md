@@ -1,120 +1,117 @@
 ---
-title: "Const Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Const"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Const statement [Visual Basic]"
+title: Istruzione Const (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Const
+helpviewer_keywords: Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Const Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consente di dichiarare e definire una o più costanti.  
+# <a name="const-statement-visual-basic"></a><span data-ttu-id="2e3b6-102">Istruzione Const (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e3b6-102">Const Statement (Visual Basic)</span></span>
+<span data-ttu-id="2e3b6-103">Dichiara e definisce una o più costanti.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-103">Declares and defines one or more constants.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="2e3b6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2e3b6-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ]   
+[ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="2e3b6-105">Parti</span><span class="sxs-lookup"><span data-stu-id="2e3b6-105">Parts</span></span>  
  `attributelist`  
- Parametro facoltativo.  Elenco di attributi applicabili a tutte le costanti dichiarate nell'istruzione.  Vedere [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi angolari \("`<`" e "`>`"\).  
+ <span data-ttu-id="2e3b6-106">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-106">Optional.</span></span> <span data-ttu-id="2e3b6-107">Elenco di attributi che si applicano a tutte le costanti dichiarate in questa istruzione.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-107">List of attributes that apply to all the constants declared in this statement.</span></span> <span data-ttu-id="2e3b6-108">Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").</span><span class="sxs-lookup"><span data-stu-id="2e3b6-108">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>  
   
  `accessmodifier`  
- Parametro facoltativo.  Consente di specificare il codice con cui accedere alle costanti.  Sono consentiti i valori seguenti: [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend` o [Private](../../../visual-basic/language-reference/modifiers/private.md).  
+ <span data-ttu-id="2e3b6-109">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-109">Optional.</span></span> <span data-ttu-id="2e3b6-110">Consente di specificare il codice può accedere a queste costanti.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-110">Use this to specify what code can access these constants.</span></span> <span data-ttu-id="2e3b6-111">Può essere [pubblica](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, o [privata](../../../visual-basic/language-reference/modifiers/private.md).</span><span class="sxs-lookup"><span data-stu-id="2e3b6-111">Can be [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, or [Private](../../../visual-basic/language-reference/modifiers/private.md).</span></span>  
   
  `Shadows`  
- Parametro facoltativo.  Consente di ridichiarare e nascondere un elemento di programmazione nella classe base.  Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ <span data-ttu-id="2e3b6-112">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-112">Optional.</span></span> <span data-ttu-id="2e3b6-113">Consente di dichiarare nuovamente e nascondere un elemento di programmazione in una classe base.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-113">Use this to redeclare and hide a programming element in a base class.</span></span> <span data-ttu-id="2e3b6-114">Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span><span class="sxs-lookup"><span data-stu-id="2e3b6-114">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>  
   
  `constantlist`  
- Obbligatorio.  Elenco delle costanti dichiarate in questa istruzione.  
+ <span data-ttu-id="2e3b6-115">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-115">Required.</span></span> <span data-ttu-id="2e3b6-116">Elenco di costanti che vengono dichiarate in questa istruzione.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-116">List of constants being declared in this statement.</span></span>  
   
- `constant` `[ ,` `constant` `... ]`  
+ <span data-ttu-id="2e3b6-117">`constant` `[ ,` `constant` `... ]`</span><span class="sxs-lookup"><span data-stu-id="2e3b6-117">`constant` `[ ,` `constant` `... ]`</span></span>  
   
- Ogni `constant` presenta la sintassi e le parti seguenti:  
+ <span data-ttu-id="2e3b6-118">Ogni `constant` presenta la sintassi e le parti seguenti:</span><span class="sxs-lookup"><span data-stu-id="2e3b6-118">Each `constant` has the following syntax and parts:</span></span>  
   
- `constantname` `[ As` `datatype` `] =` `initializer`  
+ <span data-ttu-id="2e3b6-119">`constantname` `[ As` `datatype` `] =` `initializer`</span><span class="sxs-lookup"><span data-stu-id="2e3b6-119">`constantname` `[ As` `datatype` `] =` `initializer`</span></span>  
   
-|Parte|Descrizione|  
-|-----------|-----------------|  
-|`constantname`|Obbligatorio.  Nome della costante.  Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`datatype`|Obbligatoria se `Option Strict` è `On`.  Consente di indicare il tipo di dati della costante.|  
-|`initializer`|Obbligatorio.  Espressione valutata in fase di compilazione e assegnata alla costante.|  
+|<span data-ttu-id="2e3b6-120">Parte</span><span class="sxs-lookup"><span data-stu-id="2e3b6-120">Part</span></span>|<span data-ttu-id="2e3b6-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2e3b6-121">Description</span></span>|  
+|----------|-----------------|  
+|`constantname`|<span data-ttu-id="2e3b6-122">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-122">Required.</span></span> <span data-ttu-id="2e3b6-123">Nome della costante.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-123">Name of the constant.</span></span> <span data-ttu-id="2e3b6-124">Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="2e3b6-124">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`datatype`|<span data-ttu-id="2e3b6-125">Obbligatorio se `Option Strict` è `On`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-125">Required if `Option Strict` is `On`.</span></span> <span data-ttu-id="2e3b6-126">Tipo di dati della costante.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-126">Data type of the constant.</span></span>|  
+|`initializer`|<span data-ttu-id="2e3b6-127">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-127">Required.</span></span> <span data-ttu-id="2e3b6-128">Espressione che viene valutata in fase di compilazione e assegnato alla costante.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-128">Expression that is evaluated at compile time and assigned to the constant.</span></span>|  
   
-## Note  
- Se nell'applicazione è contenuto un valore che non viene mai modificato, è possibile definire una costante denominata e utilizzarla al posto di un valore letterale.  È più facile ricordare un nome che un valore.  È possibile definire la costante una sola volta e utilizzarla in numerose posizioni del codice.  Se in una versione successiva è necessario ridefinire il valore, l'istruzione `Const` è l'unico luogo in cui si dovranno effettuare modifiche.  
+## <a name="remarks"></a><span data-ttu-id="2e3b6-129">Note</span><span class="sxs-lookup"><span data-stu-id="2e3b6-129">Remarks</span></span>  
+ <span data-ttu-id="2e3b6-130">Se si dispone di un valore che non viene mai modificata nell'applicazione, è possibile definire una costante denominata e utilizzarlo al posto di un valore letterale.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-130">If you have a value that never changes in your application, you can define a named constant and use it in place of a literal value.</span></span> <span data-ttu-id="2e3b6-131">È facile da ricordare rispetto a un valore di un nome.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-131">A name is easier to remember than a value.</span></span> <span data-ttu-id="2e3b6-132">È possibile definire la costante a una sola volta e usarla in numerose posizioni nel codice.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-132">You can define the constant just once and use it in many places in your code.</span></span> <span data-ttu-id="2e3b6-133">Se in una versione successiva è necessario ridefinire il valore, il `Const` istruzione è l'unico punto è necessario apportare una modifica.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-133">If in a later version you need to redefine the value, the `Const` statement is the only place you need to make a change.</span></span>  
   
- È possibile utilizzare l'istruzione `Const` solo a livello di modulo o di routine.  In altri termini, il *contesto della dichiarazione* per una variabile deve essere una classe, una struttura, un modulo, una routine o un blocco, e non può essere un file di origine, uno spazio dei nomi o un'interfaccia.  Per ulteriori informazioni, vedere [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="2e3b6-134">È possibile utilizzare `Const` solo a livello di modulo o routine.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-134">You can use `Const` only at module or procedure level.</span></span> <span data-ttu-id="2e3b6-135">Ciò significa che il *contesto della dichiarazione* per una variabile deve essere una classe, struttura, modulo, routine o blocco e non può essere un file di origine, lo spazio dei nomi o interfaccia.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-135">This means the *declaration context* for a variable must be a class, structure, module, procedure, or block, and cannot be a source file, namespace, or interface.</span></span> <span data-ttu-id="2e3b6-136">Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="2e3b6-136">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Le costanti locali all'interno di una routine per impostazione predefinita dispongono di accesso pubblico e non è possibile utilizzare modificatori di accesso per tali variabili.  Per impostazione predefinita, le costanti dei membri di classi e moduli al di fuori di una routine dispongono di accesso privato, mentre le costanti membri di strutture dispongono di accesso pubblico.  È possibile modificarne i livelli di accesso mediante gli appositi modificatori.  
+ <span data-ttu-id="2e3b6-137">Impostazione predefinita le costanti locali (all'interno di una routine) per l'accesso pubblico ed è possibile utilizzare modificatori di accesso su di essi.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-137">Local constants (inside a procedure) default to public access, and you cannot use any access modifiers on them.</span></span> <span data-ttu-id="2e3b6-138">Classe e modulo predefinito di costanti (all'esterno di qualsiasi routine) membro accesso privato e predefinito di costanti di membro di struttura per l'accesso pubblico.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-138">Class and module member constants (outside any procedure) default to private access, and structure member constants default to public access.</span></span> <span data-ttu-id="2e3b6-139">È possibile regolare i livelli di accesso con i modificatori di accesso.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-139">You can adjust their access levels with the access modifiers.</span></span>  
   
-## Regole  
+## <a name="rules"></a><span data-ttu-id="2e3b6-140">Regole</span><span class="sxs-lookup"><span data-stu-id="2e3b6-140">Rules</span></span>  
   
--   **Contesto della dichiarazione.** Una costante dichiarata a livello di modulo, al di fuori di una routine, è una *costante membro* ed è membro della classe, della struttura o del modulo che la dichiara.  
+-   <span data-ttu-id="2e3b6-141">**Contesto della dichiarazione.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-141">**Declaration Context.**</span></span> <span data-ttu-id="2e3b6-142">Una costante dichiarata a livello di modulo, all'esterno di qualsiasi routine, un *costante membro*; è un membro della classe, struttura o modulo che lo dichiara.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-142">A constant declared at module level, outside any procedure, is a *member constant*; it is a member of the class, structure, or module that declares it.</span></span>  
   
-     Una costante dichiarata a livello di routine è una *costante locale* ed è locale per la routine o il blocco che la dichiara.  
+     <span data-ttu-id="2e3b6-143">Una costante dichiarata a livello di routine è un *costante locale*; è locale per la routine o un blocco che lo dichiara.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-143">A constant declared at procedure level is a *local constant*; it is local to the procedure or block that declares it.</span></span>  
   
--   **Attributi.** È possibile applicare gli attributi solo alle costanti membri e non alle costanti locali.  Un attributo fornisce ai metadati dell'assembly informazioni non significative per archivi temporanei quali le costanti locali.  
+-   <span data-ttu-id="2e3b6-144">**Attributi.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-144">**Attributes.**</span></span> <span data-ttu-id="2e3b6-145">È possibile applicare gli attributi solo per le costanti di membro, non per le costanti locali.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-145">You can apply attributes only to member constants, not to local constants.</span></span> <span data-ttu-id="2e3b6-146">Un attributo fornisce informazioni per i metadati dell'assembly, che non è significativo per l'archiviazione temporanea, ad esempio le costanti locali.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-146">An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local constants.</span></span>  
   
--   **Modificatori.** Per impostazione predefinita, tutte le costanti sono `Shared`, `Static` e `ReadOnly`.  Non è possibile utilizzare queste parole chiave per dichiarare una costante.  
+-   <span data-ttu-id="2e3b6-147">**Modificatori.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-147">**Modifiers.**</span></span> <span data-ttu-id="2e3b6-148">Per impostazione predefinita, tutte le costanti sono `Shared`, `Static`, e `ReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-148">By default, all constants are `Shared`, `Static`, and `ReadOnly`.</span></span> <span data-ttu-id="2e3b6-149">Non è possibile utilizzare uno qualsiasi di queste parole chiave per dichiarare una costante.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-149">You cannot use any of these keywords when declaring a constant.</span></span>  
   
-     A livello di routine non è possibile utilizzare `Shadows` né i modificatori di accesso per dichiarare le costanti locali.  
+     <span data-ttu-id="2e3b6-150">A livello di routine, non è possibile utilizzare `Shadows` o i modificatori di accesso per dichiarare le costanti locali.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-150">At procedure level, you cannot use `Shadows` or any access modifiers to declare local constants.</span></span>  
   
--   **Costanti multiple.** È possibile dichiarare più costanti nella stessa istruzione di dichiarazione, specificando per ognuna la parte `constantname` e separandole con una virgola.  
+-   <span data-ttu-id="2e3b6-151">**Più costanti.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-151">**Multiple Constants.**</span></span> <span data-ttu-id="2e3b6-152">È possibile dichiarare più costanti nella stessa istruzione di dichiarazione, specificando il `constantname` parte per ognuno di essi.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-152">You can declare several constants in the same declaration statement, specifying the `constantname` part for each one.</span></span> <span data-ttu-id="2e3b6-153">Più costanti sono separate da virgole.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-153">Multiple constants are separated by commas.</span></span>  
   
-## Regole per tipi di dati  
+## <a name="data-type-rules"></a><span data-ttu-id="2e3b6-154">Regole di tipo di dati</span><span class="sxs-lookup"><span data-stu-id="2e3b6-154">Data Type Rules</span></span>  
   
--   **Tipi di dati.** L'istruzione `Const` può dichiarare il tipo di dati di una variabile.  È possibile specificare un tipo di dati o il nome di una enumerazione.  
+-   <span data-ttu-id="2e3b6-155">**Tipi di dati.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-155">**Data Types.**</span></span> <span data-ttu-id="2e3b6-156">Il `Const` istruzione può dichiarare il tipo di dati di una variabile.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-156">The `Const` statement can declare the data type of a variable.</span></span> <span data-ttu-id="2e3b6-157">È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-157">You can specify any data type or the name of an enumeration.</span></span>  
   
--   **Tipo predefinito.** Se non si specifica `datatype`, la costante accetta il tipo di dati di `initializer`.  Se si specificano sia la parte `datatype` che la parte `initializer`, il tipo di dati di `initializer` deve poter essere convertito in `datatype`.  Se non vengono specificate né `datatype` né `initializer`, verrà utilizzato il tipo di dati predefinito `Object`.  
+-   <span data-ttu-id="2e3b6-158">**Tipo predefinito.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-158">**Default Type.**</span></span> <span data-ttu-id="2e3b6-159">Se non si specifica `datatype`, la costante accetta il tipo di dati `initializer`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-159">If you do not specify `datatype`, the constant takes the data type of `initializer`.</span></span> <span data-ttu-id="2e3b6-160">Se si specificano entrambi `datatype` e `initializer`, il tipo di dati `initializer` deve essere convertibile in `datatype`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-160">If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`.</span></span> <span data-ttu-id="2e3b6-161">Se non si specifica `datatype` né `initializer` è presente, il tipo di dati predefinite per `Object`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-161">If neither `datatype` nor `initializer` is present, the data type defaults to `Object`.</span></span>  
   
--   **Tipi differenti.** È possibile specificare tipi diversi di dati per costanti diverse utilizzando una clausola `As` distinta per ogni variabile dichiarata.  Non è tuttavia possibile dichiarare più costanti dello stesso tipo utilizzando una clausola `As` comune.  
+-   <span data-ttu-id="2e3b6-162">**Tipi diversi.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-162">**Different Types.**</span></span> <span data-ttu-id="2e3b6-163">È possibile specificare i tipi di dati diversi per costanti diverse utilizzando un oggetto separato `As` clausola per ogni variabile è dichiarata.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-163">You can specify different data types for different constants by using a separate `As` clause for each variable you declare.</span></span> <span data-ttu-id="2e3b6-164">Tuttavia, non è possibile dichiarare più costanti dello stesso tipo utilizzando un comune `As` clausola.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-164">However, you cannot declare several constants to be of the same type by using a common `As` clause.</span></span>  
   
--   **Inizializzazione.** È necessario inizializzare il valore di ogni costante in `constantlist`.  Per fornire un'espressione da assegnare alla costante, viene utilizzato `initializer`.  L'espressione può essere composta da una combinazione di valori letterali, da altre costanti già definite e da membri di enumerazione già definiti.  Per combinare tali elementi è possibile utilizzare operatori aritmetici e logici.  
+-   <span data-ttu-id="2e3b6-165">**Inizializzazione.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-165">**Initialization.**</span></span> <span data-ttu-id="2e3b6-166">È necessario inizializzare il valore di ogni costante in `constantlist`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-166">You must initialize the value of every constant in `constantlist`.</span></span> <span data-ttu-id="2e3b6-167">Utilizzare `initializer` per fornire un'espressione da assegnare alla costante.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-167">You use `initializer` to supply an expression to be assigned to the constant.</span></span> <span data-ttu-id="2e3b6-168">L'espressione può essere qualsiasi combinazione di valori letterali, sono già definite altre costanti e membri di enumerazione che sono già definiti.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-168">The expression can be any combination of literals, other constants that are already defined, and enumeration members that are already defined.</span></span> <span data-ttu-id="2e3b6-169">È possibile utilizzare gli operatori aritmetici e logici per combinare tali elementi.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-169">You can use arithmetic and logical operators to combine such elements.</span></span>  
   
-     Nella parte `initializer` non è possibile utilizzare variabili o funzioni,  ma è consentito l'utilizzo di parole chiave di conversione quali `CByte` e `CShort`.  È inoltre possibile utilizzare `AscW`, se lo si chiama con una costante `String` o un argomento `Char`, poiché è possibile eseguirne la valutazione in fase di compilazione.  
+     <span data-ttu-id="2e3b6-170">Non è possibile utilizzare variabili o funzioni `initializer`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-170">You cannot use variables or functions in `initializer`.</span></span> <span data-ttu-id="2e3b6-171">Tuttavia, è possibile utilizzare parole chiave di conversione, ad esempio `CByte` e `CShort`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-171">However, you can use conversion keywords such as `CByte` and `CShort`.</span></span> <span data-ttu-id="2e3b6-172">È inoltre possibile utilizzare `AscW` se viene chiamata con una costante `String` o `Char` argomento, dal momento che può essere valutato in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-172">You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.</span></span>  
   
-## Comportamento  
+## <a name="behavior"></a><span data-ttu-id="2e3b6-173">Comportamento</span><span class="sxs-lookup"><span data-stu-id="2e3b6-173">Behavior</span></span>  
   
--   **Ambito.** È possibile accedere alle costanti locali solo dall'interno della routine o del blocco a cui appartengono.  È possibile accedere alle costanti membri dall'interno della classe, struttura o modulo a cui appartengono.  
+-   <span data-ttu-id="2e3b6-174">**Ambito.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-174">**Scope.**</span></span> <span data-ttu-id="2e3b6-175">Le costanti locali sono accessibili solo dall'interno della routine o un blocco.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-175">Local constants are accessible only from within their procedure or block.</span></span> <span data-ttu-id="2e3b6-176">Costanti di membro sono accessibili da qualsiasi punto all'interno di loro classe, struttura o modulo.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-176">Member constants are accessible from anywhere within their class, structure, or module.</span></span>  
   
--   **Qualificazione.** Il codice al di fuori di una classe, di una struttura o di un modulo deve qualificare il nome di una costante membro con il nome di tale classe, struttura o modulo.  Il codice al di fuori di una routine o di un blocco non può fare riferimento a costanti locali interne a tale routine o blocco.  
+-   <span data-ttu-id="2e3b6-177">**Qualifica.**</span><span class="sxs-lookup"><span data-stu-id="2e3b6-177">**Qualification.**</span></span> <span data-ttu-id="2e3b6-178">Codice esterno di una classe, struttura o un modulo necessario qualificare il nome di una costante membro con il nome di tale classe, struttura o modulo.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-178">Code outside a class, structure, or module must qualify a member constant's name with the name of that class, structure, or module.</span></span> <span data-ttu-id="2e3b6-179">All'esterno di che una stored procedure o un blocco non può fare riferimento a costanti locali all'interno della routine o un blocco di codice.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-179">Code outside a procedure or block cannot refer to any local constants within that procedure or block.</span></span>  
   
-## Esempio  
- Nell'esempio seguente l'istruzione `Const` viene utilizzata per dichiarare costanti da utilizzare in sostituzione dei valori letterali.  
+## <a name="example"></a><span data-ttu-id="2e3b6-180">Esempio</span><span class="sxs-lookup"><span data-stu-id="2e3b6-180">Example</span></span>  
+ <span data-ttu-id="2e3b6-181">L'esempio seguente usa il `Const` istruzione per dichiarare le costanti da utilizzare in sostituzione di valori letterali.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-181">The following example uses the `Const` statement to declare constants for use in place of literal values.</span></span>  
   
  [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
   
-## Esempio  
- Se viene definita una costante con il tipo di dati `Object`, il compilatore di Visual Basic assegnerà il tipo di dati `initializer` invece che `Object`.  Nell'esempio seguente, alla costante `naturalLogBase` viene associato il tipo `Decimal` in fase di esecuzione.  
+## <a name="example"></a><span data-ttu-id="2e3b6-182">Esempio</span><span class="sxs-lookup"><span data-stu-id="2e3b6-182">Example</span></span>  
+ <span data-ttu-id="2e3b6-183">Se si definisce una costante con tipo di dati `Object`, il compilatore Visual Basic fornisce il tipo di `initializer`, invece di `Object`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-183">If you define a constant with data type `Object`, the Visual Basic compiler gives it the type of `initializer`, instead of `Object`.</span></span> <span data-ttu-id="2e3b6-184">Nell'esempio seguente, la costante `naturalLogBase` è di tipo in fase di esecuzione `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-184">In the following example, the constant `naturalLogBase` has the run-time type `Decimal`.</span></span>  
   
  [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
   
- Nell'esempio precedente viene utilizzato il metodo <xref:System.Type.ToString%2A> sull'oggetto <xref:System.Type> restituito da [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), poiché non è possibile convertire <xref:System.Type> in `String` utilizzando `CStr`.  
+ <span data-ttu-id="2e3b6-185">Nell'esempio precedente viene utilizzato il <xref:System.Type.ToString%2A> metodo il <xref:System.Type> oggetto restituito dal [operatore GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)perché <xref:System.Type> non può essere convertito in `String` utilizzando `CStr`.</span><span class="sxs-lookup"><span data-stu-id="2e3b6-185">The preceding example uses the <xref:System.Type.ToString%2A> method on the <xref:System.Type> object returned by the [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), because <xref:System.Type> cannot be converted to `String` using `CStr`.</span></span>  
   
-## Vedere anche  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)   
- [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)   
- [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md)   
- [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Constants and Enumerations](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)   
- [Constants and Enumerations](../../../visual-basic/language-reference/constants-and-enumerations.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a><span data-ttu-id="2e3b6-186">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2e3b6-186">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ [<span data-ttu-id="2e3b6-187">Istruzione Enum</span><span class="sxs-lookup"><span data-stu-id="2e3b6-187">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="2e3b6-188">Direttiva #Const</span><span class="sxs-lookup"><span data-stu-id="2e3b6-188">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [<span data-ttu-id="2e3b6-189">Istruzione Dim</span><span class="sxs-lookup"><span data-stu-id="2e3b6-189">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="2e3b6-190">Istruzione ReDim</span><span class="sxs-lookup"><span data-stu-id="2e3b6-190">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [<span data-ttu-id="2e3b6-191">Conversioni implicite ed esplicite</span><span class="sxs-lookup"><span data-stu-id="2e3b6-191">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="2e3b6-192">Costanti ed enumerazioni</span><span class="sxs-lookup"><span data-stu-id="2e3b6-192">Constants and Enumerations</span></span>](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
+ [<span data-ttu-id="2e3b6-193">Costanti ed enumerazioni</span><span class="sxs-lookup"><span data-stu-id="2e3b6-193">Constants and Enumerations</span></span>](../../../visual-basic/language-reference/constants-and-enumerations.md)  
+ [<span data-ttu-id="2e3b6-194">Funzioni di conversione del tipo</span><span class="sxs-lookup"><span data-stu-id="2e3b6-194">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

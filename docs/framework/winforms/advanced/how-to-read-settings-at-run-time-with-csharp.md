@@ -1,40 +1,41 @@
 ---
-title: "How To: Read Settings at Run Time With C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "application settings [Windows Forms], reading"
-  - "application settings [Windows Forms], run time"
-  - "application settings [Windows Forms], C#"
+title: 'Procedura: leggere le impostazioni in fase di esecuzione con C#'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application settings [Windows Forms], reading
+- application settings [Windows Forms], run time
+- application settings [Windows Forms], C#
 ms.assetid: dbe8bf09-5e1c-49da-9192-154033d7240b
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c23fd88d33ff4ca480c435f2058f4c568320578
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How To: Read Settings at Run Time With C# #
-È possibile leggere le impostazioni con ambito di applicazione e con ambito di utente in fase di esecuzione tramite l'oggetto Proprietà.  L'oggetto Proprietà espone tutte le impostazioni predefinite per il progetto tramite il membro Properties.Settings.Default.  
+# <a name="how-to-read-settings-at-run-time-with-c"></a><span data-ttu-id="30134-102">Procedura: leggere le impostazioni in fase di esecuzione con C#</span><span class="sxs-lookup"><span data-stu-id="30134-102">How To: Read Settings at Run Time With C#</span></span> #
+<span data-ttu-id="30134-103">È possibile leggere le impostazioni con ambito di applicazione e con ambito di utente in fase di esecuzione tramite l'oggetto Proprietà.</span><span class="sxs-lookup"><span data-stu-id="30134-103">You can read both Application-scoped and User-scoped settings at run time via the Properties object.</span></span> <span data-ttu-id="30134-104">L'oggetto Proprietà espone tutte le impostazioni predefinite per il progetto tramite il membro Properties.Settings.Default.</span><span class="sxs-lookup"><span data-stu-id="30134-104">The Properties object exposes all of the default settings for the project via the Properties.Settings.Default member.</span></span>  
   
-### Per leggere le impostazioni in fase di esecuzione con C\#  
+### <a name="to-read-settings-at-run-time-with-c"></a><span data-ttu-id="30134-105">Per leggere le impostazioni in fase di esecuzione con C#</span><span class="sxs-lookup"><span data-stu-id="30134-105">To Read Settings at Run Time with C#</span></span>  
   
--   Accedere all'impostazione appropriata tramite il membro Properties.Settings.Default.  Nell'esempio seguente viene illustrato come assegnare l'impostazione `myColor` a una proprietà BackColor.  È necessario avere creato in precedenza un file di impostazioni che contenga un'impostazione denominata `myColor` di tipo `System.Drawing.Color`.  Per informazioni sulla creazione di un file di impostazioni, vedere [How To: Create a New Setting at Design Time](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md).  
+-   <span data-ttu-id="30134-106">Accedere all'impostazione appropriata tramite il membro Properties.Settings.Default.</span><span class="sxs-lookup"><span data-stu-id="30134-106">Access the appropriate setting via the Properties.Settings.Default member.</span></span> <span data-ttu-id="30134-107">Nell'esempio seguente viene illustrato come assegnare l'impostazione `myColor` a una proprietà BackColor.</span><span class="sxs-lookup"><span data-stu-id="30134-107">The following example shows how to assign a setting named `myColor` to a BackColor property.</span></span> <span data-ttu-id="30134-108">È necessario avere creato in precedenza un file di impostazioni che contenga un'impostazione denominata `myColor` di tipo `System.Drawing.Color`.</span><span class="sxs-lookup"><span data-stu-id="30134-108">It requires you to have previously created a Settings file containing a setting named `myColor` of type `System.Drawing.Color`.</span></span> <span data-ttu-id="30134-109">Per informazioni sulla creazione di un file di impostazioni, vedere [procedura: creare una nuova impostazione in fase di progettazione](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="30134-109">For information about creating a Settings file, see [How To: Create a New Setting at Design Time](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md).</span></span>  
   
     ```  
     // C#  
     this.BackColor = Properties.Settings.Default.myColor;  
     ```  
   
-## Vedere anche  
- [Using Application Settings and User Settings](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)   
- [How To: Write User Settings at Run Time with C\#](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)   
- [Cenni preliminari sulle impostazioni delle applicazioni](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+## <a name="see-also"></a><span data-ttu-id="30134-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="30134-110">See Also</span></span>  
+ [<span data-ttu-id="30134-111">Uso delle impostazioni applicazione e delle impostazioni utente</span><span class="sxs-lookup"><span data-stu-id="30134-111">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
+ [<span data-ttu-id="30134-112">Procedura: Scrivere le impostazioni utente in fase di esecuzione con C#</span><span class="sxs-lookup"><span data-stu-id="30134-112">How To: Write User Settings at Run Time with C#</span></span>](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [<span data-ttu-id="30134-113">Cenni preliminari sulle impostazioni delle applicazioni</span><span class="sxs-lookup"><span data-stu-id="30134-113">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

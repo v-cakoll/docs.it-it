@@ -1,99 +1,104 @@
 ---
-title: "Procedura: creare un componente aggiuntivo che restituisce un&#39;interfaccia utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "componente aggiuntivo [WPF], restituzione di un'interfaccia utente"
-  - "creazione di un componente aggiuntivo che restituisce un'interfaccia utente [WPF]"
-  - "implementazione dei segmenti della pipeline del componente aggiuntivo [WPF]"
+title: 'Procedura: creare un componente aggiuntivo che restituisce un''interfaccia utente'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- creating an add-in that returns a UI [WPF]
+- implementing add-in pipeline segments [WPF]
+- add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dd6956f1934f8594a941b57066cc2d4d6214a9a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un componente aggiuntivo che restituisce un&#39;interfaccia utente
-In questo esempio viene illustrato come creare un componente aggiuntivo che restituisce un'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] di [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] a un'applicazione host [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonoma.  
+# <a name="how-to-create-an-add-in-that-returns-a-ui"></a><span data-ttu-id="82a8a-102">Procedura: creare un componente aggiuntivo che restituisce un'interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="82a8a-102">How to: Create an Add-In That Returns a UI</span></span>
+<span data-ttu-id="82a8a-103">In questo esempio viene illustrato come creare un componente aggiuntivo che restituisce un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] a un host [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione autonoma.</span><span class="sxs-lookup"><span data-stu-id="82a8a-103">This example shows how to create an add-in that returns a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)][!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] to a host [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application.</span></span>  
   
- Il componente aggiuntivo restituisce un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] che rappresenta un controllo utente di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Il contenuto del controllo utente è costituito da un unico pulsante che consente di visualizzare una finestra di messaggio.  Nell'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonoma viene ospitato il componente aggiuntivo e visualizzato il controllo utente, restituito da quest'ultimo, come contenuto della finestra principale dell'applicazione.  
+ <span data-ttu-id="82a8a-104">Il componente aggiuntivo che restituisce un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] vale a dire un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] controllo utente.</span><span class="sxs-lookup"><span data-stu-id="82a8a-104">The add-in returns a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] that is a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] user control.</span></span> <span data-ttu-id="82a8a-105">Il contenuto del controllo utente è costituito da un unico pulsante che consente di visualizzare una finestra di messaggio.</span><span class="sxs-lookup"><span data-stu-id="82a8a-105">The content of the user control is a single button that, when clicked, displays a message box.</span></span> <span data-ttu-id="82a8a-106">Il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione autonoma ospita il componente aggiuntivo e lo visualizza il controllo utente, restituito dal componente aggiuntivo, il contenuto della finestra principale dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="82a8a-106">The [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application hosts the add-in and displays the user control (returned by the add-in) as the content of the main application window.</span></span>  
   
- **Prerequisiti**  
+ <span data-ttu-id="82a8a-107">**Prerequisiti**</span><span class="sxs-lookup"><span data-stu-id="82a8a-107">**Prerequisites**</span></span>  
   
- In questo esempio vengono evidenziate le estensioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] al modello di componente aggiuntivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] responsabile dell'abilitazione di tale scenario e si presuppongono le seguenti condizioni:  
+ <span data-ttu-id="82a8a-108">In questo esempio viene evidenziato il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estensioni per il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aggiuntivo modello abilitare questo scenario, si presuppone quanto segue:</span><span class="sxs-lookup"><span data-stu-id="82a8a-108">This example highlights the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] extensions to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model that enable this scenario, and assumes the following:</span></span>  
   
--   Conoscenza del modello di componente aggiuntivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluso lo sviluppo di pipeline, componenti aggiuntivi e host.  Per informazioni su questi concetti, vedere [Componenti aggiuntivi ed estensibilità](../../../../ml/index.xml).  Per un'esercitazione in cui venga illustrata l'implementazione di una pipeline, un componente aggiuntivo e un'applicazione host, vedere [Procedura dettagliata: creazione di un'applicazione estendibile](../Topic/Walkthrough:%20Creating%20an%20Extensible%20Application.md).  
+-   <span data-ttu-id="82a8a-109">Conoscere il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modello del componente aggiuntivo, tra cui sviluppo di pipeline, componenti aggiuntivi e host.</span><span class="sxs-lookup"><span data-stu-id="82a8a-109">Knowledge of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model, including pipeline, add-in, and host development.</span></span> <span data-ttu-id="82a8a-110">Se non si ha familiarità con questi concetti, vedere [aggiuntivi ed estensibilità](../../../../docs/framework/add-ins/index.md).</span><span class="sxs-lookup"><span data-stu-id="82a8a-110">If you are unfamiliar with these concepts, see [Add-ins and Extensibility](../../../../docs/framework/add-ins/index.md).</span></span> <span data-ttu-id="82a8a-111">Per un'esercitazione che illustra l'implementazione di una pipeline, un componente aggiuntivo e un'applicazione host, vedere [procedura dettagliata: creazione di un'applicazione estensibile](../../../../docs/framework/add-ins/walkthrough-create-extensible-app.md).</span><span class="sxs-lookup"><span data-stu-id="82a8a-111">For a tutorial that demonstrates the implementation of a pipeline, an add-in, and a host application, see [Walkthrough: Creating an Extensible Application](../../../../docs/framework/add-ins/walkthrough-create-extensible-app.md).</span></span>  
   
--   Conoscenza delle estensioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] al modello di componente aggiuntivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], disponibile in: [Cenni preliminari sui componenti aggiuntivi di WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+-   <span data-ttu-id="82a8a-112">Conoscenza del [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estensioni per il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modello del componente aggiuntivo, che è disponibili qui: [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span><span class="sxs-lookup"><span data-stu-id="82a8a-112">Knowledge of the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] extensions to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model, which can be found here: [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
   
-## Esempio  
- La creazione di un componente aggiuntivo che restituisce un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] richiede l'utilizzo di codice specifico per ciascun segmento di pipeline, per il componente aggiuntivo e per l'applicazione host.  
-  
-   
+## <a name="example"></a><span data-ttu-id="82a8a-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="82a8a-113">Example</span></span>  
+ <span data-ttu-id="82a8a-114">Per creare un componente aggiuntivo che restituisce un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] richiede codice specifico per ogni segmento della pipeline, il componente aggiuntivo e l'applicazione host.</span><span class="sxs-lookup"><span data-stu-id="82a8a-114">To create an add-in that returns a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] requires specific code for each pipeline segment, the add-in, and the host application.</span></span>  
+    
   
 <a name="Contract"></a>   
-## Implementazione del segmento di pipeline di contratto  
- Per poter restituire un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], un metodo deve essere definito dal contratto e il relativo valore restituito deve essere di tipo <xref:System.AddIn.Contract.INativeHandleContract>,  come illustrato dal metodo `GetAddInUI` del contratto `IWPFAddInContract` nel codice seguente.  
+## <a name="implementing-the-contract-pipeline-segment"></a><span data-ttu-id="82a8a-115">Implementazione del segmento di pipeline di contratto</span><span class="sxs-lookup"><span data-stu-id="82a8a-115">Implementing the Contract Pipeline Segment</span></span>  
+ <span data-ttu-id="82a8a-116">Un metodo deve essere definito dal contratto per la restituzione di un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], e il relativo valore restituito deve essere di tipo <xref:System.AddIn.Contract.INativeHandleContract>.</span><span class="sxs-lookup"><span data-stu-id="82a8a-116">A method must be defined by the contract for returning a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], and its return value must be of type <xref:System.AddIn.Contract.INativeHandleContract>.</span></span> <span data-ttu-id="82a8a-117">Questo viene dimostrato la `GetAddInUI` metodo il `IWPFAddInContract` contratto nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="82a8a-117">This is demonstrated by the `GetAddInUI` method of the `IWPFAddInContract` contract in the following code.</span></span>  
   
  [!code-csharp[SimpleAddInReturnsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
  [!code-vb[SimpleAddInReturnsAUISample#ContractCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]  
   
 <a name="AddInView"></a>   
-## Implementazione del segmento di pipeline di visualizzazione del componente aggiuntivo  
- Poiché il componente aggiuntivo implementa le [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fornite come sottoclassi di <xref:System.Windows.FrameworkElement>, il metodo nella visualizzazione del componente aggiuntivo correlata a `IWPFAddInView.GetAddInUI` deve restituire un valore di tipo <xref:System.Windows.FrameworkElement>.  Nel codice riportato di seguito viene illustrata la visualizzazione del componente aggiuntivo del contratto, implementata come interfaccia.  
+## <a name="implementing-the-add-in-view-pipeline-segment"></a><span data-ttu-id="82a8a-118">Implementazione del segmento di pipeline di visualizzazione componente aggiuntivo</span><span class="sxs-lookup"><span data-stu-id="82a8a-118">Implementing the Add-In View Pipeline Segment</span></span>  
+ <span data-ttu-id="82a8a-119">Poiché il componente aggiuntivo implementa il [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fornite come sottoclassi di <xref:System.Windows.FrameworkElement>, il metodo nella vista è correlata a `IWPFAddInView.GetAddInUI` deve restituire un valore di tipo <xref:System.Windows.FrameworkElement>.</span><span class="sxs-lookup"><span data-stu-id="82a8a-119">Because the add-in implements the [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] it provides as subclasses of <xref:System.Windows.FrameworkElement>, the method on the add-in view that correlates to `IWPFAddInView.GetAddInUI` must return a value of type <xref:System.Windows.FrameworkElement>.</span></span> <span data-ttu-id="82a8a-120">Il codice seguente illustra la visualizzazione componente aggiuntivo del contratto, implementata come interfaccia.</span><span class="sxs-lookup"><span data-stu-id="82a8a-120">The following code shows the add-in view of the contract, implemented as an interface.</span></span>  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInViews/IWPFAddInView.cs#addinviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInViewCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInViews/IWPFAddInView.vb#addinviewcode)]  
   
 <a name="AddInSideAdapter"></a>   
-## Implementazione del segmento di pipeline dell'adattatore sul lato componente aggiuntivo  
- Il metodo del contratto restituisce <xref:System.AddIn.Contract.INativeHandleContract>, ma il componente aggiuntivo restituisce <xref:System.Windows.FrameworkElement>, come specificato dalla visualizzazione del componente.  Di conseguenza, l'oggetto <xref:System.Windows.FrameworkElement> deve essere convertito in <xref:System.AddIn.Contract.INativeHandleContract> prima di oltrepassare il limite di isolamento.  La conversione viene eseguita dall'adattatore sul lato componente aggiuntivo mediante una chiamata a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, come illustrato nel codice seguente.  
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a><span data-ttu-id="82a8a-121">Implementazione del segmento di pipeline dell'adattatore sul lato del componente aggiuntivo</span><span class="sxs-lookup"><span data-stu-id="82a8a-121">Implementing the Add-In-Side Adapter Pipeline Segment</span></span>  
+ <span data-ttu-id="82a8a-122">Il metodo del contratto restituisce un <xref:System.AddIn.Contract.INativeHandleContract>, ma il componente aggiuntivo restituisce un <xref:System.Windows.FrameworkElement> (come specificato da parte della vista del componente aggiuntivo).</span><span class="sxs-lookup"><span data-stu-id="82a8a-122">The contract method returns an <xref:System.AddIn.Contract.INativeHandleContract>, but the add-in returns a <xref:System.Windows.FrameworkElement> (as specified by the add-in view).</span></span> <span data-ttu-id="82a8a-123">Di conseguenza, il <xref:System.Windows.FrameworkElement> deve essere convertito in un <xref:System.AddIn.Contract.INativeHandleContract> prima di oltrepassare il limite di isolamento.</span><span class="sxs-lookup"><span data-stu-id="82a8a-123">Consequently, the <xref:System.Windows.FrameworkElement> must be converted to an <xref:System.AddIn.Contract.INativeHandleContract> before crossing the isolation boundary.</span></span> <span data-ttu-id="82a8a-124">Questa operazione viene eseguita dall'adapter sul lato componente-chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="82a8a-124">This work is performed by the add-in-side adapter by calling <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, as shown in the following code.</span></span>  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInSideAdapterCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]  
   
 <a name="HostView"></a>   
-## Implementazione del segmento di pipeline di visualizzazione host  
- Poiché l'applicazione host visualizzerà <xref:System.Windows.FrameworkElement>, il metodo nella visualizzazione host correlata a `IWPFAddInHostView.GetAddInUI` deve restituire un valore di tipo <xref:System.Windows.FrameworkElement>.  Nel codice riportato di seguito viene illustrata la visualizzazione host del contratto, implementata come interfaccia.  
+## <a name="implementing-the-host-view-pipeline-segment"></a><span data-ttu-id="82a8a-125">Implementazione del segmento di pipeline di visualizzazione host</span><span class="sxs-lookup"><span data-stu-id="82a8a-125">Implementing the Host View Pipeline Segment</span></span>  
+ <span data-ttu-id="82a8a-126">Poiché l'applicazione host visualizzerà un <xref:System.Windows.FrameworkElement>, il metodo nella visualizzazione host correlata a `IWPFAddInHostView.GetAddInUI` deve restituire un valore di tipo <xref:System.Windows.FrameworkElement>.</span><span class="sxs-lookup"><span data-stu-id="82a8a-126">Because the host application will display a <xref:System.Windows.FrameworkElement>, the method on the host view that correlates to `IWPFAddInHostView.GetAddInUI` must return a value of type <xref:System.Windows.FrameworkElement>.</span></span> <span data-ttu-id="82a8a-127">Il codice seguente illustra la visualizzazione host del contratto, implementata come interfaccia.</span><span class="sxs-lookup"><span data-stu-id="82a8a-127">The following code shows the host view of the contract, implemented as an interface.</span></span>  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostViews/IWPFAddInHostView.cs#hostviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostViewCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostViews/IWPFAddInHostView.vb#hostviewcode)]  
   
 <a name="HostSideAdapter"></a>   
-## Implementazione del segmento di pipeline dell'adattatore sul lato host  
- Il metodo del contratto restituisce <xref:System.AddIn.Contract.INativeHandleContract>, ma l'applicazione host prevede <xref:System.Windows.FrameworkElement>, come specificato dalla visualizzazione host.  Di conseguenza, l'oggetto <xref:System.AddIn.Contract.INativeHandleContract> deve essere convertito in <xref:System.Windows.FrameworkElement> dopo aver oltrepassato il limite di isolamento.  La conversione viene eseguita dall'adattatore sul lato host mediante una chiamata a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, come illustrato nel codice seguente.  
+## <a name="implementing-the-host-side-adapter-pipeline-segment"></a><span data-ttu-id="82a8a-128">Implementazione del segmento di pipeline dell'adattatore sul lato host</span><span class="sxs-lookup"><span data-stu-id="82a8a-128">Implementing the Host-Side Adapter Pipeline Segment</span></span>  
+ <span data-ttu-id="82a8a-129">Il metodo del contratto restituisce un <xref:System.AddIn.Contract.INativeHandleContract>, ma l'applicazione host prevede un <xref:System.Windows.FrameworkElement> (come specificato dalla visualizzazione host).</span><span class="sxs-lookup"><span data-stu-id="82a8a-129">The contract method returns an <xref:System.AddIn.Contract.INativeHandleContract>, but the host application expects a <xref:System.Windows.FrameworkElement> (as specified by the host view).</span></span> <span data-ttu-id="82a8a-130">Di conseguenza, il <xref:System.AddIn.Contract.INativeHandleContract> deve essere convertito in un <xref:System.Windows.FrameworkElement> dopo aver oltrepassato il limite di isolamento.</span><span class="sxs-lookup"><span data-stu-id="82a8a-130">Consequently, the <xref:System.AddIn.Contract.INativeHandleContract> must be converted to a <xref:System.Windows.FrameworkElement> after crossing the isolation boundary.</span></span> <span data-ttu-id="82a8a-131">Questa operazione viene eseguita dall'adapter sul lato host chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="82a8a-131">This work is performed by the host-side adapter by calling <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, as shown in the following code.</span></span>  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#hostsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostSideAdapterCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#hostsideadaptercode)]  
   
 <a name="AddIn"></a>   
-## Implementazione del componente aggiuntivo  
- Dopo aver creato l'adattatore sul lato componente aggiuntivo e la visualizzazione del componente, il componente aggiuntivo \(`WPFAddIn1.AddIn`\) deve implementare il metodo `IWPFAddInView.GetAddInUI` per restituire un oggetto <xref:System.Windows.FrameworkElement> \(<xref:System.Windows.Controls.UserControl> in questo esempio\).  Nel codice riportato di seguito viene illustrata l'implementazione di <xref:System.Windows.Controls.UserControl>, `AddInUI`.  
+## <a name="implementing-the-add-in"></a><span data-ttu-id="82a8a-132">Implementazione del componente aggiuntivo</span><span class="sxs-lookup"><span data-stu-id="82a8a-132">Implementing the Add-In</span></span>  
+ <span data-ttu-id="82a8a-133">Con il lato del componente-scheda aggiuntivo creato e la visualizzazione, il componente aggiuntivo (`WPFAddIn1.AddIn`) deve implementare il `IWPFAddInView.GetAddInUI` per restituire un <xref:System.Windows.FrameworkElement> oggetto (un <xref:System.Windows.Controls.UserControl> in questo esempio).</span><span class="sxs-lookup"><span data-stu-id="82a8a-133">With the add-in-side adapter and add-in view created, the add-in (`WPFAddIn1.AddIn`) must implement the `IWPFAddInView.GetAddInUI` method to return a <xref:System.Windows.FrameworkElement> object (a <xref:System.Windows.Controls.UserControl> in this example).</span></span> <span data-ttu-id="82a8a-134">L'implementazione del <xref:System.Windows.Controls.UserControl>, `AddInUI`, viene visualizzato per il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="82a8a-134">The implementation of the <xref:System.Windows.Controls.UserControl>, `AddInUI`, is shown by the following code.</span></span>  
   
- [!code-xml[SimpleAddInReturnsAUISample#AddInUIMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml#addinuimarkup)]  
+ [!code-xaml[SimpleAddInReturnsAUISample#AddInUIMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml#addinuimarkup)]  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#addinuicodebehind)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#addinuicodebehind)]  
   
- L'implementazione di `IWPFAddInView.GetAddInUI` da parte del componente aggiuntivo deve semplicemente restituire una nuova istanza di `AddInUI`, come illustrato nel codice seguente.  
+ <span data-ttu-id="82a8a-135">L'implementazione del `IWPFAddInView.GetAddInUI` da parte del componente aggiuntivo deve semplicemente restituire una nuova istanza della `AddInUI`, come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="82a8a-135">The implementation of the `IWPFAddInView.GetAddInUI` by the add-in simply needs to return a new instance of `AddInUI`, as shown by the following code.</span></span>  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddIn.cs#addincode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddIn.vb#addincode)]  
   
 <a name="App"></a>   
-## Implementazione dell'applicazione host  
- Una volta creato l'adattatore sul lato host e la visualizzazione host, nell'applicazione host è possibile utilizzare il modello di componente aggiuntivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per aprire la pipeline, acquisire una visualizzazione host del componente aggiuntivo e chiamare il metodo `IWPFAddInHostView.GetAddInUI`.  Nel codice riportato di seguito vengono illustrati i diversi passaggi.  
+## <a name="implementing-the-host-application"></a><span data-ttu-id="82a8a-136">Implementazione dell'applicazione host</span><span class="sxs-lookup"><span data-stu-id="82a8a-136">Implementing the Host Application</span></span>  
+ <span data-ttu-id="82a8a-137">Con l'adattatore host sul lato host creato e la visualizzazione, è possibile utilizzare l'applicazione host di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modello di componente aggiuntivo per aprire la pipeline, acquisire una visualizzazione host del componente aggiuntivo e chiamata di `IWPFAddInHostView.GetAddInUI` (metodo).</span><span class="sxs-lookup"><span data-stu-id="82a8a-137">With the host-side adapter and host view created, the host application can use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model to open the pipeline, acquire a host view of the add-in, and call the `IWPFAddInHostView.GetAddInUI` method.</span></span> <span data-ttu-id="82a8a-138">Il codice riportato di seguito illustra i diversi passaggi.</span><span class="sxs-lookup"><span data-stu-id="82a8a-138">These steps are shown in the following code.</span></span>  
   
  [!code-csharp[SimpleAddInReturnsAUISample#GetUICode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Host/MainWindow.xaml.cs#getuicode)]
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
-## Vedere anche  
- [Componenti aggiuntivi ed estensibilità](../../../../ml/index.xml)   
- [Cenni preliminari sui componenti aggiuntivi di WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="see-also"></a><span data-ttu-id="82a8a-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="82a8a-139">See Also</span></span>  
+ [<span data-ttu-id="82a8a-140">Componenti aggiuntivi ed estendibilità</span><span class="sxs-lookup"><span data-stu-id="82a8a-140">Add-ins and Extensibility</span></span>](../../../../docs/framework/add-ins/index.md)  
+ [<span data-ttu-id="82a8a-141">Cenni preliminari sui componenti aggiuntivi di WPF</span><span class="sxs-lookup"><span data-stu-id="82a8a-141">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

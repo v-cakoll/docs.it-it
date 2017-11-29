@@ -1,94 +1,92 @@
 ---
-title: "Funzioni stringa (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "funzioni stringa"
+title: Funzioni stringa (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0e7672f03cda99aa0e1dcecd79b0358f9d5f16f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Funzioni stringa (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Nella tabella seguente vengono elencate le funzioni disponibili in Visual Basic per cercare e modificare le stringhe.  
+# <a name="string-functions-visual-basic"></a><span data-ttu-id="fce9a-102">Funzioni stringa (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fce9a-102">String Functions (Visual Basic)</span></span>
+<span data-ttu-id="fce9a-103">Nella tabella seguente sono elencate le funzioni disponibili in Visual Basic per la ricerca e modificare le stringhe.</span><span class="sxs-lookup"><span data-stu-id="fce9a-103">The following table lists the functions that Visual Basic provides to search and manipulate strings.</span></span>  
   
-|Metodo di .NET Framework|Descrizione|  
-|------------------------------|-----------------|  
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Restituisce un `Integer` che rappresenta il codice carattere corrispondente a un carattere.|  
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Restituisce il carattere associato al codice carattere specificato.|  
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Restituisce una matrice con indice in base zero che contiene un sottoinsieme di una matrice `String` definito in base ai criteri di filtro specificati.|  
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Restituisce una stringa formattata in base alle istruzioni contenute in un'espressione `String` di formato.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Restituisce un'espressione nel formato valore di valuta utilizzando il simbolo di valuta impostato nel Pannello di controllo del sistema.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Restituisce un'espressione stringa che rappresenta un valore data\/ora.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Restituisce un'espressione in formato di numero.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Restituisce un'espressione nel formato percentuale, ossia moltiplicata per 100, seguita dal carattere %.|  
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Restituisce un Integer che specifica la posizione di inizio della prima occorrenza di una stringa in un'altra.|  
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Restituisce la posizione della prima occorrenza di una stringa inclusa in un'altra a partire dalla destra della stringa.|  
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Restituisce una stringa creata unendo un certo numero di sottostringhe di una matrice.|  
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Restituisce una stringa o un carattere convertito in minuscolo.|  
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Restituisce una stringa contenente un numero specificato di caratteri a partire dal lato sinistro di una stringa.|  
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Restituisce un intero in cui è contenuto il numero di caratteri in una stringa.|  
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Restituisce una stringa allineata a sinistra contenente la stringa specificata adeguata alla lunghezza specificata.|  
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Restituisce una stringa contenente una copia di una stringa specificata senza spazi iniziali.|  
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Restituisce una stringa contenente il numero di caratteri specificato da una stringa.|  
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Restituisce una stringa nella quale la sottostringa specificata è stata sostituita con un'altra sottostringa per il numero di volte indicato.|  
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Restituisce una stringa contenente un numero di caratteri specificato a partire dalla destra della stringa.|  
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Restituisce una stringa allineata a destra contenente la stringa specificata adattata alla lunghezza specificata.|  
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Restituisce una stringa contenente una copia di una stringa specificata senza spazi finali.|  
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Restituisce una stringa composta dal numero di spazi specificato.|  
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Restituisce una matrice unidimensionale con indice in base zero che contiene il numero di sottostringhe specificato.|  
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Restituisce \-1, 0 o 1 in base al risultato di un confronto tra stringhe.|  
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Restituisce una stringa convertita come specificato.|  
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Restituisce una stringa o un oggetto composto dal carattere specificato ripetuto per il numero di volte specificato.|  
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Restituisce una stringa nella quale è stato invertito l'ordine dei caratteri della stringa specificata.|  
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Restituisce una stringa contenente una copia di una stringa specificata senza spazi iniziali o finali.|  
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Restituisce una stringa o un carattere contenente la stringa specificata convertita in lettere maiuscole.|  
+|<span data-ttu-id="fce9a-104">Metodo .NET framework</span><span class="sxs-lookup"><span data-stu-id="fce9a-104">.NET Framework method</span></span>|<span data-ttu-id="fce9a-105">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fce9a-105">Description</span></span>|  
+|---------------------------|-----------------|  
+|<span data-ttu-id="fce9a-106"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span><span class="sxs-lookup"><span data-stu-id="fce9a-106"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span></span>|<span data-ttu-id="fce9a-107">Restituisce un `Integer` che rappresenta il codice carattere corrispondente a un carattere.</span><span class="sxs-lookup"><span data-stu-id="fce9a-107">Returns an `Integer` value representing the character code corresponding to a character.</span></span>|  
+|<span data-ttu-id="fce9a-108"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span><span class="sxs-lookup"><span data-stu-id="fce9a-108"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span></span>|<span data-ttu-id="fce9a-109">Restituisce il carattere associato al codice di carattere specificato.</span><span class="sxs-lookup"><span data-stu-id="fce9a-109">Returns the character associated with the specified character code.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|<span data-ttu-id="fce9a-110">Restituisce una matrice in base zero contenente un subset di un `String` matrice in base ai criteri di filtro specificati.</span><span class="sxs-lookup"><span data-stu-id="fce9a-110">Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|<span data-ttu-id="fce9a-111">Restituisce una stringa formattata in base alle istruzioni contenute in un formato `String` espressione.</span><span class="sxs-lookup"><span data-stu-id="fce9a-111">Returns a string formatted according to instructions contained in a format `String` expression.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|<span data-ttu-id="fce9a-112">Restituisce un'espressione formattata come un valore di valuta utilizzando il simbolo di valuta definito nel Pannello di controllo del sistema.</span><span class="sxs-lookup"><span data-stu-id="fce9a-112">Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|<span data-ttu-id="fce9a-113">Restituisce un'espressione stringa che rappresenta un valore data/ora.</span><span class="sxs-lookup"><span data-stu-id="fce9a-113">Returns a string expression representing a date/time value.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|<span data-ttu-id="fce9a-114">Restituisce un'espressione formattata come un numero.</span><span class="sxs-lookup"><span data-stu-id="fce9a-114">Returns an expression formatted as a number.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|<span data-ttu-id="fce9a-115">Restituisce un'espressione formattata come percentuale (ovvero moltiplicata per 100) con un carattere % finale.</span><span class="sxs-lookup"><span data-stu-id="fce9a-115">Returns an expression formatted as a percentage (that is, multiplied by 100) with a trailing % character.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|<span data-ttu-id="fce9a-116">Restituisce un intero che specifica la posizione iniziale della prima occorrenza di una stringa all'interno di altra.</span><span class="sxs-lookup"><span data-stu-id="fce9a-116">Returns an integer specifying the start position of the first occurrence of one string within another.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|<span data-ttu-id="fce9a-117">Restituisce la posizione della prima occorrenza di una stringa all'interno di un'altra, a partire dal lato destro della stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-117">Returns the position of the first occurrence of one string within another, starting from the right side of the string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|<span data-ttu-id="fce9a-118">Restituisce una stringa creata unendo in join un numero di sottostringhe contenute in una matrice.</span><span class="sxs-lookup"><span data-stu-id="fce9a-118">Returns a string created by joining a number of substrings contained in an array.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|<span data-ttu-id="fce9a-119">Restituisce una stringa o un carattere convertito in caratteri minuscoli.</span><span class="sxs-lookup"><span data-stu-id="fce9a-119">Returns a string or character converted to lowercase.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|<span data-ttu-id="fce9a-120">Restituisce una stringa contenente un numero specificato di caratteri dal lato sinistro di una stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-120">Returns a string containing a specified number of characters from the left side of a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|<span data-ttu-id="fce9a-121">Restituisce un intero che contiene il numero di caratteri in una stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-121">Returns an integer that contains the number of characters in a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|<span data-ttu-id="fce9a-122">Restituisce una stringa allineata a sinistra contenente la stringa specificata adattata alla lunghezza specificata.</span><span class="sxs-lookup"><span data-stu-id="fce9a-122">Returns a left-aligned string containing the specified string adjusted to the specified length.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|<span data-ttu-id="fce9a-123">Restituisce una stringa contenente una copia di una stringa specificata senza spazi iniziali.</span><span class="sxs-lookup"><span data-stu-id="fce9a-123">Returns a string containing a copy of a specified string with no leading spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|<span data-ttu-id="fce9a-124">Restituisce una stringa contenente un numero specificato di caratteri da una stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-124">Returns a string containing a specified number of characters from a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|<span data-ttu-id="fce9a-125">Restituisce una stringa in cui una sottostringa specificata è stata sostituita con un'altra sottostringa per il numero di volte.</span><span class="sxs-lookup"><span data-stu-id="fce9a-125">Returns a string in which a specified substring has been replaced with another substring a specified number of times.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|<span data-ttu-id="fce9a-126">Restituisce una stringa contenente un numero specificato di caratteri dal lato destro di una stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-126">Returns a string containing a specified number of characters from the right side of a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|<span data-ttu-id="fce9a-127">Restituisce una stringa allineata a destra contenente la stringa specificata adattata alla lunghezza specificata.</span><span class="sxs-lookup"><span data-stu-id="fce9a-127">Returns a right-aligned string containing the specified string adjusted to the specified length.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|<span data-ttu-id="fce9a-128">Restituisce una stringa contenente una copia di una stringa specificata senza spazi finali.</span><span class="sxs-lookup"><span data-stu-id="fce9a-128">Returns a string containing a copy of a specified string with no trailing spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|<span data-ttu-id="fce9a-129">Restituisce una stringa costituita dal numero specificato di spazi.</span><span class="sxs-lookup"><span data-stu-id="fce9a-129">Returns a string consisting of the specified number of spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|<span data-ttu-id="fce9a-130">Restituisce una matrice unidimensionale in base zero contenente un numero specificato di sottostringhe.</span><span class="sxs-lookup"><span data-stu-id="fce9a-130">Returns a zero-based, one-dimensional array containing a specified number of substrings.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|<span data-ttu-id="fce9a-131">Restituisce -1, 0 o 1, in base al risultato di un confronto tra stringhe.</span><span class="sxs-lookup"><span data-stu-id="fce9a-131">Returns -1, 0, or 1, based on the result of a string comparison.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|<span data-ttu-id="fce9a-132">Restituisce una stringa convertita nel modo specificato.</span><span class="sxs-lookup"><span data-stu-id="fce9a-132">Returns a string converted as specified.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|<span data-ttu-id="fce9a-133">Restituisce una stringa o oggetto costituito dal carattere specificato ripetuto il numero di volte specificato.</span><span class="sxs-lookup"><span data-stu-id="fce9a-133">Returns a string or object consisting of the specified character repeated the specified number of times.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|<span data-ttu-id="fce9a-134">Restituisce una stringa in cui viene invertito l'ordine dei caratteri di una stringa specificata.</span><span class="sxs-lookup"><span data-stu-id="fce9a-134">Returns a string in which the character order of a specified string is reversed.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|<span data-ttu-id="fce9a-135">Restituisce una stringa contenente una copia di una stringa specificata senza spazi iniziali o finali.</span><span class="sxs-lookup"><span data-stu-id="fce9a-135">Returns a string containing a copy of a specified string with no leading or trailing spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|<span data-ttu-id="fce9a-136">Restituisce una stringa o carattere contenente la stringa specificata convertita in caratteri maiuscoli.</span><span class="sxs-lookup"><span data-stu-id="fce9a-136">Returns a string or character containing the specified string converted to uppercase.</span></span>|  
   
- È possibile utilizzare l'istruzione [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) per specificare se le stringhe vengono confrontate tramite un ordinamento di testo senza distinzione tra maiuscole e minuscole determinato dalle impostazioni locali del sistema \(`Text`\) o dalle rappresentazioni binarie interne dei caratteri \(`Binary`\).  Il metodo di confronto del testo predefinito è `Binary`.  
+ <span data-ttu-id="fce9a-137">È possibile utilizzare il [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) istruzione per specificare se le stringhe vengono confrontate con una distinzione tra maiuscole ordinamento determinato dalle impostazioni locali del sistema (`Text`) o da rappresentazioni binarie interne del (caratteri `Binary`).</span><span class="sxs-lookup"><span data-stu-id="fce9a-137">You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`).</span></span> <span data-ttu-id="fce9a-138">Il metodo di confronto del testo predefinito è `Binary`.</span><span class="sxs-lookup"><span data-stu-id="fce9a-138">The default text comparison method is `Binary`.</span></span>  
   
-## Esempio  
- Nell'esempio seguente la funzione `UCase` viene utilizzata per restituire una versione in lettere maiuscole di una stringa:  
+## <a name="example"></a><span data-ttu-id="fce9a-139">Esempio</span><span class="sxs-lookup"><span data-stu-id="fce9a-139">Example</span></span>  
+ <span data-ttu-id="fce9a-140">Questo esempio viene utilizzato il `UCase` funzione per restituire la versione maiuscola di una stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-140">This example uses the `UCase` function to return an uppercase version of a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
-## Esempio  
- In questo esempio vengono utilizzate la funzione `LTrim` per rimuovere gli spazi iniziali e la funzione `RTrim` per rimuovere gli spazi finali da una variabile String.  Viene utilizzata la funzione `Trim` per eliminare entrambi i tipi di spazi.  
+## <a name="example"></a><span data-ttu-id="fce9a-141">Esempio</span><span class="sxs-lookup"><span data-stu-id="fce9a-141">Example</span></span>  
+ <span data-ttu-id="fce9a-142">Questo esempio viene utilizzato il `LTrim` funzione per rimuovere gli spazi iniziali e `RTrim` di spazi di funzione per rimuovere finali da una variabile di stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-142">This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable.</span></span> <span data-ttu-id="fce9a-143">Usa il `Trim` funzione per rimuovere entrambi i tipi di spazi.</span><span class="sxs-lookup"><span data-stu-id="fce9a-143">It uses the `Trim` function to strip both types of spaces.</span></span>  
   
  [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
-## Esempio  
- Nell'esempio riportato di seguito la funzione `Mid` viene utilizzata per restituire un determinato numero di caratteri da una stringa.  
+## <a name="example"></a><span data-ttu-id="fce9a-144">Esempio</span><span class="sxs-lookup"><span data-stu-id="fce9a-144">Example</span></span>  
+ <span data-ttu-id="fce9a-145">Questo esempio viene utilizzato il `Mid` funzione per restituire un numero specificato di caratteri da una stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-145">This example uses the `Mid` function to return a specified number of characters from a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
-## Esempio  
- Nell'esempio riportato di seguito la funzione `Len` viene utilizzata per restituire il numero di caratteri di una stringa.  
+## <a name="example"></a><span data-ttu-id="fce9a-146">Esempio</span><span class="sxs-lookup"><span data-stu-id="fce9a-146">Example</span></span>  
+ <span data-ttu-id="fce9a-147">Questo esempio viene utilizzato `Len` per restituire il numero di caratteri in una stringa.</span><span class="sxs-lookup"><span data-stu-id="fce9a-147">This example uses `Len` to return the number of characters in a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
-## Esempio  
- Nell'esempio riportato di seguito la funzione `InStr` viene utilizzata per restituire la posizione della prima occorrenza di una stringa in un'altra:  
+## <a name="example"></a><span data-ttu-id="fce9a-148">Esempio</span><span class="sxs-lookup"><span data-stu-id="fce9a-148">Example</span></span>  
+ <span data-ttu-id="fce9a-149">Questo esempio viene utilizzato il `InStr` funzione per restituire la posizione della prima occorrenza di una stringa all'interno di altra.</span><span class="sxs-lookup"><span data-stu-id="fce9a-149">This example uses the `InStr` function to return the position of the first occurrence of one string within another.</span></span>  
   
  [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
-## Esempio  
- In questo esempio sono presentati vari utilizzi della funzione `Format` per formattare valori mediante formati sia di tipo `String` che definiti dall'utente.  Per quanto riguarda il separatore della data \(`/`\), dell'ora \(`:`\) e gli indicatori AM\/PM \(`t` e `tt`\), l'output formattato visualizzato dal sistema dipende dalle impostazioni locali utilizzate per il codice.  Nell'ambiente di sviluppo la data e l'ora vengono visualizzate nel formato breve delle impostazioni locali.  
+## <a name="example"></a><span data-ttu-id="fce9a-150">Esempio</span><span class="sxs-lookup"><span data-stu-id="fce9a-150">Example</span></span>  
+ <span data-ttu-id="fce9a-151">Questo esempio mostra vari usi del `Format` funzione a valori di formato utilizzando sia `String` formati e i formati definiti dall'utente.</span><span class="sxs-lookup"><span data-stu-id="fce9a-151">This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats.</span></span> <span data-ttu-id="fce9a-152">Per il separatore della data (`/`), il separatore dell'ora (`:`) e gli indicatori AM/PM (`t` e `tt`), l'output formattato visualizzato dal sistema dipende dalle impostazioni locali utilizzate nel codice.</span><span class="sxs-lookup"><span data-stu-id="fce9a-152">For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using.</span></span> <span data-ttu-id="fce9a-153">Quando tempi e le date vengono visualizzate nell'ambiente di sviluppo, il formato di ora breve e il formato di data breve delle impostazioni locali del codice vengono utilizzati.</span><span class="sxs-lookup"><span data-stu-id="fce9a-153">When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.</span></span>  
   
 > [!NOTE]
->  Per le impostazioni locali che utilizzano il formato 24 ore, gli indicatori AM\/PM \(`t` e `tt`\) non visualizzano alcun output.  
+>  <span data-ttu-id="fce9a-154">Per le impostazioni locali che utilizzano un orologio di 24 ore, gli indicatori AM/PM (`t` e `tt`) non visualizzano alcun output.</span><span class="sxs-lookup"><span data-stu-id="fce9a-154">For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.</span></span>  
   
  [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
-## Vedere anche  
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic Runtime Library Members](../../../visual-basic/language-reference/runtime-library-members.md)   
- [String Manipulation Summary](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a><span data-ttu-id="fce9a-155">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fce9a-155">See Also</span></span>  
+ [<span data-ttu-id="fce9a-156">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="fce9a-156">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="fce9a-157">Membri della libreria di runtime di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fce9a-157">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)  
+ [<span data-ttu-id="fce9a-158">Riepilogo della modifica delle stringhe</span><span class="sxs-lookup"><span data-stu-id="fce9a-158">String Manipulation Summary</span></span>](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

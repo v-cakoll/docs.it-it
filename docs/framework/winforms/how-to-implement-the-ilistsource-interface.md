@@ -1,31 +1,35 @@
 ---
-title: "Procedura: implementare l&#39;interfaccia IListSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "associazione dati, implementazione"
-  - "interfaccia IListSource"
+title: 'Procedura: implementare l''interfaccia IListSource'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data binding [Windows Forms], implementing
+- IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 149b6a421100d2b6f678e89f6b3ebf6b276dc4a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: implementare l&#39;interfaccia IListSource
-Implementare l'interfaccia <xref:System.ComponentModel.IListSource> per creare una classe associabile che non implementa <xref:System.Collections.IList> ma fornisce invece un elenco da un altro percorso.  
+# <a name="how-to-implement-the-ilistsource-interface"></a><span data-ttu-id="1e8f4-102">Procedura: implementare l'interfaccia IListSource</span><span class="sxs-lookup"><span data-stu-id="1e8f4-102">How to: Implement the IListSource Interface</span></span>
+<span data-ttu-id="1e8f4-103">Implementare il <xref:System.ComponentModel.IListSource> interfaccia per creare una classe associabile che non implementa <xref:System.Collections.IList> ma fornisce un elenco da un altro percorso.</span><span class="sxs-lookup"><span data-stu-id="1e8f4-103">Implement the <xref:System.ComponentModel.IListSource> interface to create a bindable class that does not implement <xref:System.Collections.IList> but instead provides a list from another location.</span></span>  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene illustrato come implementare l'interfaccia <xref:System.ComponentModel.IListSource>.  Un componente denominato `EmployeeListSource` espone un'interfaccia <xref:System.Collections.IList> per l'associazione dati implementando il metodo <xref:System.ComponentModel.IListSource.GetList%2A>.  
+## <a name="example"></a><span data-ttu-id="1e8f4-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="1e8f4-104">Example</span></span>  
+ <span data-ttu-id="1e8f4-105">Esempio di codice seguente viene illustrato come implementare il <xref:System.ComponentModel.IListSource> interfaccia.</span><span class="sxs-lookup"><span data-stu-id="1e8f4-105">The following code example demonstrates how to implement the <xref:System.ComponentModel.IListSource> interface.</span></span> <span data-ttu-id="1e8f4-106">Un componente denominato `EmployeeListSource` espone un <xref:System.Collections.IList> per l'associazione dati mediante l'implementazione di <xref:System.ComponentModel.IListSource.GetList%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="1e8f4-106">A component named `EmployeeListSource` exposes an <xref:System.Collections.IList> for data binding by implementing the <xref:System.ComponentModel.IListSource.GetList%2A> method.</span></span>  
   
  [!code-csharp[System.ComponentModel.IListSource#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IListSource/CS/EmployeeListSource.cs#1)]
  [!code-vb[System.ComponentModel.IListSource#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IListSource/VB/EmployeeListSource.vb#1)]  
@@ -39,14 +43,14 @@ Implementare l'interfaccia <xref:System.ComponentModel.IListSource> per creare u
  [!code-csharp[System.ComponentModel.IListSource#1000](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IListSource/CS/Form1.cs#1000)]
  [!code-vb[System.ComponentModel.IListSource#1000](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IListSource/VB/Form1.vb#1000)]  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="1e8f4-107">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="1e8f4-107">Compiling the Code</span></span>  
+ <span data-ttu-id="1e8f4-108">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="1e8f4-108">This example requires:</span></span>  
   
--   Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
+-   <span data-ttu-id="1e8f4-109">Riferimenti agli assembly System.Drawing e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="1e8f4-109">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
-## Vedere anche  
- <xref:System.ComponentModel.IListSource>   
- <xref:System.ComponentModel.ITypedList>   
- <xref:System.ComponentModel.BindingList%601>   
- <xref:System.ComponentModel.IBindingList>   
- [Associazione dati e Windows Form](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="1e8f4-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1e8f4-110">See Also</span></span>  
+ <xref:System.ComponentModel.IListSource>  
+ <xref:System.ComponentModel.ITypedList>  
+ <xref:System.ComponentModel.BindingList%601>  
+ <xref:System.ComponentModel.IBindingList>  
+ [<span data-ttu-id="1e8f4-111">Data binding e Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1e8f4-111">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

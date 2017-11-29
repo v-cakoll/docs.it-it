@@ -1,39 +1,39 @@
 ---
-title: "Cenni preliminari sul controllo Button (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Button"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button (controllo) [Windows Form], informazioni sul controllo Button"
-  - "pulsanti, informazioni sui pulsanti"
+title: Cenni preliminari sul controllo Button (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Button
+helpviewer_keywords:
+- Button control [Windows Forms], about Button control
+- buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ff98eb39113a2fa8117d091645ac04526e2983c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul controllo Button (Windows Form)
-Il controllo <xref:System.Windows.Forms.Button> Windows Form consente all'utente di eseguire le operazioni desiderate facendo clic su un pulsante.  Una volta scelto, il pulsante viene visualizzato come se fosse stato effettivamente attivato e poi rilasciato.  Quando l'utente fa clic su un pulsante, viene richiamato il gestore eventi <xref:System.Windows.Forms.Control.Click>.  Per eseguire qualsiasi operazione, inserire il codice nel gestore eventi <xref:System.Windows.Forms.Control.Click>.  
+# <a name="button-control-overview-windows-forms"></a><span data-ttu-id="1df75-102">Cenni preliminari sul controllo Button (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="1df75-102">Button Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="1df75-103">Il controllo <xref:System.Windows.Forms.Button> Windows Form consente all'utente di eseguire le operazioni desiderate facendo clic su di esso.</span><span class="sxs-lookup"><span data-stu-id="1df75-103">The Windows Forms <xref:System.Windows.Forms.Button> control allows the user to click it to perform an action.</span></span> <span data-ttu-id="1df75-104">Una volta scelto, il pulsante viene visualizzato come se fosse stato effettivamente premuto e poi rilasciato.</span><span class="sxs-lookup"><span data-stu-id="1df75-104">When the button is clicked, it looks as if it is being pushed in and released.</span></span> <span data-ttu-id="1df75-105">Ogni volta che l'utente fa clic su un pulsante, il <xref:System.Windows.Forms.Control.Click> viene richiamato il gestore di evento.</span><span class="sxs-lookup"><span data-stu-id="1df75-105">Whenever the user clicks a button, the <xref:System.Windows.Forms.Control.Click> event handler is invoked.</span></span> <span data-ttu-id="1df75-106">Inserire il codice nel <xref:System.Windows.Forms.Control.Click> gestore eventi per eseguire qualsiasi operazione.</span><span class="sxs-lookup"><span data-stu-id="1df75-106">You place code in the <xref:System.Windows.Forms.Control.Click> event handler to perform any action you choose.</span></span>  
   
- Il testo visualizzato nel pulsante è specificato nella proprietà <xref:System.Windows.Forms.Control.Text%2A>.  Se la larghezza del testo è superiore a quella del pulsante, il testo viene mandato a capo.  In caso le dimensioni del pulsante non siano comunque sufficienti a contenerlo, il testo risulterà tagliato.  Per ulteriori informazioni, vedere [Procedura: impostare il testo visualizzato da un controllo di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  La proprietà <xref:System.Windows.Forms.Control.Text%2A> può contenere un tasto di scelta che consente di selezionare il controllo premendo contemporaneamente ALT e tale tasto.  Per informazioni dettagliate, vedere [Procedura: creare tasti di scelta per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  L'aspetto del testo viene controllato dalle proprietà <xref:System.Windows.Forms.Control.Font%2A> e <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>.  
+ <span data-ttu-id="1df75-107">Cui è contenuto il testo visualizzato sul pulsante di <xref:System.Windows.Forms.Control.Text%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="1df75-107">The text displayed on the button is contained in the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="1df75-108">Se il testo supera la larghezza del pulsante, eseguirà il wrapping alla riga successiva.</span><span class="sxs-lookup"><span data-stu-id="1df75-108">If your text exceeds the width of the button, it will wrap to the next line.</span></span> <span data-ttu-id="1df75-109">Tuttavia, verrà troncato se il controllo non supporta l'altezza complessiva.</span><span class="sxs-lookup"><span data-stu-id="1df75-109">However, it will be clipped if the control cannot accommodate its overall height.</span></span> <span data-ttu-id="1df75-110">Per ulteriori informazioni, vedere [procedura: impostare il testo visualizzato da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="1df75-110">For more information, see [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span> <span data-ttu-id="1df75-111">Il <xref:System.Windows.Forms.Control.Text%2A> proprietà può contenere una chiave di accesso, che consente agli utenti di "fare clic su" controllo premendo il tasto ALT con la chiave di accesso.</span><span class="sxs-lookup"><span data-stu-id="1df75-111">The <xref:System.Windows.Forms.Control.Text%2A> property can contain an access key, which allows a user to "click" the control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="1df75-112">Per informazioni dettagliate, vedere [procedura: creazione di chiavi per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="1df75-112">For details, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span></span> <span data-ttu-id="1df75-113">L'aspetto del testo viene controllato mediante il <xref:System.Windows.Forms.Control.Font%2A> proprietà e <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="1df75-113">The appearance of the text is controlled by the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> property.</span></span>  
   
- Il controllo  <xref:System.Windows.Forms.Button> consente inoltre di visualizzare immagini utilizzando le proprietà <xref:System.Windows.Forms.ButtonBase.Image%2A> e <xref:System.Windows.Forms.ButtonBase.ImageList%2A>.  Per ulteriori informazioni, vedere [Procedura: impostare l'immagine visualizzata da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ <span data-ttu-id="1df75-114">Il <xref:System.Windows.Forms.Button> controllo può anche visualizzare immagini utilizzando la <xref:System.Windows.Forms.ButtonBase.Image%2A> e <xref:System.Windows.Forms.ButtonBase.ImageList%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="1df75-114">The <xref:System.Windows.Forms.Button> control can also display images using the <xref:System.Windows.Forms.ButtonBase.Image%2A> and <xref:System.Windows.Forms.ButtonBase.ImageList%2A> properties.</span></span> <span data-ttu-id="1df75-115">Per ulteriori informazioni, vedere [procedura: impostare l'immagine visualizzata da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="1df75-115">For more information, see [How to: Set the Image Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Button>   
- [Procedura: rispondere alla selezione dei pulsanti di Windows Form](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Modalità di selezione di un controllo Button Windows Form](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Procedura: designare un pulsante Windows Form come pulsante di conferma utilizzando la finestra di progettazione](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)   
- [Procedura: designare un pulsante Windows Form come pulsante Annulla utilizzando la finestra di progettazione](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)   
- [Controllo Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="1df75-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1df75-116">See Also</span></span>  
+ <xref:System.Windows.Forms.Button>  
+ [<span data-ttu-id="1df75-117">Procedura: Rispondere alla selezione dei pulsanti di Windows Form</span><span class="sxs-lookup"><span data-stu-id="1df75-117">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="1df75-118">Modalità di selezione di un controllo Button di Windows Form</span><span class="sxs-lookup"><span data-stu-id="1df75-118">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="1df75-119">Procedura: Designare un pulsante Windows Form come pulsante di conferma usando la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="1df75-119">How to: Designate a Windows Forms Button as the Accept Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
+ [<span data-ttu-id="1df75-120">Procedura: Designare un pulsante Windows Form come pulsante Annulla usando la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="1df75-120">How to: Designate a Windows Forms Button as the Cancel Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
+ [<span data-ttu-id="1df75-121">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="1df75-121">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

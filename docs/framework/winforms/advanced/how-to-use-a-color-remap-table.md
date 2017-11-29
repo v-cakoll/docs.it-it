@@ -1,45 +1,51 @@
 ---
-title: "Procedura: utilizzare una tabella di riassociazione cromatica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "tabelle di rimappatura dei colori, utilizzo"
-  - "tabelle del colore, rimappatura dei colori"
-  - "colori personalizzati, creazione con tabelle di rimappatura dei colori"
+title: 'Procedura: utilizzare una tabella di riassociazione cromatica'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- color tables [Windows Forms], remapping colors with
+- custom colors [Windows Forms], creating with color remap table
+- color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1c4399e98504a675cfbf63462b8dc964c677488e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare una tabella di riassociazione cromatica
-La riassociazione è il processo di conversione dei colori in un'immagine in base a una tabella di riassociazione cromatica.  Tale tabella è una matrice di oggetti <xref:System.Drawing.Imaging.ColorMap>.  Ogni oggetto <xref:System.Drawing.Imaging.ColorMap> contenuto nella matrice dispone di una proprietà <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> e di una proprietà <xref:System.Drawing.Imaging.ColorMap.NewColor%2A>.  
+# <a name="how-to-use-a-color-remap-table"></a><span data-ttu-id="e04fd-102">Procedura: utilizzare una tabella di riassociazione cromatica</span><span class="sxs-lookup"><span data-stu-id="e04fd-102">How to: Use a Color Remap Table</span></span>
+<span data-ttu-id="e04fd-103">Modifica del mapping è il processo di conversione dei colori in un'immagine in base a una tabella di modifica del mapping dei colori.</span><span class="sxs-lookup"><span data-stu-id="e04fd-103">Remapping is the process of converting the colors in an image according to a color remap table.</span></span> <span data-ttu-id="e04fd-104">La tabella è una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti.</span><span class="sxs-lookup"><span data-stu-id="e04fd-104">The color remap table is an array of <xref:System.Drawing.Imaging.ColorMap> objects.</span></span> <span data-ttu-id="e04fd-105">Ogni <xref:System.Drawing.Imaging.ColorMap> oggetto nella matrice è un <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> proprietà e un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="e04fd-105">Each <xref:System.Drawing.Imaging.ColorMap> object in the array has an <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> property and a <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> property.</span></span>  
   
- Quando si disegna un'immagine con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], ciascun pixel dell'immagine viene confrontato con la matrice dei colori precedenti.  Se il colore di un pixel corrisponde a uno dei colori precedenti al pixel viene applicato il nuovo colore corrispondente.  I colori sono modificati solo a scopo di rendering; i valori cromatici veri e propri dell'immagine, memorizzati in un oggetto <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap>, non vengono modificati.  
+ <span data-ttu-id="e04fd-106">Quando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] disegna un'immagine, ogni pixel dell'immagine viene confrontato con la matrice di colori precedente.</span><span class="sxs-lookup"><span data-stu-id="e04fd-106">When [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] draws an image, each pixel of the image is compared to the array of old colors.</span></span> <span data-ttu-id="e04fd-107">Se il colore del pixel corrisponde a un colore precedente, viene modificato il colore per il nuovo colore corrispondente.</span><span class="sxs-lookup"><span data-stu-id="e04fd-107">If a pixel's color matches an old color, its color is changed to the corresponding new color.</span></span> <span data-ttu-id="e04fd-108">I colori vengono modificati solo per il rendering, i valori di colore dell'immagine (archiviati in un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto) non vengono modificati.</span><span class="sxs-lookup"><span data-stu-id="e04fd-108">The colors are changed only for rendering — the color values of the image itself (stored in an <xref:System.Drawing.Image> or <xref:System.Drawing.Bitmap> object) are not changed.</span></span>  
   
- Per disegnare un'immagine riassociata, inizializzare una matrice di oggetti <xref:System.Drawing.Imaging.ColorMap>.  Passare la matrice al metodo <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> di un oggetto <xref:System.Drawing.Imaging.ImageAttributes>, quindi passare l'oggetto <xref:System.Drawing.Imaging.ImageAttributes> al metodo <xref:System.Drawing.Graphics.DrawImage%2A> di un oggetto <xref:System.Drawing.Graphics>.  
+ <span data-ttu-id="e04fd-109">Per disegnare un'immagine riassociata, inizializzare una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti.</span><span class="sxs-lookup"><span data-stu-id="e04fd-109">To draw a remapped image, initialize an array of <xref:System.Drawing.Imaging.ColorMap> objects.</span></span> <span data-ttu-id="e04fd-110">Passare la matrice di <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> metodo di un <xref:System.Drawing.Imaging.ImageAttributes> dell'oggetto e quindi passare il <xref:System.Drawing.Imaging.ImageAttributes> dell'oggetto per il <xref:System.Drawing.Graphics.DrawImage%2A> metodo di un <xref:System.Drawing.Graphics> oggetto.</span><span class="sxs-lookup"><span data-stu-id="e04fd-110">Pass that array to the <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> method of an <xref:System.Drawing.Imaging.ImageAttributes> object, and then pass the <xref:System.Drawing.Imaging.ImageAttributes> object to the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object.</span></span>  
   
-## Esempio  
- Nell'esempio che segue viene creato un oggetto <xref:System.Drawing.Image> dal file RemapInput.bmp.  Nel codice viene creata una tabella di riassociazione cromatica costituita da un unico oggetto <xref:System.Drawing.Imaging.ColorMap>.  La proprietà <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> dell'oggetto `ColorRemap`  è il rosso e la proprietà <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> è il blu.  L'immagine viene disegnata una volta con e una volta senza riassociazione.  Tramite il processo di riassociazione tutti i pixel rossi vengono cambiati in blu.  
+## <a name="example"></a><span data-ttu-id="e04fd-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="e04fd-111">Example</span></span>  
+ <span data-ttu-id="e04fd-112">Nell'esempio seguente viene creato un <xref:System.Drawing.Image> oggetto dal file RemapInput.</span><span class="sxs-lookup"><span data-stu-id="e04fd-112">The following example creates an <xref:System.Drawing.Image> object from the file RemapInput.bmp.</span></span> <span data-ttu-id="e04fd-113">Il codice crea una tabella di riassociazione cromatica costituita da una singola <xref:System.Drawing.Imaging.ColorMap> oggetto.</span><span class="sxs-lookup"><span data-stu-id="e04fd-113">The code creates a color remap table that consists of a single <xref:System.Drawing.Imaging.ColorMap> object.</span></span> <span data-ttu-id="e04fd-114">Il <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> proprietà del `ColorRemap` è rosso, oggetto e <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> proprietà è di colore blu.</span><span class="sxs-lookup"><span data-stu-id="e04fd-114">The <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> property of the `ColorRemap` object is red, and the <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> property is blue.</span></span> <span data-ttu-id="e04fd-115">L'immagine viene disegnata una sola volta senza mapping e una volta con mapping.</span><span class="sxs-lookup"><span data-stu-id="e04fd-115">The image is drawn once without remapping and once with remapping.</span></span> <span data-ttu-id="e04fd-116">Il processo di modifica del mapping modifica tutti i pixel rossi blu.</span><span class="sxs-lookup"><span data-stu-id="e04fd-116">The remapping process changes all the red pixels to blue.</span></span>  
   
- Nell'illustrazione che segue si mostra l'immagine originale a sinistra e l'immagine riassociata a destra.  
+ <span data-ttu-id="e04fd-117">Nella figura seguente mostra l'immagine originale a sinistra e l'immagine rimappato a destra.</span><span class="sxs-lookup"><span data-stu-id="e04fd-117">The following illustration shows the original image on the left and the remapped image on the right.</span></span>  
+  
+ <span data-ttu-id="e04fd-118">![Modifica del mapping dei colori](../../../../docs/framework/winforms/advanced/media/colortrans7.png "colortrans7")</span><span class="sxs-lookup"><span data-stu-id="e04fd-118">![Color ReMap](../../../../docs/framework/winforms/advanced/media/colortrans7.png "colortrans7")</span></span>  
   
  [!code-csharp[System.Drawing.RecoloringImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.RecoloringImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="e04fd-119">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="e04fd-119">Compiling the Code</span></span>  
+ <span data-ttu-id="e04fd-120">L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="e04fd-120">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## Vedere anche  
- [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)   
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="e04fd-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e04fd-121">See Also</span></span>  
+ [<span data-ttu-id="e04fd-122">Ricolorazione di immagini</span><span class="sxs-lookup"><span data-stu-id="e04fd-122">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [<span data-ttu-id="e04fd-123">Immagini, bitmap e metafile</span><span class="sxs-lookup"><span data-stu-id="e04fd-123">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

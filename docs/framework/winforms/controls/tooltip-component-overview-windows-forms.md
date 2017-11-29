@@ -1,37 +1,37 @@
 ---
-title: "Cenni preliminari sul componente ToolTip (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolTip"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ToolTip (componente) [Windows Form], informazioni sul componente ToolTip"
-  - "descrizioni comandi [Windows Form], informazioni sulle descrizioni comandi"
+title: Cenni preliminari sul componente ToolTip (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolTip
+helpviewer_keywords:
+- tooltips [Windows Forms], about tooltips
+- ToolTip component [Windows Forms], about ToolTip component
 ms.assetid: 3fbc6f08-c882-4acd-a960-a08efe3c7e6e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ff2364b5c7223c265571257920a7c7e794b4921b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul componente ToolTip (Windows Form)
-Il componente <xref:System.Windows.Forms.ToolTip> di Windows Form visualizza testo quando l'utente posiziona il puntatore del mouse su uno dei controlli.  È possibile associare un componente ToolTip a qualsiasi controllo.  Per risparmiare spazio in un form, ad esempio, è possibile visualizzare una piccola icona su un pulsante e utilizzare un componente ToolTip per illustrare la funzione del pulsante.  
+# <a name="tooltip-component-overview-windows-forms"></a><span data-ttu-id="2f7c0-102">Cenni preliminari sul componente ToolTip (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="2f7c0-102">ToolTip Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="2f7c0-103">Il componente <xref:System.Windows.Forms.ToolTip> di Windows Form visualizza un testo quando l'utente posiziona il puntatore sui controlli.</span><span class="sxs-lookup"><span data-stu-id="2f7c0-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="2f7c0-104">Una descrizione comando può essere associata a qualsiasi controllo.</span><span class="sxs-lookup"><span data-stu-id="2f7c0-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="2f7c0-105">Un esempio di questo componente: per risparmiare spazio in un form, è possibile visualizzare una piccola icona su un pulsante e utilizzare una descrizione comando per illustrare la funzione del pulsante.</span><span class="sxs-lookup"><span data-stu-id="2f7c0-105">An example use of this component: to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  
   
-## Utilizzo del componente ToolTip  
- Un componente <xref:System.Windows.Forms.ToolTip> fornisce una proprietà `ToolTip` a più controlli in un Windows Form o in un altro contenitore.  Ad esempio, se si inserisce un componente <xref:System.Windows.Forms.ToolTip> in un form, è possibile visualizzare il testo "Digitare il nome" per un controllo <xref:System.Windows.Forms.TextBox> e "Fare clic per salvare le modifiche" per un controllo <xref:System.Windows.Forms.Button>.  
+## <a name="working-with-the-tooltip-component"></a><span data-ttu-id="2f7c0-106">Utilizzo del componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="2f7c0-106">Working with the ToolTip Component</span></span>  
+ <span data-ttu-id="2f7c0-107">Oggetto <xref:System.Windows.Forms.ToolTip> componente fornisce un `ToolTip` proprietà a più controlli in un Windows Form o un altro contenitore.</span><span class="sxs-lookup"><span data-stu-id="2f7c0-107">A <xref:System.Windows.Forms.ToolTip> component provides a `ToolTip` property to multiple controls on a Windows Form or other container.</span></span> <span data-ttu-id="2f7c0-108">Ad esempio, se si inserisce uno <xref:System.Windows.Forms.ToolTip> componente in un form, è possibile visualizzare il testo "Digitare qui il nome" per un <xref:System.Windows.Forms.TextBox> controllare e "Fare clic qui per salvare le modifiche" per un <xref:System.Windows.Forms.Button> controllo.</span><span class="sxs-lookup"><span data-stu-id="2f7c0-108">For example, if you place one <xref:System.Windows.Forms.ToolTip> component on a form, you can display "Type your name here" for a <xref:System.Windows.Forms.TextBox> control and "Click here to save changes" for a <xref:System.Windows.Forms.Button> control.</span></span>  
   
- I metodi principali del componente <xref:System.Windows.Forms.ToolTip> sono <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> e <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>.  È possibile utilizzare il metodo <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> per impostare i componenti ToolTip visualizzati per i controlli.  Per ulteriori informazioni, vedere [Procedura: impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md).  Le proprietà principali sono <xref:System.Windows.Forms.ToolTip.Active%2A>, che deve essere impostata su `true` affinché il componente ToolTip venga visualizzato, e <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, che stabilisce per quanto tempo la stringa del componente ToolTip rimane visualizzata, per quanto tempo il puntatore deve rimanere sul controllo affinché la descrizione del comando venga visualizzata e quanto tempo deve trascorre prima della visualizzazione delle descrizioni successive.  Per ulteriori informazioni, vedere [Procedura: modificare il ritardo del componente ToolTip di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  
+ <span data-ttu-id="2f7c0-109">I metodi principali del <xref:System.Windows.Forms.ToolTip> componente sono <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> e <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>.</span><span class="sxs-lookup"><span data-stu-id="2f7c0-109">The key methods of the <xref:System.Windows.Forms.ToolTip> component are <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> and <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>.</span></span> <span data-ttu-id="2f7c0-110">È possibile utilizzare il <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> per impostare le descrizioni comandi visualizzate per i controlli.</span><span class="sxs-lookup"><span data-stu-id="2f7c0-110">You can use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method to set the ToolTips displayed for controls.</span></span> <span data-ttu-id="2f7c0-111">Per ulteriori informazioni, vedere [procedura: impostare le descrizioni di comandi per i controlli in un Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="2f7c0-111">For more information, see [How to: Set ToolTips for Controls on a Windows Form at Design Time](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md).</span></span> <span data-ttu-id="2f7c0-112">Le proprietà principali sono <xref:System.Windows.Forms.ToolTip.Active%2A>, che deve essere impostata su `true` per la descrizione comando viene visualizzata, e <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, che imposta il periodo di tempo che la stringa di descrizione comandi, quanto tempo l'utente deve fare riferimento al controllo per la descrizione comando viene visualizzata e come tempo accetta per finestre di descrizione comando successive.</span><span class="sxs-lookup"><span data-stu-id="2f7c0-112">The key properties are <xref:System.Windows.Forms.ToolTip.Active%2A>, which must be set to `true` for the ToolTip to appear, and <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, which sets the length of time that the ToolTip string is shown, how long the user must point at the control for the ToolTip to appear, and how long it takes for subsequent ToolTip windows to appear.</span></span> <span data-ttu-id="2f7c0-113">Per ulteriori informazioni, vedere [procedura: modificare il ritardo del componente ToolTip di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).</span><span class="sxs-lookup"><span data-stu-id="2f7c0-113">For more information, see [How to: Change the Delay of the Windows Forms ToolTip Component](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolTip>   
- [Procedura: impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)   
- [Procedura: modificare il ritardo del componente ToolTip di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+## <a name="see-also"></a><span data-ttu-id="2f7c0-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2f7c0-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolTip>  
+ [<span data-ttu-id="2f7c0-115">Procedura: Impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="2f7c0-115">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
+ [<span data-ttu-id="2f7c0-116">Procedura: Modifica del ritardo del componente ToolTip di Windows Form</span><span class="sxs-lookup"><span data-stu-id="2f7c0-116">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)

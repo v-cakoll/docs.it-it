@@ -1,152 +1,134 @@
 ---
-title: Opzioni del compilatore di Visual Basic elencate per categoria | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Opzioni del compilatore Visual Basic elencate per categoria
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c379a937f798a02badd7b7cd8470f2e1ce3b072
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f554893858b9475b3d94a669a094206be6a5c3fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Opzioni del compilatore Visual Basic elencate per categoria
-Il compilatore da riga di comando [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] fornisce un'alternativa alla compilazione dei programmi dall'interno dell'ambiente di sviluppo integrato (IDE) di [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]. Di seguito è riportato un elenco delle opzioni del compilatore da riga di comando [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ordinate in base alla categoria funzionale.  
+# <a name="visual-basic-compiler-options-listed-by-category"></a><span data-ttu-id="2a294-102">Opzioni del compilatore Visual Basic elencate per categoria</span><span class="sxs-lookup"><span data-stu-id="2a294-102">Visual Basic Compiler Options Listed by Category</span></span>
+<span data-ttu-id="2a294-103">Il compilatore da riga di comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornisce un'alternativa alla compilazione dei programmi dall'interno dell'ambiente di sviluppo integrato (IDE) di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2a294-103">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler is provided as an alternative to compiling programs from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment (IDE).</span></span> <span data-ttu-id="2a294-104">Di seguito è riportato un elenco delle opzioni del compilatore da riga di comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ordinate in base alla categoria funzionale.</span><span class="sxs-lookup"><span data-stu-id="2a294-104">The following is a list of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler options sorted by functional category.</span></span>  
   
-## <a name="compiler-output"></a>Output del compilatore  
+## <a name="compiler-output"></a><span data-ttu-id="2a294-105">Output del compilatore</span><span class="sxs-lookup"><span data-stu-id="2a294-105">Compiler Output</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-106">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-106">Option</span></span>|<span data-ttu-id="2a294-107">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-107">Purpose</span></span>|  
 |---|---|  
-|[/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Elimina i messaggi informativi del compilatore.|  
-|[/utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Visualizza l'output del compilatore usando la codifica UTF-8.|  
-|[/verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Restituisce informazioni supplementari durante la compilazione.|  
-|`/modulename:<string>`|Specificare il nome del modulo di origine|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Specificare una lingua per l'output del compilatore.|  
+|[<span data-ttu-id="2a294-108">/nologo</span><span class="sxs-lookup"><span data-stu-id="2a294-108">/nologo</span></span>](../../../visual-basic/reference/command-line-compiler/nologo.md)|<span data-ttu-id="2a294-109">Elimina i messaggi informativi del compilatore.</span><span class="sxs-lookup"><span data-stu-id="2a294-109">Suppresses compiler banner information.</span></span>|  
+|[<span data-ttu-id="2a294-110">/utf8output</span><span class="sxs-lookup"><span data-stu-id="2a294-110">/utf8output</span></span>](../../../visual-basic/reference/command-line-compiler/utf8output.md)|<span data-ttu-id="2a294-111">Visualizza l'output del compilatore usando la codifica UTF-8.</span><span class="sxs-lookup"><span data-stu-id="2a294-111">Displays compiler output using UTF-8 encoding.</span></span>|  
+|[<span data-ttu-id="2a294-112">/verbose</span><span class="sxs-lookup"><span data-stu-id="2a294-112">/verbose</span></span>](../../../visual-basic/reference/command-line-compiler/verbose.md)|<span data-ttu-id="2a294-113">Restituisce informazioni supplementari durante la compilazione.</span><span class="sxs-lookup"><span data-stu-id="2a294-113">Outputs extra information during compilation.</span></span>|  
+|`/modulename:<string>`|<span data-ttu-id="2a294-114">Specificare il nome del modulo di origine</span><span class="sxs-lookup"><span data-stu-id="2a294-114">Specify the name of the source module</span></span>|  
+|[<span data-ttu-id="2a294-115">/preferreduilang</span><span class="sxs-lookup"><span data-stu-id="2a294-115">/preferreduilang</span></span>](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|<span data-ttu-id="2a294-116">Specificare una lingua per l'output del compilatore.</span><span class="sxs-lookup"><span data-stu-id="2a294-116">Specify a language for compiler output.</span></span>|  
   
-## <a name="optimization"></a>Ottimizzazione  
+## <a name="optimization"></a><span data-ttu-id="2a294-117">Ottimizzazione</span><span class="sxs-lookup"><span data-stu-id="2a294-117">Optimization</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-118">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-118">Option</span></span>|<span data-ttu-id="2a294-119">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-119">Purpose</span></span>|  
 |---|---|  
-|[/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Specifica la posizione di allineamento per le sezioni del file di output.|  
-|[/optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Abilita/disabilita le ottimizzazioni.|  
+|[<span data-ttu-id="2a294-120">/filealign</span><span class="sxs-lookup"><span data-stu-id="2a294-120">/filealign</span></span>](../../../visual-basic/reference/command-line-compiler/filealign.md)|<span data-ttu-id="2a294-121">Specifica la posizione di allineamento per le sezioni del file di output.</span><span class="sxs-lookup"><span data-stu-id="2a294-121">Specifies where to align the sections of the output file.</span></span>|  
+|[<span data-ttu-id="2a294-122">/optimize</span><span class="sxs-lookup"><span data-stu-id="2a294-122">/optimize</span></span>](../../../visual-basic/reference/command-line-compiler/optimize.md)|<span data-ttu-id="2a294-123">Abilita/disabilita le ottimizzazioni.</span><span class="sxs-lookup"><span data-stu-id="2a294-123">Enables/disables optimizations.</span></span>|  
   
-## <a name="output-files"></a>File di output  
+## <a name="output-files"></a><span data-ttu-id="2a294-124">File di output</span><span class="sxs-lookup"><span data-stu-id="2a294-124">Output Files</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-125">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-125">Option</span></span>|<span data-ttu-id="2a294-126">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-126">Purpose</span></span>|  
 |---|---|  
-|[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Elabora commenti per la documentazione in un file XML.|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Imposta il compilatore in modo che punti a [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)].|  
-|[/out](../../../visual-basic/reference/command-line-compiler/out.md)|Specifica un file di output.|  
-|[/target](../../../visual-basic/reference/command-line-compiler/target.md)|Specifica il formato dell'output.|  
+|[<span data-ttu-id="2a294-127">/doc</span><span class="sxs-lookup"><span data-stu-id="2a294-127">/doc</span></span>](../../../visual-basic/reference/command-line-compiler/doc.md)|<span data-ttu-id="2a294-128">Elabora commenti per la documentazione in un file XML.</span><span class="sxs-lookup"><span data-stu-id="2a294-128">Process documentation comments to an XML file.</span></span>|  
+|[<span data-ttu-id="2a294-129">/netcf</span><span class="sxs-lookup"><span data-stu-id="2a294-129">/netcf</span></span>](../../../visual-basic/reference/command-line-compiler/netcf.md)|<span data-ttu-id="2a294-130">Imposta il compilatore in modo che punti a [!INCLUDE[Compact](~/includes/compact-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2a294-130">Sets the compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>|  
+|[<span data-ttu-id="2a294-131">/out</span><span class="sxs-lookup"><span data-stu-id="2a294-131">/out</span></span>](../../../visual-basic/reference/command-line-compiler/out.md)|<span data-ttu-id="2a294-132">Specifica un file di output.</span><span class="sxs-lookup"><span data-stu-id="2a294-132">Specifies an output file.</span></span>|  
+|[<span data-ttu-id="2a294-133">/target</span><span class="sxs-lookup"><span data-stu-id="2a294-133">/target</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)|<span data-ttu-id="2a294-134">Specifica il formato dell'output.</span><span class="sxs-lookup"><span data-stu-id="2a294-134">Specifies the format of the output.</span></span>|  
   
-## <a name="net-assemblies"></a>Assembly .NET  
+## <a name="net-assemblies"></a><span data-ttu-id="2a294-135">Assembly .NET</span><span class="sxs-lookup"><span data-stu-id="2a294-135">.NET Assemblies</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-136">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-136">Option</span></span>|<span data-ttu-id="2a294-137">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-137">Purpose</span></span>|  
 |---|---|  
-|[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Fa sì che il compilatore renda disponibili per il progetto in compilazione tutte le informazioni sui tipi presenti nei file specificati.|  
-|[/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Specifica se l'assembly avrà firma completa o parziale.|  
-|[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importa uno spazio dei nomi dall'assembly specificato.|  
-|[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.|  
-|[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Specifica un file contenente una chiave o una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.|  
-|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifica il percorso degli assembly a cui fa riferimento il [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) (opzione).|  
-|[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Importa metadati da un assembly.|  
-|[/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Specifica il nome dell'assembly che conterrà un modulo.|  
-|`/analyzer`|Esegue gli analizzatori da questo assembly (forma breve: /a)|  
-|`/additionalfile`|Assegna un nome ad altri file che non influiscono direttamente sulla generazione del codice, ma possono essere usati dagli analizzatori per produrre errori o avvisi.|  
+|[<span data-ttu-id="2a294-138">/addmodule</span><span class="sxs-lookup"><span data-stu-id="2a294-138">/addmodule</span></span>](../../../visual-basic/reference/command-line-compiler/addmodule.md)|<span data-ttu-id="2a294-139">Fa sì che il compilatore renda disponibili per il progetto in compilazione tutte le informazioni sui tipi presenti nei file specificati.</span><span class="sxs-lookup"><span data-stu-id="2a294-139">Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.</span></span>|  
+|[<span data-ttu-id="2a294-140">/delaysign</span><span class="sxs-lookup"><span data-stu-id="2a294-140">/delaysign</span></span>](../../../visual-basic/reference/command-line-compiler/delaysign.md)|<span data-ttu-id="2a294-141">Specifica se l'assembly avrà firma completa o parziale.</span><span class="sxs-lookup"><span data-stu-id="2a294-141">Specifies whether the assembly will be fully or partially signed.</span></span>|  
+|[<span data-ttu-id="2a294-142">/imports</span><span class="sxs-lookup"><span data-stu-id="2a294-142">/imports</span></span>](../../../visual-basic/reference/command-line-compiler/imports.md)|<span data-ttu-id="2a294-143">Importa uno spazio dei nomi dall'assembly specificato.</span><span class="sxs-lookup"><span data-stu-id="2a294-143">Imports a namespace from a specified assembly.</span></span>|  
+|[<span data-ttu-id="2a294-144">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="2a294-144">/keycontainer</span></span>](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|<span data-ttu-id="2a294-145">Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="2a294-145">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>|  
+|[<span data-ttu-id="2a294-146">/keyfile</span><span class="sxs-lookup"><span data-stu-id="2a294-146">/keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)|<span data-ttu-id="2a294-147">Specifica un file contenente una chiave o una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="2a294-147">Specifies a file containing a key or key pair to give an assembly a strong name.</span></span>|  
+|[<span data-ttu-id="2a294-148">/libpath</span><span class="sxs-lookup"><span data-stu-id="2a294-148">/libpath</span></span>](../../../visual-basic/reference/command-line-compiler/libpath.md)|<span data-ttu-id="2a294-149">Specifica la posizione degli assembly a cui fa riferimento il [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) opzione.</span><span class="sxs-lookup"><span data-stu-id="2a294-149">Specifies the location of assemblies referenced by the [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>|  
+|[<span data-ttu-id="2a294-150">/reference</span><span class="sxs-lookup"><span data-stu-id="2a294-150">/reference</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)|<span data-ttu-id="2a294-151">Importa metadati da un assembly.</span><span class="sxs-lookup"><span data-stu-id="2a294-151">Imports metadata from an assembly.</span></span>|  
+|[<span data-ttu-id="2a294-152">/moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="2a294-152">/moduleassemblyname</span></span>](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|<span data-ttu-id="2a294-153">Specifica il nome dell'assembly che conterrà un modulo.</span><span class="sxs-lookup"><span data-stu-id="2a294-153">Specifies the name of the assembly that a module will be a part of.</span></span>|  
+|`/analyzer`|<span data-ttu-id="2a294-154">Esegue gli analizzatori da questo assembly (forma breve: /a)</span><span class="sxs-lookup"><span data-stu-id="2a294-154">Run the analyzers from this assembly (Short form: /a)</span></span>|  
+|`/additionalfile`|<span data-ttu-id="2a294-155">Assegna un nome ad altri file che non influiscono direttamente sulla generazione del codice, ma possono essere usati dagli analizzatori per produrre errori o avvisi.</span><span class="sxs-lookup"><span data-stu-id="2a294-155">Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.</span></span>|  
   
-## <a name="debuggingerror-checking"></a>Debug/Controllo errori  
+## <a name="debuggingerror-checking"></a><span data-ttu-id="2a294-156">Debug/Controllo errori</span><span class="sxs-lookup"><span data-stu-id="2a294-156">Debugging/Error Checking</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-157">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-157">Option</span></span>|<span data-ttu-id="2a294-158">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-158">Purpose</span></span>|  
 |---|---|  
-|[/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Crea un file contenente informazioni che rendono più semplice segnalare un bug.|  
-|[/debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Crea informazioni di debug.|  
-|[/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|Inibisce la capacità del compilatore di generare avvisi.|  
-|[/quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Impedisce al compilatore di visualizzare codice per avvisi ed errori relativi alla sintassi.|  
-|[/removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Disabilita il controllo dell'overflow di Integer.|  
-|[/warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Alza il livello degli avvisi a errori.|  
-|`/ruleset:<file>`|Specificare un file di set di regole che disabilita la diagnostica specifica.|  
+|[<span data-ttu-id="2a294-159">/bugreport</span><span class="sxs-lookup"><span data-stu-id="2a294-159">/bugreport</span></span>](../../../visual-basic/reference/command-line-compiler/bugreport.md)|<span data-ttu-id="2a294-160">Crea un file contenente informazioni che rendono più semplice segnalare un bug.</span><span class="sxs-lookup"><span data-stu-id="2a294-160">Creates a file that contains information that makes it easy to report a bug.</span></span>|  
+|[<span data-ttu-id="2a294-161">/debug</span><span class="sxs-lookup"><span data-stu-id="2a294-161">/debug</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)|<span data-ttu-id="2a294-162">Crea informazioni di debug.</span><span class="sxs-lookup"><span data-stu-id="2a294-162">Produces debugging information.</span></span>|  
+|[<span data-ttu-id="2a294-163">/nowarn</span><span class="sxs-lookup"><span data-stu-id="2a294-163">/nowarn</span></span>](../../../visual-basic/reference/command-line-compiler/nowarn.md)|<span data-ttu-id="2a294-164">Inibisce la capacità del compilatore di generare avvisi.</span><span class="sxs-lookup"><span data-stu-id="2a294-164">Suppresses the compiler's ability to generate warnings.</span></span>|  
+|[<span data-ttu-id="2a294-165">/quiet</span><span class="sxs-lookup"><span data-stu-id="2a294-165">/quiet</span></span>](../../../visual-basic/reference/command-line-compiler/quiet.md)|<span data-ttu-id="2a294-166">Impedisce al compilatore di visualizzare codice per avvisi ed errori relativi alla sintassi.</span><span class="sxs-lookup"><span data-stu-id="2a294-166">Prevents the compiler from displaying code for syntax-related errors and warnings.</span></span>|  
+|[<span data-ttu-id="2a294-167">/removeintchecks</span><span class="sxs-lookup"><span data-stu-id="2a294-167">/removeintchecks</span></span>](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|<span data-ttu-id="2a294-168">Disabilita il controllo dell'overflow di Integer.</span><span class="sxs-lookup"><span data-stu-id="2a294-168">Disables integer overflow checking.</span></span>|  
+|[<span data-ttu-id="2a294-169">/warnaserror</span><span class="sxs-lookup"><span data-stu-id="2a294-169">/warnaserror</span></span>](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|<span data-ttu-id="2a294-170">Alza il livello degli avvisi a errori.</span><span class="sxs-lookup"><span data-stu-id="2a294-170">Promotes warnings to errors.</span></span>|  
+|`/ruleset:<file>`|<span data-ttu-id="2a294-171">Specificare un file di set di regole che disabilita la diagnostica specifica.</span><span class="sxs-lookup"><span data-stu-id="2a294-171">Specify a ruleset file that disables specific diagnostics.</span></span>|  
   
-## <a name="help"></a>?  
+## <a name="help"></a><span data-ttu-id="2a294-172">?</span><span class="sxs-lookup"><span data-stu-id="2a294-172">Help</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-173">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-173">Option</span></span>|<span data-ttu-id="2a294-174">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-174">Purpose</span></span>|  
 |---|---|  
-|[/?](../../../visual-basic/reference/command-line-compiler/help.md)|Visualizza le opzioni del compilatore. Questo comando ha la stessa funzione dell'opzione `/help`. Non viene effettuata alcuna compilazione.|  
-|[/help](../../../visual-basic/reference/command-line-compiler/help.md)|Visualizza le opzioni del compilatore. Questo comando ha la stessa funzione dell'opzione `/?`. Non viene effettuata alcuna compilazione.|  
+|[<span data-ttu-id="2a294-175">/?</span><span class="sxs-lookup"><span data-stu-id="2a294-175">/?</span></span>](../../../visual-basic/reference/command-line-compiler/help.md)|<span data-ttu-id="2a294-176">Visualizza le opzioni del compilatore.</span><span class="sxs-lookup"><span data-stu-id="2a294-176">Displays the compiler options.</span></span> <span data-ttu-id="2a294-177">Questo comando ha la stessa funzione dell'opzione `/help`.</span><span class="sxs-lookup"><span data-stu-id="2a294-177">This command is the same as specifying the `/help` option.</span></span> <span data-ttu-id="2a294-178">Non viene effettuata alcuna compilazione.</span><span class="sxs-lookup"><span data-stu-id="2a294-178">No compilation occurs.</span></span>|  
+|[<span data-ttu-id="2a294-179">/help</span><span class="sxs-lookup"><span data-stu-id="2a294-179">/help</span></span>](../../../visual-basic/reference/command-line-compiler/help.md)|<span data-ttu-id="2a294-180">Visualizza le opzioni del compilatore.</span><span class="sxs-lookup"><span data-stu-id="2a294-180">Displays the compiler options.</span></span> <span data-ttu-id="2a294-181">Questo comando ha la stessa funzione dell'opzione `/?`.</span><span class="sxs-lookup"><span data-stu-id="2a294-181">This command is the same as specifying the `/?` option.</span></span> <span data-ttu-id="2a294-182">Non viene effettuata alcuna compilazione.</span><span class="sxs-lookup"><span data-stu-id="2a294-182">No compilation occurs.</span></span>|  
   
-## <a name="language"></a>Linguaggio  
+## <a name="language"></a><span data-ttu-id="2a294-183">Linguaggio</span><span class="sxs-lookup"><span data-stu-id="2a294-183">Language</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-184">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-184">Option</span></span>|<span data-ttu-id="2a294-185">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-185">Purpose</span></span>|  
 |---|---|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specificare la versione della lingua: 9 | 9.0 | 10 | 10.0 | 11 | 11.0.|  
-|[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Richiede la dichiarazione esplicita delle variabili.|  
-|[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Attiva la semantica dei tipi rigorosa.|  
-|[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Specifica se il confronto si verifica tra stringhe di tipo binario oppure se usare una semantica basata sul testo specifica delle impostazioni locali definite.|  
-|[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.|  
+|[<span data-ttu-id="2a294-186">/langversion</span><span class="sxs-lookup"><span data-stu-id="2a294-186">/langversion</span></span>](../../../visual-basic/reference/command-line-compiler/langversion.md)|<span data-ttu-id="2a294-187">Specificare la versione del linguaggio: 9 &#124; 9.0 &#124; 10.0 10 &#124; &#124; 11 &#124; 11.0.</span><span class="sxs-lookup"><span data-stu-id="2a294-187">Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.</span></span>|  
+|[<span data-ttu-id="2a294-188">/optionexplicit</span><span class="sxs-lookup"><span data-stu-id="2a294-188">/optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|<span data-ttu-id="2a294-189">Richiede la dichiarazione esplicita delle variabili.</span><span class="sxs-lookup"><span data-stu-id="2a294-189">Enforces explicit declaration of variables.</span></span>|  
+|[<span data-ttu-id="2a294-190">/optionstrict</span><span class="sxs-lookup"><span data-stu-id="2a294-190">/optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|<span data-ttu-id="2a294-191">Attiva la semantica dei tipi rigorosa.</span><span class="sxs-lookup"><span data-stu-id="2a294-191">Enforces strict type semantics.</span></span>|  
+|[<span data-ttu-id="2a294-192">/optioncompare</span><span class="sxs-lookup"><span data-stu-id="2a294-192">/optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|<span data-ttu-id="2a294-193">Specifica se il confronto si verifica tra stringhe di tipo binario oppure se usare una semantica basata sul testo specifica delle impostazioni locali definite.</span><span class="sxs-lookup"><span data-stu-id="2a294-193">Specifies whether string comparisons should be binary or use locale-specific text semantics.</span></span>|  
+|[<span data-ttu-id="2a294-194">/optioninfer</span><span class="sxs-lookup"><span data-stu-id="2a294-194">/optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|<span data-ttu-id="2a294-195">Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.</span><span class="sxs-lookup"><span data-stu-id="2a294-195">Enables the use of local type inference in variable declarations.</span></span>|  
   
-## <a name="preprocessor"></a>Preprocessore  
+## <a name="preprocessor"></a><span data-ttu-id="2a294-196">Preprocessore</span><span class="sxs-lookup"><span data-stu-id="2a294-196">Preprocessor</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-197">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-197">Option</span></span>|<span data-ttu-id="2a294-198">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-198">Purpose</span></span>|  
 |---|---|  
-|[/define](../../../visual-basic/reference/command-line-compiler/define.md)|Definisce simboli per la compilazione condizionale.|  
+|[<span data-ttu-id="2a294-199">/define</span><span class="sxs-lookup"><span data-stu-id="2a294-199">/define</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)|<span data-ttu-id="2a294-200">Definisce simboli per la compilazione condizionale.</span><span class="sxs-lookup"><span data-stu-id="2a294-200">Defines symbols for conditional compilation.</span></span>|  
   
-## <a name="resources"></a>Risorse  
+## <a name="resources"></a><span data-ttu-id="2a294-201">Risorse</span><span class="sxs-lookup"><span data-stu-id="2a294-201">Resources</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-202">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-202">Option</span></span>|<span data-ttu-id="2a294-203">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-203">Purpose</span></span>|  
 |---|---|  
-|[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Crea un collegamento a una risorsa gestita.|  
-|[/resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Incorpora una risorsa gestita in un assembly.|  
-|[/win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|Inserisce un file ico nel file di output.|  
-|[/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Inserisce una risorsa Win32 nel file di output.|  
+|[<span data-ttu-id="2a294-204">/linkresource</span><span class="sxs-lookup"><span data-stu-id="2a294-204">/linkresource</span></span>](../../../visual-basic/reference/command-line-compiler/linkresource.md)|<span data-ttu-id="2a294-205">Crea un collegamento a una risorsa gestita.</span><span class="sxs-lookup"><span data-stu-id="2a294-205">Creates a link to a managed resource.</span></span>|  
+|[<span data-ttu-id="2a294-206">/resource</span><span class="sxs-lookup"><span data-stu-id="2a294-206">/resource</span></span>](../../../visual-basic/reference/command-line-compiler/resource.md)|<span data-ttu-id="2a294-207">Incorpora una risorsa gestita in un assembly.</span><span class="sxs-lookup"><span data-stu-id="2a294-207">Embeds a managed resource in an assembly.</span></span>|  
+|[<span data-ttu-id="2a294-208">/win32icon</span><span class="sxs-lookup"><span data-stu-id="2a294-208">/win32icon</span></span>](../../../visual-basic/reference/command-line-compiler/win32icon.md)|<span data-ttu-id="2a294-209">Inserisce un file ico nel file di output.</span><span class="sxs-lookup"><span data-stu-id="2a294-209">Inserts an .ico file into the output file.</span></span>|  
+|[<span data-ttu-id="2a294-210">/win32resource</span><span class="sxs-lookup"><span data-stu-id="2a294-210">/win32resource</span></span>](../../../visual-basic/reference/command-line-compiler/win32resource.md)|<span data-ttu-id="2a294-211">Inserisce una risorsa Win32 nel file di output.</span><span class="sxs-lookup"><span data-stu-id="2a294-211">Inserts a Win32 resource into the output file.</span></span>|  
   
-## <a name="miscellaneous"></a>Varie  
+## <a name="miscellaneous"></a><span data-ttu-id="2a294-212">Varie</span><span class="sxs-lookup"><span data-stu-id="2a294-212">Miscellaneous</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a294-213">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a294-213">Option</span></span>|<span data-ttu-id="2a294-214">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a294-214">Purpose</span></span>|  
 |---|---|  
-|[@ (Specifica di un file di risposta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Specifica un file di risposta.|  
-|[/baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Specifica l'indirizzo di base di una DLL.|  
-|[/codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Specifica la tabella codici da usare per tutti i file del codice sorgente nella compilazione.|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifica la modalità di segnalazione degli errori interni del compilatore [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].|  
-|[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Indica al kernel di Windows se un particolare eseguibile supporta ASLR (Address Space Layout Randomization) a entropia elevata.|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifica la classe che contiene il `Sub``Main` procedura da eseguire all'avvio.|  
-|[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|La compilazione non viene eseguita con Vbc.rsp|  
-|[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Indica al compilatore di non fare riferimento alle librerie standard.|  
-|[/nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Indica al compilatore di non incorporare un manifesto dell'applicazione nel file eseguibile.|  
-|[/platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Specifica la piattaforma del processore da impostare come destinazione del file di output.|  
-|[/recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Cerca nelle sottodirectory i file di origine da compilare.|  
-|[/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Specifica uno spazio dei nomi per tutte le dichiarazioni di tipo.|  
-|[/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Specifica il percorso dei file Mscorlib.dll e Microsoft.VisualBasic.dll.|  
-|[/vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Indica che il compilatore deve compilare senza un riferimento alla libreria di runtime di Visual Basic oppure con un riferimento a una libreria di runtime specifica.|  
-|[/win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identifica un file manifesto dell'applicazione Win32 definito dall'utente da incorporare nel file eseguibile di tipo PE di un progetto.|  
-|`/parallel[+&#124;-]`|Specifica se usare la compilazione simultanea (+).|  
-|`/checksumalgorithm:<alg>`|Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256.|  
+|[<span data-ttu-id="2a294-215">@ (Specifica di un file di risposta)</span><span class="sxs-lookup"><span data-stu-id="2a294-215">@ (Specify Response File)</span></span>](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|<span data-ttu-id="2a294-216">Specifica un file di risposta.</span><span class="sxs-lookup"><span data-stu-id="2a294-216">Specifies a response file.</span></span>|  
+|[<span data-ttu-id="2a294-217">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="2a294-217">/baseaddress</span></span>](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|<span data-ttu-id="2a294-218">Specifica l'indirizzo di base di una DLL.</span><span class="sxs-lookup"><span data-stu-id="2a294-218">Specifies the base address of a DLL.</span></span>|  
+|[<span data-ttu-id="2a294-219">/codepage</span><span class="sxs-lookup"><span data-stu-id="2a294-219">/codepage</span></span>](../../../visual-basic/reference/command-line-compiler/codepage.md)|<span data-ttu-id="2a294-220">Specifica la tabella codici da usare per tutti i file del codice sorgente nella compilazione.</span><span class="sxs-lookup"><span data-stu-id="2a294-220">Specifies the code page to use for all source code files in the compilation.</span></span>|  
+|[<span data-ttu-id="2a294-221">/errorreport</span><span class="sxs-lookup"><span data-stu-id="2a294-221">/errorreport</span></span>](../../../visual-basic/reference/command-line-compiler/errorreport.md)|<span data-ttu-id="2a294-222">Specifica la modalità di segnalazione degli errori interni del compilatore [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2a294-222">Specifies how the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler should report internal compiler errors.</span></span>|  
+|[<span data-ttu-id="2a294-223">/highentropyva</span><span class="sxs-lookup"><span data-stu-id="2a294-223">/highentropyva</span></span>](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|<span data-ttu-id="2a294-224">Indica al kernel di Windows se un particolare eseguibile supporta ASLR (Address Space Layout Randomization) a entropia elevata.</span><span class="sxs-lookup"><span data-stu-id="2a294-224">Tells the Windows kernel whether a particular executable supports high entropy Address Space Layout Randomization (ASLR).</span></span>|  
+|[<span data-ttu-id="2a294-225">/main</span><span class="sxs-lookup"><span data-stu-id="2a294-225">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)|<span data-ttu-id="2a294-226">Specifica la classe che contiene il `Sub``Main` procedura da eseguire all'avvio.</span><span class="sxs-lookup"><span data-stu-id="2a294-226">Specifies the class that contains the `Sub``Main` procedure to use at startup.</span></span>|  
+|[<span data-ttu-id="2a294-227">/noconfig</span><span class="sxs-lookup"><span data-stu-id="2a294-227">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)|<span data-ttu-id="2a294-228">La compilazione non viene eseguita con Vbc.rsp</span><span class="sxs-lookup"><span data-stu-id="2a294-228">Do not compile with Vbc.rsp</span></span>|  
+|[<span data-ttu-id="2a294-229">/nostdlib</span><span class="sxs-lookup"><span data-stu-id="2a294-229">/nostdlib</span></span>](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|<span data-ttu-id="2a294-230">Indica al compilatore di non fare riferimento alle librerie standard.</span><span class="sxs-lookup"><span data-stu-id="2a294-230">Causes the compiler not to reference the standard libraries.</span></span>|  
+|[<span data-ttu-id="2a294-231">/nowin32manifest</span><span class="sxs-lookup"><span data-stu-id="2a294-231">/nowin32manifest</span></span>](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|<span data-ttu-id="2a294-232">Indica al compilatore di non incorporare un manifesto dell'applicazione nel file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="2a294-232">Instructs the compiler not to embed any application manifest into the executable file.</span></span>|  
+|[<span data-ttu-id="2a294-233">/platform</span><span class="sxs-lookup"><span data-stu-id="2a294-233">/platform</span></span>](../../../visual-basic/reference/command-line-compiler/platform.md)|<span data-ttu-id="2a294-234">Specifica la piattaforma del processore da impostare come destinazione del file di output.</span><span class="sxs-lookup"><span data-stu-id="2a294-234">Specifies the processor platform the compiler targets for the output file.</span></span>|  
+|[<span data-ttu-id="2a294-235">/recurse</span><span class="sxs-lookup"><span data-stu-id="2a294-235">/recurse</span></span>](../../../visual-basic/reference/command-line-compiler/recurse.md)|<span data-ttu-id="2a294-236">Cerca nelle sottodirectory i file di origine da compilare.</span><span class="sxs-lookup"><span data-stu-id="2a294-236">Searches subdirectories for source files to compile.</span></span>|  
+|[<span data-ttu-id="2a294-237">/rootnamespace</span><span class="sxs-lookup"><span data-stu-id="2a294-237">/rootnamespace</span></span>](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|<span data-ttu-id="2a294-238">Specifica uno spazio dei nomi per tutte le dichiarazioni di tipo.</span><span class="sxs-lookup"><span data-stu-id="2a294-238">Specifies a namespace for all type declarations.</span></span>|  
+|[<span data-ttu-id="2a294-239">/sdkpath</span><span class="sxs-lookup"><span data-stu-id="2a294-239">/sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|<span data-ttu-id="2a294-240">Specifica il percorso dei file Mscorlib.dll e Microsoft.VisualBasic.dll.</span><span class="sxs-lookup"><span data-stu-id="2a294-240">Specifies the location of Mscorlib.dll and Microsoft.VisualBasic.dll.</span></span>|  
+|[<span data-ttu-id="2a294-241">/vbruntime</span><span class="sxs-lookup"><span data-stu-id="2a294-241">/vbruntime</span></span>](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|<span data-ttu-id="2a294-242">Indica che il compilatore deve compilare senza un riferimento alla libreria di runtime di Visual Basic oppure con un riferimento a una libreria di runtime specifica.</span><span class="sxs-lookup"><span data-stu-id="2a294-242">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>|  
+|[<span data-ttu-id="2a294-243">/win32manifest</span><span class="sxs-lookup"><span data-stu-id="2a294-243">/win32manifest</span></span>](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|<span data-ttu-id="2a294-244">Identifica un file manifesto dell'applicazione Win32 definito dall'utente da incorporare nel file eseguibile di tipo PE di un progetto.</span><span class="sxs-lookup"><span data-stu-id="2a294-244">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>|  
+|`/parallel[+&#124;-]`|<span data-ttu-id="2a294-245">Specifica se usare la compilazione simultanea (+).</span><span class="sxs-lookup"><span data-stu-id="2a294-245">Specifies whether to use concurrent build (+).</span></span>|  
+|`/checksumalgorithm:<alg>`|<span data-ttu-id="2a294-246">Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.</span><span class="sxs-lookup"><span data-stu-id="2a294-246">Specify the algorithm for calculating the source file checksum stored in PDB.</span></span>  <span data-ttu-id="2a294-247">I valori supportati sono: SHA1 (predefinito) o SHA256.</span><span class="sxs-lookup"><span data-stu-id="2a294-247">Supported values are: SHA1 (default) or SHA256.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore di Visual Basic elencate in ordine alfabetico](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)   
- [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [Opzioni del compilatore c# elencate in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [Opzioni del compilatore C# elencate per categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a><span data-ttu-id="2a294-248">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2a294-248">See Also</span></span>  
+ [<span data-ttu-id="2a294-249">Opzioni del compilatore Visual Basic in ordine alfabetico</span><span class="sxs-lookup"><span data-stu-id="2a294-249">Visual Basic Compiler Options Listed Alphabetically</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+ [<span data-ttu-id="2a294-250">Introduzione a Creazione progetti</span><span class="sxs-lookup"><span data-stu-id="2a294-250">Introduction to the Project Designer</span></span>](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [<span data-ttu-id="2a294-251">Opzioni del compilatore C# in ordine alfabetico</span><span class="sxs-lookup"><span data-stu-id="2a294-251">C# Compiler Options Listed Alphabetically</span></span>](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [<span data-ttu-id="2a294-252">Opzioni del compilatore C# elencate per categoria</span><span class="sxs-lookup"><span data-stu-id="2a294-252">C# Compiler Options Listed by Category</span></span>](../../../csharp/language-reference/compiler-options/listed-by-category.md)

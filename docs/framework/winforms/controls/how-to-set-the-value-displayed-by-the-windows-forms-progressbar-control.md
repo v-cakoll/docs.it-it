@@ -1,54 +1,54 @@
 ---
-title: "Procedura: impostare il valore visualizzato da un controllo ProgressBar Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Increment (metodo)"
-  - "PerformStep (metodo)"
-  - "stato (controlli), impostazione valore visualizzato"
-  - "ProgressBar (controllo) [Windows Form], impostazione valore visualizzato"
-  - "Step (proprietà)"
-  - "Value (proprietà)"
+title: 'Procedura: impostare il valore visualizzato da un controllo ProgressBar Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ProgressBar control [Windows Forms], setting value displayed
+- progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d3fd66e10515e5135545f6fcfa64546141346519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare il valore visualizzato da un controllo ProgressBar Windows Form
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a><span data-ttu-id="69db4-102">Procedura: impostare il valore visualizzato da un controllo ProgressBar Windows Form</span><span class="sxs-lookup"><span data-stu-id="69db4-102">How to: Set the Value Displayed by the Windows Forms ProgressBar Control</span></span>
 > [!IMPORTANT]
->  Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  
+>  <span data-ttu-id="69db4-103">Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.</span><span class="sxs-lookup"><span data-stu-id="69db4-103">The <xref:System.Windows.Forms.ToolStripProgressBar> control replaces and adds functionality to the <xref:System.Windows.Forms.ProgressBar> control; however, the <xref:System.Windows.Forms.ProgressBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sono disponibili vari modi per visualizzare un determinato valore all'interno del controllo <xref:System.Windows.Forms.ProgressBar>.  La scelta dell'approccio da utilizzare dipende dall'attività da eseguire o dal problema che si intende risolvere.  Nella tabella che segue sono elencati gli approcci utilizzabili.  
+ <span data-ttu-id="69db4-104">Il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] offre diversi modi per visualizzare un determinato valore all'interno di <xref:System.Windows.Forms.ProgressBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="69db4-104">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gives you several different ways to display a given value within the <xref:System.Windows.Forms.ProgressBar> control.</span></span> <span data-ttu-id="69db4-105">Il metodo scelto dipende l'attività in questione o di problemi.</span><span class="sxs-lookup"><span data-stu-id="69db4-105">Which approach you choose will depend on the task at hand or the problem you are solving.</span></span> <span data-ttu-id="69db4-106">La tabella seguente illustra gli approcci, che è possibile scegliere.</span><span class="sxs-lookup"><span data-stu-id="69db4-106">The following table shows the approaches you can choose.</span></span>  
   
-|Approccio|Descrizione|  
-|---------------|-----------------|  
-|Impostare direttamente il valore del controllo <xref:System.Windows.Forms.ProgressBar>.|Questo tipo di approccio è utile per le attività in cui è noto il totale dell'elemento misurato, ad esempio per la lettura di record da un'origine dati.  È inoltre un metodo semplice per impostare il valore una o due volte.  Questa procedura, infine, è ottimale per ridurre il valore visualizzato nell'indicatore di stato.|  
-|Aumentare il valore visualizzato dal controllo <xref:System.Windows.Forms.ProgressBar> in base a un valore fisso.|Si tratta di un approccio utile quando si visualizza un conteggio semplice tra il valore minimo e quello massimo, ad esempio il tempo trascorso o il numero di file elaborati su un totale noto.|  
-|Aumentare il valore visualizzato dal controllo <xref:System.Windows.Forms.ProgressBar> in base a un valore variabile.|Questo approccio è invece utile quando occorre modificare il valore visualizzato più volte con quantità diverse.  Un esempio di questa situazione è dato dalla visualizzazione dello spazio su disco rigido impiegato per la scrittura di una serie di file sul disco.|  
+|<span data-ttu-id="69db4-107">Approccio</span><span class="sxs-lookup"><span data-stu-id="69db4-107">Approach</span></span>|<span data-ttu-id="69db4-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="69db4-108">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="69db4-109">Impostare il valore della <xref:System.Windows.Forms.ProgressBar> controllare direttamente.</span><span class="sxs-lookup"><span data-stu-id="69db4-109">Set the value of the <xref:System.Windows.Forms.ProgressBar> control directly.</span></span>|<span data-ttu-id="69db4-110">Questo approccio è utile per le attività in cui si conosce il totale dell'elemento misurato che sarà coinvolti, quali lettura dei record da un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="69db4-110">This approach is useful for tasks where you know the total of the item measured that will be involved, such as reading records from a data source.</span></span> <span data-ttu-id="69db4-111">Inoltre, se occorre impostare una o due volte il valore, questo è un modo semplice per eseguire l'operazione.</span><span class="sxs-lookup"><span data-stu-id="69db4-111">Additionally, if you only need to set the value once or twice, this is an easy way to do it.</span></span> <span data-ttu-id="69db4-112">Infine, utilizzare questo processo se è necessario diminuire il valore visualizzato per l'indicatore di stato.</span><span class="sxs-lookup"><span data-stu-id="69db4-112">Finally, use this process if you need to decrease the value displayed by the progress bar.</span></span>|  
+|<span data-ttu-id="69db4-113">Aumentare la <xref:System.Windows.Forms.ProgressBar> visualizzare da un valore fisso.</span><span class="sxs-lookup"><span data-stu-id="69db4-113">Increase the <xref:System.Windows.Forms.ProgressBar> display by a fixed value.</span></span>|<span data-ttu-id="69db4-114">Questo approccio è utile quando si visualizza un semplice conteggio tra i valori minimo e massimo, ad esempio il tempo trascorso o il numero di file che sono stati elaborati su un totale noto.</span><span class="sxs-lookup"><span data-stu-id="69db4-114">This approach is useful when you are displaying a simple count between the minimum and maximum, such as elapsed time or the number of files that have been processed out of a known total.</span></span>|  
+|<span data-ttu-id="69db4-115">Aumentare la <xref:System.Windows.Forms.ProgressBar> visualizzare da un valore variabile.</span><span class="sxs-lookup"><span data-stu-id="69db4-115">Increase the <xref:System.Windows.Forms.ProgressBar> display by a value that varies.</span></span>|<span data-ttu-id="69db4-116">Questo approccio è utile quando è necessario modificare il valore visualizzato un numero di volte in quantità diverse.</span><span class="sxs-lookup"><span data-stu-id="69db4-116">This approach is useful when you need to change the displayed value a number of times in different amounts.</span></span> <span data-ttu-id="69db4-117">Un esempio potrebbe essere che mostra la quantità di spazio su disco utilizzata durante la scrittura di una serie di file sul disco.</span><span class="sxs-lookup"><span data-stu-id="69db4-117">An example would be showing the amount of hard-disk space being consumed while writing a series of files to the disk.</span></span>|  
   
- Il modo più diretto per impostare il valore visualizzato da un indicatore di stato consiste nell'impostare la proprietà <xref:System.Windows.Forms.ProgressBar.Value%2A>.  Questa operazione può essere eseguita in fase di progettazione o in fase di esecuzione.  
+ <span data-ttu-id="69db4-118">Il modo più diretto per impostare il valore visualizzato da una barra di stato di avanzamento è impostando il <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="69db4-118">The most direct way to set the value displayed by a progress bar is by setting the <xref:System.Windows.Forms.ProgressBar.Value%2A> property.</span></span> <span data-ttu-id="69db4-119">Questa operazione può essere eseguita in fase di progettazione o in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="69db4-119">This can be done either at design time or at run time.</span></span>  
   
-### Per impostare direttamente il valore di ProgressBar  
+### <a name="to-set-the-progressbar-value-directly"></a><span data-ttu-id="69db4-120">Per impostare il valore di ProgressBar direttamente</span><span class="sxs-lookup"><span data-stu-id="69db4-120">To set the ProgressBar value directly</span></span>  
   
-1.  Impostare i valori <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> del controllo <xref:System.Windows.Forms.ProgressBar>.  
+1.  <span data-ttu-id="69db4-121">Impostare il <xref:System.Windows.Forms.ProgressBar> del controllo <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valori.</span><span class="sxs-lookup"><span data-stu-id="69db4-121">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2.  Nel codice impostare la proprietà <xref:System.Windows.Forms.ProgressBar.Value%2A> del controllo su un valore integer compreso tra i valori minimo e massimo stabiliti.  
+2.  <span data-ttu-id="69db4-122">Nel codice, impostare il controllo <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà a valore integer compreso tra i valori minimo e massimi è stato stabilito.</span><span class="sxs-lookup"><span data-stu-id="69db4-122">In code, set the control's <xref:System.Windows.Forms.ProgressBar.Value%2A> property to an integer value between the minimum and maximum values you have established.</span></span>  
   
     > [!NOTE]
-    >  Se si imposta la proprietà <xref:System.Windows.Forms.ProgressBar.Value%2A> su un valore non incluso nell'intervallo compreso tra i valori stabiliti per le proprietà <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A>, verrà generata un'eccezione <xref:System.ArgumentException>.  
+    >  <span data-ttu-id="69db4-123">Se si imposta la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà esterni ai limiti stabiliti per la <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> proprietà, il controllo genera un <xref:System.ArgumentException> eccezione.</span><span class="sxs-lookup"><span data-stu-id="69db4-123">If you set the <xref:System.Windows.Forms.ProgressBar.Value%2A> property outside the boundaries established by the <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> properties, the control throws an <xref:System.ArgumentException> exception.</span></span>  
   
-     Nell'esempio di codice seguente viene illustrata l'impostazione diretta del valore <xref:System.Windows.Forms.ProgressBar>.  Nel codice vengono letti i record da un'origine dati, l'indicatore di stato viene aggiornato e viene applicata un'etichetta per ogni lettura di record di dati.  Per l'esempio è necessario che sul form siano presenti un controllo <xref:System.Windows.Forms.Label>, un controllo <xref:System.Windows.Forms.ProgressBar> e una tabella di dati con una riga denominata`CustomerRow` con campi`FirstName` e`Last Name` .  
+     <span data-ttu-id="69db4-124">Esempio di codice seguente viene illustrato come impostare il <xref:System.Windows.Forms.ProgressBar> valore direttamente.</span><span class="sxs-lookup"><span data-stu-id="69db4-124">The following code example illustrates how to set the <xref:System.Windows.Forms.ProgressBar> value directly.</span></span> <span data-ttu-id="69db4-125">Il codice legge i record da un'origine dati e aggiorna l'indicatore di stato e l'etichetta ogni volta che un record di dati viene letto.</span><span class="sxs-lookup"><span data-stu-id="69db4-125">The code reads records from a data source and updates the progress bar and label every time a data record is read.</span></span> <span data-ttu-id="69db4-126">In questo esempio richiede che il form abbia un <xref:System.Windows.Forms.Label> (controllo), un <xref:System.Windows.Forms.ProgressBar> controllo e una tabella di dati con una riga denominata `CustomerRow` con `FirstName` e `LastName` campi.</span><span class="sxs-lookup"><span data-stu-id="69db4-126">This example requires that your form has a <xref:System.Windows.Forms.Label> control, a <xref:System.Windows.Forms.ProgressBar> control, and a data table with a row called `CustomerRow` with `FirstName` and `LastName` fields.</span></span>  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -69,7 +69,6 @@ caps.handback.revision: 14
        ' Updates the label to show that a record was read.  
        Label1.Text = "Records Read = " & ProgressBar1.Value.ToString()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -94,19 +93,19 @@ caps.handback.revision: 14
     }  
     ```  
   
-     Per visualizzare uno stato che progredisce in base a un intervallo fisso, è possibile impostare il valore e chiamare un metodo che aumenta il valore del controllo <xref:System.Windows.Forms.ProgressBar> in base a tale intervallo.  Questa soluzione è utile per i timer e per altri scenari in cui il progresso non viene misurato come percentuale del totale.  
+     Se viene visualizzato lo stato di avanzamento che consente di passare da un intervallo fisso, è possibile impostare il valore e quindi chiamare un metodo che aumenta la <xref:System.Windows.Forms.ProgressBar> il valore del controllo di tale intervallo. <span data-ttu-id="69db4-128">Ciò è utile per i timer e altri scenari in cui non misura lo stato di avanzamento come percentuale del totale.</span><span class="sxs-lookup"><span data-stu-id="69db4-128">This is useful for timers and other scenarios where you are not measuring progress as a percentage of the whole.</span></span>  
   
-### Per aumentare il valore dell'indicatore di stato in base a un valore fisso  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a><span data-ttu-id="69db4-129">Per aumentare l'indicatore di stato da un valore fisso</span><span class="sxs-lookup"><span data-stu-id="69db4-129">To increase the progress bar by a fixed value</span></span>  
   
-1.  Impostare i valori <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> del controllo <xref:System.Windows.Forms.ProgressBar>.  
+1.  <span data-ttu-id="69db4-130">Impostare il <xref:System.Windows.Forms.ProgressBar> del controllo <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valori.</span><span class="sxs-lookup"><span data-stu-id="69db4-130">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.ProgressBar.Step%2A> del controllo su un intero che rappresenta la quantità in base alla quale aumentare il valore visualizzato dell'indicatore di stato.  
+2.  <span data-ttu-id="69db4-131">Impostare il controllo <xref:System.Windows.Forms.ProgressBar.Step%2A> proprietà in un intero che rappresenta la quantità per aumentare l'indicatore di stato valore visualizzato.</span><span class="sxs-lookup"><span data-stu-id="69db4-131">Set the control's <xref:System.Windows.Forms.ProgressBar.Step%2A> property to an integer representing the amount to increase the progress bar's displayed value.</span></span>  
   
-3.  Chiamare il metodo <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> per modificare il valore visualizzato in base alla quantità impostata nella proprietà <xref:System.Windows.Forms.ProgressBar.Step%2A>.  
+3.  <span data-ttu-id="69db4-132">Chiamare il <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> metodo per modificare il valore visualizzato per il valore impostato di <xref:System.Windows.Forms.ProgressBar.Step%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="69db4-132">Call the <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> method to change the value displayed by the amount set in the <xref:System.Windows.Forms.ProgressBar.Step%2A> property.</span></span>  
   
-     Nell'esempio di codice seguente viene illustrato in che modo mantenere il conteggio dei file in un'operazione di copia mediante un indicatore di stato.  
+     <span data-ttu-id="69db4-133">Esempio di codice seguente viene illustrato come un indicatore di stato può mantenere un conteggio dei file in un'operazione di copia.</span><span class="sxs-lookup"><span data-stu-id="69db4-133">The following code example illustrates how a progress bar can maintain a count of the files in a copy operation.</span></span>  
   
-     Nell'esempio, man mano che ogni file viene letto in memoria, l'indicatore di stato e l'etichetta vengono aggiornati per riflettere il numero totale di file letti.  Per l'esempio è necessario che sul form siano presenti un controllo <xref:System.Windows.Forms.Label> e un controllo <xref:System.Windows.Forms.ProgressBar>.  
+     <span data-ttu-id="69db4-134">Nell'esempio seguente, in ogni file viene letto in memoria, l'indicatore di stato e l'etichetta vengono aggiornati per riflettere che i totale di file letti.</span><span class="sxs-lookup"><span data-stu-id="69db4-134">In the following example, as each file is read into memory, the progress bar and label are updated to reflect the total files read.</span></span> <span data-ttu-id="69db4-135">In questo esempio richiede che il form abbia un <xref:System.Windows.Forms.Label> controllo e un <xref:System.Windows.Forms.ProgressBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="69db4-135">This example requires that your form has a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -132,7 +131,6 @@ caps.handback.revision: 14
           Label1.Text = "# of Files Read = " & ProgressBar1.Value.ToString  
        Next i  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -161,17 +159,17 @@ caps.handback.revision: 14
     }  
     ```  
   
-     È infine possibile aumentare il valore visualizzato da un indicatore di stato in modo che ogni aumento corrisponda a una quantità univoca.  Questo approccio è utile per tenere traccia di una serie di operazioni univoche, come la scrittura di file di dimensioni diverse su un disco rigido, o per misurare il progresso come percentuale del totale.  
+     Infine, è possibile aumentare il valore visualizzato da una barra di stato in modo che ogni incremento di una quantità univoca. <span data-ttu-id="69db4-137">Ciò è utile quando si sta tenendo traccia di una serie di operazioni univoche, ad esempio la scrittura di file di dimensioni diverse in un disco rigido o misurare lo stato di avanzamento come percentuale del totale.</span><span class="sxs-lookup"><span data-stu-id="69db4-137">This is useful when you are keeping track of a series of unique operations, such as writing files of different sizes to a hard disk, or measuring progress as a percentage of the whole.</span></span>  
   
-### Per aumentare il valore dell'indicatore di stato in base a un valore dinamico  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a><span data-ttu-id="69db4-138">Per aumentare l'indicatore di stato di un valore dinamico</span><span class="sxs-lookup"><span data-stu-id="69db4-138">To increase the progress bar by a dynamic value</span></span>  
   
-1.  Impostare i valori <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> del controllo <xref:System.Windows.Forms.ProgressBar>.  
+1.  <span data-ttu-id="69db4-139">Impostare il <xref:System.Windows.Forms.ProgressBar> del controllo <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valori.</span><span class="sxs-lookup"><span data-stu-id="69db4-139">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2.  Chiamare il metodo <xref:System.Windows.Forms.ProgressBar.Increment%2A> per modificare il valore visualizzato in base a un intero specificato.  
+2.  <span data-ttu-id="69db4-140">Chiamare il <xref:System.Windows.Forms.ProgressBar.Increment%2A> metodo per modificare il valore visualizzato in un intero specificato.</span><span class="sxs-lookup"><span data-stu-id="69db4-140">Call the <xref:System.Windows.Forms.ProgressBar.Increment%2A> method to change the value displayed by an integer you specify.</span></span>  
   
-     Nell'esempio di codice seguente viene illustrato come calcolare lo spazio su disco utilizzato durante un'operazione di copia mediante un indicatore di stato.  
+     <span data-ttu-id="69db4-141">Esempio di codice seguente viene illustrato come un indicatore di stato possibile calcolare la quantità di spazio su disco è stata utilizzata durante un'operazione di copia.</span><span class="sxs-lookup"><span data-stu-id="69db4-141">The following code example illustrates how a progress bar can calculate how much disk space has been used during a copy operation.</span></span>  
   
-     Nell'esempio, man mano che ogni file viene scritto sul disco rigido, l'indicatore di stato e l'etichetta vengono aggiornati per riflettere la quantità di spazio su disco disponibile.  Per l'esempio è necessario che sul form siano presenti un controllo <xref:System.Windows.Forms.Label> e un controllo <xref:System.Windows.Forms.ProgressBar>.  
+     <span data-ttu-id="69db4-142">Nell'esempio seguente, in ogni file viene scritto sul disco rigido, l'indicatore di stato e l'etichetta vengono aggiornati per riflettere la quantità di spazio su disco disponibile.</span><span class="sxs-lookup"><span data-stu-id="69db4-142">In the following example, as each file is written to the hard disk, the progress bar and label are updated to reflect the amount of hard-disk space available.</span></span> <span data-ttu-id="69db4-143">In questo esempio richiede che il form abbia un <xref:System.Windows.Forms.Label> controllo e un <xref:System.Windows.Forms.ProgressBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="69db4-143">This example requires that your form has a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
   
     ```vb  
     Public Sub ReadFiles()  
@@ -203,7 +201,6 @@ caps.handback.revision: 14
           ProgressBar1.Value.ToString()  
        Next i  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -237,8 +234,8 @@ caps.handback.revision: 14
     }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ProgressBar>   
- <xref:System.Windows.Forms.ToolStripProgressBar>   
- [Cenni preliminari sul controllo ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)   
- [Controllo ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="69db4-144">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="69db4-144">See Also</span></span>  
+ <xref:System.Windows.Forms.ProgressBar>  
+ <xref:System.Windows.Forms.ToolStripProgressBar>  
+ [<span data-ttu-id="69db4-145">Panoramica sul controllo ProgressBar</span><span class="sxs-lookup"><span data-stu-id="69db4-145">ProgressBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
+ [<span data-ttu-id="69db4-146">Controllo ProgressBar</span><span class="sxs-lookup"><span data-stu-id="69db4-146">ProgressBar Control</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)

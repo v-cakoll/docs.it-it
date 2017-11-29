@@ -1,67 +1,69 @@
 ---
-title: "Esempio di pacchetto di tipi di carattere OpenType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipi di carattere, OpenType (pacchetto di caratteri)"
-  - "OpenType (pacchetto di caratteri)"
-  - "tipografia, OpenType (pacchetto di caratteri)"
+title: Esempio di pacchetto di tipi di carattere OpenType
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OpenType font pack [WPF]
+- fonts [WPF], OpenType font pack
+- typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bbc5caeab5a77518e160bacb9722e50ff7abbfb4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Esempio di pacchetto di tipi di carattere OpenType
-In questo argomento viene fornita una panoramica dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio distribuiti con [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].  I tipi di carattere di esempio supportano funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] estese che possono essere utilizzate dalle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+# <a name="sample-opentype-font-pack"></a><span data-ttu-id="39e4d-102">Esempio di pacchetto di tipi di carattere OpenType</span><span class="sxs-lookup"><span data-stu-id="39e4d-102">Sample OpenType Font Pack</span></span>
+<span data-ttu-id="39e4d-103">Questo argomento offre una panoramica dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio distribuiti con [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39e4d-103">This topic provides an overview of the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts that are distributed with the [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].</span></span> <span data-ttu-id="39e4d-104">I tipi di carattere di esempio supportano funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] estese che possono essere usate dalle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39e4d-104">The sample fonts support extended [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features that can be used by [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-   
   
 <a name="overview"></a>   
-## Tipi di carattere nel pacchetto di caratteri OpenType  
- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] fornisce un insieme di tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio che possono essere utilizzati nella creazione di applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  I tipi di carattere di esempio sono concessi in licenza da Ascender Corporation.  Questi tipi di carattere implementano solo un sottoinsieme delle funzionalità totali definite dal formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  Nella tabella seguente sono elencati i nomi dei tipi di caratteri [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio.  
+## <a name="fonts-in-the-opentype-font-pack"></a><span data-ttu-id="39e4d-105">Tipi di carattere nel pacchetto di caratteri OpenType</span><span class="sxs-lookup"><span data-stu-id="39e4d-105">Fonts in the OpenType Font Pack</span></span>  
+ <span data-ttu-id="39e4d-106">[!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] contiene un set di tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio che è possibile usare nella creazione di applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39e4d-106">The [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] provides a set of sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts that you can use in creating [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="39e4d-107">I tipi di carattere di esempio sono concessi in licenza da Ascender Corporation.</span><span class="sxs-lookup"><span data-stu-id="39e4d-107">The sample fonts are supplied under license from Ascender Corporation.</span></span> <span data-ttu-id="39e4d-108">Questi tipi di carattere implementano solo un subset delle funzionalità totali definite dal formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39e4d-108">These fonts implement only a subset of the total features defined by the [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] format.</span></span> <span data-ttu-id="39e4d-109">La tabella seguente contiene un elenco dei nomi dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio.</span><span class="sxs-lookup"><span data-stu-id="39e4d-109">The following table lists the names of the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span>  
   
-|**Nome**|**File**|  
+|<span data-ttu-id="39e4d-110">**Nome**</span><span class="sxs-lookup"><span data-stu-id="39e4d-110">**Name**</span></span>|<span data-ttu-id="39e4d-111">**File**</span><span class="sxs-lookup"><span data-stu-id="39e4d-111">**File**</span></span>|  
 |--------------|--------------|  
-|Kootenay|Kooten.ttf|  
-|Lindsey|Linds.ttf|  
-|Miramonte|Miramo.ttf|  
-|Miramonte Bold|Miramob.ttf|  
-|Pericles|Peric.ttf|  
-|Pericles Light|Pericl.ttf|  
-|Pescadero|Pesca.ttf|  
-|Pescadero Bold|Pescab.ttf|  
+|<span data-ttu-id="39e4d-112">Kootenay</span><span class="sxs-lookup"><span data-stu-id="39e4d-112">Kootenay</span></span>|<span data-ttu-id="39e4d-113">Kooten.ttf</span><span class="sxs-lookup"><span data-stu-id="39e4d-113">Kooten.ttf</span></span>|  
+|<span data-ttu-id="39e4d-114">Lindsey</span><span class="sxs-lookup"><span data-stu-id="39e4d-114">Lindsey</span></span>|<span data-ttu-id="39e4d-115">Linds.ttf</span><span class="sxs-lookup"><span data-stu-id="39e4d-115">Linds.ttf</span></span>|  
+|<span data-ttu-id="39e4d-116">Miramonte</span><span class="sxs-lookup"><span data-stu-id="39e4d-116">Miramonte</span></span>|<span data-ttu-id="39e4d-117">Miramo.ttf</span><span class="sxs-lookup"><span data-stu-id="39e4d-117">Miramo.ttf</span></span>|  
+|<span data-ttu-id="39e4d-118">Miramonte Bold</span><span class="sxs-lookup"><span data-stu-id="39e4d-118">Miramonte Bold</span></span>|<span data-ttu-id="39e4d-119">Miramob.ttf</span><span class="sxs-lookup"><span data-stu-id="39e4d-119">Miramob.ttf</span></span>|  
+|<span data-ttu-id="39e4d-120">Pericles</span><span class="sxs-lookup"><span data-stu-id="39e4d-120">Pericles</span></span>|<span data-ttu-id="39e4d-121">Peric.ttf</span><span class="sxs-lookup"><span data-stu-id="39e4d-121">Peric.ttf</span></span>|  
+|<span data-ttu-id="39e4d-122">Pericles Light</span><span class="sxs-lookup"><span data-stu-id="39e4d-122">Pericles Light</span></span>|<span data-ttu-id="39e4d-123">Pericl.ttf</span><span class="sxs-lookup"><span data-stu-id="39e4d-123">Pericl.ttf</span></span>|  
+|<span data-ttu-id="39e4d-124">Pescadero</span><span class="sxs-lookup"><span data-stu-id="39e4d-124">Pescadero</span></span>|<span data-ttu-id="39e4d-125">Pesca.ttf</span><span class="sxs-lookup"><span data-stu-id="39e4d-125">Pesca.ttf</span></span>|  
+|<span data-ttu-id="39e4d-126">Pescadero Bold</span><span class="sxs-lookup"><span data-stu-id="39e4d-126">Pescadero Bold</span></span>|<span data-ttu-id="39e4d-127">Pescab.ttf</span><span class="sxs-lookup"><span data-stu-id="39e4d-127">Pescab.ttf</span></span>|  
   
- Nell'illustrazione seguente viene illustrato l'aspetto dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio.  
+ <span data-ttu-id="39e4d-128">La figura seguente illustra l'aspetto dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39e4d-128">The following illustration shows what the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts look like.</span></span>  
   
- ![Elenco di nomi di carattere nel pacchetto di caratteri di esempio](../../../../docs/framework/wpf/advanced/media/samplefontpack01.png "samplefontpack01")  
-Tipi di carattere nel pacchetto di caratteri OpenType  
+ <span data-ttu-id="39e4d-129">![Elenco dei tipi di carattere nel pacchetto di esempio caratteri](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")</span><span class="sxs-lookup"><span data-stu-id="39e4d-129">![List of font names in sample font pack](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")</span></span>  
+<span data-ttu-id="39e4d-130">Tipi di carattere nel pacchetto di caratteri OpenType</span><span class="sxs-lookup"><span data-stu-id="39e4d-130">Fonts in the OpenType Font Pack</span></span>  
   
- I tipi di carattere di esempio sono concessi in licenza da Ascender Corporation.  Ascender è un provider di tipi di carattere avanzati.  Per ottenere in licenza versioni estese o personalizzate dei tipi di carattere di esempio, vedere il [sito Web di Ascender Corporation](http://go.microsoft.com/fwlink/?LinkId=182627) \(la pagina potrebbe essere in inglese\).  
+ <span data-ttu-id="39e4d-131">I tipi di carattere di esempio sono concessi in licenza da Ascender Corporation.</span><span class="sxs-lookup"><span data-stu-id="39e4d-131">The sample fonts are supplied under license from Ascender Corporation.</span></span> <span data-ttu-id="39e4d-132">Ascender è un provider di tipi di carattere avanzati.</span><span class="sxs-lookup"><span data-stu-id="39e4d-132">Ascender is a provider of advanced font products.</span></span> <span data-ttu-id="39e4d-133">Per ottenere in licenza versioni estese o personalizzate dei tipi di carattere di esempio, vedere il [sito Web di Ascender Corporation](http://go.microsoft.com/fwlink/?LinkId=182627).</span><span class="sxs-lookup"><span data-stu-id="39e4d-133">To license extended or custom versions of the sample fonts, see [Ascender Corporation's Web site](http://go.microsoft.com/fwlink/?LinkId=182627).</span></span>  
   
 > [!NOTE]
->  È responsabilità dello sviluppatore accertarsi di disporre dei diritti di licenza necessari per qualsiasi tipo di carattere incorporato all'interno di un'applicazione o ridistribuito in altro modo.  
+>  <span data-ttu-id="39e4d-134">È responsabilità degli sviluppatori verificare di disporre dei diritti di licenza necessari per qualsiasi tipo di carattere incorporato all'interno di un'applicazione o ridistribuito in altro modo.</span><span class="sxs-lookup"><span data-stu-id="39e4d-134">As a developer it is your responsibility to ensure that you have the required license rights for any font you embed within an application or otherwise redistribute.</span></span>  
   
 <a name="installing_the_fonts"></a>   
-## Installazione dei tipi di carattere  
- È possibile installare i tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio nella directory dei tipi di carattere di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] predefinita, ovvero **\\WINDOWS\\Fonts**.  Per installare i tipi di carattere, utilizzare il pannello di controllo Tipi di carattere.  Dopo aver installato questi tipi di carattere nel computer, tutte le applicazioni che fanno riferimento ai tipi di carattere predefiniti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] potranno accedere ai tipi di carattere installati. È possibile visualizzare un set di caratteri rappresentativo in diverse dimensioni facendo doppio clic sul file del tipo di carattere.  Nella schermata seguente viene illustrato il file del tipo di carattere Lindsey, ovvero Linds.ttf.  
+## <a name="installing-the-fonts"></a><span data-ttu-id="39e4d-135">Installazione dei tipi di carattere</span><span class="sxs-lookup"><span data-stu-id="39e4d-135">Installing the Fonts</span></span>  
+ <span data-ttu-id="39e4d-136">È possibile installare i tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio nella directory dei tipi di carattere di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] predefinita, ovvero **\WINDOWS\Fonts**.</span><span class="sxs-lookup"><span data-stu-id="39e4d-136">You have the option of installing the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts to the default [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Fonts directory, **\WINDOWS\Fonts**.</span></span> <span data-ttu-id="39e4d-137">Per l'installazione, usare il pannello di controllo Tipi di carattere.</span><span class="sxs-lookup"><span data-stu-id="39e4d-137">Use the Fonts control panel to install the fonts.</span></span> <span data-ttu-id="39e4d-138">Dopo l'installazione nel computer, questi tipi di carattere saranno accessibili a tutte le applicazioni che fanno riferimento ai tipi di carattere predefiniti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39e4d-138">Once these fonts are on your computer, they are accessible to all applications that reference default [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] fonts.</span></span> <span data-ttu-id="39e4d-139">È possibile visualizzare un set di caratteri rappresentativo in diverse dimensioni facendo doppio clic sul file del tipo di carattere.</span><span class="sxs-lookup"><span data-stu-id="39e4d-139">You can display a representative set of characters in several font sizes by doubling-clicking the font file.</span></span> <span data-ttu-id="39e4d-140">La screenshot seguente mostra il file del tipo di carattere Lindsey, ovvero Linds.ttf.</span><span class="sxs-lookup"><span data-stu-id="39e4d-140">The following screenshot shows the Lindsey font file, Linds.ttf.</span></span>  
   
- ![Tipo di carattere Lindsey &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF\_04")  
-Visualizzazione del tipo di carattere Lindsey  
+ <span data-ttu-id="39e4d-141">![Tipo di carattere Lindsey &#40; OpenType &#41; ] (../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")</span><span class="sxs-lookup"><span data-stu-id="39e4d-141">![Lindsey font &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")</span></span>  
+<span data-ttu-id="39e4d-142">Visualizzazione del tipo di carattere Lindsey</span><span class="sxs-lookup"><span data-stu-id="39e4d-142">Displaying the Lindsey font</span></span>  
   
 <a name="using_the_fonts"></a>   
-## Utilizzo dei tipi di carattere  
- Nell'applicazione è possibile utilizzare i tipi di carattere in due modi.  È possibile aggiungere i tipi di carattere all'applicazione come elementi di contenuto del progetto non incorporati come risorse in un assembly.  In alternativa, è possibile aggiungere tipi di carattere all'applicazione come elementi di risorsa di progetto incorporati nei file assembly dell'applicazione.  Per ulteriori informazioni, vedere [Creazione di un package di tipi di carattere tramite applicazioni](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
+## <a name="using-the-fonts"></a><span data-ttu-id="39e4d-143">Uso dei tipi di carattere</span><span class="sxs-lookup"><span data-stu-id="39e4d-143">Using the Fonts</span></span>  
+ <span data-ttu-id="39e4d-144">Nell'applicazione si possono usare i tipi di carattere in due modi.</span><span class="sxs-lookup"><span data-stu-id="39e4d-144">There are two ways that you can use fonts in your application.</span></span> <span data-ttu-id="39e4d-145">È possibile aggiungere tipi di carattere all'applicazione come elementi di contenuto del progetto non incorporati come risorse in un assembly.</span><span class="sxs-lookup"><span data-stu-id="39e4d-145">You can add fonts to your application as project content items that are not embedded as resources within an assembly.</span></span> <span data-ttu-id="39e4d-146">In alternativa, si possono aggiungere tipi di carattere all'applicazione come elementi risorsa del progetto incorporati nei file di assembly dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="39e4d-146">Alternatively, you can add fonts to your application as project resource items that are embedded within the application's assembly files.</span></span> <span data-ttu-id="39e4d-147">Per altre informazioni, vedere [Includere i tipi di carattere nel pacchetto delle applicazioni](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).</span><span class="sxs-lookup"><span data-stu-id="39e4d-147">For more information, see [Packaging Fonts with Applications](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Documents.Typography>   
- [Funzionalità dei tipi di carattere OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)   
- [Creazione di un package di tipi di carattere tramite applicazioni](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a><span data-ttu-id="39e4d-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="39e4d-148">See Also</span></span>  
+ <xref:System.Windows.Documents.Typography>  
+ [<span data-ttu-id="39e4d-149">Funzionalità dei tipi di carattere OpenType</span><span class="sxs-lookup"><span data-stu-id="39e4d-149">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="39e4d-150">Includere i tipi di carattere nel pacchetto delle applicazioni</span><span class="sxs-lookup"><span data-stu-id="39e4d-150">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

@@ -1,54 +1,60 @@
 ---
-title: "Procedura: ruotare un oggetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "grafica, rotazione di oggetti"
-  - "rotazione di oggetti"
+title: 'Procedura: ruotare un oggetto'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], rotating objects [WPF]
+- rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b9b6212ed6c50faf73a6d3531f001a1b7e72d33
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ruotare un oggetto
-In questo esempio viene illustrato come ruotare un oggetto.  Viene innanzitutto creato un oggetto <xref:System.Windows.Media.RotateTransform> e quindi si specifica il relativo valore <xref:System.Windows.Media.RotateTransform.Angle%2A> in gradi.  
+# <a name="how-to-rotate-an-object"></a><span data-ttu-id="ac433-102">Procedura: ruotare un oggetto</span><span class="sxs-lookup"><span data-stu-id="ac433-102">How to: Rotate an Object</span></span>
+<span data-ttu-id="ac433-103">Questo esempio spiega come ruotare un oggetto.</span><span class="sxs-lookup"><span data-stu-id="ac433-103">This example shows how to rotate an object.</span></span> <span data-ttu-id="ac433-104">Nell'esempio viene creata una <xref:System.Windows.Media.RotateTransform> e quindi specifica relativa <xref:System.Windows.Media.RotateTransform.Angle%2A> in gradi.</span><span class="sxs-lookup"><span data-stu-id="ac433-104">The example first creates a <xref:System.Windows.Media.RotateTransform> and then specifies its <xref:System.Windows.Media.RotateTransform.Angle%2A> in degrees.</span></span>  
   
- Nell'esempio seguente un oggetto <xref:System.Windows.Shapes.Polyline> viene ruotato di 45 gradi intorno all'angolo superiore sinistro.  
+ <span data-ttu-id="ac433-105">Nell'esempio seguente consente di ruotare un <xref:System.Windows.Shapes.Polyline> 45 gradi rispetto all'angolo superiore sinistro dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="ac433-105">The following example rotates a <xref:System.Windows.Shapes.Polyline> object 45 degrees about its upper-left corner.</span></span>  
   
-## Esempio  
- [!code-xml[Transforms_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineabouttopleft)]  
+## <a name="example"></a><span data-ttu-id="ac433-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="ac433-106">Example</span></span>  
+ [!code-xaml[Transforms_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineabouttopleft)]  
   
  [!code-csharp[Transforms_Procedural_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/RotateTransformExample.cs#rotatepolylineabouttopleft)]
  [!code-vb[Transforms_Procedural_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/RotateTransformExample.vb#rotatepolylineabouttopleft)]  
   
- Le proprietà <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> di <xref:System.Windows.Media.RotateTransform> specificano il punto intorno al quale viene ruotato l'oggetto.  Questo punto centrale è espresso nello spazio delle coordinate dell'elemento trasformato.  Per impostazione predefinita, la rotazione viene applicata in corrispondenza di \(0,0\), che è l'angolo superiore sinistro dell'oggetto da trasformare.  
+ <span data-ttu-id="ac433-107">Il <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> le proprietà del <xref:System.Windows.Media.RotateTransform> specificare il punto in cui l'oggetto viene ruotato.</span><span class="sxs-lookup"><span data-stu-id="ac433-107">The <xref:System.Windows.Media.RotateTransform.CenterX%2A> and <xref:System.Windows.Media.RotateTransform.CenterY%2A> properties of the <xref:System.Windows.Media.RotateTransform> specify the point about which the object is rotated.</span></span> <span data-ttu-id="ac433-108">Il punto centrale viene espresso nello spazio delle coordinate dell'elemento trasformato.</span><span class="sxs-lookup"><span data-stu-id="ac433-108">This center point is expressed in the coordinate space of the element that is transformed.</span></span> <span data-ttu-id="ac433-109">Per impostazione predefinita, la rotazione viene applicata a (0,0), ovvero l'angolo superiore sinistro dell'oggetto da trasformare.</span><span class="sxs-lookup"><span data-stu-id="ac433-109">By default, the rotation is applied to (0,0), which is the upper-left corner of the object to transform.</span></span>  
   
- Nell'esempio seguente viene ruotato un oggetto <xref:System.Windows.Shapes.Polyline> di 45 gradi in senso orario intorno al punto \(25,50\).  
+ <span data-ttu-id="ac433-110">L'esempio seguente viene ruotato un <xref:System.Windows.Shapes.Polyline> dell'oggetto in senso orario di 45 gradi rispetto al punto (25,50).</span><span class="sxs-lookup"><span data-stu-id="ac433-110">The next example rotates a <xref:System.Windows.Shapes.Polyline> object clockwise 45 degrees about the point (25,50).</span></span>  
   
- [!code-xml[Transforms_snip#RotatePolylineAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineaboutcenter)]  
+ [!code-xaml[Transforms_snip#RotatePolylineAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineaboutcenter)]  
   
  [!code-csharp[Transforms_Procedural_snip#RotatePolylineAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/RotateTransformExample.cs#rotatepolylineaboutcenter)]
  [!code-vb[Transforms_Procedural_snip#RotatePolylineAboutCenter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/RotateTransformExample.vb#rotatepolylineaboutcenter)]  
   
- Nell'immagine seguente sono illustrati i risultati dell'applicazione di <xref:System.Windows.Media.Transform> ai due oggetti.  
+ <span data-ttu-id="ac433-111">La figura seguente mostra i risultati dell'applicazione un <xref:System.Windows.Media.Transform> ai due oggetti.</span><span class="sxs-lookup"><span data-stu-id="ac433-111">The following illustration shows the results of applying a <xref:System.Windows.Media.Transform> to the two objects.</span></span>  
   
- ![Rotazioni di 45 gradi con punti centrali diversi](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.png "wcpsdk\_graphicsmm\_rotatetransform45degrees")  
-Due oggetti che ruotano di 45 gradi rispetto a centri rotazionali diversi  
+ <span data-ttu-id="ac433-112">![45 degree rotations with different center points](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")</span><span class="sxs-lookup"><span data-stu-id="ac433-112">![45 degree rotations with different center points](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")</span></span>  
+<span data-ttu-id="ac433-113">Due oggetti che ruotano di 45 gradi da centri di rotazione diversi</span><span class="sxs-lookup"><span data-stu-id="ac433-113">Two objects that rotate 45 degrees from different rotational centers</span></span>  
   
- L'oggetto <xref:System.Windows.Shapes.Polyline> negli esempi precedenti è <xref:System.Windows.UIElement>.  Quando si applica <xref:System.Windows.Media.Transform> alla proprietà <xref:System.Windows.UIElement.RenderTransform%2A> di un oggetto <xref:System.Windows.UIElement>, è possibile utilizzare la proprietà <xref:System.Windows.UIElement.RenderTransformOrigin%2A> per specificare un'origine per ogni <xref:System.Windows.Media.Transform> che si applica all'elemento.  Poiché la proprietà <xref:System.Windows.UIElement.RenderTransformOrigin%2A> utilizza coordinate relative, è possibile applicare una trasformazione al centro dell'elemento anche se non se ne conoscono le dimensioni.  Per ulteriori informazioni e un esempio, vedere [Specificare l'origine di una trasformazione utilizzando valori relativi](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md).  
+ <span data-ttu-id="ac433-114">Il <xref:System.Windows.Shapes.Polyline> negli esempi precedenti è un <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="ac433-114">The <xref:System.Windows.Shapes.Polyline> in the previous examples is a <xref:System.Windows.UIElement>.</span></span> <span data-ttu-id="ac433-115">Quando si applica un <xref:System.Windows.Media.Transform> per il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà di un <xref:System.Windows.UIElement>, è possibile utilizzare il <xref:System.Windows.UIElement.RenderTransformOrigin%2A> proprietà per specificare un'origine per ogni <xref:System.Windows.Media.Transform> applicabili all'elemento.</span><span class="sxs-lookup"><span data-stu-id="ac433-115">When you apply a <xref:System.Windows.Media.Transform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property of a <xref:System.Windows.UIElement>, you can use the <xref:System.Windows.UIElement.RenderTransformOrigin%2A> property to specify an origin for every <xref:System.Windows.Media.Transform> that you apply to the element.</span></span> <span data-ttu-id="ac433-116">Poiché il <xref:System.Windows.UIElement.RenderTransformOrigin%2A> proprietà utilizza coordinate relative, è possibile applicare una trasformazione al centro dell'elemento, anche se non si conosce la dimensione.</span><span class="sxs-lookup"><span data-stu-id="ac433-116">Because the <xref:System.Windows.UIElement.RenderTransformOrigin%2A> property uses relative coordinates, you can apply a transformation to the center of the element even if you do not know its size.</span></span> <span data-ttu-id="ac433-117">Per ulteriori informazioni e per un esempio, vedere [specificare l'origine di una matrice di trasformazione utilizzando valori relativi](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md).</span><span class="sxs-lookup"><span data-stu-id="ac433-117">For more information and for an example, see [Specify the Origin of a Transform by Using Relative Values](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md).</span></span>  
   
- Per l'esempio completo, vedere [Esempio di trasformazioni bidimensionali](http://go.microsoft.com/fwlink/?LinkID=158252) \(la pagina potrebbe essere in inglese\).  
+ <span data-ttu-id="ac433-118">Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](http://go.microsoft.com/fwlink/?LinkID=158252).</span><span class="sxs-lookup"><span data-stu-id="ac433-118">For the complete sample, see [2-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Media.Transform>   
- [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="ac433-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ac433-119">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ [<span data-ttu-id="ac433-120">Cenni preliminari sulle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="ac433-120">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="ac433-121">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="ac433-121">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

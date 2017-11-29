@@ -1,192 +1,190 @@
 ---
-title: "Globalizzazione per WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "globalizzazione"
-  - "interfaccia utente internazionale, XAML"
-  - "XAML, globalizzazione"
-  - "XAML, interfaccia utente internazionale"
+title: Globalizzazione per WPF
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-wpf
+ms.topic: article
+helpviewer_keywords:
+- XAML [WPF], international user interface
+- XAML [WPF], globalization
+- international user interface [WPF], XAML
+- globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: 35
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "35"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 418a1b6d2033b8bc84a18578cfc227c5f227ad91
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Globalizzazione per WPF
-In questo argomento vengono presentati i problemi da considerare per la scrittura di applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] per il mercato globale.  Gli elementi di programmazione per la globalizzazione sono definiti in [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.  
+# <a name="globalization-for-wpf"></a><span data-ttu-id="00985-102">Globalizzazione per WPF</span><span class="sxs-lookup"><span data-stu-id="00985-102">Globalization for WPF</span></span>
+<span data-ttu-id="00985-103">In questo argomento vengono presentati i problemi da prendere in considerazione quando si scrive [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni per il mercato globale.</span><span class="sxs-lookup"><span data-stu-id="00985-103">This topic introduces issues that you should be aware of when writing [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications for the global market.</span></span> <span data-ttu-id="00985-104">Gli elementi di programmazione di globalizzazione sono definiti [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.</span><span class="sxs-lookup"><span data-stu-id="00985-104">The globalization programming elements are defined in [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.</span></span>  
   
-   
+
   
 <a name="xaml_globalization"></a>   
-## Globalizzazione XAML  
- [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)] si basa su [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] e sfrutta i vantaggi del supporto della globalizzazione definito nella specifica [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  Nelle sezioni riportate di seguito vengono descritte alcune funzionalità [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] da tenere presenti.  
+## <a name="xaml-globalization"></a><span data-ttu-id="00985-105">Globalizzazione XAML</span><span class="sxs-lookup"><span data-stu-id="00985-105">XAML Globalization</span></span>  
+ [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)]<span data-ttu-id="00985-106">si basa sul [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] e consente di sfruttare il supporto di globalizzazione definito nel [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] specifica.</span><span class="sxs-lookup"><span data-stu-id="00985-106"> is based on [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] and takes advantage of the globalization support defined in the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] specification.</span></span> <span data-ttu-id="00985-107">Nelle sezioni seguenti vengono descritte alcune [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] funzionalità che è necessario essere consapevoli di.</span><span class="sxs-lookup"><span data-stu-id="00985-107">The following sections describe some [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] features that you should be aware of.</span></span>  
   
 <a name="char_reference"></a>   
-### Riferimenti a carattere  
- Un riferimento a carattere fornisce il numero del carattere [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] specifico che rappresenta, decimale o esadecimale.  Nell'esempio riportato di seguito viene illustrato un riferimento a carattere decimale.  
-  
-```  
-Ϩ  
-```  
-  
- Nell'esempio viene illustrato un riferimento a carattere esadecimale.  Si noti che è presente una **x** davanti al numero esadecimale.  
-  
-```  
-Ϩ  
-```  
-  
+### <a name="character-references"></a><span data-ttu-id="00985-108">Riferimenti ai caratteri</span><span class="sxs-lookup"><span data-stu-id="00985-108">Character References</span></span>  
+<span data-ttu-id="00985-109">Un riferimento a carattere fornisce l'unità di codice UTF16 dello specifico [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] di caratteri rappresenta, decimale o esadecimale.</span><span class="sxs-lookup"><span data-stu-id="00985-109">A character reference gives the UTF16 code unit of the particular [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] character it represents, in either decimal or hexadecimal.</span></span> <span data-ttu-id="00985-110">Nell'esempio seguente viene mostrato un riferimento di carattere decimale per COPTO ALFABETO COPTO oppure 'Ϩ':</span><span class="sxs-lookup"><span data-stu-id="00985-110">The following example shows a decimal character reference for the COPTIC CAPITAL LETTER HORI, or 'Ϩ':</span></span>
+
+```
+&#1000;
+```
+
+<span data-ttu-id="00985-111">Nell'esempio seguente viene illustrato un riferimento a carattere esadecimale.</span><span class="sxs-lookup"><span data-stu-id="00985-111">The following example shows a hexadecimal character reference.</span></span> <span data-ttu-id="00985-112">Si noti che ha un **x** davanti a numero esadecimale.</span><span class="sxs-lookup"><span data-stu-id="00985-112">Notice that it has an **x** in front of the hexadecimal number.</span></span>
+
+```
+&#x3E8;
+```
+
 <a name="encoding"></a>   
-### Codifica  
- Le codifiche supportate da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sono [!INCLUDE[TLA#tla_ascii](../../../../includes/tlasharptla-ascii-md.md)], [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF\-16 e UTF\-8.  L'istruzione di codifica si trova all'inizio del documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  Se non è presente alcun attributo di codifica né un ordine dei byte, verrà utilizzato il valore predefinito UTF\-8.  UTF\-8 e UTF\-16 sono le codifiche preferite.  UTF\-7 non è supportata.  Nell'esempio riportato di seguito viene illustrato come specificare una codifica UTF\-8 in un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+### <a name="encoding"></a><span data-ttu-id="00985-113">Codifica</span><span class="sxs-lookup"><span data-stu-id="00985-113">Encoding</span></span>  
+ <span data-ttu-id="00985-114">Le codifiche supportate da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sono [!INCLUDE[TLA#tla_ascii](../../../../includes/tlasharptla-ascii-md.md)], [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 e UTF-8.</span><span class="sxs-lookup"><span data-stu-id="00985-114">The encoding supported by [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] are [!INCLUDE[TLA#tla_ascii](../../../../includes/tlasharptla-ascii-md.md)], [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16, and UTF-8.</span></span> <span data-ttu-id="00985-115">L'istruzione di codifica si trova all'inizio di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] documento.</span><span class="sxs-lookup"><span data-stu-id="00985-115">The encoding statement is at the beginning of [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] document.</span></span> <span data-ttu-id="00985-116">Se non esiste alcun attributo di codifica né un ordine dei byte, il parser userà il valore predefinito UTF-8.</span><span class="sxs-lookup"><span data-stu-id="00985-116">If no encoding attribute exists and there is no byte-order, the parser defaults to UTF-8.</span></span> <span data-ttu-id="00985-117">UTF-8 e UTF-16 sono i tipi di codifica preferiti.</span><span class="sxs-lookup"><span data-stu-id="00985-117">UTF-8 and UTF-16 are the preferred encodings.</span></span> <span data-ttu-id="00985-118">UTF-7 non è supportato.</span><span class="sxs-lookup"><span data-stu-id="00985-118">UTF-7 is not supported.</span></span> <span data-ttu-id="00985-119">Nell'esempio seguente viene illustrato come specificare una codifica UTF-8 in un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file.</span><span class="sxs-lookup"><span data-stu-id="00985-119">The following example demonstrates how to specify a UTF-8 encoding in a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file.</span></span>  
   
 ```  
 ?xml encoding="UTF-8"?  
 ```  
   
 <a name="lang_attrib"></a>   
-### Attributo Language  
- In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene utilizzato [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) per rappresentare l'attributo Language di un elemento.  Per sfruttare al meglio la classe <xref:System.Globalization.CultureInfo>, è necessario che il valore dell'attributo Language sia uno dei nomi di impostazioni cultura predefiniti da <xref:System.Globalization.CultureInfo>.  [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) è ereditabile nella struttura ad albero dell'elemento, in base alle regole XML, non necessariamente per l'ereditarietà della proprietà di dipendenza, e l'impostazione predefinita è una stringa vuota se non viene assegnato esplicitamente un valore.  
+### <a name="language-attribute"></a><span data-ttu-id="00985-120">Attributo Language</span><span class="sxs-lookup"><span data-stu-id="00985-120">Language Attribute</span></span>  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<span data-ttu-id="00985-121">Usa [XML: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) per rappresentare l'attributo language dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="00985-121"> uses [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) to represent the language attribute of an element.</span></span>  <span data-ttu-id="00985-122">Per sfruttare il <xref:System.Globalization.CultureInfo> (classe), il valore dell'attributo lingua deve essere uno dei nomi di impostazioni cultura predefiniti da <xref:System.Globalization.CultureInfo>.</span><span class="sxs-lookup"><span data-stu-id="00985-122">To take advantage of the <xref:System.Globalization.CultureInfo> class, the language attribute value needs to be one of the culture names predefined by <xref:System.Globalization.CultureInfo>.</span></span> <span data-ttu-id="00985-123">[xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) è ereditabile nell'albero di elementi (in base alle regole XML, non necessariamente a causa dell'ereditarietà della proprietà di dipendenza) e il valore predefinito è una stringa vuota se non viene assegnato in modo esplicito.</span><span class="sxs-lookup"><span data-stu-id="00985-123">[xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) is inheritable in the element tree (by XML rules, not necessarily because of dependency property inheritance) and its default value is an empty string if it is not assigned explicitly.</span></span>  
   
- L'attributo Language è utile per la specifica di sottolinguaggi.  Ad esempio, la lingua francese ha ortografia, vocabolario e pronuncia diverse in Francia, Quebec, Belgio e Svizzera.  Anche il cinese, il giapponese e il coreano condividono elementi di codice in [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ma le forme ideografiche sono diverse e utilizzano tipi di carattere diversi.  
+ <span data-ttu-id="00985-124">L'attributo language è molto utile per specificare i dialetti.</span><span class="sxs-lookup"><span data-stu-id="00985-124">The language attribute is very useful for specifying dialects.</span></span> <span data-ttu-id="00985-125">Il francese, ad esempio, ha ortografia, vocabolario e pronuncia diversi in Francia, Quebec, Belgio e Svizzera.</span><span class="sxs-lookup"><span data-stu-id="00985-125">For example, French has different spelling, vocabulary, and pronunciation in France, Quebec, Belgium, and Switzerland.</span></span> <span data-ttu-id="00985-126">Anche il cinese, giapponese e coreano condividere i punti di codice nella [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ma le forme ideografiche sono diverse e che utilizzano diversi tipi di carattere.</span><span class="sxs-lookup"><span data-stu-id="00985-126">Also Chinese, Japanese, and Korean share code points in [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], but the ideographic shapes are different and they use totally different fonts.</span></span>  
   
- Nell'esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] riportato di seguito viene utilizzato l'attributo Language `fr-CA` per specificare la lingua francese canadese.  
+ <span data-ttu-id="00985-127">Nell'esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] esempio Usa il `fr-CA` attributo language per specificare la lingua francese canadese.</span><span class="sxs-lookup"><span data-stu-id="00985-127">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] example uses the `fr-CA` language attribute to specify Canadian French.</span></span>  
   
-```  
+```xml  
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>  
 ```  
   
 <a name="unicode"></a>   
-### Unicode  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] supporta tutte le funzionalità [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], inclusi i sostituti.  Il set di caratteri è supportato purché sia possibile mapparlo a [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)].  Ad esempio, GB18030 presenta alcuni caratteri mappati all'estensione A e B e alle coppie sostitutive di cinese, giapponese e coreano \(CFK\), pertanto è completamente supportato.  Un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può utilizzare <xref:System.Globalization.StringInfo> per modificare le stringhe senza capire se queste dispongano di coppie sostitutive o segni di unione.  
+### <a name="unicode"></a><span data-ttu-id="00985-128">Unicode</span><span class="sxs-lookup"><span data-stu-id="00985-128">Unicode</span></span>  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<span data-ttu-id="00985-129">supporta tutti [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] funzionalità tra cui surrogati.</span><span class="sxs-lookup"><span data-stu-id="00985-129"> supports all [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] features including surrogates.</span></span> <span data-ttu-id="00985-130">Fino a quando il set di caratteri può essere mappato a [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], è supportato.</span><span class="sxs-lookup"><span data-stu-id="00985-130">As long as the character set can be mapped to [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], it is supported.</span></span> <span data-ttu-id="00985-131">GB18030, ad esempio, introduce alcuni caratteri con mapping all'estensione A e B per cinese, giapponese e coreano e le coppie di surrogati, quindi è completamente supportato.</span><span class="sxs-lookup"><span data-stu-id="00985-131">For example, GB18030 introduces some characters that are mapped to the Chinese, Japanese, and Korean (CFK) extension A and B and surrogate pairs, therefore it is fully supported.</span></span> <span data-ttu-id="00985-132">Oggetto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione può utilizzare <xref:System.Globalization.StringInfo> per modificare le stringhe senza capire se dispongono delle coppie di surrogati o combinazione di caratteri.</span><span class="sxs-lookup"><span data-stu-id="00985-132">A [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application can use <xref:System.Globalization.StringInfo> to manipulate strings without understanding whether they have surrogate pairs or combining characters.</span></span>  
   
 <a name="design_intl_ui_with_xaml"></a>   
-## Progettazione di un'interfaccia utente internazionale con XAML  
- In questa sezione vengono illustrate le funzionalità dell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] da considerare per la scrittura di un'applicazione.  
+## <a name="designing-an-international-user-interface-with-xaml"></a><span data-ttu-id="00985-133">Progettazione di un'interfaccia utente internazionale con XAML</span><span class="sxs-lookup"><span data-stu-id="00985-133">Designing an International User Interface with XAML</span></span>  
+ <span data-ttu-id="00985-134">In questa sezione descrive [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] funzionalità che è necessario considerare quando si scrive un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="00985-134">This section describes [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] features that you should consider when writing an application.</span></span>  
   
 <a name="intl_text"></a>   
-### Testo internazionale  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include l'elaborazione predefinita per tutti i sistemi di scrittura [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] supportati.  
+### <a name="international-text"></a><span data-ttu-id="00985-135">Testo internazionale</span><span class="sxs-lookup"><span data-stu-id="00985-135">International Text</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="00985-136">include l'elaborazione predefinita per tutti i [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] sistemi di scrittura è supportata.</span><span class="sxs-lookup"><span data-stu-id="00985-136"> includes built-in processing for all [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] supported writing systems.</span></span>  
   
- Attualmente sono supportati i seguenti script:  
+ <span data-ttu-id="00985-137">Sono attualmente supportati gli script seguenti:</span><span class="sxs-lookup"><span data-stu-id="00985-137">The following scripts are currently supported:</span></span>  
   
--   Arabo  
+-   <span data-ttu-id="00985-138">Arabo</span><span class="sxs-lookup"><span data-stu-id="00985-138">Arabic</span></span>  
   
--   Bengali  
+-   <span data-ttu-id="00985-139">Bengali</span><span class="sxs-lookup"><span data-stu-id="00985-139">Bengali</span></span>  
   
--   Devanagari  
+-   <span data-ttu-id="00985-140">Devanagari</span><span class="sxs-lookup"><span data-stu-id="00985-140">Devanagari</span></span>  
   
--   Cirillico  
+-   <span data-ttu-id="00985-141">Cirillico</span><span class="sxs-lookup"><span data-stu-id="00985-141">Cyrillic</span></span>  
   
--   Greco  
+-   <span data-ttu-id="00985-142">Greco</span><span class="sxs-lookup"><span data-stu-id="00985-142">Greek</span></span>  
   
--   Gujarati  
+-   <span data-ttu-id="00985-143">Gujarati</span><span class="sxs-lookup"><span data-stu-id="00985-143">Gujarati</span></span>  
   
--   Gurmukhi  
+-   <span data-ttu-id="00985-144">Gurmukhi</span><span class="sxs-lookup"><span data-stu-id="00985-144">Gurmukhi</span></span>  
   
--   Ebraico  
+-   <span data-ttu-id="00985-145">Ebraico</span><span class="sxs-lookup"><span data-stu-id="00985-145">Hebrew</span></span>  
   
--   Script ideografici  
+-   <span data-ttu-id="00985-146">Script ideografici</span><span class="sxs-lookup"><span data-stu-id="00985-146">Ideographic scripts</span></span>  
   
--   Kannada  
+-   <span data-ttu-id="00985-147">Kannada</span><span class="sxs-lookup"><span data-stu-id="00985-147">Kannada</span></span>  
   
--   Lao  
+-   <span data-ttu-id="00985-148">Lao</span><span class="sxs-lookup"><span data-stu-id="00985-148">Lao</span></span>  
   
--   Latino  
+-   <span data-ttu-id="00985-149">Latino</span><span class="sxs-lookup"><span data-stu-id="00985-149">Latin</span></span>  
   
--   Malayalam  
+-   <span data-ttu-id="00985-150">Malayalam</span><span class="sxs-lookup"><span data-stu-id="00985-150">Malayalam</span></span>  
   
--   Mongolo  
+-   <span data-ttu-id="00985-151">Mongolo</span><span class="sxs-lookup"><span data-stu-id="00985-151">Mongolian</span></span>  
   
--   Odia  
+-   <span data-ttu-id="00985-152">Odia</span><span class="sxs-lookup"><span data-stu-id="00985-152">Odia</span></span>  
   
--   Siriano  
+-   <span data-ttu-id="00985-153">Siriaco</span><span class="sxs-lookup"><span data-stu-id="00985-153">Syriac</span></span>  
   
--   Tamil  
+-   <span data-ttu-id="00985-154">Tamil</span><span class="sxs-lookup"><span data-stu-id="00985-154">Tamil</span></span>  
   
--   Telugu  
+-   <span data-ttu-id="00985-155">Telugu</span><span class="sxs-lookup"><span data-stu-id="00985-155">Telugu</span></span>  
   
--   Thaana  
+-   <span data-ttu-id="00985-156">Thaana</span><span class="sxs-lookup"><span data-stu-id="00985-156">Thaana</span></span>  
   
--   Thai\*  
+-   <span data-ttu-id="00985-157">Thailandese*</span><span class="sxs-lookup"><span data-stu-id="00985-157">Thai*</span></span>  
   
--   Tibetano  
+-   <span data-ttu-id="00985-158">Tibetano</span><span class="sxs-lookup"><span data-stu-id="00985-158">Tibetan</span></span>  
   
- \*In questa versione è supportata la visualizzazione e la modifica del testo thai, ma non l'interruzione di parola.  
+ <span data-ttu-id="00985-159">*In questa versione sono supportate la visualizzazione e la modifica del testo in thailandese. L'interruzione parole non è supportata.</span><span class="sxs-lookup"><span data-stu-id="00985-159">*In this release the display and editing of Thai text is supported; word breaking is not.</span></span>  
   
- Attualmente gli script riportati di seguito non sono supportati:  
+ <span data-ttu-id="00985-160">Non sono attualmente supportati gli script seguenti:</span><span class="sxs-lookup"><span data-stu-id="00985-160">The following scripts are not currently supported:</span></span>  
   
--   Khmer  
+-   <span data-ttu-id="00985-161">Khmer</span><span class="sxs-lookup"><span data-stu-id="00985-161">Khmer</span></span>  
   
--   Coreano Hangul antico  
+-   <span data-ttu-id="00985-162">Antico hangul coreano</span><span class="sxs-lookup"><span data-stu-id="00985-162">Korean Old Hangul</span></span>  
   
--   Birmano  
+-   <span data-ttu-id="00985-163">Myanmar</span><span class="sxs-lookup"><span data-stu-id="00985-163">Myanmar</span></span>  
   
--   Singalese  
+-   <span data-ttu-id="00985-164">Singalese</span><span class="sxs-lookup"><span data-stu-id="00985-164">Sinhala</span></span>  
   
- Tutti i motori dei sistemi di scrittura supportano i tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  I tipi di carattere [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] possono includere le tabelle di layout [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] che consentono ai creatori dei tipi di carattere di progettare in modo ottimale caratteri tipografici internazionali e di alto livello.  Le tabelle di layout dei tipi di carattere [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] contengono informazioni sulle sostituzioni e sul posizionamento dei glifi, sulla giustificazione e sul posizionamento di base, consentendo alle applicazioni di elaborazione testi di migliorare il layout del testo.  
+ <span data-ttu-id="00985-165">Il sistema di scrittura motori supporto [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere.</span><span class="sxs-lookup"><span data-stu-id="00985-165">All the writing system engines support [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]<span data-ttu-id="00985-166">tipi di carattere possono includere il [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelle layout che consentono ai creatori di tipo di carattere progettare meglio ottimale caratteri tipografici internazionali e di fascia alta.</span><span class="sxs-lookup"><span data-stu-id="00985-166"> fonts can include the [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] layout tables that enable font creators to design better international and high-end typographic fonts.</span></span> <span data-ttu-id="00985-167">Il [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] carattere layout che contengono informazioni sulle sostituzioni, il posizionamento del glifo, giustificazione e sul posizionamento di base, consentendo alle applicazioni di elaborazione del testo migliorare il layout del testo.</span><span class="sxs-lookup"><span data-stu-id="00985-167">The [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] font layout tables contain information about glyph substitutions, glyph positioning, justification, and baseline positioning, enabling text-processing applications to improve text layout.</span></span>  
   
- I tipi di carattere [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] consentono la gestione di grandi set di glifi tramite la codifica [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)].  Tale codifica garantisce un ampio supporto internazionale nonché il supporto delle varianti di glifo tipografiche.  
+ [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]<span data-ttu-id="00985-168">tipi di carattere consentono la gestione di grandi dimensioni glifo imposta utilizzando [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] codifica.</span><span class="sxs-lookup"><span data-stu-id="00985-168"> fonts allow the handling of large glyph sets using [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] encoding.</span></span> <span data-ttu-id="00985-169">Tale codifica consente un esteso supporto internazionale, oltre alle varianti dei glifi tipografici.</span><span class="sxs-lookup"><span data-stu-id="00985-169">Such encoding enables broad international support as well as for typographic glyph variants.</span></span>  
   
- Il rendering del testo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] si basa sulla tecnologia dei subpixel [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] che supporta l'indipendenza dalla risoluzione.  Viene in tal modo migliorata significativamente la leggibilità e viene offerta la capacità di supportare documenti di alta qualità per tutti gli script.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="00985-170">il rendering del testo [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tecnologia pixel secondaria che supporta l'indipendenza dalla risoluzione.</span><span class="sxs-lookup"><span data-stu-id="00985-170"> text rendering is powered by [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] sub-pixel technology that supports resolution independence.</span></span> <span data-ttu-id="00985-171">Questo migliora considerevolmente la leggibilità e consente di supportare documenti in stile rivista di qualità elevata per tutti gli script.</span><span class="sxs-lookup"><span data-stu-id="00985-171">This significantly improves legibility and provides the ability to support high quality magazine style documents for all scripts.</span></span>  
   
 <a name="intl_layout"></a>   
-### Layout internazionale  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un modo pratico per supportare layout orizzontali, bidirezionali e verticali.  Nel framework della presentazione è possibile utilizzare la proprietà <xref:System.Windows.FrameworkElement.FlowDirection%2A> per definire il layout.  I modelli di direzione del testo sono:  
+### <a name="international-layout"></a><span data-ttu-id="00985-172">Layout internazionale</span><span class="sxs-lookup"><span data-stu-id="00985-172">International Layout</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="00985-173"> offre un modo molto pratico per supportare layout orizzontali, bidirezionale e verticali.</span><span class="sxs-lookup"><span data-stu-id="00985-173"> provides a very convenient way to support horizontal, bidirectional, and vertical layouts.</span></span> <span data-ttu-id="00985-174">Nel framework di presentazione di <xref:System.Windows.FrameworkElement.FlowDirection%2A> proprietà può essere utilizzata per definire il layout.</span><span class="sxs-lookup"><span data-stu-id="00985-174">In presentation framework the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property can be used to define layout.</span></span> <span data-ttu-id="00985-175">I modelli di direzione del flusso sono:</span><span class="sxs-lookup"><span data-stu-id="00985-175">The flow direction patterns are:</span></span>  
   
--   *LeftToRight*: layout orizzontale per l'alfabeto latino, asiatico e così via.  
+-   <span data-ttu-id="00985-176">*LeftToRight*: layout orizzontale per latino, lingue dell'Asia orientale e così via.</span><span class="sxs-lookup"><span data-stu-id="00985-176">*LeftToRight* - horizontal layout for Latin, East Asian and so forth.</span></span>  
   
--   *RightToLeft*: bidirezionale per arabo, ebraico e così via.  
+-   <span data-ttu-id="00985-177">*RightToLeft*: bidirezionale per arabo, ebraico e così via.</span><span class="sxs-lookup"><span data-stu-id="00985-177">*RightToLeft* - bidirectional for Arabic, Hebrew and so forth.</span></span>  
   
 <a name="developing_localizable_apps"></a>   
-## Sviluppo di applicazioni localizzabili  
- Quando si scrive un'applicazione per il mercato globale è opportuno tenere presente che l'applicazione deve essere localizzabile.  Negli argomenti riportati di seguito vengono evidenziati i punti da considerare.  
+## <a name="developing-localizable-applications"></a><span data-ttu-id="00985-178">Sviluppo di applicazioni localizzabili</span><span class="sxs-lookup"><span data-stu-id="00985-178">Developing Localizable Applications</span></span>  
+ <span data-ttu-id="00985-179">Quando si scrive un'applicazione per il consumo globale, è opportuno ricordare che l'applicazione deve essere localizzabile.</span><span class="sxs-lookup"><span data-stu-id="00985-179">When you write an application for global consumption you should keep in mind that the application must be localizable.</span></span> <span data-ttu-id="00985-180">Gli argomenti seguenti illustrano alcune importanti considerazioni.</span><span class="sxs-lookup"><span data-stu-id="00985-180">The following topics point out things to consider.</span></span>  
   
 <a name="mui"></a>   
-### Interfaccia utente multilingue  
- Le interfacce utente multilingue \(MUI, Multilingual User Interface\) è un supporto [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] per il passaggio tra [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] in lingue diverse.  Un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizza il modello di assembly per supportare le interfacce MUI.  Un'applicazione contiene sia assembly indipendenti dalla lingua sia assembly di risorse satellite dipendenti dalla lingua.  Il punto di ingresso è un file exe gestito nell'assembly principale.  Il caricatore di risorse [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sfrutta la gestione risorse di [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] per supportare la ricerca e il fallback delle risorse.  Gli assembly satellite multilingue funzionano con lo stesso assembly principale.  L'assembly di risorse caricato dipende dalla proprietà <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> del thread corrente.  
+### <a name="multilingual-user-interface"></a><span data-ttu-id="00985-181">Interfaccia utente multilingue</span><span class="sxs-lookup"><span data-stu-id="00985-181">Multilingual User Interface</span></span>  
+ <span data-ttu-id="00985-182">Interfacce utente multilingue (MUI) è un [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] il supporto per il cambio [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] da una lingua a altra.</span><span class="sxs-lookup"><span data-stu-id="00985-182">Multilingual User Interfaces (MUI) is a [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] support for switching [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] from one language to another.</span></span> <span data-ttu-id="00985-183">Oggetto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione utilizza il modello di assembly per supportare l'interfaccia MUI.</span><span class="sxs-lookup"><span data-stu-id="00985-183">A [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application uses the assembly model to support MUI.</span></span> <span data-ttu-id="00985-184">Un'applicazione contiene assembly indipendenti dalla lingua, ma anche assembly di risorse satellite dipendenti dalla lingua.</span><span class="sxs-lookup"><span data-stu-id="00985-184">One application contains language-neutral assemblies as well as language-dependent satellite resource assemblies.</span></span> <span data-ttu-id="00985-185">Il punto di ingresso è un file EXE gestito nell'assembly principale.</span><span class="sxs-lookup"><span data-stu-id="00985-185">The entry point is a managed .EXE in the main assembly.</span></span>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="00985-186">caricatore di risorse consente di sfruttare il [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]del gestore delle risorse per supportare la ricerca di risorse e del fallback.</span><span class="sxs-lookup"><span data-stu-id="00985-186"> resource loader takes advantage of the [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]'s resource manager to support resource lookup and fallback.</span></span> <span data-ttu-id="00985-187">Gli assembly satellite di più lingue usano lo stesso assembly principale.</span><span class="sxs-lookup"><span data-stu-id="00985-187">Multiple language satellite assemblies work with the same main assembly.</span></span> <span data-ttu-id="00985-188">Dipende da assembly di risorse che viene caricato il <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> del thread corrente.</span><span class="sxs-lookup"><span data-stu-id="00985-188">The resource assembly that is loaded depends on the <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> of the current thread.</span></span>  
   
 <a name="localizable_ui"></a>   
-### Interfaccia utente localizzabile  
- Le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizzano [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per definire la propria [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] consente agli sviluppatori di specificare una gerarchia di oggetti con un set di proprietà e logica.  L'utilizzo principale del linguaggio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è quello di sviluppare applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ma può anche essere utilizzato per specificare una gerarchia di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].  La maggior parte degli sviluppatori utilizza il linguaggio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per specificare l'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dell'applicazione e un linguaggio di programmazione quale [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] per rispondere all'interazione dell'utente.  
+### <a name="localizable-user-interface"></a><span data-ttu-id="00985-189">Interfaccia utente localizzabile</span><span class="sxs-lookup"><span data-stu-id="00985-189">Localizable User Interface</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="00985-190">le applicazioni utilizzano [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per definire i relativi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="00985-190"> applications use [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to define their [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<span data-ttu-id="00985-191"> consente agli sviluppatori di specificare una gerarchia di oggetti con un set di proprietà e una logica.</span><span class="sxs-lookup"><span data-stu-id="00985-191"> allows developers to specify a hierarchy of objects with a set of properties and logic.</span></span> <span data-ttu-id="00985-192">L'utilizzo principale di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è necessario sviluppare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni ma può essere utilizzata per specificare una gerarchia di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] oggetti.</span><span class="sxs-lookup"><span data-stu-id="00985-192">The primary use of [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is to develop [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications but it can be used to specify a hierarchy of any [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects.</span></span> <span data-ttu-id="00985-193">Maggior parte degli sviluppatori [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per specificare le applicazioni [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e usare un linguaggio di programmazione, ad esempio [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] per rispondere all'interazione dell'utente.</span><span class="sxs-lookup"><span data-stu-id="00985-193">Most developers use [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to specify their application's [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] and use a programming language such as [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] to react to user interaction.</span></span>  
   
- Dal punto di vista della risorsa, un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] progettato per descrivere un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dipendente dal linguaggio è un elemento risorsa, pertanto il formato di distribuzione finale deve essere localizzabile per supportare lingue internazionali.  Poiché il linguaggio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] non consente di gestire eventi, molte applicazioni [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] contengono blocchi di codice per tale scopo.  Per ulteriori informazioni, vedere [Cenni preliminari su XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  Il codice viene rimosso e compilato in binari diversi quando un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene suddiviso in token nel form BAML di XAML. File, le immagini e altri tipi di oggetti di risorse gestite del form BALM di XAML sono incorporati nell'assembly di risorse satellite, che può essere localizzato in altre lingue o nell'assembly principale quando la localizzazione non è necessaria.  
+ <span data-ttu-id="00985-194">Dal punto di vista della risorsa, una [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file progettato per descrivere un dipendenti dalla lingua [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] è un elemento di risorsa, pertanto il formato di distribuzione finale deve essere localizzabile per supportare lingue internazionali.</span><span class="sxs-lookup"><span data-stu-id="00985-194">From a resource point of view, a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file designed to describe a language-dependent [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] is a resource element and therefore its final distribution format must be localizable to support international languages.</span></span> <span data-ttu-id="00985-195">Poiché [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] non può gestire eventi molti [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] applicazioni contengono blocchi di codice per eseguire questa operazione.</span><span class="sxs-lookup"><span data-stu-id="00985-195">Because [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] cannot handle events many [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] applications contain blocks of code to do this.</span></span> <span data-ttu-id="00985-196">Per ulteriori informazioni, vedere [Panoramica di XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="00985-196">For more information, see [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span></span> <span data-ttu-id="00985-197">Codice viene rimosso e compilato in diversi file binari quando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file è suddiviso in token nel modulo BAML di XAML.</span><span class="sxs-lookup"><span data-stu-id="00985-197">Code is stripped out and compiled into different binaries when a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file is tokenized into the BAML form of XAML.</span></span> <span data-ttu-id="00985-198">Il formato BAML dei file XAML, le immagini e altri tipi di oggetti risorsa gestita vengono incorporati nell'assembly di risorse satellite, che può essere localizzato in altre lingue, o nell'assembly principale quando la localizzazione non è necessaria.</span><span class="sxs-lookup"><span data-stu-id="00985-198">The BAML form of XAML files, images, and other types of managed resource objects are embedded in the satellite resource assembly, which can be localized into other languages, or the main assembly when localization is not required.</span></span>  
   
 > [!NOTE]
->  Le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supportano tutte le risorse [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] di [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)], incluse tabelle di stringhe, immagini e così via.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="00985-199">applicazioni supportano tutte le [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] risorse tra le tabelle di stringhe, immagini e così via.</span><span class="sxs-lookup"><span data-stu-id="00985-199"> applications support all the [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] resources including string tables, images, and so forth.</span></span>  
   
 <a name="building_localizable_apps"></a>   
-### Compilazione di applicazioni localizzabili  
- Per localizzazione si intende l'adattamento di un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a impostazioni cultura diverse.  Per rendere localizzabile un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], è necessario che gli sviluppatori compilino tutte le risorse localizzabili in un assembly di risorse.  L'assembly di risorse viene localizzato in lingue diverse e il code\-behind utilizza l'[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] di gestione risorse per il caricamento.  Uno dei file necessari per un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è un file di progetto \(proj\).  Tutte le risorse utilizzate nell'applicazione devono essere incluse nel file di progetto.  Nell'esempio di file csproj riportato di seguito viene illustrato come procedere.  
+### <a name="building-localizable-applications"></a><span data-ttu-id="00985-200">Compilazione di applicazioni localizzabili</span><span class="sxs-lookup"><span data-stu-id="00985-200">Building Localizable Applications</span></span>  
+ <span data-ttu-id="00985-201">Localizzazione si intende l'adattamento un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a impostazioni cultura diverse.</span><span class="sxs-lookup"><span data-stu-id="00985-201">Localization means to adapt a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to different cultures.</span></span> <span data-ttu-id="00985-202">Per rendere un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localizzabili, gli sviluppatori devono compilare tutte le risorse localizzabili in un assembly di risorse dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="00985-202">To make a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application localizable, developers need to build all the localizable resources into a resource assembly.</span></span> <span data-ttu-id="00985-203">Assembly di risorse è localizzato in diverse lingue e il code-behind utilizza la gestione delle risorse [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] da caricare.</span><span class="sxs-lookup"><span data-stu-id="00985-203">The resource assembly is localized into different languages, and the code-behind uses resource management [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] to load.</span></span> <span data-ttu-id="00985-204">Uno dei file necessari per un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione è un file di progetto (proj).</span><span class="sxs-lookup"><span data-stu-id="00985-204">One of the files required for a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application is a project file (.proj).</span></span> <span data-ttu-id="00985-205">Tutte le risorse usate nell'applicazione devono essere incluse nel file di progetto.</span><span class="sxs-lookup"><span data-stu-id="00985-205">All resources that you use in your application should be included in the project file.</span></span> <span data-ttu-id="00985-206">L'esempio seguente da un file con estensione csproj illustra come effettuare questa operazione.</span><span class="sxs-lookup"><span data-stu-id="00985-206">The following example from a .csproj file shows how to do this.</span></span>  
   
-```  
+```xml  
 <Resource Include="data\picture1.jpg"/>  
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>  
 ```  
   
- Per utilizzare una risorsa nell'applicazione, creare un'istanza dell'oggetto <xref:System.Resources.ResourceManager> e caricare la risorsa che si desidera utilizzare.  Nell'esempio riportato di seguito viene illustrato come procedere.  
+ <span data-ttu-id="00985-207">Per utilizzare una risorsa nell'applicazione creare un'istanza di un <xref:System.Resources.ResourceManager> e caricare la risorsa a cui si desidera utilizzare.</span><span class="sxs-lookup"><span data-stu-id="00985-207">To use a resource in your application instantiate a <xref:System.Resources.ResourceManager> and load the resource you want to use.</span></span> <span data-ttu-id="00985-208">Nell'esempio riportato di seguito viene illustrato come procedere.</span><span class="sxs-lookup"><span data-stu-id="00985-208">The following example demonstrates how to do this.</span></span>  
   
  [!code-csharp[LocalizationResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]  
   
 <a name="using_clickonce"></a>   
-## Utilizzo di ClickOnce con applicazioni localizzate  
- ClickOnce è una nuova tecnologia di distribuzione di Windows Form fornita con [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)].  Consente l'installazione e l'aggiornamento di applicazioni Web.  Quando un'applicazione distribuita con ClickOnce viene localizzata, può essere visualizzata solo in base alle impostazioni cultura in cui è localizzata.  Se ad esempio un'applicazione distribuita viene localizzata in giapponese, può essere visualizzato solo nella versione giapponese di [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)], non in quella inglese.  Questa condizione costituisce un problema poiché gli utenti giapponesi utilizzano solitamente una versione inglese di [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+## <a name="using-clickonce-with-localized-applications"></a><span data-ttu-id="00985-209">Uso di ClickOnce con applicazioni localizzate</span><span class="sxs-lookup"><span data-stu-id="00985-209">Using ClickOnce with Localized Applications</span></span>  
+ <span data-ttu-id="00985-210">ClickOnce è una nuova tecnologia di distribuzione di Windows Form che verrà forniti [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)].</span><span class="sxs-lookup"><span data-stu-id="00985-210">ClickOnce is a new Windows Forms deployment technology that will ship with [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)].</span></span> <span data-ttu-id="00985-211">che consente l'installazione e l'aggiornamento di applicazioni Web.</span><span class="sxs-lookup"><span data-stu-id="00985-211">It enables application installation and upgrading of Web applications.</span></span> <span data-ttu-id="00985-212">Quando un'applicazione distribuita con ClickOnce è localizzata, può essere visualizzata solo nelle impostazioni cultura localizzate.</span><span class="sxs-lookup"><span data-stu-id="00985-212">When an application that was deployed with ClickOnce is localized it can only be viewed on the localized culture.</span></span> <span data-ttu-id="00985-213">Ad esempio, se un'applicazione distribuita è localizzata in giapponese, può essere visualizzato solo nella versione giapponese [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] non in lingua inglese [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].</span><span class="sxs-lookup"><span data-stu-id="00985-213">For example, if a deployed application is localized to Japanese it can only be viewed on Japanese [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] not on English [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].</span></span> <span data-ttu-id="00985-214">Ciò costituisce un problema perché è uno scenario comune per gli utenti giapponesi eseguire una versione inglese di [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].</span><span class="sxs-lookup"><span data-stu-id="00985-214">This presents a problem because it is a common scenario for Japanese users to run an English version of [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].</span></span>  
   
- La soluzione a questo problema consiste nell'impostare l'attributo di fallback della lingua di sistema.  Uno sviluppatore di applicazioni può rimuovere facoltativamente le risorse dall'assembly principale e specificare che tali risorse sono disponibili in un assembly satellite corrispondente a impostazioni cultura specifiche.  A tale scopo, utilizzare l'oggetto <xref:System.Resources.NeutralResourcesLanguageAttribute>.  Il costruttore della classe <xref:System.Resources.NeutralResourcesLanguageAttribute> presenta due firme, una che accetta un parametro <xref:System.Resources.UltimateResourceFallbackLocation> per specificare il percorso in cui l'oggetto <xref:System.Resources.ResourceManager> estrae le risorse di fallback, assembly principale o satellite.  Nell'esempio riportato di seguito viene illustrato come utilizzare l'attributo.  Per il percorso di fallback finale, nel codice viene specificato che l'oggetto <xref:System.Resources.ResourceManager> cerchi le risorse nella sottodirectory "de" della directory dell'assembly attualmente in esecuzione.  
+ <span data-ttu-id="00985-215">Per risolvere il problema, è necessario impostare l'attributo di fallback su una lingua neutra.</span><span class="sxs-lookup"><span data-stu-id="00985-215">The solution to this problem is setting the neutral language fallback attribute.</span></span> <span data-ttu-id="00985-216">Uno sviluppatore di applicazioni può facoltativamente rimuovere risorse dall'assembly principale e specificare che le risorse sono disponibili in un assembly satellite corrispondente a impostazioni cultura specifiche.</span><span class="sxs-lookup"><span data-stu-id="00985-216">An application developer can optionally remove resources from the main assembly and specify that the resources can be found in a satellite assembly corresponding to a specific culture.</span></span> <span data-ttu-id="00985-217">A questo scopo, utilizzare il <xref:System.Resources.NeutralResourcesLanguageAttribute>.</span><span class="sxs-lookup"><span data-stu-id="00985-217">To control this process use the <xref:System.Resources.NeutralResourcesLanguageAttribute>.</span></span> <span data-ttu-id="00985-218">Il costruttore del <xref:System.Resources.NeutralResourcesLanguageAttribute> classe presenta due firme, uno che accetta un <xref:System.Resources.UltimateResourceFallbackLocation> parametro per specificare il percorso in cui il <xref:System.Resources.ResourceManager> deve estrarre le risorse di fallback: assembly principale o un assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="00985-218">The constructor of the <xref:System.Resources.NeutralResourcesLanguageAttribute> class has two signatures, one that takes an <xref:System.Resources.UltimateResourceFallbackLocation> parameter to specify the location where the <xref:System.Resources.ResourceManager> should extract the fallback resources: main assembly or satellite assembly.</span></span> <span data-ttu-id="00985-219">L'esempio seguente mostra come usare l'attributo.</span><span class="sxs-lookup"><span data-stu-id="00985-219">The following example shows how to use the attribute.</span></span> <span data-ttu-id="00985-220">Per il percorso di fallback finale, il codice provoca il <xref:System.Resources.ResourceManager> per cercare le risorse nella sottodirectory "de" della directory dell'assembly attualmente in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="00985-220">For the ultimate fallback location, the code causes the <xref:System.Resources.ResourceManager> to look for the resources in the "de" subdirectory of the directory of the currently executing assembly.</span></span>  
   
 ```  
 [assembly: NeutralResourcesLanguageAttribute(  
     "de" , UltimateResourceFallbackLocation.Satellite)]  
-  
 ```  
   
-## Vedere anche  
- [Cenni preliminari sulla globalizzazione e localizzazione WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+## <a name="see-also"></a><span data-ttu-id="00985-221">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="00985-221">See Also</span></span>  
+ [<span data-ttu-id="00985-222">Cenni preliminari sulla globalizzazione e localizzazione WPF</span><span class="sxs-lookup"><span data-stu-id="00985-222">WPF Globalization and Localization Overview</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)

@@ -1,52 +1,57 @@
 ---
-title: "Procedura: eseguire il rendering di un elemento dello stile visivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "aspetto professionale, applicazione a elementi delle applicazioni Windows Form"
-  - "stili visivi, rendering di controlli Windows Form"
-  - "temi visivi, applicazione a elementi delle applicazioni Windows Form"
+title: 'Procedura: eseguire il rendering di un elemento dello stile visivo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- visual themes [Windows Forms], applying to elements of Windows Forms applications
+- professional appearance [Windows Forms], applying to elements of Windows Forms applications
+- visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b96f9e6cc54e028e94cc7ae377012ac4f1328bb0
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: eseguire il rendering di un elemento dello stile visivo
-Lo spazio dei nomi <xref:System.Windows.Forms.VisualStyles?displayProperty=fullName> espone gli oggetti <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> che rappresentano gli elementi dell'interfaccia utente \(UI, User Interface\) Windows supportati dagli stili visivi.  In questo argomento viene illustrato come utilizzare la classe <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> per eseguire il rendering della classe <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> che rappresenta i pulsanti **Disconnetti** e **Chiudi sessione** del menu Start.  
+# <a name="how-to-render-a-visual-style-element"></a><span data-ttu-id="6fcf6-102">Procedura: eseguire il rendering di un elemento dello stile visivo</span><span class="sxs-lookup"><span data-stu-id="6fcf6-102">How to: Render a Visual Style Element</span></span>
+<span data-ttu-id="6fcf6-103">Il <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> espone lo spazio dei nomi <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementi (UI) supportati dagli stili dell'interfaccia utente gli oggetti che rappresentano l'utente di Windows.</span><span class="sxs-lookup"><span data-stu-id="6fcf6-103">The <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace exposes <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> objects that represent the Windows user interface (UI) elements supported by visual styles.</span></span> <span data-ttu-id="6fcf6-104">In questo argomento viene illustrato come utilizzare il <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> classe per eseguire il rendering di <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> che rappresenta il **Disconnetti** e **Arresta** pulsanti del menu Start.</span><span class="sxs-lookup"><span data-stu-id="6fcf6-104">This topic demonstrates how to use the <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> class to render the <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> that represents the **Log Off** and **Shut Down** buttons of the Start menu.</span></span>  
   
-### Per eseguire il rendering di un elemento dello stile visivo  
+### <a name="to-render-a-visual-style-element"></a><span data-ttu-id="6fcf6-105">Per eseguire il rendering di un elemento dello stile di visualizzazione</span><span class="sxs-lookup"><span data-stu-id="6fcf6-105">To render a visual style element</span></span>  
   
-1.  Creare una classe <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> e impostarla sull'elemento che si desidera disegnare.  Si noti l'uso della proprietà <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=fullName> e del metodo <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A?displayProperty=fullName>: il costruttore <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> genera un'eccezione se gli stili visivi sono disabilitati o un elemento non è definito.  
+1.  <span data-ttu-id="6fcf6-106">Creare un <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> e impostarla per l'elemento che si desidera creare.</span><span class="sxs-lookup"><span data-stu-id="6fcf6-106">Create a <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> and set it to the element you want to draw.</span></span> <span data-ttu-id="6fcf6-107">Si noti l'uso del <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> proprietà e <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A?displayProperty=nameWithType> (metodo); il <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> costruttore genera un'eccezione se gli stili di visualizzazione sono disabilitate o non è definito un elemento.</span><span class="sxs-lookup"><span data-stu-id="6fcf6-107">Note the use of the <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> property and the <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A?displayProperty=nameWithType> method; the <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> constructor will throw an exception if visual styles are disabled or an element is undefined.</span></span>  
   
      [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/cpp/form1.cpp#4)]
      [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/VB/form1.vb#4)]  
   
-2.  Chiamare il metodo <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> per eseguire il rendering dell'elemento rappresentato dalla classe <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+2.  <span data-ttu-id="6fcf6-108">Chiamare il <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> metodo per il rendering dell'elemento che la <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> attualmente rappresenta.</span><span class="sxs-lookup"><span data-stu-id="6fcf6-108">Call the <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> method to render the element that the <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> currently represents.</span></span>  
   
      [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#6](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/cpp/form1.cpp#6)]
      [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/CS/form1.cs#6)]
      [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/VB/form1.vb#6)]  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="6fcf6-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="6fcf6-109">Compiling the Code</span></span>  
+ <span data-ttu-id="6fcf6-110">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="6fcf6-110">This example requires:</span></span>  
   
--   Un controllo personalizzato derivato dalla classe <xref:System.Windows.Forms.Control>.  
+-   <span data-ttu-id="6fcf6-111">Un controllo personalizzato derivato dalla <xref:System.Windows.Forms.Control> classe.</span><span class="sxs-lookup"><span data-stu-id="6fcf6-111">A custom control derived from the <xref:System.Windows.Forms.Control> class.</span></span>  
   
--   Una classe <xref:System.Windows.Forms.Form> che contiene il controllo personalizzato.  
+-   <span data-ttu-id="6fcf6-112">Oggetto <xref:System.Windows.Forms.Form> che ospita il controllo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="6fcf6-112">A <xref:System.Windows.Forms.Form> that hosts the custom control.</span></span>  
   
--   Riferimenti agli spazi dei nomi <xref:System?displayProperty=fullName>, <xref:System.Drawing?displayProperty=fullName>, <xref:System.Windows.Forms?displayProperty=fullName> e <xref:System.Windows.Forms.VisualStyles?displayProperty=fullName>.  
+-   <span data-ttu-id="6fcf6-113">I riferimenti al <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, e <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> gli spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="6fcf6-113">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, and <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespaces.</span></span>  
   
-## Vedere anche  
- [Rendering dei controlli con stili visivi](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)
+## <a name="see-also"></a><span data-ttu-id="6fcf6-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6fcf6-114">See Also</span></span>  
+ [<span data-ttu-id="6fcf6-115">Rendering dei controlli con stili visivi</span><span class="sxs-lookup"><span data-stu-id="6fcf6-115">Rendering Controls with Visual Styles</span></span>](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)

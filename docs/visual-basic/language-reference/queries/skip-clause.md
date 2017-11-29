@@ -1,60 +1,58 @@
 ---
-title: "Skip Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QuerySkip"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [Visual Basic], Skip"
-  - "Skip statement"
-  - "Skip clause"
+title: Clausola Skip (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QuerySkip
+helpviewer_keywords:
+- queries [Visual Basic], Skip
+- Skip statement [Visual Basic]
+- Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 508f3c094df4c834305bcb4a78223c1cee82b1c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Skip Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Ignora un numero specificato di elementi in una raccolta e quindi restituisce gli elementi rimanenti.  
+# <a name="skip-clause-visual-basic"></a><span data-ttu-id="3332a-102">Clausola Skip (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3332a-102">Skip Clause (Visual Basic)</span></span>
+<span data-ttu-id="3332a-103">Ignora un numero specificato di elementi in una raccolta e quindi restituisce gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="3332a-103">Bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="3332a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3332a-104">Syntax</span></span>  
   
 ```  
 Skip count  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="3332a-105">Parti</span><span class="sxs-lookup"><span data-stu-id="3332a-105">Parts</span></span>  
  `count`  
- Obbligatorio.  Valore o espressione che restituisce il numero di elementi della sequenza da ignorare.  
+ <span data-ttu-id="3332a-106">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="3332a-106">Required.</span></span> <span data-ttu-id="3332a-107">Un valore o un'espressione che restituisce il numero di elementi della sequenza da ignorare.</span><span class="sxs-lookup"><span data-stu-id="3332a-107">A value or an expression that evaluates to the number of elements of the sequence to skip.</span></span>  
   
-## Note  
- La clausola `Skip` fa in modo che una query ignori gli elementi all'inizio di un elenco di risultati e restituisca gli elementi rimanenti.  Il numero di elementi da ignorare viene specificato dal parametro `count`.  
+## <a name="remarks"></a><span data-ttu-id="3332a-108">Note</span><span class="sxs-lookup"><span data-stu-id="3332a-108">Remarks</span></span>  
+ <span data-ttu-id="3332a-109">Il `Skip` clausola interrompe una query ignora gli elementi all'inizio di un elenco di risultati e restituisce gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="3332a-109">The `Skip` clause causes a query to bypass elements at the beginning of a results list and return the remaining elements.</span></span> <span data-ttu-id="3332a-110">Il numero di elementi da ignorare è identificato dal `count` parametro.</span><span class="sxs-lookup"><span data-stu-id="3332a-110">The number of elements to skip is identified by the `count` parameter.</span></span>  
   
- È possibile utilizzare la clausola `Skip` con la clausola `Take` per restituire un intervallo di dati da qualsiasi segmento di una query.  A tale scopo, passare l'indice del primo elemento dell'intervallo alla clausola `Skip` e la dimensione dell'intervallo alla clausola `Take`.  
+ <span data-ttu-id="3332a-111">È possibile utilizzare il `Skip` clausola con il `Take` clausola per restituire un intervallo di dati da qualsiasi segmento di una query.</span><span class="sxs-lookup"><span data-stu-id="3332a-111">You can use the `Skip` clause with the `Take` clause to return a range of data from any segment of a query.</span></span> <span data-ttu-id="3332a-112">A tale scopo, passare l'indice del primo elemento dell'intervallo per il `Skip` clausola e le dimensioni dell'intervallo per il `Take` clausola.</span><span class="sxs-lookup"><span data-stu-id="3332a-112">To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.</span></span>  
   
- Quando si utilizza la clausola `Skip` in una query, è necessario assicurarsi che i risultati vengano restituiti in un ordine che consente alla clausola `Skip` di ignorare i risultati desiderati.  Per ulteriori informazioni sull'ordinamento dei risultati di una query, vedere [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ <span data-ttu-id="3332a-113">Quando si utilizza il `Skip` clausola in una query, è necessario anche per assicurarsi che i risultati vengono restituiti in un ordine, per consentire il `Skip` clausola per ignorare i risultati desiderati.</span><span class="sxs-lookup"><span data-stu-id="3332a-113">When you use the `Skip` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Skip` clause to bypass the intended results.</span></span> <span data-ttu-id="3332a-114">Per ulteriori informazioni sull'ordinamento dei risultati della query, vedere [clausola Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).</span><span class="sxs-lookup"><span data-stu-id="3332a-114">For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).</span></span>  
   
- È possibile utilizzare la clausola `SkipWhile` per specificare che vengano ignorati solo determinati elementi, in funzione di una condizione fornita.  
+ <span data-ttu-id="3332a-115">È possibile utilizzare il `SkipWhile` clausola per specificare che solo determinati elementi vengano ignorati, a seconda di una condizione fornita.</span><span class="sxs-lookup"><span data-stu-id="3332a-115">You can use the `SkipWhile` clause to specify that only certain elements are ignored, depending on a supplied condition.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene utilizzata insieme la clausola `Skip` con la clausola `Take` per restituire dati da una query in pagine.  La funzione `GetCustomers` utilizza la clausola `Skip` per ignorare i clienti nell'elenco fino al valore di indice iniziale fornito e utilizza la clausola `Take` per restituire una pagina di clienti a partire da quel valore di indice.  
+## <a name="example"></a><span data-ttu-id="3332a-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="3332a-116">Example</span></span>  
+ <span data-ttu-id="3332a-117">Nell'esempio di codice viene illustrato come utilizzare il `Skip` clausola con il `Take` clausola per restituire dati da una query in pagine.</span><span class="sxs-lookup"><span data-stu-id="3332a-117">The following code example uses the `Skip` clause together with the `Take` clause to return data from a query in pages.</span></span> <span data-ttu-id="3332a-118">Il `GetCustomers` funzione Usa il `Skip` clausola per ignorare i clienti nell'elenco finché l'iniziale fornito valore di indice e utilizza il `Take` clausola per restituire una pagina di clienti a partire da quel valore di indice.</span><span class="sxs-lookup"><span data-stu-id="3332a-118">The `GetCustomers` function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
-## Vedere anche  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md)   
- [Take Clause](../../../visual-basic/language-reference/queries/take-clause.md)
+## <a name="see-also"></a><span data-ttu-id="3332a-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3332a-119">See Also</span></span>  
+ [<span data-ttu-id="3332a-120">Introduzione a LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3332a-120">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="3332a-121">Query</span><span class="sxs-lookup"><span data-stu-id="3332a-121">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="3332a-122">Clausola Select</span><span class="sxs-lookup"><span data-stu-id="3332a-122">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="3332a-123">Clausola From</span><span class="sxs-lookup"><span data-stu-id="3332a-123">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="3332a-124">Clausola Order By</span><span class="sxs-lookup"><span data-stu-id="3332a-124">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [<span data-ttu-id="3332a-125">Clausola Skip While</span><span class="sxs-lookup"><span data-stu-id="3332a-125">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [<span data-ttu-id="3332a-126">Clausola Take</span><span class="sxs-lookup"><span data-stu-id="3332a-126">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)

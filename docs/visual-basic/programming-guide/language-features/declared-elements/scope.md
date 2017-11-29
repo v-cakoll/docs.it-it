@@ -1,82 +1,81 @@
 ---
-title: "Scope in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "module scope"
-  - "scope, levels"
-  - "module level"
-  - "procedures, scope"
-  - "declared elements, scope"
-  - "namespaces, scope"
-  - "scope, declared elements"
-  - "scope, about scope"
-  - "levels of scope"
-  - "block scope"
-  - "scope, Visual Basic"
-  - "procedure scope"
+title: Ambito in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- module scope [Visual Basic]
+- scope [Visual Basic], levels
+- module level
+- procedures [Visual Basic], scope
+- declared elements [Visual Basic], scope
+- namespaces [Visual Basic], scope
+- scope [Visual Basic], declared elements
+- scope [Visual Basic], about scope
+- levels of scope [Visual Basic]
+- block scope [Visual Basic]
+- scope [Visual Basic], Visual Basic
+- procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Scope in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-L'*ambito* di un elemento dichiarato è tutto l'insieme del codice che può fare riferimento a esso senza qualificarne il nome o renderlo disponibile tramite un'[Imports Statement \(.NET Namespace and Type\)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  L'ambito di un elemento può essere relativo a uno dei livelli che seguono:  
+# <a name="scope-in-visual-basic"></a><span data-ttu-id="6dfae-102">Ambito in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6dfae-102">Scope in Visual Basic</span></span>
+<span data-ttu-id="6dfae-103">Il *ambito* di un elemento dichiarato è il set di tutto il codice che è possibile farvi riferimento senza qualificarne il nome o renderlo disponibile tramite un [istruzione Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="6dfae-103">The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span> <span data-ttu-id="6dfae-104">Ambito di un elemento può essere uno dei seguenti livelli:</span><span class="sxs-lookup"><span data-stu-id="6dfae-104">An element can have scope at one of the following levels:</span></span>  
   
-|Livello|Descrizione|  
-|-------------|-----------------|  
-|Ambito blocco|Disponibile solo all'interno del blocco di codice in cui viene dichiarato|  
-|Ambito routine|Disponibile per tutto il codice all'interno della routine in cui viene dichiarato|  
-|Ambito modulo|Disponibile per tutto il codice all'interno del modulo, della classe o della struttura in cui viene dichiarato|  
-|Ambito spazio dei nomi|Disponibile per tutto il codice all'interno dello spazio dei nomi in cui viene dichiarato|  
+|<span data-ttu-id="6dfae-105">Livello</span><span class="sxs-lookup"><span data-stu-id="6dfae-105">Level</span></span>|<span data-ttu-id="6dfae-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6dfae-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="6dfae-107">Ambito blocco</span><span class="sxs-lookup"><span data-stu-id="6dfae-107">Block scope</span></span>|<span data-ttu-id="6dfae-108">Disponibile solo all'interno del codice di blocco in cui è dichiarata</span><span class="sxs-lookup"><span data-stu-id="6dfae-108">Available only within the code block in which it is declared</span></span>|  
+|<span data-ttu-id="6dfae-109">Ambito routine</span><span class="sxs-lookup"><span data-stu-id="6dfae-109">Procedure scope</span></span>|<span data-ttu-id="6dfae-110">Disponibile a tutto il codice all'interno della routine in cui è dichiarato</span><span class="sxs-lookup"><span data-stu-id="6dfae-110">Available to all code within the procedure in which it is declared</span></span>|  
+|<span data-ttu-id="6dfae-111">Ambito del modulo</span><span class="sxs-lookup"><span data-stu-id="6dfae-111">Module scope</span></span>|<span data-ttu-id="6dfae-112">Disponibile a tutto il codice all'interno di modulo, classe o struttura in cui è dichiarato</span><span class="sxs-lookup"><span data-stu-id="6dfae-112">Available to all code within the module, class, or structure in which it is declared</span></span>|  
+|<span data-ttu-id="6dfae-113">Ambito Namespace</span><span class="sxs-lookup"><span data-stu-id="6dfae-113">Namespace scope</span></span>|<span data-ttu-id="6dfae-114">Disponibile a tutto il codice nello spazio dei nomi in cui è dichiarato</span><span class="sxs-lookup"><span data-stu-id="6dfae-114">Available to all code in the namespace in which it is declared</span></span>|  
   
- Questi livelli di ambito vanno dal più ristretto \(blocco\) al più ampio \(spazio dei nomi\), dove per *ambito più ristretto* si intende il gruppo più piccolo di codice che può fare riferimento all'elemento senza qualifica.  Per ulteriori informazioni, vedere "Livelli di ambito" in questa pagina.  
+ <span data-ttu-id="6dfae-115">Questi livelli di più ampio (spazio dei nomi), lo stato dell'ambito più ristretto (blocco) in cui *ambito più ristretto* significa che il set più piccolo di codice che è possibile fare riferimento all'elemento senza qualifica.</span><span class="sxs-lookup"><span data-stu-id="6dfae-115">These levels of scope progress from the narrowest (block) to the widest (namespace), where *narrowest scope* means the smallest set of code that can refer to the element without qualification.</span></span> <span data-ttu-id="6dfae-116">Per ulteriori informazioni, vedere "Livelli di ambito" in questa pagina.</span><span class="sxs-lookup"><span data-stu-id="6dfae-116">For more information, see "Levels of Scope" on this page.</span></span>  
   
-## Specifica dell'ambito e definizione delle variabili  
- Specificare l'ambito di un elemento quando lo si dichiara.  L'ambito può dipendere dai fattori che seguono:  
+## <a name="specifying-scope-and-defining-variables"></a><span data-ttu-id="6dfae-117">Specifica l'ambito e definire le variabili</span><span class="sxs-lookup"><span data-stu-id="6dfae-117">Specifying Scope and Defining Variables</span></span>  
+ <span data-ttu-id="6dfae-118">Specificare l'ambito di un elemento al momento della dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="6dfae-118">You specify the scope of an element when you declare it.</span></span> <span data-ttu-id="6dfae-119">L'ambito può dipendere da fattori seguenti:</span><span class="sxs-lookup"><span data-stu-id="6dfae-119">The scope can depend on the following factors:</span></span>  
   
--   L'area \(blocco, routine, modulo, classe o struttura\) nella quale l'elemento viene dichiarato  
+-   <span data-ttu-id="6dfae-120">L'area in cui si dichiara l'elemento (blocco, procedure, modulo, classe o struttura)</span><span class="sxs-lookup"><span data-stu-id="6dfae-120">The region (block, procedure, module, class, or structure) in which you declare the element</span></span>  
   
--   Lo spazio dei nomi contenente la dichiarazione dell'elemento  
+-   <span data-ttu-id="6dfae-121">Lo spazio dei nomi che contiene la dichiarazione dell'elemento</span><span class="sxs-lookup"><span data-stu-id="6dfae-121">The namespace containing the element's declaration</span></span>  
   
--   Il livello di accesso dichiarato per l'elemento  
+-   <span data-ttu-id="6dfae-122">Il livello di accesso che è dichiarato per l'elemento</span><span class="sxs-lookup"><span data-stu-id="6dfae-122">The access level you declare for the element</span></span>  
   
- Prestare attenzione quando si definiscono variabili con lo stesso nome ma ambito diverso, perché questa operazione può comportare risultati non previsti.  Per ulteriori informazioni, vedere [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ <span data-ttu-id="6dfae-123">Prestare attenzione quando si definiscono le variabili con lo stesso nome ma con ambiti diversi, perché può provocare risultati imprevisti.</span><span class="sxs-lookup"><span data-stu-id="6dfae-123">Use care when you define variables with the same name but different scope, because doing so can lead to unexpected results.</span></span> <span data-ttu-id="6dfae-124">Per altre informazioni, vedere [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="6dfae-124">For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## Livelli di ambito  
- Un elemento di programmazione è disponibile in tutta l'area nella quale viene dichiarato.  Tutti i codici nella stessa area possono fare riferimento all'elemento senza qualificarne il nome.  
+## <a name="levels-of-scope"></a><span data-ttu-id="6dfae-125">Livelli di ambito</span><span class="sxs-lookup"><span data-stu-id="6dfae-125">Levels of Scope</span></span>  
+ <span data-ttu-id="6dfae-126">Un elemento di programmazione è disponibile in tutta l'area in cui viene dichiarato.</span><span class="sxs-lookup"><span data-stu-id="6dfae-126">A programming element is available throughout the region in which you declare it.</span></span> <span data-ttu-id="6dfae-127">Tutto il codice nella stessa area è possibile fare riferimento all'elemento senza qualificarne il nome.</span><span class="sxs-lookup"><span data-stu-id="6dfae-127">All code in the same region can refer to the element without qualifying its name.</span></span>  
   
-### Ambito blocco  
- Un blocco è un insieme di istruzioni incluse nelle istruzioni di dichiarazione di inizio e fine, quale quella riportata di seguito:  
+### <a name="block-scope"></a><span data-ttu-id="6dfae-128">Ambito blocco</span><span class="sxs-lookup"><span data-stu-id="6dfae-128">Block Scope</span></span>  
+ <span data-ttu-id="6dfae-129">Un blocco è un set di istruzioni racchiuso tra parentesi iniziale e finale delle istruzioni di dichiarazione, ad esempio le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="6dfae-129">A block is a set of statements enclosed within initiating and terminating declaration statements, such as the following:</span></span>  
   
--   `Do` e `Loop`.  
+-   <span data-ttu-id="6dfae-130">`Do` e `Loop`</span><span class="sxs-lookup"><span data-stu-id="6dfae-130">`Do` and `Loop`</span></span>  
   
--   `For` \[`Each`\] e `Next`  
+-   <span data-ttu-id="6dfae-131">`For`[`Each`] e`Next`</span><span class="sxs-lookup"><span data-stu-id="6dfae-131">`For` [`Each`] and `Next`</span></span>  
   
--   `If` e `End If`.  
+-   <span data-ttu-id="6dfae-132">`If` e `End If`</span><span class="sxs-lookup"><span data-stu-id="6dfae-132">`If` and `End If`</span></span>  
   
--   `Select` e `End Select`.  
+-   <span data-ttu-id="6dfae-133">`Select` e `End Select`</span><span class="sxs-lookup"><span data-stu-id="6dfae-133">`Select` and `End Select`</span></span>  
   
--   `SyncLock` e `End SyncLock`.  
+-   <span data-ttu-id="6dfae-134">`SyncLock` e `End SyncLock`</span><span class="sxs-lookup"><span data-stu-id="6dfae-134">`SyncLock` and `End SyncLock`</span></span>  
   
--   `Try` e `End Try`.  
+-   <span data-ttu-id="6dfae-135">`Try` e `End Try`</span><span class="sxs-lookup"><span data-stu-id="6dfae-135">`Try` and `End Try`</span></span>  
   
--   `While` e `End While`.  
+-   <span data-ttu-id="6dfae-136">`While` e `End While`</span><span class="sxs-lookup"><span data-stu-id="6dfae-136">`While` and `End While`</span></span>  
   
--   `With` e `End With`.  
+-   <span data-ttu-id="6dfae-137">`With` e `End With`</span><span class="sxs-lookup"><span data-stu-id="6dfae-137">`With` and `End With`</span></span>  
   
- Una variabile dichiarata in un blocco può essere utilizzata solo all'interno di quel blocco.  Nell'esempio che segue l'ambito della variabile integer `cube` è il blocco tra `If` e `End If`. Non è più possibile fare riferimento a `cube` quando l'esecuzione esce dal blocco.  
+ <span data-ttu-id="6dfae-138">Se si dichiara una variabile all'interno di un blocco, è possibile utilizzarlo solo all'interno del blocco.</span><span class="sxs-lookup"><span data-stu-id="6dfae-138">If you declare a variable within a block, you can use it only within that block.</span></span> <span data-ttu-id="6dfae-139">Nell'esempio seguente, l'ambito della variabile integer `cube` è il blocco tra `If` e `End If`, e non è possibile fare riferimento a `cube` quando l'esecuzione passa all'esterno del blocco.</span><span class="sxs-lookup"><span data-stu-id="6dfae-139">In the following example, the scope of the integer variable `cube` is the block between `If` and `End If`, and you can no longer refer to `cube` when execution passes out of the block.</span></span>  
   
 ```  
 If n < 1291 Then  
@@ -86,24 +85,24 @@ End If
 ```  
   
 > [!NOTE]
->  Anche se l'ambito di una variabile è limitato a un blocco, la relativa durata resta quella dell'intera routine.  Se si inserisce il blocco più volte durante la routine, ciascuna variabile di blocco conserva il rispettivo valore precedente.  Per evitare risultati imprevisti in questo caso, è consigliabile inizializzare le variabili di blocco all'inizio del blocco.  
+>  <span data-ttu-id="6dfae-140">Anche se l'ambito di una variabile è limitato a un blocco, la relativa durata è ancora che dell'intera procedura.</span><span class="sxs-lookup"><span data-stu-id="6dfae-140">Even if the scope of a variable is limited to a block, its lifetime is still that of the entire procedure.</span></span> <span data-ttu-id="6dfae-141">Se si immette il blocco più volte nel corso della procedura, ogni variabile del blocco mantiene il valore precedente.</span><span class="sxs-lookup"><span data-stu-id="6dfae-141">If you enter the block more than once during the procedure, each block variable retains its previous value.</span></span> <span data-ttu-id="6dfae-142">Per evitare risultati imprevisti, in tal caso, è consigliabile inizializzare le variabili di blocco all'inizio del blocco.</span><span class="sxs-lookup"><span data-stu-id="6dfae-142">To avoid unexpected results in such a case, it is wise to initialize block variables at the beginning of the block.</span></span>  
   
-### Ambito routine  
- Un elemento dichiarato all'interno di una routine non è disponibile all'esterno di essa.  Solamente la routine che contiene la dichiarazione può utilizzarlo.  Le variabili a questo livello sono note anche come *variabili locali* e vengono dichiarate con l'[Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), con o senza la parola chiave [Static](../../../../visual-basic/language-reference/modifiers/static.md).  
+### <a name="procedure-scope"></a><span data-ttu-id="6dfae-143">Ambito routine</span><span class="sxs-lookup"><span data-stu-id="6dfae-143">Procedure Scope</span></span>  
+ <span data-ttu-id="6dfae-144">Un elemento dichiarato all'interno di una stored procedure non è disponibile di fuori di tale procedura.</span><span class="sxs-lookup"><span data-stu-id="6dfae-144">An element declared within a procedure is not available outside that procedure.</span></span> <span data-ttu-id="6dfae-145">Solo le procedure che contiene la dichiarazione può utilizzarlo.</span><span class="sxs-lookup"><span data-stu-id="6dfae-145">Only the procedure that contains the declaration can use it.</span></span> <span data-ttu-id="6dfae-146">Le variabili a questo livello sono anche noti come *variabili locali*.</span><span class="sxs-lookup"><span data-stu-id="6dfae-146">Variables at this level are also known as *local variables*.</span></span> <span data-ttu-id="6dfae-147">E vengono dichiarate con la [Dim (istruzione)](../../../../visual-basic/language-reference/statements/dim-statement.md), con o senza il [statico](../../../../visual-basic/language-reference/modifiers/static.md) (parola chiave).</span><span class="sxs-lookup"><span data-stu-id="6dfae-147">You declare them with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), with or without the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.</span></span>  
   
- Ambiti routine e ambiti blocco sono strettamente correlati tra loro.  Se una variabile viene dichiarata all'interno di una routine ma all'esterno di eventuali blocchi interni alla routine, è possibile considerarla come dotata di ambito blocco, dove il blocco è l'intera routine.  
+ <span data-ttu-id="6dfae-148">Ambito routine e di blocco sono strettamente correlati.</span><span class="sxs-lookup"><span data-stu-id="6dfae-148">Procedure and block scope are closely related.</span></span> <span data-ttu-id="6dfae-149">Se si dichiara una variabile all'interno di una routine, ma all'esterno di qualsiasi blocco in questa procedura, è possibile considerare la variabile con ambito blocco, in cui il blocco è l'intera procedura.</span><span class="sxs-lookup"><span data-stu-id="6dfae-149">If you declare a variable inside a procedure but outside any block within that procedure, you can think of the variable as having block scope, where the block is the entire procedure.</span></span>  
   
 > [!NOTE]
->  Tutti gli elementi locali, anche se si tratta di variabili `Static`, sono privati rispetto alla routine nella quale sono visualizzati.  Non è possibile dichiarare un elemento utilizzando la parola chiave [Public](../../../../visual-basic/language-reference/modifiers/public.md) all'interno di una routine.  
+>  <span data-ttu-id="6dfae-150">Tutti gli elementi locali, anche se sono `Static` le variabili sono private per la procedura in cui appaiono.</span><span class="sxs-lookup"><span data-stu-id="6dfae-150">All local elements, even if they are `Static` variables, are private to the procedure in which they appear.</span></span> <span data-ttu-id="6dfae-151">Non è possibile dichiarare un elemento utilizzando il [pubblica](../../../../visual-basic/language-reference/modifiers/public.md) parola chiave all'interno di una stored procedure.</span><span class="sxs-lookup"><span data-stu-id="6dfae-151">You cannot declare any element using the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword within a procedure.</span></span>  
   
-### Ambito modulo  
- Per comodità, la singola espressione *a livello di modulo* fa riferimento ai moduli, alle classi e alle strutture.  È possibile dichiarare elementi a questo livello collocando l'istruzione di dichiarazione all'esterno di eventuali routine o blocchi ma internamente al modulo, alla classe o alla struttura.  
+### <a name="module-scope"></a><span data-ttu-id="6dfae-152">Ambito del modulo</span><span class="sxs-lookup"><span data-stu-id="6dfae-152">Module Scope</span></span>  
+ <span data-ttu-id="6dfae-153">Per comodità, il termine singolo *a livello di modulo* vale per i moduli, classi e strutture.</span><span class="sxs-lookup"><span data-stu-id="6dfae-153">For convenience, the single term *module level* applies equally to modules, classes, and structures.</span></span> <span data-ttu-id="6dfae-154">Inserendo l'istruzione di dichiarazione all'esterno di qualsiasi routine o un blocco, ma nel modulo, classe o struttura, è possibile dichiarare gli elementi a questo livello.</span><span class="sxs-lookup"><span data-stu-id="6dfae-154">You can declare elements at this level by placing the declaration statement outside of any procedure or block but within the module, class, or structure.</span></span>  
   
- Quando si effettua una dichiarazione a livello di modulo, il livello di accesso scelto determina l'ambito.  Anche lo spazio dei nomi che contiene il modulo, la classe o la struttura ha effetto sull'ambito.  
+ <span data-ttu-id="6dfae-155">Quando si crea una dichiarazione a livello di modulo, il livello di accesso che scelto determina l'ambito.</span><span class="sxs-lookup"><span data-stu-id="6dfae-155">When you make a declaration at the module level, the access level you choose determines the scope.</span></span> <span data-ttu-id="6dfae-156">Lo spazio dei nomi che contiene il modulo, classe o struttura interesserà anche l'ambito.</span><span class="sxs-lookup"><span data-stu-id="6dfae-156">The namespace that contains the module, class, or structure also affects the scope.</span></span>  
   
- Gli elementi per i quali si dichiara il livello di accesso [Private](../../../../visual-basic/language-reference/modifiers/private.md) sono disponibili per tutte le routine di quel modulo, ma non per il codice presente in un modulo diverso.  Se non si utilizzano parole chiave del livello di accesso, per l'istruzione `Dim` a livello di modulo verrà utilizzata l'impostazione predefinita `Private`.  È tuttavia possibile indicare l'ambito e il livello di accesso in modo più chiaro, utilizzando la parola chiave `Private` nell'istruzione `Dim`.  
+ <span data-ttu-id="6dfae-157">Gli elementi per cui si dichiara [privata](../../../../visual-basic/language-reference/modifiers/private.md) livello di accesso sono disponibili per tutte le routine in tale modulo, ma non per il codice in un modulo diverso.</span><span class="sxs-lookup"><span data-stu-id="6dfae-157">Elements for which you declare [Private](../../../../visual-basic/language-reference/modifiers/private.md) access level are available to every procedure in that module, but not to any code in a different module.</span></span> <span data-ttu-id="6dfae-158">Il `Dim` istruzione a livello di modulo per impostazione predefinita `Private` se non si utilizzano parole chiave qualsiasi livello di accesso.</span><span class="sxs-lookup"><span data-stu-id="6dfae-158">The `Dim` statement at module level defaults to `Private` if you do not use any access level keywords.</span></span> <span data-ttu-id="6dfae-159">Tuttavia, effettuare il livello di ambito e accesso più ovvio utilizzando il `Private` parola chiave nel `Dim` istruzione.</span><span class="sxs-lookup"><span data-stu-id="6dfae-159">However, you can make the scope and access level more obvious by using the `Private` keyword in the `Dim` statement.</span></span>  
   
- Nell'esempio che segue tutte le routine definite nel modulo possono fare riferimento alla variabile di stringa `strMsg`.  Quando viene chiamata la seconda routine, il contenuto della variabile di stringa `strMsg` viene visualizzato in una finestra di dialogo.  
+ <span data-ttu-id="6dfae-160">Nell'esempio seguente, tutte le procedure definite nel modulo possono fare riferimento alla variabile di stringa `strMsg`.</span><span class="sxs-lookup"><span data-stu-id="6dfae-160">In the following example, all procedures defined in the module can refer to the string variable `strMsg`.</span></span> <span data-ttu-id="6dfae-161">Quando la seconda procedura viene chiamata, viene visualizzato il contenuto della variabile di stringa `strMsg` in una finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="6dfae-161">When the second procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.</span></span>  
   
 ```  
 ' Put the following declaration at module level (not in any procedure).  
@@ -118,35 +117,35 @@ Sub usePrivateVariable()
 End Sub  
 ```  
   
-### Ambito spazio dei nomi  
- Se si dichiara un elemento a livello di modulo, utilizzando la parola chiave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [Public](../../../../visual-basic/language-reference/modifiers/public.md), tale elemento diventa disponibile per tutte le routine nello spazio dei nomi in cui è dichiarato.  Modificando l'esempio precedente come indicato di seguito, è possibile fare riferimento alla variabile di stringa `strMsg` da qualsiasi parte di codice nello spazio dei nomi della relativa dichiarazione.  
+### <a name="namespace-scope"></a><span data-ttu-id="6dfae-162">Ambito Namespace</span><span class="sxs-lookup"><span data-stu-id="6dfae-162">Namespace Scope</span></span>  
+ <span data-ttu-id="6dfae-163">Se si dichiara un elemento a livello di modulo, utilizzando il [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [pubblica](../../../../visual-basic/language-reference/modifiers/public.md) (parola chiave), diventa disponibile per tutte le procedure in tutto lo spazio dei nomi in cui l'elemento viene dichiarato.</span><span class="sxs-lookup"><span data-stu-id="6dfae-163">If you declare an element at module level using the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword, it becomes available to all procedures throughout the namespace in which the element is declared.</span></span> <span data-ttu-id="6dfae-164">Con la modifica seguente all'esempio precedente, la variabile stringa `strMsg` può fare riferimento al codice in qualsiasi punto nello spazio dei nomi della relativa dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="6dfae-164">With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.</span></span>  
   
 ```  
 ' Include this declaration at module level (not inside any procedure).  
 Public strMsg As String  
 ```  
   
- L'ambito spazio dei nomi include spazi dei nomi annidati.  Un elemento disponibile dall'interno di uno spazio dei nomi è disponibile anche dall'interno di qualsiasi spazio dei nomi annidato nel primo.  
+ <span data-ttu-id="6dfae-165">Ambito Namespace include spazi dei nomi annidati.</span><span class="sxs-lookup"><span data-stu-id="6dfae-165">Namespace scope includes nested namespaces.</span></span> <span data-ttu-id="6dfae-166">Un elemento disponibile dall'interno di uno spazio dei nomi è anche disponibile dall'interno di qualsiasi spazio dei nomi annidato all'interno di tale spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="6dfae-166">An element available from within a namespace is also available from within any namespace nested inside that namespace.</span></span>  
   
- Se il progetto non contiene alcuna [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md), ogni elemento del progetto sarà contenuto nello stesso spazio dei nomi.  In questo caso, l'ambito spazio dei nomi può essere considerato come ambito del progetto.  Anche gli elementi `Public` di un modulo, una classe o una struttura sono disponibili per qualsiasi progetto che faccia riferimento al rispettivo progetto.  
+ <span data-ttu-id="6dfae-167">Se il progetto non contiene alcuna [istruzione Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, ogni elemento del progetto è dello stesso spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="6dfae-167">If your project does not contain any [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, everything in the project is in the same namespace.</span></span> <span data-ttu-id="6dfae-168">In questo caso, ambito dello spazio dei nomi possono essere considerato come ambito del progetto.</span><span class="sxs-lookup"><span data-stu-id="6dfae-168">In this case, namespace scope can be thought of as project scope.</span></span> <span data-ttu-id="6dfae-169">`Public`gli elementi in un modulo, classe o struttura sono anche disponibili per qualsiasi progetto che fa riferimento il progetto.</span><span class="sxs-lookup"><span data-stu-id="6dfae-169">`Public` elements in a module, class, or structure are also available to any project that references their project.</span></span>  
   
-## Scelta dell'ambito  
- Quando si dichiara una variabile, per la scelta del relativo ambito è necessario tenere presenti i punti riportati di seguito.  
+## <a name="choice-of-scope"></a><span data-ttu-id="6dfae-170">Scelta dell'ambito</span><span class="sxs-lookup"><span data-stu-id="6dfae-170">Choice of Scope</span></span>  
+ <span data-ttu-id="6dfae-171">Quando si dichiara una variabile, è necessario tenere presente i seguenti punti quando si sceglie il relativo ambito.</span><span class="sxs-lookup"><span data-stu-id="6dfae-171">When you declare a variable, you should keep in mind the following points when choosing its scope.</span></span>  
   
-### Vantaggi delle variabili locali  
- Le variabili locali sono da preferire per qualsiasi tipo di calcolo temporaneo per i motivi che seguono:  
+### <a name="advantages-of-local-variables"></a><span data-ttu-id="6dfae-172">Vantaggi delle variabili locali</span><span class="sxs-lookup"><span data-stu-id="6dfae-172">Advantages of Local Variables</span></span>  
+ <span data-ttu-id="6dfae-173">Le variabili locali sono un'ottima scelta per qualsiasi tipo di calcolo temporaneo per i motivi seguenti:</span><span class="sxs-lookup"><span data-stu-id="6dfae-173">Local variables are a good choice for any kind of temporary calculation, for the following reasons:</span></span>  
   
--   **Prevenzione dei conflitti di nomi.** I nomi delle variabili locali non sono soggetti a conflitti.  È possibile, ad esempio, creare numerose routine diverse contenenti una variabile denominata `intTemp`.  Fino a quando ciascuna variabile `intTemp` viene dichiarata come variabile locale, ogni routine riconosce solo la propria versione di `intTemp`.  Ogni singola routine può modificare il valore nella propria `intTemp` locale senza effetto sulle variabili `intTemp` nelle altre routine.  
+-   <span data-ttu-id="6dfae-174">**Prevenzione dei conflitti di nome.**</span><span class="sxs-lookup"><span data-stu-id="6dfae-174">**Name Conflict Avoidance.**</span></span> <span data-ttu-id="6dfae-175">Nomi delle variabili locali non sono soggetti a conflitti.</span><span class="sxs-lookup"><span data-stu-id="6dfae-175">Local variable names are not susceptible to conflict.</span></span> <span data-ttu-id="6dfae-176">Ad esempio, è possibile creare varie procedure diverse contenenti una variabile denominata `intTemp`.</span><span class="sxs-lookup"><span data-stu-id="6dfae-176">For example, you can create several different procedures containing a variable called `intTemp`.</span></span> <span data-ttu-id="6dfae-177">Purché ogni `intTemp` è dichiarato come una variabile locale, ogni routine riconosce solo la propria versione di `intTemp`.</span><span class="sxs-lookup"><span data-stu-id="6dfae-177">As long as each `intTemp` is declared as a local variable, each procedure recognizes only its own version of `intTemp`.</span></span> <span data-ttu-id="6dfae-178">Ogni singola routine può modificare il valore nella propria locale `intTemp` senza influire sul `intTemp` variabili nelle altre routine.</span><span class="sxs-lookup"><span data-stu-id="6dfae-178">Any one procedure can alter the value in its local `intTemp` without affecting `intTemp` variables in other procedures.</span></span>  
   
--   **Consumo di memoria.** Le variabili locali occupano memoria solo durante l'esecuzione della rispettiva routine.  Questa memoria viene rilasciata quando la routine viene restituita al codice chiamante.  Al contrario, le variabili [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [Static](../../../../visual-basic/language-reference/modifiers/static.md) occupano risorse di memoria finché l'applicazione non termina l'esecuzione. Si consiglia pertanto di utilizzarle solo quando necessario.  Le *variabili di istanza* occupano memoria finché l'istanza continua a esistere, pertanto sono meno efficienti delle variabili locali, tuttavia potenzialmente più efficienti delle variabili `Shared` o `Static`.  
+-   <span data-ttu-id="6dfae-179">**Utilizzo di memoria.**</span><span class="sxs-lookup"><span data-stu-id="6dfae-179">**Memory Consumption.**</span></span> <span data-ttu-id="6dfae-180">Le variabili locali occupano memoria solo durante l'esecuzione di procedure.</span><span class="sxs-lookup"><span data-stu-id="6dfae-180">Local variables consume memory only while their procedure is running.</span></span> <span data-ttu-id="6dfae-181">La memoria viene rilasciata quando viene restituito al codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="6dfae-181">Their memory is released when the procedure returns to the calling code.</span></span> <span data-ttu-id="6dfae-182">Al contrario, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [statico](../../../../visual-basic/language-reference/modifiers/static.md) variabili utilizzano risorse di memoria fino a quando l'esecuzione dell'applicazione, quindi utilizzarle solo se necessario.</span><span class="sxs-lookup"><span data-stu-id="6dfae-182">By contrast, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) and [Static](../../../../visual-basic/language-reference/modifiers/static.md) variables consume memory resources until your application stops running, so use them only when necessary.</span></span> <span data-ttu-id="6dfae-183">*Le variabili di istanza* occupano memoria finché l'istanza continua a esistere, pertanto sono meno efficienti rispetto alle variabili locali, ma potenzialmente più efficienti `Shared` o `Static` variabili.</span><span class="sxs-lookup"><span data-stu-id="6dfae-183">*Instance variables* consume memory while their instance continues to exist, which makes them less efficient than local variables, but potentially more efficient than `Shared` or `Static` variables.</span></span>  
   
-### Riduzione dell'ambito  
- In generale, quando si dichiara una variabile o una costante, è buona norma di programmazione rendere l'ambito il più ristretto possibile. L'ambito blocco è il più ristretto.  Questo consente di ridurre l'utilizzo della memoria e la possibilità che il codice faccia erroneamente riferimento alla variabile sbagliata.  Analogamente, si consiglia di dichiarare una variabile [Static](../../../../visual-basic/language-reference/modifiers/static.md) solo quando è necessario conservarne il valore tra le chiamate di routine.  
+### <a name="minimizing-scope"></a><span data-ttu-id="6dfae-184">Riduzione dell'ambito</span><span class="sxs-lookup"><span data-stu-id="6dfae-184">Minimizing Scope</span></span>  
+ <span data-ttu-id="6dfae-185">In generale, quando si dichiara una variabile o una costante, è buona norma di programmazione rendere l'ambito più brevi possibile (è ristretto ambito blocco).</span><span class="sxs-lookup"><span data-stu-id="6dfae-185">In general, when declaring any variable or constant, it is good programming practice to make the scope as narrow as possible (block scope is the narrowest).</span></span> <span data-ttu-id="6dfae-186">Questo consente di conservare la memoria e riduce al minimo la probabilità del codice erroneamente che fa riferimento alla variabile non corretta.</span><span class="sxs-lookup"><span data-stu-id="6dfae-186">This helps conserve memory and minimizes the chances of your code erroneously referring to the wrong variable.</span></span> <span data-ttu-id="6dfae-187">Allo stesso modo, è necessario dichiarare una variabile [statico](../../../../visual-basic/language-reference/modifiers/static.md) solo quando è necessario mantenere il valore tra le chiamate di procedura.</span><span class="sxs-lookup"><span data-stu-id="6dfae-187">Similarly, you should declare a variable to be [Static](../../../../visual-basic/language-reference/modifiers/static.md) only when it is necessary to preserve its value between procedure calls.</span></span>  
   
-## Vedere anche  
- [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Dichiarazione di variabili](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="6dfae-188">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6dfae-188">See Also</span></span>  
+ [<span data-ttu-id="6dfae-189">Caratteristiche di elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="6dfae-189">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="6dfae-190">Procedura: controllare l'ambito di una variabile</span><span class="sxs-lookup"><span data-stu-id="6dfae-190">How to: Control the Scope of a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
+ [<span data-ttu-id="6dfae-191">Durata in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6dfae-191">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="6dfae-192">Livelli di accesso in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6dfae-192">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="6dfae-193">Riferimenti a elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="6dfae-193">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="6dfae-194">Dichiarazione di variabile</span><span class="sxs-lookup"><span data-stu-id="6dfae-194">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

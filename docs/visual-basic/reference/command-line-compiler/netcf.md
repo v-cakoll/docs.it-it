@@ -1,77 +1,60 @@
 ---
-title: /netcf | Documenti di Microsoft
-ms.date: 2015-07-20
+title: /netcf
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /netcf
 - netcf
-dev_langs:
-- VB
 helpviewer_keywords:
 - -netcf compiler option [Visual Basic]
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d8e2328eb5434ea0e73238709c429975ae29e6d0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4a75573b0881af71e907a488c2b3c15db3816fc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="netcf"></a>/netcf
-Imposta il compilatore in modo che punti a [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)].  
+# <a name="netcf"></a><span data-ttu-id="2f43c-102">/netcf</span><span class="sxs-lookup"><span data-stu-id="2f43c-102">/netcf</span></span>
+<span data-ttu-id="2f43c-103">Imposta il compilatore in modo che punti a [!INCLUDE[Compact](~/includes/compact-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2f43c-103">Sets the compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="2f43c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2f43c-104">Syntax</span></span>  
   
 ```  
 /netcf  
 ```  
   
-## <a name="remarks"></a>Note  
- Il `/netcf` opzione il [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilatore alla destinazione di [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] anziché l'intero [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Funzionalità di linguaggio che è presente solo nella versione completa [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] è disabilitato.  
+## <a name="remarks"></a><span data-ttu-id="2f43c-105">Note</span><span class="sxs-lookup"><span data-stu-id="2f43c-105">Remarks</span></span>  
+ <span data-ttu-id="2f43c-106">Il `/netcf` opzione cause di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore di destinazione di [!INCLUDE[Compact](~/includes/compact-md.md)] anziché la versione completa [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2f43c-106">The `/netcf` option causes the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)] rather than the full [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="2f43c-107">Funzionalità di linguaggio che è presente solo nella versione completa [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="2f43c-107">Language functionality that is present only in the full [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] is disabled.</span></span>  
   
- Il `/netcf` opzione è progettata per essere utilizzato con [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Le funzionalità di linguaggio disabilitate da `/netcf` sono le stesse funzionalità di linguaggio non presenti nel file di destinazione con `/sdkpath`.  
+ <span data-ttu-id="2f43c-108">Il `/netcf` opzione è progettata per essere utilizzato con [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md).</span><span class="sxs-lookup"><span data-stu-id="2f43c-108">The `/netcf` option is designed to be used with [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md).</span></span> <span data-ttu-id="2f43c-109">Le funzionalità del linguaggio per disabilitato `/netcf` sono le stesse funzionalità di linguaggio non presente nel file di destinazione con `/sdkpath`.</span><span class="sxs-lookup"><span data-stu-id="2f43c-109">The language features disabled by `/netcf` are the same language features not present in the files targeted with `/sdkpath`.</span></span>  
   
 > [!NOTE]
->  Il `/netcf` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando. Il `/netcf` opzione viene impostata quando un [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] dispositivo progetto viene caricato.  
+>  <span data-ttu-id="2f43c-110">Il `/netcf` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="2f43c-110">The `/netcf` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span> <span data-ttu-id="2f43c-111">Il `/netcf` opzione viene impostata quando un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] viene caricato il progetto di dispositivo.</span><span class="sxs-lookup"><span data-stu-id="2f43c-111">The `/netcf` option is set when a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] device project is loaded.</span></span>  
   
- Il `/netcf` opzione consente di modificare le funzionalità del linguaggio seguenti:  
+ <span data-ttu-id="2f43c-112">Il `/netcf` opzione consente di modificare le funzionalità del linguaggio seguenti:</span><span class="sxs-lookup"><span data-stu-id="2f43c-112">The `/netcf` option changes the following language features:</span></span>  
   
--   Il [End \<parola chiave > istruzione](../../../visual-basic/language-reference/statements/end-keyword-statement.md) (parola chiave), che termina l'esecuzione di un programma, è disabilitato. Il seguente programma compilato ed eseguito senza `/netcf` ma non riesce in fase di compilazione con `/netcf`.  
+-   <span data-ttu-id="2f43c-113">Il [fine \<parola chiave > istruzione](../../../visual-basic/language-reference/statements/end-keyword-statement.md) (parola chiave), che termina l'esecuzione di un programma, è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="2f43c-113">The [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) keyword, which terminates execution of a program, is disabled.</span></span> <span data-ttu-id="2f43c-114">Il seguente programma compilato ed eseguito senza `/netcf` ma non riesce in fase di compilazione con `/netcf`.</span><span class="sxs-lookup"><span data-stu-id="2f43c-114">The following program compiles and runs without `/netcf` but fails at compile time with `/netcf`.</span></span>  
   
-     [!code-vb[VbVbalrCompiler&#34;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
+     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
--   L'associazione tardiva, in tutti i form, è disabilitata. Quando vengono rilevati gli scenari di associazione tardiva riconosciuti, vengono generati errori in fase di compilazione. Il seguente programma compilato ed eseguito senza `/netcf` ma non riesce in fase di compilazione con `/netcf`.  
+-   <span data-ttu-id="2f43c-115">L'associazione tardiva, in tutti i form, è disabilitata.</span><span class="sxs-lookup"><span data-stu-id="2f43c-115">Late binding, in all forms, is disabled.</span></span> <span data-ttu-id="2f43c-116">Quando si verificano gli scenari di associazione tardiva riconosciuti, vengono generati errori di compilazione.</span><span class="sxs-lookup"><span data-stu-id="2f43c-116">Compile-time errors are generated when recognized late-binding scenarios are encountered.</span></span> <span data-ttu-id="2f43c-117">Il seguente programma compilato ed eseguito senza `/netcf` ma non riesce in fase di compilazione con `/netcf`.</span><span class="sxs-lookup"><span data-stu-id="2f43c-117">The following program compiles and runs without `/netcf` but fails at compile time with `/netcf`.</span></span>  
   
-     [!code-vb[VbVbalrCompiler&#35;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
+     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
--   Il [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), e [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) modificatori sono disabilitati. La sintassi di [l'istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) istruzione viene inoltre modificata in `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Il codice seguente viene illustrato l'effetto di `/netcf` su una compilazione.  
+-   <span data-ttu-id="2f43c-118">Il [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), e [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) modificatori sono disabilitati.</span><span class="sxs-lookup"><span data-stu-id="2f43c-118">The [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), and [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) modifiers are disabled.</span></span> <span data-ttu-id="2f43c-119">La sintassi del [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) istruzione viene modificata anche a `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`.</span><span class="sxs-lookup"><span data-stu-id="2f43c-119">The syntax of the [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) statement is also modified to `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`.</span></span> <span data-ttu-id="2f43c-120">Il codice seguente viene illustrato l'effetto di `/netcf` su una compilazione.</span><span class="sxs-lookup"><span data-stu-id="2f43c-120">The following code shows the effect of `/netcf` on a compilation.</span></span>  
   
-     [!code-vb[VbVbalrCompiler&#36;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
+     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   Utilizzando le parole chiave Visual Basic 6.0 che sono stati rimossi dalla [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] genera un errore diverso quando `/netcf` viene utilizzato. Ciò influisce sui messaggi di errore per le parole chiave seguenti:  
+-   <span data-ttu-id="2f43c-121">Utilizzo delle parole chiave di Visual Basic 6.0 che sono stati rimossi da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] genera un errore diverso quando `/netcf` viene utilizzato.</span><span class="sxs-lookup"><span data-stu-id="2f43c-121">Using Visual Basic 6.0 keywords that were removed from [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] generates a different error when `/netcf` is used.</span></span> <span data-ttu-id="2f43c-122">Questo riguarda i messaggi di errore per le parole chiave seguenti:</span><span class="sxs-lookup"><span data-stu-id="2f43c-122">This affects the error messages for the following keywords:</span></span>  
   
     -   `Open`  
   
@@ -105,14 +88,14 @@ Imposta il compilatore in modo che punti a [!INCLUDE[Compact](../../../visual-ba
   
     -   `Line`  
   
-## <a name="example"></a>Esempio  
- Il codice seguente Compila `Myfile.vb` con il [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)], con le versioni di mscorlib. dll e Microsoft.VisualBasic.dll trovato nella directory di installazione predefinita di [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] nell'unità C. In genere, si utilizzerà la versione più recente di [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)].  
+## <a name="example"></a><span data-ttu-id="2f43c-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="2f43c-123">Example</span></span>  
+ <span data-ttu-id="2f43c-124">Il codice seguente Compila `Myfile.vb` con il [!INCLUDE[Compact](~/includes/compact-md.md)], usando le versioni dei file mscorlib.dll e Microsoft.VisualBasic.dll trovato nella directory di installazione predefinita di [!INCLUDE[Compact](~/includes/compact-md.md)] nell'unità C.</span><span class="sxs-lookup"><span data-stu-id="2f43c-124">The following code compiles `Myfile.vb` with the [!INCLUDE[Compact](~/includes/compact-md.md)], using the versions of mscorlib.dll and Microsoft.VisualBasic.dll found in the default installation directory of the [!INCLUDE[Compact](~/includes/compact-md.md)] on the C drive.</span></span> <span data-ttu-id="2f43c-125">In genere, si utilizzerà la versione più recente di [!INCLUDE[Compact](~/includes/compact-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2f43c-125">Typically, you would use the most recent version of the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>  
   
 ```  
 vbc /netcf /sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Esempi di righe di comando compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+## <a name="see-also"></a><span data-ttu-id="2f43c-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2f43c-126">See Also</span></span>  
+ [<span data-ttu-id="2f43c-127">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2f43c-127">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="2f43c-128">Esempi di righe di comando di compilazione</span><span class="sxs-lookup"><span data-stu-id="2f43c-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="2f43c-129">/sdkpath</span><span class="sxs-lookup"><span data-stu-id="2f43c-129">/sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

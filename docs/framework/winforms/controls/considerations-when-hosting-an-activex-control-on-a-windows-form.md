@@ -1,45 +1,46 @@
 ---
-title: "Considerazioni sull&#39;inserimento di controlli ActiveX in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli ActiveX [Windows Form], aggiunta"
-  - "controlli ActiveX [Windows Form], hosting"
-  - "controlli Windows Form, controlli ActiveX"
-  - "Windows Form, controlli ActiveX"
-  - "Windows Form, hosting di controlli ActiveX"
+title: Considerazioni sull'inserimento di controlli ActiveX in Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- ActiveX controls [Windows Forms], hosting
+- Windows Forms, ActiveX controls
+- Windows Forms, hosting ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ec828ca0b2bd8231d0baca72bf97bef566f2651
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Considerazioni sull&#39;inserimento di controlli ActiveX in Windows Form
-Sebbene i Windows Form siano stati ottimizzati per contenere i controlli Windows Form, è comunque possibile utilizzare controlli ActiveX.  Di seguito sono elencati alcuni elementi di cui tenere conto durante la pianificazione di un'applicazione che utilizzi i controlli ActiveX:  
+# <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a><span data-ttu-id="fe1ec-102">Considerazioni sull'inserimento di controlli ActiveX in Windows Form</span><span class="sxs-lookup"><span data-stu-id="fe1ec-102">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>
+<span data-ttu-id="fe1ec-103">Anche se Windows Form è stato ottimizzato per ospitare i controlli Windows Form, è tuttavia possibile usare i controlli ActiveX.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-103">Although Windows Forms have been optimized to host Windows Forms controls, you can still use ActiveX controls.</span></span> <span data-ttu-id="fe1ec-104">Quando si pianifica un'applicazione che usa i controlli ActiveX, tenere presenti le considerazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="fe1ec-104">Keep the following considerations in mind when planning an application that uses ActiveX controls:</span></span>  
   
--   **Sicurezza** In Common Language Runtime le funzionalità di sicurezza dall'accesso di codice sono state potenziate.  Le applicazioni che utilizzano Windows Form possono essere eseguite in un ambiente completamente attendibile senza alcun problema e in un ambiente parzialmente attendibile con la possibilità di accedere alla maggior parte delle funzionalità.  I controlli dei Windows Form inoltre possono essere facilmente memorizzati in un browser.  Con i controlli ActiveX dei Windows Form tuttavia non è possibile sfruttare i miglioramenti della sicurezza.  L'esecuzione di un controllo ActiveX richiede l'autorizzazione per il codice non gestito. Tale autorizzazione viene impostata tramite la proprietà <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=fullName>.  Per ulteriori informazioni sulla sicurezza e sull'autorizzazione per il codice non gestito, vedere la [classe SecurityPermissionAttribute](frlrfSystemSecurityPermissionsSecurityPermissionAttributeClassTopic).  
+-   <span data-ttu-id="fe1ec-105">**Sicurezza** Common Language Runtime è stato migliorato dal punto di vista della sicurezza dall'accesso di codice.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-105">**Security** The common language runtime has been enhanced with regard to code access security.</span></span> <span data-ttu-id="fe1ec-106">Le applicazioni con Windows Form possono essere eseguite in un ambiente completamente attendibile senza problemi e in un ambiente parzialmente attendibile con accesso alla maggior parte delle funzionalità.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-106">Applications featuring Windows Forms can run in a fully trusted environment without issue and in a semi-trusted environment with most of the functionality accessible.</span></span> <span data-ttu-id="fe1ec-107">I controlli Windows Form possono essere ospitati in un browser senza complicazioni.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-107">Windows Forms controls can be hosted in a browser with no complications.</span></span> <span data-ttu-id="fe1ec-108">I controlli ActiveX in Windows Form tuttavia non possono sfruttare i vantaggi offerti da questi miglioramenti della sicurezza.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-108">However, ActiveX controls on Windows Forms cannot take advantage of these security enhancements.</span></span> <span data-ttu-id="fe1ec-109">Esecuzione di un controllo ActiveX richiede l'autorizzazione di accesso al codice non gestito, che viene impostato con la <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> proprietà.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-109">Running an ActiveX control requires unmanaged code permission, which is set with the <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="fe1ec-110">Per ulteriori informazioni sulla sicurezza e l'autorizzazione per codice non gestito, vedere <xref:System.Security.Permissions.SecurityPermissionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-110">For more information about security and unmanaged code permission, see <xref:System.Security.Permissions.SecurityPermissionAttribute>.</span></span>  
   
--   **Costo di proprietà complessivo \(TCO, Total Cost of Ownership\)**  Eventuali controlli ActiveX aggiunti a Windows Form vengono distribuiti per intero con lo specifico Windows Form, il che può comportare un significativo aumento delle dimensioni dei file creati.  Per consentire l'uso dei controlli ActiveX nei Windows Form, inoltre, è necessaria una scrittura sul Registro di sistema.  Per questa ragione i controlli ActiveX si rivelano particolarmente invasivi per i computer degli utenti rispetto ai controlli dei Windows Form, per i quali tale operazione non viene richiesta.  
-  
-    > [!NOTE]
-    >  L'utilizzo di un controllo ActiveX richiede l'utilizzo di un wrapper di interoperabilità COM.  Per ulteriori informazioni, vedere [Interoperabilità COM in Visual Basic e in Visual C\#](../Topic/COM%20Interoperability%20in%20.NET%20Framework%20Applications%20\(Visual%20Basic\).md).  
+-   <span data-ttu-id="fe1ec-111">**Costo totale di proprietà** I controlli ActiveX aggiunti a un Windows Form vengono interamente distribuiti con tale Windows Form, aumentando considerevolmente le dimensioni dei file creati.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-111">**Total Cost of Ownership** ActiveX controls added to a Windows Form are deployed with that Windows Form in their entirety, which can add significantly to the size of the file(s) created.</span></span> <span data-ttu-id="fe1ec-112">Per usare i controlli ActiveX in Windows Form, è anche necessaria un'operazione di scrittura nel Registro di sistema,</span><span class="sxs-lookup"><span data-stu-id="fe1ec-112">Additionally, using ActiveX controls on Windows Forms requires writing to the registry.</span></span> <span data-ttu-id="fe1ec-113">che è più invasiva per il computer di un utente dei controlli Windows Form, per cui invece non è necessaria.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-113">This is more invasive to a user's computer than Windows Forms controls, which do not require this.</span></span>  
   
     > [!NOTE]
-    >  Se il nome di un membro del controllo ActiveX corrisponde a un nome definito in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], l'utilità di importazione di controlli ActiveX aggiunge al nome del membro il prefisso **Ctl** quando crea la classe derivata da <xref:System.Windows.Forms.AxHost>.  Se ad esempio il controllo ActiveX presenta un membro denominato **Layout**, tale membro viene rinominato **CtlLayout** nella classe derivata da AxHost poiché l'evento **Layout** è definito in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+    >  <span data-ttu-id="fe1ec-114">Per usare un controllo ActiveX, è necessario un wrapper di interoperabilità COM.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-114">Working with an ActiveX control requires the use of a COM interop wrapper.</span></span> <span data-ttu-id="fe1ec-115">Per altre informazioni, vedere [Interoperabilità COM in Visual Basic e Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).</span><span class="sxs-lookup"><span data-stu-id="fe1ec-115">For more information, see [COM Interoperability in Visual Basic and Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).</span></span>  
   
-## Vedere anche  
- [Procedura: aggiungere i controlli ActiveX a Windows Form](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)   
- [Code Access Security](../../../../docs/framework/misc/code-access-security.md)   
- [Controls and Programmable Objects Compared in Various Languages and Libraries](http://msdn.microsoft.com/it-it/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [Inserimento di controlli in Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)   
- [Controlli per Windows Form](../../../../docs/framework/winforms/controls/index.md)
+    > [!NOTE]
+    >  <span data-ttu-id="fe1ec-116">Se il nome di un membro del controllo ActiveX corrisponde a un nome definito nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], quindi l'utilità di importazione verrà prefisso del nome del membro **Ctl** quando crea la <xref:System.Windows.Forms.AxHost> classe derivata.</span><span class="sxs-lookup"><span data-stu-id="fe1ec-116">If the name of a member of the ActiveX control matches a name defined in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], then the ActiveX Control Importer will prefix the member name with **Ctl** when it creates the <xref:System.Windows.Forms.AxHost> derived class.</span></span> <span data-ttu-id="fe1ec-117">Se, ad esempio, il controllo ActiveX contiene un membro denominato **Layout**, questo verrà rinominato **CtlLayout** nella classe derivata da AxHost perché l'evento **Layout** è definito in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fe1ec-117">For example, if your ActiveX control has a member named **Layout**, it is renamed **CtlLayout** in the AxHost-derived class because the **Layout** event is defined within the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="fe1ec-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fe1ec-118">See Also</span></span>  
+ [<span data-ttu-id="fe1ec-119">Procedura: Aggiungere i controlli ActiveX a Windows Form</span><span class="sxs-lookup"><span data-stu-id="fe1ec-119">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [<span data-ttu-id="fe1ec-120">Sicurezza dall'accesso di codice</span><span class="sxs-lookup"><span data-stu-id="fe1ec-120">Code Access Security</span></span>](../../../../docs/framework/misc/code-access-security.md)  
+ [<span data-ttu-id="fe1ec-121">Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie</span><span class="sxs-lookup"><span data-stu-id="fe1ec-121">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [<span data-ttu-id="fe1ec-122">Inserimento di controlli in Windows Form</span><span class="sxs-lookup"><span data-stu-id="fe1ec-122">Putting Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [<span data-ttu-id="fe1ec-123">Controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="fe1ec-123">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)

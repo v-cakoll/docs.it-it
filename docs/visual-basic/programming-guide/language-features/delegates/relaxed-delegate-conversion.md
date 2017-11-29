@@ -1,79 +1,62 @@
 ---
-title: Assoluta conversione delegato (Visual Basic) | Documenti di Microsoft
+title: Conversione di tipo relaxed del delegato (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - relaxed delegate conversion [Visual Basic]
 - delegates [Visual Basic], relaxed conversion
-- conversions, relaxed delegate
+- conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c0160165d3df9755481b89570b4cd135b3a990a2
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0cca3d09b538905714f627c9fa006187b8927383
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="relaxed-delegate-conversion-visual-basic"></a>Conversione di tipo relaxed del delegato (Visual Basic)
-Conversione di tipo relaxed del delegato consente di assegnare subroutine e funzioni ai delegati o gestori anche quando le firme non sono identiche. Pertanto, l'associazione ai delegati diventa coerente con l'associazione già consentita per le chiamate ai metodi.  
+# <a name="relaxed-delegate-conversion-visual-basic"></a><span data-ttu-id="f4691-102">Conversione di tipo relaxed del delegato (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4691-102">Relaxed Delegate Conversion (Visual Basic)</span></span>
+<span data-ttu-id="f4691-103">Conversione di tipo relaxed del delegato consente di assegnare subroutine e funzioni a delegati o gestori anche quando le firme non sono identiche.</span><span class="sxs-lookup"><span data-stu-id="f4691-103">Relaxed delegate conversion enables you to assign subs and functions to delegates or handlers even when their signatures are not identical.</span></span> <span data-ttu-id="f4691-104">Pertanto, l'associazione di delegati diventa coerente con l'associazione già consentita per le chiamate di metodo.</span><span class="sxs-lookup"><span data-stu-id="f4691-104">Therefore, binding to delegates becomes consistent with the binding already allowed for method invocations.</span></span>  
   
-## <a name="parameters-and-return-type"></a>Parametri e tipo restituito  
- Al posto della corrispondenza esatta delle firme, conversione di tipo relaxed richiede che siano soddisfatte le condizioni seguenti quando `Option Strict` è impostato su `On`:  
+## <a name="parameters-and-return-type"></a><span data-ttu-id="f4691-105">Parametri e tipo restituito</span><span class="sxs-lookup"><span data-stu-id="f4691-105">Parameters and Return Type</span></span>  
+ <span data-ttu-id="f4691-106">Al posto di corrispondenza esatta delle firme, conversione di tipo relaxed richiede che le condizioni seguenti quando `Option Strict` è impostato su `On`:</span><span class="sxs-lookup"><span data-stu-id="f4691-106">In place of exact signature match, relaxed conversion requires that the following conditions be met when `Option Strict` is set to `On`:</span></span>  
   
--   Deve esistere una conversione dal tipo di dati di ogni parametro del delegato al tipo di dati del parametro corrispondente della funzione assegnata o `Sub`. Nell'esempio seguente, il delegato `Del1` dispone di un parametro, un `Integer`. Parametro `m` nell'espressione lambda assegnato le espressioni devono contenere un tipo di dati per cui è disponibile una conversione da `Integer`, ad esempio `Long` o `Double`.  
+-   <span data-ttu-id="f4691-107">Deve esistere una conversione dal tipo di dati di ogni parametro del delegato al tipo di dati del parametro corrispondente della funzione assegnata o `Sub`.</span><span class="sxs-lookup"><span data-stu-id="f4691-107">A widening conversion must exist from the data type of each delegate parameter to the data type of the corresponding parameter of the assigned function or `Sub`.</span></span> <span data-ttu-id="f4691-108">Nell'esempio seguente, il delegato `Del1` dispone di un parametro, un `Integer`.</span><span class="sxs-lookup"><span data-stu-id="f4691-108">In the following example, the delegate `Del1` has one parameter, an `Integer`.</span></span> <span data-ttu-id="f4691-109">Parametro `m` nell'espressione lambda assegnata espressioni devono avere un tipo di dati per cui è disponibile una conversione da `Integer`, ad esempio `Long` o `Double`.</span><span class="sxs-lookup"><span data-stu-id="f4691-109">Parameter `m` in the assigned lambda expressions must have a data type for which there is a widening conversion from `Integer`, such as `Long` or `Double`.</span></span>  
   
-     [!code-vb[VbVbalrRelaxedDelegates n.&1;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
   
-     [!code-vb[VbVbalrRelaxedDelegates n.&2;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#2](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]  
   
-     Le conversioni sono consentite solo quando `Option Strict` è impostato su `Off`.  
+     <span data-ttu-id="f4691-110">Conversioni di restrizione sono consentite solo quando `Option Strict` è impostato su `Off`.</span><span class="sxs-lookup"><span data-stu-id="f4691-110">Narrowing conversions are permitted only when `Option Strict` is set to `Off`.</span></span>  
   
-     [!code-vb[VbVbalrRelaxedDelegates n.&8;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#8](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]  
   
--   Deve esistere una conversione nella direzione opposta dal tipo restituito della funzione assegnata o `Sub` per il tipo restituito del delegato. Negli esempi seguenti, il corpo di ogni espressione lambda assegnata deve restituire un tipo di dati che si amplia in `Integer` perché il tipo restituito di `del1` è `Integer`.  
+-   <span data-ttu-id="f4691-111">Deve esistere una conversione widening nella direzione opposta dal tipo restituito della funzione assegnata o `Sub` per il tipo restituito del delegato.</span><span class="sxs-lookup"><span data-stu-id="f4691-111">A widening conversion must exist in the opposite direction from the return type of the assigned function or `Sub` to the return type of the delegate.</span></span> <span data-ttu-id="f4691-112">Negli esempi seguenti, il corpo di ogni espressione lambda assegnata deve restituire un tipo di dati che si amplia in `Integer` perché il tipo restituito di `del1` è `Integer`.</span><span class="sxs-lookup"><span data-stu-id="f4691-112">In the following examples, the body of each assigned lambda expression must evaluate to a data type that widens to `Integer` because the return type of `del1` is `Integer`.</span></span>  
   
-     [!code-vb[VbVbalrRelaxedDelegates n.&3;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#3](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]  
   
- Se `Option Strict` è impostato su `Off`, le conversioni di restrizione è stata rimossa in entrambe le direzioni.  
+ <span data-ttu-id="f4691-113">Se `Option Strict` è impostato su `Off`, l'ampliamento restrizione è stata rimossa in entrambe le direzioni.</span><span class="sxs-lookup"><span data-stu-id="f4691-113">If `Option Strict` is set to `Off`, the widening restriction is removed in both directions.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates n.&4;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#4](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]  
   
-## <a name="omitting-parameter-specifications"></a>L'omissione di specifiche di parametro  
- Delegati di tipo relaxed consentono inoltre di omettere completamente le specifiche dei parametri nel metodo assegnato:  
+## <a name="omitting-parameter-specifications"></a><span data-ttu-id="f4691-114">L'omissione di specifiche di parametro</span><span class="sxs-lookup"><span data-stu-id="f4691-114">Omitting Parameter Specifications</span></span>  
+ <span data-ttu-id="f4691-115">Delegati di tipo relaxed consentono anche di omettere completamente le specifiche dei parametri nel metodo assegnato:</span><span class="sxs-lookup"><span data-stu-id="f4691-115">Relaxed delegates also allow you to completely omit parameter specifications in the assigned method:</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates n.&5;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#5](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]  
   
- [!code-vb[6 VbVbalrRelaxedDelegates](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#6](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]  
   
- Si noti che non è possibile specificare alcuni parametri e omettere gli altri.  
+ <span data-ttu-id="f4691-116">Si noti che non è possibile specificare alcuni parametri e omettere gli altri.</span><span class="sxs-lookup"><span data-stu-id="f4691-116">Note that you cannot specify some parameters and omit others.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates&#15;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#15](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]  
   
- La possibilità di omettere i parametri è utile in una situazione simile definisce un gestore eventi, in cui sono coinvolti diversi parametri complessi. Gli argomenti per alcuni gestori di eventi non vengono utilizzati. Al contrario, il gestore accede direttamente lo stato del controllo in cui viene registrato l'evento e gli argomenti vengono ignorati. Delegati di tipo relaxed consentono di omettere gli argomenti in tali dichiarazioni quando non risultano ambiguità. Nell'esempio seguente, il metodo specificato completamente `OnClick` può essere riscritta come `RelaxedOnClick`.  
+ <span data-ttu-id="f4691-117">La possibilità di omettere i parametri è utile in una situazione ad esempio la definizione di un gestore eventi, in cui sono coinvolti diversi parametri complessi.</span><span class="sxs-lookup"><span data-stu-id="f4691-117">The ability to omit parameters is helpful in a situation such as defining an event handler, where several complex parameters are involved.</span></span> <span data-ttu-id="f4691-118">Non vengono utilizzati gli argomenti per alcuni gestori di eventi.</span><span class="sxs-lookup"><span data-stu-id="f4691-118">The arguments to some event handlers are not used.</span></span> <span data-ttu-id="f4691-119">Invece, il gestore accede direttamente lo stato del controllo in cui è registrato l'evento e gli argomenti vengono ignorati.</span><span class="sxs-lookup"><span data-stu-id="f4691-119">Instead, the handler directly accesses the state of the control on which the event is registered, and ignores the arguments.</span></span> <span data-ttu-id="f4691-120">Delegati di tipo relaxed consentono di omettere gli argomenti in tali dichiarazioni quando non risultano ambiguità.</span><span class="sxs-lookup"><span data-stu-id="f4691-120">Relaxed delegates allow you to omit the arguments in such declarations when no ambiguities result.</span></span> <span data-ttu-id="f4691-121">Nell'esempio seguente, il metodo specificato completamente `OnClick` può essere riscritta come `RelaxedOnClick`.</span><span class="sxs-lookup"><span data-stu-id="f4691-121">In the following example, the fully specified method `OnClick` can be rewritten as `RelaxedOnClick`.</span></span>  
   
 ```vb  
 Sub OnClick(ByVal sender As Object, ByVal e As EventArgs) Handles b.Click  
@@ -85,32 +68,32 @@ Sub RelaxedOnClick() Handles b.Click
 End Sub  
 ```  
   
-## <a name="addressof-examples"></a>Esempi di AddressOf  
- Espressioni lambda vengono utilizzate negli esempi precedenti in modo semplice visualizzare le relazioni di tipo. Tuttavia, le stesse conversioni di tipo relaxed sono consentite per le assegnazioni di delegato che utilizzano `AddressOf`, `Handles`, o `AddHandler`.  
+## <a name="addressof-examples"></a><span data-ttu-id="f4691-122">Esempi di AddressOf</span><span class="sxs-lookup"><span data-stu-id="f4691-122">AddressOf Examples</span></span>  
+ <span data-ttu-id="f4691-123">Espressioni lambda vengono utilizzate negli esempi precedenti in modo semplice visualizzare le relazioni di tipo.</span><span class="sxs-lookup"><span data-stu-id="f4691-123">Lambda expressions are used in the previous examples to make the type relationships easy to see.</span></span> <span data-ttu-id="f4691-124">Tuttavia, le stesse conversioni di tipo relaxed sono consentite per le assegnazioni di delegato che utilizzano `AddressOf`, `Handles`, o `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="f4691-124">However, the same relaxations are permitted for delegate assignments that use `AddressOf`, `Handles`, or `AddHandler`.</span></span>  
   
- Nell'esempio seguente, le funzioni `f1`, `f2`, `f3`, e `f4` può essere assegnato a `Del1`.  
+ <span data-ttu-id="f4691-125">Nell'esempio seguente, le funzioni `f1`, `f2`, `f3`, e `f4` può essere assegnato a `Del1`.</span><span class="sxs-lookup"><span data-stu-id="f4691-125">In the following example, functions `f1`, `f2`, `f3`, and `f4` can all be assigned to `Del1`.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates n.&1;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
   
- [!code-vb[VbVbalrRelaxedDelegates&#7;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#7](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]  
   
- [!code-vb[9 VbVbalrRelaxedDelegates](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#9](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]  
   
- Nell'esempio seguente è valido solo quando `Option Strict` è impostato su `Off`.  
+ <span data-ttu-id="f4691-126">Nell'esempio seguente è valido solo quando `Option Strict` è impostato su `Off`.</span><span class="sxs-lookup"><span data-stu-id="f4691-126">The following example is valid only when `Option Strict` is set to `Off`.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates&#14;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#14](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]  
   
-## <a name="dropping-function-returns"></a>Eliminazione di elementi restituiti dalla funzione  
- Conversione di tipo relaxed del delegato consente di assegnare una funzione a un `Sub` delegato, ignorando efficacemente il valore restituito della funzione. Tuttavia, non è possibile assegnare un `Sub` a un delegato della funzione. Nell'esempio seguente, l'indirizzo della funzione `doubler` viene assegnato a `Sub` delegare `Del3`.  
+## <a name="dropping-function-returns"></a><span data-ttu-id="f4691-127">Eliminazione di elementi restituiti da funzioni</span><span class="sxs-lookup"><span data-stu-id="f4691-127">Dropping Function Returns</span></span>  
+ <span data-ttu-id="f4691-128">Conversione di tipo relaxed del delegato consente di assegnare una funzione da un `Sub` delegato, in modo efficace, ignorando il valore restituito della funzione.</span><span class="sxs-lookup"><span data-stu-id="f4691-128">Relaxed delegate conversion enables you to assign a function to a `Sub` delegate, effectively ignoring the return value of the function.</span></span> <span data-ttu-id="f4691-129">Tuttavia, non è possibile assegnare un `Sub` a un delegato della funzione.</span><span class="sxs-lookup"><span data-stu-id="f4691-129">However, you cannot assign a `Sub` to a function delegate.</span></span> <span data-ttu-id="f4691-130">Nell'esempio seguente, l'indirizzo della funzione `doubler` viene assegnato a `Sub` delegato `Del3`.</span><span class="sxs-lookup"><span data-stu-id="f4691-130">In the following example, the address of function `doubler` is assigned to `Sub` delegate `Del3`.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates&#10;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#10](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]  
   
- [!code-vb[VbVbalrRelaxedDelegates&#11;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#11](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Ampliamento e restrizione conversioni](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [Procedura: passare una routine a un'altra routine in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)   
- [Inferenza del tipo locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a><span data-ttu-id="f4691-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f4691-131">See Also</span></span>  
+ [<span data-ttu-id="f4691-132">Espressioni lambda</span><span class="sxs-lookup"><span data-stu-id="f4691-132">Lambda Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [<span data-ttu-id="f4691-133">Conversioni di ampliamento e restrizione</span><span class="sxs-lookup"><span data-stu-id="f4691-133">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [<span data-ttu-id="f4691-134">Delegati</span><span class="sxs-lookup"><span data-stu-id="f4691-134">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [<span data-ttu-id="f4691-135">Procedura: Passare una routine a un'altra routine in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f4691-135">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
+ [<span data-ttu-id="f4691-136">Inferenza del tipo di variabile locale</span><span class="sxs-lookup"><span data-stu-id="f4691-136">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="f4691-137">Istruzione Option Strict</span><span class="sxs-lookup"><span data-stu-id="f4691-137">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -1,35 +1,34 @@
 ---
-title: "Group Join Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryGroupJoinIn"
-  - "vb.QueryGroupJoinOn"
-  - "vb.QueryGroupJoin"
-  - "vb.QueryGroupJoinInto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Group Join clause"
-  - "Group Join statement"
-  - "queries [Visual Basic], Group Join"
+title: Clausola Group Join (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryGroupJoinIn
+- vb.QueryGroupJoinOn
+- vb.QueryGroupJoin
+- vb.QueryGroupJoinInto
+helpviewer_keywords:
+- Group Join clause [Visual Basic]
+- Group Join statement [Visual Basic]
+- queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Group Join Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Combina due raccolte in un'unica raccolta gerarchica.  L'operazione di join è basata sulla corrispondenza di chiavi.  
+# <a name="group-join-clause-visual-basic"></a><span data-ttu-id="466df-102">Clausola Group Join (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="466df-102">Group Join Clause (Visual Basic)</span></span>
+<span data-ttu-id="466df-103">Combina due raccolte in un'unica raccolta gerarchica.</span><span class="sxs-lookup"><span data-stu-id="466df-103">Combines two collections into a single hierarchical collection.</span></span> <span data-ttu-id="466df-104">L'operazione di join è basata su chiavi corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="466df-104">The join operation is based on matching keys.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="466df-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="466df-105">Syntax</span></span>  
   
 ```  
 Group Join element [As type] In collection _  
@@ -37,38 +36,37 @@ Group Join element [As type] In collection _
   Into expressionList  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="466df-106">Parti</span><span class="sxs-lookup"><span data-stu-id="466df-106">Parts</span></span>  
   
-|||  
-|-|-|  
-|Termine|Definizione|  
-|`element`|Obbligatorio.  La variabile di controllo per la raccolta da unire.|  
-|`type`|Parametro facoltativo.  Tipo di `element`.  Se non è specificato alcun `type`, il tipo di `element` viene dedotto da `collection`.|  
-|`collection`|Obbligatorio.  La raccolta da combinare con la raccolta sul lato sinistro dell'operatore `Group Join`.  Una clausola `Group Join` può essere annidata in una clausola `Join` o in un'altra clausola `Group Join`.|  
-|`key1` `Equals` `key2`|Obbligatorio.  Identifica le chiavi per le raccolte da unire.  È necessario utilizzare l'operatore `Equals` per confrontare le chiavi dalle raccolte da unire.  È possibile combinare condizioni di join utilizzando l'operatore `And` per identificare più chiavi.  Il parametro `key1` deve provenire dalla raccolta sul lato sinistro dell'operatore `Join`.  Il parametro `key2` deve provenire dalla raccolta sul lato destro dell'operatore `Join`.<br /><br /> Le chiavi utilizzate nella condizione di join possono essere espressioni che includono più di un elemento della raccolta.  Tuttavia ogni espressione di chiave può contenere solo elementi della rispettiva raccolta.|  
-|`expressionList`|Obbligatorio.  Una o più espressioni che identificano come vengono aggregati i gruppi di elementi della raccolta.  Per identificare un nome di membro per i risultati raggruppati, utilizzare la parola chiave `Group` \(`<alias> = Group`\).  È anche possibile includere funzioni di aggregazione da applicare al gruppo.|  
+|<span data-ttu-id="466df-107">Termine</span><span class="sxs-lookup"><span data-stu-id="466df-107">Term</span></span>|<span data-ttu-id="466df-108">Definizione</span><span class="sxs-lookup"><span data-stu-id="466df-108">Definition</span></span>|  
+|---|---|  
+|`element`|<span data-ttu-id="466df-109">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="466df-109">Required.</span></span> <span data-ttu-id="466df-110">La variabile di controllo per la raccolta da unire in join.</span><span class="sxs-lookup"><span data-stu-id="466df-110">The control variable for the collection being joined.</span></span>|  
+|`type`|<span data-ttu-id="466df-111">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="466df-111">Optional.</span></span> <span data-ttu-id="466df-112">Tipo di `element`.</span><span class="sxs-lookup"><span data-stu-id="466df-112">The type of `element`.</span></span> <span data-ttu-id="466df-113">Se non `type` è specificato, il tipo di `element` viene dedotto dal `collection`.</span><span class="sxs-lookup"><span data-stu-id="466df-113">If no `type` is specified, the type of `element` is inferred from `collection`.</span></span>|  
+|`collection`|<span data-ttu-id="466df-114">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="466df-114">Required.</span></span> <span data-ttu-id="466df-115">La raccolta da combinare con la raccolta che si trova sul lato sinistro del `Group Join` operatore.</span><span class="sxs-lookup"><span data-stu-id="466df-115">The collection to combine with the collection that is on the left side of the `Group Join` operator.</span></span> <span data-ttu-id="466df-116">Oggetto `Group Join` clausola può essere annidata una `Join` clausola o in un altro `Group Join` clausola.</span><span class="sxs-lookup"><span data-stu-id="466df-116">A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.</span></span>|  
+|<span data-ttu-id="466df-117">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="466df-117">`key1` `Equals` `key2`</span></span>|<span data-ttu-id="466df-118">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="466df-118">Required.</span></span> <span data-ttu-id="466df-119">Identifica le chiavi per le raccolte da unire in join.</span><span class="sxs-lookup"><span data-stu-id="466df-119">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="466df-120">È necessario utilizzare il `Equals` operatore per confrontare le chiavi dalle raccolte da unire in join.</span><span class="sxs-lookup"><span data-stu-id="466df-120">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="466df-121">È possibile combinare le condizioni di join utilizzando il `And` operatore per identificare più chiavi.</span><span class="sxs-lookup"><span data-stu-id="466df-121">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="466df-122">Il `key1` parametro deve essere dall'insieme sul lato sinistro del `Join` operatore.</span><span class="sxs-lookup"><span data-stu-id="466df-122">The `key1` parameter must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="466df-123">Il `key2` parametro deve essere dall'insieme sul lato destro del `Join` operatore.</span><span class="sxs-lookup"><span data-stu-id="466df-123">The `key2` parameter must be from the collection on the right side of the `Join` operator.</span></span><br /><br /> <span data-ttu-id="466df-124">Le chiavi usate nella condizione di join possono essere espressioni che includono più di un elemento dalla raccolta.</span><span class="sxs-lookup"><span data-stu-id="466df-124">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="466df-125">Tuttavia, ogni espressione chiave può contenere solo gli elementi del rispettivo insieme.</span><span class="sxs-lookup"><span data-stu-id="466df-125">However, each key expression can contain only items from its respective collection.</span></span>|  
+|`expressionList`|<span data-ttu-id="466df-126">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="466df-126">Required.</span></span> <span data-ttu-id="466df-127">Una o più espressioni che identificano come vengono aggregati i gruppi di elementi dalla raccolta.</span><span class="sxs-lookup"><span data-stu-id="466df-127">One or more expressions that identify how the groups of elements from the collection are aggregated.</span></span> <span data-ttu-id="466df-128">Per identificare un nome di membro per i risultati raggruppati, utilizzare il `Group` (parola chiave) (`<alias> = Group`).</span><span class="sxs-lookup"><span data-stu-id="466df-128">To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`).</span></span> <span data-ttu-id="466df-129">È anche possibile includere funzioni di aggregazione da applicare al gruppo.</span><span class="sxs-lookup"><span data-stu-id="466df-129">You can also include aggregate functions to apply to the group.</span></span>|  
   
-## Note  
- La clausola `Group Join` combina due raccolte in base ai valori chiave corrispondenti delle raccolte da unire.  La raccolta risultante può contenere un membro che fa riferimento a una raccolta di elementi dalla seconda raccolta che corrispondono al valore della chiave della prima raccolta.  È anche possibile specificare funzioni di aggregazione da applicare agli elementi raggruppati della seconda raccolta.  Per ulteriori informazioni sulle funzioni di aggregazione, vedere [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a><span data-ttu-id="466df-130">Note</span><span class="sxs-lookup"><span data-stu-id="466df-130">Remarks</span></span>  
+ <span data-ttu-id="466df-131">Il `Group Join` clausola combina due raccolte in base ai valori di chiave le raccolte da unire in join di corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="466df-131">The `Group Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="466df-132">La raccolta risultante può contenere un membro che fa riferimento a una raccolta di elementi della seconda raccolta che corrisponde al valore di chiave della prima raccolta.</span><span class="sxs-lookup"><span data-stu-id="466df-132">The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection.</span></span> <span data-ttu-id="466df-133">È anche possibile specificare funzioni di aggregazione da applicare agli elementi raggruppati la seconda raccolta.</span><span class="sxs-lookup"><span data-stu-id="466df-133">You can also specify aggregate functions to apply to the grouped elements from the second collection.</span></span> <span data-ttu-id="466df-134">Per informazioni sulle funzioni di aggregazione, vedere [clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="466df-134">For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
- Si consideri, ad esempio, una raccolta di amministratori e una raccolta di dipendenti.  Gli elementi di entrambe le raccolte hanno una proprietà ManagerID che identifica i dipendenti che riportano a un particolare amministratore.  I risultati di un'operazione di join conterrebbero un risultato per ogni amministratore e ogni dipendente con valore corrispondente di ManagerID.  I risultati di un'operazione `Group Join` conterrebbero l'elenco completo degli amministratori.  Ogni amministratore nel risultato avrebbe un membro che fa riferimento all'elenco dei dipendenti che hanno una corrispondenza con lo specifico amministratore.  
+ <span data-ttu-id="466df-135">Si consideri, ad esempio, una raccolta di gestori e una raccolta di dipendenti.</span><span class="sxs-lookup"><span data-stu-id="466df-135">Consider, for example, a collection of managers and a collection of employees.</span></span> <span data-ttu-id="466df-136">Gli elementi di entrambe le raccolte hanno una proprietà ManagerID che identifica i dipendenti che fanno riferimento a una gestione particolare.</span><span class="sxs-lookup"><span data-stu-id="466df-136">Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager.</span></span> <span data-ttu-id="466df-137">I risultati di un'operazione di join conterrebbe un risultato per ogni manager ed employee con un valore di ManagerID corrispondente.</span><span class="sxs-lookup"><span data-stu-id="466df-137">The results from a join operation would contain a result for each manager and employee with a matching ManagerID value.</span></span> <span data-ttu-id="466df-138">I risultati di una `Group Join` operazione contiene l'elenco completo dei gestori.</span><span class="sxs-lookup"><span data-stu-id="466df-138">The results from a `Group Join` operation would contain the complete list of managers.</span></span> <span data-ttu-id="466df-139">Ogni risultato del gestore avrebbe un membro che fa riferimento all'elenco dei dipendenti che hanno una corrispondenza per il gestore specifico.</span><span class="sxs-lookup"><span data-stu-id="466df-139">Each manager result would have a member that referenced the list of employees that were a match for the specific manager.</span></span>  
   
- La raccolta risultante per un'operazione `Group Join` può contenere qualsiasi combinazione dei valori della raccolta identificata nella clausola `From` e delle espressioni identificate nella clausola `Into` della clausola `Group Join`.  Per ulteriori informazioni sulle espressioni valide per la clausola `Into`, vedere [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ <span data-ttu-id="466df-140">La raccolta risultante da un `Group Join` operazione può contenere qualsiasi combinazione di valori dalla raccolta identificato nel `From` clausola ed espressioni identificate nella `Into` clausola del `Group Join` clausola.</span><span class="sxs-lookup"><span data-stu-id="466df-140">The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause.</span></span> <span data-ttu-id="466df-141">Per ulteriori informazioni sulle espressioni valide per il `Into` clausola, vedere [clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="466df-141">For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
- Un'operazione `Group Join` restituirà tutti i risultati della raccolta identificata sul lato sinistro dell'operatore `Group Join` Questo si verifica anche se non esistono corrispondenze tra le raccolte da unire.  Equivale a `LEFT OUTER JOIN` in SQL.  
+ <span data-ttu-id="466df-142">Oggetto `Group Join` operazione restituirà tutti i risultati dall'insieme identificato sul lato sinistro del `Group Join` operatore.</span><span class="sxs-lookup"><span data-stu-id="466df-142">A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator.</span></span> <span data-ttu-id="466df-143">Questo vale anche se non sono presenti corrispondenze nella raccolta da unire in join.</span><span class="sxs-lookup"><span data-stu-id="466df-143">This is true even if there are no matches in the collection being joined.</span></span> <span data-ttu-id="466df-144">Ciò equivale a un `LEFT OUTER JOIN` in SQL.</span><span class="sxs-lookup"><span data-stu-id="466df-144">This is like a `LEFT OUTER JOIN` in SQL.</span></span>  
   
- È possibile utilizzare la clausola `Join` per combinare più raccolte in un'unica raccolta.  Equivale ad un `INNER JOIN` in SQL.  
+ <span data-ttu-id="466df-145">È possibile utilizzare il `Join` clausola per combinare le raccolte in un'unica raccolta.</span><span class="sxs-lookup"><span data-stu-id="466df-145">You can use the `Join` clause to combine collections into a single collection.</span></span> <span data-ttu-id="466df-146">Ciò equivale a un `INNER JOIN` in SQL.</span><span class="sxs-lookup"><span data-stu-id="466df-146">This is equivalent to an `INNER JOIN` in SQL.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente vengono unite due raccolte utilizzando la clausola `Group Join`.  
+## <a name="example"></a><span data-ttu-id="466df-147">Esempio</span><span class="sxs-lookup"><span data-stu-id="466df-147">Example</span></span>  
+ <span data-ttu-id="466df-148">Esempio di codice seguente crea un join tra due raccolte tramite la `Group Join` clausola.</span><span class="sxs-lookup"><span data-stu-id="466df-148">The following code example joins two collections by using the `Group Join` clause.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## Vedere anche  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Join Clause](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Clausola Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a><span data-ttu-id="466df-149">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="466df-149">See Also</span></span>  
+ [<span data-ttu-id="466df-150">Introduzione a LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="466df-150">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="466df-151">Query</span><span class="sxs-lookup"><span data-stu-id="466df-151">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="466df-152">Clausola Select</span><span class="sxs-lookup"><span data-stu-id="466df-152">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="466df-153">Clausola From</span><span class="sxs-lookup"><span data-stu-id="466df-153">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="466df-154">Clausola Join</span><span class="sxs-lookup"><span data-stu-id="466df-154">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="466df-155">Clausola Where</span><span class="sxs-lookup"><span data-stu-id="466df-155">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="466df-156">Clausola Group By</span><span class="sxs-lookup"><span data-stu-id="466df-156">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)

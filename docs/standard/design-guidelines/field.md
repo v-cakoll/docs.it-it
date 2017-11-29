@@ -1,57 +1,55 @@
 ---
-title: "Progettazione di campi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "campi, linee guida di progettazione"
-  - "campi di sola lettura"
-  - "indicazioni per la progettazione di membri, i campi"
+title: Progettazione di campi
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fields, design guidelines
+- read-only fields
+- member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: dc3249518dd1e1c751de08c22d1c5eb4fa28dc6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Progettazione di campi
-Il principio di incapsulamento è uno dei concetti più importanti nella progettazione orientata agli oggetti. Questo principio indica che i dati archiviati all'interno di un oggetto devono essere accessibili solo a tale oggetto.  
+# <a name="field-design"></a><span data-ttu-id="2b492-102">Progettazione di campi</span><span class="sxs-lookup"><span data-stu-id="2b492-102">Field Design</span></span>
+<span data-ttu-id="2b492-103">Il principio di incapsulamento è uno delle nozioni fondamentali nella progettazione orientata agli oggetti.</span><span class="sxs-lookup"><span data-stu-id="2b492-103">The principle of encapsulation is one of the most important notions in object-oriented design.</span></span> <span data-ttu-id="2b492-104">Questo principio indica che i dati archiviati all'interno di un oggetto devono essere accessibili solo a tale oggetto.</span><span class="sxs-lookup"><span data-stu-id="2b492-104">This principle states that data stored inside an object should be accessible only to that object.</span></span>  
   
- Un modo utile per interpretare il principio è significa che un tipo deve essere progettato in modo che le modifiche apportate ai campi di tale tipo \(nome o il tipo di modifica\) possono essere eseguite senza interrompere il codice diverso per i membri del tipo. Questa interpretazione immediatamente significa che tutti i campi devono essere privati.  
+ <span data-ttu-id="2b492-105">Un modo utile per interpretare il principio è significa che un tipo deve essere progettato in modo che le modifiche apportate ai campi di quel tipo (nome o il tipo di modifica) possono essere eseguite senza interrompere il codice diverso per i membri del tipo.</span><span class="sxs-lookup"><span data-stu-id="2b492-105">A useful way to interpret the principle is to say that a type should be designed so that changes to fields of that type (name or type changes) can be made without breaking code other than for members of the type.</span></span> <span data-ttu-id="2b492-106">Questa interpretazione immediatamente implica che tutti i campi devono essere privati.</span><span class="sxs-lookup"><span data-stu-id="2b492-106">This interpretation immediately implies that all fields must be private.</span></span>  
   
- Microsoft esclude costanti e statici campi di sola lettura da questa limitazione rigida, poiché tali campi, quasi per definizione, non dovranno modificare.  
+ <span data-ttu-id="2b492-107">Microsoft esclude statici e costanti campi di sola lettura da questa limitazione strict, poiché tali campi, quasi per definizione, non deve modificare.</span><span class="sxs-lookup"><span data-stu-id="2b492-107">We exclude constant and static read-only fields from this strict restriction, because such fields, almost by definition, are never required to change.</span></span>  
   
- **X non** forniscono i campi di istanza pubblici sono protetti.  
+ <span data-ttu-id="2b492-108">**X non** specificare campi di istanza pubblici sono protetti.</span><span class="sxs-lookup"><span data-stu-id="2b492-108">**X DO NOT** provide instance fields that are public or protected.</span></span>  
   
- È necessario fornire le proprietà per l'accesso ai campi anziché renderli pubblici o protetti.  
+ <span data-ttu-id="2b492-109">È necessario fornire le proprietà per l'accesso ai campi anziché rendendoli pubblico o protetto.</span><span class="sxs-lookup"><span data-stu-id="2b492-109">You should provide properties for accessing fields instead of making them public or protected.</span></span>  
   
- **✓ si** utilizzare i campi costanti per le costanti che non verranno mai modificato.  
+ <span data-ttu-id="2b492-110">**✓ SI** utilizzare i campi costanti per le costanti che non verranno mai modificato.</span><span class="sxs-lookup"><span data-stu-id="2b492-110">**✓ DO** use constant fields for constants that will never change.</span></span>  
   
- Il compilatore esegue il burn\-i valori dei campi const direttamente nella chiamata di codice. Pertanto, valori const non possono essere modificati senza il rischio di compromettere la compatibilità.  
+ <span data-ttu-id="2b492-111">Il compilatore esegue il burn-i valori dei campi const direttamente nella chiamata di codice.</span><span class="sxs-lookup"><span data-stu-id="2b492-111">The compiler burns the values of const fields directly into calling code.</span></span> <span data-ttu-id="2b492-112">Pertanto, valori const non possono essere modificati senza il rischio di danneggiare la compatibilità.</span><span class="sxs-lookup"><span data-stu-id="2b492-112">Therefore, const values can never be changed without the risk of breaking compatibility.</span></span>  
   
- **✓ si** utilizzare statici pubblici `readonly` campi per le istanze di oggetto predefinito.  
+ <span data-ttu-id="2b492-113">**✓ SI** utilizzare statici pubblici `readonly` campi per le istanze di oggetto predefinito.</span><span class="sxs-lookup"><span data-stu-id="2b492-113">**✓ DO** use public static `readonly` fields for predefined object instances.</span></span>  
   
- Se sono presenti istanze predefinite del tipo, dichiararli come public campi statici di sola lettura del tipo.  
+ <span data-ttu-id="2b492-114">Se sono presenti istanze predefinite del tipo, dichiararli come public campi statici di sola lettura del tipo stesso.</span><span class="sxs-lookup"><span data-stu-id="2b492-114">If there are predefined instances of the type, declare them as public read-only static fields of the type itself.</span></span>  
   
- **X non** assegnare istanze di tipi modificabili per `readonly` campi.  
+ <span data-ttu-id="2b492-115">**X non** assegnare le istanze di tipi modificabili per `readonly` campi.</span><span class="sxs-lookup"><span data-stu-id="2b492-115">**X DO NOT** assign instances of mutable types to `readonly` fields.</span></span>  
   
- Un tipo modificabile è un tipo con istanze che possono essere modificate dopo la creazione di istanze. Ad esempio, matrici, la maggior parte delle raccolte e i flussi sono tipi modificabili, ma <xref:System.Int32?displayProperty=fullName>, <xref:System.Uri?displayProperty=fullName>, e <xref:System.String?displayProperty=fullName> sono tutti non modificabile. Il modificatore di sola lettura su un campo di tipo riferimento impedisce l'istanza archiviato nel campo venga sostituito, ma non impedisce che i dati di campo istanza vengano modificati chiamando i membri modifica dell'istanza.  
+ <span data-ttu-id="2b492-116">Un tipo modificabile è un tipo con le istanze che possono essere modificate dopo la creazione di istanze.</span><span class="sxs-lookup"><span data-stu-id="2b492-116">A mutable type is a type with instances that can be modified after they are instantiated.</span></span> <span data-ttu-id="2b492-117">Ad esempio, matrici, la maggior parte delle raccolte e i flussi sono tipi modificabili, ma <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, e <xref:System.String?displayProperty=nameWithType> sono tutti non modificabile.</span><span class="sxs-lookup"><span data-stu-id="2b492-117">For example, arrays, most collections, and streams are mutable types, but <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, and <xref:System.String?displayProperty=nameWithType> are all immutable.</span></span> <span data-ttu-id="2b492-118">Il modificatore di sola lettura su un campo di tipo riferimento impedisce l'istanza archiviati nel campo venga sostituito, ma non impedisce che i dati del campo istanza vengano modificati chiamando i membri di modifica dell'istanza.</span><span class="sxs-lookup"><span data-stu-id="2b492-118">The read-only modifier on a reference type field prevents the instance stored in the field from being replaced, but it does not prevent the field’s instance data from being modified by calling members changing the instance.</span></span>  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ <span data-ttu-id="2b492-119">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="2b492-119">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ <span data-ttu-id="2b492-120">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="2b492-120">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vedere anche  
- [Indicazioni per la progettazione di membri](../../../docs/standard/design-guidelines/member.md)   
- [Linee guida](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="2b492-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2b492-121">See Also</span></span>  
+ [<span data-ttu-id="2b492-122">Linee guida di progettazione di membro</span><span class="sxs-lookup"><span data-stu-id="2b492-122">Member Design Guidelines</span></span>](../../../docs/standard/design-guidelines/member.md)  
+ [<span data-ttu-id="2b492-123">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="2b492-123">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

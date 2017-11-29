@@ -1,39 +1,41 @@
 ---
-title: "API Web ASP.NET e WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: API Web ASP.NET e WCF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e3d4d3677654934bc083ec14c97c65573a327146
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# API Web ASP.NET e WCF
-WCF è il modello di programmazione unificato di Microsoft per la compilazione di applicazioni orientate ai servizi.Consente agli sviluppatori di compilare soluzioni transazionali protette e affidabili in grado di integrarsi a piattaforme diverse e interagire con investimenti esistenti.[API Web ASP.NET](http://www.asp.net/web-api) è un framework che consente di compilare servizi HTTP che soddisfano una vasta gamma di client, inclusi i browser e i dispositivi mobili.API Web ASP.NET è la piattaforma ideale per compilare applicazioni RESTful in .NET Framework.In questo argomento vengono indicate alcune linee guida utili per decidere la tecnologia che soddisfa meglio le proprie esigenze.  
+# <a name="wcf-and-aspnet-web-api"></a><span data-ttu-id="db268-102">API Web ASP.NET e WCF</span><span class="sxs-lookup"><span data-stu-id="db268-102">WCF and ASP.NET Web API</span></span>
+<span data-ttu-id="db268-103">WCF è il modello di programmazione unificato di Microsoft per la compilazione di applicazioni orientate ai servizi.</span><span class="sxs-lookup"><span data-stu-id="db268-103">WCF is Microsoft’s unified programming model for building service-oriented applications.</span></span> <span data-ttu-id="db268-104">Consente agli sviluppatori di compilare soluzioni transazionali protette e affidabili in grado di integrarsi a piattaforme diverse e interagire con investimenti esistenti.</span><span class="sxs-lookup"><span data-stu-id="db268-104">It enables developers to build secure, reliable, transacted solutions that integrate across platforms and interoperate with existing investments.</span></span> <span data-ttu-id="db268-105">[ASP.NET Web API](http://www.asp.net/web-api) è un framework che rende più semplice compilare servizi HTTP in grado di raggiungono una vasta gamma di client, inclusi browser e dispositivi mobili.</span><span class="sxs-lookup"><span data-stu-id="db268-105">[ASP.NET Web API](http://www.asp.net/web-api) is a framework that makes it easy to build HTTP services that reach a broad range of clients, including browsers and mobile devices.</span></span> <span data-ttu-id="db268-106">API Web ASP.NET è la piattaforma ideale per compilare applicazioni RESTful in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="db268-106">ASP.NET Web API is an ideal platform for building RESTful applications on the .NET Framework.</span></span> <span data-ttu-id="db268-107">In questo argomento vengono indicate alcune linee guida utili per decidere la tecnologia che soddisfa meglio le proprie esigenze.</span><span class="sxs-lookup"><span data-stu-id="db268-107">This topic presents some guidance to help you decide which technology will best meet your needs.</span></span>  
   
-## Scelta della tecnologia da utilizzare  
- Nella tabella seguente vengono descritte le principali funzionalità di ogni tecnologia.  
+## <a name="choosing-which-technology-to-use"></a><span data-ttu-id="db268-108">Scelta della tecnologia da utilizzare</span><span class="sxs-lookup"><span data-stu-id="db268-108">Choosing which technology to use</span></span>  
+ <span data-ttu-id="db268-109">Nella tabella seguente vengono descritte le principali funzionalità di ogni tecnologia.</span><span class="sxs-lookup"><span data-stu-id="db268-109">The following table describes the major features of each technology.</span></span>  
   
-|WCF|API Web ASP.NET|  
+|<span data-ttu-id="db268-110">WCF</span><span class="sxs-lookup"><span data-stu-id="db268-110">WCF</span></span>|<span data-ttu-id="db268-111">API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="db268-111">ASP.NET Web API</span></span>|  
 |---------|---------------------|  
-|Abilita i servizi di compilazione che supportano più protocolli di trasporto \(HTTP, TCP, UDP e trasporti personalizzati\) e consentono il passaggio da un protocollo all'altro.|Solo HTTP.Modello di programmazione di prima classe per HTTP. Più appropriato per l'accesso da vari browser, dispositivi mobili e così via, è un modello di ampia portata.|  
-|Abilita i servizi di compilazione che supportano più codifiche \(testo, MTOM e binario\) dello stesso tipo di messaggio e consente il passaggio da una codifica all'altra.|Abilita le API Web che supportano un'ampia varietà di tipi di contenuti multimediali, ad esempio XML, JSON e così via.|  
-|Supporta i servizi di compilazione con gli standard WS\-\* come la messaggistica affidabile, le transazioni, la sicurezza dei messaggi.|Utilizza il protocollo di base e i formati quali HTTP, WebSockets, SSL, JQuery, JSON e XML.Non è disponibile alcun supporto per i protocolli di livello superiore, ad esempio la messaggistica affidabile o le transazioni.|  
-|Supporta i modelli di scambio dei messaggi richiesta\-risposta, unidirezionale e duplex.|HTTP è richiesta\-risposta ma i modelli aggiuntivi possono essere supportati tramite l'integrazione [SignalR](https://github.com/SignalR/SignalR) e WebSockets.|  
-|I servizi SOAP WCF possono essere descritti in WSDL per permettere agli strumenti automatizzati di generare i proxy client anche per i servizi con schemi complessi.|Esistono diversi modi per descrivere un'API Web, dalla pagina della Guida HTML generata automaticamente che descrive frammenti ai metadati strutturati per API integrate OData.|  
-|Viene fornito con .NET Framework.|Viene fornito con .NET Framework ma è open\-source ed è anche disponibile fuori banda come download indipendente.|  
+|<span data-ttu-id="db268-112">Abilita i servizi di compilazione che supportano più protocolli di trasporto (HTTP, TCP, UDP e trasporti personalizzati) e consentono il passaggio da un protocollo all'altro.</span><span class="sxs-lookup"><span data-stu-id="db268-112">Enables building services that support multiple transport protocols (HTTP, TCP, UDP, and custom transports) and allows switching between them.</span></span>|<span data-ttu-id="db268-113">Solo HTTP.</span><span class="sxs-lookup"><span data-stu-id="db268-113">HTTP only.</span></span> <span data-ttu-id="db268-114">Modello di programmazione prima classe per HTTP.</span><span class="sxs-lookup"><span data-stu-id="db268-114">First-class programming model for HTTP.</span></span> <span data-ttu-id="db268-115">Più adatto per l'accesso da diversi browser, i dispositivi mobili via abilitazione wide raggiungere.</span><span class="sxs-lookup"><span data-stu-id="db268-115">More suitable for access from various browsers, mobile devices etc enabling wide reach.</span></span>|  
+|<span data-ttu-id="db268-116">Abilita i servizi di compilazione che supportano più codifiche (testo, MTOM e binario) dello stesso tipo di messaggio e consente il passaggio da una codifica all'altra.</span><span class="sxs-lookup"><span data-stu-id="db268-116">Enables building services that support multiple encodings (Text, MTOM, and Binary) of the same message type and allows switching between them.</span></span>|<span data-ttu-id="db268-117">Abilita le API Web che supportano un'ampia varietà di tipi di contenuti multimediali, ad esempio XML, JSON e così via.</span><span class="sxs-lookup"><span data-stu-id="db268-117">Enables building Web APIs that support wide variety of media types including XML, JSON etc.</span></span>|  
+|<span data-ttu-id="db268-118">Supporta i servizi di compilazione con gli standard WS-* come la messaggistica affidabile, le transazioni, la sicurezza dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="db268-118">Supports building services with WS-* standards like Reliable Messaging, Transactions, Message Security.</span></span>|<span data-ttu-id="db268-119">Utilizza il protocollo di base e i formati quali HTTP, WebSockets, SSL, JQuery, JSON e XML.</span><span class="sxs-lookup"><span data-stu-id="db268-119">Uses basic protocol and formats such as HTTP, WebSockets, SSL, JQuery, JSON, and XML.</span></span> <span data-ttu-id="db268-120">Non è disponibile alcun supporto per i protocolli di livello superiore, ad esempio la messaggistica affidabile o le transazioni.</span><span class="sxs-lookup"><span data-stu-id="db268-120">There is no support for higher level protocols such as Reliable Messaging or Transactions.</span></span>|  
+|<span data-ttu-id="db268-121">Supporta i modelli di scambio dei messaggi richiesta-risposta, unidirezionale e duplex.</span><span class="sxs-lookup"><span data-stu-id="db268-121">Supports Request-Reply, One Way, and Duplex message exchange patterns.</span></span>|<span data-ttu-id="db268-122">HTTP è richiesta/risposta, ma ulteriori criteri che possono essere supportati tramite [SignalR](https://github.com/SignalR/SignalR) e l'integrazione di WebSocket.</span><span class="sxs-lookup"><span data-stu-id="db268-122">HTTP is request/response but additional patterns can be supported through [SignalR](https://github.com/SignalR/SignalR) and WebSockets integration.</span></span>|  
+|<span data-ttu-id="db268-123">I servizi SOAP WCF possono essere descritti in WSDL per permettere agli strumenti automatizzati di generare i proxy client anche per i servizi con schemi complessi.</span><span class="sxs-lookup"><span data-stu-id="db268-123">WCF SOAP services can be described in WSDL allowing automated tools to generate client proxies even for services with complex schemas.</span></span>|<span data-ttu-id="db268-124">Esistono diversi modi per descrivere un'API Web, dalla pagina della Guida HTML generata automaticamente che descrive frammenti ai metadati strutturati per API integrate OData.</span><span class="sxs-lookup"><span data-stu-id="db268-124">There is a variety of ways to describe a Web API ranging from auto-generated HTML help page describing snippets to structured metadata for OData integrated APIs.</span></span>|  
+|<span data-ttu-id="db268-125">Viene fornito con .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="db268-125">Ships with the .NET framework.</span></span>|<span data-ttu-id="db268-126">Viene fornito con .NET Framework ma è open-source ed è anche disponibile fuori banda come download indipendente.</span><span class="sxs-lookup"><span data-stu-id="db268-126">Ships with .NET framework but is open-source and is also available out-of-band as independent download.</span></span>|  
   
- Utilizzare WCF per creare i servizi Web efficaci e sicuri accessibili da una varietà di trasporti.Utilizzare l'API Web ASP.NET per creare i servizi basati su HTTP accessibili da un'ampia varietà di client.Utilizzare l'API Web ASP.NET se si stanno creando e progettando nuovi servizi in stile REST.Sebbene WCF fornisca supporto per scrivere servizi in stile REST, il supporto per REST nell'API Web ASP.NET è più completo e tutti i futuri miglioramenti della funzionalità REST verranno introdotti nell'API Web ASP.NET.Se si dispone di un servizio WCF e si desidera esporre endpoint REST aggiuntivi, utilizzare WCF e <xref:System.ServiceModel.WebHttpBinding>.  
+ <span data-ttu-id="db268-127">Utilizzare WCF per creare i servizi Web efficaci e sicuri accessibili da una varietà di trasporti.</span><span class="sxs-lookup"><span data-stu-id="db268-127">Use WCF to create reliable, secure web services that accessible over a variety of transports.</span></span> <span data-ttu-id="db268-128">Utilizzare l'API Web ASP.NET per creare i servizi basati su HTTP accessibili da un'ampia varietà di client.</span><span class="sxs-lookup"><span data-stu-id="db268-128">Use ASP.NET Web API to create HTTP-based services that are accessible from a wide variety of clients.</span></span> <span data-ttu-id="db268-129">Utilizzare l'API Web ASP.NET se si stanno creando e progettando nuovi servizi in stile REST.</span><span class="sxs-lookup"><span data-stu-id="db268-129">Use ASP.NET Web API if you are creating and designing new REST-style services.</span></span> <span data-ttu-id="db268-130">Sebbene WCF fornisca supporto per scrivere servizi in stile REST, il supporto per REST nell'API Web ASP.NET è più completo e tutti i futuri miglioramenti della funzionalità REST verranno introdotti nell'API Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="db268-130">Although WCF provides some support for writing REST-style services, the support for REST in ASP.NET Web API is more complete and all future REST feature improvements will be made in ASP.NET Web API.</span></span> <span data-ttu-id="db268-131">Se si dispone di un servizio WCF e si desidera esporre endpoint REST aggiuntivi, utilizzare WCF e <xref:System.ServiceModel.WebHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="db268-131">If you have an existing WCF service and you want to expose additional REST endpoints, use WCF and the <xref:System.ServiceModel.WebHttpBinding>.</span></span>  
   
-## Vedere anche  
- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)   
- [Concetti fondamentali di Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)   
- [WCF and ASP.NET Web API](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)
+## <a name="see-also"></a><span data-ttu-id="db268-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="db268-132">See Also</span></span>  
+ [<span data-ttu-id="db268-133">Informazioni su Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="db268-133">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
+ [<span data-ttu-id="db268-134">Concetti fondamentali di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="db268-134">Fundamental Windows Communication Foundation Concepts</span></span>](../../../docs/framework/wcf/fundamental-concepts.md)  

@@ -1,113 +1,111 @@
 ---
-title: "Convenzioni di denominazione generali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "nomi di conflitti [.NET Framework]"
-  - "conflitti di nomi di tipi"
-  - "nomi di tipi specifici di linguaggio"
-  - "nomi di sulle linee guida sulla denominazione [.NET Framework]"
-  - "nomi di abbreviazioni [.NET Framework]"
-  - "convenzioni di denominazione abbreviazione"
-  - "denominazione degli acronimi"
-  - "Notazione ungherese"
-  - "nomi [.NET Framework], nomi dei tipi"
-  - "nomi [.NET Framework], gli acronimi"
+title: Convenzioni di denominazione generali
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], conflicts
+- type names, conflicts
+- language-specific type names
+- names [.NET Framework], about naming guidelines
+- names [.NET Framework], abbreviations
+- abbreviation naming guidelines
+- acronym naming guidelines
+- Hungarian notation
+- names [.NET Framework], type names
+- names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: dde3adbb7640978829dea4b977ed14eec38a9077
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Convenzioni di denominazione generali
-Questa sezione descrive convenzioni di denominazione generali correlate alla scelta delle parole, le linee guida sull'utilizzo di abbreviazioni e acronimi e indicazioni su come evitare di utilizzare nomi specifici della lingua.  
+# <a name="general-naming-conventions"></a><span data-ttu-id="129d8-102">Convenzioni di denominazione generali</span><span class="sxs-lookup"><span data-stu-id="129d8-102">General Naming Conventions</span></span>
+<span data-ttu-id="129d8-103">Questa sezione descrive convenzioni di denominazione generali correlate alla scelta delle parole, le linee guida sull'utilizzo di abbreviazioni e acronimi e indicazioni su come evitare di utilizzare nomi specifici della lingua.</span><span class="sxs-lookup"><span data-stu-id="129d8-103">This section describes general naming conventions that relate to word choice, guidelines on using abbreviations and acronyms, and recommendations on how to avoid using language-specific names.</span></span>  
   
-## Scelta delle parole  
- **✓ si** scegliere nomi di identificatori facilmente leggibili.  
+## <a name="word-choice"></a><span data-ttu-id="129d8-104">Scelta di Word</span><span class="sxs-lookup"><span data-stu-id="129d8-104">Word Choice</span></span>  
+ <span data-ttu-id="129d8-105">**✓ SI** scegliere i nomi degli identificatori facilmente leggibili.</span><span class="sxs-lookup"><span data-stu-id="129d8-105">**✓ DO** choose easily readable identifier names.</span></span>  
   
- Ad esempio, una proprietà denominata `HorizontalAlignment` è più inglese\-leggibile `AlignmentHorizontal`.  
+ <span data-ttu-id="129d8-106">Ad esempio, una proprietà denominata `HorizontalAlignment` è più inglese-leggibile `AlignmentHorizontal`.</span><span class="sxs-lookup"><span data-stu-id="129d8-106">For example, a property named `HorizontalAlignment` is more English-readable than `AlignmentHorizontal`.</span></span>  
   
- **✓ si** preferire la leggibilità brevità.  
+ <span data-ttu-id="129d8-107">**✓ SI** preferire la leggibilità di brevità.</span><span class="sxs-lookup"><span data-stu-id="129d8-107">**✓ DO** favor readability over brevity.</span></span>  
   
- Il nome della proprietà `CanScrollHorizontally` è migliore di `ScrollableX` \(un riferimento all'asse x\).  
+ <span data-ttu-id="129d8-108">Il nome della proprietà `CanScrollHorizontally` è migliore `ScrollableX` (un riferimento all'asse x).</span><span class="sxs-lookup"><span data-stu-id="129d8-108">The property name `CanScrollHorizontally` is better than `ScrollableX` (an obscure reference to the X-axis).</span></span>  
   
- **X non** utilizzare altri caratteri non alfanumerici, trattini o caratteri di sottolineatura.  
+ <span data-ttu-id="129d8-109">**X non** utilizzare altri caratteri non alfanumerici, trattini o caratteri di sottolineatura.</span><span class="sxs-lookup"><span data-stu-id="129d8-109">**X DO NOT** use underscores, hyphens, or any other nonalphanumeric characters.</span></span>  
   
- **X non** utilizzare la notazione ungherese.  
+ <span data-ttu-id="129d8-110">**X non** utilizzare la notazione ungherese.</span><span class="sxs-lookup"><span data-stu-id="129d8-110">**X DO NOT** use Hungarian notation.</span></span>  
   
- **X evitare** utilizzando gli identificatori che creano conflitti con parole chiave ampiamente utilizzato linguaggi di programmazione.  
+ <span data-ttu-id="129d8-111">**X evitare** utilizzando gli identificatori che sono in conflitto con le parole chiave di ampiamente utilizzato linguaggi di programmazione.</span><span class="sxs-lookup"><span data-stu-id="129d8-111">**X AVOID** using identifiers that conflict with keywords of widely used programming languages.</span></span>  
   
- In base alla regola 4 della specifica CLS \(Common Language\), tutti i linguaggi conformi devono fornire un meccanismo che consente l'accesso agli elementi denominati che utilizza una parola chiave del linguaggio come identificatore. In c\#, ad esempio, utilizza il simbolo come meccanismo di escape in questo caso @. Tuttavia, è comunque consigliabile evitare parole chiave comuni in quanto è molto più difficile di utilizzare un metodo con la sequenza di escape quello senza di esso.  
+ <span data-ttu-id="129d8-112">In base alla regola 4 della specifica CLS (Common Language), tutti i linguaggi conformi devono fornire un meccanismo che consente l'accesso agli elementi denominati che usano una parola chiave del linguaggio come identificatore.</span><span class="sxs-lookup"><span data-stu-id="129d8-112">According to Rule 4 of the Common Language Specification (CLS), all compliant languages must provide a mechanism that allows access to named items that use a keyword of that language as an identifier.</span></span> <span data-ttu-id="129d8-113">In c#, ad esempio, Usa il simbolo come meccanismo di escape in questo caso @.</span><span class="sxs-lookup"><span data-stu-id="129d8-113">C#, for example, uses the @ sign as an escape mechanism in this case.</span></span> <span data-ttu-id="129d8-114">Tuttavia, è comunque consigliabile evitare di parole chiave comuni in quanto è molto più difficile usare un metodo con la sequenza di escape quello senza di esso.</span><span class="sxs-lookup"><span data-stu-id="129d8-114">However, it is still a good idea to avoid common keywords because it is much more difficult to use a method with the escape sequence than one without it.</span></span>  
   
-## Utilizzo di abbreviazioni e acronimi  
- **X non** utilizzare abbreviazioni o forme contratte nell'ambito dei nomi degli identificatori.  
+## <a name="using-abbreviations-and-acronyms"></a><span data-ttu-id="129d8-115">Utilizzo di abbreviazioni e gli acronimi</span><span class="sxs-lookup"><span data-stu-id="129d8-115">Using Abbreviations and Acronyms</span></span>  
+ <span data-ttu-id="129d8-116">**X non** utilizzare abbreviazioni o termini più semplici come parte dei nomi degli identificatori.</span><span class="sxs-lookup"><span data-stu-id="129d8-116">**X DO NOT** use abbreviations or contractions as part of identifier names.</span></span>  
   
- Ad esempio, utilizzare `GetWindow` anziché `GetWin`.  
+ <span data-ttu-id="129d8-117">Ad esempio, utilizzare `GetWindow` anziché `GetWin`.</span><span class="sxs-lookup"><span data-stu-id="129d8-117">For example, use `GetWindow` rather than `GetWin`.</span></span>  
   
- **X non** utilizzare acronimi che non sono molto diffusa e anche in tal caso, solo quando necessario.  
+ <span data-ttu-id="129d8-118">**X non** utilizzare acronimi che non sono molto diffusa e persino in tal caso, solo quando necessario.</span><span class="sxs-lookup"><span data-stu-id="129d8-118">**X DO NOT** use any acronyms that are not widely accepted, and even if they are, only when necessary.</span></span>  
   
-## Evitare nomi specifici del linguaggio  
- **✓ si** utilizzare nomi significativi anziché parole chiave specifiche della lingua per i nomi dei tipi.  
+## <a name="avoiding-language-specific-names"></a><span data-ttu-id="129d8-119">Evitare nomi specifici della lingua</span><span class="sxs-lookup"><span data-stu-id="129d8-119">Avoiding Language-Specific Names</span></span>  
+ <span data-ttu-id="129d8-120">**✓ SI** utilizzare nomi significativi anziché parole chiave specifiche della lingua per i nomi dei tipi.</span><span class="sxs-lookup"><span data-stu-id="129d8-120">**✓ DO** use semantically interesting names rather than language-specific keywords for type names.</span></span>  
   
- Ad esempio, `GetLength` è un nome più significativo rispetto a `GetInt`.  
+ <span data-ttu-id="129d8-121">Ad esempio, `GetLength` è un nome più significativo rispetto a `GetInt`.</span><span class="sxs-lookup"><span data-stu-id="129d8-121">For example, `GetLength` is a better name than `GetInt`.</span></span>  
   
- **✓ si** utilizzare un nome di tipo generico di CLR, anziché un nome specifico del linguaggio, in rari casi in cui un identificatore non ha alcun significato semantico oltre il relativo tipo.  
+ <span data-ttu-id="129d8-122">**✓ SI** usare un nome di tipo generico di CLR, anziché un nome specifico della lingua, in rari casi in cui un identificatore non ha alcun significato semantico oltre il relativo tipo.</span><span class="sxs-lookup"><span data-stu-id="129d8-122">**✓ DO** use a generic CLR type name, rather than a language-specific name, in the rare cases when an identifier has no semantic meaning beyond its type.</span></span>  
   
- Ad esempio, un metodo di conversione in <xref:System.Int64> deve essere denominato `ToInt64`, non `ToLong` \(poiché <xref:System.Int64> è un nome CLR per il linguaggio c\#\-alias specifico `long`\). La tabella seguente vengono illustrati diversi tipi di dati di base utilizzando i nomi dei tipi CLR \(nonché i nomi dei tipi corrispondenti per c\#, Visual Basic e C\+\+\).  
+ <span data-ttu-id="129d8-123">Ad esempio, un metodo di conversione in <xref:System.Int64> deve essere denominato `ToInt64`, non `ToLong` (perché <xref:System.Int64> è un nome CLR per c#-alias specifico `long`).</span><span class="sxs-lookup"><span data-stu-id="129d8-123">For example, a method converting to <xref:System.Int64> should be named `ToInt64`, not `ToLong` (because <xref:System.Int64> is a CLR name for the C#-specific alias `long`).</span></span> <span data-ttu-id="129d8-124">Nella tabella seguente presenta vari tipi di dati di base utilizzando i nomi dei tipi CLR (nonché i nomi dei tipi corrispondenti per c#, Visual Basic e C++).</span><span class="sxs-lookup"><span data-stu-id="129d8-124">The following table presents several base data types using the CLR type names (as well as the corresponding type names for C#, Visual Basic, and C++).</span></span>  
   
-|C\#|Visual Basic|C\+\+|CLR|  
+|<span data-ttu-id="129d8-125">C#</span><span class="sxs-lookup"><span data-stu-id="129d8-125">C#</span></span>|<span data-ttu-id="129d8-126">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="129d8-126">Visual Basic</span></span>|<span data-ttu-id="129d8-127">C++</span><span class="sxs-lookup"><span data-stu-id="129d8-127">C++</span></span>|<span data-ttu-id="129d8-128">CLR</span><span class="sxs-lookup"><span data-stu-id="129d8-128">CLR</span></span>|  
 |---------|------------------|-----------|---------|  
-|**sbyte**|**SByte**|**char**|**SByte**|  
-|**byte**|**Byte**|**unsigned char**|**Byte**|  
-|**short**|**Breve**|**short**|**Int16**|  
-|**ushort**|**UInt16**|**unsigned short**|**UInt16**|  
-|**int**|**Integer**|**int**|**Int32**|  
-|**uint**|**UInt32**|**unsigned int**|**UInt32**|  
-|**long**|**Long**|**\_\_int64**|**Int64**|  
-|**ulong**|**UInt64**|**unsigned \_\_int64**|**UInt64**|  
-|**float**|**Single**|**float**|**Single**|  
-|**double**|**Double**|**double**|**Double**|  
-|**bool**|**Booleano**|**bool**|**Booleano**|  
-|**char**|**Char**|**wchar\_t**|**Char**|  
-|**string**|**String**|**String**|**String**|  
-|**object**|**Oggetto**|**Oggetto**|**Oggetto**|  
+|<span data-ttu-id="129d8-129">**sbyte**</span><span class="sxs-lookup"><span data-stu-id="129d8-129">**sbyte**</span></span>|<span data-ttu-id="129d8-130">**SByte**</span><span class="sxs-lookup"><span data-stu-id="129d8-130">**SByte**</span></span>|<span data-ttu-id="129d8-131">**char**</span><span class="sxs-lookup"><span data-stu-id="129d8-131">**char**</span></span>|<span data-ttu-id="129d8-132">**SByte**</span><span class="sxs-lookup"><span data-stu-id="129d8-132">**SByte**</span></span>|  
+|<span data-ttu-id="129d8-133">**byte**</span><span class="sxs-lookup"><span data-stu-id="129d8-133">**byte**</span></span>|<span data-ttu-id="129d8-134">**Byte**</span><span class="sxs-lookup"><span data-stu-id="129d8-134">**Byte**</span></span>|<span data-ttu-id="129d8-135">**unsigned char**</span><span class="sxs-lookup"><span data-stu-id="129d8-135">**unsigned char**</span></span>|<span data-ttu-id="129d8-136">**Byte**</span><span class="sxs-lookup"><span data-stu-id="129d8-136">**Byte**</span></span>|  
+|<span data-ttu-id="129d8-137">**short**</span><span class="sxs-lookup"><span data-stu-id="129d8-137">**short**</span></span>|<span data-ttu-id="129d8-138">**Short**</span><span class="sxs-lookup"><span data-stu-id="129d8-138">**Short**</span></span>|<span data-ttu-id="129d8-139">**short**</span><span class="sxs-lookup"><span data-stu-id="129d8-139">**short**</span></span>|<span data-ttu-id="129d8-140">**Int16**</span><span class="sxs-lookup"><span data-stu-id="129d8-140">**Int16**</span></span>|  
+|<span data-ttu-id="129d8-141">**ushort**</span><span class="sxs-lookup"><span data-stu-id="129d8-141">**ushort**</span></span>|<span data-ttu-id="129d8-142">**UInt16**</span><span class="sxs-lookup"><span data-stu-id="129d8-142">**UInt16**</span></span>|<span data-ttu-id="129d8-143">**unsigned short**</span><span class="sxs-lookup"><span data-stu-id="129d8-143">**unsigned short**</span></span>|<span data-ttu-id="129d8-144">**UInt16**</span><span class="sxs-lookup"><span data-stu-id="129d8-144">**UInt16**</span></span>|  
+|<span data-ttu-id="129d8-145">**int**</span><span class="sxs-lookup"><span data-stu-id="129d8-145">**int**</span></span>|<span data-ttu-id="129d8-146">**Integer**</span><span class="sxs-lookup"><span data-stu-id="129d8-146">**Integer**</span></span>|<span data-ttu-id="129d8-147">**int**</span><span class="sxs-lookup"><span data-stu-id="129d8-147">**int**</span></span>|<span data-ttu-id="129d8-148">**Int32**</span><span class="sxs-lookup"><span data-stu-id="129d8-148">**Int32**</span></span>|  
+|<span data-ttu-id="129d8-149">**uint**</span><span class="sxs-lookup"><span data-stu-id="129d8-149">**uint**</span></span>|<span data-ttu-id="129d8-150">**UInt32**</span><span class="sxs-lookup"><span data-stu-id="129d8-150">**UInt32**</span></span>|<span data-ttu-id="129d8-151">**unsigned int**</span><span class="sxs-lookup"><span data-stu-id="129d8-151">**unsigned int**</span></span>|<span data-ttu-id="129d8-152">**UInt32**</span><span class="sxs-lookup"><span data-stu-id="129d8-152">**UInt32**</span></span>|  
+|<span data-ttu-id="129d8-153">**long**</span><span class="sxs-lookup"><span data-stu-id="129d8-153">**long**</span></span>|<span data-ttu-id="129d8-154">**Long**</span><span class="sxs-lookup"><span data-stu-id="129d8-154">**Long**</span></span>|<span data-ttu-id="129d8-155">**__int64**</span><span class="sxs-lookup"><span data-stu-id="129d8-155">**__int64**</span></span>|<span data-ttu-id="129d8-156">**Int64**</span><span class="sxs-lookup"><span data-stu-id="129d8-156">**Int64**</span></span>|  
+|<span data-ttu-id="129d8-157">**ulong**</span><span class="sxs-lookup"><span data-stu-id="129d8-157">**ulong**</span></span>|<span data-ttu-id="129d8-158">**UInt64**</span><span class="sxs-lookup"><span data-stu-id="129d8-158">**UInt64**</span></span>|<span data-ttu-id="129d8-159">**unsigned __int64**</span><span class="sxs-lookup"><span data-stu-id="129d8-159">**unsigned __int64**</span></span>|<span data-ttu-id="129d8-160">**UInt64**</span><span class="sxs-lookup"><span data-stu-id="129d8-160">**UInt64**</span></span>|  
+|<span data-ttu-id="129d8-161">**float**</span><span class="sxs-lookup"><span data-stu-id="129d8-161">**float**</span></span>|<span data-ttu-id="129d8-162">**Single**</span><span class="sxs-lookup"><span data-stu-id="129d8-162">**Single**</span></span>|<span data-ttu-id="129d8-163">**float**</span><span class="sxs-lookup"><span data-stu-id="129d8-163">**float**</span></span>|<span data-ttu-id="129d8-164">**Single**</span><span class="sxs-lookup"><span data-stu-id="129d8-164">**Single**</span></span>|  
+|<span data-ttu-id="129d8-165">**double**</span><span class="sxs-lookup"><span data-stu-id="129d8-165">**double**</span></span>|<span data-ttu-id="129d8-166">**Double**</span><span class="sxs-lookup"><span data-stu-id="129d8-166">**Double**</span></span>|<span data-ttu-id="129d8-167">**double**</span><span class="sxs-lookup"><span data-stu-id="129d8-167">**double**</span></span>|<span data-ttu-id="129d8-168">**Double**</span><span class="sxs-lookup"><span data-stu-id="129d8-168">**Double**</span></span>|  
+|<span data-ttu-id="129d8-169">**bool**</span><span class="sxs-lookup"><span data-stu-id="129d8-169">**bool**</span></span>|<span data-ttu-id="129d8-170">**Boolean**</span><span class="sxs-lookup"><span data-stu-id="129d8-170">**Boolean**</span></span>|<span data-ttu-id="129d8-171">**bool**</span><span class="sxs-lookup"><span data-stu-id="129d8-171">**bool**</span></span>|<span data-ttu-id="129d8-172">**Boolean**</span><span class="sxs-lookup"><span data-stu-id="129d8-172">**Boolean**</span></span>|  
+|<span data-ttu-id="129d8-173">**char**</span><span class="sxs-lookup"><span data-stu-id="129d8-173">**char**</span></span>|<span data-ttu-id="129d8-174">**Char**</span><span class="sxs-lookup"><span data-stu-id="129d8-174">**Char**</span></span>|<span data-ttu-id="129d8-175">**wchar_t**</span><span class="sxs-lookup"><span data-stu-id="129d8-175">**wchar_t**</span></span>|<span data-ttu-id="129d8-176">**Char**</span><span class="sxs-lookup"><span data-stu-id="129d8-176">**Char**</span></span>|  
+|<span data-ttu-id="129d8-177">**string**</span><span class="sxs-lookup"><span data-stu-id="129d8-177">**string**</span></span>|<span data-ttu-id="129d8-178">**String**</span><span class="sxs-lookup"><span data-stu-id="129d8-178">**String**</span></span>|<span data-ttu-id="129d8-179">**String**</span><span class="sxs-lookup"><span data-stu-id="129d8-179">**String**</span></span>|<span data-ttu-id="129d8-180">**String**</span><span class="sxs-lookup"><span data-stu-id="129d8-180">**String**</span></span>|  
+|<span data-ttu-id="129d8-181">**object**</span><span class="sxs-lookup"><span data-stu-id="129d8-181">**object**</span></span>|<span data-ttu-id="129d8-182">**Oggetto**</span><span class="sxs-lookup"><span data-stu-id="129d8-182">**Object**</span></span>|<span data-ttu-id="129d8-183">**Oggetto**</span><span class="sxs-lookup"><span data-stu-id="129d8-183">**Object**</span></span>|<span data-ttu-id="129d8-184">**Oggetto**</span><span class="sxs-lookup"><span data-stu-id="129d8-184">**Object**</span></span>|  
   
- **✓ si**  utilizzare un nome comune, ad esempio `value` o `item`, invece di ripetere il nome del tipo in rari casi in cui un identificatore non ha alcun significato semantico e il tipo del parametro non è importante.  
+ <span data-ttu-id="129d8-185">**✓ SI** utilizzare un nome comune, ad esempio `value` o `item`, piuttosto che ripetere il nome del tipo, in rari casi in cui un identificatore non ha alcun significato semantico e il tipo del parametro non è importante.</span><span class="sxs-lookup"><span data-stu-id="129d8-185">**✓ DO**  use a common name, such as `value` or `item`, rather than repeating the type name, in the rare cases when an identifier has no semantic meaning and the type of the parameter is not important.</span></span>  
   
-## Denominazione di nuove versioni dell'API esistenti  
- **✓ si** utilizzare un nome simile all'API precedente durante la creazione di nuove versioni di un'API esistente.  
+## <a name="naming-new-versions-of-existing-apis"></a><span data-ttu-id="129d8-186">Denominazione di nuove versioni delle API esistente</span><span class="sxs-lookup"><span data-stu-id="129d8-186">Naming New Versions of Existing APIs</span></span>  
+ <span data-ttu-id="129d8-187">**✓ SI** utilizzare un nome simile all'API precedente durante la creazione di nuove versioni di un'API esistente.</span><span class="sxs-lookup"><span data-stu-id="129d8-187">**✓ DO** use a name similar to the old API when creating new versions of an existing API.</span></span>  
   
- Ciò consente di evidenziare la relazione tra le API.  
+ <span data-ttu-id="129d8-188">Ciò consente di evidenziare la relazione tra le API.</span><span class="sxs-lookup"><span data-stu-id="129d8-188">This helps to highlight the relationship between the APIs.</span></span>  
   
- **✓ si** preferisce l'aggiunta di un suffisso piuttosto che un prefisso per indicare una nuova versione di un'API esistente.  
+ <span data-ttu-id="129d8-189">**✓ SI** preferisce aggiungere un suffisso anziché un prefisso per indicare una nuova versione di un'API esistente.</span><span class="sxs-lookup"><span data-stu-id="129d8-189">**✓ DO** prefer adding a suffix rather than a prefix to indicate a new version of an existing API.</span></span>  
   
- Durante l'esplorazione, documentazione, così da poter individuazione o l'utilizzo di Intellisense. La versione precedente dell'API verrà organizzata vicino le nuove API, poiché la maggior parte dei browser e Intellisense Mostra gli identificatori in ordine alfabetico.  
+ <span data-ttu-id="129d8-190">Questo modo viene agevolata individuazione durante l'esplorazione di documentazione, o l'utilizzo di Intellisense.</span><span class="sxs-lookup"><span data-stu-id="129d8-190">This will assist discovery when browsing documentation, or using Intellisense.</span></span> <span data-ttu-id="129d8-191">La versione precedente dell'API verrà organizzata vicino a nuove API, poiché la maggior parte dei browser e Intellisense Mostra gli identificatori in ordine alfabetico.</span><span class="sxs-lookup"><span data-stu-id="129d8-191">The old version of the API will be organized close to the new APIs, because most browsers and Intellisense show identifiers in alphabetical order.</span></span>  
   
- **✓ PROVARE** utilizzando un identificatore di nuovo, ma significativo, anziché aggiungere un suffisso o prefisso.  
+ <span data-ttu-id="129d8-192">**Provare a ✓** utilizzando un identificatore di nuovo, ma è significativo, anziché aggiungere un prefisso o suffisso.</span><span class="sxs-lookup"><span data-stu-id="129d8-192">**✓ CONSIDER** using a brand new, but meaningful identifier, instead of adding a suffix or a prefix.</span></span>  
   
- **✓ si** utilizzare un suffisso numerico per indicare una nuova versione di un'API esistente, in particolare se il nome dell'API esistente è il solo nome significativa \(ad esempio, se è uno standard del settore\) e se si aggiungono significativo qualsiasi suffisso \(o la modifica del nome\) non è un'opzione appropriata.  
+ <span data-ttu-id="129d8-193">**✓ SI** utilizzare un suffisso numerico per indicare una nuova versione di un'API esistente, in particolare se il nome dell'API esistente è l'unico nome appropriato (ad esempio, se si tratta di uno standard del settore) e se si aggiungono significativo qualsiasi suffisso (o la modifica del nome) non è un'app opzione ropriate.</span><span class="sxs-lookup"><span data-stu-id="129d8-193">**✓ DO** use a numeric suffix to indicate a new version of an existing API, particularly if the existing name of the API is the only name that makes sense (i.e., if it is an industry standard) and if adding any meaningful suffix (or changing the name) is not an appropriate option.</span></span>  
   
- **X non** utilizzare "Ex" \(o una simile\) suffisso di un identificatore per distinguerlo da una versione precedente dell'API stessa.  
+ <span data-ttu-id="129d8-194">**X non** utilizzare "Ex" (o una simile) suffisso di un identificatore per distinguerlo da una versione precedente dell'API stessa.</span><span class="sxs-lookup"><span data-stu-id="129d8-194">**X DO NOT** use the "Ex" (or a similar) suffix for an identifier to distinguish it from an earlier version of the same API.</span></span>  
   
- **✓ si** utilizza il suffisso "64" quando si introduce le versioni delle API che operano su un valore integer a 64 bit \(valore long integer\) anziché un intero a 32 bit. È necessario adottare questo approccio quando è presente l'API a 32 bit esistente. non farlo per le nuove API con solo una versione a 64 bit.  
+ <span data-ttu-id="129d8-195">**✓ SI** utilizza il suffisso "64" quando si introduce le versioni delle API che operano su un valore integer a 64 bit (un valore long integer) anziché un intero a 32 bit.</span><span class="sxs-lookup"><span data-stu-id="129d8-195">**✓ DO** use the "64" suffix when introducing versions of APIs that operate on a 64-bit integer (a long integer) instead of a 32-bit integer.</span></span> <span data-ttu-id="129d8-196">È necessario adottare questo approccio quando è presente l'API di 32 bit esistente. non eseguire l'operazione per la nuove API con solo una versione a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="129d8-196">You only need to take this approach when the existing 32-bit API exists; don’t do it for brand new APIs with only a 64-bit version.</span></span>  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ <span data-ttu-id="129d8-197">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="129d8-197">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ <span data-ttu-id="129d8-198">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="129d8-198">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vedere anche  
- [Linee guida](../../../docs/standard/design-guidelines/index.md)   
- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="129d8-199">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="129d8-199">See Also</span></span>  
+ [<span data-ttu-id="129d8-200">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="129d8-200">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="129d8-201">Convenzioni di denominazione</span><span class="sxs-lookup"><span data-stu-id="129d8-201">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)

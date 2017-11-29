@@ -1,48 +1,47 @@
 ---
-title: "Array Conversions (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "arrays [Visual Basic], converting type"
-  - "type conversion, arrays"
-  - "conversions, type"
-  - "arrays [Visual Basic], data types"
-  - "conversions, data type"
-  - "object arrays, converting type"
-  - "data type conversion, array conversions"
-  - "conversions, array types"
-  - "object arrays"
+title: Conversioni di matrici (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- arrays [Visual Basic], converting type
+- type conversion [Visual Basic], arrays
+- conversions [Visual Basic], type
+- arrays [Visual Basic], data types
+- conversions [Visual Basic], data type
+- object arrays [Visual Basic], converting type
+- data type conversion [Visual Basic], array conversions
+- conversions [Visual Basic], array types
+- object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 40dc9805157dd0bc991ca2375c3436aa6b6e09a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Array Conversions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-È possibile convertire un tipo di matrice in un altro tipo di matrice, ma solo in presenza di determinate condizioni:  
+# <a name="array-conversions-visual-basic"></a><span data-ttu-id="2cea4-102">Conversioni di matrici (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2cea4-102">Array Conversions (Visual Basic)</span></span>
+<span data-ttu-id="2cea4-103">È possibile convertire un tipo di matrice a un tipo di matrice diversa purché soddisfi le condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="2cea4-103">You can convert an array type to a different array type provided you meet the following conditions:</span></span>  
   
--   **Numero di dimensioni uguale.** È necessario che le matrici presentino lo stesso numero di dimensioni.  Non è tuttavia necessario che corrispondano anche le lunghezze delle rispettive dimensioni.  
+-   <span data-ttu-id="2cea4-104">**Numero di dimensioni uguale.**</span><span class="sxs-lookup"><span data-stu-id="2cea4-104">**Equal Rank.**</span></span> <span data-ttu-id="2cea4-105">Le classificazioni di due matrici devono essere uguali, vale a dire deve hanno lo stesso numero di dimensioni.</span><span class="sxs-lookup"><span data-stu-id="2cea4-105">The ranks of the two arrays must be the same, that is, they must have the same number of dimensions.</span></span> <span data-ttu-id="2cea4-106">Tuttavia, le lunghezze delle rispettive dimensioni non è necessario essere uguali.</span><span class="sxs-lookup"><span data-stu-id="2cea4-106">However, the lengths of the respective dimensions do not need to be the same.</span></span>  
   
--   **Tipo di dati degli elementi.** È necessario che i tipi di dati degli elementi di entrambe le matrici siano tipi di riferimento.  Non è possibile convertire una matrice `Integer` in una matrice `Long` né in una matrice `Object`, perché è interessato almeno un tipo valore.  Per ulteriori informazioni, vedere [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   <span data-ttu-id="2cea4-107">**Tipo di elemento di dati.**</span><span class="sxs-lookup"><span data-stu-id="2cea4-107">**Element Data Type.**</span></span> <span data-ttu-id="2cea4-108">I tipi di dati degli elementi di entrambe le matrici devono essere tipi di riferimento.</span><span class="sxs-lookup"><span data-stu-id="2cea4-108">The data types of the elements of both arrays must be reference types.</span></span> <span data-ttu-id="2cea4-109">Non è possibile convertire un `Integer` matrice un `Long` matrice, o anche a un `Object` matrice, in quanto è interessato almeno un tipo valore.</span><span class="sxs-lookup"><span data-stu-id="2cea4-109">You cannot convert an `Integer` array to a `Long` array, or even to an `Object` array, because at least one value type is involved.</span></span> <span data-ttu-id="2cea4-110">Per ulteriori informazioni, vedere [tipi di valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span><span class="sxs-lookup"><span data-stu-id="2cea4-110">For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span></span>  
   
--   **Possibilità di conversione.** È necessario che sia possibile una conversione, sia essa verso un tipo di dati più grande o più piccolo, tra i tipi di elementi delle due matrici.  Un esempio di mancato adempimento di questo requisito è un tentativo di conversione fra una matrice `String` e una matrice di una classe derivata da <xref:System.Attribute?displayProperty=fullName>.  I due tipi non hanno alcun elemento in comune e la conversione tra loro non è possibile.  
+-   <span data-ttu-id="2cea4-111">**Possibilità di conversione.**</span><span class="sxs-lookup"><span data-stu-id="2cea4-111">**Convertibility.**</span></span> <span data-ttu-id="2cea4-112">Una conversione widening o narrowing, deve essere possibile tra i tipi di elementi di due matrici.</span><span class="sxs-lookup"><span data-stu-id="2cea4-112">A conversion, either widening or narrowing, must be possible between the element types of the two arrays.</span></span> <span data-ttu-id="2cea4-113">Un esempio di questo requisito non è un tentativo di conversione tra un `String` matrice e una matrice di una classe derivata da <xref:System.Attribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2cea4-113">An example that fails this requirement is an attempted conversion between a `String` array and an array of a class derived from <xref:System.Attribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="2cea4-114">Questi due tipi hanno in comune nulla e non esiste alcuna conversione di qualsiasi tipo tra di essi.</span><span class="sxs-lookup"><span data-stu-id="2cea4-114">These two types have nothing in common, and no conversion of any kind exists between them.</span></span>  
   
- La conversione di un tipo di matrice in un altro è di ampliamento o di restrizione a seconda che la conversione dei rispettivi elementi sia di ampliamento o restrizione.  Per ulteriori informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ <span data-ttu-id="2cea4-115">Una conversione di un tipo di matrice a un altro è widening o narrowing a seconda se la conversione dei rispettivi elementi è grande o più piccolo.</span><span class="sxs-lookup"><span data-stu-id="2cea4-115">A conversion of one array type to another is widening or narrowing depending on whether the conversion of the respective elements is widening or narrowing.</span></span> <span data-ttu-id="2cea4-116">Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="2cea4-116">For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>  
   
-## Conversione in una matrice Object  
- Quando si dichiara una matrice `Object` senza inizializzarla, il tipo di elemento della matrice è `Object` e rimarrà tale finché non verrà inizializzata.  Quando viene impostata su una matrice di una classe specifica, assume il tipo di quella classe.  Tuttavia il tipo sottostante è ancora `Object` ed è possibile quindi impostarla successivamente su un'altra matrice di una classe non correlata.  Poiché tutte le classi derivano da `Object`, è possibile trasformare il tipo di elemento della matrice da qualsiasi classe in qualsiasi altra classe.  
+## <a name="conversion-to-an-object-array"></a><span data-ttu-id="2cea4-117">Conversione in una matrice di oggetti</span><span class="sxs-lookup"><span data-stu-id="2cea4-117">Conversion to an Object Array</span></span>  
+ <span data-ttu-id="2cea4-118">Quando si dichiara un `Object` matrice senza inizializzarla, il tipo di elemento è `Object` purché rimane non inizializzato.</span><span class="sxs-lookup"><span data-stu-id="2cea4-118">When you declare an `Object` array without initializing it, its element type is `Object` as long as it remains uninitialized.</span></span> <span data-ttu-id="2cea4-119">Quando si imposta in una matrice di una classe specifica, assume il tipo di tale classe.</span><span class="sxs-lookup"><span data-stu-id="2cea4-119">When you set it to an array of a specific class, it takes on the type of that class.</span></span> <span data-ttu-id="2cea4-120">Tuttavia, il relativo tipo sottostante è ancora `Object`, ed è possibile impostare successivamente a un'altra matrice di una classe non correlata.</span><span class="sxs-lookup"><span data-stu-id="2cea4-120">However, its underlying type is still `Object`, and you can subsequently set it to another array of an unrelated class.</span></span> <span data-ttu-id="2cea4-121">Poiché tutte le classi derivano da `Object`, è possibile modificare il tipo di elemento della matrice da una classe in qualsiasi altra classe.</span><span class="sxs-lookup"><span data-stu-id="2cea4-121">Since all classes derive from `Object`, you can change the array's element type from any class to any other class.</span></span>  
   
- Nell'esempio che segue non è possibile alcuna conversione tra i tipi `student` e `String`, ma entrambi derivano da `Object`, pertanto tutte le assegnazioni sono valide.  
+ <span data-ttu-id="2cea4-122">Nell'esempio seguente, non esiste alcuna conversione tra tipi `student` e `String`, ma entrambi derivano da `Object`, pertanto tutte le assegnazioni sono valide.</span><span class="sxs-lookup"><span data-stu-id="2cea4-122">In the following example, no conversion exists between types `student` and `String`, but both derive from `Object`, so all assignments are valid.</span></span>  
   
 ```  
 ' Assume student has already been defined as a class.  
@@ -55,10 +54,10 @@ testArray = names
 ' testArray is now a String array.  
 ```  
   
-### Tipo sottostante di una matrice  
- Se originariamente si dichiara una matrice con una classe specifica, il tipo di elemento sottostante sarà rappresentato da quella classe.  Se successivamente viene impostata su una matrice di un'altra classe, è necessario che esista una conversione tra le due classi.  
+### <a name="underlying-type-of-an-array"></a><span data-ttu-id="2cea4-123">Il tipo sottostante di una matrice</span><span class="sxs-lookup"><span data-stu-id="2cea4-123">Underlying Type of an Array</span></span>  
+ <span data-ttu-id="2cea4-124">Se originariamente si dichiara una matrice con una classe specifica, il tipo di elemento sottostante è quella classe.</span><span class="sxs-lookup"><span data-stu-id="2cea4-124">If you originally declare an array with a specific class, its underlying element type is that class.</span></span> <span data-ttu-id="2cea4-125">Se si imposta in seguito a una matrice di un'altra classe, deve esistere una conversione tra le due classi.</span><span class="sxs-lookup"><span data-stu-id="2cea4-125">If you subsequently set it to an array of another class, there must be a conversion between the two classes.</span></span>  
   
- Nell'esempio che segue `students` è una matrice `student`.  Dal momento che non è possibile alcuna conversione tra `String` e `student`, l'ultima istruzione avrà esito negativo.  
+ <span data-ttu-id="2cea4-126">Nell'esempio seguente, `students` è un `student` matrice.</span><span class="sxs-lookup"><span data-stu-id="2cea4-126">In the following example, `students` is a `student` array.</span></span> <span data-ttu-id="2cea4-127">Poiché non esiste alcuna conversione tra `String` e `student`, l'ultima istruzione ha esito negativo.</span><span class="sxs-lookup"><span data-stu-id="2cea4-127">Since no conversion exists between `String` and `student`, the last statement fails.</span></span>  
   
 ```  
 Dim students() As student  
@@ -68,12 +67,12 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## Vedere anche  
- [Riepilogo dei tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Implicit and Explicit Conversions](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Conversions Between Strings and Other Types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="2cea4-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2cea4-128">See Also</span></span>  
+ [<span data-ttu-id="2cea4-129">Tipi di dati</span><span class="sxs-lookup"><span data-stu-id="2cea4-129">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="2cea4-130">Conversioni di tipi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2cea4-130">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="2cea4-131">Conversioni implicite ed esplicite</span><span class="sxs-lookup"><span data-stu-id="2cea4-131">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="2cea4-132">Conversioni fra stringhe e altri tipi</span><span class="sxs-lookup"><span data-stu-id="2cea4-132">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [<span data-ttu-id="2cea4-133">Procedura: convertire un oggetto in un altro tipo in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2cea4-133">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [<span data-ttu-id="2cea4-134">Tipi di dati</span><span class="sxs-lookup"><span data-stu-id="2cea4-134">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="2cea4-135">Funzioni di conversione del tipo</span><span class="sxs-lookup"><span data-stu-id="2cea4-135">Type Conversion Functions</span></span>](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="2cea4-136">Array</span><span class="sxs-lookup"><span data-stu-id="2cea4-136">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

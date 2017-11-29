@@ -1,51 +1,55 @@
 ---
-title: "Procedura: visualizzare icone per il controllo ListView Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "icone, visualizzazione per i controlli ListView"
-  - "ImageList (componente) [Windows Form], con controllo ListView"
-  - "visualizzazioni elenco, visualizzazione di icone"
-  - "elenchi, visualizzazione di icone"
-  - "ListView (controllo) [Windows Form], visualizzazione di icone"
+title: 'Procedura: visualizzare icone per il controllo ListView Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ListView control [Windows Forms], displaying icons
+- icons [Windows Forms], displaying for ListView controls
+- lists [Windows Forms], displaying icons
+- ImageList component [Windows Forms], with ListView control
+- list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d9a8bdc54f3f321b37bda897aac1f340f7a46aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: visualizzare icone per il controllo ListView Windows Form
-Il controllo <xref:System.Windows.Forms.ListView> di Windows Form può visualizzare le icone da tre elenchi immagini.  Le visualizzazioni List, Details e SmallIcon visualizzano le immagini dell'elenco specificato nella proprietà <xref:System.Windows.Forms.ListView.SmallImageList%2A>,  mentre la visualizzazione LargeIcon visualizza le immagini dell'elenco specificato nella proprietà <xref:System.Windows.Forms.ListView.LargeImageList%2A>.  Una visualizzazione elenco può anche visualizzare un ulteriore insieme di icone, impostato nella proprietà <xref:System.Windows.Forms.ListView.StateImageList%2A>, accanto alle icone grandi o piccole.  Per ulteriori informazioni sugli elenchi di immagini vedere [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [Procedura: aggiungere o rimuovere immagini tramite il componente ImageList Windows Form](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a><span data-ttu-id="5d705-102">Procedura: visualizzare icone per il controllo ListView Windows Form</span><span class="sxs-lookup"><span data-stu-id="5d705-102">How to: Display Icons for the Windows Forms ListView Control</span></span>
+<span data-ttu-id="5d705-103">Windows Form <xref:System.Windows.Forms.ListView> controllo può visualizzare le icone da tre elenchi di immagini.</span><span class="sxs-lookup"><span data-stu-id="5d705-103">The Windows Forms <xref:System.Windows.Forms.ListView> control can display icons from three image lists.</span></span> <span data-ttu-id="5d705-104">Le visualizzazioni elenco e dettagli SmallIcon visualizzano immagini dall'elenco di immagini specificato nella <xref:System.Windows.Forms.ListView.SmallImageList%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="5d705-104">The List, Details, and SmallIcon views display images from the image list specified in the <xref:System.Windows.Forms.ListView.SmallImageList%2A> property.</span></span> <span data-ttu-id="5d705-105">La visualizzazione LargeIcon visualizza immagini dall'elenco di immagini specificato nella <xref:System.Windows.Forms.ListView.LargeImageList%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="5d705-105">The LargeIcon view displays images from the image list specified in the <xref:System.Windows.Forms.ListView.LargeImageList%2A> property.</span></span> <span data-ttu-id="5d705-106">Una visualizzazione elenco può anche visualizzare un altro set di icone, impostato nella <xref:System.Windows.Forms.ListView.StateImageList%2A> proprietà, accanto alle icone grandi o piccole.</span><span class="sxs-lookup"><span data-stu-id="5d705-106">A list view can also display an additional set of icons, set in the <xref:System.Windows.Forms.ListView.StateImageList%2A> property, next to the large or small icons.</span></span> <span data-ttu-id="5d705-107">Per ulteriori informazioni sugli elenchi di immagini, vedere [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [procedura: aggiungere o rimuovere immagini con il componente ImageList di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span><span class="sxs-lookup"><span data-stu-id="5d705-107">For more information about image lists, see [ImageList Component](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) and [How to: Add or Remove Images with the Windows Forms ImageList Component](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span>  
   
-### Per visualizzare le immagini in una visualizzazione elenco  
+### <a name="to-display-images-in-a-list-view"></a><span data-ttu-id="5d705-108">Per visualizzare le immagini in una visualizzazione elenco</span><span class="sxs-lookup"><span data-stu-id="5d705-108">To display images in a list view</span></span>  
   
-1.  Impostare la proprietà appropriata, <xref:System.Windows.Forms.ListView.SmallImageList%2A>, <xref:System.Windows.Forms.ListView.LargeImageList%2A> o <xref:System.Windows.Forms.ListView.StateImageList%2A>, sul componente <xref:System.Windows.Forms.ImageList> esistente che si desidera utilizzare.  
+1.  <span data-ttu-id="5d705-109">Impostare la proprietà appropriata, ovvero<xref:System.Windows.Forms.ListView.SmallImageList%2A>, <xref:System.Windows.Forms.ListView.LargeImageList%2A>, o <xref:System.Windows.Forms.ListView.StateImageList%2A>: esistente <xref:System.Windows.Forms.ImageList> componente che si desidera utilizzare.</span><span class="sxs-lookup"><span data-stu-id="5d705-109">Set the appropriate property—<xref:System.Windows.Forms.ListView.SmallImageList%2A>, <xref:System.Windows.Forms.ListView.LargeImageList%2A>, or <xref:System.Windows.Forms.ListView.StateImageList%2A>—to the existing <xref:System.Windows.Forms.ImageList> component you wish to use.</span></span>  
   
-     Queste proprietà possono essere impostate nella finestra di progettazione mediante la finestra Proprietà oppure nel codice.  
+     <span data-ttu-id="5d705-110">Queste proprietà possono essere impostate nella finestra di progettazione con la finestra proprietà o nel codice.</span><span class="sxs-lookup"><span data-stu-id="5d705-110">These properties can be set in the designer with the Properties window, or in code.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#41)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#41)]  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> o <xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A> per ciascuna voce di elenco con un'icona associata.  
+2.  <span data-ttu-id="5d705-111">Impostare il <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> o <xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A> proprietà per ogni elemento di elenco che è associata un'icona.</span><span class="sxs-lookup"><span data-stu-id="5d705-111">Set the <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> or <xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A> property for each list item that has an associated icon.</span></span>  
   
-     Queste proprietà possono essere impostate nel codice o all'interno dell'**editor della raccolta ListViewItem**.  Per aprire l'**editor della raccolta ListViewItem**, fare clic sul pulsante con i puntini di sospensione \(![Schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) accanto alla proprietà <xref:System.Windows.Forms.ListView.Items%2A> nella finestra **Proprietà**.  
+     <span data-ttu-id="5d705-112">Queste proprietà possono essere impostate nel codice o all'interno di **Editor della raccolta ListViewItem**.</span><span class="sxs-lookup"><span data-stu-id="5d705-112">These properties can be set in code, or within the **ListViewItem Collection Editor**.</span></span> <span data-ttu-id="5d705-113">Per aprire la **Editor della raccolta ListViewItem**, fare clic sul pulsante con i puntini di sospensione (![schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) accanto il <xref:System.Windows.Forms.ListView.Items%2A>proprietà il **proprietà** finestra.</span><span class="sxs-lookup"><span data-stu-id="5d705-113">To open the **ListViewItem Collection Editor**, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.ListView.Items%2A> property on the **Properties** window.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#42)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#42)]  
   
-## Vedere anche  
- [Cenni preliminari sul controllo ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)   
- [Procedura: aggiungere e rimuovere elementi tramite il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)   
- [Procedura: aggiungere colonne al controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)   
- [Procedura: aggiungere informazioni personalizzate a un controllo TreeView o ListView \(Windows Form\)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)   
- [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5d705-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5d705-114">See Also</span></span>  
+ [<span data-ttu-id="5d705-115">Panoramica del controllo ListView</span><span class="sxs-lookup"><span data-stu-id="5d705-115">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="5d705-116">Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="5d705-116">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="5d705-117">Procedura: Aggiungere colonne al controllo ListView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="5d705-117">How to: Add Columns to the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="5d705-118">Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="5d705-118">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ [<span data-ttu-id="5d705-119">Componente ImageList</span><span class="sxs-lookup"><span data-stu-id="5d705-119">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

@@ -1,63 +1,67 @@
 ---
-title: "Procedura: esplorare dati in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CurrencyManager (classe), esplorazione di dati in Windows Form"
-  - "cursori, origini dati"
-  - "dati [Windows Form], esplorazione"
-  - "origini dati, Windows Form"
-  - "Windows Form, esplorazione"
+title: 'Procedura: esplorare dati in Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cursors [Windows Forms], data sources
+- data sources [Windows Forms], Windows Forms
+- Windows Forms, navigating
+- CurrencyManager class [Windows Forms], navigating Windows Forms data
+- data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7c754bba18e93f63306701381f66af04b593c473
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: esplorare dati in Windows Form
-Il modo più semplice di spostarsi tra i record di un'origine dati in un'applicazione Windows consiste nell'associare un componente <xref:System.Windows.Forms.BindingSource> all'origine dati e poi nell'associare i controlli alla classe <xref:System.Windows.Forms.BindingSource>.  In seguito sarà possibile applicare il metodo di navigazione incorporato alla classe <xref:System.Windows.Forms.BindingSource>, ad esempio <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>.  Con questi metodi vengono adattate in maniera appropriata le proprietà <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> della classe <xref:System.Windows.Forms.BindingSource>.  È inoltre possibile trovare un elemento e impostarlo come elemento corrente impostando la proprietà <xref:System.Windows.Forms.BindingSource.Position%2A>.  
+# <a name="how-to-navigate-data-in-windows-forms"></a><span data-ttu-id="9031b-102">Procedura: esplorare dati in Windows Form</span><span class="sxs-lookup"><span data-stu-id="9031b-102">How to: Navigate Data in Windows Forms</span></span>
+<span data-ttu-id="9031b-103">In un'applicazione Windows, il modo più semplice per spostarsi tra i record in un'origine dati è associare un <xref:System.Windows.Forms.BindingSource> componente per l'origine dati e quindi associare i controlli per il <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="9031b-103">In a Windows application, the easiest way to navigate through records in a data source is to bind a <xref:System.Windows.Forms.BindingSource> component to the data source and then bind controls to the <xref:System.Windows.Forms.BindingSource>.</span></span> <span data-ttu-id="9031b-104">È quindi possibile utilizzare il metodo di spostamento incorporate nel <xref:System.Windows.Forms.BindingSource> tali un <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>.</span><span class="sxs-lookup"><span data-stu-id="9031b-104">You can then use the built-in navigation method on the <xref:System.Windows.Forms.BindingSource> such a <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> and <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>.</span></span> <span data-ttu-id="9031b-105">Con questi metodi vengono adattate le <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> le proprietà del <xref:System.Windows.Forms.BindingSource> in modo appropriato.</span><span class="sxs-lookup"><span data-stu-id="9031b-105">Using these methods will adjust the <xref:System.Windows.Forms.BindingSource.Position%2A> and <xref:System.Windows.Forms.BindingSource.Current%2A> properties of the <xref:System.Windows.Forms.BindingSource> appropriately.</span></span> <span data-ttu-id="9031b-106">È inoltre possibile trovare un elemento e impostarlo come elemento corrente impostando la <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="9031b-106">You can also find an item and set it as the current item by setting the <xref:System.Windows.Forms.BindingSource.Position%2A> property.</span></span>  
   
-### Per incrementare la posizione in un'origine dati  
+### <a name="to-increment-the-position-in-a-data-source"></a><span data-ttu-id="9031b-107">Per incrementare la posizione in un'origine dati</span><span class="sxs-lookup"><span data-stu-id="9031b-107">To increment the position in a data source</span></span>  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.BindingSource.Position%2A> della classe <xref:System.Windows.Forms.BindingSource> per i dati associati sulla posizione del record su cui spostarsi.  Nell'esempio riportato di seguito viene illustrato l'utilizzo del metodo <xref:System.Windows.Forms.BindingSource.MoveNext%2A> della classe <xref:System.Windows.Forms.BindingSource> per incrementare la proprietà <xref:System.Windows.Forms.BindingSource.Position%2A> quando si fa clic su `nextButton`.  La classe <xref:System.Windows.Forms.BindingSource> è associata alla tabella `Customers` di un dataset `Northwind`.  
+1.  <span data-ttu-id="9031b-108">Impostare il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà del <xref:System.Windows.Forms.BindingSource> per i dati associati alla posizione del record per passare a.</span><span class="sxs-lookup"><span data-stu-id="9031b-108">Set the <xref:System.Windows.Forms.BindingSource.Position%2A> property of the <xref:System.Windows.Forms.BindingSource> for your bound data to the record position to go to.</span></span> <span data-ttu-id="9031b-109">Nell'esempio seguente viene illustrato l'utilizzo di <xref:System.Windows.Forms.BindingSource.MoveNext%2A> metodo del <xref:System.Windows.Forms.BindingSource> per incrementare la <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà quando il `nextButton` si fa clic.</span><span class="sxs-lookup"><span data-stu-id="9031b-109">The following example illustrates using the <xref:System.Windows.Forms.BindingSource.MoveNext%2A> method of the <xref:System.Windows.Forms.BindingSource> to increment the <xref:System.Windows.Forms.BindingSource.Position%2A> property when the `nextButton` is clicked.</span></span> <span data-ttu-id="9031b-110">Il <xref:System.Windows.Forms.BindingSource> è associato il `Customers` tabella di un set di dati `Northwind`.</span><span class="sxs-lookup"><span data-stu-id="9031b-110">The <xref:System.Windows.Forms.BindingSource> is associated with the `Customers` table of a dataset `Northwind`.</span></span>  
   
     > [!NOTE]
-    >  Se la proprietà <xref:System.Windows.Forms.BindingSource.Position%2A> viene impostata su un valore oltre il primo o l'ultimo record non viene generato alcun errore, perché [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] non consente di impostare la posizione su un valore non incluso nelle associazioni dell'elenco.  Se è importante che l'applicazione sia in grado di rilevare se è stato oltrepassato il primo o l'ultimo record, includere una logica per verificare se viene superato il numero degli elementi di dati.  
+    >  <span data-ttu-id="9031b-111">L'impostazione di <xref:System.Windows.Forms.BindingSource.Position%2A> un valore oltre il primo o ultimo record della proprietà non produce un errore, come il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] non consente di impostare la posizione su un valore all'esterno dei limiti dell'elenco.</span><span class="sxs-lookup"><span data-stu-id="9031b-111">Setting the <xref:System.Windows.Forms.BindingSource.Position%2A> property to a value beyond the first or last record does not result in an error, as the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] will not allow you to set the position to a value outside the bounds of the list.</span></span> <span data-ttu-id="9031b-112">Se è importante in un'applicazione per sapere se è stato oltrepassato il primo o ultimo record, includere la logica per verificare se viene superato il numero di elementi di dati.</span><span class="sxs-lookup"><span data-stu-id="9031b-112">If it is important in your application to know whether you have gone past the first or last record, include logic to test whether you will exceed the data element count.</span></span>  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
-### Per verificare se è stato superato il primo o l'ultimo elemento  
+### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a><span data-ttu-id="9031b-113">Per verificare se sono stati passati alla fine o all'inizio</span><span class="sxs-lookup"><span data-stu-id="9031b-113">To check whether you have passed the end or beginning</span></span>  
   
-1.  Creare un gestore eventi per l'evento <xref:System.Windows.Forms.BindingSource.PositionChanged>.  Nel gestore eventi è possibile verificare se i valori della posizione proposta hanno superato il numero effettivo degli elementi di dati.  
+1.  <span data-ttu-id="9031b-114">Creare un gestore eventi per l'evento <xref:System.Windows.Forms.BindingSource.PositionChanged>.</span><span class="sxs-lookup"><span data-stu-id="9031b-114">Create an event handler for the <xref:System.Windows.Forms.BindingSource.PositionChanged> event.</span></span> <span data-ttu-id="9031b-115">Nel gestore, è possibile verificare se il valore della posizione proposta ha superato il numero di elementi di dati effettivi.</span><span class="sxs-lookup"><span data-stu-id="9031b-115">In the handler, you can test whether the proposed position value has exceeded the actual data element count.</span></span>  
   
-     Nell'esempio che segue viene illustrato come verificare se è stato raggiunto l'ultimo elemento di dati.  Se ci si trova sull'ultimo elemento, il pulsante **Avanti** del form verrà disabilitato.  
+     <span data-ttu-id="9031b-116">Nell'esempio seguente viene illustrato come è possibile verificare se è stato raggiunto l'ultimo elemento di dati.</span><span class="sxs-lookup"><span data-stu-id="9031b-116">The following example illustrates how you can test whether you have reached the last data element.</span></span> <span data-ttu-id="9031b-117">Nell'esempio, se si sta utilizzando l'ultimo elemento, il **Avanti** pulsante nel form è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="9031b-117">In the example, if you are at the last element, the **Next** button on the form is disabled.</span></span>  
   
     > [!NOTE]
-    >  Se si modifica l'elenco in cui ci si sposta nel codice, sarà necessario riattivare il pulsante **Avanti** in modo che gli utenti possano spostarsi all'interno di tutto il nuovo elenco.  Inoltre, l'evento <xref:System.Windows.Forms.BindingSource.PositionChanged> per la specifica classe <xref:System.Windows.Forms.BindingSource> che si sta utilizzando deve essere associato al relativo metodo di gestione degli eventi.  Di seguito viene riportato un esempio di metodo per la gestione dell'evento <xref:System.Windows.Forms.BindingSource.PositionChanged>:  
+    >  <span data-ttu-id="9031b-118">Tenere presente che, se si modifica l'elenco si sposta nel codice, è necessario attivare nuovamente il **Avanti** pulsante, in modo che gli utenti possono cercare l'intera durata del nuovo elenco.</span><span class="sxs-lookup"><span data-stu-id="9031b-118">Be aware that, should you change the list you are navigating in code, you should re-enable the **Next** button, so that users may browse the entire length of the new list.</span></span> <span data-ttu-id="9031b-119">Inoltre, tenere presente che la precedente <xref:System.Windows.Forms.BindingSource.PositionChanged> evento per la specifica <xref:System.Windows.Forms.BindingSource> in uso deve essere associato con il metodo di gestione degli eventi.</span><span class="sxs-lookup"><span data-stu-id="9031b-119">Additionally, be aware that the above <xref:System.Windows.Forms.BindingSource.PositionChanged> event for the specific <xref:System.Windows.Forms.BindingSource> you are working with needs to be associated with its event-handling method.</span></span> <span data-ttu-id="9031b-120">Di seguito è riportato un esempio di un metodo per la gestione di <xref:System.Windows.Forms.BindingSource.PositionChanged> evento:</span><span class="sxs-lookup"><span data-stu-id="9031b-120">The following is an example of a method for handling the <xref:System.Windows.Forms.BindingSource.PositionChanged> event:</span></span>  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
   
-### Per trovare un elemento e impostarlo come elemento corrente  
+### <a name="to-find-an-item-and-set-it-as-the-current-item"></a><span data-ttu-id="9031b-121">Per trovare un elemento e impostarlo come elemento corrente</span><span class="sxs-lookup"><span data-stu-id="9031b-121">To find an item and set it as the current item</span></span>  
   
-1.  Trovare il record che si desidera impostare come elemento corrente.  A tale scopo, utilizzare il metodo <xref:System.Windows.Forms.BindingSource.Find%2A> della classe <xref:System.Windows.Forms.BindingSource> se l'origine dati implementa l'interfaccia <xref:System.ComponentModel.IBindingList>.  Tra le origini dati di esempio che implementano l'interfaccia <xref:System.ComponentModel.IBindingList> sono annoverate <xref:System.ComponentModel.BindingList%601> e <xref:System.Data.DataView>.  
+1.  <span data-ttu-id="9031b-122">Trovare il record che si desidera impostare come elemento corrente.</span><span class="sxs-lookup"><span data-stu-id="9031b-122">Find the record you wish to set as the current item.</span></span> <span data-ttu-id="9031b-123">È possibile farlo usando il <xref:System.Windows.Forms.BindingSource.Find%2A> metodo il <xref:System.Windows.Forms.BindingSource>, se l'origine dati implementa <xref:System.ComponentModel.IBindingList>.</span><span class="sxs-lookup"><span data-stu-id="9031b-123">You can do this using the <xref:System.Windows.Forms.BindingSource.Find%2A> method of the <xref:System.Windows.Forms.BindingSource>, if your data source implements <xref:System.ComponentModel.IBindingList>.</span></span> <span data-ttu-id="9031b-124">Alcuni esempi di dati di origini che implementano <xref:System.ComponentModel.IBindingList> sono <xref:System.ComponentModel.BindingList%601> e <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="9031b-124">Some examples of data sources that implement <xref:System.ComponentModel.IBindingList> are <xref:System.ComponentModel.BindingList%601> and <xref:System.Data.DataView>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
-## Vedere anche  
- [Origini dati supportate da Windows Form](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)   
- [Notifica delle modifiche nell'associazione dati dei Windows Form](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)   
- [Associazione dati e Windows Form](../../../docs/framework/winforms/data-binding-and-windows-forms.md)   
- [Associazione ai dati di Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a><span data-ttu-id="9031b-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9031b-125">See Also</span></span>  
+ [<span data-ttu-id="9031b-126">Origini dati supportate da Windows Form</span><span class="sxs-lookup"><span data-stu-id="9031b-126">Data Sources Supported by Windows Forms</span></span>](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [<span data-ttu-id="9031b-127">Notifica delle modifiche nel data binding dei Windows Form</span><span class="sxs-lookup"><span data-stu-id="9031b-127">Change Notification in Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [<span data-ttu-id="9031b-128">Data binding e Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9031b-128">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [<span data-ttu-id="9031b-129">Data binding in Windows Form</span><span class="sxs-lookup"><span data-stu-id="9031b-129">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)

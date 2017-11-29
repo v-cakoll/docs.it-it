@@ -1,56 +1,57 @@
 ---
-title: "Dialog Boxes in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "dialog boxes, Windows Forms"
-  - "Windows Forms dialog boxes"
-  - "dialogs, using in Windows Forms"
+title: Finestre di dialogo in Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dialog boxes [Windows Forms], Windows Forms
+- Windows Forms dialog boxes
+- dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1660bf08f10a7d4e0db4b7ae8d58fd631986974c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Dialog Boxes in Windows Forms
-Le finestre di dialogo sono usate per interagire con l'utente e recuperare informazioni.  Detto semplicemente, una finestra di dialogo è un form con la proprietà dell'enumerazione <xref:System.Windows.Forms.FormBorderStyle> impostata su `FixedDialog`.  È possibile creare finestre di dialogo personalizzate usando Progettazione Windows Form in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  Per personalizzare le finestre di dialogo in base a esigenze specifiche, aggiungere controlli come `Label`, `Textbox` e `Button`.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include anche finestre di dialogo predefinite, ad esempio **Apri file** e finestre di messaggio, che è possibile adattare all'applicazione.  Per altre informazioni, vedere [Controlli e componenti della finestra di dialogo](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
+# <a name="dialog-boxes-in-windows-forms"></a><span data-ttu-id="f9220-102">Finestre di dialogo in Windows Form</span><span class="sxs-lookup"><span data-stu-id="f9220-102">Dialog Boxes in Windows Forms</span></span>
+<span data-ttu-id="f9220-103">Le finestre di dialogo sono usate per interagire con l'utente e recuperare informazioni.</span><span class="sxs-lookup"><span data-stu-id="f9220-103">Dialog boxes are used to interact with the user and retrieve information.</span></span> <span data-ttu-id="f9220-104">Detto semplicemente, una finestra di dialogo è un form con la proprietà dell'enumerazione <xref:System.Windows.Forms.FormBorderStyle> impostata su `FixedDialog`.</span><span class="sxs-lookup"><span data-stu-id="f9220-104">In simple terms, a dialog box is a form with its <xref:System.Windows.Forms.FormBorderStyle> enumeration property set to `FixedDialog`.</span></span> <span data-ttu-id="f9220-105">È possibile creare finestre di dialogo personalizzate usando Progettazione Windows Form in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f9220-105">You can construct your own custom dialog boxes by using the Windows Forms Designer in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span></span> <span data-ttu-id="f9220-106">Per personalizzare le finestre di dialogo in base a esigenze specifiche, aggiungere controlli come `Label`, `Textbox` e `Button`.</span><span class="sxs-lookup"><span data-stu-id="f9220-106">Add controls such as `Label`, `Textbox`, and `Button` to customize dialog boxes to your specific needs.</span></span> <span data-ttu-id="f9220-107">Il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include anche finestre di dialogo predefinite, ad esempio **Apri File** e finestre di messaggio, è possibile adattare le proprie applicazioni.</span><span class="sxs-lookup"><span data-stu-id="f9220-107">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] also includes predefined dialog boxes, such as **File Open** and message boxes, which you can adapt for your own applications.</span></span> <span data-ttu-id="f9220-108">Per ulteriori informazioni, vedere [componenti e controlli della finestra di dialogo](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="f9220-108">For more information, see [Dialog-Box Controls and Components](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).</span></span>  
   
-## In questa sezione  
- [How to: Display Dialog Boxes for Windows Forms](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
- Fornisce indicazioni per la visualizzazione delle finestre di dialogo.  
+## <a name="in-this-section"></a><span data-ttu-id="f9220-109">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="f9220-109">In This Section</span></span>  
+ [<span data-ttu-id="f9220-110">Procedura: Visualizzare le finestre di dialogo per Windows Form</span><span class="sxs-lookup"><span data-stu-id="f9220-110">How to: Display Dialog Boxes for Windows Forms</span></span>](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
+ <span data-ttu-id="f9220-111">Fornisce indicazioni per la visualizzazione delle finestre di dialogo.</span><span class="sxs-lookup"><span data-stu-id="f9220-111">Gives directions for showing dialog boxes.</span></span>  
   
--   [Procedura: Recuperare informazioni sulle finestre di dialogo in modo selettivo usando più proprietà](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))  
+-   <span data-ttu-id="f9220-112">[Procedura: recuperare informazioni in modo selettivo usando più proprietà finestra](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="f9220-112">[How to: Retrieve Dialog Box Information Selectively Using Multiple Properties](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))</span></span>  
   
--   [Procedura: Recuperare informazioni dal form padre di una finestra di dialogo](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))  
+-   <span data-ttu-id="f9220-113">[Procedura: recuperare informazioni dal Form padre di una finestra di dialogo](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="f9220-113">[How to: Retrieve Information from the Parent Form of a Dialog Box](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))</span></span>  
   
--   [Input dell'utente all'interno di finestre di dialogo](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))  
+-   <span data-ttu-id="f9220-114">[Input dell'utente alle finestre di dialogo](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="f9220-114">[User Input to Dialog Boxes](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))</span></span>  
   
--   [Procedura: Recuperare il risultato delle finestre di dialogo](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))  
+-   <span data-ttu-id="f9220-115">[Procedura: recuperare il risultato delle finestre di dialogo](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="f9220-115">[How to: Retrieve the Result for Dialog Boxes](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))</span></span>  
   
--   [Procedura dettagliata: Recupero collettivo di informazioni relative alle finestre di dialogo tramite oggetti](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))  
+-   <span data-ttu-id="f9220-116">[Procedura dettagliata: Recupero di informazioni tramite oggetti finestra](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="f9220-116">[Walkthrough: Retrieving Dialog Box Information Collectively Using Objects](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))</span></span>  
   
--   [Procedura: Chiudere finestre di dialogo e mantenere l'input dell'utente](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))  
+-   <span data-ttu-id="f9220-117">[Procedura: chiudere finestre di dialogo e mantenere l'Input dell'utente](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="f9220-117">[How to: Close Dialog Boxes and Retain User Input](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))</span></span>  
   
--   [Procedura: Creare finestre di dialogo in fase di progettazione](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).  
+-   <span data-ttu-id="f9220-118">[Procedura: creare finestre di dialogo in fase di progettazione](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="f9220-118">[How to: Create Dialog Boxes at Design Time](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))</span></span>  
   
--   [Procedura: Visualizzare le finestre di messaggio](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))  
+-   <span data-ttu-id="f9220-119">[Procedura: visualizzare le finestre di messaggio](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="f9220-119">[How to: Display Message Boxes](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))</span></span>  
   
-## Sezioni correlate  
- [Controlli e componenti della finestra di dialogo](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Elenca i controlli predefiniti della finestra di dialogo.  
+## <a name="related-sections"></a><span data-ttu-id="f9220-120">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="f9220-120">Related Sections</span></span>  
+ [<span data-ttu-id="f9220-121">Controlli e componenti della finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="f9220-121">Dialog-Box Controls and Components</span></span>](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="f9220-122">Elenca i controlli predefiniti della finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="f9220-122">Lists the predefined dialog box controls.</span></span>  
   
- [Changing the Appearance of Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- Contiene collegamenti ad argomenti che spiegano come cambiare l'aspetto delle applicazioni Windows Forms.  
+ [<span data-ttu-id="f9220-123">Modifica dell'aspetto di Windows Form</span><span class="sxs-lookup"><span data-stu-id="f9220-123">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ <span data-ttu-id="f9220-124">Contiene collegamenti ad argomenti che spiegano come cambiare l'aspetto delle applicazioni Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="f9220-124">Contains links to topics that describe how to change the appearance of Windows Forms applications.</span></span>  
   
- [Cenni preliminari sul controllo TabControl](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- Spiega come incorporare il controllo Struttura a schede in una finestra di dialogo.
+ [<span data-ttu-id="f9220-125">Panoramica del controllo TabControl</span><span class="sxs-lookup"><span data-stu-id="f9220-125">TabControl Control Overview</span></span>](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ <span data-ttu-id="f9220-126">Spiega come incorporare il controllo Struttura a schede in una finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="f9220-126">Explains how you incorporate the tab control into a dialog box.</span></span>

@@ -1,72 +1,79 @@
 ---
-title: "Procedura: creare un flusso di lavoro sequenziale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un flusso di lavoro sequenziale'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3bf6d8b499903522ee09021bb9339ece6a5894eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un flusso di lavoro sequenziale
-I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate.In questo argomento viene illustrata in dettaglio la creazione di un flusso di lavoro in cui vengono utilizzate sia attività incorporate, ad esempio <xref:System.Activities.Statements.Sequence>, sia attività personalizzate dell'argomento [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) precedente.Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
+# <a name="how-to-create-a-sequential-workflow"></a><span data-ttu-id="d60ef-102">Procedura: creare un flusso di lavoro sequenziale</span><span class="sxs-lookup"><span data-stu-id="d60ef-102">How to: Create a Sequential Workflow</span></span>
+<span data-ttu-id="d60ef-103">I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate.</span><span class="sxs-lookup"><span data-stu-id="d60ef-103">Workflows can be constructed from built-in activities as well as from custom activities.</span></span> <span data-ttu-id="d60ef-104">Passaggi in questo argomento per la creazione di un flusso di lavoro che utilizza entrambe le attività predefinite, ad esempio il <xref:System.Activities.Statements.Sequence> attività e le attività personalizzate dal precedente [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) argomento.</span><span class="sxs-lookup"><span data-stu-id="d60ef-104">This topic steps through creating a workflow that uses both built-in activities such as the <xref:System.Activities.Statements.Sequence> activity, and the custom activities from the previous [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) topic.</span></span> <span data-ttu-id="d60ef-105">Il flusso di lavoro consente di modellare un gioco per determinare un numero.</span><span class="sxs-lookup"><span data-stu-id="d60ef-105">The workflow models a number guessing game.</span></span>  
   
 > [!NOTE]
->  Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti.Per completare questo argomento, è necessario completare prima [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md).  
+>  <span data-ttu-id="d60ef-106">Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti.</span><span class="sxs-lookup"><span data-stu-id="d60ef-106">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="d60ef-107">Per completare questo argomento, è necessario prima completare [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span><span class="sxs-lookup"><span data-stu-id="d60ef-107">To complete this topic, you must first complete [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span></span>  
   
 > [!NOTE]
->  Per scaricare una versione completa dell'esercitazione, vedere [Windows Workflow Foundation \(WF45\) \- esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  <span data-ttu-id="d60ef-108">Per scaricare una versione completa dell'esercitazione, vedere [Windows Workflow Foundation (WF45) - esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="d60ef-108">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-### Per creare il flusso di lavoro  
+### <a name="to-create-the-workflow"></a><span data-ttu-id="d60ef-109">Per creare il flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="d60ef-109">To create the workflow</span></span>  
   
-1.  Fare clic con il pulsante destro del mouse su **NumberGuessWorkflowActivities** in **Esplora soluzioni** e selezionare **Aggiungi**, **Nuovo elemento**.  
+1.  <span data-ttu-id="d60ef-110">Fare doppio clic su **NumberGuessWorkflowActivities** in **Esplora** e selezionare **Aggiungi**, **nuovo elemento**.</span><span class="sxs-lookup"><span data-stu-id="d60ef-110">Right-click **NumberGuessWorkflowActivities** in **Solution Explorer** and select **Add**, **New Item**.</span></span>  
   
-2.  Nel nodo **Installato**, **Elementi comuni**, selezionare **Flusso di lavoro**.Selezionare **Attività** dall'elenco **Flusso di lavoro**.  
+2.  <span data-ttu-id="d60ef-111">Nel **installato**, **elementi comuni** nodo, seleziona **flusso di lavoro**.</span><span class="sxs-lookup"><span data-stu-id="d60ef-111">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="d60ef-112">Selezionare **attività** dal **flusso di lavoro** elenco.</span><span class="sxs-lookup"><span data-stu-id="d60ef-112">Select **Activity** from the **Workflow** list.</span></span>  
   
-3.  Digitare `SequentialNumberGuessWorkflow` nella casella **Nome**, quindi fare clic su **Aggiungi**.  
+3.  <span data-ttu-id="d60ef-113">Tipo `SequentialNumberGuessWorkflow` nel **nome** casella e fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="d60ef-113">Type `SequentialNumberGuessWorkflow` into the **Name** box and click **Add**.</span></span>  
   
-4.  Trascinare un'attività **Sequence** dalla sezione **Flusso di controllo** della **Casella degli strumenti** e rilasciarla sull'etichetta **Rilasciare l'attività** nell'area di progettazione del flusso di lavoro.  
+4.  <span data-ttu-id="d60ef-114">Trascinare un **sequenza** attività dal **flusso di controllo** sezione del **della casella degli strumenti** e rilasciarla il **Rilascia attività qui** etichetta nel area di progettazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="d60ef-114">Drag a **Sequence** activity from the **Control Flow** section of the **Toolbox** and drop it onto the **Drop activity here** label on the workflow design surface.</span></span>  
   
-### Per creare variabili e argomenti del flusso di lavoro  
+### <a name="to-create-the-workflow-variables-and-arguments"></a><span data-ttu-id="d60ef-115">Per creare variabili e argomenti del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="d60ef-115">To create the workflow variables and arguments</span></span>  
   
-1.  Fare doppio clic su **SequentialNumberGuessWorkflow.xaml** in **Esplora soluzioni** per visualizzare il flusso di lavoro nella finestra di progettazione nel caso non sia già visibile.  
+1.  <span data-ttu-id="d60ef-116">Fare doppio clic su **Sequentialnumberguessworkflow** in **Esplora** per visualizzare il flusso di lavoro nella finestra di progettazione, se non è già visualizzato.</span><span class="sxs-lookup"><span data-stu-id="d60ef-116">Double-click **SequentialNumberGuessWorkflow.xaml** in **Solution Explorer** to display the workflow in the designer, if it is not already displayed.</span></span>  
   
-2.  Fare clic su **Argomenti** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il riquadro **Argomenti**.  
+2.  <span data-ttu-id="d60ef-117">Fare clic su **argomenti** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il **argomenti** riquadro.</span><span class="sxs-lookup"><span data-stu-id="d60ef-117">Click **Arguments** in the lower-left side of the workflow designer to display the **Arguments** pane.</span></span>  
   
-3.  Fare clic su **Crea argomento**.  
+3.  <span data-ttu-id="d60ef-118">Fare clic su **Crea argomento**.</span><span class="sxs-lookup"><span data-stu-id="d60ef-118">Click **Create Argument**.</span></span>  
   
-4.  Digitare `MaxNumber` nella casella **Nome**, selezionare **Interno** dall'elenco a discesa **Direzione**, selezionare **Int32** dall'elenco a discesa **Tipo di argomento**, quindi premere INVIO per salvare l'argomento.  
+4.  <span data-ttu-id="d60ef-119">Tipo `MaxNumber` nel **nome** , quindi selezionare **In** dal **direzione** elenco a discesa, seleziona **Int32** dal **Tipo di argomento** elenco a discesa e quindi premere INVIO per salvare l'argomento.</span><span class="sxs-lookup"><span data-stu-id="d60ef-119">Type `MaxNumber` into the **Name** box, select **In** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-5.  Fare clic su **Crea argomento**.  
+5.  <span data-ttu-id="d60ef-120">Fare clic su **Crea argomento**.</span><span class="sxs-lookup"><span data-stu-id="d60ef-120">Click **Create Argument**.</span></span>  
   
-6.  Digitare `Turns` nella casella **Nome** che si trova sotto l'argomento `MaxNumber` appena aggiunto, selezionare **Esterno** dall'elenco a discesa **Direzione**, selezionare **Int32** dall'elenco a discesa **Tipo di argomento**, quindi premere INVIO.  
+6.  <span data-ttu-id="d60ef-121">Tipo `Turns` nel **nome** casella che si trova sotto appena aggiunta `MaxNumber` argomento, selezionare **Out** dal **direzione** -elenco a discesa, seleziona  **Int32** dal **tipo di argomento** elenco a discesa e quindi premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="d60ef-121">Type `Turns` into the **Name** box that is below the newly added `MaxNumber` argument, select **Out** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER.</span></span>  
   
-7.  Fare clic su **Argomenti** nel lato inferiore sinistro di ActivityDesigner per chiudere il riquadro **Argomenti**.  
+7.  <span data-ttu-id="d60ef-122">Fare clic su **argomenti** nel lato inferiore sinistro dell'ActivityDesigner per chiudere la **argomenti** riquadro.</span><span class="sxs-lookup"><span data-stu-id="d60ef-122">Click **Arguments** in the lower-left side of the activity designer to close the **Arguments** pane.</span></span>  
   
-8.  Fare clic su **Variabili** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il riquadro **Variabili**.  
+8.  <span data-ttu-id="d60ef-123">Fare clic su **variabili** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il **variabili** riquadro.</span><span class="sxs-lookup"><span data-stu-id="d60ef-123">Click **Variables** in the lower-left side of the workflow designer to display the **Variables** pane.</span></span>  
   
-9. Fare clic su **Crea variabile**.  
+9. <span data-ttu-id="d60ef-124">Fare clic su **creare variabile**.</span><span class="sxs-lookup"><span data-stu-id="d60ef-124">Click **Create Variable**.</span></span>  
   
     > [!TIP]
-    >  Se non viene visualizzata la casella **Crea variabile**, fare clic sull'attività **Sequence** nella finestra di progettazione del flusso di lavoro per selezionarla.  
+    >  <span data-ttu-id="d60ef-125">Se non **Crea variabile** viene visualizzata, fare clic su di **sequenza** attività nell'area di progettazione del flusso di lavoro per selezionarla.</span><span class="sxs-lookup"><span data-stu-id="d60ef-125">If no **Create Variable** box is displayed, click the **Sequence** activity on the workflow designer surface to select it.</span></span>  
   
-10. Digitare `Guess` nella casella **Nome**, selezionare **Int32** dall'elenco a discesa **Tipo di variabile**, quindi premere INVIO per salvare la variabile.  
+10. <span data-ttu-id="d60ef-126">Tipo `Guess` nel **nome** , quindi selezionare **Int32** dal **tipo di variabile** elenco a discesa e quindi premere INVIO per salvare la variabile.</span><span class="sxs-lookup"><span data-stu-id="d60ef-126">Type `Guess` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-11. Fare clic su **Crea variabile**.  
+11. <span data-ttu-id="d60ef-127">Fare clic su **creare variabile**.</span><span class="sxs-lookup"><span data-stu-id="d60ef-127">Click **Create Variable**.</span></span>  
   
-12. Digitare `Target` nella casella **Nome**, selezionare **Int32** dall'elenco a discesa **Tipo di variabile**, quindi premere INVIO per salvare la variabile.  
+12. <span data-ttu-id="d60ef-128">Tipo `Target` nel **nome** , quindi selezionare **Int32** dal **tipo di variabile** elenco a discesa e quindi premere INVIO per salvare la variabile.</span><span class="sxs-lookup"><span data-stu-id="d60ef-128">Type `Target` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-13. Fare clic su **Variabili** nel lato inferiore sinistro di ActivityDesigner per chiudere il riquadro **Variabili**.  
+13. <span data-ttu-id="d60ef-129">Fare clic su **variabili** nel lato inferiore sinistro dell'ActivityDesigner per chiudere la **variabili** riquadro.</span><span class="sxs-lookup"><span data-stu-id="d60ef-129">Click **Variables** in the lower-left side of the activity designer to close the **Variables** pane.</span></span>  
   
-### Per aggiungere le attività del flusso di lavoro  
+### <a name="to-add-the-workflow-activities"></a><span data-ttu-id="d60ef-130">Per aggiungere le attività del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="d60ef-130">To add the workflow activities</span></span>  
   
-1.  Trascinare un'attività **Assign** dalla sezione **Primitive** della **Casella degli strumenti** e rilasciarla sull'attività **Sequence**.Digitare `Target` nella casella **A** e l'espressione seguente nella casella **Immettere un'espressione C\#** o **Immettere un'espressione VB**.  
+1.  <span data-ttu-id="d60ef-131">Trascinare un **assegnare** attività dal **primitive** sezione il **della casella degli strumenti** e rilasciarla il **sequenza** attività.</span><span class="sxs-lookup"><span data-stu-id="d60ef-131">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and drop it onto the **Sequence** activity.</span></span> <span data-ttu-id="d60ef-132">Tipo `Target` nel **a** casella e l'espressione seguente nella **immettere un'espressione c#** o **immettere un'espressione VB** casella.</span><span class="sxs-lookup"><span data-stu-id="d60ef-132">Type `Target` into the **To** box and the following expression into the **Enter a C# expression** or **Enter a VB expression** box.</span></span>  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -77,11 +84,11 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```  
   
     > [!TIP]
-    >  Se la finestra **Casella degli strumenti** non è visualizzata, scegliere **Casella degli strumenti** dal menu **Visualizza**.  
+    >  <span data-ttu-id="d60ef-133">Se il **della casella degli strumenti** non verrà visualizzata la finestra, selezionare **della casella degli strumenti** dal **vista** menu.</span><span class="sxs-lookup"><span data-stu-id="d60ef-133">If the **Toolbox** window is not displayed, select **Toolbox** from the **View** menu.</span></span>  
   
-2.  Trascinare un'attività **DoWhile** dalla sezione **Flusso di controllo** della **Casella degli strumenti** e rilasciarla sul flusso di lavoro in modo che si trovi sotto l'attività **Assign**.  
+2.  <span data-ttu-id="d60ef-134">Trascinare un **DoWhile** attività dal **flusso di controllo** sezione il **della casella degli strumenti** e rilasciarla sul flusso di lavoro in modo che si trovi sotto il **assegnare** attività.</span><span class="sxs-lookup"><span data-stu-id="d60ef-134">Drag a **DoWhile** activity from the **Control Flow** section of the **Toolbox** and drop it on the workflow so that it is below the **Assign** activity.</span></span>  
   
-3.  Digitare l'espressione seguente nella casella del valore di proprietà **DoWhile** dell'attività **Condition**.  
+3.  <span data-ttu-id="d60ef-135">Digitare l'espressione seguente nella **DoWhile** dell'attività **condizione** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="d60ef-135">Type the following expression into the **DoWhile** activity’s **Condition** property value box.</span></span>  
   
     ```vb  
     Guess <> Target  
@@ -91,11 +98,11 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     Guess != Target  
     ```  
   
-     Un'attività <xref:System.Activities.Statements.DoWhile> esegue le proprie attività figlio e successivamente valuta <xref:System.Activities.Statements.DoWhile.Condition%2A>.Se <xref:System.Activities.Statements.DoWhile.Condition%2A> dà come risultato `True`, le attività in <xref:System.Activities.Statements.DoWhile> vengono eseguite nuovamente.In questo esempio, viene valutata l'ipotesi dell'utente e <xref:System.Activities.Statements.DoWhile> continua finché l'ipotesi non è corretta.  
+     <span data-ttu-id="d60ef-136">Un'attività <xref:System.Activities.Statements.DoWhile> esegue le proprie attività figlio e successivamente valuta <xref:System.Activities.Statements.DoWhile.Condition%2A>.</span><span class="sxs-lookup"><span data-stu-id="d60ef-136">A <xref:System.Activities.Statements.DoWhile> activity executes its child activities and then evaluates its <xref:System.Activities.Statements.DoWhile.Condition%2A>.</span></span> <span data-ttu-id="d60ef-137">Se <xref:System.Activities.Statements.DoWhile.Condition%2A> dà come risultato `True`, le attività in <xref:System.Activities.Statements.DoWhile> vengono eseguite nuovamente.</span><span class="sxs-lookup"><span data-stu-id="d60ef-137">If the <xref:System.Activities.Statements.DoWhile.Condition%2A> evaluates to `True`, then the activities in the <xref:System.Activities.Statements.DoWhile> execute again.</span></span> <span data-ttu-id="d60ef-138">In questo esempio, viene valutata l'ipotesi dell'utente e <xref:System.Activities.Statements.DoWhile> continua finché l'ipotesi non è corretta.</span><span class="sxs-lookup"><span data-stu-id="d60ef-138">In this example, the user’s guess is evaluated and the <xref:System.Activities.Statements.DoWhile> continues until the guess is correct.</span></span>  
   
-4.  Trascinare un'attività **Prompt** dalla sezione **NumberGuessWorkflowActivities** della **Casella degli strumenti** e rilasciarla nell'attività **DoWhile** dal passaggio precedente.  
+4.  <span data-ttu-id="d60ef-139">Trascinare un **Prompt** attività dal **NumberGuessWorkflowActivities** sezione del **della casella degli strumenti** e rilasciarlo nel **DoWhile** attività nel passaggio precedente.</span><span class="sxs-lookup"><span data-stu-id="d60ef-139">Drag a **Prompt** activity from the **NumberGuessWorkflowActivities** section of the **Toolbox** and drop it in the **DoWhile** activity from the previous step.</span></span>  
   
-5.  Nella **Finestra Proprietà** digitare `"EnterGuess"`, incluse le virgolette, nella casella del valore della proprietà **BookmarkName** per l'attività **Prompt**.Digitare `Guess` nella casella del valore della proprietà **Result** e digitare l'espressione seguente nella casella della proprietà **Text**.  
+5.  <span data-ttu-id="d60ef-140">Nel **finestra proprietà**, tipo `"EnterGuess"` incluse le virgolette nel **BookmarkName** casella valore della proprietà per il **Prompt** attività.</span><span class="sxs-lookup"><span data-stu-id="d60ef-140">In the **Properties Window**, type `"EnterGuess"` including the quotes into the **BookmarkName** property value box for the **Prompt** activity.</span></span> <span data-ttu-id="d60ef-141">Tipo `Guess` nel **risultato** casella valore di proprietà e digitare l'espressione seguente nella **testo** casella della proprietà.</span><span class="sxs-lookup"><span data-stu-id="d60ef-141">Type `Guess` into the **Result** property value box, and type the following expression into the **Text** property box.</span></span>  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -106,18 +113,18 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```  
   
     > [!TIP]
-    >  Se la **Finestra proprietà** non è visualizzata, scegliere **Finestra Proprietà** dal menu **Visualizza**.  
+    >  <span data-ttu-id="d60ef-142">Se il **finestra proprietà** non è visualizzata, selezionare **finestra proprietà** dal **vista** menu.</span><span class="sxs-lookup"><span data-stu-id="d60ef-142">If the **Properties Window** is not displayed, select **Properties Window** from the **View** menu.</span></span>  
   
-6.  Trascinare un'attività **Assign** dalla sezione **Primitive** della **Casella degli strumenti** e rilasciarla nell'attività **DoWhile** in modo che segua l'attività **Prompt**.  
+6.  <span data-ttu-id="d60ef-143">Trascinare un **assegnare** attività dal **primitive** sezione del **della casella degli strumenti** e rilasciarlo nel **DoWhile** attività in modo che segua il **Prompt** attività.</span><span class="sxs-lookup"><span data-stu-id="d60ef-143">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and drop it in the **DoWhile** activity so that it follows the **Prompt** activity.</span></span>  
   
     > [!NOTE]
-    >  Quando si rilascia l'attività **Assign**, notare come la finestra di progettazione del flusso di lavoro aggiunge automaticamente un'attività **Sequence** per contenere sia l'attività **Prompt** che l'attività **Assign** appena aggiunta.  
+    >  <span data-ttu-id="d60ef-144">Quando si trascina il **assegnare** attività, nota come finestra di progettazione del flusso di lavoro aggiunge automaticamente un **sequenza** attività per contenere sia il **Prompt** appena aggiunta e attività **Assegnare** attività.</span><span class="sxs-lookup"><span data-stu-id="d60ef-144">When you drop the **Assign** activity, note how the workflow designer automatically adds a **Sequence** activity to contain both the **Prompt** activity and the newly added **Assign** activity.</span></span>  
   
-7.  Digitare `Turns` nella casella **A** e `Turns + 1` nella casella **Immettere un'espressione C\#** o **Immettere un'espressione VB**.  
+7.  <span data-ttu-id="d60ef-145">Tipo `Turns` nel **a** casella e `Turns + 1` nel **immettere un'espressione c#** o **immettere un'espressione VB** casella.</span><span class="sxs-lookup"><span data-stu-id="d60ef-145">Type `Turns` into the **To** box and `Turns + 1` into the **Enter a C# expression** or **Enter a VB expression** box.</span></span>  
   
-8.  Trascinare un'attività **If** dalla sezione **Flusso di controllo** della **Casella degli strumenti** e rilasciarla nell'attività **Sequence** in modo che segua l'attività **Assign** appena aggiunta.  
+8.  <span data-ttu-id="d60ef-146">Trascinare un **se** attività dal **flusso di controllo** sezione del **della casella degli strumenti** e rilasciarlo nel **sequenza** attività in modo che segua il aggiunta di **assegnare** attività.</span><span class="sxs-lookup"><span data-stu-id="d60ef-146">Drag an **If** activity from the **Control Flow** section of the **Toolbox** and drop it in the **Sequence** activity so that it follows the newly added **Assign** activity.</span></span>  
   
-9. Digitare l'espressione seguente nella casella del valore di proprietà **Condition** dell'attività **If**.  
+9. <span data-ttu-id="d60ef-147">Digitare l'espressione seguente nella **se** dell'attività **condizione** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="d60ef-147">Type the following expression into the **If** activity’s **Condition** property value box.</span></span>  
   
     ```vb  
     Guess <> Target  
@@ -127,43 +134,43 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     Guess != Target  
     ```  
   
-10. Trascinare un'altra attività **If** dalla sezione **Flusso di controllo** della **Casella degli strumenti** e rilasciarla nella sezione **Then** della prima attività **If**.  
+10. <span data-ttu-id="d60ef-148">Trascinare un'altra **se** attività dal **flusso di controllo** sezione il **della casella degli strumenti** e rilasciarlo nel **quindi** sezione del primo **Se** attività.</span><span class="sxs-lookup"><span data-stu-id="d60ef-148">Drag another **If** activity from the **Control Flow** section of the **Toolbox** and drop it in the **Then** section of the first **If** activity.</span></span>  
   
-11. Digitare l'espressione seguente nella casella del valore di proprietà **Condition** dell'attività **If** appena aggiunta.  
+11. <span data-ttu-id="d60ef-149">Digitare l'espressione seguente in appena aggiunta **se** dell'attività **condizione** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="d60ef-149">Type the following expression into the newly added **If** activity’s **Condition** property value box.</span></span>  
   
-    ```vb-c#  
+    ```
     Guess < Target  
     ```  
   
-12. Trascinare due attività **WriteLine** dalla sezione **Primitive** della **Casella degli strumenti** e rilasciarle in modo che una si trovi nella sezione **Then** dell'attività **If** appena aggiunta e l'altra si trovi nella sezione **Else**.  
+12. <span data-ttu-id="d60ef-150">Trascinare due **WriteLine** le attività dal **primitive** sezione del **della casella degli strumenti** e rilasciarle in modo che uno è il **quindi** sezione di appena aggiunta **se** attività e l'altro è il **Else** sezione.</span><span class="sxs-lookup"><span data-stu-id="d60ef-150">Drag two **WriteLine** activities from the **Primitives** section of the **Toolbox** and drop them so that one is in the **Then** section of the newly added **If** activity, and one is in the **Else** section.</span></span>  
   
-13. Fare clic sull'attività **WriteLine** nella sezione **Then** per selezionarla, quindi digitare la seguente espressione nella casella del valore della proprietà **Text**.  
+13. <span data-ttu-id="d60ef-151">Fare clic sul **WriteLine** attività di **quindi** sezione per selezionarlo, quindi digitare l'espressione seguente nel **testo** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="d60ef-151">Click the **WriteLine** activity in the **Then** section to select it, and type the following expression into the **Text** property value box.</span></span>  
   
     ```vb  
     "Your guess is too low."  
     ```  
   
-14. Fare clic sull'attività **WriteLine** nella sezione **Else** per selezionarla, quindi digitare la seguente espressione nella casella del valore della proprietà **Text**.  
+14. <span data-ttu-id="d60ef-152">Fare clic sul **WriteLine** attività di **Else** sezione per selezionarlo, quindi digitare l'espressione seguente nel **testo** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="d60ef-152">Click the **WriteLine** activity in the **Else** section to select it, and type the following expression into the **Text** property value box.</span></span>  
   
     ```vb  
     "Your guess is too high."  
     ```  
   
-     Nell'esempio seguente viene illustrato il flusso di lavoro completato.  
+     <span data-ttu-id="d60ef-153">Nell'esempio seguente viene illustrato il flusso di lavoro completato.</span><span class="sxs-lookup"><span data-stu-id="d60ef-153">The following example illustrates the completed workflow.</span></span>  
   
-     ![Flusso di lavoro sequenziale completato](../../../docs/framework/windows-workflow-foundation//media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
+     <span data-ttu-id="d60ef-154">![Flusso di lavoro sequenza completato](../../../docs/framework/windows-workflow-foundation/media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")</span><span class="sxs-lookup"><span data-stu-id="d60ef-154">![Completed Sequential Workflow](../../../docs/framework/windows-workflow-foundation/media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")</span></span>  
   
-### Per compilare il flusso di lavoro  
+### <a name="to-build-the-workflow"></a><span data-ttu-id="d60ef-155">Per compilare il flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="d60ef-155">To build the workflow</span></span>  
   
-1.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+1.  <span data-ttu-id="d60ef-156">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="d60ef-156">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-     Per istruzioni sull'esecuzione del flusso di lavoro, vedere l'argomento successivo [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md).Se è già stato completato il passaggio [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) con uno stile di flusso di lavoro diverso e si desidera eseguirlo tramite il flusso di lavoro sequenziale da questo passaggio, andare alla sezione [Per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md#BKMK_ToRunTheApplication) di [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md).  
+     <span data-ttu-id="d60ef-157">Per istruzioni su come eseguire il flusso di lavoro, vedere l'argomento successivo, [procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="d60ef-157">For instructions on how to run the workflow, please see the next topic, [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span></span> <span data-ttu-id="d60ef-158">Se è già stata completata la [come: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) spostarsi con uno stile diverso del flusso di lavoro e desidera eseguirlo tramite il flusso di lavoro sequenza da questo passaggio, ignorare il [per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)sezione [procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="d60ef-158">If you have already completed the [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) step with a different style of workflow and wish to run it using the sequential workflow from this step, skip ahead to the [To build and run the application](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section of [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Activities.Statements.Flowchart>   
- <xref:System.Activities.Statements.FlowDecision>   
- [Programmazione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//programming.md)   
- [Progettazione di flussi di lavoro](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)   
- [Esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)   
- [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md)   
- [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md)
+## <a name="see-also"></a><span data-ttu-id="d60ef-159">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d60ef-159">See Also</span></span>  
+ <xref:System.Activities.Statements.Flowchart>  
+ <xref:System.Activities.Statements.FlowDecision>  
+ [<span data-ttu-id="d60ef-160">Programmazione di Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="d60ef-160">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [<span data-ttu-id="d60ef-161">Progettazione di flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="d60ef-161">Designing Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [<span data-ttu-id="d60ef-162">Esercitazione introduttiva</span><span class="sxs-lookup"><span data-stu-id="d60ef-162">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ [<span data-ttu-id="d60ef-163">Procedura: Creare un'attività</span><span class="sxs-lookup"><span data-stu-id="d60ef-163">How to: Create an Activity</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [<span data-ttu-id="d60ef-164">Procedura: Eseguire un flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="d60ef-164">How to: Run a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

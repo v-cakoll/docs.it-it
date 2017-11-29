@@ -1,256 +1,257 @@
 ---
-title: "Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], disposizione con SnapLine"
-  - "SnapLine (classe), procedure dettagliate"
-  - "guide di allineamento, disposizione dei controlli Windows Form"
-  - "controlli Windows Form, disposizione"
+title: 'Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], arranging with snaplines
+- snaplines [Windows Forms], arranging Windows Forms controls
+- SnapLine class [Windows Forms], walkthroughs
+- Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be514f435b787c770eca114d42bee5c1424a40c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento
-Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form.  A tale scopo, Progettazione Windows Form offre diversi strumenti di layout.  Uno dei più importanti è la funzionalità <xref:System.Windows.Forms.Design.Behavior.SnapLine>.  
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a><span data-ttu-id="f9da5-102">Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-102">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>
+<span data-ttu-id="f9da5-103">Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="f9da5-104">Progettazione Windows Form offre diversi strumenti di layout a questo scopo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-104">The Windows Forms Designer gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="f9da5-105">Uno dei più importanti è la <xref:System.Windows.Forms.Design.Behavior.SnapLine> funzionalità.</span><span class="sxs-lookup"><span data-stu-id="f9da5-105">One of the most important is the <xref:System.Windows.Forms.Design.Behavior.SnapLine> feature.</span></span>  
   
- La funzionalità visualizza delle guide di allineamento che mostrano precisamente dove allineare i controlli con altri controlli  e visualizzano le distanze consigliate tra i margini dei controlli, in base alle indicazioni dell'interfaccia utente di Windows.  Per informazioni dettagliate, vedere [User Interface Design and Development](http://go.microsoft.com/FWLink/?LinkId=83878).  
+ <span data-ttu-id="f9da5-106">Le guide di allineamento mostrano precisamente dove allineare i controlli con altri controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-106">Snaplines show you precisely where to line up controls with other controls.</span></span> <span data-ttu-id="f9da5-107">E visualizzano le distanze consigliate per i margini tra i controlli, come specificato dalle linee guida dell'interfaccia utente di Windows.</span><span class="sxs-lookup"><span data-stu-id="f9da5-107">They also show you the recommended distances for margins between controls, as specified by the Windows User Interface Guidelines.</span></span> <span data-ttu-id="f9da5-108">Per informazioni dettagliate, vedere [progettazione dell'interfaccia utente e lo sviluppo](http://go.microsoft.com/FWLink/?LinkId=83878).</span><span class="sxs-lookup"><span data-stu-id="f9da5-108">For details, see [User Interface Design and Development](http://go.microsoft.com/FWLink/?LinkId=83878).</span></span>  
   
- Le guide di allineamento semplificano l'allineamento dei controlli per un aspetto e un comportamento professionale e nitido.  
+ <span data-ttu-id="f9da5-109">Le guide di allineamento semplificano l'allineamento dei controlli, consentono di ottenere, professional aspetto e il comportamento (aspetto).</span><span class="sxs-lookup"><span data-stu-id="f9da5-109">Snaplines make it easy to align your controls, for crisp, professional appearance and behavior (look and feel).</span></span>  
   
- Di seguito vengono elencate le attività illustrate nella procedura dettagliata:  
+ <span data-ttu-id="f9da5-110">Le attività illustrate nella procedura dettagliata sono le seguenti:</span><span class="sxs-lookup"><span data-stu-id="f9da5-110">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Creazione di un progetto Windows Form  
+-   <span data-ttu-id="f9da5-111">Creazione di un progetto Windows Form</span><span class="sxs-lookup"><span data-stu-id="f9da5-111">Creating a Windows Forms project</span></span>  
   
--   Spaziatura e allineamento dei controlli utilizzando le guide di allineamento  
+-   <span data-ttu-id="f9da5-112">La spaziatura e allineamento di controlli utilizzando le guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-112">Spacing and Aligning Controls Using Snaplines</span></span>  
   
--   Allineamento ai margini di un form e di un contenitore  
+-   <span data-ttu-id="f9da5-113">Allineamento dei Form e i margini di contenitore</span><span class="sxs-lookup"><span data-stu-id="f9da5-113">Aligning to Form and Container Margins</span></span>  
   
--   Allineamento a controlli raggruppati  
+-   <span data-ttu-id="f9da5-114">Allineamento di controlli raggruppati</span><span class="sxs-lookup"><span data-stu-id="f9da5-114">Aligning to Grouped Controls</span></span>  
   
--   Utilizzo delle guide di allineamento per inserire un controllo definendo la dimensione  
+-   <span data-ttu-id="f9da5-115">Utilizzando le guide di allineamento per posizionare un controllo definendone la dimensione</span><span class="sxs-lookup"><span data-stu-id="f9da5-115">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
   
--   Utilizzo delle guide di allineamento durante il trascinamento di un controllo dalla Casella degli strumenti  
+-   <span data-ttu-id="f9da5-116">Utilizzando le guide di allineamento quando si trascina un controllo dalla casella degli strumenti</span><span class="sxs-lookup"><span data-stu-id="f9da5-116">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
   
--   Ridimensionamento dei controlli utilizzando le guide di allineamento  
+-   <span data-ttu-id="f9da5-117">Ridimensionamento di controlli utilizzando le guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-117">Resizing Controls Using Snaplines</span></span>  
   
--   Allineamento di un'etichetta al testo di un controllo  
+-   <span data-ttu-id="f9da5-118">Allineamento di un'etichetta di testo di un controllo</span><span class="sxs-lookup"><span data-stu-id="f9da5-118">Aligning a Label to a Control's Text</span></span>  
   
--   Utilizzo delle guide di allineamento con la navigazione da tastiera  
+-   <span data-ttu-id="f9da5-119">Utilizzando le guide di allineamento con navigazione tramite tastiera</span><span class="sxs-lookup"><span data-stu-id="f9da5-119">Using Snaplines with Keyboard Navigation</span></span>  
   
--   Pannelli layout e guide di allineamento  
+-   <span data-ttu-id="f9da5-120">Le guide di allineamento e i pannelli di Layout</span><span class="sxs-lookup"><span data-stu-id="f9da5-120">Snaplines and Layout Panels</span></span>  
   
--   Disabilitazione delle guide di allineamento  
+-   <span data-ttu-id="f9da5-121">La disabilitazione di guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-121">Disabling Snaplines</span></span>  
   
- Al termine, si saranno acquisite le informazioni circa il ruolo di layout delle guide di allineamento.  
-  
-> [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## Creazione del progetto  
- Il primo passaggio indica come creare il progetto e impostare il form.  
-  
-#### Per creare il progetto  
-  
-1.  Creare un progetto di applicazione basata su Windows chiamato "SnaplineExample".  Per informazioni dettagliate, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
-  
-2.  Selezionare il form in Progettazione form.  
-  
-## Spaziatura e allineamento dei controlli utilizzando le guide di allineamento  
- Le guide di allineamento forniscono un metodo accurato e intuitivo per allineare i controlli nel form.  Le guide di allineamento vengono visualizzate quando si sposta uno o più controlli selezionati accanto a un altro controllo o gruppo di controlli per l'allineamento.  La selezione verrà bloccata nella posizione suggerita quando la si sposta oltre gli altri controlli.  
-  
-#### Per disporre i controlli utilizzando le guide di allineamento  
-  
-1.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  
-  
-2.  Spostare il controllo <xref:System.Windows.Forms.Button> nell'angolo inferiore destro del form.  Le guide di allineamento vengono visualizzate quando il controllo <xref:System.Windows.Forms.Button> si avvicina ai bordi inferiore e destro del form.  Le guide di allineamento visualizzano la distanza consigliata tra i bordi del controllo e del form.  
-  
-3.  Spostare il controllo <xref:System.Windows.Forms.Button> intorno ai bordi del form e notare dove vengono visualizzate le guide di allineamento.  Una volta terminato, spostare il controllo <xref:System.Windows.Forms.Button> al centro del form.  
-  
-4.  Trascinare un altro controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel form.  
-  
-5.  Spostare il secondo controllo <xref:System.Windows.Forms.Button> in modo che sia quasi allineato al primo.  Si noti la guida di allineamento che viene visualizzata sulla linea di base del testo di entrambi i pulsanti mentre il controllo che si sta spostando si blocca in una posizione perfettamente allineata con l'altro controllo.  
-  
-6.  Spostare il secondo controllo <xref:System.Windows.Forms.Button> in modo che si trovi direttamente sopra il primo.  Le guide di allineamento vengono visualizzate lungo i bordi sinistro e destro di entrambi i pulsanti mentre il controllo che si sta spostando si blocca in una posizione perfettamente allineata con l'altro controllo.  
-  
-7.  Selezionare uno dei controlli <xref:System.Windows.Forms.Button> e spostarlo accanto all'altro fino quasi a farli toccare.  Si noti la guida di allineamento che viene visualizzata tra i controlli  indicante la distanza consigliata tra i bordi dei controlli.  Si noti inoltre che il controllo che si sta spostando si blocca in questa posizione.  
-  
-8.  Trascinare due controlli <xref:System.Windows.Forms.Panel> dalla **Casella degli strumenti** nel form.  
-  
-9. Spostare uno dei controlli <xref:System.Windows.Forms.Panel> in modo che sia quasi allineato al primo.  Le guide di allineamento vengono visualizzate lungo i bordi superiore e inferiore di entrambi i controlli mentre il controllo che si sta spostando si blocca in una posizione perfettamente allineata con l'altro controllo.  
-  
-## Allineamento ai margini di un form e di un contenitore  
- Le guide di allineamento consentono di allineare i controlli ai margini del form e del contenitore in modo coerente.  
-  
-#### Per allineare i controlli ai margini del form e del contenitore  
-  
-1.  Selezionare uno dei controlli <xref:System.Windows.Forms.Button> e spostarlo vicino al bordo destro del form fino a visualizzare una guida di allineamento.  La distanza della guida di allineamento dal bordo destro è costituita dalla somma dei valori della proprietà <xref:System.Windows.Forms.Control.Margin%2A> del controllo e della proprietà <xref:System.Windows.Forms.Control.Padding%2A> del form.  
+ <span data-ttu-id="f9da5-122">Al termine, si avrà una migliore comprensione del ruolo del layout riprodotto di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-122">When you are finished, you will have an understanding of the layout role played by the snaplines feature.</span></span>  
   
 > [!NOTE]
->  Se la proprietà <xref:System.Windows.Forms.Control.Padding%2A> del form viene impostata su 0,0,0,0, tramite Progettazione Windows Form viene assegnato al form un valore di <xref:System.Windows.Forms.Control.Padding%2A> nascosto corrispondente a 9,9,9,9.  Per eseguire l'override di questo comportamento, assegnare un valore diverso da 0,0,0,0.  
+>  <span data-ttu-id="f9da5-123">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="f9da5-123">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f9da5-124">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="f9da5-124">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f9da5-125">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="f9da5-125">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-1.  Modificare il valore della proprietà <xref:System.Windows.Forms.Control.Margin%2A> del controllo <xref:System.Windows.Forms.Button> espandendo la voce <xref:System.Windows.Forms.Control.Margin%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.All%2A> su 0.  Per informazioni dettagliate, vedere [Procedura dettagliata: disposizione di controlli Windows Form utilizzando spaziatura, margini e la proprietà AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).  
+## <a name="creating-the-project"></a><span data-ttu-id="f9da5-126">Creazione del progetto</span><span class="sxs-lookup"><span data-stu-id="f9da5-126">Creating the Project</span></span>  
+ <span data-ttu-id="f9da5-127">Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-127">The first step is to create the project and set up the form.</span></span>  
   
-2.  Spostare il controllo <xref:System.Windows.Forms.Button> vicino al bordo destro del form fino a visualizzare una guida di allineamento.  La distanza è ora stabilita dal valore della proprietà <xref:System.Windows.Forms.Control.Padding%2A> del form.  
+#### <a name="to-create-the-project"></a><span data-ttu-id="f9da5-128">Per creare il progetto</span><span class="sxs-lookup"><span data-stu-id="f9da5-128">To create the project</span></span>  
   
-3.  Trascinare un controllo <xref:System.Windows.Forms.GroupBox> dalla **Casella degli strumenti** al form.  
+1.  <span data-ttu-id="f9da5-129">Creare un progetto di applicazione basata su Windows denominato "SnaplineExample".</span><span class="sxs-lookup"><span data-stu-id="f9da5-129">Create a Windows-based application project called "SnaplineExample".</span></span> <span data-ttu-id="f9da5-130">Per informazioni dettagliate, vedere [Procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="f9da5-130">For details, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-4.  Modificare il valore della proprietà <xref:System.Windows.Forms.Control.Padding%2A> del controllo <xref:System.Windows.Forms.GroupBox> espandendo la voce <xref:System.Windows.Forms.Control.Padding%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.All%2A> su 10.  
+2.  <span data-ttu-id="f9da5-131">Selezionare il form in Progettazione form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-131">Select the form in the Forms Designer.</span></span>  
   
-5.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel controllo <xref:System.Windows.Forms.GroupBox>.  
+## <a name="spacing-and-aligning-controls-using-snaplines"></a><span data-ttu-id="f9da5-132">La spaziatura e allineamento di controlli utilizzando le guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-132">Spacing and Aligning Controls Using Snaplines</span></span>  
+ <span data-ttu-id="f9da5-133">Le guide di allineamento offrono un modo accurato e intuitivo per allineare i controlli nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-133">Snaplines give you an accurate and intuitive way to align controls on your form.</span></span> <span data-ttu-id="f9da5-134">Vengono visualizzati quando si desidera spostare uno o più controlli selezionati prossimità allineamento con un altro controllo o un set di controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-134">They appear when you are moving a selected control or controls near a position that would align with another control or set of controls.</span></span> <span data-ttu-id="f9da5-135">La selezione verrà "bloccata" nella posizione suggerita lo spostamento oltre gli altri controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-135">Your selection will "snap" to the suggested position as you move it past the other controls.</span></span>  
   
-6.  Spostare il controllo <xref:System.Windows.Forms.Button> vicino al bordo destro del controllo <xref:System.Windows.Forms.GroupBox> fino a visualizzare una guida di allineamento.  Spostare il controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.GroupBox> e osservare dove vengono visualizzate le guide di allineamento.  
+#### <a name="to-arrange-controls-using-snaplines"></a><span data-ttu-id="f9da5-136">Per disporre i controlli usando le guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-136">To arrange controls using snaplines</span></span>  
   
-## Allineamento a controlli raggruppati  
- È possibile utilizzare le guide di allineamento per allineare controlli raggruppati e non, in un controllo <xref:System.Windows.Forms.GroupBox>.  
+1.  <span data-ttu-id="f9da5-137">Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-137">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-#### Per allineare controlli raggruppati  
+2.  <span data-ttu-id="f9da5-138">Spostare il <xref:System.Windows.Forms.Button> controllo nell'angolo in basso a destra del form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-138">Move the <xref:System.Windows.Forms.Button> control to the lower-right corner of the form.</span></span> <span data-ttu-id="f9da5-139">Le guide di allineamento che appaiono come il <xref:System.Windows.Forms.Button> controllo si avvicina ai bordi inferiore e destro del form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-139">Note the snaplines that appear as the <xref:System.Windows.Forms.Button> control approaches the bottom and right borders of the form.</span></span> <span data-ttu-id="f9da5-140">Tali guide indicano la distanza consigliata tra i bordi del controllo e il modulo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-140">These snaplines display the recommended distance between the borders of the control and the form.</span></span>  
   
-1.  Selezionare nel form due controlli.  Spostare la selezione e notare le guide di allineamento che vengono visualizzate tra la selezione e gli altri controlli.  
+3.  <span data-ttu-id="f9da5-141">Spostare il <xref:System.Windows.Forms.Button> controllo intorno ai bordi del form e notare dove vengono visualizzate le guide di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-141">Move the <xref:System.Windows.Forms.Button> control around the borders of the form and note where the snaplines appear.</span></span> <span data-ttu-id="f9da5-142">Al termine, spostare il <xref:System.Windows.Forms.Button> controllo vicino al centro della forma.</span><span class="sxs-lookup"><span data-stu-id="f9da5-142">When you are finished, move the <xref:System.Windows.Forms.Button> control near the center of the form.</span></span>  
   
-2.  Trascinare un controllo <xref:System.Windows.Forms.GroupBox> dalla **Casella degli strumenti** al form.  
+4.  <span data-ttu-id="f9da5-143">Trascinare un'altra <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-143">Drag another <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-3.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel controllo <xref:System.Windows.Forms.GroupBox>.  
+5.  <span data-ttu-id="f9da5-144">Spostare il secondo <xref:System.Windows.Forms.Button> controllare fino a quando non è quasi allineato al primo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-144">Move the second <xref:System.Windows.Forms.Button> control until it is nearly level with the first.</span></span> <span data-ttu-id="f9da5-145">Si noti la Guida di allineamento che appare in linea di base di testo di entrambi i pulsanti e il controllo che si sta spostando si blocca in una posizione che è perfettamente allineata con l'altro controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-145">Note the snapline that appears at the text baseline of both buttons, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-4.  Selezionare uno dei controlli <xref:System.Windows.Forms.Button> e spostarlo intorno al controllo <xref:System.Windows.Forms.GroupBox>.  Le guide di allineamento vengono visualizzate ai bordi del controllo <xref:System.Windows.Forms.GroupBox>.  Vengono inoltre visualizzate le guide di allineamento sui bordi del controllo <xref:System.Windows.Forms.Button> contenuto nel controllo <xref:System.Windows.Forms.GroupBox>.  Anche i controlli figlio di un controllo contenitore supportano le guide di allineamento.  
+6.  <span data-ttu-id="f9da5-146">Spostare il secondo <xref:System.Windows.Forms.Button> controllare fino a quando non è posizionato direttamente sopra il primo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-146">Move the second <xref:System.Windows.Forms.Button> control until it is positioned directly above the first.</span></span> <span data-ttu-id="f9da5-147">Tenere presente le guide di allineamento che appaiono lungo i bordi sinistro e destro di entrambi i pulsanti e si noti che il controllo sta spostando si blocca in una posizione che è perfettamente allineata con l'altro controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-147">Note the snaplines that appear along the left and right edges of both buttons, and note that the control you are moving snaps to a position that is exactly aligned with the other control.</span></span>  
   
-## Utilizzo delle guide di allineamento per inserire un controllo definendo la dimensione  
- Le guide di allineamento consentono di allineare i controlli quando vengono inseriti per la prima volta in un form.  
+7.  <span data-ttu-id="f9da5-148">Selezionare una del <xref:System.Windows.Forms.Button> controlla e spostarlo accanto a altro, fino a quando non si stanno pressoché toccando.</span><span class="sxs-lookup"><span data-stu-id="f9da5-148">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the other, until they are almost touching.</span></span> <span data-ttu-id="f9da5-149">Si noti la Guida di allineamento che viene visualizzato tra di essi.</span><span class="sxs-lookup"><span data-stu-id="f9da5-149">Note the snapline that appears between them.</span></span> <span data-ttu-id="f9da5-150">La distanza è la distanza consigliata tra i bordi dei controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-150">This distance is the recommended distance between the borders of the controls.</span></span> <span data-ttu-id="f9da5-151">Si noti inoltre che il controllo a cui che si sta spostando si blocca in questa posizione.</span><span class="sxs-lookup"><span data-stu-id="f9da5-151">Also note that the control you are moving snaps to this position.</span></span>  
   
-#### Per utilizzare le guide di allineamento per inserire un controllo definendone la dimensione  
+8.  <span data-ttu-id="f9da5-152">Trascinare due <xref:System.Windows.Forms.Panel> dei controlli di **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-152">Drag two <xref:System.Windows.Forms.Panel> controls from the **Toolbox** onto your form.</span></span>  
   
-1.  Nella **Casella degli strumenti** fare clic sull'icona del controllo <xref:System.Windows.Forms.Button>.  Non trascinare nel form.  
+9. <span data-ttu-id="f9da5-153">Spostare una del <xref:System.Windows.Forms.Panel> controlla fino a quando non è quasi allineato al primo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-153">Move one of the <xref:System.Windows.Forms.Panel> controls until it is nearly level with the first.</span></span> <span data-ttu-id="f9da5-154">Tenere presente le guide di allineamento che appaiono lungo i bordi superiore e inferiore di entrambi i controlli e il controllo che si sta spostando si blocca in una posizione che è perfettamente allineata con l'altro controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-154">Note the snaplines that appear along the top and bottom edges of both controls, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-2.  Spostare il puntatore del mouse sull'area di progettazione del form.  Il puntatore assumerà la forma di una croce \(selezione di precisione\) associata all'icona del controllo <xref:System.Windows.Forms.Button>.  Inoltre, vengono visualizzate le guide di allineamento per indicare le posizioni allineate per il controllo <xref:System.Windows.Forms.Button>.  
+## <a name="aligning-to-form-and-container-margins"></a><span data-ttu-id="f9da5-155">Allineamento dei Form e i margini di contenitore</span><span class="sxs-lookup"><span data-stu-id="f9da5-155">Aligning to Form and Container Margins</span></span>  
+ <span data-ttu-id="f9da5-156">Le guide di allineamento consentono di allineare i controlli ai margini del form e contenitore in modo coerente.</span><span class="sxs-lookup"><span data-stu-id="f9da5-156">Snaplines help you to align your controls to form and container margins in a consistent manner.</span></span>  
   
-3.  Fare clic e tenere premuto il pulsante del mouse.  
+#### <a name="to-align-controls-to-form-and-container-margins"></a><span data-ttu-id="f9da5-157">Per allineare i controlli per i margini del form e contenitore</span><span class="sxs-lookup"><span data-stu-id="f9da5-157">To align controls to form and container margins</span></span>  
   
-4.  Trascinare il puntatore del mouse sul form.  Viene disegnata una struttura indicante la posizione e la dimensione del controllo.  
+1.  <span data-ttu-id="f9da5-158">Selezionare una del <xref:System.Windows.Forms.Button> controlla e spostarlo vicino al bordo destro del form, finché non viene visualizzata una Guida di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-158">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="f9da5-159">Distanza della Guida di allineamento dal bordo destro è la somma del controllo <xref:System.Windows.Forms.Control.Margin%2A> proprietà e il modulo <xref:System.Windows.Forms.Control.Padding%2A> i valori delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="f9da5-159">The snapline's distance from the right border is the sum of the control's <xref:System.Windows.Forms.Control.Margin%2A> property and the form's <xref:System.Windows.Forms.Control.Padding%2A> property values.</span></span>  
   
-5.  Trascinare il puntatore fino ad allinearlo con un altro controllo del form.  Viene visualizzata una guida per indicare l'allineamento.  
+> [!NOTE]
+>  <span data-ttu-id="f9da5-160">Se il modulo <xref:System.Windows.Forms.Control.Padding%2A> è impostata su 0,0,0,0, Progettazione Windows Form viene assegnato al form un <xref:System.Windows.Forms.Control.Padding%2A> valore 9,9,9,9.</span><span class="sxs-lookup"><span data-stu-id="f9da5-160">If the form's <xref:System.Windows.Forms.Control.Padding%2A> property is set to 0,0,0,0, the Windows Forms Designer gives the form a shadowed <xref:System.Windows.Forms.Control.Padding%2A> value of 9,9,9,9.</span></span> <span data-ttu-id="f9da5-161">Per eseguire l'override di questo comportamento, assegnare un valore diverso da 0,0,0,0.</span><span class="sxs-lookup"><span data-stu-id="f9da5-161">To override this behavior, assign a value other than 0,0,0,0.</span></span>  
   
-6.  Rilasciare il pulsante del mouse.  Il controllo viene creato utilizzando la posizione e la dimensione indicate dalla struttura.  
+1.  <span data-ttu-id="f9da5-162">Modificare il valore della <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Margin%2A> espandendo il <xref:System.Windows.Forms.Control.Margin%2A> voce il **proprietà** finestra e impostando il <xref:System.Windows.Forms.Padding.All%2A> proprietà su 0.</span><span class="sxs-lookup"><span data-stu-id="f9da5-162">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Margin%2A> property by expanding the <xref:System.Windows.Forms.Control.Margin%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 0.</span></span> <span data-ttu-id="f9da5-163">Per informazioni dettagliate, vedere [procedura dettagliata: disposizione di controlli Windows Form usando spaziatura, margini e la proprietà AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).</span><span class="sxs-lookup"><span data-stu-id="f9da5-163">For details, see [Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).</span></span>  
   
-## Utilizzo delle guide di allineamento durante il trascinamento di un controllo dalla Casella degli strumenti  
- Le guide di allineamento consentono di allineare i controlli quando vengono trascinati dalla **Casella degli strumenti** nel form.  
+2.  <span data-ttu-id="f9da5-164">Spostare il <xref:System.Windows.Forms.Button> controllo vicino al bordo destro del form fino a quando non viene visualizzata una Guida di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-164">Move the <xref:System.Windows.Forms.Button> control close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="f9da5-165">La distanza è ora stabilita dal valore nel formato <xref:System.Windows.Forms.Control.Padding%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="f9da5-165">This distance is now given by the value of the form's <xref:System.Windows.Forms.Control.Padding%2A> property.</span></span>  
   
-#### Per utilizzare le guide di allineamento durante il trascinamento di un controllo dalla Casella degli strumenti  
+3.  <span data-ttu-id="f9da5-166">Trascinare un <xref:System.Windows.Forms.GroupBox> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-166">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel form, senza rilasciare il pulsante del mouse.  
+4.  <span data-ttu-id="f9da5-167">Modificare il valore del <xref:System.Windows.Forms.GroupBox> del controllo <xref:System.Windows.Forms.Control.Padding%2A> espandendo il <xref:System.Windows.Forms.Control.Padding%2A> voce il **proprietà** finestra e impostando il <xref:System.Windows.Forms.Padding.All%2A> proprietà a 10.</span><span class="sxs-lookup"><span data-stu-id="f9da5-167">Change the value of the <xref:System.Windows.Forms.GroupBox> control's <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 10.</span></span>  
   
-2.  Spostare il puntatore del mouse sull'area di progettazione del form.  Il puntatore cambia per indicare la posizione in cui il nuovo controllo<xref:System.Windows.Forms.Button> verrà creato.  
+5.  <span data-ttu-id="f9da5-168">Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel <xref:System.Windows.Forms.GroupBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-168">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  Trascinare il puntatore del mouse sul form.  Vengono visualizzate le guide di allineamento per indicare le posizioni allineate per il controllo <xref:System.Windows.Forms.Button>.  Trovare una posizione allineata ad altri controlli.  
+6.  <span data-ttu-id="f9da5-169">Spostare il <xref:System.Windows.Forms.Button> controllo vicino al bordo destro del <xref:System.Windows.Forms.GroupBox> controllo finché non viene visualizzata una Guida di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-169">Move the <xref:System.Windows.Forms.Button> control close to the right border of the <xref:System.Windows.Forms.GroupBox> control until a snapline appears.</span></span> <span data-ttu-id="f9da5-170">Spostare il <xref:System.Windows.Forms.Button> controllo all'interno di <xref:System.Windows.Forms.GroupBox> controllo e osservare dove vengono visualizzate le guide di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-170">Move the <xref:System.Windows.Forms.Button> control within the <xref:System.Windows.Forms.GroupBox> control and note where the snaplines appear.</span></span>  
   
-4.  Rilasciare il pulsante del mouse.  Il controllo viene creato utilizzando la posizione indicata dalle guide di allineamento.  
+## <a name="aligning-to-grouped-controls"></a><span data-ttu-id="f9da5-171">Allineamento di controlli raggruppati</span><span class="sxs-lookup"><span data-stu-id="f9da5-171">Aligning to Grouped Controls</span></span>  
+ <span data-ttu-id="f9da5-172">È possibile utilizzare le guide di allineamento per allineare i controlli raggruppati nonché i controlli all'interno di un <xref:System.Windows.Forms.GroupBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-172">You can use snaplines to align grouped controls as well as controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-## Ridimensionamento dei controlli utilizzando le guide di allineamento  
- Le guide di allineamento consentono di allineare i controlli durante il ridimensionamento.  
+#### <a name="to-align-to-grouped-controls"></a><span data-ttu-id="f9da5-173">Per allineare i controlli raggruppati</span><span class="sxs-lookup"><span data-stu-id="f9da5-173">To align to grouped controls</span></span>  
   
-#### Per ridimensionare un controllo utilizzando le guide di allineamento  
+1.  <span data-ttu-id="f9da5-174">Selezionare due controlli nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-174">Select two of the controls on your form.</span></span> <span data-ttu-id="f9da5-175">Spostare la selezione e le guide di allineamento che appaiono tra la selezione e gli altri controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-175">Move the selection around and note the snaplines that appear between your selection and the other controls.</span></span>  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  
+2.  <span data-ttu-id="f9da5-176">Trascinare un <xref:System.Windows.Forms.GroupBox> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-176">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-2.  Ridimensionare il controllo <xref:System.Windows.Forms.Button> agganciando uno dei quadratini di ridimensionamento presenti negli angoli del controllo e trascinandolo.  Per informazioni dettagliate, vedere [Procedura: ridimensionare i controlli di un Windows Form](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+3.  <span data-ttu-id="f9da5-177">Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel <xref:System.Windows.Forms.GroupBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-177">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  Trascinare il quadratino di ridimensionamento fino ad allineare uno dei bordi del controllo <xref:System.Windows.Forms.Button> a un altro controllo.  Viene visualizzata una guida di allineamento.  Il quadratino di ridimensionamento si blocca nella posizione indicata dalla guida di allineamento.  
+4.  <span data-ttu-id="f9da5-178">Selezionare una del <xref:System.Windows.Forms.Button> controlla e spostarlo all'interno di <xref:System.Windows.Forms.GroupBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-178">Select one of the <xref:System.Windows.Forms.Button> controls and move it around the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="f9da5-179">Le guide di allineamento che vengono visualizzati i bordi del <xref:System.Windows.Forms.GroupBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-179">Note the snaplines that appear at the edges of the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="f9da5-180">Si noti inoltre le guide di allineamento vengono visualizzati i bordi del <xref:System.Windows.Forms.Button> controllo che è contenuto il <xref:System.Windows.Forms.GroupBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-180">Also note the snaplines that appear at the edges of the <xref:System.Windows.Forms.Button> control that is contained by the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="f9da5-181">I controlli figlio di un controllo contenitore supportano anche le guide di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-181">Controls that are children of a container control also support snaplines.</span></span>  
   
-4.  Ridimensionare il controllo <xref:System.Windows.Forms.Button> in altre direzioni e allineare il quadratino di ridimensionamento ad altri controlli.  Si noti come le guide di allineamento vengano visualizzate in diverse direzioni per indicare l'allineamento.  
+## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="f9da5-182">Utilizzando le guide di allineamento per posizionare un controllo definendone la dimensione</span><span class="sxs-lookup"><span data-stu-id="f9da5-182">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
+ <span data-ttu-id="f9da5-183">Le guide di allineamento consentono di che allineare controlla quando vengono innanzitutto posizionate su un form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-183">Snaplines help you align controls when you first place them on a form.</span></span>  
   
-## Allineamento di un'etichetta al testo di un controllo  
- Alcuni controlli prevedono una guida per l'allineamento di altri controlli al testo visualizzato.  
+#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="f9da5-184">Utilizzare le guide di allineamento per posizionare un controllo definendone la dimensione</span><span class="sxs-lookup"><span data-stu-id="f9da5-184">To use snaplines to place a control by outlining its size</span></span>  
   
-#### Per allineare un'etichetta al testo di un controllo  
+1.  <span data-ttu-id="f9da5-185">Nella **Casella degli strumenti**fare clic sull'icona del controllo <xref:System.Windows.Forms.Button> .</span><span class="sxs-lookup"><span data-stu-id="f9da5-185">In the **Toolbox**, click the <xref:System.Windows.Forms.Button> control icon.</span></span> <span data-ttu-id="f9da5-186">Non trascinarla nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-186">Do not drag it onto the form.</span></span>  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.TextBox> dalla **Casella degli strumenti** al form.  Quando si rilascia il controllo <xref:System.Windows.Forms.TextBox> nel form, fare clic sull'icona dello smart tag e selezionare l'opzione **Usa textBox1 come testo**.  Per informazioni dettagliate, vedere [Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).  
+2.  <span data-ttu-id="f9da5-187">Spostare il puntatore del mouse sull'area di progettazione del form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-187">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="f9da5-188">Osservare che il puntatore assume la forma di un mirino con l'icona del controllo <xref:System.Windows.Forms.Button> associata.</span><span class="sxs-lookup"><span data-stu-id="f9da5-188">Note that the pointer changes to a crosshair with the <xref:System.Windows.Forms.Button> control icon attached.</span></span> <span data-ttu-id="f9da5-189">Si noti inoltre le guide di allineamento che appaiono per indicare le posizioni allineate per i <xref:System.Windows.Forms.Button> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-189">Also note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span>  
   
-2.  Trascinare un controllo <xref:System.Windows.Forms.Label> dalla **Casella degli strumenti** al form.  
+3.  <span data-ttu-id="f9da5-190">Fare clic e tenere premuto il pulsante del mouse.</span><span class="sxs-lookup"><span data-stu-id="f9da5-190">Click and hold the mouse button.</span></span>  
   
-3.  Modificare il valore della proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> del controllo <xref:System.Windows.Forms.Label> su `true`.  I bordi del controllo vengono modificati in base al testo da visualizzare.  
+4.  <span data-ttu-id="f9da5-191">Trascinare il puntatore del mouse intorno al form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-191">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="f9da5-192">Si noti che viene disegnata una struttura, che indica la posizione e le dimensioni del controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-192">Note that an outline is drawn, indicating the position and the size of the control.</span></span>  
   
-4.  Spostare il controllo <xref:System.Windows.Forms.Label> a sinistra del controllo <xref:System.Windows.Forms.TextBox> in modo che sia allineato al bordo inferiore del controllo <xref:System.Windows.Forms.TextBox>.  Si noti la guida di allineamento che viene visualizzata lungo i bordi inferiori dei due controlli.  
+5.  <span data-ttu-id="f9da5-193">Trascinare il puntatore fino a quando non in linea con un altro controllo nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-193">Drag the pointer until it aligns with another control on the form.</span></span> <span data-ttu-id="f9da5-194">Si noti che viene visualizzata una Guida di allineamento per indicare l'allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-194">Note that a snapline appears to indicate alignment.</span></span>  
   
-5.  Spostare il controllo <xref:System.Windows.Forms.Label>leggermente in avanti fino ad allineare il testo di <xref:System.Windows.Forms.Label>e il testo di <xref:System.Windows.Forms.TextBox>.  Viene visualizzata una guida di allineamento in uno stile differente che indica quando i campi testo di entrambi i controlli sono allineati.  
+6.  <span data-ttu-id="f9da5-195">Rilasciare il pulsante del mouse.</span><span class="sxs-lookup"><span data-stu-id="f9da5-195">Release the mouse button.</span></span> <span data-ttu-id="f9da5-196">Il controllo viene creato nella posizione e dimensioni indicate dalla struttura.</span><span class="sxs-lookup"><span data-stu-id="f9da5-196">The control is created at the position and size indicated by the outline.</span></span>  
   
-## Utilizzo delle guide di allineamento con la navigazione da tastiera  
- Le guide di allineamento consentono di allineare i controlli quando vengono disposti utilizzando i tasti di direzione della tastiera.  
+## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="f9da5-197">Utilizzando le guide di allineamento quando si trascina un controllo dalla casella degli strumenti</span><span class="sxs-lookup"><span data-stu-id="f9da5-197">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
+ <span data-ttu-id="f9da5-198">Le guide di allineamento consentono di allineare controlla quando si trascina il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-198">Snaplines help you align controls when you drag them from the **Toolbox** onto your form.</span></span>  
   
-#### Per utilizzare le guide di allineamento con la navigazione da tastiera  
+#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="f9da5-199">Utilizzare le guide di allineamento quando si trascina un controllo dalla casella degli strumenti</span><span class="sxs-lookup"><span data-stu-id="f9da5-199">To use snaplines when dragging a control from the Toolbox</span></span>  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  Posizionarlo nell'angolo superiore sinistro del form.  
+1.  <span data-ttu-id="f9da5-200">Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form, senza rilasciare il pulsante del mouse.</span><span class="sxs-lookup"><span data-stu-id="f9da5-200">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form, but do not release the mouse button.</span></span>  
   
-2.  Premere CTRL \+ freccia GIÙ.  Il controllo viene spostato nel form verso il basso, nella prima posizione disponibile per l'allineamento orizzontale.  
+2.  <span data-ttu-id="f9da5-201">Spostare il puntatore del mouse sull'area di progettazione del form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-201">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="f9da5-202">Si noti che il puntatore del mouse cambia per indicare la posizione in cui il nuovo <xref:System.Windows.Forms.Button> controllo verrà creato.</span><span class="sxs-lookup"><span data-stu-id="f9da5-202">Note that the pointer changes to indicate the position at which the new <xref:System.Windows.Forms.Button> control will be created.</span></span>  
   
-3.  Premere CTRL \+ freccia GIÙ finché il controllo non raggiunge la fine del form.  Si notino le posizioni occupate dal controllo mentre si sposta verso il basso all'interno del form.  
+3.  <span data-ttu-id="f9da5-203">Trascinare il puntatore del mouse intorno al form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-203">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="f9da5-204">Le guide di allineamento che appaiono per indicare le posizioni allineate per i <xref:System.Windows.Forms.Button> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-204">Note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="f9da5-205">Cercare una posizione che è allineata con altri controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-205">Find a position that is aligned with other controls.</span></span>  
   
-4.  Premere CTRL \+ freccia DESTRA.  Il controllo viene spostato nel form, nella prima posizione disponibile per l'allineamento verticale.  
+4.  <span data-ttu-id="f9da5-206">Rilasciare il pulsante del mouse.</span><span class="sxs-lookup"><span data-stu-id="f9da5-206">Release the mouse button.</span></span> <span data-ttu-id="f9da5-207">Il controllo viene creato nella posizione indicata dalle guide di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-207">The control is created at the position indicated by the snaplines.</span></span>  
   
-5.  Premere CTRL \+ freccia DESTRA finché il controllo non raggiunge il lato destro del form.  Si notino le posizioni occupate dal controllo mentre si sposta all'interno del form.  
+## <a name="resizing-controls-using-snaplines"></a><span data-ttu-id="f9da5-208">Ridimensionamento di controlli utilizzando le guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-208">Resizing Controls Using Snaplines</span></span>  
+ <span data-ttu-id="f9da5-209">Le guide di allineamento consentono di allineare i controlli durante il ridimensionamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-209">Snaplines help you align controls as you resize them.</span></span>  
   
-6.  Spostare il controllo nel form con una combinazione di tasti di direzione.  Si notino le posizioni occupate dal controllo e le relative guide di allineamento.  
+#### <a name="to-resize-a-control-using-snaplines"></a><span data-ttu-id="f9da5-210">Per ridimensionare un controllo utilizzando le guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-210">To resize a control using snaplines</span></span>  
   
-7.  Premere MAIUSC \+ un tasto di direzione per ridimensionare il controllo <xref:System.Windows.Forms.Button> in incrementi di un pixel.  
+1.  <span data-ttu-id="f9da5-211">Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-211">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-8.  Premere CTRL \+ MAIUSC \+ un tasto di direzione per ridimensionare il controllo <xref:System.Windows.Forms.Button> in incrementi della guida di allineamento.  
+2.  <span data-ttu-id="f9da5-212">Ridimensionare il <xref:System.Windows.Forms.Button> controllo agganciando uno dei quadratini di ridimensionamento e trascinandolo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-212">Resize the <xref:System.Windows.Forms.Button> control by grabbing one of the corner sizing handles and dragging.</span></span> <span data-ttu-id="f9da5-213">Per informazioni dettagliate, vedere [procedura: ridimensionare i controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="f9da5-213">For details, see [How to: Resize Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).</span></span>  
   
-## Pannelli layout e guide di allineamento  
- Le guide di allineamento sono disabilitate nei pannelli layout.  
+3.  <span data-ttu-id="f9da5-214">Trascinare il quadratino di ridimensionamento fino a quando una del <xref:System.Windows.Forms.Button> bordi del controllo è allineato con un altro controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-214">Drag the sizing handle until one of the <xref:System.Windows.Forms.Button> control's borders is aligned with another control.</span></span> <span data-ttu-id="f9da5-215">Si noti che viene visualizzata una Guida di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-215">Note that a snapline appears.</span></span> <span data-ttu-id="f9da5-216">Si noti inoltre che il quadratino di ridimensionamento si blocca nella posizione indicata dalla Guida di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-216">Also note that the sizing handle snaps to the position indicated by the snapline.</span></span>  
   
-#### Per disabilitare selettivamente le guide di allineamento  
+4.  <span data-ttu-id="f9da5-217">Ridimensionare il <xref:System.Windows.Forms.Button> controllo in diverse direzioni e allineare il quadratino di ridimensionamento di controlli diversi.</span><span class="sxs-lookup"><span data-stu-id="f9da5-217">Resize the <xref:System.Windows.Forms.Button> control in different directions and align the sizing handle to different controls.</span></span> <span data-ttu-id="f9da5-218">Si noti come le guide di allineamento vengono visualizzati in diverse direzioni per indicare l'allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-218">Note how the snaplines appear in various orientations to indicate alignment.</span></span>  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.  
+## <a name="aligning-a-label-to-a-controls-text"></a><span data-ttu-id="f9da5-219">Allineamento di un'etichetta di testo di un controllo</span><span class="sxs-lookup"><span data-stu-id="f9da5-219">Aligning a Label to a Control's Text</span></span>  
+ <span data-ttu-id="f9da5-220">Alcuni controlli offrono una Guida di allineamento per allineare il testo visualizzato degli altri controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-220">Some controls offer a snapline for aligning other controls to displayed text.</span></span>  
   
-2.  Fare doppio clic sull'icona del controllo <xref:System.Windows.Forms.Button> nella **Casella degli strumenti**.  Viene visualizzato un nuovo controllo pulsante nella prima cella del controllo <xref:System.Windows.Forms.TableLayoutPanel>.  
+#### <a name="to-align-a-label-to-a-controls-text"></a><span data-ttu-id="f9da5-221">Per allineare un'etichetta di testo di un controllo</span><span class="sxs-lookup"><span data-stu-id="f9da5-221">To align a label to a control's text</span></span>  
   
-3.  Fare doppio clic sull'icona del controllo <xref:System.Windows.Forms.Button> nella **Casella degli strumenti** altre due volte.  In tal modo viene lasciata una cella vuota nel controllo <xref:System.Windows.Forms.TableLayoutPanel>.  
+1.  <span data-ttu-id="f9da5-222">Trascinare un <xref:System.Windows.Forms.TextBox> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-222">Drag a <xref:System.Windows.Forms.TextBox> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="f9da5-223">Quando si trascina il <xref:System.Windows.Forms.TextBox> controllo nel form, fare clic sul glifo dello smart tag e selezionare il **impostare testo textBox1** opzione.</span><span class="sxs-lookup"><span data-stu-id="f9da5-223">When you drop the <xref:System.Windows.Forms.TextBox> control onto the form, click the smart-tag glyph and select the **Set text to textBox1** option.</span></span> <span data-ttu-id="f9da5-224">Per informazioni dettagliate, vedere [procedura dettagliata: esecuzione di comuni attività utilizzando gli Smart tag nei controlli Windows Form](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).</span><span class="sxs-lookup"><span data-stu-id="f9da5-224">For details, see [Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).</span></span>  
   
-4.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nella cella vuota del controllo <xref:System.Windows.Forms.TableLayoutPanel>.  Non viene visualizzata alcuna guida di allineamento.  
+2.  <span data-ttu-id="f9da5-225">Trascinare un <xref:System.Windows.Forms.Label> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-225">Drag a <xref:System.Windows.Forms.Label> control from the **Toolbox** onto your form.</span></span>  
   
-5.  Trascinare il controllo <xref:System.Windows.Forms.Button> fuori dal controllo <xref:System.Windows.Forms.TableLayoutPanel> e spostarlo all'interno del controllo <xref:System.Windows.Forms.TableLayoutPanel>.  Vengono di nuovo visualizzate le guide di allineamento.  
+3.  <span data-ttu-id="f9da5-226">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Label>, <xref:System.Windows.Forms.Control.AutoSize%2A>, su `true`.</span><span class="sxs-lookup"><span data-stu-id="f9da5-226">Change the value of the <xref:System.Windows.Forms.Label> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="f9da5-227">Si noti che i bordi del controllo vengono regolati per adattarsi al testo visualizzato.</span><span class="sxs-lookup"><span data-stu-id="f9da5-227">Note that the control's borders are adjusted to fit the display text.</span></span>  
   
-## Disabilitazione delle guide di allineamento  
- Per impostazione predefinita le guide di allineamento sono attivate.  È possibile disabilitarle selettivamente oppure nell'ambiente di progettazione.  
+4.  <span data-ttu-id="f9da5-228">Spostare il <xref:System.Windows.Forms.Label> controllo a sinistra del <xref:System.Windows.Forms.TextBox> controllare, in modo che sia allineato al bordo inferiore del <xref:System.Windows.Forms.TextBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-228">Move the <xref:System.Windows.Forms.Label> control to the left of the <xref:System.Windows.Forms.TextBox> control, so it is aligned with the bottom edge of the <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="f9da5-229">Si noti la Guida di allineamento che viene visualizzato lungo il bordo inferiore dei due controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-229">Note the snapline that appears along the bottom edges of the two controls.</span></span>  
   
-#### Per disabilitare selettivamente le guide di allineamento  
+5.  <span data-ttu-id="f9da5-230">Spostare il <xref:System.Windows.Forms.Label> controllo leggermente verso l'alto, finché il <xref:System.Windows.Forms.Label> testo e <xref:System.Windows.Forms.TextBox> testo sono allineate.</span><span class="sxs-lookup"><span data-stu-id="f9da5-230">Move the <xref:System.Windows.Forms.Label> control slightly upward, until the <xref:System.Windows.Forms.Label> text and the <xref:System.Windows.Forms.TextBox> text are aligned.</span></span> <span data-ttu-id="f9da5-231">Si noti la Guida di allineamento in uno stile differente viene visualizzato un messaggio quando i campi di testo di entrambi i controlli sono allineati.</span><span class="sxs-lookup"><span data-stu-id="f9da5-231">Note the differently styled snapline that appears, indicating when the text fields of both controls are aligned.</span></span>  
   
--   Premere ALT mentre si sposta un controllo all'interno del form.  
+## <a name="using-snaplines-with-keyboard-navigation"></a><span data-ttu-id="f9da5-232">Utilizzando le guide di allineamento con navigazione tramite tastiera</span><span class="sxs-lookup"><span data-stu-id="f9da5-232">Using Snaplines with Keyboard Navigation</span></span>  
+ <span data-ttu-id="f9da5-233">Le guide di allineamento consentono di che allineare controlla quando vengono disposti utilizzando i tasti di direzione della tastiera.</span><span class="sxs-lookup"><span data-stu-id="f9da5-233">Snaplines help you align controls when you are arranging them using the keyboard's arrow keys.</span></span>  
   
-     Si noti che non viene visualizzata alcuna guida di allineamento e il controllo non si blocca in alcuna posizione di allineamento potenziale.  
+#### <a name="to-use-snaplines-with-keyboard-navigation"></a><span data-ttu-id="f9da5-234">Per utilizzare le guide di allineamento con navigazione tramite tastiera</span><span class="sxs-lookup"><span data-stu-id="f9da5-234">To use snaplines with keyboard navigation</span></span>  
   
-#### Per disabilitare le guide di allineamento nell'ambiente di progettazione  
+1.  <span data-ttu-id="f9da5-235">Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-235">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="f9da5-236">Inserirlo nell'angolo superiore sinistro del form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-236">Place it in the upper-left corner of the form.</span></span>  
   
-1.  Aprire la finestra di dialogo **Opzioni** dal menu **Strumenti**.  Aprire la finestra di dialogo Progettazione Windows Form.  Per informazioni dettagliate, vedere [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/it-it/8dd170af-72f0-4212-b04b-034ceee92834).  
+2.  <span data-ttu-id="f9da5-237">Premere CTRL + freccia giù.</span><span class="sxs-lookup"><span data-stu-id="f9da5-237">Press CTRL+DOWN ARROW.</span></span> <span data-ttu-id="f9da5-238">Si noti che il controllo viene spostato verso il basso il modulo nella prima posizione di allineamento orizzontale disponibile.</span><span class="sxs-lookup"><span data-stu-id="f9da5-238">Note that the control moves down the form to the first available horizontal alignment position.</span></span>  
   
-2.  Scegliere il nodo **Generale**.  Nella sezione **Modalità layout**, cambiare la selezione da **SnapLines** a **SnapToGrid**.  
+3.  <span data-ttu-id="f9da5-239">Premere CTRL + freccia GIÙ fino a quando il controllo raggiunge la fine del form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-239">Press CTRL+DOWN ARROW until the control reaches the bottom of the form.</span></span> <span data-ttu-id="f9da5-240">Tenere presente le posizioni occupate mentre vengono spostati verso il basso il modulo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-240">Note the positions it occupies as it moves down the form.</span></span>  
   
-3.  Scegliere OK per applicare le impostazioni.  
+4.  <span data-ttu-id="f9da5-241">Premere CTRL + freccia destra.</span><span class="sxs-lookup"><span data-stu-id="f9da5-241">Press CTRL+RIGHT ARROW.</span></span> <span data-ttu-id="f9da5-242">Si noti che il controllo viene spostato nel form per la prima posizione di allineamento verticale disponibili.</span><span class="sxs-lookup"><span data-stu-id="f9da5-242">Note that the control moves across the form to the first available vertical alignment position.</span></span>  
   
-4.  Selezionare un controllo nel form e spostarlo intorno agli altri controlli.  Le guide di allineamento non vengono visualizzate.  
+5.  <span data-ttu-id="f9da5-243">Premere CTRL + freccia destra fino a quando il controllo raggiunge il lato del form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-243">Press CTRL+RIGHT ARROW until the control reaches the side of the form.</span></span> <span data-ttu-id="f9da5-244">Tenere presente le posizioni occupate mentre si sposta tra il modulo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-244">Note the positions it occupies as it moves across the form.</span></span>  
   
-## Passaggi successivi  
- Le guide di allineamento offrono modalità intuitive per l'allineamento dei controlli nel form.  Per approfondire l'argomento, si consiglia di effettuare le seguenti operazioni:  
+6.  <span data-ttu-id="f9da5-245">Spostare il controllo nel form con una combinazione di tasti di direzione.</span><span class="sxs-lookup"><span data-stu-id="f9da5-245">Move the control around the form with a combination of arrow keys.</span></span> <span data-ttu-id="f9da5-246">Si notino le posizioni che occupate dal controllo e le guide di allineamento che li accompagnano.</span><span class="sxs-lookup"><span data-stu-id="f9da5-246">Note the positions the control occupies and the snaplines that accompany them.</span></span>  
   
--   Provare a annidare un controllo <xref:System.Windows.Forms.GroupBox> in un altro controllo <xref:System.Windows.Forms.GroupBox>.  Inserire un controllo <xref:System.Windows.Forms.Button> in un controllo figlio <xref:System.Windows.Forms.GroupBox> e un altro all'interno del controllo padre <xref:System.Windows.Forms.GroupBox>.  Spostare i controlli <xref:System.Windows.Forms.Button> per vedere come le guide di allineamento attraversano i limiti del contenitore.  
+7.  <span data-ttu-id="f9da5-247">Premere MAIUSC + qualsiasi tasto di direzione per ridimensionare il <xref:System.Windows.Forms.Button> controllo in incrementi di un pixel.</span><span class="sxs-lookup"><span data-stu-id="f9da5-247">Press SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control by increments of one pixel.</span></span>  
   
--   Creare una colonna di controlli <xref:System.Windows.Forms.TextBox> e una corrispondente colonna di controlli <xref:System.Windows.Forms.Label>.  Impostare il valore della proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> del controllo <xref:System.Windows.Forms.Label> su `true`.  Utilizzare le guide di allineamento per spostare i controlli <xref:System.Windows.Forms.Label>in modo che il testo visualizzato sia allineato al testo dei controlli <xref:System.Windows.Forms.TextBox>.  
+8.  <span data-ttu-id="f9da5-248">Premere CTRL + MAIUSC + qualsiasi tasto di direzione per ridimensionare il <xref:System.Windows.Forms.Button> controllo in incrementi di Guida di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-248">Press CTRL+SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control in snapline increments.</span></span>  
   
- Per informazioni sulla progettazione di interfacce utente Windows, fare riferimento al libro *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA: Microsoft Press, 1999.  \(USBN: 0\-7356\-0566\-1\).  
+## <a name="snaplines-and-layout-panels"></a><span data-ttu-id="f9da5-249">Le guide di allineamento e i pannelli di Layout</span><span class="sxs-lookup"><span data-stu-id="f9da5-249">Snaplines and Layout Panels</span></span>  
+ <span data-ttu-id="f9da5-250">Le guide di allineamento sono disabilitate in altri pannelli layout.</span><span class="sxs-lookup"><span data-stu-id="f9da5-250">Snaplines are disabled within layout panels.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Design.Behavior.SnapLine>   
- [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Procedura dettagliata: disposizione di controlli Windows Form utilizzando spaziatura, margini e la proprietà AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)   
- [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="f9da5-251">Per disabilitare selettivamente le guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-251">To selectively disable snaplines</span></span>  
+  
+1.  <span data-ttu-id="f9da5-252">Trascinare un <xref:System.Windows.Forms.TableLayoutPanel> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-252">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
+  
+2.  <span data-ttu-id="f9da5-253">Fare doppio clic sull'icona del controllo <xref:System.Windows.Forms.Button> nella **Casella degli strumenti**.</span><span class="sxs-lookup"><span data-stu-id="f9da5-253">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox**.</span></span> <span data-ttu-id="f9da5-254">Viene visualizzato un pulsante nuovo nel <xref:System.Windows.Forms.TableLayoutPanel> prima cella del controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-254">Note that a new button control appears in the <xref:System.Windows.Forms.TableLayoutPanel> control's first cell.</span></span>  
+  
+3.  <span data-ttu-id="f9da5-255">Fare doppio clic su di <xref:System.Windows.Forms.Button> icona controllo il **della casella degli strumenti** altre due volte.</span><span class="sxs-lookup"><span data-stu-id="f9da5-255">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox** twice more.</span></span> <span data-ttu-id="f9da5-256">In questo modo, una cella vuota nel <xref:System.Windows.Forms.TableLayoutPanel> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-256">This leaves one empty cell in the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
+  
+4.  <span data-ttu-id="f9da5-257">Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nella cella vuota del <xref:System.Windows.Forms.TableLayoutPanel> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-257">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the empty cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="f9da5-258">Si noti che non le guide di allineamento vengono visualizzati.</span><span class="sxs-lookup"><span data-stu-id="f9da5-258">Note that no snaplines appear.</span></span>  
+  
+5.  <span data-ttu-id="f9da5-259">Trascinare il <xref:System.Windows.Forms.Button> controllare fuori il <xref:System.Windows.Forms.TableLayoutPanel> controllare e spostarlo il <xref:System.Windows.Forms.TableLayoutPanel> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-259">Drag the <xref:System.Windows.Forms.Button> control out of the <xref:System.Windows.Forms.TableLayoutPanel> control and move it around the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="f9da5-260">Si noti che le guide di allineamento vengono visualizzati di nuovo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-260">Note that snaplines appear again.</span></span>  
+  
+## <a name="disabling-snaplines"></a><span data-ttu-id="f9da5-261">La disabilitazione di guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-261">Disabling Snaplines</span></span>  
+ <span data-ttu-id="f9da5-262">Le guide di allineamento sono attivate per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="f9da5-262">Snaplines are turned on by default.</span></span> <span data-ttu-id="f9da5-263">È possibile disabilitare in modo selettivo le guide di allineamento, oppure è possibile disabilitarli nell'ambiente di progettazione.</span><span class="sxs-lookup"><span data-stu-id="f9da5-263">You can disable snaplines selectively, or you can disable them in the design environment.</span></span>  
+  
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="f9da5-264">Per disabilitare selettivamente le guide di allineamento</span><span class="sxs-lookup"><span data-stu-id="f9da5-264">To selectively disable snaplines</span></span>  
+  
+-   <span data-ttu-id="f9da5-265">Premere il tasto ALT mentre si sposta un controllo nel form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-265">Press the ALT key and while moving a control around the form.</span></span>  
+  
+     <span data-ttu-id="f9da5-266">Si noti che non le guide di allineamento vengono visualizzati e il controllo si blocca in qualsiasi posizione di allineamento potenziale.</span><span class="sxs-lookup"><span data-stu-id="f9da5-266">Note that no snaplines appear and the control does not snap to any potential alignment positions.</span></span>  
+  
+#### <a name="to-disable-snaplines-in-the-design-environment"></a><span data-ttu-id="f9da5-267">Per disabilitare le guide di allineamento nell'ambiente di progettazione</span><span class="sxs-lookup"><span data-stu-id="f9da5-267">To disable snaplines in the design environment</span></span>  
+  
+1.  <span data-ttu-id="f9da5-268">Dal **strumenti** menu, aprire il **opzioni** la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-268">From the **Tools** menu, open the **Options** dialog box.</span></span> <span data-ttu-id="f9da5-269">Aprire la finestra di dialogo Progettazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-269">Open the Windows Forms Designer dialog box.</span></span> <span data-ttu-id="f9da5-270">Per informazioni dettagliate, vedere [generale, Progettazione Windows Form, la finestra di dialogo Opzioni](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).</span><span class="sxs-lookup"><span data-stu-id="f9da5-270">For details, see [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).</span></span>  
+  
+2.  <span data-ttu-id="f9da5-271">Selezionare il **generale** nodo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-271">Select the **General** node.</span></span> <span data-ttu-id="f9da5-272">Nel **modalità Layout** sezione, modificare la selezione da **le guide di allineamento** a **SnapToGrid**.</span><span class="sxs-lookup"><span data-stu-id="f9da5-272">In the **Layout Mode** section, change the selection from **SnapLines** to **SnapToGrid**.</span></span>  
+  
+3.  <span data-ttu-id="f9da5-273">Fare clic su OK per applicare l'impostazione.</span><span class="sxs-lookup"><span data-stu-id="f9da5-273">Click OK to apply the setting.</span></span>  
+  
+4.  <span data-ttu-id="f9da5-274">Selezionare un controllo sul form e spostarlo all'interno di altri controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-274">Select a control on your form and move it around the other controls.</span></span> <span data-ttu-id="f9da5-275">Si noti che non vengono visualizzate le guide di allineamento.</span><span class="sxs-lookup"><span data-stu-id="f9da5-275">Note that snaplines do not appear.</span></span>  
+  
+## <a name="next-steps"></a><span data-ttu-id="f9da5-276">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="f9da5-276">Next Steps</span></span>  
+ <span data-ttu-id="f9da5-277">Le guide di allineamento offrono modalità intuitive per l'allineamento dei controlli sul form.</span><span class="sxs-lookup"><span data-stu-id="f9da5-277">Snaplines offer an intuitive means of aligning controls on your form.</span></span> <span data-ttu-id="f9da5-278">Per approfondire l'argomento, si consiglia di effettuare le seguenti operazioni:</span><span class="sxs-lookup"><span data-stu-id="f9da5-278">Suggestions for more exploration include:</span></span>  
+  
+-   <span data-ttu-id="f9da5-279">Provare a annidare un <xref:System.Windows.Forms.GroupBox> controllo all'interno di altra <xref:System.Windows.Forms.GroupBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-279">Try nesting a <xref:System.Windows.Forms.GroupBox> control within another <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="f9da5-280">Sul posto un <xref:System.Windows.Forms.Button> controllo all'interno del figlio <xref:System.Windows.Forms.GroupBox> controllo e un altro nel controllo padre <xref:System.Windows.Forms.GroupBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f9da5-280">Place a <xref:System.Windows.Forms.Button> control within the child <xref:System.Windows.Forms.GroupBox> control, and another within the parent <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="f9da5-281">Spostare il <xref:System.Windows.Forms.Button> controlli per vedere come le guide di allineamento attraversano i limiti del contenitore.</span><span class="sxs-lookup"><span data-stu-id="f9da5-281">Move the <xref:System.Windows.Forms.Button> controls around to see how the snaplines cross container boundaries.</span></span>  
+  
+-   <span data-ttu-id="f9da5-282">Creare una colonna di <xref:System.Windows.Forms.TextBox> controlli e una colonna corrispondente della <xref:System.Windows.Forms.Label> controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-282">Create a column of <xref:System.Windows.Forms.TextBox> controls and a corresponding column of <xref:System.Windows.Forms.Label> controls.</span></span> <span data-ttu-id="f9da5-283">Impostare il valore della <xref:System.Windows.Forms.Label> dei controlli <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà `true`.</span><span class="sxs-lookup"><span data-stu-id="f9da5-283">Set the value of the <xref:System.Windows.Forms.Label> controls' <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="f9da5-284">Utilizzare le guide di allineamento per spostare il <xref:System.Windows.Forms.Label> controlla in modo che il testo visualizzato è allineato con il testo di <xref:System.Windows.Forms.TextBox> controlli.</span><span class="sxs-lookup"><span data-stu-id="f9da5-284">Use snaplines to move the <xref:System.Windows.Forms.Label> controls so their displayed text is aligned with the text in the <xref:System.Windows.Forms.TextBox> controls.</span></span>  
+  
+ <span data-ttu-id="f9da5-285">Per informazioni sulla progettazione dell'interfaccia utente di Windows, vedere il manuale *Microsoft Windows User Experience, Official Guidelines for User Interface Developers e finestre di progettazione* Redmond, WA: Microsoft Press, 1999.</span><span class="sxs-lookup"><span data-stu-id="f9da5-285">For information about Windows user interface design, see the book *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA: Microsoft Press, 1999.</span></span> <span data-ttu-id="f9da5-286">(USBN: 0-7356-0566-1).</span><span class="sxs-lookup"><span data-stu-id="f9da5-286">(USBN: 0-7356-0566-1).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f9da5-287">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f9da5-287">See Also</span></span>  
+ <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
+ [<span data-ttu-id="f9da5-288">Procedura dettagliata: disposizione dei controlli in Windows Form usando FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="f9da5-288">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="f9da5-289">Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="f9da5-289">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="f9da5-290">Procedura dettagliata: disposizione di controlli Windows Form usando spaziatura, margini e la proprietà AutoSize</span><span class="sxs-lookup"><span data-stu-id="f9da5-290">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
+ [<span data-ttu-id="f9da5-291">Disposizione di controlli in Windows Form</span><span class="sxs-lookup"><span data-stu-id="f9da5-291">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)

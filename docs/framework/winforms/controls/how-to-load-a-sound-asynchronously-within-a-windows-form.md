@@ -1,65 +1,69 @@
 ---
-title: "Procedura: caricare in modo asincrono un suono in un Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Classe SoundPlayer, caricamento asincrono di suoni"
-  - "suoni, caricamento in thread separati"
-  - "i suoni di threading [Windows Form]"
+title: 'Procedura: Caricare in modo asincrono un suono in un Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SoundPlayer class [Windows Forms], loading sounds asynchronously
+- sounds [Windows Forms], loading on separate threads
+- threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d4ff6670c8e4d8ab735323fe13549e34c6cfd55f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: caricare in modo asincrono un suono in un Windows Form
-Nell'esempio di codice seguente viene caricato un suono in modo asincrono da un URL e quindi viene riprodotto in un nuovo thread.  
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a><span data-ttu-id="24336-102">Procedura: Caricare in modo asincrono un suono in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="24336-102">How to: Load a Sound Asynchronously within a Windows Form</span></span>
+<span data-ttu-id="24336-103">Nell'esempio di codice seguente viene caricato un suono in modo asincrono da un URL e quindi viene riprodotto in un nuovo thread.</span><span class="sxs-lookup"><span data-stu-id="24336-103">The following code example asynchronously loads a sound from an URL and then plays it on a new thread.</span></span>  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="24336-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="24336-104">Example</span></span>  
  [!code-csharp[System.Media.SoundPlayer.LoadAsync#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.LoadAsync/CS/Form1.cs#1)]
  [!code-vb[System.Media.SoundPlayer.LoadAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.LoadAsync/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio presenta i requisiti seguenti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="24336-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="24336-105">Compiling the Code</span></span>  
+ <span data-ttu-id="24336-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="24336-106">This example requires:</span></span>  
   
--   Riferimenti agli assembly System e System.Windows.Forms.  
+-   <span data-ttu-id="24336-107">Riferimenti agli assembly System e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="24336-107">References to the System and System.Windows.Forms assemblies.</span></span>  
   
--   Sostituzione del nome del file `"http://www.tailspintoys.com/sounds/stop.wav"` con un nome file valido.  
+-   <span data-ttu-id="24336-108">Sostituzione del nome del file `"http://www.tailspintoys.com/sounds/stop.wav"` con un nome file valido.</span><span class="sxs-lookup"><span data-stu-id="24336-108">That you replace the file name `"http://www.tailspintoys.com/sounds/stop.wav"` with a valid file name.</span></span>  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], vedere [compilazione dalla riga di comando](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [con la creazione della riga di comando csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.  Vedere anche [procedura: compilare ed eseguire un completo esempio Windows Form codice utilizzando Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="24336-109">Per informazioni sulla compilazione di questo esempio dalla riga di comando per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="24336-109">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="24336-110">È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.</span><span class="sxs-lookup"><span data-stu-id="24336-110">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="24336-111">Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="24336-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="robust-programming"></a>Programmazione efficiente  
- Le operazioni sui file devono essere racchiuse tra blocchi di gestione delle eccezioni appropriati.  
+## <a name="robust-programming"></a><span data-ttu-id="24336-112">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="24336-112">Robust Programming</span></span>  
+ <span data-ttu-id="24336-113">Le operazioni sui file devono essere racchiuse tra blocchi di gestione delle eccezioni appropriati.</span><span class="sxs-lookup"><span data-stu-id="24336-113">File operations should be enclosed within appropriate exception-handling blocks.</span></span>  
   
- Le seguenti condizioni possono generare un'eccezione:  
+ <span data-ttu-id="24336-114">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="24336-114">The following conditions may cause an exception:</span></span>  
   
--   Il nome del percorso non è valido. Ad esempio, contiene caratteri non validi o solo spazi vuoti (<xref:System.ArgumentException> classe).  
+-   <span data-ttu-id="24336-115">Il nome del percorso non è valido.</span><span class="sxs-lookup"><span data-stu-id="24336-115">The path name is malformed.</span></span> <span data-ttu-id="24336-116">Ad esempio, contiene caratteri non validi o solo uno spazio vuoto (classe <xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="24336-116">For example, it contains characters that are not valid or is only white space (<xref:System.ArgumentException> class).</span></span>  
   
--   Il percorso è di sola lettura (<xref:System.IO.IOException> classe).  
+-   <span data-ttu-id="24336-117">Il percorso è di sola lettura (classe <xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="24336-117">The path is read-only (<xref:System.IO.IOException> class).</span></span>  
   
--   Il percorso è `Nothing` (<xref:System.ArgumentNullException> classe).  
+-   <span data-ttu-id="24336-118">Il nome del percorso è `Nothing` (classe <xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="24336-118">The path name is `Nothing` (<xref:System.ArgumentNullException> class).</span></span>  
   
--   Il nome del percorso è troppo lungo (<xref:System.IO.PathTooLongException> classe).  
+-   <span data-ttu-id="24336-119">Il nome del percorso è troppo lungo (classe <xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="24336-119">The path name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
   
--   Il percorso non valido (<xref:System.IO.DirectoryNotFoundException> classe).  
+-   <span data-ttu-id="24336-120">Il percorso non è valido (classe <xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="24336-120">The path is not valid (<xref:System.IO.DirectoryNotFoundException> class).</span></span>  
   
--   Il percorso contiene solo due punti ":" (<xref:System.NotSupportedException> classe).  
+-   <span data-ttu-id="24336-121">Il percorso contiene solo due punti ":" (classe <xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="24336-121">The path is only a colon ":" (<xref:System.NotSupportedException> class).</span></span>  
   
-## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto. È possibile ad esempio che il file `Form1.vb` non sia un file di origine di Visual Basic. Prima di usare i dati nell'applicazione verificare tutti gli input.  
+## <a name="net-framework-security"></a><span data-ttu-id="24336-122">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="24336-122">.NET Framework Security</span></span>  
+ <span data-ttu-id="24336-123">Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto.</span><span class="sxs-lookup"><span data-stu-id="24336-123">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="24336-124">È possibile ad esempio che il file `Form1.vb` non sia un file di origine di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="24336-124">For example, the file `Form1.vb` may not be a Visual Basic source file.</span></span> <span data-ttu-id="24336-125">Prima di usare i dati nell'applicazione verificare tutti gli input.</span><span class="sxs-lookup"><span data-stu-id="24336-125">Verify all inputs before using the data in your application.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Media.SoundPlayer.LoadAsync%2A>   
- <xref:System.Media.SoundPlayer.LoadCompleted>   
- <xref:System.Media.SoundPlayer.Play%2A>   
- [Procedura: riprodurre un suono da un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+## <a name="see-also"></a><span data-ttu-id="24336-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="24336-126">See Also</span></span>  
+ <xref:System.Media.SoundPlayer.LoadAsync%2A>  
+ <xref:System.Media.SoundPlayer.LoadCompleted>  
+ <xref:System.Media.SoundPlayer.Play%2A>  
+ [<span data-ttu-id="24336-127">Procedura: Riprodurre un suono da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="24336-127">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
