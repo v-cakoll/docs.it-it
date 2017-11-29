@@ -1,32 +1,38 @@
 ---
-title: "Servizi duplex | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Servizi duplex
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5b5e0e2b1b2aa6292d53f1688ef124d9add42b5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Servizi duplex
+# <a name="duplex-services"></a>Servizi duplex
 Un contratto di servizio duplex è un modello di scambio di messaggi nel quale entrambi gli endpoint possono inviare messaggi l'uno all'altro in modo indipendente. Un servizio duplex, pertanto, può inviare messaggi all'endpoint client, fornendo un comportamento simile a quello degli eventi. Una comunicazione duplex ha luogo quando un client si connette a un servizio e fornisce a quest'ultimo un canale utilizzabile per inviare messaggi al client. Si noti che il comportamento simile a quello degli eventi di servizi duplex funziona solo all'interno di una sessione.  
   
- Per creare un contratto duplex è necessario creare una coppia di interfacce. La prima è l'interfaccia del contratto di servizio che descrive le operazioni che un client può richiamare. Contratto di servizio è necessario specificare un *contratto di callback* nel <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=fullName> proprietà. Il contratto callback è l'interfaccia che definisce le operazioni che il servizio può chiamare sull'endpoint client. Un contratto duplex non richiede sessioni, sebbene le associazioni duplex fornite dal sistema le utilizzino.  
+ Per creare un contratto duplex è necessario creare una coppia di interfacce. La prima è l'interfaccia del contratto di servizio che descrive le operazioni che un client può richiamare. Contratto di servizio è necessario specificare un *contratto di callback* nel <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> proprietà. Il contratto callback è l'interfaccia che definisce le operazioni che il servizio può chiamare sull'endpoint client. Un contratto duplex non richiede sessioni, sebbene le associazioni duplex fornite dal sistema le utilizzino.  
   
  Di seguito è riportato un esempio di contratto duplex.  
   
  [!code-csharp[c_DuplexServices#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#0)]
  [!code-vb[c_DuplexServices#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#0)]  
   
- La classe `CalculatorService` implementa l'interfaccia `ICalculatorDuplex` primaria. Il servizio utilizza il <xref:System.ServiceModel.InstanceContextMode> modalità dell'istanza per gestire il risultato per ogni sessione. Una proprietà privata denominata `Callback` accede al canale callback al client. Il servizio usa il callback per inviare i messaggi al client tramite l'interfaccia callback, come illustrato nel codice di esempio seguente.  
+ La classe `CalculatorService` implementa l'interfaccia `ICalculatorDuplex` primaria. Il servizio usa la modalità di istanza <xref:System.ServiceModel.InstanceContextMode.PerSession> per gestire il risultato per ogni sessione. Una proprietà privata denominata `Callback` accede al canale callback al client. Il servizio usa il callback per inviare i messaggi al client tramite l'interfaccia callback, come illustrato nel codice di esempio seguente.  
   
  [!code-csharp[c_DuplexServices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#1)]
  [!code-vb[c_DuplexServices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#1)]  
@@ -36,7 +42,7 @@ Un contratto di servizio duplex è un modello di scambio di messaggi nel quale e
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- Il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client generato per un contratto duplex richiede una <xref:System.ServiceModel.InstanceContext> classe devono essere fornite durante la costruzione. Questo <xref:System.ServiceModel.InstanceContext> classe viene usata come sito per un oggetto che implementa l'interfaccia di callback e gestisce i messaggi inviati dal servizio. Un <xref:System.ServiceModel.InstanceContext> viene costruita con un'istanza della classe di `CallbackHandler` (classe). Questo oggetto gestisce i messaggi inviati dal servizio al client sull'interfaccia di callback.  
+ Il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generato per un contratto duplex richiede che venga fornita una classe <xref:System.ServiceModel.InstanceContext> dopo la costruzione. Questa classe <xref:System.ServiceModel.InstanceContext> viene usata come sito per un oggetto che implementa l'interfaccia callback e gestisce i messaggi restituiti dal servizio. Una classe <xref:System.ServiceModel.InstanceContext> viene costruita con un'istanza della classe `CallbackHandler`. Questo oggetto gestisce i messaggi inviati dal servizio al client sull'interfaccia di callback.  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  
@@ -48,7 +54,7 @@ Un contratto di servizio duplex è un modello di scambio di messaggi nel quale e
   
   
 > [!NOTE]
->  I client non duplex che non riescono a eseguire l'autenticazione mediante conversazione protetta in genere generano un <xref:System.ServiceModel.Security.MessageSecurityException>. Tuttavia, se un client duplex che usa una conversazione protetta non riesce a eseguire l'autenticazione, il client riceve un <xref:System.TimeoutException> invece.  
+>  I client non duplex, la cui autenticazione mediante conversazione protetta non riesce, generano di norma un'eccezione <xref:System.ServiceModel.Security.MessageSecurityException>. Se, tuttavia, un client duplex che usa una conversazione protetta non viene autenticato, riceve un'eccezione <xref:System.TimeoutException>.  
   
  Quando si crea un client/servizio usando l'elemento `WSHttpBinding` e non si include l'endpoint di callback client, verrà restituito l'errore seguente.  
   
@@ -67,7 +73,7 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
   
  Nel codice di esempio seguente viene illustrato come specificare l'indirizzo endpoint client nella configurazione.  
   
-```  
+```xml  
 <client>  
     <endpoint name ="ServerEndpoint"   
           address="http://localhost:12000/DuplexTestUsingConfig/Server"  
@@ -83,13 +89,12 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
          </binding>  
     </wsDualHttpBinding>  
 </bindings>  
-  
 ```  
   
 > [!WARNING]
 >  Il modello duplex non consente di rilevare automaticamente il momento in cui un servizio o un client permette la chiusura del proprio canale. Pertanto, se un client viene terminato in modo imprevisto, per impostazione predefinita, non sarà inviata alcuna notifica al servizio. Client e servizi sono in grado di implementare il proprio protocollo per inviarsi vicendevolmente una notifica, se necessario.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Duplex](../../../../docs/framework/wcf/samples/duplex.md)   
- [Specifica del comportamento in fase di esecuzione Client](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)   
+ [Duplex](../../../../docs/framework/wcf/samples/duplex.md)  
+ [Specifica del comportamento in fase di esecuzione dei client](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [Procedura: creare una Channel Factory e usarla per la creazione e gestione di canali](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

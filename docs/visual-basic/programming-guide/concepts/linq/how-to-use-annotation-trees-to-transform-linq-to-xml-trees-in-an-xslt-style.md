@@ -1,32 +1,24 @@
 ---
-title: 'Procedura: utilizzare annotazioni per trasformare LINQ a strutture ad albero XML in uno stile XSLT (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: utilizzare annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17324fb6dca653aa3c15e3bad2fcc5ac35828bef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e2e5fce154d5d59657302deb2ce0be80a3bc3ac6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Procedura: utilizzare annotazioni per trasformare LINQ a strutture ad albero XML in uno stile XSLT (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Procedura: utilizzare annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (Visual Basic)
 Le annotazioni possono essere usate per facilitare le trasformazioni di un albero XML.  
   
  Alcuni documenti XML sono "basati su documenti con contenuto misto". Con tali documenti, la forma dei nodi figlio di un elemento non è necessariamente nota. Ad esempio, un nodo che contiene testo può essere analogo al seguente:  
@@ -47,13 +39,13 @@ Le annotazioni possono essere usate per facilitare le trasformazioni di un alber
   
  In dettaglio, l'approccio è costituito dai seguenti passaggi:  
   
--   Eseguire una o più query LINQ to XML che restituiscono il set di elementi da trasformare da una forma a un'altra. Per ogni elemento nella query, aggiungere un nuovo <xref:System.Xml.Linq.XElement>oggetto come un'annotazione all'elemento.</xref:System.Xml.Linq.XElement> Questo nuovo elemento sostituirà l'elemento annotato nel nuovo albero trasformato. Il codice da scrivere è semplice, come illustrato nell'esempio.  
+-   Eseguire una o più query LINQ to XML che restituiscono il set di elementi da trasformare da una forma a un'altra. Per ogni elemento della query, aggiungere un nuovo oggetto <xref:System.Xml.Linq.XElement> come annotazione all'elemento. Questo nuovo elemento sostituirà l'elemento annotato nel nuovo albero trasformato. Il codice da scrivere è semplice, come illustrato nell'esempio.  
   
 -   Il nuovo elemento aggiunto come annotazione può contenere nuovi nodi figlio e può formare un sottoalbero con la forma desiderata.  
   
 -   È necessario seguire una regola speciale: se un nodo figlio del nuovo elemento è incluso in uno spazio dei nomi diverso, ovvero uno spazio dei nomi creato appositamente (in questo esempio lo spazio dei nomi è `http://www.microsoft.com/LinqToXmlTransform/2007`), tale elemento figlio non viene copiato nel nuovo albero. Se invece lo spazio dei nomi è quello speciale citato in precedenza e il nome locale dell'elemento è `ApplyTransforms`, i nodi figlio dell'elemento nell'albero di origine vengono scorsi e quindi copiati nel nuovo albero, con l'eccezione che gli elementi figlio annotati vengono trasformati anch'essi in base a queste regole.  
   
--   Questo comportamento è in una certa misura analogo alla specifica di trasformazioni in XSL. La query che seleziona un set di nodi è analoga all'espressione XPath per un modello. Il codice per creare il nuovo <xref:System.Xml.Linq.XElement>che viene salvato come annotazione è analoga al costruttore di sequenze in XSL e `ApplyTransforms` elemento è una funzione per il `xsl:apply-templates` elemento XSL.</xref:System.Xml.Linq.XElement>  
+-   Questo comportamento è in una certa misura analogo alla specifica di trasformazioni in XSL. La query che seleziona un set di nodi è analoga all'espressione XPath per un modello. Il codice per creare il nuovo elemento <xref:System.Xml.Linq.XElement> salvato come annotazione è analogo al costruttore di sequenze in XSL e l'elemento `ApplyTransforms` ha una funzione analoga all'elemento `xsl:apply-templates` in XSL.  
   
 -   Uno dei vantaggi di questo approccio è che le query formulate vengono sempre scritte sull'albero di origine non modificata. Non è necessario preoccuparsi degli effetti delle modifiche apportate all'albero sulle query che vengono scritte.  
   
@@ -396,4 +388,4 @@ After Transform
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Avanzate di LINQ to XML programmazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

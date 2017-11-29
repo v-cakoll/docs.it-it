@@ -1,52 +1,55 @@
 ---
-title: "Procedura: specificare l&#39;origine di una trasformazione utilizzando valori relativi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "grafica, origini di trasformazioni"
-  - "origini di trasformazioni"
-  - "Trasformazioni, origini"
+title: 'Procedura: specificare l''origine di una trasformazione utilizzando valori relativi'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- origins of Transforms [WPF]
+- Transforms [WPF], origins of
+- graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec61fdedc78b785dccf2c235cd17fd20b6d5abc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: specificare l&#39;origine di una trasformazione utilizzando valori relativi
-In questo esempio viene illustrato come utilizzare valori relativi per specificare l'origine di una proprietà <xref:System.Windows.UIElement.RenderTransform%2A> applicata a <xref:System.Windows.FrameworkElement>.  
+# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Procedura: specificare l'origine di una trasformazione utilizzando valori relativi
+In questo esempio viene illustrato come utilizzare i valori relativi per specificare l'origine di un <xref:System.Windows.UIElement.RenderTransform%2A> che viene applicata a un <xref:System.Windows.FrameworkElement>.  
   
- Quando si utilizza la proprietà <xref:System.Windows.UIElement.RenderTransform%2A> per ruotare, ridimensionare o [inclinare](GTMT) un oggetto <xref:System.Windows.FrameworkElement>, per impostazione predefinita la trasformazione viene applicata all'angolo superiore sinistro dell'elemento.  Se si desidera eseguire la rotazione, il ridimensionamento o l'inclinazione dal centro dell'elemento, è possibile compensare impostando il centro della trasformazione sul centro dell'elemento.  Tuttavia, questa soluzione richiede di conoscere le dimensioni dell'elemento.  Per applicare una trasformazione al centro di un elemento in modo più semplice, è possibile impostare la relativa proprietà <xref:System.Windows.UIElement.RenderTransformOrigin%2A> su \(0,5, 0,5\), anziché impostare un valore centrale sulla trasformazione stessa.  
+ Quando ruotare, ridimensionare o inclinare un <xref:System.Windows.FrameworkElement> utilizzando il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà, l'impostazione predefinita viene applicata la trasformazione nell'angolo superiore sinistro dell'elemento. Se si desidera ruotare, ridimensionare o inclinare dal centro dell'elemento, è possibile compensare impostando il centro della trasformazione sul centro dell'elemento. Tuttavia, questa soluzione prevede che si conoscano le dimensioni dell'elemento. Un modo più semplice applicare una trasformazione al centro di un elemento consiste nell'impostare il relativo <xref:System.Windows.UIElement.RenderTransformOrigin%2A> proprietà (0,5, 0,5), anziché impostare un valore centrale sulla trasformazione stessa.  
   
-## Esempio  
- Nell'esempio seguente viene utilizzato un oggetto <xref:System.Windows.Media.RotateTransform> per ruotare un oggetto <xref:System.Windows.Controls.Button> di 45 gradi in senso orario.  Poiché nell'esempio non viene specificato un centro, il pulsante ruota intorno al punto \(0, 0\), che corrisponde all'angolo superiore sinistro.  L'oggetto <xref:System.Windows.Media.RotateTransform> viene applicato alla proprietà <xref:System.Windows.UIElement.RenderTransform%2A>.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.RotateTransform> per ruotare una <xref:System.Windows.Controls.Button> 45 gradi in senso orario. Poiché l'esempio non specifica un centro, il pulsante ruota intorno al punto (0, 0), ovvero l'angolo superiore sinistro. Il <xref:System.Windows.Media.RotateTransform> è collegato il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà.  
   
- Nell'immagine seguente è illustrato il risultato della trasformazione per l'esempio che segue.  
+ La figura seguente mostra il risultato della trasformazione per l'esempio che segue.  
   
- ![Pulsante trasformato usando RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm\_RenderTransformWithDefaultCenter")  
-Rotazione di 45 gradi in senso orario tramite la proprietà RenderTransform  
+ ![Pulsante trasformato usando RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+Rotazione in senso orario di 45 gradi usando la proprietà RenderTransform  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
- Anche nell'esempio seguente viene utilizzato un oggetto <xref:System.Windows.Media.RotateTransform> per ruotare un <xref:System.Windows.Controls.Button> di 45 gradi in senso orario; tuttavia in questo esempio viene impostata la <xref:System.Windows.UIElement.RenderTransformOrigin%2A> del pulsante su \(0,5, 0,5\).  Di conseguenza, la rotazione viene applicata al centro del pulsante anziché nell'angolo superiore sinistro.  
+ L'esempio seguente usa anche un <xref:System.Windows.Media.RotateTransform> per ruotare una <xref:System.Windows.Controls.Button> 45 gradi in senso orario, ma in questo esempio il <xref:System.Windows.UIElement.RenderTransformOrigin%2A> del pulsante su (0,5, 0,5). Di conseguenza, la rotazione viene applicata al centro del pulsante anziché all'angolo superiore sinistro.  
   
- Nell'immagine seguente è illustrato il risultato della trasformazione per l'esempio che segue.  
+ La figura seguente mostra il risultato della trasformazione per l'esempio che segue.  
   
- ![Pulsante trasformato rispetto al proprio centro](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm\_RenderTransformRelativeCenter")  
-Rotazione di 45 gradi tramite la proprietà RenderTransform con RenderTransformOrigin di \(0,5, 0,5\)  
+ ![Pulsante trasformato rispetto al proprio centro](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+Rotazione di 45 gradi usando la proprietà RenderTransform con RenderTransformOrigin del valore di (0,5, 0,5)  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- Per ulteriori informazioni sulla trasformazione di oggetti <xref:System.Windows.FrameworkElement>, vedere [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+ Per ulteriori informazioni sulla trasformazione <xref:System.Windows.FrameworkElement> degli oggetti, vedere il [Trasforma Panoramica](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
   
-## Vedere anche  
- <xref:System.Windows.Media.Transform>   
- [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Media.Transform>  
+ [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

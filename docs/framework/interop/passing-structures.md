@@ -5,28 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- platform invoke, calling unmanaged functions
+- csharp
+- vb
+helpviewer_keywords: platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e0cd4b8c76eca00ad7fbfcb03162a6705f72768
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ab9002d6e86b91f0ed21dae41f82af31f04291c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="passing-structures"></a>Passaggio di strutture
 Molte funzioni non gestite prevedono il passaggio, come parametro della funzione, di membri di strutture (tipi definiti dall'utente in Visual Basic) o membri di classi definiti nel codice gestito. Quando si passano strutture o classi al codice non gestito mediante platform invoke, è necessario fornire informazioni aggiuntive per mantenere il layout e l'allineamento originali. In questo argomento viene presentato l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, usato per definire i tipi formattati. Per le classi e le strutture gestite, è possibile selezionare tra diversi comportamenti di layout prevedibili forniti dall'enumerazione **LayoutKind**.  
@@ -188,8 +183,7 @@ public class TestPlatformInvoke
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
  <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
-

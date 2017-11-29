@@ -1,23 +1,26 @@
 ---
-title: "Operatori numerici e di confronto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Operatori numerici e di confronto
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f77cb612468b401f6aa526e46cc7481d0b47d385
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Operatori numerici e di confronto
-Gli operatori aritmetici e di confronto funzionano correttamente in Common Language Runtime \(CLR\), ad eccezione di quanto descritto di seguito:  
+# <a name="numeric-and-comparison-operators"></a>Operatori numerici e di confronto
+Gli operatori aritmetici e di confronto funzionano correttamente in Common Language Runtime (CLR), ad eccezione di quanto descritto di seguito:  
   
 -   In SQL non è supportato l'operatore modulo per i numeri a virgola mobile.  
   
@@ -25,34 +28,34 @@ Gli operatori aritmetici e di confronto funzionano correttamente in Common Langu
   
 -   Gli operatori di incremento e decremento provocano effetti collaterali quando vengono usati in espressioni che non possono essere replicate in SQL e, di conseguenza, non sono supportati.  
   
-## Operatori supportati  
+## <a name="supported-operators"></a>Operatori supportati  
  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono supportati gli operatori riportati di seguito.  
   
 -   Operatori aritmetici di base:  
   
     -   `+`  
   
-    -   `-` \(sottrazione\)  
+    -   `-` (sottrazione)  
   
     -   `*`  
   
     -   `/`  
   
-    -   Divisione con valori integer di Visual Basic \(`\`\)  
+    -   Divisione con valori integer di Visual Basic (`\`)  
   
-    -   `%` \(`Mod` di Visual Basic\)  
+    -   `%` (`Mod` di Visual Basic)  
   
     -   `<<`  
   
     -   `>>`  
   
-    -   `-` \(negazione unaria\)  
+    -   `-` (negazione unaria)  
   
 -   Operatori di confronto di base:  
   
-    -   `=` di Visual Basic e `==` di C\#  
+    -   `=` di Visual Basic e `==` di C#  
   
-    -   `<>` di Visual Basic e `!=` di C\#  
+    -   `<>` di Visual Basic e `!=` di C#  
   
     -   `Is/IsNot` Visual Basic  
   
@@ -64,7 +67,7 @@ Gli operatori aritmetici e di confronto funzionano correttamente in Common Langu
   
     -   `>=`  
   
-## Vedere anche  
- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)   
- [Operatori](../Topic/C%23%20Operators.md)   
- [Operators](../Topic/Operators%20\(Visual%20Basic\).md)
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni e tipi di dati](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
+ [Operatori C#](http://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43)  
+ [Operatori](../../../../../visual-basic/language-reference/operators/index.md)

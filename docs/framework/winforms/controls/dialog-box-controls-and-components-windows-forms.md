@@ -1,61 +1,62 @@
 ---
-title: "Controlli e componenti della finestra di dialogo (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CommonDialog (controllo)"
-  - "finestre di dialogo, Windows Form"
-  - "Windows Form (finestre di dialogo), predefiniti"
-  - "Windows Form, finestre di dialogo"
+title: Controlli e componenti della finestra di dialogo (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CommonDialog control
+- Windows Forms dialog boxes [Windows Forms], predefined
+- dialog boxes [Windows Forms], Windows Forms
+- Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ce4e6a62097fc673268f38a6db660b3bc9cba7b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Controlli e componenti della finestra di dialogo (Windows Form)
-I controlli e i componenti Windows Form riportati di seguito determinano la visualizzazione di finestre di dialogo standard.  Per altre informazioni sulle funzioni disponibili in ogni finestra di dialogo, usare i relativi collegamenti.  
+# <a name="dialog-box-controls-and-components-windows-forms"></a>Controlli e componenti della finestra di dialogo (Windows Form)
+I controlli e i componenti Windows Form riportati di seguito determinano la visualizzazione di finestre di dialogo standard. Per altre informazioni sulle funzioni disponibili in ogni finestra di dialogo, usare i relativi collegamenti.  
   
-## Riferimenti  
- [Classe ColorDialog](frlrfSystemWindowsFormsColorDialogClassTopic)  
+## <a name="reference"></a>Riferimento  
+ <xref:System.Windows.Forms.ColorDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.ColorDialog> e sui relativi membri.  
   
- [Classe FontDialog](frlrfSystemWindowsFormsFontDialogClassTopic)  
+ <xref:System.Windows.Forms.FontDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.FontDialog> e sui relativi membri.  
   
- [Classe OpenFileDialog](frlrfSystemWindowsFormsOpenFileDialogClassTopic)  
+ <xref:System.Windows.Forms.OpenFileDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.OpenFileDialog> e sui relativi membri.  
   
- [Classe PageSetupDialog](frlrfSystemWindowsFormsPageSetupDialogClassTopic)  
+ <xref:System.Windows.Forms.PageSetupDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.PageSetupDialog> e sui relativi membri.  
   
- [Classe PrintDialog](frlrfSystemWindowsFormsPrintDialogClassTopic)  
+ <xref:System.Windows.Forms.PrintDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.PrintDialog> e sui relativi membri.  
   
- [Classe PrintPreviewDialog](frlrfSystemWindowsFormsPrintPreviewDialogClassTopic)  
+ <xref:System.Windows.Forms.PrintPreviewDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.PrintPreviewDialog> e sui relativi membri.  
   
- [Classe SaveFileDialog](frlrfSystemWindowsFormsSaveFileDialogClassTopic)  
+ <xref:System.Windows.Forms.SaveFileDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.SaveFileDialog> e sui relativi membri.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Finestre di dialogo in Windows Form](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
  Illustra la creazione di una finestra di dialogo per un Windows Form.  
   
  [Cenni preliminari sul componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
  Consente all'utente di selezionare un colore da una tavolozza all'interno di una finestra di dialogo preconfigurata e di aggiungere colori personalizzati alla tavolozza.  
   
- [Cenni preliminari sul componente FolderBrowserDialog \(Windows Form\)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ [Cenni preliminari sul componente FolderBrowserDialog (Windows Form)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  Consente agli utenti di individuare e selezionare cartelle.  
   
  [Cenni preliminari sul componente FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  

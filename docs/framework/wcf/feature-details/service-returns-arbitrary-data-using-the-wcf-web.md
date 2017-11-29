@@ -1,27 +1,30 @@
 ---
-title: "Procedura: creare un servizio che restituisca dati arbitrari utilizzando il modello di programmazione HTTP Web WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 64179a559986f11fa263fac7fe680ddd9bea809c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare un servizio che restituisca dati arbitrari utilizzando il modello di programmazione HTTP Web WCF
-Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio,Questa situazione si verifica quando un'operazione del servizio deve restituire dati in un formato non supportato da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].In questo argomento viene illustrato l'utilizzo del modello di programmazione HTTP Web di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per creare un servizio di tale tipo.In questo servizio è presente un'operazione che restituisce un flusso.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF
+Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò si verifica quando un'operazione del servizio deve restituire dati in un formato non supportato da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In questo argomento viene illustrato l'utilizzo del modello di programmazione HTTP Web di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per creare un servizio di tale tipo. In questo servizio è presente un'operazione che restituisce un flusso.  
   
-### Per implementare il contratto di servizio  
+### <a name="to-implement-the-service-contract"></a>Per implementare il contratto di servizio  
   
-1.  Definire il contratto di servizio.Il contratto viene denominato `IImageServer` e dispone di un metodo chiamato `GetImage` che restituisce <xref:System.IO.Stream>.  
+1.  Definire il contratto di servizio. Il contratto viene denominato `IImageServer` e dispone di un metodo chiamato `GetImage` che restituisce <xref:System.IO.Stream>.  
   
     ```  
     [ServiceContract]  
@@ -34,7 +37,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
   
      Poiché il metodo restituisce <xref:System.IO.Stream>, in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si presuppone che l'operazione abbia il controllo completo sui byte restituiti dall'operazione del servizio e non viene applicata alcuna formattazione ai dati restituiti.  
   
-2.  Implementare il contratto di servizio.Il contratto ha una sola operazione \(`GetImage`\).Questo metodo genera una bitmap, quindi la salva in <xref:System.IO.MemoryStream> in formato .jpg.L'operazione restituisce quindi il flusso al chiamante.  
+2.  Implementare il contratto di servizio Il contratto ha una sola operazione (`GetImage`). Questo metodo genera una bitmap, quindi la salva in <xref:System.IO.MemoryStream> in formato .jpg. L'operazione restituisce quindi il flusso al chiamante.  
   
     ```  
     public class Service : IImageServer  
@@ -60,9 +63,9 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
   
      Si noti il codice dalla seconda all'ultima riga: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     In questo modo l'intestazione del tipo di contenuto viene impostata su `“image/jpeg”`.Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato.L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
+     Consente di impostare l'intestazione del tipo di contenuto di `"image/jpeg"`. Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
   
-### Per ospitare il servizio  
+### <a name="to-host-the-service"></a>Per ospitare il servizio  
   
 1.  Creare un'applicazione console per ospitare il servizio.  
   
@@ -85,14 +88,12 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
-  
     ```  
   
 4.  Aggiungere un endpoint utilizzando <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
-  
     ```  
   
 5.  Aprire l’host del servizio.  
@@ -108,16 +109,15 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
     Console.Write("Press ENTER to close the host");  
     Console.ReadLine();  
     host.Close();  
-  
     ```  
   
-### Per chiamare il servizio non elaborato tramite Internet Explorer  
+### <a name="to-call-the-raw-service-using-internet-explorer"></a>Per chiamare il servizio non elaborato tramite Internet Explorer  
   
-1.  Eseguire il servizio. L'output seguente dovrebbe essere restituito dal servizio.`Service is running Press ENTER to close the host`  
+1.  Eseguire il servizio. L'output seguente dovrebbe essere restituito dal servizio. `Service is running Press ENTER to close the host`  
   
 2.  Aprire Internet Explorer e digitare `http://localhost:8000/Service/GetImage?width=50&height=40`. Verrà visualizzato un rettangolo giallo con una linea diagonale blu che attraversa il centro.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Di seguito è riportato un elenco completo del codice per questo argomento.  
   
 ```  
@@ -179,12 +179,11 @@ namespace RawImageService
         }  
     }  
 }  
-  
 ```  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a>Compilazione del codice  
   
 -   Durante la compilazione del codice di esempio, fare riferimento a System.ServiceModel.dll e a System.ServiceModel.Web.dll.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

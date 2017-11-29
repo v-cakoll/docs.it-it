@@ -1,35 +1,38 @@
 ---
-title: "506 - CreateServiceHostStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 506 - CreateServiceHostStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f51e4903-1162-47bd-bf8a-f4177c48768a
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d8f915ee86c2710a4cd8a1c187e13bc0617e368
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 506 - CreateServiceHostStop
-## Proprietà  
+# <a name="506---createservicehoststop"></a>506 - CreateServiceHostStop
+## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
 |ID|506|  
 |Parole chiave|WebHost|  
 |Livello|Informazioni|  
-|Canale|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Canale|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Descrizione  
+## <a name="description"></a>Descrizione  
  Questo evento viene generato alla fine di CreateServiceHost.  
   
-## Messaggio  
+## <a name="message"></a>Messaggio  
  Fine CreateServiceHost  
   
-## Dettagli
+## <a name="details"></a>Dettagli

@@ -1,25 +1,28 @@
 ---
-title: "Contract | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contract1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2e92c5d804fca3c04506e951a5c341c89eed1c54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Contract
-Contract  
+# <a name="contract"></a>Contratto
+Contratto  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class Contract  
@@ -36,80 +39,80 @@ class Contract
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe Contract non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe Contract ha le proprietà seguenti:  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Tipo di dati: sint32  
   
- Tipo di accesso: in sola lettura.  
+ Tipo di accesso: sola lettura  
   
  ID del dominio applicazione che ospita il contratto.  
   
-### Behaviors  
+### <a name="behaviors"></a>Comportamenti  
  Tipo di dati: matrice di Behavior  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Comportamenti associati al contratto.  
   
-### Name  
+### <a name="name"></a>Nome  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Nome del contratto in WSDL.  
   
-### Namespace  
+### <a name="namespace"></a>Spazio dei nomi  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Spazio dei nomi dell'elemento `portType` in WSDL.  
   
-### Operations  
+### <a name="operations"></a>Operazioni  
  Tipo di dati: matrice di Operation  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Operazioni di questo contratto.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  ID del processo che ospita il contratto.  
   
-### ref  
+### <a name="ref"></a>ref  
  Tipo di dati: contratto  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Tipo di callback se il contratto è duplex.  
   
-### SessionMode  
+### <a name="sessionmode"></a>SessionMode  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Indica se il contratto richiede che l'associazione di questo contratto utilizzi le sessioni del canale.  
   
-### Type  
+### <a name="type"></a>Tipo  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Tipo del contratto.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Description.ContractDescription>

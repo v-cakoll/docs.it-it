@@ -1,28 +1,24 @@
 ---
-title: 'Procedura: popolare una struttura ad albero XML dal File System (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: popolare un albero XML dal File System (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c55210365651c468b75b943dc46e08726e1ec939
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 6046cf5837aa033f2efb72c7b45f9526bedf871c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Procedura: popolare una struttura ad albero XML dal File System (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Procedura: popolare un albero XML dal File System (Visual Basic)
 Un'applicazione utile e comune degli alberi XML è data dall'utilizzo come archivio dati nome/valore gerarchico. È possibile popolare un albero XML con dati gerarchici e quindi eseguirvi query, trasformarla e, se necessario, serializzarla. In questo scenario di utilizzo molte delle caratteristiche semantiche specifiche di XML, quali gli spazi dei nomi e il comportamento degli spazi vuoti, non sono rilevanti. L'albero XML viene invece usato come piccolo database gerarchico in memoria per singolo utente.  
   
 ## <a name="example"></a>Esempio  

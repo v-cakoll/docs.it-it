@@ -1,37 +1,29 @@
 ---
-title: 'Procedura: calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36fbe64601ab66f7a87669fa4293f2e6d43d95c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Procedura: calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic)
-In questo esempio viene illustrato come eseguire i calcoli di aggregazione quali Sum, Average, Min e Max nelle colonne di un file CSV. I principi di esempio riportati di seguito possono essere applicati ad altri tipi di testo strutturati.  
+In questo esempio viene illustrato come eseguire i calcoli di aggregazione quali Sum, Average, Min e Max nelle colonne di un file con estensione csv. I principi di esempio riportati di seguito possono essere applicati ad altri tipi di testo strutturati.  
   
 ### <a name="to-create-the-source-file"></a>Per creare il file di origine  
   
-1.  Copiare le righe seguenti in un file denominato scores. csv e salvarlo nella cartella del progetto. Si supponga che la prima colonna rappresenta un ID dello studente e le colonne successive rappresentino i punteggi di quattro esami.  
+1.  Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Si supponga che la prima colonna rappresenti degli ID studente e che le colonne successive rappresentino i punteggi di quattro esami.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -157,11 +149,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- La query funziona utilizzando il <xref:System.String.Split%2A>metodo per convertire ogni riga di testo in una matrice.</xref:System.String.Split%2A> Ogni elemento della matrice rappresenta una colonna. Infine, il testo in ogni colonna viene convertito in una rappresentazione numerica. Se il file è un file delimitato da tabulazioni, aggiornare solo l'argomento in di `Split` metodo `\t`.  
+ La query funziona usando il metodo <xref:System.String.Split%2A> per convertire ogni riga di testo in una matrice. Ogni elemento della matrice rappresenta una colonna. Infine, il testo in ogni colonna viene convertito in una rappresentazione numerica. Se il file è un file con valori delimitati da tabulazioni, aggiornare solo l'argomento nel metodo `Split` in `\t`.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

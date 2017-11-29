@@ -1,32 +1,30 @@
 ---
-title: "How to: Sort An Array in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Array.Sort"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "arrays [Visual Basic], sorting"
-  - "examples [Visual Basic], arrays"
+title: 'Procedura: ordinare una matrice in Visual Basic'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: Array.Sort
+helpviewer_keywords:
+- arrays [Visual Basic], sorting
+- examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 310c2dacb384de49c80073840c6c58d37f3937d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Sort An Array in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Nell'esempio riportato di seguito una matrice di oggetti `String` denominata `zooAnimals` viene dichiarata, compilata e ordinata alfabeticamente.  
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Procedura: ordinare una matrice in Visual Basic
+In questo esempio dichiara una matrice di `String` gli oggetti denominati `zooAnimals`, viene compilata e quindi la Ordina alfabeticamente.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 Private Sub sortAnimals()  
@@ -38,23 +36,23 @@ Private Sub sortAnimals()
 End Sub  
 ```  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
--   Accedere a Mscorlib.dll e allo spazio dei nomi <xref:System>.  
+-   Accesso a mscorlib. dll e <xref:System> dello spazio dei nomi.  
   
-## Programmazione efficiente  
+## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   La matrice è vuota \(classe <xref:System.ArgumentNullException>\)  
+-   Matrice è vuota (<xref:System.ArgumentNullException> classe)  
   
--   La matrice è multidimensionale \(classe <xref:System.RankException>\)  
+-   La matrice è multidimensionale (<xref:System.RankException> classe)  
   
--   In uno o più elementi della matrice non è implementata l'interfaccia <xref:System.IComparable> \(classe <xref:System.InvalidOperationException>\)  
+-   Uno o più elementi della matrice non implementano il <xref:System.IComparable> interfaccia (<xref:System.InvalidOperationException> classe)  
   
-## Vedere anche  
- <xref:System.Array.Sort%2A?displayProperty=fullName>   
- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Troubleshooting Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)   
- [Raccolte](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
+ [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [Istruzione For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

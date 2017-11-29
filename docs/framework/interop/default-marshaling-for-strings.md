@@ -5,32 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d5e78bebf15630589a90a684f2299565728728c7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 34cd8194f5f36c2f9c93517403aa27f6bbbcb698
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-strings"></a>Marshalling predefinito per le stringhe
-Le classi <xref:System.String?displayProperty=fullName> e <xref:System.Text.StringBuilder?displayProperty=fullName> presentano un comportamento del marshalling simile.  
+Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> presentano un comportamento del marshalling simile.  
   
  Viene eseguito il marshalling delle stringhe come tipo `BSTR` di tipo COM oppure come stringa con terminazione Null (matrice di caratteri che termina con un carattere Null). È possibile eseguire il marshalling dei caratteri all'interno della stringa come Unicode (impostazione predefinita nei sistemi Windows) o ANSI.  
   
@@ -274,8 +270,7 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  (Tipi copiabili da BLT e non copiabili da BLT)  
- [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Tipi copiabili e non copiabili](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)
-

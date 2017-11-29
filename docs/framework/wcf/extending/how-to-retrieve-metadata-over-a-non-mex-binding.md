@@ -1,29 +1,32 @@
 ---
-title: "Procedura: recuperare metadati attraverso un&#39;associazione non MEX | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: recuperare metadati attraverso un''associazione non MEX'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f214c45ea09c96d5cb77646f31b7c53338761621
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: recuperare metadati attraverso un&#39;associazione non MEX
-In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX.Il codice riportato in questo esempio è basato sull'esempio [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: recuperare metadati attraverso un'associazione non MEX
+In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio è basato sul [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio.  
   
-### Per recuperare metadati attraverso un'associazione non MEX  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Per recuperare metadati attraverso un'associazione non MEX  
   
-1.  Determinare l'associazione utilizzata dall'endpoint MEX.Per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è possibile determinare l'associazione MEX accedendo al file di configurazione del servizio.In questo caso, l'associazione MEX è definita nella configurazione del servizio seguente:  
+1.  Determinare l'associazione utilizzata dall'endpoint MEX. Per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è possibile determinare l'associazione MEX accedendo al file di configurazione del servizio. In questo caso, l'associazione MEX è definita nella configurazione del servizio seguente:  
   
-    ```  
+    ```xml  
     <services>  
         <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
                 behaviorConfiguration="CalculatorServiceBehavior">  
@@ -55,9 +58,9 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
      </bindings>  
     ```  
   
-2.  Nel file di configurazione client, configurare la stessa associazione personalizzata.Qui il client definisce anche un comportamento `clientCredentials` per fornire un certificato da utilizzare per l'autenticazione al servizio quando vengono richiesti metadati dall'endpoint MEX.Quando si utilizza Svcutil.exe per richiedere metadati su un'associazione personalizzata, è necessario aggiungere la configurazione dell'endpoint MEX al file di configurazione per Svcutil.exe \(Svcutil.exe.config\) e il nome della configurazione dell'endpoint deve corrispondere allo schema URI dell'indirizzo dell'endpoint MEX, come illustrato nel codice seguente:  
+2.  Nel file di configurazione client, configurare la stessa associazione personalizzata. Qui il client definisce anche un comportamento `clientCredentials` per fornire un certificato da utilizzare per l'autenticazione al servizio quando vengono richiesti metadati dall'endpoint MEX. Quando si utilizza Svcutil.exe per richiedere metadati su un'associazione personalizzata, è necessario aggiungere la configurazione dell'endpoint MEX al file di configurazione per Svcutil.exe (Svcutil.exe.config) e il nome della configurazione dell'endpoint deve corrispondere allo schema URI dell'indirizzo dell'endpoint MEX, come illustrato nel codice seguente:  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <client>  
         <endpoint name="http"  
@@ -90,7 +93,7 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
     </system.serviceModel>  
     ```  
   
-3.  Creare un `MetadataExchangeClient` e chiamare `GetMetadata`.Per eseguire questa operazione, è possibile specificare l'associazione personalizzata nella configurazione oppure nel codice:  
+3.  Creare un `MetadataExchangeClient` e chiamare `GetMetadata`. Per eseguire questa operazione, è possibile specificare l'associazione personalizzata nella configurazione oppure nel codice:  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -128,7 +131,7 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  A questo punto, si ha una raccolta di endpoint del servizio.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] importazione dei metadati, vedere [Procedura: importare metadati negli endpoint del servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  A questo punto, si ha una raccolta di endpoint del servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]importazione di metadati, vedere [procedura: importare metadati negli endpoint del servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
-## Vedere anche  
- [Metadata](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Vedere anche  
+ [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)

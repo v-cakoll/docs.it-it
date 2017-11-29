@@ -1,23 +1,27 @@
 ---
-title: "Esempio di compensazione personalizzata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esempio di compensazione personalizzata
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3a9745c0cdd3a2d7050aed083d2eee5dfd4aaaf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Esempio di compensazione personalizzata
-In questo esempio viene illustrato come utilizzare <xref:System.Activities.Statements.CompensableActivity> e il relativo gestore di compensazione per definire la logica di compensazione personalizzata.Lo scenario modellato in questo esempio è una Agenzia di noleggio furgoni.  
+# <a name="custom-compensation-sample"></a>Esempio di compensazione personalizzata
+In questo esempio viene illustrato come usare <xref:System.Activities.Statements.CompensableActivity> e il relativo gestore di compensazione per definire la logica di compensazione personalizzata. Lo scenario modellato in questo esempio è una Agenzia di noleggio furgoni.  
   
-## Dettagli dell'esempio  
+## <a name="sample-details"></a>Dettagli dell'esempio  
  Di seguito sono riportati i passaggi simulati:  
   
 1.  L'utente richiede preventivi per il noleggio di furgoni per una data specificata.  
@@ -38,23 +42,23 @@ In questo esempio viene illustrato come utilizzare <xref:System.Activities.State
   
     1.  Se il cliente non dispone di un conto "premium" e mancano meno di 10 giorni alla data di prenotazione, la commissione di servizio viene comunque addebitata. In caso contrario, la commissione di servizio viene rimborsata dall'applicazione.  
   
-    2.  Il resto delle attività compensabili \(ordine del furgone \+ tariffa di ordine del furgone\) viene eseguito sulla base della logica di compensazione predefinita che consiste nel compensare in ordine inverso di esecuzione.  
+    2.  Il resto delle attività compensabili (ordine del furgone + tariffa di ordine del furgone) viene eseguito sulla base della logica di compensazione predefinita che consiste nel compensare in ordine inverso di esecuzione.  
   
-#### Per impostare, compilare ed eseguire l'esempio  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione CustomCompensation.sln.Si trova nella directory \\WF\\Basic\\Compensation\\CustomCompensation.  
+1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione CustomCompensation.sln. Si trova nella directory \WF\Basic\Compensation\CustomCompensation.  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-3.  Premere CTRL\+F5 per eseguire l'applicazione.  
+3.  Premere CTRL+F5 per eseguire l'applicazione.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`  
   
-## Vedere anche
+## <a name="see-also"></a>Vedere anche

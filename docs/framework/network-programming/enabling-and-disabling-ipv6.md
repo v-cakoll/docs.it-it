@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dee5dd53a88bdd108b84d05cfb75799630836033
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9edb87cf1ee35ac6848a478552cf8d0732177a81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Abilitazione e disabilitazione di IPv6
 Per usare il protocollo IPv6, assicurarsi di eseguire una versione del sistema operativo che supporti IPv6 e che il sistema operativo e le classi di rete siano configurati correttamente.  
@@ -51,13 +45,12 @@ Per usare il protocollo IPv6, assicurarsi di eseguire una versione del sistema o
 </system.net>  
 ```  
   
- Per .NET Framework versione 1.1 e versioni precedenti, il valore dell'opzione di configurazione **ipv6 enabled** specifica se i membri della classe <xref:System.Net.Dns?displayProperty=fullName> restituiscono indirizzi IPv6.  
+ Per .NET Framework versione 1.1 e versioni precedenti, il valore dell'opzione di configurazione **ipv6 enabled** specifica se i membri della classe <xref:System.Net.Dns?displayProperty=nameWithType> restituiscono indirizzi IPv6.  
   
- Per .NET Framework versione 2.0 e versioni successive, se Windows supporta IPv6, i membri della classe <xref:System.Net.Dns?displayProperty=fullName> (ad esempio, il metodo <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=fullName>) restituiscono indirizzi IPv6 con una limitazione. I membri obsoleti del DNS <xref:System.Net.Dns?displayProperty=fullName> (ad esempio, il metodo <xref:System.Net.Dns.Resolve%2A?displayProperty=fullName>) leggeranno e riconosceranno il valore nel file di configurazione per l'impostazione abilitata per ipv6.  
+ Per .NET Framework versione 2.0 e versioni successive, se Windows supporta IPv6, i membri della classe <xref:System.Net.Dns?displayProperty=nameWithType> (ad esempio, il metodo <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>) restituiscono indirizzi IPv6 con una limitazione. I membri obsoleti del DNS <xref:System.Net.Dns?displayProperty=nameWithType> (ad esempio, il metodo <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) leggeranno e riconosceranno il valore nel file di configurazione per l'impostazione abilitata per ipv6.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
- [Sockets](../../../docs/framework/network-programming/sockets.md)  (Socket)  
- [Schema delle impostazioni di rete](../../../docs/framework/configure-apps/file-schema/network/index.md)   
+ [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Socket](../../../docs/framework/network-programming/sockets.md)  
+ [Schema delle impostazioni di rete](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [Elemento \<ipv6> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
-

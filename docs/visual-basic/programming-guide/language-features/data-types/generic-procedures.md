@@ -1,46 +1,45 @@
 ---
-title: "Generic Procedures in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "generic methods, type inference"
-  - "generics [Visual Basic], type inference"
-  - "procedures, generic"
-  - "generic procedures"
-  - "type inference, generics"
-  - "generic methods"
-  - "type inference"
-  - "generics [Visual Basic], procedures"
-  - "generic procedures, type inference"
+title: Generic Procedures in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- generic methods [Visual Basic], type inference
+- generics [Visual Basic], type inference
+- procedures [Visual Basic], generic
+- generic procedures
+- type inference, generics
+- generic methods [Visual Basic]
+- type inference
+- generics [Visual Basic], procedures
+- generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e019ca32277f93f798e99e996a3670c8302ba9b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Generic Procedures in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una *routine generica*, chiamata anche *metodo generico*, indica una routine definita con almeno un parametro di tipo.  Essa consente al codice chiamante di personalizzare i tipi di dati per soddisfare le relative esigenze ad ogni chiamata della routine.  
+# <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
+Oggetto *routine generica*, denominati anche un *metodo generico*, non è una procedura definita con almeno un parametro di tipo. In questo modo il codice adattare i tipi di dati ai propri requisiti ogni volta che viene chiamata la routine chiamante.  
   
- Una routine non è generica semplicemente perché definita all'interno di una classe generica o di una struttura generica.  Affinché sia generica, la routine deve utilizzare almeno un parametro di tipo, oltre a tutti i normali parametri che può utilizzare.  Una classe o struttura generica può contenere routine non generiche mentre una classe, una struttura o un modulo non generico può contenere routine generiche.  
+ Una stored procedure non è generica semplicemente perché definita all'interno di una classe generica o una struttura generica. Per essere generico, la routine deve accettare almeno un parametro di tipo, oltre a eventuali parametri normali che possono essere necessarie. Una classe generica o una struttura può contenere procedure non generiche e una classe, struttura o modulo può contenere routine generiche.  
   
- Una routine generica può utilizzare i parametri di tipo contenuti nel relativo elenco di parametri normali, nel tipo restituito se ne presenta uno e nel relativo codice della routine.  
+ Una routine generica è possibile utilizzare i parametri di tipo nel relativo elenco di parametri normali, il tipo restituito se dispone di codice uno e nella relativa procedura.  
   
-## Inferenza di tipi  
- È possibile chiamare una routine generica senza fornire alcun argomento di tipo.  Se la chiamata viene effettuata con questa modalità, il compilatore tenta di determinare i tipi di dati appropriati da passare agli argomenti di tipo della routine.  Questo meccanismo è denominato *inferenza di tipi*.  Nel codice riportato di seguito viene illustrata una chiamata in cui il compilatore deduce che il tipo `String` deve essere passato al parametro di tipo `t`.  
+## <a name="type-inference"></a>Inferenza di tipi  
+ È possibile chiamare una routine generica senza fornire alcun argomento di tipo affatto. Se si chiama in questo modo, il compilatore tenta di determinare i tipi di dati appropriato per passare agli argomenti di tipo della stored procedure. Si tratta di *l'inferenza del tipo*. Il codice seguente viene illustrata una chiamata in cui il compilatore deduce che deve essere passato tipo `String` al parametro di tipo `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
- Se il compilatore non è in grado di dedurre gli argomenti di tipo dal contesto della chiamata, viene segnalato un errore.  Una possibile causa di tale errore è dovuta a una mancata corrispondenza del numero di dimensioni della matrice.  Si supponga ad esempio di definire un normale parametro come matrice di un parametro di tipo.  Se si chiama la routine generica fornendo una matrice con un numero di dimensioni differenti, la mancata corrispondenza provoca la non riuscita dell'inferenza di tipi.  Nel codice riportato di seguito viene illustrata una chiamata in cui una matrice bidimensionale viene passata a una routine che prevede una matrice unidimensionale.  
+ Se il compilatore non è possibile dedurre gli argomenti di tipo dal contesto della chiamata, viene segnalato un errore. Una delle possibili cause di questo errore è una mancata corrispondenza del numero di dimensioni matrice. Ad esempio, si supponga di che definisce un parametro normale come una matrice di un parametro di tipo. Se si chiama la routine generica fornendo una matrice di un numero di dimensioni diversa (numero di dimensioni), la mancata corrispondenza causa l'inferenza del tipo esito negativo. Il codice seguente viene illustrata una chiamata in una matrice bidimensionale che viene passata a una procedura che prevede una matrice unidimensionale.  
   
  `Public Sub demoSub(Of t)(ByVal arg() As t)`  
   
@@ -54,32 +53,32 @@ Una *routine generica*, chiamata anche *metodo generico*, indica una routine def
   
  `End Sub`  
   
- È possibile richiamare l'inferenza di tipi solo omettendo tutti gli argomenti di tipo.  Nel caso fornisca un argomento di tipo, sarà necessario fornirli tutti.  
+ È possibile richiamare l'inferenza del tipo solo omettendo tutti gli argomenti di tipo. Se si fornisce un argomento di tipo, è necessario fornire tutti.  
   
- L'inferenza di tipi è supportata solo per le routine generiche.  Non è possibile richiamare l'inferenza di tipi su classi, strutture, interfacce o delegati generici.  
+ L'inferenza del tipo è supportato solo per le routine generiche. Non è possibile richiamare l'inferenza del tipo in delegati, strutture, interfacce o classi generiche.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- Nell'esempio riportato di seguito viene definita una routine generica `Function` per trovare un particolare elemento in una matrice.  Viene definito un parametro di tipo e viene utilizzato per costruire i due parametri nell'elenco di parametri.  
+### <a name="description"></a>Descrizione  
+ L'esempio seguente definisce un oggetto generico `Function` procedura per trovare un particolare elemento in una matrice. Definisce un parametro di tipo e viene utilizzato per costruire i due parametri nell'elenco di parametri.  
   
-### Codice  
+### <a name="code"></a>Codice  
  [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
-### Commenti  
- Nell'esempio precedente viene richiesto di confrontare `searchValue` in ogni elemento di `searchArray`.  Per garantire questa operazione, al parametro di tipo `T` viene vincolata l'implementazione dell'interfaccia <xref:System.IComparable%601>.  Nel codice viene utilizzato il metodo <xref:System.IComparable%601.CompareTo%2A> anziché l'operatore `=`, poiché non è garantito che un argomento di tipo fornito per `T` supporti l'operatore `=`.  
+### <a name="comments"></a>Commenti  
+ L'esempio precedente richiede la possibilità di confrontare `searchValue` rispetto a ogni elemento di `searchArray`. Per garantire la possibilità, vincola il parametro di tipo `T` per implementare il <xref:System.IComparable%601> interfaccia. Il codice Usa il <xref:System.IComparable%601.CompareTo%2A> anziché il `=` (operatore), poiché non c'è garanzia che un argomento di tipo fornito per `T` supporta il `=` operatore.  
   
- È possibile eseguire il test della routine `findElement` mediante il codice riportato di seguito.  
+ È possibile testare il `findElement` procedure con il codice seguente.  
   
  [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
- Nelle chiamate precedenti a `MsgBox` vengono visualizzati rispettivamente "0", "1" e "\-1".  
+ Nelle chiamate precedenti a `MsgBox` visualizzare rispettivamente "0", "1" e "-1".  
   
-## Vedere anche  
- [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Procedura: definire una classe in grado di fornire funzionalità identiche con tipi di dati diversi](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)   
- [Procedura: utilizzare una classe generica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)   
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Type List](../../../../visual-basic/language-reference/statements/type-list.md)   
- [Parameter List](../../../../visual-basic/language-reference/statements/parameter-list.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [Procedura: Definire una classe in grado di fornire funzionalità identiche con tipi di dati diversi](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
+ [Procedura: Usare una classe generica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Routine](../../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Parametri e argomenti delle routine](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
+ [Elenco dei tipi](../../../../visual-basic/language-reference/statements/type-list.md)  
+ [Elenco dei parametri](../../../../visual-basic/language-reference/statements/parameter-list.md)

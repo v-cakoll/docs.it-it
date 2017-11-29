@@ -1,43 +1,47 @@
 ---
-title: "Riconoscimento della grafia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "riconoscimento della grafia"
-  - "grafia (riconoscimento)"
+title: Riconoscimento della grafia
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- handwriting recognition [WPF]
+- recognition of handwriting [WPF]
 ms.assetid: f4e8576d-e731-4bac-9818-22e2ae636636
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f8a202d4698c968a91a3d930138290cedfe3a83b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Riconoscimento della grafia
-In questa sezione vengono descritti gli elementi di base del riconoscimento relativamente all'input digitale nella piattaforma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="handwriting-recognition"></a>Riconoscimento della grafia
+Questa sezione illustra alcune nozioni di base del riconoscimento relativamente all'input penna digitale nella piattaforma WPF.  
   
-## Soluzioni di riconoscimento  
- Nell'esempio seguente viene illustrato come riconoscere l'input penna utilizzando <xref:System.Windows.Ink.InkAnalyzer>.  
+## <a name="recognition-solutions"></a>Soluzioni di riconoscimento  
+ Nell'esempio seguente viene mostrato come riconoscere l'input penna usando la classe [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/microsoft.ink.inkcollector\(v=vs.90\).aspx).  
   
 > [!NOTE]
 >  Per questo esempio è necessario che il riconoscimento grafia sia installato nel sistema.  
   
- Creare un nuovo progetto di applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in Visual Studio 2005 denominato InkRecognition.  Sostituire il contenuto del file Window1.xaml con il codice XAML seguente.  Il codice esegue il rendering dell'interfaccia utente dell'applicazione.  
+ Creare un nuovo progetto di applicazione WPF in Visual Studio denominato **InkRecognition**. Sostituire il contenuto del file Window1.xaml con il codice XAML seguente. Questo codice esegue il rendering dell'interfaccia utente dell'applicazione.  
   
- [!code-xml[InkRecognition#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml#1)]  
+ [!code-xaml[InkRecognition#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml#1)]  
   
- Aggiungere un riferimento agli assembly di analisi dell'input penna di WPF, IAWinFX.dll, IACore.dll e IALoader.dll, disponibili in \\\\Programmi\\\\Reference Assemblies\\\\Microsoft\\\\Tablet PC\\\\v1 .7.  Sostituire il contenuto del file code\-behind con il codice seguente.  
+ Aggiungere un riferimento all'assembly Microsoft Ink Microsoft.Ink.dll, che può trovarsi in \Programmi\File comuni\Microsoft Shared\Ink. Sostituire il contenuto del file code-behind con il codice seguente.  
   
  [!code-csharp[InkRecognition#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml.cs#2)]
  [!code-vb[InkRecognition#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkRecognition/VisualBasic/Window1.xaml.vb#2)]  
   
-## Vedere anche  
- <xref:System.Windows.Ink.InkAnalyzer>   
- <xref:System.Windows.Ink.AnalysisStatus>   
- <xref:System.Windows.Controls.InkCanvas>
+## <a name="see-also"></a>Vedere anche  
+ [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/microsoft.ink.inkcollector\(v=vs.90\).aspx)

@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - protocols, TCP/UDP
 - network resources, TCP/UDP
@@ -27,19 +22,18 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f067d24b59fbb5b49803605a625cef52d12fdbea
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 04a3bb1c7499a60175aaaa9715e780ea5ddceb31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tcp-udp"></a>TCP-UDP
-Le applicazioni possono usare servizi TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) con le classi <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient>. Queste classi protocollo sono basate sulla classe <xref:System.Net.Sockets.Socket?displayProperty=fullName> e possono gestire i dettagli del trasferimento dei dati.  
+Le applicazioni possono usare servizi TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) con le classi <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient>. Queste classi protocollo sono basate sulla classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> e possono gestire i dettagli del trasferimento dei dati.  
   
  Le classi protocollo usano i metodi sincroni della classe **Socket** per fornire un accesso semplice e diretto ai servizi di rete senza il sovraccarico di gestione delle informazioni sullo stato o senza conoscere i dettagli di configurazione per socket specifici del protocollo. Per usare i metodi **Socket** asincroni, è possibile usare i metodi asincroni forniti dalla classe <xref:System.Net.Sockets.NetworkStream>. Per accedere alle funzionalità della classe **Socket** non esposte dalle classi protocollo, è necessario usare la classe **Socket**.  
   
@@ -48,10 +42,9 @@ Le applicazioni possono usare servizi TCP (Transmission Control Protocol) e UDP 
  La classe **UdpClient** usa una matrice di byte per contenere il datagramma UDP. Si usa il metodo <xref:System.Net.Sockets.UdpClient.Send%2A> per inviare i dati alla rete e il metodo <xref:System.Net.Sockets.UdpClient.Receive%2A> per ricevere un datagramma in ingresso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso dei servizi TCP](../../../docs/framework/network-programming/using-tcp-services.md)   
- [Uso dei servizi UDP](../../../docs/framework/network-programming/using-udp-services.md)   
- [Uso di flussi nella rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [Uso di un socket client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
+ [Utilizzo dei servizi TCP](../../../docs/framework/network-programming/using-tcp-services.md)  
+ [Utilizzo dei servizi UDP](../../../docs/framework/network-programming/using-udp-services.md)  
+ [L'uso di flussi di rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Utilizzo di un Socket Server asincroni](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Utilizzo di un Socket Client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
  [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)
-

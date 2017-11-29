@@ -1,25 +1,28 @@
 ---
-title: "Contratti dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contratti dati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 941049b6-8e98-497f-ab3f-19848241699f
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 21f85c21490f1200d1f486f44036356287aec91f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Contratti dati
+# <a name="data-contracts"></a>Contratti dati
 Questa sezione include esempi che descrivono i contratti dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Contratto dati di base](../../../../docs/framework/wcf/samples/basic-data-contract.md)  
  Viene illustrato come implementare un contratto dati.  
   
@@ -32,8 +35,8 @@ Questa sezione include esempi che descrivono i contratti dati in [!INCLUDE[indig
  [Riferimenti a oggetti](../../../../docs/framework/wcf/samples/object-references.md)  
  Viene descritto come passare oggetti mediante riferimenti tra server e client.  
   
- [Supporto POCO](../../../../docs/framework/wcf/samples/poco-support.md)  
- Viene illustrato il supporto di serializzazione per i tipi non contrassegnati, ovvero tipi ai quali non sono stati applicati attributi di serializzazione, definiti talvolta tipi POCO \(Plain Old CLR Object\).  
+ [POCO supporto](../../../../docs/framework/wcf/samples/poco-support.md)  
+ Viene illustrato il supporto di serializzazione per i tipi non contrassegnati, ovvero tipi ai quali non sono stati applicati attributi di serializzazione, definiti talvolta tipi POCO (Plain Old CLR Object).  
   
  [Utilizzo del gestore di associazione della serializzazione](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)  
  In questo esempio viene illustrato come utilizzare <xref:System.Runtime.Serialization.SerializationBinder> per modificare la versione di un tipo generico quando è serializzato.

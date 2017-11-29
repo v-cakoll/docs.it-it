@@ -1,43 +1,47 @@
 ---
-title: "Procedura: utilizzare un oggetto Pen per disegnare rettangoli | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "penne, disegno di rettangoli"
-  - "rettangoli, disegno"
+title: 'Procedura: utilizzare un oggetto Pen per disegnare rettangoli'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- rectangles [Windows Forms], drawing
+- pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 032f53ffe3bccd329b3e2eea4fbf13949f35c3cd
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: utilizzare un oggetto Pen per disegnare rettangoli
-Per tracciare un rettangolo, sono necessari un oggetto <xref:System.Drawing.Graphics> e un oggetto <xref:System.Drawing.Pen>.  L'oggetto <xref:System.Drawing.Graphics> fornisce il metodo <xref:System.Drawing.Graphics.DrawRectangle%2A>, mentre nell'oggetto <xref:System.Drawing.Pen> sono memorizzati gli attributi, quale il colore e lo spessore della linea.  
+# <a name="how-to-use-a-pen-to-draw-rectangles"></a>Procedura: utilizzare un oggetto Pen per disegnare rettangoli
+Per disegnare rettangoli, è necessario un <xref:System.Drawing.Graphics> oggetto e un <xref:System.Drawing.Pen> oggetto. Il <xref:System.Drawing.Graphics> oggetto fornisce il <xref:System.Drawing.Graphics.DrawRectangle%2A> (metodo) e <xref:System.Drawing.Pen> oggetto archivia le funzionalità della riga, ad esempio colore e spessore.  
   
-## Esempio  
- Nell'esempio che segue si traccia un rettangolo con l'angolo superiore sinistro in posizione \(10, 10\).  Il rettangolo ha larghezza 100 e altezza 50  Il secondo argomento passato al costruttore <xref:System.Drawing.Pen.%23ctor%2A> indica che lo spessore della penna è 5 pixel.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente disegna un rettangolo con il relativo angolo superiore sinistro a (10, 10). Il rettangolo ha una larghezza pari a 100 e un'altezza pari a 50. Il secondo argomento passato al <xref:System.Drawing.Pen.%23ctor%2A> costruttore indica che la larghezza della penna è 5 pixel.  
   
- Quando viene disegnato il rettangolo la penna è centrata rispetto al limite del rettangolo.  Poiché la larghezza della penna è pari a 5, i lati del rettangolo vengono tracciati con larghezza pari a 5 pixel, in modo che 1 pixel viene disegnato sul limite, 2 pixel all'interno e 2 pixel all'esterno.  Per ulteriori informazioni sull'allineamento della penna, vedere [Procedura: impostare la larghezza e l'allineamento di un oggetto Pen](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md).  
+ Quando viene disegnato il rettangolo, la penna è centrata sul bordo del rettangolo. Poiché la larghezza della penna è 5, i lati del rettangolo vengono disegnati 5 pixel ampia, ad esempio che 1 pixel viene disegnato sul limite, 2 pixel sono disegnate all'interno e 2 pixel sono disegnate all'esterno. Per ulteriori informazioni sull'allineamento della penna, vedere [procedura: impostare larghezza e l'allineamento](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md).  
   
- Nell'illustrazione che segue si mostra il rettangolo risultante.  Le linee tratteggiate indicano la posizione in cui il rettangolo sarebbe stato tracciato se la larghezza della penna fosse stata uguale a 1 pixel.  La visualizzazione estesa dell'angolo superiore sinistro del rettangolo mostra che le linee spesse di colore nero sono centrate rispetto alle linee tratteggiate.  
+ Nella figura seguente viene illustrato il rettangolo risulta. Le linee tratteggiate indicano in cui il rettangolo sarebbe stato tracciato se la larghezza della penna fosse un pixel. La visualizzazione estesa dell'angolo superiore sinistro del rettangolo mostra che le linee nere spessore sono centrate sul linee tratteggiate.  
   
- ![Oggetti Pen](../../../../docs/framework/winforms/advanced/media/pens1.png "pens1")  
+ ![Penne](../../../../docs/framework/winforms/advanced/media/pens1.gif "pens1")  
   
  [!code-csharp[System.Drawing.UsingAPen#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingAPen#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
   
-## Vedere anche  
- [Utilizzo di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

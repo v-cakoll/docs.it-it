@@ -1,28 +1,34 @@
 ---
-title: "Procedura: restituire rowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: restituire rowset'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 24211e82633e41256a8c801000c4d3e17d9d8612
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: restituire rowset
+# <a name="how-to-return-rowsets"></a>Procedura: restituire rowset
 In questo esempio viene restituito un rowset dal database e viene incluso un parametro di input per filtrare il risultato.  
   
- Quando si esegue una stored procedure che restituisce un rowset, si usa una classe *di risultati* per l'archiviazione dei valori restituiti dalla stored procedure.  Per altre informazioni, vedere [Analizzare il codice sorgente di LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
+ Quando si esegue una stored procedure che restituisce un set di righe, utilizza un *risultato* classe che archivia i valori restituiti dalla stored procedure. Per ulteriori informazioni, vedere [l'analisi di codice LINQ to SQL origine](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
   
-## Esempio  
- Nell'esempio seguente è rappresentata una stored procedure che restituisce righe di clienti e usa un parametro di input per restituire solo le righe in cui è elencata "London" come città del cliente.  In questo esempio si presuppone una classe `CustomersByCityResult` enumerabile.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente è rappresentata una stored procedure che restituisce righe di clienti e usa un parametro di input per restituire solo le righe in cui è elencata "London" come città del cliente. In questo esempio si presuppone una classe `CustomersByCityResult` enumerabile.  
   
 ```  
 CREATE PROCEDURE [dbo].[Customers By City]  
@@ -40,6 +46,6 @@ END
  [!code-csharp[DLinqSprox#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#1)]
  [!code-vb[DLinqSprox#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#1)]  
   
-## Vedere anche  
- [Stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)   
- [Download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Vedere anche  
+ [Stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

@@ -1,35 +1,38 @@
 ---
-title: "DataTableReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataTableReader
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ed9094a036262bac2e101e7b4268aac2e66a0d10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# DataTableReader
-Il tipo <xref:System.Data.DataTableReader> presenta il contenuto di un tipo <xref:System.Data.DataTable> o di un tipo <xref:System.Data.DataSet> sotto forma di uno o più set di risultati forward\-only in sola lettura.  
+# <a name="datatablereaders"></a>DataTableReader
+Il tipo <xref:System.Data.DataTableReader> presenta il contenuto di un tipo <xref:System.Data.DataTable> o di un tipo <xref:System.Data.DataSet> sotto forma di uno o più set di risultati forward-only in sola lettura.  
   
- Quando si crea un **DataTableReader** da una **DataTable**, l'oggetto **DataTableReader** risultante contiene un solo set di risultati con gli stessi dati della **DataTable** da cui è stato creato, ad eccezione delle righe contrassegnate come eliminate.  Le colonne vengono visualizzate nello stesso ordine in cui vengono visualizzate nella **DataTable** originale.  
+ Quando si crea un **DataTableReader** da un **DataTable**, il valore risultante **DataTableReader** oggetto contiene un set di risultati con gli stessi dati il  **DataTable** da cui è stato creato, ad eccezione delle righe che sono state contrassegnate come eliminate. Le colonne vengono visualizzate nello stesso ordine utilizzato originale **DataTable**.  
   
- Un **DataTableReader** può contenere più set di risultati se viene creato chiamando il metodo <xref:System.Data.DataSet.CreateDataReader%2A>.  L'ordine dei risultati corrisponde a quello delle **DataTable** nella raccolta <xref:System.Data.DataSet.Tables%2A> dell'oggetto **DataSet**.  
+ Oggetto **DataTableReader** può contenere più set di risultati, se è stato creato chiamando <xref:System.Data.DataSet.CreateDataReader%2A>. I risultati sono nello stesso ordine di **DataTable** nel **DataSet** dell'oggetto <xref:System.Data.DataSet.Tables%2A> insieme.  
   
-## In questa sezione  
- [Creazione di un DataReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
- Viene illustrato come creare un oggetto **DataTableReader**.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Creazione di un oggetto DataReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
+ Viene illustrato come creare un **DataTableReader** oggetto.  
   
- [Navigazione in DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
- Viene descritto come usare il metodo **Read** per spostarsi all'interno del contenuto di un **DataTableReader**.  
+ [Esplorazione di oggetti DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
+ Viene descritto come utilizzare il **lettura** metodo per scorrere il contenuto di un **DataTableReader**.  
   
-## Vedere anche  
- [Recupero e modifica di dati in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Recupero e modifica di dati in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

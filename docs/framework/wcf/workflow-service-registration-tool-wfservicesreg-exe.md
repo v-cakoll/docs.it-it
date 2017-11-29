@@ -1,45 +1,47 @@
 ---
-title: "Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f88d5f63ce77eae013e4df995956dc35771a0274
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
-Lo strumento di registrazione dei servizi di Windows Workflow \(WFServicesReg.exe\) è un strumento autonomo che può essere utilizzato per aggiungere, rimuovere o ripristinare gli elementi di configurazione per i servizi Windows Workflow Foundation \(WF\).  
+# <a name="workflow-service-registration-tool-wfservicesregexe"></a>Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
+Lo strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe) è un strumento autonomo che può essere utilizzato per aggiungere, rimuovere o ripristinare gli elementi di configurazione per i servizi Windows Workflow Foundation (WF).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## Note  
- Lo strumento si trova nel percorso di installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], in modo specifico, %windir%\\Microsoft.NET\\Framework\\v3.5, o %windir%\\Microsoft.NET\\Framework64\\v3.5 in computer a 64 bit.  
+## <a name="remarks"></a>Note  
+ Lo strumento si trova nel percorso di installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], in modo specifico, %windir%\Microsoft.NET\Framework\v3.5, o %windir%\Microsoft.NET\Framework64\v3.5 in computer a 64 bit.  
   
  Nelle tabelle riportate di seguito vengono illustrate le opzioni che è possibile utilizzare con lo strumento di registrazione dei servizi di Windows Workflow.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|`/c`|Configura i servizi di Windows Workflow.Utilizzato in scenari di installazione e ripristino.|  
+|------------|-----------------|  
+|`/c`|Configura i servizi di Windows Workflow. Utilizzato in scenari di installazione e ripristino.|  
 |`/r`|Rimuove la configurazione dei servizi di Windows Workflow.|  
-|`/v`|Stampare informazioni dettagliate \(per configurazione o rimozione\).|  
+|`/v`|Stampare informazioni dettagliate (per configurazione o rimozione).|  
 |`/m`|Abilita formato di registrazione di MSI.|  
 |`/i`|Riduce a icona la finestra durante l' esecuzione dell'applicazione.|  
   
-## Registrazione  
+## <a name="registration"></a>Registrazione  
  Lo strumento controlla il file Web.config e registra gli elementi seguenti:  
   
 -   Assembly di riferimento di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].  
@@ -64,33 +66,33 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Lo strumento registra inoltre scriptmap e gestori .xoml e .rules nella metabase IIS.  
   
- In computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../includes/wxp-md.md)] \(IIS 5.1 e [!INCLUDE[iis601](../../../includes/iis601-md.md)]\), è registrato un set di scriptmap .xoml e .rules.  
+ In computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5.1 e [!INCLUDE[iis601](../../../includes/iis601-md.md)]), è registrato un set di scriptmap .xoml e .rules.  
   
  In computer a 64 bit lo strumento registra scriptmap di modalità WOW, se l'opzione `Enable32BitAppOnWin64` è abilitata, o scriptmap a 64 bit nativi, se l'opzione `Enable32BitAppOnWin64` è disabilitata.  
   
- In computer con sistema [!INCLUDE[wv](../../../includes/wv-md.md)] e Windows Server 2008 \(IIS 7.0 e versioni successive\) sono registrati due set di gestori: uno per la modalità integrata e uno per la modalità classica.  
+ In [!INCLUDE[wv](../../../includes/wv-md.md)] e Windows Server 2008 (IIS 7.0 e versioni successive) registrate macchine, due set di xoml e. Rules gestori: uno per la modalità integrata e uno per la modalità classica.  
   
- In computer a 64 bit sono registrati tre set di gestori \(indipendentemente dallo stato dell'opzione `Enable32BitAppOnWin64`\): uno per la modalità integrata, uno per la modalità classica WOW e uno per la modalità classica a 64 bit nativa.  
+ In computer a 64 bit sono registrati tre set di gestori (indipendentemente dallo stato dell'opzione `Enable32BitAppOnWin64`): uno per la modalità integrata, uno per la modalità classica WOW e uno per la modalità classica a 64 bit nativa.  
   
 > [!NOTE]
->  A differenza di ServiceModelreg.exe, WFServicesReg.exe non consente di aggiungere, rimuovere o ripristinare scriptmap o gestori per un particolare sito Web.Per una soluzione alternativa a questo problema, vedere la sezione "Ripristino di scriptmap".  
+>  A differenza di ServiceModelreg.exe, WFServicesReg.exe non consente di aggiungere, rimuovere o ripristinare scriptmap o gestori per un particolare sito Web. Per una soluzione alternativa a questo problema, vedere la sezione "Ripristino di scriptmap".  
   
-## Utilizzo di scenari  
+## <a name="usage-scenarios"></a>Utilizzo di scenari  
   
-### Installazione di IIS dopo l'installazione di .NET Framework 3.5  
- In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] viene installato prima dell'installazione di IIS.A causa dell'indisponibilità della metabase IIS, l'installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] viene completata senza installare scriptmap .xoml e .rules.  
+### <a name="installing-iis-after-net-framework-35-is-installed"></a>Installazione di IIS dopo l'installazione di .NET Framework 3.5  
+ In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] viene installato prima dell'installazione di IIS. A causa dell'indisponibilità della metabase IIS, l'installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] viene completata senza installare scriptmap .xoml e .rules.  
   
  Al termine dell'installazione di IIS, è possibile utilizzare lo strumento WFServicesReg.exe con l'opzione `/c` per installare questi scriptmap specifici.  
   
-### Ripristino di scriptmap  
+### <a name="repairing-the-scriptmaps"></a>Ripristino di scriptmap  
   
-#### Eliminazione di scriptmap nel nodo Siti Web  
- In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .xoml o .rules viene accidentalmente eliminato dal nodo Siti Web.Può essere ripristinato eseguendo lo strumento WFServicesReg.exe con l'opzione `/c`.  
+#### <a name="scriptmap-deleted-under-web-sites-node"></a>Eliminazione di scriptmap nel nodo Siti Web  
+ In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .xoml o .rules viene accidentalmente eliminato dal nodo Siti Web. Può essere ripristinato eseguendo lo strumento WFServicesReg.exe con l'opzione `/c`.  
   
-#### Eliminazione di scriptmap in un particolare sito Web  
- In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .xoml o .rules viene accidentalmente eliminato da un particolare sito Web \(ad esempio il sito Web predefinito\) piuttosto che dal nodo Siti Web.  
+#### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Eliminazione di scriptmap in un particolare sito Web  
+ In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .xoml o .rules viene accidentalmente eliminato da un particolare sito Web (ad esempio il sito Web predefinito) piuttosto che dal nodo Siti Web.  
   
- Per ripristinare i gestori eliminati per un particolare sito Web è necessario eseguire "WFServicesReg.exe \/r" per rimuovere i gestori da tutti i siti Web, quindi "WFServicesReg.exe \/c" per creare i gestori appropriati per tutti i siti Web.  
+ Per ripristinare i gestori eliminati per un particolare sito Web, è necessario eseguire "WFServicesReg.exe r" per rimuovere i gestori da tutti i siti Web, quindi eseguire "WFServicesReg.exe c" per creare i gestori appropriati per tutti i siti Web.  
   
-### Configurazione dei gestori dopo il cambio di modalità di IIS  
- Quando IIS è in modalità di configurazione condivisa e [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] è installato, la metabase IIS viene configurata in un percorso condiviso.Se si passa IIS a una modalità di configurazione non\-condivisa, la metabase locale non conterrà i gestori necessari.Per configurare correttamente la metabase locale è possibile importare la metabase condivisa in locale, o eseguire "WFServicesReg.exe \/c" che configura la metabase locale.
+### <a name="configuring-handlers-after-switching-iis-mode"></a>Configurazione dei gestori dopo il cambio di modalità di IIS  
+ Quando IIS è in modalità di configurazione condivisa e [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] è installato, la metabase IIS viene configurata in un percorso condiviso. Se si passa IIS a una modalità di configurazione non-condivisa, la metabase locale non conterrà i gestori necessari. Per configurare correttamente la metabase locale, è possibile importare la metabase condivisa in locale, o eseguire "WFServicesReg.exe /c", che consente di configurare la metabase locale.

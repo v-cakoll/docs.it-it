@@ -1,34 +1,37 @@
 ---
-title: "Procedura: partizionamento dei dati del servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: partizionamento dei dati del servizio'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-caps.latest.revision: 3
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 7104aa2fee49a21dab7fcc8392a9d4bb291203fe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: partizionamento dei dati del servizio
-In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione.Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico.Può essere ad esempio necessario elaborare messaggi provenienti da clienti di valore elevato o "Gold" a una priorità più alta rispetto ai messaggi provenienti da un cliente standard.  
+# <a name="how-to-service-data-partitioning"></a>Procedura: partizionamento dei dati del servizio
+In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione. Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico. I messaggi da un valore elevato o ai clienti di "Oro", ad esempio, potrebbe essere necessario per l'elaborazione una priorità più alta rispetto ai messaggi da un cliente standard.  
   
- In questo esempio i messaggi vengono indirizzati a una o due istanze del servizio regularCalc.Entrambe le istanze del servizio sono identiche. Il servizio rappresentato dall'endpoint di calculator1 elabora tuttavia i messaggi ricevuti dai clienti di valore elevato, mentre l'endpoint di calculator2 elabora i messaggi ricevuti dagli altri clienti  
+ In questo esempio i messaggi vengono indirizzati a una o due istanze del servizio regularCalc. Entrambe le istanze del servizio sono identiche. Il servizio rappresentato dall'endpoint di calculator1 elabora tuttavia i messaggi ricevuti dai clienti di valore elevato, mentre l'endpoint di calculator2 elabora i messaggi ricevuti dagli altri clienti  
   
- Il messaggio inviato dal client non dispone di dati univoci che possono essere utilizzati per identificare l'istanza del servizio a cui indirizzare il messaggio.Per consentire a ogni client di indirizzare dati a un servizio di destinazione specifico, verranno implementati due endpoint servizio che verranno utilizzati per ricevere messaggi.  
+ Il messaggio inviato dal client non dispone di dati univoci che possono essere utilizzati per identificare l'istanza del servizio a cui indirizzare il messaggio. Per consentire a ogni client di indirizzare dati a un servizio di destinazione specifico, verranno implementati due endpoint servizio che verranno utilizzati per ricevere messaggi.  
   
 > [!NOTE]
 >  Mentre in questo esempio vengono utilizzati endpoint specifici per partizionare dati, è possibile portare a termine questa operazione anche utilizzando le informazioni contenute all'interno del messaggio stesso, ad esempio l'intestazione o i dati del corpo.  
   
-### Implementare il partizionamento dei dati del servizio  
+### <a name="implement-service-data-partitioning"></a>Implementare il partizionamento dei dati del servizio  
   
-1.  Creare la configurazione del servizio di routing di base specificando gli endpoint servizio esposti dal servizio.Nell'esempio seguente vengono definiti due endpoint che verranno utilizzati per ricevere messaggi.Vengono inoltre definiti gli endpoint client, utilizzati per inviare messaggi alle istanze del servizio regularCalc.  
+1.  Creare la configurazione del servizio di routing di base specificando gli endpoint servizio esposti dal servizio. Nell'esempio seguente vengono definiti due endpoint che verranno utilizzati per ricevere messaggi. Vengono inoltre definiti gli endpoint client, utilizzati per inviare messaggi alle istanze del servizio regularCalc.  
   
     ```xml  
     <services>  
@@ -63,10 +66,9 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
                   binding="netTcpBinding"  
                   contract="*" />  
      </client>  
-  
     ```  
   
-2.  Definire i filtri utilizzati per indirizzare messaggi agli endpoint di destinazione.Ai fini di questo esempio viene utilizzato il filtro EndpointName per determinare quale endpoint servizio ha ricevuto il messaggio.Nell'esempio seguente vengono definiti i filtri e la sezione di routing necessari.  
+2.  Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  Ai fini di questo esempio viene utilizzato il filtro EndpointName per determinare quale endpoint servizio ha ricevuto il messaggio. Nell'esempio seguente vengono definiti i filtri e la sezione di routing necessari.  
   
     ```xml  
     <filters>  
@@ -79,7 +81,7 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
     </filters>  
     ```  
   
-3.  Definire la tabella dei filtri, che associa ogni filtro a un endpoint client.In questo esempio il messaggio verrà indirizzato in base all'endpoint specifico su cui è stato ricevuto.Poiché il messaggio può corrispondere solo a uno dei due possibili filtri, non è necessario utilizzare la priorità del filtro per controllare l'ordine di valutazione dei filtri.  
+3.  Definire la tabella dei filtri, che associa ogni filtro a un endpoint client. In questo esempio il messaggio verrà indirizzato in base all'endpoint specifico su cui è stato ricevuto. Poiché il messaggio può corrispondere solo a uno dei due possibili filtri, non è necessario utilizzare la priorità del filtro per controllare l'ordine di valutazione dei filtri.  
   
      Di seguito viene definita la tabella dei filtri e vengono aggiunti i filtri definiti in precedenza.  
   
@@ -91,10 +93,9 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
          <add filterName="NormalPriority" endpointName="CalcEndpoint2"/>  
        </filterTable>  
     </filterTables>  
-  
     ```  
   
-4.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.Nell'esempio seguente viene illustrata l'associazione di "filterTable1" agli endpoint servizio:  
+4.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata l'associazione di "filterTable1" agli endpoint servizio:  
   
     ```xml  
     <behaviors>  
@@ -105,10 +106,9 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Il codice seguente costituisce un elenco completo del file di configurazione.  
   
 ```xml  
@@ -183,5 +183,5 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
 </configuration>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,47 +1,45 @@
 ---
-title: "Narrowing (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.narrowing"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "conversions, type"
-  - "type conversion"
-  - "conversions, data type"
-  - "Narrowing keyword"
-  - "data type conversion"
+title: Narrowing (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.narrowing
+helpviewer_keywords:
+- conversions [Visual Basic], type
+- type conversion [Visual Basic]
+- conversions [Visual Basic], data type
+- Narrowing keyword [Visual Basic]
+- data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 50116c6212e919d4b9b35fc933d80dee14bd4ecf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Narrowing (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Indica che un operatore di conversione \(`CType`\) converte una classe o una struttura in un tipo che potrebbe non contenere alcuni dei possibili valori della classe o della struttura originale.  
+# <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
+Indica che un operatore di conversione (`CType`) converte una classe o struttura in un tipo che potrebbe non essere in grado di contenere alcuni dei possibili valori della classe o della struttura originale.  
   
-## Conversione con la parola chiave Narrowing  
- Nella routine di conversione è necessario specificare `Public Shared` oltre a `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>La conversione con la parola chiave Narrowing  
+ Routine di conversione deve specificare `Public Shared` oltre a `Narrowing`.  
   
- Le conversioni di restrizione non vengono sempre eseguite correttamente in fase di esecuzione e possono causare una perdita di dati.  Alcuni esempi sono le conversioni di `Long` in `Integer`, di `String` in `Date` e di un tipo base in un tipo derivato.  L'ultima conversione viene eseguita verso un tipo di dati più piccolo poiché il tipo base potrebbe non contenere tutti i membri del tipo derivato e pertanto non rappresentare un'istanza di quest'ultimo.  
+ Conversioni di restrizione non sempre esito positivo in fase di esecuzione e può non riuscire o comportare la perdita di dati. Esempi sono `Long` a `Integer`, `String` a `Date`e un tipo di base a un tipo derivato. Questa conversione ultima è narrowing perché il tipo di base potrebbe non contenere tutti i membri del tipo derivato e pertanto non è un'istanza del tipo derivato.  
   
- Se `Option Strict` è `On`, il codice utilizzato dovrà impiegare `CType` per tutte le conversioni verso un tipo di dati più piccolo.  
+ Se `Option Strict` è `On`, l'utilizzo di codice è necessario utilizzare `CType` per tutte le conversioni di restrizione.  
   
- È possibile utilizzare la parola chiave `Narrowing` nel seguente contesto:  
+ Il `Narrowing` parola chiave può essere utilizzata in questo contesto:  
   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
-## Vedere anche  
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [How to: Define an Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)   
- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -1,26 +1,22 @@
 ---
-title: Posticipata di esempio di esecuzione (Visual Basic) | Documenti di Microsoft
+title: Esempio di esecuzione posticipata (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff3d6988ce826fea0aee1987a7c546f5c863e71d
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: a4d2146901d9282b0df706b483afef79f714f660
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deferred-execution-example-visual-basic"></a>Esempio di esecuzione posticipata (Visual Basic)
 In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.  

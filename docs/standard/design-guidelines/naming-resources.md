@@ -1,55 +1,53 @@
 ---
-title: "Nomi delle risorse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "risorse localizzati nomi [.NET Framework]"
-  - "localizzazione, convenzioni di denominazione"
-  - "nomi delle risorse"
-  - "applicazioni globali, convenzioni di denominazione"
-  - "applicazioni internazionali, convenzioni di denominazione"
+title: Denominazione di risorse
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], localized resources
+- localization, naming guidelines
+- resource names
+- global applications, naming guidelines
+- international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 89782b00799bfaac97780b0ffdee62c89fdfbe49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Nomi delle risorse
-Poiché possono fare riferimento a risorse localizzabili mediante alcuni oggetti come se fossero proprietà, convenzioni di denominazione per le risorse sono simili alle linee guida per la proprietà.  
+# <a name="naming-resources"></a>Denominazione di risorse
+Poiché possono fare riferimento a risorse localizzabili mediante determinati oggetti come se fossero proprietà, convenzioni di denominazione per le risorse sono simili alle linee guida di proprietà.  
   
- **✓ si** utilizzare il sistema Pascal le chiavi di risorsa.  
+ **✓ SI** utilizzare il sistema Pascal le chiavi di risorsa.  
   
- **✓ si** fornire descrittivo anziché identificatori brevi.  
+ **✓ SI** fornire descrittivo anziché identificatori breve.  
   
- **X non** utilizzare parole chiave specifiche del linguaggio dei principali linguaggi CLR.  
+ **X non** utilizzare parole chiave specifiche della lingua dei linguaggi CLR principale.  
   
- **✓ si** utilizzare solo caratteri alfanumerici e caratteri di sottolineatura nei nomi delle risorse.  
+ **✓ SI** utilizzare solo caratteri alfanumerici e caratteri di sottolineatura nei nomi delle risorse.  
   
- **✓ si** utilizzare la seguente convenzione di denominazione per le risorse di messaggio eccezione.  
+ **✓ SI** utilizzare la seguente convenzione di denominazione per le risorse di messaggio di eccezione.  
   
  L'identificatore di risorsa deve essere il nome del tipo di eccezione e un identificatore breve dell'eccezione:  
   
- `ArgumentExceptionIllegalCharacters`   
- `ArgumentExceptionInvalidName`   
+ `ArgumentExceptionIllegalCharacters`  
+ `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
-## Vedere anche  
- [Linee guida](../../../docs/standard/design-guidelines/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
  [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)

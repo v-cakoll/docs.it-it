@@ -1,28 +1,34 @@
 ---
-title: "Aggiornamento dei dati in un&#39;origine dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiornamento di dati in un'origine dati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 91e6a5f2b956816b5e001701a7fbe4a40e7866e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Aggiornamento dei dati in un&#39;origine dati
-Le istruzioni SQL che modificano i dati, ad esempio INSERT, UPDATE o DELETE, non restituiscono righe.  Analogamente, molte stored procedure eseguono un'operazione ma non restituiscono righe.  Per eseguire comandi che non restituiscono righe, creare un oggetto **Command** con il comando SQL appropriato, un oggetto **Connection** con tutti i **Parameters** necessari  Eseguire il comando con il metodo **ExecuteNonQuery** dell'oggetto **Command**.  
+# <a name="updating-data-in-a-data-source"></a>Aggiornamento di dati in un'origine dati
+Le istruzioni SQL che modificano i dati, ad esempio INSERT, UPDATE o DELETE, non restituiscono righe. Analogamente, molte stored procedure eseguono un'operazione ma non restituiscono righe. Per eseguire i comandi che non restituiscono righe, creare un **comando** oggetto con il comando SQL appropriato e un **connessione**, incluse le necessarie **parametri**. Eseguire il comando con il **ExecuteNonQuery** metodo il **comando** oggetto.  
   
- Il metodo **ExecuteNonQuery** restituisce un valore intero che rappresenta il numero di righe interessate dall'istruzione o dalla stored procedure eseguita.  Se si eseguono più istruzioni, il valore restituito sarà la somma dei record interessati da ognuna delle istruzioni eseguite.  
+ Il **ExecuteNonQuery** metodo restituisce un intero che rappresenta il numero di righe interessate dall'istruzione o stored procedure che è stata eseguita. Se si eseguono più istruzioni, il valore restituito sarà la somma dei record interessati da ognuna delle istruzioni eseguite.  
   
-## Esempio  
- Nell'esempio di codice seguente viene eseguita un'istruzione INSERT per inserire un record in un database usando **ExecuteNonQuery**.  
+## <a name="example"></a>Esempio  
+ L'esempio di codice seguente viene eseguita un'istruzione INSERT per inserire un record in un database utilizzando **ExecuteNonQuery**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -46,9 +52,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Nell'esempio di codice seguente viene eseguita la stored procedure creata dal codice di esempio in [Esecuzione di operazioni nel catalogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md).  La stored procedure non restituisce righe, quindi viene usato il metodo **ExecuteNonQuery**, ma riceve un parametro di input e restituisce un parametro di output e un valore restituito.  
+ L'esempio di codice seguente viene eseguita la stored procedure creata dal codice di esempio in [esecuzione delle operazioni di catalogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Non viene restituita dalla stored procedure, pertanto la **ExecuteNonQuery** viene usato il metodo, ma la stored procedure riceve un parametro di input e restituisce un parametro di output e un valore restituito.  
   
- Per l'oggetto <xref:System.Data.OleDb.OleDbCommand>, il parametro **ReturnValue** deve essere aggiunto prima alla raccolta **Parameters**.  
+ Per il <xref:System.Data.OleDb.OleDbCommand> oggetto, il **ReturnValue** parametro deve essere aggiunto al **parametri** raccolta prima.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -95,8 +101,8 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## Vedere anche  
- [Utilizzo di oggetti Command per la modifica dei dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)   
- [Aggiornamenti di origini dati tramite DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Utilizzo di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Aggiornamento di origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

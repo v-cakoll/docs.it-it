@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0bb682c6eaebf7e1a0c2c2de5b584c28e4c192c5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 22c2272118c8f8a42523d9bc8ceaa2007c0b7b57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web farm
 Quando si usa Windows Identity Foundation (WIF) per proteggere le risorse di un'applicazione relying party (RP) distribuita in una Web farm, è necessario eseguire passaggi specifici per garantire che WIF possa elaborare i token da istanze dell'applicazione relying party in esecuzione in computer diversi nella farm. Tale elaborazione comprende la convalida delle firme dei token di sessione, la crittografia e la decrittografia dei token di sessione, la memorizzazione nella cache dei token di sessione e il rilevamento dei token di sicurezza riprodotti.  
@@ -51,7 +49,7 @@ Quando si usa Windows Identity Foundation (WIF) per proteggere le risorse di un'
     </securityTokenHandlers>  
     ```  
   
--   Derivare da <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> e implementare la cache distribuita, ovvero una cache accessibile da tutti i computer della farm in cui la relying party potrebbe venire eseguita. Configurare la relying party per usare la cache distribuita, specificando l'elemento [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) nel file di configurazione. È possibile eseguire l'override del metodo <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=fullName> nella classe derivata per implementare gli elementi figlio dell'elemento `<sessionSecurityTokenCache>`, se sono necessari.  
+-   Derivare da <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> e implementare la cache distribuita, ovvero una cache accessibile da tutti i computer della farm in cui la relying party potrebbe venire eseguita. Configurare la relying party per usare la cache distribuita, specificando l'elemento [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) nel file di configurazione. È possibile eseguire l'override del metodo <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> nella classe derivata per implementare gli elementi figlio dell'elemento `<sessionSecurityTokenCache>`, se sono necessari.  
   
     ```xml  
     <caches>  
@@ -262,8 +260,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>   
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>   
- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>   
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+ <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  
  [Gestione delle sessioni WIF](../../../docs/framework/security/wif-session-management.md)
-

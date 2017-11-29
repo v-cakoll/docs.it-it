@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - authentication [.NET Framework], classes
 - IAuthenticationModule interface
@@ -26,16 +21,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a26811b5dd62e30b371af88bc79d06843ef58d05
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="internet-authentication"></a>Autenticazione Internet
 Le classi <xref:System.Net> supportano svariati meccanismi di autenticazione client, inclusi i metodi di autenticazione Internet standard come l'autenticazione di base, digest, di negoziazione, NTLM e Kerberos, nonché metodi personalizzati che è possibile creare.  
@@ -46,7 +40,7 @@ Le classi <xref:System.Net> supportano svariati meccanismi di autenticazione cli
   
  La classe **CredentialCache** archivia una raccolta di credenziali per diverse risorse Web. Quando viene chiamato il metodo <xref:System.Net.CredentialCache.GetCredential%2A>, **CredentialCache** restituisce il set di credenziali corretto, determinato dall'URI della risorsa Web e dallo schema di autenticazione richiesto. Le applicazioni che usano un'ampia gamma di risorse Internet con schemi di autenticazione diversi traggono vantaggio dall'uso della classe **CredentialCache**, che archivia tutte le credenziali e le fornisce in base alle richieste.  
   
- Quando una risorsa Internet richiede l'autenticazione, il metodo <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=fullName> invia <xref:System.Net.WebRequest> a **AuthenticationManager** insieme alla richiesta di credenziali. La richiesta viene quindi autenticata in base al processo seguente:  
+ Quando una risorsa Internet richiede l'autenticazione, il metodo <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> invia <xref:System.Net.WebRequest> a **AuthenticationManager** insieme alla richiesta di credenziali. La richiesta viene quindi autenticata in base al processo seguente:  
   
 1.  **AuthenticationManager** chiama il metodo <xref:System.Net.IAuthenticationModule.Authenticate%2A> in ognuno dei moduli di autenticazione registrati, nell'ordine in cui sono stati registrati. **AuthenticationManager** usa il primo modulo che non restituisce **null** per eseguire il processo di autenticazione. I dettagli del processo variano a seconda del tipo di modulo di autenticazione coinvolto.  
   
@@ -55,7 +49,6 @@ Le classi <xref:System.Net> supportano svariati meccanismi di autenticazione cli
  Alcuni schemi di autenticazione possono autenticare un utente senza prima eseguire la richiesta di una risorsa. Un'applicazione può risparmiare tempo tramite la preautenticazione dell'utente con la risorsa, eliminando in questo modo almeno un round trip al server. In alternativa, l'applicazione può eseguire l'autenticazione durante l'avvio del programma per rispondere più rapidamente all'utente in seguito. Gli schemi di autenticazione che possono usare la preautenticazione impostano la proprietà <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> su **true**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Autenticazione di base e del digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
- [Autenticazione NTLM e Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
+ [Base e l'autenticazione Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [Autenticazione NTLM e Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [Sicurezza nella programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)
-

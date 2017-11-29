@@ -1,39 +1,21 @@
 ---
 title: Elementi dichiarati in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 074ae8af056784e2ae4b870545ec4389deb9388e
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 0c437331e5fb1a5b9d727b3e24760250685fd365
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="declared-elements-in-visual-basic"></a>Elementi dichiarati in Visual Basic
 Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzione di dichiarazione. Gli elementi dichiarati includono variabili, costanti, enumerazioni, classi, strutture, moduli, interfacce, procedure, parametri di procedura, risultati di funzioni, riferimenti a routine esterne, operatori, proprietà, eventi e delegati.  
@@ -87,4 +69,3 @@ Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzi
   
  [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
  Sono indicati i tipi di elementi dichiarati, ognuno con la relativa istruzione di dichiarazione, il contesto in cui si può effettuare la dichiarazione e il livello di accesso predefinito.
-

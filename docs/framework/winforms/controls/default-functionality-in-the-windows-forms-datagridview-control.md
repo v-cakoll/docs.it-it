@@ -1,60 +1,61 @@
 ---
-title: "Funzionalit&#224; predefinite nel controllo DataGridView Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "griglie dei dati, funzionalità predefinite nel controllo DataGridView"
-  - "DataGridView (controllo) [Windows Form], funzionalità predefinite"
+title: "Funzionalità predefinite nel controllo DataGridView Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], default functionality in DataGridView control
+- DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d6b15085c301f074ef6fcf9e60a75299c4b245b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Funzionalit&#224; predefinite nel controllo DataGridView Windows Form
-Il controllo <xref:System.Windows.Forms.DataGridView> Windows Form fornisce agli utenti numerose funzionalità predefinite.  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Funzionalità predefinite nel controllo DataGridView Windows Form
+Windows Form <xref:System.Windows.Forms.DataGridView> controllo offre agli utenti con una quantità significativa di funzionalità predefinite.  
   
-## Funzionalità predefinite  
- Per impostazione predefinita, un controllo <xref:System.Windows.Forms.DataGridView>:  
+## <a name="default-functionality"></a>Funzionalità predefinita  
+ Per impostazione predefinita, un <xref:System.Windows.Forms.DataGridView> controllo:  
   
--   Visualizza automaticamente le intestazioni di colonna e di riga che restano visibili anche quando la tabella viene fatta scorrere verticalmente.  
+-   Visualizza automaticamente le intestazioni di colonna e intestazioni di riga che restano visibili durante lo scorrimento verticale della tabella.  
   
--   Dispone di un'intestazione di riga contenente un indicatore di selezione per la riga corrente.  
+-   Include un'intestazione di riga che contiene un indicatore di selezione per la riga corrente.  
   
--   Dispone di una rettangolo di selezione nella prima cella.  
+-   Dispone di un rettangolo di selezione nella prima cella.  
   
--   Contiene alcune colonne che possono essere ridimensionate automaticamente facendo doppio clic sui divisori di colonna.  
+-   Sono presenti colonne che possono essere ridimensionate automaticamente quando l'utente fa doppio clic i separatori di colonna.  
   
--   Supporta automaticamente gli stili visivi in Windows XP e nei sistemi della famiglia di prodotti Windows Server 2003 quando il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> viene chiamato dal metodo `Main` dell'applicazione.  
+-   In Windows XP e nella famiglia Windows Server 2003 sono automaticamente supportati gli stili di visualizzazione quando il <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metodo viene chiamato da dell'applicazione `Main` metodo.  
   
- Inoltre, per impostazione predefinita il contenuto di un controllo <xref:System.Windows.Forms.DataGridView> può essere modificato:  
+ Inoltre, il contenuto di un <xref:System.Windows.Forms.DataGridView> controllo può essere modificato per impostazione predefinita:  
   
--   Se l'utente fa doppio clic o preme F2 in una cella, il controllo imposta automaticamente la cella in modalità di modifica e aggiorna il contenuto della cella durante la digitazione dell'utente.  
+-   Se l'utente fa doppio clic o preme F2 in una cella, il controllo viene automaticamente pone la cella in modalità di modifica e aggiorna il contenuto della cella, come i tipi di utente.  
   
--   Se si scorre la griglia fino in fondo, sarà possibile notare che è presente una riga per l'aggiunta di nuovi record.  Quando l'utente fa clic su questa riga, viene aggiunta una nuova riga al controllo <xref:System.Windows.Forms.DataGridView>, con i valori predefiniti.  Quando si preme ESC, la nuova riga viene rimossa.  
+-   Se l'utente scorre verso la fine della griglia, verrà visualizzato l'utente che sia presente una riga per l'aggiunta di nuovi record. Quando l'utente fa clic su questa riga, viene aggiunta una nuova riga per il <xref:System.Windows.Forms.DataGridView> controllo con i valori predefiniti. Quando l'utente preme ESC, questa nuova riga viene rimossa.  
   
--   Se l'utente fa clic su un'intestazione di riga, l'intera riga verrà selezionata.  
+-   Se l'utente fa clic su un'intestazione di riga, viene selezionata l'intera riga.  
   
- Quando si associa un controllo <xref:System.Windows.Forms.DataGridView> a un'origine dati impostando la corrispondente proprietà <xref:System.Windows.Forms.DataGridView.DataSource%2A>, il controllo:  
+ Quando si associa un <xref:System.Windows.Forms.DataGridView> controllo a un'origine dati impostando il relativo <xref:System.Windows.Forms.DataGridView.DataSource%2A> proprietà, il controllo:  
   
--   Utilizza automaticamente i nomi delle colonne dell'origine dati come testo dell'intestazione di colonna.  
+-   Utilizza automaticamente i nomi delle colonne dell'origine dati come il testo dell'intestazione di colonna.  
   
--   Viene popolato con il contenuto dell'origine dati.  Le colonne <xref:System.Windows.Forms.DataGridView> vengono create automaticamente per ciascuna colonna nell'origine dati.  
+-   Viene popolata con il contenuto dell'origine dati. <xref:System.Windows.Forms.DataGridView>le colonne vengono create automaticamente per ogni colonna nell'origine dati.  
   
--   Crea una riga per ciascuna riga visibile nella tabella.  
+-   Crea una riga per ogni riga visibile nella tabella.  
   
 -   Ordina automaticamente le righe in base ai dati sottostanti quando l'utente fa clic su un'intestazione di colonna.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.DataGridView>  
  [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

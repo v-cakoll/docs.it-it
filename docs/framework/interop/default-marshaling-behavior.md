@@ -5,30 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, default
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4fad3c0021c14d11cd88a209c7a56cdb58e75fe6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7fe48904a59751da3f4089153b32ac68cc6f4b6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -87,7 +83,7 @@ BSTR MethodOne (BSTR b) {
   
 -   Per platform invoke, un delegato viene sottoposto a marshalling come puntatore a funzione non gestito per impostazione predefinita.  
   
--   Per l'interoperabilità COM, un delegato viene sottoposto a marshalling come interfaccia COM di tipo **_Delegate** per impostazione predefinita. L'interfaccia **_Delegate** è definita nella libreria dei tipi Mscorlib.tlb e contiene il metodo <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName>, che consente di chiamare il metodo a cui fa riferimento il delegato.  
+-   Per l'interoperabilità COM, un delegato viene sottoposto a marshalling come interfaccia COM di tipo **_Delegate** per impostazione predefinita. L'interfaccia **_Delegate** è definita nella libreria dei tipi Mscorlib.tlb e contiene il metodo <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, che consente di chiamare il metodo a cui fa riferimento il delegato.  
   
  La tabella seguente illustra le opzioni di marshalling per il tipo di dati delegato gestito. L'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornisce diversi valori di enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per il marshalling di delegati.  
   
@@ -365,34 +361,34 @@ interface _Graphics {
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Tipi di valore di sistema  
- Lo spazio dei nomi <xref:System> include diversi tipi di valore che rappresentano il formato sottoposto a conversione boxing dei tipi primitivi di runtime. Ad esempio, la struttura <xref:System.Int32?displayProperty=fullName> del tipo valore rappresenta il formato sottoposto a conversione boxing di **ELEMENT_TYPE_I4**. Anziché effettuare il marshalling di questi tipi come strutture, come nel caso di altri tipi formattati, si effettua il marshalling nello stesso modo dei tipi primitivi di cui viene eseguita la conversione boxing. Per **System.Int32** viene quindi effettuato il marshalling come **ELEMENT_TYPE_I4** invece che come struttura contenente un singolo membro di tipo **long**. La tabella seguente contiene un elenco dei tipi valore nello spazio dei nomi **System** che costituiscono rappresentazioni sottoposte a conversione boxing di tipi primitivi.  
+ Lo spazio dei nomi <xref:System> include diversi tipi di valore che rappresentano il formato sottoposto a conversione boxing dei tipi primitivi di runtime. Ad esempio, la struttura <xref:System.Int32?displayProperty=nameWithType> del tipo valore rappresenta il formato sottoposto a conversione boxing di **ELEMENT_TYPE_I4**. Anziché effettuare il marshalling di questi tipi come strutture, come nel caso di altri tipi formattati, si effettua il marshalling nello stesso modo dei tipi primitivi di cui viene eseguita la conversione boxing. Per **System.Int32** viene quindi effettuato il marshalling come **ELEMENT_TYPE_I4** invece che come struttura contenente un singolo membro di tipo **long**. La tabella seguente contiene un elenco dei tipi valore nello spazio dei nomi **System** che costituiscono rappresentazioni sottoposte a conversione boxing di tipi primitivi.  
   
 |Tipo di valore di sistema|Tipo di elemento|  
 |-----------------------|------------------|  
-|<xref:System.Boolean?displayProperty=fullName>|**ELEMENT_TYPE_BOOLEAN**|  
-|<xref:System.SByte?displayProperty=fullName>|**ELEMENT_TYPE_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**ELEMENT_TYPE_UI1**|  
-|<xref:System.Char?displayProperty=fullName>|**ELEMENT_TYPE_CHAR**|  
-|<xref:System.Int16?displayProperty=fullName>|**ELEMENT_TYPE_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**ELEMENT_TYPE_U2**|  
-|<xref:System.Int32?displayProperty=fullName>|**ELEMENT_TYPE_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**ELEMENT_TYPE_U4**|  
-|<xref:System.Int64?displayProperty=fullName>|**ELEMENT_TYPE_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**ELEMENT_TYPE_U8**|  
-|<xref:System.Single?displayProperty=fullName>|**ELEMENT_TYPE_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**ELEMENT_TYPE_R8**|  
-|<xref:System.String?displayProperty=fullName>|**ELEMENT_TYPE_STRING**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**ELEMENT_TYPE_I**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**ELEMENT_TYPE_U**|  
+|<xref:System.Boolean?displayProperty=nameWithType>|**ELEMENT_TYPE_BOOLEAN**|  
+|<xref:System.SByte?displayProperty=nameWithType>|**ELEMENT_TYPE_I1**|  
+|<xref:System.Byte?displayProperty=nameWithType>|**ELEMENT_TYPE_UI1**|  
+|<xref:System.Char?displayProperty=nameWithType>|**ELEMENT_TYPE_CHAR**|  
+|<xref:System.Int16?displayProperty=nameWithType>|**ELEMENT_TYPE_I2**|  
+|<xref:System.UInt16?displayProperty=nameWithType>|**ELEMENT_TYPE_U2**|  
+|<xref:System.Int32?displayProperty=nameWithType>|**ELEMENT_TYPE_I4**|  
+|<xref:System.UInt32?displayProperty=nameWithType>|**ELEMENT_TYPE_U4**|  
+|<xref:System.Int64?displayProperty=nameWithType>|**ELEMENT_TYPE_I8**|  
+|<xref:System.UInt64?displayProperty=nameWithType>|**ELEMENT_TYPE_U8**|  
+|<xref:System.Single?displayProperty=nameWithType>|**ELEMENT_TYPE_R4**|  
+|<xref:System.Double?displayProperty=nameWithType>|**ELEMENT_TYPE_R8**|  
+|<xref:System.String?displayProperty=nameWithType>|**ELEMENT_TYPE_STRING**|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|**ELEMENT_TYPE_I**|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|**ELEMENT_TYPE_U**|  
   
  Alcuni altri tipi valore nello spazio dei nomi **System** vengono gestiti diversamente. Poiché il codice non gestito dispone già di formati ben definiti per questi tipi, il gestore di marshalling ha regole speciali per il loro marshalling. La tabella seguente elenca i tipi valore speciali nello spazio dei nomi **System**, nonché il tipo non gestito a cui viene effettuato il marshalling.  
   
 |Tipo di valore di sistema|Tipo IDL|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=fullName>|**DATE**|  
-|<xref:System.Decimal?displayProperty=fullName>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=fullName>|**GUID**|  
-|<xref:System.Drawing.Color?displayProperty=fullName>|**OLE_COLOR**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  Il codice seguente mostra la definizione dei tipi non gestiti **DATE**, **GUID**, **DECIMAL** e **OLE_COLOR** nella libreria dei tipi Stdole2.  
   
@@ -451,9 +447,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  (Tipi copiabili da BLT e non copiabili da BLT)  
- [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)   
- [Marshalling predefinito per le matrici](../../../docs/framework/interop/default-marshaling-for-arrays.md)   
- [Marshalling predefinito per gli oggetti](../../../docs/framework/interop/default-marshaling-for-objects.md)   
+ [Tipi copiabili e non copiabili](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)  
+ [Marshalling predefinito per le matrici](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
+ [Marshalling predefinito per gli oggetti](../../../docs/framework/interop/default-marshaling-for-objects.md)  
  [Marshalling predefinito per le stringhe](../../../docs/framework/interop/default-marshaling-for-strings.md)
-

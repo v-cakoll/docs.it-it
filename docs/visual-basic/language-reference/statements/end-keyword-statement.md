@@ -1,145 +1,142 @@
 ---
-title: "End &lt;keyword&gt; Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.EndDefinition"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "End keyword"
+title: Fine &lt;parola chiave&gt; istruzione (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.EndDefinition
+helpviewer_keywords: End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cf0ac1221f8a85a8a43599d9c5ec210884205e5e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# End &lt;keyword&gt; Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="end-ltkeywordgt-statement-visual-basic"></a>Fine &lt;parola chiave&gt; istruzione (Visual Basic)
 Quando è seguito da una parola chiave aggiuntiva, termina la definizione del blocco di istruzioni introdotto dalla parola chiave.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 End AddHandler  
-End Class   
-End Enum   
-End Event   
-End Function   
-End Get   
-End If   
-End Interface   
-End Module   
-End Namespace   
-End Operator   
-End Property   
+End Class   
+End Enum   
+End Event   
+End Function   
+End Get   
+End If   
+End Interface   
+End Module   
+End Namespace   
+End Operator   
+End Property   
 End RaiseEvent  
 End RemoveHandler  
-End Select   
-End Set   
-End Structure   
-End Sub   
-End SyncLock   
-End Try   
-End While   
+End Select   
+End Set   
+End Structure   
+End Sub   
+End SyncLock   
+End Try   
+End While   
 End With  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `End`  
- Obbligatorio.  Termina la definizione dell'elemento di programmazione.  
+ Obbligatorio. Termina la definizione dell'elemento di programmazione.  
   
  `AddHandler`  
- Necessaria per terminare una funzione di accesso `AddHandler` iniziata mediante un'istruzione `AddHandler` corrispondente in un'[Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) personalizzata.  
+ Necessaria per terminare un `AddHandler` funzione di accesso iniziata da un oggetto corrispondente `AddHandler` istruzione in un oggetto personalizzato [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
  `Class`  
- Necessaria per terminare una definizione di classe iniziata mediante un'[Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) corrispondente.  
+ È necessario terminare una definizione di classe iniziata da un oggetto corrispondente [istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md).  
   
  `Enum`  
- Necessaria per terminare una definizione di enumerazione iniziata mediante un'[Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) corrispondente.  
+ È necessario terminare una definizione di enumerazione iniziata da un oggetto corrispondente [istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
  `Event`  
- Necessaria per terminare una definizione di evento `Custom` iniziata mediante un'[Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) corrispondente.  
+ Necessaria per terminare un `Custom` definizione di evento iniziata da un oggetto corrispondente [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
  `Function`  
- Necessaria per terminare una definizione di routine `Function` iniziata mediante un'[Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) corrispondente.  Se durante l'esecuzione viene rilevata un'istruzione `End` `Function`, il controllo torna al codice chiamante.  
+ Necessaria per terminare un `Function` iniziato mediante una corrispondente definizione della stored procedure [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md). Se l'esecuzione incontra un `End``Function` istruzione, controllo viene restituito il codice chiamante.  
   
  `Get`  
- Necessaria per terminare una definizione di routine `Property` iniziata mediante un'[Get Statement](../../../visual-basic/language-reference/statements/get-statement.md) corrispondente.  Se durante l'esecuzione viene rilevata un'istruzione `End` `Get`, il controllo torna all'istruzione che richiede il valore della proprietà.  
+ Necessaria per terminare un `Property` iniziato mediante una corrispondente definizione della stored procedure [l'istruzione Get](../../../visual-basic/language-reference/statements/get-statement.md). Se l'esecuzione incontra un `End``Get` istruzione, controllo viene restituito all'istruzione che richiede il valore della proprietà.  
   
  `If`  
- Necessaria per terminare una definizione di blocco `If`...`Then`...`Else` iniziata mediante un'istruzione `If` corrispondente.  Vedere [If...Then...Else Statement](../../../visual-basic/language-reference/statements/if-then-else-statement.md).  
+ Necessaria per terminare un `If`... `Then`... `Else` iniziata da un oggetto corrispondente `If` istruzione. Vedere [se... Quindi... Istruzione else](../../../visual-basic/language-reference/statements/if-then-else-statement.md).  
   
  `Interface`  
- Necessaria per terminare una definizione di interfaccia iniziata mediante un'[Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md) corrispondente.  
+ È necessario terminare una definizione di interfaccia iniziata da un oggetto corrispondente [istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md).  
   
  `Module`  
- Necessaria per terminare una definizione di modulo iniziata mediante un'[Module Statement](../../../visual-basic/language-reference/statements/module-statement.md) corrispondente.  
+ È necessario terminare una definizione di modulo iniziata da un oggetto corrispondente [istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md).  
   
  `Namespace`  
- Necessaria per terminare una definizione di spazio dei nomi iniziata mediante un'[Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md) corrispondente.  
+ È necessario terminare una definizione di spazio dei nomi iniziata da un oggetto corrispondente [istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md).  
   
  `Operator`  
- Necessaria per terminare una definizione di operatore iniziata mediante un'[Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md) corrispondente.  
+ È necessario terminare una definizione di operatore iniziata da un oggetto corrispondente [Operator (istruzione)](../../../visual-basic/language-reference/statements/operator-statement.md).  
   
  `Property`  
- Necessaria per terminare una definizione di proprietà iniziata mediante un'[Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) corrispondente.  
+ È necessario terminare una definizione di proprietà iniziata da un oggetto corrispondente [istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md).  
   
  `RaiseEvent`  
- Necessaria per terminare una funzione di accesso `RaiseEvent` iniziata mediante un'istruzione `RaiseEvent` corrispondente in un'[Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) personalizzata.  
+ Necessaria per terminare un `RaiseEvent` funzione di accesso iniziata da un oggetto corrispondente `RaiseEvent` istruzione in un oggetto personalizzato [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
  `RemoveHandler`  
- Necessaria per terminare una funzione di accesso `RemoveHandler` iniziata mediante un'istruzione `RemoveHandler` corrispondente in un'[Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) personalizzata.  
+ Necessaria per terminare un `RemoveHandler` funzione di accesso iniziata da un oggetto corrispondente `RemoveHandler` istruzione in un oggetto personalizzato [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
  `Select`  
- Necessaria per terminare una definizione di blocco `Select`...`Case` iniziata mediante un'istruzione `Select` corrispondente.  Vedere [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+ Necessaria per terminare un `Select`... `Case` iniziata da un oggetto corrispondente `Select` istruzione. Vedere [Seleziona... Istruzione case](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
  `Set`  
- Necessaria per terminare una definizione di routine `Property` iniziata mediante un'[Set Statement](../../../visual-basic/language-reference/statements/set-statement.md) corrispondente.  Se durante l'esecuzione viene rilevata un'istruzione `End` `Set`, il controllo torna all'istruzione che imposta il valore della proprietà.  
+ Necessaria per terminare un `Property` iniziato mediante una corrispondente definizione della stored procedure [istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md). Se l'esecuzione incontra un `End``Set` istruzione, controllo viene restituito all'istruzione che imposta il valore della proprietà.  
   
  `Structure`  
- Necessaria per terminare una definizione di struttura iniziata mediante un'[Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) corrispondente.  
+ È necessario terminare una definizione di struttura iniziata da un oggetto corrispondente [istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md).  
   
  `Sub`  
- Necessaria per terminare una definizione di routine `Sub` iniziata mediante un'[Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md) corrispondente.  Se durante l'esecuzione viene rilevata un'istruzione `End` `Sub`, il controllo torna al codice chiamante.  
+ Necessaria per terminare un `Sub` iniziato mediante una corrispondente definizione della stored procedure [istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md). Se l'esecuzione incontra un `End``Sub` istruzione, controllo viene restituito il codice chiamante.  
   
  `SyncLock`  
- Necessaria per terminare una definizione di blocco `SyncLock` iniziata mediante un'istruzione `SyncLock` corrispondente.  Vedere [SyncLock Statement](../../../visual-basic/language-reference/statements/synclock-statement.md).  
+ Necessaria per terminare un `SyncLock` iniziata da un oggetto corrispondente `SyncLock` istruzione. Vedere [istruzione SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md).  
   
  `Try`  
- Necessaria per terminare una definizione di blocco `Try`...`Catch`...`Finally` iniziata mediante un'istruzione `Try` corrispondente.  Vedere [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Necessaria per terminare un `Try`... `Catch`... `Finally` iniziata da un oggetto corrispondente `Try` istruzione. Vedere [provare... Catch... Istruzione finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
  `While`  
- Necessaria per terminare una definizione di ciclo `While` iniziata mediante un'istruzione `While` corrispondente.  Vedere [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
+ Necessaria per terminare un `While` ciclo iniziata da un oggetto corrispondente `While` istruzione. Vedere [mentre... End While (istruzione)](../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
   
  `With`  
- Necessaria per terminare una definizione di blocco `With` iniziata mediante un'istruzione `With` corrispondente.  Vedere [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
+ Necessaria per terminare un `With` iniziata da un oggetto corrispondente `With` istruzione. Vedere [con... Terminare con l'istruzione](../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
-## Note  
- Se non viene specificata alcuna parola chiave aggiuntiva, l'[End Statement](../../../visual-basic/language-reference/statements/end-statement.md) termina immediatamente l'esecuzione.  
+## <a name="remarks"></a>Note  
+ Il [istruzione End](../../../visual-basic/language-reference/statements/end-statement.md), senza una parola chiave aggiuntiva, termina immediatamente l'esecuzione.  
   
- Quando è preceduta da un segno di numero \(`#`\), la parola chiave `End` termina un blocco di pre\-elaborazione introdotto dalla direttiva corrispondente.  
+ Quando è preceduta da un simbolo di cancelletto (`#`), il `End` (parola chiave) termina un blocco di pre-elaborazione introdotto dalla direttiva corrispondente.  
   
  `#End`  
- Obbligatorio.  Termina la definizione del blocco di pre\-elaborazione.  
+ Obbligatorio. Termina la definizione del blocco di pre-elaborazione.  
   
  `#ExternalSource`  
- Necessaria per terminare un blocco di codice sorgente esterno iniziato mediante una [\#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) corrispondente.  
+ È necessario terminare un blocco di codice sorgente esterno iniziato da un oggetto corrispondente [#ExternalSource direttiva](../../../visual-basic/language-reference/directives/externalsource-directive.md).  
   
  `#If`  
- Necessaria per terminare un blocco di compilazione condizionale iniziato mediante una direttiva `#If` corrispondente.  Vedere [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md).  
+ È necessario terminare un blocco di compilazione condizionale iniziato da un oggetto corrispondente `#If` direttiva. Vedere [#If... Then... #Else direttive](../../../visual-basic/language-reference/directives/if-then-else-directives.md).  
   
  `#Region`  
- Necessaria per terminare un blocco region sorgente iniziato mediante una [\#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) corrispondente.  
+ È necessario terminare un blocco di area di origine iniziato da un oggetto corrispondente [#Region direttiva](../../../visual-basic/language-reference/directives/region-directive.md).  
   
-## Note per gli sviluppatori di applicazioni per Smart Device  
- Se non viene specificata alcuna parola chiave aggiuntiva, l'istruzione `End` non è supportata.  
+## <a name="smart-device-developer-notes"></a>Note per gli sviluppatori di Smart Device  
+ Il `End` istruzione, senza la parola chiave aggiuntiva, non è supportata.  
   
-## Vedere anche  
- [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione End](../../../visual-basic/language-reference/statements/end-statement.md)

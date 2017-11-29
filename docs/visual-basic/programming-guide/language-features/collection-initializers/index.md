@@ -1,43 +1,23 @@
 ---
 title: Inizializzatori di raccolta (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.CollectionInitializer
-dev_langs:
-- VB
-helpviewer_keywords:
-- collection initializers [Visual Basic]
+f1_keywords: vb.CollectionInitializer
+helpviewer_keywords: collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72ca6506d0bd867efa60ba73ecda72c32def129e
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5ec0179df50df453d6058a4b910d17561394140d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collection-initializers-visual-basic"></a>Inizializzatori di raccolta (Visual Basic)
 Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla con un set iniziale di valori. Gli inizializzatori di insieme sono utili quando si crea una raccolta da un set di valori noti, ad esempio un elenco di opzioni di menu o categorie, un set iniziale di valori numerici, un elenco statico di stringhe quali nomi di giorni o mesi o un elenco di aree geografiche, ad esempio un elenco di stati che viene usato per la convalida.  
@@ -103,14 +83,13 @@ Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla c
 |[Procedura: Creare una raccolta usata da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Illustra come abilitare l'uso di un inizializzatore di insieme includendo un metodo `Add` in una classe di raccolte che implementa `IEnumerable`.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Operatore New](../../../../visual-basic/language-reference/operators/new-operator.md)   
- [Proprietà implementate automaticamente](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [Procedura: Inizializzare una variabile di matrice in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)   
- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+ [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Operatore New](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [Proprietà implementate automaticamente](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [Procedura: Inizializzare una variabile di matrice in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
+ [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Procedura: Creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
-

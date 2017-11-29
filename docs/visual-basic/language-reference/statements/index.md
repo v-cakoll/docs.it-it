@@ -1,40 +1,21 @@
 ---
 title: Istruzioni (Visual Basic)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- statements [Visual Basic]
+helpviewer_keywords: statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 30d7fb19e5f11b538b780bf7225917ec50ed765b
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5619cb48907ce3d240b10a94c534c849a82fac2a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="statements-visual-basic"></a>Istruzioni (Visual Basic)
 Gli argomenti di questa sezione contengono tabelle con le istruzioni eseguibili e di dichiarazione di Visual Basic e con elenchi importanti applicabili a numerose istruzioni.  
@@ -60,4 +41,3 @@ Gli argomenti di questa sezione contengono tabelle con le istruzioni eseguibili 
  [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
-

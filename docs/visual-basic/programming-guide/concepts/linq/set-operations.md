@@ -1,75 +1,67 @@
 ---
-title: Operazioni (Visual Basic) | Documenti di Microsoft
+title: Operazioni sui set (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e835737b388427445a15b6658c7d148801f29b79
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2e30c521635326afeea4aad9ce932d5206d06c6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-operations-visual-basic"></a>Operazioni sui set (Visual Basic)
-Operazioni set in LINQ si riferiscono alle operazioni di query che producono un set di risultati che si basa sulla presenza o assenza di elementi equivalenti all'interno della stessa o separato raccolte (o set).  
+Le operazioni sui set in LINQ si riferiscono alle operazioni di query che generano un set di risultati basato sulla presenza o sull'assenza di elementi equivalenti all'interno delle stesse Collection oppure di Collection (o set) distinte.  
   
- Nella sezione seguente sono elencati i metodi di operatore query standard che eseguono le operazioni di impostazione.  
+ La sezione seguente elenca i metodi dell'operatore query standard che eseguono operazioni sui set.  
   
 ## <a name="methods"></a>Metodi  
   
 |Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Distinct|Rimuove i valori duplicati da una raccolta.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName></xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName>|  
-|Eccezione|Restituisce la differenza di set, ovvero gli elementi di una raccolta che non vengono visualizzati in un secondo insieme.|Non applicabile.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=fullName></xref:System.Linq.Queryable.Except%2A?displayProperty=fullName>|  
-|Interseca|Restituisce l'intersezione di set, ovvero gli elementi presenti in ciascuna delle due raccolte.|Non applicabile.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName></xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName>|  
-|Unione|Restituisce l'unione di set, ovvero gli elementi univoci presenti in uno di due raccolte.|Non applicabile.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=fullName></xref:System.Linq.Queryable.Union%2A?displayProperty=fullName>|  
+|Distinct|Rimuove i valori duplicati da una Collection.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
+|Eccezione|Restituisce la differenza dei set, ovvero gli elementi di una Collection che non sono presenti in una seconda Collection.|Non applicabile.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
+|Interseca|Restituisce l'intersezione di set, ovvero gli elementi presenti in ognuna delle due Collection.|Non applicabile.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|  
+|Unione|Restituisce l'unione di set, ovvero gli elementi univoci presenti in una delle due Collection.|Non applicabile.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
   
-## <a name="comparison-of-set-operations"></a>Confronto tra le operazioni di impostazione  
+## <a name="comparison-of-set-operations"></a>Confronto tra le operazioni sui set  
   
 ### <a name="distinct"></a>Distinct  
- Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName>metodo in una sequenza di caratteri.</xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> La sequenza restituita contiene gli elementi univoci della sequenza di input.  
+ Nella figura seguente viene illustrato il comportamento del metodo <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> su una sequenza di caratteri. La sequenza restituita contiene gli elementi univoci dalla sequenza di input.  
   
- ![Grafica che mostra il comportamento di Distinct (). ] (../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinti")  
+ ![Grafico che mostra il comportamento di Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
   
 ### <a name="except"></a>Eccezione  
- Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>.</xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName> La sequenza restituita contiene solo gli elementi dalla sequenza di input prima che non sono presenti nella seconda sequenza di input.  
+ Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La sequenza restituita contiene solo gli elementi dalla prima sequenza di input che non sono presenti nella seconda sequenza di input.  
   
- ![Rappresentazione grafica dell'azione di Except (). ](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ ![Grafico che mostra l'azione di Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
   
 ### <a name="intersect"></a>Interseca  
- Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>.</xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName> La sequenza restituita contiene gli elementi che sono comuni a entrambe le sequenze di input.  
+ Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La sequenza restituita contiene gli elementi comuni a entrambe le sequenze di input.  
   
- ![Grafica che mostra l'intersezione di due sequenze. ] (../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Si intersecano")  
+ ![Grafico che mostra l'intersezione di due sequenze.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
   
 ### <a name="union"></a>Unione  
- Nella figura seguente viene illustrata un'operazione di unione di due sequenze di caratteri. La sequenza restituita contiene gli elementi univoci di entrambe le sequenze di input.  
+ La figura seguente illustra un'operazione di unione tra due sequenze di caratteri. La sequenza restituita contiene gli elementi univoci da entrambe le sequenze di input.  
   
- ![Grafica che mostra l'unione di due sequenze. ](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
+ ![Grafico che mostra l'unione di due sequenze.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
   
-## <a name="query-expression-syntax-example"></a>Esempio di sintassi di espressione di query  
- Nell'esempio seguente viene utilizzata la `Distinct` clausola in una query LINQ per restituire i numeri univoci da un elenco di numeri interi.  
+## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query  
+ L'esempio seguente usa il `Distinct` clausola in una query LINQ per restituire i numeri univoci da un elenco di numeri interi.  
   
- [!code-vb[CsLINQSetOps n.&1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
+ [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq></xref:System.Linq>   
- [Cenni preliminari sugli operatori di Query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Clausola DISTINCT](../../../../visual-basic/language-reference/queries/distinct-clause.md)   
- [Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)   
+ <xref:System.Linq>  
+ [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Clausola Distinct](../../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ [Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
  [Procedura: trovare la differenza dei Set tra due elenchi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

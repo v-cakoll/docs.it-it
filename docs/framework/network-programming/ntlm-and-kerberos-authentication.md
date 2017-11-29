@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - authentication [.NET Framework], NTLM
 - authentication [.NET Framework], Kerberos
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8cb52a70aa34e1011f12a77ea32ec5077f92c127
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 36e88b163ab857180a02278828dba7dcec457736
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>Autenticazione NTLM e Kerberos
 L'autenticazione NTLM predefinita e l'autenticazione Kerberos usano le credenziali utente di Microsoft Windows NT associate all'applicazione chiamante per tentare l'autenticazione nel server. Quando si usa l'autenticazione NTLM non predefinita, l'applicazione imposta il tipo di autenticazione su NTLM e usa un oggetto <xref:System.Net.NetworkCredential> per passare nome utente, password e dominio all'host, come illustrato nell'esempio seguente.  
@@ -75,6 +72,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  L'autenticazione NTLM non funziona tramite un server proxy.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Autenticazione di base e del digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
+ [Base e l'autenticazione Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
  [Autenticazione Internet](../../../docs/framework/network-programming/internet-authentication.md)
-

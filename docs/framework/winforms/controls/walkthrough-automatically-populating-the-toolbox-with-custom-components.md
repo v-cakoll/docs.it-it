@@ -1,111 +1,112 @@
 ---
-title: "Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "componenti personalizzati, aggiunta alla Casella degli strumenti"
-  - "IToolboxService (interfaccia)"
-  - "casella degli strumenti [Windows Form], compilazione"
+title: 'Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IToolboxService interface
+- Toolbox [Windows Forms], populating
+- custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 691487046e2a34dbf233dc4bc03e20f9ec245da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati
-Se i componenti sono definiti da un progetto nella soluzione corrente, verranno automaticamente inclusi nella **Casella degli strumenti**, senza la necessità di altre azioni.  È anche possibile inserire manualmente i componenti personalizzati nella **Casella degli strumenti** utilizzando [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/it-it/bd07835f-18a8-433e-bccc-7141f65263bb), ma la **Casella degli strumenti** tiene conto degli elementi presenti negli output di compilazione della soluzione con tutte le seguenti caratteristiche:  
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati
+Se i componenti sono definiti da un progetto nella soluzione attualmente aperta, verrà automaticamente visualizzato nel **della casella degli strumenti**, senza interventi da parte dell'utente. È anche possibile inserire manualmente il **della casella degli strumenti** con componenti personalizzati usando il [Scegli elementi della finestra della casella (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), ma la **della casella degli strumenti** tiene conto elementi della soluzione di output con le seguenti caratteristiche di compilazione:  
   
--   Implementa <xref:System.ComponentModel.IComponent>.  
+-   Implementa <xref:System.ComponentModel.IComponent>;  
   
--   Non dispone di <xref:System.ComponentModel.ToolboxItemAttribute> impostato su `false`.  
+-   Non dispone <xref:System.ComponentModel.ToolboxItemAttribute> impostato su `false`;  
   
--   Non dispone di <xref:System.ComponentModel.DesignTimeVisibleAttribute> impostato su `false`.  
+-   Non dispone <xref:System.ComponentModel.DesignTimeVisibleAttribute> impostato su `false`.  
   
 > [!NOTE]
->  La **Casella degli strumenti** non segue le catene dei riferimenti e quindi non visualizzerà gli elementi che non vengono compilati da un progetto nella soluzione.  
+>  Il **della casella degli strumenti** segue le catene di riferimento, quindi non visualizzerà gli elementi che non vengono compilati da un progetto nella soluzione.  
   
- In questa procedura dettagliata viene descritto come impostare la visualizzazione automatica di un componente personalizzato nella **Casella degli strumenti** successivamente alla compilazione del componente.  Di seguito vengono elencate le attività illustrate nella procedura dettagliata:  
+ Questa procedura dettagliata illustra come un componente personalizzato viene automaticamente visualizzata nel **della casella degli strumenti** una volta creato il componente. Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione di un progetto Windows Form  
+-   Creazione di un progetto Windows Form.  
   
 -   Creazione di un componente personalizzato.  
   
 -   Creazione di un'istanza di un componente personalizzato.  
   
--   Scaricamento e nuovo caricamento di un componente personalizzato.  
+-   Scaricare e ricaricare un componente personalizzato.  
   
- Al termine, si potrà notare che nella **Casella degli strumenti** è incluso il componente creato.  
+ Al termine, si noterà che il **della casella degli strumenti** viene popolato con un componente che è stato creato.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Creazione del progetto  
- Il primo passaggio indica come creare il progetto e impostare il form.  
+## <a name="creating-the-project"></a>Creazione del progetto  
+ Il primo passaggio indica come creare il progetto e impostare il modulo.  
   
-#### Per creare il progetto  
+#### <a name="to-create-the-project"></a>Per creare il progetto  
   
 1.  Creare un progetto di applicazione basata su Windows chiamato `ToolboxExample`.  
   
-     Per ulteriori informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Per altre informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  Aggiungere un nuovo componente al progetto.  Chiamarlo `DemoComponent`.  
+2.  Aggiungere un nuovo componente al progetto. Chiamarlo `DemoComponent`.  
   
-     Per ulteriori informazioni, vedere [NIB:How to: Add New Project Items](http://msdn.microsoft.com/it-it/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Per ulteriori informazioni, vedere [NIB: procedura: aggiungere nuovi elementi di progetto](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
   
 3.  Compilare il progetto.  
   
-4.  Scegliere **Opzioni** dal menu **Strumenti**.  Scegliere **su Generale** in **Progettazione Windows Form** e verificare che l'opzione **AutoToolboxPopulate** sia impostata su **True**.  
+4.  Dal **strumenti** menu, fare clic su di **opzioni** elemento. Fare clic su **generale** sotto il **Progettazione Windows Form** e verificare che il **AutoToolboxPopulate** opzione è impostata su **True**.  
   
-## Creazione di un'istanza di un componente personalizzato  
- Il passaggio successivo consiste nella creazione di un'istanza del componente personalizzato nel form.  Dal momento che la **Casella degli strumenti** automaticamente tiene conto del nuovo componente, la creazione risulterà semplice al pari di altri componenti o controlli.  
+## <a name="creating-an-instance-of-a-custom-component"></a>Creazione di un'istanza di un componente personalizzato  
+ Il passaggio successivo consiste nel creare un'istanza del componente personalizzato nel modulo. Poiché il **della casella degli strumenti** automaticamente gli account per il nuovo componente, il codice è semplice come la creazione di qualsiasi altro componente o controllo.  
   
-#### Per creare un'istanza di un componente personalizzato  
+#### <a name="to-create-an-instance-of-a-custom-component"></a>Per creare un'istanza di un componente personalizzato  
   
-1.  Aprire il form del progetto in **Progettazione Windows Form**.  
+1.  Aprire il form del progetto nel **progettazione form**.  
   
-2.  Nella **Casella degli strumenti** fare clic sulla nuova scheda denominata **Componenti ToolboxExample**.  
+2.  Nel **della casella degli strumenti**, fare clic sulla scheda nuovo chiamata **Componenti ToolboxExample**.  
   
      Dopo aver selezionato la scheda, verrà visualizzato **DemoComponent**.  
   
     > [!NOTE]
-    >  Per non compromettere le prestazioni, i componenti presenti nell'area compilata automaticamente della **Casella degli strumenti** non vengono visualizzate le bitmap personalizzate e <xref:System.Drawing.ToolboxBitmapAttribute> non è supportato.  Per visualizzare un'icona per un componente personalizzato nella **Casella degli strumenti**, caricare il componente nella finestra di dialogo **Scegli elementi della Casella degli strumenti**.  
+    >  Per motivi di prestazioni, i componenti nell'area di popolati automaticamente il **della casella degli strumenti** non visualizzano le bitmap personalizzate e <xref:System.Drawing.ToolboxBitmapAttribute> non è supportata. Per visualizzare un'icona per un componente personalizzato nel **della casella degli strumenti**, utilizzare il **Scegli elementi della casella degli strumenti** finestra di dialogo per caricare il componente.  
   
-3.  Trascinare il componente nel form.  
+3.  Trascinare il componente al form.  
   
-     Un'istanza del componente viene creata e aggiunta nella **Barra dei componenti**.  
+     Viene aggiunta a un'istanza del componente di **sulla barra dei componenti**.  
   
-## Scaricamento e nuovo caricamento di un componente personalizzato  
- La **Casella degli strumenti** tiene conto dei componenti di ogni progetto caricato e quando un progetto viene scaricato, rimuove i riferimenti ai componenti del progetto.  
+## <a name="unloading-and-reloading-a-custom-component"></a>Scaricare e ricaricare un componente personalizzato  
+ Il **della casella degli strumenti** tengano conto dei componenti in ogni progetto di caricamento e quando un progetto viene scaricato, rimuove i riferimenti ai componenti del progetto.  
   
-#### Per valutare l'effetto nella Casella degli strumenti dello scaricamento e nuovo caricamento dei componenti  
+#### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Per sperimentare l'effetto della casella degli strumenti di scaricare e ricaricare i componenti  
   
 1.  Scaricare il progetto dalla soluzione.  
   
-     Per ulteriori informazioni sullo scaricamento dei progetti, vedere [NIB:How to: Unload and Reload Projects](http://msdn.microsoft.com/it-it/abc0155b-8fcb-4ffc-95b6-698518a7100b).  Se viene chiesto di salvare, scegliere **Sì**.  
+     Per ulteriori informazioni sullo scaricamento dei progetti, vedere [NIB: procedura: scaricare e ricaricare i progetti](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b). Se viene chiesto di salvare, scegliere **Sì**.  
   
-2.  Aggiungere alla soluzione un nuovo progetto **Applicazione Windows**.  Aprire il form nella **finestra di progettazione**.  
+2.  Aggiungere un nuovo **applicazione Windows** progetto alla soluzione. Aprire il form nel **progettazione**.  
   
-     La scheda **Componenti ToolboxExample** del progetto precedente è stata rimossa.  
+     Il **Componenti ToolboxExample** scheda dal progetto precedente è stata rimossa.  
   
-3.  Ricaricare il progetto `ToolboxExample`.  
+3.  Ricarica il `ToolboxExample` progetto.  
   
-     La scheda **Componenti ToolboxExample** viene ora di nuovo visualizzata.  
+     Il **Componenti ToolboxExample** scheda ora viene visualizzato nuovamente.  
   
-## Passaggi successivi  
- In questa procedura dettagliata viene spiegato che la **Casella degli strumenti** tiene conto dei componenti di un progetto e anche dei controlli.  Provare con i controlli personalizzati aggiungendo e rimuovendo i progetti dei controlli dalla soluzione.  
+## <a name="next-steps"></a>Passaggi successivi  
+ Questa procedura dettagliata viene dimostrato che la **della casella degli strumenti** tiene conto dei componenti di un progetto, ma la **della casella degli strumenti** è anche dei controlli. Sperimentare controlli personalizzati aggiungendo e rimuovendo i progetti di controllo dalla soluzione.  
   
-## Vedere anche  
- [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/it-it/8dd170af-72f0-4212-b04b-034ceee92834)   
- [How to: Manipulate Toolbox Tabs](http://msdn.microsoft.com/it-it/21285050-cadd-455a-b1f5-a2289a89c4db)   
- [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/it-it/bd07835f-18a8-433e-bccc-7141f65263bb)   
+## <a name="see-also"></a>Vedere anche  
+ [Generale, finestra di progettazione Windows Form, la finestra di dialogo Opzioni](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Procedura: modificare le schede della Casella degli strumenti](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [Finestra di dialogo Scegli elementi della Casella degli strumenti (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
  [Inserimento di controlli in Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

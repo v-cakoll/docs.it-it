@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e99b084ddb565a8ae00ee917eaf7fca2c659ab64
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b8f8e5ef6aa90b1d31c589a82891f0ca1bfa5469
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedura: creare wrapper COM
 È possibile creare wrapper COM (Component Object Model) usando le funzionalità [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] degli strumenti Tlbimp.exe e Regasm.exe di .NET Framework. Entrambi i metodi generano due tipi di wrapper COM:  
@@ -88,6 +81,5 @@ ms.lasthandoff: 08/21/2017
  È possibile eseguire Regasm.exe su un assembly disponibile in qualsiasi directory e quindi eseguire [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) per spostarlo nella Global Assembly Cache. Lo spostamento dell'assembly non invalida le voci del Registro di sistema per la posizione, perché la Global Assembly Cache viene sempre esaminata se l'assembly non viene trovato in altre posizioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)   
+ [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)  
  [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)
-

@@ -1,122 +1,120 @@
 ---
-title: "Like Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Like"
-  - "vb.Like"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "similar to"
-  - "pattern matching"
-  - "Like operator [Visual Basic]"
-  - "? symbol, wildcard character"
-  - "string comparison [Visual Basic], Like operator"
-  - "strings [Visual Basic], comparing"
-  - "comparison operators"
-  - "symbols, wildcard"
-  - "wildcards, Like operator"
-  - "strings [Visual Basic], matching"
-  - "string comparison [Visual Basic], sorting data"
-  - "data [Visual Basic], sorting"
-  - "text [Visual Basic], comparing"
-  - "operators [Visual Basic], pattern-matching"
-  - "data [Visual Basic], string comparisons"
-  - "string comparison [Visual Basic], Like operators"
+title: Like (operatore) (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Like
+- vb.Like
+helpviewer_keywords:
+- similar to
+- pattern matching
+- Like operator [Visual Basic]
+- '? symbol, wildcard character'
+- string comparison [Visual Basic], Like operator
+- strings [Visual Basic], comparing
+- comparison operators [Visual Basic]
+- symbols, wildcard
+- wildcards, Like operator
+- strings [Visual Basic], matching
+- string comparison [Visual Basic], sorting data
+- data [Visual Basic], sorting
+- text [Visual Basic], comparing
+- operators [Visual Basic], pattern-matching
+- data [Visual Basic], string comparisons
+- string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Like Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="like-operator-visual-basic"></a>Like (operatore) (Visual Basic)
 Confronta una stringa con un modello.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 result = string Like pattern  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `result`  
- Obbligatorio.  Qualsiasi variabile `Boolean`.  Il risultato è un valore `Boolean` che indica se `string` soddisfa i criteri di corrispondenza con `pattern`.  
+ Obbligatorio. Qualsiasi `Boolean` variabile. Il risultato è un `Boolean` valore che indica se il `string` soddisfa il `pattern`.  
   
  `string`  
- Obbligatorio.  Qualsiasi espressione `String`.  
+ Obbligatorio. Qualsiasi espressione `String`.  
   
  `pattern`  
- Obbligatorio.  Qualsiasi espressione `String` conforme alle convenzioni di corrispondenza dei modelli descritte nella sezione relativa alle osservazioni.  
+ Obbligatorio. Qualsiasi `String` espressione conforme alle convenzioni di criteri di ricerca descritte in "Osservazioni".  
   
-## Note  
- Se il valore di `string` soddisfa i criteri di corrispondenza con il modello contenuto in `pattern`, `result` sarà `True`.  Se tali criteri non vengono soddisfatti, `result` sarà `False`.  Se `string` e `pattern` sono entrambe stringhe vuote, il risultato sarà `True`.  
+## <a name="remarks"></a>Note  
+ Se il valore in `string` soddisfa il `pattern`, `result` è `True`. Se la stringa non soddisfa il criterio, `result` è `False`. Se entrambi `string` e `pattern` sono stringhe vuote, il risultato è `True`.  
   
-## Metodo di confronto  
- Il comportamento dell'operatore `Like` dipende dall'[Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md).  Il metodo di confronto delle stringhe predefinito per ciascun file di origine è `Option Compare Binary`.  
+## <a name="comparison-method"></a>Metodo di confronto  
+ Il comportamento del `Like` operatore dipende il [istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md). Il metodo di confronto di stringa predefinito per ogni file di origine è `Option Compare Binary`.  
   
-## Opzioni del modello  
- La corrispondenza tra modelli rappresenta uno strumento versatile per il confronto tra stringhe.  Le funzionalità di corrispondenza tra modelli consentono di associare ciascun carattere incluso in `string` con un carattere specifico, un carattere jolly, un elenco o un intervallo di caratteri.  Nella tabella riportata di seguito vengono illustrati i caratteri consentiti in `pattern` e le relative corrispondenze.  
+## <a name="pattern-options"></a>Opzioni del modello  
+ Criteri di ricerca incorporati offre uno strumento versatile per confronti tra stringhe. Le funzionalità di criteri di ricerca consentono di associare ogni carattere `string` da un carattere specifico, un carattere jolly, un elenco di caratteri o un intervallo di caratteri. La tabella seguente mostra i caratteri consentiti in `pattern` e le relative corrispondenze.  
   
-|Caratteri inclusi in `pattern`|Corrispondenza in `string`|  
-|------------------------------------|--------------------------------|  
-|`?`|Qualsiasi carattere singolo.|  
-|`*`|Nessuno o più caratteri.|  
-|`#`|Qualsiasi cifra singola \(0\-9\).|  
-|`[` `charlist` `]`|Qualsiasi carattere singolo incluso in `charlist`.|  
-|`[!` `charlist` `]`|Qualsiasi carattere singolo non incluso in `charlist`.|  
+|Caratteri`pattern`|Corrispondenze in`string`|  
+|-----------------------------|-------------------------|  
+|`?`|Qualsiasi carattere singolo|  
+|`*`|Zero o più caratteri|  
+|`#`|Qualsiasi cifra (0-9)|  
+|`[charlist]`|Qualsiasi carattere singolo`charlist`|  
+|`[!charlist]`|Qualsiasi carattere singolo non incluso`charlist`|  
   
-## Elenchi di caratteri  
- Per stabilire una corrispondenza con qualsiasi carattere presente in `string`, è possibile utilizzare un gruppo di uno o più caratteri \(`charlist`\) racchiuso tra parentesi quadre \(`[ ]`\) che può contenere quasi tutti i codici carattere, comprese le cifre.  
+## <a name="character-lists"></a>Elenchi di caratteri  
+ Un gruppo di uno o più caratteri (`charlist`) racchiusi tra parentesi quadre (`[ ]`) può essere usato per corrispondi a qualsiasi carattere singolo in `string` e possono includere qualsiasi codice di carattere, comprese le cifre.  
   
- Se si specifica un punto esclamativo \(`!`\) all'inizio di `charlist`, la corrispondenza verrà stabilita se `string` contiene uno o più caratteri che non sono inclusi in `charlist`.  Se utilizzato fuori dalle parentesi quadre, il punto esclamativo non svolgerà alcuna funzione particolare.  
+ Un punto esclamativo (`!`) all'inizio di `charlist` indica che viene individuata una corrispondenza se qualsiasi carattere tranne i caratteri in `charlist` è presente in `string`. Se utilizzato all'esterno delle parentesi quadre, il punto esclamativo corrisponde a se stesso.  
   
-## Caratteri speciali  
- Per verificare la corrispondenza di caratteri speciali quali la parentesi quadra aperta \(`[`\), il punto interrogativo \(`?`\), il segno di numero \(`#`\) e l'asterisco \(`*`\), è necessario racchiuderli tra parentesi quadre.  La parentesi quadra chiusa \(`]`\) può essere utilizzata per stabilire una corrispondenza con un carattere identico all'esterno ma non all'interno di un gruppo.  
+## <a name="special-characters"></a>Caratteri speciali  
+ Per trovare la corrispondenza di parentesi quadra sinistra i caratteri speciali (`[`), punto interrogativo (`?`), simbolo di cancelletto (`#`) e l'asterisco (`*`), racchiuderli tra parentesi quadre. La parentesi quadra chiusa (`]`) non può essere utilizzato all'interno di un gruppo per stabilire una corrispondenza, ma può essere utilizzato all'esterno di un gruppo come un singolo carattere.  
   
- La sequenza di caratteri `[]` viene considerata una stringa di lunghezza zero \(`""`\).  Non può tuttavia far parte di un elenco di caratteri racchiusi tra parentesi quadre.  Per verificare se una determinata posizione in `string` contiene un solo carattere di un gruppo o non contiene alcun carattere, è possibile utilizzare `Like` due volte.  Per un esempio, vedere [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ La sequenza di caratteri `[]` viene considerata una stringa di lunghezza zero (`""`). Tuttavia, non può far parte di un elenco di caratteri racchiusi tra parentesi quadre. Se si desidera controllare se una posizione in `string` contiene uno di un gruppo di caratteri o nessun carattere, è possibile utilizzare `Like` due volte. Per un esempio, vedere [procedura: confrontare una stringa con un modello](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
-## Intervalli di caratteri  
- All'interno di `charlist` è possibile specificare un intervallo di caratteri inserendo un trattino \(`–`\) tra il limite superiore e quello inferiore dell'intervallo.  Ad esempio, `[A–Z]` restituisce una corrispondenza se la posizione corrispondente in `string` contiene un qualsiasi carattere compreso nell'intervallo `A`–`Z`, mentre `[!H–L]` restituisce una corrispondenza se la posizione corrispondente contiene un qualsiasi carattere non compreso nell'intervallo `H`–`L`.  
+## <a name="character-ranges"></a>Intervalli di caratteri  
+ Utilizzando un trattino (`–`) per separare i limiti inferiore e superiore dell'intervallo, `charlist` possibile specificare un intervallo di caratteri. Ad esempio, `[A–Z]` produce una corrispondenza, se la posizione corrispondente `string` contenente qualsiasi carattere all'interno dell'intervallo `A`–`Z`, e `[!H–L]` produce una corrispondenza, se la posizione corrispondente contenente qualsiasi carattere non compreso nell'intervallo `H`–`L`.  
   
- Quando viene specificato un intervallo di caratteri, questi devono essere indicati in ordine crescente, ossia dal minore al maggiore.  L'intervallo `[A–Z]` risulta quindi valido, al contrario di `[Z–A]`.  
+ Quando si specifica un intervallo di caratteri, è necessario specificarle nell'ordine crescente, vale a dire, dalla più bassa. Di conseguenza, `[A–Z]` è valido, ma `[Z–A]` non.  
   
-### Intervalli multipli di caratteri  
- Per specificare più intervalli per la stessa posizione di carattere, inserirli tra le stesse parentesi quadre senza delimitatori.  Ad esempio, `[A–CX–Z]` restituisce una corrispondenza se la posizione corrispondente in `string` contiene un qualsiasi carattere compreso nell'intervallo `A`–`C` o `X`–`Z`.  
+### <a name="multiple-character-ranges"></a>Più intervalli di caratteri  
+ Per specificare più intervalli per la stessa posizione di carattere, inserirli all'interno delle parentesi stesso senza delimitatori. Ad esempio, `[A–CX–Z]` produce una corrispondenza, se la posizione corrispondente `string` contenente qualsiasi carattere compreso nell'intervallo `A`–`C` o l'intervallo `X`–`Z`.  
   
-### Utilizzo del trattino  
- Per stabilire una corrispondenza con un carattere identico, il trattino \(`–`\) può essere inserito sia all'inizio \(dopo il punto esclamativo, se utilizzato\) che alla fine di `charlist` .  In qualsiasi altra posizione il trattino identifica un intervallo di caratteri delimitato dal carattere precedente e successivo.  
+### <a name="usage-of-the-hyphen"></a>Utilizzo del trattino  
+ Un segno meno (`–`) possono essere visualizzati all'inizio (dopo un punto esclamativo, se presente) o alla fine di `charlist` per stabilire una corrispondenza. In qualsiasi altro percorso, il trattino identifica un intervallo di caratteri racchiusi tra i caratteri su entrambi i lati del trattino.  
   
-## Sequenza di confronto  
- Il significato di un intervallo specificato dipende dall'ordinamento dei caratteri in fase di esecuzione, determinato da `Option` `Compare` e dalle impostazioni locali del sistema in cui viene eseguito il codice.  Con `Option` `Compare` `Binary` l'intervallo `[A–E]` corrisponde ad `A`, `B`, `C`, `D` ed `E`.  Con `Option` `Compare` `Text` `[A–E]` corrisponde ad `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E` ed `e`.  L'intervallo non include `Ê` o `ê` perché i caratteri accentati vengono messi a confronto dopo quelli non accentati nella sequenza di ordinamento.  
+## <a name="collating-sequence"></a>Sequenza di confronto  
+ Il significato di un intervallo specificato dipende dall'ordinamento dei caratteri in fase di esecuzione, come determinato dalla `Option``Compare` e le impostazioni locali del sistema in cui viene eseguito il codice. Con `Option``Compare``Binary`, l'intervallo `[A–E]` corrisponde `A`, `B`, `C`, `D`, e `E`. Con `Option``Compare``Text`, `[A–E]` corrisponde `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, e `e`. L'intervallo corrisponde `Ê` o `ê` perché i caratteri accentati collate dopo accentati nell'ordinamento.  
   
-## Caratteri digraph  
- In alcune lingue sono presenti lettere che rappresentano due caratteri distinti.  In diverse lingue viene ad esempio utilizzato il carattere `æ` per rappresentare il dittongo composto da `a` e `e` quando i due caratteri compaiono insieme.  L'operatore `Like` consente di rilevare l'equivalenza tra il singolo carattere digraph e i due caratteri singoli.  
+## <a name="digraph-characters"></a>Caratteri digraph  
+ In alcune lingue, sono presenti caratteri alfabetici che rappresentano due caratteri distinti. Ad esempio, di utilizzare il carattere più lingue `æ` per rappresentare i caratteri `a` e `e` quando vengono visualizzati insieme. Il `Like` operatore riconosce che il singolo carattere digraph e i due caratteri singoli sono equivalenti.  
   
- Se nelle impostazioni locali del sistema viene specificata una lingua che utilizza un carattere digraph, l'occorrenza di tale carattere in `pattern` o `string` verrà considerata corrispondente alla sequenza dei due caratteri nell'altra stringa.  Analogamente, un carattere digraph in `pattern` racchiuso tra parentesi quadre \(da solo, in un elenco o in un intervallo\) verrà considerato corrispondente all'equivalente sequenza di due caratteri presente in `string`.  
+ Quando una lingua che utilizza un carattere digraph è specificata nelle impostazioni locali del sistema, di un'occorrenza del carattere in una tale `pattern` o `string` corrisponde alla sequenza di due caratteri equivalente in altra stringa. Analogamente, un carattere digraph in `pattern` racchiusi tra parentesi quadre (di per sé, in un elenco o in un intervallo) corrisponde alla sequenza di due caratteri equivalente in `string`.  
   
-## Overload  
- L'operatore `Like` può essere sottoposto a *overload*. In altri termini, una classe o una struttura può ridefinirne il comportamento quando un operando specifica il tipo di tale classe o struttura.  Se il codice utilizza l'operatore su una classe o una struttura di questo tipo, è importante comprendere il comportamento ridefinito di tale operatore.  Per ulteriori informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Overload  
+ Il `Like` operatore può essere *overload*, il che significa che una classe o struttura ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice Usa l'operatore in una classe o una struttura, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito l'operatore `Like` viene utilizzato per confrontare stringhe con diversi modelli.  I risultati vengono inseriti in una variabile `Boolean` che indica se ogni stringa soddisfa i criteri di corrispondenza con il modello.  
+## <a name="example"></a>Esempio  
+ Questo esempio viene utilizzato il `Like` operatore per confrontare le stringhe in vari modelli. I risultati vengono inseriti in un `Boolean` variabile che indica se ogni stringa soddisfa il criterio.  
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## Vedere anche  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>   
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>   
- [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md)   
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
+ [Operatori di confronto](../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Procedura: Confrontare una stringa con un modello](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

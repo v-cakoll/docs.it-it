@@ -1,48 +1,53 @@
 ---
-title: "Procedura: creare elenchi Master-Details con il controllo DataGrid Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid (controllo) [Windows Form], Master-Details (elenchi)"
-  - "Master-Details (elenchi)"
-  - "tabelle correlate, visualizzazione nel controllo DataGrid"
+title: 'Procedura: creare elenchi Master-Details con il controllo DataGrid Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- master-details lists
+- DataGrid control [Windows Forms], master-details lists
+- related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63cb647e2ed6dcbc97fab15db3166b55c52f635a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare elenchi Master-Details con il controllo DataGrid Windows Form
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Procedura: creare elenchi Master-Details con il controllo DataGrid Windows Form
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Se <xref:System.Data.DataSet> contiene una serie di tabelle correlate, è possibile utilizzare due controlli <xref:System.Windows.Forms.DataGrid> per visualizzare i dati in un formato Master\-Details.  Il primo <xref:System.Windows.Forms.DataGrid> viene designato come griglia principale e il secondo come griglia dei dettagli.  Quando si seleziona una voce nell'elenco principale, nell'elenco dei dettagli vengono visualizzate tutte le relative voci figlio.  Se ad esempio <xref:System.Data.DataSet> contiene una tabella Customers e una tabella correlata Orders, è possibile specificare la tabella Customers come griglia principale e la tabella Orders come griglia dei dettagli.  Quando si seleziona un cliente nella griglia principale, tutti gli ordini associati a quel cliente inclusi nella tabella Orders verranno visualizzati nella griglia dei dettagli.  
+ Se il <xref:System.Data.DataSet> contiene una serie di tabelle correlate, è possibile utilizzare due <xref:System.Windows.Forms.DataGrid> controlli per visualizzare i dati in un formato master-details. Uno <xref:System.Windows.Forms.DataGrid> designato come griglia principale, e il secondo è designato come griglia dei dettagli. Quando si seleziona una voce nell'elenco master, tutte le voci figlio correlati vengono visualizzate nell'elenco dei dettagli. Ad esempio, se il <xref:System.Data.DataSet> contiene una tabella Customers e una tabella correlata Orders, specificare la tabella Customers come griglia principale e la tabella Orders come griglia dei dettagli. Quando un cliente è selezionato nella griglia principale, tutti gli ordini associati al cliente nella tabella Orders verrebbero visualizzati nella griglia dettagli.  
   
-### Per impostare una relazione Master\-Details a livello di codice  
+### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Per impostare una relazione master/dettagli a livello di codice  
   
-1.  Creare due nuovi controlli <xref:System.Windows.Forms.DataGrid> e impostarne le proprietà.  
+1.  Creare due nuovi <xref:System.Windows.Forms.DataGrid> controlla e impostare le relative proprietà.  
   
-2.  Aggiungere delle tabelle al dataset.  
+2.  Aggiungere tabelle al set di dati.  
   
 3.  Dichiarare una variabile di tipo <xref:System.Data.DataRelation> per rappresentare la relazione che si desidera creare.  
   
-4.  Creare un'istanza della relazione \(DataRelation\) specificando un nome per la relazione nonché la tabella, la colonna e l'elemento che collegheranno le due tabelle.  
+4.  Specificando un nome per la relazione e le tabelle, colonne e l'elemento che verrà associata a due tabelle, creare un'istanza della relazione.  
   
-5.  Aggiungere la relazione alla raccolta <xref:System.Data.DataSet.Relations%2A> dell'oggetto <xref:System.Data.DataSet>.  
+5.  Aggiungere la relazione per il <xref:System.Data.DataSet> dell'oggetto <xref:System.Data.DataSet.Relations%2A> insieme.  
   
-6.  Utilizzare il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> del controllo <xref:System.Windows.Forms.DataGrid> per associare entrambe le griglie all'oggetto <xref:System.Data.DataSet>.  
+6.  Utilizzare il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo il <xref:System.Windows.Forms.DataGrid> per entrambe le griglie per associare il <xref:System.Data.DataSet>.  
   
-     Nell'esempio riportato di seguito viene illustrato come impostare una relazione Master\-Details tra la tabella Customers e la tabella Orders in un oggetto <xref:System.Data.DataSet> \(`ds`\) precedentemente generato.  
+     Nell'esempio seguente viene illustrato come impostare una relazione master/dettaglio tra le tabelle Customers e Orders in generato in precedenza <xref:System.Data.DataSet> (`ds`).  
   
     ```vb  
     Dim myDataRelation As DataRelation  
@@ -53,7 +58,6 @@ caps.handback.revision: 15
     ds.Relations.Add(myDataRelation)  
     GridOrders.SetDataBinding(ds, "Customers")  
     GridDetails.SetDataBinding(ds, "Customers.CustOrd")  
-  
     ```  
   
     ```csharp  
@@ -63,7 +67,6 @@ caps.handback.revision: 15
     ds.Relations.Add(myDataRelation);  
     GridOrders.SetDataBinding(ds,"Customers");  
     GridDetails.SetDataBinding(ds,"Customers.CustOrd");  
-  
     ```  
   
     ```cpp  
@@ -77,7 +80,7 @@ caps.handback.revision: 15
     GridDetails->SetDataBinding(ds, "Customers.CustOrd");  
     ```  
   
-## Vedere anche  
- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Procedura: associare il controllo DataGrid Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [Procedura: Associare il controllo DataGrid Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
 - strong-named assemblies, interop applications
@@ -27,16 +21,15 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e969535342c9952630947dfff8e0d3104e3a5f80
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f804843c248e0051582aca6d1dd6328871e1cc06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deploying-an-interop-application"></a>Distribuzione di una applicazione di interoperabilità
 Un'applicazione di interoperabilità in genere include un assembly client .NET, uno o più assembly di interoperabilità che rappresentano librerie dei tipi COM distinte e uno o più componenti COM registrati. Visual Studio e [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] forniscono strumenti per importare e convertire una libreria dei tipi in un assembly di interoperabilità, come illustrato in [Importing a Type Library as an Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md) (Importazione di una libreria dei tipi come assembly). Un'applicazione di interoperabilità può essere distribuita in due modi:  
@@ -62,8 +55,7 @@ Struttura delle directory e voci del Registro di sistema per una distribuzione p
  Gli assembli condivisi da più applicazioni devono essere installati in un repository centralizzato denominato Global Assembly Cache. I client .NET possono accedere alla stessa copia dell'assembly di interoperabilità, che viene firmato e installato nella Global Assembly Cache. Per altre informazioni sulla creazione e sull'uso di assembly di interoperabilità primari, vedere [Primary Interop Assemblies](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080) (Assembly di interoperabilità primari).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)   
- [Importazione di una libreria dei tipi come assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
- [Uso dei tipi COM nel codice gestito](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
+ [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
+ [Importazione di una libreria dei tipi come assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
+ [Utilizzo di tipi COM nel codice gestito](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [Compilazione di un progetto di interoperabilità](../../../docs/framework/interop/compiling-an-interop-project.md)
-

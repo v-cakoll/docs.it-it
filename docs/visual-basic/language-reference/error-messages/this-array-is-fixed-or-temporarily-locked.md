@@ -1,40 +1,38 @@
 ---
-title: "This array is fixed or temporarily locked (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID10"
-dev_langs: 
-  - "VB"
+title: "La matrice è fissa o temporaneamente bloccata (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: adff10d4ae61e45402df64ebaa3baf146371ff9e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# This array is fixed or temporarily locked (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Le cause possibili dell'errore sono le seguenti:  
+# <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>La matrice è fissa o temporaneamente bloccata (Visual Basic)
+Questo errore sono le seguenti cause possibili:  
   
--   Utilizzo di `ReDim` per cambiare il numero di elementi di una matrice di dimensioni fisse.  
+-   Utilizzando `ReDim` per modificare il numero di elementi di una matrice di dimensioni fisse.  
   
--   Ridimensionamento di una matrice dinamica a livello di modulo in cui un elemento è stato passato come argomento a una routine.  Se un elemento viene passato, la matrice viene bloccata per impedire la deallocazione di memoria per il parametro di riferimento all'interno della routine.  
+-   Ridimensionamento di una matrice dinamica a livello di modulo, in cui un elemento è stato passato come argomento a una routine. Se un elemento viene passato, la matrice è bloccata per impedire la deallocazione di memoria per il parametro di riferimento all'interno della routine.  
   
--   Tentativo di assegnazione di un valore a una variabile `Variant` contenente una matrice, ma `Variant` al momento è bloccata.  
+-   Il tentativo di assegnare un valore a un `Variant` variabile che contiene una matrice, ma la `Variant` è attualmente bloccato.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Rendere dinamica e non fissa la matrice originale dichiarandola con `ReDim`, se è dichiarata all'interno di una routine, oppure dichiarandola senza specificare il numero di elementi, se è dichiarata a livello di modulo.  
+1.  Rendere la matrice originale dinamica anziché dichiarandola con `ReDim` (se è dichiarata all'interno di una stored procedure), sia che venga dichiarata senza specificare il numero di elementi (se la matrice viene dichiarata a livello di modulo.  
   
-2.  Stabilire se è effettivamente necessario passare l'elemento, dato che è visibile all'interno di tutte le routine nel modulo.  
+2.  Determinare se sia necessario per passare l'elemento, dato che è visibile all'interno di tutte le procedure nel modulo.  
   
-3.  Stabilire cosa blocca `Variant` e porvi rimedio.  
+3.  Stabilire cosa blocca il `Variant` e correzione.  
   
-## Vedere anche  
- [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)

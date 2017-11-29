@@ -1,54 +1,60 @@
 ---
-title: "Federazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "federazione [WCF]"
-  - "WCF, federazione"
+title: Federazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, federation
+- federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 71b685b372edc99ffa8ea00180cdf622c5e48632
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Federazione
-In questo argomento viene illustrato brevemente il concetto di sicurezza federata.Viene inoltre descritto il supporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per la distribuzione di architetture di sicurezza federata.Per un'applicazione di esempio sulla federazione, vedere [Esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
+# <a name="federation"></a>Federazione
+In questo argomento viene illustrato brevemente il concetto di sicurezza federata. Viene inoltre descritto il supporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per la distribuzione di architetture di sicurezza federata. Per un'applicazione di esempio che illustra la federazione, vedere [federazione esempio](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-## Definizione di sicurezza federata  
- La protezione federata consente di separare con precisione il servizio al quale sta accedendo un client dalle procedure pertinenti di autenticazione e di autorizzazione.La protezione federata consente inoltre la collaborazione attraverso più sistemi, reti e organizzazioni in diverse aree di attendibilità.  
+## <a name="definition-of-federated-security"></a>Definizione di sicurezza federata  
+ La protezione federata consente di separare con precisione il servizio al quale sta accedendo un client dalle procedure pertinenti di autenticazione e di autorizzazione. La protezione federata consente inoltre la collaborazione attraverso più sistemi, reti e organizzazioni in diverse aree di attendibilità.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce il supporto per creare e distribuire sistemi distribuiti che utilizzano la protezione federata.  
   
-### Elementi di un'architettura di sicurezza federata  
+### <a name="elements-of-a-federated-security-architecture"></a>Elementi di un'architettura di sicurezza federata  
  L'architettura di sicurezza federata è composta da tre elementi principali, come descritto nella tabella seguente.  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|Dominio\/area|Una singola unità di amministrazione di sicurezza o attendibilità.Un dominio tipico potrebbe includere una sola organizzazione.|  
-|Federazione|Una raccolta di domini che hanno stabilito una relazione di trust.Il livello di attendibilità può variare, ma in genere include l'autenticazione e quasi sempre l'autorizzazione.Una federazione tipica potrebbe includere numerose organizzazioni che hanno stabilito una relazione di trust per l'accesso condiviso a un set di risorse.|  
-|Servizio Token di sicurezza \(STS, Security Token Service\)|Servizio Web che rilascia token di sicurezza, ovvero, fa asserzioni basate su evidenze che considera attendibili, a chiunque lo consideri attendibile.Questa è la base della negoziazione di attendibilità tra domini.|  
+|-------------|-----------------|  
+|Dominio/area|Una singola unità di amministrazione di sicurezza o attendibilità. Un dominio tipico potrebbe includere una sola organizzazione.|  
+|Federazione|Una raccolta di domini che hanno stabilito una relazione di trust. Il livello di attendibilità può variare, ma in genere include l'autenticazione e quasi sempre l'autorizzazione. Una federazione tipica potrebbe includere numerose organizzazioni che hanno stabilito una relazione di trust per l'accesso condiviso a un set di risorse.|  
+|Servizio Token di sicurezza (STS, Security Token Service)|Servizio Web che rilascia token di sicurezza, ovvero, fa asserzioni basate su evidenze che considera attendibili, a chiunque lo consideri attendibile. Questa è la base della negoziazione di attendibilità tra domini.|  
   
-### Scenario di esempio  
+### <a name="example-scenario"></a>Scenario di esempio  
  Nella figura seguente viene illustrato un esempio di sicurezza federata.  
   
  ![Federazione](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
   
- In questo scenario sono incluse due organizzazioni: A e B.L'organizzazione B ha una risorsa Web \(un servizio Web\) che alcuni utenti dell'organizzazione A ritengono preziosa.  
+ In questo scenario sono incluse due organizzazioni: A e B. L'organizzazione B ha una risorsa Web (un servizio Web) che alcuni utenti dell'organizzazione A ritengono preziosa.  
   
 > [!NOTE]
->  In questa sezione, vengono utilizzati indifferentemente i termini *risorsa*, *servizio* e *servizio Web*.  
+>  In questa sezione vengono utilizzati i termini *risorse*, *servizio*, e *servizio Web* in modo intercambiabile.  
   
- L'organizzazione B richiede in genere che un utente dell'organizzazione A fornisca un tipo valido di autenticazione prima di accedere al servizio.Potrebbe inoltre richiedere che l'utente venga autorizzato ad accedere alla risorsa specifica in questione.Un modo per risolvere questo problema e consentire agli utenti dell'organizzazione A di accedere alla risorsa nell'organizzazione B è il seguente:  
+ L'organizzazione B richiede in genere che un utente dell'organizzazione A fornisca un tipo valido di autenticazione prima di accedere al servizio. Potrebbe inoltre richiedere che l'utente venga autorizzato ad accedere alla risorsa specifica in questione. Un modo per risolvere questo problema e consentire agli utenti dell'organizzazione A di accedere alla risorsa nell'organizzazione B è il seguente:  
   
--   Gli utenti dell'organizzazione A registrano le proprie credenziali \(un nome utente e una password\) presso l'organizzazione B.  
+-   Gli utenti dell'organizzazione A registrano le proprie credenziali (un nome utente e una password) presso l'organizzazione B.  
   
 -   Durante l'accesso alla risorsa, gli utenti dell'organizzazione A presentano le proprie credenziali all'organizzazione B e vengono autenticati prima di accedere alla risorsa.  
   
@@ -56,29 +62,29 @@ In questo argomento viene illustrato brevemente il concetto di sicurezza federat
   
 -   L'organizzazione B deve gestire le credenziali degli utenti dell'organizzazione A, oltre a quelle dei propri utenti locali.  
   
--   Gli utenti dell'organizzazione A devono mantenere un set aggiuntivo di credenziali \(ovvero, ricordare un nome utente e una password in più\), oltre a quelle normalmente utilizzate per accedere alle risorse all'interno dell'organizzazione A.Ciò incoraggia la pratica dell'utilizzo dello stesso nome utente e della stessa password in più siti del servizio, il che non è una misura efficace di sicurezza.  
+-   Gli utenti dell'organizzazione A devono mantenere un set aggiuntivo di credenziali (ovvero, ricordare un nome utente e una password in più), oltre a quelle normalmente utilizzate per accedere alle risorse all'interno dell'organizzazione A. Ciò incoraggia la pratica dell'utilizzo dello stesso nome utente e della stessa password in più siti del servizio, il che non è una misura efficace di sicurezza.  
   
 -   L'architettura non si adatta, in quanto più organizzazioni percepiscono la risorsa dell'organizzazione B come di un qualche valore.  
   
- Un approccio alternativo, che risolve gli inconvenienti menzionati in precedenza, consiste nell'utilizzare la protezione federata.In questo approccio, le organizzazioni A e B stabiliscono una relazione di trust e utilizzano il servizio token di sicurezza \(STS, Security Token Service\) per consentire la negoziazione della relazione di trust stabilita.  
+ Un approccio alternativo, che risolve gli inconvenienti menzionati in precedenza, consiste nell'utilizzare la protezione federata. In questo approccio, le organizzazioni A e B stabiliscono una relazione di trust e utilizzano il servizio token di sicurezza (STS, Security Token Service) per consentire la negoziazione della relazione di trust stabilita.  
   
  In un'architettura di sicurezza federata, gli utenti dell'organizzazione A sanno che se vogliono accedere al servizio Web dell'organizzazione B devono presentare un token di sicurezza valido dall'STS dell'organizzazione B, che autentica e autorizza il loro accesso al servizio specifico.  
   
- Quando contattano l'STS B, gli utenti ricevono un altro livello di riferimento indiretto dal criterio associato a STS.Devono presentare un token di sicurezza valido da STS A \(ovvero, l'area di attendibilità del client\) prima che STS B possa rilasciare loro un token di sicurezza.Si tratta di un corollario della relazione di trust stabilita tra le due organizzazioni e implica che l'organizzazione B non deve gestire le identità degli utenti dell'organizzazione A.In pratica, STS B in genere ha `issuerAddress` e `issuerMetadataAddress` Null.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).In tal caso, il client consulta criteri locali per individuare STS A.Questa configurazione è chiamata *federazione dell'area di autenticazione principale* e si adatta meglio perché STS B non deve conservare informazioni su STS A.  
+ Quando contattano l'STS B, gli utenti ricevono un altro livello di riferimento indiretto dal criterio associato a STS. Devono presentare un token di sicurezza valido da STS A (ovvero, l'area di attendibilità del client) prima che STS B possa rilasciare loro un token di sicurezza. Si tratta di un corollario della relazione di trust stabilita tra le due organizzazioni e implica che l'organizzazione B non deve gestire le identità degli utenti dell'organizzazione A. In pratica, STS B in genere ha `issuerAddress` e `issuerMetadataAddress` nulli. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). In tal caso, il client consulta criteri locali per individuare STS A. Questa configurazione è denominata *home federazione dell'area di autenticazione* e si adatta meglio perché STS B non è necessario gestire le informazioni relative al servizio token di sicurezza A.  
   
- Gli utenti contattano quindi l'STS dell'organizzazione A e ottengono un token di sicurezza presentando le credenziali di autenticazione che utilizzano normalmente per accedere a qualsiasi altra risorsa all'interno dell'organizzazione A.In tal modo, si evita loro di dover conservare più set di credenziali o utilizzare lo stesso set di credenziali in più siti del servizio.  
+ Gli utenti contattano quindi l'STS dell'organizzazione A e ottengono un token di sicurezza presentando le credenziali di autenticazione che utilizzano normalmente per accedere a qualsiasi altra risorsa all'interno dell'organizzazione A. In tal modo, si evita loro di dover conservare più set di credenziali o utilizzare lo stesso set di credenziali in più siti del servizio.  
   
- Una volta ottenuto un token di sicurezza da STS A, gli utenti lo presentano a STS B.L'organizzazione B procede per eseguire l'autorizzazione delle richieste degli utenti e rilascia loro un token di sicurezza preso dal proprio set di token di sicurezza.Gli utenti possono presentare quindi il proprio token alla risorsa dell'organizzazione B e accedere al servizio.  
+ Una volta ottenuto un token di sicurezza da STS A, gli utenti lo presentano a STS B. L'organizzazione B procede per eseguire l'autorizzazione delle richieste degli utenti e rilascia loro un token di sicurezza preso dal proprio set di token di sicurezza. Gli utenti possono presentare quindi il proprio token alla risorsa dell'organizzazione B e accedere al servizio.  
   
-## Supporto per la protezione federata in WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un supporto chiavi in mano per la distribuzione di architetture di sicurezza federata tramite [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+## <a name="support-for-federated-security-in-wcf"></a>Supporto per la protezione federata in WCF  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornisce il supporto di chiavi in mano per la distribuzione di architetture di sicurezza federate tramite il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
- L'elemento [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) offre un'associazione sicura, affidabile e interoperativa che comporta l'utilizzo di HTTP come meccanismo di trasporto sottostante per lo stile di comunicazione request\/reply, utilizzando testo e XML come formato wire per la codifica.  
+ Il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento fornisce per un'associazione protetta, affidabile, interoperativa che comporta l'utilizzo di HTTP come meccanismo di trasporto sottostante per lo stile di comunicazione request / reply, utilizzo di testo e XML come formato di trasmissione per la codifica.  
   
- L'utilizzo di [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) in uno scenario di sicurezza federata può essere separato in due fasi logicamente indipendenti, come descritto nelle sezioni seguenti.  
+ L'utilizzo di [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) per la protezione federata scenario può essere separato in due fasi logicamente indipendente, come descritto nelle sezioni seguenti.  
   
-### Fase 1: Progettazione  
- Durante la fase di progettazione, il client utilizza [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per leggere il criterio esposto dall'endpoint del servizio e raccogliere i requisiti di autenticazione e autorizzazione del servizio.Vengono costruiti proxy adatti per creare il modello di comunicazione di sicurezza federata seguente nel client:  
+### <a name="phase-1-design-phase"></a>Fase 1: Progettazione  
+ Durante la fase di progettazione, il client utilizza il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per leggere i criteri che espone l'endpoint del servizio e raccogliere i requisiti del servizio di autenticazione e autorizzazione. Vengono costruiti proxy adatti per creare il modello di comunicazione di sicurezza federata seguente nel client:  
   
 -   Ottenere un token di sicurezza da STS nell'area di attendibilità del client.  
   
@@ -88,22 +94,22 @@ In questo argomento viene illustrato brevemente il concetto di sicurezza federat
   
 -   Presentare il token al servizio per accedere ad esso.  
   
-### Fase 2: Runtime  
- Durante la fase runtime, il client crea un'istanza di un oggetto della classe client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e fa una chiamata utilizzando il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Il framework sottostante di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gestisce i passaggi menzionati in precedenza nel modello di comunicazione di sicurezza federata e consente al client di utilizzare facilmente il servizio.  
+### <a name="phase-2-run-time-phase"></a>Fase 2: Runtime  
+ Durante la fase runtime, il client crea un'istanza di un oggetto della classe client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e fa una chiamata utilizzando il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il framework sottostante di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gestisce i passaggi menzionati in precedenza nel modello di comunicazione di sicurezza federata e consente al client di utilizzare facilmente il servizio.  
   
-## Implementazione di esempio utilizzando WCF  
+## <a name="sample-implementation-using-wcf"></a>Implementazione di esempio utilizzando WCF  
  Nella figura seguente viene illustrata un'implementazione di esempio per un'architettura di sicurezza federata utilizzando il supporto nativo da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  ![Sicurezza di federazione in WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
-### Esempio MyService  
- Il servizio `MyService` espone un singolo endpoint tramite `MyServiceEndpoint`.Nella figura seguente vengono illustrati l'indirizzo, l'associazione e il contratto associati all'endpoint.  
+### <a name="example-myservice"></a>Esempio MyService  
+ Il servizio `MyService` espone un singolo endpoint tramite `MyServiceEndpoint`. Nella figura seguente vengono illustrati l'indirizzo, l'associazione e il contratto associati all'endpoint.  
   
  ![Federazione](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
   
- L'endpoint del servizio `MyServiceEndpoint` utilizza [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) e richiede un token Security Assertions Markup Language \(SAML\) valido con un'attestazione `accessAuthorized` rilasciata da STS B.Questo è specificato in modo dichiarativo nella configurazione del servizio.  
+ L'endpoint del servizio `MyServiceEndpoint` utilizza il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) e richiede un token di sicurezza asserzioni Markup Language (SAML) valido con un `accessAuthorized` attestazione rilasciata da STS B. Questo è specificato in modo dichiarativo nella configurazione del servizio.  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.MyService"      
@@ -152,7 +158,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  In relazione alle attestazioni richieste da `MyService`, è opportuno tenere presente un fattore importante.La seconda figura indica che `MyService` richiede un token SAML con l'attestazione `accessAuthorized`.Per essere più precisi, viene specificato il tipo di attestazione richiesto da `MyService`.Il nome completo di questo tipo di attestazione è http:\/\/tempuri.org:accessAuthorized \(insieme allo spazio dei nomi associato\), utilizzato nel file di configurazione del servizio.Il valore di questa attestazione indica la sua presenza e si presuppone che sia impostato su `true` da STS B.  
+>  In relazione alle attestazioni richieste da `MyService`, è opportuno tenere presente un fattore importante. La seconda figura indica che `MyService` richiede un token SAML con l'attestazione `accessAuthorized`. Per essere più precisi, viene specificato il tipo di attestazione richiesto da `MyService`. Il nome completo di questo tipo di attestazione è http://tempuri.org:accessAuthorized (insieme allo spazio dei nomi associato), utilizzato nel file di configurazione del servizio. Il valore di questa attestazione indica la sua presenza e si presuppone che sia impostato su `true` da STS B.  
   
  In fase di esecuzione, questo criterio viene imposto dalla classe `MyServiceOperationRequirement` implementata come parte di `MyService`.  
   
@@ -161,14 +167,14 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 [!code-csharp[C_Federation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#1)]
 [!code-vb[C_Federation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#1)]  
   
-#### STS B  
- Nella figura seguente viene illustrato STS B.Come dichiarato precedentemente, un servizio token di sicurezza \(STS\) è anche un servizio Web a cui possono essere associati endpoint, criteri e così via.  
+#### <a name="sts-b"></a>STS B  
+ Nella figura seguente viene illustrato STS B. Come dichiarato precedentemente, un servizio token di sicurezza (STS) è anche un servizio Web a cui possono essere associati endpoint, criterio e così via.  
   
  ![Federazione](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
   
- STS B espone un singolo endpoint, chiamato `STSEndpoint` che può essere utilizzato per richiedere token di sicurezza.Nello specifico, STS B rilascia token SAML con l'attestazione `accessAuthorized`, che può essere presentata al sito del servizio `MyService` per accedere al servizio.STS B richiede tuttavia che gli utenti presentino un token SAML valido rilasciato da STS A, contenente l'attestazione `userAuthenticated`.Questo è specificato in modo dichiarativo nella configurazione STS.  
+ STS B espone un singolo endpoint, chiamato `STSEndpoint` che può essere utilizzato per richiedere token di sicurezza. Nello specifico, STS B rilascia token SAML con l'attestazione `accessAuthorized`, che può essere presentata al sito del servizio `MyService` per accedere al servizio. STS B richiede tuttavia che gli utenti presentino un token SAML valido rilasciato da STS A, contenente l'attestazione `userAuthenticated`. Questo è specificato in modo dichiarativo nella configurazione STS.  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.STS_B" behaviorConfiguration=  
@@ -211,7 +217,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Anche qui l'attestazione `userAuthenticated` è il tipo di attestazione richiesto da STS B.Il nome completo di questo tipo di attestazione è http:\/\/tempuri.org:userAuthenticated \(insieme allo spazio dei nomi associato\), utilizzato nel file di configurazione di STS.Il valore di questa attestazione indica la sua presenza e si presuppone che sia impostato su `true` da STS A.  
+>  Anche qui, l'attestazione `userAuthenticated` è il tipo di attestazione richiesto da STS B. Il nome completo di questo tipo di attestazione è http://tempuri.org:userAuthenticated (insieme allo spazio dei nomi associato), utilizzato nel file di configurazione STS. Il valore di questa attestazione indica la sua presenza e si presuppone che sia impostato su `true` da STS A.  
   
  In fase di esecuzione, questo criterio viene imposto dalla classe `STS_B_OperationRequirement` implementata come parte di STS B.  
   
@@ -223,14 +229,14 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  [!code-csharp[C_Federation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#3)]
  [!code-vb[C_Federation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#3)]  
   
-#### STS A  
+#### <a name="sts-a"></a>STS A  
  Nella figura seguente viene illustrato STS A.  
   
- ![Federazione](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS\_B")  
+ ![Federazione](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- Anche STS A, come STS B, è un servizio Web che rilascia token di sicurezza ed espone a tale fine un solo endpoint.Utilizza tuttavia un'associazione diversa \(`wsHttpBinding`\) e richiede che gli utenti presentino una [!INCLUDE[infocard](../../../../includes/infocard-md.md)] valida con un'attestazione `emailAddress`.In risposta, rilascia token SAML con l'attestazione `userAuthenticated`.Questo è specificato in modo dichiarativo nella configurazione del servizio.  
+ Anche STS A, come STS B, è un servizio Web che rilascia token di sicurezza ed espone a tale fine un solo endpoint. Utilizza tuttavia un'associazione diversa (`wsHttpBinding`) e richiede che gli utenti presentino una [!INCLUDE[infocard](../../../../includes/infocard-md.md)] valida con un'attestazione `emailAddress`. In risposta, rilascia token SAML con l'attestazione `userAuthenticated`. Questo è specificato in modo dichiarativo nella configurazione del servizio.  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.STS_A" behaviorConfiguration="STS-A_Behavior">  
@@ -285,13 +291,13 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  [!code-csharp[C_Federation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#5)]
  [!code-vb[C_Federation#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#5)]  
   
-### Client nell'organizzazione A  
- Nella figura seguente viene illustrato il client nell'organizzazione A, insieme ai passaggi necessari per eseguire una chiamata al servizio `MyService`.A fini di completezza, sono inclusi anche gli altri componenti funzionali.  
+### <a name="client-at-organization-a"></a>Client nell'organizzazione A  
+ Nella figura seguente viene illustrato il client nell'organizzazione A, insieme ai passaggi necessari per eseguire una chiamata al servizio `MyService`. A fini di completezza, sono inclusi anche gli altri componenti funzionali.  
   
  ![Federazione](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
-## Riepilogo  
- La protezione federata offre una divisione netta della responsabilità e contribuisce a creare architetture del servizio sicure e scalabili.Come piattaforma per la creazione e distribuzione di applicazioni distribuite, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce supporto nativo per implementare la protezione federata.  
+## <a name="summary"></a>Riepilogo  
+ La protezione federata offre una divisione netta della responsabilità e contribuisce a creare architetture del servizio sicure e scalabili. Come piattaforma per la creazione e distribuzione di applicazioni distribuite, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce supporto nativo per implementare la protezione federata.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)

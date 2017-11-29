@@ -1,67 +1,68 @@
 ---
-title: "Personalizzazione del controllo DataGridView Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "griglie dei dati, personalizzazione"
-  - "DataGridView (controllo) [Windows Form], personalizzazione"
+title: Personalizzazione del controllo DataGridView Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], customization
+- DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d1246a8052af19057f7aa9d6729e34203177f8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Personalizzazione del controllo DataGridView Windows Form
-Il controllo `DataGridView` fornisce diverse proprietà che è possibile utilizzare per modificare l'aspetto e il comportamento di base delle relative celle, righe e colonne.  Se, per esigenze speciali, è necessario estendere le capacità della classe <xref:System.Windows.Forms.DataGridViewCellStyle>, è anche possibile implementare il disegno personalizzato per il controllo o estenderne le capacità creando celle, colonne e righe personalizzate.  
+# <a name="customizing-the-windows-forms-datagridview-control"></a>Personalizzazione del controllo DataGridView Windows Form
+Il `DataGridView` controllo fornisce diverse proprietà che è possibile utilizzare per modificare l'aspetto e il comportamento di base (aspetto) delle relative celle, righe e colonne. Se si dispone di particolari esigenze che vanno oltre le capacità del <xref:System.Windows.Forms.DataGridViewCellStyle> classe, tuttavia, è possibile inoltre implementare il disegno personalizzato per il controllo o estenderne le funzionalità tramite la creazione di celle, colonne e righe.  
   
- Per disegnare celle e righe personalizzate, è possibile gestire vari eventi `DataGridView`.  Per modificare la funzionalità esistente o fornire nuove funzionalità, si possono creare tipi personalizzati derivati dai tipi `DataGridViewCell`, `DataGridViewColumn` e `DataGridViewRow` già presenti.  È anche possibile fornire nuove capacità di modifica mediante la creazione di tipi derivati che consentono di visualizzare un controllo a propria scelta quando una cella è in modalità di modifica.  
+ Per disegnare celle e righe personalizzate, è possibile gestire vari `DataGridView` gli eventi di disegno. Per modificare le funzionalità esistenti o fornire nuove funzionalità, è possibile creare i propri tipi derivati da esistenti `DataGridViewCell`, `DataGridViewColumn`, e `DataGridViewRow` tipi. È anche possibile fornire nuove funzionalità di modifica mediante la creazione di tipi derivati che visualizzano un controllo di propria scelta quando una cella si trova in modalità di modifica.  
   
-## In questa sezione  
- [Procedura: personalizzare l'aspetto delle celle nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
- Viene illustrato come gestire l'evento <xref:System.Windows.Forms.DataGridView.CellPainting> per disegnare le celle manualmente.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Personalizzare l'aspetto delle celle nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+ Viene descritto come gestire il <xref:System.Windows.Forms.DataGridView.CellPainting> evento per disegnare le celle manualmente.  
   
- [Procedura: personalizzare l'aspetto delle righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
- Viene illustrato come gestire gli eventi <xref:System.Windows.Forms.DataGridView.RowPrePaint> e <xref:System.Windows.Forms.DataGridView.RowPostPaint> per disegnare righe con uno sfondo sfumato personalizzato e un contenuto che occupa più colonne.  
+ [Procedura: Personalizzare l'aspetto delle righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+ Viene descritto come gestire il <xref:System.Windows.Forms.DataGridView.RowPrePaint> e <xref:System.Windows.Forms.DataGridView.RowPostPaint> gli eventi per disegnare righe con uno sfondo sfumato personalizzato e un contenuto che si estende su più colonne.  
   
- [Procedura: personalizzare celle e colonne nel controllo DataGridView di Windows Form estendendone il comportamento e l'aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
- Viene illustrato come creare tipi personalizzati derivati dai tipi `DataGridViewCell` e `DataGridViewColumn` per evidenziare le celle quando il puntatore del mouse viene posizionato sopra di esse.  
+ [Procedura: Personalizzare celle e colonne nel controllo DataGridView di Windows Form estendendone il comportamento e l'aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+ Viene descritto come creare tipi personalizzati derivati da `DataGridViewCell` e `DataGridViewColumn` per evidenziare le celle quando il puntatore del mouse si sofferma su di essi.  
   
- [Procedura: disabilitare i pulsanti in una colonna del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
- Viene illustrato come creare tipi personalizzati derivati dai tipi <xref:System.Windows.Forms.DataGridViewButtonCell> e <xref:System.Windows.Forms.DataGridViewButtonColumn> per visualizzare i pulsanti disabilitati in una colonna di pulsanti.  
+ [Procedura: Disabilitare i pulsanti in una colonna del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
+ Viene descritto come creare tipi personalizzati derivati da <xref:System.Windows.Forms.DataGridViewButtonCell> e <xref:System.Windows.Forms.DataGridViewButtonColumn> per visualizzare i pulsanti disabilitati in una colonna.  
   
- [Procedura: inserire controlli in celle del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
- Viene descritto come implementare l'interfaccia `IDataGridViewEditingControl` e creare tipi personalizzati derivati da `DataGridViewCell` e `DataGridViewColumn` allo scopo di visualizzare un controllo <xref:System.Windows.Forms.DateTimePicker> quando una cella è in modalità di modifica.  
+ [Procedura: Inserire controlli in celle del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+ Viene descritto come implementare il `IDataGridViewEditingControl` l'interfaccia e creare tipi personalizzati derivati da `DataGridViewCell` e `DataGridViewColumn` per visualizzare un <xref:System.Windows.Forms.DateTimePicker> controllare quando una cella si trova in modalità di modifica.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
- Viene fornita la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
+ Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridViewCell>  
- Viene fornita la documentazione di riferimento per la classe <xref:System.Windows.Forms.DataGridViewCell>.  
+ Fornisce la documentazione di riferimento per la <xref:System.Windows.Forms.DataGridViewCell> classe.  
   
  <xref:System.Windows.Forms.DataGridViewRow>  
- Viene fornita la documentazione di riferimento per la classe <xref:System.Windows.Forms.DataGridViewRow>.  
+ Fornisce la documentazione di riferimento per la <xref:System.Windows.Forms.DataGridViewRow> classe.  
   
  <xref:System.Windows.Forms.DataGridViewColumn>  
- Viene fornita la documentazione di riferimento per la classe <xref:System.Windows.Forms.DataGridViewColumn>.  
+ Fornisce la documentazione di riferimento per la <xref:System.Windows.Forms.DataGridViewColumn> classe.  
   
  <xref:System.Windows.Forms.IDataGridViewEditingControl>  
- Viene fornita la documentazione di riferimento per l'interfaccia <xref:System.Windows.Forms.IDataGridViewEditingControl>.  
+ Fornisce la documentazione di riferimento per il <xref:System.Windows.Forms.IDataGridViewEditingControl> interfaccia.  
   
-## Sezioni correlate  
- [Formattazione e stile di base nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- Vengono forniti argomenti in cui è descritto come modificare l'aspetto di base del controllo e il formato di visualizzazione dei dati delle celle.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Formattazione e stile di base nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ Fornisce argomenti che descrivono come modificare l'aspetto del controllo e la formattazione di base dei dati delle celle.  
   
-## Vedere anche  
- [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Tipi di colonna nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Tipi di colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

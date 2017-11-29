@@ -1,6 +1,6 @@
 ---
 title: Funzioni (F#)
-description: Funzioni (F#)
+description: 'Informazioni sulle funzioni in F # e come F # supporta i costrutti di programmazione funzionali comuni.'
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 7a5fff4746157b430c6f1a492c23e9ea3d7b82c3
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9750e37647a3e382c7a8308c3ffede15729012d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="functions"></a>Funzioni
 
 Le funzioni sono l'unità fondamentale di esecuzione di un programma in qualsiasi linguaggio di programmazione. Come negli altri linguaggi, una funzione F# ha un nome, può avere parametri e accettare argomenti e ha un corpo. F# supporta anche i costrutti di programmazione funzionale, ad esempio l'uso di funzioni come valori, l'uso di funzioni senza nome nelle espressioni, composizione di funzioni per creare nuove funzioni, funzioni sottoposte a currying e la definizione implicita di funzioni attraverso l'applicazione parziale di argomenti di funzioni.
@@ -50,11 +49,11 @@ Le funzioni possono essere contrassegnate `inline`. Per informazioni su `inline`
 ## <a name="scope"></a>Ambito
 A qualsiasi livello di ambito diverso dall'ambito del modulo, non è un errore riusare un nome di funzione o un valore. Se si riusa un nome, il nome dichiarato successivamente sostituisce il nome dichiarato in precedenza. Tuttavia, nell'ambito di livello superiore in un modulo, i nomi devono essere univoci. Ad esempio, il codice seguente genera un errore quando viene visualizzato nell'ambito del modulo, ma non quando viene visualizzato all'interno di una funzione:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
 Ma il codice seguente è accettabile a qualsiasi livello di ambito:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
     
 #### <a name="parameters"></a>Parametri
 I nomi dei parametri vengono elencati dopo il nome della funzione. È possibile specificare un tipo per un parametro, come illustrato nell'esempio seguente:
@@ -81,7 +80,7 @@ La funzione crea una tupla da un argomento di qualsiasi tipo. Poiché il tipo no
 ## <a name="function-bodies"></a>Corpi di funzioni
 Un corpo di funzione può contenere definizioni di funzioni e variabili locali. Tali funzioni e variabili rientrano nell'ambito del corpo della funzione corrente ma non al suo esterno. Dopo aver abilitato l'opzione di sintassi leggera, è necessario usare un rientro per indicare che una definizione è in un corpo della funzione, come illustrato nell'esempio seguente:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 Per altre informazioni, vedere [Code Formatting Guidelines](../code-formatting-guidelines.md) (Linee guida per la formattazione del codice) e [Verbose Syntax](../verbose-syntax.md) (Sintassi dettagliata).
 
@@ -91,7 +90,7 @@ Il compilatore usa l'espressione finale in un corpo di funzione per determinare 
 
 Per specificare in modo esplicito il valore restituito, scrivere il codice nel modo seguente:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
 Analogamente al codice scritto in precedenza, il compilatore applica **float** all'intera funzione; se si vuole applicarlo anche ai tipi di parametro, usare il codice seguente:
 
@@ -109,16 +108,16 @@ let vol = cylinderVolume 2.0 3.0
 ## <a name="partial-application-of-arguments"></a>Applicazione parziale degli argomenti
 Se si specifica un numero di argomenti inferiore al numero specificato, si crea una nuova funzione che prevedere gli argomenti rimanenti. Questo metodo di gestione degli argomenti è detto *currying* ed è una caratteristica dei linguaggi di programmazione funzionale come F#. Ad esempio, si supponga di usare due dimensioni per un tubo: una ha un raggio di **2** e l'altra ha un raggio di **3**. È possibile creare funzioni che determinano il volume del tubo nel modo seguente:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
 Verrà quindi specificato l'argomento aggiuntivo necessario per varie lunghezze del tubo delle due dimensioni diverse:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>Funzioni ricorsive
-Le *funzioni ricorsive* sono funzioni che chiamano se stesse. Richiedono di specificare la parola chiave **rec** seguita dalla parola chiave **let**. È possibile richiamare la funzione ricorsiva dall'interno del corpo della funzione esattamente come si richiama qualsiasi chiamata di funzione. La funzione ricorsiva seguente calcola il numero di Fibonacci *n*. La sequenza dei numeri di Fibonacci è nota dall'antichità ed è una sequenza in cui ogni numero successivo è la somma di due numeri precedenti nella sequenza.
+Le *funzioni ricorsive* sono funzioni che chiamano se stesse. Richiedono di specificare la parola chiave **rec** seguita dalla parola chiave **let**. È possibile richiamare la funzione ricorsiva dall'interno del corpo della funzione esattamente come si richiama qualsiasi chiamata di funzione. La funzione ricorsiva seguente calcola il  *n* numero di Fibonacci. La sequenza dei numeri di Fibonacci è nota dall'antichità ed è una sequenza in cui ogni numero successivo è la somma di due numeri precedenti nella sequenza.
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 Alcune funzioni ricorsive potrebbero includere un overflow dello stack di programma o risultare inefficienti se non vengono scritte con cura e con tecniche speciali, come l'uso di accumulatori e continuazioni.
 
@@ -126,17 +125,17 @@ Alcune funzioni ricorsive potrebbero includere un overflow dello stack di progra
 ## <a name="function-values"></a>Valori della funzione
 In F#, tutte le funzioni sono considerate valori, e infatti sono note come *valori di funzione*. Poiché le funzioni sono valori, possono essere usate come argomenti per altre funzioni o in altri contesti in cui vengono usati valori. Di seguito è incluso un esempio di una funzione che accetta un valore di funzione come argomento:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
 Il tipo di valore di una funzione viene specificato usando il token `->`. Sul lato sinistro di questo token si trova il tipo dell'argomento e sul lato destro si trova il valore restituito. Nell'esempio precedente, `apply1` è una funzione che accetta una funzione `transform` come argomento, in cui `transform` è una funzione che accetta un numero intero e restituisce un altro numero intero. L'esempio di codice seguente illustra come usare `apply1`:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 Il valore di `result` sarà 101 dopo l'esecuzione del codice precedente.
 
 Più argomenti sono separati da token `->` successivi, come illustrato nell'esempio seguente:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
 Il risultato è 200.
 
@@ -144,7 +143,7 @@ Il risultato è 200.
 ## <a name="lambda-expressions"></a>Espressioni lambda
 Un'*espressione lambda* è una funzione senza nome. Negli esempi precedenti, invece di definire le funzioni denominate **increment** e **mul**, è possibile usare espressioni lambda nel modo seguente:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
 Le espressioni lambda vengono definite usando la parola chiave `fun`. Un'espressione lambda è simile a una definizione di funzione, con la differenza che al posto del token `=`, viene usato il token `->` per separare l'elenco di argomenti dal corpo della funzione. Analogamente a una definizione di funzione regolare, i tipi di argomenti possono essere dedotti o specificati in modo esplicito e il tipo restituito dell'espressione lambda viene dedotto dal tipo dell'ultima espressione nel corpo. Per altre informazioni, vedere [Espressioni lambda: parola chiave `fun`](../functions/lambda-expressions-the-fun-keyword.md).
 
@@ -152,7 +151,7 @@ Le espressioni lambda vengono definite usando la parola chiave `fun`. Un'espress
 ## <a name="function-composition-and-pipelining"></a>Composizione di funzioni e pipelining
 Le funzioni in F# possono essere composte da altre funzioni. La composizione di due funzioni, **funzione1** e **funzione2**, è un'altra funzione che rappresenta l'applicazione di **funzione1** seguita dall'applicazione di **funzione2**:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
 Il risultato è 202.
 
@@ -188,11 +187,11 @@ let result2 = Compose2 2
 
 // Pipelining
 // Pipeline operator
-// ( <| ) : ('T -> 'U) -> 'T -> 'U
+// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
 let Pipeline1 x = addOne <| timesTwo x
 
 // Backward pipeline operator
-// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
+// ( <| ) : ('T -> 'U) -> 'T -> 'U
 let Pipeline2 x = addOne x |> timesTwo
 
 // Result is 5
@@ -210,4 +209,3 @@ let result4 = Pipeline2 2
 [Valori](../values/index.md)
 
 [Riferimenti per il linguaggio F#](../index.md)
-

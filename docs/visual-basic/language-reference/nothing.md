@@ -1,65 +1,64 @@
 ---
-title: "Nothing (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Nothing"
-  - "vb.Nothing"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Nothing keyword"
-  - "Nothing keyword, syntax"
+title: Nothing (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Nothing
+- vb.Nothing
+helpviewer_keywords:
+- Nothing keyword [Visual Basic]
+- Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: 31
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Nothing (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Rappresenta il valore predefinito di qualsiasi tipo di dati.  Per i tipi di riferimento, il valore predefinito è `null` riferimento.  Per i tipi di valore, il valore predefinito varia a seconda che il tipo di valore è nullable.  
+# <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
+Rappresenta il valore predefinito di qualsiasi tipo di dati. Per i tipi di riferimento, il valore predefinito è il `null` riferimento. Per i tipi di valore, il valore predefinito varia a seconda se il tipo di valore è nullable.  
   
 > [!NOTE]
->  Per i tipi di valore non nullable, `Nothing` in Visual Basic differisce da  `null` in c\#.  In Visual Basic, se si imposta una variabile di un tipo di valore non nullable a `Nothing`, la variabile è impostata sul valore predefinito per il suo tipo dichiarato.  In c\#, se si assegna una variabile di un tipo di valore non nullable a `null`, un errore in fase di compilazione si verifica.  
+>  Per i tipi di valore non nullable, `Nothing` in Visual Basic è diverso da `null` in c#. In Visual Basic, se si imposta una variabile di un tipo di valore non nullable `Nothing`, la variabile è impostata sul valore predefinito per il relativo tipo dichiarato. In c#, se si assegna una variabile di un tipo di valore non nullable `null`, si verifica un errore in fase di compilazione.  
   
-## Note  
- `Nothing` rappresenta il valore predefinito di un tipo di dati.  Il valore predefinito varia a seconda che la variabile è di un tipo di valore o di un tipo di riferimento.  
+## <a name="remarks"></a>Note  
+ `Nothing`rappresenta il valore predefinito di un tipo di dati. Il valore predefinito dipende se la variabile è un tipo di valore o di un tipo di riferimento.  
   
- Una variabile di un oggetto *tipo di valore* contiene direttamente il valore.  I tipi di valore sono inclusi tutti i tipi di dati numerici, `Boolean`,  `Char`,  `Date`, tutte le strutture e le enumerazioni.  Una variabile di un oggetto *tipo di riferimento* archivia un riferimento a un'istanza di oggetto in memoria.  I tipi di riferimento sono incluse le classi, le matrici, delegati e stringhe.  Per ulteriori informazioni, vedere [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+ Una variabile di un *tipo di valore* contiene direttamente il relativo valore. Tipi di valore includono tutti i tipi di dati numerici, `Boolean`, `Char`, `Date`, tutte le strutture e tutte le enumerazioni. Una variabile di un *tipo di riferimento* archivia un riferimento a un'istanza dell'oggetto in memoria. Tipi di riferimento includono matrici, delegati, classi e le stringhe. Per altre informazioni, vedere [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
- Se una variabile è di tipo valore, il comportamento di `Nothing` varia a seconda che la variabile è di un tipo di dati nullable.  Per rappresentare un tipo di valore nullable, aggiungere un oggetto `?` modificatore al nome del tipo.  assegnare `Nothing` le nullable una variabile imposta il valore su  `null`.  Per ulteriori informazioni ed esempi, vedere [Nullable Value Types](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
+ Se una variabile è di un valore di tipo, il comportamento di `Nothing` varia a seconda che la variabile di un tipo di dati ammette valori null. Per rappresentare un tipo di valore nullable, aggiungere un `?` modificatore al nome del tipo. L'assegnazione di `Nothing` a una variabile che ammette valori null, il valore impostato su `null`. Per ulteriori informazioni ed esempi, vedere [tipi di valore Nullable](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
   
- se una variabile è di un tipo di valore che non è nullable, assegnare `Nothing` lo impostato il valore predefinito per il tipo dichiarato.  Se nel tipo si trovano membri variabili, questi vengono tutti impostati ai valori predefiniti corrispondenti.  Questo comportamento viene illustrato nell'esempio seguente per i tipi scalari.  
+ Se la variabile è un tipo di valore che non ammette valori null, l'assegnazione `Nothing` per questo viene impostato il valore predefinito per il relativo tipo dichiarato. Se il tipo contiene membri variabili, sono tutti impostati sui valori predefiniti. Nell'esempio seguente viene illustrato questo per i tipi scalari.  
   
  [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
- Se una variabile è di tipo riferimento, assegnare `Nothing` per impostare variabili a un oggetto  `null` riferimento del tipo della variabile.  Una variabile che è impostata su `null` il riferimento non associato ad alcun oggetto.  Nell'esempio che segue viene illustrato quanto descritto.  
+ Se la variabile è di un tipo riferimento, l'assegnazione `Nothing` alla variabile impostato su un `null` riferimento di tipo della variabile. Una variabile è impostata su un `null` riferimento non è associata ad alcun oggetto. Nell'esempio che segue viene illustrato quanto descritto.  
   
  [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
- Nel controllare se tipo di valore NULL o di riferimento\) una variabile sia `null`, non utilizzare  `= Nothing` o  `<> Nothing`.  Utilizzare sempre `Is Nothing` o  `IsNot Nothing`.  
+ Quando si verifica se un riferimento (o un tipo di valore nullable) è variabile `null`, non utilizzare `= Nothing` o `<> Nothing`. Utilizzare sempre `Is Nothing` o `IsNot Nothing`.  
   
- Per le stringhe in Visual Basic, equals di stringa vuota `Nothing`.  di conseguenza, `"" = Nothing` è true.  
+ Per le stringhe in Visual Basic, è uguale a una stringa vuota `Nothing`. Pertanto, `"" = Nothing` è true.  
   
- Nell'esempio seguente vengono illustrati confronti in cui vengono utilizzati gli operatori `Is` e `IsNot`.  
+ L'esempio seguente mostra i confronti che usano il `Is` e `IsNot` operatori.  
   
  [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
- Se si dichiara una variabile senza utilizzare una clausola `As` e la si imposta su `Nothing`, la variabile dispone di un tipo di `Object`.  Un esempio è `Dim something = Nothing`.  Un errore in fase di compilazione si verifica in questo caso `Option Strict` è attivato e  `Option Infer` è disattivato.  
+ Se si dichiara una variabile senza utilizzare un `As` clausola e impostarlo su `Nothing`, la variabile è di tipo `Object`. Un esempio di questo oggetto è `Dim something = Nothing`. In questo caso verrà generato un errore in fase di compilazione quando `Option Strict` in e `Option Infer` è disattivata.  
   
- Quando si assegna la parola chiave `Nothing` a una variabile oggetto, tale variabile non farà più riferimento all'istanza di un oggetto.  Se in precedenza la variabile ha fatto riferimento a un'istanza, l'istanza non viene automaticamente terminata quando si imposta la variabile su `Nothing`.  L'istanza viene terminata e le risorse di memoria e di sistema associate a essa vengono rilasciate solo quando il Garbage Collector non rileva più riferimenti attivi.  
+ Quando si assegna `Nothing` a una variabile oggetto non fa riferimento a un'istanza dell'oggetto. Se la variabile ha già fatto riferimento a un'istanza, se è impostato su `Nothing` non termina l'istanza stessa. L'istanza viene terminata, e vengono rilasciate le risorse di memoria e di sistema è associate, solo dopo che il garbage collector (GC) rileva che non sono presenti riferimenti attivi.  
   
- `Nothing` è diverso da  <xref:System.DBNull> oggetto, che rappresenta una variante non inizializzate o una colonna inesistente del database.  
+ `Nothing`è diverso dal <xref:System.DBNull> oggetto che rappresenta una variante non inizializzata o una colonna del database inesistente.  
   
-## Vedere anche  
- [Dim Statement](../../visual-basic/language-reference/statements/dim-statement.md)   
- [Object Lifetime: How Objects Are Created and Destroyed](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
- [Lifetime in Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Is Operator](../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot Operator](../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Nullable Value Types](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Dim](../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Durata degli oggetti: come creare e distruggere oggetti](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [Durata in Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [Operatore Is](../../visual-basic/language-reference/operators/is-operator.md)  
+ [Operatore IsNot](../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Tipi di valori nullable](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

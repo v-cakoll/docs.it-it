@@ -1,36 +1,41 @@
 ---
-title: "Procedura: posizionare gli elementi figlio di una griglia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grid (controllo), posizionamento di elementi figlio"
+title: 'Procedura: posizionare gli elementi figlio di una griglia'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2dbe0bcb5d3c46edcb97410e00832f1b9d6205b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: posizionare gli elementi figlio di una griglia
-In questo esempio viene illustrato come utilizzare i metodi get e set definiti sulla classe <xref:System.Windows.Controls.Grid> per posizionare elementi figlio.  
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>Procedura: posizionare gli elementi figlio di una griglia
+In questo esempio viene illustrato come utilizzare il metodo get e i metodi definiti nel set <xref:System.Windows.Controls.Grid> per posizionare gli elementi figlio.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene definito un elemento <xref:System.Windows.Controls.Grid> padre \(`grid1`\) con tre colonne e tre righe.  Un elemento <xref:System.Windows.Shapes.Rectangle> figlio \(`rect1`\) viene aggiunto all'elemento <xref:System.Windows.Controls.Grid> nella posizione di colonna zero e nella posizione di riga zero.  Gli elementi <xref:System.Windows.Controls.Button> rappresentano metodi che è possibile chiamare per riposizionare l'elemento <xref:System.Windows.Shapes.Rectangle> all'interno dell'elemento <xref:System.Windows.Controls.Grid>.  Quando un utente fa clic su un pulsante, il metodo correlato viene attivato.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente definisce un elemento padre <xref:System.Windows.Controls.Grid> elemento (`grid1`) che ha tre colonne e tre righe. Un elemento figlio <xref:System.Windows.Shapes.Rectangle> elemento (`rect1`) viene aggiunto al <xref:System.Windows.Controls.Grid> in zero posizione della colonna, riga posizione zero. <xref:System.Windows.Controls.Button>gli elementi rappresentano i metodi che possono essere chiamati per riposizionare il <xref:System.Windows.Shapes.Rectangle> elemento all'interno di <xref:System.Windows.Controls.Grid>. Quando un utente fa clic su un pulsante, il metodo correlato è attivato.  
   
- [!code-xml[gridGetSetMethods#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml#1)]  
+ [!code-xaml[gridGetSetMethods#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml#1)]  
   
- Nell'esempio code\-behind seguente sono gestiti i metodi generati dagli eventi del pulsante <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.  Nell'esempio le chiamate al metodo sono scritte negli elementi <xref:System.Windows.Controls.TextBlock> che utilizzano metodi get correlati per restituire i nuovi valori di proprietà come stringhe.  
+ Nell'esempio di codice seguente gestisce i metodi che il pulsante <xref:System.Windows.Controls.Primitives.ButtonBase.Click> dagli eventi. L'esempio scrive chiamate ai metodi <xref:System.Windows.Controls.TextBlock> gli elementi correlati utilizzare metodi get per restituire i nuovi valori di proprietà come stringhe.  
   
  [!code-csharp[gridGetSetMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml.cs#2)]
  [!code-vb[gridGetSetMethods#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gridGetSetMethods/VisualBasic/Window1.xaml.vb#2)]  
   
-## Vedere anche  
- <xref:System.Windows.Controls.Grid>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Controls.Grid>  
  [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)

@@ -1,64 +1,65 @@
 ---
-title: "Tasti di scelta rapida per il controllo DataGrid Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid (controllo) [Windows Form], tasti di navigazione"
-  - "tasti di scelta rapida, controllo DataGrid"
+title: Tasti di scelta rapida per il controllo DataGrid Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ac73652d5f017fe43d1745866de38cd7eeccf8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tasti di scelta rapida per il controllo DataGrid Windows Form
+# <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Tasti di scelta rapida per il controllo DataGrid Windows Form
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Nella seguente tabella sono elencati i tasti di scelta rapida che è possibile utilizzare per navigare all'interno del controllo <xref:System.Windows.Forms.DataGrid> Windows Form:  
+ Nella tabella seguente sono elencati i tasti di scelta rapida che possono essere usati per la navigazione all'interno di Windows Form <xref:System.Windows.Forms.DataGrid> controllo:  
   
-|Azione|Tasto di scelta rapida|  
-|------------|----------------------------|  
-|Completamento dell'immissione di dati in una cella e spostamento nella cella successiva verso il basso.<br /><br /> Se lo stato attivo si trova sul collegamento a una tabella figlio, viene eseguito il passaggio a questa tabella.|INVIO|  
-|Annullamento della modifica della cella se si è in modalità di modifica della cella.<br /><br /> Se si sta effettuando la selezione di testo scorrevole, viene eseguito l'annullamento della modifica della riga.|ESC|  
-|Eliminazione del carattere che precede il punto di inserimento durante la modifica di una cella.|BACKSPACE|  
-|Eliminazione del carattere che segue il punto di inserimento durante la modifica di una cella.|DELETE|  
-|Spostamento nella prima cella della riga corrente.|HOME|  
-|Spostamento nell'ultima cella della riga corrente.|FINE|  
-|Evidenziazione dei caratteri della cella corrente e collocamento del punto di inserimento alla fine della riga corrente.  Si tratta dello stesso effetto del doppio clic all'interno di una cella.|F2|  
-|Se lo stato attivo si trova in una cella, viene eseguito il passaggio alla cella successiva della riga.<br /><br /> Se lo stato attivo si trova nell'ultima cella di una riga, vengono eseguiti il passaggio al primo collegamento alla tabella figlio della riga e l'espansione di tale collegamento.<br /><br /> Se lo stato attivo si trova su un collegamento figlio, viene eseguito il passaggio al collegamento figlio successivo.<br /><br /> Se lo stato attivo si trova sull'ultimo collegamento figlio, viene eseguito il passaggio alla prima cella della riga successiva.|TAB|  
-|Se lo stato attivo si trova in una cella, viene eseguito il passaggio alla cella precedente della riga.<br /><br /> Se lo stato attivo si trova nella prima cella di una riga, viene eseguito passaggio al passaggio all'ultimo collegamento a una tabella figlio che è stato espanso nella riga precedente oppure viene eseguito il passaggio all'ultima cella della riga precedente.<br /><br /> Se lo stato attivo si trova su un collegamento figlio, viene eseguito il passaggio al collegamento figlio precedente.<br /><br /> Se lo stato attivo si trova sul primo collegamento figlio, viene eseguito il passaggio all'ultima cella della riga precedente.|MAIUSC\+TAB|  
-|Passaggio al controllo successivo nell'ordine di tabulazione.|CTRL\+TAB|  
-|Passaggio al controllo precedente nell'ordine di tabulazione.|CTRL\+MAIUSC\+TAB|  
-|Passaggio alla tabella padre se lo stato attivo all'interno di una tabella figlio.  Si tratta dello stesso effetto del clic sul pulsante Indietro.|ALT\+freccia SINISTRA|  
-|Espansione dei collegamenti della tabella figlio.  ALT\+freccia GIÙ per l'espansione di tutti i collegamenti, non solo quelli selezionati.|ALT\+freccia GIÙ o CTRL\+segno PIÙ|  
-|Compressione dei collegamenti della tabella figlio.  ALT\+freccia SU per la compressione di tutti i collegamenti, non solo quelli selezionati.|ALT\+freccia SU o CTRL\+segno MENO|  
-|Passaggio all'ultima cella non vuota in direzione della freccia.|CTRL\+freccia|  
-|Estensione della selezione avanzando di una riga in direzione della freccia \(esclusi i collegamenti alle tabelle figlio\).|MAIUSC\+freccia SU\/GIÙ|  
-|Estensione della selezione all'ultima riga non vuota in direzione della freccia \(esclusi i collegamenti alle tabelle figlio\).|CTRL\+MAIUSC\+freccia SU\/GIÙ|  
-|Passaggio alla cella superiore sinistra.|CTRL\+HOME|  
-|Passaggio alla cella inferiore destra.|CTRL\+FINE|  
-|Estensione della selezione alla riga superiore.|CTRL\+MAIUSC\+HOME|  
-|Estensione della selezione alla riga inferiore.|CTRL\+MAIUSC\+FINE|  
-|Selezione della riga corrente \(esclusi i collegamenti alle tabelle figlio\).|MAIUSC\+BARRA SPAZIATRICE|  
-|Selezione dell'intera griglia \(esclusi i collegamenti alle tabelle figlio\).|CTRL\+A|  
-|Visualizzazione della riga padre dall'interno di una tabella figlio.|CTRL\+PGGIÙ|  
-|Nascondere la riga padre dall'interno di una tabella figlio.|CTRL\+PGSU|  
-|Estensione della selezione verso il basso avanzando di una schermata \(esclusi i collegamenti alle tabelle figlio\).|MAIUSC\+PGGIÙ|  
-|Estensione della selezione verso l'alto avanzando di una schermata \(esclusi i collegamenti alle tabelle figlio\).|MAIUSC\+PGSU|  
-|Chiamata del metodo <xref:System.Windows.Forms.DataGrid.EndEdit%2A> per la riga corrente.|CTRL\+INVIO|  
-|Immissione di un valore <xref:System.DBNull.Value?displayProperty=fullName> in una cella in modalità di modifica.|CTRL\+0|  
+|Operazione|Collegamento|  
+|------------|--------------|  
+|Completare l'immissione di una cella e spostarsi verso il basso alla cella successiva.<br /><br /> Se lo stato attivo è su un collegamento nella tabella figlio, passare a tale tabella.|INVIO|  
+|In caso di modalità di modifica, annullare la modifica della cella.<br /><br /> In caso di selezione, annullare la modifica nella riga.|ESC|  
+|Eliminare il carattere che precede il punto di inserimento quando si modifica una cella.|BACKSPACE|  
+|Eliminare il carattere dopo il punto di inserimento quando si modifica una cella.|DELETE|  
+|Passa alla prima cella nella riga corrente.|HOME|  
+|Passa all'ultima cella nella riga corrente.|FINE|  
+|Evidenziare i caratteri nella cella corrente e posizionare il cursore alla fine della riga. Stesso comportamento di doppio clic su una cella.|F2|  
+|Se lo stato attivo si trova in una cella, spostarsi nella cella nella riga successiva.<br /><br /> Se lo stato attivo si trova in una riga all'ultima cella, spostare il primo collegamento per la tabella figlio della riga ed espanderlo.<br /><br /> Se lo stato attivo è su un collegamento figlio, spostare in avanti figlio.<br /><br /> Se lo stato attivo si trova sull'ultimo collegamento figlio, passare alla prima cella della riga successiva.|TAB|  
+|Se lo stato attivo si trova in una cella, spostarsi sulla cella nella riga precedente.<br /><br /> Se lo stato attivo è sulla prima cella in una riga, spostarsi sull'ultimo collegamento per la tabella figlio espansi della riga precedente o spostarsi sull'ultima cella della riga precedente.<br /><br /> Se lo stato attivo è su un collegamento figlio, spostare il collegamento figlio precedente.<br /><br /> Se lo stato attivo sul primo collegamento figlio, passa all'ultima cella della riga precedente.|MAIUSC+TAB|  
+|Spostare il controllo successivo nell'ordine di tabulazione.|CTRL+TAB|  
+|Portarsi sul controllo precedente nell'ordine di tabulazione.|CTRL+MAIUSC+TAB|  
+|Sposta su per la tabella padre in caso di una tabella figlio. Stesso comportamento facendo clic sul pulsante Indietro.|ALT+FRECCIA SINISTRA|  
+|Espandere collegamenti alle tabelle figlio. ALT + freccia giù consente di espandere tutti i collegamenti, non solo quelli selezionati.|ALT + freccia giù o CTRL + segno più|  
+|Comprimere i collegamenti alle tabelle figlio. ALT + freccia consente di comprimere tutti i collegamenti, non solo quelli selezionati.|ALT + freccia su o CTRL + segno meno|  
+|Spostare l'ultima cella non vuota nella direzione della freccia.|CTRL + FRECCIA|  
+|Estendere la riga di una selezione nella direzione della freccia (esclusi i collegamenti della tabella figlio).|MAIUSC + FRECCIA SU/GIÙ|  
+|Estendere la selezione verso l'ultima riga non vuota nella direzione della freccia (esclusi i collegamenti della tabella figlio).|CTRL + MAIUSC + FRECCIA SU/GIÙ|  
+|Spostarsi nella cella superiore sinistra.|CTRL + HOME|  
+|Spostarsi nella cella inferiore destra.|CTRL + FINE|  
+|Estendere la selezione verso la riga superiore.|CTRL + MAIUSC + HOME|  
+|Estendere la selezione verso la riga inferiore.|CTRL + MAIUSC + FINE|  
+|Selezionare la riga corrente (esclusi i collegamenti della tabella figlio).|MAIUSC + BARRA SPAZIATRICE|  
+|Selezionare l'intera griglia (esclusi i collegamenti della tabella figlio).|CTRL+A|  
+|Visualizzazione della riga padre quando in una tabella figlio.|CTRL+PGGIÙ|  
+|Nascondere la riga padre quando in una tabella figlio.|CTRL+PGSU|  
+|Estendere la selezione verso il basso di una schermata (esclusi i collegamenti della tabella figlio).|MAIUSC+PGGIÙ|  
+|Estendere la selezione di una schermata (esclusi i collegamenti della tabella figlio).|MAIUSC+PGSU|  
+|Chiamare il <xref:System.Windows.Forms.DataGrid.EndEdit%2A> metodo per la riga corrente.|CTRL+INVIO|  
+|Immettere un <xref:System.DBNull.Value?displayProperty=nameWithType> valore in una cella in modalità di modifica.|CTRL+0|  
   
-## Vedere anche  
- [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

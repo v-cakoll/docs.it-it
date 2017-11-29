@@ -1,69 +1,71 @@
 ---
-title: "Elemento &lt;Thread_UseAllCpuGroups&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: '&lt;Thread_UseAllCpuGroups&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 187e391acf3b80a5ae2dfe795c4a3b397af815ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;Thread_UseAllCpuGroups&gt;
-Specifica se il runtime distribuisce thread gestiti in tutti i gruppi della CPU.  
+# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt; elemento
+Specifica se il runtime distribuisce i thread gestiti tra tutti i gruppi di CPU.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
+<Thread_UseAllCpuGroups>  
   
-```vb  
+## <a name="syntax"></a>Sintassi  
+  
+```xml
 <Thread_UseAllCpuGroups    
    enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se il runtime distribuisce thread gestiti in tutti i gruppi della CPU.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se il runtime distribuisce i thread gestiti tra tutti i gruppi di CPU.|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|Il runtime non distribuisce i thread gestiti su più gruppi di CPU.  Impostazione predefinita.|  
-|`true`|Il runtime distribuisce i thread gestiti su più gruppi della CPU, se il computer ha più gruppi di CPU e l'elemento [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) è abilitato.|  
+|-----------|-----------------|  
+|`false`|Il runtime non distribuisce i thread gestiti in più gruppi di CPU. Questa è l'impostazione predefinita.|  
+|`true`|Il runtime distribuisce i thread gestiti in più gruppi di CPU, se il computer dispone di più gruppi di CPU e [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) elemento è abilitato.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## Note  
- Quando un computer include più gruppi di CPU, l'abilitazione di questo elemento fa sì che il runtime distribuisca i thread gestiti in tutti i gruppi di CPU.  Per utilizzare questa funzionalità, è possibile attivare l'elemento [\<\<GCCpuGroup\>\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md), che estende la Garbage Collection a tutti i gruppi di CPU e prende in considerazione tutti i core durante la creazione e il bilanciamento degli heap.  L'abilitazione dell'elemento [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) richiede l'abilitazione dell'elemento [\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md).  Se questi elementi non sono abilitati, l'attivazione dell'elemento `<Thread_UseAllCpuGroups>` non produrrà alcun effetto.  
+## <a name="remarks"></a>Note  
+ Quando un computer dispone di più gruppi di CPU, abilitazione di questo elemento, il runtime di distribuire i thread gestiti in tutti i gruppi di CPU. Per utilizzare questa funzionalità, è necessario abilitare il [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) elemento, che estende l'operazione di garbage collection a tutti i gruppi di CPU e tiene conto durante la creazione e bilanciamento degli heap di tutti i core. Abilitazione di [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) elemento richiede l'abilitazione di [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento. Se questi elementi non sono abilitati, l'abilitazione di `<Thread_UseAllCpuGroups>` elemento non ha alcun effetto.  
   
-## Esempio  
- L'esempio seguente mostra come abilitare il supporto per più gruppi di CPU.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come abilitare il supporto per più gruppi di CPU.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <Thread_UseAllCpuGroups enabled="true"/>  
@@ -73,7 +75,7 @@ Specifica se il runtime distribuisce thread gestiti in tutti i gruppi della CPU.
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Elemento \<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [\<GCCpuGroup > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

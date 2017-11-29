@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - dates [.NET Framework], formatting
 - invalid date time local format
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43155bb2eebfd2cd379d245715c100878fb9fb73
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3181acec440f2d01e928bb051b297fba75de1e2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat (MDA)
 L'assistente al debug gestito `dateTimeInvalidLocalFormat` viene attivato quando per la formattazione di un'istanza di <xref:System.DateTime> archiviata in formato UTC (Universal Coordinated Time) viene usato un formato riservato alle istanze locali di <xref:System.DateTime>. Questo assistente non viene attivato per le istanze di <xref:System.DateTime> non specificate o predefinite.  
@@ -48,7 +41,7 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ```  
   
 ### <a name="cause"></a>Causa  
- Il formato 'z' del metodo <xref:System.DateTime.ToString%2A?displayProperty=fullName> include l'offset del fuso orario locale, ad esempio "+10:00" per l'ora di Sydney. Di conseguenza, verrà generato un risultato significativo solo se il valore di <xref:System.DateTime> è locale. Se il valore è in formato UTC, <xref:System.DateTime.ToString%2A?displayProperty=fullName> include l'offset del fuso orario locale, ma non visualizza né modifica l'identificatore del fuso orario.  
+ Il formato 'z' del metodo <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> include l'offset del fuso orario locale, ad esempio "+10:00" per l'ora di Sydney. Di conseguenza, verrà generato un risultato significativo solo se il valore di <xref:System.DateTime> è locale. Se il valore è in formato UTC, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> include l'offset del fuso orario locale, ma non visualizza né modifica l'identificatore del fuso orario.  
   
 ### <a name="resolution"></a>Risoluzione  
  Le istanze di <xref:System.DateTime> in formato UTC devono essere formattate in modo che vengano identificate come UTC. Per indicare un'ora in formato UTC è consigliabile usare una 'Z':  
@@ -102,6 +95,5 @@ String serialized = XmlConvert.ToString(myDateTime,
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization.DateTimeFormatInfo>   
+ <xref:System.Globalization.DateTimeFormatInfo>  
  [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

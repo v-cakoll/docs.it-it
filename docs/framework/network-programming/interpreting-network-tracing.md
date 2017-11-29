@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - TraceMode attribute
 - hexidecimal data, network tracing output
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8c451a84117208457942d1c3794628963a49e93
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: deb191f18bda5b00ef4a967f50e8e983289882a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interpreting-network-tracing"></a>Interpretazione della traccia di rete
 Quando la traccia di rete è abilitata, può essere usata per acquisire le chiamate effettuate dall'applicazione a diversi membri della classe <xref:System.Net>. L'output di queste chiamate può essere simile agli esempi seguenti.  
@@ -60,7 +54,6 @@ Quando la traccia di rete è abilitata, può essere usata per acquisire le chiam
  `Connection: Close`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)   
- [Procedura: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
+ [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)  
+ [Procedura: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
-

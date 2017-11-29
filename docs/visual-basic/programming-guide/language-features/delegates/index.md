@@ -1,45 +1,27 @@
 ---
 title: Delegati (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="delegates-visual-basic"></a>Delegati (Visual Basic)
-I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descritti come *puntatori a funzione indipendenti dai tipi* poiché sono simili ai puntatori a funzione usati in altri linguaggi di programmazione. A differenza dei puntatori a funzione, tuttavia, i delegati [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sono un tipo riferimento basato sulla classe <xref:System.Delegate?displayProperty=fullName>. I delegati possono fare riferimento sia a metodi condivisi, ovvero metodi che è possibile chiamare senza una specifica istanza di una classe, sia a metodi di istanza.  
+I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descritti come *puntatori a funzione indipendenti dai tipi* poiché sono simili ai puntatori a funzione usati in altri linguaggi di programmazione. A differenza dei puntatori a funzione, tuttavia, i delegati [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sono un tipo riferimento basato sulla classe <xref:System.Delegate?displayProperty=nameWithType>. I delegati possono fare riferimento sia a metodi condivisi, ovvero metodi che è possibile chiamare senza una specifica istanza di una classe, sia a metodi di istanza.  
   
 ## <a name="delegates-and-events"></a>Delegati ed eventi  
  I delegati sono utili nelle situazioni in cui è necessario un intermediario tra una routine chiamante e la routine chiamata. Ad esempio, può essere necessario che un oggetto generatore di eventi sia in grado di chiamare gestori di eventi differenti in circostanze diverse. Purtroppo, l'oggetto che genera gli eventi non può sapere in anticipo quale gestore eventi gestirà uno specifico evento. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] consente di associare in modo dinamico i gestori eventi agli eventi mediante la creazione automatica di un delegato quando viene usata l'istruzione `AddHandler`. In fase di esecuzione, il delegato inoltrerà le chiamate al gestore eventi appropriato.  
@@ -91,4 +73,3 @@ I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descrit
 |[Procedura: Passare una routine a un'altra routine in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Viene illustrato come usare i delegati per passare una routine a un'altra routine.|  
 |[Conversione di tipo relaxed del delegato](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Viene descritto come assegnare subroutine e funzioni a delegati o gestori anche quando le relative firme non sono identiche.|  
 |[Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md)|Viene offerta una panoramica degli eventi in Visual Basic.|
-

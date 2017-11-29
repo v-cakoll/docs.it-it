@@ -1,37 +1,40 @@
 ---
-title: "Procedura: aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ListItem"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], ListView (controllo)"
-  - "esempi [Windows Form], TreeView (controllo)"
-  - "ListView (controllo) [Windows Form], aggiunta di informazioni personalizzate"
-  - "Tag (proprietà)"
-  - "TreeView (controllo) [Windows Form], aggiunta di informazioni personalizzate"
+title: 'Procedura: aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: ListItem
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- examples [Windows Forms], ListView control
+- ListView control [Windows Forms], adding custom information
+- TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e7086e52992f575781449e5dc2a83c3443f558d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)
-È possibile creare un nodo derivato in un controllo <xref:System.Windows.Forms.TreeView> Windows Form o un elemento derivato in un controllo <xref:System.Windows.Forms.ListView>.  La derivazione consente di aggiungere eventuali campi necessari, oltre a metodi e costruttori personalizzati per gestirli.  Questa funzionalità può essere utilizzata, ad esempio, per associare un oggetto Customer a ciascun nodo della struttura ad albero o voce dell'elenco.  Negli esempi seguenti viene utilizzato il controllo <xref:System.Windows.Forms.TreeView>, tuttavia è possibile eseguire la stessa procedura anche con il controllo <xref:System.Windows.Forms.ListView>.  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Procedura: aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)
+È possibile creare un nodo derivato in un Windows Form <xref:System.Windows.Forms.TreeView> controllo o un elemento derivato in una <xref:System.Windows.Forms.ListView> controllo. La derivazione consente di aggiungere eventuali campi necessari, nonché metodi personalizzati e costruttori per gestirli. Un utilizzo di questa funzionalità consiste nel collegare un oggetto Customer a ogni nodo di una struttura ad albero o voce di elenco. Negli esempi seguenti sono per un <xref:System.Windows.Forms.TreeView> il controllo, ma lo stesso approccio può essere utilizzato per un <xref:System.Windows.Forms.ListView> controllo.  
   
-### Per derivare un nodo della struttura ad albero  
+### <a name="to-derive-a-tree-node"></a>Per derivare un nodo della struttura ad albero  
   
--   Creare una nuova classe del nodo, derivata dalla classe <xref:System.Windows.Forms.TreeNode>, che presenta un campo personalizzato per la registrazione del percorso di un file.  
+-   Creare una nuova classe di nodo, derivata dal <xref:System.Windows.Forms.TreeNode> (classe), che presenta un campo personalizzato per registrare un percorso di file.  
   
     ```vb  
     Class myTreeNode  
@@ -45,7 +48,6 @@ caps.handback.revision: 13
           Me.Text = fp.Substring(fp.LastIndexOf("\"))  
        End Sub  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -59,7 +61,6 @@ caps.handback.revision: 13
           this.Text = fp.Substring(fp.LastIndexOf("\\"));  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -76,11 +77,11 @@ caps.handback.revision: 13
     };  
     ```  
   
-### Per utilizzare un nodo della struttura ad albero derivato  
+### <a name="to-use-a-derived-tree-node"></a>Per usare un nodo di struttura ad albero derivato  
   
-1.  È possibile utilizzare il nuovo nodo della struttura ad albero derivato come parametro per le chiamate di funzione.  
+1.  È possibile usare il nuovo nodo della struttura ad albero derivato come parametro per le chiamate di funzione.  
   
-     Nell'esempio riportato di seguito, il percorso impostato per la posizione del file di testo coincide con la cartella Documenti.  Si consiglia di utilizzare questa posizione perché tale cartella è presente nella maggior parte dei computer che esegue il sistema operativo Windows.  La scelta di questa posizione consente inoltre di eseguire l'applicazione senza problemi agli utenti che dispongono di livelli di accesso minimo.  
+     Nell'esempio seguente il percorso impostato per la posizione del file di testo è la cartella Documenti. Si procede in questo modo perché si presume che la maggior parte dei computer con il sistema operativo Windows avrà questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi.  
   
     ```vb  
     ' You should replace the bold text file   
@@ -88,7 +89,6 @@ caps.handback.revision: 13
     TreeView1.Nodes.Add(New myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        & "\ TextFile.txt ") )  
-  
     ```  
   
     ```csharp  
@@ -98,7 +98,6 @@ caps.handback.revision: 13
     treeView1.Nodes.Add(new myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        + @"\TextFile.txt") );  
-  
     ```  
   
     ```cpp  
@@ -110,7 +109,7 @@ caps.handback.revision: 13
        "\\TextFile.txt")));  
     ```  
   
-2.  Se il nodo della struttura ad albero è stato passato e viene indicato come una classe <xref:System.Windows.Forms.TreeNode>, sarà necessario effettuare il cast sulla classe derivata.  Il cast è una conversione esplicita da un tipo di oggetto a un altro.  Per ulteriori informazioni sul cast, vedere [Implicit and Explicit Conversions](../Topic/Implicit%20and%20Explicit%20Conversions%20\(Visual%20Basic\).md) \([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]\), [Operatore \(\)](../Topic/\(\)%20Operator%20\(C%23%20Reference\).md) \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\) o [Operatore cast: \(\)](../../../../amples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/spec_withstructure-xps/_rels/.rels) \([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\).  
+2.  Se è stato passato il nodo dell'albero e viene indicato come un <xref:System.Windows.Forms.TreeNode> classe, sarà necessario eseguire il cast di una classe derivata. Il cast è una conversione esplicita da un tipo di oggetto a un altro. Per altre informazioni sul cast, vedere [Conversioni implicite ed esplicite](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]), [() Operatore](~/docs/csharp/language-reference/operators/invocation-operator.md) ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) o [Operatore cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -118,7 +117,6 @@ caps.handback.revision: 13
        mynode = CType(e.node, myTreeNode)  
        MessageBox.Show("Node selected is " & mynode.filepath)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -128,7 +126,6 @@ caps.handback.revision: 13
        myTreeNode myNode = (myTreeNode)e.Node;  
        MessageBox.Show("Node selected is " + myNode.FilePath);  
     }  
-  
     ```  
   
     ```cpp  
@@ -142,6 +139,6 @@ caps.handback.revision: 13
        }  
     ```  
   
-## Vedere anche  
- [Controllo TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controllo TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
  [Controllo ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

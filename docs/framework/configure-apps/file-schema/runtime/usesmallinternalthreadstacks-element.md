@@ -1,76 +1,78 @@
 ---
-title: "Elemento &lt;UseSmallInternalThreadStacks&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<UseSmallInternalThreadStacks> (elemento)"
-  - "UseSmallInternalThreadStacks (elemento)"
+title: '&lt;UseSmallInternalThreadStacks&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UseSmallInternalThreadStacks element
+- <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2558423b412333a4d6ac9f650ad8ff3dab449d74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;UseSmallInternalThreadStacks&gt;
-Richiede che il Common Language Runtime \(CLR\) riduca l'utilizzo della memoria specificando dimensioni dello stack esplicite quando crea determinati thread che utilizza internamente, anziché utilizzare la dimensione dello stack predefinita per quei thread.  
+# <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; elemento
+Le richieste che common language runtime (CLR) ridurre la memoria utilizzano specificando le dimensioni dello stack esplicita quando crea determinati thread che utilizza internamente, anziché utilizzare la dimensione predefinita per tali thread.  
   
-## Sintassi  
+ \<configurazione > elemento  
+\<runtime > elemento  
+\<UseSmallInternalThreadStacks > elemento  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <UseSmallInternalThreadStacks enabled="true|false" />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|enabled|Attributo obbligatorio.<br /><br /> Specifica se richiedere che CLR utilizzi le dimensioni dello stack esplicite anziché la dimensione dello stack predefinita quando crea determinati thread che utilizza internamente.  Le dimensioni dello stack esplicite sono più piccole della dimensione predefinita dello stack di 1 Mb.|  
+|enabled|Attributo obbligatorio.<br /><br /> Specifica se richiedere che le dimensioni dello stack esplicita uso CLR anziché la dimensione predefinita quando si crea determinati thread che utilizza internamente. Le dimensioni dello stack esplicita sono inferiori alle dimensioni dello stack predefinito di 1 MB.|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|true|Richiedere dimensioni dello stack esplicite.|  
-|false|Utilizzare la dimensione dello stack predefinita.  L'impostazione predefinita per [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] è "Infinity".|  
+|-----------|-----------------|  
+|true|Le dimensioni dello stack esplicita della richiesta.|  
+|false|Utilizzare la dimensione predefinita. Questo è il valore predefinito per il [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## Note  
- Questo elemento di configurazione è utilizzato per richiedere un utilizzo ridotto della memoria virtuale in un processo, in quanto le dimensioni del thread esplicito che CLR utilizza per i thread interni, se viene rispettata la richiesta, sono più piccole delle dimensioni predefinite.  
+## <a name="remarks"></a>Note  
+ Questo elemento di configurazione viene utilizzato per richiedere l'utilizzo ridotto della memoria virtuale in un processo, poiché le dimensioni di esplicita di thread usati da CLR per i thread interni, se la richiesta è stata rispettata, sono inferiori alle dimensioni predefinite.  
   
 > [!IMPORTANT]
->  Questo elemento di configurazione è una richiesta a CLR piuttosto che un requisito assoluto.  In [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], la richiesta viene rispettata solo per l'architettura x86.  Questo elemento potrebbe essere ignorato completamente nelle future versioni di CLR o sostituito da dimensioni dello stack esplicite che vengono sempre utilizzate per i thread interni selezionati.  
+>  Questo elemento di configurazione è una richiesta di CLR anziché un requisito assoluto. Nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], la richiesta viene rispettata solo per x86 architettura. Questo elemento potrebbe essere ignorato completamente nelle versioni future di CLR o sostituito da dimensioni dello stack esplicite che vengono sempre utilizzate per thread interni selezionati.  
   
- La specifica di questo elemento di configurazione negozia l'affidabilità per un minore utilizzo di memoria virtuale se CLR onora la richiesta, perché le minori dimensioni dello stack potrebbero potenzialmente rendere più probabile gli overflow dello stack.  
+ Specificare che questo elemento di configurazione negozia l'affidabilità di minore utilizzo della memoria virtuale se CLR soddisfa la richiesta, perché le dimensioni dello stack più piccole potrebbe potenzialmente stack overflow più probabile.  
   
-## Esempio  
- Nell'esempio seguente viene mostrato come richiedere che le dimensioni esplicite dello stack che CLR utilizza per determinati  thread che utilizza internamente.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come richiedere che il Common Language Runtime Usa dimensioni esplicite dello stack per determinati thread che utilizza internamente.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <UseSmallInternalThreadStacks enabled="true" />  
@@ -78,6 +80,6 @@ Richiede che il Common Language Runtime \(CLR\) riduca l'utilizzo della memoria 
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

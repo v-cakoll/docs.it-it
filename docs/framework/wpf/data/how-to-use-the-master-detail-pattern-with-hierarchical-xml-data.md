@@ -1,33 +1,36 @@
 ---
-title: "Procedura: utilizzare il modello Master-Details con dati XML gerarchici | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "associazione dati, paradigma dati Master-Detail"
-  - "paradigma dati Master-Detail"
+title: 'Procedura: utilizzare il modello Master-Details con dati XML gerarchici'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [WPF], Master-Detail data paradigm
+- Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b28a2220b5fc86654fe054deb9180450025f72f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare il modello Master-Details con dati XML gerarchici
-In questo esempio viene illustrato come implementare lo scenario Master\-Details con i dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>Procedura: utilizzare il modello Master-Details con dati XML gerarchici
+In questo esempio viene illustrato come implementare lo scenario master-Details con [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati.  
   
-## Esempio  
- Questo esempio rappresenta la versione dei dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dell'esempio illustrato in [Utilizzare il modello Master\-Details con dati gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md).  In questo esempio, i dati provengono dal file `League.xml`.  Notare il modo in cui il terzo controllo di <xref:System.Windows.Controls.ListBox> tiene traccia delle modifiche alla selezione apportate al secondo oggetto <xref:System.Windows.Controls.ListBox> mediante l'associazione alla relativa proprietà <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>.  
+## <a name="example"></a>Esempio  
+ Questo esempio si trova il [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] versione dei dati di esempio illustrato in [utilizzare il modello Master-Details con dati gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). In questo esempio, i dati provengono da file `League.xml`. Si noti come il terzo <xref:System.Windows.Controls.ListBox> controllo tiene traccia delle modifiche di selezione del secondo <xref:System.Windows.Controls.ListBox> tramite l'associazione alla relativa <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> proprietà.  
   
- [!code-xml[MasterDetailXml#HowTo1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto1)]  
-[!code-xml[MasterDetailXml#HowTo2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
+ [!code-xaml[MasterDetailXml#HowTo1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto1)]  
+[!code-xaml[MasterDetailXml#HowTo2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
   
-## Vedere anche  
- <xref:System.Windows.HierarchicalDataTemplate>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.HierarchicalDataTemplate>  
  [Procedure relative](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

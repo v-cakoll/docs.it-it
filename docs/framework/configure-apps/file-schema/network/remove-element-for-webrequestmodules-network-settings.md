@@ -1,80 +1,82 @@
 ---
-title: "Elemento &lt;remove&gt; per webRequestModules (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<remove> (elemento), webRequestModules"
-  - "<webRequestModules>, remove (elemento)"
-  - "remove (elemento), webRequestModules"
-  - "webRequestModules, remove (elemento)"
+title: '&lt;rimuovere&gt; elemento per webRequestModules (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
+helpviewer_keywords:
+- remove element, webRequestModules
+- webRequestModules, remove element
+- <remove> element, webRequestModules
+- <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 43f0d30f8c18c4755f31d0c851c773207bc15b78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;remove&gt; per webRequestModules (Impostazioni di rete)
-Consente di rimuovere un modulo di richiesta Web personalizzato dall'applicazione.  
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;rimuovere&gt; elemento per webRequestModules (impostazioni di rete)
+Rimuove un modulo di richiesta Web personalizzato dall'applicazione.  
   
-## Sintassi  
+ \<configuration>  
+\<System.NET >  
+\<webRequestModules >  
+\<rimuovere >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-      <remove   
-  name = "URI prefix"   
+```xml  
+<remove   
+  prefix="URI prefix"   
 />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`name`|Prefisso URI per le richieste gestite da questo modulo di richiesta Web.|  
+|`prefix`|Il prefisso URI per le richieste gestite da questo modulo di richiesta Web.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Selezione dei moduli da utilizzare per richiedere informazioni agli host di rete.|  
+|-----------------|---------------------|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli da utilizzare per richiedere informazioni agli host di rete.|  
   
-## Note  
- L'elemento `remove` rimuove il modulo di richiesta Web registrato per il prefisso URI specificato.  
+## <a name="remarks"></a>Note  
+ Il `remove` elemento rimuove il modulo di richiesta Web registrato per il prefisso URI specificato.  
   
- Il valore dell'attributo `prefix` deve corrispondere ai caratteri iniziali di un URI valido, ad esempio "http" o "http:\/\/www.contoso.com".  
+ Il valore per il `prefix` attributo deve corrispondere ai caratteri iniziali di un URI valido, ad esempio, "http" o "http://www.contoso.com".  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a>File di configurazione  
+ Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene rimosso il modulo di richiesta Web per HTTP esistente e viene registrato un nuovo modulo di richiesta Web personalizzato per le richieste HTTP destinate a www.contoso.com.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente rimuove il modulo di richiesta Web esistente per HTTP e viene registrato un nuovo modulo di richiesta Web personalizzato per le richieste HTTP a www.contoso.com.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
-      <remove prefix = "http">  
+      <remove prefix="http">  
       <add prefix="http"  
            type="System.Net.HttpRequestCreator, System, Version=2.0.3600.0,  
            Culture=neutral, PublicKeyToken=b77a5c561934e089"  
@@ -84,6 +86,6 @@ Consente di rimuovere un modulo di richiesta Web personalizzato dall'applicazion
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net.WebRequest>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Net.WebRequest>  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

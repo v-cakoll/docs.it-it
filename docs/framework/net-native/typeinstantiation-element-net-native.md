@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4b0a295e5d788eb50ba39227ac6971ea057ec1e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 442970c8253147313a38e1a1518219a96ec41945
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>Elemento &lt;TypeInstantiation&gt; (.NET Native)
 Applica i criteri di reflection di runtime a un tipo generico costruito.  
@@ -54,9 +52,9 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|  
 |`Serialize`|Serializzazione|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a costruttori, campi e proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie quali il serializzatore JSON di Newtonsoft.|  
-|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
+|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi di riferimento a Windows Runtime e COM.|  
 |`MarshalDelegate`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.|  
 |`MarshalStructure`|Interoperabilità|Attributo facoltativo. Controlla i criteri per il marshalling delle strutture al codice nativo.|  
@@ -65,7 +63,7 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*type_name*|Nome del tipo. Se questo elemento `<TypeInstantiation>` è figlio di un elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), un elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o di un altro elemento `<TypeInstantiation>`, *type_name* può specificare il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo. Il nome del tipo non è decorato. Ad esempio, per un oggetto <xref:System.Collections.Generic.List%601?displayProperty=fullName>, l'elemento `<TypeInstantiation>` può apparire come segue:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|Nome del tipo. Se questo elemento `<TypeInstantiation>` è figlio di un elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), un elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o di un altro elemento `<TypeInstantiation>`, *type_name* può specificare il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo. Il nome del tipo non è decorato. Ad esempio, per un oggetto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, l'elemento `<TypeInstantiation>` può apparire come segue:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Attributo di argomenti  
   
@@ -113,7 +111,7 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Dopo aver eseguito la compilazione con la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)], l'esempio genera un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) sulla riga che chiama il metodo <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName>. È possibile eliminare l'eccezione e fornire i metadati necessari aggiungendo il seguente elemento `<TypeInstantiation>` al file di direttive di runtime:  
+ Dopo aver eseguito la compilazione con la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)], l'esempio genera un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) sulla riga che chiama il metodo <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>. È possibile eliminare l'eccezione e fornire i metadati necessari aggiungendo il seguente elemento `<TypeInstantiation>` al file di direttive di runtime:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -127,7 +125,6 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
-

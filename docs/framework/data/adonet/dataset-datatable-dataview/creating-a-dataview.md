@@ -1,36 +1,41 @@
 ---
-title: "Creazione di un DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creazione di un oggetto DataView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 28a2f6f299d2f904dc3f842c0c778f30081240b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Creazione di un DataView
-Per creare un <xref:System.Data.DataView>, sono disponibili due modalità.  È possibile usare il costruttore **DataView** oppure creare un riferimento alla proprietà <xref:System.Data.DataTable.DefaultView%2A> della <xref:System.Data.DataTable>.  Il costruttore **DataView** può essere vuoto oppure può accettare una **DataTable** come unico argomento o una **DataTable** insieme a criteri di filtro, criteri di ordinamento e un filtro relativo allo stato di riga.  Per altre informazioni sugli argomenti aggiuntivi disponibili per l'uso con **DataView**, vedere [Ordinamento e filtro dei dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+# <a name="creating-a-dataview"></a>Creazione di un oggetto DataView
+Per creare un <xref:System.Data.DataView>, sono disponibili due modalità. È possibile utilizzare il **DataView** costruttore, oppure è possibile creare un riferimento al <xref:System.Data.DataTable.DefaultView%2A> proprietà del <xref:System.Data.DataTable>. Il **DataView** costruttore può essere vuoto oppure può accettare un **DataTable** come argomento singolo, o un **DataTable** insieme ai criteri di filtro, criteri di ordinamento e una riga filtro di stato. Per ulteriori informazioni sugli argomenti aggiuntivi per l'utilizzo con il **DataView**, vedere [ordinamento e filtraggio dei dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
- Dal momento che l'indice per un **DataView** viene compilato sia al momento della creazione del **DataView** che a ogni modifica della proprietà **Sort**, **RowFilter** o **RowStateFilter**, per ottenere prestazioni ottimali, si consiglia di fornire eventuali criteri di ordinamento o di filtro iniziali come argomenti del costruttore quando si crea il **DataView**.  Se si crea un oggetto **DataView** senza specificare criteri di filtro o di ordinamento e successivamente si imposta la proprietà **Sort**, **RowFilter** o **RowStateFilter**, l'indice verrà compilato almeno due volte: una volta durante la creazione di **DataView** e una seconda volta quando viene modificata una delle proprietà di ordinamento o filtro.  
+ Poiché l'indice per un **DataView** viene compilato sia quando la **DataView** viene creato e quando un il **ordinamento**, **RowFilter**, o  **RowStateFilter** si modificano le proprietà, per ottenere prestazioni ottimali di fornire qualsiasi tipo di ordinamento iniziale o criteri di filtro come argomenti del costruttore quando si crea il **DataView**. Creazione di un **DataView** senza specificare i criteri di ordinamento o filtro e quindi impostando la **ordinamento**, **RowFilter**, o **RowStateFilter** le proprietà in un secondo momento fa sì che l'indice verrà compilato almeno due volte: una volta quando il **DataView** viene creato e nuovamente quando le proprietà di ordinamento o filtro vengono modificate.  
   
- Notare che se si crea un **DataView** usando un costruttore che non accetta argomenti, non sarà possibile usare il **DataView** fino a quando non sarà stata impostata la proprietà **Table**.  
+ Si noti che se si crea un **DataView** utilizzando il costruttore che non accetta alcun argomento, non sarà in grado di utilizzare il **DataView** fino a quando non è stato impostato il **tabella** proprietà .  
   
- Nell'esempio di codice seguente viene illustrata la creazione di un **DataView** mediante il costruttore **DataView**.  Insieme alla **DataTable** vengono forniti un **RowFilter**, una colonna **Sort** e **DataViewRowState**.  
+ Esempio di codice riportato di seguito viene illustrato come creare un **DataView** utilizzando il **DataView** costruttore. Oggetto **RowFilter**, **ordinamento** colonna, e **DataViewRowState** vengono forniti con il **DataTable**.  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
     "Country = 'USA'", _  
     "ContactName", _  
     DataViewRowState.CurrentRows)  
-  
 ```  
   
 ```csharp  
@@ -40,21 +45,20 @@ DataView custDV = new DataView(custDS.Tables["Customers"],
     DataViewRowState.CurrentRows);  
 ```  
   
- Nell'esempio di codice seguente viene illustrato come ottenere un riferimento al **DataView** predefinito di una **DataTable** mediante la proprietà **DefaultView** della tabella.  
+ Esempio di codice riportato di seguito viene illustrato come ottenere un riferimento all'impostazione predefinita **DataView** di un **DataTable** utilizzando il **DefaultView** proprietà della tabella.  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  
-  
 ```  
   
 ```csharp  
 DataView custDV = custDS.Tables["Customers"].DefaultView;  
 ```  
   
-## Vedere anche  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Ordinamento e filtro dei dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)   
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [Ordinamento e filtro dei dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

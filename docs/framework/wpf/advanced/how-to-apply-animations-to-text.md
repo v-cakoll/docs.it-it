@@ -1,48 +1,51 @@
 ---
-title: "Procedura: applicare animazioni al testo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animazione, testo"
-  - "tipografia, animazioni"
+title: 'Procedura: Applicare animazioni al testo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], animations
+- animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0298462db5897e955bf0a2551cca7fc81bb27d89
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: applicare animazioni al testo
-Le animazioni possono modificare la visualizzazione e l'aspetto del testo nell'applicazione.  Negli esempi seguenti vengono utilizzati tipi diversi di animazioni per influire sulla visualizzazione del testo in un controllo <xref:System.Windows.Controls.TextBlock>.  
+# <a name="how-to-apply-animations-to-text"></a>Procedura: Applicare animazioni al testo
+Le animazioni possono modificare la visualizzazione e l'aspetto del testo nell'applicazione. Negli esempi seguenti utilizzano tipi diversi di animazioni per modificare la visualizzazione di testo in un <xref:System.Windows.Controls.TextBlock> controllo.  
   
-## Esempio  
- Nell'esempio seguente viene utilizzato un oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> per aggiungere un'animazione alla larghezza del blocco di testo.  Il valore di larghezza viene modificato dalla larghezza del blocco di testo a 0 per una durata pari a 10 secondi, quindi inverte i valori di larghezza e continua.  Questo tipo di animazione crea un effetto a comparsa.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.Animation.DoubleAnimation> per animare la larghezza del blocco di testo. Il valore della larghezza varia dalla larghezza del blocco di testo a 0 per una durata pari a 10 secondi, quindi inverte i valori della larghezza e continua. Questo tipo di animazione crea un effetto a comparsa.  
   
- [!code-xml[TextAnimationSample#TextAnimationSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample1)]  
+ [!code-xaml[TextAnimationSample#TextAnimationSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample1)]  
   
- Nell'esempio seguente viene utilizzato un oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> per aggiungere un'animazione all'opacità del blocco di testo.  Il valore di opacità viene modificato da 1,0 a 0 per una durata pari a 5 secondi, quindi inverte i valori di opacità e continua.  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.Animation.DoubleAnimation> animare l'opacità del blocco di testo. Il valore dell'opacità varia da 1,0 a 0 per una durata pari a 5 secondi, quindi inverte i valori dell'opacità e continua.  
   
- [!code-xml[TextAnimationSample#TextAnimationSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample2)]  
+ [!code-xaml[TextAnimationSample#TextAnimationSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample2)]  
   
- Nel diagramma seguente viene illustrato l'effetto del controllo <xref:System.Windows.Controls.TextBlock> per cui l'opacità viene modificata da `1.00` a `0.00` in un intervallo pari a 5 secondi definito da <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+ Il diagramma seguente mostra l'effetto del <xref:System.Windows.Controls.TextBlock> controllo modifica l'opacità da `1.00` a `0.00` durante l'intervallo di 5 secondi definito dal <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- ![Testo con modifica di opacità da 1.00 a 0.00](../../../../docs/framework/wpf/advanced/media/fadedtext01.png "FadedText01")  
+ ![Testo per opacità da 1.00 a 0.00](../../../../docs/framework/wpf/advanced/media/fadedtext01.png "FadedText01")  
 Opacità del testo modificata da 1,00 a 0,00  
   
- Nell'esempio seguente viene utilizzato un oggetto <xref:System.Windows.Media.Animation.ColorAnimation> per aggiungere un'animazione al colore di primo piano del blocco di testo.  Il valore del colore di primo piano viene modificato da un colore a un altro per una durata pari a 5 secondi, quindi inverte i valori del colore e continua.  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.Animation.ColorAnimation> animare il colore di primo piano del blocco di testo. Il valore del colore di primo piano varia da un colore a un altro per una durata pari a 5 secondi, quindi inverte i valori del colore e continua.  
   
- [!code-xml[TextAnimationSample#TextAnimationSample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  
+ [!code-xaml[TextAnimationSample#TextAnimationSample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  
   
- Nell'esempio seguente viene utilizzato un oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> per ruotare il blocco di testo.  Il blocco di testo esegue una rotazione completa per una durata pari a 20 secondi, quindi continua a ripetere la rotazione.  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.Animation.DoubleAnimation> per ruotare il blocco di testo. Il blocco di testo esegue una rotazione completa per una durata pari a 20 secondi, quindi continua a ripetere la rotazione.  
   
- [!code-xml[TextAnimationSample#TextAnimationSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
+ [!code-xaml[TextAnimationSample#TextAnimationSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

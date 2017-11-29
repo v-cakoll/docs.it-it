@@ -1,25 +1,28 @@
 ---
-title: "ClientCredentials | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ClientCredentials
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 68a2fa36c8a4fa1fde3ca8d8aaf1898060ea972f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# ClientCredentials
+# <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class ClientCredentials : Behavior  
@@ -35,73 +38,73 @@ class ClientCredentials : Behavior
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe ClientCredentials non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe ClientCredentials dispone delle proprietà seguenti:  
   
-### ClientCertificate  
+### <a name="clientcertificate"></a>ClientCertificate  
  Tipo di dati: stringa  
   
- Tipo di accesso: in sola lettura  
+ Tipo di accesso: sola lettura  
   
  Certificato X.509 utilizzato dal client per l'autenticazione per il servizio.  
   
-### HttpDigest  
+### <a name="httpdigest"></a>HttpDigest  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Credenziale digest HTTP corrente.  
   
-### IssuedToken  
+### <a name="issuedtoken"></a>IssuedToken  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Indirizzo e associazione dell'endpoint utilizzati per contattare il servizio locale del token di sicurezza.  
   
-### Peer  
+### <a name="peer"></a>Peer  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Credenziali utilizzate dal nodo peer per l'autenticazione con gli altri nodi nella rete.  
   
-### ServiceCertificate  
+### <a name="servicecertificate"></a>ServiceCertificate  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Certificato X.509 del servizio.  
   
-### SupportInteractive  
+### <a name="supportinteractive"></a>SupportInteractive  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore booleano che specifica se la credenziale supporta negoziazioni interattive.  
   
-### UserName  
+### <a name="username"></a>Nomeutente  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Nome utente e password utilizzati dal client per l'autenticazione per il servizio.  
   
-### Windows  
+### <a name="windows"></a>Windows  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Credenziali Windows utilizzate dal client per l'autenticazione per il servizio.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Description.ClientCredentials>

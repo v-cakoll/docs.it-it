@@ -1,25 +1,28 @@
 ---
-title: "Classe Channel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Classe Channel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1df634a61cce695fca74fdfe53beea6c0f83d082
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Classe Channel
+# <a name="channel-class"></a>Classe Channel
 Canale  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class Channel  
@@ -32,52 +35,52 @@ class Channel
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe Channel non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe Channel presenta le proprietà seguenti.  
   
-### LocalAddress  
+### <a name="localaddress"></a>LocalAddress  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Endpoint locale del canale.  
   
-### ref  
+### <a name="ref"></a>ref  
  Tipo di dati: endpoint  
   
  Tipo di accesso: sola lettura  
   
  Riferimento all'endpoint a cui si connette il canale.  
   
-### RemoteAddress  
+### <a name="remoteaddress"></a>RemoteAddress  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Indirizzo remoto associato al canale.  
   
-### SessionId  
+### <a name="sessionid"></a>SessionId  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  ID della sessione corrente, se presente.  
   
-### Tipo  
+### <a name="type"></a>Tipo  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Tipo del canale.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Channels.ChannelBase>

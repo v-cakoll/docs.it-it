@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a8a01e89977ea4fb9487520f2baa35028720e9d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6c0665a379f02a74bd0f3631aa26b41dd6ece5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Isolamento rete per app di Windows Store
 Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref:System.Net.Http.Headers> possono essere usate per sviluppare app di Windows Store o app desktop. Quando vengono usate in un'app di Windows Store, le classi in questi spazi dei nomi sono interessate dall'isolamento rete, parte del modello di sicurezza delle applicazioni usato da [!INCLUDE[win8](../../../includes/win8-md.md)]. Le funzionalità di rete appropriate devono essere abilitate nel manifesto dell'app per un'app di Windows Store affinché il sistema consenta l'accesso alla rete.  
@@ -41,10 +35,9 @@ Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref
  Per informazioni più dettagliate su come configurare le funzionalità di rete e gli strumenti di isolamento usati per la risoluzione dei problemi dell'isolamento rete, vedere [Come impostare le funzionalità di rete](http://go.microsoft.com/fwlink/?LinkID=228265) nella documentazione per gli sviluppatori di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connessione a servizi Web](http://go.microsoft.com/fwlink/?LinkID=245696)   
- [Linee guida ed elenco di controllo per l'isolamento rete](http://go.microsoft.com/fwlink/?LinkID=228265)   
- [Come connettersi tramite System.Net.Http.HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)   
- [Come usare i gestori System.Net.Http.HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)   
- [Come proteggere le connessioni System.Net.Http.HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)   
+ [Connessione a un servizio web](http://go.microsoft.com/fwlink/?LinkID=245696)  
+ [Linee guida e l'elenco di controllo per l'isolamento rete](http://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Guida introduttiva: Connessione tramite HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Come utilizzare i gestori di HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)  
+ [Come proteggere le connessioni di HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)  
  [HttpClient Sample](http://go.microsoft.com/fwlink/?LinkId=242550) (Esempio con HttpClient)
-

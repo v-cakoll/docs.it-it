@@ -1,113 +1,112 @@
 ---
-title: "Module Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Module"
-  - "vb.Module"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "modules, classes"
-  - "modules"
-  - "Module statement"
-  - "modules, declaring"
-  - "standard modules"
-  - "classes [Visual Basic], vs. modules"
-  - "declarations, modules"
+title: Istruzione Module
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Module
+- vb.Module
+helpviewer_keywords:
+- modules, classes
+- modules
+- Module statement [Visual Basic]
+- modules, declaring
+- standard modules
+- classes [Visual Basic], vs. modules
+- declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 92cdcd1919f21243118108da3bc382ea5d954130
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Module Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consente di dichiarare il nome di un modulo e introduce la definizione di variabili, proprietà, eventi e procedure comprese dal modulo.  
+# <a name="module-statement"></a>Istruzione Module
+Dichiara il nome di un modulo e introduce la definizione di variabili, proprietà, eventi ed procedure che comprende il modulo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-[ <attributelist> ] [ accessmodifier ]  Module name  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ]  Module name  
+    [ statements ]  
 End Module  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `attributelist`  
- Parametro facoltativo.  Vedere [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Parametro facoltativo.  ad esempio uno dei seguenti:  
+ Parametro facoltativo. Può essere uno dei seguenti:  
   
 -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
 -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- Vedere [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `name`  
- Obbligatorio.  Nome di questo modulo.  Per informazioni, vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Obbligatorio. Nome di questo modulo. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `statements`  
- Parametro facoltativo.  Istruzioni che definiscono variabili, proprietà, eventi, metodi e tipi annidati di questo modulo.  
+ Parametro facoltativo. Istruzioni che definiscono le variabili, proprietà, eventi, procedure e tipi annidati di questo modulo.  
   
  `End Module`  
- Consente di terminare la definizione `Module`.  
+ Termina il `Module` definizione.  
   
-## Note  
- Un'istruzione `Module` consente di definire un tipo di riferimento disponibile tramite il suo spazio dei nomi.  Un *modulo* \(denominato a volte *modulo standard*\)è simile a una classe ma con alcune distinzioni importanti.  Ogni modulo ha esattamente un'istanza e non deve essere creata o assegnata a una variabile.  I moduli non sono in grado di supportare interfacce di ereditarietà o implementazione.  Si noti che un modulo non è un *tipo* nello stesso senso di una classe o struttura. Non è possibile dichiarare che un elemento di programmazione abbia il tipo di dati di un modulo.  
+## <a name="remarks"></a>Note  
+ Oggetto `Module` istruzione definisce un tipo di riferimento disponibile in tutto lo spazio dei nomi. A *modulo* (detto anche un *modulo standard*) è simile a una classe, ma con alcune differenze importanti. Ogni modulo ha esattamente un'istanza e non devono essere creati o assegnati a una variabile. I moduli non supportano l'ereditarietà o implementare interfacce. Si noti che un modulo non è un *tipo* nel senso che è una classe o struttura, è possibile dichiarare un elemento di programmazione per il tipo di dati di un modulo.  
   
- La parola chiave `Module` può essere utilizzata solo a livello di spazio dei nomi.  Il altri termini, il *contesto della dichiarazione* per un modulo deve essere costituito di un file di origine o uno spazio dei nomi e non può essere una classe, una struttura, un modulo, un'interfaccia, una routine o un blocco.  Non è possibile annidare un modulo all'interno di un altro modulo o all'interno di un tipo.  Per ulteriori informazioni, vedere [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ È possibile utilizzare `Module` solo a livello di spazio dei nomi. Ciò significa che il *contesto della dichiarazione* per un modulo deve essere un file di origine o di spazio dei nomi e non può essere una classe, struttura, modulo, interfaccia, routine o blocco. È possibile nidificare un modulo all'interno di un altro modulo o all'interno di qualsiasi tipo. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- La durata di un modulo corrisponde a quella del programma.  Poiché i suoi membri sono tutti `Shared` la loro durata corrisponde anch'essa a quella del programma.  
+ Un modulo con la stessa durata del programma. Poiché i relativi membri sono tutti `Shared`, hanno anche una durata uguale a quella del programma.  
   
- L'impostazione predefinita dei moduli è l'accesso [Friend](../../../visual-basic/language-reference/modifiers/friend.md).  È possibile modificarne i livelli di accesso mediante gli appositi modificatori.  Per ulteriori informazioni, vedere [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Per impostazione predefinita i moduli [Friend](../../../visual-basic/language-reference/modifiers/friend.md) accesso. È possibile regolare i livelli di accesso con i modificatori di accesso. Per ulteriori informazioni, vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- Tutti i membri di un modulo sono `Shared` in modo implicito.  
+ Tutti i membri di un modulo sono implicitamente `Shared`.  
   
-## Classi e moduli  
- Questi elementi hanno molte similitudini, ma vi sono anche alcune differenze significative.  
+## <a name="classes-and-modules"></a>Classi e moduli  
+ Questi elementi presentano molte analogie, ma esistono alcune importanti differenze.  
   
--   **Terminologia.** Nelle versioni precedenti di Visual Basic vengono riconosciuti due tipi di moduli: *moduli di classe* \(file con estensione cls\) e *moduli standard*  \(file con estensione bas\).  La versione corrente li definisce *classi* e *moduli*, rispettivamente.  
+-   **Terminologia.** Due tipi di moduli di riconoscere le versioni precedenti di Visual Basic: *moduli di classe* (file CLS) e *moduli standard* (file BAS). La versione corrente chiama questi *classi* e *moduli*, rispettivamente.  
   
--   **Membri condivisi.** È possibile controllare se un membro di una classe è un membro condiviso o dell'istanza.  
+-   **Membri condivisi.** È possibile controllare se è un oggetto condiviso di un membro di una classe o membro di istanza.  
   
--   **Orientamento dell'oggetto.** Le classi sono orientate agli oggetti mentre i moduli no.  , quindi è possibile creare istanze come oggetti solo delle classi.  Per ulteriori informazioni, vedere [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+-   **Orientamento agli oggetti.** Classi sono orientata agli oggetti, ma non sono moduli. Pertanto sola classi possono essere implementate come oggetti. Per ulteriori informazioni, vedere [oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
-## Regole  
+## <a name="rules"></a>Regole  
   
--   **Modificatori.** Tutti i membri dei moduli sono considerati [Shared](../../../visual-basic/language-reference/modifiers/shared.md) in modo implicito.  Quando si dichiara un membro, non è possibile utilizzare la parola chiave `Shared` e non è possibile alterare lo stato condiviso di nessun membro.  
+-   **Modificatori.** Tutti i membri del modulo sono implicitamente [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Non è possibile utilizzare il `Shared` (parola chiave) quando si dichiara un membro se non è possibile modificare lo stato condiviso tra i membri.  
   
--   **Ereditarietà.** Un modulo non può ereditare da un tipo diverso da <xref:System.Object>, da cui ereditano tutti i moduli.  In particolare, un modulo non può ereditare da un'altro.  
+-   **Ereditarietà.** Un modulo non può ereditare da qualsiasi tipo diverso da <xref:System.Object>, ereditare da tutti i moduli. In particolare, un modulo non può ereditare da un altro.  
   
-     Non è possibile utilizzare l'[Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) nella definizione di un modulo, anche per specificare <xref:System.Object>.  
+     Non è possibile utilizzare il [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md) nella definizione di un modulo, anche per specificare <xref:System.Object>.  
   
--   **Proprietà predefinita.** Non è possibile definire proprietà predefinite in un modulo.  Per ulteriori informazioni, vedere [Default](../../../visual-basic/language-reference/modifiers/default.md).  
+-   **Proprietà predefinita.** È possibile definire le proprietà predefinite in un modulo. Per ulteriori informazioni, vedere [predefinito](../../../visual-basic/language-reference/modifiers/default.md).  
   
-## Comportamento  
+## <a name="behavior"></a>Comportamento  
   
--   **Livello di accesso.** All'interno di un modulo è possibile dichiarare ogni membro con il suo livello di accesso personale.  L'impostazione predefinita dei membri del modulo è l'accesso [Public](../../../visual-basic/language-reference/modifiers/public.md), tranne che per variabili e costanti, la cui impostazione predefinita è l'accesso [Private](../../../visual-basic/language-reference/modifiers/private.md).  Quando un modulo ha un accesso più ristretto rispetto a uno dei suoi membri, avrà la precedenza il livello di accesso specificato del modulo.  
+-   **Livello di accesso.** All'interno di un modulo, è possibile dichiarare ogni membro con il proprio livello di accesso. Per impostazione predefinita ai membri del modulo [pubblica](../../../visual-basic/language-reference/modifiers/public.md) accedere, ad eccezione delle variabili e costanti, il valore predefinito per [privata](../../../visual-basic/language-reference/modifiers/private.md) accesso. Quando un modulo ha più limitato l'accesso a uno dei relativi membri, il livello di accesso del modulo specificato ha la precedenza.  
   
--   **Ambito.** L'ambito si trova nell'area di validità tramite il suo spazio dei nomi.  
+-   **Ambito.** Un modulo è incluso nell'ambito dello spazio dei nomi.  
   
-     L'ambito di un membro di ogni modulo è l'intero modulo.  Si noti che tutti i membri sono sottoposti a una *promozione del tipo*, che fa sì che il loro ambito venga promosso allo spazio dei nomi contenente il modulo.  Per ulteriori informazioni, vedere [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+     L'ambito di ogni membro di modulo è l'intero modulo. Si noti che è possibile eseguire tutti i membri *promozione del tipo*, che comporta l'ambito da innalzare di livello allo spazio dei nomi che contiene il modulo. Per ulteriori informazioni, vedere [promozione tipo](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
--   **Qualificazione.** Un progetto può contenere più moduli ed è possibile dichiarare i membri con lo stesso nome in due o più moduli.  Tuttavia è necessario qualificare qualsiasi riferimento a tale membro con il nome del modulo appropriato se il riferimento si trova al di fuori del modulo.  Per ulteriori informazioni, vedere [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+-   **Qualifica.** È possibile più moduli in un progetto che è possibile dichiarare membri con lo stesso nome in due o più moduli. Tuttavia, è necessario qualificare ogni riferimento a tale membro con il nome del modulo appropriato se il riferimento si trova all'esterno del modulo. Per ulteriori informazioni, vedere [riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## Vedere anche  
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Promozione tipo](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

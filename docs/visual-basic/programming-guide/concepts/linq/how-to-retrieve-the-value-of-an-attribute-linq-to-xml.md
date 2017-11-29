@@ -1,30 +1,25 @@
 ---
-title: 'Procedura: recuperare il valore di un attributo (LINQ to XML) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: recuperare il valore di un attributo (LINQ to XML) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a1661b1ea00eb7e377fc4d8a57ba27a558052b46
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 5eed0c34f79a4a338dda7b26049f2c1510443736
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Procedura: recuperare il valore di un attributo (LINQ to XML) (Visual Basic)
-In questo argomento viene illustrato come ottenere il valore di attributi. Esistono due modi: È possibile eseguire il cast un <xref:System.Xml.Linq.XAttribute>al tipo desiderato; l'operatore di conversione esplicito converte quindi il contenuto dell'elemento o attributo al tipo specificato.</xref:System.Xml.Linq.XAttribute> In alternativa, è possibile utilizzare il <xref:System.Xml.Linq.XAttribute.Value%2A>proprietà.</xref:System.Xml.Linq.XAttribute.Value%2A> L'esecuzione del cast costituisce in genere l'approccio migliore. Se si esegue il cast dell'attributo a un tipo nullable, sarà più semplice scrivere il codice quando si recupera il valore di un attributo che potrebbe o meno esistere. Per esempi di questa tecnica, vedere [procedura: recuperare il valore di un elemento (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+In questo argomento viene illustrato come ottenere il valore di attributi. Per eseguire questa operazione, è possibile scegliere tra due alternative. È possibile eseguire il cast di un <xref:System.Xml.Linq.XAttribute> al tipo desiderato; l'operatore di conversione esplicito converte quindi il contenuto dell'elemento o dell'attributo al tipo specificato. In alternativa, è possibile usare la proprietà <xref:System.Xml.Linq.XAttribute.Value%2A>. L'esecuzione del cast costituisce in genere l'approccio migliore. Se si esegue il cast dell'attributo a un tipo nullable, sarà più semplice scrivere il codice quando si recupera il valore di un attributo che potrebbe o meno esistere. Per esempi di questa tecnica, vedere [procedura: recuperare il valore di un elemento (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Esempio  
  In Visual Basic è possibile usare la proprietà integrata dell'attributo per recuperare il valore di un attributo.  

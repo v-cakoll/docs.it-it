@@ -1,45 +1,25 @@
 ---
 title: Matrici in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Array
-dev_langs:
-- VB
+f1_keywords: vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 04deeccd19fd4edb3f2c88310d660eedf5c707d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="arrays-in-visual-basic"></a>Matrici in Visual Basic
 Una matrice è costituita da un insieme di valori logicamente correlati tra loro, ad esempio il numero degli studenti iscritti a ciascun anno scolastico di una scuola elementare.  Per informazioni sulle matrici in Visual Basic for Applications (VBA), vedere la [documentazione di riferimento del linguaggio](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx).  
@@ -257,11 +237,11 @@ Dim prices(3, 4, 5) As Long
 ##  <a name="BKMK_ArrayTypes"></a> Tipi di matrice e altri tipi  
  Ogni matrice ha un tipo di dati, diverso da quello dei relativi elementi. Non esiste un singolo tipo di dati per tutte le matrici. Il tipo di dati di una matrice viene invece determinato dal numero di dimensioni, o *rango*, della matrice e dal tipo di dati degli elementi nella matrice. Due variabili di matrice hanno lo stesso tipo di dati solo se hanno lo stesso numero di dimensioni e i relativi elementi includono lo stesso tipo di dati. La lunghezza delle dimensioni in una matrice non influisce sul tipo di dati della matrice.  
   
- Ogni matrice eredita dalla classe <xref:System.Array?displayProperty=fullName>. È possibile dichiarare una variabile di tipo `Array`, ma non è possibile creare una matrice di tipo `Array`. L'[istruzione ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md) non può inoltre operare su una variabile dichiarata di tipo `Array`. Per questi motivi, e per garantire l'indipendenza dai tipi, è consigliabile dichiarare ogni matrice con un tipo specifico, ad esempio `Integer` nell'esempio precedente.  
+ Ogni matrice eredita dalla classe <xref:System.Array?displayProperty=nameWithType>. È possibile dichiarare una variabile di tipo `Array`, ma non è possibile creare una matrice di tipo `Array`. L'[istruzione ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md) non può inoltre operare su una variabile dichiarata di tipo `Array`. Per questi motivi, e per garantire l'indipendenza dai tipi, è consigliabile dichiarare ogni matrice con un tipo specifico, ad esempio `Integer` nell'esempio precedente.  
   
  È possibile determinare il tipo di dati di una matrice o dei relativi elementi in diversi modi.  
   
--   È possibile chiamare il metodo <xref:System.Object.GetType%2A?displayProperty=fullName> sulla variabile per ricevere un oggetto <xref:System.Type> per il tipo della variabile in fase di esecuzione. Nelle proprietà e nei metodi dell'oggetto <xref:System.Type> sono presenti informazioni complete.  
+-   È possibile chiamare il metodo <xref:System.Object.GetType%2A?displayProperty=nameWithType> sulla variabile per ricevere un oggetto <xref:System.Type> per il tipo della variabile in fase di esecuzione. Nelle proprietà e nei metodi dell'oggetto <xref:System.Type> sono presenti informazioni complete.  
   
 -   È possibile passare la variabile alla funzione <xref:Microsoft.VisualBasic.Information.TypeName%2A> per ricevere un oggetto `String` contenente il nome del tipo in fase di esecuzione.  
   
@@ -278,12 +258,12 @@ Dim prices(3, 4, 5) As Long
   
  Per alcune raccolte è possibile assegnare una chiave a qualsiasi oggetto inserito nella raccolta in modo da recuperare rapidamente l'oggetto usando la chiave.  
   
- Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una delle classi nello spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName> . In una raccolta generica viene imposta l'indipendenza dai tipi, in modo da impedire che vengano aggiunti altri tipi di dati alla raccolta. Quando si recupera un elemento da una raccolta generica, non è necessario determinarne il tipo di dati né convertirlo.  
+ Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una delle classi nello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType> . In una raccolta generica viene imposta l'indipendenza dai tipi, in modo da impedire che vengano aggiunti altri tipi di dati alla raccolta. Quando si recupera un elemento da una raccolta generica, non è necessario determinarne il tipo di dati né convertirlo.  
   
  Per altre informazioni sulle raccolte, vedere [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
 ### <a name="example"></a>Esempio  
- L'esempio seguente usa la classe generica <xref:System.Collections.Generic.List%601?displayProperty=fullName> di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per creare una raccolta di oggetti `Customer`.  
+ L'esempio seguente usa la classe generica <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per creare una raccolta di oggetti `Customer`.  
   
  [!code-vb[VbVbalrArrays#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#1)]  
   
@@ -300,7 +280,6 @@ Dim prices(3, 4, 5) As Long
 |[Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|Illustra alcuni problemi comuni che si verificano quando si usano le matrici.|  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Array>   
- [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)   
+ <xref:System.Array>  
+ [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [Istruzione ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md)
-
