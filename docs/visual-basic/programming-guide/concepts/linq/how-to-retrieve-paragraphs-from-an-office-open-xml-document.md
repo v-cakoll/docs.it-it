@@ -1,40 +1,36 @@
 ---
-title: 'Procedura: recuperare paragrafi da un documento Office Open XML (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: recuperare paragrafi da un documento Office Open XML (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 303fffb8a548805f4ae7c1e66d683b35b9faf2b0
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ecce435601092e0025a977c797100e0b5ff74b86
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Procedura: recuperare paragrafi da un documento Office Open XML (Visual Basic)
 In questo argomento viene presentato un esempio in cui viene aperto un documento Office Open XML e viene recuperata una raccolta di tutti i relativi paragrafi.  
   
- Per ulteriori informazioni su Office Open XML, vedere [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Per altre informazioni su Office Open XML, vedere [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene aperto un pacchetto Office Open XML e vengono usate le relazioni all'interno del pacchetto per trovare le parti di documento e di stile. Viene quindi eseguita una query sul documento, proiettando una raccolta di un tipo anonimo che contiene il paragrafo <xref:System.Xml.Linq.XElement>nodo, il nome dello stile di ogni paragrafo e il testo di ogni paragrafo.</xref:System.Xml.Linq.XElement>  
+ In questo esempio viene aperto un pacchetto Office Open XML e vengono usate le relazioni all'interno del pacchetto per trovare le parti di documento e di stile. Viene quindi eseguita una query sul documento, proiettando una raccolta di un tipo anonimo che contiene il nodo <xref:System.Xml.Linq.XElement> del paragrafo, il nome dello stile di ogni paragrafo e il testo di ogni paragrafo.  
   
  Viene usato un metodo di estensione denominato `StringConcatenate`, specificato nell'esempio.  
   
- Per un'esercitazione dettagliata che illustra il funzionamento in questo esempio, vedere [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Per un'esercitazione dettagliata che illustra il funzionamento in questo esempio, vedere [Pure funzionale trasformazioni del linguaggio XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- In questo esempio vengono usate classi dell'assembly WindowsBase Utilizza i tipi di <xref:System.IO.Packaging?displayProperty=fullName>dello spazio dei nomi.</xref:System.IO.Packaging?displayProperty=fullName>  
+ In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -165,7 +161,7 @@ Module Module1
 End Module  
 ```  
   
- Viene eseguito con il documento Open XML di esempio descritto in [la creazione di origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), in questo esempio produce il seguente output:  
+ Viene eseguito con il documento Open XML di esempio descritto in [l'origine documento Office Open XML (Visual Basic) di creazione](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), in questo esempio produce il seguente output:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

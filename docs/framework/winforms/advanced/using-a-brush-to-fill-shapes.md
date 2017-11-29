@@ -1,65 +1,66 @@
 ---
-title: "Utilizzo di un oggetto Brush per il riempimento di forme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pennelli"
-  - "esempi [Windows Form], pennelli"
-  - "forme, riempimento"
+title: Utilizzo di un oggetto Brush per il riempimento di forme
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- examples [Windows Forms], brushes
+- shapes [Windows Forms], filling
+- brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 057bc7bbfb9c1653fd4857ccc43fb6fc324e4c92
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Utilizzo di un oggetto Brush per il riempimento di forme
-Un oggetto <xref:System.Drawing.Brush> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è utilizzato per riempire l'interno di una forma chiusa.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] definisce vari stili: colore a tinta unita, modello di tratteggio, trama dell'immagine e sfumatura di colore.  
+# <a name="using-a-brush-to-fill-shapes"></a>Utilizzo di un oggetto Brush per il riempimento di forme
+Oggetto [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> oggetto viene utilizzato per riempire l'area interna di una forma chiusa. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]definisce vari stili: colore a tinta unita, motivo a tratteggio, trama dell'immagine e colore sfumato.  
   
-## In questa sezione  
- [Procedura: riempire una forma con un colore a tinta unita](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
- Descrive come utilizzare un pennello a tinta unita per il riempimento di forme.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Riempire una forma con un colore a tinta unita](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
+ Viene descritto come utilizzare un pennello tinta unita per il riempimento di forme.  
   
- [Procedura: riempire una forma con un motivo a tratteggio](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-hatch-pattern.md)  
- Mostra come utilizzare un pennello a tratteggio per il riempimento di forme.  
+ [Procedura: Riempire una forma con un motivo a tratteggio](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-hatch-pattern.md)  
+ Di seguito viene illustrato come utilizzare un pennello di tratteggio per riempire forme.  
   
- [Procedura: riempire una forma con una trama basata su un'immagine](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-an-image-texture.md)  
- Illustra come utilizzare un pennello a trama per il riempimento di forme.  
+ [Procedura: Riempire una forma con una trama basata su un'immagine](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-an-image-texture.md)  
+ Viene illustrato come utilizzare un pennello di trama per riempire forme.  
   
- [Procedura: riempire una forma con immagini affiancate](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)  
- Descrive come affiancare un'immagine in una forma.  
+ [Procedura: Riempire una forma con immagini affiancate](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)  
+ Viene descritto come un'immagine in una forma di riquadro.  
   
-## Riferimenti  
- <xref:System.Drawing.Brush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
+## <a name="reference"></a>Riferimento  
+ <xref:System.Drawing.Brush?displayProperty=nameWithType>  
+ Descrive la classe e contiene collegamenti a tutti i relativi membri  
   
- <xref:System.Drawing.SolidBrush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
+ <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>  
+ Descrive la classe e contiene collegamenti a tutti i relativi membri  
   
- <xref:System.Drawing.TextureBrush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
+ <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  
+ Descrive la classe e contiene collegamenti a tutti i relativi membri.  
   
- <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
+ <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
+ Descrive la classe e contiene collegamenti a tutti i relativi membri.  
   
- <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
+ <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=nameWithType>  
+ Descrive la classe e contiene collegamenti a tutti i relativi membri.  
   
-## Sezioni correlate  
- [Utilizzo di un pennello a sfumatura per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Include un elenco di argomenti che illustrano come utilizzare un pennello a sfumatura.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Uso di un pennello a sfumatura per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
+ Contiene un elenco di argomenti che illustrano come usare un pennello sfumato.  
   
- [Utilizzo di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [Uso di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
  Fornisce un elenco di argomenti che illustrano come disegnare forme con contorni.  
   
- [Utilizzo di classi grafiche gestite](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
- Include un elenco di argomenti che descrivono come utilizzare le classi Graphics gestite.
+ [Uso di classi grafiche gestite](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
+ Contiene un elenco di argomenti che descrivono come utilizzare classi grafiche gestite.

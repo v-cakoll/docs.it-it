@@ -1,32 +1,28 @@
 ---
-title: 'Procedura: trovare un singolo discendente con il metodo Descendants (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: trovare un singolo discendente con il metodo Descendants (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74d4dd0b805a5ea2c189cb89bcaeca3f4cac1268
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0647dee5ced1e986fcb3fac7915437dfb37b0796
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Procedura: trovare un singolo discendente con il metodo Descendants (Visual Basic)
-È possibile utilizzare il <xref:System.Xml.Linq.XContainer.Descendants%2A>metodo dell'asse per scrivere rapidamente codice per trovare in modo univoco un singolo elemento denominato.</xref:System.Xml.Linq.XContainer.Descendants%2A> Questa tecnica è particolarmente utile quando si desidera trovare un particolare discendente con un nome specifico. È possibile scrivere il codice per spostarsi all'elemento desiderato, ma è spesso più veloce e semplice scrivere il codice usando il <xref:System.Xml.Linq.XContainer.Descendants%2A>dell'asse.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+È possibile usare il metodo <xref:System.Xml.Linq.XContainer.Descendants%2A> dell'asse per scrivere rapidamente codice per trovare un singolo elemento con un nome univoco. Questa tecnica è particolarmente utile quando si desidera trovare un particolare discendente con un nome specifico. È possibile scrivere il codice per spostarsi fino all'elemento desiderato, ma risulta in genere più veloce e semplice scrivere il codice usando l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio viene utilizzato il <xref:System.Linq.Enumerable.First%2A>operatore di query standard.</xref:System.Linq.Enumerable.First%2A>  
+ In questo esempio viene usato l'operatore di query standard <xref:System.Linq.Enumerable.First%2A>.  
   
 ```vb  
 Dim root As XElement = _  
@@ -94,4 +90,4 @@ GC3 Value
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+ [Le query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

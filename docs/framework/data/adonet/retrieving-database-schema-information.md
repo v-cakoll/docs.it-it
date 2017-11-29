@@ -1,41 +1,44 @@
 ---
-title: "Recupero di informazioni sullo schema di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Recupero di informazioni dello schema del database
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 71493eb91415b5f4695e771c7a549244629bb654
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Recupero di informazioni sullo schema di database
-Il recupero di informazioni sullo schema da un database viene eseguito tramite il processo di individuazione dello schema.  L'individuazione dello schema consente alle applicazioni di richiedere ai provider gestiti di trovare e restituire informazioni sullo schema di database, note anche come *metadati* di un determinato database.  Nella raccolta di schemi vengono esposti vari elementi dello schema del database, quali tabelle, colonne e stored procedure.  Ogni raccolta di schemi contiene una varietà di informazioni sullo schema specifiche del provider usato.  
+# <a name="retrieving-database-schema-information"></a>Recupero di informazioni dello schema del database
+Il recupero di informazioni sullo schema da un database viene eseguito tramite il processo di individuazione dello schema. Individuazione dello schema consente alle applicazioni di richiedere che il provider gestito Trova e restituisce informazioni sullo schema di database, noto anche come *metadati*, di un determinato database. Nella raccolta di schemi vengono esposti vari elementi dello schema del database, quali tabelle, colonne e stored procedure. Ogni raccolta di schemi contiene una varietà di informazioni sullo schema specifiche del provider usato.  
   
- In ogni provider .NET Framework gestito viene implementato il metodo **GetSchema** nella classe **Connection** e le informazioni sullo schema restituite dal metodo**GetSchema** vengono visualizzate sotto forma di <xref:System.Data.DataTable>.  **GetSchema** è un metodo di overload che fornisce parametri facoltativi per specificare la raccolta di schemi da restituire e per limitare la quantità di informazioni restituite.  
+ Ogni implementazione di provider gestiti di .NET Framework la **GetSchema** metodo il **connessione** classe e le informazioni sullo schema restituito dal **GetSchema**metodo disponibile sotto forma di un <xref:System.Data.DataTable>. Il **GetSchema** è un metodo di overload che fornisce parametri facoltativi per specificare la raccolta di schemi da restituire e per limitare la quantità di informazioni restituite.  
   
- I provider di dati .NET Framework per OLE DB, ODBC, Oracle e SqlClient forniscono un metodo **GetSchemaTable** che restituisce un oggetto DataTable descrivente i metadati della colonna dell'oggetto **Datareader**.  
+ I provider di dati .NET Framework per OLE DB, ODBC, Oracle e SqlClient forniscono un **GetSchemaTable** metodo che restituisce un oggetto DataTable descrivente i metadati della colonna di **DataReader**.  
   
- Il provider di dati .NET Framework per OLE DB presenta le informazioni sullo schema usando anche il metodo <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A> dell'oggetto <xref:System.Data.OleDb.OleDbConnection>.  Il metodo **GetOleDbSchemaTable** accetta come argomenti un tipo <xref:System.Data.OleDb.OleDbSchemaGuid> che identifica le informazioni sullo schema da restituire e una matrice di restrizioni sulle colonne restituite.  Il metodo **GetOleDbSchemaTable** restituisce un tipo <xref:System.Data.DataTable> compilato con le informazioni richieste sullo schema.  
+ Il provider di dati .NET Framework per OLE DB presenta le informazioni sullo schema usando anche il metodo <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A> dell'oggetto <xref:System.Data.OleDb.OleDbConnection>. Come argomenti, **GetOleDbSchemaTable** accetta un <xref:System.Data.OleDb.OleDbSchemaGuid> che identifica le informazioni sullo schema da restituire e una matrice di restrizioni sulle colonne restituite. **GetOleDbSchemaTable** restituisce un <xref:System.Data.DataTable> popolato con le informazioni richieste sullo schema.  
   
-## In questa sezione  
- [GetSchema e raccolte di schemi](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- Viene descritto il metodo **GetSchema** e come usarlo per recuperare e limitare le informazioni sullo schema da un database.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Raccolte di schemi e GetSchema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
+ Viene descritto il **GetSchema** (metodo) e come può essere usato per recuperare e limitare le informazioni sullo schema da un database.  
   
  Restrizione dello schema  
- Vengono illustrate le restrizioni di schema che è possibile usare con **GetSchema**.  
+ Vengono descritte le restrizioni dello schema che possono essere utilizzate con **GetSchema**.  
   
  [Raccolte di schemi comuni](../../../../docs/framework/data/adonet/common-schema-collections.md)  
  Vengono descritte tutte le raccolte di schemi comuni supportate dai provider .NET Framework gestiti.  
   
- [Raccolte di schemi di SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
+ [Raccolte di schemi SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
  Viene illustrata la raccolta di schemi supportata dal provider .NET Framework per SQL Server.  
   
  [Raccolte di schemi Oracle](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
@@ -47,37 +50,37 @@ Il recupero di informazioni sullo schema da un database viene eseguito tramite i
  [Raccolte di schemi OLE DB](../../../../docs/framework/data/adonet/ole-db-schema-collections.md)  
  Vengono illustrate le raccolte di schemi per i provider OLE DB.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Data.Common.DbConnection.GetSchema%2A>  
- Viene descritto il metodo **GetSchema** della classe <xref:System.Data.Common.DbConnection>.  
+ Viene descritto il **GetSchema** metodo la <xref:System.Data.Common.DbConnection> classe.  
   
  <xref:System.Data.Odbc.OdbcConnection.GetSchema%2A>  
- Viene descritto il metodo **GetSchema** della classe <xref:System.Data.Odbc.OdbcConnection>.  
+ Viene descritto il **GetSchema** metodo la <xref:System.Data.Odbc.OdbcConnection> classe.  
   
  <xref:System.Data.OleDb.OleDbConnection.GetSchema%2A>  
- Viene descritto il metodo **GetSchema** della classe <xref:System.Data.OleDb.OleDbConnection>.  
+ Viene descritto il **GetSchema** metodo la <xref:System.Data.OleDb.OleDbConnection> classe.  
   
  <xref:System.Data.OracleClient.OracleConnection.GetSchema%2A>  
- Viene descritto il metodo **GetSchema** della classe <xref:System.Data.OracleClient.OracleConnection>.  
+ Viene descritto il **GetSchema** metodo la <xref:System.Data.OracleClient.OracleConnection> classe.  
   
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>  
- Viene descritto il metodo **GetSchema** della classe <xref:System.Data.SqlClient.SqlConnection>.  
+ Viene descritto il **GetSchema** metodo la <xref:System.Data.SqlClient.SqlConnection> classe.  
   
  <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A>  
- Viene descritto il metodo **GetSchemaTable** della classe <xref:System.Data.Common.DbDataReader>.  
+ Viene descritto il **GetSchemaTable** metodo la <xref:System.Data.Common.DbDataReader> classe.  
   
  <xref:System.Data.Odbc.OdbcDataReader.GetSchemaTable%2A>  
- Viene descritto il metodo **GetSchemaTable** della classe <xref:System.Data.Odbc.OdbcDataReader>.  
+ Viene descritto il **GetSchemaTable** metodo la <xref:System.Data.Odbc.OdbcDataReader> classe.  
   
  <xref:System.Data.OleDb.OleDbDataReader.GetSchemaTable%2A>  
- Viene descritto il metodo **GetSchemaTable** della classe <xref:System.Data.OleDb.OleDbDataReader>.  
+ Viene descritto il **GetSchemaTable** metodo la <xref:System.Data.OleDb.OleDbDataReader> classe.  
   
  <xref:System.Data.OracleClient.OracleDataReader.GetSchemaTable%2A>  
- Viene descritto il metodo **GetSchemaTable** della classe <xref:System.Data.OracleClient.OracleDataReader>.  
+ Viene descritto il **GetSchemaTable** metodo la <xref:System.Data.OracleClient.OracleDataReader> classe.  
   
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
- Viene descritto il metodo **GetSchemaTable** della classe <xref:System.Data.SqlClient.SqlDataReader>.  
+ Viene descritto il **GetSchemaTable** metodo la <xref:System.Data.SqlClient.SqlDataReader> classe.  
   
-## Vedere anche  
- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

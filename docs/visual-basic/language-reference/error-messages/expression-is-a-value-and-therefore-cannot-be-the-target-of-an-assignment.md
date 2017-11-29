@@ -1,29 +1,27 @@
 ---
-title: "Expression is a value and therefore cannot be the target of an assignment | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30068"
-  - "vbc30068"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30068"
+title: "L'espressione è un valore, quindi non può essere la destinazione di un'assegnazione"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30068
+- vbc30068
+helpviewer_keywords: BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bec3e2d298160bd0b459dc3b7ef93b94648e439a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Expression is a value and therefore cannot be the target of an assignment
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Un'istruzione tenta di assegnare un valore a un'espressione.  È possibile assegnare un valore solo a una variabile, a una proprietà o a un elemento di matrice modificabile in fase di esecuzione.  Nell'esempio riportato di seguito viene illustrato come può verificarsi questo errore.  
+# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>L'espressione è un valore, quindi non può essere la destinazione di un'assegnazione
+Un'istruzione tenta di assegnare un valore a un'espressione. È possibile assegnare un valore solo a una variabile scrivibile, una proprietà o un elemento della matrice in fase di esecuzione. Nell'esempio seguente viene illustrato come questo errore può verificarsi.  
   
 ```  
 Dim yesterday As Integer  
@@ -34,9 +32,9 @@ maximum = 50
 ' The preceding line is an ERROR because maximum is declared ReadOnly.  
 ```  
   
- Esempi simili possono essere validi per le proprietà e gli elementi di matrice.  
+ Esempi simili possibile applicare alle proprietà e gli elementi della matrice.  
   
- **Accesso indiretto.** Questo errore può essere generato anche dall'accesso indiretto attraverso un tipo di valore.  Nell'esempio di codice riportato di seguito viene effettuato un tentativo di impostare il valore dell'oggetto <xref:System.Drawing.Point> accedendo indirettamente ad esso attraverso la proprietà <xref:System.Windows.Forms.Control.Location%2A>.  
+ **Accesso indiretto.** Accesso indiretto attraverso un tipo di valore può inoltre generare questo errore. Si consideri l'esempio di codice riportato di seguito, che tenta di impostare il valore di <xref:System.Drawing.Point> accedendovi indirettamente tramite <xref:System.Windows.Forms.Control.Location%2A>.  
   
 ```  
 ' Assume this code runs inside Form1.  
@@ -46,7 +44,7 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.  
 ```  
   
- L'ultima istruzione dell'esempio precedente non viene eseguita correttamente poiché crea solo un'allocazione temporanea per la struttura dell'oggetto <xref:System.Drawing.Point> restituita dalla proprietà <xref:System.Windows.Forms.Control.Location%2A>.  Una struttura è un tipo di valore e la struttura temporanea non viene mantenuta dopo l'esecuzione dell'istruzione.  Per risolvere il problema, è necessario dichiarare e utilizzare una variabile per la proprietà <xref:System.Windows.Forms.Control.Location%2A> che crei un'allocazione più permanente per la struttura dell'oggetto <xref:System.Drawing.Point>.  Nell'esempio riportato di seguito viene illustrato il codice che può sostituire l'ultima istruzione dell'esempio precedente.  
+ L'ultima istruzione dell'esempio precedente ha esito negativo poiché crea solo un'allocazione temporanea per il <xref:System.Drawing.Point> restituito dalla struttura di <xref:System.Windows.Forms.Control.Location%2A> proprietà. Una struttura è un tipo di valore e la struttura temporanea non viene mantenuta dopo l'istruzione viene eseguita. Il problema viene risolto dichiarando e utilizzando una variabile per <xref:System.Windows.Forms.Control.Location%2A>, che consente di creare un'allocazione più permanente per la <xref:System.Drawing.Point> struttura. Nell'esempio seguente viene illustrato il codice che è possibile sostituire l'ultima istruzione dell'esempio precedente.  
   
 ```  
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
@@ -55,17 +53,17 @@ exitButton.Location = exitLocation
   
  **ID errore:** BC30068  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Se l'istruzione assegna un valore a un'espressione, sostituire quest'ultima con una variabile, una proprietà o un elemento di matrice modificabile.  
+-   Se l'istruzione assegna un valore a un'espressione, è possibile sostituire l'espressione a una singola variabile scrivibile, una proprietà o un elemento della matrice.  
   
--   Se l'istruzione effettua l'accesso indiretto attraverso un tipo di valore, in genere una struttura, creare una variabile che contenga il tipo di valore.  
+-   Se l'istruzione effettua l'accesso indiretto attraverso un tipo di valore (in genere una struttura), creare una variabile per contenere il tipo di valore.  
   
--   Assegnare alla variabile la struttura o un altro tipo di valore appropriato.  
+-   Assegnare la struttura appropriata (o altro tipo di valore) alla variabile.  
   
--   Utilizzare la variabile per accedere alla proprietà e assegnare a quest'ultima un valore.  
+-   Utilizzare la variabile per accedere alla proprietà per assegnare un valore.  
   
-## Vedere anche  
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)   
- [Troubleshooting Procedures](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)  
+ [Risoluzione dei problemi relativi alle routine](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

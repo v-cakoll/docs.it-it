@@ -1,26 +1,28 @@
 ---
-title: "Get non supportato in fase di esecuzione | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID393"
+title: Get non supportato in fase di esecuzione
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID393
 ms.assetid: b527c5a8-3f24-42e9-871f-e6305c9f514b
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 15914b9832ea141ebb008168417aa1ba109f4e78
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Get non supportato in fase di esecuzione
+# <a name="get-not-supported-at-run-time"></a>Get non supportato in fase di esecuzione
 Si è provato a leggere una proprietà in fase di esecuzione che è accessibile solo in fase di progettazione.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
 1.  Controllare la proprietà e determinare in quali condizioni è possibile impostarla.  
   
 2.  Rimuovere il riferimento alla proprietà.  
   
-## Vedere anche  
- [NIB Procedura: Modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/it-it/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vedere anche  
+ [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

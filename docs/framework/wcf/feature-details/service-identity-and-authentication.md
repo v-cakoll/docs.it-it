@@ -1,27 +1,32 @@
 ---
-title: "Identit&#224; del servizio e autenticazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Specifica l'identità di un servizio di autenticazione [WCF]"
+title: "Identità del servizio e autenticazione"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 32
+caps.latest.revision: "32"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5ef2d71496a5a1268492fa7c3cb55019e969b709
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Identit&#224; del servizio e autenticazione
-Un servizio *identità endpoint*è un valore generato dal servizio Web Services Description Language (WSDL). Questo valore, propagato a tutti i client, viene utilizzato per autenticare il servizio. Dopo che il client ha avviato una comunicazione con un endpoint e il servizio è stato autenticato nel client, quest'ultimo confronta il valore dell'identità endpoint con il valore effettivo restituito dal processo di autenticazione dell'endpoint. La corrispondenza di questi due valori costituisce garanzia per il client di aver contattato l'endpoint del servizio previsto. Questo meccanismo funziona come una protezione contro *phishing* , impedendo che un client viene reindirizzato a un endpoint ospitato da un servizio dannoso.  
+# <a name="service-identity-and-authentication"></a>Identità del servizio e autenticazione
+Un servizio *identità endpoint*è un valore generato dal servizio Web Services Description Language (WSDL). Questo valore, propagato a tutti i client, viene utilizzato per autenticare il servizio. Dopo che il client ha avviato una comunicazione con un endpoint e il servizio è stato autenticato nel client, quest'ultimo confronta il valore dell'identità endpoint con il valore effettivo restituito dal processo di autenticazione dell'endpoint. La corrispondenza di questi due valori costituisce garanzia per il client di aver contattato l'endpoint del servizio previsto. Questo meccanismo funziona come una protezione contro *phishing* da un client impedendo il reindirizzamento a un endpoint ospitato da un servizio dannoso.  
   
- Per un'applicazione di esempio che illustra l'impostazione dell'identità, vedere [esempio identità del servizio](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli endpoint e gli indirizzi degli endpoint, vedere [indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
+ Per un'applicazione di esempio che illustra l'impostazione di identità, vedere [esempio identità del servizio](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli endpoint e gli indirizzi degli endpoint, vedere [indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   
 > [!NOTE]
 >  Quando si utilizza NTLM (NT LanMan) per l'autenticazione, l'identità del servizio non viene controllata, poiché, con NTLM, il client non è in grado di autenticare il server. L'autenticazione NTLM viene utilizzata quando i computer fanno parte di un gruppo di lavoro di Windows o quando eseguono una versione precedente di Windows che non supporta l'autenticazione Kerberos.  
@@ -36,7 +41,7 @@ Un servizio *identità endpoint*è un valore generato dal servizio Web Services 
   
  L'elaborazione dell'identità nel client è analoga all'autenticazione del client nel servizio. Un servizio protetto non esegue codice fino a quando non vengono autenticate le credenziali del client. Allo stesso modo, il client non invia messaggi al servizio fino a quando le credenziali del servizio non sono state autenticate in base a ciò che è noto in anticipo dai metadati del servizio.  
   
- Il <xref:System.ServiceModel.EndpointAddress.Identity%2A> di proprietà di <xref:System.ServiceModel.EndpointAddress> classe rappresenta l'identità del servizio chiamato dal client. Il servizio pubblica il <xref:System.ServiceModel.EndpointAddress.Identity%2A> nei relativi metadati. Quando lo sviluppatore del client viene eseguito il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sull'endpoint di servizio, la configurazione generata contiene il valore del servizio <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà. L'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (se configurata con la protezione) verifica che il servizio abbia l'identità specificata.  
+ La proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> della classe <xref:System.ServiceModel.EndpointAddress> rappresenta l'identità del servizio chiamato dal client. Il servizio pubblica <xref:System.ServiceModel.EndpointAddress.Identity%2A> nei propri metadati. Quando lo sviluppatore del client viene eseguito il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) nell'endpoint di servizio, la configurazione generata contiene il valore del servizio <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà. L'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (se configurata con la protezione) verifica che il servizio abbia l'identità specificata.  
   
 > [!IMPORTANT]
 >  I metadati contengono l'identità prevista del servizio, pertanto è consigliabile esporre i metadati del servizio tramite mezzi di comunicazione protetti, ad esempio creando un endpoint HTTPS per il servizio. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: proteggere endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
@@ -50,18 +55,18 @@ Un servizio *identità endpoint*è un valore generato dal servizio Web Services 
 |Certificato. Impostazione predefinita quando `ClientCredentialType` è impostato su Certificato.|Questo elemento specifica un certificato X.509 con codifica Base64 da confrontare con il client.<br /><br /> Utilizzare inoltre questo elemento quando si utilizza [!INCLUDE[infocard](../../../../includes/infocard-md.md)] come credenziale per autenticare il servizio.|Questo elemento restringe l'autenticazione a un solo certificato in base al valore dell'identificazione personale. Ciò rende possibile un'autenticazione più restrittiva, poiché i valori dell'identificazione personale sono univoci. Occorre tuttavia notare che il certificato, se viene riemesso con lo stesso nome di soggetto, avrà anche una nuova identificazione personale. I client non saranno pertanto in grado di convalidare il servizio, a meno che non sia nota la nuova identificazione digitale. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ricerca di identificazione personale del certificato, vedere [procedura: recuperare l'identificazione personale del certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
 |Riferimento del certificato|Identico all'opzione Certificato prima descritta. Tuttavia, questo elemento consente di specificare un nome di certificato e il percorso dell'archivio da cui recuperare il certificato.|Uguale allo scenario Certificato prima descritto.<br /><br /> Il vantaggio è che il percorso dell'archivio certificati può essere modificato.|  
 |RSA|Questo elemento specifica un valore della chiave RSA da confrontare con il client. È simile all'opzione certificato, ma invece dell'identificazione personale del certificato viene utilizzata la chiave RSA del certificato.|Un controllo RSA consente di restringere specificamente l'autenticazione a un solo certificato in base alla relativa chiave RSA. Ciò rende possibile l'autenticazione più restrittiva di una chiave RSA specifica a spese del servizio, che non funziona più con i client esistenti, se il valore della chiave RSA viene modificato.|  
-|Nome dell'entità utente (UPN). Impostazione predefinita quando `ClientCredentialType` è impostato su Windows e il processo del servizio non è in esecuzione con uno degli account di sistema.|Questo elemento specifica l'UPN con cui è in esecuzione il servizio. Vedere la sezione protocollo Kerberos e identità di [si esegue l'override dell'identità di un servizio per l'autenticazione](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Questo assicura che il servizio sia in esecuzione con un account utente di Windows specifico. L'account utente può essere l'utente attualmente connesso o il servizio in esecuzione con un particolare account utente.<br /><br /> Questa impostazione sfrutta la protezione Kerberos di Windows, se il servizio è in esecuzione con un account di dominio all'interno di un ambiente Active Directory.|  
-|Nome dell'entità servizio (SPN). Impostazione predefinita quando `ClientCredentialType` è impostato su Windows e il processo del servizio è in esecuzione con uno degli account di sistema: LocalService, LocalSystem o NetworkService.|Questo elemento specifica il nome SPN associato all'account del servizio. Vedere la sezione protocollo Kerberos e identità di [si esegue l'override dell'identità di un servizio per l'autenticazione](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Questo assicura che il nome SPN e l'account specifico di Windows a esso associato identifichino il servizio.<br /><br /> È possibile utilizzare lo strumento Setspn.exe per associare un account computer per l'account utente del servizio.<br /><br /> Questa impostazione sfrutta la protezione Kerberos di Windows, se il servizio è in esecuzione con uno degli account di sistema o con un account di dominio associato a un nome SPN e il computer è un membro di un dominio interno a un ambiente Active Directory.|  
+|Nome dell'entità utente (UPN). Impostazione predefinita quando `ClientCredentialType` è impostato su Windows e il processo del servizio non è in esecuzione con uno degli account di sistema.|Questo elemento specifica l'UPN con cui è in esecuzione il servizio. Vedere la sezione del protocollo Kerberos e identità di [override dell'identità di un servizio per l'autenticazione](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Questo assicura che il servizio sia in esecuzione con un account utente di Windows specifico. L'account utente può essere l'utente attualmente connesso o il servizio in esecuzione con un particolare account utente.<br /><br /> Questa impostazione sfrutta la protezione Kerberos di Windows, se il servizio è in esecuzione con un account di dominio all'interno di un ambiente Active Directory.|  
+|Nome dell'entità servizio (SPN). Impostazione predefinita quando `ClientCredentialType` è impostato su Windows e il processo del servizio è in esecuzione con uno degli account di sistema: LocalService, LocalSystem o NetworkService.|Questo elemento specifica il nome SPN associato all'account del servizio. Vedere la sezione del protocollo Kerberos e identità di [override dell'identità di un servizio per l'autenticazione](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Questo assicura che il nome SPN e l'account specifico di Windows a esso associato identifichino il servizio.<br /><br /> È possibile utilizzare lo strumento Setspn.exe per associare un account computer per l'account utente del servizio.<br /><br /> Questa impostazione sfrutta la protezione Kerberos di Windows, se il servizio è in esecuzione con uno degli account di sistema o con un account di dominio associato a un nome SPN e il computer è un membro di un dominio interno a un ambiente Active Directory.|  
   
 ## <a name="specifying-identity-at-the-service"></a>Impostazione dell'identità nel servizio  
- In genere non è necessario impostare l'identità in un servizio, perché la selezione del tipo di credenziale di un client impone il tipo di identità esposto nei metadati del servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come eseguire l'override o specificare l'identità del servizio, vedere [si esegue l'override dell'identità di un servizio per l'autenticazione](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
+ In genere non è necessario impostare l'identità in un servizio, perché la selezione del tipo di credenziale di un client impone il tipo di identità esposto nei metadati del servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come eseguire l'override o specificare l'identità del servizio, vedere [override dell'identità di un servizio per l'autenticazione](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
   
-## <a name="using-the-identity-element-in-configuration"></a>Utilizzo di <> \> elemento di configurazione  
+## <a name="using-the-identity-element-in-configuration"></a>Utilizzo di \<identità > elemento configurazione  
  Se si imposta su `Certificate,` il tipo di credenziale client nell'associazione prima descritta, il codice WSDL generato conterrà un certificato X.509 con serializzazione Base64 per il valore dell'identità, come illustrato nel codice seguente. Si tratta dell'impostazione predefinita per tutti i tipi di credenziale client diversi da Windows.  
   
   
   
- È possibile modificare il valore dell'identità del servizio predefinita o modificare il tipo di identità tramite il `<identity>` elemento nella configurazione o impostando l'identità nel codice. Nel codice di configurazione seguente viene impostata un'identità DNS (Domain Name System) con il valore `contoso.com`.  
+ È possibile modificare il valore dell'identità del servizio predefinito o modificare il tipo di identità tramite il `<identity>` elemento nella configurazione o impostando l'identità nel codice. Nel codice di configurazione seguente viene impostata un'identità DNS (Domain Name System) con il valore `contoso.com`.  
   
   
   
@@ -104,24 +109,24 @@ Un servizio *identità endpoint*è un valore generato dal servizio Web Services 
   
 -   SPN. Viene restituito un SPN del servizio esplicito, ad esempio, `host/myservice`.  
   
--   UPN. UPN dell'account di servizio. L'UPN è nel formato `username` @ `domain`. Ad esempio, quando il servizio è in esecuzione con un account utente, l'UPN può essere `username@contoso.com`.  
+-   UPN. UPN dell'account di servizio. Il nome UPN è nel formato `username` @ `domain`. Ad esempio, quando il servizio è in esecuzione con un account utente, l'UPN può essere `username@contoso.com`.  
   
- Impostazione dell'identità a livello di codice (utilizzando il <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà) è facoltativo. Se non viene specificata alcuna identità, e il tipo di credenziale client è Windows, l'impostazione predefinita è SPN con il valore impostato sulla parte del nome host dell'indirizzo dell'endpoint del servizio preceduta dal valore letterale "host/". Se non viene specificata alcuna identità, e il tipo di credenziale client è un certificato, l'impostazione predefinita è `Certificate`. Questo vale per la protezione a livello di messaggio e di trasporto.  
+ L'impostazione dell'identità a livello di programmazione (utilizzando la proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>) è facoltativa. Se non viene specificata alcuna identità, e il tipo di credenziale client è Windows, l'impostazione predefinita è SPN con il valore impostato sulla parte del nome host dell'indirizzo dell'endpoint del servizio preceduta dal valore letterale "host/". Se non viene specificata alcuna identità, e il tipo di credenziale client è un certificato, l'impostazione predefinita è `Certificate`. Questo vale per la protezione a livello di messaggio e di trasporto.  
   
 ## <a name="identity-and-custom-bindings"></a>Identità e associazioni personalizzate  
- Poiché l'identità di un servizio dipende dal tipo di associazione utilizzato, assicurarsi che sia esposta un'identità appropriata quando si crea un'associazione personalizzata. Ad esempio, nell'esempio di codice seguente, l'identità esposta non è compatibile con il tipo di sicurezza, poiché l'identità per l'associazione bootstrap di conversazione protetta non corrisponde all'identità per l'associazione sull'endpoint. L'associazione di conversazione protetta imposta l'identità DNS, mentre il <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> imposta l'identità UPN o SPN.  
+ Poiché l'identità di un servizio dipende dal tipo di associazione utilizzato, assicurarsi che sia esposta un'identità appropriata quando si crea un'associazione personalizzata. Ad esempio, nell'esempio di codice seguente, l'identità esposta non è compatibile con il tipo di sicurezza, poiché l'identità per l'associazione bootstrap di conversazione protetta non corrisponde all'identità per l'associazione sull'endpoint. L'associazione di conversazione protetta imposta l'identità DNS, mentre <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> imposta l'identità UPN o SPN.  
   
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come uno stack di elementi di associazione in modo corretto per un'associazione personalizzata, vedere [Creating User-Defined associazioni](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creazione di un'associazione personalizzata con il <xref:System.ServiceModel.Channels.SecurityBindingElement>, vedere [procedura: creare un elemento SecurityBindingElement per una modalità di autenticazione specificato](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come stack di elementi in modo corretto per un'associazione personalizzata di associazione, vedere [Creating User-Defined associazioni](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creazione di un'associazione personalizzata con il <xref:System.ServiceModel.Channels.SecurityBindingElement>, vedere [procedura: creare un elemento SecurityBindingElement per una modalità di autenticazione specificato](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)   
- [Procedura: creare un elemento SecurityBindingElement per una modalità di autenticazione specificata](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)   
- [Procedura: creare un verificatore di identità Client personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)   
- [Selezione di un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [Creazione di associazioni definite dall'utente](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)   
+ [Procedura: creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Procedura: creare un elemento SecurityBindingElement per una modalità di autenticazione specificato](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ [Procedura: creare un verificatore di identità Client personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Selezione di un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Creazione di associazioni definite dall'utente](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  
  [Procedura: recuperare l'identificazione personale del certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

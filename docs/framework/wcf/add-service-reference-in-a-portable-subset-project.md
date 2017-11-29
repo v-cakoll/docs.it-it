@@ -1,38 +1,41 @@
 ---
-title: "Aggiungere un riferimento al servizio in un progetto di subset portabili | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere un riferimento al servizio in un progetto di subset portabili
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7bd456b8c89c315321ad23683708d9dacc1dda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Aggiungere un riferimento al servizio in un progetto di subset portabili
-I progetti di subset portabili consentono ai programmatori di assembly .NET di gestire un unico albero di origine e di compilare il sistema supportando allo stesso tempo più piattaforme .NET \(desktop, Silverlight, Windows Phone e XBOX\).I progetti di subset portabili fanno riferimento solo alle librerie portabili .NET che rappresentano un assembly .NET Framework che può essere utilizzato in qualsiasi piattaforma .NET principale.  
+# <a name="add-service-reference-in-a-portable-subset-project"></a>Aggiungere un riferimento al servizio in un progetto di subset portabili
+I progetti di subset portabili consentono ai programmatori di assembly .NET di gestire un unico albero di origine e compilare il sistema supportando comunque più implementazioni di .NET (desktop, Silverlight, Windows Phone e XBOX). Solo i progetti di subset portabili fanno riferimento a librerie portabili .NET che rappresentano un assembly di .NET framework che può essere usato in qualsiasi implementazione di .NET.  
   
-## Dettagli relativi a Aggiungi riferimento al servizio  
+## <a name="add-service-reference-details"></a>Dettagli relativi a Aggiungi riferimento al servizio  
  Quando si aggiunge un riferimento al servizio in un progetto di subset portabili, si applicano le limitazioni seguenti:  
   
-1.  Per l'oggetto <xref:System.Xml.Serialization.XmlSerializer> sono consentite solo le codifiche letterali.Le codifiche SOAP generano un errore durante l'importazione.  
+1.  Per l'oggetto <xref:System.Xml.Serialization.XmlSerializer> sono consentite solo le codifiche letterali. Le codifiche SOAP generano un errore durante l'importazione.  
   
 2.  Per i servizi che utilizzano gli scenari <xref:System.Runtime.Serialization.DataContractSerializer>, viene fornito un surrogato del contratto dati per assicurarsi che i tipi riutilizzati provengano solo dal subset portabile.  
   
-3.  Gli endpoint che si basano su associazioni non supporte nelle librerie portabili \(tutte le associazioni tranne <xref:System.ServiceModel.BasicHttpBinding>, l'oggetto <xref:System.ServiceModel.WsHttpBinding> senza flusso di transazione, le sessioni affidabili o la codifica MTOM e le associazioni personalizzate equivalenti\) vengono ignorati.  
+3.  Gli endpoint che si basano su associazioni non supporte nelle librerie portabili (tutte le associazioni tranne <xref:System.ServiceModel.BasicHttpBinding>, l'oggetto <xref:System.ServiceModel.WSHttpBinding> senza flusso di transazione, le sessioni affidabili o la codifica MTOM e le associazioni personalizzate equivalenti) vengono ignorati.  
   
 4.  Le intestazioni dei messaggi vengono eliminate da tutte le descrizioni dei messaggi in tutte le operazioni prima dell'importazione.  
   
-5.  Gli attributi non portabili <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.Serializable> e <xref:System.ServiceModel.TransactionFlow> vengono rimossi dal codice del proxy client generato.  
+5.  Gli attributi non portabili <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> e <xref:System.ServiceModel.TransactionFlowAttribute> vengono rimossi dal codice del proxy client generato.  
   
-6.  Le proprietà non portabili ProtectionLevel, SessionMode, IsInitiating, IsTerminating vengono rimosse dagli oggetti <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContract> e <xref:System.ServiceModel.FaultContract>.  
+6.  Le proprietà non portabili ProtectionLevel, SessionMode, IsInitiating, IsTerminating vengono rimosse dagli oggetti <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> e <xref:System.ServiceModel.FaultContractAttribute>.  
   
 7.  Tutte le operazioni del servizio vengono create come operazioni asincrone nel proxy client.  
   
@@ -50,6 +53,6 @@ I progetti di subset portabili consentono ai programmatori di assembly .NET di g
   
 14. La proprietà <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> non è supportata nei progetti di subset portabili.  
   
-## Vedere anche  
- [Accesso ai servizi tramite client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Accesso ai servizi tramite client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
  [Libreria di classi portabile](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))

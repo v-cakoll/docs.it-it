@@ -1,35 +1,30 @@
 ---
-title: 'Procedura: eseguire una Query LINQ to XML tramite XPath (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: eseguire una Query LINQ to XML tramite XPath (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0356a7210fbc1b1e0c15adc9d37b6099877fa655
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 97f885a76a79832b06f2f5d4a270d418bf244cb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>Procedura: eseguire una Query LINQ to XML tramite XPath (Visual Basic)
-In questo argomento vengono presentati i metodi di estensione che consentono di eseguire una query su un albero XML usando XPath. Per informazioni dettagliate sull'utilizzo di questi metodi di estensione, vedere <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.</xref:System.Xml.XPath.Extensions?displayProperty=fullName>  
+In questo argomento vengono presentati i metodi di estensione che consentono di eseguire una query su un albero XML usando XPath. Per informazioni dettagliate sull'utilizzo di questi metodi di estensione, vedere <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
- A meno che non esista un motivo molto specifico per eseguire query tramite XPATH, ad esempio l'uso esteso di codice legacy, è preferibile non usare XPATH con LINQ to XML. Le query XPath non eseguirà nonché [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] query.  
+ A meno che non esista un motivo molto specifico per eseguire query tramite XPATH, ad esempio l'uso esteso di codice legacy, è preferibile non usare XPATH con LINQ to XML. Le query XPath non vengono eseguite con le stesse prestazioni delle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creata un piccolo albero XML e viene utilizzato <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A>per selezionare un set di elementi.</xref:System.Xml.XPath.Extensions.XPathSelectElements%2A>  
+ Nell'esempio seguente viene creata un piccolo albero XML e viene usato <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> per selezionare un set di elementi.  
   
 ```vb  
 Dim root As XElement = _  
@@ -50,7 +45,7 @@ Next
   
  Questo esempio produce il seguente output:  
   
-```  
+```xml  
 <Child2>4</Child2>  
 <Child2>5</Child2>  
 <Child2>6</Child2>  
@@ -58,4 +53,3 @@ Next
   
 ## <a name="see-also"></a>Vedere anche  
  [Tecniche di Query (LINQ to XML) avanzate (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

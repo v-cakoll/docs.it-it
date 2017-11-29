@@ -1,34 +1,38 @@
 ---
-title: "Emulazione di interruzione in un&#39;attivit&#224; While | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Emulazione di interruzione in un'attività While"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4417f4225200f01f23d753f6b7aa52ebc69cab4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Emulazione di interruzione in un&#39;attivit&#224; While
+# <a name="emulating-breaking-in-a-while-activity"></a>Emulazione di interruzione in un'attività While
 In questo esempio viene illustrato come interrompere il meccanismo di ciclo delle attività seguenti: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> e <xref:System.Activities.Statements.ParallelForEach%601>.  
   
  Tale operazione è utile poiché in [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere l'esecuzione di questi cicli.  
   
-## Scenario  
- Nell'esempio viene rilevato il primo fornitore affidabile in un elenco di fornitori \(istanze della classe `Vendor`\).Ogni fornitore dispone di un oggetto `ID`, di un oggetto `Name` e di un valore di affidabilità numerico che determina l'affidabilità del fornitore.Nell'esempio viene creata un'attività personalizzata denominata `FindReliableVendor` che riceve due parametri di input \(un elenco di fornitori e un valore di affidabilità minimo\) e restituisce il primo fornitore dell'elenco che corrisponde ai criteri forniti.  
+## <a name="scenario"></a>Scenario  
+ Nell'esempio viene rilevato il primo fornitore affidabile in un elenco di fornitori (istanze della classe `Vendor`). Ogni fornitore dispone di un oggetto `ID`, di un oggetto `Name` e di un valore di affidabilità numerico che determina l'affidabilità del fornitore. Nell'esempio viene creata un'attività personalizzata denominata `FindReliableVendor` che riceve due parametri di input (un elenco di fornitori e un valore di affidabilità minimo) e restituisce il primo fornitore dell'elenco che corrisponde ai criteri forniti.  
   
-## Interruzione di un ciclo  
- In [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere un ciclo.Nell'esempio di codice viene eseguita l'interruzione di un ciclo tramite un'attività <xref:System.Activities.Statements.If> e diverse variabili.Nell'esempio, l'attività <xref:System.Activities.Statements.While> viene interrotta dopo che alla variabile `reliableVendor` viene assegnato un valore diverso da `null`.  
+## <a name="breaking-a-loop"></a>Interruzione di un ciclo  
+ In [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere un ciclo. Nell'esempio di codice viene eseguita l'interruzione di un ciclo tramite un'attività <xref:System.Activities.Statements.If> e diverse variabili. Nell'esempio, l'attività <xref:System.Activities.Statements.While> viene interrotta dopo che alla variabile `reliableVendor` viene assegnato un valore diverso da `null`.  
   
  Nell'esempio di codice seguente viene illustrato il modo in cui l'esempio interrompe un ciclo while.  
   
 ```csharp  
-// Iterates while the “i” variable is lower than the size of the list   
+// Iterates while the "i" variable is lower than the size of the list   
 // and any reliable Vendor is found.        
 new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(env) == null)  
 {  
@@ -67,24 +71,23 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
         }  
     }  
 }  
-  
 ```  
   
-#### Per utilizzare questo esempio  
+#### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
 1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione EmulatingBreakInWhile.sln.  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-3.  Per eseguire la soluzione, premere CTRL\+F5.  
+3.  Per eseguire la soluzione, premere CTRL+F5.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
   
-## Vedere anche
+## <a name="see-also"></a>Vedere anche

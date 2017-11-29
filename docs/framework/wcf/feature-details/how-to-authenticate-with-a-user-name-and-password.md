@@ -1,33 +1,35 @@
 ---
-title: "Procedura: autenticare con un nome utente e una password | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autenticazione [WCF], nome utente e password"
+title: 'Procedura: autenticare con un nome utente e una password'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73ef3c3f4f4aeb9295cedbbf56635454869b3f4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: autenticare con un nome utente e una password
-In questo argomento viene illustrato come consentire a un servizio di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] di autenticare un client con un nome utente e una password del dominio Windows.Si presuppone che l'utente disponga di un servizio WCF funzionante e indipendente.Per un esempio di creazione di un servizio WCF indipendente di base, vedere [Esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md).In questo argomento si presuppone che il servizio sia configurato nel codice.Se si desidera visualizzare un esempio di configurazione di un servizio simile tramite un file di configurazione, vedere [Sicurezza dei messaggi tramite nome utente](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedura: autenticare con un nome utente e una password
+In questo argomento viene illustrato come abilitare l'autenticazione di un client con un nome utente e una password di dominio Windows in un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Si presuppone che l'utente disponga di un servizio WCF self-hosted funzionante. Per un esempio di creazione di base vedere servizio WCF self-hosted, [esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md). In questo argomento si presuppone che il servizio sia configurato tramite codice. Se si desidera vedere un esempio di configurazione di un servizio simile utilizzando un file di configurazione vedere [nome utente di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
- Per configurare l'autenticazione da parte di un servizio dei relativi client mediante il nome utente e la password del dominio Windows, utilizzare l'oggetto <xref:System.ServiceModel.WSHttpBinding> e impostare la relativa proprietà `Security.Mode` su `Message`.Inoltre, è necessario specificare un certificato X509 che verrà utilizzato per crittografare il nome utente e la password quando vengono inviati dal client al servizio.  
+ Per configurare un servizio per l'autenticazione dei client mediante l'utilizzo di nomi utente e password di dominio Windows di <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> e impostare il relativo `Security.Mode` proprietà `Message`. Inoltre, è necessario specificare un certificato X509 che verrà utilizzato per crittografare il nome utente e la password quando vengono inviati dal client al servizio.  
   
- Nel client, è necessario richiedere all'utente il nome utente e la password e specificare le credenziali dell'utente nel proxy client WCF.  
+ Nel client è necessario richiedere all'utente il nome utente e la password e specificare le credenziali dell'utente nel proxy client WCF.  
   
-### Per configurare un servizio WCF per l'autenticazione tramite nome utente e password del dominio Windows.  
+### <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Per configurare un servizio WCF per l'autenticazione tramite nome utente e password di dominio Windows  
   
-1.  Creare un'istanza dell'oggetto <xref:System.ServiceModel.WSHttpBinding>, impostare la modalità di sicurezza dell'associazione su `SecurityMode.Message`, impostare `ClientCredentialType` dell'associazione su `MessageCredentialType.UserName` e aggiungere un endpoint del servizio utilizzando l'associazione configurata all'host del servizio come illustrato nel codice seguente:  
+1.  Creare un'istanza del <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, impostare la modalità di sicurezza dell'associazione `SecurityMode.Message`, impostare il `ClientCredentialType` dell'associazione `MessageCredentialType.UserName`e aggiungere un endpoint del servizio utilizzando l'associazione configurata all'host del servizio, come illustrato nel codice seguente:  
   
     ```  
     // ...  
@@ -38,7 +40,7 @@ In questo argomento viene illustrato come consentire a un servizio di [!INCLUDE[
     // ...  
     ```  
   
-2.  Specificare il certificato del server utilizzato per crittografare le informazioni relative al nome utente e alla password inviate tramite la rete.Questo codice deve seguire immediatamente il codice precedente.Nell'esempio seguente viene utilizzato il certificato creato dal file setup.bat dell'esempio [Sicurezza dei messaggi tramite nome utente](../../../../docs/framework/wcf/samples/message-security-user-name.md):  
+2.  Specificare il certificato del server utilizzato per crittografare le informazioni relative al nome utente e alla password inviate tramite la rete. Questo codice deve seguire immediatamente il codice illustrato sopra. L'esempio seguente usa il certificato viene creato per il file setup.bat dal [nome utente di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-user-name.md) esempio:  
   
     ```  
     // ...  
@@ -46,11 +48,11 @@ In questo argomento viene illustrato come consentire a un servizio di [!INCLUDE[
     // ...  
     ```  
   
-     È possibile utilizzare il proprio certificato; è sufficiente modificare il codice per fare riferimento al certificato.Per ulteriori informazioni sulla creazione e sull'utilizzo di certificati, vedere [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).Assicurarsi che il certificato si trovi nell'archivio TrustedPeople per il computer locale.Questa operazione può essere effettuata eseguendo mmc.exe e selezionando le voci di menu **File**, **Aggiungi\/Rimuovi snap\-in**.Nella finestra di dialogo **Aggiungi o rimuovi snap\-in** selezionare **Snap\-in certificati** e fare clic su **Aggiungi**.Nella finestra di dialogo Snap\-in certificati selezionare **Account del computer**.Per impostazione predefinita, il certificato generato nell'esempio di sicurezza dei messaggi tramite nome utente sarà posizionato nella cartella Personale\/Certificati.Verrà elencato come "localhost" nella colonna Rilasciato a della finestra MMC.Trascinare il certificato nella cartella **Persone attendibili**.Questa operazione consentirà a WCF di trattare il certificato come attendibile quando si effettua l'autenticazione.  
+     È possibile utilizzare il proprio certificato; è sufficiente modificare il codice in modo che faccia riferimento a tale certificato. Per ulteriori informazioni sulla creazione e utilizzo di certificati vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Assicurarsi che il certificato si trovi nell'archivio certificati Persone attendibili del computer locale. È possibile farlo eseguendo mmc.exe e scegliendo il **File**, **Aggiungi/Rimuovi Snap-in...**  voce di menu. Nel **Aggiungi o Rimuovi Snap-in** finestra di dialogo Seleziona il **snap-in certificati** e fare clic su **Aggiungi**. Nella finestra di dialogo Snap-in certificati selezionare **account Computer**. Per impostazione predefinita, il certificato generato nell'esempio di sicurezza dei messaggi tramite nome utente sarà posizionato nella cartella Personale/Certificati,  Sarà elencato come "localhost" con la colonna rilasciato a della finestra di MMC. Trascinare e rilasciare il certificato di **persone attendibili** cartella. In questo modo il certificato verrà considerato come attendibile da WCF quando viene effettuata l'autenticazione.  
   
-### Per chiamare il servizio passando nome utente e password  
+### <a name="to-call-the-service-passing-username-and-password"></a>Per chiamare il servizio passando nome utente e password  
   
-1.  L'applicazione client deve richiedere all'utente il nome utente e la password.Tramite il codice seguente vengono chiesti all'utente il nome utente e la password.  
+1.  L'applicazione client deve richiedere all'utente il nome utente e la password. Il codice seguente richiede all'utente il nome utente e la password.  
   
     > [!WARNING]
     >  Questo codice non deve essere utilizzato in produzione poiché la password viene visualizzata durante l'immissione.  
@@ -65,7 +67,6 @@ In questo argomento viene illustrato come consentire a un servizio di [!INCLUDE[
                 password = Console.ReadLine();             
                 return;  
             }  
-  
     ```  
   
 2.  Creare un'istanza del proxy client specificando le credenziali del client come illustrato nel codice seguente:  
@@ -89,15 +90,15 @@ In questo argomento viene illustrato come consentire a un servizio di [!INCLUDE[
     // Call the service operation using the proxy  
     ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.WsHttpBinding>   
- <xref:System.ServiceModel.WSHttpSecurity>   
- <xref:System.ServiceModel.SecurityMode>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.Password%2A>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>   
- <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>   
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>   
- [Protezione del trasporto con l'autenticazione di base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)   
- [Protezione delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)   
- [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+## <a name="see-also"></a>Vedere anche  
+ <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
+ <xref:System.ServiceModel.WSHttpSecurity>  
+ <xref:System.ServiceModel.SecurityMode>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.Password%2A>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
+ <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>  
+ <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
+ [Sicurezza del trasporto con l'autenticazione di base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [Protezione delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

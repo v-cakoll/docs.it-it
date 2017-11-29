@@ -1,25 +1,28 @@
 ---
-title: "Accesso a OperationContext da un servizio di flusso di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Accesso a OperationContext da un servizio flusso di lavoro
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 11a6a1efad59ba5b9f3a143277909b63a5fe5e05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Accesso a OperationContext da un servizio di flusso di lavoro
-Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata.Eseguire l'override del metodo <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False&autoUpgrade=True passato come riferimento a <xref:System.ServiceModel.OperationContext>.In questo argomento viene descritta l'implementazione della proprietà di esecuzione per recuperare un'intestazione personalizzata e un'attività personalizzata che esporrà tale proprietà a <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.L'attività personalizzata implementerà lo stesso comportamento come un'attività <xref:System.ServiceModel.Activities.Sequence>, ad eccezione del fatto che quando un oggetto <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno dell'attività verrà chiamato <xref:System.ServiceModel.Activities.IReceiveMessageCallback> e le informazioni <xref:System.ServiceModel.OperationContext> verranno recuperate.Nell'argomento viene inoltre illustrato come accedere a <xref:System.ServiceModel.OperationContext> sul lato client per aggiungere intestazioni in uscita tramite l'interfaccia <xref:System.ServiceModel.Activities.ISendMessageCallback>.  
+# <a name="accessing-operationcontext-from-a-workflow-service"></a>Accesso a OperationContext da un servizio flusso di lavoro
+Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata. Eseguire l'override di <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & autoUpgrade = True metodo che viene passato un riferimento di <xref:System.ServiceModel.OperationContext>. In questo argomento viene descritta l'implementazione della proprietà di esecuzione per recuperare un'intestazione personalizzata e un'attività personalizzata che esporrà tale proprietà a <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.  L'attività personalizzata implementerà lo stesso comportamento di un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` attività, ad eccezione che, quando un <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno, il <xref:System.ServiceModel.Activities.IReceiveMessageCallback> verrà chiamato e <xref:System.ServiceModel.OperationContext> verranno recuperate le informazioni.  Nell'argomento viene inoltre illustrato come accedere a <xref:System.ServiceModel.OperationContext> sul lato client per aggiungere intestazioni in uscita tramite l'interfaccia <xref:System.ServiceModel.Activities.ISendMessageCallback>.  
   
-### Implementare IReceiveMessageCallback sul lato servizio  
+### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementare IReceiveMessageCallback sul lato servizio  
   
 1.  Creare una soluzione [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vuota.  
   
@@ -54,12 +57,11 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                 }  
             }  
     }  
-  
     ```  
   
      In questo codice viene utilizzato <xref:System.ServiceModel.OperationContext> passato al metodo per accedere alle intestazioni del messaggio in arrivo.  
   
-### Implementare l'attività Native sul lato servizio per aggiungere l'implementazione IReceiveMessageCallback a NativeActivityContext  
+### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementare l'attività Native sul lato servizio per aggiungere l'implementazione IReceiveMessageCallback a NativeActivityContext  
   
 1.  Aggiungere una nuova classe derivata da <xref:System.Activities.NativeActivity> denominata `ReceiveInstanceIdScope`.  
   
@@ -73,7 +75,6 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
             Variable<int> currentIndex;  
             CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  Implementare il costruttore  
@@ -87,7 +88,6 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                 this.currentIndex = new Variable<int>();  
             }  
     }  
-  
     ```  
   
 4.  Implementare le proprietà `Activities` e `Variables`.  
@@ -102,10 +102,9 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
-5.  Eseguire l'override del metodo <xref:System.Activities.NativeActivity.CacheMetadata%2A>.  
+5.  Eseguire l'override di <xref:System.Activities.NativeActivity.CacheMetadata%2A>.  
   
     ```  
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -115,10 +114,9 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
-6.  Eseguire l'override del metodo <xref:System.Activities.NativeActivity.Execute%2A>.  
+6.  Eseguire l'override di <xref:System.Activities.NativeActivity.Execute%2A>.  
   
     ```  
     protected override void Execute(  
@@ -152,12 +150,11 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                 //increment the currentIndex  
                 this.currentIndex.Set(context, ++currentActivityIndex);  
             }  
-  
     ```  
   
-### Implementare il servizio di flusso di lavoro  
+### <a name="implement-the-workflow-service"></a>Implementare il servizio di flusso di lavoro  
   
-1.  Aprire la classe `Program` esistente.  
+1.  Aprire `Program` classe.  
   
 2.  Definire le costanti seguenti:  
   
@@ -167,7 +164,6 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
        const string addr = "http://localhost:8080/Service";  
        static XName contract = XName.Get("IService", "http://tempuri.org");  
     }  
-  
     ```  
   
 3.  Aggiungere un metodo statico denominato `GetWorkflowService` che crea il servizio di flusso di lavoro.  
@@ -206,7 +202,6 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                     }  
                 };  
             }  
-  
     ```  
   
 4.  Nel metodo `Main` esistente ospitare il servizio di flusso di lavoro.  
@@ -227,10 +222,9 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                     host.Close();  
                 }  
             }  
-  
     ```  
   
-### Implementare ISendMessageCallback sul lato client  
+### <a name="implement-the-client-side-isendmessagecallback"></a>Implementare ISendMessageCallback sul lato client  
   
 1.  Aggiungere alla soluzione una nuova applicazione console denominata `Service`.  
   
@@ -257,12 +251,11 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                 operationContext.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader(HeaderName, HeaderNS, this.InstanceId));  
             }  
         }  
-  
     ```  
   
      In questo codice viene utilizzato <xref:System.ServiceModel.OperationContext> passato al metodo per aggiungere un'intestazione personalizzata al messaggio in arrivo.  
   
-### Implementare l'attività Native sul lato client per aggiungere l'implementazione ISendMessageCallback sul lato client a NativeActivityContext  
+### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementare l'attività Native sul lato client per aggiungere l'implementazione ISendMessageCallback sul lato client a NativeActivityContext  
   
 1.  Aggiungere una nuova classe derivata da <xref:System.Activities.NativeActivity> denominata `SendInstanceIdScope`.  
   
@@ -276,7 +269,6 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
             Variable<int> currentIndex;  
             CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  Implementare il costruttore  
@@ -289,7 +281,6 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                 this.variables = new Collection<Variable>();  
                 this.currentIndex = new Variable<int>();  
             }  
-  
     ```  
   
 4.  Implementare le proprietà `Activities` e `Variables`.  
@@ -304,10 +295,9 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
-5.  Eseguire l'override del metodo <xref:System.Activities.NativeActivity.CacheMetadata%2A>.  
+5.  Eseguire l'override di <xref:System.Activities.NativeActivity.CacheMetadata%2A>.  
   
     ```  
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -317,10 +307,9 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
-6.  Eseguire l'override del metodo <xref:System.Activities.NativeActivity.Execute%2A>.  
+6.  Eseguire l'override di <xref:System.Activities.NativeActivity.Execute%2A>.  
   
     ```  
     protected override void Execute(  
@@ -385,10 +374,9 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                 //increment the currentIndex  
                 this.currentIndex.Set(context, ++currentActivityIndex);  
             }  
-  
     ```  
   
-### Implementare un client flusso di lavoro  
+### <a name="implement-a-workflow-client"></a>Implementare un client flusso di lavoro  
   
 1.  Creare un nuovo progetto di applicazione console denominato `Client`.  
   
@@ -458,7 +446,6 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
                     }  
                 };  
             }  
-  
     ```  
   
 4.  Aggiungere il codice di hosting seguente per implementare il metodo `Main()`.  
@@ -472,10 +459,9 @@ Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flu
        Console.WriteLine("Press [ENTER] to exit");  
        Console.ReadLine();  
     }  
-  
     ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Di seguito è riportato il codice sorgente utilizzato in questo argomento.  
   
 ```  
@@ -561,7 +547,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -595,7 +580,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -671,7 +655,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
     }  
   
 }  
-  
 ```  
   
 ```  
@@ -699,7 +682,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -785,7 +767,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -864,12 +845,11 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
  Commenti facoltativi.  
   
-## Vedere anche  
- [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Accesso a OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)   
- [Creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](../../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>Vedere anche  
+ [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Accesso a OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [Creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

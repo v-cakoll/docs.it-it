@@ -1,35 +1,33 @@
 ---
-title: "Expression does not produce a value | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30491"
-  - "bc30491"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30491"
+title: L'espressione non produce un valore
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30491
+- bc30491
+helpviewer_keywords: BC30491
 ms.assetid: 8399d7ae-bc0a-49e6-81dc-2e7229708bc9
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 32cbfdaaf70fbf44b798a83c0e550966570dea39
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Expression does not produce a value
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Si è tentato di utilizzare un'espressione che non produce un valore in un contesto di produzione di valore; ad esempio si è chiamata un'istruzione `Sub` in un contesto in cui è prevista un'istruzione `Function`.  
+# <a name="expression-does-not-produce-a-value"></a>L'espressione non produce un valore
+Si è tentato di utilizzare un'espressione che non produce un valore in un contesto di produzione valore un `Sub` in un contesto in cui un `Function` è previsto.  
   
  **ID errore:** BC30491  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Sostituire l'espressione con una che produce un valore.  
+-   Modificare l'espressione che produce un valore.  
   
-## Vedere anche  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)

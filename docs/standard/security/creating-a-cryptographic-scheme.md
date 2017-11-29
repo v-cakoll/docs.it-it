@@ -1,35 +1,33 @@
 ---
-title: "Creating a Cryptographic Scheme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "encryption [.NET Framework], creating cryptographic schemes"
-  - "cryptography [.NET Framework], creating cryptographic schemes"
+title: Creazione di uno schema di crittografia
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [.NET Framework], creating cryptographic schemes
+- cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3e3c4a832f70fae7808bf71016cb9f6648332f01
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Creating a Cryptographic Scheme
+# <a name="creating-a-cryptographic-scheme"></a>Creazione di uno schema di crittografia
 I componenti di crittografia di .NET Framework possono essere combinati per creare diversi schemi per la crittografia e la decrittografia dei dati.  
   
  Uno schema di crittografia semplice per la crittografia e la decrittografia dei dati può specificare i passaggi seguenti:  
   
-1.  Ogni parte genera una coppia di chiavi pubblica\/privata.  
+1.  Ogni parte genera una coppia di chiavi pubblica/privata.  
   
 2.  Le parti si scambiano le chiavi pubbliche.  
   
@@ -39,7 +37,7 @@ I componenti di crittografia di .NET Framework possono essere combinati per crea
   
 5.  Le parti avviano quindi una conversazione usando la crittografia simmetrica.  
   
- La creazione di uno schema di crittografia non è un'attività banale.  Per altre informazioni sull'uso della crittografia, vedere l'argomento Crittografia nella documentazione di Platform SDK all'indirizzo http:\/\/msdn.microsoft.com\/library.  
+ La creazione di uno schema di crittografia non è un'attività banale. Per altre informazioni sull'uso della crittografia, vedere l'argomento Crittografia nella documentazione di Platform SDK all'indirizzo http://msdn.microsoft.com/library.  
   
-## Vedere anche  
- [Servizi di crittografia](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

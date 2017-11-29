@@ -1,31 +1,27 @@
 ---
-title: 'Procedura: elencare tutti i nodi in una struttura (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: elencare tutti i nodi in una struttura (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Procedura: elencare tutti i nodi in una struttura (Visual Basic)
 A volte risulta utile elencare tutti i nodi di un albero, ad esempio quando si desidera identificare gli effetti esatti di una proprietà o metodo sull'albero. Uno degli approcci disponibili per elencare tutti i nodi in formato testuale consiste nel generare un'espressione XPath che identifica in modo esatto e specifico qualsiasi nodo nell'albero.  
   
- Non risulta particolarmente utile eseguire espressioni XPath tramite [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Le espressioni XPath hanno prestazioni inferiori rispetto alle query [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] e le query [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] sono molto più potenti. Tuttavia, XPath è efficace per identificare i nodi nell'albero XML.  
+ Non risulta particolarmente utile eseguire espressioni XPath tramite [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Le espressioni XPath hanno prestazioni inferiori rispetto alle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e le query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sono molto più potenti. Tuttavia, XPath è efficace per identificare i nodi nell'albero XML.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata una funzione denominata `GetXPath` che genera un'espressione XPath specifica per qualsiasi nodo nell'albero XML. Genera espressioni XPath appropriate anche quando i nodi sono inclusi in uno spazio dei nomi. Le espressioni XPath vengono generate usando prefissi di spazio dei nomi.  
@@ -245,7 +241,7 @@ End Module
   
  Questo esempio produce il seguente output:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  
