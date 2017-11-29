@@ -1,30 +1,21 @@
 ---
 title: 'Procedura: Compilare esempi in LINQ to XML (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 8df8555f587714834b2c444f3455d505a39dac02
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d95748a69ac42f1c767dcf19c9f6d2edc8c872ee
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>Procedura: Compilare esempi in LINQ to XML (C#)
 Nei vari frammenti ed esempi di questa documentazione vengono usati classi e tipi di un'ampia varietà di spazi dei nomi. Quando si compila codice C#, è necessario fornire direttive `using` appropriate.  
@@ -53,4 +44,3 @@ using System.IO.Packaging;
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della programmazione con LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
-

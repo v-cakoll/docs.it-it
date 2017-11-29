@@ -1,50 +1,42 @@
 ---
-title: "Utilizzo della funzionalità Async per l&quot;accesso ai File (Visual Basic) | Documenti di Microsoft"
+title: "Uso della funzionalità Async per l'accesso ai file (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0e548989b1d2c32b9faf5ce0dd90ae371dfc028
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 329ae43f8752fbe8a7167b57cb710cc53c0ec247
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Uso della funzionalità Async per l'accesso ai file (Visual Basic)
-È possibile utilizzare la funzionalità Async per accedere ai file. Tramite la funzionalità Async, è possibile chiamare i metodi asincroni senza utilizzare callback o suddividere il codice in più metodi o espressioni lambda. Per rendere il codice sincrono asincrono, sufficiente chiamare un metodo asincrono anziché un metodo sincrono e aggiungere alcune parole chiave per il codice.  
+È possibile utilizzare la funzionalità Async per accedere ai file. Tramite la funzionalità Async, è possibile chiamare i metodi asincroni senza utilizzare callback o suddividere il codice in più metodi o espressioni lambda. Per rendere asincrono il codice sincrono, è sufficiente chiamare un metodo asincrono anziché un metodo sincrono e aggiungere alcune parole chiave al codice.  
   
- È opportuno considerare i seguenti motivi per l'aggiunta di asincronia per chiamate di accesso ai file:  
+ È opportuno considerare i seguenti motivi per l'aggiunta della modalità asincrona alle chiamate di accesso ai file:  
   
--   Modalità asincrona rende più reattive applicazioni dell'interfaccia utente perché il thread dell'interfaccia utente che avvia l'operazione può eseguire altre operazioni. Se il thread dell'interfaccia utente deve essere eseguito codice che richiede molto tempo (ad esempio, più di 50 millisecondi), l'interfaccia utente potrebbe bloccare fino a quando il / o è stata completata e il thread dell'interfaccia utente può elaborare tastiera nuovamente e inpui e di altri eventi del mouse.  
+-   La modalità asincrona rende più reattive le applicazioni dell'interfaccia utente perché il thread dell'interfaccia utente che avvia l'operazione può eseguire altre operazioni. Se il thread dell'interfaccia utente deve eseguire codice che richiede molto tempo (ad esempio, più di 50 millisecondi), l'interfaccia utente può bloccarsi fino al completamento dell'I/O e il thread dell'interfaccia utente può nuovamente elaborare l'input di tastiera e mouse e altri eventi.  
   
--   Modalità asincrona migliora la scalabilità di ASP.NET e altre applicazioni basate su server, riducendo la necessità di thread. Se l'applicazione utilizza un thread dedicato per ogni risposta e mille richieste vengono gestite contemporaneamente, sono necessari i thread delle migliaia. Operazioni asincrone non spesso necessitano usare un thread durante l'attesa. Essi usare brevemente il thread di completamento i/o esistente alla fine.  
+-   La modalità asincrona migliora la scalabilità di ASP.NET e di altre applicazioni basate su server, riducendo la necessità di thread. Se l'applicazione usa un thread dedicato per ogni risposta e vengono gestite contemporaneamente mille richieste, sono necessari mille thread. Le operazioni asincrone non richiedono spesso l'uso di un thread durante l'attesa. Usano brevemente il thread di completamento di I/O esistente alla fine.  
   
--   La latenza di un'operazione di accesso ai file potrebbe essere molto bassa in condizioni correnti, ma la latenza può aumentare notevolmente in futuro. Ad esempio, è possibile spostare un file a un server in tutto il mondo.  
+-   La latenza di un'operazione di accesso ai file può essere molto bassa nelle condizioni attuali, ma aumentare notevolmente in futuro. Ad esempio, un file può essere spostato in tutt'altra parte del mondo.  
   
--   L'ulteriore overhead di utilizzo della funzionalità Async è ridotto.  
+-   Il sovraccarico aggiuntivo dovuto all'uso della funzionalità Async è ridotto.  
   
--   Attività asincrone può facilmente essere eseguita in parallelo.  
+-   Le attività asincrone possono essere facilmente eseguite in parallelo.  
   
 ## <a name="running-the-examples"></a>Esecuzione degli esempi  
- Per eseguire gli esempi in questo argomento, è possibile creare un **applicazione WPF** o **applicazione Windows Form** e quindi aggiungere un **pulsante**. Il pulsante `Click` evento, aggiungere una chiamata al primo metodo in ogni esempio.  
+ Per eseguire gli esempi in questo argomento, è possibile creare un'**applicazione WPF** o un'**applicazione Windows Form** e quindi aggiungere un **pulsante**. Nell'evento `Click` del pulsante aggiungere una chiamata al primo metodo in ogni esempio.  
   
- Negli esempi seguenti, incluse le seguenti `Imports` istruzioni.  
+ Negli esempi seguenti includere le istruzioni `Imports` indicate di seguito.  
   
 ```vb  
 Imports System  
@@ -55,13 +47,13 @@ Imports System.Text
 Imports System.Threading.Tasks  
 ```  
   
-## <a name="use-of-the-filestream-class"></a>Utilizzare la classe FileStream  
- Negli esempi inclusi in questo argomento viene utilizzato il <xref:System.IO.FileStream>classe, che dispone di un'opzione che causa i/o asincrone a livello di sistema operativo.</xref:System.IO.FileStream> Utilizzando questa opzione, è possibile evitare di bloccare un thread ThreadPool in molti casi. Per abilitare questa opzione, specificare il `useAsync=true` o `options=FileOptions.Asynchronous` argomento nella chiamata al costruttore.  
+## <a name="use-of-the-filestream-class"></a>Uso della classe FileStream  
+ Negli esempi di questo argomento viene usata la classe <xref:System.IO.FileStream>, che ha un'opzione che determina la generazione di I/O asincrono a livello di sistema operativo. L'opzione consente di evitare il blocco di un thread del pool di thread in molti casi. Per abilitare questa opzione, specificare l'argomento `useAsync=true` o `options=FileOptions.Asynchronous` nella chiamata al costruttore.  
   
- È possibile utilizzare questa opzione con <xref:System.IO.StreamReader>e <xref:System.IO.StreamWriter>Se vengono aperti direttamente specificando un percorso del file.</xref:System.IO.StreamWriter> </xref:System.IO.StreamReader> Tuttavia, è possibile utilizzare questa opzione se si fornisce loro un <xref:System.IO.Stream>che la <xref:System.IO.FileStream>classe aperto.</xref:System.IO.FileStream> </xref:System.IO.Stream> Si noti che le chiamate asincrone sono più veloci in App dell'interfaccia utente anche se un thread di pool di thread è bloccato, poiché il thread dell'interfaccia utente non è bloccato durante l'attesa.  
+ Non è possibile usare questa opzione con oggetti <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> se questi vengono aperti direttamente tramite l'indicazione di un percorso. È tuttavia possibile usare questa opzione se si fornisce loro un oggetto <xref:System.IO.Stream> aperto dalla classe <xref:System.IO.FileStream>. Si noti che le chiamate asincrone sono più veloci nelle applicazioni dell'interfaccia utente anche se un thread del pool di thread è bloccato, poiché il thread dell'interfaccia utente non è bloccato durante l'attesa.  
   
 ## <a name="writing-text"></a>Scrittura di testo  
- Nell'esempio seguente scrive il testo in un file. In ogni istruzione await, il metodo termina immediatamente. Una volta completato il / o di file, il metodo riprende in corrispondenza dell'istruzione che segue l'istruzione await. Si noti che il modificatore async nella definizione di metodi che utilizzano l'istruzione await.  
+ Nell'esempio seguente viene scritto un testo in un file. Ad ogni istruzione await il metodo termina immediatamente. Completato l'I/O del file, il metodo riprende in corrispondenza dell'istruzione che segue l'istruzione await. Si noti che il modificatore async si trova nella definizione dei metodi che usano l'istruzione await.  
   
 ```vb  
 Public Async Sub ProcessWrite()  
@@ -83,17 +75,17 @@ Private Async Function WriteTextAsync(filePath As String, text As String) As Tas
 End Function  
 ```  
   
- L'esempio originale include l'istruzione `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, che è una contrazione delle due istruzioni seguenti:  
+ L'esempio originale usa l'istruzione `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, che è una contrazione delle due istruzioni seguenti:  
   
 ```vb  
 Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length)  
 Await theTask  
 ```  
   
- La prima istruzione restituisce un'attività e determina l'elaborazione di file avviare. La seconda istruzione con await induce il metodo chiudere immediatamente e restituire un'attività diversa. Al termine dell'elaborazione in un secondo momento il file, esecuzione torna all'istruzione successiva ad await. Per ulteriori informazioni, vedere [flusso di controllo in programmi asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ La prima istruzione restituisce un'attività e determina l'avvio dell'elaborazione dei file. La seconda istruzione con await induce il metodo a terminare immediatamente e restituire un'attività diversa. Al termine dell'elaborazione dei file l'esecuzione torna quindi all'istruzione che segue await. Per ulteriori informazioni, vedere [flusso di controllo in programmi asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Lettura di testo  
- Nell'esempio seguente legge il testo da un file. Il testo viene memorizzato nel buffer e, in questo caso, inserito in un <xref:System.Text.StringBuilder>.</xref:System.Text.StringBuilder> A differenza nell'esempio precedente, la valutazione dell'attesa produce un valore. Il <xref:System.IO.Stream.ReadAsync%2A>metodo restituisce un <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>, pertanto la valutazione dell'attesa produce un `Int32` valore (`numRead`) dopo il completamento dell'operazione.</xref:System.Int32> </xref:System.Threading.Tasks.Task> </xref:System.IO.Stream.ReadAsync%2A> Per ulteriori informazioni, vedere [Async restituire tipi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Nell'esempio seguente viene letto del testo da un file. Il testo viene memorizzato nel buffer e, in questo caso, inserito in un oggetto <xref:System.Text.StringBuilder>. A differenza dell'esempio precedente, la valutazione di await produce un valore. Il metodo <xref:System.IO.Stream.ReadAsync%2A> restituisce un <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>. Pertanto la valutazione dell'attesa produce un valore `Int32` (`numRead`) dopo il completamento dell'operazione. Per ulteriori informazioni, vedere [tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -134,12 +126,12 @@ Private Async Function ReadTextAsync(filePath As String) As Task(Of String)
 End Function  
 ```  
   
-## <a name="parallel-asynchronous-io"></a>/ O asincrone parallela  
- Nell'esempio seguente viene illustrato l'elaborazione parallela scrivendo 10 file di testo. Per ogni file, il <xref:System.IO.Stream.WriteAsync%2A>metodo restituisce un'attività che viene quindi aggiunto a un elenco di attività.</xref:System.IO.Stream.WriteAsync%2A> Il `Await Task.WhenAll(tasks)` istruzione termina il metodo e riprende all'interno del metodo dell'elaborazione di file completate per tutte le attività.  
+## <a name="parallel-asynchronous-io"></a>I/O asincrono parallelo  
+ Nell'esempio seguente viene illustrata l'elaborazione parallela per la scrittura di 10 file di testo. Per ogni file, il metodo <xref:System.IO.Stream.WriteAsync%2A> restituisce un'attività che successivamente viene aggiunta a un elenco di attività. L'istruzione `Await Task.WhenAll(tasks)` termina il metodo e riprende all'interno del metodo quando l'elaborazione dei file è completata per tutte le attività.  
   
- Nell'esempio vengono chiuse tutte <xref:System.IO.FileStream>le istanze in un `Finally` blocchi dopo le attività vengono completate.</xref:System.IO.FileStream> Se ogni `FileStream` invece è stato creato in un `Imports` istruzione, il `FileStream` potrebbero essere eliminati prima del completamento dell'attività.  
+ L'esempio chiude tutte le istanze di <xref:System.IO.FileStream> in un blocco `Finally` dopo il completamento delle attività. Se invece ogni oggetto `FileStream` è stato creato in un'istruzione `Imports`, è possibile che l'oggetto `FileStream` venga eliminato prima del completamento dell'attività.  
   
- Si noti che qualsiasi miglioramento delle prestazioni è quasi interamente dall'elaborazione in parallelo e non l'elaborazione asincrona. I vantaggi dell'asincronia sono che non impegnare più thread e che non bloccare il thread dell'interfaccia utente.  
+ Si noti che qualsiasi miglioramento delle prestazioni è dovuto quasi interamente all'elaborazione parallela e non all'elaborazione asincrona. I vantaggi dell'asincronia sono che l'elaborazione non blocca più thread e non blocca il thread dell'interfaccia utente.  
   
 ```vb  
 Public Async Sub ProcessWriteMult()  
@@ -175,9 +167,9 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- Quando si utilizza il <xref:System.IO.Stream.WriteAsync%2A>e <xref:System.IO.Stream.ReadAsync%2A>metodi, è possibile specificare un <xref:System.Threading.CancellationToken>, che consente di annullare il flusso intermedio di operazione.</xref:System.Threading.CancellationToken> </xref:System.IO.Stream.ReadAsync%2A> </xref:System.IO.Stream.WriteAsync%2A> Per ulteriori informazioni, vedere [ottimizzazione Async applicazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) e [annullamento in thread gestiti](http://msdn.microsoft.com/library/eea11fe5-d8b0-4314-bb5d-8a58166fb1c3).  
+ Quando si usano i metodi <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, è possibile specificare uno struct <xref:System.Threading.CancellationToken>, che consente di annullare l'operazione nel corso del flusso. Per ulteriori informazioni, vedere [ottimizzazione Async applicazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) e [annullamento in thread gestiti](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)   
+ [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
  [Flusso di controllo in programmi asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

@@ -18,16 +18,15 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7f8ee49861902002e69af96168def5883d73c3a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8b06d21006b95b385792785cafaf75fa3e8cf4b1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 Gestione automatica della memoria è uno dei servizi offerti da Common Language Runtime durante l'[esecuzione gestita](../../docs/standard/managed-execution-process.md). L'allocazione e il rilascio di memoria per un'applicazione vengono gestiti da Garbage Collector di Common Language Runtime. Agli sviluppatori non viene quindi richiesta la scrittura di codice per eseguire attività di gestione della memoria quando si sviluppano applicazioni gestite. La gestione automatica della memoria consente di evitare che si verifichino i problemi consueti legati alla gestione della memoria, quale la mancata liberazione di un oggetto e il conseguente spreco di memoria allocata ma non più referenziabile o il tentativo di accesso alla memoria per un oggetto già liberato. In questa sezione viene descritta la modalità utilizzata dal Garbage Collector per l'allocazione e il rilascio di memoria.  
@@ -60,7 +59,6 @@ Gestione automatica della memoria è uno dei servizi offerti da Common Language 
  Le attività di gestione della memoria necessarie vengono effettuate dal Garbage Collector per la maggior parte degli oggetti creati dall'applicazione. Per le risorse non gestite è tuttavia necessario il rilascio esplicito. Il tipo più comune di risorsa non gestita è rappresentato da un oggetto che esegue il wrapping di una risorsa del sistema operativo, quale un handle di file, un handle di finestra o una connessione di rete. Benché il Garbage Collector sia in grado di tenere traccia della durata di un oggetto gestito in cui è incapsulata una risorsa non gestita, non dispone di dati sufficienti per effettuare il rilascio della risorsa. Quando si crea un oggetto che incapsula una risorsa non gestita, si consiglia di fornire il codice necessario per il rilascio della risorsa non gestita in un metodo **Dispose** pubblico. Fornendo un metodo **Dispose** si consente agli utenti dell'oggetto di liberarne esplicitamente la memoria al termine delle operazioni che richiedono tale oggetto. Quando si usa un oggetto che incapsula una risorsa non gestita, si consiglia di tenere in considerazione il metodo **Dispose** e di chiamarlo in caso di necessità. Per altre informazioni su come pulire una risorsa non gestita e per un esempio di modello di progettazione per l'implementazione del metodo **Dispose**, vedere [Garbage Collection](../../docs/standard/garbage-collection/index.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.GC>   
- [Garbage Collection](../../docs/standard/garbage-collection/index.md)   
+ <xref:System.GC>  
+ [Garbage Collection](../../docs/standard/garbage-collection/index.md)  
  [Processo di esecuzione gestita](../../docs/standard/managed-execution-process.md)
-

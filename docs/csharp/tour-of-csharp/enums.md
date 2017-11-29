@@ -10,21 +10,19 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-    
 # <a name="enums"></a>Enumerazioni
 
 Un ***tipo enum*** è un tipo valore distinto con un set di costanti denominate. Le enumerazioni vengono definite quando è necessario specificare un tipo che può avere un set di valori discreti. Le enumerazioni usano uno dei tipi valore integrali come archiviazione sottostante e offrono significato semantico ai valori discreti.
 
 Nell'esempio seguente viene dichiarato e usato un tipo `enum` denominato `Color` con tre valori di costante, `Red`, `Green` e `Blue`.
 
-[!code-csharp[Esempio enum](../../../samples/snippets/csharp/tour/enums/Program.cs#L3-L36)]
+[!code-csharp[EnumExample](../../../samples/snippets/csharp/tour/enums/Program.cs#L3-L36)]
 
 Ogni tipo `enum` ha un tipo integrale corrispondente, denominato ***tipo sottostante*** del tipo `enum`. Un tipo `enum` che non dichiara in modo esplicito un tipo sottostante ha un tipo sottostante di `int`. Il formato di archiviazione di un tipo `enum` e l'intervallo di valori possibili sono determinati dal tipo sottostante. Il set di valori che un tipo `enum` può richiedere non è limitato dai relativi membri `enum`. In particolare, è possibile eseguire il cast di qualsiasi valore del tipo sottostante di un tipo `enum` al tipo `enum`. Si tratta di un valore valido distinto del tipo `enum` in questione.
 
@@ -40,9 +38,8 @@ I valori `Enum` possono essere convertiti in valori integrali e viceversa usando
 
 Il valore predefinito di qualsiasi tipo `enum` è il valore integrale zero convertito nel tipo `enum`. Nei casi in cui le variabili vengono inizializzate automaticamente con un valore predefinito, tale valore viene assegnato alle variabili dei tipi `enum`. Per rendere facilmente disponibile il valore predefinito di un tipo `enum`, il valore letterale `0` viene implicitamente convertito in qualsiasi tipo `enum`. Di conseguenza, quanto riportato di seguito è consentito.
 
-[!code-csharp[Enum zero](../../../samples/snippets/csharp/tour/enums/Program.cs#L58-L58)]
+[!code-csharp[EnumZero](../../../samples/snippets/csharp/tour/enums/Program.cs#L58-L58)]
 
 >[!div class="step-by-step"]
 [Precedente](interfaces.md)
 [Successivo](delegates.md)
-

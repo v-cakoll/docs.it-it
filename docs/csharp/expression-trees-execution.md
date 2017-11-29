@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="executing-expression-trees"></a>Esecuzione di alberi delle espressioni
 
 [Precedente -- Tipi di framework che supportano alberi delle espressioni](expression-classes.md)
@@ -130,4 +128,3 @@ Gli alberi delle espressioni che rappresentano le espressioni lambda possono ess
 L'albero delle espressioni non rappresenta il codice da eseguire per qualsiasi costrutto specifico creato. Finché l'ambiente in cui viene compilato ed eseguito il codice corrisponderà all'ambiente in cui si crea l'espressione, tutto funzionerà come previsto. In caso contrario, gli errori sono molto prevedibili e verranno intercettati nei primi test di qualsiasi codice basato sugli alberi delle espressioni.
 
 [Successivo --Interpretazione di espressioni](expression-trees-interpreting.md)
-

@@ -1,39 +1,21 @@
 ---
 title: Istruzioni di iterazione (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - iteration statements [C#]
 - loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6977248fecb61944fac95e4f2bdf976308566f1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae023712a2b299ea66ff8034d3677c44a37426f8
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="iteration-statements-c-reference"></a>Istruzioni di iterazione (Riferimenti per C#)
 Le istruzioni di iterazione consentono di creare cicli. Con le istruzioni di iterazione le istruzioni incorporate vengono eseguite più volte, in base ai criteri di fine del ciclo. Queste istruzioni vengono eseguite in ordine, tranne quando viene rilevata un'[istruzione di salto](../../../csharp/language-reference/keywords/jump-statements.md).  
@@ -51,8 +33,7 @@ Le istruzioni di iterazione consentono di creare cicli. Con le istruzioni di ite
 -   [while](../../../csharp/language-reference/keywords/while.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
  [Parole chiave per le istruzioni](../../../csharp/language-reference/keywords/statement-keywords.md)
-

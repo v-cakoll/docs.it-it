@@ -1,43 +1,24 @@
 ---
 title: Operatore [] (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '[]_CSharpKeyword'
-dev_langs:
-- CSharp
+f1_keywords: '[]_CSharpKeyword'
 helpviewer_keywords:
 - subscript operator [C#]
 - square brackets [ ] operator [C#]
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 03664f5604bb7d7dce9e8ae2ff0ec045c6a203b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b49d41af0dd4dc34b1b74c62ce8779aa31d69f77
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>Operatore [] (Riferimenti per C#)
 Le parentesi quadre (`[]`) sono usate per le matrici, gli indicizzatori e gli attributi ma possono essere usate anche per i puntatori.  
@@ -45,11 +26,11 @@ Le parentesi quadre (`[]`) sono usate per le matrici, gli indicizzatori e gli at
 ## <a name="remarks"></a>Note  
  Un tipo matrice è un tipo seguito da `[]`:  
   
- [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
+ [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
  Per consentire l'accesso a un elemento di una matrice, l'indice dell'elemento desiderato viene racchiuso tra parentesi:  
   
- [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
+ [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
  Se l'indice di una matrice non è incluso nell'intervallo, viene generata un'eccezione.  
   
@@ -57,15 +38,15 @@ Le parentesi quadre (`[]`) sono usate per le matrici, gli indicizzatori e gli at
   
  In .NET Framework, ad esempio, è possibile definire un tipo `Hashtable` che associa chiavi e valori di tipo arbitrario:  
   
- [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
+ [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
  Le parentesi quadre vengono usate anche per specificare [attributi](../../../csharp/programming-guide/concepts/attributes/index.md):  
   
- [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
+ [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
  È possibile usare le parentesi quadre per effettuare l'indicizzazione a partire da un puntatore:  
   
- [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
+ [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
  Non viene eseguito alcun controllo dei limiti.  
   
@@ -73,11 +54,10 @@ Le parentesi quadre (`[]`) sono usate per le matrici, gli indicizzatori e gli at
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Operatori C#](../../../csharp/language-reference/operators/index.md)   
- [Matrici](../../../csharp/programming-guide/arrays/index.md)   
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Operatori C#](../../../csharp/language-reference/operators/index.md)  
+ [Array](../../../csharp/programming-guide/arrays/index.md)  
+ [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
  [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
-

@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - debugging extensions
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: efdb4bec75d160acd212b763690bd7a473c35eed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41338111c92cb4af7f175c00c8ec87e48dc9c228
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (estensione del debugger SOS)
 L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di programmi gestiti in Visual Studio e nel debugger Windows (WinDbg.exe) fornendo informazioni sull'ambiente Common Language Runtime (CLR) interno. L'uso di questo strumento richiede l'abilitazione del debug non gestito nel progetto. SOS.dll viene installato automaticamente con .NET Framework. Per usare SOS.dll in Visual Studio, installare [Windows Driver Kit (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362).  
@@ -220,6 +213,5 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)   
+ [Strumenti](../../../docs/framework/tools/index.md)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

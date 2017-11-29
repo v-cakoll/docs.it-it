@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4b95f3d70c7329efd1affcb333ac6eee08cc29d3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fba6c6a912cc9d2df9e1b9b11790840f782922d5
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
@@ -59,7 +52,7 @@ ilasm [options] filename [[options]filename...]
 | ------ | ----------- |
 |**/32bitpreferred**|Crea un'immagine con preferenza per i 32 bit (PE32).|
 |**/alignment:** `integer`|Imposta FileAlignment sul valore specificato da `integer` nell'intestazione NT facoltativa. Se la direttiva IL .alignment è specificata nel file, questa opzione ne esegue l'override.|
-|**/appcontainer**|Genera un *.dll* o *.exe* che viene eseguito nel contenitore delle app Windows, come output.|
+|**/appcontainer**|Genera un file *.dll* o *.exe* che viene eseguito nel contenitore delle app Windows, come output.|
 |**/arm**|Specifica Advanced RISC Machine (ARM) come processore di destinazione.<br /><br /> Se non viene specificato il numero di bit dell'immagine, viene utilizzata l'impostazione predefinita **/32bitpreferred**.|
 |**/base:** `integer`|Imposta ImageBase sul valore specificato da `integer` nell'intestazione NT facoltativa. Se la direttiva IL .imagebase è specificata nel file, questa opzione ne esegue l'override.|
 |**/clock**|Misura e segnala i seguenti tempi di compilazione in millisecondi per il file di origine .il specificato:<br /><br /> **Total Run**: tempo totale impiegato per l'esecuzione di tutte le operazioni specifiche che seguono.<br /><br /> **Startup**: caricamento e apertura del file.<br /><br /> **Emitting MD**: emissione di metadati.<br /><br /> **Ref to Def Resolution**: risoluzione dei riferimenti nelle definizioni nel file.<br /><br /> **CEE File Generation**: generazione dell'immagine del file in memoria.<br /><br /> **PE File Writing**: scrittura dell'immagine in un file PE.|
@@ -80,7 +73,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Disabilita l'ereditarietà predefinita da <xref:System.Object> quando non è specificata alcuna classe base.|
 |**/nocorstub**|Elimina la generazione dello stub CORExeMain.|
 |**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|
-|**/output:** `file.ext`|Specifica il nome e l'estensione del file di output. Per impostazione predefinita, il nome del file di output corrisponde al nome del primo file di origine. L'estensione predefinita è *.exe*. Se si specifica l'opzione **/dll**, l'estensione predefinita sarà *.dll*. **Nota:** se si specifica **/output**:myfile.dll, non viene impostata l'opzione **/dll**. Se non si specifica **/dll**, si otterrà un file eseguibile denominato *myfile.dll*.|
+|**/output:** `file.ext`|Specifica il nome e l'estensione del file di output. Per impostazione predefinita, il nome del file di output corrisponde al nome del primo file di origine. L'estensione predefinita è *.exe*. Se si specifica l'opzione **/dll**, l'estensione predefinita sarà *.dll*. **Nota:** se si specifica **/output**:myfile.dll, non verrà impostata l'opzione **/dll**. Se non si specifica **/dll**, si otterrà un file eseguibile denominato *myfile.dll*.|
 |**/optimize**|Ottimizza le istruzioni long convertendole in short. Ad esempio, `br` viene convertito in `br.s`.|
 |**/pe64**|Crea un'immagine a 64 bit (PE32+).<br /><br /> Se non è specificato il processore di destinazione, l'impostazione predefinita è `/itanium`.|
 |**/pdb**|Crea un file PDB senza abilitare la traccia delle informazioni di debug.|
@@ -94,7 +87,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
 > [!NOTE]
-> Tutte le opzioni di *Ilasm.exe* non sono soggette alla distinzione tre maiuscole e minuscole e vengono riconosciute dalle prime tre lettere. Ad esempio, **/lis** è equivalente a **/listing** e **/res**:myresfile.res è equivalente a **/resource**:myresfile.res. Le opzioni che specificano argomenti accettano i due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento. **/output**:*file.ext*, ad esempio, equivale a **/output**=*file.ext*.
+> Tutte le opzioni di *Ilasm.exe* non sono soggette alla distinzione tra maiuscole e minuscole e vengono riconosciute dalle prime tre lettere. Ad esempio, **/lis** equivale a **/listing** e **/res**:myresfile.res equivale a **/resource**:myresfile.res. Le opzioni che specificano argomenti accettano i due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento. **/output**:*file.ext*, ad esempio, equivale a **/output**=*file.ext*.
 
 ## <a name="remarks"></a>Note
 
@@ -248,4 +241,3 @@ L'esempio di codice IL riportato di seguito corrisponde al precedente esempio di
 [*Ildasm.exe* (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
 [Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md)  
 [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="what-is-managed-code"></a>Informazioni sul codice gestito
 
 Quando si lavora con .NET Framework, viene spesso usato il termine "codice gestito". Questo documento illustra il significato di questo termine e fornisce informazioni aggiuntive.
@@ -47,4 +45,3 @@ Analogamente a quanto sopra esposto, C# è un linguaggio che consente di usare c
 *   [Cenni preliminari su .NET Framework](https://msdn.microsoft.com/library/zw4w595w.aspx)
 *   [Codice unsafe e puntatori](https://msdn.microsoft.com/library/t2yzs44b.aspx)
 *   [Interoperabilità (Guida per programmatori C#)](https://msdn.microsoft.com/library/ms173184.aspx)
-

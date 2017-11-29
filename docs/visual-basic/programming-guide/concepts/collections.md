@@ -1,47 +1,39 @@
 ---
-title: Raccolte (Visual Basic) | Documenti di Microsoft
+title: Raccolte (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-caps.latest.revision: 6
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b3c8de3e22075d576f86bcd4eb599946740ebe16
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collections-visual-basic"></a>Raccolte (Visual Basic)
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.  
   
- Le matrici sono estremamente utili per la creazione e l'uso di un numero fisso di oggetti fortemente tipizzati. Per informazioni sulle matrici, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Le matrici sono estremamente utili per la creazione e l'uso di un numero fisso di oggetti fortemente tipizzati. Per altre informazioni sulle matrici, vedere [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
  Le raccolte consentono di lavorare in modo più flessibile con gruppi di oggetti. A differenza delle matrici, il gruppo di oggetti con cui si lavora può aumentare e diminuire in modo dinamico in base alle esigenze dell'applicazione. Per alcune raccolte è possibile assegnare una chiave a qualsiasi oggetto inserito nella raccolta in modo da recuperare rapidamente l'oggetto usando la chiave.  
   
- Una Collection è una classe. Di conseguenza, prima di poter aggiungere elementi a una nuova raccolta è necessario dichiarare la Collection.  
+ Una raccolta è una classe. Di conseguenza, prima di poter aggiungere elementi a una nuova raccolta è necessario dichiarare la raccolta.  
   
- Se la raccolta contiene elementi di un solo tipo di dati, è possibile utilizzare una delle classi di <xref:System.Collections.Generic?displayProperty=fullName>dello spazio dei nomi.</xref:System.Collections.Generic?displayProperty=fullName> In una raccolta generica viene imposta l'indipendenza dai tipi, in modo da impedire che vengano aggiunti altri tipi di dati alla raccolta. Quando si recupera un elemento da una raccolta generica, non è necessario determinarne il tipo di dati né convertirlo.  
+ Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una delle classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. In una raccolta generica viene imposta l'indipendenza dai tipi, in modo da impedire che vengano aggiunti altri tipi di dati alla raccolta. Quando si recupera un elemento da una raccolta generica, non è necessario determinarne il tipo di dati né convertirlo.  
   
 > [!NOTE]
->  Per gli esempi in questo argomento, includere [importazioni](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) le istruzioni per la `System.Collections.Generic` e `System.Linq` gli spazi dei nomi.  
+>  Per gli esempi in questo argomento, includere [importazioni](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) istruzioni per la `System.Collections.Generic` e `System.Linq` gli spazi dei nomi.  
   
  **Contenuto dell'argomento**  
   
--   [Utilizzando una semplice raccolta](#BKMK_SimpleCollection)  
+-   [Uso di una raccolta semplice](#BKMK_SimpleCollection)  
   
 -   [Tipi di raccolte](#BKMK_KindsOfCollections)  
   
@@ -49,13 +41,13 @@ Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È
   
     -   [Classi System.Collections.Concurrent](#BKMK_Concurrent)  
   
-    -   [Classi System. Collections](#BKMK_Collections)  
+    -   [Classi System.Collections](#BKMK_Collections)  
   
-    -   [Classe di raccolta di Visual Basic](#BKMK_VisualBasic)  
+    -   [Classe Collection di Visual Basic](#BKMK_VisualBasic)  
   
 -   [Implementazione di una raccolta di coppie chiave/valore](#BKMK_KeyValuePairs)  
   
--   [Utilizzo di LINQ per accedere a una raccolta](#BKMK_LINQ)  
+-   [Uso di LINQ per accedere a una raccolta](#BKMK_LINQ)  
   
 -   [Ordinamento di una raccolta](#BKMK_Sorting)  
   
@@ -65,9 +57,9 @@ Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È
   
 <a name="BKMK_SimpleCollection"></a>
 ## <a name="using-a-simple-collection"></a>Uso di una raccolta semplice  
- Negli esempi inclusi in questa sezione utilizzano gli elementi generici <xref:System.Collections.Generic.List%601>classe, che consente di lavorare con un elenco di oggetti fortemente tipizzato.</xref:System.Collections.Generic.List%601>  
+ Gli esempi in questa sezione usano la classe generica <xref:System.Collections.Generic.List%601>, che consente di usare un elenco di oggetti fortemente tipizzato.  
   
- Nell'esempio seguente viene creato un elenco di stringhe e quindi scorre le stringhe mediante un [For Each... Avanti](../../../visual-basic/language-reference/statements/for-each-next-statement.md) istruzione.  
+ Nell'esempio seguente crea un elenco di stringhe e quindi scorrere le stringhe usando un [For Each... Avanti](../../../visual-basic/language-reference/statements/for-each-next-statement.md) istruzione.  
   
 ```vb  
 ' Create a list of strings.  
@@ -84,7 +76,7 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Se il contenuto di una raccolta è noti in anticipo, è possibile utilizzare un *inizializzatore di raccolta* per inizializzare la raccolta. Per ulteriori informazioni, vedere [gli inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
+ Se il contenuto di una raccolta è noto in anticipo, si può usare un *inizializzatore di raccolta* per inizializzare la raccolta. Per altre informazioni, vedere [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
  L'esempio seguente è identico all'esempio precedente, ma usa un inizializzatore di raccolta per aggiungere elementi alla raccolta.  
   
@@ -100,9 +92,9 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- È possibile utilizzare un [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) istruzione anziché un `For Each` istruzione per scorrere una raccolta. Questo è possibile mediante l'accesso agli elementi della raccolta dalla posizione di indice. L'indice degli elementi inizia da 0 e termina in corrispondenza del numero di elementi meno 1.  
+ È possibile utilizzare un [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) istruzione anziché un `For Each` per scorrere una raccolta. Questo è possibile mediante l'accesso agli elementi della raccolta dalla posizione di indice. L'indice degli elementi inizia da 0 e termina in corrispondenza del numero di elementi meno 1.  
   
- Nell'esempio seguente scorre gli elementi di una raccolta tramite `For…Next` anziché `For Each`.  
+ Nell'esempio seguente l'iterazione negli elementi di una raccolta avviene mediante `For…Next` anziché mediante `For Each`.  
   
 ```vb  
 Dim salmons As New List(Of String) From  
@@ -132,7 +124,7 @@ Next
 'Output: chinook pink sockeye  
 ```  
   
- Nell'esempio seguente vengono rimossi elementi da un elenco generico. Invece di un `For Each` istruzione, una [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) viene utilizzata l'istruzione che esegue l'iterazione in ordine decrescente. In questo modo il <xref:System.Collections.Generic.List%601.RemoveAt%2A>(metodo), gli elementi dopo un elemento rimosso un valore di indice più basso.</xref:System.Collections.Generic.List%601.RemoveAt%2A>  
+ Nell'esempio seguente vengono rimossi elementi da un elenco generico. Invece di un `For Each` istruzione, un [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) viene utilizzata l'istruzione che esegue l'iterazione in ordine decrescente. Ciò è necessario perché il metodo <xref:System.Collections.Generic.List%601.RemoveAt%2A> fa sì che gli elementi dopo un elemento rimosso abbiano un valore di indice inferiore.  
   
 ```vb  
 Dim numbers As New List(Of Integer) From  
@@ -155,7 +147,7 @@ numbers.ForEach(
 ' Output: 0 2 4 6 8  
 ```  
   
- Per il tipo di elementi <xref:System.Collections.Generic.List%601>è inoltre possibile definire la propria classe.</xref:System.Collections.Generic.List%601> Nell'esempio seguente, il `Galaxy` classe che viene utilizzato il <xref:System.Collections.Generic.List%601>è definito nel codice.</xref:System.Collections.Generic.List%601>  
+ Per il tipo di elementi in <xref:System.Collections.Generic.List%601>, è possibile anche definire una classe personalizzata. Nell'esempio seguente la classe `Galaxy` viene usata dall'oggetto <xref:System.Collections.Generic.List%601> definito nel codice.  
   
 ```vb  
 Private Sub IterateThroughList()  
@@ -192,73 +184,73 @@ End Class
   
  In questa sezione sono descritte alcune classi di raccolte comuni:  
   
--   @System.Collections.Genericclassi  
+-   Classi <xref:System.Collections.Generic>  
   
--   @System.Collections.Concurrentclassi  
+-   Classi <xref:System.Collections.Concurrent>  
   
--   @System.Collectionsclassi  
+-   Classi <xref:System.Collections>  
   
--   Visual Basic `Collection` (classe)  
+-   Visual Basic `Collection` classe  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>Classi System.Collections.Generic  
 
- È possibile creare una raccolta generica utilizzando una delle classi di <xref:System.Collections.Generic>dello spazio dei nomi.</xref:System.Collections.Generic> Una raccolta generica è utile quando ogni elemento al suo interno presenta lo stesso tipo di dati. Una raccolta generica applica la tipizzazione forte consentendo di aggiungere soltanto i tipi di dati desiderati.  
+ È possibile creare una raccolta generica usando una delle classi dello spazio dei nomi <xref:System.Collections.Generic>. Una raccolta generica è utile quando ogni elemento al suo interno presenta lo stesso tipo di dati. Una raccolta generica applica la tipizzazione forte consentendo di aggiungere soltanto i tipi di dati desiderati.  
   
- Nella tabella seguente sono elencate alcune delle classi di frequente il <xref:System.Collections.Generic?displayProperty=fullName>dello spazio dei nomi:</xref:System.Collections.Generic?displayProperty=fullName>  
+ La tabella seguente elenca alcune delle classi di uso frequente dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>:  
   
 |Classe|Descrizione|  
 |---|---|  
-|<xref:System.Collections.Generic.Dictionary%602></xref:System.Collections.Generic.Dictionary%602>|Rappresenta una raccolta di coppie chiave/valore organizzate in base alla chiave.|  
-|<xref:System.Collections.Generic.List%601></xref:System.Collections.Generic.List%601>|Rappresenta un elenco di oggetti accessibile in base all'indice. Fornisce metodi per la ricerca, l'ordinamento e la modifica degli elenchi.|  
-|<xref:System.Collections.Generic.Queue%601></xref:System.Collections.Generic.Queue%601>|Rappresenta una raccolta di oggetti FIFO (First-In First-Out).|  
-|<xref:System.Collections.Generic.SortedList%602></xref:System.Collections.Generic.SortedList%602>|Rappresenta una raccolta di coppie chiave/valore ordinate per chiave in base alle associato <xref:System.Collections.Generic.IComparer%601>implementazione.</xref:System.Collections.Generic.IComparer%601>|  
-|<xref:System.Collections.Generic.Stack%601></xref:System.Collections.Generic.Stack%601>|Rappresenta una raccolta di oggetti LIFO (Last-In First-Out).|  
+|<xref:System.Collections.Generic.Dictionary%602>|Rappresenta una raccolta di coppie chiave/valore organizzate in base alla chiave.|  
+|<xref:System.Collections.Generic.List%601>|Rappresenta un elenco di oggetti accessibile in base all'indice. Fornisce metodi per la ricerca, l'ordinamento e la modifica degli elenchi.|  
+|<xref:System.Collections.Generic.Queue%601>|Rappresenta una raccolta di oggetti FIFO (First-In First-Out).|  
+|<xref:System.Collections.Generic.SortedList%602>|Rappresenta una raccolta di coppie chiave/valore ordinate per chiave in base all'implementazione <xref:System.Collections.Generic.IComparer%601> associata.|  
+|<xref:System.Collections.Generic.Stack%601>|Rappresenta una raccolta di oggetti LIFO (Last-In First-Out).|  
   
- Per ulteriori informazioni, vedere [utilizzati tipi di raccolte comunemente](http://msdn.microsoft.com/library/f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55), [selezione di una classe di raccolta](../../../standard/collections/selecting-a-collection-class.md)e <xref:System.Collections.Generic?displayProperty=fullName>.</xref:System.Collections.Generic?displayProperty=fullName>  
+ Per altre informazioni, vedere [Tipi di raccolte comunemente utilizzate](../../../standard/collections/commonly-used-collection-types.md), [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md) e <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>Classi System.Collections.Concurrent   
- In .NET Framework 4 o successive, gli insiemi di <xref:System.Collections.Concurrent>dello spazio dei nomi forniscono operazioni thread-safe efficienti per accedere agli elementi della raccolta da più thread.</xref:System.Collections.Concurrent>  
+ In .NET Framework 4 o versioni successive le raccolte dello spazio dei nomi <xref:System.Collections.Concurrent> garantiscono operazioni thread-safe efficienti per accedere agli elementi della raccolta da più thread.  
   
- Le classi di <xref:System.Collections.Concurrent>è necessario utilizzare lo spazio dei nomi anziché i tipi corrispondenti nel <xref:System.Collections.Generic?displayProperty=fullName>e <xref:System.Collections?displayProperty=fullName>gli spazi dei nomi ogni volta che più thread accedono contemporaneamente alla raccolta.</xref:System.Collections?displayProperty=fullName> </xref:System.Collections.Generic?displayProperty=fullName> </xref:System.Collections.Concurrent> Per ulteriori informazioni, vedere [raccolte Thread-Safe](../../../standard/collections/threadsafe/index.md) e <xref:System.Collections.Concurrent>.</xref:System.Collections.Concurrent>  
+ Le classi dello spazio dei nomi <xref:System.Collections.Concurrent> devono essere usate in sostituzione dei tipi corrispondenti negli spazi dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType> e <xref:System.Collections?displayProperty=nameWithType> ogni volta che più thread accedono contemporaneamente alla raccolta. Per altre informazioni, vedere [Raccolte thread-safe](../../../standard/collections/thread-safe/index.md) e <xref:System.Collections.Concurrent>.  
   
- Alcune classi incluse nel <xref:System.Collections.Concurrent>dello spazio dei nomi sono <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>e <xref:System.Collections.Concurrent.ConcurrentStack%601>.</xref:System.Collections.Concurrent.ConcurrentStack%601> </xref:System.Collections.Concurrent.ConcurrentQueue%601> </xref:System.Collections.Concurrent.ConcurrentDictionary%602> </xref:System.Collections.Concurrent.BlockingCollection%601> </xref:System.Collections.Concurrent>  
+ Alcune classi incluse nello spazio dei nomi <xref:System.Collections.Concurrent> sono <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>Classi System.Collections    
- Le classi di <xref:System.Collections?displayProperty=fullName>dello spazio dei nomi non archiviare elementi come oggetti tipizzati in modo specifico, ma come oggetti di tipo `Object`.</xref:System.Collections?displayProperty=fullName>  
+ Le classi dello spazio dei nomi <xref:System.Collections?displayProperty=nameWithType> non archiviano gli elementi come oggetti tipizzati in modo specifico, ma come oggetti di tipo `Object`.  
   
- Quando possibile, utilizzare le raccolte generiche nel <xref:System.Collections.Generic?displayProperty=fullName>dello spazio dei nomi o <xref:System.Collections.Concurrent>dello spazio dei nomi anziché i tipi legacy nel `System.Collections` dello spazio dei nomi.</xref:System.Collections.Concurrent> </xref:System.Collections.Generic?displayProperty=fullName>  
+ Quando possibile, usare le raccolte generiche degli spazi dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType> o <xref:System.Collections.Concurrent> al posto dei tipi legacy dello spazio dei nomi `System.Collections`.  
   
- Nella tabella seguente sono elencate alcune delle classi utilizzate di frequente il `System.Collections` dello spazio dei nomi:  
+ La tabella seguente elenca alcune classi di uso frequente nello spazio dei nomi `System.Collections`:  
   
 |Classe|Descrizione|  
 |---|---|  
-|<xref:System.Collections.ArrayList></xref:System.Collections.ArrayList>|Rappresenta una matrice di oggetti le cui dimensioni sono incrementate in modo dinamico in base alle esigenze.|  
-|<xref:System.Collections.Hashtable></xref:System.Collections.Hashtable>|Rappresenta una raccolta di coppie chiave/valore organizzate in base al codice hash della chiave.|  
-|<xref:System.Collections.Queue></xref:System.Collections.Queue>|Rappresenta una raccolta di oggetti FIFO (First-In First-Out).|  
-|<xref:System.Collections.Stack></xref:System.Collections.Stack>|Rappresenta una raccolta di oggetti LIFO (Last-In First-Out).|  
+|<xref:System.Collections.ArrayList>|Rappresenta una matrice di oggetti le cui dimensioni sono incrementate in modo dinamico in base alle esigenze.|  
+|<xref:System.Collections.Hashtable>|Rappresenta una raccolta di coppie chiave/valore organizzate in base al codice hash della chiave.|  
+|<xref:System.Collections.Queue>|Rappresenta una raccolta di oggetti FIFO (First-In First-Out).|  
+|<xref:System.Collections.Stack>|Rappresenta una raccolta di oggetti LIFO (Last-In First-Out).|  
   
- Il <xref:System.Collections.Specialized>dello spazio dei nomi fornisce classi di raccolte specializzate e fortemente tipizzate, ad esempio elenchi collegati e ibridi dizionari e raccolte di stringa.</xref:System.Collections.Specialized>  
+ Lo spazio dei nomi <xref:System.Collections.Specialized> offre classi di raccolte fortemente tipizzate e specializzate, ad esempio raccolte di sole stringhe, dizionari ibridi e dizionari a elenchi collegati.  
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Classe Collection di Visual Basic  
- È possibile utilizzare Visual Basic <xref:Microsoft.VisualBasic.Collection>di accedere a una raccolta di elementi utilizzando entrambi un indice numerico o una classe `String` chiave.</xref:Microsoft.VisualBasic.Collection> Per aggiungere elementi a un oggetto raccolta, è possibile specificare o non specificare una chiave. Se si aggiunge un elemento senza una chiave, è necessario usare il relativo indice numerico per accedervi.  
+ È possibile utilizzare Visual Basic <xref:Microsoft.VisualBasic.Collection> classe per accedere a una raccolta di elementi usando un indice numerico o un `String` chiave. Per aggiungere elementi a un oggetto raccolta, è possibile specificare o non specificare una chiave. Se si aggiunge un elemento senza una chiave, è necessario usare il relativo indice numerico per accedervi.  
   
  Visual Basic `Collection` classe archivia tutti i relativi elementi come tipo `Object`, pertanto è possibile aggiungere un elemento di qualsiasi tipo di dati. Non esiste alcuna misura per impedire l'aggiunta di tipi di dati non appropriati.  
   
- Quando si utilizza Visual Basic `Collection` (classe), il primo elemento in una raccolta include un indice di 1. Questo comportamento è diverso rispetto alle classi Collection di .NET Framework, per cui l'indice iniziale è 0.  
+ Quando si utilizza Visual Basic `Collection` (classe), il primo elemento in una raccolta ha indice 1. Questo comportamento è diverso rispetto alle classi di raccolte di .NET Framework, per cui l'indice iniziale è 0.  
   
- Quando possibile, utilizzare le raccolte generiche nel <xref:System.Collections.Generic?displayProperty=fullName>dello spazio dei nomi o <xref:System.Collections.Concurrent>dello spazio dei nomi anziché Visual Basic `Collection` classe</xref:System.Collections.Concurrent> </xref:System.Collections.Generic?displayProperty=fullName>  
+ Quando possibile, utilizzare le raccolte generiche nel <xref:System.Collections.Generic?displayProperty=nameWithType> dello spazio dei nomi o <xref:System.Collections.Concurrent> dello spazio dei nomi anziché Visual Basic `Collection` classe.  
   
- Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Collection>.</xref:Microsoft.VisualBasic.Collection>  
+ Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Collection>.  
   
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Implementazione di una raccolta di coppie chiave/valore   
- Il <xref:System.Collections.Generic.Dictionary%602>insieme generico consente di accedere agli elementi in una raccolta utilizzando la chiave di ogni elemento.</xref:System.Collections.Generic.Dictionary%602> Ogni aggiunta al dizionario è costituita da un valore e dalla chiave associata corrispondente. Il recupero di un valore tramite la relativa chiave è veloci perché la `Dictionary` classe viene implementata come una tabella hash.  
+ La raccolta generica <xref:System.Collections.Generic.Dictionary%602> consente di accedere agli elementi di una raccolta usando la chiave di ogni elemento. Ogni aggiunta al dizionario è costituita da un valore e dalla chiave associata corrispondente. Il recupero di un valore tramite la relativa chiave è un'operazione veloce, perché la classe `Dictionary` viene implementata come tabella hash.  
   
- Nell'esempio seguente viene creato un `Dictionary` insieme e scorrere il dizionario con un `For Each` istruzione.  
+ L'esempio seguente crea una raccolta `Dictionary` ed esegue l'iterazione nel dizionario usando un'istruzione `For Each`.  
   
 ```vb  
 Private Sub IterateThroughDictionary()  
@@ -304,7 +296,7 @@ Public Class Element
 End Class  
 ```  
   
- Utilizzare invece un inizializzatore di raccolta per creare il `Dictionary` raccolta, è possibile sostituire il `BuildDictionary` e `AddToDictionary` metodi con il metodo seguente.  
+ Per usare invece un inizializzatore di raccolta per compilare la raccolta `Dictionary`, è possibile sostituire i metodi `BuildDictionary` e `AddToDictionary` con il metodo seguente.  
   
 ```vb  
 Private Function BuildDictionary2() As Dictionary(Of String, Element)  
@@ -322,7 +314,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function  
 ```  
   
- Nell'esempio seguente viene utilizzato il <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>(metodo) e <xref:System.Collections.Generic.Dictionary%602.Item%2A>proprietà di `Dictionary` per trovare rapidamente un elemento dalla chiave.</xref:System.Collections.Generic.Dictionary%602.Item%2A> </xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> Il `Item` proprietà consente di accedere a un elemento di `elements` raccolta utilizzando il `elements(symbol)` codice in Visual Basic.  
+ L'esempio seguente usa il metodo <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> e la proprietà <xref:System.Collections.Generic.Dictionary%602.Item%2A> di `Dictionary` per trovare rapidamente un elemento in base alla chiave. Il `Item` proprietà consente di accedere a un elemento di `elements` raccolta utilizzando il `elements(symbol)` codice in Visual Basic.  
   
 ```vb  
 Private Sub FindInDictionary(ByVal symbol As String)  
@@ -337,7 +329,7 @@ Private Sub FindInDictionary(ByVal symbol As String)
 End Sub  
 ```  
   
- Nell'esempio seguente utilizza invece il <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>metodo per trovare rapidamente un elemento chiave.</xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>  
+ L'esempio seguente usa invece il metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> per individuare rapidamente un elemento in base alla chiave.  
   
 ```vb  
 Private Sub FindInDictionary2(ByVal symbol As String)  
@@ -356,7 +348,7 @@ End Sub
 ##  <a name="using-linq-to-access-a-collection"></a>Uso di LINQ per accedere a una raccolta  
  È possibile usare LINQ (Language-Integrated Query) per accedere alle raccolte. Le query LINQ forniscono funzionalità di filtro, ordinamento e raggruppamento. Per ulteriori informazioni, vedere [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
- Nell'esempio seguente esegue una query LINQ rispetto generico `List`. La query LINQ restituisce una raccolta diversa che contiene i risultati.  
+ Nell'esempio seguente viene eseguita una query LINQ su un oggetto `List` generico. La query LINQ restituisce una raccolta diversa che contiene i risultati.  
   
 ```vb  
 Private Sub ShowLINQ()  
@@ -400,11 +392,11 @@ End Class
   
  <a name="BKMK_Sorting"></a> 
 ## <a name="sorting-a-collection"></a>Ordinamento di una raccolta  
- L'esempio seguente illustra una procedura per ordinare una raccolta. Nell'esempio consente di ordinare le istanze di `Car` (classe) che vengono archiviati in un <xref:System.Collections.Generic.List%601>.</xref:System.Collections.Generic.List%601> Il `Car` implementa il <xref:System.IComparable%601>interfaccia, che è necessario che il <xref:System.IComparable%601.CompareTo%2A>metodo essere implementato.</xref:System.IComparable%601.CompareTo%2A> </xref:System.IComparable%601>  
+ L'esempio seguente illustra una procedura per ordinare una raccolta. Nell'esempio vengono ordinate le istanze della classe `Car` archiviate in un oggetto <xref:System.Collections.Generic.List%601>. La classe `Car` implementa l'interfaccia <xref:System.IComparable%601>, che richiede l'implementazione del metodo <xref:System.IComparable%601.CompareTo%2A>.  
   
- Ogni chiamata al <xref:System.IComparable%601.CompareTo%2A>metodo effettua un confronto singolo che viene utilizzato per l'ordinamento.</xref:System.IComparable%601.CompareTo%2A> Codice scritto dall'utente di `CompareTo` metodo restituisce un valore per ogni confronto dell'oggetto corrente con un altro oggetto. Il valore restituito è minore di zero se l'oggetto corrente è inferiore all'altro oggetto, maggiore di zero se l'oggetto corrente è superiore all'altro oggetto e zero se sono uguali. In questo modo è possibile definire nel codice i criteri di maggiore, minore e uguale.  
+ Ogni chiamata al metodo <xref:System.IComparable%601.CompareTo%2A> effettua un confronto unico che viene usato per l'ordinamento. Il codice scritto dall'utente presente nel metodo `CompareTo` restituisce un valore per ogni confronto dell'oggetto corrente con un altro oggetto. Il valore restituito è minore di zero se l'oggetto corrente è inferiore all'altro oggetto, maggiore di zero se l'oggetto corrente è superiore all'altro oggetto e zero se sono uguali. In questo modo è possibile definire nel codice i criteri di maggiore, minore e uguale.  
   
- Nel `ListCars` (metodo), il `cars.Sort()` istruzione Ordina l'elenco. Questa chiamata al <xref:System.Collections.Generic.List%601.Sort%2A>metodo il <xref:System.Collections.Generic.List%601>fa sì che il `CompareTo` metodo da chiamare automaticamente per il `Car` gli oggetti il `List`.</xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.List%601.Sort%2A>  
+ Nel metodo `ListCars` l'istruzione `cars.Sort()` ordina l'elenco. Questa chiamata al metodo <xref:System.Collections.Generic.List%601.Sort%2A> di <xref:System.Collections.Generic.List%601> determina la chiamata automatica al metodo `CompareTo` per gli oggetti `Car` in `List`.  
   
 ```vb  
 Public Sub ListCars()  
@@ -478,13 +470,13 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Definizione di una raccolta personalizzata  
- È possibile definire una raccolta mediante l'implementazione di <xref:System.Collections.Generic.IEnumerable%601>o <xref:System.Collections.IEnumerable>interfaccia.</xref:System.Collections.IEnumerable> </xref:System.Collections.Generic.IEnumerable%601> Per ulteriori informazioni, vedere [enumerando una raccolta di](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
+ È possibile definire una raccolta implementando l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Per ulteriori informazioni, vedere [enumerando una raccolta di](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Sebbene sia possibile definire un insieme personalizzato, è preferibile utilizzare invece le raccolte che vengono inclusi in .NET Framework, che sono descritti in [tipi di raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) precedentemente in questo argomento.  
+ Sebbene sia possibile definire una raccolta personalizzata, in genere è preferibile usare le raccolte incluse in .NET Framework, descritte in [Tipi di raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) in precedenza in questo argomento.  
   
- Nell'esempio seguente viene definita una classe di raccolta personalizzato denominata `AllColors`. Questa classe implementa il <xref:System.Collections.IEnumerable>interfaccia, che è necessario che il <xref:System.Collections.IEnumerable.GetEnumerator%2A>metodo essere implementato.</xref:System.Collections.IEnumerable.GetEnumerator%2A> </xref:System.Collections.IEnumerable>  
+ L'esempio seguente definisce una classe di raccolte personalizzata denominata `AllColors`. Questa classe implementa l'interfaccia <xref:System.Collections.IEnumerable> che richiede l'implementazione del metodo <xref:System.Collections.IEnumerable.GetEnumerator%2A>.  
   
- Il `GetEnumerator` metodo restituisce un'istanza di `ColorEnumerator` (classe). `ColorEnumerator`implementa il <xref:System.Collections.IEnumerator>interfaccia, che è necessario che il <xref:System.Collections.IEnumerator.Current%2A>proprietà <xref:System.Collections.IEnumerator.MoveNext%2A>(metodo), e <xref:System.Collections.IEnumerator.Reset%2A>metodo essere implementato.</xref:System.Collections.IEnumerator.Reset%2A> </xref:System.Collections.IEnumerator.MoveNext%2A> </xref:System.Collections.IEnumerator.Current%2A> </xref:System.Collections.IEnumerator>  
+ Il metodo `GetEnumerator` restituisce un'istanza della classe `ColorEnumerator`. `ColorEnumerator` implementa l'interfaccia <xref:System.Collections.IEnumerator> che richiede l'implementazione della proprietà <xref:System.Collections.IEnumerator.Current%2A> e dei metodi <xref:System.Collections.IEnumerator.MoveNext%2A> e <xref:System.Collections.IEnumerator.Reset%2A>.  
   
 ```vb  
 Public Sub ListColors()  
@@ -556,13 +548,13 @@ End Class
   
 <a name="BKMK_Iterators"></a>
 ##  <a name="iterators"></a>Iteratori  
- Un *iteratore* viene utilizzato per eseguire un'iterazione personalizzata su una raccolta. Un iteratore può essere un metodo o un `get` della funzione di accesso. Un iteratore utilizza un [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per la restituzione di ogni elemento della raccolta uno alla volta.  
+ Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore Usa un [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per restituire ogni elemento della raccolta uno alla volta.  
   
- Viene chiamato un iteratore utilizzando un [For Each... Avanti](../../../visual-basic/language-reference/statements/for-each-next-statement.md) istruzione. Ogni iterazione del `For Each` ciclo chiama l'iteratore. Quando un `Yield` viene raggiunta l'istruzione nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.  
+ Per chiamare un iteratore di un [For Each... Avanti](../../../visual-basic/language-reference/statements/for-each-next-statement.md) istruzione. Ogni iterazione del ciclo `For Each` chiama l'iteratore. Quando si raggiunge un'istruzione `Yield` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.  
   
  Per ulteriori informazioni, vedere [iteratori (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).  
   
- Nell'esempio seguente viene usato un metodo iteratore. Il metodo iteratore è un `Yield` istruzione all'interno di un [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) ciclo. Nel `ListEvenNumbers` (metodo), ogni iterazione del `For Each` corpo dell'istruzione crea una chiamata al metodo iteratore, che consente di passare alla successiva `Yield` istruzione.  
+ Nell'esempio seguente viene usato un metodo iteratore. Il metodo iteratore ha un `Yield` istruzione all'interno di un [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) ciclo. Nel metodo `ListEvenNumbers` ogni iterazione del corpo dell'istruzione `For Each` crea una chiamata al metodo iteratore, che procede all'istruzione `Yield` successiva.  
   
 ```vb  
 Public Sub ListEvenNumbers()  
@@ -587,13 +579,13 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [Concetti di programmazione (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)   
- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [Parallel LINQ (PLINQ)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
- [Raccolte e strutture di dati](../../../standard/collections/index.md)   
- [Creazione e modifica delle raccolte](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
- [Selezione di una classe di raccolta](../../../standard/collections/selecting-a-collection-class.md)   
- [Confronti e ordinamenti all'interno delle raccolte](../../../standard/collections/comparisons-and-sorts-within-collections.md)   
+ [Inizializzatori di raccolta](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md) (Concetti di programmazione (Visual Basic))  
+ [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+ [Raccolte e strutture di dati](../../../standard/collections/index.md)  
+ [Creazione e modifica delle raccolte](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)  
+ [Confronti e ordinamenti all'interno delle raccolte](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Quando utilizzare raccolte generiche](../../../standard/collections/when-to-use-generic-collections.md)

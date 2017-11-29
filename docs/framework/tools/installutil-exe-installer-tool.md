@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - uninstalling server resources
 - removing server resources
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 611df94890200f442e8e2b0f5d1442eb44f25c70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8660d2c87936f6fa7a8b9b86872300911c1ae99d
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Strumento Programma di installazione)
 Lo strumento Programma di installazione è un'utilità da riga di comando che consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di assembly specificati. Questo strumento funziona insieme alle classi nello spazio dei nomi <xref:System.Configuration.Install>.  
@@ -62,7 +55,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> -oppure-<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|`/help` *assembly*<br /><br /> -oppure-<br /><br /> `/?` *assembly*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|  
+|`/help` *assembly*<br /><br /> -oppure-<br /><br /> `/?` *assembly*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Specifica il nome sicuro di un assembly, che verrà registrato nella Global Assembly Cache. Il nome dell'assembly deve essere completo, con versione, impostazioni cultura e token di chiave pubblica. Il nome completo deve essere racchiuso tra virgolette.<br /><br /> Ad esempio, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" è un nome di assembly completo.|  
 |`/InstallStateDir=[` *directoryName* `]`|Specifica la directory del file con estensione InstallState contenente i dati utilizzati per la disinstallazione dell'assembly. La directory predefinita è quella che contiene l'assembly.|  
 |`/LogFile=`[*filename*]|Specifica il nome del file di log in cui è registrato lo stato dell'installazione. Per impostazione predefinita, se l'opzione `/LogFile` viene omessa, viene creato un file di log denominato *assemblyname*.InstallLog. Se *filename* viene omesso, non verrà generato alcun file di log.|  
@@ -75,7 +68,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
  I singoli programmi di installazione usati all'interno di un assembly sono in grado di riconoscere opzioni oltre a quelle elencate nella sezione [Opzioni](#options). Per ulteriori informazioni su queste opzioni, eseguire InstallUtil.exe con i percorsi degli assembly sulla riga di comando con l'opzione `/?` o `/help`. Per specificare queste opzioni, includerle nella riga di comando con le opzioni riconosciute da InstallUtil.exe.  
   
 > [!NOTE]
->  Il testo della Guida sulle opzioni supportate da singoli componenti del programma di installazione viene restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName>. Le singole opzioni che sono state inserite nella riga di comando sono accessibili a livello di codice dalla proprietà <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=fullName>.  
+>  Il testo della Guida sulle opzioni supportate da singoli componenti del programma di installazione viene restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>. Le singole opzioni che sono state inserite nella riga di comando sono accessibili a livello di codice dalla proprietà <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>.  
   
  Tutte le opzioni e i parametri della riga di comando vengono scritti nel file di log dell'installazione. Tuttavia, se si utilizza il parametro `/Password`, che è riconosciuto da alcuni componenti del programma di installazione, le informazioni relative alla password verranno sostituite da otto asterischi (*) e non verranno visualizzate nel file di log.  
   
@@ -95,7 +88,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 -   *assemblyname*.InstallState: contiene i dati usati per disinstallare l'assembly.  
   
- Installutil.exe utilizza la reflection per esaminare gli assembly specificati e individuare tutti i tipi <xref:System.Configuration.Install.Installer> il cui attributo <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=fullName> è impostato su `true`. Lo strumento esegue quindi il metodo <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=fullName> o <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=fullName> su ciascuna istanza del tipo <xref:System.Configuration.Install.Installer>. Installutil.exe esegue l'installazione in modo transazionale: se risulta impossibile installare uno degli assembly, viene eseguito il rollback dell'installazione di tutti gli altri assembly. La disinstallazione non è invece transazionale.  
+ Installutil.exe utilizza la reflection per esaminare gli assembly specificati e individuare tutti i tipi <xref:System.Configuration.Install.Installer> il cui attributo <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=nameWithType> è impostato su `true`. Lo strumento esegue quindi il metodo <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=nameWithType> o <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=nameWithType> su ciascuna istanza del tipo <xref:System.Configuration.Install.Installer>. Installutil.exe esegue l'installazione in modo transazionale: se risulta impossibile installare uno degli assembly, viene eseguito il rollback dell'installazione di tutti gli altri assembly. La disinstallazione non è invece transazionale.  
   
  Installutil.exe può installare o disinstallare assembly con nome sicuro, ma non assembly con firma ritardata.  
   
@@ -110,7 +103,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 installutil /?  
 ```  
   
- Il comando che segue visualizza una descrizione della sintassi e delle opzioni di comando per InstallUtil.exe. Visualizza anche una descrizione e un elenco delle opzioni supportate dai componenti del programma di installazione in `myAssembly.exe` se il testo della Guida è stato assegnato alla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> del programma di installazione.  
+ Il comando che segue visualizza una descrizione della sintassi e delle opzioni di comando per InstallUtil.exe. Visualizza anche una descrizione e un elenco delle opzioni supportate dai componenti del programma di installazione in `myAssembly.exe` se il testo della Guida è stato assegnato alla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> del programma di installazione.  
   
 ```  
 installutil /? myAssembly.exe  
@@ -177,7 +170,6 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Configuration.Install>   
- [Strumenti](../../../docs/framework/tools/index.md)   
+ <xref:System.Configuration.Install>  
+ [Strumenti](../../../docs/framework/tools/index.md)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 2eb71e1d03da16581ee25bf972be51ee2f63f585
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9ca1f68b7f88c3aec08d58fc1ccba7ea082bb026
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="shadow-copying-assemblies"></a>Creazione di copie replicate di assembly
 La creazione di copie shadow consente di aggiornare gli assembly usati in un dominio applicazione senza scaricare quest'ultimo. Ciò è particolarmente utile per le applicazioni che devono essere disponibili in modo continuo, ad esempio siti ASP.NET.  
@@ -88,9 +86,8 @@ La creazione di copie shadow consente di aggiornare gli assembly usati in un dom
  La classe <xref:System.AppDomain> include diversi metodi, ad esempio <xref:System.AppDomain.SetShadowCopyFiles%2A> e <xref:System.AppDomain.ClearShadowCopyPath%2A>, che possono essere usati per controllare la creazione di copie shadow in un dominio applicazione, ma che sono stati contrassegnati come obsoleti in .NET Framework versione 2.0. Il modo consigliato per configurare un dominio applicazione per la creazione di copie shadow consiste nell'usare le proprietà della classe <xref:System.AppDomainSetup>.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=fullName>   
+ <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>  
  [\<Elemento shadowCopyVerifyByTimestamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
-

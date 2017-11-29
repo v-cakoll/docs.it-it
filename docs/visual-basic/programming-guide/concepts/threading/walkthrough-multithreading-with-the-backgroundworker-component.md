@@ -1,71 +1,63 @@
 ---
-title: Multithreading con il componente BackgroundWorker (Visual Basic) | Documenti di Microsoft
+title: Multithreading con il componente BackgroundWorker (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Procedura dettagliata: Multithreading con il componente BackgroundWorker (Visual Basic)
-Questa procedura dettagliata viene illustrato come creare un'applicazione Windows Form con multithreading che cerca un file di testo per le occorrenze di una parola. Viene illustrato come:  
+Questa procedura dettagliata spiega come creare un'applicazione Windows Form multithreading che cerca le occorrenze di una parola in un file di testo. Illustra quanto segue:  
   
--   Definizione di una classe con un metodo che può essere chiamato dal <xref:System.ComponentModel.BackgroundWorker>component.</xref:System.ComponentModel.BackgroundWorker>  
+-   Definizione di una classe con un metodo che può essere chiamato dal componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Gestione degli eventi generati dal <xref:System.ComponentModel.BackgroundWorker>component.</xref:System.ComponentModel.BackgroundWorker>  
+-   Gestione degli eventi generati dal componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Avvio di un <xref:System.ComponentModel.BackgroundWorker>componente per l'esecuzione di un metodo.</xref:System.ComponentModel.BackgroundWorker>  
+-   Avvio di un componente <xref:System.ComponentModel.BackgroundWorker> per l'esecuzione di un metodo.  
   
--   Implementazione di un `Cancel` pulsante che consente di arrestare il <xref:System.ComponentModel.BackgroundWorker>component.</xref:System.ComponentModel.BackgroundWorker>  
+-   Implementazione di un pulsante `Cancel` che arresta il componente <xref:System.ComponentModel.BackgroundWorker>.  
   
 ### <a name="to-create-the-user-interface"></a>Per creare l'interfaccia utente  
   
 1.  Aprire un nuovo progetto applicazione Windows Form di Visual Basic e creare un form denominato `Form1`.  
   
-2.  Aggiungere due pulsanti e quattro caselle di testo per `Form1`.  
+2.  Aggiungere due pulsanti e quattro caselle di testo a `Form1`.  
   
-3.  Denominare gli oggetti come illustrato nella tabella seguente.  
+3.  Assegnare i nomi agli oggetti come illustrato nella tabella seguente.  
   
     |Oggetto|Proprietà|Impostazione|  
     |------------|--------------|-------------|  
-    |Primo pulsante|`Name`, `Text`|Inizio, avvio|  
-    |Secondo pulsante|`Name`, `Text`|Annulla, Annulla|  
+    |Primo pulsante|`Name`, `Text`|Start, Start|  
+    |Secondo pulsante|`Name`, `Text`|Cancel, Cancel|  
     |Prima casella di testo|`Name`, `Text`|SourceFile, ""|  
     |Seconda casella di testo|`Name`, `Text`|CompareString, ""|  
     |Terza casella di testo|`Name`, `Text`|WordsCounted, "0"|  
     |Quarta casella di testo|`Name`, `Text`|LinesCounted, "0"|  
   
-4.  Aggiungere un'etichetta accanto a ciascuna casella di testo. Impostare il `Text` proprietà per ogni etichetta, come illustrato nella tabella seguente.  
+4.  Aggiungere un'etichetta accanto a ogni casella di testo. Impostare la proprietà `Text` per ogni etichetta come illustrato nella tabella seguente.  
   
     |Oggetto|Proprietà|Impostazione|  
     |------------|--------------|-------------|  
     |Prima etichetta|`Text`|File di origine|  
-    |Seconda etichetta|`Text`|Confronto di stringhe|  
-    |Terza etichetta|`Text`|Numero di termini corrispondenti|  
-    |Quarta etichetta|`Text`|Conteggiata righe|  
+    |Seconda etichetta|`Text`|Stringa di confronto|  
+    |Terza etichetta|`Text`|Parole corrispondenti|  
+    |Quarta etichetta|`Text`|Righe conteggiate|  
   
-### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Per creare un componente BackgroundWorker e sottoscrivere gli eventi  
+### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Per creare un componente BackgroundWorker e sottoscrivere i relativi eventi  
   
-1.  Aggiungere un <xref:System.ComponentModel.BackgroundWorker>componente il **componenti** sezione il **della casella degli strumenti** al form.</xref:System.ComponentModel.BackgroundWorker> Verrà visualizzato nella barra dei componenti del form.  
+1.  Aggiungere al form un componente <xref:System.ComponentModel.BackgroundWorker> dalla sezione **Componenti** della **casella degli strumenti**. Verrà visualizzato nella barra dei componenti del form.  
   
 2.  Impostare le proprietà seguenti per l'oggetto BackgroundWorker1.  
   
@@ -76,11 +68,11 @@ Questa procedura dettagliata viene illustrato come creare un'applicazione Window
   
 ### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>Per definire il metodo che verrà eseguito in un thread separato  
   
-1.  Dal **progetto** menu, scegliere **Aggiungi classe** per aggiungere una classe al progetto. Il **Aggiungi nuovo elemento** viene visualizzata la finestra di dialogo.  
+1.  Scegliere **Aggiungi classe** dal menu **Progetto** per aggiungere una classe al progetto. Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
   
-2.  Selezionare **classe** nella finestra dei modelli e immettere `Words.vb` nel campo nome.  
+2.  Selezionare **Classe** nella finestra dei modelli e immettere `Words.vb` nel campo del nome.  
   
-3.  Fare clic su **Aggiungi**. La `Words` classe viene visualizzata.  
+3.  Fare clic su **Aggiungi**. Viene visualizzata la classe `Words`.  
   
 4.  Aggiungere il codice seguente alla classe `Words` :  
   
@@ -173,7 +165,7 @@ Questa procedura dettagliata viene illustrato come creare un'applicazione Window
   
 ### <a name="to-handle-events-from-the-thread"></a>Per gestire gli eventi dal thread  
   
--   Aggiungere i gestori eventi seguenti al form principale:  
+-   Aggiungere i seguenti gestori eventi al form principale:  
   
     ```vb  
     Private Sub BackgroundWorker1_RunWorkerCompleted(   
@@ -207,7 +199,7 @@ Questa procedura dettagliata viene illustrato come creare un'applicazione Window
   
 ### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>Per avviare e chiamare un nuovo thread che esegue il metodo WordCount  
   
-1.  Aggiungere le seguenti procedure per il programma:  
+1.  Aggiungere le procedure seguenti al programma:  
   
     ```vb  
     Private Sub BackgroundWorker1_DoWork(   
@@ -241,7 +233,7 @@ Questa procedura dettagliata viene illustrato come creare un'applicazione Window
     End Sub  
     ```  
   
-2.  Chiamare il `StartThread` dal metodo di `Start` pulsante nel form:  
+2.  Chiamare il metodo `StartThread` dal pulsante `Start` nel form:  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -251,7 +243,7 @@ Questa procedura dettagliata viene illustrato come creare un'applicazione Window
   
 ### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>Per implementare un pulsante Annulla che interrompe il thread  
   
--   Chiamare il `StopThread` procedura il `Click` gestore eventi per il `Cancel` pulsante.  
+-   Chiamare la procedura`StopThread` dal gestore eventi `Click` per il pulsante `Cancel`.  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -261,30 +253,30 @@ Questa procedura dettagliata viene illustrato come creare un'applicazione Window
     ```  
   
 ## <a name="testing"></a>Test  
- È ora possibile testare l'applicazione per assicurarsi che funzioni correttamente.  
+ È ora possibile testare l'applicazione per verificare che funzioni correttamente.  
   
 #### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
   
 1.  Premere F5 per eseguire l'applicazione.  
   
-2.  Quando viene visualizzato il modulo, immettere il percorso del file per il file che si desidera testare il `sourceFile` casella. Ad esempio, supponendo che il file di test è denominato test. txt, immettere c:\test.txt..  
+2.  Quando viene visualizzato il form immettere il percorso del file da testare nella casella `sourceFile`. Ad esempio, se il file di test è denominato Test.txt, immettere C:\Test.txt.  
   
-3.  Nella seconda casella di testo, immettere una parola o frase per l'applicazione per la ricerca nel file di testo.  
+3.  Nella seconda casella di testo immettere una parola o frase per l'applicazione da cercare nel file di testo.  
   
-4.  Fare clic sul pulsante `Start`. Il `LinesCounted` pulsante dovrebbe iniziare immediatamente. L'applicazione visualizza il messaggio "Terminata Counting" è terminato.  
+4.  Fare clic sul pulsante `Start`. Il pulsante `LinesCounted` dovrebbe iniziare immediatamente ad aumentare. Al termine l'applicazione visualizza un messaggio che indica che il conteggio è terminato.  
   
 #### <a name="to-test-the-cancel-button"></a>Per testare il pulsante Annulla  
   
-1.  Premere F5 per avviare l'applicazione e immettere il file nome e la ricerca come descritto nella procedura precedente. Assicurarsi che il file che scelto è sufficientemente elevato da garantire che essere in grado di annullare la procedura prima del completamento.  
+1.  Premere F5 per avviare l'applicazione e immettere il nome del file e la parola di ricerca come descritto nella procedura precedente. Verificare che il file che scelto sia abbastanza grande da garantire di avere tempo a sufficienza per annullare la procedura prima che venga completata.  
   
-2.  Fare clic sul `Start` pulsante per avviare l'applicazione.  
+2.  Fare clic sul pulsante `Start` per avviare l'applicazione.  
   
-3.  Fare clic sul pulsante `Cancel`. Il conteggio dovrebbe arrestarsi immediatamente.  
+3.  Fare clic sul pulsante `Cancel`. L'applicazione deve interrompere immediatamente il conteggio.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Questa applicazione contiene alcune gestione degli errori di base. Rileva le stringhe di ricerca vuoto. È possibile rendere più affidabile questo programma tramite la gestione di altri errori, ad esempio il superamento del numero massimo di parole o le righe che possono essere conteggiate.  
+ Questa applicazione contiene alcune operazioni di base per la gestione degli errori. Rileva le stringhe di ricerca vuote. È possibile rendere più efficace questo aggiungendo la gestione di altri errori, ad esempio il superamento del numero massimo di parole o righe che possono essere conteggiate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [Procedura dettagliata: Creazione di componenti multithreading semplici con Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
+ [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [Procedura dettagliata: Creazione di un componente semplice multithreading con Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [Procedura: Eseguire e annullare la sottoscrizione a eventi](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

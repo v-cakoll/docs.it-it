@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="working-with-linq"></a>Uso di LINQ
 
 ## <a name="introduction"></a>Introduzione
@@ -277,7 +275,7 @@ Si noti che la registrazione non viene eseguita ogni volta che si accede a una q
 
 Esiste un modo semplice per aggiornare il programma ed evitare tutte queste esecuzioni. I metodi LINQ `ToArray()` e `ToList()` consentono di eseguire la query e di memorizzare i risultati rispettivamente in una matrice e in un elenco. Sono quindi utili per memorizzare nella cache i risultati di una query evitando così di ripetere la query di origine.  Aggiungere una chiamata a `ToArray()` alle query che generano i mazzi di carte ed eseguire nuovamente la query:
 
-[!CODE-csharp[Principale](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 In questo modo, il numero di query si ridurrà a 30. Eseguire nuovamente il programma per mischiare anche le carte esterne e si noteranno miglioramenti analoghi. Il totale delle query sarà infatti 162.
 
@@ -334,4 +332,3 @@ Compilare e ripetere l'esecuzione. L'output è un po' più pulito e il codice è
 Questo esempio ha illustrato alcuni dei metodi usati in LINQ e come creare metodi personalizzati da usare facilmente con il codice abilitato per LINQ. Ha inoltre mostrato le differenze tra le modalità di valutazione lazy e eager e l'effetto che può avere tale decisione sulle prestazioni.
 
 Ha spiegato anche alcuni aspetti di una delle tecniche di cartomagia. I prestigiatori usano il miscuglio faro perché possono controllare lo spostamento di ogni carta nel mazzo. In alcuni trucchi, il prestigiatore chiede a una persona del pubblico di mettere una carta all'inizio del mazzo e mischia il mazzo più volte senza mai perdere di vista la posizione della carta. Per altri trucchi di illusionismo il mazzo di carte deve essere impostato in un certo modo. Il prestigiatore ordina il mazzo prima di eseguire il trucco e quindi mischia cinque volte le carte interne al mazzo. In uno spettacolo, può mostrare un mazzo apparentemente ordinato in maniera casuale, mischiare le carte tre volte e infine ottenere un mazzo con le carte disposte esattamente nel modo desiderato.
-

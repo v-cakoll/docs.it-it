@@ -2,8 +2,7 @@
 title: Tipi di enumerazione (Guida per programmatori C#)
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -11,15 +10,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
-ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
-ms.contentlocale: it-it
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipi di enumerazione (Guida per programmatori C#)
 
@@ -68,7 +66,7 @@ Se la variabile `meetingDay` è di tipo `Day`, è possibile assegnare (senza un 
 
 È possibile usare un tipo di enumerazione per definire flag di bit, che consentono a un'istanza del tipo di enumerazione di archiviare qualsiasi combinazione dei valori definiti nell'elenco di enumeratori. Naturalmente alcune combinazioni potrebbero non essere significative o consentite nel codice del programma.
 
-Un enum di flag di bit viene creato applicando l'attributo <xref:System.FlagsAttribute?displayProperty=fullName> e definendo in modo appropriato i valori in modo che sia possibile eseguirvi operazioni bit per bit `AND`, `OR`, `NOT` e `XOR`. In un enum di flag di bit, includere una costante denominata con valore zero, che indica che non sono impostati flag. Assegnare a un flag un valore pari a zero solo per indicare che non sono impostati flag.
+Un enum di flag di bit viene creato applicando l'attributo <xref:System.FlagsAttribute?displayProperty=nameWithType> e definendo in modo appropriato i valori in modo che sia possibile eseguirvi operazioni bit per bit `AND`, `OR`, `NOT` e `XOR`. In un enum di flag di bit, includere una costante denominata con valore zero, che indica che non sono impostati flag. Assegnare a un flag un valore pari a zero solo per indicare che non sono impostati flag.
 
 Nell'esempio seguente viene definita un'altra versione dell'enum `Day` denominata `Days`. `Days` dispone dell'attributo `Flags`. A ogni valore viene assegnata la successiva potenza di 2. In questo modo è possibile creare una variabile `Days` il cui valore è `Days.Tuesday | Days.Thursday`.
 
@@ -82,20 +80,19 @@ Per determinare se un flag specifico è impostato, usare l'operatore `AND` bit p
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-Per altre informazioni sugli aspetti da considerare quando si definiscono tipi di enumerazione con l'attributo <xref:System.FlagsAttribute?displayProperty=fullName>, vedere <xref:System.Enum?displayProperty=fullName>.
+Per altre informazioni sugli aspetti da considerare quando si definiscono tipi di enumerazione con l'attributo <xref:System.FlagsAttribute?displayProperty=nameWithType>, vedere <xref:System.Enum?displayProperty=nameWithType>.
 
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Uso dei metodi System.Enum per individuare e modificare valori enum
 
-Tutti gli enum sono istanze del tipo <xref:System.Enum?displayProperty=fullName>. Non è possibile derivare nuove classi da <xref:System.Enum?displayProperty=fullName>, ma è possibile usarne i metodi per individuare informazioni e modificare valori in un'istanza dell'enum.
+Tutti gli enum sono istanze del tipo <xref:System.Enum?displayProperty=nameWithType>. Non è possibile derivare nuove classi da <xref:System.Enum?displayProperty=nameWithType>, ma è possibile usarne i metodi per individuare informazioni e modificare valori in un'istanza dell'enum.
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-Per altre informazioni, vedere <xref:System.Enum?displayProperty=fullName>.
+Per altre informazioni, vedere <xref:System.Enum?displayProperty=nameWithType>.
 
 È anche possibile creare un nuovo metodo per un enum tramite un metodo di estensione. Per altre informazioni, vedere [Procedura: Creare un nuovo metodo per una enumerazione (Guida per programmatori C#)](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Vedere anche
- <xref:System.Enum?displayProperty=fullName>   
- [Guida per programmatori C#](../../csharp/programming-guide/index.md)   
+ <xref:System.Enum?displayProperty=nameWithType>  
+ [Guida per programmatori C#](../../csharp/programming-guide/index.md)  
  [enum](../../csharp/language-reference/keywords/enum.md)
-

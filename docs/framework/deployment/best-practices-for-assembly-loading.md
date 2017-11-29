@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - assemblies,binding
 - LoadFrom method
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 302be9cafc0fd2ef327767cbf1178d4927757d2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d8fe9ae599f8a8470a85000bc23823d66ef0c8ca
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedure consigliate per il caricamento di assembly
 Questo articolo illustra come evitare problemi di identità del tipo che possono causare eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori. Nell'articolo vengono discussi i seguenti suggerimenti:  
@@ -57,7 +50,7 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
 -   Il contesto di caricamento di default contiene gli assembly rilevati mediante l'esecuzione di probe nella Global Assembly Cache, nello store di assembly dell'host se il runtime è gestito tramite host (ad esempio in SQL Server) e in <xref:System.AppDomainSetup.ApplicationBase%2A> e <xref:System.AppDomainSetup.PrivateBinPath%2A> nel dominio dell'applicazione. La maggior parte degli overload del metodo <xref:System.Reflection.Assembly.Load%2A> carica gli assembly in questo contesto.  
   
--   Il contesto di origine del caricamento contiene assembly caricati da percorsi nei quali il caricatore non esegue ricerche. Ad esempio i componenti aggiuntivi potrebbero essere installati in una directory che non si trova nel percorso dell'applicazione. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> e <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> sono esempi di metodi che vengono caricati in base al percorso.  
+-   Il contesto di origine del caricamento contiene assembly caricati da percorsi nei quali il caricatore non esegue ricerche. Ad esempio i componenti aggiuntivi potrebbero essere installati in una directory che non si trova nel percorso dell'applicazione. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> e <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> sono esempi di metodi che vengono caricati in base al percorso.  
   
 -   Il contesto Reflection-Only contiene assembly caricati con i metodi <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. Il codice in questo contesto non può essere eseguito, pertanto non viene discusso in questo argomento. Per altre informazioni, vedere [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
@@ -77,7 +70,7 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
 ### <a name="load-from-context"></a>Contesto di origine del caricamento  
  Il contesto di origine del caricamento consente di caricare un assembly da un percorso esterno al percorso dell'applicazione e pertanto non incluso nell'esecuzione del probe. Consente il rilevamento e il caricamento delle dipendenze da tale percorso, perché le informazioni del percorso sono gestite dal contesto. Inoltre gli assembly in questo contesto possono usare le dipendenze caricate nel contesto di caricamento predefinito.  
   
- Il caricamento di assembly con il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> o uno degli altri metodi di caricamento in base al percorso presenta i seguenti svantaggi:  
+ Il caricamento di assembly con il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> o uno degli altri metodi di caricamento in base al percorso presenta i seguenti svantaggi:  
   
 -   Se è già caricato un assembly con la stessa identità <xref:System.Reflection.Assembly.LoadFrom%2A> restituisce l'assembly caricato anche se è stato specificato un percorso diverso.  
   
@@ -85,7 +78,7 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
 -   Se un assembly viene caricato con <xref:System.Reflection.Assembly.LoadFrom%2A> e il percorso di esecuzione del probe include un assembly con la stessa identità ma situato in un percorso diverso possono verificarsi eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> o altri comportamenti imprevisti.  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A> richiede <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=fullName> e <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=fullName> o <xref:System.Net.WebPermission> per il percorso specificato.  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A> richiede <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> e <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> o <xref:System.Net.WebPermission> per il percorso specificato.  
   
 -   Se esiste un'immagine nativa per l'assembly tale immagine non viene usata.  
   
@@ -100,9 +93,9 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
  Il caricamento di assembly senza contesto presenta i seguenti svantaggi:  
   
--   Gli altri assembly non possono essere associati agli assembly caricati senza contesto, a meno che non si gestisca l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
+-   Gli altri assembly non possono essere associati agli assembly caricati senza contesto, a meno che non si gestisca l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
--   Le dipendenze non vengono caricate automaticamente. È possibile precaricarle senza contesto, precaricarle nel contesto di caricamento predefinito o caricarle tramite la gestione dell'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
+-   Le dipendenze non vengono caricate automaticamente. È possibile precaricarle senza contesto, precaricarle nel contesto di caricamento predefinito o caricarle tramite la gestione dell'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
 -   Il caricamento di più assembly con la stessa identità senza contesto può causare problemi di identità del tipo simili a quelli causati dal caricamento di assembly con la stessa identità in più contesti. Vedere [Evitare il caricamento di un assembly in più contesti](#avoid_loading_into_multiple_contexts).  
   
@@ -114,11 +107,11 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
 <a name="avoid_partial_names"></a>   
 ## <a name="avoid-binding-on-partial-assembly-names"></a>Evitare l'associazione di nomi di assembly parziali  
- L'associazione di un nome parziale si verifica quando al caricamento di un assembly si specifica solo una parte del nome visualizzato dell'assembly (<xref:System.Reflection.Assembly.FullName%2A>). Ad esempio è possibile chiamare il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> solo con il nome semplice dell'assembly, omettendo la versione, le impostazioni cultura e il token di chiave pubblica. Oppure è possibile chiamare il metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> il quale prima chiama il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>, quindi se questo non individua l'assembly esegue una ricerca nella Global Assembly Cache e carica la versione disponibile più recente dell'assembly.  
+ L'associazione di un nome parziale si verifica quando al caricamento di un assembly si specifica solo una parte del nome visualizzato dell'assembly (<xref:System.Reflection.Assembly.FullName%2A>). Ad esempio è possibile chiamare il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> solo con il nome semplice dell'assembly, omettendo la versione, le impostazioni cultura e il token di chiave pubblica. Oppure è possibile chiamare il metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> il quale prima chiama il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, quindi se questo non individua l'assembly esegue una ricerca nella Global Assembly Cache e carica la versione disponibile più recente dell'assembly.  
   
  L'associazione di nomi parziali può causare numerosi problemi, inclusi i seguenti:  
   
--   Il metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> potrebbe caricare un assembly diverso con lo stesso nome semplice. Ad esempio è possibile che due applicazioni installino nella Global Assembly Cache due assembly completamente diversi che hanno lo stesso nome semplice `GraphicsLibrary`.  
+-   Il metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> potrebbe caricare un assembly diverso con lo stesso nome semplice. Ad esempio è possibile che due applicazioni installino nella Global Assembly Cache due assembly completamente diversi che hanno lo stesso nome semplice `GraphicsLibrary`.  
   
 -   L'assembly realmente caricato potrebbe non essere compatibile con le versioni precedenti. Ad esempio se non si specifica la versione potrebbe essere caricata una versione di molto successiva a quella che il programma doveva usare in origine. Le modifiche presenti nella versione successiva potrebbero causare errori nell'applicazione.  
   
@@ -128,7 +121,7 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
 -   Può verificarsi il caricamento imprevisto di dipendenze. Se si caricano due assembly che condividono una dipendenza, il caricamento con associazione parziale può far sì che un assembly usi un componente con il quale non è stato compilato né testato.  
   
- Per i problemi che può causare, il metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A> è stato contrassegnato come obsoleto. Si consiglia di usare il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> e di specificare i nomi visualizzati degli assembly completi. Vedere [Comprendere i vantaggi e gli svantaggi dei contesti di caricamento](#load_contexts) e [Considerare il passaggio al contesto di caricamento predefinito](#switch_to_default).  
+ Per i problemi che può causare, il metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A> è stato contrassegnato come obsoleto. Si consiglia di usare il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e di specificare i nomi visualizzati degli assembly completi. Vedere [Comprendere i vantaggi e gli svantaggi dei contesti di caricamento](#load_contexts) e [Considerare il passaggio al contesto di caricamento predefinito](#switch_to_default).  
   
  Se si vuole usare il metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A> perché semplifica il caricamento degli assembly, tenere presente che l'interruzione del funzionamento dell'applicazione con un messaggio di errore che identifica l'assembly mancante è probabilmente un'esperienza utente migliore all'uso automatico di una versione sconosciuta dell'assembly, che potrebbe causare comportamenti imprevedibili e problemi di sicurezza.  
   
@@ -140,7 +133,7 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
  Si consideri ora cosa accade quando viene eseguito il programma. Gli assembly ai quali fa riferimento il programma vengono caricati nel contesto di caricamento predefinito. Se si carica un assembly di destinazione in base all'identità con il metodo <xref:System.Reflection.Assembly.Load%2A>, l'assembly e le relative dipendenze vengono caricati nel contesto di caricamento predefinito. Sia il programma sia l'assembly di destinazione useranno lo stesso assembly `Utility`.  
   
- Si supponga tuttavia di caricare l'assembly di destinazione in base al percorso del file, usando il metodo <xref:System.Reflection.Assembly.LoadFile%2A>. L'assembly viene caricato senza contesto, pertanto le relative dipendenze non vengono caricate automaticamente. Si potrebbe disporre di un gestore per l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> per fornire la dipendenza e caricare l'assembly `Utility` senza contesto mediante il metodo <xref:System.Reflection.Assembly.LoadFile%2A>. Ora quando si crea un'istanza di un tipo incluso nell'assembly di destinazione e si tenta di assegnarla a una variabile di tipo `ICommunicate` viene restituita un'eccezione <xref:System.InvalidCastException> perché il runtime considera le interfacce `ICommunicate` nelle due copie dell'assembly `Utility` come tipi diversi.  
+ Si supponga tuttavia di caricare l'assembly di destinazione in base al percorso del file, usando il metodo <xref:System.Reflection.Assembly.LoadFile%2A>. L'assembly viene caricato senza contesto, pertanto le relative dipendenze non vengono caricate automaticamente. Si potrebbe disporre di un gestore per l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per fornire la dipendenza e caricare l'assembly `Utility` senza contesto mediante il metodo <xref:System.Reflection.Assembly.LoadFile%2A>. Ora quando si crea un'istanza di un tipo incluso nell'assembly di destinazione e si tenta di assegnarla a una variabile di tipo `ICommunicate` viene restituita un'eccezione <xref:System.InvalidCastException> perché il runtime considera le interfacce `ICommunicate` nelle due copie dell'assembly `Utility` come tipi diversi.  
   
  Esistono molti altri scenari in cui un assembly può essere caricato in più contesti. L'approccio migliore consiste nell'evitare conflitti riposizionando l'assembly di destinazione nel percorso dell'applicazione e usando il metodo <xref:System.Reflection.Assembly.Load%2A> con il nome visualizzato completo. L'assembly viene così caricato nel contesto di caricamento predefinito ed entrambi gli assembly usano lo stesso assembly `Utility`.  
   
@@ -154,13 +147,13 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
  Ad esempio il programma potrebbe caricare immediatamente una versione dell'assembly `Utility` e in seguito caricare un altro assembly che carica una versione diversa dell'assembly `Utility`. Oppure un errore di codifica potrebbe far sì che due percorsi di codice diversi dell'applicazione carichino versioni diverse di un assembly.  
   
- Nel contesto di caricamento predefinito questo problema può verificarsi quando si usa il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> e si specificano nomi visualizzati degli assembly completi che includono numeri di versione diversi. Per gli assembly caricati senza contesto, il problema può essere causato dall'uso del metodo <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName> per caricare lo stesso assembly da percorsi diversi. Il runtime considera due assembly caricati da percorsi diversi come assembly diversi, anche se le loro identità sono uguali.  
+ Nel contesto di caricamento predefinito questo problema può verificarsi quando si usa il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e si specificano nomi visualizzati degli assembly completi che includono numeri di versione diversi. Per gli assembly caricati senza contesto, il problema può essere causato dall'uso del metodo <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> per caricare lo stesso assembly da percorsi diversi. Il runtime considera due assembly caricati da percorsi diversi come assembly diversi, anche se le loro identità sono uguali.  
   
  Oltre ai problemi di identità del tipo, più versioni di un assembly possono causare un'eccezione <xref:System.MissingMethodException> se un tipo caricato da una determinata versione dell'assembly viene passato a codice che prevede di ricevere quel tipo da una versione diversa. Ad esempio il codice potrebbe prevedere un metodo aggiunto alla versione successiva.  
   
  Errori più insidiosi possono verificarsi se il comportamento del tipo è cambiato da una versione all'altra. Ad esempio un metodo potrebbe generare un'eccezione imprevista o restituire un valore imprevisto.  
   
- Esaminare attentamente il codice per garantire che sia caricata una sola versione di un assembly. È possibile usare il metodo <xref:System.AppDomain.GetAssemblies%2A?displayProperty=fullName> per determinare quali assembly vengono caricati in un determinato momento.  
+ Esaminare attentamente il codice per garantire che sia caricata una sola versione di un assembly. È possibile usare il metodo <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> per determinare quali assembly vengono caricati in un determinato momento.  
   
 <a name="switch_to_default"></a>   
 ## <a name="consider-switching-to-the-default-load-context"></a>Considerare il passaggio al contesto di caricamento predefinito  
@@ -175,14 +168,13 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
  L'inserimento degli assembly nella Global Assembly Cache consente di sfruttare il vantaggio di un percorso dell'assembly condiviso al di fuori della base dell'applicazione, senza rinunciare ai vantaggi del contesto di caricamento predefinito né avere gli svantaggi degli altri contesti.  
   
 ### <a name="consider-using-application-domains"></a>Considerare l'uso dei domini applicazione  
- Se risulta impossibile distribuire alcuni assembly nel percorso di esecuzione del probe dell'applicazione, considerare la possibilità di creare di un nuovo dominio applicazione per tali assembly. Usare un oggetto <xref:System.AppDomainSetup> per creare il nuovo dominio applicazione e la proprietà <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName> per specificare il percorso che contiene gli assembly da caricare. Se è necessario eseguire il probe in più directory, è possibile impostare <xref:System.AppDomainSetup.ApplicationBase%2A> su una directory radice e usare la proprietà <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> per identificare le sottodirectory in cui eseguire il probe. In alternativa è possibile creare più domini applicazione e impostare la proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> di ogni dominio sul percorso appropriato per gli assembly.  
+ Se risulta impossibile distribuire alcuni assembly nel percorso di esecuzione del probe dell'applicazione, considerare la possibilità di creare di un nuovo dominio applicazione per tali assembly. Usare un oggetto <xref:System.AppDomainSetup> per creare il nuovo dominio applicazione e la proprietà <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> per specificare il percorso che contiene gli assembly da caricare. Se è necessario eseguire il probe in più directory, è possibile impostare <xref:System.AppDomainSetup.ApplicationBase%2A> su una directory radice e usare la proprietà <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=nameWithType> per identificare le sottodirectory in cui eseguire il probe. In alternativa è possibile creare più domini applicazione e impostare la proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> di ogni dominio sul percorso appropriato per gli assembly.  
   
- Per caricare questi assembly è possibile usare il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>. Dal momento che ora si trovano nel percorso di esecuzione del probe, verranno caricati nel contesto di caricamento predefinito anziché nel contesto di origine del caricamento. Tuttavia è consigliabile passare al metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> e fornire i nomi visualizzati degli assembly completi per assicurare che vengano sempre usate versioni corrette.  
+ Per caricare questi assembly è possibile usare il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. Dal momento che ora si trovano nel percorso di esecuzione del probe, verranno caricati nel contesto di caricamento predefinito anziché nel contesto di origine del caricamento. Tuttavia è consigliabile passare al metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e fornire i nomi visualizzati degli assembly completi per assicurare che vengano sempre usate versioni corrette.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName>   
- <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>   
+ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
  [Componenti aggiuntivi ed estendibilità](../../../docs/framework/add-ins/index.md)
-

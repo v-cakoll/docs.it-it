@@ -14,30 +14,27 @@ helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-caps.latest.revision: 19
+caps.latest.revision: "19"
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e67fff19c4b187010b35519081f46e11effbad6c
+ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/25/2017
 ---
-
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilità delle applicazioni in .NET Framework
 
 ## <a name="introduction"></a>Introduzione
-
 La compatibilità è un obiettivo molto importante di ogni versione di .NET, perché garantisce che ogni versione venga aggiunta alle precedenti, che pertanto continuano a funzionare. D'altra parte, quando codice o applicazioni esistenti vengono eseguiti in una versione successiva, le modifiche apportate alle funzionalità precedenti per migliorare le prestazioni, risolvere i problemi di sicurezza o correggere i bug possono causare problemi di compatibilità. In .NET Framework esiste la distinzione tra modifiche di ridestinazione e modifiche di runtime. Le modifiche di ridestinazione interessano le applicazioni destinate a una versione specifica di .NET Framework ma che vengono eseguite in una versione successiva. Le modifiche di runtime interessano tutte le applicazioni in esecuzione in una versione specifica.
 
 Ogni app è destinata a una versione specifica di .NET Framework, che può essere indicata tramite le azioni seguenti:
 
-- Definizione di un framework di destinazione in Visual Studio.
-- Indicazione del framework di destinazione in un file di progetto.
-- Applicazione di un <xref:System.Runtime.Versioning.TargetFrameworkAttribute> al codice sorgente.
+* Definizione di un framework di destinazione in Visual Studio.
+* Indicazione del framework di destinazione in un file di progetto.
+* Applicazione di un <xref:System.Runtime.Versioning.TargetFrameworkAttribute> al codice sorgente.
 
 Durante l'esecuzione in una versione più recente di quella di destinazione, .NET Framework simula la versione di destinazione precedente adottando un comportamento anomalo. In altre parole, l'app viene eseguita nella versione più recente di .NET Framework, ma si comporta come se fosse in esecuzione nella versione precedente. Questo modello di comportamento consente di attenuare molti problemi di compatibilità tra versioni diverse di .NET Framework.
 
@@ -82,16 +79,14 @@ Per ogni problema sono incluse le informazioni seguenti:
 -   ID delle diagnostiche disponibili
 
 ## <a name="usage"></a>Utilizzo
-
 Per iniziare, selezionare il tipo di modifica della compatibilità di seguito:
 
-- [Modifiche di reindirizzamento](./retargeting/index.md)
-- [Modifiche al runtime](./runtime/index.md)
+* [Modifiche di reindirizzamento](./retargeting/index.md)
+* [Modifiche al runtime](./runtime/index.md)
 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Versioni e dipendenze](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
-[Novità](../../../docs/framework/whats-new/index.md)   
-[Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)
-
+* [Versioni e dipendenze](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+* [Novità](../../../docs/framework/whats-new/index.md)
+* [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)

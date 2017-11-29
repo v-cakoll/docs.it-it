@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="hosting-net-core"></a>Hosting di .NET Core
 
 Come tutto il codice gestito, le applicazioni .NET Core sono eseguite da un host. L'host è responsabile dell'avvio del runtime, inclusi i componenti come JIT e Garbage Collector, della creazione di AppDomain e della chiamata dei punti di ingresso gestiti.
@@ -147,4 +145,3 @@ Dopo aver compilato l'host, è possibile testarlo eseguendolo dalla riga di coma
 Se si verifica un malfunzionamento inizialo, verificare che *coreclr.dll* sia disponibile nel percorso previsto dall'host, che tutte le librerie Framework necessarie siano incluse nell'elenco TPA e che il numero di bit (32 o 64) di CoreCLR corrisponda alla modalità di compilazione dell'host.
 
 Sebbene rappresenti uno scenario avanzato che molti sviluppatori non richiedono, l'hosting del runtime di .NET Core può essere molto utile per gli sviluppatori che devono avviare codice gestito da un processo nativo o che necessitano di maggior controllo sul comportamento del runtime di .NET Core. Poiché .NET Core può essere eseguito side-by-side, è possibile creare host che inizializzano e avviano più versioni del runtime di .NET Core ed eseguono le app in tutte le versioni nello stesso processo. 
-

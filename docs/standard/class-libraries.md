@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-class-libraries"></a>Librerie di classi .NET
 
 Le librerie di classi rappresentano il concetto di [libreria condivisa](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) di .NET. Consentono di componentizzare funzionalità utili in moduli che possono essere usati da più applicazioni. Possono anche servire per caricare le funzionalità non necessarie o sconosciute all'avvio dell'applicazione. Le librerie di classi vengono descritte con il [formato di file assembly .NET](assembly-format.md).
@@ -63,4 +61,3 @@ Le piattaforme seguenti supportano le librerie di .NET Standard:
 ### <a name="mono-class-libraries"></a>Librerie di classi Mono
 
 Mono supporta le librerie di classi, inclusi i tre tipi di libreria descritti in precedenza. A ragione, Mono è stato spesso considerato un'implementazione multipiattaforma di Microsoft .NET Framework. In parte perché le librerie .NET Framework specifiche della piattaforma potevano essere eseguite in fase di esecuzione Mono senza modifiche o ricompilazione. Questa caratteristica esisteva prima che fossero create le librerie di classi portabili. Tali librerie risultano quindi una scelta obbligata per consentire la portabilità binaria tra .NET Framework e Mono, nonostante funzionasse solo in una direzione.
-

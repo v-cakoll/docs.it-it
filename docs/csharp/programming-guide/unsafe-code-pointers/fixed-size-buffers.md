@@ -1,40 +1,22 @@
 ---
 title: Buffer a dimensione fissa (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
 ms.assetid: 6220d454-947c-4977-ac9d-9308c6ed5051
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3f99c2c6d477fca988fcca77de5ca5c2f8addd4d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e1a3dcf953cb56fc3436fdd5e7ecb60478a12922
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffer a dimensione fissa (Guida per programmatori C#)
 In C# è possibile usare l'istruzione [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) per creare un buffer con una matrice di dimensioni fisse in una struttura di dati. Ciò si rivela utile quando si usa codice esistente, ad esempio codice scritto in altri linguaggi, DLL preesistenti o progetti COM. La matrice fissa può accettare attributi o modificatori consentiti per i membri struct normali. L'unica restrizione è rappresentata dal fatto che il tipo di matrice deve essere `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float` o `double`.  
@@ -50,11 +32,11 @@ private fixed char name[30];
   
  Ad esempio, prima di C# 2.0, lo struct `struct` seguente avrebbe avuto una dimensione di 8 byte. La matrice `pathName` è un riferimento alla matrice con allocazione heap:  
   
- [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
+ [!code-csharp[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
   
  A partire da C# 2.0, un oggetto `struct` può contenere una matrice incorporata. Nell'esempio seguente la matrice `fixedBuffer` è di dimensioni fisse. Per accedere agli elementi della matrice, si usa un'istruzione `fixed` per definire un puntatore al primo elemento. L'istruzione `fixed` blocca un'istanza di `fixedBuffer` a un percorso specifico nella memoria.  
   
- [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
+ [!code-csharp[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
  Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../../csharp/language-reference/keywords/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.  
   
@@ -74,8 +56,7 @@ private fixed char name[30];
 -   I buffer unsafe possono essere solo campi di istanza di struct in un contesto unsafe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Codice di tipo unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [Interoperabilità](../../../csharp/programming-guide/interop/index.md)
-

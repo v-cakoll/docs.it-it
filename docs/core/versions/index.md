@@ -8,12 +8,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: HT
-ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
 ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-core-versioning"></a>Controllo delle versioni di .NET Core
 
@@ -255,4 +254,3 @@ I diversi metapacchetti vengono aggiornati in modo che facciano riferimento ai p
 [Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)   
 [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)  (Scheda informativa sul ciclo di supporto per .NET Core)  
 [Associazione della versione di .NET core 2+](https://github.com/dotnet/designs/issues/3)   
-

@@ -8,11 +8,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: c2b267562f78b359d5ceaa696ff9a9bdcffa5821
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: ff7cd60619f8583376442c202f27a4309790fff8
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="introduction-to-classes"></a>Introduzione alle classi
 
@@ -149,7 +150,7 @@ Viene così introdotto il concetto di ***eccezioni***. Il modo standard per indi
 
 [!code-csharp[DepositAndWithdrawal](../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
 
-L'istruzione [`throw`](../language-reference/throw.md) **genera** un'eccezione. L'esecuzione del metodo corrente termina e riprende quando viene riscontrato un blocco `catch` corrispondente. Più avanti si aggiungerà un blocco `catch` per testare questo codice.
+L'istruzione [`throw`](../language-reference/keywords/throw.md) **genera** un'eccezione. L'esecuzione del metodo corrente termina e riprende quando viene riscontrato un blocco `catch` corrispondente. Più avanti si aggiungerà un blocco `catch` per testare questo codice.
 
 Il costruttore deve ottenere una modifica in modo da aggiungere una transazione iniziale, invece di aggiornare direttamente il saldo. Dato che il metodo `MakeDeposit` è già stato scritto, chiamarlo dal costruttore. Il costruttore completato dovrebbe essere simile al seguente:
 

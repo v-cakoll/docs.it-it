@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: d143798c4344b385d954cc64bd63c8f81eb48750
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d9e8b5858f115e8aaf16861d37a49c18c3bf22b8
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemi di sicurezza nella reflection emit
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce tre modalità per creare codice Microsoft Intermediate Language (MSIL), ciascuna con specifici problemi di sicurezza:  
@@ -46,7 +44,7 @@ ms.lasthandoff: 07/28/2017
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Assembly dinamici  
- Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=fullName>. La maggior parte degli overload di questo metodo sono deprecati in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a causa dell'eliminazione dei criteri di sicurezza a livello di computer. Vedere [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
+ Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La maggior parte degli overload di questo metodo sono deprecati in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a causa dell'eliminazione dei criteri di sicurezza a livello di computer. Vedere [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
   
 > [!NOTE]
 >  Gli attributi applicati all'assembly dinamico dopo averlo creato mediante il metodo <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> non sono effettivi fino a quando l'assembly non viene salvato su disco e caricato di nuovo in memoria.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 07/28/2017
  Il codice in un assembly dinamico può accedere a tipi e membri visibili in altri assembly.  
   
 > [!NOTE]
->  Gli assembly dinamici non usano i flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> e <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> che consentono ai metodi dinamici di accedere a tipi e membri non pubblici.  
+>  Gli assembly dinamici non usano i flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> e <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> che consentono ai metodi dinamici di accedere a tipi e membri non pubblici.  
   
  Gli assembly dinamici temporanei vengono creati in memoria e non vengono mai salvati su disco, pertanto non richiedono alcuna autorizzazione di accesso ai file. Il salvataggio di un assembly dinamico su disco richiede <xref:System.Security.Permissions.FileIOPermission> con flag appropriati.  
   
@@ -76,26 +74,26 @@ ms.lasthandoff: 07/28/2017
  Al contrario, quando viene creato un metodo dinamico ospitato anonimamente, viene acquisito lo stack di chiamate. Quando il metodo viene costruito, le richieste di sicurezza vengono effettuate sullo stack di chiamate acquisito.  
   
 > [!NOTE]
->  Concettualmente, le richieste vengono effettuate durante la costruzione del metodo. In altre parole, le richieste potrebbero essere effettuate durante la creazione delle singole istruzioni MSIL. Nell'implementazione corrente tutte le richieste vengono effettuate quando il metodo <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=fullName> viene chiamato o quando viene richiamato il compilatore Just-In-Time (JIT), se il metodo viene richiamato senza chiamare <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
+>  Concettualmente, le richieste vengono effettuate durante la costruzione del metodo. In altre parole, le richieste potrebbero essere effettuate durante la creazione delle singole istruzioni MSIL. Nell'implementazione corrente tutte le richieste vengono effettuate quando il metodo <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> viene chiamato o quando viene richiamato il compilatore Just-In-Time (JIT), se il metodo viene richiamato senza chiamare <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
   
- Se il dominio applicazione lo consente, i metodi dinamici ospitati anonimamente possono ignorare i controlli di visibilità JIT, ma solo se viene rispettata la restrizione seguente: i tipi e i membri non pubblici a cui accede un metodo dinamico ospitato anonimamente devono trovarsi in assembly i cui set di concessioni sono uguali o sono subset del set di concessioni dello stack di chiamate di creazione. Questa possibilità limitata di ignorare i controlli di visibilità JIT viene abilitata se il dominio applicazione concede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>.  
+ Se il dominio applicazione lo consente, i metodi dinamici ospitati anonimamente possono ignorare i controlli di visibilità JIT, ma solo se viene rispettata la restrizione seguente: i tipi e i membri non pubblici a cui accede un metodo dinamico ospitato anonimamente devono trovarsi in assembly i cui set di concessioni sono uguali o sono subset del set di concessioni dello stack di chiamate di creazione. Questa possibilità limitata di ignorare i controlli di visibilità JIT viene abilitata se il dominio applicazione concede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
 -   Se il metodo usa solo tipi e membri pubblici, non sono necessarie autorizzazioni durante la costruzione.  
   
--   Se si specifica che i controlli di visibilità JIT debbano essere ignorati, la richiesta effettuata durante la costruzione del metodo includerà <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> e il set di concessioni dell'assembly che contiene il membro non pubblico a cui si accede.  
+-   Se si specifica che i controlli di visibilità JIT debbano essere ignorati, la richiesta effettuata durante la costruzione del metodo includerà <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e il set di concessioni dell'assembly che contiene il membro non pubblico a cui si accede.  
   
- Poiché il set di concessioni del membro non pubblico viene preso in considerazione, il codice parzialmente attendibile che ha ottenuto <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> non può elevare i privilegi eseguendo membri non pubblici di assembly attendibili.  
+ Poiché il set di concessioni del membro non pubblico viene preso in considerazione, il codice parzialmente attendibile che ha ottenuto <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> non può elevare i privilegi eseguendo membri non pubblici di assembly attendibili.  
   
  Come con qualsiasi altro codice generato, l'esecuzione del metodo dinamico richiede le autorizzazioni obbligatorie per i metodi usate dal metodo dinamico.  
   
- L'assembly di sistema che ospita i metodi dinamici ospitati anonimamente usa il modello di trasparenza <xref:System.Security.SecurityRuleSet.Level1?displayProperty=fullName>, usato in .NET Framework prima di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+ L'assembly di sistema che ospita i metodi dinamici ospitati anonimamente usa il modello di trasparenza <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, usato in .NET Framework prima di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
  Per altre informazioni, vedere la classe <xref:System.Reflection.Emit.DynamicMethod>.  
   
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Generazione di metodi dinamici ospitati anonimamente dal codice parzialmente attendibile  
  Considerare le condizioni in cui un assembly con autorizzazioni Internet può generare un metodo dinamico ospitato anonimamente ed eseguirlo:  
   
--   Il metodo dinamico usa solo tipi e membri pubblici. Se il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>, è possibile usare i tipi e i membri non pubblici di qualsiasi assembly il cui set di concessioni sia uguale o sia un subset del set di concessioni dell'assembly di creazione.  
+-   Il metodo dinamico usa solo tipi e membri pubblici. Se il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, è possibile usare i tipi e i membri non pubblici di qualsiasi assembly il cui set di concessioni sia uguale o sia un subset del set di concessioni dell'assembly di creazione.  
   
 -   Le autorizzazioni necessarie per tutti i tipi e i membri usati dal metodo dinamico sono incluse nel set di concessioni dell'assembly parzialmente attendibile.  
   
@@ -116,14 +114,14 @@ ms.lasthandoff: 07/28/2017
   
 -   Se il metodo usa solo membri e tipi pubblici e lo si associa a un tipo o a un modulo personalizzato, non sono necessarie autorizzazioni.  
   
--   Se si specifica che devono essere ignorati i controlli di visibilità JIT, il costruttore richiede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>.  
+-   Se si specifica che devono essere ignorati i controlli di visibilità JIT, il costruttore richiede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
   
--   Se si associa il metodo dinamico a un altro tipo, anche all'interno dell'assembly, il costruttore richiede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> e <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=fullName>.  
+-   Se si associa il metodo dinamico a un altro tipo, anche all'interno dell'assembly, il costruttore richiede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> e <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
--   Se si associa il metodo dinamico a un tipo o a un modulo in un altro assembly, il costruttore richiede due cose: <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> e il set di concessioni dell'assembly che contiene l'altro modulo. Ovvero, lo stack di chiamate deve includere tutte le autorizzazioni nel set di concessioni del modulo di destinazione, oltre a <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>.  
+-   Se si associa il metodo dinamico a un tipo o a un modulo in un altro assembly, il costruttore richiede due cose: <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e il set di concessioni dell'assembly che contiene l'altro modulo. Ovvero, lo stack di chiamate deve includere tutte le autorizzazioni nel set di concessioni del modulo di destinazione, oltre a <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
-    >  Per la compatibilità con le versioni precedenti, se la richiesta per il set di concessioni di destinazione con <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> ha esito negativo, il costruttore richiede <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=fullName>.  
+    >  Per la compatibilità con le versioni precedenti, se la richiesta per il set di concessioni di destinazione con <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ha esito negativo, il costruttore richiede <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
  Anche se gli elementi nell'elenco vengono descritti in termini di set di concessioni dell'assembly, tenere presente che le richieste vengono effettuate sullo stack di chiamate completo, incluso il limite del dominio applicazione.  
   
@@ -136,9 +134,9 @@ ms.lasthandoff: 07/28/2017
   
  Considerare le condizioni in cui un assembly con autorizzazioni Internet può generare un metodo dinamico ed eseguirlo:  
   
--   Il metodo dinamico è associato al modulo o al tipo che lo genera oppure il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> ed è associato a un modulo in un assembly il cui set di concessioni è uguale o è un subset del set di concessioni dell'assembly di creazione.  
+-   Il metodo dinamico è associato al modulo o al tipo che lo genera oppure il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ed è associato a un modulo in un assembly il cui set di concessioni è uguale o è un subset del set di concessioni dell'assembly di creazione.  
   
--   Il metodo dinamico usa solo tipi e membri pubblici. Se il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> ed è associato a un modulo in un assembly il cui set di concessioni è uguale o è un subset del set di concessioni dell'assembly di creazione, può usare tipi e membri contrassegnati come `internal` (`Friend` in Visual Basic, `assembly` nei metadati di Common Language Runtime) nel modulo associato.  
+-   Il metodo dinamico usa solo tipi e membri pubblici. Se il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ed è associato a un modulo in un assembly il cui set di concessioni è uguale o è un subset del set di concessioni dell'assembly di creazione, può usare tipi e membri contrassegnati come `internal` (`Friend` in Visual Basic, `assembly` nei metadati di Common Language Runtime) nel modulo associato.  
   
 -   Le autorizzazioni richieste da tutti i tipi e i membri usati dal metodo dinamico sono inclusi nel set di concessioni dell'assembly parzialmente attendibile.  
   
@@ -151,19 +149,18 @@ ms.lasthandoff: 07/28/2017
 ## <a name="version-information"></a>Informazioni sulla versione  
  A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], i criteri di sicurezza a livello di computer vengono eliminati e la trasparenza della sicurezza diventa il meccanismo di imposizione predefinito. Vedere [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md).  
   
- A partire da [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], non è più necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=fullName> quando si generano assembly e metodi dinamici. Questo flag è richiesto in tutte le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ A partire da [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], non è più necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> quando si generano assembly e metodi dinamici. Questo flag è richiesto in tutte le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=fullName> viene incluso per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `LocalIntranet`, ma non nel set di autorizzazioni `Internet`. Pertanto, nelle versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile usare una libreria con autorizzazioni Internet solo se viene eseguito un <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] consente di generare codice in scenari con attendibilità parziale senza creare alcuna richiesta di sicurezza, poiché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere SecurityTransparent ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, che semplifica l'attività di scrittura di una libreria protetta.  
+>  <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> viene incluso per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `LocalIntranet`, ma non nel set di autorizzazioni `Internet`. Pertanto, nelle versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile usare una libreria con autorizzazioni Internet solo se viene eseguito un <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] consente di generare codice in scenari con attendibilità parziale senza creare alcuna richiesta di sicurezza, poiché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere SecurityTransparent ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, che semplifica l'attività di scrittura di una libreria protetta.  
   
- Inoltre, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] introduce il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> per l'accesso a tipi e membri non pubblici da metodi dinamici parzialmente attendibili. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] richiedono il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> per i metodi dinamici che accedono a membri e tipi non pubblici; si tratta di un'autorizzazione che non dovrebbe mai essere concessa a codice parzialmente attendibile.  
+ Inoltre, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] introduce il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> per l'accesso a tipi e membri non pubblici da metodi dinamici parzialmente attendibili. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] richiedono il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> per i metodi dinamici che accedono a membri e tipi non pubblici; si tratta di un'autorizzazione che non dovrebbe mai essere concessa a codice parzialmente attendibile.  
   
  Infine, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] introduce i metodi ospitati anonimamente.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Informazioni su tipi e membri  
- A partire da [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] non sono necessarie autorizzazioni per ottenere informazioni sui tipi e i membri non pubblici. Per ottenere le informazioni necessarie a generare metodi dinamici viene usato Reflection. Ad esempio, gli oggetti <xref:System.Reflection.MethodInfo> vengono usati per generare le chiamate al metodo. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] richiedono <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=fullName>. Per altre informazioni, vedere [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection).  
+ A partire da [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] non sono necessarie autorizzazioni per ottenere informazioni sui tipi e i membri non pubblici. Per ottenere le informazioni necessarie a generare metodi dinamici viene usato Reflection. Ad esempio, gli oggetti <xref:System.Reflection.MethodInfo> vengono usati per generare le chiamate al metodo. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] richiedono <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Per altre informazioni, vedere [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  (Considerazioni sulla sicurezza per reflection)  
+ [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection)  
  [Creazione di assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
-

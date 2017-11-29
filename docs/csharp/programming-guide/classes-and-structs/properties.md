@@ -1,41 +1,22 @@
 ---
 title: "Proprietà (Guida per programmatori C#)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.properties
-dev_langs:
-- CSharp
+f1_keywords: cs.properties
 helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 127299a617cacee15f87964a12bb3877a2586204
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="properties-c-programming-guide"></a>Proprietà (Guida per programmatori C#)
 
@@ -56,9 +37,9 @@ Una proprietà è un membro che fornisce un meccanismo flessibile per leggere, s
 
 Un modello di base per l'implementazione di una proprietà prevede l'uso di un campo sottostante privato per l'impostazione e il recupero del valore della proprietà. La funzione di accesso `get` restituisce il valore del campo privato e la funzione di accesso `set` può eseguire una convalida dei dati prima di assegnare un valore al campo privato. Entrambe le funzioni di accesso possono anche eseguire una conversione o un calcolo nei dati prima che vengano archiviati o restituiti.
 
-L'esempio seguente illustra il modello. Nell'esempio la classe `TimePeriod` rappresenta un intervallo di tempo. Internamente la classe archivia l'intervallo di tempo in secondi in un campo privato denominato `seconds`. Una proprietà di lettura/scrittura denominata `Hours` consente al cliente di specificare l'intervallo di tempo in ore. Entrambe le funzioni di accesso `get` e `set` eseguono la conversione necessaria tra ore e secondi. Inoltre, la funzione di accesso `set` convalida i dati e genera @System.ArgumentOutOfRangeException se il numero di ore non è valido. 
+L'esempio seguente illustra il modello. Nell'esempio la classe `TimePeriod` rappresenta un intervallo di tempo. Internamente la classe archivia l'intervallo di tempo in secondi in un campo privato denominato `seconds`. Una proprietà di lettura/scrittura denominata `Hours` consente al cliente di specificare l'intervallo di tempo in ore. Entrambe le funzioni di accesso `get` e `set` eseguono la conversione necessaria tra ore e secondi. Inoltre, la funzione di accesso `set` convalida i dati e genera <xref:System.ArgumentOutOfRangeException> se il numero di ore non è valido. 
    
- [!code-cs[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
+ [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>Definizioni del corpo dell'espressione  
 
@@ -66,11 +47,11 @@ L'esempio seguente illustra il modello. Nell'esempio la classe `TimePeriod` rapp
 
  A partire da C# 6, le proprietà di sola lettura possono implementare la funzione di accesso `get` come membro con corpo di espressione. In questo caso non viene usata la parola chiave della funzione di accesso `get` né la parola chiave `return`. L'esempio seguente implementa la proprietà `Name` di sola lettura come membro con corpo di espressione.
 
- [!code-cs[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
+ [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
  A partire da C# 7, entrambe le funzioni di accesso `get` e `set` possono essere implementate come membri con corpo di espressione. In questo caso, è necessario che siano presenti le parole chiave `get` e `set`. L'esempio seguente illustra l'uso di definizioni del corpo dell'espressione per entrambe le funzioni di accesso. Si noti che la parola chiave `return` non viene usata con la funzione di accesso `get`.
  
-  [!code-cs[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
+  [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>Proprietà implementate automaticamente
 
@@ -78,7 +59,7 @@ In alcuni casi, le funzioni di accesso `get` e `set` delle proprietà si limitan
 
 Se una proprietà ha entrambe le funzioni di accesso `get` e `set`, entrambe le funzioni devono essere implementate automaticamente. È possibile definire una proprietà implementata automaticamente usando le parole chiave `get` e `set` senza specificare alcuna implementazione. L'esempio seguente ripete l'esempio precedente, ad eccezione del fatto che `Name` e `Price` sono proprietà implementate automaticamente. Si noti che l'esempio rimuove anche il costruttore con parametri in modo che gli oggetti `SaleItem` vengano ora inizializzati con una chiamata al costruttore predefinito e un [inizializzatore di oggetto](object-and-collection-initializers.md).
 
-  [!code-cs[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
+  [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Sezioni correlate  
   
@@ -96,9 +77,8 @@ Se una proprietà ha entrambe le funzioni di accesso `get` e `set`, entrambe le 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)   
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
  [Parola chiave get](../../../csharp/language-reference/keywords/get.md)    
  [Parola chiave set](../../../csharp/language-reference/keywords/set.md)    
-

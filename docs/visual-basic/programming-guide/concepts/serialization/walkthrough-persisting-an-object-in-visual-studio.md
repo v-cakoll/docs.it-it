@@ -1,31 +1,22 @@
 ---
-title: Persistenza di un oggetto in Visual Studio (Visual Basic) | Microsoft Docs
+title: Persistenza di un oggetto in Visual Studio (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f4b78654f79913d90667daa9e75c88f45f8efbdc
-ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 838038fd873c3a841fd83d30df1c7b3e27fe697f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procedura dettagliata: Persistenza di un oggetto in Visual Studio (Visual Basic)
 Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefiniti in fase di progettazione, tutti i valori immessi in fase di esecuzione vengono persi quando l'oggetto viene eliminato. È possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.  
@@ -234,5 +225,5 @@ Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefini
  A questo punto, è nuovamente possibile compilare ed eseguire l'applicazione. Inizialmente i valori predefiniti vengono visualizzati nelle caselle di testo. Provare a modificare i valori e immettere un nome nella quarta casella di testo. Chiudere l'applicazione ed eseguirla nuovamente. Si noti che i nuovi valori ora appaiono nelle caselle di testo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Serializzazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
+ [Serializzazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
  [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)

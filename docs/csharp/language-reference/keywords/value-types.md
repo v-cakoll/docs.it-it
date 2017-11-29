@@ -1,42 +1,23 @@
 ---
 title: Tipi di valore (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.valuetypes
-dev_langs:
-- CSharp
+f1_keywords: cs.valuetypes
 helpviewer_keywords:
 - value types [C#]
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="value-types-c-reference"></a>Tipi di valore (Riferimenti per C#)
 I tipi valore comprendono due categorie principali:  
@@ -62,7 +43,7 @@ I tipi valore comprendono due categorie principali:
 ## <a name="main-features-of-value-types"></a>Funzionalità principali dei tipi valore  
  Le variabili che sono basate direttamente su tipi valore contengono valori. Assegnando una variabile di tipo valore a un'altra, il valore contenuto viene copiato. Questo comportamento è diverso dall'assegnazione delle variabili di tipo riferimento, in cui viene copiato un riferimento all'oggetto, ma non l'oggetto stesso.  
   
- Tutti i tipi valore sono derivati in modo implicito da <xref:System.ValueType?displayProperty=fullName>.  
+ Tutti i tipi valore sono derivati in modo implicito da <xref:System.ValueType?displayProperty=nameWithType>.  
   
  A differenza dei tipi riferimento, non è possibile derivare un nuovo tipo da un tipo valore. Tuttavia, come i tipi riferimento, gli struct possono implementare interfacce.  
   
@@ -71,7 +52,7 @@ I tipi valore comprendono due categorie principali:
  Ogni tipo valore ha un costruttore predefinito implicito che inizializza il valore predefinito di tale tipo. Per informazioni sui valori predefiniti dei tipi valore, vedere [Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md).  
   
 ## <a name="main-features-of-simple-types"></a>Funzionalità principali dei tipi semplici  
- Tutti i tipi semplici, ovvero quelli integrali del linguaggio C#, sono alias dei tipi di sistema di .NET Framework. Ad esempio, [int](../../../csharp/language-reference/keywords/int.md) è un alias di <xref:System.Int32?displayProperty=fullName>. Per un elenco completo degli alias, vedere [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md).  
+ Tutti i tipi semplici, ovvero quelli integrali del linguaggio C#, sono alias dei tipi di sistema di .NET Framework. Ad esempio, [int](../../../csharp/language-reference/keywords/int.md) è un alias di <xref:System.Int32?displayProperty=nameWithType>. Per un elenco completo degli alias, vedere [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md).  
   
  Le espressioni costanti, in cui gli operandi sono tutte costanti di tipo semplice, vengono valutate in fase di compilazione.  
   
@@ -123,10 +104,9 @@ Point p = new Point(); // Invoke default constructor for the struct.
  Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabella di formattazione dei risultati numerici](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Tipi](../../../csharp/language-reference/keywords/types.md)   
- [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tipi](../../../csharp/language-reference/keywords/types.md)  
+ [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
  [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)
-

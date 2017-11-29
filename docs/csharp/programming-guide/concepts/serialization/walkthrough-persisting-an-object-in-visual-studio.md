@@ -1,30 +1,21 @@
 ---
 title: 'Procedura dettagliata: Persistenza di un oggetto in Visual Studio (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Procedura dettagliata: Persistenza di un oggetto in Visual Studio (C#)
 Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefiniti in fase di progettazione, tutti i valori immessi in fase di esecuzione vengono persi quando l'oggetto viene eliminato. È possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.  
@@ -230,6 +221,5 @@ Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefini
  A questo punto, è nuovamente possibile compilare ed eseguire l'applicazione. Inizialmente i valori predefiniti vengono visualizzati nelle caselle di testo. Provare a modificare i valori e immettere un nome nella quarta casella di testo. Chiudere l'applicazione ed eseguirla nuovamente. Si noti che i nuovi valori ora appaiono nelle caselle di testo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Serializzazione (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ [Serializzazione (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
-

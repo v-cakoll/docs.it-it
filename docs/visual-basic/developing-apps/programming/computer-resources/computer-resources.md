@@ -1,45 +1,26 @@
 ---
 title: Accesso alle risorse del computer (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- computer resources
-- My.Computer object, tasks
-- computer resources, accessing
+- computer resources [Visual Basic]
+- My.Computer object [Visual Basic], tasks
+- computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 20c9d23570ec986598ad697f559aaf3a3153a8a0
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae9517d2c06c2583a90b2bb503094094bb6e938c
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-
 # <a name="accessing-computer-resources-visual-basic"></a>Accesso alle risorse del computer (Visual Basic)
 
 L'oggetto `My.Computer` è uno dei tre oggetti principali di `My` e permette l'accesso a informazioni e funzionalità usate di frequente. `My.Computer` specifica metodi, proprietà ed eventi per l'accesso al computer in cui è eseguita l'applicazione. Gli oggetti includono:  
@@ -80,4 +61,3 @@ Elenca le attività associate a `My.Computer.Ports`, ad esempio la visualizzazio
 
 [Lettura e scrittura nel Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
 Elenca le attività associate a `My.Computer.Registry`, ad esempio la lettura o la scrittura di dati nelle chiavi del Registro di sistema.
-

@@ -1,30 +1,21 @@
 ---
 title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7b003e76229a06883adc22f933f08663330f0c9d
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)
 Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, è possibile effettuare un accoppiamento debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria gestita senza dover essere ricompilato per ogni versione.  
@@ -49,7 +40,7 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
   
 -   Le costanti non vengono incorporate.  
   
--   La classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> non supporta un tipo incorporato come chiave. È possibile implementare un proprio tipo di dizionario per supportare un tipo incorporato come chiave.  
+-   La classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> non supporta un tipo incorporato come chiave. È possibile implementare un proprio tipo di dizionario per supportare un tipo incorporato come chiave.  
   
  In questa procedura dettagliata, si eseguiranno le operazioni:  
   
@@ -250,8 +241,7 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
 6.  In Esplora File aprire la cartella del percorso di output, ad esempio C:\TypeEquivalenceSample. Fare doppio clic su TypeEquivalenceClient.exe per eseguire il programma. Il programma rifletterà la nuova versione dell'assembly TypeEquivalenceRuntime senza dover essere ricompilato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)   
- [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)   
+ [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
+ [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)  
  [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-

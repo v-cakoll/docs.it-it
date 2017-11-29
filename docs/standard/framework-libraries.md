@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
+ms.openlocfilehash: 6851e7059ca60430e761cebed4fd5040a6a3ee08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 9c38237a8e729155c443298814f4c98bec61016b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="framework-libraries"></a>Librerie del framework
 
 .NET ha un ampio set standard di librerie di classi, definite librerie di classi di base (set di base) o librerie di classi di framework (set completo). Le librerie offrono implementazioni per molti tipi generali e specifici dell'app, algoritmi e funzionalità di utilità. Le librerie commerciali e delle community sono basati sulle librerie di classi di framework e offrono librerie disponibili sul mercato facili da usare per un ampio set di attività di elaborazione.
@@ -32,15 +30,15 @@ Le librerie di classi base offrono i tipi fondamentali e le funzionalità di uti
 
 .NET include un set di tipi primitivi, che vengono usati in tutti i programmi (a diversi livelli). Questi tipi contengono dati, ad esempio numeri, stringhe, byte e oggetti arbitrari. Il linguaggio C# include parole chiave per questi tipi. Un set di esempio di questi tipi è elencato di seguito, con le parole chiave del linguaggio C# corrispondenti.
 
-* <xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)): classe di base principale nel sistema di tipo CLR. È la radice della gerarchia dei tipi.
-* <xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)): tipo intero con segno a 16 bit. È anche disponibile il tipo <xref:System.UInt16> senza segno.
-* <xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)): tipo intero con segno a 32 bit. È anche disponibile il tipo [UInt32](../csharp/language-reference/keywords/uint.md) senza segno.
-* <xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)): tipo a virgola mobile a 32 bit.
-* <xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)): tipo decimale a 128 bit.
-* <xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)): tipo intero senza segno a 8 bit che rappresenta un byte di memoria.
-* <xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)): tipo booleano che rappresenta `true` o `false`.
-* <xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)): tipo numerico a 16 bit che rappresenta un carattere Unicode.
-* <xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)): rappresenta una serie di caratteri. Diverso dal tipo `char[]`, ma consente l'indicizzazione in ogni singolo `char` di `string`.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): classe di base principale nel sistema di tipo CLR. È la radice della gerarchia dei tipi.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)): tipo intero con segno a 16 bit. È anche disponibile il tipo <xref:System.UInt16> senza segno.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)): tipo intero con segno a 32 bit. È anche disponibile il tipo [UInt32](../csharp/language-reference/keywords/uint.md) senza segno.
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)): tipo a virgola mobile a 32 bit.
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)): tipo decimale a 128 bit.
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)): tipo intero senza segno a 8 bit che rappresenta un byte di memoria.
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): tipo booleano che rappresenta `true` o `false`.
+* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): tipo numerico a 16 bit che rappresenta un carattere Unicode.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): rappresenta una serie di caratteri. Diverso dal tipo `char[]`, ma consente l'indicizzazione in ogni singolo `char` di `string`.
 
 ## <a name="data-structures"></a>Strutture di dati
 
@@ -65,4 +63,3 @@ Le librerie di classi base offrono i tipi fondamentali e le funzionalità di uti
 Ci sono molti modelli per app, offerti da diverse società, che possono essere usati con .NET.
 
 *   [ASP.NET](http://asp.net): offre un framework Web per la creazione di siti Web e servizi. Supportato in Windows, Linux e macOS (dipende dalla versione ASP.NET).
-

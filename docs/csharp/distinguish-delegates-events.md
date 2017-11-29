@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="distinguishing-delegates-and-events"></a>Distinzione di delegati ed eventi
 
 [Precedente](modern-events.md)
@@ -55,4 +53,3 @@ Ciò contrasta con molte progettazioni basate su delegati, in cui un delegato vi
 ## <a name="evaluate-carefully"></a>Valutare con attenzione
 
 Le considerazioni precedenti non rappresentano regole ferree ma informazioni aggiuntive che consentono di stabilire la scelta più appropriata per il proprio caso specifico. Date le analogie, è anche possibile eseguire un prototipo per entrambi i tipi di progettazione, per verificare quale risulterebbe più naturale usare. Entrambi consentono di gestire in modo efficiente gli scenari di associazione tardiva. Usare quello che comunica meglio con il proprio progetto.
-
