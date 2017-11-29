@@ -1,154 +1,157 @@
 ---
-title: "Protocolli di transazione versione 1.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Protocolli di transazione versione 1.0
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 95bf16a4e243d82b9b8fe83b306284335ae0bd16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Protocolli di transazione versione 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] versione 1 implementa la versione 1.0 dei protocolli WS\-Atomic Transaction e WS\-Coordination.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] versione 1.1, vedere [Protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+# <a name="transaction-protocols-version-10"></a><span data-ttu-id="38569-102">Protocolli di transazione versione 1.0</span><span class="sxs-lookup"><span data-stu-id="38569-102">Transaction Protocols version 1.0</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="38569-103"> versione 1 implementa la versione 1.0 dei protocolli WS-Atomic Transaction e WS-Coordination.</span><span class="sxs-lookup"><span data-stu-id="38569-103"> version 1 implements version 1.0 of the WS-Atomic Transaction and WS-Coordination protocols.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="38569-104">versione 1.1, vedere [protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).</span><span class="sxs-lookup"><span data-stu-id="38569-104"> version 1.1, see [Transaction Protocols](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).</span></span>  
   
-|Specifica\/documento|Collegamento|  
-|--------------------------|------------------|  
-|WS\-Coordination|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-coordination\/|  
-|WS\-AtomicTransaction|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-atomictransaction\/|  
+|<span data-ttu-id="38569-105">Specifica/documento</span><span class="sxs-lookup"><span data-stu-id="38569-105">Specification/Document</span></span>|<span data-ttu-id="38569-106">Collegamento</span><span class="sxs-lookup"><span data-stu-id="38569-106">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="38569-107">WS-Coordination</span><span class="sxs-lookup"><span data-stu-id="38569-107">WS-Coordination</span></span>|<span data-ttu-id="38569-108">http://msdn.microsoft.com/ws/2005/08/ws-coordination/</span><span class="sxs-lookup"><span data-stu-id="38569-108">http://msdn.microsoft.com/ws/2005/08/ws-coordination/</span></span>|  
+|<span data-ttu-id="38569-109">WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="38569-109">WS-AtomicTransaction</span></span>|<span data-ttu-id="38569-110">http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/</span><span class="sxs-lookup"><span data-stu-id="38569-110">http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/</span></span>|  
   
- Su queste specifiche del protocollo è richiesta l'interoperabilità a due livelli: tra le applicazioni e tra i gestori delle transazioni \(vedere la figura seguente\).Le specifiche descrivono dettagliatamente i formati dei messaggi e lo scambio di messaggi per entrambi i livelli di interoperabilità.Alcune protezioni, affidabilità e codifiche per lo scambio tra le applicazioni si applicano come per il normale scambio tra applicazioni.Perché, tuttavia, sia possibile l'interoperabilità tra i gestori delle transazioni, è necessario che vi sia un accordo sull'associazione interessata dato che in genere non è configurata dall'utente.  
+ <span data-ttu-id="38569-111">Su queste specifiche del protocollo è richiesta l'interoperabilità a due livelli: tra le applicazioni e tra i gestori delle transazioni (vedere la figura seguente).</span><span class="sxs-lookup"><span data-stu-id="38569-111">Interoperability on these protocol specifications is required at two levels: between applications and between transaction managers (see the following figure).</span></span> <span data-ttu-id="38569-112">Le specifiche descrivono dettagliatamente i formati dei messaggi e lo scambio di messaggi per entrambi i livelli di interoperabilità.</span><span class="sxs-lookup"><span data-stu-id="38569-112">Specifications describe in great detail the message formats and message exchange for both interoperability levels.</span></span> <span data-ttu-id="38569-113">Alcune protezioni, affidabilità e codifiche per lo scambio tra le applicazioni si applicano come per il normale scambio tra applicazioni.</span><span class="sxs-lookup"><span data-stu-id="38569-113">Certain security, reliability, and encodings for application-to-application exchange apply as they do for regular application exchange.</span></span> <span data-ttu-id="38569-114">Perché, tuttavia, sia possibile l'interoperabilità tra i gestori delle transazioni, è necessario che vi sia un accordo sull'associazione interessata dato che in genere non è configurata dall'utente.</span><span class="sxs-lookup"><span data-stu-id="38569-114">However, successful interoperability between transaction managers requires agreement on the particular binding, because it is usually not configured by the user.</span></span>  
   
- In questo argomento vengono illustrate una composizione della specifica WS\-Atomic Transaction \(WS\-AT\) con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni.L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS\-AT e WS\-Coordination, compresi IBM, IONA, Sun Microsystems e altri.  
+ <span data-ttu-id="38569-115">In questo argomento vengono illustrate una composizione della specifica WS-Atomic Transaction (WS-AT) con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni.</span><span class="sxs-lookup"><span data-stu-id="38569-115">This topic describes a composition of the WS-Atomic Transaction (WS-AT) specification with security and describes the secure binding used for communication between transaction managers.</span></span> <span data-ttu-id="38569-116">L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS-AT e WS-Coordination, compresi IBM, IONA, Sun Microsystems e altri.</span><span class="sxs-lookup"><span data-stu-id="38569-116">The approach described in this document has been successfully tested with other implementations of WS-AT and WS-Coordination including IBM, IONA, Sun Microsystems, and others.</span></span>  
   
- Nella figura seguente è riportata l'interoperabilità tra due gestori di transazioni, Gestore transazioni 1 e Gestore transazioni 2 e due applicazioni, Applicazione 1 e Applicazione 2.  
+ <span data-ttu-id="38569-117">Nella figura seguente è riportata l'interoperabilità tra due gestori di transazioni, Gestore transazioni 1 e Gestore transazioni 2 e due applicazioni, Applicazione 1 e Applicazione 2.</span><span class="sxs-lookup"><span data-stu-id="38569-117">The following figure depicts the interoperability between two transaction managers, Transaction Manager 1 and Transaction Manager 2, and two applications, Application 1 and Application 2.</span></span>  
   
- ![Protocolli di transazione](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ <span data-ttu-id="38569-118">![Protocolli di transazione](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")</span><span class="sxs-lookup"><span data-stu-id="38569-118">![Transaction Protocols](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")</span></span>  
   
- Si consideri un tipico scenario WS\-Coordination\/WS\-Atomic Transaction con un Iniziatore \(I\) e un Partecipante \(P\).Sia l'Iniziatore che il Partecipante hanno gestori transazioni \(ITM e PTM, rispettivamente\).In questo argomento, il commit in due fasi viene chiamato 2PC.  
+ <span data-ttu-id="38569-119">Si consideri un tipico scenario WS-Coordination/WS-Atomic Transaction con un Iniziatore (I) e un Partecipante (P).</span><span class="sxs-lookup"><span data-stu-id="38569-119">Consider a typical WS-Coordination/WS-Atomic Transaction scenario with one Initiator (I) and one Participant (P).</span></span> <span data-ttu-id="38569-120">Sia l'Iniziatore che il Partecipante hanno gestori transazioni (ITM e PTM, rispettivamente).</span><span class="sxs-lookup"><span data-stu-id="38569-120">Both Initiator and Participant have Transaction Managers, (ITM and PTM, respectively).</span></span> <span data-ttu-id="38569-121">In questo argomento, il commit in due fasi viene chiamato 2PC.</span><span class="sxs-lookup"><span data-stu-id="38569-121">Two-phase commit is referred to as 2PC in this topic.</span></span>  
   
 |||  
 |-|-|  
-|1.CreateCoordinationContext|12.Risposta al messaggio dell'applicazione|  
-|2.CreateCoordinationContextResponse|13.Commit \(completamento\)|  
-|3.Register \(completamento\)|14.Preparare \(2PC\)|  
-|4.RegisterResponse|15.Preparare \(2PC\)|  
-|5.Messaggio dell'applicazione|16.Prepared \(2PC\)|  
-|6.CreateCoordinationContext con Context|17.Prepared \(2PC\)|  
-|7.Register \(durevole\)|18.Committed \(completamento\)|  
-|8.RegisterResponse|19.Commit \(2PC\)|  
-|9.CreateCoordinationContextResponse|20.Commit \(2PC\)|  
-|10.Register \(durevole\)|21.Committed \(2PC\)|  
-|11.RegisterResponse|22.Committed \(2PC\)|  
+|<span data-ttu-id="38569-122">1. CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="38569-122">1. CreateCoordinationContext</span></span>|<span data-ttu-id="38569-123">12. Risposta al messaggio dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="38569-123">12. Application Message Response</span></span>|  
+|<span data-ttu-id="38569-124">2. CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="38569-124">2. CreateCoordinationContextResponse</span></span>|<span data-ttu-id="38569-125">13. Commit (completamento)</span><span class="sxs-lookup"><span data-stu-id="38569-125">13. Commit (Completion)</span></span>|  
+|<span data-ttu-id="38569-126">3. Register (completamento)</span><span class="sxs-lookup"><span data-stu-id="38569-126">3. Register (Completion)</span></span>|<span data-ttu-id="38569-127">14. Preparare (2PC)</span><span class="sxs-lookup"><span data-stu-id="38569-127">14. Prepare (2PC)</span></span>|  
+|<span data-ttu-id="38569-128">4. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="38569-128">4. RegisterResponse</span></span>|<span data-ttu-id="38569-129">15. Preparare (2PC)</span><span class="sxs-lookup"><span data-stu-id="38569-129">15. Prepare (2PC)</span></span>|  
+|<span data-ttu-id="38569-130">5. Messaggio dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="38569-130">5. Application Message</span></span>|<span data-ttu-id="38569-131">16. Prepared (2PC)</span><span class="sxs-lookup"><span data-stu-id="38569-131">16. Prepared (2PC)</span></span>|  
+|<span data-ttu-id="38569-132">6. CreateCoordinationContext con Context</span><span class="sxs-lookup"><span data-stu-id="38569-132">6. CreateCoordinationContext with Context</span></span>|<span data-ttu-id="38569-133">17. Prepared (2PC)</span><span class="sxs-lookup"><span data-stu-id="38569-133">17. Prepared (2PC)</span></span>|  
+|<span data-ttu-id="38569-134">7. Register (durevole)</span><span class="sxs-lookup"><span data-stu-id="38569-134">7. Register (Durable)</span></span>|<span data-ttu-id="38569-135">18. Committed (completamento)</span><span class="sxs-lookup"><span data-stu-id="38569-135">18. Committed (Completion)</span></span>|  
+|<span data-ttu-id="38569-136">8. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="38569-136">8. RegisterResponse</span></span>|<span data-ttu-id="38569-137">19. Commit (2PC)</span><span class="sxs-lookup"><span data-stu-id="38569-137">19. Commit (2PC)</span></span>|  
+|<span data-ttu-id="38569-138">9. CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="38569-138">9. CreateCoordinationContextResponse</span></span>|<span data-ttu-id="38569-139">20. Commit (2PC)</span><span class="sxs-lookup"><span data-stu-id="38569-139">20. Commit (2PC)</span></span>|  
+|<span data-ttu-id="38569-140">10. Register (durevole)</span><span class="sxs-lookup"><span data-stu-id="38569-140">10. Register (Durable)</span></span>|<span data-ttu-id="38569-141">21. Committed (2PC)</span><span class="sxs-lookup"><span data-stu-id="38569-141">21. Committed (2PC)</span></span>|  
+|<span data-ttu-id="38569-142">11. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="38569-142">11. RegisterResponse</span></span>|<span data-ttu-id="38569-143">22. Committed (2PC)</span><span class="sxs-lookup"><span data-stu-id="38569-143">22. Committed (2PC)</span></span>|  
   
- In questo documento vengono illustrate una composizione della specifica WS\-AtomicTransaction con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni.L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS\-AT e WS\-Coordination.  
+ <span data-ttu-id="38569-144">In questo documento vengono illustrate una composizione della specifica WS-AtomicTransaction con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni.</span><span class="sxs-lookup"><span data-stu-id="38569-144">This document describes a composition of the WS-AtomicTransaction specification with security and describes the secure binding used for communication between transaction managers.</span></span> <span data-ttu-id="38569-145">L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS-AT e WS-Coordination.</span><span class="sxs-lookup"><span data-stu-id="38569-145">The approach described in this document has been successfully tested with other implementations of WS-AT and WS-Coordination.</span></span>  
   
- Nella figura e nella tabella vengono illustrate quattro classi di messaggi dal punto di vista della protezione:  
+ <span data-ttu-id="38569-146">Nella figura e nella tabella vengono illustrate quattro classi di messaggi dal punto di vista della protezione:</span><span class="sxs-lookup"><span data-stu-id="38569-146">The figure and table illustrate four classes of messages from the viewpoint of security:</span></span>  
   
--   Messaggi di attivazione \(CreateCoordinationContext e CreateCoordinationContextResponse\).  
+-   <span data-ttu-id="38569-147">Messaggi di attivazione (CreateCoordinationContext e CreateCoordinationContextResponse).</span><span class="sxs-lookup"><span data-stu-id="38569-147">Activation messages (CreateCoordinationContext and CreateCoordinationContextResponse).</span></span>  
   
--   Messaggi di registrazione \(Register e RegisterResponse\)  
+-   <span data-ttu-id="38569-148">Messaggi di registrazione (Register e RegisterResponse)</span><span class="sxs-lookup"><span data-stu-id="38569-148">Registration messages (Register and RegisterResponse)</span></span>  
   
--   Messaggi di protocollo \(Prepare, Rollback, Commit, Aborted e così via\).  
+-   <span data-ttu-id="38569-149">Messaggi di protocollo (Prepare, Rollback, Commit, Aborted e così via).</span><span class="sxs-lookup"><span data-stu-id="38569-149">Protocol messages (Prepare, Rollback, Commit, Aborted, and so on).</span></span>  
   
--   Messaggi dell'applicazione.  
+-   <span data-ttu-id="38569-150">Messaggi dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="38569-150">Application messages.</span></span>  
   
- Le prime tre classi di messaggi sono considerate messaggi del gestore transazioni e la loro configurazione dell'associazione viene descritta in "Scambio di messaggi dell'applicazione", più avanti in questo argomento.La quarta classe di messaggi riguarda i messaggi da applicazione ad applicazione e viene descritta nella sezione "Esempi di messaggi", più avanti in questo argomento.In questa sezione vengono illustrati i binding del protocollo utilizzati per ognuna di queste classi da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="38569-151">Le prime tre classi di messaggi sono considerate messaggi del gestore transazioni e la loro configurazione dell'associazione viene descritta in "Scambio di messaggi dell'applicazione", più avanti in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="38569-151">The first three message classes are considered Transaction Manager messages and their binding configuration is described in the "Application Message Exchange" later in this topic.</span></span> <span data-ttu-id="38569-152">La quarta classe di messaggi riguarda i messaggi da applicazione ad applicazione e viene descritta nella sezione "Esempi di messaggi", più avanti in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="38569-152">The fourth class of message is application to application messages and is described in the "Message Examples" section later in this topic.</span></span> <span data-ttu-id="38569-153">Contenuto della sezione vengono illustrati i binding del protocollo utilizzati per ognuna di queste classi da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="38569-153">This section describes the protocol bindings used for each of these classes by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- In questo documento vengono utilizzati gli spazi dei nomi XML e i relativi prefissi associati seguenti.  
+ <span data-ttu-id="38569-154">In questo documento vengono utilizzati gli spazi dei nomi XML e i relativi prefissi associati seguenti.</span><span class="sxs-lookup"><span data-stu-id="38569-154">The following XML Namespaces and associated prefixes are used throughout this document.</span></span>  
   
-|Prefisso|URI dello spazio dei nomi|  
-|--------------|-------------------------------|  
-|s11|http:\/\/schemas.xmlsoap.org\/soap\/envelope|  
-|wsa|http:\/\/www.w3.org\/2004\/08\/addressing|  
-|wscoor|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wscoor|  
-|wsat|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wsat|  
-|t|http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust|  
-|o|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.0.xsd|  
-|xsd|http:\/\/www.w3.org\/2001\/XMLSchema|  
+|<span data-ttu-id="38569-155">Prefisso</span><span class="sxs-lookup"><span data-stu-id="38569-155">Prefix</span></span>|<span data-ttu-id="38569-156">URI dello spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="38569-156">Namespace URI</span></span>|  
+|------------|-------------------|  
+|<span data-ttu-id="38569-157">s11</span><span class="sxs-lookup"><span data-stu-id="38569-157">s11</span></span>|<span data-ttu-id="38569-158">http://schemas.xmlsoap.org/soap/envelope</span><span class="sxs-lookup"><span data-stu-id="38569-158">http://schemas.xmlsoap.org/soap/envelope</span></span>|  
+|<span data-ttu-id="38569-159">wsa</span><span class="sxs-lookup"><span data-stu-id="38569-159">wsa</span></span>|<span data-ttu-id="38569-160">http://www.w3.org/2004/08/Addressing</span><span class="sxs-lookup"><span data-stu-id="38569-160">http://www.w3.org/2004/08/addressing</span></span>|  
+|<span data-ttu-id="38569-161">wscoor</span><span class="sxs-lookup"><span data-stu-id="38569-161">wscoor</span></span>|<span data-ttu-id="38569-162">http://schemas.xmlsoap.org/ws/2004/10/wscoor</span><span class="sxs-lookup"><span data-stu-id="38569-162">http://schemas.xmlsoap.org/ws/2004/10/wscoor</span></span>|  
+|<span data-ttu-id="38569-163">wsat</span><span class="sxs-lookup"><span data-stu-id="38569-163">wsat</span></span>|<span data-ttu-id="38569-164">http://schemas.xmlsoap.org/ws/2004/10/wsat</span><span class="sxs-lookup"><span data-stu-id="38569-164">http://schemas.xmlsoap.org/ws/2004/10/wsat</span></span>|  
+|<span data-ttu-id="38569-165">t</span><span class="sxs-lookup"><span data-stu-id="38569-165">t</span></span>|<span data-ttu-id="38569-166">http://schemas.xmlsoap.org/ws/2005/02/trust</span><span class="sxs-lookup"><span data-stu-id="38569-166">http://schemas.xmlsoap.org/ws/2005/02/trust</span></span>|  
+|<span data-ttu-id="38569-167">o</span><span class="sxs-lookup"><span data-stu-id="38569-167">o</span></span>|<span data-ttu-id="38569-168">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd</span><span class="sxs-lookup"><span data-stu-id="38569-168">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd</span></span>|  
+|<span data-ttu-id="38569-169">xsd</span><span class="sxs-lookup"><span data-stu-id="38569-169">xsd</span></span>|<span data-ttu-id="38569-170">http://www.w3.org/2001/XMLSchema</span><span class="sxs-lookup"><span data-stu-id="38569-170">http://www.w3.org/2001/XMLSchema</span></span>|  
   
-## Associazioni dei gestori transazioni  
- R1001: i gestori transazioni devono utilizzare SOAP 1.1 e WS\-Addressing 2004\/08 per gli scambi di messaggi WS\-Atomic Transaction e WS\-Coordination.  
+## <a name="transaction-manager-bindings"></a><span data-ttu-id="38569-171">Associazioni dei gestori transazioni</span><span class="sxs-lookup"><span data-stu-id="38569-171">Transaction Manager Bindings</span></span>  
+ <span data-ttu-id="38569-172">R1001: i gestori transazioni devono utilizzare SOAP 1.1 e WS-Addressing 2004/08 per gli scambi di messaggi WS-Atomic Transaction e WS-Coordination.</span><span class="sxs-lookup"><span data-stu-id="38569-172">R1001: Transaction Managers must use SOAP 1.1 and WS-Addressing 2004/08 for WS-Atomic Transaction and WS-Coordination message exchanges.</span></span>  
   
- I messaggi dell'applicazione non sono vincolati a queste associazioni e vengono descritti più avanti.  
+ <span data-ttu-id="38569-173">I messaggi dell'applicazione non sono vincolati a queste associazioni e vengono descritti più avanti.</span><span class="sxs-lookup"><span data-stu-id="38569-173">Application messages are not constrained to these bindings and are described later.</span></span>  
   
-### Associazione HTTP dei gestori transazioni  
- L'associazione HTTPS dei gestori transazioni si basa unicamente sulla protezione del trasporto per ottenere la protezione e stabilire relazioni di trust tra ogni coppia mittente\-destinatario nella struttura della transazione.  
+### <a name="transaction-manager-https-binding"></a><span data-ttu-id="38569-174">Associazione HTTP dei gestori transazioni</span><span class="sxs-lookup"><span data-stu-id="38569-174">Transaction Manager HTTPS Binding</span></span>  
+ <span data-ttu-id="38569-175">L'associazione HTTPS dei gestori transazioni si basa unicamente sulla protezione del trasporto per ottenere la protezione e stabilire relazioni di trust tra ogni coppia mittente-destinatario nella struttura della transazione.</span><span class="sxs-lookup"><span data-stu-id="38569-175">The transaction manager HTTPS binding relies solely on transport security to achieve security and establish trust between each sender-receiver pair in the transaction tree.</span></span>  
   
-#### Configurazione di trasporto HTTPS  
- I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni.L'autenticazione client\/server è obbligatoria, mentre l'autorizzazione client\/server viene lasciata come dettaglio di implementazione:  
+#### <a name="https-transport-configuration"></a><span data-ttu-id="38569-176">Configurazione di trasporto HTTPS</span><span class="sxs-lookup"><span data-stu-id="38569-176">HTTPS Transport Configuration</span></span>  
+ <span data-ttu-id="38569-177">I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni.</span><span class="sxs-lookup"><span data-stu-id="38569-177">X.509 certificates are used to establish Transaction Manager Identity.</span></span> <span data-ttu-id="38569-178">L'autenticazione client/server è obbligatoria, mentre l'autorizzazione client/server viene lasciata come dettaglio di implementazione:</span><span class="sxs-lookup"><span data-stu-id="38569-178">Client/server authentication is required, and client/server authorization is left as an implementation detail:</span></span>  
   
--   R1111: i certificati X.509 presentati sulla rete devono avere un nome soggetto che corrisponde al nome di dominio completo \(FQDN\) del computer di origine.  
+-   <span data-ttu-id="38569-179">R1111: i certificati X.509 presentati sulla rete devono avere un nome soggetto che corrisponde al nome di dominio completo (FQDN) del computer di origine.</span><span class="sxs-lookup"><span data-stu-id="38569-179">R1111: X.509 certificates presented over the wire must have a subject name that matches the fully qualified domain name (FQDN) of the originating machine.</span></span>  
   
--   B1112: perché i controlli del nome soggetto X.509 abbiano esito positivo, il DNS deve essere funzionale tra ogni coppia mittente\-destinatario nel sistema.  
+-   <span data-ttu-id="38569-180">B1112: perché i controlli del nome soggetto X.509 abbiano esito positivo, il DNS deve essere funzionale tra ogni coppia mittente-destinatario nel sistema.</span><span class="sxs-lookup"><span data-stu-id="38569-180">B1112: DNS must be functional between each sender-receiver pair in the system for X.509 subject name checks to succeed.</span></span>  
   
-#### Attivazione e configurazione dell'associazione di registrazione  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede un'associazione duplex request\/reply con correlazione su HTTPS.Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request\/reply, vedere WS\-Atomic Transaction, Sezione 8.  
+#### <a name="activation-and-registration-binding-configuration"></a><span data-ttu-id="38569-181">Attivazione e configurazione dell'associazione di registrazione</span><span class="sxs-lookup"><span data-stu-id="38569-181">Activation and Registration Binding Configuration</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="38569-182"> richiede un'associazione duplex request/reply con correlazione su HTTPS.</span><span class="sxs-lookup"><span data-stu-id="38569-182"> requires request/reply duplex binding with correlation over HTTPS.</span></span> <span data-ttu-id="38569-183">Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request/reply, vedere WS-Atomic Transaction, Sezione 8.</span><span class="sxs-lookup"><span data-stu-id="38569-183">(For more information about correlation and descriptions of the request/reply message exchange patterns, see WS-Atomic Transaction, Section 8.)</span></span>  
   
-#### Configurazione del binding del protocollo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali \(datagramma\) su HTTPS.La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
+#### <a name="2pc-protocol-binding-configuration"></a><span data-ttu-id="38569-184">Configurazione del binding del protocollo 2PC</span><span class="sxs-lookup"><span data-stu-id="38569-184">2PC Protocol Binding Configuration</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="38569-185"> supporta messaggi unidirezionali (datagramma) su HTTPS.</span><span class="sxs-lookup"><span data-stu-id="38569-185"> supports one-way (datagram) messages over HTTPS.</span></span> <span data-ttu-id="38569-186">La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.</span><span class="sxs-lookup"><span data-stu-id="38569-186">Correlation among the messages is left as an implementation detail.</span></span>  
   
- B2131: le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS\-Addressing per ottenere la correlazione dei messaggi 2PC di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="38569-187">B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]del messaggi 2PC.</span><span class="sxs-lookup"><span data-stu-id="38569-187">B2131: Implementations must support `wsa:ReferenceParameters` as described in WS-Addressing to achieve correlation of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]’s 2PC messages.</span></span>  
   
-### Associazione di sicurezza mista del gestore transazioni  
- Questa è un'associazione alternativa \(modalità mista\) che utilizza la protezione del trasporto assieme al modello del token emesso WS\-Coordination allo scopo di stabilire l'identità.L'attivazione e la registrazione sono gli unici elementi che differiscono tra le due associazioni.  
+### <a name="transaction-manager-mixed-security-binding"></a><span data-ttu-id="38569-188">Associazione di sicurezza mista del gestore transazioni</span><span class="sxs-lookup"><span data-stu-id="38569-188">Transaction Manager Mixed Security Binding</span></span>  
+ <span data-ttu-id="38569-189">Si tratta di un'associazione che utilizza la protezione del trasporto associata al modello del Token emesso WS-Coordination allo scopo di identità alternativa (modalità mista).</span><span class="sxs-lookup"><span data-stu-id="38569-189">This is an alternate (mixed mode) binding that uses transport security combined with the  WS-Coordination Issued Token model for identity establishment purposes.</span></span>  <span data-ttu-id="38569-190">L'attivazione e la registrazione sono gli unici elementi che differiscono tra le due associazioni.</span><span class="sxs-lookup"><span data-stu-id="38569-190">Activation and Registration are the only elements that differ between the two bindings.</span></span>  
   
-#### Configurazione di trasporto HTTPS  
- I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni.L'autenticazione client\/server è obbligatoria, mentre l'autorizzazione client\/server viene lasciata come dettaglio di implementazione.  
+#### <a name="https-transport-configuration"></a><span data-ttu-id="38569-191">Configurazione di trasporto HTTPS</span><span class="sxs-lookup"><span data-stu-id="38569-191">HTTPS Transport Configuration</span></span>  
+ <span data-ttu-id="38569-192">I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni.</span><span class="sxs-lookup"><span data-stu-id="38569-192">X.509 certificates are used to establish Transaction Manager Identity.</span></span> <span data-ttu-id="38569-193">L'autenticazione client/server è obbligatoria, mentre l'autorizzazione client/server viene lasciata come dettaglio di implementazione.</span><span class="sxs-lookup"><span data-stu-id="38569-193">Client/Server authentication is required, and client/server authorization is left as an implementation detail.</span></span>  
   
-#### Configurazione dell'associazione dei messaggi di attivazione  
- I messaggi di attivazione in genere non partecipano all'interoperabilità perché si verificano normalmente tra un'applicazione e il suo gestore transazioni locale.  
+#### <a name="activation-message-binding-configuration"></a><span data-ttu-id="38569-194">Configurazione dell'associazione dei messaggi di attivazione</span><span class="sxs-lookup"><span data-stu-id="38569-194">Activation Message Binding Configuration</span></span>  
+ <span data-ttu-id="38569-195">I messaggi di attivazione in genere non partecipano all'interoperabilità perché si verificano normalmente tra un'applicazione e il suo gestore transazioni locale.</span><span class="sxs-lookup"><span data-stu-id="38569-195">Activation Messages usually do not participate in interoperability because they typically occur between an application and its local Transaction Manager.</span></span>  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza associazioni HTTPS duplex \(descritte in [Protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)\) per i messaggi di attivazione.I messaggi di richiesta e risposta sono correlati utilizzando WS\-Addressing 2004\/08.  
+ <span data-ttu-id="38569-196">B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'associazione HTTPS duplex (descritto in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) per i messaggi di attivazione.</span><span class="sxs-lookup"><span data-stu-id="38569-196">B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses duplex HTTPS binding (described in [Messaging Protocols](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) for Activation messages.</span></span> <span data-ttu-id="38569-197">I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.</span><span class="sxs-lookup"><span data-stu-id="38569-197">Request and Reply messages are correlated using WS-Addressing 2004/08.</span></span>  
   
- Nella specifica WS\-Atomic Transaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
+ <span data-ttu-id="38569-198">Nella specifica WS-Atomic Transaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="38569-198">WS-Atomic Transaction specification, Section 8, describes further details about correlation and the message exchange patterns.</span></span>  
   
--   R1222: alla ricezione di un `CreateCoordinationContext`, il coordinatore deve emettere un `SecurityContextToken` con il segreto `STx` associato.Tale token viene restituito in un'intestazione `t:IssuedTokens` dopo la specifica WS\-Trust.  
+-   <span data-ttu-id="38569-199">R1222: alla ricezione di un `CreateCoordinationContext`, il coordinatore deve emettere un `SecurityContextToken` con il segreto `STx` associato.</span><span class="sxs-lookup"><span data-stu-id="38569-199">R1222: Upon receiving a `CreateCoordinationContext`, the Coordinator must issue a `SecurityContextToken` with associated secret `STx`.</span></span> <span data-ttu-id="38569-200">Tale token viene restituito in un'intestazione `t:IssuedTokens` dopo la specifica WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="38569-200">This token is returned inside a `t:IssuedTokens` header following WS-Trust specification.</span></span>  
   
--   R1223: se l'attivazione si verifica all'interno di un contesto di coordinamento esistente, l'intestazione `t:IssuedTokens` con il `SecurityContextToken` associato al contesto esistente deve propagarsi sul messaggio `CreateCoordinationContext`.  
+-   <span data-ttu-id="38569-201">R1223: se l'attivazione si verifica all'interno di un contesto di coordinamento esistente, l'intestazione `t:IssuedTokens` con il `SecurityContextToken` associato al contesto esistente deve propagarsi sul messaggio `CreateCoordinationContext`.</span><span class="sxs-lookup"><span data-stu-id="38569-201">R1223: If Activation occurs within an existing Coordination Context, the `t:IssuedTokens` header with the `SecurityContextToken` associated with existing Context must flow on the `CreateCoordinationContext` message.</span></span>  
   
- Per la connessione con il messaggio `wscoor:CreateCoordinationContextResponse` in uscita, è necessario che venga generata una nuova intestazione `t:IssuedTokens`.  
+ <span data-ttu-id="38569-202">Un nuovo `t:IssuedTokens` intestazione deve essere generata per associazione a in uscita `wscoor:CreateCoordinationContextResponse` messaggio.</span><span class="sxs-lookup"><span data-stu-id="38569-202">A new `t:IssuedTokens` header should be generated for attaching to the outgoing `wscoor:CreateCoordinationContextResponse` message.</span></span>  
   
-#### Configurazione dell'associazione dei messaggi di registrazione  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'associazione HTTPS duplex \(descritta in [Protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)\).I messaggi di richiesta e risposta sono correlati utilizzando WS\-Addressing 2004\/08.  
+#### <a name="registration-message-binding-configuration"></a><span data-ttu-id="38569-203">Configurazione dell'associazione dei messaggi di registrazione</span><span class="sxs-lookup"><span data-stu-id="38569-203">Registration Message Binding Configuration</span></span>  
+ <span data-ttu-id="38569-204">B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'associazione HTTPS duplex (descritto in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)).</span><span class="sxs-lookup"><span data-stu-id="38569-204">B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses duplex HTTPS binding (described in [Messaging Protocols](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)).</span></span> <span data-ttu-id="38569-205">I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.</span><span class="sxs-lookup"><span data-stu-id="38569-205">Request and Reply messages are correlated using WS-Addressing 2004/08.</span></span>  
   
- In WS\-AtomicTransaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
+ <span data-ttu-id="38569-206">In WS-AtomicTransaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="38569-206">WS-AtomicTransaction, Section 8, describes further details about correlation and descriptions of the message exchange patterns.</span></span>  
   
- R1232: i messaggi `wscoor:Register` in uscita devono utilizzare la modalità di autenticazione `IssuedTokenOverTransport` descritta in [Protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ <span data-ttu-id="38569-207">R1232: In uscita `wscoor:Register` messaggi è necessario utilizzare il `IssuedTokenOverTransport` modalità di autenticazione descritte [protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md).</span><span class="sxs-lookup"><span data-stu-id="38569-207">R1232: Outgoing `wscoor:Register` messages must use the `IssuedTokenOverTransport` authentication mode described in [Security Protocols](../../../../docs/framework/wcf/feature-details/security-protocols.md).</span></span>  
   
- L'elemento `wsse:Timestamp` deve essere firmato utilizzando il `SecurityContextToken``STx` emesso.Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione.Il messaggio RegistrationResponse viene inviato su HTTPS.  
+ <span data-ttu-id="38569-208">Il `wsse:Timestamp` elemento deve essere firmato utilizzando il `SecurityContextToken``STx` rilasciato.</span><span class="sxs-lookup"><span data-stu-id="38569-208">The `wsse:Timestamp` element must be signed using the `SecurityContextToken``STx` issued.</span></span> <span data-ttu-id="38569-209">Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione.</span><span class="sxs-lookup"><span data-stu-id="38569-209">This signature is a proof of possession of the token associated with particular transaction and is used to authenticate a participant enlisting in the transaction.</span></span> <span data-ttu-id="38569-210">Il messaggio RegistrationResponse viene inviato su HTTPS.</span><span class="sxs-lookup"><span data-stu-id="38569-210">The RegistrationResponse message is sent back over HTTPS.</span></span>  
   
-#### Configurazione del binding del protocollo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali \(datagramma\) su HTTPS.La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
+#### <a name="2pc-protocol-binding-configuration"></a><span data-ttu-id="38569-211">Configurazione del binding del protocollo 2PC</span><span class="sxs-lookup"><span data-stu-id="38569-211">2PC Protocol Binding Configuration</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="38569-212"> supporta messaggi unidirezionali (datagramma) su HTTPS.</span><span class="sxs-lookup"><span data-stu-id="38569-212"> supports one-way (datagram) messages over HTTPS.</span></span> <span data-ttu-id="38569-213">La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.</span><span class="sxs-lookup"><span data-stu-id="38569-213">Correlation among the messages is left as an implementation detail.</span></span>  
   
- B2131: le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS\-Addressing per ottenere la correlazione dei messaggi 2PC di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="38569-214">B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]del messaggi 2PC.</span><span class="sxs-lookup"><span data-stu-id="38569-214">B2131: Implementations must support `wsa:ReferenceParameters` as described in WS-Addressing to achieve correlation of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]’s 2PC messages.</span></span>  
   
-## Scambio di messaggi dell'applicazione  
- Le applicazioni possono utilizzare qualsiasi particolare associazione per i messaggi da applicazione ad applicazione, a condizione che l'associazione soddisfi i requisiti di sicurezza seguenti:  
+## <a name="application-message-exchange"></a><span data-ttu-id="38569-215">Scambio di messaggi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="38569-215">Application Message Exchange</span></span>  
+ <span data-ttu-id="38569-216">Le applicazioni possono utilizzare qualsiasi particolare associazione per i messaggi da applicazione ad applicazione, a condizione che l'associazione soddisfi i requisiti di sicurezza seguenti:</span><span class="sxs-lookup"><span data-stu-id="38569-216">Applications are free to use any particular binding for application-to-application messages, as long as the binding meets the following security requirements:</span></span>  
   
--   R2001: i messaggi da applicazione ad applicazione devono propagarsi nell'intestazione `t:IssuedTokens` insieme al `CoordinationContext` nell'intestazione del messaggio.  
+-   <span data-ttu-id="38569-217">R2001: i messaggi da applicazione ad applicazione devono propagarsi nell'intestazione `t:IssuedTokens` insieme al `CoordinationContext` nell'intestazione del messaggio.</span><span class="sxs-lookup"><span data-stu-id="38569-217">R2001: Application-to-application messages must flow the `t:IssuedTokens` header along with the `CoordinationContext` in the header of the message.</span></span>  
   
--   R2002: è necessario fornire l'integrità e la riservatezza di `t:IssuedToken`.  
+-   <span data-ttu-id="38569-218">R2002: è necessario fornire l'integrità e la riservatezza di `t:IssuedToken`.</span><span class="sxs-lookup"><span data-stu-id="38569-218">R2002: Integrity and confidentiality of `t:IssuedToken` must be provided.</span></span>  
   
- L'intestazione `CoordinationContext` contiene `wscoor:Identifier`.Mentre la definizione di `xsd:AnyURI` consente di utilizzare URI sia assoluti che relativi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta solo `wscoor:Identifiers` che sono URI assoluti.  
+ <span data-ttu-id="38569-219">L'intestazione `CoordinationContext` contiene `wscoor:Identifier`.</span><span class="sxs-lookup"><span data-stu-id="38569-219">The `CoordinationContext` header contains `wscoor:Identifier`.</span></span> <span data-ttu-id="38569-220">Mentre la definizione di `xsd:AnyURI` consente di utilizzare URI sia assoluti che relativi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta solo `wscoor:Identifiers` che sono URI assoluti.</span><span class="sxs-lookup"><span data-stu-id="38569-220">While the definition of `xsd:AnyURI` allows the use of both absolute and relative URIs, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports only `wscoor:Identifiers`, which are absolute URIs.</span></span>  
   
- Se `wscoor:Identifier` del `wscoor:CoordinationContext` è un URI relativo, i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transazionali restituiranno degli errori.  
+ <span data-ttu-id="38569-221">Se `wscoor:Identifier` del `wscoor:CoordinationContext` è un URI relativo, i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transazionali restituiranno degli errori.</span><span class="sxs-lookup"><span data-stu-id="38569-221">If the `wscoor:Identifier` of the `wscoor:CoordinationContext` is a relative URI, faults will be returned from transactional [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
-## Esempi di messaggi  
+## <a name="message-examples"></a><span data-ttu-id="38569-222">Esempi di messaggi</span><span class="sxs-lookup"><span data-stu-id="38569-222">Message Examples</span></span>  
   
-### Messaggi di richiesta\/risposta CreateCoordinationContext  
- I messaggi seguenti seguono un modello richiesta\/risposta.  
+### <a name="createcoordinationcontext-requestresponse-messages"></a><span data-ttu-id="38569-223">Messaggi di richiesta/risposta CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="38569-223">CreateCoordinationContext Request/Response Messages</span></span>  
+ <span data-ttu-id="38569-224">I messaggi seguenti seguono un modello richiesta/risposta.</span><span class="sxs-lookup"><span data-stu-id="38569-224">The following messages follow a request/response pattern.</span></span>  
   
-#### CreateCoordinationContext  
+#### <a name="createcoordinationcontext"></a><span data-ttu-id="38569-225">CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="38569-225">CreateCoordinationContext</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wscoor/CreateCoordinationContext</Action>  
@@ -170,12 +173,11 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContext>  
   </s:Body>  
 </s11:Envelope>  
-  
 ```  
   
-#### CreateCoordinationContextResponse  
+#### <a name="createcoordinationcontextresponse"></a><span data-ttu-id="38569-226">CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="38569-226">CreateCoordinationContextResponse</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <!-- Data below is shown in the clear for  
        illustration purposes only. -->  
@@ -253,15 +255,14 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContextResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Messaggi di registrazione  
- I messaggi seguenti sono messaggi di registrazione.  
+### <a name="registration-messages"></a><span data-ttu-id="38569-227">Messaggi di registrazione</span><span class="sxs-lookup"><span data-stu-id="38569-227">Registration Messages</span></span>  
+ <span data-ttu-id="38569-228">I messaggi seguenti sono messaggi di registrazione.</span><span class="sxs-lookup"><span data-stu-id="38569-228">The following messages are registration messages.</span></span>  
   
-#### Registro  
+#### <a name="register"></a><span data-ttu-id="38569-229">Registrazione</span><span class="sxs-lookup"><span data-stu-id="38569-229">Register</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register</a:Action>  
@@ -318,12 +319,11 @@ caps.handback.revision: 3
     </wscoor:Register>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-#### RegisterResponse  
+#### <a name="register-response"></a><span data-ttu-id="38569-230">RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="38569-230">Register Response</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>  
@@ -355,15 +355,14 @@ caps.handback.revision: 3
     </wscoor:RegisterResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Messaggi del protocollo di commit a due fasi  
- Il messaggio seguente si riferisce al protocollo di commit a due fasi \(2PC\).  
+### <a name="two-phase-commit-protocol-messages"></a><span data-ttu-id="38569-231">Messaggi del protocollo di commit a due fasi</span><span class="sxs-lookup"><span data-stu-id="38569-231">Two Phase Commit Protocol Messages</span></span>  
+ <span data-ttu-id="38569-232">Il messaggio seguente si riferisce al protocollo di commit a due fasi (2PC).</span><span class="sxs-lookup"><span data-stu-id="38569-232">The following message relates to the two-phase commit (2PC) protocol.</span></span>  
   
-#### Commit  
+#### <a name="commit"></a><span data-ttu-id="38569-233">Commit</span><span class="sxs-lookup"><span data-stu-id="38569-233">Commit</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wsat/Commit</a:Action>  
@@ -382,15 +381,14 @@ caps.handback.revision: 3
     <wsat:Commit />  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Messaggi dell'applicazione  
- I messaggi seguenti sono messaggi dell'applicazione.  
+### <a name="application-messages"></a><span data-ttu-id="38569-234">Messaggi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="38569-234">Application Messages</span></span>  
+ <span data-ttu-id="38569-235">I messaggi seguenti sono messaggi dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="38569-235">The following messages are application messages.</span></span>  
   
-#### Messaggio dell'applicazione \- Richiesta  
+#### <a name="application-message-request"></a><span data-ttu-id="38569-236">Messaggio dell'applicazione - Richiesta</span><span class="sxs-lookup"><span data-stu-id="38569-236">Application message-Request</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
 <!-- Addressing headers, all signed-->  

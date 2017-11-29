@@ -1,74 +1,77 @@
 ---
-title: "Elemento &lt;performanceCounter&gt; (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<performanceCounter> (elemento)"
-  - "performanceCounter (elemento)"
+title: '&lt;performanceCounter&gt; elemento (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
+helpviewer_keywords:
+- performanceCounter element
+- <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ca6debc4458c34e9f76b0bfaa0e2047ce0be2cae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;performanceCounter&gt; (Impostazioni di rete)
-Abilita o disabilita i contatori delle prestazioni per le comunicazioni di rete.  
+# <a name="ltperformancecountergt-element-network-settings"></a><span data-ttu-id="0b7ef-102">&lt;performanceCounter&gt; elemento (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="0b7ef-102">&lt;performanceCounter&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="0b7ef-103">Abilita o disabilita i contatori delle prestazioni di rete.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-103">Enables or disables networking performance counters.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="0b7ef-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0b7ef-104">\<configuration></span></span>  
+<span data-ttu-id="0b7ef-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="0b7ef-105">\<system.net></span></span>  
+<span data-ttu-id="0b7ef-106">\<Impostazioni ></span><span class="sxs-lookup"><span data-stu-id="0b7ef-106">\<settings></span></span>  
+<span data-ttu-id="0b7ef-107">\<performanceCounters ></span><span class="sxs-lookup"><span data-stu-id="0b7ef-107">\<performanceCounters></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="0b7ef-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0b7ef-108">Syntax</span></span>  
+  
+```xml  
 <performanceCounters  
   enabled="true|false"  
 />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0b7ef-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="0b7ef-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="0b7ef-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="0b7ef-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="0b7ef-111">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="0b7ef-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="0b7ef-112">Attribute</span></span>|<span data-ttu-id="0b7ef-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0b7ef-113">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|Specifica se i contatori delle prestazioni per la comunicazione di rete sono abilitati.  Il valore predefinito è `false`.|  
+|`enabled`|<span data-ttu-id="0b7ef-114">Specifica se sono abilitati i contatori delle prestazioni di rete.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-114">Specifies whether the networking performance counters are enabled.</span></span> <span data-ttu-id="0b7ef-115">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-115">The default value is `false`.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="0b7ef-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="0b7ef-116">Child Elements</span></span>  
+ <span data-ttu-id="0b7ef-117">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-117">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="0b7ef-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="0b7ef-118">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|<span data-ttu-id="0b7ef-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="0b7ef-119">Element</span></span>|<span data-ttu-id="0b7ef-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0b7ef-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0b7ef-121">Impostazioni</span><span class="sxs-lookup"><span data-stu-id="0b7ef-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="0b7ef-122">Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## Note  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="remarks"></a><span data-ttu-id="0b7ef-123">Note</span><span class="sxs-lookup"><span data-stu-id="0b7ef-123">Remarks</span></span>  
+ <span data-ttu-id="0b7ef-124">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="0b7ef-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
- I contatori delle prestazioni per la comunicazione di rete devono essere abilitati nel file di configurazione da utilizzare.  Tutti i contatori delle prestazioni per le comunicazioni di rete sono abilitati o disabilitati con una sola impostazione nel file di configurazione.  Non è possibile abilitare o disabilitare singoli contatori delle prestazioni per le comunicazioni di rete.  Per ulteriori informazioni sui contatori delle prestazioni per le comunicazioni di rete specifici, vedere [Networking Performance Counters](http://msdn.microsoft.com/it-it/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ <span data-ttu-id="0b7ef-125">I contatori delle prestazioni della rete devono essere abilitati nel file di configurazione da usare.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-125">Networking performance counters need to be enabled in the configuration file to be used.</span></span> <span data-ttu-id="0b7ef-126">Tutti i contatori delle prestazioni della rete vengono abilitati o disabilitati con una singola impostazione nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-126">All networking performance counters are enabled or disabled with a single setting in the configuration file.</span></span> <span data-ttu-id="0b7ef-127">Non è possibile abilitare o disabilitare singoli contatori delle prestazioni della rete.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-127">Individual networking performance counters cannot be enabled or disabled.</span></span> <span data-ttu-id="0b7ef-128">Per ulteriori informazioni sui contatori di prestazioni di rete specifici, vedere [contatori delle prestazioni della rete](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd).</span><span class="sxs-lookup"><span data-stu-id="0b7ef-128">For more information on the specific networking performance counters, see [Networking Performance Counters](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd).</span></span>  
   
- Il valore predefinito è che i contatori delle prestazioni per la comunicazione di rete sono disabilitati.  
+ <span data-ttu-id="0b7ef-129">Il valore predefinito è che le prestazioni di rete, i contatori sono disabilitati.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-129">The default value is that networking performance counters are disabled.</span></span>  
   
- La proprietà <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=fullName> può essere utilizzata per ottenere il valore corrente dell'attributo **enabled** dai file di configurazione applicabili.  
+ <span data-ttu-id="0b7ef-130">Il <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> utilizzabile per ottenere il valore corrente della proprietà di **abilitato** attributo dal file di configurazione applicabili.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-130">The <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> property can be used to get the current value of the **enabled** attribute from applicable configuration files.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come configurare <xref:System.Net> e gli spazi dei nomi correlati per abilitare contatori delle prestazioni per la comunicazione di rete.  
+## <a name="example"></a><span data-ttu-id="0b7ef-131">Esempio</span><span class="sxs-lookup"><span data-stu-id="0b7ef-131">Example</span></span>  
+ <span data-ttu-id="0b7ef-132">Nell'esempio seguente viene illustrato come configurare il <xref:System.Net> e i relativi spazi dei nomi per abilitare i contatori delle prestazioni di rete.</span><span class="sxs-lookup"><span data-stu-id="0b7ef-132">The following example shows how to configure the <xref:System.Net> and related namespaces to enable networking performance counters.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -80,8 +83,8 @@ Abilita o disabilita i contatori delle prestazioni per le comunicazioni di rete.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=fullName>   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=fullName>   
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)   
- [Networking Performance Counters](http://msdn.microsoft.com/it-it/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+## <a name="see-also"></a><span data-ttu-id="0b7ef-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0b7ef-133">See Also</span></span>  
+ <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="0b7ef-134">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="0b7ef-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+ [<span data-ttu-id="0b7ef-135">Contatori delle prestazioni di rete</span><span class="sxs-lookup"><span data-stu-id="0b7ef-135">Networking Performance Counters</span></span>](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd)

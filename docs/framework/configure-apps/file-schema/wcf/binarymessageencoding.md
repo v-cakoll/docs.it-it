@@ -5,35 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ddfe12fed87c2ad501364bc5d76df7b9480aa83
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 11d819d5d6302da309dd3e4ce674110c8419978f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
-Definisce un codificatore di messaggi binario che codifica messaggi di Windows Communication Foundation (WCF) in transito in formato binario.  
+# <a name="ltbinarymessageencodinggt"></a><span data-ttu-id="6b375-102">&lt;binaryMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="6b375-102">&lt;binaryMessageEncoding&gt;</span></span>
+<span data-ttu-id="6b375-103">Definisce un codificatore di messaggi binario che codifica messaggi di Windows Communication Foundation (WCF) in transito in formato binario.</span><span class="sxs-lookup"><span data-stu-id="6b375-103">Defines a binary message encoder that encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span>  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<customBinding >  
-\<associazione >  
-\<binaryMessageEncoding >  
+ <span data-ttu-id="6b375-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="6b375-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="6b375-105">\<associazioni ></span><span class="sxs-lookup"><span data-stu-id="6b375-105">\<bindings></span></span>  
+<span data-ttu-id="6b375-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="6b375-106">\<customBinding></span></span>  
+<span data-ttu-id="6b375-107">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="6b375-107">\<binding></span></span>  
+<span data-ttu-id="6b375-108">\<binaryMessageEncoding ></span><span class="sxs-lookup"><span data-stu-id="6b375-108">\<binaryMessageEncoding></span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="6b375-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6b375-109">Syntax</span></span>  
   
 ```xml  
 <binaryMessageEncoding   
@@ -42,36 +37,36 @@ Definisce un codificatore di messaggi binario che codifica messaggi di Windows C
    maxWritePoolSize="Integer"   messageVersion="Soap11Addressing10/Soap12Addressing10" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6b375-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="6b375-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="6b375-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="6b375-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a><span data-ttu-id="6b375-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="6b375-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="6b375-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="6b375-113">Attribute</span></span>|<span data-ttu-id="6b375-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6b375-114">Description</span></span>|  
 |---------------|-----------------|  
-|maxReadPoolSize|Numero intero che definisce il numero di messaggi che possono essere letti contemporaneamente senza allocare nuovi lettori. Dimensioni maggiori del pool rendono il sistema più tollerante ai picchi di attività al costo di un working set superiore. Il valore predefinito è 64.|  
-|maxSessionSize|Numero intero positivo che imposta la dimensione, in byte, del buffer usato per la codifica. Un buffer più grande aumenta la velocità di codifica a spese della dimensione del working set. Il valore predefinito è 2048.|  
-|maxWritePoolSize|Numero intero che definisce il numero di messaggi che possono essere inviati contemporaneamente senza allocare nuovi writer. Dimensioni maggiori del pool rendono il sistema più tollerante ai picchi di attività al costo di un working set superiore. Il valore predefinito è 16.|  
-|messageVersion|Specifica le versioni del messaggio SOAP e WS-Addressing usate o previste.|  
+|<span data-ttu-id="6b375-115">maxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="6b375-115">maxReadPoolSize</span></span>|<span data-ttu-id="6b375-116">Numero intero che definisce il numero di messaggi che possono essere letti contemporaneamente senza allocare nuovi lettori.</span><span class="sxs-lookup"><span data-stu-id="6b375-116">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span> <span data-ttu-id="6b375-117">Dimensioni maggiori del pool rendono il sistema più tollerante ai picchi di attività al costo di un working set superiore.</span><span class="sxs-lookup"><span data-stu-id="6b375-117">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="6b375-118">Il valore predefinito è 64.</span><span class="sxs-lookup"><span data-stu-id="6b375-118">The default is 64.</span></span>|  
+|<span data-ttu-id="6b375-119">maxSessionSize</span><span class="sxs-lookup"><span data-stu-id="6b375-119">maxSessionSize</span></span>|<span data-ttu-id="6b375-120">Numero intero positivo che imposta la dimensione, in byte, del buffer usato per la codifica.</span><span class="sxs-lookup"><span data-stu-id="6b375-120">A positive integer that sets the size, in bytes, of the buffer used for encoding.</span></span> <span data-ttu-id="6b375-121">Un buffer più grande aumenta la velocità di codifica a spese della dimensione del working set.</span><span class="sxs-lookup"><span data-stu-id="6b375-121">A larger buffer increases encoding speed at the expense of the size of the working set.</span></span> <span data-ttu-id="6b375-122">Il valore predefinito è 2048.</span><span class="sxs-lookup"><span data-stu-id="6b375-122">The default is 2048.</span></span>|  
+|<span data-ttu-id="6b375-123">maxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="6b375-123">maxWritePoolSize</span></span>|<span data-ttu-id="6b375-124">Numero intero che definisce il numero di messaggi che possono essere inviati contemporaneamente senza allocare nuovi writer.</span><span class="sxs-lookup"><span data-stu-id="6b375-124">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span> <span data-ttu-id="6b375-125">Dimensioni maggiori del pool rendono il sistema più tollerante ai picchi di attività al costo di un working set superiore.</span><span class="sxs-lookup"><span data-stu-id="6b375-125">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="6b375-126">Il valore predefinito è 16.</span><span class="sxs-lookup"><span data-stu-id="6b375-126">The default is 16.</span></span>|  
+|<span data-ttu-id="6b375-127">messageVersion</span><span class="sxs-lookup"><span data-stu-id="6b375-127">messageVersion</span></span>|<span data-ttu-id="6b375-128">Specifica le versioni del messaggio SOAP e WS-Addressing usate o previste.</span><span class="sxs-lookup"><span data-stu-id="6b375-128">Specifies the SOAP message and WS-Addressing versions that are used or expected.</span></span>|  
   
-### <a name="child-elements"></a>Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="6b375-129">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="6b375-129">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
+|<span data-ttu-id="6b375-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="6b375-130">Element</span></span>|<span data-ttu-id="6b375-131">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6b375-131">Description</span></span>|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[<span data-ttu-id="6b375-132">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="6b375-132">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="6b375-133">Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione.</span><span class="sxs-lookup"><span data-stu-id="6b375-133">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="6b375-134">L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="6b375-134">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a>Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="6b375-135">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="6b375-135">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
+|<span data-ttu-id="6b375-136">Elemento</span><span class="sxs-lookup"><span data-stu-id="6b375-136">Element</span></span>|<span data-ttu-id="6b375-137">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6b375-137">Description</span></span>|  
 |-------------|-----------------|  
-|[\<associazione >](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[<span data-ttu-id="6b375-138">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="6b375-138">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="6b375-139">Definisce tutte le funzionalità di associazione dell'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="6b375-139">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="remarks"></a>Note  
- La codifica è il processo di trasformazione di un messaggio in una sequenza di byte. La decodifica è il processo inverso. Windows Communication Foundation (WCF) include tre tipi di codifica per i messaggi SOAP, ovvero testo, binaria e MTOM (Message Transmission Optimization Mechanism).  
+## <a name="remarks"></a><span data-ttu-id="6b375-140">Note</span><span class="sxs-lookup"><span data-stu-id="6b375-140">Remarks</span></span>  
+ <span data-ttu-id="6b375-141">La codifica è il processo di trasformazione di un messaggio in una sequenza di byte.</span><span class="sxs-lookup"><span data-stu-id="6b375-141">Encoding is the process of transforming a message into a sequence of bytes.</span></span> <span data-ttu-id="6b375-142">La decodifica è il processo inverso.</span><span class="sxs-lookup"><span data-stu-id="6b375-142">Decoding is the reverse process.</span></span> <span data-ttu-id="6b375-143">Windows Communication Foundation (WCF) include tre tipi di codifica per i messaggi SOAP, ovvero testo, binaria e MTOM (Message Transmission Optimization Mechanism).</span><span class="sxs-lookup"><span data-stu-id="6b375-143">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  
   
- L'elemento `binaryMessageEncoding` specifica il formato binario .NET per XML e dispone delle opzioni che consentono di specificare la codifica dei caratteri e le versioni SOAP e WS-Addressing da usare. Il codificatore di messaggi binario codifica messaggi di Windows Communication Foundation (WCF) in transito in formato binario. Se da un lato questa codifica comporta una trasmissione molto veloce dei messaggi, dall'altro si perde l'interoperabilità basata sugli standard WS - *.  
+ <span data-ttu-id="6b375-144">L'elemento `binaryMessageEncoding` specifica il formato binario .NET per XML e dispone delle opzioni che consentono di specificare la codifica dei caratteri e le versioni SOAP e WS-Addressing da usare.</span><span class="sxs-lookup"><span data-stu-id="6b375-144">The `binaryMessageEncoding` element specifies the .NET Binary Format for XML and has options to specify the character encoding and the SOAP and WS-Addressing version to be used.</span></span> <span data-ttu-id="6b375-145">Il codificatore di messaggi binario codifica messaggi di Windows Communication Foundation (WCF) in transito in formato binario.</span><span class="sxs-lookup"><span data-stu-id="6b375-145">The binary message encoder encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span> <span data-ttu-id="6b375-146">Se da un lato questa codifica comporta una trasmissione molto veloce dei messaggi, dall'altro si perde l'interoperabilità basata sugli standard WS - *.</span><span class="sxs-lookup"><span data-stu-id="6b375-146">While this encoding results in very fast transmission of messages, interoperability based on the WS-* standards is lost.</span></span>  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="6b375-147">Esempio</span><span class="sxs-lookup"><span data-stu-id="6b375-147">Example</span></span>  
   
 ```xml  
 <binaryMessageEncoding maxReadPoolSize="211"  
@@ -79,15 +74,14 @@ Definisce un codificatore di messaggi binario che codifica messaggi di Windows C
    maxSessionSize="3141" />  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>   
- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>   
- [Codifica dei messaggi](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)   
- [Scelta di un codificatore di messaggi](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-
+## <a name="see-also"></a><span data-ttu-id="6b375-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6b375-148">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+ <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+ [<span data-ttu-id="6b375-149">Codifica dei messaggi</span><span class="sxs-lookup"><span data-stu-id="6b375-149">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
+ [<span data-ttu-id="6b375-150">Scelta di un codificatore di messaggi</span><span class="sxs-lookup"><span data-stu-id="6b375-150">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [<span data-ttu-id="6b375-151">Associazioni</span><span class="sxs-lookup"><span data-stu-id="6b375-151">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="6b375-152">Estensione delle associazioni</span><span class="sxs-lookup"><span data-stu-id="6b375-152">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="6b375-153">Associazioni personalizzate</span><span class="sxs-lookup"><span data-stu-id="6b375-153">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="6b375-154">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="6b375-154">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

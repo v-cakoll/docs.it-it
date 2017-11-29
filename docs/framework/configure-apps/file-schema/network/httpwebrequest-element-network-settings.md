@@ -1,40 +1,42 @@
 ---
-title: "Elemento &lt;httpWebRequest&gt; (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#httpWebRequest"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<httpWebRequest> (elemento)"
-  - "httpWebRequest (elemento)"
+title: '&lt;httpWebRequest&gt; elemento (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#httpWebRequest
+helpviewer_keywords:
+- <httpWebRequest> element
+- httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-caps.latest.revision: 18
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 0a4490870cb12ff221f75b043f01baad9b5c7c96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;httpWebRequest&gt; (Impostazioni di rete)
-Personalizza i parametri delle richieste Web.  
+# <a name="lthttpwebrequestgt-element-network-settings"></a><span data-ttu-id="0037b-102">&lt;httpWebRequest&gt; elemento (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="0037b-102">&lt;httpWebRequest&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="0037b-103">Consente di personalizzare i parametri della richiesta Web.</span><span class="sxs-lookup"><span data-stu-id="0037b-103">Customizes Web request parameters.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="0037b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0037b-104">\<configuration></span></span>  
+<span data-ttu-id="0037b-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="0037b-105">\<system.net></span></span>  
+<span data-ttu-id="0037b-106">\<Impostazioni ></span><span class="sxs-lookup"><span data-stu-id="0037b-106">\<settings></span></span>  
+<span data-ttu-id="0037b-107">\<httpWebRequest ></span><span class="sxs-lookup"><span data-stu-id="0037b-107">\<httpWebRequest></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="0037b-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0037b-108">Syntax</span></span>  
   
-      <httpWebRequest  
+```xml  
+<httpWebRequest  
   maximumResponseHeadersLength="size"  
   maximumErrorResponseLength="size"  
   maximumUnauthorizedUploadLength="size"  
@@ -42,37 +44,37 @@ Personalizza i parametri delle richieste Web.
 />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0037b-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="0037b-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="0037b-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="0037b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="0037b-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="0037b-111">Attributes</span></span>  
   
-|**Attributo**|**Descrizione**|  
+|<span data-ttu-id="0037b-112">**Attributo**</span><span class="sxs-lookup"><span data-stu-id="0037b-112">**Attribute**</span></span>|<span data-ttu-id="0037b-113">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="0037b-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|Specifica la lunghezza massima, in kilobyte, di un'intestazione di risposta.  Il valore predefinito è 64.  Il valore \-1 indica che non verrà imposto alcun limite di dimensione sulle intestazioni di risposta.|  
-|`maximumErrorResponseLength`|Specifica la lunghezza massima, in kilobyte, di una risposta di errore.  Il valore predefinito è 64.  Il valore \-1 indica che non verrà imposto alcun limite di dimensione sulle risposte di errore.|  
-|`maximumUnauthorizedUploadLength`|Specifica la lunghezza massima, in byte, di un caricamento eseguito in risposta a un codice di errore non autorizzato.  Il valore predefinito è \-1.  Un valore di \-1 indica che non verrà imposto alcun limite di dimensione all'upload.|  
-|`useUnsafeHeaderParsing`|Specifica se l'analisi delle intestazioni non protette è attivata.  Il valore predefinito è `false`.|  
+|`maximumResponseHeadersLength`|<span data-ttu-id="0037b-114">Specifica la lunghezza massima di un'intestazione di risposta, in kilobyte.</span><span class="sxs-lookup"><span data-stu-id="0037b-114">Specifies the maximum length of a response header, in kilobytes.</span></span> <span data-ttu-id="0037b-115">Il valore predefinito è 64.</span><span class="sxs-lookup"><span data-stu-id="0037b-115">The default is 64.</span></span> <span data-ttu-id="0037b-116">Il valore-1 indica che non verrà imposto alcun limite di dimensione delle intestazioni di risposta.</span><span class="sxs-lookup"><span data-stu-id="0037b-116">A value of -1 indicates that no size limit will be imposed on the response headers.</span></span>|  
+|`maximumErrorResponseLength`|<span data-ttu-id="0037b-117">Specifica la lunghezza massima di una risposta di errore, in kilobyte.</span><span class="sxs-lookup"><span data-stu-id="0037b-117">Specifies the maximum length of an error response, in kilobytes.</span></span> <span data-ttu-id="0037b-118">Il valore predefinito è 64.</span><span class="sxs-lookup"><span data-stu-id="0037b-118">The default is 64.</span></span> <span data-ttu-id="0037b-119">Il valore-1 indica che non verrà imposto alcun limite di dimensione nella risposta di errore.</span><span class="sxs-lookup"><span data-stu-id="0037b-119">A value of -1 indicates that no size limit will be imposed on the error response.</span></span>|  
+|`maximumUnauthorizedUploadLength`|<span data-ttu-id="0037b-120">Specifica la lunghezza massima di un'operazione di caricamento in risposta a un codice di errore non autorizzato, in byte.</span><span class="sxs-lookup"><span data-stu-id="0037b-120">Specifies the maximum length of an upload in response to an unauthorized error code, in bytes.</span></span> <span data-ttu-id="0037b-121">Il valore predefinito è -1.</span><span class="sxs-lookup"><span data-stu-id="0037b-121">The default is -1.</span></span> <span data-ttu-id="0037b-122">Il valore-1 indica che non verrà imposto sul caricamento alcun limite di dimensione.</span><span class="sxs-lookup"><span data-stu-id="0037b-122">A value of -1 indicates that no size limit will be imposed on the upload.</span></span>|  
+|`useUnsafeHeaderParsing`|<span data-ttu-id="0037b-123">Specifica se l'analisi delle intestazioni non sicure è abilitata.</span><span class="sxs-lookup"><span data-stu-id="0037b-123">Specifies whether unsafe header parsing is enabled.</span></span> <span data-ttu-id="0037b-124">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="0037b-124">The default value is `false`.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="0037b-125">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="0037b-125">Child Elements</span></span>  
+ <span data-ttu-id="0037b-126">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="0037b-126">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="0037b-127">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="0037b-127">Parent Elements</span></span>  
   
-|**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|<span data-ttu-id="0037b-128">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="0037b-128">**Element**</span></span>|<span data-ttu-id="0037b-129">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="0037b-129">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="0037b-130">Impostazioni</span><span class="sxs-lookup"><span data-stu-id="0037b-130">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="0037b-131">Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="0037b-131">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## Note  
- Per impostazione predefinita, .NET Framework applica in maniera rigida la specifica RFC 2616 per l'analisi URI.  Alcune risposte del server possono includere caratteri di controllo in campi non consentiti, che causeranno la generazione di un'eccezione <xref:System.Net.WebException> da parte del metodo <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=fullName>.  Se l'attributo **useUnsafeHeaderParsing** è impostato su **true**, il metodo <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=fullName> non genererà alcuna eccezione. L'applicazione sarà, tuttavia, vulnerabile a diverse forme di attacchi durante l'analisi URI.  La soluzione migliore consiste nel modificare le impostazioni del server in modo che la risposta non includa caratteri di controllo.  
+## <a name="remarks"></a><span data-ttu-id="0037b-132">Note</span><span class="sxs-lookup"><span data-stu-id="0037b-132">Remarks</span></span>  
+ <span data-ttu-id="0037b-133">Per impostazione predefinita, .NET Framework viene introdotto RFC 2616 per l'analisi di URI.</span><span class="sxs-lookup"><span data-stu-id="0037b-133">By default, the .NET Framework strictly enforces RFC 2616 for URI parsing.</span></span> <span data-ttu-id="0037b-134">Alcune risposte del server possono includere caratteri di controllo in campi non consentiti, che provoca il <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> metodo consente di generare un <xref:System.Net.WebException>.</span><span class="sxs-lookup"><span data-stu-id="0037b-134">Some server responses may include control characters in prohibited fields, which will cause the <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> method to throw a <xref:System.Net.WebException>.</span></span> <span data-ttu-id="0037b-135">Se **useUnsafeHeaderParsing** è impostato su **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> non viene generata in questo caso, tuttavia, l'applicazione sarà vulnerabile a diversi tipi di attacchi di analisi URI.</span><span class="sxs-lookup"><span data-stu-id="0037b-135">If **useUnsafeHeaderParsing** is set to **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> will not throw in this case; however, your application will be vulnerable to several forms of URI parsing attacks.</span></span> <span data-ttu-id="0037b-136">La soluzione migliore consiste nel modificare il server in modo che la risposta non include caratteri di controllo.</span><span class="sxs-lookup"><span data-stu-id="0037b-136">The best solution is to change the server so that the response does not include control characters.</span></span>  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="0037b-137">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="0037b-137">Configuration Files</span></span>  
+ <span data-ttu-id="0037b-138">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="0037b-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene illustrato come specificare una lunghezza di intestazione massima maggiore del normale.  
+## <a name="example"></a><span data-ttu-id="0037b-139">Esempio</span><span class="sxs-lookup"><span data-stu-id="0037b-139">Example</span></span>  
+ <span data-ttu-id="0037b-140">Nell'esempio seguente viene illustrato come specificare un maggiore rispetto alla lunghezza massima dell'intestazione normale.</span><span class="sxs-lookup"><span data-stu-id="0037b-140">The following example shows how to specify a larger than normal maximum header length.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -84,6 +86,6 @@ Personalizza i parametri delle richieste Web.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>   
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="0037b-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0037b-141">See Also</span></span>  
+ <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
+ [<span data-ttu-id="0037b-142">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="0037b-142">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

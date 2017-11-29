@@ -1,37 +1,43 @@
 ---
-title: "Register a Client-Side Provider Assembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "registering client-side provider assemblies"
-  - "client-side provider assemblies, registering"
-  - "UI Automation, registering provider assemblies"
-  - "provider assemblies, registering"
+title: Registrare un assembly di provider lato client
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- registering client-side provider assemblies
+- client-side provider assemblies, registering
+- UI Automation, registering provider assemblies
+- provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-caps.latest.revision: 8
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 638e7b07c159bf1daf91428a1b95a4e83f61dace
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Register a Client-Side Provider Assembly
+# <a name="register-a-client-side-provider-assembly"></a><span data-ttu-id="af639-102">Registrare un assembly di provider lato client</span><span class="sxs-lookup"><span data-stu-id="af639-102">Register a Client-Side Provider Assembly</span></span>
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="af639-103">Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="af639-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="af639-104">Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="af639-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- Questo argomento illustra come registrare una DLL contenente provider di automazione interfaccia utente lato client.  
+ <span data-ttu-id="af639-105">Questo argomento illustra come registrare una DLL contenente provider di automazione interfaccia utente lato client.</span><span class="sxs-lookup"><span data-stu-id="af639-105">This topic shows how to register a DLL that contains client-side UI Automation providers.</span></span>  
   
-## Esempio  
- L'esempio seguente illustra come registrare un assembly contenente un provider per una finestra della console.  
+## <a name="example"></a><span data-ttu-id="af639-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="af639-106">Example</span></span>  
+ <span data-ttu-id="af639-107">L'esempio seguente illustra come registrare un assembly contenente un provider per una finestra della console.</span><span class="sxs-lookup"><span data-stu-id="af639-107">The following example shows how to register an assembly that contains a provider for a console window.</span></span>  
   
  [!code-csharp[UIAClientSideProvider_snip#102](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSClientProgram.cs#102)]
  [!code-vb[UIAClientSideProvider_snip#102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csclientprogram.vb#102)]  
   
-## Vedere anche  
- [Create a Client\-Side UI Automation Provider](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+## <a name="see-also"></a><span data-ttu-id="af639-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="af639-108">See Also</span></span>  
+ [<span data-ttu-id="af639-109">Creare un Provider di automazione interfaccia utente lato Client</span><span class="sxs-lookup"><span data-stu-id="af639-109">Create a Client-Side UI Automation Provider</span></span>](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)

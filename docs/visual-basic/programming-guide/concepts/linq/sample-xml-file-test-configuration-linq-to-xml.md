@@ -1,35 +1,27 @@
 ---
-title: 'File XML di esempio: Test Configuration (LINQ to XML) | Documenti di Microsoft'
+title: 'File XML di esempio: configurazione di test (LINQ to XML)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: addb3f40b0d995d320171cdcd5d2dd58ff5cfe0d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0702c6a452ce08aaeccdd0abe56c255483aef65c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>File XML di esempio: configurazione di test (LINQ to XML)
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Si tratta di un file di configurazione di test.  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="141c6-102">File XML di esempio: configurazione di test (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="141c6-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="141c6-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="141c6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="141c6-104">Si tratta di un file di configurazione di test.</span><span class="sxs-lookup"><span data-stu-id="141c6-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a><span data-ttu-id="141c6-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="141c6-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,5 +65,5 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="141c6-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="141c6-106">See Also</span></span>  
+ [<span data-ttu-id="141c6-107">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="141c6-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

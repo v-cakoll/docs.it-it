@@ -1,55 +1,61 @@
 ---
-title: "Protezione del trasporto con l&#39;autenticazione di Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Protezione del trasporto con l'autenticazione di Windows
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-caps.latest.revision: 17
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 68550646f806b30f072b4270a336698011db54d6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Protezione del trasporto con l&#39;autenticazione di Windows
-Nello scenario seguente vengono illustrati un client e un servizio di  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti tramite la sicurezza di Windows.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] programmazione, vedere [Procedura: proteggere un servizio con credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+# <a name="transport-security-with-windows-authentication"></a><span data-ttu-id="cfeb9-102">Protezione del trasporto con l'autenticazione di Windows</span><span class="sxs-lookup"><span data-stu-id="cfeb9-102">Transport Security with Windows Authentication</span></span>
+<span data-ttu-id="cfeb9-103">Nello scenario seguente vengono illustrati un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti tramite la sicurezza Windows.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-103">The following scenario shows a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client and service secured by Windows security.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfeb9-104">linguaggio di programmazione, vedere [procedura: proteggere un servizio con le credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span><span class="sxs-lookup"><span data-stu-id="cfeb9-104"> programming, see [How to: Secure a Service with Windows Credentials](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span></span>  
   
- Un servizio Web intranet consente di visualizzare informazioni sulle risorse umane.Il client è un'applicazione Windows Form.L'applicazione è distribuita in un dominio in cui la protezione è affidata a un controller Kerberos.  
+ <span data-ttu-id="cfeb9-105">Un servizio Web intranet consente di visualizzare informazioni sulle risorse umane.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-105">An intranet Web service displays human resources information.</span></span> <span data-ttu-id="cfeb9-106">Il client è un'applicazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-106">The client is a Windows Form application.</span></span> <span data-ttu-id="cfeb9-107">L'applicazione è distribuita in un dominio in cui la protezione è affidata a un controller Kerberos.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-107">The application is deployed in a domain with a Kerberos controller securing the domain.</span></span>  
   
- ![Sicurezza del trasporto con l'autenticazione di Windows](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ <span data-ttu-id="cfeb9-108">![Trasporto con l'autenticazione di Windows](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span><span class="sxs-lookup"><span data-stu-id="cfeb9-108">![Transport security with Windows authentication](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span></span>  
   
-|Caratteristica|Descrizione|  
+|<span data-ttu-id="cfeb9-109">Caratteristica</span><span class="sxs-lookup"><span data-stu-id="cfeb9-109">Characteristic</span></span>|<span data-ttu-id="cfeb9-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cfeb9-110">Description</span></span>|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Trasporto|  
-|Interoperabilità|Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
-|Autenticazione \(server\)<br /><br /> Autenticazione \(client\)|Sì \(utilizza l'autenticazione integrata di Windows\)<br /><br /> Sì \(utilizza l'autenticazione integrata di Windows\)|  
-|Integrità|Sì|  
-|Riservatezza|Sì|  
-|Transport|NET.TCP|  
-|Associazione|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="cfeb9-111">Modalità di sicurezza</span><span class="sxs-lookup"><span data-stu-id="cfeb9-111">Security Mode</span></span>|<span data-ttu-id="cfeb9-112">Trasporto</span><span class="sxs-lookup"><span data-stu-id="cfeb9-112">Transport</span></span>|  
+|<span data-ttu-id="cfeb9-113">Interoperabilità</span><span class="sxs-lookup"><span data-stu-id="cfeb9-113">Interoperability</span></span>|<span data-ttu-id="cfeb9-114">Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfeb9-114">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] only</span></span>|  
+|<span data-ttu-id="cfeb9-115">Autenticazione (server)</span><span class="sxs-lookup"><span data-stu-id="cfeb9-115">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="cfeb9-116">Autenticazione (client)</span><span class="sxs-lookup"><span data-stu-id="cfeb9-116">Authentication (Client)</span></span>|<span data-ttu-id="cfeb9-117">Sì (utilizza l'autenticazione integrata di Windows)</span><span class="sxs-lookup"><span data-stu-id="cfeb9-117">Yes (using Windows integrated authentication)</span></span><br /><br /> <span data-ttu-id="cfeb9-118">Sì (utilizza l'autenticazione integrata di Windows)</span><span class="sxs-lookup"><span data-stu-id="cfeb9-118">Yes (using Windows integrated authentication)</span></span>|  
+|<span data-ttu-id="cfeb9-119">Integrità</span><span class="sxs-lookup"><span data-stu-id="cfeb9-119">Integrity</span></span>|<span data-ttu-id="cfeb9-120">Sì</span><span class="sxs-lookup"><span data-stu-id="cfeb9-120">Yes</span></span>|  
+|<span data-ttu-id="cfeb9-121">Riservatezza</span><span class="sxs-lookup"><span data-stu-id="cfeb9-121">Confidentiality</span></span>|<span data-ttu-id="cfeb9-122">Sì</span><span class="sxs-lookup"><span data-stu-id="cfeb9-122">Yes</span></span>|  
+|<span data-ttu-id="cfeb9-123">Trasporto</span><span class="sxs-lookup"><span data-stu-id="cfeb9-123">Transport</span></span>|<span data-ttu-id="cfeb9-124">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="cfeb9-124">NET.TCP</span></span>|  
+|<span data-ttu-id="cfeb9-125">Binding</span><span class="sxs-lookup"><span data-stu-id="cfeb9-125">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## Servizio  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.Eseguire una delle operazioni seguenti:  
+## <a name="service"></a><span data-ttu-id="cfeb9-126">Servizio</span><span class="sxs-lookup"><span data-stu-id="cfeb9-126">Service</span></span>  
+ <span data-ttu-id="cfeb9-127">Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-127">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="cfeb9-128">Eseguire una delle operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="cfeb9-128">Do one of the following:</span></span>  
   
--   Creare un servizio autonomo utilizzando il codice senza alcuna configurazione.  
+-   <span data-ttu-id="cfeb9-129">Creare un servizio autonomo usando il codice senza alcuna configurazione.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-129">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   Creare un servizio utilizzando la configurazione fornita, ma non definire alcun endpoint.  
+-   <span data-ttu-id="cfeb9-130">Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-130">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### Codice  
- Nel codice seguente viene illustrato come creare un endpoint del servizio che utilizza la protezione di Windows.  
+### <a name="code"></a><span data-ttu-id="cfeb9-131">Codice</span><span class="sxs-lookup"><span data-stu-id="cfeb9-131">Code</span></span>  
+ <span data-ttu-id="cfeb9-132">Nel codice seguente viene illustrato come creare un endpoint del servizio che utilizza la protezione di Windows.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-132">The following code shows how to create a service endpoint that uses a Windows security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### Configurazione  
- Per configurare l'endpoint del servizio, è possibile utilizzare la configurazione seguente anziché il codice.  
+### <a name="configuration"></a><span data-ttu-id="cfeb9-133">Configurazione</span><span class="sxs-lookup"><span data-stu-id="cfeb9-133">Configuration</span></span>  
+ <span data-ttu-id="cfeb9-134">Per configurare l'endpoint del servizio, è possibile utilizzare la configurazione seguente anziché il codice.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-134">The following configuration can be used instead of the code to set up the service endpoint:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -77,26 +83,26 @@ Nello scenario seguente vengono illustrati un client e un servizio di  [!INCLUDE
 </configuration>  
 ```  
   
-## Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.Eseguire una delle operazioni seguenti:  
+## <a name="client"></a><span data-ttu-id="cfeb9-135">Client</span><span class="sxs-lookup"><span data-stu-id="cfeb9-135">Client</span></span>  
+ <span data-ttu-id="cfeb9-136">Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="cfeb9-137">Eseguire una delle operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="cfeb9-137">Do one of the following:</span></span>  
   
--   Creare un client autonomo utilizzando il codice \(e il codice client\).  
+-   <span data-ttu-id="cfeb9-138">Creare un client autonomo usando il codice (e il codice client).</span><span class="sxs-lookup"><span data-stu-id="cfeb9-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   Creare un client che non definisce alcun indirizzo di endpoint.Utilizzare invece il costruttore client che accetta il nome della configurazione come argomento.Ad esempio:  
+-   <span data-ttu-id="cfeb9-139">Creare un client che non definisce alcun indirizzo di endpoint.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="cfeb9-140">Usare invece il costruttore client che accetta il nome della configurazione come argomento.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="cfeb9-141">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="cfeb9-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Codice  
- Il codice seguente crea il client.L'associazione è configurata per utilizzare la protezione della modalità trasporto, con il trasporto TCP e il tipo di credenziale client impostato su Windows.  
+### <a name="code"></a><span data-ttu-id="cfeb9-142">Codice</span><span class="sxs-lookup"><span data-stu-id="cfeb9-142">Code</span></span>  
+ <span data-ttu-id="cfeb9-143">Il codice seguente crea il client.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-143">The following code creates the client.</span></span> <span data-ttu-id="cfeb9-144">L'associazione è configurata per utilizzare la protezione della modalità trasporto, con il trasporto TCP e il tipo di credenziale client impostato su Windows.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-144">The binding is configured to use the Transport mode security, with the TCP transport, with the client credential type set to Windows.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### Configurazione  
- Per creare il client, è possibile utilizzare la configurazione seguente anziché il codice.  
+### <a name="configuration"></a><span data-ttu-id="cfeb9-145">Configurazione</span><span class="sxs-lookup"><span data-stu-id="cfeb9-145">Configuration</span></span>  
+ <span data-ttu-id="cfeb9-146">Per creare il client, è possibile utilizzare la configurazione seguente anziché il codice.</span><span class="sxs-lookup"><span data-stu-id="cfeb9-146">The following configuration can be used instead of the code to create the client.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -121,7 +127,7 @@ Nello scenario seguente vengono illustrati un client e un servizio di  [!INCLUDE
 </configuration>  
 ```  
   
-## Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Procedura: proteggere un servizio con credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)   
- [Modello di sicurezza per Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="cfeb9-147">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cfeb9-147">See Also</span></span>  
+ [<span data-ttu-id="cfeb9-148">Cenni preliminari sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="cfeb9-148">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="cfeb9-149">Procedura: Proteggere un servizio con credenziali di Windows</span><span class="sxs-lookup"><span data-stu-id="cfeb9-149">How to: Secure a Service with Windows Credentials</span></span>](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
+ [<span data-ttu-id="cfeb9-150">Modello di sicurezza per Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="cfeb9-150">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,40 +1,44 @@
 ---
-title: "Procedura: inviare dati al figlio MDI attivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "form figlio"
-  - "Appunti, recupero di dati"
-  - "Appunti, incollare"
-  - "MDI, invio di dati ai form"
+title: 'Procedura: inviare dati al figlio MDI attivo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- child forms
+- MDI [Windows Forms], sending data to forms
+- Clipboard [Windows Forms], pasting
+- Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b7f505d68bfd6d8c65104244f9583fd3cf975dd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: inviare dati al figlio MDI attivo
-Spesso, nel contesto delle [applicazioni MDI \(Interfaccia a documenti multipli, Multiple Document Interface\)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), è necessario inviare dati alla finestra figlio attiva, come quando l'utente incolla i dati dagli Appunti in un'applicazione MDI.  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="c1f5e-102">Procedura: inviare dati al figlio MDI attivo</span><span class="sxs-lookup"><span data-stu-id="c1f5e-102">How to: Send Data to the Active MDI Child</span></span>
+<span data-ttu-id="c1f5e-103">Spesso, all'interno del contesto di [Multiple-Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), sarà necessario inviare dati alla finestra figlio attivo, ad esempio quando l'utente consente di incollare dati dagli Appunti in un'applicazione MDI.</span><span class="sxs-lookup"><span data-stu-id="c1f5e-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
   
 > [!NOTE]
->  Per informazioni sulla verifica della finestra figlio attiva e l'invio del relativo contenuto negli Appunti, vedere [Determinazione del figlio MIDI attivo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
+>  <span data-ttu-id="c1f5e-104">Per informazioni sulla verifica finestra figlio ha lo stato attivo e l'invio del relativo contenuto negli Appunti, vedere [determinazione del figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).</span><span class="sxs-lookup"><span data-stu-id="c1f5e-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).</span></span>  
   
-### Per inviare i dati alla finestra figlio MDI attiva dagli Appunti  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="c1f5e-105">Per inviare dati alla finestra figlio MDI attiva dagli Appunti</span><span class="sxs-lookup"><span data-stu-id="c1f5e-105">To send data to the active MDI child window from the Clipboard</span></span>  
   
-1.  In un metodo, copiare il testo degli Appunti nel controllo attivo del form figlio attivo.  
+1.  <span data-ttu-id="c1f5e-106">Copiare il testo negli Appunti all'interno di un metodo, il controllo attivo del form figlio attivo.</span><span class="sxs-lookup"><span data-stu-id="c1f5e-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
   
     > [!NOTE]
-    >  Nell'esempio qui di seguito si presume l'esistenza di un form padre MDI \(`Form1`\) con una o più finestre figlio MDI contenenti un controllo <xref:System.Windows.Forms.RichTextBox>.  Per ulteriori informazioni, vedere [Creazione di form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  <span data-ttu-id="c1f5e-107">Questo esempio si presuppone un form padre MDI è (`Form1`) che dispone di uno o più finestre figlio MDI contenente un <xref:System.Windows.Forms.RichTextBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="c1f5e-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="c1f5e-108">Per ulteriori informazioni, vedere [creazione di form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="c1f5e-108">For more information, see [Creating MDI Parent Forms](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -62,7 +66,6 @@ Spesso, nel contesto delle [applicazioni MDI \(Interfaccia a documenti multipli,
           End Try  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -96,12 +99,11 @@ Spesso, nel contesto delle [applicazioni MDI \(Interfaccia a documenti multipli,
           }  
        }  
     }  
-  
     ```  
   
-## Vedere anche  
- [Applicazioni MDI \(Interfaccia a documenti multipli, Multiple\-Document Interface\)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)   
- [Procedura: creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Procedura: creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [Procedura: determinare il figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)   
- [Procedura: disporre i form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a><span data-ttu-id="c1f5e-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c1f5e-109">See Also</span></span>  
+ [<span data-ttu-id="c1f5e-110">Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)</span><span class="sxs-lookup"><span data-stu-id="c1f5e-110">Multiple-Document Interface (MDI) Applications</span></span>](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [<span data-ttu-id="c1f5e-111">Procedura: Creare form padre MDI</span><span class="sxs-lookup"><span data-stu-id="c1f5e-111">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [<span data-ttu-id="c1f5e-112">Procedura: Creare form figlio MDI</span><span class="sxs-lookup"><span data-stu-id="c1f5e-112">How to: Create MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [<span data-ttu-id="c1f5e-113">Procedura: Determinare il figlio MDI attivo</span><span class="sxs-lookup"><span data-stu-id="c1f5e-113">How to: Determine the Active MDI Child</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [<span data-ttu-id="c1f5e-114">Procedura: Disporre i form figlio MDI</span><span class="sxs-lookup"><span data-stu-id="c1f5e-114">How to: Arrange MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

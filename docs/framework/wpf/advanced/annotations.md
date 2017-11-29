@@ -1,37 +1,40 @@
 ---
-title: "Annotazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "documenti, annotazioni"
-  - "evidenziazioni"
-  - "note"
+title: Annotazioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- highlights [WPF]
+- documents [WPF], annotations
+- sticky notes [WPF]
 ms.assetid: 232ad0d7-2264-4bed-aae3-10dfde116a9c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ad5825c63672f0cadd30b7a57d81427407e5097e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Annotazioni
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce controlli per la visualizzazione dei documenti che supportano l'annotazione del contenuto dei documenti.  
+# <a name="annotations"></a><span data-ttu-id="22fa1-102">Annotazioni</span><span class="sxs-lookup"><span data-stu-id="22fa1-102">Annotations</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="22fa1-103">fornisce controlli che supportano l'annotazione del contenuto dei documenti di visualizzazione del documento.</span><span class="sxs-lookup"><span data-stu-id="22fa1-103"> provides document viewing controls that support annotating document content.</span></span>  
   
-## In questa sezione  
- [Cenni preliminari sulle annotazioni](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
- [Schema annotazioni](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
+## <a name="in-this-section"></a><span data-ttu-id="22fa1-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="22fa1-104">In This Section</span></span>  
+ [<span data-ttu-id="22fa1-105">Cenni preliminari sulle annotazioni</span><span class="sxs-lookup"><span data-stu-id="22fa1-105">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
+  [<span data-ttu-id="22fa1-106">Schema annotazioni</span><span class="sxs-lookup"><span data-stu-id="22fa1-106">Annotations Schema</span></span>](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="22fa1-107">Riferimento</span><span class="sxs-lookup"><span data-stu-id="22fa1-107">Reference</span></span>  
  <xref:System.Windows.Annotations.Annotation>  
- <xref:System.Windows.Annotations.AnnotationService>  
- <xref:System.Windows.Controls.DocumentViewer>  
+  <xref:System.Windows.Annotations.AnnotationService>  
+  <xref:System.Windows.Controls.DocumentViewer>  
   
-## Sezioni correlate  
- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="22fa1-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="22fa1-108">Related Sections</span></span>  
+ [<span data-ttu-id="22fa1-109">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="22fa1-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+  [<span data-ttu-id="22fa1-110">Cenni preliminari sui documenti dinamici</span><span class="sxs-lookup"><span data-stu-id="22fa1-110">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

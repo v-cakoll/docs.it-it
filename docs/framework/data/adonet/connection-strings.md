@@ -1,49 +1,52 @@
 ---
-title: "Stringhe di connessione in ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Stringhe di connessione in ADO.NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bd787373b869c31727cfc0d027b6b98774b0d630
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stringhe di connessione in ADO.NET
-In .NET Framework 2.0 sono state introdotte nuove funzionalità per l'uso delle stringhe di connessione, tra cui l'introduzione di nuove parole chiave nelle classi di generatori di stringhe di connessione che facilitano la creazione di stringhe di connessione valide in fase di esecuzione.  
+# <a name="connection-strings-in-adonet"></a><span data-ttu-id="1865f-102">Stringhe di connessione in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="1865f-102">Connection Strings in ADO.NET</span></span>
+<span data-ttu-id="1865f-103">In .NET Framework 2.0 sono state introdotte nuove funzionalità per l'uso delle stringhe di connessione, tra cui l'introduzione di nuove parole chiave nelle classi di generatori di stringhe di connessione che facilitano la creazione di stringhe di connessione valide in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="1865f-103">The .NET Framework 2.0 introduced new capabilities for working with connection strings, including the introduction of new keywords to the connection string builder classes, which facilitate creating valid connection strings at run time.</span></span>  
   
- Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati.  La sintassi dipende dal provider di dati e la stringa di connessione viene analizzata durante il tentativo di aprire una connessione.  Gli errori di sintassi generano un'eccezione in fase di esecuzione, ma altri errori si verificano solo dopo che l'origine dati riceve informazioni sulla connessione.  Una volta convalidata, l'origine dati applica le opzioni specificate nella stringa di connessione e apre la connessione.  
+ <span data-ttu-id="1865f-104">Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="1865f-104">A connection string contains initialization information that is passed as a parameter from a data provider to a data source.</span></span> <span data-ttu-id="1865f-105">La sintassi dipende dal provider di dati e la stringa di connessione viene analizzata durante il tentativo di aprire una connessione.</span><span class="sxs-lookup"><span data-stu-id="1865f-105">The syntax depends on the data provider, and the connection string is parsed during the attempt to open a connection.</span></span> <span data-ttu-id="1865f-106">Gli errori di sintassi generano un'eccezione in fase di esecuzione, ma altri errori si verificano solo dopo che l'origine dati riceve informazioni sulla connessione.</span><span class="sxs-lookup"><span data-stu-id="1865f-106">Syntax errors generate a run-time exception, but other errors occur only after the data source receives connection information.</span></span> <span data-ttu-id="1865f-107">Una volta convalidata, l'origine dati applica le opzioni specificate nella stringa di connessione e apre la connessione.</span><span class="sxs-lookup"><span data-stu-id="1865f-107">Once validated, the data source applies the options specified in the connection string and opens the connection.</span></span>  
   
- Il formato di una stringa di connessione è un elenco delimitato da punti e virgola composto da coppie di parametri chiave\/valore:  
+ <span data-ttu-id="1865f-108">Il formato di una stringa di connessione è un elenco delimitato da punti e virgola composto da coppie di parametri chiave/valore:</span><span class="sxs-lookup"><span data-stu-id="1865f-108">The format of a connection string is a semicolon-delimited list of key/value parameter pairs:</span></span>  
   
  `keyword1=value; keyword2=value;`  
   
- Le parole chiave non fanno distinzione tra maiuscole e minuscole e gli spazi tra coppie chiave\/valore vengono ignorati.  Tuttavia, i valori possono fare distinzione tra maiuscole e minuscole, a seconda dell'origine dati.  I valori contenenti punto e virgola, virgolette singole o virgolette doppie devono essere racchiusi tra virgolette doppie.  
+ <span data-ttu-id="1865f-109">Le parole chiave non fanno distinzione tra maiuscole e minuscole e gli spazi tra coppie chiave/valore vengono ignorati.</span><span class="sxs-lookup"><span data-stu-id="1865f-109">Keywords are not case sensitive, and spaces between key/value pairs are ignored.</span></span> <span data-ttu-id="1865f-110">Tuttavia, i valori possono fare distinzione tra maiuscole e minuscole, a seconda dell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="1865f-110">However, values may be case sensitive, depending on the data source.</span></span> <span data-ttu-id="1865f-111">I valori contenenti punto e virgola, virgolette singole o virgolette doppie devono essere racchiusi tra virgolette doppie.</span><span class="sxs-lookup"><span data-stu-id="1865f-111">Any values containing a semicolon, single quotation marks, or double quotation marks must be enclosed in double quotation marks.</span></span>  
   
- La sintassi di una stringa di connessione valida varia a seconda del provider e, nel corso degli anni, si è evoluta dalle API iniziali quale ODBC.  Il provider di dati .NET Framework per SQL Server \(SqlClient\)  incorpora numerosi elementi della sintassi precedente e, in genere, presenta una sintassi delle stringhe di connessione comuni più flessibile.  Esistono spesso sinonimi ugualmente validi per gli elementi della sintassi delle stringhe di connessione, ma alcuni errori di sintassi e di ortografia possono causare problemi.  Ad esempio "`Integrated Security=true`" è valido, mentre "`IntegratedSecurity=true`" genera un errore.  Inoltre, le stringhe di connessione create in fase di esecuzione da input dell'utente non convalidato possono portare ad attacchi injection alle stringhe, compromettendo la sicurezza nell'origine dati.  
+ <span data-ttu-id="1865f-112">La sintassi di una stringa di connessione valida varia a seconda del provider e, nel corso degli anni, si è evoluta dalle API iniziali quale ODBC.</span><span class="sxs-lookup"><span data-stu-id="1865f-112">Valid connection string syntax depends on the provider, and has evolved over the years from earlier APIs like ODBC.</span></span> <span data-ttu-id="1865f-113">Il provider di dati .NET Framework per SQL Server (SqlClient)  incorpora numerosi elementi della sintassi precedente e, in genere, presenta una sintassi delle stringhe di connessione comuni più flessibile.</span><span class="sxs-lookup"><span data-stu-id="1865f-113">The .NET Framework Data Provider for SQL Server (SqlClient) incorporates many elements from older syntax and is generally more flexible with common connection string syntax.</span></span> <span data-ttu-id="1865f-114">Esistono spesso sinonimi ugualmente validi per gli elementi della sintassi delle stringhe di connessione, ma alcuni errori di sintassi e di ortografia possono causare problemi.</span><span class="sxs-lookup"><span data-stu-id="1865f-114">There are frequently equally valid synonyms for connection string syntax elements, but some syntax and spelling errors can cause problems.</span></span> <span data-ttu-id="1865f-115">Ad esempio "`Integrated Security=true`" è valido, mentre "`IntegratedSecurity=true`" genera un errore.</span><span class="sxs-lookup"><span data-stu-id="1865f-115">For example, "`Integrated Security=true`" is valid, whereas "`IntegratedSecurity=true`" causes an error.</span></span> <span data-ttu-id="1865f-116">Inoltre, le stringhe di connessione create in fase di esecuzione da input dell'utente non convalidato possono portare ad attacchi injection alle stringhe, compromettendo la sicurezza nell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="1865f-116">In addition, connection strings constructed at run time from unvalidated user input can lead to string injection attacks, jeopardizing security at the data source.</span></span>  
   
- Per risolvere questi problemi, in ADO.NET 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework.  Le parole chiave sono esposte come proprietà, consentendo la convalida della sintassi delle stringhe di connessione prima dell'invio all'origine dati.  
+ <span data-ttu-id="1865f-117">Per risolvere questi problemi, in ADO.NET 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1865f-117">To address these problems, ADO.NET 2.0 introduced new connection string builders for each .NET Framework data provider.</span></span> <span data-ttu-id="1865f-118">Le parole chiave sono esposte come proprietà, consentendo la convalida della sintassi delle stringhe di connessione prima dell'invio all'origine dati.</span><span class="sxs-lookup"><span data-stu-id="1865f-118">Keywords are exposed as properties, enabling connection string syntax to be validated before submission to the data source.</span></span>  
   
-## In questa sezione  
- [Compilatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.  
+## <a name="in-this-section"></a><span data-ttu-id="1865f-119">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="1865f-119">In This Section</span></span>  
+ [<span data-ttu-id="1865f-120">Generatori di stringhe di connessione</span><span class="sxs-lookup"><span data-stu-id="1865f-120">Connection String Builders</span></span>](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ <span data-ttu-id="1865f-121">Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="1865f-121">Demonstrates how to use the `ConnectionStringBuilder` classes to construct valid connection strings at run time.</span></span>  
   
- [Stringhe di connessione e file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- Viene illustrato come archiviare e recuperare le stringhe di connessione nei file di configurazione.  
+ [<span data-ttu-id="1865f-122">Stringhe di connessione e i file di configurazione</span><span class="sxs-lookup"><span data-stu-id="1865f-122">Connection Strings and Configuration Files</span></span>](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
+ <span data-ttu-id="1865f-123">Viene illustrato come archiviare e recuperare le stringhe di connessione nei file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="1865f-123">Demonstrates how to store and retrieve connection strings in configuration files.</span></span>  
   
- [Sintassi della stringa di connessione](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- Viene descritto come configurare stringhe di connessione specifiche del provider per `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.  
+ [<span data-ttu-id="1865f-124">Sintassi della stringa di connessione</span><span class="sxs-lookup"><span data-stu-id="1865f-124">Connection String Syntax</span></span>](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
+ <span data-ttu-id="1865f-125">Viene descritto come configurare stringhe di connessione specifiche del provider per `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.</span><span class="sxs-lookup"><span data-stu-id="1865f-125">Describes how to configure provider-specific connection strings for `SqlClient`, `OracleClient`, `OleDb`, and `Odbc`.</span></span>  
   
- [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- Vengono illustrate tecniche per proteggere le informazioni usate per la connessione a un'origine dati.  
+ [<span data-ttu-id="1865f-126">Protezione delle informazioni di connessione</span><span class="sxs-lookup"><span data-stu-id="1865f-126">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ <span data-ttu-id="1865f-127">Vengono illustrate tecniche per proteggere le informazioni usate per la connessione a un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="1865f-127">Demonstrates techniques for protecting information used to connect to a data source.</span></span>  
   
-## Vedere anche  
- [Connessione a un'origine dati](../../../../ocs/framework/data/adonet/connecting-to-a-data-source.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1865f-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1865f-128">See Also</span></span>  
+ [<span data-ttu-id="1865f-129">Connessione a un'origine dati</span><span class="sxs-lookup"><span data-stu-id="1865f-129">Connecting to a Data Source</span></span>](/cpp/data/odbc/connecting-to-a-data-source)  
+ [<span data-ttu-id="1865f-130">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="1865f-130">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

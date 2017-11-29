@@ -1,78 +1,81 @@
 ---
-title: "Implementing the UI Automation Window Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, Window"
-  - "UI Automation, Window control pattern"
-  - "Window control pattern"
+title: Implementazione del pattern di controllo Window di automazione interfaccia utente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, Window
+- UI Automation, Window control pattern
+- Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 9e8d83c3ef40ccc6e97ba3128cab5d88a5af5305
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Window Control Pattern
+# <a name="implementing-the-ui-automation-window-control-pattern"></a><span data-ttu-id="a9844-102">Implementazione del pattern di controllo Window di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="a9844-102">Implementing the UI Automation Window Control Pattern</span></span>
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="a9844-103">Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="a9844-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a9844-104">Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="a9844-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IWindowProvider>, incluse le informazioni relative a proprietà, metodi ed eventi di <xref:System.Windows.Automation.WindowPattern>. Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
+ <span data-ttu-id="a9844-105">In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IWindowProvider>, incluse le informazioni relative a proprietà, metodi ed eventi di <xref:System.Windows.Automation.WindowPattern> .</span><span class="sxs-lookup"><span data-stu-id="a9844-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IWindowProvider>, including information about <xref:System.Windows.Automation.WindowPattern> properties, methods, and events.</span></span> <span data-ttu-id="a9844-106">Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.</span><span class="sxs-lookup"><span data-stu-id="a9844-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- Il pattern di controllo <xref:System.Windows.Automation.WindowPattern> viene usato per supportare i controlli che forniscono la funzionalità fondamentale basata su finestra in un'[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] tradizionale. I controlli che devono implementare questo pattern di controllo sono, ad esempio, le finestre dell'applicazione di primo livello, le finestre figlio dell'[!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)], i controlli riquadro ridimensionabili, le finestre di dialogo modali e le finestre fumetto della Guida.  
+ <span data-ttu-id="a9844-107">Il pattern di controllo <xref:System.Windows.Automation.WindowPattern> viene usato per supportare i controlli che forniscono la funzionalità fondamentale basata su finestra in un' [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]tradizionale.</span><span class="sxs-lookup"><span data-stu-id="a9844-107">The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)].</span></span> <span data-ttu-id="a9844-108">I controlli che devono implementare questo pattern di controllo sono, ad esempio, le finestre dell'applicazione di primo livello, le finestre figlio dell' [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] , i controlli riquadro ridimensionabili, le finestre di dialogo modali e le finestre fumetto della Guida.</span><span class="sxs-lookup"><span data-stu-id="a9844-108">Examples of controls that must implement this control pattern include top-level application windows, [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] child windows, resizable split pane controls, modal dialogs and balloon help windows.</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Linee guida e convenzioni di implementazione  
- Quando si implementa il pattern di controllo Window, tenere presenti le linee guida e le convenzioni seguenti:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="a9844-109">Linee guida e convenzioni di implementazione</span><span class="sxs-lookup"><span data-stu-id="a9844-109">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="a9844-110">Quando si implementa il pattern di controllo Window, tenere presenti le linee guida e le convenzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="a9844-110">When implementing the Window control pattern, note the following guidelines and conventions:</span></span>  
   
--   Per supportare la possibilità di modificare sia le dimensioni della finestra che la posizione sullo schermo con Automazione interfaccia utente, un controllo deve implementare <xref:System.Windows.Automation.Provider.ITransformProvider> oltre a <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+-   <span data-ttu-id="a9844-111">Per supportare la possibilità di modificare sia le dimensioni della finestra che la posizione sullo schermo con Automazione interfaccia utente, un controllo deve implementare <xref:System.Windows.Automation.Provider.ITransformProvider> oltre a <xref:System.Windows.Automation.Provider.IWindowProvider>.</span><span class="sxs-lookup"><span data-stu-id="a9844-111">To support the ability to modify both window size and screen position using UI Automation, a control must implement <xref:System.Windows.Automation.Provider.ITransformProvider> in addition to <xref:System.Windows.Automation.Provider.IWindowProvider>.</span></span>  
   
--   I controlli contenenti barre del titolo ed elementi della barra del titolo che consentono di spostare, ridimensionare, ingrandire, ridurre a icona o chiudere il controllo in genere devono implementare <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+-   <span data-ttu-id="a9844-112">I controlli contenenti barre del titolo ed elementi della barra del titolo che consentono di spostare, ridimensionare, ingrandire, ridurre a icona o chiudere il controllo in genere devono implementare <xref:System.Windows.Automation.Provider.IWindowProvider>.</span><span class="sxs-lookup"><span data-stu-id="a9844-112">Controls that contain title bars and title bar elements that enable the control to be moved, resized, maximized, minimized, or closed are typically required to implement <xref:System.Windows.Automation.Provider.IWindowProvider>.</span></span>  
   
--   I controlli come i popup di descrizione comando e le caselle combinate o i menu a discesa in genere non implementano <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+-   <span data-ttu-id="a9844-113">I controlli come i popup di descrizione comando e le caselle combinate o i menu a discesa in genere non implementano <xref:System.Windows.Automation.Provider.IWindowProvider>.</span><span class="sxs-lookup"><span data-stu-id="a9844-113">Controls such as tooltip pop-ups and combo box or menu drop-downs do not typically implement <xref:System.Windows.Automation.Provider.IWindowProvider>.</span></span>  
   
--   Le finestre fumetto della Guida si distinguono dai popup di descrizione comando di base per il provisioning di un pulsante Chiudi simile a quello delle finestre.  
+-   <span data-ttu-id="a9844-114">Le finestre fumetto della Guida si distinguono dai popup di descrizione comando di base per il provisioning di un pulsante Chiudi simile a quello delle finestre.</span><span class="sxs-lookup"><span data-stu-id="a9844-114">Balloon help windows are differentiated from basic tooltip pop-ups by the provision of a window-like Close button.</span></span>  
   
--   La modalità schermo intero non è supportata da IWindowProvider perché è una funzionalità specifica delle applicazioni e non è un comportamento tipico delle finestre.  
+-   <span data-ttu-id="a9844-115">La modalità schermo intero non è supportata da IWindowProvider perché è una funzionalità specifica delle applicazioni e non è un comportamento tipico delle finestre.</span><span class="sxs-lookup"><span data-stu-id="a9844-115">Full-screen mode is not supported by IWindowProvider as it is feature-specific to an application and is not typical window behavior.</span></span>  
   
 <a name="Required_Members_for_IWindowProvider"></a>   
-## Membri obbligatori per IWindowProvider  
- Le proprietà, i metodi e gli eventi seguenti sono obbligatori per l'implementazione dell'interfaccia IWindowProvider.  
+## <a name="required-members-for-iwindowprovider"></a><span data-ttu-id="a9844-116">Membri obbligatori per IWindowProvider</span><span class="sxs-lookup"><span data-stu-id="a9844-116">Required Members for IWindowProvider</span></span>  
+ <span data-ttu-id="a9844-117">Le proprietà, i metodi e gli eventi seguenti sono obbligatori per l'implementazione dell'interfaccia IWindowProvider.</span><span class="sxs-lookup"><span data-stu-id="a9844-117">The following properties, methods, and events are required for the IWindowProvider interface.</span></span>  
   
-|Membro obbligatorio|Tipo di membro|Note|  
-|-------------------------|--------------------|----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Metodo|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Metodo|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Metodo|Nessuno|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Evento|Nessuna|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Evento|None|  
-|<xref:System.Windows.Automation.WindowInteractionState>|Evento|Non è garantito che sia <xref:System.Windows.Automation.WindowInteractionState>|  
+|<span data-ttu-id="a9844-118">Membro obbligatorio</span><span class="sxs-lookup"><span data-stu-id="a9844-118">Required member</span></span>|<span data-ttu-id="a9844-119">Tipo di membro</span><span class="sxs-lookup"><span data-stu-id="a9844-119">Member type</span></span>|<span data-ttu-id="a9844-120">Note</span><span class="sxs-lookup"><span data-stu-id="a9844-120">Notes</span></span>|  
+|---------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|<span data-ttu-id="a9844-121">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a9844-121">Property</span></span>|<span data-ttu-id="a9844-122">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-122">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|<span data-ttu-id="a9844-123">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a9844-123">Property</span></span>|<span data-ttu-id="a9844-124">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-124">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|<span data-ttu-id="a9844-125">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a9844-125">Property</span></span>|<span data-ttu-id="a9844-126">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-126">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|<span data-ttu-id="a9844-127">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a9844-127">Property</span></span>|<span data-ttu-id="a9844-128">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-128">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|<span data-ttu-id="a9844-129">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a9844-129">Property</span></span>|<span data-ttu-id="a9844-130">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-130">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|<span data-ttu-id="a9844-131">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a9844-131">Property</span></span>|<span data-ttu-id="a9844-132">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-132">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|<span data-ttu-id="a9844-133">Metodo</span><span class="sxs-lookup"><span data-stu-id="a9844-133">Method</span></span>|<span data-ttu-id="a9844-134">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-134">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|<span data-ttu-id="a9844-135">Metodo</span><span class="sxs-lookup"><span data-stu-id="a9844-135">Method</span></span>|<span data-ttu-id="a9844-136">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-136">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|<span data-ttu-id="a9844-137">Metodo</span><span class="sxs-lookup"><span data-stu-id="a9844-137">Method</span></span>|<span data-ttu-id="a9844-138">Nessuna</span><span class="sxs-lookup"><span data-stu-id="a9844-138">None</span></span>|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|<span data-ttu-id="a9844-139">Evento</span><span class="sxs-lookup"><span data-stu-id="a9844-139">Event</span></span>|<span data-ttu-id="a9844-140">Nessuno</span><span class="sxs-lookup"><span data-stu-id="a9844-140">None</span></span>|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|<span data-ttu-id="a9844-141">Evento</span><span class="sxs-lookup"><span data-stu-id="a9844-141">Event</span></span>|<span data-ttu-id="a9844-142">Nessuno</span><span class="sxs-lookup"><span data-stu-id="a9844-142">None</span></span>|  
+|<xref:System.Windows.Automation.WindowInteractionState>|<span data-ttu-id="a9844-143">Evento</span><span class="sxs-lookup"><span data-stu-id="a9844-143">Event</span></span>|<span data-ttu-id="a9844-144">Non è garantito che sia <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction></span><span class="sxs-lookup"><span data-stu-id="a9844-144">Is not guaranteed to be <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction></span></span>|  
   
 <a name="Exceptions"></a>   
-## Eccezioni  
- I provider devono generare le eccezioni seguenti.  
+## <a name="exceptions"></a><span data-ttu-id="a9844-145">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="a9844-145">Exceptions</span></span>  
+ <span data-ttu-id="a9844-146">I provider devono generare le eccezioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="a9844-146">Providers must throw the following exceptions.</span></span>  
   
-|Tipo di eccezione|Condizione|  
-|-----------------------|----------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   Quando un controllo non supporta un comportamento richiesto.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   Quando il parametro non è un numero valido.|  
+|<span data-ttu-id="a9844-147">Tipo di eccezione</span><span class="sxs-lookup"><span data-stu-id="a9844-147">Exception type</span></span>|<span data-ttu-id="a9844-148">Condizione</span><span class="sxs-lookup"><span data-stu-id="a9844-148">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> <span data-ttu-id="a9844-149">-Quando un controllo non supporta un comportamento richiesto.</span><span class="sxs-lookup"><span data-stu-id="a9844-149">-   When a control does not support a requested behavior.</span></span>|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> <span data-ttu-id="a9844-150">-Quando il parametro non è un numero valido.</span><span class="sxs-lookup"><span data-stu-id="a9844-150">-   When the parameter is not a valid number.</span></span>|  
   
-## Vedere anche  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="a9844-151">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9844-151">See Also</span></span>  
+ [<span data-ttu-id="a9844-152">Cenni preliminari sui pattern di controllo automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="a9844-152">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="a9844-153">Supportare pattern di controllo in un Provider di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="a9844-153">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="a9844-154">Pattern di controllo di automazione interfaccia utente per i client</span><span class="sxs-lookup"><span data-stu-id="a9844-154">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="a9844-155">Panoramica dell'albero di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="a9844-155">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="a9844-156">Utilizzare la memorizzazione nella cache in automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="a9844-156">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

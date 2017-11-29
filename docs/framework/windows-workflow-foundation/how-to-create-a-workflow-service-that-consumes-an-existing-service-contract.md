@@ -1,42 +1,46 @@
 ---
-title: "Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a811609f601e844d55d4173eb94df24701fcc7d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offre una maggiore integrazione tra i servizi Web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro con priorità al contratto.Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice.Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto.  
+# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a><span data-ttu-id="eacf1-102">Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente</span><span class="sxs-lookup"><span data-stu-id="eacf1-102">How to: Create a workflow service that consumes an existing service contract</span></span>
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="eacf1-103"> offre una maggiore integrazione tra i servizi Web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro con priorità al contratto.</span><span class="sxs-lookup"><span data-stu-id="eacf1-103"> features better integration between web services and workflows in the form of contract-first workflow development.</span></span> <span data-ttu-id="eacf1-104">Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice.</span><span class="sxs-lookup"><span data-stu-id="eacf1-104">The contract-first workflow development tool allows you to design the contract in code first.</span></span> <span data-ttu-id="eacf1-105">Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto.</span><span class="sxs-lookup"><span data-stu-id="eacf1-105">The tool then automatically generates an activity template in the toolbox for the operations in the contract.</span></span>  
   
 > [!NOTE]
->  In questo argomento vengono fornite le istruzioni dettagliate per la creazione di un servizio del flusso di lavoro con priorità al contratto \("contract\-first"\).[!INCLUDE[crabout](../../../includes/crabout-md.md)]llo sviluppo del servizio del flusso di lavoro con priorità al contratto \("contract\-first"\), vedere [Sviluppo del servizio del flusso di lavoro con priorità al contratto \("contract\-first"\)](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md).  
+>  <span data-ttu-id="eacf1-106">In questo argomento viene fornito materiale sussidiario dettagliato per la creazione di un servizio del flusso di lavoro con priorità al contratto ("contract-first").</span><span class="sxs-lookup"><span data-stu-id="eacf1-106">This topic provides step-by-step guidance on creating a contract-first workflow service.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="eacf1-107">lo sviluppo del servizio del flusso di lavoro di priorità al contratto, vedere [sviluppo del servizio del flusso di lavoro prima contratto](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).</span><span class="sxs-lookup"><span data-stu-id="eacf1-107"> contract-first workflow service development, see [Contract First Workflow Service Development](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).</span></span>  
   
-### Creazione del progetto flusso di lavoro  
+### <a name="creating-the-workflow-project"></a><span data-ttu-id="eacf1-108">Creazione del progetto flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="eacf1-108">Creating the workflow project</span></span>  
   
-1.  In [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] fare clic su **File**, quindi su **Nuovo progetto**.Selezionare il nodo **WCF** nel nodo **C\#** nell'albero **Modelli** e selezionare il modello **Applicazione di servizi flusso di lavoro WCF**.  
+1.  <span data-ttu-id="eacf1-109">In [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]selezionare **File**, **nuovo progetto**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-109">In [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], select **File**, **New Project**.</span></span> <span data-ttu-id="eacf1-110">Selezionare il **WCF** nodo sotto il **c#** nodo il **modelli** ad albero e selezionare il **applicazione del servizio del flusso di lavoro WCF** modello.</span><span class="sxs-lookup"><span data-stu-id="eacf1-110">Select the **WCF** node under the **C#** node in the **Templates** tree, and select the **WCF Workflow Service Application** template.</span></span>  
   
-2.  Assegnare il nome `ContractFirst` al nuovo progetto, quindi fare clic su **OK**.  
+2.  <span data-ttu-id="eacf1-111">Denominare il nuovo progetto `ContractFirst` e fare clic su **Ok**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-111">Name the new project `ContractFirst` and click **Ok**.</span></span>  
   
-### Creazione del contratto di servizio  
+### <a name="creating-the-service-contract"></a><span data-ttu-id="eacf1-112">Creazione del contratto di servizio</span><span class="sxs-lookup"><span data-stu-id="eacf1-112">Creating the service contract</span></span>  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**, **Nuovo elemento…**.Selezionare il nodo **Codice** a sinistra e il modello **Classe** a destra.Assegnare il nome `IBookService` alla nuova classe e fare clic su **OK**.  
+1.  <span data-ttu-id="eacf1-113">Fare clic sul progetto in **Esplora** e selezionare **Aggiungi**, **nuovo elemento...** .</span><span class="sxs-lookup"><span data-stu-id="eacf1-113">Right-click the project in **Solution Explorer** and select **Add**, **New Item…**.</span></span> <span data-ttu-id="eacf1-114">Selezionare il **codice** nodo a sinistra e **classe** modello sulla destra.</span><span class="sxs-lookup"><span data-stu-id="eacf1-114">Select the **Code** node on the left, and the **Class** template on the right.</span></span> <span data-ttu-id="eacf1-115">Denominare la nuova classe `IBookService` e fare clic su **Ok**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-115">Name the new class `IBookService` and click **Ok**.</span></span>  
   
-2.  Nella parte superiore della finestra del codice visualizzata, aggiungere un'istruzione Using a `System.Servicemodel`.  
+2.  <span data-ttu-id="eacf1-116">Nella parte superiore della finestra del codice visualizzata, aggiungere un'istruzione Using a `System.Servicemodel`.</span><span class="sxs-lookup"><span data-stu-id="eacf1-116">In the top of the code window that appears, add a Using statement to `System.Servicemodel`.</span></span>  
   
     ```  
     using System.ServiceModel;  
     ```  
   
-3.  Modificare la definizione della classe di esempio nella definizione di interfaccia seguente.  
+3.  <span data-ttu-id="eacf1-117">Modificare la definizione della classe di esempio nella definizione di interfaccia seguente.</span><span class="sxs-lookup"><span data-stu-id="eacf1-117">Change the sample class definition to the following interface definition.</span></span>  
   
     ```  
     [ServiceContract]  
@@ -50,20 +54,20 @@ caps.handback.revision: 5
         }  
     ```  
   
-4.  Premere **CTRL\+MAIUSC\+B** per compilare il progetto.  
+4.  <span data-ttu-id="eacf1-118">Compilare il progetto premendo **Ctrl + MAIUSC + B**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-118">Build the project by pressing **Ctrl+Shift+B**.</span></span>  
   
-### Importazione del contratto di servizio  
+### <a name="importing-the-service-contract"></a><span data-ttu-id="eacf1-119">Importazione del contratto di servizio</span><span class="sxs-lookup"><span data-stu-id="eacf1-119">Importing the service contract</span></span>  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e selezionare **Importa contratto del servizio**.In **\<Progetto corrente\>** aprire tutti i sottonodi e selezionare **IBookService**.Scegliere **OK**.  
+1.  <span data-ttu-id="eacf1-120">Fare clic sul progetto in **Esplora** e selezionare **Importa contratto del servizio**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-120">Right-click the project in **Solution Explorer** and select **Import Service Contract**.</span></span> <span data-ttu-id="eacf1-121">In  **\<progetto corrente >**, aprire tutti i sottonodi e selezionare **IBookService**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-121">Under **\<Current Project>**, open all sub-nodes and select **IBookService**.</span></span> <span data-ttu-id="eacf1-122">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-122">Click **OK**.</span></span>  
   
-2.  Verrà visualizzata una finestra di dialogo indicante che l'operazione è stata completata correttamente e che le attività generate verranno inserite nella casella degli strumenti dopo che il progetto sarà stato compilato.Scegliere **OK**.  
+2.  <span data-ttu-id="eacf1-123">Verrà visualizzata una finestra di dialogo indicante che l'operazione è stata completata correttamente e che le attività generate verranno inserite nella casella degli strumenti dopo che il progetto sarà stato compilato.</span><span class="sxs-lookup"><span data-stu-id="eacf1-123">A dialog will open, alerting you that the operation completed successfully, and that the generated activities will appear in the toolbox after you build the project.</span></span> <span data-ttu-id="eacf1-124">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-124">Click **OK**.</span></span>  
   
-3.  Compilare il progetto premendo **CTRL\+MAIUSC\+B**; in questo modo le attività importate saranno visualizzate nella casella degli strumenti.  
+3.  <span data-ttu-id="eacf1-125">Compilare il progetto premendo **Ctrl + MAIUSC + B**, in modo che le attività importate saranno visualizzate nella casella degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="eacf1-125">Build the project by pressing **Ctrl+Shift+B**, so that the imported activities will appear in the toolbox.</span></span>  
   
-4.  In **Esplora soluzioni** aprire il file Service1.xamlx.Il servizio del flusso di lavoro verrà visualizzata nella finestra di progettazione.  
+4.  <span data-ttu-id="eacf1-126">In **Esplora**, aprire Service1. xamlx.</span><span class="sxs-lookup"><span data-stu-id="eacf1-126">In **Solution Explorer**, open Service1.xamlx.</span></span> <span data-ttu-id="eacf1-127">Il servizio del flusso di lavoro verrà visualizzata nella finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="eacf1-127">The workflow service will appear in the designer.</span></span>  
   
-5.  Selezionare l'attività **Sequence**.Nella finestra Proprietà fare clic sul pulsante **…** nella proprietà **ImplementedContract**.Nella finestra **Editor raccolta di tipi** che viene visualizzata fare clic sul menu a discesa **Tipo** e selezionare la voce **Cerca tipi**.Nella finestra di dialogo **Cerca e seleziona un tipo .NET**, in **\<Progetto corrente\>**, aprire tutti i sottonodi e selezionare **IBookService**.Scegliere **OK**.Nella finestra di dialogo **Editor raccolta di tipi** fare clic su **OK**.  
+5.  <span data-ttu-id="eacf1-128">Selezionare il **sequenza** attività.</span><span class="sxs-lookup"><span data-stu-id="eacf1-128">Select the **Sequence** activity.</span></span> <span data-ttu-id="eacf1-129">Nella finestra Proprietà fare clic su di **...**</span><span class="sxs-lookup"><span data-stu-id="eacf1-129">In the Properties window, click the **…**</span></span> <span data-ttu-id="eacf1-130">pulsante di **ImplementedContract** proprietà.</span><span class="sxs-lookup"><span data-stu-id="eacf1-130">button in the **ImplementedContract** property.</span></span> <span data-ttu-id="eacf1-131">Nel **Editor raccolta di tipi** finestra visualizzata, fare clic su di **tipo** elenco a discesa e selezionare il **Cerca tipi...**</span><span class="sxs-lookup"><span data-stu-id="eacf1-131">In the **Type Collection Editor** window that appears, click the **Type** dropdown, and select the **Browse for Types…**</span></span> <span data-ttu-id="eacf1-132">voce.</span><span class="sxs-lookup"><span data-stu-id="eacf1-132">entry.</span></span> <span data-ttu-id="eacf1-133">Nel **Cerca e seleziona .net tipo** finestra di dialogo, in  **\<progetto corrente >**, aprire tutti i sottonodi e selezionare **IBookService**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-133">In the **Browse and Select a .Net Type** dialog, under **\<Current Project>**, open all sub-nodes and select **IBookService**.</span></span> <span data-ttu-id="eacf1-134">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-134">Click **OK**.</span></span> <span data-ttu-id="eacf1-135">Nel **Editor raccolta di tipi** finestra di dialogo, fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="eacf1-135">In the **Type Collection Editor** dialog, click **OK**.</span></span>  
   
-6.  Selezionare ed eliminare le attività **ReceiveRequest** e **SendResponse**.  
+6.  <span data-ttu-id="eacf1-136">Selezionare ed eliminare il **ReceiveRequest** e **SendResponse** attività.</span><span class="sxs-lookup"><span data-stu-id="eacf1-136">Select and delete the **ReceiveRequest** and **SendResponse** activities.</span></span>  
   
-7.  Dalla casella degli strumenti, trascinare un'attività **Buy\_ReceiveAndSendReply** e un'attività **Checkout\_Receive** sull'attività **Sequential Service**.
+7.  <span data-ttu-id="eacf1-137">Dalla casella degli strumenti, trascinare un **Buy_ReceiveAndSendReply** e **Checkout_Receive** attività sul **servizio sequenziale** attività.</span><span class="sxs-lookup"><span data-stu-id="eacf1-137">From the toolbox, drag a **Buy_ReceiveAndSendReply** and a **Checkout_Receive** activity onto the **Sequential Service** activity.</span></span>

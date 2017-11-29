@@ -1,45 +1,37 @@
 ---
-title: 'Procedura: caricare XML da un File (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: caricare XML da un File (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 54755384eaf74fa008f93198f3de5e44fb095bda
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7babad6b08b2aa486c2ae92e7ad2485d62ac5d47
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Procedura: caricare XML da un File (Visual Basic)
-In questo argomento viene illustrato come caricare XML da un URI tramite il <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>(metodo).</xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>  
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a><span data-ttu-id="2711e-102">Procedura: caricare XML da un File (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2711e-102">How to: Load XML from a File (Visual Basic)</span></span>
+<span data-ttu-id="2711e-103">In questo argomento viene illustrato come caricare XML da un URI tramite il metodo <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2711e-103">This topic shows how to load XML from a URI by using the <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come caricare un documento XML da un file. Viene caricato il file books.xml e viene restituito l'albero XML alla console.  
+## <a name="example"></a><span data-ttu-id="2711e-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="2711e-104">Example</span></span>  
+ <span data-ttu-id="2711e-105">Nell'esempio seguente viene illustrato come caricare un documento XML da un file.</span><span class="sxs-lookup"><span data-stu-id="2711e-105">The following example shows how to load an XML document from a file.</span></span> <span data-ttu-id="2711e-106">Viene caricato il file books.xml e viene restituito l'albero XML alla console.</span><span class="sxs-lookup"><span data-stu-id="2711e-106">The following example loads books.xml and outputs the XML tree to the console.</span></span>  
   
- In questo esempio viene utilizzato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ <span data-ttu-id="2711e-107">Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="2711e-107">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  
 Console.WriteLine(booksFromFile)  
 ```  
   
- L'output del codice è il seguente:  
+ <span data-ttu-id="2711e-108">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="2711e-108">This code produces the following output:</span></span>  
   
 ```xml  
 <Catalog>  
@@ -65,5 +57,5 @@ Console.WriteLine(booksFromFile)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Analisi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="2711e-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2711e-109">See Also</span></span>  
+ [<span data-ttu-id="2711e-110">Analisi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2711e-110">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

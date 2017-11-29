@@ -1,74 +1,75 @@
 ---
-title: "Guida introduttiva alla programmazione grafica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "disegno"
-  - "esempi [Windows Form], grafica"
-  - "introduzione, programmazione della grafica"
-  - "grafica, introduzione"
+title: Guida introduttiva alla programmazione grafica
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], getting started
+- getting started [Windows Forms], graphics programming
+- examples [Windows Forms], graphics
+- drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Guida introduttiva alla programmazione grafica
-In questa sezione vengono fornite informazioni introduttive sull'utilizzo di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in un'applicazione Windows Form.  Negli argomenti indicati di seguito viene illustrato come completare diverse attività di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], quali ad esempio il disegno e il riempimento di forme e testo.  
+# <a name="getting-started-with-graphics-programming"></a><span data-ttu-id="afb25-102">Guida introduttiva alla programmazione grafica</span><span class="sxs-lookup"><span data-stu-id="afb25-102">Getting Started with Graphics Programming</span></span>
+<span data-ttu-id="afb25-103">In questa sezione viene illustrato come iniziare a usare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in un'applicazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="afb25-103">This section shows how to get started using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application.</span></span> <span data-ttu-id="afb25-104">Gli argomenti seguenti viene illustrato come completare diverse [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] attività quali disegno e il riempimento di forme e testo.</span><span class="sxs-lookup"><span data-stu-id="afb25-104">The following topics show how to complete several [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.</span></span>  
   
-## In questa sezione  
- [Procedura: creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Viene illustrato come creare un oggetto <xref:System.Drawing.Graphics> per il disegno.  
+## <a name="in-this-section"></a><span data-ttu-id="afb25-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="afb25-105">In This Section</span></span>  
+ [<span data-ttu-id="afb25-106">Procedura: Creare oggetti Graphics per disegnare</span><span class="sxs-lookup"><span data-stu-id="afb25-106">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ <span data-ttu-id="afb25-107">Viene illustrato come creare un <xref:System.Drawing.Graphics> oggetto per il disegno.</span><span class="sxs-lookup"><span data-stu-id="afb25-107">Shows how to create a <xref:System.Drawing.Graphics> object for drawing.</span></span>  
   
- [Procedura: creare un oggetto Pen](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- Viene illustrato come creare un oggetto Pen.  
+ [<span data-ttu-id="afb25-108">Procedura: Creare un oggetto Pen</span><span class="sxs-lookup"><span data-stu-id="afb25-108">How to: Create a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ <span data-ttu-id="afb25-109">Viene illustrato come creare una penna.</span><span class="sxs-lookup"><span data-stu-id="afb25-109">Shows how to create a pen.</span></span>  
   
- [Procedura: impostare il colore di un oggetto Pen](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
- Viene illustrato come impostare il colore di un oggetto Pen.  
+ [<span data-ttu-id="afb25-110">Procedura: Impostare il colore di un oggetto Pen</span><span class="sxs-lookup"><span data-stu-id="afb25-110">How to: Set the Color of a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
+ <span data-ttu-id="afb25-111">Viene illustrato come impostare il colore della penna.</span><span class="sxs-lookup"><span data-stu-id="afb25-111">Demonstrates how to set the color of a pen.</span></span>  
   
- [Procedura: creare un oggetto Solid Brush](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
- Viene illustrato come creare un oggetto SolidBrush.  
+ [<span data-ttu-id="afb25-112">Procedura: Creare un oggetto Solid Brush</span><span class="sxs-lookup"><span data-stu-id="afb25-112">How to: Create a Solid Brush</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
+ <span data-ttu-id="afb25-113">Viene descritto come creare un pennello tinta unita.</span><span class="sxs-lookup"><span data-stu-id="afb25-113">Describes how to create a solid brush.</span></span>  
   
- [Procedura: disegnare una linea in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- Viene illustrato come disegnare una linea.  
+ [<span data-ttu-id="afb25-114">Procedura: Disegnare una linea in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="afb25-114">How to: Draw a Line on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ <span data-ttu-id="afb25-115">Viene illustrato come disegnare una linea.</span><span class="sxs-lookup"><span data-stu-id="afb25-115">Demonstrates how to draw a line.</span></span>  
   
- [Procedura: creare una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
- Viene illustrato come disegnare una forma.  
+ [<span data-ttu-id="afb25-116">Procedura: Creare una forma con contorno</span><span class="sxs-lookup"><span data-stu-id="afb25-116">How to: Draw an Outlined Shape</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
+ <span data-ttu-id="afb25-117">Viene descritto come disegnare una forma.</span><span class="sxs-lookup"><span data-stu-id="afb25-117">Describes how to draw a shape.</span></span>  
   
- [Procedura: disegnare un rettangolo con riempimento in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- Viene illustrato come disegnare un rettangolo.  
+ [<span data-ttu-id="afb25-118">Procedura: Disegnare un rettangolo con riempimento in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="afb25-118">How to: Draw a Filled Rectangle on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ <span data-ttu-id="afb25-119">Viene illustrato come un rettangolo.</span><span class="sxs-lookup"><span data-stu-id="afb25-119">Explains how to draw a rectangle.</span></span>  
   
- [Procedura: disegnare un'ellisse con riempimento in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- Viene illustrato come disegnare un'ellisse piena.  
+ [<span data-ttu-id="afb25-120">Procedura: Disegnare un'ellisse con riempimento in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="afb25-120">How to: Draw a Filled Ellipse on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ <span data-ttu-id="afb25-121">Viene illustrato come disegnare un'ellisse piena.</span><span class="sxs-lookup"><span data-stu-id="afb25-121">Shows how to draw a filled ellipse.</span></span>  
   
- [Procedura: disegnare testo in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- Viene illustrato come disegnare testo.  
+ [<span data-ttu-id="afb25-122">Procedura: Disegnare testo in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="afb25-122">How to: Draw Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
+ <span data-ttu-id="afb25-123">Viene descritto come disegnare il testo.</span><span class="sxs-lookup"><span data-stu-id="afb25-123">Describes how to draw text.</span></span>  
   
- [Procedura: disegnare testo verticale in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
- Viene illustrato come disegnare testo verticale.  
+ [<span data-ttu-id="afb25-124">Procedura: Disegnare testo verticale in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="afb25-124">How to: Draw Vertical Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
+ <span data-ttu-id="afb25-125">Viene illustrato come disegnare testo verticale.</span><span class="sxs-lookup"><span data-stu-id="afb25-125">Shows how to draw vertical text.</span></span>  
   
- [Procedura: eseguire il rendering delle immagini con GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- Viene illustrato come disegnare immagini.  
+ [<span data-ttu-id="afb25-126">Procedura: Eseguire il rendering delle immagini con GDI+</span><span class="sxs-lookup"><span data-stu-id="afb25-126">How to: Render Images with GDI+</span></span>](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ <span data-ttu-id="afb25-127">Viene illustrato come disegnare immagini.</span><span class="sxs-lookup"><span data-stu-id="afb25-127">Demonstrates how to draw images.</span></span>  
   
- [Procedura: creare un Windows Form con una forma](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
- Viene illustrato come modificare la forma di un form.  
+ [<span data-ttu-id="afb25-128">Procedura: Creare un Windows Form con una forma</span><span class="sxs-lookup"><span data-stu-id="afb25-128">How to: Create a Shaped Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
+ <span data-ttu-id="afb25-129">Viene illustrato come modificare la forma di un form.</span><span class="sxs-lookup"><span data-stu-id="afb25-129">Explains how to change the shape of a form.</span></span>  
   
- [Procedura: copiare i pixel per ridurre lo sfarfallio in Windows Form](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- Viene illustrato come copiare pixel da un'area all'altra.  
+ [<span data-ttu-id="afb25-130">Procedura: Copiare i pixel per ridurre lo sfarfallio in Windows Form</span><span class="sxs-lookup"><span data-stu-id="afb25-130">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ <span data-ttu-id="afb25-131">Viene illustrato come copiare i pixel da un'area a un'altra.</span><span class="sxs-lookup"><span data-stu-id="afb25-131">Explains how to copy pixels from one area to another.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="afb25-132">Riferimento</span><span class="sxs-lookup"><span data-stu-id="afb25-132">Reference</span></span>  
  <xref:System.Drawing>  
- Viene descritto lo spazio dei nomi e vengono forniti collegamenti a tutti i relativi membri.  
+ <span data-ttu-id="afb25-133">Viene descritto questo spazio dei nomi e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="afb25-133">Describes this namespace and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms>  
- Viene descritto lo spazio dei nomi e vengono forniti collegamenti a tutti i relativi membri.
+ <span data-ttu-id="afb25-134">Viene descritto questo spazio dei nomi e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="afb25-134">Describes this namespace and has links to all of its members.</span></span>

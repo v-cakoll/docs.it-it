@@ -1,37 +1,42 @@
 ---
-title: "Procedura: rimuovere uno strumento decorativo da un elemento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elementi grafici, rimozione"
+title: 'Procedura: rimuovere uno strumento decorativo da un elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe11dc8df1a29518ba05792877bd26670f96b29d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: rimuovere uno strumento decorativo da un elemento
-In questo esempio viene mostrato come rimuovere a livello di codice uno specifico strumento decorativo visuale da un oggetto <xref:System.Windows.UIElement> specificato.  
+# <a name="how-to-remove-an-adorner-from-an-element"></a><span data-ttu-id="41059-102">Procedura: rimuovere uno strumento decorativo da un elemento</span><span class="sxs-lookup"><span data-stu-id="41059-102">How to: Remove an Adorner from an Element</span></span>
+<span data-ttu-id="41059-103">In questo esempio viene illustrato come rimuovere a livello di codice un adorner specifico da un oggetto specificato <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="41059-103">This example shows how to programmatically remove a specific adorner from a specified <xref:System.Windows.UIElement>.</span></span>  
   
-## Esempio  
- In questo esempio di codice dettagliato viene rimosso il primo strumento decorativo visuale della matrice di strumenti decorativi visuali restituita dall'oggetto <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.  Nell'esempio vengono recuperati gli strumenti decorativi visuali di un oggetto <xref:System.Windows.UIElement> denominato *myTextBox*.  Se l'elemento specificato nella chiamata a <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> non dispone di strumenti decorativi visuali, viene restituito `null`.  Questo codice verifica in modo esplicito una matrice null ed è particolarmente indicato per le applicazioni in cui si prevede che una matrice null sia comune.  
+## <a name="example"></a><span data-ttu-id="41059-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="41059-104">Example</span></span>  
+ <span data-ttu-id="41059-105">Questo esempio di codice dettagliato rimuove il primo strumento decorativo nella matrice di Adorner restituito da <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.</span><span class="sxs-lookup"><span data-stu-id="41059-105">This verbose code example removes the first adorner in the array of adorners returned by <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.</span></span>  <span data-ttu-id="41059-106">Questo esempio vengono recuperati gli strumenti decorativi su un <xref:System.Windows.UIElement> denominato *myTextBox*.</span><span class="sxs-lookup"><span data-stu-id="41059-106">This example happens to retrieve the adorners on a <xref:System.Windows.UIElement> named *myTextBox*.</span></span>  <span data-ttu-id="41059-107">Se l'elemento specificato nella chiamata a <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> senza strumenti decorativi visuali, `null` viene restituito.</span><span class="sxs-lookup"><span data-stu-id="41059-107">If the element specified in the call to <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> has no adorners, `null` is returned.</span></span>  <span data-ttu-id="41059-108">Questo codice verifica la presenza di una matrice null, in modo esplicito ed è più adatto per le applicazioni in una matrice null deve essere abbastanza comune.</span><span class="sxs-lookup"><span data-stu-id="41059-108">This code explicitly checks for a null array, and is best suited for applications where a null array is expected to be relatively common.</span></span>  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerLong](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornerlong)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerLong](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornerlong)]  
   
-## Esempio  
- Questo esempio di codice ridotto è equivalente, da un punto di vista funzionale, all'esempio dettagliato mostrato in precedenza.  Questo codice non verifica in modo esplicito una matrice null, pertanto è possibile che venga generata un'eccezione <xref:System.NullReferenceException>.  Questo codice è particolarmente indicato per le applicazioni in cui si prevede che una matrice null sia rara.  
+## <a name="example"></a><span data-ttu-id="41059-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="41059-109">Example</span></span>  
+ <span data-ttu-id="41059-110">In questo esempio di codice ridotto è funzionalmente equivalente all'esempio dettagliato illustrato in precedenza.</span><span class="sxs-lookup"><span data-stu-id="41059-110">This condensed code example is functionally equivalent to the verbose example shown above.</span></span> <span data-ttu-id="41059-111">Questo codice non controllano in modo esplicito una matrice null, pertanto è possibile che un <xref:System.NullReferenceException> può essere generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="41059-111">This code does not explicitly check for a null array, so it is possible that a <xref:System.NullReferenceException> exception may be raised.</span></span>  <span data-ttu-id="41059-112">Questo codice è più adatto per le applicazioni in cui in cui è prevista una matrice null rari.</span><span class="sxs-lookup"><span data-stu-id="41059-112">This code is best suited for applications where a null array is expected to be rare.</span></span>  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornershort)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
-## Vedere anche  
- [Cenni preliminari sugli strumenti decorativi visuali](../../../../docs/framework/wpf/controls/adorners-overview.md)
+## <a name="see-also"></a><span data-ttu-id="41059-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="41059-113">See Also</span></span>  
+ [<span data-ttu-id="41059-114">Panoramica sugli strumenti decorativi</span><span class="sxs-lookup"><span data-stu-id="41059-114">Adorners Overview</span></span>](../../../../docs/framework/wpf/controls/adorners-overview.md)

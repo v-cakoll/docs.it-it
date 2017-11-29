@@ -1,49 +1,52 @@
 ---
-title: "Metodi System.TimeSpan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Metodi System.TimeSpan
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a32b57488b49e9fd2f4e6342391690b27d7ad825
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Metodi System.TimeSpan
-Il supporto dei membri per <xref:System.TimeSpan?displayProperty=fullName> dipende molto dalle versioni di .NET Framework e di Microsoft SQL Server in uso.  
+# <a name="systemtimespan-methods"></a><span data-ttu-id="b8e3c-102">Metodi System.TimeSpan</span><span class="sxs-lookup"><span data-stu-id="b8e3c-102">System.TimeSpan Methods</span></span>
+<span data-ttu-id="b8e3c-103">Il supporto dei membri per <xref:System.TimeSpan?displayProperty=nameWithType> dipende molto dalle versioni di .NET Framework e di Microsoft SQL Server in uso.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-103">Member support for <xref:System.TimeSpan?displayProperty=nameWithType> greatly depends on the versions of the .NET Framework and Microsoft SQL Server that you are using.</span></span>  
   
- Quando un metodo, una proprietà o un operatore non è supportato, significa che LINQ to SQL non può eseguire la conversione del membro per l'esecuzione in SQL Server.  È comunque possibile usare questi membri nel codice.  Essi devono tuttavia essere valutati prima che la query venga convertita in Transact\-SQL o dopo che i risultati siano stati recuperati dal database.  
+ <span data-ttu-id="b8e3c-104">Quando un metodo, una proprietà o un operatore non è supportato, significa che LINQ to SQL non può eseguire la conversione del membro per l'esecuzione in SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-104">When a method, operator, or property is unsupported; it means that LINQ to SQL cannot translate the member for execution on the SQL Server.</span></span> <span data-ttu-id="b8e3c-105">È comunque possibile usare questi membri nel codice.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-105">You may still be able to use these members in your code.</span></span> <span data-ttu-id="b8e3c-106">Essi devono tuttavia essere valutati prima che la query venga convertita in Transact-SQL o dopo che i risultati siano stati recuperati dal database.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-106">However, they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-## Limitazioni precedenti  
- Quando si usa LINQ to SQL con versioni di .NET Framework precedenti a .NET Framework 3.5 SP1, non è possibile eseguire il mapping di campi dei database di SQL Server a <xref:System.TimeSpan?displayProperty=fullName>.  Sono tuttavia supportate operazioni su <xref:System.TimeSpan>, in quanto è possibile che i valori <xref:System.TimeSpan> vengano restituiti da una sottrazione <xref:System.DateTime> o vengano introdotti in un'espressione come un valore letterale o una variabile associata.  
+## <a name="previous-limitations"></a><span data-ttu-id="b8e3c-107">Limitazioni precedenti</span><span class="sxs-lookup"><span data-stu-id="b8e3c-107">Previous Limitations</span></span>  
+ <span data-ttu-id="b8e3c-108">Quando si usa LINQ to SQL con versioni di .NET Framework precedenti a .NET Framework 3.5 SP1, non è possibile eseguire il mapping di campi dei database di SQL Server a <xref:System.TimeSpan?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-108">When using LINQ to SQL with versions of the .NET Framework prior to .NET Framework 3.5 SP1, you cannot map SQL Server database fields to <xref:System.TimeSpan?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b8e3c-109">Sono tuttavia supportate operazioni su <xref:System.TimeSpan>, in quanto è possibile che i valori <xref:System.TimeSpan> vengano restituiti da una sottrazione <xref:System.DateTime> o vengano introdotti in un'espressione come un valore letterale o una variabile associata.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-109">However, operations on <xref:System.TimeSpan> are supported because <xref:System.TimeSpan> values can be returned from <xref:System.DateTime> subtraction or introduced into an expression as a literal or bound variable.</span></span>  
   
-## Supporto dei metodi System.TimeSpan supportati  
- I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono disponibili per l'uso nelle query LINQ to SQL.  Una volta eseguito il mapping nel modello a oggetti o nel file di mapping esterno, LINQ to SQL consente di chiamare numerosi membri <xref:System.TimeSpan?displayProperty=fullName> nelle query LINQ to SQL.  
+## <a name="supported-systemtimespan-method-support"></a><span data-ttu-id="b8e3c-110">Supporto dei metodi System.TimeSpan supportati</span><span class="sxs-lookup"><span data-stu-id="b8e3c-110">Supported System.TimeSpan Method Support</span></span>  
+ <span data-ttu-id="b8e3c-111">I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono disponibili per l'uso nelle query LINQ to SQL.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-111">The following LINQ to SQL-supported methods, operators, and properties are available for you to use in your LINQ to SQL queries.</span></span> <span data-ttu-id="b8e3c-112">Una volta eseguito il mapping nel modello a oggetti o nel file di mapping esterno, LINQ to SQL consente di chiamare numerosi membri <xref:System.TimeSpan?displayProperty=nameWithType> nelle query LINQ to SQL.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-112">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call many of the <xref:System.TimeSpan?displayProperty=nameWithType> members inside your LINQ to SQL queries.</span></span>  
   
-|Metodi <xref:System.TimeSpan> supportati|Operatori <xref:System.TimeSpan> supportati|Proprietà <xref:System.TimeSpan> supportate|  
-|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<span data-ttu-id="b8e3c-113">Metodi <xref:System.TimeSpan> supportati</span><span class="sxs-lookup"><span data-stu-id="b8e3c-113">Supported <xref:System.TimeSpan> Methods</span></span>|<span data-ttu-id="b8e3c-114">Operatori <xref:System.TimeSpan> supportati</span><span class="sxs-lookup"><span data-stu-id="b8e3c-114">Supported <xref:System.TimeSpan> Operators</span></span>|<span data-ttu-id="b8e3c-115">Proprietà <xref:System.TimeSpan> supportate</span><span class="sxs-lookup"><span data-stu-id="b8e3c-115">Supported <xref:System.TimeSpan> Properties</span></span>|  
+|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.TimeSpan.Compare%2A>|<xref:System.TimeSpan.op_Equality%2A>|<xref:System.TimeSpan.Days%2A>|  
 |<xref:System.TimeSpan.CompareTo%28System.TimeSpan%29>|<xref:System.TimeSpan.op_GreaterThan%2A>|<xref:System.TimeSpan.Hours%2A>|  
 |<xref:System.TimeSpan.Duration%2A>|<xref:System.TimeSpan.op_GreaterThanOrEqual%2A>|<xref:System.TimeSpan.MaxValue>|  
 |<xref:System.TimeSpan.Equals%28System.TimeSpan%2CSystem.TimeSpan%29>|<xref:System.TimeSpan.op_Inequality%2A>|<xref:System.TimeSpan.Milliseconds%2A>|  
 |<xref:System.TimeSpan.Equals%28System.TimeSpan%29>|<xref:System.TimeSpan.op_LessThan%2A>|<xref:System.TimeSpan.Minutes%2A>|  
-||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<xref:System.TimeSpan.MinValue%2A>|  
+||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<!--zz <xref:System.TimeSpan.MinValue%2A>-->|  
   
 > [!NOTE]
->  Per eseguire il mapping di <xref:System.TimeSpan?displayProperty=fullName> a una colonna `TIME` SQL con LINQ to SQL è necessario disporre di .NET Framework 3.5 SP1 o versione successiva.  Il tipo di dati `TIME` SQL è disponibile solo in Microsoft SQL Server 2008 e versioni successive.  
+>  <span data-ttu-id="b8e3c-116">Per eseguire il mapping di <xref:System.TimeSpan?displayProperty=nameWithType> a una colonna `TIME` SQL con LINQ to SQL è necessario disporre di .NET Framework 3.5 SP1 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-116">The ability to map <xref:System.TimeSpan?displayProperty=nameWithType> to a SQL `TIME` column with LINQ to SQL requires the .NET Framework 3.5 SP1 and beyond.</span></span> <span data-ttu-id="b8e3c-117">Il tipo di dati `TIME` SQL è disponibile solo in Microsoft SQL Server 2008 e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-117">The SQL `TIME` data type is only available in Microsoft SQL Server 2008 and beyond.</span></span>  
   
-### Aggiunta e sottrazione  
- Sebbene il tipo <xref:System.TimeSpan?displayProperty=fullName> CLR supporti l'aggiunta e la sottrazione, il tipo `TIME` SQL non supporta queste operazioni.  Per questo motivo, le query LINQ to SQL genereranno errori se viene eseguito un tentativo di aggiunta e sottrazione quando sono mappate al tipo `TIME` SQL.  Per altre considerazioni sull'utilizzo dei tipi di data e ora SQL, vedere [Mapping di tipi SQL\-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+### <a name="addition-and-subtraction"></a><span data-ttu-id="b8e3c-118">Aggiunta e sottrazione</span><span class="sxs-lookup"><span data-stu-id="b8e3c-118">Addition and Subtraction</span></span>  
+ <span data-ttu-id="b8e3c-119">Sebbene il tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR supporti l'aggiunta e la sottrazione, il tipo `TIME` SQL non supporta queste operazioni.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-119">Although the CLR <xref:System.TimeSpan?displayProperty=nameWithType> type does support addition and subtraction, the SQL `TIME` type does not.</span></span> <span data-ttu-id="b8e3c-120">Per questo motivo, le query LINQ to SQL genereranno errori se viene eseguito un tentativo di aggiunta e sottrazione quando sono mappate al tipo `TIME` SQL.</span><span class="sxs-lookup"><span data-stu-id="b8e3c-120">Because of this, your LINQ to SQL queries will generate errors if they attempt addition and subtraction when they are mapped to the SQL `TIME` type.</span></span> <span data-ttu-id="b8e3c-121">È possibile trovare altre considerazioni per l'utilizzo di tipi di data e ora SQL in [Mapping dei tipi CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="b8e3c-121">You can find other considerations for working with SQL date and time types in [SQL-CLR Type Mapping](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).</span></span>  
   
-## Vedere anche  
- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)   
- [Creazione del modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)   
- [Mapping di tipi SQL\-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)   
- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="b8e3c-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b8e3c-122">See Also</span></span>  
+ [<span data-ttu-id="b8e3c-123">Concetti relativi alle query</span><span class="sxs-lookup"><span data-stu-id="b8e3c-123">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [<span data-ttu-id="b8e3c-124">Creazione del modello a oggetti</span><span class="sxs-lookup"><span data-stu-id="b8e3c-124">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [<span data-ttu-id="b8e3c-125">Mapping dei tipi CLR SQL</span><span class="sxs-lookup"><span data-stu-id="b8e3c-125">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [<span data-ttu-id="b8e3c-126">Funzioni e tipi di dati</span><span class="sxs-lookup"><span data-stu-id="b8e3c-126">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

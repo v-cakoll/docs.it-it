@@ -1,51 +1,54 @@
 ---
-title: "Considerazioni sulla sicurezza in WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sicurezza [WCF]"
-  - "WCF, sicurezza"
-  - "Windows Communication Foundation, sicurezza"
+title: Considerazioni sulla sicurezza in WCF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [WCF]
+- Windows Communication Foundation, security
+- WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-caps.latest.revision: 49
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 49
+caps.latest.revision: "49"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c0af5a5d96f20b2ba5118909a3f0c5ba405bdb11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Considerazioni sulla sicurezza in WCF
-Negli argomenti di questa sezione vengono elencati i vari elementi relativi alla protezione che è necessario considerare nella progettazione di un'applicazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="security-considerations-in-wcf"></a><span data-ttu-id="af6ee-102">Considerazioni sulla sicurezza in WCF</span><span class="sxs-lookup"><span data-stu-id="af6ee-102">Security Considerations in WCF</span></span>
+<span data-ttu-id="af6ee-103">Negli argomenti di questa sezione vengono elencati i vari elementi relativi alla protezione che è necessario considerare nella progettazione di un'applicazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="af6ee-103">The topics in this section list various security-related items to consider when designing a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application.</span></span>  
   
-## In questa sezione  
- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- Illustra le varie modalità in cui è possibile diffondere o lanciare attacchi alle informazioni e come limitare il problema  
+## <a name="in-this-section"></a><span data-ttu-id="af6ee-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="af6ee-104">In This Section</span></span>  
+ [<span data-ttu-id="af6ee-105">Diffusione di informazioni</span><span class="sxs-lookup"><span data-stu-id="af6ee-105">Information Disclosure</span></span>](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ <span data-ttu-id="af6ee-106">Illustra le varie modalità in cui è possibile diffondere o lanciare attacchi alle informazioni e come limitare il problema</span><span class="sxs-lookup"><span data-stu-id="af6ee-106">Discusses the various ways that information can be disclosed or attacked, and how to mitigate this.</span></span>  
   
- [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- Descrive gli effetti causati quando all'autore di un attacco vengono assegnate autorizzazioni che vanno oltre quelle concesse inizialmente e come circoscrivere il problema.  
+ [<span data-ttu-id="af6ee-107">Elevazione dei privilegi</span><span class="sxs-lookup"><span data-stu-id="af6ee-107">Elevation of Privilege</span></span>](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ <span data-ttu-id="af6ee-108">Descrive gli effetti causati quando all'autore di un attacco vengono assegnate autorizzazioni che vanno oltre quelle concesse inizialmente e come circoscrivere il problema.</span><span class="sxs-lookup"><span data-stu-id="af6ee-108">Discusses the effects of giving an attacker authorization permissions beyond those initially granted and how to mitigate this.</span></span>  
   
- [Denial of Service \(Negazione del servizio\)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- Descrive ciò che avviene quando un sistema non è in grado di elaborare messaggi in modo appropriato e come limitare il problema.  
+ [<span data-ttu-id="af6ee-109">Denial of Service</span><span class="sxs-lookup"><span data-stu-id="af6ee-109">Denial of Service</span></span>](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ <span data-ttu-id="af6ee-110">Descrive ciò che avviene quando un sistema non è in grado di elaborare messaggi in modo appropriato e come limitare il problema.</span><span class="sxs-lookup"><span data-stu-id="af6ee-110">Discusses what happens when a system is unable to process messages appropriately and how to mitigate it.</span></span>  
   
- [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)  
- Descrive la modifica dei messaggi o del recapito dei messaggi e come limitare il problema.  
+ [<span data-ttu-id="af6ee-111">Manomissione</span><span class="sxs-lookup"><span data-stu-id="af6ee-111">Tampering</span></span>](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ <span data-ttu-id="af6ee-112">Descrive la modifica dei messaggi o del recapito dei messaggi e come limitare il problema.</span><span class="sxs-lookup"><span data-stu-id="af6ee-112">Discusses the altering of messages or the delivery of messages and how to mitigate it.</span></span>  
   
- [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- Descrive ciò che avviene quando l'autore dell'attacco copia un flusso di messaggi tra due parti e lo riproduce verso una o più delle parti e spiega come limitare il problema.  
+ [<span data-ttu-id="af6ee-113">Attacchi di riproduzione</span><span class="sxs-lookup"><span data-stu-id="af6ee-113">Replay Attacks</span></span>](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ <span data-ttu-id="af6ee-114">Descrive ciò che avviene quando l'autore dell'attacco copia un flusso di messaggi tra due parti e lo riproduce verso una o più delle parti e spiega come limitare il problema.</span><span class="sxs-lookup"><span data-stu-id="af6ee-114">Discusses what happens when an attacker copies a stream of messages between two parties and replays the stream to one or more of the parties, and how to mitigate this.</span></span>  
   
- [Considerazioni sulla protezione per le sessioni protette](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
- Descrive gli elementi seguenti che influiscono sulla protezione durante l'implementazione di sessioni protette.  
+ [<span data-ttu-id="af6ee-115">Considerazioni sulla sicurezza per le sessioni protette</span><span class="sxs-lookup"><span data-stu-id="af6ee-115">Security Considerations for Secure Sessions</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
+ <span data-ttu-id="af6ee-116">Descrive gli elementi seguenti che influiscono sulla protezione durante l'implementazione di sessioni protette.</span><span class="sxs-lookup"><span data-stu-id="af6ee-116">Discusses the following items that affect security when implementing secure sessions.</span></span>  
   
- [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- Elenca i diversi scenari che non supportano un particolare aspetto della protezione e che devono essere evitati o presi in considerazione.  
+ [<span data-ttu-id="af6ee-117">Scenari non supportati</span><span class="sxs-lookup"><span data-stu-id="af6ee-117">Unsupported Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
+ <span data-ttu-id="af6ee-118">Elenca i diversi scenari che non supportano un particolare aspetto della protezione e che devono essere evitati o presi in considerazione.</span><span class="sxs-lookup"><span data-stu-id="af6ee-118">Lists various scenarios that do not support a particular aspect of security and should be avoided or considered.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="af6ee-119">Riferimento</span><span class="sxs-lookup"><span data-stu-id="af6ee-119">Reference</span></span>  
  <xref:System.IdentityModel.Tokens>  
   
  <xref:System.IdentityModel.Claims>  
@@ -54,8 +57,8 @@ Negli argomenti di questa sezione vengono elencati i vari elementi relativi alla
   
  <xref:System.ServiceModel>  
   
-## Sezioni correlate  
- [Indicazioni di sicurezza e procedure consigliate](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+## <a name="related-sections"></a><span data-ttu-id="af6ee-120">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="af6ee-120">Related Sections</span></span>  
+ [<span data-ttu-id="af6ee-121">Guida alla protezione e le procedure consigliate</span><span class="sxs-lookup"><span data-stu-id="af6ee-121">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
-## Vedere anche  
- [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="af6ee-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="af6ee-122">See Also</span></span>  
+ [<span data-ttu-id="af6ee-123">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="af6ee-123">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)

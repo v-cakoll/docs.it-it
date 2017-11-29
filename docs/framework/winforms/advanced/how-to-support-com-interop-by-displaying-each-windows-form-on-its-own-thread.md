@@ -1,46 +1,48 @@
 ---
-title: "Procedura: supportare l&#39;interoperabilit&#224; COM mediante la visualizzazione di ogni Windows Form nel relativo thread | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperabilità COM, Windows Form"
-  - "COM [Windows Form]"
-  - "Windows Form, non gestito"
-  - "controlli ActiveX [Windows Form], interoperabilità COM"
-  - "Windows Form, interoperabilità"
+title: "Procedura: supportare l'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo thread"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- COM interop [Windows Forms], Windows Forms
+- COM [Windows Forms]
+- Windows Forms, unmanaged
+- ActiveX controls [Windows Forms], COM interop
+- Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c772f547dc87af6618b92603ed1e709efc511b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: supportare l&#39;interoperabilit&#224; COM mediante la visualizzazione di ogni Windows Form nel relativo thread
-Per risolvere i problemi di interoperabilità COM, visualizzare il form in un ciclo di messaggi di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], che è possibile creare usando il metodo <xref:System.Windows.Forms.Application.Run%2A?displayProperty=fullName>.  
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a><span data-ttu-id="c42b0-102">Procedura: supportare l'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo thread</span><span class="sxs-lookup"><span data-stu-id="c42b0-102">How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread</span></span>
+<span data-ttu-id="c42b0-103">Per risolvere i problemi di interoperabilità COM, visualizzare il form in un ciclo di messaggi di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], che è possibile creare usando il metodo <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c42b0-103">You can resolve COM interoperability problems by displaying your form on a [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] message loop, which you can create by using the <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> method.</span></span>  
   
- Perché un Windows Form funzioni correttamente da un'applicazione client COM, è necessario eseguire il form in un ciclo di messaggi Windows Form. Per eseguire questa operazione, adottare uno degli approcci seguenti:  
+ <span data-ttu-id="c42b0-104">Perché un Windows Form funzioni correttamente da un'applicazione client COM, è necessario eseguire il form in un ciclo di messaggi Windows Form.</span><span class="sxs-lookup"><span data-stu-id="c42b0-104">To make a Windows Form work correctly from a COM client application, you must run the form on a Windows Forms message loop.</span></span> <span data-ttu-id="c42b0-105">Per eseguire questa operazione, adottare uno degli approcci seguenti:</span><span class="sxs-lookup"><span data-stu-id="c42b0-105">To do this, use one of the following approaches:</span></span>  
   
--   Usare il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=fullName> per visualizzare il Windows Form. Per altre informazioni, vedere [Procedura: supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md).  
+-   <span data-ttu-id="c42b0-106">Usare il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> per visualizzare il Windows Form.</span><span class="sxs-lookup"><span data-stu-id="c42b0-106">Use the <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> method to display the Windows Form.</span></span> <span data-ttu-id="c42b0-107">Per altre informazioni, vedere [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md).</span><span class="sxs-lookup"><span data-stu-id="c42b0-107">For more information, see [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md).</span></span>  
   
--   Visualizzare ogni Windows Form in un thread separato.  
+-   <span data-ttu-id="c42b0-108">Visualizzare ogni Windows Form in un thread separato.</span><span class="sxs-lookup"><span data-stu-id="c42b0-108">Display each Windows Form on a separate thread.</span></span>  
   
- In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] è disponibile un supporto completo per questa funzionalità.  
+ <span data-ttu-id="c42b0-109">In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]è disponibile un supporto completo per questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="c42b0-109">There is extensive support for this feature in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
   
- Vedere anche [Procedura dettagliata: supporto dell'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo thread](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
+ <span data-ttu-id="c42b0-110">Vedere anche [Procedura dettagliata: supporto dell'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo thread](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="c42b0-110">Also see [Walkthrough: Supporting COM Interop by Displaying Each Windows Form on Its Own Thread](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).</span></span>  
   
-## Esempio  
- L'esempio di codice seguente illustra come visualizzare il form in un thread separato e chiamare il metodo <xref:System.Windows.Forms.Application.Run%2A?displayProperty=fullName> per avviare un message pump Windows Form su tale thread. Per adottare questo approccio, è necessario effettuare il marshalling di tutte le chiamate al form dall'applicazione non gestita usando il metodo <xref:System.Windows.Forms.Control.Invoke%2A>.  
+## <a name="example"></a><span data-ttu-id="c42b0-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="c42b0-111">Example</span></span>  
+ <span data-ttu-id="c42b0-112">L'esempio di codice seguente illustra come visualizzare il form in un thread separato e chiamare il metodo <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> per avviare un message pump Windows Form su tale thread.</span><span class="sxs-lookup"><span data-stu-id="c42b0-112">The following code example demonstrates how to display the form on a separate thread and call the <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> method to start a Windows Forms message pump on that thread.</span></span> <span data-ttu-id="c42b0-113">Per adottare questo approccio, è necessario effettuare il marshalling di tutte le chiamate al form dall'applicazione non gestita usando il metodo <xref:System.Windows.Forms.Control.Invoke%2A> .</span><span class="sxs-lookup"><span data-stu-id="c42b0-113">To use this approach, you must marshal any calls to the form from the unmanaged application by using the <xref:System.Windows.Forms.Control.Invoke%2A> method.</span></span>  
   
- Questo approccio richiede che ogni istanza di un form venga eseguita nel rispettivo thread usando il proprio ciclo di messaggi. Non è possibile eseguire più di un ciclo di messaggi per ogni thread. Quindi non è possibile modificare il ciclo di messaggi dell'applicazione client. Tuttavia, è possibile modificare il componente [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per avviare un nuovo thread che usa il proprio ciclo di messaggi.  
+ <span data-ttu-id="c42b0-114">Questo approccio richiede che ogni istanza di un form venga eseguita nel rispettivo thread usando il proprio ciclo di messaggi.</span><span class="sxs-lookup"><span data-stu-id="c42b0-114">This approach requires that each instance of a form runs on its own thread by using its own message loop.</span></span> <span data-ttu-id="c42b0-115">Non è possibile eseguire più di un ciclo di messaggi per ogni thread.</span><span class="sxs-lookup"><span data-stu-id="c42b0-115">You cannot have more than one message loop running per thread.</span></span> <span data-ttu-id="c42b0-116">Quindi non è possibile modificare il ciclo di messaggi dell'applicazione client.</span><span class="sxs-lookup"><span data-stu-id="c42b0-116">Therefore, you cannot change the client application's message loop.</span></span> <span data-ttu-id="c42b0-117">Tuttavia, è possibile modificare il componente [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per avviare un nuovo thread che usa il proprio ciclo di messaggi.</span><span class="sxs-lookup"><span data-stu-id="c42b0-117">However, you can modify the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] component to start a new thread that uses its own message loop.</span></span>  
   
  [!code-vb[System.Windows.Forms.ComInterop#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]  
   
@@ -48,13 +50,13 @@ Per risolvere i problemi di interoperabilità COM, visualizzare il form in un ci
   
  [!code-vb[System.Windows.Forms.ComInterop#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/Form1.vb#100)]  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a><span data-ttu-id="c42b0-118">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="c42b0-118">Compiling the Code</span></span>  
   
--   Compilare i tipi `COMForm`, `Form1` e `FormManager` in un assembly denominato `COMWinform.dll`. Registrare l'assembly per l'interoperabilità COM usando uno dei metodi descritti in [Packaging an Assembly for COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md). Ora è possibile usare l'assembly e il file libreria dei tipi \(tlb\) corrispondente nelle applicazioni non gestite. Ad esempio, è possibile usare la libreria dei tipi come riferimento in un progetto eseguibile di Visual Basic 6.0.  
+-   <span data-ttu-id="c42b0-119">Compilare i tipi `COMForm`, `Form1`e `FormManager` in un assembly denominato `COMWinform.dll`.</span><span class="sxs-lookup"><span data-stu-id="c42b0-119">Compile the `COMForm`, `Form1`, and `FormManager` types into an assembly called `COMWinform.dll`.</span></span> <span data-ttu-id="c42b0-120">Registrare l'assembly per l'interoperabilità COM usando uno dei metodi descritti in [Packaging an Assembly for COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md).</span><span class="sxs-lookup"><span data-stu-id="c42b0-120">Register the assembly for COM interop by using one of the methods described in [Packaging an Assembly for COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md).</span></span> <span data-ttu-id="c42b0-121">Ora è possibile usare l'assembly e il file libreria dei tipi (tlb) corrispondente nelle applicazioni non gestite.</span><span class="sxs-lookup"><span data-stu-id="c42b0-121">You can now use the assembly and its corresponding type library (.tlb) file in unmanaged applications.</span></span> <span data-ttu-id="c42b0-122">Ad esempio, è possibile usare la libreria dei tipi come riferimento in un progetto eseguibile di Visual Basic 6.0.</span><span class="sxs-lookup"><span data-stu-id="c42b0-122">For example, you can use the type library as a reference in a Visual Basic 6.0 executable project.</span></span>  
   
-## Vedere anche  
- [Exposing .NET Framework Components to COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Packaging an Assembly for COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)   
- [Registering Assemblies with COM](../../../../docs/framework/interop/registering-assemblies-with-com.md)   
- [Procedura: supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)   
- [Cenni preliminari su Windows Form e applicazioni non gestite](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c42b0-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c42b0-123">See Also</span></span>  
+ [<span data-ttu-id="c42b0-124">Esposizione di componenti .NET Framework a COM</span><span class="sxs-lookup"><span data-stu-id="c42b0-124">Exposing .NET Framework Components to COM</span></span>](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [<span data-ttu-id="c42b0-125">Preparazione di un assembly per COM</span><span class="sxs-lookup"><span data-stu-id="c42b0-125">Packaging an Assembly for COM</span></span>](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
+ [<span data-ttu-id="c42b0-126">Registrazione di assembly presso COM</span><span class="sxs-lookup"><span data-stu-id="c42b0-126">Registering Assemblies with COM</span></span>](../../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [<span data-ttu-id="c42b0-127">Procedura: Supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog</span><span class="sxs-lookup"><span data-stu-id="c42b0-127">How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method</span></span>](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
+ [<span data-ttu-id="c42b0-128">Panoramica su Windows Form e applicazioni non gestite</span><span class="sxs-lookup"><span data-stu-id="c42b0-128">Windows Forms and Unmanaged Applications Overview</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)

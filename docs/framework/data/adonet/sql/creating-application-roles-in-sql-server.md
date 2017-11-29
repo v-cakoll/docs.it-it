@@ -1,72 +1,75 @@
 ---
-title: "Creazione di ruoli applicazione in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creazione di ruoli applicazione in SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 632b25408db8556dd9604f653f975bccbea75e2b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Creazione di ruoli applicazione in SQL Server
-I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione anziché a un ruolo o a un utente del database.  Gli utenti possono connettersi al database, attivare il ruolo applicazione e assumere le autorizzazioni concesse all'applicazione.  Le autorizzazioni concesse al ruolo applicazione sono effettive per la durata della connessione.  
+# <a name="creating-application-roles-in-sql-server"></a><span data-ttu-id="00921-102">Creazione di ruoli applicazione in SQL Server</span><span class="sxs-lookup"><span data-stu-id="00921-102">Creating Application Roles in SQL Server</span></span>
+<span data-ttu-id="00921-103">I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione anziché a un ruolo o a un utente del database.</span><span class="sxs-lookup"><span data-stu-id="00921-103">Application roles provide a way to assign permissions to an application instead of a database role or user.</span></span> <span data-ttu-id="00921-104">Gli utenti possono connettersi al database, attivare il ruolo applicazione e assumere le autorizzazioni concesse all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="00921-104">Users can connect to the database, activate the application role, and assume the permissions granted to the application.</span></span> <span data-ttu-id="00921-105">Le autorizzazioni concesse al ruolo applicazione sono effettive per la durata della connessione.</span><span class="sxs-lookup"><span data-stu-id="00921-105">The permissions granted to the application role are in force for the duration of the connection.</span></span>  
   
 > [!IMPORTANT]
->  I ruoli applicazione vengono attivati quando un'applicazione client fornisce un nome e una password di ruolo applicazione nella stringa di connessione.  Presentano una vulnerabilità di sicurezza nelle applicazioni a 2 livelli perché la password deve essere archiviata nel computer client.  Nelle applicazioni a 3 livelli è possibile archiviare la password in modo che non sia accessibile agli utenti dell'applicazione.  
+>  <span data-ttu-id="00921-106">I ruoli applicazione vengono attivati quando un'applicazione client fornisce un nome e una password di ruolo applicazione nella stringa di connessione.</span><span class="sxs-lookup"><span data-stu-id="00921-106">Application roles are activated when a client application supplies an application role name and a password in the connection string.</span></span> <span data-ttu-id="00921-107">Presentano una vulnerabilità di sicurezza nelle applicazioni a 2 livelli perché la password deve essere archiviata nel computer client.</span><span class="sxs-lookup"><span data-stu-id="00921-107">They present a security vulnerability in a two-tier application because the password must be stored on the client computer.</span></span> <span data-ttu-id="00921-108">Nelle applicazioni a 3 livelli è possibile archiviare la password in modo che non sia accessibile agli utenti dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="00921-108">In a three-tier application, you can store the password so that it cannot be accessed by users of the application.</span></span>  
   
-## Funzionalità dei ruoli applicazione  
- Le funzionalità dei ruoli applicazione includono:  
+## <a name="application-role-features"></a><span data-ttu-id="00921-109">Funzionalità dei ruoli applicazione</span><span class="sxs-lookup"><span data-stu-id="00921-109">Application Role Features</span></span>  
+ <span data-ttu-id="00921-110">Le funzionalità dei ruoli applicazione includono:</span><span class="sxs-lookup"><span data-stu-id="00921-110">Application roles have the following features:</span></span>  
   
--   A differenza dei ruoli del database, i ruoli applicazione non contengono membri.  
+-   <span data-ttu-id="00921-111">A differenza dei ruoli del database, i ruoli applicazione non contengono membri.</span><span class="sxs-lookup"><span data-stu-id="00921-111">Unlike database roles, application roles contain no members.</span></span>  
   
--   I ruoli applicazione vengono attivati quando un'applicazione fornisce il nome e una password del ruolo applicazione alla stored procedure di sistema `sp_setapprole`.  
+-   <span data-ttu-id="00921-112">I ruoli applicazione vengono attivati quando un'applicazione fornisce il nome e una password del ruolo applicazione alla stored procedure di sistema `sp_setapprole`.</span><span class="sxs-lookup"><span data-stu-id="00921-112">Application roles are activated when an application supplies the application role name and a password to the `sp_setapprole` system stored procedure.</span></span>  
   
--   La password deve essere archiviata nel computer client e specificata in fase di esecuzione. I ruoli applicazione non possono essere attivati dall'interno di SQL Server.  
+-   <span data-ttu-id="00921-113">La password deve essere archiviata nel computer client e specificata in fase di esecuzione. I ruoli applicazione non possono essere attivati dall'interno di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="00921-113">The password must be stored on the client computer and supplied at run time; an application role cannot be activated from inside of SQL Server.</span></span>  
   
--   La password non è crittografata.  La password con parametri viene archiviata come hash unidirezionale.  
+-   <span data-ttu-id="00921-114">La password non è crittografata.</span><span class="sxs-lookup"><span data-stu-id="00921-114">The password is not encrypted.</span></span> <span data-ttu-id="00921-115">La password con parametri viene archiviata come hash unidirezionale.</span><span class="sxs-lookup"><span data-stu-id="00921-115">The parameter password is stored as a one-way hash.</span></span>  
   
--   Una volta attivate, le autorizzazioni acquisite tramite il ruolo applicazione rimangono effettive per la durata della connessione.  
+-   <span data-ttu-id="00921-116">Una volta attivate, le autorizzazioni acquisite tramite il ruolo applicazione rimangono effettive per la durata della connessione.</span><span class="sxs-lookup"><span data-stu-id="00921-116">Once activated, permissions acquired through the application role remain in effect for the duration of the connection.</span></span>  
   
--   Il ruolo applicazione eredita le autorizzazioni concesse al ruolo `public`.  
+-   <span data-ttu-id="00921-117">Il ruolo applicazione eredita le autorizzazioni concesse al ruolo `public`.</span><span class="sxs-lookup"><span data-stu-id="00921-117">The application role inherits permissions granted to the `public` role.</span></span>  
   
--   Se un membro del ruolo predefinito del server `sysadmin` attiva un ruolo applicazione, il contesto di sicurezza diventa quello del ruolo applicazione per la durata della connessione.  
+-   <span data-ttu-id="00921-118">Se un membro del ruolo predefinito del server `sysadmin` attiva un ruolo applicazione, il contesto di sicurezza diventa quello del ruolo applicazione per la durata della connessione.</span><span class="sxs-lookup"><span data-stu-id="00921-118">If a member of the `sysadmin` fixed server role activates an application role, the security context switches to that of the application role for the duration of the connection.</span></span>  
   
--   Se si crea un account `guest` in un database che include un ruolo applicazione, non è necessario creare un account utente di database per il ruolo applicazione o per uno degli account di accesso che lo richiamano.  I ruoli applicazione possono accedere direttamente a un altro database solo se in quest'ultimo esiste un account `guest`.  
+-   <span data-ttu-id="00921-119">Se si crea un account `guest` in un database che include un ruolo applicazione, non è necessario creare un account utente di database per il ruolo applicazione o per uno degli account di accesso che lo richiamano.</span><span class="sxs-lookup"><span data-stu-id="00921-119">If you create a `guest` account in a database that has an application role, you do not need to create a database user account for the application role or for any of the logins that invoke it.</span></span> <span data-ttu-id="00921-120">I ruoli applicazione possono accedere direttamente a un altro database solo se in quest'ultimo esiste un account `guest`.</span><span class="sxs-lookup"><span data-stu-id="00921-120">Application roles can directly access another database only if a `guest` account exists in the second database</span></span>  
   
--   Le funzioni predefinite che restituiscono nomi di account di accesso, ad esempio SYSTEM\_USER, restituiscono il nome dell'account di accesso che ha richiamato il ruolo applicazione.  Le funzioni predefinite che restituiscono nomi utente del database restituiscono il nome del ruolo applicazione.  
+-   <span data-ttu-id="00921-121">Le funzioni predefinite che restituiscono nomi di account di accesso, ad esempio SYSTEM_USER, restituiscono il nome dell'account di accesso che ha richiamato il ruolo applicazione.</span><span class="sxs-lookup"><span data-stu-id="00921-121">Built-in functions that return login names, such as SYSTEM_USER, return the name of the login that invoked the application role.</span></span> <span data-ttu-id="00921-122">Le funzioni predefinite che restituiscono nomi utente del database restituiscono il nome del ruolo applicazione.</span><span class="sxs-lookup"><span data-stu-id="00921-122">Built-in functions that return database user names return the name of the application role.</span></span>  
   
-### Principio dei privilegi minimi  
- Ai ruoli applicazione è necessario concedere solo le autorizzazioni necessarie in caso la password sia compromessa.  Le autorizzazioni al ruolo `public` devono essere revocate in qualsiasi database che usa un ruolo applicazione.  Disabilitare l'account utente `guest` in ogni database a cui non si desidera che i chiamanti del ruolo applicazione abbiano accesso.  
+### <a name="the-principle-of-least-privilege"></a><span data-ttu-id="00921-123">Principio dei privilegi minimi</span><span class="sxs-lookup"><span data-stu-id="00921-123">The Principle of Least Privilege</span></span>  
+ <span data-ttu-id="00921-124">Ai ruoli applicazione è necessario concedere solo le autorizzazioni necessarie in caso la password sia compromessa.</span><span class="sxs-lookup"><span data-stu-id="00921-124">Application roles should be granted only required permissions in case the password is compromised.</span></span> <span data-ttu-id="00921-125">Le autorizzazioni al ruolo `public` devono essere revocate in qualsiasi database che usa un ruolo applicazione.</span><span class="sxs-lookup"><span data-stu-id="00921-125">Permissions to the `public` role should be revoked in any database using an application role.</span></span> <span data-ttu-id="00921-126">Disabilitare l'account utente `guest` in ogni database a cui non si desidera che i chiamanti del ruolo applicazione abbiano accesso.</span><span class="sxs-lookup"><span data-stu-id="00921-126">Disable the `guest` account in any database you do not want callers of the application role to have access to.</span></span>  
   
-### Miglioramenti dei ruoli applicazione  
- Il contesto di esecuzione può essere restituito al chiamante originale dopo l'attivazione di un ruolo applicazione, eliminando la necessità di disabilitare il pool di connessioni.  La procedura `sp_setapprole` include una nuova opzione che crea un cookie, contenente informazioni di contesto sul chiamante.  È possibile ripristinare la sessione chiamando la procedura `sp_unsetapprole`, passando il cookie.  
+### <a name="application-role-enhancements"></a><span data-ttu-id="00921-127">Miglioramenti dei ruoli applicazione</span><span class="sxs-lookup"><span data-stu-id="00921-127">Application Role Enhancements</span></span>  
+ <span data-ttu-id="00921-128">Il contesto di esecuzione può essere restituito al chiamante originale dopo l'attivazione di un ruolo applicazione, eliminando la necessità di disabilitare il pool di connessioni.</span><span class="sxs-lookup"><span data-stu-id="00921-128">The execution context can be switched back to the original caller after activating an application role, removing the need to disable connection pooling.</span></span> <span data-ttu-id="00921-129">La procedura `sp_setapprole` include una nuova opzione che crea un cookie, contenente informazioni di contesto sul chiamante.</span><span class="sxs-lookup"><span data-stu-id="00921-129">The `sp_setapprole` procedure has a new option that creates a cookie, which contains context information about the caller.</span></span> <span data-ttu-id="00921-130">È possibile ripristinare la sessione chiamando la procedura `sp_unsetapprole`, passando il cookie.</span><span class="sxs-lookup"><span data-stu-id="00921-130">You can revert the session by calling the `sp_unsetapprole` procedure, passing it the cookie.</span></span>  
   
-## Alternative ai ruoli applicazione  
- I ruoli applicazione dipendono dalla sicurezza di una password, che presenta una potenziale vulnerabilità per la sicurezza.  Le password possono essere esposte se vengono incorporate nel codice dell'applicazione o salvate su disco.  
+## <a name="application-role-alternatives"></a><span data-ttu-id="00921-131">Alternative ai ruoli applicazione</span><span class="sxs-lookup"><span data-stu-id="00921-131">Application Role Alternatives</span></span>  
+ <span data-ttu-id="00921-132">I ruoli applicazione dipendono dalla sicurezza di una password, che presenta una potenziale vulnerabilità per la sicurezza.</span><span class="sxs-lookup"><span data-stu-id="00921-132">Application roles depend on the security of a password, which presents a potential security vulnerability.</span></span> <span data-ttu-id="00921-133">Le password possono essere esposte se vengono incorporate nel codice dell'applicazione o salvate su disco.</span><span class="sxs-lookup"><span data-stu-id="00921-133">Passwords may be exposed by being embedded in application code or saved on disk.</span></span>  
   
- Può essere opportuno considerare le seguenti alternative.  
+ <span data-ttu-id="00921-134">Può essere opportuno considerare le seguenti alternative.</span><span class="sxs-lookup"><span data-stu-id="00921-134">You may want to consider the following alternatives.</span></span>  
   
--   Usare il passaggio di contesto con l'istruzione EXECUTE AS e le relative clausole NO REVERT e WITH COOKIE.  È possibile creare un account utente in un database non mappato a un account di accesso.  Assegnare quindi le autorizzazioni a questo account.  L'uzo di EXECUTE AS con un utente senza account di accesso è un sistema più sicuro, perché si basa su autorizzazioni e non su password.  Per altre informazioni, vedere [Personalizzazione delle autorizzazioni mediante la rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+-   <span data-ttu-id="00921-135">Usare il passaggio di contesto con l'istruzione EXECUTE AS e le relative clausole NO REVERT e WITH COOKIE.</span><span class="sxs-lookup"><span data-stu-id="00921-135">Use context switching with the EXECUTE AS statement with its NO REVERT and WITH COOKIE clauses.</span></span> <span data-ttu-id="00921-136">È possibile creare un account utente in un database non mappato a un account di accesso.</span><span class="sxs-lookup"><span data-stu-id="00921-136">You can create a user account in a database that is not mapped to a login.</span></span> <span data-ttu-id="00921-137">Assegnare quindi le autorizzazioni a questo account.</span><span class="sxs-lookup"><span data-stu-id="00921-137">You then assign permissions to this account.</span></span> <span data-ttu-id="00921-138">L'uzo di EXECUTE AS con un utente senza account di accesso è un sistema più sicuro, perché si basa su autorizzazioni e non su password.</span><span class="sxs-lookup"><span data-stu-id="00921-138">Using EXECUTE AS with a login-less user is more secure because it is permission-based, not password-based.</span></span> <span data-ttu-id="00921-139">Per ulteriori informazioni, vedere [personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).</span><span class="sxs-lookup"><span data-stu-id="00921-139">For more information, see [Customizing Permissions with Impersonation in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).</span></span>  
   
--   Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle.  Per altre informazioni, vedere [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+-   <span data-ttu-id="00921-140">Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle.</span><span class="sxs-lookup"><span data-stu-id="00921-140">Sign stored procedures with certificates, granting only permission to execute the procedures.</span></span> <span data-ttu-id="00921-141">Per ulteriori informazioni, vedere [firma di Stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).</span><span class="sxs-lookup"><span data-stu-id="00921-141">For more information, see [Signing Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).</span></span>  
   
-## Risorse esterne  
- Per altre informazioni, vedere le risorse seguenti.  
+## <a name="external-resources"></a><span data-ttu-id="00921-142">Risorse esterne</span><span class="sxs-lookup"><span data-stu-id="00921-142">External Resources</span></span>  
+ <span data-ttu-id="00921-143">Per altre informazioni, vedere le risorse seguenti.</span><span class="sxs-lookup"><span data-stu-id="00921-143">For more information, see the following resources.</span></span>  
   
-|Risorsa|Descrizione|  
-|-------------|-----------------|  
-|[Ruoli applicazione](http://msdn.microsoft.com/library/ms190998.aspx) nella documentazione online di SQL Server|Viene descritto come creare e usare i ruoli applicazione in SQL Server 2008.|  
+|<span data-ttu-id="00921-144">Risorsa</span><span class="sxs-lookup"><span data-stu-id="00921-144">Resource</span></span>|<span data-ttu-id="00921-145">Descrizione</span><span class="sxs-lookup"><span data-stu-id="00921-145">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="00921-146">[I ruoli applicazione](http://msdn.microsoft.com/library/ms190998.aspx) nella documentazione Online di SQL Server</span><span class="sxs-lookup"><span data-stu-id="00921-146">[Application Roles](http://msdn.microsoft.com/library/ms190998.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="00921-147">Viene descritto come creare e usare i ruoli applicazione in SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="00921-147">Describes how to create and use application roles in SQL Server 2008.</span></span>|  
   
-## Vedere anche  
- [Protezione di applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Panoramica della sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="00921-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="00921-148">See Also</span></span>  
+ [<span data-ttu-id="00921-149">Protezione delle applicazioni ADO.NET</span><span class="sxs-lookup"><span data-stu-id="00921-149">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="00921-150">Panoramica della sicurezza SQL Server</span><span class="sxs-lookup"><span data-stu-id="00921-150">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="00921-151">Scenari di sicurezza in SQL Server</span><span class="sxs-lookup"><span data-stu-id="00921-151">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="00921-152">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="00921-152">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

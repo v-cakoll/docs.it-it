@@ -1,65 +1,63 @@
 ---
-title: "SqlClient per Entity Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: SqlClient per Entity Framework
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3cb7880621a849b7162ea5f86ee0786f6184ea58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# SqlClient per Entity Framework
-Contenuto della sezione viene descritto il provider di dati .NET Framework per SQL Server \(SqlClient\), che consente a Entity Framework di funzionare su Microsoft SQL Server.  
+# <a name="sqlclient-for-the-entity-framework"></a><span data-ttu-id="10c75-102">SqlClient per Entity Framework</span><span class="sxs-lookup"><span data-stu-id="10c75-102">SqlClient for the Entity Framework</span></span>
+<span data-ttu-id="10c75-103">Contenuto della sezione viene descritto il provider di dati .NET Framework per SQL Server (SqlClient), che consente a Entity Framework di funzionare su Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="10c75-103">This section describes the .NET Framework Data Provider for SQL Server (SqlClient), which enables the Entity Framework to work over Microsoft SQL Server.</span></span>  
   
-## Attributo Provider dell'elemento Schema  
- `Provider` è un attributo dell'elemento `Schema` in SSDL \(Store Schema Definition Language\).  
+## <a name="provider-schema-attribute"></a><span data-ttu-id="10c75-104">Attributo Provider dell'elemento Schema</span><span class="sxs-lookup"><span data-stu-id="10c75-104">Provider Schema Attribute</span></span>  
+ <span data-ttu-id="10c75-105">`Provider` è un attributo dell'elemento `Schema` in SSDL (Store Schema Definition Language).</span><span class="sxs-lookup"><span data-stu-id="10c75-105">`Provider` is an attribute of the `Schema` element in store schema definition language (SSDL).</span></span>  
   
- Per usare SqlClient, assegnare la stringa "System.Data.SqlClient" all'attributo `Provider` dell'elemento `Schema`.  
+ <span data-ttu-id="10c75-106">Per usare SqlClient, assegnare la stringa "System.Data.SqlClient" all'attributo `Provider` dell'elemento `Schema`.</span><span class="sxs-lookup"><span data-stu-id="10c75-106">To use SqlClient, assign the string "System.Data.SqlClient" to the `Provider` attribute of the `Schema` element.</span></span>  
   
-## Attributo ProviderManifestToken dell'elemento Schema  
- `ProviderManifestToken` è un attributo obbligatorio dell'elemento `Schema` in SSDL.  Questo token è usato per caricare il manifesto del provider per gli scenari non in linea.  Per altre informazioni sull'attributo `ProviderManifestToken`, vedere [Schema Element \(SSDL\)](http://msdn.microsoft.com/it-it/fec75ae4-7f16-4421-9265-9dac61509222).  
+## <a name="providermanifesttoken-schema-attribute"></a><span data-ttu-id="10c75-107">Attributo ProviderManifestToken dell'elemento Schema</span><span class="sxs-lookup"><span data-stu-id="10c75-107">ProviderManifestToken Schema Attribute</span></span>  
+ <span data-ttu-id="10c75-108">`ProviderManifestToken` è un attributo obbligatorio dell'elemento `Schema` in SSDL.</span><span class="sxs-lookup"><span data-stu-id="10c75-108">`ProviderManifestToken` is a required attribute of the `Schema` element in SSDL.</span></span> <span data-ttu-id="10c75-109">Questo token è usato per caricare il manifesto del provider per gli scenari non in linea.</span><span class="sxs-lookup"><span data-stu-id="10c75-109">This token is used to load the provider manifest for offline scenarios.</span></span> <span data-ttu-id="10c75-110">Per ulteriori informazioni su `ProviderManifestToken` attributo, vedere [elemento dello Schema (SSDL)](http://msdn.microsoft.com/en-us/fec75ae4-7f16-4421-9265-9dac61509222).</span><span class="sxs-lookup"><span data-stu-id="10c75-110">For more information about `ProviderManifestToken` attribute, see [Schema Element (SSDL)](http://msdn.microsoft.com/en-us/fec75ae4-7f16-4421-9265-9dac61509222).</span></span>  
   
- SqlClient può essere usato come provider di dati per versioni diverse di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Queste versioni dispongono di funzionalità diverse.  Ad esempio, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] non supporta i tipi `varchar(max)` e `nvarchar(max)` introdotti con [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
+ <span data-ttu-id="10c75-111">SqlClient può essere usato come provider di dati per versioni diverse di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="10c75-111">SqlClient can be used as a data provider for different versions of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="10c75-112">Queste versioni dispongono di funzionalità diverse.</span><span class="sxs-lookup"><span data-stu-id="10c75-112">These versions have different capabilities.</span></span> <span data-ttu-id="10c75-113">Ad esempio, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] non supporta i tipi `varchar(max)` e `nvarchar(max)` introdotti con [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].</span><span class="sxs-lookup"><span data-stu-id="10c75-113">For example, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] does not support `varchar(max)` and `nvarchar(max)` types that were introduced with [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].</span></span>  
   
- SqlClient produce e accetta i token del manifesto del provider seguenti per versioni diverse di SQL Server.  
+ <span data-ttu-id="10c75-114">SqlClient produce e accetta i token del manifesto del provider seguenti per versioni diverse di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="10c75-114">SqlClient produces and accepts the following provider manifest tokens for different versions of SQL Server.</span></span>  
   
-||||  
+|<span data-ttu-id="10c75-115">SQL Server 2000</span><span class="sxs-lookup"><span data-stu-id="10c75-115">SQL Server 2000</span></span>|<span data-ttu-id="10c75-116">SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="10c75-116">SQL Server 2005</span></span>|<span data-ttu-id="10c75-117">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="10c75-117">SQL Server 2008</span></span>|  
 |-|-|-|  
-|SQL Server 2000|SQL Server 2005|SQL Server 2008|  
-|2000|2005|2008|  
+|<span data-ttu-id="10c75-118">2000</span><span class="sxs-lookup"><span data-stu-id="10c75-118">2000</span></span>|<span data-ttu-id="10c75-119">2005</span><span class="sxs-lookup"><span data-stu-id="10c75-119">2005</span></span>|<span data-ttu-id="10c75-120">2008</span><span class="sxs-lookup"><span data-stu-id="10c75-120">2008</span></span>|  
   
 > [!NOTE]
->  A partire da [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010, [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/it-it/91076853-0881-421b-837a-f582f36be527) non supporta SQL Server 2000.  
+>  <span data-ttu-id="10c75-121">A partire da [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010, il [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) non supportano SQL Server 2000.</span><span class="sxs-lookup"><span data-stu-id="10c75-121">Starting with [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010, the [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) do not support SQL Server 2000.</span></span>  
   
-## Nome dello spazio dei nomi del provider  
- Tutti i provider devono specificare uno spazio dei nomi.  Questa proprietà consente a Entity Framework di individuare quale prefisso viene usato dal provider per costrutti specifici, ad esempio tipi e funzioni.  Lo spazio dei nomi per i manifesti del provider SqlClient è `SqlServer`.  Per altre informazioni sugli spazi dei nomi, vedere [Namespaces](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  
+## <a name="provider-namespace-name"></a><span data-ttu-id="10c75-122">Nome dello spazio dei nomi del provider </span><span class="sxs-lookup"><span data-stu-id="10c75-122">Provider Namespace Name</span></span>  
+ <span data-ttu-id="10c75-123">Tutti i provider devono specificare uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="10c75-123">All providers must specify a namespace.</span></span> <span data-ttu-id="10c75-124">Questa proprietà consente a Entity Framework di individuare quale prefisso viene usato dal provider per costrutti specifici, ad esempio tipi e funzioni.</span><span class="sxs-lookup"><span data-stu-id="10c75-124">This property tells the Entity Framework which prefix is used by the provider for specific constructs, such as types and functions.</span></span> <span data-ttu-id="10c75-125">Lo spazio dei nomi per i manifesti del provider SqlClient è `SqlServer`.</span><span class="sxs-lookup"><span data-stu-id="10c75-125">The namespace for SqlClient provider manifests is `SqlServer`.</span></span> <span data-ttu-id="10c75-126">Per ulteriori informazioni sugli spazi dei nomi, vedere [gli spazi dei nomi](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="10c75-126">For more information about namespaces, see [Namespaces](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).</span></span>  
   
-## Tipi  
- Il provider SqlClient per Entity Framework fornisce informazioni di mapping tra i tipi del modello concettuale e i tipi SQL Server.  Per altre informazioni, vedere [SqlClient per i tipi Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+## <a name="types"></a><span data-ttu-id="10c75-127">Tipi</span><span class="sxs-lookup"><span data-stu-id="10c75-127">Types</span></span>  
+ <span data-ttu-id="10c75-128">Il provider SqlClient per Entity Framework fornisce informazioni di mapping tra i tipi del modello concettuale e i tipi SQL Server.</span><span class="sxs-lookup"><span data-stu-id="10c75-128">The SqlClient provider for the Entity Framework provides mapping information between conceptual model types and SQL Server types.</span></span> <span data-ttu-id="10c75-129">Per ulteriori informazioni, vedere [SqlClient per tipi Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).</span><span class="sxs-lookup"><span data-stu-id="10c75-129">For more information, see [SqlClient for Entity FrameworkTypes](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).</span></span>  
   
-## Funzioni  
- Nel provider SqlClient per Entity Framework viene definito l'elenco di funzioni supportate dal provider.  Per un elenco delle funzioni supportate, vedere [Funzioni di SqlClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+## <a name="functions"></a><span data-ttu-id="10c75-130">Funzioni</span><span class="sxs-lookup"><span data-stu-id="10c75-130">Functions</span></span>  
+ <span data-ttu-id="10c75-131">Nel provider SqlClient per Entity Framework viene definito l'elenco di funzioni supportate dal provider.</span><span class="sxs-lookup"><span data-stu-id="10c75-131">The SqlClient provider for the Entity Framework defines the list of functions supported by the provider.</span></span> <span data-ttu-id="10c75-132">Per un elenco delle funzioni supportate, vedere [SqlClient per funzioni Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span><span class="sxs-lookup"><span data-stu-id="10c75-132">For a list of the supported functions, see [SqlClient for Entity Framework Functions](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>  
   
-## Contenuto della sezione  
- [Funzioni di SqlClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
+## <a name="in-this-section"></a><span data-ttu-id="10c75-133">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="10c75-133">In This Section</span></span>  
+ [<span data-ttu-id="10c75-134">SqlClient per funzioni Entity Framework</span><span class="sxs-lookup"><span data-stu-id="10c75-134">SqlClient for Entity Framework Functions</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
   
- [SqlClient per i tipi Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
+ [<span data-ttu-id="10c75-135">SqlClient per tipi Entity Framework</span><span class="sxs-lookup"><span data-stu-id="10c75-135">SqlClient for Entity FrameworkTypes</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
   
- [Problemi noti in SqlClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
+ [<span data-ttu-id="10c75-136">Problemi noti in SqlClient per Entity Framework</span><span class="sxs-lookup"><span data-stu-id="10c75-136">Known Issues in SqlClient for Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   
-## Vedere anche  
- [Linguaggio Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)   
- [Riferimenti per il linguaggio](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)   
- [Known Issues in SqlClient Provider for Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+## <a name="see-also"></a><span data-ttu-id="10c75-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10c75-137">See Also</span></span>  
+ [<span data-ttu-id="10c75-138">Linguaggio Entity SQL</span><span class="sxs-lookup"><span data-stu-id="10c75-138">Entity SQL Language</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+ [<span data-ttu-id="10c75-139">Riferimenti per il linguaggio</span><span class="sxs-lookup"><span data-stu-id="10c75-139">Language Reference</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
+ [<span data-ttu-id="10c75-140">Problemi noti di Provider SqlClient per Entity Framework</span><span class="sxs-lookup"><span data-stu-id="10c75-140">Known Issues in SqlClient Provider for Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

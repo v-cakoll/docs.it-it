@@ -1,34 +1,37 @@
 ---
-title: "Comunicazione bidirezionale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Comunicazione bidirezionale
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b9d55087eb46cc304fa2a42a3e64208d9a4fec5d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Comunicazione bidirezionale
-Questo esempio dimostra come eseguire comunicazioni transazionali bidirezionali in coda su MSQM.  In questo esempio viene usata l'associazione `netMsmqBinding`.  In questo caso, il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
+# <a name="two-way-communication"></a><span data-ttu-id="e7ef6-102">Comunicazione bidirezionale</span><span class="sxs-lookup"><span data-stu-id="e7ef6-102">Two-Way Communication</span></span>
+<span data-ttu-id="e7ef6-103">Questo esempio dimostra come eseguire comunicazioni transazionali bidirezionali in coda su MSQM.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-103">This sample demonstrates how to perform transacted two-way queued communication over MSMQ.</span></span> <span data-ttu-id="e7ef6-104">In questo esempio viene usata l'associazione `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-104">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="e7ef6-105">In questo caso, il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-105">In this case, the service is a self-hosted console application that allows you to observe the service receiving queued messages.</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+>  <span data-ttu-id="e7ef6-106">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Questo esempio è basato sull'[Associazioni MSMQ transazionali](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ <span data-ttu-id="e7ef6-107">Questo esempio è basato sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span><span class="sxs-lookup"><span data-stu-id="e7ef6-107">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span></span>  
   
- Nella comunicazione in coda, il client comunica al servizio usando una coda.  Il client invia messaggi a una coda e il servizio riceve i messaggi dalla coda.  Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.  
+ <span data-ttu-id="e7ef6-108">Nella comunicazione in coda, il client comunica al servizio usando una coda.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-108">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="e7ef6-109">Il client invia messaggi a una coda e il servizio riceve i messaggi dalla coda.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-109">The client sends messages to a queue, and the service receives messages from the queue.</span></span> <span data-ttu-id="e7ef6-110">Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-110">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- Questo esempio dimostra la comunicazione bidirezionale usando le code.  Il client invia ordini di acquisto alla coda dall'interno dell'ambito di una transazione.  Il servizio riceve gli ordini, elabora l'ordine e quindi richiama il client con lo stato dell'ordine dalla coda all'interno dell'ambito di una transazione.  Per facilitare la comunicazione bidirezionale il client e il servizio usano entrambi code per accodare gli ordini di acquisto e lo stato degli ordini.  
+ <span data-ttu-id="e7ef6-111">Questo esempio dimostra la comunicazione bidirezionale usando le code.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-111">This sample demonstrates 2-way communication using queues.</span></span> <span data-ttu-id="e7ef6-112">Il client invia ordini di acquisto alla coda dall'interno dell'ambito di una transazione.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-112">The client sends purchase orders to the queue from within the scope of a transaction.</span></span> <span data-ttu-id="e7ef6-113">Il servizio riceve gli ordini, elabora l'ordine e quindi richiama il client con lo stato dell'ordine dalla coda all'interno dell'ambito di una transazione.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-113">The service receives the orders, processes the order and then calls back the client with the status of the order from the queue within the scope of a transaction.</span></span> <span data-ttu-id="e7ef6-114">Per facilitare la comunicazione bidirezionale il client e il servizio usano entrambi code per accodare gli ordini di acquisto e lo stato degli ordini.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-114">To facilitate two-way communication the client and service both use queues to enqueue purchase orders and order status.</span></span>  
   
- Il contratto di servizio `IOrderProcessor` definisce operazioni del servizio bidirezionale che sono adeguate all'accodamento.  L'operazione del servizio include l'endpoint di risposta al qual e inviare gli stati degli ordini  L'endpoint di risposta è URI della coda alla quale restituire lo stato dell'ordine per il client.  L'applicazione di elaborazione degli ordini implementa questo contratto.  
+ <span data-ttu-id="e7ef6-115">Il contratto di servizio `IOrderProcessor` definisce operazioni del servizio bidirezionale che sono adeguate all'accodamento.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-115">The service contract `IOrderProcessor` defines one-way service operations that suit the use of queuing.</span></span> <span data-ttu-id="e7ef6-116">L'operazione del servizio include l'endpoint di risposta al qual e inviare gli stati degli ordini</span><span class="sxs-lookup"><span data-stu-id="e7ef6-116">The service operation includes the reply endpoint to use to send the order statuses to.</span></span> <span data-ttu-id="e7ef6-117">L'endpoint di risposta è URI della coda alla quale restituire lo stato dell'ordine per il client.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-117">The reply endpoint is the URI of the queue to send the order status back to the client.</span></span> <span data-ttu-id="e7ef6-118">L'applicazione di elaborazione degli ordini implementa questo contratto.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-118">The order processing application implements this contract.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -38,10 +41,9 @@ public interface IOrderProcessor
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
 }  
-  
 ```  
   
- Il contratto di risposta per inviare lo stato dell'ordine è specificato dal client.  Il client implementa il contratto dello stato dell'ordine.  Il servizio usa il proxy generato di questo contratto per restituire lo stato dell'ordine al client.  
+ <span data-ttu-id="e7ef6-119">Il contratto di risposta per inviare lo stato dell'ordine è specificato dal client.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-119">The reply contract to send order status is specified by the client.</span></span> <span data-ttu-id="e7ef6-120">Il client implementa il contratto dello stato dell'ordine.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-120">The client implements the order status contract.</span></span> <span data-ttu-id="e7ef6-121">Il servizio usa il proxy generato di questo contratto per restituire lo stato dell'ordine al client.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-121">The service uses the generated proxy of this contract to send order status back to the client.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -52,9 +54,9 @@ public interface IOrderStatus
 }  
 ```  
   
- L'operazione del servizio elabora l'ordine di acquisto inviato.  <xref:System.ServiceModel.OperationBehaviorAttribute> viene applicato all'operazione del servizio per specificare l'inserimento automatico nell'elenco in una transazione usata per ricevere il messaggio dalla coda e il completamento automatico delle transazioni al completamento dell'operazione del servizio.  La classe `Orders` incapsula la funzionalità di elaborazione degli ordini.  In questo caso, aggiunge l'ordine di acquisto a un dizionario.  La transazione che l'operazione del servizio ha inserito nell'elenco è disponibile per le operazioni nella classe `Orders`.  
+ <span data-ttu-id="e7ef6-122">L'operazione del servizio elabora l'ordine di acquisto inviato.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-122">The service operation processes the submitted purchase order.</span></span> <span data-ttu-id="e7ef6-123"><xref:System.ServiceModel.OperationBehaviorAttribute> viene applicato all'operazione del servizio per specificare l'inserimento automatico nell'elenco in una transazione usata per ricevere il messaggio dalla coda e il completamento automatico delle transazioni al completamento dell'operazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-123">The <xref:System.ServiceModel.OperationBehaviorAttribute> is applied to the service operation to specify automatic enlistment in a transaction that is used to receive the message from the queue and automatic completion of transactions on completion of the service operation.</span></span> <span data-ttu-id="e7ef6-124">La classe `Orders` incapsula la funzionalità di elaborazione degli ordini.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-124">The `Orders` class encapsulates order processing functionality.</span></span> <span data-ttu-id="e7ef6-125">In questo caso, aggiunge l'ordine di acquisto a un dizionario.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-125">In this case, it adds the purchase order to a dictionary.</span></span> <span data-ttu-id="e7ef6-126">La transazione che l'operazione del servizio ha inserito nell'elenco è disponibile per le operazioni nella classe `Orders`.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-126">The transaction that the service operation enlisted in is available to the operations in the `Orders` class.</span></span>  
   
- L'operazione del servizio, oltre a elaborare l'ordine di acquisto inviato risponde al client in merito allo stato dell'ordine.  
+ <span data-ttu-id="e7ef6-127">L'operazione del servizio, oltre a elaborare l'ordine di acquisto inviato risponde al client in merito allo stato dell'ordine.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-127">The service operation, in addition to processing the submitted purchase order, replies back to the client on the status of the order.</span></span>  
   
 ```  
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -78,12 +80,12 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
 }  
 ```  
   
- Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione.  L'endpoint per il servizio è definito nella sezione System.ServiceModel del file di configurazione.  
+ <span data-ttu-id="e7ef6-128">Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-128">The MSMQ queue name is specified in an appSettings section of the configuration file.</span></span> <span data-ttu-id="e7ef6-129">L'endpoint per il servizio è definito nella sezione System.ServiceModel del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-129">The endpoint for the service is defined in the System.ServiceModel section of the configuration file.</span></span>  
   
 > [!NOTE]
->  Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse.  Nel nome della coda MSMQ viene usato un punto \(.\) per il computer locale e il separatore barra rovesciata nel percorso.  Nell'indirizzo dell'endpoint di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene specificato uno schema net.msmq:, viene usato "localhost" per il computer locale e barre nel percorso.  Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
+>  <span data-ttu-id="e7ef6-130">Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-130">The MSMQ queue name and endpoint address use slightly different addressing conventions.</span></span> <span data-ttu-id="e7ef6-131">Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-131">The MSMQ queue name uses a dot (.) for the local machine and backslash separators in its path.</span></span> <span data-ttu-id="e7ef6-132">Nell'indirizzo dell'endpoint di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene specificato uno schema net.msmq:, viene usato "localhost" per il computer locale e barre nel percorso.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-132">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoint address specifies a net.msmq: scheme, uses "localhost" for the local machine, and uses forward slashes in its path.</span></span> <span data-ttu-id="e7ef6-133">Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-133">To read from a queue that is hosted on the remote machine, replace the "." and "localhost" to the remote machine name.</span></span>  
   
- Il servizio è indipendente.  Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo.  Questa operazione può essere eseguita manualmente o mediante il codice.  In questo esempio, il servizio verifica l'esistenza della coda e la crea se necessario.  Il nome della coda viene letto dal file di configurazione.  L'indirizzo di base viene usato da [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy per il servizio.  
+ <span data-ttu-id="e7ef6-134">Il servizio è indipendente.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-134">The service is self hosted.</span></span> <span data-ttu-id="e7ef6-135">Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-135">When using the MSMQ transport, the queue used must be created in advance.</span></span> <span data-ttu-id="e7ef6-136">Questa operazione può essere eseguita manualmente o mediante il codice.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-136">This can be done manually or through code.</span></span> <span data-ttu-id="e7ef6-137">In questo esempio, il servizio verifica l'esistenza della coda e la crea se necessario.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-137">In this sample, the service checks for the existence of the queue and creates it, if necessary.</span></span> <span data-ttu-id="e7ef6-138">Il nome della coda viene letto dal file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-138">The queue name is read from the configuration file.</span></span> <span data-ttu-id="e7ef6-139">L'indirizzo di base viene utilizzato il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy al servizio.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-139">The base address is used by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the proxy to the service.</span></span>  
   
 ```  
 // Host the service within this EXE console application.  
@@ -111,7 +113,7 @@ public static void Main()
 }  
 ```  
   
- Il client crea una transazione.  La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale tutti i messaggi riescono o meno.  
+ <span data-ttu-id="e7ef6-140">Il client crea una transazione.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-140">The client creates a transaction.</span></span> <span data-ttu-id="e7ef6-141">La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale tutti i messaggi riescono o meno.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-141">Communication with the queue takes place within the scope of the transaction, causing it to be treated as an atomic unit where all messages succeed or fail.</span></span>  
   
 ```  
 // Create a ServiceHost for the OrderStatus service type.  
@@ -149,10 +151,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-  
 ```  
   
- Il codice client implementa il contratto `IOrderStatus` per ricevere lo stato dell'ordine dal servizio.  In questo caso, stampa lo stato dell'ordine.  
+ <span data-ttu-id="e7ef6-142">Il codice client implementa il contratto `IOrderStatus` per ricevere lo stato dell'ordine dal servizio.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-142">The client code implements the `IOrderStatus` contract to receive order status from the service.</span></span> <span data-ttu-id="e7ef6-143">In questo caso, stampa lo stato dell'ordine.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-143">In this case, it prints out the order status.</span></span>  
   
 ```  
 [ServiceBehavior]  
@@ -166,12 +167,11 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-  
 ```  
   
- La coda dello stato degli ordini viene creata nel metodo `Main`.  La configurazione del client comprende la configurazione del servizio di stato degli ordini per ospitare il servizio di stato degli ordini, come illustrato nella configurazione di esempio seguente.  
+ <span data-ttu-id="e7ef6-144">La coda dello stato degli ordini viene creata nel metodo `Main`.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-144">The order status queue is created in the `Main` method.</span></span> <span data-ttu-id="e7ef6-145">La configurazione del client comprende la configurazione del servizio di stato degli ordini per ospitare il servizio di stato degli ordini, come illustrato nella configurazione di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-145">The client configuration includes the order status service configuration to host the order status service, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <appSettings>  
   <!-- Use appSetting to configure MSMQ queue name. -->  
   <add key="queueName" value=".\private$\ServiceModelSamplesTwo-way/OrderStatus" />  
@@ -198,12 +198,11 @@ public class OrderStatusService : IOrderStatus
   </client>  
   
 </system.serviceModel>  
-  
 ```  
   
- Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client.  È possibile osservare il servizio che riceve i messaggi dal client.  Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  
+ <span data-ttu-id="e7ef6-146">Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-146">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="e7ef6-147">È possibile osservare il servizio che riceve i messaggi dal client.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-147">You can see the service receive messages from the client.</span></span> <span data-ttu-id="e7ef6-148">Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-148">Press ENTER in each console window to shut down the service and client.</span></span>  
   
- Il servizio visualizza le informazioni dell'ordine di acquisto e indica che restituisce lo stato dell'ordine alla coda di stato degli ordini.  
+ <span data-ttu-id="e7ef6-149">Il servizio visualizza le informazioni dell'ordine di acquisto e indica che restituisce lo stato dell'ordine alla coda di stato degli ordini.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-149">The service displays the purchase order information and indicates it is sending back the order status to the order status queue.</span></span>  
   
 ```  
 The service is ready.  
@@ -220,32 +219,31 @@ Processing Purchase Order: 124a1f69-3699-4b16-9bcc-43147a8756fc
 Sending back order status information  
 ```  
   
- Il client visualizza le informazioni sullo stato dell'ordine inviate dal servizio.  
+ <span data-ttu-id="e7ef6-150">Il client visualizza le informazioni sullo stato dell'ordine inviate dal servizio.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-150">The client displays the order status information sent by the service.</span></span>  
   
 ```  
 Press <ENTER> to terminate client.  
 Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending  
-  
 ```  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e7ef6-151">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="e7ef6-151">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="e7ef6-152">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7ef6-152">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="e7ef6-153">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7ef6-153">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="e7ef6-154">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7ef6-154">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare i nomi degli endpoint nella configurazione client in modo che corrisponda al codice client.  
+    >  <span data-ttu-id="e7ef6-155">Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare i nomi degli endpoint nella configurazione client in modo che corrisponda al codice client.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-155">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint names in the client configuration to match the client code.</span></span>  
   
- Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata.  Sono disponibili due proprietà di rilievo per la sicurezza del trasporto MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`.  Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ.  Se si esegue questo esempio in un computer che non soddisfà questi criteri si riceve un errore.  
+ <span data-ttu-id="e7ef6-156">Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-156">By default with the <xref:System.ServiceModel.NetMsmqBinding>, transport security is enabled.</span></span> <span data-ttu-id="e7ef6-157">Sono disponibili due proprietà pertinenti per la sicurezza del trasporto MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-157">There are two relevant properties for MSMQ transport security, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> and <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="e7ef6-158">Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-158">For MSMQ to provide the authentication and signing feature, it must be part of a domain and the active directory integration option for MSMQ must be installed.</span></span> <span data-ttu-id="e7ef6-159">Se si esegue questo esempio in un computer che non soddisfà questi criteri si riceve un errore.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-159">If you run this sample on a computer that does not satisfy these criteria you receive an error.</span></span>  
   
-### Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a><span data-ttu-id="e7ef6-160">Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory</span><span class="sxs-lookup"><span data-stu-id="e7ef6-160">To run the sample on a computer joined to a workgroup or without active directory integration</span></span>  
   
-1.  Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nella configurazione di esempio seguente:  
+1.  <span data-ttu-id="e7ef6-161">Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nella configurazione di esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="e7ef6-161">If your computer is not part of a domain or does not have active directory integration installed, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration:</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
   
       <appSettings>  
@@ -276,12 +274,11 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
       </system.serviceModel>  
   
     </configuration>  
-  
     ```  
   
-2.  La disattivazione della sicurezza per una configurazione client genera quanto segue:  
+2.  <span data-ttu-id="e7ef6-162">La disattivazione della sicurezza per una configurazione client genera quanto segue:</span><span class="sxs-lookup"><span data-stu-id="e7ef6-162">Turning off security for a client configuration generates the following:</span></span>  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <appSettings>  
@@ -323,25 +320,25 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-3.  Il servizio per questo esempio crea un'associazione in `OrderProcessorService`.  Aggiungere una riga di codice dopo la creazione dell'istanza dell'associazione per impostare la modalità di sicurezza su `None`.  
+3.  <span data-ttu-id="e7ef6-163">Il servizio per questo esempio crea un'associazione in `OrderProcessorService`.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-163">The service for this sample creates a binding in the `OrderProcessorService`.</span></span> <span data-ttu-id="e7ef6-164">Aggiungere una riga di codice dopo la creazione dell'istanza dell'associazione per impostare la modalità di sicurezza su `None`.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-164">Add a line of code after the binding is instantiated to set the security mode to `None`.</span></span>  
   
     ```  
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  
   
-4.  Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.  
+4.  <span data-ttu-id="e7ef6-165">Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-165">Ensure that you change the configuration on both the server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> o della sicurezza del `Message` su `None`.  
+    >  <span data-ttu-id="e7ef6-166">L'impostazione di `security mode` su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> o della sicurezza del `Message` su `None`.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-166">Setting `security mode` to `None` is equivalent to setting <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> or `Message` security to `None`.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.  Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="e7ef6-167">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-167">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e7ef6-168">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-168">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="e7ef6-169">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e7ef6-169">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e7ef6-170">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="e7ef6-170">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="e7ef6-171">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e7ef6-171">See Also</span></span>

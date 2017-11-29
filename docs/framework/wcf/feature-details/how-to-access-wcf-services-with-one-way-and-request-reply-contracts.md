@@ -1,29 +1,32 @@
 ---
-title: "Procedura: accedere a servizi WCF con un contratto unidirezionale o request/reply | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: accedere a servizi WCF con un contratto unidirezionale o request/reply'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 20d9cad52c0f528b521b031173b5dce1cb4f2a50
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: accedere a servizi WCF con un contratto unidirezionale o request/reply
-Le procedure seguenti descrivono come accedere a un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] che definisce un contratto unidirezionale o un contratto request/reply e in cui non viene utilizzato il modello di comunicazione duplex.  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="0de59-102">Procedura: accedere a servizi WCF con un contratto unidirezionale o request/reply</span><span class="sxs-lookup"><span data-stu-id="0de59-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
+<span data-ttu-id="0de59-103">Le procedure seguenti descrivono come accedere a un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] che definisce un contratto unidirezionale o un contratto request/reply e in cui non viene utilizzato il modello di comunicazione duplex.</span><span class="sxs-lookup"><span data-stu-id="0de59-103">The following procedures describe how to access a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
   
-### <a name="to-define-the-service"></a>Per definire il servizio  
+### <a name="to-define-the-service"></a><span data-ttu-id="0de59-104">Per definire il servizio</span><span class="sxs-lookup"><span data-stu-id="0de59-104">To define the service</span></span>  
   
-1.  Dichiarare il contratto di servizio. Le operazioni che devono essere unidirezionali devono avere `IsOneWay` impostato su `true` all'interno di <xref:System.ServiceModel.OperationContractAttribute>. Nel codice seguente viene dichiarato il contratto `IOneWayCalculator` con operazioni unidirezionali per `Add`, `Subtract`, `Multiply` e `Divide`. Viene inoltre definita un'operazione di richiesta/risposta chiamata `SayHello`.  
+1.  <span data-ttu-id="0de59-105">Dichiarare il contratto di servizio.</span><span class="sxs-lookup"><span data-stu-id="0de59-105">Declare the service contract.</span></span> <span data-ttu-id="0de59-106">Per le operazioni che devono essere unidirezionali `IsOneWay` deve essere impostato su `true` all'interno di <xref:System.ServiceModel.OperationContractAttribute>.</span><span class="sxs-lookup"><span data-stu-id="0de59-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="0de59-107">Nel codice seguente viene dichiarato il contratto `IOneWayCalculator` con operazioni unidirezionali per `Add`, `Subtract`, `Multiply` e `Divide`.</span><span class="sxs-lookup"><span data-stu-id="0de59-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="0de59-108">Viene inoltre definita un'operazione di richiesta/risposta chiamata `SayHello`.</span><span class="sxs-lookup"><span data-stu-id="0de59-108">It also defines a request response operation called `SayHello`.</span></span>  
   
-    ```  
+    ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
     public interface IOneWayCalculator  
     {  
@@ -40,9 +43,9 @@ Le procedure seguenti descrivono come accedere a un servizio [!INCLUDE[indigo1](
     }  
     ```  
   
-2.  Implementare il contratto di servizio Nel codice seguente viene implementata l'interfaccia `IOnewayCalculator`.  
+2.  <span data-ttu-id="0de59-109">Implementare il contratto di servizio</span><span class="sxs-lookup"><span data-stu-id="0de59-109">Implement the service contract.</span></span> <span data-ttu-id="0de59-110">Nel codice seguente viene implementata l'interfaccia `IOnewayCalculator`.</span><span class="sxs-lookup"><span data-stu-id="0de59-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
   
-    ```  
+    ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
     public class CalculatorService : IOneWayCalculator  
     {  
@@ -78,9 +81,9 @@ Le procedure seguenti descrivono come accedere a un servizio [!INCLUDE[indigo1](
     }  
     ```  
   
-3.  Ospitare il servizio in un'applicazione console. Nel codice seguente viene illustrato come ospitare il servizio.  
+3.  <span data-ttu-id="0de59-111">Ospitare il servizio in un'applicazione console.</span><span class="sxs-lookup"><span data-stu-id="0de59-111">Host the service in a console application.</span></span> <span data-ttu-id="0de59-112">Nel codice seguente viene illustrato come ospitare il servizio.</span><span class="sxs-lookup"><span data-stu-id="0de59-112">The following code shows how to host the service.</span></span>  
   
-    ```  
+    ```csharp  
     // Host the service within this EXE console application.  
     public static void Main()  
     {  
@@ -114,11 +117,11 @@ Le procedure seguenti descrivono come accedere a un servizio [!INCLUDE[indigo1](
     }  
     ```  
   
-### <a name="to-access-the-service"></a>Per accedere al servizio  
+### <a name="to-access-the-service"></a><span data-ttu-id="0de59-113">Per accedere al servizio</span><span class="sxs-lookup"><span data-stu-id="0de59-113">To access the service</span></span>  
   
-1.  Eseguire il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) utilizzando l'indirizzo di endpoint di scambio di metadati per creare la classe client per il servizio utilizzando la seguente riga di comando: `Svcutil http://localhost:8000/Service` il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera un set di interfacce e classi, come illustrato nell'esempio di codice seguente.  
+1.  <span data-ttu-id="0de59-114">Eseguire il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) utilizzando l'indirizzo di endpoint di scambio di metadati per creare la classe client per il servizio utilizzando la seguente riga di comando: `Svcutil http://localhost:8000/Service` il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera un set di interfacce e classi, come illustrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="0de59-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
   
-    ```  
+    ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="IOneWayCalculator")]  
     public interface IOneWayCalculator  
@@ -199,24 +202,22 @@ Le procedure seguenti descrivono come accedere a un servizio [!INCLUDE[indigo1](
             return base.Channel.SayHello(name);  
         }  
     }  
-  
     ```  
   
-     Si noti che nel `IOneWayCalculator` interfaccia che le operazioni del servizio unidirezionale è il <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attributo impostato su `true` e l'operazione del servizio richiesta-risposta con l'attributo impostato sul valore predefinito, `false`. Si noti inoltre la classe `OneWayCalculatorClient`. Si tratta della classe che verrà utilizzata per chiamare il servizio.  
+     <span data-ttu-id="0de59-115">Si noti che nell'interfaccia `IOneWayCalculator` l'attributo <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>delle operazioni del servizio unidirezionale è impostato su `true` e l'attibuto dell'operazione del servizio richiesta/risposta è impostato sul valore predefinito `false`.</span><span class="sxs-lookup"><span data-stu-id="0de59-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="0de59-116">Si noti inoltre la classe `OneWayCalculatorClient`.</span><span class="sxs-lookup"><span data-stu-id="0de59-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="0de59-117">Si tratta della classe che verrà utilizzata per chiamare il servizio.</span><span class="sxs-lookup"><span data-stu-id="0de59-117">This is the class that you will use to call the service.</span></span>  
   
-2.  Creare l'oggetto client.  
+2.  <span data-ttu-id="0de59-118">Creare l'oggetto client.</span><span class="sxs-lookup"><span data-stu-id="0de59-118">Create the client object.</span></span>  
   
-    ```  
+    ```csharp  
     // Create a client  
     WSHttpBinding binding = new WSHttpBinding();  
     EndpointAddress epAddress = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
-  
     ```  
   
-3.  Chiamare le operazioni del servizio.  
+3.  <span data-ttu-id="0de59-119">Chiamare le operazioni del servizio.</span><span class="sxs-lookup"><span data-stu-id="0de59-119">Call service operations.</span></span>  
   
-    ```  
+    ```csharp  
     // Call the Add service operation.  
     double value1 = 100.00D;  
     double value2 = 15.99D;  
@@ -246,21 +247,19 @@ Le procedure seguenti descrivono come accedere a un servizio [!INCLUDE[indigo1](
     string response = client.SayHello(name);  
     Console.WriteLine("SayHello([0])", name);  
     Console.WriteLine("SayHello() returned: " + response);  
-  
     ```  
   
-4.  Chiudere il client per chiudere le connessioni e liberare risorse.  
+4.  <span data-ttu-id="0de59-120">Chiudere il client per chiudere le connessioni e liberare risorse.</span><span class="sxs-lookup"><span data-stu-id="0de59-120">Close the client to close connections and clean up resources.</span></span>  
   
-    ```  
+    ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
     client.Close();  
-  
     ```  
   
-## <a name="example"></a>Esempio  
- Di seguito è riportato un elenco completo del codice utilizzato in questo argomento.  
+## <a name="example"></a><span data-ttu-id="0de59-121">Esempio</span><span class="sxs-lookup"><span data-stu-id="0de59-121">Example</span></span>  
+ <span data-ttu-id="0de59-122">Di seguito è riportato un elenco completo del codice utilizzato in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="0de59-122">The following is a complete listing of the code used  in this topic.</span></span>  
   
-```  
+```csharp  
 // Service.cs  
 using System;  
 using System.Configuration;  
@@ -352,8 +351,10 @@ namespace Microsoft.ServiceModel.Samples
             }  
         }  
     }  
-}  
-  
+} 
+```
+
+```csharp
 // client.cs  
 using System;  
 using System.ServiceModel;  
@@ -407,10 +408,7 @@ namespace Microsoft.ServiceModel.Samples
         }  
     }  
 }  
-  
 ```  
   
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
-## <a name="see-also"></a>Vedere anche  
- [Servizi unidirezionali](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a><span data-ttu-id="0de59-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0de59-123">See Also</span></span>  
+ [<span data-ttu-id="0de59-124">Servizi unidirezionali</span><span class="sxs-lookup"><span data-stu-id="0de59-124">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)

@@ -1,80 +1,80 @@
 ---
-title: "Programmazione WCF di base | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "programmazione di base [WCF]"
-  - "WCF [WCF], programmazione di base"
-  - "WCF [WCF], programmazione"
-  - "Windows Communication Foundation [WCF], programmazione di base"
-  - "Windows Communication Foundation [WCF], programmazione"
+title: Programmazione WCF di base
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- basic programming [WCF]
+- WCF [WCF], basic programming
+- WCF [WCF], programming
+- Windows Communication Foundation [WCF], basic programming
+- Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fa43705fd20a60512ca4c460bb3048220aa1e193
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Programmazione WCF di base
-In questa sezione vengono illustrati i principi per la creazione di applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+# <a name="basic-wcf-programming"></a><span data-ttu-id="2a8ea-102">Programmazione WCF di base</span><span class="sxs-lookup"><span data-stu-id="2a8ea-102">Basic WCF Programming</span></span>
+<span data-ttu-id="2a8ea-103">Contenuto della sezione vengono illustrati i principi per la creazione di applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2a8ea-103">This section presents the fundamentals for creating [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applications.</span></span>  
   
-## In questa sezione  
- [Ciclo di vita della programmazione di base](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Descrive il ciclo di vita relativo alla progettazione, generazione e distribuzione di applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="2a8ea-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="2a8ea-104">In This Section</span></span>  
+ [<span data-ttu-id="2a8ea-105">Ciclo di vita della programmazione di base</span><span class="sxs-lookup"><span data-stu-id="2a8ea-105">Basic Programming Lifecycle</span></span>](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ <span data-ttu-id="2a8ea-106">Descrive il ciclo di vita relativo alla progettazione, generazione e distribuzione di applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2a8ea-106">Describes the lifecycle of designing, building, and deploying [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service and client applications.</span></span>  
   
- [Progettazione e implementazione di servizi](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- Descrive come progettare e implementare un contratto di servizio, scegliere un modello per lo scambio di messaggi, specificare un contratto di errore e altri aspetti di base dei servizi.  
+ [<span data-ttu-id="2a8ea-107">Progettazione e implementazione di servizi</span><span class="sxs-lookup"><span data-stu-id="2a8ea-107">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ <span data-ttu-id="2a8ea-108">Descrive come progettare e implementare un contratto di servizio, scegliere un modello per lo scambio di messaggi, specificare un contratto di errore e altri aspetti di base dei servizi.</span><span class="sxs-lookup"><span data-stu-id="2a8ea-108">Describes how to design and implement a service contract, choose a message exchange pattern, specify a fault contract, and other basic aspects of services.</span></span>  
   
- [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)  
- Descrive come configurare un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per supportare i requisiti del contratto, personalizzare il comportamento in fase di esecuzione locale e indicare l'indirizzo per pubblicare il servizio.  
+ [<span data-ttu-id="2a8ea-109">Configurazione dei servizi</span><span class="sxs-lookup"><span data-stu-id="2a8ea-109">Configuring Services</span></span>](../../../docs/framework/wcf/configuring-services.md)  
+ <span data-ttu-id="2a8ea-110">Descrive come configurare un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per supportare i requisiti del contratto, personalizzare il comportamento in fase di esecuzione locale e indicare l'indirizzo per pubblicare il servizio.</span><span class="sxs-lookup"><span data-stu-id="2a8ea-110">Describes how to configure a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service to support the contract requirements, customize local runtime behavior, and indicate the address to publish the service.</span></span>  
   
- [Servizi host](../../../docs/framework/wcf/hosting-services.md)  
- Descrive le caratteristiche fondamentali dei servizi host in un'applicazione.  
+ [<span data-ttu-id="2a8ea-111">Servizi di hosting</span><span class="sxs-lookup"><span data-stu-id="2a8ea-111">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
+ <span data-ttu-id="2a8ea-112">Descrive le caratteristiche fondamentali dei servizi host in un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2a8ea-112">Describes the basics of hosting services in an application.</span></span>  
   
- [Creazione di client](../../../docs/framework/wcf/building-clients.md)  
- Descrive come ottenere metadati dai servizi, convertirli in codice client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], gestire problemi di sicurezza e generare, configurare e ospitare un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="2a8ea-113">Creazione di client</span><span class="sxs-lookup"><span data-stu-id="2a8ea-113">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ <span data-ttu-id="2a8ea-114">Descrive come ottenere metadati dai servizi, convertirli in codice client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], gestire problemi di sicurezza e generare, configurare e ospitare un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2a8ea-114">Describes how to obtain metadata from services, convert that into [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client code, handle security issues, and build, configure, and host an [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span>  
   
- [Introduzione all'estendibilità](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- Descrive come estendere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per creare soluzioni personalizzate.  
+ [<span data-ttu-id="2a8ea-115">Introduzione all'estendibilità</span><span class="sxs-lookup"><span data-stu-id="2a8ea-115">Introduction to Extensibility</span></span>](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ <span data-ttu-id="2a8ea-116">Descrive come estendere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per creare soluzioni personalizzate.</span><span class="sxs-lookup"><span data-stu-id="2a8ea-116">Describes how to extend [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to create custom solutions.</span></span>  
   
- [Guida rapida alla risoluzione dei problemi di WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- Descrive alcuni dei problemi più comuni, cosa è possibile fare per risolverli e dove trovare ulteriori informazioni sul problema.  
+ [<span data-ttu-id="2a8ea-117">Guida rapida alla risoluzione dei problemi di WCF</span><span class="sxs-lookup"><span data-stu-id="2a8ea-117">WCF Troubleshooting Quickstart</span></span>](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
+ <span data-ttu-id="2a8ea-118">Descrive alcuni dei problemi più comuni, cosa è possibile fare per risolverli e dove trovare ulteriori informazioni sul problema.</span><span class="sxs-lookup"><span data-stu-id="2a8ea-118">Describes some of the most common issues that occur, what you can do to solve them, and where to locate more information about the issue.</span></span>  
   
- [API Web ASP.NET e WCF](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
- Vengono illustrate le due tecnologie, come interagiscono tra loro e quando utilizzarle.  
+ [<span data-ttu-id="2a8ea-119">API Web ASP.NET e WCF</span><span class="sxs-lookup"><span data-stu-id="2a8ea-119">WCF and ASP.NET Web API</span></span>](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
+ <span data-ttu-id="2a8ea-120">Vengono illustrate le due tecnologie, come interagiscono tra loro e quando utilizzarle.</span><span class="sxs-lookup"><span data-stu-id="2a8ea-120">Discusses the two technologies, how they relate to each other, and when to use them.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="2a8ea-121">Riferimento</span><span class="sxs-lookup"><span data-stu-id="2a8ea-121">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Description>  
   
-## Sezioni correlate  
- [Requisiti di sistema](../../../docs/framework/wcf/wcf-system-requirements.md)  
+## <a name="related-sections"></a><span data-ttu-id="2a8ea-122">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="2a8ea-122">Related Sections</span></span>  
+ [<span data-ttu-id="2a8ea-123">Requisiti di sistema</span><span class="sxs-lookup"><span data-stu-id="2a8ea-123">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
- [Panoramica dei concetti](../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="2a8ea-124">Panoramica dei concetti</span><span class="sxs-lookup"><span data-stu-id="2a8ea-124">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
   
- [Esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="2a8ea-125">Esercitazione introduttiva</span><span class="sxs-lookup"><span data-stu-id="2a8ea-125">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [Linee guida e procedure consigliate](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [<span data-ttu-id="2a8ea-126">Linee guida e procedure consigliate</span><span class="sxs-lookup"><span data-stu-id="2a8ea-126">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
   
- [Windows Communication Foundation Tools](../../../docs/framework/wcf/tools.md)  
+ [<span data-ttu-id="2a8ea-127">Strumenti Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="2a8ea-127">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/it-it/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [<span data-ttu-id="2a8ea-128">Esempi di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="2a8ea-128">Windows Communication Foundation Samples</span></span>](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [Guida introduttiva](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="2a8ea-129">Introduzione</span><span class="sxs-lookup"><span data-stu-id="2a8ea-129">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   
- [Hosting IIS mediante il codice inline](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [<span data-ttu-id="2a8ea-130">Hosting IIS mediante il codice Inline</span><span class="sxs-lookup"><span data-stu-id="2a8ea-130">IIS Hosting Using Inline Code</span></span>](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
   
- [Servizio indipendente](../../../docs/framework/wcf/samples/self-host.md)
+ [<span data-ttu-id="2a8ea-131">Servizio indipendente</span><span class="sxs-lookup"><span data-stu-id="2a8ea-131">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

@@ -1,74 +1,69 @@
 ---
-title: "&lt;add&gt; di &lt;protocolMapping&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;add&gt; di &lt;protocolMapping&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dc534e3ccd3d965b76354bcc054b789af5fc4efd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;add&gt; di &lt;protocolMapping&gt;
-Rappresenta un mapping del protocollo predefinito tra lo schema di un protocollo di trasporto \(ad esempio http, net.tcp, net.pipe e così via\) e l'associazione di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  Durante la creazione di endpoint predefiniti in fase di esecuzione, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.  
+# <a name="ltaddgt-of-ltprotocolmappinggt"></a><span data-ttu-id="7fe2e-102">&lt;add&gt; di &lt;protocolMapping&gt;</span><span class="sxs-lookup"><span data-stu-id="7fe2e-102">&lt;add&gt; of &lt;protocolMapping&gt;</span></span>
+<span data-ttu-id="7fe2e-103">Rappresenta un mapping del protocollo predefinito tra una combinazione di protocollo di trasporto (ad esempio, http, net.tcp, NET. pipe, e così via) e un [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] associazione.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-103">Represents a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] binding.</span></span> <span data-ttu-id="7fe2e-104">Durante la creazione di endpoint predefiniti in fase di esecuzione, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-104">When creating default endpoints at runtime, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="7fe2e-105">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="7fe2e-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="7fe2e-106">\<protocolMapping ></span><span class="sxs-lookup"><span data-stu-id="7fe2e-106">\<protocolMapping></span></span>  
+<span data-ttu-id="7fe2e-107">\<add></span><span class="sxs-lookup"><span data-stu-id="7fe2e-107">\<add></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="7fe2e-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7fe2e-108">Syntax</span></span>  
   
+```xml
+   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>
+```
+
+## <a name="attributes-and-elements"></a><span data-ttu-id="7fe2e-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="7fe2e-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7fe2e-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+  
+### <a name="attributes"></a><span data-ttu-id="7fe2e-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="7fe2e-111">Attributes</span></span>  
+  
+|<span data-ttu-id="7fe2e-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="7fe2e-112">Element</span></span>|<span data-ttu-id="7fe2e-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7fe2e-113">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="7fe2e-114">associazione</span><span class="sxs-lookup"><span data-stu-id="7fe2e-114">binding</span></span>|<span data-ttu-id="7fe2e-115">Stringa che specifica il tipo di associazione da usare per un endpoint durante la creazione dell'endpoint predefinito.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-115">A string that specifies the type of binding to be used for an endpoint during default endpoint creation.</span></span>|  
+|<span data-ttu-id="7fe2e-116">bindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="7fe2e-116">bindingConfiguration</span></span>|<span data-ttu-id="7fe2e-117">Stringa che specifica il nome della sezione di configurazione dell'associazione alla quale fare riferimento.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-117">A string that specifies the name of the binding configuration section to be referenced.</span></span>|  
+|<span data-ttu-id="7fe2e-118">scheme</span><span class="sxs-lookup"><span data-stu-id="7fe2e-118">scheme</span></span>|<span data-ttu-id="7fe2e-119">Schema del protocollo di trasporto da usare per l'endpoint predefinito.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-119">The transport protocol scheme to be used for the default endpoint.</span></span>|  
+  
+### <a name="child-elements"></a><span data-ttu-id="7fe2e-120">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="7fe2e-120">Child Elements</span></span>  
+ <span data-ttu-id="7fe2e-121">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-121">None.</span></span>  
+  
+### <a name="parent-elements"></a><span data-ttu-id="7fe2e-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="7fe2e-122">Parent Elements</span></span>  
+  
+|<span data-ttu-id="7fe2e-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="7fe2e-123">Element</span></span>|<span data-ttu-id="7fe2e-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7fe2e-124">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="7fe2e-125">\<protocolMapping ></span><span class="sxs-lookup"><span data-stu-id="7fe2e-125">\<protocolMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|<span data-ttu-id="7fe2e-126">Rappresenta una sezione di configurazione per la definizione dei mapping di protocolli predefiniti tra gli schemi di protocollo di trasporto (ad esempio, http, net.tcp, NET. pipe, e così via) e [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] associazioni.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-126">Represents a configuration section for defining default protocol mappings between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] bindings.</span></span>|  
+  
+## <a name="example"></a><span data-ttu-id="7fe2e-127">Esempio</span><span class="sxs-lookup"><span data-stu-id="7fe2e-127">Example</span></span>  
+ <span data-ttu-id="7fe2e-128">Nell'esempio di configurazione seguente viene illustrato il mapping del protocollo predefinito nel file machine.config.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-128">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="7fe2e-129">È possibile eseguire l'override di questo mapping predefinito al livello di computer modificando il file machine.config.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-129">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="7fe2e-130">In alternativa, se si desidera eseguirne l'override solo nell'ambito di un'applicazione, è possibile eseguire l'override di questa sezione all'interno del file di configurazione dell'applicazione e modificare il mapping per i singoli schemi di protocollo.</span><span class="sxs-lookup"><span data-stu-id="7fe2e-130">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
+  
+```xml  
 <protocolMapping>  
-    <add binding="String”  
-         bindingConfiguration="String”  
-         scheme="http/net.msmq/net.pipe/net.tcp"/>  
+        <add scheme="http" binding="basicHttpBinding"/>  
+        <add scheme="net.tcp" binding="netTcpBinding"/>  
+        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
+        <add scheme="net.msmq" binding="netMsmqBinding"/>  
 </protocolMapping>  
-  
 ```  
   
-```csharp  
-  
-```  
-  
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
-  
-### Attributi  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|associazione|Stringa che specifica il tipo di associazione da usare per un endpoint durante la creazione dell'endpoint predefinito.|  
-|bindingConfiguration|Stringa che specifica il nome della sezione di configurazione dell'associazione alla quale fare riferimento.|  
-|scheme|Schema del protocollo di trasporto da usare per l'endpoint predefinito.|  
-  
-### Elementi figlio  
- Nessuno.  
-  
-### Elementi padre  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<protocolMapping\>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Rappresenta una sezione di configurazione per la definizione dei mapping di protocolli predefiniti tra gli schemi dei protocolli di trasporto \(ad esempio http, net.tcp, net.pipe e così via\) e le associazioni di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].|  
-  
-## Esempio  
- Nell'esempio di configurazione seguente viene illustrato il mapping del protocollo predefinito nel file machine.config.  È possibile eseguire l'override di questo mapping predefinito al livello di computer modificando il file machine.config.  In alternativa, se si desidera eseguirne l'override solo nell'ambito di un'applicazione, è possibile eseguire l'override di questa sezione all'interno del file di configurazione dell'applicazione e modificare il mapping per i singoli schemi di protocollo.  
-  
-```  
-  
-<protocolMapping>  
-        <add scheme="http" binding="basicHttpBinding"/>  
-        <add scheme="net.tcp" binding="netTcpBinding"/>  
-        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
-        <add scheme="net.msmq" binding="netMsmqBinding"/>  
-</protocolMapping>  
-  
-```  
-  
-## Vedere anche  
- [System.ServiceModel.Configuration.ProtocolMappingSection](assetId:///System.ServiceModel.Configuration.ProtocolMappingSection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.ServiceModel.Configuration.ProtocolMappingElement](assetId:///System.ServiceModel.Configuration.ProtocolMappingElement?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a><span data-ttu-id="7fe2e-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7fe2e-131">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>      
+ <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    

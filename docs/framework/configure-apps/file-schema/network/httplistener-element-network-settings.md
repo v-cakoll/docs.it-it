@@ -1,130 +1,132 @@
 ---
-title: "Elemento &lt;httpListener&gt; (impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: '&lt;httpListener&gt; elemento (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 14a758f1d69da4db8ed58809de20d3522ea7e4e9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;httpListener&gt; (impostazioni di rete)
-Personalizza i parametri utilizzati dalla classe <xref:System.Net.HttpListener>.  
+# <a name="lthttplistenergt-element-network-settings"></a><span data-ttu-id="74116-102">&lt;httpListener&gt; elemento (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="74116-102">&lt;httpListener&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="74116-103">Consente di personalizzare i parametri utilizzati per la <xref:System.Net.HttpListener> classe.</span><span class="sxs-lookup"><span data-stu-id="74116-103">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="74116-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="74116-104">\<configuration></span></span>  
+<span data-ttu-id="74116-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="74116-105">\<system.net></span></span>  
+<span data-ttu-id="74116-106">\<Impostazioni ></span><span class="sxs-lookup"><span data-stu-id="74116-106">\<settings></span></span>  
+<span data-ttu-id="74116-107">\<httpListener ></span><span class="sxs-lookup"><span data-stu-id="74116-107">\<httpListener></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="74116-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="74116-108">Syntax</span></span>  
   
-      <httpListener  
-  unescapeRequestUrl ="true|false"  
+```xml  
+<httpListener  
+  unescapeRequestUrl="true|false"  
 />  
 ```  
   
-## Tipo  
+## <a name="type"></a><span data-ttu-id="74116-109">Tipo</span><span class="sxs-lookup"><span data-stu-id="74116-109">Type</span></span>  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="74116-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="74116-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="74116-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="74116-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="74116-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="74116-112">Attributes</span></span>  
   
-|Attribute|Descrizione|  
+|<span data-ttu-id="74116-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="74116-113">Attribute</span></span>|<span data-ttu-id="74116-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="74116-114">Description</span></span>|  
 |---------------|-----------------|  
-|unescapeRequestUrl|Valore booleano che indica se un'istanza <xref:System.Net.HttpListener> utilizza l'URI senza codice di escape non elaborato anziché l'URI convertito.|  
+|<span data-ttu-id="74116-115">unescapeRequestUrl</span><span class="sxs-lookup"><span data-stu-id="74116-115">unescapeRequestUrl</span></span>|<span data-ttu-id="74116-116">Un valore booleano che indica se un <xref:System.Net.HttpListener> istanza utilizza l'URI senza caratteri escape non elaborato anziché l'URI convertito.</span><span class="sxs-lookup"><span data-stu-id="74116-116">A Boolean value that indicates if a <xref:System.Net.HttpListener> instance uses the raw unescaped URI instead of the converted URI.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="74116-117">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="74116-117">Child Elements</span></span>  
+ <span data-ttu-id="74116-118">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="74116-118">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="74116-119">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="74116-119">Parent Elements</span></span>  
   
-|**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|<span data-ttu-id="74116-120">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="74116-120">**Element**</span></span>|<span data-ttu-id="74116-121">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="74116-121">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="74116-122">Impostazioni</span><span class="sxs-lookup"><span data-stu-id="74116-122">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="74116-123">Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="74116-123">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## Note  
- L'attributo [indica se T:System.Net.HttpListener](assetId:///indica se T:System.Net.HttpListener?qualifyHint=False&autoUpgrade=True) utilizza l'URI senza codice di escape non elaborato anziché l'URI convertito laddove vengono convertiti i valori con codifica in percentuale e vengono eseguiti altri passaggi della normalizzazione.  
+## <a name="remarks"></a><span data-ttu-id="74116-124">Note</span><span class="sxs-lookup"><span data-stu-id="74116-124">Remarks</span></span>  
+ <span data-ttu-id="74116-125">Il **unescapeRequestUrl** attributo indica se <xref:System.Net.HttpListener> utilizza l'URI senza caratteri escape non elaborato anziché l'URI convertito in cui vengono convertiti i valori codificati in percentuale e vengono eseguiti altri passaggi di normalizzazione.</span><span class="sxs-lookup"><span data-stu-id="74116-125">The **unescapeRequestUrl** attribute indicates if <xref:System.Net.HttpListener> uses the raw unescaped URI instead of the converted URI where any percent-encoded values are converted and other normalization steps are taken.</span></span>  
   
- Quando un'istanza <xref:System.Net.HttpListener> riceve una richiesta tramite il servizio `http.sys`, crea un'istanza della stringa URI fornita da `http.sys` e l'espone come proprietà <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=fullName>.  
+ <span data-ttu-id="74116-126">Quando un <xref:System.Net.HttpListener> istanza riceve una richiesta tramite il `http.sys` servizio, crea un'istanza della stringa URI fornita da `http.sys`e lo espone come il <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> proprietà.</span><span class="sxs-lookup"><span data-stu-id="74116-126">When a <xref:System.Net.HttpListener> instance receives a request through the `http.sys` service, it creates an instance of the URI string provided by `http.sys`, and exposes it as the <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> property.</span></span>  
   
- Il servizio `http.sys` espone due stringhe URI di richiesta:  
+ <span data-ttu-id="74116-127">Il `http.sys` servizio espone due stringhe URI di richiesta:</span><span class="sxs-lookup"><span data-stu-id="74116-127">The `http.sys` service exposes two request URI strings:</span></span>  
   
--   URI non elaborato  
+-   <span data-ttu-id="74116-128">URI non elaborato</span><span class="sxs-lookup"><span data-stu-id="74116-128">Raw URI</span></span>  
   
--   URI convertito  
+-   <span data-ttu-id="74116-129">URI convertito</span><span class="sxs-lookup"><span data-stu-id="74116-129">Converted URI</span></span>  
   
- L'URI non elaborato è rappresentato dall'oggetto <xref:System.Uri?displayProperty=fullName> fornito nella riga di richiesta di una richiesta HTTP:  
+ <span data-ttu-id="74116-130">L'URI non elaborato il <xref:System.Uri?displayProperty=nameWithType> fornito nella riga della richiesta di una richiesta HTTP:</span><span class="sxs-lookup"><span data-stu-id="74116-130">The raw URI is the <xref:System.Uri?displayProperty=nameWithType> provided in the request line of a HTTP request:</span></span>  
   
  `GET /path/`  
   
  `Host: www.contoso.com`  
   
- L'URI non elaborato fornito da `http.sys` per la richiesta sopra indicata è "\/path\/."  Questo rappresenta la stringa che segue il verbo HTTP come è inviato sulla rete.  
+ <span data-ttu-id="74116-131">L'URI non elaborato fornito da `http.sys` per è indicata in precedenza, la richiesta di "percorso /".</span><span class="sxs-lookup"><span data-stu-id="74116-131">The raw URI provided by `http.sys` for the request mentioned above, is "/path/".</span></span> <span data-ttu-id="74116-132">Rappresenta la stringa che segue il verbo HTTP, come è stato inviato in rete.</span><span class="sxs-lookup"><span data-stu-id="74116-132">This represents the string following the HTTP verb as it was sent over the network.</span></span>  
   
- Il servizio `http.sys` crea un URI convertito partendo dalle informazioni disponibili nella richiesta tramite l'URI presente nella riga della richiesta HTTP e nell'intestazione Host allo scopo di determinare il server di origine a cui la richiesta deve essere inoltrata.  Questa operazione viene eseguita confrontando le informazioni dalla richiesta con un set di prefissi URI registrati.  La documentazione SDK del server HTTP si riferisce a questo URI convertito come la struttura HTTP\_COOKED\_URL.  
+ <span data-ttu-id="74116-133">Il `http.sys` servizio crea un URI convertito dalle informazioni fornite nella richiesta utilizzando l'URI specificato nella riga della richiesta HTTP e l'intestazione Host per determinare il server di origine la richiesta deve essere inoltrato a.</span><span class="sxs-lookup"><span data-stu-id="74116-133">The `http.sys` service creates a converted URI from the information provided in the request by using the URI provided in the HTTP request line and the Host header to determine the origin server the request should be forwarded to.</span></span> <span data-ttu-id="74116-134">Questa operazione viene eseguita confrontando le informazioni della richiesta con un set di prefissi URI registrati.</span><span class="sxs-lookup"><span data-stu-id="74116-134">This is done by comparing the information from the request with a set of registered URI prefixes.</span></span> <span data-ttu-id="74116-135">La documentazione SDK Server HTTP fa riferimento all'URI convertito come la struttura HTTP_COOKED_URL.</span><span class="sxs-lookup"><span data-stu-id="74116-135">The HTTP Server SDK documentation refers to this converted URI as the HTTP_COOKED_URL structure.</span></span>  
   
- Per essere in grado di confrontare la richiesta con i prefissi URI registrati, è necessario effettuare alcune normalizzazioni della richiesta.  Nell'esempio precedente l'URI convertito sarebbe:  
+ <span data-ttu-id="74116-136">Per poter essere in grado di confrontare la richiesta con i prefissi URI registrati, deve essere eseguita la normalizzazione della richiesta.</span><span class="sxs-lookup"><span data-stu-id="74116-136">In order to be able to compare the request with registered URI prefixes, some normalization to the request needs to be done.</span></span> <span data-ttu-id="74116-137">Nell'esempio precedente l'URI convertito sarà come segue:</span><span class="sxs-lookup"><span data-stu-id="74116-137">For the sample above the converted URI would be as follows:</span></span>  
   
  `http://www.contoso.com/path/`  
   
- Il servizio `http.sys` combina il valore della proprietà <xref:System.Uri.Host%2A?displayProperty=fullName> e la stringa della riga della richiesta in moda da creare un URI convertito.  Inoltre, `http.sys` e la classe <xref:System.Uri?displayProperty=fullName> esegue anche quanto di seguito descritto:  
+ <span data-ttu-id="74116-138">Il `http.sys` servizio combina il <xref:System.Uri.Host%2A?displayProperty=nameWithType> valore della proprietà e la stringa nella riga della richiesta per creare un URI convertito.</span><span class="sxs-lookup"><span data-stu-id="74116-138">The `http.sys` service combines the <xref:System.Uri.Host%2A?displayProperty=nameWithType> property value and the string in the request line to create a converted URI.</span></span> <span data-ttu-id="74116-139">Inoltre, `http.sys` e <xref:System.Uri?displayProperty=nameWithType> classe esegue inoltre le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="74116-139">In addition, `http.sys` and the <xref:System.Uri?displayProperty=nameWithType> class also does the following:</span></span>  
   
--   Non effettua l'escape di tutte le percentuali dei valori codificati.  
+-   <span data-ttu-id="74116-140">Non consente l'escape tutte le percentuali di valori codificati.</span><span class="sxs-lookup"><span data-stu-id="74116-140">Un-escapes all percent encoded values.</span></span>  
   
--   Converte caratteri non ASCII con codifica in percentuale in una rappresentazione UTF\-16 del carattere.  Notare che sono supportati i caratteri UTF\-8, ANSI\/DBCS e Unicode \(codifica Unicode tramite il formato %uXXXX\).  
+-   <span data-ttu-id="74116-141">Caratteri non ASCII converte codificati in percentuale in una rappresentazione dei caratteri UTF-16.</span><span class="sxs-lookup"><span data-stu-id="74116-141">Converts percent-encoded non-ASCII characters into a UTF-16 character representation.</span></span> <span data-ttu-id="74116-142">Si noti che i caratteri UTF-8 e ANSI o DBCS sono supportati anche i caratteri Unicode (codifica Unicode utilizzando il formato % uXXXX).</span><span class="sxs-lookup"><span data-stu-id="74116-142">Note that UTF-8 and ANSI/DBCS characters are supported as well as Unicode characters (Unicode encoding using the %uXXXX format).</span></span>  
   
--   Esegue gli altri passaggi della normalizzazione, come la compressione del percorso.  
+-   <span data-ttu-id="74116-143">Consente di eseguire altri passaggi di normalizzazione, come la compressione del percorso.</span><span class="sxs-lookup"><span data-stu-id="74116-143">Executes other normalization steps, like path compression.</span></span>  
   
- Poiché la richiesta non contiene alcuna informazione sulla codifica utilizzata per i valori con codifica in percentuale, potrebbe non essere possibile determinare la codifica corretta unicamente tramite l'analisi dei valori con codifica in percentuale.  
+ <span data-ttu-id="74116-144">Poiché la richiesta non contiene alcuna informazione sulla codifica utilizzata per i valori codificati in percentuale, potrebbe non essere possibile determinare la codifica corretta solo analizzando i valori codificati in percentuale.</span><span class="sxs-lookup"><span data-stu-id="74116-144">Since the request doesn't contain any information about the encoding used for percent-encoded values, it may not be possible to determine the correct encoding just by parsing the percent-encoded values.</span></span>  
   
- Pertanto `http.sys` fornisce due chiavi del Registro di sistema per la modifica del processo:  
+ <span data-ttu-id="74116-145">Pertanto `http.sys` fornisce due chiavi del Registro di sistema per la modifica del processo:</span><span class="sxs-lookup"><span data-stu-id="74116-145">Therefore `http.sys` provides two registry keys for modifying the process:</span></span>  
   
-|Chiave del Registro di sistema|Valore predefinito|Descrizione|  
-|------------------------------------|------------------------|-----------------|  
-|EnableNonUTF8|1|Se è zero, `http.sys` accetta solo URL con codifica UTF\-8.<br /><br /> Se diverso da zero, `http.sys` accetta anche URL con codifica ANSI o DBCS nelle richieste.|  
-|FavorUTF8|1|Se diverso da zero, `http.sys` tenta sempre di decodificare prima un URL come UTF\-8; se quella conversione non riesce e se EnableNonUTF8 è diverso da zero, Http.sys tenta quindi di decodificarlo come ANSI o DBCS.<br /><br /> Se è zero \(e EnableNonUTF8 è diverso da zero\), `http.sys` tenta di decodificarlo come ANSI o DBCS; se non vi riesce, prova a convertirlo in UTF\-8.|  
+|<span data-ttu-id="74116-146">Chiave del Registro di sistema</span><span class="sxs-lookup"><span data-stu-id="74116-146">Registry Key</span></span>|<span data-ttu-id="74116-147">Valore predefinito</span><span class="sxs-lookup"><span data-stu-id="74116-147">Default Value</span></span>|<span data-ttu-id="74116-148">Descrizione</span><span class="sxs-lookup"><span data-stu-id="74116-148">Description</span></span>|  
+|------------------|-------------------|-----------------|  
+|<span data-ttu-id="74116-149">EnableNonUTF8</span><span class="sxs-lookup"><span data-stu-id="74116-149">EnableNonUTF8</span></span>|<span data-ttu-id="74116-150">1</span><span class="sxs-lookup"><span data-stu-id="74116-150">1</span></span>|<span data-ttu-id="74116-151">Se è zero, `http.sys` accetta solo URL con codifica UTF-8.</span><span class="sxs-lookup"><span data-stu-id="74116-151">If zero, `http.sys` accepts only UTF-8-encoded URLs.</span></span><br /><br /> <span data-ttu-id="74116-152">Se diverso da zero, `http.sys` accetta anche URL con codifica ANSI o DBCS nelle richieste.</span><span class="sxs-lookup"><span data-stu-id="74116-152">If non-zero, `http.sys` also accepts ANSI-encoded or DBCS-encoded URLs in requests.</span></span>|  
+|<span data-ttu-id="74116-153">FavorUTF8</span><span class="sxs-lookup"><span data-stu-id="74116-153">FavorUTF8</span></span>|<span data-ttu-id="74116-154">1</span><span class="sxs-lookup"><span data-stu-id="74116-154">1</span></span>|<span data-ttu-id="74116-155">Se diverso da zero, `http.sys` sempre eseguito un tentativo di decodificare un URL come UTF-8 per primo; se tale conversione non riesce ed EnableNonUTF8 è diverso da zero, Http.sys quindi tenta di decodificarlo come ANSI o DBCS.</span><span class="sxs-lookup"><span data-stu-id="74116-155">If non-zero, `http.sys` always tries to decode a URL as UTF-8 first; if that conversion fails and EnableNonUTF8 is non-zero, Http.sys then tries to decode it as ANSI or DBCS.</span></span><br /><br /> <span data-ttu-id="74116-156">Se è zero (ed EnableNonUTF8 è diverso da zero), `http.sys` eseguito un tentativo di decodificare come ANSI o DBCS; se non è riuscita, prova una conversione di UTF-8.</span><span class="sxs-lookup"><span data-stu-id="74116-156">If zero (and EnableNonUTF8 is non-zero), `http.sys` tries to decode it as ANSI or DBCS; if that is not successful, it tries a UTF-8 conversion.</span></span>|  
   
- Quando <xref:System.Net.HttpListener> riceve una richiesta, utilizza l'URI convertito da `http.sys` come input alla proprietà <xref:System.Net.HttpListenerRequest.Url%2A>.  
+ <span data-ttu-id="74116-157">Quando <xref:System.Net.HttpListener> riceve una richiesta, viene utilizzato l'URI convertito da `http.sys` come input per il <xref:System.Net.HttpListenerRequest.Url%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="74116-157">When <xref:System.Net.HttpListener> receives a request, it uses the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url%2A> property.</span></span>  
   
- Occorre inoltre supportare caratteri oltre ai caratteri e numeri in URI.  Un esempio è dato dal seguente URI, utilizzato per recuperare informazioni sul cliente in base al numero cliente "1\/3812":  
+ <span data-ttu-id="74116-158">È necessario supportare i caratteri oltre ai caratteri e numeri negli URI.</span><span class="sxs-lookup"><span data-stu-id="74116-158">There is a need for supporting characters besides characters and numbers in URIs.</span></span> <span data-ttu-id="74116-159">Un esempio è il seguente URI utilizzato per recuperare informazioni sul cliente per il cliente numero "1/3812":</span><span class="sxs-lookup"><span data-stu-id="74116-159">An example is the following URI, which is used to retrieve customer information for customer number "1/3812":</span></span>  
   
  `http://www.contoso.com/Customer('1%2F3812')/`  
   
- Notare la barra con codifica in percentuale nell'Uri \(%2F\).  Questo è necessario poiché in questo caso il carattere della barra rappresenta dati e non un delimitatore del percorso.  
+ <span data-ttu-id="74116-160">Si noti la barra codificati in percentuale nell'Uri (% 2F).</span><span class="sxs-lookup"><span data-stu-id="74116-160">Note the percent-encoded slash in the Uri (%2F).</span></span> <span data-ttu-id="74116-161">Questa operazione è necessaria, poiché in questo caso il carattere di barra rappresenta dati e non un delimitatore di percorso.</span><span class="sxs-lookup"><span data-stu-id="74116-161">This is necessary, since in this case the slash character represents data and not a path delimiter.</span></span>  
   
- Il passaggio della stringa al costruttore Uri produrrà il seguente URI:  
+ <span data-ttu-id="74116-162">Passare la stringa al costruttore Uri determinerà l'URI seguente:</span><span class="sxs-lookup"><span data-stu-id="74116-162">Passing the string to Uri constructor will lead to the following URI:</span></span>  
   
  `http://www.contoso.com/Customer('1/3812')/`  
   
- La suddivisione del percorso nei relativi segmenti darebbe origine agli elementi seguenti:  
+ <span data-ttu-id="74116-163">Il percorso di suddivisione in segmenti comporta i seguenti elementi:</span><span class="sxs-lookup"><span data-stu-id="74116-163">Splitting the path into its segments would result in the following elements:</span></span>  
   
  `Customer('1`  
   
  `3812')`  
   
- Questo non è l'intento del mittente della richiesta.  
+ <span data-ttu-id="74116-164">Non è lo scopo del mittente della richiesta.</span><span class="sxs-lookup"><span data-stu-id="74116-164">This is not the intent of the sender of the request.</span></span>  
   
- Se l'attributo **unescapeRequestUrl** è impostato su **false**, quando <xref:System.Net.HttpListener> riceve una richiesta, utilizza l'URI non elaborato anziché l'URI convertito da?qualifyHint=False&autoUpgrade=True`http.sys come input per la proprietà` <xref:System.Net.HttpListenerRequest.Url%2A>.  
+ <span data-ttu-id="74116-165">Se il **unescapeRequestUrl** attributo è impostato su **false**, successivamente, quando il <xref:System.Net.HttpListener> riceve una richiesta, viene utilizzato l'URI non elaborato anziché l'URI convertito da `http.sys` come input per il <xref:System.Net.HttpListenerRequest.Url%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="74116-165">If the **unescapeRequestUrl** attribute is set to **false**, then when the <xref:System.Net.HttpListener> receives a request, it uses the raw URI instead of the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url%2A> property.</span></span>  
   
- Il valore predefinito per l'attributo **unescapeRequestUrl** è **true**.  
+ <span data-ttu-id="74116-166">Il valore predefinito per il **unescapeRequestUrl** attributo **true**.</span><span class="sxs-lookup"><span data-stu-id="74116-166">The default value for the **unescapeRequestUrl** attribute is **true**.</span></span>  
   
- La proprietà <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> può essere utilizzata per ottenere il valore corrente dell'attributo **unescapeRequestUrl** dai file di configurazione applicabili.  
+ <span data-ttu-id="74116-167">Il <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> utilizzabile per ottenere il valore corrente della proprietà di **unescapeRequestUrl** attributo dal file di configurazione applicabili.</span><span class="sxs-lookup"><span data-stu-id="74116-167">The <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> property can be used to get the current value of the **unescapeRequestUrl** attribute from applicable configuration files.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene mostrato come configurare la classe <xref:System.Net.HttpListener> quando riceve una richiesta per utilizzare l'URI non elaborato anziché l'URI convertito da `http.sys` come input alla proprietà <xref:System.Net.HttpListenerRequest.Url%2A>.  
+## <a name="example"></a><span data-ttu-id="74116-168">Esempio</span><span class="sxs-lookup"><span data-stu-id="74116-168">Example</span></span>  
+ <span data-ttu-id="74116-169">Nell'esempio seguente viene illustrato come configurare il <xref:System.Net.HttpListener> classe quando riceve una richiesta di usare l'URI non elaborato anziché l'URI convertito da `http.sys` come input per il <xref:System.Net.HttpListenerRequest.Url%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="74116-169">The following example shows how to configure the <xref:System.Net.HttpListener> class when it receives a request to use the raw URI instead of the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url%2A> property.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -136,17 +138,17 @@ Personalizza i parametri utilizzati dalla classe <xref:System.Net.HttpListener>.
 </configuration>  
 ```  
   
-## Informazioni sull'elemento  
+## <a name="element-information"></a><span data-ttu-id="74116-170">Informazioni sull'elemento</span><span class="sxs-lookup"><span data-stu-id="74116-170">Element Information</span></span>  
   
-|||  
+|||
 |-|-|  
-|Spazio dei nomi|System.Net|  
-|Nome di schema||  
-|File di convalida||  
-|Può essere vuoto||  
+|<span data-ttu-id="74116-171">Spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="74116-171">Namespace</span></span>|<span data-ttu-id="74116-172">System.Net</span><span class="sxs-lookup"><span data-stu-id="74116-172">System.Net</span></span>|  
+|<span data-ttu-id="74116-173">Nome di schema</span><span class="sxs-lookup"><span data-stu-id="74116-173">Schema Name</span></span>||  
+|<span data-ttu-id="74116-174">File di convalida</span><span class="sxs-lookup"><span data-stu-id="74116-174">Validation File</span></span>||  
+|<span data-ttu-id="74116-175">Può essere vuoto</span><span class="sxs-lookup"><span data-stu-id="74116-175">Can be Empty</span></span>||  
   
-## Vedere anche  
- <xref:System.Net.Configuration.HttpListenerElement>   
- <xref:System.Net.HttpListener>   
- <xref:System.Net.HttpListenerRequest.Url%2A>   
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="74116-176">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="74116-176">See Also</span></span>  
+ <xref:System.Net.Configuration.HttpListenerElement>  
+ <xref:System.Net.HttpListener>  
+ <xref:System.Net.HttpListenerRequest.Url%2A>  
+ [<span data-ttu-id="74116-177">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="74116-177">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

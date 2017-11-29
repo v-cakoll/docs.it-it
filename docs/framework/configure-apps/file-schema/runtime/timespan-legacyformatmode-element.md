@@ -1,93 +1,98 @@
 ---
-title: "Elemento &lt;TimeSpan_LegacyFormatMode&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<TimeSpan_LegacyFormatMode> (elemento)"
-  - "TimeSpan_LegacyFormatMode (elemento)"
+title: '&lt;TimeSpan_LegacyFormatMode&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- <TimeSpan_LegacyFormatMode> element
+- TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2724b3811e9cc28888a9beac0c1ed77092302c3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;TimeSpan_LegacyFormatMode&gt;
-Determina se il runtime mantiene un comportamento legacy in operazioni di formattazione con valori <xref:System.TimeSpan?displayProperty=fullName>.  
+# <a name="lttimespanlegacyformatmodegt-element"></a><span data-ttu-id="aa2eb-102">&lt;TimeSpan_LegacyFormatMode&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="aa2eb-102">&lt;TimeSpan_LegacyFormatMode&gt; Element</span></span>
+<span data-ttu-id="aa2eb-103">Determina se il runtime deve mantenere il comportamento legacy in operazioni di formattazione con <xref:System.TimeSpan?displayProperty=nameWithType> valori.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-103">Determines whether the runtime preserves legacy behavior in formatting operations with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="aa2eb-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="aa2eb-104">\<configuration></span></span>  
+<span data-ttu-id="aa2eb-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="aa2eb-105">\<runtime></span></span>  
+<span data-ttu-id="aa2eb-106"><TimeSpan_LegacyFormatMode></span><span class="sxs-lookup"><span data-stu-id="aa2eb-106"><TimeSpan_LegacyFormatMode></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="aa2eb-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="aa2eb-107">Syntax</span></span>  
+  
+```xml  
 <TimeSpan_LegacyFormatMode    
    enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="aa2eb-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="aa2eb-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="aa2eb-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="aa2eb-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="aa2eb-110">Attributes</span></span>  
   
-|Attribute|Descrizione|  
+|<span data-ttu-id="aa2eb-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="aa2eb-111">Attribute</span></span>|<span data-ttu-id="aa2eb-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="aa2eb-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Consente di specificare se il runtime utilizza un comportamento di formattazione legacy con i valori <xref:System.TimeSpan?displayProperty=fullName>.|  
+|`enabled`|<span data-ttu-id="aa2eb-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="aa2eb-114">Specifica se il runtime utilizza il comportamento della formattazione legacy con <xref:System.TimeSpan?displayProperty=nameWithType> valori.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-114">Specifies whether the runtime uses legacy formatting behavior with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="aa2eb-115">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="aa2eb-115">enabled Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|Il runtime non ripristina il comportamento della formattazione legacy.|  
-|`true`|Il runtime ripristina il comportamento della formattazione legacy.|  
+|<span data-ttu-id="aa2eb-116">Valore</span><span class="sxs-lookup"><span data-stu-id="aa2eb-116">Value</span></span>|<span data-ttu-id="aa2eb-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="aa2eb-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="aa2eb-118">Il runtime non consente di ripristinare il comportamento della formattazione legacy.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-118">The runtime does not restore legacy formatting behavior.</span></span>|  
+|`true`|<span data-ttu-id="aa2eb-119">Il runtime consente di ripristinare il comportamento della formattazione legacy.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-119">The runtime restores legacy formatting behavior.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="aa2eb-120">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="aa2eb-120">Child Elements</span></span>  
+ <span data-ttu-id="aa2eb-121">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-121">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="aa2eb-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="aa2eb-122">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
+|<span data-ttu-id="aa2eb-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="aa2eb-123">Element</span></span>|<span data-ttu-id="aa2eb-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="aa2eb-124">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="aa2eb-125">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="aa2eb-126">Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-126">Contains information about runtime initialization options.</span></span>|  
   
-## Note  
- A partire da [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], la struttura <xref:System.TimeSpan?displayProperty=fullName>implementa l'interfaccia <xref:System.IFormattable>e supporta operazioni di formattazione con stringhe di formato standard e personalizzato.  Se un metodo dell'analisi incontra un identificatore di formato o una stringa di formato non supportati, genera un <xref:System.FormatException>.  
+## <a name="remarks"></a><span data-ttu-id="aa2eb-127">Note</span><span class="sxs-lookup"><span data-stu-id="aa2eb-127">Remarks</span></span>  
+ <span data-ttu-id="aa2eb-128">A partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], <xref:System.TimeSpan?displayProperty=nameWithType> struttura implementa il <xref:System.IFormattable> interfaccia e supporta operazioni di formattazione con stringhe di formato standard e personalizzate.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-128">Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], the <xref:System.TimeSpan?displayProperty=nameWithType> structure implements the <xref:System.IFormattable> interface and supports formatting operations with standard and custom format strings.</span></span> <span data-ttu-id="aa2eb-129">Se un metodo di analisi viene rilevato un identificatore di formato non supportato o di una stringa di formato, viene generata una <xref:System.FormatException>.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-129">If a parsing method encounters an unsupported format specifier or format string, it throws a <xref:System.FormatException>.</span></span>  
   
- In versioni precedenti di .NET Framework, la struttura <xref:System.TimeSpan> non ha implementato <xref:System.IFormattable> e non ha supportato stringhe di formato.  Tuttavia, molti sviluppatori ritengono erroneamente che <xref:System.TimeSpan> abbia supportato un set di stringhe di formato e le abbia utilizzate in [operazioni di formattazione composite](../../../../../docs/standard/base-types/composite-formatting.md) con metodi quali <xref:System.String.Format%2A?displayProperty=fullName>.  In genere, se un tipo implementa <xref:System.IFormattable> e supporta stringhe di formato, le chiamate ai metodi di formattazione con le stringhe di formato non supportate generano <xref:System.FormatException>.  Tuttavia, poiché <xref:System.TimeSpan> non ha implementato <xref:System.IFormattable>, il runtime ha ignorato la stringa di formato e ha invece chiamato il metodo <xref:System.TimeSpan.ToString?displayProperty=fullName>.  Significa che, anche se le stringhe di formato non hanno avuto effetto sull'operazione di formattazione, la loro presenza non ha provocato un <xref:System.FormatException>.  
+ <span data-ttu-id="aa2eb-130">Nelle versioni precedenti di .NET Framework, il <xref:System.TimeSpan> struttura non ha implementato <xref:System.IFormattable> e non supporta le stringhe di formato.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-130">In previous versions of the .NET Framework, the <xref:System.TimeSpan> structure did not implement <xref:System.IFormattable> and did not support format strings.</span></span> <span data-ttu-id="aa2eb-131">Tuttavia, molti sviluppatori erroneamente che <xref:System.TimeSpan> supportavano un set di stringhe di formato e utilizzati in [le operazioni di formattazione composita](../../../../../docs/standard/base-types/composite-formatting.md) con metodi come <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-131">However, many developers mistakenly assumed that <xref:System.TimeSpan> did support a set of format strings and used them in [composite formatting operations](../../../../../docs/standard/base-types/composite-formatting.md) with methods such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="aa2eb-132">In genere, se un tipo implementa <xref:System.IFormattable> e stringhe, chiamate ai metodi di formattazione con formato non supportato normalmente generano stringhe di formato supporta un <xref:System.FormatException>.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-132">Ordinarily, if a type implements <xref:System.IFormattable> and supports format strings, calls to formatting methods with unsupported format strings usually throw a <xref:System.FormatException>.</span></span> <span data-ttu-id="aa2eb-133">Tuttavia, poiché <xref:System.TimeSpan> non ha implementato <xref:System.IFormattable>, il runtime ignorata la stringa di formato e invece chiamato il <xref:System.TimeSpan.ToString?displayProperty=nameWithType> (metodo).</span><span class="sxs-lookup"><span data-stu-id="aa2eb-133">However, because <xref:System.TimeSpan> did not implement <xref:System.IFormattable>, the runtime ignored the format string and instead called the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="aa2eb-134">Ciò significa che, anche se le stringhe di formato non aveva alcun effetto sull'operazione di formattazione, la loro presenza non ha restituito un <xref:System.FormatException>.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-134">This means that, although the format strings had no effect on the formatting operation, their presence did not result in a <xref:System.FormatException>.</span></span>  
   
- Per casi in cui il codice legacy passa un metodo di formattazione composita e una stringa del formato non valido e non è possibile ricompilare quel codice, è possibile utilizzare l'elemento`<TimeSpan_LegacyFormatMode>` per ripristinare il comportamento <xref:System.TimeSpan> legacy.  Quando si imposta l'attributo `enabled` di tale elemento su `true`, il metodo di formattazione composita provoca una chiamata a <xref:System.TimeSpan.ToString?displayProperty=fullName> piuttosto che a <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName>e <xref:System.FormatException> non viene generato.  
+ <span data-ttu-id="aa2eb-135">Nei casi in cui il codice legacy passa un metodo e una stringa di formato non valido di formattazione composita e non è possibile ricompilare tale codice, è possibile utilizzare il `<TimeSpan_LegacyFormatMode>` elemento da ripristinare legacy <xref:System.TimeSpan> comportamento.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-135">For cases in which legacy code passes a composite formatting method and an invalid format string, and that code cannot be recompiled, you can use the `<TimeSpan_LegacyFormatMode>` element to restore the legacy <xref:System.TimeSpan> behavior.</span></span> <span data-ttu-id="aa2eb-136">Quando si imposta la `enabled` attributo dell'elemento `true`, in una chiamata a risultati dei metodi di formattazione composita <xref:System.TimeSpan.ToString?displayProperty=nameWithType> anziché <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>e un <xref:System.FormatException> non viene generata.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-136">When you set the `enabled` attribute of this element to `true`, the composite formatting method results in a call to <xref:System.TimeSpan.ToString?displayProperty=nameWithType> rather than <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, and a <xref:System.FormatException> is not thrown.</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene creata l'istanza di un oggetto <xref:System.TimeSpan> e si tenta di formattarlo con il metodo <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=fullName> tramite una stringa di formato standard non supportata.  
+## <a name="example"></a><span data-ttu-id="aa2eb-137">Esempio</span><span class="sxs-lookup"><span data-stu-id="aa2eb-137">Example</span></span>  
+ <span data-ttu-id="aa2eb-138">Nell'esempio seguente viene creata un'istanza di un <xref:System.TimeSpan> oggetto e tenta di formattarla con il <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> metodo utilizzando una stringa di formato standard non supportata.</span><span class="sxs-lookup"><span data-stu-id="aa2eb-138">The following example instantiates a <xref:System.TimeSpan> object and attempts to format it with the <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> method by using an unsupported standard format string.</span></span>  
   
  [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
  [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]  
   
- Quando si esegue l'esempio su [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] o su una versione precedente, viene visualizzato l'output seguente:  
+ <span data-ttu-id="aa2eb-139">Quando si esegue l'esempio sul [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] o in una versione precedente, viene visualizzato il seguente output:</span><span class="sxs-lookup"><span data-stu-id="aa2eb-139">When you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] or on an earlier version, it displays the following output:</span></span>  
   
 ```  
 12:30:45  
 ```  
   
- È notevolmente differente dall'output se si esegue l'esempio su [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o versioni successive:  
+ <span data-ttu-id="aa2eb-140">È notevolmente differente dall'output dell'esempio eseguito in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o versioni successive:</span><span class="sxs-lookup"><span data-stu-id="aa2eb-140">This differs markedly from the output if you run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version:</span></span>  
   
 ```  
 Invalid Format  
 ```  
   
- Tuttavia, se si aggiunge il file di configurazione seguente alla directory dell'esempio e successivamente si esegue l'esempio in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o versioni successive, l'output è identico a quello prodotto dall'esempio quando viene eseguito in [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ <span data-ttu-id="aa2eb-141">Tuttavia, se si aggiunge il file di configurazione seguente alla directory dell'esempio e, successivamente, si esegue l'esempio in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o versioni successive, l'output è identico a quello prodotto dall'esempio quando viene eseguito in [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa2eb-141">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version, the output is identical to that produced by the example when it is run on [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
   
-```  
+```xml  
 <?xml version ="1.0"?>  
 <configuration>  
    <runtime>  
@@ -96,6 +101,6 @@ Invalid Format
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="aa2eb-142">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa2eb-142">See Also</span></span>  
+ [<span data-ttu-id="aa2eb-143">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="aa2eb-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="aa2eb-144">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="aa2eb-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

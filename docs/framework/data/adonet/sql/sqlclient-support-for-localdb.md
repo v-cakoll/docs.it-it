@@ -1,58 +1,73 @@
 ---
-title: "Supporto SqlClient per LocalDB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Supporto SqlClient per LocalDB
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: abe9487f9c2ebbb93c2e712959237f722ee707b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Supporto SqlClient per LocalDB
-A partire da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], nome in codice Denali, è disponibile una versione semplificata di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], chiamata LocalDB. In questo argomento viene illustrato come connettersi a un database di LocalDB.  
+# <a name="sqlclient-support-for-localdb"></a><span data-ttu-id="c23c0-102">Supporto SqlClient per LocalDB</span><span class="sxs-lookup"><span data-stu-id="c23c0-102">SqlClient Support for LocalDB</span></span>
+<span data-ttu-id="c23c0-103">A partire da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] , nome in codice Denali, è disponibile una versione semplificata di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], chiamata LocalDB.</span><span class="sxs-lookup"><span data-stu-id="c23c0-103">Beginning in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] code name Denali, a lightweight version of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], called LocalDB, will be available.</span></span> <span data-ttu-id="c23c0-104">In questo argomento viene illustrato come connettersi a un database di LocalDB.</span><span class="sxs-lookup"><span data-stu-id="c23c0-104">This topic discusses how to connect to a LocalDB database.</span></span>  
   
-## Osservazioni  
- Per altre informazioni su LocalDB, ad esempio come installarlo e configurare l'istanza di LocalDB, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a><span data-ttu-id="c23c0-105">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="c23c0-105">Remarks</span></span>  
+ <span data-ttu-id="c23c0-106">Per altre informazioni su LocalDB, ad esempio come installarlo e configurare l'istanza di LocalDB, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="c23c0-106">For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online.</span></span>  
   
- Per riepilogare le operazioni che è possibile eseguire con LocalDB:  
+ <span data-ttu-id="c23c0-107">Per riepilogare le operazioni che è possibile eseguire con LocalDB:</span><span class="sxs-lookup"><span data-stu-id="c23c0-107">To summarize what you can do with LocalDB:</span></span>  
   
--   Creare e avviare le istanze di LocalDB con sqllocaldb.exe o il file app.config.  
+-   <span data-ttu-id="c23c0-108">Creare e avviare le istanze di LocalDB con sqllocaldb.exe o il file app.config.</span><span class="sxs-lookup"><span data-stu-id="c23c0-108">Create and start LocalDB instances with sqllocaldb.exe or your app.config file.</span></span>  
   
--   Usare sqlcmd.exe per aggiungere e modificare i database in un'istanza di LocalDB. Ad esempio `sqlcmd -S (localdb)\myinst`.  
+-   <span data-ttu-id="c23c0-109">Usare sqlcmd.exe per aggiungere e modificare i database in un'istanza di LocalDB.</span><span class="sxs-lookup"><span data-stu-id="c23c0-109">Use sqlcmd.exe to add and modify databases in a LocalDB instance.</span></span> <span data-ttu-id="c23c0-110">Ad esempio `sqlcmd -S (localdb)\myinst`.</span><span class="sxs-lookup"><span data-stu-id="c23c0-110">For example, `sqlcmd -S (localdb)\myinst`.</span></span>  
   
--   Usare la parola chiave della stringa di connessione `AttachDBFilename` per aggiungere un database all'istanza di LocalDB. Quando si usa `AttachDBFilename`, se non si specifica il nome del database con la parola chiave della stringa di connessione `Database`, il database verrà rimosso dall'istanza di LocalDB alla chiusura dell'applicazione.  
+-   <span data-ttu-id="c23c0-111">Usare la parola chiave della stringa di connessione `AttachDBFilename` per aggiungere un database all'istanza di LocalDB.</span><span class="sxs-lookup"><span data-stu-id="c23c0-111">Use the `AttachDBFilename` connection string keyword to add a database to your LocalDB instance.</span></span> <span data-ttu-id="c23c0-112">Quando si usa `AttachDBFilename`, se non si specifica il nome del database con la parola chiave della stringa di connessione `Database` , il database verrà rimosso dall'istanza di LocalDB alla chiusura dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="c23c0-112">When using `AttachDBFilename`, if you do not specify the name of the database with the `Database` connection string keyword, the database will be removed from the LocalDB instance when the application closes.</span></span>  
   
--   Specificare un'istanza di LocalDB nella stringa di connessione. Ad esempio, se il nome dell'istanza è `myInstance`, la stringa di connessione includerà:  
+-   <span data-ttu-id="c23c0-113">Specificare un'istanza di LocalDB nella stringa di connessione.</span><span class="sxs-lookup"><span data-stu-id="c23c0-113">Specify a LocalDB instance in your connection string.</span></span> <span data-ttu-id="c23c0-114">Ad esempio, se il nome dell'istanza è `myInstance`, la stringa di connessione includerà:</span><span class="sxs-lookup"><span data-stu-id="c23c0-114">For example, your instance name is `myInstance`, the connection string would include:</span></span>  
   
     ```  
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` non è consentito quando ci si connette a un database di LocalDB.  
+ <span data-ttu-id="c23c0-115">`User Instance=True` non è consentito quando ci si connette a un database di LocalDB.</span><span class="sxs-lookup"><span data-stu-id="c23c0-115">`User Instance=True` is not allowed when connecting to a LocalDB database.</span></span>  
   
- È possibile scaricare LocalDB da [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Se si usa sqlcmd.exe per modificare i dati nell'istanza di LocalDB, sarà necessario sqlcmd da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, che è possibile ottenere da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 Feature Pack.  
+ <span data-ttu-id="c23c0-116">È possibile scaricare LocalDB da [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065).</span><span class="sxs-lookup"><span data-stu-id="c23c0-116">You can download LocalDB from [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065).</span></span> <span data-ttu-id="c23c0-117">Se si usa sqlcmd.exe per modificare i dati nell'istanza di LocalDB, sarà necessario sqlcmd da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, che è possibile ottenere da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 Feature Pack.</span><span class="sxs-lookup"><span data-stu-id="c23c0-117">If you will use sqlcmd.exe to modify data in your LocalDB instance, you will need sqlcmd from [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, which you can also get from the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 Feature Pack.</span></span>  
   
-## Creare un'istanza denominata a livello di codice  
- Un'applicazione può creare un'istanza denominata e specificare un database come segue:  
+## <a name="programmatically-create-a-named-instance"></a><span data-ttu-id="c23c0-118">Creare un'istanza denominata a livello di codice</span><span class="sxs-lookup"><span data-stu-id="c23c0-118">Programmatically Create a Named Instance</span></span>  
+ <span data-ttu-id="c23c0-119">Un'applicazione può creare un'istanza denominata e specificare un database come segue:</span><span class="sxs-lookup"><span data-stu-id="c23c0-119">An application can create a named instance and specify a database as follows:</span></span>  
   
--   Specificare le istanze di LocalDB da creare nel file app.config, come illustrato di seguito.  Il numero di versione dell'istanza deve essere uguale al numero di versione dell'installazione di LocalDB.  
+-   <span data-ttu-id="c23c0-120">Specificare le istanze di LocalDB da creare nel file app.config, come illustrato di seguito.</span><span class="sxs-lookup"><span data-stu-id="c23c0-120">Specify the LocalDB instances to create in the app.config file, as follows.</span></span>  <span data-ttu-id="c23c0-121">Il numero di versione dell'istanza deve essere uguale al numero di versione dell'installazione di LocalDB.</span><span class="sxs-lookup"><span data-stu-id="c23c0-121">The version number of the instance should be the same as the version number of your LocalDB installation.</span></span>  
   
+    ```xml  
+    <?xml version="1.0" encoding="utf-8" ?>  
+    <configuration>  
+      <configSections>  
+        <section  
+        name="system.data.localdb"  
+        type="System.Data.LocalDBConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/>  
+      </configSections>  
+      <system.data.localdb>  
+        <localdbinstances>  
+          <add name="myInstance" version="11.0" />  
+        </localdbinstances>  
+      </system.data.localdb>  
+    </configuration>  
     ```  
-    <?xml version="1.0" encoding="utf-8" ?> <configuration> <configSections> <section name="system.data.localdb" type="System.Data.LocalDBConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> </configSections> <system.data.localdb> <localdbinstances> <add name="myInstance" version="11.0" /> </localdbinstances> </system.data.localdb> </configuration>  
-    ```  
   
--   Specificare il nome dell'istanza mediante la parola chiave della stringa di connessione `server`.  Il nome dell'istanza specificato nella parola chiave della stringa di connessione `server` deve corrispondere a quello specificato nel file app.config.  
+-   <span data-ttu-id="c23c0-122">Specificare il nome dell'istanza mediante la parola chiave della stringa di connessione `server` .</span><span class="sxs-lookup"><span data-stu-id="c23c0-122">Specify the name of the instance using the `server` connection string keyword.</span></span>  <span data-ttu-id="c23c0-123">Il nome dell'istanza specificato nella parola chiave della stringa di connessione `server` deve corrispondere a quello specificato nel file app.config.</span><span class="sxs-lookup"><span data-stu-id="c23c0-123">The instance name specified in the `server` connection string keyword must match the name specified in the app.config file.</span></span>  
   
--   Usare la parola chiave della stringa di connessione `AttachDBFilename` per specificare il file con estensione MDF.  
+-   <span data-ttu-id="c23c0-124">Usare la parola chiave della stringa di connessione `AttachDBFilename` per specificare il file con estensione MDF.</span><span class="sxs-lookup"><span data-stu-id="c23c0-124">Use the `AttachDBFilename` connection string keyword to specify the .MDF file.</span></span>  
   
-## Vedere anche  
- [Funzionalità di SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)   
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="c23c0-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c23c0-125">See Also</span></span>  
+ [<span data-ttu-id="c23c0-126">Funzionalità di SQL Server e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c23c0-126">SQL Server Features and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ [<span data-ttu-id="c23c0-127">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="c23c0-127">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

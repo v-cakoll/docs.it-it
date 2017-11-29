@@ -1,50 +1,53 @@
 ---
-title: "Entity Data Model: tipi di dati primitivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Entity Data Model: tipi di dati primitivi'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Entity Data Model: tipi di dati primitivi
-Entity Data Model \(EDM\) supporta un set di tipi di dati primitivi astratti \(ad esempio, String, Boolean, Int32 e così via\) usati per definire le [proprietà](../../../../docs/framework/data/adonet/property.md) in un modello concettuale.  Questi tipi di dati primitivi sono proxy per i tipi di dati primitivi effettivi supportati nell'ambiente di archiviazione o host, ad esempio un database SQL Server o Common Language Runtime \(CLR\).  EDM non definisce la semantica di operazioni o conversioni su tipi di dati primitivi. Questa semantica viene definita dall'ambiente di archiviazione o host.  I tipi di dati primitivi in EDM sono in genere associati ai corrispondenti tipi di dati primitivi nell'ambiente di archiviazione o host.  Per informazioni su come Entity Framework esegue il mapping di tipi primitivi in EDM ai tipi di dati di SQL Server, vedere [SqlClient per i tipi Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+# <a name="entity-data-model-primitive-data-types"></a><span data-ttu-id="3151e-102">Entity Data Model: tipi di dati primitivi</span><span class="sxs-lookup"><span data-stu-id="3151e-102">Entity Data Model: Primitive Data Types</span></span>
+<span data-ttu-id="3151e-103">Entity Data Model (EDM) supporta un set di tipi di dati primitivo astratto (ad esempio String, Boolean, Int32 e così via) che vengono usate per definire [proprietà](../../../../docs/framework/data/adonet/property.md) in un modello concettuale.</span><span class="sxs-lookup"><span data-stu-id="3151e-103">The Entity Data Model (EDM) supports a set of abstract primitive data types (such as String, Boolean, Int32, and so on) that are used to define [properties](../../../../docs/framework/data/adonet/property.md) in a conceptual model.</span></span> <span data-ttu-id="3151e-104">Questi tipi di dati primitivi sono proxy per i tipi di dati primitivi effettivi supportati nell'ambiente di archiviazione o host, ad esempio un database SQL Server o Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="3151e-104">These primitive data types are proxies for actual primitive data types that are supported in the storage or hosting environment, such as a SQL Server database or the common language runtime (CLR).</span></span> <span data-ttu-id="3151e-105">EDM non definisce la semantica di operazioni o conversioni su tipi di dati primitivi. Questa semantica viene definita dall'ambiente di archiviazione o host.</span><span class="sxs-lookup"><span data-stu-id="3151e-105">The EDM does not define the semantics of operations or conversions over primitive data types; these semantics are defined by the storage or hosting environment.</span></span> <span data-ttu-id="3151e-106">I tipi di dati primitivi in EDM sono in genere associati ai corrispondenti tipi di dati primitivi nell'ambiente di archiviazione o host.</span><span class="sxs-lookup"><span data-stu-id="3151e-106">Typically, primitive data types in the EDM are mapped to corresponding primitive data types in the storage or hosting environment.</span></span> <span data-ttu-id="3151e-107">Per informazioni su come Entity Framework esegue il mapping di tipi primitivi in EDM ai tipi di dati di SQL Server, vedere [SqlClient per tipi Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).</span><span class="sxs-lookup"><span data-stu-id="3151e-107">For information about how the Entity Framework maps primitive types in the EDM to SQL Server data types, see [SqlClient for Entity FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).</span></span>  
   
 > [!NOTE]
->  EDM non supporta raccolte di tipi di dati primitivi.  
+>  <span data-ttu-id="3151e-108">EDM non supporta raccolte di tipi di dati primitivi.</span><span class="sxs-lookup"><span data-stu-id="3151e-108">The EDM does not support collections of primitive data types.</span></span>  
   
- Per informazioni sui tipi di dati strutturati in EDM, vedere [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) e [tipo complesso](../../../../docs/framework/data/adonet/complex-type.md).  
+ <span data-ttu-id="3151e-109">Per informazioni sui tipi di dati strutturati in EDM, vedere [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) e [tipo complesso](../../../../docs/framework/data/adonet/complex-type.md).</span><span class="sxs-lookup"><span data-stu-id="3151e-109">For information about structured data types in the EDM, see [entity type](../../../../docs/framework/data/adonet/entity-type.md) and [complex type](../../../../docs/framework/data/adonet/complex-type.md).</span></span>  
   
-## Tipi di dati primitivi supportati in Entity Data Model  
- Nella tabella seguente vengono elencati i tipi di dati primitivi supportati da EDM.  Nella tabella vengono inoltre elencati i [facet](../../../../docs/framework/data/adonet/facet.md) applicabili a ogni tipo di dati primitivi.  
+## <a name="primitive-data-types-supported-in-the-entity-data-model"></a><span data-ttu-id="3151e-110">Tipi di dati primitivi supportati in Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="3151e-110">Primitive Data Types Supported in the Entity Data Model</span></span>  
+ <span data-ttu-id="3151e-111">Nella tabella seguente vengono elencati i tipi di dati primitivi supportati da EDM.</span><span class="sxs-lookup"><span data-stu-id="3151e-111">The table below lists the primitive data types supported by the EDM.</span></span> <span data-ttu-id="3151e-112">La tabella include anche il [facet](../../../../docs/framework/data/adonet/facet.md) che possono essere applicati a ogni tipo di dati primitivi.</span><span class="sxs-lookup"><span data-stu-id="3151e-112">The table also lists the [facets](../../../../docs/framework/data/adonet/facet.md) that can be applied to each primitive data type.</span></span>  
   
-|Tipi di dati primitivi|Descrizione|Facet applicabili|  
-|----------------------------|-----------------|-----------------------|  
-|Binario|Contiene dati binari.|MaxLength, FixedLength, Nullable, Default|  
-|Boolean|Contiene il valore `true` o `false`.|Nullable, Default|  
-|Byte|Contiene un Unsigned Integer a 8 bit.|Precision, Nullable, Default|  
-|DateTime|Rappresenta una data e un'ora.|Precision, Nullable, Default|  
-|DateTimeOffset|Contiene una data e un'ora come offset in minuti rispetto all'ora GMT.|Precision, Nullable, Default|  
-|Decimal|Contiene un valore numerico con scala e precisione fisse.|Precision, Nullable, Default|  
-|Double|Contiene un numero a virgola mobile con precisione a 15 cifre.|Precision, Nullable, Default|  
-|Float|Contiene un numero a virgola mobile con precisione a sette cifre.|Precision, Nullable, Default|  
-|Guid|Contiene un identificatore univoco a 16 byte.|Precision, Nullable, Default|  
-|Int16|Contiene un Signed Integer a 16 bit.|Precision, Nullable, Default|  
-|Int32|Contiene un Signed Integer a 32 bit.|Precision, Nullable, Default|  
-|Int64|Contiene un Signed Integer a 64 bit.|Precision, Nullable, Default|  
-|SByte|Contiene un Signed Integer a 8 bit.|Precision, Nullable, Default|  
-|String|Contiene dati di tipo carattere.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
-|utente|Contiene un'ora del giorno.|Precision, Nullable, Default|  
+|<span data-ttu-id="3151e-113">Tipi di dati primitivi</span><span class="sxs-lookup"><span data-stu-id="3151e-113">Primitive Data Type</span></span>|<span data-ttu-id="3151e-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3151e-114">Description</span></span>|<span data-ttu-id="3151e-115">Facet applicabili</span><span class="sxs-lookup"><span data-stu-id="3151e-115">Applicable Facets</span></span>|  
+|-------------------------|-----------------|-----------------------|  
+|<span data-ttu-id="3151e-116">Binario</span><span class="sxs-lookup"><span data-stu-id="3151e-116">Binary</span></span>|<span data-ttu-id="3151e-117">Contiene dati binari.</span><span class="sxs-lookup"><span data-stu-id="3151e-117">Contains binary data.</span></span>|<span data-ttu-id="3151e-118">MaxLength, FixedLength, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-118">MaxLength, FixedLength, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-119">Boolean</span><span class="sxs-lookup"><span data-stu-id="3151e-119">Boolean</span></span>|<span data-ttu-id="3151e-120">Contiene il valore `true` o `false`.</span><span class="sxs-lookup"><span data-stu-id="3151e-120">Contains the value `true` or `false`.</span></span>|<span data-ttu-id="3151e-121">Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-121">Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-122">Byte</span><span class="sxs-lookup"><span data-stu-id="3151e-122">Byte</span></span>|<span data-ttu-id="3151e-123">Contiene un Unsigned Integer a 8 bit.</span><span class="sxs-lookup"><span data-stu-id="3151e-123">Contains an unsigned 8-bit integer value.</span></span>|<span data-ttu-id="3151e-124">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-124">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-125">DateTime</span><span class="sxs-lookup"><span data-stu-id="3151e-125">DateTime</span></span>|<span data-ttu-id="3151e-126">Rappresenta una data e un'ora.</span><span class="sxs-lookup"><span data-stu-id="3151e-126">Represents a date and time.</span></span>|<span data-ttu-id="3151e-127">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-127">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-128">DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="3151e-128">DateTimeOffset</span></span>|<span data-ttu-id="3151e-129">Contiene una data e un'ora come offset in minuti rispetto all'ora GMT.</span><span class="sxs-lookup"><span data-stu-id="3151e-129">Contains a date and time as an offset in minutes from GMT.</span></span>|<span data-ttu-id="3151e-130">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-130">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-131">Decimal</span><span class="sxs-lookup"><span data-stu-id="3151e-131">Decimal</span></span>|<span data-ttu-id="3151e-132">Contiene un valore numerico con scala e precisione fisse.</span><span class="sxs-lookup"><span data-stu-id="3151e-132">Contains a numeric value with fixed precision and scale.</span></span>|<span data-ttu-id="3151e-133">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-133">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-134">Double</span><span class="sxs-lookup"><span data-stu-id="3151e-134">Double</span></span>|<span data-ttu-id="3151e-135">Contiene un numero a virgola mobile con precisione a 15 cifre.</span><span class="sxs-lookup"><span data-stu-id="3151e-135">Contains a floating point number with 15 digit precision.</span></span>|<span data-ttu-id="3151e-136">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-136">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-137">Float</span><span class="sxs-lookup"><span data-stu-id="3151e-137">Float</span></span>|<span data-ttu-id="3151e-138">Contiene un numero a virgola mobile con precisione a sette cifre.</span><span class="sxs-lookup"><span data-stu-id="3151e-138">Contains a floating point number with seven digit precision.</span></span>|<span data-ttu-id="3151e-139">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-139">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-140">Guid</span><span class="sxs-lookup"><span data-stu-id="3151e-140">Guid</span></span>|<span data-ttu-id="3151e-141">Contiene un identificatore univoco a 16 byte.</span><span class="sxs-lookup"><span data-stu-id="3151e-141">Contains a 16-byte unique identifier.</span></span>|<span data-ttu-id="3151e-142">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-142">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-143">Int16</span><span class="sxs-lookup"><span data-stu-id="3151e-143">Int16</span></span>|<span data-ttu-id="3151e-144">Contiene un Signed Integer a 16 bit.</span><span class="sxs-lookup"><span data-stu-id="3151e-144">Contains a signed 16-bit integer value.</span></span>|<span data-ttu-id="3151e-145">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-145">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-146">Int32</span><span class="sxs-lookup"><span data-stu-id="3151e-146">Int32</span></span>|<span data-ttu-id="3151e-147">Contiene un Signed Integer a 32 bit.</span><span class="sxs-lookup"><span data-stu-id="3151e-147">Contains a signed 32-bit integer value.</span></span>|<span data-ttu-id="3151e-148">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-148">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-149">Int64</span><span class="sxs-lookup"><span data-stu-id="3151e-149">Int64</span></span>|<span data-ttu-id="3151e-150">Contiene un Signed Integer a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="3151e-150">Contains a signed 64-bit integer value.</span></span>|<span data-ttu-id="3151e-151">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-151">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-152">SByte</span><span class="sxs-lookup"><span data-stu-id="3151e-152">SByte</span></span>|<span data-ttu-id="3151e-153">Contiene un Signed Integer a 8 bit.</span><span class="sxs-lookup"><span data-stu-id="3151e-153">Contains a signed 8-bit integer value.</span></span>|<span data-ttu-id="3151e-154">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-154">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-155">String</span><span class="sxs-lookup"><span data-stu-id="3151e-155">String</span></span>|<span data-ttu-id="3151e-156">Contiene dati di tipo carattere.</span><span class="sxs-lookup"><span data-stu-id="3151e-156">Contains character data.</span></span>|<span data-ttu-id="3151e-157">Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-157">Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3151e-158">utente</span><span class="sxs-lookup"><span data-stu-id="3151e-158">Time</span></span>|<span data-ttu-id="3151e-159">Contiene un'ora del giorno.</span><span class="sxs-lookup"><span data-stu-id="3151e-159">Contains a time of day.</span></span>|<span data-ttu-id="3151e-160">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3151e-160">Precision, Nullable, Default</span></span>|  
   
-## Vedere anche  
- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="3151e-161">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3151e-161">See Also</span></span>  
+ [<span data-ttu-id="3151e-162">Concetti chiave di Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="3151e-162">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="3151e-163">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="3151e-163">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

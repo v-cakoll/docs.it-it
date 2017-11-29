@@ -1,37 +1,40 @@
 ---
-title: "Supporto delle associazioni a pi&#249; siti IIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Supporto delle associazioni a più siti IIS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ebe433d1c18d46e0868f9566a273124e6bd63f1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Supporto delle associazioni a pi&#249; siti IIS
-Se si ospita un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in Internet Information Services \(IIS\) 7.0, potrebbe risultare opportuno fornire più indirizzi di base che utilizzano lo stesso protocollo per lo stesso sito.In questo modo lo stesso servizio può rispondere a diversi URI.Ciò risulta utile se si desidera ospitare un servizio in ascolto su http:\/\/www.contoso.com e http:\/\/contoso.com.È inoltre utile per creare un servizio che dispone di un indirizzo di base per gli utenti interni e un indirizzo di base separato per gli utenti esterni.Ad esempio: http:\/\/internal.contoso.com e http:\/\/www.contoso.com.  
+# <a name="supporting-multiple-iis-site-bindings"></a><span data-ttu-id="549de-102">Supporto delle associazioni a più siti IIS</span><span class="sxs-lookup"><span data-stu-id="549de-102">Supporting Multiple IIS Site Bindings</span></span>
+<span data-ttu-id="549de-103">Se si ospita un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in Internet Information Services (IIS) 7.0, potrebbe risultare opportuno fornire più indirizzi di base che utilizzano lo stesso protocollo per lo stesso sito.</span><span class="sxs-lookup"><span data-stu-id="549de-103">When hosting a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service under Internet Information Services (IIS) 7.0, you may want to provide multiple base addresses that use the same protocol on the same site.</span></span> <span data-ttu-id="549de-104">In questo modo lo stesso servizio può rispondere a diversi URI.</span><span class="sxs-lookup"><span data-stu-id="549de-104">This allows the same service to respond to a number of different URIs.</span></span> <span data-ttu-id="549de-105">Ciò risulta utile se si desidera ospitare un servizio in ascolto su http://www.contoso.com e http://contoso.com. È inoltre utile per creare un servizio che dispone di un indirizzo di base per gli utenti interni e un indirizzo di base separato per gli utenti esterni.</span><span class="sxs-lookup"><span data-stu-id="549de-105">This is useful when you want to host a service that listens on http://www.contoso.com and http://contoso.com. It is also useful to create a service that has a base address for internal users and a separate base address for external users.</span></span> <span data-ttu-id="549de-106">Ad esempio: http://internal.contoso.com e http://www.contoso.com.</span><span class="sxs-lookup"><span data-stu-id="549de-106">For example: http://internal.contoso.com and http://www.contoso.com.</span></span>  
   
 > [!NOTE]
->  Questa funzionalità è disponibile solo utilizzando il protocollo HTTP.  
+>  <span data-ttu-id="549de-107">Questa funzionalità è disponibile solo utilizzando il protocollo HTTP.</span><span class="sxs-lookup"><span data-stu-id="549de-107">This functionality is only available using the HTTP protocol.</span></span>  
   
-## Più indirizzi di base  
- Questa funzionalità è disponibile solo per i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitati in IIS.Per impostazione predefinita questa funzionalità non è abilitata.Per abilitarla, è necessario aggiungere l'attributo `multipleSiteBindingsEnabled` all'elemento \<`serviceHostingEnvironment`\> nel file Web.config e impostarlo su `true`, come indicato nell'esempio seguente.  
+## <a name="multiple-base-addresses"></a><span data-ttu-id="549de-108">Più indirizzi di base</span><span class="sxs-lookup"><span data-stu-id="549de-108">Multiple Base Addresses</span></span>  
+ <span data-ttu-id="549de-109">Questa funzionalità è disponibile solo per i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitati in IIS.</span><span class="sxs-lookup"><span data-stu-id="549de-109">This feature is only available to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that are hosted under IIS.</span></span> <span data-ttu-id="549de-110">Per impostazione predefinita questa funzionalità non è abilitata.</span><span class="sxs-lookup"><span data-stu-id="549de-110">This feature is not enabled by default.</span></span> <span data-ttu-id="549de-111">Per abilitare la funzionalità è necessario aggiungere il `multipleSiteBindingsEnabled` attributo per il <`serviceHostingEnvironment`> elemento nel file Web. config file e impostarlo su `true`, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="549de-111">To enable it you must add the `multipleSiteBindingsEnabled` attribute to the <`serviceHostingEnvironment`> element in your Web.config file and set it to `true`, as shown in the following example.</span></span>  
   
 ```xml  
-<serviceHostingEnvironment multipleSiteBindingsEnabled=”true”/>  
+<serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  
 ```  
   
- Se si ospita un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in IIS, quest'ultimo crea un indirizzo di base basato sull'URI della directory virtuale che contiene l'applicazione.È possibile aggiungere ulteriori indirizzi di base che utilizzano lo stesso protocollo mediante Gestione Internet Information Services per aggiungere una o più associazioni al sito Web.Per ogni associazione specificare un protocollo \(HTTP o HTTPS\), un indirizzo IP, una porta e un nome host.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizzo di Gestione Internet Information Services, vedere [Gestione IIS \(IIS 7\)](http://go.microsoft.com/fwlink/?LinkId=164057).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] aggiunta di associazioni a un sito, vedere [Creare un sito Web \(IIS 7\)](http://go.microsoft.com/fwlink/?LinkId=164060)  
+ <span data-ttu-id="549de-112">Se si ospita un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in IIS, quest'ultimo crea un indirizzo di base basato sull'URI della directory virtuale che contiene l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="549de-112">When hosting a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service under IIS, IIS creates one base address for you based on the URI to the virtual directory that contains the application.</span></span> <span data-ttu-id="549de-113">È possibile aggiungere ulteriori indirizzi di base che utilizzano lo stesso protocollo mediante Gestione Internet Information Services per aggiungere una o più associazioni al sito Web.</span><span class="sxs-lookup"><span data-stu-id="549de-113">You can add additional base addresses that use the same protocol by using Internet Information Services Manager to add one or more bindings to your Web site.</span></span> <span data-ttu-id="549de-114">Per ogni associazione specificare un protocollo (HTTP o HTTPS), un indirizzo IP, una porta e un nome host.</span><span class="sxs-lookup"><span data-stu-id="549de-114">For each binding specify a protocol (HTTP or HTTPS), an IP address, a port, and a host name.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="549de-115">utilizzando Gestione Internet Information Services, vedere [Gestione IIS (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164057).</span><span class="sxs-lookup"><span data-stu-id="549de-115"> using Internet Information Services Manager, see [IIS Manager (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164057).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="549de-116">aggiunta di associazioni per un sito, vedere [creare un sito Web (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164060)</span><span class="sxs-lookup"><span data-stu-id="549de-116"> adding bindings to a site, see [Create a Web Site (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164060)</span></span>  
   
- L'impostazione di più indirizzi di base per lo stesso sito influisce sul contenuto della pagina della Guida di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], sullo schema di importazione e sulle informazioni WSDL\/MEX generate dal servizio.Nella pagina della Guida di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene visualizzata la riga di comando da utilizzare per generare un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in grado di comunicare con il servizio.La riga di comando contiene solo il primo indirizzo specificato nell'associazione IIS per il sito Web.In modo analogo allo schema di importazione, viene utilizzato solo il primo indirizzo di base specificato nell'associazione IIS.I dati WSDL e MEX contengono tutti gli indirizzi di base specificati nelle associazioni IIS.  
+ <span data-ttu-id="549de-117">L'impostazione di più indirizzi di base per lo stesso sito influisce sul contenuto della pagina della Guida di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], sullo schema di importazione e sulle informazioni WSDL/MEX generate dal servizio.</span><span class="sxs-lookup"><span data-stu-id="549de-117">Specifying multiple base addresses for the same site affects the content of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Help page, importing schema, and the WSDL/MEX information generated by the service.</span></span> <span data-ttu-id="549de-118">Nella pagina della Guida di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene visualizzata la riga di comando da utilizzare per generare un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in grado di comunicare con il servizio.</span><span class="sxs-lookup"><span data-stu-id="549de-118">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Help page displays the command line to use to generate a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that can communicate with the service.</span></span> <span data-ttu-id="549de-119">La riga di comando contiene solo il primo indirizzo specificato nell'associazione IIS per il sito Web.</span><span class="sxs-lookup"><span data-stu-id="549de-119">This command line contains only the first address specified in the IIS binding for the Web site.</span></span> <span data-ttu-id="549de-120">In modo analogo allo schema di importazione, viene utilizzato solo il primo indirizzo di base specificato nell'associazione IIS.</span><span class="sxs-lookup"><span data-stu-id="549de-120">Similarly when importing schema, only the first base address specified in the IIS binding is used.</span></span> <span data-ttu-id="549de-121">I dati WSDL e MEX contengono tutti gli indirizzi di base specificati nelle associazioni IIS.</span><span class="sxs-lookup"><span data-stu-id="549de-121">WSDL and MEX data contain all the base addresses specified in the IIS bindings.</span></span>  
   
 > [!WARNING]
->  Ciò significa che se un servizio dispone di due indirizzi di base, uno per utenti interni e uno per utenti esterni, entrambi vengono specificati nelle informazioni WSDL\/MEX generate dal servizio.
+>  <span data-ttu-id="549de-122">Ciò significa che se un servizio dispone di due indirizzi di base, uno per utenti interni e uno per utenti esterni, entrambi vengono specificati nelle informazioni WSDL/MEX generate dal servizio.</span><span class="sxs-lookup"><span data-stu-id="549de-122">This means that if a service has two base addresses, one for internal users and one for external users, both are specified in the WSDL/MEX information generated by the service.</span></span>

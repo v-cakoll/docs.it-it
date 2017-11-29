@@ -1,43 +1,47 @@
 ---
-title: "Procedura: accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox (controllo) [Windows Form], accesso a elementi"
-  - "caselle combinate, accesso a elementi"
-  - "ComboBox (controllo) [Windows Form], accesso a elementi"
-  - "caselle di riepilogo, accesso a elementi"
-  - "ListBox (controllo) [Windows Form], accesso a elementi"
-  - "ListBox (controllo) [Windows Form], restituzione di informazioni sugli elementi"
+title: 'Procedura: accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ComboBox control [Windows Forms], accessing items
+- ListBox control [Windows Forms], returning item information
+- list boxes [Windows Forms], accessing items
+- ListBox control [Windows Forms], accessing items
+- combo boxes [Windows Forms], accessing items
+- CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox Windows Form
-L'accesso a elementi specifici di una casella combinata, di una casella di riepilogo o di una casella di riepilogo selezionata è un'attività di importanza fondamentale.  Consente infatti di stabilire a livello di codice il contenuto di un elenco in ogni singolo percorso.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="24c0c-102">Procedura: accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox Windows Form</span><span class="sxs-lookup"><span data-stu-id="24c0c-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="24c0c-103">Accesso a elementi specifici in una casella combinata, una casella di riepilogo o casella di riepilogo è un'attività essenziale.</span><span class="sxs-lookup"><span data-stu-id="24c0c-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="24c0c-104">Consente di determinare a livello di codice che cos'è un elenco in qualsiasi posizione specificata.</span><span class="sxs-lookup"><span data-stu-id="24c0c-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### Per accedere a un elemento specifico  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="24c0c-105">Per accedere a un elemento specifico</span><span class="sxs-lookup"><span data-stu-id="24c0c-105">To access a specific item</span></span>  
   
-1.  Eseguire una query sulla raccolta`Items` utilizzando l'indice dell'elemento specifico:  
+1.  <span data-ttu-id="24c0c-106">Query di `Items` raccolta utilizzando l'indice dell'elemento specifico:</span><span class="sxs-lookup"><span data-stu-id="24c0c-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
        ' Return the text of the item using the index:  
        Return ComboBox1.Items(i).ToString  
     End Function  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ L'accesso a elementi specifici di una casella combinata, di una casella di riepi
        // Return the text of the item using the index:  
        return (comboBox1.Items[i].ToString());  
     }  
-  
     ```  
   
     ```cpp  
@@ -58,8 +61,8 @@ L'accesso a elementi specifici di una casella combinata, di una casella di riepi
        }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [Controlli Windows Form usati per elencare opzioni](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a><span data-ttu-id="24c0c-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="24c0c-107">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [<span data-ttu-id="24c0c-108">Controlli Windows Form usati per elencare opzioni</span><span class="sxs-lookup"><span data-stu-id="24c0c-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

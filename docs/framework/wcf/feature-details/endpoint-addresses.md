@@ -1,150 +1,152 @@
 ---
-title: "Indirizzi endpoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "indirizzi [WCF]"
-  - "WCF [WCF], indirizzi"
-  - "Windows Communication Foundation [WCF], indirizzi"
+title: Indirizzi endpoint
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- addresses [WCF]
+- Windows Communication Foundation [WCF], addresses
+- WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 52c5dfd84a55e727e465e2bd6214462fd57c334f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Indirizzi endpoint
-A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo.L'indirizzo è costituito principalmente da un URI \(Uniform Resource Identifier\) che specifica il percorso dell'endpoint.L'indirizzo endpoint è rappresentato nel modello di programmazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tramite la classe <xref:System.ServiceModel.EndpointAddress>. Questa contiene una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> facoltativa che consente l'autenticazione dell'endpoint tramite altri endpoint che scambiano messaggi con esso e un set di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Tali proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio.Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio.L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS\-Addressing \(EPR\).  
+# <a name="endpoint-addresses"></a><span data-ttu-id="ebacc-102">Indirizzi endpoint</span><span class="sxs-lookup"><span data-stu-id="ebacc-102">Endpoint Addresses</span></span>
+<span data-ttu-id="ebacc-103">A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo.</span><span class="sxs-lookup"><span data-stu-id="ebacc-103">Every endpoint has an address associated with it, which is used to locate and identify the endpoint.</span></span> <span data-ttu-id="ebacc-104">L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="ebacc-104">This address consists primarily of a Uniform Resource Identifier (URI), which specifies the location of the endpoint.</span></span> <span data-ttu-id="ebacc-105">L'indirizzo endpoint è rappresentato nel modello di programmazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tramite la classe <xref:System.ServiceModel.EndpointAddress>. Questa contiene una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> facoltativa che consente l'autenticazione dell'endpoint tramite altri endpoint che scambiano messaggi con esso e un set di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Tali proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio.</span><span class="sxs-lookup"><span data-stu-id="ebacc-105">The endpoint address is represented in the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programming model by the <xref:System.ServiceModel.EndpointAddress> class, which contains an optional <xref:System.ServiceModel.EndpointAddress.Identity%2A> property that enables the authentication of the endpoint by other endpoints that exchange messages with it, and a set of optional <xref:System.ServiceModel.EndpointAddress.Headers%2A> properties, which define any other SOAP headers required to reach the service.</span></span> <span data-ttu-id="ebacc-106">Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio.</span><span class="sxs-lookup"><span data-stu-id="ebacc-106">The optional headers provide additional and more detailed addressing information to identify or interact with the service endpoint.</span></span> <span data-ttu-id="ebacc-107">L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).</span><span class="sxs-lookup"><span data-stu-id="ebacc-107">The address of an endpoint is represented on the wire as a WS-Addressing endpoint reference (EPR).</span></span>  
   
-## Struttura URI di un indirizzo  
- L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti.Le quattro parti dell'URI http:\/\/www.fabrikam.com:322\/mathservice.svc\/secureEndpoint, ad esempio, possono essere specificate come segue:  
+## <a name="uri-structure-of-an-address"></a><span data-ttu-id="ebacc-108">Struttura URI di un indirizzo</span><span class="sxs-lookup"><span data-stu-id="ebacc-108">URI Structure of an Address</span></span>  
+ <span data-ttu-id="ebacc-109">L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti.</span><span class="sxs-lookup"><span data-stu-id="ebacc-109">The address URI for most transports has four parts.</span></span> <span data-ttu-id="ebacc-110">Le quattro parti dell'URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint, ad esempio, possono essere specificate come segue:</span><span class="sxs-lookup"><span data-stu-id="ebacc-110">For example, the four parts of the URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint can be itemized as follows:</span></span>  
   
--   Schema: http:  
+-   <span data-ttu-id="ebacc-111">Schema: http:</span><span class="sxs-lookup"><span data-stu-id="ebacc-111">Scheme: http:</span></span>  
   
--   Computer: www.fabrikam.com  
+-   <span data-ttu-id="ebacc-112">Computer: www.fabrikam.com</span><span class="sxs-lookup"><span data-stu-id="ebacc-112">Machine: www.fabrikam.com</span></span>  
   
--   \(facoltativo\) Porta: 322  
+-   <span data-ttu-id="ebacc-113">(facoltativo) Porta: 322</span><span class="sxs-lookup"><span data-stu-id="ebacc-113">(optional) Port: 322</span></span>  
   
--   Percorso: \/mathservice.svc\/secureEndpoint  
+-   <span data-ttu-id="ebacc-114">Percorso: /mathservice.svc/secureEndpoint</span><span class="sxs-lookup"><span data-stu-id="ebacc-114">Path: /mathservice.svc/secureEndpoint</span></span>  
   
-## Definizione di un indirizzo per un servizio  
- L'indirizzo endpoint per un servizio può essere specificato in modo imperativo mediante l'utilizzo di codice oppure in modo dichiarativo mediante la configurazione.In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli utilizzati durante lo sviluppo del servizio.In genere è più pratico definire endpoint di servizio mediante la configurazione piuttosto che mediante codice.Se le informazioni sull'associazione e sull'indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare o distribuire nuovamente l'applicazione.  
+## <a name="defining-an-address-for-a-service"></a><span data-ttu-id="ebacc-115">Definizione di un indirizzo per un servizio</span><span class="sxs-lookup"><span data-stu-id="ebacc-115">Defining an Address for a Service</span></span>  
+ <span data-ttu-id="ebacc-116">L'indirizzo endpoint per un servizio può essere specificato in modo imperativo mediante l'utilizzo di codice oppure in modo dichiarativo mediante la configurazione.</span><span class="sxs-lookup"><span data-stu-id="ebacc-116">The endpoint address for a service can be specified either imperatively using code or declaratively through configuration.</span></span> <span data-ttu-id="ebacc-117">In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio.</span><span class="sxs-lookup"><span data-stu-id="ebacc-117">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="ebacc-118">In genere è più pratico definire endpoint di servizio mediante la configurazione piuttosto che mediante codice.</span><span class="sxs-lookup"><span data-stu-id="ebacc-118">Generally, it is more practical to define service endpoints using configuration rather than code.</span></span> <span data-ttu-id="ebacc-119">Se le informazioni sull'associazione e sull'indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare o distribuire nuovamente l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ebacc-119">Keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
   
-### Definizione di un indirizzo nella configurazione  
- Per definire un endpoint in un file di configurazione, utilizzare l'elemento [\<endpoint\>](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md).Per ulteriori informazioni e per un esempio, vedere [Specifica di un indirizzo endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="defining-an-address-in-configuration"></a><span data-ttu-id="ebacc-120">Definizione di un indirizzo nella configurazione</span><span class="sxs-lookup"><span data-stu-id="ebacc-120">Defining an Address in Configuration</span></span>  
+ <span data-ttu-id="ebacc-121">Per definire un endpoint in un file di configurazione, utilizzare il [ \<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="ebacc-121">To define an endpoint in a configuration file, use the [\<endpoint>](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element.</span></span> <span data-ttu-id="ebacc-122">Per informazioni dettagliate ed esempi, vedere [specificando un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="ebacc-122">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-### Definizione di un indirizzo nel codice  
- È possibile creare un indirizzo endpoint nel codice con la classe <xref:System.ServiceModel.EndpointAddress>.Per ulteriori informazioni e per un esempio, vedere [Specifica di un indirizzo endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="defining-an-address-in-code"></a><span data-ttu-id="ebacc-123">Definizione di un indirizzo nel codice</span><span class="sxs-lookup"><span data-stu-id="ebacc-123">Defining an Address in Code</span></span>  
+ <span data-ttu-id="ebacc-124">È possibile creare un indirizzo endpoint nel codice con la classe <xref:System.ServiceModel.EndpointAddress>.</span><span class="sxs-lookup"><span data-stu-id="ebacc-124">An endpoint address can be created in code with the <xref:System.ServiceModel.EndpointAddress> class.</span></span> <span data-ttu-id="ebacc-125">Per informazioni dettagliate ed esempi, vedere [specificando un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="ebacc-125">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-### Endpoint in WSDL  
- Un indirizzo endpoint può essere rappresentato anche in WSDL come elemento EPR di WS\-Addressing all'interno dell'elemento `wsdl:port` dell'endpoint corrispondente.L'EPR contiene l'indirizzo dell'endpoint e qualsiasi proprietà dell'indirizzo.Per ulteriori informazioni e per un esempio, vedere [Specifica di un indirizzo endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="endpoints-in-wsdl"></a><span data-ttu-id="ebacc-126">Endpoint in WSDL</span><span class="sxs-lookup"><span data-stu-id="ebacc-126">Endpoints in WSDL</span></span>  
+ <span data-ttu-id="ebacc-127">Un indirizzo endpoint può essere rappresentato anche in WSDL come elemento EPR di WS-Addressing all'interno dell'elemento `wsdl:port` dell'endpoint corrispondente.</span><span class="sxs-lookup"><span data-stu-id="ebacc-127">An endpoint address can also be represented in WSDL as a WS-Addressing EPR element inside the corresponding endpoint's `wsdl:port` element.</span></span> <span data-ttu-id="ebacc-128">L'EPR contiene l'indirizzo dell'endpoint e qualsiasi proprietà dell'indirizzo.</span><span class="sxs-lookup"><span data-stu-id="ebacc-128">The EPR contains the endpoint's address as well as any address properties.</span></span> <span data-ttu-id="ebacc-129">Per informazioni dettagliate ed esempi, vedere [specificando un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="ebacc-129">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-## Supporto per più binding IIS in .NET Framework 3.5  
- I provider di servizi Internet consentono spesso di ospitare diverse applicazioni nello stesso server e nello stesso sito per aumentare la densità del sito e ridurre il costo totale di proprietà.Queste applicazioni sono in genere associate a indirizzi di base diversi.Un sito Web IIS \(Internet Information Services\) può contenere più applicazioni.Alle applicazioni in un sito è possibile accedere tramite una o più associazioni IIS.  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a><span data-ttu-id="ebacc-130">IIS più supporto dell'associazione in .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="ebacc-130">Multiple IIS Binding Support in .NET Framework 3.5</span></span>  
+ <span data-ttu-id="ebacc-131">I provider di servizi Internet consentono spesso di ospitare diverse applicazioni nello stesso server e nello stesso sito per aumentare la densità del sito e ridurre il costo totale di proprietà.</span><span class="sxs-lookup"><span data-stu-id="ebacc-131">Internet service providers often host many applications on the same server and site to increase the site density and lower total cost of ownership.</span></span> <span data-ttu-id="ebacc-132">Queste applicazioni sono in genere associate a indirizzi di base diversi.</span><span class="sxs-lookup"><span data-stu-id="ebacc-132">These applications are typically bound to different base addresses.</span></span> <span data-ttu-id="ebacc-133">Un sito Web IIS (Internet Information Services) può contenere più applicazioni.</span><span class="sxs-lookup"><span data-stu-id="ebacc-133">An Internet Information Services (IIS) Web site can contain multiple applications.</span></span> <span data-ttu-id="ebacc-134">Alle applicazioni in un sito è possibile accedere tramite una o più associazioni IIS.</span><span class="sxs-lookup"><span data-stu-id="ebacc-134">The applications in a site can be accessed through one or more IIS bindings.</span></span>  
   
- Le associazioni IIS forniscono due tipi di informazioni: un protocollo di associazione e informazioni di associazione.Il protocollo di associazione definisce lo schema sul quale ha luogo la comunicazione, mentre le informazioni di associazione sono utilizzate per accedere al sito.  
+ <span data-ttu-id="ebacc-135">Le associazioni IIS forniscono due tipi di informazioni: un protocollo di associazione e informazioni di associazione.</span><span class="sxs-lookup"><span data-stu-id="ebacc-135">IIS bindings provide two pieces of information: a binding protocol, and binding information.</span></span> <span data-ttu-id="ebacc-136">Il protocollo di associazione definisce lo schema sul quale ha luogo la comunicazione, mentre le informazioni di associazione sono utilizzate per accedere al sito.</span><span class="sxs-lookup"><span data-stu-id="ebacc-136">The binding protocol defines the scheme over which communication occurs, and binding information is the information used to access the site.</span></span>  
   
- Nell'esempio seguente vengono illustrati i componenti che possono essere presenti in un'associazione IIS:  
+ <span data-ttu-id="ebacc-137">Nell'esempio seguente vengono illustrati i componenti che possono essere presenti in un'associazione IIS:</span><span class="sxs-lookup"><span data-stu-id="ebacc-137">The following example shows the components that can be present in an IIS binding:</span></span>  
   
--   Protocollo di associazione: HTTP  
+-   <span data-ttu-id="ebacc-138">Protocollo di associazione: HTTP</span><span class="sxs-lookup"><span data-stu-id="ebacc-138">Binding protocol: HTTP</span></span>  
   
--   Informazioni di associazione: indirizzo IP, porta, intestazione host  
+-   <span data-ttu-id="ebacc-139">Informazioni di associazione: indirizzo IP, porta, intestazione host</span><span class="sxs-lookup"><span data-stu-id="ebacc-139">Binding Information: IP Address, Port, Host header</span></span>  
   
- IIS può specificare più associazioni per ogni sito, il che comporta più indirizzi di base per ogni schema.Prima di [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non erano supportati più indirizzi per uno schema e, nel caso venissero specificati, veniva generata un'eccezione <xref:System.ArgumentException> durante l'attivazione.  
+ <span data-ttu-id="ebacc-140">IIS può specificare più associazioni per ogni sito, il che comporta più indirizzi di base per ogni schema.</span><span class="sxs-lookup"><span data-stu-id="ebacc-140">IIS can specify multiple bindings for each site, which results in multiple base addresses for each scheme.</span></span> <span data-ttu-id="ebacc-141">Prima di [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non erano supportati più indirizzi per uno schema e, nel caso venissero specificati, veniva generata un'eccezione <xref:System.ArgumentException> durante l'attivazione.</span><span class="sxs-lookup"><span data-stu-id="ebacc-141">Prior to [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] did not support multiple addresses for a schema and, if they were specified, threw a <xref:System.ArgumentException> during activation.</span></span>  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] consente ai provider di servizi Internet di ospitare più applicazioni con indirizzi di base diversi per lo stesso schema sullo stesso sito.  
+ <span data-ttu-id="ebacc-142">[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] consente ai provider di servizi Internet di ospitare più applicazioni con indirizzi di base diversi per lo stesso schema sullo stesso sito.</span><span class="sxs-lookup"><span data-stu-id="ebacc-142">The [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] enables Internet service providers to host multiple applications with different base addresses for the same scheme on the same site.</span></span>  
   
- Un sito potrebbe contenere, ad esempio, gli indirizzi di base seguenti:  
+ <span data-ttu-id="ebacc-143">Un sito potrebbe contenere, ad esempio, gli indirizzi di base seguenti:</span><span class="sxs-lookup"><span data-stu-id="ebacc-143">For example, a site could contain the following base addresses:</span></span>  
   
--   http:\/\/payroll.myorg.com\/Service.svc  
+-   <span data-ttu-id="ebacc-144">http://payroll.myorg.com/Service.svc</span><span class="sxs-lookup"><span data-stu-id="ebacc-144">http://payroll.myorg.com/Service.svc</span></span>  
   
--   http:\/\/shipping.myorg.com\/Service.svc  
+-   <span data-ttu-id="ebacc-145">http://shipping.myorg.com/Service.svc</span><span class="sxs-lookup"><span data-stu-id="ebacc-145">http://shipping.myorg.com/Service.svc</span></span>  
   
- Con [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], si specifica un filtro del prefisso a livello di AppDomain nel file di configurazione.A tale scopo, utilizzare l'elemento [\<FiltriPrefissoIndirizzoBase\>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) che contiene un elenco di prefissi.Gli indirizzi di base in ingresso, forniti da IIS, sono filtrati in base all'elenco di prefissi facoltativo.Per impostazione predefinita, quando non è specificato un prefisso, vengono passati tutti gli indirizzi.La specifica del prefisso fa sì che venga passato solo l'indirizzo di base corrispondente per quello schema.  
+ <span data-ttu-id="ebacc-146">Con [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], si specifica un filtro del prefisso a livello di AppDomain nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ebacc-146">With [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], you specify a prefix filter at the AppDomain level in the configuration file.</span></span> <span data-ttu-id="ebacc-147">Eseguire questa operazione con il [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) elemento che contiene un elenco di prefissi.</span><span class="sxs-lookup"><span data-stu-id="ebacc-147">You do this with the [\<baseAddressPrefixFilters>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) element, which contains a list of prefixes.</span></span> <span data-ttu-id="ebacc-148">Gli indirizzi di base in ingresso, forniti da IIS, sono filtrati in base all'elenco di prefissi facoltativo.</span><span class="sxs-lookup"><span data-stu-id="ebacc-148">The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list.</span></span> <span data-ttu-id="ebacc-149">Per impostazione predefinita, quando non è specificato un prefisso, vengono passati tutti gli indirizzi.</span><span class="sxs-lookup"><span data-stu-id="ebacc-149">By default, when a prefix is not specified, all addresses are passed through.</span></span> <span data-ttu-id="ebacc-150">La specifica del prefisso fa sì che venga passato solo l'indirizzo di base corrispondente per quello schema.</span><span class="sxs-lookup"><span data-stu-id="ebacc-150">Specifying the prefix results in only the matching base address for that scheme to be passed through.</span></span>  
   
- Quello che segue è un esempio di codice di configurazione che utilizza i filtri del prefisso.  
+ <span data-ttu-id="ebacc-151">Quello che segue è un esempio di codice di configurazione che utilizza i filtri del prefisso.</span><span class="sxs-lookup"><span data-stu-id="ebacc-151">The following is an example of configuration code that uses the prefix filters.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <serviceHostingEnvironment>  
      <baseAddressPrefixFilters>  
-        <add prefix="net.tcp://payroll.myorg.com:8000"/>  
-        <add prefix="http://shipping.myorg.com:8000"/>  
-    </baseAddressPrefixFilters>  
+        <add prefix="net.tcp://payroll.myorg.com:8000"/>  
+        <add prefix="http://shipping.myorg.com:8000"/>  
+    </baseAddressPrefixFilters>  
   </serviceHostingEnvironment>  
 </system.serviceModel>  
 ```  
   
- Nell'esempio precedente, net.tcp:\/\/payroll.myorg.com:8000 e http:\/\/shipping.myorg.com:8000 sono gli unici indirizzi di base, per i rispettivi schemi, che vengono passati.  
+ <span data-ttu-id="ebacc-152">Nell'esempio precedente, net.tcp://payroll.myorg.com:8000 e http://shipping.myorg.com:8000 sono gli unici indirizzi di base, per i rispettivi schemi, che vengono passati.</span><span class="sxs-lookup"><span data-stu-id="ebacc-152">In the preceding example, net.tcp://payroll.myorg.com:8000 and http://shipping.myorg.com:8000 are the only base addresses, for their respective schemes, which are passed through.</span></span>  
   
- `baseAddressPrefixFilter` non supporta caratteri jolly.  
+ <span data-ttu-id="ebacc-153">`baseAddressPrefixFilter` non supporta caratteri jolly.</span><span class="sxs-lookup"><span data-stu-id="ebacc-153">The `baseAddressPrefixFilter` does not support wildcards.</span></span>  
   
- Gli indirizzi di base forniti da IIS possono disporre di indirizzi associati ad altri schemi non presenti nell'elenco `baseAddressPrefixFilters`.Questi indirizzi non vengono filtrati.  
+ <span data-ttu-id="ebacc-154">Gli indirizzi di base forniti da IIS possono disporre di indirizzi associati ad altri schemi non presenti nell'elenco `baseAddressPrefixFilters`.</span><span class="sxs-lookup"><span data-stu-id="ebacc-154">The base addresses supplied by IIS may have addresses bound to other schemes not present in `baseAddressPrefixFilters` list.</span></span> <span data-ttu-id="ebacc-155">Questi indirizzi non vengono filtrati.</span><span class="sxs-lookup"><span data-stu-id="ebacc-155">These addresses are not filtered out.</span></span>  
   
-## Supporto per più binding IIS in .NET Framework 4 e versione successiva  
- A partire da .NET 4, è possibile abilitare il supporto di più binding in IIS senza dover scegliere un indirizzo di base unico, impostando la proprietà <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> dell'oggetto <xref:System.ServiceModel.ServiceHostingEnvironment> su true.Questo supporto è limitato agli schemi del protocollo HTTP.  
+## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a><span data-ttu-id="ebacc-156">Supporto per più binding IIS in .NET Framework 4 e versioni successive</span><span class="sxs-lookup"><span data-stu-id="ebacc-156">Multiple IIS Binding Support in .NET Framework 4 and later</span></span>  
+ <span data-ttu-id="ebacc-157">A partire da .NET 4, è possibile abilitare il supporto di più binding in IIS senza dover scegliere un indirizzo di base unico, impostando la proprietà <xref:System.ServiceModel.ServiceHostingEnvironment> dell'oggetto <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> su true.</span><span class="sxs-lookup"><span data-stu-id="ebacc-157">Starting in .NET 4, you can enable support for multiple bindings in IIS without having to pick a single base address, by setting <xref:System.ServiceModel.ServiceHostingEnvironment>’s <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> setting to true.</span></span> <span data-ttu-id="ebacc-158">Questo supporto è limitato agli schemi del protocollo HTTP.</span><span class="sxs-lookup"><span data-stu-id="ebacc-158">This support is limited to HTTP protocol schemes.</span></span>  
   
- Di seguito è riportato un esempio di codice di configurazione in cui viene utilizzata la proprietà multipleSiteBindingsEnabled in [\<serviceHostingEnvironment\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
+ <span data-ttu-id="ebacc-159">Di seguito è riportato un esempio di codice di configurazione che utilizza multipleSiteBindingsEnabled in [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).</span><span class="sxs-lookup"><span data-stu-id="ebacc-159">The following is an example of configuration code that uses multipleSiteBindingsEnabled on [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).</span></span>  
   
-```  
-  
+```xml  
 <system.serviceModel>  
-  <serviceHostingEnvironment multipleSiteBindingsEnabled=”true” >  
+  <serviceHostingEnvironment multipleSiteBindingsEnabled="true" >  
   </serviceHostingEnvironment>  
 </system.serviceModel>  
 ```  
   
- Quando questa impostazione viene utilizzata per abilitare più binding di siti, tutte le impostazioni baseAddressPrefixFilters vengono ignorate, sia per i protocolli HTTP sia per quelli non HTTP.  
+ <span data-ttu-id="ebacc-160">Quando questa impostazione viene utilizzata per abilitare più associazioni di siti, tutte le impostazioni baseAddressPrefixFilters vengono ignorate, sia per i protocolli HTTP sia per quelli non HTTP.</span><span class="sxs-lookup"><span data-stu-id="ebacc-160">Any baseAddressPrefixFilters settings are ignored, for both HTTP and non-HTTP protocols, when multiple site bindings are enabled using this setting.</span></span>  
   
- Per dettagli ed esempi, vedere [Supporto delle associazioni a più siti IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) e la proprietà <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
+ <span data-ttu-id="ebacc-161">Per informazioni dettagliate ed esempi, vedere [di supporto di più associazioni di sito IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) e <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.</span><span class="sxs-lookup"><span data-stu-id="ebacc-161">For details and examples, see [Supporting Multiple IIS Site Bindings](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) and <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.</span></span>  
   
-## Estensione dell'indirizzamento nei servizi WCF  
- Nel modello di indirizzamento predefinito dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene utilizzato l'indirizzo URI dell'endpoint per gli scopi seguenti:  
+## <a name="extending-addressing-in-wcf-services"></a><span data-ttu-id="ebacc-162">Estensione dell'indirizzamento nei servizi WCF</span><span class="sxs-lookup"><span data-stu-id="ebacc-162">Extending Addressing in WCF Services</span></span>  
+ <span data-ttu-id="ebacc-163">Nel modello di indirizzamento predefinito dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene utilizzato l'indirizzo URI dell'endpoint per gli scopi seguenti:</span><span class="sxs-lookup"><span data-stu-id="ebacc-163">The default addressing model of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services uses the endpoint address URI for the following purposes:</span></span>  
   
--   Per specificare l'indirizzo di ascolto del servizio, il percorso su cui l'endpoint resta in ascolto dei messaggi.  
+-   <span data-ttu-id="ebacc-164">Per specificare l'indirizzo di ascolto del servizio, il percorso su cui l'endpoint resta in ascolto dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="ebacc-164">To specify the service listening address, the location at which the endpoint listens for messages,</span></span>  
   
--   Per specificare il filtro dell'indirizzo SOAP, l'indirizzo che un endpoint si aspetta come intestazione SOAP.  
+-   <span data-ttu-id="ebacc-165">Per specificare il filtro dell'indirizzo SOAP, l'indirizzo che un endpoint si aspetta come intestazione SOAP.</span><span class="sxs-lookup"><span data-stu-id="ebacc-165">To specify the SOAP address filter, the address an endpoint expects as a SOAP header.</span></span>  
   
- I valori per ognuno di questi scopi possono essere specificati separatamente, consentendo numerose estensioni di indirizzamento a copertura di scenari utili:  
+ <span data-ttu-id="ebacc-166">I valori per ognuno di questi scopi possono essere specificati separatamente, consentendo numerose estensioni di indirizzamento a copertura di scenari utili:</span><span class="sxs-lookup"><span data-stu-id="ebacc-166">The values for each of these purposes can be specified separately, allowing several extensions of addressing that cover useful scenarios:</span></span>  
   
--   Intermediari SOAP: un messaggio inviato da un client attraversa uno o più servizi aggiuntivi che elaborano il messaggio prima che raggiunga la sua destinazione finale.Gli intermediari SOAP possono eseguire numerose attività, ad esempio memorizzazione nella cache, routing, bilanciamento del carico o convalida dello schema sui messaggi.Per realizzare questo scenario, inviare messaggi a un indirizzo fisico separato \(`via`\) destinato all'intermediario piuttosto che a un indirizzo logico \(`wsa:To`\) per la destinazione finale.  
+-   <span data-ttu-id="ebacc-167">Intermediari SOAP: un messaggio inviato da un client attraversa uno o più servizi aggiuntivi che elaborano il messaggio prima che raggiunga la sua destinazione finale.</span><span class="sxs-lookup"><span data-stu-id="ebacc-167">SOAP intermediaries: a message sent by a client traverses one or more additional services that process the message before it reaches its final destination.</span></span> <span data-ttu-id="ebacc-168">Gli intermediari SOAP possono eseguire numerose attività, ad esempio memorizzazione nella cache, routing, bilanciamento del carico o convalida dello schema sui messaggi.</span><span class="sxs-lookup"><span data-stu-id="ebacc-168">SOAP intermediaries can perform various tasks, such as caching, routing, load-balancing, or schema validation on the messages.</span></span> <span data-ttu-id="ebacc-169">Per realizzare questo scenario, inviare messaggi a un indirizzo fisico separato (`via`) destinato all'intermediario piuttosto che a un indirizzo logico (`wsa:To`) per la destinazione finale.</span><span class="sxs-lookup"><span data-stu-id="ebacc-169">This scenario is accomplished by sending messages to a separate physical address (`via`) that targets the intermediary rather than just to a logical address (`wsa:To`) that targets the ultimate destination.</span></span>  
   
--   L'indirizzo di ascolto dell'endpoint è un URI privato ed è impostato su un valore diverso dalla sua proprietà `listenURI`.  
+-   <span data-ttu-id="ebacc-170">L'indirizzo di ascolto dell'endpoint è un URI privato ed è impostato su un valore diverso dalla sua proprietà `listenURI`.</span><span class="sxs-lookup"><span data-stu-id="ebacc-170">The listening address of the endpoint is a private URI and is set to a different value than its `listenURI` property.</span></span>  
   
- L'indirizzo di trasporto specificato da `via` è il percorso al quale dovrebbe inizialmente essere inviato un messaggio mentre si sta dirigendo verso un altro indirizzo remoto specificato dal parametro `to` in cui si trova il servizio.Nella maggior parte degli scenari Internet, l'URI `via` corrisponde alla proprietà <xref:System.ServiceModel.EndpointAddress.Uri%2A> dell'indirizzo finale `to` del servizio.La distinzione tra i due indirizzi è necessaria solo quando è richiesto il routing manuale.  
+ <span data-ttu-id="ebacc-171">L'indirizzo di trasporto specificato da `via` è il percorso al quale dovrebbe inizialmente essere inviato un messaggio mentre si sta dirigendo verso un altro indirizzo remoto specificato dal parametro `to` in cui si trova il servizio.</span><span class="sxs-lookup"><span data-stu-id="ebacc-171">The transport address that the `via` specifies is the location to which a message should initially be sent on its way to some other remote address specified by the `to` parameter at which the service is located.</span></span> <span data-ttu-id="ebacc-172">Nella maggior parte degli scenari Internet, l'URI `via` corrisponde alla proprietà <xref:System.ServiceModel.EndpointAddress.Uri%2A> dell'indirizzo finale `to` del servizio.</span><span class="sxs-lookup"><span data-stu-id="ebacc-172">In most Internet scenarios, the `via` URI is the same as the <xref:System.ServiceModel.EndpointAddress.Uri%2A> property of the final `to` address of the service.</span></span> <span data-ttu-id="ebacc-173">La distinzione tra i due indirizzi è necessaria solo quando è richiesto il routing manuale.</span><span class="sxs-lookup"><span data-stu-id="ebacc-173">You only distinguish between these two addresses when you must do manual routing.</span></span>  
   
-### Intestazioni di indirizzamento  
- Un endpoint può essere indirizzato da una o più intestazioni SOAP oltre che dal proprio URI di base.Ciò è utile, ad esempio, in presenza di scenari di intermediari SOAP in cui per un endpoint viene richiesto che nei relativi client siano incluse intestazioni SOAP destinate agli intermediari.  
+### <a name="addressing-headers"></a><span data-ttu-id="ebacc-174">Intestazioni di indirizzamento</span><span class="sxs-lookup"><span data-stu-id="ebacc-174">Addressing Headers</span></span>  
+ <span data-ttu-id="ebacc-175">Un endpoint può essere indirizzato da una o più intestazioni SOAP oltre che dal proprio URI di base.</span><span class="sxs-lookup"><span data-stu-id="ebacc-175">An endpoint can be addressed by one or more SOAP headers in addition to its basic URI.</span></span> <span data-ttu-id="ebacc-176">Ciò è utile, ad esempio, in presenza di scenari di intermediari SOAP in cui per un endpoint viene richiesto che nei relativi client siano incluse intestazioni SOAP destinate agli intermediari.</span><span class="sxs-lookup"><span data-stu-id="ebacc-176">One set of scenarios where this is useful is a set of SOAP intermediary scenarios where an endpoint requires clients of that endpoint to include SOAP headers targeted at intermediaries.</span></span>  
   
- È possibile definire intestazioni di indirizzo personalizzate in due modi: codice o configurazione:  
+ <span data-ttu-id="ebacc-177">È possibile definire intestazioni di indirizzo personalizzate in due modi: codice o configurazione:</span><span class="sxs-lookup"><span data-stu-id="ebacc-177">You can define custom address headers in two ways—by using either code or configuration:</span></span>  
   
--   Nel codice, creare intestazioni di indirizzo personalizzate utilizzando la classe <xref:System.ServiceModel.Channels.AddressHeader>, quindi utilizzarle nella costruzione di un oggetto <xref:System.ServiceModel.EndpointAddress>.  
+-   <span data-ttu-id="ebacc-178">Nel codice, creare intestazioni di indirizzo personalizzate utilizzando la classe <xref:System.ServiceModel.Channels.AddressHeader>, quindi utilizzarle nella costruzione di un oggetto <xref:System.ServiceModel.EndpointAddress>.</span><span class="sxs-lookup"><span data-stu-id="ebacc-178">In code, create custom address headers by using the <xref:System.ServiceModel.Channels.AddressHeader> class, and then used in the construction of an <xref:System.ServiceModel.EndpointAddress>.</span></span>  
   
--   Nella configurazione, [\<intestazioni\>](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)[\<endpoint\> personalizzate sono specificate come figli dell'elemento](http://msdn.microsoft.com/it-it/13aa23b7-2f08-4add-8dbf-a99f8127c017).  
+-   <span data-ttu-id="ebacc-179">In configurazione personalizzata [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) vengono specificati come elementi figlio del [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.</span><span class="sxs-lookup"><span data-stu-id="ebacc-179">In configuration, custom [\<headers>](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) are specified as children of the [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element.</span></span>  
   
- La configurazione è in genere preferibile al codice, poiché consente di modificare le intestazioni dopo la distribuzione.  
+ <span data-ttu-id="ebacc-180">La configurazione è in genere preferibile al codice, poiché consente di modificare le intestazioni dopo la distribuzione.</span><span class="sxs-lookup"><span data-stu-id="ebacc-180">Configuration is generally preferable to code, as it allows you to change the headers after deployment.</span></span>  
   
-### Indirizzi di ascolto personalizzati  
- È possibile impostare l'indirizzo di ascolto su un valore diverso dall'URI dell'endpoint.Ciò è utile negli scenari di intermediari in cui l'indirizzo SOAP da esporre è quello di un intermediario SOAP pubblico, mentre l'indirizzo su cui l'endpoint è effettivamente in ascolto è un indirizzo di rete privata.  
+### <a name="custom-listening-addresses"></a><span data-ttu-id="ebacc-181">Indirizzi di ascolto personalizzati</span><span class="sxs-lookup"><span data-stu-id="ebacc-181">Custom Listening Addresses</span></span>  
+ <span data-ttu-id="ebacc-182">È possibile impostare l'indirizzo di ascolto su un valore diverso dall'URI dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="ebacc-182">You can set the listening address to a different value than the endpoint’s URI.</span></span> <span data-ttu-id="ebacc-183">Ciò è utile negli scenari di intermediari in cui l'indirizzo SOAP da esporre è quello di un intermediario SOAP pubblico, mentre l'indirizzo su cui l'endpoint è effettivamente in ascolto è un indirizzo di rete privata.</span><span class="sxs-lookup"><span data-stu-id="ebacc-183">This is useful in intermediary scenarios where the SOAP address to be exposed is that of a public SOAP intermediary, whereas the address where the endpoint actually listens is a private network address.</span></span>  
   
- È possibile specificare un indirizzo di ascolto personalizzato utilizzando codice o configurazione:  
+ <span data-ttu-id="ebacc-184">È possibile specificare un indirizzo di ascolto personalizzato utilizzando codice o configurazione:</span><span class="sxs-lookup"><span data-stu-id="ebacc-184">You can specify a custom listening address by using either code or configuration:</span></span>  
   
--   Nel codice, specificare un indirizzo di ascolto personalizzato aggiungendo una classe <xref:System.ServiceModel.Description.ClientViaBehavior> alla raccolta di comportamenti dell'endpoint.  
+-   <span data-ttu-id="ebacc-185">Nel codice, specificare un indirizzo di ascolto personalizzato aggiungendo una classe <xref:System.ServiceModel.Description.ClientViaBehavior> alla raccolta di comportamenti dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="ebacc-185">In code, specify a custom listening address by adding a <xref:System.ServiceModel.Description.ClientViaBehavior> class to the endpoint’s behavior collection.</span></span>  
   
--   Nella configurazione, specificare un indirizzo di ascolto personalizzato con l'attributo `ListenUri` dell'elemento [\<endpoint\>](http://msdn.microsoft.com/it-it/13aa23b7-2f08-4add-8dbf-a99f8127c017) del servizio.  
+-   <span data-ttu-id="ebacc-186">Nella configurazione, specificare un indirizzo di ascolto personalizzato con il `ListenUri` attributo del servizio [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.</span><span class="sxs-lookup"><span data-stu-id="ebacc-186">In configuration, specify a custom listening address with the `ListenUri` attribute of the service [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element.</span></span>  
   
-### Filtro dell'indirizzo SOAP personalizzato  
- <xref:System.ServiceModel.EndpointAddress.Uri%2A> viene utilizzato insieme a una proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> per definire il filtro dell'indirizzo SOAP di un endpoint \(<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>\).Per impostazione predefinita, questo filtro consente di verificare che un messaggio in arrivo disponga di un'intestazione del messaggio `To` che corrisponde all'URI dell'endpoint e che nel messaggio siano presenti tutte le intestazioni dell'endpoint richieste.  
+### <a name="custom-soap-address-filter"></a><span data-ttu-id="ebacc-187">Filtro dell'indirizzo SOAP personalizzato</span><span class="sxs-lookup"><span data-stu-id="ebacc-187">Custom SOAP Address Filter</span></span>  
+ <span data-ttu-id="ebacc-188"><xref:System.ServiceModel.EndpointAddress.Uri%2A> viene utilizzato insieme a una proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> per definire il filtro dell'indirizzo SOAP di un endpoint (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>).</span><span class="sxs-lookup"><span data-stu-id="ebacc-188">The <xref:System.ServiceModel.EndpointAddress.Uri%2A> is used in conjunction with any <xref:System.ServiceModel.EndpointAddress.Headers%2A> property to define an endpoint’s SOAP address filter (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>).</span></span> <span data-ttu-id="ebacc-189">Per impostazione predefinita, questo filtro consente di verificare che un messaggio in arrivo disponga di un'intestazione del messaggio `To` che corrisponde all'URI dell'endpoint e che nel messaggio siano presenti tutte le intestazioni dell'endpoint richieste.</span><span class="sxs-lookup"><span data-stu-id="ebacc-189">By default, this filter verifies that an incoming message has a `To` message header that matches the endpoint’s URI and that all of the required endpoint headers are present in the message.</span></span>  
   
- In alcuni scenari, un endpoint riceve tutti i messaggi che arrivano sul trasporto sottostante e non solo quelli con l'intestazione `To` appropriata.Affinché ciò sia possibile, l'utente può utilizzare la classe <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
+ <span data-ttu-id="ebacc-190">In alcuni scenari, un endpoint riceve tutti i messaggi che arrivano sul trasporto sottostante e non solo quelli con l'intestazione `To` appropriata.</span><span class="sxs-lookup"><span data-stu-id="ebacc-190">In some scenarios, an endpoint receives all messages that arrive on the underlying transport, and not just those with the appropriate `To` header.</span></span> <span data-ttu-id="ebacc-191">Affinché ciò sia possibile, l'utente può utilizzare la classe <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.</span><span class="sxs-lookup"><span data-stu-id="ebacc-191">To enable this, the user can use the <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> class.</span></span>  
   
-## Vedere anche  
- [Specifica di un indirizzo endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)   
- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="ebacc-192">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ebacc-192">See Also</span></span>  
+ [<span data-ttu-id="ebacc-193">Specifica di un indirizzo dell'endpoint</span><span class="sxs-lookup"><span data-stu-id="ebacc-193">Specifying an Endpoint Address</span></span>](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+ [<span data-ttu-id="ebacc-194">L'autenticazione e identità del servizio</span><span class="sxs-lookup"><span data-stu-id="ebacc-194">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

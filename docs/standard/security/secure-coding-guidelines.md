@@ -1,86 +1,90 @@
 ---
-title: "Secure Coding Guidelines | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "managed wrapper to native code implementation"
-  - "secure coding"
-  - "reusable components"
-  - "library code that exposes protected resources"
-  - "code, security"
-  - "code security"
-  - "secure coding, options"
-  - "components [.NET Framework], security"
-  - "code security, options"
-  - "security-neutral code"
-  - "security [.NET Framework], coding guidelines"
+title: Linee guida per la generazione di codice sicuro
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- managed wrapper to native code implementation
+- secure coding
+- reusable components
+- library code that exposes protected resources
+- code, security
+- code security
+- secure coding, options
+- components [.NET Framework], security
+- code security, options
+- security-neutral code
+- security [.NET Framework], coding guidelines
 ms.assetid: 4f882d94-262b-4494-b0a6-ba9ba1f5f177
-caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "20"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3be1a51db31f18255eabe633cdeaeb860f9c8ce7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Secure Coding Guidelines
-La sicurezza basata sull'evidenza e la sicurezza per l'accesso al codice forniscono meccanismi espliciti molto efficaci per implementare la sicurezza. Nella maggior parte dei casi, per proteggere il codice delle applicazioni è sufficiente l'infrastruttura implementata da .NET Framework. In alcuni casi è tuttavia necessaria una sicurezza aggiuntiva specifica per l'applicazione, creata mediante l'estensione del sistema di sicurezza o tramite metodi ad hoc.  
+# <a name="secure-coding-guidelines"></a><span data-ttu-id="c8539-102">Linee guida per la generazione di codice sicuro</span><span class="sxs-lookup"><span data-stu-id="c8539-102">Secure Coding Guidelines</span></span>
+<span data-ttu-id="c8539-103">La sicurezza basata sull'evidenza e la sicurezza per l'accesso al codice forniscono meccanismi espliciti molto efficaci per implementare la sicurezza.</span><span class="sxs-lookup"><span data-stu-id="c8539-103">Evidence-based security and code access security provide very powerful, explicit mechanisms to implement security.</span></span> <span data-ttu-id="c8539-104">Nella maggior parte dei casi, per proteggere il codice delle applicazioni è sufficiente l'infrastruttura implementata da .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c8539-104">Most application code can simply use the infrastructure implemented by the .NET Framework.</span></span> <span data-ttu-id="c8539-105">In alcuni casi è tuttavia necessaria una sicurezza aggiuntiva specifica per l'applicazione, creata mediante l'estensione del sistema di sicurezza o tramite metodi ad hoc.</span><span class="sxs-lookup"><span data-stu-id="c8539-105">In some cases, additional application-specific security is required, built either by extending the security system or by using new ad hoc methods.</span></span>  
   
- L'uso delle autorizzazioni applicate da .NET Framework e di altri tipi di sicurezza imposta nel codice consente di creare barriere che impediscono l'ottenimento di informazioni da parte di malware o l'esecuzione di altre operazioni non desiderate. È inoltre necessario raggiungere un compromesso tra sicurezza e usabilità del codice in tutti gli scenari d'uso di codice attendibile.  
+ <span data-ttu-id="c8539-106">L'uso delle autorizzazioni applicate da .NET Framework e di altri tipi di sicurezza imposta nel codice consente di creare barriere che impediscono l'ottenimento di informazioni da parte di malware o l'esecuzione di altre operazioni non desiderate.</span><span class="sxs-lookup"><span data-stu-id="c8539-106">Using the .NET Framework-enforced permissions and other enforcement in your code, you should erect barriers to prevent malicious code from obtaining information that you do not want it to have or performing other undesirable actions.</span></span> <span data-ttu-id="c8539-107">È inoltre necessario raggiungere un compromesso tra sicurezza e usabilità del codice in tutti gli scenari d'uso di codice attendibile.</span><span class="sxs-lookup"><span data-stu-id="c8539-107">Additionally, you must strike a balance between security and usability in all the expected scenarios using trusted code.</span></span>  
   
- In questa panoramica vengono descritti i diversi metodi di progettazione del codice per l'uso del sistema di sicurezza.  
+ <span data-ttu-id="c8539-108">In questa panoramica vengono descritti i diversi metodi di progettazione del codice per l'uso del sistema di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="c8539-108">This overview describes the different ways code can be designed to work with the security system.</span></span>  
   
-> [!NOTE]
->  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per altre informazioni su queste modifiche, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+## <a name="securing-resource-access"></a><span data-ttu-id="c8539-109">Protezione dell'accesso alle risorse</span><span class="sxs-lookup"><span data-stu-id="c8539-109">Securing Resource Access</span></span>  
+ <span data-ttu-id="c8539-110">Durante la progettazione e la scrittura del codice, è necessario proteggere e limitare l'accesso del codice alle risorse, soprattutto quando si usa o chiama codice di origine sconosciuta.</span><span class="sxs-lookup"><span data-stu-id="c8539-110">When designing and writing your code, you need to protect and limit the access that code has to resources, especially when using or invoking code of unknown origin.</span></span> <span data-ttu-id="c8539-111">Le tecniche seguenti consentono di verificare che il codice sia sicuro:</span><span class="sxs-lookup"><span data-stu-id="c8539-111">So, keep in mind the following techniques to ensure your code is secure:</span></span>  
   
-## Sicurezza dall'accesso di codice e codice parzialmente attendibile  
- .NET Framework fornisce un meccanismo denominato sicurezza dall'accesso di codice, che consente di applicare vari livelli di attendibilità a codice diverso in esecuzione nella stessa applicazione.  Poiché non garantisce l'isolamento del codice, la sicurezza dall'accesso di codice in .NET Framework non va usata come limite di sicurezza con codice parzialmente attendibile, in particolare con codice di origine sconosciuta. Non è consigliabile caricare ed eseguire codice di origine sconosciuta in assenza di misure di sicurezza alternative.  
+-   <span data-ttu-id="c8539-112">Non usare Sicurezza per l'accesso al codice (CAS, Code Access Security).</span><span class="sxs-lookup"><span data-stu-id="c8539-112">Do not use Code Access Security (CAS).</span></span>  
   
- Questi criteri si applicano a tutte le versioni di .NET Framework, ma non alla versione di .NET Framework inclusa in Silverlight.  
+-   <span data-ttu-id="c8539-113">Non usare codice parzialmente attendibile.</span><span class="sxs-lookup"><span data-stu-id="c8539-113">Do not use partial trusted code.</span></span>  
   
-## Codice indipendente dalla sicurezza  
- Il codice indipendente dalla sicurezza non ha elementi espliciti in comune con il sistema di sicurezza e viene eseguito a prescindere dalle autorizzazioni ricevute Anche se le applicazioni che non riescono a intercettare eccezioni associate alle operazioni protette, come l'uso di file o le operazioni in rete, possono avere come effetto eccezioni non gestite, il codice indipendente dalla sicurezza è comunque in grado di sfruttare le tecnologie di sicurezza di .NET Framework.  
+-   <span data-ttu-id="c8539-114">Non usare Servizi remoti .NET.</span><span class="sxs-lookup"><span data-stu-id="c8539-114">Do not use .NET Remoting.</span></span>  
   
- Una libreria indipendente dalla sicurezza dispone di caratteristiche speciali che è necessario comprendere. Si supponga che nella libreria siano forniti elementi API che consentano di usare file o chiamare codice non gestito. Se al codice non è associata l'autorizzazione corrispondente, questo non verrà eseguito nel modo descritto. Tuttavia, anche al codice viene concessa l'autorizzazione, il codice delle applicazioni da cui tale codice viene chiamato deve disporre della stessa autorizzazione per funzionare. Se il codice chiamante non dispone dell'autorizzazione appropriata, il percorso chiamate nello stack della sicurezza per l'accesso al codice genera un oggetto <xref:System.Security.SecurityException>.  
+-   <span data-ttu-id="c8539-115">Non usare DCOM (Distributed Component Object Model).</span><span class="sxs-lookup"><span data-stu-id="c8539-115">Do not use Distributed Component Object Model (DCOM).</span></span>  
   
-## Codice di applicazioni non riutilizzabile  
- Se il codice fa parte di un'applicazione che non verrà richiamata da altro codice, la sicurezza è semplice e potrebbe non essere necessario scrivere codice speciale. Tenere comunque presente che il codice può essere chiamato da codice dannoso. Anche se la sicurezza per l'accesso al codice può impedire a codice dannoso di accedere alle risorse, con questo codice è comunque possibile leggere i valori contenuti nei campi o nelle proprietà che possono rappresentare informazioni sensibili.  
+-   <span data-ttu-id="c8539-116">Non utilizzare formattori binari.</span><span class="sxs-lookup"><span data-stu-id="c8539-116">Do not use binary formatters.</span></span>  
   
- Se inoltre il codice accetta input da Internet o da altre fonti inaffidabili, è opportuno evitare input dannosi.  
+ <span data-ttu-id="c8539-117">La sicurezza dall'accesso di codice e il codice SecurityTransparent non saranno supportati come limiti di sicurezza con codice parzialmente attendibile.</span><span class="sxs-lookup"><span data-stu-id="c8539-117">Code Access Security and Security-Transparent Code will not be supported as a security boundary with partially trusted code.</span></span> <span data-ttu-id="c8539-118">Non è consigliabile caricare ed eseguire codice di origine sconosciuta in assenza di misure di sicurezza alternative.</span><span class="sxs-lookup"><span data-stu-id="c8539-118">We advise against loading and executing code of unknown origins without putting alternative security measures in place.</span></span> <span data-ttu-id="c8539-119">Le misure di protezione alternative sono:</span><span class="sxs-lookup"><span data-stu-id="c8539-119">The alternative security measures are:</span></span>  
   
-## Wrapper gestiti nell'implementazione di codice nativo  
- In genere, in uno scenario di questo tipo, viene implementata una funzionalità utile nel codice nativo da rendere disponibile per il codice gestito. I wrapper gestiti possono essere scritti in modo semplice usando platform invoke o l'interoperabilità COM. Per la riuscita di questa operazione è tuttavia necessario che i chiamanti dei wrapper dispongano di diritti per il codice non gestito. In base ai criteri predefiniti, il codice scaricato da una rete Intranet o da Internet non funzionerà con i wrapper.  
+-   <span data-ttu-id="c8539-120">Virtualizzazione</span><span class="sxs-lookup"><span data-stu-id="c8539-120">Virtualization</span></span>  
   
- Invece di assegnare a tutte le applicazioni che impiegano i wrapper diritti di codice non gestito, è preferibile fornire questi diritti solo al codice wrapper. Se la funzionalità sottostante non espone alcuna risorsa e l'implementazione è probabilmente sicura, per il wrapper è sufficiente l'asserzione dei diritti, che consente la chiamata tramite codice. Quando sono coinvolte le risorse, il codice della sicurezza deve essere analogo a quello di libreria descritto nella sezione successiva. Poiché il wrapper può esporre i chiamanti a queste risorse, la verifica attenta della sicurezza del codice nativo è necessaria e costituisce uno dei compiti del wrapper.  
+-   <span data-ttu-id="c8539-121">AppContainers</span><span class="sxs-lookup"><span data-stu-id="c8539-121">AppContainers</span></span>  
   
-## Codice di libreria che espone risorse protette  
- Si tratta dell'approccio più efficace e potenzialmente pericoloso, se eseguito in modo non corretto, della codifica della sicurezza: la libreria funge da interfaccia per l'accesso tramite codice ad alcune risorse non altrimenti disponibili, così come le classi di .NET Framework impongono le autorizzazioni relative alle risorse che usano. Se si espone una risorsa, è necessario per prima cosa esigere tramite codice l'autorizzazione adeguata alla risorsa \(in altre parole, eseguire un controllo di sicurezza\) e quindi eseguire un'asserzione dei relativi diritti per eseguire l'operazione vera e propria.  
+-   <span data-ttu-id="c8539-122">Utenti e autorizzazioni del sistema operativo (SO)</span><span class="sxs-lookup"><span data-stu-id="c8539-122">Operating system (OS) users and permissions</span></span>  
   
-## Argomenti correlati  
+-   <span data-ttu-id="c8539-123">Contenitori Hyper-V</span><span class="sxs-lookup"><span data-stu-id="c8539-123">Hyper-V containers</span></span>  
   
-|Titolo|Descrizione|  
-|------------|-----------------|  
-|[How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)|Viene illustrato come eseguire un'applicazione parzialmente attendibile in un ambiente di sicurezza con restrizioni, in cui le autorizzazioni di accesso al codice concesse all'applicazione sono limitate.|  
-|[Securing State Data](../../../docs/standard/security/securing-state-data.md)|Viene descritto come proteggere membri privati.|  
-|[Securing Method Access](../../../docs/framework/misc/securing-method-access.md)|Viene descritto come proteggere i metodi dalle chiamate da parte di codice parzialmente attendibile.|  
-|[Securing Wrapper Code](../../../docs/framework/misc/securing-wrapper-code.md)|Vengono descritti argomenti relativi alla sicurezza del codice che esegue il wrapping di altro codice.|  
-|[Security and Public Read\-only Array Fields](../../../docs/framework/misc/security-and-public-read-only-array-fields.md)|Vengono descritte le problematiche relative alla sicurezza per il codice che usa matrici pubbliche di sola lettura disponibili nelle librerie .NET Framework.|  
-|[Securing Exception Handling](../../../docs/framework/misc/securing-exception-handling.md)|Vengono descritti aspetti della sicurezza relativi alla gestione delle eccezioni.|  
-|[Security and User Input](../../../docs/standard/security/security-and-user-input.md)|Vengono descritti argomenti relativi alla sicurezza delle applicazioni che accettano input dell'utente.|  
-|[Security and Remoting Considerations](../../../docs/framework/misc/security-and-remoting-considerations.md)|Vengono descritti argomenti relativi alla sicurezza delle applicazioni che comunicano tra domini di applicazioni.|  
-|[Security and Serialization](../../../docs/framework/misc/security-and-serialization.md)|Vengono descritti aspetti della sicurezza relativi alla serializzazione degli oggetti.|  
-|[Security and Race Conditions](../../../docs/standard/security/security-and-race-conditions.md)|Viene descritto come evitare race condition nel codice.|  
-|[Security and On\-the\-Fly Code Generation](../../../docs/standard/security/security-and-on-the-fly-code-generation.md)|Vengono descritti aspetti della sicurezza relativi alle applicazioni che consentono di generare codice dinamico.|  
-|[Security and Setup Issues](../Topic/Security%20and%20Setup%20Issues.md)|Vengono illustrate considerazioni relative a test e installazione dell'applicazione.|  
-|[Code Access Security](../../../docs/framework/misc/code-access-security.md)|Viene descritta in modo dettagliato la sicurezza dall'accesso di codice di .NET Framework e viene illustrato come usarla nel codice.|  
-|[Role\-Based Security](../../../docs/standard/security/role-based-security.md)|Viene descritta in modo dettagliato la sicurezza basata sui ruoli di .NET Framework e viene illustrato come usarla nel codice.|
+## <a name="security-neutral-code"></a><span data-ttu-id="c8539-124">Codice indipendente dalla sicurezza</span><span class="sxs-lookup"><span data-stu-id="c8539-124">Security-Neutral Code</span></span>  
+ <span data-ttu-id="c8539-125">Il codice indipendente dalla sicurezza non ha elementi espliciti in comune con il sistema di sicurezza</span><span class="sxs-lookup"><span data-stu-id="c8539-125">Security-neutral code does nothing explicit with the security system.</span></span> <span data-ttu-id="c8539-126">e viene eseguito a prescindere dalle autorizzazioni ricevute</span><span class="sxs-lookup"><span data-stu-id="c8539-126">It runs with whatever permissions it receives.</span></span> <span data-ttu-id="c8539-127">Anche se le applicazioni che non riescono a intercettare eccezioni associate alle operazioni protette, come l'uso di file o le operazioni in rete, possono avere come effetto eccezioni non gestite, il codice indipendente dalla sicurezza è comunque in grado di sfruttare le tecnologie di sicurezza di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c8539-127">Although applications that fail to catch security exceptions associated with protected operations (such as using files, networking, and so on) can result in an unhandled exception, security-neutral code still takes advantage of the .NET Framework security technologies.</span></span>  
+  
+ <span data-ttu-id="c8539-128">Una libreria indipendente dalla sicurezza dispone di caratteristiche speciali che è necessario comprendere.</span><span class="sxs-lookup"><span data-stu-id="c8539-128">A security-neutral library has special characteristics that you should understand.</span></span> <span data-ttu-id="c8539-129">Si supponga che nella libreria siano forniti elementi API che consentano di usare file o chiamare codice non gestito. Se al codice non è associata l'autorizzazione corrispondente, questo non verrà eseguito nel modo descritto.</span><span class="sxs-lookup"><span data-stu-id="c8539-129">Suppose your library provides API elements that use files or call unmanaged code; if your code does not have the corresponding permission, it will not run as described.</span></span> <span data-ttu-id="c8539-130">Tuttavia, anche al codice viene concessa l'autorizzazione, il codice delle applicazioni da cui tale codice viene chiamato deve disporre della stessa autorizzazione per funzionare.</span><span class="sxs-lookup"><span data-stu-id="c8539-130">However, even if the code has the permission, any application code that calls it must have the same permission in order to work.</span></span> <span data-ttu-id="c8539-131">Se il codice chiamante non dispone dell'autorizzazione appropriata, un <xref:System.Security.SecurityException> viene visualizzato in seguito il percorso stack di protezione accesso di codice.</span><span class="sxs-lookup"><span data-stu-id="c8539-131">If the calling code does not have the right permission, a <xref:System.Security.SecurityException> appears as a result of the code access security stack walk.</span></span>  
+  
+## <a name="application-code-that-is-not-a-reusable-component"></a><span data-ttu-id="c8539-132">Codice di applicazioni non riutilizzabile</span><span class="sxs-lookup"><span data-stu-id="c8539-132">Application Code That Is Not a Reusable Component</span></span>  
+ <span data-ttu-id="c8539-133">Se il codice fa parte di un'applicazione che non verrà richiamata da altro codice, la sicurezza è semplice e potrebbe non essere necessario scrivere codice speciale.</span><span class="sxs-lookup"><span data-stu-id="c8539-133">If your code is part of an application that will not be called by other code, security is simple and special coding might not be required.</span></span> <span data-ttu-id="c8539-134">Tenere comunque presente che il codice può essere chiamato da codice dannoso.</span><span class="sxs-lookup"><span data-stu-id="c8539-134">However, remember that malicious code can call your code.</span></span> <span data-ttu-id="c8539-135">Anche se la sicurezza per l'accesso al codice può impedire a codice dannoso di accedere alle risorse, con questo codice è comunque possibile leggere i valori contenuti nei campi o nelle proprietà che possono rappresentare informazioni sensibili.</span><span class="sxs-lookup"><span data-stu-id="c8539-135">While code access security might stop malicious code from accessing resources, such code could still read values of your fields or properties that might contain sensitive information.</span></span>  
+  
+ <span data-ttu-id="c8539-136">Se inoltre il codice accetta input da Internet o da altre fonti inaffidabili, è opportuno evitare input dannosi.</span><span class="sxs-lookup"><span data-stu-id="c8539-136">Additionally, if your code accepts user input from the Internet or other unreliable sources, you must be careful about malicious input.</span></span>  
+  
+## <a name="managed-wrapper-to-native-code-implementation"></a><span data-ttu-id="c8539-137">Wrapper gestiti nell'implementazione di codice nativo</span><span class="sxs-lookup"><span data-stu-id="c8539-137">Managed Wrapper to Native Code Implementation</span></span>  
+ <span data-ttu-id="c8539-138">In genere, in uno scenario di questo tipo, viene implementata una funzionalità utile nel codice nativo da rendere disponibile per il codice gestito.</span><span class="sxs-lookup"><span data-stu-id="c8539-138">Typically in this scenario, some useful functionality is implemented in native code that you want to make available to managed code.</span></span> <span data-ttu-id="c8539-139">I wrapper gestiti possono essere scritti in modo semplice usando platform invoke o l'interoperabilità COM.</span><span class="sxs-lookup"><span data-stu-id="c8539-139">Managed wrappers are easy to write using either platform invoke or COM interop.</span></span> <span data-ttu-id="c8539-140">Per la riuscita di questa operazione è tuttavia necessario che i chiamanti dei wrapper dispongano di diritti per il codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="c8539-140">However, if you do this, callers of your wrappers must have unmanaged code rights in order to succeed.</span></span> <span data-ttu-id="c8539-141">In base ai criteri predefiniti, il codice scaricato da una rete Intranet o da Internet non funzionerà con i wrapper.</span><span class="sxs-lookup"><span data-stu-id="c8539-141">Under default policy, this means that code downloaded from an intranet or the Internet will not work with the wrappers.</span></span>  
+  
+ <span data-ttu-id="c8539-142">Invece di assegnare a tutte le applicazioni che impiegano i wrapper diritti di codice non gestito, è preferibile fornire questi diritti solo al codice wrapper.</span><span class="sxs-lookup"><span data-stu-id="c8539-142">Instead of giving all applications that use these wrappers unmanaged code rights, it is better to give these rights only to the wrapper code.</span></span> <span data-ttu-id="c8539-143">Se la funzionalità sottostante non espone alcuna risorsa e l'implementazione è probabilmente sicura, per il wrapper è sufficiente l'asserzione dei diritti, che consente la chiamata tramite codice.</span><span class="sxs-lookup"><span data-stu-id="c8539-143">If the underlying functionality exposes no resources and the implementation is likewise safe, the wrapper only needs to assert its rights, which enables any code to call through it.</span></span> <span data-ttu-id="c8539-144">Quando sono coinvolte le risorse, il codice della sicurezza deve essere analogo a quello di libreria descritto nella sezione successiva.</span><span class="sxs-lookup"><span data-stu-id="c8539-144">When resources are involved, security coding should be the same as the library code case described in the next section.</span></span> <span data-ttu-id="c8539-145">Poiché il wrapper può esporre i chiamanti a queste risorse, la verifica attenta della sicurezza del codice nativo è necessaria e costituisce uno dei compiti del wrapper.</span><span class="sxs-lookup"><span data-stu-id="c8539-145">Because the wrapper is potentially exposing callers to these resources, careful verification of the safety of the native code is necessary and is the wrapper's responsibility.</span></span>  
+  
+## <a name="library-code-that-exposes-protected-resources"></a><span data-ttu-id="c8539-146">Codice di libreria che espone risorse protette</span><span class="sxs-lookup"><span data-stu-id="c8539-146">Library Code That Exposes Protected Resources</span></span>  
+ <span data-ttu-id="c8539-147">Si tratta dell'approccio più efficace e potenzialmente pericoloso, se eseguito in modo non corretto, della codifica della sicurezza: la libreria funge da interfaccia per l'accesso tramite codice ad alcune risorse non altrimenti disponibili, così come le classi di .NET Framework impongono le autorizzazioni relative alle risorse che usano.</span><span class="sxs-lookup"><span data-stu-id="c8539-147">This is the most powerful and hence potentially dangerous (if done incorrectly) approach for security coding: Your library serves as an interface for other code to access certain resources that are not otherwise available, just as the classes of the .NET Framework enforce permissions for the resources they use.</span></span> <span data-ttu-id="c8539-148">Se si espone una risorsa, è necessario per prima cosa esigere tramite codice l'autorizzazione adeguata alla risorsa (in altre parole, eseguire un controllo di sicurezza) e quindi eseguire un'asserzione dei relativi diritti per eseguire l'operazione vera e propria.</span><span class="sxs-lookup"><span data-stu-id="c8539-148">Wherever you expose a resource, your code must first demand the permission appropriate to the resource (that is, it must perform a security check) and then typically assert its rights to perform the actual operation.</span></span>  
+  
+## <a name="related-topics"></a><span data-ttu-id="c8539-149">Argomenti correlati</span><span class="sxs-lookup"><span data-stu-id="c8539-149">Related Topics</span></span>  
+  
+|<span data-ttu-id="c8539-150">Titolo</span><span class="sxs-lookup"><span data-stu-id="c8539-150">Title</span></span>|<span data-ttu-id="c8539-151">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c8539-151">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="c8539-152">Protezione dei dati di stato</span><span class="sxs-lookup"><span data-stu-id="c8539-152">Securing State Data</span></span>](../../../docs/standard/security/securing-state-data.md)|<span data-ttu-id="c8539-153">Viene descritto come proteggere membri privati.</span><span class="sxs-lookup"><span data-stu-id="c8539-153">Describes how to protect private members.</span></span>|  
+|[<span data-ttu-id="c8539-154">Sicurezza e input dell'utente</span><span class="sxs-lookup"><span data-stu-id="c8539-154">Security and User Input</span></span>](../../../docs/standard/security/security-and-user-input.md)|<span data-ttu-id="c8539-155">Vengono descritti argomenti relativi alla sicurezza delle applicazioni che accettano input dell'utente.</span><span class="sxs-lookup"><span data-stu-id="c8539-155">Describes security concerns for applications that accept user input.</span></span>|  
+|[<span data-ttu-id="c8539-156">Sicurezza e race condition</span><span class="sxs-lookup"><span data-stu-id="c8539-156">Security and Race Conditions</span></span>](../../../docs/standard/security/security-and-race-conditions.md)|<span data-ttu-id="c8539-157">Viene descritto come evitare race condition nel codice.</span><span class="sxs-lookup"><span data-stu-id="c8539-157">Describes how to avoid race conditions in your code.</span></span>|  
+|[<span data-ttu-id="c8539-158">Sicurezza e generazione di codice immediata</span><span class="sxs-lookup"><span data-stu-id="c8539-158">Security and On-the-Fly Code Generation</span></span>](../../../docs/standard/security/security-and-on-the-fly-code-generation.md)|<span data-ttu-id="c8539-159">Vengono descritti aspetti della sicurezza relativi alle applicazioni che consentono di generare codice dinamico.</span><span class="sxs-lookup"><span data-stu-id="c8539-159">Describes security concerns for applications that generate dynamic code.</span></span>|  
+|[<span data-ttu-id="c8539-160">Sicurezza basata sui ruoli</span><span class="sxs-lookup"><span data-stu-id="c8539-160">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)|<span data-ttu-id="c8539-161">Viene descritta in modo dettagliato la sicurezza basata sui ruoli di .NET Framework e viene illustrato come usarla nel codice.</span><span class="sxs-lookup"><span data-stu-id="c8539-161">Describes .NET Framework role-based security in detail and provides instructions for using it in your code.</span></span>|

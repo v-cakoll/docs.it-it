@@ -1,81 +1,84 @@
 ---
-title: "Elemento &lt;bindingRedirect&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#bindingRedirect"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bindingRedirect> (elemento)"
-  - "bindingRedirect (elemento)"
-  - "tag contenitore, <bindingRedirect> (elemento)"
+title: '&lt;bindingRedirect&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#bindingRedirect
+helpviewer_keywords:
+- <bindingRedirect> element
+- container tags, <bindingRedirect> element
+- bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3bc8abc019ddb271c8c1246b280be754585bfd61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;bindingRedirect&gt;
-Reindirizza una versione dell'assembly in un'altra.  
+# <a name="ltbindingredirectgt-element"></a><span data-ttu-id="3b132-102">&lt;bindingRedirect&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="3b132-102">&lt;bindingRedirect&gt; Element</span></span>
+<span data-ttu-id="3b132-103">Reindirizza una versione dell'assembly in un'altra.</span><span class="sxs-lookup"><span data-stu-id="3b132-103">Redirects one assembly version to another.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="3b132-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3b132-104">\<configuration></span></span>  
+<span data-ttu-id="3b132-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="3b132-105">\<runtime></span></span>  
+<span data-ttu-id="3b132-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="3b132-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="3b132-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="3b132-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="3b132-108">\<bindingRedirect ></span><span class="sxs-lookup"><span data-stu-id="3b132-108">\<bindingRedirect></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="3b132-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3b132-109">Syntax</span></span>  
   
-   <bindingRedirect    
+```xml  
+   <bindingRedirect    
 oldVersion="existing assembly version"  
 newVersion="new assembly version"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3b132-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="3b132-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="3b132-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="3b132-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="3b132-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="3b132-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="3b132-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="3b132-113">Attribute</span></span>|<span data-ttu-id="3b132-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3b132-114">Description</span></span>|  
 |---------------|-----------------|  
-|`oldVersion`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly richiesta in origine.  Il formato del numero di versione dell'assembly è *major.minor.build.revision*.  I valori validi per ogni parte del numero di versione sono compresi tra 0 e 65535.<br /><br /> È inoltre possibile specificare una gamma di versioni nel seguente formato:<br /><br /> *n.n.n.n \- n.n.n.n*|  
-|`newVersion`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly da utilizzare al posto della versione richiesta in origine nel formato: *n.n.n.n*<br /><br /> Questo valore può specificare una versione precedente di `oldVersion`.|  
+|`oldVersion`|<span data-ttu-id="3b132-115">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="3b132-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="3b132-116">Specifica la versione dell'assembly richiesta in origine.</span><span class="sxs-lookup"><span data-stu-id="3b132-116">Specifies the version of the assembly that was originally requested.</span></span> <span data-ttu-id="3b132-117">Il formato di un numero di versione di assembly è *revisione*.</span><span class="sxs-lookup"><span data-stu-id="3b132-117">The format of an assembly version number is *major.minor.build.revision*.</span></span> <span data-ttu-id="3b132-118">I valori validi per ogni parte del numero di versione sono compresi tra 0 e 65535.</span><span class="sxs-lookup"><span data-stu-id="3b132-118">Valid values for each part of this version number are 0 to 65535.</span></span><br /><br /> <span data-ttu-id="3b132-119">È inoltre possibile specificare una gamma di versioni nel seguente formato:</span><span class="sxs-lookup"><span data-stu-id="3b132-119">You can also specify a range of versions in the following format:</span></span><br /><br /> <span data-ttu-id="3b132-120">*n.n.n. n - n.n.n. n*</span><span class="sxs-lookup"><span data-stu-id="3b132-120">*n.n.n.n - n.n.n.n*</span></span>|  
+|`newVersion`|<span data-ttu-id="3b132-121">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="3b132-121">Required attribute.</span></span><br /><br /> <span data-ttu-id="3b132-122">Specifica la versione dell'assembly da utilizzare invece la versione richiesta originariamente nel formato: *n.n.n. n*</span><span class="sxs-lookup"><span data-stu-id="3b132-122">Specifies the version of the assembly to use instead of the originally requested version in the format: *n.n.n.n*</span></span><br /><br /> <span data-ttu-id="3b132-123">Questo valore può specificare una versione precedente di `oldVersion`.</span><span class="sxs-lookup"><span data-stu-id="3b132-123">This value can specify an earlier version than `oldVersion`.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="3b132-124">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="3b132-124">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|Nessuno||  
+|<span data-ttu-id="3b132-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="3b132-125">Element</span></span>|<span data-ttu-id="3b132-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3b132-126">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="3b132-127">Nessuno</span><span class="sxs-lookup"><span data-stu-id="3b132-127">None</span></span>||  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="3b132-128">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="3b132-128">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`dependentAssembly`|Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly.  Utilizzare un elemento dependentAssembly per ciascun assembly.|  
-|`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
+|<span data-ttu-id="3b132-129">Elemento</span><span class="sxs-lookup"><span data-stu-id="3b132-129">Element</span></span>|<span data-ttu-id="3b132-130">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3b132-130">Description</span></span>|  
+|-------------|-----------------|  
+|`assemblyBinding`|<span data-ttu-id="3b132-131">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="3b132-131">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="3b132-132">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3b132-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`dependentAssembly`|<span data-ttu-id="3b132-133">Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly.</span><span class="sxs-lookup"><span data-stu-id="3b132-133">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="3b132-134">Utilizzare un elemento dependentAssembly per ciascun assembly.</span><span class="sxs-lookup"><span data-stu-id="3b132-134">Use one dependentAssembly element for each assembly.</span></span>|  
+|`runtime`|<span data-ttu-id="3b132-135">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="3b132-135">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Note  
- Quando si compila un'applicazione .NET Framework in base a un assembly con un nome sicuro, per impostazione predefinita tale versione dell'assembly viene utilizzata dall'applicazione in fase di esecuzione, anche se è disponibile una nuova versione.  È possibile tuttavia configurare l'applicazione in modo che venga eseguita in base a una versione più recente dell'assembly.  Per ulteriori informazioni su come tali file vengono gestiti nell'ambiente di esecuzione per determinare la versione dell'assembly da utilizzare, vedere [Modalità di individuazione di assembly dell'ambiente di esecuzione](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="remarks"></a><span data-ttu-id="3b132-136">Note</span><span class="sxs-lookup"><span data-stu-id="3b132-136">Remarks</span></span>  
+ <span data-ttu-id="3b132-137">Quando si compila un'applicazione .NET Framework in base a un assembly con un nome sicuro, per impostazione predefinita tale versione dell'assembly viene utilizzata dall'applicazione in fase di esecuzione, anche se è disponibile una nuova versione.</span><span class="sxs-lookup"><span data-stu-id="3b132-137">When you build a .NET Framework application against a strong-named assembly, the application uses that version of the assembly at run time by default, even if a new version is available.</span></span> <span data-ttu-id="3b132-138">È possibile tuttavia configurare l'applicazione in modo che venga eseguita in base a una versione più recente dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="3b132-138">However, you can configure the application to run against a newer version of the assembly.</span></span> <span data-ttu-id="3b132-139">Per informazioni dettagliate su come il runtime utilizza questi file per determinare la versione di assembly da utilizzare, vedere [come il Runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="3b132-139">For details on how the runtime uses these files to determine which assembly version to use, see [How the Runtime Locates Assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- È possibile reindirizzare più versioni di assembly includendo più elementi `bindingRedirect` in un elemento `dependentAssembly`.  È inoltre possibile reindirizzare una versione più recente a una versione precedente dell'assembly.  
+ <span data-ttu-id="3b132-140">È possibile reindirizzare più versioni di assembly includendo più elementi `bindingRedirect` in un elemento `dependentAssembly`.</span><span class="sxs-lookup"><span data-stu-id="3b132-140">You can redirect more than one assembly version by including multiple `bindingRedirect` elements in a `dependentAssembly` element.</span></span> <span data-ttu-id="3b132-141">È inoltre possibile reindirizzare una versione più recente a una versione precedente dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="3b132-141">You can also redirect from a newer version to an older version of the assembly.</span></span>  
   
- Il reindirizzamento esplicito dell'associazione di assembly in un file di configurazione di un'applicazione richiede un'autorizzazione di sicurezza,  che vale per il reindirizzamento degli assembly .NET Framework e di quelli di altri produttori.  Tale autorizzazione viene concessa impostando il flag [BindingRedirects](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic) sulla [classe SecurityPermission](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic).  Per ulteriori informazioni, vedere [Autorizzazione di sicurezza per il reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ <span data-ttu-id="3b132-142">Il reindirizzamento esplicito dell'associazione di assembly in un file di configurazione di un'applicazione richiede un'autorizzazione di sicurezza,</span><span class="sxs-lookup"><span data-stu-id="3b132-142">Explicit assembly binding redirection in an application configuration file requires a security permission.</span></span> <span data-ttu-id="3b132-143">che vale per il reindirizzamento degli assembly .NET Framework e di quelli di altri produttori.</span><span class="sxs-lookup"><span data-stu-id="3b132-143">This applies to redirection of .NET Framework assemblies and assemblies from third parties.</span></span> <span data-ttu-id="3b132-144">L'autorizzazione viene concessa impostando il <xref:System.Security.Permissions.SecurityPermissionFlag> flag di <xref:System.Security.Permissions.SecurityPermission>.</span><span class="sxs-lookup"><span data-stu-id="3b132-144">The permission is granted by setting the <xref:System.Security.Permissions.SecurityPermissionFlag> flag on the <xref:System.Security.Permissions.SecurityPermission>.</span></span> <span data-ttu-id="3b132-145">Per ulteriori informazioni, vedere [autorizzazione di sicurezza il reindirizzamento di Assembly](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).</span><span class="sxs-lookup"><span data-stu-id="3b132-145">For more information, see [Assembly Binding Redirection Security Permission](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come reindirizzare una versione dell'assembly a un'altra.  
+## <a name="example"></a><span data-ttu-id="3b132-146">Esempio</span><span class="sxs-lookup"><span data-stu-id="3b132-146">Example</span></span>  
+ <span data-ttu-id="3b132-147">Nell'esempio seguente viene illustrato come reindirizzare una versione dell'assembly a un'altra.</span><span class="sxs-lookup"><span data-stu-id="3b132-147">The following example shows how to redirect one assembly version to another.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -91,7 +94,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="3b132-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3b132-148">See Also</span></span>  
+ [<span data-ttu-id="3b132-149">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="3b132-149">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="3b132-150">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="3b132-150">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="3b132-151">Reindirizzamento delle versioni di assembly</span><span class="sxs-lookup"><span data-stu-id="3b132-151">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

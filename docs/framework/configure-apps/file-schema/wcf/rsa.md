@@ -1,67 +1,72 @@
 ---
-title: "&lt;rsa&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;RSA&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ab07508c4cab32cb2a60d37af368c345a0f12d88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;rsa&gt;
-Un client WCF protetto che si connette a un endpoint con questa identità verifica che le attestazioni presentate dal server contengano un'attestazione contenente a sua volta la chiave pubblica RSA usata per costruire tale identità.  
+# <a name="ltrsagt"></a><span data-ttu-id="d43c4-102">&lt;RSA&gt;</span><span class="sxs-lookup"><span data-stu-id="d43c4-102">&lt;rsa&gt;</span></span>
+<span data-ttu-id="d43c4-103">Un client WCF protetto che si connette a un endpoint con questa identità verifica che le attestazioni presentate dal server contengano un'attestazione contenente a sua volta la chiave pubblica RSA usata per costruire tale identità.</span><span class="sxs-lookup"><span data-stu-id="d43c4-103">A secure WCF client that connects to an endpoint with this identity verifies that the claims presented by the server contain a claim that contains the RSA public key used to construct this identity.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="d43c4-104">\<identità ></span><span class="sxs-lookup"><span data-stu-id="d43c4-104">\<identity></span></span>  
+<span data-ttu-id="d43c4-105">\<RSA ></span><span class="sxs-lookup"><span data-stu-id="d43c4-105">\<rsa></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d43c4-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d43c4-106">Syntax</span></span>  
   
+```xml  
 <rsa value = "String" />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d43c4-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="d43c4-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="d43c4-108">Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.</span><span class="sxs-lookup"><span data-stu-id="d43c4-108">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="d43c4-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="d43c4-109">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="d43c4-110">Attributo</span><span class="sxs-lookup"><span data-stu-id="d43c4-110">Attribute</span></span>|<span data-ttu-id="d43c4-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d43c4-111">Description</span></span>|  
 |---------------|-----------------|  
-|predefinito|Stringa facoltativa.  Valore della chiave pubblica RSA con cui eseguire il confronto nel client.|  
+|<span data-ttu-id="d43c4-112">predefinito</span><span class="sxs-lookup"><span data-stu-id="d43c4-112">value</span></span>|<span data-ttu-id="d43c4-113">Stringa facoltativa.</span><span class="sxs-lookup"><span data-stu-id="d43c4-113">Optional String.</span></span> <span data-ttu-id="d43c4-114">Valore della chiave pubblica RSA con cui eseguire il confronto nel client.</span><span class="sxs-lookup"><span data-stu-id="d43c4-114">The RSA public key value to be compared with on the client.</span></span>|  
   
-### Elementi figlio  
- None  
+### <a name="child-elements"></a><span data-ttu-id="d43c4-115">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="d43c4-115">Child Elements</span></span>  
+ <span data-ttu-id="d43c4-116">None</span><span class="sxs-lookup"><span data-stu-id="d43c4-116">None</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="d43c4-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="d43c4-117">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<identità\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Specifica l'identità del servizio da autenticare presso il client.|  
+|<span data-ttu-id="d43c4-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="d43c4-118">Element</span></span>|<span data-ttu-id="d43c4-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d43c4-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d43c4-120">\<identità ></span><span class="sxs-lookup"><span data-stu-id="d43c4-120">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="d43c4-121">Specifica l'identità del servizio da autenticare presso il client.</span><span class="sxs-lookup"><span data-stu-id="d43c4-121">Specifies the identity of the service to be authenticated by the client.</span></span>|  
   
-## Note  
- Un controllo RSA consente di restringere specificamente l'autenticazione a un solo certificato in base alla relativa chiave RSA o in base a un valore di chiave RSA generato manualmente.  Ciò consente l'autenticazione più restrittiva di una chiave RSA specifica a spese del servizio, che non funziona più con i client esistenti se il valore della chiave RSA viene modificato.  
+## <a name="remarks"></a><span data-ttu-id="d43c4-122">Note</span><span class="sxs-lookup"><span data-stu-id="d43c4-122">Remarks</span></span>  
+ <span data-ttu-id="d43c4-123">Un controllo RSA consente di restringere specificamente l'autenticazione a un solo certificato in base alla relativa chiave RSA o in base a un valore di chiave RSA generato manualmente.</span><span class="sxs-lookup"><span data-stu-id="d43c4-123">A RSA check enables you to specifically restrict authentication to a single certificate based upon its RSA key or generated your own RSA key value.</span></span> <span data-ttu-id="d43c4-124">Ciò consente l'autenticazione più restrittiva di una chiave RSA specifica a spese del servizio, che non funziona più con i client esistenti se il valore della chiave RSA viene modificato.</span><span class="sxs-lookup"><span data-stu-id="d43c4-124">This enables stricter authentication of a specific RSA key at the expense of the service no longer working with existing clients if the RSA key value is changed.</span></span>  
   
- Per altre informazioni sull'utilizzo dell'identità per convalidare un servizio presso un client, vedere [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ <span data-ttu-id="d43c4-125">Per ulteriori informazioni sull'utilizzo di identità per convalidare un servizio a un client, vedere [autenticazione e identità del servizio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="d43c4-125">For more information about using identity to validate a service to a client, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
-## Esempio  
- Nel codice di configurazione seguente viene specificato il valore della chiave pubblica di un certificato X.509 usato per autenticare un server.  
+## <a name="example"></a><span data-ttu-id="d43c4-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="d43c4-126">Example</span></span>  
+ <span data-ttu-id="d43c4-127">Nel codice di configurazione seguente viene specificato il valore della chiave pubblica di un certificato X.509 usato per autenticare un server.</span><span class="sxs-lookup"><span data-stu-id="d43c4-127">The following configuration code specifies the public key value of an X.509 certificate that is used to authenticate a server.</span></span>  
   
-```  
+```xml  
 <identity>  
   <rsa value = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>  
 </identity>  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>   
- <xref:System.ServiceModel.RsaEndpointIdentity>   
- [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<identità\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a><span data-ttu-id="d43c4-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d43c4-128">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
+ <xref:System.ServiceModel.RsaEndpointIdentity>  
+ [<span data-ttu-id="d43c4-129">L'autenticazione e identità del servizio</span><span class="sxs-lookup"><span data-stu-id="d43c4-129">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="d43c4-130">\<identità ></span><span class="sxs-lookup"><span data-stu-id="d43c4-130">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

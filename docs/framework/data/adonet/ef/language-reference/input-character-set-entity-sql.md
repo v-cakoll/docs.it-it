@@ -1,43 +1,42 @@
 ---
-title: "Set di caratteri di input (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Set di caratteri di input (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 691f29a04b1b1f997be501330ec887d6815d7531
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Set di caratteri di input (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] accetta i caratteri Unicode con codifica UTF\-16.  
+# <a name="input-character-set-entity-sql"></a><span data-ttu-id="a682e-102">Set di caratteri di input (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="a682e-102">Input Character Set (Entity SQL)</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a682e-103"> accetta i caratteri Unicode con codifica UTF-16.</span><span class="sxs-lookup"><span data-stu-id="a682e-103"> accepts UNICODE characters encoded in UTF-16.</span></span>  
   
- I valori letterali stringa possono contenere qualsiasi carattere UTF\-16 racchiuso tra virgolette singole.  Ad esempio, N'文字列リテラル'.  Quando i valori letterali stringa vengono confrontati, vengono usati i valori UTF\-16 originali.  N'ABC, ad esempio, è diverso nelle tabelle codici giapponese e latina.  
+ <span data-ttu-id="a682e-104">I valori letterali stringa possono contenere qualsiasi carattere UTF-16 racchiuso tra virgolette singole.</span><span class="sxs-lookup"><span data-stu-id="a682e-104">String literals can contain any UTF-16 character enclosed in single quotes.</span></span> <span data-ttu-id="a682e-105">Ad esempio, N'文字列リテラル'.</span><span class="sxs-lookup"><span data-stu-id="a682e-105">For example, N'文字列リテラル'.</span></span> <span data-ttu-id="a682e-106">Quando i valori letterali stringa vengono confrontati, vengono usati i valori UTF-16 originali.</span><span class="sxs-lookup"><span data-stu-id="a682e-106">When string literals are compared, the original UTF-16 values are used.</span></span> <span data-ttu-id="a682e-107">N'ABC, ad esempio, è diverso nelle tabelle codici giapponese e latina.</span><span class="sxs-lookup"><span data-stu-id="a682e-107">For example, N'ABC' is different in Japanese and Latin codepages.</span></span>  
   
- I commenti possono contenere qualsiasi carattere UTF\-16.  
+ <span data-ttu-id="a682e-108">I commenti possono contenere qualsiasi carattere UTF-16.</span><span class="sxs-lookup"><span data-stu-id="a682e-108">Comments can contain any UTF-16 character.</span></span>  
   
- Gli identificatori preceduti da un carattere di escape possono contenere qualsiasi carattere UTF\-16 racchiuso tra parentesi quadre,  Ad esempio, \[エスケープされた識別子\].  Il confronto di identificatori UTF\-16 che usano caratteri di escape è senza distinzione tra maiuscole e minuscole.  In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le versioni delle lettere che hanno lo stesso aspetto ma che provengono da tabelle codici diverse vengono gestite come caratteri differenti.  Le lettere \[ABC\], ad esempio, equivalgono alle lettere \[abc\] se i caratteri corrispondenti appartengono alla stessa tabella codici.  Se, tuttavia, gli stessi due identificatori appartengono a tabelle codici differenti, non sono equivalenti.  
+ <span data-ttu-id="a682e-109">Gli identificatori preceduti da un carattere di escape possono contenere qualsiasi carattere UTF-16 racchiuso tra parentesi quadre,</span><span class="sxs-lookup"><span data-stu-id="a682e-109">Escaped identifiers can contain any UTF-16 character enclosed in square brackets.</span></span> <span data-ttu-id="a682e-110">Ad esempio, [エスケープされた識別子].</span><span class="sxs-lookup"><span data-stu-id="a682e-110">For example, [エスケープされた識別子].</span></span> <span data-ttu-id="a682e-111">Il confronto di identificatori UTF-16 che usano caratteri di escape è senza distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="a682e-111">The comparison of UTF-16 escaped identifiers is case insensitive.</span></span> <span data-ttu-id="a682e-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le versioni delle lettere che hanno lo stesso aspetto ma che provengono da tabelle codici diverse vengono gestite come caratteri differenti.</span><span class="sxs-lookup"><span data-stu-id="a682e-112">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] treats versions of letters that appear the same but are from different code pages as different characters.</span></span> <span data-ttu-id="a682e-113">Le lettere [ABC], ad esempio, equivalgono alle lettere [abc] se i caratteri corrispondenti appartengono alla stessa tabella codici.</span><span class="sxs-lookup"><span data-stu-id="a682e-113">For example, [ABC] is equivalent to [abc] if the corresponding characters are from the same code page.</span></span> <span data-ttu-id="a682e-114">Se, tuttavia, gli stessi due identificatori appartengono a tabelle codici differenti, non sono equivalenti.</span><span class="sxs-lookup"><span data-stu-id="a682e-114">However, if the same two identifiers are from different code pages, they are not equivalent.</span></span>  
   
- Lo spazio vuoto è qualsiasi carattere di spazio vuoto UTF\-16.  
+ <span data-ttu-id="a682e-115">Lo spazio vuoto è qualsiasi carattere di spazio vuoto UTF-16.</span><span class="sxs-lookup"><span data-stu-id="a682e-115">White space is any UTF-16 white space character.</span></span>  
   
- Una nuova riga è qualsiasi carattere di nuova riga UTF\-16 normalizzato.  '\\n' e '\\r\\n' sono ad esempio considerati caratteri di nuova riga, mentre '\\r' no.  
+ <span data-ttu-id="a682e-116">Una nuova riga è qualsiasi carattere di nuova riga UTF-16 normalizzato.</span><span class="sxs-lookup"><span data-stu-id="a682e-116">A newline is any normalized UTF-16 newline character.</span></span> <span data-ttu-id="a682e-117">'\n' e '\r\n' sono ad esempio considerati caratteri di nuova riga, mentre '\r' no.</span><span class="sxs-lookup"><span data-stu-id="a682e-117">For example, '\n' and '\r\n' are considered newline characters, but '\r' is not a newline character.</span></span>  
   
- Le parole chiave, le espressioni e la punteggiatura possono essere qualsiasi carattere UTF\-16 normalizzato in latino.  SELECT in una tabella codici giapponese è, ad esempio, una parola chiave valida.  
+ <span data-ttu-id="a682e-118">Le parole chiave, le espressioni e la punteggiatura possono essere qualsiasi carattere UTF-16 normalizzato in latino.</span><span class="sxs-lookup"><span data-stu-id="a682e-118">Keywords, expressions, and punctuation can be any UTF-16 character that normalizes to Latin.</span></span> <span data-ttu-id="a682e-119">SELECT in una tabella codici giapponese è, ad esempio, una parola chiave valida.</span><span class="sxs-lookup"><span data-stu-id="a682e-119">For example, SELECT in a Japanese codepage is a valid keyword.</span></span>  
   
- Le parole chiave, le espressioni e la punteggiatura possono essere solo caratteri latini.  `SELECT` in una tabella codici giapponese non è una parola chiave.  \+, \-, \*, \/, \=, \(\) ', \[,\] e qualsiasi altro costrutto di linguaggio non citato possono essere solo caratteri latini.  
+ <span data-ttu-id="a682e-120">Le parole chiave, le espressioni e la punteggiatura possono essere solo caratteri latini.</span><span class="sxs-lookup"><span data-stu-id="a682e-120">Keywords, expressions, and punctuation can only be Latin characters.</span></span> <span data-ttu-id="a682e-121">`SELECT` in una tabella codici giapponese non è una parola chiave.</span><span class="sxs-lookup"><span data-stu-id="a682e-121">`SELECT` in a Japanese codepage is not a keyword.</span></span> <span data-ttu-id="a682e-122">+, -, *, /, =, () ', [,] e qualsiasi altro costrutto di linguaggio non citato possono essere solo caratteri latini.</span><span class="sxs-lookup"><span data-stu-id="a682e-122">+, -, *, /, =, (, ), ‘, [, ] and any other language construct not quoted here can only be Latin characters.</span></span>  
   
- Gli identificatori semplici possono essere solo caratteri latini.  Questo consente di evitare l'ambiguità durante il confronto, poiché vengono confrontati i valori originali.  ABC sarebbe ad esempio diverso nelle tabelle codici giapponese e latina.  
+ <span data-ttu-id="a682e-123">Gli identificatori semplici possono essere solo caratteri latini.</span><span class="sxs-lookup"><span data-stu-id="a682e-123">Simple identifiers can only be Latin characters.</span></span> <span data-ttu-id="a682e-124">Questo consente di evitare l'ambiguità durante il confronto, poiché vengono confrontati i valori originali.</span><span class="sxs-lookup"><span data-stu-id="a682e-124">This avoids ambiguity during comparison, because original values are compared.</span></span> <span data-ttu-id="a682e-125">ABC sarebbe ad esempio diverso nelle tabelle codici giapponese e latina.</span><span class="sxs-lookup"><span data-stu-id="a682e-125">For example, ABC would be different in in Japanese and Latin codepages.</span></span>  
   
-## Vedere anche  
- [Panoramica su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a682e-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a682e-126">See Also</span></span>  
+ [<span data-ttu-id="a682e-127">Panoramica di Entity SQL</span><span class="sxs-lookup"><span data-stu-id="a682e-127">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

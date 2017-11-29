@@ -1,54 +1,57 @@
 ---
-title: "x:Reference Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "x:Reference markup extension [XAML Services]"
-  - "XAML [XAML Services], x:Reference Markup Extension"
-  - "Reference markup extension [XAML Services]"
+title: estensione di markup x:Reference
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- x:Reference markup extension [XAML Services]
+- XAML [XAML Services], x:Reference Markup Extension
+- Reference markup extension [XAML Services]
 ms.assetid: 2982e68b-d26b-4aa3-826a-34c57a9c5199
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 06e59e7686004f8fd44473bd9572ed07a0118d1f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# x:Reference Markup Extension
-Fa riferimento a un'istanza dichiarata altrove nel markup XAML.  Il riferimento si riferisce a `x:Name` dell'elemento.  
+# <a name="xreference-markup-extension"></a><span data-ttu-id="bf4e4-102">estensione di markup x:Reference</span><span class="sxs-lookup"><span data-stu-id="bf4e4-102">x:Reference Markup Extension</span></span>
+<span data-ttu-id="bf4e4-103">Fa riferimento a un'istanza che è dichiarata in un' posizione nel markup XAML.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-103">References an instance that is declared elsewhere in XAML markup.</span></span> <span data-ttu-id="bf4e4-104">Il riferimento si riferisce a un elemento `x:Name`.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-104">The reference refers to an element's `x:Name`.</span></span>  
   
-## Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="bf4e4-105">Utilizzo della sintassi XAML per gli attributi</span><span class="sxs-lookup"><span data-stu-id="bf4e4-105">XAML Attribute Usage</span></span>  
   
+```xaml  
+<object property="{x:Reference instancexName}" .../>  
 ```  
-<object property="{x:Reference instancexName}" .../>  
-```  
   
-## Utilizzo della sintassi XAML per gli elementi oggetto  
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="bf4e4-106">Utilizzo della sintassi XAML per gli elementi oggetto</span><span class="sxs-lookup"><span data-stu-id="bf4e4-106">XAML Object Element Usage</span></span>  
   
-```  
+```xaml  
 <object>  
   <object.property>  
-    <x:Reference Name="instancexName"/>  
+    <x:Reference Name="instancexName"/>  
   </object.property>  
 </object>  
 ```  
   
-## Valori XAML  
+## <a name="xaml-values"></a><span data-ttu-id="bf4e4-107">Valori XAML</span><span class="sxs-lookup"><span data-stu-id="bf4e4-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`instancexName`|Valore `x:Name` \(o valore della proprietà identificata da <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>\) dell'istanza a cui si fa riferimento.|  
+|`instancexName`|<span data-ttu-id="bf4e4-108">Il `x:Name` valore (o valore del <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>-proprietà identificata) dell'istanza di riferimento.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-108">The `x:Name` value (or value of the <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>-identified property) of the referenced instance.</span></span>|  
   
-## Note  
- `x:Reference` fornisce supporto per il livello di linguaggio XAML per un concetto di riferimento dell'elemento che diversamente è implementato nei framework specifici come WPF.  
+## <a name="remarks"></a><span data-ttu-id="bf4e4-109">Note</span><span class="sxs-lookup"><span data-stu-id="bf4e4-109">Remarks</span></span>  
+ <span data-ttu-id="bf4e4-110">`x:Reference`fornisce supporto a livello di linguaggio XAML per un concetto di riferimento di elemento che è stato implementato in caso contrario in Framework specifici, ad esempio WPF.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-110">`x:Reference` provides XAML language-level support for an element reference concept that was otherwise implemented in specific frameworks such as WPF.</span></span>  
   
-## x:Reference e WPF  
- In WPF e XAML 2006, i riferimenti dell'elemento vengono indirizzati dalla funzionalità a livello di framework dell'associazione <xref:System.Windows.Data.Binding.ElementName%2A>.  Per la maggior parte delle applicazioni WPF e degli scenari, l'associazione <xref:System.Windows.Data.Binding.ElementName%2A> deve essere ancora utilizzata.  Eccezioni a questa istruzione generale potrebbero includere casi in cui ci sono il contesto dati o altre considerazioni di scopo che rendono l'associazione dati impraticabile e dove la compilazione del markup non è coinvolta.  
+## <a name="xreference-and-wpf"></a><span data-ttu-id="bf4e4-111">X:Reference e WPF</span><span class="sxs-lookup"><span data-stu-id="bf4e4-111">x:Reference and WPF</span></span>  
+ <span data-ttu-id="bf4e4-112">In WPF e XAML 2006, i riferimenti dell'elemento vengono indirizzati mediante la funzionalità a livello di framework di <xref:System.Windows.Data.Binding.ElementName%2A> associazione.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-112">In WPF and XAML 2006, element references are addressed by the framework-level feature of <xref:System.Windows.Data.Binding.ElementName%2A> binding.</span></span> <span data-ttu-id="bf4e4-113">Per la maggior parte delle applicazioni WPF e scenari, <xref:System.Windows.Data.Binding.ElementName%2A> deve ancora essere utilizzata l'associazione.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-113">For most WPF applications and scenarios, <xref:System.Windows.Data.Binding.ElementName%2A> binding should still be used.</span></span> <span data-ttu-id="bf4e4-114">Eccezioni a questa Guida generale potrebbero includere casi in cui sono presenti contesto dei dati o altre considerazioni di ambito che causa è consigliabile eseguire l'associazione dati e la compilazione del markup non è coinvolto.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-114">Exceptions to this general guidance might include cases where there are data context or other scoping considerations that make data binding impractical and where markup compilation is not involved.</span></span>  
   
- `x:Reference` è un costrutto definito in XAML 2009.  In WPF, è possibile utilizzare le funzionalità XAML 2009, ma solo per XAML che non è compilato dal markup WPF.  XAML compilato dal markup e il form BAML di XAML non supportano attualmente le parole chiave e le funzionalità del linguaggio XAML 2009.
+ <span data-ttu-id="bf4e4-115">`x:Reference`è un costrutto definito in XAML 2009.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-115">`x:Reference` is a construct defined in XAML 2009.</span></span> <span data-ttu-id="bf4e4-116">In WPF è possibile usare le funzionalità di XAML 2009, ma solo per il codice XAML non compilato dal markup WPF.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-116">In WPF, you can use XAML 2009 features, but only for XAML that is not WPF markup-compiled.</span></span> <span data-ttu-id="bf4e4-117">Il codice XAML compilato dal markup e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009.</span><span class="sxs-lookup"><span data-stu-id="bf4e4-117">Markup-compiled XAML and the BAML form of XAML do not currently support the XAML 2009 language keywords and features.</span></span>

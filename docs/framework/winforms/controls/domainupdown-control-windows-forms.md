@@ -1,53 +1,54 @@
 ---
-title: "Controllo DomainUpDown (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DomainUpDown (controllo) [Windows Form]"
-  - "controllo pulsante di selezione"
-  - "controllo pulsante di selezione, controlli di scorrimento"
-  - "controlli di scorrimento"
-  - "controlli di scorrimento, controlli pulsante di selezione"
+title: Controllo DomainUpDown (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DomainUpDown control [Windows Forms]
+- spin button control [Windows Forms], up-down controls
+- up-down controls
+- spin button control
+- up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 37cec82876edadfed5cda338ca12775ad19ae732
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Controllo DomainUpDown (Windows Form)
-Il controllo <xref:System.Windows.Forms.DomainUpDown> di Windows Form ha l'aspetto di una casella di testo abbinata a una coppia di frecce per lo spostamento verso l'alto o verso il basso in un elenco.  Nel controllo viene visualizzata e impostata una stringa di testo da un elenco di scelte.  L'utente può selezionare la stringa facendo clic sui pulsanti di scorrimento verso l'alto e verso il basso per spostarsi all'interno dell'elenco, premendo i tasti FRECCIA SU e FRECCIA GIÙ oppure digitando una stringa che corrisponda a una voce dell'elenco.  Un possibile utilizzo di tale controllo è la selezione di voci da un elenco di nomi in ordine alfabetico.  Per ordinare l'elenco, impostare la proprietà <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> su `true`. La funzione di questo controllo è molto simile a quella di una casella di riepilogo o di una casella combinata, ma occupa uno spazio minimo.  
+# <a name="domainupdown-control-windows-forms"></a><span data-ttu-id="e5278-102">Controllo DomainUpDown (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="e5278-102">DomainUpDown Control (Windows Forms)</span></span>
+<span data-ttu-id="e5278-103">Windows Form <xref:System.Windows.Forms.DomainUpDown> controllo simile a una combinazione di una casella di testo e una coppia di pulsanti per spostarsi verso l'alto o verso il basso all'interno di un elenco.</span><span class="sxs-lookup"><span data-stu-id="e5278-103">The Windows Forms <xref:System.Windows.Forms.DomainUpDown> control looks like a combination of a text box and a pair of buttons for moving up or down through a list.</span></span> <span data-ttu-id="e5278-104">Il controllo Visualizza e imposta una stringa di testo da un elenco di scelte.</span><span class="sxs-lookup"><span data-stu-id="e5278-104">The control displays and sets a text string from a list of choices.</span></span> <span data-ttu-id="e5278-105">L'utente può selezionare la stringa facendo clic su e giù per spostarsi in un elenco, premendo i tasti freccia su e giù o digitando una stringa che corrisponde a un elemento nell'elenco.</span><span class="sxs-lookup"><span data-stu-id="e5278-105">The user can select the string by clicking up and down buttons to move through a list, by pressing the UP and DOWN ARROW keys, or by typing a string that matches an item in the list.</span></span> <span data-ttu-id="e5278-106">Un possibile utilizzo di questo controllo è per la selezione di elementi da un elenco in ordine alfabetico dei nomi.</span><span class="sxs-lookup"><span data-stu-id="e5278-106">One possible use for this control is for selecting items from an alphabetically sorted list of names.</span></span> <span data-ttu-id="e5278-107">(Per ordinare l'elenco, impostare il <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> proprietà `true`.) La funzione di questo controllo è molto simile alla casella di riepilogo o casella combinata, ma richiede poco spazio.</span><span class="sxs-lookup"><span data-stu-id="e5278-107">(To sort the list, set the <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> property to `true`.) The function of this control is very similar to the list box or combo box, but it takes up very little space.</span></span>  
   
- Le proprietà principali del controllo sono <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> e <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.  La proprietà <xref:System.Windows.Forms.DomainUpDown.Items%2A> contiene l'elenco di oggetti i cui valori di testo sono visualizzati nel controllo.  Se <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> è impostata su `false`, il controllo completa automaticamente il testo digitato dall'utente e lo fa corrispondere a un valore nell'elenco.  Se <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> è impostata su `true`, scorrendo oltre l'ultima voce si tornerà alla prima voce dell'elenco e viceversa.  I metodi principali del controllo sono <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> e <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
+ <span data-ttu-id="e5278-108">Le proprietà principali del controllo sono <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, e <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.</span><span class="sxs-lookup"><span data-stu-id="e5278-108">The key properties of the control are <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, and <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.</span></span> <span data-ttu-id="e5278-109">Il <xref:System.Windows.Forms.DomainUpDown.Items%2A> proprietà contiene l'elenco di oggetti i cui valori di testo vengono visualizzati nel controllo.</span><span class="sxs-lookup"><span data-stu-id="e5278-109">The <xref:System.Windows.Forms.DomainUpDown.Items%2A> property contains the list of objects whose text values are displayed in the control.</span></span> <span data-ttu-id="e5278-110">Se <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> è impostato su `false`, il controllo completa automaticamente il testo che l'utente digita e a esso corrispondente a un valore nell'elenco.</span><span class="sxs-lookup"><span data-stu-id="e5278-110">If <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> is set to `false`, the control automatically completes text that the user types and matches it to a value in the list.</span></span> <span data-ttu-id="e5278-111">Se <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> è impostato su `true`, lo scorrimento oltre l'ultimo elemento verrà visualizzata al primo elemento nell'elenco e viceversa.</span><span class="sxs-lookup"><span data-stu-id="e5278-111">If <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> is set to `true`, scrolling past the last item will take you to the first item in the list and vice versa.</span></span> <span data-ttu-id="e5278-112">I metodi principali del controllo sono <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> e <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.</span><span class="sxs-lookup"><span data-stu-id="e5278-112">The key methods of the control are <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> and <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.</span></span>  
   
- Questo controllo visualizza solo stringhe di testo.  Se si desidera un controllo che visualizzi valori numerici, utilizzare il controllo <xref:System.Windows.Forms.NumericUpDown>.  Per ulteriori informazioni, vedere [Controllo NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md).  
+ <span data-ttu-id="e5278-113">Questo controllo consente di visualizzare solo le stringhe di testo.</span><span class="sxs-lookup"><span data-stu-id="e5278-113">This control displays only text strings.</span></span> <span data-ttu-id="e5278-114">Se si desidera un controllo che visualizza i valori numerici, utilizzare il <xref:System.Windows.Forms.NumericUpDown> controllo.</span><span class="sxs-lookup"><span data-stu-id="e5278-114">If you want a control that displays numeric values, use the <xref:System.Windows.Forms.NumericUpDown> control.</span></span> <span data-ttu-id="e5278-115">Per ulteriori informazioni, vedere [controllo NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .</span><span class="sxs-lookup"><span data-stu-id="e5278-115">For more information, see [NumericUpDown Control](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .</span></span>  
   
-## In questa sezione  
- [Cenni preliminari sul controllo DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
- Vengono presentati i concetti generali relativi al controllo <xref:System.Windows.Forms.DomainUpDown>, che consente agli utenti di scorrere un elenco di stringhe di testo ed effettuarvi una selezione.  
+## <a name="in-this-section"></a><span data-ttu-id="e5278-116">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="e5278-116">In This Section</span></span>  
+ [<span data-ttu-id="e5278-117">Panoramica sul controllo DomainUpDown</span><span class="sxs-lookup"><span data-stu-id="e5278-117">DomainUpDown Control Overview</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
+ <span data-ttu-id="e5278-118">Introduce i concetti generali relativi il <xref:System.Windows.Forms.DomainUpDown> controllo, che consente agli utenti di esplorare e selezionare da un elenco di stringhe di testo.</span><span class="sxs-lookup"><span data-stu-id="e5278-118">Introduces the general concepts of the <xref:System.Windows.Forms.DomainUpDown> control, which allows users to browse through and select from a list of text strings.</span></span>  
   
- [Procedura: aggiungere elementi ai controlli DomainUpDown Windows Form a livello di codice](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
- Viene descritto come specificare le stringhe di testo che dovranno essere visualizzate dal controllo <xref:System.Windows.Forms.DomainUpDown>.  
+ [<span data-ttu-id="e5278-119">Procedura: Aggiungere elementi ai controlli DomainUpDown di Windows Form a livello di codice</span><span class="sxs-lookup"><span data-stu-id="e5278-119">How to: Add Items to Windows Forms DomainUpDown Controls Programmatically</span></span>](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
+ <span data-ttu-id="e5278-120">Viene descritto come specificare le stringhe di testo il <xref:System.Windows.Forms.DomainUpDown> controllo devono essere visualizzati.</span><span class="sxs-lookup"><span data-stu-id="e5278-120">Describes how to specify the text strings the <xref:System.Windows.Forms.DomainUpDown> control should display.</span></span>  
   
- [Procedura: rimuovere elementi dai controlli DomainUpDown Windows Form](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
- Viene descritto come eliminare elementi dal controllo <xref:System.Windows.Forms.DomainUpDown> nel codice.  
+ [<span data-ttu-id="e5278-121">Procedura: Rimuovere elementi dai controlli DomainUpDown di Windows Form</span><span class="sxs-lookup"><span data-stu-id="e5278-121">How to: Remove Items from Windows Forms DomainUpDown Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
+ <span data-ttu-id="e5278-122">Viene descritto come eliminare gli elementi di <xref:System.Windows.Forms.DomainUpDown> nel codice.</span><span class="sxs-lookup"><span data-stu-id="e5278-122">Describes how to delete items from the <xref:System.Windows.Forms.DomainUpDown> control in code.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="e5278-123">Riferimento</span><span class="sxs-lookup"><span data-stu-id="e5278-123">Reference</span></span>  
  <xref:System.Windows.Forms.DomainUpDown>  
- Viene descritta la classe e forniti i collegamenti a tutti i relativi membri.  
+ <span data-ttu-id="e5278-124">Descrive la classe e fornisce i collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="e5278-124">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.NumericUpDown>  
- Viene descritta la classe e vengono forniti i collegamenti a tutti i relativi membri.  
+ <span data-ttu-id="e5278-125">Descrive la classe e include collegamenti a tutti i relativi membri...</span><span class="sxs-lookup"><span data-stu-id="e5278-125">Describes this class and has links to all its members..</span></span>  
   
-## Sezioni correlate  
- [Controlli utilizzabili in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Viene fornito un elenco completo dei controlli Windows Form, con l'indicazione dei collegamenti alle informazioni sul relativo utilizzo.
+## <a name="related-sections"></a><span data-ttu-id="e5278-126">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="e5278-126">Related Sections</span></span>  
+ [<span data-ttu-id="e5278-127">Controlli utilizzabili in Windows Form</span><span class="sxs-lookup"><span data-stu-id="e5278-127">Controls You Can Use On Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="e5278-128">Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.</span><span class="sxs-lookup"><span data-stu-id="e5278-128">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

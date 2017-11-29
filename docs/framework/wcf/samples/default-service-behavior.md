@@ -1,33 +1,36 @@
 ---
-title: "Comportamento predefinito del servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Esempio di comportamento predefinito di un servizio[Windows Communication Foundation]"
-  - "comportamenti dei servizi, impostazioni predefinite"
+title: Comportamento predefinito del servizio
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service behaviors, defaults
+- Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d584bbe3092524397639e5db8da6632deea8a752
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Comportamento predefinito del servizio
-In questo esempio viene illustrato come configurare le impostazioni del comportamento del servizio.L'esempio si basa su [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il contratto di servizio `ICalculator`.In questo esempio vengono definiti in modo esplicito i comportamenti del servizio e i comportamenti dell'operazione utilizzando gli attributi <xref:System.ServiceModel.ServiceBehaviorAttribute> e <xref:System.ServiceModel.OperationBehaviorAttribute>.È possibile configurare i comportamenti nei file di configurazione oppure in modo imperativo nel codice, come illustrato in questo esempio.  
+# <a name="default-service-behavior"></a><span data-ttu-id="7132e-102">Comportamento predefinito del servizio</span><span class="sxs-lookup"><span data-stu-id="7132e-102">Default Service Behavior</span></span>
+<span data-ttu-id="7132e-103">In questo esempio viene illustrato come configurare le impostazioni del comportamento del servizio.</span><span class="sxs-lookup"><span data-stu-id="7132e-103">This sample demonstrates how service behavior settings can be configured.</span></span> <span data-ttu-id="7132e-104">L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il `ICalculator` contratto di servizio.</span><span class="sxs-lookup"><span data-stu-id="7132e-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements the `ICalculator` service contract.</span></span> <span data-ttu-id="7132e-105">In questo esempio vengono definiti in modo esplicito i comportamenti del servizio e i comportamenti dell'operazione utilizzando gli attributi <xref:System.ServiceModel.ServiceBehaviorAttribute> e <xref:System.ServiceModel.OperationBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="7132e-105">This sample explicitly defines service behaviors and operation behaviors using the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes.</span></span> <span data-ttu-id="7132e-106">È possibile configurare i comportamenti nei file di configurazione oppure in modo imperativo nel codice, come illustrato in questo esempio.</span><span class="sxs-lookup"><span data-stu-id="7132e-106">You can configure behaviors in configuration files or imperatively in code (as this sample demonstrates).</span></span>  
   
- In questo esempio, il client è un'applicazione console \(.exe\) e il servizio è ospitato da Internet Information Services \(IIS\).  
+ <span data-ttu-id="7132e-107">In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="7132e-107">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  <span data-ttu-id="7132e-108">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="7132e-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- La classe del servizio specifica i comportamenti con <xref:System.ServiceModel.ServiceBehaviorAttribute> e <xref:System.ServiceModel.OperationBehaviorAttribute>, come illustrato nell'esempio di codice seguente.Tutti i valori specificati sono le impostazioni predefinite.  
+ <span data-ttu-id="7132e-109">La classe del servizio specifica i comportamenti con <xref:System.ServiceModel.ServiceBehaviorAttribute> e <xref:System.ServiceModel.OperationBehaviorAttribute>, come illustrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="7132e-109">The service class specifies behaviors with the <xref:System.ServiceModel.ServiceBehaviorAttribute> and the <xref:System.ServiceModel.OperationBehaviorAttribute> as shown in the following code sample.</span></span> <span data-ttu-id="7132e-110">Tutti i valori specificati sono le impostazioni predefinite.</span><span class="sxs-lookup"><span data-stu-id="7132e-110">All values specified are the defaults.</span></span>  
   
 ```  
 [ServiceBehavior(  
@@ -50,31 +53,30 @@ public class CalculatorService : ICalculator
     }  
     ...  
 }  
-  
 ```  
   
- I comportamenti del servizio vengono specificati con l'attributo <xref:System.ServiceModel.ServiceBehaviorAttribute>.Nella tabella seguente sono descritti alcuni di tali comportamenti.  
+ <span data-ttu-id="7132e-111">I comportamenti del servizio vengono specificati con l'attributo <xref:System.ServiceModel.ServiceBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="7132e-111">Service behaviors are specified with the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute.</span></span> <span data-ttu-id="7132e-112">Nella tabella seguente sono descritti alcuni di tali comportamenti.</span><span class="sxs-lookup"><span data-stu-id="7132e-112">The following table describes some of these behaviors.</span></span>  
   
-|Comportamento del servizio|Descrizione|  
-|--------------------------------|-----------------|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|Arresta automaticamente una sessione alla richiesta del client.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Specifica la modalità di concorrenza per ogni istanza del servizio.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|Specifica la modalità di contesto dell'istanza.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Determina se utilizzare il contesto di sincronizzazione fornito, se impostato.Utilizzare questa proprietà quando si desidera controllare se utilizzare un `WindowsFormsSynchronizationContext` nelle applicazioni Windows Form.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Determina se le eccezioni di esecuzione generali non gestite devono essere convertite in una `Fault<string>` e inviate come messaggio di errore.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|Specifica il livello di isolamento per le transazioni.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|Determina se intestazioni impreviste del messaggio provocano una condizione di errore.|  
+|<span data-ttu-id="7132e-113">Comportamento del servizio</span><span class="sxs-lookup"><span data-stu-id="7132e-113">Service behavior</span></span>|<span data-ttu-id="7132e-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7132e-114">Description</span></span>|  
+|----------------------|-----------------|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|<span data-ttu-id="7132e-115">Arresta automaticamente una sessione alla richiesta del client.</span><span class="sxs-lookup"><span data-stu-id="7132e-115">Automatically shuts down a session at the client's request.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|<span data-ttu-id="7132e-116">Specifica la modalità di concorrenza per ogni istanza del servizio.</span><span class="sxs-lookup"><span data-stu-id="7132e-116">Specifies the concurrency mode for each service instance.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|<span data-ttu-id="7132e-117">Specifica la modalità di contesto dell'istanza.</span><span class="sxs-lookup"><span data-stu-id="7132e-117">Specifies the instance context mode.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|<span data-ttu-id="7132e-118">Determina se utilizzare il contesto di sincronizzazione fornito, se impostato.</span><span class="sxs-lookup"><span data-stu-id="7132e-118">Determines whether to use the provided synchronization context, if one is set.</span></span> <span data-ttu-id="7132e-119">Utilizzare questa proprietà quando si desidera controllare se utilizzare un `WindowsFormsSynchronizationContext` nelle applicazioni Windows Form.</span><span class="sxs-lookup"><span data-stu-id="7132e-119">Use this when you want to control whether to use a `WindowsFormsSynchronizationContext` in Windows Forms applications.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|<span data-ttu-id="7132e-120">Determina se le eccezioni di esecuzione generali non gestite devono essere convertite in una `Fault<string>` e inviate come messaggio di errore.</span><span class="sxs-lookup"><span data-stu-id="7132e-120">Determines whether general unhandled execution exceptions are to be converted into a `Fault<string>` and sent as a fault message.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|<span data-ttu-id="7132e-121">Specifica il livello di isolamento per le transazioni.</span><span class="sxs-lookup"><span data-stu-id="7132e-121">Specifies the isolation level for transactions.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|<span data-ttu-id="7132e-122">Determina se intestazioni impreviste del messaggio provocano una condizione di errore.</span><span class="sxs-lookup"><span data-stu-id="7132e-122">Determines whether unexpected message headers cause an error condition.</span></span>|  
   
- I comportamenti dell'operazione vengono specificati utilizzando l'attributo <xref:System.ServiceModel.OperationBehaviorAttribute>.Nella tabella seguente sono descritti alcuni di tali comportamenti.  
+ <span data-ttu-id="7132e-123">I comportamenti dell'operazione vengono specificati utilizzando l'attributo <xref:System.ServiceModel.OperationBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="7132e-123">Operation behaviors are specified by using the <xref:System.ServiceModel.OperationBehaviorAttribute> attribute.</span></span> <span data-ttu-id="7132e-124">Nella tabella seguente sono descritti alcuni di tali comportamenti.</span><span class="sxs-lookup"><span data-stu-id="7132e-124">The following table describes some of these behaviors.</span></span>  
   
-|Comportamento dell'operazione|Descrizione|  
-|-----------------------------------|-----------------|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|Determina se il completamento dell'operazione del servizio esegue il commit della transazione corrente.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|Determina se l'operazione del servizio si integra in una transazione propagata dal client.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>|Determina se l'operazione del servizio rappresenta l'identità del chiamante.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A>|Determina se le istanze del servizio vengono riciclate all'inizio o alla fine della chiamata dell'operazione di servizio.|  
+|<span data-ttu-id="7132e-125">Comportamento dell'operazione</span><span class="sxs-lookup"><span data-stu-id="7132e-125">Operation Behavior</span></span>|<span data-ttu-id="7132e-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7132e-126">Description</span></span>|  
+|------------------------|-----------------|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|<span data-ttu-id="7132e-127">Determina se il completamento dell'operazione del servizio esegue il commit della transazione corrente.</span><span class="sxs-lookup"><span data-stu-id="7132e-127">Determines whether service operation completion commits the current transaction.</span></span>|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|<span data-ttu-id="7132e-128">Determina se l'operazione del servizio si integra in una transazione propagata dal client.</span><span class="sxs-lookup"><span data-stu-id="7132e-128">Determines whether the service operation enlists in a client-flowed transaction.</span></span>|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>|<span data-ttu-id="7132e-129">Determina se l'operazione del servizio rappresenta l'identità del chiamante.</span><span class="sxs-lookup"><span data-stu-id="7132e-129">Determines whether the service operation impersonates the caller's identity.</span></span>|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A>|<span data-ttu-id="7132e-130">Determina se le istanze del servizio vengono riciclate all'inizio o alla fine della chiamata dell'operazione di servizio.</span><span class="sxs-lookup"><span data-stu-id="7132e-130">Determines whether service instances are recycled at the start or end of the service operation call.</span></span>|  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.Il ritardo tra le chiamate è il risultato delle chiamate a `System.Threading.Thread.Sleep()` eseguite nelle operazioni del servizio.Gli altri esempi di comportamento illustrano questi comportamenti in maggiore dettaglio.Premere INVIO nella finestra del client per arrestare il client.  
+ <span data-ttu-id="7132e-131">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="7132e-131">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="7132e-132">Il ritardo tra le chiamate è il risultato delle chiamate a `System.Threading.Thread.Sleep()` eseguite nelle operazioni del servizio.</span><span class="sxs-lookup"><span data-stu-id="7132e-132">The delay between the calls is the result of the calls to `System.Threading.Thread.Sleep()` made in the service operations.</span></span> <span data-ttu-id="7132e-133">Gli altri esempi di comportamento illustrano questi comportamenti in maggiore dettaglio.</span><span class="sxs-lookup"><span data-stu-id="7132e-133">The rest of the behavior samples explain these behaviors in more detail.</span></span> <span data-ttu-id="7132e-134">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="7132e-134">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -85,21 +87,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="7132e-135">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="7132e-135">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="7132e-136">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7132e-136">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="7132e-137">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7132e-137">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="7132e-138">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7132e-138">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="7132e-139">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="7132e-139">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7132e-140">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="7132e-140">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="7132e-141">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="7132e-141">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7132e-142">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="7132e-142">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="7132e-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7132e-143">See Also</span></span>

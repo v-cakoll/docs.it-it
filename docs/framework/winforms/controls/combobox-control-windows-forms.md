@@ -1,48 +1,49 @@
 ---
-title: "Controllo ComboBox (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "caselle combinate"
-  - "caselle combinate, controlli Windows Form"
-  - "ComboBox (controllo) [Windows Form]"
-  - "elenchi a discesa, ComboBox (controllo)"
-  - "elenchi a discesa, Windows Form"
-  - "controlli elenco, Windows Form"
-  - "voci elenco, controlli Windows Form che visualizzano"
+title: Controllo ComboBox (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drop-down lists [Windows Forms], Windows Forms
+- list controls [Windows Forms], Windows Forms
+- combo boxes [Windows Forms], Windows Forms controls
+- combo boxes
+- list items [Windows Forms], Windows Forms controls that display
+- drop-down lists [Windows Forms], ComboBox control
+- ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Controllo ComboBox (Windows Form)
-Il controllo `ComboBox` Windows Form viene utilizzato per visualizzare dati in una casella combinata a discesa.  Per impostazione predefinita, il controllo `ComboBox` è costituito da due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco,  la seconda parte è una casella di riepilogo che visualizza un elenco dal quale l'utente può selezionare una o più voci.  
+# <a name="combobox-control-windows-forms"></a><span data-ttu-id="9a089-102">Controllo ComboBox (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="9a089-102">ComboBox Control (Windows Forms)</span></span>
+<span data-ttu-id="9a089-103">Windows Form `ComboBox` controllo viene utilizzato per visualizzare i dati in una casella combinata a discesa.</span><span class="sxs-lookup"><span data-stu-id="9a089-103">The Windows Forms `ComboBox` control is used to display data in a drop-down combo box.</span></span> <span data-ttu-id="9a089-104">Per impostazione predefinita, il `ComboBox` verrà visualizzato un controllo in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco.</span><span class="sxs-lookup"><span data-stu-id="9a089-104">By default, the `ComboBox` control appears in two parts: the top part is a text box that allows the user to type a list item.</span></span> <span data-ttu-id="9a089-105">La seconda parte è una casella di riepilogo che consente di visualizzare un elenco di elementi da cui l'utente può selezionare uno.</span><span class="sxs-lookup"><span data-stu-id="9a089-105">The second part is a list box that displays a list of items from which the user can select one.</span></span>  
   
-## In questa sezione  
- [Cenni preliminari sul controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- Viene fornita una definizione del controllo e ne vengono illustrate funzionalità chiave e proprietà.  
+## <a name="in-this-section"></a><span data-ttu-id="9a089-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="9a089-106">In This Section</span></span>  
+ [<span data-ttu-id="9a089-107">Panoramica sul controllo ComboBox</span><span class="sxs-lookup"><span data-stu-id="9a089-107">ComboBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ <span data-ttu-id="9a089-108">Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.</span><span class="sxs-lookup"><span data-stu-id="9a089-108">Explains what this control is and its key features and properties.</span></span>  
   
- [Procedura: creare testo di dimensioni variabili in un controllo ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
- Viene illustrato il disegno personalizzato di testo in un controllo `ComboBox`.  
+ [<span data-ttu-id="9a089-109">Procedura: Creare testo di dimensioni variabili in un controllo ComboBox</span><span class="sxs-lookup"><span data-stu-id="9a089-109">How to: Create Variable Sized Text in a ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ <span data-ttu-id="9a089-110">Viene illustrato il disegno personalizzato di testo in un `ComboBox` controllo.</span><span class="sxs-lookup"><span data-stu-id="9a089-110">Demonstrates custom drawing of text in a `ComboBox` control.</span></span>  
   
-## Riferimenti  
- Classe <xref:System.Windows.Forms.ComboBox>  
- Viene descritta la classe e forniti i collegamenti a tutti i relativi membri.  
+## <a name="reference"></a><span data-ttu-id="9a089-111">Riferimento</span><span class="sxs-lookup"><span data-stu-id="9a089-111">Reference</span></span>  
+ <span data-ttu-id="9a089-112">Classe <xref:System.Windows.Forms.ComboBox></span><span class="sxs-lookup"><span data-stu-id="9a089-112"><xref:System.Windows.Forms.ComboBox> class</span></span>  
+ <span data-ttu-id="9a089-113">Descrive la classe e fornisce i collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="9a089-113">Describes this class and has links to all its members.</span></span>  
   
-## Sezioni correlate  
- [Controlli Windows Form usati per elencare opzioni](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Viene fornito un elenco di possibili operazioni eseguibili con caselle di riepilogo, caselle combinate e caselle di riepilogo selezionate.  
+## <a name="related-sections"></a><span data-ttu-id="9a089-114">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="9a089-114">Related Sections</span></span>  
+ [<span data-ttu-id="9a089-115">Controlli Windows Form usati per elencare opzioni</span><span class="sxs-lookup"><span data-stu-id="9a089-115">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="9a089-116">Fornisce un elenco di operazioni che è possibile eseguire con caselle di riepilogo, caselle combinate e caselle di riepilogo selezionate.</span><span class="sxs-lookup"><span data-stu-id="9a089-116">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>  
   
-## Vedere anche  
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9a089-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a089-117">See Also</span></span>  
+ [<span data-ttu-id="9a089-118">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="9a089-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

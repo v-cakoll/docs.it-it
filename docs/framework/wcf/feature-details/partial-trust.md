@@ -1,30 +1,33 @@
 ---
-title: "Attendibilit&#224; parziale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Attendibilità parziale"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 489b1587-9909-4d0e-8c1a-5e83c8f8292b
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f3febf1f3703377806493c8067b50c149bce0108
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Attendibilit&#224; parziale
-A partire da [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], i chiamanti parzialmente attendibili possono accedere a tipi e metodi pubblici implementati in <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>e <xref:System.ServiceModel.Web>.In questa sezione vengono illustrati gli scenari supportati per utilizzare [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] all'interno di un'applicazione parzialmente attendibile, così come il sottoinsieme limitato di funzionalità di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] disponibile per le applicazioni che sono in esecuzione con autorizzazioni ridotte di sicurezza dall'accesso di codice \(CAS, Code Access Security\).  
+# <a name="partial-trust"></a><span data-ttu-id="4a161-102">Attendibilità parziale</span><span class="sxs-lookup"><span data-stu-id="4a161-102">Partial Trust</span></span>
+<span data-ttu-id="4a161-103">A partire da [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], i chiamanti parzialmente attendibili possono accedere a tipi e metodi pubblici implementati in <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>e <xref:System.ServiceModel.Web>.</span><span class="sxs-lookup"><span data-stu-id="4a161-103">Starting with the [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], partially trusted callers can access public types and methods implemented in <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>, and <xref:System.ServiceModel.Web>.</span></span> <span data-ttu-id="4a161-104">Contenuto della sezione vengono illustrati gli scenari supportati per utilizzare [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] all'interno di un'applicazione parzialmente attendibile, così come il sottoinsieme limitato di funzionalità di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] disponibile per le applicazioni che sono in esecuzione con autorizzazioni ridotte di sicurezza dall'accesso di codice (CAS, Code Access Security).</span><span class="sxs-lookup"><span data-stu-id="4a161-104">This section describes supported scenarios for using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] within a partially trusted application as well as the limited subset of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] functionality available to applications running with reduced code access security (CAS) permissions.</span></span>  
   
-## In questa sezione  
- [Scenari di distribuzione supportati](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- Descrive gli scenari principali di attendibilità parziale per l'esecuzione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="4a161-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="4a161-105">In This Section</span></span>  
+ [<span data-ttu-id="4a161-106">Scenari di distribuzione supportati</span><span class="sxs-lookup"><span data-stu-id="4a161-106">Supported Deployment Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
+ <span data-ttu-id="4a161-107">Descrive gli scenari principali di attendibilità parziale per l'esecuzione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a161-107">Describes the main partial trust scenarios for running [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [Compatibilità con la funzionalità di trust parziale](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md)  
- Descrive le funzioni di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che non possono essere utilizzate con l'attendibilità parziale.  
+ [<span data-ttu-id="4a161-108">Compatibilità con la funzionalità di attendibilità parziale</span><span class="sxs-lookup"><span data-stu-id="4a161-108">Partial Trust Feature Compatibility</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md)  
+ <span data-ttu-id="4a161-109">Descrive le funzioni di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che non possono essere utilizzate con l'attendibilità parziale.</span><span class="sxs-lookup"><span data-stu-id="4a161-109">Describes the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] features that cannot be used with partial trust.</span></span>  
   
- [Procedure consigliate in ambienti parzialmente attendibili](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)  
- Contiene le procedure consigliate per utilizzare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in applicazioni parzialmente attendibili.
+ [<span data-ttu-id="4a161-110">Procedure consigliate di attendibilità parziale</span><span class="sxs-lookup"><span data-stu-id="4a161-110">Partial Trust Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)  
+ <span data-ttu-id="4a161-111">Contiene le procedure consigliate per utilizzare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in applicazioni parzialmente attendibili.</span><span class="sxs-lookup"><span data-stu-id="4a161-111">Contains best practices for using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in partially trusted applications.</span></span>

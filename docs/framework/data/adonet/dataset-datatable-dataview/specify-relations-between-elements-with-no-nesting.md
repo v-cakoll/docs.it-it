@@ -1,27 +1,30 @@
 ---
-title: "Definire relazioni tra elementi non annidati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Specifica di relazioni tra elementi senza alcun annidamento
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 036085160e9e4817964754a85db627e4d4ba8654
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Definire relazioni tra elementi non annidati
-Se gli elementi non sono annidati, non viene creata alcuna relazione implicita.  È tuttavia possibile specificare esplicitamente relazioni tra elementi non annidati mediante l'annotazione **msdata:Relationship**.  
+# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="60333-102">Specifica di relazioni tra elementi senza alcun annidamento</span><span class="sxs-lookup"><span data-stu-id="60333-102">Specify Relations Between Elements with No Nesting</span></span>
+<span data-ttu-id="60333-103">Se gli elementi non sono annidati, non viene creata alcuna relazione implicita.</span><span class="sxs-lookup"><span data-stu-id="60333-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="60333-104">Tuttavia, è possibile specificare esplicitamente relazioni tra gli elementi non annidati mediante il **msdata: Relationship** annotazione.</span><span class="sxs-lookup"><span data-stu-id="60333-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
   
- Nell'esempio seguente viene riportato un XML Schema in cui l'annotazione **msdata:Relationship** viene specificata tra gli elementi non annidati **Order** e **OrderDetail**.  L'annotazione **msdata:Relationship** viene specificata come elemento figlio dell'elemento **Schema**.  
+ <span data-ttu-id="60333-105">Nell'esempio seguente viene illustrato un XML Schema in cui il **msdata: Relationship** annotazione viene specificata tra la **ordine** e **OrderDetail** elementi, che non sono annidati.</span><span class="sxs-lookup"><span data-stu-id="60333-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="60333-106">Il **msdata: Relationship** annotazione viene specificata come elemento figlio del **Schema** elemento.</span><span class="sxs-lookup"><span data-stu-id="60333-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
              xmlns:xs="http://www.w3.org/2001/XMLSchema"   
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -60,7 +63,7 @@ Se gli elementi non sono annidati, non viene creata alcuna relazione implicita. 
 </xs:schema>  
 ```  
   
- Il processo di mapping dello schema XSD \(XML Schema Definition Language\) consente di creare un tipo <xref:System.Data.DataSet> con le tabelle **Order** e **OrderDetail** e con una relazione specificata tra tali tabelle, come illustrato di seguito.  
+ <span data-ttu-id="60333-107">Il processo di mapping dello schema di XML Schema definition language (XSD) crea un <xref:System.Data.DataSet> con **ordine** e **OrderDetail** tabelle e una relazione specificata tra le due tabelle, come illustrato di seguito.</span><span class="sxs-lookup"><span data-stu-id="60333-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -71,7 +74,7 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## Vedere anche  
- [Generazione delle relazioni del DataSet da XML Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Mapping dei vincoli di XML Schema \(XSD\) ai vincoli del DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="60333-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="60333-108">See Also</span></span>  
+ [<span data-ttu-id="60333-109">La generazione di relazioni tra DataSet da XML Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="60333-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="60333-110">Vincoli di mapping XML Schema (XSD) e vincoli di DataSet</span><span class="sxs-lookup"><span data-stu-id="60333-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="60333-111">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="60333-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,34 +1,38 @@
 ---
-title: "Opzioni di hosting di flussi di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Opzioni di hosting di flussi di lavoro
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 06d39fc37d40747eef323d83f65426e015099913
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Opzioni di hosting di flussi di lavoro
-Nella maggior parte degli esempi di [!INCLUDE[wf](../../../includes/wf-md.md)] vengono utilizzati flussi di lavoro ospitati in un'applicazione console, ma non si tratta di uno scenario realistico per i flussi di lavoro generalmente utilizzati.I flussi di lavoro nelle applicazioni aziendali reali saranno ospitati in processi persistenti, ad esempio un servizio Windows creato dallo sviluppatore o un'applicazione server come [!INCLUDE[iisver](../../../includes/iisver-md.md)] o AppFabric.Di seguito sono riportate le differenze tra questi approcci.  
+# <a name="workflow-hosting-options"></a><span data-ttu-id="fd5a4-102">Opzioni di hosting di flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="fd5a4-102">Workflow Hosting Options</span></span>
+<span data-ttu-id="fd5a4-103">Nella maggior parte degli esempi di [!INCLUDE[wf](../../../includes/wf-md.md)] vengono usati flussi di lavoro ospitati in un'applicazione console, ma non si tratta di uno scenario realistico per i flussi di lavoro generalmente usati.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-103">Most of the [!INCLUDE[wf](../../../includes/wf-md.md)] samples use workflows that are hosted in a console application, but this isn't a realistic scenario for real-world workflows.</span></span> <span data-ttu-id="fd5a4-104">I flussi di lavoro nelle applicazioni aziendali reali saranno ospitati in processi persistenti, ad esempio un servizio Windows creato dallo sviluppatore o un'applicazione server come [!INCLUDE[iisver](../../../includes/iisver-md.md)] o AppFabric.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-104">Workflows in actual business applications will be hosted in persistent processes- either a Windows service authored by the developer, or a server application such as [!INCLUDE[iisver](../../../includes/iisver-md.md)] or AppFabric.</span></span> <span data-ttu-id="fd5a4-105">Di seguito sono riportate le differenze tra questi approcci.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-105">The differences between these approaches are as follows.</span></span>  
   
-## Hosting di flussi di lavoro in IIS con Windows AppFabric  
- IIS con AppFabric è l'host preferito per i flussi di lavoro.L'applicazione host per i flussi di lavoro che utilizzano AppFabric è Windows Activation Service che rimuove la dipendenza di HTTP su IIS indipendente.  
+## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a><span data-ttu-id="fd5a4-106">Hosting di flussi di lavoro in IIS con Windows AppFabric</span><span class="sxs-lookup"><span data-stu-id="fd5a4-106">Hosting workflows in IIS with Windows AppFabric</span></span>  
+ <span data-ttu-id="fd5a4-107">IIS con AppFabric è l'host preferito per i flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-107">Using IIS with AppFabric is the preferred host for workflows.</span></span> <span data-ttu-id="fd5a4-108">L'applicazione host per i flussi di lavoro che usano AppFabric è Windows Activation Service che rimuove la dipendenza di HTTP su IIS indipendente.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-108">The host application for workflows using AppFabric is Windows Activation Service, which removes the dependency on HTTP over IIS alone.</span></span>  
   
-## Hosting di flussi di lavoro in IIS indipendente  
- L'utilizzo di [!INCLUDE[iisver](../../../includes/iisver-md.md)] indipendente non è consigliato perché con AppFabric sono disponibili strumenti di gestione e monitoraggio che facilitano la manutenzione delle applicazioni in esecuzione.I flussi di lavoro devono essere ospitati in [!INCLUDE[iisver](../../../includes/iisver-md.md)] indipendente solo in caso di problemi di infrastruttura per il passaggio ad AppFabric.  
+## <a name="hosting-workflows-in-iis-alone"></a><span data-ttu-id="fd5a4-109">Hosting di flussi di lavoro in IIS indipendente</span><span class="sxs-lookup"><span data-stu-id="fd5a4-109">Hosting workflows in IIS alone</span></span>  
+ <span data-ttu-id="fd5a4-110">L'utilizzo di [!INCLUDE[iisver](../../../includes/iisver-md.md)] indipendente non è consigliato perché con AppFabric sono disponibili strumenti di gestione e monitoraggio che facilitano la manutenzione delle applicazioni in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-110">Using [!INCLUDE[iisver](../../../includes/iisver-md.md)] alone is not recommended, as there are management and monitoring tools available with AppFabric that facilitate maintenance of running applications.</span></span> <span data-ttu-id="fd5a4-111">I flussi di lavoro devono essere ospitati in [!INCLUDE[iisver](../../../includes/iisver-md.md)] indipendente solo in caso di problemi di infrastruttura per il passaggio ad AppFabric.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-111">Workflows should only be hosted in [!INCLUDE[iisver](../../../includes/iisver-md.md)] alone if there are infrastructure concerns with moving to AppFabric.</span></span>  
   
 > [!WARNING]
->  [!INCLUDE[iisver](../../../includes/iisver-md.md)] ricicla periodicamente i pool di applicazioni per diversi motivi.Quando un pool di applicazioni viene riciclato, IIS smette di accettare i messaggi del pool precedente e crea un'istanza di un nuovo pool di applicazioni per accettare le nuove richieste.Se il flusso di lavoro continua dopo l'invio di una risposta, [!INCLUDE[iisver](../../../includes/iisver-md.md)] non verrà informato del lavoro eseguito e può riciclare il pool di applicazioni host.In questo caso, il flusso di lavoro verrà interrotto e i servizi di rilevamento registreranno un messaggio [1004 \- WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation//1004-workflowinstanceaborted.md) con il campo relativo al motivo vuoto.  
+>  [!INCLUDE[iisver](../../../includes/iisver-md.md)]<span data-ttu-id="fd5a4-112"> ricicla periodicamente i pool di applicazioni per diversi motivi.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-112"> recycles application pools periodically for various reasons.</span></span> <span data-ttu-id="fd5a4-113">Quando un pool di applicazioni viene riciclato, IIS smette di accettare i messaggi del pool precedente e crea un'istanza di un nuovo pool di applicazioni per accettare le nuove richieste.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-113">When an application pool is recycled, IIS stops accepting messages to the old pool, and instantiates a new application pool to accept new requests.</span></span> <span data-ttu-id="fd5a4-114">Se il flusso di lavoro continua dopo l'invio di una risposta, [!INCLUDE[iisver](../../../includes/iisver-md.md)] non verrà informato del lavoro eseguito e può riciclare il pool di applicazioni host.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-114">If a workflow continues working after sending a response, [!INCLUDE[iisver](../../../includes/iisver-md.md)] will not be aware of the work being done, and may recycle the hosting application pool.</span></span> <span data-ttu-id="fd5a4-115">Se in questo caso, il flusso di lavoro verrà interrotta e servizi di rilevamento registrerà un [1004 - WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) messaggio con un campo motivo vuoto.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-115">If this happens, the workflow will abort, and tracking services will record a [1004 - WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) message with an empty Reason field.</span></span>  
 >   
->  Se si utilizza la persistenza, l'host deve esplicitamente riavviare le istanze arrestate dall'ultimo punto di persistenza.  
+>  <span data-ttu-id="fd5a4-116">Se si usa la persistenza, l'host deve esplicitamente riavviare le istanze arrestate dall'ultimo punto di persistenza.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-116">If persistence is used, the host must explicitly restart aborted instances from the last persistence point.</span></span>  
 >   
->  Se si utilizza AppFabric, il servizio di gestione del flusso di lavoro eventualmente riprenderà il flusso di lavoro dall'ultimo il punto di persistenza riuscito se si utilizza la persistenza.Se la persistenza non viene utilizzata e il flusso di lavoro esegue operazioni all'esterno di un modello di risposta\-richiesta, i dati verranno persi quando il flusso di lavoro viene interrotto.  
+>  <span data-ttu-id="fd5a4-117">Se si usa AppFabric, il servizio di gestione del flusso di lavoro eventualmente riprenderà il flusso di lavoro dall'ultimo il punto di persistenza riuscito se si usa la persistenza.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-117">If AppFabric is used, the workflow management service will eventually resume the workflow from the last successful persistence point if persistence is used.</span></span> <span data-ttu-id="fd5a4-118">Se la persistenza non viene usata e il flusso di lavoro esegue operazioni all'esterno di un modello di risposta-richiesta, i dati verranno persi quando il flusso di lavoro viene interrotto.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-118">If no persistence is used, and the workflow performs operations outside a Request/Response pattern, data will be lost when the workflow aborts.</span></span>  
   
-## Hosting di un flusso di lavoro in un servizio Windows personalizzato  
- La creazione di un servizio personalizzato di flusso di lavoro per ospitare il flusso di lavoro richiede allo sviluppatore di duplicare molte funzionalità fornite in modo predefinito da AppFabric, ma consente maggiore flessibilità con le funzionalità personalizzate.Da tenere in considerazione solo se AppFabric dimostra di non essere un'opzione.
+## <a name="hosting-a-workflow-in-a-custom-windows-service"></a><span data-ttu-id="fd5a4-119">Hosting di un flusso di lavoro in un servizio Windows personalizzato</span><span class="sxs-lookup"><span data-stu-id="fd5a4-119">Hosting a workflow in a custom Windows Service</span></span>  
+ <span data-ttu-id="fd5a4-120">La creazione di un servizio personalizzato di flusso di lavoro per ospitare il flusso di lavoro richiede allo sviluppatore di duplicare molte funzionalità fornite in modo predefinito da AppFabric, ma consente maggiore flessibilità con le funzionalità personalizzate.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-120">Creating a custom workflow service to host the workflow will require the developer to duplicate a lot of the functionality provided out-of-box by AppFabric, but will allow for more flexibility with custom functionality.</span></span> <span data-ttu-id="fd5a4-121">Da tenere in considerazione solo se AppFabric dimostra di non essere un'opzione.</span><span class="sxs-lookup"><span data-stu-id="fd5a4-121">This option should only be considered if AppFabric proves to not be an option.</span></span>

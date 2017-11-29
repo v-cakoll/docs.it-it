@@ -1,51 +1,54 @@
 ---
-title: "Guida per programmatori | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Guida per programmatori
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 03d4febc7e61425d0057c48949b18281ca3dec4b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Guida per programmatori
-Questa sezione fornisce informazioni sulla creazione e sull'uso del modello a oggetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  Se si usa [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], è inoltre possibile usare [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per eseguire molte di queste stesse attività.  
+# <a name="programming-guide"></a><span data-ttu-id="a4553-102">Guida per programmatori</span><span class="sxs-lookup"><span data-stu-id="a4553-102">Programming Guide</span></span>
+<span data-ttu-id="a4553-103">Questa sezione fornisce informazioni sulla creazione e sull'uso del modello a oggetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a4553-103">This section contains information about how to create and use your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model.</span></span> <span data-ttu-id="a4553-104">Se si usa [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], è inoltre possibile usare [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per eseguire molte di queste stesse attività.</span><span class="sxs-lookup"><span data-stu-id="a4553-104">If you are using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], you can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to perform many of these same tasks.</span></span>  
   
- È possibile effettuare la ricerca di problemi specifici in MSDN Library e partecipare al [Forum su LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), dove è possibile discutere in dettaglio argomenti più complessi con gli esperti.  Infine, nel white paper relativo alla [conversione da LINQ a SQL e alle query integrate con il linguaggio .NET per i dati relazionali](http://go.microsoft.com/fwlink/?LinkId=93205) sono disponibili informazioni dettagliate sulla tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], oltre a esempi di codice [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] e C\#.  
+ <span data-ttu-id="a4553-105">È inoltre possibile cercare Microsoft Docs problemi specifici e, è possibile partecipare il [forum su LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti.</span><span class="sxs-lookup"><span data-stu-id="a4553-105">You can also search Microsoft Docs for specific issues, and you can participate in the [LINQ Forum](http://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.</span></span> <span data-ttu-id="a4553-106">Infine, nel white paper [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) (LINQ to SQL: Language Integrated Query .NET per dati relazionali) sono disponibili informazioni dettagliate sulla tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], oltre a esempi di codice [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] e C#.</span><span class="sxs-lookup"><span data-stu-id="a4553-106">Finally, the [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) white paper details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# code examples.</span></span>  
   
-## In questa sezione  
- [Creazione del modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- Viene descritto come generare un modello a oggetti.  
+## <a name="in-this-section"></a><span data-ttu-id="a4553-107">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="a4553-107">In This Section</span></span>  
+ [<span data-ttu-id="a4553-108">Creazione del modello a oggetti</span><span class="sxs-lookup"><span data-stu-id="a4553-108">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ <span data-ttu-id="a4553-109">Viene descritto come generare un modello a oggetti.</span><span class="sxs-lookup"><span data-stu-id="a4553-109">Describes how to generate an object model.</span></span>  
   
- [Comunicazioni con il database](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)  
- Viene descritto come usare un oggetto <xref:System.Data.Linq.DataContext> come canale di accesso al database.  
+ [<span data-ttu-id="a4553-110">Comunicazione con il Database</span><span class="sxs-lookup"><span data-stu-id="a4553-110">Communicating with the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)  
+ <span data-ttu-id="a4553-111">Viene descritto come usare un oggetto <xref:System.Data.Linq.DataContext> come canale di accesso al database.</span><span class="sxs-lookup"><span data-stu-id="a4553-111">Describes how to use a <xref:System.Data.Linq.DataContext> object as a conduit to the database.</span></span>  
   
- [Esecuzione di query nel database](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
- Viene descritto come eseguire query in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti molti esempi.  
+ [<span data-ttu-id="a4553-112">Una query sul Database</span><span class="sxs-lookup"><span data-stu-id="a4553-112">Querying the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
+ <span data-ttu-id="a4553-113">Viene descritto come eseguire query in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti molti esempi.</span><span class="sxs-lookup"><span data-stu-id="a4553-113">Describes how to execute queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], and provides many examples.</span></span>  
   
- [Scrittura e invio di modifiche di dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
- Viene descritto come modificare i dati nel database.  
+ [<span data-ttu-id="a4553-114">Creazione e invio di modifiche ai dati</span><span class="sxs-lookup"><span data-stu-id="a4553-114">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
+ <span data-ttu-id="a4553-115">Viene descritto come modificare i dati nel database.</span><span class="sxs-lookup"><span data-stu-id="a4553-115">Describes how change data in the database.</span></span>  
   
- [Supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- Viene descritto il supporto disponibile per il debug di progetti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ [<span data-ttu-id="a4553-116">Supporto del debug</span><span class="sxs-lookup"><span data-stu-id="a4553-116">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
+ <span data-ttu-id="a4553-117">Viene descritto il supporto disponibile per il debug di progetti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a4553-117">Describes the support available for debugging [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects.</span></span>  
   
- [Informazioni complementari](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- Sono inclusi elementi aggiuntivi, ad esempio per la risoluzione dei conflitti di concorrenza, la creazione di nuovi database e altro, per gli utenti più avanzati.  
+ [<span data-ttu-id="a4553-118">Informazioni generali</span><span class="sxs-lookup"><span data-stu-id="a4553-118">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ <span data-ttu-id="a4553-119">Sono inclusi elementi aggiuntivi, ad esempio per la risoluzione dei conflitti di concorrenza, la creazione di nuovi database e altro, per gli utenti più avanzati.</span><span class="sxs-lookup"><span data-stu-id="a4553-119">Includes additional items, such as concurrency conflict resolution, creating new databases, and more, for more advanced users.</span></span>  
   
-## Sezioni correlate  
- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- Vengono forniti collegamenti ad argomenti che illustrano la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e ne vengono descritte le funzionalità.  
+## <a name="related-sections"></a><span data-ttu-id="a4553-120">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="a4553-120">Related Sections</span></span>  
+ [<span data-ttu-id="a4553-121">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="a4553-121">LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ <span data-ttu-id="a4553-122">Vengono forniti collegamenti ad argomenti che illustrano la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e ne vengono descritte le funzionalità.</span><span class="sxs-lookup"><span data-stu-id="a4553-122">Provides links to topics that explain the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology and demonstrate features.</span></span>  
   
- [Stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- Sono inclusi collegamenti ad argomenti che illustrano come usare stored procedure.  
+ [<span data-ttu-id="a4553-123">Stored procedure</span><span class="sxs-lookup"><span data-stu-id="a4553-123">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ <span data-ttu-id="a4553-124">Sono inclusi collegamenti ad argomenti che illustrano come usare stored procedure.</span><span class="sxs-lookup"><span data-stu-id="a4553-124">Includes links to topics that illustrate how to use stored procedures.</span></span>  
   
- [Introduction to LINQ](../../../../../../ocs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Vengono fornite risorse che facilitano l'apprendimento di informazioni su [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+ [<span data-ttu-id="a4553-125">Introduzione a LINQ</span><span class="sxs-lookup"><span data-stu-id="a4553-125">Introduction to LINQ</span></span>](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
+ <span data-ttu-id="a4553-126">Vengono fornite risorse che facilitano l'apprendimento di informazioni su [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a4553-126">Provides resources to help you begin to learn about [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>

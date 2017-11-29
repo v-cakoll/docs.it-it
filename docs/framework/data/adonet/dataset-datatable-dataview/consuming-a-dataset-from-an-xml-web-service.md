@@ -1,36 +1,42 @@
 ---
-title: "Utilizzo di un DataSet da un servizio Web XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizzo di un dataset da un servizio Web XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 73af93286530fe94145cb5c05f4c70eed110d6ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizzo di un DataSet da un servizio Web XML
-Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa, in parte per facilitare il trasporto di dati su Internet.  Il **DataSet** è "serializzabile", in quanto è possibile specificarlo come input in o output da servizi Web XML, senza che sia necessaria la scrittura di codice aggiuntivo per eseguire lo streaming del contenuto del **DataSet** da un servizio Web XML a un client e viceversa.  Il **DataSet** viene convertito implicitamente in un flusso XML tramite il formato DiffGram, viene inviato in rete e ricreato come **DataSet** dal flusso XML nell'estremità ricevente.  Si tratta quindi di un metodo molto semplice e flessibile per la trasmissione e la restituzione di dati relazionali tramite i servizi Web XML.  Per altre informazioni sul formato DiffGram, vedere [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
+# <a name="consuming-a-dataset-from-an-xml-web-service"></a><span data-ttu-id="27f37-102">Utilizzo di un dataset da un servizio Web XML</span><span class="sxs-lookup"><span data-stu-id="27f37-102">Consuming a DataSet from an XML Web Service</span></span>
+<span data-ttu-id="27f37-103">Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa, in parte per facilitare il trasporto di dati su Internet.</span><span class="sxs-lookup"><span data-stu-id="27f37-103">The <xref:System.Data.DataSet> was architected with a disconnected design, in part to facilitate the convenient transport of data over the Internet.</span></span> <span data-ttu-id="27f37-104">Il **DataSet** è "serializzabile" in quanto può essere specificato come un input o output da servizi Web XML senza scrivere codice aggiuntivo necessario per il contenuto del flusso di **DataSet** da un servizio Web XML per un client e viceversa.</span><span class="sxs-lookup"><span data-stu-id="27f37-104">The **DataSet** is "serializable" in that it can be specified as an input to or output from XML Web services without any additional coding required to stream the contents of the **DataSet** from an XML Web service to a client and back.</span></span> <span data-ttu-id="27f37-105">Il **set di dati** viene convertito implicitamente in un flusso XML utilizzando il formato DiffGram, inviati in rete e ricreato dal flusso XML come un **DataSet** all'estremità ricevente.</span><span class="sxs-lookup"><span data-stu-id="27f37-105">The **DataSet** is implicitly converted to an XML stream using the DiffGram format, sent over the network, and then reconstructed from the XML stream as a **DataSet** on the receiving end.</span></span> <span data-ttu-id="27f37-106">Si tratta quindi di un metodo molto semplice e flessibile per la trasmissione e la restituzione di dati relazionali tramite i servizi Web XML.</span><span class="sxs-lookup"><span data-stu-id="27f37-106">This gives you a very simple and flexible method for transmitting and returning relational data using XML Web services.</span></span> <span data-ttu-id="27f37-107">Per ulteriori informazioni sul formato DiffGram, vedere [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).</span><span class="sxs-lookup"><span data-stu-id="27f37-107">For more information about the DiffGram format, see [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).</span></span>  
   
- Nell'esempio riportato si seguito viene illustrato come creare un servizio Web XML e un client che utilizzino il **DataSet** per il trasporto dei dati relazionali, incluse le modifiche di tali dati, e per la risoluzione di eventuali aggiornamenti fino all'origine dati originale.  
+ <span data-ttu-id="27f37-108">Nell'esempio seguente viene illustrato come creare un servizio Web XML e un client che utilizzano il **DataSet** per il trasporto di dati relazionali (inclusi i dati modificati) e risolvere eventuali aggiornamenti fino all'origine dei dati.</span><span class="sxs-lookup"><span data-stu-id="27f37-108">The following example shows how to create an XML Web service and client that use the **DataSet** to transport relational data (including modified data) and resolve any updates back to the original data source.</span></span>  
   
 > [!NOTE]
->  Nella creazione di un servizio Web XML si consiglia di tenere sempre presenti le implicazioni inerenti la sicurezza.  Per altre informazioni sulla protezione di un servizio Web XML, vedere [Securing XML Web Services Created Using ASP.NET](http://msdn.microsoft.com/it-it/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  <span data-ttu-id="27f37-109">Nella creazione di un servizio Web XML si consiglia di tenere sempre presenti le implicazioni inerenti la sicurezza.</span><span class="sxs-lookup"><span data-stu-id="27f37-109">We recommend that you always consider security implications when creating an XML Web service.</span></span> <span data-ttu-id="27f37-110">Per informazioni sulla protezione di un servizio Web XML, vedere [protezione dei servizi Web XML creati tramite ASP.NET](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c).</span><span class="sxs-lookup"><span data-stu-id="27f37-110">For information on securing an XML Web service, see [Securing XML Web Services Created Using ASP.NET](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c).</span></span>  
   
-### Per creare un servizio Web XML che restituisca e utilizzi un DataSet  
+### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a><span data-ttu-id="27f37-111">Per creare un servizio Web XML che restituisca e utilizzi un DataSet</span><span class="sxs-lookup"><span data-stu-id="27f37-111">To create an XML Web service that returns and consumes a DataSet</span></span>  
   
-1.  Creare il servizio Web XML.  
+1.  <span data-ttu-id="27f37-112">Creare il servizio Web XML.</span><span class="sxs-lookup"><span data-stu-id="27f37-112">Create the XML Web service.</span></span>  
   
-     Nell'esempio seguente viene creato un servizio Web XML che restituisce dati, in questo caso un elenco di clienti contenuto nel database **Northwind**, e riceve un **DataSet** con aggiornamenti ai dati, che vengono risolti dal servizio Web XML fino all'origine dati originale.  
+     <span data-ttu-id="27f37-113">Nell'esempio viene creato un servizio Web XML che restituisce dati, in questo caso un elenco di clienti il **Northwind** database e riceve un **DataSet** con gli aggiornamenti dei dati, che il servizio Web XML risolve l'origine dati originale.</span><span class="sxs-lookup"><span data-stu-id="27f37-113">In the example, an XML Web service is created that returns data, in this case a list of customers from the **Northwind** database, and receives a **DataSet** with updates to the data, which the XML Web service resolves back to the original data source.</span></span>  
   
-     Due metodi vengono esposti dal servizio Web XML: **GetCustomers**, che consente la restituzione dell'elenco di clienti, e **UpdateCustomers**, che consente di risolvere gli aggiornamenti fino all'origine dati.  Il servizio Web XML viene archiviato in un file sul server Web denominato DataSetSample.asmx.  Nel codice seguente viene descritto il contenuto del file DataSetSample.asmx.  
+     <span data-ttu-id="27f37-114">Il servizio Web XML espone due metodi: **GetCustomers**, per restituire l'elenco di clienti e **UpdateCustomers**, per risolvere gli aggiornamenti dell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="27f37-114">The XML Web service exposes two methods: **GetCustomers**, to return the list of customers, and **UpdateCustomers**, to resolve updates back to the data source.</span></span> <span data-ttu-id="27f37-115">Il servizio Web XML viene archiviato in un file sul server Web denominato DataSetSample.asmx.</span><span class="sxs-lookup"><span data-stu-id="27f37-115">The XML Web service is stored in a file on the Web server called DataSetSample.asmx.</span></span> <span data-ttu-id="27f37-116">Nel codice seguente viene descritto il contenuto del file DataSetSample.asmx.</span><span class="sxs-lookup"><span data-stu-id="27f37-116">The following code outlines the contents of DataSetSample.asmx.</span></span>  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -94,7 +100,6 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
         Return custDS  
       End Function  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -162,41 +167,41 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
     }  
     ```  
   
-     In uno scenario tipico il metodo **UpdateCustomers** verrebbe scritto in modo da rilevare eventuali violazioni alla concorrenza ottimistica.  Per semplicità, questa opzione non è stata inclusa nell'esempio.  Per altre informazioni sulla concorrenza ottimistica, vedere [Concorrenza ottimistica](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
+     <span data-ttu-id="27f37-117">In uno scenario tipico, il **UpdateCustomers** metodo verrebbe scritto per rilevare eventuali violazioni alla concorrenza ottimistica.</span><span class="sxs-lookup"><span data-stu-id="27f37-117">In a typical scenario, the **UpdateCustomers** method would be written to catch optimistic concurrency violations.</span></span> <span data-ttu-id="27f37-118">Per semplicità, questa opzione non è stata inclusa nell'esempio.</span><span class="sxs-lookup"><span data-stu-id="27f37-118">For simplicity, the example does not include this.</span></span> <span data-ttu-id="27f37-119">Per ulteriori informazioni sulla concorrenza ottimistica, vedere [la concorrenza ottimistica](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).</span><span class="sxs-lookup"><span data-stu-id="27f37-119">For more information about optimistic concurrency, see [Optimistic Concurrency](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).</span></span>  
   
-2.  Creare un proxy del servizio Web XML.  
+2.  <span data-ttu-id="27f37-120">Creare un proxy del servizio Web XML.</span><span class="sxs-lookup"><span data-stu-id="27f37-120">Create an XML Web service proxy.</span></span>  
   
-     Un proxy SOAP verrà richiesto dai client del servizio Web XML per l'uso dei metodi esposti.  È possibile generare questo proxy usando Visual Studio.  Se si imposta un riferimento Web su un servizio Web esistente tramite Visual Studio, tutti i comportamenti descritti in questo passaggio si verificheranno in modo trasparente.  Per creare la classe proxy autonomamente, continuare a eseguire i passaggi descritti di seguito.  Tuttavia, nella maggior parte dei casi, per creare la classe proxy per l'applicazione client è sufficiente usare Visual Studio.  
+     <span data-ttu-id="27f37-121">Un proxy SOAP verrà richiesto dai client del servizio Web XML per l'uso dei metodi esposti.</span><span class="sxs-lookup"><span data-stu-id="27f37-121">Clients of the XML Web service require a SOAP proxy in order to consume the exposed methods.</span></span> <span data-ttu-id="27f37-122">È possibile generare questo proxy usando Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="27f37-122">You can have Visual Studio generate this proxy for you.</span></span> <span data-ttu-id="27f37-123">Se si imposta un riferimento Web su un servizio Web esistente tramite Visual Studio, tutti i comportamenti descritti in questo passaggio si verificheranno in modo trasparente.</span><span class="sxs-lookup"><span data-stu-id="27f37-123">By setting a Web reference to an existing Web service from within Visual Studio, all the behavior described in this step occurs transparently.</span></span> <span data-ttu-id="27f37-124">Per creare la classe proxy autonomamente, continuare a eseguire i passaggi descritti di seguito.</span><span class="sxs-lookup"><span data-stu-id="27f37-124">If you want to create the proxy class yourself, continue with this discussion.</span></span> <span data-ttu-id="27f37-125">Tuttavia, nella maggior parte dei casi, per creare la classe proxy per l'applicazione client è sufficiente usare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="27f37-125">In most circumstances, however, using Visual Studio to create the proxy class for the client application is sufficient.</span></span>  
   
-     Per creare un proxy, è possibile usare lo Strumento del linguaggio di descrizione dei servizi Web \(Wsdl.exe\).  Se ad esempio il servizio Web XML viene esposto nell'URL http:\/\/myserver\/data\/DataSetSample.asmx, per creare un proxy di Visual Basic .NET con spazio dei nomi **WebData.DSSample** e archiviarlo nel file sample.vb è necessario eseguire un comando simile al seguente.  
+     <span data-ttu-id="27f37-126">Per creare un proxy, è possibile usare lo Strumento del linguaggio di descrizione dei servizi Web (Wsdl.exe).</span><span class="sxs-lookup"><span data-stu-id="27f37-126">A proxy can be created using the Web Services Description Language Tool.</span></span> <span data-ttu-id="27f37-127">Ad esempio, se il servizio Web XML viene esposto l'URL http://myserver/data/DataSetSample.asmx, inviare un comando analogo al seguente per creare un proxy di Visual Basic .NET con spazio dei nomi **WebData. DSSample** e archiviarlo nel file Sample. vb.</span><span class="sxs-lookup"><span data-stu-id="27f37-127">For example, if the XML Web service is exposed at the URL http://myserver/data/DataSetSample.asmx, issue a command such as the following to create a Visual Basic .NET proxy with a namespace of **WebData.DSSample** and store it in the file sample.vb.</span></span>  
   
     ```  
     wsdl /l:VB /out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
-     Per creare un proxy C\# nel file sample.cs, eseguire il comando seguente.  
+     <span data-ttu-id="27f37-128">Per creare un proxy C# nel file sample.cs, eseguire il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="27f37-128">To create a C# proxy in the file sample.cs, issue the following command.</span></span>  
   
     ```  
     wsdl /l:CS /out:sample.cs http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
-     È quindi possibile compilare il proxy come libreria e importarlo nel client del servizio Web XML.  Per compilare il codice del proxy di Visual Basic .NET archiviato nel file sample.vb come sample.dll, eseguire il comando seguente.  
+     <span data-ttu-id="27f37-129">È quindi possibile compilare il proxy come libreria e importarlo nel client del servizio Web XML.</span><span class="sxs-lookup"><span data-stu-id="27f37-129">The proxy can then be compiled as a library and imported into the XML Web service client.</span></span> <span data-ttu-id="27f37-130">Per compilare il codice del proxy di Visual Basic .NET archiviato nel file sample.vb come sample.dll, eseguire il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="27f37-130">To compile the Visual Basic .NET proxy code stored in sample.vb as sample.dll, issue the following command.</span></span>  
   
     ```  
     vbc /t:library /out:sample.dll sample.vb /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
     ```  
   
-     Per compilare il codice del proxy C\# archiviato nel file sample.cs come sample.dll, eseguire il comando seguente.  
+     <span data-ttu-id="27f37-131">Per compilare il codice del proxy C# archiviato nel file sample.cs come sample.dll, eseguire il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="27f37-131">To compile the C# proxy code stored in sample.cs as sample.dll, issue the following command.</span></span>  
   
     ```  
     csc /t:library /out:sample.dll sample.cs /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
     ```  
   
-3.  Creare un client del servizio Web XML.  
+3.  <span data-ttu-id="27f37-132">Creare un client del servizio Web XML.</span><span class="sxs-lookup"><span data-stu-id="27f37-132">Create an XML Web service client.</span></span>  
   
-     Per generare una classe proxy del servizio Web usando Visual Studio, è sufficiente creare il progetto client e fare clic su di esso con il pulsante destro del mouse nella finestra Esplora soluzioni. Quindi fare clic su **Aggiungi riferimento Web** e selezionare il servizio Web dall'elenco di servizi Web disponibili. Se il servizio Web non è disponibile nella soluzione o nel computer corrente, potrebbe essere richiesto di fornire l'indirizzo dell'endpoint del servizio Web. Se si crea autonomamente il proxy del servizio Web XML, come descritto nel passaggio precedente, è possibile importarlo nel codice del client e usare i metodi del servizio Web XML.  Il codice di esempio seguente consente di importare la libreria del proxy, chiamare **GetCustomers** per ottenere un elenco di clienti, aggiungere un nuovo cliente e infine restituire un **DataSet** contenente gli aggiornamenti a **UpdateCustomers**.  
+     <span data-ttu-id="27f37-133">Se si desidera generare automaticamente la classe proxy del servizio Web di Visual Studio, è sufficiente creare il progetto client e, nella finestra Esplora soluzioni, fare clic sul progetto, fare clic su **Aggiungi riferimento Web**e il servizio Web da selezionare l'elenco dei servizi Web disponibili (può essere necessario fornire l'indirizzo dell'endpoint del servizio Web, se il servizio Web non è disponibile all'interno della soluzione corrente o nel computer corrente.) Se si crea autonomamente il proxy del servizio Web XML, come descritto nel passaggio precedente, è possibile importarlo nel codice del client e usare i metodi del servizio Web XML.</span><span class="sxs-lookup"><span data-stu-id="27f37-133">If you want to have Visual Studio generate the Web service proxy class for you, simply create the client project, and, in the Solution Explorer window, right-click the project, click **Add Web Reference**, and select the Web service from the list of available Web services (this may require supplying the address of the Web service endpoint, if the Web service isn't available within the current solution, or on the current computer.) If you create the XML Web service proxy yourself (as described in the previous step), you can import it into your client code and consume the XML Web service methods.</span></span> <span data-ttu-id="27f37-134">Esempio di codice seguente importa la libreria del proxy, le chiamate **GetCustomers** per ottenere un elenco di clienti, aggiunge un nuovo cliente e quindi restituisce un **set di dati** con gli aggiornamenti a **UpdateCustomers** .</span><span class="sxs-lookup"><span data-stu-id="27f37-134">The following sample code imports the proxy library, calls **GetCustomers** to get a list of customers, adds a new customer, and then returns a **DataSet** with the updates to **UpdateCustomers**.</span></span>  
   
-     Notare che nell'esempio il **DataSet** restituito da **DataSet.GetChanges** viene passato a **UpdateCustomers**, poiché è necessario passare a **UpdateCustomers** solo le righe modificate.  **UpdateCustomers** restituisce il **DataSet** risolto, su cui è possibile eseguire il **Merge** nel **DataSet** esistente, in modo da incorporare le modifiche risolte ed eventuali informazioni relative agli errori di riga provenienti dall'aggiornamento.  Nel codice seguente si presuppone che il riferimento Web sia stato creato usando Visual Studio e che sia stato rinominato come DsSample nella finestra di dialogo **Aggiungi riferimento Web**.  
+     <span data-ttu-id="27f37-135">Si noti che nell'esempio viene passato il **DataSet** restituito da **DataSet. GetChanges** a **UpdateCustomers** perché solo le righe modificate devono essere passati a  **UpdateCustomers**.</span><span class="sxs-lookup"><span data-stu-id="27f37-135">Notice that the example passes the **DataSet** returned by **DataSet.GetChanges** to **UpdateCustomers** because only modified rows need to be passed to **UpdateCustomers**.</span></span> <span data-ttu-id="27f37-136">**UpdateCustomers** restituisce l'oggetto risolto **DataSet**, che è possibile quindi **Merge** in esistente **DataSet** per incorporare le modifiche risolte e eventuali informazioni sugli errori di riga provenienti dall'aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="27f37-136">**UpdateCustomers** returns the resolved **DataSet**, which you can then **Merge** into the existing **DataSet** to incorporate the resolved changes and any row error information from the update.</span></span> <span data-ttu-id="27f37-137">Il codice seguente si presuppone che si usa Visual Studio per creare il riferimento Web e che sia stato rinominato come DsSample nel riferimento Web il **Aggiungi riferimento Web** la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="27f37-137">The following code assumes that you have used Visual Studio to create the Web reference, and that you have renamed the Web reference to DsSample in the **Add Web Reference** dialog box.</span></span>  
   
     ```vb  
     Imports System  
@@ -222,7 +227,6 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
         customersDataSet.AcceptChanges()  
       End Sub  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -253,24 +257,24 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
     }  
     ```  
   
-     Se si crea la classe proxy autonomamente, invece, è necessario eseguire i seguenti passaggi aggiuntivi.  Per compilare l'esempio, fornire la libreria del proxy creata \(sample.dll\) e le librerie .NET correlate.  Per compilare la versione di Visual Basic .NET dell'esempio, archiviata nel file client.vb, eseguire il comando seguente.  
+     <span data-ttu-id="27f37-138">Se si crea la classe proxy autonomamente, invece, è necessario eseguire i seguenti passaggi aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="27f37-138">If you decide to create the proxy class yourself, you must take the following extra steps.</span></span> <span data-ttu-id="27f37-139">Per compilare l'esempio, fornire la libreria del proxy creata (sample.dll) e le librerie .NET correlate.</span><span class="sxs-lookup"><span data-stu-id="27f37-139">To compile the sample, supply the proxy library that was created (sample.dll) and the related .NET libraries.</span></span> <span data-ttu-id="27f37-140">Per compilare la versione di Visual Basic .NET dell'esempio, archiviata nel file client.vb, eseguire il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="27f37-140">To compile the Visual Basic .NET version of the sample, stored in the file client.vb, issue the following command.</span></span>  
   
     ```  
     vbc client.vb /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
     ```  
   
-     Per compilare la versione C\# dell'esempio, archiviata nel file client.cs, eseguire il comando seguente.  
+     <span data-ttu-id="27f37-141">Per compilare la versione C# dell'esempio, archiviata nel file client.cs, eseguire il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="27f37-141">To compile the C# version of the sample, stored in the file client.cs, issue the following command.</span></span>  
   
     ```  
     csc client.cs /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
     ```  
   
-## Vedere anche  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)   
- [DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Popolamento di un dataset da un oggetto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)   
- [Aggiornamenti di origini dati tramite DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [Parametri di DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)   
- [Web Services Description Language Tool \(Wsdl.exe\)](http://msdn.microsoft.com/it-it/b9210348-8bc2-4367-8c91-d1a04b403e88)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="27f37-142">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="27f37-142">See Also</span></span>  
+ [<span data-ttu-id="27f37-143">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="27f37-143">ADO.NET</span></span>](../../../../../docs/framework/data/adonet/index.md)  
+ [<span data-ttu-id="27f37-144">Oggetti DataSet, DataTable e DataView</span><span class="sxs-lookup"><span data-stu-id="27f37-144">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="27f37-145">DataTable</span><span class="sxs-lookup"><span data-stu-id="27f37-145">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="27f37-146">Popolamento di un set di dati da un oggetto DataAdapter</span><span class="sxs-lookup"><span data-stu-id="27f37-146">Populating a DataSet from a DataAdapter</span></span>](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [<span data-ttu-id="27f37-147">Aggiornamento di origini dati con DataAdapter</span><span class="sxs-lookup"><span data-stu-id="27f37-147">Updating Data Sources with DataAdapters</span></span>](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [<span data-ttu-id="27f37-148">Parametri DataAdapter</span><span class="sxs-lookup"><span data-stu-id="27f37-148">DataAdapter Parameters</span></span>](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [<span data-ttu-id="27f37-149">Web Services Description Language Tool (Wsdl.exe)</span><span class="sxs-lookup"><span data-stu-id="27f37-149">Web Services Description Language Tool (Wsdl.exe)</span></span>](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [<span data-ttu-id="27f37-150">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="27f37-150">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

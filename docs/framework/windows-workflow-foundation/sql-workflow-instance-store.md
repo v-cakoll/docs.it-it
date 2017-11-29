@@ -1,45 +1,49 @@
 ---
-title: "Archivio di istanze del flusso di lavoro SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Archivio di istanze del flusso di lavoro SQL
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5bf78f3b966b006d002771414551412ea0208e30
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Archivio di istanze del flusso di lavoro SQL
-[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] viene fornito con l'archivio di istanze del flusso di lavoro SQL che consente ai flussi di lavoro di rendere persistenti le informazioni sullo stato delle istanze del flusso di lavoro in un database di SQL Server 2005 o di SQL Server 2008.Questa funzionalità viene implementata principalmente nel formato della classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> che deriva dalla classe <xref:System.Runtime.Persistence.InstanceStore> astratta del framework di persistenza.La funzionalità di archivio di istanze del flusso di lavoro SQL costituisce un provider di persistenza SQL, ovvero un'implementazione concreta dell'API di persistenza utilizzata da un host per inviare i comandi di persistenza all'archivio.  
+# <a name="sql-workflow-instance-store"></a><span data-ttu-id="65eb5-102">Archivio di istanze del flusso di lavoro SQL</span><span class="sxs-lookup"><span data-stu-id="65eb5-102">SQL Workflow Instance Store</span></span>
+<span data-ttu-id="65eb5-103">[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] viene fornito con l'archivio di istanze del flusso di lavoro SQL che consente ai flussi di lavoro di rendere persistenti le informazioni sullo stato delle istanze del flusso di lavoro in un database di SQL Server 2005 o di SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="65eb5-103">The [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ships with the SQL Workflow Instance Store, which allows workflows to persist state information about workflow instances in a SQL Server 2005 or SQL Server 2008 database.</span></span> <span data-ttu-id="65eb5-104">Questa funzionalità viene implementata principalmente nel formato della classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> che deriva dalla classe <xref:System.Runtime.DurableInstancing.InstanceStore> astratta del framework di persistenza.</span><span class="sxs-lookup"><span data-stu-id="65eb5-104">This feature is primarily implemented in the form of the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> class, which derives from the abstract <xref:System.Runtime.DurableInstancing.InstanceStore> class of the persistence framework.</span></span> <span data-ttu-id="65eb5-105">La funzionalità di archivio di istanze del flusso di lavoro SQL costituisce un provider di persistenza SQL, ovvero un'implementazione concreta dell'API di persistenza usata da un host per inviare i comandi di persistenza all'archivio.</span><span class="sxs-lookup"><span data-stu-id="65eb5-105">The SQL Workflow Instance Store feature constitutes a SQL persistence provider, which is a concrete implementation of the persistence API that a host uses to send persistence commands to the store.</span></span>  
   
- L'archivio di istanze del flusso di lavoro SQL supporta sia flussi di lavoro indipendenti o i servizi dei flussi di lavoro che utilizzano l'oggetto <xref:System.Activities.WorkflowApplication> o <xref:System.ServiceModel.WorkflowServiceHost> sia i servizi ospitati in WAS tramite l'oggetto <xref:System.ServiceModel.WorkflowServiceHost>.La funzionalità di archivio di istanze del flusso di lavoro SQL può essere configurata a livello di codice per i servizi indipendenti tramite il modello a oggetti esposto dalla funzionalità.Questa funzionalità può essere configurata per i servizi ospitati dall'oggetto <xref:System.ServiceModel.WorkflowServiceHost> sia a livello di codice tramite il modello a oggetti sia tramite un file di configurazione XML.  
+ <span data-ttu-id="65eb5-106">L'archivio di istanze del flusso di lavoro SQL supporta sia flussi di lavoro indipendenti o i servizi dei flussi di lavoro che usano l'oggetto <xref:System.Activities.WorkflowApplication> o <xref:System.ServiceModel.WorkflowServiceHost> sia i servizi ospitati in WAS tramite l'oggetto <xref:System.ServiceModel.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="65eb5-106">The SQL Workflow Instance Store supports both self-hosted workflows or workflow services that use <xref:System.Activities.WorkflowApplication> or <xref:System.ServiceModel.WorkflowServiceHost> as well as services hosted in WAS using <xref:System.ServiceModel.WorkflowServiceHost>.</span></span> <span data-ttu-id="65eb5-107">La funzionalità di archivio di istanze del flusso di lavoro SQL può essere configurata a livello di codice per i servizi indipendenti tramite il modello a oggetti esposto dalla funzionalità.</span><span class="sxs-lookup"><span data-stu-id="65eb5-107">You can configure the SQL Workflow Instance Store feature for self-hosted services programmatically by using the object model exposed by the feature.</span></span> <span data-ttu-id="65eb5-108">Questa funzionalità può essere configurata per i servizi ospitati dall'oggetto <xref:System.ServiceModel.WorkflowServiceHost> sia a livello di codice tramite il modello a oggetti sia tramite un file di configurazione XML.</span><span class="sxs-lookup"><span data-stu-id="65eb5-108">You can configure this feature for services hosted by <xref:System.ServiceModel.WorkflowServiceHost> both programmatically by using the object model and also by using an XML configuration file.</span></span>  
   
- La funzionalità di archivio di istanze del flusso di lavoro SQL \(classe **SqlWorkflowInstanceStore**\) non implementa l'oggetto <xref:System.ServiceModel.Persistence.PersistenceProviderFactory>, pertanto non offre il supporto della persistenza per i servizi WCF durevoli non del flusso di lavoro.Inoltre, non implementando l'oggetto <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService>, non offre il supporto della persistenza per i flussi di lavoro 3.x.La funzionalità supporta la persistenza solo per i flussi di lavoro e i relativi servizi di WF 4.0 \(e versione successiva\).La funzionalità non supporta inoltre alcun database diverso da SQL Server 2005 e SQL Server 2008.  
+ <span data-ttu-id="65eb5-109">La funzionalità di archivio di istanze del flusso di lavoro SQL (**SqlWorkflowInstanceStore** classe) non implementa <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> e pertanto non offre il supporto della persistenza per i servizi WCF senza flusso di lavoro durevoli.</span><span class="sxs-lookup"><span data-stu-id="65eb5-109">The SQL Workflow Instance Store feature (**SqlWorkflowInstanceStore** class) does not implement <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> and hence does not offer persistence support for durable non-workflow WCF services.</span></span> <span data-ttu-id="65eb5-110">Inoltre, non implementando l'oggetto <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService>, non offre il supporto della persistenza per i flussi di lavoro 3.x.</span><span class="sxs-lookup"><span data-stu-id="65eb5-110">It also does not implement <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> and hence does not offer persistence support for 3.x workflows.</span></span> <span data-ttu-id="65eb5-111">La funzionalità supporta la persistenza solo per i flussi di lavoro e i relativi servizi di WF 4.0 e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="65eb5-111">The feature supports persistence for only WF 4.0 (and later) workflows and workflow services.</span></span> <span data-ttu-id="65eb5-112">La funzionalità non supporta inoltre alcun database diverso da SQL Server 2005 e SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="65eb5-112">The feature also does not support any databases other than SQL Server 2005 and SQL Server 2008.</span></span>  
   
- Negli argomenti di questa sezione vengono descritte le proprietà e le funzionalità dell'archivio di istanze del flusso di lavoro SQL e forniti i dettagli sulla configurazione dell'archivio.  
+ <span data-ttu-id="65eb5-113">Negli argomenti di questa sezione vengono descritte le proprietà e le funzionalità dell'archivio di istanze del flusso di lavoro SQL e forniti i dettagli sulla configurazione dell'archivio.</span><span class="sxs-lookup"><span data-stu-id="65eb5-113">The topics in this section describe properties and features of the SQL Workflow Instance Store and provide you with details on configuring the store.</span></span>  
   
- Windows Server AppFabric è dotato di un proprio archivio di istanze e di strumenti per semplificare la configurazione e l'utilizzo dell'archivio.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] vedere [Archivio di istanze di Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201201).[!INCLUDE[crabout](../../../includes/crabout-md.md)] sul database di persistenza di SQL Server AppFabric vedere [Database di persistenza SQL Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ <span data-ttu-id="65eb5-114">Windows Server AppFabric è dotato di un proprio archivio di istanze e di strumenti per semplificare la configurazione e l'uso dell'archivio.</span><span class="sxs-lookup"><span data-stu-id="65eb5-114">Windows Server App Fabric provides its own instance store and tooling to simplify the configuration and use of the instance store.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="65eb5-115">vedere [archivio di istanze di Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201201).</span><span class="sxs-lookup"><span data-stu-id="65eb5-115"> see [Windows Server App Fabric Instance Store](http://go.microsoft.com/fwlink/?LinkId=201201).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="65eb5-116">vedere il Database di persistenza di App Fabric SQL Server [App persistenza Database di SQL Server](http://go.microsoft.com/fwlink/?LinkId=201202)</span><span class="sxs-lookup"><span data-stu-id="65eb5-116"> the App Fabric SQL Server Persistence Database see [App Fabric SQL Server Persistence Database](http://go.microsoft.com/fwlink/?LinkId=201202)</span></span>  
   
-## In questa sezione  
+## <a name="in-this-section"></a><span data-ttu-id="65eb5-117">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="65eb5-117">In This Section</span></span>  
   
--   [Proprietà dell'archivio di istanze del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation//properties-of-sql-workflow-instance-store.md)  
+-   [<span data-ttu-id="65eb5-118">Proprietà dell'archivio di istanze del flusso di lavoro SQL</span><span class="sxs-lookup"><span data-stu-id="65eb5-118">Properties of SQL Workflow Instance Store</span></span>](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
--   [Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi](../../../docs/framework/windows-workflow-foundation//how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [<span data-ttu-id="65eb5-119">Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi</span><span class="sxs-lookup"><span data-stu-id="65eb5-119">How to: Enable SQL Persistence for Workflows and Workflow Services</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Attivazione di istanze](../../../docs/framework/windows-workflow-foundation//instance-activation.md)  
+-   [<span data-ttu-id="65eb5-120">Attivazione di istanze</span><span class="sxs-lookup"><span data-stu-id="65eb5-120">Instance Activation</span></span>](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
   
--   [Supporto per le query](../../../docs/framework/windows-workflow-foundation//support-for-queries.md)  
+-   [<span data-ttu-id="65eb5-121">Supporto per le query</span><span class="sxs-lookup"><span data-stu-id="65eb5-121">Support for Queries</span></span>](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
   
--   [Estensibilità dell'archivio](../../../docs/framework/windows-workflow-foundation//store-extensibility.md)  
+-   [<span data-ttu-id="65eb5-122">Estendibilità dell'archivio</span><span class="sxs-lookup"><span data-stu-id="65eb5-122">Store Extensibility</span></span>](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
   
--   [Sicurezza](../../../docs/framework/windows-workflow-foundation//security.md)  
+-   [<span data-ttu-id="65eb5-123">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="65eb5-123">Security</span></span>](../../../docs/framework/windows-workflow-foundation/security.md)  
   
--   [Database di persistenza SQL Server](../../../docs/framework/windows-workflow-foundation//sql-server-persistence-database.md)  
+-   [<span data-ttu-id="65eb5-124">Database di persistenza di SQL Server</span><span class="sxs-lookup"><span data-stu-id="65eb5-124">SQL Server Persistence Database</span></span>](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
-## Vedere anche  
- [Esempi di persistenza](http://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a><span data-ttu-id="65eb5-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="65eb5-125">See Also</span></span>  
+ [<span data-ttu-id="65eb5-126">Esempi di persistenza</span><span class="sxs-lookup"><span data-stu-id="65eb5-126">Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkID=177735)

@@ -1,87 +1,90 @@
 ---
-title: "Control Pattern Mapping for UI Automation Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, for UI Automation clients"
-  - "UI Automation, clients, control patterns for"
+title: Mapping dei pattern di controllo per i client di automazione interfaccia utente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, for UI Automation clients
+- UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-caps.latest.revision: 18
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Control Pattern Mapping for UI Automation Clients
+# <a name="control-pattern-mapping-for-ui-automation-clients"></a><span data-ttu-id="fdb51-102">Mapping dei pattern di controllo per i client di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="fdb51-102">Control Pattern Mapping for UI Automation Clients</span></span>
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="fdb51-103">Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="fdb51-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="fdb51-104">Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="fdb51-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- In questo argomento vengono elencati i tipi di controllo e i pattern di controllo associati.  
+ <span data-ttu-id="fdb51-105">In questo argomento vengono elencati i tipi di controllo e i pattern di controllo associati.</span><span class="sxs-lookup"><span data-stu-id="fdb51-105">This topic lists control types and their associated control patterns.</span></span>  
   
- Nella tabella seguente i pattern di controllo sono organizzati nelle categorie seguenti:  
+ <span data-ttu-id="fdb51-106">Nella tabella seguente i pattern di controllo sono organizzati nelle categorie seguenti:</span><span class="sxs-lookup"><span data-stu-id="fdb51-106">The following table organizes the control patterns into the following categories:</span></span>  
   
--   Supportato. Il controllo deve supportare questo il pattern di controllo.  
+-   <span data-ttu-id="fdb51-107">Supportato.</span><span class="sxs-lookup"><span data-stu-id="fdb51-107">Supported.</span></span> <span data-ttu-id="fdb51-108">Il controllo deve supportare questo il pattern di controllo.</span><span class="sxs-lookup"><span data-stu-id="fdb51-108">The control must support this control pattern.</span></span>  
   
--   Supporto condizionale. Il controllo può supportare questo pattern di controllo a seconda dello stato del controllo.  
+-   <span data-ttu-id="fdb51-109">Supporto condizionale.</span><span class="sxs-lookup"><span data-stu-id="fdb51-109">Conditional support.</span></span> <span data-ttu-id="fdb51-110">Il controllo può supportare questo pattern di controllo a seconda dello stato del controllo.</span><span class="sxs-lookup"><span data-stu-id="fdb51-110">The control may support this control pattern depending on the state of the control.</span></span>  
   
--   Non supportato. Il controllo non supporta questo pattern di controllo. I controlli personalizzati possono supportare questo pattern di controllo.  
+-   <span data-ttu-id="fdb51-111">Non supportato.</span><span class="sxs-lookup"><span data-stu-id="fdb51-111">Not supported.</span></span> <span data-ttu-id="fdb51-112">Il controllo non supporta questo pattern di controllo. I controlli personalizzati possono supportare questo pattern di controllo.</span><span class="sxs-lookup"><span data-stu-id="fdb51-112">The control does not support this control pattern; custom controls may support this control pattern.</span></span>  
   
 > [!NOTE]
->  Alcuni controlli sono caratterizzati dal supporto condizionale per diversi pattern di controllo a seconda della funzionalità del controllo. Ad esempio, il controllo voce di menu prevede il supporto condizionale per il pattern di controllo <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern> o <xref:System.Windows.Automation.SelectionItemPattern> a seconda della relativa funzione nel controllo menu.  
+>  <span data-ttu-id="fdb51-113">Alcuni controlli sono caratterizzati dal supporto condizionale per diversi pattern di controllo a seconda della funzionalità del controllo.</span><span class="sxs-lookup"><span data-stu-id="fdb51-113">Some controls have conditional support for several control patterns depending on the functionality of the control.</span></span> <span data-ttu-id="fdb51-114">Ad esempio, il controllo voce di menu prevede il supporto condizionale per il pattern di controllo <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>o <xref:System.Windows.Automation.SelectionItemPattern> a seconda della relativa funzione nel controllo menu.</span><span class="sxs-lookup"><span data-stu-id="fdb51-114">For example, the menu item control has conditional support for the <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, or <xref:System.Windows.Automation.SelectionItemPattern> control pattern, depending on its function in the menu control.</span></span>  
   
 <a name="control_mapping_clients"></a>   
-## Pattern di controllo di automazione interfaccia utente per i client  
+## <a name="ui-automation-control-patterns-for-clients"></a><span data-ttu-id="fdb51-115">Pattern di controllo di automazione interfaccia utente per i client</span><span class="sxs-lookup"><span data-stu-id="fdb51-115">UI Automation Control Patterns for Clients</span></span>  
   
-|Tipo di controllo|Supportato|Supporto condizionale|Non supportato|  
-|-----------------------|----------------|---------------------------|--------------------|  
-|Button|Nessuno|Invoke, Toggle, ExpandCollapse|Nessuno|  
-|Calendar|Grid, Table|Selection, Scroll|Value|  
-|CheckBox|Toggle|Nessuno|Nessuno|  
-|ComboBox|ExpandCollapse|Selection, Value|Scroll|  
-|DataGrid|Grid|Scroll, Selection, Table|Nessuno|  
-|DataItem|SelectionItem|ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value|Nessuno|  
-|Document|Text|Scroll, Value|Nessuno|  
-|Edit|Nessuno|Text, RangeValue, Value|None|  
-|Group|Nessuno|ExpandCollapse|Nessuno|  
-|Header|Nessuno|Transform|Nessuno|  
-|HeaderItem|Nessuno|Transform, Invoke|Nessuno|  
-|Hyperlink|Invoke|Value|Nessuno|  
-|Image|Nessuno|GridItem, TableItem|Invoke, SelectionItem|  
-|List|Nessuno|Grid, MultipleView, Scroll, Selection|Table|  
-|ListItem|Item|ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value|Nessuno|  
-|Menu|Nessuno|Nessuno|Nessuno|  
-|MenuBar|Nessuno|ExpandCollapse, Dock, Transform|Nessuno|  
-|MenuItem|Nessuno|ExpandCollapse, Invoke, SelectionItem, Toggle|Nessuno|  
-|Pane|Nessuno|Dock Scroll, Transform|Window|  
-|ProgressBar|Nessuno|RangeValue, Value|Nessuno|  
-|RadioButton|SelectionItem|Nessuno|Toggle|  
-|ScrollBar|Nessuno|RangeValue|Scroll|  
-|Separator|Nessuno|Nessuno|Nessuno|  
-|Slider|Nessuno|RangeValue, Selection, Value|Nessuno|  
-|Spinner|Nessuno|RangeValue, Selection, Value|Nessuno|  
-|Pulsante di menu combinato|Invoke, ExpandCollapse|Nessuno|Nessuno|  
-|StatusBar|Nessuno|Grid|Nessuno|  
-|Tab|Selection|Scroll|Nessuno|  
-|TabItem|SelectionItem|Nessuno|Invoke|  
-|Table|Grid, GridItem, Table, TableItem|Nessuno|Nessuno|  
-|Text|Nessuno|GridItem, TableItem, Text|Valore|  
-|Thumb|Transform|Nessuno|Nessuno|  
-|TitleBar|Nessuno|Nessuno|Nessuno|  
-|ToolBar|Nessuno|Dock, ExpandCollapse, Transform|Nessuno|  
-|ToolTip|Nessuno|Text, Window|Nessuno|  
-|Tree|Nessuno|Scroll, Selection|Nessuno|  
-|TreeItem|ExpandCollapse|Invoke, ScrollItem, SelectionItem, Toggle|Nessuno|  
-|Window|Transform, Window|Dock|Nessuno|  
+|<span data-ttu-id="fdb51-116">Tipo di controllo</span><span class="sxs-lookup"><span data-stu-id="fdb51-116">Control Type</span></span>|<span data-ttu-id="fdb51-117">Supportato</span><span class="sxs-lookup"><span data-stu-id="fdb51-117">Supported</span></span>|<span data-ttu-id="fdb51-118">Supporto condizionale</span><span class="sxs-lookup"><span data-stu-id="fdb51-118">Conditional Support</span></span>|<span data-ttu-id="fdb51-119">Non supportato</span><span class="sxs-lookup"><span data-stu-id="fdb51-119">Not Supported</span></span>|  
+|------------------|---------------|-------------------------|-------------------|  
+|<span data-ttu-id="fdb51-120">Button</span><span class="sxs-lookup"><span data-stu-id="fdb51-120">Button</span></span>|<span data-ttu-id="fdb51-121">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-121">None</span></span>|<span data-ttu-id="fdb51-122">Invoke, Toggle, ExpandCollapse</span><span class="sxs-lookup"><span data-stu-id="fdb51-122">Invoke, Toggle, Expand Collapse</span></span>|<span data-ttu-id="fdb51-123">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-123">None</span></span>|  
+|<span data-ttu-id="fdb51-124">Calendar</span><span class="sxs-lookup"><span data-stu-id="fdb51-124">Calendar</span></span>|<span data-ttu-id="fdb51-125">Grid, Table</span><span class="sxs-lookup"><span data-stu-id="fdb51-125">Grid, Table</span></span>|<span data-ttu-id="fdb51-126">Selection, Scroll</span><span class="sxs-lookup"><span data-stu-id="fdb51-126">Selection, Scroll</span></span>|<span data-ttu-id="fdb51-127">Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-127">Value</span></span>|  
+|<span data-ttu-id="fdb51-128">CheckBox</span><span class="sxs-lookup"><span data-stu-id="fdb51-128">Check Box</span></span>|<span data-ttu-id="fdb51-129">Toggle</span><span class="sxs-lookup"><span data-stu-id="fdb51-129">Toggle</span></span>|<span data-ttu-id="fdb51-130">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-130">None</span></span>|<span data-ttu-id="fdb51-131">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-131">None</span></span>|  
+|<span data-ttu-id="fdb51-132">ComboBox</span><span class="sxs-lookup"><span data-stu-id="fdb51-132">Combo Box</span></span>|<span data-ttu-id="fdb51-133">ExpandCollapse</span><span class="sxs-lookup"><span data-stu-id="fdb51-133">Expand Collapse</span></span>|<span data-ttu-id="fdb51-134">Selection, Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-134">Selection, Value</span></span>|<span data-ttu-id="fdb51-135">Scroll</span><span class="sxs-lookup"><span data-stu-id="fdb51-135">Scroll</span></span>|  
+|<span data-ttu-id="fdb51-136">DataGrid</span><span class="sxs-lookup"><span data-stu-id="fdb51-136">Data Grid</span></span>|<span data-ttu-id="fdb51-137">Grid</span><span class="sxs-lookup"><span data-stu-id="fdb51-137">Grid</span></span>|<span data-ttu-id="fdb51-138">Scroll, Selection, Table</span><span class="sxs-lookup"><span data-stu-id="fdb51-138">Scroll, Selection, Table</span></span>|<span data-ttu-id="fdb51-139">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-139">None</span></span>|  
+|<span data-ttu-id="fdb51-140">DataItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-140">Data Item</span></span>|<span data-ttu-id="fdb51-141">SelectionItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-141">Selection Item</span></span>|<span data-ttu-id="fdb51-142">ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-142">Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value</span></span>|<span data-ttu-id="fdb51-143">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-143">None</span></span>|  
+|<span data-ttu-id="fdb51-144">Document</span><span class="sxs-lookup"><span data-stu-id="fdb51-144">Document</span></span>|<span data-ttu-id="fdb51-145">Text</span><span class="sxs-lookup"><span data-stu-id="fdb51-145">Text</span></span>|<span data-ttu-id="fdb51-146">Scroll, Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-146">Scroll, Value</span></span>|<span data-ttu-id="fdb51-147">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-147">None</span></span>|  
+|<span data-ttu-id="fdb51-148">Edit</span><span class="sxs-lookup"><span data-stu-id="fdb51-148">Edit</span></span>|<span data-ttu-id="fdb51-149">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-149">None</span></span>|<span data-ttu-id="fdb51-150">Text, RangeValue, Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-150">Text, Range Value, Value</span></span>|<span data-ttu-id="fdb51-151">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-151">None</span></span>|  
+|<span data-ttu-id="fdb51-152">Group</span><span class="sxs-lookup"><span data-stu-id="fdb51-152">Group</span></span>|<span data-ttu-id="fdb51-153">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-153">None</span></span>|<span data-ttu-id="fdb51-154">ExpandCollapse</span><span class="sxs-lookup"><span data-stu-id="fdb51-154">Expand Collapse</span></span>|<span data-ttu-id="fdb51-155">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-155">None</span></span>|  
+|<span data-ttu-id="fdb51-156">Header</span><span class="sxs-lookup"><span data-stu-id="fdb51-156">Header</span></span>|<span data-ttu-id="fdb51-157">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-157">None</span></span>|<span data-ttu-id="fdb51-158">Transform</span><span class="sxs-lookup"><span data-stu-id="fdb51-158">Transform</span></span>|<span data-ttu-id="fdb51-159">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-159">None</span></span>|  
+|<span data-ttu-id="fdb51-160">HeaderItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-160">Header Item</span></span>|<span data-ttu-id="fdb51-161">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-161">None</span></span>|<span data-ttu-id="fdb51-162">Transform, Invoke</span><span class="sxs-lookup"><span data-stu-id="fdb51-162">Transform, Invoke</span></span>|<span data-ttu-id="fdb51-163">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-163">None</span></span>|  
+|<span data-ttu-id="fdb51-164">Hyperlink</span><span class="sxs-lookup"><span data-stu-id="fdb51-164">Hyperlink</span></span>|<span data-ttu-id="fdb51-165">Invoke</span><span class="sxs-lookup"><span data-stu-id="fdb51-165">Invoke</span></span>|<span data-ttu-id="fdb51-166">Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-166">Value</span></span>|<span data-ttu-id="fdb51-167">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-167">None</span></span>|  
+|<span data-ttu-id="fdb51-168">Image</span><span class="sxs-lookup"><span data-stu-id="fdb51-168">Image</span></span>|<span data-ttu-id="fdb51-169">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-169">None</span></span>|<span data-ttu-id="fdb51-170">GridItem, TableItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-170">Grid Item, Table Item</span></span>|<span data-ttu-id="fdb51-171">Invoke, SelectionItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-171">Invoke, Selection Item</span></span>|  
+|<span data-ttu-id="fdb51-172">List</span><span class="sxs-lookup"><span data-stu-id="fdb51-172">List</span></span>|<span data-ttu-id="fdb51-173">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-173">None</span></span>|<span data-ttu-id="fdb51-174">Grid, MultipleView, Scroll, Selection</span><span class="sxs-lookup"><span data-stu-id="fdb51-174">Grid, Multiple View, Scroll, Selection</span></span>|<span data-ttu-id="fdb51-175">Table</span><span class="sxs-lookup"><span data-stu-id="fdb51-175">Table</span></span>|  
+|<span data-ttu-id="fdb51-176">ListItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-176">List Item</span></span>|<span data-ttu-id="fdb51-177">SelectionItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-177">Selection Item</span></span>|<span data-ttu-id="fdb51-178">ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-178">Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value</span></span>|<span data-ttu-id="fdb51-179">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-179">None</span></span>|  
+|<span data-ttu-id="fdb51-180">Menu</span><span class="sxs-lookup"><span data-stu-id="fdb51-180">Menu</span></span>|<span data-ttu-id="fdb51-181">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-181">None</span></span>|<span data-ttu-id="fdb51-182">Nessuna</span><span class="sxs-lookup"><span data-stu-id="fdb51-182">None</span></span>|<span data-ttu-id="fdb51-183">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-183">None</span></span>|  
+|<span data-ttu-id="fdb51-184">MenuBar</span><span class="sxs-lookup"><span data-stu-id="fdb51-184">Menu Bar</span></span>|<span data-ttu-id="fdb51-185">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-185">None</span></span>|<span data-ttu-id="fdb51-186">ExpandCollapse, Dock, Transform</span><span class="sxs-lookup"><span data-stu-id="fdb51-186">Expand Collapse, Dock, Transform</span></span>|<span data-ttu-id="fdb51-187">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-187">None</span></span>|  
+|<span data-ttu-id="fdb51-188">MenuItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-188">Menu Item</span></span>|<span data-ttu-id="fdb51-189">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-189">None</span></span>|<span data-ttu-id="fdb51-190">ExpandCollapse, Invoke, SelectionItem, Toggle</span><span class="sxs-lookup"><span data-stu-id="fdb51-190">Expand Collapse, Invoke, Selection Item, Toggle</span></span>|<span data-ttu-id="fdb51-191">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-191">None</span></span>|  
+|<span data-ttu-id="fdb51-192">Pane</span><span class="sxs-lookup"><span data-stu-id="fdb51-192">Pane</span></span>|<span data-ttu-id="fdb51-193">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-193">None</span></span>|<span data-ttu-id="fdb51-194">Dock</span><span class="sxs-lookup"><span data-stu-id="fdb51-194">Dock.</span></span> <span data-ttu-id="fdb51-195">Scroll, Transform</span><span class="sxs-lookup"><span data-stu-id="fdb51-195">Scroll, Transform</span></span>|<span data-ttu-id="fdb51-196">Window</span><span class="sxs-lookup"><span data-stu-id="fdb51-196">Window</span></span>|  
+|<span data-ttu-id="fdb51-197">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="fdb51-197">Progress Bar</span></span>|<span data-ttu-id="fdb51-198">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-198">None</span></span>|<span data-ttu-id="fdb51-199">RangeValue, Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-199">Range Value, Value</span></span>|<span data-ttu-id="fdb51-200">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-200">None</span></span>|  
+|<span data-ttu-id="fdb51-201">RadioButton</span><span class="sxs-lookup"><span data-stu-id="fdb51-201">Radio Button</span></span>|<span data-ttu-id="fdb51-202">SelectionItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-202">Selection Item</span></span>|<span data-ttu-id="fdb51-203">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-203">None</span></span>|<span data-ttu-id="fdb51-204">Toggle</span><span class="sxs-lookup"><span data-stu-id="fdb51-204">Toggle</span></span>|  
+|<span data-ttu-id="fdb51-205">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="fdb51-205">Scroll Bar</span></span>|<span data-ttu-id="fdb51-206">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-206">None</span></span>|<span data-ttu-id="fdb51-207">RangeValue</span><span class="sxs-lookup"><span data-stu-id="fdb51-207">Range Value</span></span>|<span data-ttu-id="fdb51-208">Scroll</span><span class="sxs-lookup"><span data-stu-id="fdb51-208">Scroll</span></span>|  
+|<span data-ttu-id="fdb51-209">Separator</span><span class="sxs-lookup"><span data-stu-id="fdb51-209">Separator</span></span>|<span data-ttu-id="fdb51-210">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-210">None</span></span>|<span data-ttu-id="fdb51-211">Nessuna</span><span class="sxs-lookup"><span data-stu-id="fdb51-211">None</span></span>|<span data-ttu-id="fdb51-212">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-212">None</span></span>|  
+|<span data-ttu-id="fdb51-213">Slider</span><span class="sxs-lookup"><span data-stu-id="fdb51-213">Slider</span></span>|<span data-ttu-id="fdb51-214">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-214">None</span></span>|<span data-ttu-id="fdb51-215">RangeValue, Selection, Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-215">Range Value, Selection, Value</span></span>|<span data-ttu-id="fdb51-216">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-216">None</span></span>|  
+|<span data-ttu-id="fdb51-217">Spinner</span><span class="sxs-lookup"><span data-stu-id="fdb51-217">Spinner</span></span>|<span data-ttu-id="fdb51-218">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-218">None</span></span>|<span data-ttu-id="fdb51-219">RangeValue, Selection, Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-219">Range Value, Selection, Value</span></span>|<span data-ttu-id="fdb51-220">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-220">None</span></span>|  
+|<span data-ttu-id="fdb51-221">Pulsante di menu combinato</span><span class="sxs-lookup"><span data-stu-id="fdb51-221">Split Button</span></span>|<span data-ttu-id="fdb51-222">Invoke, ExpandCollapse</span><span class="sxs-lookup"><span data-stu-id="fdb51-222">Invoke, Expand Collapse</span></span>|<span data-ttu-id="fdb51-223">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-223">None</span></span>|<span data-ttu-id="fdb51-224">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-224">None</span></span>|  
+|<span data-ttu-id="fdb51-225">StatusBar</span><span class="sxs-lookup"><span data-stu-id="fdb51-225">Status Bar</span></span>|<span data-ttu-id="fdb51-226">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-226">None</span></span>|<span data-ttu-id="fdb51-227">Grid</span><span class="sxs-lookup"><span data-stu-id="fdb51-227">Grid</span></span>|<span data-ttu-id="fdb51-228">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-228">None</span></span>|  
+|<span data-ttu-id="fdb51-229">Tab</span><span class="sxs-lookup"><span data-stu-id="fdb51-229">Tab</span></span>|<span data-ttu-id="fdb51-230">Selection</span><span class="sxs-lookup"><span data-stu-id="fdb51-230">Selection</span></span>|<span data-ttu-id="fdb51-231">Scroll</span><span class="sxs-lookup"><span data-stu-id="fdb51-231">Scroll</span></span>|<span data-ttu-id="fdb51-232">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-232">None</span></span>|  
+|<span data-ttu-id="fdb51-233">TabItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-233">Tab Item</span></span>|<span data-ttu-id="fdb51-234">SelectionItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-234">Selection Item</span></span>|<span data-ttu-id="fdb51-235">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-235">None</span></span>|<span data-ttu-id="fdb51-236">Invoke</span><span class="sxs-lookup"><span data-stu-id="fdb51-236">Invoke</span></span>|  
+|<span data-ttu-id="fdb51-237">Table</span><span class="sxs-lookup"><span data-stu-id="fdb51-237">Table</span></span>|<span data-ttu-id="fdb51-238">Grid, GridItem, Table, TableItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-238">Grid, Grid Item, Table, Table Item</span></span>|<span data-ttu-id="fdb51-239">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-239">None</span></span>|<span data-ttu-id="fdb51-240">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-240">None</span></span>|  
+|<span data-ttu-id="fdb51-241">Text</span><span class="sxs-lookup"><span data-stu-id="fdb51-241">Text</span></span>|<span data-ttu-id="fdb51-242">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-242">None</span></span>|<span data-ttu-id="fdb51-243">GridItem, TableItem, Text</span><span class="sxs-lookup"><span data-stu-id="fdb51-243">Grid Item, Table Item, Text</span></span>|<span data-ttu-id="fdb51-244">Value</span><span class="sxs-lookup"><span data-stu-id="fdb51-244">Value</span></span>|  
+|<span data-ttu-id="fdb51-245">Thumb</span><span class="sxs-lookup"><span data-stu-id="fdb51-245">Thumb</span></span>|<span data-ttu-id="fdb51-246">Transform</span><span class="sxs-lookup"><span data-stu-id="fdb51-246">Transform</span></span>|<span data-ttu-id="fdb51-247">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-247">None</span></span>|<span data-ttu-id="fdb51-248">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-248">None</span></span>|  
+|<span data-ttu-id="fdb51-249">TitleBar</span><span class="sxs-lookup"><span data-stu-id="fdb51-249">Title Bar</span></span>|<span data-ttu-id="fdb51-250">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-250">None</span></span>|<span data-ttu-id="fdb51-251">Nessuna</span><span class="sxs-lookup"><span data-stu-id="fdb51-251">None</span></span>|<span data-ttu-id="fdb51-252">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-252">None</span></span>|  
+|<span data-ttu-id="fdb51-253">ToolBar</span><span class="sxs-lookup"><span data-stu-id="fdb51-253">Tool Bar</span></span>|<span data-ttu-id="fdb51-254">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-254">None</span></span>|<span data-ttu-id="fdb51-255">Dock, ExpandCollapse, Transform</span><span class="sxs-lookup"><span data-stu-id="fdb51-255">Dock, Expand Collapse, Transform</span></span>|<span data-ttu-id="fdb51-256">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-256">None</span></span>|  
+|<span data-ttu-id="fdb51-257">ToolTip</span><span class="sxs-lookup"><span data-stu-id="fdb51-257">Tool Tip</span></span>|<span data-ttu-id="fdb51-258">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-258">None</span></span>|<span data-ttu-id="fdb51-259">Text, Window</span><span class="sxs-lookup"><span data-stu-id="fdb51-259">Text, Window</span></span>|<span data-ttu-id="fdb51-260">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-260">None</span></span>|  
+|<span data-ttu-id="fdb51-261">Tree</span><span class="sxs-lookup"><span data-stu-id="fdb51-261">Tree</span></span>|<span data-ttu-id="fdb51-262">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-262">None</span></span>|<span data-ttu-id="fdb51-263">Scroll, Selection</span><span class="sxs-lookup"><span data-stu-id="fdb51-263">Scroll, Selection</span></span>|<span data-ttu-id="fdb51-264">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-264">None</span></span>|  
+|<span data-ttu-id="fdb51-265">TreeItem</span><span class="sxs-lookup"><span data-stu-id="fdb51-265">Tree Item</span></span>|<span data-ttu-id="fdb51-266">ExpandCollapse</span><span class="sxs-lookup"><span data-stu-id="fdb51-266">Expand Collapse</span></span>|<span data-ttu-id="fdb51-267">Invoke, ScrollItem, SelectionItem, Toggle</span><span class="sxs-lookup"><span data-stu-id="fdb51-267">Invoke, Scroll Item, Selection Item, Toggle</span></span>|<span data-ttu-id="fdb51-268">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-268">None</span></span>|  
+|<span data-ttu-id="fdb51-269">Window</span><span class="sxs-lookup"><span data-stu-id="fdb51-269">Window</span></span>|<span data-ttu-id="fdb51-270">Transform, Window</span><span class="sxs-lookup"><span data-stu-id="fdb51-270">Transform, Window</span></span>|<span data-ttu-id="fdb51-271">Dock</span><span class="sxs-lookup"><span data-stu-id="fdb51-271">Dock</span></span>|<span data-ttu-id="fdb51-272">Nessuno</span><span class="sxs-lookup"><span data-stu-id="fdb51-272">None</span></span>|  
   
 > [!NOTE]
->  Se un tipo di controllo non dispone di pattern di controllo supportati ma ha uno o più pattern di controllo supportati in modo condizionale, uno dei pattern di controllo condizionali risulterà sempre supportato.  
+>  <span data-ttu-id="fdb51-273">Se un tipo di controllo non dispone di pattern di controllo supportati ma ha uno o più pattern di controllo supportati in modo condizionale, uno dei pattern di controllo condizionali risulterà sempre supportato.</span><span class="sxs-lookup"><span data-stu-id="fdb51-273">If a control type has no supported control patterns listed but has one or more conditionally-supported control patterns, then one of those conditional control patterns will be supported at all times.</span></span>  
   
-## Vedere anche  
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="fdb51-274">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fdb51-274">See Also</span></span>  
+ [<span data-ttu-id="fdb51-275">Panoramica di automazione dell'interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="fdb51-275">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

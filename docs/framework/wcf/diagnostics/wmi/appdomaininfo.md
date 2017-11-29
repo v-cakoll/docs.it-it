@@ -1,25 +1,28 @@
 ---
-title: "AppDomainInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: AppDomainInfo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97818cf1fc6fa1c59b8b0eeaab69a73b21360151
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# AppDomainInfo
-Informazioni sul dominio applicazione  
+# <a name="appdomaininfo"></a><span data-ttu-id="490b5-102">AppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="490b5-102">AppDomainInfo</span></span>
+<span data-ttu-id="490b5-103">Informazioni sul dominio applicazione</span><span class="sxs-lookup"><span data-stu-id="490b5-103">Application domain information</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="490b5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="490b5-104">Syntax</span></span>  
   
 ```  
 class AppDomainInfo  
@@ -39,98 +42,98 @@ class AppDomainInfo
 };  
 ```  
   
-## Metodi  
- La classe AppDomainInfo non definisce metodi.  
+## <a name="methods"></a><span data-ttu-id="490b5-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="490b5-105">Methods</span></span>  
+ <span data-ttu-id="490b5-106">La classe AppDomainInfo non definisce metodi.</span><span class="sxs-lookup"><span data-stu-id="490b5-106">The AppDomainInfo class does not define any methods.</span></span>  
   
-## Proprietà  
- La classe AppDomainInfo presenta le proprietà seguenti:  
+## <a name="properties"></a><span data-ttu-id="490b5-107">Proprietà</span><span class="sxs-lookup"><span data-stu-id="490b5-107">Properties</span></span>  
+ <span data-ttu-id="490b5-108">La classe AppDomainInfo presenta le proprietà seguenti:</span><span class="sxs-lookup"><span data-stu-id="490b5-108">The AppDomainInfo class has the following properties:</span></span>  
   
-### AppDomainId  
- Tipo di dati: sint32  
+### <a name="appdomainid"></a><span data-ttu-id="490b5-109">AppDomainId</span><span class="sxs-lookup"><span data-stu-id="490b5-109">AppDomainId</span></span>  
+ <span data-ttu-id="490b5-110">Tipo di dati: sint32</span><span class="sxs-lookup"><span data-stu-id="490b5-110">Data type: sint32</span></span>  
   
- Tipo di accesso: in sola lettura  
+ <span data-ttu-id="490b5-111">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="490b5-111">Access type: Read-only</span></span>  
   
- ID del dominio applicazione.  
+ <span data-ttu-id="490b5-112">ID del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="490b5-112">The Id of the appdomain.</span></span>  
   
-### IsDefault  
- Tipo di dati: booleano  
+### <a name="isdefault"></a><span data-ttu-id="490b5-113">IsDefault</span><span class="sxs-lookup"><span data-stu-id="490b5-113">IsDefault</span></span>  
+ <span data-ttu-id="490b5-114">Tipo di dati: booleano</span><span class="sxs-lookup"><span data-stu-id="490b5-114">Data type: boolean</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="490b5-115">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="490b5-115">Access type: Read-only</span></span>  
   
- Indica se il dominio applicazione è quello predefinito.  
+ <span data-ttu-id="490b5-116">Indica se il dominio applicazione è quello predefinito.</span><span class="sxs-lookup"><span data-stu-id="490b5-116">Indicates whether the appdomain is the default appdomain.</span></span>  
   
-### LogMalformedMessages  
- Tipo di dati: booleano  
+### <a name="logmalformedmessages"></a><span data-ttu-id="490b5-117">LogMalformedMessages</span><span class="sxs-lookup"><span data-stu-id="490b5-117">LogMalformedMessages</span></span>  
+ <span data-ttu-id="490b5-118">Tipo di dati: booleano</span><span class="sxs-lookup"><span data-stu-id="490b5-118">Data type: boolean</span></span>  
   
- Tipo di accesso: in lettura\/scrittura  
+ <span data-ttu-id="490b5-119">Tipo di accesso: in lettura/scrittura</span><span class="sxs-lookup"><span data-stu-id="490b5-119">Access type: Read/Write</span></span>  
   
- Valore che specifica se i messaggi in formato non valido vengono registrati.  
+ <span data-ttu-id="490b5-120">Valore che specifica se i messaggi in formato non valido vengono registrati.</span><span class="sxs-lookup"><span data-stu-id="490b5-120">A value that specifies whether malformed messages are logged.</span></span>  
   
-### LogMessagesAtServiceLevel  
- Tipo di dati: booleano  
+### <a name="logmessagesatservicelevel"></a><span data-ttu-id="490b5-121">LogMessagesAtServiceLevel</span><span class="sxs-lookup"><span data-stu-id="490b5-121">LogMessagesAtServiceLevel</span></span>  
+ <span data-ttu-id="490b5-122">Tipo di dati: booleano</span><span class="sxs-lookup"><span data-stu-id="490b5-122">Data type: boolean</span></span>  
   
- Tipo di accesso: in lettura\/scrittura  
+ <span data-ttu-id="490b5-123">Tipo di accesso: in lettura/scrittura</span><span class="sxs-lookup"><span data-stu-id="490b5-123">Access type: Read/Write</span></span>  
   
- Valore che specifica se i messaggi vengono registrati a livello di servizio \(prima della crittografia e delle trasformazioni relative al trasporto\).  
+ <span data-ttu-id="490b5-124">Valore che specifica se i messaggi vengono registrati a livello di servizio (prima della crittografia e delle trasformazioni relative al trasporto).</span><span class="sxs-lookup"><span data-stu-id="490b5-124">A value that specifies whether messages are traced at the service level (before encryption and transport-related transforms).</span></span>  
   
-### LogMessagesAtTransportLevel  
- Tipo di dati: booleano  
+### <a name="logmessagesattransportlevel"></a><span data-ttu-id="490b5-125">LogMessagesAtTransportLevel</span><span class="sxs-lookup"><span data-stu-id="490b5-125">LogMessagesAtTransportLevel</span></span>  
+ <span data-ttu-id="490b5-126">Tipo di dati: booleano</span><span class="sxs-lookup"><span data-stu-id="490b5-126">Data type: boolean</span></span>  
   
- Tipo di accesso: in lettura\/scrittura  
+ <span data-ttu-id="490b5-127">Tipo di accesso: in lettura/scrittura</span><span class="sxs-lookup"><span data-stu-id="490b5-127">Access type: Read/Write</span></span>  
   
- Valore che specifica se i messaggi vengono registrati a livello di trasporto.  
+ <span data-ttu-id="490b5-128">Valore che specifica se i messaggi vengono registrati a livello di trasporto.</span><span class="sxs-lookup"><span data-stu-id="490b5-128">A value that specifies whether messages are traced at the transport level.</span></span>  
   
-### MessageLoggingTraceListeners  
- Tipo di dati: matrice di TraceListener  
+### <a name="messageloggingtracelisteners"></a><span data-ttu-id="490b5-129">MessageLoggingTraceListeners</span><span class="sxs-lookup"><span data-stu-id="490b5-129">MessageLoggingTraceListeners</span></span>  
+ <span data-ttu-id="490b5-130">Tipo di dati: matrice di TraceListener</span><span class="sxs-lookup"><span data-stu-id="490b5-130">Data type: TraceListener array</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="490b5-131">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="490b5-131">Access type: Read-only</span></span>  
   
- Raccolta di listener di traccia in attesa sull'origine di traccia System.Wmi.MessageLogging.  
+ <span data-ttu-id="490b5-132">Raccolta di listener di traccia in attesa sull'origine di traccia System.Wmi.MessageLogging.</span><span class="sxs-lookup"><span data-stu-id="490b5-132">The collection trace listeners that listen to the System.Wmi.MessageLogging trace source.</span></span>  
   
-### Name  
- Tipo di dati: stringa  
+### <a name="name"></a><span data-ttu-id="490b5-133">Nome</span><span class="sxs-lookup"><span data-stu-id="490b5-133">Name</span></span>  
+ <span data-ttu-id="490b5-134">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="490b5-134">Data type: string</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="490b5-135">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="490b5-135">Access type: Read-only</span></span>  
   
- Nome del dominio applicazione.  
+ <span data-ttu-id="490b5-136">Nome del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="490b5-136">The name of the appdomain.</span></span>  
   
-### PerformanceCounters  
- Tipo di dati: stringa  
+### <a name="performancecounters"></a><span data-ttu-id="490b5-137">PerformanceCounters</span><span class="sxs-lookup"><span data-stu-id="490b5-137">PerformanceCounters</span></span>  
+ <span data-ttu-id="490b5-138">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="490b5-138">Data type: string</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="490b5-139">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="490b5-139">Access type: Read-only</span></span>  
   
- Ambito dei contatori delle prestazioni attivi nel dominio applicazione.  
+ <span data-ttu-id="490b5-140">Ambito dei contatori delle prestazioni attivi nel dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="490b5-140">The scope of active performance counters in the appdomain.</span></span>  
   
-### ProcessId  
- Tipo di dati: sint32  
+### <a name="processid"></a><span data-ttu-id="490b5-141">ProcessId</span><span class="sxs-lookup"><span data-stu-id="490b5-141">ProcessId</span></span>  
+ <span data-ttu-id="490b5-142">Tipo di dati: sint32</span><span class="sxs-lookup"><span data-stu-id="490b5-142">Data type: sint32</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="490b5-143">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="490b5-143">Access type: Read-only</span></span>  
   
- ID del processo.  
+ <span data-ttu-id="490b5-144">ID del processo.</span><span class="sxs-lookup"><span data-stu-id="490b5-144">The process Id.</span></span>  
   
-### ServiceConfigPath  
- Tipo di dati: stringa  
+### <a name="serviceconfigpath"></a><span data-ttu-id="490b5-145">ServiceConfigPath</span><span class="sxs-lookup"><span data-stu-id="490b5-145">ServiceConfigPath</span></span>  
+ <span data-ttu-id="490b5-146">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="490b5-146">Data type: string</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="490b5-147">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="490b5-147">Access type: Read-only</span></span>  
   
- Percorso della configurazione del servizio.  
+ <span data-ttu-id="490b5-148">Percorso della configurazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="490b5-148">The path to the configuration of the service.</span></span>  
   
-### TraceLevel  
- Tipo di dati: stringa  
+### <a name="tracelevel"></a><span data-ttu-id="490b5-149">TraceLevel</span><span class="sxs-lookup"><span data-stu-id="490b5-149">TraceLevel</span></span>  
+ <span data-ttu-id="490b5-150">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="490b5-150">Data type: string</span></span>  
   
- Tipo di accesso: in lettura\/scrittura  
+ <span data-ttu-id="490b5-151">Tipo di accesso: in lettura/scrittura</span><span class="sxs-lookup"><span data-stu-id="490b5-151">Access type: Read/Write</span></span>  
   
- Livello di traccia dell'origine di traccia di System.Wmi.  
+ <span data-ttu-id="490b5-152">Livello di traccia dell'origine di traccia di System.Wmi.</span><span class="sxs-lookup"><span data-stu-id="490b5-152">The trace level of the System.Wmi trace source.</span></span>  
   
-### ServiceModelTraceListeners  
- Tipo di dati: matrice di TraceListener  
+### <a name="servicemodeltracelisteners"></a><span data-ttu-id="490b5-153">ServiceModelTraceListeners</span><span class="sxs-lookup"><span data-stu-id="490b5-153">ServiceModelTraceListeners</span></span>  
+ <span data-ttu-id="490b5-154">Tipo di dati: matrice di TraceListener</span><span class="sxs-lookup"><span data-stu-id="490b5-154">Data type: TraceListener array</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="490b5-155">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="490b5-155">Access type: Read-only</span></span>  
   
- Raccolta di listener in attesa sull'origine di traccia System.ServiceModel.  
+ <span data-ttu-id="490b5-156">Raccolta di listener in attesa sull'origine di traccia System.ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="490b5-156">A collection of listeners from the System.ServiceModel trace source.</span></span>  
   
-## Requisiti  
+## <a name="requirements"></a><span data-ttu-id="490b5-157">Requisiti</span><span class="sxs-lookup"><span data-stu-id="490b5-157">Requirements</span></span>  
   
-|MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|
+|<span data-ttu-id="490b5-158">MOF</span><span class="sxs-lookup"><span data-stu-id="490b5-158">MOF</span></span>|<span data-ttu-id="490b5-159">Dichiarato in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="490b5-159">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="490b5-160">Spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="490b5-160">Namespace</span></span>|<span data-ttu-id="490b5-161">Definito in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="490b5-161">Defined in root\ServiceModel</span></span>|

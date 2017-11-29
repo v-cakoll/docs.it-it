@@ -1,128 +1,133 @@
 ---
-title: "Rimozione dello stato di visualizzazione della finestra di progettazione per l&#39;aggiunta a un file XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rimozione dello stato di visualizzazione della finestra di progettazione per l'aggiunta a un file XAML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 66966668bb91a857503a82449633f8dd1ae621b8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Rimozione dello stato di visualizzazione della finestra di progettazione per l&#39;aggiunta a un file XAML
-In questo esempio viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML.[!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] scrive informazioni nel documento XAML, che è noto come stato di visualizzazione.Lo stato di visualizzazione si riferisce alle informazioni richieste in fase di progettazione, ad esempio il posizionamento del layout, che non sono richieste in fase di esecuzione.[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] inserisce queste informazioni nel documento XAML man mano che viene modificato.[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] scrive lo stato di visualizzazione nel file XAML con un attributo `mc:Ignorable`, in modo che queste informazioni non vengano caricate quando il runtime carica il file XAML.In questo esempio viene illustrato come creare una classe che rimuove tali informazioni sullo stato di visualizzazione durante l'elaborazione di nodi XAML.  
+# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a><span data-ttu-id="725e2-102">Rimozione dello stato di visualizzazione della finestra di progettazione per l'aggiunta a un file XAML</span><span class="sxs-lookup"><span data-stu-id="725e2-102">Removing the View State the Designer Adds to an XAML File</span></span>
+<span data-ttu-id="725e2-103">In questo esempio viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML.</span><span class="sxs-lookup"><span data-stu-id="725e2-103">This sample demonstrates how to create a class that derives from <xref:System.Windows.Markup.XamlWriter> and removes view state from a XAML file.</span></span> [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]<span data-ttu-id="725e2-104"> scrive informazioni nel documento XAML, che è noto come stato di visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="725e2-104"> writes information into the XAML document, which is known as view state.</span></span> <span data-ttu-id="725e2-105">Lo stato di visualizzazione si riferisce alle informazioni richieste in fase di progettazione, ad esempio il posizionamento del layout, che non sono richieste in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="725e2-105">View state refers to the information that is required at design time, such as layout positioning, that is not required at runtime.</span></span> [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]<span data-ttu-id="725e2-106"> inserisce queste informazioni nel documento XAML man mano che viene modificato.</span><span class="sxs-lookup"><span data-stu-id="725e2-106"> inserts this information into the XAML document as it is edited.</span></span> [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]<span data-ttu-id="725e2-107"> scrive lo stato di visualizzazione nel file XAML con un attributo `mc:Ignorable`, in modo che queste informazioni non vengano caricate quando il runtime carica il file XAML.</span><span class="sxs-lookup"><span data-stu-id="725e2-107"> writes the view state into the XAML file with the `mc:Ignorable` attribute, so this information is not loaded when the runtime loads the XAML file.</span></span> <span data-ttu-id="725e2-108">In questo esempio viene illustrato come creare una classe che rimuove tali informazioni sullo stato di visualizzazione durante l'elaborazione di nodi XAML.</span><span class="sxs-lookup"><span data-stu-id="725e2-108">This sample demonstrates how to create a class that removes that view state information while processing XAML nodes.</span></span>  
   
-## Discussione  
- In questo esempio viene illustrato come creare un writer personalizzato.  
+## <a name="discussion"></a><span data-ttu-id="725e2-109">Discussione</span><span class="sxs-lookup"><span data-stu-id="725e2-109">Discussion</span></span>  
+ <span data-ttu-id="725e2-110">In questo esempio viene illustrato come creare un writer personalizzato.</span><span class="sxs-lookup"><span data-stu-id="725e2-110">This sample demonstrates how to create a custom writer.</span></span>  
   
- Per compilare un writer XAML personalizzato, creare una classe che eredita da <xref:System.Windows.Markup.XamlWriter>.Dal momento che i writer XAML sono spesso annidati, è tipico tenere traccia di un writer XAML "interno".Questi writer "interni" possono essere considerati come riferimento allo stack restante di writer XAML, consentendo di disporre di più punti di ingresso per eseguire le operazioni e delegare quindi l'elaborazione al resto dello stack.  
+ <span data-ttu-id="725e2-111">Per compilare un writer XAML personalizzato, creare una classe che eredita da <xref:System.Windows.Markup.XamlWriter>.</span><span class="sxs-lookup"><span data-stu-id="725e2-111">To build a custom XAML writer, create a class that inherits from <xref:System.Windows.Markup.XamlWriter>.</span></span> <span data-ttu-id="725e2-112">I writer XAML sono spesso annidati, è tipico tenere traccia di un writer XAML "interno".</span><span class="sxs-lookup"><span data-stu-id="725e2-112">As XAML writers are often nested, it is typical to keep track of an "inner" XAML writer.</span></span> <span data-ttu-id="725e2-113">Questi "interna ' writer possono essere considerati come riferimento allo stack restante di writer XAML, consentendo di disporre di più punti di ingresso per eseguire le operazioni e delegare quindi l'elaborazione al resto dello stack.</span><span class="sxs-lookup"><span data-stu-id="725e2-113">These "inner’ writers can be thought of as the reference to the remaining stack of XAML writers, allowing you to have multiple entry points to do work and then delegate processing to the remainder of the stack.</span></span>  
   
- In questo esempio sono presenti alcuni elementi di interesse.Uno consiste nel verificare se l'elemento scritto proviene da uno spazio dei nomi della finestra di progettazione.Si noti che consente di rimuovere anche l'utilizzo di altri tipi dallo spazio dei nomi della finestra di progettazione in un flusso di lavoro.  
+ <span data-ttu-id="725e2-114">In questo esempio sono presenti alcuni elementi di interesse.</span><span class="sxs-lookup"><span data-stu-id="725e2-114">In this sample, there are a few items of interest.</span></span> <span data-ttu-id="725e2-115">Uno consiste nel verificare se l'elemento scritto proviene da uno spazio dei nomi della finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="725e2-115">One is the check to see whether the item being written is from a designer namespace.</span></span> <span data-ttu-id="725e2-116">Si noti che consente di rimuovere anche l'uso di altri tipi dallo spazio dei nomi della finestra di progettazione in un flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="725e2-116">Note that this also strips out the use of other types from the designer namespace in a workflow.</span></span>  
   
-```  
+```csharp
 static Boolean IsDesignerAttachedProperty(XamlMember xamlMember)  
 {  
-return xamlMember.IsAttachable &&  
-   xamlMember.PreferredXamlNamespace.Equals(c_sapNamespaceURI, StringComparison.OrdinalIgnoreCase);  
+    return xamlMember.IsAttachable &&  
+        xamlMember.PreferredXamlNamespace.Equals(c_sapNamespaceURI, StringComparison.OrdinalIgnoreCase);  
 }  
   
 const String c_sapNamespaceURI = "http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation";  
-The next item of interest is the constructor, where the utilization of the inner XAML writer is seen.  
+
+// The next item of interest is the constructor, where the utilization of the inner XAML writer is seen.  
 public ViewStateCleaningWriter(XamlWriter innerWriter)  
 {  
-this.InnerWriter = innerWriter;  
-this.MemberStack = new Stack<XamlMember>();  
+    this.InnerWriter = innerWriter;  
+    this.MemberStack = new Stack<XamlMember>();  
 }  
   
 XamlWriter InnerWriter {get; set; }  
 Stack<XamlMember> MemberStack {get; set; }  
-  
 ```  
   
- Inoltre, crea uno stack di membri XAML utilizzati mentre si attraversa il flusso del nodo.Il lavoro rimanente di questo esempio è ampiamente contenuto nel metodo <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>.  
+ <span data-ttu-id="725e2-117">Inoltre, crea uno stack di membri XAML usati mentre si attraversa il flusso del nodo.</span><span class="sxs-lookup"><span data-stu-id="725e2-117">This also creates a stack of XAML members that are used while traversing the node stream.</span></span> <span data-ttu-id="725e2-118">Il lavoro rimanente di questo esempio è ampiamente contenuto nel <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` metodo.</span><span class="sxs-lookup"><span data-stu-id="725e2-118">The remaining work of this sample is largely contained in the <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` method.</span></span>  
   
-```  
+```csharp
 public override void WriteStartMember(XamlMember xamlMember)  
 {  
-MemberStack.Push(xamlMember);  
-if (IsDesignerAttachedProperty(xamlMember))  
-{  
-m_attachedPropertyDepth++;  
-}  
+    MemberStack.Push(xamlMember);
+
+    if (IsDesignerAttachedProperty(xamlMember))  
+    {  
+        m_attachedPropertyDepth++;  
+    }  
   
-if (m_attachedPropertyDepth > 0)  
-{  
-return;  
-}  
+    if (m_attachedPropertyDepth > 0)  
+    {  
+        return;  
+    }  
   
-InnerWriter.WriteStartMember(xamlMember);  
+    InnerWriter.WriteStartMember(xamlMember);  
 }  
-  
 ```  
   
- Metodi successivi consentono quindi di verificare se sono ancora contenuti in un contenitore dello stato di visualizzazione e, in tal caso, restituire, e non passare, il nodo dello stack del writer.  
+ <span data-ttu-id="725e2-119">Metodi successivi consentono quindi di verificare se sono ancora contenuti in un contenitore dello stato di visualizzazione e, in tal caso, restituire, e non passare, il nodo dello stack del writer.</span><span class="sxs-lookup"><span data-stu-id="725e2-119">Subsequent methods then check to see whether they are still contained in a view state container, and if so, return, and do not pass the node down the writer stack.</span></span>  
   
-```  
+```csharp
 public override void WriteValue(Object value)  
 {  
-if (m_attachedPropertyDepth > 0)  
-{  
-return;  
-}  
+    if (m_attachedPropertyDepth > 0)  
+    {  
+        return;  
+    }  
   
-InnerWriter.WriteValue(value);  
+    InnerWriter.WriteValue(value);  
 }  
 ```  
   
- Per utilizzare un writer XAML personalizzato, è necessario concatenarlo insieme in uno stack di writer XAML.Nel seguente esempio di codice viene mostrato come questo possa essere utilizzato.  
+ <span data-ttu-id="725e2-120">Per usare un writer XAML personalizzato, è necessario concatenarlo insieme in uno stack di writer XAML.</span><span class="sxs-lookup"><span data-stu-id="725e2-120">To use a custom XAML writer, you must chain it together in a stack of XAML writers.</span></span> <span data-ttu-id="725e2-121">Nel seguente esempio di codice viene mostrato come questo possa essere usato.</span><span class="sxs-lookup"><span data-stu-id="725e2-121">The following code shows how this can be used.</span></span>  
   
-```  
+```csharp 
 XmlWriterSettings writerSettings = new XmlWriterSettings {  Indent = true };  
 XmlWriter xmlWriter = XmlWriter.Create(File.OpenWrite(args[1]), writerSettings);  
 XamlXmlWriter xamlWriter = new XamlXmlWriter(xmlWriter, new XamlSchemaContext());  
 XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilderWriter(xamlWriter)), ab);  
-  
 ```  
   
-#### Per utilizzare questo esempio  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="725e2-122">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="725e2-122">To use this sample</span></span>  
   
-1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione ViewStateCleaningWriter.sln.  
+1. <span data-ttu-id="725e2-123">In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione ViewStateCleaningWriter.sln.</span><span class="sxs-lookup"><span data-stu-id="725e2-123">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ViewStateCleaningWriter.sln solution file.</span></span>  
   
-2.  Aprire un prompt dei comandi e passare alla directory in cui viene compilato ViewStageCleaningWriter.exe.  
+2. <span data-ttu-id="725e2-124">Aprire un prompt dei comandi e passare alla directory in cui viene compilato ViewStageCleaningWriter.exe.</span><span class="sxs-lookup"><span data-stu-id="725e2-124">Open a command prompt and navigate to the directory where the ViewStageCleaningWriter.exe is built.</span></span>  
   
-3.  Eseguire ViewStateCleaningWriter.exe nel file Workflow1.xaml.  
+3. <span data-ttu-id="725e2-125">Eseguire ViewStateCleaningWriter.exe nel file Workflow1.xaml.</span><span class="sxs-lookup"><span data-stu-id="725e2-125">Run ViewStateCleaningWriter.exe on the Workflow1.xaml file.</span></span>  
+
+   <span data-ttu-id="725e2-126">La sintassi per il file eseguibile viene mostrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="725e2-126">The syntax for the executable is shown in the following example.</span></span>  
   
-     La sintassi per il file eseguibile viene mostrata nell'esempio seguente.  
+   ```console
+   ViewStateCleaningWriter.exe [input file] [output file]
+   ```
+   
+   <span data-ttu-id="725e2-127">Restituisce un file XAML in \[outfile], che contiene tutte le informazioni sullo stato di visualizzazione rimosse.</span><span class="sxs-lookup"><span data-stu-id="725e2-127">This outputs a XAML file to \[outfile], which has all its view state information removed.</span></span>  
   
- **ViewStateCleaningWriter.exe \[file di input\] \[file di output\]**     Restituisce un file XAML in \[file di output\] con tutte le relative informazioni sullo stato di visualizzazione rimosse.  
+> [!NOTE]
+> <span data-ttu-id="725e2-128">Per un flusso di lavoro <xref:System.Activities.Statements.Sequence>, vengono rimossi diversi suggerimenti di virtualizzazione</span><span class="sxs-lookup"><span data-stu-id="725e2-128">For a <xref:System.Activities.Statements.Sequence> workflow, a number of virtualization hints are removed.</span></span> <span data-ttu-id="725e2-129">determinando così il ricalcolo del layout da parte della finestra di progettazione al successivo caricamento.</span><span class="sxs-lookup"><span data-stu-id="725e2-129">This causes the designer to recalculate layout the next time it is loaded.</span></span> <span data-ttu-id="725e2-130">Quando si usa questo esempio per un oggetto <xref:System.Activities.Statements.Flowchart>, tutte le informazioni relative al posizionamento e al routing linea vengono rimosse e, al successivo caricamento nella finestra di progettazione, tutte le attività sono in pila sul lato sinistro dello schermo.</span><span class="sxs-lookup"><span data-stu-id="725e2-130">When you use this sample for a <xref:System.Activities.Statements.Flowchart>, all positioning and line routing information are removed and on subsequent loading into the designer, all activities are stacked on the left side of the screen.</span></span>  
   
-    > [!NOTE]
-    >  Per un flusso di lavoro <xref:System.Activities.Statements.Sequence>, vengono rimossi diversi suggerimenti di virtualizzazionedeterminando così il ricalcolo del layout da parte della finestra di progettazione al successivo caricamento.Quando si utilizza questo esempio per un oggetto <xref:System.Activities.Statements.Flowchart>, tutte le informazioni relative al posizionamento e al routing linea vengono rimosse e, al successivo caricamento nella finestra di progettazione, tutte le attività sono in pila sul lato sinistro dello schermo.  
+#### <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a><span data-ttu-id="725e2-131">Per creare un file XAML di esempio da usare con questo esempio</span><span class="sxs-lookup"><span data-stu-id="725e2-131">To create a sample XAML file for use with this sample</span></span>  
   
-#### Per creare un file XAML di esempio da utilizzare con questo esempio  
+1. <span data-ttu-id="725e2-132">Aprire [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="725e2-132">Open [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-1.  Aprire [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+2. <span data-ttu-id="725e2-133">Creare una nuova applicazione console flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="725e2-133">Create a new Workflow Console Application.</span></span>  
   
-2.  Creare una nuova applicazione console flusso di lavoro.  
+3. <span data-ttu-id="725e2-134">Trascinare alcune attività sull'area di disegno</span><span class="sxs-lookup"><span data-stu-id="725e2-134">Drag and drop a few activities onto the canvas</span></span>  
   
-3.  Trascinare alcune attività sull'area di disegno  
+4. <span data-ttu-id="725e2-135">Salvare il file XAML del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="725e2-135">Save the workflow XAML file.</span></span>  
   
-4.  Salvare il file XAML del flusso di lavoro.  
-  
-5.  Esaminare il file XAML per visualizzare le proprietà collegate dello stato di visualizzazione.  
+5. <span data-ttu-id="725e2-136">Esaminare il file XAML per visualizzare le proprietà collegate dello stato di visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="725e2-136">Inspect the XAML file to see the view state attached properties.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+> <span data-ttu-id="725e2-137">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="725e2-137">The samples may already be installed on your machine.</span></span> <span data-ttu-id="725e2-138">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="725e2-138">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+> <span data-ttu-id="725e2-139">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="725e2-139">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="725e2-140">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="725e2-140">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`  
-  
-## Vedere anche
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

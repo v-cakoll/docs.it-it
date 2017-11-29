@@ -1,87 +1,93 @@
 ---
-title: "Tipi di grandi dimensioni definiti dall&#39;utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tipi di grandi dimensioni definiti dall'utente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1133db68d233032b64d113a09e367781cf73321e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tipi di grandi dimensioni definiti dall&#39;utente
-I tipi definiti dall'utente \(UDT\) consentono agli sviluppatori di estendere il sistema di tipi scalari del server archiviando oggetti CLR \(Common Language Runtime\) in un database di SQL Server.  I tipi UDT possono contenere più elementi e presentare comportamenti diversi dai tipi di dati alias tradizionali, costituiti da un singolo tipo di dati di sistema SQL Server.  
+# <a name="large-udts"></a><span data-ttu-id="90c9f-102">Tipi di grandi dimensioni definiti dall'utente</span><span class="sxs-lookup"><span data-stu-id="90c9f-102">Large UDTs</span></span>
+<span data-ttu-id="90c9f-103">I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il sistema di tipi scalari del server archiviando oggetti CLR (Common Language Runtime) in un database di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="90c9f-103">User-defined types (UDTs) allow a developer to extend the server's scalar type system by storing common language runtime (CLR) objects in a SQL Server database.</span></span> <span data-ttu-id="90c9f-104">I tipi UDT possono contenere più elementi e presentare comportamenti diversi dai tipi di dati alias tradizionali, costituiti da un singolo tipo di dati di sistema SQL Server.</span><span class="sxs-lookup"><span data-stu-id="90c9f-104">UDTs can contain multiple elements and can have behaviors, unlike the traditional alias data types, which consist of a single SQL Server system data type.</span></span>  
   
 > [!NOTE]
->  Per sfruttare il supporto SqlClient migliorato per i tipi UDT di grandi dimensioni, è necessario installare .NET Framework 3.5 SP1 \(o versione successiva\).  
+>  <span data-ttu-id="90c9f-105">Per sfruttare il supporto SqlClient migliorato per i tipi UDT di grandi dimensioni, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).</span><span class="sxs-lookup"><span data-stu-id="90c9f-105">You must install the .NET Framework 3.5 SP1 (or later) to take advantage of the enhanced SqlClient support for large UDTs.</span></span>  
   
- In precedenza, i tipi UDT avevano una dimensione massima di 8 kilobyte.  In SQL Server 2008 questa limitazione è stata rimossa per i tipi UDT che hanno un formato <xref:Microsoft.SqlServer.Server.Format>.  
+ <span data-ttu-id="90c9f-106">In precedenza, i tipi UDT avevano una dimensione massima di 8 kilobyte.</span><span class="sxs-lookup"><span data-stu-id="90c9f-106">Previously, UDTs were restricted to a maximum size of 8 kilobytes.</span></span> <span data-ttu-id="90c9f-107">In SQL Server 2008 questa limitazione è stata rimossa per i tipi UDT che hanno un formato <xref:Microsoft.SqlServer.Server.Format.UserDefined>.</span><span class="sxs-lookup"><span data-stu-id="90c9f-107">In SQL Server 2008, this restriction has been removed for UDTs that have a format of <xref:Microsoft.SqlServer.Server.Format.UserDefined>.</span></span>  
   
- Per informazioni complete sui tipi definiti dall'utente, vedere la documentazione online di SQL Server relativa alla versione di SQL Server in uso.  
+ <span data-ttu-id="90c9f-108">Per informazioni complete sui tipi definiti dall'utente, vedere la documentazione online di SQL Server relativa alla versione di SQL Server in uso.</span><span class="sxs-lookup"><span data-stu-id="90c9f-108">For the complete documentation for user-defined types, see the version of SQL Server Books Online for the version of SQL Server you are using.</span></span>  
   
- **Documentazione online di SQL Server**  
+ <span data-ttu-id="90c9f-109">**Documentazione online di SQL Server**</span><span class="sxs-lookup"><span data-stu-id="90c9f-109">**SQL Server Books Online**</span></span>  
   
-1.  [Tipi CLR definiti dall'utente](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1.  [<span data-ttu-id="90c9f-110">Tipi CLR definiti dall'utente</span><span class="sxs-lookup"><span data-stu-id="90c9f-110">CLR User-Defined Types</span></span>](http://go.microsoft.com/fwlink/?LinkId=98366)  
   
-## Recupero di schemi UDT tramite GetSchema  
- Il metodo <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> di <xref:System.Data.SqlClient.SqlConnection> restituisce informazioni sullo schema del database in un oggetto <xref:System.Data.DataTable>.  Per altre informazioni, vedere [Raccolte di schemi di SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
+## <a name="retrieving-udt-schemas-using-getschema"></a><span data-ttu-id="90c9f-111">Recupero di schemi UDT tramite GetSchema</span><span class="sxs-lookup"><span data-stu-id="90c9f-111">Retrieving UDT Schemas Using GetSchema</span></span>  
+ <span data-ttu-id="90c9f-112">Il metodo <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> di <xref:System.Data.SqlClient.SqlConnection> restituisce informazioni sullo schema del database in un oggetto <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="90c9f-112">The <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of <xref:System.Data.SqlClient.SqlConnection> returns database schema information in a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="90c9f-113">Per ulteriori informazioni, vedere [raccolte di schemi di SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).</span><span class="sxs-lookup"><span data-stu-id="90c9f-113">For more information, see [SQL Server Schema Collections](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).</span></span>  
   
-### Valori della colonna GetSchemaTable per i tipi UDT  
- Il metodo <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> di <xref:System.Data.SqlClient.SqlDataReader> restituisce un oggetto <xref:System.Data.DataTable> che descrive i metadati della colonna.  La tabella seguente descrive le differenze tra i metadati della colonna per i tipi UDT di grandi dimensioni tra SQL Server 2005 e SQL Server 2008.  
+### <a name="getschematable-column-values-for-udts"></a><span data-ttu-id="90c9f-114">Valori della colonna GetSchemaTable per i tipi UDT</span><span class="sxs-lookup"><span data-stu-id="90c9f-114">GetSchemaTable Column Values for UDTs</span></span>  
+ <span data-ttu-id="90c9f-115">Il metodo <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> di <xref:System.Data.SqlClient.SqlDataReader> restituisce un oggetto <xref:System.Data.DataTable> che descrive i metadati della colonna.</span><span class="sxs-lookup"><span data-stu-id="90c9f-115">The <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> method of a <xref:System.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.DataTable> that describes column metadata.</span></span> <span data-ttu-id="90c9f-116">La tabella seguente descrive le differenze tra i metadati della colonna per i tipi UDT di grandi dimensioni tra SQL Server 2005 e SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="90c9f-116">The following table describes the differences in the column metadata for large UDTs between SQL Server 2005 and SQL Server 2008.</span></span>  
   
-|Colonna SqlDataReader|SQL Server 2005|SQL Server 2008 e versioni successive|  
-|---------------------------|---------------------|-------------------------------------------|  
-|`ColumnSize`|Variabile|Variabile|  
-|`NumericPrecision`|255|255|  
-|`NumericScale`|255|255|  
-|`DataType`|`Byte[]`|Istanza UDT|  
-|`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|Istanza UDT|  
-|`ProviderType`|21 \(`SqlDbType.VarBinary`\)|29 \(`SqlDbType.Udt`\)|  
-|`NonVersionedProviderType`|29 \(`SqlDbType.Udt`\)|29 \(`SqlDbType.Udt`\)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|Nome in tre parti specificato come *Database.SchemaName.TypeName*.|  
-|`IsLong`|Variabile|Variabile|  
+|<span data-ttu-id="90c9f-117">Colonna SqlDataReader</span><span class="sxs-lookup"><span data-stu-id="90c9f-117">SqlDataReader column</span></span>|<span data-ttu-id="90c9f-118">SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="90c9f-118">SQL Server 2005</span></span>|<span data-ttu-id="90c9f-119">SQL Server 2008 e versioni successive</span><span class="sxs-lookup"><span data-stu-id="90c9f-119">SQL Server 2008 and later</span></span>|  
+|--------------------------|---------------------|-------------------------------|  
+|`ColumnSize`|<span data-ttu-id="90c9f-120">Variabile</span><span class="sxs-lookup"><span data-stu-id="90c9f-120">Varies</span></span>|<span data-ttu-id="90c9f-121">Variabile</span><span class="sxs-lookup"><span data-stu-id="90c9f-121">Varies</span></span>|  
+|`NumericPrecision`|<span data-ttu-id="90c9f-122">255</span><span class="sxs-lookup"><span data-stu-id="90c9f-122">255</span></span>|<span data-ttu-id="90c9f-123">255</span><span class="sxs-lookup"><span data-stu-id="90c9f-123">255</span></span>|  
+|`NumericScale`|<span data-ttu-id="90c9f-124">255</span><span class="sxs-lookup"><span data-stu-id="90c9f-124">255</span></span>|<span data-ttu-id="90c9f-125">255</span><span class="sxs-lookup"><span data-stu-id="90c9f-125">255</span></span>|  
+|`DataType`|`Byte[]`|<span data-ttu-id="90c9f-126">Istanza UDT</span><span class="sxs-lookup"><span data-stu-id="90c9f-126">UDT instance</span></span>|  
+|`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|<span data-ttu-id="90c9f-127">Istanza UDT</span><span class="sxs-lookup"><span data-stu-id="90c9f-127">UDT instance</span></span>|  
+|`ProviderType`|<span data-ttu-id="90c9f-128">21 (`SqlDbType.VarBinary`)</span><span class="sxs-lookup"><span data-stu-id="90c9f-128">21 (`SqlDbType.VarBinary`)</span></span>|<span data-ttu-id="90c9f-129">29 (`SqlDbType.Udt`)</span><span class="sxs-lookup"><span data-stu-id="90c9f-129">29 (`SqlDbType.Udt`)</span></span>|  
+|`NonVersionedProviderType`|<span data-ttu-id="90c9f-130">29 (`SqlDbType.Udt`)</span><span class="sxs-lookup"><span data-stu-id="90c9f-130">29 (`SqlDbType.Udt`)</span></span>|<span data-ttu-id="90c9f-131">29 (`SqlDbType.Udt`)</span><span class="sxs-lookup"><span data-stu-id="90c9f-131">29 (`SqlDbType.Udt`)</span></span>|  
+|`DataTypeName`|`SqlDbType.VarBinary`|<span data-ttu-id="90c9f-132">Specificato come nome in tre parti *SchemaName*.</span><span class="sxs-lookup"><span data-stu-id="90c9f-132">The three part name specified as *Database.SchemaName.TypeName*.</span></span>|  
+|`IsLong`|<span data-ttu-id="90c9f-133">Variabile</span><span class="sxs-lookup"><span data-stu-id="90c9f-133">Varies</span></span>|<span data-ttu-id="90c9f-134">Variabile</span><span class="sxs-lookup"><span data-stu-id="90c9f-134">Varies</span></span>|  
   
-## Considerazioni su SqlDataReader  
- <xref:System.Data.SqlClient.SqlDataReader> è stato esteso a partire da SQL Server 2008 per supportare il recupero di valori UDT di grandi dimensioni.  La modalità di elaborazione dei valori UDT di grandi dimensioni da parte di [SqlDataReader](assetId:///SqlDataReader?qualifyHint=False&amp;autoUpgrade=True) dipende dalla versione di SQL Server in uso, nonché dal valore di `Type System Version` specificato nella stringa di connessione.  Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+## <a name="sqldatareader-considerations"></a><span data-ttu-id="90c9f-135">Considerazioni su SqlDataReader</span><span class="sxs-lookup"><span data-stu-id="90c9f-135">SqlDataReader Considerations</span></span>  
+ <span data-ttu-id="90c9f-136"><xref:System.Data.SqlClient.SqlDataReader> è stato esteso a partire da SQL Server 2008 per supportare il recupero di valori UDT di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="90c9f-136">The <xref:System.Data.SqlClient.SqlDataReader> has been extended beginning in SQL Server 2008 to support retrieving large UDT values.</span></span> <span data-ttu-id="90c9f-137">La modalità di elaborazione dei valori UDT di grandi dimensioni da parte di <xref:System.Data.SqlClient.SqlDataReader> dipende dalla versione di SQL Server in uso, nonché dal valore di `Type System Version` specificato nella stringa di connessione.</span><span class="sxs-lookup"><span data-stu-id="90c9f-137">How large UDT values are processed by a <xref:System.Data.SqlClient.SqlDataReader> depends on the version of SQL Server you are using, as well as on the `Type System Version` specified in the connection string.</span></span> <span data-ttu-id="90c9f-138">Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span><span class="sxs-lookup"><span data-stu-id="90c9f-138">For more information, see <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span></span>  
   
- I seguenti metodi di <xref:System.Data.SqlClient.SqlDataReader> restituiranno <xref:System.Data.SqlTypes.SqlBinary> anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
+ <span data-ttu-id="90c9f-139">I seguenti metodi di <xref:System.Data.SqlClient.SqlDataReader> restituiranno <xref:System.Data.SqlTypes.SqlBinary> anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:</span><span class="sxs-lookup"><span data-stu-id="90c9f-139">The following methods of <xref:System.Data.SqlClient.SqlDataReader> will return a <xref:System.Data.SqlTypes.SqlBinary> instead of a UDT when the `Type System Version` is set to SQL Server 2005:</span></span>  
   
 -   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
 -   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  ``  
+-   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  ``  
+-   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
   
 -   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
- I seguenti metodi restituiranno una matrice di `Byte[]` anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
+ <span data-ttu-id="90c9f-140">I seguenti metodi restituiranno una matrice di `Byte[]` anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:</span><span class="sxs-lookup"><span data-stu-id="90c9f-140">The following methods will return an array of `Byte[]` instead of a UDT when the `Type System Version` is set to SQL Server 2005:</span></span>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  ``  
+-   <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
 -   <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
- Si noti che per la versione corrente di ADO.NET non vengono eseguite conversioni.  
+ <span data-ttu-id="90c9f-141">Si noti che per la versione corrente di ADO.NET non vengono eseguite conversioni.</span><span class="sxs-lookup"><span data-stu-id="90c9f-141">Note that no conversions are made for the current version of ADO.NET.</span></span>  
   
-## Impostazione di SqlParameters  
- Le proprietà <xref:System.Data.SqlClient.SqlParameter> seguenti sono state estese per l'uso con i tipi UDT di grandi dimensioni.  
+## <a name="specifying-sqlparameters"></a><span data-ttu-id="90c9f-142">Impostazione di SqlParameters</span><span class="sxs-lookup"><span data-stu-id="90c9f-142">Specifying SqlParameters</span></span>  
+ <span data-ttu-id="90c9f-143">Le proprietà <xref:System.Data.SqlClient.SqlParameter> seguenti sono state estese per l'uso con i tipi UDT di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="90c9f-143">The following <xref:System.Data.SqlClient.SqlParameter> properties have been extended to work with large UDTs.</span></span>  
   
-|Proprietà SqlParameter|Descrizione|  
-|----------------------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro.  Il valore predefinito è Null.  La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
-|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro.  Il valore predefinito è Null.  La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
-|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ottiene o imposta la dimensione del valore del parametro da risolvere.  Il valore predefinito è 0.  La proprietà può essere un integer che rappresenta la dimensione del valore del parametro.  Per i tipi UDT di grandi dimensioni, può trattarsi delle dimensioni effettive del tipo UDT oppure può essere pari a \-1 per i tipi sconosciuti.|  
+|<span data-ttu-id="90c9f-144">Proprietà SqlParameter</span><span class="sxs-lookup"><span data-stu-id="90c9f-144">SqlParameter Property</span></span>|<span data-ttu-id="90c9f-145">Descrizione</span><span class="sxs-lookup"><span data-stu-id="90c9f-145">Description</span></span>|  
+|---------------------------|-----------------|  
+|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|<span data-ttu-id="90c9f-146">Ottiene o imposta un oggetto che rappresenta il valore del parametro.</span><span class="sxs-lookup"><span data-stu-id="90c9f-146">Gets or sets an object that represents the value of the parameter.</span></span> <span data-ttu-id="90c9f-147">Il valore predefinito è Null.</span><span class="sxs-lookup"><span data-stu-id="90c9f-147">The default is null.</span></span> <span data-ttu-id="90c9f-148">La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.</span><span class="sxs-lookup"><span data-stu-id="90c9f-148">The property can be `SqlBinary`, `Byte[]`, or a managed object.</span></span>|  
+|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|<span data-ttu-id="90c9f-149">Ottiene o imposta un oggetto che rappresenta il valore del parametro.</span><span class="sxs-lookup"><span data-stu-id="90c9f-149">Gets or sets an object that represents the value of the parameter.</span></span> <span data-ttu-id="90c9f-150">Il valore predefinito è Null.</span><span class="sxs-lookup"><span data-stu-id="90c9f-150">The default is null.</span></span> <span data-ttu-id="90c9f-151">La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.</span><span class="sxs-lookup"><span data-stu-id="90c9f-151">The property can be `SqlBinary`, `Byte[]`, or a managed object.</span></span>|  
+|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|<span data-ttu-id="90c9f-152">Ottiene o imposta la dimensione del valore del parametro da risolvere.</span><span class="sxs-lookup"><span data-stu-id="90c9f-152">Gets or sets the size of the parameter value to resolve.</span></span> <span data-ttu-id="90c9f-153">Il valore predefinito è 0.</span><span class="sxs-lookup"><span data-stu-id="90c9f-153">The default value is 0.</span></span> <span data-ttu-id="90c9f-154">La proprietà può essere un integer che rappresenta la dimensione del valore del parametro.</span><span class="sxs-lookup"><span data-stu-id="90c9f-154">The property can be an integer that represents the size of the parameter value.</span></span> <span data-ttu-id="90c9f-155">Per i tipi UDT di grandi dimensioni, può trattarsi delle dimensioni effettive del tipo UDT oppure può essere pari a -1 per i tipi sconosciuti.</span><span class="sxs-lookup"><span data-stu-id="90c9f-155">For large UDTs, it can be the actual size of the UDT, or -1 for unknown.</span></span>|  
   
-## Esempio di recupero di dati  
- Nel frammento di codice seguente viene illustrato come recuperare i dati UDT di grandi dimensioni.  La variabile `connectionString` presuppone una connessione valida a un database di SQL Server e la variabile `commandString` presuppone un'istruzione SELECT valida con la colonna della chiave primaria elencata per prima.  
+## <a name="retrieving-data-example"></a><span data-ttu-id="90c9f-156">Esempio di recupero di dati</span><span class="sxs-lookup"><span data-stu-id="90c9f-156">Retrieving Data Example</span></span>  
+ <span data-ttu-id="90c9f-157">Nel frammento di codice seguente viene illustrato come recuperare i dati UDT di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="90c9f-157">The following code fragment demonstrates how to retrieve large UDT data.</span></span> <span data-ttu-id="90c9f-158">La variabile `connectionString` presuppone una connessione valida a un database di SQL Server e la variabile `commandString` presuppone un'istruzione SELECT valida con la colonna della chiave primaria elencata per prima.</span><span class="sxs-lookup"><span data-stu-id="90c9f-158">The `connectionString` variable assumes a valid connection to a SQL Server database and the `commandString` variable assumes a valid SELECT statement with the primary key column listed first.</span></span>  
   
 ```csharp  
 using (SqlConnection connection = new SqlConnection(   
@@ -133,12 +139,11 @@ Using connection As New SqlConnection( _
     End While  
     reader.Close()  
 End Using  
-  
 ```  
   
-## Vedere anche  
- [Configurazione dei parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)   
- [Recupero di informazioni sullo schema di database](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)   
- [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)   
- [Dati binari e con valori di grandi dimensioni SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="90c9f-159">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="90c9f-159">See Also</span></span>  
+ [<span data-ttu-id="90c9f-160">Configurazione di parametri e tipi di dati di parametro</span><span class="sxs-lookup"><span data-stu-id="90c9f-160">Configuring Parameters and Parameter Data Types</span></span>](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [<span data-ttu-id="90c9f-161">Durante il recupero delle informazioni sullo Schema di Database</span><span class="sxs-lookup"><span data-stu-id="90c9f-161">Retrieving Database Schema Information</span></span>](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [<span data-ttu-id="90c9f-162">Mapping dei tipi di dati SQL Server</span><span class="sxs-lookup"><span data-stu-id="90c9f-162">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [<span data-ttu-id="90c9f-163">Dati binari e con valori elevati SQL Server</span><span class="sxs-lookup"><span data-stu-id="90c9f-163">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [<span data-ttu-id="90c9f-164">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="90c9f-164">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

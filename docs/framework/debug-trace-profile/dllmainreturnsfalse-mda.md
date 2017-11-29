@@ -5,51 +5,44 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - managed debugging assistants (MDAs), DllMain returns false
 - DllMainReturnsFalse MDA
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be2fcbd608e15ecc9b0b17529558999d0dfa85c9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 91d2dfefc8de49770ec5c0b0083767bbb4b76c0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dllmainreturnsfalse-mda"></a>MDA dllMainReturnsFalse
-L'assistente al debug gestito `dllMainReturnsFalse` viene attivato se la funzione `DllMain` gestita di un assembly utente, chiamata per il motivo DLL_PROCESS_ATTACH, restituisce FALSE.  
+# <a name="dllmainreturnsfalse-mda"></a><span data-ttu-id="b4d58-102">MDA dllMainReturnsFalse</span><span class="sxs-lookup"><span data-stu-id="b4d58-102">dllMainReturnsFalse MDA</span></span>
+<span data-ttu-id="b4d58-103">L'assistente al debug gestito `dllMainReturnsFalse` viene attivato se la funzione `DllMain` gestita di un assembly utente, chiamata per il motivo DLL_PROCESS_ATTACH, restituisce FALSE.</span><span class="sxs-lookup"><span data-stu-id="b4d58-103">The `dllMainReturnsFalse` managed debugging assistant (MDA) is activated if the managed `DllMain` function of a user assembly, called with reason DLL_PROCESS_ATTACH, returns FALSE.</span></span>  
   
-## <a name="symptoms"></a>Sintomi  
- La funzione `DllMain` ha restituito FALSE, che indica che non è stata eseguita correttamente. Questo può causare problemi non determinati perché le funzioni `DllMain` contengono in genere un codice di inizializzazione importante.  
+## <a name="symptoms"></a><span data-ttu-id="b4d58-104">Sintomi</span><span class="sxs-lookup"><span data-stu-id="b4d58-104">Symptoms</span></span>  
+ <span data-ttu-id="b4d58-105">La funzione `DllMain` ha restituito FALSE, che indica che non è stata eseguita correttamente.</span><span class="sxs-lookup"><span data-stu-id="b4d58-105">The `DllMain` function returned FALSE, indicating that it did not execute properly.</span></span> <span data-ttu-id="b4d58-106">Questo può causare problemi non determinati perché le funzioni `DllMain` contengono in genere un codice di inizializzazione importante.</span><span class="sxs-lookup"><span data-stu-id="b4d58-106">This can cause undetermined issues because `DllMain` functions typically contain important initialization code.</span></span>  
   
-## <a name="cause"></a>Causa  
- La funzione `DllMain` viene chiamata con il motivo DLL_PROCESS_ATTACH per l'inizializzazione della DLL nel carico. Se restituisce FALSE, significa che l'inizializzazione della DLL non è riuscita.  
+## <a name="cause"></a><span data-ttu-id="b4d58-107">Causa</span><span class="sxs-lookup"><span data-stu-id="b4d58-107">Cause</span></span>  
+ <span data-ttu-id="b4d58-108">La funzione `DllMain` viene chiamata con il motivo DLL_PROCESS_ATTACH per l'inizializzazione della DLL nel carico.</span><span class="sxs-lookup"><span data-stu-id="b4d58-108">The `DllMain` function is called with reason DLL_PROCESS_ATTACH for DLL initialization upon load.</span></span> <span data-ttu-id="b4d58-109">Se restituisce FALSE, significa che l'inizializzazione della DLL non è riuscita.</span><span class="sxs-lookup"><span data-stu-id="b4d58-109">If it returns FALSE, it means that DLL initialization failed.</span></span>  
   
-## <a name="resolution"></a>Risoluzione  
- Analizzare il codice della funzione `DllMain` della DLL non riuscita e identificare la causa dell'errore di inizializzazione.  
+## <a name="resolution"></a><span data-ttu-id="b4d58-110">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="b4d58-110">Resolution</span></span>  
+ <span data-ttu-id="b4d58-111">Analizzare il codice della funzione `DllMain` della DLL non riuscita e identificare la causa dell'errore di inizializzazione.</span><span class="sxs-lookup"><span data-stu-id="b4d58-111">Analyze the code of the `DllMain` function of the failed DLL and identify the cause of the initialization failure.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
- L'assistente al debug gestito non ha alcun effetto su CLR. Fornisce solo dati sul valore restituito per `DllMain`.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="b4d58-112">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="b4d58-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="b4d58-113">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="b4d58-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="b4d58-114">Fornisce solo dati sul valore restituito per `DllMain`.</span><span class="sxs-lookup"><span data-stu-id="b4d58-114">It only reports data about the return value for `DllMain`.</span></span>  
   
-## <a name="output"></a>Output  
- Messaggio indicante che una funzione `DllMain`, chiamata per il motivo DLL_PROCESS_ATTACH, ha restituito FALSE. Si noti che questo assistente al debug gestito viene attivato solo se si implementa `DllMain` nel codice gestito.  
+## <a name="output"></a><span data-ttu-id="b4d58-115">Output</span><span class="sxs-lookup"><span data-stu-id="b4d58-115">Output</span></span>  
+ <span data-ttu-id="b4d58-116">Messaggio indicante che una funzione `DllMain`, chiamata per il motivo DLL_PROCESS_ATTACH, ha restituito FALSE.</span><span class="sxs-lookup"><span data-stu-id="b4d58-116">A message indicating that a `DllMain` function, called for reason DLL_PROCESS_ATTACH, returned FALSE.</span></span> <span data-ttu-id="b4d58-117">Si noti che questo assistente al debug gestito viene attivato solo se si implementa `DllMain` nel codice gestito.</span><span class="sxs-lookup"><span data-stu-id="b4d58-117">Note that this MDA is activated only if `DllMain` is implemented in managed code.</span></span>  
   
-## <a name="configuration"></a>Configurazione  
+## <a name="configuration"></a><span data-ttu-id="b4d58-118">Configurazione</span><span class="sxs-lookup"><span data-stu-id="b4d58-118">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -59,6 +52,5 @@ L'assistente al debug gestito `dllMainReturnsFalse` viene attivato se la funzion
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="b4d58-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b4d58-119">See Also</span></span>  
+ [<span data-ttu-id="b4d58-120">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="b4d58-120">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
