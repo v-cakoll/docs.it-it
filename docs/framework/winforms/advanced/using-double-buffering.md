@@ -1,50 +1,51 @@
 ---
-title: "Utilizzo del doppio buffer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "inserimento nel buffer, doppio buffer"
-  - "doppio buffer"
-  - "sfarfallio, riduzione in Windows Form"
-  - "grafica, doppio buffer"
+title: Utilizzo del doppio buffer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], double buffering
+- double buffering
+- flicker [Windows Forms], reducing in Windows Forms
+- buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5ad51e27c3d31ece1d11831c953023bedba3a97
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Utilizzo del doppio buffer
-È possibile utilizzare grafica con doppio buffer per ridurre lo sfarfallio nelle applicazioni che prevedono operazioni di disegno complesse.  .NET Framework fornisce supporto incorporato per il doppio buffer; in alternativa, è possibile gestire ed eseguire manualmente il rendering della grafica.  
+# <a name="using-double-buffering"></a><span data-ttu-id="36419-102">Utilizzo del doppio buffer</span><span class="sxs-lookup"><span data-stu-id="36419-102">Using Double Buffering</span></span>
+<span data-ttu-id="36419-103">È possibile utilizzare grafica a doppio buffer per ridurre lo sfarfallio nelle applicazioni che contengono operazioni di disegno complesse.</span><span class="sxs-lookup"><span data-stu-id="36419-103">You can use double-buffered graphics to reduce flicker in your applications that contain complex painting operations.</span></span> <span data-ttu-id="36419-104">.NET Framework include supporto incorporato per il doppio buffer o è possibile gestire ed eseguire il rendering di grafica manualmente.</span><span class="sxs-lookup"><span data-stu-id="36419-104">The .NET Framework contains built-in support for double-buffering or you can manage and render graphics manually.</span></span>  
   
-## In questa sezione  
- [Grafica a doppio buffer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- Viene illustrato il concetto di doppio buffer e descritto il supporto .NET Framework.  
+## <a name="in-this-section"></a><span data-ttu-id="36419-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="36419-105">In This Section</span></span>  
+ [<span data-ttu-id="36419-106">Grafica a doppio buffer</span><span class="sxs-lookup"><span data-stu-id="36419-106">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ <span data-ttu-id="36419-107">Introduce doppio buffering concetto e strutture di supporto di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="36419-107">Introduces double buffering concept and outlines .NET Framework support.</span></span>  
   
- [Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
- Viene illustrato come utilizzare il supporto predefinito del doppio buffer in .NET Framework.  
+ [<span data-ttu-id="36419-108">Procedura: Ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli</span><span class="sxs-lookup"><span data-stu-id="36419-108">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ <span data-ttu-id="36419-109">Viene illustrato come utilizzare il valore predefinito il doppio buffer di supporto in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="36419-109">Demonstrates how to use the default double buffering support in the .NET Framework.</span></span>  
   
- [Procedura: gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
- Viene illustrato come gestire il doppio buffer nelle applicazioni.  
+ [<span data-ttu-id="36419-110">Procedura: Gestire manualmente le immagini memorizzate nel buffer</span><span class="sxs-lookup"><span data-stu-id="36419-110">How to: Manually Manage Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
+ <span data-ttu-id="36419-111">Viene illustrato come gestire il doppio buffer nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="36419-111">Shows how to manage double buffering in applications.</span></span>  
   
- [Procedura: eseguire il rendering manuale di grafica memorizzata nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
- Viene illustrato come eseguire il rendering della grafica con doppio buffer.  
+ [<span data-ttu-id="36419-112">Procedura: Eseguire il rendering manuale di grafica memorizzata nel buffer</span><span class="sxs-lookup"><span data-stu-id="36419-112">How to: Manually Render Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
+ <span data-ttu-id="36419-113">Viene illustrato come eseguire il rendering di grafica a doppio buffer.</span><span class="sxs-lookup"><span data-stu-id="36419-113">Demonstrates how to render double-buffered graphics.</span></span>  
   
-## Riferimenti  
- <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- Metodo di controllo che attiva il doppio buffer.  
+## <a name="reference"></a><span data-ttu-id="36419-114">Riferimento</span><span class="sxs-lookup"><span data-stu-id="36419-114">Reference</span></span>  
+ <span data-ttu-id="36419-115"><xref:System.Windows.Forms.Control.SetStyle%2A> ,</span><span class="sxs-lookup"><span data-stu-id="36419-115"><xref:System.Windows.Forms.Control.SetStyle%2A> ,</span></span>  
+ <span data-ttu-id="36419-116">Metodo di controllo che attiva il doppio buffer.</span><span class="sxs-lookup"><span data-stu-id="36419-116">Control method that enables double buffering.</span></span>  
   
- <xref:System.Drawing.BufferedGraphicsContext> ,  
- Fornisce i metodi per la creazione dei buffer di grafica.  
+ <span data-ttu-id="36419-117"><xref:System.Drawing.BufferedGraphicsContext> ,</span><span class="sxs-lookup"><span data-stu-id="36419-117"><xref:System.Drawing.BufferedGraphicsContext> ,</span></span>  
+ <span data-ttu-id="36419-118">Fornisce metodi per la creazione di buffer di grafica.</span><span class="sxs-lookup"><span data-stu-id="36419-118">Provides methods for creating graphics buffers.</span></span>  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
- Fornisce accesso al contesto della grafica con buffer per un dominio di applicazione.
+ <span data-ttu-id="36419-119">Fornisce l'accesso al contesto di grafica memorizzata nel buffer per un dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="36419-119">Provides access to the buffered graphics context for a application domain.</span></span>

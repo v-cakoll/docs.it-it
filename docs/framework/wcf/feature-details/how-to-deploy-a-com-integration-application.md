@@ -1,51 +1,54 @@
 ---
-title: "Procedura: distribuire un&#39;applicazione di integrazione COM+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: distribuire un''applicazione di integrazione COM+'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d6d9103c2d36de81392858fedc249be9f7ae94f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: distribuire un&#39;applicazione di integrazione COM+
-Dopo aver scritto un'applicazione di integrazione COM\+, è possibile distribuirla ad altri computer.In questo argomento viene illustrato come trasferire un'applicazione di integrazione COM\+ da un computer a un altro.  
+# <a name="how-to-deploy-a-com-integration-application"></a><span data-ttu-id="b2b8d-102">Procedura: distribuire un'applicazione di integrazione COM+</span><span class="sxs-lookup"><span data-stu-id="b2b8d-102">How to: Deploy a COM+ Integration Application</span></span>
+<span data-ttu-id="b2b8d-103">Dopo aver scritto un'applicazione di integrazione COM+, è possibile distribuirla ad altri computer.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-103">Once you have written a COM+ integration application, you may want to deploy it on another machine.</span></span> <span data-ttu-id="b2b8d-104">In questo argomento viene illustrato come trasferire un'applicazione di integrazione COM+ da un computer a un altro.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-104">This topic describes how to move a COM+ integration application from one machine to another.</span></span>  
   
-### Trasferimento di un'applicazione di integrazione COM\+ ospitata  
+### <a name="moving-a-com-hosted-integration-app"></a><span data-ttu-id="b2b8d-105">Trasferimento di un'applicazione di integrazione COM+ ospitata</span><span class="sxs-lookup"><span data-stu-id="b2b8d-105">Moving a COM+ hosted Integration App</span></span>  
   
-1.  Assicurarsi che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia installato su entrambi i computer.  
+1.  <span data-ttu-id="b2b8d-106">Assicurarsi che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia installato su entrambi i computer.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-106">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
   
-2.  Esportare l'applicazione dal computer A.  
+2.  <span data-ttu-id="b2b8d-107">Esportare l'applicazione dal computer A.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-107">Export the application from machine A.</span></span>  
   
-3.  Importare l'applicazione nel computer B.  
+3.  <span data-ttu-id="b2b8d-108">Importare l'applicazione nel computer B.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-108">Import the application on machine B.</span></span>  
   
-4.  Impostare la directory principale dell'applicazione.Per convenzione, è %PROGRAMFILES%\/ComPlus Applications\/{AppGUID}.  
+4.  <span data-ttu-id="b2b8d-109">Impostare la directory principale dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-109">Set the Application Root Directory.</span></span> <span data-ttu-id="b2b8d-110">Per convenzione, è %PROGRAMFILES%/ComPlus Applications/{AppGUID}.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-110">By convention, this is %PROGRAMFILES%/ComPlus Applications/{AppGUID}.</span></span>  
   
-5.  Copiare i file Application.config e Application.manifest dalla directory principale dell'applicazione del computer A nella directory principale dell'applicazione del computer B.  
+5.  <span data-ttu-id="b2b8d-111">Copiare i file Application.config e Application.manifest dalla directory principale dell'applicazione del computer A nella directory principale dell'applicazione del computer B.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-111">Copy the Application.config and Application.manifest files from the application root directory on machine A to the application root directory on machine B.</span></span>  
   
-6.  Modificare gli indirizzi endpoint del servizio nel file Application.config nel computer B per identificare il computer appropriato.Cambiare, ad esempio, http:\/\/machineA\/MyService in http:\/\/machineB\/MyService.  
+6.  <span data-ttu-id="b2b8d-112">Modificare gli indirizzi endpoint del servizio nel file Application.config nel computer B per identificare il computer appropriato.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-112">Edit the service endpoint addresses in the Application.config file on machine B to identify the appropriate machine.</span></span> <span data-ttu-id="b2b8d-113">Cambiare, ad esempio, http://machineA/MyService in http://machineB/MyService.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-113">For example, change http://machineA/MyService to http://machineB/MyService.</span></span>  
   
-### Trasferimento di un'applicazione di integrazione ospitata da Web  
+### <a name="moving-a-web-hosted-integration-application"></a><span data-ttu-id="b2b8d-114">Trasferimento di un'applicazione di integrazione ospitata da Web</span><span class="sxs-lookup"><span data-stu-id="b2b8d-114">Moving a Web-hosted integration application</span></span>  
   
-1.  Assicurarsi che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia installato su entrambi i computer.  
+1.  <span data-ttu-id="b2b8d-115">Assicurarsi che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia installato su entrambi i computer.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-115">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
   
-2.  Esportare l'applicazione dal computer A.  
+2.  <span data-ttu-id="b2b8d-116">Esportare l'applicazione dal computer A.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-116">Export the application from machine A.</span></span>  
   
-3.  Importare l'applicazione nel computer B.  
+3.  <span data-ttu-id="b2b8d-117">Importare l'applicazione nel computer B.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-117">Import the application on machine B.</span></span>  
   
-4.  Creare una radice virtuale di IIS nel computer B.  
+4.  <span data-ttu-id="b2b8d-118">Creare una radice virtuale di IIS nel computer B.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-118">Create an IIS vroot on machine B.</span></span>  
   
-5.  Copiare il file con estensione svc \(componentName.svc\) e il file Web.config dalla radice virtuale nel computer A nella radice virtuale appena creata nel computer B.  
+5.  <span data-ttu-id="b2b8d-119">Copiare il file con estensione svc (componentName.svc) e il file Web.config dalla radice virtuale nel computer A nella radice virtuale appena creata nel computer B.</span><span class="sxs-lookup"><span data-stu-id="b2b8d-119">Copy the .svc file (componentName.svc) and the Web.config file from the vroot on machine A to the newly created vroot on machine B.</span></span>  
   
-## Vedere anche  
- [Panoramica sull'integrazione con applicazioni COM\+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)   
- [Procedura: configurare le impostazioni del servizio COM\+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)   
- [Procedura: utilizzare lo strumento di configurazione del modello di servizi di COM\+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a><span data-ttu-id="b2b8d-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b2b8d-120">See Also</span></span>  
+ [<span data-ttu-id="b2b8d-121">L'integrazione con panoramica delle applicazioni COM+</span><span class="sxs-lookup"><span data-stu-id="b2b8d-121">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [<span data-ttu-id="b2b8d-122">Procedura: configurare le impostazioni di servizio COM+</span><span class="sxs-lookup"><span data-stu-id="b2b8d-122">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [<span data-ttu-id="b2b8d-123">Procedura: utilizzare lo strumento di configurazione del modello di servizio COM+</span><span class="sxs-lookup"><span data-stu-id="b2b8d-123">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

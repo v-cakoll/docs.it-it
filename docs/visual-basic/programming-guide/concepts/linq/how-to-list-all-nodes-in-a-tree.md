@@ -1,40 +1,36 @@
 ---
-title: 'Procedura: elencare tutti i nodi in una struttura (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: elencare tutti i nodi in una struttura (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Procedura: elencare tutti i nodi in una struttura (Visual Basic)
-A volte risulta utile elencare tutti i nodi di un albero, ad esempio quando si desidera identificare gli effetti esatti di una proprietà o metodo sull'albero. Uno degli approcci disponibili per elencare tutti i nodi in formato testuale consiste nel generare un'espressione XPath che identifica in modo esatto e specifico qualsiasi nodo nell'albero.  
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a><span data-ttu-id="7f7d8-102">Procedura: elencare tutti i nodi in una struttura (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f7d8-102">How to: List All Nodes in a Tree (Visual Basic)</span></span>
+<span data-ttu-id="7f7d8-103">A volte risulta utile elencare tutti i nodi di un albero,</span><span class="sxs-lookup"><span data-stu-id="7f7d8-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="7f7d8-104">ad esempio quando si desidera identificare gli effetti esatti di una proprietà o metodo sull'albero.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="7f7d8-105">Uno degli approcci disponibili per elencare tutti i nodi in formato testuale consiste nel generare un'espressione XPath che identifica in modo esatto e specifico qualsiasi nodo nell'albero.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
   
- Non risulta particolarmente utile eseguire espressioni XPath tramite [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Le espressioni XPath hanno prestazioni inferiori rispetto alle query [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] e le query [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] sono molto più potenti. Tuttavia, XPath è efficace per identificare i nodi nell'albero XML.  
+ <span data-ttu-id="7f7d8-106">Non risulta particolarmente utile eseguire espressioni XPath tramite [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f7d8-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="7f7d8-107">Le espressioni XPath hanno prestazioni inferiori rispetto alle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e le query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sono molto più potenti.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="7f7d8-108">Tuttavia, XPath è efficace per identificare i nodi nell'albero XML.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
   
-## <a name="example"></a>Esempio  
- In questo esempio viene illustrata una funzione denominata `GetXPath` che genera un'espressione XPath specifica per qualsiasi nodo nell'albero XML. Genera espressioni XPath appropriate anche quando i nodi sono inclusi in uno spazio dei nomi. Le espressioni XPath vengono generate usando prefissi di spazio dei nomi.  
+## <a name="example"></a><span data-ttu-id="7f7d8-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="7f7d8-109">Example</span></span>  
+ <span data-ttu-id="7f7d8-110">In questo esempio viene illustrata una funzione denominata `GetXPath` che genera un'espressione XPath specifica per qualsiasi nodo nell'albero XML.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="7f7d8-111">Genera espressioni XPath appropriate anche quando i nodi sono inclusi in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="7f7d8-112">Le espressioni XPath vengono generate usando prefissi di spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
   
- Nell'esempio viene quindi creata un piccolo albero XML che contiene un esempio di diversi tipi di nodi. Vengono quindi scorsi i nodi discendenti e viene stampata l'espressione XPath per ogni nodo.  
+ <span data-ttu-id="7f7d8-113">Nell'esempio viene quindi creata un piccolo albero XML che contiene un esempio di diversi tipi di nodi.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="7f7d8-114">Vengono quindi scorsi i nodi discendenti e viene stampata l'espressione XPath per ogni nodo.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
   
- Si noterà che la dichiarazione di XML non è un nodo dell'albero.  
+ <span data-ttu-id="7f7d8-115">Si noterà che la dichiarazione di XML non è un nodo dell'albero.</span><span class="sxs-lookup"><span data-stu-id="7f7d8-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
   
- Il file XML seguente contiene diversi tipi di nodi:  
+ <span data-ttu-id="7f7d8-116">Il file XML seguente contiene diversi tipi di nodi:</span><span class="sxs-lookup"><span data-stu-id="7f7d8-116">The following is an XML file that contains several types of nodes:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -50,7 +46,7 @@ A volte risulta utile elencare tutti i nodi di un albero, ad esempio quando si d
 </Root>  
 ```  
   
- Di seguito è riportato l'elenco dei nodi dell'albero XML precedente, espressi come espressioni XPath:  
+ <span data-ttu-id="7f7d8-117">Di seguito è riportato l'elenco dei nodi dell'albero XML precedente, espressi come espressioni XPath:</span><span class="sxs-lookup"><span data-stu-id="7f7d8-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
   
 ```  
 /processing-instruction()  
@@ -243,9 +239,9 @@ Module Module1
 End Module  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="7f7d8-118">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="7f7d8-118">This example produces the following output:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  
@@ -276,5 +272,5 @@ End Module
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Tecniche di Query (LINQ to XML) avanzate (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7f7d8-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7f7d8-119">See Also</span></span>  
+ [<span data-ttu-id="7f7d8-120">Tecniche di Query (LINQ to XML) avanzate (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f7d8-120">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

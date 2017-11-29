@@ -1,62 +1,65 @@
 ---
-title: "UI Automation Control Patterns for Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, control patterns for clients"
-  - "control patterns, UI Automation clients"
+title: Pattern di controllo di automazione interfaccia utente per i client
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, control patterns for clients
+- control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-caps.latest.revision: 24
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 1d556b3da13b70a0a5e69eb72905e04a01dffa9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Control Patterns for Clients
+# <a name="ui-automation-control-patterns-for-clients"></a><span data-ttu-id="f161b-102">Pattern di controllo di automazione interfaccia utente per i client</span><span class="sxs-lookup"><span data-stu-id="f161b-102">UI Automation Control Patterns for Clients</span></span>
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="f161b-103">Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="f161b-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="f161b-104">Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="f161b-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- In questa panoramica vengono presentati i pattern di controllo per i client di automazione interfaccia utente. Sono incluse informazioni su come un client di automazione interfaccia utente può usare i pattern di controllo per accedere alle informazioni relative all'[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+ <span data-ttu-id="f161b-105">In questa panoramica vengono presentati i pattern di controllo per i client di automazione interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="f161b-105">This overview introduces control patterns for UI Automation clients.</span></span> <span data-ttu-id="f161b-106">Sono incluse informazioni su come un client di automazione interfaccia utente può usare i pattern di controllo per accedere alle informazioni relative all' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f161b-106">It includes information on how a UI Automation client can use control patterns to access information about the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].</span></span>  
   
- I pattern di controllo rappresentano un metodo di classificazione ed esposizione della funzionalità di un controllo indipendentemente dal tipo o dall'aspetto del controllo stesso. I client di automazione interfaccia utente possono esaminare un <xref:System.Windows.Automation.AutomationElement> per determinare quali pattern di controllo sono supportati e verificare il comportamento del controllo.  
+ <span data-ttu-id="f161b-107">I pattern di controllo rappresentano un metodo di classificazione ed esposizione della funzionalità di un controllo indipendentemente dal tipo o dall'aspetto del controllo stesso.</span><span class="sxs-lookup"><span data-stu-id="f161b-107">Control patterns provide a way to categorize and expose a control's functionality independent of the control type or the appearance of the control.</span></span> <span data-ttu-id="f161b-108">I client di automazione interfaccia utente possono esaminare un <xref:System.Windows.Automation.AutomationElement> per determinare quali pattern di controllo sono supportati e verificare il comportamento del controllo.</span><span class="sxs-lookup"><span data-stu-id="f161b-108">UI Automation clients can examine an <xref:System.Windows.Automation.AutomationElement> to determine which control patterns are supported and be assured of the behavior of the control.</span></span>  
   
- Per un elenco completo dei pattern di controllo, vedere [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+ <span data-ttu-id="f161b-109">Per un elenco completo dei pattern di controllo, vedere [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span><span class="sxs-lookup"><span data-stu-id="f161b-109">For a complete list of control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
 <a name="uiautomation_getting_control_patterns"></a>   
-## Recupero dei pattern di controllo  
- I client possono ottenere pattern di controllo da <xref:System.Windows.Automation.AutomationElement> con una chiamata a <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=fullName> o a <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=fullName>.  
+## <a name="getting-control-patterns"></a><span data-ttu-id="f161b-110">Recupero dei pattern di controllo</span><span class="sxs-lookup"><span data-stu-id="f161b-110">Getting Control Patterns</span></span>  
+ <span data-ttu-id="f161b-111">I client possono ottenere pattern di controllo da <xref:System.Windows.Automation.AutomationElement> con una chiamata a <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> o a <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f161b-111">Clients retrieve a control pattern from an <xref:System.Windows.Automation.AutomationElement> by calling either <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> or <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.</span></span>  
   
- I client possono usare il metodo <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> o una singola proprietà `IsPatternAvailable` \(ad esempio, <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>\) per determinare se un pattern o un gruppo di pattern è supportato in <xref:System.Windows.Automation.AutomationElement>. È tuttavia più efficiente tentare di ottenere il pattern di controllo e verificare la presenza di un riferimento `null` anziché controllare le proprietà supportate e recuperare il pattern di controllo, poiché ciò comporta un numero inferiore di chiamate tra processi.  
+ <span data-ttu-id="f161b-112">I client possono usare il metodo <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> o una singola proprietà `IsPatternAvailable` (ad esempio, <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) per determinare se un pattern o un gruppo di pattern è supportato in <xref:System.Windows.Automation.AutomationElement>.</span><span class="sxs-lookup"><span data-stu-id="f161b-112">Clients can use the <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> method or an individual `IsPatternAvailable` property (for example, <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) to determine if a pattern or group of patterns is supported on the <xref:System.Windows.Automation.AutomationElement>.</span></span> <span data-ttu-id="f161b-113">È tuttavia più efficiente tentare di ottenere il pattern di controllo e verificare la presenza di un riferimento `null` anziché controllare le proprietà supportate e recuperare il pattern di controllo, poiché ciò comporta un numero inferiore di chiamate tra processi.</span><span class="sxs-lookup"><span data-stu-id="f161b-113">However, it is more efficient to attempt to get the control pattern and test for a `null` reference than to check the supported properties and retrieve the control pattern since it results in fewer cross-process calls.</span></span>  
   
- Nell'esempio seguente viene illustrato come ottenere un <xref:System.Windows.Automation.TextPattern> pattern di controllo da <xref:System.Windows.Automation.AutomationElement>.  
+ <span data-ttu-id="f161b-114">Nell'esempio seguente viene illustrato come ottenere un <xref:System.Windows.Automation.TextPattern> pattern di controllo da <xref:System.Windows.Automation.AutomationElement>.</span><span class="sxs-lookup"><span data-stu-id="f161b-114">The following example demonstrates how to get a <xref:System.Windows.Automation.TextPattern> control pattern from an <xref:System.Windows.Automation.AutomationElement>.</span></span>  
   
  [!code-csharp[UIATextPattern_snip#1037](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1037)]  
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
-## Recupero delle proprietà per i pattern di controllo  
- I client possono recuperare i valori delle proprietà dei pattern di controllo con una chiamata a <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=fullName> o a <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=fullName> e con il cast dell'oggetto restituito a un tipo appropriato. Per altre informazioni sulle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+## <a name="retrieving-properties-on-control-patterns"></a><span data-ttu-id="f161b-115">Recupero delle proprietà per i pattern di controllo</span><span class="sxs-lookup"><span data-stu-id="f161b-115">Retrieving Properties on Control Patterns</span></span>  
+ <span data-ttu-id="f161b-116">I client possono recuperare i valori delle proprietà dei pattern di controllo con una chiamata a <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> o a <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> e con il cast dell'oggetto restituito a un tipo appropriato.</span><span class="sxs-lookup"><span data-stu-id="f161b-116">Clients can retrieve the property values on control patterns by calling either <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> or <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> and casting the object returned to an appropriate type.</span></span> <span data-ttu-id="f161b-117">Per ulteriori informazioni su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà, vedere [proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span><span class="sxs-lookup"><span data-stu-id="f161b-117">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
- Oltre che con i metodi `GetPropertyValue`, è possibile recuperare i valori delle proprietà tramite le funzioni di accesso [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] per l'accesso alle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] di un pattern.  
+ <span data-ttu-id="f161b-118">Oltre che con i metodi `GetPropertyValue` , è possibile recuperare i valori delle proprietà tramite le funzioni di accesso [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] per l'accesso alle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] di un pattern.</span><span class="sxs-lookup"><span data-stu-id="f161b-118">In addition to the `GetPropertyValue` methods, property values can be retrieved through the [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] accessors to access the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties on a pattern.</span></span>  
   
 <a name="uiautomation_with_variable_patterns"></a>   
-## Controlli con pattern variabili  
- Alcuni tipi di controllo supportano pattern diversi a seconda dello stato del controllo o del modo in cui questo viene usato. Esempi di controlli che possono avere pattern variabili sono le visualizzazioni elenco \(anteprime, riquadri, icone, elenchi, dettagli\), grafici [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] \(a torta, a righe, a barre, valore della cella con una formula\), le aree documento di [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] \(Normale, Layout Web, Struttura, Layout di stampa, Anteprima di stampa\) e le interfacce personalizzate di [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)].  
+## <a name="controls-with-variable-patterns"></a><span data-ttu-id="f161b-119">Controlli con pattern variabili</span><span class="sxs-lookup"><span data-stu-id="f161b-119">Controls with Variable Patterns</span></span>  
+ <span data-ttu-id="f161b-120">Alcuni tipi di controllo supportano pattern diversi a seconda dello stato del controllo o del modo in cui questo viene usato.</span><span class="sxs-lookup"><span data-stu-id="f161b-120">Some control types support different patterns depending on their state or the manner in which the control is being used.</span></span> <span data-ttu-id="f161b-121">Esempi di controlli che possono avere pattern variabili sono le visualizzazioni elenco (anteprime, riquadri, icone, elenchi, dettagli), grafici [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] (a torta, a righe, a barre, valore della cella con una formula), le aree documento di [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)](Normale, Layout Web, Struttura, Layout di stampa, Anteprima di stampa) e le interfacce personalizzate di [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f161b-121">Examples of controls that can have variable patterns are list views (thumbnails, tiles, icons, list, details), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] Charts (Pie, Line, Bar, Cell Value with a formula), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]'s document area (Normal, Web Layout, Outline, Print Layout, Print Preview), and [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] skins.</span></span>  
   
- I controlli che implementano i tipi di controllo personalizzati possono disporre di qualsiasi set di pattern di controllo necessario per la rappresentazione delle funzionalità dei controlli stessi.  
+ <span data-ttu-id="f161b-122">I controlli che implementano i tipi di controllo personalizzati possono disporre di qualsiasi set di pattern di controllo necessario per la rappresentazione delle funzionalità dei controlli stessi.</span><span class="sxs-lookup"><span data-stu-id="f161b-122">Controls implementing custom control types can have any set of control patterns that are needed to represent their functionality.</span></span>  
   
-## Vedere anche  
- [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)   
- [UI Automation Text Pattern](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)   
- [Invoke a Control Using UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)   
- [Get the Toggle State of a Check Box Using UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)   
- [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)   
- [TextPattern Insert Text Sample](http://msdn.microsoft.com/it-it/67353f93-7ee2-42f2-ab76-5c078cf6ca16)   
- [TextPattern Search and Selection Sample](http://msdn.microsoft.com/it-it/0a3bca57-8b72-489d-a57c-da85b7a22c7f)   
- [InvokePattern and ExpandCollapsePattern Menu Item Sample](http://msdn.microsoft.com/it-it/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+## <a name="see-also"></a><span data-ttu-id="f161b-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f161b-123">See Also</span></span>  
+ [<span data-ttu-id="f161b-124">Pattern di controllo per automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="f161b-124">UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [<span data-ttu-id="f161b-125">Pattern di testo per l'automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="f161b-125">UI Automation Text Pattern</span></span>](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
+ [<span data-ttu-id="f161b-126">Richiamare un controllo utilizzando automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="f161b-126">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="f161b-127">Ottenere lo stato di attivazione/disattivazione di una casella di controllo utilizzando automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="f161b-127">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="f161b-128">Mapping dei Pattern di controllo per i client di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="f161b-128">Control Pattern Mapping for UI Automation Clients</span></span>](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [<span data-ttu-id="f161b-129">TextPattern Insert Text Sample</span><span class="sxs-lookup"><span data-stu-id="f161b-129">TextPattern Insert Text Sample</span></span>](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [<span data-ttu-id="f161b-130">Esempio di selezione e ricerca di TextPattern</span><span class="sxs-lookup"><span data-stu-id="f161b-130">TextPattern Search and Selection Sample</span></span>](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
+ [<span data-ttu-id="f161b-131">Esempio di elemento di Menu ExpandCollapsePattern e InvokePattern</span><span class="sxs-lookup"><span data-stu-id="f161b-131">InvokePattern and ExpandCollapsePattern Menu Item Sample</span></span>](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

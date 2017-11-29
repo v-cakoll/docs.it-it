@@ -1,29 +1,27 @@
 ---
-title: "Expression is a value and therefore cannot be the target of an assignment | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30068"
-  - "vbc30068"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30068"
+title: "L'espressione è un valore, quindi non può essere la destinazione di un'assegnazione"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30068
+- vbc30068
+helpviewer_keywords: BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bec3e2d298160bd0b459dc3b7ef93b94648e439a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Expression is a value and therefore cannot be the target of an assignment
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Un'istruzione tenta di assegnare un valore a un'espressione.  È possibile assegnare un valore solo a una variabile, a una proprietà o a un elemento di matrice modificabile in fase di esecuzione.  Nell'esempio riportato di seguito viene illustrato come può verificarsi questo errore.  
+# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a><span data-ttu-id="2dcc5-102">L'espressione è un valore, quindi non può essere la destinazione di un'assegnazione</span><span class="sxs-lookup"><span data-stu-id="2dcc5-102">Expression is a value and therefore cannot be the target of an assignment</span></span>
+<span data-ttu-id="2dcc5-103">Un'istruzione tenta di assegnare un valore a un'espressione.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-103">A statement attempts to assign a value to an expression.</span></span> <span data-ttu-id="2dcc5-104">È possibile assegnare un valore solo a una variabile scrivibile, una proprietà o un elemento della matrice in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-104">You can assign a value only to a writable variable, property, or array element at run time.</span></span> <span data-ttu-id="2dcc5-105">Nell'esempio seguente viene illustrato come questo errore può verificarsi.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-105">The following example illustrates how this error can occur.</span></span>  
   
 ```  
 Dim yesterday As Integer  
@@ -34,9 +32,9 @@ maximum = 50
 ' The preceding line is an ERROR because maximum is declared ReadOnly.  
 ```  
   
- Esempi simili possono essere validi per le proprietà e gli elementi di matrice.  
+ <span data-ttu-id="2dcc5-106">Esempi simili possibile applicare alle proprietà e gli elementi della matrice.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-106">Similar examples could apply to properties and array elements.</span></span>  
   
- **Accesso indiretto.** Questo errore può essere generato anche dall'accesso indiretto attraverso un tipo di valore.  Nell'esempio di codice riportato di seguito viene effettuato un tentativo di impostare il valore dell'oggetto <xref:System.Drawing.Point> accedendo indirettamente ad esso attraverso la proprietà <xref:System.Windows.Forms.Control.Location%2A>.  
+ <span data-ttu-id="2dcc5-107">**Accesso indiretto.**</span><span class="sxs-lookup"><span data-stu-id="2dcc5-107">**Indirect Access.**</span></span> <span data-ttu-id="2dcc5-108">Accesso indiretto attraverso un tipo di valore può inoltre generare questo errore.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-108">Indirect access through a value type can also generate this error.</span></span> <span data-ttu-id="2dcc5-109">Si consideri l'esempio di codice riportato di seguito, che tenta di impostare il valore di <xref:System.Drawing.Point> accedendovi indirettamente tramite <xref:System.Windows.Forms.Control.Location%2A>.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-109">Consider the following code example, which attempts to set the value of <xref:System.Drawing.Point> by accessing it indirectly through <xref:System.Windows.Forms.Control.Location%2A>.</span></span>  
   
 ```  
 ' Assume this code runs inside Form1.  
@@ -46,26 +44,26 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.  
 ```  
   
- L'ultima istruzione dell'esempio precedente non viene eseguita correttamente poiché crea solo un'allocazione temporanea per la struttura dell'oggetto <xref:System.Drawing.Point> restituita dalla proprietà <xref:System.Windows.Forms.Control.Location%2A>.  Una struttura è un tipo di valore e la struttura temporanea non viene mantenuta dopo l'esecuzione dell'istruzione.  Per risolvere il problema, è necessario dichiarare e utilizzare una variabile per la proprietà <xref:System.Windows.Forms.Control.Location%2A> che crei un'allocazione più permanente per la struttura dell'oggetto <xref:System.Drawing.Point>.  Nell'esempio riportato di seguito viene illustrato il codice che può sostituire l'ultima istruzione dell'esempio precedente.  
+ <span data-ttu-id="2dcc5-110">L'ultima istruzione dell'esempio precedente ha esito negativo poiché crea solo un'allocazione temporanea per il <xref:System.Drawing.Point> restituito dalla struttura di <xref:System.Windows.Forms.Control.Location%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-110">The last statement of the preceding example fails because it creates only a temporary allocation for the <xref:System.Drawing.Point> structure returned by the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span> <span data-ttu-id="2dcc5-111">Una struttura è un tipo di valore e la struttura temporanea non viene mantenuta dopo l'istruzione viene eseguita.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-111">A structure is a value type, and the temporary structure is not retained after the statement runs.</span></span> <span data-ttu-id="2dcc5-112">Il problema viene risolto dichiarando e utilizzando una variabile per <xref:System.Windows.Forms.Control.Location%2A>, che consente di creare un'allocazione più permanente per la <xref:System.Drawing.Point> struttura.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-112">The problem is resolved by declaring and using a variable for <xref:System.Windows.Forms.Control.Location%2A>, which creates a more permanent allocation for the <xref:System.Drawing.Point> structure.</span></span> <span data-ttu-id="2dcc5-113">Nell'esempio seguente viene illustrato il codice che è possibile sostituire l'ultima istruzione dell'esempio precedente.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-113">The following example shows code that can replace the last statement of the preceding example.</span></span>  
   
 ```  
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
 exitButton.Location = exitLocation  
 ```  
   
- **ID errore:** BC30068  
+ <span data-ttu-id="2dcc5-114">**ID errore:** BC30068</span><span class="sxs-lookup"><span data-stu-id="2dcc5-114">**Error ID:** BC30068</span></span>  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2dcc5-115">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="2dcc5-115">To correct this error</span></span>  
   
--   Se l'istruzione assegna un valore a un'espressione, sostituire quest'ultima con una variabile, una proprietà o un elemento di matrice modificabile.  
+-   <span data-ttu-id="2dcc5-116">Se l'istruzione assegna un valore a un'espressione, è possibile sostituire l'espressione a una singola variabile scrivibile, una proprietà o un elemento della matrice.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-116">If the statement assigns a value to an expression, replace the expression with a single writable variable, property, or array element.</span></span>  
   
--   Se l'istruzione effettua l'accesso indiretto attraverso un tipo di valore, in genere una struttura, creare una variabile che contenga il tipo di valore.  
+-   <span data-ttu-id="2dcc5-117">Se l'istruzione effettua l'accesso indiretto attraverso un tipo di valore (in genere una struttura), creare una variabile per contenere il tipo di valore.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-117">If the statement makes indirect access through a value type (usually a structure), create a variable to hold the value type.</span></span>  
   
--   Assegnare alla variabile la struttura o un altro tipo di valore appropriato.  
+-   <span data-ttu-id="2dcc5-118">Assegnare la struttura appropriata (o altro tipo di valore) alla variabile.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-118">Assign the appropriate structure (or other value type) to the variable.</span></span>  
   
--   Utilizzare la variabile per accedere alla proprietà e assegnare a quest'ultima un valore.  
+-   <span data-ttu-id="2dcc5-119">Utilizzare la variabile per accedere alla proprietà per assegnare un valore.</span><span class="sxs-lookup"><span data-stu-id="2dcc5-119">Use the variable to access the property to assign it a value.</span></span>  
   
-## Vedere anche  
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)   
- [Troubleshooting Procedures](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+## <a name="see-also"></a><span data-ttu-id="2dcc5-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2dcc5-120">See Also</span></span>  
+ [<span data-ttu-id="2dcc5-121">Operatori ed espressioni</span><span class="sxs-lookup"><span data-stu-id="2dcc5-121">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="2dcc5-122">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="2dcc5-122">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)  
+ [<span data-ttu-id="2dcc5-123">Risoluzione dei problemi relativi alle routine</span><span class="sxs-lookup"><span data-stu-id="2dcc5-123">Troubleshooting Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

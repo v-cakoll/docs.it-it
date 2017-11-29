@@ -5,53 +5,49 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- callback function, implementing
+- csharp
+- vb
+- cpp
+helpviewer_keywords: callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d4382c956bf3d56426be485897cdda75453b4910
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5be0dbb6666da88897ceedf0757e2af720705a07
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-implement-callback-functions"></a>Procedura: implementare funzioni di callback
-La procedura e l'esempio seguenti illustrano come un'applicazione gestita, usando il platform invoke, può stampare il valore di handle per ogni finestra sul computer locale. In particolare, la procedura e l'esempio usano la funzione **EnumWindows** per esaminare l'elenco di finestre e una funzione di callback gestita (denominata CallBack) per visualizzare il valore di handle della finestra.  
+# <a name="how-to-implement-callback-functions"></a><span data-ttu-id="75fe1-102">Procedura: implementare funzioni di callback</span><span class="sxs-lookup"><span data-stu-id="75fe1-102">How to: Implement Callback Functions</span></span>
+<span data-ttu-id="75fe1-103">La procedura e l'esempio seguenti illustrano come un'applicazione gestita, usando il platform invoke, può stampare il valore di handle per ogni finestra sul computer locale.</span><span class="sxs-lookup"><span data-stu-id="75fe1-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="75fe1-104">In particolare, la procedura e l'esempio usano la funzione **EnumWindows** per esaminare l'elenco di finestre e una funzione di callback gestita (denominata CallBack) per visualizzare il valore di handle della finestra.</span><span class="sxs-lookup"><span data-stu-id="75fe1-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  
   
-### <a name="to-implement-a-callback-function"></a>Per implementare una funzione di callback  
+### <a name="to-implement-a-callback-function"></a><span data-ttu-id="75fe1-105">Per implementare una funzione di callback</span><span class="sxs-lookup"><span data-stu-id="75fe1-105">To implement a callback function</span></span>  
   
-1.  Esaminare la firma per la funzione **EnumWindows** prima di procedere con l'implementazione. **EnumWindows** presenta in genere la firma seguente:  
+1.  <span data-ttu-id="75fe1-106">Esaminare la firma per la funzione **EnumWindows** prima di procedere con l'implementazione.</span><span class="sxs-lookup"><span data-stu-id="75fe1-106">Look at the signature for the **EnumWindows** function before going further with the implementation.</span></span> <span data-ttu-id="75fe1-107">**EnumWindows** presenta in genere la firma seguente:</span><span class="sxs-lookup"><span data-stu-id="75fe1-107">**EnumWindows** has the following signature:</span></span>  
   
     ```  
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
     ```  
   
-     Un’indicazione del fatto che questa funzione richiede un callback è la presenza dell'argomento **lpEnumFunc**. È frequente vedere il prefisso **lp** (puntatore di tipo long) combinato con il suffisso **Func** nel nome di argomenti che accettano un puntatore a una funzione di callback. Per informazioni sulle funzioni Win32, vedere Microsoft Platform SDK.  
+     <span data-ttu-id="75fe1-108">Un’indicazione del fatto che questa funzione richiede un callback è la presenza dell'argomento **lpEnumFunc**.</span><span class="sxs-lookup"><span data-stu-id="75fe1-108">One clue that this function requires a callback is the presence of the **lpEnumFunc** argument.</span></span> <span data-ttu-id="75fe1-109">È frequente vedere il prefisso **lp** (puntatore di tipo long) combinato con il suffisso **Func** nel nome di argomenti che accettano un puntatore a una funzione di callback.</span><span class="sxs-lookup"><span data-stu-id="75fe1-109">It is common to see the **lp** (long pointer) prefix combined with the **Func** suffix in the name of arguments that take a pointer to a callback function.</span></span> <span data-ttu-id="75fe1-110">Per informazioni sulle funzioni Win32, vedere Microsoft Platform SDK.</span><span class="sxs-lookup"><span data-stu-id="75fe1-110">For documentation about Win32 functions, see the Microsoft Platform SDK.</span></span>  
   
-2.  Creare la funzione di callback gestita. L'esempio dichiara un tipo delegato, denominato `CallBack`, che accetta due argomenti (**hwnd** e **lparam**). Il primo argomento è un handle alla finestra, mentre il secondo è definito dall'applicazione. In questa versione entrambi gli argomenti devono essere numeri interi.  
+2.  <span data-ttu-id="75fe1-111">Creare la funzione di callback gestita.</span><span class="sxs-lookup"><span data-stu-id="75fe1-111">Create the managed callback function.</span></span> <span data-ttu-id="75fe1-112">L'esempio dichiara un tipo delegato, denominato `CallBack`, che accetta due argomenti (**hwnd** e **lparam**).</span><span class="sxs-lookup"><span data-stu-id="75fe1-112">The example declares a delegate type, called `CallBack`, which takes two arguments (**hwnd** and **lparam**).</span></span> <span data-ttu-id="75fe1-113">Il primo argomento è un handle alla finestra, mentre il secondo è definito dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="75fe1-113">The first argument is a handle to the window; the second argument is application-defined.</span></span> <span data-ttu-id="75fe1-114">In questa versione entrambi gli argomenti devono essere numeri interi.</span><span class="sxs-lookup"><span data-stu-id="75fe1-114">In this release, both arguments must be integers.</span></span>  
   
-     Funzioni di callback restituiscono in genere valori diversi da zero per indicare l’esito positivo e zero per indicare l’esito negativo. Questo esempio imposta in modo esplicito il valore restituito su **true** per continuare l'enumerazione.  
+     <span data-ttu-id="75fe1-115">Funzioni di callback restituiscono in genere valori diversi da zero per indicare l’esito positivo e zero per indicare l’esito negativo.</span><span class="sxs-lookup"><span data-stu-id="75fe1-115">Callback functions generally return nonzero values to indicate success and zero to indicate failure.</span></span> <span data-ttu-id="75fe1-116">Questo esempio imposta in modo esplicito il valore restituito su **true** per continuare l'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="75fe1-116">This example explicitly sets the return value to **true** to continue the enumeration.</span></span>  
   
-3.  Creare un delegato e passarlo come argomento alla funzione **EnumWindows**. Platform invoke converte automaticamente il delegato in un formato di callback conosciuto.  
+3.  <span data-ttu-id="75fe1-117">Creare un delegato e passarlo come argomento alla funzione **EnumWindows**.</span><span class="sxs-lookup"><span data-stu-id="75fe1-117">Create a delegate and pass it as an argument to the **EnumWindows** function.</span></span> <span data-ttu-id="75fe1-118">Platform invoke converte automaticamente il delegato in un formato di callback conosciuto.</span><span class="sxs-lookup"><span data-stu-id="75fe1-118">Platform invoke converts the delegate to a familiar callback format automatically.</span></span>  
   
-4.  Assicurarsi che il garbage collector non recuperi il delegato prima che venga completata la funzione di callback. Quando si passa un delegato come parametro o si passa un delegato contenuto come campo in una struttura, questo non viene interessato per la durata della chiamata. Quindi, come nel seguente esempio di enumerazione, la funzione di callback viene completata prima che venga restituita la chiamata e non richiede operazioni aggiuntive dal chiamante gestito.  
+4.  <span data-ttu-id="75fe1-119">Assicurarsi che il garbage collector non recuperi il delegato prima che venga completata la funzione di callback.</span><span class="sxs-lookup"><span data-stu-id="75fe1-119">Ensure that the garbage collector does not reclaim the delegate before the callback function completes its work.</span></span> <span data-ttu-id="75fe1-120">Quando si passa un delegato come parametro o si passa un delegato contenuto come campo in una struttura, questo non viene interessato per la durata della chiamata.</span><span class="sxs-lookup"><span data-stu-id="75fe1-120">When you pass a delegate as a parameter, or pass a delegate contained as a field in a structure, it remains uncollected for the duration of the call.</span></span> <span data-ttu-id="75fe1-121">Quindi, come nel seguente esempio di enumerazione, la funzione di callback viene completata prima che venga restituita la chiamata e non richiede operazioni aggiuntive dal chiamante gestito.</span><span class="sxs-lookup"><span data-stu-id="75fe1-121">So, as is the case in the following enumeration example, the callback function completes its work before the call returns and requires no additional action by the managed caller.</span></span>  
   
-     Se, tuttavia, la funzione di callback può essere richiamata dopo che viene restituita la chiamata, il chiamante gestito deve provvedere a garantire che il delegato non venga interessato fino al completamento della funzione di richiamata. Per informazioni dettagliate su come evitare operazioni di Garbage Collection, vedere [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md) con platform invoke.  
+     <span data-ttu-id="75fe1-122">Se, tuttavia, la funzione di callback può essere richiamata dopo che viene restituita la chiamata, il chiamante gestito deve provvedere a garantire che il delegato non venga interessato fino al completamento della funzione di richiamata.</span><span class="sxs-lookup"><span data-stu-id="75fe1-122">If, however, the callback function can be invoked after the call returns, the managed caller must take steps to ensure that the delegate remains uncollected until the callback function finishes.</span></span> <span data-ttu-id="75fe1-123">Per informazioni dettagliate su come evitare operazioni di Garbage Collection, vedere [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md) con platform invoke.</span><span class="sxs-lookup"><span data-stu-id="75fe1-123">For detailed information about preventing garbage collection, see [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md) with Platform Invoke.</span></span>  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="75fe1-124">Esempio</span><span class="sxs-lookup"><span data-stu-id="75fe1-124">Example</span></span>  
   
 ```vb  
 Imports System  
@@ -140,7 +136,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di callback](../../../docs/framework/interop/callback-functions.md)   
- [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)
-
+## <a name="see-also"></a><span data-ttu-id="75fe1-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="75fe1-125">See Also</span></span>  
+ [<span data-ttu-id="75fe1-126">Funzioni di callback</span><span class="sxs-lookup"><span data-stu-id="75fe1-126">Callback Functions</span></span>](../../../docs/framework/interop/callback-functions.md)  
+ [<span data-ttu-id="75fe1-127">Chiamata a una funzione di DLL</span><span class="sxs-lookup"><span data-stu-id="75fe1-127">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)

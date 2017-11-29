@@ -1,53 +1,35 @@
 ---
-title: "Espressione in modo ricorsivo chiama la proprietà che contiene &quot;&lt;propertyname&gt;&quot; | Documenti di Microsoft"
-ms.date: 2015-07-20
+title: "In modo ricorsivo espressione chiama la proprietà che contiene &#39; &lt;propertyname&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc42026
 - BC42026
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC42026
+helpviewer_keywords: BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ca20bf1a539f2727a80f8e781c1e9ebc5a4a253d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 47de3c2d25336962168f01a4c8717274de7c9aad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Espressione in modo ricorsivo chiama la proprietà che contiene '&lt;propertyname&gt;'
-Un'istruzione all'interno di `Set` routine di una definizione di proprietà archivia un valore nel nome della proprietà.  
+# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a><span data-ttu-id="88cb0-102">In modo ricorsivo espressione chiama la proprietà che contiene &#39; &lt;propertyname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="88cb0-102">Expression recursively calls the containing property &#39;&lt;propertyname&gt;&#39;</span></span>
+<span data-ttu-id="88cb0-103">Un'istruzione all'interno di `Set` routine di una definizione di proprietà memorizza un valore nel nome della proprietà.</span><span class="sxs-lookup"><span data-stu-id="88cb0-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  
   
- L'approccio consigliato per contenere il valore di una proprietà consiste nel definire un `Private` variabile nel contenitore della proprietà e utilizzarlo in entrambe le `Get` e `Set` procedure. Il `Set` routine deve archiviare, quindi il valore in ingresso in questa `Private` variabile.  
+ <span data-ttu-id="88cb0-104">L'approccio consigliato per contenere il valore di una proprietà consiste nel definire un `Private` variabile nel contenitore della proprietà e utilizzarlo in entrambe le `Get` e `Set` procedure.</span><span class="sxs-lookup"><span data-stu-id="88cb0-104">The recommended approach to holding the value of a property is to define a `Private` variable in the property's container and use it in both the `Get` and `Set` procedures.</span></span> <span data-ttu-id="88cb0-105">Il `Set` routine deve archiviare, quindi il valore in ingresso in questa `Private` variabile.</span><span class="sxs-lookup"><span data-stu-id="88cb0-105">The `Set` procedure should then store the incoming value in this `Private` variable.</span></span>  
   
- Il `Get` routine si comporta come un `Function` procedura per assegnare un valore per il nome della proprietà e restituire il controllo in corrispondenza di `End Get` istruzione. Si consiglia, tuttavia, consiste nell'includere il `Private` variabile come valore in un [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ <span data-ttu-id="88cb0-106">Il `Get` routine si comporta come un `Function` procedure, in modo è possibile assegnare un valore per il nome della proprietà e restituire il controllo in corrispondenza di `End Get` istruzione.</span><span class="sxs-lookup"><span data-stu-id="88cb0-106">The `Get` procedure behaves like a `Function` procedure, so it can assign a value to the property name and return control by encountering the `End Get` statement.</span></span> <span data-ttu-id="88cb0-107">L'approccio consigliato, tuttavia, consiste nell'includere il `Private` variabile come valore in un [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md).</span><span class="sxs-lookup"><span data-stu-id="88cb0-107">The recommended approach, however, is to include the `Private` variable as the value in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).</span></span>  
   
- Il `Set` routine si comporta come un `Sub` routine, che non restituisce un valore. Pertanto, il nome della routine o proprietà hanno alcun significato speciale all'interno di un `Set` ed è possibile archiviare un valore al suo interno.  
+ <span data-ttu-id="88cb0-108">Il `Set` routine si comporta come un `Sub` routine, che non restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="88cb0-108">The `Set` procedure behaves like a `Sub` procedure, which does not return a value.</span></span> <span data-ttu-id="88cb0-109">Pertanto, il nome della routine o proprietà hanno alcun significato speciale all'interno di un `Set` ed è possibile archiviare un valore al suo interno.</span><span class="sxs-lookup"><span data-stu-id="88cb0-109">Therefore, the procedure or property name has no special meaning within a `Set` procedure, and you cannot store a value into it.</span></span>  
   
- Nell'esempio seguente viene illustrato l'approccio che può causare questo errore, aggiungendo l'approccio consigliato.  
+ <span data-ttu-id="88cb0-110">Nell'esempio seguente viene illustrato l'approccio che può causare questo errore, aggiungendo l'approccio consigliato.</span><span class="sxs-lookup"><span data-stu-id="88cb0-110">The following example illustrates the approach that can cause this error, followed by the recommended approach.</span></span>  
   
 ```  
 Public Class illustrateProperties  
@@ -79,15 +61,15 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- Per impostazione predefinita, si tratta di un messaggio di avviso. Per ulteriori informazioni su come nascondere gli avvisi o considerarli come errori, vedere [configurazione degli avvisi in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="88cb0-111">Per impostazione predefinita, si tratta di un messaggio di avviso.</span><span class="sxs-lookup"><span data-stu-id="88cb0-111">By default, this message is a warning.</span></span> <span data-ttu-id="88cb0-112">Per ulteriori informazioni su come nascondere gli avvisi o considerarli come errori, vedere [configurazione degli avvisi in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="88cb0-112">For more information about hiding warnings or treating warnings as errors, please see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **ID errore:** BC42026  
+ <span data-ttu-id="88cb0-113">**ID errore:** BC42026</span><span class="sxs-lookup"><span data-stu-id="88cb0-113">**Error ID:** BC42026</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="88cb0-114">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="88cb0-114">To correct this error</span></span>  
   
--   Riscrivere la definizione di proprietà per utilizzare l'approccio consigliato come illustrato nell'esempio precedente.  
+-   <span data-ttu-id="88cb0-115">Riscrivere la definizione di proprietà per utilizzare l'approccio consigliato, come illustrato nell'esempio precedente.</span><span class="sxs-lookup"><span data-stu-id="88cb0-115">Rewrite the property definition to use the recommended approach as illustrated in the preceding example.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà (routine)](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Property (istruzione)](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a><span data-ttu-id="88cb0-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="88cb0-116">See Also</span></span>  
+ [<span data-ttu-id="88cb0-117">Routine Property</span><span class="sxs-lookup"><span data-stu-id="88cb0-117">Property Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
+ [<span data-ttu-id="88cb0-118">Istruzione Property</span><span class="sxs-lookup"><span data-stu-id="88cb0-118">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="88cb0-119">Istruzione Set</span><span class="sxs-lookup"><span data-stu-id="88cb0-119">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)

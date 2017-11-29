@@ -1,97 +1,109 @@
 ---
-title: "Procedura: creare fusi orari con regole di regolazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "regolazione (regola) [.NET Framework]"
-  - "fusi orari [.NET Framework], e regole di regolazione"
-  - "fusi orari [.NET Framework], creazione"
+title: 'Procedura: creare fusi orari con regole di regolazione'
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- time zones [.NET Framework], creating
+- time zones [.NET Framework], and adjustment rules
+- adjustment rule [.NET Framework]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 75e1867e810090bf35a0dfc7def5785747f94382
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare fusi orari con regole di regolazione
-Le informazioni precise del fuso orario richieste da un'applicazione possono non essere presenti in un determinato sistema per molte ragioni:  
-  
--   Il fuso orario non è mai stato definito nel Registro di sistema locale.  
-  
--   I dati sul fuso orario sono stati modificati o rimossi dal Registro di sistema.  
-  
--   Il fuso orario non ha informazioni accurate sulle regolazioni del fuso orario per un determinato periodo storico.  
-  
- In questi casi, è possibile chiamare il metodo <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> per definire il fuso orario richiesto dall'applicazione.  È possibile utilizzare gli overload di questo metodo per creare un fuso orario con o senza regole di regolazione.  Se il fuso orario supporta l'ora legale, è possibile definire le regolazioni con regole di regolazione fisse o mobili. Per le definizioni di questi termini, vedere la sezione "Terminologia relativa al fuso orario" in [Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md).  
-  
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a><span data-ttu-id="38866-102">Procedura: creare fusi orari con regole di regolazione</span><span class="sxs-lookup"><span data-stu-id="38866-102">How to: Create time zones with adjustment rules</span></span>
+
+<span data-ttu-id="38866-103">Le informazioni di fuso orario preciso richiesto da un'applicazione potrebbero non essere presente in un determinato sistema per diversi motivi:</span><span class="sxs-lookup"><span data-stu-id="38866-103">The precise time zone information that is required by an application may not be present on a particular system for several reasons:</span></span>
+
+* <span data-ttu-id="38866-104">Il fuso orario non è mai stato definito nel Registro di sistema del sistema locale.</span><span class="sxs-lookup"><span data-stu-id="38866-104">The time zone has never been defined in the local system's registry.</span></span>
+
+* <span data-ttu-id="38866-105">Dati sul fuso orario sono stati modificati o rimossi dal Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="38866-105">Data about the time zone has been modified or removed from the registry.</span></span>
+
+* <span data-ttu-id="38866-106">Il fuso orario non dispone di informazioni accurate sulle regolazioni del fuso orario per un determinato periodo storico.</span><span class="sxs-lookup"><span data-stu-id="38866-106">The time zone does not have accurate information about time zone adjustments for a particular historic period.</span></span>
+
+<span data-ttu-id="38866-107">In questi casi, è possibile chiamare il <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metodo per definire il fuso orario richiesto dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="38866-107">In these cases, you can call the <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> method to define the time zone required by your application.</span></span> <span data-ttu-id="38866-108">È possibile utilizzare l'overload di questo metodo per creare un fuso orario con o senza regole di regolazione.</span><span class="sxs-lookup"><span data-stu-id="38866-108">You can use the overloads of this method to create a time zone with or without adjustment rules.</span></span> <span data-ttu-id="38866-109">Se il fuso orario supporta l'ora legale, è possibile definire le regolazioni con entrambe le regole di regolazione fissa o mobile.</span><span class="sxs-lookup"><span data-stu-id="38866-109">If the time zone supports daylight saving time, you can define adjustments with either fixed or floating adjustment rules.</span></span> <span data-ttu-id="38866-110">(Per le definizioni di questi termini, vedere la sezione "Terminologia fuso orario" in [Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md).)</span><span class="sxs-lookup"><span data-stu-id="38866-110">(For definitions of these terms, see the "Time Zone Terminology" section in [Time zone overview](../../../docs/standard/datetime/time-zone-overview.md).)</span></span>
+
 > [!IMPORTANT]
->  I fusi orari personalizzati creati chiamando il metodo <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> non vengono aggiunti al Registro di sistema,  ma è possibile accedervi solo tramite il riferimento all'oggetto restituito dalla chiamata al metodo <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>.  
-  
- In questo argomento viene illustrato come creare un fuso orario con regole di regolazione.  Per creare un fuso orario che non supporta le regole di regolazione dell'ora legale, vedere [Procedura: creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).  
-  
-### Per creare un fuso orario con le regole di regolazione mobili  
-  
-1.  Per ogni regolazione, ovvero per ogni transizione da ora solare e viceversa in un determinato intervallo di tempo, effettuare le operazioni seguenti:  
-  
-    1.  Definire il tempo di transizione iniziale per la regolazione del fuso orario.  
-  
-         È necessario chiamare il metodo <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=fullName> e passare un valore <xref:System.DateTime> che definisce il tempo della transizione, un valore intero che definisce il mese della transizione, un valore intero che definisce la settimana in cui si verifica la transizione e un valore <xref:System.DayOfWeek> che definisce il giorno della settimana in cui si verifica la transizione.  Questa chiamata al metodo crea un'istanza di un oggetto <xref:System.TimeZoneInfo.TransitionTime>.  
-  
-    2.  Definire il tempo di transizione finale per la regolazione del fuso orario.  Richiede un'altra chiamata al metodo <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=fullName>.  Questa chiamata al metodo crea un'istanza di un secondo oggetto <xref:System.TimeZoneInfo.TransitionTime>.  
-  
-    3.  Chiamare il metodo <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> e passare le date effettive di inizio e di fine della regolazione, un oggetto <xref:System.TimeSpan> che definisce il periodo della transizione e i due oggetti <xref:System.TimeZoneInfo.TransitionTime> che definiscono quando si verifica la transizione da ora solare a ora legale e viceversa.  Questa chiamata al metodo crea un'istanza di un oggetto <xref:System.TimeZoneInfo.AdjustmentRule>.  
-  
-    4.  Assegnare l'oggetto <xref:System.TimeZoneInfo.AdjustmentRule> a una matrice di oggetti <xref:System.TimeZoneInfo.AdjustmentRule>.  
-  
-2.  Definire il nome visualizzato del fuso orario.  Il nome visualizzato segue un formato quasi standard in cui l'offset del fuso orario dall'ora UTC \(Coordinated Universal Time\) viene racchiuso tra parentesi e seguito da una stringa che identifica il fuso orario, una o più città del fuso orario o uno o più paesi o regioni del fuso orario.  
-  
-3.  Definire il nome dell'ora solare del fuso orario.  In genere questa stringa viene utilizzata anche come identificatore del fuso orario.  
-  
-4.  Definire il nome dell'ora legale del fuso orario.  
-  
-5.  Se si desidera utilizzare un identificatore diverso dal nome standard del fuso orario, definire l'identificatore del fuso orario.  
-  
-6.  Creare un'istanza di un oggetto <xref:System.TimeSpan> che definisce l'offset del fuso orario dall'ora UTC.  I fusi orari con ore in avanti rispetto all'ora UTC hanno un offset positivo.  I fusi orari con ore indietro rispetto all'ora UTC hanno un offset negativo.  
-  
-7.  Chiamare il metodo [TimeZoneInfo.CreateCustomTimeZone\(String, TimeSpan, String, String, String, TimeZoneInfo.AdjustmentRule\<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=fullName> per creare un'istanza del nuovo fuso orario.  
-  
-## Esempio  
- Nell'esempio seguente viene definito un fuso Ora solare fuso centrale per gli Stati Uniti che include le regole di regolazione per una varietà di intervalli di tempo dal 1918 a oggi.  
-  
- [!code-csharp[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#5)]
- [!code-vb[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#5)]  
-  
- Il fuso orario creato in questo esempio ha più regole di regolazione.  È necessario pertanto assicurarsi che le date effettive di inizio e di fine di una regola di regolazione non si sovrappongono con le date di un'altra regola.  In caso di sovrapposizione, viene generata un'eccezione <xref:System.InvalidTimeZoneException>.  
-  
- Per le regole di regolazione mobili, viene passato il valore 5 al parametro `week` del metodo <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> indicando che la transizione si verifica nell'ultima settimana di un determinato mese.  
-  
- Nel creare la matrice di oggetti <xref:System.TimeZoneInfo.AdjustmentRule> da utilizzare nella chiamata al metodo [TimeZoneInfo.CreateCustomTimeZone\(String, TimeSpan, String, String, String, TimeZoneInfo.AdjustmentRule\<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=fullName>, la matrice è stata inizializzata in base alla dimensione richiesta dal numero di regolazioni da creare per il fuso orario.  In questo esempio di codice invece viene chiamato il metodo <xref:System.Collections.Generic.List%601.Add%2A> per aggiungere ogni regola di regolazione a una raccolta <xref:System.Collections.Generic.List%601> generica di oggetti <xref:System.TimeZoneInfo.AdjustmentRule>.  Viene quindi chiamato il metodo <xref:System.Collections.Generic.List%601.CopyTo%2A> per copiare i membri di questa raccolta nella matrice.  
-  
- Nell'esempio viene anche utilizzato il metodo <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> per definire regolazioni a data fissa.  Equivale a chiamare il metodo <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A>, con l'unica differenza che è necessario fornire solo l'ora, il mese e il giorno come parametri di transizione.  
-  
- È possibile eseguire il test di questo esempio utilizzando un codice analogo al seguente:  
-  
- [!code-csharp[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#7)]
- [!code-vb[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#7)]  
-  
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
-  
--   Aggiungere un riferimento a System.Core.dll al progetto.  
-  
--   Importare gli spazi dei nomi seguenti:  
-  
-     [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
-     [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]  
-  
-## Vedere anche  
- [Date, ora e fusi orari](../../../docs/standard/datetime/index.md)   
- [Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md)   
- [Procedura: creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+> <span data-ttu-id="38866-111">Fusi orari personalizzati creati tramite la chiamata di <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo) non vengono aggiunti al Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="38866-111">Custom time zones created by calling the <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> method are not added to the registry.</span></span> <span data-ttu-id="38866-112">Ma è possibile accedervi solo tramite il riferimento all'oggetto restituito dal <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> chiamata al metodo.</span><span class="sxs-lookup"><span data-stu-id="38866-112">Instead, they can be accessed only through the object reference returned by the <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> method call.</span></span>
+
+<span data-ttu-id="38866-113">In questo argomento viene illustrato come creare un fuso orario con regole di regolazione.</span><span class="sxs-lookup"><span data-stu-id="38866-113">This topic shows how to create a time zone with adjustment rules.</span></span> <span data-ttu-id="38866-114">Per creare un fuso orario che non supporta regole di regolazione dell'ora legale, vedere [procedura: creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).</span><span class="sxs-lookup"><span data-stu-id="38866-114">To create a time zone that does not support daylight saving time adjustment rules, see [How to: Create Time Zones Without Adjustment Rules](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).</span></span>
+
+### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a><span data-ttu-id="38866-115">Per creare un fuso orario con le regole di regolazione mobili</span><span class="sxs-lookup"><span data-stu-id="38866-115">To create a time zone with floating adjustment rules</span></span>
+
+1. <span data-ttu-id="38866-116">Per ogni nuova regolazione (che, per ogni transizione da e di nuovo all'ora solare in un intervallo di tempo specifico), eseguire le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="38866-116">For each adjustment (that is, for each transition away from and back to standard time over a particular time interval), do the following:</span></span>
+
+    1. <span data-ttu-id="38866-117">Definire il tempo di transizione iniziale per la regolazione del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-117">Define the starting transition time for the time zone adjustment.</span></span>
+
+       <span data-ttu-id="38866-118">È necessario chiamare il <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> (metodo) e passare un <xref:System.DateTime> valore che definisce il tempo di transizione, un valore intero che definisce il mese della transizione, un valore intero che definisce la settimana in cui si verifica la transizione, e un <xref:System.DayOfWeek> valore che definisce il giorno della settimana in cui si verifica la transizione.</span><span class="sxs-lookup"><span data-stu-id="38866-118">You must call the <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> method and pass it a <xref:System.DateTime> value that defines the time of the transition, an integer value that defines the month of the transition, an integer value that defines the week on which the transition occurs, and a <xref:System.DayOfWeek> value that defines the day of the week on which the transition occurs.</span></span> <span data-ttu-id="38866-119">Crea un'istanza di questa chiamata al metodo un <xref:System.TimeZoneInfo.TransitionTime> oggetto.</span><span class="sxs-lookup"><span data-stu-id="38866-119">This method call instantiates a <xref:System.TimeZoneInfo.TransitionTime> object.</span></span>
+
+    2. <span data-ttu-id="38866-120">Definire il tempo di transizione finale per la regolazione del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-120">Define the ending transition time for the time zone adjustment.</span></span> <span data-ttu-id="38866-121">Questa operazione richiede un'altra chiamata al <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> metodo.</span><span class="sxs-lookup"><span data-stu-id="38866-121">This requires another call to the <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="38866-122">Questa chiamata al metodo crea un'istanza di un secondo <xref:System.TimeZoneInfo.TransitionTime> oggetto.</span><span class="sxs-lookup"><span data-stu-id="38866-122">This method call instantiates a second <xref:System.TimeZoneInfo.TransitionTime> object.</span></span>
+
+    3. <span data-ttu-id="38866-123">Chiamare il <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> metodo e passarlo effettive di inizio e data di fine della regolazione, un <xref:System.TimeSpan> oggetto che definisce la quantità di tempo in cui la transizione e le due <xref:System.TimeZoneInfo.TransitionTime> oggetti che definiscono quando le transizioni da e verso legale ora si verificano.</span><span class="sxs-lookup"><span data-stu-id="38866-123">Call the <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> method and pass it the effective start and end dates of the adjustment, a <xref:System.TimeSpan> object that defines the amount of time in the transition, and the two <xref:System.TimeZoneInfo.TransitionTime> objects that define when the transitions to and from daylight saving time occur.</span></span> <span data-ttu-id="38866-124">Crea un'istanza di questa chiamata al metodo un <xref:System.TimeZoneInfo.AdjustmentRule> oggetto.</span><span class="sxs-lookup"><span data-stu-id="38866-124">This method call instantiates a <xref:System.TimeZoneInfo.AdjustmentRule> object.</span></span>
+
+    4. <span data-ttu-id="38866-125">Assegnare il <xref:System.TimeZoneInfo.AdjustmentRule> oggetto a una matrice di <xref:System.TimeZoneInfo.AdjustmentRule> oggetti.</span><span class="sxs-lookup"><span data-stu-id="38866-125">Assign the <xref:System.TimeZoneInfo.AdjustmentRule> object to an array of <xref:System.TimeZoneInfo.AdjustmentRule> objects.</span></span>
+
+2. <span data-ttu-id="38866-126">Definire nome visualizzato del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-126">Define the time zone's display name.</span></span> <span data-ttu-id="38866-127">Il nome visualizzato segue un formato pressoché standard in cui l'offset del fuso orario dall'ora Coordinated Universal Time (UTC) è racchiuso tra parentesi ed è seguito da una stringa che identifica il fuso orario, una o più delle città nel fuso orario, o in uno o più di cou Mo o aree del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-127">The display name follows a fairly standard format in which the time zone's offset from Coordinated Universal Time (UTC) is enclosed in parentheses and is followed by a string that identifies the time zone, one or more of the cities in the time zone, or one or more of the countries or regions in the time zone.</span></span>
+
+3. <span data-ttu-id="38866-128">Definire il nome dell'ora solare del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-128">Define the name of the time zone's standard time.</span></span> <span data-ttu-id="38866-129">In genere, questa stringa viene utilizzata anche come identificatore del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-129">Typically, this string is also used as the time zone's identifier.</span></span>
+
+4. <span data-ttu-id="38866-130">Definire il nome dell'ora legale del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-130">Define the name of the time zone's daylight time.</span></span>
+
+5. <span data-ttu-id="38866-131">Se si desidera utilizzare un identificatore nome standard del fuso orario diverso, definire l'identificatore del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-131">If you want to use a different identifier than the time zone's standard name, define the time zone identifier.</span></span>
+
+6. <span data-ttu-id="38866-132">Creare un'istanza di un <xref:System.TimeSpan> oggetto che definisce l'offset del fuso orario dall'ora UTC.</span><span class="sxs-lookup"><span data-stu-id="38866-132">Instantiate a <xref:System.TimeSpan> object that defines the time zone's offset from UTC.</span></span> <span data-ttu-id="38866-133">Fusi orari con ore in avanti rispetto all'ora UTC hanno un offset positivo.</span><span class="sxs-lookup"><span data-stu-id="38866-133">Time zones with times that are later than UTC have a positive offset.</span></span> <span data-ttu-id="38866-134">Fusi orari con ore precedenti rispetto all'ora UTC hanno un offset negativo.</span><span class="sxs-lookup"><span data-stu-id="38866-134">Time zones with times that are earlier than UTC have a negative offset.</span></span>
+
+7. <span data-ttu-id="38866-135">Chiamare il <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> metodo per creare un'istanza del nuovo fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-135">Call the <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> method to instantiate the new time zone.</span></span>
+
+## <a name="example"></a><span data-ttu-id="38866-136">Esempio</span><span class="sxs-lookup"><span data-stu-id="38866-136">Example</span></span>
+
+<span data-ttu-id="38866-137">L'esempio seguente definisce un fuso orario centrale Standard per gli Stati Uniti che include le regole di regolazione per un'ampia gamma di intervalli di tempo da 1918 a quella corrente.</span><span class="sxs-lookup"><span data-stu-id="38866-137">The following example defines a Central Standard Time zone for the United States that includes adjustment rules for a variety of time intervals from 1918 to the present.</span></span>
+
+[!code-csharp[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#5)]
+[!code-vb[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#5)]
+
+<span data-ttu-id="38866-138">Il fuso orario creato in questo esempio dispone di più regole di regolazione.</span><span class="sxs-lookup"><span data-stu-id="38866-138">The time zone created in this example has multiple adjustment rules.</span></span> <span data-ttu-id="38866-139">È necessario pertanto verificare che le date di inizio e data di fine di qualsiasi regola di rettifica non si sovrapponga con le date di un'altra regola di rettifica.</span><span class="sxs-lookup"><span data-stu-id="38866-139">Care must be taken to ensure that the effective start and end dates of any adjustment rule do not overlap with the dates of another adjustment rule.</span></span> <span data-ttu-id="38866-140">Se è presente una sovrapposizione, un <xref:System.InvalidTimeZoneException> viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="38866-140">If there is an overlap, an <xref:System.InvalidTimeZoneException> is thrown.</span></span>
+
+<span data-ttu-id="38866-141">Per le regole di regolazione mobili, il valore 5 viene passato per il `week` parametro il <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> metodo per indicare che la transizione si verifica nell'ultima settimana di un determinato mese.</span><span class="sxs-lookup"><span data-stu-id="38866-141">For floating adjustment rules, the value 5 is passed to the `week` parameter of the <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> method to indicate that the transition occurs on the last week of a particular month.</span></span>
+
+<span data-ttu-id="38866-142">Nella creazione della matrice di <xref:System.TimeZoneInfo.AdjustmentRule> oggetti da utilizzare nella <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> chiamata al metodo, il codice può inizializzare la matrice per la dimensione della richiesta per il numero di modifiche da creare per il fuso orario.</span><span class="sxs-lookup"><span data-stu-id="38866-142">In creating the array of <xref:System.TimeZoneInfo.AdjustmentRule> objects to use in the <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> method call, the code could initialize the array to the size required by the number of adjustments to be created for the time zone.</span></span> <span data-ttu-id="38866-143">Al contrario, questo codice di esempio chiama il <xref:System.Collections.Generic.List%601.Add%2A> metodo per aggiungere ogni regola di rettifica per un oggetto generico <xref:System.Collections.Generic.List%601> insieme di <xref:System.TimeZoneInfo.AdjustmentRule> oggetti.</span><span class="sxs-lookup"><span data-stu-id="38866-143">Instead, this code example calls the <xref:System.Collections.Generic.List%601.Add%2A> method to add each adjustment rule to a generic <xref:System.Collections.Generic.List%601> collection of <xref:System.TimeZoneInfo.AdjustmentRule> objects.</span></span> <span data-ttu-id="38866-144">Il codice chiama quindi il <xref:System.Collections.Generic.List%601.CopyTo%2A> metodo per copiare i membri di questa raccolta nella matrice.</span><span class="sxs-lookup"><span data-stu-id="38866-144">The code then calls the <xref:System.Collections.Generic.List%601.CopyTo%2A> method to copy the members of this collection to the array.</span></span>
+
+<span data-ttu-id="38866-145">Nell'esempio viene inoltre utilizzata la <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> metodo per definire regolazioni a data fissa.</span><span class="sxs-lookup"><span data-stu-id="38866-145">The example also uses the <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> method to define fixed-date adjustments.</span></span> <span data-ttu-id="38866-146">Questa operazione è simile alla chiamata di <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> metodo, ad eccezione del fatto che richiede solo l'ora, mese e giorno parametri di transizione.</span><span class="sxs-lookup"><span data-stu-id="38866-146">This is similar to calling the <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> method, except that it requires only the time, month, and day of the transition parameters.</span></span>
+
+<span data-ttu-id="38866-147">L'esempio è possibile verificarlo utilizzando codice analogo al seguente:</span><span class="sxs-lookup"><span data-stu-id="38866-147">The example can be tested using code such as the following:</span></span>
+
+[!code-csharp[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#7)]
+[!code-vb[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#7)]
+
+## <a name="compiling-the-code"></a><span data-ttu-id="38866-148">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="38866-148">Compiling the code</span></span>
+
+<span data-ttu-id="38866-149">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="38866-149">This example requires:</span></span>
+
+* <span data-ttu-id="38866-150">Un riferimento a System.Core.dll essere aggiunto al progetto.</span><span class="sxs-lookup"><span data-stu-id="38866-150">That a reference to System.Core.dll be added to the project.</span></span>
+
+* <span data-ttu-id="38866-151">Che importati spazi dei nomi seguenti:</span><span class="sxs-lookup"><span data-stu-id="38866-151">That the following namespaces be imported:</span></span>
+
+  [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
+  [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
+
+## <a name="see-also"></a><span data-ttu-id="38866-152">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="38866-152">See also</span></span>
+
+<span data-ttu-id="38866-153">[Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+[Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md)
+[procedura: creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)</span><span class="sxs-lookup"><span data-stu-id="38866-153">[Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[Time zone overview](../../../docs/standard/datetime/time-zone-overview.md)
+[How to: Create time zones without adjustment rules](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)</span></span>

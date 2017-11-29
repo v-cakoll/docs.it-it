@@ -1,43 +1,34 @@
 ---
-title: 'Procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: flusso di frammenti XML con accesso alle informazioni di intestazione (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)
-A volte è necessario leggere file XML arbitrariamente grandi e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML di grandi dimensioni, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a><span data-ttu-id="5ad54-102">Procedura: flusso di frammenti XML con accesso alle informazioni di intestazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ad54-102">How to: Stream XML Fragments with Access to Header Information (Visual Basic)</span></span>
+<span data-ttu-id="5ad54-103">A volte è necessario leggere file XML arbitrariamente grandi e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile.</span><span class="sxs-lookup"><span data-stu-id="5ad54-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="5ad54-104">Se si tenta di popolare un albero XML con un file XML di grandi dimensioni, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo).</span><span class="sxs-lookup"><span data-stu-id="5ad54-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="5ad54-105">Pertanto, è necessario usare una tecnica di flusso in sostituzione.</span><span class="sxs-lookup"><span data-stu-id="5ad54-105">Therefore, you should use a streaming technique instead.</span></span>  
   
- È possibile scrivere l'applicazione utilizzando <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> Tuttavia, possibile che si desidera utilizzare [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] per eseguire una query di struttura ad albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. Per ulteriori informazioni, vedere [procedura: scrivere un LINQ nel metodo Axis XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ <span data-ttu-id="5ad54-106">Una delle opzioni disponibili consiste nello scrivere l'applicazione usando <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="5ad54-106">One option is to write your application using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="5ad54-107">Può tuttavia essere necessario usare [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per eseguire una query nell'albero XML.</span><span class="sxs-lookup"><span data-stu-id="5ad54-107">However, you might want to use [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to query the XML tree.</span></span> <span data-ttu-id="5ad54-108">In questo caso, è possibile scrivere un metodo dell'asse personalizzato.</span><span class="sxs-lookup"><span data-stu-id="5ad54-108">If this is the case, you can write your own custom axis method.</span></span> <span data-ttu-id="5ad54-109">Per ulteriori informazioni, vedere [procedura: scrivere un LINQ al metodo Axis XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).</span><span class="sxs-lookup"><span data-stu-id="5ad54-109">For more information, see [How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).</span></span>  
   
- Per scrivere un metodo dell'asse, scrivere un piccolo metodo che utilizza il <xref:System.Xml.XmlReader>per leggere i nodi fino a raggiungere uno dei nodi in cui si è interessati.</xref:System.Xml.XmlReader> Il metodo chiama quindi <xref:System.Xml.Linq.XNode.ReadFrom%2A>, che legge dal <xref:System.Xml.XmlReader>e crea un'istanza di un frammento XML.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> È quindi possibile scrivere query LINQ sul metodo dell'asse personalizzato.  
+ <span data-ttu-id="5ad54-110">Per scrivere metodo dell'asse, scrivere un piccolo metodo che usa <xref:System.Xml.XmlReader> per leggere i nodi fino a raggiungere uno dei nodi di interesse.</span><span class="sxs-lookup"><span data-stu-id="5ad54-110">To write your own axis method, you write a small method that uses the <xref:System.Xml.XmlReader> to read nodes until it reaches one of the nodes in which you are interested.</span></span> <span data-ttu-id="5ad54-111">Il metodo chiama quindi <xref:System.Xml.Linq.XNode.ReadFrom%2A>, che legge da <xref:System.Xml.XmlReader> e crea un'istanza di un frammento XML.</span><span class="sxs-lookup"><span data-stu-id="5ad54-111">The method then calls <xref:System.Xml.Linq.XNode.ReadFrom%2A>, which reads from the <xref:System.Xml.XmlReader> and instantiates an XML fragment.</span></span> <span data-ttu-id="5ad54-112">È quindi possibile scrivere query LINQ sul metodo dell'asse personalizzato.</span><span class="sxs-lookup"><span data-stu-id="5ad54-112">You can then write LINQ queries on your custom axis method.</span></span>  
   
- Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Standard determinati operatori di query, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza.</xref:System.Linq.Enumerable.OrderBy%2A> Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto.  
+ <span data-ttu-id="5ad54-113">Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento.</span><span class="sxs-lookup"><span data-stu-id="5ad54-113">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="5ad54-114">Determinati operatori di query standard, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza.</span><span class="sxs-lookup"><span data-stu-id="5ad54-114">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="5ad54-115">Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto.</span><span class="sxs-lookup"><span data-stu-id="5ad54-115">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint.</span></span>  
   
-## <a name="example"></a>Esempio  
- A volte il problema diventa più interessante. Nel documento XML seguente, il consumer del metodo dell'asse personalizzato deve conoscere anche il nome del cliente cui appartiene ogni elemento.  
+## <a name="example"></a><span data-ttu-id="5ad54-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="5ad54-116">Example</span></span>  
+ <span data-ttu-id="5ad54-117">A volte il problema diventa più interessante.</span><span class="sxs-lookup"><span data-stu-id="5ad54-117">Sometimes the problem gets just a little more interesting.</span></span> <span data-ttu-id="5ad54-118">Nel documento XML seguente, il consumer del metodo dell'asse personalizzato deve conoscere anche il nome del cliente cui appartiene ogni elemento.</span><span class="sxs-lookup"><span data-stu-id="5ad54-118">In the following XML document, the consumer of your custom axis method also has to know the name of the customer that each item belongs to.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -84,11 +75,11 @@ A volte è necessario leggere file XML arbitrariamente grandi e scrivere l'appli
 </Root>  
 ```  
   
- L'approccio adottato in questo esempio prevede anche di cercare queste informazioni di intestazione, salvarle e quindi compilare un piccolo albero XML che contiene sia le informazioni di intestazione che i dettagli enumerati. Il metodo dell'asse restituisce questo nuovo, piccolo albero XML. La query ha quindi accesso alle informazioni di intestazione oltre a quelle sui dettagli.  
+ <span data-ttu-id="5ad54-119">L'approccio adottato in questo esempio prevede anche di cercare queste informazioni di intestazione, salvarle e quindi compilare un piccolo albero XML che contiene sia le informazioni di intestazione che i dettagli enumerati.</span><span class="sxs-lookup"><span data-stu-id="5ad54-119">The approach that this example takes is to also watch for this header information, save the header information, and then build a small XML tree that contains both the header information and the detail that you are enumerating.</span></span> <span data-ttu-id="5ad54-120">Il metodo dell'asse restituisce questo nuovo, piccolo albero XML.</span><span class="sxs-lookup"><span data-stu-id="5ad54-120">The axis method then yields this new, small XML tree.</span></span> <span data-ttu-id="5ad54-121">La query ha quindi accesso alle informazioni di intestazione oltre a quelle sui dettagli.</span><span class="sxs-lookup"><span data-stu-id="5ad54-121">The query then has access to the header information as well as the detail information.</span></span>  
   
- Questo approccio prevede un footprint di memoria ridotto. Quando viene restituito un frammento XML, non viene mantenuto alcun riferimento al frammento precedente, che diventa disponibile per Garbage Collection. Si noti che con questa tecnica vengono creati molti oggetti temporanei sull'heap.  
+ <span data-ttu-id="5ad54-122">Questo approccio prevede un footprint di memoria ridotto.</span><span class="sxs-lookup"><span data-stu-id="5ad54-122">This approach has a small memory footprint.</span></span> <span data-ttu-id="5ad54-123">Quando viene restituito un frammento XML, non viene mantenuto alcun riferimento al frammento precedente, che diventa disponibile per Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="5ad54-123">As each detail XML fragment is yielded, no references are kept to the previous fragment, and it is available for garbage collection.</span></span> <span data-ttu-id="5ad54-124">Si noti che con questa tecnica vengono creati molti oggetti temporanei sull'heap.</span><span class="sxs-lookup"><span data-stu-id="5ad54-124">Note that this technique creates many short lived objects on the heap.</span></span>  
   
- Nell'esempio seguente viene illustrato come implementare e usare un metodo dell'asse personalizzato che genera un flusso di frammenti XML dal file specificato dall'URI. Il metodo dell'asse personalizzato è stato scritto in modo tale da prevedere un documento contenente gli elementi `Customer`, `Name` e `Item`, disposti come nel documento `Source.xml` precedente. Si tratta di un'implementazione semplicistica. Un'implementazione più solida sarebbe in grado di analizzare un documento non valido.  
+ <span data-ttu-id="5ad54-125">Nell'esempio seguente viene illustrato come implementare e usare un metodo dell'asse personalizzato che genera un flusso di frammenti XML dal file specificato dall'URI.</span><span class="sxs-lookup"><span data-stu-id="5ad54-125">The following example shows how to implement and use a custom axis method that streams XML fragments from the file specified by the URI.</span></span> <span data-ttu-id="5ad54-126">Il metodo dell'asse personalizzato è stato scritto in modo tale da prevedere un documento contenente gli elementi `Customer`, `Name` e `Item`, disposti come nel documento `Source.xml` precedente.</span><span class="sxs-lookup"><span data-stu-id="5ad54-126">This custom axis is specifically written such that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the above `Source.xml` document.</span></span> <span data-ttu-id="5ad54-127">Si tratta di un'implementazione semplicistica.</span><span class="sxs-lookup"><span data-stu-id="5ad54-127">It is a simplistic implementation.</span></span> <span data-ttu-id="5ad54-128">Un'implementazione più solida sarebbe in grado di analizzare un documento non valido.</span><span class="sxs-lookup"><span data-stu-id="5ad54-128">A more robust implementation would be prepared to parse an invalid document.</span></span>  
   
 ```vb  
 Module Module1  
@@ -221,7 +212,7 @@ Public Class StreamCustomerItemEnumerator
 End Class  
 ```  
   
- L'output del codice è il seguente:  
+ <span data-ttu-id="5ad54-129">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="5ad54-129">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -248,6 +239,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="5ad54-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5ad54-130">See Also</span></span>  
+ [<span data-ttu-id="5ad54-131">Avanzate di LINQ to XML programmazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ad54-131">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

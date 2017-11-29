@@ -1,128 +1,111 @@
 ---
-title: Gli operatori aritmetici in Visual Basic | Documenti di Microsoft
+title: Operatori aritmetici in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - type safety
 - operators [Visual Basic], bitwise
 - operators [Visual Basic], bit-shift
-- bitwise operators
-- bit-shift operators
+- bitwise operators [Visual Basic]
+- bit-shift operators [Visual Basic]
 - zero, division by zero
 - operators [Visual Basic], arithmetic
-- division, by zero
+- division [Visual Basic], by zero
 - Visual Basic code, operators
-- arithmetic operators, about arithmetic operators
+- arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c724bf8b6794e71d49b32c7d3ce9e010f541f68f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="arithmetic-operators-in-visual-basic"></a>Operatori aritmetici in Visual Basic
-Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritmetiche che comportano il calcolo di valori numerici rappresentati da valori letterali, variabili, altre espressioni, funzione e chiamate di proprietà e costanti. Vengono classificati come operatori aritmetici sono gli operatori di spostamento di bit, che operano a livello dei singoli bit degli operandi e spostare degli schemi di bit verso sinistra o destra.  
+# <a name="arithmetic-operators-in-visual-basic"></a><span data-ttu-id="5c488-102">Operatori aritmetici in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5c488-102">Arithmetic Operators in Visual Basic</span></span>
+<span data-ttu-id="5c488-103">Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritmetiche che comportano il calcolo di valori numerici rappresentati da valori letterali, variabili, altre espressioni, funzione e chiamate a proprietà e costanti.</span><span class="sxs-lookup"><span data-stu-id="5c488-103">Arithmetic operators are used to perform many of the familiar arithmetic operations that involve the calculation of numeric values represented by literals, variables, other expressions, function and property calls, and constants.</span></span> <span data-ttu-id="5c488-104">Anche classificati con operatori aritmetici sono gli operatori di spostamento di bit, che operano a livello dei singoli bit degli operandi e spostare degli schemi di bit a sinistra o a destra.</span><span class="sxs-lookup"><span data-stu-id="5c488-104">Also classified with arithmetic operators are the bit-shift operators, which act at the level of the individual bits of the operands and shift their bit patterns to the left or right.</span></span>  
   
-## <a name="arithmetic-operations"></a>Operazioni aritmetiche  
- È possibile aggiungere due valori in un'espressione con il [+ (operatore)](../../../../visual-basic/language-reference/operators/addition-operator.md), o sottrarre uno da altro con il [-operatore (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), come illustrato nell'esempio seguente.  
+## <a name="arithmetic-operations"></a><span data-ttu-id="5c488-105">Operazioni aritmetiche</span><span class="sxs-lookup"><span data-stu-id="5c488-105">Arithmetic Operations</span></span>  
+ <span data-ttu-id="5c488-106">È possibile aggiungere due valori in un'espressione con il [+ (operatore)](../../../../visual-basic/language-reference/operators/addition-operator.md), o da un'altra con sottrarre il [-operatore (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="5c488-106">You can add two values in an expression together with the [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md), or subtract one from another with the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), as the following example demonstrates.</span></span>  
   
- [!code-vb[VbVbalrOperators&#57;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
   
- Negazione utilizza inoltre il [-operatore (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), ma con un solo operando, come nell'esempio seguente viene illustrato.  
+ <span data-ttu-id="5c488-107">Negazione utilizza inoltre il [-operatore (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), ma con un solo operando, come nell'esempio seguente viene illustrato.</span><span class="sxs-lookup"><span data-stu-id="5c488-107">Negation also uses the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), but with only one operand, as the following example demonstrates.</span></span>  
   
- [!code-vb[VbVbalrOperators&#58;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
   
- Utilizzo di moltiplicazione e divisione di [* (operatore)](../../../../visual-basic/language-reference/operators/multiplication-operator.md) e [/ (operatore) (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), rispettivamente, come illustrato nell'esempio seguente.  
+ <span data-ttu-id="5c488-108">Utilizzo di moltiplicazione e divisione di [* operatore](../../../../visual-basic/language-reference/operators/multiplication-operator.md) e [/ (operatore) (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), rispettivamente, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="5c488-108">Multiplication and division use the [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) and [/ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), respectively, as the following example demonstrates.</span></span>  
   
- [!code-vb[VbVbalrOperators&#59;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
   
- Elevamento a potenza utilizza il [^ (operatore)](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), come illustrato nell'esempio seguente.  
+ <span data-ttu-id="5c488-109">Elevamento a potenza utilizza il [^ operatore](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="5c488-109">Exponentiation uses the [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), as the following example demonstrates.</span></span>  
   
- [!code-vb[60 VbVbalrOperators](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
   
- Divisione di interi viene eseguita con il [\ (operatore) (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Divisione di interi restituisce il quoziente, vale a dire il numero intero che rappresenta il numero di volte in cui il divisore possono essere suddivisi in dividendo senza tenere conto di eventuali residui. Sia il divisore e il dividendo devono essere tipi integrali (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, e `ULong`) per l'operatore. Tutti gli altri tipi devono essere convertiti in un tipo integrale prima. L'esempio seguente illustra la divisione di interi.  
+ <span data-ttu-id="5c488-110">La divisione di integer viene eseguita utilizzando il [\ (operatore) (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md).</span><span class="sxs-lookup"><span data-stu-id="5c488-110">Integer division is carried out using the [\ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md).</span></span> <span data-ttu-id="5c488-111">Divisione di interi restituisce il quoziente, vale a dire un valore integer che rappresenta il numero di volte in cui il divisore possono essere suddivisi in dividendo senza tenere conto di eventuali residui.</span><span class="sxs-lookup"><span data-stu-id="5c488-111">Integer division returns the quotient, that is, the integer that represents the number of times the divisor can divide into the dividend without consideration of any remainder.</span></span> <span data-ttu-id="5c488-112">Sia il divisore e il dividendo devono essere tipi integrali (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, e `ULong`) per l'operatore.</span><span class="sxs-lookup"><span data-stu-id="5c488-112">Both the divisor and the dividend must be integral types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, and `ULong`) for this operator.</span></span> <span data-ttu-id="5c488-113">Tutti gli altri tipi devono essere convertiti prima a un tipo integrale.</span><span class="sxs-lookup"><span data-stu-id="5c488-113">All other types must be converted to an integral type first.</span></span> <span data-ttu-id="5c488-114">L'esempio seguente illustra la divisione di interi.</span><span class="sxs-lookup"><span data-stu-id="5c488-114">The following example demonstrates integer division.</span></span>  
   
- [!code-vb[VbVbalrOperators&#61;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
   
- Il modulo aritmetico viene eseguito utilizzando il [operatore Mod](../../../../visual-basic/language-reference/operators/mod-operator.md). Questo operatore restituisce il resto dopo aver diviso il divisore per il dividendo per un numero intero di volte. Se il divisore e dividendo sono tipi integrali, il valore restituito è di tipo integrale. Se il divisore e dividendo sono tipi a virgola mobile, il valore restituito è anche a virgola mobile. Nell'esempio seguente viene illustrato questo comportamento.  
+ <span data-ttu-id="5c488-115">Il modulo aritmetico viene eseguito utilizzando il [operatore Mod](../../../../visual-basic/language-reference/operators/mod-operator.md).</span><span class="sxs-lookup"><span data-stu-id="5c488-115">Modulus arithmetic is performed using the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md).</span></span> <span data-ttu-id="5c488-116">Questo operatore restituisce il resto dopo aver diviso il divisore per il dividendo per un numero intero di volte.</span><span class="sxs-lookup"><span data-stu-id="5c488-116">This operator returns the remainder after dividing the divisor into the dividend an integral number of times.</span></span> <span data-ttu-id="5c488-117">Se il divisore e dividendo sono entrambi tipi integrali, il valore restituito è di tipo integrale.</span><span class="sxs-lookup"><span data-stu-id="5c488-117">If both divisor and dividend are integral types, the returned value is integral.</span></span> <span data-ttu-id="5c488-118">Se il divisore e dividendo sono tipi a virgola mobile, il valore restituito è anche a virgola mobile.</span><span class="sxs-lookup"><span data-stu-id="5c488-118">If divisor and dividend are floating-point types, the returned value is also floating-point.</span></span> <span data-ttu-id="5c488-119">Nell'esempio seguente viene illustrato questo comportamento.</span><span class="sxs-lookup"><span data-stu-id="5c488-119">The following example demonstrates this behavior.</span></span>  
   
- [!code-vb[&#62; VbVbalrOperators](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
   
- [!code-vb[VbVbalrOperators&#63;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
   
-### <a name="attempted-division-by-zero"></a>Tentativo di divisione per Zero  
- Divisione per zero produce risultati diversi a seconda dei tipi di dati coinvolti. In integral divisions (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), the [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] throws a <xref:System.DivideByZeroException> exception.</xref:System.DivideByZeroException> In operazioni di divisione di `Decimal` o `Single` tipo di dati, il [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] genera inoltre un <xref:System.DivideByZeroException>(eccezione).</xref:System.DivideByZeroException>  
+### <a name="attempted-division-by-zero"></a><span data-ttu-id="5c488-120">Tentativo di divisione per Zero</span><span class="sxs-lookup"><span data-stu-id="5c488-120">Attempted Division by Zero</span></span>  
+ <span data-ttu-id="5c488-121">Divisione per zero produce risultati diversi a seconda dei tipi di dati coinvolti.</span><span class="sxs-lookup"><span data-stu-id="5c488-121">Division by zero has different results depending on the data types involved.</span></span> <span data-ttu-id="5c488-122">In integrali suddivisioni (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] genera un <xref:System.DivideByZeroException> eccezione.</span><span class="sxs-lookup"><span data-stu-id="5c488-122">In integral divisions (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] throws a <xref:System.DivideByZeroException> exception.</span></span> <span data-ttu-id="5c488-123">In operazioni di divisione di `Decimal` o `Single` tipo di dati, il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] genera inoltre un <xref:System.DivideByZeroException> eccezione.</span><span class="sxs-lookup"><span data-stu-id="5c488-123">In division operations on the `Decimal` or `Single` data type, the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] also throws a <xref:System.DivideByZeroException> exception.</span></span>  
   
- Divisioni a virgola mobile che coinvolgono il `Double` tipo di dati, viene generata alcuna eccezione e il risultato è il membro della classe che rappresenta <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, o <xref:System.Double.NegativeInfinity>, a seconda del dividendo.</xref:System.Double.NegativeInfinity> </xref:System.Double.PositiveInfinity> </xref:System.Double.NaN> Nella tabella seguente vengono riepilogati i diversi risultati tentativo di dividere un `Double` valore in base zero.  
+ <span data-ttu-id="5c488-124">Divisioni a virgola mobile che implicano il `Double` il tipo di dati, viene generata alcuna eccezione e il risultato è il membro della classe che rappresenta <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, o <xref:System.Double.NegativeInfinity>, a seconda del dividendo.</span><span class="sxs-lookup"><span data-stu-id="5c488-124">In floating-point divisions involving the `Double` data type, no exception is thrown, and the result is the class member representing <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, or <xref:System.Double.NegativeInfinity>, depending on the dividend.</span></span> <span data-ttu-id="5c488-125">Nella tabella seguente sono riepilogati i vari risultati tentativo di dividere un `Double` valore in base zero.</span><span class="sxs-lookup"><span data-stu-id="5c488-125">The following table summarizes the various results of attempting to divide a `Double` value by zero.</span></span>  
   
-|Tipo di dati dividendo|Tipo di dati divisore|Valore del dividendo|Risultato|  
+|<span data-ttu-id="5c488-126">Tipo di dati dividendo</span><span class="sxs-lookup"><span data-stu-id="5c488-126">Dividend data type</span></span>|<span data-ttu-id="5c488-127">Tipo di dati divisore</span><span class="sxs-lookup"><span data-stu-id="5c488-127">Divisor data type</span></span>|<span data-ttu-id="5c488-128">Valore del dividendo</span><span class="sxs-lookup"><span data-stu-id="5c488-128">Dividend value</span></span>|<span data-ttu-id="5c488-129">Risultato</span><span class="sxs-lookup"><span data-stu-id="5c488-129">Result</span></span>|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>(non un numero definito matematicamente)</xref:System.Double.NaN>|  
-|`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity></xref:System.Double.PositiveInfinity>|  
-|`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity></xref:System.Double.NegativeInfinity>|  
+|`Double`|`Double`|<span data-ttu-id="5c488-130">0</span><span class="sxs-lookup"><span data-stu-id="5c488-130">0</span></span>|<span data-ttu-id="5c488-131"><xref:System.Double.NaN>(non un numero definito matematicamente)</span><span class="sxs-lookup"><span data-stu-id="5c488-131"><xref:System.Double.NaN> (not a mathematically defined number)</span></span>|  
+|`Double`|`Double`|<span data-ttu-id="5c488-132">> 0</span><span class="sxs-lookup"><span data-stu-id="5c488-132">> 0</span></span>|<xref:System.Double.PositiveInfinity>|  
+|`Double`|`Double`|<span data-ttu-id="5c488-133">\< 0</span><span class="sxs-lookup"><span data-stu-id="5c488-133">\< 0</span></span>|<xref:System.Double.NegativeInfinity>|  
   
- Quando viene rilevata un' <xref:System.DivideByZeroException>che eccezione, è possibile utilizzare i membri che consentono di gestirla.</xref:System.DivideByZeroException> Ad esempio, la <xref:System.Exception.Message%2A>proprietà contiene il testo del messaggio dell'eccezione.</xref:System.Exception.Message%2A> Per ulteriori informazioni, vedere [Try... Catch... Istruzione finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ <span data-ttu-id="5c488-134">Quando viene rilevata una <xref:System.DivideByZeroException> eccezione, è possibile utilizzare i relativi membri che consentono di gestirlo.</span><span class="sxs-lookup"><span data-stu-id="5c488-134">When you catch a <xref:System.DivideByZeroException> exception, you can use its members to help you handle it.</span></span> <span data-ttu-id="5c488-135">Ad esempio, il <xref:System.Exception.Message%2A> proprietà contiene il testo del messaggio dell'eccezione.</span><span class="sxs-lookup"><span data-stu-id="5c488-135">For example, the <xref:System.Exception.Message%2A> property holds the message text for the exception.</span></span> <span data-ttu-id="5c488-136">Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span><span class="sxs-lookup"><span data-stu-id="5c488-136">For more information, see [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-## <a name="bit-shift-operations"></a>Operazioni di spostamento di bit  
- Un'operazione di spostamento bit esegue uno spostamento aritmetico in uno schema di bit. Il modello di contenuto dell'operando di sinistra, mentre l'operando a destra specifica il numero di posizioni per spostare lo schema. È possibile spostare lo schema a destra con il [>> operatore](../../../../visual-basic/language-reference/operators/right-shift-operator.md) o a sinistra con la [ <> </> ](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
+## <a name="bit-shift-operations"></a><span data-ttu-id="5c488-137">Operazioni di spostamento di bit</span><span class="sxs-lookup"><span data-stu-id="5c488-137">Bit-Shift Operations</span></span>  
+ <span data-ttu-id="5c488-138">Un'operazione di spostamento di bit esegue uno scorrimento aritmetico in uno schema di bit.</span><span class="sxs-lookup"><span data-stu-id="5c488-138">A bit-shift operation performs an arithmetic shift on a bit pattern.</span></span> <span data-ttu-id="5c488-139">Il modello di contenuto dell'operando di sinistra, mentre l'operando a destra specifica il numero di posizioni per spostare lo schema.</span><span class="sxs-lookup"><span data-stu-id="5c488-139">The pattern is contained in the operand on the left, while the operand on the right specifies the number of positions to shift the pattern.</span></span> <span data-ttu-id="5c488-140">È possibile spostare il modello a destra con la [>> operatore](../../../../visual-basic/language-reference/operators/right-shift-operator.md) o a sinistra con la [<< operatore](../../../../visual-basic/language-reference/operators/left-shift-operator.md).</span><span class="sxs-lookup"><span data-stu-id="5c488-140">You can shift the pattern to the right with the [>> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md) or to the left with the [<< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md).</span></span>  
   
- Il tipo di dati dell'operando dello schema deve essere `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`. Il tipo di dati dell'operando quantità MAIUSC deve essere `Integer` o deve ampliarsi a `Integer`.  
+ <span data-ttu-id="5c488-141">Il tipo di dati dell'operando dello schema deve essere `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`.</span><span class="sxs-lookup"><span data-stu-id="5c488-141">The data type of the pattern operand must be `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`.</span></span> <span data-ttu-id="5c488-142">Deve essere il tipo di dati dell'operando quantità shift `Integer` o deve ampliarsi a `Integer`.</span><span class="sxs-lookup"><span data-stu-id="5c488-142">The data type of the shift amount operand must be `Integer` or must widen to `Integer`.</span></span>  
   
- Aritmetici non sono circolare, ovvero i bit spostati oltre un'estremità del risultato non vengono reinstallati a altra estremità. Le posizioni dei bit liberate da uno spostamento sono impostate come segue:  
+ <span data-ttu-id="5c488-143">Aritmetici non sono circolare, ovvero i bit spostati oltre un'estremità del risultato non sono reintrodotto a altra estremità.</span><span class="sxs-lookup"><span data-stu-id="5c488-143">Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end.</span></span> <span data-ttu-id="5c488-144">Le posizioni dei bit liberate da uno spostamento impostate come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="5c488-144">The bit positions vacated by a shift are set as follows:</span></span>  
   
--   0 per uno spostamento aritmetico a sinistra  
+-   <span data-ttu-id="5c488-145">0 per uno scorrimento aritmetico a sinistra</span><span class="sxs-lookup"><span data-stu-id="5c488-145">0 for an arithmetic left shift</span></span>  
   
--   0 per uno spostamento aritmetico a destra di un numero positivo  
+-   <span data-ttu-id="5c488-146">0 per un aritmetico a destra di un numero positivo</span><span class="sxs-lookup"><span data-stu-id="5c488-146">0 for an arithmetic right shift of a positive number</span></span>  
   
--   0 per uno spostamento aritmetico a destra di un tipo di dati senza segno (`Byte`, `UShort`, `UInteger`, `ULong`)  
+-   <span data-ttu-id="5c488-147">0 per un aritmetico a destra di un tipo di dati senza segno (`Byte`, `UShort`, `UInteger`, `ULong`)</span><span class="sxs-lookup"><span data-stu-id="5c488-147">0 for an arithmetic right shift of an unsigned data type (`Byte`, `UShort`, `UInteger`, `ULong`)</span></span>  
   
--   1 per uno spostamento aritmetico a destra di un numero negativo (`SByte`, `Short`, `Integer`, o `Long`)  
+-   <span data-ttu-id="5c488-148">1 per un aritmetico a destra di un numero negativo (`SByte`, `Short`, `Integer`, o `Long`)</span><span class="sxs-lookup"><span data-stu-id="5c488-148">1 for an arithmetic right shift of a negative number (`SByte`, `Short`, `Integer`, or `Long`)</span></span>  
   
- Nell'esempio seguente sposta un `Integer` valore sia a sinistra e destra.  
+ <span data-ttu-id="5c488-149">Nell'esempio seguente sposta un `Integer` valore a sinistra e a destra.</span><span class="sxs-lookup"><span data-stu-id="5c488-149">The following example shifts an `Integer` value both left and right.</span></span>  
   
- [!code-vb[&#64; VbVbalrOperators](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
   
- Aritmetici non generano mai eccezioni di overflow.  
+ <span data-ttu-id="5c488-150">Aritmetici non generano mai eccezioni di overflow.</span><span class="sxs-lookup"><span data-stu-id="5c488-150">Arithmetic shifts never generate overflow exceptions.</span></span>  
   
-## <a name="bitwise-operations"></a>Operazioni bit per bit  
- Oltre a essere operatori logici, `Not`, `Or`, `And`, e `Xor` inoltre eseguire operazioni aritmetiche bit per bit se utilizzati con valori numerici. Per ulteriori informazioni, vedere "Operazioni bit per bit" in [operatori logici e bit per bit in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
+## <a name="bitwise-operations"></a><span data-ttu-id="5c488-151">Operazioni bit per bit</span><span class="sxs-lookup"><span data-stu-id="5c488-151">Bitwise Operations</span></span>  
+ <span data-ttu-id="5c488-152">Oltre a essere operatori logici, `Not`, `Or`, `And`, e `Xor` inoltre eseguire operazioni aritmetiche bit per bit se utilizzati con valori numerici.</span><span class="sxs-lookup"><span data-stu-id="5c488-152">In addition to being logical operators, `Not`, `Or`, `And`, and `Xor` also perform bitwise arithmetic when used on numeric values.</span></span> <span data-ttu-id="5c488-153">Per ulteriori informazioni, vedere "Operazioni bit per bit" in [operatori logici e bit per bit in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).</span><span class="sxs-lookup"><span data-stu-id="5c488-153">For more information, see "Bitwise Operations" in [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).</span></span>  
   
-## <a name="type-safety"></a>Indipendenza dai tipi  
- Gli operandi in genere devono essere dello stesso tipo. Ad esempio, se si esegue un'addizione con un `Integer` variabile, è necessario aggiungerlo a un altro `Integer` variabile ed è necessario assegnare il risultato a una variabile di tipo `Integer` anche.  
+## <a name="type-safety"></a><span data-ttu-id="5c488-154">Indipendenza dai tipi</span><span class="sxs-lookup"><span data-stu-id="5c488-154">Type Safety</span></span>  
+ <span data-ttu-id="5c488-155">Gli operandi in genere devono essere dello stesso tipo.</span><span class="sxs-lookup"><span data-stu-id="5c488-155">Operands should normally be of the same type.</span></span> <span data-ttu-id="5c488-156">Ad esempio, se si esegue un'addizione con un `Integer` variabile, è necessario aggiungerlo a un altro `Integer` variabile ed è necessario assegnare il risultato a una variabile di tipo `Integer` anche.</span><span class="sxs-lookup"><span data-stu-id="5c488-156">For example, if you are doing addition with an `Integer` variable, you should add it to another `Integer` variable, and you should assign the result to a variable of type `Integer` as well.</span></span>  
   
- Un modo per garantire una buona indipendente dai tipi scrittura di codice consiste nell'utilizzare il [istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Se si imposta `Option Strict On`, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] esegue automaticamente *indipendente dai tipi* conversioni. Ad esempio, se si tenta di aggiungere un `Integer` variabile a un `Double` variabile e assegnare il valore di un `Double` variabile, l'operazione viene eseguita normalmente, perché un `Integer` valore può essere convertito in `Double` senza perdita di dati. Le conversioni di tipo unsafe, d'altra parte, causano un errore del compilatore con `Option Strict On`. Ad esempio, se si tenta di aggiungere un `Integer` variabile a un `Double` variabile e assegnare il valore di un `Integer` variabile, un errore del compilatore generato, perché un `Double` variabile non può essere convertita in modo implicito nel tipo `Integer`.  
+ <span data-ttu-id="5c488-157">Un modo per garantire una buona indipendente dai tipi scrittura di codice consiste nell'utilizzare il [istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="5c488-157">One way to ensure good type-safe coding practice is to use the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span> <span data-ttu-id="5c488-158">Se si imposta `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] esegue automaticamente *indipendente dai tipi* conversioni.</span><span class="sxs-lookup"><span data-stu-id="5c488-158">If you set `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically performs *type-safe* conversions.</span></span> <span data-ttu-id="5c488-159">Ad esempio, se si tenta di aggiungere un `Integer` variabile a un `Double` variabile e assegnare il valore a un `Double` variabile, l'operazione viene eseguita in genere, perché un `Integer` valore può essere convertito in `Double` senza perdita di dati.</span><span class="sxs-lookup"><span data-stu-id="5c488-159">For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to a `Double` variable, the operation proceeds normally, because an `Integer` value can be converted to `Double` without loss of data.</span></span> <span data-ttu-id="5c488-160">Conversioni di tipo-unsafe, d'altra parte, provocare un errore del compilatore con `Option Strict On`.</span><span class="sxs-lookup"><span data-stu-id="5c488-160">Type-unsafe conversions, on the other hand, cause a compiler error with `Option Strict On`.</span></span> <span data-ttu-id="5c488-161">Ad esempio, se si tenta di aggiungere un `Integer` variabile a un `Double` variabile e assegnare il valore a un `Integer` variabile, un errore del compilatore risultati, perché un `Double` variabile non può essere convertita in modo implicito nel tipo `Integer`.</span><span class="sxs-lookup"><span data-stu-id="5c488-161">For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to an `Integer` variable, a compiler error results, because a `Double` variable cannot be implicitly converted to type `Integer`.</span></span>  
   
- Se si imposta `Option Strict Off`, tuttavia, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] consente le conversioni di narrowing implicite abbiano luogo, sebbene possano determinare una perdita imprevista di dati o di precisione. Per questo motivo, è consigliabile utilizzare `Option Strict On` durante la scrittura di codice di produzione. Per ulteriori informazioni, vedere [conversioni di ampliamento e restrizione](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ <span data-ttu-id="5c488-162">Se si imposta `Option Strict Off`, tuttavia, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] consente conversioni implicite verso un abbiano luogo, anche se possono comportare la perdita di dati o di precisione imprevista.</span><span class="sxs-lookup"><span data-stu-id="5c488-162">If you set `Option Strict Off`, however, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] allows implicit narrowing conversions to take place, although they can result in the unexpected loss of data or precision.</span></span> <span data-ttu-id="5c488-163">Per questo motivo, è consigliabile utilizzare `Option Strict On` durante la scrittura di codice di produzione.</span><span class="sxs-lookup"><span data-stu-id="5c488-163">For this reason, we recommend that you use `Option Strict On` when writing production code.</span></span> <span data-ttu-id="5c488-164">Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="5c488-164">For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Aritmetici (operatori)](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operatori di scorrimento bit](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)   
- [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Operatori di concatenazione in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)   
- [Operatori logici e bit per bit in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)   
- [Combinazione efficace di operatori](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a><span data-ttu-id="5c488-165">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5c488-165">See Also</span></span>  
+ [<span data-ttu-id="5c488-166">Operatori aritmetici</span><span class="sxs-lookup"><span data-stu-id="5c488-166">Arithmetic Operators</span></span>](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="5c488-167">Operatori di spostamento bit</span><span class="sxs-lookup"><span data-stu-id="5c488-167">Bit Shift Operators</span></span>](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [<span data-ttu-id="5c488-168">Operatori di confronto in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5c488-168">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [<span data-ttu-id="5c488-169">Operatori di concatenazione in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5c488-169">Concatenation Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
+ [<span data-ttu-id="5c488-170">Operatori logici e bit per bit in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5c488-170">Logical and Bitwise Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
+ [<span data-ttu-id="5c488-171">Combinazione efficace di operatori</span><span class="sxs-lookup"><span data-stu-id="5c488-171">Efficient Combination of Operators</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

@@ -1,180 +1,162 @@
 ---
-title: Scrittura di query in Visual Basic | Documenti di Microsoft
+title: Scrittura di query in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs:
-- VB
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ [Visual Basic], walkthroughs
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e870d5d0640c68fa57b07986f2bf8268fd5246c9
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 00103fe95912ba44a764cef30b337603301c8479
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-writing-queries-in-visual-basic"></a>Procedura dettagliata: Scrittura delle query in Visual Basic
-Questa procedura dettagliata viene illustrato come è possibile utilizzare funzionalità del linguaggio Visual Basic per scrivere [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] espressioni di query. La procedura dettagliata viene illustrato come creare query su un elenco di oggetti Student, come eseguire le query e come modificarli. Le query incorporano diverse funzionalità tra cui tipi anonimi, inferenza del tipo locale e gli inizializzatori di oggetto.  
+# <a name="walkthrough-writing-queries-in-visual-basic"></a><span data-ttu-id="7d0ea-102">Procedura dettagliata: Scrittura delle query in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7d0ea-102">Walkthrough: Writing Queries in Visual Basic</span></span>
+<span data-ttu-id="7d0ea-103">Questa procedura dettagliata illustra come è possibile utilizzare le funzionalità del linguaggio Visual Basic per scrivere [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] espressioni di query.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-103">This walkthrough demonstrates how you can use Visual Basic language features to write [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query expressions.</span></span> <span data-ttu-id="7d0ea-104">La procedura dettagliata illustra come creare query in un elenco di oggetti Student, come eseguire le query e come modificarli.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-104">The walkthrough demonstrates how to create queries on a list of Student objects, how to run the queries, and how to modify them.</span></span> <span data-ttu-id="7d0ea-105">Le query incorporano diverse funzionalità tra i tipi anonimi, inferenza dei tipi locali e gli inizializzatori di oggetto.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-105">The queries incorporate several features including object initializers, local type inference, and anonymous types.</span></span>  
   
- Dopo aver completato questa procedura dettagliata, sarà possibile passare agli esempi e documentazione per la specifica [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] provider si è interessati. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]i provider includono [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)], [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)], e [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+ <span data-ttu-id="7d0ea-106">Dopo aver completato questa procedura dettagliata, sarà possibile passare agli esempi e documentazione per la specifica [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider si è interessati.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-106">After completing this walkthrough, you will be ready to move on to the samples and documentation for the specific [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider you are interested in.</span></span> [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="7d0ea-107">provider includono [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7d0ea-107"> providers include [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
-## <a name="create-a-project"></a>Creare un progetto  
+## <a name="create-a-project"></a><span data-ttu-id="7d0ea-108">Creare un progetto</span><span class="sxs-lookup"><span data-stu-id="7d0ea-108">Create a Project</span></span>  
   
-#### <a name="to-create-a-console-application-project"></a>Per creare un progetto applicazione console  
+#### <a name="to-create-a-console-application-project"></a><span data-ttu-id="7d0ea-109">Per creare un progetto applicazione console</span><span class="sxs-lookup"><span data-stu-id="7d0ea-109">To create a console application project</span></span>  
   
-1.  Avviare Visual Studio.  
+1.  <span data-ttu-id="7d0ea-110">Avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-110">Start Visual Studio.</span></span>  
   
-2.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
+2.  <span data-ttu-id="7d0ea-111">Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-111">On the **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-3.  Nel **modelli installati** elenco, fare clic su **Visual Basic**.  
+3.  <span data-ttu-id="7d0ea-112">Nel **modelli installati** elenco, fare clic su **Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-112">In the **Installed Templates** list, click **Visual Basic**.</span></span>  
   
-4.  Nell'elenco dei tipi di progetto, fare clic su **applicazione Console**. Nel **nome** casella, digitare un nome per il progetto e quindi fare clic su **OK**.  
+4.  <span data-ttu-id="7d0ea-113">Nell'elenco dei tipi di progetto, fare clic su **applicazione Console**.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-113">In the list of project types, click **Console Application**.</span></span> <span data-ttu-id="7d0ea-114">Nel **nome** casella, digitare un nome per il progetto e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-114">In the **Name** box, type a name for the project, and then click **OK**.</span></span>  
   
-     Viene creato un progetto. Per impostazione predefinita, contiene un riferimento a System.Core.dll. Inoltre, il **spazi dei nomi importati** elenco il [pagina riferimenti, Progettazione progetti (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic) include il <xref:System.Linq?displayProperty=fullName>dello spazio dei nomi.</xref:System.Linq?displayProperty=fullName>  
+     <span data-ttu-id="7d0ea-115">Viene creato un progetto.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-115">A project is created.</span></span> <span data-ttu-id="7d0ea-116">Per impostazione predefinita, contiene un riferimento a System.Core.dll.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-116">By default, it contains a reference to System.Core.dll.</span></span> <span data-ttu-id="7d0ea-117">Inoltre, il **spazi dei nomi importati** elenco il [pagina riferimenti, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) include il <xref:System.Linq?displayProperty=nameWithType> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-117">Also, the **Imported namespaces** list on the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) includes the <xref:System.Linq?displayProperty=nameWithType> namespace.</span></span>  
   
-5.  Nel [pagina Compila, Progettazione progetti (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic), assicurarsi che **Option infer** è impostato su **su**.  
+5.  <span data-ttu-id="7d0ea-118">Nel [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), assicurarsi che **Option infer** è impostato su **su**.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-118">On the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), ensure that **Option infer** is set to **On**.</span></span>  
   
-## <a name="add-an-in-memory-data-source"></a>Aggiungere un'origine dati In memoria  
- L'origine dati per le query in questa procedura dettagliata è un elenco di `Student` oggetti. Ogni `Student` oggetto contiene un nome, cognome, un anno di classe e un grado accademico del corpo studenti.  
+## <a name="add-an-in-memory-data-source"></a><span data-ttu-id="7d0ea-119">Aggiungere un'origine dati In memoria</span><span class="sxs-lookup"><span data-stu-id="7d0ea-119">Add an In-Memory Data Source</span></span>  
+ <span data-ttu-id="7d0ea-120">L'origine dati per le query in questa procedura dettagliata è un elenco di `Student` oggetti.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-120">The data source for the queries in this walkthrough is a list of `Student` objects.</span></span> <span data-ttu-id="7d0ea-121">Ogni `Student` oggetto contiene un nome, cognome, un anno di classe e un grado accademico del corpo studenti.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-121">Each `Student` object contains a first name, a last name, a class year, and an academic rank in the student body.</span></span>  
   
-#### <a name="to-add-the-data-source"></a>Per aggiungere l'origine dati  
+#### <a name="to-add-the-data-source"></a><span data-ttu-id="7d0ea-122">Per aggiungere l'origine dati</span><span class="sxs-lookup"><span data-stu-id="7d0ea-122">To add the data source</span></span>  
   
--   Definire un `Student` classe e creare un elenco di istanze della classe.  
+-   <span data-ttu-id="7d0ea-123">Definire un `Student` classe e creare un elenco di istanze della classe.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-123">Define a `Student` class, and create a list of instances of the class.</span></span>  
   
     > [!IMPORTANT]
-    >  Il codice necessario per definire il `Student` classe e creare l'elenco utilizzato nella procedura dettagliata esempi viene fornito [procedura: creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). È possibile copiarlo e incollarlo nel progetto. Il nuovo codice sostituisce il codice visualizzato al momento della creazione del progetto.  
+    >  <span data-ttu-id="7d0ea-124">Il codice necessario per definire il `Student` classe e creare l'elenco utilizzato nella procedura dettagliata esempi viene fornito [procedura: creare un elenco di elementi di](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).</span><span class="sxs-lookup"><span data-stu-id="7d0ea-124">The code needed to define the `Student` class and create the list used in the walkthrough examples is provided in [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).</span></span> <span data-ttu-id="7d0ea-125">È possibile copiarlo e incollarlo nel progetto.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-125">You can copy it from there and paste it into your project.</span></span> <span data-ttu-id="7d0ea-126">Il nuovo codice sostituisce il codice visualizzato al momento della creazione del progetto.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-126">The new code replaces the code that appeared when you created the project.</span></span>  
   
-#### <a name="to-add-a-new-student-to-the-students-list"></a>Per aggiungere un nuovo studente all'elenco di studenti  
+#### <a name="to-add-a-new-student-to-the-students-list"></a><span data-ttu-id="7d0ea-127">Per aggiungere un nuovo studente all'elenco di studenti</span><span class="sxs-lookup"><span data-stu-id="7d0ea-127">To add a new student to the students list</span></span>  
   
--   Seguire il modello nel `getStudents` metodo per aggiungere un'altra istanza della `Student` classe all'elenco. Aggiunta dello studente verrà introdotti gli inizializzatori di oggetto. Per ulteriori informazioni, vedere [gli inizializzatori di oggetto: tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   <span data-ttu-id="7d0ea-128">Seguire il modello nel `getStudents` metodo per aggiungere un'altra istanza del `Student` classe all'elenco.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-128">Follow the pattern in the `getStudents` method to add another instance of the `Student` class to the list.</span></span> <span data-ttu-id="7d0ea-129">L'aggiunta dello studente verrà introdotti gli inizializzatori di oggetto.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-129">Adding the student will introduce you to object initializers.</span></span> <span data-ttu-id="7d0ea-130">Per ulteriori informazioni, vedere [gli inizializzatori di oggetto: tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="7d0ea-130">For more information, see [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).</span></span>  
   
-## <a name="create-a-query"></a>Creare una query  
- Quando viene eseguito, la query è stato aggiunto in questa sezione produce un elenco di studenti il cui grado accademico li inserisce i primi dieci. Poiché la query seleziona l'intero `Student` oggetto ogni volta, il tipo del risultato della query è `IEnumerable(Of Student)`. Tuttavia, il tipo di query in genere non è specificato nelle definizioni di query. Al contrario, il compilatore utilizza l'inferenza del tipo locale per determinare il tipo. Per ulteriori informazioni, vedere [l'inferenza del tipo locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Variabile di intervallo della query, `currentStudent`, funge da riferimento a ogni `Student` istanza dell'origine, `students`, che fornisce accesso alle proprietà di ciascun oggetto `students`.  
+## <a name="create-a-query"></a><span data-ttu-id="7d0ea-131">Creare una query</span><span class="sxs-lookup"><span data-stu-id="7d0ea-131">Create a Query</span></span>  
+ <span data-ttu-id="7d0ea-132">Quando viene eseguita, la query è stato aggiunto in questa sezione produce un elenco degli studenti il cui grado accademico li inserisce i primi dieci.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-132">When executed, the query added in this section produces a list of the students whose academic rank puts them in the top ten.</span></span> <span data-ttu-id="7d0ea-133">Poiché la query seleziona l'intero `Student` ogni volta, il tipo del risultato della query di oggetto è `IEnumerable(Of Student)`.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-133">Because the query selects the complete `Student` object each time, the type of the query result is `IEnumerable(Of Student)`.</span></span> <span data-ttu-id="7d0ea-134">Tuttavia, il tipo di query in genere non è specificato nelle definizioni di query.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-134">However, the type of the query typically is not specified in query definitions.</span></span> <span data-ttu-id="7d0ea-135">Al contrario, il compilatore utilizza l'inferenza del tipo locale per determinare il tipo.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-135">Instead, the compiler uses local type inference to determine the type.</span></span> <span data-ttu-id="7d0ea-136">Per ulteriori informazioni, vedere [locale l'inferenza del tipo](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span><span class="sxs-lookup"><span data-stu-id="7d0ea-136">For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span></span> <span data-ttu-id="7d0ea-137">Variabile di intervallo della query, `currentStudent`, funge da riferimento a ogni `Student` istanza dell'origine, `students`, fornendo l'accesso alle proprietà di ciascun oggetto `students`.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-137">The query's range variable, `currentStudent`, serves as a reference to each `Student` instance in the source, `students`, providing access to the properties of each object in `students`.</span></span>  
   
-#### <a name="to-create-a-simple-query"></a>Per creare una query semplice  
+#### <a name="to-create-a-simple-query"></a><span data-ttu-id="7d0ea-138">Per creare una query semplice</span><span class="sxs-lookup"><span data-stu-id="7d0ea-138">To create a simple query</span></span>  
   
-1.  Trovare la posizione di `Main` metodo del progetto che è contrassegnato come indicato di seguito:  
+1.  <span data-ttu-id="7d0ea-139">Trovare la posizione di `Main` metodo del progetto che è contrassegnato come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="7d0ea-139">Find the place in the `Main` method of the project that is marked as follows:</span></span>  
   
-     [!code-vb[VbLINQWalkthrough n.&1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
-     Copiare il codice seguente e incollarlo in.  
+     <span data-ttu-id="7d0ea-140">Copiare il codice seguente e incollarlo in.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-140">Copy the following code and paste it in.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough n.&2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
-2.  Posizionare il puntatore del mouse su `studentQuery` nel codice per verificare che il tipo assegnato dal compilatore è `IEnumerable(Of Student)`.  
+2.  <span data-ttu-id="7d0ea-141">Posizionare il puntatore del mouse su `studentQuery` nel codice per verificare che il tipo assegnato dal compilatore è `IEnumerable(Of Student)`.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-141">Rest the mouse pointer over `studentQuery` in your code to verify that the compiler-assigned type is `IEnumerable(Of Student)`.</span></span>  
   
-## <a name="run-the-query"></a>Eseguire la Query  
- La variabile `studentQuery` contiene la definizione della query, non i risultati dell'esecuzione della query. Un meccanismo tipico per l'esecuzione di una query è un `For Each` ciclo. Ogni elemento della sequenza restituita è accessibile tramite la variabile di iterazione del ciclo. Per ulteriori informazioni sull'esecuzione delle query, vedere [scrittura la prima Query LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+## <a name="run-the-query"></a><span data-ttu-id="7d0ea-142">Eseguire la Query</span><span class="sxs-lookup"><span data-stu-id="7d0ea-142">Run the Query</span></span>  
+ <span data-ttu-id="7d0ea-143">La variabile `studentQuery` contiene la definizione della query, non i risultati dell'esecuzione della query.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-143">The variable `studentQuery` contains the definition of the query, not the results of running the query.</span></span> <span data-ttu-id="7d0ea-144">Un meccanismo tipico per l'esecuzione di una query è un `For Each` ciclo.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-144">A typical mechanism for running a query is a `For Each` loop.</span></span> <span data-ttu-id="7d0ea-145">Ogni elemento nella sequenza restituita è accessibile tramite la variabile di iterazione del ciclo.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-145">Each element in the returned sequence is accessed through the loop iteration variable.</span></span> <span data-ttu-id="7d0ea-146">Per ulteriori informazioni sull'esecuzione di query, vedere [scrittura nella prima Query LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).</span><span class="sxs-lookup"><span data-stu-id="7d0ea-146">For more information about query execution, see [Writing Your First LINQ Query](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).</span></span>  
   
-#### <a name="to-run-the-query"></a>Per eseguire la query  
+#### <a name="to-run-the-query"></a><span data-ttu-id="7d0ea-147">Per eseguire la query</span><span class="sxs-lookup"><span data-stu-id="7d0ea-147">To run the query</span></span>  
   
-1.  Aggiungere il codice seguente `For Each` ciclo sotto la query nel progetto.  
+1.  <span data-ttu-id="7d0ea-148">Aggiungere il seguente `For Each` ciclo sotto la query nel progetto.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-148">Add the following `For Each` loop below the query in your project.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough n.&3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
-2.  Posizionare il puntatore del mouse sulla variabile di controllo del ciclo `studentRecord` per visualizzarne il tipo di dati. Il tipo di `studentRecord` viene dedotto come `Student`, in quanto `studentQuery` restituisce una raccolta di `Student` istanze.  
+2.  <span data-ttu-id="7d0ea-149">Posizionare il puntatore del mouse sulla variabile di controllo del ciclo `studentRecord` per visualizzarne il tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-149">Rest the mouse pointer over the loop control variable `studentRecord` to see its data type.</span></span> <span data-ttu-id="7d0ea-150">Il tipo di `studentRecord` viene considerato `Student`perché `studentQuery` restituisce una raccolta di `Student` istanze.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-150">The type of `studentRecord` is inferred to be `Student`, because `studentQuery` returns a collection of `Student` instances.</span></span>  
   
-3.  Compilare ed eseguire l'applicazione premendo CTRL + F5. Si noti che i risultati nella finestra della console.  
+3.  <span data-ttu-id="7d0ea-151">Compilare ed eseguire l'applicazione premendo CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-151">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="7d0ea-152">Si noti che i risultati nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-152">Note the results in the console window.</span></span>  
   
-## <a name="modify-the-query"></a>Modificare la Query  
- È più semplice analizzare i risultati della query se sono nell'ordine specificato. È possibile ordinare la sequenza restituita in base a qualsiasi campo disponibile.  
+## <a name="modify-the-query"></a><span data-ttu-id="7d0ea-153">Modificare la query</span><span class="sxs-lookup"><span data-stu-id="7d0ea-153">Modify the Query</span></span>  
+ <span data-ttu-id="7d0ea-154">È facile analizzare i risultati di query se sono nell'ordine specificato.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-154">It is easier to scan query results if they are in a specified order.</span></span> <span data-ttu-id="7d0ea-155">È possibile ordinare la sequenza restituita in base a qualsiasi campo disponibile.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-155">You can sort the returned sequence based on any available field.</span></span>  
   
-#### <a name="to-order-the-results"></a>Per ordinare i risultati  
+#### <a name="to-order-the-results"></a><span data-ttu-id="7d0ea-156">Per ordinare i risultati</span><span class="sxs-lookup"><span data-stu-id="7d0ea-156">To order the results</span></span>  
   
-1.  Aggiungere il codice seguente `Order By` clausola tra il `Where` istruzione e `Select` istruzione della query. Il `Order By` clausola ordina i risultati in ordine alfabetico da A Z, in base all'ultimo nome di ogni studente.  
+1.  <span data-ttu-id="7d0ea-157">Aggiungere il seguente `Order By` clausola tra il `Where` istruzione e `Select` istruzione della query.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-157">Add the following `Order By` clause between the `Where` statement and the `Select` statement of the query.</span></span> <span data-ttu-id="7d0ea-158">Il `Order By` clausola ordina i risultati in ordine alfabetico da A Z, in base all'ultimo nome di ogni studente.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-158">The `Order By` clause will order the results alphabetically from A to Z, according to the last name of each student.</span></span>  
   
     ```  
     Order By currentStudent.Last Ascending   
     ```  
   
-2.  Per ordinare in base al cognome e poi al nome, aggiungere campi alla query:  
+2.  <span data-ttu-id="7d0ea-159">Per ordinare in base al cognome e poi al nome, entrambi i campi aggiunti alla query:</span><span class="sxs-lookup"><span data-stu-id="7d0ea-159">To order by last name and then first name, add both fields to the query:</span></span>  
   
     ```  
     Order By currentStudent.Last Ascending, currentStudent.First Ascending   
     ```  
   
-     È inoltre possibile specificare `Descending` all'ordine da Z ad A.  
+     <span data-ttu-id="7d0ea-160">È inoltre possibile specificare `Descending` all'ordine da Z ad A.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-160">You can also specify `Descending` to order from Z to A.</span></span>  
   
-3.  Compilare ed eseguire l'applicazione premendo CTRL + F5. Si noti che i risultati nella finestra della console.  
+3.  <span data-ttu-id="7d0ea-161">Compilare ed eseguire l'applicazione premendo CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-161">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="7d0ea-162">Si noti che i risultati nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-162">Note the results in the console window.</span></span>  
   
-#### <a name="to-introduce-a-local-identifier"></a>Per introdurre un identificatore locale  
+#### <a name="to-introduce-a-local-identifier"></a><span data-ttu-id="7d0ea-163">Per introdurre un identificatore locale</span><span class="sxs-lookup"><span data-stu-id="7d0ea-163">To introduce a local identifier</span></span>  
   
-1.  Aggiungere il codice in questa sezione per introdurre un identificatore locale nell'espressione di query. L'identificatore locale conterrà un risultato intermedio. Nell'esempio seguente, `name` è un identificatore che contiene una concatenazione dello studente nome e cognome. Un identificatore locale può essere utilizzato per comodità, o può migliorare le prestazioni archiviando i risultati di un'espressione che altrimenti verrebbe calcolato più volte.  
+1.  <span data-ttu-id="7d0ea-164">Aggiungere il codice in questa sezione per introdurre un identificatore locale nell'espressione di query.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-164">Add the code in this section to introduce a local identifier in the query expression.</span></span> <span data-ttu-id="7d0ea-165">L'identificatore locale conterrà un risultato intermedio.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-165">The local identifier will hold an intermediate result.</span></span> <span data-ttu-id="7d0ea-166">Nell'esempio seguente, `name` è un identificatore che contiene una concatenazione dello studente nome e cognome.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-166">In the following example, `name` is an identifier that holds a concatenation of the student's first and last names.</span></span> <span data-ttu-id="7d0ea-167">Un identificatore locale può essere utilizzato per praticità, o può migliorare le prestazioni archiviando i risultati di un'espressione che in caso contrario viene calcolato più volte.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-167">A local identifier can be used for convenience, or it can enhance performance by storing the results of an expression that would otherwise be calculated multiple times.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough n.&4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
-2.  Compilare ed eseguire l'applicazione premendo CTRL + F5. Si noti che i risultati nella finestra della console.  
+2.  <span data-ttu-id="7d0ea-168">Compilare ed eseguire l'applicazione premendo CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-168">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="7d0ea-169">Si noti che i risultati nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-169">Note the results in the console window.</span></span>  
   
-#### <a name="to-project-one-field-in-the-select-clause"></a>Per proiettare un campo nella clausola Select  
+#### <a name="to-project-one-field-in-the-select-clause"></a><span data-ttu-id="7d0ea-170">Per proiettare un campo nella clausola Select</span><span class="sxs-lookup"><span data-stu-id="7d0ea-170">To project one field in the Select clause</span></span>  
   
-1.  Aggiungere la query e `For Each` ciclo in questa sezione per creare una query che produce una sequenza i cui elementi differiscono dagli elementi nell'origine. Nell'esempio seguente, l'origine è una raccolta di `Student` gli oggetti, ma solo un membro di ogni oggetto viene restituito: il nome degli studenti il cui cognome sia Garcia. Poiché `currentStudent.First` è una stringa, il tipo di dati della sequenza restituita da `studentQuery3` è `IEnumerable(Of String)`, una sequenza di stringhe. Come illustrato negli esempi precedenti, l'assegnazione dei dati di tipo per `studentQuery3` viene lasciato il compilatore può determinare tramite inferenza del tipo locale.  
+1.  <span data-ttu-id="7d0ea-171">Aggiungere la query e `For Each` ciclo in questa sezione per creare una query che produce una sequenza i cui elementi sono diversi dagli elementi nell'origine.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-171">Add the query and `For Each` loop from this section to create a query that produces a sequence whose elements differ from the elements in the source.</span></span> <span data-ttu-id="7d0ea-172">Nell'esempio seguente, l'origine è una raccolta di `Student` gli oggetti, ma solo un membro di ogni oggetto viene restituito: il nome degli studenti il cui cognome è Garcia.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-172">In the following example, the source is a collection of `Student` objects, but only one member of each object is returned: the first name of students whose last name is Garcia.</span></span> <span data-ttu-id="7d0ea-173">Poiché `currentStudent.First` è una stringa, il tipo di dati della sequenza restituita da `studentQuery3` è `IEnumerable(Of String)`, una sequenza di stringhe.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-173">Because `currentStudent.First` is a string, the data type of the sequence returned by `studentQuery3` is `IEnumerable(Of String)`, a sequence of strings.</span></span> <span data-ttu-id="7d0ea-174">Come illustrato negli esempi precedenti, l'assegnazione dei dati di tipo per `studentQuery3` viene lasciato il compilatore può determinare tramite inferenza del tipo locale.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-174">As in earlier examples, the assignment of a data type for `studentQuery3` is left for the compiler to determine by using local type inference.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough n.&5;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
-2.  Posizionare il puntatore del mouse su `studentQuery3` nel codice per verificare che il tipo assegnato sia `IEnumerable(Of String)`.  
+2.  <span data-ttu-id="7d0ea-175">Posizionare il puntatore del mouse su `studentQuery3` nel codice per verificare che il tipo assegnato sia `IEnumerable(Of String)`.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-175">Rest the mouse pointer over `studentQuery3` in your code to verify that the assigned type is `IEnumerable(Of String)`.</span></span>  
   
-3.  Compilare ed eseguire l'applicazione premendo CTRL + F5. Si noti che i risultati nella finestra della console.  
+3.  <span data-ttu-id="7d0ea-176">Compilare ed eseguire l'applicazione premendo CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-176">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="7d0ea-177">Si noti che i risultati nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-177">Note the results in the console window.</span></span>  
   
-#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Per creare un tipo anonimo nella clausola Select  
+#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a><span data-ttu-id="7d0ea-178">Per creare un tipo anonimo nella clausola Select</span><span class="sxs-lookup"><span data-stu-id="7d0ea-178">To create an anonymous type in the Select clause</span></span>  
   
-1.  Aggiungere il codice in questa sezione per visualizzare i tipi anonimi come vengono utilizzate nelle query. Utilizzarli nelle query, quando si desidera restituire diversi campi dall'origine dati anziché record completi (`currentStudent` record negli esempi precedenti) o singoli campi (`First` nella sezione precedente). Anziché definire un nuovo tipo denominato che contiene i campi che si desidera includere nel risultato, specificare i campi di `Select` clausola e il compilatore crea un tipo anonimo con tali campi come proprietà. Per ulteriori informazioni, vedere [tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+1.  <span data-ttu-id="7d0ea-179">Aggiungere il codice in questa sezione per visualizzare i tipi anonimi come vengono utilizzate nelle query.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-179">Add the code from this section to see how anonymous types are used in queries.</span></span> <span data-ttu-id="7d0ea-180">Usarli nelle query, quando si desidera restituire diversi campi dall'origine dati anziché record completi (`currentStudent` record negli esempi precedenti) o singoli campi (`First` nella sezione precedente).</span><span class="sxs-lookup"><span data-stu-id="7d0ea-180">You use them in queries when you want to return several fields from the data source rather than complete records (`currentStudent` records in previous examples) or single fields (`First` in the preceding section).</span></span> <span data-ttu-id="7d0ea-181">Anziché definire un nuovo tipo denominato che contiene i campi che si desidera includere nel risultato, specificare i campi di `Select` clausola e il compilatore crea un tipo anonimo con tali campi come proprietà.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-181">Instead of defining a new named type that contains the fields you want to include in the result, you specify the fields in the `Select` clause and the compiler creates an anonymous type with those fields as its properties.</span></span> <span data-ttu-id="7d0ea-182">Per altre informazioni, vedere [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="7d0ea-182">For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>  
   
-     Nell'esempio seguente crea una query che restituisce il nome e il cui grado accademico sia compreso tra 1 e 10, in ordine di rango accademico dirigenti. In questo esempio, il tipo di `studentQuery4` deve essere dedotto, poiché il `Select` clausola restituisce un'istanza di un tipo anonimo, e un tipo anonimo non hanno nome utilizzabile.  
+     <span data-ttu-id="7d0ea-183">Nell'esempio seguente crea una query che restituisce il nome e il cui rango Education è compreso tra 1 e 10, in ordine di rango Education dirigenti.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-183">The following example creates a query that returns the name and rank of seniors whose academic rank is between 1 and 10, in order of academic rank.</span></span> <span data-ttu-id="7d0ea-184">In questo esempio, il tipo di `studentQuery4` deve essere dedotto perché il `Select` clausola restituisce un'istanza di un tipo anonimo, e un tipo anonimo ha un nome utilizzabile.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-184">In this example, the type of `studentQuery4` must be inferred because the `Select` clause returns an instance of an anonymous type, and an anonymous type has no usable name.</span></span>  
   
-     [!code-vb[6 VbLINQWalkthrough](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
-2.  Compilare ed eseguire l'applicazione premendo CTRL + F5. Si noti che i risultati nella finestra della console.  
+2.  <span data-ttu-id="7d0ea-185">Compilare ed eseguire l'applicazione premendo CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-185">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="7d0ea-186">Si noti che i risultati nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-186">Note the results in the console window.</span></span>  
   
-## <a name="additional-examples"></a>Esempi aggiuntivi  
- Dopo aver appreso le nozioni di base, di seguito è un elenco di altri esempi per illustrare la flessibilità e potenza di [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] query. Ogni esempio è preceduto da una breve descrizione del risultato. Posizionare il puntatore del mouse sulla variabile di risultato di query per ogni query visualizzare il tipo derivato. Utilizzare un `For Each` ciclo per ottenere i risultati.  
+## <a name="additional-examples"></a><span data-ttu-id="7d0ea-187">Esempi aggiuntivi</span><span class="sxs-lookup"><span data-stu-id="7d0ea-187">Additional Examples</span></span>  
+ <span data-ttu-id="7d0ea-188">Dopo avere appreso le nozioni di base, di seguito è un elenco di altri esempi per illustrare la flessibilità e potenza di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-188">Now that you understand the basics, the following is a list of additional examples to illustrate the flexibility and power of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries.</span></span> <span data-ttu-id="7d0ea-189">Ogni esempio è preceduto da una breve descrizione delle operazioni eseguite.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-189">Each example is preceded by a brief description of what it does.</span></span> <span data-ttu-id="7d0ea-190">Posizionare il puntatore del mouse sulla variabile di risultato di query per ogni query visualizzare il tipo derivato.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-190">Rest the mouse pointer over the query result variable for each query to see the inferred type.</span></span> <span data-ttu-id="7d0ea-191">Utilizzare un `For Each` ciclo per produrre i risultati.</span><span class="sxs-lookup"><span data-stu-id="7d0ea-191">Use a `For Each` loop to produce the results.</span></span>  
   
- [!code-vb[VbLINQWalkthrough&#7;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
-## <a name="additional-information"></a>Informazioni aggiuntive  
- Dopo aver acquisito familiarità con i concetti di base delle query, si è pronti per leggere la documentazione ed esempi per il tipo specifico di [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] provider che si è interessati:  
+## <a name="additional-information"></a><span data-ttu-id="7d0ea-192">Informazioni aggiuntive</span><span class="sxs-lookup"><span data-stu-id="7d0ea-192">Additional Information</span></span>  
+ <span data-ttu-id="7d0ea-193">Dopo aver acquisito familiarità con i concetti di base delle query, si è pronti per leggere la documentazione ed esempi per il tipo specifico di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider che si è interessati:</span><span class="sxs-lookup"><span data-stu-id="7d0ea-193">After you are familiar with the basic concepts of working with queries, you are ready to read the documentation and samples for the specific type of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider that you are interested in:</span></span>  
   
- [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
+ [<span data-ttu-id="7d0ea-194">LINQ to Objects</span><span class="sxs-lookup"><span data-stu-id="7d0ea-194">LINQ to Objects</span></span>](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [<span data-ttu-id="7d0ea-195">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="7d0ea-195">LINQ to SQL</span></span>](https://msdn.microsoft.com/library/bb386976)  
   
- [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
+ [<span data-ttu-id="7d0ea-196">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="7d0ea-196">LINQ to XML</span></span>](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
   
- [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
+ [<span data-ttu-id="7d0ea-197">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="7d0ea-197">LINQ to DataSet</span></span>](../../../../framework/data/adonet/linq-to-dataset.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)   
- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Inferenza del tipo locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Query](../../../../visual-basic/language-reference/queries/queries.md)
+## <a name="see-also"></a><span data-ttu-id="7d0ea-198">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7d0ea-198">See Also</span></span>  
+ [<span data-ttu-id="7d0ea-199">LINQ (Language-Integrated Query) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d0ea-199">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [<span data-ttu-id="7d0ea-200">Introduzione a LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7d0ea-200">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="7d0ea-201">Inferenza del tipo di variabile locale</span><span class="sxs-lookup"><span data-stu-id="7d0ea-201">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="7d0ea-202">Inizializzatori di oggetto: tipi denominati e tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="7d0ea-202">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [<span data-ttu-id="7d0ea-203">Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="7d0ea-203">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [<span data-ttu-id="7d0ea-204">Introduzione a LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7d0ea-204">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="7d0ea-205">LINQ</span><span class="sxs-lookup"><span data-stu-id="7d0ea-205">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="7d0ea-206">Query</span><span class="sxs-lookup"><span data-stu-id="7d0ea-206">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)

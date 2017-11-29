@@ -1,56 +1,57 @@
 ---
-title: "Drag-and-Drop Functionality in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "drag and drop, Windows Forms"
-  - "Windows Forms, drag and drop"
+title: "Funzionalità di trascinamento della selezione in Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drag and drop [Windows Forms], Windows Forms
+- Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f86ff2fbb3944ce2ed381cb29e2b3c6df39b62bf
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Drag-and-Drop Functionality in Windows Forms
-Windows Forms include un set di metodi, eventi e classi che implementano il comportamento di trascinamento della selezione.  Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione in Windows Forms.  Vedere anche [Supporto delle operazioni di trascinamento e degli Appunti](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+# <a name="drag-and-drop-functionality-in-windows-forms"></a><span data-ttu-id="2be01-102">Funzionalità di trascinamento della selezione in Windows Form</span><span class="sxs-lookup"><span data-stu-id="2be01-102">Drag-and-Drop Functionality in Windows Forms</span></span>
+<span data-ttu-id="2be01-103">Windows Forms include un set di metodi, eventi e classi che implementano il comportamento di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="2be01-103">Windows Forms includes a set of methods, events, and classes that implement drag-and-drop behavior.</span></span> <span data-ttu-id="2be01-104">Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione in Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="2be01-104">This topic provides an overview of the drag-and-drop support in Windows Forms.</span></span>  <span data-ttu-id="2be01-105">Vedere anche [operazioni di trascinamento e rilascio e supporto per gli Appunti](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="2be01-105">Also see [Drag-and-Drop Operations and Clipboard Support](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).</span></span>  
   
-## Esecuzione di operazioni di trascinamento della selezione  
- Per eseguire un'operazione di trascinamento della selezione, usare il metodo <xref:System.Windows.Forms.Control.DoDragDrop%2A> della classe <xref:System.Windows.Forms.Control>.  Per altre informazioni su come viene eseguita un'operazione di trascinamento e rilascio, vedere <xref:System.Windows.Forms.Control.DoDragDrop%2A>.  Per ottenere il rettangolo sul quale deve essere trascinato il puntatore del mouse prima che inizi un'operazione di trascinamento della selezione, usare la proprietà <xref:System.Windows.Forms.SystemInformation.DragSize%2A> della classe <xref:System.Windows.Forms.SystemInformation>.  
+## <a name="performing-drag-and-drop-operations"></a><span data-ttu-id="2be01-106">Esecuzione di operazioni di trascinamento e rilascio</span><span class="sxs-lookup"><span data-stu-id="2be01-106">Performing Drag-and-Drop Operations</span></span>  
+ <span data-ttu-id="2be01-107">Per eseguire un'operazione di trascinamento della selezione, usare il metodo <xref:System.Windows.Forms.Control.DoDragDrop%2A> della classe <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="2be01-107">To perform a drag-and-drop operation, use the <xref:System.Windows.Forms.Control.DoDragDrop%2A> method of the <xref:System.Windows.Forms.Control> class.</span></span> <span data-ttu-id="2be01-108">Per altre informazioni su come viene eseguita un'operazione di trascinamento e rilascio, vedere <xref:System.Windows.Forms.Control.DoDragDrop%2A>.</span><span class="sxs-lookup"><span data-stu-id="2be01-108">For more information about how a drag-and-drop operation is performed, see <xref:System.Windows.Forms.Control.DoDragDrop%2A>.</span></span> <span data-ttu-id="2be01-109">Per ottenere il rettangolo sul quale deve essere trascinato il puntatore del mouse prima che inizi un'operazione di trascinamento della selezione, usare la proprietà <xref:System.Windows.Forms.SystemInformation.DragSize%2A> della classe <xref:System.Windows.Forms.SystemInformation>.</span><span class="sxs-lookup"><span data-stu-id="2be01-109">To get the rectangle that the mouse pointer must be dragged over before a drag-and-drop operation begins, use the <xref:System.Windows.Forms.SystemInformation.DragSize%2A> property of the <xref:System.Windows.Forms.SystemInformation> class.</span></span>  
   
-## Eventi relativi a operazioni di trascinamento della selezione  
- Esistono due categorie di eventi in un'operazione di trascinamento della selezione: eventi che si verificano sulla destinazione corrente ed eventi che si verificano sull'origine dell'operazione di trascinamento della selezione.  
+## <a name="events-related-to-drag-and-drop-operations"></a><span data-ttu-id="2be01-110">Eventi relativi a operazioni di trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="2be01-110">Events Related to Drag-and-Drop Operations</span></span>  
+ <span data-ttu-id="2be01-111">Esistono due categorie di eventi in un'operazione di trascinamento della selezione: eventi che si verificano sulla destinazione corrente ed eventi che si verificano sull'origine dell'operazione di trascinamento della selezione.</span><span class="sxs-lookup"><span data-stu-id="2be01-111">There are two categories of events in a drag and drop operation: events that occur on the current target of the drag-and-drop operation, and events that occur on the source of the drag and drop operation.</span></span>  
   
-### Eventi sulla destinazione corrente  
- La tabella seguente illustra gli eventi che si verificano sulla destinazione corrente di un'operazione di trascinamento della selezione.  
+### <a name="events-on-the-current-target"></a><span data-ttu-id="2be01-112">Eventi sulla destinazione corrente</span><span class="sxs-lookup"><span data-stu-id="2be01-112">Events on the Current Target</span></span>  
+ <span data-ttu-id="2be01-113">La tabella seguente illustra gli eventi che si verificano sulla destinazione corrente di un'operazione di trascinamento della selezione.</span><span class="sxs-lookup"><span data-stu-id="2be01-113">The following table shows the events that occur on the current target of a drag-and-drop operation.</span></span>  
   
-|Evento del mouse|Descrizione|  
-|----------------------|-----------------|  
-|<xref:System.Windows.Forms.Control.DragEnter>|Questo evento si verifica quando un oggetto viene trascinato all'interno dei limiti del controllo.  Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.DragEventArgs>.|  
-|<xref:System.Windows.Forms.Control.DragOver>|Questo evento si verifica quando un oggetto viene trascinato mentre il puntatore del mouse è all'interno dei limiti del controllo.  Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.DragEventArgs>.|  
-|<xref:System.Windows.Forms.Control.DragDrop>|Questo evento si verifica quando viene completata un'operazione di trascinamento della selezione.  Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.DragEventArgs>.|  
-|<xref:System.Windows.Forms.Control.DragLeave>|Questo evento si verifica quando un oggetto viene trascinato all'esterno dei limiti del controllo.  Il gestore di questo evento riceve un argomento di tipo <xref:System.EventArgs>.|  
+|<span data-ttu-id="2be01-114">Evento del mouse</span><span class="sxs-lookup"><span data-stu-id="2be01-114">Mouse Event</span></span>|<span data-ttu-id="2be01-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2be01-115">Description</span></span>|  
+|-----------------|-----------------|  
+|<xref:System.Windows.Forms.Control.DragEnter>|<span data-ttu-id="2be01-116">Questo evento si verifica quando un oggetto viene trascinato all'interno dei limiti del controllo.</span><span class="sxs-lookup"><span data-stu-id="2be01-116">This event occurs when an object is dragged into the control's bounds.</span></span> <span data-ttu-id="2be01-117">Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.DragEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="2be01-117">The handler for this event receives an argument of type <xref:System.Windows.Forms.DragEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.DragOver>|<span data-ttu-id="2be01-118">Questo evento si verifica quando un oggetto viene trascinato mentre il puntatore del mouse è all'interno dei limiti del controllo.</span><span class="sxs-lookup"><span data-stu-id="2be01-118">This event occurs when an object is dragged while the mouse pointer is within the control's bounds.</span></span> <span data-ttu-id="2be01-119">Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.DragEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="2be01-119">The handler for this event receives an argument of type <xref:System.Windows.Forms.DragEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.DragDrop>|<span data-ttu-id="2be01-120">Questo evento si verifica quando viene completata un'operazione di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="2be01-120">This event occurs when a drag-and-drop operation is completed.</span></span> <span data-ttu-id="2be01-121">Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.DragEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="2be01-121">The handler for this event receives an argument of type <xref:System.Windows.Forms.DragEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.DragLeave>|<span data-ttu-id="2be01-122">Questo evento si verifica quando un oggetto viene trascinato all'esterno dei limiti del controllo.</span><span class="sxs-lookup"><span data-stu-id="2be01-122">This event occurs when an object is dragged out of the control's bounds.</span></span> <span data-ttu-id="2be01-123">Il gestore di questo evento riceve un argomento di tipo <xref:System.EventArgs>.</span><span class="sxs-lookup"><span data-stu-id="2be01-123">The handler for this event receives an argument of type <xref:System.EventArgs>.</span></span>|  
   
- La classe <xref:System.Windows.Forms.DragEventArgs> fornisce la posizione del puntatore del mouse, lo stato corrente dei pulsanti del mouse e dei tasti di modifica della tastiera, i dati trascinati e i valori dell'enumerazione <xref:System.Windows.Forms.DragDropEffects> che specificano le operazioni consentite dall'origine dell'evento di trascinamento e l'effetto del rilascio sulla destinazione per l'operazione.  
+ <span data-ttu-id="2be01-124">La classe <xref:System.Windows.Forms.DragEventArgs> fornisce la posizione del puntatore del mouse, lo stato corrente dei pulsanti del mouse e dei tasti di modifica della tastiera, i dati trascinati e i valori dell'enumerazione <xref:System.Windows.Forms.DragDropEffects> che specificano le operazioni consentite dall'origine dell'evento di trascinamento e l'effetto del rilascio sulla destinazione per l'operazione.</span><span class="sxs-lookup"><span data-stu-id="2be01-124">The <xref:System.Windows.Forms.DragEventArgs> class provides the location of the mouse pointer, the current state of the mouse buttons and modifier keys of the keyboard, the data being dragged, and <xref:System.Windows.Forms.DragDropEffects> values that specify the operations allowed by the source of the drag event and the target drop effect for the operation.</span></span>  
   
-### Eventi sull'origine  
- La tabella seguente illustra gli eventi che si verificano sull'origine di un'operazione di trascinamento della selezione.  
+### <a name="events-on-the-source"></a><span data-ttu-id="2be01-125">Eventi sull'origine</span><span class="sxs-lookup"><span data-stu-id="2be01-125">Events on the Source</span></span>  
+ <span data-ttu-id="2be01-126">La tabella seguente illustra gli eventi che si verificano sull'origine di un'operazione di trascinamento della selezione.</span><span class="sxs-lookup"><span data-stu-id="2be01-126">The following table shows the events that occur on the source of the drag-and-drop operation.</span></span>  
   
-|Evento del mouse|Descrizione|  
-|----------------------|-----------------|  
-|<xref:System.Windows.Forms.Control.GiveFeedback>|Questo evento si verifica durante un'operazione di trascinamento.  Permette di fornire all'utente un'indicazione visiva dell'operazione di trascinamento della selezione in corso, ad esempio cambiando l'aspetto del puntatore del mouse.  Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
-|<xref:System.Windows.Forms.Control.QueryContinueDrag>|Questo evento si verifica durante un'operazione di trascinamento della selezione e consente all'origine del trascinamento di determinare se l'operazione deve essere annullata.  Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  
+|<span data-ttu-id="2be01-127">Evento del mouse</span><span class="sxs-lookup"><span data-stu-id="2be01-127">Mouse Event</span></span>|<span data-ttu-id="2be01-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2be01-128">Description</span></span>|  
+|-----------------|-----------------|  
+|<xref:System.Windows.Forms.Control.GiveFeedback>|<span data-ttu-id="2be01-129">Questo evento si verifica durante un'operazione di trascinamento.</span><span class="sxs-lookup"><span data-stu-id="2be01-129">This event occurs during a drag operation.</span></span> <span data-ttu-id="2be01-130">Permette di fornire all'utente un'indicazione visiva dell'operazione di trascinamento della selezione in corso, ad esempio cambiando l'aspetto del puntatore del mouse.</span><span class="sxs-lookup"><span data-stu-id="2be01-130">It provides an opportunity to give a visual cue to the user that the drag-and-drop operation is occurring, such as changing the mouse pointer.</span></span> <span data-ttu-id="2be01-131">Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.GiveFeedbackEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="2be01-131">The handler for this event receives an argument of type <xref:System.Windows.Forms.GiveFeedbackEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.QueryContinueDrag>|<span data-ttu-id="2be01-132">Questo evento si verifica durante un'operazione di trascinamento e rilascio e consente all'origine del trascinamento di determinare se l'operazione deve essere annullata.</span><span class="sxs-lookup"><span data-stu-id="2be01-132">This event is raised during a drag-and-drop operation and enables the drag source to determine whether the drag-and-drop operation should be canceled.</span></span> <span data-ttu-id="2be01-133">Il gestore di questo evento riceve un argomento di tipo <xref:System.Windows.Forms.QueryContinueDragEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="2be01-133">The handler for this event receives an argument of type <xref:System.Windows.Forms.QueryContinueDragEventArgs>.</span></span>|  
   
- La classe <xref:System.Windows.Forms.QueryContinueDragEventArgs> fornisce lo stato corrente dei pulsanti del mouse e dei tasti di modifica della tastiera, un valore che specifica se è stato premuto il tasto ESC e un valore dell'enumerazione <xref:System.Windows.Forms.DragAction> che è possibile impostare per specificare se l'operazione di trascinamento della selezione deve continuare.  
+ <span data-ttu-id="2be01-134">La classe <xref:System.Windows.Forms.QueryContinueDragEventArgs> fornisce lo stato corrente dei pulsanti del mouse e dei tasti di modifica della tastiera, un valore che specifica se è stato premuto il tasto ESC e un valore dell'enumerazione <xref:System.Windows.Forms.DragAction> che è possibile impostare per specificare se l'operazione di trascinamento della selezione deve continuare.</span><span class="sxs-lookup"><span data-stu-id="2be01-134">The <xref:System.Windows.Forms.QueryContinueDragEventArgs> class provides the current state of the mouse buttons and modifier keys of the keyboard, a value specifying whether the ESC key was pressed, and a <xref:System.Windows.Forms.DragAction> value that can be set to specify whether the drag-and-drop operation should continue.</span></span>  
   
-## Vedere anche  
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="2be01-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2be01-135">See Also</span></span>  
+ [<span data-ttu-id="2be01-136">Input del mouse in un'applicazione Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2be01-136">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

@@ -1,39 +1,42 @@
 ---
-title: "Personalizzazione della fase di progettazione del flusso di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estensione [WF], progettazione flussi di lavoro"
+title: Personalizzazione della fase di progettazione del flusso di lavoro
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9916e30812e167e108a1ca9b958aa6d15fbd1f41
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Personalizzazione della fase di progettazione del flusso di lavoro
-In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] sono stati semplificati gli scenari per progettare le attività personalizzate e riallocare [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].Pertanto lo sviluppo e la distribuzione sono più semplici e più flessibili.La modifica infrastrutturale principale prevede che il nuovo modello di programmazione dell'ActivityDesigner sia compilato in base a [!INCLUDE[avalon1](../../../includes/avalon1-md.md)].In questo modo è possibile definire in modo dichiarativo gli ActivityDesigner e riallocare [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in altre applicazioni in modo semplice.In caso di riallocazione, è possibile sviluppare un editor di espressioni personalizzato per supportare IntelliSense o un dominio di espressioni semplificato.L'integrazione con [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è diventata più semplice grazie all'utilizzo dei servizi flusso di lavoro.Gli ActivityDesigner personalizzati e la struttura ad albero degli elementi del modello possono essere utilizzati per migliorare le esperienze in fase di progettazione nelle progettazioni flussi di lavoro riallocate.  
+# <a name="customizing-the-workflow-design-experience"></a><span data-ttu-id="73acb-102">Personalizzazione della fase di progettazione del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="73acb-102">Customizing the Workflow Design Experience</span></span>
+<span data-ttu-id="73acb-103">In [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] sono stati semplificati gli scenari per progettare le attività personalizzate e riallocare [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="73acb-103">The scenarios for designing custom activities and for rehosting the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] have been greatly simplified in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span></span> <span data-ttu-id="73acb-104">Pertanto lo sviluppo e la distribuzione sono più semplici e più flessibili.</span><span class="sxs-lookup"><span data-stu-id="73acb-104">Development and deployment are now both easier and more flexible.</span></span> <span data-ttu-id="73acb-105">La modifica infrastrutturale principale prevede che il nuovo modello di programmazione dell'ActivityDesigner sia compilato in base a [!INCLUDE[avalon1](../../../includes/avalon1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="73acb-105">The key infrastructural change is that the new activity designer programming model is built upon [!INCLUDE[avalon1](../../../includes/avalon1-md.md)].</span></span> <span data-ttu-id="73acb-106">In questo modo è possibile definire in modo dichiarativo gli ActivityDesigner e riallocare [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in altre applicazioni in modo semplice.</span><span class="sxs-lookup"><span data-stu-id="73acb-106">This gives you the ability to define activity designers declaratively and to rehost the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in other applications with comparative easy.</span></span> <span data-ttu-id="73acb-107">In caso di riallocazione, è possibile sviluppare un editor di espressioni personalizzato per supportare IntelliSense o un dominio di espressioni semplificato.</span><span class="sxs-lookup"><span data-stu-id="73acb-107">When rehosting, a custom expression editor can be developed to support IntelliSense or a simplified expression domain.</span></span> <span data-ttu-id="73acb-108">L'integrazione con [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è diventata più semplice grazie all'utilizzo dei servizi flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="73acb-108">The integration with [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] has become more seamless with use of workflow services.</span></span> <span data-ttu-id="73acb-109">Gli ActivityDesigner personalizzati e l'albero degli elementi del modello possono essere usati per migliorare le esperienze in fase di progettazione nelle progettazioni flussi di lavoro riallocate.</span><span class="sxs-lookup"><span data-stu-id="73acb-109">Custom activity designers and the Model Item Tree can be used to enhance design time experiences in rehosted workflow designers.</span></span>  
   
-## In questa sezione  
- [Utilizzo di finestre di progettazione e modelli di attività personalizzati](../../../docs/framework/windows-workflow-foundation//using-custom-activity-designers-and-templates.md)  
- Viene descritto come creare nuovi ActivityDesigner e modelli personalizzati.  
+## <a name="in-this-section"></a><span data-ttu-id="73acb-110">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="73acb-110">In This Section</span></span>  
+ [<span data-ttu-id="73acb-111">Uso di finestre di progettazione e modelli di attività personalizzati</span><span class="sxs-lookup"><span data-stu-id="73acb-111">Using Custom Activity Designers and Templates</span></span>](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)  
+ <span data-ttu-id="73acb-112">Viene descritto come creare nuovi ActivityDesigner e modelli personalizzati.</span><span class="sxs-lookup"><span data-stu-id="73acb-112">Describes how to create new custom activity designers and templates.</span></span>  
   
- [Riallocazione dell'utilità di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)  
- Viene descritto come riallocare [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] all'esterno di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] e come visualizzare gli errori di convalida.  
+ [<span data-ttu-id="73acb-113">Riallocazione di Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="73acb-113">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ <span data-ttu-id="73acb-114">Viene descritto come riallocare [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] all'esterno di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] e come visualizzare gli errori di convalida.</span><span class="sxs-lookup"><span data-stu-id="73acb-114">Describes how to re-host the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] outside of [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] and how to display validation errors.</span></span>  
   
- [Utilizzo di un editor espressioni personalizzato](../../../docs/framework/windows-workflow-foundation//using-a-custom-expression-editor.md)  
- Viene descritto come implementare un editor di espressioni personalizzato da utilizzare con le progettazioni flussi di lavoro riallocate all'esterno di [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+ [<span data-ttu-id="73acb-115">Uso di un editor di espressioni personalizzato</span><span class="sxs-lookup"><span data-stu-id="73acb-115">Using a Custom Expression Editor</span></span>](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)  
+ <span data-ttu-id="73acb-116">Viene descritto come implementare un editor di espressioni personalizzato da usare con le progettazioni flussi di lavoro riallocate all'esterno di [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="73acb-116">Describes how to implement a custom expression editor to use with workflow designers rehosted outside of [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="73acb-117">Riferimento</span><span class="sxs-lookup"><span data-stu-id="73acb-117">Reference</span></span>  
  <xref:System.Activities.Presentation.ActivityDesigner>  
   
-## Vedere anche  
- [Estensione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//extend.md)   
- [Finestra di progettazione](../../../docs/framework/windows-workflow-foundation/samples/designer.md)   
- [ActivityDesigner personalizzati](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)   
- [Riallocazione della finestra di progettazione](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)
+## <a name="see-also"></a><span data-ttu-id="73acb-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="73acb-118">See Also</span></span>  
+ [<span data-ttu-id="73acb-119">Estensione di Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="73acb-119">Extending Windows Workflow Foundation</span></span>](../../../docs/framework/windows-workflow-foundation/extend.md)  
+ [<span data-ttu-id="73acb-120">Finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="73acb-120">Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
+ [<span data-ttu-id="73acb-121">Gli ActivityDesigner personalizzati</span><span class="sxs-lookup"><span data-stu-id="73acb-121">Custom Activity Designers</span></span>](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
+ [<span data-ttu-id="73acb-122">Riallocazione della finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="73acb-122">Designer ReHosting</span></span>](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)

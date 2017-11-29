@@ -1,77 +1,60 @@
 ---
-title: 'Procedura: utilizzare una classe che definisce gli operatori (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: utilizzare una classe che definisce gli operatori (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- operator procedures, calling
-- procedures, operator
-- procedures, calling
+- operator procedures [Visual Basic], calling
+- procedures [Visual Basic], operator
+- procedures [Visual Basic], calling
 - examples [Visual Basic], CType
-- syntax, Operator procedures
+- syntax [Visual Basic], Operator procedures
 - operators [Visual Basic], overloading
-- return values, Operator procedures
+- return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b1db7c0b2a6fd8160baa48892b5f2214df24674e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Procedura: utilizzare una classe che definisce gli operatori (Visual Basic)
-Se si utilizza una classe o struttura che definisce i propri operatori, è possibile accedere a tali operatori da [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a><span data-ttu-id="60316-102">Procedura: utilizzare una classe che definisce gli operatori (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60316-102">How to: Use a Class that Defines Operators (Visual Basic)</span></span>
+<span data-ttu-id="60316-103">Se si utilizza una classe o struttura che definisce i propri operatori, è possibile accedere a tali operatori da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="60316-103">If you are using a class or structure that defines its own operators, you can access those operators from [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- Definisce un operatore su una classe o struttura viene anche chiamato *overload* l'operatore.  
+ <span data-ttu-id="60316-104">La definizione di un operatore in una classe o struttura viene definita anche *overload* l'operatore.</span><span class="sxs-lookup"><span data-stu-id="60316-104">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente consente di accedere alla struttura SQL <xref:System.Data.SqlTypes.SqlString>, che definisce gli operatori di conversione ([funzione CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) in entrambe le direzioni tra una stringa SQL e un [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] stringa.</xref:System.Data.SqlTypes.SqlString> Utilizzare `CType(` *espressione stringa SQL*, `String)` per convertire una stringa SQL a un [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] stringa, e `CType(` *espressione stringa Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` da convertire in altra direzione.</xref:System.Data.SqlTypes.SqlString>  
+## <a name="example"></a><span data-ttu-id="60316-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="60316-105">Example</span></span>  
+ <span data-ttu-id="60316-106">Nell'esempio seguente consente di accedere alla struttura SQL <xref:System.Data.SqlTypes.SqlString>, che definisce gli operatori di conversione ([CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md)) in entrambe le direzioni tra una stringa SQL e un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stringa.</span><span class="sxs-lookup"><span data-stu-id="60316-106">The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] string.</span></span> <span data-ttu-id="60316-107">Utilizzare `CType(` *espressione stringa SQL*, `String)` per convertire una stringa SQL per un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stringa, e `CType(` *espressione stringa Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` da convertire in altra direzione.</span><span class="sxs-lookup"><span data-stu-id="60316-107">Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.</span></span>  
   
- [!code-vb[&#30; VbVbcnProcedures](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures&#31;](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
- Il <xref:System.Data.SqlTypes.SqlString>struttura definisce un operatore di conversione ([CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md)) da `String` a <xref:System.Data.SqlTypes.SqlString>e un altro da <xref:System.Data.SqlTypes.SqlString>a `String`.</xref:System.Data.SqlTypes.SqlString> </xref:System.Data.SqlTypes.SqlString> </xref:System.Data.SqlTypes.SqlString> L'istruzione che assegna `title` a `jobTitle` utilizza il primo operatore e <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>chiamata di funzione utilizza il secondo.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
+ <span data-ttu-id="60316-108">Il <xref:System.Data.SqlTypes.SqlString> struttura definisce un operatore di conversione ([CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md)) da `String` a <xref:System.Data.SqlTypes.SqlString> e un altro da <xref:System.Data.SqlTypes.SqlString> a `String`.</span><span class="sxs-lookup"><span data-stu-id="60316-108">The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`.</span></span> <span data-ttu-id="60316-109">L'istruzione che assegna `title` a `jobTitle` utilizza il primo operatore e <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> chiamata di funzione utilizza il secondo.</span><span class="sxs-lookup"><span data-stu-id="60316-109">The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Assicurarsi che la classe o struttura in uso definisce l'operatore da utilizzare. Non presupporre che la classe o struttura è definita tutti gli operatori disponibili per eseguire l'overload. Per un elenco di operatori disponibili, vedere [Operator (istruzione)](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+## <a name="compiling-the-code"></a><span data-ttu-id="60316-110">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="60316-110">Compiling the Code</span></span>  
+ <span data-ttu-id="60316-111">Assicurarsi che la classe o struttura in uso definisce l'operatore a cui che si desidera utilizzare.</span><span class="sxs-lookup"><span data-stu-id="60316-111">Be sure the class or structure you are using defines the operator you want to use.</span></span> <span data-ttu-id="60316-112">Non presupporre che la classe o struttura sia definito tutti gli operatori disponibili per l'overload.</span><span class="sxs-lookup"><span data-stu-id="60316-112">Do not assume that the class or structure has defined every operator available for overloading.</span></span> <span data-ttu-id="60316-113">Per un elenco di operatori disponibili, vedere [Operator (istruzione)](../../../../visual-basic/language-reference/statements/operator-statement.md).</span><span class="sxs-lookup"><span data-stu-id="60316-113">For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
   
- Includere l'appropriata `Imports` istruzione per la stringa SQL all'inizio del file di origine (in questo caso <xref:System.Data.SqlTypes>).</xref:System.Data.SqlTypes>  
+ <span data-ttu-id="60316-114">Includere appropriata `Imports` istruzione per la stringa SQL all'inizio del file di origine (in questo caso <xref:System.Data.SqlTypes>).</span><span class="sxs-lookup"><span data-stu-id="60316-114">Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).</span></span>  
   
- Il progetto deve disporre di riferimenti a System. Data e System. Xml.  
+ <span data-ttu-id="60316-115">Il progetto deve includere riferimenti a System. Data e System. Xml.</span><span class="sxs-lookup"><span data-stu-id="60316-115">Your project must have references to System.Data and System.XML.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Routine di operatore](./operator-procedures.md)   
- [Procedura: definire un operatore](./how-to-define-an-operator.md)   
- [Procedura: definire un operatore di conversione](./how-to-define-a-conversion-operator.md)   
- [Procedura: chiamare una routine di operatore](./how-to-call-an-operator-procedure.md)   
- [Ampliamento](../../../../visual-basic/language-reference/modifiers/widening.md)   
- [Restrizione](../../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Procedura: dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Conversioni implicite ed esplicite](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Conversioni di ampliamento e restrizione](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="60316-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="60316-116">See Also</span></span>  
+ [<span data-ttu-id="60316-117">Routine di operatore</span><span class="sxs-lookup"><span data-stu-id="60316-117">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="60316-118">Procedura: Definire un operatore</span><span class="sxs-lookup"><span data-stu-id="60316-118">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)  
+ [<span data-ttu-id="60316-119">Procedura: Definire un operatore di conversione</span><span class="sxs-lookup"><span data-stu-id="60316-119">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="60316-120">Procedura: Chiamare una routine di operatore</span><span class="sxs-lookup"><span data-stu-id="60316-120">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)  
+ [<span data-ttu-id="60316-121">Widening</span><span class="sxs-lookup"><span data-stu-id="60316-121">Widening</span></span>](../../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="60316-122">Narrowing</span><span class="sxs-lookup"><span data-stu-id="60316-122">Narrowing</span></span>](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="60316-123">Istruzione Structure</span><span class="sxs-lookup"><span data-stu-id="60316-123">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="60316-124">Procedura: Dichiarare una struttura</span><span class="sxs-lookup"><span data-stu-id="60316-124">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="60316-125">Conversioni implicite ed esplicite</span><span class="sxs-lookup"><span data-stu-id="60316-125">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="60316-126">Conversioni di ampliamento e restrizione</span><span class="sxs-lookup"><span data-stu-id="60316-126">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

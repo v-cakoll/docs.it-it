@@ -1,64 +1,72 @@
 ---
-title: "Procedura: consentire agli utenti di risolvere orari ambigui | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ora ambigua [.NET Framework]"
-  - "fusi orari [.NET Framework], ora ambigua"
+title: 'Procedura: consentire agli utenti di risolvere orari ambigui'
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time zones [.NET Framework], ambiguous time
+- ambiguous time [.NET Framework]
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6409e676944f64931b197fda1a6a7b392c268c97
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: consentire agli utenti di risolvere orari ambigui
-Un'ora ambigua è un'ora associata a più ore UTC \(Coordinated Universal Time\).  Si verifica quando l'orario viene portato indietro, ad esempio durante la transizione da ora legale a ora solare di un fuso orario.  Quando si gestisce un'ora ambigua, è possibile effettuare una delle operazioni seguenti:  
-  
--   Se l'ora ambigua è un elemento di dati immesso dall'utente, sarà l'utente a risolvere l'ambiguità.  
-  
--   Fare una supposizione sul modo in cui l'ora viene associata all'ora UTC.  Ad esempio, è possibile presupporre che un'ora ambigua sia sempre espressa nell'ora solare del fuso orario.  
-  
- In questo argomento viene illustrato come consentire a un utente di risolvere un'ora ambigua.  
-  
-### Per consentire a un utente di risolvere un'ora ambigua  
-  
-1.  Ottenere l'input di data e ora dall'utente.  
-  
-2.  Chiamare il metodo <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> per determinare se l'ora è ambigua.  
-  
-3.  Se l'ora è ambigua, chiamare il metodo <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> per recuperare una matrice di oggetti <xref:System.TimeSpan>.  Ogni elemento della matrice contiene un offset UTC a cui è possibile associare l'ora ambigua.  
-  
-4.  Consentire all'utente di selezionare l'offset desiderato.  
-  
-5.  Ottenere la data e ora UTC sottraendo l'offset selezionato dall'utente dall'ora locale.  
-  
-6.  Chiamare il metodo <xref:System.DateTime.SpecifyKind%2A> `static` \(`Shared` in Visual Basic .NET\) per impostare la proprietà <xref:System.DateTime.Kind%2A> del valore di data e ora UTC su <xref:System.DateTimeKind?displayProperty=fullName>.  
-  
-## Esempio  
- Nell'esempio seguente viene richiesto all'utente di immettere una data e ora e, se è ambigua, consente all'utente di selezionare l'ora UTC alla quale è associata l'ora ambigua.  
-  
- [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
- [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]  
-  
- Nel codice di esempio viene utilizzata una matrice di oggetti <xref:System.TimeSpan> per indicare i possibili offset dell'ora ambigua dall'ora UTC.  Questi offset non saranno però significativi per l'utente.  Per chiarificare il significato di offset, nel codice viene anche indicato se un offset rappresenta l'ora solare o l'ora legale del fuso orario locale.  Dal confronto dell'offset con il valore della proprietà <xref:System.TimeZoneInfo.BaseUtcOffset%2A> è possibile stabilire quale sia l'ora solare e quale l'ora legale.  Questa proprietà indica la differenza tra l'ora UTC e l'ora solare del fuso orario.  
-  
- In questo esempio, tutti i riferimenti al fuso orario locale vengono eseguiti tramite la proprietà <xref:System.TimeZoneInfo.Local%2A?displayProperty=fullName>. Il fuso orario locale non viene mai assegnato a una variabile oggetto.  È una procedura consigliata poiché una chiamata al metodo <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=fullName> invalida tutti gli oggetti assegnati al fuso orario locale.  
-  
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
-  
--   Aggiungere un riferimento a System.Core.dll al progetto.  
-  
--   Importare lo spazio dei nomi <xref:System> con l'istruzione `using` \(richiesto nel codice C\#\).  
-  
-## Vedere anche  
- [Date, ora e fusi orari](../../../docs/standard/datetime/index.md)   
- [Procedura: risolvere orari ambigui](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+# <a name="how-to-let-users-resolve-ambiguous-times"></a><span data-ttu-id="f2203-102">Procedura: consentire agli utenti di risolvere orari ambigui</span><span class="sxs-lookup"><span data-stu-id="f2203-102">How to: Let users resolve ambiguous times</span></span>
+
+<span data-ttu-id="f2203-103">Un'ora ambigua è un'ora associata a più ore UTC (Coordinated Universal Time).</span><span class="sxs-lookup"><span data-stu-id="f2203-103">An ambiguous time is a time that maps to more than one Coordinated Universal Time (UTC).</span></span> <span data-ttu-id="f2203-104">Si verifica quando l'orologio viene riportato indietro, ad esempio durante la transizione dall'ora legale all'ora solare di un determinato fuso orario.</span><span class="sxs-lookup"><span data-stu-id="f2203-104">It occurs when the clock time is adjusted back in time, such as during the transition from a time zone's daylight saving time to its standard time.</span></span> <span data-ttu-id="f2203-105">Quando si gestisce un'ora ambigua è possibile eseguire una delle operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="f2203-105">When handling an ambiguous time, you can do one of the following:</span></span>
+
+* <span data-ttu-id="f2203-106">Se l'ora ambigua è un elemento di dati immesso dall'utente, sarà l'utente a risolvere l'ambiguità.</span><span class="sxs-lookup"><span data-stu-id="f2203-106">If the ambiguous time is an item of data entered by the user, you can leave it to the user to resolve the ambiguity.</span></span>
+
+* <span data-ttu-id="f2203-107">Fare una supposizione sulla modalità di associazione dell'ora all'ora UTC.</span><span class="sxs-lookup"><span data-stu-id="f2203-107">Make an assumption about how the time maps to UTC.</span></span> <span data-ttu-id="f2203-108">Si può, ad esempio, presupporre che un'ora ambigua sia sempre espressa nell'ora solare del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="f2203-108">For example, you can assume that an ambiguous time is always expressed in the time zone's standard time.</span></span>
+
+<span data-ttu-id="f2203-109">In questo argomento viene illustrato come consentire a un utente di risolvere un'ora ambigua.</span><span class="sxs-lookup"><span data-stu-id="f2203-109">This topic shows how to let a user resolve an ambiguous time.</span></span>
+
+### <a name="to-let-a-user-resolve-an-ambiguous-time"></a><span data-ttu-id="f2203-110">Consentire a un utente di risolvere orari ambigui</span><span class="sxs-lookup"><span data-stu-id="f2203-110">To let a user resolve an ambiguous time</span></span>
+
+1. <span data-ttu-id="f2203-111">Ottenere l'input di data e ora dall'utente.</span><span class="sxs-lookup"><span data-stu-id="f2203-111">Get the date and time input by the user.</span></span>
+
+2. <span data-ttu-id="f2203-112">Chiamare il <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> metodo per determinare se l'ora è ambigua.</span><span class="sxs-lookup"><span data-stu-id="f2203-112">Call the <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> method to determine whether the time is ambiguous.</span></span>
+
+3. <span data-ttu-id="f2203-113">Se l'ora è ambigua, chiamare il <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> metodo per recuperare una matrice di <xref:System.TimeSpan> oggetti.</span><span class="sxs-lookup"><span data-stu-id="f2203-113">If the time is ambiguous, call the <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> method to retrieve an array of <xref:System.TimeSpan> objects.</span></span> <span data-ttu-id="f2203-114">Ogni elemento della matrice contiene una differenza UTC che può eseguire il mapping a ora ambigua.</span><span class="sxs-lookup"><span data-stu-id="f2203-114">Each element in the array contains a UTC offset that the ambiguous time can map to.</span></span>
+
+4. <span data-ttu-id="f2203-115">Consentire all'utente di selezionare l'offset desiderato.</span><span class="sxs-lookup"><span data-stu-id="f2203-115">Let the user select the desired offset.</span></span>
+
+5. <span data-ttu-id="f2203-116">Ottenere la data e l'ora UTC sottraendo dall'ora locale l'offset selezionato dall'utente.</span><span class="sxs-lookup"><span data-stu-id="f2203-116">Get the UTC date and time by subtracting the offset selected by the user from the local time.</span></span>
+
+6. <span data-ttu-id="f2203-117">Chiamare il `static` (`Shared` in Visual Basic .NET) <xref:System.DateTime.SpecifyKind%2A> per impostare l'ora UTC data e ora del valore <xref:System.DateTime.Kind%2A> proprietà <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f2203-117">Call the `static` (`Shared` in Visual Basic .NET) <xref:System.DateTime.SpecifyKind%2A> method to set the UTC date and time value's <xref:System.DateTime.Kind%2A> property to <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.</span></span>
+
+## <a name="example"></a><span data-ttu-id="f2203-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="f2203-118">Example</span></span>
+
+<span data-ttu-id="f2203-119">Nell'esempio seguente si richiede all'utente di immettere una data e l'ora e, se è ambigua, si consente all'utente di selezionare l'ora UTC alla quale è associata l'ora ambigua.</span><span class="sxs-lookup"><span data-stu-id="f2203-119">The following example prompts the user to enter a date and time and, if it is ambiguous, lets the user select the UTC time that the ambiguous time maps to.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
+[!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
+
+<span data-ttu-id="f2203-120">I componenti di base del codice di esempio utilizza una matrice di <xref:System.TimeSpan> oggetti per indicare i possibili offset dell'ora ambigua rispetto a UTC.</span><span class="sxs-lookup"><span data-stu-id="f2203-120">The core of the example code uses an array of <xref:System.TimeSpan> objects to indicate possible offsets of the ambiguous time from UTC.</span></span> <span data-ttu-id="f2203-121">Tuttavia, questi offset probabilmente non sono significativi per l'utente.</span><span class="sxs-lookup"><span data-stu-id="f2203-121">However, these offsets are unlikely to be meaningful to the user.</span></span> <span data-ttu-id="f2203-122">Per chiarire il significato degli offset, il codice indica anche se un offset rappresenta l'ora solare o l'ora legale del fuso orario locale.</span><span class="sxs-lookup"><span data-stu-id="f2203-122">To clarify the meaning of the offsets, the code also notes whether an offset represents the local time zone's standard time or its daylight saving time.</span></span> <span data-ttu-id="f2203-123">Il codice determina quali standard e che ora è legale confrontando l'offset con il valore della <xref:System.TimeZoneInfo.BaseUtcOffset%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="f2203-123">The code determines which time is standard and which time is daylight by comparing the offset with the value of the <xref:System.TimeZoneInfo.BaseUtcOffset%2A> property.</span></span> <span data-ttu-id="f2203-124">Questa proprietà indica la differenza tra l'ora solare del fuso orario corrente e l'ora UTC.</span><span class="sxs-lookup"><span data-stu-id="f2203-124">This property indicates the difference between the UTC and the time zone's standard time.</span></span>
+
+<span data-ttu-id="f2203-125">In questo esempio, tutti i riferimenti per il fuso orario locale vengono effettuati tramite il <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> proprietà; l'ora locale zona non viene mai assegnata a una variabile oggetto.</span><span class="sxs-lookup"><span data-stu-id="f2203-125">In this example, all references to the local time zone are made through the <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> property; the local time zone is never assigned to an object variable.</span></span> <span data-ttu-id="f2203-126">Si tratta di una procedura consigliata, perché una chiamata al <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metodo invalida tutti gli oggetti assegnati per il fuso orario locale.</span><span class="sxs-lookup"><span data-stu-id="f2203-126">This is a recommended practice because a call to the <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> method invalidates any objects that the local time zone is assigned to.</span></span>
+
+## <a name="compiling-the-code"></a><span data-ttu-id="f2203-127">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="f2203-127">Compiling the code</span></span>
+
+<span data-ttu-id="f2203-128">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="f2203-128">This example requires:</span></span>
+
+* <span data-ttu-id="f2203-129">Un riferimento a System.Core.dll essere aggiunto al progetto.</span><span class="sxs-lookup"><span data-stu-id="f2203-129">That a reference to System.Core.dll be added to the project.</span></span>
+
+* <span data-ttu-id="f2203-130">Che il <xref:System> dello spazio dei nomi importati con il `using` istruzione (richiesto nel codice c#).</span><span class="sxs-lookup"><span data-stu-id="f2203-130">That the <xref:System> namespace be imported with the `using` statement (required in C# code).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="f2203-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f2203-131">See also</span></span>
+
+<span data-ttu-id="f2203-132">[Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+[procedura: risolvere orari ambigui](../../../docs/standard/datetime/resolve-ambiguous-times.md)</span><span class="sxs-lookup"><span data-stu-id="f2203-132">[Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[How to: Resolve ambiguous times](../../../docs/standard/datetime/resolve-ambiguous-times.md)</span></span>

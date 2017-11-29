@@ -1,53 +1,35 @@
 ---
-title: Introduzione alle stringhe in Visual Basic | Documenti di Microsoft
+title: Introduzione alle stringhe in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- strings [Visual Basic], about strings
+helpviewer_keywords: strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 604aa2f91bb2a25ba59dc75d5d73314bc7bf2343
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ce1cbd375af1c1d34eeaada4024da269af4d9e57
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="introduction-to-strings-in-visual-basic"></a>Introduzione alle stringhe in Visual Basic
-In questa sezione vengono descritti i concetti fondamentali relativi all'utilizzo delle stringhe in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+# <a name="introduction-to-strings-in-visual-basic"></a><span data-ttu-id="c8d9d-102">Introduzione alle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c8d9d-102">Introduction to Strings in Visual Basic</span></span>
+<span data-ttu-id="c8d9d-103">Questa sezione descrive i concetti fondamentali relativi all'uso delle stringhe in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c8d9d-103">This section describes the basic concepts behind using strings in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Nozioni fondamentali sulle stringhe](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduce i concetti fondamentali relativi all'utilizzo di stringhe e variabili di stringa.  
+## <a name="in-this-section"></a><span data-ttu-id="c8d9d-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="c8d9d-104">In This Section</span></span>  
+ [<span data-ttu-id="c8d9d-105">Nozioni fondamentali sulle stringhe</span><span class="sxs-lookup"><span data-stu-id="c8d9d-105">String Basics</span></span>](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+ <span data-ttu-id="c8d9d-106">Introduce i concetti fondamentali relativi all'utilizzo di stringhe e le variabili di stringa.</span><span class="sxs-lookup"><span data-stu-id="c8d9d-106">Introduces the basic concepts behind using strings and string variables.</span></span>  
   
- [Tipi di metodi di manipolazione delle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Vengono presentati diversi modi per analizzare e modificare le stringhe.  
+ [<span data-ttu-id="c8d9d-107">Tipi di metodi di manipolazione delle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c8d9d-107">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ <span data-ttu-id="c8d9d-108">Introduce i diversi modi per analizzare e modificare le stringhe.</span><span class="sxs-lookup"><span data-stu-id="c8d9d-108">Introduces several different ways to analyze and manipulate strings.</span></span>  
   
- [Influenza delle impostazioni cultura sulle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Viene descritto come [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] utilizza informazioni per eseguire le conversioni di stringhe e i confronti delle impostazioni cultura.  
+ [<span data-ttu-id="c8d9d-109">Influenza delle impostazioni cultura sulle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c8d9d-109">How Culture Affects Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ <span data-ttu-id="c8d9d-110">Viene descritto come [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Usa informazioni per eseguire conversioni di stringhe e i confronti delle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="c8d9d-110">Discusses how [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uses culture information to perform string conversions and comparisons.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Stringhe](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a><span data-ttu-id="c8d9d-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c8d9d-111">See Also</span></span>  
+ [<span data-ttu-id="c8d9d-112">Stringhe</span><span class="sxs-lookup"><span data-stu-id="c8d9d-112">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)

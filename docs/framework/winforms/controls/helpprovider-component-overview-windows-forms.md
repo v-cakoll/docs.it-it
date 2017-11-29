@@ -1,49 +1,49 @@
 ---
-title: "Cenni preliminari sul componente HelpProvider (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "HelpProvider"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "finestre di dialogo, Guida sensibile al contesto"
-  - "F1 (Guida), aggiunta a Windows Form"
-  - "Guida, aggiunta alle applicazioni Windows"
-  - "HelpProvider (componente) [Windows Form], informazioni sul componente HelpProvider"
-  - "Windows Form, Guida sensibile al contesto"
+title: Cenni preliminari sul componente HelpProvider (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: HelpProvider
+helpviewer_keywords:
+- HelpProvider component [Windows Forms], about HelpProvider component
+- Help [Windows Forms], adding to Windows applications
+- F1 Help [Windows Forms], adding to Windows Forms
+- dialog boxes [Windows Forms], context-sensitive Help
+- Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42a788e44fde80662748e19a7244ce77bb26118f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Cenni preliminari sul componente HelpProvider (Windows Form)
-Il componente Windows Form [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) viene utilizzato per associare un file della Guida HTML Help 1.x all'applicazione Windows personalizzata, vale a dire un file CHM creato con HTML Help Workshop o un file HTM.  Le informazioni che è possibile fornire sono di diversi tipi:  
+# <a name="helpprovider-component-overview-windows-forms"></a><span data-ttu-id="d0585-102">Cenni preliminari sul componente HelpProvider (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="d0585-102">HelpProvider Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="d0585-103">Windows Form [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) componente viene utilizzato per associare un file di Guida HTML Help 1. x (un file. chm creato con HTML Help Workshop o un file con estensione htm) con l'applicazione di Windows.</span><span class="sxs-lookup"><span data-stu-id="d0585-103">The Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows application.</span></span> <span data-ttu-id="d0585-104">È possibile fornire la Guida in diversi modi:</span><span class="sxs-lookup"><span data-stu-id="d0585-104">You can provide help in a variety of ways:</span></span>  
   
--   La Guida sensibile al contesto per i controlli in Windows Form.  
+-   <span data-ttu-id="d0585-105">Fornire la Guida sensibile al contesto per i controlli in Windows Form.</span><span class="sxs-lookup"><span data-stu-id="d0585-105">Provide context-sensitive Help for controls on Windows Forms.</span></span>  
   
--   La Guida sensibile al contesto relativa a una particolare finestra di dialogo o a controlli specifici in una finestra di dialogo.  
+-   <span data-ttu-id="d0585-106">Fornire la Guida sensibile al contesto in una particolare finestra di dialogo o controlli specifici in una finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="d0585-106">Provide context-sensitive Help on a particular dialog box or specific controls on a dialog box.</span></span>  
   
--   Un file della Guida per aree specifiche, come la pagina principale di un sommario, un indice o una funzione di ricerca.  
+-   <span data-ttu-id="d0585-107">Aprire un file della Guida per aree specifiche, ad esempio la pagina principale di un sommario, indice o una funzione di ricerca.</span><span class="sxs-lookup"><span data-stu-id="d0585-107">Open a Help file to specific areas, such as the main page of a Table of Contents, the Index, or a search function.</span></span>  
   
-## Utilizzo del provider della Guida  
- L'aggiunta di un componente <xref:System.Windows.Forms.HelpProvider> al Windows Form consente agli altri controlli del form di esporre le proprietà della Guida del componente <xref:System.Windows.Forms.HelpProvider> consentendo in tal modo di fornire informazioni della Guida per i controlli in Windows Form.  È possibile associare un file della Guida al componente <xref:System.Windows.Forms.HelpProvider> utilizzando la proprietà <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>.  Specificare il tipo di Guida fornito chiamando il metodo <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> e fornendo un valore dall'enumerazione <xref:System.Windows.Forms.HelpNavigator> per il controllo specificato.  Fornire la parola chiave o l'argomento per la Guida chiamando il metodo <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>.  
+## <a name="using-the-help-provider"></a><span data-ttu-id="d0585-108">Utilizzo del Provider della Guida</span><span class="sxs-lookup"><span data-stu-id="d0585-108">Using the Help Provider</span></span>  
+ <span data-ttu-id="d0585-109">Aggiunta di un <xref:System.Windows.Forms.HelpProvider> componente al Windows Form consente agli altri controlli nel form per esporre le proprietà della Guida di <xref:System.Windows.Forms.HelpProvider> componente.</span><span class="sxs-lookup"><span data-stu-id="d0585-109">Adding a <xref:System.Windows.Forms.HelpProvider> component to your Windows Form allows the other controls on the form to expose the Help properties of the <xref:System.Windows.Forms.HelpProvider> component.</span></span> <span data-ttu-id="d0585-110">Ciò consente di fornire la Guida per i controlli Windows Form.</span><span class="sxs-lookup"><span data-stu-id="d0585-110">This enables you to provide help for the controls on your Windows Form.</span></span> <span data-ttu-id="d0585-111">È possibile associare un file della Guida con il <xref:System.Windows.Forms.HelpProvider> componente utilizzando il <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="d0585-111">You can associate a Help file with the <xref:System.Windows.Forms.HelpProvider> component using the <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> property.</span></span> <span data-ttu-id="d0585-112">Specificare il tipo di Guida fornito chiamando <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> e fornendo un valore di <xref:System.Windows.Forms.HelpNavigator> enumerazione per il controllo specificato.</span><span class="sxs-lookup"><span data-stu-id="d0585-112">You specify the type of Help provided by calling <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> and providing a value from the <xref:System.Windows.Forms.HelpNavigator> enumeration for the specified control.</span></span> <span data-ttu-id="d0585-113">È possibile specificare la parola chiave o un argomento per la Guida chiamando la <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="d0585-113">You provide the keyword or topic for Help by calling the <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> method.</span></span>  
   
- È inoltre possibile associare una specifica stringa della Guida a un altro controllo, utilizzando il metodo <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>.  La stringa associata al controllo con tale metodo verrà visualizzata in una finestra popup quando l'utente preme il tasto F1 mentre il controllo è attivo.  
+ <span data-ttu-id="d0585-114">Facoltativamente, per associare una specifica stringa della Guida con un altro controllo, utilizzare il <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="d0585-114">Optionally, to associate a specific Help string with another control, use the <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> method.</span></span> <span data-ttu-id="d0585-115">La stringa che viene associato a un controllo con questo metodo viene visualizzata in una finestra popup quando l'utente preme il tasto F1 mentre il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="d0585-115">The string that you associate with a control using this method is displayed in a pop-up window when the user presses the F1 key while the control has focus.</span></span>  
   
- Se la proprietà <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> non è stata impostata, è necessario utilizzare <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> per specificare il testo della Guida.  Se si è impostato sia <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> che la stringa della Guida, avranno la precedenza le informazioni della Guida basate su <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>.  
+ <span data-ttu-id="d0585-116">Se <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> non è stata impostata, è necessario utilizzare <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> per fornire il testo della Guida.</span><span class="sxs-lookup"><span data-stu-id="d0585-116">If <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> has not been set, you must use <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> to provide the Help text.</span></span> <span data-ttu-id="d0585-117">Se si è impostato sia <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> e la stringa della Guida, la Guida basata sulla <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> avrà la precedenza.</span><span class="sxs-lookup"><span data-stu-id="d0585-117">If you have set both <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> and the Help string, Help based on <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> will take precedence.</span></span>  
   
 > [!NOTE]
->  Si possono verificare problemi di utilizzo del percorso relativo, quando si specifica il percorso per il file della Guida nel metodo <xref:System.Windows.Forms.Help.ShowHelp%2A> o nella proprietà <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> del controllo <xref:System.Windows.Forms.HelpProvider>.  Pertanto accertarsi di utilizzare il percorso assoluto per specificare il file della Guida.  
+>  <span data-ttu-id="d0585-118">Si possono verificare problemi con il percorso relativo quando si specifica il percorso del file della Guida nel <xref:System.Windows.Forms.Help.ShowHelp%2A> metodo o <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> proprietà del <xref:System.Windows.Forms.HelpProvider> controllo.</span><span class="sxs-lookup"><span data-stu-id="d0585-118">You may encounter problems using the relative path when specifiying the path to the Help file in the <xref:System.Windows.Forms.Help.ShowHelp%2A> method or <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> property of the <xref:System.Windows.Forms.HelpProvider> control.</span></span> <span data-ttu-id="d0585-119">Di conseguenza, assicurarsi di utilizzare il percorso file assoluto per specificare il file della Guida.</span><span class="sxs-lookup"><span data-stu-id="d0585-119">As such, be sure to use the absolute file path to specify the Help file.</span></span>  
   
-## Vedere anche  
- [Help Systems in Windows Forms Applications](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+## <a name="see-also"></a><span data-ttu-id="d0585-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d0585-120">See Also</span></span>  
+ [<span data-ttu-id="d0585-121">Sistemi di Guida nelle Windows Forms Application</span><span class="sxs-lookup"><span data-stu-id="d0585-121">Help Systems in Windows Forms Applications</span></span>](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)

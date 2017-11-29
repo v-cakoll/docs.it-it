@@ -1,45 +1,43 @@
 ---
-title: "Creating a Cryptographic Scheme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "encryption [.NET Framework], creating cryptographic schemes"
-  - "cryptography [.NET Framework], creating cryptographic schemes"
+title: Creazione di uno schema di crittografia
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [.NET Framework], creating cryptographic schemes
+- cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3e3c4a832f70fae7808bf71016cb9f6648332f01
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Creating a Cryptographic Scheme
-I componenti di crittografia di .NET Framework possono essere combinati per creare diversi schemi per la crittografia e la decrittografia dei dati.  
+# <a name="creating-a-cryptographic-scheme"></a><span data-ttu-id="9a56f-102">Creazione di uno schema di crittografia</span><span class="sxs-lookup"><span data-stu-id="9a56f-102">Creating a Cryptographic Scheme</span></span>
+<span data-ttu-id="9a56f-103">I componenti di crittografia di .NET Framework possono essere combinati per creare diversi schemi per la crittografia e la decrittografia dei dati.</span><span class="sxs-lookup"><span data-stu-id="9a56f-103">The cryptographic components of the .NET Framework can be combined to create different schemes to encrypt and decrypt data.</span></span>  
   
- Uno schema di crittografia semplice per la crittografia e la decrittografia dei dati può specificare i passaggi seguenti:  
+ <span data-ttu-id="9a56f-104">Uno schema di crittografia semplice per la crittografia e la decrittografia dei dati può specificare i passaggi seguenti:</span><span class="sxs-lookup"><span data-stu-id="9a56f-104">A simple cryptographic scheme for encrypting and decrypting data might specify the following steps:</span></span>  
   
-1.  Ogni parte genera una coppia di chiavi pubblica\/privata.  
+1.  <span data-ttu-id="9a56f-105">Ogni parte genera una coppia di chiavi pubblica/privata.</span><span class="sxs-lookup"><span data-stu-id="9a56f-105">Each party generates a public/private key pair.</span></span>  
   
-2.  Le parti si scambiano le chiavi pubbliche.  
+2.  <span data-ttu-id="9a56f-106">Le parti si scambiano le chiavi pubbliche.</span><span class="sxs-lookup"><span data-stu-id="9a56f-106">The parties exchange their public keys.</span></span>  
   
-3.  Ogni parte genera una chiave segreta per la crittografia TripleDES, ad esempio, e crittografa la nuova chiave creata usando la chiave pubblica dell'altra parte.  
+3.  <span data-ttu-id="9a56f-107">Ogni parte genera una chiave segreta per la crittografia TripleDES, ad esempio, e crittografa la nuova chiave creata usando la chiave pubblica dell'altra parte.</span><span class="sxs-lookup"><span data-stu-id="9a56f-107">Each party generates a secret key for TripleDES encryption, for example, and encrypts the newly created key using the other's public key.</span></span>  
   
-4.  Ogni parte invia i dati all'altra parte e combina la chiave segreta dell'altra parte con la propria, in un ordine specifico, per creare una nuova chiave segreta.  
+4.  <span data-ttu-id="9a56f-108">Ogni parte invia i dati all'altra parte e combina la chiave segreta dell'altra parte con la propria, in un ordine specifico, per creare una nuova chiave segreta.</span><span class="sxs-lookup"><span data-stu-id="9a56f-108">Each party sends the data to the other and combines the other's secret key with its own, in a particular order, to create a new secret key.</span></span>  
   
-5.  Le parti avviano quindi una conversazione usando la crittografia simmetrica.  
+5.  <span data-ttu-id="9a56f-109">Le parti avviano quindi una conversazione usando la crittografia simmetrica.</span><span class="sxs-lookup"><span data-stu-id="9a56f-109">The parties then initiate a conversation using symmetric encryption.</span></span>  
   
- La creazione di uno schema di crittografia non è un'attività banale.  Per altre informazioni sull'uso della crittografia, vedere l'argomento Crittografia nella documentazione di Platform SDK all'indirizzo http:\/\/msdn.microsoft.com\/library.  
+ <span data-ttu-id="9a56f-110">La creazione di uno schema di crittografia non è un'attività banale.</span><span class="sxs-lookup"><span data-stu-id="9a56f-110">Creating a cryptographic scheme is not a trivial task.</span></span> <span data-ttu-id="9a56f-111">Per altre informazioni sull'uso della crittografia, vedere l'argomento Crittografia nella documentazione di Platform SDK all'indirizzo http://msdn.microsoft.com/library.</span><span class="sxs-lookup"><span data-stu-id="9a56f-111">For more information on using cryptography, see the Cryptography topic in the Platform SDK documentation at http://msdn.microsoft.com/library.</span></span>  
   
-## Vedere anche  
- [Servizi di crittografia](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="9a56f-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a56f-112">See Also</span></span>  
+ [<span data-ttu-id="9a56f-113">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="9a56f-113">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

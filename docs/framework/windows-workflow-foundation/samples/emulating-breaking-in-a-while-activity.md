@@ -1,34 +1,38 @@
 ---
-title: "Emulazione di interruzione in un&#39;attivit&#224; While | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Emulazione di interruzione in un'attività While"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4417f4225200f01f23d753f6b7aa52ebc69cab4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Emulazione di interruzione in un&#39;attivit&#224; While
-In questo esempio viene illustrato come interrompere il meccanismo di ciclo delle attività seguenti: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> e <xref:System.Activities.Statements.ParallelForEach%601>.  
+# <a name="emulating-breaking-in-a-while-activity"></a><span data-ttu-id="e6a94-102">Emulazione di interruzione in un'attività While</span><span class="sxs-lookup"><span data-stu-id="e6a94-102">Emulating breaking in a While activity</span></span>
+<span data-ttu-id="e6a94-103">In questo esempio viene illustrato come interrompere il meccanismo di ciclo delle attività seguenti: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> e <xref:System.Activities.Statements.ParallelForEach%601>.</span><span class="sxs-lookup"><span data-stu-id="e6a94-103">This sample demonstrates how to break the looping mechanism of the following activities: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, and <xref:System.Activities.Statements.ParallelForEach%601>.</span></span>  
   
- Tale operazione è utile poiché in [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere l'esecuzione di questi cicli.  
+ <span data-ttu-id="e6a94-104">Tale operazione è utile poiché in [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere l'esecuzione di questi cicli.</span><span class="sxs-lookup"><span data-stu-id="e6a94-104">This is useful because [!INCLUDE[wf](../../../../includes/wf-md.md)] does not include any activity to break the execution of these loops.</span></span>  
   
-## Scenario  
- Nell'esempio viene rilevato il primo fornitore affidabile in un elenco di fornitori \(istanze della classe `Vendor`\).Ogni fornitore dispone di un oggetto `ID`, di un oggetto `Name` e di un valore di affidabilità numerico che determina l'affidabilità del fornitore.Nell'esempio viene creata un'attività personalizzata denominata `FindReliableVendor` che riceve due parametri di input \(un elenco di fornitori e un valore di affidabilità minimo\) e restituisce il primo fornitore dell'elenco che corrisponde ai criteri forniti.  
+## <a name="scenario"></a><span data-ttu-id="e6a94-105">Scenario</span><span class="sxs-lookup"><span data-stu-id="e6a94-105">Scenario</span></span>  
+ <span data-ttu-id="e6a94-106">Nell'esempio viene rilevato il primo fornitore affidabile in un elenco di fornitori (istanze della classe `Vendor`).</span><span class="sxs-lookup"><span data-stu-id="e6a94-106">The sample finds the first reliable vendor from a list of vendors (instances of the `Vendor` class).</span></span> <span data-ttu-id="e6a94-107">Ogni fornitore dispone di un oggetto `ID`, di un oggetto `Name` e di un valore di affidabilità numerico che determina l'affidabilità del fornitore.</span><span class="sxs-lookup"><span data-stu-id="e6a94-107">Each vendor has an `ID`, a `Name` and a numeric reliability value that determines how dependable the vendor is.</span></span> <span data-ttu-id="e6a94-108">Nell'esempio viene creata un'attività personalizzata denominata `FindReliableVendor` che riceve due parametri di input (un elenco di fornitori e un valore di affidabilità minimo) e restituisce il primo fornitore dell'elenco che corrisponde ai criteri forniti.</span><span class="sxs-lookup"><span data-stu-id="e6a94-108">The sample creates a custom activity called `FindReliableVendor` that receives two input parameters (a list of vendors and a minimum reliability value) and returns the first vendor of the list that matches the supplied criteria.</span></span>  
   
-## Interruzione di un ciclo  
- In [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere un ciclo.Nell'esempio di codice viene eseguita l'interruzione di un ciclo tramite un'attività <xref:System.Activities.Statements.If> e diverse variabili.Nell'esempio, l'attività <xref:System.Activities.Statements.While> viene interrotta dopo che alla variabile `reliableVendor` viene assegnato un valore diverso da `null`.  
+## <a name="breaking-a-loop"></a><span data-ttu-id="e6a94-109">Interruzione di un ciclo</span><span class="sxs-lookup"><span data-stu-id="e6a94-109">Breaking a Loop</span></span>  
+ <span data-ttu-id="e6a94-110">In [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere un ciclo.</span><span class="sxs-lookup"><span data-stu-id="e6a94-110">[!INCLUDE[wf](../../../../includes/wf-md.md)] does not include an activity to break a loop.</span></span> <span data-ttu-id="e6a94-111">Nell'esempio di codice viene eseguita l'interruzione di un ciclo tramite un'attività <xref:System.Activities.Statements.If> e diverse variabili.</span><span class="sxs-lookup"><span data-stu-id="e6a94-111">The code sample accomplishes breaking a loop by using an <xref:System.Activities.Statements.If> activity and several variables.</span></span> <span data-ttu-id="e6a94-112">Nell'esempio, l'attività <xref:System.Activities.Statements.While> viene interrotta dopo che alla variabile `reliableVendor` viene assegnato un valore diverso da `null`.</span><span class="sxs-lookup"><span data-stu-id="e6a94-112">In the sample, the <xref:System.Activities.Statements.While> activity is broken once the `reliableVendor` variable is assigned a value other than `null`.</span></span>  
   
- Nell'esempio di codice seguente viene illustrato il modo in cui l'esempio interrompe un ciclo while.  
+ <span data-ttu-id="e6a94-113">Nell'esempio di codice seguente viene illustrato il modo in cui l'esempio interrompe un ciclo while.</span><span class="sxs-lookup"><span data-stu-id="e6a94-113">The following code example demonstrates how the sample breaks a while loop.</span></span>  
   
 ```csharp  
-// Iterates while the “i” variable is lower than the size of the list   
+// Iterates while the "i" variable is lower than the size of the list   
 // and any reliable Vendor is found.        
 new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(env) == null)  
 {  
@@ -67,24 +71,23 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
         }  
     }  
 }  
-  
 ```  
   
-#### Per utilizzare questo esempio  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="e6a94-114">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="e6a94-114">To use this sample</span></span>  
   
-1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione EmulatingBreakInWhile.sln.  
+1.  <span data-ttu-id="e6a94-115">In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione EmulatingBreakInWhile.sln.</span><span class="sxs-lookup"><span data-stu-id="e6a94-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the EmulatingBreakInWhile.sln solution file.</span></span>  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+2.  <span data-ttu-id="e6a94-116">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="e6a94-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Per eseguire la soluzione, premere CTRL\+F5.  
+3.  <span data-ttu-id="e6a94-117">Per eseguire la soluzione, premere CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="e6a94-117">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="e6a94-118">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="e6a94-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e6a94-119">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="e6a94-119">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="e6a94-120">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e6a94-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e6a94-121">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="e6a94-121">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="e6a94-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e6a94-122">See Also</span></span>

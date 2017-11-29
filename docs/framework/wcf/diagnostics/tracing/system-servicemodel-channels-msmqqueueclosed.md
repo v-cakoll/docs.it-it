@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.MsmqQueueClosed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqQueueClosed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52fc5e66-a86a-4bc3-8d88-40ec9f408082
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ff362f90da36783c4c37ff9613908ee36c947de1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqQueueClosed
-System.ServiceModel.Channels.MsmqQueueClosed  
+# <a name="systemservicemodelchannelsmsmqqueueclosed"></a><span data-ttu-id="e8fe2-102">System.ServiceModel.Channels.MsmqQueueClosed</span><span class="sxs-lookup"><span data-stu-id="e8fe2-102">System.ServiceModel.Channels.MsmqQueueClosed</span></span>
+<span data-ttu-id="e8fe2-103">System.ServiceModel.Channels.MsmqQueueClosed</span><span class="sxs-lookup"><span data-stu-id="e8fe2-103">System.ServiceModel.Channels.MsmqQueueClosed</span></span>  
   
-## Descrizione  
- Coda MSMQ chiusa.  
+## <a name="description"></a><span data-ttu-id="e8fe2-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e8fe2-104">Description</span></span>  
+ <span data-ttu-id="e8fe2-105">Coda MSMQ chiusa.</span><span class="sxs-lookup"><span data-stu-id="e8fe2-105">MSMQ queue closed.</span></span>  
   
-## Vedere anche  
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e8fe2-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e8fe2-106">See Also</span></span>  
+ [<span data-ttu-id="e8fe2-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="e8fe2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e8fe2-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="e8fe2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e8fe2-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="e8fe2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
