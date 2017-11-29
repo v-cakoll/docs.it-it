@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - tracing [.NET Framework], trace and debug settings schema
 - configuration schema [.NET Framework], trace and debug settings
@@ -24,49 +18,47 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c74874519d992985c49b49542c0c7fb63e8557b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 97c96fbb1abf969d902159709ca0e738f475fab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="trace-and-debug-settings-schema"></a>Schema delle impostazioni di traccia e debug
-Le impostazioni di traccia e debug specificano i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.  
+# <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="9a495-102">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="9a495-102">Trace and Debug Settings Schema</span></span>
+<span data-ttu-id="9a495-103">Le impostazioni di traccia e debug specificano i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  
   
- La tabella seguente descrive la funzione di ogni elemento delle impostazioni di traccia e debug.  
+ <span data-ttu-id="9a495-104">La tabella seguente descrive la funzione di ogni elemento delle impostazioni di traccia e debug.</span><span class="sxs-lookup"><span data-stu-id="9a495-104">The following table describes the function of each trace and debug settings element.</span></span>  
   
-|Elemento|Descrizione|  
+|<span data-ttu-id="9a495-105">Elemento</span><span class="sxs-lookup"><span data-stu-id="9a495-105">Element</span></span>|<span data-ttu-id="9a495-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9a495-106">Description</span></span>|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Aggiunge un listener alla raccolta `Listeners`.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|Aggiunge un listener alla raccolta `sharedListeners`.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|Specifica il livello in cui viene impostata un'opzione di traccia.|  
-|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Specifica se visualizzare una finestra di messaggio quando si chiama il metodo <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>. Specifica anche il nome del file in cui scrivere i messaggi.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Cancella la raccolta `Listeners` per un'origine di traccia.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Cancella la raccolta `Listeners` per una traccia.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Aggiunge un filtro a un listener nella raccolta `Listeners` per un'origine di traccia.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|Aggiunge un filtro a un listener nella raccolta `Listeners` per la traccia.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|Aggiunge un filtro a un listener nella raccolta `sharedListeners`.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Specifica i listener per la raccolta `Listeners` per un'origine di traccia.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Specifica i listener per la raccolta `Listeners` per una traccia.|  
-|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Specifica le dimensioni della memoria globale condivisa dai contatori delle prestazioni.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Rimuove un listener dalla raccolta `Listeners` per la traccia.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Rimuove un listener dalla raccolta `Listeners` per un'origine di traccia.|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Contiene le origini di traccia che avviano i messaggi di traccia.|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni di traccia.|  
-|[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.|  
+|[<span data-ttu-id="9a495-107">\<add></span><span class="sxs-lookup"><span data-stu-id="9a495-107">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="9a495-108">Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-108">Adds a listener to the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="9a495-109">\<add></span><span class="sxs-lookup"><span data-stu-id="9a495-109">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="9a495-110">Aggiunge un listener alla raccolta `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="9a495-110">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="9a495-111">\<add></span><span class="sxs-lookup"><span data-stu-id="9a495-111">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|<span data-ttu-id="9a495-112">Aggiunge un listener alla raccolta `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="9a495-112">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="9a495-113">\<add></span><span class="sxs-lookup"><span data-stu-id="9a495-113">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="9a495-114">Specifica il livello in cui viene impostata un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-114">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="9a495-115">\<assert></span><span class="sxs-lookup"><span data-stu-id="9a495-115">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="9a495-116">Specifica se visualizzare una finestra di messaggio quando si chiama il metodo <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Specifica anche il nome del file in cui scrivere i messaggi.</span><span class="sxs-lookup"><span data-stu-id="9a495-116">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="9a495-117">\<clear></span><span class="sxs-lookup"><span data-stu-id="9a495-117">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="9a495-118">Cancella la raccolta `Listeners` per un'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-118">Clears the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="9a495-119">\<clear></span><span class="sxs-lookup"><span data-stu-id="9a495-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="9a495-120">Cancella la raccolta `Listeners` per una traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="9a495-121">\<filter></span><span class="sxs-lookup"><span data-stu-id="9a495-121">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|<span data-ttu-id="9a495-122">Aggiunge un filtro a un listener nella raccolta `Listeners` per un'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-122">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="9a495-123">\<filter></span><span class="sxs-lookup"><span data-stu-id="9a495-123">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="9a495-124">Aggiunge un filtro a un listener nella raccolta `Listeners` per la traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-124">Adds a filter to a listener in the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="9a495-125">\<filter></span><span class="sxs-lookup"><span data-stu-id="9a495-125">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|<span data-ttu-id="9a495-126">Aggiunge un filtro a un listener nella raccolta `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="9a495-126">Adds a filter to a listener in the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="9a495-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="9a495-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="9a495-128">Specifica i listener per la raccolta `Listeners` per un'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-128">Specifies listeners for the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="9a495-129">\<listeners></span><span class="sxs-lookup"><span data-stu-id="9a495-129">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="9a495-130">Specifica i listener per la raccolta `Listeners` per una traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-130">Specifies listeners for the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="9a495-131">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="9a495-131">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="9a495-132">Specifica le dimensioni della memoria globale condivisa dai contatori delle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="9a495-132">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="9a495-133">\<remove></span><span class="sxs-lookup"><span data-stu-id="9a495-133">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="9a495-134">Rimuove un listener dalla raccolta `Listeners` per la traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-134">Removes a listener from the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="9a495-135">\<remove></span><span class="sxs-lookup"><span data-stu-id="9a495-135">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="9a495-136">Rimuove un listener dalla raccolta `Listeners` per un'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-136">Removes a listener from the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="9a495-137">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="9a495-137">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="9a495-138">Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-138">Contains listeners that any source or trace element can reference.</span></span>|  
+|[<span data-ttu-id="9a495-139">\<sources></span><span class="sxs-lookup"><span data-stu-id="9a495-139">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="9a495-140">Contiene le origini di traccia che avviano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-140">Contains trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="9a495-141">\<source></span><span class="sxs-lookup"><span data-stu-id="9a495-141">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="9a495-142">Specifica un'origine di traccia che avvia i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-142">Specifies a trace source that initiates tracing messages.</span></span>|  
+|[<span data-ttu-id="9a495-143">\<switches></span><span class="sxs-lookup"><span data-stu-id="9a495-143">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="9a495-144">Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-144">Contains trace switches and the level where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="9a495-145">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="9a495-145">\<system.diagnostics></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|<span data-ttu-id="9a495-146">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-146">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="9a495-147">\<trace></span><span class="sxs-lookup"><span data-stu-id="9a495-147">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="9a495-148">Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="9a495-148">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.Debug>   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="9a495-149">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a495-149">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.Debug>  
+ [<span data-ttu-id="9a495-150">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="9a495-150">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

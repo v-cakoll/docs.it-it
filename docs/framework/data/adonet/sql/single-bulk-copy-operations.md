@@ -1,62 +1,68 @@
 ---
-title: "Esecuzione di singole operazioni di copia di massa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Singole operazioni di copia di massa
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 001bd24d46d0106887ad693534c51d152eedfb1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Esecuzione di singole operazioni di copia di massa
-L'approccio più semplice per eseguire un'operazione di copia di massa in SQL Server consiste nell'eseguire una singola operazione in un database.  Per impostazione predefinita, un'operazione di copia di massa viene eseguita come operazione isolata: l'operazione di copia avviene in modalità non transazionale, senza la possibilità di eseguirne il rollback.  
+# <a name="single-bulk-copy-operations"></a><span data-ttu-id="b928c-102">Singole operazioni di copia di massa</span><span class="sxs-lookup"><span data-stu-id="b928c-102">Single Bulk Copy Operations</span></span>
+<span data-ttu-id="b928c-103">L'approccio più semplice per eseguire un'operazione di copia di massa in SQL Server consiste nell'eseguire una singola operazione in un database.</span><span class="sxs-lookup"><span data-stu-id="b928c-103">The simplest approach to performing a SQL Server bulk copy operation is to perform a single operation against a database.</span></span> <span data-ttu-id="b928c-104">Per impostazione predefinita, un'operazione di copia di massa viene eseguita come operazione isolata: l'operazione di copia avviene in modalità non transazionale, senza la possibilità di eseguirne il rollback.</span><span class="sxs-lookup"><span data-stu-id="b928c-104">By default, a bulk copy operation is performed as an isolated operation: the copy operation occurs in a non-transacted way, with no opportunity for rolling it back.</span></span>  
   
 > [!NOTE]
->  Per eseguire il rollback di una parte o dell'intera copia di massa quando si verifica un errore, è possibile usare una transazione gestita di <xref:System.Data.SqlClient.SqlBulkCopy> oppure eseguire la copia di massa in una transazione esistente.  **SqlBulkCopy** funzionerà anche con <xref:System.Transactions> se la connessione è inserita, in modo implicito o esplicito, nell'elenco di una transazione **System.Transactions**.  
+>  <span data-ttu-id="b928c-105">Per eseguire il rollback di una parte o dell'intera copia di massa quando si verifica un errore, è possibile usare una transazione gestita di <xref:System.Data.SqlClient.SqlBulkCopy> oppure eseguire la copia di massa in una transazione esistente.</span><span class="sxs-lookup"><span data-stu-id="b928c-105">If you need to roll back all or part of the bulk copy when an error occurs, you can either use a <xref:System.Data.SqlClient.SqlBulkCopy>-managed transaction, or perform the bulk copy operation within an existing transaction.</span></span> <span data-ttu-id="b928c-106">**SqlBulkCopy** funzionerà anche con <xref:System.Transactions> se la connessione viene inserita, in modo implicito o esplicito, in un **System. Transactions** delle transazioni.</span><span class="sxs-lookup"><span data-stu-id="b928c-106">**SqlBulkCopy** will also work with <xref:System.Transactions> if the connection is enlisted (implicitly or explicitly) into a **System.Transactions** transaction.</span></span>  
 >   
->  Per altre informazioni, vedere [Transazioni e operazioni di copia di massa](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
+>  <span data-ttu-id="b928c-107">Per ulteriori informazioni, vedere [delle transazioni e operazioni di copia Bulk](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).</span><span class="sxs-lookup"><span data-stu-id="b928c-107">For more information, see [Transaction and Bulk Copy Operations](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).</span></span>  
   
- In generale, i passaggi per eseguire un'operazione di copia di massa sono i seguenti:  
+ <span data-ttu-id="b928c-108">In generale, i passaggi per eseguire un'operazione di copia di massa sono i seguenti:</span><span class="sxs-lookup"><span data-stu-id="b928c-108">The general steps for performing a bulk copy operation are as follows:</span></span>  
   
-1.  Connettersi al server di origine per recuperare i dati da copiare.  I dati possono provenire anche da altre origini, se possono essere recuperati da un oggetto<xref:System.Data.IDataReader> o <xref:System.Data.DataTable>.  
+1.  <span data-ttu-id="b928c-109">Connettersi al server di origine per recuperare i dati da copiare.</span><span class="sxs-lookup"><span data-stu-id="b928c-109">Connect to the source server and obtain the data to be copied.</span></span> <span data-ttu-id="b928c-110">I dati possono provenire anche da altre origini, se possono essere recuperati da un oggetto<xref:System.Data.IDataReader> o <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="b928c-110">Data can also come from other sources, if it can be retrieved from an <xref:System.Data.IDataReader> or <xref:System.Data.DataTable> object.</span></span>  
   
-2.  Connettersi al server di destinazione \(la connessione può essere eseguita automaticamente anche da **SqlBulkCopy**\).  
+2.  <span data-ttu-id="b928c-111">Connettersi al server di destinazione (a meno che non si desidera **SqlBulkCopy** per stabilire una connessione per l'utente).</span><span class="sxs-lookup"><span data-stu-id="b928c-111">Connect to the destination server (unless you want **SqlBulkCopy** to establish a connection for you).</span></span>  
   
-3.  Creare un oggetto <xref:System.Data.SqlClient.SqlBulkCopy>, impostando tutte le proprietà necessarie.  
+3.  <span data-ttu-id="b928c-112">Creare un oggetto <xref:System.Data.SqlClient.SqlBulkCopy>, impostando tutte le proprietà necessarie.</span><span class="sxs-lookup"><span data-stu-id="b928c-112">Create a <xref:System.Data.SqlClient.SqlBulkCopy> object, setting any necessary properties.</span></span>  
   
-4.  Impostare la proprietà **DestinationTableName** per indicare la tabella di destinazione per l'operazione di inserimento di massa.  
+4.  <span data-ttu-id="b928c-113">Impostare il **DestinationTableName** proprietà per indicare la tabella di destinazione per la maggior parte delle operazioni di inserimento.</span><span class="sxs-lookup"><span data-stu-id="b928c-113">Set the **DestinationTableName** property to indicate the target table for the bulk insert operation.</span></span>  
   
-5.  Chiamare uno dei metodi **WriteToServer**.  
+5.  <span data-ttu-id="b928c-114">Chiamare uno del **WriteToServer** metodi.</span><span class="sxs-lookup"><span data-stu-id="b928c-114">Call one of the **WriteToServer** methods.</span></span>  
   
-6.  Inoltre, è possibile aggiornare le proprietà e, se necessario, chiamare nuovamente **WriteToServer**.  
+6.  <span data-ttu-id="b928c-115">Facoltativamente, aggiornare le proprietà e chiamate **WriteToServer** nuovamente se necessario.</span><span class="sxs-lookup"><span data-stu-id="b928c-115">Optionally, update properties and call **WriteToServer** again as necessary.</span></span>  
   
-7.  Chiamare <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A> o eseguire il wrapping delle operazioni di copia di massa all'interno di un'istruzione `Using`.  
+7.  <span data-ttu-id="b928c-116">Chiamare <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A> o eseguire il wrapping delle operazioni di copia di massa all'interno di un'istruzione `Using`.</span><span class="sxs-lookup"><span data-stu-id="b928c-116">Call <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, or wrap the bulk copy operations within a `Using` statement.</span></span>  
   
 > [!CAUTION]
->  È consigliabile assicurare che la corrispondenza tra i tipi di dati della colonna di origine e quelli di destinazione.  Se i tipi di dati non corrispondono, **SqlBulkCopy** tenterà di convertire ogni valore di origine nel tipo di dati di destinazione usando le regole della proprietà <xref:System.Data.SqlClient.SqlParameter.Value%2A> Le conversioni possono influenzare le prestazioni e possono provocare errori imprevisti.  Ad esempio, non è sempre possibile convertire un tipo di dati `Double` in `Decimal`.  
+>  <span data-ttu-id="b928c-117">È consigliabile assicurare che la corrispondenza tra i tipi di dati della colonna di origine e quelli di destinazione.</span><span class="sxs-lookup"><span data-stu-id="b928c-117">We recommend that the source and target column data types match.</span></span> <span data-ttu-id="b928c-118">Se i tipi di dati non corrispondono, **SqlBulkCopy** tenta di convertire ogni valore di origine al tipo di dati di destinazione, tramite le regole utilizzate da <xref:System.Data.SqlClient.SqlParameter.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="b928c-118">If the data types do not match, **SqlBulkCopy** attempts to convert each source value to the target data type, using the rules employed by <xref:System.Data.SqlClient.SqlParameter.Value%2A>.</span></span> <span data-ttu-id="b928c-119">Le conversioni possono influenzare le prestazioni e possono provocare errori imprevisti.</span><span class="sxs-lookup"><span data-stu-id="b928c-119">Conversions can affect performance, and also can result in unexpected errors.</span></span> <span data-ttu-id="b928c-120">Ad esempio, non è sempre possibile convertire un tipo di dati `Double` in `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="b928c-120">For example, a `Double` data type can be converted to a `Decimal` data type most of the time, but not always.</span></span>  
   
-## Esempio  
- Nell'applicazione console riportata di seguito viene illustrato come caricare i dati usando la classe <xref:System.Data.SqlClient.SqlBulkCopy>.  In questo esempio, viene usato un oggetto <xref:System.Data.SqlClient.SqlDataReader> per copiare i dati dalla tabella **Production.Product** del database **AdventureWorks** di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] in una tabella simile dello stesso database.  
+## <a name="example"></a><span data-ttu-id="b928c-121">Esempio</span><span class="sxs-lookup"><span data-stu-id="b928c-121">Example</span></span>  
+ <span data-ttu-id="b928c-122">Nell'applicazione console riportata di seguito viene illustrato come caricare i dati usando la classe <xref:System.Data.SqlClient.SqlBulkCopy>.</span><span class="sxs-lookup"><span data-stu-id="b928c-122">The following console application demonstrates how to load data using the <xref:System.Data.SqlClient.SqlBulkCopy> class.</span></span> <span data-ttu-id="b928c-123">In questo esempio, un <xref:System.Data.SqlClient.SqlDataReader> viene utilizzato per copiare i dati di **Production. Product** tabella il [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks** database in una tabella simile nello stesso database.</span><span class="sxs-lookup"><span data-stu-id="b928c-123">In this example, a <xref:System.Data.SqlClient.SqlDataReader> is used to copy data from the **Production.Product** table in the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]**AdventureWorks** database to a similar table in the same database.</span></span>  
   
 > [!IMPORTANT]
->  Questo esempio non verrà eseguito a meno che le tabelle di lavoro non siano state create come descritto in [Installazione dell'esempio relativo alla copia di massa](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md).  Il codice viene fornito solo per illustrare la sintassi relativa all'utilizzo di **SqlBulkCopy**.  Se la tabella di origine e quella di destinazione risiedono nella stessa istanza di SQL Server, per copiare i dati è più semplice e rapido usare un'istruzione `INSERT … SELECT` Transact\-SQL.  
+>  <span data-ttu-id="b928c-124">Questo esempio non verrà eseguito a meno che non state create le tabelle di lavoro come descritto in [l'installazione di esempio copia Bulk](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md).</span><span class="sxs-lookup"><span data-stu-id="b928c-124">This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md).</span></span> <span data-ttu-id="b928c-125">Questo codice viene fornito per illustrare la sintassi per l'utilizzo di **SqlBulkCopy** solo.</span><span class="sxs-lookup"><span data-stu-id="b928c-125">This code is provided to demonstrate the syntax for using **SqlBulkCopy** only.</span></span> <span data-ttu-id="b928c-126">Se la tabella di origine e quella di destinazione risiedono nella stessa istanza di SQL Server, per copiare i dati è più semplice e rapido usare un'istruzione `INSERT … SELECT` Transact-SQL.</span><span class="sxs-lookup"><span data-stu-id="b928c-126">If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.</span></span>  
   
  [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
  [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]  
   
-## Esecuzione di un'operazione di copia di massa con Transact\-SQL e la classe Command  
- Nell'esempio seguente viene illustrato come usare il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> per eseguire l'istruzione BULK INSERT.  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a><span data-ttu-id="b928c-127">Esecuzione di un'operazione di copia di massa con Transact-SQL e la classe Command</span><span class="sxs-lookup"><span data-stu-id="b928c-127">Performing a Bulk Copy Operation Using Transact-SQL and the Command Class</span></span>  
+ <span data-ttu-id="b928c-128">Nell'esempio seguente viene illustrato come usare il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> per eseguire l'istruzione BULK INSERT.</span><span class="sxs-lookup"><span data-stu-id="b928c-128">The following example illustrates how to use the <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> method to execute the BULK INSERT statement.</span></span>  
   
 > [!NOTE]
->  Il percorso di file per l'origine dati è relativo al server.  Per la corretta esecuzione dell'operazione di copia di massa, è necessario che il processo server abbia accesso a tale percorso.  
+>  <span data-ttu-id="b928c-129">Il percorso di file per l'origine dati è relativo al server.</span><span class="sxs-lookup"><span data-stu-id="b928c-129">The file path for the data source is relative to the server.</span></span> <span data-ttu-id="b928c-130">Per la corretta esecuzione dell'operazione di copia di massa, è necessario che il processo server abbia accesso a tale percorso.</span><span class="sxs-lookup"><span data-stu-id="b928c-130">The server process must have access to that path in order for the bulk copy operation to succeed.</span></span>  
   
 ```vb  
 Using connection As SqlConnection = New SqlConnection(connectionString)  
@@ -83,6 +89,6 @@ command.ExecuteNonQuery();
 }  
 ```  
   
-## Vedere anche  
- [Operazioni di copia di massa in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b928c-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b928c-131">See Also</span></span>  
+ [<span data-ttu-id="b928c-132">Operazioni di copia bulk in SQL Server</span><span class="sxs-lookup"><span data-stu-id="b928c-132">Bulk Copy Operations in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
+ [<span data-ttu-id="b928c-133">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="b928c-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

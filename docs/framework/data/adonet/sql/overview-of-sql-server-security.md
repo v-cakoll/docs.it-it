@@ -1,53 +1,56 @@
 ---
-title: "Panoramica della sicurezza di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cenni preliminari sulla sicurezza in SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d93d077153cd15534175c1e60e63a765ce893c71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Panoramica della sicurezza di SQL Server
-Una strategia di difesa in profondità, basata su livelli sovrapposti di sicurezza, costituisce il modo migliore per fronteggiare i rischi per la sicurezza.  SQL Server offre un'architettura di sicurezza progettata per consentire ad amministratori e sviluppatori di database di creare applicazioni di database protette e contrastare minacce.  Ogni versione di SQL Server è stata migliorata rispetto alle versioni precedenti grazie all'introduzione di nuove funzionalità.  La sicurezza non può essere limitata a una o più nuove funzionalità.  Ogni applicazione presenta infatti speciali requisiti di sicurezza.  Gli sviluppatori devono pertanto individuare la combinazione di funzionalità più appropriate per contrastare le minacce note e prevedere eventuali minacce future.  
+# <a name="overview-of-sql-server-security"></a><span data-ttu-id="267e1-102">Cenni preliminari sulla sicurezza in SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-102">Overview of SQL Server Security</span></span>
+<span data-ttu-id="267e1-103">Una strategia di difesa in profondità, basata su livelli sovrapposti di sicurezza, costituisce il modo migliore per fronteggiare i rischi per la sicurezza.</span><span class="sxs-lookup"><span data-stu-id="267e1-103">A defense-in-depth strategy, with overlapping layers of security, is the best way to counter security threats.</span></span> <span data-ttu-id="267e1-104">SQL Server offre un'architettura di sicurezza progettata per consentire ad amministratori e sviluppatori di database di creare applicazioni di database protette e contrastare minacce.</span><span class="sxs-lookup"><span data-stu-id="267e1-104">SQL Server provides a security architecture that is designed to allow database administrators and developers to create secure database applications and counter threats.</span></span> <span data-ttu-id="267e1-105">Ogni versione di SQL Server è stata migliorata rispetto alle versioni precedenti grazie all'introduzione di nuove funzionalità.</span><span class="sxs-lookup"><span data-stu-id="267e1-105">Each version of SQL Server has improved on previous versions of SQL Server with the introduction of new features and functionality.</span></span> <span data-ttu-id="267e1-106">La sicurezza non può essere limitata a una o più nuove funzionalità.</span><span class="sxs-lookup"><span data-stu-id="267e1-106">However, security does not ship in the box.</span></span> <span data-ttu-id="267e1-107">Ogni applicazione presenta infatti speciali requisiti di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="267e1-107">Each application is unique in its security requirements.</span></span> <span data-ttu-id="267e1-108">Gli sviluppatori devono pertanto individuare la combinazione di funzionalità più appropriate per contrastare le minacce note e prevedere eventuali minacce future.</span><span class="sxs-lookup"><span data-stu-id="267e1-108">Developers need to understand which combination of features and functionality are most appropriate to counter known threats, and to anticipate threats that may arise in the future.</span></span>  
   
- Un'istanza di SQL Server contiene una raccolta gerarchica di entità, a partire dal server.  Ogni server contiene più database, ciascuno dei quali contiene una raccolta di oggetti a protezione diretta.  A ogni oggetto a protezione diretta SQL Server sono associate *autorizzazioni* che possono essere concesse a un'*entità di sicurezza*, ovvero un singolo, un gruppo o un processo a cui viene concesso l'accesso a SQL Server.  Il framework di sicurezza di SQL Server gestisce l'accesso alle entità a protezione diretta tramite l'*autenticazione* e l'*autorizzazione*.  
+ <span data-ttu-id="267e1-109">Un'istanza di SQL Server contiene una raccolta gerarchica di entità, a partire dal server.</span><span class="sxs-lookup"><span data-stu-id="267e1-109">A SQL Server instance contains a hierarchical collection of entities, starting with the server.</span></span> <span data-ttu-id="267e1-110">Ogni server contiene più database, ciascuno dei quali contiene una raccolta di oggetti a protezione diretta.</span><span class="sxs-lookup"><span data-stu-id="267e1-110">Each server contains multiple databases, and each database contains a collection of securable objects.</span></span> <span data-ttu-id="267e1-111">Ogni entità a protezione diretta di SQL Server sono associate *autorizzazioni* che possono essere concesse a un *principale*, ovvero un singolo utente, gruppo o un processo concesso l'accesso a SQL Server.</span><span class="sxs-lookup"><span data-stu-id="267e1-111">Every SQL Server securable has associated *permissions* that can be granted to a *principal*, which is an individual, group or process granted access to SQL Server.</span></span> <span data-ttu-id="267e1-112">Il framework di sicurezza di SQL Server gestisce l'accesso alle entità a protezione diretta tramite *autenticazione* e *autorizzazione*.</span><span class="sxs-lookup"><span data-stu-id="267e1-112">The SQL Server security framework manages access to securable entities through *authentication* and *authorization*.</span></span>  
   
--   L'autenticazione è il processo di accesso a SQL Server, in base al quale un'entità di sicurezza richiede l'accesso inviando credenziali che vengono valutate dal server.  L'autenticazione consente di stabilire l'identità dell'utente o del processo da autenticare.  
+-   <span data-ttu-id="267e1-113">L'autenticazione è il processo di accesso a SQL Server, in base al quale un'entità di sicurezza richiede l'accesso inviando credenziali che vengono valutate dal server.</span><span class="sxs-lookup"><span data-stu-id="267e1-113">Authentication is the process of logging on to SQL Server by which a principal requests access by submitting credentials that the server evaluates.</span></span> <span data-ttu-id="267e1-114">L'autenticazione consente di stabilire l'identità dell'utente o del processo da autenticare.</span><span class="sxs-lookup"><span data-stu-id="267e1-114">Authentication establishes the identity of the user or process being authenticated.</span></span>  
   
--   L'autorizzazione è il processo che consente di determinare le risorse ad accesso diretto accessibili a un'entità di sicurezza e le operazioni consentite a tali risorse.  
+-   <span data-ttu-id="267e1-115">L'autorizzazione è il processo che consente di determinare le risorse ad accesso diretto accessibili a un'entità di sicurezza e le operazioni consentite a tali risorse.</span><span class="sxs-lookup"><span data-stu-id="267e1-115">Authorization is the process of determining which securable resources a principal can access, and which operations are allowed for those resources.</span></span>  
   
- Negli argomenti in questa sezione vengono illustrati gli elementi fondamentali della sicurezza di SQL Server e vengono forniti collegamenti agli argomenti completi della versione pertinente della documentazione online di SQL Server.  
+ <span data-ttu-id="267e1-116">Negli argomenti in questa sezione vengono illustrati gli elementi fondamentali della sicurezza di SQL Server e vengono forniti collegamenti agli argomenti completi della versione pertinente della documentazione online di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="267e1-116">The topics in this section cover SQL Server security fundamentals, providing links to the complete documentation in the relevant version of SQL Server Books Online.</span></span>  
   
-## In questa sezione  
- [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- Vengono descritti gli account di accesso e l'autenticazione di SQL Server e vengono forniti i collegamenti a ulteriori risorse.  
+## <a name="in-this-section"></a><span data-ttu-id="267e1-117">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="267e1-117">In This Section</span></span>  
+ [<span data-ttu-id="267e1-118">Autenticazione di SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-118">Authentication in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ <span data-ttu-id="267e1-119">Vengono descritti gli account di accesso e l'autenticazione di SQL Server e vengono forniti i collegamenti a ulteriori risorse.</span><span class="sxs-lookup"><span data-stu-id="267e1-119">Describes logins and authentication in SQL Server and provides links to additional resources.</span></span>  
   
- [Ruoli del server e del database in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- Vengono descritti i ruoli predefiniti del database e del server, i ruoli personalizzati del database, nonché gli account predefiniti e vengono forniti i collegamenti a ulteriori risorse.  
+ [<span data-ttu-id="267e1-120">Ruoli server e Database in SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-120">Server and Database Roles in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ <span data-ttu-id="267e1-121">Vengono descritti i ruoli predefiniti del database e del server, i ruoli personalizzati del database, nonché gli account predefiniti e vengono forniti i collegamenti a ulteriori risorse.</span><span class="sxs-lookup"><span data-stu-id="267e1-121">Describes fixed server and database roles, custom database roles, and built-in accounts and provides links to additional resources.</span></span>  
   
- [Proprietà e distinzione tra utente e schema in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- Vengono illustrate la proprietà degli oggetti e la distinzione tra schema e utente e vengono forniti i collegamenti a ulteriori risorse.  
+ [<span data-ttu-id="267e1-122">Proprietà e distinzione tra utente e Schema in SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-122">Ownership and User-Schema Separation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ <span data-ttu-id="267e1-123">Vengono illustrate la proprietà degli oggetti e la distinzione tra schema e utente e vengono forniti i collegamenti a ulteriori risorse.</span><span class="sxs-lookup"><span data-stu-id="267e1-123">Describes object ownership and  user-schema separation and provides links to additional resources.</span></span>  
   
- [Autorizzazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- Viene spiegato come concedere autorizzazioni usando il principio dei privilegi minimi e vengono forniti i collegamenti a ulteriori risorse.  
+ [<span data-ttu-id="267e1-124">Autorizzazioni in SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-124">Authorization and Permissions in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ <span data-ttu-id="267e1-125">Viene spiegato come concedere autorizzazioni usando il principio dei privilegi minimi e vengono forniti i collegamenti a ulteriori risorse.</span><span class="sxs-lookup"><span data-stu-id="267e1-125">Describes granting permissions using the principle of least privilege and provides links to additional resources.</span></span>  
   
- [Crittografia dei dati in SQL Server](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
- Vengono descritte le opzioni di crittografia dei dati disponibili in SQL Server e vengono forniti i collegamenti a ulteriori risorse.  
+ [<span data-ttu-id="267e1-126">Crittografia dei dati in SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-126">Data Encryption in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
+ <span data-ttu-id="267e1-127">Vengono descritte le opzioni di crittografia dei dati disponibili in SQL Server e vengono forniti i collegamenti a ulteriori risorse.</span><span class="sxs-lookup"><span data-stu-id="267e1-127">Describes data encryption options in SQL Server and provides links to additional resources.</span></span>  
   
- [Sicurezza dell'integrazione CLR in SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
- Vengono forniti i collegamenti alle risorse sulla sicurezza relative all'integrazione CLR.  
+ [<span data-ttu-id="267e1-128">Sicurezza dell'integrazione con CLR in SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-128">CLR Integration Security in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
+ <span data-ttu-id="267e1-129">Vengono forniti i collegamenti alle risorse sulla sicurezza relative all'integrazione CLR.</span><span class="sxs-lookup"><span data-stu-id="267e1-129">Provides links to CLR integration security resources.</span></span>  
   
-## Vedere anche  
- [Protezione di applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)   
- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="267e1-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="267e1-130">See Also</span></span>  
+ [<span data-ttu-id="267e1-131">Protezione delle applicazioni ADO.NET</span><span class="sxs-lookup"><span data-stu-id="267e1-131">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="267e1-132">Sicurezza di SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-132">SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [<span data-ttu-id="267e1-133">Scenari di sicurezza in SQL Server</span><span class="sxs-lookup"><span data-stu-id="267e1-133">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="267e1-134">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="267e1-134">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

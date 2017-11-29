@@ -1,45 +1,43 @@
 ---
-title: "Procedura: creare criteri editore | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "GAC (Global Assembly Cache), assembly dei criteri editore"
-  - "Global Assembly Cache, assembly dei criteri editore"
-  - "assembly dei criteri editore"
-  - "file dei criteri editore"
+title: 'Procedura: creare criteri editore'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publisher policy assembly
+- publisher policy files
+- GAC (global assembly cache), publisher policy assembly
+- global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 430426e3662582bd904bc088a362e9d7ed331c11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare criteri editore
-È possibile che i fornitori di assembly consiglino l'utilizzo di una versione più recente di un assembly per l'esecuzione delle applicazioni fornendo un file dei criteri editore con l'assembly aggiornato.  Il file dei criteri editore contiene le impostazioni della codebase e per il reindirizzamento degli assembly e utilizza lo stesso formato del file di configurazione dell'applicazione.  Il file dei criteri editore viene compilato in un assembly e inserito nella Global Assembly Cache.  
+# <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="149b3-102">Procedura: creare criteri editore</span><span class="sxs-lookup"><span data-stu-id="149b3-102">How to: Create a Publisher Policy</span></span>
+<span data-ttu-id="149b3-103">I fornitori di assembly è possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly con l'inclusione di un file dei criteri editore con l'assembly aggiornato.</span><span class="sxs-lookup"><span data-stu-id="149b3-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="149b3-104">File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni di base di codice e Usa lo stesso formato del file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="149b3-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="149b3-105">File dei criteri editore viene compilato in un assembly e inserito in global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="149b3-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  
   
- La creazione dei criteri editore si articola in tre passaggi.  
+ <span data-ttu-id="149b3-106">Esistono tre passaggi coinvolti nella creazione di un criterio server di pubblicazione:</span><span class="sxs-lookup"><span data-stu-id="149b3-106">There are three steps involved in creating a publisher policy:</span></span>  
   
-1.  Creazione di un file dei criteri editore.  
+1.  <span data-ttu-id="149b3-107">Creare un file dei criteri editore.</span><span class="sxs-lookup"><span data-stu-id="149b3-107">Create a publisher policy file.</span></span>  
   
-2.  Creazione di un assembly dei criteri editore.  
+2.  <span data-ttu-id="149b3-108">Creare un assembly dei criteri editore.</span><span class="sxs-lookup"><span data-stu-id="149b3-108">Create a publisher policy assembly.</span></span>  
   
-3.  Aggiunta dell'assembly dei criteri editore alla Global Assembly Cache.  
+3.  <span data-ttu-id="149b3-109">Aggiungere l'assembly dei criteri editore nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="149b3-109">Add the publisher policy assembly to the global assembly cache.</span></span>  
   
- Lo schema per i criteri editore viene descritto nella sezione [Reindirizzamento delle versioni degli assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md).  Nell'esempio riportato di seguito viene illustrato un file dei criteri editori che consente di reindirizzare una versione di `myAssembly`.  
+ <span data-ttu-id="149b3-110">Viene descritto lo schema dei criteri dell'editore in [reindirizzamento delle versioni degli Assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md).</span><span class="sxs-lookup"><span data-stu-id="149b3-110">The schema for publisher policy is described in [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md).</span></span> <span data-ttu-id="149b3-111">Nell'esempio seguente viene illustrato un server di pubblicazione che reindirizza una versione del file dei criteri `myAssembly` a un altro.</span><span class="sxs-lookup"><span data-stu-id="149b3-111">The following example shows a publisher policy file that redirects one version of `myAssembly` to another.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -56,67 +54,67 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
- Per informazioni su come specificare una codebase, vedere [Specifica della posizione di un assembly](../../../docs/framework/configure-apps/specify-assembly-location.md).  
+ <span data-ttu-id="149b3-112">Per informazioni su come specificare una base di codice, vedere [specificando il percorso di un Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md).</span><span class="sxs-lookup"><span data-stu-id="149b3-112">To learn how to specify a code base, see [Specifying an Assembly's Location](../../../docs/framework/configure-apps/specify-assembly-location.md).</span></span>  
   
-## Creazione dell'assembly dei criteri editore  
- Utilizzare [Assembly Linker \(Al.exe\)](../../../docs/framework/tools/al-exe-assembly-linker.md) per creare l'assembly dei criteri editore.  
+## <a name="creating-the-publisher-policy-assembly"></a><span data-ttu-id="149b3-113">Creazione di Assembly dei criteri editore</span><span class="sxs-lookup"><span data-stu-id="149b3-113">Creating the Publisher Policy Assembly</span></span>  
+ <span data-ttu-id="149b3-114">Utilizzare il [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) per creare l'assembly dei criteri editore.</span><span class="sxs-lookup"><span data-stu-id="149b3-114">Use the [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) to create the publisher policy assembly.</span></span>  
   
-#### Per creare un assembly dei criteri editore  
+#### <a name="to-create-a-publisher-policy-assembly"></a><span data-ttu-id="149b3-115">Per creare un assembly dei criteri editore</span><span class="sxs-lookup"><span data-stu-id="149b3-115">To create a publisher policy assembly</span></span>  
   
-1.  Digitare il seguente comando al prompt dei comandi:  
+1.  <span data-ttu-id="149b3-116">Digitare il comando seguente al prompt dei comandi:</span><span class="sxs-lookup"><span data-stu-id="149b3-116">Type the following command at the command prompt:</span></span>  
   
-     **al \/link:** *publisherPolicyFile* **\/out:** *publisherPolicyAssemblyFile* **\/keyfile:** *keyPairFile* **\/platform:** *processorArchitecture*  
+     <span data-ttu-id="149b3-117">**/link al:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/platform:** *processorArchitecture*</span><span class="sxs-lookup"><span data-stu-id="149b3-117">**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*</span></span>  
   
-     In questo comando:  
+     <span data-ttu-id="149b3-118">In questo comando:</span><span class="sxs-lookup"><span data-stu-id="149b3-118">In this command:</span></span>  
   
-    -   L'argomento *publisherPolicyFile* è il nome del file dei criteri editore.  
+    -   <span data-ttu-id="149b3-119">Il *publisherPolicyFile* argomento è il nome del file dei criteri editore.</span><span class="sxs-lookup"><span data-stu-id="149b3-119">The *publisherPolicyFile* argument is the name of the publisher policy file.</span></span>  
   
-    -   L'argomento *publisherPolicyAssemblyFile* è il nome dell'assembly dei criteri editore risultante da questo comando.  Il nome del file di assembly deve seguire il formato:  
+    -   <span data-ttu-id="149b3-120">Il *publisherPolicyAssemblyFile* argomento è il nome dell'assembly dei criteri editore risultante da questo comando.</span><span class="sxs-lookup"><span data-stu-id="149b3-120">The *publisherPolicyAssemblyFile* argument is the name of the publisher policy assembly that results from this command.</span></span> <span data-ttu-id="149b3-121">Il nome del file di assembly deve seguire il formato:</span><span class="sxs-lookup"><span data-stu-id="149b3-121">The assembly file name must follow the format:</span></span>  
   
-         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         <span data-ttu-id="149b3-122">**criteri.**</span><span class="sxs-lookup"><span data-stu-id="149b3-122">**policy.**</span></span> <span data-ttu-id="149b3-123">*majorNumber* **.**</span><span class="sxs-lookup"><span data-stu-id="149b3-123">*majorNumber* **.**</span></span> <span data-ttu-id="149b3-124">*minorNumber* **.**</span><span class="sxs-lookup"><span data-stu-id="149b3-124">*minorNumber* **.**</span></span> <span data-ttu-id="149b3-125">*mainAssemblyName* **. dll**</span><span class="sxs-lookup"><span data-stu-id="149b3-125">*mainAssemblyName* **.dll**</span></span>  
   
-    -   L'argomento *keyPairFile* è il nome del file che contiene la coppia di chiavi.  È necessario utilizzare la stessa coppia di chiavi per firmare l'assembly e l'assembly dei criteri editore.  
+    -   <span data-ttu-id="149b3-126">Il *keyPairFile* argomento è il nome del file contenente la coppia di chiavi.</span><span class="sxs-lookup"><span data-stu-id="149b3-126">The *keyPairFile* argument is the name of the file containing the key pair.</span></span> <span data-ttu-id="149b3-127">È necessario firmare l'assembly e assembly dei criteri editore con la stessa coppia di chiavi.</span><span class="sxs-lookup"><span data-stu-id="149b3-127">You must sign the assembly and publisher policy assembly with the same key pair.</span></span>  
   
-    -   L'argomento *processorArchitecture* identifica la piattaforma di destinazione di un assembly specifico di un processore,  
+    -   <span data-ttu-id="149b3-128">Il *processorArchitecture* argomento identifica la piattaforma di destinazione da un assembly specifico del processore.</span><span class="sxs-lookup"><span data-stu-id="149b3-128">The *processorArchitecture* argument identifies the platform targeted by a processor-specific assembly.</span></span>  
   
         > [!NOTE]
-        >  La possibilità di utilizzare come destinazione un'architettura specifica di un processore è una nuova funzionalità di .NET Framework versione 2.0.  
+        >  <span data-ttu-id="149b3-129">La possibilità di indirizzare un'architettura di processore specifica è stata introdotta in .NET Framework versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="149b3-129">The ability to target a specific processor architecture is new in the .NET Framework version 2.0.</span></span>  
   
-     Mediante il comando riportato di seguito viene creato un assembly dei criteri editore denominato `policy.1.0.myAssembly` da un file dei criteri editore denominato `pub.config`. Viene inoltre assegnato all'assembly un nome sicuro mediante la coppia di chiavi presente nel file `sgKey.snk` e viene specificata come destinazione dell'assembly l'architettura del processore x86.  
+     <span data-ttu-id="149b3-130">Il comando seguente crea un assembly dei criteri editore chiamato `policy.1.0.myAssembly` da un file dei criteri editore chiamato `pub.config`, assegna un nome sicuro all'assembly mediante la coppia di chiavi nel `sgKey.snk` file e specifica che l'assembly è destinato x86 architettura del processore.</span><span class="sxs-lookup"><span data-stu-id="149b3-130">The following command creates a publisher policy assembly called `policy.1.0.myAssembly` from a publisher policy file called `pub.config`, assigns a strong name to the assembly using the key pair in the `sgKey.snk` file, and specifies that the assembly targets the x86 processor architecture.</span></span>  
   
     ```  
     al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86  
     ```  
   
-     L'assembly dei criteri editore deve corrispondere all'architettura del processore dell'assembly a cui si applica.  Se pertanto il valore <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> dell'assembly è impostato su <xref:System.Reflection.ProcessorArchitecture>, l'assembly dei criteri editore per tale assembly deve essere creato con `/platform:anycpu`.  È necessario specificare un assembly dei criteri editore separato per ogni assembly specifico di un processore.  
+     <span data-ttu-id="149b3-131">L'assembly dei criteri editore deve corrispondere all'architettura di processore dell'assembly a cui si applica.</span><span class="sxs-lookup"><span data-stu-id="149b3-131">The publisher policy assembly must match the processor architecture of the assembly that it applies to.</span></span> <span data-ttu-id="149b3-132">Pertanto, se l'assembly dispone di un <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> valore <xref:System.Reflection.ProcessorArchitecture.MSIL>, l'assembly dei criteri editore per tale assembly deve essere creato con `/platform:anycpu`.</span><span class="sxs-lookup"><span data-stu-id="149b3-132">Thus, if your assembly has a <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> value of <xref:System.Reflection.ProcessorArchitecture.MSIL>, the publisher policy assembly for that assembly must be created with `/platform:anycpu`.</span></span> <span data-ttu-id="149b3-133">È necessario fornire un oggetto separato per ogni assembly specifico del processore assembly dei criteri editore.</span><span class="sxs-lookup"><span data-stu-id="149b3-133">You must provide a separate publisher policy assembly for each processor-specific assembly.</span></span>  
   
-     Come conseguenza di questa regola, per modificare l'architettura del processore per un assembly, è necessario modificare il componente principale o secondario del numero di versione, in modo da poter fornire a un nuovo assembly dei criteri editore l'architettura di processore corretta.  Non è più possibile utilizzare l'assembly dei criteri editore precedente per l'assembly dopo aver specificato un'architettura di processore diversa.  
+     <span data-ttu-id="149b3-134">Una conseguenza di questa regola è che, per modificare l'architettura del processore per un assembly, è necessario modificare il componente principale o secondario del numero di versione, in modo che è possibile fornire un nuovo assembly dei criteri editore con l'architettura del processore corretta.</span><span class="sxs-lookup"><span data-stu-id="149b3-134">A consequence of this rule is that in order to change the processor architecture for an assembly, you must change the major or minor component of the version number, so that you can supply a new publisher policy assembly with the correct processor architecture.</span></span> <span data-ttu-id="149b3-135">L'assembly dei criteri editore precedente non è in grado di soddisfare l'assembly dopo che l'assembly dispone di un'architettura di processore differente.</span><span class="sxs-lookup"><span data-stu-id="149b3-135">The old publisher policy assembly cannot service your assembly once your assembly has a different processor architecture.</span></span>  
   
-     Un'altra conseguenza è che non è possibile utilizzare il linker della versione 2.0 per creare un assembly dei criteri editore per un assembly compilato utilizzando versioni precedenti di .NET Framework, poiché viene specificata l'architettura del processore.  
+     <span data-ttu-id="149b3-136">Un altro motivo, il linker versione 2.0 non può essere utilizzato per creare un assembly dei criteri editore per un assembly compilato con le versioni precedenti di .NET Framework, poiché viene specificata l'architettura del processore.</span><span class="sxs-lookup"><span data-stu-id="149b3-136">Another consequence is that the version 2.0 linker cannot be used to create a publisher policy assembly for an assembly compiled using earlier versions of the .NET Framework, because it always specifies processor architecture.</span></span>  
   
-## Aggiunta dell'assembly dei criteri editore alla Global Assembly Cache  
- Utilizzare lo [strumento Global Assembly Cache \(Gacutil.exe\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) per aggiungere l'assembly dei criteri editore alla Global Assembly Cache.  
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="149b3-137">Aggiunta di Assembly dei criteri editore alla Global Assembly Cache</span><span class="sxs-lookup"><span data-stu-id="149b3-137">Adding the Publisher Policy Assembly to the Global Assembly Cache</span></span>  
+ <span data-ttu-id="149b3-138">Utilizzare il [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) per aggiungere l'assembly dei criteri editore alla global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="149b3-138">Use the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to add the publisher policy assembly to the global assembly cache.</span></span>  
   
-#### Per aggiungere l'assembly dei criteri editore alla Global Assembly Cache  
+#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="149b3-139">Per aggiungere l'assembly dei criteri editore alla global assembly cache</span><span class="sxs-lookup"><span data-stu-id="149b3-139">To add the publisher policy assembly to the global assembly cache</span></span>  
   
-1.  Digitare il seguente comando al prompt dei comandi:  
+1.  <span data-ttu-id="149b3-140">Digitare il comando seguente al prompt dei comandi:</span><span class="sxs-lookup"><span data-stu-id="149b3-140">Type the following command at the command prompt:</span></span>  
   
-     **gacutil \/i**  *publisherPolicyAssemblyFile*  
+     <span data-ttu-id="149b3-141">**gacutil /i***publisherPolicyAssemblyFile* </span><span class="sxs-lookup"><span data-stu-id="149b3-141">**gacutil /i**  *publisherPolicyAssemblyFile*</span></span>  
   
-     Mediante il seguente comando viene aggiunto l'assembly `policy.1.0.myAssembly.dll` alla Global Assembly Cache.  
+     <span data-ttu-id="149b3-142">Il seguente comando aggiunge `policy.1.0.myAssembly.dll` global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="149b3-142">The following command adds `policy.1.0.myAssembly.dll` to the global assembly cache.</span></span>  
   
     ```  
     gacutil /i policy.1.0.myAssembly.dll  
     ```  
   
     > [!IMPORTANT]
-    >  L'assembly dei criteri editore non può essere aggiunto alla Global Assembly Cache a meno che il file dei criteri editore originale non sia contenuto nella stessa directory dell'assembly.  
+    >  <span data-ttu-id="149b3-143">Impossibile aggiungere l'assembly dei criteri editore per global assembly cache, a meno che il file dei criteri editore originale si trova nella stessa directory dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="149b3-143">The publisher policy assembly cannot be added to the global assembly cache unless the original publisher policy file is located in the same directory as the assembly.</span></span>  
   
-## Vedere anche  
- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Configurazione di app](../../../docs/framework/configure-apps/index.md)   
- [Configuring .NET Framework Apps](http://msdn.microsoft.com/it-it/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)   
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)   
- [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="149b3-144">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="149b3-144">See Also</span></span>  
+ [<span data-ttu-id="149b3-145">Programmazione con gli assembly</span><span class="sxs-lookup"><span data-stu-id="149b3-145">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="149b3-146">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="149b3-146">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="149b3-147">Configurazione di applicazioni</span><span class="sxs-lookup"><span data-stu-id="149b3-147">Configuring Apps</span></span>](../../../docs/framework/configure-apps/index.md)  
+ [<span data-ttu-id="149b3-148">Configurazione delle app .NET Framework</span><span class="sxs-lookup"><span data-stu-id="149b3-148">Configuring .NET Framework Apps</span></span>](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [<span data-ttu-id="149b3-149">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="149b3-149">Runtime Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="149b3-150">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="149b3-150">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="149b3-151">Reindirizzamento delle versioni di assembly</span><span class="sxs-lookup"><span data-stu-id="149b3-151">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

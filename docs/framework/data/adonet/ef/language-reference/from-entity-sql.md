@@ -1,169 +1,168 @@
 ---
-title: "FROM (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: FROM (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 51f65896cb54a65756558d846e1fc940de5b9470
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# FROM (Entity SQL)
-Specifica la raccolta usata nelle istruzioni [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md).  
+# <a name="from-entity-sql"></a><span data-ttu-id="a658f-102">FROM (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="a658f-102">FROM (Entity SQL)</span></span>
+<span data-ttu-id="a658f-103">Specifica la raccolta usata nelle [selezionare](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) istruzioni.</span><span class="sxs-lookup"><span data-stu-id="a658f-103">Specifies the collection used in [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) statements.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="a658f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a658f-104">Syntax</span></span>  
   
 ```  
 FROM expression [ ,...n ] as C  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a><span data-ttu-id="a658f-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="a658f-105">Arguments</span></span>  
  `expression`  
- Qualsiasi espressione di query valida che produce una raccolta da usare come origine in un'istruzione `SELECT`.  
+ <span data-ttu-id="a658f-106">Qualsiasi espressione di query valida che produce una raccolta da usare come origine in un'istruzione `SELECT`.</span><span class="sxs-lookup"><span data-stu-id="a658f-106">Any valid query expression that yields a collection to use as a source in a `SELECT` statement.</span></span>  
   
-## Note  
- Una clausola `FROM` è un elenco delimitato da virgole di uno o più elementi della clausola `FROM`.  La clausola `FROM` può essere usata per specificare una o più origini per un'istruzione `SELECT`.  Il tipo più semplice di clausola `FROM` consiste in una singola espressione di query che identifica una raccolta e un alias usati come origine in un'istruzione `SELECT`, come illustrato nell'esempio seguente:  
+## <a name="remarks"></a><span data-ttu-id="a658f-107">Note</span><span class="sxs-lookup"><span data-stu-id="a658f-107">Remarks</span></span>  
+ <span data-ttu-id="a658f-108">Una clausola `FROM` è un elenco delimitato da virgole di uno o più elementi della clausola `FROM`.</span><span class="sxs-lookup"><span data-stu-id="a658f-108">A `FROM` clause is a comma-separated list of one or more `FROM` clause items.</span></span> <span data-ttu-id="a658f-109">La clausola `FROM` può essere usata per specificare una o più origini per un'istruzione `SELECT`.</span><span class="sxs-lookup"><span data-stu-id="a658f-109">The `FROM` clause can be used to specify one or more sources for a `SELECT` statement.</span></span> <span data-ttu-id="a658f-110">Il tipo più semplice di clausola `FROM` consiste in una singola espressione di query che identifica una raccolta e un alias usati come origine in un'istruzione `SELECT`, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="a658f-110">The simplest form of a `FROM` clause is a single query expression that identifies a collection and an alias used as the source in a `SELECT` statement, as illustrated in the following example:</span></span>  
   
  `FROM C as c`  
   
-## Elementi della clausola FROM  
- Ogni elemento della clausola `FROM` si riferisce a una raccolta di origine nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta le classi seguenti di elementi della clausola `FROM`: elementi della clausola `FROM` semplici, elementi della clausola `JOIN FROM` ed elementi della clausola `APPLY FROM` Nelle sezioni seguenti è disponibile una descrizione più dettagliata per ognuno di questi elementi della clausola `FROM`.  
+## <a name="from-clause-items"></a><span data-ttu-id="a658f-111">Elementi della clausola FROM</span><span class="sxs-lookup"><span data-stu-id="a658f-111">FROM Clause Items</span></span>  
+ <span data-ttu-id="a658f-112">Ogni elemento della clausola `FROM` si riferisce a una raccolta di origine nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a658f-112">Each `FROM` clause item refers to a source collection in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a658f-113"> supporta le classi seguenti di elementi della clausola `FROM`: elementi della clausola `FROM` semplici, elementi della clausola `JOIN FROM` ed elementi della clausola `APPLY FROM`</span><span class="sxs-lookup"><span data-stu-id="a658f-113"> supports the following classes of `FROM` clause items: simple `FROM` clause items, `JOIN FROM` clause items, and `APPLY FROM` clause items.</span></span> <span data-ttu-id="a658f-114">Nelle sezioni seguenti è disponibile una descrizione più dettagliata per ognuno di questi elementi della clausola `FROM`.</span><span class="sxs-lookup"><span data-stu-id="a658f-114">Each of these `FROM` clause items is described in more detail in the following sections.</span></span>  
   
-### Elemento della clausola FROM semplice  
- L'elemento della clausola `FROM` più semplice è dato da una singola espressione che identifica una raccolta e un alias.  L'espressione può consistere semplicemente in un set di entità, o subquery, o in qualsiasi altra espressione corrispondente a un tipo di raccolta.  Di seguito è riportato un esempio:  
+### <a name="simple-from-clause-item"></a><span data-ttu-id="a658f-115">Elemento della clausola FROM semplice</span><span class="sxs-lookup"><span data-stu-id="a658f-115">Simple FROM Clause Item</span></span>  
+ <span data-ttu-id="a658f-116">L'elemento della clausola `FROM` più semplice è dato da una singola espressione che identifica una raccolta e un alias.</span><span class="sxs-lookup"><span data-stu-id="a658f-116">The simplest `FROM` clause item is a single expression that identifies a collection and an alias.</span></span> <span data-ttu-id="a658f-117">L'espressione può consistere semplicemente in un set di entità, o subquery, o in qualsiasi altra espressione corrispondente a un tipo di raccolta.</span><span class="sxs-lookup"><span data-stu-id="a658f-117">The expression can simply be an entity set, or a subquery, or any other expression that is a collection type.</span></span> <span data-ttu-id="a658f-118">Di seguito è riportato un esempio:</span><span class="sxs-lookup"><span data-stu-id="a658f-118">The following is an example:</span></span>  
   
 ```  
 LOB.Customers as c  
 ```  
   
- La specifica dell'alias è facoltativa.  Di seguito è riportato un esempio di specifica alternativa per l'elemento della clausola FROM precedente:  
+ <span data-ttu-id="a658f-119">La specifica dell'alias è facoltativa.</span><span class="sxs-lookup"><span data-stu-id="a658f-119">The alias specification is optional.</span></span> <span data-ttu-id="a658f-120">Di seguito è riportato un esempio di specifica alternativa per l'elemento della clausola FROM precedente:</span><span class="sxs-lookup"><span data-stu-id="a658f-120">An alternate specification of the above from clause item could be the following:</span></span>  
   
 ```  
 LOB.Customers  
 ```  
   
- Se non viene specificato alcun alias, in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] viene eseguito un tentativo di generare un alias in base all'espressione della raccolta.  
+ <span data-ttu-id="a658f-121">Se non viene specificato alcun alias, in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] viene eseguito un tentativo di generare un alias in base all'espressione della raccolta.</span><span class="sxs-lookup"><span data-stu-id="a658f-121">If no alias is specified, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] attempts to generate an alias based on the collection expression.</span></span>  
   
-### Elemento della clausola JOIN FROM  
- Un elemento della clausola `JOIN FROM` rappresenta un join tra due elementi della clausola `FROM`.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta cross join, inner join, left e right outer join e full outer join.  Il supporto di questi join presenta caratteristiche analoghe a quelle del supporto offerto da [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  Come in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], i due elementi della clausola `FROM` inclusi nel `JOIN` devono essere indipendenti.  In altre parole, non possono essere correlati.  In questi casi è possibile usare una clausola `CROSS APPLY` o `OUTER APPLY`.  
+### <a name="join-from-clause-item"></a><span data-ttu-id="a658f-122">Elemento della clausola JOIN FROM</span><span class="sxs-lookup"><span data-stu-id="a658f-122">JOIN FROM Clause Item</span></span>  
+ <span data-ttu-id="a658f-123">Un elemento della clausola `JOIN FROM` rappresenta un join tra due elementi della clausola `FROM`.</span><span class="sxs-lookup"><span data-stu-id="a658f-123">A `JOIN FROM` clause item represents a join between two `FROM` clause items.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a658f-124"> supporta cross join, inner join, left e right outer join e full outer join.</span><span class="sxs-lookup"><span data-stu-id="a658f-124"> supports cross joins, inner joins, left and right outer joins, and full outer joins.</span></span> <span data-ttu-id="a658f-125">Il supporto di questi join presenta caratteristiche analoghe a quelle del supporto offerto da [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a658f-125">All these joins are supported similar to the way that they are supported in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span></span> <span data-ttu-id="a658f-126">Come in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], i due elementi della clausola `FROM` inclusi nel `JOIN` devono essere indipendenti.</span><span class="sxs-lookup"><span data-stu-id="a658f-126">As in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], the two `FROM` clause items involved in the `JOIN` must be independent.</span></span> <span data-ttu-id="a658f-127">In altre parole, non possono essere correlati.</span><span class="sxs-lookup"><span data-stu-id="a658f-127">That is, they cannot be correlated.</span></span> <span data-ttu-id="a658f-128">In questi casi è possibile usare una clausola `CROSS APPLY` o `OUTER APPLY`.</span><span class="sxs-lookup"><span data-stu-id="a658f-128">A `CROSS APPLY` or `OUTER APPLY` can be used for these cases.</span></span>  
   
-#### Cross join  
- Un'espressione di query `CROSS JOIN` genera il prodotto cartesiano di due raccolte, come illustrato nell'esempio seguente:  
+#### <a name="cross-joins"></a><span data-ttu-id="a658f-129">Cross join</span><span class="sxs-lookup"><span data-stu-id="a658f-129">Cross Joins</span></span>  
+ <span data-ttu-id="a658f-130">Un'espressione di query `CROSS JOIN` genera il prodotto cartesiano di due raccolte, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="a658f-130">A `CROSS JOIN` query expression produces the Cartesian product of the two collections, as illustrated in the following example:</span></span>  
   
  `FROM C AS c CROSS JOIN D as d`  
   
-#### Inner join  
- Un `INNER JOIN` genera un prodotto cartesiano vincolato di due raccolte, come illustrato nell'esempio seguente:  
+#### <a name="inner-joins"></a><span data-ttu-id="a658f-131">Inner join</span><span class="sxs-lookup"><span data-stu-id="a658f-131">Inner Joins</span></span>  
+ <span data-ttu-id="a658f-132">Un `INNER JOIN` genera un prodotto cartesiano vincolato di due raccolte, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="a658f-132">An `INNER JOIN` produces a constrained Cartesian product of the two collections, as illustrated in the following example:</span></span>  
   
  `FROM C AS c [INNER] JOIN D AS d ON e`  
   
- L'espressione di query precedente elabora una combinazione di ogni elemento della raccolta a sinistra abbinato a ogni elemento della raccolta a destra, in cui la condizione `ON` è vera.  Se non è specificata alcuna condizione `ON`, un `INNER JOIN` degenera in un `CROSS JOIN`.  
+ <span data-ttu-id="a658f-133">L'espressione di query precedente elabora una combinazione di ogni elemento della raccolta a sinistra abbinato a ogni elemento della raccolta a destra, in cui la condizione `ON` è vera.</span><span class="sxs-lookup"><span data-stu-id="a658f-133">The previous query expression processes a combination of every element of the collection on the left paired against every element of the collection on the right, where the `ON` condition is true.</span></span> <span data-ttu-id="a658f-134">Se non è specificata alcuna condizione `ON`, un `INNER JOIN` degenera in un `CROSS JOIN`.</span><span class="sxs-lookup"><span data-stu-id="a658f-134">If no `ON` condition is specified, an `INNER JOIN` degenerates to a `CROSS JOIN`.</span></span>  
   
-#### Left outer join e right outer join  
- Un'espressione di query `OUTER JOIN` genera un prodotto cartesiano vincolato di due raccolte, come illustrato nell'esempio seguente:  
+#### <a name="left-outer-joins-and-right-outer-joins"></a><span data-ttu-id="a658f-135">Left outer join e right outer join</span><span class="sxs-lookup"><span data-stu-id="a658f-135">Left Outer Joins and Right Outer Joins</span></span>  
+ <span data-ttu-id="a658f-136">Un'espressione di query `OUTER JOIN` genera un prodotto cartesiano vincolato di due raccolte, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="a658f-136">An `OUTER JOIN` query expression produces a constrained Cartesian product of the two collections, as illustrated in the following example:</span></span>  
   
  `FROM C AS c LEFT OUTER JOIN D AS d ON e`  
   
- L'espressione di query precedente elabora una combinazione di ogni elemento della raccolta a sinistra abbinato a ogni elemento della raccolta a destra, in cui la condizione `ON` è vera.  Se la condizione `ON` è falsa, l'espressione elabora comunque una sola istanza dell'elemento a sinistra abbinato all'elemento a destra con valore Null.  
+ <span data-ttu-id="a658f-137">L'espressione di query precedente elabora una combinazione di ogni elemento della raccolta a sinistra abbinato a ogni elemento della raccolta a destra, in cui la condizione `ON` è vera.</span><span class="sxs-lookup"><span data-stu-id="a658f-137">The previous query expression processes a combination of every element of the collection on the left paired against every element of the collection on the right, where the `ON` condition is true.</span></span> <span data-ttu-id="a658f-138">Se la condizione `ON` è falsa, l'espressione elabora comunque una sola istanza dell'elemento a sinistra abbinato all'elemento a destra con valore Null.</span><span class="sxs-lookup"><span data-stu-id="a658f-138">If the `ON` condition is false, the expression still processes a single instance of the element on the left paired against the element on the right, with the value null.</span></span>  
   
- Un `RIGHT OUTER JOIN` può essere espresso in modo simile.  
+ <span data-ttu-id="a658f-139">Un `RIGHT OUTER JOIN` può essere espresso in modo simile.</span><span class="sxs-lookup"><span data-stu-id="a658f-139">A `RIGHT OUTER JOIN` may be expressed in a similar manner.</span></span>  
   
-#### Full Outer Join  
- Un `FULL OUTER JOIN` esplicito genera un prodotto cartesiano vincolato di due raccolte, come illustrato nell'esempio seguente:  
+#### <a name="full-outer-joins"></a><span data-ttu-id="a658f-140">Full Outer Join</span><span class="sxs-lookup"><span data-stu-id="a658f-140">Full Outer Joins</span></span>  
+ <span data-ttu-id="a658f-141">Un `FULL OUTER JOIN` esplicito genera un prodotto cartesiano vincolato di due raccolte, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="a658f-141">An explicit `FULL OUTER JOIN` produces a constrained Cartesian product of the two collections as illustrated in the following example:</span></span>  
   
  `FROM C AS c FULL OUTER JOIN D AS d ON e`  
   
- L'espressione di query precedente elabora una combinazione di ogni elemento della raccolta a sinistra abbinato a ogni elemento della raccolta a destra, in cui la condizione `ON` è vera.  Se la condizione `ON` è falsa, l'espressione elabora comunque una sola istanza dell'elemento a sinistra abbinato all'elemento a destra con valore Null.  Elabora inoltre una sola istanza dell'elemento a destra abbinato all'elemento a sinistra con valore Null.  
+ <span data-ttu-id="a658f-142">L'espressione di query precedente elabora una combinazione di ogni elemento della raccolta a sinistra abbinato a ogni elemento della raccolta a destra, in cui la condizione `ON` è vera.</span><span class="sxs-lookup"><span data-stu-id="a658f-142">The previous query expression processes a combination of every element of the collection on the left paired against every element of the collection on the right, where the `ON` condition is true.</span></span> <span data-ttu-id="a658f-143">Se la condizione `ON` è falsa, l'espressione elabora comunque una sola istanza dell'elemento a sinistra abbinato all'elemento a destra con valore Null.</span><span class="sxs-lookup"><span data-stu-id="a658f-143">If the `ON` condition is false, the expression still processes one instance of the element on the left paired against the element on the right, with the value null.</span></span> <span data-ttu-id="a658f-144">Elabora inoltre una sola istanza dell'elemento a destra abbinato all'elemento a sinistra con valore Null.</span><span class="sxs-lookup"><span data-stu-id="a658f-144">It also processes one instance of the element on the right paired against the element on the left, with the value null.</span></span>  
   
 > [!NOTE]
->  Per mantenere la compatibilità con SQL\-92, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] la parola chiave OUTER è facoltativa.  Pertanto, `LEFT JOIN`, `RIGHT JOIN` e `FULL JOIN` sono sinonimi di `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` e `FULL OUTER JOIN`.  
+>  <span data-ttu-id="a658f-145">Per mantenere la compatibilità con SQL-92, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] la parola chiave OUTER è facoltativa.</span><span class="sxs-lookup"><span data-stu-id="a658f-145">To preserve compatibility with SQL-92, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] the OUTER keyword is optional.</span></span> <span data-ttu-id="a658f-146">Pertanto, `LEFT JOIN`, `RIGHT JOIN` e `FULL JOIN` sono sinonimi di `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` e `FULL OUTER JOIN`.</span><span class="sxs-lookup"><span data-stu-id="a658f-146">Therefore, `LEFT JOIN`, `RIGHT JOIN`, and `FULL JOIN` are synonyms for `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, and `FULL OUTER JOIN`.</span></span>  
   
-### Elemento della clausola APPLY  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due tipi di clausola `APPLY`: `CROSS APPLY` e `OUTER APPLY`.  
+### <a name="apply-clause-item"></a><span data-ttu-id="a658f-147">Elemento della clausola APPLY</span><span class="sxs-lookup"><span data-stu-id="a658f-147">APPLY Clause Item</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a658f-148"> supporta due tipi di clausola `APPLY`: `CROSS APPLY` e `OUTER APPLY`.</span><span class="sxs-lookup"><span data-stu-id="a658f-148"> supports two kinds of `APPLY`: `CROSS APPLY` and `OUTER APPLY`.</span></span>  
   
- Una clausola `CROSS APPLY` produce un abbinamento univoco di ogni elemento della raccolta a sinistra con un elemento della raccolta prodotto dalla valutazione dell'espressione a destra.  Con una clausola `CROSS APPLY`, l'espressione a destra dipende dal punto di vista funzionale dall'elemento a sinistra, come illustrato nell'esempio di raccolta associata seguente:  
+ <span data-ttu-id="a658f-149">Una clausola `CROSS APPLY` produce un abbinamento univoco di ogni elemento della raccolta a sinistra con un elemento della raccolta prodotto dalla valutazione dell'espressione a destra.</span><span class="sxs-lookup"><span data-stu-id="a658f-149">A `CROSS APPLY` produces a unique pairing of each element of the collection on the left with an element of the collection produced by evaluating the expression on the right.</span></span> <span data-ttu-id="a658f-150">Con una clausola `CROSS APPLY`, l'espressione a destra dipende dal punto di vista funzionale dall'elemento a sinistra, come illustrato nell'esempio di raccolta associata seguente:</span><span class="sxs-lookup"><span data-stu-id="a658f-150">With a `CROSS APPLY`, the expression on the right is functionally dependent on the element on the left, as illustrated in the following associated collection example:</span></span>  
   
  `SELECT c, f FROM C AS c CROSS APPLY c.Assoc AS f`  
   
- Il comportamento di `CROSS APPLY` è simile a quello dell'elenco di join.  Se l'espressione a destra restituisce una raccolta vuota, `CROSS APPLY` non produce abbinamenti per quell'istanza dell'elemento a sinistra.  
+ <span data-ttu-id="a658f-151">Il comportamento di `CROSS APPLY` è simile a quello dell'elenco di join.</span><span class="sxs-lookup"><span data-stu-id="a658f-151">The behavior of `CROSS APPLY` is similar to the join list.</span></span> <span data-ttu-id="a658f-152">Se l'espressione a destra restituisce una raccolta vuota, `CROSS APPLY` non produce abbinamenti per quell'istanza dell'elemento a sinistra.</span><span class="sxs-lookup"><span data-stu-id="a658f-152">If the expression on the right evaluates to an empty collection, the `CROSS APPLY` produces no pairings for that instance of the element on the left.</span></span>  
   
- Una clausola `OUTER APPLY` è simile a una `CROSS APPLY`, ad eccezione del fatto che viene prodotto un abbinamento anche se l'espressione a destra restituisce una raccolta vuota.  Di seguito viene riportato un esempio di `OUTER APPLY`.  
+ <span data-ttu-id="a658f-153">Una clausola `OUTER APPLY` è simile a una `CROSS APPLY`, ad eccezione del fatto che viene prodotto un abbinamento anche se l'espressione a destra restituisce una raccolta vuota.</span><span class="sxs-lookup"><span data-stu-id="a658f-153">An `OUTER APPLY` resembles a `CROSS APPLY`, except a pairing is still produced even when the expression on the right evaluates to an empty collection.</span></span> <span data-ttu-id="a658f-154">Di seguito viene riportato un esempio di `OUTER APPLY`.</span><span class="sxs-lookup"><span data-stu-id="a658f-154">The following is an example of an `OUTER APPLY`:</span></span>  
   
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  A differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è necessario un passaggio UNNEST esplicito.  
+>  <span data-ttu-id="a658f-155">A differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è necessario un passaggio UNNEST esplicito.</span><span class="sxs-lookup"><span data-stu-id="a658f-155">Unlike in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], there is no need for an explicit unnest step in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>  
   
 > [!NOTE]
->  Gli operatori `CROSS` e `OUTER APPLY` sono stati introdotti in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)].  In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact\-SQL contenenti gli operatori `CROSS APPLY` e\/o `OUTER APPLY`.  Poiché tali operatori non sono supportati da alcuni provider di back\-end, incluse le versioni di [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], non è consentita l'esecuzione di query con tali provider.  
+>  <span data-ttu-id="a658f-156">Gli operatori `CROSS` e `OUTER APPLY` sono stati introdotti in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a658f-156">`CROSS` and `OUTER APPLY` operators were introduced in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)].</span></span> <span data-ttu-id="a658f-157">In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact-SQL contenenti gli operatori `CROSS APPLY` e/o `OUTER APPLY`.</span><span class="sxs-lookup"><span data-stu-id="a658f-157">In some cases, the query pipeline might produce Transact-SQL that contains `CROSS APPLY` and/or `OUTER APPLY` operators.</span></span> <span data-ttu-id="a658f-158">Poiché tali operatori non sono supportati da alcuni provider di back-end, incluse le versioni di [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], non è consentita l'esecuzione di query con tali provider.</span><span class="sxs-lookup"><span data-stu-id="a658f-158">Because some backend providers, including versions of [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], do not support these operators, such queries cannot be executed on these backend providers.</span></span>  
 >   
->  Di seguito sono elencati alcuni degli scenari tipici che potrebbero determinare la presenza degli operatori `CROSS APPLY` e\/o `OUTER APPLY` nella query di output: una subquery correlata con paging, AnyElement su una subquery correlata o su una raccolta prodotta dalla navigazione, query LINQ che usano metodi di raggruppamento che accettano un selettore elemento, una query nella quale viene specificata in modo esplicito una clausola `CROSS APPLY` o `OUTER APPLY`, una query che presenta un costrutto `DEREF` su un costrutto `REF`.  
+>  <span data-ttu-id="a658f-159">Di seguito sono elencati alcuni degli scenari tipici che potrebbero determinare la presenza degli operatori `CROSS APPLY` e/o `OUTER APPLY` nella query di output: una subquery correlata con paging, AnyElement su una subquery correlata o su una raccolta prodotta dalla navigazione, query LINQ che usano metodi di raggruppamento che accettano un selettore elemento, una query nella quale viene specificata in modo esplicito una clausola `CROSS APPLY` o `OUTER APPLY`, una query che presenta un costrutto `DEREF` su un costrutto `REF`.</span><span class="sxs-lookup"><span data-stu-id="a658f-159">Some typical scenarios that might lead to the presence of `CROSS APPLY` and/or `OUTER APPLY` operators in the output query are the following: a correlated subquery with paging; AnyElement over a correlated subquery or over a collection produced by navigation; LINQ queries that use grouping methods that accept an element selector; a query in which a `CROSS APPLY` or an `OUTER APPLY` are explicitly specified; a query that has a `DEREF` construct over a `REF` construct.</span></span>  
   
-## Più raccolte nella clausola FROM  
- La clausola `FROM` può contenere più raccolte separate da virgole.  In questi casi, si presuppone che le raccolte siano unite in join,  come se si trattasse di un CROSS JOIN a n vie.  
+## <a name="multiple-collections-in-the-from-clause"></a><span data-ttu-id="a658f-160">Più raccolte nella clausola FROM</span><span class="sxs-lookup"><span data-stu-id="a658f-160">Multiple Collections in the FROM Clause</span></span>  
+ <span data-ttu-id="a658f-161">La clausola `FROM` può contenere più raccolte separate da virgole.</span><span class="sxs-lookup"><span data-stu-id="a658f-161">The `FROM` clause can contain more than one collection separated by commas.</span></span> <span data-ttu-id="a658f-162">In questi casi, si presuppone che le raccolte siano unite in join,</span><span class="sxs-lookup"><span data-stu-id="a658f-162">In these cases, the collections are assumed to be joined together.</span></span> <span data-ttu-id="a658f-163">come se si trattasse di un CROSS JOIN a n vie.</span><span class="sxs-lookup"><span data-stu-id="a658f-163">Think of these as an n-way CROSS JOIN.</span></span>  
   
- Nell'esempio seguente `C` e `D` sono raccolte indipendenti, ma `c.Names` è dipendente da `C`.  
+ <span data-ttu-id="a658f-164">Nell'esempio seguente, `C` e `D` sono raccolte indipendenti, ma `c.Names` dipende `C`.</span><span class="sxs-lookup"><span data-stu-id="a658f-164">In the following example, `C` and `D` are independent collections, but `c.Names` is dependent on `C`.</span></span>  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
 ```  
   
- L'esempio precedente rappresenta l'equivalente logico dell'esempio seguente.  
+ <span data-ttu-id="a658f-165">L'esempio precedente rappresenta l'equivalente logico dell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="a658f-165">The previous example is logically equivalent to the following example:</span></span>  
   
  `FROM (C AS c JOIN D AS d) CROSS APPLY c.Names AS e`  
   
-## Correlazione sinistra  
- Gli elementi nella clausola `FROM` possono fare riferimento a elementi specificati nelle clausole precedenti.  Nell'esempio seguente `C` e `D` sono raccolte indipendenti, ma `c.Names` è dipendente da `C`:  
+## <a name="left-correlation"></a><span data-ttu-id="a658f-166">Correlazione sinistra</span><span class="sxs-lookup"><span data-stu-id="a658f-166">Left Correlation</span></span>  
+ <span data-ttu-id="a658f-167">Gli elementi nella clausola `FROM` possono fare riferimento a elementi specificati nelle clausole precedenti.</span><span class="sxs-lookup"><span data-stu-id="a658f-167">Items in the `FROM` clause can refer to items specified in earlier clauses.</span></span> <span data-ttu-id="a658f-168">Nell'esempio seguente `C` e `D` sono raccolte indipendenti, ma `c.Names` è dipendente da `C`:</span><span class="sxs-lookup"><span data-stu-id="a658f-168">In the following example, `C` and `D` are independent collections, but `c.Names` is dependent on `C`:</span></span>  
   
 ```  
 from C as c, D as d, c.Names as e  
 ```  
   
- Si tratta dell'equivalente logico di:  
+ <span data-ttu-id="a658f-169">Si tratta dell'equivalente logico di:</span><span class="sxs-lookup"><span data-stu-id="a658f-169">This is logically equivalent to:</span></span>  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
-## Semantics  
- Dal punto di vista logico, si presuppone che le raccolte nella clausola `FROM` facciano parte di un cross join a `n` vie, tranne nel caso di un cross join a una via.  Gli alias nella clausola `FROM` vengono elaborati da sinistra verso destra e vengono aggiunti all'ambito corrente per i riferimenti futuri.  Si presuppone che la clausola `FROM` produca un multiset di righe.  Per ogni elemento della clausola `FROM` sarà presente un campo che rappresenterà un singolo elemento della raccolta in questione.  
+## <a name="semantics"></a><span data-ttu-id="a658f-170">Semantics</span><span class="sxs-lookup"><span data-stu-id="a658f-170">Semantics</span></span>  
+ <span data-ttu-id="a658f-171">Dal punto di vista logico, si presuppone che le raccolte nella clausola `FROM` facciano parte di un cross join a `n` vie, tranne nel caso di un cross join a una via.</span><span class="sxs-lookup"><span data-stu-id="a658f-171">Logically, the collections in the `FROM` clause are assumed to be part of an `n`-way cross join (except in the case of a 1-way cross join).</span></span> <span data-ttu-id="a658f-172">Gli alias nella clausola `FROM` vengono elaborati da sinistra verso destra e vengono aggiunti all'ambito corrente per i riferimenti futuri.</span><span class="sxs-lookup"><span data-stu-id="a658f-172">Aliases in the `FROM` clause are processed left to right, and are added to the current scope for later reference.</span></span> <span data-ttu-id="a658f-173">Si presuppone che la clausola `FROM` produca un multiset di righe.</span><span class="sxs-lookup"><span data-stu-id="a658f-173">The `FROM` clause is assumed to produce a multiset of rows.</span></span> <span data-ttu-id="a658f-174">Per ogni elemento della clausola `FROM` sarà presente un campo che rappresenterà un singolo elemento della raccolta in questione.</span><span class="sxs-lookup"><span data-stu-id="a658f-174">There will be one field for each item in the `FROM` clause that represents a single element from that collection item.</span></span>  
   
- La clausola `FROM` produce logicamente un multiset di righe di tipo Row\(c, d, e\) in cui si presuppone che i campi c, d ed e siano del tipo di elemento `C`, `D` e `c.Names`.  
+ <span data-ttu-id="a658f-175">La clausola `FROM` produce logicamente un multiset di righe di tipo Row(c, d, e) in cui si presuppone che i campi c, d ed e siano del tipo di elemento `C`, `D` e `c.Names`.</span><span class="sxs-lookup"><span data-stu-id="a658f-175">The `FROM` clause logically produces a multiset of rows of type Row(c, d, e) where fields c, d, and e are assumed to be of the element type of `C`, `D`, and `c.Names`.</span></span>  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduce nell'ambito un alias per ogni elemento della clausola `FROM` semplice.  Nel frammento di clausola FROM seguente, ad esempio, i nomi introdotti nell'ambito sono c, d ed e.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a658f-176"> introduce nell'ambito un alias per ogni elemento della clausola `FROM` semplice.</span><span class="sxs-lookup"><span data-stu-id="a658f-176"> introduces an alias for each simple `FROM` clause item in scope.</span></span> <span data-ttu-id="a658f-177">Nel frammento di clausola FROM seguente, ad esempio, i nomi introdotti nell'ambito sono c, d ed e.</span><span class="sxs-lookup"><span data-stu-id="a658f-177">For example, in the following FROM clause snippet, The names introduced into scope are c, d, and e.</span></span>  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] \(a differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]\), la clausola `FROM` introduce solo gli alias nell'ambito.  Tutti i riferimenti alle colonne, o proprietà, di tali raccolte devono essere qualificati con l'alias.  
+ <span data-ttu-id="a658f-178">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (a differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]), la clausola `FROM` introduce solo gli alias nell'ambito.</span><span class="sxs-lookup"><span data-stu-id="a658f-178">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (unlike [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]), the `FROM` clause only introduces the aliases into scope.</span></span> <span data-ttu-id="a658f-179">Tutti i riferimenti alle colonne, o proprietà, di tali raccolte devono essere qualificati con l'alias.</span><span class="sxs-lookup"><span data-stu-id="a658f-179">Any references to columns (properties) of these collections must be qualified with the alias.</span></span>  
   
-## Estrazione delle chiavi da query annidate  
- Non sono supportati determinati tipi di query che richiedono l'estrazione delle chiavi da una query annidata.  Viene ad esempio considerata valida la query seguente:  
+## <a name="pulling-up-keys-from-nested-queries"></a><span data-ttu-id="a658f-180">Estrazione delle chiavi da query annidate</span><span class="sxs-lookup"><span data-stu-id="a658f-180">Pulling Up Keys from Nested Queries</span></span>  
+ <span data-ttu-id="a658f-181">Non sono supportati determinati tipi di query che richiedono l'estrazione delle chiavi da una query annidata.</span><span class="sxs-lookup"><span data-stu-id="a658f-181">Certain types of queries that require pulling up keys from a nested query are not supported.</span></span> <span data-ttu-id="a658f-182">Viene ad esempio considerata valida la query seguente:</span><span class="sxs-lookup"><span data-stu-id="a658f-182">For example, the following query is valid:</span></span>  
   
 ```  
 select c.Orders from Customers as c   
 ```  
   
- L'esempio seguente non è invece considerato valido, in quanto la query annidata non contiene chiavi:  
+ <span data-ttu-id="a658f-183">L'esempio seguente non è invece considerato valido, in quanto la query annidata non contiene chiavi:</span><span class="sxs-lookup"><span data-stu-id="a658f-183">However, the following query is not valid, because the nested query does not have any keys:</span></span>  
   
 ```  
 select {1} from {2, 3}  
 ```  
   
-## Vedere anche  
- [Riferimenti a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [Espressioni di query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)   
- [Tipi strutturati nullable](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="a658f-184">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a658f-184">See Also</span></span>  
+ [<span data-ttu-id="a658f-185">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="a658f-185">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="a658f-186">Espressioni di query</span><span class="sxs-lookup"><span data-stu-id="a658f-186">Query Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
+ [<span data-ttu-id="a658f-187">Tipi strutturati nullable</span><span class="sxs-lookup"><span data-stu-id="a658f-187">Nullable Structured Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

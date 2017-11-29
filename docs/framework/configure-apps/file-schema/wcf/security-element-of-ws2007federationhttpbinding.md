@@ -1,28 +1,36 @@
 ---
-title: "Elemento &lt;security&gt; di &lt;ws2007FederationHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;security&gt; di &lt;ws2007FederationHttpBinding&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-caps.latest.revision: 10
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 79976b015f35bdd71a5f95a018d85c0ba41ce0b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;security&gt; di &lt;ws2007FederationHttpBinding&gt;
-Definisce le impostazioni di sicurezza dell'elemento [\<ws2007FederationHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md).  
+# <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a><span data-ttu-id="2ad27-102">Elemento &lt;security&gt; di &lt;ws2007FederationHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="2ad27-102">&lt;security&gt; element of &lt;ws2007FederationHttpBinding&gt;</span></span>
+<span data-ttu-id="2ad27-103">Definisce le impostazioni di sicurezza di [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="2ad27-103">Defines the security settings of the [\<ws2007FederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) element.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="2ad27-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="2ad27-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2ad27-105">\<associazioni ></span><span class="sxs-lookup"><span data-stu-id="2ad27-105">\<bindings></span></span>  
+<span data-ttu-id="2ad27-106">\<ws2007FederationHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="2ad27-106">\<ws2007FederationHttpBinding></span></span>  
+<span data-ttu-id="2ad27-107">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="2ad27-107">\<binding></span></span>  
+<span data-ttu-id="2ad27-108">\<sicurezza ></span><span class="sxs-lookup"><span data-stu-id="2ad27-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="2ad27-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2ad27-109">Syntax</span></span>  
   
+```xml  
 <ws2007FederationBinding>  
     <binding >  
         <security mode="None/Message/TransportWithMessageCredential">  
@@ -37,44 +45,44 @@ Definisce le impostazioni di sicurezza dell'elemento [\<ws2007FederationHttpBind
 </ws2007FederationBinding>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2ad27-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="2ad27-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="2ad27-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="2ad27-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="2ad27-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="2ad27-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="2ad27-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="2ad27-113">Attribute</span></span>|<span data-ttu-id="2ad27-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2ad27-114">Description</span></span>|  
 |---------------|-----------------|  
-|`mode`|Parametro facoltativo.  Specifica il tipo di sicurezza applicata.  Il valore predefinito è `Message`.  L'attributo è di tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|`mode`|<span data-ttu-id="2ad27-115">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="2ad27-115">Optional.</span></span> <span data-ttu-id="2ad27-116">Specifica il tipo di sicurezza applicata.</span><span class="sxs-lookup"><span data-stu-id="2ad27-116">Specifies the type of security that is applied.</span></span> <span data-ttu-id="2ad27-117">Il valore predefinito è `Message`.</span><span class="sxs-lookup"><span data-stu-id="2ad27-117">The default value is `Message`.</span></span> <span data-ttu-id="2ad27-118">L'attributo è di tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="2ad27-118">This attribute is of type <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span></span>|  
   
-## Attributo mode  
+## <a name="mode-attribute"></a><span data-ttu-id="2ad27-119">Attributo mode</span><span class="sxs-lookup"><span data-stu-id="2ad27-119">mode Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|None|Il messaggio SOAP non viene protetto durante il trasferimento.|  
-|Messaggio|L'integrità, la riservatezza e l'autenticazione server e client sono fornite usando la sicurezza dei messaggi SOAP.  Per impostazione predefinita, il corpo viene crittografato e firmato.  Il servizio deve essere configurato con un certificato.  L'autenticazione client è basata sul token rilasciato al client da un servizio token di sicurezza.|  
-|TransportWithMessageCredential|Integrità, riservatezza e autenticazione server sono fornite tramite HTTPS.  Il servizio deve essere configurato con un certificato.  L'autenticazione client è fornita tramite la sicurezza dei messaggi SOAP ed è basata sul token rilasciato al client da un servizio token di sicurezza.|  
+|<span data-ttu-id="2ad27-120">Valore</span><span class="sxs-lookup"><span data-stu-id="2ad27-120">Value</span></span>|<span data-ttu-id="2ad27-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2ad27-121">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="2ad27-122">None</span><span class="sxs-lookup"><span data-stu-id="2ad27-122">None</span></span>|<span data-ttu-id="2ad27-123">Il messaggio SOAP non viene protetto durante il trasferimento.</span><span class="sxs-lookup"><span data-stu-id="2ad27-123">The SOAP message is not secure during transfer.</span></span>|  
+|<span data-ttu-id="2ad27-124">Messaggio</span><span class="sxs-lookup"><span data-stu-id="2ad27-124">Message</span></span>|<span data-ttu-id="2ad27-125">L'integrità, la riservatezza e l'autenticazione server e client sono fornite usando la sicurezza dei messaggi SOAP.</span><span class="sxs-lookup"><span data-stu-id="2ad27-125">Integrity, confidentiality, server authentication and client authentication are provided using SOAP message security.</span></span> <span data-ttu-id="2ad27-126">Per impostazione predefinita, il corpo viene crittografato e firmato.</span><span class="sxs-lookup"><span data-stu-id="2ad27-126">By default, the body is encrypted and signed.</span></span> <span data-ttu-id="2ad27-127">Il servizio deve essere configurato con un certificato.</span><span class="sxs-lookup"><span data-stu-id="2ad27-127">The service must be configured with a certificate.</span></span> <span data-ttu-id="2ad27-128">L'autenticazione client è basata sul token rilasciato al client da un servizio token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="2ad27-128">Client authentication is based on the token issued to the client by a security token service.</span></span>|  
+|<span data-ttu-id="2ad27-129">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="2ad27-129">TransportWithMessageCredential</span></span>|<span data-ttu-id="2ad27-130">Integrità, riservatezza e autenticazione server sono fornite tramite HTTPS.</span><span class="sxs-lookup"><span data-stu-id="2ad27-130">Integrity, confidentiality and server authentication are provided by HTTPS.</span></span> <span data-ttu-id="2ad27-131">Il servizio deve essere configurato con un certificato.</span><span class="sxs-lookup"><span data-stu-id="2ad27-131">The service must be configured with a certificate.</span></span> <span data-ttu-id="2ad27-132">L'autenticazione client è fornita tramite la sicurezza dei messaggi SOAP ed è basata sul token rilasciato al client da un servizio token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="2ad27-132">Client authentication is provided by means of SOAP message security and is based on the token issued to the client by a security token service.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="2ad27-133">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="2ad27-133">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<messaggio\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Definisce le impostazioni di sicurezza per il messaggio.  L'elemento è di tipo <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|<span data-ttu-id="2ad27-134">Elemento</span><span class="sxs-lookup"><span data-stu-id="2ad27-134">Element</span></span>|<span data-ttu-id="2ad27-135">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2ad27-135">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="2ad27-136">\<messaggio ></span><span class="sxs-lookup"><span data-stu-id="2ad27-136">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|<span data-ttu-id="2ad27-137">Definisce le impostazioni di sicurezza per il messaggio.</span><span class="sxs-lookup"><span data-stu-id="2ad27-137">Defines the settings for the message-level security.</span></span> <span data-ttu-id="2ad27-138">L'elemento è di tipo <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.</span><span class="sxs-lookup"><span data-stu-id="2ad27-138">This element is of type <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="2ad27-139">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="2ad27-139">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<associazione\>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione di [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|<span data-ttu-id="2ad27-140">Elemento</span><span class="sxs-lookup"><span data-stu-id="2ad27-140">Element</span></span>|<span data-ttu-id="2ad27-141">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2ad27-141">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="2ad27-142">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="2ad27-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="2ad27-143">Definisce tutte le funzionalità di associazione di [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="2ad27-143">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## Vedere anche  
- <xref:System.ServiceModel.WSFederationHttpSecurity>   
- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>   
- [Procedura: creare una classe WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)   
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Selezione di un tipo di credenziale](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/it-it/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<associazione\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="2ad27-144">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2ad27-144">See Also</span></span>  
+ <xref:System.ServiceModel.WSFederationHttpSecurity>  
+ <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
+ [<span data-ttu-id="2ad27-145">Procedura: creare una classe WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="2ad27-145">How to: Create a WSFederationHttpBinding</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="2ad27-146">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="2ad27-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="2ad27-147">Selezione di un tipo di credenziale</span><span class="sxs-lookup"><span data-stu-id="2ad27-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="2ad27-148">Associazioni</span><span class="sxs-lookup"><span data-stu-id="2ad27-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="2ad27-149">Configurazione di associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="2ad27-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="2ad27-150">Uso di associazioni per configurare i client e servizi Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="2ad27-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="2ad27-151">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="2ad27-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

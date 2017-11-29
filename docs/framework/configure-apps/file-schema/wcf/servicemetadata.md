@@ -1,137 +1,137 @@
 ---
-title: "&lt;serviceMetadata&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;serviceMetadata&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a771b3b89c9031a011185a579e70767081d20597
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;serviceMetadata&gt;
-Specifica la pubblicazione dei metadati del servizio e delle informazioni associate.  
+# <a name="ltservicemetadatagt"></a><span data-ttu-id="90452-102">&lt;serviceMetadata&gt;</span><span class="sxs-lookup"><span data-stu-id="90452-102">&lt;serviceMetadata&gt;</span></span>
+<span data-ttu-id="90452-103">Specifica la pubblicazione dei metadati del servizio e delle informazioni associate.</span><span class="sxs-lookup"><span data-stu-id="90452-103">Specifies the publication of service metadata and associated information.</span></span>  
   
-## Sintassi  
+<span data-ttu-id="90452-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="90452-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="90452-105">\<i comportamenti ></span><span class="sxs-lookup"><span data-stu-id="90452-105">\<behaviors></span></span>  
+<span data-ttu-id="90452-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="90452-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="90452-107">\<comportamento ></span><span class="sxs-lookup"><span data-stu-id="90452-107">\<behavior></span></span>  
+<span data-ttu-id="90452-108">\<serviceMetadata ></span><span class="sxs-lookup"><span data-stu-id="90452-108">\<serviceMetadata></span></span>  
   
+## <a name="syntax"></a><span data-ttu-id="90452-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="90452-109">Syntax</span></span>  
+  
+```xml
+<serviceMetadata externalMetadataLocation="String"  
+                 httpGetBinding="String" 
+                 httpGetBindingConfiguration="String"  
+                 httpGetEnabled="Boolean" 
+                 httpGetUrl="String" 
+                 httpsGetBinding="String" 
+                 httpsGetBindingConfiguration="String"  
+                 httpsGetEnabled="Boolean"   
+                 httpsGetUrl="String"  
+                 policyVersion="Policy12/Policy15" />  
 ```  
   
-<serviceMetadata   
-    externalMetadataLocation="String"  
-    httpGetBinding=”String”  
-    httpGetBindingConfiguration=”String”  
-    httpGetEnabled="Boolean"   
-    httpGetUrl="String"  
-    httpsGetBinding=”String”  
-    httpsGetBindingConfiguration=”String”  
-    httpsGetEnabled="Boolean"   
-    httpsGetUrl="String"  
-    policyVersion="Policy12/Policy15"/>  
-```  
+## <a name="attributes-and-elements"></a><span data-ttu-id="90452-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="90452-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="90452-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="90452-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+### <a name="attributes"></a><span data-ttu-id="90452-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="90452-112">Attributes</span></span>  
   
-### Attributi  
-  
-|Attributo|Descrizione|  
+|<span data-ttu-id="90452-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="90452-113">Attribute</span></span>|<span data-ttu-id="90452-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="90452-114">Description</span></span>|  
 |---------------|-----------------|  
-|externalMetadataLocation|URI contenente il percorso di un file WSDL. Tale file viene restituito all'utente in risposta a richieste WSDL e MEX al posto del file WSDL generato automaticamente.  Se questo attributo non viene impostato, viene restituito il file WSDL predefinito.  Il valore predefinito è una stringa vuota.|  
-|httpGetBinding|Stringa che specifica il tipo dell'associazione che verrà usata per il recupero di metadati tramite HTTP GET.  Questa impostazione è facoltativa.  Se non viene specificata, verranno usate le associazioni predefinite.<br /><br /> Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>.  La proprietà <xref:System.ServiceModel.Channels.MessageVersion%2A> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
-|httpGetBindingConfiguration|Stringa che imposta il nome dell'associazione specificata nell'attributo `httpGetBinding` che fa riferimento alle informazioni di configurazione aggiuntive di questa associazione.  Lo stesso nome deve essere definito nella sezione `<bindings>`.|  
-|httpGetEnabled|Valore booleano che specifica se pubblicare metadati di servizio per il recupero usando una richiesta HTTP GET.  Il valore predefinito è `false`.<br /><br /> Se l'attributo httpGetUrl non viene specificato, l'indirizzo di pubblicazione dei metadati è l'indirizzo del servizio seguito da "?wsdl".  Ad esempio, se l'indirizzo del servizio è "http:\/\/localhost:8080\/CalculatorService", l'indirizzo di pubblicazione dei metadati tramite una richiesta HTTP GET è "http:\/\/localhost:8080\/CalculatorService?wsdl".<br /><br /> Se questa proprietà è `false` o se l'indirizzo del servizio non è basato su HTTP o HTTPS, l'elemento "?wsdl" viene ignorato.|  
-|httpGetUrl|URI che specifica l'indirizzo di pubblicazione dei metadati per il recupero usando una richiesta HTTP GET.  Se è specificato un URI relativo, verrà considerato come relativo all'indirizzo di base del servizio.|  
-|httpsGetBinding|Stringa che specifica il tipo dell'associazione che verrà usata per il recupero di metadati tramite HTTPS GET.  Questa impostazione è facoltativa.  Se non viene specificata, verranno usate le associazioni predefinite.<br /><br /> Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>.  La proprietà <xref:System.ServiceModel.Channels.MessageVersion%2A> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
-|httpsGetBindingConfiguration|Stringa che imposta il nome dell'associazione specificata nell'attributo `httpsGetBinding` che fa riferimento alle informazioni di configurazione aggiuntive di questa associazione.  Lo stesso nome deve essere definito nella sezione `<bindings>`.|  
-|httpsGetEnabled|Valore booleano che specifica se pubblicare metadati di servizio per il recupero usando una richiesta HTTPS GET.  Il valore predefinito è `false`.<br /><br /> Se l'attributo httpsGetUrl non viene specificato, l'indirizzo di pubblicazione dei metadati è l'indirizzo del servizio seguito da "?wsdl".  Ad esempio, se l'indirizzo del servizio è "https:\/\/localhost:8080\/CalculatorService", l'indirizzo di pubblicazione dei metadati tramite una richiesta HTTPS GET è "https:\/\/localhost:8080\/CalculatorService?wsdl".<br /><br /> Se questa proprietà è `false` o se l'indirizzo del servizio non è basato su HTTP o HTTPS, l'elemento "?wsdl" viene ignorato.|  
-|httpsGetUrl|URI che specifica l'indirizzo di pubblicazione dei metadati per il recupero usando una richiesta HTTPS GET.|  
-|policyVersion|Stringa che indica la versione della specifica WS\-Policy usata.  L'attributo è di tipo <xref:System.ServiceModel.Description.PolicyVersion>.|  
+|<span data-ttu-id="90452-115">externalMetadataLocation</span><span class="sxs-lookup"><span data-stu-id="90452-115">externalMetadataLocation</span></span>|<span data-ttu-id="90452-116">URI contenente il percorso di un file WSDL. Tale file viene restituito all'utente in risposta a richieste WSDL e MEX al posto del file WSDL generato automaticamente.</span><span class="sxs-lookup"><span data-stu-id="90452-116">A Uri that contains the location of a WSDL file, which is returned to the user in response to WSDL and MEX requests instead of the auto-generated WSDL.</span></span> <span data-ttu-id="90452-117">Se questo attributo non viene impostato, viene restituito il file WSDL predefinito.</span><span class="sxs-lookup"><span data-stu-id="90452-117">When this attribute is not set, the default WSDL is returned.</span></span> <span data-ttu-id="90452-118">Il valore predefinito è una stringa vuota.</span><span class="sxs-lookup"><span data-stu-id="90452-118">The default is an empty string.</span></span>|  
+|<span data-ttu-id="90452-119">httpGetBinding</span><span class="sxs-lookup"><span data-stu-id="90452-119">httpGetBinding</span></span>|<span data-ttu-id="90452-120">Stringa che specifica il tipo dell'associazione che verrà usata per il recupero di metadati tramite HTTP GET.</span><span class="sxs-lookup"><span data-stu-id="90452-120">A string that specifies the type of the binding that will be used for metadata retrieval via HTTP GET.</span></span> <span data-ttu-id="90452-121">Questa impostazione è facoltativa.</span><span class="sxs-lookup"><span data-stu-id="90452-121">This setting is optional.</span></span> <span data-ttu-id="90452-122">Se non viene specificata, verranno usate le associazioni predefinite.</span><span class="sxs-lookup"><span data-stu-id="90452-122">If it is not specified, the default bindings will be used.</span></span><br /><br /> <span data-ttu-id="90452-123">Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>.</span><span class="sxs-lookup"><span data-stu-id="90452-123">Only bindings with inner binding elements that support <xref:System.ServiceModel.Channels.IReplyChannel> will be supported.</span></span> <span data-ttu-id="90452-124">La proprietà <xref:System.ServiceModel.Channels.MessageVersion> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span><span class="sxs-lookup"><span data-stu-id="90452-124">Additionally, the <xref:System.ServiceModel.Channels.MessageVersion> property of the binding must be <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span>|  
+|<span data-ttu-id="90452-125">httpGetBindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="90452-125">httpGetBindingConfiguration</span></span>|<span data-ttu-id="90452-126">Stringa che imposta il nome dell'associazione specificata nell'attributo `httpGetBinding` che fa riferimento alle informazioni di configurazione aggiuntive di questa associazione.</span><span class="sxs-lookup"><span data-stu-id="90452-126">A string that sets the name of the binding that is specified in the `httpGetBinding` attribute, which references to the additional configuration information of this binding.</span></span> <span data-ttu-id="90452-127">Lo stesso nome deve essere definito nella sezione `<bindings>`.</span><span class="sxs-lookup"><span data-stu-id="90452-127">The same name must be defined in the `<bindings>` section.</span></span>|  
+|<span data-ttu-id="90452-128">httpGetEnabled</span><span class="sxs-lookup"><span data-stu-id="90452-128">httpGetEnabled</span></span>|<span data-ttu-id="90452-129">Valore booleano che specifica se pubblicare metadati di servizio per il recupero usando una richiesta HTTP GET.</span><span class="sxs-lookup"><span data-stu-id="90452-129">A Boolean value that specifies whether to publish service metadata for retrieval using an HTTP/Get request.</span></span> <span data-ttu-id="90452-130">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="90452-130">The default is `false`.</span></span><br /><br /> <span data-ttu-id="90452-131">Se l'attributo httpGetUrl non viene specificato, l'indirizzo di pubblicazione dei metadati è l'indirizzo del servizio seguito da "?wsdl".</span><span class="sxs-lookup"><span data-stu-id="90452-131">If the httpGetUrl attribute is not specified, the address at which the metadata is published is the service address plus a "?wsdl".</span></span> <span data-ttu-id="90452-132">Ad esempio, se l'indirizzo del servizio è "http://localhost:8080/CalculatorService", l'indirizzo di pubblicazione dei metadati tramite una richiesta HTTP GET è "http://localhost:8080/CalculatorService?wsdl".</span><span class="sxs-lookup"><span data-stu-id="90452-132">For example, if the service address is "http://localhost:8080/CalculatorService", the HTTP/Get metadata address is "http://localhost:8080/CalculatorService?wsdl".</span></span><br /><br /> <span data-ttu-id="90452-133">Se questa proprietà è `false`, o l'indirizzo del servizio non è basato su HTTP o HTTPS, "? wsdl" viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="90452-133">If this property is `false`, or the address of the service is not based on HTTP or HTTPS, "?wsdl" is ignored.</span></span>|  
+|<span data-ttu-id="90452-134">httpGetUrl</span><span class="sxs-lookup"><span data-stu-id="90452-134">httpGetUrl</span></span>|<span data-ttu-id="90452-135">URI che specifica l'indirizzo di pubblicazione dei metadati per il recupero usando una richiesta HTTP GET.</span><span class="sxs-lookup"><span data-stu-id="90452-135">A Uri that specifies the address at which the metadata is published for retrieval using an HTTP/Get request.</span></span> <span data-ttu-id="90452-136">Se è specificato un URI relativo, verrà considerato come relativo all'indirizzo di base del servizio.</span><span class="sxs-lookup"><span data-stu-id="90452-136">If a relative Uri is specified it will be treated as relative to the service’s base address.</span></span>|  
+|<span data-ttu-id="90452-137">httpsGetBinding</span><span class="sxs-lookup"><span data-stu-id="90452-137">httpsGetBinding</span></span>|<span data-ttu-id="90452-138">Stringa che specifica il tipo dell'associazione che verrà usata per il recupero di metadati tramite HTTPS GET.</span><span class="sxs-lookup"><span data-stu-id="90452-138">A string that specifies the type of the binding that will be used for metadata retrieval via HTTPS GET.</span></span> <span data-ttu-id="90452-139">Questa impostazione è facoltativa.</span><span class="sxs-lookup"><span data-stu-id="90452-139">This setting is optional.</span></span> <span data-ttu-id="90452-140">Se non viene specificata, verranno usate le associazioni predefinite.</span><span class="sxs-lookup"><span data-stu-id="90452-140">If it is not specified, the default bindings will be used.</span></span><br /><br /> <span data-ttu-id="90452-141">Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>.</span><span class="sxs-lookup"><span data-stu-id="90452-141">Only bindings with inner binding elements that support <xref:System.ServiceModel.Channels.IReplyChannel> will be supported.</span></span> <span data-ttu-id="90452-142">La proprietà <xref:System.ServiceModel.Channels.MessageVersion> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span><span class="sxs-lookup"><span data-stu-id="90452-142">Additionally, the <xref:System.ServiceModel.Channels.MessageVersion> property of the binding must be <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span>|  
+|<span data-ttu-id="90452-143">httpsGetBindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="90452-143">httpsGetBindingConfiguration</span></span>|<span data-ttu-id="90452-144">Stringa che imposta il nome dell'associazione specificata nell'attributo `httpsGetBinding` che fa riferimento alle informazioni di configurazione aggiuntive di questa associazione.</span><span class="sxs-lookup"><span data-stu-id="90452-144">A string that sets the name of the binding that is specified in the `httpsGetBinding` attribute, which references to the additional configuration information of this binding.</span></span> <span data-ttu-id="90452-145">Lo stesso nome deve essere definito nella sezione `<bindings>`.</span><span class="sxs-lookup"><span data-stu-id="90452-145">The same name must be defined in the `<bindings>` section.</span></span>|  
+|<span data-ttu-id="90452-146">httpsGetEnabled</span><span class="sxs-lookup"><span data-stu-id="90452-146">httpsGetEnabled</span></span>|<span data-ttu-id="90452-147">Valore booleano che specifica se pubblicare metadati di servizio per il recupero usando una richiesta HTTPS GET.</span><span class="sxs-lookup"><span data-stu-id="90452-147">A Boolean value that specifies whether to publish service metadata for retrieval using an HTTPS/Get request.</span></span> <span data-ttu-id="90452-148">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="90452-148">The default is `false`.</span></span><br /><br /> <span data-ttu-id="90452-149">Se l'attributo httpsGetUrl non viene specificato, l'indirizzo di pubblicazione dei metadati è l'indirizzo del servizio seguito da "?wsdl".</span><span class="sxs-lookup"><span data-stu-id="90452-149">If the httpsGetUrl attribute is not specified, the address at which the metadata is published is the service address plus a "?wsdl".</span></span> <span data-ttu-id="90452-150">Ad esempio, se l'indirizzo del servizio è "https://localhost:8080/CalculatorService", l'indirizzo di pubblicazione dei metadati tramite una richiesta HTTPS GET è "https://localhost:8080/CalculatorService?wsdl".</span><span class="sxs-lookup"><span data-stu-id="90452-150">For example, if the service address is "https://localhost:8080/CalculatorService", the HTTP/Get metadata address is "https://localhost:8080/CalculatorService?wsdl".</span></span><br /><br /> <span data-ttu-id="90452-151">Se questa proprietà è `false`, o l'indirizzo del servizio non è basato su HTTP o HTTPS, "? wsdl" viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="90452-151">If this property is `false`, or the address of the service is not based on HTTP or HTTPS, "?wsdl" is ignored.</span></span>|  
+|<span data-ttu-id="90452-152">httpsGetUrl</span><span class="sxs-lookup"><span data-stu-id="90452-152">httpsGetUrl</span></span>|<span data-ttu-id="90452-153">URI che specifica l'indirizzo di pubblicazione dei metadati per il recupero usando una richiesta HTTPS GET.</span><span class="sxs-lookup"><span data-stu-id="90452-153">A Uri that specifies the address at which the metadata is published for retrieval using an HTTPS/Get request.</span></span>|  
+|<span data-ttu-id="90452-154">policyVersion</span><span class="sxs-lookup"><span data-stu-id="90452-154">policyVersion</span></span>|<span data-ttu-id="90452-155">Stringa che indica la versione della specifica WS-Policy usata.</span><span class="sxs-lookup"><span data-stu-id="90452-155">A string that specifies the version of the WS-Policy specification being used.</span></span> <span data-ttu-id="90452-156">L'attributo è di tipo <xref:System.ServiceModel.Description.PolicyVersion>.</span><span class="sxs-lookup"><span data-stu-id="90452-156">This attribute is of type <xref:System.ServiceModel.Description.PolicyVersion>.</span></span>|  
   
-### Elementi figlio  
- None  
+### <a name="child-elements"></a><span data-ttu-id="90452-157">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="90452-157">Child Elements</span></span>  
+ <span data-ttu-id="90452-158">None</span><span class="sxs-lookup"><span data-stu-id="90452-158">None</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="90452-159">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="90452-159">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<comportamento\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
+|<span data-ttu-id="90452-160">Elemento</span><span class="sxs-lookup"><span data-stu-id="90452-160">Element</span></span>|<span data-ttu-id="90452-161">Descrizione</span><span class="sxs-lookup"><span data-stu-id="90452-161">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="90452-162">\<comportamento ></span><span class="sxs-lookup"><span data-stu-id="90452-162">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="90452-163">Specifica un elemento di comportamento.</span><span class="sxs-lookup"><span data-stu-id="90452-163">Specifies a behavior element.</span></span>|  
   
-## Note  
- Questo elemento di configurazione consente di controllare le funzionalità di pubblicazione dei metadati di un servizio.  Per impedire la rivelazione non intenzionale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] disabilita la pubblicazione dei metadati.  Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati \(ad esempio Svcutil.exe\) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione.  Tale elemento di configurazione consente di abilitare questo comportamento di pubblicazione per il servizio.  
+## <a name="remarks"></a><span data-ttu-id="90452-164">Note</span><span class="sxs-lookup"><span data-stu-id="90452-164">Remarks</span></span>  
+ <span data-ttu-id="90452-165">Questo elemento di configurazione consente di controllare le funzionalità di pubblicazione dei metadati di un servizio.</span><span class="sxs-lookup"><span data-stu-id="90452-165">This configuration element allows you to control the metadata publishing features of a service.</span></span> <span data-ttu-id="90452-166">Per impedire la rivelazione non intenzionale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] disabilita la pubblicazione dei metadati.</span><span class="sxs-lookup"><span data-stu-id="90452-166">To prevent unintentional disclosure of potentially sensitive service metadata, the default configuration for [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services disables metadata publishing.</span></span> <span data-ttu-id="90452-167">Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione.</span><span class="sxs-lookup"><span data-stu-id="90452-167">This behavior is secure by default, but also means that you cannot use a metadata import tool (such as Svcutil.exe) to generate the client code required to call the service unless the service’s metadata publishing behavior is explicitly enabled in configuration.</span></span> <span data-ttu-id="90452-168">Tale elemento di configurazione consente di abilitare questo comportamento di pubblicazione per il servizio.</span><span class="sxs-lookup"><span data-stu-id="90452-168">Using this configuration element, you can enable this publishing behavior for your service.</span></span>  
   
- Per un esempio dettagliato del codice di configurazione di questo comportamento, vedere [Comportamento di pubblicazione dei metadati](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).  
+ <span data-ttu-id="90452-169">Per un esempio dettagliato di configurazione di questo comportamento, vedere [il comportamento di pubblicazione dei metadati](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="90452-169">For a detailed example of configuring this behavior, see [Metadata Publishing Behavior](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).</span></span>  
   
- Gli attributi `httpGetBinding` e `httpsGetBinding` facoltativi consentono di configurare le associazioni usate per il recupero di metadati tramite HTTP GET \(o HTTPS GET\).  Se non vengono specificati, per il recupero dei metadati verranno usate le associazioni predefinite \(`HttpTransportBindingElement` per HTTP e `HttpsTransportBindingElement` per HTTPS\) a seconda dei casi.  Si noti che non è possibile usare questi attributi con le associazioni WCF incorporate.  Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>.  La proprietà <xref:System.ServiceModel.Channels.MessageVersion%2A> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
+ <span data-ttu-id="90452-170">Gli attributi `httpGetBinding` e `httpsGetBinding` facoltativi consentono di configurare le associazioni usate per il recupero di metadati tramite HTTP GET (o HTTPS GET).</span><span class="sxs-lookup"><span data-stu-id="90452-170">The optional `httpGetBinding` and `httpsGetBinding` attributes allow you to configure the bindings used for metadata retrieval via HTTP GET (or HTTPS GET).</span></span> <span data-ttu-id="90452-171">Se non vengono specificati, per il recupero dei metadati verranno usate le associazioni predefinite (`HttpTransportBindingElement` per HTTP e `HttpsTransportBindingElement` per HTTPS) a seconda dei casi.</span><span class="sxs-lookup"><span data-stu-id="90452-171">If they are not specified, the default bindings (`HttpTransportBindingElement`, in the case of HTTP and `HttpsTransportBindingElement`, in the case of HTTPS) are used for metadata retrieval as appropriate.</span></span> <span data-ttu-id="90452-172">Si noti che non è possibile usare questi attributi con le associazioni WCF incorporate.</span><span class="sxs-lookup"><span data-stu-id="90452-172">Notice that you cannot use these attributes with the built-in WCF bindings.</span></span> <span data-ttu-id="90452-173">Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>.</span><span class="sxs-lookup"><span data-stu-id="90452-173">Only bindings with inner binding elements that support <xref:System.ServiceModel.Channels.IReplyChannel> will be supported.</span></span> <span data-ttu-id="90452-174">La proprietà <xref:System.ServiceModel.Channels.MessageVersion> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span><span class="sxs-lookup"><span data-stu-id="90452-174">Additionally, the <xref:System.ServiceModel.Channels.MessageVersion> property of the binding must be <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span>  
   
- Per ridurre l'esposizione di un servizio agli utenti malintenzionati, questo trasferimento può essere protetto mediante il meccanismo HTTPS \(ovvero SSL su HTTP\).  A tale scopo, è anzitutto necessario associare un certificato X.509 adatto a una porta specifica del computer che ospita il servizio.  \([!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)\). Aggiungere quindi questo elemento alla configurazione del servizio e impostare l'attributo `httpsGetEnabled` su `true`.  Impostare infine l'attributo `httpsGetUrl` sull'URL dell'endpoint dei metadati del servizio, come illustrato nell'esempio seguente.  
+ <span data-ttu-id="90452-175">Per ridurre l'esposizione di un servizio agli utenti malintenzionati, questo trasferimento può essere protetto mediante il meccanismo HTTPS (ovvero SSL su HTTP).</span><span class="sxs-lookup"><span data-stu-id="90452-175">To reduce the exposure of a service to malicious users, it is possible to secure the transfer using the SSL over HTTP (HTTPS) mechanism.</span></span> <span data-ttu-id="90452-176">A tale scopo, è anzitutto necessario associare un certificato X.509 adatto a una porta specifica del computer che ospita il servizio.</span><span class="sxs-lookup"><span data-stu-id="90452-176">To do so, you must first bind a suitable X.509 certificate to a specific port on the computer that is hosting the service.</span></span> <span data-ttu-id="90452-177">([!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Aggiungere quindi questo elemento alla configurazione del servizio e impostare l'attributo `httpsGetEnabled` su `true`.</span><span class="sxs-lookup"><span data-stu-id="90452-177">([!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Second, add this element to the service configuration and set the `httpsGetEnabled` attribute to `true`.</span></span> <span data-ttu-id="90452-178">Impostare infine l'attributo `httpsGetUrl` sull'URL dell'endpoint dei metadati del servizio, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="90452-178">Finally, set the `httpsGetUrl` attribute to the URL of the service metadata endpoint, as shown in the following example.</span></span>  
   
-```  
+```xml
 <behaviors>  
- <serviceBehaviors>  
-  <behavior name="NewBehavior">  
-    <serviceMetadata httpsGetEnabled="true"   
-     httpsGetUrl="https://myComputerName/myEndpoint" />  
-  </behavior>  
- </serviceBehaviors>  
+  <serviceBehaviors>  
+    <behavior name="NewBehavior">  
+      <serviceMetadata httpsGetEnabled="true"   
+                       httpsGetUrl="https://myComputerName/myEndpoint" />  
+    </behavior>  
+  </serviceBehaviors>  
 </behaviors>  
 ```  
   
-## Esempio  
- L'esempio seguente configura un servizio per esporre metadati tramite l'elemento \<serviceMetadata\>.  Viene inoltre configurato un endpoint per esporre il contratto `IMetadataExchange` come un'implementazione di un protocollo WS\-MetadataExchange \(MEX\).  Nell'esempio viene usata l'associazione `mexHttpBinding`, ovvero un'utile associazione standard equivalente all'associazione `wsHttpBinding` con la modalità di sicurezza impostata su `None`.  Nell'endpoint viene usato un indirizzo relativo "mex" che, quando risolto rispetto all'indirizzo di base dei servizi, produce l'indirizzo di endpoint "http:\/\/localhost\/servicemodelsamples\/service.svc\/mex".  
+## <a name="example"></a><span data-ttu-id="90452-179">Esempio</span><span class="sxs-lookup"><span data-stu-id="90452-179">Example</span></span>  
+ <span data-ttu-id="90452-180">L'esempio seguente configura un servizio per esporre metadati tramite il \<serviceMetadata > elemento.</span><span class="sxs-lookup"><span data-stu-id="90452-180">The following example configure a service to expose metadata by using the \<serviceMetadata> element.</span></span> <span data-ttu-id="90452-181">Viene inoltre configurato un endpoint per esporre il contratto `IMetadataExchange` come un'implementazione di un protocollo WS-MetadataExchange (MEX).</span><span class="sxs-lookup"><span data-stu-id="90452-181">It also configures an endpoint to expose the `IMetadataExchange` contract as an implementation of a WS-MetadataExchange (MEX) protocol.</span></span> <span data-ttu-id="90452-182">Nell'esempio viene usata l'associazione `mexHttpBinding`, ovvero un'utile associazione standard equivalente all'associazione `wsHttpBinding` con la modalità di sicurezza impostata su `None`.</span><span class="sxs-lookup"><span data-stu-id="90452-182">The example uses the `mexHttpBinding`, which is a convenience standard binding that is equivalent to the `wsHttpBinding` with the security mode set to `None`.</span></span> <span data-ttu-id="90452-183">Nell'endpoint viene usato un indirizzo relativo "mex" che, quando risolto rispetto all'indirizzo di base dei servizi, produce l'indirizzo di endpoint "http://localhost/servicemodelsamples/service.svc/mex".</span><span class="sxs-lookup"><span data-stu-id="90452-183">A relative address of "mex" is used in the endpoint, which when resolved against the services base address results in an endpoint address of http://localhost/servicemodelsamples/service.svc/mex.</span></span>  
   
-```  
+```xml
 <configuration>  
-<system.serviceModel>  
-  <services>  
-    <service   
-        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-        behaviorConfiguration="CalculatorServiceBehavior">  
-      <!-- This endpoint is exposed at the base address provided by the host: http://localhost/servicemodelsamples/service.svc  -->  
-      <endpoint address=""  
-                binding="wsHttpBinding"  
-                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-      <!-- the mex endpoint is exposed at http://localhost/servicemodelsamples/service.svc/mex   
-           To expose the IMetadataExchange contract, you   
-           must enable the serviceMetadata behavior as demonstrated below -->  
-      <endpoint address="mex"  
-                binding="mexHttpBinding"  
-                contract="IMetadataExchange" />  
-    </service>  
-  </services>  
-  
-  <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
-  <behaviors>  
-    <serviceBehaviors>  
-      <behavior name="CalculatorServiceBehavior">  
-        <!-- The serviceMetadata behavior publishes metadata through   
-             the IMetadataExchange contract. When this behavior is   
-             present, you can expose this contract through an endpoint   
-             as shown above. Setting httpGetEnabled to true publishes   
-             the service's WSDL at the <baseaddress>?wsdl  
-             eg. http://localhost/servicemodelsamples/service.svc?wsdl -->  
-        <serviceMetadata httpGetEnabled="True"/>  
-        <serviceDebug includeExceptionDetailInFaults="False" />  
-      </behavior>  
-    </serviceBehaviors>  
-  </behaviors>  
-  
-</system.serviceModel>  
-  
+  <system.serviceModel>  
+    <services>  
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService" 
+               behaviorConfiguration="CalculatorServiceBehavior">  
+        <!-- This endpoint is exposed at the base address provided by the host: http://localhost/servicemodelsamples/service.svc -->  
+        <endpoint address=""  
+                  binding="wsHttpBinding"  
+                  contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+        <!-- The mex endpoint is exposed at http://localhost/servicemodelsamples/service.svc/mex   
+             To expose the IMetadataExchange contract, you must enable the serviceMetadata behavior as demonstrated below. -->  
+        <endpoint address="mex"  
+                  binding="mexHttpBinding"  
+                  contract="IMetadataExchange" />  
+      </service>  
+    </services>  
+
+    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
+    <behaviors>  
+      <serviceBehaviors>  
+        <behavior name="CalculatorServiceBehavior">  
+          <!-- The serviceMetadata behavior publishes metadata through   
+               the IMetadataExchange contract. When this behavior is   
+               present, you can expose this contract through an endpoint   
+               as shown above. Setting httpGetEnabled to true publishes   
+               the service's WSDL at the <baseaddress>?wsdl  
+               eg. http://localhost/servicemodelsamples/service.svc?wsdl -->  
+          <serviceMetadata httpGetEnabled="True"/>  
+          <serviceDebug includeExceptionDetailInFaults="False" />  
+        </behavior>  
+      </serviceBehaviors>  
+    </behaviors>
+  </system.serviceModel>  
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>   
- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Comportamento di pubblicazione dei metadati](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+## <a name="see-also"></a><span data-ttu-id="90452-184">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="90452-184">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
+ [<span data-ttu-id="90452-185">Comportamenti di sicurezza</span><span class="sxs-lookup"><span data-stu-id="90452-185">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="90452-186">Comportamento di pubblicazione dei metadati</span><span class="sxs-lookup"><span data-stu-id="90452-186">Metadata Publishing Behavior</span></span>](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)

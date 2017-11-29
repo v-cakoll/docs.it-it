@@ -1,69 +1,71 @@
 ---
-title: "Elemento &lt;cryptoNameMapping&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoNameMapping> (elemento)"
-  - "cryptoNameMapping (elemento)"
+title: '&lt;cryptoNameMapping&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping
+helpviewer_keywords:
+- <cryptoNameMapping> element
+- cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 2156c6441190b530c48a70e67e93e4806d20b199
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;cryptoNameMapping&gt;
-Contiene i mapping delle classi sui nomi descrittivi.  
+# <a name="ltcryptonamemappinggt-element"></a><span data-ttu-id="2d1ce-102">&lt;cryptoNameMapping&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="2d1ce-102">&lt;cryptoNameMapping&gt; Element</span></span>
+<span data-ttu-id="2d1ce-103">Contiene i mapping di classi e nomi descrittivi.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-103">Contains mappings of classes to friendly names.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="2d1ce-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2d1ce-104">\<configuration></span></span>  
+<span data-ttu-id="2d1ce-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="2d1ce-105">\<mscorlib></span></span>  
+<span data-ttu-id="2d1ce-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="2d1ce-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="2d1ce-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="2d1ce-107">\<cryptoNameMapping></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="2d1ce-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2d1ce-108">Syntax</span></span>  
   
-      <cryptoNameMapping>   
+```xml  
+      <cryptoNameMapping>   
 </cryptoNameMapping>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2d1ce-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="2d1ce-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="2d1ce-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
- Nessuno.  
+### <a name="attributes"></a><span data-ttu-id="2d1ce-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="2d1ce-111">Attributes</span></span>  
+ <span data-ttu-id="2d1ce-112">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-112">None.</span></span>  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="2d1ce-113">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="2d1ce-113">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`cryptoClasses`|Contiene un elenco delle classi di crittografia per le quali è stato eseguito il mapping su un nome descrittivo nell'elemento **\<nameEntry\>**.|  
-|`nameEntry`|Esegue il mapping del nome di una classe su un nome di algoritmo descrittivo consentendo l'uso di più nomi descrittivi per un'unica classe.|  
+|<span data-ttu-id="2d1ce-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="2d1ce-114">Element</span></span>|<span data-ttu-id="2d1ce-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2d1ce-115">Description</span></span>|  
+|-------------|-----------------|  
+|`cryptoClasses`|<span data-ttu-id="2d1ce-116">Contiene un elenco delle classi di crittografia per le quali è stato eseguito il mapping a un nome descrittivo nell'elemento **\<nameEntry>**.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-116">Contains a list of cryptography classes that have a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
+|`nameEntry`|<span data-ttu-id="2d1ce-117">Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-117">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="2d1ce-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="2d1ce-118">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`cryptographySettings`|Contiene le impostazioni di crittografia.|  
-|`cryptoNameMapping`|Contiene i mapping delle classi sui nomi descrittivi.|  
-|`mscorlib`|Contiene l'elemento \<cryptographySettings\>.|  
+|<span data-ttu-id="2d1ce-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="2d1ce-119">Element</span></span>|<span data-ttu-id="2d1ce-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2d1ce-120">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="2d1ce-121">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="2d1ce-122">Contiene le impostazioni di crittografia.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-122">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="2d1ce-123">Contiene i mapping di classi e nomi descrittivi.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-123">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="2d1ce-124">Contiene il \<cryptographySettings > elemento.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-124">Contains the \<cryptographySettings> element.</span></span>|  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'elemento **\<cryptoNameMapping\>** per fare riferimento a una classe di crittografia e configurare il runtime.  È quindi possibile passare la stringa "RSA" al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> e utilizzare il metodo <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un oggetto `MyCryptoRSAClass`.  
+## <a name="example"></a><span data-ttu-id="2d1ce-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="2d1ce-125">Example</span></span>  
+ <span data-ttu-id="2d1ce-126">Nell'esempio seguente viene illustrato come utilizzare il  **\<cryptoNameMapping >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-126">The following example shows how to use the **\<cryptoNameMapping>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="2d1ce-127">È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e utilizzare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un `MyCryptoRSAClass` oggetto.</span><span class="sxs-lookup"><span data-stu-id="2d1ce-127">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -82,8 +84,8 @@ Contiene i mapping delle classi sui nomi descrittivi.
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)   
- [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="2d1ce-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2d1ce-128">See Also</span></span>  
+ [<span data-ttu-id="2d1ce-129">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="2d1ce-129">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="2d1ce-130">Schema delle impostazioni di crittografia</span><span class="sxs-lookup"><span data-stu-id="2d1ce-130">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="2d1ce-131">Servizi di crittografia</span><span class="sxs-lookup"><span data-stu-id="2d1ce-131">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="2d1ce-132">Configurazione di classi di crittografia</span><span class="sxs-lookup"><span data-stu-id="2d1ce-132">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

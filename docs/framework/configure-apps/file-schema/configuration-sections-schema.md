@@ -1,55 +1,43 @@
 ---
-title: "Schema delle sezioni di configurazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "schema di configurazione [.NET Framework], impostazioni personalizzate nei file di configurazione"
-  - "sezioni di configurazione [.NET Framework]"
-  - "impostazioni di configurazione [.NET Framework], personalizzati"
-  - "elementi personalizzati"
-  - "elementi [.NET Framework], impostazioni personalizzate nei file di configurazione"
-  - "impostazioni di configurazione di schema"
+title: Schema delle sezioni di configurazione
+ms.date: 05/02/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration settings [.NET Framework], custom
+- schema configuration settings
+- configuration sections [.NET Framework]
+- custom elements
+- configuration schema [.NET Framework], custom settings in configuration files
+- elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: guardrex
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c668cf3d2f2c0bcffda185cea01edfb9e55c6d6c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Schema delle sezioni di configurazione
-Nello schema delle sezioni di configurazione sono contenuti gli elementi che consentono di inserire le impostazioni personalizzate nei file di configurazione.  
-  
- [\<configuration\>](../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-  
- [\<configSections\>](http://msdn.microsoft.com/it-it/8a5cbc84-0257-4c2e-80a9-a064fe7c896b)  
-  
- [\<clear\>](http://msdn.microsoft.com/it-it/b0ce3c91-89fa-4bb5-a995-30e21a61036b)  
-  
- [\<remove\>](http://msdn.microsoft.com/it-it/6e2b2d45-113d-4d10-9f8e-0b15fc86bb98)  
-  
- [\<section\>](http://msdn.microsoft.com/it-it/51c9d658-c275-4ab2-aa66-c5d5b5289570)  
-  
- [\<sectionGroup\>](http://msdn.microsoft.com/it-it/45fbeb5c-26c7-4c68-b732-b3f1e62c53bf)  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[Elemento clear per configSections \(schema delle impostazioni generali\)](http://msdn.microsoft.com/it-it/b0ce3c91-89fa-4bb5-a995-30e21a61036b)|Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza.|  
-|[Elemento configSections \(schema delle impostazioni generali\)](http://msdn.microsoft.com/it-it/8a5cbc84-0257-4c2e-80a9-a064fe7c896b)|Contiene le dichiarazioni delle sezioni di configurazione e degli spazi dei nomi.|  
-|[Elemento remove per configSections \(schema delle impostazioni generali\)](http://msdn.microsoft.com/it-it/6e2b2d45-113d-4d10-9f8e-0b15fc86bb98)|Rimuove una sezione o un gruppo di sezioni già definito.|  
-|[Elemento section per configSections \(schema delle impostazioni generali\)](http://msdn.microsoft.com/it-it/51c9d658-c275-4ab2-aa66-c5d5b5289570)|Contiene una dichiarazione della sezione di configurazione.|  
-|[Elemento sectionGroup per configSections \(schema delle impostazioni generali\)](http://msdn.microsoft.com/it-it/45fbeb5c-26c7-4c68-b732-b3f1e62c53bf)|Definisce uno spazio dei nomi per le sezioni di configurazione.|  
-  
-## Vedere anche  
- [Schema dei file di configurazione](../../../../docs/framework/configure-apps/file-schema/index.md)
+# <a name="configuration-sections-schema"></a><span data-ttu-id="829e0-102">Schema delle sezioni di configurazione</span><span class="sxs-lookup"><span data-stu-id="829e0-102">Configuration sections schema</span></span>
+
+<span data-ttu-id="829e0-103">Lo schema di sezioni di configurazione contiene elementi che definiscono le impostazioni personalizzate nei file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="829e0-103">The configuration sections schema contains elements that define custom settings in configuration files.</span></span> <span data-ttu-id="829e0-104">Per informazioni generali sui file di configurazione e gli schemi, vedere [schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="829e0-104">For general information on configuration files and schemas, see [Configuration file schema for the .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).</span></span>
+
+<span data-ttu-id="829e0-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="829e0-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="829e0-106">[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="829e0-106">[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="829e0-107">[**\<Deselezionare >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="829e0-107">[**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) </span></span>  
+<span data-ttu-id="829e0-108">[**\<rimuovere >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="829e0-108">[**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) </span></span>  
+<span data-ttu-id="829e0-109">[**\<sezione >**](~/docs/framework/configure-apps/file-schema/section-element.md) </span><span class="sxs-lookup"><span data-stu-id="829e0-109">[**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) </span></span>  
+[<span data-ttu-id="829e0-110">**\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="829e0-110">**\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+
+|     | <span data-ttu-id="829e0-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="829e0-111">Description</span></span> |
+| --- | ----------- |
+| [<span data-ttu-id="829e0-112">**\<Deselezionare >** per  **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="829e0-112">**\<clear>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="829e0-113">Cancella tutte le sezioni definite in precedenza e i gruppi di sezioni.</span><span class="sxs-lookup"><span data-stu-id="829e0-113">Clears all previously defined sections and section groups.</span></span> |
+| [<span data-ttu-id="829e0-114">**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="829e0-114">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="829e0-115">Cancella tutte le sezioni definite in precedenza e i gruppi di sezioni.</span><span class="sxs-lookup"><span data-stu-id="829e0-115">Clears all previously defined sections and section groups.</span></span> |
+| [<span data-ttu-id="829e0-116">**\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="829e0-116">**\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="829e0-117">Contiene le dichiarazioni dello spazio dei nomi e di sezione di configurazione.</span><span class="sxs-lookup"><span data-stu-id="829e0-117">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="829e0-118">**\<rimuovere >** per  **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="829e0-118">**\<remove>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | <span data-ttu-id="829e0-119">Rimuove una sezione predefinita o il gruppo di sezione.</span><span class="sxs-lookup"><span data-stu-id="829e0-119">Removes a predefined section or section group.</span></span> |
+| [<span data-ttu-id="829e0-120">**\<sezione >** per  **\<configSections >** e  **\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="829e0-120">**\<section>** for **\<configSections>** and **\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/section-element.md) | <span data-ttu-id="829e0-121">Contiene una dichiarazione di sezione di configurazione.</span><span class="sxs-lookup"><span data-stu-id="829e0-121">Contains a configuration section declaration.</span></span> |
+| [<span data-ttu-id="829e0-122">**\<sectionGroup >** per  **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="829e0-122">**\<sectionGroup>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="829e0-123">Definisce uno spazio dei nomi per le sezioni di configurazione.</span><span class="sxs-lookup"><span data-stu-id="829e0-123">Defines a namespace for configuration sections.</span></span> |

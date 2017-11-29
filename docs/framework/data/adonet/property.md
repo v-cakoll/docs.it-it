@@ -1,53 +1,56 @@
 ---
-title: "propriet&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "proprietà"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c052c53488fde0ea767a46f51ef349dd6a7d2766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# propriet&#224;
-Le *proprietà* sono i blocchi predefiniti fondamentali dei [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) e dei [tipi complessi](../../../../docs/framework/data/adonet/complex-type.md).  Le proprietà definiscono la forma e le caratteristiche dei dati che saranno contenuti in un'istanza di un tipo di entità o in un'istanza di un tipo complesso.  Le proprietà in un modello concettuale sono analoghe alle proprietà definite su una classe.  Nello stesso modo in cui le proprietà su una classe definiscono la forma della classe e forniscono informazioni su oggetti, le proprietà in un modello concettuale definiscono la forma di un tipo di entità e forniscono informazioni su istanze del tipo di entità.  
+# <a name="property"></a><span data-ttu-id="e5276-102">proprietà</span><span class="sxs-lookup"><span data-stu-id="e5276-102">property</span></span>
+<span data-ttu-id="e5276-103">*Proprietà* sono gli elementi fondamentali di [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) e [tipi complessi](../../../../docs/framework/data/adonet/complex-type.md).</span><span class="sxs-lookup"><span data-stu-id="e5276-103">*Properties* are the fundamental building blocks of [entity types](../../../../docs/framework/data/adonet/entity-type.md) and [complex types](../../../../docs/framework/data/adonet/complex-type.md).</span></span> <span data-ttu-id="e5276-104">Le proprietà definiscono la forma e le caratteristiche dei dati che saranno contenuti in un'istanza di un tipo di entità o in un'istanza di un tipo complesso.</span><span class="sxs-lookup"><span data-stu-id="e5276-104">Properties define the shape and characteristics of data that an entity type instance or complex type instance will contain.</span></span> <span data-ttu-id="e5276-105">Le proprietà in un modello concettuale sono analoghe alle proprietà definite su una classe.</span><span class="sxs-lookup"><span data-stu-id="e5276-105">Properties in a conceptual model are analogous to properties defined on a class.</span></span> <span data-ttu-id="e5276-106">Nello stesso modo in cui le proprietà su una classe definiscono la forma della classe e forniscono informazioni su oggetti, le proprietà in un modello concettuale definiscono la forma di un tipo di entità e forniscono informazioni su istanze del tipo di entità.</span><span class="sxs-lookup"><span data-stu-id="e5276-106">In the same way that properties on a class define the shape of the class and carry information about objects, properties in a conceptual model define the shape of an entity type and carry information about entity type instances.</span></span>  
   
 > [!NOTE]
->  Le proprietà descritte in questo argomento sono diverse dalle proprietà di navigazione.  Per altre informazioni, vedere [proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md).  
+>  <span data-ttu-id="e5276-107">Le proprietà descritte in questo argomento sono diverse dalle proprietà di navigazione.</span><span class="sxs-lookup"><span data-stu-id="e5276-107">Properties, as described in this topic, are different from navigation properties.</span></span> <span data-ttu-id="e5276-108">Per ulteriori informazioni, vedere [le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md).</span><span class="sxs-lookup"><span data-stu-id="e5276-108">For more information, see [navigation properties](../../../../docs/framework/data/adonet/navigation-property.md).</span></span>  
   
- Una definizione di proprietà contiene le informazioni seguenti:  
+ <span data-ttu-id="e5276-109">Una definizione di proprietà contiene le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="e5276-109">A property definition contains the following information:</span></span>  
   
--   Un nome di proprietà  \(obbligatorio\).  
+-   <span data-ttu-id="e5276-110">Un nome di proprietà</span><span class="sxs-lookup"><span data-stu-id="e5276-110">A property name.</span></span> <span data-ttu-id="e5276-111">(obbligatorio).</span><span class="sxs-lookup"><span data-stu-id="e5276-111">(Required)</span></span>  
   
--   Un tipo di proprietà  \(obbligatorio\).  
+-   <span data-ttu-id="e5276-112">Un tipo di proprietà</span><span class="sxs-lookup"><span data-stu-id="e5276-112">A property type.</span></span> <span data-ttu-id="e5276-113">(obbligatorio).</span><span class="sxs-lookup"><span data-stu-id="e5276-113">(Required)</span></span>  
   
--   Un set di [facet](../../../../docs/framework/data/adonet/facet.md) \(facoltativo\)  
+-   <span data-ttu-id="e5276-114">Un set di [facet](../../../../docs/framework/data/adonet/facet.md).</span><span class="sxs-lookup"><span data-stu-id="e5276-114">A set of [facets](../../../../docs/framework/data/adonet/facet.md).</span></span> <span data-ttu-id="e5276-115">(facoltativo)</span><span class="sxs-lookup"><span data-stu-id="e5276-115">(Optional)</span></span>  
   
- Una proprietà può contenere dati primitivi \(ad esempio una stringa, un Integer o un valore booleano\) o dati strutturati \(ad esempio un tipo complesso\).  Le proprietà di tipo primitivo sono dette anche proprietà scalari.  Per altre informazioni, vedere [Entity Data Model: tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+ <span data-ttu-id="e5276-116">Una proprietà può contenere dati primitivi (ad esempio una stringa, un Integer o un valore booleano) o dati strutturati (ad esempio un tipo complesso).</span><span class="sxs-lookup"><span data-stu-id="e5276-116">A property can contain primitive data (such as a string, an integer, or a Boolean value), or structured data (such as a complex type).</span></span> <span data-ttu-id="e5276-117">Le proprietà di tipo primitivo sono dette anche proprietà scalari.</span><span class="sxs-lookup"><span data-stu-id="e5276-117">Properties that are of primitive type are also called scalar properties.</span></span> <span data-ttu-id="e5276-118">Per ulteriori informazioni, vedere [Entity Data Model: tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="e5276-118">For more information, see [Entity Data Model: Primitive Data Types](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).</span></span>  
   
 > [!NOTE]
->  Un tipo complesso può, di per sé, disporre di proprietà che sono tipi complessi.  
+>  <span data-ttu-id="e5276-119">Un tipo complesso può, di per sé, disporre di proprietà che sono tipi complessi.</span><span class="sxs-lookup"><span data-stu-id="e5276-119">A complex type can, itself, have properties that are complex types.</span></span>  
   
-## Esempio  
- Nel diagramma seguente viene illustrato un modello concettuale con tre tipi di entità: `Book`, `Publisher` e `Author`.  Ogni tipo di entità dispone di diverse proprietà, anche se nel diagramma non sono contenute informazioni sul tipo per ogni proprietà.  Le proprietà che sono [chiavi di entità](../../../../docs/framework/data/adonet/entity-key.md) vengono indicate con \(Key\).  
+## <a name="example"></a><span data-ttu-id="e5276-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="e5276-120">Example</span></span>  
+ <span data-ttu-id="e5276-121">Nel diagramma seguente viene illustrato un modello concettuale con tre tipi di entità: `Book`, `Publisher` e `Author`.</span><span class="sxs-lookup"><span data-stu-id="e5276-121">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span> <span data-ttu-id="e5276-122">Ogni tipo di entità dispone di diverse proprietà, anche se nel diagramma non sono contenute informazioni sul tipo per ogni proprietà.</span><span class="sxs-lookup"><span data-stu-id="e5276-122">Each entity type has several properties, although type information for each property is not conveyed in the diagram.</span></span> <span data-ttu-id="e5276-123">Le proprietà di [le chiavi di entità](../../../../docs/framework/data/adonet/entity-key.md) vengono indicate con (Key).</span><span class="sxs-lookup"><span data-stu-id="e5276-123">Properties that are [entity keys](../../../../docs/framework/data/adonet/entity-key.md) are denoted with (Key).</span></span>  
   
- ![Modello di esempio](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="e5276-124">![Modello di esempio](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="e5276-124">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un linguaggio specifico di dominio detto [CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) \(Conceptual Schema Definition Language\) per definire i modelli concettuali.  Il seguente linguaggio CSDL definisce il tipo di entità `Book` \(come illustrato nel diagramma precedente\) e indica il tipo e il nome di ogni proprietà usando attributi XML.  Un facet facoltativo, `Nullable`, è definito anche tramite un attributo XML.  
+ <span data-ttu-id="e5276-125">Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio (DSL), chiamato linguaggio conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali.</span><span class="sxs-lookup"><span data-stu-id="e5276-125">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="e5276-126">Il seguente linguaggio CSDL definisce il tipo di entità `Book` (come illustrato nel diagramma precedente) e indica il tipo e il nome di ogni proprietà usando attributi XML.</span><span class="sxs-lookup"><span data-stu-id="e5276-126">The following CSDL defines the `Book` entity type (as shown in the diagram above) and indicates the type and name of each property by using XML attributes.</span></span> <span data-ttu-id="e5276-127">Un facet facoltativo, `Nullable`, è definito anche tramite un attributo XML.</span><span class="sxs-lookup"><span data-stu-id="e5276-127">An optional facet, `Nullable`, is also defined by using an XML attribute.</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
- È possibile che una delle proprietà illustrate nel diagramma sia una proprietà di tipo complesso.  La proprietà `Address` sul tipo di entità `Publisher`, ad esempio, potrebbe essere una proprietà di tipo complesso costituita da diverse proprietà scalari, quali `StreetAddress`, `City`, `StateOrProvince`, `Country` e `PostalCode`.  La rappresentazione CSDL di tale tipo complesso sarà come segue:  
+ <span data-ttu-id="e5276-128">È possibile che una delle proprietà illustrate nel diagramma sia una proprietà di tipo complesso.</span><span class="sxs-lookup"><span data-stu-id="e5276-128">It is possible that one of the properties shown in the diagram is a complex type property.</span></span> <span data-ttu-id="e5276-129">La proprietà `Address` sul tipo di entità `Publisher`, ad esempio, potrebbe essere una proprietà di tipo complesso costituita da diverse proprietà scalari, quali `StreetAddress`, `City`, `StateOrProvince`, `Country` e `PostalCode`.</span><span class="sxs-lookup"><span data-stu-id="e5276-129">For example, the `Address` property on the `Publisher` entity type could be a complex type property composed of several scalar properties, such as `StreetAddress`, `City`, `StateOrProvince`, `Country`, and `PostalCode`.</span></span> <span data-ttu-id="e5276-130">La rappresentazione CSDL di tale tipo complesso sarà come segue:</span><span class="sxs-lookup"><span data-stu-id="e5276-130">The CSDL representation of such a complex type would be as follows:</span></span>  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
-## Vedere anche  
- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="e5276-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e5276-131">See Also</span></span>  
+ [<span data-ttu-id="e5276-132">Concetti chiave di Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="e5276-132">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="e5276-133">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="e5276-133">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

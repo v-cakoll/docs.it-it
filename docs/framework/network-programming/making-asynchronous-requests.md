@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, asynchronous access
 - Networking
@@ -19,43 +17,42 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d0ed1eea11049a1e6f026c71a2eb41134f87fd8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="making-asynchronous-requests"></a>Esecuzione di richieste asincrone
-Le classi <xref:System.Net> usano il modello di programmazione asincrona standard di .NET Framework per l'accesso asincrono alle risorse Internet. I metodi <xref:System.Net.WebRequest.BeginGetResponse%2A> e <xref:System.Net.WebRequest.EndGetResponse%2A> della classe <xref:System.Net.WebRequest> avviano e completano richieste asincrone per una risorsa Internet.  
+# <a name="making-asynchronous-requests"></a><span data-ttu-id="3aa04-102">Esecuzione di richieste asincrone</span><span class="sxs-lookup"><span data-stu-id="3aa04-102">Making Asynchronous Requests</span></span>
+<span data-ttu-id="3aa04-103">Le classi <xref:System.Net> usano il modello di programmazione asincrona standard di .NET Framework per l'accesso asincrono alle risorse Internet.</span><span class="sxs-lookup"><span data-stu-id="3aa04-103">The <xref:System.Net> classes use the .NET Framework's standard asynchronous programming model for asynchronous access to Internet resources.</span></span> <span data-ttu-id="3aa04-104">I metodi <xref:System.Net.WebRequest.BeginGetResponse%2A> e <xref:System.Net.WebRequest.EndGetResponse%2A> della classe <xref:System.Net.WebRequest> avviano e completano richieste asincrone per una risorsa Internet.</span><span class="sxs-lookup"><span data-stu-id="3aa04-104">The <xref:System.Net.WebRequest.BeginGetResponse%2A> and <xref:System.Net.WebRequest.EndGetResponse%2A> methods of the <xref:System.Net.WebRequest> class start and complete asynchronous requests for an Internet resource.</span></span>  
   
 > [!NOTE]
->  L'uso di chiamate sincrone in metodi di callback asincroni può causare notevoli riduzioni delle prestazioni. Le richieste Internet effettuate con **WebRequest** e i relativi discendenti devono usare <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> per leggere il flusso restituito dal metodo <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>.  
+>  <span data-ttu-id="3aa04-105">L'uso di chiamate sincrone in metodi di callback asincroni può causare notevoli riduzioni delle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="3aa04-105">Using synchronous calls in asynchronous callback methods can result in severe performance penalties.</span></span> <span data-ttu-id="3aa04-106">Le richieste Internet effettuate con **WebRequest** e i relativi discendenti devono usare <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> per leggere il flusso restituito dal metodo <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3aa04-106">Internet requests made with **WebRequest** and its descendants must use <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> to read the stream returned by the <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> method.</span></span>  
   
- Il codice di esempio seguente dimostra come usare le chiamate asincrone con la classe **WebRequest**. L'esempio è un programma console che accetta un URI dalla riga di comando, richiede la risorsa in corrispondenza dell'URI e quindi stampa i dati nella console non appena ricevuti da Internet.  
+ <span data-ttu-id="3aa04-107">Il codice di esempio seguente dimostra come usare le chiamate asincrone con la classe **WebRequest**.</span><span class="sxs-lookup"><span data-stu-id="3aa04-107">The following sample code demonstrates how to use asynchronous calls with the **WebRequest** class.</span></span> <span data-ttu-id="3aa04-108">L'esempio è un programma console che accetta un URI dalla riga di comando, richiede la risorsa in corrispondenza dell'URI e quindi stampa i dati nella console non appena ricevuti da Internet.</span><span class="sxs-lookup"><span data-stu-id="3aa04-108">The sample is a console program that takes a URI from the command line, requests the resource at the URI, and then prints data to the console as it is received from the Internet.</span></span>  
   
- Il programma definisce due classi per l'uso interno, la classe **RequestState** che passa i dati tra le chiamate asincrone e la classe **ClientGetAsync** che implementa la richiesta asincrona per una risorsa Internet.  
+ <span data-ttu-id="3aa04-109">Il programma definisce due classi per l'uso interno, la classe **RequestState** che passa i dati tra le chiamate asincrone e la classe **ClientGetAsync** che implementa la richiesta asincrona per una risorsa Internet.</span><span class="sxs-lookup"><span data-stu-id="3aa04-109">The program defines two classes for its own use, the **RequestState** class, which passes data across asynchronous calls, and the **ClientGetAsync** class, which implements the asynchronous request to an Internet resource.</span></span>  
   
- La classe **RequestState** mantiene lo stato della richiesta tra le diverse chiamate a metodi asincroni che gestiscono la richiesta. Contiene **WebRequest** e istanze di <xref:System.IO.Stream> che contengono la richiesta corrente per la risorsa e il flusso ricevuto in risposta, un buffer che contiene i dati correntemente ricevuti dalla risorsa Internet e un <xref:System.Text.StringBuilder> che contiene la risposta completa. Viene passato un oggetto **RequestState** come parametro *state* al momento della registrazione del metodo <xref:System.AsyncCallback> con **WebRequest.BeginGetResponse**.  
+ <span data-ttu-id="3aa04-110">La classe **RequestState** mantiene lo stato della richiesta tra le diverse chiamate a metodi asincroni che gestiscono la richiesta.</span><span class="sxs-lookup"><span data-stu-id="3aa04-110">The **RequestState** class preserves the state of the request across calls to the asynchronous methods that service the request.</span></span> <span data-ttu-id="3aa04-111">Contiene **WebRequest** e istanze di <xref:System.IO.Stream> che contengono la richiesta corrente per la risorsa e il flusso ricevuto in risposta, un buffer che contiene i dati correntemente ricevuti dalla risorsa Internet e un <xref:System.Text.StringBuilder> che contiene la risposta completa.</span><span class="sxs-lookup"><span data-stu-id="3aa04-111">It contains **WebRequest** and <xref:System.IO.Stream> instances that contain the current request to the resource and the stream received in response, a buffer that contains the data currently received from the Internet resource, and a <xref:System.Text.StringBuilder> that contains the complete response.</span></span> <span data-ttu-id="3aa04-112">Viene passato un oggetto **RequestState** come parametro *state* al momento della registrazione del metodo <xref:System.AsyncCallback> con **WebRequest.BeginGetResponse**.</span><span class="sxs-lookup"><span data-stu-id="3aa04-112">A **RequestState**is passed as the *state* parameter when the <xref:System.AsyncCallback> method is registered with **WebRequest.BeginGetResponse**.</span></span>  
   
- La classe **ClientGetAsync** implementa una richiesta asincrona per una risorsa Internet e scrive la risposta risultante nella console. Contiene i metodi e le proprietà descritti nell'elenco seguente.  
+ <span data-ttu-id="3aa04-113">La classe **ClientGetAsync** implementa una richiesta asincrona per una risorsa Internet e scrive la risposta risultante nella console.</span><span class="sxs-lookup"><span data-stu-id="3aa04-113">The **ClientGetAsync** class implements an asynchronous request to an Internet resource and writes the resulting response to the console.</span></span> <span data-ttu-id="3aa04-114">Contiene i metodi e le proprietà descritti nell'elenco seguente.</span><span class="sxs-lookup"><span data-stu-id="3aa04-114">It contains the methods and properties described in the following list.</span></span>  
   
--   La proprietà `allDone` contiene un'istanza della classe <xref:System.Threading.ManualResetEvent> che segnala il completamento della richiesta.  
+-   <span data-ttu-id="3aa04-115">La proprietà `allDone` contiene un'istanza della classe <xref:System.Threading.ManualResetEvent> che segnala il completamento della richiesta.</span><span class="sxs-lookup"><span data-stu-id="3aa04-115">The `allDone` property contains an instance of the <xref:System.Threading.ManualResetEvent> class that signals the completion of the request.</span></span>  
   
--   Il metodo `Main()` legge la riga di comando e avvia la richiesta per la risorsa Internet specificata. Crea l'oggetto **WebRequest** `wreq` e l'oggetto **RequestState** `rs`, chiama **BeginGetResponse** per avviare l'elaborazione della richiesta e quindi chiama il metodo `allDone.WaitOne()` in modo che l'applicazione non restituisca il controllo fino al completamento del callback. Dopo la lettura della risposta dalla risorsa Internet, `Main()` la scrive nella console e l'applicazione termina.  
+-   <span data-ttu-id="3aa04-116">Il metodo `Main()` legge la riga di comando e avvia la richiesta per la risorsa Internet specificata.</span><span class="sxs-lookup"><span data-stu-id="3aa04-116">The `Main()` method reads the command line and begins the request for the specified Internet resource.</span></span> <span data-ttu-id="3aa04-117">Crea l'oggetto **WebRequest** `wreq` e l'oggetto **RequestState** `rs`, chiama **BeginGetResponse** per avviare l'elaborazione della richiesta e quindi chiama il metodo `allDone.WaitOne()` in modo che l'applicazione non restituisca il controllo fino al completamento del callback.</span><span class="sxs-lookup"><span data-stu-id="3aa04-117">It creates the **WebRequest** `wreq` and the **RequestState** `rs`, calls **BeginGetResponse** to begin processing the request, and then calls the `allDone.WaitOne()`method so that the application will not exit until the callback is complete.</span></span> <span data-ttu-id="3aa04-118">Dopo la lettura della risposta dalla risorsa Internet, `Main()` la scrive nella console e l'applicazione termina.</span><span class="sxs-lookup"><span data-stu-id="3aa04-118">After the response is read from the Internet resource, `Main()` writes it to the console and the application ends.</span></span>  
   
--   Il metodo `showusage()` scrive una riga di comando di esempio nella console. Viene chiamato da `Main()` quando non viene fornito alcun URI nella riga di comando.  
+-   <span data-ttu-id="3aa04-119">Il metodo `showusage()` scrive una riga di comando di esempio nella console.</span><span class="sxs-lookup"><span data-stu-id="3aa04-119">The `showusage()` method writes an example command line on the console.</span></span> <span data-ttu-id="3aa04-120">Viene chiamato da `Main()` quando non viene fornito alcun URI nella riga di comando.</span><span class="sxs-lookup"><span data-stu-id="3aa04-120">It is called by `Main()` when no URI is provided on the command line.</span></span>  
   
--   Il metodo `RespCallBack()` implementa il metodo di callback asincrono per la richiesta Internet. Crea l'istanza di **WebResponse** contenente la risposta dalla risorsa Internet, ottiene il flusso di risposta e quindi avvia la lettura dei dati dal flusso in modo asincrono.  
+-   <span data-ttu-id="3aa04-121">Il metodo `RespCallBack()` implementa il metodo di callback asincrono per la richiesta Internet.</span><span class="sxs-lookup"><span data-stu-id="3aa04-121">The `RespCallBack()` method implements the asynchronous callback method for the Internet request.</span></span> <span data-ttu-id="3aa04-122">Crea l'istanza di **WebResponse** contenente la risposta dalla risorsa Internet, ottiene il flusso di risposta e quindi avvia la lettura dei dati dal flusso in modo asincrono.</span><span class="sxs-lookup"><span data-stu-id="3aa04-122">It creates the **WebResponse** instance containing the response from the Internet resource, gets the response stream, and then starts reading the data from the stream asynchronously.</span></span>  
   
--   Il metodo `ReadCallBack()` implementa il metodo di callback asincrono per la lettura del flusso di risposta. Trasferisce i dati ricevuti dalla risorsa Internet alla proprietà **ResponseData** dell'istanza **RequestState**, quindi avvia un'altra lettura asincrona del flusso di risposta fino a quando non vengono restituiti altri dati. Dopo la lettura di tutti i dati, `ReadCallBack()` chiude il flusso di risposta e chiama il metodo `allDone.Set()` per indicare che l'intera risposta è presente in **ResponseData**.  
+-   <span data-ttu-id="3aa04-123">Il metodo `ReadCallBack()` implementa il metodo di callback asincrono per la lettura del flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="3aa04-123">The `ReadCallBack()` method implements the asynchronous callback method for reading the response stream.</span></span> <span data-ttu-id="3aa04-124">Trasferisce i dati ricevuti dalla risorsa Internet alla proprietà **ResponseData** dell'istanza **RequestState**, quindi avvia un'altra lettura asincrona del flusso di risposta fino a quando non vengono restituiti altri dati.</span><span class="sxs-lookup"><span data-stu-id="3aa04-124">It transfers data received from the Internet resource into the **ResponseData** property of the **RequestState** instance, then starts another asynchronous read of the response stream until no more data is returned.</span></span> <span data-ttu-id="3aa04-125">Dopo la lettura di tutti i dati, `ReadCallBack()` chiude il flusso di risposta e chiama il metodo `allDone.Set()` per indicare che l'intera risposta è presente in **ResponseData**.</span><span class="sxs-lookup"><span data-stu-id="3aa04-125">Once all the data has been read, `ReadCallBack()` closes the response stream and calls the `allDone.Set()` method to indicate that the entire response is present in **ResponseData**.</span></span>  
   
     > [!NOTE]
-    >  È fondamentale che tutti i flussi di rete vengano chiusi. Se non si chiude ogni richiesta e flusso di risposta, l'applicazione esaurirà le connessioni al server e non sarà più in grado di elaborare ulteriori richieste.  
+    >  <span data-ttu-id="3aa04-126">È fondamentale che tutti i flussi di rete vengano chiusi.</span><span class="sxs-lookup"><span data-stu-id="3aa04-126">It is critical that all network streams are closed.</span></span> <span data-ttu-id="3aa04-127">Se non si chiude ogni richiesta e flusso di risposta, l'applicazione esaurirà le connessioni al server e non sarà più in grado di elaborare ulteriori richieste.</span><span class="sxs-lookup"><span data-stu-id="3aa04-127">If you do not close each request and response stream, your application will run out of connections to the server and be unable to process additional requests.</span></span>  
   
 ```csharp  
 using System;  
@@ -346,6 +343,5 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)
-
+## <a name="see-also"></a><span data-ttu-id="3aa04-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3aa04-128">See Also</span></span>  
+ [<span data-ttu-id="3aa04-129">Richiesta di dati</span><span class="sxs-lookup"><span data-stu-id="3aa04-129">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)

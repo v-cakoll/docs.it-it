@@ -1,84 +1,87 @@
 ---
-title: "Download dei database di esempio (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Download di database di esempio (LINQ to DataSet)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6450e683f51abe0bdd4eb7f45089f04d11660d5d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Download dei database di esempio (LINQ to DataSet)
-Negli esempi e nelle procedure dettagliate riportate nella documentazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] viene usato il database di esempio AdventureWorks.  È possibile scaricare gratuitamente questo prodotto dal sito di download Microsoft. Negli esempi e nelle procedure dettagliate riportate nella documentazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] viene usato SQL Server come archivio dati.  Anziché SQL Server è tuttavia possibile usare come archivio dati SQL Server Express Edition, disponibile gratuitamente.  
+# <a name="downloading-sample-databases-linq-to-dataset"></a><span data-ttu-id="c7698-102">Download di database di esempio (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="c7698-102">Downloading Sample Databases (LINQ to DataSet)</span></span>
+<span data-ttu-id="c7698-103">Gli esempi e procedure dettagliate di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentazione utilizzano il database di esempio AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="c7698-103">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation use the AdventureWorks sample database.</span></span> <span data-ttu-id="c7698-104">È possibile scaricare gratuitamente questo prodotto dal sito di download Microsoft.</span><span class="sxs-lookup"><span data-stu-id="c7698-104">You can download this product free of charge from the Microsoft download site.</span></span> <span data-ttu-id="c7698-105">Negli esempi e nelle procedure dettagliate riportate nella documentazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] viene utilizzato SQL Server come archivio dati.</span><span class="sxs-lookup"><span data-stu-id="c7698-105">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation use SQL Server as the data store.</span></span> <span data-ttu-id="c7698-106">Anziché SQL Server è tuttavia possibile usare come archivio dati SQL Server Express Edition, disponibile gratuitamente.</span><span class="sxs-lookup"><span data-stu-id="c7698-106">SQL Server Express Edition, which is available without charge, can also be used as the data store instead of SQL Server.</span></span>  
   
-## Download e installazione del database AdventureWorks  
+## <a name="downloading-and-installing-the-adventureworks-database"></a><span data-ttu-id="c7698-107">Download e installazione del database AdventureWorks</span><span class="sxs-lookup"><span data-stu-id="c7698-107">Downloading and Installing the AdventureWorks Database</span></span>  
   
-#### Per scaricare e installare il database di esempio AdventureWorks per SQL Server  
+#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a><span data-ttu-id="c7698-108">Per scaricare e installare il database di esempio AdventureWorks per SQL Server</span><span class="sxs-lookup"><span data-stu-id="c7698-108">To download and install the AdventureWorks sample database for SQL Server</span></span>  
   
-1.  Aprire Internet Explorer.  
+1.  <span data-ttu-id="c7698-109">Aprire Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="c7698-109">Open Internet Explorer.</span></span>  
   
-2.  Passare al sito Web relativo agli [esempi di SQL Server 2005 e ai database di esempio](http://go.microsoft.com/fwlink/?linkid=31046).  
+2.  <span data-ttu-id="c7698-110">Passare al [esempi di SQL Server 2005 e database di esempio](http://go.microsoft.com/fwlink/?linkid=31046) sito Web.</span><span class="sxs-lookup"><span data-stu-id="c7698-110">Go to the [SQL Server 2005 Samples and Sample Databases](http://go.microsoft.com/fwlink/?linkid=31046) Web site.</span></span>  
   
-3.  Attenersi alle istruzioni per scaricare il database di esempio AdventureWorks corretto per il tipo di processore in utilizzo, ad esempio AdventureWorksDB.msi, quindi salvare il file MSI nel computer locale.  
+3.  <span data-ttu-id="c7698-111">Attenersi alle istruzioni per scaricare il database di esempio AdventureWorks corretto per il tipo di processore in utilizzo, ad esempio AdventureWorksDB.msi, quindi salvare il file MSI nel computer locale.</span><span class="sxs-lookup"><span data-stu-id="c7698-111">Follow the instructions for downloading the AdventureWorks sample database for your processor type (such as AdventureWorksDB.msi), and save the .MSI file to your local computer.</span></span>  
   
-4.  Se è già stata installata una versione precedente di AdventureWorks, tramite download o durante l'installazione di SQL Server, è necessario rimuoverla prima di eseguire AdventureWorks.msi.  
+4.  <span data-ttu-id="c7698-112">Se è già stata installata una versione precedente di AdventureWorks, tramite download o durante l'installazione di SQL Server, è necessario rimuoverla prima di eseguire AdventureWorks.msi.</span><span class="sxs-lookup"><span data-stu-id="c7698-112">If you have a previous version of AdventureWorks installed from the download or during the SQL Server setup, you must remove it before running AdventureWorks.msi.</span></span>  
   
-#### Per rimuovere un download precedente di un database di esempio AdventureWorks  
+#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a><span data-ttu-id="c7698-113">Per rimuovere un download precedente di un database di esempio AdventureWorks</span><span class="sxs-lookup"><span data-stu-id="c7698-113">To remove a previous download of an AdventureWorks sample database</span></span>  
   
-1.  Eliminare il database AdventureWorks o AdventureWorksDW.  
+1.  <span data-ttu-id="c7698-114">Rilasciare il database AdventureWorks o AdventureWorksDW.</span><span class="sxs-lookup"><span data-stu-id="c7698-114">Drop the AdventureWorks or AdventureWorksDW database.</span></span>  
   
-2.  In **Installazione applicazioni** selezionare **AdventureWorksDB** o **AdventureWorksBI**, quindi fare clic su **Rimuovi**.  
+2.  <span data-ttu-id="c7698-115">Da **Aggiungi / Rimuovi programmi**selezionare **AdventureWorksDB** o **AdventureWorksBI** e fare clic su **rimuovere**.</span><span class="sxs-lookup"><span data-stu-id="c7698-115">From **Add or Remove Programs**, select **AdventureWorksDB** or **AdventureWorksBI** and click **Remove**.</span></span>  
   
-#### Per rimuovere un database di esempio AdventureWorks installato in precedenza tramite il programma di installazione  
+#### <a name="to-remove-an-adventureworks-sample-database-previously-installed-using-setup"></a><span data-ttu-id="c7698-116">Per rimuovere un database di esempio AdventureWorks installato in precedenza tramite il programma di installazione</span><span class="sxs-lookup"><span data-stu-id="c7698-116">To remove an AdventureWorks sample database previously installed using Setup</span></span>  
   
-1.  Eliminare il database AdventureWorks o AdventureWorksDW.  
+1.  <span data-ttu-id="c7698-117">Rilasciare il database AdventureWorks o AdventureWorksDW.</span><span class="sxs-lookup"><span data-stu-id="c7698-117">Drop the AdventureWorks or AdventureWorksDW database.</span></span>  
   
-2.  In **Installazione applicazioni** selezionare **Microsoft SQL Server 2005** e fare clic su **Cambia**.  
+2.  <span data-ttu-id="c7698-118">Da **Aggiungi / Rimuovi programmi**selezionare **Microsoft SQL Server 2005** e fare clic su **modifica**.</span><span class="sxs-lookup"><span data-stu-id="c7698-118">From **Add or Remove Programs**, select **Microsoft SQL Server 2005** and click **Change**.</span></span>  
   
-3.  In **Selezione componenti** selezionare **Componenti workstation** e quindi fare clic su **Avanti**.  
+3.  <span data-ttu-id="c7698-119">Da **Selezione componenti**selezionare **componenti Workstation** e quindi fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="c7698-119">From **Component Selection**, select **Workstation Components** and then click **Next**.</span></span>  
   
-4.  In **Installazione guidata di Microsoft SQL Server** fare clic su **Avanti**.  
+4.  <span data-ttu-id="c7698-120">Da **iniziale per l'installazione guidata di SQL Server**, fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="c7698-120">From **Welcome to the SQL Server Installation Wizard**, click **Next**.</span></span>  
   
-5.  In **Controllo configurazione sistema** fare clic su **Avanti**.  
+5.  <span data-ttu-id="c7698-121">Da **controllo configurazione sistema**, fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="c7698-121">From **System Configuration Check**, click **Next**.</span></span>  
   
-6.  In **Cambia o rimuovi istanza** fare clic su **Modifica componenti installati**.  
+6.  <span data-ttu-id="c7698-122">Da **cambia o Rimuovi istanza**, fare clic su **modifica componenti installati**.</span><span class="sxs-lookup"><span data-stu-id="c7698-122">From **Change or Remove Instance**, click **Change Installed Components**.</span></span>  
   
-7.  In **Selezione funzionalità** espandere il nodo **Documentazione, esempi e database di esempio**.  
+7.  <span data-ttu-id="c7698-123">Da **Selezione funzionalità**, espandere il **documentazione, esempi e database di esempio** nodo.</span><span class="sxs-lookup"><span data-stu-id="c7698-123">From **Feature Selection**, expand the **Documentation, Samples, and Sample Databases** node.</span></span>  
   
-8.  Selezionare **Codice e applicazioni di esempio**.  Espandere **Database di esempio**, selezionare il database di esempio da rimuovere e selezionare **La funzionalità completa non sarà disponibile**.  Scegliere **Avanti**.  
+8.  <span data-ttu-id="c7698-124">Selezionare **codice e applicazioni di esempio**.</span><span class="sxs-lookup"><span data-stu-id="c7698-124">Select **Sample Code and Applications**.</span></span> <span data-ttu-id="c7698-125">Espandere **database di esempio**, selezionare il database di esempio da rimuovere, quindi scegliere **la funzionalità completa non sarà disponibile**.</span><span class="sxs-lookup"><span data-stu-id="c7698-125">Expand **Sample Databases**, select the sample database to be removed, and select **Entire feature will be unavailable**.</span></span> <span data-ttu-id="c7698-126">Scegliere **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="c7698-126">Click **Next**.</span></span>  
   
-9. Fare clic su **Installa** per completare l'installazione guidata.  
+9. <span data-ttu-id="c7698-127">Fare clic su **installare** e completare l'installazione guidata.</span><span class="sxs-lookup"><span data-stu-id="c7698-127">Click **Install** and finish the installation wizard.</span></span>  
   
-#### Per collegare i file del database di esempio AdventureWorks a un'istanza di SQL Server  
+#### <a name="to-attach-the-adventureworks-sample-database-files-to-an-instance-of-sql-server"></a><span data-ttu-id="c7698-128">Per collegare i file del database di esempio AdventureWorks a un'istanza di SQL Server</span><span class="sxs-lookup"><span data-stu-id="c7698-128">To attach the AdventureWorks sample database files to an instance of SQL Server</span></span>  
   
-1.  Dopo aver installato il file del programma di installazione del database di esempio, fare doppio clic su file **AdventureWorksDB.msi** \(o sul file scaricato\) per installare il database.  Per impostazione predefinita, il database viene installato in C:\\Programmi\\Microsoft SQL Server\\MSSQL.1\\MSSQL\\Data.  
+1.  <span data-ttu-id="c7698-129">Dopo aver scaricato il file di programma di installazione database di esempio file, fare doppio clic su di **AdventureWorksDB.msi** file (o il file scaricato) per installare il database.</span><span class="sxs-lookup"><span data-stu-id="c7698-129">After the file sample database installer file has downloaded, double-click the **AdventureWorksDB.msi** file (or the file you downloaded) to install the database.</span></span> <span data-ttu-id="c7698-130">Per impostazione predefinita, il database viene installato in C:\Programmi\Microsoft SQL Server\MSSQL.1\MSSQL\Data.</span><span class="sxs-lookup"><span data-stu-id="c7698-130">By default, the database is installed at c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data.</span></span>  
   
-2.  Per collegare il file del database AdventureWorks a un'istanza di SQL Server, eseguire il seguente script SQLCMD o SQL Server Management Studio:  
+2.  <span data-ttu-id="c7698-131">Per collegare il file del database AdventureWorks a un'istanza di SQL Server, eseguire il seguente script SQLCMD o SQL Server Management Studio:</span><span class="sxs-lookup"><span data-stu-id="c7698-131">Attach the AdventureWorks database files to an instance of SQL Server by executing the following script SQLCMD or SQL Server Management Studio:</span></span>  
   
     ```  
     exec sp_attach_db @dbname=N'AdventureWorks', @filename1=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_Data.mdf', @filename2=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_log.ldf'  
     ```  
   
-     Se i file sono stati installati in un'unità o una directory diversa, è necessario modificare i percorsi prima di eseguire la stored procedure `sp_attach_db`.  
+     <span data-ttu-id="c7698-132">Se i file sono stati installati in un'unità o una directory diversa, è necessario modificare i percorsi prima di eseguire la stored procedure `sp_attach_db`.</span><span class="sxs-lookup"><span data-stu-id="c7698-132">If you have installed these files to a different drive or directory, you must revise the paths appropriately before you execute the `sp_attach_db` stored procedure.</span></span>  
   
-## Download di SQL Server Express Edition  
- Negli esempi e nelle procedure dettagliate della sezione [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] viene usato SQL Server 2005 come archivio dati, sebbene sia comunque possibile usare SQL Server Express Edition.  SQL Server Express Edition è disponibile gratuitamente e può essere ridistribuito con le applicazioni.  Se si usa [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], SQL Server Express Edition è incluso nelle edizioni Pro e superiori.  
+## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="c7698-133">Download di SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="c7698-133">Downloading SQL Server Express Edition</span></span>  
+ <span data-ttu-id="c7698-134">Gli esempi e procedure dettagliate di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sezione utilizzare SQL Server 2005 come archivio dati, ma può essere modificato per utilizzare invece SQL Server Express Edition.</span><span class="sxs-lookup"><span data-stu-id="c7698-134">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section use SQL Server 2005 as the data store but can be modified to use SQL Server Express Edition, instead.</span></span> <span data-ttu-id="c7698-135">SQL Server Express Edition è disponibile gratuitamente e può essere ridistribuito con le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="c7698-135">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="c7698-136">Se si usa [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], SQL Server Express Edition è incluso nelle edizioni Pro e superiori.</span><span class="sxs-lookup"><span data-stu-id="c7698-136">If you are using [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], SQL Server Express Edition is included in the Pro and higher editions.</span></span>  
   
-#### Per scaricare e installare SQL Server Express Edition  
+#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="c7698-137">Per scaricare e installare SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="c7698-137">To download and install SQL Server Express Edition</span></span>  
   
-1.  Avviare Internet Explorer.  
+1.  <span data-ttu-id="c7698-138">Avviare Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="c7698-138">Start Internet Explorer.</span></span>  
   
-2.  Passare alla pagina di download di [Microsoft SQL Server 2005 Express Edition](http://go.microsoft.com/fwlink/?LinkID=31070).  
+2.  <span data-ttu-id="c7698-139">Passare al [Microsoft SQL Server 2005 Express Edition](http://go.microsoft.com/fwlink/?LinkID=31070) pagina di download.</span><span class="sxs-lookup"><span data-stu-id="c7698-139">Go to the  [Microsoft SQL Server 2005 Express Edition](http://go.microsoft.com/fwlink/?LinkID=31070) download page.</span></span>  
   
-3.  Attenersi alle istruzioni di installazione visualizzate nel sito Web.  
+3.  <span data-ttu-id="c7698-140">Attenersi alle istruzioni di installazione visualizzate nel sito Web.</span><span class="sxs-lookup"><span data-stu-id="c7698-140">Follow the installation instructions on the Web site.</span></span>  
   
-## Vedere anche  
- [Guida introduttiva](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="c7698-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c7698-141">See Also</span></span>  
+ [<span data-ttu-id="c7698-142">Introduzione</span><span class="sxs-lookup"><span data-stu-id="c7698-142">Getting Started</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

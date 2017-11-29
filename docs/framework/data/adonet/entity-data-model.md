@@ -1,74 +1,77 @@
 ---
-title: "Entity Data Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Entity Data Model
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Entity Data Model
-EDM \(Entity Data Model\) è un set di concetti che descrivono la struttura dei dati, indipendentemente dal form archiviato.  EDM è mutuato dal modello entità\-relazione descritto da Peter Chen nel 1976, ma è anche basato su tale modello di cui estende gli utilizzi tradizionali.  
+# <a name="entity-data-model"></a><span data-ttu-id="19ec9-102">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="19ec9-102">Entity Data Model</span></span>
+<span data-ttu-id="19ec9-103">EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei dati, indipendentemente dal form archiviato.</span><span class="sxs-lookup"><span data-stu-id="19ec9-103">The Entity Data Model (EDM) is a set of concepts that describe the structure of data, regardless of its stored form.</span></span> <span data-ttu-id="19ec9-104">EDM è mutuato dal modello entità-relazione descritto da Peter Chen nel 1976, ma è anche basato su tale modello di cui estende gli utilizzi tradizionali.</span><span class="sxs-lookup"><span data-stu-id="19ec9-104">The EDM borrows from the Entity-Relationship Model described by Peter Chen in 1976, but it also builds on the Entity-Relationship Model and extends its traditional uses.</span></span>  
   
- EDM consente di superare le difficoltà derivanti dall'archiviazione dei dati in più form.  Si pensi, ad esempio, a un'azienda che archivia i dati in database relazionali, file di testo, file XML, fogli di calcolo e rapporti.  Ne derivano difficoltà considerevoli nella modellazione dati, nella progettazione di applicazioni e nell'accesso ai dati.  Quando si progetta un'applicazione orientata ai dati, è difficile scrivere un codice efficiente e gestibile senza sacrificare accesso ai dati, archiviazione e scalabilità efficienti.  Quando la struttura dei dati è relazionale, l'accesso ai dati, l'archiviazione e la scalabilità sono molto efficienti, ma la scrittura di un codice efficiente e gestibile diventa più difficile.  Quando la struttura dei dati è basata sugli oggetti, si verifica il contrario: per scrivere un codice efficiente e gestibile, è necessario rinunciare ad accesso ai dati, archiviazione e scalabilità efficienti.  Anche se è possibile trovare un giusto equilibrio tra queste due condizioni, nuove difficoltà sorgono quando i dati vengono spostati da un form a un altro.  Entity Data Model risolve questi problemi descrivendo la struttura dei dati in termini di entità e relazioni indipendenti da qualsiasi schema di archiviazione.  In questo modo il form di dati archiviato risulta irrilevante per la progettazione e lo sviluppo di applicazioni.  E, poiché le entità e le relazioni descrivono la struttura dei dati usata in un'applicazione \(non nel form archiviato\), possono evolvere esattamente come un'applicazione.  
+ <span data-ttu-id="19ec9-105">EDM consente di superare le difficoltà derivanti dall'archiviazione dei dati in più form.</span><span class="sxs-lookup"><span data-stu-id="19ec9-105">The EDM addresses the challenges that arise from having data stored in many forms.</span></span> <span data-ttu-id="19ec9-106">Si pensi, ad esempio, a un'azienda che archivia i dati in database relazionali, file di testo, file XML, fogli di calcolo e rapporti.</span><span class="sxs-lookup"><span data-stu-id="19ec9-106">For example, consider a business that stores data in relational databases, text files, XML files, spreadsheets, and reports.</span></span> <span data-ttu-id="19ec9-107">Ne derivano difficoltà considerevoli nella modellazione dati, nella progettazione di applicazioni e nell'accesso ai dati.</span><span class="sxs-lookup"><span data-stu-id="19ec9-107">This presents significant challenges in data modeling, application design, and data access.</span></span> <span data-ttu-id="19ec9-108">Quando si progetta un'applicazione orientata ai dati, è difficile scrivere un codice efficiente e gestibile senza sacrificare accesso ai dati, archiviazione e scalabilità efficienti.</span><span class="sxs-lookup"><span data-stu-id="19ec9-108">When designing a data-oriented application, the challenge is to write efficient and maintainable code without sacrificing efficient data access, storage, and scalability.</span></span> <span data-ttu-id="19ec9-109">Quando la struttura dei dati è relazionale, l'accesso ai dati, l'archiviazione e la scalabilità sono molto efficienti, ma la scrittura di un codice efficiente e gestibile diventa più difficile.</span><span class="sxs-lookup"><span data-stu-id="19ec9-109">When data has a relational structure, data access, storage, and scalability are very efficient, but writing efficient and maintainable code becomes more difficult.</span></span> <span data-ttu-id="19ec9-110">Quando la struttura dei dati è basata sugli oggetti, si verifica il contrario: per scrivere un codice efficiente e gestibile, è necessario rinunciare ad accesso ai dati, archiviazione e scalabilità efficienti.</span><span class="sxs-lookup"><span data-stu-id="19ec9-110">When data has an object structure, the trade-offs are reversed: Writing efficient and maintainable code comes at the cost of efficient data access, storage, and scalability.</span></span> <span data-ttu-id="19ec9-111">Anche se è possibile trovare un giusto equilibrio tra queste due condizioni, nuove difficoltà sorgono quando i dati vengono spostati da un form a un altro.</span><span class="sxs-lookup"><span data-stu-id="19ec9-111">Even if the right balance between these trade-offs can be found, new challenges arise when data is moved from one form to another.</span></span> <span data-ttu-id="19ec9-112">Entity Data Model risolve questi problemi descrivendo la struttura dei dati in termini di entità e relazioni indipendenti da qualsiasi schema di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="19ec9-112">The Entity Data Model addresses these challenges by describing the structure of data in terms of entities and relationships that are independent of any storage schema.</span></span> <span data-ttu-id="19ec9-113">In questo modo il form di dati archiviato risulta irrilevante per la progettazione e lo sviluppo di applicazioni.</span><span class="sxs-lookup"><span data-stu-id="19ec9-113">This makes the stored form of data irrelevant to application design and development.</span></span> <span data-ttu-id="19ec9-114">E, poiché le entità e le relazioni descrivono la struttura dei dati usata in un'applicazione (non nel form archiviato), possono evolvere esattamente come un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="19ec9-114">And, because entities and relationships describe the structure of data as it is used in an application (not its stored form), they can evolve as an application evolves.</span></span>  
   
- Un `conceptual model` è una rappresentazione specifica della struttura di dati come entità e relazioni e viene in genere definito in un linguaggio specifico di dominio che implementa i concetti del modello EDM.  [CSDL \(Conceptual Schema Definition Language\)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) è un esempio di tale linguaggio specifico di dominio.  Entità e relazioni descritte in un modello concettuale possono essere considerate come astrazioni di oggetti e associazioni in un'applicazione.  In questo modo gli sviluppatori hanno la possibilità di concentrarsi sul modello concettuale senza preoccuparsi dello schema di archiviazione e di scrivere il codice avendo come obiettivo l'efficienza e la manutenibilità.  Nel frattempo i progettisti dello schema di archiviazione possono concentrarsi sull'efficienza di accesso ai dati, archiviazione e scalabilità.  
+ <span data-ttu-id="19ec9-115">Un `conceptual model` è una rappresentazione specifica della struttura di dati come entità e relazioni e viene in genere definito in un linguaggio specifico di dominio che implementa i concetti del modello EDM.</span><span class="sxs-lookup"><span data-stu-id="19ec9-115">A `conceptual model` is a specific representation of the structure of data as entities and relationships, and is generally defined in a domain-specific language (DSL) that implements the concepts of the EDM.</span></span> <span data-ttu-id="19ec9-116">[Il linguaggio di definizione di schema concettuale (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) è riportato un esempio di tale linguaggio specifico di dominio di.</span><span class="sxs-lookup"><span data-stu-id="19ec9-116">[Conceptual schema definition language (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) is an example of such a domain-specific language.</span></span> <span data-ttu-id="19ec9-117">Entità e relazioni descritte in un modello concettuale possono essere considerate come astrazioni di oggetti e associazioni in un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="19ec9-117">Entities and relationships described in a conceptual model can be thought of as abstractions of objects and associations in an application.</span></span> <span data-ttu-id="19ec9-118">In questo modo gli sviluppatori hanno la possibilità di concentrarsi sul modello concettuale senza preoccuparsi dello schema di archiviazione e di scrivere il codice avendo come obiettivo l'efficienza e la manutenibilità.</span><span class="sxs-lookup"><span data-stu-id="19ec9-118">This allows developers to focus on the conceptual model without concern for the storage schema, and allows them to write code with efficiency and maintainability in mind.</span></span> <span data-ttu-id="19ec9-119">Nel frattempo i progettisti dello schema di archiviazione possono concentrarsi sull'efficienza di accesso ai dati, archiviazione e scalabilità.</span><span class="sxs-lookup"><span data-stu-id="19ec9-119">Meanwhile storage schema designers can focus on the efficiency of data access, storage, and scalability.</span></span>  
   
-## Contenuto della sezione  
- Negli argomenti di questa sezione vengono descritti i concetti relativi a Entity Data Model.  I linguaggi specifici di dominio che implementano EDM devono includere i concetti descritti di seguito.  Si noti che [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa CSDL per definire i modelli concettuali.  Per altre informazioni, vedere [Specifiche CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
+## <a name="in-this-section"></a><span data-ttu-id="19ec9-120">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="19ec9-120">In This Section</span></span>  
+ <span data-ttu-id="19ec9-121">Negli argomenti di questa sezione vengono descritti i concetti relativi a Entity Data Model.</span><span class="sxs-lookup"><span data-stu-id="19ec9-121">Topics in this section describe the concepts of the Entity Data Model.</span></span> <span data-ttu-id="19ec9-122">I linguaggi DSL che implementano EDM devono includere i concetti descritti di seguito.</span><span class="sxs-lookup"><span data-stu-id="19ec9-122">Any DSL that implements the EDM should include the concepts described here.</span></span> <span data-ttu-id="19ec9-123">Si noti che il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa CSDL per definire i modelli concettuali.</span><span class="sxs-lookup"><span data-stu-id="19ec9-123">Note that the [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses CSDL to define conceptual models.</span></span> <span data-ttu-id="19ec9-124">Per ulteriori informazioni, vedere [specifica CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).</span><span class="sxs-lookup"><span data-stu-id="19ec9-124">For more information, see [CSDL Specification](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).</span></span>  
   
- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="19ec9-125">Concetti chiave di Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="19ec9-125">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [Entity Data Model: spazi dei nomi](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [<span data-ttu-id="19ec9-126">Entity Data Model: spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="19ec9-126">Entity Data Model: Namespaces</span></span>](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Entity Data Model: tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [<span data-ttu-id="19ec9-127">Entity Data Model: Tipi di dati primitivi</span><span class="sxs-lookup"><span data-stu-id="19ec9-127">Entity Data Model: Primitive Data Types</span></span>](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Entity Data Model: ereditarietà](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [<span data-ttu-id="19ec9-128">Entity Data Model: ereditarietà</span><span class="sxs-lookup"><span data-stu-id="19ec9-128">Entity Data Model: Inheritance</span></span>](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [entità finale dell'associazione](../../../../docs/framework/data/adonet/association-end.md)  
+ [<span data-ttu-id="19ec9-129">entità finale dell'associazione</span><span class="sxs-lookup"><span data-stu-id="19ec9-129">association end</span></span>](../../../../docs/framework/data/adonet/association-end.md)  
   
- [molteplicità di entità finale dell'associazione](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [<span data-ttu-id="19ec9-130">molteplicità di entità di associazione finale</span><span class="sxs-lookup"><span data-stu-id="19ec9-130">association end multiplicity</span></span>](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [set di associazioni](../../../../docs/framework/data/adonet/association-set.md)  
+ [<span data-ttu-id="19ec9-131">set di associazioni</span><span class="sxs-lookup"><span data-stu-id="19ec9-131">association set</span></span>](../../../../docs/framework/data/adonet/association-set.md)  
   
- [entità finale del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [<span data-ttu-id="19ec9-132">fine del set di associazioni</span><span class="sxs-lookup"><span data-stu-id="19ec9-132">association set end</span></span>](../../../../docs/framework/data/adonet/association-set-end.md)  
   
- [tipo di associazione](../../../../docs/framework/data/adonet/association-type.md)  
+ [<span data-ttu-id="19ec9-133">tipo di associazione</span><span class="sxs-lookup"><span data-stu-id="19ec9-133">association type</span></span>](../../../../docs/framework/data/adonet/association-type.md)  
   
- [tipo complesso](../../../../docs/framework/data/adonet/complex-type.md)  
+ [<span data-ttu-id="19ec9-134">tipo complesso</span><span class="sxs-lookup"><span data-stu-id="19ec9-134">complex type</span></span>](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [contenitore di entità](../../../../docs/framework/data/adonet/entity-container.md)  
+ [<span data-ttu-id="19ec9-135">contenitore di entità</span><span class="sxs-lookup"><span data-stu-id="19ec9-135">entity container</span></span>](../../../../docs/framework/data/adonet/entity-container.md)  
   
- [chiave di entità](../../../../docs/framework/data/adonet/entity-key.md)  
+ [<span data-ttu-id="19ec9-136">chiave di entità</span><span class="sxs-lookup"><span data-stu-id="19ec9-136">entity key</span></span>](../../../../docs/framework/data/adonet/entity-key.md)  
   
- [set di entità](../../../../docs/framework/data/adonet/entity-set.md)  
+ [<span data-ttu-id="19ec9-137">set di entità</span><span class="sxs-lookup"><span data-stu-id="19ec9-137">entity set</span></span>](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md)  
+ [<span data-ttu-id="19ec9-138">tipo di entità</span><span class="sxs-lookup"><span data-stu-id="19ec9-138">entity type</span></span>](../../../../docs/framework/data/adonet/entity-type.md)  
   
- [facet](../../../../docs/framework/data/adonet/facet.md)  
+ [<span data-ttu-id="19ec9-139">facet</span><span class="sxs-lookup"><span data-stu-id="19ec9-139">facet</span></span>](../../../../docs/framework/data/adonet/facet.md)  
   
- [proprietà di chiave esterna](../../../../docs/framework/data/adonet/foreign-key-property.md)  
+ [<span data-ttu-id="19ec9-140">proprietà di chiave esterna</span><span class="sxs-lookup"><span data-stu-id="19ec9-140">foreign key property</span></span>](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
- [funzione dichiarata dal modello](../../../../docs/framework/data/adonet/model-declared-function.md)  
+ [<span data-ttu-id="19ec9-141">funzione dichiarata dal modello</span><span class="sxs-lookup"><span data-stu-id="19ec9-141">model-declared function</span></span>](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [funzione definita dal modello](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [<span data-ttu-id="19ec9-142">funzione definita dal modello</span><span class="sxs-lookup"><span data-stu-id="19ec9-142">model-defined function</span></span>](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
- [proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md)  
+ [<span data-ttu-id="19ec9-143">proprietà di navigazione</span><span class="sxs-lookup"><span data-stu-id="19ec9-143">navigation property</span></span>](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [proprietà](../../../../docs/framework/data/adonet/property.md)  
+ [<span data-ttu-id="19ec9-144">proprietà</span><span class="sxs-lookup"><span data-stu-id="19ec9-144">property</span></span>](../../../../docs/framework/data/adonet/property.md)  
   
- [vincolo di integrità referenziale](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
+ [<span data-ttu-id="19ec9-145">vincolo di integrità referenziale</span><span class="sxs-lookup"><span data-stu-id="19ec9-145">referential integrity constraint</span></span>](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
-## Vedere anche  
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/it-it/91076853-0881-421b-837a-f582f36be527)   
- [.edmx File Overview](http://msdn.microsoft.com/it-it/f4c8e7ce-1db6-417e-9759-15f8b55155d4)   
- [Specifiche CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)
+## <a name="see-also"></a><span data-ttu-id="19ec9-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="19ec9-146">See Also</span></span>  
+ [<span data-ttu-id="19ec9-147">Strumenti di ADO.NET Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="19ec9-147">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
+ [<span data-ttu-id="19ec9-148">Cenni preliminari sui file con estensione edmx</span><span class="sxs-lookup"><span data-stu-id="19ec9-148">.edmx File Overview</span></span>](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [<span data-ttu-id="19ec9-149">Specifica CSDL</span><span class="sxs-lookup"><span data-stu-id="19ec9-149">CSDL Specification</span></span>](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

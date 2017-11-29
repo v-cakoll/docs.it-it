@@ -7,29 +7,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Ping
+helpviewer_keywords: Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 28c55a9e51b43fcc882ef98f6bad907d5d5c5301
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-ping-a-host"></a>Procedura: Eseguire il ping di un host
-Questo esempio mostra come eseguire il ping di un host remoto.  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="d1a98-102">Procedura: Eseguire il ping di un host</span><span class="sxs-lookup"><span data-stu-id="d1a98-102">How to: Ping a Host</span></span>
+<span data-ttu-id="d1a98-103">Questo esempio mostra come eseguire il ping di un host remoto.</span><span class="sxs-lookup"><span data-stu-id="d1a98-103">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="d1a98-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="d1a98-104">Example</span></span>  
   
 ```  
 using System;  
@@ -135,8 +128,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio presenta i requisiti seguenti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="d1a98-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="d1a98-105">Compiling the Code</span></span>  
+ <span data-ttu-id="d1a98-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="d1a98-106">This example requires:</span></span>  
   
--   Riferimenti allo spazio dei nomi **System.Net**.
-
+-   <span data-ttu-id="d1a98-107">Riferimenti allo spazio dei nomi **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="d1a98-107">References to the **System.Net** namespace.</span></span>

@@ -1,66 +1,69 @@
 ---
-title: "DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataTables
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# DataTable
-Un tipo <xref:System.Data.DataSet> è composto da una raccolta di tabelle, relazioni e vincoli.  In ADO.NET gli oggetti <xref:System.Data.DataTable> vengono usati per rappresentare le tabelle in un **DataSet**.  Una **DataTable** rappresenta una tabella di dati relazionali in memoria. Tali dati sono locali rispetto all'applicazione basata su .NET in cui risiedono, ma possono provenire da un'origine dati quale Microsoft SQL Server tramite **DataAdapter**. Per altre informazioni, vedere [Popolamento di un dataset da un oggetto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
+# <a name="datatables"></a><span data-ttu-id="b8d92-102">DataTables</span><span class="sxs-lookup"><span data-stu-id="b8d92-102">DataTables</span></span>
+<span data-ttu-id="b8d92-103">Un tipo <xref:System.Data.DataSet> è composto da una raccolta di tabelle, relazioni e vincoli.</span><span class="sxs-lookup"><span data-stu-id="b8d92-103">A <xref:System.Data.DataSet> is made up of a collection of tables, relationships, and constraints.</span></span> <span data-ttu-id="b8d92-104">In ADO.NET <xref:System.Data.DataTable> gli oggetti vengono utilizzati per rappresentare le tabelle in un **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="b8d92-104">In ADO.NET, <xref:System.Data.DataTable> objects are used to represent the tables in a **DataSet**.</span></span> <span data-ttu-id="b8d92-105">Oggetto **DataTable** rappresenta una tabella di dati relazionali in memoria; i dati sono locali per il. Applicazione basata su rete in cui si trova, ma possono essere popolato da un'origine dati, ad esempio Microsoft SQL Server utilizzando un **DataAdapter** per ulteriori informazioni, vedere [popolamento di un set di dati da un oggetto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .</span><span class="sxs-lookup"><span data-stu-id="b8d92-105">A **DataTable** represents one table of in-memory relational data; the data is local to the .NET-based application in which it resides, but can be populated from a data source such as Microsoft SQL Server using a **DataAdapter** For more information, see [Populating a DataSet from a DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).</span></span>  
   
- La classe **DataTable** è un membro dello spazio dei nomi **System.Data** all'interno della libreria di classi .NET Framework.  È possibile creare e usare una **DataTable** in modo indipendente o come membro di un **DataSet** e gli oggetti **DataTable** possono essere usati anche insieme ad altri oggetti .NET Framework, incluso l'oggetto <xref:System.Data.DataView>.  È possibile accedere alla raccolta di tabelle di un **DataSet** tramite la proprietà **Tables** dell'oggetto **DataSet**.  
+ <span data-ttu-id="b8d92-106">Il **DataTable** classe è un membro del **System. Data** spazio dei nomi nella libreria di classi .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b8d92-106">The **DataTable** class is a member of the **System.Data** namespace within the .NET Framework class library.</span></span> <span data-ttu-id="b8d92-107">È possibile creare e utilizzare un **DataTable** in modo indipendente o come membro di un **DataSet**, e **DataTable** oggetti possono essere utilizzati anche insieme ad altri oggetti di .NET Framework, tra cui la <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="b8d92-107">You can create and use a **DataTable** independently or as a member of a **DataSet**, and **DataTable** objects can also be used in conjunction with other .NET Framework objects, including the <xref:System.Data.DataView>.</span></span> <span data-ttu-id="b8d92-108">Accedere alla raccolta di tabelle in un **set di dati** tramite il **tabelle** proprietà del **DataSet** oggetto.</span><span class="sxs-lookup"><span data-stu-id="b8d92-108">You access the collection of tables in a **DataSet** through the **Tables** property of the **DataSet** object.</span></span>  
   
- Lo schema o struttura di una tabella è rappresentato da colonne e vincoli.  Per definire lo schema di una **DataTable**, è possibile usare gli oggetti <xref:System.Data.DataColumn> o gli oggetti <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>.  Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  
+ <span data-ttu-id="b8d92-109">Lo schema o struttura di una tabella è rappresentato da colonne e vincoli.</span><span class="sxs-lookup"><span data-stu-id="b8d92-109">The schema, or structure of a table is represented by columns and constraints.</span></span> <span data-ttu-id="b8d92-110">Per definire lo schema di un **DataTable** utilizzando <xref:System.Data.DataColumn> oggetti nonché <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint> oggetti.</span><span class="sxs-lookup"><span data-stu-id="b8d92-110">You define the schema of a **DataTable** using <xref:System.Data.DataColumn> objects as well as <xref:System.Data.ForeignKeyConstraint> and <xref:System.Data.UniqueConstraint> objects.</span></span> <span data-ttu-id="b8d92-111">Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.</span><span class="sxs-lookup"><span data-stu-id="b8d92-111">The columns in a table can map to columns in a data source, contain calculated values from expressions, automatically increment their values, or contain primary key values.</span></span>  
   
- Oltre a uno schema, è necessario che **DataTable** disponga anche di righe per contenere e ordinare i dati.  La classe <xref:System.Data.DataRow> rappresenta i dati effettivi contenuti in una tabella.  La classe **DataRow** e i relativi metodi e proprietà consentono di recuperare, valutare e modificare i dati di una tabella.  Quando si accede ai dati di una riga e li si modifica, l'oggetto **DataRow** conserva sia lo stato corrente che lo stato originale.  
+ <span data-ttu-id="b8d92-112">Oltre a uno schema, un **DataTable** deve anche avere righe per contenere e ordinare i dati.</span><span class="sxs-lookup"><span data-stu-id="b8d92-112">In addition to a schema, a **DataTable** must also have rows to contain and order data.</span></span> <span data-ttu-id="b8d92-113">La classe <xref:System.Data.DataRow> rappresenta i dati effettivi contenuti in una tabella.</span><span class="sxs-lookup"><span data-stu-id="b8d92-113">The <xref:System.Data.DataRow> class represents the actual data contained in a table.</span></span> <span data-ttu-id="b8d92-114">Utilizzare il **DataRow** e relative proprietà e metodi per recuperare, valutare e modificare i dati in una tabella.</span><span class="sxs-lookup"><span data-stu-id="b8d92-114">You use the **DataRow** and its properties and methods to retrieve, evaluate, and manipulate the data in a table.</span></span> <span data-ttu-id="b8d92-115">Come si accedere e modificare i dati all'interno di una riga, il **DataRow** oggetto mantiene lo stato corrente e originale.</span><span class="sxs-lookup"><span data-stu-id="b8d92-115">As you access and change the data within a row, the **DataRow** object maintains both its current and original state.</span></span>  
   
- L'utilizzo di una o più colonne correlate delle tabelle consente di creare relazioni padre\-figlio tra tabelle.  È possibile creare una relazione tra oggetti **DataTable** tramite un tipo <xref:System.Data.DataRelation>.  Gli oggetti **DataRelation** possono quindi essere usati per restituire le righe padre o figlio correlate di una particolare riga.  Per altre informazioni, vedere [Aggiunta di DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
+ <span data-ttu-id="b8d92-116">L'utilizzo di una o più colonne correlate delle tabelle consente di creare relazioni padre-figlio tra tabelle.</span><span class="sxs-lookup"><span data-stu-id="b8d92-116">You can create parent-child relationships between tables using one or more related columns in the tables.</span></span> <span data-ttu-id="b8d92-117">Creare una relazione tra **DataTable** degli oggetti mediante un <xref:System.Data.DataRelation>.</span><span class="sxs-lookup"><span data-stu-id="b8d92-117">You create a relationship between **DataTable** objects using a <xref:System.Data.DataRelation>.</span></span> <span data-ttu-id="b8d92-118">**DataRelation** gli oggetti possono quindi essere utilizzati per restituire le righe padre o figlio correlate di una particolare riga.</span><span class="sxs-lookup"><span data-stu-id="b8d92-118">**DataRelation** objects can then be used to return the related child or parent rows of a particular row.</span></span> <span data-ttu-id="b8d92-119">Per ulteriori informazioni, vedere [aggiunta di oggetti DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="b8d92-119">For more information, see [Adding DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).</span></span>  
   
-## In questa sezione  
- [Creazione di una DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
- Viene spiegato come creare una **DataTable** e aggiungerla a un **DataSet**.  
+## <a name="in-this-section"></a><span data-ttu-id="b8d92-120">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="b8d92-120">In This Section</span></span>  
+ [<span data-ttu-id="b8d92-121">Creazione di un oggetto DataTable</span><span class="sxs-lookup"><span data-stu-id="b8d92-121">Creating a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ <span data-ttu-id="b8d92-122">Viene illustrato come creare un **DataTable** e aggiungerla a un **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="b8d92-122">Explains how to create a **DataTable** and add it to a **DataSet**.</span></span>  
   
- [Definizione dello schema di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- Vengono fornite informazioni sulla creazione e l'uso di oggetti e vincoli **DataColumn**.  
+ [<span data-ttu-id="b8d92-123">Definizione dello Schema di DataTable</span><span class="sxs-lookup"><span data-stu-id="b8d92-123">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ <span data-ttu-id="b8d92-124">Vengono fornite informazioni sulla creazione e utilizzo **DataColumn** oggetti e vincoli.</span><span class="sxs-lookup"><span data-stu-id="b8d92-124">Provides information about creating and using **DataColumn** objects and constraints.</span></span>  
   
- [Modifica dei dati in una DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- Viene spiegato come aggiungere, modificare ed eliminare i dati di una tabella  e come usare gli eventi **DataTable** per esaminare le modifiche apportate ai dati della tabella.  
+ [<span data-ttu-id="b8d92-125">La modifica dei dati in un oggetto DataTable</span><span class="sxs-lookup"><span data-stu-id="b8d92-125">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ <span data-ttu-id="b8d92-126">Viene spiegato come aggiungere, modificare ed eliminare i dati di una tabella</span><span class="sxs-lookup"><span data-stu-id="b8d92-126">Explains how to add, modify, and delete data in a table.</span></span> <span data-ttu-id="b8d92-127">Viene illustrato come utilizzare **DataTable** eventi per esaminare le modifiche ai dati nella tabella.</span><span class="sxs-lookup"><span data-stu-id="b8d92-127">Explains how to use **DataTable** events to examine changes to data in the table.</span></span>  
   
- [Gestione degli eventi di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- Vengono fornite informazioni relative agli eventi disponibili per l'uso con un oggetto **DataTable**, inclusi gli eventi relativi alla modifica di valori di colonna e all'aggiunta o all'eliminazione di righe.  
+ [<span data-ttu-id="b8d92-128">Gestione degli eventi di DataTable</span><span class="sxs-lookup"><span data-stu-id="b8d92-128">Handling DataTable Events</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ <span data-ttu-id="b8d92-129">Fornisce informazioni sugli eventi disponibili per l'utilizzo con un **DataTable**, inclusi gli eventi quando vengono modificati i valori delle colonne e righe vengono aggiunte o eliminate.</span><span class="sxs-lookup"><span data-stu-id="b8d92-129">Provides information about the events available for use with a **DataTable**, including events when column values are modified and rows are added or deleted.</span></span>  
   
-## Sezioni correlate  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- Vengono descritti l'architettura e i componenti di ADO.NET e come usarli per l'accesso alle origini dati esistenti e per la gestione dei dati dell'applicazione.  
+## <a name="related-sections"></a><span data-ttu-id="b8d92-130">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="b8d92-130">Related Sections</span></span>  
+ [<span data-ttu-id="b8d92-131">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b8d92-131">ADO.NET</span></span>](../../../../../docs/framework/data/adonet/index.md)  
+ <span data-ttu-id="b8d92-132">Vengono descritti l'architettura e i componenti di ADO.NET e come usarli per l'accesso alle origini dati esistenti e per la gestione dei dati dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b8d92-132">Describes the ADO.NET architecture and components, and how to use them to access existing data sources and manage application data.</span></span>  
   
- [DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Vengono fornite informazioni relative al **DataSet** di ADO.NET, incluse informazioni sulla creazione di relazioni tra tabelle.  
+ [<span data-ttu-id="b8d92-133">Oggetti DataSet, DataTable e DataView</span><span class="sxs-lookup"><span data-stu-id="b8d92-133">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="b8d92-134">Fornisce informazioni su ADO.NET **DataSet** incluso come creare relazioni tra tabelle.</span><span class="sxs-lookup"><span data-stu-id="b8d92-134">Provides information about the ADO.NET **DataSet** including how to create relationships between tables.</span></span>  
   
- [Classe Constraint](frlrfSystemDataConstraintClassTopic)  
- Vengono fornite informazioni di riferimento relative all'oggetto **Constraint**.  
+ <xref:System.Data.Constraint>  
+ <span data-ttu-id="b8d92-135">Fornisce informazioni di riferimento sul **vincolo** oggetto.</span><span class="sxs-lookup"><span data-stu-id="b8d92-135">Provides reference information about the **Constraint** object.</span></span>  
   
- [Classe DataColumn](frlrfSystemDataDataColumnClassTopic)  
- Vengono fornite informazioni di riferimento relative all'oggetto **DataColumn**.  
+ <xref:System.Data.DataColumn>  
+ <span data-ttu-id="b8d92-136">Fornisce informazioni di riferimento sul **DataColumn** oggetto.</span><span class="sxs-lookup"><span data-stu-id="b8d92-136">Provides reference information about the **DataColumn** object.</span></span>  
   
- [Classe DataSet](frlrfSystemDataDataSetClassTopic)  
- Vengono fornite informazioni di riferimento relative all'oggetto **DataSet**.  
+ <xref:System.Data.DataSet>  
+ <span data-ttu-id="b8d92-137">Fornisce informazioni di riferimento sul **DataSet** oggetto.</span><span class="sxs-lookup"><span data-stu-id="b8d92-137">Provides reference information about the **DataSet** object.</span></span>  
   
- [Classe DataTable](frlrfSystemDataDataTableClassTopic)  
- Vengono fornite informazioni di riferimento relative all'oggetto **DataTable**.  
+ <xref:System.Data.DataTable>  
+ <span data-ttu-id="b8d92-138">Fornisce informazioni di riferimento sul **DataTable** oggetto.</span><span class="sxs-lookup"><span data-stu-id="b8d92-138">Provides reference information about the **DataTable** object.</span></span>  
   
- [Cenni preliminari sulla libreria di classi](../../../../../docs/standard/class-library-overview.md)  
- Viene fornita una panoramica della libreria di classi .NET Framework, incluso lo spazio dei nomi **System** e il relativo spazio dei nomi di secondo livello **System.Data**.  
+ [<span data-ttu-id="b8d92-139">Panoramica della libreria di classi</span><span class="sxs-lookup"><span data-stu-id="b8d92-139">Class Library Overview</span></span>](../../../../../docs/standard/class-library-overview.md)  
+ <span data-ttu-id="b8d92-140">Viene fornita una panoramica della libreria di classi .NET Framework, inclusi il **sistema** dello spazio dei nomi e lo spazio dei nomi di secondo livello, **System. Data**.</span><span class="sxs-lookup"><span data-stu-id="b8d92-140">Provides an overview of the .NET Framework class library, including the **System** namespace as well as its second-level namespace, **System.Data**.</span></span>  
   
-## Vedere anche  
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b8d92-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b8d92-141">See Also</span></span>  
+ [<span data-ttu-id="b8d92-142">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="b8d92-142">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

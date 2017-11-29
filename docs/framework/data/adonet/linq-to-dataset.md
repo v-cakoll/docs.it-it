@@ -1,43 +1,46 @@
 ---
-title: "LINQ to DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: LINQ to DataSet
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: de0f11149c2ec587372b9e25f39f35f8552503c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to DataSet
-Con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è più facile e veloce eseguire una query su dati memorizzati nella cache di un oggetto <xref:System.Data.DataSet>.  In particolare, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] semplifica l'esecuzione una query consentendo agli sviluppatori di scrivere query dal linguaggio di programmazione stesso, anziché usando un linguaggio di query separato.  Questo aspetto è utile soprattutto per gli sviluppatori di [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], che possono trarre vantaggio dal controllo della sintassi in fase di compilazione, dalla tipizzazione statica e dal supporto IntelliSense resi disponibili da [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] nelle query.  
+# <a name="linq-to-dataset"></a><span data-ttu-id="bbb6b-102">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="bbb6b-102">LINQ to DataSet</span></span>
+<span data-ttu-id="bbb6b-103">Con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è più facile e veloce eseguire una query su dati memorizzati nella cache di un oggetto <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-103">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] makes it easier and faster to query over data cached in a <xref:System.Data.DataSet> object.</span></span> <span data-ttu-id="bbb6b-104">In particolare, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] semplifica l'esecuzione di query consentendo agli sviluppatori di scrivere query dal linguaggio di programmazione stesso, anziché tramite un linguaggio di query separata.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-104">Specifically, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] simplifies querying by enabling developers to write queries from the programming language itself, instead of by using a separate query language.</span></span> <span data-ttu-id="bbb6b-105">Ciò è particolarmente utile per [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] che possono trarre vantaggio del controllo della sintassi in fase di compilazione, tipizzazione statica e supporto IntelliSense resi disponibili per gli sviluppatori di [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] nelle query.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-105">This is especially useful for [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] developers, who can now take advantage of the compile-time syntax checking, static typing, and IntelliSense support provided by the [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] in their queries.</span></span>  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] può inoltre essere usato per eseguire query su dati che sono stati consolidati da una o più origini dati.  In tal modo sono possibili molti scenari in cui è necessario rappresentare e gestire i dati con flessibilità, ad esempio per le query su dati aggregati localmente e la memorizzazione nella cache di livello intermedio nelle applicazioni Web.  In particolare, questo tipo di modifiche sono richieste nelle applicazioni generiche per la creazione di rapporti, di analisi e di Business Intelligence.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="bbb6b-106"> può inoltre essere usato per eseguire query su dati che sono stati consolidati da una o più origini dati.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-106"> can also be used to query over data that has been consolidated from one or more data sources.</span></span> <span data-ttu-id="bbb6b-107">In tal modo sono possibili molti scenari in cui è necessario rappresentare e gestire i dati con flessibilità, ad esempio per le query su dati aggregati localmente e la memorizzazione nella cache di livello intermedio nelle applicazioni Web.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-107">This enables many scenarios that require flexibility in how data is represented and handled, such as querying locally aggregated data and middle-tier caching in Web applications.</span></span> <span data-ttu-id="bbb6b-108">In particolare, questo tipo di modifiche sono richieste nelle applicazioni generiche per la creazione di rapporti, di analisi e di Business Intelligence.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-108">In particular, generic reporting, analysis, and business intelligence applications require this method of manipulation.</span></span>  
   
- La funzionalità di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è esposta principalmente tramite i metodi di estensione delle classi <xref:System.Data.DataRowExtensions> e <xref:System.Data.DataTableExtensions>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] si basa e sfrutta l'architettura [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] esistente e non è stato progettato per sostituire [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] nel codice delle applicazioni.  Il codice ADO.NET 2.0 esistente continuerà a funzionare nelle applicazioni [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Nel diagramma seguente viene illustrata la relazione tra [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] e  [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] e l'archivio dati.  
+ <span data-ttu-id="bbb6b-109">Il [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] funzionalità è esposta principalmente tramite i metodi di estensione di <xref:System.Data.DataRowExtensions> e <xref:System.Data.DataTableExtensions> classi.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-109">The [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] functionality is exposed primarily through the extension methods in the <xref:System.Data.DataRowExtensions> and <xref:System.Data.DataTableExtensions> classes.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="bbb6b-110">si basa e utilizzerà il [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] architettura e non è progettato per sostituire [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] nel codice dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-110"> builds on and uses the existing [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] architecture, and is not meant to replace [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] in application code.</span></span> <span data-ttu-id="bbb6b-111">Il codice ADO.NET 2.0 esistente continuerà a funzionare nelle applicazioni [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bbb6b-111">Existing ADO.NET 2.0 code will continue to function in a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] application.</span></span> <span data-ttu-id="bbb6b-112">Nel diagramma seguente viene illustrata la relazione tra [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] e  [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] e l'archivio dati.</span><span class="sxs-lookup"><span data-stu-id="bbb6b-112">The relationship of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] to [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] and the data store is illustrated in the following diagram.</span></span>  
   
- ![LINQ to DataSet è basato sul provider ADO.NET](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")  
+ <span data-ttu-id="bbb6b-113">![LINQ to DataSet è basato sul Provider ADO.NET](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")</span><span class="sxs-lookup"><span data-stu-id="bbb6b-113">![LINQ to DataSet is based on the ADO.NET Provider](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")</span></span>  
   
-## In questa sezione  
- [Guida introduttiva](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bbb6b-114">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="bbb6b-114">In This Section</span></span>  
+ [<span data-ttu-id="bbb6b-115">Introduzione</span><span class="sxs-lookup"><span data-stu-id="bbb6b-115">Getting Started</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
   
- [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [<span data-ttu-id="bbb6b-116">Guida per programmatori</span><span class="sxs-lookup"><span data-stu-id="bbb6b-116">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="bbb6b-117">Riferimento</span><span class="sxs-lookup"><span data-stu-id="bbb6b-117">Reference</span></span>  
  <xref:System.Data.DataTableExtensions>  
   
  <xref:System.Data.DataRowExtensions>  
   
  <xref:System.Data.DataRowComparer>  
   
-## Vedere anche  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [LINQ e ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)   
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+## <a name="see-also"></a><span data-ttu-id="bbb6b-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bbb6b-118">See Also</span></span>  
+ [<span data-ttu-id="bbb6b-119">LINQ (Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="bbb6b-119">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [<span data-ttu-id="bbb6b-120">LINQ e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="bbb6b-120">LINQ and ADO.NET</span></span>](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [<span data-ttu-id="bbb6b-121">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="bbb6b-121">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)

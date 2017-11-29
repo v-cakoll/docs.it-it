@@ -1,25 +1,31 @@
 ---
-title: "Parametri di DataAdapter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Parametri DataAdapter
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3e2670132bc6af1c914efa17cfbb98fd6577bd1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Parametri di DataAdapter
-<xref:System.Data.Common.DbDataAdapter> dispone di quattro proprietà che consentono di recuperare e aggiornare i dati dell'origine dati. La proprietà <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> restituisce i dati dall'origine dati, mentre le proprietà <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> e <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> vengono usate per gestire le modifiche nell'origine dati.  La proprietà `SelectCommand` deve essere impostata prima di chiamare il metodo `Fill` di `DataAdapter`.  È necessario impostare la proprietà `InsertCommand`, `UpdateCommand` o `DeleteCommand` prima di chiamare il metodo `Update` di `DataAdapter` a seconda delle modifiche apportate ai dati in <xref:System.Data.DataTable>,  Se ad esempio sono state aggiunte righe, è necessario impostare la proprietà `InsertCommand` prima di chiamare `Update`.  Quando `Update` elabora una riga inserita, aggiornata o eliminata, `DataAdapter` usa la rispettiva proprietà `Command` per l'operazione.  Le informazioni correnti sulla riga modificata vengono passate all'oggetto `Command` mediante la raccolta `Parameters`.  
+# <a name="dataadapter-parameters"></a><span data-ttu-id="3e13b-102">Parametri DataAdapter</span><span class="sxs-lookup"><span data-stu-id="3e13b-102">DataAdapter Parameters</span></span>
+<span data-ttu-id="3e13b-103"><xref:System.Data.Common.DbDataAdapter> dispone di quattro proprietà che consentono di recuperare e aggiornare i dati dell'origine dati. La proprietà <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> restituisce i dati dall'origine dati, mentre le proprietà <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> e <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> vengono usate per gestire le modifiche nell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="3e13b-103">The <xref:System.Data.Common.DbDataAdapter> has four properties that are used to retrieve data from and update data to the data source: the <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> property returns data from the data source; and the <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, and <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> properties are used to manage changes at the data source.</span></span> <span data-ttu-id="3e13b-104">La proprietà `SelectCommand` deve essere impostata prima di chiamare il metodo `Fill` di `DataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-104">The `SelectCommand` property must be set before you call the `Fill` method of the `DataAdapter`.</span></span> <span data-ttu-id="3e13b-105">È necessario impostare la proprietà `InsertCommand`, `UpdateCommand` o `DeleteCommand` prima di chiamare il metodo `Update` di `DataAdapter` a seconda delle modifiche apportate ai dati in <xref:System.Data.DataTable>,</span><span class="sxs-lookup"><span data-stu-id="3e13b-105">The `InsertCommand`, `UpdateCommand`, or `DeleteCommand` properties must be set before the `Update` method of the `DataAdapter` is called, depending on what changes were made to the data in the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="3e13b-106">Se ad esempio sono state aggiunte righe, è necessario impostare la proprietà `InsertCommand` prima di chiamare `Update`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-106">For example, if rows have been added, the `InsertCommand` must be set before you call `Update`.</span></span> <span data-ttu-id="3e13b-107">Quando `Update` elabora una riga inserita, aggiornata o eliminata, `DataAdapter` usa la rispettiva proprietà `Command` per l'operazione.</span><span class="sxs-lookup"><span data-stu-id="3e13b-107">When `Update` is processing an inserted, updated, or deleted row, the `DataAdapter` uses the respective `Command` property to process the action.</span></span> <span data-ttu-id="3e13b-108">Le informazioni correnti sulla riga modificata vengono passate all'oggetto `Command` mediante la raccolta `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-108">Current information about the modified row is passed to the `Command` object through the `Parameters` collection.</span></span>  
   
- Quando si aggiorna una riga nell'origine dati, viene chiamata l'istruzione UPDATE che usa un identificatore univoco per identificare la riga nella tabella da aggiornare.  In genere, il valore dell'identificatore univoco corrisponde a quello del campo di una chiave primaria.  Nell'istruzione UPDATE vengono usati i parametri che contengono sia l'identificatore univoco che le colonne e i valori da aggiornare, come illustrato nell'istruzione Transact\-SQL seguente.  
+ <span data-ttu-id="3e13b-109">Quando si aggiorna una riga nell'origine dati, viene chiamata l'istruzione UPDATE che usa un identificatore univoco per identificare la riga nella tabella da aggiornare.</span><span class="sxs-lookup"><span data-stu-id="3e13b-109">When you update a row at the data source, you call the UPDATE statement, which uses a unique identifier to identify the row in the table be updated.</span></span> <span data-ttu-id="3e13b-110">In genere, il valore dell'identificatore univoco corrisponde a quello del campo di una chiave primaria.</span><span class="sxs-lookup"><span data-stu-id="3e13b-110">The unique identifier is typically the value of a primary key field.</span></span> <span data-ttu-id="3e13b-111">Nell'istruzione UPDATE vengono usati i parametri che contengono sia l'identificatore univoco che le colonne e i valori da aggiornare, come illustrato nell'istruzione Transact-SQL seguente.</span><span class="sxs-lookup"><span data-stu-id="3e13b-111">The UPDATE statement uses parameters that contain both the unique identifier and the columns and values to be updated, as shown in the following Transact-SQL statement.</span></span>  
   
 ```  
 UPDATE Customers SET CompanyName = @CompanyName   
@@ -27,9 +33,9 @@ UPDATE Customers SET CompanyName = @CompanyName
 ```  
   
 > [!NOTE]
->  La sintassi per i segnaposto dei parametri varia in base all'origine dati.  In questo esempio vengono mostrati i segnaposto per un'origine dati SQL Server.  Per i parametri <xref:System.Data.OleDb> e <xref:System.Data.Odbc> vengono usati come segnaposto i punti interrogativi \(?\).  
+>  <span data-ttu-id="3e13b-112">La sintassi per i segnaposto dei parametri varia in base all'origine dati.</span><span class="sxs-lookup"><span data-stu-id="3e13b-112">The syntax for parameter placeholders depends on the data source.</span></span> <span data-ttu-id="3e13b-113">In questo esempio vengono mostrati i segnaposto per un'origine dati SQL Server.</span><span class="sxs-lookup"><span data-stu-id="3e13b-113">This example shows placeholders for a SQL Server data source.</span></span> <span data-ttu-id="3e13b-114">Per i parametri <xref:System.Data.OleDb> e <xref:System.Data.Odbc> vengono usati come segnaposto i punti interrogativi (?).</span><span class="sxs-lookup"><span data-stu-id="3e13b-114">Use question mark (?) placeholders for <xref:System.Data.OleDb> and <xref:System.Data.Odbc> parameters.</span></span>  
   
- In questo esempio di [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], il campo `CompanyName` viene aggiornato con il valore del parametro `@CompanyName` nella riga in cui `CustomerID` è uguale al valore del parametro `@CustomerID```.  Le informazioni della riga modificata vengono recuperate dai parametri mediante la proprietà <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> dell'oggetto <xref:System.Data.SqlClient.SqlParameter>.  Di seguito sono riportati i parametri della precedente istruzione UPDATE di esempio.  Nel codice si presuppone che la variabile `adapter` rappresenti un oggetto <xref:System.Data.SqlClient.SqlDataAdapter> valido.  
+ <span data-ttu-id="3e13b-115">In questo [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] esempio, il `CompanyName` campo viene aggiornato con il valore della `@CompanyName` parametro per la riga in cui `CustomerID` è uguale al valore del `@CustomerID` parametro.</span><span class="sxs-lookup"><span data-stu-id="3e13b-115">In this [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] example, the `CompanyName` field is updated with the value of the `@CompanyName` parameter for the row where `CustomerID` equals the value of the `@CustomerID` parameter.</span></span> <span data-ttu-id="3e13b-116">I parametri di recupero le informazioni dalla riga modificata utilizzando il <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> proprietà del <xref:System.Data.SqlClient.SqlParameter> oggetto.</span><span class="sxs-lookup"><span data-stu-id="3e13b-116">The parameters retrieve information from the modified row using the <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> property of the <xref:System.Data.SqlClient.SqlParameter> object.</span></span> <span data-ttu-id="3e13b-117">Di seguito sono riportati i parametri della precedente istruzione UPDATE di esempio.</span><span class="sxs-lookup"><span data-stu-id="3e13b-117">The following are the parameters for the previous sample UPDATE statement.</span></span> <span data-ttu-id="3e13b-118">Nel codice si presuppone che la variabile `adapter` rappresenti un oggetto <xref:System.Data.SqlClient.SqlDataAdapter> valido.</span><span class="sxs-lookup"><span data-stu-id="3e13b-118">The code assumes that the variable `adapter` represents a valid <xref:System.Data.SqlClient.SqlDataAdapter> object.</span></span>  
   
 ```  
 adapter.Parameters.Add( _  
@@ -40,33 +46,33 @@ Dim parameter As SqlParameter = _
 parameter.SourceVersion = DataRowVersion.Original  
 ```  
   
- Il metodo `Add` della raccolta `Parameters` accetta il nome del parametro, il tipo di dati, le dimensioni \(se applicabili al tipo\) e il nome dell'oggetto <xref:System.Data.Common.DbParameter.SourceColumn%2A> da `DataTable`.  Notare che la proprietà <xref:System.Data.Common.DbParameter.SourceVersion%2A> del parametro `@CustomerID` è impostata su `Original`.  Questo valore assicura che l'aggiornamento della riga esistente nell'origine dati venga eseguito se il valore della colonna o delle colonne identificative è stato cambiato nell'oggetto <xref:System.Data.DataRow> modificato.  In questo caso il valore `Original` della riga corrisponde al valore corrente nell'origine dati e il valore `Current` della riga contiene il valore aggiornato.  `SourceVersion` non è impostato per il parametro `@CompanyName`, pertanto verrà usato il valore di riga `Current` predefinito.  
+ <span data-ttu-id="3e13b-119">Il metodo `Add` della raccolta `Parameters` accetta il nome del parametro, il tipo di dati, le dimensioni (se applicabili al tipo) e il nome dell'oggetto <xref:System.Data.Common.DbParameter.SourceColumn%2A> da `DataTable`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-119">The `Add` method of the `Parameters` collection takes the name of the parameter, the data type, the size (if applicable to the type), and the name of the <xref:System.Data.Common.DbParameter.SourceColumn%2A> from the `DataTable`.</span></span> <span data-ttu-id="3e13b-120">Notare che la proprietà <xref:System.Data.Common.DbParameter.SourceVersion%2A> del parametro `@CustomerID` è impostata su `Original`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-120">Notice that the <xref:System.Data.Common.DbParameter.SourceVersion%2A> of the `@CustomerID` parameter is set to `Original`.</span></span> <span data-ttu-id="3e13b-121">Questo valore assicura che l'aggiornamento della riga esistente nell'origine dati venga eseguito se il valore della colonna o delle colonne identificative è stato cambiato nell'oggetto <xref:System.Data.DataRow> modificato.</span><span class="sxs-lookup"><span data-stu-id="3e13b-121">This guarantees that the existing row in the data source is updated if the value of the identifying column or columns has been changed in the modified <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="3e13b-122">In questo caso il valore `Original` della riga corrisponde al valore corrente nell'origine dati e il valore `Current` della riga contiene il valore aggiornato.</span><span class="sxs-lookup"><span data-stu-id="3e13b-122">In that case, the `Original` row value would match the current value at the data source, and the `Current` row value would contain the updated value.</span></span> <span data-ttu-id="3e13b-123">`SourceVersion` non è impostato per il parametro `@CompanyName`, pertanto verrà usato il valore di riga `Current` predefinito.</span><span class="sxs-lookup"><span data-stu-id="3e13b-123">The `SourceVersion` for the `@CompanyName` parameter is not set and uses the default, `Current` row value.</span></span>  
   
 > [!NOTE]
->  Per le operazioni `Fill` del `DataAdapter` e i metodi `Get` del `DataReader`, il tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene inferito dal tipo restituito dal provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  I tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] inferiti e metodi delle funzioni di accesso per i tipi di dati Microsoft SQL Server, OLE DB e ODBC sono descritti in [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+>  <span data-ttu-id="3e13b-124">Per le operazioni `Fill` del `DataAdapter` e i metodi `Get` del `DataReader`, il tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene inferito dal tipo restituito dal provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3e13b-124">For both the `Fill` operations of the `DataAdapter` and the `Get` methods of the `DataReader`, the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type is inferred from the type returned from the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] data provider.</span></span> <span data-ttu-id="3e13b-125">Il derivato [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipi e metodi di accesso per i tipi di dati Microsoft SQL Server, OLE DB e ODBC sono descritti [mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).</span><span class="sxs-lookup"><span data-stu-id="3e13b-125">The inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] types and accessor methods for Microsoft SQL Server, OLE DB, and ODBC data types are described in [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).</span></span>  
   
-## Parameter.SourceColumn e Parameter.SourceVersion  
- È possibile passare `SourceColumn` e `SourceVersion` come argomenti del costruttore `Parameter` o impostarli come proprietà di un oggetto `Parameter` esistente.  `SourceColumn` è il nome dell'oggetto <xref:System.Data.DataColumn> derivato da <xref:System.Data.DataRow> in cui viene recuperato il valore di `Parameter`.  `SourceVersion` specifica la versione di `DataRow` usata da `DataAdapter` per recuperare il valore.  
+## <a name="parametersourcecolumn-parametersourceversion"></a><span data-ttu-id="3e13b-126">Parameter.SourceColumn e Parameter.SourceVersion</span><span class="sxs-lookup"><span data-stu-id="3e13b-126">Parameter.SourceColumn, Parameter.SourceVersion</span></span>  
+ <span data-ttu-id="3e13b-127">È possibile passare `SourceColumn` e `SourceVersion` come argomenti del costruttore `Parameter` o impostarli come proprietà di un oggetto `Parameter` esistente.</span><span class="sxs-lookup"><span data-stu-id="3e13b-127">The `SourceColumn` and `SourceVersion` may be passed as arguments to the `Parameter` constructor, or set as properties of an existing `Parameter`.</span></span> <span data-ttu-id="3e13b-128">`SourceColumn` è il nome dell'oggetto <xref:System.Data.DataColumn> derivato da <xref:System.Data.DataRow> in cui viene recuperato il valore di `Parameter`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-128">The `SourceColumn` is the name of the <xref:System.Data.DataColumn> from the <xref:System.Data.DataRow> where the value of the `Parameter` will be retrieved.</span></span> <span data-ttu-id="3e13b-129">`SourceVersion` specifica la versione di `DataRow` usata da `DataAdapter` per recuperare il valore.</span><span class="sxs-lookup"><span data-stu-id="3e13b-129">The `SourceVersion` specifies the `DataRow` version that the `DataAdapter` uses to retrieve the value.</span></span>  
   
- Nella tabella seguente sono elencati i valori di enumerazione <xref:System.Data.DataRowVersion> disponibili per l'uso con `SourceVersion`.  
+ <span data-ttu-id="3e13b-130">Nella tabella seguente sono elencati i valori di enumerazione <xref:System.Data.DataRowVersion> disponibili per l'uso con `SourceVersion`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-130">The following table shows the <xref:System.Data.DataRowVersion> enumeration values available for use with `SourceVersion`.</span></span>  
   
-|Enumerazione DataRowVersion|Descrizione|  
-|---------------------------------|-----------------|  
-|`Current`|Il parametro usa il valore corrente della colonna.  Questa è l'impostazione predefinita.|  
-|`Default`|Il parametro usa il valore `DefaultValue` della colonna.|  
-|`Original`|Il parametro usa il valore originale della colonna.|  
-|`Proposed`|Il parametro usa un valore proposto.|  
+|<span data-ttu-id="3e13b-131">Enumerazione DataRowVersion</span><span class="sxs-lookup"><span data-stu-id="3e13b-131">DataRowVersion Enumeration</span></span>|<span data-ttu-id="3e13b-132">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3e13b-132">Description</span></span>|  
+|--------------------------------|-----------------|  
+|`Current`|<span data-ttu-id="3e13b-133">Il parametro usa il valore corrente della colonna.</span><span class="sxs-lookup"><span data-stu-id="3e13b-133">The parameter uses the current value of the column.</span></span> <span data-ttu-id="3e13b-134">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="3e13b-134">This is the default.</span></span>|  
+|`Default`|<span data-ttu-id="3e13b-135">Il parametro usa il valore `DefaultValue` della colonna.</span><span class="sxs-lookup"><span data-stu-id="3e13b-135">The parameter uses the `DefaultValue` of the column.</span></span>|  
+|`Original`|<span data-ttu-id="3e13b-136">Il parametro usa il valore originale della colonna.</span><span class="sxs-lookup"><span data-stu-id="3e13b-136">The parameter uses the original value of the column.</span></span>|  
+|`Proposed`|<span data-ttu-id="3e13b-137">Il parametro usa un valore proposto.</span><span class="sxs-lookup"><span data-stu-id="3e13b-137">The parameter uses a proposed value.</span></span>|  
   
- Nell'esempio di codice `SqlClient` della sezione successiva viene definito un parametro per un oggetto <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> in cui la colonna `CustomerID` viene usata come `SourceColumn` per due parametri: `@CustomerID` \(`SET CustomerID = @CustomerID`\) e `@OldCustomerID` \(`WHERE CustomerID = @OldCustomerID`\).  Il parametro `@CustomerID` viene usato per aggiornare la colonna **CustomerID** in base al valore corrente di `DataRow`.  Di conseguenza, viene usato `SourceColumn` `CustomerID` in cui il valore di `SourceVersion` è uguale a `Current`.  Il parametro *@OldCustomerID* viene usato per identificare la riga corrente nell'origine dati.  Poiché il valore della colonna corrispondente viene individuato nella versione `Original` della riga, verrà usato lo stesso oggetto `SourceColumn` \(`CustomerID`\) con `SourceVersion` `Original`.  
+ <span data-ttu-id="3e13b-138">Nell'esempio di codice `SqlClient` della sezione successiva viene definito un parametro per un oggetto <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> in cui la colonna `CustomerID` viene usata come `SourceColumn` per due parametri: `@CustomerID` (`SET CustomerID = @CustomerID`) e `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`).</span><span class="sxs-lookup"><span data-stu-id="3e13b-138">The `SqlClient` code example in the next section defines a parameter for an <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> in which the `CustomerID` column is used as a `SourceColumn` for two parameters: `@CustomerID` (`SET CustomerID = @CustomerID`), and `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`).</span></span> <span data-ttu-id="3e13b-139">Il `@CustomerID` parametro viene utilizzato per aggiornare il **CustomerID** colonna sul valore corrente di `DataRow`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-139">The `@CustomerID` parameter is used to update the **CustomerID** column to the current value in the `DataRow`.</span></span> <span data-ttu-id="3e13b-140">Di conseguenza, il `CustomerID` `SourceColumn` con un `SourceVersion` di `Current` viene utilizzato.</span><span class="sxs-lookup"><span data-stu-id="3e13b-140">As a result, the `CustomerID` `SourceColumn` with a `SourceVersion` of `Current` is used.</span></span> <span data-ttu-id="3e13b-141">Il  *@OldCustomerID*  parametro viene utilizzato per identificare la riga corrente nell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="3e13b-141">The *@OldCustomerID* parameter is used to identify the current row in the data source.</span></span> <span data-ttu-id="3e13b-142">Poiché il valore della colonna corrispondente viene individuato nella versione `Original` della riga, verrà usato lo stesso oggetto `SourceColumn` (`CustomerID`) con `SourceVersion` `Original`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-142">Because the matching column value is found in the `Original` version of the row, the same `SourceColumn` (`CustomerID`) with a `SourceVersion` of `Original` is used.</span></span>  
   
-## Uso di parametri SqlClient  
- Nell'esempio seguente viene illustrato come creare un oggetto <xref:System.Data.SqlClient.SqlDataAdapter> e impostare <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> su <xref:System.Data.MissingSchemaAction> per recuperare informazioni aggiuntive sullo schema dal database.  Vengono impostate le proprietà <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> e <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> e i relativi oggetti <xref:System.Data.SqlClient.SqlParameter> corrispondenti vengono aggiunti alla raccolta <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>.  Il metodo restituisce un oggetto `SqlDataAdapter`.  
+## <a name="working-with-sqlclient-parameters"></a><span data-ttu-id="3e13b-143">Uso di parametri SqlClient</span><span class="sxs-lookup"><span data-stu-id="3e13b-143">Working with SqlClient Parameters</span></span>  
+ <span data-ttu-id="3e13b-144">Nell'esempio seguente viene illustrato come creare un oggetto <xref:System.Data.SqlClient.SqlDataAdapter> e impostare <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> su <xref:System.Data.MissingSchemaAction.AddWithKey> per recuperare informazioni aggiuntive sullo schema dal database.</span><span class="sxs-lookup"><span data-stu-id="3e13b-144">The following example demonstrates how to create a <xref:System.Data.SqlClient.SqlDataAdapter> and set the <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> to <xref:System.Data.MissingSchemaAction.AddWithKey> in order to retrieve additional schema information from the database.</span></span> <span data-ttu-id="3e13b-145">Vengono impostate le proprietà <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> e <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> e i relativi oggetti <xref:System.Data.SqlClient.SqlParameter> corrispondenti vengono aggiunti alla raccolta <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>.</span><span class="sxs-lookup"><span data-stu-id="3e13b-145">The <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, and <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> properties set and their corresponding <xref:System.Data.SqlClient.SqlParameter> objects added to the <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> collection.</span></span> <span data-ttu-id="3e13b-146">Il metodo restituisce un oggetto `SqlDataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-146">The method returns a `SqlDataAdapter` object.</span></span>  
   
  [!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/CS/source.cs#1)]
  [!code-vb[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/VB/source.vb#1)]  
   
-## Segnaposti di parametri OleDb  
- Per gli oggetti <xref:System.Data.OleDb.OleDbDataAdapter> e <xref:System.Data.Odbc.OdbcDataAdapter>, è necessario usare il punto interrogativo \(?\) come segnaposto per identificare i parametri.  
+## <a name="oledb-parameter-placeholders"></a><span data-ttu-id="3e13b-147">Segnaposti di parametri OleDb</span><span class="sxs-lookup"><span data-stu-id="3e13b-147">OleDb Parameter Placeholders</span></span>  
+ <span data-ttu-id="3e13b-148">Per gli oggetti <xref:System.Data.OleDb.OleDbDataAdapter> e <xref:System.Data.Odbc.OdbcDataAdapter>, è necessario usare il punto interrogativo (?) come segnaposto per identificare i parametri.</span><span class="sxs-lookup"><span data-stu-id="3e13b-148">For the <xref:System.Data.OleDb.OleDbDataAdapter> and <xref:System.Data.Odbc.OdbcDataAdapter> objects, you must use question mark (?) placeholders to identify the parameters.</span></span>  
   
 ```vb  
 Dim selectSQL As String = _  
@@ -93,11 +99,11 @@ string updateSQL =
 string deleteSQL = "DELETE FROM Customers WHERE CustomerID = ?";  
 ```  
   
- Le istruzioni delle query con parametri definiscono i parametri di input e di output che è necessario creare.  Per creare un parametro, usare il metodo `Parameters.Add` o il costruttore `Parameter` per specificare il nome della colonna, il tipo di dati e le dimensioni.  Per tipi di dati intrinseci, ad esempio `Integer`, non è necessario includere le dimensioni oppure è possibile specificare quelle predefinite.  
+ <span data-ttu-id="3e13b-149">Le istruzioni delle query con parametri definiscono i parametri di input e di output che è necessario creare.</span><span class="sxs-lookup"><span data-stu-id="3e13b-149">The parameterized query statements define which input and output parameters must be created.</span></span> <span data-ttu-id="3e13b-150">Per creare un parametro, usare il metodo `Parameters.Add` o il costruttore `Parameter` per specificare il nome della colonna, il tipo di dati e le dimensioni.</span><span class="sxs-lookup"><span data-stu-id="3e13b-150">To create a parameter, use the `Parameters.Add` method or the `Parameter` constructor to specify the column name, data type, and size.</span></span> <span data-ttu-id="3e13b-151">Per tipi di dati intrinseci, ad esempio `Integer`, non è necessario includere le dimensioni oppure è possibile specificare quelle predefinite.</span><span class="sxs-lookup"><span data-stu-id="3e13b-151">For intrinsic data types, such as `Integer`, you do not have to include the size, or you can specify the default size.</span></span>  
   
- Nell'esempio di codice seguente vengono creati i parametri per un'istruzione SQL e viene quindi compilato un `DataSet`.  
+ <span data-ttu-id="3e13b-152">Nell'esempio di codice seguente vengono creati i parametri per un'istruzione SQL e viene quindi compilato un `DataSet`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-152">The following code example creates the parameters for a SQL statement and then fills a `DataSet`.</span></span>  
   
-## Esempio di OleDb  
+## <a name="oledb-example"></a><span data-ttu-id="3e13b-153">Esempio di OleDb</span><span class="sxs-lookup"><span data-stu-id="3e13b-153">OleDb Example</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid OleDbConnection object.  
@@ -114,7 +120,6 @@ selectCMD.Parameters.Add( _
   
 Dim customers As DataSet = New DataSet  
 adapter.Fill(customers, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -134,7 +139,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");  
 ```  
   
-## Parametri Odbc  
+## <a name="odbc-parameters"></a><span data-ttu-id="3e13b-154">Parametri Odbc</span><span class="sxs-lookup"><span data-stu-id="3e13b-154">Odbc Parameters</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid OdbcConnection object.  
@@ -149,7 +154,6 @@ selectCMD.Parameters.Add("@City", OdbcType.VarChar, 15).Value = "London"
   
 Dim customers As DataSet = New DataSet  
 adapter.Fill(customers, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -168,12 +172,12 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  Se non viene specificato un nome, al parametro viene assegnato il nome predefinito incrementale Parameter*N* *,* che inizia con "Parameter1".  Si consiglia di evitare la convenzione di denominazione Parameter*N* quando si specifica il nome del parametro, in quanto il nome indicato può entrare in conflitto con un nome predefinito esistente in `ParameterCollection`.  Se il nome fornito è già presente, viene generata un'eccezione.  
+>  <span data-ttu-id="3e13b-155">Se per un parametro non viene specificato un nome di parametro, il parametro è assegnato il nome predefinito incrementale del parametro*N* *,* inizia con "Parameter1".</span><span class="sxs-lookup"><span data-stu-id="3e13b-155">If a parameter name is not supplied for a parameter, the parameter is given an incremental default name of Parameter*N* *,* starting with "Parameter1".</span></span> <span data-ttu-id="3e13b-156">Si consiglia di evitare il parametro*N* convenzione di denominazione quando si fornisce un nome di parametro, perché il nome specificato potrebbe essere in conflitto con un nome di parametro predefinito esistente nel `ParameterCollection`.</span><span class="sxs-lookup"><span data-stu-id="3e13b-156">We recommend that you avoid the Parameter*N* naming convention when you supply a parameter name, because the name that you supply might conflict with an existing default parameter name in the `ParameterCollection`.</span></span> <span data-ttu-id="3e13b-157">Se il nome fornito è già presente, viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="3e13b-157">If the supplied name already exists, an exception is thrown.</span></span>  
   
-## Vedere anche  
- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Aggiornamenti di origini dati tramite DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [Modifica di dati con le stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)   
- [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3e13b-158">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3e13b-158">See Also</span></span>  
+ [<span data-ttu-id="3e13b-159">DataAdapter e DataReader</span><span class="sxs-lookup"><span data-stu-id="3e13b-159">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="3e13b-160">Comandi e parametri</span><span class="sxs-lookup"><span data-stu-id="3e13b-160">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="3e13b-161">Aggiornamento di origini dati con DataAdapter</span><span class="sxs-lookup"><span data-stu-id="3e13b-161">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [<span data-ttu-id="3e13b-162">Modifica dei dati con le Stored procedure</span><span class="sxs-lookup"><span data-stu-id="3e13b-162">Modifying Data with Stored Procedures</span></span>](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [<span data-ttu-id="3e13b-163">Mapping dei tipi di dati in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3e13b-163">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [<span data-ttu-id="3e13b-164">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="3e13b-164">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

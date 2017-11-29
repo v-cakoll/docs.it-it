@@ -1,118 +1,118 @@
 ---
-title: "Operazioni del servizio (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "HTML"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "operazioni del servizio [WCF Data Services]"
-  - "WCF Data Services, operazioni del servizio"
+title: Operazioni di servizio (WCF Data Services)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- service operations [WCF Data Services]
+- WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 43f2b4bf7a7617587d76252108ec1ab5fb194a11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Operazioni del servizio (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di definire operazioni del servizio in un servizio dati per esporre metodi nel server.  Allo stesso modo di altre risorse del servizio dati, le operazioni del servizio vengono indirizzate mediante URI.  Le operazioni del servizio consentono di esporre la logica di business in un servizio dati, ad esempio per implementare la logica di convalida, per applicare la sicurezza basata sui ruoli o per esporre funzionalità di query specializzate.  Le operazioni del servizio sono metodi aggiunti alla classe del servizio dati che deriva da <xref:System.Data.Services.DataService%601>. Analogamente a tutte le altre risorse del servizio dati, è possibile fornire parametri al metodo dell'operazione del servizio. L'URI dell'operazione del servizio seguente, basato sul servizio dati della [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md), passa ad esempio il valore `London` al parametro `city`:  
+# <a name="service-operations-wcf-data-services"></a><span data-ttu-id="97283-102">Operazioni di servizio (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="97283-102">Service Operations (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="97283-103"> consente di definire operazioni del servizio in un servizio dati per esporre metodi nel server.</span><span class="sxs-lookup"><span data-stu-id="97283-103"> enables you to define service operations on a data service to expose methods on the server.</span></span> <span data-ttu-id="97283-104">Allo stesso modo di altre risorse del servizio dati, le operazioni del servizio vengono indirizzate mediante URI.</span><span class="sxs-lookup"><span data-stu-id="97283-104">Like other data service resources, service operations are addressed by URIs.</span></span> <span data-ttu-id="97283-105">Le operazioni del servizio consentono di esporre la logica di business in un servizio dati, ad esempio per implementare la logica di convalida, per applicare la sicurezza basata sui ruoli o per esporre funzionalità di query specializzate.</span><span class="sxs-lookup"><span data-stu-id="97283-105">Service operations enable you to expose business logic in a data service, such as to implement validation logic, to apply role-based security, or to expose specialized querying capabilities.</span></span> <span data-ttu-id="97283-106">Le operazioni del servizio sono metodi aggiunti alla classe del servizio dati che deriva da <xref:System.Data.Services.DataService%601>.</span><span class="sxs-lookup"><span data-stu-id="97283-106">Service operations are methods added to the data service class that derives from <xref:System.Data.Services.DataService%601>.</span></span> <span data-ttu-id="97283-107">Analogamente a tutte le altre risorse del servizio dati, è possibile fornire parametri al metodo dell'operazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="97283-107">Like all other data service resources, you can supply parameters to the service operation method.</span></span> <span data-ttu-id="97283-108">Ad esempio, la seguente operazione URI del servizio (in base il [delle Guide rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) servizio dati) passa il valore `London` per il `city` parametro:</span><span class="sxs-lookup"><span data-stu-id="97283-108">For example, the following service operation URI (based on the [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) data service) passes the value `London` to the `city` parameter:</span></span>  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
 ```  
   
- La definizione per questa operazione del servizio è la seguente:  
+ <span data-ttu-id="97283-109">La definizione per questa operazione del servizio è la seguente:</span><span class="sxs-lookup"><span data-stu-id="97283-109">The definition for this service operation is as follows:</span></span>  
   
  [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
  [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
- È possibile usare la proprietà <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> dell'oggetto <xref:System.Data.Services.DataService%601> per accedere direttamente all'origine dati usata dal servizio dati.  Per altre informazioni, vedere [Procedura: definire un'operazione del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
+ <span data-ttu-id="97283-110">È possibile usare la proprietà <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> dell'oggetto <xref:System.Data.Services.DataService%601> per accedere direttamente all'origine dati usata dal servizio dati.</span><span class="sxs-lookup"><span data-stu-id="97283-110">You can use the <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> of the <xref:System.Data.Services.DataService%601> to directly access the data source that the data service is using.</span></span> <span data-ttu-id="97283-111">Per ulteriori informazioni, vedere [procedura: definire un'operazione del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="97283-111">For more information, see [How to: Define a Service Operation](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).</span></span>  
   
- Per informazioni su come chiamare un'operazione del servizio da un'applicazione client .NET Framework, vedere [Operazioni del servizio di chiamata](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).  
+ <span data-ttu-id="97283-112">Per informazioni su come chiamare un'operazione del servizio da un'applicazione client .NET Framework, vedere [la chiamata a operazioni del servizio](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="97283-112">For information on how to call a service operation from a .NET Framework client application, see [Calling Service Operations](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).</span></span>  
   
-## Requisiti delle operazioni del servizio  
- I requisiti seguenti si applicano in caso di definizione di operazioni del servizio nel servizio dati.  Se un metodo non soddisfa questi requisiti, non verrà esposto come operazione del servizio per il servizio dati.  
+## <a name="service-operation-requirements"></a><span data-ttu-id="97283-113">Requisiti delle operazioni del servizio</span><span class="sxs-lookup"><span data-stu-id="97283-113">Service Operation Requirements</span></span>  
+ <span data-ttu-id="97283-114">I requisiti seguenti si applicano in caso di definizione di operazioni del servizio nel servizio dati.</span><span class="sxs-lookup"><span data-stu-id="97283-114">The following requirements apply when defining service operations on the data service.</span></span> <span data-ttu-id="97283-115">Se un metodo non soddisfa questi requisiti, non verrà esposto come operazione del servizio per il servizio dati.</span><span class="sxs-lookup"><span data-stu-id="97283-115">If a method does not meet these requirements, it will not be exposed as a service operation for the data service.</span></span>  
   
--   L'operazione deve essere un metodo di istanza pubblica, ovvero un membro della classe del servizio dati.  
+-   <span data-ttu-id="97283-116">L'operazione deve essere un metodo di istanza pubblica, ovvero un membro della classe del servizio dati.</span><span class="sxs-lookup"><span data-stu-id="97283-116">The operation must be a public instance method that is a member of the data service class.</span></span>  
   
--   È possibile che il metodo dell'operazione accetti solo parametri di input.  L'accesso ai dati inviati nel corpo del messaggio non può essere eseguito dal servizio dati.  
+-   <span data-ttu-id="97283-117">È possibile che il metodo dell'operazione accetti solo parametri di input.</span><span class="sxs-lookup"><span data-stu-id="97283-117">The operation method may only accept input parameters.</span></span> <span data-ttu-id="97283-118">L'accesso ai dati inviati nel corpo del messaggio non può essere eseguito dal servizio dati.</span><span class="sxs-lookup"><span data-stu-id="97283-118">Data sent in the message body cannot be accessed by the data service.</span></span>  
   
--   Se sono definiti parametri, il tipo di ogni parametro deve essere primitivo.  I dati di un tipo non primitivo devono essere serializzati e passati in un parametro di stringa.  
+-   <span data-ttu-id="97283-119">Se sono definiti parametri, il tipo di ogni parametro deve essere primitivo.</span><span class="sxs-lookup"><span data-stu-id="97283-119">If parameters are defined, the type of each parameter must be a primitive type.</span></span> <span data-ttu-id="97283-120">I dati di un tipo non primitivo devono essere serializzati e passati in un parametro di stringa.</span><span class="sxs-lookup"><span data-stu-id="97283-120">Any data of a non-primitive type must be serialized and passed into a string parameter.</span></span>  
   
--   Il metodo deve restituire uno degli elementi seguenti:  
+-   <span data-ttu-id="97283-121">Il metodo deve restituire uno degli elementi seguenti:</span><span class="sxs-lookup"><span data-stu-id="97283-121">The method must return one of the following:</span></span>  
   
-    -   `void` \(`Nothing` in Visual Basic\)  
+    -   <span data-ttu-id="97283-122">`void` (`Nothing` in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97283-122">`void` (`Nothing` in Visual Basic)</span></span>  
   
     -   <xref:System.Collections.Generic.IEnumerable%601>  
   
     -   <xref:System.Linq.IQueryable%601>  
   
-    -   Un tipo di entità nel modello di dati esposto dal servizio dati.                  ``  
+    -   <span data-ttu-id="97283-123">Un tipo di entità nel modello di dati esposto dal servizio dati.</span><span class="sxs-lookup"><span data-stu-id="97283-123">An entity type in the data model that the data service exposes.</span></span>  
   
-    -   Una classe primitiva, ad esempio Integer o stringa.  
+    -   <span data-ttu-id="97283-124">Una classe primitiva, ad esempio Integer o stringa.</span><span class="sxs-lookup"><span data-stu-id="97283-124">A primitive class such as integer or string.</span></span>  
   
--   Per supportare opzioni di query di ordinamento, paging e filtro, i metodi delle operazioni del servizio devono restituire <xref:System.Linq.IQueryable%601>.  Le richieste a operazioni del servizio che includono opzioni di query vengono rifiutate per le operazioni che restituiscono solo <xref:System.Collections.Generic.IEnumerable%601>.  
+-   <span data-ttu-id="97283-125">Per supportare opzioni di query di ordinamento, paging e filtro, i metodi delle operazioni del servizio devono restituire <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="97283-125">In order to support query options such as sorting, paging, and filtering, service operation methods should return <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="97283-126">Le richieste a operazioni del servizio che includono opzioni di query vengono rifiutate per le operazioni che restituiscono solo <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="97283-126">Requests to service operations that include query options are rejected for operations that only return <xref:System.Collections.Generic.IEnumerable%601>.</span></span>  
   
--   Per supportare l'accesso alle entità correlate tramite le proprietà di navigazione, l'operazione del servizio deve restituire <xref:System.Linq.IQueryable%601>.  
+-   <span data-ttu-id="97283-127">Per supportare l'accesso alle entità correlate tramite le proprietà di navigazione, l'operazione del servizio deve restituire <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="97283-127">In order to support accessing related entities by using navigation properties, the service operation must return <xref:System.Linq.IQueryable%601>.</span></span>  
   
--   Il metodo deve essere annotato con l'attributo `[WebGet]` o `[WebInvoke]`.  
+-   <span data-ttu-id="97283-128">Il metodo deve essere annotato con l'attributo `[WebGet]` o `[WebInvoke]`.</span><span class="sxs-lookup"><span data-stu-id="97283-128">The method must be annotated with the `[WebGet]` or `[WebInvoke]` attribute.</span></span>  
   
-    -   `[WebGet]` abilita il metodo da richiamare tramite una richiesta GET.  
+    -   <span data-ttu-id="97283-129">`[WebGet]` abilita il metodo da richiamare tramite una richiesta GET.</span><span class="sxs-lookup"><span data-stu-id="97283-129">`[WebGet]` enables the method to be invoked by using a GET request.</span></span>  
   
-    -   `[WebInvoke(Method = "POST")]` abilita il metodo da richiamare tramite una richiesta POST.  Altri metodi <xref:System.ServiceModel.Web.WebInvokeAttribute> non sono supportati.  
+    -   <span data-ttu-id="97283-130">`[WebInvoke(Method = "POST")]` abilita il metodo da richiamare tramite una richiesta POST.</span><span class="sxs-lookup"><span data-stu-id="97283-130">`[WebInvoke(Method = "POST")]` enables the method to be invoked by using a POST request.</span></span> <span data-ttu-id="97283-131">Altri metodi <xref:System.ServiceModel.Web.WebInvokeAttribute> non sono supportati.</span><span class="sxs-lookup"><span data-stu-id="97283-131">Other <xref:System.ServiceModel.Web.WebInvokeAttribute> methods are not supported.</span></span>  
   
--   Un'operazione del servizio può essere annotata con <xref:System.Data.Services.SingleResultAttribute> che specifica che il valore restituito dal metodo è una singola entità anziché una raccolta di entità.  Questa distinzione determina la serializzazione della risposta e il modo in cui gli attraversamenti delle proprietà di navigazione aggiuntivi vengono rappresentati nell'URI.  Nel caso di utilizzo della serializzazione AtomPub, ad esempio, un'istanza singola del tipo di risorsa viene rappresentata come elemento entry e un set di istanze come elemento feed.  
+-   <span data-ttu-id="97283-132">Un'operazione del servizio può essere annotata con <xref:System.Data.Services.SingleResultAttribute> che specifica che il valore restituito dal metodo è una singola entità anziché una raccolta di entità.</span><span class="sxs-lookup"><span data-stu-id="97283-132">A service operation may be annotated with the <xref:System.Data.Services.SingleResultAttribute> that specifies that the return value from the method is a single entity rather than a collection of entities.</span></span> <span data-ttu-id="97283-133">Questa distinzione determina la serializzazione della risposta e il modo in cui gli attraversamenti delle proprietà di navigazione aggiuntivi vengono rappresentati nell'URI.</span><span class="sxs-lookup"><span data-stu-id="97283-133">This distinction dictates the resulting serialization of the response and the manner in which additional navigation property traversals are represented in the URI.</span></span> <span data-ttu-id="97283-134">Nel caso di utilizzo della serializzazione AtomPub, ad esempio, un'istanza singola del tipo di risorsa viene rappresentata come elemento entry e un set di istanze come elemento feed.</span><span class="sxs-lookup"><span data-stu-id="97283-134">For example, when using AtomPub serialization, a single resource type instance is represented as an entry element and a set of instances as a feed element.</span></span>  
   
-## Indirizzamento di operazioni di servizio  
- È possibile indirizzare le operazioni del servizio inserendo il nome del metodo nel primo segmento di percorso di un URI.  Ad esempio, l'URI riportato di seguito consente l'accesso a un'operazione `GetOrdersByState` che restituisce una raccolta <xref:System.Linq.IQueryable%601> di oggetti `Orders`.  
+## <a name="addressing-service-operations"></a><span data-ttu-id="97283-135">Indirizzamento di operazioni di servizio</span><span class="sxs-lookup"><span data-stu-id="97283-135">Addressing Service Operations</span></span>  
+ <span data-ttu-id="97283-136">È possibile indirizzare le operazioni del servizio inserendo il nome del metodo nel primo segmento di percorso di un URI.</span><span class="sxs-lookup"><span data-stu-id="97283-136">You can address service operations by placing the name of the method in the first path segment of a URI.</span></span> <span data-ttu-id="97283-137">Ad esempio, l'URI riportato di seguito consente l'accesso a un'operazione `GetOrdersByState` che restituisce una raccolta <xref:System.Linq.IQueryable%601> di oggetti `Orders`.</span><span class="sxs-lookup"><span data-stu-id="97283-137">As an example, the following URI accesses a `GetOrdersByState` operation that returns an <xref:System.Linq.IQueryable%601> collection of `Orders` objects.</span></span>  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true  
 ```  
   
- Quando si chiama un'operazione del servizio, i parametri vengono forniti come opzioni query.  L'operazione del servizio precedente accetta sia un parametro di stringa `state` che un parametro booleano `includeItems` che indicano se includere oggetti `Order_Detail` correlati nella risposta.  
+ <span data-ttu-id="97283-138">Quando si chiama un'operazione del servizio, i parametri vengono forniti come opzioni query.</span><span class="sxs-lookup"><span data-stu-id="97283-138">When calling a service operation, parameters are supplied as query options.</span></span> <span data-ttu-id="97283-139">L'operazione del servizio precedente accetta sia un parametro di stringa `state` che un parametro booleano `includeItems` che indicano se includere oggetti `Order_Detail` correlati nella risposta.</span><span class="sxs-lookup"><span data-stu-id="97283-139">The previous service operation accepts both a string parameter `state` and a Boolean parameter `includeItems` that indicates whether to include related `Order_Detail` objects in the response.</span></span>  
   
- Di seguito sono riportati i tipi restituiti validi per un'operazione del servizio:  
+ <span data-ttu-id="97283-140">Di seguito sono riportati i tipi restituiti validi per un'operazione del servizio:</span><span class="sxs-lookup"><span data-stu-id="97283-140">The following are valid return types for a service operation:</span></span>  
   
-|Tipi restituiti validi|Regole URI|  
-|----------------------------|----------------|  
-|`void` \(`Nothing` in Visual Basic\)<br /><br /> \-oppure\-<br /><br /> Tipi di entità<br /><br /> \-oppure\-<br /><br /> Tipi primitivi|L'URI deve essere costituito da un singolo segmento di percorso corrispondente al nome dell'operazione del servizio.  Le opzioni di query non sono consentite.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|L'URI deve essere costituito da un singolo segmento di percorso corrispondente al nome dell'operazione del servizio.  Poiché il tipo di risultato non è un tipo <xref:System.Linq.IQueryable%601>, le opzioni di query non sono consentite.|  
-|<xref:System.Linq.IQueryable%601>|Oltre al percorso corrispondente al nome dell'operazione del servizio, sono consentiti segmenti di percorso di query.  Sono consentite anche le opzioni di query.|  
+|<span data-ttu-id="97283-141">Tipi restituiti validi</span><span class="sxs-lookup"><span data-stu-id="97283-141">Valid Return Types</span></span>|<span data-ttu-id="97283-142">Regole URI</span><span class="sxs-lookup"><span data-stu-id="97283-142">URI Rules</span></span>|  
+|------------------------|---------------|  
+|<span data-ttu-id="97283-143">`void` (`Nothing` in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97283-143">`void` (`Nothing` in Visual Basic)</span></span><br /><br /> <span data-ttu-id="97283-144">-oppure-</span><span class="sxs-lookup"><span data-stu-id="97283-144">-or-</span></span><br /><br /> <span data-ttu-id="97283-145">Tipi di entità</span><span class="sxs-lookup"><span data-stu-id="97283-145">Entity types</span></span><br /><br /> <span data-ttu-id="97283-146">-oppure-</span><span class="sxs-lookup"><span data-stu-id="97283-146">-or-</span></span><br /><br /> <span data-ttu-id="97283-147">Tipi primitivi</span><span class="sxs-lookup"><span data-stu-id="97283-147">Primitive types</span></span>|<span data-ttu-id="97283-148">L'URI deve essere costituito da un singolo segmento di percorso corrispondente al nome dell'operazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="97283-148">The URI must be a single path segment that is the name of the service operation.</span></span> <span data-ttu-id="97283-149">Le opzioni di query non sono consentite.</span><span class="sxs-lookup"><span data-stu-id="97283-149">Query options are not allowed.</span></span>|  
+|<xref:System.Collections.Generic.IEnumerable%601>|<span data-ttu-id="97283-150">L'URI deve essere costituito da un singolo segmento di percorso corrispondente al nome dell'operazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="97283-150">The URI must be a single path segment that is the name of the service operation.</span></span> <span data-ttu-id="97283-151">Poiché il tipo di risultato non è un tipo <xref:System.Linq.IQueryable%601>, le opzioni di query non sono consentite.</span><span class="sxs-lookup"><span data-stu-id="97283-151">Because the result type is not an <xref:System.Linq.IQueryable%601> type, query options are not allowed.</span></span>|  
+|<xref:System.Linq.IQueryable%601>|<span data-ttu-id="97283-152">Oltre al percorso corrispondente al nome dell'operazione del servizio, sono consentiti segmenti di percorso di query.</span><span class="sxs-lookup"><span data-stu-id="97283-152">Query path segments in addition to the path that is the name of the service operation are allowed.</span></span> <span data-ttu-id="97283-153">Sono consentite anche le opzioni di query.</span><span class="sxs-lookup"><span data-stu-id="97283-153">Query options are also allowed.</span></span>|  
   
- A seconda del tipo restituito dell'operazione del servizio, è possibile aggiungere all'URI segmenti di percorso o opzioni di query aggiuntive.  Ad esempio, l'URI riportato di seguito consente l'accesso a un'operazione `GetOrdersByCity` che restituisce una raccolta <xref:System.Linq.IQueryable%601> di oggetti `Orders` ordinati in ordine decrescente in base a `RequiredDate` insieme agli oggetti `Order_Details` correlati:  
+ <span data-ttu-id="97283-154">A seconda del tipo restituito dell'operazione del servizio, è possibile aggiungere all'URI segmenti di percorso o opzioni di query aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="97283-154">Additional path segments or query options may be added to the URI depending on the return type of the service operation.</span></span> <span data-ttu-id="97283-155">Ad esempio, l'URI riportato di seguito consente l'accesso a un'operazione `GetOrdersByCity` che restituisce una raccolta <xref:System.Linq.IQueryable%601> di oggetti `Orders` ordinati in ordine decrescente in base a `RequiredDate` insieme agli oggetti `Order_Details` correlati:</span><span class="sxs-lookup"><span data-stu-id="97283-155">For example, the following URI accesses a `GetOrdersByCity` operation that returns an <xref:System.Linq.IQueryable%601> collection of `Orders` objects, ordered by `RequiredDate` in descending order, along with the related `Order_Details` objects:</span></span>  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc  
-  
 ```  
   
-## Controllo di accesso alle operazioni del servizio  
- La visibilità a livello di servizio delle operazioni del servizio viene controllata dal metodo <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> sulla classe <xref:System.Data.Services.IDataServiceConfiguration> pressoché nello stesso modo in cui viene controllata la visibilità del set di entità tramite il metodo <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A>.  Ad esempio, la riga di codice seguente nella definizione del servizio dati abilita l'accesso all'operazione del servizio `CustomersByCity`.  
+## <a name="service-operations-access-control"></a><span data-ttu-id="97283-156">Controllo di accesso alle operazioni del servizio</span><span class="sxs-lookup"><span data-stu-id="97283-156">Service Operations Access Control</span></span>  
+ <span data-ttu-id="97283-157">La visibilità a livello di servizio delle operazioni del servizio viene controllata dal metodo <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> sulla classe <xref:System.Data.Services.IDataServiceConfiguration> pressoché nello stesso modo in cui viene controllata la visibilità del set di entità tramite il metodo <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A>.</span><span class="sxs-lookup"><span data-stu-id="97283-157">Service-wide visibility of service operations is controlled by the <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> method on the <xref:System.Data.Services.IDataServiceConfiguration> class in much the same way that entity set visibility is controlled by using the <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A> method.</span></span> <span data-ttu-id="97283-158">Ad esempio, la riga di codice seguente nella definizione del servizio dati abilita l'accesso all'operazione del servizio `CustomersByCity`.</span><span class="sxs-lookup"><span data-stu-id="97283-158">For example, the following line of code in the data service definition enables access to the `CustomersByCity` service operation.</span></span>  
   
  [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
  [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 > [!NOTE]
->  Se un'operazione del servizio dispone di un tipo restituito nascosto mediante limitazione dell'accesso nei set di entità sottostanti, l'operazione del servizio non sarà disponibile alle applicazioni client.  
+>  <span data-ttu-id="97283-159">Se un'operazione del servizio dispone di un tipo restituito nascosto mediante limitazione dell'accesso nei set di entità sottostanti, l'operazione del servizio non sarà disponibile alle applicazioni client.</span><span class="sxs-lookup"><span data-stu-id="97283-159">If a service operation has a return type that has been hidden by restricting access on the underlying entity sets, then the service operation will not be available to client applications.</span></span>  
   
- Per altre informazioni, vedere [Procedura: definire un'operazione del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
+ <span data-ttu-id="97283-160">Per ulteriori informazioni, vedere [procedura: definire un'operazione del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="97283-160">For more information, see [How to: Define a Service Operation](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).</span></span>  
   
-## Generazione di eccezioni  
- È consigliabile usare la classe <xref:System.Data.Services.DataServiceException> quando si genera un'eccezione nell'esecuzione del servizio dati,  poiché il runtime del servizio dati è in grado di eseguire il mapping delle proprietà di questo oggetto eccezione al messaggio di risposta HTTP in modo corretto.  Quando si genera un oggetto <xref:System.Data.Services.DataServiceException> in un'operazione del servizio, verrà eseguito il wrapping dell'eccezione restituita in un oggetto <xref:System.Reflection.TargetInvocationException>.  Per restituire l'oggetto <xref:System.Data.Services.DataServiceException> di base senza includere l'oggetto <xref:System.Reflection.TargetInvocationException>, è necessario eseguire l'override del metodo <xref:System.Data.Services.DataService%601.HandleException%2A> in <xref:System.Data.Services.DataService%601>, estrarre <xref:System.Data.Services.DataServiceException> da <xref:System.Reflection.TargetInvocationException> e restituirlo come errore di livello superiore, come illustrato nell'esempio seguente:  
+## <a name="raising-exceptions"></a><span data-ttu-id="97283-161">Generazione di eccezioni</span><span class="sxs-lookup"><span data-stu-id="97283-161">Raising Exceptions</span></span>  
+ <span data-ttu-id="97283-162">È consigliabile usare la classe <xref:System.Data.Services.DataServiceException> quando si genera un'eccezione nell'esecuzione del servizio dati,</span><span class="sxs-lookup"><span data-stu-id="97283-162">We recommend that you use the <xref:System.Data.Services.DataServiceException> class whenever you raise an exception in the data service execution.</span></span> <span data-ttu-id="97283-163">poiché il runtime del servizio dati è in grado di eseguire il mapping delle proprietà di questo oggetto eccezione al messaggio di risposta HTTP in modo corretto.</span><span class="sxs-lookup"><span data-stu-id="97283-163">This is because the data service runtime knows how to map properties of this exception object correctly to the HTTP response message.</span></span> <span data-ttu-id="97283-164">Quando si genera un oggetto <xref:System.Data.Services.DataServiceException> in un'operazione del servizio, verrà eseguito il wrapping dell'eccezione restituita in un oggetto <xref:System.Reflection.TargetInvocationException>.</span><span class="sxs-lookup"><span data-stu-id="97283-164">When you raise a <xref:System.Data.Services.DataServiceException> in a service operation, the returned exception is wrapped in a <xref:System.Reflection.TargetInvocationException>.</span></span> <span data-ttu-id="97283-165">Per restituire l'oggetto <xref:System.Data.Services.DataServiceException> di base senza includere l'oggetto <xref:System.Reflection.TargetInvocationException>, è necessario eseguire l'override del metodo <xref:System.Data.Services.DataService%601.HandleException%2A> in <xref:System.Data.Services.DataService%601>, estrarre <xref:System.Data.Services.DataServiceException> da <xref:System.Reflection.TargetInvocationException> e restituirlo come errore di livello superiore, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="97283-165">To return the base <xref:System.Data.Services.DataServiceException> without the enclosing <xref:System.Reflection.TargetInvocationException>, you must override the <xref:System.Data.Services.DataService%601.HandleException%2A> method in the <xref:System.Data.Services.DataService%601>, extract the <xref:System.Data.Services.DataServiceException> from the <xref:System.Reflection.TargetInvocationException>, and return it as the top-level error, as in the following example:</span></span>  
   
  [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
-## Vedere anche  
- [Intercettori](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="97283-166">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="97283-166">See Also</span></span>  
+ [<span data-ttu-id="97283-167">Intercettori</span><span class="sxs-lookup"><span data-stu-id="97283-167">Interceptors</span></span>](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

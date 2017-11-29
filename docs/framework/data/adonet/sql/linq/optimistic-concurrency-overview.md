@@ -1,99 +1,102 @@
 ---
-title: "Cenni preliminari sulla concorrenza ottimistica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Concorrenza ottimistica: panoramica'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 52e83f443c0ae74587b4585beb51ddbeb093486a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Cenni preliminari sulla concorrenza ottimistica
-In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è supportato il controllo della concorrenza ottimistica.  Nella tabella seguente vengono descritti i termini applicabili alla concorrenza ottimistica nella documentazione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
+# <a name="optimistic-concurrency-overview"></a><span data-ttu-id="6b17a-102">Concorrenza ottimistica: panoramica</span><span class="sxs-lookup"><span data-stu-id="6b17a-102">Optimistic Concurrency: Overview</span></span>
+<span data-ttu-id="6b17a-103">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è supportato il controllo della concorrenza ottimistica.</span><span class="sxs-lookup"><span data-stu-id="6b17a-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports optimistic concurrency control.</span></span> <span data-ttu-id="6b17a-104">Nella tabella seguente vengono descritti i termini applicabili alla concorrenza ottimistica in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione:</span><span class="sxs-lookup"><span data-stu-id="6b17a-104">The following table describes terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation:</span></span>  
   
-|Termini|Descrizione|  
-|-------------|-----------------|  
-|concorrenza|Situazione in cui due o più utenti tentano contemporaneamente di aggiornare la stessa riga del database.|  
-|conflitto di concorrenza|Situazione in cui due o più utenti tentano contemporaneamente di inviare valori in conflitto a una o più colonne di una riga.|  
-|controllo della concorrenza|Tecnica usata per risolvere i conflitti di concorrenza.|  
-|controllo di concorrenza ottimistica|Tecnica che consente di esaminare se i valori presenti in una riga in altre transazioni sono stati modificati prima di consentire l'invio di modifiche.<br /><br /> Si differenzia dal *controllo pessimistico della concorrenza*che blocca il record per evitare conflitti di concorrenza.<br /><br /> Il controllo *ottimistico* viene così definito perché considera improbabile la possibilità che una transazione interferisca con un'altra.|  
-|risoluzione dei conflitti|Processo di aggiornamento di un elemento in conflitto mediante la riesecuzione di una query sul database e la risoluzione delle differenze.<br /><br /> Quando un oggetto viene aggiornato, la funzionalità di ricerca delle modifiche di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conserva i dati seguenti:<br /><br /> -   I valori rilevati in origine dal database e usati per il controllo degli aggiornamenti.<br />-   I nuovi valori del database dalla query successiva.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] determina quindi se l'oggetto è in conflitto, ovvero se uno o più valori del membro sono stati modificati.  Se l'oggetto è in conflitto, in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono determinati i membri in conflitto.<br /><br /> Qualsiasi conflitto fra membri individuato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene aggiunto a un elenco di conflitti.|  
+|<span data-ttu-id="6b17a-105">Termini</span><span class="sxs-lookup"><span data-stu-id="6b17a-105">Terms</span></span>|<span data-ttu-id="6b17a-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6b17a-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="6b17a-107">concorrenza</span><span class="sxs-lookup"><span data-stu-id="6b17a-107">concurrency</span></span>|<span data-ttu-id="6b17a-108">Situazione in cui due o più utenti tentano contemporaneamente di aggiornare la stessa riga del database.</span><span class="sxs-lookup"><span data-stu-id="6b17a-108">The situation in which two or more users at the same time try to update the same database row.</span></span>|  
+|<span data-ttu-id="6b17a-109">conflitto di concorrenza</span><span class="sxs-lookup"><span data-stu-id="6b17a-109">concurrency conflict</span></span>|<span data-ttu-id="6b17a-110">Situazione in cui due o più utenti tentano contemporaneamente di inviare valori in conflitto a una o più colonne di una riga.</span><span class="sxs-lookup"><span data-stu-id="6b17a-110">The situation in which two or more users at the same time try to submit conflicting values to one or more columns of a row.</span></span>|  
+|<span data-ttu-id="6b17a-111">controllo della concorrenza</span><span class="sxs-lookup"><span data-stu-id="6b17a-111">concurrency control</span></span>|<span data-ttu-id="6b17a-112">Tecnica usata per risolvere i conflitti di concorrenza.</span><span class="sxs-lookup"><span data-stu-id="6b17a-112">The technique used to resolve concurrency conflicts.</span></span>|  
+|<span data-ttu-id="6b17a-113">controllo di concorrenza ottimistica</span><span class="sxs-lookup"><span data-stu-id="6b17a-113">optimistic concurrency control</span></span>|<span data-ttu-id="6b17a-114">Tecnica che consente di esaminare se i valori presenti in una riga in altre transazioni sono stati modificati prima di consentire l'invio di modifiche.</span><span class="sxs-lookup"><span data-stu-id="6b17a-114">The technique that first investigates whether other transactions have changed values in a row before permitting changes to be submitted.</span></span><br /><br /> <span data-ttu-id="6b17a-115">Si differenzia *controllo della concorrenza pessimistica*, che blocca il record per evitare conflitti di concorrenza.</span><span class="sxs-lookup"><span data-stu-id="6b17a-115">Contrast with *pessimistic concurrency control*, which locks the record to avoid concurrency conflicts.</span></span><br /><br /> <span data-ttu-id="6b17a-116">*Ottimistica* controllo viene così definito perché considera la possibilità che una transazione interferisca con un'altra improbabile.</span><span class="sxs-lookup"><span data-stu-id="6b17a-116">*Optimistic* control is so termed because it considers the chances of one transaction interfering with another to be unlikely.</span></span>|  
+|<span data-ttu-id="6b17a-117">risoluzione dei conflitti</span><span class="sxs-lookup"><span data-stu-id="6b17a-117">conflict resolution</span></span>|<span data-ttu-id="6b17a-118">Processo di aggiornamento di un elemento in conflitto mediante la riesecuzione di una query sul database e la risoluzione delle differenze.</span><span class="sxs-lookup"><span data-stu-id="6b17a-118">The process of refreshing a conflicting item by querying the database again and then reconciling differences.</span></span><br /><br /> <span data-ttu-id="6b17a-119">Quando un oggetto viene aggiornato, la funzionalità di ricerca delle modifiche di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conserva i dati seguenti:</span><span class="sxs-lookup"><span data-stu-id="6b17a-119">When an object is refreshed, the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] change tracker holds the following data:</span></span><br /><br /> <span data-ttu-id="6b17a-120">-Controllare i valori prese dal database di origine e utilizzato per l'aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="6b17a-120">-   The values originally taken from the database and used for the update check.</span></span><br /><span data-ttu-id="6b17a-121">-I nuovi valori di database dalla query successiva.</span><span class="sxs-lookup"><span data-stu-id="6b17a-121">-   The new database values from the subsequent query.</span></span><br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="6b17a-122"> determina quindi se l'oggetto è in conflitto, ovvero se uno o più valori del membro sono stati modificati.</span><span class="sxs-lookup"><span data-stu-id="6b17a-122"> then determines whether the object is in conflict (that is, whether one or more of its member values has changed).</span></span> <span data-ttu-id="6b17a-123">Se l'oggetto è in conflitto, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] successivamente determina i membri sono in conflitto.</span><span class="sxs-lookup"><span data-stu-id="6b17a-123">If the object is in conflict, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] next determines which of its members are in conflict.</span></span><br /><br /> <span data-ttu-id="6b17a-124">Qualsiasi conflitto fra membri individuato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene aggiunto a un elenco di conflitti.</span><span class="sxs-lookup"><span data-stu-id="6b17a-124">Any member conflict that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] discovers is added to a conflict list.</span></span>|  
   
- Nel modello a oggetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] si verifica un *conflitto di concorrenza ottimistica* quando entrambe le condizioni seguenti sono vere:  
+ <span data-ttu-id="6b17a-125">Nel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modello a oggetti, un *conflitto di concorrenza ottimistica* si verifica in presenza di entrambe le condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="6b17a-125">In the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model, an *optimistic concurrency conflict* occurs when both of the following conditions are true:</span></span>  
   
--   Il client tenta di inviare modifiche al database.  
+-   <span data-ttu-id="6b17a-126">Il client tenta di inviare modifiche al database.</span><span class="sxs-lookup"><span data-stu-id="6b17a-126">The client tries to submit changes to the database.</span></span>  
   
--   Uno o più valori di controllo degli aggiornamenti sono stati aggiornati nel database dall'ultima lettura effettuata dal client.  
+-   <span data-ttu-id="6b17a-127">Uno o più valori di controllo degli aggiornamenti sono stati aggiornati nel database dall'ultima lettura effettuata dal client.</span><span class="sxs-lookup"><span data-stu-id="6b17a-127">One or more update-check values have been updated in the database since the client last read them.</span></span>  
   
- Per risolvere questo conflitto, è necessario individuare i membri dell'oggetto in conflitto, quindi decidere come procedere.  
+ <span data-ttu-id="6b17a-128">Per risolvere questo conflitto, è necessario individuare i membri dell'oggetto in conflitto, quindi decidere come procedere.</span><span class="sxs-lookup"><span data-stu-id="6b17a-128">Resolution of this conflict includes discovering which members of the object are in conflict, and then deciding what you want to do about it.</span></span>  
   
 > [!NOTE]
->  Solo i membri di cui è stato eseguito il mapping come <xref:System.Data.Linq.Mapping.UpdateCheck> o <xref:System.Data.Linq.Mapping.UpdateCheck> fanno parte dei controlli di concorrenza ottimistica.  Per i membri contrassegnati come <xref:System.Data.Linq.Mapping.UpdateCheck> non viene eseguito alcun controllo.  Per altre informazioni, vedere <xref:System.Data.Linq.Mapping.UpdateCheck>.  
+>  <span data-ttu-id="6b17a-129">Solo i membri di cui è stato eseguito il mapping come <xref:System.Data.Linq.Mapping.UpdateCheck.Always> o <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> fanno parte dei controlli di concorrenza ottimistica.</span><span class="sxs-lookup"><span data-stu-id="6b17a-129">Only members mapped as <xref:System.Data.Linq.Mapping.UpdateCheck.Always> or <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> participate in optimistic concurrency checks.</span></span> <span data-ttu-id="6b17a-130">Per i membri contrassegnati come <xref:System.Data.Linq.Mapping.UpdateCheck.Never> non viene eseguito alcun controllo.</span><span class="sxs-lookup"><span data-stu-id="6b17a-130">No check is performed for members marked <xref:System.Data.Linq.Mapping.UpdateCheck.Never>.</span></span> <span data-ttu-id="6b17a-131">Per altre informazioni, vedere <xref:System.Data.Linq.Mapping.UpdateCheck>.</span><span class="sxs-lookup"><span data-stu-id="6b17a-131">For more information, see <xref:System.Data.Linq.Mapping.UpdateCheck>.</span></span>  
   
-## Esempio  
- Nel seguente scenario, ad esempio, User1 prepara un aggiornamento mediante l'esecuzione di una query su una riga del database.  User1 riceve una riga con i valori Alfreds, Maria e Sales.  
+## <a name="example"></a><span data-ttu-id="6b17a-132">Esempio</span><span class="sxs-lookup"><span data-stu-id="6b17a-132">Example</span></span>  
+ <span data-ttu-id="6b17a-133">Nel seguente scenario, ad esempio, User1 prepara un aggiornamento mediante l'esecuzione di una query su una riga del database.</span><span class="sxs-lookup"><span data-stu-id="6b17a-133">For example, in the following scenario, User1 starts to prepare an update by querying the database for a row.</span></span> <span data-ttu-id="6b17a-134">User1 riceve una riga con i valori Alfreds, Maria e Sales.</span><span class="sxs-lookup"><span data-stu-id="6b17a-134">User1 receives a row with values of Alfreds, Maria, and Sales.</span></span>  
   
- User1 desidera modificare il valore della colonna Manager in Alfred e il valore della colonna Department in Marketing.  Prima che User1 possa inviare le modifiche, User2 ha già inviato le proprie modifiche al database.  Ora il valore della colonna Assistant è stato modificato in Mary e il valore della colonna Department è cambiato in Service.  
+ <span data-ttu-id="6b17a-135">User1 desidera modificare il valore della colonna Manager in Alfred e il valore della colonna Department in Marketing.</span><span class="sxs-lookup"><span data-stu-id="6b17a-135">User1 wants to change the value of the Manager column to Alfred and the value of the Department column to Marketing.</span></span> <span data-ttu-id="6b17a-136">Prima che User1 possa inviare le modifiche, User2 ha già inviato le proprie modifiche al database.</span><span class="sxs-lookup"><span data-stu-id="6b17a-136">Before User1 can submit those changes, User2 has submitted changes to the database.</span></span> <span data-ttu-id="6b17a-137">Ora il valore della colonna Assistant è stato modificato in Mary e il valore della colonna Department è cambiato in Service.</span><span class="sxs-lookup"><span data-stu-id="6b17a-137">So now the value of the Assistant column has been changed to Mary and the value of the Department column to Service.</span></span>  
   
- Quando User1 tenta di inviare le modifiche, l'invio non viene completato e viene generata un'eccezione <xref:System.Data.Linq.ChangeConflictException>.  Questo risultato si verifica perché i valori del database per le colonna Assistant e Department non sono quelli previsti.  I membri che rappresentano le colonne Assistant e Department sono in conflitto.  Nella tabella seguente è riepilogata questa situazione:  
+ <span data-ttu-id="6b17a-138">Quando User1 tenta di inviare le modifiche, l'invio non viene completato e viene generata un'eccezione <xref:System.Data.Linq.ChangeConflictException>.</span><span class="sxs-lookup"><span data-stu-id="6b17a-138">When User1 now tries to submit changes, the submission fails and a <xref:System.Data.Linq.ChangeConflictException> exception is thrown.</span></span> <span data-ttu-id="6b17a-139">Questo risultato si verifica perché i valori del database per le colonna Assistant e Department non sono quelli previsti.</span><span class="sxs-lookup"><span data-stu-id="6b17a-139">This result occurs because the database values for the Assistant column and the Department column are not those that were expected.</span></span> <span data-ttu-id="6b17a-140">I membri che rappresentano le colonne Assistant e Department sono in conflitto.</span><span class="sxs-lookup"><span data-stu-id="6b17a-140">Members representing the Assistant and Department columns are in conflict.</span></span> <span data-ttu-id="6b17a-141">Nella tabella seguente è riepilogata questa situazione:</span><span class="sxs-lookup"><span data-stu-id="6b17a-141">The following table summarizes the situation.</span></span>  
   
-||Manager|Assistant|Department|  
+||<span data-ttu-id="6b17a-142">Manager</span><span class="sxs-lookup"><span data-stu-id="6b17a-142">Manager</span></span>|<span data-ttu-id="6b17a-143">Assistant</span><span class="sxs-lookup"><span data-stu-id="6b17a-143">Assistant</span></span>|<span data-ttu-id="6b17a-144">Department</span><span class="sxs-lookup"><span data-stu-id="6b17a-144">Department</span></span>|  
 |------|-------------|---------------|----------------|  
-|Stato originale|Alfreds|Maria|Sales|  
-|Utente1|Alfred||Marketing|  
-|User2||Mary|Servizio|  
+|<span data-ttu-id="6b17a-145">Stato originale</span><span class="sxs-lookup"><span data-stu-id="6b17a-145">Original state</span></span>|<span data-ttu-id="6b17a-146">Alfreds</span><span class="sxs-lookup"><span data-stu-id="6b17a-146">Alfreds</span></span>|<span data-ttu-id="6b17a-147">Maria</span><span class="sxs-lookup"><span data-stu-id="6b17a-147">Maria</span></span>|<span data-ttu-id="6b17a-148">Sales</span><span class="sxs-lookup"><span data-stu-id="6b17a-148">Sales</span></span>|  
+|<span data-ttu-id="6b17a-149">Utente1</span><span class="sxs-lookup"><span data-stu-id="6b17a-149">User1</span></span>|<span data-ttu-id="6b17a-150">Alfred</span><span class="sxs-lookup"><span data-stu-id="6b17a-150">Alfred</span></span>||<span data-ttu-id="6b17a-151">Marketing</span><span class="sxs-lookup"><span data-stu-id="6b17a-151">Marketing</span></span>|  
+|<span data-ttu-id="6b17a-152">User2</span><span class="sxs-lookup"><span data-stu-id="6b17a-152">User2</span></span>||<span data-ttu-id="6b17a-153">Mary</span><span class="sxs-lookup"><span data-stu-id="6b17a-153">Mary</span></span>|<span data-ttu-id="6b17a-154">Servizio</span><span class="sxs-lookup"><span data-stu-id="6b17a-154">Service</span></span>|  
   
- È possibile risolvere questo tipo di conflitti in diversi modi.  Per altre informazioni, vedere [Procedura: gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ <span data-ttu-id="6b17a-155">È possibile risolvere questo tipo di conflitti in diversi modi.</span><span class="sxs-lookup"><span data-stu-id="6b17a-155">You can resolve conflicts such as this in different ways.</span></span> <span data-ttu-id="6b17a-156">Per ulteriori informazioni, vedere [procedura: gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="6b17a-156">For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span></span>  
   
-## Elenco di controllo per il rilevamento e la risoluzione dei conflitti  
- È possibile rilevare e risolvere i conflitti a qualsiasi livello di dettaglio.  Da una parte è possibile risolvere tutti i conflitti usando una delle tre modalità disponibili \(vedere <xref:System.Data.Linq.RefreshMode>\) senza ulteriori considerazioni.  Dall'altra è possibile definire un'azione specifica per ogni tipo di conflitto e per ogni membro in conflitto.  
+## <a name="conflict-detection-and-resolution-checklist"></a><span data-ttu-id="6b17a-157">Elenco di controllo per il rilevamento e la risoluzione dei conflitti</span><span class="sxs-lookup"><span data-stu-id="6b17a-157">Conflict Detection and Resolution Checklist</span></span>  
+ <span data-ttu-id="6b17a-158">È possibile rilevare e risolvere i conflitti a qualsiasi livello di dettaglio.</span><span class="sxs-lookup"><span data-stu-id="6b17a-158">You can detect and resolve conflicts at any level of detail.</span></span> <span data-ttu-id="6b17a-159">Da una parte è possibile risolvere tutti i conflitti usando una delle tre modalità disponibili (vedere <xref:System.Data.Linq.RefreshMode>) senza ulteriori considerazioni.</span><span class="sxs-lookup"><span data-stu-id="6b17a-159">At one extreme, you can resolve all conflicts in one of three ways (see <xref:System.Data.Linq.RefreshMode>) without additional consideration.</span></span> <span data-ttu-id="6b17a-160">Dall'altra è possibile definire un'azione specifica per ogni tipo di conflitto e per ogni membro in conflitto.</span><span class="sxs-lookup"><span data-stu-id="6b17a-160">At the other extreme, you can designate a specific action for each type of conflict on every member in conflict.</span></span>  
   
--   Specificare o modificare le opzioni per <xref:System.Data.Linq.Mapping.UpdateCheck> nel modello a oggetti.  
+-   <span data-ttu-id="6b17a-161">Specificare o modificare le opzioni per <xref:System.Data.Linq.Mapping.UpdateCheck> nel modello a oggetti.</span><span class="sxs-lookup"><span data-stu-id="6b17a-161">Specify or revise <xref:System.Data.Linq.Mapping.UpdateCheck> options in your object model.</span></span>  
   
-     Per altre informazioni, vedere [Procedura: specificare i membri da testare per i conflitti di concorrenza](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
+     <span data-ttu-id="6b17a-162">Per ulteriori informazioni, vedere [procedura: specificare che i membri vengono verificati i conflitti di concorrenza](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="6b17a-162">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
   
--   Nel blocco try\/catch della chiamata a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> specificare a che punto dovranno essere generate eccezioni.  
+-   <span data-ttu-id="6b17a-163">Nel blocco try/catch della chiamata a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> specificare a che punto dovranno essere generate eccezioni.</span><span class="sxs-lookup"><span data-stu-id="6b17a-163">In the try/catch block of your call to <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, specify at what point you want exceptions to be thrown.</span></span>  
   
-     Per altre informazioni, vedere [Procedura: specificare quando vengono generate le eccezioni di concorrenza](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+     <span data-ttu-id="6b17a-164">Per ulteriori informazioni, vedere [procedura: specificare quando le eccezioni di concorrenza vengono generate](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span><span class="sxs-lookup"><span data-stu-id="6b17a-164">For more information, see [How to: Specify When Concurrency Exceptions are Thrown](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span></span>  
   
--   Determinare la quantità di dettagli sul conflitto da recuperare, quindi includere nel blocco try\/catch il codice necessario.  
+-   <span data-ttu-id="6b17a-165">Determinare la quantità di dettagli sul conflitto da recuperare, quindi includere nel blocco try/catch il codice necessario.</span><span class="sxs-lookup"><span data-stu-id="6b17a-165">Determine how much conflict detail you want to retrieve, and include code in your try/catch block accordingly.</span></span>  
   
-     Per altre informazioni, vedere [Procedura: recuperare informazioni sul conflitto tra entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) e [Procedura: recuperare informazioni sul conflitto tra membri](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
+     <span data-ttu-id="6b17a-166">Per ulteriori informazioni, vedere [procedura: recuperare informazioni sui conflitti di entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) e [procedura: recuperare informazioni sui conflitti di membro](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).</span><span class="sxs-lookup"><span data-stu-id="6b17a-166">For more information, see [How to: Retrieve Entity Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) and [How to: Retrieve Member Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).</span></span>  
   
--   Includere nel codice `try`\/`catch` come si desidera risolvere i diversi conflitti individuati.  
+-   <span data-ttu-id="6b17a-167">Includere nel `try` / `catch` codice come si desidera risolvere diversi conflitti individuati.</span><span class="sxs-lookup"><span data-stu-id="6b17a-167">Include in your `try`/`catch` code how you want to resolve the various conflicts you discover.</span></span>  
   
-     Per altre informazioni, vedere [Procedura: risolvere conflitti mediante la conservazione dei valori di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [Procedura: risolvere conflitti mediante la sovrascrittura dei valori di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md) e [Procedura: risolvere conflitti mediante l'unione con i valori di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
+     <span data-ttu-id="6b17a-168">Per ulteriori informazioni, vedere [come: Risolvi conflitti per mantenere i valori del Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [come: Risolvi conflitti per sovrascrivere i valori del Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), e [procedura: risolvere i conflitti da merge con i valori del Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).</span><span class="sxs-lookup"><span data-stu-id="6b17a-168">For more information, see [How to: Resolve Conflicts by Retaining Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [How to: Resolve Conflicts by Overwriting Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), and [How to: Resolve Conflicts by Merging with Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).</span></span>  
   
-## Tipi LINQ to SQL che supportano l'individuazione e la risoluzione dei conflitti  
- Di seguito sono elencate le classi e le funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] che supportano la risoluzione di conflitti nella concorrenza ottimistica:  
+## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a><span data-ttu-id="6b17a-169">Tipi LINQ to SQL che supportano l'individuazione e la risoluzione dei conflitti</span><span class="sxs-lookup"><span data-stu-id="6b17a-169">LINQ to SQL Types That Support Conflict Discovery and Resolution</span></span>  
+ <span data-ttu-id="6b17a-170">Di seguito sono elencate le classi e le funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] che supportano la risoluzione di conflitti nella concorrenza ottimistica:</span><span class="sxs-lookup"><span data-stu-id="6b17a-170">Classes and features to support the resolution of conflicts in optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] include the following:</span></span>  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=fullName>  
+-   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
-## Vedere anche  
- [Procedura: gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="6b17a-171">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6b17a-171">See Also</span></span>  
+ [<span data-ttu-id="6b17a-172">Procedura: gestire i conflitti di modifiche</span><span class="sxs-lookup"><span data-stu-id="6b17a-172">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

@@ -5,223 +5,220 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1643e5d645ec6c3ae35b2e57b8cb4f4bcb048379
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="loader-etw-events"></a>Eventi ETW del caricatore
-<a name="top"></a> Questi eventi raccolgono le informazioni relative al caricamento e allo scaricamento di domini applicazioni, assembly e moduli.  
+# <a name="loader-etw-events"></a><span data-ttu-id="de5b2-102">Eventi ETW del caricatore</span><span class="sxs-lookup"><span data-stu-id="de5b2-102">Loader ETW Events</span></span>
+<span data-ttu-id="de5b2-103"><a name="top"></a> Questi eventi raccolgono le informazioni relative al caricamento e allo scaricamento di domini applicazioni, assembly e moduli.</span><span class="sxs-lookup"><span data-stu-id="de5b2-103"><a name="top"></a> These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  
   
- Tutti gli eventi del caricatore vengono generati con la parola chiave `LoaderKeyword` (0x8). Gli eventi `DCStart` e `DCEnd` vengono generati in `LoaderRundownKeyword` (0x8) con `StartRundown`/`EndRundown` abilitato. Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ <span data-ttu-id="de5b2-104">Tutti gli eventi del caricatore vengono generati con la parola chiave `LoaderKeyword` (0x8).</span><span class="sxs-lookup"><span data-stu-id="de5b2-104">All loader events are raised under the `LoaderKeyword` (0x8) keyword.</span></span> <span data-ttu-id="de5b2-105">Gli eventi `DCStart` e `DCEnd` vengono generati in `LoaderRundownKeyword` (0x8) con `StartRundown`/`EndRundown` abilitato.</span><span class="sxs-lookup"><span data-stu-id="de5b2-105">The `DCStart` and the `DCEnd` events are raised under `LoaderRundownKeyword` (0x8) with `StartRundown`/`EndRundown` enabled.</span></span> <span data-ttu-id="de5b2-106">Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).</span><span class="sxs-lookup"><span data-stu-id="de5b2-106">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
- Gli eventi del caricatore sono suddivisi in:  
+ <span data-ttu-id="de5b2-107">Gli eventi del caricatore sono suddivisi in:</span><span class="sxs-lookup"><span data-stu-id="de5b2-107">Loader events are subdivided into the following:</span></span>  
   
--   [Eventi del dominio applicazioni](#application_domain_events)  
+-   [<span data-ttu-id="de5b2-108">Eventi del dominio applicazioni</span><span class="sxs-lookup"><span data-stu-id="de5b2-108">Application Domain Events</span></span>](#application_domain_events)  
   
--   [Eventi assembly del caricatore CLR](#clr_loader_assembly_events)  
+-   [<span data-ttu-id="de5b2-109">Eventi assembly del caricatore CLR</span><span class="sxs-lookup"><span data-stu-id="de5b2-109">CLR Loader Assembly Events</span></span>](#clr_loader_assembly_events)  
   
--   [Eventi modulo](#module_events)  
+-   [<span data-ttu-id="de5b2-110">Eventi modulo</span><span class="sxs-lookup"><span data-stu-id="de5b2-110">Module Events</span></span>](#module_events)  
   
--   [Eventi modulo del dominio CLR](#clr_domain_module_events)  
+-   [<span data-ttu-id="de5b2-111">Eventi modulo del dominio CLR</span><span class="sxs-lookup"><span data-stu-id="de5b2-111">CLR Domain Module Events</span></span>](#clr_domain_module_events)  
   
--   [Eventi di intervallo modulo](#module_range_events)  
+-   [<span data-ttu-id="de5b2-112">Eventi di intervallo modulo</span><span class="sxs-lookup"><span data-stu-id="de5b2-112">Module Range Events</span></span>](#module_range_events)  
   
 <a name="application_domain_events"></a>   
-## <a name="application-domain-events"></a>Eventi del dominio applicazioni  
- La tabella seguente illustra la parola chiave e il livello  
+## <a name="application-domain-events"></a><span data-ttu-id="de5b2-113">Eventi del dominio applicazioni</span><span class="sxs-lookup"><span data-stu-id="de5b2-113">Application Domain Events</span></span>  
+ <span data-ttu-id="de5b2-114">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-114">The following table shows the keyword and level.</span></span>  
   
-|Parola chiave per la generazione dell'evento|Evento|Livello|  
+|<span data-ttu-id="de5b2-115">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-115">Keyword for raising the event</span></span>|<span data-ttu-id="de5b2-116">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-116">Event</span></span>|<span data-ttu-id="de5b2-117">Livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-117">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` e `AppDomainUnLoad_V1`|Informativo (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informativo (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Informativo (4)|  
+|<span data-ttu-id="de5b2-118">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="de5b2-118">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="de5b2-119">`AppDomainLoad_V1` e `AppDomainUnLoad_V1`</span><span class="sxs-lookup"><span data-stu-id="de5b2-119">`AppDomainLoad_V1` and `AppDomainUnLoad_V1`</span></span>|<span data-ttu-id="de5b2-120">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-120">Informational (4)</span></span>|  
+|<span data-ttu-id="de5b2-121">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="de5b2-121">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|<span data-ttu-id="de5b2-122">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-122">Informational (4)</span></span>|  
+|<span data-ttu-id="de5b2-123">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="de5b2-123">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|<span data-ttu-id="de5b2-124">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-124">Informational (4)</span></span>|  
   
- La tabella seguente mostra le informazioni sull'evento.  
+ <span data-ttu-id="de5b2-125">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-125">The following table shows the event information.</span></span>  
   
-|Evento|ID evento|Descrizione|  
+|<span data-ttu-id="de5b2-126">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-126">Event</span></span>|<span data-ttu-id="de5b2-127">ID evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-127">Event ID</span></span>|<span data-ttu-id="de5b2-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-128">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (registrato per tutti i domini applicazioni)|156|Generato se un dominio applicazioni viene creato nel corso di un processo.|  
-|`AppDomainUnLoad_V1`|157|Generato se un dominio applicazioni viene eliminato nel corso di un processo.|  
-|`AppDomainDCStart_V1`|157|Enumera i domini applicazioni durante un rundown di avvio.|  
-|`AppDomainDCEnd_V1`|158|Enumera i domini applicazioni durante un rundown di fine.|  
+|<span data-ttu-id="de5b2-129">`AppDomainLoad_V1` (registrato per tutti i domini applicazioni)</span><span class="sxs-lookup"><span data-stu-id="de5b2-129">`AppDomainLoad_V1` (logged for all application domains)</span></span>|<span data-ttu-id="de5b2-130">156</span><span class="sxs-lookup"><span data-stu-id="de5b2-130">156</span></span>|<span data-ttu-id="de5b2-131">Generato se un dominio applicazioni viene creato nel corso di un processo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-131">Raised whenever an application domain is created during the lifetime of a process.</span></span>|  
+|`AppDomainUnLoad_V1`|<span data-ttu-id="de5b2-132">157</span><span class="sxs-lookup"><span data-stu-id="de5b2-132">157</span></span>|<span data-ttu-id="de5b2-133">Generato se un dominio applicazioni viene eliminato nel corso di un processo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-133">Raised whenever an application domain is destroyed during the lifetime of a process.</span></span>|  
+|`AppDomainDCStart_V1`|<span data-ttu-id="de5b2-134">157</span><span class="sxs-lookup"><span data-stu-id="de5b2-134">157</span></span>|<span data-ttu-id="de5b2-135">Enumera i domini applicazioni durante un rundown di avvio.</span><span class="sxs-lookup"><span data-stu-id="de5b2-135">Enumerates the application domains during a start rundown.</span></span>|  
+|`AppDomainDCEnd_V1`|<span data-ttu-id="de5b2-136">158</span><span class="sxs-lookup"><span data-stu-id="de5b2-136">158</span></span>|<span data-ttu-id="de5b2-137">Enumera i domini applicazioni durante un rundown di fine.</span><span class="sxs-lookup"><span data-stu-id="de5b2-137">Enumerates the application domains during an end rundown.</span></span>|  
   
- La tabella seguente mostra i dati dell'evento.  
+ <span data-ttu-id="de5b2-138">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-138">The following table shows the event data.</span></span>  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|<span data-ttu-id="de5b2-139">Nome campo</span><span class="sxs-lookup"><span data-stu-id="de5b2-139">Field name</span></span>|<span data-ttu-id="de5b2-140">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="de5b2-140">Data type</span></span>|<span data-ttu-id="de5b2-141">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-141">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AppDomainID|win:UInt64|Identificatore univoco per un dominio applicazioni.|  
-|AppDomainFlags|win:UInt32|0x1: dominio predefinito.<br /><br /> 0x2: eseguibile.<br /><br /> 0x4: dominio applicazioni, bit 28-31: condivisione dei criteri di questo dominio.<br /><br /> 0: dominio condiviso.|  
-|AppDomainName|win:UnicodeString|Nome descrittivo del dominio applicazioni. Può cambiare nel corso del processo.|  
-|AppDomainIndex|win:UInt32|Indice di questo dominio applicazioni.|  
-|ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
+|<span data-ttu-id="de5b2-142">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="de5b2-142">AppDomainID</span></span>|<span data-ttu-id="de5b2-143">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-143">win:UInt64</span></span>|<span data-ttu-id="de5b2-144">Identificatore univoco per un dominio applicazioni.</span><span class="sxs-lookup"><span data-stu-id="de5b2-144">The unique identifier for an application domain.</span></span>|  
+|<span data-ttu-id="de5b2-145">AppDomainFlags</span><span class="sxs-lookup"><span data-stu-id="de5b2-145">AppDomainFlags</span></span>|<span data-ttu-id="de5b2-146">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-146">win:UInt32</span></span>|<span data-ttu-id="de5b2-147">0x1: dominio predefinito.</span><span class="sxs-lookup"><span data-stu-id="de5b2-147">0x1: Default domain.</span></span><br /><br /> <span data-ttu-id="de5b2-148">0x2: eseguibile.</span><span class="sxs-lookup"><span data-stu-id="de5b2-148">0x2: Executable.</span></span><br /><br /> <span data-ttu-id="de5b2-149">0x4: dominio applicazioni, bit 28-31: condivisione dei criteri di questo dominio.</span><span class="sxs-lookup"><span data-stu-id="de5b2-149">0x4: Application domain, bit 28-31: Sharing policy of this domain.</span></span><br /><br /> <span data-ttu-id="de5b2-150">0: dominio condiviso.</span><span class="sxs-lookup"><span data-stu-id="de5b2-150">0: A shared domain.</span></span>|  
+|<span data-ttu-id="de5b2-151">AppDomainName</span><span class="sxs-lookup"><span data-stu-id="de5b2-151">AppDomainName</span></span>|<span data-ttu-id="de5b2-152">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-152">win:UnicodeString</span></span>|<span data-ttu-id="de5b2-153">Nome descrittivo del dominio applicazioni.</span><span class="sxs-lookup"><span data-stu-id="de5b2-153">Friendly application domain name.</span></span> <span data-ttu-id="de5b2-154">Può cambiare nel corso del processo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-154">Might change during the lifetime of the process.</span></span>|  
+|<span data-ttu-id="de5b2-155">AppDomainIndex</span><span class="sxs-lookup"><span data-stu-id="de5b2-155">AppDomainIndex</span></span>|<span data-ttu-id="de5b2-156">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-156">Win:UInt32</span></span>|<span data-ttu-id="de5b2-157">Indice di questo dominio applicazioni.</span><span class="sxs-lookup"><span data-stu-id="de5b2-157">The index of this application domain.</span></span>|  
+|<span data-ttu-id="de5b2-158">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="de5b2-158">ClrInstanceID</span></span>|<span data-ttu-id="de5b2-159">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="de5b2-159">win:UInt16</span></span>|<span data-ttu-id="de5b2-160">ID univoco per l'istanza di CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="de5b2-160">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Torna all'inizio](#top)  
+ [<span data-ttu-id="de5b2-161">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="de5b2-161">Back to top</span></span>](#top)  
   
 <a name="clr_loader_assembly_events"></a>   
-## <a name="clr-loader-assembly-events"></a>Eventi assembly del caricatore CLR  
- La tabella seguente illustra la parola chiave e il livello  
+## <a name="clr-loader-assembly-events"></a><span data-ttu-id="de5b2-162">Eventi assembly del caricatore CLR</span><span class="sxs-lookup"><span data-stu-id="de5b2-162">CLR Loader Assembly Events</span></span>  
+ <span data-ttu-id="de5b2-163">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-163">The following table shows the keyword and level.</span></span>  
   
-|Parola chiave per la generazione dell'evento|Evento|Livello|  
+|<span data-ttu-id="de5b2-164">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-164">Keyword for raising the event</span></span>|<span data-ttu-id="de5b2-165">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-165">Event</span></span>|<span data-ttu-id="de5b2-166">Livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-166">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` e `AssemblyUnload`|Informativo (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informativo (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Informativo (4)|  
+|<span data-ttu-id="de5b2-167">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="de5b2-167">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="de5b2-168">`AssemblyLoad` e `AssemblyUnload`</span><span class="sxs-lookup"><span data-stu-id="de5b2-168">`AssemblyLoad` and `AssemblyUnload`</span></span>|<span data-ttu-id="de5b2-169">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-169">Informational (4)</span></span>|  
+|<span data-ttu-id="de5b2-170">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="de5b2-170">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|<span data-ttu-id="de5b2-171">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-171">Informational (4)</span></span>|  
+|<span data-ttu-id="de5b2-172">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="de5b2-172">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|<span data-ttu-id="de5b2-173">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-173">Informational (4)</span></span>|  
   
- La tabella seguente mostra le informazioni sull'evento.  
+ <span data-ttu-id="de5b2-174">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-174">The following table shows the event information.</span></span>  
   
-|Evento|ID evento|Descrizione|  
+|<span data-ttu-id="de5b2-175">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-175">Event</span></span>|<span data-ttu-id="de5b2-176">ID evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-176">Event ID</span></span>|<span data-ttu-id="de5b2-177">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-177">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`AssemblyLoad_V1`|154|Generato quando viene caricato un assembly.|  
-|`AssemblyUnload_V1`|155|Generato quando viene scaricato un assembly.|  
-|`AssemblyDCStart_V1`|155|Enumera gli assembly durante un rundown di avvio.|  
-|`AssemblyDCEnd_V1`|156|Enumera gli assembly durante un rundown di fine.|  
+|`AssemblyLoad_V1`|<span data-ttu-id="de5b2-178">154</span><span class="sxs-lookup"><span data-stu-id="de5b2-178">154</span></span>|<span data-ttu-id="de5b2-179">Generato quando viene caricato un assembly.</span><span class="sxs-lookup"><span data-stu-id="de5b2-179">Raised when an assembly is loaded.</span></span>|  
+|`AssemblyUnload_V1`|<span data-ttu-id="de5b2-180">155</span><span class="sxs-lookup"><span data-stu-id="de5b2-180">155</span></span>|<span data-ttu-id="de5b2-181">Generato quando viene scaricato un assembly.</span><span class="sxs-lookup"><span data-stu-id="de5b2-181">Raised when an assembly is unloaded.</span></span>|  
+|`AssemblyDCStart_V1`|<span data-ttu-id="de5b2-182">155</span><span class="sxs-lookup"><span data-stu-id="de5b2-182">155</span></span>|<span data-ttu-id="de5b2-183">Enumera gli assembly durante un rundown di avvio.</span><span class="sxs-lookup"><span data-stu-id="de5b2-183">Enumerates assemblies during a start rundown.</span></span>|  
+|`AssemblyDCEnd_V1`|<span data-ttu-id="de5b2-184">156</span><span class="sxs-lookup"><span data-stu-id="de5b2-184">156</span></span>|<span data-ttu-id="de5b2-185">Enumera gli assembly durante un rundown di fine.</span><span class="sxs-lookup"><span data-stu-id="de5b2-185">Enumerates assemblies during an end rundown.</span></span>|  
   
- La tabella seguente mostra i dati dell'evento.  
+ <span data-ttu-id="de5b2-186">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-186">The following table shows the event data.</span></span>  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|<span data-ttu-id="de5b2-187">Nome campo</span><span class="sxs-lookup"><span data-stu-id="de5b2-187">Field name</span></span>|<span data-ttu-id="de5b2-188">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="de5b2-188">Data type</span></span>|<span data-ttu-id="de5b2-189">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-189">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AssemblyID|win:UInt64|ID univoco per l'assembly.|  
-|AppDomainID|win:UInt64|ID del dominio dell'assembly.|  
-|BindingID|win:UInt64|ID che identifica univocamente l'associazione di assembly.|  
-|AssemblyFlags|win:UInt32|0x1: assembly indipendente dal dominio.<br /><br /> 0x2: assembly dinamico.<br /><br /> 0x4: assembly con immagine nativa.<br /><br /> 0x8: assembly ritirabile.|  
-|AssemblyName|win:UnicodeString|Nome completo dell'assembly.|  
-|ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
+|<span data-ttu-id="de5b2-190">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="de5b2-190">AssemblyID</span></span>|<span data-ttu-id="de5b2-191">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-191">win:UInt64</span></span>|<span data-ttu-id="de5b2-192">ID univoco per l'assembly.</span><span class="sxs-lookup"><span data-stu-id="de5b2-192">Unique ID for the assembly.</span></span>|  
+|<span data-ttu-id="de5b2-193">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="de5b2-193">AppDomainID</span></span>|<span data-ttu-id="de5b2-194">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-194">win:UInt64</span></span>|<span data-ttu-id="de5b2-195">ID del dominio dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="de5b2-195">ID of the domain of this assembly.</span></span>|  
+|<span data-ttu-id="de5b2-196">BindingID</span><span class="sxs-lookup"><span data-stu-id="de5b2-196">BindingID</span></span>|<span data-ttu-id="de5b2-197">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-197">win:UInt64</span></span>|<span data-ttu-id="de5b2-198">ID che identifica univocamente l'associazione di assembly.</span><span class="sxs-lookup"><span data-stu-id="de5b2-198">ID that uniquely identifies the assembly binding.</span></span>|  
+|<span data-ttu-id="de5b2-199">AssemblyFlags</span><span class="sxs-lookup"><span data-stu-id="de5b2-199">AssemblyFlags</span></span>|<span data-ttu-id="de5b2-200">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-200">win:UInt32</span></span>|<span data-ttu-id="de5b2-201">0x1: assembly indipendente dal dominio.</span><span class="sxs-lookup"><span data-stu-id="de5b2-201">0x1: Domain neutral assembly.</span></span><br /><br /> <span data-ttu-id="de5b2-202">0x2: assembly dinamico.</span><span class="sxs-lookup"><span data-stu-id="de5b2-202">0x2: Dynamic assembly.</span></span><br /><br /> <span data-ttu-id="de5b2-203">0x4: assembly con immagine nativa.</span><span class="sxs-lookup"><span data-stu-id="de5b2-203">0x4: Assembly has a native image.</span></span><br /><br /> <span data-ttu-id="de5b2-204">0x8: assembly ritirabile.</span><span class="sxs-lookup"><span data-stu-id="de5b2-204">0x8: Collectible assembly.</span></span>|  
+|<span data-ttu-id="de5b2-205">AssemblyName</span><span class="sxs-lookup"><span data-stu-id="de5b2-205">AssemblyName</span></span>|<span data-ttu-id="de5b2-206">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-206">win:UnicodeString</span></span>|<span data-ttu-id="de5b2-207">Nome completo dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="de5b2-207">Fully qualified assembly name.</span></span>|  
+|<span data-ttu-id="de5b2-208">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="de5b2-208">ClrInstanceID</span></span>|<span data-ttu-id="de5b2-209">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="de5b2-209">win:UInt16</span></span>|<span data-ttu-id="de5b2-210">ID univoco per l'istanza di CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="de5b2-210">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Torna all'inizio](#top)  
+ [<span data-ttu-id="de5b2-211">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="de5b2-211">Back to top</span></span>](#top)  
   
 <a name="module_events"></a>   
-## <a name="module-events"></a>Eventi modulo  
- La tabella seguente illustra la parola chiave e il livello  
+## <a name="module-events"></a><span data-ttu-id="de5b2-212">Eventi modulo</span><span class="sxs-lookup"><span data-stu-id="de5b2-212">Module Events</span></span>  
+ <span data-ttu-id="de5b2-213">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-213">The following table shows the keyword and level.</span></span>  
   
-|Parola chiave per la generazione dell'evento|Evento|Livello|  
+|<span data-ttu-id="de5b2-214">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-214">Keyword for raising the event</span></span>|<span data-ttu-id="de5b2-215">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-215">Event</span></span>|<span data-ttu-id="de5b2-216">Livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-216">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` e `ModuleUnload_V2`|Informativo (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informativo (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Informativo (4)|  
+|<span data-ttu-id="de5b2-217">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="de5b2-217">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="de5b2-218">`ModuleLoad_V2` e `ModuleUnload_V2`</span><span class="sxs-lookup"><span data-stu-id="de5b2-218">`ModuleLoad_V2` and `ModuleUnload_V2`</span></span>|<span data-ttu-id="de5b2-219">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-219">Informational (4)</span></span>|  
+|<span data-ttu-id="de5b2-220">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="de5b2-220">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|<span data-ttu-id="de5b2-221">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-221">Informational (4)</span></span>|  
+|<span data-ttu-id="de5b2-222">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="de5b2-222">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|<span data-ttu-id="de5b2-223">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-223">Informational (4)</span></span>|  
 ||||  
   
- La tabella seguente mostra le informazioni sull'evento.  
+ <span data-ttu-id="de5b2-224">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-224">The following table shows the event information.</span></span>  
   
-|Evento|ID evento|Descrizione|  
+|<span data-ttu-id="de5b2-225">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-225">Event</span></span>|<span data-ttu-id="de5b2-226">ID evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-226">Event ID</span></span>|<span data-ttu-id="de5b2-227">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-227">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ModuleLoad_V2`|152|Generato se un modulo viene caricato nel corso di un processo.|  
-|`ModuleUnload_V2`|153|Generato se un modulo viene scaricato nel corso di un processo.|  
-|`ModuleDCStart_V2`|153|Enumera i moduli durante un rundown di avvio.|  
-|`ModuleDCEnd_V2`|154|Enumera i moduli durante un rundown di fine.|  
+|`ModuleLoad_V2`|<span data-ttu-id="de5b2-228">152</span><span class="sxs-lookup"><span data-stu-id="de5b2-228">152</span></span>|<span data-ttu-id="de5b2-229">Generato se un modulo viene caricato nel corso di un processo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-229">Raised when a module is loaded during the lifetime of a process.</span></span>|  
+|`ModuleUnload_V2`|<span data-ttu-id="de5b2-230">153</span><span class="sxs-lookup"><span data-stu-id="de5b2-230">153</span></span>|<span data-ttu-id="de5b2-231">Generato se un modulo viene scaricato nel corso di un processo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-231">Raised when a module is unloaded during the lifetime of a process.</span></span>|  
+|`ModuleDCStart_V2`|<span data-ttu-id="de5b2-232">153</span><span class="sxs-lookup"><span data-stu-id="de5b2-232">153</span></span>|<span data-ttu-id="de5b2-233">Enumera i moduli durante un rundown di avvio.</span><span class="sxs-lookup"><span data-stu-id="de5b2-233">Enumerates modules during a start rundown.</span></span>|  
+|`ModuleDCEnd_V2`|<span data-ttu-id="de5b2-234">154</span><span class="sxs-lookup"><span data-stu-id="de5b2-234">154</span></span>|<span data-ttu-id="de5b2-235">Enumera i moduli durante un rundown di fine.</span><span class="sxs-lookup"><span data-stu-id="de5b2-235">Enumerates modules during an end rundown.</span></span>|  
   
- La tabella seguente mostra i dati dell'evento.  
+ <span data-ttu-id="de5b2-236">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-236">The following table shows the event data.</span></span>  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|<span data-ttu-id="de5b2-237">Nome campo</span><span class="sxs-lookup"><span data-stu-id="de5b2-237">Field name</span></span>|<span data-ttu-id="de5b2-238">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="de5b2-238">Data type</span></span>|<span data-ttu-id="de5b2-239">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-239">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|ID univoco per il modulo.|  
-|AssemblyID|win:UInt64|ID dell'assembly in cui si trova il modulo.|  
-|ModuleFlags|win:UInt32|0x1: modulo indipendente dal dominio.<br /><br /> 0x2: modulo con immagine nativa.<br /><br /> 0x4: modulo dinamico.<br /><br /> 0x8: modulo del manifesto.|  
-|Reserved1|win:UInt32|Campo riservato.|  
-|ModuleILPath|win:UnicodeString|Percorso dell'immagine Microsoft Intermediate Language (MSIL) per il modulo oppure nome del modulo dinamico se si tratta di un assembly dinamico (con terminazione null).|  
-|ModuleNativePath|win:UnicodeString|Percorso dell'immagine nativa del modulo, se presente (con terminazione null).|  
-|ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
-|ManagedPdbSignature|win:GUID|Firma GUID del database del programma gestito (PDB) che corrisponde al modulo. (Vedere Note).|  
-|ManagedPdbAge|win:UInt32|Numero della durata scritto nel PDB gestito che corrisponde al modulo. (Vedere Note).|  
-|ManagedPdbBuildPath|win:UnicodeString|Percorso alla posizione in cui è stato compilato il PDB gestito che corrisponde al modulo. In alcuni casi, può essere semplicemente un nome file. (Vedere Note).|  
-|NativePdbSignature|win:GUID|Firma GUID del file PDB del generatore di immagini native (NGen) che corrisponde al modulo, se applicabile. (Vedere Note).|  
-|NativePdbAge|win:UInt32|Numero della durata scritto nel PDB di NGen che corrisponde al modulo, se applicabile. (Vedere Note).|  
-|NativePdbBuildPath|win:UnicodeString|Percorso alla posizione in cui è stato compilato il PDB di NGen che corrisponde al modulo, se applicabile. In alcuni casi, può essere semplicemente un nome file. (Vedere Note).|  
+|<span data-ttu-id="de5b2-240">ModuleID</span><span class="sxs-lookup"><span data-stu-id="de5b2-240">ModuleID</span></span>|<span data-ttu-id="de5b2-241">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-241">win:UInt64</span></span>|<span data-ttu-id="de5b2-242">ID univoco per il modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-242">Unique ID for the module.</span></span>|  
+|<span data-ttu-id="de5b2-243">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="de5b2-243">AssemblyID</span></span>|<span data-ttu-id="de5b2-244">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-244">win:UInt64</span></span>|<span data-ttu-id="de5b2-245">ID dell'assembly in cui si trova il modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-245">ID of the assembly in which this module resides.</span></span>|  
+|<span data-ttu-id="de5b2-246">ModuleFlags</span><span class="sxs-lookup"><span data-stu-id="de5b2-246">ModuleFlags</span></span>|<span data-ttu-id="de5b2-247">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-247">win:UInt32</span></span>|<span data-ttu-id="de5b2-248">0x1: modulo indipendente dal dominio.</span><span class="sxs-lookup"><span data-stu-id="de5b2-248">0x1: Domain neutral module.</span></span><br /><br /> <span data-ttu-id="de5b2-249">0x2: modulo con immagine nativa.</span><span class="sxs-lookup"><span data-stu-id="de5b2-249">0x2: Module has a native image.</span></span><br /><br /> <span data-ttu-id="de5b2-250">0x4: modulo dinamico.</span><span class="sxs-lookup"><span data-stu-id="de5b2-250">0x4: Dynamic module.</span></span><br /><br /> <span data-ttu-id="de5b2-251">0x8: modulo del manifesto.</span><span class="sxs-lookup"><span data-stu-id="de5b2-251">0x8: Manifest module.</span></span>|  
+|<span data-ttu-id="de5b2-252">Reserved1</span><span class="sxs-lookup"><span data-stu-id="de5b2-252">Reserved1</span></span>|<span data-ttu-id="de5b2-253">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-253">win:UInt32</span></span>|<span data-ttu-id="de5b2-254">Campo riservato.</span><span class="sxs-lookup"><span data-stu-id="de5b2-254">Reserved field.</span></span>|  
+|<span data-ttu-id="de5b2-255">ModuleILPath</span><span class="sxs-lookup"><span data-stu-id="de5b2-255">ModuleILPath</span></span>|<span data-ttu-id="de5b2-256">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-256">win:UnicodeString</span></span>|<span data-ttu-id="de5b2-257">Percorso dell'immagine Microsoft Intermediate Language (MSIL) per il modulo oppure nome del modulo dinamico se si tratta di un assembly dinamico (con terminazione null).</span><span class="sxs-lookup"><span data-stu-id="de5b2-257">Path of the Microsoft intermediate language (MSIL) image for the module, or dynamic module name if it is a dynamic assembly (null-terminated).</span></span>|  
+|<span data-ttu-id="de5b2-258">ModuleNativePath</span><span class="sxs-lookup"><span data-stu-id="de5b2-258">ModuleNativePath</span></span>|<span data-ttu-id="de5b2-259">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-259">win:UnicodeString</span></span>|<span data-ttu-id="de5b2-260">Percorso dell'immagine nativa del modulo, se presente (con terminazione null).</span><span class="sxs-lookup"><span data-stu-id="de5b2-260">Path of the module native image, if present (null-terminated).</span></span>|  
+|<span data-ttu-id="de5b2-261">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="de5b2-261">ClrInstanceID</span></span>|<span data-ttu-id="de5b2-262">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="de5b2-262">win:UInt16</span></span>|<span data-ttu-id="de5b2-263">ID univoco per l'istanza di CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="de5b2-263">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+|<span data-ttu-id="de5b2-264">ManagedPdbSignature</span><span class="sxs-lookup"><span data-stu-id="de5b2-264">ManagedPdbSignature</span></span>|<span data-ttu-id="de5b2-265">win:GUID</span><span class="sxs-lookup"><span data-stu-id="de5b2-265">win:GUID</span></span>|<span data-ttu-id="de5b2-266">Firma GUID del database del programma gestito (PDB) che corrisponde al modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-266">GUID signature of the managed program database (PDB) that matches this module.</span></span> <span data-ttu-id="de5b2-267">(Vedere Note).</span><span class="sxs-lookup"><span data-stu-id="de5b2-267">(See Remarks.)</span></span>|  
+|<span data-ttu-id="de5b2-268">ManagedPdbAge</span><span class="sxs-lookup"><span data-stu-id="de5b2-268">ManagedPdbAge</span></span>|<span data-ttu-id="de5b2-269">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-269">win:UInt32</span></span>|<span data-ttu-id="de5b2-270">Numero della durata scritto nel PDB gestito che corrisponde al modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-270">Age number written to the managed PDB that matches this module.</span></span> <span data-ttu-id="de5b2-271">(Vedere Note).</span><span class="sxs-lookup"><span data-stu-id="de5b2-271">(See Remarks.)</span></span>|  
+|<span data-ttu-id="de5b2-272">ManagedPdbBuildPath</span><span class="sxs-lookup"><span data-stu-id="de5b2-272">ManagedPdbBuildPath</span></span>|<span data-ttu-id="de5b2-273">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-273">win:UnicodeString</span></span>|<span data-ttu-id="de5b2-274">Percorso alla posizione in cui è stato compilato il PDB gestito che corrisponde al modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-274">Path to the location where the managed PDB that matches this module was built.</span></span> <span data-ttu-id="de5b2-275">In alcuni casi, può essere semplicemente un nome file.</span><span class="sxs-lookup"><span data-stu-id="de5b2-275">In some cases, this may just be a file name.</span></span> <span data-ttu-id="de5b2-276">(Vedere Note).</span><span class="sxs-lookup"><span data-stu-id="de5b2-276">(See Remarks.)</span></span>|  
+|<span data-ttu-id="de5b2-277">NativePdbSignature</span><span class="sxs-lookup"><span data-stu-id="de5b2-277">NativePdbSignature</span></span>|<span data-ttu-id="de5b2-278">win:GUID</span><span class="sxs-lookup"><span data-stu-id="de5b2-278">win:GUID</span></span>|<span data-ttu-id="de5b2-279">Firma GUID del file PDB del generatore di immagini native (NGen) che corrisponde al modulo, se applicabile.</span><span class="sxs-lookup"><span data-stu-id="de5b2-279">GUID signature of the Native Image Generator (NGen) PDB that matches this module, if applicable.</span></span> <span data-ttu-id="de5b2-280">(Vedere Note).</span><span class="sxs-lookup"><span data-stu-id="de5b2-280">(See Remarks.)</span></span>|  
+|<span data-ttu-id="de5b2-281">NativePdbAge</span><span class="sxs-lookup"><span data-stu-id="de5b2-281">NativePdbAge</span></span>|<span data-ttu-id="de5b2-282">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-282">win:UInt32</span></span>|<span data-ttu-id="de5b2-283">Numero della durata scritto nel PDB di NGen che corrisponde al modulo, se applicabile.</span><span class="sxs-lookup"><span data-stu-id="de5b2-283">Age number written to the NGen PDB that matches this module, if applicable.</span></span> <span data-ttu-id="de5b2-284">(Vedere Note).</span><span class="sxs-lookup"><span data-stu-id="de5b2-284">(See Remarks.)</span></span>|  
+|<span data-ttu-id="de5b2-285">NativePdbBuildPath</span><span class="sxs-lookup"><span data-stu-id="de5b2-285">NativePdbBuildPath</span></span>|<span data-ttu-id="de5b2-286">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-286">win:UnicodeString</span></span>|<span data-ttu-id="de5b2-287">Percorso alla posizione in cui è stato compilato il PDB di NGen che corrisponde al modulo, se applicabile.</span><span class="sxs-lookup"><span data-stu-id="de5b2-287">Path to the location where the NGen PDB that matches this module was built, if applicable.</span></span> <span data-ttu-id="de5b2-288">In alcuni casi, può essere semplicemente un nome file.</span><span class="sxs-lookup"><span data-stu-id="de5b2-288">In some cases, this may just be a file name.</span></span> <span data-ttu-id="de5b2-289">(Vedere Note).</span><span class="sxs-lookup"><span data-stu-id="de5b2-289">(See Remarks.)</span></span>|  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a><span data-ttu-id="de5b2-290">Note</span><span class="sxs-lookup"><span data-stu-id="de5b2-290">Remarks</span></span>  
   
--   I campi che contengono "Pdb" nel nome possono essere usati dagli strumenti di profilazione per individuare i PDB che corrispondono ai moduli caricati durante la sessione di profilazione. I valori di questi campi corrispondono ai dati scritti nelle sezioni IMAGE_DIRECTORY_ENTRY_DEBUG del modulo normalmente usato dai debugger per individuare i PDB che corrispondono ai moduli caricati.  
+-   <span data-ttu-id="de5b2-291">I campi che contengono "Pdb" nel nome possono essere usati dagli strumenti di profilazione per individuare i PDB che corrispondono ai moduli caricati durante la sessione di profilazione.</span><span class="sxs-lookup"><span data-stu-id="de5b2-291">The fields that have "Pdb" in their names can be used by profiling tools to locate PDBs that match the modules that were loaded during the profiling session.</span></span> <span data-ttu-id="de5b2-292">I valori di questi campi corrispondono ai dati scritti nelle sezioni IMAGE_DIRECTORY_ENTRY_DEBUG del modulo normalmente usato dai debugger per individuare i PDB che corrispondono ai moduli caricati.</span><span class="sxs-lookup"><span data-stu-id="de5b2-292">The values of these fields correspond to the data written into the IMAGE_DIRECTORY_ENTRY_DEBUG sections of the module normally used by debuggers to help locate PDBs that match the loaded modules.</span></span>  
   
--   I nomi dei campi che iniziano con "ManagedPdb" fanno riferimento al PDB gestito che corrisponde al modulo MSIL generato dal compilatore gestito (ad esempio, il compilatore C# o Visual Basic). Questo PDB usa il formato PDB gestito e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi MSIL compilati nel form MSIL.  
+-   <span data-ttu-id="de5b2-293">I nomi dei campi che iniziano con "ManagedPdb" fanno riferimento al PDB gestito che corrisponde al modulo MSIL generato dal compilatore gestito (ad esempio, il compilatore C# o Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="de5b2-293">The field names that begin with "ManagedPdb" refer to the managed PDB corresponding to the MSIL module that was generated by the managed compiler (such as the C# or Visual Basic compiler).</span></span> <span data-ttu-id="de5b2-294">Questo PDB usa il formato PDB gestito e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi MSIL compilati nel form MSIL.</span><span class="sxs-lookup"><span data-stu-id="de5b2-294">This PDB uses the managed PDB format, and describes how elements from the original managed source code, such as files, line numbers, and symbol names, map to MSIL elements that are compiled into the MSIL module.</span></span>  
   
--   I nomi dei campi che iniziano con "NativePdb" fanno riferimento al PDB di NGen generato chiamando `NGEN createPDB`. Questo PDB usa il formato PDB nativo e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi nativi compilati nel modulo NGen.  
+-   <span data-ttu-id="de5b2-295">I nomi dei campi che iniziano con "NativePdb" fanno riferimento al PDB di NGen generato chiamando `NGEN createPDB`.</span><span class="sxs-lookup"><span data-stu-id="de5b2-295">The field names that begin with "NativePdb" refer to the NGen PDB generated by calling `NGEN createPDB`.</span></span> <span data-ttu-id="de5b2-296">Questo PDB usa il formato PDB nativo e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi nativi compilati nel modulo NGen.</span><span class="sxs-lookup"><span data-stu-id="de5b2-296">This PDB uses the native PDB format, and describes how elements from the original managed source code, such as files, line numbers, and symbol names, map to native elements that are compiled into the NGen module.</span></span>  
   
- [Torna all'inizio](#top)  
+ [<span data-ttu-id="de5b2-297">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="de5b2-297">Back to top</span></span>](#top)  
   
 <a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>Eventi modulo del dominio CLR  
- La tabella seguente illustra la parola chiave e il livello  
+## <a name="clr-domain-module-events"></a><span data-ttu-id="de5b2-298">Eventi modulo del dominio CLR</span><span class="sxs-lookup"><span data-stu-id="de5b2-298">CLR Domain Module Events</span></span>  
+ <span data-ttu-id="de5b2-299">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-299">The following table shows the keyword and level.</span></span>  
   
-|Parola chiave per la generazione dell'evento|Evento|Livello|  
+|<span data-ttu-id="de5b2-300">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-300">Keyword for raising the event</span></span>|<span data-ttu-id="de5b2-301">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-301">Event</span></span>|<span data-ttu-id="de5b2-302">Livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-302">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Informativo (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informativo (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Informativo (4)|  
+|<span data-ttu-id="de5b2-303">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="de5b2-303">`LoaderKeyword` (0x8)</span></span>|`DomainModuleLoad_V1`|<span data-ttu-id="de5b2-304">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-304">Informational (4)</span></span>|  
+|<span data-ttu-id="de5b2-305">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="de5b2-305">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|<span data-ttu-id="de5b2-306">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-306">Informational (4)</span></span>|  
+|<span data-ttu-id="de5b2-307">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="de5b2-307">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|<span data-ttu-id="de5b2-308">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-308">Informational (4)</span></span>|  
   
- La tabella seguente mostra le informazioni sull'evento.  
+ <span data-ttu-id="de5b2-309">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-309">The following table shows the event information.</span></span>  
   
-|Evento|ID evento|Descrizione|  
+|<span data-ttu-id="de5b2-310">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-310">Event</span></span>|<span data-ttu-id="de5b2-311">ID evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-311">Event ID</span></span>|<span data-ttu-id="de5b2-312">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-312">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`DomainModuleLoad_V1`|151|Generato quando un modulo viene caricato per un dominio applicazioni.|  
-|`DomainModuleDCStart_V1`|151|Enumera i moduli caricati per un dominio applicazioni durante un rundown di avvio e viene registrato per tutti i domini applicazioni.|  
-|`DomainModuleDCEnd_V1`|152|Enumera i moduli caricati per un dominio applicazioni durante un rundown di fine e viene registrato per tutti i domini applicazioni.|  
+|`DomainModuleLoad_V1`|<span data-ttu-id="de5b2-313">151</span><span class="sxs-lookup"><span data-stu-id="de5b2-313">151</span></span>|<span data-ttu-id="de5b2-314">Generato quando un modulo viene caricato per un dominio applicazioni.</span><span class="sxs-lookup"><span data-stu-id="de5b2-314">Raised when a module is loaded for an application domain.</span></span>|  
+|`DomainModuleDCStart_V1`|<span data-ttu-id="de5b2-315">151</span><span class="sxs-lookup"><span data-stu-id="de5b2-315">151</span></span>|<span data-ttu-id="de5b2-316">Enumera i moduli caricati per un dominio applicazioni durante un rundown di avvio e viene registrato per tutti i domini applicazioni.</span><span class="sxs-lookup"><span data-stu-id="de5b2-316">Enumerates modules loaded for an application domain during a start rundown, and is logged for all application domains.</span></span>|  
+|`DomainModuleDCEnd_V1`|<span data-ttu-id="de5b2-317">152</span><span class="sxs-lookup"><span data-stu-id="de5b2-317">152</span></span>|<span data-ttu-id="de5b2-318">Enumera i moduli caricati per un dominio applicazioni durante un rundown di fine e viene registrato per tutti i domini applicazioni.</span><span class="sxs-lookup"><span data-stu-id="de5b2-318">Enumerates modules loaded for an application domain during an end rundown, and is logged for all application domains.</span></span>|  
   
- La tabella seguente mostra i dati dell'evento.  
+ <span data-ttu-id="de5b2-319">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-319">The following table shows the event data.</span></span>  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|<span data-ttu-id="de5b2-320">Nome campo</span><span class="sxs-lookup"><span data-stu-id="de5b2-320">Field name</span></span>|<span data-ttu-id="de5b2-321">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="de5b2-321">Data type</span></span>|<span data-ttu-id="de5b2-322">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-322">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|Identifica l'assembly al quale appartiene il modulo.|  
-|AssemblyID|win:UInt64|ID dell'assembly in cui si trova il modulo.|  
-|AppDomainID|win:UInt64|ID del dominio applicazioni in cui viene usato il modulo.|  
-|ModuleFlags|win:UInt32|0x1: modulo indipendente dal dominio.<br /><br /> 0x2: modulo con immagine nativa.<br /><br /> 0x4: modulo dinamico.<br /><br /> 0x8: modulo del manifesto.|  
-|Reserved1|win:UInt32|Campo riservato.|  
-|ModuleILPath|win:UnicodeString|Percorso dell'immagine MSIL per il modulo oppure nome del modulo dinamico se si tratta di un assembly dinamico (con terminazione null)|  
-|ModuleNativePath|win:UnicodeString|Percorso dell'immagine nativa del modulo, se presente (con terminazione null).|  
-|ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
+|<span data-ttu-id="de5b2-323">ModuleID</span><span class="sxs-lookup"><span data-stu-id="de5b2-323">ModuleID</span></span>|<span data-ttu-id="de5b2-324">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-324">win:UInt64</span></span>|<span data-ttu-id="de5b2-325">Identifica l'assembly al quale appartiene il modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-325">Identifies the assembly to which this module belongs.</span></span>|  
+|<span data-ttu-id="de5b2-326">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="de5b2-326">AssemblyID</span></span>|<span data-ttu-id="de5b2-327">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-327">win:UInt64</span></span>|<span data-ttu-id="de5b2-328">ID dell'assembly in cui si trova il modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-328">ID of the assembly in which this module resides.</span></span>|  
+|<span data-ttu-id="de5b2-329">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="de5b2-329">AppDomainID</span></span>|<span data-ttu-id="de5b2-330">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-330">win:UInt64</span></span>|<span data-ttu-id="de5b2-331">ID del dominio applicazioni in cui viene usato il modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-331">ID of the application domain in which this module is used.</span></span>|  
+|<span data-ttu-id="de5b2-332">ModuleFlags</span><span class="sxs-lookup"><span data-stu-id="de5b2-332">ModuleFlags</span></span>|<span data-ttu-id="de5b2-333">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-333">win:UInt32</span></span>|<span data-ttu-id="de5b2-334">0x1: modulo indipendente dal dominio.</span><span class="sxs-lookup"><span data-stu-id="de5b2-334">0x1: Domain neutral module.</span></span><br /><br /> <span data-ttu-id="de5b2-335">0x2: modulo con immagine nativa.</span><span class="sxs-lookup"><span data-stu-id="de5b2-335">0x2: Module has a native image.</span></span><br /><br /> <span data-ttu-id="de5b2-336">0x4: modulo dinamico.</span><span class="sxs-lookup"><span data-stu-id="de5b2-336">0x4: Dynamic module.</span></span><br /><br /> <span data-ttu-id="de5b2-337">0x8: modulo del manifesto.</span><span class="sxs-lookup"><span data-stu-id="de5b2-337">0x8: Manifest module.</span></span>|  
+|<span data-ttu-id="de5b2-338">Reserved1</span><span class="sxs-lookup"><span data-stu-id="de5b2-338">Reserved1</span></span>|<span data-ttu-id="de5b2-339">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-339">win:UInt32</span></span>|<span data-ttu-id="de5b2-340">Campo riservato.</span><span class="sxs-lookup"><span data-stu-id="de5b2-340">Reserved field.</span></span>|  
+|<span data-ttu-id="de5b2-341">ModuleILPath</span><span class="sxs-lookup"><span data-stu-id="de5b2-341">ModuleILPath</span></span>|<span data-ttu-id="de5b2-342">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-342">win:UnicodeString</span></span>|<span data-ttu-id="de5b2-343">Percorso dell'immagine MSIL per il modulo oppure nome del modulo dinamico se si tratta di un assembly dinamico (con terminazione null)</span><span class="sxs-lookup"><span data-stu-id="de5b2-343">Path of the MSIL image for the module, or dynamic module name if it is a dynamic assembly (null-terminated).</span></span>|  
+|<span data-ttu-id="de5b2-344">ModuleNativePath</span><span class="sxs-lookup"><span data-stu-id="de5b2-344">ModuleNativePath</span></span>|<span data-ttu-id="de5b2-345">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-345">win:UnicodeString</span></span>|<span data-ttu-id="de5b2-346">Percorso dell'immagine nativa del modulo, se presente (con terminazione null).</span><span class="sxs-lookup"><span data-stu-id="de5b2-346">Path of the module native image, if present (null-terminated).</span></span>|  
+|<span data-ttu-id="de5b2-347">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="de5b2-347">ClrInstanceID</span></span>|<span data-ttu-id="de5b2-348">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="de5b2-348">win:UInt16</span></span>|<span data-ttu-id="de5b2-349">ID univoco per l'istanza di CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="de5b2-349">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Torna all'inizio](#top)  
+ [<span data-ttu-id="de5b2-350">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="de5b2-350">Back to top</span></span>](#top)  
   
 <a name="module_range_events"></a>   
-## <a name="module-range-events"></a>Eventi di intervallo modulo  
- La tabella seguente illustra la parola chiave e il livello  
+## <a name="module-range-events"></a><span data-ttu-id="de5b2-351">Eventi di intervallo modulo</span><span class="sxs-lookup"><span data-stu-id="de5b2-351">Module Range Events</span></span>  
+ <span data-ttu-id="de5b2-352">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-352">The following table shows the keyword and level.</span></span>  
   
-|Parola chiave per la generazione dell'evento|Evento|Livello|  
+|<span data-ttu-id="de5b2-353">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-353">Keyword for raising the event</span></span>|<span data-ttu-id="de5b2-354">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-354">Event</span></span>|<span data-ttu-id="de5b2-355">Livello</span><span class="sxs-lookup"><span data-stu-id="de5b2-355">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`PerfTrackKeyWord`)|`ModuleRange`|Informativo (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCStart`|Informativo (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|Informativo (4)|  
+|<span data-ttu-id="de5b2-356">`PerfTrackKeyWord`)</span><span class="sxs-lookup"><span data-stu-id="de5b2-356">`PerfTrackKeyWord`)</span></span>|`ModuleRange`|<span data-ttu-id="de5b2-357">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-357">Informational (4)</span></span>|  
+|`PerfTrackKeyWord`|`ModuleRangeDCStart`|<span data-ttu-id="de5b2-358">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-358">Informational (4)</span></span>|  
+|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|<span data-ttu-id="de5b2-359">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="de5b2-359">Informational (4)</span></span>|  
   
- La tabella seguente mostra le informazioni sull'evento.  
+ <span data-ttu-id="de5b2-360">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-360">The following table shows the event information.</span></span>  
   
-|Evento|ID evento|Descrizione|  
+|<span data-ttu-id="de5b2-361">Evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-361">Event</span></span>|<span data-ttu-id="de5b2-362">ID evento</span><span class="sxs-lookup"><span data-stu-id="de5b2-362">Event ID</span></span>|<span data-ttu-id="de5b2-363">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-363">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ModuleRange`|158|Questo evento è presente se un'immagine del generatore di immagini native (NGen) è stata ottimizzata con IBC e contiene informazioni sulle sezioni critiche dell'immagine NGen.|  
-|`ModuleRangeDCStart`|160|Evento `ModuleRange` generato all'avvio di un rundown.|  
-|`ModuleRangeDCEnd`|161|Evento `ModuleRange` generato alla fine di un rundown.|  
+|`ModuleRange`|<span data-ttu-id="de5b2-364">158</span><span class="sxs-lookup"><span data-stu-id="de5b2-364">158</span></span>|<span data-ttu-id="de5b2-365">Questo evento è presente se un'immagine del generatore di immagini native (NGen) è stata ottimizzata con IBC e contiene informazioni sulle sezioni critiche dell'immagine NGen.</span><span class="sxs-lookup"><span data-stu-id="de5b2-365">This event is present if a loaded Native Image Generator (NGen) image has been optimized with IBC and contains information about the hot sections of the NGen image.</span></span>|  
+|`ModuleRangeDCStart`|<span data-ttu-id="de5b2-366">160</span><span class="sxs-lookup"><span data-stu-id="de5b2-366">160</span></span>|<span data-ttu-id="de5b2-367">Evento `ModuleRange` generato all'avvio di un rundown.</span><span class="sxs-lookup"><span data-stu-id="de5b2-367">A `ModuleRange` event fired at the start of a rundown.</span></span>|  
+|`ModuleRangeDCEnd`|<span data-ttu-id="de5b2-368">161</span><span class="sxs-lookup"><span data-stu-id="de5b2-368">161</span></span>|<span data-ttu-id="de5b2-369">Evento `ModuleRange` generato alla fine di un rundown.</span><span class="sxs-lookup"><span data-stu-id="de5b2-369">A `ModuleRange` event fired at the end of a rundown.</span></span>|  
   
- La tabella seguente mostra i dati dell'evento.  
+ <span data-ttu-id="de5b2-370">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-370">The following table shows the event data.</span></span>  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|<span data-ttu-id="de5b2-371">Nome campo</span><span class="sxs-lookup"><span data-stu-id="de5b2-371">Field name</span></span>|<span data-ttu-id="de5b2-372">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="de5b2-372">Data type</span></span>|<span data-ttu-id="de5b2-373">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de5b2-373">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|Identifica in modo univoco un'istanza specifica di CLR in un processo se vengono caricate più istanze di CLR.|  
-|ModuleID|win:UInt64|Identifica l'assembly al quale appartiene il modulo.|  
-|RangeBegin|win:UInt32|Offset nel modulo che rappresenta l'inizio dell'intervallo per il tipo di intervallo specificato.|  
-|RangeSize|win:UInt32|Dimensione dell'intervallo specificato in byte.|  
-|RangeType|win:UInt32|Valore singolo, 0x4, che rappresenta gli intervalli IBC a freddo. In futuro, questo campo potrebbe rappresentare più valori.|  
-|RangeSize1|win:UInt32|0 indica dati non validi.|  
-|RangeBegin2|win:UnicodeString||  
+|<span data-ttu-id="de5b2-374">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="de5b2-374">ClrInstanceID</span></span>|<span data-ttu-id="de5b2-375">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="de5b2-375">win:UInt16</span></span>|<span data-ttu-id="de5b2-376">Identifica in modo univoco un'istanza specifica di CLR in un processo se vengono caricate più istanze di CLR.</span><span class="sxs-lookup"><span data-stu-id="de5b2-376">Uniquely identifies a specific instance of the CLR in a process if multiple instances of the CLR are loaded.</span></span>|  
+|<span data-ttu-id="de5b2-377">ModuleID</span><span class="sxs-lookup"><span data-stu-id="de5b2-377">ModuleID</span></span>|<span data-ttu-id="de5b2-378">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="de5b2-378">win:UInt64</span></span>|<span data-ttu-id="de5b2-379">Identifica l'assembly al quale appartiene il modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-379">Identifies the assembly to which this module belongs.</span></span>|  
+|<span data-ttu-id="de5b2-380">RangeBegin</span><span class="sxs-lookup"><span data-stu-id="de5b2-380">RangeBegin</span></span>|<span data-ttu-id="de5b2-381">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-381">win:UInt32</span></span>|<span data-ttu-id="de5b2-382">Offset nel modulo che rappresenta l'inizio dell'intervallo per il tipo di intervallo specificato.</span><span class="sxs-lookup"><span data-stu-id="de5b2-382">The offset in the module that represents the start of the range for the specified range type.</span></span>|  
+|<span data-ttu-id="de5b2-383">RangeSize</span><span class="sxs-lookup"><span data-stu-id="de5b2-383">RangeSize</span></span>|<span data-ttu-id="de5b2-384">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-384">win:UInt32</span></span>|<span data-ttu-id="de5b2-385">Dimensione dell'intervallo specificato in byte.</span><span class="sxs-lookup"><span data-stu-id="de5b2-385">The size of the specified range in bytes.</span></span>|  
+|<span data-ttu-id="de5b2-386">RangeType</span><span class="sxs-lookup"><span data-stu-id="de5b2-386">RangeType</span></span>|<span data-ttu-id="de5b2-387">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-387">win:UInt32</span></span>|<span data-ttu-id="de5b2-388">Valore singolo, 0x4, che rappresenta gli intervalli IBC a freddo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-388">A single value, 0x4, to represent Cold IBC ranges.</span></span> <span data-ttu-id="de5b2-389">In futuro, questo campo potrebbe rappresentare più valori.</span><span class="sxs-lookup"><span data-stu-id="de5b2-389">This field can represent more values in the future.</span></span>|  
+|<span data-ttu-id="de5b2-390">RangeSize1</span><span class="sxs-lookup"><span data-stu-id="de5b2-390">RangeSize1</span></span>|<span data-ttu-id="de5b2-391">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="de5b2-391">win:UInt32</span></span>|<span data-ttu-id="de5b2-392">0 indica dati non validi.</span><span class="sxs-lookup"><span data-stu-id="de5b2-392">0 indicates bad data.</span></span>|  
+|<span data-ttu-id="de5b2-393">RangeBegin2</span><span class="sxs-lookup"><span data-stu-id="de5b2-393">RangeBegin2</span></span>|<span data-ttu-id="de5b2-394">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="de5b2-394">win:UnicodeString</span></span>||  
   
-### <a name="remarks"></a>Note  
- Se un'immagine NGen caricata in un processo di .NET Framework è stata ottimizzata con IBC, l'evento `ModuleRange` che contiene gli intervalli critici nell'immagine NGen viene registrato insieme a `moduleID` e `ClrInstanceID`.  Se l'immagine NGen non è ottimizzata con IBC, l'evento non viene registrato. Per determinare il nome del modulo, questo evento deve essere collazionato con gli eventi ETW di caricamento del modulo.  
+### <a name="remarks"></a><span data-ttu-id="de5b2-395">Note</span><span class="sxs-lookup"><span data-stu-id="de5b2-395">Remarks</span></span>  
+ <span data-ttu-id="de5b2-396">Se un'immagine NGen caricata in un processo di .NET Framework è stata ottimizzata con IBC, l'evento `ModuleRange` che contiene gli intervalli critici nell'immagine NGen viene registrato insieme a `moduleID` e `ClrInstanceID`.</span><span class="sxs-lookup"><span data-stu-id="de5b2-396">If a loaded NGen image in a .NET Framework process has been optimized with IBC, the `ModuleRange` event that contains the hot ranges in the NGen image is logged along with its `moduleID` and `ClrInstanceID`.</span></span>  <span data-ttu-id="de5b2-397">Se l'immagine NGen non è ottimizzata con IBC, l'evento non viene registrato.</span><span class="sxs-lookup"><span data-stu-id="de5b2-397">If the NGen image is not optimized with IBC, this event isn't logged.</span></span> <span data-ttu-id="de5b2-398">Per determinare il nome del modulo, questo evento deve essere collazionato con gli eventi ETW di caricamento del modulo.</span><span class="sxs-lookup"><span data-stu-id="de5b2-398">To determine the module name, this event must be collated with the module load ETW events.</span></span>  
   
- Le dimensioni del payload per questo evento sono variabili. Il campo `Count` indica il numero di offset dell'intervallo contenuti nell'evento.  L'evento deve essere collazionato con l'evento `IStart` di Windows per determinare gli intervalli effettivi. L'evento di caricamento dell'immagine di Windows viene registrato quando viene caricata un'immagine e contiene l'indirizzo virtuale dell'immagine caricata.  
+ <span data-ttu-id="de5b2-399">Le dimensioni del payload per questo evento sono variabili. Il campo `Count` indica il numero di offset dell'intervallo contenuti nell'evento.</span><span class="sxs-lookup"><span data-stu-id="de5b2-399">The payload size for this event is variable; the `Count` field indicates the number of range offsets contained in the event.</span></span>  <span data-ttu-id="de5b2-400">L'evento deve essere collazionato con l'evento `IStart` di Windows per determinare gli intervalli effettivi.</span><span class="sxs-lookup"><span data-stu-id="de5b2-400">This event has to be collated with the Windows `IStart` event to determine the actual ranges.</span></span> <span data-ttu-id="de5b2-401">L'evento di caricamento dell'immagine di Windows viene registrato quando viene caricata un'immagine e contiene l'indirizzo virtuale dell'immagine caricata.</span><span class="sxs-lookup"><span data-stu-id="de5b2-401">The Windows Image Load event is logged whenever an image is loaded, and contains the virtual address of the loaded image.</span></span>  
   
- Gli eventi di intervallo form vengono generati in un qualsiasi livello ETW maggiore o uguale a 4 e vengono classificati come eventi informativi.  
+ <span data-ttu-id="de5b2-402">Gli eventi di intervallo form vengono generati in un qualsiasi livello ETW maggiore o uguale a 4 e vengono classificati come eventi informativi.</span><span class="sxs-lookup"><span data-stu-id="de5b2-402">Module range events are fired under any ETW level greater than or equal to 4 and are classified as informational events.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="de5b2-403">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="de5b2-403">See Also</span></span>  
+ [<span data-ttu-id="de5b2-404">Eventi ETW di CLR</span><span class="sxs-lookup"><span data-stu-id="de5b2-404">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

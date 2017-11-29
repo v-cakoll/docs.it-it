@@ -1,70 +1,72 @@
 ---
-title: "Elemento &lt;clear&gt; per bypasslist (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist>, clear (elemento)"
-  - "<clear> (elemento), bypasslist"
-  - "bypasslist, clear (elemento)"
-  - "clear (elemento), bypasslist"
+title: '&lt;deselezionare&gt; elemento per bypasslist (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, bypasslist
+- <clear> element, bypasslist
+- <bypasslist>, clear element
+- bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 5ee20b9177d519010c40351e335973dce10256f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;clear&gt; per bypasslist (Impostazioni di rete)
-Consente di cancellare l'elenco di esclusione proxy.  
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a><span data-ttu-id="1b823-102">&lt;deselezionare&gt; elemento per bypasslist (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="1b823-102">&lt;clear&gt; Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="1b823-103">Cancella l'elenco proxy da ignorare.</span><span class="sxs-lookup"><span data-stu-id="1b823-103">Clears the proxy bypass list.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="1b823-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1b823-104">\<configuration></span></span>  
+<span data-ttu-id="1b823-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="1b823-105">\<system.net></span></span>  
+<span data-ttu-id="1b823-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="1b823-106">\<defaultProxy></span></span>  
+<span data-ttu-id="1b823-107">\<BypassList ></span><span class="sxs-lookup"><span data-stu-id="1b823-107">\<bypasslist></span></span>  
+<span data-ttu-id="1b823-108">\<Deselezionare ></span><span class="sxs-lookup"><span data-stu-id="1b823-108">\<clear></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="1b823-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1b823-109">Syntax</span></span>  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1b823-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="1b823-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="1b823-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="1b823-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
- Nessuno.  
+### <a name="attributes"></a><span data-ttu-id="1b823-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="1b823-112">Attributes</span></span>  
+ <span data-ttu-id="1b823-113">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="1b823-113">None.</span></span>  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="1b823-114">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="1b823-114">Child Elements</span></span>  
+ <span data-ttu-id="1b823-115">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="1b823-115">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="1b823-116">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="1b823-116">Parent Elements</span></span>  
   
-|**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un insieme di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
+|<span data-ttu-id="1b823-117">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="1b823-117">**Element**</span></span>|<span data-ttu-id="1b823-118">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="1b823-118">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="1b823-119">BypassList</span><span class="sxs-lookup"><span data-stu-id="1b823-119">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="1b823-120">Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.</span><span class="sxs-lookup"><span data-stu-id="1b823-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## Note  
- L'elemento `clear` cancella tutte le voci dell'elenco di esclusione.  
+## <a name="remarks"></a><span data-ttu-id="1b823-121">Note</span><span class="sxs-lookup"><span data-stu-id="1b823-121">Remarks</span></span>  
+ <span data-ttu-id="1b823-122">Il `clear` elemento cancella tutte le voci dell'elenco di esclusione.</span><span class="sxs-lookup"><span data-stu-id="1b823-122">The `clear` element clears all entries from the bypass list.</span></span>  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="1b823-123">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="1b823-123">Configuration Files</span></span>  
+ <span data-ttu-id="1b823-124">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="1b823-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene cancellato il contenuto dell'elenco di esclusione, a cui vengono quindi aggiunti due indirizzi.  Il primo consente di ignorare il proxy per tutti i server del dominio contoso.com, il secondo, invece, di ignorare il proxy per tutti i server i cui indirizzi IP iniziano con 192.168.  
+## <a name="example"></a><span data-ttu-id="1b823-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="1b823-125">Example</span></span>  
+ <span data-ttu-id="1b823-126">Nell'esempio seguente consente di cancellare l'elenco di esclusione e quindi aggiunge due indirizzi all'elenco di esclusione.</span><span class="sxs-lookup"><span data-stu-id="1b823-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="1b823-127">Il primo viene ignorato il proxy per tutti i server nel dominio contoso.com. il secondo consente di ignorare il proxy per tutti i server il cui indirizzo IP inizia con 192.168.</span><span class="sxs-lookup"><span data-stu-id="1b823-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -78,6 +80,6 @@ Consente di cancellare l'elenco di esclusione proxy.
 </configuration>   
 ```  
   
-## Vedere anche  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="1b823-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1b823-128">See Also</span></span>  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="1b823-129">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="1b823-129">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
