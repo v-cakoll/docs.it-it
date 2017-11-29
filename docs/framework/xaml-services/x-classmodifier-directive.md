@@ -1,68 +1,71 @@
 ---
-title: "x:ClassModifier Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xClassModifier"
-  - "x:ClassModifier"
-  - "ClassModifier"
-helpviewer_keywords: 
-  - "XAML [XAML Services], x:ClassModifier attribute"
-  - "x:ClassModifier attribute [XAML Services]"
-  - "ClassModifier attribute in XAML [XAML Services]"
+title: Direttiva x:ClassModifier
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xClassModifier
+- x:ClassModifier
+- ClassModifier
+helpviewer_keywords:
+- XAML [XAML Services], x:ClassModifier attribute
+- x:ClassModifier attribute [XAML Services]
+- ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-caps.latest.revision: 22
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 111c4a6ed78a908ae3b171dc9349a3c9b81750de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# x:ClassModifier Directive
-Modifica il comportamento della compilazione XAML nei casi in cui viene fornito anche `x:Class`.  In particolare, anziché creare una `class` parziale con un livello di accesso `Public` \(impostazione predefinita\), l'oggetto `x:Class` fornito viene creato con un livello di accesso `NotPublic`.  Questo comportamento influisce sul livello di accesso per la classe negli assembly generati.  
+# <a name="xclassmodifier-directive"></a><span data-ttu-id="d4114-102">Direttiva x:ClassModifier</span><span class="sxs-lookup"><span data-stu-id="d4114-102">x:ClassModifier Directive</span></span>
+<span data-ttu-id="d4114-103">Modifica il comportamento di compilazione XAML quando `x:Class` viene inoltre fornita.</span><span class="sxs-lookup"><span data-stu-id="d4114-103">Modifies XAML compilation behavior when `x:Class` is also provided.</span></span> <span data-ttu-id="d4114-104">In particolare, anziché creare un elemento parziale `class` che ha un `Public` (impostazione predefinita), livello di accesso fornito `x:Class` viene creato con un `NotPublic` livello di accesso.</span><span class="sxs-lookup"><span data-stu-id="d4114-104">Specifically, instead of creating a partial `class` that has a `Public` access level (the default), the provided `x:Class` is created with a `NotPublic` access level.</span></span> <span data-ttu-id="d4114-105">Questo comportamento influenza il livello di accesso per la classe nell'assembly generati.</span><span class="sxs-lookup"><span data-stu-id="d4114-105">This behavior affects the access level for the class in the generated assemblies.</span></span>  
   
-## Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="d4114-106">Utilizzo della sintassi XAML per gli attributi</span><span class="sxs-lookup"><span data-stu-id="d4114-106">XAML Attribute Usage</span></span>  
   
 ```  
-<object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
+<object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
    ...  
 </object>  
 ```  
   
-## Valori XAML  
+## <a name="xaml-values"></a><span data-ttu-id="d4114-107">Valori XAML</span><span class="sxs-lookup"><span data-stu-id="d4114-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|*NotPublic*|Stringa esatta da passare per specificare la differenza tra <xref:System.Reflection.TypeAttributes?displayProperty=fullName> e <xref:System.Reflection.TypeAttributes?displayProperty=fullName> in base al linguaggio di programmazione code\-behind utilizzato.  Vedere la sezione Osservazioni.|  
+|<span data-ttu-id="d4114-108">*NotPublic*</span><span class="sxs-lookup"><span data-stu-id="d4114-108">*NotPublic*</span></span>|<span data-ttu-id="d4114-109">La stringa esatta da passare per specificare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> e <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varia a seconda del linguaggio di programmazione codice in uso.</span><span class="sxs-lookup"><span data-stu-id="d4114-109">The exact string to pass to specify <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> versus <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varies, depending on the code-behind programming language that you use.</span></span> <span data-ttu-id="d4114-110">Vedere la sezione Osservazioni.</span><span class="sxs-lookup"><span data-stu-id="d4114-110">See Remarks.</span></span>|  
   
-## Dipendenze  
- L'attributo [x:Class](../../../docs/framework/xaml-services/x-class-directive.md) deve inoltre essere disponibile nello stesso elemento, che deve trovarsi nell'elemento radice di una pagina.  Per ulteriori informazioni, vedere[\[MS\-XAML\] Sezione 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525).  
+## <a name="dependencies"></a><span data-ttu-id="d4114-111">Dipendenze</span><span class="sxs-lookup"><span data-stu-id="d4114-111">Dependencies</span></span>  
+ <span data-ttu-id="d4114-112">[X:Class](../../../docs/framework/xaml-services/x-class-directive.md) deve inoltre essere disponibile nello stesso elemento, e tale elemento deve essere l'elemento radice in una pagina.</span><span class="sxs-lookup"><span data-stu-id="d4114-112">[x:Class](../../../docs/framework/xaml-services/x-class-directive.md) must also be provided on the same element, and that element must be the root element in a page.</span></span> <span data-ttu-id="d4114-113">Per ulteriori informazioni, vedere [ \[MS-XAML\] sezione 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525).</span><span class="sxs-lookup"><span data-stu-id="d4114-113">For more information, see [\[MS-XAML\] Section 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>  
   
-## Note  
- Il valore di `x:ClassModifier` nell'utilizzo dei servizi XAML di .NET Framework varia in base al linguaggio di programmazione.  La stringa da utilizzare dipende dal modo in cui ciascun linguaggio implementa <xref:System.CodeDom.Compiler.CodeDomProvider> e dai convertitori dei tipi restituiti per definire i significati per <xref:System.Reflection.TypeAttributes?displayProperty=fullName> e <xref:System.Reflection.TypeAttributes?displayProperty=fullName>, nonché dal rilevamento della distinzione tra maiuscole e minuscole nel linguaggio specifico.  
+## <a name="remarks"></a><span data-ttu-id="d4114-114">Note</span><span class="sxs-lookup"><span data-stu-id="d4114-114">Remarks</span></span>  
+ <span data-ttu-id="d4114-115">Il valore di `x:ClassModifier` nei servizi XAML di .NET Framework utilizzo varia in base al linguaggio di programmazione.</span><span class="sxs-lookup"><span data-stu-id="d4114-115">The value of `x:ClassModifier` in .NET Framework XAML Services usage varies by programming language.</span></span> <span data-ttu-id="d4114-116">La stringa da utilizzare dipende dal modo in cui ogni linguaggio implementa relativo <xref:System.CodeDom.Compiler.CodeDomProvider> e i convertitori di tipi restituiti per definire il significato per <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> e <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, e se tale lingua viene fatta distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="d4114-116">The string to use depends on how each language implements its <xref:System.CodeDom.Compiler.CodeDomProvider> and the type converters it returns to define the meanings for <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> and <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, and whether that language is case sensitive.</span></span>  
   
--   Per [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], la stringa da passare per definire <xref:System.Reflection.TypeAttributes?displayProperty=fullName> è `internal`.  
+-   <span data-ttu-id="d4114-117">Per [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], la stringa da passare per definire <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> è `internal`.</span><span class="sxs-lookup"><span data-stu-id="d4114-117">For [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], the string to pass to designate <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> is `internal`.</span></span>  
   
--   Per [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)], la stringa da passare per definire <xref:System.Reflection.TypeAttributes?displayProperty=fullName> è `Friend`.  
+-   <span data-ttu-id="d4114-118">Per [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)], la stringa da passare per definire <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> è `Friend`.</span><span class="sxs-lookup"><span data-stu-id="d4114-118">For [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)], the string to pass to designate <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> is `Friend`.</span></span>  
   
--   Per [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], non sono disponibili destinazioni che supportano la compilazione di XAML, pertanto il valore da passare è non specificato.  
+-   <span data-ttu-id="d4114-119">Per [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], nessuna destinazione esistono che supportano la compilazione di XAML; pertanto, non è specificato il valore da passare.</span><span class="sxs-lookup"><span data-stu-id="d4114-119">For [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], no targets exist that support compiling XAML; therefore, the value to pass is unspecified.</span></span>  
   
- È inoltre possibile specificare <xref:System.Reflection.TypeAttributes?displayProperty=fullName> \(`public` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Public` in [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]\); tuttavia, solitamente non si specifica <xref:System.Reflection.TypeAttributes?displayProperty=fullName> dal momento che <xref:System.Reflection.TypeAttributes?displayProperty=fullName> è già il comportamento predefinito.  
+ <span data-ttu-id="d4114-120">È inoltre possibile specificare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Public` in [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]); tuttavia, specificando <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> avviene raramente perché <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> è già il comportamento predefinito.</span><span class="sxs-lookup"><span data-stu-id="d4114-120">You can also specify <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Public` in [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]); however, specifying <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> is infrequently done because <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> is already the default behavior.</span></span>  
   
- Altri valori con restrizioni di accesso al codice a livello di utente equivalenti, come `private` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], non interessano `x:ClassModifier`, in quanto i riferimenti a classi annidate non sono supportati in XAML e pertanto il modificatore <xref:System.Reflection.TypeAttributes?displayProperty=fullName> avrà lo stesso effetto.  
+ <span data-ttu-id="d4114-121">Altri valori con il codice utente equivalente a livello di accesso restrizioni, ad esempio `private` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], non sono rilevanti per `x:ClassModifier` perché i riferimenti a classi annidate non sono supportati in XAML e di conseguenza, il <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> modificatore ha lo stesso effetto.</span><span class="sxs-lookup"><span data-stu-id="d4114-121">Other values with equivalent user code access-level restrictions, such as `private` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], are not relevant for `x:ClassModifier` because nested class references are not supported in XAML, and therefore, the <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> modifier has the same effect.</span></span>  
   
-## Nota sulla sicurezza  
- Il livello di accesso dichiarato in `x:ClassModifier` è comunque soggetto a interpretazione da parte di determinati framework e delle relative funzionalità.  WPF include funzionalità per caricare e creare un'istanza di tipi dove `x:ClassModifier` è `internal`, se a tale classe si fa riferimento da una risorsa WPF tramite un riferimento URI di tipo pack.  A seguito di questo caso e possibilmente di altri casi analoghi in cui si è eseguita l'implementazione da parte di altri framework, evitare di basarsi esclusivamente su `x:ClassModifier` per bloccare tutti i possibili tentativi di creazione di istanze.  
+## <a name="security-notes"></a><span data-ttu-id="d4114-122">Note sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="d4114-122">Security Notes</span></span>  
+ <span data-ttu-id="d4114-123">Il livello di accesso, come dichiarato in `x:ClassModifier` viene interpretato ancora determinati Framework e le relative funzionalità.</span><span class="sxs-lookup"><span data-stu-id="d4114-123">The access level as declared in `x:ClassModifier` is still subject to interpretation by particular frameworks and their capabilities.</span></span> <span data-ttu-id="d4114-124">WPF include funzionalità per caricare e creare istanze di tipi in cui `x:ClassModifier` è `internal`, se tale classe viene fatto riferimento da una risorsa WPF tramite un riferimento all'URI di tipo pack.</span><span class="sxs-lookup"><span data-stu-id="d4114-124">WPF includes capabilities to load and instantiate types where `x:ClassModifier` is `internal`, if that class is referenced from a WPF resource through a pack URI reference.</span></span> <span data-ttu-id="d4114-125">Di conseguenza questo caso e potenzialmente di altri utenti, quali quelle implementate da altri Framework, non fare affidamento esclusivamente su `x:ClassModifier` tenta di bloccare la creazione di istanze di tutti i possibili.</span><span class="sxs-lookup"><span data-stu-id="d4114-125">As a consequence of this case and potentially others like it implemented by other frameworks, do not rely exclusively on `x:ClassModifier` to block all possible instantiation attempts.</span></span>  
   
-## Vedere anche  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [Code\-behind e XAML in WPF](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
- [x:FieldModifier Directive](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)   
- [Sicurezza \(WPF\)](../../../ocs/framework/wpf/security-wpf.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="d4114-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d4114-126">See Also</span></span>  
+ [<span data-ttu-id="d4114-127">Direttiva x:Class</span><span class="sxs-lookup"><span data-stu-id="d4114-127">x:Class Directive</span></span>](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [<span data-ttu-id="d4114-128">Code-behind e XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="d4114-128">Code-Behind and XAML in WPF</span></span>](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [<span data-ttu-id="d4114-129">Direttiva x:FieldModifier</span><span class="sxs-lookup"><span data-stu-id="d4114-129">x:FieldModifier Directive</span></span>](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
+ [<span data-ttu-id="d4114-130">Sicurezza (WPF)</span><span class="sxs-lookup"><span data-stu-id="d4114-130">Security (WPF)</span></span>](../../../docs/framework/wpf/security-wpf.md)  
+ [<span data-ttu-id="d4114-131">Tipi migrati da WPF a System.Xaml</span><span class="sxs-lookup"><span data-stu-id="d4114-131">Types Migrated from WPF to System.Xaml</span></span>](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

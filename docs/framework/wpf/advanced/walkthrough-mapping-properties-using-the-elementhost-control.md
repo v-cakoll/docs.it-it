@@ -1,150 +1,156 @@
 ---
-title: "Procedura dettagliata: mapping delle propriet&#224; tramite il controllo ElementHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controllo ElementHost, mapping di proprietà"
-  - "mapping di proprietà"
+title: "Procedura dettagliata: mapping delle proprietà tramite il controllo ElementHost"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- mapping properties [WPF]
+- ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dae954012d15431d2019d3d9cbe61747a8646d4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: mapping delle propriet&#224; tramite il controllo ElementHost
-In questa procedura dettagliata viene mostrato l'utilizzo della proprietà <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> per eseguire il mapping delle proprietà di [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] alle proprietà corrispondenti di un elemento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ospitato.  
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a><span data-ttu-id="af912-102">Procedura dettagliata: mapping delle proprietà tramite il controllo ElementHost</span><span class="sxs-lookup"><span data-stu-id="af912-102">Walkthrough: Mapping Properties Using the ElementHost Control</span></span>
+<span data-ttu-id="af912-103">Questa procedura dettagliata viene illustrato come utilizzare il <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> proprietà da mappare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] proprietà alle proprietà corrispondenti di hosting [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elemento.</span><span class="sxs-lookup"><span data-stu-id="af912-103">This walkthrough shows you how to use the <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> property to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element.</span></span>  
   
- Di seguito vengono elencate le attività illustrate nella procedura dettagliata:  
+ <span data-ttu-id="af912-104">Le attività illustrate nella procedura dettagliata sono le seguenti:</span><span class="sxs-lookup"><span data-stu-id="af912-104">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Creazione del progetto.  
+-   <span data-ttu-id="af912-105">Creazione del progetto.</span><span class="sxs-lookup"><span data-stu-id="af912-105">Creating the project.</span></span>  
   
--   Definizione di un nuovo mapping della proprietà.  
+-   <span data-ttu-id="af912-106">Definizione di un nuovo mapping delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-106">Defining a new property mapping.</span></span>  
   
--   Rimozione di un mapping della proprietà predefinito.  
+-   <span data-ttu-id="af912-107">Definizione di un mapping delle proprietà predefinito.</span><span class="sxs-lookup"><span data-stu-id="af912-107">Removing a default property mapping.</span></span>  
   
--   Estensione di un mapping della proprietà predefinito.  
+-   <span data-ttu-id="af912-108">Estensione di un mapping delle proprietà predefinito.</span><span class="sxs-lookup"><span data-stu-id="af912-108">Extending a default property mapping.</span></span>  
   
- Per un elenco di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Esempio di mapping delle proprietà tramite il controllo ElementHost](http://go.microsoft.com/fwlink/?LinkID=160018) \(la pagina potrebbe essere in inglese\).  
+ <span data-ttu-id="af912-109">Per un elenco di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Mapping delle proprietà utilizzando l'esempio di controllo ElementHost](http://go.microsoft.com/fwlink/?LinkID=160018).</span><span class="sxs-lookup"><span data-stu-id="af912-109">For a complete code listing of the tasks illustrated in this walkthrough, see [Mapping Properties Using the ElementHost Control Sample](http://go.microsoft.com/fwlink/?LinkID=160018).</span></span>  
   
- Al termine della procedura, si sarà in grado di eseguire il mapping delle proprietà di [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] alle proprietà di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] corrispondenti di un elemento ospitato.  
+ <span data-ttu-id="af912-110">Al termine, sarà possibile eseguire il mapping di [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] proprietà corrispondente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le proprietà di un elemento ospitato.</span><span class="sxs-lookup"><span data-stu-id="af912-110">When you are finished, you will be able to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties on a hosted element.</span></span>  
   
-## Prerequisiti  
- Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
+## <a name="prerequisites"></a><span data-ttu-id="af912-111">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="af912-111">Prerequisites</span></span>  
+ <span data-ttu-id="af912-112">Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="af912-112">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]<span data-ttu-id="af912-113">.</span><span class="sxs-lookup"><span data-stu-id="af912-113">.</span></span>  
   
-## Creazione del progetto  
+## <a name="creating-the-project"></a><span data-ttu-id="af912-114">Creazione del progetto</span><span class="sxs-lookup"><span data-stu-id="af912-114">Creating the Project</span></span>  
   
-#### Per creare il progetto  
+#### <a name="to-create-the-project"></a><span data-ttu-id="af912-115">Per creare il progetto</span><span class="sxs-lookup"><span data-stu-id="af912-115">To create the project</span></span>  
   
-1.  Creare un progetto dell'applicazione [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denominato `PropertyMappingWithElementHost`.  Per ulteriori informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  <span data-ttu-id="af912-116">Creare un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] progetto di applicazione denominato `PropertyMappingWithElementHost`.</span><span class="sxs-lookup"><span data-stu-id="af912-116">Create a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application project named `PropertyMappingWithElementHost`.</span></span> <span data-ttu-id="af912-117">Per altre informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="af912-117">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  In Esplora soluzioni aggiungere riferimenti agli assembly [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] indicati di seguito.  
+2.  <span data-ttu-id="af912-118">In Esplora soluzioni aggiungere riferimenti ai seguenti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assembly.</span><span class="sxs-lookup"><span data-stu-id="af912-118">In Solution Explorer, add references to the following [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies.</span></span>  
   
-    -   PresentationCore  
+    -   <span data-ttu-id="af912-119">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="af912-119">PresentationCore</span></span>  
   
-    -   PresentationFramework  
+    -   <span data-ttu-id="af912-120">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="af912-120">PresentationFramework</span></span>  
   
-    -   WindowsBase  
+    -   <span data-ttu-id="af912-121">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="af912-121">WindowsBase</span></span>  
   
-    -   WindowsFormsIntegration  
+    -   <span data-ttu-id="af912-122">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="af912-122">WindowsFormsIntegration</span></span>  
   
-3.  Copiare il codice seguente all'inizio del file di codice `Form1`.  
+3.  <span data-ttu-id="af912-123">Copiare il codice seguente all'inizio del `Form1` file di codice.</span><span class="sxs-lookup"><span data-stu-id="af912-123">Copy the following code into the top of the `Form1` code file.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]  
   
-4.  Aprire `Form1` in Progettazione Windows Form.  Fare doppio clic sul form per aggiungere un gestore eventi per l'evento <xref:System.Windows.Forms.Form.Load>.  
+4.  <span data-ttu-id="af912-124">Aprire `Form1` in Progettazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="af912-124">Open `Form1` in the Windows Forms Designer.</span></span> <span data-ttu-id="af912-125">Fare doppio clic sul form per aggiungere un gestore eventi per il <xref:System.Windows.Forms.Form.Load> evento.</span><span class="sxs-lookup"><span data-stu-id="af912-125">Double-click the form to add an event handler for the <xref:System.Windows.Forms.Form.Load> event.</span></span>  
   
-5.  Tornare a Progettazione Windows Form e aggiungere un gestore eventi per l'evento <xref:System.Windows.Forms.Control.Resize> del form.  Per ulteriori informazioni, vedere [How to: Create Event Handlers Using the Designer](http://msdn.microsoft.com/it-it/8461e9b8-14e8-406f-936e-3726732b23d2).  
+5.  <span data-ttu-id="af912-126">Tornare a Progettazione Windows Form e aggiungere un gestore eventi per il modulo <xref:System.Windows.Forms.Control.Resize> evento.</span><span class="sxs-lookup"><span data-stu-id="af912-126">Return to the Windows Forms Designer and add an event handler for the form's <xref:System.Windows.Forms.Control.Resize> event.</span></span> <span data-ttu-id="af912-127">Per ulteriori informazioni, vedere [procedura: creare di gestori di eventi utilizzando la finestra di progettazione](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2).</span><span class="sxs-lookup"><span data-stu-id="af912-127">For more information, see [How to: Create Event Handlers Using the Designer](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2).</span></span>  
   
-6.  Dichiarare un campo <xref:System.Windows.Forms.Integration.ElementHost> nella classe `Form1`.  
+6.  <span data-ttu-id="af912-128">Dichiarare un <xref:System.Windows.Forms.Integration.ElementHost> campo la `Form1` classe.</span><span class="sxs-lookup"><span data-stu-id="af912-128">Declare an <xref:System.Windows.Forms.Integration.ElementHost> field in the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]  
   
-## Definizione di nuovi mapping della proprietà  
- Il controllo <xref:System.Windows.Forms.Integration.ElementHost> fornisce diversi mapping della proprietà predefiniti.  È possibile aggiungere un nuovo mapping della proprietà chiamando il metodo <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> sull'oggetto <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> del controllo <xref:System.Windows.Forms.Integration.ElementHost>.  
+## <a name="defining-new-property-mappings"></a><span data-ttu-id="af912-129">Definizione di nuovi mapping di proprietà</span><span class="sxs-lookup"><span data-stu-id="af912-129">Defining New Property Mappings</span></span>  
+ <span data-ttu-id="af912-130">Il <xref:System.Windows.Forms.Integration.ElementHost> controllo fornisce mapping di proprietà predefiniti diversi.</span><span class="sxs-lookup"><span data-stu-id="af912-130">The <xref:System.Windows.Forms.Integration.ElementHost> control provides several default property mappings.</span></span> <span data-ttu-id="af912-131">Per aggiungere un nuovo mapping di proprietà, chiamare il <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> metodo il <xref:System.Windows.Forms.Integration.ElementHost> del controllo <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span><span class="sxs-lookup"><span data-stu-id="af912-131">You add a new property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>  
   
-#### Per definire nuovi mapping della proprietà  
+#### <a name="to-define-new-property-mappings"></a><span data-ttu-id="af912-132">Per definire nuovi mapping di proprietà</span><span class="sxs-lookup"><span data-stu-id="af912-132">To define new property mappings</span></span>  
   
-1.  Copiare il codice riportato di seguito nella definizione della classe `Form1`.  
+1.  <span data-ttu-id="af912-133">Copiare il codice seguente nella definizione di `Form1` classe.</span><span class="sxs-lookup"><span data-stu-id="af912-133">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]  
   
-     Il metodo `AddMarginMapping` aggiunge un nuovo mapping per la proprietà <xref:System.Windows.Forms.Control.Margin%2A>.  
+     <span data-ttu-id="af912-134">Il `AddMarginMapping` metodo aggiunge un nuovo mapping per il <xref:System.Windows.Forms.Control.Margin%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-134">The `AddMarginMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Margin%2A> property.</span></span>  
   
-     Il metodo `OnMarginChange` converte la proprietà <xref:System.Windows.Forms.Control.Margin%2A> nella proprietà <xref:System.Windows.FrameworkElement.Margin%2A> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+     <span data-ttu-id="af912-135">Il `OnMarginChange` metodo converte il <xref:System.Windows.Forms.Control.Margin%2A> proprietà per il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-135">The `OnMarginChange` method translates the <xref:System.Windows.Forms.Control.Margin%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> property.</span></span>  
   
-2.  Copiare il codice riportato di seguito nella definizione della classe `Form1`.  
+2.  <span data-ttu-id="af912-136">Copiare il codice seguente nella definizione di `Form1` classe.</span><span class="sxs-lookup"><span data-stu-id="af912-136">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]  
   
-     Il metodo `AddRegionMapping` aggiunge un nuovo mapping per la proprietà <xref:System.Windows.Forms.Control.Region%2A>.  
+     <span data-ttu-id="af912-137">Il `AddRegionMapping` metodo aggiunge un nuovo mapping per il <xref:System.Windows.Forms.Control.Region%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-137">The `AddRegionMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Region%2A> property.</span></span>  
   
-     Il metodo `OnRegionChange` converte la proprietà <xref:System.Windows.Forms.Control.Region%2A> nella proprietà <xref:System.Windows.UIElement.Clip%2A> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+     <span data-ttu-id="af912-138">Il `OnRegionChange` metodo converte il <xref:System.Windows.Forms.Control.Region%2A> proprietà per il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-138">The `OnRegionChange` method translates the <xref:System.Windows.Forms.Control.Region%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> property.</span></span>  
   
-     Il metodo `Form1_Resize` gestisce l'evento <xref:System.Windows.Forms.Control.Resize> del form e adatta le dimensioni dell'area di ritaglio all'elemento ospitato.  
+     <span data-ttu-id="af912-139">Il `Form1_Resize` metodo gestisce il modulo <xref:System.Windows.Forms.Control.Resize> eventi e le dimensioni dell'area di ritaglio per adattarlo all'elemento ospitato.</span><span class="sxs-lookup"><span data-stu-id="af912-139">The `Form1_Resize` method handles the form's <xref:System.Windows.Forms.Control.Resize> event and sizes the clipping region to fit the hosted element.</span></span>  
   
-## Rimozione di un mapping della proprietà predefinito  
- È possibile rimuovere un mapping della proprietà predefinito chiamando il metodo <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> sull'oggetto <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> del controllo <xref:System.Windows.Forms.Integration.ElementHost>.  
+## <a name="removing-a-default-property-mapping"></a><span data-ttu-id="af912-140">Rimozione di un mapping delle proprietà predefinito</span><span class="sxs-lookup"><span data-stu-id="af912-140">Removing a Default Property Mapping</span></span>  
+ <span data-ttu-id="af912-141">Rimuovere un mapping di proprietà predefinito chiamando il <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> metodo il <xref:System.Windows.Forms.Integration.ElementHost> del controllo <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span><span class="sxs-lookup"><span data-stu-id="af912-141">Remove a default property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>  
   
-#### Per rimuovere un mapping della proprietà predefinito  
+#### <a name="to-remove-a-default-property-mapping"></a><span data-ttu-id="af912-142">Per rimuovere un mapping delle proprietà predefinito</span><span class="sxs-lookup"><span data-stu-id="af912-142">To remove a default property mapping</span></span>  
   
--   Copiare il codice riportato di seguito nella definizione della classe `Form1`.  
+-   <span data-ttu-id="af912-143">Copiare il codice seguente nella definizione di `Form1` classe.</span><span class="sxs-lookup"><span data-stu-id="af912-143">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]  
   
-     Il metodo `RemoveCursorMapping` elimina il mapping predefinito della proprietà <xref:System.Windows.Forms.Control.Cursor%2A>.  
+     <span data-ttu-id="af912-144">Il `RemoveCursorMapping` metodo elimina il mapping predefinito per il <xref:System.Windows.Forms.Control.Cursor%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-144">The `RemoveCursorMapping` method deletes the default mapping for the <xref:System.Windows.Forms.Control.Cursor%2A> property.</span></span>  
   
-## Estensione di un mapping della proprietà predefinito  
- È possibile utilizzare un mapping della proprietà predefinito ed estenderlo con un mapping personalizzato.  
+## <a name="extending-a-default-property-mapping"></a><span data-ttu-id="af912-145">Estensione di un mapping delle proprietà predefinito</span><span class="sxs-lookup"><span data-stu-id="af912-145">Extending a Default Property Mapping</span></span>  
+ <span data-ttu-id="af912-146">È possibile usare un mapping delle proprietà predefinito ed estenderlo con un mapping personalizzato.</span><span class="sxs-lookup"><span data-stu-id="af912-146">You can use a default property mapping and also extend it with your own mapping.</span></span>  
   
-#### Per estendere un mapping della proprietà predefinito  
+#### <a name="to-extend-a-default-property-mapping"></a><span data-ttu-id="af912-147">Per estendere un mapping delle proprietà predefinito</span><span class="sxs-lookup"><span data-stu-id="af912-147">To extend a default property mapping</span></span>  
   
--   Copiare il codice riportato di seguito nella definizione della classe `Form1`.  
+-   <span data-ttu-id="af912-148">Copiare il codice seguente nella definizione di `Form1` classe.</span><span class="sxs-lookup"><span data-stu-id="af912-148">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]  
   
-     Il metodo `ExtendBackColorMapping` aggiunge un convertitore di proprietà personalizzato al mapping della proprietà <xref:System.Windows.Forms.Control.BackColor%2A> esistente.  
+     <span data-ttu-id="af912-149">Il `ExtendBackColorMapping` metodo aggiunge un convertitore di proprietà personalizzato esistente <xref:System.Windows.Forms.Control.BackColor%2A> mapping di proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-149">The `ExtendBackColorMapping` method adds a custom property translator to the existing <xref:System.Windows.Forms.Control.BackColor%2A> property mapping.</span></span>  
   
-     Il metodo `OnBackColorChange` assegna una specifica immagine alla proprietà <xref:System.Windows.Controls.Control.Background%2A> del controllo ospitato.  Il metodo `OnBackColorChange` viene chiamato dopo l'applicazione del mapping della proprietà predefinito.  
+     <span data-ttu-id="af912-150">Il `OnBackColorChange` metodo assegna un'immagine specifica del controllo ospitato <xref:System.Windows.Controls.Control.Background%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-150">The `OnBackColorChange` method assigns a specific image to the hosted control's <xref:System.Windows.Controls.Control.Background%2A> property.</span></span> <span data-ttu-id="af912-151">Il `OnBackColorChange` metodo viene chiamato dopo aver applicato il mapping di proprietà predefinito.</span><span class="sxs-lookup"><span data-stu-id="af912-151">The `OnBackColorChange` method is called after the default property mapping is applied.</span></span>  
   
-## Inizializzazione dei mapping della proprietà  
+## <a name="initializing-your-property-mappings"></a><span data-ttu-id="af912-152">Inizializzazione dei mapping delle proprietà</span><span class="sxs-lookup"><span data-stu-id="af912-152">Initializing Your Property Mappings</span></span>  
   
-#### Per inizializzare i mapping della proprietà  
+#### <a name="to-initialize-your-property-mappings"></a><span data-ttu-id="af912-153">Per inizializzare i mapping delle proprietà</span><span class="sxs-lookup"><span data-stu-id="af912-153">To initialize your property mappings</span></span>  
   
-1.  Copiare il codice riportato di seguito nella definizione della classe `Form1`.  
+1.  <span data-ttu-id="af912-154">Copiare il codice seguente nella definizione di `Form1` classe.</span><span class="sxs-lookup"><span data-stu-id="af912-154">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]  
   
-     Il metodo `Form1_Load` gestisce l'evento <xref:System.Windows.Forms.Form.Load> ed esegue la seguente inizializzazione.  
+     <span data-ttu-id="af912-155">Il `Form1_Load` metodo gestisca il <xref:System.Windows.Forms.Form.Load> evento ed esegue le inizializzazioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="af912-155">The `Form1_Load` method handles the <xref:System.Windows.Forms.Form.Load> event and performs the following initialization.</span></span>  
   
-    -   Crea un elemento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>.  
+    -   <span data-ttu-id="af912-156">Crea un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> elemento.</span><span class="sxs-lookup"><span data-stu-id="af912-156">Creates a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> element.</span></span>  
   
-    -   Chiama i metodi definiti in precedenza nella procedura dettagliata per configurare i mapping della proprietà.  
+    -   <span data-ttu-id="af912-157">Chiama i metodi definiti in precedenza nella procedura dettagliata per impostare i mapping delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="af912-157">Calls the methods you defined earlier in the walkthrough to set up the property mappings.</span></span>  
   
-    -   Assegna i valori iniziali alle proprietà di cui è stato eseguito il mapping.  
+    -   <span data-ttu-id="af912-158">Assegna i valori iniziali alle proprietà mappate.</span><span class="sxs-lookup"><span data-stu-id="af912-158">Assigns initial values to the mapped properties.</span></span>  
   
-2.  Premere F5 per compilare ed eseguire l'applicazione.  
+2.  <span data-ttu-id="af912-159">Premere F5 per compilare ed eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="af912-159">Press F5 to build and run the application.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Mapping di proprietà di Windows Form e WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)   
- [WPF Designer](http://msdn.microsoft.com/it-it/c6c65214-8411-4e16-b254-163ed4099c26)   
- [Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="af912-160">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="af912-160">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="af912-161">Mapping di proprietà di Windows Form e WPF</span><span class="sxs-lookup"><span data-stu-id="af912-161">Windows Forms and WPF Property Mapping</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
+ [<span data-ttu-id="af912-162">WPF Designer</span><span class="sxs-lookup"><span data-stu-id="af912-162">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="af912-163">Procedura dettaglia: hosting di un controllo WPF composito in Windows Form</span><span class="sxs-lookup"><span data-stu-id="af912-163">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

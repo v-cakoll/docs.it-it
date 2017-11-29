@@ -1,39 +1,43 @@
 ---
-title: "Esecuzione del debug dei flussi di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esecuzione del debug dei flussi di lavoro
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9304622ff4243f7f885de2175a66cfae1c192aeb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Esecuzione del debug dei flussi di lavoro
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse opzioni per eseguire il debug dei flussi di lavoro in esecuzione dall'ambiente di sviluppo.  Il debug dei flussi di lavoro può essere eseguito nell'utilità di progettazione, in XAML e nel codice.  
+# <a name="debugging-workflows"></a><span data-ttu-id="ca343-102">Esecuzione del debug dei flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="ca343-102">Debugging Workflows</span></span>
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="ca343-103"> offre diverse opzioni per eseguire il debug dei flussi di lavoro in esecuzione dall'ambiente di sviluppo.</span><span class="sxs-lookup"><span data-stu-id="ca343-103"> offers several options for debugging running workflows from the development environment.</span></span> <span data-ttu-id="ca343-104">Il debug dei flussi di lavoro può essere eseguito nell'utilità di progettazione, in XAML e nel codice.</span><span class="sxs-lookup"><span data-stu-id="ca343-104">Workflows can be debugged in the designer, in XAML, and in code.</span></span>  
   
-## Debug nell'utilità di progettazione del flusso di lavoro  
- Nelle attività dell'utilità di progettazione del flusso di lavoro è possibile impostare punti di interruzione evidenziando l'attività e premendo **F9** oppure usando il menu di scelta rapida dell'attività.  L'esecuzione del flusso di lavoro si interrompe quindi quando l'host del flusso di lavoro viene eseguito in modalità di debug.  Nella schermata seguente l'esecuzione del flusso di lavoro viene sospesa in un punto di interruzione.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Debug dei flussi di lavoro mediante Progettazione flussi di lavoro](../Topic/Debugging%20Workflows%20with%20the%20Workflow%20Designer.md).  
+## <a name="debugging-in-the-workflow-designer"></a><span data-ttu-id="ca343-105">Debug nell'utilità di progettazione del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="ca343-105">Debugging in the Workflow Designer</span></span>  
+ <span data-ttu-id="ca343-106">Le attività nella finestra di progettazione del flusso di lavoro può essere impostare punti di interruzione evidenziando l'attività e premendo **F9** o utilizzando il menu di scelta rapida dell'attività.</span><span class="sxs-lookup"><span data-stu-id="ca343-106">Breakpoints can be set on activities in the workflow designer by either highlighting the activity and pressing **F9** or by using the activity’s context menu.</span></span> <span data-ttu-id="ca343-107">L'esecuzione del flusso di lavoro si interrompe quindi quando l'host del flusso di lavoro viene eseguito in modalità di debug.</span><span class="sxs-lookup"><span data-stu-id="ca343-107">Execution of the workflow then breaks when the workflow host is run in debug mode.</span></span> <span data-ttu-id="ca343-108">Nella schermata seguente l'esecuzione del flusso di lavoro viene sospesa in un punto di interruzione.</span><span class="sxs-lookup"><span data-stu-id="ca343-108">In the following screenshot, workflow execution is paused at a breakpoint.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ca343-109">[Il debug di flussi di lavoro con Progettazione flussi di lavoro](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer).</span><span class="sxs-lookup"><span data-stu-id="ca343-109"> [Debugging Workflows with the Workflow Designer](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer).</span></span>  
   
-## Debug in XAML  
- Se un flusso di lavoro viene sospeso in un punto di interruzione nella finestra di progettazione, il flusso di lavoro può essere sottoposto a debug anche in XAML.  Per visualizzare il punto di esecuzione in XAML, selezionare **Visualizzazione XAML** nell'utilità di progettazione del flusso di lavoro quando l'esecuzione del flusso di lavoro viene sospesa.  Il debug può essere nuovamente avviato dalla finestra di progettazione riaprendo il flusso di lavoro nella finestra da Esplora soluzioni.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Procedura: debug di XML mediante Progettazione flussi di lavoro](../Topic/How%20to:%20Debug%20XAML%20with%20the%20Workflow%20Designer.md).  
+## <a name="debugging-in-xaml"></a><span data-ttu-id="ca343-110">Debug in XAML</span><span class="sxs-lookup"><span data-stu-id="ca343-110">Debugging in XAML</span></span>  
+ <span data-ttu-id="ca343-111">Se un flusso di lavoro viene sospeso in un punto di interruzione nella finestra di progettazione, il flusso di lavoro può essere sottoposto a debug anche in XAML.</span><span class="sxs-lookup"><span data-stu-id="ca343-111">If a workflow has paused at a breakpoint in the designer, the workflow can also be debugged in XAML.</span></span> <span data-ttu-id="ca343-112">Per visualizzare il punto di esecuzione in XAML, selezionare **visualizzazione XAML** nella finestra di progettazione del flusso di lavoro quando viene sospesa l'esecuzione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ca343-112">To view the point of execution in XAML, select **XAML View** in the workflow designer when workflow execution is paused.</span></span> <span data-ttu-id="ca343-113">Il debug può essere nuovamente avviato dalla finestra di progettazione riaprendo il flusso di lavoro nella finestra da Esplora soluzioni.</span><span class="sxs-lookup"><span data-stu-id="ca343-113">Debugging can be switched back to the designer by re-opening the workflow in the designer from the solution explorer.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ca343-114">[Procedura: Debug di XAML con la finestra di progettazione del flusso di lavoro](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).</span><span class="sxs-lookup"><span data-stu-id="ca343-114"> [How to: Debug XAML with the Workflow Designer](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).</span></span>  
   
-## Debug nel codice  
- I punti di interruzione del codice possono essere usati nello stesso modo in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] e in altre applicazioni imperative.  Fare clic sul margine sinistro del riquadro del codice per creare un punto di interruzione del codice o premere **F9** per posizionare un punto di interruzione in corrispondenza del percorso del cursore.  
+## <a name="debugging-in-code"></a><span data-ttu-id="ca343-115">Debug nel codice</span><span class="sxs-lookup"><span data-stu-id="ca343-115">Debugging in Code</span></span>  
+ <span data-ttu-id="ca343-116">I punti di interruzione del codice possono essere usati nello stesso modo in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] e in altre applicazioni imperative.</span><span class="sxs-lookup"><span data-stu-id="ca343-116">Code breakpoints can be used in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in the same way that they can be used in other imperative applications.</span></span> <span data-ttu-id="ca343-117">Fare clic sul margine sinistro del riquadro del codice per creare un punto di interruzione, codice o premere **F9** per inserire un punto di interruzione nella posizione del cursore.</span><span class="sxs-lookup"><span data-stu-id="ca343-117">Click the left margin of the code pane to create a code breakpoint, or press **F9** to place a breakpoint at the cursor location.</span></span>  
   
-## Connessione a un processo del flusso di lavoro  
- Il debug del flusso di lavoro è supportato anche usando l'infrastruttura di Visual Studio per la connessione a un processo.  In questo modo, l'autore del flusso di lavoro può eseguire il debug di un flusso di lavoro in esecuzione in un ambiente host diverso, ad esempio Internet Information Services \(IIS\) 7.0.  
+## <a name="attaching-to-a-workflow-process"></a><span data-ttu-id="ca343-118">Connessione a un processo del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="ca343-118">Attaching to a Workflow Process</span></span>  
+ <span data-ttu-id="ca343-119">Il debug del flusso di lavoro è supportato anche usando l'infrastruttura di Visual Studio per la connessione a un processo.</span><span class="sxs-lookup"><span data-stu-id="ca343-119">Workflow debugging also supports using Visual Studio’s infrastructure to attach to a process.</span></span> <span data-ttu-id="ca343-120">In questo modo, l'autore del flusso di lavoro può eseguire il debug di un flusso di lavoro in esecuzione in un ambiente host diverso, ad esempio Internet Information Services (IIS) 7.0.</span><span class="sxs-lookup"><span data-stu-id="ca343-120">This enables the workflow author to debug a workflow running in a different host environment such as Internet Information Services (IIS) 7.0.</span></span>  
   
-## Debug remoto  
- Il debug remoto di [!INCLUDE[wf](../../../includes/wf-md.md)] funziona nello stesso modo del debug remoto per altri componenti [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].  Per informazioni sul debug remoto, vedere [Procedura: attivare il debug remoto](http://go.microsoft.com/fwlink/?LinkId=196257).  
+## <a name="remote-debugging"></a><span data-ttu-id="ca343-121">Debug remoto</span><span class="sxs-lookup"><span data-stu-id="ca343-121">Remote Debugging</span></span>  
+ <span data-ttu-id="ca343-122">Il debug remoto di [!INCLUDE[wf](../../../includes/wf-md.md)] funziona nello stesso modo del debug remoto per altri componenti [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ca343-122">[!INCLUDE[wf](../../../includes/wf-md.md)] remote debugging functions the same as remote debugging for other [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] components.</span></span> <span data-ttu-id="ca343-123">Per informazioni sul debug remoto, vedere [procedura: attivare il debug remoto](http://go.microsoft.com/fwlink/?LinkId=196257).</span><span class="sxs-lookup"><span data-stu-id="ca343-123">For information on using remote debugging, see [How to: Enable Remote Debugging](http://go.microsoft.com/fwlink/?LinkId=196257).</span></span>  
   
 > [!NOTE]
->  Se l'applicazione flusso di lavoro è destinata all'architettura x86 ed è contenuta in un computer che esegue un sistema operativo a 64 bit, il debug remoto non funzionerà a meno che [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] sia installato nel computer remoto o la destinazione dell'applicazione flusso di lavoro è stata modificata in **Qualsiasi CPU**.  
+>  <span data-ttu-id="ca343-124">Se l'applicazione del flusso di lavoro destinata x86 architettura ed è ospitato in un computer che esegue un sistema operativo a 64 bit, il debug remoto non funzionerà a meno che non [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] è installato nel computer remoto o la destinazione è stata modificata l'applicazione del flusso di lavoro per **qualsiasi CPU**.</span><span class="sxs-lookup"><span data-stu-id="ca343-124">If the workflow application targets the x86 architecture and is hosted on a computer running a 64 bit operating system, then remote debugging will not work unless [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] is installed on the remote computer or the target for the workflow application is changed to **Any CPU**.</span></span>  
   
-## Estensione del servizio di debug del flusso di lavoro  
- Il servizio del debugger del flusso di lavoro è ora pubblico e può essere usato per creare applicazioni personalizzate quali monitoraggio, simulazione e debug in una finestra di progettazione riallocata.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] l'argomento <xref:System.Activities.Presentation.Debug.DebuggerService>.
+## <a name="extending-the-workflow-debugging-service"></a><span data-ttu-id="ca343-125">Estensione del servizio di debug del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="ca343-125">Extending the Workflow Debugging Service</span></span>  
+ <span data-ttu-id="ca343-126">Il servizio del debugger del flusso di lavoro è ora pubblico e può essere usato per creare applicazioni personalizzate quali monitoraggio, simulazione e debug in una finestra di progettazione riallocata.</span><span class="sxs-lookup"><span data-stu-id="ca343-126">The workflow debugger service is now public and can be used to create custom applications such as monitoring, simulation, and debugging in a re-hosted designer.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ca343-127"> l'argomento <xref:System.Activities.Presentation.Debug.DebuggerService>.</span><span class="sxs-lookup"><span data-stu-id="ca343-127"> the <xref:System.Activities.Presentation.Debug.DebuggerService> topic.</span></span>

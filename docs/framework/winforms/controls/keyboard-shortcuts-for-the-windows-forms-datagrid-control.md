@@ -1,64 +1,65 @@
 ---
-title: "Tasti di scelta rapida per il controllo DataGrid Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid (controllo) [Windows Form], tasti di navigazione"
-  - "tasti di scelta rapida, controllo DataGrid"
+title: Tasti di scelta rapida per il controllo DataGrid Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ac73652d5f017fe43d1745866de38cd7eeccf8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tasti di scelta rapida per il controllo DataGrid Windows Form
+# <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a><span data-ttu-id="bda72-102">Tasti di scelta rapida per il controllo DataGrid Windows Form</span><span class="sxs-lookup"><span data-stu-id="bda72-102">Keyboard Shortcuts for the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="bda72-103">Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.</span><span class="sxs-lookup"><span data-stu-id="bda72-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="bda72-104">Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="bda72-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Nella seguente tabella sono elencati i tasti di scelta rapida che è possibile utilizzare per navigare all'interno del controllo <xref:System.Windows.Forms.DataGrid> Windows Form:  
+ <span data-ttu-id="bda72-105">Nella tabella seguente sono elencati i tasti di scelta rapida che possono essere usati per la navigazione all'interno di Windows Form <xref:System.Windows.Forms.DataGrid> controllo:</span><span class="sxs-lookup"><span data-stu-id="bda72-105">The following table lists the keyboard shortcuts that can be used for navigation within the Windows Forms <xref:System.Windows.Forms.DataGrid> control:</span></span>  
   
-|Azione|Tasto di scelta rapida|  
-|------------|----------------------------|  
-|Completamento dell'immissione di dati in una cella e spostamento nella cella successiva verso il basso.<br /><br /> Se lo stato attivo si trova sul collegamento a una tabella figlio, viene eseguito il passaggio a questa tabella.|INVIO|  
-|Annullamento della modifica della cella se si è in modalità di modifica della cella.<br /><br /> Se si sta effettuando la selezione di testo scorrevole, viene eseguito l'annullamento della modifica della riga.|ESC|  
-|Eliminazione del carattere che precede il punto di inserimento durante la modifica di una cella.|BACKSPACE|  
-|Eliminazione del carattere che segue il punto di inserimento durante la modifica di una cella.|DELETE|  
-|Spostamento nella prima cella della riga corrente.|HOME|  
-|Spostamento nell'ultima cella della riga corrente.|FINE|  
-|Evidenziazione dei caratteri della cella corrente e collocamento del punto di inserimento alla fine della riga corrente.  Si tratta dello stesso effetto del doppio clic all'interno di una cella.|F2|  
-|Se lo stato attivo si trova in una cella, viene eseguito il passaggio alla cella successiva della riga.<br /><br /> Se lo stato attivo si trova nell'ultima cella di una riga, vengono eseguiti il passaggio al primo collegamento alla tabella figlio della riga e l'espansione di tale collegamento.<br /><br /> Se lo stato attivo si trova su un collegamento figlio, viene eseguito il passaggio al collegamento figlio successivo.<br /><br /> Se lo stato attivo si trova sull'ultimo collegamento figlio, viene eseguito il passaggio alla prima cella della riga successiva.|TAB|  
-|Se lo stato attivo si trova in una cella, viene eseguito il passaggio alla cella precedente della riga.<br /><br /> Se lo stato attivo si trova nella prima cella di una riga, viene eseguito passaggio al passaggio all'ultimo collegamento a una tabella figlio che è stato espanso nella riga precedente oppure viene eseguito il passaggio all'ultima cella della riga precedente.<br /><br /> Se lo stato attivo si trova su un collegamento figlio, viene eseguito il passaggio al collegamento figlio precedente.<br /><br /> Se lo stato attivo si trova sul primo collegamento figlio, viene eseguito il passaggio all'ultima cella della riga precedente.|MAIUSC\+TAB|  
-|Passaggio al controllo successivo nell'ordine di tabulazione.|CTRL\+TAB|  
-|Passaggio al controllo precedente nell'ordine di tabulazione.|CTRL\+MAIUSC\+TAB|  
-|Passaggio alla tabella padre se lo stato attivo all'interno di una tabella figlio.  Si tratta dello stesso effetto del clic sul pulsante Indietro.|ALT\+freccia SINISTRA|  
-|Espansione dei collegamenti della tabella figlio.  ALT\+freccia GIÙ per l'espansione di tutti i collegamenti, non solo quelli selezionati.|ALT\+freccia GIÙ o CTRL\+segno PIÙ|  
-|Compressione dei collegamenti della tabella figlio.  ALT\+freccia SU per la compressione di tutti i collegamenti, non solo quelli selezionati.|ALT\+freccia SU o CTRL\+segno MENO|  
-|Passaggio all'ultima cella non vuota in direzione della freccia.|CTRL\+freccia|  
-|Estensione della selezione avanzando di una riga in direzione della freccia \(esclusi i collegamenti alle tabelle figlio\).|MAIUSC\+freccia SU\/GIÙ|  
-|Estensione della selezione all'ultima riga non vuota in direzione della freccia \(esclusi i collegamenti alle tabelle figlio\).|CTRL\+MAIUSC\+freccia SU\/GIÙ|  
-|Passaggio alla cella superiore sinistra.|CTRL\+HOME|  
-|Passaggio alla cella inferiore destra.|CTRL\+FINE|  
-|Estensione della selezione alla riga superiore.|CTRL\+MAIUSC\+HOME|  
-|Estensione della selezione alla riga inferiore.|CTRL\+MAIUSC\+FINE|  
-|Selezione della riga corrente \(esclusi i collegamenti alle tabelle figlio\).|MAIUSC\+BARRA SPAZIATRICE|  
-|Selezione dell'intera griglia \(esclusi i collegamenti alle tabelle figlio\).|CTRL\+A|  
-|Visualizzazione della riga padre dall'interno di una tabella figlio.|CTRL\+PGGIÙ|  
-|Nascondere la riga padre dall'interno di una tabella figlio.|CTRL\+PGSU|  
-|Estensione della selezione verso il basso avanzando di una schermata \(esclusi i collegamenti alle tabelle figlio\).|MAIUSC\+PGGIÙ|  
-|Estensione della selezione verso l'alto avanzando di una schermata \(esclusi i collegamenti alle tabelle figlio\).|MAIUSC\+PGSU|  
-|Chiamata del metodo <xref:System.Windows.Forms.DataGrid.EndEdit%2A> per la riga corrente.|CTRL\+INVIO|  
-|Immissione di un valore <xref:System.DBNull.Value?displayProperty=fullName> in una cella in modalità di modifica.|CTRL\+0|  
+|<span data-ttu-id="bda72-106">Operazione</span><span class="sxs-lookup"><span data-stu-id="bda72-106">Action</span></span>|<span data-ttu-id="bda72-107">Collegamento</span><span class="sxs-lookup"><span data-stu-id="bda72-107">Shortcut</span></span>|  
+|------------|--------------|  
+|<span data-ttu-id="bda72-108">Completare l'immissione di una cella e spostarsi verso il basso alla cella successiva.</span><span class="sxs-lookup"><span data-stu-id="bda72-108">Complete a cell entry and move down to the next cell.</span></span><br /><br /> <span data-ttu-id="bda72-109">Se lo stato attivo è su un collegamento nella tabella figlio, passare a tale tabella.</span><span class="sxs-lookup"><span data-stu-id="bda72-109">If focus is on a child table link, navigate to that table.</span></span>|<span data-ttu-id="bda72-110">INVIO</span><span class="sxs-lookup"><span data-stu-id="bda72-110">ENTER</span></span>|  
+|<span data-ttu-id="bda72-111">In caso di modalità di modifica, annullare la modifica della cella.</span><span class="sxs-lookup"><span data-stu-id="bda72-111">Cancel cell editing if in cell edit mode.</span></span><br /><br /> <span data-ttu-id="bda72-112">In caso di selezione, annullare la modifica nella riga.</span><span class="sxs-lookup"><span data-stu-id="bda72-112">If in marquee selection, cancel editing on the row.</span></span>|<span data-ttu-id="bda72-113">ESC</span><span class="sxs-lookup"><span data-stu-id="bda72-113">ESC</span></span>|  
+|<span data-ttu-id="bda72-114">Eliminare il carattere che precede il punto di inserimento quando si modifica una cella.</span><span class="sxs-lookup"><span data-stu-id="bda72-114">Delete the character before the insertion point when editing a cell.</span></span>|<span data-ttu-id="bda72-115">BACKSPACE</span><span class="sxs-lookup"><span data-stu-id="bda72-115">BACKSPACE</span></span>|  
+|<span data-ttu-id="bda72-116">Eliminare il carattere dopo il punto di inserimento quando si modifica una cella.</span><span class="sxs-lookup"><span data-stu-id="bda72-116">Delete the character after the insertion point when editing a cell.</span></span>|<span data-ttu-id="bda72-117">DELETE</span><span class="sxs-lookup"><span data-stu-id="bda72-117">DELETE</span></span>|  
+|<span data-ttu-id="bda72-118">Passa alla prima cella nella riga corrente.</span><span class="sxs-lookup"><span data-stu-id="bda72-118">Move to the first cell in the current row.</span></span>|<span data-ttu-id="bda72-119">HOME</span><span class="sxs-lookup"><span data-stu-id="bda72-119">HOME</span></span>|  
+|<span data-ttu-id="bda72-120">Passa all'ultima cella nella riga corrente.</span><span class="sxs-lookup"><span data-stu-id="bda72-120">Move to the last cell in the current row.</span></span>|<span data-ttu-id="bda72-121">FINE</span><span class="sxs-lookup"><span data-stu-id="bda72-121">END</span></span>|  
+|<span data-ttu-id="bda72-122">Evidenziare i caratteri nella cella corrente e posizionare il cursore alla fine della riga.</span><span class="sxs-lookup"><span data-stu-id="bda72-122">Highlight characters in the current cell and position the insertion point at the end of the line.</span></span> <span data-ttu-id="bda72-123">Stesso comportamento di doppio clic su una cella.</span><span class="sxs-lookup"><span data-stu-id="bda72-123">Same behavior as double-clicking a cell.</span></span>|<span data-ttu-id="bda72-124">F2</span><span class="sxs-lookup"><span data-stu-id="bda72-124">F2</span></span>|  
+|<span data-ttu-id="bda72-125">Se lo stato attivo si trova in una cella, spostarsi nella cella nella riga successiva.</span><span class="sxs-lookup"><span data-stu-id="bda72-125">If focus is on a cell, move to the next cell in the row.</span></span><br /><br /> <span data-ttu-id="bda72-126">Se lo stato attivo si trova in una riga all'ultima cella, spostare il primo collegamento per la tabella figlio della riga ed espanderlo.</span><span class="sxs-lookup"><span data-stu-id="bda72-126">If focus is on the last cell in a row, move to the first child table link of the row and expand it.</span></span><br /><br /> <span data-ttu-id="bda72-127">Se lo stato attivo è su un collegamento figlio, spostare in avanti figlio.</span><span class="sxs-lookup"><span data-stu-id="bda72-127">If focus is on a child link, move to the next child link.</span></span><br /><br /> <span data-ttu-id="bda72-128">Se lo stato attivo si trova sull'ultimo collegamento figlio, passare alla prima cella della riga successiva.</span><span class="sxs-lookup"><span data-stu-id="bda72-128">If focus is on the last child link, move to the first cell of the next row.</span></span>|<span data-ttu-id="bda72-129">TAB</span><span class="sxs-lookup"><span data-stu-id="bda72-129">TAB</span></span>|  
+|<span data-ttu-id="bda72-130">Se lo stato attivo si trova in una cella, spostarsi sulla cella nella riga precedente.</span><span class="sxs-lookup"><span data-stu-id="bda72-130">If focus is on a cell, move to the previous cell in the row.</span></span><br /><br /> <span data-ttu-id="bda72-131">Se lo stato attivo è sulla prima cella in una riga, spostarsi sull'ultimo collegamento per la tabella figlio espansi della riga precedente o spostarsi sull'ultima cella della riga precedente.</span><span class="sxs-lookup"><span data-stu-id="bda72-131">If focus is on the first cell in a row, move to the last expanded child table link of the previous row, or move to the last cell of the previous row.</span></span><br /><br /> <span data-ttu-id="bda72-132">Se lo stato attivo è su un collegamento figlio, spostare il collegamento figlio precedente.</span><span class="sxs-lookup"><span data-stu-id="bda72-132">If focus is on a child link, move to the previous child link.</span></span><br /><br /> <span data-ttu-id="bda72-133">Se lo stato attivo sul primo collegamento figlio, passa all'ultima cella della riga precedente.</span><span class="sxs-lookup"><span data-stu-id="bda72-133">If focus is on the first child link, move to the last cell of the previous row.</span></span>|<span data-ttu-id="bda72-134">MAIUSC+TAB</span><span class="sxs-lookup"><span data-stu-id="bda72-134">SHIFT+TAB</span></span>|  
+|<span data-ttu-id="bda72-135">Spostare il controllo successivo nell'ordine di tabulazione.</span><span class="sxs-lookup"><span data-stu-id="bda72-135">Move to the next control in the tab order.</span></span>|<span data-ttu-id="bda72-136">CTRL+TAB</span><span class="sxs-lookup"><span data-stu-id="bda72-136">CTRL+TAB</span></span>|  
+|<span data-ttu-id="bda72-137">Portarsi sul controllo precedente nell'ordine di tabulazione.</span><span class="sxs-lookup"><span data-stu-id="bda72-137">Move to the previous control in the tab order.</span></span>|<span data-ttu-id="bda72-138">CTRL+MAIUSC+TAB</span><span class="sxs-lookup"><span data-stu-id="bda72-138">CTRL+SHIFT+TAB</span></span>|  
+|<span data-ttu-id="bda72-139">Sposta su per la tabella padre in caso di una tabella figlio.</span><span class="sxs-lookup"><span data-stu-id="bda72-139">Move up to the parent table if in a child table.</span></span> <span data-ttu-id="bda72-140">Stesso comportamento facendo clic sul pulsante Indietro.</span><span class="sxs-lookup"><span data-stu-id="bda72-140">Same behavior as clicking the Back button.</span></span>|<span data-ttu-id="bda72-141">ALT+FRECCIA SINISTRA</span><span class="sxs-lookup"><span data-stu-id="bda72-141">ALT+LEFT ARROW</span></span>|  
+|<span data-ttu-id="bda72-142">Espandere collegamenti alle tabelle figlio.</span><span class="sxs-lookup"><span data-stu-id="bda72-142">Expand child table links.</span></span> <span data-ttu-id="bda72-143">ALT + freccia giù consente di espandere tutti i collegamenti, non solo quelli selezionati.</span><span class="sxs-lookup"><span data-stu-id="bda72-143">ALT+DOWN ARROW expands all links, not just the ones selected.</span></span>|<span data-ttu-id="bda72-144">ALT + freccia giù o CTRL + segno più</span><span class="sxs-lookup"><span data-stu-id="bda72-144">ALT+DOWN ARROW or CTRL+PLUS SIGN</span></span>|  
+|<span data-ttu-id="bda72-145">Comprimere i collegamenti alle tabelle figlio.</span><span class="sxs-lookup"><span data-stu-id="bda72-145">Collapse child table links.</span></span> <span data-ttu-id="bda72-146">ALT + freccia consente di comprimere tutti i collegamenti, non solo quelli selezionati.</span><span class="sxs-lookup"><span data-stu-id="bda72-146">ALT+UP ARROW collapses all links, not just the ones selected.</span></span>|<span data-ttu-id="bda72-147">ALT + freccia su o CTRL + segno meno</span><span class="sxs-lookup"><span data-stu-id="bda72-147">ALT+UP ARROW or CTRL+MINUS SIGN</span></span>|  
+|<span data-ttu-id="bda72-148">Spostare l'ultima cella non vuota nella direzione della freccia.</span><span class="sxs-lookup"><span data-stu-id="bda72-148">Move to the farthest nonblank cell in the direction of the arrow.</span></span>|<span data-ttu-id="bda72-149">CTRL + FRECCIA</span><span class="sxs-lookup"><span data-stu-id="bda72-149">CTRL+ARROW</span></span>|  
+|<span data-ttu-id="bda72-150">Estendere la riga di una selezione nella direzione della freccia (esclusi i collegamenti della tabella figlio).</span><span class="sxs-lookup"><span data-stu-id="bda72-150">Extend the selection one row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="bda72-151">MAIUSC + FRECCIA SU/GIÙ</span><span class="sxs-lookup"><span data-stu-id="bda72-151">SHIFT+UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="bda72-152">Estendere la selezione verso l'ultima riga non vuota nella direzione della freccia (esclusi i collegamenti della tabella figlio).</span><span class="sxs-lookup"><span data-stu-id="bda72-152">Extend the selection to farthest nonblank row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="bda72-153">CTRL + MAIUSC + FRECCIA SU/GIÙ</span><span class="sxs-lookup"><span data-stu-id="bda72-153">CTRL+SHIFT+ UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="bda72-154">Spostarsi nella cella superiore sinistra.</span><span class="sxs-lookup"><span data-stu-id="bda72-154">Move to the upper-left cell.</span></span>|<span data-ttu-id="bda72-155">CTRL + HOME</span><span class="sxs-lookup"><span data-stu-id="bda72-155">CTRL+HOME</span></span>|  
+|<span data-ttu-id="bda72-156">Spostarsi nella cella inferiore destra.</span><span class="sxs-lookup"><span data-stu-id="bda72-156">Move to the lower-right cell.</span></span>|<span data-ttu-id="bda72-157">CTRL + FINE</span><span class="sxs-lookup"><span data-stu-id="bda72-157">CTRL+END</span></span>|  
+|<span data-ttu-id="bda72-158">Estendere la selezione verso la riga superiore.</span><span class="sxs-lookup"><span data-stu-id="bda72-158">Extend the selection to the top row.</span></span>|<span data-ttu-id="bda72-159">CTRL + MAIUSC + HOME</span><span class="sxs-lookup"><span data-stu-id="bda72-159">CTRL+SHIFT+HOME</span></span>|  
+|<span data-ttu-id="bda72-160">Estendere la selezione verso la riga inferiore.</span><span class="sxs-lookup"><span data-stu-id="bda72-160">Extend the selection to the bottom row.</span></span>|<span data-ttu-id="bda72-161">CTRL + MAIUSC + FINE</span><span class="sxs-lookup"><span data-stu-id="bda72-161">CTRL+SHIFT+END</span></span>|  
+|<span data-ttu-id="bda72-162">Selezionare la riga corrente (esclusi i collegamenti della tabella figlio).</span><span class="sxs-lookup"><span data-stu-id="bda72-162">Select the current row (excluding child table links).</span></span>|<span data-ttu-id="bda72-163">MAIUSC + BARRA SPAZIATRICE</span><span class="sxs-lookup"><span data-stu-id="bda72-163">SHIFT+SPACEBAR</span></span>|  
+|<span data-ttu-id="bda72-164">Selezionare l'intera griglia (esclusi i collegamenti della tabella figlio).</span><span class="sxs-lookup"><span data-stu-id="bda72-164">Select the entire grid (excluding child table links).</span></span>|<span data-ttu-id="bda72-165">CTRL+A</span><span class="sxs-lookup"><span data-stu-id="bda72-165">CTRL+A</span></span>|  
+|<span data-ttu-id="bda72-166">Visualizzazione della riga padre quando in una tabella figlio.</span><span class="sxs-lookup"><span data-stu-id="bda72-166">Display the parent row when in a child table.</span></span>|<span data-ttu-id="bda72-167">CTRL+PGGIÙ</span><span class="sxs-lookup"><span data-stu-id="bda72-167">CTRL+PAGE DOWN</span></span>|  
+|<span data-ttu-id="bda72-168">Nascondere la riga padre quando in una tabella figlio.</span><span class="sxs-lookup"><span data-stu-id="bda72-168">Hide the parent row when in a child table.</span></span>|<span data-ttu-id="bda72-169">CTRL+PGSU</span><span class="sxs-lookup"><span data-stu-id="bda72-169">CTRL+PAGE UP</span></span>|  
+|<span data-ttu-id="bda72-170">Estendere la selezione verso il basso di una schermata (esclusi i collegamenti della tabella figlio).</span><span class="sxs-lookup"><span data-stu-id="bda72-170">Extend the selection down one screen (excluding child table links).</span></span>|<span data-ttu-id="bda72-171">MAIUSC+PGGIÙ</span><span class="sxs-lookup"><span data-stu-id="bda72-171">SHIFT+PAGE DOWN</span></span>|  
+|<span data-ttu-id="bda72-172">Estendere la selezione di una schermata (esclusi i collegamenti della tabella figlio).</span><span class="sxs-lookup"><span data-stu-id="bda72-172">Extend the selection up one screen (excluding child table links).</span></span>|<span data-ttu-id="bda72-173">MAIUSC+PGSU</span><span class="sxs-lookup"><span data-stu-id="bda72-173">SHIFT+PAGE UP</span></span>|  
+|<span data-ttu-id="bda72-174">Chiamare il <xref:System.Windows.Forms.DataGrid.EndEdit%2A> metodo per la riga corrente.</span><span class="sxs-lookup"><span data-stu-id="bda72-174">Call the <xref:System.Windows.Forms.DataGrid.EndEdit%2A> method for the current row.</span></span>|<span data-ttu-id="bda72-175">CTRL+INVIO</span><span class="sxs-lookup"><span data-stu-id="bda72-175">CTRL+ENTER</span></span>|  
+|<span data-ttu-id="bda72-176">Immettere un <xref:System.DBNull.Value?displayProperty=nameWithType> valore in una cella in modalità di modifica.</span><span class="sxs-lookup"><span data-stu-id="bda72-176">Enter a <xref:System.DBNull.Value?displayProperty=nameWithType> value into a cell when in edit mode.</span></span>|<span data-ttu-id="bda72-177">CTRL+0</span><span class="sxs-lookup"><span data-stu-id="bda72-177">CTRL+0</span></span>|  
   
-## Vedere anche  
- [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="bda72-178">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bda72-178">See Also</span></span>  
+ [<span data-ttu-id="bda72-179">Cenni preliminari sul controllo DataGrid</span><span class="sxs-lookup"><span data-stu-id="bda72-179">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="bda72-180">Controllo DataGrid</span><span class="sxs-lookup"><span data-stu-id="bda72-180">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

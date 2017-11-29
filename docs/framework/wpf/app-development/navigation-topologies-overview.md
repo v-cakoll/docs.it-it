@@ -1,154 +1,157 @@
 ---
-title: "Cenni preliminari sulle topologie di navigazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "topologia generata dinamicamente"
-  - "topologia gerarchica fissa"
-  - "topologia lineare fissa"
-  - "topologia lineare"
-  - "topologie di navigazione [WPF]"
-  - "topologie [WPF]"
+title: Cenni preliminari sulle topologie di navigazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linear topology [WPF]
+- fixed hierarchical topology [WPF]
+- fixed linear topology [WPF]
+- topologies [WPF]
+- navigation topologies [WPF]
+- dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d33eb42aded2ad9d6cd32ae5790470fa1b2dc935
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sulle topologie di navigazione
-<a name="introduction"></a> In questi cenni preliminari viene fornita un'introduzione alle topologie di navigazione in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Di seguito vengono analizzate tre topologie di navigazione comuni, con i relativi esempi.  
+# <a name="navigation-topologies-overview"></a><span data-ttu-id="cd24b-102">Cenni preliminari sulle topologie di navigazione</span><span class="sxs-lookup"><span data-stu-id="cd24b-102">Navigation Topologies Overview</span></span>
+<span data-ttu-id="cd24b-103"><a name="introduction"></a>Questa panoramica fornisce un'introduzione alle topologie di spostamento in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd24b-103"><a name="introduction"></a> This overview provides an introduction to navigation topologies in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span></span> <span data-ttu-id="cd24b-104">Di seguito vengono analizzate tre topologie di navigazione comuni con i relativi esempi.</span><span class="sxs-lookup"><span data-stu-id="cd24b-104">Three common navigation topologies, with samples, are subsequently discussed.</span></span>  
   
 > [!NOTE]
->  Prima di leggere questo argomento, è importante conoscere il concetto di navigazione strutturato in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tramite funzioni di pagina.  Per ulteriori informazioni su entrambi gli argomenti, vedere [Cenni preliminari sulla navigazione strutturata](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).  
+>  <span data-ttu-id="cd24b-105">Prima di leggere questo argomento, è necessario avere familiarità con il concetto di spostamento strutturato in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] utilizzando funzioni di pagina.</span><span class="sxs-lookup"><span data-stu-id="cd24b-105">Before reading this topic, you should be familiar with the concept of structured navigation in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] using page functions.</span></span> <span data-ttu-id="cd24b-106">Per ulteriori informazioni su entrambi gli argomenti, vedere [Structured Navigation Overview](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="cd24b-106">For more information on both of these topics, see [Structured Navigation Overview](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).</span></span>  
   
- Di seguito sono elencate le diverse sezioni di questo argomento:  
+ <span data-ttu-id="cd24b-107">Di seguito sono elencate le diverse sezioni di questo argomento:</span><span class="sxs-lookup"><span data-stu-id="cd24b-107">This topic contains the following sections:</span></span>  
   
--   [Topologie di navigazione](#Navigation_Topologies)  
+-   [<span data-ttu-id="cd24b-108">Topologie di navigazione</span><span class="sxs-lookup"><span data-stu-id="cd24b-108">Navigation Topologies</span></span>](#Navigation_Topologies)  
   
--   [Topologie di navigazione strutturate](#Structured_Navigation_Topologies)  
+-   [<span data-ttu-id="cd24b-109">Topologie di navigazione strutturata</span><span class="sxs-lookup"><span data-stu-id="cd24b-109">Structured Navigation Topologies</span></span>](#Structured_Navigation_Topologies)  
   
--   [Navigazione in una topologia lineare fissa](#Navigation_over_a_Fixed_Linear_Topology)  
+-   [<span data-ttu-id="cd24b-110">Navigazione in una topologia lineare fissa</span><span class="sxs-lookup"><span data-stu-id="cd24b-110">Navigation over a Fixed Linear Topology</span></span>](#Navigation_over_a_Fixed_Linear_Topology)  
   
--   [Navigazione dinamica in una topologia gerarchica fissa](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
+-   [<span data-ttu-id="cd24b-111">Navigazione dinamica in una topologia gerarchica fissa</span><span class="sxs-lookup"><span data-stu-id="cd24b-111">Dynamic Navigation over a Fixed Hierarchical Topology</span></span>](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
   
--   [Navigazione in una topologia generata dinamicamente](#Navigation_over_a_Dynamically_Generated_Topology)  
+-   [<span data-ttu-id="cd24b-112">Navigazione in una topologia generata dinamicamente</span><span class="sxs-lookup"><span data-stu-id="cd24b-112">Navigation over a Dynamically Generated Topology</span></span>](#Navigation_over_a_Dynamically_Generated_Topology)  
   
 <a name="Navigation_Topologies"></a>   
-## Topologie di navigazione  
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], la navigazione viene effettuata in genere in pagine \(<xref:System.Windows.Controls.Page>\) con collegamenti ipertestuali \(<xref:System.Windows.Documents.Hyperlink>\) che consentono di passare ad altre pagine quando si fa clic su di essi.  Le pagine in cui ci si sposta sono identificate da [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] \(vedere [URI di tipo pack in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)\).  Nel semplice esempio riportato di seguito vengono illustrate pagine, collegamenti ipertestuali e [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
+## <a name="navigation-topologies"></a><span data-ttu-id="cd24b-113">Topologie di navigazione</span><span class="sxs-lookup"><span data-stu-id="cd24b-113">Navigation Topologies</span></span>  
+ <span data-ttu-id="cd24b-114">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], navigazione consiste in genere di pagine (<xref:System.Windows.Controls.Page>) con i collegamenti ipertestuali (<xref:System.Windows.Documents.Hyperlink>) che consentono di passare ad altre pagine quando si fa clic.</span><span class="sxs-lookup"><span data-stu-id="cd24b-114">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], navigation typically consists of pages (<xref:System.Windows.Controls.Page>) with hyperlinks (<xref:System.Windows.Documents.Hyperlink>) that navigate to other pages when clicked.</span></span> <span data-ttu-id="cd24b-115">Le pagine in cui ci si sposta sono identificate da [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (vedere [URI di tipo Pack in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).</span><span class="sxs-lookup"><span data-stu-id="cd24b-115">Pages that are navigated to are identified by [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (see [Pack URIs in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).</span></span> <span data-ttu-id="cd24b-116">Si consideri l'esempio seguente che mostra le pagine, collegamenti ipertestuali, e [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="cd24b-116">Consider the following simple example that shows pages, hyperlinks, and [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:</span></span>  
   
- [!code-xml[NavigationTopologiesOverviewSnippets#Page1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
+ [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
- [!code-xml[NavigationTopologiesOverviewSnippets#Page2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
+ [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
   
- Queste pagine sono disposte in una *topologia di navigazione* la cui struttura è determinata dalla modalità di navigazione tra le pagine.  Questa particolare topologia di navigazione è adatta a scenari semplici, sebbene la navigazione possa richiedere topologie più complesse, alcune delle quali possono essere definite solo quando un'applicazione è in esecuzione.  
+ <span data-ttu-id="cd24b-117">Queste pagine sono disposte un *topologia di navigazione* la cui struttura è determinata da come è possibile spostarsi tra le pagine.</span><span class="sxs-lookup"><span data-stu-id="cd24b-117">These pages are arranged in a *navigation topology* whose structure is determined by how you can navigate between the pages.</span></span> <span data-ttu-id="cd24b-118">Questa particolare topologia di navigazione è adatta in scenari semplici. La navigazione può tuttavia richiedere topologie più complesse, alcune delle quali possono essere definite solo quando un'applicazione è in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="cd24b-118">This particular navigation topology is suitable in simple scenarios, although navigation can require more complex topologies, some of which can only be defined when an application is running.</span></span>  
   
- In questo argomento vengono analizzate tre topologie di navigazione comuni: *lineare fissa*, *gerarchica fissa* e *generata dinamicamente*.  Per ogni topologia di navigazione viene fornito un esempio con un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] analoga a quella illustrata nella figura seguente:  
+ <span data-ttu-id="cd24b-119">Questo argomento vengono illustrati tre topologie di spostamento comuni: *lineare fissa*, *gerarchica fissa*, e *generato dinamicamente*.</span><span class="sxs-lookup"><span data-stu-id="cd24b-119">This topic covers three common navigation topologies: *fixed linear*, *fixed hierarchical*, and *dynamically generated*.</span></span> <span data-ttu-id="cd24b-120">Ogni topologia di navigazione è illustrato un esempio con un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] come quello illustrato nella figura riportata di seguito:</span><span class="sxs-lookup"><span data-stu-id="cd24b-120">Each navigation topology is demonstrated with a sample that has a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] like the one that is shown in the following figure:</span></span>  
   
- ![Pagine di attività con elementi di dati](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ <span data-ttu-id="cd24b-121">![Pagine di attività con elementi di dati](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure6.png "NavigationTopologyFigure6")</span><span class="sxs-lookup"><span data-stu-id="cd24b-121">![Task pages with data items](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure6.png "NavigationTopologyFigure6")</span></span>  
   
 <a name="Structured_Navigation_Topologies"></a>   
-## Topologie di navigazione strutturate  
- Esistono due tipi di topologie di navigazione:  
+## <a name="structured-navigation-topologies"></a><span data-ttu-id="cd24b-122">Topologie di navigazione strutturata</span><span class="sxs-lookup"><span data-stu-id="cd24b-122">Structured Navigation Topologies</span></span>  
+ <span data-ttu-id="cd24b-123">Vi sono due topologie principali di navigazione:</span><span class="sxs-lookup"><span data-stu-id="cd24b-123">There are two broad types of navigation topologies:</span></span>  
   
--   **Topologia fissa**: viene definita in fase di compilazione e non viene modificata in fase di esecuzione.  Le topologie fisse sono utili per la navigazione in una sequenza fissa di pagine con un ordine lineare o gerarchico.  
+-   <span data-ttu-id="cd24b-124">**Topologia fissa**: è definita in fase di compilazione e non viene modificata in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="cd24b-124">**Fixed Topology**: defined at compile time and does not change at run time.</span></span> <span data-ttu-id="cd24b-125">Le topologie fisse sono utili per la navigazione in una sequenza fissa di pagine in un ordine lineare o gerarchico.</span><span class="sxs-lookup"><span data-stu-id="cd24b-125">Fixed topologies are useful for navigation through a fixed sequence of pages in either a linear or hierarchical order.</span></span>  
   
--   **Topologia dinamica**: viene definita in fase di esecuzione in base a input raccolto dall'utente, dall'applicazione o dal sistema.  Le topologie dinamiche sono utili quando è possibile spostarsi tra le pagine in sequenze diverse.  
+-   <span data-ttu-id="cd24b-126">**Topologia dinamica**: è definita in fase di esecuzione in base agli input raccolti dall'utente, dall'applicazione o dal sistema.</span><span class="sxs-lookup"><span data-stu-id="cd24b-126">**Dynamic Topology**: defined at run time based on input that is collected from the user, the application, or the system.</span></span> <span data-ttu-id="cd24b-127">Le topologie dinamiche sono utili quando è possibile spostarsi sulle pagine in sequenze diverse.</span><span class="sxs-lookup"><span data-stu-id="cd24b-127">Dynamic topologies are useful when pages can be navigated in different sequences.</span></span>  
   
- Benché sia possibile creare topologie di navigazione utilizzando le pagine, negli esempi vengono utilizzate funzioni di pagina poiché offrono un supporto aggiuntivo che semplifica le operazioni di passaggio e di restituzione dei dati attraverso le pagine di una topologia.  
+ <span data-ttu-id="cd24b-128">Sebbene sia possibile creare topologie di navigazione usando le pagine, gli esempi usano funzioni di pagina poiché questi offrono un supporto aggiuntivo che semplifica il passaggio e la restituzione dei dati tramite le pagine di una topologia.</span><span class="sxs-lookup"><span data-stu-id="cd24b-128">Although it is possible to create navigation topologies using pages, the samples use page functions because they provide additional support that simplifies support for passing and returning data through the pages of a topology.</span></span>  
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
-## Navigazione in una topologia lineare fissa  
- Una topologia lineare fissa è analoga alla struttura di una procedura guidata composta da una o più pagine in cui è possibile spostarsi in una sequenza fissa.  Nella figura riportata di seguito viene visualizzata la struttura di livello elevato e il flusso di una procedura guidata con una topologia lineare fissa.  
+## <a name="navigation-over-a-fixed-linear-topology"></a><span data-ttu-id="cd24b-129">Navigazione in una topologia lineare fissa</span><span class="sxs-lookup"><span data-stu-id="cd24b-129">Navigation over a Fixed Linear Topology</span></span>  
+ <span data-ttu-id="cd24b-130">Una topologia lineare fissa è analoga alla struttura di una procedura guidata con una o più pagine in cui ci si sposta in una sequenza fissa.</span><span class="sxs-lookup"><span data-stu-id="cd24b-130">A fixed linear topology is analogous to the structure of a wizard that has one or more wizard pages that are navigated in a fixed sequence.</span></span> <span data-ttu-id="cd24b-131">La figura seguente illustra la struttura generale e il flusso di una procedura guidata con topologia lineare fissa.</span><span class="sxs-lookup"><span data-stu-id="cd24b-131">The following figure shows the high-level structure and flow of a wizard with a fixed linear topology.</span></span>  
   
- ![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ <span data-ttu-id="cd24b-132">![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure1.png "NavigationTopologyFigure1")</span><span class="sxs-lookup"><span data-stu-id="cd24b-132">![Navigation topology diagram](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure1.png "NavigationTopologyFigure1")</span></span>  
   
- I comportamenti tipici per lo spostamento in una topologia lineare fissa sono i seguent:  
+ <span data-ttu-id="cd24b-133">I comportamenti tipici per la navigazione in una topologia lineare fissa includono quanto segue:</span><span class="sxs-lookup"><span data-stu-id="cd24b-133">The typical behaviors for navigating over a fixed linear topology include the following:</span></span>  
   
--   Spostamento dalla pagina chiamante alla pagina di avvio che inizializza la procedura guidata e consente di passare alla prima pagina della procedura.  La pagina di avvio \(<xref:System.Windows.Navigation.PageFunction%601> senza [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]\) non è obbligatoria, poiché è possibile chiamare la prima pagina della procedura guidata direttamente dalla pagina chiamante.  Tuttavia, l'utilizzo di una pagina di avvio può semplificare l'inizializzazione della procedura guidata, in particolare se tale operazione è complessa.  
+-   <span data-ttu-id="cd24b-134">Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa.</span><span class="sxs-lookup"><span data-stu-id="cd24b-134">Navigating from the calling page to a launcher page that initializes the wizard and navigates to the first wizard page.</span></span> <span data-ttu-id="cd24b-135">La pagina di avvio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-minore <xref:System.Windows.Navigation.PageFunction%601>) non è necessaria, poiché è una pagina chiamante può chiamare la prima pagina della procedura guidata direttamente.</span><span class="sxs-lookup"><span data-stu-id="cd24b-135">A launcher page (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) is not required, since a calling page can call the first wizard page directly.</span></span> <span data-ttu-id="cd24b-136">L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.</span><span class="sxs-lookup"><span data-stu-id="cd24b-136">Using a launcher page, however, can simplify wizard initialization, particularly if initialization is complex.</span></span>  
   
--   Gli utenti possono spostarsi tra le pagine utilizzando i pulsanti, o collegamenti ipertestuali, Avanti e Indietro.  
+-   <span data-ttu-id="cd24b-137">Gli utenti possono spostarsi tra le pagine usando i pulsanti Avanti e Indietro (o i collegamenti ipertestuali).</span><span class="sxs-lookup"><span data-stu-id="cd24b-137">Users can navigate between pages by using Back and Forward buttons (or hyperlinks).</span></span>  
   
--   Gli utenti possono spostarsi tra le pagine utilizzando il journal.  
+-   <span data-ttu-id="cd24b-138">Gli utenti possono spostarsi tra pagine usando il journal.</span><span class="sxs-lookup"><span data-stu-id="cd24b-138">Users can navigate between pages using the journal.</span></span>  
   
--   Gli utenti possono annullare la procedura guidata da qualsiasi pagina scegliendo il pulsante Annulla.  
+-   <span data-ttu-id="cd24b-139">Gli utenti possono annullare la procedura guidata da qualsiasi pagina di questa premendo il pulsante Annulla.</span><span class="sxs-lookup"><span data-stu-id="cd24b-139">Users can cancel the wizard from any wizard page by pressing a Cancel button.</span></span>  
   
--   Gli utenti possono accettare la procedura guidata sull'ultima pagina scegliendo il pulsante Fine.  
+-   <span data-ttu-id="cd24b-140">Gli utenti possono accettare la procedura guidata all'ultima pagina premendo un pulsante Fine.</span><span class="sxs-lookup"><span data-stu-id="cd24b-140">Users can accept the wizard on the last wizard page by pressing a Finish button.</span></span>  
   
--   Se una procedura guidata viene annullata, restituisce un risultato appropriato e non restituisce dati.  
+-   <span data-ttu-id="cd24b-141">Se una procedura guidata viene annullata, questa restituisce un risultato appropriato e non restituisce alcun dato.</span><span class="sxs-lookup"><span data-stu-id="cd24b-141">If a wizard is canceled, the wizard returns an appropriate result, and does not return any data.</span></span>  
   
--   Se una procedura guidata viene accettata, tale procedura restituisce un risultato appropriato e i dati raccolti.  
+-   <span data-ttu-id="cd24b-142">Se un utente accetta una procedura guidata, questa restituisce un risultato appropriato e restituisce i dati raccolti.</span><span class="sxs-lookup"><span data-stu-id="cd24b-142">If a user accepts a wizard, the wizard returns an appropriate result, and returns the data it collected.</span></span>  
   
--   Al completamento della procedura guidata \(accettata o annullata\), le pagine incluse nella procedura guidata vengono rimosse dal journal.  In questo modo ogni istanza della procedura guidata viene isolata, evitando potenziali anomalie dei dati o dello stato.  
+-   <span data-ttu-id="cd24b-143">Al completamento della procedura guidata (accettata o annullata), le pagine incluse nella procedura guidata vengono rimosse dal journal.</span><span class="sxs-lookup"><span data-stu-id="cd24b-143">When the wizard is complete (accepted or canceled), the pages that the wizard comprises are removed from the journal.</span></span> <span data-ttu-id="cd24b-144">In questo modo ogni istanza della procedura guidata viene mantenuta isolata, per evitare potenziali anomalie di dati o stato.</span><span class="sxs-lookup"><span data-stu-id="cd24b-144">This keeps each instance of the wizard isolated, thereby avoiding potential data or state anomalies.</span></span>  
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
-## Navigazione dinamica in una topologia gerarchica fissa  
- In alcune applicazioni, è possibile navigare dalle pagine in due o più altre pagine, come illustrato nella figura seguente.  
+## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a><span data-ttu-id="cd24b-145">Navigazione dinamica in una topologia gerarchica fissa</span><span class="sxs-lookup"><span data-stu-id="cd24b-145">Dynamic Navigation over a Fixed Hierarchical Topology</span></span>  
+ <span data-ttu-id="cd24b-146">In alcune applicazioni le pagine consentono di spostarsi su due o più altre pagine, come illustrato nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="cd24b-146">In some applications, pages allow navigation to two or more other pages, as shown in the following figure.</span></span>  
   
- ![Pagina che può spostarsi su più pagine](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ <span data-ttu-id="cd24b-147">![Pagina che consente di spostarsi su diverse altre pagine](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure2.png "NavigationTopologyFigure2")</span><span class="sxs-lookup"><span data-stu-id="cd24b-147">![A page that can navigate to multiple pages](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure2.png "NavigationTopologyFigure2")</span></span>  
   
- Questa struttura è nota come topologia gerarchica fissa e la sequenza nella quale viene attraversata la gerarchia è spesso determinata in fase di esecuzione dall'applicazione o dall'utente.  In fase di esecuzione, in ogni pagina della gerarchia che consente la navigazione a due o più altre pagine vengono raccolti i dati necessari a determinare in quale pagina spostarsi.  Nella figura riportata di seguito viene illustrata una delle numerose sequenze di navigazione possibili in base alla figura precedente.  
+ <span data-ttu-id="cd24b-148">Questa struttura è detta topologia gerarchica fissa e la sequenza in cui viene attraversata è spesso determinata in fase di esecuzione dall'applicazione o dall'utente.</span><span class="sxs-lookup"><span data-stu-id="cd24b-148">This structure is known as a fixed hierarchical topology, and the sequence in which the hierarchy is traversed is often determined at run time by either the application or the user.</span></span> <span data-ttu-id="cd24b-149">In fase di esecuzione, ogni pagina della gerarchia che consente di spostarsi su due o più altre pagine raccoglie i dati richiesti per determinare su quale pagina spostarsi.</span><span class="sxs-lookup"><span data-stu-id="cd24b-149">At run time, each page in the hierarchy that allows navigation to two or more other pages gathers the data required to determine which page to navigate to.</span></span> <span data-ttu-id="cd24b-150">La figura seguente illustra una delle possibili sequenze di navigazione in base alla figura precedente.</span><span class="sxs-lookup"><span data-stu-id="cd24b-150">The following figure illustrates one of several possible navigation sequences based on the previous figure.</span></span>  
   
- ![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ <span data-ttu-id="cd24b-151">![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure3.png "NavigationTopologyFigure3")</span><span class="sxs-lookup"><span data-stu-id="cd24b-151">![Navigation topology diagram](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure3.png "NavigationTopologyFigure3")</span></span>  
   
- Anche se la sequenza delle pagine in cui ci si sposta in una struttura gerarchica fissa viene determinata in fase di esecuzione, l'esperienza utente è uguale a quella di una topologia lineare fissa:  
+ <span data-ttu-id="cd24b-152">Anche se la sequenza di navigazione delle pagine in una struttura gerarchica fissa è determinata in fase di esecuzione, l'esperienza utente è la stessa di una topologia lineare fissa:</span><span class="sxs-lookup"><span data-stu-id="cd24b-152">Even though the sequence in which pages in a fixed hierarchical structure are navigated is determined at run time, the user experience is the same as the user experience for a fixed linear topology:</span></span>  
   
--   Spostamento dalla pagina chiamante alla pagina di avvio che inizializza la procedura guidata e consente di passare alla prima pagina della procedura.  La pagina di avvio \(<xref:System.Windows.Navigation.PageFunction%601> senza [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]\) non è obbligatoria, poiché è possibile chiamare la prima pagina della procedura guidata direttamente dalla pagina chiamante.  Tuttavia, l'utilizzo di una pagina di avvio può semplificare l'inizializzazione della procedura guidata, in particolare se tale operazione è complessa.  
+-   <span data-ttu-id="cd24b-153">Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa.</span><span class="sxs-lookup"><span data-stu-id="cd24b-153">Navigating from the calling page to a launcher page that initializes the wizard and navigates to the first wizard page.</span></span> <span data-ttu-id="cd24b-154">La pagina di avvio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-minore <xref:System.Windows.Navigation.PageFunction%601>) non è necessaria, poiché è una pagina chiamante può chiamare la prima pagina della procedura guidata direttamente.</span><span class="sxs-lookup"><span data-stu-id="cd24b-154">A launcher page (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) is not required, since a calling page can call the first wizard page directly.</span></span> <span data-ttu-id="cd24b-155">L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.</span><span class="sxs-lookup"><span data-stu-id="cd24b-155">Using a launcher page, however, can simplify wizard initialization, particularly if initialization is complex.</span></span>  
   
--   Gli utenti possono spostarsi tra le pagine utilizzando i pulsanti, o collegamenti ipertestuali, Avanti e Indietro.  
+-   <span data-ttu-id="cd24b-156">Gli utenti possono spostarsi tra le pagine usando i pulsanti Avanti e Indietro (o i collegamenti ipertestuali).</span><span class="sxs-lookup"><span data-stu-id="cd24b-156">Users can navigate between pages by using Back and Forward buttons (or hyperlinks).</span></span>  
   
--   Gli utenti possono spostarsi tra le pagine utilizzando il journal.  
+-   <span data-ttu-id="cd24b-157">Gli utenti possono spostarsi tra pagine usando il journal.</span><span class="sxs-lookup"><span data-stu-id="cd24b-157">Users can navigate between pages using the journal.</span></span>  
   
--   Gli utenti possono modificare la sequenza di navigazione se si spostano all'indietro nel journal.  
+-   <span data-ttu-id="cd24b-158">Gli utenti possono modificare la sequenza di navigazione se tornano indietro tramite il journal.</span><span class="sxs-lookup"><span data-stu-id="cd24b-158">Users can change the navigation sequence if they navigate back through the journal.</span></span>  
   
--   Gli utenti possono annullare la procedura guidata da qualsiasi pagina scegliendo il pulsante Annulla.  
+-   <span data-ttu-id="cd24b-159">Gli utenti possono annullare la procedura guidata da qualsiasi pagina di questa premendo il pulsante Annulla.</span><span class="sxs-lookup"><span data-stu-id="cd24b-159">Users can cancel the wizard from any wizard page by pressing a Cancel button.</span></span>  
   
--   Gli utenti possono accettare la procedura guidata sull'ultima pagina scegliendo il pulsante Fine.  
+-   <span data-ttu-id="cd24b-160">Gli utenti possono accettare la procedura guidata all'ultima pagina premendo un pulsante Fine.</span><span class="sxs-lookup"><span data-stu-id="cd24b-160">Users can accept the wizard on the last wizard page by pressing a Finish button.</span></span>  
   
--   Se una procedura guidata viene annullata, restituisce un risultato appropriato e non restituisce dati.  
+-   <span data-ttu-id="cd24b-161">Se una procedura guidata viene annullata, questa restituisce un risultato appropriato e non restituisce alcun dato.</span><span class="sxs-lookup"><span data-stu-id="cd24b-161">If a wizard is canceled, the wizard returns an appropriate result, and does not return any data.</span></span>  
   
--   Se una procedura guidata viene accettata, tale procedura restituisce un risultato appropriato e i dati raccolti.  
+-   <span data-ttu-id="cd24b-162">Se un utente accetta una procedura guidata, questa restituisce un risultato appropriato e restituisce i dati raccolti.</span><span class="sxs-lookup"><span data-stu-id="cd24b-162">If a user accepts a wizard, the wizard returns an appropriate result, and returns the data it collected.</span></span>  
   
--   Al completamento della procedura guidata \(accettata o annullata\), le pagine incluse nella procedura guidata vengono rimosse dal journal.  In questo modo ogni istanza della procedura guidata viene isolata, evitando potenziali anomalie dei dati o dello stato.  
+-   <span data-ttu-id="cd24b-163">Al completamento della procedura guidata (accettata o annullata), le pagine incluse nella procedura guidata vengono rimosse dal journal.</span><span class="sxs-lookup"><span data-stu-id="cd24b-163">When the wizard is complete (accepted or canceled), the pages that the wizard comprises are removed from the journal.</span></span> <span data-ttu-id="cd24b-164">In questo modo ogni istanza della procedura guidata viene mantenuta isolata, per evitare potenziali anomalie di dati o stato.</span><span class="sxs-lookup"><span data-stu-id="cd24b-164">This keeps each instance of the wizard isolated, thereby avoiding potential data or state anomalies.</span></span>  
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
-## Navigazione in una topologia generata dinamicamente  
- In alcune applicazioni, la sequenza in cui ci si sposta su due o più pagine può essere determinata solo in fase di esecuzione dall'utente, dall'applicazione o da dati esterni.  Nella figura riportata di seguito viene illustrato un insieme di pagine con una sequenza di navigazione indeterminata.  
+## <a name="navigation-over-a-dynamically-generated-topology"></a><span data-ttu-id="cd24b-165">Navigazione in una topologia generata dinamicamente</span><span class="sxs-lookup"><span data-stu-id="cd24b-165">Navigation over a Dynamically Generated Topology</span></span>  
+ <span data-ttu-id="cd24b-166">In alcune applicazioni la sequenza di navigazione di due o più pagine può essere determinata solo in fase di esecuzione dall'utente, dall'applicazione o da dati esterni.</span><span class="sxs-lookup"><span data-stu-id="cd24b-166">In some applications, the sequence in which two or more pages are navigated can only be determined at run time, whether by the user, the application, or external data.</span></span> <span data-ttu-id="cd24b-167">La figura seguente illustra un insieme di pagine con una sequenza di navigazione non determinata.</span><span class="sxs-lookup"><span data-stu-id="cd24b-167">The following figure illustrates a set of pages with an undetermined navigation sequence.</span></span>  
   
- ![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ <span data-ttu-id="cd24b-168">![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure4.png "NavigationTopologyFigure4")</span><span class="sxs-lookup"><span data-stu-id="cd24b-168">![Navigation topology diagram](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure4.png "NavigationTopologyFigure4")</span></span>  
   
- Nella figura successiva viene illustrata una sequenza di navigazione scelta dall'utente in fase di esecuzione.  
+ <span data-ttu-id="cd24b-169">La figura seguente illustra una sequenza di navigazione scelta dall'utente in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="cd24b-169">The next figure illustrates a navigation sequence that was chosen by the user at run time.</span></span>  
   
- ![Diagramma di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ <span data-ttu-id="cd24b-170">![Diagramma di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure5.png "NavigationTopologyFigure5")</span><span class="sxs-lookup"><span data-stu-id="cd24b-170">![Navigation diagram](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure5.png "NavigationTopologyFigure5")</span></span>  
   
- La sequenza di navigazione è nota come topologia generata dinamicamente.  L'esperienza utente è la stessa delle topologie di navigazione descritte in precedenza:  
+ <span data-ttu-id="cd24b-171">La sequenza di navigazione è indicata come topologia generata dinamicamente.</span><span class="sxs-lookup"><span data-stu-id="cd24b-171">The navigation sequence is known as a dynamically generated topology.</span></span> <span data-ttu-id="cd24b-172">L'esperienza utente è analoga alle topologie di navigazione precedenti:</span><span class="sxs-lookup"><span data-stu-id="cd24b-172">For the user, as with the other navigation topologies, the user experience is the same as it is for the previous topologies:</span></span>  
   
--   Spostamento dalla pagina chiamante alla pagina di avvio che inizializza la procedura guidata e consente di passare alla prima pagina della procedura.  La pagina di avvio \(<xref:System.Windows.Navigation.PageFunction%601> senza [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]\) non è obbligatoria, poiché è possibile chiamare la prima pagina della procedura guidata direttamente dalla pagina chiamante.  Tuttavia, l'utilizzo di una pagina di avvio può semplificare l'inizializzazione della procedura guidata, in particolare se tale operazione è complessa.  
+-   <span data-ttu-id="cd24b-173">Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa.</span><span class="sxs-lookup"><span data-stu-id="cd24b-173">Navigating from the calling page to a launcher page that initializes the wizard and navigates to the first wizard page.</span></span> <span data-ttu-id="cd24b-174">La pagina di avvio (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-minore <xref:System.Windows.Navigation.PageFunction%601>) non è necessaria, poiché è una pagina chiamante può chiamare la prima pagina della procedura guidata direttamente.</span><span class="sxs-lookup"><span data-stu-id="cd24b-174">A launcher page (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) is not required, since a calling page can call the first wizard page directly.</span></span> <span data-ttu-id="cd24b-175">L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.</span><span class="sxs-lookup"><span data-stu-id="cd24b-175">Using a launcher page, however, can simplify wizard initialization, particularly if initialization is complex.</span></span>  
   
--   Gli utenti possono spostarsi tra le pagine utilizzando i pulsanti, o collegamenti ipertestuali, Avanti e Indietro.  
+-   <span data-ttu-id="cd24b-176">Gli utenti possono spostarsi tra le pagine usando i pulsanti Avanti e Indietro (o i collegamenti ipertestuali).</span><span class="sxs-lookup"><span data-stu-id="cd24b-176">Users can navigate between pages by using Back and Forward buttons (or hyperlinks).</span></span>  
   
--   Gli utenti possono spostarsi tra le pagine utilizzando il journal.  
+-   <span data-ttu-id="cd24b-177">Gli utenti possono spostarsi tra pagine usando il journal.</span><span class="sxs-lookup"><span data-stu-id="cd24b-177">Users can navigate between pages using the journal.</span></span>  
   
--   Gli utenti possono annullare la procedura guidata da qualsiasi pagina scegliendo il pulsante Annulla.  
+-   <span data-ttu-id="cd24b-178">Gli utenti possono annullare la procedura guidata da qualsiasi pagina di questa premendo il pulsante Annulla.</span><span class="sxs-lookup"><span data-stu-id="cd24b-178">Users can cancel the wizard from any wizard page by pressing a Cancel button.</span></span>  
   
--   Gli utenti possono accettare la procedura guidata sull'ultima pagina scegliendo il pulsante Fine.  
+-   <span data-ttu-id="cd24b-179">Gli utenti possono accettare la procedura guidata all'ultima pagina premendo un pulsante Fine.</span><span class="sxs-lookup"><span data-stu-id="cd24b-179">Users can accept the wizard on the last wizard page by pressing a Finish button.</span></span>  
   
--   Se una procedura guidata viene annullata, restituisce un risultato appropriato e non restituisce dati.  
+-   <span data-ttu-id="cd24b-180">Se una procedura guidata viene annullata, questa restituisce un risultato appropriato e non restituisce alcun dato.</span><span class="sxs-lookup"><span data-stu-id="cd24b-180">If a wizard is canceled, the wizard returns an appropriate result, and does not return any data.</span></span>  
   
--   Se una procedura guidata viene accettata, tale procedura restituisce un risultato appropriato e i dati raccolti.  
+-   <span data-ttu-id="cd24b-181">Se un utente accetta una procedura guidata, questa restituisce un risultato appropriato e restituisce i dati raccolti.</span><span class="sxs-lookup"><span data-stu-id="cd24b-181">If a user accepts a wizard, the wizard returns an appropriate result, and returns the data it collected.</span></span>  
   
--   Al completamento della procedura guidata \(accettata o annullata\), le pagine incluse nella procedura guidata vengono rimosse dal journal.  In questo modo ogni istanza della procedura guidata viene isolata, evitando potenziali anomalie dei dati o dello stato.  
+-   <span data-ttu-id="cd24b-182">Al completamento della procedura guidata (accettata o annullata), le pagine incluse nella procedura guidata vengono rimosse dal journal.</span><span class="sxs-lookup"><span data-stu-id="cd24b-182">When the wizard is complete (accepted or canceled), the pages that the wizard comprises are removed from the journal.</span></span> <span data-ttu-id="cd24b-183">In questo modo ogni istanza della procedura guidata viene mantenuta isolata, per evitare potenziali anomalie di dati o stato.</span><span class="sxs-lookup"><span data-stu-id="cd24b-183">This keeps each instance of the wizard isolated, thereby avoiding potential data or state anomalies.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Controls.Page>   
- <xref:System.Windows.Navigation.PageFunction%601>   
- <xref:System.Windows.Navigation.NavigationService>   
- [Cenni preliminari sulla navigazione strutturata](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="cd24b-184">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cd24b-184">See Also</span></span>  
+ <xref:System.Windows.Controls.Page>  
+ <xref:System.Windows.Navigation.PageFunction%601>  
+ <xref:System.Windows.Navigation.NavigationService>  
+ [<span data-ttu-id="cd24b-185">Cenni preliminari sulla navigazione strutturata</span><span class="sxs-lookup"><span data-stu-id="cd24b-185">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)

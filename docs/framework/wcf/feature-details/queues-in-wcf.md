@@ -1,75 +1,77 @@
 ---
-title: "Code in Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Code [WCF]"
+title: Code in Windows Communication Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 279f6094b7e41549a285ac0175c3f949f9d8e7e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Code in Windows Communication Foundation
-Negli argomenti di questa sezione viene descritto il supporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per le code.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce il supporto per l'accodamento basato sul sistema di Accodamento messaggi Microsoft \(precedentemente noto come MSMQ\) come trasporto e consente gli scenari seguenti:  
+# <a name="queues-in-windows-communication-foundation"></a><span data-ttu-id="9a988-102">Code in Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="9a988-102">Queues in Windows Communication Foundation</span></span>
+<span data-ttu-id="9a988-103">Negli argomenti di questa sezione viene descritto il supporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per le code.</span><span class="sxs-lookup"><span data-stu-id="9a988-103">The topics in this section discuss [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] support for queues.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="9a988-104"> fornisce il supporto per l'accodamento basato sul sistema di Accodamento messaggi Microsoft (precedentemente noto come MSMQ) come trasporto e consente gli scenari seguenti:</span><span class="sxs-lookup"><span data-stu-id="9a988-104"> provides support for queuing by leveraging Microsoft Message Queuing (previously known as MSMQ) as a transport and enables the following scenarios:</span></span>  
   
--   Applicazioni a regime di controllo libero.Le applicazioni di invio possono inviare messaggi alle code senza che sia necessario sapere se l'applicazione ricevente è disponibile per l'elaborazione del messaggio.La coda fornisce un'indipendenza di elaborazione che consente a un'applicazione di invio di inviare messaggi alla coda a una velocità indipendente da quella di elaborazione dei messaggi da parte delle applicazioni riceventi.La disponibilità complessiva del sistema aumenta quando l'invio di messaggi a una coda non è strettamente associato all'elaborazione dei messaggi.  
+-   <span data-ttu-id="9a988-105">Applicazioni a regime di controllo libero.</span><span class="sxs-lookup"><span data-stu-id="9a988-105">Loosely coupled applications.</span></span> <span data-ttu-id="9a988-106">Le applicazioni di invio possono inviare messaggi alle code senza che sia necessario sapere se l'applicazione ricevente è disponibile per l'elaborazione del messaggio.</span><span class="sxs-lookup"><span data-stu-id="9a988-106">Sending applications can send messages to queues without needing to know whether the receiving application is available to process the message.</span></span> <span data-ttu-id="9a988-107">La coda fornisce un'indipendenza di elaborazione che consente a un'applicazione di invio di inviare messaggi alla coda a una velocità indipendente da quella di elaborazione dei messaggi da parte delle applicazioni riceventi.</span><span class="sxs-lookup"><span data-stu-id="9a988-107">The queue provides processing independence that allows a sending application to send messages to the queue at a rate that does not depend on how fast the receiving applications can process the messages.</span></span> <span data-ttu-id="9a988-108">La disponibilità complessiva del sistema aumenta quando l'invio di messaggi a una coda non è strettamente associato all'elaborazione dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="9a988-108">Overall system availability increases when sending messages to a queue is not tightly coupled to message processing.</span></span>  
   
--   Isolamento degli errori.È possibile che le applicazioni di invio o di ricezione di messaggi da una coda non vengano eseguite senza influire l'una sull'altra.Se, ad esempio, l'applicazione ricevente non viene eseguita, l'applicazione di invio può continuare a inviare messaggi alla coda.Quando l'applicazione ricevente è nuovamente disponibile, sarà in grado di elaborare i messaggi provenienti dalla coda.L'isolamento degli errori aumenta l'affidabilità e la disponibilità complessive del sistema.  
+-   <span data-ttu-id="9a988-109">Isolamento degli errori.</span><span class="sxs-lookup"><span data-stu-id="9a988-109">Failure isolation.</span></span> <span data-ttu-id="9a988-110">È possibile che le applicazioni di invio o di ricezione di messaggi da una coda non vengano eseguite senza influire l'una sull'altra.</span><span class="sxs-lookup"><span data-stu-id="9a988-110">Applications sending or receiving messages to a queue can fail without affecting each other.</span></span> <span data-ttu-id="9a988-111">Se, ad esempio, l'applicazione ricevente non viene eseguita, l'applicazione di invio può continuare a inviare messaggi alla coda.</span><span class="sxs-lookup"><span data-stu-id="9a988-111">If, for example, the receiving application fails, the sending application can continue to send messages to the queue.</span></span> <span data-ttu-id="9a988-112">Quando l'applicazione ricevente è nuovamente disponibile, sarà in grado di elaborare i messaggi provenienti dalla coda.</span><span class="sxs-lookup"><span data-stu-id="9a988-112">When the receiver is up again, it can process the messages from the queue.</span></span> <span data-ttu-id="9a988-113">L'isolamento degli errori aumenta l'affidabilità e la disponibilità complessive del sistema.</span><span class="sxs-lookup"><span data-stu-id="9a988-113">Failure isolation increases the overall system reliability and availability.</span></span>  
   
--   Distribuzione ottimale dei carichi.Le applicazioni di invio possono sovraccaricare di messaggi le applicazioni riceventi.Le code possono gestire un livello di produzione e di consumo eccessivi di messaggi non corrispondenti al fine di evitare che il destinatario venga sovraccaricato.  
+-   <span data-ttu-id="9a988-114">Distribuzione ottimale dei carichi.</span><span class="sxs-lookup"><span data-stu-id="9a988-114">Load leveling.</span></span> <span data-ttu-id="9a988-115">Le applicazioni di invio possono sovraccaricare di messaggi le applicazioni riceventi.</span><span class="sxs-lookup"><span data-stu-id="9a988-115">Sending applications can overwhelm receiving applications with messages.</span></span> <span data-ttu-id="9a988-116">Le code possono gestire un livello di produzione e di consumo eccessivi di messaggi non corrispondenti al fine di evitare che il destinatario venga sovraccaricato.</span><span class="sxs-lookup"><span data-stu-id="9a988-116">Queues can manage mismatched message production and consumption rates so that a receiver is not overwhelmed.</span></span>  
   
--   Operazioni disconnesse.Le operazioni di invio, ricezione ed elaborazione possono venire disconnesse durante la comunicazione tramite reti con latenza elevata o con disponibilità limitata, ad esempio nel caso di dispositivi mobili.Le code consentono la continuazione di queste operazioni, anche quando gli endpoint sono disconnessi.Quando la connessione viene ristabilita, la coda inoltra i messaggi all'applicazione ricevente.  
+-   <span data-ttu-id="9a988-117">Operazioni disconnesse.</span><span class="sxs-lookup"><span data-stu-id="9a988-117">Disconnected operations.</span></span> <span data-ttu-id="9a988-118">Le operazioni di invio, ricezione ed elaborazione possono venire disconnesse durante la comunicazione tramite reti con latenza elevata o con disponibilità limitata, ad esempio nel caso di dispositivi mobili.</span><span class="sxs-lookup"><span data-stu-id="9a988-118">Sending, receiving, and processing operations can become disconnected when communicating over high-latency networks or limited-availability networks, such as in the case of mobile devices.</span></span> <span data-ttu-id="9a988-119">Le code consentono la continuazione di queste operazioni, anche quando gli endpoint sono disconnessi.</span><span class="sxs-lookup"><span data-stu-id="9a988-119">Queues allow these operations to continue, even when the endpoints are disconnected.</span></span> <span data-ttu-id="9a988-120">Quando la connessione viene ristabilita, la coda inoltra i messaggi all'applicazione ricevente.</span><span class="sxs-lookup"><span data-stu-id="9a988-120">When the connection is reestablished, the queue forwards messages to the receiving application.</span></span>  
   
- Per utilizzare la funzionalità delle code in un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile utilizzare una delle associazioni standard o crearne una personalizzata se una di quelle standard non soddisfa i requisiti.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] associazioni standard pertinenti e su come sceglierne una, vedere [Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] creazione di associazioni personalizzate, vedere [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ <span data-ttu-id="9a988-121">Per utilizzare la funzionalità delle code in un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile utilizzare una delle associazioni standard o crearne una personalizzata se una di quelle standard non soddisfa i requisiti.</span><span class="sxs-lookup"><span data-stu-id="9a988-121">To use the queues feature in a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, you can use one of the standard bindings, or you can create a custom binding if one of the standard bindings does not satisfy your requirements.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9a988-122">associazioni standard rilevanti e sulla scelta di uno, vedere [come: messaggi di Exchange con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).</span><span class="sxs-lookup"><span data-stu-id="9a988-122"> relevant standard bindings and how to choose one, see [How to: Exchange Messages with WCF Endpoints and Message Queuing Applications](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9a988-123">creazione di associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="9a988-123"> creating custom bindings, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
-## In questa sezione  
- [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- Panoramica dei concetti di accodamento dei messaggi.  
+## <a name="in-this-section"></a><span data-ttu-id="9a988-124">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="9a988-124">In This Section</span></span>  
+ [<span data-ttu-id="9a988-125">Panoramica delle code</span><span class="sxs-lookup"><span data-stu-id="9a988-125">Queues Overview</span></span>](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ <span data-ttu-id="9a988-126">Panoramica dei concetti di accodamento dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="9a988-126">An overview of message queuing concepts.</span></span>  
   
- [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- Panoramica del supporto della coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="9a988-127">Accodamento messaggi in WCF</span><span class="sxs-lookup"><span data-stu-id="9a988-127">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ <span data-ttu-id="9a988-128">Panoramica del supporto della coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9a988-128">An overview of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queue support.</span></span>  
   
- [Procedura: scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Spiega come utilizzare la classe <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione tra un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="9a988-129">Procedura: scambiare messaggi con endpoint WCF in coda</span><span class="sxs-lookup"><span data-stu-id="9a988-129">How to: Exchange Queued Messages with WCF Endpoints</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ <span data-ttu-id="9a988-130">Spiega come utilizzare la classe <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione tra un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9a988-130">Explains how to use the <xref:System.ServiceModel.NetMsmqBinding> class to communicate between a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Spiega come utilizzare <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> per la comunicazione tra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e le applicazioni di Accodamento messaggi.  
+ [<span data-ttu-id="9a988-131">Procedura: scambiare messaggi con endpoint WCF e applicazioni di accodamento dei messaggi</span><span class="sxs-lookup"><span data-stu-id="9a988-131">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ <span data-ttu-id="9a988-132">Spiega come utilizzare <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> per la comunicazione tra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e le applicazioni di Accodamento messaggi.</span><span class="sxs-lookup"><span data-stu-id="9a988-132">Explains how to use the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> to communicate between [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and Message Queuing applications.</span></span>  
   
- [Raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- Spiega come raggruppare messaggi in una coda per agevolare l'elaborazione di messaggi correlati da parte di un'unica applicazione ricevente.  
+ [<span data-ttu-id="9a988-133">Raggruppamento dei messaggi in coda in una sessione</span><span class="sxs-lookup"><span data-stu-id="9a988-133">Grouping Queued Messages in a Session</span></span>](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ <span data-ttu-id="9a988-134">Spiega come raggruppare messaggi in una coda per agevolare l'elaborazione di messaggi correlati da parte di un'unica applicazione ricevente.</span><span class="sxs-lookup"><span data-stu-id="9a988-134">Explains how to group messages in a queue to facilitate correlated message processing by a single receiving application.</span></span>  
   
- [Raggruppamento di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- Spiega come raggruppare messaggi in una transazione.  
+ [<span data-ttu-id="9a988-135">Raggruppamento di messaggi in una transazione</span><span class="sxs-lookup"><span data-stu-id="9a988-135">Batching Messages in a Transaction</span></span>](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ <span data-ttu-id="9a988-136">Spiega come raggruppare messaggi in una transazione.</span><span class="sxs-lookup"><span data-stu-id="9a988-136">Explains how to batch messages in a transaction.</span></span>  
   
- [Utilizzo di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- Spiega come gestire il trasferimento dei messaggi e gli errori di recapito utilizzando le code di messaggi non recapitabili. Spiega inoltre come elaborare messaggi dalla coda di messaggi non recapitabili.  
+ [<span data-ttu-id="9a988-137">Utilizzo delle code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi</span><span class="sxs-lookup"><span data-stu-id="9a988-137">Using Dead-Letter Queues to Handle Message Transfer Failures</span></span>](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ <span data-ttu-id="9a988-138">Spiega come gestire il trasferimento dei messaggi e gli errori di recapito utilizzando le code di messaggi non recapitabili. Spiega inoltre come elaborare messaggi dalla coda di messaggi non recapitabili.</span><span class="sxs-lookup"><span data-stu-id="9a988-138">Explains how to handle message transfer and delivery failures using dead letter queues and how to process messages from the dead letter queue.</span></span>  
   
- [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- Spiega come gestire messaggi non elaborabili, ovvero messaggi che hanno superato il numero massimo di tentativi di recapito all'applicazione ricevente.  
+ [<span data-ttu-id="9a988-139">Gestione dei messaggi non elaborabili</span><span class="sxs-lookup"><span data-stu-id="9a988-139">Poison Message Handling</span></span>](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
+ <span data-ttu-id="9a988-140">Spiega come gestire messaggi non elaborabili, ovvero messaggi che hanno superato il numero massimo di tentativi di recapito all'applicazione ricevente.</span><span class="sxs-lookup"><span data-stu-id="9a988-140">Explains how to handle poison messages (messages that have exceeded the maximum number of delivery attempts to the receiving application).</span></span>  
   
- [Differenze nelle funzionalità di accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Riepiloga le differenze nella funzionalità di accodamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tra [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ [<span data-ttu-id="9a988-141">Differenze nelle funzionalità di Accodamento in Windows Vista, Windows Server 2003 e Windows XP</span><span class="sxs-lookup"><span data-stu-id="9a988-141">Differences in Queuing Features in Windows Vista, Windows Server 2003, and Windows XP</span></span>](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ <span data-ttu-id="9a988-142">Riepiloga le differenze nella funzionalità di accodamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tra [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9a988-142">Summarizes the differences in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queues feature between [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  
   
- [Protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- Descrive come utilizzare la protezione del trasporto per proteggere messaggi in coda.  
+ [<span data-ttu-id="9a988-143">Protezione dei messaggi mediante protezione del trasporto</span><span class="sxs-lookup"><span data-stu-id="9a988-143">Securing Messages Using Transport Security</span></span>](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ <span data-ttu-id="9a988-144">Descrive come utilizzare la protezione del trasporto per proteggere messaggi in coda.</span><span class="sxs-lookup"><span data-stu-id="9a988-144">Describes how to use transport security to secure queued messages.</span></span>  
   
- [Protezione dei messaggi mediante protezione a livello di messaggio](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- Descrive come utilizzare la protezione dei messaggi per proteggere messaggi in coda.  
+ [<span data-ttu-id="9a988-145">Protezione dei messaggi mediante la sicurezza dei messaggi</span><span class="sxs-lookup"><span data-stu-id="9a988-145">Securing Messages Using Message Security</span></span>](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ <span data-ttu-id="9a988-146">Descrive come utilizzare la protezione dei messaggi per proteggere messaggi in coda.</span><span class="sxs-lookup"><span data-stu-id="9a988-146">Describes how to use message security to secure queued messages.</span></span>  
   
- [Risoluzione dei problemi relativi ai messaggi in coda](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
- Spiega come risolvere problemi di accodamento comuni.  
+ [<span data-ttu-id="9a988-147">Risoluzione dei problemi di messaggistica in coda</span><span class="sxs-lookup"><span data-stu-id="9a988-147">Troubleshooting Queued Messaging</span></span>](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
+ <span data-ttu-id="9a988-148">Spiega come risolvere problemi di accodamento comuni.</span><span class="sxs-lookup"><span data-stu-id="9a988-148">Explains how to troubleshoot common queuing problems.</span></span>  
   
- [Procedure consigliate per comunicazioni in coda](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Spiega le procedure consigliate per l'utilizzo delle comunicazioni in coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="9a988-149">Procedure consigliate per la comunicazione in coda</span><span class="sxs-lookup"><span data-stu-id="9a988-149">Best Practices for Queued Communication</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
+ <span data-ttu-id="9a988-150">Spiega le procedure consigliate per l'utilizzo delle comunicazioni in coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9a988-150">Explains best practices for using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queued communication.</span></span>  
   
-## Vedere anche  
- [Message Queuing](http://msdn.microsoft.com/it-it/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a><span data-ttu-id="9a988-151">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a988-151">See Also</span></span>  
+ [<span data-ttu-id="9a988-152">Accodamento messaggi</span><span class="sxs-lookup"><span data-stu-id="9a988-152">Message Queuing</span></span>](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)

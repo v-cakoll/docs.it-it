@@ -1,42 +1,44 @@
 ---
-title: "Procedura: utilizzare un layout automatico per creare un pulsante | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "layout automatico, creazione di pulsanti"
-  - "Button (controlli), creazione con layout automatico"
-  - "creazione, pulsanti con layout automatico"
+title: 'Procedura: Usare un layout automatico per creare un pulsante'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Button controls [WPF], creating with automatic layout
+- automatic layout [WPF], creating buttons
 ms.assetid: 96c206d0-9e77-4784-9d2d-5045aed2021c
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d55dc1330c21e7eb9f7cfd7f554234dccd6f274
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare un layout automatico per creare un pulsante
-Nell'esempio viene descritto come utilizzare un approccio basato sul layout automatico per la creazione di un pulsante in un'applicazione localizzabile.  
+# <a name="how-to-use-automatic-layout-to-create-a-button"></a><span data-ttu-id="cec22-102">Procedura: Usare un layout automatico per creare un pulsante</span><span class="sxs-lookup"><span data-stu-id="cec22-102">How to: Use Automatic Layout to Create a Button</span></span>
+<span data-ttu-id="cec22-103">Questo esempio descrive come usare un approccio basato sul layout automatico per la creazione di un pulsante in un'applicazione localizzabile.</span><span class="sxs-lookup"><span data-stu-id="cec22-103">This example describes how to use the automatic layout approach to create a button in a localizable application.</span></span>  
   
- La localizzazione di un'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] può richiedere molto tempo.  Spesso sono necessari il ridimensionamento e il riposizionamento degli elementi, oltre alla traduzione del testo.  In passato ogni lingua per la quale un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] veniva adattata richiedeva delle modifiche.  Ora, le funzionalità di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consentono di progettare elementi che riducono l'esigenza di modifiche.  L'approccio alla scrittura di applicazioni che è possibile ridimensionare e riposizionare con maggiore semplicità viene definito `automatic layout`.  
+ <span data-ttu-id="cec22-104">Localizzazione di un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] può richiedere molto tempo.</span><span class="sxs-lookup"><span data-stu-id="cec22-104">Localization of a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] can be a time consuming process.</span></span> <span data-ttu-id="cec22-105">Spesso sono necessari il ridimensionamento e il riposizionamento degli elementi, oltre alla traduzione del testo.</span><span class="sxs-lookup"><span data-stu-id="cec22-105">Often localizers need to resize and reposition elements in addition to translating text.</span></span> <span data-ttu-id="cec22-106">In passato ogni lingua che un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] è stato adattato per la regolazione obbligatoria.</span><span class="sxs-lookup"><span data-stu-id="cec22-106">In the past each language that a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] was adapted for required adjustment.</span></span> <span data-ttu-id="cec22-107">Ora con le funzionalità di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è possibile progettare gli elementi che riducono l'esigenza di modifiche.</span><span class="sxs-lookup"><span data-stu-id="cec22-107">Now with the capabilities of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] you can design elements that reduce the need for adjustment.</span></span> <span data-ttu-id="cec22-108">Viene chiamato l'approccio alla scrittura di applicazioni che possono essere più facilmente ridimensionare e riposizionare `automatic layout`.</span><span class="sxs-lookup"><span data-stu-id="cec22-108">The approach to writing applications that can be more easily resized and repositioned is called `automatic layout`.</span></span>  
   
- I due esempi [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] riportati di seguito consentono di creare applicazioni che creano un'istanza di un pulsante, uno con il testo in inglese e uno con il testo in spagnolo.  Il codice è uguale a eccezione del testo. Il pulsante si regola per adattarsi al testo.  
+ <span data-ttu-id="cec22-109">I seguenti due [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] esempi di creano applicazioni che creano un pulsante, uno con testo in lingua inglese e uno con del testo in spagnolo.</span><span class="sxs-lookup"><span data-stu-id="cec22-109">The following two [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] examples create applications that instantiate a button; one with English text and one with Spanish text.</span></span> <span data-ttu-id="cec22-110">Il codice è lo stesso ad eccezione del testo. Il pulsante si regola per adattarsi al testo.</span><span class="sxs-lookup"><span data-stu-id="cec22-110">Notice that the code is the same except for the text; the button adjusts to fit the text.</span></span>  
   
-## Esempio  
- [!code-xml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+## <a name="example"></a><span data-ttu-id="cec22-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="cec22-111">Example</span></span>  
+ [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- [!code-xml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
- Nell'immagine riportata di seguito viene illustrato l'output degli esempi di codice.  
+ <span data-ttu-id="cec22-112">La figura seguente mostra l'output degli esempi di codice.</span><span class="sxs-lookup"><span data-stu-id="cec22-112">The following graphic shows the output of the code samples.</span></span>  
   
- ![Lo stesso pulsante con testo in lingue diverse](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
-Pulsante a ridimensionamento automatico  
+ <span data-ttu-id="cec22-113">![Lo stesso pulsante con testo in lingue diverse](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")</span><span class="sxs-lookup"><span data-stu-id="cec22-113">![The same button with text in different languages](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")</span></span>  
+<span data-ttu-id="cec22-114">Pulsante a ridimensionamento automatico</span><span class="sxs-lookup"><span data-stu-id="cec22-114">Auto Resizable Button</span></span>  
   
-## Vedere anche  
- [Cenni preliminari sull'utilizzo del layout automatico](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)   
- [Utilizzare una griglia per il layout automatico](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+## <a name="see-also"></a><span data-ttu-id="cec22-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cec22-115">See Also</span></span>  
+ [<span data-ttu-id="cec22-116">Cenni preliminari sull'utilizzo del layout automatico</span><span class="sxs-lookup"><span data-stu-id="cec22-116">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
+ [<span data-ttu-id="cec22-117">Usare una griglia per il layout automatico</span><span class="sxs-lookup"><span data-stu-id="cec22-117">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

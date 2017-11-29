@@ -1,95 +1,99 @@
 ---
-title: "Procedura: garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "memorizzazione nella cache [.NET Framework], elementi figlio (posizione)"
-  - "elementi figlio (posizione)"
-  - "tabelle figlio (selezione di riga)"
-  - "posizione corrente di elementi figlio"
-  - "associazione dati [.NET Framework], selezione di righe"
-  - "Master-Details (visualizzazione) [Windows Form]"
-  - "visualizzazione Master-Details"
-  - "padre-figlio (visualizzazione) [Windows Form]"
-  - "reimpostazione della posizione di elementi figlio"
-  - "posizione della riga [Windows Form]"
+title: 'Procedura: garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- master-details view
+- row position [Windows Forms]
+- parent/child view [Windows Forms]
+- resetting child position
+- data binding [.NET Framework], row selection
+- caching [.NET Framework], child position
+- child position
+- master/details view [Windows Forms]
+- child tables row selection
+- current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e050a3e5d3207f883be915aa6f00d527023f561e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta
-Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in una visualizzazione denominata padre\/figlio o master\/dettagli  Si tratta di uno scenario di data binding in cui i dati provenienti dalla stessa origine vengono visualizzati in due controlli.  Se si modifica la selezione in un controllo, automaticamente vengono modificati anche i dati visualizzati nel secondo controllo.  Ad esempio, il primo controllo può contenere un elenco di clienti e il secondo un elenco di ordini correlati al cliente selezionato nel primo controllo.  
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a><span data-ttu-id="8c125-102">Procedura: garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta</span><span class="sxs-lookup"><span data-stu-id="8c125-102">How to: Ensure the Selected Row in a Child Table Remains at the Correct Position</span></span>
+<span data-ttu-id="8c125-103">Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in una visualizzazione denominata padre/figlio o master/dettagli</span><span class="sxs-lookup"><span data-stu-id="8c125-103">Oftentimes when you work with data binding in Windows Forms, you will display data in what is called a parent/child or master/details view.</span></span> <span data-ttu-id="8c125-104">Si tratta di uno scenario di data binding in cui i dati provenienti dalla stessa origine vengono visualizzati in due controlli.</span><span class="sxs-lookup"><span data-stu-id="8c125-104">This refers to a data-binding scenario where data from the same source is displayed in two controls.</span></span> <span data-ttu-id="8c125-105">Se si modifica la selezione in un controllo, automaticamente vengono modificati anche i dati visualizzati nel secondo controllo.</span><span class="sxs-lookup"><span data-stu-id="8c125-105">Changing the selection in one control causes the data displayed in the second control to change.</span></span> <span data-ttu-id="8c125-106">Ad esempio, il primo controllo può contenere un elenco di clienti e il secondo un elenco di ordini correlati al cliente selezionato nel primo controllo.</span><span class="sxs-lookup"><span data-stu-id="8c125-106">For example, the first control might contain a list of customers and the second a list of orders related to the selected customer in the first control.</span></span>  
   
- A partire da .NET Framework versione 2.0, quando si visualizzano i dati in una visualizzazione padre\/figlio può essere necessario effettuare alcuni passaggi aggiuntivi per assicurarsi che la riga attualmente selezionata nella tabella figlio non venga reimpostata sulla prima riga della tabella.  A tale scopo, è necessario memorizzare nella cache la posizione della tabella figlio e reimpostarla dopo aver modificato la tabella padre.  In genere, la tabella figlio viene reimpostata la prima volta che si modifica un campo in una riga della tabella padre.  
+ <span data-ttu-id="8c125-107">A partire da .NET Framework versione 2.0, quando si visualizzano i dati in una visualizzazione padre/figlio può essere necessario effettuare alcuni passaggi aggiuntivi per assicurarsi che la riga attualmente selezionata nella tabella figlio non venga reimpostata sulla prima riga della tabella.</span><span class="sxs-lookup"><span data-stu-id="8c125-107">Starting with the .NET Framework version 2.0, when you display data in a parent/child view you might have to take extra steps to make sure that the currently selected row in the child table is not reset to the first row of the table.</span></span> <span data-ttu-id="8c125-108">A tale scopo, è necessario memorizzare nella cache la posizione della tabella figlio e reimpostarla dopo aver modificato la tabella padre.</span><span class="sxs-lookup"><span data-stu-id="8c125-108">In order to do this, you will have to cache the child table position and reset it after the parent table changes.</span></span> <span data-ttu-id="8c125-109">In genere, la tabella figlio viene reimpostata la prima volta che si modifica un campo in una riga della tabella padre.</span><span class="sxs-lookup"><span data-stu-id="8c125-109">Typically the child reset occurs the first time a field in a row of the parent table changes.</span></span>  
   
-### Per memorizzare nella cache la posizione corrente della tabella figlio  
+### <a name="to-cache-the-current-child-position"></a><span data-ttu-id="8c125-110">Per memorizzare nella cache la posizione corrente della tabella figlio</span><span class="sxs-lookup"><span data-stu-id="8c125-110">To Cache the Current Child Position</span></span>  
   
-1.  Dichiarare una variabile Integer per archiviare la posizione dell'elenco figlio e una variabile booleana per archiviare se memorizzare nella cache la posizione della tabella figlio.  
+1.  <span data-ttu-id="8c125-111">Dichiarare una variabile Integer per archiviare la posizione dell'elenco figlio e una variabile booleana per archiviare se memorizzare nella cache la posizione della tabella figlio.</span><span class="sxs-lookup"><span data-stu-id="8c125-111">Declare an integer variable to store the child list position and a Boolean variable to store whether to cache the child position.</span></span>  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Gestire l'evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> del binding e individuare un oggetto <xref:System.ComponentModel.ListChangedType> di <xref:System.ComponentModel.ListChangedType>.  
+2.  <span data-ttu-id="8c125-112">Gestire l'evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> del binding e individuare un oggetto <xref:System.ComponentModel.ListChangedType> di <xref:System.ComponentModel.ListChangedType.Reset>.</span><span class="sxs-lookup"><span data-stu-id="8c125-112">Handle the <xref:System.Windows.Forms.CurrencyManager.ListChanged> event for the binding's <xref:System.Windows.Forms.CurrencyManager> and check for a <xref:System.ComponentModel.ListChangedType> of <xref:System.ComponentModel.ListChangedType.Reset>.</span></span>  
   
-3.  Controllare la posizione corrente dell'oggetto <xref:System.Windows.Forms.CurrencyManager>.  Se è maggiore del primo elemento dell'elenco, in genere 0, salvarlo in una variabile.  
+3.  <span data-ttu-id="8c125-113">Controllare la posizione corrente dell'oggetto <xref:System.Windows.Forms.CurrencyManager>.</span><span class="sxs-lookup"><span data-stu-id="8c125-113">Check the current position of the <xref:System.Windows.Forms.CurrencyManager>.</span></span> <span data-ttu-id="8c125-114">Se è maggiore del primo elemento dell'elenco, in genere 0, salvarlo in una variabile.</span><span class="sxs-lookup"><span data-stu-id="8c125-114">If it is greater than first entry in the list (typically 0), save it to a variable.</span></span>  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  Gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> dell'elenco padre per l'oggetto CurrencyManager padre.  Nel gestore impostare il valore booleano per indicare che non si tratta di uno scenario di memorizzazione nella cache.  Se si verifica l'evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>, la modifica all'elemento padre sarà una modifica alla posizione dell'elenco e non una modifica al valore dell'elemento.  
+4.  <span data-ttu-id="8c125-115">Gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> dell'elenco padre per l'oggetto CurrencyManager padre.</span><span class="sxs-lookup"><span data-stu-id="8c125-115">Handle the parent list's <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> event for the parent currency manager.</span></span> <span data-ttu-id="8c125-116">Nel gestore impostare il valore booleano per indicare che non si tratta di uno scenario di memorizzazione nella cache.</span><span class="sxs-lookup"><span data-stu-id="8c125-116">In the handler, set the Boolean value to indicate it is not a caching scenario.</span></span> <span data-ttu-id="8c125-117">Se si verifica l'evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>, la modifica all'elemento padre sarà una modifica alla posizione dell'elenco e non una modifica al valore dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="8c125-117">If the <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> occurs, the change to the parent is a list position change and not an item value change.</span></span>  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
-### Per reimpostare la posizione dell'elemento figlio  
+### <a name="to-reset-the-child-position"></a><span data-ttu-id="8c125-118">Per reimpostare la posizione dell'elemento figlio</span><span class="sxs-lookup"><span data-stu-id="8c125-118">To Reset the Child Position</span></span>  
   
-1.  Gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> del binding figlio.  
+1.  <span data-ttu-id="8c125-119">Gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> del binding figlio.</span><span class="sxs-lookup"><span data-stu-id="8c125-119">Handle the <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> event for the child binding's <xref:System.Windows.Forms.CurrencyManager>.</span></span>  
   
-2.  Reimpostare la posizione della tabella figlio sulla posizione memorizzata nella cache salvata nella procedura precedente.  
+2.  <span data-ttu-id="8c125-120">Reimpostare la posizione della tabella figlio sulla posizione memorizzata nella cache salvata nella procedura precedente.</span><span class="sxs-lookup"><span data-stu-id="8c125-120">Reset the child table position to the cached position saved in the previous procedure.</span></span>  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
   
-## Esempio  
- L'esempio seguente illustra come salvare la posizione corrente nell'oggetto <xref:System.Windows.Forms.CurrencyManager> per una tabella figlio e reimpostare la posizione dopo aver effettuato una modifica nella tabella padre.  In questo esempio sono presenti due controlli <xref:System.Windows.Forms.DataGridView> associati a due tabelle in un oggetto <xref:System.Data.DataSet> mediante un componente <xref:System.Windows.Forms.BindingSource>.  Tra le due tabelle viene stabilita una relazione, che viene aggiunta all'oggetto <xref:System.Data.DataSet>.  La posizione nella tabella figlio viene impostata inizialmente sulla terza riga a mero scopo esemplificativo.  
+## <a name="example"></a><span data-ttu-id="8c125-121">Esempio</span><span class="sxs-lookup"><span data-stu-id="8c125-121">Example</span></span>  
+ <span data-ttu-id="8c125-122">L'esempio seguente illustra come salvare la posizione corrente nell'oggetto <xref:System.Windows.Forms.CurrencyManager> per una tabella figlio e reimpostare la posizione dopo aver effettuato una modifica nella tabella padre.</span><span class="sxs-lookup"><span data-stu-id="8c125-122">The following example demonstrates how to save the current position on the <xref:System.Windows.Forms.CurrencyManager>.for a child table and reset the position after an edit is completed on the parent table.</span></span> <span data-ttu-id="8c125-123">In questo esempio sono presenti due controlli <xref:System.Windows.Forms.DataGridView> associati a due tabelle in un oggetto <xref:System.Data.DataSet> mediante un componente <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="8c125-123">This example contains two <xref:System.Windows.Forms.DataGridView> controls bound to two tables in a <xref:System.Data.DataSet> using a <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="8c125-124">Tra le due tabelle viene stabilita una relazione, che viene aggiunta all'oggetto <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="8c125-124">A relation is established between the two tables and the relation is added to the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="8c125-125">La posizione nella tabella figlio viene impostata inizialmente sulla terza riga a mero scopo esemplificativo.</span><span class="sxs-lookup"><span data-stu-id="8c125-125">The position in the child table is initially set to the third row for demonstration purposes.</span></span>  
   
  [!code-csharp[System.Windows.Forms.CurrencyManagerReset#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.CurrencyManagerReset#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#1)]  
   
- Per testare l'esempio di codice, eseguire la procedura seguente:  
+ <span data-ttu-id="8c125-126">Per testare l'esempio di codice, eseguire la procedura seguente:</span><span class="sxs-lookup"><span data-stu-id="8c125-126">To test the code example, perform the following steps:</span></span>  
   
-1.  Eseguire l'esempio.  
+1.  <span data-ttu-id="8c125-127">Eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="8c125-127">Run the example.</span></span>  
   
-2.  Verificare che la casella di controllo **Memorizza nella cache e reimposta posizione** sia selezionata.  
+2.  <span data-ttu-id="8c125-128">Verificare che la casella di controllo **Memorizza nella cache e reimposta posizione** sia selezionata.</span><span class="sxs-lookup"><span data-stu-id="8c125-128">Make sure the **Cache and reset position** check box is selected.</span></span>  
   
-3.  Fare clic sul pulsante **Cancella campo padre** per provocare una modifica in un campo della tabella padre.  Notare che la riga selezionata nella tabella figlio non cambia.  
+3.  <span data-ttu-id="8c125-129">Fare clic sul pulsante **Cancella campo padre** per provocare una modifica in un campo della tabella padre.</span><span class="sxs-lookup"><span data-stu-id="8c125-129">Click the **Clear parent field** button to cause a change in a field of the parent table.</span></span> <span data-ttu-id="8c125-130">Notare che la riga selezionata nella tabella figlio non cambia.</span><span class="sxs-lookup"><span data-stu-id="8c125-130">Notice that the selected row in the child table does not change.</span></span>  
   
-4.  Chiudere ed eseguire nuovamente l'esempio.  È necessario eseguire questa procedura perché la reimpostazione si verifica solo in seguito alla prima modifica nella riga padre.  
+4.  <span data-ttu-id="8c125-131">Chiudere ed eseguire nuovamente l'esempio.</span><span class="sxs-lookup"><span data-stu-id="8c125-131">Close and run the example again.</span></span> <span data-ttu-id="8c125-132">È necessario eseguire questa procedura perché la reimpostazione si verifica solo in seguito alla prima modifica nella riga padre.</span><span class="sxs-lookup"><span data-stu-id="8c125-132">You need to do this because the reset behavior occurs only on the first change in the parent row.</span></span>  
   
-5.  Deselezionare la casella di controllo **Memorizza nella cache e reimposta posizione**.  
+5.  <span data-ttu-id="8c125-133">Deselezionare la casella di controllo **Memorizza nella cache e reimposta posizione**.</span><span class="sxs-lookup"><span data-stu-id="8c125-133">Clear the **Cache and reset position** check box.</span></span>  
   
-6.  Fare clic sul pulsante **Cancella campo padre**.  Notare che la riga selezionata nella tabella figlio diventa la prima riga.  
+6.  <span data-ttu-id="8c125-134">Fare clic sul pulsante **Cancella campo padre**.</span><span class="sxs-lookup"><span data-stu-id="8c125-134">Click the **Clear parent field** button.</span></span> <span data-ttu-id="8c125-135">Notare che la riga selezionata nella tabella figlio diventa la prima riga.</span><span class="sxs-lookup"><span data-stu-id="8c125-135">Notice that the selected row in the child table changes to the first row.</span></span>  
   
-## Compilazione del codice  
- L'esempio presenta i requisiti seguenti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="8c125-136">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="8c125-136">Compiling the Code</span></span>  
+ <span data-ttu-id="8c125-137">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="8c125-137">This example requires:</span></span>  
   
--   Riferimenti agli assembly System, System.Data, System.Drawing, System.Windows.Forms e System.XML.  
+-   <span data-ttu-id="8c125-138">Riferimenti agli assembly System, System.Data, System.Drawing, System.Windows.Forms e System.XML.</span><span class="sxs-lookup"><span data-stu-id="8c125-138">References to the System, System.Data, System.Drawing, System.Windows.Forms, and System.XML assemblies.</span></span>  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [Compilazione dalla riga di comando con csc.exe](../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="8c125-139">Per informazioni su come compilare questo esempio dalla riga di comando per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="8c125-139">For information about how to build this example from the command line for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="8c125-140">È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.</span><span class="sxs-lookup"><span data-stu-id="8c125-140">You can also build this example in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="8c125-141">Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Forms completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="8c125-141">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## Vedere anche  
- [Procedura: garantire la sincronizzazione di più controlli associati alla stessa origine dati](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)   
- [Il componente BindingSource](../../../docs/framework/winforms/controls/bindingsource-component.md)   
- [Associazione dati e Windows Form](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8c125-142">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8c125-142">See Also</span></span>  
+ [<span data-ttu-id="8c125-143">Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati</span><span class="sxs-lookup"><span data-stu-id="8c125-143">How to: Ensure Multiple Controls Bound to the Same Data Source Remain Synchronized</span></span>](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ [<span data-ttu-id="8c125-144">Componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="8c125-144">BindingSource Component</span></span>](../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [<span data-ttu-id="8c125-145">Data binding e Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8c125-145">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

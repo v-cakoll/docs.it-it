@@ -1,48 +1,53 @@
 ---
-title: "Procedura: creare elenchi Master-Details con il controllo DataGrid Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid (controllo) [Windows Form], Master-Details (elenchi)"
-  - "Master-Details (elenchi)"
-  - "tabelle correlate, visualizzazione nel controllo DataGrid"
+title: 'Procedura: creare elenchi Master-Details con il controllo DataGrid Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- master-details lists
+- DataGrid control [Windows Forms], master-details lists
+- related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63cb647e2ed6dcbc97fab15db3166b55c52f635a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare elenchi Master-Details con il controllo DataGrid Windows Form
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a><span data-ttu-id="6e6d2-102">Procedura: creare elenchi Master-Details con il controllo DataGrid Windows Form</span><span class="sxs-lookup"><span data-stu-id="6e6d2-102">How to: Create Master/Detail Lists with the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="6e6d2-103">Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="6e6d2-104">Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="6e6d2-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Se <xref:System.Data.DataSet> contiene una serie di tabelle correlate, è possibile utilizzare due controlli <xref:System.Windows.Forms.DataGrid> per visualizzare i dati in un formato Master\-Details.  Il primo <xref:System.Windows.Forms.DataGrid> viene designato come griglia principale e il secondo come griglia dei dettagli.  Quando si seleziona una voce nell'elenco principale, nell'elenco dei dettagli vengono visualizzate tutte le relative voci figlio.  Se ad esempio <xref:System.Data.DataSet> contiene una tabella Customers e una tabella correlata Orders, è possibile specificare la tabella Customers come griglia principale e la tabella Orders come griglia dei dettagli.  Quando si seleziona un cliente nella griglia principale, tutti gli ordini associati a quel cliente inclusi nella tabella Orders verranno visualizzati nella griglia dei dettagli.  
+ <span data-ttu-id="6e6d2-105">Se il <xref:System.Data.DataSet> contiene una serie di tabelle correlate, è possibile utilizzare due <xref:System.Windows.Forms.DataGrid> controlli per visualizzare i dati in un formato master-details.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-105">If your <xref:System.Data.DataSet> contains a series of related tables, you can use two <xref:System.Windows.Forms.DataGrid> controls to display the data in a master/detail format.</span></span> <span data-ttu-id="6e6d2-106">Uno <xref:System.Windows.Forms.DataGrid> designato come griglia principale, e il secondo è designato come griglia dei dettagli.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-106">One <xref:System.Windows.Forms.DataGrid> is designated to be the master grid, and the second is designated to be the details grid.</span></span> <span data-ttu-id="6e6d2-107">Quando si seleziona una voce nell'elenco master, tutte le voci figlio correlati vengono visualizzate nell'elenco dei dettagli.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-107">When you select an entry in the master list, all of the related child entries are shown in the details list.</span></span> <span data-ttu-id="6e6d2-108">Ad esempio, se il <xref:System.Data.DataSet> contiene una tabella Customers e una tabella correlata Orders, specificare la tabella Customers come griglia principale e la tabella Orders come griglia dei dettagli.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-108">For example, if your <xref:System.Data.DataSet> contains a Customers table and a related Orders table, you would specify the Customers table to be the master grid and the Orders table to be the details grid.</span></span> <span data-ttu-id="6e6d2-109">Quando un cliente è selezionato nella griglia principale, tutti gli ordini associati al cliente nella tabella Orders verrebbero visualizzati nella griglia dettagli.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-109">When a customer is selected from the master grid, all of the orders associated with that customer in the Orders table would be displayed in the details grid.</span></span>  
   
-### Per impostare una relazione Master\-Details a livello di codice  
+### <a name="to-set-a-masterdetail-relationship-programmatically"></a><span data-ttu-id="6e6d2-110">Per impostare una relazione master/dettagli a livello di codice</span><span class="sxs-lookup"><span data-stu-id="6e6d2-110">To set a master/detail relationship programmatically</span></span>  
   
-1.  Creare due nuovi controlli <xref:System.Windows.Forms.DataGrid> e impostarne le proprietà.  
+1.  <span data-ttu-id="6e6d2-111">Creare due nuovi <xref:System.Windows.Forms.DataGrid> controlla e impostare le relative proprietà.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-111">Create two new <xref:System.Windows.Forms.DataGrid> controls and set their properties.</span></span>  
   
-2.  Aggiungere delle tabelle al dataset.  
+2.  <span data-ttu-id="6e6d2-112">Aggiungere tabelle al set di dati.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-112">Add tables to the dataset.</span></span>  
   
-3.  Dichiarare una variabile di tipo <xref:System.Data.DataRelation> per rappresentare la relazione che si desidera creare.  
+3.  <span data-ttu-id="6e6d2-113">Dichiarare una variabile di tipo <xref:System.Data.DataRelation> per rappresentare la relazione che si desidera creare.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-113">Declare a variable of type <xref:System.Data.DataRelation> to represent the relation you want to create.</span></span>  
   
-4.  Creare un'istanza della relazione \(DataRelation\) specificando un nome per la relazione nonché la tabella, la colonna e l'elemento che collegheranno le due tabelle.  
+4.  <span data-ttu-id="6e6d2-114">Specificando un nome per la relazione e le tabelle, colonne e l'elemento che verrà associata a due tabelle, creare un'istanza della relazione.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-114">Instantiate the relationship by specifying a name for the relationship and specifying the table, column, and item that will tie the two tables.</span></span>  
   
-5.  Aggiungere la relazione alla raccolta <xref:System.Data.DataSet.Relations%2A> dell'oggetto <xref:System.Data.DataSet>.  
+5.  <span data-ttu-id="6e6d2-115">Aggiungere la relazione per il <xref:System.Data.DataSet> dell'oggetto <xref:System.Data.DataSet.Relations%2A> insieme.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-115">Add the relationship to the <xref:System.Data.DataSet> object's <xref:System.Data.DataSet.Relations%2A> collection.</span></span>  
   
-6.  Utilizzare il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> del controllo <xref:System.Windows.Forms.DataGrid> per associare entrambe le griglie all'oggetto <xref:System.Data.DataSet>.  
+6.  <span data-ttu-id="6e6d2-116">Utilizzare il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo il <xref:System.Windows.Forms.DataGrid> per entrambe le griglie per associare il <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="6e6d2-116">Use the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method of the <xref:System.Windows.Forms.DataGrid> to bind each of the grids to the <xref:System.Data.DataSet>.</span></span>  
   
-     Nell'esempio riportato di seguito viene illustrato come impostare una relazione Master\-Details tra la tabella Customers e la tabella Orders in un oggetto <xref:System.Data.DataSet> \(`ds`\) precedentemente generato.  
+     <span data-ttu-id="6e6d2-117">Nell'esempio seguente viene illustrato come impostare una relazione master/dettaglio tra le tabelle Customers e Orders in generato in precedenza <xref:System.Data.DataSet> (`ds`).</span><span class="sxs-lookup"><span data-stu-id="6e6d2-117">The following example shows how to set a master/detail relationship between the Customers and Orders tables in a previously generated <xref:System.Data.DataSet> (`ds`).</span></span>  
   
     ```vb  
     Dim myDataRelation As DataRelation  
@@ -53,7 +58,6 @@ caps.handback.revision: 15
     ds.Relations.Add(myDataRelation)  
     GridOrders.SetDataBinding(ds, "Customers")  
     GridDetails.SetDataBinding(ds, "Customers.CustOrd")  
-  
     ```  
   
     ```csharp  
@@ -63,7 +67,6 @@ caps.handback.revision: 15
     ds.Relations.Add(myDataRelation);  
     GridOrders.SetDataBinding(ds,"Customers");  
     GridDetails.SetDataBinding(ds,"Customers.CustOrd");  
-  
     ```  
   
     ```cpp  
@@ -77,7 +80,7 @@ caps.handback.revision: 15
     GridDetails->SetDataBinding(ds, "Customers.CustOrd");  
     ```  
   
-## Vedere anche  
- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Procedura: associare il controllo DataGrid Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a><span data-ttu-id="6e6d2-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6e6d2-118">See Also</span></span>  
+ [<span data-ttu-id="6e6d2-119">Controllo DataGrid</span><span class="sxs-lookup"><span data-stu-id="6e6d2-119">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="6e6d2-120">Cenni preliminari sul controllo DataGrid</span><span class="sxs-lookup"><span data-stu-id="6e6d2-120">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="6e6d2-121">Procedura: Associare il controllo DataGrid Windows Form a un'origine dati</span><span class="sxs-lookup"><span data-stu-id="6e6d2-121">How to: Bind the Windows Forms DataGrid Control to a Data Source</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

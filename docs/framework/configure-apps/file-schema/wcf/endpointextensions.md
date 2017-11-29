@@ -1,27 +1,30 @@
 ---
-title: "&lt;endpointExtensions&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;endpointExtensions&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3c0d9dd167dbef4a641566e3d89abcdaf7c0302a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;endpointExtensions&gt;
-Contenuto della sezione viene registrato un nuovo endpoint standard nella sezione delle estensioni di un file di configurazione di un computer o di un'applicazione.  È possibile aggiungere un endpoint standard a questa raccolta usando la parola chiave `add` e impostando l'attributo `type` dell'elemento sul tipo di endpoint, nonché l'attributo `name` sul nome dell'endpoint standard.  
+# <a name="ltendpointextensionsgt"></a><span data-ttu-id="bf672-102">&lt;endpointExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="bf672-102">&lt;endpointExtensions&gt;</span></span>
+<span data-ttu-id="bf672-103">Contenuto della sezione viene registrato un nuovo endpoint standard nella sezione delle estensioni di un file di configurazione di un computer o di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bf672-103">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="bf672-104">È possibile aggiungere un endpoint standard a questa raccolta usando la parola chiave `add` e impostando l'attributo `type` dell'elemento sul tipo di endpoint, nonché l'attributo `name` sul nome dell'endpoint standard.</span><span class="sxs-lookup"><span data-stu-id="bf672-104">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  
   
- Nell'esempio seguente viene usato l'elemento `add` e l'attributo `name` per aggiungere un endpoint standard alla sezione `<endpointExtensions>` del file di configurazione.  
+ <span data-ttu-id="bf672-105">Nell'esempio seguente viene usato l'elemento `add` e l'attributo `name` per aggiungere un endpoint standard alla sezione `<endpointExtensions>` del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="bf672-105">The following example uses the `add` element, as well as the `name` attribute to add a standard endpoint to the `<endpointExtensions>` section of the configuration file.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <extensions>  
         <endpointExtensions>  
@@ -32,25 +35,23 @@ Contenuto della sezione viene registrato un nuovo endpoint standard nella sezion
 </system.serviceModel>  
 ```  
   
- Dopo aver registrato l'endpoint standard, sarà possibile usarlo come illustrato nell'esempio seguente.  Nel'elemento [\<endpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) l'attributo `kind` specifica il tipo di endpoint standard che è stato registrato nella sezione `<endpointExtensions>`.  L'attributo `endpointConfiguration` sarà identico all'attributo `name` dell'elemento di configurazione dell'endpoint standard nella sezione `<standardEndpoints>`.  
+ <span data-ttu-id="bf672-106">Dopo aver registrato l'endpoint standard, sarà possibile usarlo come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bf672-106">After the standard endpoint has been registered, you can use it as shown in the following example.</span></span> <span data-ttu-id="bf672-107">Nel [ \<endpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento, il `kind` attributo specifica il tipo di endpoint standard che è stato registrato nel `<endpointExtensions>` sezione.</span><span class="sxs-lookup"><span data-stu-id="bf672-107">In the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element, the `kind` attribute specifies the standard endpoint type that has been registered in the `<endpointExtensions>` section.</span></span> <span data-ttu-id="bf672-108">Il `endpointConfiguration` attributo sarà identico al `name` attributo dell'elemento di configurazione dell'endpoint standard nel `<standardEndpoints>` sezione.</span><span class="sxs-lookup"><span data-stu-id="bf672-108">The `endpointConfiguration` attribute will be identical to the `name` attribute of the configuration element of the standard endpoint in the `<standardEndpoints>` section.</span></span>  
   
-```  
-  
+```xml  
 <system.serviceModel>  
-    <services>  
-      <service name="Service1">  
-        <endpoint kind="udpDiscoveryEndpoint"  
-                  endpointConfiguration="udpConfig" />  
-      </service>  
-    </services>  
-    <standardEndpoints>  
-      <udpDiscoveryEndpoint>  
-        <standardEndpoint  
-                  name="udpConfig"  
-                  multicastAddress="soap.udp://239.255.255.250:3703"  
-                  ... />  
-      </udpDiscoveryEndpoint>  
-    </standardEndpoints>  
-  </system.serviceModel>  
-  
+    <services>  
+      <service name="Service1">  
+        <endpoint kind="udpDiscoveryEndpoint"  
+                  endpointConfiguration="udpConfig" />  
+      </service>  
+    </services>  
+    <standardEndpoints>  
+      <udpDiscoveryEndpoint>  
+        <standardEndpoint  
+                  name="udpConfig"  
+                  multicastAddress="soap.udp://239.255.255.250:3703"  
+                  ... />  
+      </udpDiscoveryEndpoint>  
+    </standardEndpoints>  
+  </system.serviceModel>  
 ```

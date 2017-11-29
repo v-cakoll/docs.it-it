@@ -1,72 +1,77 @@
 ---
-title: "&lt;discoveryClientSettings&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;discoveryClientSettings&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bd2e9f3fd6d2cd0b99c6b63bc8ad0eefc9ff3e01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;discoveryClientSettings&gt;
-Contiene le impostazioni necessarie a un'applicazione per partecipare al processo di individuazione del servizio come client.  
+# <a name="ltdiscoveryclientsettingsgt"></a><span data-ttu-id="8ae77-102">&lt;discoveryClientSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="8ae77-102">&lt;discoveryClientSettings&gt;</span></span>
+<span data-ttu-id="8ae77-103">Contiene le impostazioni necessarie a un'applicazione per partecipare al processo di individuazione del servizio come client.</span><span class="sxs-lookup"><span data-stu-id="8ae77-103">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>  
   
-## Sintassi  
+<span data-ttu-id="8ae77-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="8ae77-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="8ae77-105">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="8ae77-105">\<standardEndpoints></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="8ae77-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8ae77-106">Syntax</span></span>  
   
+```xml  
 <system.serviceModel>  
-    <standardEndpoints>  
-       <dynamicEndpoint>   
-          <standardEndpoint>  
-             <discoveryClientSettings discoveryEndpoint=”String” >  
-               <findCriteria duration=”TimeSpan”  
-                  maxResults=”Integer”   
-                  scopeMatchBy=”Uri” >  
-                  <contractTypeNames>  
-                     <add name="String" namespace="String" />  
-                  <contractTypeNames>  
-                  <extensions />  
-                  <scopes>  
-                    <add scope="URI"/>  
-                  </scopes>  
-               </findCriteria>  
-             </discoveryClientSettings>  
-          <standardEndpoint>  
-       </dynamicEndpoint>          
-    </standardEndpoints>  
+  <standardEndpoints>
+    <dynamicEndpoint>
+      <standardEndpoint>
+        <discoveryClientSettings discoveryEndpoint="String">
+          <findCriteria duration="TimeSpan" 
+                        maxResults="Integer" 
+                        scopeMatchBy="Uri">
+            <contractTypeNames>
+              <add name="String" namespace="String" />
+            <contractTypeNames>
+            <extensions />
+            <scopes>
+              <add scope="URI"/>
+            </scopes>
+          </findCriteria>
+        </discoveryClientSettings>
+      <standardEndpoint>
+    </dynamicEndpoint>
+  </standardEndpoints>  
 </system.serviceModel>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8ae77-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="8ae77-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="8ae77-108">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="8ae77-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="8ae77-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="8ae77-109">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="8ae77-110">Attributo</span><span class="sxs-lookup"><span data-stu-id="8ae77-110">Attribute</span></span>|<span data-ttu-id="8ae77-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8ae77-111">Description</span></span>|  
 |---------------|-----------------|  
-|discoveryEndpoint|Stringa contenente il nome dell'endpoint di individuazione che consente a un'applicazione client di cercare automaticamente un servizio flusso di lavoro individuabile e di trovarne l'indirizzo in fase di esecuzione.|  
+|<span data-ttu-id="8ae77-112">discoveryEndpoint</span><span class="sxs-lookup"><span data-stu-id="8ae77-112">discoveryEndpoint</span></span>|<span data-ttu-id="8ae77-113">Stringa contenente il nome dell'endpoint di individuazione che consente a un'applicazione client di cercare automaticamente un servizio flusso di lavoro individuabile e di trovarne l'indirizzo in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="8ae77-113">A string that contains the name of the Discovery Endpoint that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="8ae77-114">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="8ae77-114">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<standardEndpoints\>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Elemento di configurazione che fornisce un set di criteri usati da un'applicazione client per la ricerca di un servizio di individuazione.  I criteri possono essere raggruppati nei criteri di ricerca \(specificando i servizi da cercare\) e nei criteri di terminazione della ricerca \(durata della ricerca\).|  
+|<span data-ttu-id="8ae77-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="8ae77-115">Element</span></span>|<span data-ttu-id="8ae77-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8ae77-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="8ae77-117">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="8ae77-117">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="8ae77-118">Elemento di configurazione che fornisce un set di criteri usati da un'applicazione client per la ricerca di un servizio di individuazione.</span><span class="sxs-lookup"><span data-stu-id="8ae77-118">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="8ae77-119">I criteri possono essere raggruppati nei criteri di ricerca (specificando i servizi da cercare) e i criteri di terminazione (quanto tempo deve durare la ricerca).</span><span class="sxs-lookup"><span data-stu-id="8ae77-119">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="8ae77-120">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="8ae77-120">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<standardEndpoints\>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Definisce un endpoint standard contenente le informazioni che consentono a un'applicazione di essere usata come un programma client in grado di individuare l'indirizzo dell'endpoint in modo dinamico durante la fase di esecuzione.|  
+|<span data-ttu-id="8ae77-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="8ae77-121">Element</span></span>|<span data-ttu-id="8ae77-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8ae77-122">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="8ae77-123">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="8ae77-123">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="8ae77-124">Definisce un endpoint standard contenente le informazioni che consentono a un'applicazione di essere usata come un programma client in grado di individuare l'indirizzo dell'endpoint in modo dinamico durante la fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="8ae77-124">Defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>|  
   
-## Vedere anche  
- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>   
+## <a name="see-also"></a><span data-ttu-id="8ae77-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8ae77-125">See Also</span></span>  
+ <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
  <xref:System.ServiceModel.Discovery.Configuration.DiscoveryClientSettingsElement>

@@ -1,66 +1,68 @@
 ---
-title: "How to: Access Hardware Encryption Devices | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "encryption"
-  - "key card"
-  - "cryptography"
-  - "hardware encryption"
-  - "CspParameters"
+title: 'Procedura: accedere ai dispositivi di crittografia hardware'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- encryption
+- key card
+- cryptography
+- hardware encryption
+- CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5156316387f94d434301e2d5286bd325d7e04320
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Access Hardware Encryption Devices
-È possibile usare la classe <xref:System.Security.Cryptography.CspParameters> per accedere ai dispositivi di crittografia hardware.  Questa classe può essere usata, ad esempio, per integrare l'applicazione in uso con una smart card, un generatore di numeri casuali hardware o per l'implementazione hardware di un determinato algoritmo di crittografia.  
+# <a name="how-to-access-hardware-encryption-devices"></a><span data-ttu-id="6c922-102">Procedura: accedere ai dispositivi di crittografia hardware</span><span class="sxs-lookup"><span data-stu-id="6c922-102">How to: Access Hardware Encryption Devices</span></span>
+<span data-ttu-id="6c922-103">È possibile usare la classe <xref:System.Security.Cryptography.CspParameters> per accedere ai dispositivi di crittografia hardware.</span><span class="sxs-lookup"><span data-stu-id="6c922-103">You can use the <xref:System.Security.Cryptography.CspParameters> class to access hardware encryption devices.</span></span> <span data-ttu-id="6c922-104">Questa classe può essere usata, ad esempio, per integrare l'applicazione in uso con una smart card, un generatore di numeri casuali hardware o per l'implementazione hardware di un determinato algoritmo di crittografia.</span><span class="sxs-lookup"><span data-stu-id="6c922-104">For example, you can use this class to integrate your application with a smart card, a hardware random number generator, or a hardware implementation of a particular cryptographic algorithm.</span></span>  
   
- La classe <xref:System.Security.Cryptography.CspParameters> crea un provider del servizio di crittografia \(CSP, Cryptographic Service Provider\) che accede a un dispositivo di crittografia hardware installato correttamente.  È possibile verificare la disponibilità di un CSP esaminando la chiave del Registro di sistema \(Regedit.exe\): HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Cryptography\\Defaults\\Provider.  
+ <span data-ttu-id="6c922-105">La classe <xref:System.Security.Cryptography.CspParameters> crea un provider del servizio di crittografia (CSP, Cryptographic Service Provider) che accede a un dispositivo di crittografia hardware installato correttamente.</span><span class="sxs-lookup"><span data-stu-id="6c922-105">The <xref:System.Security.Cryptography.CspParameters> class creates a cryptographic service provider (CSP) that accesses a properly installed hardware encryption device.</span></span>  <span data-ttu-id="6c922-106">È possibile verificare la disponibilità di un CSP esaminando la chiave del Registro di sistema (Regedit.exe): HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.</span><span class="sxs-lookup"><span data-stu-id="6c922-106">You can verify the availability of a CSP by inspecting the following registry key using the Registry Editor (Regedit.exe):  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.</span></span>  
   
-### Per firmare i dati mediante una scheda di chiavi  
+### <a name="to-sign-data-using-a-key-card"></a><span data-ttu-id="6c922-107">Per firmare i dati mediante una scheda di chiavi</span><span class="sxs-lookup"><span data-stu-id="6c922-107">To sign data using a key card</span></span>  
   
-1.  Creare una nuova istanza della classe <xref:System.Security.Cryptography.CspParameters>, passando il tipo di provider integer e il nome del provider al costruttore.  
+1.  <span data-ttu-id="6c922-108">Creare una nuova istanza della classe <xref:System.Security.Cryptography.CspParameters>, passando il tipo di provider integer e il nome del provider al costruttore.</span><span class="sxs-lookup"><span data-stu-id="6c922-108">Create a new instance of the <xref:System.Security.Cryptography.CspParameters> class, passing the integer provider type and the provider name to the constructor.</span></span>  
   
-2.  Passare i flag appropriati alla proprietà <xref:System.Security.Cryptography.CspParameters.Flags%2A> dell'oggetto <xref:System.Security.Cryptography.CspParameters> appena creato.  Passare, ad esempio, il flag <xref:System.Security.Cryptography.CspProviderFlags>.  
+2.  <span data-ttu-id="6c922-109">Passare i flag appropriati alla proprietà <xref:System.Security.Cryptography.CspParameters.Flags%2A> dell'oggetto <xref:System.Security.Cryptography.CspParameters> appena creato.</span><span class="sxs-lookup"><span data-stu-id="6c922-109">Pass the appropriate flags to the <xref:System.Security.Cryptography.CspParameters.Flags%2A> property of the newly created <xref:System.Security.Cryptography.CspParameters> object.</span></span>  <span data-ttu-id="6c922-110">Passare, ad esempio, il flag <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer>.</span><span class="sxs-lookup"><span data-stu-id="6c922-110">For example, pass the <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer> flag.</span></span>  
   
-3.  Creare una nuova istanza di una classe <xref:System.Security.Cryptography.AsymmetricAlgorithm> \(ad esempio, la classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>\), passando l'oggetto <xref:System.Security.Cryptography.CspParameters> al costruttore.  
+3.  <span data-ttu-id="6c922-111">Creare una nuova istanza di una classe <xref:System.Security.Cryptography.AsymmetricAlgorithm> (ad esempio, la classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>), passando l'oggetto <xref:System.Security.Cryptography.CspParameters> al costruttore.</span><span class="sxs-lookup"><span data-stu-id="6c922-111">Create a new instance of an <xref:System.Security.Cryptography.AsymmetricAlgorithm> class (for example, the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class), passing the <xref:System.Security.Cryptography.CspParameters> object to the constructor.</span></span>  
   
-4.  Firmare i dati mediante uno dei metodi `Sign` e verificarli mediante uno dei metodi `Verify`.  
+4.  <span data-ttu-id="6c922-112">Firmare i dati mediante uno dei metodi `Sign` e verificarli mediante uno dei metodi `Verify`.</span><span class="sxs-lookup"><span data-stu-id="6c922-112">Sign your data using one of the `Sign` methods and verify your data using one of the `Verify` methods.</span></span>  
   
-### Per generare un numero casuale usando un generatore di numeri casuali hardware  
+### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a><span data-ttu-id="6c922-113">Per generare un numero casuale usando un generatore di numeri casuali hardware </span><span class="sxs-lookup"><span data-stu-id="6c922-113">To generate a random number using a hardware random number generator</span></span>  
   
-1.  Creare una nuova istanza della classe <xref:System.Security.Cryptography.CspParameters>, passando il tipo di provider integer e il nome del provider al costruttore.  
+1.  <span data-ttu-id="6c922-114">Creare una nuova istanza della classe <xref:System.Security.Cryptography.CspParameters>, passando il tipo di provider integer e il nome del provider al costruttore.</span><span class="sxs-lookup"><span data-stu-id="6c922-114">Create a new instance of the <xref:System.Security.Cryptography.CspParameters> class, passing the integer provider type and the provider name to the constructor.</span></span>  
   
-2.  Creare una nuova istanza della classe <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, passando l'oggetto <xref:System.Security.Cryptography.CspParameters> al costruttore.  
+2.  <span data-ttu-id="6c922-115">Creare una nuova istanza della classe <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, passando l'oggetto <xref:System.Security.Cryptography.CspParameters> al costruttore.</span><span class="sxs-lookup"><span data-stu-id="6c922-115">Create a new instance of the <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, passing the <xref:System.Security.Cryptography.CspParameters> object to the constructor.</span></span>  
   
-3.  Creare un valore casuale usando il metodo <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> o <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A>.  
+3.  <span data-ttu-id="6c922-116">Creare un valore casuale usando il metodo <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> o <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A>.</span><span class="sxs-lookup"><span data-stu-id="6c922-116">Create a random value using the <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> or <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> method.</span></span>  
   
-## Esempio  
- L'esempio di codice seguente illustra come firmare i dati mediante una smart card.  L'esempio di codice crea un oggetto <xref:System.Security.Cryptography.CspParameters> che espone una smart card, quindi inizializza un oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> mediante il CSP  e infine firma e verifica alcuni dati.  
+## <a name="example"></a><span data-ttu-id="6c922-117">Esempio</span><span class="sxs-lookup"><span data-stu-id="6c922-117">Example</span></span>  
+ <span data-ttu-id="6c922-118">L'esempio di codice seguente illustra come firmare i dati mediante una smart card.</span><span class="sxs-lookup"><span data-stu-id="6c922-118">The following code example demonstrates how to sign data using a smart card.</span></span>  <span data-ttu-id="6c922-119">L'esempio di codice crea un oggetto <xref:System.Security.Cryptography.CspParameters> che espone una smart card, quindi inizializza un oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> mediante il CSP</span><span class="sxs-lookup"><span data-stu-id="6c922-119">The code example creates a <xref:System.Security.Cryptography.CspParameters> object that exposes a smart card, and then initializes an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object using the CSP.</span></span>  <span data-ttu-id="6c922-120">e infine firma e verifica alcuni dati.</span><span class="sxs-lookup"><span data-stu-id="6c922-120">The code example then signs and verifies some data.</span></span>  
   
  [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
  [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
  [!code-vb[Cryptography.SmartCardCSP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.SmartCardCSP/VB/example.vb#1)]  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a><span data-ttu-id="6c922-121">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="6c922-121">Compiling the Code</span></span>  
   
--   Includere gli spazi dei nomi <xref:System> e <xref:System.Security.Cryptography>.  
+-   <span data-ttu-id="6c922-122">Includere gli spazi dei nomi <xref:System> e <xref:System.Security.Cryptography>.</span><span class="sxs-lookup"><span data-stu-id="6c922-122">Include the <xref:System> and <xref:System.Security.Cryptography> namespaces.</span></span>  
   
--   È necessario avere un lettore di smart card e driver installati nel computer.  
+-   <span data-ttu-id="6c922-123">È necessario avere un lettore di smart card e driver installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="6c922-123">You must have a smart card reader and drivers installed on your computer.</span></span>  
   
--   È necessario inizializzare l'oggetto <xref:System.Security.Cryptography.CspParameters> usando informazioni specifiche del lettore di smart card.  Per altre informazioni, vedere la documentazione relativa al lettore.
+-   <span data-ttu-id="6c922-124">È necessario inizializzare l'oggetto <xref:System.Security.Cryptography.CspParameters> usando informazioni specifiche del lettore di smart card.</span><span class="sxs-lookup"><span data-stu-id="6c922-124">You must initialize the <xref:System.Security.Cryptography.CspParameters> object using information specific to your card reader.</span></span>  <span data-ttu-id="6c922-125">Per altre informazioni, vedere la documentazione relativa al lettore.</span><span class="sxs-lookup"><span data-stu-id="6c922-125">For more information, see the documentation of your card reader.</span></span>

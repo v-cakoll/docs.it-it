@@ -1,44 +1,47 @@
 ---
-title: "Criteri di autorizzazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Criteri di autorizzazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 50998acedf3b462e17c57d784dfc1ebe6fff38b9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Criteri di autorizzazione
-In questo esempio viene illustrato come implementare i criteri di autorizzazione dell'attestazione personalizzati e un gestore autorizzazioni personalizzato del servizio associato.Questa procedura è utile quando il servizio esegue i controlli di accesso basati sull'attestazione nelle operazioni del servizio e prima dei controlli di accesso, concede al chiamante alcuni diritti.In questo esempio viene illustrato sia il processo di aggiunta delle attestazioni che il processo di controllo dell'accesso a fronte del set finalizzato di attestazioni.Tutti i messaggi dell'applicazione tra il client e il server vengono firmati e crittografati.Per impostazione predefinita, con l'associazione `wsHttpBinding` vengono utilizzati un nome utente e una password forniti dal client per accedere con un account Windows NT valido.In questo esempio viene illustrato come utilizzare un <xref:System.IdentityModel.Selectors.UsernamePasswordValidator> personalizzato per autenticare il client.Viene inoltre illustrata l'autenticazione del client nel servizio tramite un certificato X.509.In questo esempio viene illustrata un'implementazione di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e <xref:System.ServiceModel.ServiceAuthorizationManager> che, insieme, concedono l'accesso a metodi specifici del servizio per utenti specifici.Questo esempio è basato su [Sicurezza dei messaggi tramite nome utente](../../../../docs/framework/wcf/samples/message-security-user-name.md), ma dimostra come eseguire una trasformazione dell'attestazione prima di chiamare <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+# <a name="authorization-policy"></a><span data-ttu-id="e26f5-102">Criteri di autorizzazione</span><span class="sxs-lookup"><span data-stu-id="e26f5-102">Authorization Policy</span></span>
+<span data-ttu-id="e26f5-103">In questo esempio viene illustrato come implementare i criteri di autorizzazione dell'attestazione personalizzati e un gestore autorizzazioni personalizzato del servizio associato.</span><span class="sxs-lookup"><span data-stu-id="e26f5-103">This sample demonstrates how to implement a custom claim authorization policy and an associated custom service authorization manager.</span></span> <span data-ttu-id="e26f5-104">Questa procedura è utile quando il servizio esegue i controlli di accesso basati sull'attestazione nelle operazioni del servizio e prima dei controlli di accesso, concede al chiamante alcuni diritti.</span><span class="sxs-lookup"><span data-stu-id="e26f5-104">This is useful when the service makes claim-based access checks to service operations and prior to the access checks, grants the caller certain rights.</span></span> <span data-ttu-id="e26f5-105">In questo esempio viene illustrato sia il processo di aggiunta delle attestazioni che il processo di controllo dell'accesso a fronte del set finalizzato di attestazioni.</span><span class="sxs-lookup"><span data-stu-id="e26f5-105">This sample shows both the process of adding claims as well as the process for doing an access check against the finalized set of claims.</span></span> <span data-ttu-id="e26f5-106">Tutti i messaggi dell'applicazione tra il client e il server vengono firmati e crittografati.</span><span class="sxs-lookup"><span data-stu-id="e26f5-106">All application messages between the client and server are signed and encrypted.</span></span> <span data-ttu-id="e26f5-107">Per impostazione predefinita, con l'associazione `wsHttpBinding` vengono utilizzati un nome utente e una password forniti dal client per accedere con un account Windows NT valido.</span><span class="sxs-lookup"><span data-stu-id="e26f5-107">By default with the `wsHttpBinding` binding, a username and password supplied by the client are used to logon to a valid Windows NT account.</span></span> <span data-ttu-id="e26f5-108">Questo esempio viene illustrato come utilizzare un oggetto personalizzato <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` per autenticare il client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-108">This sample demonstrates how to utilize a custom <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` to authenticate the client.</span></span> <span data-ttu-id="e26f5-109">Viene inoltre illustrata l'autenticazione del client nel servizio tramite un certificato X.509.</span><span class="sxs-lookup"><span data-stu-id="e26f5-109">In addition this sample shows the client authenticating to the service using an X.509 certificate.</span></span> <span data-ttu-id="e26f5-110">In questo esempio viene illustrata un'implementazione di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e <xref:System.ServiceModel.ServiceAuthorizationManager> che, insieme, concedono l'accesso a metodi specifici del servizio per utenti specifici.</span><span class="sxs-lookup"><span data-stu-id="e26f5-110">This sample shows an implementation of <xref:System.IdentityModel.Policy.IAuthorizationPolicy> and <xref:System.ServiceModel.ServiceAuthorizationManager>, which between them grant access to specific methods of the service for specific users.</span></span> <span data-ttu-id="e26f5-111">Questo esempio è basato sul [nome utente di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-user-name.md), ma viene illustrato come eseguire una trasformazione di attestazioni prima di <xref:System.ServiceModel.ServiceAuthorizationManager> la chiamata.</span><span class="sxs-lookup"><span data-stu-id="e26f5-111">This sample is based on the [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md), but demonstrates how to perform a claim transformation prior to the <xref:System.ServiceModel.ServiceAuthorizationManager> being called.</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+>  <span data-ttu-id="e26f5-112">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="e26f5-112">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seguenti:  
+ <span data-ttu-id="e26f5-113">In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="e26f5-113">In summary, this sample demonstrates how:</span></span>  
   
--   Il client può essere autenticato utilizzando un nome utente e una password.  
+-   <span data-ttu-id="e26f5-114">Il client può essere autenticato utilizzando un nome utente e una password.</span><span class="sxs-lookup"><span data-stu-id="e26f5-114">The client can be authenticated using a user name-password.</span></span>  
   
--   Il client può essere autenticato tramite un certificato X.509.  
+-   <span data-ttu-id="e26f5-115">Il client può essere autenticato tramite un certificato X.509.</span><span class="sxs-lookup"><span data-stu-id="e26f5-115">The client can be authenticated using an X.509 certificate.</span></span>  
   
--   Il server verifica le credenziali client rispetto a un validator `UsernamePassword` personalizzato.  
+-   <span data-ttu-id="e26f5-116">Il server verifica le credenziali client rispetto a un validator `UsernamePassword` personalizzato.</span><span class="sxs-lookup"><span data-stu-id="e26f5-116">The server validates the client credentials against a custom `UsernamePassword` validator.</span></span>  
   
--   Il server viene autenticato tramite il certificato X.509 del server.  
+-   <span data-ttu-id="e26f5-117">Il server viene autenticato tramite il certificato X.509 del server.</span><span class="sxs-lookup"><span data-stu-id="e26f5-117">The server is authenticated using the server's X.509 certificate.</span></span>  
   
--   Il server può utilizzare <xref:System.ServiceModel.ServiceAuthorizationManager> per controllare l'accesso a determinati metodi nel servizio.  
+-   <span data-ttu-id="e26f5-118">Il server può utilizzare <xref:System.ServiceModel.ServiceAuthorizationManager> per controllare l'accesso a determinati metodi nel servizio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-118">The server can use <xref:System.ServiceModel.ServiceAuthorizationManager> to control access to certain methods in the service.</span></span>  
   
--   Come implementare <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+-   <span data-ttu-id="e26f5-119">Come implementare <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.</span><span class="sxs-lookup"><span data-stu-id="e26f5-119">How to implement <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.</span></span>  
   
- Il servizio espone due endpoint per comunicare con il servizio definito mediante il file di configurazione App.config.Ciascun endpoint è costituito da un indirizzo, un un'associazione e un contratto.Un'associazione è configurata con un'associazione `wsHttpBinding` standard che utilizza WS\-Security e l'autenticazione del nome utente del client.L'altra associazione è configurata con un'associazione `wsHttpBinding` standard che utilizza WS\-Security e l'autenticazione del certificato client.L'[\<comportamento\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) specifica che le credenziali utente devono essere utilizzate per l'autenticazione del servizio.Il certificato server deve contenere per la proprietà `SubjectName` lo stesso valore dell'attributo `findValue` in [\<certificatoServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).  
+ <span data-ttu-id="e26f5-120">Il servizio espone due endpoint per comunicare con il servizio definito mediante il file di configurazione App.config. Ciascun endpoint è costituito da un indirizzo, un binding e un contratto.</span><span class="sxs-lookup"><span data-stu-id="e26f5-120">The service exposes two endpoints for communicating with the service, defined using the configuration file App.config. Each endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="e26f5-121">Un'associazione è configurata con un'associazione `wsHttpBinding` standard che utilizza WS-Security e l'autenticazione del nome utente del client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-121">One binding is configured with a standard `wsHttpBinding` binding that uses WS-Security and client username authentication.</span></span> <span data-ttu-id="e26f5-122">L'altra associazione è configurata con un'associazione `wsHttpBinding` standard che utilizza WS-Security e l'autenticazione del certificato client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-122">The other binding is configured with a standard `wsHttpBinding` binding that uses WS-Security and client certificate authentication.</span></span> <span data-ttu-id="e26f5-123">Il [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) specifica che le credenziali utente devono essere utilizzati per l'autenticazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-123">The [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) specifies that the user credentials are to be used for service authentication.</span></span> <span data-ttu-id="e26f5-124">Il certificato del server deve contenere lo stesso valore per il `SubjectName` proprietà come il `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span><span class="sxs-lookup"><span data-stu-id="e26f5-124">The server certificate must contain the same value for the `SubjectName` property as the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -121,12 +124,11 @@ In questo esempio viene illustrato come implementare i criteri di autorizzazione
   </behaviors>  
   
 </system.serviceModel>  
-  
 ```  
   
- Ogni configurazione dell'endpoint client è costituita da un nome di configurazione, un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto.L'associazione client è configurata con la modalità di sicurezza appropriata, come specificato in questo caso nell'[\<sicurezza\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) e `clientCredentialType` come specificato nell'[\<messaggio\>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).  
+ <span data-ttu-id="e26f5-125">Ogni configurazione dell'endpoint client è costituita da un nome di configurazione, un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto.</span><span class="sxs-lookup"><span data-stu-id="e26f5-125">Each client endpoint configuration consists of a configuration name, an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="e26f5-126">L'associazione client viene configurata con la modalità di sicurezza appropriato come specificato in questo caso nel [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) e `clientCredentialType` come specificato nella [ \<messaggio >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="e26f5-126">The client binding is configured with the appropriate security mode as specified in this case in the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) and `clientCredentialType` as specified in the [\<message>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <client>  
@@ -190,10 +192,9 @@ In questo esempio viene illustrato come implementare i criteri di autorizzazione
     </behaviors>  
   
   </system.serviceModel>  
-  
 ```  
   
- Per l'endpoint basato sul nome utente, l'implementazione client imposta il nome utente la e password da utilizzare.  
+ <span data-ttu-id="e26f5-127">Per l'endpoint basato sul nome utente, l'implementazione client imposta il nome utente la e password da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="e26f5-127">For the user name-based endpoint, the client implementation sets the user name and password to use.</span></span>  
   
 ```  
 // Create a client with Username endpoint configuration  
@@ -217,10 +218,9 @@ catch (Exception e)
 }  
   
 client1.Close();  
-  
 ```  
   
- Per l'endpoint basato sul certificato, l'implementazione client imposta il certificato client da utilizzare.  
+ <span data-ttu-id="e26f5-128">Per l'endpoint basato sul certificato, l'implementazione client imposta il certificato client da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="e26f5-128">For the certificate-based endpoint, the client implementation sets the client certificate to use.</span></span>  
   
 ```  
 // Create a client with Certificate endpoint configuration  
@@ -243,10 +243,9 @@ catch (Exception e)
 }  
   
 client2.Close();  
-  
 ```  
   
- In questo esempio viene utilizzato un <xref:System.IdentityModel.Selectors.UsernamePasswordValidator> personalizzato per convalidare i nomi utente e le password.Nell'esempio viene implementato `MyCustomUserNamePasswordValidator`, derivato da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.Per ulteriori informazioni, vedere la documentazione relativa a <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>.Allo scopo di illustrare l'integrazione con <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>, in questo esempio di validator personalizzato viene implementato il metodo <xref:System.IdentityModel.Selectors.UsernamePasswordValidator.Validate%2A> per accettare coppie di nome utente\/password quando il nome utente corrisponde alla password come mostrato nel codice seguente.  
+ <span data-ttu-id="e26f5-129">In questo esempio viene utilizzato un <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> personalizzato per convalidare i nomi utente e le password.</span><span class="sxs-lookup"><span data-stu-id="e26f5-129">This sample uses a custom <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> to validate user names and passwords.</span></span> <span data-ttu-id="e26f5-130">Nell'esempio viene implementato `MyCustomUserNamePasswordValidator`, derivato da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.</span><span class="sxs-lookup"><span data-stu-id="e26f5-130">The sample implements `MyCustomUserNamePasswordValidator`, derived from <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.</span></span> <span data-ttu-id="e26f5-131">Per ulteriori informazioni, vedere la documentazione relativa a <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.</span><span class="sxs-lookup"><span data-stu-id="e26f5-131">See the documentation about <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> for more information.</span></span> <span data-ttu-id="e26f5-132">Allo scopo di illustrare l'integrazione con <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, in questo esempio di validator personalizzato viene implementato il metodo <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> per accettare coppie di nome utente/password quando il nome utente corrisponde alla password come mostrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="e26f5-132">For the purposes of demonstrating the integration with the <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, this custom validator sample implements the <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> method to accept user name/password pairs where the user name matches the password as shown in the following code.</span></span>  
   
 ```  
 public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator  
@@ -269,19 +268,18 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
     }  
   }  
 }  
-  
 ```  
   
- Quando il validator è stato implementato nel codice del servizio, l'host del servizio deve essere informato dell'istanza del validator da utilizzare.Questa operazione viene eseguita tramite il codice seguente.  
+ <span data-ttu-id="e26f5-133">Quando il validator è stato implementato nel codice del servizio, l'host del servizio deve essere informato dell'istanza del validator da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="e26f5-133">Once the validator is implemented in service code, the service host must be informed about the validator instance to use.</span></span> <span data-ttu-id="e26f5-134">Questa operazione viene eseguita tramite il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="e26f5-134">This is done using the following code.</span></span>  
   
 ```  
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;  
 serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = new MyCustomUserNamePasswordValidatorProvider();  
 ```  
   
- In alternativa, è possibile eseguire la stessa operazione nella configurazione.  
+ <span data-ttu-id="e26f5-135">In alternativa, è possibile eseguire la stessa operazione nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="e26f5-135">Or you can do the same thing in configuration.</span></span>  
   
-```  
+```xml  
 <behavior ...>  
     <serviceCredentials>  
       <!--   
@@ -293,9 +291,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce un modello dettagliato basato sulle attestazioni per l'esecuzione dei controlli di accesso.L'oggetto <xref:System.ServiceModel.ServiceAuthorizationManager> viene utilizzato per eseguire il controllo dell'accesso e determinare se le attestazioni associate al client soddisfano i requisiti necessari per accedere al metodo del servizio.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="e26f5-136"> fornisce un modello dettagliato basato sulle attestazioni per l'esecuzione dei controlli di accesso.</span><span class="sxs-lookup"><span data-stu-id="e26f5-136"> provides a rich claims-based model for performing access checks.</span></span> <span data-ttu-id="e26f5-137">L'oggetto <xref:System.ServiceModel.ServiceAuthorizationManager> viene utilizzato per eseguire il controllo dell'accesso e determinare se le attestazioni associate al client soddisfano i requisiti necessari per accedere al metodo del servizio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-137">The <xref:System.ServiceModel.ServiceAuthorizationManager> object is used to perform the access check and determine whether the claims associated with the client satisfy the requirements necessary to access the service method.</span></span>  
   
- A scopo di dimostrazione, in questo esempio viene illustrata un'implementazione di <xref:System.ServiceModel.ServiceAuthorizationManager> per il metodo <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> per consentire a un utente l'accesso ai metodi in base alle attestazioni di tipo http:\/\/example.com\/claims\/allowedoperation, il cui valore è l'URI di azione dell'operazione che può essere chiamata.  
+ <span data-ttu-id="e26f5-138">A scopo di dimostrazione, in questo esempio viene illustrata un'implementazione di <xref:System.ServiceModel.ServiceAuthorizationManager> per il metodo <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> per consentire a un utente l'accesso ai metodi in base alle attestazioni di tipo http://example.com/claims/allowedoperation, il cui valore è l'URI di azione dell'operazione che può essere chiamata.</span><span class="sxs-lookup"><span data-stu-id="e26f5-138">For the purposes of demonstration, this sample shows an implementation of <xref:System.ServiceModel.ServiceAuthorizationManager> that implements the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method to allow a user's access to methods based on claims of type http://example.com/claims/allowedoperation whose value is the Action URI of the operation that is allowed to be called.</span></span>  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  
@@ -319,22 +317,20 @@ public class MyServiceAuthorizationManager : ServiceAuthorizationManager
     return false;                   
   }  
 }  
-  
 ```  
   
- Quando il <xref:System.ServiceModel.ServiceAuthorizationManager> personalizzato è stato implementato, l'host del servizio deve essere informato del <xref:System.ServiceModel.ServiceAuthorizationManager> da utilizzare.Questa operazione viene eseguita come mostrato nel codice seguente.  
+ <span data-ttu-id="e26f5-139">Quando il <xref:System.ServiceModel.ServiceAuthorizationManager> personalizzato è stato implementato, l'host del servizio deve essere informato del <xref:System.ServiceModel.ServiceAuthorizationManager> da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="e26f5-139">Once the custom <xref:System.ServiceModel.ServiceAuthorizationManager> is implemented, the service host must be informed about the <xref:System.ServiceModel.ServiceAuthorizationManager> to use.</span></span> <span data-ttu-id="e26f5-140">Questa operazione viene eseguita come mostrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="e26f5-140">This is done as shown in the following code.</span></span>  
   
-```  
+```xml  
 <behavior ...>  
     ...  
     <serviceAuthorization serviceAuthorizationManagerType="Microsoft.ServiceModel.Samples.MyServiceAuthorizationManager, service">  
         ...  
     </serviceAuthorization>  
 </behavior>  
-  
 ```  
   
- Il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy> principale da implementare è il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29>.  
+ <span data-ttu-id="e26f5-141">Il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy> principale da implementare è il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29>.</span><span class="sxs-lookup"><span data-stu-id="e26f5-141">The primary <xref:System.IdentityModel.Policy.IAuthorizationPolicy> method to implement is the <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> method.</span></span>  
   
 ```  
 public class MyAuthorizationPolicy : IAuthorizationPolicy  
@@ -390,29 +386,28 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 }  
 ```  
   
- Il codice precedente mostra come il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> controlla che non sia stata aggiunta nessuna nuova attestazione che influisce sull'elaborazione e aggiunge attestazioni specifiche.Le attestazioni consentite vengono ottenute dal metodo `GetAllowedOpList`, implementato per restituire un elenco specifico di operazioni che l'utente può eseguire.I criteri di autorizzazione aggiungono attestazioni per l'accesso alla specifica operazione.Tale accesso verrà utilizzato in un secondo momento da <xref:System.ServiceModel.ServiceAuthorizationManager> per effettuare scelte in relazione al controllo dell'accesso.  
+ <span data-ttu-id="e26f5-142">Il codice precedente mostra come il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> controlla che non sia stata aggiunta nessuna nuova attestazione che influisce sull'elaborazione e aggiunge attestazioni specifiche.</span><span class="sxs-lookup"><span data-stu-id="e26f5-142">The previous code shows how the <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> method checks that no new claims have been added that affect the processing and adds specific claims.</span></span> <span data-ttu-id="e26f5-143">Le attestazioni consentite vengono ottenute dal metodo `GetAllowedOpList`, implementato per restituire un elenco specifico di operazioni che l'utente può eseguire.</span><span class="sxs-lookup"><span data-stu-id="e26f5-143">The claims that are allowed are obtained from the `GetAllowedOpList` method, which is implemented to return a specific list of operations that the user is allowed to perform.</span></span> <span data-ttu-id="e26f5-144">I criteri di autorizzazione aggiungono attestazioni per l'accesso alla specifica operazione.</span><span class="sxs-lookup"><span data-stu-id="e26f5-144">The authorization policy adds claims for accessing the particular operation.</span></span> <span data-ttu-id="e26f5-145">Tale accesso verrà utilizzato in un secondo momento da <xref:System.ServiceModel.ServiceAuthorizationManager> per effettuare scelte in relazione al controllo dell'accesso.</span><span class="sxs-lookup"><span data-stu-id="e26f5-145">This is later used by the <xref:System.ServiceModel.ServiceAuthorizationManager> to perform access check decisions.</span></span>  
   
- Quando l'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> personalizzata è stata implementata, l'host del servizio deve essere informato dei criteri di autorizzazione da utilizzare.  
+ <span data-ttu-id="e26f5-146">Quando l'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> personalizzata è stata implementata, l'host del servizio deve essere informato dei criteri di autorizzazione da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="e26f5-146">Once the custom <xref:System.IdentityModel.Policy.IAuthorizationPolicy> is implemented, the service host must be informed about the authorization policies to use.</span></span>  
   
-```  
+```xml  
 <serviceAuthorization ...>  
        <authorizationPolicies>   
             <add policyType='Microsoft.ServiceModel.Samples.CustomAuthorizationPolicy.MyAuthorizationPolicy, PolicyLibrary' />  
        </authorizationPolicies>   
 </serviceAuthorization>  
-  
 ```  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.Il client chiama correttamente i metodi Add, Subtract e Multiple e ottiene un messaggio "Accesso negato" quando tenta di chiamare il metodo Divide.Premere INVIO nella finestra del client per arrestare il client.  
+ <span data-ttu-id="e26f5-147">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-147">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="e26f5-148">Il client chiama correttamente i metodi Add, Subtract e Multiple e ottiene un messaggio "Accesso negato" quando tenta di chiamare il metodo Divide.</span><span class="sxs-lookup"><span data-stu-id="e26f5-148">The client successfully calls the Add, Subtract and Multiple methods and gets an "Access is denied" message when trying to call the Divide method.</span></span> <span data-ttu-id="e26f5-149">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-149">Press ENTER in the client window to shut down the client.</span></span>  
   
-## File batch di installazione  
- Il file batch Setup.bat incluso in questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione indipendente che richiede la sicurezza server basata su certificato.  
+## <a name="setup-batch-file"></a><span data-ttu-id="e26f5-150">File batch di installazione</span><span class="sxs-lookup"><span data-stu-id="e26f5-150">Setup Batch File</span></span>  
+ <span data-ttu-id="e26f5-151">Il file batch Setup.bat incluso in questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione indipendente che richiede la sicurezza server basata su certificato.</span><span class="sxs-lookup"><span data-stu-id="e26f5-151">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run a self-hosted application that requires server certificate-based security.</span></span>  
   
- Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.  
+ <span data-ttu-id="e26f5-152">Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.</span><span class="sxs-lookup"><span data-stu-id="e26f5-152">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration:</span></span>  
   
--   Creazione del certificato server.  
+-   <span data-ttu-id="e26f5-153">Creazione del certificato server.</span><span class="sxs-lookup"><span data-stu-id="e26f5-153">Creating the server certificate.</span></span>  
   
-     Le righe seguenti del file batch Setup.bat creano il certificato server da utilizzare.La variabile %SERVER\_NAME% specifica il nome del server.Modificare questa variabile per specificare il nome del server.Il valore predefinito è localhost.  
+     <span data-ttu-id="e26f5-154">Le righe seguenti del file batch Setup.bat creano il certificato server da usare.</span><span class="sxs-lookup"><span data-stu-id="e26f5-154">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="e26f5-155">La variabile %SERVER_NAME% specifica il nome del server.</span><span class="sxs-lookup"><span data-stu-id="e26f5-155">The %SERVER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="e26f5-156">Modificare questa variabile per specificare nome del server.</span><span class="sxs-lookup"><span data-stu-id="e26f5-156">Change this variable to specify your own server name.</span></span> <span data-ttu-id="e26f5-157">Il valore predefinito è localhost.</span><span class="sxs-lookup"><span data-stu-id="e26f5-157">The default value is localhost.</span></span>  
   
     ```  
     echo ************  
@@ -422,98 +417,96 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
--   Installazione del certificato server nell'archivio certificati attendibili del client  
+-   <span data-ttu-id="e26f5-158">Installazione del certificato server nell'archivio certificati attendibili del client</span><span class="sxs-lookup"><span data-stu-id="e26f5-158">Installing the server certificate into client's trusted certificate store.</span></span>  
   
-     Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio delle persone attendibile del client.Questo passaggio è necessario perché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client.Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.  
+     <span data-ttu-id="e26f5-159">Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-159">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="e26f5-160">Questo passaggio è necessario perché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-160">This step is required because certificates that are generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="e26f5-161">Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.</span><span class="sxs-lookup"><span data-stu-id="e26f5-161">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Creazione del certificato del client  
+-   <span data-ttu-id="e26f5-162">Creazione del certificato del client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-162">Creating the client certificate.</span></span>  
   
-     Le righe seguenti del file batch Setup.bat creano il certificato client da utilizzare.La variabile %USER\_NAME% specifica il nome del server.Questo valore è impostato su "test1" perché questo è il nome cercato da `IAuthorizationPolicy`.Se si modifica il valore di %USER\_NAME%, è necessario modificare il valore corrispondente nel metodo `IAuthorizationPolicy.Evaluate`.  
+     <span data-ttu-id="e26f5-163">Le righe seguenti del file batch Setup.bat creano il certificato client da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="e26f5-163">The following lines from the Setup.bat batch file create the client certificate to be used.</span></span> <span data-ttu-id="e26f5-164">La variabile %USER_NAME% specifica il nome del server.</span><span class="sxs-lookup"><span data-stu-id="e26f5-164">The %USER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="e26f5-165">Questo valore è impostato su "test1" perché questo è il nome cercato da `IAuthorizationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="e26f5-165">This value is set to "test1" because this is the name the `IAuthorizationPolicy` looks for.</span></span> <span data-ttu-id="e26f5-166">Se si modifica il valore di %USER_NAME%, è necessario modificare il valore corrispondente nel metodo `IAuthorizationPolicy.Evaluate`.</span><span class="sxs-lookup"><span data-stu-id="e26f5-166">If you change the value of %USER_NAME% you must change the corresponding value in the `IAuthorizationPolicy.Evaluate` method.</span></span>  
   
-     Il certificato viene memorizzato nell'archivio personale nel percorso di archivio CurrentUser.  
+     <span data-ttu-id="e26f5-167">Il certificato viene memorizzato nell'archivio personale nel percorso di archivio CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="e26f5-167">The certificate is stored in My (Personal) store under the CurrentUser store location.</span></span>  
   
     ```  
     echo ************  
     echo making client cert  
     echo ************  
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
-  
     ```  
   
--   Installazione del certificato client nell'archivio certificati attendibili del server  
+-   <span data-ttu-id="e26f5-168">Installazione del certificato client nell'archivio certificati attendibili del server</span><span class="sxs-lookup"><span data-stu-id="e26f5-168">Installing the client certificate into server's trusted certificate store.</span></span>  
   
-     Le righe seguenti nel file batch Setup.bat copiano il certificato client nell'archivio delle persone attendibile.Questo passaggio è necessario perché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema del server.Se è già disponibile un certificato che è impostato come radice in un certificato radice attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio della popolazione dell'archivio certificati server con il certificato client non è necessario.  
+     <span data-ttu-id="e26f5-169">Le righe seguenti nel file batch Setup.bat copiano il certificato client nell'archivio delle persone attendibile.</span><span class="sxs-lookup"><span data-stu-id="e26f5-169">The following lines in the Setup.bat batch file copy the client certificate into the trusted people store.</span></span> <span data-ttu-id="e26f5-170">Questo passaggio è necessario perché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema del server.</span><span class="sxs-lookup"><span data-stu-id="e26f5-170">This step is required because certificates that are generated by Makecert.exe are not implicitly trusted by the server system.</span></span> <span data-ttu-id="e26f5-171">Se è già disponibile un certificato che è impostato come radice in un certificato radice attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio della popolazione dell'archivio certificati server con il certificato client non è necessario.</span><span class="sxs-lookup"><span data-stu-id="e26f5-171">If you already have a certificate that is rooted in a trusted root certificate—for example, a Microsoft issued certificate—this step of populating the server certificate store with the client certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
-#### Per impostare e compilare l'esempio  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="e26f5-172">Per impostare e compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="e26f5-172">To set up and build the sample</span></span>  
   
-1.  Per compilare la soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  <span data-ttu-id="e26f5-173">Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e26f5-173">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.  
+2.  <span data-ttu-id="e26f5-174">Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.</span><span class="sxs-lookup"><span data-stu-id="e26f5-174">To run the sample in a single- or cross-computer configuration, use the following instructions.</span></span>  
   
 > [!NOTE]
->  Se si utilizza Svcutil.exe per rigenerare la configurazione di questo esempio, verificare di modificare il nome dell'endpoint nella configurazione client in modo che corrisponda al codice client.  
+>  <span data-ttu-id="e26f5-175">Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare il nome dell'endpoint nella configurazione client in modo che corrisponda al codice client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-175">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
   
-#### Per eseguire l'esempio nello stesso computer  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="e26f5-176">Per eseguire l'esempio nello stesso computer</span><span class="sxs-lookup"><span data-stu-id="e26f5-176">To run the sample on the same computer</span></span>  
   
-1.  Aprire un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio.In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
+1.  <span data-ttu-id="e26f5-177">Aprire un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-177">Open a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt window with administrator privileges and run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="e26f5-178">In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-178">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].La variabile di ambiente PATH impostata nel prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] punta alla directory che contiene file eseguibili richiesti dallo script Setup.bat.  
+    >  <span data-ttu-id="e26f5-179">Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e26f5-179">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="e26f5-180">La variabile di ambiente PATH impostata nel prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] punta alla directory che contiene file eseguibili richiesti dallo script Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="e26f5-180">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-2.  Aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio.In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
+2.  <span data-ttu-id="e26f5-181">Aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-181">Run Setup.bat in a Visual Studio command prompt opened with administrator privileges from the sample install folder.</span></span> <span data-ttu-id="e26f5-182">In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-182">This installs all the certificates required for running the sample.</span></span>  
   
-3.  Avviare Service.exe da service\\bin.  
+3.  <span data-ttu-id="e26f5-183">Avviare Service.exe da service\bin.</span><span class="sxs-lookup"><span data-stu-id="e26f5-183">Launch Service.exe from service\bin.</span></span>  
   
-4.  Avviare Client.exe da \\client\\bin.L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+4.  <span data-ttu-id="e26f5-184">Avviare Client.exe da \client\bin.</span><span class="sxs-lookup"><span data-stu-id="e26f5-184">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="e26f5-185">L'attività del client viene visualizzata nella finestra dell'applicazione console.</span><span class="sxs-lookup"><span data-stu-id="e26f5-185">Client activity is displayed on the client console application.</span></span>  
   
-5.  Se il client e il servizio non sono in grado di comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  <span data-ttu-id="e26f5-186">Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="e26f5-186">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Per eseguire l'esempio tra più computer  
+#### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="e26f5-187">Per eseguire l'esempio tra più computer</span><span class="sxs-lookup"><span data-stu-id="e26f5-187">To run the sample across computers</span></span>  
   
-1.  Creare una directory sul computer del servizio.  
+1.  <span data-ttu-id="e26f5-188">Creare una directory sul computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-188">Create a directory on the service computer.</span></span>  
   
-2.  Copiare i file di programma del servizio da \\service\\bin nella directory del computer del servizio.Copiare inoltre i file Setup.bat, Cleanup.bat,GetComputerName.vbs e ImportClientCert.bat nel computer del servizio.  
+2.  <span data-ttu-id="e26f5-189">Copiare i file di programma del servizio da \service\bin nella directory del computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-189">Copy the service program files from \service\bin to the directory on the service computer.</span></span> <span data-ttu-id="e26f5-190">Copiare inoltre i file Setup.bat, Cleanup.bat,GetComputerName.vbs e ImportClientCert.bat nel computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-190">Also copy the Setup.bat, Cleanup.bat, GetComputerName.vbs and ImportClientCert.bat files to the service computer.</span></span>  
   
-3.  Creare una directory sul computer client del servizio per i file binari del client.  
+3.  <span data-ttu-id="e26f5-191">Creare una directory sul computer client del servizio per i file binari del client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-191">Create a directory on the client computerfor the client binaries.</span></span>  
   
-4.  Copiare i file di programma del client nella directory del client sul computer relativoe i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel computer del client.  
+4.  <span data-ttu-id="e26f5-192">Copiare i file di programma del client nella directory del client sul computer relativo</span><span class="sxs-lookup"><span data-stu-id="e26f5-192">Copy the client program files to the client directory on the client computer.</span></span> <span data-ttu-id="e26f5-193">e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.</span><span class="sxs-lookup"><span data-stu-id="e26f5-193">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
   
-5.  Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire `setup.bat service`.Quando si esegue `setup.bat` con l'argomento `service` viene creato un certificato del servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service.cer.  
+5.  <span data-ttu-id="e26f5-194">Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire `setup.bat service`.</span><span class="sxs-lookup"><span data-stu-id="e26f5-194">On the server, run `setup.bat service` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="e26f5-195">Esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer e il certificato del servizio in un file denominato Service.cer.</span><span class="sxs-lookup"><span data-stu-id="e26f5-195">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the computerand exports the service certificate to a file named Service.cer.</span></span>  
   
-6.  Modificare Service.exe.config per riflettere il nuovo nome del certificato \(nell'attributo `findValue` in [\<certificatoServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\) che corrisponde al nome di dominio completo del computer.Modificare inoltre il nome del computer nell'elemento \<service\>\/\<baseAddresses\> da localhost nel nome completo del computer del servizio.  
+6.  <span data-ttu-id="e26f5-196">Modifica Service.exe per riflettere il nuovo nome del certificato (nel `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) che corrisponde al nome di dominio completo del computer.</span><span class="sxs-lookup"><span data-stu-id="e26f5-196">Edit Service.exe.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) which is the same as the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="e26f5-197">Inoltre, modificare il nome del computer nel \<servizio > /\<baseAddresses > elemento da localhost per il nome completo del computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-197">Also change the computername in the \<service>/\<baseAddresses> element from localhost to the fully-qualified name of your service computer.</span></span>  
   
-7.  Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
+7.  <span data-ttu-id="e26f5-198">Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.</span><span class="sxs-lookup"><span data-stu-id="e26f5-198">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
   
-8.  Sul client aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire `setup.bat client`.Quando si esegue `setup.bat` con l'argomento `client` viene creato un certificato client denominato test1 e il certificato client viene esportato in un file denominato Client.cer.  
+8.  <span data-ttu-id="e26f5-199">Sul client aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire `setup.bat client`.</span><span class="sxs-lookup"><span data-stu-id="e26f5-199">On the client, run `setup.bat client` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="e26f5-200">Esecuzione `setup.bat` con il `client` argomento crea un certificato client denominato test1 e il certificato client viene esportato in un file denominato Client.cer.</span><span class="sxs-lookup"><span data-stu-id="e26f5-200">Running `setup.bat` with the `client` argument creates a client certificate named test1 and exports the client certificate to a file named Client.cer.</span></span>  
   
-9. Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server.  
+9. <span data-ttu-id="e26f5-201">Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-201">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="e26f5-202">Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server.</span><span class="sxs-lookup"><span data-stu-id="e26f5-202">Do this by replacing localhost with the fully-qualified domain name of the server.</span></span>  
   
-10. Copiare il file Client.cer dalla directory del client nella directory del servizio sul server.  
+10. <span data-ttu-id="e26f5-203">Copiare il file Client.cer dalla directory del client nella directory del servizio sul server.</span><span class="sxs-lookup"><span data-stu-id="e26f5-203">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-11. Sul client aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportServiceCert.bat.In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser \- TrustedPeople.  
+11. <span data-ttu-id="e26f5-204">Sul client aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportServiceCert.bat.</span><span class="sxs-lookup"><span data-stu-id="e26f5-204">On the client, run ImportServiceCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="e26f5-205">In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="e26f5-205">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-12. Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportClientCert.bat.In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine \- TrustedPeople.  
+12. <span data-ttu-id="e26f5-206">Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportClientCert.bat.</span><span class="sxs-lookup"><span data-stu-id="e26f5-206">On the server, run ImportClientCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="e26f5-207">In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="e26f5-207">This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-13. Sul computer server avviare Service.exe dalla finestra del prompt dei comandi.  
+13. <span data-ttu-id="e26f5-208">Sul computer server avviare Service.exe dalla finestra del prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="e26f5-208">On the server computer, launch Service.exe from the command prompt window.</span></span>  
   
-14. Sul computer client avviare Client.exe da una finestra del prompt dei comandi.Se il client e il servizio non sono in grado di comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b).  
+14. <span data-ttu-id="e26f5-209">Sul computer client avviare Client.exe da una finestra del prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="e26f5-209">On the client computer, launch Client.exe from a command prompt window.</span></span> <span data-ttu-id="e26f5-210">Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="e26f5-210">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Per eseguire la pulizia dopo l'esempio  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="e26f5-211">Per eseguire la pulizia dopo l'esempio</span><span class="sxs-lookup"><span data-stu-id="e26f5-211">To clean up after the sample</span></span>  
   
-1.  Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.In questo modo i certificati server e client vengono rimossi dall'archivio certificati.  
+1.  <span data-ttu-id="e26f5-212">Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.</span><span class="sxs-lookup"><span data-stu-id="e26f5-212">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span> <span data-ttu-id="e26f5-213">In questo modo i certificati server e client vengono rimossi dall'archivio certificati.</span><span class="sxs-lookup"><span data-stu-id="e26f5-213">This removes the server and client certificates from the certificate store.</span></span>  
   
 > [!NOTE]
->  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer.Se sono stati eseguiti esempi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizzano certificati tra più computer, verificare di cancellare i certificati del servizio installati nell'archivio CurrentUser \- TrustedPeople.Per eseguire questa operazione, utilizzare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  <span data-ttu-id="e26f5-214">Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer.</span><span class="sxs-lookup"><span data-stu-id="e26f5-214">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="e26f5-215">Se sono stati eseguiti esempi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che usano certificati tra più computer, verificare di cancellare i certificati del servizio installati nell'archivio CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="e26f5-215">If you have run [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="e26f5-216">Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="e26f5-216">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="e26f5-217">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e26f5-217">See Also</span></span>

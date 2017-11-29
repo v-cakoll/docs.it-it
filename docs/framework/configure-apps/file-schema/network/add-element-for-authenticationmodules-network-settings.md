@@ -1,76 +1,78 @@
 ---
-title: "Elemento &lt;add&gt; per authenticationModules (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> (elemento), authenticationModules"
-  - "<authenticationModules>, add (elemento)"
-  - "add (elemento), authenticationModules"
-  - "authenticationModules, add (elemento)"
+title: '&lt;aggiungere&gt; elemento per authenticationModules (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add
+helpviewer_keywords:
+- authenticationModules, add element
+- add element, authenticationModules
+- <authenticationModules>, add element
+- <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 60909a738afbe2ec14d0f67846b06578a7393601
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;add&gt; per authenticationModules (Impostazioni di rete)
-Consente di aggiungere un modulo di autenticazione all'applicazione.  
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="10fc1-102">&lt;aggiungere&gt; elemento per authenticationModules (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="10fc1-102">&lt;add&gt; Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="10fc1-103">Aggiunge un modulo di autenticazione all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="10fc1-103">Adds an authentication module to the application.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="10fc1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="10fc1-104">\<configuration></span></span>  
+<span data-ttu-id="10fc1-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="10fc1-105">\<system.net></span></span>  
+<span data-ttu-id="10fc1-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="10fc1-106">\<authenticationModules></span></span>  
+<span data-ttu-id="10fc1-107">\<add></span><span class="sxs-lookup"><span data-stu-id="10fc1-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="10fc1-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="10fc1-108">Syntax</span></span>  
   
-      <add   
-   type = "client type", System, Version="version number", Culture="culture", PublicKeyToken="token"   
+```xml  
+<add
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="10fc1-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="10fc1-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="10fc1-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="10fc1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="10fc1-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="10fc1-111">Attributes</span></span>  
   
-|**Attribute**|**Descrizione**|  
+|<span data-ttu-id="10fc1-112">**Attributo**</span><span class="sxs-lookup"><span data-stu-id="10fc1-112">**Attribute**</span></span>|<span data-ttu-id="10fc1-113">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="10fc1-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`type`|Nome di classe e dettagli del modulo che implementa l'autenticazione.|  
+|`type`|<span data-ttu-id="10fc1-114">Il nome completo del tipo (indicato dal <xref:System.Type.FullName%2A> proprietà) e il nome dell'assembly (indicato dal <xref:System.Reflection.Assembly.FullName%2A> proprietà), separati da una virgola.</span><span class="sxs-lookup"><span data-stu-id="10fc1-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="10fc1-115">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="10fc1-115">Child Elements</span></span>  
+ <span data-ttu-id="10fc1-116">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="10fc1-116">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="10fc1-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="10fc1-117">Parent Elements</span></span>  
   
-|**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Specifica i moduli utilizzati per autenticare le richieste di rete.|  
+|<span data-ttu-id="10fc1-118">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="10fc1-118">**Element**</span></span>|<span data-ttu-id="10fc1-119">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="10fc1-119">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="10fc1-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="10fc1-120">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="10fc1-121">Specifica i moduli utilizzati per autenticare le richieste di rete.</span><span class="sxs-lookup"><span data-stu-id="10fc1-121">Specifies modules used to authenticate network requests.</span></span>|  
   
-## Note  
- L'elemento `add` aggiunge un modulo di autenticazione alla fine dell'elenco dei moduli di autenticazione registrati.  I moduli di autenticazione vengono richiamati nell'ordine in cui sono stati aggiunti all'elenco.  
+## <a name="remarks"></a><span data-ttu-id="10fc1-122">Note</span><span class="sxs-lookup"><span data-stu-id="10fc1-122">Remarks</span></span>  
+ <span data-ttu-id="10fc1-123">Con l'elemento `add` viene aggiunto un modulo di autenticazione alla fine dell'elenco dei moduli di autenticazione registrati.</span><span class="sxs-lookup"><span data-stu-id="10fc1-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="10fc1-124">Moduli di autenticazione vengono chiamati nell'ordine in cui sono stati aggiunti all'elenco.</span><span class="sxs-lookup"><span data-stu-id="10fc1-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
   
- Il valore dell'attributo `type` deve essere costituito da un nome DLL valido e un nome di classe corrispondente, separati da una virgola.  
+ <span data-ttu-id="10fc1-125">Il valore per il `type` attributo deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.</span><span class="sxs-lookup"><span data-stu-id="10fc1-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="10fc1-126">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="10fc1-126">Configuration Files</span></span>  
+ <span data-ttu-id="10fc1-127">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="10fc1-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito vengono attivati i moduli di autenticazione predefiniti.  È necessario sostituire i valori di Version e PublicKeyToken con i valori corretti per il modulo specificato.  
+## <a name="example"></a><span data-ttu-id="10fc1-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="10fc1-128">Example</span></span>  
+ <span data-ttu-id="10fc1-129">L'esempio seguente Abilita i moduli di autenticazione predefinito.</span><span class="sxs-lookup"><span data-stu-id="10fc1-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="10fc1-130">È necessario sostituire i valori per la versione e PublicKeyToken con i valori corretti per il modulo specificato.</span><span class="sxs-lookup"><span data-stu-id="10fc1-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
         <authenticationModules>  
@@ -89,7 +91,7 @@ Consente di aggiungere un modulo di autenticazione all'applicazione.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="10fc1-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10fc1-131">See Also</span></span>  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
+ [<span data-ttu-id="10fc1-132">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="10fc1-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

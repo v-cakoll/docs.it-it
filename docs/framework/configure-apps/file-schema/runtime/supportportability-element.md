@@ -1,78 +1,81 @@
 ---
-title: "Elemento &lt;supportPortability&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<supportPortability> (elemento)"
-  - "supportPortability (elemento)"
+title: '&lt;supportPortability&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- supportPortability element
+- <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b46d12ecebae17b7cfe2168b6313be45ad5b04d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;supportPortability&gt;
-Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti allo scopo della portabilità dell'applicazione.  
+# <a name="ltsupportportabilitygt-element"></a><span data-ttu-id="86177-102">&lt;supportPortability&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="86177-102">&lt;supportPortability&gt; Element</span></span>
+<span data-ttu-id="86177-103">Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="86177-103">Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="86177-104">\<configurazione > elemento</span><span class="sxs-lookup"><span data-stu-id="86177-104">\<configuration> Element</span></span>  
+<span data-ttu-id="86177-105">\<runtime > elemento</span><span class="sxs-lookup"><span data-stu-id="86177-105">\<runtime> Element</span></span>  
+<span data-ttu-id="86177-106">\<assemblyBinding > elemento</span><span class="sxs-lookup"><span data-stu-id="86177-106">\<assemblyBinding> Element</span></span>  
+<span data-ttu-id="86177-107">\<supportPortability > elemento</span><span class="sxs-lookup"><span data-stu-id="86177-107">\<supportPortability> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="86177-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="86177-108">Syntax</span></span>  
+  
+```xml  
 <supportPortability PKT="public_key_token" enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="86177-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="86177-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="86177-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="86177-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="86177-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="86177-111">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="86177-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="86177-112">Attribute</span></span>|<span data-ttu-id="86177-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="86177-113">Description</span></span>|  
 |---------------|-----------------|  
-|PKT|Attributo obbligatorio.<br /><br /> Specifica il token di chiave pubblica dell'assembly interessato, come una stringa.|  
-|enabled|Attributo facoltativo.<br /><br /> Specifica se deve essere abilitato il supporto per la portabilità tra implementazioni dell'assembly .NET Framework specificato.|  
+|<span data-ttu-id="86177-114">PKT</span><span class="sxs-lookup"><span data-stu-id="86177-114">PKT</span></span>|<span data-ttu-id="86177-115">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="86177-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="86177-116">Specifica il token di chiave pubblica dell'assembly interessato, sotto forma di stringa.</span><span class="sxs-lookup"><span data-stu-id="86177-116">Specifies the public key token of the affected assembly, as a string.</span></span>|  
+|<span data-ttu-id="86177-117">enabled</span><span class="sxs-lookup"><span data-stu-id="86177-117">enabled</span></span>|<span data-ttu-id="86177-118">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="86177-118">Optional attribute.</span></span><br /><br /> <span data-ttu-id="86177-119">Specifica se deve essere abilitato il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato.</span><span class="sxs-lookup"><span data-stu-id="86177-119">Specifies whether support for portability between implementations of the specified .NET Framework assembly should be enabled.</span></span>|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="86177-120">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="86177-120">enabled Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|true|Abilita il supporto per la portabilità tra implementazioni dell'assembly .NET Framework specificato.  Questa è l'impostazione predefinita.|  
-|false|Disabilita il supporto per la portabilità tra implementazioni dell'assembly .NET Framework specificato.  Consente all'applicazione di avere riferimenti a più implementazioni dell'assembly specificato.|  
+|<span data-ttu-id="86177-121">Valore</span><span class="sxs-lookup"><span data-stu-id="86177-121">Value</span></span>|<span data-ttu-id="86177-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="86177-122">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="86177-123">true</span><span class="sxs-lookup"><span data-stu-id="86177-123">true</span></span>|<span data-ttu-id="86177-124">Abilitare il supporto per la portabilità tra implementazioni dell'assembly .NET Framework specificato.</span><span class="sxs-lookup"><span data-stu-id="86177-124">Enable support for portability between implementations of the specified .NET Framework assembly.</span></span> <span data-ttu-id="86177-125">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="86177-125">This is the default.</span></span>|  
+|<span data-ttu-id="86177-126">false</span><span class="sxs-lookup"><span data-stu-id="86177-126">false</span></span>|<span data-ttu-id="86177-127">Disabilitare il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato.</span><span class="sxs-lookup"><span data-stu-id="86177-127">Disable support for portability between implementations of the specified .NET Framework assembly.</span></span> <span data-ttu-id="86177-128">In questo modo l'applicazione di riferimenti a più implementazioni dell'assembly specificato.</span><span class="sxs-lookup"><span data-stu-id="86177-128">This enables the application to have references to multiple implementations of the specified assembly.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="86177-129">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="86177-129">Child Elements</span></span>  
+ <span data-ttu-id="86177-130">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="86177-130">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="86177-131">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="86177-131">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
-|`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
+|<span data-ttu-id="86177-132">Elemento</span><span class="sxs-lookup"><span data-stu-id="86177-132">Element</span></span>|<span data-ttu-id="86177-133">Descrizione</span><span class="sxs-lookup"><span data-stu-id="86177-133">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="86177-134">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="86177-134">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="86177-135">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="86177-135">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="86177-136">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="86177-136">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
   
-## Note  
- Iniziando con [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il supporto viene fornito automaticamente per le applicazioni che possono utilizzare una delle due implementazioni di .NET Framework, ad esempio l'implementazione di .NET Framework o di .NET Framework per Silverlight.  Le due implementazioni di un particolare assembly .NET Framework vengono considerate equivalenti dal gestore di associazione dell'assembly.  In alcuni scenari, questa funzionalità di portabilità dell'applicazione crea problemi.  In quegli scenari, l'elemento `<supportPortability>` può essere utilizzato per disabilitare la funzionalità.  
+## <a name="remarks"></a><span data-ttu-id="86177-137">Note</span><span class="sxs-lookup"><span data-stu-id="86177-137">Remarks</span></span>  
+ <span data-ttu-id="86177-138">A partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il supporto viene fornito automaticamente per le applicazioni che è possono utilizzare uno dei due implementazioni di .NET Framework, ad esempio l'implementazione di .NET Framework o .NET Framework per Silverlight.</span><span class="sxs-lookup"><span data-stu-id="86177-138">Beginning with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], support is automatically provided for applications that can use either of two implementations of the .NET Framework, for example either the .NET Framework implementation or the .NET Framework for Silverlight implementation.</span></span> <span data-ttu-id="86177-139">Le due implementazioni di un particolare assembly di .NET Framework vengono considerate equivalenti dal gestore di associazione di assembly.</span><span class="sxs-lookup"><span data-stu-id="86177-139">The two implementations of a particular .NET Framework assembly are seen as equivalent by the assembly binder.</span></span> <span data-ttu-id="86177-140">In alcuni scenari, questa funzionalità di portabilità dell'applicazione può causare problemi.</span><span class="sxs-lookup"><span data-stu-id="86177-140">In a few scenarios, this application portability feature causes problems.</span></span> <span data-ttu-id="86177-141">In tali scenari, il `<supportPortability>` elemento può essere usato per disabilitare la funzionalità.</span><span class="sxs-lookup"><span data-stu-id="86177-141">In those scenarios, the `<supportPortability>` element can be used to disable the feature.</span></span>  
   
- Un tale scenario è un assembly che deve fare riferimento sia all'implementazione di .NET Framework sia all'implementazione di .NET Framework per Silverlight di un particolare assembly di riferimento.  Ad esempio, una finestra di progettazione XAML scritta in Windows Presentation Foundation \(WPF\) potrebbe dovere fare riferimento sia all'implementazine di Desktop WPF, per l'interfaccia utente della finestra di progettazione che al sottoinsieme di WPF incluso nell'implementazione di Silverlight.  Per impostazione predefinita, i riferimenti separati provocano un errore del compilatore, perché l'associazione di assembly vede i due assembly come equivalenti.  Questo elemento disabilita il comportamento predefinito e consente alla compilazione di riuscire.  
+ <span data-ttu-id="86177-142">Uno scenario di questo tipo è un assembly che deve fare riferimento all'implementazione di .NET Framework sia .NET Framework per Silverlight di implementazione di un particolare assembly di riferimento.</span><span class="sxs-lookup"><span data-stu-id="86177-142">One such scenario is an assembly that has to reference both the .NET Framework implementation and the .NET Framework for Silverlight implementation of a particular reference assembly.</span></span> <span data-ttu-id="86177-143">Ad esempio, una finestra di progettazione XAML scritta in Windows Presentation Foundation (WPF) potrebbe essere necessario fare riferimento sia all'implementazione Desktop WPF, per l'interfaccia utente della finestra di progettazione e il subset di WPF incluso nell'implementazione di Silverlight.</span><span class="sxs-lookup"><span data-stu-id="86177-143">For example, a XAML designer written in Windows Presentation Foundation (WPF) might need to reference both the WPF Desktop implementation, for the designer's user interface, and the subset of WPF that is included in the Silverlight implementation.</span></span> <span data-ttu-id="86177-144">Per impostazione predefinita, i riferimenti separati provocano un errore del compilatore, poiché l'associazione di assembly considera uguali i due assembly.</span><span class="sxs-lookup"><span data-stu-id="86177-144">By default, the separate references cause a compiler error, because assembly binding sees the two assemblies as equivalent.</span></span> <span data-ttu-id="86177-145">Questo elemento disabilita il comportamento predefinito e consente la compilazione abbia esito positivo.</span><span class="sxs-lookup"><span data-stu-id="86177-145">This element disables the default behavior, and allows compilation to succeed.</span></span>  
   
 > [!IMPORTANT]
->  Affinché il compilatore passi le informazioni alla logica di associazione dell'assembly di Common Language Runtime, è necessario utilizzare l'opzione del compilatore `/appconfig` per specificare il percorso del file app.config che contiene questo elemento.  
+>  <span data-ttu-id="86177-146">Affinché il compilatore passare le informazioni per la logica di associazione di assembly di common language runtime, è necessario utilizzare il `/appconfig` l'opzione del compilatore per specificare il percorso del file app. config che contiene questo elemento.</span><span class="sxs-lookup"><span data-stu-id="86177-146">In order for the compiler to pass the information to the common language runtime's assembly-binding logic, you must use the `/appconfig` compiler option to specify the location of the app.config file that contains this element.</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene abilitata un'applicazione ad avere riferimenti sia all'implementazione di .NET Framework sia all'implementazione di .NET Framework for Silverlight di qualsiasi assembly di .NET Framework presente in entrambe le implementazioni.  L'opzione del compilatore `/appconfig` deve essere utilizzata per specificare il percorso di questo file app.config.  
+## <a name="example"></a><span data-ttu-id="86177-147">Esempio</span><span class="sxs-lookup"><span data-stu-id="86177-147">Example</span></span>  
+ <span data-ttu-id="86177-148">Nell'esempio seguente consente a un'applicazione di riferimenti all'implementazione di .NET Framework sia .NET Framework per Silverlight di implementazione di un assembly di .NET Framework presente in entrambe le implementazioni.</span><span class="sxs-lookup"><span data-stu-id="86177-148">The following example enables an application to have references to both the .NET Framework implementation and the .NET Framework for Silverlight implementation of any .NET Framework assembly that exists in both implementations.</span></span> <span data-ttu-id="86177-149">Il `/appconfig` opzione del compilatore deve essere usata per specificare il percorso del file app. config.</span><span class="sxs-lookup"><span data-stu-id="86177-149">The `/appconfig` compiler option must be used to specify the location of this app.config file.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding>  
@@ -83,6 +86,6 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 </configuration>  
 ```  
   
-## Vedere anche  
- [\/appconfig \(opzioni del compilatore C\#\)](http://msdn.microsoft.com/library/ee523958.aspx)   
- [.NET Framework Assembly Unification Overview](http://msdn.microsoft.com/it-it/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+## <a name="see-also"></a><span data-ttu-id="86177-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="86177-150">See Also</span></span>  
+ [<span data-ttu-id="86177-151">/appconfig (opzioni del compilatore c#)</span><span class="sxs-lookup"><span data-stu-id="86177-151">/appconfig (C# Compiler Options)</span></span>](http://msdn.microsoft.com/library/ee523958.aspx)  
+ [<span data-ttu-id="86177-152">Panoramica di unificazione degli Assembly di .NET framework</span><span class="sxs-lookup"><span data-stu-id="86177-152">.NET Framework Assembly Unification Overview</span></span>](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

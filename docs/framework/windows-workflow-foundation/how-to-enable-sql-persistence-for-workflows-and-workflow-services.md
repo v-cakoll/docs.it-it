@@ -1,56 +1,62 @@
 ---
-title: "Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: 36
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 36
+caps.latest.revision: "36"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0b06479f1a649e60e141e807db091e207636edef
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi
-In questo argomento viene descritto come configurare la funzionalità di archivio di istanze del flusso di lavoro SQL per abilitare la persistenza per i flussi di lavoro e i relativi servizi sia a livello di codice sia tramite un file di configurazione.  
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a><span data-ttu-id="ed740-102">Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi</span><span class="sxs-lookup"><span data-stu-id="ed740-102">How to: Enable SQL Persistence for Workflows and Workflow Services</span></span>
+<span data-ttu-id="ed740-103">In questo argomento viene descritto come configurare la funzionalità di archivio di istanze del flusso di lavoro SQL per abilitare la persistenza per i flussi di lavoro e i relativi servizi sia a livello di codice sia tramite un file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ed740-103">This topic describes how to configure the SQL Workflow Instance Store feature to enable persistence for your workflows and workflow services both programmatically and by using a configuration file.</span></span>  
   
- Windows Server AppFabric semplifica il processo di configurazione della persistenza.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configurazione della persistenza in AppFabric](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ <span data-ttu-id="ed740-104">Windows Server AppFabric semplifica il processo di configurazione della persistenza.</span><span class="sxs-lookup"><span data-stu-id="ed740-104">Windows Server App Fabric simplifies the process of configuring persistence.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ed740-105">[Configurazione salvataggio permanente di AppFabric](http://go.microsoft.com/fwlink/?LinkId=201204)</span><span class="sxs-lookup"><span data-stu-id="ed740-105"> [App Fabric Persistence Configuration](http://go.microsoft.com/fwlink/?LinkId=201204)</span></span>  
   
- Prima di utilizzare tale funzionalità, creare un database utilizzato dalla funzionalità per rendere persistenti le istanze del flusso di lavoro.Il programma di installazione di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] copia i file di script SQL associati alla funzionalità di archivio di istanze del flusso di lavoro SQL nella cartella %WINDIR%\\Microsoft.NET\\Framework\\v4.xxx\\SQL\\EN.Eseguire questi file di script in un database di SQL Server 2005 o SQL Server 2008 che si desidera venga utilizzato dall'archivio di istanze del flusso di lavoro SQL per rendere persistenti le istanze del flusso di lavoro.Eseguire innanzitutto il file SqlWorkflowInstanceStoreSchema.sql, quindi il file SqlWorkflowInstanceStoreLogic.sql.  
+ <span data-ttu-id="ed740-106">Prima di usare tale funzionalità, creare un database usato dalla funzionalità per rendere persistenti le istanze del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ed740-106">Before using the SQL Workflow Instance Store feature, create a database that the feature uses to persist workflow instances.</span></span> <span data-ttu-id="ed740-107">Il programma di installazione di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] copia i file di script SQL associati alla funzionalità di archivio di istanze del flusso di lavoro SQL nella cartella %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN.</span><span class="sxs-lookup"><span data-stu-id="ed740-107">The [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] set-up program copies SQL script files associated with the SQL Workflow Instance Store feature to the %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN folder.</span></span> <span data-ttu-id="ed740-108">Eseguire questi file di script in un database di SQL Server 2005 o SQL Server 2008 che si desidera venga usato dall'archivio di istanze del flusso di lavoro SQL per rendere persistenti le istanze del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ed740-108">Run these script files against a SQL Server 2005 or SQL Server 2008 database that you want the SQL Workflow Instance Store to use to persist workflow instances.</span></span> <span data-ttu-id="ed740-109">Eseguire innanzitutto il file SqlWorkflowInstanceStoreSchema.sql, quindi il file SqlWorkflowInstanceStoreLogic.sql.</span><span class="sxs-lookup"><span data-stu-id="ed740-109">Run the SqlWorkflowInstanceStoreSchema.sql file first and then run the SqlWorkflowInstanceStoreLogic.sql file.</span></span>  
   
 > [!NOTE]
->  Per pulire il database di persistenza per avere un database aggiornato, eseguire gli script in %WINDIR%\\Microsoft.NET\\Framework\\v4.xxx\\SQL\\EN nell'ordine seguente.  
+>  <span data-ttu-id="ed740-110">Per pulire il database di persistenza per avere un database aggiornato, eseguire gli script in %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN nell'ordine seguente.</span><span class="sxs-lookup"><span data-stu-id="ed740-110">To clean up the persistence database to have a fresh database, run the scripts in %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN in the following order.</span></span>  
 >   
->  1.  SqlWorkflowInstanceStoreSchema.sql  
-> 2.  SqlWorkflowInstanceStoreLogic.sql  
+>  1.  <span data-ttu-id="ed740-111">SqlWorkflowInstanceStoreSchema.sql</span><span class="sxs-lookup"><span data-stu-id="ed740-111">SqlWorkflowInstanceStoreSchema.sql</span></span>  
+> 2.  <span data-ttu-id="ed740-112">SqlWorkflowInstanceStoreLogic.sql</span><span class="sxs-lookup"><span data-stu-id="ed740-112">SqlWorkflowInstanceStoreLogic.sql</span></span>  
   
 > [!IMPORTANT]
->  Se non si crea un database di persistenza, la funzionalità di archivio di istanze del flusso di lavoro SQL genera un'eccezione simile alla seguente quando un host tenta di rendere persistenti i flussi di lavoro.  
+>  <span data-ttu-id="ed740-113">Se non si crea un database di persistenza, la funzionalità di archivio di istanze del flusso di lavoro SQL genera un'eccezione simile alla seguente quando un host tenta di rendere persistenti i flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ed740-113">If you do not create a persistence database, the SQL Workflow Instance Store feature throws an exception similar to the following one when a host tries to persist workflows.</span></span>  
 >   
->  System.Data.SqlClient.SqlException: Impossibile trovare la stored procedure 'System.Activities.DurableInstancing.CreateLockOwner'  
+>  <span data-ttu-id="ed740-114">System.Data.SqlClient.SqlException: Impossibile trovare la stored procedure 'System.Activities.DurableInstancing.CreateLockOwner'</span><span class="sxs-lookup"><span data-stu-id="ed740-114">System.Data.SqlClient.SqlException: Could not find stored procedure 'System.Activities.DurableInstancing.CreateLockOwner'</span></span>  
   
- Nelle sezioni seguenti viene descritto come abilitare la persistenza per i flussi di lavoro e i relativi servizi utilizzando l'archivio di istanze del flusso di lavoro SQL.[!INCLUDE[crabout](../../../includes/crabout-md.md)]lle proprietà di Archivio di istanze del flusso di lavoro SQL, vedere [Proprietà dell'archivio di istanze del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation//properties-of-sql-workflow-instance-store.md).  
+ <span data-ttu-id="ed740-115">Nelle sezioni seguenti viene descritto come abilitare la persistenza per i flussi di lavoro e i relativi servizi usando l'archivio di istanze del flusso di lavoro SQL.</span><span class="sxs-lookup"><span data-stu-id="ed740-115">The following sections describe how to enable persistence for workflows and workflow services using the SQL Workflow Instance Store.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ed740-116">proprietà dell'archivio di istanze del flusso di lavoro SQL, vedere [le proprietà del flusso di lavoro archivio di istanze SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).</span><span class="sxs-lookup"><span data-stu-id="ed740-116"> properties of the SQL Workflow Instance Store, see [Properties of SQL Workflow Instance Store](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).</span></span>  
   
-## Abilitazione della persistenza per i flussi di lavoro indipendenti che utilizzano l'oggetto WorkflowApplication  
- È possibile abilitare la persistenza per i flussi di lavoro indipendenti che utilizzano l'oggetto <xref:System.Activities.WorkflowApplication> a livello di codice tramite il modello a oggetti <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.Nella procedura seguente sono inclusi i passaggi per eseguire questa operazione.  
+## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a><span data-ttu-id="ed740-117">Abilitazione della persistenza per i flussi di lavoro indipendenti che usano l'oggetto WorkflowApplication</span><span class="sxs-lookup"><span data-stu-id="ed740-117">Enabling Persistence for Self-Hosted Workflows that use WorkflowApplication</span></span>  
+ <span data-ttu-id="ed740-118">È possibile abilitare la persistenza per i flussi di lavoro indipendenti che usano l'oggetto <xref:System.Activities.WorkflowApplication> a livello di codice tramite il modello a oggetti <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.</span><span class="sxs-lookup"><span data-stu-id="ed740-118">You can enable persistence for self-hosted workflows that use <xref:System.Activities.WorkflowApplication> programmatically by using the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> object model.</span></span> <span data-ttu-id="ed740-119">Nella procedura seguente sono inclusi i passaggi per eseguire questa operazione.</span><span class="sxs-lookup"><span data-stu-id="ed740-119">The following procedure contains steps to do this.</span></span>  
   
-#### Per abilitare la persistenza per i flussi di lavoro indipendenti  
+#### <a name="to-enable-persistence-for-self-hosted-workflows"></a><span data-ttu-id="ed740-120">Per abilitare la persistenza per i flussi di lavoro indipendenti</span><span class="sxs-lookup"><span data-stu-id="ed740-120">To enable persistence for self-hosted workflows</span></span>  
   
-1.  Aggiungere un riferimento a System.Activites.DurableInstancing.dll.  
+1.  <span data-ttu-id="ed740-121">Aggiungere un riferimento a System.Activites.DurableInstancing.dll.</span><span class="sxs-lookup"><span data-stu-id="ed740-121">Add a reference to System.Activites.DurableInstancing.dll.</span></span>  
   
-2.  Aggiungere l'istruzione seguente all'inizio del file di origine dopo le istruzioni "using" esistenti.  
+2.  <span data-ttu-id="ed740-122">Aggiungere l'istruzione seguente all'inizio del file di origine dopo le istruzioni "using" esistenti.</span><span class="sxs-lookup"><span data-stu-id="ed740-122">Add the following statement at the top of the source file after the existing "using" statements.</span></span>  
   
     ```csharp  
     using System.Activities.DurableInstancing;  
     ```  
   
-3.  Costruire un oggetto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> e assegnarlo alla proprietà <xref:System.Activities.WorkflowApplication.InstanceStore%2A> dell'oggetto <xref:System.Activities.WorkflowApplication> come mostrato nell'esempio di codice seguente.  
+3.  <span data-ttu-id="ed740-123">Costruire un oggetto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> e assegnarlo alla proprietà <xref:System.Activities.WorkflowApplication.InstanceStore%2A> dell'oggetto <xref:System.Activities.WorkflowApplication> come mostrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="ed740-123">Construct a <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> and assign it to the <xref:System.Activities.WorkflowApplication.InstanceStore%2A> of the <xref:System.Activities.WorkflowApplication> as shown in the following code example.</span></span>  
   
     ```csharp  
-  
     SqlWorkflowInstanceStore store =   
         new SqlWorkflowInstanceStore("Server=.\\SQLEXPRESS;Initial Catalog=Persistence;Integrated Security=SSPI");  
   
@@ -58,13 +64,12 @@ In questo argomento viene descritto come configurare la funzionalità di archivi
         new WorkflowApplication(new Workflow1());  
   
     wfApp.InstanceStore = store;  
-  
     ```  
   
     > [!NOTE]
-    >  Il nome del server della stringa di connessione potrebbe essere diverso a seconda dell'edizione di SQL Server.  
+    >  <span data-ttu-id="ed740-124">Il nome del server della stringa di connessione potrebbe essere diverso a seconda dell'edizione di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="ed740-124">Depending on your edition of SQL Server, the connection string server name may be different.</span></span>  
   
-4.  Richiamare il metodo <xref:System.Activities.WorkflowApplication.Persist%2A> sull'oggetto <xref:System.Activities.WorkflowApplication> per rendere persistente un flusso di lavoro o il metodo <xref:System.Activities.WorkflowApplication.Unload%2A> per rendere persistente e scaricare un flusso di lavoro.È anche possibile gestire l'evento <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> generato dall'oggetto <xref:System.Activities.WorkflowApplication> e restituire il membro \(<xref:System.Activities.PersistableIdleAction> o <xref:System.Activities.PersistableIdleAction>\) appropriato dell'oggetto <xref:System.Activities.PersistableIdleAction>.  
+4.  <span data-ttu-id="ed740-125">Richiamare il metodo <xref:System.Activities.WorkflowApplication.Persist%2A> sull'oggetto <xref:System.Activities.WorkflowApplication> per rendere persistente un flusso di lavoro o il metodo <xref:System.Activities.WorkflowApplication.Unload%2A> per rendere persistente e scaricare un flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ed740-125">Invoke the <xref:System.Activities.WorkflowApplication.Persist%2A> method on the <xref:System.Activities.WorkflowApplication> object to persist a workflow, or <xref:System.Activities.WorkflowApplication.Unload%2A> method to persist and unload a workflow.</span></span> <span data-ttu-id="ed740-126">È anche possibile gestire l'evento <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> generato dall'oggetto <xref:System.Activities.WorkflowApplication> e restituire il membro (<xref:System.Activities.PersistableIdleAction.Persist> o <xref:System.Activities.PersistableIdleAction.Unload>) appropriato dell'oggetto <xref:System.Activities.PersistableIdleAction>.</span><span class="sxs-lookup"><span data-stu-id="ed740-126">You can also handle the <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> event raised by the <xref:System.Activities.WorkflowApplication> object and return appropriate (<xref:System.Activities.PersistableIdleAction.Persist> or <xref:System.Activities.PersistableIdleAction.Unload>) member of <xref:System.Activities.PersistableIdleAction>.</span></span>  
   
     ```csharp  
     wfApp.PersistableIdle = delegate(WorkflowApplicationIdleEventArgs e)  
@@ -74,37 +79,34 @@ In questo argomento viene descritto come configurare la funzionalità di archivi
     ```  
   
 > [!NOTE]
->  Per informazioni sull'abilitazione della persistenza per i flussi di lavoro tramite l'oggetto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> e il passaggio [Procedura: creare ed eseguire un flusso di lavoro con esecuzione prolungata](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md) dell'[Esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md) per istruzioni dettagliate, vedere l'esempio [Persistenza di un'applicazione flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md) in [Persistenza](../../../docs/framework/windows-workflow-foundation/samples/persistence.md).  
+>  <span data-ttu-id="ed740-127">Vedere il [persistenza di un'applicazione flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md) sample in [persistenza](../../../docs/framework/windows-workflow-foundation/samples/persistence.md) per un esempio di abilitazione della persistenza per i flussi di lavoro mediante il <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>e [come: creare ed eseguire un valore Long Esecuzione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) passaggio del [esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) per istruzioni dettagliate.</span><span class="sxs-lookup"><span data-stu-id="ed740-127">See the [Persisting a Workflow Application](../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md) sample at [Persistence](../../../docs/framework/windows-workflow-foundation/samples/persistence.md) for an example of enabling persistence for workflows using the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, and the [How to: Create and Run a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) step of the [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) for step by step instructions.</span></span>  
   
-## Abilitazione della persistenza per i servizi flussi di lavoro indipendenti che utilizzano l'oggetto WorkflowServiceHost  
- È possibile abilitare la persistenza per i servizi flussi di lavoro indipendenti che utilizzano l'oggetto <xref:System.ServiceModel.WorkflowServiceHost> a livello di codice tramite la classe <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> o <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A>.  
+## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a><span data-ttu-id="ed740-128">Abilitazione della persistenza per i servizi flussi di lavoro indipendenti che usano l'oggetto WorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="ed740-128">Enabling Persistence for Self-Hosted Workflow Services that use the WorkflowServiceHost</span></span>  
+ <span data-ttu-id="ed740-129">È possibile abilitare la persistenza per i servizi flussi di lavoro indipendenti che usano l'oggetto <xref:System.ServiceModel.WorkflowServiceHost> a livello di codice tramite la classe <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> o <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A>.</span><span class="sxs-lookup"><span data-stu-id="ed740-129">You can enable persistence for self-hosted workflow services that use <xref:System.ServiceModel.WorkflowServiceHost> programmatically by using the <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> class or the <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> class.</span></span>  
   
-### Utilizzo della classe SqlWorkflowInstanceStoreBehavior  
- Nella procedura seguente sono contenuti i passaggi per utilizzare la classe <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> al fine di abilitare la persistenza per i servizi flussi di lavoro indipendenti.  
+### <a name="using-the-sqlworkflowinstancestorebehavior-class"></a><span data-ttu-id="ed740-130">Utilizzo della classe SqlWorkflowInstanceStoreBehavior</span><span class="sxs-lookup"><span data-stu-id="ed740-130">Using the SqlWorkflowInstanceStoreBehavior Class</span></span>  
+ <span data-ttu-id="ed740-131">Nella procedura seguente sono contenuti i passaggi per usare la classe <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> al fine di abilitare la persistenza per i servizi flussi di lavoro indipendenti.</span><span class="sxs-lookup"><span data-stu-id="ed740-131">The following procedure contains steps to use the <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> class to enable persistence for self-hosted workflow services.</span></span>  
   
-##### Per abilitare la persistenza tramite l'oggetto SqlWorkflowInstanceStoreBehavior  
+##### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a><span data-ttu-id="ed740-132">Per abilitare la persistenza tramite l'oggetto SqlWorkflowInstanceStoreBehavior</span><span class="sxs-lookup"><span data-stu-id="ed740-132">To enable persistence using SqlWorkflowInstanceStoreBehavior</span></span>  
   
-1.  Aggiungere un riferimento a System.ServiceModel.dll.  
+1.  <span data-ttu-id="ed740-133">Aggiungere un riferimento a System.ServiceModel.dll.</span><span class="sxs-lookup"><span data-stu-id="ed740-133">Add a reference to the System.ServiceModel.dll.</span></span>  
   
-2.  Aggiungere l'istruzione seguente all'inizio del file di origine dopo le istruzioni "using" esistenti.  
+2.  <span data-ttu-id="ed740-134">Aggiungere l'istruzione seguente all'inizio del file di origine dopo le istruzioni "using" esistenti.</span><span class="sxs-lookup"><span data-stu-id="ed740-134">Add the following statement at the top of the source file after the existing "using" statements.</span></span>  
   
     ```csharp  
     using System.ServiceModel.Activities.Description;  
     ```  
   
-3.  Creare un'istanza dell'oggetto `WorkflowServiceHost` e aggiungere gli endpoint per il servizio flusso di lavoro.  
+3.  <span data-ttu-id="ed740-135">Creare un'istanza dell'oggetto `WorkflowServiceHost` e aggiungere gli endpoint per il servizio flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ed740-135">Create an instance of the `WorkflowServiceHost` and add endpoints for the workflow service.</span></span>  
   
     ```  
-  
     WorkflowServiceHost host = new WorkflowServiceHost(new CountingWorkflow(), new Uri(hostBaseAddress));  
     host.AddServiceEndpoint("ICountingWorkflow", new BasicHttpBinding(), "");  
-  
     ```  
   
-4.  Costruire un oggetto `SqlWorkflowInstanceStoreBehavior` e impostare le proprietà dell'oggetto di comportamento.  
+4.  <span data-ttu-id="ed740-136">Costruire un oggetto `SqlWorkflowInstanceStoreBehavior` e impostare le proprietà dell'oggetto di comportamento.</span><span class="sxs-lookup"><span data-stu-id="ed740-136">Construct a `SqlWorkflowInstanceStoreBehavior` object and to set properties of the behavior object.</span></span>  
   
     ```csharp  
-  
     SqlWorkflowInstanceStoreBehavior instanceStoreBehavior = new SqlWorkflowInstanceStoreBehavior(connectionString);  
     instanceStoreBehavior.HostLockRenewalPeriod = new TimeSpan(0, 0, 5);  
     instanceStoreBehavior.InstanceCompletionAction = InstanceCompletionAction.DeleteAll;  
@@ -112,34 +114,30 @@ In questo argomento viene descritto come configurare la funzionalità di archivi
     instanceStoreBehavior.InstanceEncodingOption = InstanceEncodingOption.GZip;  
     instanceStoreBehavior.RunnableInstancesDetectionPeriod = new TimeSpan("00:00:02");  
     host.Description.Behaviors.Add(instanceStoreBehavior);  
-  
     ```  
   
-5.  Aprire l'host del servizio flusso di lavoro.  
+5.  <span data-ttu-id="ed740-137">Aprire l'host del servizio flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ed740-137">Open the workflow service host.</span></span>  
   
     ```vb  
-  
     host.Open();  
-  
     ```  
   
 > [!IMPORTANT]
->  Per informazioni sull'abilitazione della persistenza per i servizi flussi di lavoro tramite la classe `SqlWorkflowInstanceStoreBehavior`, vedere l'esempio [Configurazione predefinita](../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md) in [Persistenza](../../../docs/framework/windows-workflow-foundation/samples/persistence.md).  
+>  <span data-ttu-id="ed740-138">Vedere il [configurazione incorporato](../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md) sample in [persistenza](../../../docs/framework/windows-workflow-foundation/samples/persistence.md) per un esempio di abilitazione della persistenza per i servizi del flusso di lavoro utilizzando il `SqlWorkflowInstanceStoreBehavior` classe.</span><span class="sxs-lookup"><span data-stu-id="ed740-138">See the [Built-in Configuration](../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md) sample at [Persistence](../../../docs/framework/windows-workflow-foundation/samples/persistence.md) for an example of enabling persistence for workflow services using the `SqlWorkflowInstanceStoreBehavior` class.</span></span>  
   
-### Utilizzo della proprietà DurableInstancingOptions  
- Quando l'oggetto `SqlWorkflowInstanceStoreBehavior` è applicato, l'oggetto `DurableInstancingOptions.InstanceStore` in `WorkflowServiceHost` viene impostato sull'oggetto `SqlWorkflowInstanceStore` creato utilizzando i valori di configurazione.Tale operazione può essere eseguita anche a livello di codice per impostare la proprietà <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> dell'oggetto `WorkflowServiceHost` senza utilizzare la classe `SqlWorkflowInstanceStoreBehavior` come mostrato nell'esempio di codice seguente.  
+### <a name="using-the-durableinstancingoptions-property"></a><span data-ttu-id="ed740-139">Utilizzo della proprietà DurableInstancingOptions</span><span class="sxs-lookup"><span data-stu-id="ed740-139">Using the DurableInstancingOptions Property</span></span>  
+ <span data-ttu-id="ed740-140">Quando l'oggetto `SqlWorkflowInstanceStoreBehavior` è applicato, l'oggetto `DurableInstancingOptions.InstanceStore` in `WorkflowServiceHost` viene impostato sull'oggetto `SqlWorkflowInstanceStore` creato usando i valori di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ed740-140">When the `SqlWorkflowInstanceStoreBehavior` is applied, the `DurableInstancingOptions.InstanceStore` on the `WorkflowServiceHost` is set to the `SqlWorkflowInstanceStore` object created using the configuration values.</span></span> <span data-ttu-id="ed740-141">Tale operazione può essere eseguita anche a livello di codice per impostare la proprietà <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> dell'oggetto `WorkflowServiceHost` senza usare la classe `SqlWorkflowInstanceStoreBehavior` come mostrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="ed740-141">You can do the same programmatically to set the <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> property of the `WorkflowServiceHost` without using the `SqlWorkflowInstanceStoreBehavior` class as shown in the following code example.</span></span>  
   
 ```  
 workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObject;  
 ```  
   
-## Abilitazione della persistenza per i servizi flussi di lavoro ospitati nel servizio WAS che utilizzano l'oggetto WorkflowServiceHost tramite un file di configurazione  
- È possibile abilitare la persistenza per i servizi flussi di lavori indipendenti oppure ospitati nel servizio WAS tramite un file di configurazione.Un servizio flusso di lavoro ospitato nel servizio WAS utilizza l'oggetto WorkflowServiceHost come servizi flussi di lavoro indipendenti.  
+## <a name="enabling-persistence-for-was-hosted-workflow-services-that-use-the-workflowservicehost-using-a-configuration-file"></a><span data-ttu-id="ed740-142">Abilitazione della persistenza per i servizi flussi di lavoro ospitati nel servizio WAS che usano l'oggetto WorkflowServiceHost tramite un file di configurazione</span><span class="sxs-lookup"><span data-stu-id="ed740-142">Enabling Persistence for WAS-Hosted Workflow Services that use the WorkflowServiceHost using a Configuration File</span></span>  
+ <span data-ttu-id="ed740-143">È possibile abilitare la persistenza per i servizi flussi di lavori indipendenti oppure ospitati nel servizio WAS tramite un file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ed740-143">You can enable persistence for self-hosted or Windows Process Activation Service (WAS)-hosted workflow services by using a configuration file.</span></span> <span data-ttu-id="ed740-144">Un servizio flusso di lavoro ospitato nel servizio WAS usa l'oggetto WorkflowServiceHost come servizi flussi di lavoro indipendenti.</span><span class="sxs-lookup"><span data-stu-id="ed740-144">A WAS-hosted workflow service uses the WorkflowServiceHost as the self-hosted workflow services do.</span></span>  
   
- L'oggetto `SqlWorkflowInstanceStoreBehavior` è un comportamento del servizio che consente di modificare in modo semplice le proprietà [Archivio di istanze del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md) tramite la configurazione XML.Per i servizi flussi di lavoro ospitati nel servizio WAS, utilizzare il file Web.config.Nell'esempio di configurazione seguente viene mostrato come configurare l'archivio di istanze del flusso di lavoro SQL tramite l'elemento del comportamento `sqlWorkflowInstanceStore` in un file di configurazione.  
+ <span data-ttu-id="ed740-145">Il `SqlWorkflowInstanceStoreBehavior`, un comportamento del servizio che consente di modificare facilmente la [archivio di istanze del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) proprietà tramite la configurazione XML.</span><span class="sxs-lookup"><span data-stu-id="ed740-145">The `SqlWorkflowInstanceStoreBehavior`, a service behavior that allows you to conveniently change the [SQL Workflow Instance Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) properties through XML configuration.</span></span> <span data-ttu-id="ed740-146">Per i servizi flussi di lavoro ospitati nel servizio WAS, usare il file Web.config.</span><span class="sxs-lookup"><span data-stu-id="ed740-146">For WAS-hosted workflow services, use the Web.config file.</span></span> <span data-ttu-id="ed740-147">Nell'esempio di configurazione seguente viene mostrato come configurare l'archivio di istanze del flusso di lavoro SQL tramite l'elemento del comportamento `sqlWorkflowInstanceStore` in un file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ed740-147">The following configuration example shows how to configure the SQL Workflow Instance Store by using the `sqlWorkflowInstanceStore` behavior element in a configuration file.</span></span>  
   
-```  
-  
+```xml  
 <serviceBehaviors>  
     <behavior name="">  
         <sqlWorkflowInstanceStore   
@@ -153,27 +151,25 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
         <sqlWorkflowInstanceStore/>  
     </behavior>  
 </serviceBehaviors>  
-  
 ```  
   
- Se non si impostano i valori per la proprietà `connectionString` o `connectionStringName`, l'archivio di istanze del flusso di lavoro SQL utilizza la stringa di connessione predefinita denominata `DefaultSqlWorkflowInstanceStoreConnectionString`.  
+ <span data-ttu-id="ed740-148">Se non si impostano i valori per la proprietà `connectionString` o `connectionStringName`, l'archivio di istanze del flusso di lavoro SQL usa la stringa di connessione predefinita denominata `DefaultSqlWorkflowInstanceStoreConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="ed740-148">If you do not set values for the `connectionString` or the `connectionStringName` property, the SQL Workflow Instance Store uses the default named connection string `DefaultSqlWorkflowInstanceStoreConnectionString`.</span></span>  
   
- Quando l'oggetto `SqlWorkflowInstanceStoreBehavior` è applicato, l'oggetto `DurableInstancingOptions.InstanceStore` in `WorkflowServiceHost` viene impostato sull'oggetto `SqlWorkflowInstanceStore` creato utilizzando i valori di configurazione.Tale operazione può essere eseguita anche a livello di codice per utilizzare l'oggetto `SqlWorkflowInstanceStore` con l'oggetto `WorkflowServiceHost` senza utilizzare l'elemento del comportamento del servizio.  
+ <span data-ttu-id="ed740-149">Quando l'oggetto `SqlWorkflowInstanceStoreBehavior` è applicato, l'oggetto `DurableInstancingOptions.InstanceStore` in `WorkflowServiceHost` viene impostato sull'oggetto `SqlWorkflowInstanceStore` creato usando i valori di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ed740-149">When the `SqlWorkflowInstanceStoreBehavior` is applied, the `DurableInstancingOptions.InstanceStore` on the `WorkflowServiceHost` is set to the `SqlWorkflowInstanceStore` object created using the configuration values.</span></span> <span data-ttu-id="ed740-150">Tale operazione può essere eseguita anche a livello di codice per usare l'oggetto `SqlWorkflowInstanceStore` con l'oggetto `WorkflowServiceHost` senza usare l'elemento del comportamento del servizio.</span><span class="sxs-lookup"><span data-stu-id="ed740-150">You can do the same programmatically to use the `SqlWorkflowInstanceStore` with `WorkflowServiceHost` without using the service behavior element.</span></span>  
   
 ```  
 workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObject;  
 ```  
   
 > [!IMPORTANT]
->  È consigliabile non archiviare nel file Web.config informazioni riservate, quali nomi utente e password.In caso contrario, è necessario proteggere l'accesso a tale file tramite gli elenchi di controllo di accesso \(ACL\) del file system.Inoltre, è anche possibile proteggere i valori di configurazione all'interno di un file di configurazione come illustrato in [Crittografia delle informazioni di configurazione utilizzando la configurazione protetta](http://go.microsoft.com/fwlink/?LinkId=178419).  
+>  <span data-ttu-id="ed740-151">È consigliabile non archiviare nel file Web.config informazioni riservate, quali nomi utente e password.</span><span class="sxs-lookup"><span data-stu-id="ed740-151">It is recommended that you do not store sensitive information such as user names and passwords in the Web.config file.</span></span> <span data-ttu-id="ed740-152">In caso contrario, è necessario proteggere l'accesso a tale file tramite gli elenchi di controllo di accesso (ACL) del file system.</span><span class="sxs-lookup"><span data-stu-id="ed740-152">If you do store sensitive information in the Web.config file, you should secure access to the Web.config file by using file system Access Control Lists (ACLs).</span></span> <span data-ttu-id="ed740-153">Inoltre, è inoltre possibile proteggere i valori di configurazione all'interno di un file di configurazione come indicato nella [crittografia configurazione informazioni tramite configurazione protetta](http://go.microsoft.com/fwlink/?LinkId=178419).</span><span class="sxs-lookup"><span data-stu-id="ed740-153">In addition, you can also secure the configuration values within a configuration file as mentioned in [Encrypting Configuration Information Using Protected Configuration](http://go.microsoft.com/fwlink/?LinkId=178419).</span></span>  
   
-### Elementi Machine.config correlati alla funzionalità di archivio di istanze del flusso di lavoro SQL  
- L'installazione di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] comporta l'aggiunta degli elementi seguenti correlati alla funzionalità di archivio di istanze del flusso di lavoro SQL al file Machine.config:  
+### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a><span data-ttu-id="ed740-154">Elementi Machine.config correlati alla funzionalità di archivio di istanze del flusso di lavoro SQL</span><span class="sxs-lookup"><span data-stu-id="ed740-154">Machine.config Elements Related to the SQL Workflow Instance Store Feature</span></span>  
+ <span data-ttu-id="ed740-155">L'installazione di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] comporta l'aggiunta degli elementi seguenti correlati alla funzionalità di archivio di istanze del flusso di lavoro SQL al file Machine.config:</span><span class="sxs-lookup"><span data-stu-id="ed740-155">The [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] installation adds the following elements related to the SQL Workflow Instance Store feature to the Machine.config file:</span></span>  
   
--   Aggiungere il seguente elemento di estensione del comportamento al file Machine.config in modo da poter utilizzare l'elemento del comportamento del servizio \<`sqlWorkflowInstanceStore`\> nel di configurazione per configurare la persistenza per i servizi.  
+-   <span data-ttu-id="ed740-156">Aggiunge il seguente elemento di estensione del comportamento al file Machine.config in modo da poter usare l'elemento del comportamento del servizio <`sqlWorkflowInstanceStore`> nel file di configurazione per configurare il salvataggio permanente per i servizi.</span><span class="sxs-lookup"><span data-stu-id="ed740-156">Adds the following behavior extension element to the Machine.config file so that you can use the <`sqlWorkflowInstanceStore`> service behavior element in the configuration file to configure persistence for your services.</span></span>  
   
-    ```  
-  
+    ```xml  
     <configuration>  
         <system.serviceModel>  
             <extensions>  
@@ -183,5 +179,4 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
             </extensions>  
         <system.serviceModel>  
     <configuration>  
-  
     ```

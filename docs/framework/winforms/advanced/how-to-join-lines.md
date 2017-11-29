@@ -1,48 +1,51 @@
 ---
-title: "Procedura: unire linee | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "stile di un'unione di linee in rilievo"
-  - "disegno, unione di linee"
-  - "grafica, unione di linee"
-  - "GraphicsPath (oggetto)"
-  - "join di linee"
-  - "linee, join"
-  - "stile di un'unione di linee decorato"
-  - "Pen (classe)"
-  - "stile di un'unione di linee arrotondato"
+title: 'Procedura: unire linee'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- miter line join style
+- bevel line join style
+- line join
+- drawing [Windows Forms], joining lines
+- GraphicsPath object
+- round line join style
+- lines [Windows Forms], joining
+- graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f02da181d66f7bb26a8414782e42eff2570e6918
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: unire linee
-Un'unione di linee è l'area comune formata da due linee le cui estremità si incontrano e si sovrappongono.  In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sono disponibili tre stili di unione di linee: decorato, in rilievo e arrotondato.  Lo stile dell'unione di linee è una proprietà della classe <xref:System.Drawing.Pen>.  Quando si specifica lo stile di un'unione di linee per un oggetto <xref:System.Drawing.Pen>, tale stile sarà applicato a tutte le linee collegate in qualsiasi oggetto <xref:System.Drawing.Drawing2D.GraphicsPath> tracciato utilizzando quella penna.  
+# <a name="how-to-join-lines"></a><span data-ttu-id="e3527-102">Procedura: unire linee</span><span class="sxs-lookup"><span data-stu-id="e3527-102">How to: Join Lines</span></span>
+<span data-ttu-id="e3527-103">Un'unione di linee è l'area comune è costituito da due righe le cui estremità soddisfa o si sovrappongono.</span><span class="sxs-lookup"><span data-stu-id="e3527-103">A line join is the common area that is formed by two lines whose ends meet or overlap.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="e3527-104">sono disponibili tre stili di join di linee: decorato, rilievo e arrotondato.</span><span class="sxs-lookup"><span data-stu-id="e3527-104"> provides three line join styles: miter, bevel, and round.</span></span> <span data-ttu-id="e3527-105">Stile di linea join è una proprietà del <xref:System.Drawing.Pen> classe.</span><span class="sxs-lookup"><span data-stu-id="e3527-105">Line join style is a property of the <xref:System.Drawing.Pen> class.</span></span> <span data-ttu-id="e3527-106">Quando si specifica uno stile di linea join per un <xref:System.Drawing.Pen> dell'oggetto, che verrà applicata a tutte le righe collegate in qualsiasi tipo di join <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto disegnato utilizzando quella penna.</span><span class="sxs-lookup"><span data-stu-id="e3527-106">When you specify a line join style for a <xref:System.Drawing.Pen> object, that join style will be applied to all the connected lines in any <xref:System.Drawing.Drawing2D.GraphicsPath> object drawn using that pen.</span></span>  
   
- Nell'immagine seguente è visualizzato il risultato l'unione di linee in rilievo.  
+ <span data-ttu-id="e3527-107">Nella figura seguente mostra i risultati dell'esempio di join di linee in rilievo.</span><span class="sxs-lookup"><span data-stu-id="e3527-107">The following illustration shows the results of the beveled line join example.</span></span>  
   
- ![Oggetti Pen](../../../../docs/framework/winforms/advanced/media/pens5.png "pens5")  
+ <span data-ttu-id="e3527-108">![Penne](../../../../docs/framework/winforms/advanced/media/pens5.gif "pens5")</span><span class="sxs-lookup"><span data-stu-id="e3527-108">![Pens](../../../../docs/framework/winforms/advanced/media/pens5.gif "pens5")</span></span>  
   
-## Esempio  
- È possibile specificare lo stile dell'unione di linee utilizzando la proprietà <xref:System.Drawing.Pen.LineJoin%2A> della classe <xref:System.Drawing.Pen>.  Nell'esempio che segue è illustrata un'unione di linee in rilievo tra una linea orizzontale e una verticale.  Nel codice che segue, il valore <xref:System.Drawing.Drawing2D.LineJoin> assegnato alla proprietà <xref:System.Drawing.Pen.LineJoin%2A> è un membro dell'enumerazione <xref:System.Drawing.Drawing2D.LineJoin>.  Gli altri membri dell'enumerazione <xref:System.Drawing.Drawing2D.LineJoin> sono <xref:System.Drawing.Drawing2D.LineJoin> e <xref:System.Drawing.Drawing2D.LineJoin>.  
+## <a name="example"></a><span data-ttu-id="e3527-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="e3527-109">Example</span></span>  
+ <span data-ttu-id="e3527-110">È possibile specificare lo stile di linea join utilizzando il <xref:System.Drawing.Pen.LineJoin%2A> proprietà la <xref:System.Drawing.Pen> classe.</span><span class="sxs-lookup"><span data-stu-id="e3527-110">You can specify the line join style by using the <xref:System.Drawing.Pen.LineJoin%2A> property of the <xref:System.Drawing.Pen> class.</span></span> <span data-ttu-id="e3527-111">Nell'esempio viene illustrato un join di linee in rilievo tra una linea orizzontale e verticale.</span><span class="sxs-lookup"><span data-stu-id="e3527-111">The example demonstrates a beveled line join between a horizontal line and a vertical line.</span></span> <span data-ttu-id="e3527-112">Nel codice seguente, il valore <xref:System.Drawing.Drawing2D.LineJoin.Bevel> assegnato per il <xref:System.Drawing.Pen.LineJoin%2A> proprietà è un membro del <xref:System.Drawing.Drawing2D.LineJoin> enumerazione.</span><span class="sxs-lookup"><span data-stu-id="e3527-112">In the following code, the value <xref:System.Drawing.Drawing2D.LineJoin.Bevel> assigned to the <xref:System.Drawing.Pen.LineJoin%2A> property is a member of the <xref:System.Drawing.Drawing2D.LineJoin> enumeration.</span></span> <span data-ttu-id="e3527-113">Gli altri membri del <xref:System.Drawing.Drawing2D.LineJoin> enumerazione sono <xref:System.Drawing.Drawing2D.LineJoin.Miter> e <xref:System.Drawing.Drawing2D.LineJoin.Round>.</span><span class="sxs-lookup"><span data-stu-id="e3527-113">The other members of the <xref:System.Drawing.Drawing2D.LineJoin> enumeration are <xref:System.Drawing.Drawing2D.LineJoin.Miter> and <xref:System.Drawing.Drawing2D.LineJoin.Round>.</span></span>  
   
  [!code-csharp[System.Drawing.UsingAPen#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingAPen#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#31)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="e3527-114">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="e3527-114">Compiling the Code</span></span>  
+ <span data-ttu-id="e3527-115">L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="e3527-115">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## Vedere anche  
- [Utilizzo di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="e3527-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e3527-116">See Also</span></span>  
+ [<span data-ttu-id="e3527-117">Uso di un oggetto Pen per creare linee e forme</span><span class="sxs-lookup"><span data-stu-id="e3527-117">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

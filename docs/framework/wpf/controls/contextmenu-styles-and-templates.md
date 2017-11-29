@@ -1,61 +1,63 @@
 ---
-title: "Stili e modelli di ContextMenu | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ContextMenu [WPF], stili e modelli"
-  - "ControlTemplate [WPF], ContextMenu"
-  - "parti [WPF], ContextMenu"
-  - "stati [WPF], ContextMenu"
-  - "stili [WPF], ContextMenu"
-  - "modelli [WPF], ContextMenu"
+title: Stili e modelli di ContextMenu
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [WPF], ContextMenu
+- parts [WPF], ContextMenu
+- ContextMenu [WPF], styles and templates
+- styles [WPF], ContextMenu
+- ControlTemplate [WPF], ContextMenu
+- states [WPF], ContextMenu
 ms.assetid: 342d1f17-c406-4f94-8f55-867c5f3ea511
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a51860b21c21f8ce21510b04e817ec75d0e3b4fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stili e modelli di ContextMenu
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.ContextMenu>.  È possibile modificare l'oggetto <xref:System.Windows.Controls.ControlTemplate> predefinito per conferire al controllo un aspetto univoco.  Per ulteriori informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="contextmenu-styles-and-templates"></a><span data-ttu-id="bb7af-102">Stili e modelli di ContextMenu</span><span class="sxs-lookup"><span data-stu-id="bb7af-102">ContextMenu Styles and Templates</span></span>
+<span data-ttu-id="bb7af-103">In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.ContextMenu> controllo.</span><span class="sxs-lookup"><span data-stu-id="bb7af-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.ContextMenu> control.</span></span> <span data-ttu-id="bb7af-104">È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco.</span><span class="sxs-lookup"><span data-stu-id="bb7af-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="bb7af-105">Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="bb7af-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Parti di ContextMenu  
- Il controllo <xref:System.Windows.Controls.ContextMenu> non include parti denominate.  
+## <a name="contextmenu-parts"></a><span data-ttu-id="bb7af-106">Parti del menu di scelta rapida</span><span class="sxs-lookup"><span data-stu-id="bb7af-106">ContextMenu Parts</span></span>  
+ <span data-ttu-id="bb7af-107">Il <xref:System.Windows.Controls.ContextMenu> controllo non dispone di parti denominate.</span><span class="sxs-lookup"><span data-stu-id="bb7af-107">The <xref:System.Windows.Controls.ContextMenu> control does not have any named parts.</span></span>  
   
- Quando si crea <xref:System.Windows.Controls.ControlTemplate> per un oggetto <xref:System.Windows.Controls.ContextMenu>, il modello potrebbe contenere <xref:System.Windows.Controls.ItemsPresenter> all'interno di <xref:System.Windows.Controls.ScrollViewer>.  L'oggetto <xref:System.Windows.Controls.ItemsPresenter> visualizza ogni elemento in <xref:System.Windows.Controls.ContextMenu>; <xref:System.Windows.Controls.ScrollViewer> consente lo scorrimento all'interno del controllo.  Se <xref:System.Windows.Controls.ItemsPresenter> non è l'elemento figlio diretto di <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare a <xref:System.Windows.Controls.ItemsPresenter> il nome `ItemsPresenter`.  
+ <span data-ttu-id="bb7af-108">Quando si crea un <xref:System.Windows.Controls.ControlTemplate> per un <xref:System.Windows.Controls.ContextMenu>, il modello potrebbe contenere un <xref:System.Windows.Controls.ItemsPresenter> all'interno di un <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="bb7af-108">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.ContextMenu>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="bb7af-109">(Il <xref:System.Windows.Controls.ItemsPresenter> Visualizza ogni elemento nel <xref:System.Windows.Controls.ContextMenu>; <xref:System.Windows.Controls.ScrollViewer> Abilita lo scorrimento all'interno del controllo).</span><span class="sxs-lookup"><span data-stu-id="bb7af-109">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.ContextMenu>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="bb7af-110">Se il <xref:System.Windows.Controls.ItemsPresenter> non è il figlio diretto del <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare il <xref:System.Windows.Controls.ItemsPresenter> il nome, `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="bb7af-110">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## Stati di ContextMenu  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.ContextMenu>.  
+## <a name="contextmenu-states"></a><span data-ttu-id="bb7af-111">Stati di ContextMenu</span><span class="sxs-lookup"><span data-stu-id="bb7af-111">ContextMenu States</span></span>  
+ <span data-ttu-id="bb7af-112">Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.ContextMenu> controllo.</span><span class="sxs-lookup"><span data-stu-id="bb7af-112">The following table lists the visual states for the <xref:System.Windows.Controls.ContextMenu> control.</span></span>  
   
-||||  
+|<span data-ttu-id="bb7af-113">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="bb7af-113">VisualState Name</span></span>|<span data-ttu-id="bb7af-114">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="bb7af-114">VisualStateGroup Name</span></span>|<span data-ttu-id="bb7af-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bb7af-115">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Valid|ValidationStates|Il controllo utilizza la classe <xref:System.Windows.Controls.Validation> e la proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `false`.|  
-|InvalidFocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo non ha lo stato attivo.|  
+|<span data-ttu-id="bb7af-116">Valido</span><span class="sxs-lookup"><span data-stu-id="bb7af-116">Valid</span></span>|<span data-ttu-id="bb7af-117">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="bb7af-117">ValidationStates</span></span>|<span data-ttu-id="bb7af-118">Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.</span><span class="sxs-lookup"><span data-stu-id="bb7af-118">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="bb7af-119">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="bb7af-119">InvalidFocused</span></span>|<span data-ttu-id="bb7af-120">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="bb7af-120">ValidationStates</span></span>|<span data-ttu-id="bb7af-121">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="bb7af-121">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="bb7af-122">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="bb7af-122">InvalidUnfocused</span></span>|<span data-ttu-id="bb7af-123">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="bb7af-123">ValidationStates</span></span>|<span data-ttu-id="bb7af-124">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.</span><span class="sxs-lookup"><span data-stu-id="bb7af-124">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Esempio di ControlTemplate del controllo ContextMenu  
- Nell'esempio seguente viene illustrato come definire un oggetto <xref:System.Windows.Controls.ControlTemplate> per il controllo <xref:System.Windows.Controls.ContextMenu>.  
+## <a name="contextmenu-controltemplate-example"></a><span data-ttu-id="bb7af-125">Esempio di ControlTemplate ContextMenu</span><span class="sxs-lookup"><span data-stu-id="bb7af-125">ContextMenu ControlTemplate Example</span></span>  
+ <span data-ttu-id="bb7af-126">Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.ContextMenu> controllo.</span><span class="sxs-lookup"><span data-stu-id="bb7af-126">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.ContextMenu> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#ContextMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#contextmenu)]  
+ [!code-xaml[ControlTemplateExamples#ContextMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#contextmenu)]  
   
- <xref:System.Windows.Controls.ControlTemplate> utilizza le risorse seguenti.  
+ <span data-ttu-id="bb7af-127">Il <xref:System.Windows.Controls.ControlTemplate> utilizza le risorse seguenti.</span><span class="sxs-lookup"><span data-stu-id="bb7af-127">The <xref:System.Windows.Controls.ControlTemplate> uses the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplate](http://go.microsoft.com/fwlink/?LinkID=160041) \(la pagina potrebbe essere in inglese\).  
+ <span data-ttu-id="bb7af-128">Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="bb7af-128">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="bb7af-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bb7af-129">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="bb7af-130">Stili e modelli di Control</span><span class="sxs-lookup"><span data-stu-id="bb7af-130">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="bb7af-131">Personalizzazione dei controlli</span><span class="sxs-lookup"><span data-stu-id="bb7af-131">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="bb7af-132">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="bb7af-132">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="bb7af-133">Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="bb7af-133">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

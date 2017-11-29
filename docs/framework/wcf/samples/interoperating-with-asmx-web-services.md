@@ -1,30 +1,33 @@
 ---
-title: "Interoperabilit&#224; con servizi Web ASMX | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Interoperabilità con servizi Web ASMX"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 635502ea186e188bf9906d45e7753eba72fbd5d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Interoperabilit&#224; con servizi Web ASMX
-In questo esempio viene illustrato come integrare un'applicazione client di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un servizio Web ASMX esistente.  
+# <a name="interoperating-with-asmx-web-services"></a><span data-ttu-id="32bd9-102">Interoperabilità con servizi Web ASMX</span><span class="sxs-lookup"><span data-stu-id="32bd9-102">Interoperating with ASMX Web Services</span></span>
+<span data-ttu-id="32bd9-103">In questo esempio viene illustrato come integrare un'applicazione client di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un servizio Web ASMX esistente.</span><span class="sxs-lookup"><span data-stu-id="32bd9-103">This sample demonstrates how to integrate a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client application with an existing ASMX Web service.</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+>  <span data-ttu-id="32bd9-104">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="32bd9-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Questo esempio è costituito da un programma di console client \(.exe\) e da una libreria di servizi \(.dll\) ospitati da Internet Information Services \(IIS\).Il servizio è un servizio Web ASMX che implementa un contratto in cui viene definito un modello di comunicazione request\/reply.Il servizio espone operazioni matematiche \(`Add`, `Subtract`, `Multiply` e `Divide`\).Il client esegue richieste sincrone a un'operazione matematica e il servizio risponde fornendo il risultato.L'attività del client è visibile nella finestra della console.  
+ <span data-ttu-id="32bd9-105">Questo esempio è costituito da un programma di console client (.exe) e da una libreria di servizi (.dll) ospitati da Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="32bd9-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="32bd9-106">Il servizio è un servizio Web ASMX che implementa un contratto in cui viene definito un modello di comunicazione request/reply.</span><span class="sxs-lookup"><span data-stu-id="32bd9-106">The service is an ASMX Web Service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="32bd9-107">Il servizio espone operazioni matematiche (`Add`, `Subtract`, `Multiply` e `Divide`).</span><span class="sxs-lookup"><span data-stu-id="32bd9-107">The service exposes math operations (`Add`, `Subtract`, `Multiply`, and `Divide`).</span></span> <span data-ttu-id="32bd9-108">Il client esegue richieste sincrone a un'operazione matematica e il servizio risponde fornendo il risultato.</span><span class="sxs-lookup"><span data-stu-id="32bd9-108">The client makes synchronous requests to a math operation and the service replies with the result.</span></span> <span data-ttu-id="32bd9-109">L'attività del client è visibile nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="32bd9-109">Client activity is visible in the console window.</span></span>  
   
- L'implementazione del servizio Web ASMX illustrata nell'esempio di codice seguente calcola e restituisce il risultato appropriato.  
+ <span data-ttu-id="32bd9-110">L'implementazione del servizio Web ASMX illustrata nell'esempio di codice seguente calcola e restituisce il risultato appropriato.</span><span class="sxs-lookup"><span data-stu-id="32bd9-110">The ASMX Web service implementation shown in the following sample code calculates and returns the appropriate result.</span></span>  
   
 ```  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -51,30 +54,28 @@ public class CalculatorService : System.Web.Services.WebService
             return n1 / n2;  
         }  
     }  
-  
 ```  
   
- Con questa configurazione un client sullo stesso computer può accedere al servizio da http:\/\/localhost\/servicemodelsamples\/service.asmx.Affinché i client presenti nei computer remoti accedano al servizio, è necessario specificare un nome di dominio completo anziché localhost.  
+ <span data-ttu-id="32bd9-111">Con questa configurazione un client sullo stesso computer può accedere al servizio da http://localhost/servicemodelsamples/service.asmx.</span><span class="sxs-lookup"><span data-stu-id="32bd9-111">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.asmx by a client on the same machine.</span></span> <span data-ttu-id="32bd9-112">Affinché i client presenti nei computer remoti accedano al servizio, è necessario specificare un nome di dominio completo anziché localhost.</span><span class="sxs-lookup"><span data-stu-id="32bd9-112">For clients on remote machines to access the service, a qualified domain name must be specified instead of localhost.</span></span>  
   
- La comunicazione viene eseguita tramite un client generato da [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).Il client è contenuto nel file generatedClient.cs.Il servizio ASMX deve essere disponibile per generare il codice proxy, perché viene utilizzato per recuperare i metadati aggiornati.Eseguire il comando seguente da un prompt dei comandi nella directory del client per generare il proxy tipizzato.  
+ <span data-ttu-id="32bd9-113">La comunicazione avviene tramite un client generato dal [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="32bd9-113">Communication is done through a client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="32bd9-114">Il client è contenuto nel file generatedClient.cs.</span><span class="sxs-lookup"><span data-stu-id="32bd9-114">The client is contained in the file generatedClient.cs.</span></span> <span data-ttu-id="32bd9-115">Il servizio ASMX deve essere disponibile per generare il codice proxy, perché viene utilizzato per recuperare i metadati aggiornati.</span><span class="sxs-lookup"><span data-stu-id="32bd9-115">The ASMX service must be available to generate the proxy code, because it is used to retrieve the updated metadata.</span></span> <span data-ttu-id="32bd9-116">Eseguire il comando seguente da un prompt dei comandi nella directory del client per generare il proxy tipizzato.</span><span class="sxs-lookup"><span data-stu-id="32bd9-116">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
   
 ```  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- Utilizzando il client generato, è possibile accedere a un endpoint del servizio configurando l'indirizzo e l'associazione appropriati.Analogamente al servizio, il client utilizza un file di configurazione \(App.config\) per specificare l'endpoint con il quale comunicare.La configurazione dell'endpoint client è costituita da un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto, come illustrato nell'esempio di configurazione seguente.  
+ <span data-ttu-id="32bd9-117">Utilizzando il client generato, è possibile accedere a un endpoint del servizio configurando l'indirizzo e l'associazione appropriati.</span><span class="sxs-lookup"><span data-stu-id="32bd9-117">By using the generated client, you can access a service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="32bd9-118">Analogamente al servizio, il client utilizza un file di configurazione (App.config) per specificare l'endpoint con il quale comunicare.</span><span class="sxs-lookup"><span data-stu-id="32bd9-118">Like the service, the client uses a configuration file (App.config) to specify the endpoint to communicate with.</span></span> <span data-ttu-id="32bd9-119">La configurazione dell'endpoint client è costituita da un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto, come illustrato nell'esempio di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="32bd9-119">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <client>  
    <endpoint   
       address="http://localhost/ServiceModelSamples/service.asmx"   
       binding="basicHttpBinding"   
       contract="Microsoft.ServiceModel.Samples.CalculatorServiceSoap" />  
 </client>  
-  
 ```  
   
- L'implementazione del client crea un'istanza del client generato.Il client generato può essere utilizzato quindi per comunicare con il servizio.  
+ <span data-ttu-id="32bd9-120">L'implementazione del client crea un'istanza del client generato.</span><span class="sxs-lookup"><span data-stu-id="32bd9-120">The client implementation constructs an instance of the generated client.</span></span> <span data-ttu-id="32bd9-121">Il client generato può essere utilizzato quindi per comunicare con il servizio.</span><span class="sxs-lookup"><span data-stu-id="32bd9-121">The generated client can then be used to communicate with the service.</span></span>  
   
 ```  
 // Create a client.  
@@ -110,10 +111,9 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-  
 ```  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.Premere INVIO nella finestra del client per arrestare il client.  
+ <span data-ttu-id="32bd9-122">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="32bd9-122">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="32bd9-123">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="32bd9-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -124,21 +124,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="32bd9-124">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="32bd9-124">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="32bd9-125">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="32bd9-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="32bd9-126">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="32bd9-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="32bd9-127">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="32bd9-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="32bd9-128">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="32bd9-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="32bd9-129">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="32bd9-129">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="32bd9-130">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="32bd9-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="32bd9-131">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="32bd9-131">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="32bd9-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="32bd9-132">See Also</span></span>

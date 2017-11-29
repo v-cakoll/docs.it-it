@@ -1,52 +1,56 @@
 ---
-title: "Spline di B&#233;zier in GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "spline di Bézier"
-  - "GDI+, spline di Bézier"
-  - "spline, Bézier"
+title: "B &#233; in GDI+ spline di Bézier"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Bezier splines
+- splines [Windows Forms], Bezier
+- GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Spline di B&#233;zier in GDI+
-Una spline Bézier è una curva specificata da quattro punti: due punti finali \(p1 e p2\) e due punti di controllo \(c1 e c2\).  La curva inizia in p1 e finisce in p2  e non attraversa i punti di controllo, che tuttavia fungono da magneti, attirando la curva in determinate direzioni e influenzandone la curvatura.  Nell'immagine seguente vengono mostrati una curva Bézier con i relativi punti finali e punti di controllo.  
+# <a name="b233zier-splines-in-gdi"></a><span data-ttu-id="03796-102">B &#233; in GDI+ spline di Bézier</span><span class="sxs-lookup"><span data-stu-id="03796-102">B&#233;zier Splines in GDI+</span></span>
+<span data-ttu-id="03796-103">Una spline di Bézier è una curva specificata da quattro punti: due punti finali (p1 e p2) e due punti di controllo (c1 e c2).</span><span class="sxs-lookup"><span data-stu-id="03796-103">A Bézier spline is a curve specified by four points: two end points (p1 and p2) and two control points (c1 and c2).</span></span> <span data-ttu-id="03796-104">La curva inizia p1 e p2 termina.</span><span class="sxs-lookup"><span data-stu-id="03796-104">The curve begins at p1 and ends at p2.</span></span> <span data-ttu-id="03796-105">La curva non passano attraverso i punti di controllo, ma i punti di controllo di agire come grado attirare l'attenzione, estrarre la curva in determinate direzioni e che influenzano il modo di che curvatura.</span><span class="sxs-lookup"><span data-stu-id="03796-105">The curve does not pass through the control points, but the control points act as magnets, pulling the curve in certain directions and influencing the way the curve bends.</span></span> <span data-ttu-id="03796-106">Nella figura seguente mostra una curva di Bézier insieme ai relativi punti di controllo e di endpoint.</span><span class="sxs-lookup"><span data-stu-id="03796-106">The following illustration shows a Bézier curve along with its endpoints and control points.</span></span>  
   
- ![Spline Bezier](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art11a.png "Aboutgdip02\_art11a")  
+ <span data-ttu-id="03796-107">![Spline di Bézier](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art11a.gif "Aboutgdip02_art11a")</span><span class="sxs-lookup"><span data-stu-id="03796-107">![Bezier Splines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art11a.gif "Aboutgdip02_art11a")</span></span>  
   
- Si noti che la curva inizia in p1 e si sposta verso il punto di controllo c1.  La tangente della curva in p1 è la linea che unisce p1 e c1.  Si noti inoltre che la tangente nel punto finale p2 è la linea che unisce c2 e p2.  
+ <span data-ttu-id="03796-108">La curva inizia in p1 e si sposta verso il punto di controllo c1.</span><span class="sxs-lookup"><span data-stu-id="03796-108">The curve starts at p1 and moves toward the control point c1.</span></span> <span data-ttu-id="03796-109">La tangente della curva in p1 è la riga disegnata da p1 a c1.</span><span class="sxs-lookup"><span data-stu-id="03796-109">The tangent line to the curve at p1 is the line drawn from p1 to c1.</span></span> <span data-ttu-id="03796-110">La tangente al punto finale p2 è la riga che unisce c2 e p2.</span><span class="sxs-lookup"><span data-stu-id="03796-110">The tangent line at the endpoint p2 is the line drawn from c2 to p2.</span></span>  
   
-## Creazione di spline di Bézier  
- Per tracciare una spline Bézier, sono necessari un'istanza della classe <xref:System.Drawing.Graphics> e <xref:System.Drawing.Pen>.  L'istanza della classe <xref:System.Drawing.Graphics> fornisce il metodo <xref:System.Drawing.Graphics.DrawBezier%2A>, mentre in <xref:System.Drawing.Pen> sono memorizzati gli attributi, quali lo spessore e il colore, della linea utilizzata per eseguire il rendering della curva.  L'oggetto <xref:System.Drawing.Pen> viene passato come uno degli argomenti al metodo <xref:System.Drawing.Graphics.DrawBezier%2A>.  Gli argomenti rimanenti passati al metodo <xref:System.Drawing.Graphics.DrawBezier%2A> rappresentano i punti finali e i punti di controllo.  L'esempio seguente consente di tracciare una spline Bézier con punto iniziale \(0, 0\), punti di controllo \(40, 20\) e \(80, 150\) e punto finale \(100, 10\):  
+## <a name="drawing-bzier-splines"></a><span data-ttu-id="03796-111">Disegnare spline di Bézier</span><span class="sxs-lookup"><span data-stu-id="03796-111">Drawing Bézier Splines</span></span>  
+ <span data-ttu-id="03796-112">Per tracciare una spline di Bézier, sono necessari un'istanza di <xref:System.Drawing.Graphics> classe e un <xref:System.Drawing.Pen>.</span><span class="sxs-lookup"><span data-stu-id="03796-112">To draw a Bézier spline, you need an instance of the <xref:System.Drawing.Graphics> class and a <xref:System.Drawing.Pen>.</span></span> <span data-ttu-id="03796-113">L'istanza del <xref:System.Drawing.Graphics> classe fornisce il <xref:System.Drawing.Graphics.DrawBezier%2A> (metodo) e <xref:System.Drawing.Pen> archivia gli attributi, ad esempio spessore e colore della linea utilizzata per eseguire il rendering della curva.</span><span class="sxs-lookup"><span data-stu-id="03796-113">The instance of the <xref:System.Drawing.Graphics> class provides the <xref:System.Drawing.Graphics.DrawBezier%2A> method, and the <xref:System.Drawing.Pen> stores attributes, such as width and color, of the line used to render the curve.</span></span> <span data-ttu-id="03796-114">Il <xref:System.Drawing.Pen> viene passato come uno degli argomenti per il <xref:System.Drawing.Graphics.DrawBezier%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="03796-114">The <xref:System.Drawing.Pen> is passed as one of the arguments to the <xref:System.Drawing.Graphics.DrawBezier%2A> method.</span></span> <span data-ttu-id="03796-115">Gli argomenti rimanenti passati di <xref:System.Drawing.Graphics.DrawBezier%2A> metodo sono gli endpoint e i punti di controllo.</span><span class="sxs-lookup"><span data-stu-id="03796-115">The remaining arguments passed to the <xref:System.Drawing.Graphics.DrawBezier%2A> method are the endpoints and the control points.</span></span> <span data-ttu-id="03796-116">Nell'esempio seguente disegna una spline di Bézier con punto iniziale (0, 0), controllare i punti (40, 20) e (80, 150) e punto finale (100, 10):</span><span class="sxs-lookup"><span data-stu-id="03796-116">The following example draws a Bézier spline with starting point (0, 0), control points (40, 20) and (80, 150), and ending point (100, 10):</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#71)]
  [!code-vb[LinesCurvesAndShapes#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#71)]  
   
- Nell'immagine seguente vengono mostrati la curva, i punti di controllo e due tangenti.  
+ <span data-ttu-id="03796-117">Nella figura seguente mostra la curva, i punti di controllo e due tangenti.</span><span class="sxs-lookup"><span data-stu-id="03796-117">The following illustration shows the curve, the control points, and two tangent lines.</span></span>  
   
- ![Spline Bezier](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art12.png "Aboutgdip02\_art12")  
+ <span data-ttu-id="03796-118">![Spline di Bézier](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art12.gif "Aboutgdip02_art12")</span><span class="sxs-lookup"><span data-stu-id="03796-118">![Bezier Splines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art12.gif "Aboutgdip02_art12")</span></span>  
   
- Le spline Bézier furono concepite da Pierre Bézier per la progettazione nell'industria automobilistica.  Si sono successivamente rivelate utili in svariati tipi di progettazioni assistite dal computer e vengono utilizzate anche per definire i contorni dei caratteri.  Le spline Bézier consentono di ottenere una vasta gamma di forme, alcune delle quali sono mostrate nell'immagine qui di seguito.  
+ <span data-ttu-id="03796-119">Spline di Bézier sono stati originariamente sviluppate da Pierre Bézier per progettazione nel settore automobilistico.</span><span class="sxs-lookup"><span data-stu-id="03796-119">Bézier splines were originally developed by Pierre Bézier for design in the automotive industry.</span></span> <span data-ttu-id="03796-120">Essi sono poiché rivelati utili in molti tipi di progettazione assistita da computer e vengono inoltre utilizzate per definire le strutture di tipi di carattere.</span><span class="sxs-lookup"><span data-stu-id="03796-120">They have since proven to be useful in many types of computer-aided design and are also used to define the outlines of fonts.</span></span> <span data-ttu-id="03796-121">Spline di Bézier possono cedere l'esecuzione di un'ampia gamma di forme, alcune delle quali sono mostrate nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="03796-121">Bézier splines can yield a wide variety of shapes, some of which are shown in the following illustration.</span></span>  
   
- ![Percorsi](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art13.png "Aboutgdip02\_art13")  
+ <span data-ttu-id="03796-122">![Percorsi](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art13.gif "Aboutgdip02_art13")</span><span class="sxs-lookup"><span data-stu-id="03796-122">![Paths](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art13.gif "Aboutgdip02_art13")</span></span>  
   
-## Vedere anche  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Costruzione e creazione di curve](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)   
- [Procedura: creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Procedura: creare un oggetto Pen](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+## <a name="see-also"></a><span data-ttu-id="03796-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="03796-123">See Also</span></span>  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ [<span data-ttu-id="03796-124">Linee, curve e forme</span><span class="sxs-lookup"><span data-stu-id="03796-124">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="03796-125">Costruzione e creazione di curve</span><span class="sxs-lookup"><span data-stu-id="03796-125">Constructing and Drawing Curves</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
+ [<span data-ttu-id="03796-126">Procedura: Creare oggetti Graphics per disegnare</span><span class="sxs-lookup"><span data-stu-id="03796-126">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [<span data-ttu-id="03796-127">Procedura: Creare un oggetto Pen</span><span class="sxs-lookup"><span data-stu-id="03796-127">How to: Create a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)

@@ -1,36 +1,39 @@
 ---
-title: "Modello di dati di Windows Workflow Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "programmazione [WF], modello di dati"
+title: Modello di dati di Windows Workflow Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 019e4fd5dc506970829fd9505038b71b23574c02
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Modello di dati di Windows Workflow Foundation
-Il modello di dati di Windows Workflow Foundation è costituito da tre concetti: variabili, argomenti ed espressioni.Le variabili rappresentano l'archivio di dati mentre gli argomenti il flusso di dati all'interno e all'esterno di un'attività.Gli argomenti vengono associati \(una volta assegnato un valore\) utilizzando espressioni che possono fare riferimento alle variabili.  
+# <a name="windows-workflow-foundation-data-model"></a><span data-ttu-id="90c85-102">Modello di dati di Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="90c85-102">Windows Workflow Foundation Data Model</span></span>
+<span data-ttu-id="90c85-103">Il modello di dati di Windows Workflow Foundation è costituito da tre concetti: variabili, argomenti ed espressioni.</span><span class="sxs-lookup"><span data-stu-id="90c85-103">The Windows Workflow Foundation data model is composed of three concepts: variables, arguments, and expressions.</span></span> <span data-ttu-id="90c85-104">Le variabili rappresentano l'archivio di dati mentre gli argomenti il flusso di dati all'interno e all'esterno di un'attività.</span><span class="sxs-lookup"><span data-stu-id="90c85-104">Variables represent the storage of data and arguments represent the flow of data into and out of an activity.</span></span> <span data-ttu-id="90c85-105">Gli argomenti vengono associati (una volta assegnato un valore) usando espressioni che possono fare riferimento alle variabili.</span><span class="sxs-lookup"><span data-stu-id="90c85-105">Arguments are bound (assigned a value) using expressions that may reference variables.</span></span>  
   
-## In questa sezione  
- [Variabili e argomenti](../../../docs/framework/windows-workflow-foundation//variables-and-arguments.md).  
- Vengono descritti i concetti riguardanti variabili e argomenti e la relativa modalità di utilizzo.  
+## <a name="in-this-section"></a><span data-ttu-id="90c85-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="90c85-106">In This Section</span></span>  
+ <span data-ttu-id="90c85-107">[Variabili e argomenti](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).</span><span class="sxs-lookup"><span data-stu-id="90c85-107">[Variables and Arguments](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).</span></span>  
+ <span data-ttu-id="90c85-108">Vengono descritti i concetti riguardanti variabili e argomenti e la relativa modalità di utilizzo.</span><span class="sxs-lookup"><span data-stu-id="90c85-108">Describes the concepts of variables and arguments and how they are used.</span></span>  
   
- [Espressioni](../../../docs/framework/windows-workflow-foundation//expressions.md)  
- Vengono illustrate le espressioni e la relativa modalità di utilizzo nello sviluppo del flusso di lavoro.  
+ [<span data-ttu-id="90c85-109">Espressioni</span><span class="sxs-lookup"><span data-stu-id="90c85-109">Expressions</span></span>](../../../docs/framework/windows-workflow-foundation/expressions.md)  
+ <span data-ttu-id="90c85-110">Vengono illustrate le espressioni e la relativa modalità di utilizzo nello sviluppo del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="90c85-110">Describes expressions and how they are used in workflow development.</span></span>  
   
- [Espressioni C\#](../../../docs/framework/windows-workflow-foundation//csharp-expressions.md)  
- Vengono descritte le espressioni C\# nei flussi di lavoro, introdotte con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+ [<span data-ttu-id="90c85-111">Espressioni C#</span><span class="sxs-lookup"><span data-stu-id="90c85-111">C# Expressions</span></span>](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)  
+ <span data-ttu-id="90c85-112">Vengono descritte le espressioni C# nei flussi di lavoro, introdotte con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="90c85-112">Describes C# expressions in workflows, introduced with [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>  
   
- [Utilizzo delle proprietà rispetto agli argomenti](../../../docs/framework/windows-workflow-foundation//properties-vs-arguments.md)  
- Viene descritto come selezionare il tipo da utilizzare per gli input dell'attività.  
+ [<span data-ttu-id="90c85-113">Proprietà e argomenti</span><span class="sxs-lookup"><span data-stu-id="90c85-113">Properties vs. Arguments</span></span>](../../../docs/framework/windows-workflow-foundation/properties-vs-arguments.md)  
+ <span data-ttu-id="90c85-114">Viene descritto come selezionare il tipo da usare per gli input dell'attività.</span><span class="sxs-lookup"><span data-stu-id="90c85-114">Describes how to select which type to use for activity input.</span></span>  
   
- [Esposizione dei dati con CacheMetadata](../../../docs/framework/windows-workflow-foundation//exposing-data-with-cachemetadata.md)  
- Viene descritto come esporre un set personalizzato di metadati sui membri di un'attività in esecuzione.
+ [<span data-ttu-id="90c85-115">Esposizione dei dati con CacheMetadata</span><span class="sxs-lookup"><span data-stu-id="90c85-115">Exposing data with CacheMetadata</span></span>](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md)  
+ <span data-ttu-id="90c85-116">Viene descritto come esporre un set personalizzato di metadati sui membri di un'attività in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="90c85-116">Describes how to expose a custom set of metadata about an executing activity's members.</span></span>

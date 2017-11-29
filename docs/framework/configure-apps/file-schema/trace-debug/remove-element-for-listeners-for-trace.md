@@ -1,71 +1,73 @@
 ---
-title: "Elemento &lt;remove&gt; per &lt;listeners&gt; per &lt;trace&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<remove> (elemento)"
-  - "remove (elemento)"
+title: '&lt;rimuovere&gt; elemento per &lt;listener&gt; per &lt;traccia&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
+helpviewer_keywords:
+- remove element
+- <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ff1eb93a6d81f83b60e2621296e0c9d995699898
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;remove&gt; per &lt;listeners&gt; per &lt;trace&gt;
-Consente di rimuovere un listener dalla raccolta **Listeners**.  
+# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="ff7f1-102">&lt;rimuovere&gt; elemento per &lt;listener&gt; per &lt;traccia&gt;</span><span class="sxs-lookup"><span data-stu-id="ff7f1-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
+<span data-ttu-id="ff7f1-103">Rimuove un listener di **listener** insieme.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-103">Removes a listener from the **Listeners** collection.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="ff7f1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ff7f1-104">\<configuration></span></span>  
+<span data-ttu-id="ff7f1-105">\<System. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="ff7f1-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="ff7f1-106">\<traccia ></span><span class="sxs-lookup"><span data-stu-id="ff7f1-106">\<trace></span></span>  
+<span data-ttu-id="ff7f1-107">\<listener ></span><span class="sxs-lookup"><span data-stu-id="ff7f1-107">\<listeners></span></span>  
+<span data-ttu-id="ff7f1-108">\<rimuovere ></span><span class="sxs-lookup"><span data-stu-id="ff7f1-108">\<remove></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ff7f1-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ff7f1-109">Syntax</span></span>  
   
+```xml  
 <remove name="listener name" />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ff7f1-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="ff7f1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="ff7f1-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="ff7f1-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="ff7f1-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="ff7f1-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="ff7f1-113">Attribute</span></span>|<span data-ttu-id="ff7f1-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ff7f1-114">Description</span></span>|  
 |---------------|-----------------|  
-|**name**|Attributo obbligatorio.<br /><br /> Nome del listener da rimuovere dalla raccolta **Listeners**.|  
+|<span data-ttu-id="ff7f1-115">**name**</span><span class="sxs-lookup"><span data-stu-id="ff7f1-115">**name**</span></span>|<span data-ttu-id="ff7f1-116">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="ff7f1-117">Il nome del listener da rimuovere il **listener** insieme.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-117">The name of the listener to remove from the **Listeners** collection.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="ff7f1-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="ff7f1-118">Child Elements</span></span>  
+ <span data-ttu-id="ff7f1-119">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-119">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="ff7f1-120">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="ff7f1-120">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`listeners`|Consente di specificare un listener per la raccolta, la memorizzazione e l'invio di messaggi.  I listener indirizzano l'output di tracciatura a una destinazione adatta.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
-|`trace`|Configura il servizio di traccia di ASP.NET.|  
+|<span data-ttu-id="ff7f1-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="ff7f1-121">Element</span></span>|<span data-ttu-id="ff7f1-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ff7f1-122">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="ff7f1-123">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`listeners`|<span data-ttu-id="ff7f1-124">Specifica un listener per la raccolta, la memorizzazione e indirizza i messaggi.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-124">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="ff7f1-125">I listener indirizzano l'output di traccia a una destinazione appropriata.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-125">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="ff7f1-126">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-126">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="ff7f1-127">Configura il servizio traccia ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-127">Configures the ASP.NET trace service.</span></span>|  
   
-## Note  
+## <a name="remarks"></a><span data-ttu-id="ff7f1-128">Note</span><span class="sxs-lookup"><span data-stu-id="ff7f1-128">Remarks</span></span>  
   
 > [!NOTE]
->  Rimuovendo la classe <xref:System.Diagnostics.DefaultTraceListener> dalla raccolta `Listeners` si modifica il comportamento dei metodi <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName> e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName>.  La chiamata a un metodo `Assert` o `Fail` normalmente comporta la visualizzazione di una finestra di messaggio, ma la finestra di messaggio non viene visualizzata se la classe <xref:System.Diagnostics.DefaultTraceListener> non è contenuta nella raccolta `Listeners`.  
+>  <span data-ttu-id="ff7f1-129">Rimozione di <xref:System.Diagnostics.DefaultTraceListener> dal `Listeners` raccolta modifica il comportamento del <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> metodi.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-129">Removing the <xref:System.Diagnostics.DefaultTraceListener> from the `Listeners` collection alters the behavior of the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, and <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="ff7f1-130">La chiamata a un `Assert` o `Fail` metodo normalmente comporta la visualizzazione di una finestra di messaggio, ma la finestra di messaggio non viene visualizzata se il <xref:System.Diagnostics.DefaultTraceListener> non si trova nel `Listeners` insieme.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-130">Calling an `Assert` or `Fail` method normally results in the display of a message box, however the message box is not displayed if the <xref:System.Diagnostics.DefaultTraceListener> is not in the `Listeners` collection.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come rimuovere il listener di traccia predefinito dalla raccolta **Listeners** di traccia.  
+## <a name="example"></a><span data-ttu-id="ff7f1-131">Esempio</span><span class="sxs-lookup"><span data-stu-id="ff7f1-131">Example</span></span>  
+ <span data-ttu-id="ff7f1-132">Nell'esempio seguente viene illustrato come rimuovere il listener di traccia predefinito dalla traccia **listener** insieme.</span><span class="sxs-lookup"><span data-stu-id="ff7f1-132">The following example shows how to remove the default trace listener from the trace **Listeners** collection.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <trace autoflush="true" indentsize="0">  
@@ -77,9 +79,9 @@ Consente di rimuovere un listener dalla raccolta **Listeners**.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="ff7f1-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff7f1-133">See Also</span></span>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ [<span data-ttu-id="ff7f1-134">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="ff7f1-134">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

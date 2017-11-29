@@ -1,76 +1,80 @@
 ---
-title: "Gestione dell&#39;input dell&#39;utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli personalizzati [Windows Form], eventi tastiera (mediante il codice)"
-  - "controlli personalizzati [Windows Form], eventi mouse (mediante il codice)"
-  - "controlli personalizzati [Windows Form], input utente (mediante il codice)"
+title: Gestione dell'input dell'utente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], user input using code
+- custom controls [Windows Forms], keyboard events using code
+- custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7c3da2c4661acdb358c38fb871de70fd470f7991
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Gestione dell&#39;input dell&#39;utente
-In questo argomento vengono descritti gli eventi principali relativi a tastiera e mouse forniti da <xref:System.Windows.Forms.Control?displayProperty=fullName>.  Durante la gestione di un evento, gli autori dei controlli dovrebbero eseguire l'override del metodo `On`*NomeEvento* protetto anziché associare un delegato all'evento.  Per informazioni generali sugli eventi, vedere [Raising Events from a Component](../Topic/Raising%20Events%20from%20a%20Component.md).  
+# <a name="handling-user-input"></a><span data-ttu-id="a9879-102">Gestione dell'input dell'utente</span><span class="sxs-lookup"><span data-stu-id="a9879-102">Handling User Input</span></span>
+<span data-ttu-id="a9879-103">In questo argomento vengono descritti gli eventi di tastiera e mouse principali forniti da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a9879-103">This topic describes the main keyboard and mouse events provided by <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a9879-104">Quando si gestisce un evento, gli autori dei controlli devono eseguire l'override del metodo protetto `On`*EventName* anziché associare un delegato all'evento.</span><span class="sxs-lookup"><span data-stu-id="a9879-104">When handling an event, control authors should override the protected `On`*EventName* method rather than attaching a delegate to the event.</span></span> <span data-ttu-id="a9879-105">Per una panoramica degli eventi, vedere [Generazione di eventi da un componente](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).</span><span class="sxs-lookup"><span data-stu-id="a9879-105">For a review of events, see [Raising Events from a Component](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).</span></span>  
   
 > [!NOTE]
->  Se a un evento non sono associati dati, un'istanza della classe di base <xref:System.EventArgs> verrà passata come argomento al metodo `On`*NomeEvento*.  
+>  <span data-ttu-id="a9879-106">Se non sono presenti dati associati a un evento, un'istanza della classe di base <xref:System.EventArgs> viene passato come argomento per il `On` *EventName* metodo.</span><span class="sxs-lookup"><span data-stu-id="a9879-106">If there is no data associated with an event, an instance of the base class <xref:System.EventArgs> is passed as an argument to the `On`*EventName* method.</span></span>  
   
-## Eventi della tastiera  
- Gli eventi della tastiera che il controllo è in grado di gestire sono <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress> e <xref:System.Windows.Forms.Control.KeyUp>.  
+## <a name="keyboard-events"></a><span data-ttu-id="a9879-107">Eventi della tastiera</span><span class="sxs-lookup"><span data-stu-id="a9879-107">Keyboard Events</span></span>  
+ <span data-ttu-id="a9879-108">Gli eventi della tastiera che è in grado di gestire il controllo sono <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, e <xref:System.Windows.Forms.Control.KeyUp>.</span><span class="sxs-lookup"><span data-stu-id="a9879-108">The common keyboard events that your control can handle are <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, and <xref:System.Windows.Forms.Control.KeyUp>.</span></span>  
   
-|Nome evento|Metodo di cui eseguire l'override|Descrizione dell'evento|  
-|-----------------|---------------------------------------|-----------------------------|  
-|`KeyDown`|`void OnKeyDown(KeyEventArgs)`|Generato solo quando inizialmente è premuto un tasto.|  
-|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Generato ogni volta che è premuto un tasto.  Se un tasto viene tenuto premuto, viene generata una serie di eventi <xref:System.Windows.Forms.Control.KeyPress> con una frequenza definita dal sistema operativo.|  
-|`KeyUp`|`void OnKeyUp(KeyEventArgs)`|Generato quando è rilasciato un tasto.|  
+|<span data-ttu-id="a9879-109">Nome evento</span><span class="sxs-lookup"><span data-stu-id="a9879-109">Event Name</span></span>|<span data-ttu-id="a9879-110">Metodo di cui eseguire l'override</span><span class="sxs-lookup"><span data-stu-id="a9879-110">Method to Override</span></span>|<span data-ttu-id="a9879-111">Descrizione dell'evento</span><span class="sxs-lookup"><span data-stu-id="a9879-111">Description of Event</span></span>|  
+|----------------|------------------------|--------------------------|  
+|`KeyDown`|`void OnKeyDown(KeyEventArgs)`|<span data-ttu-id="a9879-112">Generato solo quando un tasto viene premuto inizialmente.</span><span class="sxs-lookup"><span data-stu-id="a9879-112">Raised only when a key is initially pressed.</span></span>|  
+|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|<span data-ttu-id="a9879-113">Generato ogni volta che un tasto viene premuto.</span><span class="sxs-lookup"><span data-stu-id="a9879-113">Raised every time a key is pressed.</span></span> <span data-ttu-id="a9879-114">Se una si tiene premuto, un <xref:System.Windows.Forms.Control.KeyPress> evento viene generato alla frequenza definita dal sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="a9879-114">If a key is held down, a <xref:System.Windows.Forms.Control.KeyPress> event is raised at the repeat rate defined by the operating system.</span></span>|  
+|`KeyUp`|`void OnKeyUp(KeyEventArgs)`|<span data-ttu-id="a9879-115">Viene generato quando un tasto viene rilasciato.</span><span class="sxs-lookup"><span data-stu-id="a9879-115">Raised when a key is released.</span></span>|  
   
 > [!NOTE]
->  La gestione dell'input da tastiera è notevolmente più complessa dell'override degli eventi esposti nella tabella precedente e non rientra nell'ambito di questo argomento.  Per ulteriori informazioni, vedere [User Input in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md).  
+>  <span data-ttu-id="a9879-116">La gestione dell'input da tastiera è notevolmente più complessa dell'override degli eventi nella tabella precedente ed esula dall'ambito di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="a9879-116">Handling keyboard input is considerably more complex than overriding the events in the preceding table and is beyond the scope of this topic.</span></span> <span data-ttu-id="a9879-117">Per altre informazioni, vedere [Input dell'utente in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="a9879-117">For more information, see [User Input in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md).</span></span>  
   
-## Eventi del mouse  
- Gli eventi del mouse che il controllo è in grado di gestire sono <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove> e <xref:System.Windows.Forms.Control.MouseUp>.  
+## <a name="mouse-events"></a><span data-ttu-id="a9879-118">Eventi del mouse</span><span class="sxs-lookup"><span data-stu-id="a9879-118">Mouse Events</span></span>  
+ <span data-ttu-id="a9879-119">Gli eventi del mouse in grado di gestire il controllo sono <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove>, e <xref:System.Windows.Forms.Control.MouseUp>.</span><span class="sxs-lookup"><span data-stu-id="a9879-119">The mouse events that your control can handle are <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove>, and <xref:System.Windows.Forms.Control.MouseUp>.</span></span>  
   
-|Nome evento|Metodo di cui eseguire l'override|Descrizione dell'evento|  
-|-----------------|---------------------------------------|-----------------------------|  
-|`MouseDown`|`void OnMouseDown(MouseEventArgs)`|Generato quando viene premuto il pulsante del mouse mentre il puntatore si trova sopra il controllo.|  
-|`MouseEnter`|`void OnMouseEnter(EventArgs)`|Generato quando il puntatore viene portato all'interno della regione del controllo.|  
-|`MouseHover`|`void OnMouseHover(EventArgs)`|Generato quando il puntatore passa sopra il controllo.|  
-|`MouseLeave`|`void OnMouseLeave(EventArgs)`|Generato quando il puntatore viene portato all'esterno della regione del controllo.|  
-|`MouseMove`|`void OnMouseMove(MouseEventArgs)`|Generato quando il puntatore viene spostato sopra la regione del controllo.|  
-|`MouseUp`|`void OnMouseUp(MouseEventArgs)`|Generato quando il pulsante del mouse viene rilasciato mentre il puntatore si trova sul controllo o quando il puntatore viene portato all'esterno della regione del controllo.|  
+|<span data-ttu-id="a9879-120">Nome evento</span><span class="sxs-lookup"><span data-stu-id="a9879-120">Event Name</span></span>|<span data-ttu-id="a9879-121">Metodo di cui eseguire l'override</span><span class="sxs-lookup"><span data-stu-id="a9879-121">Method to Override</span></span>|<span data-ttu-id="a9879-122">Descrizione dell'evento</span><span class="sxs-lookup"><span data-stu-id="a9879-122">Description of Event</span></span>|  
+|----------------|------------------------|--------------------------|  
+|`MouseDown`|`void OnMouseDown(MouseEventArgs)`|<span data-ttu-id="a9879-123">Viene generato quando il pulsante del mouse viene premuto mentre il puntatore si trova sopra il controllo.</span><span class="sxs-lookup"><span data-stu-id="a9879-123">Raised when the mouse button is pressed while the pointer is over the control.</span></span>|  
+|`MouseEnter`|`void OnMouseEnter(EventArgs)`|<span data-ttu-id="a9879-124">Viene generato quando il puntatore del mouse entra nell'area del controllo.</span><span class="sxs-lookup"><span data-stu-id="a9879-124">Raised when the pointer first enters the region of the control.</span></span>|  
+|`MouseHover`|`void OnMouseHover(EventArgs)`|<span data-ttu-id="a9879-125">Viene generato quando il puntatore è posizionato sul controllo.</span><span class="sxs-lookup"><span data-stu-id="a9879-125">Raised when the pointer hovers over the control.</span></span>|  
+|`MouseLeave`|`void OnMouseLeave(EventArgs)`|<span data-ttu-id="a9879-126">Viene generato quando il puntatore esce dall'area del controllo.</span><span class="sxs-lookup"><span data-stu-id="a9879-126">Raised when the pointer leaves the region of the control.</span></span>|  
+|`MouseMove`|`void OnMouseMove(MouseEventArgs)`|<span data-ttu-id="a9879-127">Viene generato quando il puntatore si sposta nell'area del controllo.</span><span class="sxs-lookup"><span data-stu-id="a9879-127">Raised when the pointer moves in the region of the control.</span></span>|  
+|`MouseUp`|`void OnMouseUp(MouseEventArgs)`|<span data-ttu-id="a9879-128">Viene generato quando il pulsante del mouse viene rilasciato mentre il puntatore si trova sul controllo o il puntatore esce dall'area del controllo.</span><span class="sxs-lookup"><span data-stu-id="a9879-128">Raised when the mouse button is released while the pointer is over the control or the pointer leaves the region of the control.</span></span>|  
   
- Nel codice riportato di seguito viene illustrato un esempio di override dell'evento <xref:System.Windows.Forms.Control.MouseDown>.  
+ <span data-ttu-id="a9879-129">Frammento di codice seguente viene illustrato un esempio di override di <xref:System.Windows.Forms.Control.MouseDown> evento.</span><span class="sxs-lookup"><span data-stu-id="a9879-129">The following code fragment shows an example of overriding the <xref:System.Windows.Forms.Control.MouseDown> event.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#7)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#7)]  
   
- Nel codice riportato di seguito viene illustrato un esempio di override dell'evento <xref:System.Windows.Forms.Control.MouseMove>.  
+ <span data-ttu-id="a9879-130">Frammento di codice seguente viene illustrato un esempio di override di <xref:System.Windows.Forms.Control.MouseMove> evento.</span><span class="sxs-lookup"><span data-stu-id="a9879-130">The following code fragment shows an example of overriding the <xref:System.Windows.Forms.Control.MouseMove> event.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#8](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#8)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#8](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#8)]  
   
- Nel codice riportato di seguito viene illustrato un esempio di override dell'evento <xref:System.Windows.Forms.Control.MouseUp>.  
+ <span data-ttu-id="a9879-131">Frammento di codice seguente viene illustrato un esempio di override di <xref:System.Windows.Forms.Control.MouseUp> evento.</span><span class="sxs-lookup"><span data-stu-id="a9879-131">The following code fragment shows an example of overriding the <xref:System.Windows.Forms.Control.MouseUp> event.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#9)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#9)]  
   
- Per il codice sorgente completo dell'esempio `FlashTrackBar`, vedere [Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ <span data-ttu-id="a9879-132">Per il codice sorgente completo dell'esempio `FlashTrackBar`, vedere [Procedura: Creare un controllo di Windows Forms che visualizzi lo stato di avanzamento](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="a9879-132">For the complete source code for the `FlashTrackBar` sample, see [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
-## Vedere anche  
- [Eventi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)   
- [Definizione di un evento](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)   
- [Eventi](../../../../docs/standard/events/index.md)   
- [User Input in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="a9879-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9879-133">See Also</span></span>  
+ [<span data-ttu-id="a9879-134">Eventi dei controlli di Windows Form</span><span class="sxs-lookup"><span data-stu-id="a9879-134">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [<span data-ttu-id="a9879-135">Definizione di un evento</span><span class="sxs-lookup"><span data-stu-id="a9879-135">Defining an Event</span></span>](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)  
+ [<span data-ttu-id="a9879-136">Eventi</span><span class="sxs-lookup"><span data-stu-id="a9879-136">Events</span></span>](../../../../docs/standard/events/index.md)  
+ [<span data-ttu-id="a9879-137">Input dell'utente in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a9879-137">User Input in Windows Forms</span></span>](../../../../docs/framework/winforms/user-input-in-windows-forms.md)

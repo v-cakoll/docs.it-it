@@ -1,25 +1,28 @@
 ---
-title: "Contract | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contract1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2e92c5d804fca3c04506e951a5c341c89eed1c54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Contract
-Contract  
+# <a name="contract"></a><span data-ttu-id="22397-102">Contratto</span><span class="sxs-lookup"><span data-stu-id="22397-102">Contract</span></span>
+<span data-ttu-id="22397-103">Contratto</span><span class="sxs-lookup"><span data-stu-id="22397-103">Contract</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="22397-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="22397-104">Syntax</span></span>  
   
 ```  
 class Contract  
@@ -36,80 +39,80 @@ class Contract
 };  
 ```  
   
-## Metodi  
- La classe Contract non definisce metodi.  
+## <a name="methods"></a><span data-ttu-id="22397-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="22397-105">Methods</span></span>  
+ <span data-ttu-id="22397-106">La classe Contract non definisce metodi.</span><span class="sxs-lookup"><span data-stu-id="22397-106">The Contract class does not define any methods.</span></span>  
   
-## Proprietà  
- La classe Contract ha le proprietà seguenti:  
+## <a name="properties"></a><span data-ttu-id="22397-107">Proprietà</span><span class="sxs-lookup"><span data-stu-id="22397-107">Properties</span></span>  
+ <span data-ttu-id="22397-108">La classe Contract ha le proprietà seguenti:</span><span class="sxs-lookup"><span data-stu-id="22397-108">The Contract class has the following properties:</span></span>  
   
-### AppDomainId  
- Tipo di dati: sint32  
+### <a name="appdomainid"></a><span data-ttu-id="22397-109">AppDomainId</span><span class="sxs-lookup"><span data-stu-id="22397-109">AppDomainId</span></span>  
+ <span data-ttu-id="22397-110">Tipo di dati: sint32</span><span class="sxs-lookup"><span data-stu-id="22397-110">Data type: sint32</span></span>  
   
- Tipo di accesso: in sola lettura.  
+ <span data-ttu-id="22397-111">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-111">Access type: Read-only</span></span>  
   
- ID del dominio applicazione che ospita il contratto.  
+ <span data-ttu-id="22397-112">ID del dominio applicazione che ospita il contratto.</span><span class="sxs-lookup"><span data-stu-id="22397-112">The appdomain id of the appdomain that hosts the contract.</span></span>  
   
-### Behaviors  
- Tipo di dati: matrice di Behavior  
+### <a name="behaviors"></a><span data-ttu-id="22397-113">Comportamenti</span><span class="sxs-lookup"><span data-stu-id="22397-113">Behaviors</span></span>  
+ <span data-ttu-id="22397-114">Tipo di dati: matrice di Behavior</span><span class="sxs-lookup"><span data-stu-id="22397-114">Data type: Behavior array</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="22397-115">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-115">Access type: Read-only</span></span>  
   
- Comportamenti associati al contratto.  
+ <span data-ttu-id="22397-116">Comportamenti associati al contratto.</span><span class="sxs-lookup"><span data-stu-id="22397-116">The behaviors associated with this contract.</span></span>  
   
-### Name  
- Tipo di dati: stringa  
+### <a name="name"></a><span data-ttu-id="22397-117">Nome</span><span class="sxs-lookup"><span data-stu-id="22397-117">Name</span></span>  
+ <span data-ttu-id="22397-118">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="22397-118">Data type: string</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="22397-119">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-119">Access type: Read-only</span></span>  
   
- Nome del contratto in WSDL.  
+ <span data-ttu-id="22397-120">Nome del contratto in WSDL.</span><span class="sxs-lookup"><span data-stu-id="22397-120">The name of the contract in WSDL.</span></span>  
   
-### Namespace  
- Tipo di dati: stringa  
+### <a name="namespace"></a><span data-ttu-id="22397-121">Spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="22397-121">Namespace</span></span>  
+ <span data-ttu-id="22397-122">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="22397-122">Data type: string</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="22397-123">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-123">Access type: Read-only</span></span>  
   
- Spazio dei nomi dell'elemento `portType` in WSDL.  
+ <span data-ttu-id="22397-124">Spazio dei nomi dell'elemento `portType` in WSDL.</span><span class="sxs-lookup"><span data-stu-id="22397-124">The namespace of the `portType` element in WSDL.</span></span>  
   
-### Operations  
- Tipo di dati: matrice di Operation  
+### <a name="operations"></a><span data-ttu-id="22397-125">Operazioni</span><span class="sxs-lookup"><span data-stu-id="22397-125">Operations</span></span>  
+ <span data-ttu-id="22397-126">Tipo di dati: matrice di Operation</span><span class="sxs-lookup"><span data-stu-id="22397-126">Data type: Operation array</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="22397-127">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-127">Access type: Read-only</span></span>  
   
- Operazioni di questo contratto.  
+ <span data-ttu-id="22397-128">Operazioni di questo contratto.</span><span class="sxs-lookup"><span data-stu-id="22397-128">The operations of this contract.</span></span>  
   
-### ProcessId  
- Tipo di dati: sint32  
+### <a name="processid"></a><span data-ttu-id="22397-129">ProcessId</span><span class="sxs-lookup"><span data-stu-id="22397-129">ProcessId</span></span>  
+ <span data-ttu-id="22397-130">Tipo di dati: sint32</span><span class="sxs-lookup"><span data-stu-id="22397-130">Data type: sint32</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="22397-131">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-131">Access type: Read-only</span></span>  
   
- ID del processo che ospita il contratto.  
+ <span data-ttu-id="22397-132">ID del processo che ospita il contratto.</span><span class="sxs-lookup"><span data-stu-id="22397-132">The process Id of the process that hosts the contract.</span></span>  
   
-### ref  
- Tipo di dati: contratto  
+### <a name="ref"></a><span data-ttu-id="22397-133">ref</span><span class="sxs-lookup"><span data-stu-id="22397-133">ref</span></span>  
+ <span data-ttu-id="22397-134">Tipo di dati: contratto</span><span class="sxs-lookup"><span data-stu-id="22397-134">Data type: Contract</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="22397-135">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-135">Access type: Read-only</span></span>  
   
- Tipo di callback se il contratto è duplex.  
+ <span data-ttu-id="22397-136">Tipo di callback se il contratto è duplex.</span><span class="sxs-lookup"><span data-stu-id="22397-136">The type of callback when the contract is a duplex contract.</span></span>  
   
-### SessionMode  
- Tipo di dati: stringa  
+### <a name="sessionmode"></a><span data-ttu-id="22397-137">SessionMode</span><span class="sxs-lookup"><span data-stu-id="22397-137">SessionMode</span></span>  
+ <span data-ttu-id="22397-138">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="22397-138">Data type: string</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="22397-139">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-139">Access type: Read-only</span></span>  
   
- Indica se il contratto richiede che l'associazione di questo contratto utilizzi le sessioni del canale.  
+ <span data-ttu-id="22397-140">Indica se il contratto richiede che l'associazione di questo contratto utilizzi le sessioni del canale.</span><span class="sxs-lookup"><span data-stu-id="22397-140">Indicates whether the contract requires the binding associated with this contract to use channel sessions.</span></span>  
   
-### Type  
- Tipo di dati: stringa  
+### <a name="type"></a><span data-ttu-id="22397-141">Tipo</span><span class="sxs-lookup"><span data-stu-id="22397-141">Type</span></span>  
+ <span data-ttu-id="22397-142">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="22397-142">Data type: string</span></span>  
   
- Tipo di accesso: sola lettura.  
+ <span data-ttu-id="22397-143">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="22397-143">Access type: Read-only</span></span>  
   
- Tipo del contratto.  
+ <span data-ttu-id="22397-144">Tipo del contratto.</span><span class="sxs-lookup"><span data-stu-id="22397-144">The type of the contract.</span></span>  
   
-## Requisiti  
+## <a name="requirements"></a><span data-ttu-id="22397-145">Requisiti</span><span class="sxs-lookup"><span data-stu-id="22397-145">Requirements</span></span>  
   
-|MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|<span data-ttu-id="22397-146">MOF</span><span class="sxs-lookup"><span data-stu-id="22397-146">MOF</span></span>|<span data-ttu-id="22397-147">Dichiarato in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="22397-147">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="22397-148">Spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="22397-148">Namespace</span></span>|<span data-ttu-id="22397-149">Definito in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="22397-149">Defined in root\ServiceModel</span></span>|  
   
-## Vedere anche  
+## <a name="see-also"></a><span data-ttu-id="22397-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="22397-150">See Also</span></span>  
  <xref:System.ServiceModel.Description.ContractDescription>

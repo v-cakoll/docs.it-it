@@ -1,55 +1,61 @@
 ---
-title: "Protezione dei messaggi con un client anonimo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Protezione dei messaggi con un client anonimo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Protezione dei messaggi con un client anonimo
-Nello scenario seguente vengono illustrati un client e un servizio protetti tramite la protezione dei messaggi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  Tra gli obiettivi di progettazione c'è quello di usare la sicurezza dei messaggi invece che la sicurezza del trasporto, così che in futuro sia possibile supportare un modello basato su attestazioni più avanzate.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ll'uso di attestazioni avanzate per l'autorizzazione, vedere [Gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+# <a name="message-security-with-an-anonymous-client"></a><span data-ttu-id="901dd-102">Protezione dei messaggi con un client anonimo</span><span class="sxs-lookup"><span data-stu-id="901dd-102">Message Security with an Anonymous Client</span></span>
+<span data-ttu-id="901dd-103">Nello scenario seguente vengono illustrati un client e un servizio protetti tramite la protezione dei messaggi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="901dd-103">The following scenario shows a client and service secured by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] message security.</span></span> <span data-ttu-id="901dd-104">Tra gli obiettivi di progettazione c'è quello di usare la sicurezza dei messaggi invece che la sicurezza del trasporto, così che in futuro sia possibile supportare un modello basato su attestazioni più avanzate.</span><span class="sxs-lookup"><span data-stu-id="901dd-104">A design goal is to use message security rather than transport security, so that in the future it can support a richer claims-based model.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="901dd-105">utilizzo esteso per le attestazioni per l'autorizzazione, vedere [gestione attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span><span class="sxs-lookup"><span data-stu-id="901dd-105"> using rich claims for authorization, see [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span></span>  
   
- Per un'applicazione di esempio, vedere [Sicurezza dei messaggi anonima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
+ <span data-ttu-id="901dd-106">Per un'applicazione di esempio, vedere [sicurezza dei messaggi anonima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span><span class="sxs-lookup"><span data-stu-id="901dd-106">For a sample application, see [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span></span>  
   
- ![Sicurezza dei messaggi con un client anonimo](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565\-831c\-4c10\-90d7\-66d8eeece0a1")  
+ <span data-ttu-id="901dd-107">![Messaggio di sicurezza con un client anonimo](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span><span class="sxs-lookup"><span data-stu-id="901dd-107">![Message security with an anynymous client](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span></span>  
   
-|Caratteristica|Descrizione|  
+|<span data-ttu-id="901dd-108">Caratteristica</span><span class="sxs-lookup"><span data-stu-id="901dd-108">Characteristic</span></span>|<span data-ttu-id="901dd-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="901dd-109">Description</span></span>|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Messaggio|  
-|Interoperabilità|Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
-|Autenticazione \(server\)|La negoziazione iniziale richiede l'autenticazione server, ma non l'autenticazione client|  
-|Autenticazione \(client\)|None|  
-|Integrità|Sì, usando un contesto di sicurezza condiviso|  
-|Riservatezza|Sì, usando un contesto di sicurezza condiviso|  
-|Trasporto|HTTP|  
+|<span data-ttu-id="901dd-110">Modalità di sicurezza</span><span class="sxs-lookup"><span data-stu-id="901dd-110">Security Mode</span></span>|<span data-ttu-id="901dd-111">Messaggio</span><span class="sxs-lookup"><span data-stu-id="901dd-111">Message</span></span>|  
+|<span data-ttu-id="901dd-112">Interoperabilità</span><span class="sxs-lookup"><span data-stu-id="901dd-112">Interoperability</span></span>|<span data-ttu-id="901dd-113">Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]</span><span class="sxs-lookup"><span data-stu-id="901dd-113">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] only</span></span>|  
+|<span data-ttu-id="901dd-114">Autenticazione (server)</span><span class="sxs-lookup"><span data-stu-id="901dd-114">Authentication (Server)</span></span>|<span data-ttu-id="901dd-115">La negoziazione iniziale richiede l'autenticazione server, ma non l'autenticazione client</span><span class="sxs-lookup"><span data-stu-id="901dd-115">Initial negotiation requires server authentication, but not client authentication</span></span>|  
+|<span data-ttu-id="901dd-116">Autenticazione (client)</span><span class="sxs-lookup"><span data-stu-id="901dd-116">Authentication (Client)</span></span>|<span data-ttu-id="901dd-117">None</span><span class="sxs-lookup"><span data-stu-id="901dd-117">None</span></span>|  
+|<span data-ttu-id="901dd-118">Integrità</span><span class="sxs-lookup"><span data-stu-id="901dd-118">Integrity</span></span>|<span data-ttu-id="901dd-119">Sì, usando un contesto di sicurezza condiviso</span><span class="sxs-lookup"><span data-stu-id="901dd-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="901dd-120">Riservatezza</span><span class="sxs-lookup"><span data-stu-id="901dd-120">Confidentiality</span></span>|<span data-ttu-id="901dd-121">Sì, usando un contesto di sicurezza condiviso</span><span class="sxs-lookup"><span data-stu-id="901dd-121">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="901dd-122">Trasporto</span><span class="sxs-lookup"><span data-stu-id="901dd-122">Transport</span></span>|<span data-ttu-id="901dd-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="901dd-123">HTTP</span></span>|  
   
-## Servizio  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.  Eseguire una delle operazioni seguenti:  
+## <a name="service"></a><span data-ttu-id="901dd-124">Servizio</span><span class="sxs-lookup"><span data-stu-id="901dd-124">Service</span></span>  
+ <span data-ttu-id="901dd-125">Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.</span><span class="sxs-lookup"><span data-stu-id="901dd-125">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="901dd-126">Eseguire una delle operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="901dd-126">Do one of the following:</span></span>  
   
--   Creare un servizio autonomo usando il codice senza alcuna configurazione.  
+-   <span data-ttu-id="901dd-127">Creare un servizio autonomo usando il codice senza alcuna configurazione.</span><span class="sxs-lookup"><span data-stu-id="901dd-127">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
+-   <span data-ttu-id="901dd-128">Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.</span><span class="sxs-lookup"><span data-stu-id="901dd-128">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### Codice  
- Nel codice seguente viene illustrato come creare un endpoint del servizio che usa la protezione del messaggio.  
+### <a name="code"></a><span data-ttu-id="901dd-129">Codice</span><span class="sxs-lookup"><span data-stu-id="901dd-129">Code</span></span>  
+ <span data-ttu-id="901dd-130">Nel codice seguente viene illustrato come creare un endpoint del servizio che usa la protezione del messaggio.</span><span class="sxs-lookup"><span data-stu-id="901dd-130">The following code shows how to create a service endpoint that uses message security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
  [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
   
-### Configurazione  
- Invece del codice, è possibile usare la configurazione seguente:  L'elemento di comportamento del servizio viene usato per specificare un certificato che viene usato per autenticare il servizio sul client.  L'elemento servizio deve specificare il comportamento usando l'attributo `behaviorConfiguration`.  L'elemento associazione specifica che il tipo di credenziale client è `None`, consentendo ai client anonimi di usare il servizio.  
+### <a name="configuration"></a><span data-ttu-id="901dd-131">Configurazione</span><span class="sxs-lookup"><span data-stu-id="901dd-131">Configuration</span></span>  
+ <span data-ttu-id="901dd-132">Invece del codice, è possibile usare la configurazione seguente:</span><span class="sxs-lookup"><span data-stu-id="901dd-132">The following configuration can be used instead of the code.</span></span> <span data-ttu-id="901dd-133">L'elemento di comportamento del servizio viene usato per specificare un certificato che viene usato per autenticare il servizio sul client.</span><span class="sxs-lookup"><span data-stu-id="901dd-133">The service behavior element is used to specify a certificate that is used to authenticate the service to the client.</span></span> <span data-ttu-id="901dd-134">L'elemento servizio deve specificare il comportamento usando l'attributo `behaviorConfiguration`.</span><span class="sxs-lookup"><span data-stu-id="901dd-134">The service element must specify the behavior using the `behaviorConfiguration` attribute.</span></span> <span data-ttu-id="901dd-135">L'elemento associazione specifica che il tipo di credenziale client è `None`, consentendo ai client anonimi di usare il servizio.</span><span class="sxs-lookup"><span data-stu-id="901dd-135">The binding element specifies that the client credential type is `None`, allowing anonymous clients to use the service.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -88,26 +94,26 @@ Nello scenario seguente vengono illustrati un client e un servizio protetti tram
 </configuration>  
 ```  
   
-## Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.  Eseguire una delle operazioni seguenti:  
+## <a name="client"></a><span data-ttu-id="901dd-136">Client</span><span class="sxs-lookup"><span data-stu-id="901dd-136">Client</span></span>  
+ <span data-ttu-id="901dd-137">Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.</span><span class="sxs-lookup"><span data-stu-id="901dd-137">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="901dd-138">Eseguire una delle operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="901dd-138">Do one of the following:</span></span>  
   
--   Creare un client autonomo usando il codice \(e il codice client\).  
+-   <span data-ttu-id="901dd-139">Creare un client autonomo usando il codice (e il codice client).</span><span class="sxs-lookup"><span data-stu-id="901dd-139">Create a stand-alone client using the code (and client code).</span></span>  
   
--   Creare un client che non definisce alcun indirizzo di endpoint.  Usare invece il costruttore client che accetta il nome della configurazione come argomento.  Ad esempio:  
+-   <span data-ttu-id="901dd-140">Creare un client che non definisce alcun indirizzo di endpoint.</span><span class="sxs-lookup"><span data-stu-id="901dd-140">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="901dd-141">Usare invece il costruttore client che accetta il nome della configurazione come argomento.</span><span class="sxs-lookup"><span data-stu-id="901dd-141">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="901dd-142">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="901dd-142">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Codice  
- Nel codice seguente viene creata un'istanza del client.  L'associazione usa la protezione in modalità messaggio e il tipo di credenziale client è impostato su Nessuno.  
+### <a name="code"></a><span data-ttu-id="901dd-143">Codice</span><span class="sxs-lookup"><span data-stu-id="901dd-143">Code</span></span>  
+ <span data-ttu-id="901dd-144">Nel codice seguente viene creata un'istanza del client.</span><span class="sxs-lookup"><span data-stu-id="901dd-144">The following code creates an instance of the client.</span></span> <span data-ttu-id="901dd-145">L'associazione usa la protezione in modalità messaggio e il tipo di credenziale client è impostato su Nessuno.</span><span class="sxs-lookup"><span data-stu-id="901dd-145">The binding uses message mode security, and the client credential type is set to none.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
  [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
   
-### Configurazione  
- Nel codice seguente viene configurato il client.  
+### <a name="configuration"></a><span data-ttu-id="901dd-146">Configurazione</span><span class="sxs-lookup"><span data-stu-id="901dd-146">Configuration</span></span>  
+ <span data-ttu-id="901dd-147">Nel codice seguente viene configurato il client.</span><span class="sxs-lookup"><span data-stu-id="901dd-147">The following code configures the client.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -135,9 +141,9 @@ Nello scenario seguente vengono illustrati un client e un servizio protetti tram
 </configuration>  
 ```  
   
-## Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Protezione delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)   
- [Sicurezza dei messaggi anonima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)   
- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="901dd-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="901dd-148">See Also</span></span>  
+ [<span data-ttu-id="901dd-149">Cenni preliminari sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="901dd-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="901dd-150">Protezione delle applicazioni distribuite</span><span class="sxs-lookup"><span data-stu-id="901dd-150">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [<span data-ttu-id="901dd-151">Sicurezza dei messaggi anonima</span><span class="sxs-lookup"><span data-stu-id="901dd-151">Message Security Anonymous</span></span>](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [<span data-ttu-id="901dd-152">L'autenticazione e identità del servizio</span><span class="sxs-lookup"><span data-stu-id="901dd-152">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="901dd-153">Modello di sicurezza per Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="901dd-153">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

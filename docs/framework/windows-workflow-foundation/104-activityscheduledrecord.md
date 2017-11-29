@@ -1,51 +1,55 @@
 ---
-title: "104 - ActivityScheduledRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 104 - ActivityScheduledRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae202178-8fb1-4646-a3aa-18beeda8ff93
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49c7a295c4025da2c7fdcb7d4a220e26a4971f1b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 104 - ActivityScheduledRecord
-## Proprietà  
+# <a name="104---activityscheduledrecord"></a><span data-ttu-id="9acbb-102">104 - ActivityScheduledRecord</span><span class="sxs-lookup"><span data-stu-id="9acbb-102">104 - ActivityScheduledRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="9acbb-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="9acbb-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|104|  
-|Parole chiave|EndToEndMonitoring, Risoluzione dei problemi, HealthMonitoring, WFTracking|  
-|Livello|Info|  
-|Canale|Microsoft\-Windows\-Server applicazioni\-Applicazioni\/Analitico|  
+|<span data-ttu-id="9acbb-104">Id</span><span class="sxs-lookup"><span data-stu-id="9acbb-104">Id</span></span>|<span data-ttu-id="9acbb-105">104</span><span class="sxs-lookup"><span data-stu-id="9acbb-105">104</span></span>|  
+|<span data-ttu-id="9acbb-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="9acbb-106">Keywords</span></span>|<span data-ttu-id="9acbb-107">EndToEndMonitoring, Risoluzione dei problemi, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="9acbb-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="9acbb-108">Livello</span><span class="sxs-lookup"><span data-stu-id="9acbb-108">Level</span></span>|<span data-ttu-id="9acbb-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="9acbb-109">Information</span></span>|  
+|<span data-ttu-id="9acbb-110">Canale</span><span class="sxs-lookup"><span data-stu-id="9acbb-110">Channel</span></span>|<span data-ttu-id="9acbb-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="9acbb-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descrizione  
- Questo evento viene creato dal partecipante del rilevamento ETW quando un'attività all'interno di un'istanza del flusso di lavoro crea l'oggetto ActivityScheduledRecord.  
+## <a name="description"></a><span data-ttu-id="9acbb-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9acbb-112">Description</span></span>  
+ <span data-ttu-id="9acbb-113">Questo evento viene creato dal partecipante del rilevamento ETW quando un'attività all'interno di un'istanza del flusso di lavoro crea l'oggetto ActivityScheduledRecord.</span><span class="sxs-lookup"><span data-stu-id="9acbb-113">This event is emitted by the ETW tracking participant when an activity within a workflow instance emits ActivityScheduledRecord</span></span>  
   
-## Messaggio  
- TrackRecord \= ActivityScheduledRecord, InstanceID \= %1,  RecordNumber \= %2, EventTime \= %3, Name \= %4, ActivityId \= %5, ActivityInstanceId \= %6, ActivityTypeName \= %7, ChildActivityName \= %8, ChildActivityId \= %9, ChildActivityInstanceId \= %10, ChildActivityTypeName \=%11, Annotations\=%12, ProfileName \= %13  
+## <a name="message"></a><span data-ttu-id="9acbb-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="9acbb-114">Message</span></span>  
+ <span data-ttu-id="9acbb-115">TrackRecord = ActivityScheduledRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, Name = %4, ActivityId = %5, ActivityInstanceId = %6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13</span><span class="sxs-lookup"><span data-stu-id="9acbb-115">TrackRecord = ActivityScheduledRecord, InstanceID = %1,  RecordNumber = %2, EventTime = %3, Name = %4, ActivityId = %5, ActivityInstanceId = %6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13</span></span>  
   
-## Dettagli  
+## <a name="details"></a><span data-ttu-id="9acbb-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="9acbb-116">Details</span></span>  
   
-|Nome elemento dati|Tipo elemento dati|Descrizione|  
-|------------------------|------------------------|-----------------|  
-|InstanceId|xs:GUID|ID istanza del flusso di lavoro.|  
-|RecordNumber|xs:long|Numero di sequenza del record creato.|  
-|EventTime|xs:dateTime|Ora di creazione dell'evento in UTC.|  
-|Name|xs:string|Nome dell'attività che ha pianificato l'attività figlio.|  
-|ActivityId|xs:string|ID dell'attività che ha pianificato l'attività figlio.|  
-|ActivityInstanceId|xs:string|ID istanza dell'attività che ha pianificato l'attività figlio.|  
-|ActivityTypeName|xs:string|Tipo di attività che ha richiesto l'operazione di annullamento.|  
-|ChildActivityName|xs:string|Nome dell'attività pianificata.|  
-|ChildActivityId|xs:string|ID dell'attività pianificata.|  
-|ChildActivityInstanceId|xs:string|ID istanza dell'attività pianificata.|  
-|ChildActivityTypeName|xs:string|Tipo dell'attività pianificata.|  
-|Annotations|xs:string|Annotazioni aggiunte a questo evento.I valori sono archiviati in un elemento xml nel formato \<items\>\< nome elemento \= "annotationName" tipo\="System.String"\>annotationValue\<\/item\>\<\/items\>.Se non è specificata alcuna annotazione, la stringa contiene \<items\/\>.La dimensione dell'evento ETW è limitata da quella del buffer ETW o dal payload massimo per un evento ETW.Se la dimensione dell'evento supera i limiti ETW, l'evento viene troncato eliminando le annotazioni e sostituendo il valore di annotazione con \<items\>...\<\/items.\>|  
-|ProfileName|xs:string|Nome o profilo di rilevamento che ha determinato la creazione di questo evento.|  
-|HostReference|xs:string|Per i servizi ospitati su Web, questo campo identifica in modo univoco il servizio nella gerarchia Web.Il relativo formato è definito come 'Nome sito Web&#124;Percorso virtuale applicazione&#124;Percorso virtuale servizio&#124;NomeServizio' Esempio: 'Sito Web predefinito\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'|  
-|AppDomain|xs:string|Stringa restituita da AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="9acbb-117">Nome elemento dati</span><span class="sxs-lookup"><span data-stu-id="9acbb-117">Data Item Name</span></span>|<span data-ttu-id="9acbb-118">Tipo elemento dati</span><span class="sxs-lookup"><span data-stu-id="9acbb-118">Data Item Type</span></span>|<span data-ttu-id="9acbb-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9acbb-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="9acbb-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="9acbb-120">InstanceId</span></span>|<span data-ttu-id="9acbb-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="9acbb-121">xs:GUID</span></span>|<span data-ttu-id="9acbb-122">ID istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="9acbb-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="9acbb-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="9acbb-123">RecordNumber</span></span>|<span data-ttu-id="9acbb-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="9acbb-124">xs:long</span></span>|<span data-ttu-id="9acbb-125">Numero di sequenza del record creato.</span><span class="sxs-lookup"><span data-stu-id="9acbb-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="9acbb-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="9acbb-126">EventTime</span></span>|<span data-ttu-id="9acbb-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="9acbb-127">xs:dateTime</span></span>|<span data-ttu-id="9acbb-128">Ora di creazione dell'evento in UTC.</span><span class="sxs-lookup"><span data-stu-id="9acbb-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="9acbb-129">Nome</span><span class="sxs-lookup"><span data-stu-id="9acbb-129">Name</span></span>|<span data-ttu-id="9acbb-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-130">xs:string</span></span>|<span data-ttu-id="9acbb-131">Nome dell'attività che ha pianificato l'attività figlio.</span><span class="sxs-lookup"><span data-stu-id="9acbb-131">The name of the activity that scheduled the child activity</span></span>|  
+|<span data-ttu-id="9acbb-132">ActivityId</span><span class="sxs-lookup"><span data-stu-id="9acbb-132">ActivityId</span></span>|<span data-ttu-id="9acbb-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-133">xs:string</span></span>|<span data-ttu-id="9acbb-134">ID dell'attività che ha pianificato l'attività figlio.</span><span class="sxs-lookup"><span data-stu-id="9acbb-134">The id of the activity that scheduled the child activity</span></span>|  
+|<span data-ttu-id="9acbb-135">ActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="9acbb-135">ActivityInstanceId</span></span>|<span data-ttu-id="9acbb-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-136">xs:string</span></span>|<span data-ttu-id="9acbb-137">ID istanza dell'attività che ha pianificato l'attività figlio.</span><span class="sxs-lookup"><span data-stu-id="9acbb-137">The instance id of the activity that scheduled the child activity</span></span>|  
+|<span data-ttu-id="9acbb-138">ActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="9acbb-138">ActivityTypeName</span></span>|<span data-ttu-id="9acbb-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-139">xs:string</span></span>|<span data-ttu-id="9acbb-140">Tipo di attività che ha richiesto l'operazione di annullamento.</span><span class="sxs-lookup"><span data-stu-id="9acbb-140">The type of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="9acbb-141">ChildActivityName</span><span class="sxs-lookup"><span data-stu-id="9acbb-141">ChildActivityName</span></span>|<span data-ttu-id="9acbb-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-142">xs:string</span></span>|<span data-ttu-id="9acbb-143">Nome dell'attività pianificata.</span><span class="sxs-lookup"><span data-stu-id="9acbb-143">The name of the scheduled activity</span></span>|  
+|<span data-ttu-id="9acbb-144">ChildActivityId</span><span class="sxs-lookup"><span data-stu-id="9acbb-144">ChildActivityId</span></span>|<span data-ttu-id="9acbb-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-145">xs:string</span></span>|<span data-ttu-id="9acbb-146">ID dell'attività pianificata.</span><span class="sxs-lookup"><span data-stu-id="9acbb-146">The id of the scheduled activity</span></span>|  
+|<span data-ttu-id="9acbb-147">ChildActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="9acbb-147">ChildActivityInstanceId</span></span>|<span data-ttu-id="9acbb-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-148">xs:string</span></span>|<span data-ttu-id="9acbb-149">ID istanza dell'attività pianificata.</span><span class="sxs-lookup"><span data-stu-id="9acbb-149">The instance id of the scheduled activity</span></span>|  
+|<span data-ttu-id="9acbb-150">ChildActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="9acbb-150">ChildActivityTypeName</span></span>|<span data-ttu-id="9acbb-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-151">xs:string</span></span>|<span data-ttu-id="9acbb-152">Tipo dell'attività pianificata.</span><span class="sxs-lookup"><span data-stu-id="9acbb-152">The type of the scheduled activity</span></span>|  
+|<span data-ttu-id="9acbb-153">Annotazioni</span><span class="sxs-lookup"><span data-stu-id="9acbb-153">Annotations</span></span>|<span data-ttu-id="9acbb-154">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-154">xs:string</span></span>|<span data-ttu-id="9acbb-155">Annotazioni aggiunte a questo evento.</span><span class="sxs-lookup"><span data-stu-id="9acbb-155">The annotations that were added to this event.</span></span>  <span data-ttu-id="9acbb-156">I valori vengono archiviati in un elemento xml nel formato \<elementi >\< nome elemento = "Nomeannotazione" Type = "> Valoreannotazione\</item > \< /items >.</span><span class="sxs-lookup"><span data-stu-id="9acbb-156">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="9acbb-157">Se viene specificata alcuna annotazione, la stringa contiene \<elementi / >.</span><span class="sxs-lookup"><span data-stu-id="9acbb-157">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="9acbb-158">La dimensione dell'evento ETW è limitata da quella del buffer ETW o dal payload massimo per un evento ETW.</span><span class="sxs-lookup"><span data-stu-id="9acbb-158">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="9acbb-159">Se la dimensione dell'evento supera i limiti ETW, l'evento viene troncato eliminando le annotazioni e sostituendo il valore di annotazione con \<elementi >...  \< /items >.</span><span class="sxs-lookup"><span data-stu-id="9acbb-159">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="9acbb-160">ProfileName</span><span class="sxs-lookup"><span data-stu-id="9acbb-160">ProfileName</span></span>|<span data-ttu-id="9acbb-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-161">xs:string</span></span>|<span data-ttu-id="9acbb-162">Nome o profilo di rilevamento che ha determinato la creazione di questo evento.</span><span class="sxs-lookup"><span data-stu-id="9acbb-162">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="9acbb-163">HostReference</span><span class="sxs-lookup"><span data-stu-id="9acbb-163">HostReference</span></span>|<span data-ttu-id="9acbb-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-164">xs:string</span></span>|<span data-ttu-id="9acbb-165">Per i servizi ospitati su Web questo campo identifica in modo univoco il servizio nella gerarchia Web.</span><span class="sxs-lookup"><span data-stu-id="9acbb-165">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="9acbb-166">Il formato viene definito come ' nome sito Web dell'applicazione virtuale percorso &#124; Percorso virtuale servizio &#124; Nomeservizio ' esempio: ' Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="9acbb-166">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="9acbb-167">AppDomain</span><span class="sxs-lookup"><span data-stu-id="9acbb-167">AppDomain</span></span>|<span data-ttu-id="9acbb-168">xs:string</span><span class="sxs-lookup"><span data-stu-id="9acbb-168">xs:string</span></span>|<span data-ttu-id="9acbb-169">Stringa restituita da AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="9acbb-169">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

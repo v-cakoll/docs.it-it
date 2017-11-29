@@ -5,59 +5,56 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: aa25f163199652618e35399c6548a9864a17370a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="building-my-first-claims-aware-aspnet-web-application"></a>Creazione della prima applicazione Web ASP.NET in grado di riconoscere attestazioni
-## <a name="applies-to"></a>Si applica a  
+# <a name="building-my-first-claims-aware-aspnet-web-application"></a><span data-ttu-id="ce515-102">Creazione della prima applicazione Web ASP.NET in grado di riconoscere attestazioni</span><span class="sxs-lookup"><span data-stu-id="ce515-102">Building My First Claims-Aware ASP.NET Web Application</span></span>
+## <a name="applies-to"></a><span data-ttu-id="ce515-103">Si applica a</span><span class="sxs-lookup"><span data-stu-id="ce515-103">Applies To</span></span>  
   
--   Windows Identity Foundation (WIF)  
+-   <span data-ttu-id="ce515-104">Windows Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="ce515-104">Windows Identity Foundation (WIF)</span></span>  
   
--   ASP.NET  
+-   <span data-ttu-id="ce515-105">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ce515-105">ASP.NET</span></span>  
   
- In questo argomento viene illustrato lo scenario di compilazione di applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF. Uno scenario di applicazione in grado di riconoscere attestazioni prevede in genere tre partecipanti: l'applicazione stessa, l'utente finale e il servizio token di sicurezza, come illustrato nella figura seguente:  
+ <span data-ttu-id="ce515-106">In questo argomento viene illustrato lo scenario di compilazione di applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF.</span><span class="sxs-lookup"><span data-stu-id="ce515-106">This topic outlines the scenario of building claims-aware ASP.NET web applications using WIF.</span></span> <span data-ttu-id="ce515-107">Uno scenario di applicazione in grado di riconoscere attestazioni prevede in genere tre partecipanti: l'applicazione stessa, l'utente finale e il servizio token di sicurezza,</span><span class="sxs-lookup"><span data-stu-id="ce515-107">There are usually three participants in a claims-aware application scenario: the application itself, the end user, and the Security Token Service (STS).</span></span> <span data-ttu-id="ce515-108">come illustrato nella figura seguente:</span><span class="sxs-lookup"><span data-stu-id="ce515-108">The following figure describes this scenario:</span></span>  
   
- ![App Web di base WIF](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")  
+ <span data-ttu-id="ce515-109">![App Web di base WIF](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")</span><span class="sxs-lookup"><span data-stu-id="ce515-109">![WIF Basic Web App](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")</span></span>  
   
-1.  Tramite l'applicazione in grado di riconoscere attestazioni viene utilizzato WIF per identificare le richieste non autenticate e per reindirizzarle al servizio token di sicurezza.  
+1.  <span data-ttu-id="ce515-110">Tramite l'applicazione in grado di riconoscere attestazioni viene utilizzato WIF per identificare le richieste non autenticate e per reindirizzarle al servizio token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="ce515-110">The claims-aware application uses WIF to identify unauthenticated requests and to redirect them to the STS.</span></span>  
   
-2.  L'utente finale fornisce le credenziali al servizio token di sicurezza e alla riuscita dell'autenticazione all'utente viene rilasciato un token dal servizio in questione.  
+2.  <span data-ttu-id="ce515-111">L'utente finale fornisce le credenziali al servizio token di sicurezza e alla riuscita dell'autenticazione all'utente viene rilasciato un token dal servizio in questione.</span><span class="sxs-lookup"><span data-stu-id="ce515-111">The end user provides credentials to the STS and upon successful authentication the user is issued a token by the STS.</span></span>  
   
-3.  L'utente viene reindirizzato dal servizio token di sicurezza all'applicazione in grado di riconoscere attestazioni con il token rilasciato da questo servizio nella richiesta.  
+3.  <span data-ttu-id="ce515-112">L'utente viene reindirizzato dal servizio token di sicurezza all'applicazione in grado di riconoscere attestazioni con il token rilasciato da questo servizio nella richiesta.</span><span class="sxs-lookup"><span data-stu-id="ce515-112">The user is redirected from the STS to the claims-aware application with the STS-issued token in the request.</span></span>  
   
-4.  L'applicazione in grado di riconoscere attestazioni viene configurata per considerare attendibili il servizio token di sicurezza e i token da quest'ultimo rilasciati. Tramite l'applicazione in grado di riconoscere attestazioni viene utilizzato WIF per convalidare il token e analizzarlo. Gli sviluppatori usano tipi e API WIF appropriati, ad esempio **ClaimsPrincipal**, per esigenze dell'applicazione come l'implementazione della relativa autorizzazione.  
+4.  <span data-ttu-id="ce515-113">L'applicazione in grado di riconoscere attestazioni viene configurata per considerare attendibili il servizio token di sicurezza e i token da quest'ultimo rilasciati.</span><span class="sxs-lookup"><span data-stu-id="ce515-113">The claims-aware application is configured to trust the STS and the tokens it issues.</span></span> <span data-ttu-id="ce515-114">Tramite l'applicazione in grado di riconoscere attestazioni viene utilizzato WIF per convalidare il token e analizzarlo.</span><span class="sxs-lookup"><span data-stu-id="ce515-114">The claims-aware application uses WIF to validate the token and to parse it.</span></span> <span data-ttu-id="ce515-115">Gli sviluppatori usano tipi e API WIF appropriati, ad esempio **ClaimsPrincipal**, per esigenze dell'applicazione come l'implementazione della relativa autorizzazione.</span><span class="sxs-lookup"><span data-stu-id="ce515-115">Developers use the appropriate WIF API and types, for example, **ClaimsPrincpal** for the application’s needs, such as implementing authorization for it.</span></span>  
   
- A partire da .NET 4.5, WIF fa parte del pacchetto .NET Framework. La disponibilità delle classi di WIF direttamente nel framework consente una maggiore integrazione dell'identità basata sulle attestazioni nella piattaforma .NET, semplificando l'utilizzo delle attestazioni. Con WIF 4.5 non è necessario installare altri componenti fuori banda per avviare lo sviluppo di applicazioni Web in grado di riconoscere attestazioni. Le classi di WIF vengono ora estese tra diversi assembly, i principali dei quali sono System.Security.Claims, System.IdentityModel e System.IdentityModel.Services.  
+ <span data-ttu-id="ce515-116">A partire da .NET 4.5, WIF fa parte del pacchetto .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ce515-116">Starting from .NET 4.5, WIF is part of the .NET Framework package.</span></span> <span data-ttu-id="ce515-117">La disponibilità delle classi di WIF direttamente nel framework consente una maggiore integrazione dell'identità basata sulle attestazioni nella piattaforma .NET, semplificando l'utilizzo delle attestazioni.</span><span class="sxs-lookup"><span data-stu-id="ce515-117">Having the WIF classes directly available in the framework allows a much deeper integration of claims-based identity in .NET, making it easier to use claims.</span></span> <span data-ttu-id="ce515-118">Con WIF 4.5 non è necessario installare altri componenti fuori banda per avviare lo sviluppo di applicazioni Web in grado di riconoscere attestazioni.</span><span class="sxs-lookup"><span data-stu-id="ce515-118">With WIF 4.5, you do not need to install any out-of-band components in order to start developing claims-aware web applications.</span></span> <span data-ttu-id="ce515-119">Le classi di WIF vengono ora estese tra diversi assembly, i principali dei quali sono System.Security.Claims, System.IdentityModel e System.IdentityModel.Services.</span><span class="sxs-lookup"><span data-stu-id="ce515-119">WIF classes are now spread across various assemblies, the main ones being System.Security.Claims, System.IdentityModel and System.IdentityModel.Services.</span></span>  
   
- Il servizio token di sicurezza è un servizio tramite cui vengono rilasciati dei token alla riuscita dell'autenticazione. Microsoft offre due servizi token di sicurezza standard del settore:  
+ <span data-ttu-id="ce515-120">Il servizio token di sicurezza è un servizio tramite cui vengono rilasciati dei token alla riuscita dell'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="ce515-120">STS is a service that issues tokens upon successful authentication.</span></span> <span data-ttu-id="ce515-121">Microsoft offre due servizi token di sicurezza standard del settore:</span><span class="sxs-lookup"><span data-stu-id="ce515-121">Microsoft offers two industry standard STS’s:</span></span>  
   
--   [Active Directory Federation Services (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   <span data-ttu-id="ce515-122">[Active Directory Federation Services (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)</span><span class="sxs-lookup"><span data-stu-id="ce515-122">[Active Directory Federation Services (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)</span></span>  
   
--   [Windows Azure Access Control Service (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).  
+-   <span data-ttu-id="ce515-123">[Windows Azure Access Control Service (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).</span><span class="sxs-lookup"><span data-stu-id="ce515-123">[Windows Azure Access Control Service (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).</span></span>  
   
- AD FS 2.0 fa parte di Windows Server R2 e può essere utilizzato come servizio token di sicurezza in scenari locali. ACS è un servizio cloud, fornito come parte della piattaforma Microsoft Azure. Per fini di test e didattici, è inoltre possibile utilizzare altri servizi token di sicurezza per compilare applicazioni in grado di riconoscere attestazioni. È possibile, ad esempio, usare il servizio token di sicurezza di sviluppo locale che fa parte di [Identity and Access Tool for Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849), disponibile gratuitamente online.  
+ <span data-ttu-id="ce515-124">AD FS 2.0 fa parte di Windows Server R2 e può essere utilizzato come servizio token di sicurezza in scenari locali.</span><span class="sxs-lookup"><span data-stu-id="ce515-124">AD FS 2.0 is part of the Windows Server R2 and can be used as an STS for on-premise scenarios.</span></span> <span data-ttu-id="ce515-125">ACS è un servizio cloud, fornito come parte della piattaforma Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="ce515-125">ACS is a cloud service, offered as part of the Windows Azure Platform.</span></span> <span data-ttu-id="ce515-126">Per fini di test e didattici, è inoltre possibile utilizzare altri servizi token di sicurezza per compilare applicazioni in grado di riconoscere attestazioni.</span><span class="sxs-lookup"><span data-stu-id="ce515-126">For testing or educational purposes, you can also use other STS’s in order to build your claims-aware applications.</span></span> <span data-ttu-id="ce515-127">È possibile, ad esempio, usare il servizio token di sicurezza di sviluppo locale che fa parte di [Identity and Access Tool for Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849), disponibile gratuitamente online.</span><span class="sxs-lookup"><span data-stu-id="ce515-127">For example, you can use the Local Development STS that is part of the [Identity and Access Tool for Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) which is freely available online.</span></span>  
   
- Per compilare la prima applicazione ASP.NET in grado di riconoscere attestazioni mediante WIF, seguire le istruzioni in uno dei collegamenti seguenti:  
+ <span data-ttu-id="ce515-128">Per compilare la prima applicazione ASP.NET in grado di riconoscere attestazioni mediante WIF, seguire le istruzioni in uno dei collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="ce515-128">To build your first claims-aware ASP.NET application using WIF, follow the instructions in one of the following:</span></span>  
   
--   [Procedura: Compilare un'applicazione Web ASP.NET MVC che può riconoscere attestazioni con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [<span data-ttu-id="ce515-129">Procedura: Compilare un'applicazione Web ASP.NET MVC che può riconoscere attestazioni con WIF</span><span class="sxs-lookup"><span data-stu-id="ce515-129">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Procedura: Compilare un'applicazione Web Form ASP.NET che può riconoscere attestazioni con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [<span data-ttu-id="ce515-130">Procedura: Compilare un'applicazione Web Form ASP.NET che può riconoscere attestazioni con WIF</span><span class="sxs-lookup"><span data-stu-id="ce515-130">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione basata su moduli](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [<span data-ttu-id="ce515-131">Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione basata su moduli</span><span class="sxs-lookup"><span data-stu-id="ce515-131">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida introduttiva a WIF](../../../docs/framework/security/getting-started-with-wif.md)
-
+## <a name="see-also"></a><span data-ttu-id="ce515-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ce515-132">See Also</span></span>  
+ [<span data-ttu-id="ce515-133">Guida introduttiva a WIF</span><span class="sxs-lookup"><span data-stu-id="ce515-133">Getting Started With WIF</span></span>](../../../docs/framework/security/getting-started-with-wif.md)

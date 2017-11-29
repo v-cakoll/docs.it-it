@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
 - managed debugging assistants (MDAs), invalid apartment state
@@ -24,48 +18,47 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f42a2b840a0cf678cfc2a06be0e9ed252c355a2a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71634018e42ad66fdd2d03d0b0d496394cde801e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="invalidapartmentstatechange-mda"></a>MDA invalidApartmentStateChange
-L'assistente al debug gestito `invalidApartmentStateChange` viene attivato quando si verificano due problemi diversi:  
+# <a name="invalidapartmentstatechange-mda"></a><span data-ttu-id="ad6f7-102">MDA invalidApartmentStateChange</span><span class="sxs-lookup"><span data-stu-id="ad6f7-102">invalidApartmentStateChange MDA</span></span>
+<span data-ttu-id="ad6f7-103">L'assistente al debug gestito `invalidApartmentStateChange` viene attivato quando si verificano due problemi diversi:</span><span class="sxs-lookup"><span data-stu-id="ad6f7-103">The `invalidApartmentStateChange` managed debugging assistant (MDS) is activated by either of two problems:</span></span>  
   
--   Viene effettuato un tentativo di modificare lo stato di apartment COM di un thread che è già stato inizializzato da COM in uno stato di apartment diverso.  
+-   <span data-ttu-id="ad6f7-104">Viene effettuato un tentativo di modificare lo stato di apartment COM di un thread che è già stato inizializzato da COM in uno stato di apartment diverso.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-104">An attempt is made to change the COM apartment state of a thread that has already been initialized by COM to a different apartment state.</span></span>  
   
--   Lo stato di apartment COM di un thread cambia in modo imprevisto.  
+-   <span data-ttu-id="ad6f7-105">Lo stato di apartment COM di un thread cambia in modo imprevisto.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-105">The COM apartment state of a thread changes unexpectedly.</span></span>  
   
-## <a name="symptoms"></a>Sintomi  
+## <a name="symptoms"></a><span data-ttu-id="ad6f7-106">Sintomi</span><span class="sxs-lookup"><span data-stu-id="ad6f7-106">Symptoms</span></span>  
   
--   Lo stato di apartment COM di un thread è diverso da quello richiesto. Questo problema può causare l'uso di proxy per componenti COM associati a un modello di threading diverso da quello corrente. A sua volta, questo comportamento può provocare la generazione di un'eccezione <xref:System.InvalidCastException> quando viene chiamato l'oggetto COM tramite interfacce che non sono configurate per il marshalling tra diversi apartment.  
+-   <span data-ttu-id="ad6f7-107">Lo stato di apartment COM di un thread è diverso da quello richiesto.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-107">A thread's COM apartment state is not what was requested.</span></span> <span data-ttu-id="ad6f7-108">Questo problema può causare l'uso di proxy per componenti COM associati a un modello di threading diverso da quello corrente.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-108">This may cause proxies to be used for COM components that have a threading model different from the current one.</span></span> <span data-ttu-id="ad6f7-109">A sua volta, questo comportamento può provocare la generazione di un'eccezione <xref:System.InvalidCastException> quando viene chiamato l'oggetto COM tramite interfacce che non sono configurate per il marshalling tra diversi apartment.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-109">This in turn may cause an <xref:System.InvalidCastException> to be thrown when calling the COM object through interfaces that are not set up for cross-apartment marshaling.</span></span>  
   
--   Lo stato di apartment COM del thread è diverso da quello previsto. Questo problema può provocare un'eccezione <xref:System.Runtime.InteropServices.COMException> con valore HRESULT impostato su RPC_E_WRONG_THREAD, nonché un'eccezione <xref:System.InvalidCastException> quando si effettuano chiamate in un [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Questo problema può anche far sì che diversi thread accedano contemporaneamente ad alcuni componenti COM a thread singolo, danneggiando i dati o provocandone la perdita.  
+-   <span data-ttu-id="ad6f7-110">Lo stato di apartment COM del thread è diverso da quello previsto.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-110">The COM apartment state of the thread is different than expected.</span></span> <span data-ttu-id="ad6f7-111">Questo problema può provocare un'eccezione <xref:System.Runtime.InteropServices.COMException> con valore HRESULT impostato su RPC_E_WRONG_THREAD, nonché un'eccezione <xref:System.InvalidCastException> quando si effettuano chiamate in un [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW).</span><span class="sxs-lookup"><span data-stu-id="ad6f7-111">This can cause a <xref:System.Runtime.InteropServices.COMException> with an HRESULT of RPC_E_WRONG_THREAD as well as a <xref:System.InvalidCastException> when making calls on a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW).</span></span> <span data-ttu-id="ad6f7-112">Questo problema può anche far sì che diversi thread accedano contemporaneamente ad alcuni componenti COM a thread singolo, danneggiando i dati o provocandone la perdita.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-112">This can also cause some single-threaded COM components to be accessed by multiple threads at the same time, which can lead to corruption or data loss.</span></span>  
   
-## <a name="cause"></a>Causa  
+## <a name="cause"></a><span data-ttu-id="ad6f7-113">Causa</span><span class="sxs-lookup"><span data-stu-id="ad6f7-113">Cause</span></span>  
   
--   Il thread è stato precedentemente inizializzato in uno stato di apartment COM diverso. Si noti che lo stato di apartment di un thread può essere impostato in modo sia esplicito sia implicito. Le operazioni esplicite includono la proprietà <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> e i metodi <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A>. Un thread creato con il metodo <xref:System.Threading.Thread.Start%2A> viene impostato in modo implicito su <xref:System.Threading.ApartmentState.MTA>, a meno che <xref:System.Threading.Thread.SetApartmentState%2A> non venga chiamato prima dell'avvio del thread. Anche il thread principale dell'applicazione viene inizializzato in modo implicito in <xref:System.Threading.ApartmentState.MTA>, a meno che nel metodo principale non sia specificato l'attributo <xref:System.STAThreadAttribute>.  
+-   <span data-ttu-id="ad6f7-114">Il thread è stato precedentemente inizializzato in uno stato di apartment COM diverso.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-114">The thread was previously initialized to a different COM apartment state.</span></span> <span data-ttu-id="ad6f7-115">Si noti che lo stato di apartment di un thread può essere impostato in modo sia esplicito sia implicito.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-115">Note that the apartment state of a thread can be set either explicitly or implicitly.</span></span> <span data-ttu-id="ad6f7-116">Le operazioni esplicite includono la proprietà <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> e i metodi <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A>.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-116">The explicit operations include the <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> property and the <xref:System.Threading.Thread.SetApartmentState%2A> and <xref:System.Threading.Thread.TrySetApartmentState%2A> methods.</span></span> <span data-ttu-id="ad6f7-117">Un thread creato con il metodo <xref:System.Threading.Thread.Start%2A> viene impostato in modo implicito su <xref:System.Threading.ApartmentState.MTA>, a meno che <xref:System.Threading.Thread.SetApartmentState%2A> non venga chiamato prima dell'avvio del thread.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-117">A thread created using the <xref:System.Threading.Thread.Start%2A> method is implicitly set to <xref:System.Threading.ApartmentState.MTA> unless <xref:System.Threading.Thread.SetApartmentState%2A> is called before the thread is started.</span></span> <span data-ttu-id="ad6f7-118">Anche il thread principale dell'applicazione viene inizializzato in modo implicito in <xref:System.Threading.ApartmentState.MTA>, a meno che nel metodo principale non sia specificato l'attributo <xref:System.STAThreadAttribute>.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-118">The main thread of the application is also implicitly initialized to <xref:System.Threading.ApartmentState.MTA> unless the <xref:System.STAThreadAttribute> attribute is specified on the main method.</span></span>  
   
--   Nel thread viene chiamato il metodo `CoUninitialize` (o il metodo `CoInitializeEx`) con un modello di concorrenza diverso.  
+-   <span data-ttu-id="ad6f7-119">Nel thread viene chiamato il metodo `CoUninitialize` (o il metodo `CoInitializeEx`) con un modello di concorrenza diverso.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-119">The `CoUninitialize` method (or the `CoInitializeEx` method) with a different concurrency model is called on the thread.</span></span>  
   
-## <a name="resolution"></a>Risoluzione  
- Impostare lo stato di apartment del thread prima dell'avvio dell'esecuzione oppure applicare l'attributo <xref:System.STAThreadAttribute> o <xref:System.MTAThreadAttribute> al metodo principale dell'applicazione.  
+## <a name="resolution"></a><span data-ttu-id="ad6f7-120">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="ad6f7-120">Resolution</span></span>  
+ <span data-ttu-id="ad6f7-121">Impostare lo stato di apartment del thread prima dell'avvio dell'esecuzione oppure applicare l'attributo <xref:System.STAThreadAttribute> o <xref:System.MTAThreadAttribute> al metodo principale dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-121">Set the apartment state of the thread before it begins executing, or apply either the <xref:System.STAThreadAttribute> attribute or the <xref:System.MTAThreadAttribute> attribute to the main method of the application.</span></span>  
   
- Per la seconda causa, idealmente, il codice che chiama il metodo `CoUninitialize` deve essere modificato in modo da ritardare la chiamata finché il thread non sta per terminare e non vi sono RCW, né i rispettivi componenti COM sottostanti, ancora in uso da parte del thread. Tuttavia, se non è possibile modificare il codice che chiama il metodo `CoUninitialize`, nessun RCW può essere usato dai thread non inizializzati in questo modo.  
+ <span data-ttu-id="ad6f7-122">Per la seconda causa, idealmente, il codice che chiama il metodo `CoUninitialize` deve essere modificato in modo da ritardare la chiamata finché il thread non sta per terminare e non vi sono RCW, né i rispettivi componenti COM sottostanti, ancora in uso da parte del thread.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-122">For the second cause, ideally, the code that calls the `CoUninitialize` method should be modified to delay the call until the thread is about to terminate and there are no RCWs and their underlying COM components still in use by the thread.</span></span> <span data-ttu-id="ad6f7-123">Tuttavia, se non è possibile modificare il codice che chiama il metodo `CoUninitialize`, nessun RCW può essere usato dai thread non inizializzati in questo modo.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-123">However, if it is not possible to modify the code that calls the `CoUninitialize` method, then no RCWs should be used from threads that are uninitialized in this way.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
- L'assistente al debug gestito non ha alcun effetto su CLR.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="ad6f7-124">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="ad6f7-124">Effect on the Runtime</span></span>  
+ <span data-ttu-id="ad6f7-125">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-125">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a>Output  
- Stato di apartment COM del thread corrente e stato che il codice stava tentando di applicare.  
+## <a name="output"></a><span data-ttu-id="ad6f7-126">Output</span><span class="sxs-lookup"><span data-stu-id="ad6f7-126">Output</span></span>  
+ <span data-ttu-id="ad6f7-127">Stato di apartment COM del thread corrente e stato che il codice stava tentando di applicare.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-127">The COM apartment state of the current thread, and the state that the code was attempting to apply.</span></span>  
   
-## <a name="configuration"></a>Configurazione  
+## <a name="configuration"></a><span data-ttu-id="ad6f7-128">Configurazione</span><span class="sxs-lookup"><span data-stu-id="ad6f7-128">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -75,8 +68,8 @@ L'assistente al debug gestito `invalidApartmentStateChange` viene attivato quand
 </mdaConfig>  
 ```  
   
-## <a name="example"></a>Esempio  
- L'esempio di codice seguente mostra una situazione che può comportare l'attivazione di questo assistente al debug gestito.  
+## <a name="example"></a><span data-ttu-id="ad6f7-129">Esempio</span><span class="sxs-lookup"><span data-stu-id="ad6f7-129">Example</span></span>  
+ <span data-ttu-id="ad6f7-130">L'esempio di codice seguente mostra una situazione che può comportare l'attivazione di questo assistente al debug gestito.</span><span class="sxs-lookup"><span data-stu-id="ad6f7-130">The following code example demonstrates a situation that can activate this MDA.</span></span>  
   
 ```  
 using System.Threading;  
@@ -92,8 +85,7 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
-
+## <a name="see-also"></a><span data-ttu-id="ad6f7-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad6f7-131">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="ad6f7-132">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="ad6f7-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="ad6f7-133">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="ad6f7-133">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

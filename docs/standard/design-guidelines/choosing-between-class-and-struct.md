@@ -1,68 +1,66 @@
 ---
-title: "Scelta tra classi e Struct | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "classe libreria linee guida di progettazione [.NET Framework], strutture"
-  - "classe libreria linee guida di progettazione [.NET Framework], classi"
-  - "strutture [.NET Framework], e classi"
-  - "classi [.NET Framework], linee guida di progettazione"
-  - "indicazioni per la progettazione di tipo, strutture"
-  - "strutture di progettazione [.NET Framework]"
-  - "classi [.NET Framework] e strutture"
-  - "tipo di linee guida di progettazione, classi"
+title: Scelta tra classi e struct
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- class library design guidelines [.NET Framework], structures
+- class library design guidelines [.NET Framework], classes
+- structures [.NET Framework], vs. classes
+- classes [.NET Framework], design guidelines
+- type design guidelines, structures
+- structures [.NET Framework], design guidelines
+- classes [.NET Framework], vs. structures
+- type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: df6659853e9c410ece3233cfa630c9066303a871
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Scelta tra classi e Struct
-Una delle decisioni di progettazione di base che deve affrontare ogni finestra di progettazione di framework indica se un tipo di progettazione come una classe \(un tipo di riferimento\) o uno struct \(un tipo di valore\). Buona conoscenza delle differenze nel comportamento dei tipi di riferimento e tipi di valore è fondamentale effettuare questa scelta.  
+# <a name="choosing-between-class-and-struct"></a><span data-ttu-id="14636-102">Scelta tra classi e struct</span><span class="sxs-lookup"><span data-stu-id="14636-102">Choosing Between Class and Struct</span></span>
+<span data-ttu-id="14636-103">Una delle decisioni di progettazione di base che deve affrontare ogni finestra di progettazione di framework è di progettare un tipo come una classe (un tipo di riferimento) o uno struct (un tipo di valore).</span><span class="sxs-lookup"><span data-stu-id="14636-103">One of the basic design decisions every framework designer faces is whether to design a type as a class (a reference type) or as a struct (a value type).</span></span> <span data-ttu-id="14636-104">Buona conoscenza delle differenze nel comportamento dei tipi di riferimento e tipi di valore è essenziale per effettuare questa scelta.</span><span class="sxs-lookup"><span data-stu-id="14636-104">Good understanding of the differences in the behavior of reference types and value types is crucial in making this choice.</span></span>  
   
- La prima differenza tra i tipi di riferimento e tipi di valore che verrà presa in considerazione è che i tipi di riferimento sono allocati sull'heap e sottoposto a garbage collection, mentre i tipi di valore sono allocati nel stack o inline nella contenente i tipi e deallocati quando lo stack viene rimosso o quando tipo che li contiene viene deallocato. Pertanto, le allocazioni e deallocazioni di tipi di valore sono in genere più economiche di allocazioni e deallocazioni dei tipi di riferimento.  
+ <span data-ttu-id="14636-105">Il primo differenza tra i tipi di riferimento e tipi di valore si prenderà in considerazione è che i tipi di riferimento sono allocati sull'heap e sottoposto a garbage collection, mentre i tipi di valore vengono allocati nello stack o inline in contenente i tipi e deallocato quando lo stack Rimuove o quando il tipo contenitore è Ottiene deallocata.</span><span class="sxs-lookup"><span data-stu-id="14636-105">The first difference between reference types and value types we will consider is that reference types are allocated on the heap and garbage-collected, whereas value types are allocated either on the stack or inline in containing types and deallocated when the stack unwinds or when their containing type gets deallocated.</span></span> <span data-ttu-id="14636-106">Pertanto, le allocazioni e deallocazioni di tipi di valore sono in genere più economica rispetto alle allocazioni e deallocazioni dei tipi di riferimento.</span><span class="sxs-lookup"><span data-stu-id="14636-106">Therefore, allocations and deallocations of value types are in general cheaper than allocations and deallocations of reference types.</span></span>  
   
- Successivamente, le matrici di riferimento sono tipi allocati out\-of\-line, vale a dire la matrice di elementi sono riferimenti soli alle istanze del tipo di riferimento che risiedono nell'heap. Matrici di tipi di valore vengono allocate inline, ovvero gli elementi della matrice sono le istanze effettive del tipo di valore. Pertanto, le allocazioni e deallocazioni di matrici di tipi di valore sono molto più conveniente del allocazioni e deallocazioni delle matrici di tipo riferimento. Inoltre, nella maggior parte dei casi matrici di tipi valore comportarsi in modo molto posizionamento ottimale dei riferimenti.  
+ <span data-ttu-id="14636-107">Successivamente, le matrici di tipi di riferimento allocato out-of-line, vale a dire la matrice di elementi sono riferimenti soli alle istanze del tipo di riferimento che risiedono nell'heap.</span><span class="sxs-lookup"><span data-stu-id="14636-107">Next, arrays of reference types are allocated out-of-line, meaning the array elements are just references to instances of the reference type residing on the heap.</span></span> <span data-ttu-id="14636-108">Matrici di tipi di valore vengono allocate inline, ovvero gli elementi della matrice sono le istanze effettive del tipo di valore.</span><span class="sxs-lookup"><span data-stu-id="14636-108">Value type arrays are allocated inline, meaning that the array elements are the actual instances of the value type.</span></span> <span data-ttu-id="14636-109">Pertanto, le allocazioni e deallocazioni di matrici di tipi di valore sono molto più economiche rispetto alle allocazioni e deallocazioni di matrici di tipi di riferimento.</span><span class="sxs-lookup"><span data-stu-id="14636-109">Therefore, allocations and deallocations of value type arrays are much cheaper than allocations and deallocations of reference type arrays.</span></span> <span data-ttu-id="14636-110">Inoltre, la maggior parte dei casi matrici di tipi valore risulta molto posizionamento ottimale dei riferimenti.</span><span class="sxs-lookup"><span data-stu-id="14636-110">In addition, in a majority of cases value type arrays exhibit much better locality of reference.</span></span>  
   
- Differenza successiva è correlata all'utilizzo della memoria. Tipi di valore compattati quando esegue il cast a un tipo di riferimento o una delle interfacce implementate. Ottengono unboxed quando esegue il cast al tipo di valore. Poiché le caselle sono oggetti che vengono allocati nell'heap sottoposto a garbage collection, troppa boxing e unboxing può avere un impatto negativo su heap, il garbage collector e infine le prestazioni dell'applicazione.  Al contrario, si verifica alcun tali boxing come vengono eseguito il cast di tipi di riferimento.  
+ <span data-ttu-id="14636-111">Differenza successiva è correlata all'utilizzo della memoria.</span><span class="sxs-lookup"><span data-stu-id="14636-111">The next difference is related to memory usage.</span></span> <span data-ttu-id="14636-112">Tipi di valore ottengano boxed quando esegue il cast a un tipo riferimento o una delle interfacce implementate.</span><span class="sxs-lookup"><span data-stu-id="14636-112">Value types get boxed when cast to a reference type or one of the interfaces they implement.</span></span> <span data-ttu-id="14636-113">Ricevono unboxed quando esegue il cast al tipo di valore.</span><span class="sxs-lookup"><span data-stu-id="14636-113">They get unboxed when cast back to the value type.</span></span> <span data-ttu-id="14636-114">Poiché le caselle sono oggetti che vengono allocati nell'heap sottoposto a garbage collection, troppo conversione boxing e unboxing può avere un impatto negativo sull'heap del garbage collector e infine le prestazioni dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="14636-114">Because boxes are objects that are allocated on the heap and are garbage-collected, too much boxing and unboxing can have a negative impact on the heap, the garbage collector, and ultimately the performance of the application.</span></span>  <span data-ttu-id="14636-115">Al contrario, si verifica alcun tali boxing, come vengono eseguito il cast di tipi di riferimento.</span><span class="sxs-lookup"><span data-stu-id="14636-115">In contrast, no such boxing occurs as reference types are cast.</span></span>  
   
- Le assegnazioni di tipi di riferimento successivamente, copiare il riferimento, mentre le assegnazioni di tipi di valore copiare l'intero valore. Pertanto, le assegnazioni di tipi di riferimento di grandi dimensioni sono più economiche di assegnazioni di tipi di valori di grandi dimensioni.  
+ <span data-ttu-id="14636-116">Le assegnazioni di tipi di riferimento successivamente, copiare il riferimento, mentre le assegnazioni di tipi di valore copiare l'intero valore.</span><span class="sxs-lookup"><span data-stu-id="14636-116">Next, reference type assignments copy the reference, whereas value type assignments copy the entire value.</span></span> <span data-ttu-id="14636-117">Pertanto, le assegnazioni di tipi di riferimento di grandi dimensioni sono più economiche rispetto alla assegnazioni di tipi di valori di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="14636-117">Therefore, assignments of large reference types are cheaper than assignments of large value types.</span></span>  
   
- Infine, i tipi di riferimento vengono passati per riferimento, mentre i tipi di valore vengono passati per valore. Le modifiche a un'istanza di un tipo di riferimento influiscono su tutti i riferimenti che puntano all'istanza. Istanze del tipo di valore vengono copiate quando vengono passati per valore. Quando un'istanza di un tipo di valore viene modificata, ovviamente non influisce sulle copie. Poiché le copie non vengono create in modo esplicito dall'utente, ma vengono create in modo implicito quando gli argomenti vengono passati o i valori vengono restituiti, tipi di valore che possono essere modificati possono essere confusione a molti utenti. Di conseguenza, i tipi di valore devono essere non modificabili.  
+ <span data-ttu-id="14636-118">Infine, i tipi di riferimento vengono passati per riferimento, mentre i tipi di valore vengono passati per valore.</span><span class="sxs-lookup"><span data-stu-id="14636-118">Finally, reference types are passed by reference, whereas value types are passed by value.</span></span> <span data-ttu-id="14636-119">Le modifiche a un'istanza di un tipo riferimento interessano tutti i riferimenti che puntano all'istanza.</span><span class="sxs-lookup"><span data-stu-id="14636-119">Changes to an instance of a reference type affect all references pointing to the instance.</span></span> <span data-ttu-id="14636-120">Istanze del tipo di valore vengono copiate quando vengono passati per valore.</span><span class="sxs-lookup"><span data-stu-id="14636-120">Value type instances are copied when they are passed by value.</span></span> <span data-ttu-id="14636-121">Quando un'istanza di un tipo di valore viene modificata, ovviamente non si applica una delle relative copie.</span><span class="sxs-lookup"><span data-stu-id="14636-121">When an instance of a value type is changed, it of course does not affect any of its copies.</span></span> <span data-ttu-id="14636-122">Poiché le copie non vengono create in modo esplicito dall'utente, ma vengono create in modo implicito quando gli argomenti vengono passati o i valori vengono restituiti, è possibile che i tipi di valore che possono essere modificati possono generare confusione a molti utenti.</span><span class="sxs-lookup"><span data-stu-id="14636-122">Because the copies are not created explicitly by the user but are implicitly created when arguments are passed or return values are returned, value types that can be changed can be confusing to many users.</span></span> <span data-ttu-id="14636-123">Di conseguenza, i tipi di valore devono essere non modificabili.</span><span class="sxs-lookup"><span data-stu-id="14636-123">Therefore, value types should be immutable.</span></span>  
   
- Come regola generale, la maggior parte dei tipi in un framework deve essere classi. Esistono tuttavia alcune situazioni in cui le caratteristiche di un tipo valore rendono più appropriato per l'utilizzo delle strutture.  
+ <span data-ttu-id="14636-124">Come regola generale, la maggior parte dei tipi in un framework deve essere classi.</span><span class="sxs-lookup"><span data-stu-id="14636-124">As a rule of thumb, the majority of types in a framework should be classes.</span></span> <span data-ttu-id="14636-125">Esistono tuttavia alcune situazioni in cui le caratteristiche di un tipo valore rendano più appropriata per l'utilizzo delle strutture.</span><span class="sxs-lookup"><span data-stu-id="14636-125">There are, however, some situations in which the characteristics of a value type make it more appropriate to use structs.</span></span>  
   
- **✓ PROVARE** definire una struttura invece di una classe, se le istanze del tipo sono di piccole dimensioni e di breve durata o vengono comunemente incorporate in altri oggetti.  
+ <span data-ttu-id="14636-126">**Provare a ✓** la definizione di una struttura invece di una classe, se le istanze del tipo sono piccoli e di breve durata o vengono comunemente incorporate in altri oggetti.</span><span class="sxs-lookup"><span data-stu-id="14636-126">**✓ CONSIDER** defining a struct instead of a class if instances of the type are small and commonly short-lived or are commonly embedded in other objects.</span></span>  
   
- **X evitare** la definizione di una struttura, a meno che il tipo dispone di tutte le caratteristiche seguenti:  
+ <span data-ttu-id="14636-127">**X evitare** definire una struttura, a meno che il tipo dispone di tutte le caratteristiche seguenti:</span><span class="sxs-lookup"><span data-stu-id="14636-127">**X AVOID** defining a struct unless the type has all of the following characteristics:</span></span>  
   
--   Logicamente rappresenta un singolo valore, simile ai tipi primitivi \(`int`, `double`, ecc.\).  
+-   <span data-ttu-id="14636-128">Logicamente rappresenta un singolo valore, simile ai tipi primitivi (`int`, `double`, ecc.).</span><span class="sxs-lookup"><span data-stu-id="14636-128">It logically represents a single value, similar to primitive types (`int`, `double`, etc.).</span></span>  
   
--   Ha una dimensione di istanza inferiore a 16 byte.  
+-   <span data-ttu-id="14636-129">Ha una dimensione di istanza inferiore a 16 byte.</span><span class="sxs-lookup"><span data-stu-id="14636-129">It has an instance size under 16 bytes.</span></span>  
   
--   Non è modificabile.  
+-   <span data-ttu-id="14636-130">È non modificabile.</span><span class="sxs-lookup"><span data-stu-id="14636-130">It is immutable.</span></span>  
   
--   Non dovranno essere sottoposto a boxing frequentemente.  
+-   <span data-ttu-id="14636-131">Non dovrà essere boxed frequentemente.</span><span class="sxs-lookup"><span data-stu-id="14636-131">It will not have to be boxed frequently.</span></span>  
   
- In tutti gli altri casi, è necessario definire i tipi di classi.  
+ <span data-ttu-id="14636-132">In tutti gli altri casi, è necessario definire i tipi di classi.</span><span class="sxs-lookup"><span data-stu-id="14636-132">In all other cases, you should define your types as classes.</span></span>  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ <span data-ttu-id="14636-133">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="14636-133">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ <span data-ttu-id="14636-134">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="14636-134">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vedere anche  
- [Indicazioni per la progettazione di tipo](../../../docs/standard/design-guidelines/type.md)   
- [Linee guida](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="14636-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="14636-135">See Also</span></span>  
+ [<span data-ttu-id="14636-136">Linee guida di progettazione di tipo</span><span class="sxs-lookup"><span data-stu-id="14636-136">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="14636-137">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="14636-137">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

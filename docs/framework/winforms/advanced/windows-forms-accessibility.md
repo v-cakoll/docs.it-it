@@ -1,43 +1,44 @@
 ---
-title: "Accessibilit&#224; in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli Windows Form, accessibilità"
-  - "accessibilità, controlli Windows Form"
+title: "Accessibilità in Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, accessibility
+- accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 23a3f168-ebc0-4f23-9efc-799109aa4a2d
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 94296e623407aad2fecb52b9e6ece7500778931b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Accessibilit&#224; in Windows Form
-La funzionalità di accessibilità di Windows Form consente di rendere disponibile l'applicazione a un'ampia gamma di utenti.  
+# <a name="windows-forms-accessibility"></a><span data-ttu-id="5c29c-102">Accessibilità in Windows Form</span><span class="sxs-lookup"><span data-stu-id="5c29c-102">Windows Forms Accessibility</span></span>
+<span data-ttu-id="5c29c-103">La funzionalità di accessibilità di Windows Form consente di rendere disponibile l'applicazione a un'ampia gamma di utenti.</span><span class="sxs-lookup"><span data-stu-id="5c29c-103">The accessibility functionality of Windows Forms allows you to make your application available to a wide variety of users.</span></span>  
   
-## In questa sezione  
- [Procedura dettagliata: creazione di un'applicazione Windows ad Accesso facilitato](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
- Descrive tutte le funzionalità da supportare per migliorare l'accessibilità.  
+## <a name="in-this-section"></a><span data-ttu-id="5c29c-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="5c29c-104">In This Section</span></span>  
+ [<span data-ttu-id="5c29c-105">Procedura dettagliata: Creazione di un'applicazione Windows ad Accesso facilitato</span><span class="sxs-lookup"><span data-stu-id="5c29c-105">Walkthrough: Creating an Accessible Windows-based Application</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
+ <span data-ttu-id="5c29c-106">Descrive tutte le funzionalità da supportare per migliorare l'accessibilità.</span><span class="sxs-lookup"><span data-stu-id="5c29c-106">Describes all of the features you should support to increase accessibility.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="5c29c-107">Riferimento</span><span class="sxs-lookup"><span data-stu-id="5c29c-107">Reference</span></span>  
  <xref:Accessibility>  
- Spazio dei nomi contenente un numero di classi correlate all'accessibilità.  
+ <span data-ttu-id="5c29c-108">Spazio dei nomi contenente un numero di classi correlate all'accessibilità.</span><span class="sxs-lookup"><span data-stu-id="5c29c-108">A namespace containing a number of classes related to accessibility.</span></span>  
   
  <xref:System.Windows.Forms.AccessibleObject>  
- Fornisce le informazioni usate dalle applicazioni di accessibilità per modificare l'interfaccia utente di un'applicazione in base alle necessità degli utenti diversamente abili.  
+ <span data-ttu-id="5c29c-109">Fornisce le informazioni usate dalle applicazioni di accessibilità per modificare l'interfaccia utente di un'applicazione in base alle necessità degli utenti diversamente abili.</span><span class="sxs-lookup"><span data-stu-id="5c29c-109">Provides information that accessibility applications use to adjust an application's user interface (UI) for users with impairments.</span></span>  
   
-## Sezioni correlate  
- [Aggiunta di informazioni per l'Accesso facilitato ai controlli in un Windows Form](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Descrive come fornire le informazioni usate dai controlli Windows Form per assistere gli utenti diversamente abili.  
+## <a name="related-sections"></a><span data-ttu-id="5c29c-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="5c29c-110">Related Sections</span></span>  
+ [<span data-ttu-id="5c29c-111">Aggiunta di informazioni per l'Accesso facilitato ai controlli in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="5c29c-111">Providing Accessibility Information for Controls on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ <span data-ttu-id="5c29c-112">Descrive come fornire le informazioni usate dai controlli Windows Form per assistere gli utenti diversamente abili.</span><span class="sxs-lookup"><span data-stu-id="5c29c-112">Describes how to supply information that Windows Forms controls can use to assist users with impairments.</span></span>  
   
- [Automatic Scaling in Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
- Descrive come far rispondere l'applicazione Windows Form alle modifiche apportate alle dimensioni del carattere del sistema.
+ [<span data-ttu-id="5c29c-113">Ridimensionamento automatico in Windows Form</span><span class="sxs-lookup"><span data-stu-id="5c29c-113">Automatic Scaling in Windows Forms</span></span>](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
+ <span data-ttu-id="5c29c-114">Descrive come far rispondere l'applicazione Windows Form alle modifiche apportate alle dimensioni del carattere del sistema.</span><span class="sxs-lookup"><span data-stu-id="5c29c-114">Describes how to make your Windows Forms application react to changes in the system font size.</span></span>

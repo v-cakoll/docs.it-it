@@ -1,78 +1,61 @@
 ---
-title: 'Procedura: dichiarare enumerazioni (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: dichiarare enumerazioni (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- declarations, enumerations
+- declarations [Visual Basic], enumerations
 - enumerations [Visual Basic], declaring
-- declaring enumerations
+- declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8ff8bf2df39bed0597740bcda968283ec854f447
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 938550ebbfcf099729db3de96b809549cb234d81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-declare-enumerations-visual-basic"></a>Procedura: dichiarare enumerazioni (Visual Basic)
-Per creare un'enumerazione con la `Enum` istruzione nella sezione delle dichiarazioni di una classe o modulo. È possibile dichiarare un'enumerazione con un metodo. Per specificare il livello appropriato di accesso, utilizzare `Private`, `Protected`, `Friend`, o `Public`.  
+# <a name="how-to-declare-enumerations-visual-basic"></a><span data-ttu-id="bb58d-102">Procedura: dichiarare enumerazioni (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb58d-102">How to: Declare Enumerations (Visual Basic)</span></span>
+<span data-ttu-id="bb58d-103">Per creare un'enumerazione con la `Enum` istruzione nella sezione delle dichiarazioni di una classe o modulo.</span><span class="sxs-lookup"><span data-stu-id="bb58d-103">You create an enumeration with the `Enum` statement in the declarations section of a class or module.</span></span> <span data-ttu-id="bb58d-104">È possibile dichiarare un'enumerazione con un metodo.</span><span class="sxs-lookup"><span data-stu-id="bb58d-104">You cannot declare an enumeration within a method.</span></span> <span data-ttu-id="bb58d-105">Per specificare il livello di accesso appropriato, utilizzare `Private`, `Protected`, `Friend`, o `Public`.</span><span class="sxs-lookup"><span data-stu-id="bb58d-105">To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.</span></span>  
   
- Un `Enum` tipo ha un nome, un tipo sottostante e un set di campi, ognuno dei quali rappresenta una costante. Il nome deve essere valido [!INCLUDE[vbprvblong](../../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)] qualificatore. Il tipo sottostante deve essere uno dei tipi integer:`Byte`, `Short`, `Long` o `Integer`. Il valore predefinito è `Integer`. Le enumerazioni sono sempre fortemente tipizzate e non sono interscambiabili con tipi di numeri integer.  
+ <span data-ttu-id="bb58d-106">Un `Enum` tipo ha un nome, un tipo sottostante e un set di campi, ognuno dei quali rappresenta una costante.</span><span class="sxs-lookup"><span data-stu-id="bb58d-106">An `Enum` type has a name, an underlying type, and a set of fields, each representing a constant.</span></span> <span data-ttu-id="bb58d-107">Il nome deve essere un qualificatore di Visual Basic .NET valido.</span><span class="sxs-lookup"><span data-stu-id="bb58d-107">The name must be a valid Visual Basic .NET qualifier.</span></span> <span data-ttu-id="bb58d-108">Il tipo sottostante deve essere uno dei tipi integer:`Byte`, `Short`, `Long` o `Integer`.</span><span class="sxs-lookup"><span data-stu-id="bb58d-108">The underlying type must be one of the integer types—`Byte`, `Short`, `Long` or `Integer`.</span></span> <span data-ttu-id="bb58d-109">Il valore predefinito è `Integer`.</span><span class="sxs-lookup"><span data-stu-id="bb58d-109">`Integer` is the default.</span></span> <span data-ttu-id="bb58d-110">Le enumerazioni sono sempre fortemente tipizzate e non sono interscambiabili con tipi di numeri integer.</span><span class="sxs-lookup"><span data-stu-id="bb58d-110">Enumerations are always strongly typed and are not interchangeable with integer number types.</span></span>  
   
- Le enumerazioni non possono avere valori a virgola mobile. Se un'enumerazione viene assegnato un valore a virgola mobile con `Option Strict On`, si verificherà un errore del compilatore. Se `Option Strict` è `Off`, il valore viene convertito automaticamente nel `Enum` tipo.  
+ <span data-ttu-id="bb58d-111">Enumerazioni non possono avere valori a virgola mobile.</span><span class="sxs-lookup"><span data-stu-id="bb58d-111">Enumerations cannot have floating-point values.</span></span> <span data-ttu-id="bb58d-112">Se un'enumerazione viene assegnato un valore a virgola mobile con `Option Strict On`, si verificherà un errore del compilatore.</span><span class="sxs-lookup"><span data-stu-id="bb58d-112">If an enumeration is assigned a floating-point value with `Option Strict On`, a compiler error results.</span></span> <span data-ttu-id="bb58d-113">Se `Option Strict` è `Off`, il valore viene convertito automaticamente nel `Enum` tipo.</span><span class="sxs-lookup"><span data-stu-id="bb58d-113">If `Option Strict` is `Off`, the value is automatically converted to the `Enum` type.</span></span>  
   
- Per informazioni sui nomi e come utilizzare il `Imports` istruzione per evitare la qualifica di nome, vedere [qualifica di nomi ed enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ <span data-ttu-id="bb58d-114">Per informazioni sui nomi e su come utilizzare il `Imports` istruzione per evitare la qualificazione di nomi, vedere [qualifica di nomi ed enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).</span><span class="sxs-lookup"><span data-stu-id="bb58d-114">For information on names, and how to use the `Imports` statement to make name qualification unnecessary, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).</span></span>  
   
-### <a name="to-declare-an-enumeration"></a>Per dichiarare un'enumerazione  
+### <a name="to-declare-an-enumeration"></a><span data-ttu-id="bb58d-115">Per dichiarare un'enumerazione</span><span class="sxs-lookup"><span data-stu-id="bb58d-115">To declare an enumeration</span></span>  
   
-1.  Scrivere una dichiarazione che include un livello di accesso di codice, il `Enum` (parola chiave) e un nome valido, come negli esempi seguenti, ognuna delle quali viene dichiarata una differente `Enum`.  
+1.  <span data-ttu-id="bb58d-116">Scrivere una dichiarazione che include un livello di accesso di codice, il `Enum` (parola chiave) e un nome valido, come negli esempi seguenti, ognuno dei quali viene dichiarata una differente `Enum`.</span><span class="sxs-lookup"><span data-stu-id="bb58d-116">Write a declaration that includes a code access level, the `Enum` keyword, and a valid name, as in the following examples, each of which declares a different `Enum`.</span></span>  
   
-     [!code-vb[VbEnumsTask n.&3;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
+     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
   
-2.  Definire le costanti dell'enumerazione. Per impostazione predefinita, la prima costante nell'enumerazione viene inizializzata a `0`, e le costanti successive vengono inizializzate su un valore di più rispetto alla costante precedente. Ad esempio, l'enumerazione seguente `Days`, contiene una costante denominata `Sunday` con il valore `0`, una costante denominata `Monday` con il valore `1`, una costante denominata `Tuesday` con il valore di `2`e così via.  
+2.  <span data-ttu-id="bb58d-117">Definire le costanti dell'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="bb58d-117">Define the constants in the enumeration.</span></span> <span data-ttu-id="bb58d-118">Per impostazione predefinita, la prima costante di enumerazione è inizializzata su `0`, e le costanti successive vengono inizializzate su un valore di un altro rispetto alla costante precedente.</span><span class="sxs-lookup"><span data-stu-id="bb58d-118">By default, the first constant in an enumeration is initialized to `0`, and subsequent constants are initialized to a value of one more than the previous constant.</span></span> <span data-ttu-id="bb58d-119">Ad esempio, l'enumerazione seguente `Days`, contiene una costante denominata `Sunday` con il valore `0`, una costante denominata `Monday` con il valore `1`, una costante denominata `Tuesday` con il valore di `2`e così via.</span><span class="sxs-lookup"><span data-stu-id="bb58d-119">For example, the following enumeration, `Days`, contains a constant named `Sunday` with the value `0`, a constant named `Monday` with the value `1`, a constant named `Tuesday` with the value of `2`, and so on.</span></span>  
   
-     [!code-vb[VbEnumsTask n.&4;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
+     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
   
-3.  In modo esplicito, è possibile assegnare valori alle costanti di enumerazione utilizzando un'istruzione di assegnazione. È possibile assegnare qualsiasi valore intero, inclusi i numeri negativi. Ad esempio, si consiglia di costanti con i valori minori di zero per rappresentare le condizioni di errore. Nell'enumerazione seguente, la costante `Invalid` viene assegnato in modo esplicito il valore `–1`e la costante `Sunday` viene assegnato il valore `0`. Perché è la prima costante nell'enumerazione, `Saturday` viene inoltre inizializzata sul valore `0`. Il valore di `Monday` è `1` (uno più il valore di `Sunday`); il valore di `Tuesday` è `2`e così via.  
+3.  <span data-ttu-id="bb58d-120">In modo esplicito, è possibile assegnare valori alle costanti di enumerazione utilizzando un'istruzione di assegnazione.</span><span class="sxs-lookup"><span data-stu-id="bb58d-120">You can explicitly assign values to constants in an enumeration by using an assignment statement.</span></span> <span data-ttu-id="bb58d-121">È possibile assegnare qualsiasi valore intero, inclusi i numeri negativi.</span><span class="sxs-lookup"><span data-stu-id="bb58d-121">You can assign any integer value, including negative numbers.</span></span> <span data-ttu-id="bb58d-122">Ad esempio, si consiglia di costanti con i valori minori di zero per rappresentare le condizioni di errore.</span><span class="sxs-lookup"><span data-stu-id="bb58d-122">For example, you may want constants with values less than zero to represent error conditions.</span></span> <span data-ttu-id="bb58d-123">Nell'enumerazione seguente, la costante `Invalid` viene assegnato in modo esplicito il valore `–1`e la costante `Sunday` viene assegnato il valore `0`.</span><span class="sxs-lookup"><span data-stu-id="bb58d-123">In the following enumeration, the constant `Invalid` is explicitly assigned the value `–1`, and the constant `Sunday` is assigned the value `0`.</span></span> <span data-ttu-id="bb58d-124">Perché è la prima costante nell'enumerazione, `Saturday` viene inoltre inizializzata sul valore `0`.</span><span class="sxs-lookup"><span data-stu-id="bb58d-124">Because it is the first constant in the enumeration, `Saturday` is also initialized to the value `0`.</span></span> <span data-ttu-id="bb58d-125">Il valore di `Monday` è `1` (uno più il valore di `Sunday`); il valore di `Tuesday` è `2`e così via.</span><span class="sxs-lookup"><span data-stu-id="bb58d-125">The value of `Monday` is `1` (one more than the value of `Sunday`); the value of `Tuesday` is `2`, and so on.</span></span>  
   
-     [!code-vb[VbEnumsTask n.&5;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
+     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
   
-### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Per dichiarare un'enumerazione come un tipo esplicito  
+### <a name="to-declare-an-enumeration-as-an-explicit-type"></a><span data-ttu-id="bb58d-126">Per dichiarare un'enumerazione come un tipo esplicito</span><span class="sxs-lookup"><span data-stu-id="bb58d-126">To declare an enumeration as an explicit type</span></span>  
   
--   Specificare il tipo di enumerazione utilizzando il `As` clausola, come illustrato nell'esempio seguente.  
+-   <span data-ttu-id="bb58d-127">Specificare il tipo di enumerazione utilizzando il `As` clausola, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bb58d-127">Specify the type of the enum by using the `As` clause, as shown in the following example.</span></span>  
   
-     [!code-vb[6 VbEnumsTask](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
+     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Qualifica di nomi ed enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [Procedura: fare riferimento a un membro di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [Procedura: scorrere un'enumerazione in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)   
- [Procedura: determinare la stringa associata a un valore di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
- [Quando utilizzare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)   
- [Cenni preliminari sulle costanti](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [Tipi di dati costanti e letterali](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)   
- [Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="bb58d-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bb58d-128">See Also</span></span>  
+ [<span data-ttu-id="bb58d-129">Qualifica di nomi ed enumerazioni</span><span class="sxs-lookup"><span data-stu-id="bb58d-129">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [<span data-ttu-id="bb58d-130">Procedura: Fare riferimento a un membro di enumerazione</span><span class="sxs-lookup"><span data-stu-id="bb58d-130">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [<span data-ttu-id="bb58d-131">Procedura: scorrere un'enumerazione in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bb58d-131">How to: Iterate Through An Enumeration in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)  
+ [<span data-ttu-id="bb58d-132">Procedura: Determinare la stringa associata a un valore di enumerazione</span><span class="sxs-lookup"><span data-stu-id="bb58d-132">How to: Determine the String Associated with an Enumeration Value</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
+ [<span data-ttu-id="bb58d-133">Quando usare un'enumerazione</span><span class="sxs-lookup"><span data-stu-id="bb58d-133">When to Use an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
+ [<span data-ttu-id="bb58d-134">Cenni preliminari sulle costanti</span><span class="sxs-lookup"><span data-stu-id="bb58d-134">Constants Overview</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [<span data-ttu-id="bb58d-135">Tipi di dati costanti e letterali</span><span class="sxs-lookup"><span data-stu-id="bb58d-135">Constant and Literal Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
+ [<span data-ttu-id="bb58d-136">Costanti ed enumerazioni</span><span class="sxs-lookup"><span data-stu-id="bb58d-136">Constants and Enumerations</span></span>](../../../../visual-basic/language-reference/constants-and-enumerations.md)

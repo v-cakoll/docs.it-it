@@ -1,43 +1,45 @@
 ---
-title: "Provider di servizi dati (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF Data Services, provider"
+title: Provider di servizi dati (WCF Data Services)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f794088f2494157e22b8551c6241786c7a73398
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Provider di servizi dati (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta più modelli di provider per l'esposizione dei dati come feed [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].  In questo argomento vengono fornite le informazioni che consentono di scegliere il provider di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] più adatto all'origine dati usata.  
+# <a name="data-services-providers-wcf-data-services"></a><span data-ttu-id="e8d49-102">Provider di servizi dati (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="e8d49-102">Data Services Providers (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="e8d49-103">supporta più modelli di provider per l'esposizione di dati come un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.</span><span class="sxs-lookup"><span data-stu-id="e8d49-103"> supports multiple provider models for exposing data as an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.</span></span> <span data-ttu-id="e8d49-104">In questo argomento vengono fornite le informazioni che consentono di scegliere il provider di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] più adatto all'origine dati usata.</span><span class="sxs-lookup"><span data-stu-id="e8d49-104">This topic provides information to enable you to select the best [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] provider for your data source.</span></span>  
   
-## Provider di origini dati  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta i provider riportati di seguito per la definizione del modello di dati di un servizio dati.  
+## <a name="data-source-providers"></a><span data-ttu-id="e8d49-105">Provider di origini dati</span><span class="sxs-lookup"><span data-stu-id="e8d49-105">Data Source Providers</span></span>  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="e8d49-106">supporta i provider seguenti per la definizione del modello di dati di un servizio dati.</span><span class="sxs-lookup"><span data-stu-id="e8d49-106"> supports the following providers for defining the data model of a data service.</span></span>  
   
-|Provider|Descrizione|  
+|<span data-ttu-id="e8d49-107">Provider</span><span class="sxs-lookup"><span data-stu-id="e8d49-107">Provider</span></span>|<span data-ttu-id="e8d49-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e8d49-108">Description</span></span>|  
 |--------------|-----------------|  
-|Provider di Entity Framework|Questo provider usa ADO.NET Entity Framework per consentire l'uso di dati relazionali con un servizio dati mediante la definizione di un modello di dati che esegue il mapping ai dati relazionali.  L'origine dati può essere SQL Server o qualsiasi altra origine dati con supporto di provider di terze parti per Entity Framework.  È necessario usare il provider di Entity Framework quando si dispone di un'origine dati relazionale, ad esempio un database di SQL Server.  Per altre informazioni, vedere [Provider di Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).|  
-|Provider di reflection|Questo provider usa la reflection per consentire la definizione di un modello di dati basato su classi di dati esistenti che possono essere esposte come istanze dell'interfaccia <xref:System.Linq.IQueryable%601>.  Gli aggiornamenti vengono abilitati mediante l'implementazione dell'interfaccia <xref:System.Data.Services.IUpdatable>.  È necessario usare questo provider quando si dispone di classi di dati statiche definite in fase di esecuzione, ad esempio quelle generate da LINQ to SQL o definite da un set di dati tipizzato.  Per altre informazioni, vedere [Provider di reflection](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).|  
-|Provider di servizi dati personalizzati|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include un set di provider che consentono di definire in modo dinamico un modello di dati basato su tipi di dati ad associazione tardiva.  È necessario implementare queste interfacce quando i dati esposti non sono noti al momento della progettazione dell'applicazione o quando il provider di reflection o il provider di Entity Framework non è sufficiente.  Per altre informazioni, vedere [Provider di servizi dati personalizzati](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
+|<span data-ttu-id="e8d49-109">Provider di Entity Framework</span><span class="sxs-lookup"><span data-stu-id="e8d49-109">Entity Framework provider</span></span>|<span data-ttu-id="e8d49-110">Questo provider usa ADO.NET Entity Framework per consentire l'uso di dati relazionali con un servizio dati mediante la definizione di un modello di dati che esegue il mapping ai dati relazionali.</span><span class="sxs-lookup"><span data-stu-id="e8d49-110">This provider uses the ADO.NET Entity Framework to enable you to use relational data with a data service by defining a data model that maps to relational data.</span></span> <span data-ttu-id="e8d49-111">L'origine dati può essere SQL Server o qualsiasi altra origine dati con supporto di provider di terze parti per Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="e8d49-111">Your data source can be SQL Server or any other data source with third-party provider support for the Entity Framework.</span></span> <span data-ttu-id="e8d49-112">È necessario usare il provider di Entity Framework quando si dispone di un'origine dati relazionale, ad esempio un database di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="e8d49-112">You should use the Entity Framework provider when you have a relational data source, such as a SQL Server database.</span></span> <span data-ttu-id="e8d49-113">Per ulteriori informazioni, vedere [Provider di Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="e8d49-113">For more information, see [Entity Framework Provider](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).</span></span>|  
+|<span data-ttu-id="e8d49-114">Provider di reflection</span><span class="sxs-lookup"><span data-stu-id="e8d49-114">Reflection provider</span></span>|<span data-ttu-id="e8d49-115">Questo provider usa la reflection per consentire la definizione di un modello di dati basato su classi di dati esistenti che possono essere esposte come istanze dell'interfaccia <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="e8d49-115">This provider uses reflection to enable you to define a data model based on existing data classes that can be exposed as instances of the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="e8d49-116">Gli aggiornamenti vengono abilitati mediante l'implementazione dell'interfaccia <xref:System.Data.Services.IUpdatable>.</span><span class="sxs-lookup"><span data-stu-id="e8d49-116">Updates are enabled by implementing the <xref:System.Data.Services.IUpdatable> interface.</span></span> <span data-ttu-id="e8d49-117">È necessario usare questo provider quando si dispone di classi di dati statiche definite in fase di esecuzione, ad esempio quelle generate da LINQ to SQL o definite da un set di dati tipizzato.</span><span class="sxs-lookup"><span data-stu-id="e8d49-117">You should use this provider when you have static data classes that are defined at runtime, such as those generated by LINQ to SQL or defined by a typed DataSet.</span></span> <span data-ttu-id="e8d49-118">Per ulteriori informazioni, vedere [Provider di Reflection](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="e8d49-118">For more information, see [Reflection Provider](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).</span></span>|  
+|<span data-ttu-id="e8d49-119">Provider di servizi dati personalizzati</span><span class="sxs-lookup"><span data-stu-id="e8d49-119">Custom Data Service Providers</span></span>|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="e8d49-120"> include un set di provider che consentono di definire in modo dinamico un modello di dati basato su tipi di dati ad associazione tardiva.</span><span class="sxs-lookup"><span data-stu-id="e8d49-120"> includes a set of providers that enable you to dynamically define a data model based on late-bound data types.</span></span> <span data-ttu-id="e8d49-121">È necessario implementare queste interfacce quando i dati esposti non sono noti al momento della progettazione dell'applicazione o quando il provider di reflection o il provider di Entity Framework non è sufficiente.</span><span class="sxs-lookup"><span data-stu-id="e8d49-121">You should implement these interfaces when the data being exposed is not known when the application is being designed or when the Entity Framework or reflection providers are not sufficient.</span></span> <span data-ttu-id="e8d49-122">Per ulteriori informazioni, vedere [provider di servizi dati personalizzati](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="e8d49-122">For more information, see [Custom Data Service Providers](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).</span></span>|  
   
-## Altri provider di servizi dati  
- In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è inoltre disponibile il provider del servizio dati seguente che migliora le prestazioni di un'origine dati definita usando uno degli altri provider.  
+## <a name="other-data-service-providers"></a><span data-ttu-id="e8d49-123">Altri provider di servizi dati</span><span class="sxs-lookup"><span data-stu-id="e8d49-123">Other Data Service Providers</span></span>  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="e8d49-124">è il provider del servizio dati seguente che migliora le prestazioni di un'origine dati definita usando uno degli altri provider.</span><span class="sxs-lookup"><span data-stu-id="e8d49-124"> has the following additional data service provider that enhances the performance of a data source defined by using one of the other providers.</span></span>  
   
-|Provider|Descrizione|  
+|<span data-ttu-id="e8d49-125">Provider</span><span class="sxs-lookup"><span data-stu-id="e8d49-125">Provider</span></span>|<span data-ttu-id="e8d49-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e8d49-126">Description</span></span>|  
 |--------------|-----------------|  
-|Provider di flusso|Questo provider consente di esporre tipi di dati per oggetti binari di grandi dimensioni tramite [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  Un provider di flusso viene creato mediante l'implementazione dell'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  È possibile implementare questo provider insieme a qualsiasi provider dell'origine dati.  Per altre informazioni, vedere [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).|  
+|<span data-ttu-id="e8d49-127">Provider di flusso</span><span class="sxs-lookup"><span data-stu-id="e8d49-127">Streaming provider</span></span>|<span data-ttu-id="e8d49-128">Questo provider consente di esporre tipi di dati per oggetti binari di grandi dimensioni tramite [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e8d49-128">This provider enables you to expose binary large object data types by using [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span> <span data-ttu-id="e8d49-129">Un provider di flusso viene creato mediante l'implementazione dell'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.</span><span class="sxs-lookup"><span data-stu-id="e8d49-129">A streaming provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interface.</span></span> <span data-ttu-id="e8d49-130">È possibile implementare questo provider insieme a qualsiasi provider dell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="e8d49-130">This provider can be implemented together with any data source provider.</span></span> <span data-ttu-id="e8d49-131">Per ulteriori informazioni, vedere [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="e8d49-131">For more information, see [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span></span>|  
   
-## Vedere anche  
- [Definizione di WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)   
- [Configurazione del servizio dati](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)   
- [Hosting del servizio dati](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="e8d49-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e8d49-132">See Also</span></span>  
+ [<span data-ttu-id="e8d49-133">Definizione di WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="e8d49-133">Defining WCF Data Services</span></span>](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [<span data-ttu-id="e8d49-134">Configurazione del servizio dati</span><span class="sxs-lookup"><span data-stu-id="e8d49-134">Configuring the Data Service</span></span>](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  
+ [<span data-ttu-id="e8d49-135">Hosting del servizio dati</span><span class="sxs-lookup"><span data-stu-id="e8d49-135">Hosting the Data Service</span></span>](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

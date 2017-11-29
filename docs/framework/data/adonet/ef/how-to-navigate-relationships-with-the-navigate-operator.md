@@ -1,45 +1,45 @@
 ---
-title: "Procedura: navigare nelle relazioni con l&#39;operatore Navigate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
-  - "jsharp"
+title: 'Procedura: esplorare relazioni con l''operatore NAVIGATE'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 38b2a6630d967519f3c907c60944d943c6b9b720
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: navigare nelle relazioni con l&#39;operatore Navigate
-In questo argomento viene illustrato come eseguire un comando su un modello concettuale usando un oggetto <xref:System.Data.EntityClient.EntityCommand> e viene mostrato come recuperare i risultati di <xref:System.Data.Metadata.Edm.RefType> usando un oggetto <xref:System.Data.EntityClient.EntityDataReader>.  
+# <a name="how-to-navigate-relationships-with-the-navigate-operator"></a><span data-ttu-id="90e57-102">Procedura: esplorare relazioni con l'operatore NAVIGATE</span><span class="sxs-lookup"><span data-stu-id="90e57-102">How to: Navigate Relationships with the Navigate Operator</span></span>
+<span data-ttu-id="90e57-103">In questo argomento viene illustrato come eseguire un comando su un modello concettuale usando un oggetto <xref:System.Data.EntityClient.EntityCommand> e viene mostrato come recuperare i risultati di <xref:System.Data.Metadata.Edm.RefType> usando un oggetto <xref:System.Data.EntityClient.EntityDataReader>.</span><span class="sxs-lookup"><span data-stu-id="90e57-103">This topic shows how to execute a command against a conceptual model by using an <xref:System.Data.EntityClient.EntityCommand> object, and how to retrieve the <xref:System.Data.Metadata.Edm.RefType> results by using an <xref:System.Data.EntityClient.EntityDataReader>.</span></span>  
   
-### Per eseguire il codice in questo esempio  
+### <a name="to-run-the-code-in-this-example"></a><span data-ttu-id="90e57-104">Per eseguire il codice in questo esempio</span><span class="sxs-lookup"><span data-stu-id="90e57-104">To run the code in this example</span></span>  
   
-1.  Aggiungere [AdventureWorks Sales Model](http://msdn.microsoft.com/it-it/f16cd988-673f-4376-b034-129ca93c7832) al progetto e configurare il progetto per l'uso di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  Per altre informazioni, vedere [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/it-it/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+1.  <span data-ttu-id="90e57-105">Aggiungere il [modello Sales di AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) al progetto e configurare il progetto utilizzerà il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="90e57-105">Add the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) to your project and configure your project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="90e57-106">Per ulteriori informazioni, vedere [procedura: utilizzare la procedura guidata Entity Data Model](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d).</span><span class="sxs-lookup"><span data-stu-id="90e57-106">For more information, see [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d).</span></span>  
   
-2.  Nella tabella codici per l'applicazione aggiungere le istruzioni `using` seguenti \(`Imports` in Visual Basic\):  
+2.  <span data-ttu-id="90e57-107">Nella tabella codici per l'applicazione aggiungere le istruzioni `using` seguenti (`Imports` in Visual Basic):</span><span class="sxs-lookup"><span data-stu-id="90e57-107">In the code page for your application, add the following `using` statements (`Imports` in Visual Basic):</span></span>  
   
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come navigare nelle relazioni in [!INCLUDE[esql](../../../../../includes/esql-md.md)] utilizzando l'operatore [NAVIGATE](../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md). L'operatore `Navigate` accetta i parametri seguenti: un'istanza di un'entità, il tipo di relazione, l'entità finale della relazione e l'inizio della relazione.  Facoltativamente, è possibile passare solo un'istanza di un'entità e il tipo di relazione all'operatore `Navigate`.  
+## <a name="example"></a><span data-ttu-id="90e57-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="90e57-108">Example</span></span>  
+ <span data-ttu-id="90e57-109">Nell'esempio seguente viene illustrato come spostarsi tra relazioni in [!INCLUDE[esql](../../../../../includes/esql-md.md)] utilizzando il [NAVIGA](../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md) operatore.</span><span class="sxs-lookup"><span data-stu-id="90e57-109">The following example shows how to navigate relationships in [!INCLUDE[esql](../../../../../includes/esql-md.md)] by using the [NAVIGATE](../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md) operator.</span></span> <span data-ttu-id="90e57-110">Il `Navigate` operatore accetta i parametri seguenti: un'istanza di un'entità, il tipo di relazione, la fine della relazione e l'inizio della relazione.</span><span class="sxs-lookup"><span data-stu-id="90e57-110">The `Navigate` operator takes the following parameters: an instance of an entity, the relationship type, the end of the relationship, and the beginning of the relationship.</span></span> <span data-ttu-id="90e57-111">Facoltativamente, è possibile passare solo un'istanza di un'entità e il tipo di relazione per il `Navigate` operatore.</span><span class="sxs-lookup"><span data-stu-id="90e57-111">Optionally, you can pass only an instance of an entity and the relationship type to the `Navigate` operator.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#navigatewithnavoperatorwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#navigatewithnavoperatorwithentitycommand)]  
   
-## Vedere anche  
- [Provider EntityClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)   
- [Linguaggio Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+## <a name="see-also"></a><span data-ttu-id="90e57-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="90e57-112">See Also</span></span>  
+ [<span data-ttu-id="90e57-113">Provider EntityClient per Entity Framework</span><span class="sxs-lookup"><span data-stu-id="90e57-113">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
+ [<span data-ttu-id="90e57-114">Linguaggio Entity SQL</span><span class="sxs-lookup"><span data-stu-id="90e57-114">Entity SQL Language</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

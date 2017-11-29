@@ -1,62 +1,64 @@
 ---
-title: "Utilit&#224; di configurazione WS-AtomicTransaction (wsatConfig.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c84a0ddd05de3a28a6c38bc63151c8cec35bdd2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Utilit&#224; di configurazione WS-AtomicTransaction (wsatConfig.exe)
-L'utilità di configurazione WS\-AtomicTransaction viene utilizzata per configurare le impostazioni di base per il supporto WS\-AtomicTransaction.  
+# <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a><span data-ttu-id="b2bf7-102">Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="b2bf7-102">WS-AtomicTransaction Configuration Utility (wsatConfig.exe)</span></span>
+<span data-ttu-id="b2bf7-103">L'utilità di configurazione WS-AtomicTransaction viene utilizzata per configurare le impostazioni di base per il supporto WS-AtomicTransaction.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-103">The WS-AtomicTransaction Configuration Utility is used to configure basic WS-AtomicTransaction support settings.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="b2bf7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b2bf7-104">Syntax</span></span>  
   
 ```  
-  
 wsatConfig [Options]  
 ```  
   
-## Note  
- Questo strumento da riga di comando può essere utilizzato per configurare soltanto impostazioni WS\-AT di base in un computer locale.Se è necessario configurare impostazioni su computer locali e remoti, è necessario utilizzare lo snap\-in MMC come descritto in [Configurazione del supporto transazioni WS\-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+## <a name="remarks"></a><span data-ttu-id="b2bf7-105">Note</span><span class="sxs-lookup"><span data-stu-id="b2bf7-105">Remarks</span></span>  
+ <span data-ttu-id="b2bf7-106">Questo strumento da riga di comando può essere utilizzato per configurare soltanto impostazioni WS-AT di base in un computer locale.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-106">This command line tool can be used to configure basic WS-AT settings in a local machine only.</span></span> <span data-ttu-id="b2bf7-107">Se è necessario configurare le impostazioni nei computer locali e remoti, utilizzare lo snap-in MMC come descritto in [configurazione del supporto transazioni WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).</span><span class="sxs-lookup"><span data-stu-id="b2bf7-107">If you have to configure settings on both local and remote machines, you should use the MMC snap-in as described in [Configuring WS-Atomic Transaction Support](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).</span></span>  
   
- Lo strumento da riga di comando si trova specificamente nel percorso di installazione di Windows SDK.  
+ <span data-ttu-id="b2bf7-108">Lo strumento da riga di comando si trova specificamente nel percorso di installazione di Windows SDK. </span><span class="sxs-lookup"><span data-stu-id="b2bf7-108">The command line tool can be found in the Windows SDK installation location, specifically,</span></span>  
   
- %SystemRoot%\\Microsoft.Net\\Framework\\v3.0\\Windows Communication Foundation\\wsatConfig.exe  
+ <span data-ttu-id="b2bf7-109">%SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe</span><span class="sxs-lookup"><span data-stu-id="b2bf7-109">%SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe</span></span>  
   
- Se si sta eseguendo [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], è necessario scaricare un aggiornamento prima di eseguire WsatConfig.exe.Per ulteriori informazioni su questo aggiornamento, vedere [Aggiornamento per Windows Communication Foundation 2007 \(KB912817\)](http://go.microsoft.com/fwlink/?LinkId=95340) e [Disponibilità di Windows XP COM\+ Hotfix Rollup Package 13](http://go.microsoft.com/fwlink/?LinkId=95341).  
+ <span data-ttu-id="b2bf7-110">Se si sta eseguendo [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], è necessario scaricare un aggiornamento prima di eseguire WsatConfig.exe.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-110">If you are running [!INCLUDE[wxp](../../../includes/wxp-md.md)] or [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], you must download an update before running WsatConfig.exe.</span></span> <span data-ttu-id="b2bf7-111">Per ulteriori informazioni su questo aggiornamento, vedere [aggiornamento per Commerce Server 2007 (KB912817)](http://go.microsoft.com/fwlink/?LinkId=95340) e [disponibilità di Windows XP COM+ Hotfix Rollup pacchetto 13](http://go.microsoft.com/fwlink/?LinkId=95341).</span><span class="sxs-lookup"><span data-stu-id="b2bf7-111">For more information about this update, see [Update for Commerce Server 2007 (KB912817)](http://go.microsoft.com/fwlink/?LinkId=95340) and [Availability of Windows XP COM+ Hotfix Rollup Package 13](http://go.microsoft.com/fwlink/?LinkId=95341).</span></span>  
   
- Nella tabella riportata di seguito vengono illustrate le opzioni che possono essere utilizzate con l’utilità di configurazione WS\-AtomicTransaction \(wsatConfig.exe\).  
+ <span data-ttu-id="b2bf7-112">Nella tabella riportata di seguito vengono illustrate le opzioni che possono essere utilizzate con l’utilità di configurazione WS-AtomicTransaction (wsatConfig.exe).</span><span class="sxs-lookup"><span data-stu-id="b2bf7-112">The following table shows the options that can be used with WS-AtomicTransaction Configuration Utility (wsatConfig.exe).</span></span>  
   
 > [!NOTE]
->  Impostando un certificato SSL per una porta selezionata, il certificato SSL originale associato a quella porta, se presente, viene sovrascritto.  
+>  <span data-ttu-id="b2bf7-113">Impostando un certificato SSL per una porta selezionata, il certificato SSL originale associato a quella porta, se presente, viene sovrascritto.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-113">When you set an SSL certificate for a selected port, you overwrite the original SSL certificate associated with that port if one exists.</span></span>  
   
-|Opzioni|Descrizione|  
+|<span data-ttu-id="b2bf7-114">Opzioni</span><span class="sxs-lookup"><span data-stu-id="b2bf7-114">Options</span></span>|<span data-ttu-id="b2bf7-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2bf7-115">Description</span></span>|  
 |-------------|-----------------|  
-|\-account:\<account,\>|Specifica un elenco con valori delimitati da virgole di account che possono partecipare in WS\-AtomicTransaction.La validità di questi account non viene controllata.|  
-|\-accountsCerts:\<thumb\>&#124;"Issuer\\SubjectName",\>|Specifica un elenco con valori delimitati da virgole di certificati che possono partecipare in WS\-AtomicTransaction.I certificati sono indicati tramite identificazione digitale o dalla coppia Issuer\\SubjectName.Utilizzare {Vuoto} per il nome del soggetto se è vuoto.|  
-|\-endpointCert:\<machine&#124;\<thumb\>&#124;"Issuer\\SubjectName"\>|Utilizza il certificato del computer o un altro certificato dell'endpoint locale specificato tramite identificazione digitale o dalla coppia Issuer\\SubjectName.Utilizza {Vuoto} per il nome del soggetto se è vuoto.|  
-|\-maxTimeout:\<sec\>|Specifica il timeout massimo in secondi.I valori validi sono compresi tra 0 e 3600.|  
-|\-rete:\<enable&#124;disable\>|Abilita o disabilita il supporto di rete WS\-AtomicTransaction.|  
-|\-porta:\<portNum\>|Imposta la porta HTTPS per WS\-AtomicTransaction.<br /><br /> Se prima di eseguire questo strumento è già stato abilitato un firewall, la porta viene automaticamente registrata nell'elenco delle eccezioni.Se il firewall è stato disabilitato prima di eseguire questo strumento, non avviene nessun’altra configurazione riguardante il firewall.<br /><br /> Se si abilita il firewall dopo aver configurato WS\-AT, è necessario eseguire di nuovo questo strumento e fornire il numero della porta che utilizza questo parametro.Se si disabilita il firewall dopo la configurazione, WS\-AT rimane in funzione senza input aggiuntivo.|  
-|\-timeout:\<sec\>|Specifica il timeout predefinito in secondi.I valori validi sono compresi tra 1 e 3600.|  
-|\-traceActivity:\<enable&#124;disable\>|Abilita o disabilita la traccia degli eventi di attività.|  
-|\-traceLevel:\<Off&#124;Error&#124;Critical&#124;Warning&#124;Information&#124; Verbose&#124;All\>}|Specifica il livello di traccia.|  
-|\-tracePII:\<enable&#124;disable\>|Abilita o disabilita la traccia delle informazioni personali.|  
-|\-traceProp:\<enable&#124;disable\>|Abilita o disabilita la traccia degli eventi di propagazione.|  
-|\-riavvia|Riavvia MSDTC per attivare immediatamente le modifiche.Se tale funzionalità non è specificata, le modifiche hanno effetto quando MSDTC viene riavviato.|  
-|\-mostra|Visualizza le impostazioni del protocollo WS\-AtomicTransaction correnti.|  
-|\-virtualServer:\<virtualServer\>|Specifica il nome del cluster della risorsa DTC.|  
+|<span data-ttu-id="b2bf7-116">-account:\<account ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-116">-accounts:\<account,></span></span>|<span data-ttu-id="b2bf7-117">Specifica un elenco con valori delimitati da virgole di account che possono partecipare in WS-AtomicTransaction.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-117">Specifies a comma-separated list of accounts that can participate in WS-AtomicTransaction.</span></span> <span data-ttu-id="b2bf7-118">La validità di questi account non viene controllata.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-118">The validity of these accounts is not checked.</span></span>|  
+|<span data-ttu-id="b2bf7-119">-accountsCerts:\<thumb > &#124; " Issuer\SubjectName."></span><span class="sxs-lookup"><span data-stu-id="b2bf7-119">-accountsCerts:\<thumb>&#124;"Issuer\SubjectName",></span></span>|<span data-ttu-id="b2bf7-120">Specifica un elenco con valori delimitati da virgole di certificati che possono partecipare in WS-AtomicTransaction.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-120">Specifies a comma-separated list of certificates that can participate in WS-AtomicTransaction.</span></span> <span data-ttu-id="b2bf7-121">I certificati sono indicati tramite identificazione digitale o dalla coppia Issuer\SubjectName.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-121">The certificates are indicated by thumbprint or by the Issuer\SubjectName pair.</span></span> <span data-ttu-id="b2bf7-122">Utilizzare {Vuoto} per il nome del soggetto se è vuoto.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-122">Use {EMPTY} for subject name if it is empty.</span></span>|  
+|<span data-ttu-id="b2bf7-123">-endpointCert: < computer &#124; \<thumb > &#124; " Issuer\SubjectName."></span><span class="sxs-lookup"><span data-stu-id="b2bf7-123">-endpointCert:<machine&#124;\<thumb>&#124;"Issuer\SubjectName"></span></span>|<span data-ttu-id="b2bf7-124">Utilizza il certificato del computer o un altro certificato dell'endpoint locale specificato tramite identificazione digitale o dalla coppia Issuer\SubjectName.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-124">Uses the machine certificate or another local endpoint certificate specified by thumbprint or Issuer\SubjectName pair.</span></span> <span data-ttu-id="b2bf7-125">Utilizza {Vuoto} per il nome del soggetto se è vuoto.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-125">Uses {EMPTY} for the subject name if it is empty.</span></span>|  
+|<span data-ttu-id="b2bf7-126">-maxTimeout:\<sec ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-126">-maxTimeout:\<sec></span></span>|<span data-ttu-id="b2bf7-127">Specifica il timeout massimo in secondi.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-127">Specifies the maximum timeout in seconds.</span></span> <span data-ttu-id="b2bf7-128">I valori validi sono compresi tra 0 e 3600.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-128">Valid values are from 0 to 3600.</span></span>|  
+|<span data-ttu-id="b2bf7-129">-rete:\<Abilita &#124; Disabilita ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-129">-network:\<enable&#124;disable></span></span>|<span data-ttu-id="b2bf7-130">Abilita o disabilita il supporto di rete WS-AtomicTransaction.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-130">Enables or disables the WS-AtomicTransaction network support.</span></span>|  
+|<span data-ttu-id="b2bf7-131">-porta:\<portNum ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-131">-port:\<portNum></span></span>|<span data-ttu-id="b2bf7-132">Imposta la porta HTTPS per WS-AtomicTransaction.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-132">Sets the HTTPS port for WS-AtomicTransaction.</span></span><br /><br /> <span data-ttu-id="b2bf7-133">Se prima di eseguire questo strumento è già stato abilitato un firewall, la porta viene automaticamente registrata nell'elenco delle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-133">If you have already enabled firewall before running this tool, the port is automatically registered in the exception list.</span></span> <span data-ttu-id="b2bf7-134">Se il firewall è stato disabilitato prima di eseguire questo strumento, non avviene nessun’altra configurazione riguardante il firewall.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-134">If firewall is disabled before running this tool, nothing additional is configured regarding the firewall.</span></span><br /><br /> <span data-ttu-id="b2bf7-135">Se si abilita il firewall dopo aver configurato WS-AT, è necessario eseguire di nuovo questo strumento e fornire il numero della porta che utilizza questo parametro.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-135">If you enable firewall after configuring WS-AT, you have to run this tool again and supply the port number using this parameter.</span></span> <span data-ttu-id="b2bf7-136">Se si disabilita il firewall dopo la configurazione, WS-AT rimane in funzione senza input aggiuntivo.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-136">If you disable firewall after configuring, WS-AT continues to work without additional input.</span></span>|  
+|<span data-ttu-id="b2bf7-137">-timeout:\<sec ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-137">-timeout:\<sec></span></span>|<span data-ttu-id="b2bf7-138">Specifica il timeout predefinito in secondi.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-138">Specifies the default timeout in seconds.</span></span> <span data-ttu-id="b2bf7-139">I valori validi sono compresi tra 1 e 3600.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-139">Valid values are from 1 to 3600.</span></span>|  
+|<span data-ttu-id="b2bf7-140">-traceActivity:\<Abilita &#124; Disabilita ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-140">-traceActivity:\<enable&#124;disable></span></span>|<span data-ttu-id="b2bf7-141">Abilita o disabilita la traccia degli eventi di attività.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-141">Enables or disables the tracing of activity events.</span></span>|  
+|<span data-ttu-id="b2bf7-142">-traceLevel:\<Off &#124; Errore &#124; Critico &#124; Avviso &#124; informazioni &#124; Verbose &#124; Tutti i >}</span><span class="sxs-lookup"><span data-stu-id="b2bf7-142">-traceLevel:\<Off&#124;Error&#124;Critical&#124;Warning&#124;Information&#124; Verbose&#124;All>}</span></span>|<span data-ttu-id="b2bf7-143">Specifica il livello di traccia.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-143">Specifies the trace level.</span></span>|  
+|<span data-ttu-id="b2bf7-144">-tracePII:\<Abilita &#124; Disabilita ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-144">-tracePII:\<enable&#124;disable></span></span>|<span data-ttu-id="b2bf7-145">Abilita o disabilita la traccia delle informazioni personali.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-145">Enables or disables the tracing of personally identifiable information.</span></span>|  
+|<span data-ttu-id="b2bf7-146">-traceProp:\<Abilita &#124; Disabilita ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-146">-traceProp:\<enable&#124;disable></span></span>|<span data-ttu-id="b2bf7-147">Abilita o disabilita la traccia degli eventi di propagazione.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-147">Enables or disables the tracing of propagation events.</span></span>|  
+|<span data-ttu-id="b2bf7-148">-riavvia</span><span class="sxs-lookup"><span data-stu-id="b2bf7-148">-restart</span></span>|<span data-ttu-id="b2bf7-149">Riavvia MSDTC per attivare immediatamente le modifiche.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-149">Restarts MSDTC to activate changes immediately.</span></span> <span data-ttu-id="b2bf7-150">Se tale funzionalità non è specificata, le modifiche hanno effetto quando MSDTC viene riavviato.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-150">If this is not specified, the changes take effect when MSDTC is restarted.</span></span>|  
+|<span data-ttu-id="b2bf7-151">-mostra</span><span class="sxs-lookup"><span data-stu-id="b2bf7-151">-show</span></span>|<span data-ttu-id="b2bf7-152">Visualizza le impostazioni del protocollo WS-AtomicTransaction correnti.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-152">Displays the current WS-AtomicTransaction protocol settings.</span></span>|  
+|<span data-ttu-id="b2bf7-153">-virtualServer:\<virtualServer ></span><span class="sxs-lookup"><span data-stu-id="b2bf7-153">-virtualServer:\<virtualServer></span></span>|<span data-ttu-id="b2bf7-154">Specifica il nome del cluster della risorsa DTC.</span><span class="sxs-lookup"><span data-stu-id="b2bf7-154">Specifies the DTC resource cluster name.</span></span>|  
   
-## Vedere anche  
- [Uso di WS\-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)   
- [Configurazione del supporto transazioni WS\-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+## <a name="see-also"></a><span data-ttu-id="b2bf7-155">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b2bf7-155">See Also</span></span>  
+ [<span data-ttu-id="b2bf7-156">Utilizzando WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="b2bf7-156">Using WS-AtomicTransaction</span></span>](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
+ [<span data-ttu-id="b2bf7-157">Configurazione del supporto WS-Atomic Transaction</span><span class="sxs-lookup"><span data-stu-id="b2bf7-157">Configuring WS-Atomic Transaction Support</span></span>](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

@@ -1,36 +1,39 @@
 ---
-title: "Utilizzo di oggetti Command per la modifica dei dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizzo di comandi per modificare i dati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 853f8e4e75df3fffad4a2d5ecd4f7ae21b5d674f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizzo di oggetti Command per la modifica dei dati
-Con un provider di dati .NET Framework è possibile eseguire stored procedure o istruzioni DDL \(Data Definition Language\), ad esempio CREATE TABLE e ALTER COLUMN, per modificare lo schema di un database o di un catalogo.  Poiché, diversamente dalle query, questi comandi non restituiscono righe, l'oggetto **Command** fornisce un metodo **ExecuteNonQuery** per l'elaborazione.  
+# <a name="using-commands-to-modify-data"></a><span data-ttu-id="16a6e-102">Utilizzo di comandi per modificare i dati</span><span class="sxs-lookup"><span data-stu-id="16a6e-102">Using Commands to Modify Data</span></span>
+<span data-ttu-id="16a6e-103">Con un provider di dati .NET Framework è possibile eseguire stored procedure o istruzioni DDL (Data Definition Language), ad esempio CREATE TABLE e ALTER COLUMN, per modificare lo schema di un database o di un catalogo.</span><span class="sxs-lookup"><span data-stu-id="16a6e-103">Using a .NET Framework data provider, you can execute stored procedures or data definition language statements (for example, CREATE TABLE and ALTER COLUMN) to perform schema manipulation on a database or catalog.</span></span> <span data-ttu-id="16a6e-104">Questi comandi non restituiscono righe come una query, pertanto la **comando** oggetto fornisce un **ExecuteNonQuery** per elaborarli.</span><span class="sxs-lookup"><span data-stu-id="16a6e-104">These commands do not return rows as a query would, so the **Command** object provides an **ExecuteNonQuery** to process them.</span></span>  
   
- Oltre a usare **ExecuteNonQuery** per modificare lo schema, è possibile usare questo metodo per elaborare istruzioni SQL che modificano i dati ma non restituiscono righe, ad esempio INSERT, UPDATE e DELETE.  
+ <span data-ttu-id="16a6e-105">Oltre a utilizzare **ExecuteNonQuery** per modificare lo schema, è inoltre possibile utilizzare questo metodo per elaborare le istruzioni SQL che modificano i dati ma che non restituiscono righe, ad esempio INSERT, UPDATE e DELETE.</span><span class="sxs-lookup"><span data-stu-id="16a6e-105">In addition to using **ExecuteNonQuery** to modify schema, you can also use this method to process SQL statements that modify data but that do not return rows, such as INSERT, UPDATE, and DELETE.</span></span>  
   
- Anche se il metodo **ExecuteNonQuery** non restituisce righe, è possibile passare e restituire parametri di input e di output e valori restituiti mediante la raccolta **Parameters** dell'oggetto **Command**.  
+ <span data-ttu-id="16a6e-106">Anche se le righe non vengono restituite dal **ExecuteNonQuery** parametri di metodo di input e output e valori restituiti possono essere passati e restituiti tramite il **parametri** insieme del **comando**  oggetto.</span><span class="sxs-lookup"><span data-stu-id="16a6e-106">Although rows are not returned by the **ExecuteNonQuery** method, input and output parameters and return values can be passed and returned via the **Parameters** collection of the **Command** object.</span></span>  
   
-## In questa sezione  
- [Aggiornamento dei dati in un'origine dati](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
- Viene descritto come eseguire i comandi o le stored procedure che modificano i dati in un database.  
+## <a name="in-this-section"></a><span data-ttu-id="16a6e-107">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="16a6e-107">In This Section</span></span>  
+ [<span data-ttu-id="16a6e-108">L'aggiornamento dei dati in un'origine dati</span><span class="sxs-lookup"><span data-stu-id="16a6e-108">Updating Data in a Data Source</span></span>](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
+ <span data-ttu-id="16a6e-109">Viene descritto come eseguire i comandi o le stored procedure che modificano i dati in un database.</span><span class="sxs-lookup"><span data-stu-id="16a6e-109">Describes how to execute commands or stored procedures that modify data in a database.</span></span>  
   
- [Esecuzione di operazioni nel catalogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
- Viene descritto come eseguire i comandi per la modifica dello schema di database.  
+ [<span data-ttu-id="16a6e-110">Esecuzione di operazioni di catalogo</span><span class="sxs-lookup"><span data-stu-id="16a6e-110">Performing Catalog Operations</span></span>](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
+ <span data-ttu-id="16a6e-111">Viene descritto come eseguire i comandi per la modifica dello schema di database.</span><span class="sxs-lookup"><span data-stu-id="16a6e-111">Describes how to execute commands that modify database schema.</span></span>  
   
-## Vedere anche  
- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="16a6e-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16a6e-112">See Also</span></span>  
+ [<span data-ttu-id="16a6e-113">Recupero e modifica di dati in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="16a6e-113">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="16a6e-114">Comandi e parametri</span><span class="sxs-lookup"><span data-stu-id="16a6e-114">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="16a6e-115">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="16a6e-115">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

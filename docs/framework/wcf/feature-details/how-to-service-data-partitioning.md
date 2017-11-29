@@ -1,34 +1,37 @@
 ---
-title: "Procedura: partizionamento dei dati del servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: partizionamento dei dati del servizio'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-caps.latest.revision: 3
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 7104aa2fee49a21dab7fcc8392a9d4bb291203fe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: partizionamento dei dati del servizio
-In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione.Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico.Può essere ad esempio necessario elaborare messaggi provenienti da clienti di valore elevato o "Gold" a una priorità più alta rispetto ai messaggi provenienti da un cliente standard.  
+# <a name="how-to-service-data-partitioning"></a><span data-ttu-id="ac553-102">Procedura: partizionamento dei dati del servizio</span><span class="sxs-lookup"><span data-stu-id="ac553-102">How To: Service Data Partitioning</span></span>
+<span data-ttu-id="ac553-103">In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione.</span><span class="sxs-lookup"><span data-stu-id="ac553-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="ac553-104">Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico.</span><span class="sxs-lookup"><span data-stu-id="ac553-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="ac553-105">I messaggi da un valore elevato o ai clienti di "Oro", ad esempio, potrebbe essere necessario per l'elaborazione una priorità più alta rispetto ai messaggi da un cliente standard.</span><span class="sxs-lookup"><span data-stu-id="ac553-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  
   
- In questo esempio i messaggi vengono indirizzati a una o due istanze del servizio regularCalc.Entrambe le istanze del servizio sono identiche. Il servizio rappresentato dall'endpoint di calculator1 elabora tuttavia i messaggi ricevuti dai clienti di valore elevato, mentre l'endpoint di calculator2 elabora i messaggi ricevuti dagli altri clienti  
+ <span data-ttu-id="ac553-106">In questo esempio i messaggi vengono indirizzati a una o due istanze del servizio regularCalc.</span><span class="sxs-lookup"><span data-stu-id="ac553-106">In this example, messages are routed to one of two instances of the regularCalc service.</span></span> <span data-ttu-id="ac553-107">Entrambe le istanze del servizio sono identiche. Il servizio rappresentato dall'endpoint di calculator1 elabora tuttavia i messaggi ricevuti dai clienti di valore elevato, mentre l'endpoint di calculator2 elabora i messaggi ricevuti dagli altri clienti</span><span class="sxs-lookup"><span data-stu-id="ac553-107">Both instances of the service are identical; however the service represented by the calculator1 endpoint processes messages received from high value customers, the calculator 2 endpoint processes messages from other customers</span></span>  
   
- Il messaggio inviato dal client non dispone di dati univoci che possono essere utilizzati per identificare l'istanza del servizio a cui indirizzare il messaggio.Per consentire a ogni client di indirizzare dati a un servizio di destinazione specifico, verranno implementati due endpoint servizio che verranno utilizzati per ricevere messaggi.  
+ <span data-ttu-id="ac553-108">Il messaggio inviato dal client non dispone di dati univoci che possono essere utilizzati per identificare l'istanza del servizio a cui indirizzare il messaggio.</span><span class="sxs-lookup"><span data-stu-id="ac553-108">The message sent from the client does not have any unique data that can be used to identify which service instance the message should be routed to.</span></span> <span data-ttu-id="ac553-109">Per consentire a ogni client di indirizzare dati a un servizio di destinazione specifico, verranno implementati due endpoint servizio che verranno utilizzati per ricevere messaggi.</span><span class="sxs-lookup"><span data-stu-id="ac553-109">To allow each client to route data to a specific destination service we will implement two service endpoints that will be used to receive messages.</span></span>  
   
 > [!NOTE]
->  Mentre in questo esempio vengono utilizzati endpoint specifici per partizionare dati, è possibile portare a termine questa operazione anche utilizzando le informazioni contenute all'interno del messaggio stesso, ad esempio l'intestazione o i dati del corpo.  
+>  <span data-ttu-id="ac553-110">Mentre in questo esempio vengono utilizzati endpoint specifici per partizionare dati, è possibile portare a termine questa operazione anche utilizzando le informazioni contenute all'interno del messaggio stesso, ad esempio l'intestazione o i dati del corpo.</span><span class="sxs-lookup"><span data-stu-id="ac553-110">While this example uses specific endpoints to partition data, this could also be accomplished using information contained within the message itself such as header or body data.</span></span>  
   
-### Implementare il partizionamento dei dati del servizio  
+### <a name="implement-service-data-partitioning"></a><span data-ttu-id="ac553-111">Implementare il partizionamento dei dati del servizio</span><span class="sxs-lookup"><span data-stu-id="ac553-111">Implement Service Data Partitioning</span></span>  
   
-1.  Creare la configurazione del servizio di routing di base specificando gli endpoint servizio esposti dal servizio.Nell'esempio seguente vengono definiti due endpoint che verranno utilizzati per ricevere messaggi.Vengono inoltre definiti gli endpoint client, utilizzati per inviare messaggi alle istanze del servizio regularCalc.  
+1.  <span data-ttu-id="ac553-112">Creare la configurazione del servizio di routing di base specificando gli endpoint servizio esposti dal servizio.</span><span class="sxs-lookup"><span data-stu-id="ac553-112">Create the basic Routing Service configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="ac553-113">Nell'esempio seguente vengono definiti due endpoint che verranno utilizzati per ricevere messaggi.</span><span class="sxs-lookup"><span data-stu-id="ac553-113">The following example defines two endpoints, which will be used to receive messages.</span></span> <span data-ttu-id="ac553-114">Vengono inoltre definiti gli endpoint client, utilizzati per inviare messaggi alle istanze del servizio regularCalc.</span><span class="sxs-lookup"><span data-stu-id="ac553-114">It also defines the client endpoints, which are used to send messages to the regularCalc service instances.</span></span>  
   
     ```xml  
     <services>  
@@ -63,10 +66,9 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
                   binding="netTcpBinding"  
                   contract="*" />  
      </client>  
-  
     ```  
   
-2.  Definire i filtri utilizzati per indirizzare messaggi agli endpoint di destinazione.Ai fini di questo esempio viene utilizzato il filtro EndpointName per determinare quale endpoint servizio ha ricevuto il messaggio.Nell'esempio seguente vengono definiti i filtri e la sezione di routing necessari.  
+2.  <span data-ttu-id="ac553-115">Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.</span><span class="sxs-lookup"><span data-stu-id="ac553-115">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="ac553-116">Ai fini di questo esempio viene utilizzato il filtro EndpointName per determinare quale endpoint servizio ha ricevuto il messaggio.</span><span class="sxs-lookup"><span data-stu-id="ac553-116">For this example, the EndpointName filter is used to determine which service endpoint received the message.</span></span> <span data-ttu-id="ac553-117">Nell'esempio seguente vengono definiti i filtri e la sezione di routing necessari.</span><span class="sxs-lookup"><span data-stu-id="ac553-117">The following example defines the necessary routing section and filters.</span></span>  
   
     ```xml  
     <filters>  
@@ -79,9 +81,9 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
     </filters>  
     ```  
   
-3.  Definire la tabella dei filtri, che associa ogni filtro a un endpoint client.In questo esempio il messaggio verrà indirizzato in base all'endpoint specifico su cui è stato ricevuto.Poiché il messaggio può corrispondere solo a uno dei due possibili filtri, non è necessario utilizzare la priorità del filtro per controllare l'ordine di valutazione dei filtri.  
+3.  <span data-ttu-id="ac553-118">Definire la tabella dei filtri, che associa ogni filtro a un endpoint client.</span><span class="sxs-lookup"><span data-stu-id="ac553-118">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="ac553-119">In questo esempio il messaggio verrà indirizzato in base all'endpoint specifico su cui è stato ricevuto.</span><span class="sxs-lookup"><span data-stu-id="ac553-119">In this example, the message will be routed based on the specific endpoint it was received over.</span></span> <span data-ttu-id="ac553-120">Poiché il messaggio può corrispondere solo a uno dei due possibili filtri, non è necessario utilizzare la priorità del filtro per controllare l'ordine di valutazione dei filtri.</span><span class="sxs-lookup"><span data-stu-id="ac553-120">Since the message can only match one of the two possible filters, there is no need for using filter priority to control to the order in which filters are evaluated.</span></span>  
   
-     Di seguito viene definita la tabella dei filtri e vengono aggiunti i filtri definiti in precedenza.  
+     <span data-ttu-id="ac553-121">Di seguito viene definita la tabella dei filtri e vengono aggiunti i filtri definiti in precedenza.</span><span class="sxs-lookup"><span data-stu-id="ac553-121">The following defines the filter table and adds the filters defined earlier.</span></span>  
   
     ```xml  
     <filterTables>  
@@ -91,10 +93,9 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
          <add filterName="NormalPriority" endpointName="CalcEndpoint2"/>  
        </filterTable>  
     </filterTables>  
-  
     ```  
   
-4.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.Nell'esempio seguente viene illustrata l'associazione di "filterTable1" agli endpoint servizio:  
+4.  <span data-ttu-id="ac553-122">Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.</span><span class="sxs-lookup"><span data-stu-id="ac553-122">To evaluate incoming messages against the filters contained in the table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="ac553-123">Nell'esempio seguente viene illustrata l'associazione di "filterTable1" agli endpoint servizio:</span><span class="sxs-lookup"><span data-stu-id="ac553-123">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -105,11 +106,10 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Esempio  
- Il codice seguente costituisce un elenco completo del file di configurazione.  
+## <a name="example"></a><span data-ttu-id="ac553-124">Esempio</span><span class="sxs-lookup"><span data-stu-id="ac553-124">Example</span></span>  
+ <span data-ttu-id="ac553-125">Il codice seguente costituisce un elenco completo del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ac553-125">The following is a complete listing of the configuration file.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -183,5 +183,5 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
 </configuration>  
 ```  
   
-## Vedere anche  
- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a><span data-ttu-id="ac553-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ac553-126">See Also</span></span>  
+ [<span data-ttu-id="ac553-127">Servizi di routing</span><span class="sxs-lookup"><span data-stu-id="ac553-127">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)

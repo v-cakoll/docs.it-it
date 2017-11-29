@@ -1,80 +1,84 @@
 ---
-title: "Attivit&#224; di promozione propriet&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Attività di promozione proprietà"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bd8356927ad7cb4c24cc278fcb901cc543c6d7b5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Attivit&#224; di promozione propriet&#224;
-In questo esempio viene fornita una soluzione end\-to\-end che integra direttamente la funzionalità di promozione <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> nella creazione di flussi di lavoro.Vengono forniti inoltre una raccolta di elementi di configurazione, attività ed estensioni del flusso di lavoro che semplificano l'utilizzo della funzionalità di promozione.Nell'esempio è contenuto infine un semplice flusso di lavoro che dimostra come utilizzare la raccolta.  
+# <a name="property-promotion-activity"></a><span data-ttu-id="c46c7-102">Attività di promozione proprietà</span><span class="sxs-lookup"><span data-stu-id="c46c7-102">Property Promotion Activity</span></span>
+<span data-ttu-id="c46c7-103">In questo esempio viene fornita una soluzione end-to-end che integra direttamente la funzionalità di promozione <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> nella creazione di flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-103">This sample provides an end-to-end solution that integrates the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Promotion feature directly into the workflow authoring experience.</span></span> <span data-ttu-id="c46c7-104">Vengono forniti inoltre una raccolta di elementi di configurazione, attività ed estensioni del flusso di lavoro che semplificano l'uso della funzionalità di promozione.</span><span class="sxs-lookup"><span data-stu-id="c46c7-104">A collection of configuration elements, workflow activities, and workflow extensions that simplify the use of the Promotion feature are provided.</span></span> <span data-ttu-id="c46c7-105">Nell'esempio è contenuto infine un semplice flusso di lavoro che dimostra come usare la raccolta.</span><span class="sxs-lookup"><span data-stu-id="c46c7-105">Additionally, the sample contains a simple workflow that demonstrates how to use this collection.</span></span>  
   
 > [!NOTE]
->  Gli esempi vengono forniti solo a scopo didattico.Non sono destinati né sono stati testati in un ambiente di produzione.Microsoft non fornisce supporto tecnico per questi esempi.  
+>  <span data-ttu-id="c46c7-106">Gli esempi vengono forniti solo a scopo didattico.</span><span class="sxs-lookup"><span data-stu-id="c46c7-106">Samples are provided for educational purposes only.</span></span> <span data-ttu-id="c46c7-107">Non sono destinati né sono stati testati in un ambiente di produzione.</span><span class="sxs-lookup"><span data-stu-id="c46c7-107">They are not intended for a production environment, and have not been tested in a production environment.</span></span> <span data-ttu-id="c46c7-108">Microsoft non fornisce supporto tecnico per questi esempi.</span><span class="sxs-lookup"><span data-stu-id="c46c7-108">Microsoft does not provide technical support for these samples.</span></span>  
   
-## Prerequisiti  
+## <a name="prerequisites"></a><span data-ttu-id="c46c7-109">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="c46c7-109">Prerequisites</span></span>  
   
--   Un database <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> inizializzato  
+-   <span data-ttu-id="c46c7-110">Un database <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> inizializzato</span><span class="sxs-lookup"><span data-stu-id="c46c7-110">An initialized <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> database</span></span>  
   
 -   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]  
   
-## Progetti di esempio  
+## <a name="sample-projects"></a><span data-ttu-id="c46c7-111">Progetti di esempio</span><span class="sxs-lookup"><span data-stu-id="c46c7-111">Sample Projects</span></span>  
   
--   Il progetto **PropertyPromotionActivity** contiene file relativi agli elementi di configurazione specifici della promozione nonché attività ed estensioni del flusso di lavoro.  
+-   <span data-ttu-id="c46c7-112">Il **PropertyPromotionActivity** progetto contiene file relativi agli elementi di configurazione specifica dell'innalzamento di livello, le attività del flusso di lavoro e le estensioni del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-112">The **PropertyPromotionActivity** project contains files pertaining to the promotion-specific configuration elements, workflow activities, and workflow extensions.</span></span>  
   
--   Il progetto **CounterServiceApplication** contiene un flusso di lavoro di esempio che utilizza il progetto **SqlWorkflowInstanceStorePromotion**.  
+-   <span data-ttu-id="c46c7-113">Il **CounterServiceApplication** progetto contiene un flusso di lavoro di esempio che utilizza il **SqlWorkflowInstanceStorePromotion** progetto.</span><span class="sxs-lookup"><span data-stu-id="c46c7-113">The **CounterServiceApplication** project contains a sample workflow that uses the **SqlWorkflowInstanceStorePromotion** project.</span></span>  
   
--   Uno script SQL \(PropertyPromotionActivitySQLSample.sql\) che è necessario eseguire nel database <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.  
+-   <span data-ttu-id="c46c7-114">Uno script SQL (PropertyPromotionActivitySQLSample.sql) che è necessario eseguire nel database <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.</span><span class="sxs-lookup"><span data-stu-id="c46c7-114">A SQL script (PropertyPromotionActivitySQLSample.sql) that must be run against the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> database.</span></span>  
   
--   Un file della soluzione che collega i due progetti [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] \(`PropertyPromotionActivity.sln`\)  
+-   <span data-ttu-id="c46c7-115">Un file della soluzione che collega i due progetti [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (`PropertyPromotionActivity.sln`)</span><span class="sxs-lookup"><span data-stu-id="c46c7-115">A solution file that links the two [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] projects (`PropertyPromotionActivity.sln`)</span></span>  
   
-## Per impostare ed eseguire l'esempio  
+## <a name="to-set-up-and-run-the-sample"></a><span data-ttu-id="c46c7-116">Per impostare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="c46c7-116">To set up and run the sample</span></span>  
   
-1.  Inizializzare un database di persistenza del flusso di lavoro.  
+1.  <span data-ttu-id="c46c7-117">Inizializzare un database di persistenza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-117">Initialize a workflow persistence database.</span></span>  
   
-    1.  Passare alla directory di esempio \(\\WF\\Basic\\Persistence\\PropertyPromotionActivity\) ed eseguire CreateInstanceStore.cmd.  
+    1.  <span data-ttu-id="c46c7-118">Passare alla directory di esempio (\WF\Basic\Persistence\PropertyPromotionActivity) ed eseguire CreateInstanceStore.cmd.</span><span class="sxs-lookup"><span data-stu-id="c46c7-118">Navigate to the sample directory (\WF\Basic\Persistence\PropertyPromotionActivity) and run CreateInstanceStore.cmd.</span></span>  
   
-    2.  Se i privilegi di amministratore non sono disponibili, creare un account di accesso di SQL Server.In SQL Server Management Studio andare a **Protezione**, **Account di accesso**.Fare clic con il pulsante destro del mouse su **Account di accesso** e creare un nuovo account.Aggiungere l'utente ACL al ruolo SQL aprendo **Database**, **InstanceStore**, **Protezione**.Fare clic con il pulsante destro del mouse su **Utenti**, quindi scegliere **Nuovo utente**.Impostare **Nome account di accesso** sull'utente creato in precedenza.Aggiungere l'utente all'appartenenza ai ruoli del database System.Activities.DurableInstancing.InstanceStoreUsers \(e altri\).Notare che l'utente potrebbe essere già presente \(ad esempio, utente dbo\).  
+    2.  <span data-ttu-id="c46c7-119">Se i privilegi di amministratore non sono disponibili, creare un account di accesso di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="c46c7-119">If Administrator privileges are not available, create a SQL Server login.</span></span> <span data-ttu-id="c46c7-120">In SQL Server Management Studio, andare a **sicurezza**, **gli account di accesso**.</span><span class="sxs-lookup"><span data-stu-id="c46c7-120">In SQL Server Management Studio, go to **Security**, **Logins**.</span></span> <span data-ttu-id="c46c7-121">Fare doppio clic su **gli account di accesso** e creare un nuovo account di accesso.</span><span class="sxs-lookup"><span data-stu-id="c46c7-121">Right-click **Logins** and create a new login.</span></span> <span data-ttu-id="c46c7-122">Aggiungere l'utente ACL al ruolo SQL aprendo **database**, **InstanceStore**, **sicurezza**.</span><span class="sxs-lookup"><span data-stu-id="c46c7-122">Add your ACL user to the SQL role by opening **Databases**, **InstanceStore**, **Security**.</span></span> <span data-ttu-id="c46c7-123">Fare doppio clic su **utenti** e selezionare **nuovo utente**.</span><span class="sxs-lookup"><span data-stu-id="c46c7-123">Right-click **Users** and select **New user**.</span></span> <span data-ttu-id="c46c7-124">Impostare il **nome account di accesso** all'utente creato in precedenza.</span><span class="sxs-lookup"><span data-stu-id="c46c7-124">Set the **Login name** to the user created above.</span></span> <span data-ttu-id="c46c7-125">Aggiungere l'utente all'appartenenza ai ruoli del database System.Activities.DurableInstancing.InstanceStoreUsers (e altri).</span><span class="sxs-lookup"><span data-stu-id="c46c7-125">Add the user to the Database role membership System.Activities.DurableInstancing.InstanceStoreUsers (and others).</span></span> <span data-ttu-id="c46c7-126">Notare che l'utente potrebbe essere già presente (ad esempio, utente dbo).</span><span class="sxs-lookup"><span data-stu-id="c46c7-126">Note that the user might exist already (for example, user dbo).</span></span>  
   
-2.  Aprire il file della soluzione PropertyPromotionActivity.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+2.  <span data-ttu-id="c46c7-127">Aprire il file della soluzione PropertyPromotionActivity.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c46c7-127">Open the PropertyPromotionActivity.sln solution file in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-3.  Se l'archivio di istanze è stato creato in un database diverso da un'installazione locale di SQL Server Express, è necessario aggiornare la stringa di connessione di database.Modificare il file App.config in **CounterServiceApplication** impostando il valore dell'attributo `connectionString` sul nodo `sqlWorkflowInstanceStorePromotion` in modo che punti al database di persistenza inizializzato nel passaggio 1.  
+3.  <span data-ttu-id="c46c7-128">Se l'archivio di istanze è stato creato in un database diverso da un'installazione locale di SQL Server Express, è necessario aggiornare la stringa di connessione di database.</span><span class="sxs-lookup"><span data-stu-id="c46c7-128">If you created the instance store in a database other than a local installation of SQL Server Express, then you must update the database connection string.</span></span> <span data-ttu-id="c46c7-129">Modificare il file app. config sotto il **CounterServiceApplication** impostando il valore della `connectionString` attributo il `sqlWorkflowInstanceStorePromotion` nodo in modo che punti al database di persistenza inizializzato nel passaggio 1.</span><span class="sxs-lookup"><span data-stu-id="c46c7-129">Alter the App.config file under the **CounterServiceApplication** by setting the value of the `connectionString` attribute on the `sqlWorkflowInstanceStorePromotion` node so that it points to the persistence database that was initialized in step 1.</span></span>  
   
-4.  Compilare ed eseguire la soluzione.Verranno avviati il servizio Counter WF e, automaticamente, un'istanza del flusso di lavoro.  
+4.  <span data-ttu-id="c46c7-130">Compilare ed eseguire la soluzione.</span><span class="sxs-lookup"><span data-stu-id="c46c7-130">Build and run the solution.</span></span> <span data-ttu-id="c46c7-131">Verranno avviati il servizio Counter WF e, automaticamente, un'istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-131">This will start the Counter WF service and automatically start a workflow instance.</span></span>  
   
-5.  Selezionare rapidamente tutte le righe nella vista \[dbo\].\[CounterService\] del database di persistenza \(aggiunta tramite l'esecuzione di CreateInstanceStore.cmd nel passaggio 1\).Il set di risultati sarà analogo al seguente:  
+5.  <span data-ttu-id="c46c7-132">Selezionare rapidamente tutte le righe nella vista [dbo].[CounterService] del database di persistenza (aggiunta tramite l'esecuzione di CreateInstanceStore.cmd nel passaggio 1).</span><span class="sxs-lookup"><span data-stu-id="c46c7-132">Quickly select all the rows in the [dbo].[CounterService] view in your persistence database (this view was added by running CreateInstanceStore.cmd in step 1).</span></span> <span data-ttu-id="c46c7-133">Il set di risultati sarà analogo al seguente:</span><span class="sxs-lookup"><span data-stu-id="c46c7-133">You will see a result set similar to the following:</span></span>  
   
-    |InstanceId|CounterValue|CounterValueLastUpdated|  
+    |<span data-ttu-id="c46c7-134">InstanceId</span><span class="sxs-lookup"><span data-stu-id="c46c7-134">InstanceId</span></span>|<span data-ttu-id="c46c7-135">CounterValue</span><span class="sxs-lookup"><span data-stu-id="c46c7-135">CounterValue</span></span>|<span data-ttu-id="c46c7-136">CounterValueLastUpdated</span><span class="sxs-lookup"><span data-stu-id="c46c7-136">CounterValueLastUpdated</span></span>|  
     |----------------|------------------|-----------------------------|  
-    |2FA2C302\-929E\-4C0D\-8C25\-768A3DA20CE5|12|2010\-02\-18 22:48:01.740|  
+    |<span data-ttu-id="c46c7-137">2FA2C302-929E-4C0D-8C25-768A3DA20CE5</span><span class="sxs-lookup"><span data-stu-id="c46c7-137">2FA2C302-929E-4C0D-8C25-768A3DA20CE5</span></span>|<span data-ttu-id="c46c7-138">12</span><span class="sxs-lookup"><span data-stu-id="c46c7-138">12</span></span>|<span data-ttu-id="c46c7-139">2010-02-18 22:48:01.740</span><span class="sxs-lookup"><span data-stu-id="c46c7-139">2010-02-18 22:48:01.740</span></span>|  
   
-     Man mano che si procede con l'aggiornamento della vista, si noterà che gli elementi CounterValue e CounterValueLastUpdated vengono modificati ogni due secondi,che rappresentano l'intervallo di aggiornamento del contatore.CounterValue e CounterValueLastUpdated rappresentano proprietà promosse per questo flusso di lavoro.  
+     <span data-ttu-id="c46c7-140">Man mano che si procede con l'aggiornamento della vista, si noterà che gli elementi CounterValue e CounterValueLastUpdated vengono modificati ogni due secondi,</span><span class="sxs-lookup"><span data-stu-id="c46c7-140">As you keep refreshing the view, you will notice that CounterValue and CounterValueLastUpdated change every two seconds.</span></span> <span data-ttu-id="c46c7-141">che rappresentano l'intervallo di aggiornamento del contatore.</span><span class="sxs-lookup"><span data-stu-id="c46c7-141">This is the interval at which the counter updates itself.</span></span> <span data-ttu-id="c46c7-142">CounterValue e CounterValueLastUpdated rappresentano proprietà promosse per questo flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-142">CounterValue and CounterValueLastUpdated represent promoted properties for this workflow.</span></span>  
   
-## Per rimuovere l'esempio  
+## <a name="to-remove-the-sample"></a><span data-ttu-id="c46c7-143">Per rimuovere l'esempio</span><span class="sxs-lookup"><span data-stu-id="c46c7-143">To remove the sample</span></span>  
   
--   Eseguire RemoveInstanceStore.cmd nella directory di esempio \(\\WF\\Basic\\Persistence\\PropertyPromotionActivity\).  
+-   <span data-ttu-id="c46c7-144">Eseguire RemoveInstanceStore.cmd nella directory di esempio (\WF\Basic\Persistence\PropertyPromotionActivity).</span><span class="sxs-lookup"><span data-stu-id="c46c7-144">Run RemoveInstanceStore.cmd in the sample directory (\WF\Basic\Persistence\PropertyPromotionActivity).</span></span>  
   
-## Informazioni sull'esempio  
- Nell'esempio sono contenuti due progetti e un file SQL:  
+## <a name="understanding-this-sample"></a><span data-ttu-id="c46c7-145">Informazioni sull'esempio</span><span class="sxs-lookup"><span data-stu-id="c46c7-145">Understanding This Sample</span></span>  
+ <span data-ttu-id="c46c7-146">Nell'esempio sono contenuti due progetti e un file SQL:</span><span class="sxs-lookup"><span data-stu-id="c46c7-146">The sample contains two projects and an SQL file:</span></span>  
   
--   **CounterServiceApplication** è un'applicazione console che ospita un servizio Counter WF semplice.Alla ricezione di un messaggio unidirezionale tramite l'endpoint `Start`, il flusso di lavoro conta da 0 a 29, incrementando una variabile del contatore ogni due secondi.Dopo ogni incremento del contatore, il flusso di lavoro è persistente e le proprietà promosse vengono aggiornate nella vista \[dbo\].\[CounterService\].Quando viene eseguita, l'applicazione console ospita il servizio WF e invia un messaggio all'endpoint `Start`, creando un'istanza di Counter WF.  
+-   <span data-ttu-id="c46c7-147">**CounterServiceApplication** è un'applicazione console che ospita un servizio Counter WF semplice.</span><span class="sxs-lookup"><span data-stu-id="c46c7-147">**CounterServiceApplication** is a console application that hosts a simple Counter WF service.</span></span> <span data-ttu-id="c46c7-148">Alla ricezione di un messaggio unidirezionale tramite l'endpoint `Start`, il flusso di lavoro conta da 0 a 29, incrementando una variabile del contatore ogni due secondi.</span><span class="sxs-lookup"><span data-stu-id="c46c7-148">Upon receiving a one-way message through the `Start` endpoint, the workflow counts from 0 to 29, incrementing a counter variable every two seconds.</span></span> <span data-ttu-id="c46c7-149">Dopo ogni incremento del contatore, il flusso di lavoro è persistente e le proprietà promosse vengono aggiornate nella vista [dbo].[CounterService].</span><span class="sxs-lookup"><span data-stu-id="c46c7-149">After every counter increment, the workflow persists, and the promoted properties are updated in the [dbo].[CounterService] view.</span></span> <span data-ttu-id="c46c7-150">Quando viene eseguita, l'applicazione console ospita il servizio WF e invia un messaggio all'endpoint `Start`, creando un'istanza di Counter WF.</span><span class="sxs-lookup"><span data-stu-id="c46c7-150">When the console application is run, it hosts the WF service and sends a message to the `Start` endpoint, creating a Counter WF instance.</span></span>  
   
--   **PropertyPromotionActivity** è una libreria di classi che contiene gli elementi di configurazione e le attività e le estensioni del flusso di lavoro utilizzate da **CounterServiceApplication**.  
+-   <span data-ttu-id="c46c7-151">**PropertyPromotionActivity** è una libreria di classi che contiene gli elementi di configurazione, le attività del flusso di lavoro e le estensioni del flusso di lavoro che il **CounterServiceApplication** utilizza.</span><span class="sxs-lookup"><span data-stu-id="c46c7-151">**PropertyPromotionActivity** is a class library that contains the configuration elements, workflow activities, and workflow extensions that the **CounterServiceApplication** uses.</span></span>  
   
--   **PropertyPromotionActivitySQLSample.sql** crea e aggiunge la vista \[dbo\].\[CounterService\] al database.  
+-   <span data-ttu-id="c46c7-152">**PropertyPromotionActivitySQLSample.sql** crea e aggiunge la vista [dbo]. [ CounterService] al database.</span><span class="sxs-lookup"><span data-stu-id="c46c7-152">**PropertyPromotionActivitySQLSample.sql** creates and adds the view [dbo].[CounterService] to the database.</span></span>  
   
-### CounterServiceApplication  
+### <a name="counterserviceapplication"></a><span data-ttu-id="c46c7-153">CounterServiceApplication</span><span class="sxs-lookup"><span data-stu-id="c46c7-153">CounterServiceApplication</span></span>  
   
-#### Utilizzo dell'elemento di configurazione SqlWorkflowInstanceStorePromotion  
- L'elemento di configurazione `SqlWorkflowInstanceStorePromotion` eredita dall'elemento di configurazione `SqlWorkflowInstanceStore`, ma aggiunge un ulteriore elemento denominato `promotionSets`.L'elemento `promotionSets` consente all'utente di specificare proprietà promosse tramite la configurazione.Il file di configurazione utilizzato nell'esempio è il seguente:  
+#### <a name="using-the-sqlworkflowinstancestorepromotion-configuration-element"></a><span data-ttu-id="c46c7-154">Utilizzo dell'elemento di configurazione SqlWorkflowInstanceStorePromotion</span><span class="sxs-lookup"><span data-stu-id="c46c7-154">Using the SqlWorkflowInstanceStorePromotion Configuration Element</span></span>  
+ <span data-ttu-id="c46c7-155">L'elemento di configurazione `SqlWorkflowInstanceStorePromotion` eredita dall'elemento di configurazione `SqlWorkflowInstanceStore`, ma aggiunge un ulteriore elemento denominato `promotionSets`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-155">The `SqlWorkflowInstanceStorePromotion` configuration element inherits from the `SqlWorkflowInstanceStore` configuration element, but adds an additional configuration element called `promotionSets`.</span></span> <span data-ttu-id="c46c7-156">L'elemento `promotionSets` consente all'utente di specificare proprietà promosse tramite la configurazione.</span><span class="sxs-lookup"><span data-stu-id="c46c7-156">The `promotionSets` element enables the user to specify promoted properties through configuration.</span></span> <span data-ttu-id="c46c7-157">Il file di configurazione usato nell'esempio è il seguente:</span><span class="sxs-lookup"><span data-stu-id="c46c7-157">This is the configuration file that is used by the sample:</span></span>  
   
 ```xml  
 <sqlWorkflowInstanceStorePromotion connectionString ="Data Source=.;Initial Catalog=SqlWorkflowInstanceStoreTest;Integrated Security=True;">  
@@ -87,7 +91,7 @@ In questo esempio viene fornita una soluzione end\-to\-end che integra direttame
 </sqlWorkflowInstanceStorePromotion>  
 ```  
   
- Esaminare la definizione per la vista \[dbo\].\[CounterService\].  
+ <span data-ttu-id="c46c7-158">Esaminare la definizione per la vista [dbo].[CounterService].</span><span class="sxs-lookup"><span data-stu-id="c46c7-158">Examine the definition for the [dbo].[CounterService] view.</span></span>  
   
 ```sql  
 create view [dbo].[CounterService] as  
@@ -97,39 +101,38 @@ create view [dbo].[CounterService] as
       from [System.Activities.DurableInstancing].[InstancePromotedProperties]  
       where [PromotionName] = 'CounterService'  
 go  
-  
 ```  
   
- Quando un'istanza del flusso di lavoro è persistente, una riga viene inserita nella vista `InstancePromotedProperties` per ogni `PromotionSet` definito nella configurazione.Questa riga contiene tutte le proprietà promosse di `PromotionSet` \(una proprietà promossa per colonna\).Questo elemento `PromotionSet` è collegato con chiave dalla tupla `InstanceId, PromotionName`.In questo esempio è presente un elemento `PromotionSet` definito in una configurazione il cui attributo name è `CounterService`.Si noti che il valore della colonna `PromotionSet` è uguale all'attributo name `PromotionName`.  
+ <span data-ttu-id="c46c7-159">Quando un'istanza del flusso di lavoro è persistente, una riga viene inserita nella vista `InstancePromotedProperties` per ogni `PromotionSet` definito nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="c46c7-159">When a workflow instance persists, a row is inserted into the `InstancePromotedProperties` view for each `PromotionSet` defined in the configuration.</span></span> <span data-ttu-id="c46c7-160">Questa riga contiene tutte le proprietà promosse di `PromotionSet` (una proprietà promossa per colonna).</span><span class="sxs-lookup"><span data-stu-id="c46c7-160">This row contains all the promoted properties of the `PromotionSet` (one promoted property per column).</span></span> <span data-ttu-id="c46c7-161">Questo elemento `PromotionSet` è collegato con chiave dalla tupla `InstanceId, PromotionName`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-161">This `PromotionSet` is keyed by the tuple: `InstanceId, PromotionName`.</span></span> <span data-ttu-id="c46c7-162">In questo esempio è presente un elemento `PromotionSet` definito in una configurazione il cui attributo name è `CounterService`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-162">In this sample, we have one `PromotionSet` defined in configuration whose name attribute is `CounterService`.</span></span> <span data-ttu-id="c46c7-163">Si noti che il valore della colonna `PromotionName` è uguale all'attributo name `PromotionSet`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-163">Note how the `PromotionName` column value is equal to the name attribute of the `PromotionSet` element.</span></span>  
   
- L'ordine degli elementi di `promotedValue` è correlato alla posizione delle proprietà promosse nella visualizzazione `InstancePromotedProperties`.`Count` è il primo elemento di `promotedValue`.Di conseguenza, tale elemento viene mappato alla colonna `Value1` nella vista `InstancePromotedProperties`.`LastIncrementedAt` è il secondo elemento di `promotedValue`.Di conseguenza, tale elemento viene mappato alla colonna `Value2` nella vista `InstancePromotedProperties`.  
+ <span data-ttu-id="c46c7-164">L'ordine degli elementi di `promotedValue` è correlato alla posizione delle proprietà promosse nella visualizzazione `InstancePromotedProperties`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-164">The order of the `promotedValue` elements correlates with the placement of the promoted properties in the `InstancePromotedProperties` view.</span></span> <span data-ttu-id="c46c7-165">`Count` è il primo elemento di `promotedValue`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-165">`Count` is the first `promotedValue` element.</span></span> <span data-ttu-id="c46c7-166">Di conseguenza, tale elemento viene mappato alla colonna `Value1` nella vista `InstancePromotedProperties`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-166">As a result, it is mapped to the `Value1` column in the `InstancePromotedProperties` view.</span></span> <span data-ttu-id="c46c7-167">`LastIncrementedAt` è il secondo elemento di `promotedValue`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-167">`LastIncrementedAt` is the second `promotedValue` element.</span></span> <span data-ttu-id="c46c7-168">Di conseguenza, tale elemento viene mappato alla colonna `Value2` nella vista `InstancePromotedProperties`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-168">As a result, it is mapped to the `Value2` column in the `InstancePromotedProperties` view.</span></span>  
   
-#### Utilizzo dell'attività PromoteValue  
- Esaminare il file CounterService.xamlx nella finestra di progettazione di [!INCLUDE[wf2](../../../../includes/wf2-md.md)].Si noti che sono presenti due attività speciali nella definizione WF, ovvero `PromoteValue<DateTime>` e `PromoteValue<Int32>`.  
+#### <a name="using-the-promotevalue-activity"></a><span data-ttu-id="c46c7-169">Utilizzo dell'attività PromoteValue</span><span class="sxs-lookup"><span data-stu-id="c46c7-169">Using the PromoteValue Activity</span></span>  
+ <span data-ttu-id="c46c7-170">Esaminare il file CounterService.xamlx nella finestra di progettazione di [!INCLUDE[wf2](../../../../includes/wf2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c46c7-170">Examine the CounterService.xamlx file in the [!INCLUDE[wf2](../../../../includes/wf2-md.md)] Designer.</span></span> <span data-ttu-id="c46c7-171">Si noti che sono presenti due attività speciali nella definizione WF, ovvero `PromoteValue<DateTime>` e `PromoteValue<Int32>`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-171">Notice that there are two special activities in the WF definition: `PromoteValue<DateTime>` and `PromoteValue<Int32>`.</span></span>  
   
- All'attività `PromoteValue<Int32>` è associato il membro `Name` definito come `Count`che corrisponde al primo elemento `promotedValue` nella configurazione e per cui il relativo elemento `Value` è definito come variabile del flusso di lavoro `Counter`.Quando il flusso di lavoro è persistente, la variabile del flusso di lavoro `Counter` viene resa persistente come proprietà promossa nella colonna `Value1` della vista `InstancePromotedProperties`.  
+ <span data-ttu-id="c46c7-172">All'attività `PromoteValue<Int32>` è associato il membro `Name` definito come `Count`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-172">The `PromoteValue<Int32>` activity has its `Name` member defined as `Count`.</span></span> <span data-ttu-id="c46c7-173">che corrisponde al primo elemento `promotedValue` nella configurazione e per cui il relativo elemento `Value` è definito come variabile del flusso di lavoro `Counter`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-173">This matches with the first `promotedValue` element in the configuration, and has its `Value` defined as the `Counter` workflow variable.</span></span> <span data-ttu-id="c46c7-174">Quando il flusso di lavoro è persistente, la variabile del flusso di lavoro `Counter` viene resa persistente come proprietà promossa nella colonna `Value1` della vista `InstancePromotedProperties`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-174">When the workflow persists, the `Counter` workflow variable is persisted as a promoted property into the `Value1` column of the `InstancePromotedProperties` view.</span></span>  
   
- All'attività `PromoteValue<DateTime>` è associato il membro `Name` definito come `LastIncrementedAt`che corrisponde al secondo elemento `promotedValue` nella configurazione e per cui il relativo elemento `Value` è definito come variabile del flusso di lavoro `TimeLastIncremented`.Questo significa che quando il flusso di lavoro è persistente, la variabile del flusso di lavoro `TimeLastIncremented` verrà resa persistente come proprietà promossa nella colonna `Value2` della vista `InstancePromotedProperties`.  
+ <span data-ttu-id="c46c7-175">All'attività `PromoteValue<DateTime>` è associato il membro `Name` definito come `LastIncrementedAt`</span><span class="sxs-lookup"><span data-stu-id="c46c7-175">The `PromoteValue<DateTime>` activity has its `Name` member defined as `LastIncrementedAt`.</span></span> <span data-ttu-id="c46c7-176">che corrisponde al secondo elemento `promotedValue` nella configurazione e per cui il relativo elemento `Value` è definito come variabile del flusso di lavoro `TimeLastIncremented`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-176">This matches with the second `promotedValue` element in the configuration, and has its `Value` defined as the `TimeLastIncremented` workflow variable.</span></span> <span data-ttu-id="c46c7-177">Questo significa che quando il flusso di lavoro è persistente, la variabile del flusso di lavoro `TimeLastIncremented` verrà resa persistente come proprietà promossa nella colonna `Value2` della vista `InstancePromotedProperties`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-177">This means that when the workflow persists, the value for the `TimeLastIncremented` workflow variable will be persisted as a promoted property into the `Value2` column of the `InstancePromotedProperties` view.</span></span>  
   
- Si noti che all'attività `PromotedValue` è inoltre associato un membro di tipo Boolean denominato `ClearExistingPromotedData`.Quando questo membro è impostato su `true`, vengono cancellate tutti i valori della proprietà promossa fino al punto specifico nel flusso di lavoro.Se ad esempio un'attività Sequence è definita come segue:  
+ <span data-ttu-id="c46c7-178">Si noti che all'attività `PromotedValue` è inoltre associato un membro di tipo Boolean denominato `ClearExistingPromotedData`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-178">Note that the `PromotedValue` activity also has a Boolean member called `ClearExistingPromotedData`.</span></span> <span data-ttu-id="c46c7-179">Quando questo membro è impostato su `true`, vengono cancellate tutti i valori della proprietà promossa fino al punto specifico nel flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-179">When this member is set to `true`, this clears all the promoted property values up to that point in the workflow.</span></span> <span data-ttu-id="c46c7-180">Se ad esempio un'attività Sequence è definita come segue:</span><span class="sxs-lookup"><span data-stu-id="c46c7-180">For example, if a Sequence activity is defined as follows:</span></span>  
   
-1.  PromoteValue { Name \= “Count”, Value \= 3}  
+1.  <span data-ttu-id="c46c7-181">PromoteValue {nome = "Count", valore = 3}</span><span class="sxs-lookup"><span data-stu-id="c46c7-181">PromoteValue { Name = "Count", Value = 3}</span></span>  
   
-2.  PromoteValue {Name \= “LastIncrementedAt”, Value \= 1\-1\-2000 }  
+2.  <span data-ttu-id="c46c7-182">PromoteValue {nome = "LastIncrementedAt", valore = 1-1-2000}</span><span class="sxs-lookup"><span data-stu-id="c46c7-182">PromoteValue {Name = "LastIncrementedAt", Value = 1-1-2000 }</span></span>  
   
-3.  Persist  
+3.  <span data-ttu-id="c46c7-183">Persist</span><span class="sxs-lookup"><span data-stu-id="c46c7-183">Persist</span></span>  
   
-4.  PromoteValue {Name \= “Count”, Value \= 4, ClearExistingPromotedData \= true}  
+4.  <span data-ttu-id="c46c7-184">PromoteValue {nome = "Count", valore = 4, ClearExistingPromotedData = true}</span><span class="sxs-lookup"><span data-stu-id="c46c7-184">PromoteValue {Name = "Count", Value = 4, ClearExistingPromotedData = true}</span></span>  
   
-5.  Persist  
+5.  <span data-ttu-id="c46c7-185">Persist</span><span class="sxs-lookup"><span data-stu-id="c46c7-185">Persist</span></span>  
   
- Al secondo Persist, il valore promosso per `Count` sarà 4e il valore promosso per `LastIncrementedAt` sarà `NULL`.Se `ClearExistingPromotedData` non fosse stato impostato su `true` nel passaggio 4, dopo il secondo Persist il valore promosso per Count sarebbe 4.Di conseguenza, il valore promosso per `LastIncrementedAt` sarebbe ancora 1\-1\-2000.  
+ <span data-ttu-id="c46c7-186">Al secondo Persist, il valore promosso per `Count` sarà 4</span><span class="sxs-lookup"><span data-stu-id="c46c7-186">On the second persist, the promoted value for `Count` will be 4.</span></span> <span data-ttu-id="c46c7-187">Tuttavia, il valore promosso per `LastIncrementedAt` sarà `NULL`.</span><span class="sxs-lookup"><span data-stu-id="c46c7-187">However, the promoted value for `LastIncrementedAt` will be `NULL`.</span></span> <span data-ttu-id="c46c7-188">Se `ClearExistingPromotedData` non fosse stato impostato su `true` nel passaggio 4, dopo il secondo Persist il valore promosso per Count sarebbe 4.</span><span class="sxs-lookup"><span data-stu-id="c46c7-188">If `ClearExistingPromotedData` was not set to `true` for step 4, then after the second persist, the promoted value for Count would be 4.</span></span> <span data-ttu-id="c46c7-189">Di conseguenza, il valore promosso per `LastIncrementedAt` sarebbe ancora 1-1-2000.</span><span class="sxs-lookup"><span data-stu-id="c46c7-189">As a result, the promoted value for `LastIncrementedAt` would still be 1-1-2000.</span></span>  
   
-### PropertyPromotionActivity  
- Questa libreria di classi contiene le seguenti classi pubbliche che consentono di semplificare l'utilizzo della funzionalità di promozione <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.  
+### <a name="propertypromotionactivity"></a><span data-ttu-id="c46c7-190">PropertyPromotionActivity</span><span class="sxs-lookup"><span data-stu-id="c46c7-190">PropertyPromotionActivity</span></span>  
+ <span data-ttu-id="c46c7-191">Questa libreria di classi contiene le seguenti classi pubbliche che consentono di semplificare l'uso della funzionalità di promozione <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.</span><span class="sxs-lookup"><span data-stu-id="c46c7-191">This class library contains the following public classes to simplify use of the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Promotion feature.</span></span>  
   
-#### Classe PromoteValue  
- Questa classe promuove una proprietà.Il nome della proprietà promossa deve corrispondere a un attributo name dell'elemento `promotedValue` nella configurazione.Questa attività può essere utilizzata in Progettazione flussi di lavoro.Per un esempio di utilizzo, vedere CounterServiceApplication.  
+#### <a name="promotevalue-class"></a><span data-ttu-id="c46c7-192">Classe PromoteValue</span><span class="sxs-lookup"><span data-stu-id="c46c7-192">PromoteValue Class</span></span>  
+ <span data-ttu-id="c46c7-193">Questa classe promuove una proprietà.</span><span class="sxs-lookup"><span data-stu-id="c46c7-193">This class promotes one property.</span></span> <span data-ttu-id="c46c7-194">Il nome della proprietà promossa deve corrispondere a un attributo name dell'elemento `promotedValue` nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="c46c7-194">The name of the promoted property should match a name attribute of a `promotedValue` element in the configuration.</span></span> <span data-ttu-id="c46c7-195">Questa attività può essere usata in Progettazione flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-195">This activity can be used in the Workflow Designer.</span></span> <span data-ttu-id="c46c7-196">Per un esempio di utilizzo, vedere CounterServiceApplication.</span><span class="sxs-lookup"><span data-stu-id="c46c7-196">See the CounterServiceApplication for an example usage.</span></span>  
   
 ```csharp  
 public class PromoteValue<T> : CodeActivity  
@@ -142,20 +145,19 @@ public class PromoteValue<T> : CodeActivity
     public string Name { get; set; }  
     public InArgument<T> Value { get; set; }  
 }  
-  
 ```  
   
- ClearExistingPromotedData \(Bool\)  
- Cancella tutti i valori promossi prima di questa attività.  
+ <span data-ttu-id="c46c7-197">ClearExistingPromotedData (Bool)</span><span class="sxs-lookup"><span data-stu-id="c46c7-197">ClearExistingPromotedData (Bool)</span></span>  
+ <span data-ttu-id="c46c7-198">Cancella tutti i valori promossi prima di questa attività.</span><span class="sxs-lookup"><span data-stu-id="c46c7-198">Clears all values that were promoted before this activity.</span></span>  
   
- Name \(stringa\)  
- Nome che rappresenta la proprietà.Tale nome deve corrispondere all'attributo name di un elemento \<promotedValue\> nella configurazione.  
+ <span data-ttu-id="c46c7-199">Name (stringa)</span><span class="sxs-lookup"><span data-stu-id="c46c7-199">Name (string)</span></span>  
+ <span data-ttu-id="c46c7-200">Nome che rappresenta la proprietà.</span><span class="sxs-lookup"><span data-stu-id="c46c7-200">The name that represents this property.</span></span> <span data-ttu-id="c46c7-201">L'attributo del nome deve corrispondere un \<promotedValue > nella configurazione dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="c46c7-201">This should match the name attribute of a \<promotedValue> element in the configuration.</span></span>  
   
- Value \(InArgument\<T\>\)  
- La variabile o il valore da desidera archiviare nella colonna.  
+ <span data-ttu-id="c46c7-202">Valore (InArgument\<T >)</span><span class="sxs-lookup"><span data-stu-id="c46c7-202">Value (InArgument\<T>)</span></span>  
+ <span data-ttu-id="c46c7-203">La variabile o il valore da desidera archiviare nella colonna.</span><span class="sxs-lookup"><span data-stu-id="c46c7-203">The variable / value that you want to store in the column.</span></span>  
   
-#### Classe PromoteValues  
- Questa classe promuove più proprietà.I nomi delle proprietà promosse devono corrispondere a tutti gli attributi name degli elementi `promotedValue` nella configurazione.L'utilizzo è analogo a quello dell'attività `PromoteValue`, ad eccezione del fatto che è possibile promuovere più proprietà contemporaneamente.Questa attività non può essere utilizzata in Progettazione flussi di lavoro.  
+#### <a name="promotevalues-class"></a><span data-ttu-id="c46c7-204">Classe PromoteValues</span><span class="sxs-lookup"><span data-stu-id="c46c7-204">PromoteValues Class</span></span>  
+ <span data-ttu-id="c46c7-205">Questa classe promuove più proprietà.</span><span class="sxs-lookup"><span data-stu-id="c46c7-205">Promotes multiple properties.</span></span> <span data-ttu-id="c46c7-206">I nomi delle proprietà promosse devono corrispondere a tutti gli attributi name degli elementi `promotedValue` nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="c46c7-206">The names of the promoted properties should match all name attributes in the `promotedValue` elements in the configuration.</span></span> <span data-ttu-id="c46c7-207">L'utilizzo è analogo a quello dell'attività `PromoteValue`, ad eccezione del fatto che è possibile promuovere più proprietà contemporaneamente.</span><span class="sxs-lookup"><span data-stu-id="c46c7-207">Usage is similar to the `PromoteValue` activity, except for the fact that multiple properties can be promoted at the same time.</span></span> <span data-ttu-id="c46c7-208">Questa attività non può essere usata in Progettazione flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-208">This activity cannot be used in the Workflow Designer.</span></span>  
   
 ```  
 public class PromoteValues : CodeActivity  
@@ -170,8 +172,8 @@ public class PromoteValues : CodeActivity
 }  
 ```  
   
-#### SqlWorkflowInstanceStorePromotionBehavior  
- Classe derivata da `SqlWorkflowInstanceStoreBehavior`che aggiunge un partecipante di persistenza personalizzato \(appartenente anche a questa libreria\) come estensione del flusso di lavoro.L'implementazione delle due attività del flusso di lavoro precedenti si basa su questo partecipante di persistenza personalizzato.  
+#### <a name="sqlworkflowinstancestorepromotionbehavior"></a><span data-ttu-id="c46c7-209">SqlWorkflowInstanceStorePromotionBehavior</span><span class="sxs-lookup"><span data-stu-id="c46c7-209">SqlWorkflowInstanceStorePromotionBehavior</span></span>  
+ <span data-ttu-id="c46c7-210">Classe derivata da `SqlWorkflowInstanceStoreBehavior`</span><span class="sxs-lookup"><span data-stu-id="c46c7-210">Derives from `SqlWorkflowInstanceStoreBehavior`.</span></span> <span data-ttu-id="c46c7-211">che aggiunge un partecipante di persistenza personalizzato (appartenente anche a questa libreria) come estensione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c46c7-211">This derived class adds a custom persistence participant (also a part of this library) as a workflow extension.</span></span> <span data-ttu-id="c46c7-212">L'implementazione delle due attività del flusso di lavoro precedenti si basa su questo partecipante di persistenza personalizzato.</span><span class="sxs-lookup"><span data-stu-id="c46c7-212">The implementation of the previous two workflow activities relies on this custom persistence participant.</span></span>  
   
 ```  
 public class SqlWorkflowInstanceStorePromotionBehavior :  
@@ -181,22 +183,21 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
                             IEnumerable<string> promoteAsBinary)  
   
 }  
-  
 ```  
   
- Questa libreria di classi contiene inoltre l'implementazione di `ConfigurationElement` per `SqlWorkflowInstanceStorePromotionElement` e un partecipante di persistenza personalizzato utilizzati dalle attività di promozione precedenti.  
+ <span data-ttu-id="c46c7-213">Questa libreria di classi contiene inoltre l'implementazione di `ConfigurationElement` per `SqlWorkflowInstanceStorePromotionElement` e un partecipante di persistenza personalizzato usati dalle attività di promozione precedenti.</span><span class="sxs-lookup"><span data-stu-id="c46c7-213">This class library also contains the `ConfigurationElement` implementation for the `SqlWorkflowInstanceStorePromotionElement` and a custom persistence participant used by the previous promotion activities.</span></span>  
   
-### PropertyPromotionActivitySQLSample  
- Questo file SQL crea una vista `[dbo].[CounterService]`, oltre alla vista `[InstancePromotedProperties]`, per l'esecuzione di query su tutte le istanze a cui è associato una promozione CounterService impostata.  
+### <a name="propertypromotionactivitysqlsample"></a><span data-ttu-id="c46c7-214">PropertyPromotionActivitySQLSample</span><span class="sxs-lookup"><span data-stu-id="c46c7-214">PropertyPromotionActivitySQLSample</span></span>  
+ <span data-ttu-id="c46c7-215">Questo file SQL crea una vista `[dbo].[CounterService]`, oltre alla vista `[InstancePromotedProperties]`, per l'esecuzione di query su tutte le istanze a cui è associato una promozione CounterService impostata.</span><span class="sxs-lookup"><span data-stu-id="c46c7-215">This SQL file creates a `[dbo].[CounterService]` view in addition to the `[InstancePromotedProperties]` view for querying all instances that have a CounterService Promotion set.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="c46c7-216">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="c46c7-216">The samples may already be installed on your computer.</span></span> <span data-ttu-id="c46c7-217">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="c46c7-217">Check for the following (default) directory before continuing:</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="c46c7-218">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="c46c7-218">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c46c7-219">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="c46c7-219">This sample is located in the following directory:</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
-## Vedere anche  
- [Hosting e salvataggio permanente](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="c46c7-220">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c46c7-220">See Also</span></span>  
+ [<span data-ttu-id="c46c7-221">Hosting di AppFabric ed esempi di persistenza</span><span class="sxs-lookup"><span data-stu-id="c46c7-221">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

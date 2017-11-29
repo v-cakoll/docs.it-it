@@ -1,84 +1,86 @@
 ---
-title: "Elemento &lt;disableCachingBindingFailures&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCachingBindingFailures"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<disableCachingBindingFailures> (elemento)"
-  - "assembly [.NET Framework], memorizzazione nella cache di errori di associazione"
-  - "memorizzazione nella cache di errori di associazione di assembly"
-  - "disableCachingBindingFailures (elemento)"
+title: '&lt;disableCachingBindingFailures&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCachingBindingFailures
+helpviewer_keywords:
+- assemblies [.NET Framework],caching binding failures
+- caching assembly binding failures
+- <disableCachingBindingFailures> element
+- disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 25d504afd7945718f08dd5f2bf92d7ea33037a11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;disableCachingBindingFailures&gt;
-Specifica se disabilitare la memorizzazione nella cache di errori di associazione degli assembly che si verificano perché l'assembly non è stato trovato tramite sondaggio.  
+# <a name="ltdisablecachingbindingfailuresgt-element"></a><span data-ttu-id="1798b-102">&lt;disableCachingBindingFailures&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="1798b-102">&lt;disableCachingBindingFailures&gt; Element</span></span>
+<span data-ttu-id="1798b-103">Specifica se disabilitare la memorizzazione nella cache di errori di associazione che si verificano perché l'assembly non è stato trovato il sondaggio.</span><span class="sxs-lookup"><span data-stu-id="1798b-103">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="1798b-104">\<configurazione > elemento</span><span class="sxs-lookup"><span data-stu-id="1798b-104">\<configuration> Element</span></span>  
+<span data-ttu-id="1798b-105">\<runtime > elemento</span><span class="sxs-lookup"><span data-stu-id="1798b-105">\<runtime> Element</span></span>  
+<span data-ttu-id="1798b-106">\<disableCachingBindingFailures ></span><span class="sxs-lookup"><span data-stu-id="1798b-106">\<disableCachingBindingFailures></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="1798b-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1798b-107">Syntax</span></span>  
+  
+```xml  
 <disableCachingBindingFailures enabled="0|1"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1798b-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="1798b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="1798b-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="1798b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="1798b-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="1798b-110">Attributes</span></span>  
   
-|Attribute|Descrizione|  
+|<span data-ttu-id="1798b-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="1798b-111">Attribute</span></span>|<span data-ttu-id="1798b-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1798b-112">Description</span></span>|  
 |---------------|-----------------|  
-|enabled|Attributo obbligatorio.<br /><br /> Specifica se disabilitare la memorizzazione nella cache di errori di associazione degli assembly che si verificano perché l'assembly non è stato trovato tramite sondaggio.|  
+|<span data-ttu-id="1798b-113">enabled</span><span class="sxs-lookup"><span data-stu-id="1798b-113">enabled</span></span>|<span data-ttu-id="1798b-114">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="1798b-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="1798b-115">Specifica se disabilitare la memorizzazione nella cache di errori di associazione che si verificano perché l'assembly non è stato trovato il sondaggio.</span><span class="sxs-lookup"><span data-stu-id="1798b-115">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="1798b-116">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="1798b-116">enabled Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|0|Non disabilita la memorizzazione nella cache degli errori di associazione degli assembly che si verificano perché l'assembly non è stato trovato tramite un sondaggio.  Si tratta del comportamento di associazione predefinito a partire da .NET Framework versione 2.0.|  
-|1|Disabilita la memorizzazione nella cache di errori di associazione degli assembly che si verificano perché l'assembly non è stato trovato tramite sondaggio.  Questa impostazione ripristina il comportamento di associazione di .NET Framework versione 1.1.|  
+|<span data-ttu-id="1798b-117">Valore</span><span class="sxs-lookup"><span data-stu-id="1798b-117">Value</span></span>|<span data-ttu-id="1798b-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1798b-118">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="1798b-119">0</span><span class="sxs-lookup"><span data-stu-id="1798b-119">0</span></span>|<span data-ttu-id="1798b-120">Non disabilitare la memorizzazione nella cache di errori di associazione che si verificano perché l'assembly non è stato trovato il sondaggio.</span><span class="sxs-lookup"><span data-stu-id="1798b-120">Do not disable the caching of binding failures that occur because the assembly was not found by probing.</span></span> <span data-ttu-id="1798b-121">Questo è il comportamento di associazione predefinito a partire da .NET Framework versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="1798b-121">This is the default binding behavior starting with the .NET Framework version 2.0.</span></span>|  
+|<span data-ttu-id="1798b-122">1</span><span class="sxs-lookup"><span data-stu-id="1798b-122">1</span></span>|<span data-ttu-id="1798b-123">Disabilitare la memorizzazione nella cache di errori di associazione che si verificano perché l'assembly non è stato trovato il sondaggio.</span><span class="sxs-lookup"><span data-stu-id="1798b-123">Disable the caching of binding failures that occur because the assembly was not found by probing.</span></span> <span data-ttu-id="1798b-124">Questa impostazione consente di ripristinare il comportamento di associazione di .NET Framework versione 1.1.</span><span class="sxs-lookup"><span data-stu-id="1798b-124">This setting reverts to the binding behavior of the .NET Framework version 1.1.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="1798b-125">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="1798b-125">Child Elements</span></span>  
+ <span data-ttu-id="1798b-126">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="1798b-126">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="1798b-127">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="1798b-127">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
+|<span data-ttu-id="1798b-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="1798b-128">Element</span></span>|<span data-ttu-id="1798b-129">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1798b-129">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="1798b-130">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1798b-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="1798b-131">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="1798b-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Note  
- A partire da .NET Framework versione 2.0, il comportamento predefinito per il caricamento degli assembly consiste nel memorizzare nella cache tutti gli errori di associazione e di caricamento.  Se pertanto un tentativo di caricare un assembly ha esito negativo, le richieste successive di caricare lo stesso assembly verranno arrestate immediatamente, senza tentare di individuare l'assembly.  Questo elemento disabilita il comportamento predefinito relativo ad errori di associazione che si verificano perché l'assembly non è stato trovato nel percorso di sondaggio.  Questi errori generano <xref:System.IO.FileNotFoundException>.  
+## <a name="remarks"></a><span data-ttu-id="1798b-132">Note</span><span class="sxs-lookup"><span data-stu-id="1798b-132">Remarks</span></span>  
+ <span data-ttu-id="1798b-133">A partire da .NET Framework versione 2.0, il comportamento predefinito per il caricamento degli assembly è per memorizzare nella cache tutti i binding e gli errori di caricamento.</span><span class="sxs-lookup"><span data-stu-id="1798b-133">Starting with the .NET Framework version 2.0, the default behavior for loading assemblies is to cache all binding and loading failures.</span></span> <span data-ttu-id="1798b-134">Ovvero, se un tentativo di caricare un assembly ha esito negativo, le successive richieste per caricare l'assembly stesso non riescono immediatamente, senza tentare di individuare l'assembly.</span><span class="sxs-lookup"><span data-stu-id="1798b-134">That is, if an attempt to load an assembly fails, subsequent requests to load the same assembly fail immediately, without any attempt to locate the assembly.</span></span> <span data-ttu-id="1798b-135">Questo elemento disabilita il comportamento predefinito per errori di associazione che si verificano perché l'assembly non è stato trovato nel percorso di sondaggio.</span><span class="sxs-lookup"><span data-stu-id="1798b-135">This element disables that default behavior for binding failures that occur because the assembly could not be found in the probing path.</span></span> <span data-ttu-id="1798b-136">Questi errori generano <xref:System.IO.FileNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="1798b-136">These failures throw <xref:System.IO.FileNotFoundException>.</span></span>  
   
- Alcuni errori di associazione e caricamento non sono influenzati da tale elemento e vengono sempre memorizzati nella cache.  Questi errori si verificano perché l'assembly è stato trovato ma non è stato possibile caricarlo.  Generano <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>.  Nell'elenco seguente sono inclusi alcuni esempi di tali errori.  
+ <span data-ttu-id="1798b-137">Alcuni associazione e il caricamento di errori non sono interessati da questo elemento e vengono sempre memorizzati nella cache.</span><span class="sxs-lookup"><span data-stu-id="1798b-137">Some binding and loading failures are not affected by this element, and are always cached.</span></span> <span data-ttu-id="1798b-138">Questi errori si verificano perché l'assembly è stato trovato ma non può essere caricato.</span><span class="sxs-lookup"><span data-stu-id="1798b-138">These failures occur because the assembly was found but could not be loaded.</span></span> <span data-ttu-id="1798b-139">Generano <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>.</span><span class="sxs-lookup"><span data-stu-id="1798b-139">They throw <xref:System.BadImageFormatException> or <xref:System.IO.FileLoadException>.</span></span> <span data-ttu-id="1798b-140">Nell'elenco seguente è riportati alcuni esempi di tali errori.</span><span class="sxs-lookup"><span data-stu-id="1798b-140">The following list includes some examples of such failures.</span></span>  
   
--   Se si tenta di caricare un file che non è un assembly valido, i tentativi successivi di caricare l'assembly non riusciranno anche se il file errato viene sostituito con l'assembly corretto.  
+-   <span data-ttu-id="1798b-141">Se si tenta di caricare un file non è un assembly valido, i tentativi successivi di caricare l'assembly avrà esito negativo anche se il file non valido viene sostituito con l'assembly corretto.</span><span class="sxs-lookup"><span data-stu-id="1798b-141">If you attempt to load a file is not a valid assembly, subsequent attempts to load the assembly will fail even if the bad file is replaced with the correct assembly.</span></span>  
   
--   Se si tenta di caricare un assembly bloccato dal file system, i tentativi successivi di caricare l'assembly non riusciranno anche se l'assembly è stato rilasciato dal file system.  
+-   <span data-ttu-id="1798b-142">Se si tenta di caricare un assembly a cui è stato bloccato dal file system, i tentativi successivi di caricare l'assembly avrà esito negativo anche dopo che l'assembly viene rilasciata dal file system.</span><span class="sxs-lookup"><span data-stu-id="1798b-142">If you attempt to load an assembly that is locked by the file system, subsequent attempts to load the assembly will fail even after the assembly is released by the file system.</span></span>  
   
--   Se una o più versioni dell'assembly che si sta tentando di caricare sono nel percorso di sondaggio ma la versione specifica necessaria non è fra loro, i successivi tentativi di caricamento della versione non riusciranno anche se la versione corretta viene spostata sul percorso del sondaggio.  
+-   <span data-ttu-id="1798b-143">Se uno o più versioni dell'assembly che si sta tentando di caricare è nel percorso di sondaggio, ma la versione che richiesta non è compreso tra loro, i tentativi successivi di caricare tale versione avrà esito negativo anche se la versione corretta viene spostata nel percorso di sondaggio.</span><span class="sxs-lookup"><span data-stu-id="1798b-143">If one or more versions of the assembly that you are attempting to load is in the probing path, but the specific version you are requesting is not among them, subsequent attempts to load that version will fail even if the correct version is moved into the probing path.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene mostrato come disabilitare la memorizzazione nella cache di errori di associazione degli assembly che si verificano perché l'assembly non è stato trovato tramite sondaggio.  
+## <a name="example"></a><span data-ttu-id="1798b-144">Esempio</span><span class="sxs-lookup"><span data-stu-id="1798b-144">Example</span></span>  
+ <span data-ttu-id="1798b-145">Nell'esempio seguente viene illustrato come disabilitare la memorizzazione nella cache di errori di associazione di assembly che si verificano perché l'assembly non è stato trovato il sondaggio.</span><span class="sxs-lookup"><span data-stu-id="1798b-145">The following example shows how to disable the caching of assembly binding failures that occur because the assembly was not found by probing.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <disableCachingBindingFailures enabled="1" />  
@@ -86,7 +88,7 @@ Specifica se disabilitare la memorizzazione nella cache di errori di associazion
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="1798b-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1798b-146">See Also</span></span>  
+ [<span data-ttu-id="1798b-147">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="1798b-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="1798b-148">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="1798b-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="1798b-149">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="1798b-149">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

@@ -1,49 +1,51 @@
 ---
-title: "Interoperabilit&#224; con applicazioni POX | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Interoperabilità con applicazioni POX"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6dbdd72dce196ea58550cff956a7b0e6fe0b1a73
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Interoperabilit&#224; con applicazioni POX
-Le applicazioni "Plain Old XML" \(POX\) comunicano scambiando messaggi HTTP non elaborati che contengono solo dati di applicazioni XML non inclusi all'interno di una SOAP envelope.[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può fornire servizi e client che utilizzano messaggi POX.Nel servizio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere utilizzato per implementare servizi che espongono endpoint a client, ad esempio browser Web e linguaggi di script che inviano e ricevono messaggi POX.Nel client, il modello di programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere utilizzato per implementare client che comunicano con servizi basati su POX.  
+# <a name="interoperability-with-pox-applications"></a><span data-ttu-id="d2298-102">Interoperabilità con applicazioni POX</span><span class="sxs-lookup"><span data-stu-id="d2298-102">Interoperability with POX Applications</span></span>
+<span data-ttu-id="d2298-103">"Plain Old XML" applicazioni (POX) comunicano mediante lo scambio di messaggi HTTP non elaborati che contengono solo i dati dell'applicazione XML che non si trova all'interno di una busta SOAP.</span><span class="sxs-lookup"><span data-stu-id="d2298-103">"Plain Old XML" (POX) applications communicate by exchanging raw HTTP messages that contain only XML application data that is not enclosed within a SOAP envelope.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="d2298-104"> può fornire servizi e client che utilizzano messaggi POX.</span><span class="sxs-lookup"><span data-stu-id="d2298-104"> can provide both services and clients that use POX messages.</span></span> <span data-ttu-id="d2298-105">Nel servizio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere utilizzato per implementare servizi che espongono endpoint a client, ad esempio browser Web e linguaggi di script che inviano e ricevono messaggi POX.</span><span class="sxs-lookup"><span data-stu-id="d2298-105">On the service, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can be used to implement services that expose endpoints to clients such as Web browsers and scripting languages that send and receive POX messages.</span></span> <span data-ttu-id="d2298-106">Nel client, il modello di programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere utilizzato per implementare client che comunicano con servizi basati su POX.</span><span class="sxs-lookup"><span data-stu-id="d2298-106">On the client, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programming model can be used to implement clients that communicate with POX-based services.</span></span>  
   
 > [!NOTE]
->  Questo documento è stato scritto originariamente per [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 dispone di supporto incorporato per l'utilizzo di applicazioni POX.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] vedere [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+>  <span data-ttu-id="d2298-107">Questo documento è stato scritto originariamente per [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.</span><span class="sxs-lookup"><span data-stu-id="d2298-107">This document was originally written for the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.</span></span>  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]<span data-ttu-id="d2298-108"> 3.5 dispone di supporto incorporato per l'utilizzo di applicazioni POX.</span><span class="sxs-lookup"><span data-stu-id="d2298-108"> 3.5 has built-in support for working with POX applications.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d2298-109">vedere [modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)</span><span class="sxs-lookup"><span data-stu-id="d2298-109"> see [WCF Web HTTP Programming Model](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)</span></span>  
   
-## Programmazione POX con WCF  
- I servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che comunicano su HTTP tramite messaggi POX utilizzano un [\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+## <a name="pox-programming-with-wcf"></a><span data-ttu-id="d2298-110">Programmazione POX con WCF</span><span class="sxs-lookup"><span data-stu-id="d2298-110">POX Programming with WCF</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d2298-111">i servizi che comunicano su HTTP tramite l'utilizzo di messaggi POX un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span><span class="sxs-lookup"><span data-stu-id="d2298-111"> services that communicate over HTTP using POX messages use a [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span></span>  
   
-```  
+```xml  
 <customBinding>  
    <binding name="poxServerBinding">  
        <textMessageEncoding messageVersion="None" />  
        <httpTransport />  
    </binding>  
 </customBinding>  
-  
 ```  
   
- Questa associazione personalizzata contiene due elementi:  
+ <span data-ttu-id="d2298-112">Questa associazione personalizzata contiene due elementi:</span><span class="sxs-lookup"><span data-stu-id="d2298-112">This custom binding contains two elements:</span></span>  
   
--   [\<trasportoHttp\>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) e  
+-   <span data-ttu-id="d2298-113">Il [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) e</span><span class="sxs-lookup"><span data-stu-id="d2298-113">The [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) and</span></span>  
   
--   [\<codificaMessaggiTesto\>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+-   <span data-ttu-id="d2298-114">Il [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).</span><span class="sxs-lookup"><span data-stu-id="d2298-114">The [\<textMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).</span></span>  
   
- Il codificatore dei messaggi di testo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard è configurato per l'utilizzo del valore <xref:System.ServiceModel.Channels.MessageVersion.None%2A> che consente di elaborare payload di messaggi XML che non arrivano incapsulati in una SOAP envelope.  
+ <span data-ttu-id="d2298-115">Il codificatore dei messaggi di testo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard è configurato per l'utilizzo del valore <xref:System.ServiceModel.Channels.MessageVersion.None%2A> che consente di elaborare payload di messaggi XML che non arrivano incapsulati in una SOAP envelope.</span><span class="sxs-lookup"><span data-stu-id="d2298-115">The standard [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Text Message Encoder is specially configured to use the <xref:System.ServiceModel.Channels.MessageVersion.None%2A> value, which allows it to process XML message payloads that do not arrive wrapped in a SOAP envelope.</span></span>  
   
- I client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che comunicano su HTTP tramite messaggi POX utilizzano un'associazione simile \(illustrata nel codice imperativo seguente\).  
+ <span data-ttu-id="d2298-116">I client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che comunicano su HTTP tramite messaggi POX utilizzano un'associazione simile (illustrata nel codice imperativo seguente).</span><span class="sxs-lookup"><span data-stu-id="d2298-116">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients that communicate over HTTP using POX messages use a similar binding (shown in the following imperative code).</span></span>  
   
 ```  
 private static Binding CreatePoxBinding()  
@@ -56,26 +58,26 @@ private static Binding CreatePoxBinding()
 }   
 ```  
   
- Poiché i client POX devono specificare in modo esplicito gli URI ai quali inviano messaggi, devono in genere configurare <xref:System.ServiceModel.Channels.HttpTransportBindingElement> come modalità di indirizzamento manuale impostando la proprietà <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> su `true` nell'elemento.Ciò consente ai messaggi di essere indirizzati in modo esplicito dal codice dell'applicazione e non sarà quindi necessario creare un nuovo <xref:System.ServiceModel.ChannelFactory> ogni volta che un'applicazione invia un messaggio a un URI HTTP diverso.  
+ <span data-ttu-id="d2298-117">Poiché i client POX devono specificare in modo esplicito gli URI ai quali inviano messaggi, devono in genere configurare <xref:System.ServiceModel.Channels.HttpTransportBindingElement> come modalità di indirizzamento manuale impostando la proprietà <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> su `true` nell'elemento.</span><span class="sxs-lookup"><span data-stu-id="d2298-117">Because POX clients must explicitly specify the URIs to which they send messages, they usually must configure the <xref:System.ServiceModel.Channels.HttpTransportBindingElement> to a manual addressing mode by setting the <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> property to `true` on the element.</span></span> <span data-ttu-id="d2298-118">Ciò consente ai messaggi di essere indirizzati in modo esplicito dal codice dell'applicazione e non sarà quindi necessario creare un nuovo <xref:System.ServiceModel.ChannelFactory> ogni volta che un'applicazione invia un messaggio a un URI HTTP diverso.</span><span class="sxs-lookup"><span data-stu-id="d2298-118">This allows messages to be addressed explicitly by application code and it is not necessary to create a new <xref:System.ServiceModel.ChannelFactory> every time an application sends a message to a different HTTP URI.</span></span>  
   
- Poiché i messaggi POX non utilizzano intestazioni SOAP per trasmettere informazioni importanti sul protocollo, i client e i servizi POX spesso devono modificare parti della richiesta HTTP sottostante utilizzata per inviare o ricevere un messaggio.Le informazioni sul protocollo specifiche di HTTP, ad esempio le intestazioni e i codici di stato HTTP, nel modello di programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assumono la forma di due classi:  
+ <span data-ttu-id="d2298-119">Poiché i messaggi POX non utilizzano intestazioni SOAP per trasmettere informazioni importanti sul protocollo, i client e i servizi POX spesso devono modificare parti della richiesta HTTP sottostante utilizzata per inviare o ricevere un messaggio.</span><span class="sxs-lookup"><span data-stu-id="d2298-119">Because POX messages do not use SOAP headers to convey important protocol information, POX clients and services often must manipulate pieces of the underlying HTTP request used to send or receive a message.</span></span> <span data-ttu-id="d2298-120">Le informazioni sul protocollo specifiche di HTTP, ad esempio le intestazioni e i codici di stato HTTP, nel modello di programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assumono la forma di due classi:</span><span class="sxs-lookup"><span data-stu-id="d2298-120">HTTP-specific protocol information such as the HTTP headers and status codes are surfaced in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programming model through two classes:</span></span>  
   
--   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> che contiene informazioni sulla richiesta HTTP, ad esempio le intestazioni di metodo e di richiesta HTTP.  
+-   <span data-ttu-id="d2298-121"><xref:System.ServiceModel.Channels.HttpRequestMessageProperty> che contiene informazioni sulla richiesta HTTP, ad esempio le intestazioni di metodo e di richiesta HTTP.</span><span class="sxs-lookup"><span data-stu-id="d2298-121"><xref:System.ServiceModel.Channels.HttpRequestMessageProperty>, which contains information about the HTTP request, such as the HTTP method and request headers.</span></span>  
   
--   <xref:System.ServiceModel.Channels.HttpResponseMessageProperty> che contiene informazioni sulla risposta HTTP, ad esempio il codice di stato e la descrizione dello stato HTTP, come pure qualsiasi intestazione di risposta HTTP.  
+-   <span data-ttu-id="d2298-122"><xref:System.ServiceModel.Channels.HttpResponseMessageProperty> che contiene informazioni sulla risposta HTTP, ad esempio il codice di stato e la descrizione dello stato HTTP, come pure qualsiasi intestazione di risposta HTTP.</span><span class="sxs-lookup"><span data-stu-id="d2298-122"><xref:System.ServiceModel.Channels.HttpResponseMessageProperty>, which contains information about the HTTP response, such as the HTTP status code and status description, as well as any HTTP response headers.</span></span>  
   
- Nell'esempio di codice seguente viene illustrato come creare un messaggio di richiesta HTTP GET indirizzato a http:\/\/localhost:8100\/customers.  
+ <span data-ttu-id="d2298-123">Nell'esempio di codice seguente viene illustrato come creare un messaggio di richiesta HTTP GET indirizzato a http://localhost:8100/customers.</span><span class="sxs-lookup"><span data-stu-id="d2298-123">The following code example shows how to create an HTTP GET request message that is addressed to http://localhost:8100/customers.</span></span>  
   
 ```  
 Message request = Message.CreateMessage( MessageVersion.None, String.Empty );  
-request.Headers.To = “http://localhost:8100/customers”;  
+request.Headers.To = "http://localhost:8100/customers";  
   
 HttpRequestMessageProperty property = new HttpRequestMessageProperty();  
-property.Method = “GET”;  
+property.Method = "GET";  
 property.SuppressEntityBody = true;  
 request.Properties.Add( HttpRequestMessageProperty.Name, property );  
 ```  
   
- In primo luogo viene creata una richiesta vuota <xref:System.ServiceModel.Channels.Message> chiamando <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%29>.Il parametro <xref:System.ServiceModel.Channels.MessageVersion.None%2A> viene utilizzato per indicare che non è necessaria una SOAP envelope e il parametro <xref:System.String.Empty> viene passato come Action.Il messaggio di richiesta viene quindi indirizzato impostando l'intestazione <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> sull'URI desiderato.Viene quindi creato <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> e <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.Method%2A> viene impostato sul metodo del verbo HTTP GET e <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.SuppressEntityBody%2A> viene impostato su `true` per indicare che nessun dato deve essere inviato nel corpo del messaggio di richiesta HTTP in uscita.Infine la proprietà della richiesta viene aggiunta alla raccolta <xref:System.ServiceModel.Channels.Message.Properties%2A> del messaggio di richiesta in modo da influire sull'invio della richiesta da parte del trasporto HTTP.Il messaggio è quindi pronto per essere inviato su un'istanza appropriata di <xref:System.ServiceModel.Channels.IRequestChannel>.  
+ <span data-ttu-id="d2298-124">In primo luogo viene creata una richiesta vuota <xref:System.ServiceModel.Channels.Message> chiamando <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%29>.</span><span class="sxs-lookup"><span data-stu-id="d2298-124">First, an empty request <xref:System.ServiceModel.Channels.Message> is created by calling <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%29>.</span></span> <span data-ttu-id="d2298-125">Il parametro <xref:System.ServiceModel.Channels.MessageVersion.None%2A> viene utilizzato per indicare che non è necessaria una SOAP envelope e il parametro <xref:System.String.Empty> viene passato come Action.</span><span class="sxs-lookup"><span data-stu-id="d2298-125">The <xref:System.ServiceModel.Channels.MessageVersion.None%2A> parameter is used to indicate that a SOAP envelope is not required and <xref:System.String.Empty> parameter is passed as the Action.</span></span> <span data-ttu-id="d2298-126">Il messaggio di richiesta viene quindi indirizzato impostando l'intestazione <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> sull'URI desiderato.</span><span class="sxs-lookup"><span data-stu-id="d2298-126">The request message is then addressed by setting <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> header to the desired URI.</span></span> <span data-ttu-id="d2298-127">Viene quindi creato <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> e <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.Method%2A> viene impostato sul metodo del verbo HTTP GET e <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.SuppressEntityBody%2A> viene impostato su `true` per indicare che nessun dato deve essere inviato nel corpo del messaggio di richiesta HTTP in uscita.</span><span class="sxs-lookup"><span data-stu-id="d2298-127">Next, an <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> is created and the <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.Method%2A> is set to the HTTP verb GET method and the <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.SuppressEntityBody%2A> is set to `true` to indicate that no data should be sent in the body of the outgoing HTTP request message.</span></span> <span data-ttu-id="d2298-128">Infine la proprietà della richiesta viene aggiunta alla raccolta <xref:System.ServiceModel.Channels.Message.Properties%2A> del messaggio di richiesta in modo da influire sull'invio della richiesta da parte del trasporto HTTP.</span><span class="sxs-lookup"><span data-stu-id="d2298-128">Finally, the request property is added to the <xref:System.ServiceModel.Channels.Message.Properties%2A> collection of the request message so it can influence how the HTTP Transport sends the request.</span></span> <span data-ttu-id="d2298-129">Il messaggio è quindi pronto per essere inviato su un'istanza appropriata di <xref:System.ServiceModel.Channels.IRequestChannel>.</span><span class="sxs-lookup"><span data-stu-id="d2298-129">The message is then ready to be sent over an appropriate instance of the <xref:System.ServiceModel.Channels.IRequestChannel>.</span></span>  
   
- È possibile utilizzare tecniche simili nel servizio per estrarre <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> da un messaggio in ingresso e creare una risposta.
+ <span data-ttu-id="d2298-130">È possibile utilizzare tecniche simili nel servizio per estrarre <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> da un messaggio in ingresso e creare una risposta.</span><span class="sxs-lookup"><span data-stu-id="d2298-130">Similar techniques can be used on the service to extract the <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> from an incoming message and construct a response.</span></span>

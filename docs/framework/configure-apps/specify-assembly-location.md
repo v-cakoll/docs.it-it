@@ -1,45 +1,43 @@
 ---
-title: "Specifica della posizione di un assembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "configurazione di applicazioni [.NET Framework]"
-  - "assembly [.NET Framework], specifica del percorso"
-  - "configurazione [.NET Framework], applicazioni"
+title: Specifica un Assembly &#39; s percorso
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration [.NET Framework], applications
+- application configuration [.NET Framework]
+- assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f747d921e9c131edaa8a1749c5adc5eae14623c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Specifica della posizione di un assembly
-È possibile specificare la posizione di un assembly utilizzando due elementi:  
+# <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="849f8-102">Specifica un Assembly &#39; s percorso</span><span class="sxs-lookup"><span data-stu-id="849f8-102">Specifying an Assembly&#39;s Location</span></span>
+<span data-ttu-id="849f8-103">Esistono due modi per specificare il percorso dell'assembly:</span><span class="sxs-lookup"><span data-stu-id="849f8-103">There are two ways to specify an assembly's location:</span></span>  
   
--   Utilizzo dell'elemento [\<codeBase\>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
+-   <span data-ttu-id="849f8-104">Utilizzo di [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="849f8-104">Using the [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) element.</span></span>  
   
--   Utilizzo dell'elemento [\<probing\>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md).  
+-   <span data-ttu-id="849f8-105">Utilizzo di [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="849f8-105">Using the [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element.</span></span>  
   
- È possibile utilizzare anche lo [strumento .NET Framework Configuration \(Mscorcfg.msc\)](http://msdn.microsoft.com/it-it/a7106c52-68da-490e-b129-971b2c743764) per specificare le posizioni di assembly o le posizioni in cui Common Language Runtime possa verificare la presenza di assembly.  
+ <span data-ttu-id="849f8-106">È inoltre possibile utilizzare il [strumento .NET Framework Configuration (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) per specificare i percorsi degli assembly o percorsi visualizzati per common language runtime verificare la presenza di assembly.</span><span class="sxs-lookup"><span data-stu-id="849f8-106">You can also use the [.NET Framework Configuration Tool (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) to specify assembly locations or specify locations for the common language runtime to probe for assemblies.</span></span>  
   
-## Utilizzo dell'elemento \<codeBase\>  
- È possibile utilizzare l'elemento **\<codeBase\>** solo all'interno dei file di configurazione del computer o dei criteri editore che contengono anche le impostazioni per il reindirizzamento della versione di assembly.  Quando determina la versione di assembly da utilizzare, il runtime applica le impostazioni di codebase contenute nel file che determina la versione.  Se non viene specificata alcuna codebase, il runtime verifica la presenza dell'assembly secondo la normale procedura.  Per ulteriori informazioni, vedere [Modalità di individuazione di assembly del runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-codebase-element"></a><span data-ttu-id="849f8-107">Utilizzo di \<codeBase > elemento</span><span class="sxs-lookup"><span data-stu-id="849f8-107">Using the \<codeBase> Element</span></span>  
+ <span data-ttu-id="849f8-108">È possibile utilizzare il  **\<codeBase >** elemento solo nei computer server di pubblicazione o di configurazione file dei criteri che anche la versione dell'assembly di reindirizzamento.</span><span class="sxs-lookup"><span data-stu-id="849f8-108">You can use the **\<codeBase>** element only in machine configuration or publisher policy files that also redirect the assembly version.</span></span> <span data-ttu-id="849f8-109">Quando il runtime determina la versione di assembly da usare, si applica l'impostazione di base del codice dal file che determina la versione.</span><span class="sxs-lookup"><span data-stu-id="849f8-109">When the runtime determines which assembly version to use, it applies the code base setting from the file that determines the version.</span></span> <span data-ttu-id="849f8-110">Se non viene specificata alcuna base di codice, il runtime verifica per l'assembly in modo normale.</span><span class="sxs-lookup"><span data-stu-id="849f8-110">If no code base is indicated, the runtime probes for the assembly in the normal way.</span></span> <span data-ttu-id="849f8-111">Per informazioni dettagliate, vedere [come il Runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="849f8-111">For details, see [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- Nell'esempio riportato di seguito viene illustrato come specificare la posizione di un assembly.  
+ <span data-ttu-id="849f8-112">Nell'esempio seguente viene illustrato come specificare il percorso di un assembly.</span><span class="sxs-lookup"><span data-stu-id="849f8-112">The following example shows how to specify an assembly's location.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -55,17 +53,17 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- È necessario specificare l'attributo **version** per tutti gli assembly con nome sicuro, mentre è possibile ometterlo per gli assembly senza nome sicuro.  L'elemento **\<codeBase\>** richiede l'attributo **href**.  Non è possibile specificare intervalli di versioni nell'elemento **\<codeBase\>**.  
+ <span data-ttu-id="849f8-113">Il **versione** attributo è obbligatorio per tutti gli assembly con nome sicuro, ma deve essere omesso per gli assembly senza nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="849f8-113">The **version** attribute is required for all strong-named assemblies but should be omitted for assemblies that are not strong-named.</span></span> <span data-ttu-id="849f8-114">Il  **\<codeBase >** elemento richiede il **href** attributo.</span><span class="sxs-lookup"><span data-stu-id="849f8-114">The **\<codeBase>** element requires the **href** attribute.</span></span> <span data-ttu-id="849f8-115">Non è possibile specificare gli intervalli di versione nel  **\<codeBase >** elemento.</span><span class="sxs-lookup"><span data-stu-id="849f8-115">You cannot specify version ranges in the **\<codeBase>** element.</span></span>  
   
 > [!NOTE]
->  Se viene fornito un suggerimento relativo alla codebase per un assembly senza nome sicuro, è necessario che tale suggerimento faccia riferimento alla base dell'applicazione o a una sottodirectory della directory della base dell'applicazione.  
+>  <span data-ttu-id="849f8-116">Se viene fornito un hint di base di codice per un assembly che non è sicuro, l'hint deve puntare alla base dell'applicazione o una sottodirectory della directory base dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="849f8-116">If you are supplying a code base hint for an assembly that is not strong-named, the hint must point to the application base or a subdirectory of the application base directory.</span></span>  
   
-## Utilizzo dell'elemento \<probing\>  
- Gli assembly privi di una codebase vengono individuati dal runtime mediante la ricerca.  Per ulteriori informazioni, vedere [Modalità di individuazione di assembly del runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-probing-element"></a><span data-ttu-id="849f8-117">Utilizzo di \<probing > elemento</span><span class="sxs-lookup"><span data-stu-id="849f8-117">Using the \<probing> Element</span></span>  
+ <span data-ttu-id="849f8-118">Il runtime individua gli assembly che non contengono un codice di base mediante la ricerca.</span><span class="sxs-lookup"><span data-stu-id="849f8-118">The runtime locates assemblies that do not have a code base by probing.</span></span> <span data-ttu-id="849f8-119">Per ulteriori informazioni, vedere [come il Runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="849f8-119">For more information about probing, see [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- È possibile utilizzare l'elemento [\<probing\>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) all'interno del file di configurazione dell'applicazione per specificare le sottodirectory in cui il runtime deve eseguire la ricerca per l'individuazione di un assembly.  Nell'esempio riportato di seguito viene illustrato come specificare le directory in cui eseguire la ricerca.  
+ <span data-ttu-id="849f8-120">È possibile utilizzare il [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento nel file di configurazione dell'applicazione per specificare le sottodirectory, eseguire la ricerca durante l'individuazione di un assembly.</span><span class="sxs-lookup"><span data-stu-id="849f8-120">You can use the [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element in the application configuration file to specify subdirectories the runtime should search when locating an assembly.</span></span> <span data-ttu-id="849f8-121">Nell'esempio seguente viene illustrato come specificare directory di cui che eseguire la ricerca.</span><span class="sxs-lookup"><span data-stu-id="849f8-121">The following example shows how to specify directories the runtime should search.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -75,10 +73,10 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- L'attributo **privatePath** contiene le directory nelle quali il runtime deve cercare gli assembly.  Se l'applicazione si trova nella directory C:\\Programmi\\MyApp, il runtime cercherà gli assembly nei quali non viene specificata una codebase nelle directory C:\\Programmi\\MyApp\\Bin, C:\\Programmi\\MyApp\\Bin2\\Subbin e C:\\Programmi\\MyApp\\Bin3.  Le directory specificate nell'attributo **privatePath** devono essere sottodirectory della directory della base applicativa.  
+ <span data-ttu-id="849f8-122">Il **privatePath** attributo contiene le directory che il runtime deve cercare gli assembly.</span><span class="sxs-lookup"><span data-stu-id="849f8-122">The **privatePath** attribute contains the directories that the runtime should search for assemblies.</span></span> <span data-ttu-id="849f8-123">Se l'applicazione si trova in c:\Programmi\Microsoft Programmi\Applicazione, il runtime cerca gli assembly che non si specificano una base di codice in c:\Programmi\Microsoft Files\MyApp\Bin Files\MyApp\Bin2\Subbin c:\Programmi\Microsoft e c:\Programmi\Microsoft Files\MyApp\Bin3.</span><span class="sxs-lookup"><span data-stu-id="849f8-123">If the application is located at C:\Program Files\MyApp, the runtime will look for assemblies that do not specify a code base in C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin, and C:\Program Files\MyApp\Bin3.</span></span> <span data-ttu-id="849f8-124">Directory specificate in **privatePath** devono essere sottodirectory della directory base dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="849f8-124">The directories specified in **privatePath** must be subdirectories of the application base directory.</span></span>  
   
-## Vedere anche  
- [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Configuring .NET Framework Apps](http://msdn.microsoft.com/it-it/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a><span data-ttu-id="849f8-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="849f8-125">See Also</span></span>  
+ [<span data-ttu-id="849f8-126">Assembly in Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="849f8-126">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [<span data-ttu-id="849f8-127">Programmazione con gli assembly</span><span class="sxs-lookup"><span data-stu-id="849f8-127">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="849f8-128">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="849f8-128">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="849f8-129">Configurazione delle app .NET Framework</span><span class="sxs-lookup"><span data-stu-id="849f8-129">Configuring .NET Framework Apps</span></span>](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

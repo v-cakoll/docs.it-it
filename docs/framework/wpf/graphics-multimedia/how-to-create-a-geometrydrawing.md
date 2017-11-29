@@ -1,44 +1,46 @@
 ---
-title: "Procedura: creare un oggetto GeometryDrawing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classi, GeometryDrawing"
-  - "GeometryDrawing (classe)"
-  - "grafica, GeometryDrawing (classe)"
-  - "forme renderizzabili"
-  - "forme, renderizzabili"
+title: 'Procedura: creare un oggetto GeometryDrawing'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- shapes [WPF], renderable
+- renderable shapes [WPF]
+- graphics [WPF], GeometryDrawing class
+- classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7f0fa86a9786e5440db9fec0cee76c5ed28363b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un oggetto GeometryDrawing
-In questo esempio viene illustrato come creare e visualizzare <xref:System.Windows.Media.GeometryDrawing>.  <xref:System.Windows.Media.GeometryDrawing> consente di creare una forma con un riempimento e un contorno associando <xref:System.Windows.Media.Pen> e <xref:System.Windows.Media.Brush> a <xref:System.Windows.Media.Geometry>.  <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> descrive la struttura della forma, <xref:System.Windows.Media.GeometryDrawing.Brush%2A> ne descrive il riempimento e <xref:System.Windows.Media.GeometryDrawing.Pen%2A> ne descrive il contorno.  
+# <a name="how-to-create-a-geometrydrawing"></a><span data-ttu-id="556ae-102">Procedura: creare un oggetto GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="556ae-102">How to: Create a GeometryDrawing</span></span>
+<span data-ttu-id="556ae-103">In questo esempio viene illustrato come creare e visualizzare un <xref:System.Windows.Media.GeometryDrawing>.</span><span class="sxs-lookup"><span data-stu-id="556ae-103">This example shows how to create and display a <xref:System.Windows.Media.GeometryDrawing>.</span></span> <span data-ttu-id="556ae-104">Oggetto <xref:System.Windows.Media.GeometryDrawing> consente di creare una forma con riempimento e una struttura associando un <xref:System.Windows.Media.Pen> e <xref:System.Windows.Media.Brush> con un <xref:System.Windows.Media.Geometry>.</span><span class="sxs-lookup"><span data-stu-id="556ae-104">A <xref:System.Windows.Media.GeometryDrawing> enables you to create shape with a fill and an outline by associating a <xref:System.Windows.Media.Pen> and a <xref:System.Windows.Media.Brush> with a <xref:System.Windows.Media.Geometry>.</span></span> <span data-ttu-id="556ae-105">Il <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> descrive la struttura della forma, il <xref:System.Windows.Media.GeometryDrawing.Brush%2A> descrive il riempimento e <xref:System.Windows.Media.GeometryDrawing.Pen%2A> descrive la struttura della forma.</span><span class="sxs-lookup"><span data-stu-id="556ae-105">The <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> describes the shape's structure, the <xref:System.Windows.Media.GeometryDrawing.Brush%2A> describes the shape's fill, and the <xref:System.Windows.Media.GeometryDrawing.Pen%2A> describes the shape's outline.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene utilizzato <xref:System.Windows.Media.GeometryDrawing> per il rendering di una forma.  La forma è descritta da un oggetto <xref:System.Windows.Media.GeometryGroup> e due oggetti <xref:System.Windows.Media.EllipseGeometry>.  L'interno della forma viene disegnato con <xref:System.Windows.Media.LinearGradientBrush> e il contorno con <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>.  <xref:System.Windows.Media.GeometryDrawing> viene visualizzato tramite un elemento <xref:System.Windows.Media.ImageDrawing> e un elemento <xref:System.Windows.Controls.Image>.  
+## <a name="example"></a><span data-ttu-id="556ae-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="556ae-106">Example</span></span>  
+ <span data-ttu-id="556ae-107">Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.GeometryDrawing> per eseguire il rendering di una forma.</span><span class="sxs-lookup"><span data-stu-id="556ae-107">The following example uses a <xref:System.Windows.Media.GeometryDrawing> to render a shape.</span></span> <span data-ttu-id="556ae-108">La forma è descritta da un <xref:System.Windows.Media.GeometryGroup> e due <xref:System.Windows.Media.EllipseGeometry> oggetti.</span><span class="sxs-lookup"><span data-stu-id="556ae-108">The shape is described by a <xref:System.Windows.Media.GeometryGroup> and two <xref:System.Windows.Media.EllipseGeometry> objects.</span></span> <span data-ttu-id="556ae-109">Viene disegnato l'interno della forma con un <xref:System.Windows.Media.LinearGradientBrush> e la struttura con un <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>.</span><span class="sxs-lookup"><span data-stu-id="556ae-109">The shape's interior is painted with a <xref:System.Windows.Media.LinearGradientBrush> and its outline is drawn with a <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>.</span></span> <span data-ttu-id="556ae-110">Il <xref:System.Windows.Media.GeometryDrawing> viene visualizzato utilizzando un <xref:System.Windows.Media.ImageDrawing> e <xref:System.Windows.Controls.Image> elemento.</span><span class="sxs-lookup"><span data-stu-id="556ae-110">The <xref:System.Windows.Media.GeometryDrawing> is displayed using an <xref:System.Windows.Media.ImageDrawing> and an <xref:System.Windows.Controls.Image> element.</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#GeometryDrawingExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GeometryDrawingExample.cs#geometrydrawingexamplewholepage)]
- [!code-xml[DrawingMiscSnippets_snip#GeometryDrawingExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GeometryDrawingExample.xaml#geometrydrawingexamplewholepage)]  
+ [!code-xaml[DrawingMiscSnippets_snip#GeometryDrawingExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GeometryDrawingExample.xaml#geometrydrawingexamplewholepage)]  
   
- Nella figura riportata di seguito viene illustrato l'oggetto <xref:System.Windows.Media.GeometryDrawing> risultante.  
+ <span data-ttu-id="556ae-111">La figura seguente mostra il valore risultante <xref:System.Windows.Media.GeometryDrawing>.</span><span class="sxs-lookup"><span data-stu-id="556ae-111">The following illustration shows the resulting <xref:System.Windows.Media.GeometryDrawing>.</span></span>  
   
- ![GeometryDrawing di due ellissi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.png "graphicsmm\_geodraw")  
+ <span data-ttu-id="556ae-112">![GeometryDrawing di due ellissi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span><span class="sxs-lookup"><span data-stu-id="556ae-112">![A GeometryDrawing of two ellipses](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span></span>  
   
- Per creare disegni più complessi, è possibile combinare più oggetti di disegno in un singolo disegno composto utilizzando <xref:System.Windows.Media.DrawingGroup>.  
+ <span data-ttu-id="556ae-113">Per creare disegni più complessi, è possibile combinare più oggetti in un unico disegno composto utilizzando un <xref:System.Windows.Media.DrawingGroup>.</span><span class="sxs-lookup"><span data-stu-id="556ae-113">To create more complex drawings, you can combine multiple drawing objects into a single composite drawing using a <xref:System.Windows.Media.DrawingGroup>.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Media.DrawingGroup>   
- [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
- [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Creare un disegno composto](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)
+## <a name="see-also"></a><span data-ttu-id="556ae-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="556ae-114">See Also</span></span>  
+ <xref:System.Windows.Media.DrawingGroup>  
+ [<span data-ttu-id="556ae-115">Cenni preliminari sugli oggetti Drawing</span><span class="sxs-lookup"><span data-stu-id="556ae-115">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="556ae-116">Cenni preliminari sulle classi Geometry</span><span class="sxs-lookup"><span data-stu-id="556ae-116">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="556ae-117">Creare un disegno composto</span><span class="sxs-lookup"><span data-stu-id="556ae-117">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)

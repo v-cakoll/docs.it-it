@@ -1,74 +1,77 @@
 ---
-title: "Gestione delle autorizzazioni con le stored procedure in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gestione delle autorizzazioni con stored procedure in SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 806cd23060dde3f7b466df0d4ce39162353380e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Gestione delle autorizzazioni con le stored procedure in SQL Server
-Per creare più linee di difesa intorno al database, è possibile implementare tutto l'accesso ai dati tramite stored procedure o funzioni definite dall'utente.  Revocare o negare tutte le autorizzazioni per gli oggetti sottostanti, ad esempio tabelle, e concedere autorizzazioni EXECUTE sulle stored procedure.  In questo modo viene creato un perimetro di sicurezza efficace intorno ai dati e agli oggetti di database.  
+# <a name="managing-permissions-with-stored-procedures-in-sql-server"></a><span data-ttu-id="4045e-102">Gestione delle autorizzazioni con stored procedure in SQL Server</span><span class="sxs-lookup"><span data-stu-id="4045e-102">Managing Permissions with Stored Procedures in SQL Server</span></span>
+<span data-ttu-id="4045e-103">Per creare più linee di difesa intorno al database, è possibile implementare tutto l'accesso ai dati tramite stored procedure o funzioni definite dall'utente.</span><span class="sxs-lookup"><span data-stu-id="4045e-103">One method of creating multiple lines of defense around your database is to implement all data access using stored procedures or user-defined functions.</span></span> <span data-ttu-id="4045e-104">Revocare o negare tutte le autorizzazioni per gli oggetti sottostanti, ad esempio tabelle, e concedere autorizzazioni EXECUTE sulle stored procedure.</span><span class="sxs-lookup"><span data-stu-id="4045e-104">You revoke or deny all permissions to underlying objects, such as tables, and grant EXECUTE permissions on stored procedures.</span></span> <span data-ttu-id="4045e-105">In questo modo viene creato un perimetro di sicurezza efficace intorno ai dati e agli oggetti di database.</span><span class="sxs-lookup"><span data-stu-id="4045e-105">This effectively creates a security perimeter around your data and database objects.</span></span>  
   
-## Vantaggi delle stored procedure  
- Le stored procedure offrono i vantaggi seguenti:  
+## <a name="stored-procedure-benefits"></a><span data-ttu-id="4045e-106">Vantaggi delle stored procedure</span><span class="sxs-lookup"><span data-stu-id="4045e-106">Stored Procedure Benefits</span></span>  
+ <span data-ttu-id="4045e-107">Le stored procedure offrono i vantaggi seguenti:</span><span class="sxs-lookup"><span data-stu-id="4045e-107">Stored procedures have the following benefits:</span></span>  
   
--   La logica dei dati e le regole business possono essere incapsulate in modo tale che gli utenti possano accedere a dati e oggetti soltanto nelle modalità previste dagli sviluppatori e dagli amministratori di database.  
+-   <span data-ttu-id="4045e-108">La logica dei dati e le regole business possono essere incapsulate in modo tale che gli utenti possano accedere a dati e oggetti soltanto nelle modalità previste dagli sviluppatori e dagli amministratori di database.</span><span class="sxs-lookup"><span data-stu-id="4045e-108">Data logic and business rules can be encapsulated so that users can access data and objects only in ways that developers and database administrators intend.</span></span>  
   
--   Le stored procedure con parametri che convalidano tutto l'input dell'utente possono essere usate per contrastare gli attacchi SQL injection.  Se si usano istruzioni SQL dinamiche, aggiungere parametri ai comandi e non includere mai i valori dei parametri direttamente in una stringa di query.  
+-   <span data-ttu-id="4045e-109">Le stored procedure con parametri che convalidano tutto l'input dell'utente possono essere usate per contrastare gli attacchi SQL injection.</span><span class="sxs-lookup"><span data-stu-id="4045e-109">Parameterized stored procedures that validate all user input can be used to thwart SQL injection attacks.</span></span> <span data-ttu-id="4045e-110">Se si usano istruzioni SQL dinamiche, aggiungere parametri ai comandi e non includere mai i valori dei parametri direttamente in una stringa di query.</span><span class="sxs-lookup"><span data-stu-id="4045e-110">If you use dynamic SQL, be sure to parameterize your commands, and never include parameter values directly into a query string.</span></span>  
   
--   È possibile non consentire le query e le modifiche dei dati ad hoc,  per impedire agli utenti di eliminare in modo permanente i dati o di eseguire query che compromettono le prestazioni del server o della rete, inavvertitamente o intenzionalmente.  
+-   <span data-ttu-id="4045e-111">È possibile non consentire le query e le modifiche dei dati ad hoc,</span><span class="sxs-lookup"><span data-stu-id="4045e-111">Ad hoc queries and data modifications can be disallowed.</span></span> <span data-ttu-id="4045e-112">per impedire agli utenti di eliminare in modo permanente i dati o di eseguire query che compromettono le prestazioni del server o della rete, inavvertitamente o intenzionalmente.</span><span class="sxs-lookup"><span data-stu-id="4045e-112">This prevents users from maliciously or inadvertently destroying data or executing queries that impair performance on the server or the network.</span></span>  
   
--   Gli errori possono essere gestiti nel codice procedurale senza essere passati direttamente alle applicazioni client.  In questo modo si impedisce la restituzione di messaggi di errore che potrebbero agevolare un attacco di tipo probe.  Registrare gli errori e gestirli sul server.  
+-   <span data-ttu-id="4045e-113">Gli errori possono essere gestiti nel codice procedurale senza essere passati direttamente alle applicazioni client.</span><span class="sxs-lookup"><span data-stu-id="4045e-113">Errors can be handled in procedure code without being passed directly to client applications.</span></span> <span data-ttu-id="4045e-114">In questo modo si impedisce la restituzione di messaggi di errore che potrebbero agevolare un attacco di tipo probe.</span><span class="sxs-lookup"><span data-stu-id="4045e-114">This prevents error messages from being returned that could aid in a probing attack.</span></span> <span data-ttu-id="4045e-115">Registrare gli errori e gestirli sul server.</span><span class="sxs-lookup"><span data-stu-id="4045e-115">Log errors and handle them on the server.</span></span>  
   
--   Le stored procedure possono essere scritte una sola volta ed essere accessibili a molte applicazioni.  
+-   <span data-ttu-id="4045e-116">Le stored procedure possono essere scritte una sola volta ed essere accessibili a molte applicazioni.</span><span class="sxs-lookup"><span data-stu-id="4045e-116">Stored procedures can be written once, and accessed by many applications.</span></span>  
   
--   Le applicazioni client non devono necessariamente riconoscere le strutture dati sottostanti.  Il codice delle stored procedure può essere modificato senza richiedere modifiche nelle applicazioni client, purché le modifiche non abbiano effetto sugli elenchi di parametri o sui tipi di dati restituiti.  
+-   <span data-ttu-id="4045e-117">Le applicazioni client non devono necessariamente riconoscere le strutture dati sottostanti.</span><span class="sxs-lookup"><span data-stu-id="4045e-117">Client applications do not need to know anything about the underlying data structures.</span></span> <span data-ttu-id="4045e-118">Il codice delle stored procedure può essere modificato senza richiedere modifiche nelle applicazioni client, purché le modifiche non abbiano effetto sugli elenchi di parametri o sui tipi di dati restituiti.</span><span class="sxs-lookup"><span data-stu-id="4045e-118">Stored procedure code can be changed without requiring changes in client applications as long as the changes do not affect parameter lists or returned data types.</span></span>  
   
--   Le stored procedure consentono di ridurre il traffico di rete combinando più operazioni in un'unica chiamata di procedura.  
+-   <span data-ttu-id="4045e-119">Le stored procedure consentono di ridurre il traffico di rete combinando più operazioni in un'unica chiamata di procedura.</span><span class="sxs-lookup"><span data-stu-id="4045e-119">Stored procedures can reduce network traffic by combining multiple operations into one procedure call.</span></span>  
   
-## Esecuzione delle stored procedure  
- Le stored procedure traggono vantaggio dal concatenamento della proprietà per fornire l'accesso ai dati. In questo modo gli utenti non devono disporre di autorizzazioni esplicite per l'accesso agli oggetti di database.  Una catena di proprietà esiste quando gli oggetti che accedono ad altri oggetti in modo sequenziale appartengono allo stesso utente.  Ad esempio, una stored procedure può chiamare un'altra stored procedure oppure può accedere a più tabelle.  Se tutti gli oggetti nella catena di esecuzione appartengono allo stesso utente, in SQL server viene controllata solo l'autorizzazione EXECUTE del chiamante, non le autorizzazioni per altri oggetti.  Pertanto, è necessario concedere solo le autorizzazioni EXECUTE sulle stored procedure e revocare o negare tutte le autorizzazioni per le tabelle sottostanti.  
+## <a name="stored-procedure-execution"></a><span data-ttu-id="4045e-120">Esecuzione delle stored procedure</span><span class="sxs-lookup"><span data-stu-id="4045e-120">Stored Procedure Execution</span></span>  
+ <span data-ttu-id="4045e-121">Le stored procedure traggono vantaggio dal concatenamento della proprietà per fornire l'accesso ai dati. In questo modo gli utenti non devono disporre di autorizzazioni esplicite per l'accesso agli oggetti di database.</span><span class="sxs-lookup"><span data-stu-id="4045e-121">Stored procedures take advantage of ownership chaining to provide access to data so that users do not need to have explicit permission to access database objects.</span></span> <span data-ttu-id="4045e-122">Una catena di proprietà esiste quando gli oggetti che accedono ad altri oggetti in modo sequenziale appartengono allo stesso utente.</span><span class="sxs-lookup"><span data-stu-id="4045e-122">An ownership chain exists when objects that access each other sequentially are owned by the same user.</span></span> <span data-ttu-id="4045e-123">Ad esempio, una stored procedure può chiamare un'altra stored procedure oppure può accedere a più tabelle.</span><span class="sxs-lookup"><span data-stu-id="4045e-123">For example, a stored procedure can call other stored procedures, or a stored procedure can access multiple tables.</span></span> <span data-ttu-id="4045e-124">Se tutti gli oggetti nella catena di esecuzione appartengono allo stesso utente, in SQL server viene controllata solo l'autorizzazione EXECUTE del chiamante, non le autorizzazioni per altri oggetti.</span><span class="sxs-lookup"><span data-stu-id="4045e-124">If all objects in the chain of execution have the same owner, then SQL Server only checks the EXECUTE permission for the caller, not the caller's permissions on other objects.</span></span> <span data-ttu-id="4045e-125">Pertanto, è necessario concedere solo le autorizzazioni EXECUTE sulle stored procedure e revocare o negare tutte le autorizzazioni per le tabelle sottostanti.</span><span class="sxs-lookup"><span data-stu-id="4045e-125">Therefore you need to grant only EXECUTE permissions on stored procedures; you can revoke or deny all permissions on the underlying tables.</span></span>  
   
-## Suggerimenti  
- Scrivere stored procedure non è sufficiente per proteggere in modo adeguato l'applicazione.  È necessario prendere in considerazione anche i possibili problemi di sicurezza elencati di seguito.  
+## <a name="best-practices"></a><span data-ttu-id="4045e-126">Suggerimenti</span><span class="sxs-lookup"><span data-stu-id="4045e-126">Best Practices</span></span>  
+ <span data-ttu-id="4045e-127">Scrivere stored procedure non è sufficiente per proteggere in modo adeguato l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4045e-127">Simply writing stored procedures isn't enough to adequately secure your application.</span></span> <span data-ttu-id="4045e-128">È necessario prendere in considerazione anche i possibili problemi di sicurezza elencati di seguito.</span><span class="sxs-lookup"><span data-stu-id="4045e-128">You should also consider the following potential security holes.</span></span>  
   
--   Concedere autorizzazioni EXECUTE sulle stored procedure per i ruoli del database che si desidera siano in grado di accedere ai dati.  
+-   <span data-ttu-id="4045e-129">Concedere autorizzazioni EXECUTE sulle stored procedure per i ruoli del database che si desidera siano in grado di accedere ai dati.</span><span class="sxs-lookup"><span data-stu-id="4045e-129">Grant EXECUTE permissions on the stored procedures for database roles you want to be able to access the data.</span></span>  
   
--   Revocare o negare tutte le autorizzazioni sulle tabelle sottostanti per tutti i ruoli e gli utenti del database, incluso il ruolo `public`.  Tutti gli utenti ereditano le autorizzazioni dal ruolo public.  Pertanto, negando le autorizzazioni a `public`, solo i proprietari e i membri `sysadmin` dispongono di accesso, mentre tutti gli altri utenti non saranno in grado di ereditare le autorizzazioni dall'appartenenza ad altri ruoli.  
+-   <span data-ttu-id="4045e-130">Revocare o negare tutte le autorizzazioni sulle tabelle sottostanti per tutti i ruoli e gli utenti del database, incluso il ruolo `public`.</span><span class="sxs-lookup"><span data-stu-id="4045e-130">Revoke or deny all permissions to the underlying tables for all roles and users in the database, including the `public` role.</span></span> <span data-ttu-id="4045e-131">Tutti gli utenti ereditano le autorizzazioni dal ruolo public.</span><span class="sxs-lookup"><span data-stu-id="4045e-131">All users inherit permissions from public.</span></span> <span data-ttu-id="4045e-132">Pertanto, negando le autorizzazioni a `public`, solo i proprietari e i membri `sysadmin` dispongono di accesso, mentre tutti gli altri utenti non saranno in grado di ereditare le autorizzazioni dall'appartenenza ad altri ruoli.</span><span class="sxs-lookup"><span data-stu-id="4045e-132">Therefore denying permissions to `public` means that only owners and `sysadmin` members have access; all other users will be unable to inherit permissions from membership in other roles.</span></span>  
   
--   Non aggiungere utenti o ruoli ai ruoli `sysadmin` o `db_owner`.  Gli amministratori di sistema e i proprietari di database possono accedere a tutti gli oggetti di database.  
+-   <span data-ttu-id="4045e-133">Non aggiungere utenti o ruoli ai ruoli `sysadmin` o `db_owner`.</span><span class="sxs-lookup"><span data-stu-id="4045e-133">Do not add users or roles to the `sysadmin` or `db_owner` roles.</span></span> <span data-ttu-id="4045e-134">Gli amministratori di sistema e i proprietari di database possono accedere a tutti gli oggetti di database.</span><span class="sxs-lookup"><span data-stu-id="4045e-134">System administrators and database owners can access all database objects.</span></span>  
   
--   Disabilitare l'account `guest`.  In questo modo gli utenti anonimi non potranno connettersi al database.  L'account Guest è disabilitato per impostazione predefinita nei nuovi database.  
+-   <span data-ttu-id="4045e-135">Disabilitare l'account `guest`.</span><span class="sxs-lookup"><span data-stu-id="4045e-135">Disable the `guest` account.</span></span> <span data-ttu-id="4045e-136">In questo modo gli utenti anonimi non potranno connettersi al database.</span><span class="sxs-lookup"><span data-stu-id="4045e-136">This will prevent anonymous users from connecting to the database.</span></span> <span data-ttu-id="4045e-137">L'account Guest è disabilitato per impostazione predefinita nei nuovi database.</span><span class="sxs-lookup"><span data-stu-id="4045e-137">The guest account is disabled by default in new databases.</span></span>  
   
--   Implementare la gestione degli errori e registrare gli errori.  
+-   <span data-ttu-id="4045e-138">Implementare la gestione degli errori e registrare gli errori.</span><span class="sxs-lookup"><span data-stu-id="4045e-138">Implement error handling and log errors.</span></span>  
   
--   Creare stored procedure con parametri che convalidano tutto l'input dell'utente.  Considerare tutto l'input dell'utente come non attendibile.  
+-   <span data-ttu-id="4045e-139">Creare stored procedure con parametri che convalidano tutto l'input dell'utente.</span><span class="sxs-lookup"><span data-stu-id="4045e-139">Create parameterized stored procedures that validate all user input.</span></span> <span data-ttu-id="4045e-140">Considerare tutto l'input dell'utente come non attendibile.</span><span class="sxs-lookup"><span data-stu-id="4045e-140">Treat all user input as untrusted.</span></span>  
   
--   Evitare le istruzioni SQL dinamiche se non sono assolutamente necessarie.  Usare la funzione Transact\-SQL QUOTENAME\(\) per delimitare un valore di stringa e usare caratteri di escape per tutte le occorrenze del delimitatore nella stringa di input.  
+-   <span data-ttu-id="4045e-141">Evitare le istruzioni SQL dinamiche se non sono assolutamente necessarie.</span><span class="sxs-lookup"><span data-stu-id="4045e-141">Avoid dynamic SQL unless absolutely necessary.</span></span> <span data-ttu-id="4045e-142">Usare la funzione Transact-SQL QUOTENAME() per delimitare un valore di stringa e usare caratteri di escape per tutte le occorrenze del delimitatore nella stringa di input.</span><span class="sxs-lookup"><span data-stu-id="4045e-142">Use the Transact-SQL QUOTENAME() function to delimit a string value and escape any occurrence of the delimiter in the input string.</span></span>  
   
-## Risorse esterne  
- Per altre informazioni, vedere le risorse seguenti.  
+## <a name="external-resources"></a><span data-ttu-id="4045e-143">Risorse esterne</span><span class="sxs-lookup"><span data-stu-id="4045e-143">External Resources</span></span>  
+ <span data-ttu-id="4045e-144">Per altre informazioni, vedere le risorse seguenti.</span><span class="sxs-lookup"><span data-stu-id="4045e-144">For more information, see the following resources.</span></span>  
   
-|Risorsa|Descrizione|  
-|-------------|-----------------|  
-|[Stored procedure](http://msdn.microsoft.com/library/ms190782.aspx) e [SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) nella documentazione online di SQL Server|Viene descritto come creare stored procedure e come funziona SQL Injection.|  
+|<span data-ttu-id="4045e-145">Risorsa</span><span class="sxs-lookup"><span data-stu-id="4045e-145">Resource</span></span>|<span data-ttu-id="4045e-146">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4045e-146">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="4045e-147">[Stored procedure](http://msdn.microsoft.com/library/ms190782.aspx) e [attacchi SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) nella documentazione Online di SQL Server</span><span class="sxs-lookup"><span data-stu-id="4045e-147">[Stored Procedures](http://msdn.microsoft.com/library/ms190782.aspx) and [SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) in SQL Server Books Online</span></span>|<span data-ttu-id="4045e-148">Viene descritto come creare stored procedure e come funziona SQL Injection.</span><span class="sxs-lookup"><span data-stu-id="4045e-148">Topics describe how to create stored procedures and how SQL Injection works.</span></span>|  
   
-## Vedere anche  
- [Protezione di applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Panoramica della sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Scrittura di istruzioni SQL dinamiche protette in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)   
- [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)   
- [Personalizzazione delle autorizzazioni mediante la rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)   
- [Modifica di dati con le stored procedure](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="4045e-149">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4045e-149">See Also</span></span>  
+ [<span data-ttu-id="4045e-150">Protezione delle applicazioni ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4045e-150">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="4045e-151">Panoramica della sicurezza SQL Server</span><span class="sxs-lookup"><span data-stu-id="4045e-151">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="4045e-152">Scenari di sicurezza in SQL Server</span><span class="sxs-lookup"><span data-stu-id="4045e-152">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="4045e-153">Scrittura dinamica sicura in SQL Server</span><span class="sxs-lookup"><span data-stu-id="4045e-153">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [<span data-ttu-id="4045e-154">Firma di Stored procedure in SQL Server</span><span class="sxs-lookup"><span data-stu-id="4045e-154">Signing Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="4045e-155">Personalizzazione delle autorizzazioni con rappresentazione in SQL Server</span><span class="sxs-lookup"><span data-stu-id="4045e-155">Customizing Permissions with Impersonation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [<span data-ttu-id="4045e-156">Modifica dei dati con le Stored procedure</span><span class="sxs-lookup"><span data-stu-id="4045e-156">Modifying Data with Stored Procedures</span></span>](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [<span data-ttu-id="4045e-157">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="4045e-157">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,26 +1,28 @@
 ---
-title: "Token personalizzati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sicurezza [WCF], token personalizzati"
+title: Token personalizzati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: security [WCF], custom tokens
 ms.assetid: 8b2dbe29-dec2-4652-8e34-fb21bc1437b5
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36335ce8fd7cc3b82f73c25dbd71e74e207f4f3b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Token personalizzati
-Sebbene [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supporti a livello nativo certificati X.509, token di sicurezza del contesto, ticket Kerberos e token basati sul nome utente come credenziali, è sufficientemente flessibile da consentire l'utilizzo di credenziali personalizzate.  
+# <a name="custom-tokens"></a><span data-ttu-id="8b7bd-102">Token personalizzati</span><span class="sxs-lookup"><span data-stu-id="8b7bd-102">Custom Tokens</span></span>
+<span data-ttu-id="8b7bd-103">Sebbene [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supporti a livello nativo certificati X.509, token di sicurezza del contesto, ticket Kerberos e token basati sul nome utente come credenziali, è sufficientemente flessibile da consentire l'utilizzo di credenziali personalizzate.</span><span class="sxs-lookup"><span data-stu-id="8b7bd-103">Although [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] natively supports X.509 certificates, Security Context Tokens, Kerberos tickets, and user name tokens as credentials, it is flexible enough to allow you to use your own custom credentials.</span></span>  
   
-## In questa sezione  
- [Procedura: creare un token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
- Viene descritto come creare un token di sicurezza personalizzato utilizzando la classe <xref:System.IdentityModel.Tokens.SecurityToken> e come integrarlo in un provider e autenticatore di token di sicurezza personalizzati.
+## <a name="in-this-section"></a><span data-ttu-id="8b7bd-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="8b7bd-104">In This Section</span></span>  
+ [<span data-ttu-id="8b7bd-105">Procedura: creare un Token personalizzato</span><span class="sxs-lookup"><span data-stu-id="8b7bd-105">How to: Create a Custom Token</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
+ <span data-ttu-id="8b7bd-106">Viene descritto come creare un token di sicurezza personalizzato utilizzando la classe <xref:System.IdentityModel.Tokens.SecurityToken> e come integrarlo in un provider e autenticatore di token di sicurezza personalizzati.</span><span class="sxs-lookup"><span data-stu-id="8b7bd-106">Describes how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span>

@@ -1,81 +1,83 @@
 ---
-title: "Elemento &lt;gcAllowVeryLargeObjects&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcAllowVeryLargeObjects> (elemento)"
-  - "gcAllowVeryLargeObjects (elemento)"
+title: '&lt;gcAllowVeryLargeObjects&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- gcAllowVeryLargeObjects element
+- <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 49046c343ef749e597402f7e19a08fe1f2c98ca0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;gcAllowVeryLargeObjects&gt;
-Sulle piattaforme a 64 bit, consente alle matrici che hanno dimensione totale maggiore di 2 GB \(GB\).  
+# <a name="ltgcallowverylargeobjectsgt-element"></a><span data-ttu-id="49f1d-102">&lt;gcAllowVeryLargeObjects&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="49f1d-102">&lt;gcAllowVeryLargeObjects&gt; Element</span></span>
+<span data-ttu-id="49f1d-103">Nelle piattaforme a 64 bit, abilita le matrici con dimensione totale maggiore di 2 gigabyte (GB).</span><span class="sxs-lookup"><span data-stu-id="49f1d-103">On 64-bit platforms, enables arrays that are greater than 2 gigabytes (GB) in total size.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="49f1d-104">\<configurazione > elemento</span><span class="sxs-lookup"><span data-stu-id="49f1d-104">\<configuration> Element</span></span>  
+<span data-ttu-id="49f1d-105">\<runtime > elemento</span><span class="sxs-lookup"><span data-stu-id="49f1d-105">\<runtime> Element</span></span>  
+<span data-ttu-id="49f1d-106">\<gcAllowVeryLargeObjects > elemento</span><span class="sxs-lookup"><span data-stu-id="49f1d-106">\<gcAllowVeryLargeObjects> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="49f1d-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="49f1d-107">Syntax</span></span>  
+  
+```xml  
 <gcAllowVeryLargeObjects    
    enabled="true|false" />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="49f1d-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="49f1d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="49f1d-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="49f1d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="49f1d-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="49f1d-110">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="49f1d-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="49f1d-111">Attribute</span></span>|<span data-ttu-id="49f1d-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="49f1d-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se gli array più grandi di 2 GB nella dimensione totale sono abilitati sulle piattaforme a 64 bit.|  
+|`enabled`|<span data-ttu-id="49f1d-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="49f1d-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="49f1d-114">Specifica se le matrici con dimensione totale più grande di 2 GB sono abilitate nelle piattaforme a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="49f1d-114">Specifies whether arrays that are greater than 2 GB in total size are enabled on 64-bit platforms.</span></span>|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="49f1d-115">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="49f1d-115">enabled Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|Gli array più grandi di 2 GB nella dimensione totale non sono abilitati.  Questa è l'impostazione predefinita.|  
-|`true`|Gli array più grandi di 2 GB nella dimensione totale sono abilitati sulle piattaforme a 64 bit.|  
+|<span data-ttu-id="49f1d-116">Valore</span><span class="sxs-lookup"><span data-stu-id="49f1d-116">Value</span></span>|<span data-ttu-id="49f1d-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="49f1d-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="49f1d-118">Le matrici con dimensione totale più grande di 2 GB non sono abilitate.</span><span class="sxs-lookup"><span data-stu-id="49f1d-118">Arrays greater than 2 GB in total size are not enabled.</span></span> <span data-ttu-id="49f1d-119">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="49f1d-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="49f1d-120">Le matrici con dimensione totale più grande di 2 GB sono abilitate nelle piattaforme a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="49f1d-120">Arrays greater than 2 GB in total size are enabled on 64-bit platforms.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="49f1d-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="49f1d-121">Child Elements</span></span>  
+ <span data-ttu-id="49f1d-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="49f1d-122">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="49f1d-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="49f1d-123">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
+|<span data-ttu-id="49f1d-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="49f1d-124">Element</span></span>|<span data-ttu-id="49f1d-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="49f1d-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="49f1d-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="49f1d-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="49f1d-127">Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="49f1d-127">Contains information about runtime initialization options.</span></span>|  
   
-## Note  
- Utilizzare questo elemento nel file di configurazione dell'applicazione abilita gli array con una dimensione maggiore di 2 GB, ma non modifica gli altri limiti sulla dimensione dell'oggetto o sulla dimensione degli array:  
+## <a name="remarks"></a><span data-ttu-id="49f1d-128">Note</span><span class="sxs-lookup"><span data-stu-id="49f1d-128">Remarks</span></span>  
+ <span data-ttu-id="49f1d-129">L'utilizzo di questo elemento nel file di configurazione dell'applicazione abilita le matrici con dimensione maggiori di 2 GB, ma non consente di modificare gli altri limiti relativi alla dimensione dell'oggetto o della matrice:</span><span class="sxs-lookup"><span data-stu-id="49f1d-129">Using this element in your application configuration file enables arrays that are larger than 2 GB in size, but does not change other limits on object size or array size:</span></span>  
   
--   Il numero massimo di elementi in un array è <xref:System.UInt32.MaxValue?displayProperty=fullName>.  
+-   <span data-ttu-id="49f1d-130">Il numero massimo di elementi in una matrice è <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="49f1d-130">The maximum number of elements in an array is <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span></span>  
   
--   L'indice massimo di ogni singola dimensione è 2.147.483.591 \(0x7FFFFFC7\) per gli array di byte e gli array di strutture a byte singolo e 2.146.435.071 \(0X7FEFFFFF\) per gli altri tipi.  
+-   <span data-ttu-id="49f1d-131">L'indice massimo in ogni singola dimensione è 2.147.483.591 (0x7FFFFFC7) per le matrici di byte e le matrici di strutture a byte singolo e 2.146.435.071 (0X7FEFFFFF) per gli altri tipi.</span><span class="sxs-lookup"><span data-stu-id="49f1d-131">The maximum index in any single dimension is 2,147,483,591 (0x7FFFFFC7) for byte arrays and arrays of single-byte structures, and 2,146,435,071 (0X7FEFFFFF) for other types.</span></span>  
   
--   La dimensione massima consentita per stringhe e altri oggetti che non siano array resterà invariata.  
+-   <span data-ttu-id="49f1d-132">La dimensione massima consentita per le stringhe e altri oggetti diversi da matrici è invariata.</span><span class="sxs-lookup"><span data-stu-id="49f1d-132">The maximum size for strings and other non-array objects is unchanged.</span></span>  
   
 > [!CAUTION]
->  Prima di abilitare questa funzionalità, assicurarsi che l'applicazione non includa codice unsafe che supponga che tutti gli array abbiano dimensioni minori di 2 GB.  Ad esempio, il codice unsafe che utilizza gli array come buffer può essere soggetto a sovraccarichi del buffer se viene scritto partendo dal presupposto che gli array non superino i 2 GB.  
+>  <span data-ttu-id="49f1d-133">Prima di abilitare questa funzionalità, assicurarsi che nell'applicazione non sia incluso codice di tipo unsafe in cui si presuppone che la dimensione di tutte le matrici sia inferiore a 2 GB.</span><span class="sxs-lookup"><span data-stu-id="49f1d-133">Before enabling this feature, ensure that your application does not include unsafe code that assumes that all arrays are smaller than 2 GB in size.</span></span> <span data-ttu-id="49f1d-134">Ad esempio, il codice di tipo unsafe in cui le matrici vengono utilizzate come buffer può essere soggetto a sovraccarichi del buffer se viene scritto partendo dal presupposto che le matrici non superino i 2 GB.</span><span class="sxs-lookup"><span data-stu-id="49f1d-134">For example, unsafe code that uses arrays as buffers might be susceptible to buffer overruns if it is written on the assumption that arrays will not exceed 2 GB.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come attivare questa funzionalità per un'applicazione.  
+## <a name="example"></a><span data-ttu-id="49f1d-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="49f1d-135">Example</span></span>  
+ <span data-ttu-id="49f1d-136">Nell'esempio riportato di seguito viene illustrato come abilitare questa funzionalità per un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="49f1d-136">The following example shows how to enable this feature for an application.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <gcAllowVeryLargeObjects enabled="true" />  
@@ -83,6 +85,6 @@ Sulle piattaforme a 64 bit, consente alle matrici che hanno dimensione totale ma
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="49f1d-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="49f1d-137">See Also</span></span>  
+ [<span data-ttu-id="49f1d-138">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="49f1d-138">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="49f1d-139">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="49f1d-139">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

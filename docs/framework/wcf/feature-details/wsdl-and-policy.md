@@ -1,85 +1,88 @@
 ---
-title: "WSDL e criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WSDL e criteri
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d9255800b08fee4ab15a6d6feef3a53c2755dde8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# WSDL e criteri
-In questo argomento vengono illustrati i dettagli dell'implementazione di WSDL 1.1, WS\-Policy e WS\-PolicyAttachment di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], nonché ulteriori asserzioni WS\-Policy e le estensioni WSDL 1.1 introdotte da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="wsdl-and-policy"></a><span data-ttu-id="23285-102">WSDL e criteri</span><span class="sxs-lookup"><span data-stu-id="23285-102">WSDL and Policy</span></span>
+<span data-ttu-id="23285-103">In questo argomento vengono illustrati i dettagli dell'implementazione di WSDL 1.1, WS-Policy e WS-PolicyAttachment di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], nonché ulteriori asserzioni WS-Policy e le estensioni WSDL 1.1 introdotte da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23285-103">This topic covers [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy and WS-PolicyAttachment implementation details, as well as additional WS-Policy assertions and WSDL 1.1 extensions introduced by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa le specifiche WS\-Policy e WS\-PolicyAttachment inviate a W3C con i vincoli e i chiarimenti descritti in questo documento.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="23285-104"> implementa le specifiche WS-Policy e WS-PolicyAttachment inviate a W3C con i vincoli e i chiarimenti descritti in questo documento.</span><span class="sxs-lookup"><span data-stu-id="23285-104"> implements WS-Policy and WS-PolicyAttachment specifications submitted to W3C with constraints and clarifications described in this document.</span></span>  
   
- In questo documento vengono usati i prefissi e gli spazi dei nomi riportati nella tabella seguente.  
+ <span data-ttu-id="23285-105">In questo documento vengono usati i prefissi e gli spazi dei nomi riportati nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="23285-105">This document uses the prefixes and namespaces shown in the following table.</span></span>  
   
-|Prefisso|Spazio dei nomi|  
-|--------------|---------------------|  
-|wsp \(WS\-Policy 1,2\)|http:\/\/schemas.xmlsoap.org\/ws\/2004\/09\/policy|  
-|wsp \(WS\-Policy 1.5\)|http:\/\/www.w3.org\/ns\/ws\-policy|  
-|http|http:\/\/schemas.microsoft.com\/ws\/06\/2004\/policy\/http|  
-|msmq|http:\/\/schemas.microsoft.com\/ws\/06\/2004\/mspolicy\/msmq|  
-|msf|http:\/\/schemas.microsoft.com\/ws\/2006\/05\/framing\/policy|  
-|mssp|http:\/\/schemas.microsoft.com\/ws\/2005\/07\/securitypolicy|  
-|msc|http:\/\/schemas.microsoft.com\/ws\/2005\/12\/wsdl\/contract|  
-|cdp|http:\/\/schemas.microsoft.com\/net\/2006\/06\/duplex|  
+|<span data-ttu-id="23285-106">Prefisso</span><span class="sxs-lookup"><span data-stu-id="23285-106">Prefix</span></span>|<span data-ttu-id="23285-107">Spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="23285-107">Namespace</span></span>|  
+|------------|---------------|  
+|<span data-ttu-id="23285-108">wsp (WS-Policy 1,2)</span><span class="sxs-lookup"><span data-stu-id="23285-108">wsp (WS-Policy 1.2)</span></span>|<span data-ttu-id="23285-109">http://schemas.xmlsoap.org/ws/2004/09/policy</span><span class="sxs-lookup"><span data-stu-id="23285-109">http://schemas.xmlsoap.org/ws/2004/09/policy</span></span>|  
+|<span data-ttu-id="23285-110">wsp (WS-Policy 1.5)</span><span class="sxs-lookup"><span data-stu-id="23285-110">wsp (WS-Policy 1.5)</span></span>|<span data-ttu-id="23285-111">http://www.w3.org/ns/ws-policy</span><span class="sxs-lookup"><span data-stu-id="23285-111">http://www.w3.org/ns/ws-policy</span></span>|  
+|<span data-ttu-id="23285-112">http</span><span class="sxs-lookup"><span data-stu-id="23285-112">http</span></span>|<span data-ttu-id="23285-113">http://schemas.microsoft.com/ws/06/2004/policy/http</span><span class="sxs-lookup"><span data-stu-id="23285-113">http://schemas.microsoft.com/ws/06/2004/policy/http</span></span>|  
+|<span data-ttu-id="23285-114">msmq</span><span class="sxs-lookup"><span data-stu-id="23285-114">msmq</span></span>|<span data-ttu-id="23285-115">http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq</span><span class="sxs-lookup"><span data-stu-id="23285-115">http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq</span></span>|  
+|<span data-ttu-id="23285-116">msf</span><span class="sxs-lookup"><span data-stu-id="23285-116">msf</span></span>|<span data-ttu-id="23285-117">http://schemas.microsoft.com/ws/2006/05/framing/policy</span><span class="sxs-lookup"><span data-stu-id="23285-117">http://schemas.microsoft.com/ws/2006/05/framing/policy</span></span>|  
+|<span data-ttu-id="23285-118">mssp</span><span class="sxs-lookup"><span data-stu-id="23285-118">mssp</span></span>|<span data-ttu-id="23285-119">http://schemas.microsoft.com/ws/2005/07/securitypolicy</span><span class="sxs-lookup"><span data-stu-id="23285-119">http://schemas.microsoft.com/ws/2005/07/securitypolicy</span></span>|  
+|<span data-ttu-id="23285-120">msc</span><span class="sxs-lookup"><span data-stu-id="23285-120">msc</span></span>|<span data-ttu-id="23285-121">http://schemas.microsoft.com/ws/2005/12/wsdl/contract</span><span class="sxs-lookup"><span data-stu-id="23285-121">http://schemas.microsoft.com/ws/2005/12/wsdl/contract</span></span>|  
+|<span data-ttu-id="23285-122">cdp</span><span class="sxs-lookup"><span data-stu-id="23285-122">cdp</span></span>|<span data-ttu-id="23285-123">http://schemas.microsoft.com/net/2006/06/duplex</span><span class="sxs-lookup"><span data-stu-id="23285-123">http://schemas.microsoft.com/net/2006/06/duplex</span></span>|  
   
-## Estensioni WSDL1.1 di WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa le estensioni WSDL1.1 seguenti per descrivere i requisiti delle sessioni di contratto.  
+## <a name="wcf-wsdl11-extensions"></a><span data-ttu-id="23285-124">Estensioni WSDL1.1 di WCF</span><span class="sxs-lookup"><span data-stu-id="23285-124">WCF WSDL1.1 Extensions</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="23285-125"> usa le estensioni WSDL1.1 seguenti per descrivere i requisiti delle sessioni di contratto.</span><span class="sxs-lookup"><span data-stu-id="23285-125"> uses the following WSDL1.1 extensions to describe contract session requirements.</span></span>  
   
- wsdl:portType\/wsdl:operation\/@msc:isInitiating  
- xs:boolean, indica che questa operazione avvia una sessione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; il valore predefinito è `false`.  
+ wsdl:portType/wsdl:operation/@msc:isInitiating  
+ <span data-ttu-id="23285-126">xs:boolean, indica che questa operazione avvia una sessione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="23285-126">xs:boolean, indicates this operation initiates a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] session; the default value is `false`.</span></span>  
   
- wsdl:portType\/wsdl:operation\/@msc:isTerminating  
- xs:boolean, indica che questa operazione termina una sessione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; il valore predefinito è `false`.  
+ wsdl:portType/wsdl:operation/@msc:isTerminating  
+ <span data-ttu-id="23285-127">xs:boolean, indica che questa operazione termina una sessione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="23285-127">xs:boolean, indicates this operation terminates a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] session; the default value is `false`.</span></span>  
   
- wsdl:portType\/wsdl:operation\/@msc:usingSession  
- xs:boolean, indica che questo contratto richiede una sessione per essere stabilito.  
+ wsdl:portType/wsdl:operation/@msc:usingSession  
+ <span data-ttu-id="23285-128">xs:boolean, indica che questo contratto richiede una sessione per essere stabilito.</span><span class="sxs-lookup"><span data-stu-id="23285-128">xs:boolean, indicates this contract requires session to be established.</span></span>  
   
-### URI dei trasporti delle associazioni SOAP 1.x HTTP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa gli URI seguenti per indicare i trasporti da usare per gli elementi di estensione delle associazioni WSDL 1.1, SOAP 1.1 e SOAP 1.2.  
+### <a name="soap-1x-http-binding-transport-uris"></a><span data-ttu-id="23285-129">URI dei trasporti delle associazioni SOAP 1.x HTTP</span><span class="sxs-lookup"><span data-stu-id="23285-129">SOAP 1.x HTTP Binding Transport URIs</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="23285-130"> usa gli URI seguenti per indicare i trasporti da usare per gli elementi di estensione delle associazioni WSDL 1.1, SOAP 1.1 e SOAP 1.2.</span><span class="sxs-lookup"><span data-stu-id="23285-130"> uses the following URIs to indicate transports to be used for WSDL 1.1, SOAP 1.1, and SOAP 1.2 binding extension elements.</span></span>  
   
-|Trasporto|URI|  
+|<span data-ttu-id="23285-131">Trasporto</span><span class="sxs-lookup"><span data-stu-id="23285-131">Transport</span></span>|<span data-ttu-id="23285-132">URI</span><span class="sxs-lookup"><span data-stu-id="23285-132">URI</span></span>|  
 |---------------|---------|  
-|HTTP|http:\/\/schemas.xmlsoap.org\/soap\/http|  
-|TCP|http:\/\/schemas.microsoft.com\/soap\/tcp|  
-|MSMQ|http:\/\/schemas.microsoft.com\/soap\/msmq|  
-|Named pipe|http:\/\/schemas.microsoft.com\/soap\/named\-pipe|  
+|<span data-ttu-id="23285-133">HTTP</span><span class="sxs-lookup"><span data-stu-id="23285-133">HTTP</span></span>|<span data-ttu-id="23285-134">http://schemas.xmlsoap.org/soap/http</span><span class="sxs-lookup"><span data-stu-id="23285-134">http://schemas.xmlsoap.org/soap/http</span></span>|  
+|<span data-ttu-id="23285-135">TCP</span><span class="sxs-lookup"><span data-stu-id="23285-135">TCP</span></span>|<span data-ttu-id="23285-136">http://schemas.microsoft.com/soap/tcp</span><span class="sxs-lookup"><span data-stu-id="23285-136">http://schemas.microsoft.com/soap/tcp</span></span>|  
+|<span data-ttu-id="23285-137">MSMQ</span><span class="sxs-lookup"><span data-stu-id="23285-137">MSMQ</span></span>|<span data-ttu-id="23285-138">http://schemas.microsoft.com/soap/msmq</span><span class="sxs-lookup"><span data-stu-id="23285-138">http://schemas.microsoft.com/soap/msmq</span></span>|  
+|<span data-ttu-id="23285-139">Named pipe</span><span class="sxs-lookup"><span data-stu-id="23285-139">Named Pipes</span></span>|<span data-ttu-id="23285-140">http://schemas.microsoft.com/soap/named-pipe</span><span class="sxs-lookup"><span data-stu-id="23285-140">http://schemas.microsoft.com/soap/named-pipe</span></span>|  
   
-## Asserzioni di criteri implementate da WCF  
- Oltre alle asserzioni di criteri introdotte nelle specifiche dei servizi Web \(WS \- \*\) e menzionate nelle altre sezioni di questo documento, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa le asserzioni di criteri seguenti.  
+## <a name="policy-assertions-implemented-by-wcf"></a><span data-ttu-id="23285-141">Asserzioni di criteri implementate da WCF</span><span class="sxs-lookup"><span data-stu-id="23285-141">Policy Assertions Implemented by WCF</span></span>  
+ <span data-ttu-id="23285-142">Oltre alle asserzioni di criteri introdotte nelle specifiche dei servizi Web (WS - *) e menzionate nelle altre sezioni di questo documento, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa le asserzioni di criteri seguenti.</span><span class="sxs-lookup"><span data-stu-id="23285-142">In addition to policy assertions introduced in the Web Services specifications (WS-*) and mentioned in other sections of this document, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implements the following policy assertions.</span></span>  
   
-|Asserzione di criteri|Soggetto dei criteri|Descrizione|  
-|---------------------------|--------------------------|-----------------|  
-|http:HttpBasicAuthentication|Endpoint|L'endpoint usa l'autenticazione di base HTTP.|  
-|http:HttpDigestAuthentication|Endpoint|L'endpoint usa l'autenticazione digest HTTP.|  
-|http:HttpNegotiateAuthentication|Endpoint|L'endpoint usa l'autenticazione Negotiate HTTP.|  
-|http:HttpNtlmAuthentication|Endpoint|L'endpoint usa l'autenticazione NTLM HTTP.|  
-|msf:Streamed|Endpoint|L'endpoint usa il framing dei messaggi trasmessi.  Questa asserzione viene usata con il protocollo di framing dei messaggi fornito per trasporti quali TCP e named pipe.|  
-|msf:SslTransportSecurity|Endpoint|L'endpoint usa la protezione a livello di trasporto \(TLS\) con il framing dei messaggi.|  
-|msf:WindowsTransportSecurity|Endpoint|L'endpoint usa Security Provider Negotiation \(SPNEGO\) con il framing dei messaggi.|  
-|msmq:MsmqBestEffort|Endpoint|MSMQ con le migliori garanzie.|  
-|msmq:MsmqSession|Endpoint|MSMQ con le garanzie di sessione.|  
-|msmq:MsmqVolatile|Endpoint|MSMQ volatile.|  
-|msmq:Authenticated|Endpoint|L'autenticazione viene usata con il trasporto MSMQ.|  
-|msmq:WindowsDomain|Endpoint|MSMQ usa l'autenticazione dei domini di Windows.|  
-|cdp:CompositeDuplex|Endpoint|L'endpoint usa due connessioni di trasporto contrarie separate per i messaggi in ingresso e in uscita.|  
-|mssp:RsaToken|Annidata|Asserzione del token della chiave RSA.  Questo requisito viene generalmente soddisfatto da una chiave RSA serializza direttamente come parte delle informazioni sulla chiave in una firma di verifica dell'autenticità.|  
-|mssp:SslContextToken|Annidata|Richiede che venga usato un SecurityContextToken ottenuto mediante un handshake TLS binario che usa WS\-Trust.  Le asserzioni annidate includono: sp:RequireDerivedKeys, mssp:MustNotSendCancel, mssp:RequireClientCertificate.|  
-|mssp:MustNotSendCancel|Annidata|Specifica un requisito secondo cui all'autorità emittente di un determinato SecurityContextToken non devono essere inviati messaggi di richiesta di un token RST \(Request Security Token\) \[WS\-Trust\] usando l'associazione Cancel \[WS\-Trust, WS\-SC\].  Se questa asserzione è presente, tali messaggi di richiesta non devono essere inviati all'autorità emittente.  Se questa asserzione non è presente, tali messaggi di richiesta possono essere inviati all'autorità emittente.|  
-|mssp:RequireClientCertificate|Annidata|Questo elemento facoltativo specifica un requisito secondo cui deve essere fornito un certificato client come parte del protocollo TLSNEGO.  Se questa asserzione è presente, deve essere fornito un certificato client.  Se questa asserzione non è presente, non deve essere fornito un certificato client.  Questa asserzione non deve essere usata al di fuori di mssp:SslContextToken.|  
+|<span data-ttu-id="23285-143">Asserzione di criteri</span><span class="sxs-lookup"><span data-stu-id="23285-143">Policy assertion</span></span>|<span data-ttu-id="23285-144">Soggetto dei criteri</span><span class="sxs-lookup"><span data-stu-id="23285-144">Policy subject</span></span>|<span data-ttu-id="23285-145">Descrizione</span><span class="sxs-lookup"><span data-stu-id="23285-145">Description</span></span>|  
+|----------------------|--------------------|-----------------|  
+|<span data-ttu-id="23285-146">http:HttpBasicAuthentication</span><span class="sxs-lookup"><span data-stu-id="23285-146">http:HttpBasicAuthentication</span></span>|<span data-ttu-id="23285-147">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-147">Endpoint</span></span>|<span data-ttu-id="23285-148">L'endpoint usa l'autenticazione di base HTTP.</span><span class="sxs-lookup"><span data-stu-id="23285-148">Endpoint uses HTTP Basic Authentication.</span></span>|  
+|<span data-ttu-id="23285-149">http:HttpDigestAuthentication</span><span class="sxs-lookup"><span data-stu-id="23285-149">http:HttpDigestAuthentication</span></span>|<span data-ttu-id="23285-150">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-150">Endpoint</span></span>|<span data-ttu-id="23285-151">L'endpoint usa l'autenticazione digest HTTP.</span><span class="sxs-lookup"><span data-stu-id="23285-151">Endpoint uses HTTP Digest Authentication.</span></span>|  
+|<span data-ttu-id="23285-152">http:HttpNegotiateAuthentication</span><span class="sxs-lookup"><span data-stu-id="23285-152">http:HttpNegotiateAuthentication</span></span>|<span data-ttu-id="23285-153">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-153">Endpoint</span></span>|<span data-ttu-id="23285-154">L'endpoint usa l'autenticazione Negotiate HTTP.</span><span class="sxs-lookup"><span data-stu-id="23285-154">Endpoint uses HTTP Negotiate Authentication.</span></span>|  
+|<span data-ttu-id="23285-155">http:HttpNtlmAuthentication</span><span class="sxs-lookup"><span data-stu-id="23285-155">http:HttpNtlmAuthentication</span></span>|<span data-ttu-id="23285-156">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-156">Endpoint</span></span>|<span data-ttu-id="23285-157">L'endpoint usa l'autenticazione NTLM HTTP.</span><span class="sxs-lookup"><span data-stu-id="23285-157">Endpoint uses HTTP NTLM Authentication.</span></span>|  
+|<span data-ttu-id="23285-158">msf:Streamed</span><span class="sxs-lookup"><span data-stu-id="23285-158">msf:Streamed</span></span>|<span data-ttu-id="23285-159">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-159">Endpoint</span></span>|<span data-ttu-id="23285-160">L'endpoint usa il framing dei messaggi trasmessi.</span><span class="sxs-lookup"><span data-stu-id="23285-160">Endpoint uses streamed message framing.</span></span> <span data-ttu-id="23285-161">Questa asserzione viene usata con il protocollo di framing dei messaggi fornito per trasporti quali TCP e named pipe.</span><span class="sxs-lookup"><span data-stu-id="23285-161">This assertion is used with the Message Framing protocol provided for transports such as TCP, and named pipes.</span></span>|  
+|<span data-ttu-id="23285-162">msf:SslTransportSecurity</span><span class="sxs-lookup"><span data-stu-id="23285-162">msf:SslTransportSecurity</span></span>|<span data-ttu-id="23285-163">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-163">Endpoint</span></span>|<span data-ttu-id="23285-164">L'endpoint usa la protezione a livello di trasporto (TLS) con il framing dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="23285-164">Endpoint uses transport-layer security (TLS) with message framing.</span></span>|  
+|<span data-ttu-id="23285-165">msf:WindowsTransportSecurity</span><span class="sxs-lookup"><span data-stu-id="23285-165">msf:WindowsTransportSecurity</span></span>|<span data-ttu-id="23285-166">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-166">Endpoint</span></span>|<span data-ttu-id="23285-167">L'endpoint usa Security Provider Negotiation (SPNEGO) con il framing dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="23285-167">Endpoint uses Security Provider Negotiation (SPNEGO) with message framing.</span></span>|  
+|<span data-ttu-id="23285-168">msmq:MsmqBestEffort</span><span class="sxs-lookup"><span data-stu-id="23285-168">msmq:MsmqBestEffort</span></span>|<span data-ttu-id="23285-169">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-169">Endpoint</span></span>|<span data-ttu-id="23285-170">MSMQ con le migliori garanzie.</span><span class="sxs-lookup"><span data-stu-id="23285-170">MSMQ with best-effort guarantees.</span></span>|  
+|<span data-ttu-id="23285-171">msmq:MsmqSession</span><span class="sxs-lookup"><span data-stu-id="23285-171">msmq:MsmqSession</span></span>|<span data-ttu-id="23285-172">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-172">Endpoint</span></span>|<span data-ttu-id="23285-173">MSMQ con le garanzie di sessione.</span><span class="sxs-lookup"><span data-stu-id="23285-173">MSMQ with Session guarantees.</span></span>|  
+|<span data-ttu-id="23285-174">msmq:MsmqVolatile</span><span class="sxs-lookup"><span data-stu-id="23285-174">msmq:MsmqVolatile</span></span>|<span data-ttu-id="23285-175">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-175">Endpoint</span></span>|<span data-ttu-id="23285-176">MSMQ volatile.</span><span class="sxs-lookup"><span data-stu-id="23285-176">MSMQ Volatile.</span></span>|  
+|<span data-ttu-id="23285-177">msmq:Authenticated</span><span class="sxs-lookup"><span data-stu-id="23285-177">msmq:Authenticated</span></span>|<span data-ttu-id="23285-178">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-178">Endpoint</span></span>|<span data-ttu-id="23285-179">L'autenticazione viene usata con il trasporto MSMQ.</span><span class="sxs-lookup"><span data-stu-id="23285-179">Authentication is used with MSMQ transport.</span></span>|  
+|<span data-ttu-id="23285-180">msmq:WindowsDomain</span><span class="sxs-lookup"><span data-stu-id="23285-180">msmq:WindowsDomain</span></span>|<span data-ttu-id="23285-181">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-181">Endpoint</span></span>|<span data-ttu-id="23285-182">MSMQ usa l'autenticazione dei domini di Windows.</span><span class="sxs-lookup"><span data-stu-id="23285-182">MSMQ uses Windows Domain authentication.</span></span>|  
+|<span data-ttu-id="23285-183">cdp:CompositeDuplex</span><span class="sxs-lookup"><span data-stu-id="23285-183">cdp:CompositeDuplex</span></span>|<span data-ttu-id="23285-184">Endpoint</span><span class="sxs-lookup"><span data-stu-id="23285-184">Endpoint</span></span>|<span data-ttu-id="23285-185">L'endpoint usa due connessioni di trasporto contrarie separate per i messaggi in ingresso e in uscita.</span><span class="sxs-lookup"><span data-stu-id="23285-185">Endpoint uses two separate converse transport connections for in and out messages.</span></span>|  
+|<span data-ttu-id="23285-186">mssp:RsaToken</span><span class="sxs-lookup"><span data-stu-id="23285-186">mssp:RsaToken</span></span>|<span data-ttu-id="23285-187">Annidata</span><span class="sxs-lookup"><span data-stu-id="23285-187">Nested</span></span>|<span data-ttu-id="23285-188">Asserzione del token della chiave RSA.</span><span class="sxs-lookup"><span data-stu-id="23285-188">RSA key token assertion.</span></span> <span data-ttu-id="23285-189">Questo requisito viene generalmente soddisfatto da una chiave RSA serializza direttamente come parte delle informazioni sulla chiave in una firma di verifica dell'autenticità.</span><span class="sxs-lookup"><span data-stu-id="23285-189">This requirement is typically satisfied by an RSA key serialized directly as part of the key information in an endorsing signature.</span></span>|  
+|<span data-ttu-id="23285-190">mssp:SslContextToken</span><span class="sxs-lookup"><span data-stu-id="23285-190">mssp:SslContextToken</span></span>|<span data-ttu-id="23285-191">Annidata</span><span class="sxs-lookup"><span data-stu-id="23285-191">Nested</span></span>|<span data-ttu-id="23285-192">Richiede che venga usato un SecurityContextToken ottenuto mediante un handshake TLS binario che usa WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="23285-192">Requires that a SecurityContextToken obtained using binary TLS handshake using WS-Trust be used.</span></span> <span data-ttu-id="23285-193">Le asserzioni annidate includono: sp:RequireDerivedKeys, mssp:MustNotSendCancel, mssp:RequireClientCertificate.</span><span class="sxs-lookup"><span data-stu-id="23285-193">Nested assertions include: sp:RequireDerivedKeys, mssp:MustNotSendCancel, mssp:RequireClientCertificate.</span></span>|  
+|<span data-ttu-id="23285-194">mssp:MustNotSendCancel</span><span class="sxs-lookup"><span data-stu-id="23285-194">mssp:MustNotSendCancel</span></span>|<span data-ttu-id="23285-195">Annidata</span><span class="sxs-lookup"><span data-stu-id="23285-195">Nested</span></span>|<span data-ttu-id="23285-196">Specifica un requisito secondo cui all'autorità emittente di un determinato SecurityContextToken non devono essere inviati messaggi di richiesta di un token RST (Request Security Token) [WS-Trust] usando l'associazione Cancel [WS-Trust, WS-SC].</span><span class="sxs-lookup"><span data-stu-id="23285-196">Specifies a requirement that a request security token (RST) request messages [WS-Trust] using the Cancel binding [WS-Trust, WS-SC] not be sent to the issuer of a given SecurityContextToken.</span></span> <span data-ttu-id="23285-197">Se questa asserzione è presente, tali messaggi di richiesta non devono essere inviati all'autorità emittente.</span><span class="sxs-lookup"><span data-stu-id="23285-197">If this assertion is present, then such request messages must not be sent to the issuer.</span></span> <span data-ttu-id="23285-198">Se questa asserzione non è presente, tali messaggi di richiesta possono essere inviati all'autorità emittente.</span><span class="sxs-lookup"><span data-stu-id="23285-198">If this assertion is not present, then such request messages can be sent to the issuer.</span></span>|  
+|<span data-ttu-id="23285-199">mssp:RequireClientCertificate</span><span class="sxs-lookup"><span data-stu-id="23285-199">mssp:RequireClientCertificate</span></span>|<span data-ttu-id="23285-200">Annidata</span><span class="sxs-lookup"><span data-stu-id="23285-200">Nested</span></span>|<span data-ttu-id="23285-201">Questo elemento facoltativo specifica un requisito secondo cui deve essere fornito un certificato client come parte del protocollo TLSNEGO.</span><span class="sxs-lookup"><span data-stu-id="23285-201">This optional element specifies a requirement for a client certificate to be provided as part of the TLSNEGO protocol.</span></span> <span data-ttu-id="23285-202">Se questa asserzione è presente, deve essere fornito un certificato client.</span><span class="sxs-lookup"><span data-stu-id="23285-202">If this assertion is present, then a client certificate must be provided.</span></span> <span data-ttu-id="23285-203">Se questa asserzione non è presente, non deve essere fornito un certificato client.</span><span class="sxs-lookup"><span data-stu-id="23285-203">If this assertion is not present, then a client certificate must not be provided.</span></span> <span data-ttu-id="23285-204">Questa asserzione non deve essere usata al di fuori di mssp:SslContextToken.</span><span class="sxs-lookup"><span data-stu-id="23285-204">This assertion must not be used outside of mssp:SslContextToken.</span></span>|  
   
-## Vedere anche  
- [Pubblicazione WSDL personalizzata](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)   
- [Procedura: esportare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)   
- [Procedura: importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a><span data-ttu-id="23285-205">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="23285-205">See Also</span></span>  
+ [<span data-ttu-id="23285-206">Pubblicazione WSDL personalizzata</span><span class="sxs-lookup"><span data-stu-id="23285-206">Custom WSDL Publication</span></span>](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+ [<span data-ttu-id="23285-207">Procedura: esportare informazioni WSDL personalizzate</span><span class="sxs-lookup"><span data-stu-id="23285-207">How to: Export Custom WSDL</span></span>](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [<span data-ttu-id="23285-208">Procedura: importare informazioni WSDL personalizzate</span><span class="sxs-lookup"><span data-stu-id="23285-208">How to: Import Custom WSDL</span></span>](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

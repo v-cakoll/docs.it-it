@@ -1,23 +1,26 @@
 ---
-title: "Servizio: transazioni propagate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Servizio: transazioni propagate'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c564d7d-60d3-45a4-a9a1-c78f62ace57f
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 87a1b0493582c86b0f75f381928d5aaeada85d6a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Servizio: transazioni propagate
-Nome contatore: transazioni propagate  
+# <a name="service-transactions-flowed"></a><span data-ttu-id="c98ae-102">Servizio: transazioni propagate</span><span class="sxs-lookup"><span data-stu-id="c98ae-102">Service: Transactions Flowed</span></span>
+<span data-ttu-id="c98ae-103">Nome contatore: transazioni propagate</span><span class="sxs-lookup"><span data-stu-id="c98ae-103">Counter Name: Transactions Flowed.</span></span>  
   
-## Descrizione  
- Numero di transazioni propagate a operazioni contenute in questo servizio.
+## <a name="description"></a><span data-ttu-id="c98ae-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c98ae-104">Description</span></span>  
+ <span data-ttu-id="c98ae-105">Numero di transazioni propagate a operazioni contenute in questo servizio.</span><span class="sxs-lookup"><span data-stu-id="c98ae-105">Number of transactions flowed to operations in this service.</span></span>

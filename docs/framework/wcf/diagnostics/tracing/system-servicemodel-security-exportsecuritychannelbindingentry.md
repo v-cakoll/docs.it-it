@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Security.ExportSecurityChannelBindingEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Security.ExportSecurityChannelBindingEntry
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 043bad66-0a09-47c2-ae90-d1f225f52a24
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: d3c18f029514aa5ba1d585f65e963e5d8c9a99c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Security.ExportSecurityChannelBindingEntry
-System.ServiceModel.Security.ExportSecurityChannelBindingEntry  
+# <a name="systemservicemodelsecurityexportsecuritychannelbindingentry"></a><span data-ttu-id="ca2e5-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="ca2e5-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>
+<span data-ttu-id="ca2e5-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="ca2e5-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>  
   
-## Descrizione  
- Avvio di ExportChannelBinding di sicurezza.  
+## <a name="description"></a><span data-ttu-id="ca2e5-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ca2e5-104">Description</span></span>  
+ <span data-ttu-id="ca2e5-105">Avvio di ExportChannelBinding di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="ca2e5-105">Starting the Security ExportChannelBinding.</span></span>  
   
-## Vedere anche  
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ca2e5-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ca2e5-106">See Also</span></span>  
+ [<span data-ttu-id="ca2e5-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="ca2e5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ca2e5-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="ca2e5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ca2e5-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="ca2e5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,69 +1,51 @@
 ---
-title: Quando il valore del parametro &quot;ByRef&quot; &quot;&lt;parametername&gt;&quot;argomento corrispondente viene convertito dal tipo&quot;&lt;NomeTipo1&gt;&quot; al tipo&quot;&lt;in NomeTipo2&gt;&quot; | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Copia il valore di &#39; ByRef &#39; parametro &#39; &lt;parametername&gt;&#39; back per la corrispondenza consente di restringere argomento di tipo &#39;&lt; NomeTipo1&gt;&#39; nel tipo &#39;&lt; NomeTipo2&gt;&#39;
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc32053
 - vbc32053
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC32053
+helpviewer_keywords: BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 84574006b2e2ccc669fdd83ebfb6eec06b00f041
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4bf993639007162e2e17d4b8cb9dfe8d5316acaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Quando il valore del parametro 'ByRef' '&lt;parametername&gt;'argomento corrispondente viene convertito dal tipo'&lt;NomeTipo1&gt;' al tipo'&lt;in NomeTipo2&gt;'
-Una procedura viene chiamata con un argomento che può ampliarsi nel tipo di parametro corrispondente, e la conversione dal parametro dell'argomento è più piccolo.  
+# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a><span data-ttu-id="cd604-102">Copia il valore di &#39; ByRef &#39; parametro &#39; &lt;parametername&gt;&#39; back per la corrispondenza consente di restringere argomento di tipo &#39;&lt; NomeTipo1&gt;&#39; nel tipo &#39;&lt; NomeTipo2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="cd604-102">Copying the value of &#39;ByRef&#39; parameter &#39;&lt;parametername&gt;&#39; back to the matching argument narrows from type &#39;&lt;typename1&gt;&#39; to type &#39;&lt;typename2&gt;&#39;</span></span>
+<span data-ttu-id="cd604-103">Una routine viene chiamata con un argomento che viene ampliato al tipo di parametro corrispondente e la conversione dal parametro per l'argomento è di restrizione.</span><span class="sxs-lookup"><span data-stu-id="cd604-103">A procedure is called with an argument that widens to the corresponding parameter type, and the conversion from the parameter to the argument is narrowing.</span></span>  
   
- Quando si definisce una classe o una struttura, è possibile definire uno o più operatori di conversione per convertire il tipo della classe o della struttura in altri tipi. È anche possibile definire operatori di conversione inversi per riconvertire gli altri tipi nel tipo della classe o della struttura originale. Quando si utilizza il tipo di classe o struttura in una chiamata di procedura [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] possibile utilizzare gli operatori di conversione per convertire il tipo di un argomento per il tipo del parametro corrispondente.  
+ <span data-ttu-id="cd604-104">Quando si definisce una classe o una struttura, è possibile definire uno o più operatori di conversione per convertire il tipo della classe o della struttura in altri tipi.</span><span class="sxs-lookup"><span data-stu-id="cd604-104">When you define a class or structure, you can define one or more conversion operators to convert that class or structure type to other types.</span></span> <span data-ttu-id="cd604-105">È anche possibile definire operatori di conversione inversi per riconvertire gli altri tipi nel tipo della classe o della struttura originale.</span><span class="sxs-lookup"><span data-stu-id="cd604-105">You can also define reverse conversion operators to convert those other types back to your class or structure type.</span></span> <span data-ttu-id="cd604-106">Quando il tipo della classe o della struttura viene usato in una chiamata di routine, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] può usare questi operatori di conversione per convertire il tipo di un argomento nel tipo del parametro corrispondente.</span><span class="sxs-lookup"><span data-stu-id="cd604-106">When you use your class or structure type in a procedure call, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] can use these conversion operators to convert the type of an argument to the type of its corresponding parameter.</span></span>  
   
- Se si passa l'argomento [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] talvolta copia il valore dell'argomento in una variabile locale nella procedura anziché passare un riferimento. In tal caso, quando viene restituito, la procedura [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] dovrà quindi copiare il valore della variabile locale nell'argomento nel codice chiamante.  
+ <span data-ttu-id="cd604-107">Se si passa l'argomento [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] copia a volte il valore dell'argomento in una variabile locale nella routine invece di passare un riferimento.</span><span class="sxs-lookup"><span data-stu-id="cd604-107">If you pass the argument [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sometimes copies the argument value into a local variable in the procedure instead of passing a reference.</span></span> <span data-ttu-id="cd604-108">In un caso simile, alla restituzione della routine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deve quindi ricopiare il valore della variabile locale nell'argomento nel codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="cd604-108">In such a case, when the procedure returns, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must then copy the local variable value back into the argument in the calling code.</span></span>  
   
- Se un valore dell'argomento `ByRef` viene copiato nella routine e l'argomento e il parametro sono dello stesso tipo, non è necessaria alcuna conversione. Tuttavia, se i tipi sono diversi, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] necessario convertirli in entrambe le direzioni. Se uno dei tipi è il tipo di classe o struttura, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] deve convertire da e verso l'altro tipo. Se una di queste conversioni è un ampliamento, potrebbe limitare la conversione inversa.  
+ <span data-ttu-id="cd604-109">Se un valore dell'argomento `ByRef` viene copiato nella routine e l'argomento e il parametro sono dello stesso tipo, non è necessaria alcuna conversione.</span><span class="sxs-lookup"><span data-stu-id="cd604-109">If a `ByRef` argument value is copied into the procedure and the argument and parameter are of the same type, no conversion is necessary.</span></span> <span data-ttu-id="cd604-110">Se invece i tipi sono diversi, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deve eseguire la conversione in entrambe le direzioni.</span><span class="sxs-lookup"><span data-stu-id="cd604-110">But if the types are different, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must convert in both directions.</span></span> <span data-ttu-id="cd604-111">Se uno dei tipi è il tipo della classe o della struttura, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deve convertirlo nell'altro tipo e dall'altro tipo.</span><span class="sxs-lookup"><span data-stu-id="cd604-111">If one of the types is your class or structure type, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must convert it both to and from the other type.</span></span> <span data-ttu-id="cd604-112">Se una di queste conversioni è ampliamento, potrebbe limitare la conversione inversa.</span><span class="sxs-lookup"><span data-stu-id="cd604-112">If one of these conversions is widening, the reverse conversion might be narrowing.</span></span>  
   
- **ID errore:** BC32053  
+ <span data-ttu-id="cd604-113">**ID errore:** BC32053</span><span class="sxs-lookup"><span data-stu-id="cd604-113">**Error ID:** BC32053</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cd604-114">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="cd604-114">To correct this error</span></span>  
   
--   Se possibile, utilizzare un argomento chiamante dello stesso tipo del parametro di routine, pertanto [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] non è necessario effettuare alcuna conversione.  
+-   <span data-ttu-id="cd604-115">Se possibile, usare un argomento chiamante dello stesso tipo del parametro della routine, in modo che [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] non debba eseguire alcuna conversione.</span><span class="sxs-lookup"><span data-stu-id="cd604-115">If possible, use a calling argument of the same type as the procedure parameter, so [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] does not need to do any conversion.</span></span>  
   
--   Se è necessario chiamare la routine con un argomento di tipo diverso dal tipo di parametro ma non è necessario restituire un valore nell'argomento di chiamata, definire il parametro come [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) anziché `ByRef`.  
+-   <span data-ttu-id="cd604-116">Se è necessario chiamare la routine con un argomento di tipo diverso dal tipo di parametro ma non è necessario restituire un valore nell'argomento chiamante, definire il parametro come [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) anziché `ByRef`.</span><span class="sxs-lookup"><span data-stu-id="cd604-116">If you need to call the procedure with an argument type different from the parameter type but do not need to return a value into the calling argument, define the parameter to be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) instead of `ByRef`.</span></span>  
   
--   Se si desidera restituire un valore nell'argomento di chiamata, definire l'operatore di conversione inversa come [Widening](../../../visual-basic/language-reference/modifiers/widening.md), se possibile.  
+-   <span data-ttu-id="cd604-117">Se è necessario restituire un valore nell'argomento chiamante, definire l'operatore di conversione inversi come [Widening](../../../visual-basic/language-reference/modifiers/widening.md), se possibile.</span><span class="sxs-lookup"><span data-stu-id="cd604-117">If you need to return a value into the calling argument, define the reverse conversion operator as [Widening](../../../visual-basic/language-reference/modifiers/widening.md), if possible.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedure](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Gli argomenti e parametri di routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Passaggio di argomenti per valore e per riferimento](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Operator (istruzione)](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Procedura: definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [Procedura: definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [Conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="cd604-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cd604-118">See Also</span></span>  
+ [<span data-ttu-id="cd604-119">Routine</span><span class="sxs-lookup"><span data-stu-id="cd604-119">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [<span data-ttu-id="cd604-120">Parametri e argomenti delle routine</span><span class="sxs-lookup"><span data-stu-id="cd604-120">Procedure Parameters and Arguments</span></span>](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="cd604-121">Passaggio di argomenti per valore e per riferimento</span><span class="sxs-lookup"><span data-stu-id="cd604-121">Passing Arguments by Value and by Reference</span></span>](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="cd604-122">Routine di operatore</span><span class="sxs-lookup"><span data-stu-id="cd604-122">Operator Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
+ [<span data-ttu-id="cd604-123">Istruzione Operator</span><span class="sxs-lookup"><span data-stu-id="cd604-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="cd604-124">Procedura: Definire un operatore</span><span class="sxs-lookup"><span data-stu-id="cd604-124">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [<span data-ttu-id="cd604-125">Procedura: Definire un operatore di conversione</span><span class="sxs-lookup"><span data-stu-id="cd604-125">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="cd604-126">Conversioni di tipi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cd604-126">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="cd604-127">Conversioni di ampliamento e restrizione</span><span class="sxs-lookup"><span data-stu-id="cd604-127">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

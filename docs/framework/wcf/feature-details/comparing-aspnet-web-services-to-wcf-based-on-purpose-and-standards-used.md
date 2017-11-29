@@ -1,27 +1,30 @@
 ---
-title: "Confronto tra i servizi Web ASP.NET e WCF basato sullo scopo e gli standard usati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Confronto tra i servizi Web ASP.NET e WCF basato sullo scopo e gli standard usati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c6dc444b8a4c19dbe486eb904e0f054e05f6fe6a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Confronto tra i servizi Web ASP.NET e WCF basato sullo scopo e gli standard usati
-I servizi Web ASP.NET sono stati sviluppati per creare applicazioni che inviano e ricevono messaggi usando SOAP \(Simple Object Access Protocol\) su HTTP.  La struttura dei messaggi può essere definita usando un XML Schema e viene fornito un strumento per facilitare la serializzazione dei messaggi provenienti e destinati a oggetti .NET Framework.  La tecnologia può generare automaticamente metadati per descrivere i servizi Web nel linguaggio di descrizione dei servizi Web \(WSDL, Web Services Description Language\) e viene fornito un secondo strumento per generare client per i servizi Web da WSDL.  
+# <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a><span data-ttu-id="9c094-102">Confronto tra i servizi Web ASP.NET e WCF basato sullo scopo e gli standard usati</span><span class="sxs-lookup"><span data-stu-id="9c094-102">Comparing ASP.NET Web Services to WCF Based on Purpose and Standards Used</span></span>
+<span data-ttu-id="9c094-103">I servizi Web ASP.NET sono stati sviluppati per creare applicazioni che inviano e ricevono messaggi usando SOAP (Simple Object Access Protocol) su HTTP.</span><span class="sxs-lookup"><span data-stu-id="9c094-103">ASP.NET Web services was developed for building applications that send and receive messages by using the Simple Object Access Protocol (SOAP) over HTTP.</span></span> <span data-ttu-id="9c094-104">La struttura dei messaggi può essere definita usando un XML Schema e viene fornito un strumento per facilitare la serializzazione dei messaggi provenienti e destinati a oggetti .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9c094-104">The structure of the messages can be defined using an XML Schema, and a tool is provided to facilitate serializing the messages to and from .NET Framework objects.</span></span> <span data-ttu-id="9c094-105">La tecnologia può generare automaticamente metadati per descrivere i servizi Web nel linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) e viene fornito un secondo strumento per generare client per i servizi Web da WSDL.</span><span class="sxs-lookup"><span data-stu-id="9c094-105">The technology can automatically generate metadata to describe Web services in the Web Services Description Language (WSDL), and a second tool is provided for generating clients for Web services from the WSDL.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è stato progettato per consentire alle applicazioni .NET Framework di scambiare messaggi con altre entità software.  Per impostazione predefinita viene usato SOAP, ma i messaggi possono avere qualsiasi formato ed essere trasmessi mediante qualsiasi protocollo di trasporto.  La struttura dei messaggi può essere definita usando un XML Schema e sono disponibili diverse opzioni per la serializzazione dei messaggi provenienti e destinati a oggetti .NET Framework.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può generare automaticamente metadati per descrivere applicazioni compilate usando la tecnologia in WSDL e fornisce anche uno strumento per la generazione di client per tali applicazioni da WSDL.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="9c094-106"> è stato progettato per consentire alle applicazioni .NET Framework di scambiare messaggi con altre entità software.</span><span class="sxs-lookup"><span data-stu-id="9c094-106"> is for enabling .NET Framework applications to exchange messages with other software entities.</span></span> <span data-ttu-id="9c094-107">Per impostazione predefinita viene usato SOAP, ma i messaggi possono avere qualsiasi formato ed essere trasmessi mediante qualsiasi protocollo di trasporto.</span><span class="sxs-lookup"><span data-stu-id="9c094-107">SOAP is used by default, but the messages can be in any format, and conveyed by using any transport protocol.</span></span> <span data-ttu-id="9c094-108">La struttura dei messaggi può essere definita usando un XML Schema e sono disponibili diverse opzioni per la serializzazione dei messaggi provenienti e destinati a oggetti .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9c094-108">The structure of the messages can be defined using an XML Schema, and there are various options for serializing the messages to and from .NET Framework objects.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="9c094-109"> può generare automaticamente metadati per descrivere applicazioni compilate usando la tecnologia in WSDL e fornisce anche uno strumento per la generazione di client per tali applicazioni da WSDL.</span><span class="sxs-lookup"><span data-stu-id="9c094-109"> can automatically generate metadata to describe applications built using the technology in WSDL, and it also provides a tool for generating clients for those applications from the WSDL.</span></span>  
   
- Gli standard supportati dai servizi Web ASP.NET sono documentati nella pagina sui [servizi Web XML creati tramite ASP.NET](http://go.microsoft.com/fwlink/?LinkId=94872).  Un elenco più completo degli standard supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è disponibile in [Protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
+ <span data-ttu-id="9c094-110">Gli standard supportati dai servizi Web ASP.NET sono documentati in [servizi Web XML creati tramite ASP.NET](http://go.microsoft.com/fwlink/?LinkId=94872).</span><span class="sxs-lookup"><span data-stu-id="9c094-110">The standards supported by ASP.NET Web services are documented in [XML Web Services Created Using ASP.NET](http://go.microsoft.com/fwlink/?LinkId=94872).</span></span> <span data-ttu-id="9c094-111">L'elenco completo dei standard supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono elencati in [protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="9c094-111">The more extensive list of standards supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] are listed at [Web Services Protocols Supported by System-Provided Interoperability Bindings](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).</span></span>  
   
-## Vedere anche  
- [Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+## <a name="see-also"></a><span data-ttu-id="9c094-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9c094-112">See Also</span></span>  
+ [<span data-ttu-id="9c094-113">Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo</span><span class="sxs-lookup"><span data-stu-id="9c094-113">Comparing ASP.NET Web Services to WCF Based on Development</span></span>](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

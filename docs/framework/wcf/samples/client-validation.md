@@ -1,74 +1,77 @@
 ---
-title: "Convalida client | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Convalida client
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f0be40b84b11268319daff343598aa949977c52d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Convalida client
-I servizi pubblicano spesso metadati per consentire la generazione e configurazione automatica di tipi di proxy client.  Quando il servizio non è considerato attendibile, le applicazioni client devono convalidare che i metadati siano conformi ai criteri dell'applicazione client riguardanti la sicurezza, le transazioni, il tipo di contratto di servizio e così via.  Nell'esempio seguente viene dimostrato come scrivere un comportamento dell'endpoint client che convalida l'endpoint del servizio per garantire che quest'ultimo possa essere usato senza rischi.  
+# <a name="client-validation"></a><span data-ttu-id="d79fc-102">Convalida client</span><span class="sxs-lookup"><span data-stu-id="d79fc-102">Client Validation</span></span>
+<span data-ttu-id="d79fc-103">I servizi pubblicano spesso metadati per consentire la generazione e configurazione automatica di tipi di proxy client.</span><span class="sxs-lookup"><span data-stu-id="d79fc-103">Services frequently publish metadata to enable automatic generation and configuration of client proxy types.</span></span> <span data-ttu-id="d79fc-104">Quando il servizio non è considerato attendibile, le applicazioni client devono convalidare che i metadati siano conformi ai criteri dell'applicazione client riguardanti la sicurezza, le transazioni, il tipo di contratto di servizio e così via.</span><span class="sxs-lookup"><span data-stu-id="d79fc-104">When the service is not trusted, client applications should validate that the metadata conforms to the client application's policy regarding security, transactions, the type of service contract and so on.</span></span> <span data-ttu-id="d79fc-105">Nell'esempio seguente viene dimostrato come scrivere un comportamento dell'endpoint client che convalida l'endpoint del servizio per garantire che quest'ultimo possa essere usato senza rischi.</span><span class="sxs-lookup"><span data-stu-id="d79fc-105">The following sample demonstrates how to write a client endpoint behavior that validates the service endpoint to ensure that service endpoint is safe to use.</span></span>  
   
- Il servizio espone quattro endpoint del servizio.  Il primo endpoint usa WSDualHttpBinding, il secondo usa l'autenticazione NTLM, il terzo abilita il flusso delle transazioni e il quarto usa l'autenticazione basata sui certificati.  
+ <span data-ttu-id="d79fc-106">Il servizio espone quattro endpoint del servizio.</span><span class="sxs-lookup"><span data-stu-id="d79fc-106">The service exposes four service endpoints.</span></span> <span data-ttu-id="d79fc-107">Il primo endpoint usa WSDualHttpBinding, il secondo usa l'autenticazione NTLM, il terzo abilita il flusso delle transazioni e il quarto usa l'autenticazione basata sui certificati.</span><span class="sxs-lookup"><span data-stu-id="d79fc-107">The first endpoint uses the WSDualHttpBinding, the second endpoint uses NTLM authentication, the third endpoint enables transaction flow, and the fourth endpoint uses certificate-based authentication.</span></span>  
   
- Il client usa la classe <xref:System.ServiceModel.Description.MetadataResolver> per recuperare i metadati per il servizio.  Il client applica i criteri di proibizione delle associazioni duplex, autenticazione NTLM e flusso delle transazioni usando un comportamento di convalida.  Per ogni istanza <xref:System.ServiceModel.Description.ServiceEndpoint> importata dai metadati del servizio, l'applicazione client aggiunge un'istanza del comportamento dell'endpoint `InternetClientValidatorBehavior` a <xref:System.ServiceModel.Description.ServiceEndpoint> prima di tentare di usare un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per connettersi all'endpoint.  Il metodo `Validate` del comportamento viene eseguito prima che venga chiamata qualsiasi operazione nel servizio e applica i criteri del client generando `InvalidOperationExceptions`.  
+ <span data-ttu-id="d79fc-108">Il client usa la classe <xref:System.ServiceModel.Description.MetadataResolver> per recuperare i metadati per il servizio.</span><span class="sxs-lookup"><span data-stu-id="d79fc-108">The client uses the <xref:System.ServiceModel.Description.MetadataResolver> class to retrieve the metadata for the service.</span></span> <span data-ttu-id="d79fc-109">Il client applica i criteri di proibizione delle associazioni duplex, autenticazione NTLM e flusso delle transazioni usando un comportamento di convalida.</span><span class="sxs-lookup"><span data-stu-id="d79fc-109">The client enforces a policy of prohibiting duplex bindings, NTLM authentication, and transaction flow using a validating behavior.</span></span> <span data-ttu-id="d79fc-110">Per ogni istanza <xref:System.ServiceModel.Description.ServiceEndpoint> importata dai metadati del servizio, l'applicazione client aggiunge un'istanza del comportamento dell'endpoint `InternetClientValidatorBehavior` a <xref:System.ServiceModel.Description.ServiceEndpoint> prima di tentare di usare un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per connettersi all'endpoint.</span><span class="sxs-lookup"><span data-stu-id="d79fc-110">For each <xref:System.ServiceModel.Description.ServiceEndpoint> instance imported from the service's metadata, the client application adds an instance of the `InternetClientValidatorBehavior` endpoint behavior to the <xref:System.ServiceModel.Description.ServiceEndpoint> before attempting to use a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client to connect to the endpoint.</span></span> <span data-ttu-id="d79fc-111">Il metodo `Validate` del comportamento viene eseguito prima che venga chiamata qualsiasi operazione nel servizio e applica i criteri del client generando `InvalidOperationExceptions`.</span><span class="sxs-lookup"><span data-stu-id="d79fc-111">The behavior's `Validate` method runs before any operations on the service are called and enforces the client's policy by throwing `InvalidOperationExceptions`.</span></span>  
   
-### Per compilare l'esempio  
+### <a name="to-build-the-sample"></a><span data-ttu-id="d79fc-112">Per compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="d79fc-112">To build the sample</span></span>  
   
-1.  Per compilare la soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  <span data-ttu-id="d79fc-113">Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="d79fc-113">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-### Per eseguire l'esempio nello stesso computer  
+### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="d79fc-114">Per eseguire l'esempio nello stesso computer</span><span class="sxs-lookup"><span data-stu-id="d79fc-114">To run the sample on the same computer</span></span>  
   
-1.  Aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio.  In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
+1.  <span data-ttu-id="d79fc-115">Aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="d79fc-115">Open a Visual Studio command prompt with administrator privileges and run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="d79fc-116">In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="d79fc-116">This installs all the certificates required for running the sample.</span></span>  
   
-2.  Eseguire l'applicazione di servizio da \\service\\bin\\Debug.  
+2.  <span data-ttu-id="d79fc-117">Eseguire l'applicazione di servizio da \service\bin\Debug.</span><span class="sxs-lookup"><span data-stu-id="d79fc-117">Run the service application from \service\bin\Debug.</span></span>  
   
-3.  Eseguire l'applicazione client da \\client\\bin\\Debug.  L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+3.  <span data-ttu-id="d79fc-118">Eseguire l'applicazione client da \client\bin\Debug.</span><span class="sxs-lookup"><span data-stu-id="d79fc-118">Run the client application from \client\bin\Debug.</span></span> <span data-ttu-id="d79fc-119">L'attività del client viene visualizzata nella finestra dell'applicazione console.</span><span class="sxs-lookup"><span data-stu-id="d79fc-119">Client activity is displayed on the client console application.</span></span>  
   
-4.  Se il client e il servizio non sono in grado di comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  <span data-ttu-id="d79fc-120">Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="d79fc-120">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-5.  Rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio.  Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
+5.  <span data-ttu-id="d79fc-121">Rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio.</span><span class="sxs-lookup"><span data-stu-id="d79fc-121">Remove the certificates by running Cleanup.bat when you have finished with the sample.</span></span> <span data-ttu-id="d79fc-122">Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.</span><span class="sxs-lookup"><span data-stu-id="d79fc-122">Other security samples use the same certificates.</span></span>  
   
-### Per eseguire l'esempio tra più computer  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="d79fc-123">Per eseguire l'esempio tra più computer</span><span class="sxs-lookup"><span data-stu-id="d79fc-123">To run the sample across computers</span></span>  
   
-1.  Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore, quindi digitare `setup.bat service`.  Quando si esegue `setup.bat` `` con l'argomento `service` viene creato un certificato del servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service.cer.  
+1.  <span data-ttu-id="d79fc-124">Nel server, in un prompt dei comandi di Visual Studio con privilegi di amministratore, digitare `setup.bat service`.</span><span class="sxs-lookup"><span data-stu-id="d79fc-124">On the server, in a Visual Studio command prompt run with administrator privileges, type `setup.bat service`.</span></span> <span data-ttu-id="d79fc-125">Esecuzione `setup.bat` con il `service` argomento crea un certificato di servizio con il nome di dominio completo del computer e il certificato di servizio viene esportato in un file denominato Service.cer.</span><span class="sxs-lookup"><span data-stu-id="d79fc-125">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the computer and exports the service certificate to a file named Service.cer.</span></span>  
   
-2.  Modificare App.config sul server per riflettere il nome del nuovo certificato,  ovvero modificare l'attributo `findValue` nell'elemento [\<certificatoServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) con il nome di dominio completo del computer.  
+2.  <span data-ttu-id="d79fc-126">Modificare App.config sul server per riflettere il nome del nuovo certificato,</span><span class="sxs-lookup"><span data-stu-id="d79fc-126">On the server, edit App.config to reflect the new certificate name.</span></span> <span data-ttu-id="d79fc-127">Ossia, modifica il `findValue` attributo il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) elemento sul nome di dominio completo del computer.</span><span class="sxs-lookup"><span data-stu-id="d79fc-127">That is, change the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) element to the fully-qualified domain name of the computer.</span></span>  
   
-3.  Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
+3.  <span data-ttu-id="d79fc-128">Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.</span><span class="sxs-lookup"><span data-stu-id="d79fc-128">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
   
-4.  Sul client aprire un prompt dei comandi di Visual Studio con privilegi di amministratore, quindi digitare `setup.bat client`.  Quando si esegue `setup.bat` `` con l'argomento `client` viene creato un certificato client denominato client.com che viene esportato in un file denominato Client.cer.  
+4.  <span data-ttu-id="d79fc-129">Nel client, aprire un prompt dei comandi di Visual Studio con privilegi di amministratore e digitare `setup.bat client`.</span><span class="sxs-lookup"><span data-stu-id="d79fc-129">On the client, open a Visual Studio command prompt with administrator privileges, and type `setup.bat client`.</span></span> <span data-ttu-id="d79fc-130">Esecuzione `setup.bat` con il `client` argomento crea un certificato client denominato Client.com ed Esporta il certificato client in un file denominato Client.cer.</span><span class="sxs-lookup"><span data-stu-id="d79fc-130">Running `setup.bat` with the `client` argument creates a client certificate named Client.com and exports the client certificate to a file named Client.cer.</span></span>  
   
-5.  Nel file client.cs modificare il valore dell'indirizzo dell'endpoint MEX e il `findValue` per impostare il certificato del server predefinito in modo che corrisponda al nuovo indirizzo del servizio.  Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server.  Ricompilare il file.  
+5.  <span data-ttu-id="d79fc-131">Nel file client.cs modificare il valore dell'indirizzo dell'endpoint MEX e il `findValue` per impostare il certificato del server predefinito in modo che corrisponda al nuovo indirizzo del servizio.</span><span class="sxs-lookup"><span data-stu-id="d79fc-131">In the client.cs file change the address value of the MEX endpoint and the `findValue` for setting the default server certificate to match the new address of your service.</span></span> <span data-ttu-id="d79fc-132">Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server.</span><span class="sxs-lookup"><span data-stu-id="d79fc-132">You do this by replacing localhost with the fully-qualified domain name of the server.</span></span> <span data-ttu-id="d79fc-133">Ricompilare il file.</span><span class="sxs-lookup"><span data-stu-id="d79fc-133">Rebuild.</span></span>  
   
-6.  Copiare il file Client.cer dalla directory del client nella directory del servizio sul server.  
+6.  <span data-ttu-id="d79fc-134">Copiare il file Client.cer dalla directory del client nella directory del servizio sul server.</span><span class="sxs-lookup"><span data-stu-id="d79fc-134">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-7.  Sul client aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportServiceCert.bat.  In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser \- TrustedPeople.  
+7.  <span data-ttu-id="d79fc-135">Sul client aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportServiceCert.bat.</span><span class="sxs-lookup"><span data-stu-id="d79fc-135">On the client, run ImportServiceCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="d79fc-136">In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="d79fc-136">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-8.  Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportClientCert.bat.  In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine \- TrustedPeople.  
+8.  <span data-ttu-id="d79fc-137">Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportClientCert.bat.</span><span class="sxs-lookup"><span data-stu-id="d79fc-137">On the server, run ImportClientCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="d79fc-138">In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="d79fc-138">This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-9. Nel computer del servizio compilare il progetto di servizio in Visual Studio ed eseguire service.exe.  
+9. <span data-ttu-id="d79fc-139">Nel computer del servizio compilare il progetto di servizio in Visual Studio ed eseguire service.exe.</span><span class="sxs-lookup"><span data-stu-id="d79fc-139">On the service computer, build the service project in Visual Studio and run service.exe.</span></span>  
   
-10. Nel computer client eseguire client.exe.  
+10. <span data-ttu-id="d79fc-140">Nel computer client eseguire client.exe.</span><span class="sxs-lookup"><span data-stu-id="d79fc-140">On the client computer, run client.exe.</span></span>  
   
-    1.  Se il client e il servizio non sono in grado di comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  <span data-ttu-id="d79fc-141">Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="d79fc-141">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-### Per eseguire la pulizia dopo l'esempio  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="d79fc-142">Per eseguire la pulizia dopo l'esempio</span><span class="sxs-lookup"><span data-stu-id="d79fc-142">To clean up after the sample</span></span>  
   
--   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
+-   <span data-ttu-id="d79fc-143">Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.</span><span class="sxs-lookup"><span data-stu-id="d79fc-143">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
     > [!NOTE]
-    >  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer.  Se sono stati eseguiti esempi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che usano certificati tra più computer, verificare di cancellare i certificati del servizio installati nell'archivio CurrentUser \- TrustedPeople.  A questo scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Nome completo del computer server>. Ad esempio: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  <span data-ttu-id="d79fc-144">Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer.</span><span class="sxs-lookup"><span data-stu-id="d79fc-144">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="d79fc-145">Se sono stati eseguiti esempi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che usano certificati tra più computer, verificare di cancellare i certificati del servizio installati nell'archivio CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="d79fc-145">If you have run [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="d79fc-146">A tale scopo, utilizzare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="d79fc-146">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
-## Vedere anche  
- [Utilizzo di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="d79fc-147">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d79fc-147">See Also</span></span>  
+ [<span data-ttu-id="d79fc-148">Utilizzo dei metadati</span><span class="sxs-lookup"><span data-stu-id="d79fc-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)

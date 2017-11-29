@@ -1,122 +1,120 @@
 ---
-title: "Like Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Like"
-  - "vb.Like"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "similar to"
-  - "pattern matching"
-  - "Like operator [Visual Basic]"
-  - "? symbol, wildcard character"
-  - "string comparison [Visual Basic], Like operator"
-  - "strings [Visual Basic], comparing"
-  - "comparison operators"
-  - "symbols, wildcard"
-  - "wildcards, Like operator"
-  - "strings [Visual Basic], matching"
-  - "string comparison [Visual Basic], sorting data"
-  - "data [Visual Basic], sorting"
-  - "text [Visual Basic], comparing"
-  - "operators [Visual Basic], pattern-matching"
-  - "data [Visual Basic], string comparisons"
-  - "string comparison [Visual Basic], Like operators"
+title: Like (operatore) (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Like
+- vb.Like
+helpviewer_keywords:
+- similar to
+- pattern matching
+- Like operator [Visual Basic]
+- '? symbol, wildcard character'
+- string comparison [Visual Basic], Like operator
+- strings [Visual Basic], comparing
+- comparison operators [Visual Basic]
+- symbols, wildcard
+- wildcards, Like operator
+- strings [Visual Basic], matching
+- string comparison [Visual Basic], sorting data
+- data [Visual Basic], sorting
+- text [Visual Basic], comparing
+- operators [Visual Basic], pattern-matching
+- data [Visual Basic], string comparisons
+- string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Like Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Confronta una stringa con un modello.  
+# <a name="like-operator-visual-basic"></a><span data-ttu-id="893ed-102">Like (operatore) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="893ed-102">Like Operator (Visual Basic)</span></span>
+<span data-ttu-id="893ed-103">Confronta una stringa con un modello.</span><span class="sxs-lookup"><span data-stu-id="893ed-103">Compares a string against a pattern.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="893ed-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="893ed-104">Syntax</span></span>  
   
 ```  
-  
 result = string Like pattern  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="893ed-105">Parti</span><span class="sxs-lookup"><span data-stu-id="893ed-105">Parts</span></span>  
  `result`  
- Obbligatorio.  Qualsiasi variabile `Boolean`.  Il risultato è un valore `Boolean` che indica se `string` soddisfa i criteri di corrispondenza con `pattern`.  
+ <span data-ttu-id="893ed-106">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="893ed-106">Required.</span></span> <span data-ttu-id="893ed-107">Qualsiasi `Boolean` variabile.</span><span class="sxs-lookup"><span data-stu-id="893ed-107">Any `Boolean` variable.</span></span> <span data-ttu-id="893ed-108">Il risultato è un `Boolean` valore che indica se il `string` soddisfa il `pattern`.</span><span class="sxs-lookup"><span data-stu-id="893ed-108">The result is a `Boolean` value indicating whether or not the `string` satisfies the `pattern`.</span></span>  
   
  `string`  
- Obbligatorio.  Qualsiasi espressione `String`.  
+ <span data-ttu-id="893ed-109">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="893ed-109">Required.</span></span> <span data-ttu-id="893ed-110">Qualsiasi espressione `String`.</span><span class="sxs-lookup"><span data-stu-id="893ed-110">Any `String` expression.</span></span>  
   
  `pattern`  
- Obbligatorio.  Qualsiasi espressione `String` conforme alle convenzioni di corrispondenza dei modelli descritte nella sezione relativa alle osservazioni.  
+ <span data-ttu-id="893ed-111">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="893ed-111">Required.</span></span> <span data-ttu-id="893ed-112">Qualsiasi `String` espressione conforme alle convenzioni di criteri di ricerca descritte in "Osservazioni".</span><span class="sxs-lookup"><span data-stu-id="893ed-112">Any `String` expression conforming to the pattern-matching conventions described in "Remarks."</span></span>  
   
-## Note  
- Se il valore di `string` soddisfa i criteri di corrispondenza con il modello contenuto in `pattern`, `result` sarà `True`.  Se tali criteri non vengono soddisfatti, `result` sarà `False`.  Se `string` e `pattern` sono entrambe stringhe vuote, il risultato sarà `True`.  
+## <a name="remarks"></a><span data-ttu-id="893ed-113">Note</span><span class="sxs-lookup"><span data-stu-id="893ed-113">Remarks</span></span>  
+ <span data-ttu-id="893ed-114">Se il valore in `string` soddisfa il `pattern`, `result` è `True`.</span><span class="sxs-lookup"><span data-stu-id="893ed-114">If the value in `string` satisfies the pattern contained in `pattern`, `result` is `True`.</span></span> <span data-ttu-id="893ed-115">Se la stringa non soddisfa il criterio, `result` è `False`.</span><span class="sxs-lookup"><span data-stu-id="893ed-115">If the string does not satisfy the pattern, `result` is `False`.</span></span> <span data-ttu-id="893ed-116">Se entrambi `string` e `pattern` sono stringhe vuote, il risultato è `True`.</span><span class="sxs-lookup"><span data-stu-id="893ed-116">If both `string` and `pattern` are empty strings, the result is `True`.</span></span>  
   
-## Metodo di confronto  
- Il comportamento dell'operatore `Like` dipende dall'[Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md).  Il metodo di confronto delle stringhe predefinito per ciascun file di origine è `Option Compare Binary`.  
+## <a name="comparison-method"></a><span data-ttu-id="893ed-117">Metodo di confronto</span><span class="sxs-lookup"><span data-stu-id="893ed-117">Comparison Method</span></span>  
+ <span data-ttu-id="893ed-118">Il comportamento del `Like` operatore dipende il [istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).</span><span class="sxs-lookup"><span data-stu-id="893ed-118">The behavior of the `Like` operator depends on the [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md).</span></span> <span data-ttu-id="893ed-119">Il metodo di confronto di stringa predefinito per ogni file di origine è `Option Compare Binary`.</span><span class="sxs-lookup"><span data-stu-id="893ed-119">The default string comparison method for each source file is `Option Compare Binary`.</span></span>  
   
-## Opzioni del modello  
- La corrispondenza tra modelli rappresenta uno strumento versatile per il confronto tra stringhe.  Le funzionalità di corrispondenza tra modelli consentono di associare ciascun carattere incluso in `string` con un carattere specifico, un carattere jolly, un elenco o un intervallo di caratteri.  Nella tabella riportata di seguito vengono illustrati i caratteri consentiti in `pattern` e le relative corrispondenze.  
+## <a name="pattern-options"></a><span data-ttu-id="893ed-120">Opzioni del modello</span><span class="sxs-lookup"><span data-stu-id="893ed-120">Pattern Options</span></span>  
+ <span data-ttu-id="893ed-121">Criteri di ricerca incorporati offre uno strumento versatile per confronti tra stringhe.</span><span class="sxs-lookup"><span data-stu-id="893ed-121">Built-in pattern matching provides a versatile tool for string comparisons.</span></span> <span data-ttu-id="893ed-122">Le funzionalità di criteri di ricerca consentono di associare ogni carattere `string` da un carattere specifico, un carattere jolly, un elenco di caratteri o un intervallo di caratteri.</span><span class="sxs-lookup"><span data-stu-id="893ed-122">The pattern-matching features allow you to match each character in `string` against a specific character, a wildcard character, a character list, or a character range.</span></span> <span data-ttu-id="893ed-123">La tabella seguente mostra i caratteri consentiti in `pattern` e le relative corrispondenze.</span><span class="sxs-lookup"><span data-stu-id="893ed-123">The following table shows the characters allowed in `pattern` and what they match.</span></span>  
   
-|Caratteri inclusi in `pattern`|Corrispondenza in `string`|  
-|------------------------------------|--------------------------------|  
-|`?`|Qualsiasi carattere singolo.|  
-|`*`|Nessuno o più caratteri.|  
-|`#`|Qualsiasi cifra singola \(0\-9\).|  
-|`[` `charlist` `]`|Qualsiasi carattere singolo incluso in `charlist`.|  
-|`[!` `charlist` `]`|Qualsiasi carattere singolo non incluso in `charlist`.|  
+|<span data-ttu-id="893ed-124">Caratteri`pattern`</span><span class="sxs-lookup"><span data-stu-id="893ed-124">Characters in `pattern`</span></span>|<span data-ttu-id="893ed-125">Corrispondenze in`string`</span><span class="sxs-lookup"><span data-stu-id="893ed-125">Matches in `string`</span></span>|  
+|-----------------------------|-------------------------|  
+|`?`|<span data-ttu-id="893ed-126">Qualsiasi carattere singolo</span><span class="sxs-lookup"><span data-stu-id="893ed-126">Any single character</span></span>|  
+|`*`|<span data-ttu-id="893ed-127">Zero o più caratteri</span><span class="sxs-lookup"><span data-stu-id="893ed-127">Zero or more characters</span></span>|  
+|`#`|<span data-ttu-id="893ed-128">Qualsiasi cifra (0-9)</span><span class="sxs-lookup"><span data-stu-id="893ed-128">Any single digit (0–9)</span></span>|  
+|`[charlist]`|<span data-ttu-id="893ed-129">Qualsiasi carattere singolo`charlist`</span><span class="sxs-lookup"><span data-stu-id="893ed-129">Any single character in `charlist`</span></span>|  
+|`[!charlist]`|<span data-ttu-id="893ed-130">Qualsiasi carattere singolo non incluso`charlist`</span><span class="sxs-lookup"><span data-stu-id="893ed-130">Any single character not in `charlist`</span></span>|  
   
-## Elenchi di caratteri  
- Per stabilire una corrispondenza con qualsiasi carattere presente in `string`, è possibile utilizzare un gruppo di uno o più caratteri \(`charlist`\) racchiuso tra parentesi quadre \(`[ ]`\) che può contenere quasi tutti i codici carattere, comprese le cifre.  
+## <a name="character-lists"></a><span data-ttu-id="893ed-131">Elenchi di caratteri</span><span class="sxs-lookup"><span data-stu-id="893ed-131">Character Lists</span></span>  
+ <span data-ttu-id="893ed-132">Un gruppo di uno o più caratteri (`charlist`) racchiusi tra parentesi quadre (`[ ]`) può essere usato per corrispondi a qualsiasi carattere singolo in `string` e possono includere qualsiasi codice di carattere, comprese le cifre.</span><span class="sxs-lookup"><span data-stu-id="893ed-132">A group of one or more characters (`charlist`) enclosed in brackets (`[ ]`) can be used to match any single character in `string` and can include almost any character code, including digits.</span></span>  
   
- Se si specifica un punto esclamativo \(`!`\) all'inizio di `charlist`, la corrispondenza verrà stabilita se `string` contiene uno o più caratteri che non sono inclusi in `charlist`.  Se utilizzato fuori dalle parentesi quadre, il punto esclamativo non svolgerà alcuna funzione particolare.  
+ <span data-ttu-id="893ed-133">Un punto esclamativo (`!`) all'inizio di `charlist` indica che viene individuata una corrispondenza se qualsiasi carattere tranne i caratteri in `charlist` è presente in `string`.</span><span class="sxs-lookup"><span data-stu-id="893ed-133">An exclamation point (`!`) at the beginning of `charlist` means that a match is made if any character except the characters in `charlist` is found in `string`.</span></span> <span data-ttu-id="893ed-134">Se utilizzato all'esterno delle parentesi quadre, il punto esclamativo corrisponde a se stesso.</span><span class="sxs-lookup"><span data-stu-id="893ed-134">When used outside brackets, the exclamation point matches itself.</span></span>  
   
-## Caratteri speciali  
- Per verificare la corrispondenza di caratteri speciali quali la parentesi quadra aperta \(`[`\), il punto interrogativo \(`?`\), il segno di numero \(`#`\) e l'asterisco \(`*`\), è necessario racchiuderli tra parentesi quadre.  La parentesi quadra chiusa \(`]`\) può essere utilizzata per stabilire una corrispondenza con un carattere identico all'esterno ma non all'interno di un gruppo.  
+## <a name="special-characters"></a><span data-ttu-id="893ed-135">Caratteri speciali</span><span class="sxs-lookup"><span data-stu-id="893ed-135">Special Characters</span></span>  
+ <span data-ttu-id="893ed-136">Per trovare la corrispondenza di parentesi quadra sinistra i caratteri speciali (`[`), punto interrogativo (`?`), simbolo di cancelletto (`#`) e l'asterisco (`*`), racchiuderli tra parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="893ed-136">To match the special characters left bracket (`[`), question mark (`?`), number sign (`#`), and asterisk (`*`), enclose them in brackets.</span></span> <span data-ttu-id="893ed-137">La parentesi quadra chiusa (`]`) non può essere utilizzato all'interno di un gruppo per stabilire una corrispondenza, ma può essere utilizzato all'esterno di un gruppo come un singolo carattere.</span><span class="sxs-lookup"><span data-stu-id="893ed-137">The right bracket (`]`) cannot be used within a group to match itself, but it can be used outside a group as an individual character.</span></span>  
   
- La sequenza di caratteri `[]` viene considerata una stringa di lunghezza zero \(`""`\).  Non può tuttavia far parte di un elenco di caratteri racchiusi tra parentesi quadre.  Per verificare se una determinata posizione in `string` contiene un solo carattere di un gruppo o non contiene alcun carattere, è possibile utilizzare `Like` due volte.  Per un esempio, vedere [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ <span data-ttu-id="893ed-138">La sequenza di caratteri `[]` viene considerata una stringa di lunghezza zero (`""`).</span><span class="sxs-lookup"><span data-stu-id="893ed-138">The character sequence `[]` is considered a zero-length string (`""`).</span></span> <span data-ttu-id="893ed-139">Tuttavia, non può far parte di un elenco di caratteri racchiusi tra parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="893ed-139">However, it cannot be part of a character list enclosed in brackets.</span></span> <span data-ttu-id="893ed-140">Se si desidera controllare se una posizione in `string` contiene uno di un gruppo di caratteri o nessun carattere, è possibile utilizzare `Like` due volte.</span><span class="sxs-lookup"><span data-stu-id="893ed-140">If you want to check whether a position in `string` contains one of a group of characters or no character at all, you can use `Like` twice.</span></span> <span data-ttu-id="893ed-141">Per un esempio, vedere [procedura: confrontare una stringa con un modello](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="893ed-141">For an example, see [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).</span></span>  
   
-## Intervalli di caratteri  
- All'interno di `charlist` è possibile specificare un intervallo di caratteri inserendo un trattino \(`–`\) tra il limite superiore e quello inferiore dell'intervallo.  Ad esempio, `[A–Z]` restituisce una corrispondenza se la posizione corrispondente in `string` contiene un qualsiasi carattere compreso nell'intervallo `A`–`Z`, mentre `[!H–L]` restituisce una corrispondenza se la posizione corrispondente contiene un qualsiasi carattere non compreso nell'intervallo `H`–`L`.  
+## <a name="character-ranges"></a><span data-ttu-id="893ed-142">Intervalli di caratteri</span><span class="sxs-lookup"><span data-stu-id="893ed-142">Character Ranges</span></span>  
+ <span data-ttu-id="893ed-143">Utilizzando un trattino (`–`) per separare i limiti inferiore e superiore dell'intervallo, `charlist` possibile specificare un intervallo di caratteri.</span><span class="sxs-lookup"><span data-stu-id="893ed-143">By using a hyphen (`–`) to separate the lower and upper bounds of the range, `charlist` can specify a range of characters.</span></span> <span data-ttu-id="893ed-144">Ad esempio, `[A–Z]` produce una corrispondenza, se la posizione corrispondente `string` contenente qualsiasi carattere all'interno dell'intervallo `A`–`Z`, e `[!H–L]` produce una corrispondenza, se la posizione corrispondente contenente qualsiasi carattere non compreso nell'intervallo `H`–`L`.</span><span class="sxs-lookup"><span data-stu-id="893ed-144">For example, `[A–Z]` results in a match if the corresponding character position in `string` contains any character within the range `A`–`Z`, and `[!H–L]` results in a match if the corresponding character position contains any character outside the range `H`–`L`.</span></span>  
   
- Quando viene specificato un intervallo di caratteri, questi devono essere indicati in ordine crescente, ossia dal minore al maggiore.  L'intervallo `[A–Z]` risulta quindi valido, al contrario di `[Z–A]`.  
+ <span data-ttu-id="893ed-145">Quando si specifica un intervallo di caratteri, è necessario specificarle nell'ordine crescente, vale a dire, dalla più bassa.</span><span class="sxs-lookup"><span data-stu-id="893ed-145">When you specify a range of characters, they must appear in ascending sort order, that is, from lowest to highest.</span></span> <span data-ttu-id="893ed-146">Di conseguenza, `[A–Z]` è valido, ma `[Z–A]` non.</span><span class="sxs-lookup"><span data-stu-id="893ed-146">Thus, `[A–Z]` is a valid pattern, but `[Z–A]` is not.</span></span>  
   
-### Intervalli multipli di caratteri  
- Per specificare più intervalli per la stessa posizione di carattere, inserirli tra le stesse parentesi quadre senza delimitatori.  Ad esempio, `[A–CX–Z]` restituisce una corrispondenza se la posizione corrispondente in `string` contiene un qualsiasi carattere compreso nell'intervallo `A`–`C` o `X`–`Z`.  
+### <a name="multiple-character-ranges"></a><span data-ttu-id="893ed-147">Più intervalli di caratteri</span><span class="sxs-lookup"><span data-stu-id="893ed-147">Multiple Character Ranges</span></span>  
+ <span data-ttu-id="893ed-148">Per specificare più intervalli per la stessa posizione di carattere, inserirli all'interno delle parentesi stesso senza delimitatori.</span><span class="sxs-lookup"><span data-stu-id="893ed-148">To specify multiple ranges for the same character position, put them within the same brackets without delimiters.</span></span> <span data-ttu-id="893ed-149">Ad esempio, `[A–CX–Z]` produce una corrispondenza, se la posizione corrispondente `string` contenente qualsiasi carattere compreso nell'intervallo `A`–`C` o l'intervallo `X`–`Z`.</span><span class="sxs-lookup"><span data-stu-id="893ed-149">For example, `[A–CX–Z]` results in a match if the corresponding character position in `string` contains any character within either the range `A`–`C` or the range `X`–`Z`.</span></span>  
   
-### Utilizzo del trattino  
- Per stabilire una corrispondenza con un carattere identico, il trattino \(`–`\) può essere inserito sia all'inizio \(dopo il punto esclamativo, se utilizzato\) che alla fine di `charlist` .  In qualsiasi altra posizione il trattino identifica un intervallo di caratteri delimitato dal carattere precedente e successivo.  
+### <a name="usage-of-the-hyphen"></a><span data-ttu-id="893ed-150">Utilizzo del trattino</span><span class="sxs-lookup"><span data-stu-id="893ed-150">Usage of the Hyphen</span></span>  
+ <span data-ttu-id="893ed-151">Un segno meno (`–`) possono essere visualizzati all'inizio (dopo un punto esclamativo, se presente) o alla fine di `charlist` per stabilire una corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="893ed-151">A hyphen (`–`) can appear either at the beginning (after an exclamation point, if any) or at the end of `charlist` to match itself.</span></span> <span data-ttu-id="893ed-152">In qualsiasi altro percorso, il trattino identifica un intervallo di caratteri racchiusi tra i caratteri su entrambi i lati del trattino.</span><span class="sxs-lookup"><span data-stu-id="893ed-152">In any other location, the hyphen identifies a range of characters delimited by the characters on either side of the hyphen.</span></span>  
   
-## Sequenza di confronto  
- Il significato di un intervallo specificato dipende dall'ordinamento dei caratteri in fase di esecuzione, determinato da `Option` `Compare` e dalle impostazioni locali del sistema in cui viene eseguito il codice.  Con `Option` `Compare` `Binary` l'intervallo `[A–E]` corrisponde ad `A`, `B`, `C`, `D` ed `E`.  Con `Option` `Compare` `Text` `[A–E]` corrisponde ad `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E` ed `e`.  L'intervallo non include `Ê` o `ê` perché i caratteri accentati vengono messi a confronto dopo quelli non accentati nella sequenza di ordinamento.  
+## <a name="collating-sequence"></a><span data-ttu-id="893ed-153">Sequenza di confronto</span><span class="sxs-lookup"><span data-stu-id="893ed-153">Collating Sequence</span></span>  
+ <span data-ttu-id="893ed-154">Il significato di un intervallo specificato dipende dall'ordinamento dei caratteri in fase di esecuzione, come determinato dalla `Option``Compare` e le impostazioni locali del sistema in cui viene eseguito il codice.</span><span class="sxs-lookup"><span data-stu-id="893ed-154">The meaning of a specified range depends on the character ordering at run time, as determined by `Option``Compare` and the locale setting of the system the code is running on.</span></span> <span data-ttu-id="893ed-155">Con `Option``Compare``Binary`, l'intervallo `[A–E]` corrisponde `A`, `B`, `C`, `D`, e `E`.</span><span class="sxs-lookup"><span data-stu-id="893ed-155">With `Option``Compare``Binary`, the range `[A–E]` matches `A`, `B`, `C`, `D`, and `E`.</span></span> <span data-ttu-id="893ed-156">Con `Option``Compare``Text`, `[A–E]` corrisponde `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, e `e`.</span><span class="sxs-lookup"><span data-stu-id="893ed-156">With `Option``Compare``Text`, `[A–E]` matches `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, and `e`.</span></span> <span data-ttu-id="893ed-157">L'intervallo corrisponde `Ê` o `ê` perché i caratteri accentati collate dopo accentati nell'ordinamento.</span><span class="sxs-lookup"><span data-stu-id="893ed-157">The range does not match `Ê` or `ê` because accented characters collate after unaccented characters in the sort order.</span></span>  
   
-## Caratteri digraph  
- In alcune lingue sono presenti lettere che rappresentano due caratteri distinti.  In diverse lingue viene ad esempio utilizzato il carattere `æ` per rappresentare il dittongo composto da `a` e `e` quando i due caratteri compaiono insieme.  L'operatore `Like` consente di rilevare l'equivalenza tra il singolo carattere digraph e i due caratteri singoli.  
+## <a name="digraph-characters"></a><span data-ttu-id="893ed-158">Caratteri digraph</span><span class="sxs-lookup"><span data-stu-id="893ed-158">Digraph Characters</span></span>  
+ <span data-ttu-id="893ed-159">In alcune lingue, sono presenti caratteri alfabetici che rappresentano due caratteri distinti.</span><span class="sxs-lookup"><span data-stu-id="893ed-159">In some languages, there are alphabetic characters that represent two separate characters.</span></span> <span data-ttu-id="893ed-160">Ad esempio, di utilizzare il carattere più lingue `æ` per rappresentare i caratteri `a` e `e` quando vengono visualizzati insieme.</span><span class="sxs-lookup"><span data-stu-id="893ed-160">For example, several languages use the character `æ` to represent the characters `a` and `e` when they appear together.</span></span> <span data-ttu-id="893ed-161">Il `Like` operatore riconosce che il singolo carattere digraph e i due caratteri singoli sono equivalenti.</span><span class="sxs-lookup"><span data-stu-id="893ed-161">The `Like` operator recognizes that the single digraph character and the two individual characters are equivalent.</span></span>  
   
- Se nelle impostazioni locali del sistema viene specificata una lingua che utilizza un carattere digraph, l'occorrenza di tale carattere in `pattern` o `string` verrà considerata corrispondente alla sequenza dei due caratteri nell'altra stringa.  Analogamente, un carattere digraph in `pattern` racchiuso tra parentesi quadre \(da solo, in un elenco o in un intervallo\) verrà considerato corrispondente all'equivalente sequenza di due caratteri presente in `string`.  
+ <span data-ttu-id="893ed-162">Quando una lingua che utilizza un carattere digraph è specificata nelle impostazioni locali del sistema, di un'occorrenza del carattere in una tale `pattern` o `string` corrisponde alla sequenza di due caratteri equivalente in altra stringa.</span><span class="sxs-lookup"><span data-stu-id="893ed-162">When a language that uses a digraph character is specified in the system locale settings, an occurrence of the single digraph character in either `pattern` or `string` matches the equivalent two-character sequence in the other string.</span></span> <span data-ttu-id="893ed-163">Analogamente, un carattere digraph in `pattern` racchiusi tra parentesi quadre (di per sé, in un elenco o in un intervallo) corrisponde alla sequenza di due caratteri equivalente in `string`.</span><span class="sxs-lookup"><span data-stu-id="893ed-163">Similarly, a digraph character in `pattern` enclosed in brackets (by itself, in a list, or in a range) matches the equivalent two-character sequence in `string`.</span></span>  
   
-## Overload  
- L'operatore `Like` può essere sottoposto a *overload*. In altri termini, una classe o una struttura può ridefinirne il comportamento quando un operando specifica il tipo di tale classe o struttura.  Se il codice utilizza l'operatore su una classe o una struttura di questo tipo, è importante comprendere il comportamento ridefinito di tale operatore.  Per ulteriori informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="893ed-164">Overload</span><span class="sxs-lookup"><span data-stu-id="893ed-164">Overloading</span></span>  
+ <span data-ttu-id="893ed-165">Il `Like` operatore può essere *overload*, il che significa che una classe o struttura ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura.</span><span class="sxs-lookup"><span data-stu-id="893ed-165">The `Like` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="893ed-166">Se il codice Usa l'operatore in una classe o una struttura, assicurarsi di comprendere il comportamento ridefinito.</span><span class="sxs-lookup"><span data-stu-id="893ed-166">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="893ed-167">Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="893ed-167">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito l'operatore `Like` viene utilizzato per confrontare stringhe con diversi modelli.  I risultati vengono inseriti in una variabile `Boolean` che indica se ogni stringa soddisfa i criteri di corrispondenza con il modello.  
+## <a name="example"></a><span data-ttu-id="893ed-168">Esempio</span><span class="sxs-lookup"><span data-stu-id="893ed-168">Example</span></span>  
+ <span data-ttu-id="893ed-169">Questo esempio viene utilizzato il `Like` operatore per confrontare le stringhe in vari modelli.</span><span class="sxs-lookup"><span data-stu-id="893ed-169">This example uses the `Like` operator to compare strings to various patterns.</span></span> <span data-ttu-id="893ed-170">I risultati vengono inseriti in un `Boolean` variabile che indica se ogni stringa soddisfa il criterio.</span><span class="sxs-lookup"><span data-stu-id="893ed-170">The results go into a `Boolean` variable indicating whether each string satisfies the pattern.</span></span>  
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## Vedere anche  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>   
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>   
- [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md)   
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a><span data-ttu-id="893ed-171">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="893ed-171">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
+ [<span data-ttu-id="893ed-172">Operatori di confronto</span><span class="sxs-lookup"><span data-stu-id="893ed-172">Comparison Operators</span></span>](../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [<span data-ttu-id="893ed-173">Precedenza tra gli operatori in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="893ed-173">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="893ed-174">Elenco degli operatori per funzionalità</span><span class="sxs-lookup"><span data-stu-id="893ed-174">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="893ed-175">Istruzione Option Compare</span><span class="sxs-lookup"><span data-stu-id="893ed-175">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [<span data-ttu-id="893ed-176">Operatori ed espressioni</span><span class="sxs-lookup"><span data-stu-id="893ed-176">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="893ed-177">Procedura: Confrontare una stringa con un modello</span><span class="sxs-lookup"><span data-stu-id="893ed-177">How to: Match a String against a Pattern</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - maximum staleness
 - freshness of cached resources
@@ -20,41 +15,39 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 834deeff69687e0edf1671b35328d41842914b4d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: baec376501feb70e4a9ceb3f33ac66fa76b91ac1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Interazione tra criteri di cache: durata massima e obsolescenza massima
-Per garantire che all'applicazione client venga restituito il contenuto più aggiornato, l'interazione tra criteri di cache del client e requisiti di riconvalida del server determina sempre la creazione dei criteri di cache più conservativi. In tutti gli esempi di questo argomento vengono illustrati i criteri di cache per una risorsa memorizzata nella cache il 1° gennaio con scadenza il 4 gennaio.  
+# <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a><span data-ttu-id="6b9b8-102">Interazione tra criteri di cache: durata massima e obsolescenza massima</span><span class="sxs-lookup"><span data-stu-id="6b9b8-102">Cache Policy Interaction—Maximum Age and Maximum Staleness</span></span>
+<span data-ttu-id="6b9b8-103">Per garantire che all'applicazione client venga restituito il contenuto più aggiornato, l'interazione tra criteri di cache del client e requisiti di riconvalida del server determina sempre la creazione dei criteri di cache più conservativi.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-103">To help ensure that the freshest content is returned to the client application, the interaction of client cache policy and server revalidation requirements always results in the most conservative cache policy.</span></span> <span data-ttu-id="6b9b8-104">In tutti gli esempi di questo argomento vengono illustrati i criteri di cache per una risorsa memorizzata nella cache il 1° gennaio con scadenza il 4 gennaio.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-104">All the examples in this topic illustrate the cache policy for a resource that is cached on January 1 and expires on January 4.</span></span>  
   
- Negli esempi seguenti il valore di obsolescenza massima (`maxStale`) viene usato in combinazione con un valore di durata massima (`maxAge`):  
+ <span data-ttu-id="6b9b8-105">Negli esempi seguenti il valore di obsolescenza massima (`maxStale`) viene usato in combinazione con un valore di durata massima (`maxAge`):</span><span class="sxs-lookup"><span data-stu-id="6b9b8-105">In the following examples, the maximum staleness value (`maxStale`) is used in conjunction with a maximum age (`maxAge`):</span></span>  
   
--   Se i criteri di cache prevedono l'impostazione di `maxAge` su 5 giorni e non specificano alcun valore per `maxStale`, in base al valore di `maxAge` il contenuto può essere usato fino al 6 gennaio. In base ai requisiti di riconvalida del server, tuttavia, il contenuto scade il 4 gennaio. Poiché la data di scadenza del contenuto è più conservativa (antecedente), ha la precedenza rispetto ai criteri associati a `maxAge`. Il contenuto scade quindi il 4 gennaio e deve essere riconvalidato anche se la durata massima non è ancora stata raggiunta.  
+-   <span data-ttu-id="6b9b8-106">Se i criteri di cache prevedono l'impostazione di `maxAge` su 5 giorni e non specificano alcun valore per `maxStale`, in base al valore di `maxAge` il contenuto può essere usato fino al 6 gennaio.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-106">If the cache policy sets `maxAge` = 5 days and does not specify a `maxStale` value, according to the `maxAge` value, the content is usable until January 6.</span></span> <span data-ttu-id="6b9b8-107">In base ai requisiti di riconvalida del server, tuttavia, il contenuto scade il 4 gennaio.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-107">However, according to the server's revalidation requirements, the content expires on January 4.</span></span> <span data-ttu-id="6b9b8-108">Poiché la data di scadenza del contenuto è più conservativa (antecedente), ha la precedenza rispetto ai criteri associati a `maxAge`.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-108">Because the content expiration date is more conservative (sooner), it takes precedence over the `maxAge` policy.</span></span> <span data-ttu-id="6b9b8-109">Il contenuto scade quindi il 4 gennaio e deve essere riconvalidato anche se la durata massima non è ancora stata raggiunta.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-109">Therefore, the content expires on January 4 and must be revalidated even though its maximum age has not been reached.</span></span>  
   
--   Se i criteri di cache prevedono l'impostazione di `maxAge` su 5 giorni e di `maxStale` su 3 giorni, in base al valore di `maxAge` il contenuto rimane valido fino al 6 gennaio, mentre in base al valore di `maxStale` è valido fino al 7 gennaio. Il contenuto viene quindi riconvalidato il 6 gennaio.  
+-   <span data-ttu-id="6b9b8-110">Se i criteri di cache prevedono l'impostazione di `maxAge` su 5 giorni e di `maxStale` su 3 giorni, in base al valore di `maxAge` il contenuto rimane valido fino al 6 gennaio,</span><span class="sxs-lookup"><span data-stu-id="6b9b8-110">If the cache policy sets `maxAge` = 5 days and `maxStale` = 3 days, according to the `maxAge` value, the content is usable until January 6.</span></span> <span data-ttu-id="6b9b8-111">mentre in base al valore di `maxStale` è valido fino al 7 gennaio.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-111">According to the `maxStale` value, the content is usable until January 7.</span></span> <span data-ttu-id="6b9b8-112">Il contenuto viene quindi riconvalidato il 6 gennaio.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-112">Therefore, the content gets revalidated on January 6.</span></span>  
   
--   Se i criteri di cache prevedono l'impostazione di `maxAge` su 5 giorni e di `maxStale` su 1 giorno, in base al valore di `maxAge` il contenuto rimane valido fino al 6 gennaio, mentre in base al valore di `maxStale` è valido fino al 5 gennaio. Il contenuto viene quindi riconvalidato il 5 gennaio.  
+-   <span data-ttu-id="6b9b8-113">Se i criteri di cache prevedono l'impostazione di `maxAge` su 5 giorni e di `maxStale` su 1 giorno, in base al valore di `maxAge` il contenuto rimane valido fino al 6 gennaio,</span><span class="sxs-lookup"><span data-stu-id="6b9b8-113">If the cache policy sets `maxAge` = 5 days and `maxStale` = 1 day, according to the `maxAge` value, the content is usable until January 6.</span></span> <span data-ttu-id="6b9b8-114">mentre in base al valore di `maxStale` è valido fino al 5 gennaio.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-114">According to the `maxStale` value, the content is usable until January 5.</span></span> <span data-ttu-id="6b9b8-115">Il contenuto viene quindi riconvalidato il 5 gennaio.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-115">Therefore, the content gets revalidated on January 5.</span></span>  
   
- Quando il valore di durata massima è inferiore alla data di scadenza del contenuto, prevale sempre il comportamento più conservativo per la memorizzazione nella cache e il valore di obsolescenza massima non ha alcun effetto. Gli esempi seguenti illustrano l'effetto prodotto dall'impostazione di un valore di obsolescenza massima (`maxStale`) quando la durata massima (`maxAge`) viene raggiunta prima della scadenza del contenuto:  
+ <span data-ttu-id="6b9b8-116">Quando il valore di durata massima è inferiore alla data di scadenza del contenuto, prevale sempre il comportamento più conservativo per la memorizzazione nella cache e il valore di obsolescenza massima non ha alcun effetto.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-116">When the maximum age is less than the content expiration date, the more conservative caching behavior always prevails and the maximum staleness value has no effect.</span></span> <span data-ttu-id="6b9b8-117">Gli esempi seguenti illustrano l'effetto prodotto dall'impostazione di un valore di obsolescenza massima (`maxStale`) quando la durata massima (`maxAge`) viene raggiunta prima della scadenza del contenuto:</span><span class="sxs-lookup"><span data-stu-id="6b9b8-117">The following examples illustrate the effect of setting a maximum staleness (`maxStale`) value when the maximum age (`maxAge`) is reached before the content expires:</span></span>  
   
--   Se i criteri di cache prevedono l'impostazione di `maxAge` su 1 giorno e non specificano alcun valore per `maxStale`, il contenuto viene riconvalidato il 2 gennaio anche se non è ancora scaduto.  
+-   <span data-ttu-id="6b9b8-118">Se i criteri di cache prevedono l'impostazione di `maxAge` su 1 giorno e non specificano alcun valore per `maxStale`, il contenuto viene riconvalidato il 2 gennaio anche se non è ancora scaduto.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-118">If the cache policy sets `maxAge` = 1 day and does not specify a value for `maxStale` value, the content is revalidated on January 2 even though it has not expired.</span></span>  
   
--   Se i criteri di cache prevedono l'impostazione di `maxAge` su 1 giorno e di `maxStale` su 3 giorni, il contenuto viene riconvalidato il 2 gennaio e viene quindi applicata l'impostazione relativa ai criteri più conservativi.  
+-   <span data-ttu-id="6b9b8-119">Se i criteri di cache prevedono l'impostazione di `maxAge` su 1 giorno e di `maxStale` su 3 giorni, il contenuto viene riconvalidato il 2 gennaio e viene quindi applicata l'impostazione relativa ai criteri più conservativi.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-119">If the cache policy sets `maxAge` = 1 day and `maxStale` = 3 days, the content is revalidated on January 2 to enforce the more conservative policy setting.</span></span>  
   
--   Se i criteri di cache prevedono l'impostazione di `maxAge` su 1 giorno e di `maxStale` su 1 giorno, il contenuto viene riconvalidato il 2 gennaio.  
+-   <span data-ttu-id="6b9b8-120">Se i criteri di cache prevedono l'impostazione di `maxAge` su 1 giorno e di `maxStale` su 1 giorno, il contenuto viene riconvalidato il 2 gennaio.</span><span class="sxs-lookup"><span data-stu-id="6b9b8-120">If the cache policy sets `maxAge` = 1 day and `maxStale` = 1 day, the content is revalidated on January 2.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)   
- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Criteri di cache basati sul tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
- [Interazione tra criteri di cache: durata massima e validità minima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
-
+## <a name="see-also"></a><span data-ttu-id="6b9b8-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6b9b8-121">See Also</span></span>  
+ [<span data-ttu-id="6b9b8-122">Gestione della cache per le applicazioni di rete</span><span class="sxs-lookup"><span data-stu-id="6b9b8-122">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="6b9b8-123">Criteri di cache</span><span class="sxs-lookup"><span data-stu-id="6b9b8-123">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="6b9b8-124">Criteri di cache basati sulla posizione</span><span class="sxs-lookup"><span data-stu-id="6b9b8-124">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="6b9b8-125">Criteri di cache basati sull'ora</span><span class="sxs-lookup"><span data-stu-id="6b9b8-125">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="6b9b8-126">Configurazione della memorizzazione nella cache per applicazioni di rete</span><span class="sxs-lookup"><span data-stu-id="6b9b8-126">Configuring Caching in Network Applications</span></span>](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [<span data-ttu-id="6b9b8-127">Interazione tra criteri di cache: durata massima e validità minima</span><span class="sxs-lookup"><span data-stu-id="6b9b8-127">Cache Policy Interaction—Maximum Age and Minimum Freshness</span></span>](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

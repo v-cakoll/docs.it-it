@@ -1,85 +1,84 @@
 ---
-title: "Strumento di registrazione ServiceModel (ServiceModelReg.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: Strumento di registrazione ServiceModel (ServiceModelReg.exe)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7032fd6005d5eccf27e0ca34cd89c050260d6e4b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Strumento di registrazione ServiceModel (ServiceModelReg.exe)
-Lo strumento da riga di comando consente di gestire la registrazione di componenti WCF e WF in un singolo computer.In condizioni normali, non è consigliabile l'utilizzo di questo strumento poiché, se installati, i componenti WCF e WF sono configurati.Tuttavia, se si verificano problemi con l'attivazione del servizio, si può tentare la registrazione dei componenti tramite questo strumento.  
+# <a name="servicemodel-registration-tool-servicemodelregexe"></a><span data-ttu-id="bddbb-102">Strumento di registrazione ServiceModel (ServiceModelReg.exe)</span><span class="sxs-lookup"><span data-stu-id="bddbb-102">ServiceModel Registration Tool (ServiceModelReg.exe)</span></span>
+<span data-ttu-id="bddbb-103">Questo strumento da riga di comando offre la possibilità di gestire la registrazione di componenti WCF e WF in un singolo computer.</span><span class="sxs-lookup"><span data-stu-id="bddbb-103">This command-line tool provides the ability to manage the registration of WCF and WF components on a single machine.</span></span> <span data-ttu-id="bddbb-104">In condizioni normali l'utilizzo di questo strumento non è consigliabile perché i componenti WCF e WF vengono configurati quando installati.</span><span class="sxs-lookup"><span data-stu-id="bddbb-104">Under normal circumstances you should not need to use this tool as WCF and WF components are configured when installed.</span></span> <span data-ttu-id="bddbb-105">Tuttavia, se si verificano problemi con l'attivazione del servizio, si può tentare la registrazione dei componenti tramite questo strumento.</span><span class="sxs-lookup"><span data-stu-id="bddbb-105">But if you are experiencing problems with service activation, you can try to register the components using this tool.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="bddbb-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bddbb-106">Syntax</span></span>  
   
 ```  
-  
 ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]  
 ```  
   
-## Note  
- Lo strumento si trova nel percorso seguente:  
+## <a name="remarks"></a><span data-ttu-id="bddbb-107">Note</span><span class="sxs-lookup"><span data-stu-id="bddbb-107">Remarks</span></span>  
+ <span data-ttu-id="bddbb-108">Lo strumento si trova nel percorso seguente:</span><span class="sxs-lookup"><span data-stu-id="bddbb-108">The tool can be found in the following location:</span></span>  
   
- %SystemRoot%\\Microsoft.Net\\Framework\\v3.0\\Windows Communication Foundation\\  
+ <span data-ttu-id="bddbb-109">%SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\\</span><span class="sxs-lookup"><span data-stu-id="bddbb-109">%SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\\</span></span>  
   
 > [!NOTE]
->  Quando lo strumento di registrazione ServiceModel viene eseguito su [!INCLUDE[wv](../../../includes/wv-md.md)], la finestra di dialogo **Funzionalità Windows** potrebbe non indicare l'attivazione dell'opzione **Attivazione di Windows Communication Foundation HTTP** in **Microsoft .NET Framework 3.0**.La finestra di dialogo **Funzionalità Windows** può essere utilizzata facendo clic su **Avvio**, quindi fare clic su **Esegui** e digitando **OptionalFeatures**.  
+>  <span data-ttu-id="bddbb-110">Quando viene eseguito lo strumento di registrazione ServiceModel [!INCLUDE[wv](../../../includes/wv-md.md)], **le funzionalità di Windows** finestra di dialogo potrebbe non indicare il **Attivazione HTTP di Windows Communication Foundation** perl'opzione**Microsoft .NET Framework 3.0** è attivata.</span><span class="sxs-lookup"><span data-stu-id="bddbb-110">When the ServiceModel Registration Tool is run on [!INCLUDE[wv](../../../includes/wv-md.md)], the **Windows Features** dialog may not reflect that the **Windows Communication Foundation HTTP Activation** option under **Microsoft .NET Framework 3.0** is turned on.</span></span> <span data-ttu-id="bddbb-111">Il **le funzionalità di Windows** finestra di dialogo è possibile accedere facendo clic su **avviare**, quindi fare clic su **eseguire** e quindi digitando **OptionalFeatures**.</span><span class="sxs-lookup"><span data-stu-id="bddbb-111">The **Windows Features** dialog can be accessed by clicking **Start**, then click **Run** and then typing **OptionalFeatures**.</span></span>  
   
- Nella tabella riportata di seguito sono descritte le opzioni che possono essere utilizzate con ServiceModelReg.exe.  
+ <span data-ttu-id="bddbb-112">Nella tabella riportata di seguito sono descritte le opzioni che possono essere utilizzate con ServiceModelReg.exe.</span><span class="sxs-lookup"><span data-stu-id="bddbb-112">The following tables describe the options that can be used with ServiceModelReg.exe.</span></span>  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|`-ia`|Installa tutti i componenti WCF e WF.|  
-|`-ua`|Disinstalla tutti i componenti WCF e WF.|  
-|`-r`|Ripristina tutti i componenti WCF e WF.|  
-|`-i`|Installa tutti i componenti WCF e WF specificati con –c.|  
-|`-u`|Disinstalla tutti i componenti WCF e WF specificati con –c.|  
-|`-c`|Installa o disinstalla un componente:<br /><br /> -   httpnamespace – prenotazione dello spazio dei nomi HTTP<br />-   tcpportsharing – servizio di condivisione delle porte TCP<br />-   tcpactivation – servizio di attivazione TCP \(non supportato in .NET 4 Client Profile\)<br />-   namedpipeactivation – servizio di attivazione named pipe \(non supportato in .NET 4 Client Profile\)<br />-   msmqactivation – servizio di attivazione MSMQ \(non supportato in .NET 4 Client Profile\)<br />-   etw – manifesti di traccia eventi ETW \(Windows Vista o versioni successive\)|  
-|`-q`|Modalità non interattiva \(solo registrazione errori visualizzata\)|  
-|`-v`|Modalità dettagliata.|  
-|`-nologo`|Elimina le informazioni di copyright e il messaggio di avvio.|  
-|`-?`|Visualizza il testo della Guida|  
+|<span data-ttu-id="bddbb-113">Opzione</span><span class="sxs-lookup"><span data-stu-id="bddbb-113">Option</span></span>|<span data-ttu-id="bddbb-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bddbb-114">Description</span></span>|  
+|------------|-----------------|  
+|`-ia`|<span data-ttu-id="bddbb-115">Installa tutti i componenti WCF e WF.</span><span class="sxs-lookup"><span data-stu-id="bddbb-115">Installs all WCF and WF components.</span></span>|  
+|`-ua`|<span data-ttu-id="bddbb-116">Disinstalla tutti i componenti WCF e WF.</span><span class="sxs-lookup"><span data-stu-id="bddbb-116">Uninstalls all WCF and WF components.</span></span>|  
+|`-r`|<span data-ttu-id="bddbb-117">Ripristina tutti i componenti WCF e WF.</span><span class="sxs-lookup"><span data-stu-id="bddbb-117">Repairs all WCF and WF components.</span></span>|  
+|`-i`|<span data-ttu-id="bddbb-118">Installa tutti i componenti WCF e WF specificati con -c.</span><span class="sxs-lookup"><span data-stu-id="bddbb-118">Installs WCF and WF components specified with –c.</span></span>|  
+|`-u`|<span data-ttu-id="bddbb-119">Disinstalla tutti i componenti WCF e WF specificati con -c.</span><span class="sxs-lookup"><span data-stu-id="bddbb-119">Uninstalls WCF and WF components specified with –c.</span></span>|  
+|`-c`|<span data-ttu-id="bddbb-120">Installa o disinstalla un componente:</span><span class="sxs-lookup"><span data-stu-id="bddbb-120">Installs or uninstalls a component:</span></span><br /><br /> <span data-ttu-id="bddbb-121">-httpnamespace-prenotazione Namespace HTTP</span><span class="sxs-lookup"><span data-stu-id="bddbb-121">-   httpnamespace – HTTP Namespace Reservation</span></span><br /><span data-ttu-id="bddbb-122">porta TCP - tcpportsharing-servizio di condivisione</span><span class="sxs-lookup"><span data-stu-id="bddbb-122">-   tcpportsharing – TCP port sharing service</span></span><br /><span data-ttu-id="bddbb-123">servizio di attivazione - tcpactivation-TCP (non supportato in .NET 4 Client Profile)</span><span class="sxs-lookup"><span data-stu-id="bddbb-123">-   tcpactivation – TCP activation service (unsupported on .NET 4 Client Profile)</span></span><br /><span data-ttu-id="bddbb-124">-namedpipeactivation-Named pipe activation service (non supportato in .NET 4 Client Profile</span><span class="sxs-lookup"><span data-stu-id="bddbb-124">-   namedpipeactivation – Named pipe activation service (unsupported on .NET 4 Client Profile</span></span><br /><span data-ttu-id="bddbb-125">servizio di attivazione MSMQ - msmqactivation-(non supportato in .NET 4 Client Profile</span><span class="sxs-lookup"><span data-stu-id="bddbb-125">-   msmqactivation – MSMQ activation service (unsupported on .NET 4 Client Profile</span></span><br /><span data-ttu-id="bddbb-126">ETW - etw-manifesti di traccia eventi (Windows Vista o versioni successive)</span><span class="sxs-lookup"><span data-stu-id="bddbb-126">-   etw – ETW event tracing manifests (Windows Vista or later)</span></span>|  
+|`-q`|<span data-ttu-id="bddbb-127">Modalità non interattiva (solo registrazione errori visualizzata)</span><span class="sxs-lookup"><span data-stu-id="bddbb-127">Quiet mode (only display error logging)</span></span>|  
+|`-v`|<span data-ttu-id="bddbb-128">Modalità dettagliata.</span><span class="sxs-lookup"><span data-stu-id="bddbb-128">Verbose mode.</span></span>|  
+|`-nologo`|<span data-ttu-id="bddbb-129">Elimina le informazioni di copyright e il messaggio di avvio.</span><span class="sxs-lookup"><span data-stu-id="bddbb-129">Suppresses the copyright and banner message.</span></span>|  
+|`-?`|<span data-ttu-id="bddbb-130">Visualizza il testo della Guida</span><span class="sxs-lookup"><span data-stu-id="bddbb-130">Displays help text</span></span>|  
   
-## Correzione dell’errore FileLoadException  
- Se sono state installate versioni precedenti di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sul computer, è possibile che venga visualizzato un errore `FileLoadFoundException` durante l’esecuzione dello strumento ServiceModelReg per registrare una nuova installazione.Ciò può verificarsi anche se sono stati rimossi manualmente file dall’installazione precedente, ma sono state mantenute intatte le impostazioni machine.config.  
+## <a name="fixing-the-fileloadexception-error"></a><span data-ttu-id="bddbb-131">Correzione dell’errore FileLoadException </span><span class="sxs-lookup"><span data-stu-id="bddbb-131">Fixing the FileLoadException Error</span></span>  
+ <span data-ttu-id="bddbb-132">Se sono state installate versioni precedenti di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sul computer, è possibile che venga visualizzato un errore `FileLoadFoundException` durante l’esecuzione dello strumento ServiceModelReg per registrare una nuova installazione.</span><span class="sxs-lookup"><span data-stu-id="bddbb-132">If you installed previous versions of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] on your machine, you may get a `FileLoadFoundException` error when you run the ServiceModelReg tool to register a new installation.</span></span> <span data-ttu-id="bddbb-133">Ciò può verificarsi anche se sono stati rimossi manualmente file dall’installazione precedente, ma sono state mantenute intatte le impostazioni machine.config.</span><span class="sxs-lookup"><span data-stu-id="bddbb-133">This can happen even if you have manually removed files from the previous install, but left the machine.config settings intact.</span></span>  
   
- Verrà visualizzato un messaggio di errore simile al seguente:  
+ <span data-ttu-id="bddbb-134">Verrà visualizzato un messaggio di errore simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="bddbb-134">The error message is similar to the following.</span></span>  
   
 ```  
 Error: System.IO.FileLoadException: Could not load file or assembly 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)  
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- È necessario notare dal messaggio di errore che è stato installato l’assembly System.ServiceModel Versione 2.0.0.0 di una precedente versione di Customer Technology Preview \(CTP\).La versione corrente dell'assembly System.ServiceModel rilasciata è invece 3.0.0.0.Pertanto, è possibile incontrare questo problema quando si vuole installare la versione ufficiale [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] su un computer nel quale è stata installata una precedente versione di CTP [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ma non completamente disinstallata.  
+ <span data-ttu-id="bddbb-135">È necessario notare dal messaggio di errore che è stato installato l’assembly System.ServiceModel Versione 2.0.0.0 di una precedente versione di Customer Technology Preview (CTP).</span><span class="sxs-lookup"><span data-stu-id="bddbb-135">You should note from the error message that the System.ServiceModel Version 2.0.0.0 assembly was installed by an early Customer Technology Preview (CTP) release.</span></span> <span data-ttu-id="bddbb-136">La versione corrente dell'assembly System.ServiceModel rilasciata è invece 3.0.0.0.</span><span class="sxs-lookup"><span data-stu-id="bddbb-136">The current version of the System.ServiceModel assembly released is 3.0.0.0 instead.</span></span> <span data-ttu-id="bddbb-137">Pertanto, è possibile incontrare questo problema quando si vuole installare la versione ufficiale [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] su un computer nel quale è stata installata una precedente versione di CTP [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ma non completamente disinstallata.</span><span class="sxs-lookup"><span data-stu-id="bddbb-137">Therefore, this issue is encountered when you want to install the official [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] release on a machine where an early CTP release of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] was installed, but not completely uninstalled.</span></span>  
   
- ServiceModelReg.exe non può eseguire la pulizia di voci della versione precedente, né può registrare voci della versione nuova.L’unica soluzione alternativa è modificare manualmente machine.config.È possibile trovare questo file al percorso seguente.  
+ <span data-ttu-id="bddbb-138">ServiceModelReg.exe non può eseguire la pulizia di voci della versione precedente, né può registrare voci della versione nuova.</span><span class="sxs-lookup"><span data-stu-id="bddbb-138">ServiceModelReg.exe cannot clean up prior version entries, nor can it register the new version's entries.</span></span> <span data-ttu-id="bddbb-139">L’unica soluzione alternativa è modificare manualmente machine.config. È possibile trovare questo file al percorso seguente.</span><span class="sxs-lookup"><span data-stu-id="bddbb-139">The only workaround is to manually edit machine.config. You can locate this file at the following location.</span></span>  
   
 ```  
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- Se si esegue [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] su un computer a 64 bit, è necessario modificare lo stesso file anche in questa posizione.  
+ <span data-ttu-id="bddbb-140">Se si esegue [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] su un computer a 64 bit, è necessario modificare lo stesso file anche in questa posizione.</span><span class="sxs-lookup"><span data-stu-id="bddbb-140">If you are running [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] on a 64-bit machine, you should also edit the same file at this location.</span></span>  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   
 ```  
   
- Trovare qualsiasi nodo XML in questo file che fa riferimento a “System.ServiceModel, Versione\=2 .0.0.0”, eliminare tali nodi e qualsiasi nodo figlio.Per risolvere il problema, salvare il file e ripetere l'esecuzione di ServiceModelReg.exe.  
+ <span data-ttu-id="bddbb-141">Individuare tutti i nodi XML nel file che fanno riferimento a "System. ServiceModel, Version = 2.0.0.0", eliminare tali nodi e i nodi figlio.</span><span class="sxs-lookup"><span data-stu-id="bddbb-141">Locate any XML nodes in this file that refer to "System.ServiceModel, Version=2.0.0.0", delete them and any child nodes.</span></span> <span data-ttu-id="bddbb-142">Per risolvere il problema, salvare il file e ripetere l'esecuzione di ServiceModelReg.exe.</span><span class="sxs-lookup"><span data-stu-id="bddbb-142">Save the file and re-run ServiceModelReg.exe resolves this problem.</span></span>  
   
-## Esempi  
- Negli esempi seguenti viene illustrato come utilizzare le opzioni più comuni dello strumento ServiceModelReg.exe.  
+## <a name="examples"></a><span data-ttu-id="bddbb-143">Esempi</span><span class="sxs-lookup"><span data-stu-id="bddbb-143">Examples</span></span>  
+ <span data-ttu-id="bddbb-144">Negli esempi seguenti viene illustrato come utilizzare le opzioni più comuni dello strumento ServiceModelReg.exe.</span><span class="sxs-lookup"><span data-stu-id="bddbb-144">The following examples show how to use the most common options of the ServiceModelReg.exe tool.</span></span>  
   
 ```  
 ServiceModelReg.exe -ia  
