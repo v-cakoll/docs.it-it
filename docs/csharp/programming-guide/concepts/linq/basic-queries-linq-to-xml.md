@@ -1,47 +1,42 @@
 ---
 title: Query di base (LINQ to XML) (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0374cdf35a1c617e390b9e270fbb00932727c2ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 272cfadeccb505960f7872274a2af8c18efc3679
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="basic-queries-linq-to-xml-c"></a>Query di base (LINQ to XML) (C#)
-Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] di base.  
+# <a name="basic-queries-linq-to-xml-c"></a><span data-ttu-id="13376-102">Query di base (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-102">Basic Queries (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="13376-103">Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] di base.</span><span class="sxs-lookup"><span data-stu-id="13376-103">This section provides examples of basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a><span data-ttu-id="13376-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="13376-104">In This Section</span></span>  
   
-|Argomento|Descrizione|  
+|<span data-ttu-id="13376-105">Argomento</span><span class="sxs-lookup"><span data-stu-id="13376-105">Topic</span></span>|<span data-ttu-id="13376-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="13376-106">Description</span></span>|  
 |-----------|-----------------|  
-|[Procedura: Trovare un elemento con un attributo specifico (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Viene illustrato come trovare un determinato elemento che presenta un attributo con un valore specifico.|  
-|[Procedura: Trovare un elemento con un elemento figlio specifico (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Viene illustrato come trovare un determinato elemento che include un elemento figlio con un valore specifico.|  
-|[Esecuzione di query su XDocument e su Esecuzione di query su XElement (C#)](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Vengono illustrate le differenze tra la scrittura di query su un albero XML inserito nella radice di <xref:System.Xml.Linq.XElement> e la scrittura di query su un albero XML inserita nella radice di <xref:System.Xml.Linq.XDocument>.|  
-|[Procedura: Trovare discendenti con un nome di elemento specifico (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Viene illustrato come individuare tutti i discendenti di un elemento con un nome specifico. In questo esempio viene usato l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.|  
-|[Procedura: Trovare un discendente singolo con il metodo Descendants (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Viene illustrato come usare il metodo <xref:System.Xml.Linq.XContainer.Descendants%2A> dell'asse per individuare un singolo elemento con un nome univoco.|  
-|[Procedura: Scrivere query con filtro complesso (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Viene illustrato come scrivere una query con un filtro più complesso.|  
-|[Procedura: Filtrare in base a un elemento facoltativo (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|Viene illustrato come individuare nodi in un albero di forma irregolare.|  
-|[Procedura: Trovare tutti i nodi in uno spazio dei nomi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Viene illustrato come individuare tutti i nodi inclusi in uno spazio dei nomi specifico.|  
-|[Procedura: Ordinare elementi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md)|Viene illustrato come scrivere una query che ordina i relativi risultati.|  
-|[Procedura: Ordinare elementi in base a più chiavi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Viene illustrato come ordinare elementi su più chiavi.|  
-|[Procedura: Calcolare valori intermedi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Illustra come usare la clausola `Let` per calcolare valori intermedi in una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Procedura: Scrivere una query per trovare elementi basati sul contesto (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Viene illustrato come selezionare elementi basati su altri elementi dell'albero.|  
-|[Procedura: Eseguire il debug di set di risultati vuoti di query (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Viene illustrata la correzione appropriata per il debug di query su codice XML incluso in uno spazio dei nomi predefinito.|  
+|[<span data-ttu-id="13376-107">Procedura: Trovare un elemento con un attributo specifico (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-107">How to: Find an Element with a Specific Attribute (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|<span data-ttu-id="13376-108">Viene illustrato come trovare un determinato elemento che presenta un attributo con un valore specifico.</span><span class="sxs-lookup"><span data-stu-id="13376-108">Shows how to find a particular element that has an attribute that has a specific value.</span></span>|  
+|[<span data-ttu-id="13376-109">Procedura: Trovare un elemento con un elemento figlio specifico (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-109">How to: Find an Element with a Specific Child Element (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|<span data-ttu-id="13376-110">Viene illustrato come trovare un determinato elemento che include un elemento figlio con un valore specifico.</span><span class="sxs-lookup"><span data-stu-id="13376-110">Shows how to find a particular element that has a child element that has a specific value.</span></span>|  
+|[<span data-ttu-id="13376-111">Esecuzione di query su XDocument e su Esecuzione di query su XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-111">Querying an XDocument vs. Querying an XElement (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|<span data-ttu-id="13376-112">Vengono illustrate le differenze tra la scrittura di query su un albero XML inserito nella radice di <xref:System.Xml.Linq.XElement> e la scrittura di query su un albero XML inserita nella radice di <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="13376-112">Explains the differences between writing queries on an XML tree that is rooted in <xref:System.Xml.Linq.XElement> and writing queries on an XML tree that is rooted in <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|[<span data-ttu-id="13376-113">Procedura: Trovare discendenti con un nome di elemento specifico (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-113">How to: Find Descendants with a Specific Element Name (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|<span data-ttu-id="13376-114">Viene illustrato come individuare tutti i discendenti di un elemento con un nome specifico.</span><span class="sxs-lookup"><span data-stu-id="13376-114">Shows how to find all the descendants of an element that have a specific name.</span></span> <span data-ttu-id="13376-115">In questo esempio viene usato l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="13376-115">This example uses the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>|  
+|[<span data-ttu-id="13376-116">Procedura: Trovare un discendente singolo con il metodo Descendants (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-116">How to: Find a Single Descendant Using the Descendants Method (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|<span data-ttu-id="13376-117">Viene illustrato come usare il metodo <xref:System.Xml.Linq.XContainer.Descendants%2A> dell'asse per individuare un singolo elemento con un nome univoco.</span><span class="sxs-lookup"><span data-stu-id="13376-117">Shows how to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to find a single uniquely named element.</span></span>|  
+|[<span data-ttu-id="13376-118">Procedura: Scrivere query con filtro complesso (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-118">How to: Write Queries with Complex Filtering (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|<span data-ttu-id="13376-119">Viene illustrato come scrivere una query con un filtro più complesso.</span><span class="sxs-lookup"><span data-stu-id="13376-119">Shows how to write a query with a more complex filter.</span></span>|  
+|[<span data-ttu-id="13376-120">Procedura: Filtrare in base a un elemento facoltativo (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-120">How to: Filter on an Optional Element (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|<span data-ttu-id="13376-121">Viene illustrato come individuare nodi in un albero di forma irregolare.</span><span class="sxs-lookup"><span data-stu-id="13376-121">Shows how to find nodes in an irregularly shaped tree.</span></span>|  
+|[<span data-ttu-id="13376-122">Procedura: Trovare tutti i nodi in uno spazio dei nomi (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-122">How to: Find All Nodes in a Namespace (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|<span data-ttu-id="13376-123">Viene illustrato come individuare tutti i nodi inclusi in uno spazio dei nomi specifico.</span><span class="sxs-lookup"><span data-stu-id="13376-123">Shows how to find all nodes that are in a specific namespace.</span></span>|  
+|[<span data-ttu-id="13376-124">Procedura: Ordinare elementi (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-124">How to: Sort Elements (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md)|<span data-ttu-id="13376-125">Viene illustrato come scrivere una query che ordina i relativi risultati.</span><span class="sxs-lookup"><span data-stu-id="13376-125">Shows how to write a query that sorts its results.</span></span>|  
+|[<span data-ttu-id="13376-126">Procedura: Ordinare elementi in base a più chiavi (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-126">How to: Sort Elements on Multiple Keys (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|<span data-ttu-id="13376-127">Viene illustrato come ordinare elementi su più chiavi.</span><span class="sxs-lookup"><span data-stu-id="13376-127">Shows how to sort on multiple keys.</span></span>|  
+|[<span data-ttu-id="13376-128">Procedura: Calcolare valori intermedi (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-128">How to: Calculate Intermediate Values (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|<span data-ttu-id="13376-129">Illustra come usare la clausola `Let` per calcolare valori intermedi in una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="13376-129">Shows how to use the `Let` clause to calculate intermediate values in a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query.</span></span>|  
+|[<span data-ttu-id="13376-130">Procedura: Scrivere una query per trovare elementi basati sul contesto (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-130">How to: Write a Query that Finds Elements Based on Context (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|<span data-ttu-id="13376-131">Viene illustrato come selezionare elementi basati su altri elementi dell'albero.</span><span class="sxs-lookup"><span data-stu-id="13376-131">Shows how to select elements based on other elements in the tree.</span></span>|  
+|[<span data-ttu-id="13376-132">Procedura: Eseguire il debug di set di risultati vuoti di query (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-132">How to: Debug Empty Query Results Sets (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|<span data-ttu-id="13376-133">Viene illustrata la correzione appropriata per il debug di query su codice XML incluso in uno spazio dei nomi predefinito.</span><span class="sxs-lookup"><span data-stu-id="13376-133">Shows the appropriate fix when debugging queries on XML that is in a default namespace.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query su strutture ad albero XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
-
+## <a name="see-also"></a><span data-ttu-id="13376-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="13376-134">See Also</span></span>  
+ [<span data-ttu-id="13376-135">Esecuzione di query su strutture ad albero XML (C#)</span><span class="sxs-lookup"><span data-stu-id="13376-135">Querying XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

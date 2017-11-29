@@ -1,138 +1,120 @@
 ---
-title: Creazione e implementazione di interfacce (Visual Basic) | Documenti di Microsoft
+title: Creazione e implementazione di interfacce (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- interfaces, walkthroughs
-- interfaces, testing
-- interface implementation, walkthrough
-- interfaces, creating
+- interfaces [Visual Basic], walkthroughs
+- interfaces [Visual Basic], testing
+- interface implementation [Visual Basic], walkthrough
+- interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 076bc8d33e97286c31f27a2016e39a25e9cec22c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 08bf6dc7344d4f83c8ab1908fdeb29eb4a53e142
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Procedura dettagliata: creazione e implementazione di interfacce (Visual Basic)
-Interfacce descrivono le caratteristiche di proprietà, metodi ed eventi, ma i dettagli relativi all'implementazione fino a strutture o classi.  
+# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a><span data-ttu-id="b0672-102">Procedura dettagliata: creazione e implementazione di interfacce (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0672-102">Walkthrough: Creating and Implementing Interfaces (Visual Basic)</span></span>
+<span data-ttu-id="b0672-103">Interfacce descrivono le caratteristiche di proprietà, metodi ed eventi, ma i dettagli relativi all'implementazione fino a strutture o classi.</span><span class="sxs-lookup"><span data-stu-id="b0672-103">Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.</span></span>  
   
- Questa procedura dettagliata viene illustrato come dichiarare e implementare un'interfaccia.  
+ <span data-ttu-id="b0672-104">Questa procedura dettagliata viene illustrato come dichiarare e implementare un'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b0672-104">This walkthrough demonstrates how to declare and implement an interface.</span></span>  
   
 > [!NOTE]
->  Questa procedura dettagliata non fornisce informazioni su come creare un'interfaccia utente.  
+>  <span data-ttu-id="b0672-105">Questa procedura dettagliata non fornisce informazioni su come creare un'interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="b0672-105">This walkthrough doesn't provide information about how to create a user interface.</span></span>  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-define-an-interface"></a>Per definire un'interfaccia  
+### <a name="to-define-an-interface"></a><span data-ttu-id="b0672-106">Per definire un'interfaccia</span><span class="sxs-lookup"><span data-stu-id="b0672-106">To define an interface</span></span>  
   
-1.  Aprire un nuovo [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] progetto applicazione Windows.  
+1.  <span data-ttu-id="b0672-107">Aprire un nuovo progetto Applicazione Windows in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b0672-107">Open a new [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows Application project.</span></span>  
   
-2.  Aggiungere un nuovo modulo per il progetto facendo clic su **Aggiungi modulo** sul **Project** menu.  
+2.  <span data-ttu-id="b0672-108">Aggiungere un nuovo modulo al progetto, fare clic su **Aggiungi modulo** sul **progetto** menu.</span><span class="sxs-lookup"><span data-stu-id="b0672-108">Add a new module to the project by clicking **Add Module** on the **Project** menu.</span></span>  
   
-3.  Nome del nuovo modulo `Module1.vb` e fare clic su **Aggiungi**. Viene visualizzato il codice per il nuovo modulo.  
+3.  <span data-ttu-id="b0672-109">Nome del nuovo modulo `Module1.vb` e fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="b0672-109">Name the new module `Module1.vb` and click **Add**.</span></span> <span data-ttu-id="b0672-110">Viene visualizzato il codice per il nuovo modulo.</span><span class="sxs-lookup"><span data-stu-id="b0672-110">The code for the new module is displayed.</span></span>  
   
-4.  Definire un'interfaccia denominata `TestInterface` all'interno di `Module1` digitando `Interface TestInterface` tra il `Module` e `End Module` istruzioni e quindi premere INVIO. Il **Editor di codice** rientri il `Interface` (parola chiave) e aggiunge un `End Interface` istruzione in modo da formare un blocco di codice.  
+4.  <span data-ttu-id="b0672-111">Definire un'interfaccia denominata `TestInterface` all'interno di `Module1` digitando `Interface TestInterface` tra il `Module` e `End Module` istruzioni e quindi premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="b0672-111">Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER.</span></span> <span data-ttu-id="b0672-112">Il **Editor di codice** rientri di `Interface` (parola chiave) e aggiunge un `End Interface` istruzione in modo da formare un blocco di codice.</span><span class="sxs-lookup"><span data-stu-id="b0672-112">The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.</span></span>  
   
-5.  Definire un proprietà, metodi ed eventi per l'interfaccia inserendo il codice seguente tra i `Interface` e `End Interface` istruzioni:  
+5.  <span data-ttu-id="b0672-113">Definire un proprietà, metodi ed eventi per l'interfaccia inserendo il codice seguente tra i `Interface` e `End Interface` istruzioni:</span><span class="sxs-lookup"><span data-stu-id="b0672-113">Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:</span></span>  
   
-     [!code-vb[&#98; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_1.vb)]  
+     [!code-vb[VbVbalrOOP#98](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_1.vb)]  
   
-## <a name="implementation"></a>Implementazione  
- È possibile notare che la sintassi utilizzata per dichiarare i membri di interfaccia è diversa da quella utilizzata per dichiarare i membri della classe. La differenza è dovuta al fatto che le interfacce non possono contenere codice di implementazione.  
+## <a name="implementation"></a><span data-ttu-id="b0672-114">Implementazione</span><span class="sxs-lookup"><span data-stu-id="b0672-114">Implementation</span></span>  
+ <span data-ttu-id="b0672-115">È possibile notare che la sintassi utilizzata per dichiarare i membri di interfaccia è diversa da quella utilizzata per dichiarare i membri di classe.</span><span class="sxs-lookup"><span data-stu-id="b0672-115">You may notice that the syntax used to declare interface members is different from the syntax used to declare class members.</span></span> <span data-ttu-id="b0672-116">Questa differenza è dovuto al fatto che le interfacce non possono contenere codice di implementazione.</span><span class="sxs-lookup"><span data-stu-id="b0672-116">This difference reflects the fact that interfaces cannot contain implementation code.</span></span>  
   
-#### <a name="to-implement-the-interface"></a>Per implementare l'interfaccia  
+#### <a name="to-implement-the-interface"></a><span data-ttu-id="b0672-117">Per implementare l'interfaccia</span><span class="sxs-lookup"><span data-stu-id="b0672-117">To implement the interface</span></span>  
   
-1.  Aggiungere una classe denominata `ImplementationClass` aggiungendo l'istruzione seguente alle `Module1`, dopo il `End Interface` istruzione ma prima che il `End Module` istruzione e quindi premere INVIO:  
+1.  <span data-ttu-id="b0672-118">Aggiungere una classe denominata `ImplementationClass` aggiungendo l'istruzione seguente alle `Module1`, dopo il `End Interface` istruzione ma prima che il `End Module` istruzione e quindi premere INVIO:</span><span class="sxs-lookup"><span data-stu-id="b0672-118">Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:</span></span>  
   
-     [!code-vb[VbVbalrOOP&#99;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_2.vb)]  
+     [!code-vb[VbVbalrOOP#99](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_2.vb)]  
   
-     Se si lavora all'interno dell'ambiente di sviluppo integrato, il **Editor di codice** fornisce un corrispondente `End Class` istruzione quando si preme INVIO.  
+     <span data-ttu-id="b0672-119">Se si lavora all'interno dell'ambiente di sviluppo integrato, il **Editor di codice** fornisce un corrispondente `End Class` istruzione quando si preme INVIO.</span><span class="sxs-lookup"><span data-stu-id="b0672-119">If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.</span></span>  
   
-2.  Aggiungere il codice seguente `Implements` istruzione `ImplementationClass`, quali nome dell'interfaccia implementata dalla classe:  
+2.  <span data-ttu-id="b0672-120">Aggiungere il seguente `Implements` istruzione `ImplementationClass`, quali nome dell'interfaccia implementata dalla classe:</span><span class="sxs-lookup"><span data-stu-id="b0672-120">Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:</span></span>  
   
-     [!code-vb[VbVbalrOOP&#100;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_3.vb)]  
+     [!code-vb[VbVbalrOOP#100](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_3.vb)]  
   
-     Quando elencata separatamente da altri elementi nella parte superiore di una classe o struttura, il `Implements` istruzione indica che la classe o struttura implementa un'interfaccia.  
+     <span data-ttu-id="b0672-121">Quando elencata separatamente da altri elementi nella parte superiore di una classe o struttura, il `Implements` istruzione indica che la classe o struttura implementa un'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b0672-121">When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.</span></span>  
   
-     Se si lavora all'interno dell'ambiente di sviluppo integrato, il **Editor di codice** implementa i membri di classe richiesti da `TestInterface` quando si preme INVIO, e si può ignorare il passaggio successivo.  
+     <span data-ttu-id="b0672-122">Se si lavora all'interno dell'ambiente di sviluppo integrato, il **Editor di codice** implementa i membri di classe richiesti da `TestInterface` quando si preme INVIO, ed è possibile ignorare il passaggio successivo.</span><span class="sxs-lookup"><span data-stu-id="b0672-122">If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.</span></span>  
   
-3.  Se non si lavora all'interno dell'ambiente di sviluppo integrato, è necessario implementare tutti i membri dell'interfaccia `MyInterface`. Aggiungere il codice seguente a `ImplementationClass` implementare `Event1`, `Method1`, e `Prop1`:  
+3.  <span data-ttu-id="b0672-123">Se non si lavora all'interno dell'ambiente di sviluppo integrato, è necessario implementare tutti i membri dell'interfaccia `MyInterface`.</span><span class="sxs-lookup"><span data-stu-id="b0672-123">If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`.</span></span> <span data-ttu-id="b0672-124">Aggiungere il seguente codice al `ImplementationClass` implementare `Event1`, `Method1`, e `Prop1`:</span><span class="sxs-lookup"><span data-stu-id="b0672-124">Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:</span></span>  
   
-     [!code-vb[VbVbalrOOP&#101;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_4.vb)]  
+     [!code-vb[VbVbalrOOP#101](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_4.vb)]  
   
-     Il `Implements` istruzione denomina l'interfaccia e un membro di interfaccia implementati.  
+     <span data-ttu-id="b0672-125">Il `Implements` istruzione assegna un nome di interfaccia e un membro di interfaccia implementato.</span><span class="sxs-lookup"><span data-stu-id="b0672-125">The `Implements` statement names the interface and interface member being implemented.</span></span>  
   
-4.  Completare la definizione di `Prop1` aggiungendo un campo privato per la classe che è archiviato il valore della proprietà:  
+4.  <span data-ttu-id="b0672-126">Completare la definizione di `Prop1` aggiungendo un campo privato per la classe che è archiviato il valore della proprietà:</span><span class="sxs-lookup"><span data-stu-id="b0672-126">Complete the definition of `Prop1` by adding a private field to the class that stored the property value:</span></span>  
   
-     [!code-vb[&#102; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_5.vb)]  
+     [!code-vb[VbVbalrOOP#102](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_5.vb)]  
   
-     Restituisce il valore di `pval` dalla proprietà get.  
+     <span data-ttu-id="b0672-127">Restituisce il valore di `pval` dalla proprietà get.</span><span class="sxs-lookup"><span data-stu-id="b0672-127">Return the value of the `pval` from the property get accessor.</span></span>  
   
-     [!code-vb[VbVbalrOOP&#103;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_6.vb)]  
+     [!code-vb[VbVbalrOOP#103](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_6.vb)]  
   
-     Impostare il valore di `pval` nel set di proprietà della funzione di accesso.  
+     <span data-ttu-id="b0672-128">Impostare il valore di `pval` nel set di proprietà della funzione di accesso.</span><span class="sxs-lookup"><span data-stu-id="b0672-128">Set the value of `pval` in the property set accessor.</span></span>  
   
-     [!code-vb[&#104; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_7.vb)]  
+     [!code-vb[VbVbalrOOP#104](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_7.vb)]  
   
-5.  Completare la definizione di `Method1` aggiungendo il codice seguente.  
+5.  <span data-ttu-id="b0672-129">Completare la definizione di `Method1` aggiungendo il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="b0672-129">Complete the definition of `Method1` by adding the following code.</span></span>  
   
-     [!code-vb[&#105; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_8.vb)]  
+     [!code-vb[VbVbalrOOP#105](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_8.vb)]  
   
-#### <a name="to-test-the-implementation-of-the-interface"></a>Per testare l'implementazione dell'interfaccia  
+#### <a name="to-test-the-implementation-of-the-interface"></a><span data-ttu-id="b0672-130">Per testare l'implementazione dell'interfaccia</span><span class="sxs-lookup"><span data-stu-id="b0672-130">To test the implementation of the interface</span></span>  
   
-1.  Fare doppio clic su form di avvio per il progetto nel **Esplora**, fare clic su **Visualizza codice**. L'editor visualizza la classe del form di avvio. Per impostazione predefinita, viene chiamato il form di avvio `Form1`.  
+1.  <span data-ttu-id="b0672-131">Fare doppio clic su form di avvio per il progetto nel **Esplora**, fare clic su **Visualizza codice**.</span><span class="sxs-lookup"><span data-stu-id="b0672-131">Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**.</span></span> <span data-ttu-id="b0672-132">L'editor visualizza la classe del form di avvio.</span><span class="sxs-lookup"><span data-stu-id="b0672-132">The editor displays the class for your startup form.</span></span> <span data-ttu-id="b0672-133">Per impostazione predefinita, viene chiamato il form di avvio `Form1`.</span><span class="sxs-lookup"><span data-stu-id="b0672-133">By default, the startup form is called `Form1`.</span></span>  
   
-2.  Aggiungere il codice seguente `testInstance` campo la `Form1` classe:  
+2.  <span data-ttu-id="b0672-134">Aggiungere il seguente `testInstance` campo la `Form1` classe:</span><span class="sxs-lookup"><span data-stu-id="b0672-134">Add the following `testInstance` field to the `Form1` class:</span></span>  
   
-     [!code-vb[&#120; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_9.vb)]  
+     [!code-vb[VbVbalrOOP#120](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_9.vb)]  
   
-     Dichiarando `testInstance` come `WithEvents`, `Form1` classe può gestire gli eventi.  
+     <span data-ttu-id="b0672-135">Dichiarando `testInstance` come `WithEvents`, `Form1` classe consente di gestire gli eventi.</span><span class="sxs-lookup"><span data-stu-id="b0672-135">By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.</span></span>  
   
-3.  Aggiungere il seguente gestore eventi per il `Form1` classe per gestire gli eventi generati da `testInstance`:  
+3.  <span data-ttu-id="b0672-136">Aggiungere il seguente gestore eventi per il `Form1` classe per gestire gli eventi generati da `testInstance`:</span><span class="sxs-lookup"><span data-stu-id="b0672-136">Add the following event handler to the `Form1` class to handle events raised by `testInstance`:</span></span>  
   
-     [!code-vb[&#106; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_10.vb)]  
+     [!code-vb[VbVbalrOOP#106](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_10.vb)]  
   
-4.  Aggiungere una subroutine denominata `Test` per la `Form1` classe da testare l'implementazione della classe:  
+4.  <span data-ttu-id="b0672-137">Aggiungere una subroutine denominata `Test` per la `Form1` classe per testare la classe di implementazione:</span><span class="sxs-lookup"><span data-stu-id="b0672-137">Add a subroutine named `Test` to the `Form1` class to test the implementation class:</span></span>  
   
-     [!code-vb[&#107; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_11.vb)]  
+     [!code-vb[VbVbalrOOP#107](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_11.vb)]  
   
-     Il `Test` procedura crea un'istanza della classe che implementa `MyInterface`, assegna l'istanza di `testInstance` imposta una proprietà, campo e viene eseguito un metodo tramite l'interfaccia.  
+     <span data-ttu-id="b0672-138">Il `Test` procedura consente di creare un'istanza della classe che implementa `MyInterface`, assegna l'istanza di `testInstance` imposta una proprietà, campo e viene eseguito un metodo tramite l'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b0672-138">The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.</span></span>  
   
-5.  Aggiungere codice per chiamare il `Test` procedura il `Form1 Load` routine del form di avvio:  
+5.  <span data-ttu-id="b0672-139">Aggiungere codice per chiamare il `Test` stored procedure di `Form1 Load` routine del form di avvio:</span><span class="sxs-lookup"><span data-stu-id="b0672-139">Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:</span></span>  
   
-     [!code-vb[&#108; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_12.vb)]  
+     [!code-vb[VbVbalrOOP#108](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_12.vb)]  
   
-6.  Eseguire il `Test` procedura premendo F5. Viene visualizzato il messaggio "Prop1 è stato impostato su 9". Viene visualizzato dopo aver fatto clic su OK, il messaggio "il parametro X per Method1 is 5". Fare clic su OK e viene visualizzato il messaggio "il gestore dell'evento rilevata l'evento".  
+6.  <span data-ttu-id="b0672-140">Eseguire il `Test` procedura premendo F5.</span><span class="sxs-lookup"><span data-stu-id="b0672-140">Run the `Test` procedure by pressing F5.</span></span> <span data-ttu-id="b0672-141">Viene visualizzato il messaggio "Prop1 è stato impostato su 9".</span><span class="sxs-lookup"><span data-stu-id="b0672-141">The message "Prop1 was set to 9" is displayed.</span></span> <span data-ttu-id="b0672-142">Viene visualizzato dopo aver selezionato OK, il messaggio "il parametro X per Method1 is 5".</span><span class="sxs-lookup"><span data-stu-id="b0672-142">After you click OK, the message "The X parameter for Method1 is 5" is displayed.</span></span> <span data-ttu-id="b0672-143">Fare clic su OK e viene visualizzato il messaggio "il gestore dell'evento ha rilevato l'evento".</span><span class="sxs-lookup"><span data-stu-id="b0672-143">Click OK, and the message "The event handler caught the event" is displayed.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Implements (istruzione)](../../../../visual-basic/language-reference/statements/implements-statement.md)   
- [Interfacce](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)   
- [Istruzione Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Istruzione Event](../../../../visual-basic/language-reference/statements/event-statement.md)
-
+## <a name="see-also"></a><span data-ttu-id="b0672-144">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b0672-144">See Also</span></span>  
+ [<span data-ttu-id="b0672-145">Istruzione Implements</span><span class="sxs-lookup"><span data-stu-id="b0672-145">Implements Statement</span></span>](../../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [<span data-ttu-id="b0672-146">Interfacce</span><span class="sxs-lookup"><span data-stu-id="b0672-146">Interfaces</span></span>](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
+ [<span data-ttu-id="b0672-147">Istruzione Interface</span><span class="sxs-lookup"><span data-stu-id="b0672-147">Interface Statement</span></span>](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="b0672-148">Istruzione Event</span><span class="sxs-lookup"><span data-stu-id="b0672-148">Event Statement</span></span>](../../../../visual-basic/language-reference/statements/event-statement.md)

@@ -1,77 +1,58 @@
 ---
 title: Matrici multidimensionali (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ab3a93c21ddb9541a6149967605b851ea5a50a3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0203046e2038e97cf791141f6863fd8940b22ea4
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="multidimensional-arrays-c-programming-guide"></a>Matrici multidimensionali (Guida per programmatori C#)
-Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad esempio, crea una matrice bidimensionale di quattro righe e due colonne.  
+# <a name="multidimensional-arrays-c-programming-guide"></a><span data-ttu-id="533a8-102">Matrici multidimensionali (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="533a8-102">Multidimensional Arrays (C# Programming Guide)</span></span>
+<span data-ttu-id="533a8-103">Le matrici possono avere più di una dimensione.</span><span class="sxs-lookup"><span data-stu-id="533a8-103">Arrays can have more than one dimension.</span></span> <span data-ttu-id="533a8-104">La dichiarazione seguente, ad esempio, crea una matrice bidimensionale di quattro righe e due colonne.</span><span class="sxs-lookup"><span data-stu-id="533a8-104">For example, the following declaration creates a two-dimensional array of four rows and two columns.</span></span>  
   
- [!code-cs[csProgGuideArrays#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_1.cs)]  
+ [!code-csharp[csProgGuideArrays#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_1.cs)]  
   
- La dichiarazione seguente crea una matrice a tre dimensioni: 4, 2 e 3.  
+ <span data-ttu-id="533a8-105">La dichiarazione seguente crea una matrice a tre dimensioni: 4, 2 e 3.</span><span class="sxs-lookup"><span data-stu-id="533a8-105">The following declaration creates an array of three dimensions, 4, 2, and 3.</span></span>  
   
- [!code-cs[csProgGuideArrays#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_2.cs)]  
+ [!code-csharp[csProgGuideArrays#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>Inizializzazione di una matrice  
- È possibile inizializzare la matrice al momento della dichiarazione, come illustrato nell'esempio seguente.  
+## <a name="array-initialization"></a><span data-ttu-id="533a8-106">Inizializzazione di una matrice</span><span class="sxs-lookup"><span data-stu-id="533a8-106">Array Initialization</span></span>  
+ <span data-ttu-id="533a8-107">È possibile inizializzare la matrice al momento della dichiarazione, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="533a8-107">You can initialize the array upon declaration, as is shown in the following example.</span></span>  
   
- [!code-cs[csProgGuideArrays#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_3.cs)]  
+ [!code-csharp[csProgGuideArrays#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_3.cs)]  
   
- È possibile anche inizializzare la matrice senza specificarne il numero di dimensioni.  
+ <span data-ttu-id="533a8-108">È possibile anche inizializzare la matrice senza specificarne il numero di dimensioni.</span><span class="sxs-lookup"><span data-stu-id="533a8-108">You also can initialize the array without specifying the rank.</span></span>  
   
- [!code-cs[csProgGuideArrays#14](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_4.cs)]  
+ [!code-csharp[csProgGuideArrays#14](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_4.cs)]  
   
- Se si sceglie di dichiarare una variabile di matrice senza inizializzazione, è necessario usare l'operatore `new` per assegnare una matrice alla variabile. L'utilizzo di `new` è illustrato nell'esempio seguente.  
+ <span data-ttu-id="533a8-109">Se si sceglie di dichiarare una variabile di matrice senza inizializzazione, è necessario usare l'operatore `new` per assegnare una matrice alla variabile.</span><span class="sxs-lookup"><span data-stu-id="533a8-109">If you choose to declare an array variable without initialization, you must use the `new` operator to assign an array to the variable.</span></span> <span data-ttu-id="533a8-110">L'utilizzo di `new` è illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="533a8-110">The use of `new` is shown in the following example.</span></span>  
   
- [!code-cs[csProgGuideArrays#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_5.cs)]  
+ [!code-csharp[csProgGuideArrays#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_5.cs)]  
   
- Nell'esempio seguente viene assegnato un valore a un elemento specifico della matrice.  
+ <span data-ttu-id="533a8-111">Nell'esempio seguente viene assegnato un valore a un elemento specifico della matrice.</span><span class="sxs-lookup"><span data-stu-id="533a8-111">The following example assigns a value to a particular array element.</span></span>  
   
- [!code-cs[csProgGuideArrays#16](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_6.cs)]  
+ [!code-csharp[csProgGuideArrays#16](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_6.cs)]  
   
- Analogamente, nell'esempio seguente viene ottenuto il valore di un elemento specifico della matrice, che viene assegnato alla variabile `elementValue`.  
+ <span data-ttu-id="533a8-112">Analogamente, nell'esempio seguente viene ottenuto il valore di un elemento specifico della matrice, che viene assegnato alla variabile `elementValue`.</span><span class="sxs-lookup"><span data-stu-id="533a8-112">Similarly, the following example gets the value of a particular array element and assigns it to variable `elementValue`.</span></span>  
   
- [!code-cs[csProgGuideArrays#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_7.cs)]  
+ [!code-csharp[csProgGuideArrays#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_7.cs)]  
   
- Nell'esempio di codice seguente, gli elementi della matrice vengono inizializzati in base ai valori predefiniti (ad eccezione delle matrici di matrici).  
+ <span data-ttu-id="533a8-113">Nell'esempio di codice seguente, gli elementi della matrice vengono inizializzati in base ai valori predefiniti (ad eccezione delle matrici di matrici).</span><span class="sxs-lookup"><span data-stu-id="533a8-113">The following code example initializes the array elements to default values (except for jagged arrays).</span></span>  
   
- [!code-cs[csProgGuideArrays#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_8.cs)]  
+ [!code-csharp[csProgGuideArrays#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_8.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Matrici](../../../csharp/programming-guide/arrays/index.md)   
- [Matrici unidimensionali](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)   
- [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)
-
+## <a name="see-also"></a><span data-ttu-id="533a8-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="533a8-114">See Also</span></span>  
+ [<span data-ttu-id="533a8-115">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="533a8-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="533a8-116">Array</span><span class="sxs-lookup"><span data-stu-id="533a8-116">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
+ [<span data-ttu-id="533a8-117">Matrici unidimensionali</span><span class="sxs-lookup"><span data-stu-id="533a8-117">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+ [<span data-ttu-id="533a8-118">Matrici irregolari</span><span class="sxs-lookup"><span data-stu-id="533a8-118">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)

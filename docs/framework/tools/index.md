@@ -5,148 +5,140 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command line, .NET Framework tools
 - .NET Framework, tools
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 777c78a1ee296fd92d48547aeb53a083afa95b28
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bee585074a444e8df5d67e035d5e0b65d292f8ac
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="net-framework-tools"></a>Strumenti di .NET Framework
-Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la gestione di applicazioni e componenti destinati a .NET Framework.  
+# <a name="net-framework-tools"></a><span data-ttu-id="9add1-102">Strumenti di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9add1-102">.NET Framework Tools</span></span>
+<span data-ttu-id="9add1-103">Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la gestione di applicazioni e componenti destinati a .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9add1-103">The .NET Framework tools make it easier for you to create, deploy, and manage applications and components that target the .NET Framework.</span></span>  
   
- La maggior parte degli strumenti di .NET Framework descritti in questa sezione vengono installati automaticamente con Visual Studio. Per informazioni sull'installazione, vedere [Download di Visual Studio](http://go.microsoft.com/fwlink/?LinkID=325532).  
+ <span data-ttu-id="9add1-104">La maggior parte degli strumenti di .NET Framework descritti in questa sezione vengono installati automaticamente con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9add1-104">Most of the .NET Framework tools described in this section are automatically installed with Visual Studio.</span></span> <span data-ttu-id="9add1-105">Per informazioni sull'installazione, vedere [Download di Visual Studio](http://go.microsoft.com/fwlink/?LinkID=325532).</span><span class="sxs-lookup"><span data-stu-id="9add1-105">(For installation information , see the [Visual Studio Downloads](http://go.microsoft.com/fwlink/?LinkID=325532).)</span></span>  
   
- Tutti gli strumenti possono essere eseguiti dalla riga di comando, ad eccezione di Visualizzatore Assembly Cache (Shfusion.dll). Per accedere a Shfusion.dll occorre usare Esplora file.  
+ <span data-ttu-id="9add1-106">Tutti gli strumenti possono essere eseguiti dalla riga di comando, ad eccezione di Visualizzatore Assembly Cache (Shfusion.dll).</span><span class="sxs-lookup"><span data-stu-id="9add1-106">You can run all the tools from the command line with the exception of the Assembly Cache Viewer (Shfusion.dll).</span></span> <span data-ttu-id="9add1-107">Per accedere a Shfusion.dll occorre usare Esplora file.</span><span class="sxs-lookup"><span data-stu-id="9add1-107">You must access Shfusion.dll from File Explorer.</span></span>  
   
- Il modo migliore per eseguire gli strumenti da riga di comando è tramite il prompt dei comandi per gli sviluppatori per Visual Studio. Queste utilità consentono di eseguire gli strumenti facilmente, senza dover passare alla cartella di installazione. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="9add1-108">Il modo migliore per eseguire gli strumenti da riga di comando è tramite il prompt dei comandi per gli sviluppatori per Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9add1-108">The best way to run the command-line tools is by using the Developer Command Prompt for Visual Studio.</span></span> <span data-ttu-id="9add1-109">Queste utilità consentono di eseguire gli strumenti facilmente, senza dover passare alla cartella di installazione.</span><span class="sxs-lookup"><span data-stu-id="9add1-109">These utilities enable you to run the tools easily, without navigating to the installation folder.</span></span> <span data-ttu-id="9add1-110">Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="9add1-110">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
 > [!NOTE]
->  Alcuni strumenti sono specifici per computer a 32 bit o computer a 64 bit. Assicurarsi di eseguire la versione dello strumento appropriata per il computer.  
+>  <span data-ttu-id="9add1-111">Alcuni strumenti sono specifici per computer a 32 bit o computer a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="9add1-111">Some tools are specific to either 32-bit computers or 64-bit computers.</span></span> <span data-ttu-id="9add1-112">Assicurarsi di eseguire la versione dello strumento appropriata per il computer.</span><span class="sxs-lookup"><span data-stu-id="9add1-112">Be sure to run the appropriate version of the tool for your computer.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- Genera un file che dispone di un manifesto dell'assembly ricavato da moduli o file di risorse.  
+## <a name="in-this-section"></a><span data-ttu-id="9add1-113">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="9add1-113">In This Section</span></span>  
+ [<span data-ttu-id="9add1-114">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="9add1-114">Al.exe (Assembly Linker)</span></span>](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ <span data-ttu-id="9add1-115">Genera un file che dispone di un manifesto dell'assembly ricavato da moduli o file di risorse.</span><span class="sxs-lookup"><span data-stu-id="9add1-115">Generates a file that has an assembly manifest from modules or resource files.</span></span>  
   
- [Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
- Consente di convertire le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX in un controllo Windows Form.  
+ [<span data-ttu-id="9add1-116">Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)</span><span class="sxs-lookup"><span data-stu-id="9add1-116">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+ <span data-ttu-id="9add1-117">Consente di convertire le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX in un controllo Windows Form.</span><span class="sxs-lookup"><span data-stu-id="9add1-117">Converts type definitions in a COM type library for an ActiveX control into a Windows Forms control.</span></span>  
   
- [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Consente di visualizzare e configurare i criteri di sicurezza stabiliti a livello di computer, di utente o dell'intera azienda. In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] e versioni successive questo strumento influisce sui criteri di sicurezza dall'accesso di codice solo se l'elemento [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostato su `true`. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+ [<span data-ttu-id="9add1-118">Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)</span><span class="sxs-lookup"><span data-stu-id="9add1-118">Caspol.exe (Code Access Security Policy Tool)</span></span>](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
+ <span data-ttu-id="9add1-119">Consente di visualizzare e configurare i criteri di sicurezza stabiliti a livello di computer, di utente o dell'intera azienda.</span><span class="sxs-lookup"><span data-stu-id="9add1-119">Enables you to view and configure security policy for the machine policy level, the user policy level, and the enterprise policy level.</span></span> <span data-ttu-id="9add1-120">In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] e versioni successive questo strumento influisce sui criteri di sicurezza dall'accesso di codice solo se l'elemento [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostato su `true`.</span><span class="sxs-lookup"><span data-stu-id="9add1-120">In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] and later, this tool does not affect code access security (CAS) policy unless the [\<legacyCasPolicy> element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) is set to `true`.</span></span> <span data-ttu-id="9add1-121">Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).</span><span class="sxs-lookup"><span data-stu-id="9add1-121">For more information, see [Security Changes](../../../docs/framework/security/security-changes.md).</span></span>  
   
- [Cert2spc.exe (strumento di test dei certificati del distributore di software)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
- Crea un certificato dell'editore del software (SPC, Software Publisher's Certificate) da uno o più certificati X.509. Questo strumento è finalizzato unicamente ai test.  
+ [<span data-ttu-id="9add1-122">Cert2spc.exe (strumento di test dei certificati del distributore di software)</span><span class="sxs-lookup"><span data-stu-id="9add1-122">Cert2spc.exe (Software Publisher Certificate Test Tool)</span></span>](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
+ <span data-ttu-id="9add1-123">Crea un certificato dell'editore del software (SPC, Software Publisher's Certificate) da uno o più certificati X.509.</span><span class="sxs-lookup"><span data-stu-id="9add1-123">Creates a Software Publisher's Certificate (SPC) from one or more X.509 certificates.</span></span> <span data-ttu-id="9add1-124">Questo strumento è finalizzato unicamente ai test.</span><span class="sxs-lookup"><span data-stu-id="9add1-124">This tool is for testing purposes only.</span></span>  
   
- [Certmgr.exe (strumento di gestione certificati)](../../../docs/framework/tools/certmgr-exe-certificate-manager-tool.md)  
- Consente di gestire certificati, elenchi di certificati attendibili (CTL, Certificate Trust List) ed elenchi di certificati revocati (CRL, Certificate Revocation List).  
+ [<span data-ttu-id="9add1-125">Certmgr.exe (strumento di gestione certificati)</span><span class="sxs-lookup"><span data-stu-id="9add1-125">Certmgr.exe (Certificate Manager Tool)</span></span>](../../../docs/framework/tools/certmgr-exe-certificate-manager-tool.md)  
+ <span data-ttu-id="9add1-126">Consente di gestire certificati, elenchi di certificati attendibili (CTL, Certificate Trust List) ed elenchi di certificati revocati (CRL, Certificate Revocation List).</span><span class="sxs-lookup"><span data-stu-id="9add1-126">Manages certificates, certificate trust lists (CTLs), and certificate revocation lists (CRLs).</span></span>  
   
- [Clrver.exe (Strumento della versione CLR)](../../../docs/framework/tools/clrver-exe-clr-version-tool.md)  
- Segnala tutte le versioni di CLR (Common Language Runtime) installate nel computer.  
+ [<span data-ttu-id="9add1-127">Clrver.exe (Strumento della versione CLR)</span><span class="sxs-lookup"><span data-stu-id="9add1-127">Clrver.exe (CLR Version Tool)</span></span>](../../../docs/framework/tools/clrver-exe-clr-version-tool.md)  
+ <span data-ttu-id="9add1-128">Segnala tutte le versioni di CLR (Common Language Runtime) installate nel computer.</span><span class="sxs-lookup"><span data-stu-id="9add1-128">reports all the installed versions of the common language runtime (CLR) on the computer.</span></span>  
   
- [CorFlags.exe (strumento di conversione CorFlags)](../../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)  
- Consente di configurare la sezione CorFlags dell'intestazione di un'immagine PE.  
+ [<span data-ttu-id="9add1-129">CorFlags.exe (strumento di conversione CorFlags)</span><span class="sxs-lookup"><span data-stu-id="9add1-129">CorFlags.exe (CorFlags Conversion Tool)</span></span>](../../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)  
+ <span data-ttu-id="9add1-130">Consente di configurare la sezione CorFlags dell'intestazione di un'immagine PE.</span><span class="sxs-lookup"><span data-stu-id="9add1-130">Lets you configure the CorFlags section of the header of a portable executable (PE) image.</span></span>  
   
- [Fuslogvw.exe (Visualizzatore log binding assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
- Visualizza informazioni sulle associazioni di assembly per consentire di diagnosticare per quale motivo non sia possibile individuare un assembly in fase di esecuzione.  
+ [<span data-ttu-id="9add1-131">Fuslogvw.exe (Visualizzatore log binding assembly)</span><span class="sxs-lookup"><span data-stu-id="9add1-131">Fuslogvw.exe (Assembly Binding Log Viewer)</span></span>](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
+ <span data-ttu-id="9add1-132">Visualizza informazioni sulle associazioni di assembly per consentire di diagnosticare per quale motivo non sia possibile individuare un assembly in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="9add1-132">Displays information about assembly binds to help you diagnose why the .NET Framework cannot locate an assembly at run time.</span></span>  
   
- [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- Consente di visualizzare e modificare il contenuto della Global Assembly Cache e della Download Cache.  
+ [<span data-ttu-id="9add1-133">Gacutil.exe (strumento Global Assembly Cache)</span><span class="sxs-lookup"><span data-stu-id="9add1-133">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
+ <span data-ttu-id="9add1-134">Consente di visualizzare e modificare il contenuto della Global Assembly Cache e della Download Cache.</span><span class="sxs-lookup"><span data-stu-id="9add1-134">Lets you view and manipulate the contents of the global assembly cache and download cache.</span></span>  
   
- [Ilasm.exe (Assembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
- Genera un file eseguibile di tipo PE dal linguaggio intermedio (IL). È possibile eseguire il file eseguibile così ottenuto per determinare se il codice IL funziona come previsto.  
+ [<span data-ttu-id="9add1-135">Ilasm.exe (Assembler IL)</span><span class="sxs-lookup"><span data-stu-id="9add1-135">Ilasm.exe (IL Assembler)</span></span>](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+ <span data-ttu-id="9add1-136">Genera un file eseguibile di tipo PE dal linguaggio intermedio (IL).</span><span class="sxs-lookup"><span data-stu-id="9add1-136">Generates a portable executable (PE) file from intermediate language (IL).</span></span> <span data-ttu-id="9add1-137">È possibile eseguire il file eseguibile così ottenuto per determinare se il codice IL funziona come previsto.</span><span class="sxs-lookup"><span data-stu-id="9add1-137">You can run the resulting executable to determine whether the IL performs as expected.</span></span>  
   
- [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
- Accetta un file eseguibile di tipo PE contenente codice del linguaggio intermedio (IL) e crea un file di testo utilizzabile come input per l'assembler IL (Ilasm.exe).  
+ [<span data-ttu-id="9add1-138">Ildasm.exe (Disassembler IL)</span><span class="sxs-lookup"><span data-stu-id="9add1-138">Ildasm.exe (IL Disassembler)</span></span>](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
+ <span data-ttu-id="9add1-139">Accetta un file eseguibile di tipo PE contenente codice del linguaggio intermedio (IL) e crea un file di testo utilizzabile come input per l'assembler IL (Ilasm.exe).</span><span class="sxs-lookup"><span data-stu-id="9add1-139">Takes a portable executable (PE) file that contains intermediate language (IL) code and creates a text file that can be input to the IL Assembler (Ilasm.exe).</span></span>  
   
- [Installutil.exe (Strumento Programma di installazione)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di un assembly specificato. Funziona con le classi dello spazio dei nomi <xref:System.Configuration.Install>. Consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di un assembly specificato. Funziona con le classi dello spazio dei nomi <xref:System.Configuration.Install>.  
+ [<span data-ttu-id="9add1-140">Installutil.exe (Strumento Programma di installazione)</span><span class="sxs-lookup"><span data-stu-id="9add1-140">Installutil.exe (Installer Tool)</span></span>](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
+ <span data-ttu-id="9add1-141">Consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di un assembly specificato.</span><span class="sxs-lookup"><span data-stu-id="9add1-141">Enables you to install and uninstall server resources by executing the installer components in a specified assembly.</span></span> <span data-ttu-id="9add1-142">Funziona con le classi dello spazio dei nomi <xref:System.Configuration.Install>. Consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di un assembly specificato.</span><span class="sxs-lookup"><span data-stu-id="9add1-142">(Works with classes in the <xref:System.Configuration.Install> namespace.) Enables you to install and uninstall server resources by executing the installer components in a specified assembly.</span></span> <span data-ttu-id="9add1-143">Funziona con le classi dello spazio dei nomi <xref:System.Configuration.Install>.</span><span class="sxs-lookup"><span data-stu-id="9add1-143">(Works with classes in the <xref:System.Configuration.Install> namespace.)</span></span>  
   
- [Lc.exe (Compilatore licenze)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- Legge i file di testo che contengono informazioni sulla licenza e genera un file con estensione licenses che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime. Legge i file di testo che contengono informazioni sulla licenza e genera un file con estensione licenses che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime.  
+ [<span data-ttu-id="9add1-144">Lc.exe (Compilatore licenze)</span><span class="sxs-lookup"><span data-stu-id="9add1-144">Lc.exe (License Compiler)</span></span>](../../../docs/framework/tools/lc-exe-license-compiler.md)  
+ <span data-ttu-id="9add1-145">Legge i file di testo che contengono informazioni sulla licenza e genera un file con estensione licenses che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="9add1-145">Reads text files that contain licensing information and produces a .licenses file that can be embedded in a common language runtime executable as a resource.</span></span> <span data-ttu-id="9add1-146">Legge i file di testo che contengono informazioni sulla licenza e genera un file con estensione licenses che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="9add1-146">Reads text files that contain licensing information and produces a .licenses file that can be embedded in a common language runtime executable as a resource.</span></span>  
   
- [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- Consente di creare, modificare e firmare manifesti dell'applicazione e di distribuzione. Come strumento della riga di comando, Mage.exe può essere eseguito sia da script batch sia da altre applicazioni basate su Windows, incluse le applicazioni ASP.NET.  
+ [<span data-ttu-id="9add1-147">Mage.exe (Strumento per la generazione e la modifica di manifesti)</span><span class="sxs-lookup"><span data-stu-id="9add1-147">Mage.exe (Manifest Generation and Editing Tool)</span></span>](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ <span data-ttu-id="9add1-148">Consente di creare, modificare e firmare manifesti dell'applicazione e di distribuzione.</span><span class="sxs-lookup"><span data-stu-id="9add1-148">Lets you create, edit, and sign application and deployment manifests.</span></span> <span data-ttu-id="9add1-149">Come strumento della riga di comando, Mage.exe può essere eseguito sia da script batch sia da altre applicazioni basate su Windows, incluse le applicazioni ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="9add1-149">As a command-line tool, Mage.exe can be run from both batch scripts and other Windows-based applications, including ASP.NET applications.</span></span>  
   
- [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
- Supporta le stesse funzionalità dello strumento della riga di comando Mage.exe, ma usa un'interfaccia utente basata su Windows. Supporta le stesse funzionalità dello strumento della riga di comando Mage.exe, ma usa un'interfaccia utente basata su Windows.  
+ [<span data-ttu-id="9add1-150">MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)</span><span class="sxs-lookup"><span data-stu-id="9add1-150">MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)</span></span>](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
+ <span data-ttu-id="9add1-151">Supporta le stesse funzionalità dello strumento della riga di comando Mage.exe, ma usa un'interfaccia utente basata su Windows.</span><span class="sxs-lookup"><span data-stu-id="9add1-151">Supports the same functionality as the command-line tool Mage.exe, but uses a Windows-based user interface (UI).</span></span> <span data-ttu-id="9add1-152">Supporta le stesse funzionalità dello strumento della riga di comando Mage.exe, ma usa un'interfaccia utente basata su Windows.</span><span class="sxs-lookup"><span data-stu-id="9add1-152">Supports the same functionality as the command-line tool Mage.exe, but uses a Windows-based user interface (UI).</span></span>  
   
- [MDbg.exe (Debugger della riga di comando di .NET Framework)](../../../docs/framework/tools/mdbg-exe.md)  
- Consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug dei programmi basati sul Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug.  
+ [<span data-ttu-id="9add1-153">MDbg.exe (Debugger della riga di comando di .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="9add1-153">MDbg.exe (.NET Framework Command-Line Debugger)</span></span>](../../../docs/framework/tools/mdbg-exe.md)  
+ <span data-ttu-id="9add1-154">Consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug dei programmi basati sul Common Language Runtime di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9add1-154">Helps tools vendors and application developers find and fix bugs in programs that target the .NET Framework common language runtime.</span></span> <span data-ttu-id="9add1-155">Questo strumento usa l'API di debug del runtime per offrire servizi di debug.</span><span class="sxs-lookup"><span data-stu-id="9add1-155">This tool uses the runtime debugging API to provide debugging services.</span></span>  
   
- [Mgmtclassgen.exe (Generatore di classi di gestione fortemente tipizzate)](../../../docs/framework/tools/mgmtclassgen-exe.md)  
- Consente di generare una classe gestita con associazione anticipata per una classe Windows Management Instrumentation (WMI) specificata.  
+ [<span data-ttu-id="9add1-156">Mgmtclassgen.exe (Generatore di classi di gestione fortemente tipizzate)</span><span class="sxs-lookup"><span data-stu-id="9add1-156">Mgmtclassgen.exe (Management Strongly Typed Class Generator)</span></span>](../../../docs/framework/tools/mgmtclassgen-exe.md)  
+ <span data-ttu-id="9add1-157">Consente di generare una classe gestita con associazione anticipata per una classe Windows Management Instrumentation (WMI) specificata.</span><span class="sxs-lookup"><span data-stu-id="9add1-157">Enables you to generate an early-bound managed class for a specified Windows Management Instrumentation (WMI) class.</span></span>  
   
- [Mpgo.exe (strumento per l'ottimizzazione guidata da profilo gestito)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)  
- Consente di ottimizzare gli assembly di immagini native usando scenari comuni dell'utente finale. Mpgo.exe consente la generazione e l'utilizzo di dati di profilatura per gli assembly di applicazioni di immagini native (non gli assembly .NET Framework) usando scenari di training selezionati dallo sviluppatore di applicazioni.  
+ [<span data-ttu-id="9add1-158">Mpgo.exe (strumento per l'ottimizzazione guidata da profilo gestito)</span><span class="sxs-lookup"><span data-stu-id="9add1-158">Mpgo.exe (Managed Profile Guided Optimization Tool)</span></span>](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)  
+ <span data-ttu-id="9add1-159">Consente di ottimizzare gli assembly di immagini native usando scenari comuni dell'utente finale.</span><span class="sxs-lookup"><span data-stu-id="9add1-159">Enables you to tune native image assemblies using common end-user scenarios.</span></span> <span data-ttu-id="9add1-160">Mpgo.exe consente la generazione e l'utilizzo di dati di profilatura per gli assembly di applicazioni di immagini native (non gli assembly .NET Framework) usando scenari di training selezionati dallo sviluppatore di applicazioni.</span><span class="sxs-lookup"><span data-stu-id="9add1-160">Mpgo.exe allows the generation and consumption of profile data for native image application assemblies (not the .NET Framework assemblies) using training scenarios selected by the application developer.</span></span>  
   
- [Ngen.exe (generatore di immagini native)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- Migliora le prestazioni delle applicazioni gestite tramite l'utilizzo di immagini native, ovvero file che contengono codice macchina compilato specifico del processore. Il runtime può usare le immagini native della cache anziché il compilatore Just-In-Time (JIT) per compilare l'assembly originale.  
+ [<span data-ttu-id="9add1-161">Ngen.exe (generatore di immagini native)</span><span class="sxs-lookup"><span data-stu-id="9add1-161">Ngen.exe (Native Image Generator)</span></span>](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ <span data-ttu-id="9add1-162">Migliora le prestazioni delle applicazioni gestite tramite l'utilizzo di immagini native, ovvero file che contengono codice macchina compilato specifico del processore.</span><span class="sxs-lookup"><span data-stu-id="9add1-162">Improves the performance of managed applications through the use of native images (files containing compiled processor-specific machine code).</span></span> <span data-ttu-id="9add1-163">Il runtime può usare le immagini native della cache anziché il compilatore Just-In-Time (JIT) per compilare l'assembly originale.</span><span class="sxs-lookup"><span data-stu-id="9add1-163">The runtime can use native images from the cache instead of using the just-in-time (JIT) compiler to compile the original assembly.</span></span>  
   
- [Peverify.exe (strumento PEVerify)](../../../docs/framework/tools/peverify-exe-peverify-tool.md)  
- Consente di verificare se il codice Microsoft Intermediate Language (MSIL) e i metadati associati soddisfano i requisiti di indipendenza dai tipi. Consente di verificare se il codice Microsoft Intermediate Language (MSIL) e i metadati associati soddisfano i requisiti di indipendenza dai tipi.  
+ [<span data-ttu-id="9add1-164">Peverify.exe (strumento PEVerify)</span><span class="sxs-lookup"><span data-stu-id="9add1-164">Peverify.exe (PEVerify Tool)</span></span>](../../../docs/framework/tools/peverify-exe-peverify-tool.md)  
+ <span data-ttu-id="9add1-165">Consente di verificare se il codice Microsoft Intermediate Language (MSIL) e i metadati associati soddisfano i requisiti di indipendenza dai tipi.</span><span class="sxs-lookup"><span data-stu-id="9add1-165">Helps you verify whether your Microsoft intermediate language (MSIL) code and associated metadata meet type safety requirements.</span></span> <span data-ttu-id="9add1-166">Consente di verificare se il codice Microsoft Intermediate Language (MSIL) e i metadati associati soddisfano i requisiti di indipendenza dai tipi.</span><span class="sxs-lookup"><span data-stu-id="9add1-166">Helps you verify whether your Microsoft intermediate language (MSIL) code and associated metadata meet type safety requirements.</span></span>  
   
- [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- Legge i metadati in un assembly e aggiunge le voci necessarie nel Registro di sistema. In questo modo i client COM vengono visualizzati come classi .NET Framework.  
+ [<span data-ttu-id="9add1-167">Regasm.exe (strumento di registrazione di assembly)</span><span class="sxs-lookup"><span data-stu-id="9add1-167">Regasm.exe (Assembly Registration Tool)</span></span>](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
+ <span data-ttu-id="9add1-168">Legge i metadati in un assembly e aggiunge le voci necessarie nel Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="9add1-168">Reads the metadata within an assembly and adds the necessary entries to the registry.</span></span> <span data-ttu-id="9add1-169">In questo modo i client COM vengono visualizzati come classi .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9add1-169">This enables COM clients to appear as .NET Framework classes.</span></span>  
   
- [Regsvcs.exe (strumento di installazione dei servizi .NET)](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md)  
- Carica e registra un assembly, genera e installa una libreria dei tipi in un'applicazione specificata della versione 1.0 di COM+ e configura i servizi aggiunti a livello di codice a una classe.  
+ [<span data-ttu-id="9add1-170">Regsvcs.exe (strumento di installazione dei servizi .NET)</span><span class="sxs-lookup"><span data-stu-id="9add1-170">Regsvcs.exe (.NET Services Installation Tool)</span></span>](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md)  
+ <span data-ttu-id="9add1-171">Carica e registra un assembly, genera e installa una libreria dei tipi in un'applicazione specificata della versione 1.0 di COM+ e configura i servizi aggiunti a livello di codice a una classe.</span><span class="sxs-lookup"><span data-stu-id="9add1-171">Loads and registers an assembly, generates and installs a type library into a specified COM+ version 1.0 application, and configures services that you have added programmatically to a class.</span></span>  
   
- [Resgen.exe (generatore di file di risorse)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- Converte i file di testo (con estensione txt o restxt) e i file di formato di risorsa basato su XML (con estensione resx) in file binari di Common Language Runtime (con estensione resources) che è possibile incorporare in un eseguibile binario di runtime o compilare in assembly satellite.  
+ [<span data-ttu-id="9add1-172">Resgen.exe (generatore di file di risorse)</span><span class="sxs-lookup"><span data-stu-id="9add1-172">Resgen.exe (Resource File Generator)</span></span>](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
+ <span data-ttu-id="9add1-173">Converte i file di testo (con estensione txt o restxt) e i file di formato di risorsa basato su XML (con estensione resx) in file binari di Common Language Runtime (con estensione resources) che è possibile incorporare in un eseguibile binario di runtime o compilare in assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="9add1-173">Converts text (.txt or .restext) files and XML-based resource format (.resx) files to common language runtime binary (.resources) files that can be embedded in a runtime binary executable or compiled into satellite assemblies.</span></span>  
   
- [SecAnnotate.exe (strumento .NET Security Annotator)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
- Identifica le parti SecurityCritical e SecuritySafeCritical di un assembly. Identifica le parti `SecurityCritical` e `SecuritySafeCritical` di un assembly.  
+ [<span data-ttu-id="9add1-174">SecAnnotate.exe (strumento .NET Security Annotator)</span><span class="sxs-lookup"><span data-stu-id="9add1-174">SecAnnotate.exe (.NET Security Annotator Tool)</span></span>](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
+ <span data-ttu-id="9add1-175">Identifica le parti SecurityCritical e SecuritySafeCritical di un assembly.</span><span class="sxs-lookup"><span data-stu-id="9add1-175">Identifies the SecurityCritical and SecuritySafeCritical portions of an assembly.</span></span> <span data-ttu-id="9add1-176">Identifica le parti `SecurityCritical` e `SecuritySafeCritical` di un assembly.</span><span class="sxs-lookup"><span data-stu-id="9add1-176">Identifies the `SecurityCritical` and `SecuritySafeCritical` portions of an assembly.</span></span>  
   
- [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md)  
- Consente di apporre una firma digitale ai file, di verificare le firme nei file e di apporre un timestamp ai file.  
+ [<span data-ttu-id="9add1-177">SignTool.exe (strumento per la firma)</span><span class="sxs-lookup"><span data-stu-id="9add1-177">SignTool.exe (Sign Tool)</span></span>](../../../docs/framework/tools/signtool-exe.md)  
+ <span data-ttu-id="9add1-178">Consente di apporre una firma digitale ai file, di verificare le firme nei file e di apporre un timestamp ai file.</span><span class="sxs-lookup"><span data-stu-id="9add1-178">Digitally signs files, verifies signatures in files, and time-stamps files.</span></span>  
   
- [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- Consente di creare assembly con nomi sicuri. In questo strumento sono disponibili opzioni per la gestione delle chiavi nonché per la generazione e la verifica delle firme.  
+ [<span data-ttu-id="9add1-179">Sn.exe (strumento Nome sicuro)</span><span class="sxs-lookup"><span data-stu-id="9add1-179">Sn.exe (Strong Name Tool)</span></span>](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ <span data-ttu-id="9add1-180">Consente di creare assembly con nomi sicuri.</span><span class="sxs-lookup"><span data-stu-id="9add1-180">Helps create assemblies with strong names.</span></span> <span data-ttu-id="9add1-181">In questo strumento sono disponibili opzioni per la gestione delle chiavi nonché per la generazione e la verifica delle firme.</span><span class="sxs-lookup"><span data-stu-id="9add1-181">This tool provides options for key management, signature generation, and signature verification.</span></span>  
   
- [SOS.dll (estensione del debugger SOS)](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
- Facilita l'esecuzione del debug di programmi gestiti nel debugger WinDbg.exe e in Visual Studio fornendo informazioni sull'ambiente Common Language Runtime interno.  
+ [<span data-ttu-id="9add1-182">SOS.dll (estensione del debugger SOS)</span><span class="sxs-lookup"><span data-stu-id="9add1-182">SOS.dll (SOS Debugging Extension)</span></span>](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
+ <span data-ttu-id="9add1-183">Facilita l'esecuzione del debug di programmi gestiti nel debugger WinDbg.exe e in Visual Studio fornendo informazioni sull'ambiente Common Language Runtime interno.</span><span class="sxs-lookup"><span data-stu-id="9add1-183">Helps you debug managed programs in the WinDbg.exe debugger and in Visual Studio by providing information about the internal common language runtime environment.</span></span>  
   
- [SqlMetal.exe (strumento per la generazione del codice)](../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
- Genera codice e attributi di mapping per il componente LINQ to SQL di .NET Framework.  
+ [<span data-ttu-id="9add1-184">SqlMetal.exe (strumento per la generazione del codice)</span><span class="sxs-lookup"><span data-stu-id="9add1-184">SqlMetal.exe (Code Generation Tool)</span></span>](../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
+ <span data-ttu-id="9add1-185">Genera codice e attributi di mapping per il componente LINQ to SQL di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9add1-185">Generates code and mapping for the LINQ to SQL component of the .NET Framework.</span></span>  
   
- [Storeadm.exe (strumento per lo spazio di memorizzazione isolato)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md)  
- Gestisce lo spazio di memorizzazione isolato, fornisce opzioni per elencare ed eliminare le archiviazioni dell'utente.  
+ [<span data-ttu-id="9add1-186">Storeadm.exe (strumento per lo spazio di memorizzazione isolato)</span><span class="sxs-lookup"><span data-stu-id="9add1-186">Storeadm.exe (Isolated Storage Tool)</span></span>](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md)  
+ <span data-ttu-id="9add1-187">Gestisce lo spazio di memorizzazione isolato, fornisce opzioni per elencare ed eliminare le archiviazioni dell'utente.</span><span class="sxs-lookup"><span data-stu-id="9add1-187">Manages isolated storage; provides options for listing the user's stores and deleting them.</span></span>  
   
- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
- Genera una libreria dei tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
+ [<span data-ttu-id="9add1-188">Tlbexp.exe (utilità di esportazione della libreria dei tipi)</span><span class="sxs-lookup"><span data-stu-id="9add1-188">Tlbexp.exe (Type Library Exporter)</span></span>](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ <span data-ttu-id="9add1-189">Genera una libreria dei tipi che descrive i tipi definiti in un assembly di Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="9add1-189">Generates a type library that describes the types that are defined in a common language runtime assembly.</span></span>  
   
- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- Converte le definizioni dei tipi presenti in una libreria dei tipi COM nelle definizioni equivalenti di un assembly di Common Language Runtime.  
+ [<span data-ttu-id="9add1-190">Tlbimp.exe (utilità di importazione della libreria dei tipi)</span><span class="sxs-lookup"><span data-stu-id="9add1-190">Tlbimp.exe (Type Library Importer)</span></span>](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ <span data-ttu-id="9add1-191">Converte le definizioni dei tipi presenti in una libreria dei tipi COM nelle definizioni equivalenti di un assembly di Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="9add1-191">Converts the type definitions found in a COM type library into equivalent definitions in a common language runtime assembly.</span></span>  
   
- [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- Esporta un assembly .NET Framework che viene compilato come file .winmdobj in un componente Windows Runtime, il quale viene assemblato come file .winmd contenente sia i metadati Windows Runtime che le informazioni di implementazione.  
+ [<span data-ttu-id="9add1-192">Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)</span><span class="sxs-lookup"><span data-stu-id="9add1-192">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ <span data-ttu-id="9add1-193">Esporta un assembly .NET Framework che viene compilato come file .winmdobj in un componente Windows Runtime, il quale viene assemblato come file .winmd contenente sia i metadati Windows Runtime che le informazioni di implementazione.</span><span class="sxs-lookup"><span data-stu-id="9add1-193">Exports a .NET Framework assembly that is compiled as a .winmdobj file into a Windows Runtime component, which is packaged as a .winmd file that contains both Windows Runtime metadata and implementation information.</span></span>  
   
- [Winres.exe (editor di risorse di Windows Form)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
- Consente di localizzare risorse dell'interfaccia utente (file con estensione resx o resources) usate da Windows Form. È possibile tradurre stringhe e quindi ridimensionare, spostare e nascondere i controlli per adattarli alle stringhe localizzate.  
+ [<span data-ttu-id="9add1-194">Winres.exe (editor di risorse di Windows Form)</span><span class="sxs-lookup"><span data-stu-id="9add1-194">Winres.exe (Windows Forms Resource Editor)</span></span>](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
+ <span data-ttu-id="9add1-195">Consente di localizzare risorse dell'interfaccia utente (file con estensione resx o resources) usate da Windows Form.</span><span class="sxs-lookup"><span data-stu-id="9add1-195">Helps you localize user interface (UI) resources (.resx or .resources files) that are used by Windows Forms.</span></span> <span data-ttu-id="9add1-196">È possibile tradurre stringhe e quindi ridimensionare, spostare e nascondere i controlli per adattarli alle stringhe localizzate.</span><span class="sxs-lookup"><span data-stu-id="9add1-196">You can translate strings, and then size, move, and hide controls to accommodate the localized strings.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Strumenti](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
- Include strumenti quali lo strumento di conformità isXPS (isXPS.exe) e gli strumenti di profilatura delle prestazioni.  
+## <a name="related-sections"></a><span data-ttu-id="9add1-197">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="9add1-197">Related Sections</span></span>  
+ [<span data-ttu-id="9add1-198">Strumenti</span><span class="sxs-lookup"><span data-stu-id="9add1-198">Tools</span></span>](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ <span data-ttu-id="9add1-199">Include strumenti quali lo strumento di conformità isXPS (isXPS.exe) e gli strumenti di profilatura delle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="9add1-199">Includes tools such as the isXPS Conformance tool (isXPS.exe) and performance profiling tools.</span></span>  
   
- [Strumenti Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
- Include strumenti che semplificano la creazione, la distribuzione e la gestione di applicazioni Windows Communication Foundation (WCF).
-
+ [<span data-ttu-id="9add1-200">Strumenti Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="9add1-200">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
+ <span data-ttu-id="9add1-201">Include strumenti che semplificano la creazione, la distribuzione e la gestione di applicazioni Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="9add1-201">Includes tools that make it easier for you to create, deploy, and manage Windows Communication Foundation (WCF) applications.</span></span>

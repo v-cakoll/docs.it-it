@@ -10,19 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
+ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="string-interpolation-in-c"></a><span data-ttu-id="16d59-104">Interpolazione di stringhe in C#</span><span class="sxs-lookup"><span data-stu-id="16d59-104">String Interpolation in C#</span></span> #
 
-# <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C# #
+<span data-ttu-id="16d59-105">Il termine interpolazione di stringhe indica il modo in cui i segnaposto presenti in una stringa vengono sostituiti dal valore di una variabile di tipo stringa.</span><span class="sxs-lookup"><span data-stu-id="16d59-105">String Interpolation is the way that placeholders in a string are replaced by the value of a string variable.</span></span> <span data-ttu-id="16d59-106">Prima di C# 6, per eseguire questa operazione veniva usato `System.String.Format`.</span><span class="sxs-lookup"><span data-stu-id="16d59-106">Before C# 6, the way to do this is with `System.String.Format`.</span></span> <span data-ttu-id="16d59-107">Questa procedura funziona correttamente, ma, poiché usa segnaposto numerati, la scrittura delle istruzioni risulta più complessa e prolissa.</span><span class="sxs-lookup"><span data-stu-id="16d59-107">This works okay, but since it uses numbered placeholders, it can be harder to read and more verbose.</span></span>
 
-Il termine interpolazione di stringhe indica il modo in cui i segnaposto presenti in una stringa vengono sostituiti dal valore di una variabile di tipo stringa. Prima di C# 6, per eseguire questa operazione veniva usato `System.String.Format`. Questa procedura funziona correttamente, ma, poiché usa segnaposto numerati, la scrittura delle istruzioni risulta più complessa e prolissa.
-
-L'interpolazione di stringhe è stata integrata in altri linguaggi di programmazione per un certo periodo di tempo. Ad esempio, in PHP:
+<span data-ttu-id="16d59-108">L'interpolazione di stringhe è stata integrata in altri linguaggi di programmazione per un certo periodo di tempo.</span><span class="sxs-lookup"><span data-stu-id="16d59-108">Other programming languages have had string interpolation built into the language for a while.</span></span> <span data-ttu-id="16d59-109">Ad esempio, in PHP:</span><span class="sxs-lookup"><span data-stu-id="16d59-109">For instance, in PHP:</span></span>
 
 ```php
 $name = "Jonas";
@@ -30,41 +28,45 @@ echo "My name is $name.";
 // This will output "My name is Jonas."
 ```
 
-In C# 6 è stato definito lo stile di interpolazione di stringhe seguente: è possibile usare `$` prima di una stringa per indicare che le variabili e/o le espressioni devono essere sostituite dai i relativi valori.
+<span data-ttu-id="16d59-110">In C# 6 è stato definito lo stile di interpolazione di stringhe seguente:</span><span class="sxs-lookup"><span data-stu-id="16d59-110">In C# 6, we finally have that style of string interpolation.</span></span> <span data-ttu-id="16d59-111">è possibile usare `$` prima di una stringa per indicare che le variabili e/o le espressioni devono essere sostituite dai i relativi valori.</span><span class="sxs-lookup"><span data-stu-id="16d59-111">You can use a `$` before a string to indicate that it should substitute variables/expressions for their values.</span></span>
 
-## <a name="prerequisites"></a>Prerequisiti
-È necessario configurare il computer per l'esecuzione di .NET core. Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core).
-Questa applicazione può essere eseguita in Windows, Ubuntu Linux, macOS o in un contenitore Docker. È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
+## <a name="prerequisites"></a><span data-ttu-id="16d59-112">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="16d59-112">Prerequisites</span></span>
+<span data-ttu-id="16d59-113">È necessario configurare il computer per l'esecuzione di .NET core.</span><span class="sxs-lookup"><span data-stu-id="16d59-113">You’ll need to set up your machine to run .NET core.</span></span> <span data-ttu-id="16d59-114">Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="16d59-114">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
+<span data-ttu-id="16d59-115">Questa applicazione può essere eseguita in Windows, Ubuntu Linux, macOS o in un contenitore Docker.</span><span class="sxs-lookup"><span data-stu-id="16d59-115">You can run this application on Windows, Ubuntu Linux, macOS or in a Docker container.</span></span> <span data-ttu-id="16d59-116">È necessario installare l'editor di codice preferito.</span><span class="sxs-lookup"><span data-stu-id="16d59-116">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="16d59-117">Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma,</span><span class="sxs-lookup"><span data-stu-id="16d59-117">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="16d59-118">ma è possibile usare gli strumenti con cui si ha maggiore familiarità.</span><span class="sxs-lookup"><span data-stu-id="16d59-118">However, you can use whatever tools you are comfortable with.</span></span>
 
-## <a name="create-the-application"></a>Creare l'applicazione
+## <a name="create-the-application"></a><span data-ttu-id="16d59-119">Creare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="16d59-119">Create the Application</span></span>
 
-Dopo avere installato tutti gli strumenti, creare una nuova applicazione .NET Core. Per usare il generatore da riga di comando, creare una directory per il progetto, ad esempio `interpolated`, ed eseguire il comando seguente nella shell preferita:
+<span data-ttu-id="16d59-120">Dopo avere installato tutti gli strumenti, creare una nuova applicazione .NET Core.</span><span class="sxs-lookup"><span data-stu-id="16d59-120">Now that you've installed all the tools, create a new .NET Core application.</span></span> <span data-ttu-id="16d59-121">Per usare il generatore da riga di comando, creare una directory per il progetto, ad esempio `interpolated`, ed eseguire il comando seguente nella shell preferita:</span><span class="sxs-lookup"><span data-stu-id="16d59-121">To use the command line generator, create a directory for your project, such as `interpolated`, and execute the following command in your favorite shell:</span></span>
 
 ```
 dotnet new console
 ```
 
-Questo comando creerà un progetto .NET di base con un file di progetto, *interpolated.csproj*, e un file di codice sorgente, *Program.cs*. Sarà necessario eseguire `dotnet restore` per ripristinare le dipendenze richieste per la compilazione del progetto.
+<span data-ttu-id="16d59-122">Questo comando creerà un progetto .NET di base con un file di progetto, *interpolated.csproj*, e un file di codice sorgente, *Program.cs*.</span><span class="sxs-lookup"><span data-stu-id="16d59-122">This command will create a barebones .NET core project with a project file, *interpolated.csproj*, and a source code file, *Program.cs*.</span></span> <span data-ttu-id="16d59-123">Sarà necessario eseguire `dotnet restore` per ripristinare le dipendenze richieste per la compilazione del progetto.</span><span class="sxs-lookup"><span data-stu-id="16d59-123">You will need to execute `dotnet restore` to restore the dependencies needed to compile this project.</span></span>
 
-Per eseguire il programma, usare `dotnet run`. Nella console viene visualizzato "Hello, World".
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-## <a name="intro-to-string-interpolation"></a>Introduzione all'interpolazione di stringhe
+<span data-ttu-id="16d59-124">Per eseguire il programma, usare `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="16d59-124">To execute the program, use `dotnet run`.</span></span> <span data-ttu-id="16d59-125">Nella console viene visualizzato "Hello, World".</span><span class="sxs-lookup"><span data-stu-id="16d59-125">You should see "Hello, World" output to the console.</span></span>
 
-Con `System.String.Format` vengono specificati i "segnaposto" presenti in una stringa che devono essere sostituiti dai parametri che seguono la stringa stessa. Ad esempio:
 
-[!code-csharp[Esempio di String.Format](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
-Verrà visualizzato l'output "My name is Matt Groves".
+## <a name="intro-to-string-interpolation"></a><span data-ttu-id="16d59-126">Introduzione all'interpolazione di stringhe</span><span class="sxs-lookup"><span data-stu-id="16d59-126">Intro to String Interpolation</span></span>
 
-In C# 6, anziché usare `String.Format`, si definisce una stringa interpolata facendola precedere dal simbolo `$` e quindi usando le variabili direttamente nella stringa. Ad esempio:
+<span data-ttu-id="16d59-127">Con `System.String.Format` vengono specificati i "segnaposto" presenti in una stringa che devono essere sostituiti dai parametri che seguono la stringa stessa.</span><span class="sxs-lookup"><span data-stu-id="16d59-127">With `System.String.Format`, you specify "placeholders" in a string that are replaced by the parameters following the string.</span></span> <span data-ttu-id="16d59-128">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="16d59-128">For instance:</span></span>
 
-[!code-csharp[Esempio di interpolazione](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
-Non è necessario usare solo le variabili. È possibile usare qualsiasi espressione inclusa tra parentesi. Ad esempio:
+<span data-ttu-id="16d59-129">Verrà visualizzato l'output "My name is Matt Groves".</span><span class="sxs-lookup"><span data-stu-id="16d59-129">That will output "My name is Matt Groves".</span></span>
 
-[!code-csharp[Esempio di espressione di interpolazione](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+<span data-ttu-id="16d59-130">In C# 6, anziché usare `String.Format`, si definisce una stringa interpolata facendola precedere dal simbolo `$` e quindi usando le variabili direttamente nella stringa.</span><span class="sxs-lookup"><span data-stu-id="16d59-130">In C# 6, instead of using `String.Format`, you define an interpolated string by prepending it with the `$` symbol, and then using the variables directly in the string.</span></span> <span data-ttu-id="16d59-131">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="16d59-131">For instance:</span></span>
 
-L'output sarà il seguente:
+[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+
+<span data-ttu-id="16d59-132">Non è necessario usare solo le variabili.</span><span class="sxs-lookup"><span data-stu-id="16d59-132">You don't have to use just variables.</span></span> <span data-ttu-id="16d59-133">È possibile usare qualsiasi espressione inclusa tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="16d59-133">You can use any expression within the brackets.</span></span> <span data-ttu-id="16d59-134">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="16d59-134">For instance:</span></span>
+
+[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+
+<span data-ttu-id="16d59-135">L'output sarà il seguente:</span><span class="sxs-lookup"><span data-stu-id="16d59-135">Which would output:</span></span>
 
 ```
 This is line number 1
@@ -74,15 +76,15 @@ This is line number 4
 This is line number 5
 ```
 
-## <a name="how-string-interpolation-works"></a>Funzionamento dell'interpolazione di stringhe
+## <a name="how-string-interpolation-works"></a><span data-ttu-id="16d59-136">Funzionamento dell'interpolazione di stringhe</span><span class="sxs-lookup"><span data-stu-id="16d59-136">How string interpolation works</span></span>
 
-Nel background, la sintassi dell'interpolazione di stringhe viene convertita in String.Format dal compilatore. Di conseguenza, è possibile eseguire lo [stesso tipo di operazioni eseguite prima con String.Format](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx).
+<span data-ttu-id="16d59-137">Nel background, la sintassi dell'interpolazione di stringhe viene convertita in String.Format dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="16d59-137">Behind the scenes, this string interpolation syntax is translated into String.Format by the compiler.</span></span> <span data-ttu-id="16d59-138">Di conseguenza, è possibile eseguire lo [stesso tipo di operazioni eseguite prima con String.Format](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx).</span><span class="sxs-lookup"><span data-stu-id="16d59-138">So, you can do the [same type of stuff you've done before with String.Format](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx).</span></span>
 
-Ad esempio, è possibile aggiungere spaziatura interna e formattazione numerica:
+<span data-ttu-id="16d59-139">Ad esempio, è possibile aggiungere spaziatura interna e formattazione numerica:</span><span class="sxs-lookup"><span data-stu-id="16d59-139">For instance, you can add padding and numeric formatting:</span></span>
 
-[!code-csharp[Esempio di formattazione di interpolazione](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
 
-L'output del codice sopra riportato sarà simile a quanto segue:
+<span data-ttu-id="16d59-140">L'output del codice sopra riportato sarà simile a quanto segue:</span><span class="sxs-lookup"><span data-stu-id="16d59-140">The above would output something like:</span></span>
 
 ```
 998        5,177.67
@@ -94,9 +96,9 @@ L'output del codice sopra riportato sarà simile a quanto segue:
 1004       6,227.77
 ```
 
-Se un nome di variabile non viene trovato, verrà generato un errore in fase di compilazione.
+<span data-ttu-id="16d59-141">Se un nome di variabile non viene trovato, verrà generato un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="16d59-141">If a variable name is not found, then a compile time error will be generated.</span></span>
 
-Ad esempio:
+<span data-ttu-id="16d59-142">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="16d59-142">For instance:</span></span>
 
 ```csharp
 var animal = "fox";
@@ -105,22 +107,21 @@ var adj = "quick";
 Console.WriteLine(localizeMe);
 ```
 
-Se si compila il codice sopra riportato, verranno generati degli errori:
+<span data-ttu-id="16d59-143">Se si compila il codice sopra riportato, verranno generati degli errori:</span><span class="sxs-lookup"><span data-stu-id="16d59-143">If you compile this, you'll get errors:</span></span>
  
-* `Cannot use local variable 'adj' before it is declared`: la variabile `adj` non è stata dichiarata *prima* della stringa interpolata.
-* `The name 'otheranimal' does not exist in the current context`: la variabile denominata `otheranimal` non è mai stata dichiarata.
+* <span data-ttu-id="16d59-144">`Cannot use local variable 'adj' before it is declared`: la variabile `adj` non è stata dichiarata *prima* della stringa interpolata.</span><span class="sxs-lookup"><span data-stu-id="16d59-144">`Cannot use local variable 'adj' before it is declared` - the `adj` variable wasn't declared until *after* the interpolated string.</span></span>
+* <span data-ttu-id="16d59-145">`The name 'otheranimal' does not exist in the current context`: la variabile denominata `otheranimal` non è mai stata dichiarata.</span><span class="sxs-lookup"><span data-stu-id="16d59-145">`The name 'otheranimal' does not exist in the current context` - a variable called `otheranimal` was never even declared</span></span>
 
-## <a name="localization-and-internationalization"></a>Localizzazione e internazionalizzazione
+## <a name="localization-and-internationalization"></a><span data-ttu-id="16d59-146">Localizzazione e internazionalizzazione</span><span class="sxs-lookup"><span data-stu-id="16d59-146">Localization and Internationalization</span></span>
 
-Una stringa interpolata supporta `IFormattable` e `FormattableString`, caratteristica utile per l'internazionalizzazione.
+<span data-ttu-id="16d59-147">Una stringa interpolata supporta `IFormattable` e `FormattableString`, caratteristica utile per l'internazionalizzazione.</span><span class="sxs-lookup"><span data-stu-id="16d59-147">An interpolated string supports `IFormattable` and `FormattableString`, which can be useful for internationalization.</span></span>
 
-Per impostazione predefinita, una stringa interpolata usa le impostazioni cultura correnti. Per usare impostazioni cultura differenti, è possibile eseguire il cast della stringa come `IFormattable`.
+<span data-ttu-id="16d59-148">Per impostazione predefinita, una stringa interpolata usa le impostazioni cultura correnti.</span><span class="sxs-lookup"><span data-stu-id="16d59-148">By default, an interpolated string uses the current culture.</span></span> <span data-ttu-id="16d59-149">Per usare impostazioni cultura differenti, è possibile eseguire il cast della stringa come `IFormattable`.</span><span class="sxs-lookup"><span data-stu-id="16d59-149">To use a different culture, you could cast it as `IFormattable`</span></span>
 
-Ad esempio:
+<span data-ttu-id="16d59-150">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="16d59-150">For instance:</span></span>
 
-[!code-csharp[Esempio di internazionalizzazione dell'interpolazione](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
-## <a name="conclusion"></a>Conclusione 
+## <a name="conclusion"></a><span data-ttu-id="16d59-151">Conclusione</span><span class="sxs-lookup"><span data-stu-id="16d59-151">Conclusion</span></span> 
 
-In questa esercitazione è stato illustrato come usare le funzionalità di interpolazione di stringhe di C# 6. Si tratta fondamentalmente di un modo sintetico di scrivere semplici istruzioni `String.Format`, con alcune raccomandazioni per gli usi più avanzati.
-
+<span data-ttu-id="16d59-152">In questa esercitazione è stato illustrato come usare le funzionalità di interpolazione di stringhe di C# 6.</span><span class="sxs-lookup"><span data-stu-id="16d59-152">In this tutorial, you learned how to use string interpolation features of C# 6.</span></span> <span data-ttu-id="16d59-153">Si tratta fondamentalmente di un modo sintetico di scrivere semplici istruzioni `String.Format`, con alcune raccomandazioni per gli usi più avanzati.</span><span class="sxs-lookup"><span data-stu-id="16d59-153">It's basically a more concise way of writing simple `String.Format` statements, with some caveats for more advanced uses of it.</span></span>

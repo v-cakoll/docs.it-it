@@ -1,180 +1,161 @@
 ---
 title: 'Procedura dettagliata: Modifica di file con i metodi .NET Framework (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
-- text files, writing to
-- reading text files
+- text files [Visual Basic], writing to
+- reading text files [Visual Basic]
 - text, writing to files
-- files, searching
+- files [Visual Basic], searching
 - StreamReader class, walkthroughs
-- files, accessing
+- files [Visual Basic], accessing
 - I/O [Visual Basic], writing text to files
-- writing to files, walkthroughs
+- writing to files [Visual Basic], walkthroughs
 - StreamWriter class, walkthroughs
-- text files, reading
+- text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eab8ebe0f1e6f3e86b9c4aa7c3b24a2763a27ffc
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procedura dettagliata: modifica di file mediante i metodi .NET Framework (Visual Basic)
-Questa procedura dettagliata spiega come aprire e leggere un file usando la classe <xref:System.IO.StreamReader>, verificare se un file è accessibile, cercare una stringa all'interno di un file letto con un'istanza della classe <xref:System.IO.StreamReader> e scrivere in un file usando la classe <xref:System.IO.StreamWriter>.  
+# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a><span data-ttu-id="2651f-102">Procedura dettagliata: modifica di file mediante i metodi .NET Framework (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2651f-102">Walkthrough: Manipulating Files by Using .NET Framework Methods (Visual Basic)</span></span>
+<span data-ttu-id="2651f-103">Questa procedura dettagliata spiega come aprire e leggere un file usando la classe <xref:System.IO.StreamReader>, verificare se un file è accessibile, cercare una stringa all'interno di un file letto con un'istanza della classe <xref:System.IO.StreamReader> e scrivere in un file usando la classe <xref:System.IO.StreamWriter>.</span><span class="sxs-lookup"><span data-stu-id="2651f-103">This walkthrough demonstrates how to open and read a file using the <xref:System.IO.StreamReader> class, check to see if a file is being accessed, search for a string within a file read with an instance of the <xref:System.IO.StreamReader> class, and write to a file using the <xref:System.IO.StreamWriter> class.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-the-application"></a>Creare l'applicazione  
- Avviare [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] e iniziare il progetto creando un form che l'utente può usare per scrivere il file specificato.  
+## <a name="creating-the-application"></a><span data-ttu-id="2651f-104">Creare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="2651f-104">Creating the Application</span></span>  
+ <span data-ttu-id="2651f-105">Avviare [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] e iniziare il progetto creando un form che l'utente può usare per scrivere il file specificato.</span><span class="sxs-lookup"><span data-stu-id="2651f-105">Start [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] and begin the project by creating a form that the user can use to write to the designated file.</span></span>  
   
-#### <a name="to-create-the-project"></a>Per creare il progetto  
+#### <a name="to-create-the-project"></a><span data-ttu-id="2651f-106">Per creare il progetto</span><span class="sxs-lookup"><span data-stu-id="2651f-106">To create the project</span></span>  
   
-1.  Nel menu **File** selezionare **Nuovo progetto**.  
+1.  <span data-ttu-id="2651f-107">Nel menu **File** selezionare **Nuovo progetto**.</span><span class="sxs-lookup"><span data-stu-id="2651f-107">On the **File** menu, select **New Project**.</span></span>  
   
-2.  Nel riquadro **Nuovo progetto** fare clic su **Applicazione Windows**.  
+2.  <span data-ttu-id="2651f-108">Nel riquadro **Nuovo progetto** fare clic su **Applicazione Windows**.</span><span class="sxs-lookup"><span data-stu-id="2651f-108">In the **New Project** pane, click **Windows Application**.</span></span>  
   
-3.  Nella casella **Nome** digitare `MyDiary` e fare clic su **OK**.  
+3.  <span data-ttu-id="2651f-109">Nella casella **Nome** digitare `MyDiary` e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="2651f-109">In the **Name** box type `MyDiary` and click **OK**.</span></span>  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] aggiunge il progetto a **Esplora soluzioni** e viene aperto **Progettazione Windows Form**.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="2651f-110"> aggiunge il progetto a **Esplora soluzioni** e viene aperto **Progettazione Windows Form**.</span><span class="sxs-lookup"><span data-stu-id="2651f-110"> adds the project to **Solution Explorer**, and the **Windows Forms Designer** opens.</span></span>  
   
-4.  Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
+4.  <span data-ttu-id="2651f-111">Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.</span><span class="sxs-lookup"><span data-stu-id="2651f-111">Add the controls in the following table to the form and set the corresponding values for their properties.</span></span>  
   
-|**Oggetto**|**Proprietà**|**Valore**|  
+|<span data-ttu-id="2651f-112">**Oggetto**</span><span class="sxs-lookup"><span data-stu-id="2651f-112">**Object**</span></span>|<span data-ttu-id="2651f-113">**Proprietà**</span><span class="sxs-lookup"><span data-stu-id="2651f-113">**Properties**</span></span>|<span data-ttu-id="2651f-114">**Valore**</span><span class="sxs-lookup"><span data-stu-id="2651f-114">**Value**</span></span>|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Submit`<br /><br /> **Invia voce**|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Clear`<br /><br /> **Cancella voce**|  
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|<span data-ttu-id="2651f-115">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-115">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-116">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-116">**Text**</span></span>|`Submit`<br /><br /> <span data-ttu-id="2651f-117">**Invia voce**</span><span class="sxs-lookup"><span data-stu-id="2651f-117">**Submit Entry**</span></span>|  
+|<xref:System.Windows.Forms.Button>|<span data-ttu-id="2651f-118">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-118">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-119">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-119">**Text**</span></span>|`Clear`<br /><br /> <span data-ttu-id="2651f-120">**Cancella voce**</span><span class="sxs-lookup"><span data-stu-id="2651f-120">**Clear Entry**</span></span>|  
+|<xref:System.Windows.Forms.TextBox>|<span data-ttu-id="2651f-121">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-121">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-122">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-122">**Text**</span></span><br /><br /> <span data-ttu-id="2651f-123">**Multiline**</span><span class="sxs-lookup"><span data-stu-id="2651f-123">**Multiline**</span></span>|`Entry`<br /><br /> <span data-ttu-id="2651f-124">**Immettere un valore.**</span><span class="sxs-lookup"><span data-stu-id="2651f-124">**Please enter something.**</span></span><br /><br /> `False`|  
   
-## <a name="writing-to-the-file"></a>Scrivere nel file  
- Per aggiungere la possibilità di scrivere in un file tramite l'applicazione, usare la classe <xref:System.IO.StreamWriter>. La classe <xref:System.IO.StreamWriter> è progettata per l'output di caratteri in una codifica particolare, mentre la classe <xref:System.IO.Stream> è progettata per l'input e l'output di byte. Usare la classe <xref:System.IO.StreamWriter> per scrivere righe di informazioni in un file di testo standard. Per altre informazioni sulla classe <xref:System.IO.StreamWriter>, vedere <xref:System.IO.StreamWriter>.  
+## <a name="writing-to-the-file"></a><span data-ttu-id="2651f-125">Scrivere nel file</span><span class="sxs-lookup"><span data-stu-id="2651f-125">Writing to the File</span></span>  
+ <span data-ttu-id="2651f-126">Per aggiungere la possibilità di scrivere in un file tramite l'applicazione, usare la classe <xref:System.IO.StreamWriter>.</span><span class="sxs-lookup"><span data-stu-id="2651f-126">To add the ability to write to a file via the application, use the <xref:System.IO.StreamWriter> class.</span></span> <span data-ttu-id="2651f-127">La classe <xref:System.IO.StreamWriter> è progettata per l'output di caratteri in una codifica particolare, mentre la classe <xref:System.IO.Stream> è progettata per l'input e l'output di byte.</span><span class="sxs-lookup"><span data-stu-id="2651f-127"><xref:System.IO.StreamWriter> is designed for character output in a particular encoding, whereas the <xref:System.IO.Stream> class is designed for byte input and output.</span></span> <span data-ttu-id="2651f-128">Usare la classe <xref:System.IO.StreamWriter> per scrivere righe di informazioni in un file di testo standard.</span><span class="sxs-lookup"><span data-stu-id="2651f-128">Use <xref:System.IO.StreamWriter> for writing lines of information to a standard text file.</span></span> <span data-ttu-id="2651f-129">Per altre informazioni sulla classe <xref:System.IO.StreamWriter>, vedere <xref:System.IO.StreamWriter>.</span><span class="sxs-lookup"><span data-stu-id="2651f-129">For more information on the <xref:System.IO.StreamWriter> class, see <xref:System.IO.StreamWriter>.</span></span>  
   
-#### <a name="to-add-writing-functionality"></a>Per aggiungere la funzionalità di scrittura  
+#### <a name="to-add-writing-functionality"></a><span data-ttu-id="2651f-130">Per aggiungere la funzionalità di scrittura</span><span class="sxs-lookup"><span data-stu-id="2651f-130">To add writing functionality</span></span>  
   
-1.  Scegliere **Codice** dal menu **Visualizza** per aprire l'editor di codice.  
+1.  <span data-ttu-id="2651f-131">Scegliere **Codice** dal menu **Visualizza** per aprire l'editor di codice.</span><span class="sxs-lookup"><span data-stu-id="2651f-131">From the **View** menu, choose **Code** to open the Code Editor.</span></span>  
   
-2.  Poiché l'applicazione fa riferimento allo spazio dei nomi <xref:System.IO>, aggiungere le istruzioni seguenti all'inizio del codice, prima della dichiarazione di classe per il form, che inizia con `Public Class Form1`.  
+2.  <span data-ttu-id="2651f-132">Poiché l'applicazione fa riferimento allo spazio dei nomi <xref:System.IO>, aggiungere le istruzioni seguenti all'inizio del codice, prima della dichiarazione di classe per il form, che inizia con `Public Class Form1`.</span><span class="sxs-lookup"><span data-stu-id="2651f-132">Because the application references the <xref:System.IO> namespace, add the following statements at the very beginning of your code, before the class declaration for the form, which begins `Public Class Form1`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_1.vb)]  
   
-     Prima di scrivere nel file è necessario creare un'istanza di una classe <xref:System.IO.StreamWriter>.  
+     <span data-ttu-id="2651f-133">Prima di scrivere nel file è necessario creare un'istanza di una classe <xref:System.IO.StreamWriter>.</span><span class="sxs-lookup"><span data-stu-id="2651f-133">Before writing to the file, you must create an instance of a <xref:System.IO.StreamWriter> class.</span></span>  
   
-3.  Scegliere **Finestra di progettazione** dal menu **Visualizza** per tornare a **Progettazione Windows Form**. Fare doppio clic sul pulsante `Submit` per creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante e quindi aggiungere il codice seguente.  
+3.  <span data-ttu-id="2651f-134">Scegliere **Finestra di progettazione** dal menu **Visualizza** per tornare a **Progettazione Windows Form**.</span><span class="sxs-lookup"><span data-stu-id="2651f-134">From the **View** menu, choose **Designer** to return to the **Windows Forms Designer**.</span></span> <span data-ttu-id="2651f-135">Fare doppio clic sul pulsante `Submit` per creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante e quindi aggiungere il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="2651f-135">Double-click the `Submit` button to create a <xref:System.Windows.Forms.Control.Click> event handler for the button, and then add the following code.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_2.vb)]  
   
 > [!NOTE]
->  L'ambiente di sviluppo integrato (IDE) di Visual Studio torna all'editor di codice e posiziona il punto di inserimento all'interno del gestore eventi in cui deve essere aggiunto il codice.  
+>  <span data-ttu-id="2651f-136">L'ambiente di sviluppo integrato (IDE) di Visual Studio torna all'editor di codice e posiziona il punto di inserimento all'interno del gestore eventi in cui deve essere aggiunto il codice.</span><span class="sxs-lookup"><span data-stu-id="2651f-136">The Visual Studio Integrated Development Environment (IDE) will return to the Code Editor and position the insertion point within the event handler where you should add the code.</span></span>  
   
-1.  Per scrivere nel file, usare il metodo <xref:System.IO.StreamWriter.Write%2A> della classe <xref:System.IO.StreamWriter>. Aggiungere il codice seguente direttamente dopo `Dim fw As StreamWriter`. Non è necessario preoccuparsi del fatto che venga generata un'eccezione se il file non viene trovato, poiché verrà creato se non esiste già.  
+1.  <span data-ttu-id="2651f-137">Per scrivere nel file, usare il metodo <xref:System.IO.StreamWriter.Write%2A> della classe <xref:System.IO.StreamWriter>.</span><span class="sxs-lookup"><span data-stu-id="2651f-137">To write to the file, use the <xref:System.IO.StreamWriter.Write%2A> method of the <xref:System.IO.StreamWriter> class.</span></span> <span data-ttu-id="2651f-138">Aggiungere il codice seguente direttamente dopo `Dim fw As StreamWriter`.</span><span class="sxs-lookup"><span data-stu-id="2651f-138">Add the following code directly after `Dim fw As StreamWriter`.</span></span> <span data-ttu-id="2651f-139">Non è necessario preoccuparsi del fatto che venga generata un'eccezione se il file non viene trovato, poiché verrà creato se non esiste già.</span><span class="sxs-lookup"><span data-stu-id="2651f-139">You do not need to worry that an exception will be thrown if the file is not found, because it will be created if it does not already exist.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_3.vb)]  
   
-2.  Assicurarsi che l'utente non possa immettere uno spazio vuoto aggiungendo il codice seguente subito dopo `Dim ReadString As String`.  
+2.  <span data-ttu-id="2651f-140">Assicurarsi che l'utente non possa immettere uno spazio vuoto aggiungendo il codice seguente subito dopo `Dim ReadString As String`.</span><span class="sxs-lookup"><span data-stu-id="2651f-140">Make sure that the user cannot submit a blank entry by adding the following code directly after `Dim ReadString As String`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#38](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_4.vb)]  
   
-3.  Poiché si tratta di un diario, l'utente dovrà assegnare una data a ogni voce. Inserire il codice seguente dopo `fw = New StreamWriter("C:\MyDiary.txt", True)` per impostare la variabile `Today` sulla data corrente.  
+3.  <span data-ttu-id="2651f-141">Poiché si tratta di un diario, l'utente dovrà assegnare una data a ogni voce.</span><span class="sxs-lookup"><span data-stu-id="2651f-141">Because this is a diary, the user will want to assign a date to each entry.</span></span> <span data-ttu-id="2651f-142">Inserire il codice seguente dopo `fw = New StreamWriter("C:\MyDiary.txt", True)` per impostare la variabile `Today` sulla data corrente.</span><span class="sxs-lookup"><span data-stu-id="2651f-142">Insert the following code after `fw = New StreamWriter("C:\MyDiary.txt", True)` to set the variable `Today` to the current date.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_5.vb)]  
   
-4.  Aggiungere infine il codice per cancellare <xref:System.Windows.Forms.TextBox>. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Clear`.  
+4.  <span data-ttu-id="2651f-143">Aggiungere infine il codice per cancellare <xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="2651f-143">Finally, attach code to clear the <xref:System.Windows.Forms.TextBox>.</span></span> <span data-ttu-id="2651f-144">Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Clear`.</span><span class="sxs-lookup"><span data-stu-id="2651f-144">Add the following code to the `Clear` button's <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_6.vb)]  
   
-## <a name="adding-display-features-to-the-diary"></a>Aggiungere funzionalità di visualizzazione al diario  
- In questa sezione, si aggiunge una funzionalità che consente di visualizzare l'ultima voce dell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. È anche possibile aggiungere un oggetto <xref:System.Windows.Forms.ComboBox> che visualizza le diverse voci e da cui un utente può selezionare una voce da visualizzare nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Un'istanza della classe <xref:System.IO.StreamReader> legge da `MyDiary.txt`. Come la classe <xref:System.IO.StreamWriter>, la classe <xref:System.IO.StreamReader> deve essere usata con file di testo.  
+## <a name="adding-display-features-to-the-diary"></a><span data-ttu-id="2651f-145">Aggiungere funzionalità di visualizzazione al diario</span><span class="sxs-lookup"><span data-stu-id="2651f-145">Adding Display Features to the Diary</span></span>  
+ <span data-ttu-id="2651f-146">In questa sezione, si aggiunge una funzionalità che consente di visualizzare l'ultima voce dell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="2651f-146">In this section, you add a feature that displays the latest entry in the `DisplayEntry`<xref:System.Windows.Forms.TextBox>.</span></span> <span data-ttu-id="2651f-147">È anche possibile aggiungere un oggetto <xref:System.Windows.Forms.ComboBox> che visualizza le diverse voci e da cui un utente può selezionare una voce da visualizzare nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="2651f-147">You can also add a <xref:System.Windows.Forms.ComboBox> that displays various entries and from which a user can select an entry to display in the `DisplayEntry`<xref:System.Windows.Forms.TextBox>.</span></span> <span data-ttu-id="2651f-148">Un'istanza della classe <xref:System.IO.StreamReader> legge da `MyDiary.txt`.</span><span class="sxs-lookup"><span data-stu-id="2651f-148">An instance of the <xref:System.IO.StreamReader> class reads from `MyDiary.txt`.</span></span> <span data-ttu-id="2651f-149">Come la classe <xref:System.IO.StreamWriter>, la classe <xref:System.IO.StreamReader> deve essere usata con file di testo.</span><span class="sxs-lookup"><span data-stu-id="2651f-149">Like the <xref:System.IO.StreamWriter> class, <xref:System.IO.StreamReader> is intended for use with text files.</span></span>  
   
- Per questa sezione della procedura, aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
+ <span data-ttu-id="2651f-150">Per questa sezione della procedura, aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.</span><span class="sxs-lookup"><span data-stu-id="2651f-150">For this section of the walkthrough, add the controls in the following table to the form and set the corresponding values for their properties.</span></span>  
   
-|Controllo|Proprietà|Valori|  
+|<span data-ttu-id="2651f-151">Controllo</span><span class="sxs-lookup"><span data-stu-id="2651f-151">Control</span></span>|<span data-ttu-id="2651f-152">Proprietà</span><span class="sxs-lookup"><span data-stu-id="2651f-152">Properties</span></span>|<span data-ttu-id="2651f-153">Valori</span><span class="sxs-lookup"><span data-stu-id="2651f-153">Values</span></span>|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visible**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Display`<br /><br /> **Visualizzazione**|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`GetEntries`<br /><br /> **Ottieni voci**|  
-|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.TextBox>|<span data-ttu-id="2651f-154">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-154">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-155">**Visible**</span><span class="sxs-lookup"><span data-stu-id="2651f-155">**Visible**</span></span><br /><br /> <span data-ttu-id="2651f-156">**Dimensione**</span><span class="sxs-lookup"><span data-stu-id="2651f-156">**Size**</span></span><br /><br /> <span data-ttu-id="2651f-157">**Multiline**</span><span class="sxs-lookup"><span data-stu-id="2651f-157">**Multiline**</span></span>|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|<span data-ttu-id="2651f-158">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-158">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-159">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-159">**Text**</span></span>|`Display`<br /><br /> <span data-ttu-id="2651f-160">**Visualizzazione**</span><span class="sxs-lookup"><span data-stu-id="2651f-160">**Display**</span></span>|  
+|<xref:System.Windows.Forms.Button>|<span data-ttu-id="2651f-161">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-161">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-162">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-162">**Text**</span></span>|`GetEntries`<br /><br /> <span data-ttu-id="2651f-163">**Ottieni voci**</span><span class="sxs-lookup"><span data-stu-id="2651f-163">**Get Entries**</span></span>|  
+|<xref:System.Windows.Forms.ComboBox>|<span data-ttu-id="2651f-164">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-164">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-165">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-165">**Text**</span></span><br /><br /> <span data-ttu-id="2651f-166">**Enabled**</span><span class="sxs-lookup"><span data-stu-id="2651f-166">**Enabled**</span></span>|`PickEntries`<br /><br /> <span data-ttu-id="2651f-167">**Seleziona una voce**</span><span class="sxs-lookup"><span data-stu-id="2651f-167">**Select an Entry**</span></span><br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>Per popolare la casella combinata  
+#### <a name="to-populate-the-combo-box"></a><span data-ttu-id="2651f-168">Per popolare la casella combinata</span><span class="sxs-lookup"><span data-stu-id="2651f-168">To populate the combo box</span></span>  
   
-1.  L'oggetto `PickEntries`<xref:System.Windows.Forms.ComboBox> viene usato per visualizzare le date in cui un utente immette le diverse voci, in modo che l'utente possa selezionare una voce da una data specifica. Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `GetEntries` e aggiungervi il codice seguente.  
+1.  <span data-ttu-id="2651f-169">L'oggetto `PickEntries`<xref:System.Windows.Forms.ComboBox> viene usato per visualizzare le date in cui un utente immette le diverse voci, in modo che l'utente possa selezionare una voce da una data specifica.</span><span class="sxs-lookup"><span data-stu-id="2651f-169">The `PickEntries`<xref:System.Windows.Forms.ComboBox> is used to display the dates on which a user submits each entry, so the user can select an entry from a specific date.</span></span> <span data-ttu-id="2651f-170">Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `GetEntries` e aggiungervi il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="2651f-170">Create a <xref:System.Windows.Forms.Control.Click> event handler to the `GetEntries` button and add the following code.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_7.vb)]  
   
-2.  Per testare il codice, premere F5 per compilare l'applicazione e quindi fare clic su **Ottieni voci**. Fare clic sulla freccia giù nell'oggetto <xref:System.Windows.Forms.ComboBox> per visualizzare le date delle voci.  
+2.  <span data-ttu-id="2651f-171">Per testare il codice, premere F5 per compilare l'applicazione e quindi fare clic su **Ottieni voci**.</span><span class="sxs-lookup"><span data-stu-id="2651f-171">To test your code, press F5 to compile the application, and then click **Get Entries**.</span></span> <span data-ttu-id="2651f-172">Fare clic sulla freccia giù nell'oggetto <xref:System.Windows.Forms.ComboBox> per visualizzare le date delle voci.</span><span class="sxs-lookup"><span data-stu-id="2651f-172">Click the drop-down arrow in the <xref:System.Windows.Forms.ComboBox> to display the entry dates.</span></span>  
   
-#### <a name="to-choose-and-display-individual-entries"></a>Per scegliere e visualizzare le singole voci  
+#### <a name="to-choose-and-display-individual-entries"></a><span data-ttu-id="2651f-173">Per scegliere e visualizzare le singole voci</span><span class="sxs-lookup"><span data-stu-id="2651f-173">To choose and display individual entries</span></span>  
   
-1.  Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `Display` e aggiungervi il codice seguente.  
+1.  <span data-ttu-id="2651f-174">Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `Display` e aggiungervi il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="2651f-174">Create a <xref:System.Windows.Forms.Control.Click> event handler for the `Display` button and add the following code.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_8.vb)]  
   
-2.  Per testare il codice, premere F5 per compilare l'applicazione e quindi inviare una voce. Fare clic su **Ottieni voci**, selezionare una voce in <xref:System.Windows.Forms.ComboBox> e quindi fare clic su **Visualizza**. Il contenuto della voce selezionata viene visualizzato nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
+2.  <span data-ttu-id="2651f-175">Per testare il codice, premere F5 per compilare l'applicazione e quindi inviare una voce.</span><span class="sxs-lookup"><span data-stu-id="2651f-175">To test your code, press F5 to compile the application, and then submit an entry.</span></span> <span data-ttu-id="2651f-176">Fare clic su **Ottieni voci**, selezionare una voce in <xref:System.Windows.Forms.ComboBox> e quindi fare clic su **Visualizza**.</span><span class="sxs-lookup"><span data-stu-id="2651f-176">Click **Get Entries**, select an entry from the <xref:System.Windows.Forms.ComboBox>, and then click **Display**.</span></span> <span data-ttu-id="2651f-177">Il contenuto della voce selezionata viene visualizzato nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="2651f-177">The contents of the selected entry appear in the `DisplayEntry`<xref:System.Windows.Forms.TextBox>.</span></span>  
   
-## <a name="enabling-users-to-delete-or-modify-entries"></a>Consentire agli utenti di eliminare o modificare le voci  
- Infine, è possibile includere funzionalità aggiuntive che consentono agli utenti di eliminare o modificare una voce usando i pulsanti `DeleteEntry` e `EditEntry`. Entrambi i pulsanti restano disabilitati a meno che non sia visualizzata una voce.  
+## <a name="enabling-users-to-delete-or-modify-entries"></a><span data-ttu-id="2651f-178">Consentire agli utenti di eliminare o modificare le voci</span><span class="sxs-lookup"><span data-stu-id="2651f-178">Enabling Users to Delete or Modify Entries</span></span>  
+ <span data-ttu-id="2651f-179">Infine, è possibile includere funzionalità aggiuntive che consentono agli utenti di eliminare o modificare una voce usando i pulsanti `DeleteEntry` e `EditEntry`.</span><span class="sxs-lookup"><span data-stu-id="2651f-179">Finally, you can include additional functionality enables users to delete or modify an entry by using `DeleteEntry` and `EditEntry` buttons.</span></span> <span data-ttu-id="2651f-180">Entrambi i pulsanti restano disabilitati a meno che non sia visualizzata una voce.</span><span class="sxs-lookup"><span data-stu-id="2651f-180">Both buttons remain disabled unless an entry is displayed.</span></span>  
   
- Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
+ <span data-ttu-id="2651f-181">Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.</span><span class="sxs-lookup"><span data-stu-id="2651f-181">Add the controls in the following table to the form and set the corresponding values for their properties.</span></span>  
   
-|Controllo|Proprietà|Valori|  
+|<span data-ttu-id="2651f-182">Controllo</span><span class="sxs-lookup"><span data-stu-id="2651f-182">Control</span></span>|<span data-ttu-id="2651f-183">Proprietà</span><span class="sxs-lookup"><span data-stu-id="2651f-183">Properties</span></span>|<span data-ttu-id="2651f-184">Valori</span><span class="sxs-lookup"><span data-stu-id="2651f-184">Values</span></span>|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|<span data-ttu-id="2651f-185">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-185">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-186">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-186">**Text**</span></span><br /><br /> <span data-ttu-id="2651f-187">**Enabled**</span><span class="sxs-lookup"><span data-stu-id="2651f-187">**Enabled**</span></span>|`DeleteEntry`<br /><br /> <span data-ttu-id="2651f-188">**Elimina voce**</span><span class="sxs-lookup"><span data-stu-id="2651f-188">**Delete Entry**</span></span><br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|<span data-ttu-id="2651f-189">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-189">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-190">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-190">**Text**</span></span><br /><br /> <span data-ttu-id="2651f-191">**Enabled**</span><span class="sxs-lookup"><span data-stu-id="2651f-191">**Enabled**</span></span>|`EditEntry`<br /><br /> <span data-ttu-id="2651f-192">**Modifica voce**</span><span class="sxs-lookup"><span data-stu-id="2651f-192">**Edit Entry**</span></span><br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|<span data-ttu-id="2651f-193">**Nome**</span><span class="sxs-lookup"><span data-stu-id="2651f-193">**Name**</span></span><br /><br /> <span data-ttu-id="2651f-194">**Testo**</span><span class="sxs-lookup"><span data-stu-id="2651f-194">**Text**</span></span><br /><br /> <span data-ttu-id="2651f-195">**Enabled**</span><span class="sxs-lookup"><span data-stu-id="2651f-195">**Enabled**</span></span>|`SubmitEdit`<br /><br /> <span data-ttu-id="2651f-196">**Invia modifica**</span><span class="sxs-lookup"><span data-stu-id="2651f-196">**Submit Edit**</span></span><br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>Per abilitare l'eliminazione e la modifica delle voci  
+#### <a name="to-enable-deletion-and-modification-of-entries"></a><span data-ttu-id="2651f-197">Per abilitare l'eliminazione e la modifica delle voci</span><span class="sxs-lookup"><span data-stu-id="2651f-197">To enable deletion and modification of entries</span></span>  
   
-1.  Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display`, dopo `DisplayEntry.Text = ReadString`.  
+1.  <span data-ttu-id="2651f-198">Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display`, dopo `DisplayEntry.Text = ReadString`.</span><span class="sxs-lookup"><span data-stu-id="2651f-198">Add the following code to the `Display` button's <xref:System.Windows.Forms.Control.Click> event, after `DisplayEntry.Text = ReadString`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_9.vb)]  
   
-2.  Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `DeleteEntry` e aggiungervi il codice seguente.  
+2.  <span data-ttu-id="2651f-199">Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `DeleteEntry` e aggiungervi il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="2651f-199">Create a <xref:System.Windows.Forms.Control.Click> event handler for the `DeleteEntry` button and add the following code.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_10.vb)]  
   
-3.  Quando un utente visualizza una voce, il pulsante `EditEntry` viene abilitato. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display` dopo `DisplayEntry.Text = ReadString`.  
+3.  <span data-ttu-id="2651f-200">Quando un utente visualizza una voce, il pulsante `EditEntry` viene abilitato.</span><span class="sxs-lookup"><span data-stu-id="2651f-200">When a user displays an entry, the `EditEntry` button becomes enabled.</span></span> <span data-ttu-id="2651f-201">Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display` dopo `DisplayEntry.Text = ReadString`.</span><span class="sxs-lookup"><span data-stu-id="2651f-201">Add the following code to the <xref:System.Windows.Forms.Control.Click> event of the `Display` button after `DisplayEntry.Text = ReadString`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_11.vb)]  
   
-4.  Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `EditEntry` e aggiungervi il codice seguente.  
+4.  <span data-ttu-id="2651f-202">Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `EditEntry` e aggiungervi il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="2651f-202">Create a <xref:System.Windows.Forms.Control.Click> event handler for the `EditEntry` button and add the following code.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_12.vb)]  
   
-5.  Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `SubmitEdit` e aggiungervi il codice seguente  
+5.  <span data-ttu-id="2651f-203">Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `SubmitEdit` e aggiungervi il codice seguente</span><span class="sxs-lookup"><span data-stu-id="2651f-203">Create a <xref:System.Windows.Forms.Control.Click> event handler for the `SubmitEdit` button and add the following code</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_13.vb)]  
   
- Per testare il codice, premere F5 per compilare l'applicazione. Fare clic su **Ottieni voci**, selezionare una voce e quindi fare clic su **Visualizza**. La voce viene visualizzata nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Fare clic su **Modifica voce**. La voce viene visualizzata nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox>. Modificare la voce nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox> e fare clic su **Invia modifica**. Aprire il file `MyDiary.txt` per confermare la correzione. Ora selezionare una voce e fare clic su **Elimina voce**. Quando l'oggetto <xref:System.Windows.Forms.MessageBox> chiede una conferma, fare clic su **OK**. Chiudere l'applicazione e aprire `MyDiary.txt` per confermare l'eliminazione.  
+ <span data-ttu-id="2651f-204">Per testare il codice, premere F5 per compilare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2651f-204">To test your code, press F5 to compile the application.</span></span> <span data-ttu-id="2651f-205">Fare clic su **Ottieni voci**, selezionare una voce e quindi fare clic su **Visualizza**.</span><span class="sxs-lookup"><span data-stu-id="2651f-205">Click **Get Entries**, select an entry, and then click **Display**.</span></span> <span data-ttu-id="2651f-206">La voce viene visualizzata nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="2651f-206">The entry appears in the `DisplayEntry`<xref:System.Windows.Forms.TextBox>.</span></span> <span data-ttu-id="2651f-207">Fare clic su **Modifica voce**.</span><span class="sxs-lookup"><span data-stu-id="2651f-207">Click **Edit Entry**.</span></span> <span data-ttu-id="2651f-208">La voce viene visualizzata nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="2651f-208">The entry appears in the `Entry`<xref:System.Windows.Forms.TextBox>.</span></span> <span data-ttu-id="2651f-209">Modificare la voce nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox> e fare clic su **Invia modifica**.</span><span class="sxs-lookup"><span data-stu-id="2651f-209">Edit the entry in the `Entry`<xref:System.Windows.Forms.TextBox> and click **Submit Edit**.</span></span> <span data-ttu-id="2651f-210">Aprire il file `MyDiary.txt` per confermare la correzione.</span><span class="sxs-lookup"><span data-stu-id="2651f-210">Open the `MyDiary.txt` file to confirm your correction.</span></span> <span data-ttu-id="2651f-211">Ora selezionare una voce e fare clic su **Elimina voce**.</span><span class="sxs-lookup"><span data-stu-id="2651f-211">Now select an entry and click **Delete Entry**.</span></span> <span data-ttu-id="2651f-212">Quando l'oggetto <xref:System.Windows.Forms.MessageBox> chiede una conferma, fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="2651f-212">When the <xref:System.Windows.Forms.MessageBox> requests confirmation, click **OK**.</span></span> <span data-ttu-id="2651f-213">Chiudere l'applicazione e aprire `MyDiary.txt` per confermare l'eliminazione.</span><span class="sxs-lookup"><span data-stu-id="2651f-213">Close the application and open `MyDiary.txt` to confirm the deletion.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO.StreamReader>   
- <xref:System.IO.StreamWriter>   
- [Procedure dettagliate](../../../../visual-basic/walkthroughs.md)
-
+## <a name="see-also"></a><span data-ttu-id="2651f-214">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2651f-214">See Also</span></span>  
+ <xref:System.IO.StreamReader>  
+ <xref:System.IO.StreamWriter>  
+ [<span data-ttu-id="2651f-215">Procedure dettagliate</span><span class="sxs-lookup"><span data-stu-id="2651f-215">Walkthroughs</span></span>](../../../../visual-basic/walkthroughs.md)

@@ -1,35 +1,26 @@
 ---
 title: 'File XML di esempio: tipico ordine di acquisto (LINQ to XML)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: dcbfb859-24fc-4758-b01c-51d1b6f644e6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 90319793fadfa7f6103bec59d3b4abf535b3e882
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 19168f40729cf5d751c791b1dc98efae1f55fe89
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>File XML di esempio: tipico ordine di acquisto (LINQ to XML)
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Si tratta di un ordine di acquisto tipico.  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="c40f7-102">File XML di esempio: tipico ordine di acquisto (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c40f7-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="c40f7-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c40f7-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c40f7-104">Si tratta di un ordine di acquisto tipico.</span><span class="sxs-lookup"><span data-stu-id="c40f7-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a>PurchaseOrder.xml  
+## <a name="purchaseorderxml"></a><span data-ttu-id="c40f7-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="c40f7-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -68,6 +59,5 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="c40f7-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c40f7-106">See Also</span></span>  
+ [<span data-ttu-id="c40f7-107">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c40f7-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

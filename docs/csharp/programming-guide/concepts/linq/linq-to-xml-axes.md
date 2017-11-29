@@ -1,52 +1,42 @@
 ---
 title: Assi LINQ to XML (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 212754ca8bafb8c8e2d0dbe076b88d3818e39a68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 65d64b6082942d702444305d7dfed4d05444b59e
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="linq-to-xml-axes-c"></a>Assi LINQ to XML (C#)
-Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML, è possibile eseguire query su di essa per cercare elementi e attributi e recuperarne i valori.  
+# <a name="linq-to-xml-axes-c"></a><span data-ttu-id="b8751-102">Assi LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-102">LINQ to XML Axes (C#)</span></span>
+<span data-ttu-id="b8751-103">Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML, è possibile eseguire query su di essa per cercare elementi e attributi e recuperarne i valori.</span><span class="sxs-lookup"><span data-stu-id="b8751-103">After you have created an XML tree or loaded an XML document into an XML tree, you can query it to find elements and attributes and retrieve their values.</span></span>  
   
- Prima di scrivere eventuali query, è necessario conoscere gli assi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Sono disponibili due tipi di metodi per l'asse. Il primo tipo include i metodi che vengono chiamati su un unico oggetto <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> o <xref:System.Xml.Linq.XNode>. Questi metodi operano su un unico oggetto e restituiscono una raccolta di oggetti <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> o <xref:System.Xml.Linq.XNode>. Il secondo tipo include i metodi di estensione che operano su raccolte e restituiscono raccolte. I metodi di estensione enumerano la raccolta di origine, chiamano il metodo dell'asse appropriato su ogni elemento della raccolta e concatenano i risultati.  
+ <span data-ttu-id="b8751-104">Prima di scrivere eventuali query, è necessario conoscere gli assi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b8751-104">Before you can write any queries, you must understand the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes.</span></span> <span data-ttu-id="b8751-105">Sono disponibili due tipi di metodi per l'asse. Il primo tipo include i metodi che vengono chiamati su un unico oggetto <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> o <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="b8751-105">There are two kinds of axis methods: First, there are the methods that you call on a single <xref:System.Xml.Linq.XElement> object, <xref:System.Xml.Linq.XDocument> object, or <xref:System.Xml.Linq.XNode> object.</span></span> <span data-ttu-id="b8751-106">Questi metodi operano su un unico oggetto e restituiscono una raccolta di oggetti <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> o <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="b8751-106">These methods operate on a single object and return a collection of <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, or <xref:System.Xml.Linq.XNode> objects.</span></span> <span data-ttu-id="b8751-107">Il secondo tipo include i metodi di estensione che operano su raccolte e restituiscono raccolte.</span><span class="sxs-lookup"><span data-stu-id="b8751-107">Second, there are extension methods that operate on collections and return collections.</span></span> <span data-ttu-id="b8751-108">I metodi di estensione enumerano la raccolta di origine, chiamano il metodo dell'asse appropriato su ogni elemento della raccolta e concatenano i risultati.</span><span class="sxs-lookup"><span data-stu-id="b8751-108">The extension methods enumerate the source collection, call the appropriate axis method on each item in the collection, and concatenate the results.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a><span data-ttu-id="b8751-109">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="b8751-109">In This Section</span></span>  
   
-|Argomento|Descrizione|  
+|<span data-ttu-id="b8751-110">Argomento</span><span class="sxs-lookup"><span data-stu-id="b8751-110">Topic</span></span>|<span data-ttu-id="b8751-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8751-111">Description</span></span>|  
 |-----------|-----------------|  
-|[Panoramica degli assi LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|Viene fornita una definizione degli assi e ne viene illustrato l'uso nel contesto di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Procedura: Recuperare una raccolta di elementi (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|Viene presentato il metodo <xref:System.Xml.Linq.XContainer.Elements%2A>, che consente di recuperare una raccolta degli elementi figlio di un elemento.|  
-|[Procedura: Recuperare il valore di un elemento (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)|Viene spiegato come ottenere i valori di elementi.|  
-|[Procedura. Filtrare in base a nomi di elementi (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md)|Viene illustrato come filtrare in base a nomi di elemento quando si usano gli assi.|  
-|[Procedura: Concatenare chiamate al metodo dell'asse (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md)|Viene illustrato come concatenare chiamate ai metodi degli assi.|  
-|[Procedura: Recuperare un singolo elemento figlio (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)|Viene illustrato come recuperare un singolo elemento figlio di un elemento, dato il relativo nome di tag.|  
-|[Procedura: Recuperare una raccolta di attributi (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md)|Viene presentato il metodo <xref:System.Xml.Linq.XElement.Attributes%2A>, che consente di recuperare gli attributi di un elemento.|  
-|[Procedura: Recuperare un singolo attributo (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|Viene illustrato come recuperare un singolo attributo di un elemento, dato il relativo nome.|  
-|[Procedura: Recuperare il valore di un attributo (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|Viene spiegato come ottenere i valori di attributi.|  
-|[Procedura: Recuperare il valore superficiale di un elemento](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Viene illustrato come recuperare il valore superficiale di un elemento|  
+|[<span data-ttu-id="b8751-112">Panoramica degli assi LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-112">LINQ to XML Axes Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|<span data-ttu-id="b8751-113">Viene fornita una definizione degli assi e ne viene illustrato l'uso nel contesto di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b8751-113">Defines axes, and explains how they are used in the context of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>|  
+|[<span data-ttu-id="b8751-114">Procedura: Recuperare una raccolta di elementi (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-114">How to: Retrieve a Collection of Elements (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|<span data-ttu-id="b8751-115">Viene presentato il metodo <xref:System.Xml.Linq.XContainer.Elements%2A>,</span><span class="sxs-lookup"><span data-stu-id="b8751-115">Introduces the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="b8751-116">che consente di recuperare una raccolta degli elementi figlio di un elemento.</span><span class="sxs-lookup"><span data-stu-id="b8751-116">This method retrieves a collection of the child elements of an element.</span></span>|  
+|[<span data-ttu-id="b8751-117">Procedura: Recuperare il valore di un elemento (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-117">How to: Retrieve the Value of an Element (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)|<span data-ttu-id="b8751-118">Viene spiegato come ottenere i valori di elementi.</span><span class="sxs-lookup"><span data-stu-id="b8751-118">Shows how to get the values of elements.</span></span>|  
+|[<span data-ttu-id="b8751-119">Procedura. Filtrare in base a nomi di elementi (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-119">How to: Filter on Element Names (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md)|<span data-ttu-id="b8751-120">Viene illustrato come filtrare in base a nomi di elemento quando si usano gli assi.</span><span class="sxs-lookup"><span data-stu-id="b8751-120">Shows how to filter on element names when using axes.</span></span>|  
+|[<span data-ttu-id="b8751-121">Procedura: Concatenare chiamate al metodo dell'asse (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-121">How to: Chain Axis Method Calls (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md)|<span data-ttu-id="b8751-122">Viene illustrato come concatenare chiamate ai metodi degli assi.</span><span class="sxs-lookup"><span data-stu-id="b8751-122">Shows how to chain calls to axes methods.</span></span>|  
+|[<span data-ttu-id="b8751-123">Procedura: Recuperare un singolo elemento figlio (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-123">How to: Retrieve a Single Child Element (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)|<span data-ttu-id="b8751-124">Viene illustrato come recuperare un singolo elemento figlio di un elemento, dato il relativo nome di tag.</span><span class="sxs-lookup"><span data-stu-id="b8751-124">Shows how to retrieve a single child element of an element, given the tag name of the child element.</span></span>|  
+|[<span data-ttu-id="b8751-125">Procedura: Recuperare una raccolta di attributi (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-125">How to: Retrieve a Collection of Attributes (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md)|<span data-ttu-id="b8751-126">Viene presentato il metodo <xref:System.Xml.Linq.XElement.Attributes%2A>,</span><span class="sxs-lookup"><span data-stu-id="b8751-126">Introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="b8751-127">che consente di recuperare gli attributi di un elemento.</span><span class="sxs-lookup"><span data-stu-id="b8751-127">This method retrieves the attributes of an element.</span></span>|  
+|[<span data-ttu-id="b8751-128">Procedura: Recuperare un singolo attributo (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-128">How to: Retrieve a Single Attribute (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|<span data-ttu-id="b8751-129">Viene illustrato come recuperare un singolo attributo di un elemento, dato il relativo nome.</span><span class="sxs-lookup"><span data-stu-id="b8751-129">Shows how to retrieve a single attribute of an element, given the attribute name.</span></span>|  
+|[<span data-ttu-id="b8751-130">Procedura: Recuperare il valore di un attributo (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-130">How to: Retrieve the Value of an Attribute (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|<span data-ttu-id="b8751-131">Viene spiegato come ottenere i valori di attributi.</span><span class="sxs-lookup"><span data-stu-id="b8751-131">Shows how to get the values of attributes.</span></span>|  
+|[<span data-ttu-id="b8751-132">Procedura: Recuperare il valore superficiale di un elemento</span><span class="sxs-lookup"><span data-stu-id="b8751-132">How to: Retrieve the Shallow Value of an Element (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|<span data-ttu-id="b8751-133">Viene illustrato come recuperare il valore superficiale di un elemento</span><span class="sxs-lookup"><span data-stu-id="b8751-133">Shows how to retrieve the shallow value of an element.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
- [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="b8751-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b8751-134">See Also</span></span>  
+ [<span data-ttu-id="b8751-135">Metodi di estensione</span><span class="sxs-lookup"><span data-stu-id="b8751-135">Extension Methods</span></span>](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [<span data-ttu-id="b8751-136">Guida per programmatori (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8751-136">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -10,96 +10,94 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
+ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/21/2017
 ---
+# <a name="expressions"></a><span data-ttu-id="7d053-104">Espressioni</span><span class="sxs-lookup"><span data-stu-id="7d053-104">Expressions</span></span>
 
-# <a name="expressions"></a>Espressioni
+<span data-ttu-id="7d053-105">Le *espressioni* sono costituite da *operandi* e *operatori*.</span><span class="sxs-lookup"><span data-stu-id="7d053-105">*Expressions* are constructed from *operands* and *operators*.</span></span> <span data-ttu-id="7d053-106">Gli operatori di un'espressione indicano le operazioni che devono essere eseguite sugli operandi.</span><span class="sxs-lookup"><span data-stu-id="7d053-106">The operators of an expression indicate which operations to apply to the operands.</span></span> <span data-ttu-id="7d053-107">Alcuni esempi di operatori sono `+`, `-`, `*`, `/` e `new`,</span><span class="sxs-lookup"><span data-stu-id="7d053-107">Examples of operators include `+`, `-`, `*`, `/`, and `new`.</span></span> <span data-ttu-id="7d053-108">mentre i valori effettivi, i campi, le variabili locali e le espressioni sono esempi di operandi.</span><span class="sxs-lookup"><span data-stu-id="7d053-108">Examples of operands include literals, fields, local variables, and expressions.</span></span>
 
-Le *espressioni* sono costituite da *operandi* e *operatori*. Gli operatori di un'espressione indicano le operazioni che devono essere eseguite sugli operandi. Alcuni esempi di operatori sono `+`, `-`, `*`, `/` e `new`, mentre i valori effettivi, i campi, le variabili locali e le espressioni sono esempi di operandi.
+<span data-ttu-id="7d053-109">Se un'espressione contiene più operatori, la *precedenza* degli operatori determina l'ordine in cui vengono valutati i singoli operatori.</span><span class="sxs-lookup"><span data-stu-id="7d053-109">When an expression contains multiple operators, the *precedence* of the operators controls the order in which the individual operators are evaluated.</span></span> <span data-ttu-id="7d053-110">L'espressione `x + y * z`, ad esempio, viene valutata come `x + (y * z)` poiché l'operatore `*` ha la precedenza sull'operatore `+`.</span><span class="sxs-lookup"><span data-stu-id="7d053-110">For example, the expression `x + y * z` is evaluated as `x + (y * z)` because the `*` operator has higher precedence than the `+` operator.</span></span>
 
-Se un'espressione contiene più operatori, la *precedenza* degli operatori determina l'ordine in cui vengono valutati i singoli operatori. L'espressione `x + y * z`, ad esempio, viene valutata come `x + (y * z)` poiché l'operatore `*` ha la precedenza sull'operatore `+`.
+<span data-ttu-id="7d053-111">Quando un operando si trova tra due operatori con la stessa precedenza, l'ordine di esecuzione delle operazioni viene determinato dall'*associatività* degli operatori:</span><span class="sxs-lookup"><span data-stu-id="7d053-111">When an operand occurs between two operators with the same precedence, the *associativity* of the operators controls the order in which the operations are performed:</span></span>
 
-Quando un operando si trova tra due operatori con la stessa precedenza, l'ordine di esecuzione delle operazioni viene determinato dall'*associatività* degli operatori:
+*   <span data-ttu-id="7d053-112">Ad eccezione degli operatori di assegnazione, tutti gli operatori binari *prevedono l'associazione all'operando a sinistra*. In altri termini, le operazioni vengono eseguite da sinistra a destra.</span><span class="sxs-lookup"><span data-stu-id="7d053-112">Except for the assignment operators, all binary operators are *left-associative*, meaning that operations are performed from left to right.</span></span> <span data-ttu-id="7d053-113">L'espressione `x + y + z` viene ad esempio valutata come `(x + y) + z`.</span><span class="sxs-lookup"><span data-stu-id="7d053-113">For example, `x + y + z` is evaluated as `(x + y) + z`.</span></span>
+*   <span data-ttu-id="7d053-114">Gli operatori di assegnazione e gli operatori condizionali (`?:`) *prevedono l'associazione all'operando a destra*. In altri termini, le operazioni vengono eseguite da destra a sinistra.</span><span class="sxs-lookup"><span data-stu-id="7d053-114">The assignment operators and the conditional operator (`?:`) are *right-associative*, meaning that operations are performed from right to left.</span></span> <span data-ttu-id="7d053-115">L'espressione `x = y = z` viene ad esempio valutata come `x = (y = z)`.</span><span class="sxs-lookup"><span data-stu-id="7d053-115">For example, `x = y = z` is evaluated as `x = (y = z)`.</span></span>
 
-*   Ad eccezione degli operatori di assegnazione, tutti gli operatori binari *prevedono l'associazione all'operando a sinistra*. In altri termini, le operazioni vengono eseguite da sinistra a destra. L'espressione `x + y + z` viene ad esempio valutata come `(x + y) + z`.
-*   Gli operatori di assegnazione e gli operatori condizionali (`?:`) *prevedono l'associazione all'operando a destra*. In altri termini, le operazioni vengono eseguite da destra a sinistra. L'espressione `x = y = z` viene ad esempio valutata come `x = (y = z)`.
+<span data-ttu-id="7d053-116">È possibile controllare la precedenza e l'associatività usando le parentesi.</span><span class="sxs-lookup"><span data-stu-id="7d053-116">Precedence and associativity can be controlled using parentheses.</span></span> <span data-ttu-id="7d053-117">Ad esempio, `x + y * z` prima moltiplica `y` per `z` e quindi somma il risultato a `x`, ma `(x + y) * z` prima somma `x` e `y` e quindi moltiplica il risultato per `z`.</span><span class="sxs-lookup"><span data-stu-id="7d053-117">For example, `x + y * z` first multiplies `y` by `z` and then adds the result to `x`, but `(x + y) * z` first adds `x` and `y` and then multiplies the result by `z`.</span></span>
 
-È possibile controllare la precedenza e l'associatività usando le parentesi. Ad esempio, `x + y * z` prima moltiplica `y` per `z` e quindi somma il risultato a `x`, ma `(x + y) * z` prima somma `x` e `y` e quindi moltiplica il risultato per `z`.
+<span data-ttu-id="7d053-118">La maggior parte degli operatori può essere*in overload*.</span><span class="sxs-lookup"><span data-stu-id="7d053-118">Most operators can be *overloaded*.</span></span> <span data-ttu-id="7d053-119">L'overload degli operatori consente di specificare implementazioni di operatori definite dall'utente per le operazioni in cui uno o entrambi gli operandi appartengono a un tipo struct o a una classe definita dall'utente.</span><span class="sxs-lookup"><span data-stu-id="7d053-119">Operator overloading permits user-defined operator implementations to be specified for operations where one or both of the operands are of a user-defined class or struct type.</span></span>
 
-La maggior parte degli operatori può essere*in overload*. L'overload degli operatori consente di specificare implementazioni di operatori definite dall'utente per le operazioni in cui uno o entrambi gli operandi appartengono a un tipo struct o a una classe definita dall'utente.
+<span data-ttu-id="7d053-120">Di seguito sono riepilogati gli operatori di C# e sono elencate le categorie di operatori in ordine di precedenza, a partire da quella più alta.</span><span class="sxs-lookup"><span data-stu-id="7d053-120">The following summarizes C#’s operators, listing the operator categories in order of precedence from highest to lowest.</span></span> <span data-ttu-id="7d053-121">Gli operatori della stessa categoria hanno uguale precedenza.</span><span class="sxs-lookup"><span data-stu-id="7d053-121">Operators in the same category have equal precedence.</span></span> <span data-ttu-id="7d053-122">Sotto ciascuna categoria è riportato il relativo elenco di espressioni e la descrizione di ogni tipo di espressione.</span><span class="sxs-lookup"><span data-stu-id="7d053-122">Under each category is a list of expressions in that category along with the description of that expression type.</span></span>
 
-Di seguito sono riepilogati gli operatori di C# e sono elencate le categorie di operatori in ordine di precedenza, a partire da quella più alta. Gli operatori della stessa categoria hanno uguale precedenza. Sotto ciascuna categoria è riportato il relativo elenco di espressioni e la descrizione di ogni tipo di espressione.
-
-* Primario
-    - `x.m`: accesso a membri
-    - `x(...)`: chiamata a metodi e delegati
-    - `x[...]`: accesso a matrici e indicizzatori
-    - `x++`: post-incremento
-    - `x--`: post-decremento
-    - `new T(...)`: creazione di oggetti e delegati
-    - `new T(...){...}`: creazione di oggetti con inizializzatole
-    - `new {...}`: inizializzatore di oggetti anonimo
-    - `new T[...]`: creazione di matrici
-    - `typeof(T)`: ottiene l'oggetto @System.Type per `T`
-    - `checked(x)`: valuta l'espressione in un contesto controllato
-    - `unchecked(x)`: valuta l'espressione in un contesto non controllato
-    - `default(T)`: ottiene un valore predefinito di tipo `T`
-    - `delegate {...}`: funzione anonima (metodo anonimo)
-* Unario
-    - `+x`: identità
-    - `-x`: negazione
-    - `!x`: negazione logica
-    - `~x`: negazione bit per bit
-    - `++x`: pre-incremento
-    - `--x`: pre-decremento
-    - `(T)x`: converte in modo esplicito `x` al tipo `T`
-    - `await x`: attende in modo asincrono il completamento di `x`
-* Moltiplicazione
-    - `x * y`: moltiplicazione
-    - `x / y`: divisione
-    - `x % y`: resto
-* Addizione
-    - `x + y`: addizione, concatenazione di stringhe, combinazione di delegati
-    - `x – y`: sottrazione, rimozione di delegati
-* Shift
-    - `x << y`: spostamento a sinistra
-    - `x >> y`: spostamento a destra
-* Operatori relazionali e operatori di test del tipo
-    - `x < y`: minore di
-    - `x > y`: maggiore di
-    - `x <= y`: minore o uguale a
-    - `x >= y`: maggiore o uguale a
-    - `x is T`: restituisce `true` se `x` è un oggetto `T`, altrimenti `false`
-    - `x as T`: restituisce `x` tipizzato come `T` oppure `null` se `x` non è un oggetto `T`
-* Uguaglianza
-    - `x == y`: uguale
-    - `x != y`: non uguale
-* AND logico
-    - `x & y`: AND Integer bit per bit, AND logico booleano
-* XOR logico
-    - `x ^ y`: XOR Integer bit per bit, XOR logico booleano
-* OR logico
-    - `x | y`: OR Integer bit per bit, OR logico booleano
-* AND condizionale
-    - `x && y`: restituisce `y` solo se `x` non è `false`
-* OR condizionale
-    - `x || y`: restituisce `y` solo se `x` non è `true`
-* Null-coalescing
-    - `x ?? y`: Restituisce `y` se `x` è null, altrimenti `x`
-* Condizionale
-    - `x ? y : z`: restituisce `y` se `x` è `true`, `z` se `x` è `false`
-* Assegnazione o funzione anonima
-    - `x = y`: assegnazione
-    - `x op= y`: assegnazione composta. Gli operatori supportati sono
-        - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: funzione anonima (espressione lambda)
+* <span data-ttu-id="7d053-123">Primario</span><span class="sxs-lookup"><span data-stu-id="7d053-123">Primary</span></span>
+    - <span data-ttu-id="7d053-124">`x.m`: accesso a membri</span><span class="sxs-lookup"><span data-stu-id="7d053-124">`x.m`: Member access</span></span>
+    - <span data-ttu-id="7d053-125">`x(...)`: chiamata a metodi e delegati</span><span class="sxs-lookup"><span data-stu-id="7d053-125">`x(...)`: Method and delegate invocation</span></span>
+    - <span data-ttu-id="7d053-126">`x[...]`: accesso a matrici e indicizzatori</span><span class="sxs-lookup"><span data-stu-id="7d053-126">`x[...]`: Array and indexer access</span></span>
+    - <span data-ttu-id="7d053-127">`x++`: post-incremento</span><span class="sxs-lookup"><span data-stu-id="7d053-127">`x++`: Post-increment</span></span>
+    - <span data-ttu-id="7d053-128">`x--`: post-decremento</span><span class="sxs-lookup"><span data-stu-id="7d053-128">`x--`: Post-decrement</span></span>
+    - <span data-ttu-id="7d053-129">`new T(...)`: creazione di oggetti e delegati</span><span class="sxs-lookup"><span data-stu-id="7d053-129">`new T(...)`: Object and delegate creation</span></span>
+    - <span data-ttu-id="7d053-130">`new T(...){...}`: creazione di oggetti con inizializzatole</span><span class="sxs-lookup"><span data-stu-id="7d053-130">`new T(...){...}`: Object creation with initializer</span></span>
+    - <span data-ttu-id="7d053-131">`new {...}`: inizializzatore di oggetti anonimo</span><span class="sxs-lookup"><span data-stu-id="7d053-131">`new {...}`:  Anonymous object initializer</span></span>
+    - <span data-ttu-id="7d053-132">`new T[...]`: creazione di matrici</span><span class="sxs-lookup"><span data-stu-id="7d053-132">`new T[...]`: Array creation</span></span>
+    - <span data-ttu-id="7d053-133">`typeof(T)`: ottiene l'oggetto <xref:System.Type> per `T`</span><span class="sxs-lookup"><span data-stu-id="7d053-133">`typeof(T)`: Obtain <xref:System.Type> object for `T`</span></span>
+    - <span data-ttu-id="7d053-134">`checked(x)`: valuta l'espressione in un contesto controllato</span><span class="sxs-lookup"><span data-stu-id="7d053-134">`checked(x)`: Evaluate expression in checked context</span></span>
+    - <span data-ttu-id="7d053-135">`unchecked(x)`: valuta l'espressione in un contesto non controllato</span><span class="sxs-lookup"><span data-stu-id="7d053-135">`unchecked(x)`: Evaluate expression in unchecked context</span></span>
+    - <span data-ttu-id="7d053-136">`default(T)`: ottiene un valore predefinito di tipo `T`</span><span class="sxs-lookup"><span data-stu-id="7d053-136">`default(T)`: Obtain default value of type `T`</span></span>
+    - <span data-ttu-id="7d053-137">`delegate {...}`: funzione anonima (metodo anonimo)</span><span class="sxs-lookup"><span data-stu-id="7d053-137">`delegate {...}`: Anonymous function (anonymous method)</span></span>
+* <span data-ttu-id="7d053-138">Unario</span><span class="sxs-lookup"><span data-stu-id="7d053-138">Unary</span></span>
+    - <span data-ttu-id="7d053-139">`+x`: identità</span><span class="sxs-lookup"><span data-stu-id="7d053-139">`+x`: Identity</span></span>
+    - <span data-ttu-id="7d053-140">`-x`: negazione</span><span class="sxs-lookup"><span data-stu-id="7d053-140">`-x`: Negation</span></span>
+    - <span data-ttu-id="7d053-141">`!x`: negazione logica</span><span class="sxs-lookup"><span data-stu-id="7d053-141">`!x`: Logical negation</span></span>
+    - <span data-ttu-id="7d053-142">`~x`: negazione bit per bit</span><span class="sxs-lookup"><span data-stu-id="7d053-142">`~x`: Bitwise negation</span></span>
+    - <span data-ttu-id="7d053-143">`++x`: pre-incremento</span><span class="sxs-lookup"><span data-stu-id="7d053-143">`++x`: Pre-increment</span></span>
+    - <span data-ttu-id="7d053-144">`--x`: pre-decremento</span><span class="sxs-lookup"><span data-stu-id="7d053-144">`--x`: Pre-decrement</span></span>
+    - <span data-ttu-id="7d053-145">`(T)x`: converte in modo esplicito `x` al tipo `T`</span><span class="sxs-lookup"><span data-stu-id="7d053-145">`(T)x`: Explicitly convert `x` to type `T`</span></span>
+    - <span data-ttu-id="7d053-146">`await x`: attende in modo asincrono il completamento di `x`</span><span class="sxs-lookup"><span data-stu-id="7d053-146">`await x`: Asynchronously wait for `x` to complete</span></span>
+* <span data-ttu-id="7d053-147">Moltiplicazione</span><span class="sxs-lookup"><span data-stu-id="7d053-147">Multiplicative</span></span>
+    - <span data-ttu-id="7d053-148">`x * y`: moltiplicazione</span><span class="sxs-lookup"><span data-stu-id="7d053-148">`x * y`: Multiplication</span></span>
+    - <span data-ttu-id="7d053-149">`x / y`: divisione</span><span class="sxs-lookup"><span data-stu-id="7d053-149">`x / y`: Division</span></span>
+    - <span data-ttu-id="7d053-150">`x % y`: resto</span><span class="sxs-lookup"><span data-stu-id="7d053-150">`x % y`: Remainder</span></span>
+* <span data-ttu-id="7d053-151">Addizione</span><span class="sxs-lookup"><span data-stu-id="7d053-151">Additive</span></span>
+    - <span data-ttu-id="7d053-152">`x + y`: addizione, concatenazione di stringhe, combinazione di delegati</span><span class="sxs-lookup"><span data-stu-id="7d053-152">`x + y`: Addition, string concatenation, delegate combination</span></span>
+    - <span data-ttu-id="7d053-153">`x – y`: sottrazione, rimozione di delegati</span><span class="sxs-lookup"><span data-stu-id="7d053-153">`x – y`: Subtraction, delegate removal</span></span>
+* <span data-ttu-id="7d053-154">Shift</span><span class="sxs-lookup"><span data-stu-id="7d053-154">Shift</span></span>
+    - <span data-ttu-id="7d053-155">`x << y`: spostamento a sinistra</span><span class="sxs-lookup"><span data-stu-id="7d053-155">`x << y`: Shift left</span></span>
+    - <span data-ttu-id="7d053-156">`x >> y`: spostamento a destra</span><span class="sxs-lookup"><span data-stu-id="7d053-156">`x >> y`: Shift right</span></span>
+* <span data-ttu-id="7d053-157">Operatori relazionali e operatori di test del tipo</span><span class="sxs-lookup"><span data-stu-id="7d053-157">Relational and type testing</span></span>
+    - <span data-ttu-id="7d053-158">`x < y`: minore di</span><span class="sxs-lookup"><span data-stu-id="7d053-158">`x < y`: Less than</span></span>
+    - <span data-ttu-id="7d053-159">`x > y`: maggiore di</span><span class="sxs-lookup"><span data-stu-id="7d053-159">`x > y`: Greater than</span></span>
+    - <span data-ttu-id="7d053-160">`x <= y`: minore o uguale a</span><span class="sxs-lookup"><span data-stu-id="7d053-160">`x <= y`: Less than or equal</span></span>
+    - <span data-ttu-id="7d053-161">`x >= y`: maggiore o uguale a</span><span class="sxs-lookup"><span data-stu-id="7d053-161">`x >= y`: Greater than or equal</span></span>
+    - <span data-ttu-id="7d053-162">`x is T`: restituisce `true` se `x` è un oggetto `T`, altrimenti `false`</span><span class="sxs-lookup"><span data-stu-id="7d053-162">`x is T`: Return `true` if `x` is a `T`, `false` otherwise</span></span>
+    - <span data-ttu-id="7d053-163">`x as T`: restituisce `x` tipizzato come `T` oppure `null` se `x` non è un oggetto `T`</span><span class="sxs-lookup"><span data-stu-id="7d053-163">`x as T`: Return `x` typed as `T`, or `null` if `x` is not a `T`</span></span>
+* <span data-ttu-id="7d053-164">Uguaglianza</span><span class="sxs-lookup"><span data-stu-id="7d053-164">Equality</span></span>
+    - <span data-ttu-id="7d053-165">`x == y`: uguale</span><span class="sxs-lookup"><span data-stu-id="7d053-165">`x == y`: Equal</span></span>
+    - <span data-ttu-id="7d053-166">`x != y`: non uguale</span><span class="sxs-lookup"><span data-stu-id="7d053-166">`x != y`: Not equal</span></span>
+* <span data-ttu-id="7d053-167">AND logico</span><span class="sxs-lookup"><span data-stu-id="7d053-167">Logical AND</span></span>
+    - <span data-ttu-id="7d053-168">`x & y`: AND Integer bit per bit, AND logico booleano</span><span class="sxs-lookup"><span data-stu-id="7d053-168">`x & y`: Integer bitwise AND, boolean logical AND</span></span>
+* <span data-ttu-id="7d053-169">XOR logico</span><span class="sxs-lookup"><span data-stu-id="7d053-169">Logical XOR</span></span>
+    - <span data-ttu-id="7d053-170">`x ^ y`: XOR Integer bit per bit, XOR logico booleano</span><span class="sxs-lookup"><span data-stu-id="7d053-170">`x ^ y`: Integer bitwise XOR, boolean logical XOR</span></span>
+* <span data-ttu-id="7d053-171">OR logico</span><span class="sxs-lookup"><span data-stu-id="7d053-171">Logical OR</span></span>
+    - <span data-ttu-id="7d053-172">`x | y`: OR Integer bit per bit, OR logico booleano</span><span class="sxs-lookup"><span data-stu-id="7d053-172">`x | y`: Integer bitwise OR, boolean logical OR</span></span>
+* <span data-ttu-id="7d053-173">AND condizionale</span><span class="sxs-lookup"><span data-stu-id="7d053-173">Conditional AND</span></span>
+    - <span data-ttu-id="7d053-174">`x && y`: restituisce `y` solo se `x` non è `false`</span><span class="sxs-lookup"><span data-stu-id="7d053-174">`x && y`: Evaluates `y` only if `x` is not `false`</span></span>
+* <span data-ttu-id="7d053-175">OR condizionale</span><span class="sxs-lookup"><span data-stu-id="7d053-175">Conditional OR</span></span>
+    - <span data-ttu-id="7d053-176">`x || y`: restituisce `y` solo se `x` non è `true`</span><span class="sxs-lookup"><span data-stu-id="7d053-176">`x || y`: Evaluates `y` only if `x` is not `true`</span></span>
+* <span data-ttu-id="7d053-177">Null-coalescing</span><span class="sxs-lookup"><span data-stu-id="7d053-177">Null coalescing</span></span>
+    - <span data-ttu-id="7d053-178">`x ?? y`: Restituisce `y` se `x` è null, altrimenti `x`</span><span class="sxs-lookup"><span data-stu-id="7d053-178">`x ?? y`: Evaluates to `y` if `x` is null, to `x` otherwise</span></span>
+* <span data-ttu-id="7d053-179">Condizionale</span><span class="sxs-lookup"><span data-stu-id="7d053-179">Conditional</span></span>
+    - <span data-ttu-id="7d053-180">`x ? y : z`: restituisce `y` se `x` è `true`, `z` se `x` è `false`</span><span class="sxs-lookup"><span data-stu-id="7d053-180">`x ? y : z`: Evaluates `y` if `x` is `true`, `z` if `x` is `false`</span></span>
+* <span data-ttu-id="7d053-181">Assegnazione o funzione anonima</span><span class="sxs-lookup"><span data-stu-id="7d053-181">Assignment or anonymous function</span></span>
+    - <span data-ttu-id="7d053-182">`x = y`: assegnazione</span><span class="sxs-lookup"><span data-stu-id="7d053-182">`x = y`: Assignment</span></span>
+    - <span data-ttu-id="7d053-183">`x op= y`: assegnazione composta. Gli operatori supportati sono</span><span class="sxs-lookup"><span data-stu-id="7d053-183">`x op= y`: Compound assignment; supported operators are</span></span>
+        - <span data-ttu-id="7d053-184">`*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`</span><span class="sxs-lookup"><span data-stu-id="7d053-184">`*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`</span></span>
+    - <span data-ttu-id="7d053-185">`(T x) => y`: funzione anonima (espressione lambda)</span><span class="sxs-lookup"><span data-stu-id="7d053-185">`(T x) => y`: Anonymous function (lambda expression)</span></span>
 
 >[!div class="step-by-step"]
-[Precedente](types-and-variables.md)
-[Successivo](statements.md)
-
+<span data-ttu-id="7d053-186">[Precedente](types-and-variables.md)
+[Successivo](statements.md)</span><span class="sxs-lookup"><span data-stu-id="7d053-186">[Previous](types-and-variables.md)
+[Next](statements.md)</span></span>

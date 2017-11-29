@@ -1,88 +1,69 @@
 ---
 title: 'Procedura: scaricare file in Visual Basic'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- downloading Internet resources, files
-- downloading files
-- remote computers, downloading from
-- files, downloading
-- files, transferring
+- downloading Internet resources [Visual Basic], files
+- downloading files [Visual Basic]
+- remote computers [Visual Basic], downloading from
+- files [Visual Basic], downloading
+- files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc67d28b870f86c6464e86f7682f71e6e36ea9e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8988b922df921c2de3e2c4f6d7a8e98887ba7b0a
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-download-a-file-in-visual-basic"></a>Procedura: scaricare file in Visual Basic
-Il metodo <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> può essere usato per scaricare un file remoto e archiviarlo in un percorso specifico. Se il parametro `ShowUI` è impostato su `True`, viene visualizzata una finestra che mostra lo stato di avanzamento del download e consente agli utenti di annullare l'operazione. Per impostazione predefinita non vengono sovrascritti i file esistenti con lo stesso nome. Se si desidera sovrascrivere i file esistenti, impostare il parametro `overwrite` su `True`.  
+# <a name="how-to-download-a-file-in-visual-basic"></a><span data-ttu-id="74d84-102">Procedura: scaricare file in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="74d84-102">How to: Download a File in Visual Basic</span></span>
+<span data-ttu-id="74d84-103">Il metodo <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> può essere usato per scaricare un file remoto e archiviarlo in un percorso specifico.</span><span class="sxs-lookup"><span data-stu-id="74d84-103">The <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> method can be used to download a remote file and store it to a specific location.</span></span> <span data-ttu-id="74d84-104">Se il parametro `ShowUI` è impostato su `True`, viene visualizzata una finestra che mostra lo stato di avanzamento del download e consente agli utenti di annullare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="74d84-104">If the `ShowUI` parameter is set to `True`, a dialog box is displayed showing the progress of the download and allowing users to cancel the operation.</span></span> <span data-ttu-id="74d84-105">Per impostazione predefinita non vengono sovrascritti i file esistenti con lo stesso nome. Se si desidera sovrascrivere i file esistenti, impostare il parametro `overwrite` su `True`.</span><span class="sxs-lookup"><span data-stu-id="74d84-105">By default, existing files having the same name are not overwritten; if you want to overwrite existing files, set the `overwrite` parameter to `True`.</span></span>  
   
- Le seguenti condizioni possono generare un'eccezione:  
+ <span data-ttu-id="74d84-106">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="74d84-106">The following conditions may cause an exception:</span></span>  
   
--   Il nome dell'unità non è valido (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="74d84-107">Il nome dell'unità non è valido (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="74d84-107">Drive name is not valid (<xref:System.ArgumentException>).</span></span>  
   
--   L'autenticazione necessaria non è stata fornita (<xref:System.UnauthorizedAccessException> o <xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="74d84-108">L'autenticazione necessaria non è stata fornita (<xref:System.UnauthorizedAccessException> o <xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="74d84-108">Necessary authentication has not been supplied (<xref:System.UnauthorizedAccessException> or <xref:System.Security.SecurityException>).</span></span>  
   
--   Il server non risponde entro il `connectionTimeout` (<xref:System.TimeoutException>) specificato.  
+-   <span data-ttu-id="74d84-109">Il server non risponde entro il `connectionTimeout` (<xref:System.TimeoutException>) specificato.</span><span class="sxs-lookup"><span data-stu-id="74d84-109">The server does not respond within the specified `connectionTimeout` (<xref:System.TimeoutException>).</span></span>  
   
--   La richiesta è stata rifiutata dal sito Web (<xref:System.Net.WebException>).  
+-   <span data-ttu-id="74d84-110">La richiesta è stata rifiutata dal sito Web (<xref:System.Net.WebException>).</span><span class="sxs-lookup"><span data-stu-id="74d84-110">The request is denied by the Web site (<xref:System.Net.WebException>).</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 > [!IMPORTANT]
->  Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto. È possibile ad esempio che il file Form1.vb non sia un file di origine di Visual Basic. Prima di usare i dati nell'applicazione verificare tutti gli input. È possibile che il contenuto del file non corrisponda a quanto previsto e che quindi i metodi per la lettura dal file non abbiano esito positivo.  
+>  <span data-ttu-id="74d84-111">Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto.</span><span class="sxs-lookup"><span data-stu-id="74d84-111">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="74d84-112">È possibile ad esempio che il file Form1.vb non sia un file di origine di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="74d84-112">For example, the file Form1.vb may not be a Visual Basic source file.</span></span> <span data-ttu-id="74d84-113">Prima di usare i dati nell'applicazione verificare tutti gli input.</span><span class="sxs-lookup"><span data-stu-id="74d84-113">Verify all inputs before using the data in your application.</span></span> <span data-ttu-id="74d84-114">È possibile che il contenuto del file non corrisponda a quanto previsto e che quindi i metodi per la lettura dal file non abbiano esito positivo.</span><span class="sxs-lookup"><span data-stu-id="74d84-114">The contents of the file may not be what is expected, and methods to read from the file may fail.</span></span>  
   
-### <a name="to-download-a-file"></a>Per scaricare un file  
+### <a name="to-download-a-file"></a><span data-ttu-id="74d84-115">Per scaricare un file</span><span class="sxs-lookup"><span data-stu-id="74d84-115">To download a file</span></span>  
   
--   Usare il metodo `DownloadFile` per scaricare il file, specificando il percorso del file di destinazione come stringa o URI e specificando la posizione in cui archiviare il file. Questo esempio scarica il file `WineList.txt` da `http://www.cohowinery.com/downloads` e lo salva in `C:\Documents and Settings\All Users\Documents`:  
+-   <span data-ttu-id="74d84-116">Usare il metodo `DownloadFile` per scaricare il file, specificando il percorso del file di destinazione come stringa o URI e specificando la posizione in cui archiviare il file.</span><span class="sxs-lookup"><span data-stu-id="74d84-116">Use the `DownloadFile` method to download the file, specifying the target file's location as a string or URI and specifying the location at which to store the file.</span></span> <span data-ttu-id="74d84-117">Questo esempio scarica il file `WineList.txt` da `http://www.cohowinery.com/downloads` e lo salva in `C:\Documents and Settings\All Users\Documents`:</span><span class="sxs-lookup"><span data-stu-id="74d84-117">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`:</span></span>  
   
      [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
   
-### <a name="to-download-a-file-specifying-a-time-out-interval"></a>Per scaricare un file, specificando un intervallo di timeout  
+### <a name="to-download-a-file-specifying-a-time-out-interval"></a><span data-ttu-id="74d84-118">Per scaricare un file, specificando un intervallo di timeout</span><span class="sxs-lookup"><span data-stu-id="74d84-118">To download a file, specifying a time-out interval</span></span>  
   
--   Usare il metodo `DownloadFile` per scaricare il file, specificando il percorso del file di destinazione come stringa o URI che specifica la posizione in cui archiviare il file e specificando l'intervallo di timeout in millisecondi (il valore predefinito è 1000). Questo esempio scarica il file `WineList.txt` da `http://www.cohowinery.com/downloads` e lo salva in `C:\Documents and Settings\All Users\Documents`, specificando un intervallo di timeout di 500 millisecondi:  
+-   <span data-ttu-id="74d84-119">Usare il metodo `DownloadFile` per scaricare il file, specificando il percorso del file di destinazione come stringa o URI che specifica la posizione in cui archiviare il file e specificando l'intervallo di timeout in millisecondi (il valore predefinito è 1000).</span><span class="sxs-lookup"><span data-stu-id="74d84-119">Use the `DownloadFile` method to download the file, specifying the target file's location as a string or URI, specifying the location at which to store the file, and specifying the time-out interval in milliseconds (the default is 1000).</span></span> <span data-ttu-id="74d84-120">Questo esempio scarica il file `WineList.txt` da `http://www.cohowinery.com/downloads` e lo salva in `C:\Documents and Settings\All Users\Documents`, specificando un intervallo di timeout di 500 millisecondi:</span><span class="sxs-lookup"><span data-stu-id="74d84-120">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`, specifying a time-out interval of 500 milliseconds:</span></span>  
   
      [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
   
-### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>Per scaricare un file, fornendo un nome utente e una password  
+### <a name="to-download-a-file-supplying-a-user-name-and-password"></a><span data-ttu-id="74d84-121">Per scaricare un file, fornendo un nome utente e una password</span><span class="sxs-lookup"><span data-stu-id="74d84-121">To download a file, supplying a user name and password</span></span>  
   
--   Usare il metodo `DownLoadFile` per scaricare il file, specificando il percorso del file di destinazione come stringa o URI e specificando la posizione in cui archiviare il file, il nome utente e la password. Questo esempio scarica il file `WineList.txt` da `http://www.cohowinery.com/downloads` e lo salva in `C:\Documents and Settings\All Users\Documents`, con il nome utente `anonymous` e una password vuota.  
+-   <span data-ttu-id="74d84-122">Usare il metodo `DownLoadFile` per scaricare il file, specificando il percorso del file di destinazione come stringa o URI e specificando la posizione in cui archiviare il file, il nome utente e la password.</span><span class="sxs-lookup"><span data-stu-id="74d84-122">Use the `DownLoadFile` method to download the file, specifying the target file's location as a string or URI and specifying the location at which to store the file, the user name, and the password.</span></span> <span data-ttu-id="74d84-123">Questo esempio scarica il file `WineList.txt` da `http://www.cohowinery.com/downloads` e lo salva in `C:\Documents and Settings\All Users\Documents`, con il nome utente `anonymous` e una password vuota.</span><span class="sxs-lookup"><span data-stu-id="74d84-123">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`, with the user name `anonymous` and a blank password.</span></span>  
   
      [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
   
     > [!IMPORTANT]
-    >  Il protocollo FTP utilizzato dal metodo `DownLoadFile` invia informazioni, comprese le password, in testo normale e non deve essere usato per trasmettere informazioni riservate.  
+    >  <span data-ttu-id="74d84-124">Il protocollo FTP utilizzato dal metodo `DownLoadFile` invia informazioni, comprese le password, in testo normale e non deve essere usato per trasmettere informazioni riservate.</span><span class="sxs-lookup"><span data-stu-id="74d84-124">The FTP protocol used by the `DownLoadFile` method sends information, including passwords, in plain text and should not be used for transmitting sensitive information.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Devices.Network>   
- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>   
- [Procedura: caricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)   
- [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-
+## <a name="see-also"></a><span data-ttu-id="74d84-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="74d84-125">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Devices.Network>  
+ <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
+ [<span data-ttu-id="74d84-126">Procedura: Caricare un file</span><span class="sxs-lookup"><span data-stu-id="74d84-126">How to: Upload a File</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [<span data-ttu-id="74d84-127">Procedura: analizzare percorsi di file</span><span class="sxs-lookup"><span data-stu-id="74d84-127">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

@@ -1,49 +1,31 @@
 ---
 title: "Procedura: implementare una classe leggera con proprietà implementate automaticamente (Guida per programmatori C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b944b6d232925bbd9bf1c04e89cd40e5ceaf016
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Procedura: implementare una classe leggera con proprietà implementate automaticamente (Guida per programmatori C#)
-Questo esempio mostra come creare una classe leggera non modificabile che serve solo a incapsulare un set di proprietà implementate automaticamente. Usare questo genere di costrutto invece di una struct quando è necessario usare la semantica del tipo riferimento.  
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="17818-102">Procedura: implementare una classe leggera con proprietà implementate automaticamente (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="17818-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
+<span data-ttu-id="17818-103">Questo esempio mostra come creare una classe leggera non modificabile che serve solo a incapsulare un set di proprietà implementate automaticamente.</span><span class="sxs-lookup"><span data-stu-id="17818-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="17818-104">Usare questo genere di costrutto invece di una struct quando è necessario usare la semantica del tipo riferimento.</span><span class="sxs-lookup"><span data-stu-id="17818-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  
   
- È possibile creare una proprietà non modificabile in due modi.  È possibile dichiarare la funzione di accesso [set](../../../csharp/language-reference/keywords/set.md) come [privata](../../../csharp/language-reference/keywords/private.md).  La proprietà è impostabile solo all'interno del tipo è, ma non è modificabile per i consumer.  È invece possibile dichiarare solo la funzione di accesso [get](../../../csharp/language-reference/keywords/get.md), che rende la proprietà non modificabile ovunque tranne che nel costruttore del tipo.  
+ <span data-ttu-id="17818-105">È possibile creare una proprietà non modificabile in due modi.</span><span class="sxs-lookup"><span data-stu-id="17818-105">You can make an immutable property in two ways.</span></span>  <span data-ttu-id="17818-106">È possibile dichiarare la funzione di accesso [set](../../../csharp/language-reference/keywords/set.md) come [privata](../../../csharp/language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="17818-106">You can declare the [set](../../../csharp/language-reference/keywords/set.md) accessor.to be [private](../../../csharp/language-reference/keywords/private.md).</span></span>  <span data-ttu-id="17818-107">La proprietà è impostabile solo all'interno del tipo è, ma non è modificabile per i consumer.</span><span class="sxs-lookup"><span data-stu-id="17818-107">The property is only settable within the type, but it is immutable to consumers.</span></span>  <span data-ttu-id="17818-108">È invece possibile dichiarare solo la funzione di accesso [get](../../../csharp/language-reference/keywords/get.md), che rende la proprietà non modificabile ovunque tranne che nel costruttore del tipo.</span><span class="sxs-lookup"><span data-stu-id="17818-108">You can instead declare only the [get](../../../csharp/language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>  
   
- Quando si dichiara una funzione di accesso `set` privata, non è possibile usare un inizializzatore di oggetto per inizializzare la proprietà. È necessario usare un costruttore o un metodo factory.  
+ <span data-ttu-id="17818-109">Quando si dichiara una funzione di accesso `set` privata, non è possibile usare un inizializzatore di oggetto per inizializzare la proprietà.</span><span class="sxs-lookup"><span data-stu-id="17818-109">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="17818-110">È necessario usare un costruttore o un metodo factory.</span><span class="sxs-lookup"><span data-stu-id="17818-110">You must use a constructor or a factory method.</span></span>  
   
-## <a name="example"></a>Esempio  
- Il seguente esempio mostra due modi per implementare una classe non modificabile con proprietà implementate automaticamente. Ogni modo dichiara una delle proprietà con una funzione di accesso `set` privata e una delle proprietà solo con `get`.  La prima classe usa un costruttore solo per inizializzare le proprietà e la seconda classe usa un metodo factory statico che chiama un costruttore.  
+## <a name="example"></a><span data-ttu-id="17818-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="17818-111">Example</span></span>  
+ <span data-ttu-id="17818-112">Il seguente esempio mostra due modi per implementare una classe non modificabile con proprietà implementate automaticamente.</span><span class="sxs-lookup"><span data-stu-id="17818-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="17818-113">Ogni modo dichiara una delle proprietà con una funzione di accesso `set` privata e una delle proprietà solo con `get`.</span><span class="sxs-lookup"><span data-stu-id="17818-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="17818-114">La prima classe usa un costruttore solo per inizializzare le proprietà e la seconda classe usa un metodo factory statico che chiama un costruttore.</span><span class="sxs-lookup"><span data-stu-id="17818-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>  
   
 ```csharp  
 // This class is immutable. After an object is created,   
@@ -134,10 +116,9 @@ Questo esempio mostra come creare una classe leggera non modificabile che serve 
 */  
 ```  
   
- Il compilatore crea campi sottostanti per ogni proprietà implementate automaticamente. I campi non sono accessibili direttamente dal codice sorgente.  
+ <span data-ttu-id="17818-115">Il compilatore crea campi sottostanti per ogni proprietà implementate automaticamente.</span><span class="sxs-lookup"><span data-stu-id="17818-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="17818-116">I campi non sono accessibili direttamente dal codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="17818-116">The fields are not accessible directly from source code.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-
+## <a name="see-also"></a><span data-ttu-id="17818-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="17818-117">See Also</span></span>  
+ [<span data-ttu-id="17818-118">Proprietà</span><span class="sxs-lookup"><span data-stu-id="17818-118">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="17818-119">struct</span><span class="sxs-lookup"><span data-stu-id="17818-119">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
+ [<span data-ttu-id="17818-120">Inizializzatori di oggetto e di raccolta</span><span class="sxs-lookup"><span data-stu-id="17818-120">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

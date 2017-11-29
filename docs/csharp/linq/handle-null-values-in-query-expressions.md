@@ -7,37 +7,34 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
+ms.openlocfilehash: d16256e31b073a599504ffef6501ed34430a7694
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f4f189504c57c9c01268b10bc96ad3c9af49ddbd
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="handle-null-values-in-query-expressions"></a>Gestire i valori Null nelle espressioni di query
+# <a name="handle-null-values-in-query-expressions"></a><span data-ttu-id="b205d-104">Gestire i valori Null nelle espressioni di query</span><span class="sxs-lookup"><span data-stu-id="b205d-104">Handle null values in query expressions</span></span>
 
-In questo esempio viene illustrato come gestire i possibili valori Null nelle raccolte di origine. Una raccolta di oggetti, ad esempio <xref:System.Collections.Generic.IEnumerable%601>, può contenere elementi il cui valore è [Null](../language-reference/keywords/null.md). Se una raccolta di origine è Null o contiene un elemento il cui valore è Null e la query non gestisce valori Null, verrà generata un'eccezione <xref:System.NullReferenceException> quando si esegue la query.  
+<span data-ttu-id="b205d-105">In questo esempio viene illustrato come gestire i possibili valori Null nelle raccolte di origine.</span><span class="sxs-lookup"><span data-stu-id="b205d-105">This example shows how to handle possible null values in source collections.</span></span> <span data-ttu-id="b205d-106">Una raccolta di oggetti, ad esempio <xref:System.Collections.Generic.IEnumerable%601>, può contenere elementi il cui valore è [Null](../language-reference/keywords/null.md).</span><span class="sxs-lookup"><span data-stu-id="b205d-106">An object collection such as an <xref:System.Collections.Generic.IEnumerable%601> can contain elements whose value is [null](../language-reference/keywords/null.md).</span></span> <span data-ttu-id="b205d-107">Se una raccolta di origine è Null o contiene un elemento il cui valore è Null e la query non gestisce valori Null, verrà generata un'eccezione <xref:System.NullReferenceException> quando si esegue la query.</span><span class="sxs-lookup"><span data-stu-id="b205d-107">If a source collection is null or contains an element whose value is null, and your query does not handle null values, a <xref:System.NullReferenceException> will be thrown when you execute the query.</span></span>  
   
-## <a name="example"></a>Esempio
+## <a name="example"></a><span data-ttu-id="b205d-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="b205d-108">Example</span></span>
 
- È possibile codificare in modo sicuro per evitare un'eccezione di riferimento Null come illustrato nell'esempio seguente:  
+ <span data-ttu-id="b205d-109">È possibile codificare in modo sicuro per evitare un'eccezione di riferimento Null come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="b205d-109">You can code defensively to avoid a null reference exception as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideLINQ#82](../../../samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#82](../../../samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_1.cs)]  
   
- Nell'esempio precedente la clausola `where` esclude tutti gli elementi Null nella sequenza di categorie. Questa tecnica è indipendente dal controllo Null nella clausola join. In questo esempio è possibile usare l'espressione condizionale con Null poiché `Products.CategoryID` è di tipo `int?`, vale a dire una sintassi abbreviata di `Nullable<int>`.  
+ <span data-ttu-id="b205d-110">Nell'esempio precedente la clausola `where` esclude tutti gli elementi Null nella sequenza di categorie.</span><span class="sxs-lookup"><span data-stu-id="b205d-110">In the previous example, the `where` clause filters out all null elements in the categories sequence.</span></span> <span data-ttu-id="b205d-111">Questa tecnica è indipendente dal controllo Null nella clausola join.</span><span class="sxs-lookup"><span data-stu-id="b205d-111">This technique is independent of the null check in the join clause.</span></span> <span data-ttu-id="b205d-112">In questo esempio è possibile usare l'espressione condizionale con Null poiché `Products.CategoryID` è di tipo `int?`, vale a dire una sintassi abbreviata di `Nullable<int>`.</span><span class="sxs-lookup"><span data-stu-id="b205d-112">The conditional expression with null in this example works because `Products.CategoryID` is of type `int?` which is shorthand for `Nullable<int>`.</span></span>  
   
-## <a name="example"></a>Esempio
+## <a name="example"></a><span data-ttu-id="b205d-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="b205d-113">Example</span></span>
 
- Se in una clausola join solo una delle chiavi di confronto è un tipo di valore nullable, è possibile eseguire il cast delle altre chiavi a un tipo nullable nell'espressione di query. Nell'esempio seguente si supponga che `EmployeeID` sia una colonna contenente valori di tipo `int?`:  
+ <span data-ttu-id="b205d-114">Se in una clausola join solo una delle chiavi di confronto è un tipo di valore nullable, è possibile eseguire il cast delle altre chiavi a un tipo nullable nell'espressione di query.</span><span class="sxs-lookup"><span data-stu-id="b205d-114">In a join clause, if only one of the comparison keys is a nullable value type, you can cast the other to a nullable type in the query expression.</span></span> <span data-ttu-id="b205d-115">Nell'esempio seguente si supponga che `EmployeeID` sia una colonna contenente valori di tipo `int?`:</span><span class="sxs-lookup"><span data-stu-id="b205d-115">In the following example, assume that `EmployeeID` is a column that contains values of type `int?`:</span></span>  
   
- [!code-cs[csProgGuideLINQ#83](../../../samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#83](../../../samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_2.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Nullable%601>   
- [Espressioni di query LINQ](index.md)   
- [Tipi nullable](../programming-guide/nullable-types/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="b205d-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b205d-116">See also</span></span>  
+ <xref:System.Nullable%601>  
+ [<span data-ttu-id="b205d-117">Espressioni di query LINQ</span><span class="sxs-lookup"><span data-stu-id="b205d-117">LINQ query expressions</span></span>](index.md)  
+ [<span data-ttu-id="b205d-118">Tipi nullable</span><span class="sxs-lookup"><span data-stu-id="b205d-118">Nullable types</span></span>](../programming-guide/nullable-types/index.md)

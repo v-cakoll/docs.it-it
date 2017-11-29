@@ -1,37 +1,28 @@
 ---
 title: 'Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cee87fcb0d0b430d9577319abc30b8caf03e9188
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b397f3aa52a17dc35c73399b9cefdc9ad749167b
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)
-In questo esempio viene illustrato come eseguire i calcoli di aggregazione quali Sum, Average, Min e Max nelle colonne di un file con estensione csv. I principi di esempio riportati di seguito possono essere applicati ad altri tipi di testo strutturati.  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="07bb7-102">Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="07bb7-102">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>
+<span data-ttu-id="07bb7-103">In questo esempio viene illustrato come eseguire i calcoli di aggregazione quali Sum, Average, Min e Max nelle colonne di un file con estensione csv.</span><span class="sxs-lookup"><span data-stu-id="07bb7-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="07bb7-104">I principi di esempio riportati di seguito possono essere applicati ad altri tipi di testo strutturati.</span><span class="sxs-lookup"><span data-stu-id="07bb7-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a>Per creare il file di origine  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="07bb7-105">Per creare il file di origine</span><span class="sxs-lookup"><span data-stu-id="07bb7-105">To create the source file</span></span>  
   
-1.  Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Si supponga che la prima colonna rappresenti degli ID studente e che le colonne successive rappresentino i punteggi di quattro esami.  
+1.  <span data-ttu-id="07bb7-106">Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto.</span><span class="sxs-lookup"><span data-stu-id="07bb7-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="07bb7-107">Si supponga che la prima colonna rappresenti degli ID studente e che le colonne successive rappresentino i punteggi di quattro esami.</span><span class="sxs-lookup"><span data-stu-id="07bb7-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +39,7 @@ In questo esempio viene illustrato come eseguire i calcoli di aggregazione quali
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="07bb7-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="07bb7-108">Example</span></span>  
   
 ```csharp  
 class SumColumns  
@@ -173,12 +164,11 @@ class SumColumns
  */  
 ```  
   
- La query funziona usando il metodo <xref:System.String.Split%2A> per convertire ogni riga di testo in una matrice. Ogni elemento della matrice rappresenta una colonna. Infine, il testo in ogni colonna viene convertito in una rappresentazione numerica. Se il file è un file con valori delimitati da tabulazioni, aggiornare solo l'argomento nel metodo `Split` in `\t`.  
+ <span data-ttu-id="07bb7-109">La query funziona usando il metodo <xref:System.String.Split%2A> per convertire ogni riga di testo in una matrice.</span><span class="sxs-lookup"><span data-stu-id="07bb7-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="07bb7-110">Ogni elemento della matrice rappresenta una colonna.</span><span class="sxs-lookup"><span data-stu-id="07bb7-110">Each array element represents a column.</span></span> <span data-ttu-id="07bb7-111">Infine, il testo in ogni colonna viene convertito in una rappresentazione numerica.</span><span class="sxs-lookup"><span data-stu-id="07bb7-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="07bb7-112">Se il file è un file con valori delimitati da tabulazioni, aggiornare solo l'argomento nel metodo `Split` in `\t`.</span><span class="sxs-lookup"><span data-stu-id="07bb7-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="07bb7-113">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="07bb7-113">Compiling the Code</span></span>  
+ <span data-ttu-id="07bb7-114">Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="07bb7-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="07bb7-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="07bb7-115">See Also</span></span>  
+ [<span data-ttu-id="07bb7-116">LINQ e stringhe (C#)</span><span class="sxs-lookup"><span data-stu-id="07bb7-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="07bb7-117">Directory di file e LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="07bb7-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

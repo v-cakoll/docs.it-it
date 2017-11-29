@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -160,35 +159,28 @@ f1_keywords:
 - WME1015
 - WME1047
 - WME9
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Winmdexp.exe, error messages
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 83f7b1f91b70281b4cce57632977bfc4685a58fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3797621322fd88d57133602b1cb3c3173fedbe6e
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="winmdexpexe-error-messages"></a>Messaggi di errore Winmdexp.exe
-Il processo di compilazione chiama [Winmdexp.exe (Strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quando si usa il modello **[!INCLUDE[wrt](../../../includes/wrt-md.md)]Componente** in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], pertanto i messaggi di errore di Winmdexp.exe vengono visualizzati in **Elenco errori**. Winmdexp.exe viene utilizzato in un modulo compilato con l'opzione `/target:winmdobj`. Poiché viene richiesto come input un modulo compilato, i messaggi di errore vengono visualizzati solo se la compilazione viene eseguita correttamente.  
+# <a name="winmdexpexe-error-messages"></a><span data-ttu-id="c9877-102">Messaggi di errore Winmdexp.exe</span><span class="sxs-lookup"><span data-stu-id="c9877-102">Winmdexp.exe Error Messages</span></span>
+<span data-ttu-id="c9877-103">Il processo di compilazione chiama [Winmdexp.exe (Strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quando si usa il modello **[!INCLUDE[wrt](../../../includes/wrt-md.md)]Componente** in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], pertanto i messaggi di errore di Winmdexp.exe vengono visualizzati in **Elenco errori**.</span><span class="sxs-lookup"><span data-stu-id="c9877-103">The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Component** template in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], so Winmdexp.exe error messages appear in the **Error List**.</span></span> <span data-ttu-id="c9877-104">Winmdexp.exe viene utilizzato in un modulo compilato con l'opzione `/target:winmdobj`.</span><span class="sxs-lookup"><span data-stu-id="c9877-104">Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option.</span></span> <span data-ttu-id="c9877-105">Poiché viene richiesto come input un modulo compilato, i messaggi di errore vengono visualizzati solo se la compilazione viene eseguita correttamente.</span><span class="sxs-lookup"><span data-stu-id="c9877-105">Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.</span></span>  
   
- I messaggi di errore sono progettati per contenere tutte le informazioni necessarie per affrontare le condizioni di errore segnalate. Tuttavia, alcuni problemi richiedono altre informazioni oltre a quelle contenute nel messaggio. È possibile ottenere informazioni aggiuntive in [Diagnosi delle condizioni di errore di componenti Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127) nel Windows Dev Center.  
+ <span data-ttu-id="c9877-106">I messaggi di errore sono progettati per contenere tutte le informazioni necessarie per affrontare le condizioni di errore segnalate. Tuttavia, alcuni problemi richiedono altre informazioni oltre a quelle contenute nel messaggio.</span><span class="sxs-lookup"><span data-stu-id="c9877-106">The error messages are designed to contain all the information you need to address the error conditions they report.However, some problems require more information than will fit in the message.</span></span> <span data-ttu-id="c9877-107">È possibile ottenere informazioni aggiuntive in [Diagnosi delle condizioni di errore di componenti Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127) nel Windows Dev Center.</span><span class="sxs-lookup"><span data-stu-id="c9877-107">You can find additional information in [Diagnosing Windows Runtime component error conditions](http://go.microsoft.com/fwlink/p/?LinkId=251127) in the Windows Dev Center.</span></span>  
   
- Se il problema non è illustrato nell'articolo e si ritiene che nel messaggio non siano contenute informazioni sufficienti per risolvere il problema, utilizzare il collegamento al feedback nell'articolo e includere il messaggio di errore. In alternativa, è possibile archiviare il bug nel [sito Web Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130). È anche possibile cercare altre informazioni nei [Forum di Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ <span data-ttu-id="c9877-108">Se il problema non è illustrato nell'articolo e si ritiene che nel messaggio non siano contenute informazioni sufficienti per risolvere il problema, utilizzare il collegamento al feedback nell'articolo e includere il messaggio di errore.</span><span class="sxs-lookup"><span data-stu-id="c9877-108">If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message.</span></span> <span data-ttu-id="c9877-109">In alternativa, è possibile archiviare il bug nel [sito Web Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span><span class="sxs-lookup"><span data-stu-id="c9877-109">Alternatively, you can file a bug at the [Microsoft Connect website](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span></span> <span data-ttu-id="c9877-110">È anche possibile cercare altre informazioni nei [Forum di Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span><span class="sxs-lookup"><span data-stu-id="c9877-110">You can also look for more information on the [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Winmdexp.exe (Strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)   
- [Diagnosi delle condizioni di errore di componenti Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127)
-
+## <a name="see-also"></a><span data-ttu-id="c9877-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c9877-111">See Also</span></span>  
+ [<span data-ttu-id="c9877-112">Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)</span><span class="sxs-lookup"><span data-stu-id="c9877-112">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ [<span data-ttu-id="c9877-113">Diagnosi delle condizioni di errore di componenti Windows Runtime</span><span class="sxs-lookup"><span data-stu-id="c9877-113">Diagnosing Windows Runtime component error conditions</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251127)

@@ -1,81 +1,62 @@
 ---
 title: Matrici (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1cdd319ef6bbb296c7afa5195563b92bdd361f0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1035caae15b64d1311305cfe4c1f1a74c80ed19a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="arrays-c-programming-guide"></a>Matrici (Guida per programmatori C#)
-È possibile archiviare più variabili dello stesso tipo in una struttura di dati a matrice. Una matrice viene dichiarata specificando il tipo degli elementi.  
+# <a name="arrays-c-programming-guide"></a><span data-ttu-id="b34a6-102">Matrici (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="b34a6-102">Arrays (C# Programming Guide)</span></span>
+<span data-ttu-id="b34a6-103">È possibile archiviare più variabili dello stesso tipo in una struttura di dati a matrice.</span><span class="sxs-lookup"><span data-stu-id="b34a6-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="b34a6-104">Una matrice viene dichiarata specificando il tipo degli elementi.</span><span class="sxs-lookup"><span data-stu-id="b34a6-104">You declare an array by specifying the type of its elements.</span></span>  
   
  `type[] arrayName;`  
   
- L'esempio seguente consente di creare matrici unidimensionali, multidimensionali e irregolari:  
+ <span data-ttu-id="b34a6-105">L'esempio seguente consente di creare matrici unidimensionali, multidimensionali e irregolari:</span><span class="sxs-lookup"><span data-stu-id="b34a6-105">The following examples create single-dimensional, multidimensional, and jagged arrays:</span></span>  
   
- [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="array-overview"></a>Panoramica delle matrici  
- Le matrici hanno le proprietà seguenti:  
+## <a name="array-overview"></a><span data-ttu-id="b34a6-106">Panoramica delle matrici</span><span class="sxs-lookup"><span data-stu-id="b34a6-106">Array Overview</span></span>  
+ <span data-ttu-id="b34a6-107">Le matrici hanno le proprietà seguenti:</span><span class="sxs-lookup"><span data-stu-id="b34a6-107">An array has the following properties:</span></span>  
   
--   Una matrice può essere [unidimensionale](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [multidimensionale](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) o [irregolare](../../../csharp/programming-guide/arrays/jagged-arrays.md).  
+-   <span data-ttu-id="b34a6-108">Una matrice può essere [unidimensionale](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [multidimensionale](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) o [irregolare](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="b34a6-108">An array can be [Single-Dimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [Multidimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) or [Jagged](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span></span>  
   
--   Il numero di dimensioni e la lunghezza di ogni dimensione sono definiti durante la creazione dell'istanza della matrice. Questi valori non possono essere modificati per la durata dell'istanza.  
+-   <span data-ttu-id="b34a6-109">Il numero di dimensioni e la lunghezza di ogni dimensione sono definiti durante la creazione dell'istanza della matrice.</span><span class="sxs-lookup"><span data-stu-id="b34a6-109">The number of dimensions and the length of each dimension are established when the array instance is created.</span></span> <span data-ttu-id="b34a6-110">Questi valori non possono essere modificati per la durata dell'istanza.</span><span class="sxs-lookup"><span data-stu-id="b34a6-110">These values can't be changed during the lifetime of the instance.</span></span>  
   
--   I valori predefiniti degli elementi numerici della matrice sono impostati su zero, mentre gli elementi di riferimento sono impostati su null.  
+-   <span data-ttu-id="b34a6-111">I valori predefiniti degli elementi numerici della matrice sono impostati su zero, mentre gli elementi di riferimento sono impostati su null.</span><span class="sxs-lookup"><span data-stu-id="b34a6-111">The default values of numeric array elements are set to zero, and reference elements are set to null.</span></span>  
   
--   Una matrice irregolare è una matrice di matrici, quindi i relativi elementi sono tipi di riferimento inizializzati su `null`.  
+-   <span data-ttu-id="b34a6-112">Una matrice irregolare è una matrice di matrici, quindi i relativi elementi sono tipi di riferimento inizializzati su `null`.</span><span class="sxs-lookup"><span data-stu-id="b34a6-112">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
   
--   Le matrici sono a indice zero. Una matrice con `n` elementi viene indicizzata da `0` a `n-1`.  
+-   <span data-ttu-id="b34a6-113">Le matrici sono a indice zero. Una matrice con `n` elementi viene indicizzata da `0` a `n-1`.</span><span class="sxs-lookup"><span data-stu-id="b34a6-113">Arrays are zero indexed: an array with `n` elements is indexed from `0` to `n-1`.</span></span>  
   
--   Gli elementi di una matrice possono essere di qualsiasi tipo, anche di tipo matrice.  
+-   <span data-ttu-id="b34a6-114">Gli elementi di una matrice possono essere di qualsiasi tipo, anche di tipo matrice.</span><span class="sxs-lookup"><span data-stu-id="b34a6-114">Array elements can be of any type, including an array type.</span></span>  
   
--   I tipi matrice sono [tipi di riferimento](../../../csharp/language-reference/keywords/reference-types.md) derivati dal tipo di base astratto <xref:System.Array>. Poiché questo tipo implementa <xref:System.Collections.IEnumerable> e <xref:System.Collections.Generic.IEnumerable%601>, è possibile usare l'iterazione [foreach](../../../csharp/language-reference/keywords/foreach-in.md) su tutte le matrici in C#.  
+-   <span data-ttu-id="b34a6-115">I tipi matrice sono [tipi di riferimento](../../../csharp/language-reference/keywords/reference-types.md) derivati dal tipo di base astratto <xref:System.Array>.</span><span class="sxs-lookup"><span data-stu-id="b34a6-115">Array types are [reference types](../../../csharp/language-reference/keywords/reference-types.md) derived from the abstract base type <xref:System.Array>.</span></span> <span data-ttu-id="b34a6-116">Poiché questo tipo implementa <xref:System.Collections.IEnumerable> e <xref:System.Collections.Generic.IEnumerable%601>, è possibile usare l'iterazione [foreach](../../../csharp/language-reference/keywords/foreach-in.md) su tutte le matrici in C#.</span><span class="sxs-lookup"><span data-stu-id="b34a6-116">Since this type implements <xref:System.Collections.IEnumerable> and <xref:System.Collections.Generic.IEnumerable%601>, you can use [foreach](../../../csharp/language-reference/keywords/foreach-in.md) iteration on all arrays in C#.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
+## <a name="related-sections"></a><span data-ttu-id="b34a6-117">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="b34a6-117">Related Sections</span></span>  
   
--   [Matrici come oggetti](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+-   [<span data-ttu-id="b34a6-118">Matrici come oggetti</span><span class="sxs-lookup"><span data-stu-id="b34a6-118">Arrays as Objects</span></span>](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
   
--   [Uso di foreach con matrici](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+-   [<span data-ttu-id="b34a6-119">Uso di foreach con matrici</span><span class="sxs-lookup"><span data-stu-id="b34a6-119">Using foreach with Arrays</span></span>](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
   
--   [Passaggio di matrici come argomenti](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+-   [<span data-ttu-id="b34a6-120">Passaggio di matrici come argomenti</span><span class="sxs-lookup"><span data-stu-id="b34a6-120">Passing Arrays as Arguments</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [Passaggio di matrici usando ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
+-   [<span data-ttu-id="b34a6-121">Passaggio di matrici usando ref e out</span><span class="sxs-lookup"><span data-stu-id="b34a6-121">Passing Arrays Using ref and out</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="b34a6-122">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="b34a6-122">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
- [Tipo di raccolta Array](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
-
+## <a name="see-also"></a><span data-ttu-id="b34a6-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b34a6-123">See Also</span></span>  
+ [<span data-ttu-id="b34a6-124">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="b34a6-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b34a6-125">Raccolte</span><span class="sxs-lookup"><span data-stu-id="b34a6-125">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [<span data-ttu-id="b34a6-126">Tipo di raccolta Array</span><span class="sxs-lookup"><span data-stu-id="b34a6-126">Array Collection Type</span></span>](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

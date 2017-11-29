@@ -1,35 +1,26 @@
 ---
 title: 'File XML di esempio: configurazione di test in uno spazio dei nomi1'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fecab66eae4b5ed93788435757aed555b708eb3f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 891616a9327add5671b512cf2d437f61cce947e7
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>File XML di esempio: configurazione di test in uno spazio dei nomi
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Si tratta di un file di configurazione di test. L'XML si trova in uno spazio dei nomi.  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="20216-102">File XML di esempio: configurazione di test in uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="20216-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="20216-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="20216-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="20216-104">Si tratta di un file di configurazione di test.</span><span class="sxs-lookup"><span data-stu-id="20216-104">This is a test configuration file.</span></span> <span data-ttu-id="20216-105">L'XML si trova in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="20216-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="20216-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="20216-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,6 +64,5 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="20216-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="20216-107">See Also</span></span>  
+ [<span data-ttu-id="20216-108">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="20216-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

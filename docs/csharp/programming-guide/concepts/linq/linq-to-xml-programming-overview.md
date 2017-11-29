@@ -1,45 +1,35 @@
 ---
 title: Panoramica della programmazione con LINQ to XML (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4306be3540577bf921eff71dbd9dd822707b33dd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc22991f53920b045280d3e74b9b8dd73e63c944
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-to-xml-programming-overview-c"></a>Panoramica della programmazione con LINQ to XML (C#)
-In questi argomenti vengono fornite informazioni preliminari di alto livello sulle classi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], nonché informazioni dettagliate sulle tre classi più importanti.  
+# <a name="linq-to-xml-programming-overview-c"></a><span data-ttu-id="97da5-102">Panoramica della programmazione con LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="97da5-102">LINQ to XML Programming Overview (C#)</span></span>
+<span data-ttu-id="97da5-103">In questi argomenti vengono fornite informazioni preliminari di alto livello sulle classi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], nonché informazioni dettagliate sulle tre classi più importanti.</span><span class="sxs-lookup"><span data-stu-id="97da5-103">These topics provide high-level overview information about the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, as well as detailed information about three of the most important classes.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a><span data-ttu-id="97da5-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="97da5-104">In This Section</span></span>  
   
-|Argomento|Descrizione|  
+|<span data-ttu-id="97da5-105">Argomento</span><span class="sxs-lookup"><span data-stu-id="97da5-105">Topic</span></span>|<span data-ttu-id="97da5-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="97da5-106">Description</span></span>|  
 |-----------|-----------------|  
-|[Programmazione funzionale e programmazione procedurale (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|Viene fornita una panoramica di alto livello dei due principali approcci alla scrittura di applicazioni LINQ to XML.|  
-|[Panoramica delle classi LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|Vengono forniti cenni preliminari sulle classi di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Panoramica della classe XElement (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)|Viene presentata la classe <xref:System.Xml.Linq.XElement> che rappresenta elementi XML. <xref:System.Xml.Linq.XElement> è una delle classi fondamentali della gerarchia di classi di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Panoramica della classe XAttribute (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md)|Viene presentata la classe <xref:System.Xml.Linq.XAttribute> che rappresenta attributi XML.|  
-|[Panoramica della classe XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)|Viene presentata la classe <xref:System.Xml.Linq.XDocument> che rappresenta documenti XML.|  
-|[Procedura: Compilare esempi in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|Contiene le direttive `Using` necessarie per compilare gli esempi di LINQ to XML.|  
+|[<span data-ttu-id="97da5-107">Programmazione funzionale e programmazione procedurale (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="97da5-107">Functional vs. Procedural Programming (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|<span data-ttu-id="97da5-108">Viene fornita una panoramica di alto livello dei due principali approcci alla scrittura di applicazioni LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="97da5-108">Provides a high level view of the two principle approaches to writing LINQ to XML applications.</span></span>|  
+|[<span data-ttu-id="97da5-109">Panoramica delle classi LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="97da5-109">LINQ to XML Classes Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|<span data-ttu-id="97da5-110">Vengono forniti cenni preliminari sulle classi di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="97da5-110">Provides an overview of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes.</span></span>|  
+|[<span data-ttu-id="97da5-111">Panoramica della classe XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="97da5-111">XElement Class Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)|<span data-ttu-id="97da5-112">Viene presentata la classe <xref:System.Xml.Linq.XElement> che rappresenta elementi XML.</span><span class="sxs-lookup"><span data-stu-id="97da5-112">Introduces the <xref:System.Xml.Linq.XElement> class, which represents XML elements.</span></span> <span data-ttu-id="97da5-113"><xref:System.Xml.Linq.XElement> è una delle classi fondamentali della gerarchia di classi di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="97da5-113"><xref:System.Xml.Linq.XElement> is one of the fundamental classes in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] class hierarchy.</span></span>|  
+|[<span data-ttu-id="97da5-114">Panoramica della classe XAttribute (C#)</span><span class="sxs-lookup"><span data-stu-id="97da5-114">XAttribute Class Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md)|<span data-ttu-id="97da5-115">Viene presentata la classe <xref:System.Xml.Linq.XAttribute> che rappresenta attributi XML.</span><span class="sxs-lookup"><span data-stu-id="97da5-115">Introduces the <xref:System.Xml.Linq.XAttribute> class, which represents XML attributes.</span></span>|  
+|[<span data-ttu-id="97da5-116">Panoramica della classe XDocument (C#)</span><span class="sxs-lookup"><span data-stu-id="97da5-116">XDocument Class Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)|<span data-ttu-id="97da5-117">Viene presentata la classe <xref:System.Xml.Linq.XDocument> che rappresenta documenti XML.</span><span class="sxs-lookup"><span data-stu-id="97da5-117">Introduces the <xref:System.Xml.Linq.XDocument> class, which represents XML documents.</span></span>|  
+|[<span data-ttu-id="97da5-118">Procedura: Compilare esempi in LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="97da5-118">How to: Build LINQ to XML Examples (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|<span data-ttu-id="97da5-119">Contiene le direttive `Using` necessarie per compilare gli esempi di LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="97da5-119">Contains the `Using` directives that are required to build the LINQ to XML examples.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="97da5-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="97da5-120">See Also</span></span>  
+ [<span data-ttu-id="97da5-121">Guida per programmatori (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="97da5-121">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

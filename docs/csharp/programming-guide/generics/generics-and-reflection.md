@@ -1,75 +1,56 @@
 ---
 title: Generics e reflection (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 201806cca08be0633d41e10ecb7641a0f03c975b
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="generics-and-reflection-c-programming-guide"></a>Generics e reflection (Guida per programmatori C#)
-Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi generici in fase di esecuzione, è possibile usare il processo di reflection per ottenere informazioni sui tipi generici, analogamente a quanto avviene per i tipi non generici. Per altre informazioni, vedere [Generics nel runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
+# <a name="generics-and-reflection-c-programming-guide"></a><span data-ttu-id="2a2e7-102">Generics e reflection (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="2a2e7-102">Generics and Reflection (C# Programming Guide)</span></span>
+<span data-ttu-id="2a2e7-103">Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi generici in fase di esecuzione, è possibile usare il processo di reflection per ottenere informazioni sui tipi generici, analogamente a quanto avviene per i tipi non generici.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-103">Because the Common Language Runtime (CLR) has access to generic type information at run time, you can use reflection to obtain information about generic types in the same way as for non-generic types.</span></span> <span data-ttu-id="2a2e7-104">Per altre informazioni, vedere [Generics nel runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).</span><span class="sxs-lookup"><span data-stu-id="2a2e7-104">For more information, see [Generics in the Run Time](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).</span></span>  
   
- Per abilitare le informazioni di runtime per i tipi generici, in [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] sono stati aggiunti nuovi membri alla classe <xref:System.Type>. Vedere la documentazione su queste classi per altre informazioni su come usare tali metodi e proprietà. Anche lo spazio dei nomi <xref:System.Reflection.Emit> contiene nuovi membri che supportano i generics. Vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ <span data-ttu-id="2a2e7-105">Per abilitare le informazioni di runtime per i tipi generici, in [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] sono stati aggiunti nuovi membri alla classe <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-105">In the [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] several new members are added to the <xref:System.Type> class to enable run-time information for generic types.</span></span> <span data-ttu-id="2a2e7-106">Vedere la documentazione su queste classi per altre informazioni su come usare tali metodi e proprietà.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-106">See the documentation on these classes for more information on how to use these methods and properties.</span></span> <span data-ttu-id="2a2e7-107">Anche lo spazio dei nomi <xref:System.Reflection.Emit> contiene nuovi membri che supportano i generics.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-107">The <xref:System.Reflection.Emit> namespace also contains new members that support generics.</span></span> <span data-ttu-id="2a2e7-108">Vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).</span><span class="sxs-lookup"><span data-stu-id="2a2e7-108">See [How to: Define a Generic Type with Reflection Emit](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).</span></span>  
   
- Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection generico, vedere i commenti sulla proprietà <xref:System.Type.IsGenericType%2A>.  
+ <span data-ttu-id="2a2e7-109">Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection generico, vedere i commenti sulla proprietà <xref:System.Type.IsGenericType%2A>.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-109">For a list of the invariant conditions for terms used in generic reflection, see the <xref:System.Type.IsGenericType%2A> property remarks.</span></span>  
   
-|Nome del membro System. Type|Descrizione|  
+|<span data-ttu-id="2a2e7-110">Nome del membro System. Type</span><span class="sxs-lookup"><span data-stu-id="2a2e7-110">System.Type Member Name</span></span>|<span data-ttu-id="2a2e7-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2a2e7-111">Description</span></span>|  
 |-----------------------------|-----------------|  
-|<xref:System.Type.IsGenericType%2A>|Restituisce true se un tipo è generico.|  
-|<xref:System.Type.GetGenericArguments%2A>|Restituisce una matrice di oggetti `Type` che rappresentano gli argomenti di tipo specificati per un tipo costruito oppure i parametri di tipo di una definizione di un tipo generico.|  
-|<xref:System.Type.GetGenericTypeDefinition%2A>|Restituisce la definizione di un tipo generico sottostante per il tipo costruito corrente.|  
-|<xref:System.Type.GetGenericParameterConstraints%2A>|Restituisce una matrice di oggetti `Type` che rappresentano i vincoli sul parametro di tipo generico corrente.|  
-|<xref:System.Type.ContainsGenericParameters%2A>|Restituisce true se il tipo o uno dei tipi o dei metodi che lo contengono comprendono parametri di tipo per cui non sono stati indicati tipi specifici.|  
-|<xref:System.Type.GenericParameterAttributes%2A>|Ottiene una combinazione di flag `GenericParameterAttributes` che descrivono i vincoli speciali del parametro di tipo generico corrente.|  
-|<xref:System.Type.GenericParameterPosition%2A>|Per un oggetto `Type` che rappresenta un parametro di tipo, ottiene la posizione del parametro di tipo nell'elenco dei parametri di tipo della definizione di un tipo generico o della definizione di un metodo generico che ha dichiarato il parametro di tipo.|  
-|<xref:System.Type.IsGenericParameter%2A>|Ottiene un valore che indica se l'oggetto `Type` corrente rappresenta un parametro di tipo di una definizione di un tipo o metodo generico.|  
-|<xref:System.Type.IsGenericTypeDefinition%2A>|Ottiene un valore che indica se la classe <xref:System.Type> corrente rappresenta una definizione di tipo generico, da cui è possibile costruire altri tipi generici. Restituisce true se il tipo rappresenta la definizione di un tipo generico.|  
-|<xref:System.Type.DeclaringMethod%2A>|Restituisce il metodo generico che ha definito il parametro di tipo generico corrente oppure Null se il parametro di tipo non è stato definito da un metodo generico.|  
-|<xref:System.Type.MakeGenericType%2A>|Sostituisce gli elementi di una matrice di tipi ai parametri di tipo della definizione di tipo generico corrente e restituisce un oggetto <xref:System.Type> che rappresenta il tipo costruito risultante.|  
+|<xref:System.Type.IsGenericType%2A>|<span data-ttu-id="2a2e7-112">Restituisce true se un tipo è generico.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-112">Returns true if a type is generic.</span></span>|  
+|<xref:System.Type.GetGenericArguments%2A>|<span data-ttu-id="2a2e7-113">Restituisce una matrice di oggetti `Type` che rappresentano gli argomenti di tipo specificati per un tipo costruito oppure i parametri di tipo di una definizione di un tipo generico.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-113">Returns an array of `Type` objects that represent the type arguments supplied for a constructed type, or the type parameters of a generic type definition.</span></span>|  
+|<xref:System.Type.GetGenericTypeDefinition%2A>|<span data-ttu-id="2a2e7-114">Restituisce la definizione di un tipo generico sottostante per il tipo costruito corrente.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-114">Returns the underlying generic type definition for the current constructed type.</span></span>|  
+|<xref:System.Type.GetGenericParameterConstraints%2A>|<span data-ttu-id="2a2e7-115">Restituisce una matrice di oggetti `Type` che rappresentano i vincoli sul parametro di tipo generico corrente.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-115">Returns an array of `Type` objects that represent the constraints on the current generic type parameter.</span></span>|  
+|<xref:System.Type.ContainsGenericParameters%2A>|<span data-ttu-id="2a2e7-116">Restituisce true se il tipo o uno dei tipi o dei metodi che lo contengono comprendono parametri di tipo per cui non sono stati indicati tipi specifici.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-116">Returns true if the type or any of its enclosing types or methods contain type parameters for which specific types have not been supplied.</span></span>|  
+|<xref:System.Type.GenericParameterAttributes%2A>|<span data-ttu-id="2a2e7-117">Ottiene una combinazione di flag `GenericParameterAttributes` che descrivono i vincoli speciali del parametro di tipo generico corrente.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-117">Gets a combination of `GenericParameterAttributes` flags that describe the special constraints of the current generic type parameter.</span></span>|  
+|<xref:System.Type.GenericParameterPosition%2A>|<span data-ttu-id="2a2e7-118">Per un oggetto `Type` che rappresenta un parametro di tipo, ottiene la posizione del parametro di tipo nell'elenco dei parametri di tipo della definizione di un tipo generico o della definizione di un metodo generico che ha dichiarato il parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-118">For a `Type` object that represents a type parameter, gets the position of the type parameter in the type parameter list of the generic type definition or generic method definition that declared the type parameter.</span></span>|  
+|<xref:System.Type.IsGenericParameter%2A>|<span data-ttu-id="2a2e7-119">Ottiene un valore che indica se l'oggetto `Type` corrente rappresenta un parametro di tipo di una definizione di un tipo o metodo generico.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-119">Gets a value that indicates whether the current `Type` represents a type parameter of a generic type or method definition.</span></span>|  
+|<xref:System.Type.IsGenericTypeDefinition%2A>|<span data-ttu-id="2a2e7-120">Ottiene un valore che indica se la classe <xref:System.Type> corrente rappresenta una definizione di tipo generico, da cui è possibile costruire altri tipi generici.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-120">Gets a value that indicates whether the current <xref:System.Type> represents a generic type definition, from which other generic types can be constructed.</span></span> <span data-ttu-id="2a2e7-121">Restituisce true se il tipo rappresenta la definizione di un tipo generico.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-121">Returns true if the type represents the definition of a generic type.</span></span>|  
+|<xref:System.Type.DeclaringMethod%2A>|<span data-ttu-id="2a2e7-122">Restituisce il metodo generico che ha definito il parametro di tipo generico corrente oppure Null se il parametro di tipo non è stato definito da un metodo generico.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-122">Returns the generic method that defined the current generic type parameter, or null if the type parameter was not defined by a generic method.</span></span>|  
+|<xref:System.Type.MakeGenericType%2A>|<span data-ttu-id="2a2e7-123">Sostituisce gli elementi di una matrice di tipi ai parametri di tipo della definizione di tipo generico corrente e restituisce un oggetto <xref:System.Type> che rappresenta il tipo costruito risultante.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-123">Substitutes the elements of an array of types for the type parameters of the current generic type definition, and returns a <xref:System.Type> object representing the resulting constructed type.</span></span>|  
   
- Per abilitare le informazioni di runtime per i tipi generici, sono stati aggiunti anche nuovi membri alla classe <xref:System.Reflection.MethodInfo>. Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection per i metodi generici, vedere le note sulla proprietà <xref:System.Reflection.MethodInfo.IsGenericMethod%2A>.  
+ <span data-ttu-id="2a2e7-124">Per abilitare le informazioni di runtime per i tipi generici, sono stati aggiunti anche nuovi membri alla classe <xref:System.Reflection.MethodInfo>.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-124">In addition, new members are added to the <xref:System.Reflection.MethodInfo> class to enable run-time information for generic methods.</span></span> <span data-ttu-id="2a2e7-125">Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection per i metodi generici, vedere le note sulla proprietà <xref:System.Reflection.MethodInfo.IsGenericMethod%2A>.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-125">See the <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> property remarks for a list of invariant conditions for terms used to reflect on generic methods.</span></span>  
   
-|System.Reflection.MemberInfo Member Name|Descrizione|  
+|<span data-ttu-id="2a2e7-126">System.Reflection.MemberInfo Member Name</span><span class="sxs-lookup"><span data-stu-id="2a2e7-126">System.Reflection.MemberInfo Member Name</span></span>|<span data-ttu-id="2a2e7-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2a2e7-127">Description</span></span>|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|Restituisce true se un metodo è generico.|  
-|<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Restituisce una matrice di oggetti Type che rappresentano gli argomenti di tipo di un metodo generico costruito oppure i parametri di tipo di una definizione di un metodo generico.|  
-|<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Restituisce la definizione di un metodo generico sottostante per il metodo costruito corrente.|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|Restituisce true se il metodo o uno dei tipi che lo contengono comprendono parametri di tipo per cui non sono stati indicati tipi specifici.|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Restituisce true se l'oggetto <xref:System.Reflection.MethodInfo> corrente rappresenta la definizione di un metodo generico.|  
-|<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Sostituisce con gli elementi di una matrice di tipi i parametri di tipo della definizione di metodo generica corrente e restituisce un oggetto <xref:System.Reflection.MethodInfo> che rappresenta il metodo costruito risultante.|  
+|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|<span data-ttu-id="2a2e7-128">Restituisce true se un metodo è generico.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-128">Returns true if a method is generic.</span></span>|  
+|<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|<span data-ttu-id="2a2e7-129">Restituisce una matrice di oggetti Type che rappresentano gli argomenti di tipo di un metodo generico costruito oppure i parametri di tipo di una definizione di un metodo generico.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-129">Returns an array of Type objects that represent the type arguments of a constructed generic method or the type parameters of a generic method definition.</span></span>|  
+|<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|<span data-ttu-id="2a2e7-130">Restituisce la definizione di un metodo generico sottostante per il metodo costruito corrente.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-130">Returns the underlying generic method definition for the current constructed method.</span></span>|  
+|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|<span data-ttu-id="2a2e7-131">Restituisce true se il metodo o uno dei tipi che lo contengono comprendono parametri di tipo per cui non sono stati indicati tipi specifici.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-131">Returns true if the method or any of its enclosing types contain any type parameters for which specific types have not been supplied.</span></span>|  
+|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|<span data-ttu-id="2a2e7-132">Restituisce true se l'oggetto <xref:System.Reflection.MethodInfo> corrente rappresenta la definizione di un metodo generico.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-132">Returns true if the current <xref:System.Reflection.MethodInfo> represents the definition of a generic method.</span></span>|  
+|<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|<span data-ttu-id="2a2e7-133">Sostituisce con gli elementi di una matrice di tipi i parametri di tipo della definizione di metodo generica corrente e restituisce un oggetto <xref:System.Reflection.MethodInfo> che rappresenta il metodo costruito risultante.</span><span class="sxs-lookup"><span data-stu-id="2a2e7-133">Substitutes the elements of an array of types for the type parameters of the current generic method definition, and returns a <xref:System.Reflection.MethodInfo> object representing the resulting constructed method.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Generics](../../../csharp/programming-guide/generics/index.md)   
- [Reflection e tipi generici](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)   
- [Generics](~/docs/standard/generics/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="2a2e7-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2a2e7-134">See Also</span></span>  
+ [<span data-ttu-id="2a2e7-135">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="2a2e7-135">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="2a2e7-136">Generics</span><span class="sxs-lookup"><span data-stu-id="2a2e7-136">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
+ [<span data-ttu-id="2a2e7-137">Reflection e tipi generici</span><span class="sxs-lookup"><span data-stu-id="2a2e7-137">Reflection and Generic Types</span></span>](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+ [<span data-ttu-id="2a2e7-138">Generics</span><span class="sxs-lookup"><span data-stu-id="2a2e7-138">Generics</span></span>](~/docs/standard/generics/index.md)

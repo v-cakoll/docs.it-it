@@ -1,43 +1,24 @@
 ---
 title: Utilizzo degli indicizzatori (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- indexers [C#], about indexers
+helpviewer_keywords: indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d5c727edbbea116d858c6acf6b600f8fd9f43ee2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ac8990fa2efb1a2ea24497a3a5de3649795c7b23
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-indexers-c-programming-guide"></a>Utilizzo degli indicizzatori (Guida per programmatori C#)
-Gli indicizzatori sono una convenzione sintattica che consente di creare una [classe](../../../csharp/language-reference/keywords/class.md), uno [struct](../../../csharp/language-reference/keywords/struct.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) a cui le applicazioni client possono accedere esattamente come a una matrice. Gli indicizzatori sono in genere implementati in tipi il cui scopo principale è incapsulare una raccolta o una matrice interna. Si supponga, ad esempio, di avere una classe denominata TempRecord che rappresenta la temperatura in gradi Farenheit registrata a 10 orari diversi in un periodo di 24 ore. La classe contiene una matrice denominata "temps" di tipo float per rappresentare le temperature e un oggetto <xref:System.DateTime> che rappresenta la data in cui sono state registrate le temperature. Implementando un indicizzatore in questa classe, i client possono accedere alle temperature in un'istanza di TempRecord come `float temp = tr[4]` anziché come `float temp = tr.temps[4]`. La notazione dell'indicizzatore non solo semplifica la sintassi per le applicazioni client, ma rende anche la classe e il relativo scopo più intuitivi per gli altri sviluppatori.  
+# <a name="using-indexers-c-programming-guide"></a><span data-ttu-id="8aa39-102">Utilizzo degli indicizzatori (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="8aa39-102">Using Indexers (C# Programming Guide)</span></span>
+<span data-ttu-id="8aa39-103">Gli indicizzatori sono una convenzione sintattica che consente di creare una [classe](../../../csharp/language-reference/keywords/class.md), uno [struct](../../../csharp/language-reference/keywords/struct.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) a cui le applicazioni client possono accedere esattamente come a una matrice.</span><span class="sxs-lookup"><span data-stu-id="8aa39-103">Indexers are a syntactic convenience that enable you to create a [class](../../../csharp/language-reference/keywords/class.md), [struct](../../../csharp/language-reference/keywords/struct.md), or [interface](../../../csharp/language-reference/keywords/interface.md) that client applications can access just as an array.</span></span> <span data-ttu-id="8aa39-104">Gli indicizzatori sono in genere implementati in tipi il cui scopo principale è incapsulare una raccolta o una matrice interna.</span><span class="sxs-lookup"><span data-stu-id="8aa39-104">Indexers are most frequently implemented in types whose primary purpose is to encapsulate an internal collection or array.</span></span> <span data-ttu-id="8aa39-105">Si supponga, ad esempio, di avere una classe denominata TempRecord che rappresenta la temperatura in gradi Farenheit registrata a 10 orari diversi in un periodo di 24 ore.</span><span class="sxs-lookup"><span data-stu-id="8aa39-105">For example, suppose you have a class named TempRecord that represents the temperature in Farenheit as recorded at 10 different times during a 24 hour period.</span></span> <span data-ttu-id="8aa39-106">La classe contiene una matrice denominata "temps" di tipo float per rappresentare le temperature e un oggetto <xref:System.DateTime> che rappresenta la data in cui sono state registrate le temperature.</span><span class="sxs-lookup"><span data-stu-id="8aa39-106">The class contains an array named "temps" of type float to represent the temperatures, and a <xref:System.DateTime> that represents the date the temperatures were recorded.</span></span> <span data-ttu-id="8aa39-107">Implementando un indicizzatore in questa classe, i client possono accedere alle temperature in un'istanza di TempRecord come `float temp = tr[4]` anziché come `float temp = tr.temps[4]`.</span><span class="sxs-lookup"><span data-stu-id="8aa39-107">By implementing an indexer in this class, clients can access the temperatures in a TempRecord instance as `float temp = tr[4]` instead of as `float temp = tr.temps[4]`.</span></span> <span data-ttu-id="8aa39-108">La notazione dell'indicizzatore non solo semplifica la sintassi per le applicazioni client, ma rende anche la classe e il relativo scopo più intuitivi per gli altri sviluppatori.</span><span class="sxs-lookup"><span data-stu-id="8aa39-108">The indexer notation not only simplifies the syntax for client applications; it also makes the class and its purpose more intuitive for other developers to understand.</span></span>  
   
- Per dichiarare un indicizzatore su una classe o uno struct, usare la parola chiave [this](../../../csharp/language-reference/keywords/this.md), come nell'esempio seguente:  
+ <span data-ttu-id="8aa39-109">Per dichiarare un indicizzatore su una classe o uno struct, usare la parola chiave [this](../../../csharp/language-reference/keywords/this.md), come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="8aa39-109">To declare an indexer on a class or struct, use the [this](../../../csharp/language-reference/keywords/this.md) keyword, as in this example:</span></span>  
   
 ```  
 public int this[int index]    // Indexer declaration  
@@ -46,16 +27,16 @@ public int this[int index]    // Indexer declaration
 }  
 ```  
   
-## <a name="remarks"></a>Note  
- Il tipo di un indicizzatore e dei relativi parametri deve essere accessibile almeno quanto l'indicizzatore. Per altre informazioni sui livelli di accessibilità, vedere [Modificatori di accesso](../../../csharp/language-reference/keywords/access-modifiers.md).  
+## <a name="remarks"></a><span data-ttu-id="8aa39-110">Note</span><span class="sxs-lookup"><span data-stu-id="8aa39-110">Remarks</span></span>  
+ <span data-ttu-id="8aa39-111">Il tipo di un indicizzatore e dei relativi parametri deve essere accessibile almeno quanto l'indicizzatore.</span><span class="sxs-lookup"><span data-stu-id="8aa39-111">The type of an indexer and the type of its parameters must be at least as accessible as the indexer itself.</span></span> <span data-ttu-id="8aa39-112">Per altre informazioni sui livelli di accessibilità, vedere [Modificatori di accesso](../../../csharp/language-reference/keywords/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="8aa39-112">For more information about accessibility levels, see [Access Modifiers](../../../csharp/language-reference/keywords/access-modifiers.md).</span></span>  
   
- Per altre informazioni sull'uso degli indicizzatori con un'interfaccia, vedere [Indicizzatori nelle interfacce](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md).  
+ <span data-ttu-id="8aa39-113">Per altre informazioni sull'uso degli indicizzatori con un'interfaccia, vedere [Indicizzatori nelle interfacce](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="8aa39-113">For more information about how to use indexers with an interface, see [Interface Indexers](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md).</span></span>  
   
- La firma di un indicizzatore è costituita dal numero e dai tipi dei relativi parametri formali. Non include il tipo di indicizzatore o i nomi dei parametri formali. Se si dichiarano più indicizzatori nella stessa classe, gli indicizzatori devono avere firme diverse.  
+ <span data-ttu-id="8aa39-114">La firma di un indicizzatore è costituita dal numero e dai tipi dei relativi parametri formali.</span><span class="sxs-lookup"><span data-stu-id="8aa39-114">The signature of an indexer consists of the number and types of its formal parameters.</span></span> <span data-ttu-id="8aa39-115">Non include il tipo di indicizzatore o i nomi dei parametri formali.</span><span class="sxs-lookup"><span data-stu-id="8aa39-115">It does not include the indexer type or the names of the formal parameters.</span></span> <span data-ttu-id="8aa39-116">Se si dichiarano più indicizzatori nella stessa classe, gli indicizzatori devono avere firme diverse.</span><span class="sxs-lookup"><span data-stu-id="8aa39-116">If you declare more than one indexer in the same class, they must have different signatures.</span></span>  
   
- Il valore di un indicizzatore non è classificato come una variabile, pertanto non è possibile passare il valore di un indicizzatore come un parametro [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out.md).  
+ <span data-ttu-id="8aa39-117">Il valore di un indicizzatore non è classificato come una variabile, pertanto non è possibile passare il valore di un indicizzatore come un parametro [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out.md).</span><span class="sxs-lookup"><span data-stu-id="8aa39-117">An indexer value is not classified as a variable; therefore, you cannot pass an indexer value as a [ref](../../../csharp/language-reference/keywords/ref.md) or [out](../../../csharp/language-reference/keywords/out.md) parameter.</span></span>  
   
- Per fornire all'indicizzatore un nome utilizzabile da altri linguaggi, usare un attributo `name` nella dichiarazione. Ad esempio:  
+ <span data-ttu-id="8aa39-118">Per fornire all'indicizzatore un nome utilizzabile da altri linguaggi, usare un attributo `name` nella dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="8aa39-118">To provide the indexer with a name that other languages can use, use a `name` attribute in the declaration.</span></span> <span data-ttu-id="8aa39-119">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="8aa39-119">For example:</span></span>  
   
 ```  
 [System.Runtime.CompilerServices.IndexerName("TheItem")]  
@@ -64,38 +45,37 @@ public int this [int index]   // Indexer declaration
 }  
 ```  
   
- Questo indicizzatore sarà denominato `TheItem`. Se non si specifica l'attributo name, il nome predefinito sarebbe `Item`.  
+ <span data-ttu-id="8aa39-120">Questo indicizzatore sarà denominato `TheItem`.</span><span class="sxs-lookup"><span data-stu-id="8aa39-120">This indexer will have the name `TheItem`.</span></span> <span data-ttu-id="8aa39-121">Se non si specifica l'attributo name, il nome predefinito sarebbe `Item`.</span><span class="sxs-lookup"><span data-stu-id="8aa39-121">Not providing the name attribute would make `Item` the default name.</span></span>  
   
-## <a name="example-1"></a>Esempio 1  
+## <a name="example-1"></a><span data-ttu-id="8aa39-122">Esempio 1</span><span class="sxs-lookup"><span data-stu-id="8aa39-122">Example 1</span></span>  
   
-### <a name="description"></a>Descrizione  
- Nell'esempio seguente viene illustrato come dichiarare un campo di matrice privata, `temps`, e un indicizzatore. L'indicizzatore consente l'accesso diretto all'istanza `tempRecord[i]`. In alternativa all'uso dell'indicizzatore, è possibile dichiarare la matrice come un membro [public](../../../csharp/language-reference/keywords/public.md) e accedere direttamente ai relativi membri, `tempRecord.temps[i]`.  
+### <a name="description"></a><span data-ttu-id="8aa39-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8aa39-123">Description</span></span>  
+ <span data-ttu-id="8aa39-124">Nell'esempio seguente viene illustrato come dichiarare un campo di matrice privata, `temps`, e un indicizzatore.</span><span class="sxs-lookup"><span data-stu-id="8aa39-124">The following example shows how to declare a private array field, `temps`, and an indexer.</span></span> <span data-ttu-id="8aa39-125">L'indicizzatore consente l'accesso diretto all'istanza `tempRecord[i]`.</span><span class="sxs-lookup"><span data-stu-id="8aa39-125">The indexer enables direct access to the instance `tempRecord[i]`.</span></span> <span data-ttu-id="8aa39-126">In alternativa all'uso dell'indicizzatore, è possibile dichiarare la matrice come un membro [public](../../../csharp/language-reference/keywords/public.md) e accedere direttamente ai relativi membri, `tempRecord.temps[i]`.</span><span class="sxs-lookup"><span data-stu-id="8aa39-126">The alternative to using the indexer is to declare the array as a [public](../../../csharp/language-reference/keywords/public.md) member and access its members, `tempRecord.temps[i]`, directly.</span></span>  
   
- Si noti che quando viene valutato l'accesso di un indicizzatore, ad esempio in un'istruzione `Console.Write`, viene richiamata la funzione di accesso [get](../../../csharp/language-reference/keywords/get.md). Pertanto, se non esiste alcuna funzione di accesso `get`, si verifica un errore in fase di compilazione.  
+ <span data-ttu-id="8aa39-127">Si noti che quando viene valutato l'accesso di un indicizzatore, ad esempio in un'istruzione `Console.Write`, viene richiamata la funzione di accesso [get](../../../csharp/language-reference/keywords/get.md).</span><span class="sxs-lookup"><span data-stu-id="8aa39-127">Notice that when an indexer's access is evaluated, for example, in a `Console.Write` statement, the [get](../../../csharp/language-reference/keywords/get.md) accessor is invoked.</span></span> <span data-ttu-id="8aa39-128">Pertanto, se non esiste alcuna funzione di accesso `get`, si verifica un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="8aa39-128">Therefore, if no `get` accessor exists, a compile-time error occurs.</span></span>  
   
-### <a name="code"></a>Codice  
- [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+### <a name="code"></a><span data-ttu-id="8aa39-129">Codice</span><span class="sxs-lookup"><span data-stu-id="8aa39-129">Code</span></span>  
+ [!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
   
-## <a name="indexing-using-other-values"></a>Indicizzazione mediante altri valori  
- C# non limita il tipo di indice a integer. Può ad esempio essere utile usare una stringa con un indicizzatore. Un indicizzatore di questo tipo potrebbe essere implementato eseguendo la ricerca della stringa nella raccolta e restituendo il valore appropriato. Poiché è possibile eseguire l'overload delle funzioni di accesso, le versioni con la stringa e il tipo integer possono coesistere.  
+## <a name="indexing-using-other-values"></a><span data-ttu-id="8aa39-130">Indicizzazione mediante altri valori</span><span class="sxs-lookup"><span data-stu-id="8aa39-130">Indexing Using Other Values</span></span>  
+ <span data-ttu-id="8aa39-131">C# non limita il tipo di indice a integer.</span><span class="sxs-lookup"><span data-stu-id="8aa39-131">C# does not limit the index type to integer.</span></span> <span data-ttu-id="8aa39-132">Può ad esempio essere utile usare una stringa con un indicizzatore.</span><span class="sxs-lookup"><span data-stu-id="8aa39-132">For example, it may be useful to use a string with an indexer.</span></span> <span data-ttu-id="8aa39-133">Un indicizzatore di questo tipo potrebbe essere implementato eseguendo la ricerca della stringa nella raccolta e restituendo il valore appropriato.</span><span class="sxs-lookup"><span data-stu-id="8aa39-133">Such an indexer might be implemented by searching for the string in the collection, and returning the appropriate value.</span></span> <span data-ttu-id="8aa39-134">Poiché è possibile eseguire l'overload delle funzioni di accesso, le versioni con la stringa e il tipo integer possono coesistere.</span><span class="sxs-lookup"><span data-stu-id="8aa39-134">As accessors can be overloaded, the string and integer versions can co-exist.</span></span>  
   
-## <a name="example-2"></a>Esempio 2  
+## <a name="example-2"></a><span data-ttu-id="8aa39-135">Esempio 2</span><span class="sxs-lookup"><span data-stu-id="8aa39-135">Example 2</span></span>  
   
-### <a name="description"></a>Descrizione  
- In questo esempio, viene dichiarata una classe che archivia i giorni della settimana. Viene dichiarata una funzione di accesso `get` che accetta una stringa, il nome di un giorno, e restituisce l'intero corrispondente. Ad esempio, per domenica verrà restituito 0, per lunedì verrà restituito 1 e così via.  
+### <a name="description"></a><span data-ttu-id="8aa39-136">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8aa39-136">Description</span></span>  
+ <span data-ttu-id="8aa39-137">In questo esempio, viene dichiarata una classe che archivia i giorni della settimana.</span><span class="sxs-lookup"><span data-stu-id="8aa39-137">In this example, a class is declared that stores the days of the week.</span></span> <span data-ttu-id="8aa39-138">Viene dichiarata una funzione di accesso `get` che accetta una stringa, il nome di un giorno, e restituisce l'intero corrispondente.</span><span class="sxs-lookup"><span data-stu-id="8aa39-138">A `get` accessor is declared that takes a string, the name of a day, and returns the corresponding integer.</span></span> <span data-ttu-id="8aa39-139">Ad esempio, per domenica verrà restituito 0, per lunedì verrà restituito 1 e così via.</span><span class="sxs-lookup"><span data-stu-id="8aa39-139">For example, Sunday will return 0, Monday will return 1, and so on.</span></span>  
   
-### <a name="code"></a>Codice  
- [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+### <a name="code"></a><span data-ttu-id="8aa39-140">Codice</span><span class="sxs-lookup"><span data-stu-id="8aa39-140">Code</span></span>  
+ [!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
   
-## <a name="robust-programming"></a>Programmazione efficiente  
- Esistono due modi principali per migliorare la sicurezza e l'affidabilità degli indicizzatori:  
+## <a name="robust-programming"></a><span data-ttu-id="8aa39-141">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="8aa39-141">Robust Programming</span></span>  
+ <span data-ttu-id="8aa39-142">Esistono due modi principali per migliorare la sicurezza e l'affidabilità degli indicizzatori:</span><span class="sxs-lookup"><span data-stu-id="8aa39-142">There are two main ways in which the security and reliability of indexers can be improved:</span></span>  
   
--   Assicurarsi di incorporare qualche tipo di strategia di gestione degli errori per gestire la possibilità che il codice client passi un valore di indice non valido. Nel primo esempio riportato in questo argomento, la classe TempRecord fornisce una proprietà Length che consente al codice client di verificare l'input prima di passarlo all'indicizzatore. È anche possibile inserire il codice di gestione degli errori nell'indicizzatore stesso. Assicurarsi di documentare per gli utenti qualsiasi eccezione generata all'interno di una funzione di accesso dell'indicizzatore.  
+-   <span data-ttu-id="8aa39-143">Assicurarsi di incorporare qualche tipo di strategia di gestione degli errori per gestire la possibilità che il codice client passi un valore di indice non valido.</span><span class="sxs-lookup"><span data-stu-id="8aa39-143">Be sure to incorporate some type of error-handling strategy to handle the chance of client code passing in an invalid index value.</span></span> <span data-ttu-id="8aa39-144">Nel primo esempio riportato in questo argomento, la classe TempRecord fornisce una proprietà Length che consente al codice client di verificare l'input prima di passarlo all'indicizzatore.</span><span class="sxs-lookup"><span data-stu-id="8aa39-144">In the first example earlier in this topic, the TempRecord class provides a Length property that enables the client code to verify the input before passing it to the indexer.</span></span> <span data-ttu-id="8aa39-145">È anche possibile inserire il codice di gestione degli errori nell'indicizzatore stesso.</span><span class="sxs-lookup"><span data-stu-id="8aa39-145">You can also put the error handling code inside the indexer itself.</span></span> <span data-ttu-id="8aa39-146">Assicurarsi di documentare per gli utenti qualsiasi eccezione generata all'interno di una funzione di accesso dell'indicizzatore.</span><span class="sxs-lookup"><span data-stu-id="8aa39-146">Be sure to document for users any exceptions that you throw inside an indexer accessor.</span></span>  
   
--   Impostare l'accessibilità delle funzioni di accesso `get` e [set](../../../csharp/language-reference/keywords/set.md) in modo che siano quanto più restrittive possibile. Questo è particolarmente importante per la funzione di accesso `set`. Per altre informazioni, vedere [Limitazione dell'accessibilità delle funzioni di accesso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+-   <span data-ttu-id="8aa39-147">Impostare l'accessibilità delle funzioni di accesso `get` e [set](../../../csharp/language-reference/keywords/set.md) in modo che siano quanto più restrittive possibile.</span><span class="sxs-lookup"><span data-stu-id="8aa39-147">Set the accessibility of the `get` and [set](../../../csharp/language-reference/keywords/set.md) accessors to be as restrictive as is reasonable.</span></span> <span data-ttu-id="8aa39-148">Questo è particolarmente importante per la funzione di accesso `set`.</span><span class="sxs-lookup"><span data-stu-id="8aa39-148">This is important for the `set` accessor in particular.</span></span> <span data-ttu-id="8aa39-149">Per altre informazioni, vedere [Limitazione dell'accessibilità delle funzioni di accesso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).</span><span class="sxs-lookup"><span data-stu-id="8aa39-149">For more information, see [Restricting Accessor Accessibility](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)   
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
-
+## <a name="see-also"></a><span data-ttu-id="8aa39-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8aa39-150">See Also</span></span>  
+ [<span data-ttu-id="8aa39-151">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="8aa39-151">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="8aa39-152">Indicizzatori</span><span class="sxs-lookup"><span data-stu-id="8aa39-152">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="8aa39-153">Proprietà</span><span class="sxs-lookup"><span data-stu-id="8aa39-153">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)

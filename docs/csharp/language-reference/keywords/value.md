@@ -1,53 +1,32 @@
 ---
 title: value (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- value_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- value keyword [C#]
+f1_keywords: value_CSharpKeyword
+helpviewer_keywords: value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2501bc8964ed76534dba6c7cc519e095c57cb898
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 012cf622091687996fec477a8b5b821b190bbc29
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="value-c-reference"></a>value (Riferimenti per C#)
-La parola chiave contestuale `value` viene usata nella funzione di accesso set nelle dichiarazioni di proprietà ordinarie. È simile a un parametro di input su un metodo. La parola `value` fa riferimento al valore che il codice client tenta di assegnare alla proprietà. Nell'esempio seguente, `MyDerivedClass` ha una proprietà denominata `Name` che usa il parametro `value` per assegnare una nuova stringa al campo sottostante `name`. Dal punto di vista del codice client, l'operazione viene scritta come assegnazione semplice.  
+# <a name="value-c-reference"></a><span data-ttu-id="c082d-102">value (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="c082d-102">value (C# Reference)</span></span>
+<span data-ttu-id="c082d-103">La parola chiave contestuale `value` viene usata nella funzione di accesso set nelle dichiarazioni di proprietà ordinarie.</span><span class="sxs-lookup"><span data-stu-id="c082d-103">The contextual keyword `value` is used in the set accessor in ordinary property declarations.</span></span> <span data-ttu-id="c082d-104">È simile a un parametro di input su un metodo.</span><span class="sxs-lookup"><span data-stu-id="c082d-104">It is similar to an input parameter on a method.</span></span> <span data-ttu-id="c082d-105">La parola `value` fa riferimento al valore che il codice client tenta di assegnare alla proprietà.</span><span class="sxs-lookup"><span data-stu-id="c082d-105">The word `value` references the value that client code is attempting to assign to the property.</span></span> <span data-ttu-id="c082d-106">Nell'esempio seguente, `MyDerivedClass` ha una proprietà denominata `Name` che usa il parametro `value` per assegnare una nuova stringa al campo sottostante `name`.</span><span class="sxs-lookup"><span data-stu-id="c082d-106">In the following example, `MyDerivedClass` has a property called `Name` that uses the `value` parameter to assign a new string to the backing field `name`.</span></span> <span data-ttu-id="c082d-107">Dal punto di vista del codice client, l'operazione viene scritta come assegnazione semplice.</span><span class="sxs-lookup"><span data-stu-id="c082d-107">From the point of view of client code, the operation is written as a simple assignment.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/value_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/value_1.cs)]  
   
- Per altre informazioni sull'uso di `value`, vedere [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md).  
+ <span data-ttu-id="c082d-108">Per altre informazioni sull'uso di `value`, vedere [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="c082d-108">For more information about the use of `value`, see [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md).</span></span>  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="c082d-109">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="c082d-109">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="c082d-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c082d-110">See Also</span></span>  
+ [<span data-ttu-id="c082d-111">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="c082d-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="c082d-112">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="c082d-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c082d-113">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="c082d-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

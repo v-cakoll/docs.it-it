@@ -1,72 +1,53 @@
 ---
 title: 'Procedura: creare una directory in Visual Basic'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2e4cd94113d77b2f4ff8127c80174107966ef360
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a45a785916b480dcee6e36fd295390266eaa0a0
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-a-directory-in-visual-basic"></a>Procedura: creare una directory in Visual Basic
-Usare il metodo `CreateDirectory` dell'oggetto `My.Computer.FileSystem` per la creazione di directory.  
+# <a name="how-to-create-a-directory-in-visual-basic"></a><span data-ttu-id="55d2d-102">Procedura: creare una directory in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="55d2d-102">How to: Create a Directory in Visual Basic</span></span>
+<span data-ttu-id="55d2d-103">Usare il metodo `CreateDirectory` dell'oggetto `My.Computer.FileSystem` per la creazione di directory.</span><span class="sxs-lookup"><span data-stu-id="55d2d-103">Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to create directories.</span></span>  
   
- Se la directory esiste già, non verranno generate eccezioni.  
+ <span data-ttu-id="55d2d-104">Se la directory esiste già, non verranno generate eccezioni.</span><span class="sxs-lookup"><span data-stu-id="55d2d-104">If the directory already exists, no exception is thrown.</span></span>  
   
-### <a name="to-create-a-directory"></a>Per creare una directory  
+### <a name="to-create-a-directory"></a><span data-ttu-id="55d2d-105">Per creare una directory</span><span class="sxs-lookup"><span data-stu-id="55d2d-105">To create a directory</span></span>  
   
--   Usare il metodo `CreateDirectory` specificando il percorso completo della posizione in cui deve essere creata la directory. Nell'esempio riportato di seguito la directory `NewDirectory` viene creata in `C:\Documents and Settings\All Users\Documents`.  
+-   <span data-ttu-id="55d2d-106">Usare il metodo `CreateDirectory` specificando il percorso completo della posizione in cui deve essere creata la directory.</span><span class="sxs-lookup"><span data-stu-id="55d2d-106">Use the `CreateDirectory` method by specifying the full path of the location where the directory should be created.</span></span> <span data-ttu-id="55d2d-107">Nell'esempio riportato di seguito la directory `NewDirectory` viene creata in `C:\Documents and Settings\All Users\Documents`.</span><span class="sxs-lookup"><span data-stu-id="55d2d-107">This example creates the directory `NewDirectory` in `C:\Documents and Settings\All Users\Documents`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-directory_1.vb)]  
   
-## <a name="robust-programming"></a>Programmazione efficiente  
- Le seguenti condizioni possono generare un'eccezione:  
+## <a name="robust-programming"></a><span data-ttu-id="55d2d-108">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="55d2d-108">Robust Programming</span></span>  
+ <span data-ttu-id="55d2d-109">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="55d2d-109">The following conditions may cause an exception:</span></span>  
   
--   Il nome della directory non è valido. Contiene ad esempio caratteri non validi o è costituito solo da uno spazio (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="55d2d-110">Il nome della directory non è valido.</span><span class="sxs-lookup"><span data-stu-id="55d2d-110">The directory name is malformed.</span></span> <span data-ttu-id="55d2d-111">Contiene ad esempio caratteri non validi o è costituito solo da uno spazio (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="55d2d-111">For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).</span></span>  
   
--   La directory padre della directory da creare è di sola lettura (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="55d2d-112">La directory padre della directory da creare è di sola lettura (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="55d2d-112">The parent directory of the directory to be created is read-only (<xref:System.IO.IOException>).</span></span>  
   
--   Il nome della directory è `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="55d2d-113">Il nome della directory è `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="55d2d-113">The directory name is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   Il nome della directory è troppo lungo (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="55d2d-114">Il nome della directory è troppo lungo (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="55d2d-114">The directory name is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   Il nome della directory è un carattere due punti ":" (<xref:System.NotSupportedException>).  
+-   <span data-ttu-id="55d2d-115">Il nome della directory è un carattere due punti ":" (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="55d2d-115">The directory name is a colon ":" (<xref:System.NotSupportedException>).</span></span>  
   
--   L'utente non è autorizzato a creare la directory (<xref:System.UnauthorizedAccessException>).  
+-   <span data-ttu-id="55d2d-116">L'utente non è autorizzato a creare la directory (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="55d2d-116">The user does not have permission to create the directory (<xref:System.UnauthorizedAccessException>).</span></span>  
   
--   L'utente non ha le autorizzazioni richieste in una situazione di attendibilità parziale (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="55d2d-117">L'utente non ha le autorizzazioni richieste in una situazione di attendibilità parziale (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="55d2d-117">The user lacks permissions in a partial-trust situation (<xref:System.Security.SecurityException>).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   
- [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="55d2d-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="55d2d-118">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>  
+ [<span data-ttu-id="55d2d-119">Creazione, eliminazione e spostamento di file e directory</span><span class="sxs-lookup"><span data-stu-id="55d2d-119">Creating, Deleting, and Moving Files and Directories</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

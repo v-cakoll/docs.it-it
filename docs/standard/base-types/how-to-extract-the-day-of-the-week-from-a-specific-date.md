@@ -1,107 +1,113 @@
 ---
-title: "Procedura: estrarre il giorno della settimana da una data specifica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "formattazione [.NET Framework], date"
-  - "proprietà DateTime.DayOfWeek"
-  - "metodo DateTime.ToString"
-  - "date [.NET Framework], recupero di informazioni sulla settimana"
-  - "proprietà DateTimeOffset.DayOfWeek"
-  - "date [.NET Framework], giorno della settimana"
-  - "Weekday (funzione)"
-  - "giorno della settimana [.NET Framework]"
-  - "estrazione del giorno della settimana"
-  - "nomi dei giorni della settimana"
-  - "WeekdayName (funzione)"
-  - "numeri [.NET Framework], giorno della settimana"
-  - "formattazione [.NET Framework], ora"
-  - "metodo DateTimeOffset.ToString"
-  - "nomi completi dei giorni della settimana"
+title: 'Procedura: estrarre il giorno della settimana da una data specifica'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- formatting [.NET Framework], dates
+- DateTime.DayOfWeek property
+- DateTime.ToString method
+- dates [.NET Framework], retrieving week information
+- DateTimeOffset.DayOfWeek property
+- dates [.NET Framework], day of week
+- Weekday function
+- day of week [.NET Framework]
+- extracting day of week
+- weekday names
+- WeekdayName function
+- numbers [.NET Framework], day of week
+- formatting [.NET Framework], time
+- DateTimeOffset.ToString method
+- full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 3accb01eb8c5edb8b3e245020b43c5a94a8bb4cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: estrarre il giorno della settimana da una data specifica
-.NET Framework consente di determinare in modo semplice il giorno ordinale della settimana e di visualizzare il nome del giorno della settimana localizzato per una data specifica. Un valore enumerato che indica il giorno della settimana corrispondente a una determinata data è specificato dalla proprietà <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A>. Al contrario, il recupero del nome del giorno della settimana è un'operazione di formattazione che può essere eseguita effettuando la chiamata a un metodo di formattazione, ad esempio il metodo `ToString` del valore di data e ora o il metodo <xref:System.String.Format%2A?displayProperty=fullName>. In questo argomento viene illustrato come eseguire queste operazioni di formattazione.  
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a><span data-ttu-id="914d5-102">Procedura: estrarre il giorno della settimana da una data specifica</span><span class="sxs-lookup"><span data-stu-id="914d5-102">How to: Extract the Day of the Week from a Specific Date</span></span>
+<span data-ttu-id="914d5-103">.NET Framework consente di determinare in modo semplice il giorno ordinale della settimana e di visualizzare il nome del giorno della settimana localizzato per una data specifica.</span><span class="sxs-lookup"><span data-stu-id="914d5-103">The .NET Framework makes it easy to determine the ordinal day of the week for a particular date, and to display the localized weekday name for a particular date.</span></span> <span data-ttu-id="914d5-104">Un valore enumerato che indica il giorno della settimana corrispondente a una determinata data è specificato dalla proprietà <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A>.</span><span class="sxs-lookup"><span data-stu-id="914d5-104">An enumerated value that indicates the day of the week corresponding to a particular date is available from the <xref:System.DateTime.DayOfWeek%2A> or <xref:System.DateTimeOffset.DayOfWeek%2A> property.</span></span> <span data-ttu-id="914d5-105">Al contrario, il recupero del nome del giorno della settimana è un'operazione di formattazione che può essere eseguita effettuando la chiamata a un metodo di formattazione, ad esempio il metodo `ToString` del valore di data e ora o il metodo <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="914d5-105">In contrast, retrieving the weekday name is a formatting operation that can be performed by calling a formatting method, such as a date and time value's `ToString` method or the <xref:System.String.Format%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="914d5-106">In questo argomento viene illustrato come eseguire queste operazioni di formattazione.</span><span class="sxs-lookup"><span data-stu-id="914d5-106">This topic shows how to perform these formatting operations.</span></span>  
   
-### Per estrarre un numero che indica il giorno della settimana da una data specifica  
+### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a><span data-ttu-id="914d5-107">Per estrarre un numero che indica il giorno della settimana da una data specifica</span><span class="sxs-lookup"><span data-stu-id="914d5-107">To extract a number indicating the day of the week from a specific date</span></span>  
   
-1.  Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=fullName> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=fullName>.  
+1.  <span data-ttu-id="914d5-108">Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="914d5-108">If you are working with the string representation of a date, convert it to a <xref:System.DateTime> or a <xref:System.DateTimeOffset> value by using the static <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> method.</span></span>  
   
-2.  Usare la proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=fullName> o <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=fullName> per recuperare un valore <xref:System.DayOfWeek> che indica il giorno della settimana.  
+2.  <span data-ttu-id="914d5-109">Usare la proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> per recuperare un valore <xref:System.DayOfWeek> che indica il giorno della settimana.</span><span class="sxs-lookup"><span data-stu-id="914d5-109">Use the <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> property to retrieve a <xref:System.DayOfWeek> value that indicates the day of the week.</span></span>  
   
-3.  Se necessario, eseguire il cast \(in C\#\) o convertire \(in Visual Basic\) il valore <xref:System.DayOfWeek> in un valore integer.  
+3.  <span data-ttu-id="914d5-110">Se necessario, eseguire il cast (in C#) o convertire (in Visual Basic) il valore <xref:System.DayOfWeek> in un valore integer.</span><span class="sxs-lookup"><span data-stu-id="914d5-110">If necessary, cast (in C#) or convert (in Visual Basic) the <xref:System.DayOfWeek> value to an integer.</span></span>  
   
- Nell'esempio seguente è visualizzato un valore integer che rappresenta il giorno della settimana di una data specifica.  
+ <span data-ttu-id="914d5-111">Nell'esempio seguente è visualizzato un valore integer che rappresenta il giorno della settimana di una data specifica.</span><span class="sxs-lookup"><span data-stu-id="914d5-111">The following example displays an integer that represents the day of the week of a specific date.</span></span>  
   
  [!code-csharp[Formatting.Howto.WeekdayName#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/weekdaynumber7.cs#7)]
  [!code-vb[Formatting.Howto.WeekdayName#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/weekdaynumber7.vb#7)]  
   
-### Per estrarre il nome del giorno della settimana abbreviato da una data specifica  
+### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a><span data-ttu-id="914d5-112">Per estrarre il nome del giorno della settimana abbreviato da una data specifica</span><span class="sxs-lookup"><span data-stu-id="914d5-112">To extract the abbreviated weekday name from a specific date</span></span>  
   
-1.  Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=fullName> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=fullName>.  
+1.  <span data-ttu-id="914d5-113">Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="914d5-113">If you are working with the string representation of a date, convert it to a <xref:System.DateTime> or a <xref:System.DateTimeOffset> value by using the static <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> method.</span></span>  
   
-2.  È possibile estrarre il nome del giorno della settimana abbreviato delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:  
+2.  <span data-ttu-id="914d5-114">È possibile estrarre il nome del giorno della settimana abbreviato delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:</span><span class="sxs-lookup"><span data-stu-id="914d5-114">You can extract the abbreviated weekday name of the current culture or of a specific culture:</span></span>  
   
-    1.  Per estrarre il nome del giorno della settimana abbreviato per le impostazioni di cultura correnti, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%29?displayProperty=fullName> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=fullName> del valore di data e ora e passare la stringa "ddd" come parametro `format`. Nell'esempio seguente viene illustrata la chiamata al metodo <xref:System.DateTime.ToString%28System.String%29>.  
+    1.  <span data-ttu-id="914d5-115">Per estrarre il nome del giorno della settimana abbreviato per le impostazioni di cultura correnti, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> del valore di data e ora e passare la stringa "ddd" come parametro `format`.</span><span class="sxs-lookup"><span data-stu-id="914d5-115">To extract the abbreviated weekday name for the current culture, call the date and time value's <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> instance method, and pass the string "ddd" as the `format` parameter.</span></span> <span data-ttu-id="914d5-116">Nell'esempio seguente viene illustrata la chiamata al metodo <xref:System.DateTime.ToString%28System.String%29>.</span><span class="sxs-lookup"><span data-stu-id="914d5-116">The following example illustrates the call to the <xref:System.DateTime.ToString%28System.String%29> method.</span></span>  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2.  Per estrarre il nome del giorno della settimana abbreviato per impostazioni di cultura specifiche, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName> o <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName> del valore di data e ora. Passare la stringa "ddd" come parametro `format`. Passare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni di cultura per cui si vuole recuperare il nome del giorno della settimana come parametro `provider`. Nel codice seguente viene illustrata una chiamata al metodo <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> usando un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni di cultura fr\-FR.  
+    2.  <span data-ttu-id="914d5-117">Per estrarre il nome del giorno della settimana abbreviato per impostazioni di cultura specifiche, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> del valore di data e ora.</span><span class="sxs-lookup"><span data-stu-id="914d5-117">To extract the abbreviated weekday name for a specific culture, call the date and time value’s <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> instance method.</span></span> <span data-ttu-id="914d5-118">Passare la stringa "ddd" come parametro `format`.</span><span class="sxs-lookup"><span data-stu-id="914d5-118">Pass the string "ddd" as the `format` parameter.</span></span> <span data-ttu-id="914d5-119">Passare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni di cultura per cui si vuole recuperare il nome del giorno della settimana come parametro `provider`.</span><span class="sxs-lookup"><span data-stu-id="914d5-119">Pass either a <xref:System.Globalization.CultureInfo> or a <xref:System.Globalization.DateTimeFormatInfo> object that represents the culture whose weekday name you want to retrieve as the `provider` parameter.</span></span> <span data-ttu-id="914d5-120">Nel codice seguente viene illustrata una chiamata al metodo <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> usando un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni di cultura fr-FR.</span><span class="sxs-lookup"><span data-stu-id="914d5-120">The following code illustrates a call to the <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> method using a <xref:System.Globalization.CultureInfo> object that represents the fr-FR culture.</span></span>  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
   
-### Per estrarre il nome del giorno della settimana esteso da una data specifica  
+### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a><span data-ttu-id="914d5-121">Per estrarre il nome del giorno della settimana esteso da una data specifica</span><span class="sxs-lookup"><span data-stu-id="914d5-121">To extract the full weekday name from a specific date</span></span>  
   
-1.  Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=fullName> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=fullName>.  
+1.  <span data-ttu-id="914d5-122">Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="914d5-122">If you are working with the string representation of a date, convert it to a <xref:System.DateTime> or a <xref:System.DateTimeOffset> value by using the static <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> method.</span></span>  
   
-2.  È possibile estrarre il nome del giorno della settimana esteso delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:  
+2.  <span data-ttu-id="914d5-123">È possibile estrarre il nome del giorno della settimana esteso delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:</span><span class="sxs-lookup"><span data-stu-id="914d5-123">You can extract the full weekday name of the current culture or of a specific culture:</span></span>  
   
-    1.  Per estrarre il nome del giorno della settimana esteso per le impostazioni di cultura correnti, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%29?displayProperty=fullName> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=fullName> del valore di data e ora e passare la stringa "dddd" come parametro `format`. Nell'esempio seguente viene illustrata la chiamata al metodo <xref:System.DateTime.ToString%28System.String%29>.  
+    1.  <span data-ttu-id="914d5-124">Per estrarre il nome del giorno della settimana esteso per le impostazioni di cultura correnti, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> del valore di data e ora e passare la stringa "dddd" come parametro `format`.</span><span class="sxs-lookup"><span data-stu-id="914d5-124">To extract the weekday name for the current culture, call the date and time value’s <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> instance method, and pass the string "dddd" as the `format` parameter.</span></span> <span data-ttu-id="914d5-125">Nell'esempio seguente viene illustrata la chiamata al metodo <xref:System.DateTime.ToString%28System.String%29>.</span><span class="sxs-lookup"><span data-stu-id="914d5-125">The following example illustrates the call to the <xref:System.DateTime.ToString%28System.String%29> method.</span></span>  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2.  Per estrarre il nome del giorno della settimana per impostazioni di cultura specifiche, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName> o <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName> del valore di data e ora. Passare la stringa "dddd" come parametro `format`. Passare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni di cultura per cui si vuole recuperare il nome del giorno della settimana come parametro `provider`. Nel codice seguente viene illustrata una chiamata al metodo <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> usando un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni di cultura es\-ES.  
+    2.  <span data-ttu-id="914d5-126">Per estrarre il nome del giorno della settimana per impostazioni di cultura specifiche, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> del valore di data e ora.</span><span class="sxs-lookup"><span data-stu-id="914d5-126">To extract the weekday name for a specific culture, call the date and time value’s <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> instance method.</span></span> <span data-ttu-id="914d5-127">Passare la stringa "dddd" come parametro `format`.</span><span class="sxs-lookup"><span data-stu-id="914d5-127">Pass the string "dddd" as the `format` parameter.</span></span> <span data-ttu-id="914d5-128">Passare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni di cultura per cui si vuole recuperare il nome del giorno della settimana come parametro `provider`.</span><span class="sxs-lookup"><span data-stu-id="914d5-128">Pass either a <xref:System.Globalization.CultureInfo> or a <xref:System.Globalization.DateTimeFormatInfo> object that represents the culture whose weekday name you want to retrieve as the `provider` parameter.</span></span> <span data-ttu-id="914d5-129">Nel codice seguente viene illustrata una chiamata al metodo <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> usando un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni di cultura es-ES.</span><span class="sxs-lookup"><span data-stu-id="914d5-129">The following code illustrates a call to the <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> method using a <xref:System.Globalization.CultureInfo> object that represents the es-ES culture.</span></span>  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
   
-## Esempio  
- Nell'esempio vengono illustrate le chiamate alle proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=fullName> e <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=fullName> e i metodi <xref:System.DateTime.ToString%2A?displayProperty=fullName> e <xref:System.DateTimeOffset.ToString%2A?displayProperty=fullName> per recuperare il numero che rappresenta il giorno della settimana, il nome del giorno della settimana abbreviato e il nome del giorno della settimana esteso per una data specifica.  
+## <a name="example"></a><span data-ttu-id="914d5-130">Esempio</span><span class="sxs-lookup"><span data-stu-id="914d5-130">Example</span></span>  
+ <span data-ttu-id="914d5-131">Nell'esempio vengono illustrate le chiamate alle proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> e i metodi <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> per recuperare il numero che rappresenta il giorno della settimana, il nome del giorno della settimana abbreviato e il nome del giorno della settimana esteso per una data specifica.</span><span class="sxs-lookup"><span data-stu-id="914d5-131">The example illustrates calls to the <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> and <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> properties and the <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> and <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> methods to retrieve the number that represents the day of the week, the abbreviated weekday name, and the full weekday name for a particular date.</span></span>  
   
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
  [!code-vb[Formatting.Howto.WeekdayName#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example6.vb#6)]  
   
- I diversi linguaggi potrebbero fornire funzionalità che duplicano o completano la funzionalità offerta da [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. In Visual Basic, ad esempio, sono disponibili due funzioni di questo tipo:  
+ <span data-ttu-id="914d5-132">I diversi linguaggi potrebbero fornire funzionalità che duplicano o completano la funzionalità offerta da [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="914d5-132">Individual languages may provide functionality that duplicates or supplements the functionality provided by the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="914d5-133">In Visual Basic, ad esempio, sono disponibili due funzioni di questo tipo:</span><span class="sxs-lookup"><span data-stu-id="914d5-133">For example, Visual Basic includes two such functions:</span></span>  
   
--   `Weekday`, che restituisce un numero che indica il giorno della settimana di una data specifica. Considera che il valore ordinale del primo giorno della settimana sia pari a uno, mentre la proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=fullName> considera che questo sia pari a zero.  
+-   <span data-ttu-id="914d5-134">`Weekday`, che restituisce un numero che indica il giorno della settimana di una data specifica.</span><span class="sxs-lookup"><span data-stu-id="914d5-134">`Weekday`, which returns a number that indicates the day of the week of a particular date.</span></span> <span data-ttu-id="914d5-135">Considera che il valore ordinale del primo giorno della settimana sia pari a uno, mentre la proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> considera che questo sia pari a zero.</span><span class="sxs-lookup"><span data-stu-id="914d5-135">It considers the ordinal value of the first day of the week to be one, whereas the <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> property considers it to be zero.</span></span>  
   
--   `WeekdayName`, che restituisce il nome della settimana nelle impostazioni di cultura correnti, corrispondente a un numero di giorno della settimana specifico.  
+-   <span data-ttu-id="914d5-136">`WeekdayName`, che restituisce il nome della settimana nelle impostazioni di cultura correnti, corrispondente a un numero di giorno della settimana specifico.</span><span class="sxs-lookup"><span data-stu-id="914d5-136">`WeekdayName`, which returns the name of the week in the current culture that corresponds to a particular weekday number.</span></span>  
   
- Nell'esempio seguente viene illustrato l'uso delle funzioni `Weekday` e `WeekdayName` di Visual Basic.  
+ <span data-ttu-id="914d5-137">Nell'esempio seguente viene illustrato l'uso delle funzioni `Weekday` e `WeekdayName` di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="914d5-137">The following example illustrates the use of the Visual Basic `Weekday` and `WeekdayName` functions.</span></span>  
   
  [!code-vb[Formatting.HowTo.WeekdayName#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example9.vb#9)]  
   
- È anche possibile usare il valore restituito dalla proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=fullName> per recuperare il nome del giorno della settimana di una data specifica. È necessario effettuare una chiamata al metodo <xref:System.Enum.ToString%2A> sul valore <xref:System.DayOfWeek> restituito dalla proprietà. Questa tecnica non restituisce tuttavia un nome del giorno della settimana localizzato per le impostazioni di cultura correnti, come illustrato nell'esempio seguente.  
+ <span data-ttu-id="914d5-138">È anche possibile usare il valore restituito dalla proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> per recuperare il nome del giorno della settimana di una data specifica.</span><span class="sxs-lookup"><span data-stu-id="914d5-138">You can also use the value returned by the <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> property to retrieve the weekday name of a particular date.</span></span> <span data-ttu-id="914d5-139">È necessario effettuare una chiamata al metodo <xref:System.Enum.ToString%2A> sul valore <xref:System.DayOfWeek> restituito dalla proprietà.</span><span class="sxs-lookup"><span data-stu-id="914d5-139">This requires only a call to the <xref:System.Enum.ToString%2A> method on the <xref:System.DayOfWeek> value returned by the property.</span></span> <span data-ttu-id="914d5-140">Questa tecnica non restituisce tuttavia un nome del giorno della settimana localizzato per le impostazioni di cultura correnti, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="914d5-140">However, this technique does not produce a localized weekday name for the current culture, as the following example illustrates.</span></span>  
   
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
  [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]  
   
-## Vedere anche  
- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)   
- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+## <a name="see-also"></a><span data-ttu-id="914d5-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="914d5-141">See Also</span></span>  
+ [<span data-ttu-id="914d5-142">Esecuzione di operazioni di formattazione</span><span class="sxs-lookup"><span data-stu-id="914d5-142">Performing Formatting Operations</span></span>](../../../docs/standard/base-types/performing-formatting-operations.md)  
+ [<span data-ttu-id="914d5-143">Standard Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="914d5-143">Standard Date and Time Format Strings</span></span>](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [<span data-ttu-id="914d5-144">Custom Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="914d5-144">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

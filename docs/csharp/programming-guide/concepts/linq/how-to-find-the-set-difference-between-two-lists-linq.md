@@ -1,39 +1,30 @@
 ---
 title: 'Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d3987063a039b53b1e9ea7b39958835b0617aa2d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8089da9a1502b48018929978550bd2ceb2c0ec20
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)
-In questo esempio viene illustrato come usare LINQ per confrontare due elenchi di stringhe e restituire le righe presenti in names1.txt ma non in names2.txt.  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="dafc1-102">Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="dafc1-102">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>
+<span data-ttu-id="dafc1-103">In questo esempio viene illustrato come usare LINQ per confrontare due elenchi di stringhe e restituire le righe presenti in names1.txt ma non in names2.txt.</span><span class="sxs-lookup"><span data-stu-id="dafc1-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a>Per creare i file di dati  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="dafc1-104">Per creare i file di dati</span><span class="sxs-lookup"><span data-stu-id="dafc1-104">To create the data files</span></span>  
   
-1.  Copiare names1.txt e names2.txt nella cartella della soluzione come illustrato in [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  <span data-ttu-id="dafc1-105">Copiare names1.txt e names2.txt nella cartella della soluzione come illustrato in [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="dafc1-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="dafc1-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="dafc1-106">Example</span></span>  
   
 ```csharp  
 class CompareLists  
@@ -69,11 +60,10 @@ class CompareLists
      */  
 ```  
   
- Alcuni tipi di operazioni di query in C#, ad esempio <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A> e <xref:System.Linq.Enumerable.Concat%2A>, possono essere espressi solo nella sintassi basata su metodo.  
+ <span data-ttu-id="dafc1-107">Alcuni tipi di operazioni di query in C#, ad esempio <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A> e <xref:System.Linq.Enumerable.Concat%2A>, possono essere espressi solo nella sintassi basata su metodo.</span><span class="sxs-lookup"><span data-stu-id="dafc1-107">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="dafc1-108">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="dafc1-108">Compiling the Code</span></span>  
+ <span data-ttu-id="dafc1-109">Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="dafc1-109">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-
+## <a name="see-also"></a><span data-ttu-id="dafc1-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dafc1-110">See Also</span></span>  
+ [<span data-ttu-id="dafc1-111">LINQ e stringhe (C#)</span><span class="sxs-lookup"><span data-stu-id="dafc1-111">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

@@ -1,70 +1,51 @@
 ---
 title: Costruttori statici (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ee5448095cf06c2473c94bae542c02557918271a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73df76c61f393bf5fe09af66935acfbac4b5663f
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="static-constructors-c-programming-guide"></a>Costruttori statici (Guida per programmatori C#)
-Un costruttore statico consente di inizializzare gli eventuali dati [static](../../../csharp/language-reference/keywords/static.md) oppure di eseguire un'operazione specifica che deve essere effettuata una sola volta. Viene chiamato automaticamente prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.  
+# <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="4ca4c-102">Costruttori statici (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="4ca4c-102">Static Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="4ca4c-103">Un costruttore statico consente di inizializzare gli eventuali dati [static](../../../csharp/language-reference/keywords/static.md) oppure di eseguire un'operazione specifica che deve essere effettuata una sola volta.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="4ca4c-104">Viene chiamato automaticamente prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  
   
- [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
   
- I costruttori statici hanno le proprietà seguenti:  
+ <span data-ttu-id="4ca4c-105">I costruttori statici hanno le proprietà seguenti:</span><span class="sxs-lookup"><span data-stu-id="4ca4c-105">Static constructors have the following properties:</span></span>  
   
--   Un costruttore statico non accetta modificatori di accesso e non ha parametri.  
+-   <span data-ttu-id="4ca4c-106">Un costruttore statico non accetta modificatori di accesso e non ha parametri.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-106">A static constructor does not take access modifiers or have parameters.</span></span>  
   
--   Un costruttore statico viene chiamato automaticamente per inizializzare la [classe](../../../csharp/language-reference/keywords/class.md) prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.  
+-   <span data-ttu-id="4ca4c-107">Un costruttore statico viene chiamato automaticamente per inizializzare la [classe](../../../csharp/language-reference/keywords/class.md) prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-107">A static constructor is called automatically to initialize the [class](../../../csharp/language-reference/keywords/class.md) before the first instance is created or any static members are referenced.</span></span>  
   
--   Un costruttore statico non può essere chiamato direttamente.  
+-   <span data-ttu-id="4ca4c-108">Un costruttore statico non può essere chiamato direttamente.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-108">A static constructor cannot be called directly.</span></span>  
   
--   L'utente non può controllare in alcun modo il momento in cui il costruttore statico viene eseguito nel programma.  
+-   <span data-ttu-id="4ca4c-109">L'utente non può controllare in alcun modo il momento in cui il costruttore statico viene eseguito nel programma.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-109">The user has no control on when the static constructor is executed in the program.</span></span>  
   
--   In genere, i costruttori statici sono usati per scrivere voci nel file di log, quando alla classe è associato un file di log.  
+-   <span data-ttu-id="4ca4c-110">In genere, i costruttori statici sono usati per scrivere voci nel file di log, quando alla classe è associato un file di log.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-110">A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</span></span>  
   
--   I costruttori statici risultano utili anche durante la creazione di classi wrapper per il codice non gestito, quando il costruttore può chiamare il metodo `LoadLibrary`.  
+-   <span data-ttu-id="4ca4c-111">I costruttori statici risultano utili anche durante la creazione di classi wrapper per il codice non gestito, quando il costruttore può chiamare il metodo `LoadLibrary`.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-111">Static constructors are also useful when creating wrapper classes for unmanaged code, when the constructor can call the `LoadLibrary` method.</span></span>  
   
--   Se un costruttore statico genera un'eccezione, il runtime non lo chiamerà una seconda volta e il tipo rimarrà non inizializzato per la durata del dominio dell'applicazione in cui il programma è in esecuzione.  
+-   <span data-ttu-id="4ca4c-112">Se un costruttore statico genera un'eccezione, il runtime non lo chiamerà una seconda volta e il tipo rimarrà non inizializzato per la durata del dominio dell'applicazione in cui il programma è in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-112">If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.</span></span>  
   
-## <a name="example"></a>Esempio  
- In questo esempio la classe `Bus` ha un costruttore statico. Quando viene creata la prima istanza di `Bus` (`bus1`), il costruttore statico viene chiamato per inizializzare la classe. L'output dell'esempio verifica che il costruttore statico venga eseguito una sola volta, anche se vengono create due istanze di `Bus`, e che venga eseguito prima del costruttore di istanze.  
+## <a name="example"></a><span data-ttu-id="4ca4c-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="4ca4c-113">Example</span></span>  
+ <span data-ttu-id="4ca4c-114">In questo esempio la classe `Bus` ha un costruttore statico.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-114">In this example, class `Bus` has a static constructor.</span></span> <span data-ttu-id="4ca4c-115">Quando viene creata la prima istanza di `Bus` (`bus1`), il costruttore statico viene chiamato per inizializzare la classe.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-115">When the first instance of `Bus` is created (`bus1`), the static constructor is invoked to initialize the class.</span></span> <span data-ttu-id="4ca4c-116">L'output dell'esempio verifica che il costruttore statico venga eseguito una sola volta, anche se vengono create due istanze di `Bus`, e che venga eseguito prima del costruttore di istanze.</span><span class="sxs-lookup"><span data-stu-id="4ca4c-116">The sample output verifies that the static constructor runs only one time, even though two instances of `Bus` are created, and that it runs before the instance constructor runs.</span></span>  
   
- [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-
+## <a name="see-also"></a><span data-ttu-id="4ca4c-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4ca4c-117">See Also</span></span>  
+ [<span data-ttu-id="4ca4c-118">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="4ca4c-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="4ca4c-119">Classi e struct</span><span class="sxs-lookup"><span data-stu-id="4ca4c-119">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="4ca4c-120">Costruttori</span><span class="sxs-lookup"><span data-stu-id="4ca4c-120">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="4ca4c-121">Classi statiche e membri di classi statiche</span><span class="sxs-lookup"><span data-stu-id="4ca4c-121">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+ [<span data-ttu-id="4ca4c-122">Finalizzatori</span><span class="sxs-lookup"><span data-stu-id="4ca4c-122">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)

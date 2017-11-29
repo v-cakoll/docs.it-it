@@ -1,137 +1,143 @@
 ---
-title: "Costrutti di alternanza nelle espressioni regolari | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espressioni regolari di .NET Framework, costrutti di alternanza"
-  - "costrutti di alternanza"
-  - "criteri di corrispondenza alternativi"
-  - "costrutti, alternanza"
-  - "corrispondenza o/o"
-  - "criteri di corrispondenza facoltativi"
-  - "espressioni regolari, costrutti di alternanza"
+title: Costrutti di alternanza nelle espressioni regolari
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- either/or matching
+- alternative matching patterns
+- regular expressions, alternation constructs
+- alternation constructs
+- optional matching patterns
+- constructs, alternation
+- .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6ad632130b6f111ff863648b8b1a3b2835c27660
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Costrutti di alternanza nelle espressioni regolari
-<a name="top"></a> I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either\/or o condizionale. .NET Framework supporta tre costrutti di alternanza:  
+# <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="effea-102">Costrutti di alternanza nelle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="effea-102">Alternation Constructs in Regular Expressions</span></span>
+<span data-ttu-id="effea-103"><a name="top"></a> I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or o condizionale.</span><span class="sxs-lookup"><span data-stu-id="effea-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="effea-104">.NET supporta tre costrutti di alternanza:</span><span class="sxs-lookup"><span data-stu-id="effea-104">.NET supports three alternation constructs:</span></span>  
   
--   [Criteri di ricerca con &#124;](#Either_Or)  
+-   [<span data-ttu-id="effea-105">Criteri di ricerca con &#124;</span><span class="sxs-lookup"><span data-stu-id="effea-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   
--   [Corrispondenza condizionale con \(?\(espressione\)yes&#124;no\)](#Conditional_Expr)  
+-   [<span data-ttu-id="effea-106">Corrispondenza condizionale con (?(espressione)yes&#124;no)</span><span class="sxs-lookup"><span data-stu-id="effea-106">Conditional matching with (?(expression)yes&#124;no)</span></span>](#Conditional_Expr)  
   
--   [Corrispondenza condizionale in base a un gruppo di acquisizione valido](#Conditional_Group)  
+-   [<span data-ttu-id="effea-107">Corrispondenza condizionale in base a un gruppo di acquisizione valido</span><span class="sxs-lookup"><span data-stu-id="effea-107">Conditional matching based on a valid captured group</span></span>](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
-## Criteri di ricerca con &#124;  
- È possibile usare la barra verticale \(`|`\) per trovare la corrispondenza con uno qualsiasi di una serie di criteri, dove i singoli criteri sono separati dal carattere `|`.  
+## <a name="pattern-matching-with-124"></a><span data-ttu-id="effea-108">Criteri di ricerca con &#124;</span><span class="sxs-lookup"><span data-stu-id="effea-108">Pattern Matching with &#124;</span></span>  
+ <span data-ttu-id="effea-109">È possibile usare la barra verticale (`|`) per trovare la corrispondenza con uno qualsiasi di una serie di criteri, dove i singoli criteri sono separati dal carattere `|`.</span><span class="sxs-lookup"><span data-stu-id="effea-109">You can use the vertical bar (`|`) character to match any one of a series of patterns, where the `|` character separates each pattern.</span></span>  
   
- Analogamente alla classe di caratteri positivi, il carattere `|` può essere usato per trovare la corrispondenza con uno qualsiasi tra diversi caratteri singoli. L'esempio seguente usa sia una classe di caratteri positivi sia criteri di ricerca di tipo either\/or con il carattere `|` per individuare le occorrenze delle parole "gray" o "grey" in una stringa. In questo caso, `|` produce un'espressione regolare più dettagliata.  
+ <span data-ttu-id="effea-110">Analogamente alla classe di caratteri positivi, il carattere `|` può essere usato per trovare la corrispondenza con uno qualsiasi tra diversi caratteri singoli.</span><span class="sxs-lookup"><span data-stu-id="effea-110">Like the positive character class, the `|` character can be used to match any one of a number of single characters.</span></span> <span data-ttu-id="effea-111">L'esempio seguente usa sia una classe di caratteri positivi sia criteri di ricerca di tipo either/or con il carattere `|` per individuare le occorrenze delle parole "gray" o "grey" in una stringa.</span><span class="sxs-lookup"><span data-stu-id="effea-111">The following example uses both a positive character class and either/or pattern matching with the `|` character to locate occurrences of the words "gray" or "grey" in a string.</span></span> <span data-ttu-id="effea-112">In questo caso, `|` produce un'espressione regolare più dettagliata.</span><span class="sxs-lookup"><span data-stu-id="effea-112">In this case, the `|` character produces a regular expression that is more verbose.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
  [!code-vb[RegularExpressions.Language.Alternation#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]  
   
- L'espressione regolare che usa il carattere `|`, `\bgr(a|e)y\b`, viene interpretata nel modo illustrato nella tabella seguente.  
+ <span data-ttu-id="effea-113">L'espressione regolare che usa il carattere `|` , `\bgr(a|e)y\b`, viene interpretata nel modo illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="effea-113">The regular expression that uses the `|` character, `\bgr(a|e)y\b`, is interpreted as shown in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`\b`|Inizia dal confine di una parola.|  
-|`gr`|Corrisponde ai caratteri "gr".|  
-|`(a&#124;e)`|Corrisponde a una "a" o una "e".|  
-|`y\b`|Corrisponde a una "y" in un confine di parola.|  
+|<span data-ttu-id="effea-114">Criterio</span><span class="sxs-lookup"><span data-stu-id="effea-114">Pattern</span></span>|<span data-ttu-id="effea-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="effea-115">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="effea-116">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="effea-116">Start at a word boundary.</span></span>|  
+|`gr`|<span data-ttu-id="effea-117">Corrisponde ai caratteri "gr".</span><span class="sxs-lookup"><span data-stu-id="effea-117">Match the characters "gr".</span></span>|  
+|<code>(a&#124;e)</code>|<span data-ttu-id="effea-118">Corrisponde a una "a" o una "e".</span><span class="sxs-lookup"><span data-stu-id="effea-118">Match either an "a" or an "e".</span></span>|  
+|`y\b`|<span data-ttu-id="effea-119">Corrisponde a una "y" in un confine di parola.</span><span class="sxs-lookup"><span data-stu-id="effea-119">Match a "y" on a word boundary.</span></span>|  
   
- Il carattere `|` può essere usato anche per trovare una corrispondenza di tipo either\/or con più caratteri o sottoesspressioni, che possono includere qualsiasi combinazione di valori letterali carattere ed elementi del linguaggio di espressioni regolari. La classe di caratteri non offre questa funzionalità. L'esempio seguente usa il carattere `|` per estrarre un numero di previdenza sociale \(SSN, Social Security Number\) degli Stati Uniti, che corrisponde a un numero a 9 cifre \(d, digit\) con il formato *ddd*\-*dd*\-*dddd*, oppure un identificativo del datore di lavoro \(EIN, Employer Identification Number\) degli Stati Uniti, che corrisponde a un numero a 9 cifre \(d, digit\) con il formato *dd*\-*ddddddd*.  
+ <span data-ttu-id="effea-120">Il carattere `|` può essere usato anche per trovare una corrispondenza di tipo either/or con più caratteri o sottoesspressioni, che possono includere qualsiasi combinazione di valori letterali carattere ed elementi del linguaggio di espressioni regolari.</span><span class="sxs-lookup"><span data-stu-id="effea-120">The `|` character can also be used to perform an either/or match with multiple characters or subexpressions, which can include any combination of character literals and regular expression language elements.</span></span> <span data-ttu-id="effea-121">La classe di caratteri non offre questa funzionalità. L'esempio seguente usa il carattere `|` per estrarre un numero di previdenza sociale (SSN, Social Security Number) degli Stati Uniti, che corrisponde a un numero a 9 cifre (d, digit) con il formato *ddd*-*dd*-*dddd*, oppure un identificativo del datore di lavoro (EIN, Employer Identification Number) degli Stati Uniti, che corrisponde a un numero a 9 cifre (d, digit) con il formato *dd*-*ddddddd*.</span><span class="sxs-lookup"><span data-stu-id="effea-121">(The character class does not provide this functionality.) The following example uses the `|` character to extract either a U.S. Social Security Number (SSN), which is a 9-digit number with the format *ddd*-*dd*-*dddd*, or a U.S. Employer Identification Number (EIN), which is a 9-digit number with the format *dd*-*ddddddd*.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
  [!code-vb[RegularExpressions.Language.Alternation#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
   
- L'espressione regolare `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretata come illustrato nella tabella seguente.  
+ <span data-ttu-id="effea-122">L'espressione regolare `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretata come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="effea-122">The regular expression `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` is interpreted as shown in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`\b`|Inizia dal confine di una parola.|  
-|`(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})`|Corrisponde a una delle due opzioni seguenti: due cifre decimali seguite da un trattino seguito da sette cifre decimali oppure tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
-|`\d`|Termina la corrispondenza sul confine di parola.|  
+|<span data-ttu-id="effea-123">Criterio</span><span class="sxs-lookup"><span data-stu-id="effea-123">Pattern</span></span>|<span data-ttu-id="effea-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="effea-124">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="effea-125">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="effea-125">Start at a word boundary.</span></span>|  
+|<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|<span data-ttu-id="effea-126">Corrisponde a una delle due opzioni seguenti: due cifre decimali seguite da un trattino seguito da sette cifre decimali oppure tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="effea-126">Match either of the following: two decimal digits followed by a hyphen followed by seven decimal digits; or three decimal digits, a hyphen, two decimal digits, another hyphen, and four decimal digits.</span></span>|  
+|`\d`|<span data-ttu-id="effea-127">Termina la corrispondenza sul confine di parola.</span><span class="sxs-lookup"><span data-stu-id="effea-127">End the match at a word boundary.</span></span>|  
   
- [Torna all'inizio](#top)  
+ [<span data-ttu-id="effea-128">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="effea-128">Back to top</span></span>](#top)  
   
 <a name="Conditional_Expr"></a>   
-## Corrispondenza condizionale con un'espressione  
- Questo elemento del linguaggio tenta di trovare una corrispondenza con uno di due criteri, a seconda della possibilità di trovare una corrispondenza con un criterio iniziale. La sintassi è la seguente:  
+## <a name="conditional-matching-with-an-expression"></a><span data-ttu-id="effea-129">Corrispondenza condizionale con un'espressione</span><span class="sxs-lookup"><span data-stu-id="effea-129">Conditional Matching with an Expression</span></span>  
+ <span data-ttu-id="effea-130">Questo elemento del linguaggio tenta di trovare una corrispondenza con uno di due criteri, a seconda della possibilità di trovare una corrispondenza con un criterio iniziale.</span><span class="sxs-lookup"><span data-stu-id="effea-130">This language element attempts to match one of two patterns depending on whether it can match an initial pattern.</span></span> <span data-ttu-id="effea-131">La sintassi è la seguente:</span><span class="sxs-lookup"><span data-stu-id="effea-131">Its syntax is:</span></span>  
   
- `(?(` *espressione* `)` *sì* `|` *no* `)`  
+ <span data-ttu-id="effea-132">`(?(` *espressione* `)` *sì* `|` *no* `)`</span><span class="sxs-lookup"><span data-stu-id="effea-132">`(?(` *expression* `)` *yes* `|` *no* `)`</span></span>  
   
- dove *espressione* è il criterio iniziale per la corrispondenza, *sì* è il criterio di corrispondenza se viene trovata una corrispondenza per *espressione* e *no* è il criterio facoltativo di corrispondenza se non viene trovata una corrispondenza per *espressione*. Il motore delle espressioni regolari considera *espressione* come un'asserzione di larghezza zero, ovvero questo motore non avanza nel flusso di input dopo aver valutato *espressione*. Questo costrutto è pertanto equivalente a quanto segue:  
+ <span data-ttu-id="effea-133">dove *espressione* è il criterio iniziale per la corrispondenza, *sì* è il criterio di corrispondenza se viene trovata una corrispondenza per *espressione* e *no* è il criterio facoltativo di corrispondenza se non viene trovata una corrispondenza per *espressione* .</span><span class="sxs-lookup"><span data-stu-id="effea-133">where *expression* is the initial pattern to match, *yes* is the pattern to match if *expression* is matched, and *no* is the optional pattern to match if *expression* is not matched.</span></span> <span data-ttu-id="effea-134">Il motore delle espressioni regolari considera *espressione* come un'asserzione di larghezza zero, ovvero questo motore non avanza nel flusso di input dopo aver valutato *espressione*.</span><span class="sxs-lookup"><span data-stu-id="effea-134">The regular expression engine treats *expression* as a zero-width assertion; that is, the regular expression engine does not advance in the input stream after it evaluates *expression*.</span></span> <span data-ttu-id="effea-135">Questo costrutto è pertanto equivalente a quanto segue:</span><span class="sxs-lookup"><span data-stu-id="effea-135">Therefore, this construct is equivalent to the following:</span></span>  
   
- `(?(?=` *espressione* `)` *sì* `|` *no* `)`  
+ <span data-ttu-id="effea-136">`(?(?=` *espressione* `)` *sì* `|` *no* `)`</span><span class="sxs-lookup"><span data-stu-id="effea-136">`(?(?=` *expression* `)` *yes* `|` *no* `)`</span></span>  
   
- dove `(?=`*espressione*`)` è un costrutto di asserzione di larghezza zero. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md). Poiché il motore delle espressioni regolari interpreta *espressione* come un ancoraggio \(un'asserzione di larghezza zero\), *espressione* deve essere un'asserzione di larghezza zero \(per altre informazioni, vedere [Ancoraggi](../../../docs/standard/base-types/anchors-in-regular-expressions.md)\) o una sottoespressione anch'essa contenuta in *sì*. In caso contrario, non è possibile trovare una corrispondenza per il criterio *sì*.  
+ <span data-ttu-id="effea-137">dove `(?=`*espressione*`)` è un costrutto di asserzione di larghezza zero.</span><span class="sxs-lookup"><span data-stu-id="effea-137">where `(?=`*expression*`)` is a zero-width assertion construct.</span></span> <span data-ttu-id="effea-138">Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md). Poiché il motore delle espressioni regolari interpreta *espressione* come un ancoraggio (un'asserzione di larghezza zero), *espressione* deve essere un'asserzione di larghezza zero (per altre informazioni, vedere [Ancoraggi in espressioni regolari](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) o una sottoespressione contenuta in *yes*.</span><span class="sxs-lookup"><span data-stu-id="effea-138">(For more information, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).) Because the regular expression engine interprets *expression* as an anchor (a zero-width assertion), *expression* must either be a zero-width assertion (for more information, see [Anchors](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) or a subexpression that is also contained in *yes*.</span></span> <span data-ttu-id="effea-139">In caso contrario, non è possibile trovare una corrispondenza per il criterio *yes*.</span><span class="sxs-lookup"><span data-stu-id="effea-139">Otherwise, the *yes* pattern cannot be matched.</span></span>  
   
 > [!NOTE]
->  Se *espressione* è un gruppo di acquisizione denominato o numerato, il costrutto di alternanza viene interpretato come un test di acquisizione. Per altre informazioni, vedere la sezione successiva, [Corrispondenza condizionale in base a un gruppo Capture valido](#Conditional_Group). In altre parole, il motore delle espressioni regolari non tenta di trovare la corrispondenza con la sottostringa acquisita, ma verifica invece la presenza o l'assenza del gruppo.  
+>  <span data-ttu-id="effea-140">Se *espressione*è un gruppo di acquisizione denominato o numerato, il costrutto di alternanza viene interpretato come un test di acquisizione. Per altre informazioni, vedere la sezione successiva, [Corrispondenza condizionale in base a un gruppo Capture valido](#Conditional_Group).</span><span class="sxs-lookup"><span data-stu-id="effea-140">If *expression*is a named or numbered capturing group, the alternation construct is interpreted as a capture test; for more information, see the next section, [Conditional Matching Based on a Valid Capture Group](#Conditional_Group).</span></span> <span data-ttu-id="effea-141">In altre parole, il motore delle espressioni regolari non tenta di trovare la corrispondenza con la sottostringa acquisita, ma verifica invece la presenza o l'assenza del gruppo.</span><span class="sxs-lookup"><span data-stu-id="effea-141">In other words, the regular expression engine does not attempt to match the captured substring, but instead tests for the presence or absence of the group.</span></span>  
   
- L'esempio seguente è una variante dell'esempio visualizzato nella sezione relativa ai [criteri di ricerca either\/or con &#124;](#Either_Or). L'esempio usa la corrispondenza condizionale per determinare se i primi tre caratteri dopo un confine di parola sono due cifre seguite da un trattino. In caso affermativo, viene effettuato un tentativo di trovare una corrispondenza con un identificativo del datore di lavoro \(EIN\) degli Stati Uniti. In caso contrario, viene effettuato un tentativo di trovare una corrispondenza con un numero di previdenza sociale \(SSN\) degli Stati Uniti.  
+ <span data-ttu-id="effea-142">L'esempio seguente è una variante dell'esempio visualizzato nella sezione relativa ai [criteri di ricerca either/or con &#124;](#Either_Or).</span><span class="sxs-lookup"><span data-stu-id="effea-142">The following example is a variation of the example that appears in the [Either/Or Pattern Matching with &#124;](#Either_Or) section.</span></span> <span data-ttu-id="effea-143">L'esempio usa la corrispondenza condizionale per determinare se i primi tre caratteri dopo un confine di parola sono due cifre seguite da un trattino.</span><span class="sxs-lookup"><span data-stu-id="effea-143">It uses conditional matching to determine whether the first three characters after a word boundary are two digits followed by a hyphen.</span></span> <span data-ttu-id="effea-144">In caso affermativo, viene effettuato un tentativo di trovare una corrispondenza con un identificativo del datore di lavoro (EIN) degli Stati Uniti.</span><span class="sxs-lookup"><span data-stu-id="effea-144">If they are, it attempts to match a U.S. Employer Identification Number (EIN).</span></span> <span data-ttu-id="effea-145">In caso contrario, viene effettuato un tentativo di trovare una corrispondenza con un numero di previdenza sociale (SSN) degli Stati Uniti.</span><span class="sxs-lookup"><span data-stu-id="effea-145">If not, it attempts to match a U.S. Social Security Number (SSN).</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation3.cs#3)]
  [!code-vb[RegularExpressions.Language.Alternation#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation3.vb#3)]  
   
- Il criterio di ricerca di espressioni regolari `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.  
+ <span data-ttu-id="effea-146">Il criterio di ricerca di espressioni regolari `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="effea-146">The regular expression pattern `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` is interpreted as shown in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`\b`|Inizia dal confine di una parola.|  
-|`(?(\d{2}-)`|Determina se i tre caratteri successivi sono costituiti da due cifre seguite da un trattino.|  
-|`\d{2}-\d{7}`|Se il criterio precedente viene soddisfatto, trova la corrispondenza con due cifre seguite da un trattino seguito da sette cifre.|  
-|`\d{3}-\d{2}-\d{4}`|Se il criterio precedente non viene soddisfatto, trova la corrispondenza con tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
-|`\b`|Trova la corrispondenza di un confine di parola.|  
+|<span data-ttu-id="effea-147">Criterio</span><span class="sxs-lookup"><span data-stu-id="effea-147">Pattern</span></span>|<span data-ttu-id="effea-148">Descrizione</span><span class="sxs-lookup"><span data-stu-id="effea-148">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="effea-149">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="effea-149">Start at a word boundary.</span></span>|  
+|`(?(\d{2}-)`|<span data-ttu-id="effea-150">Determina se i tre caratteri successivi sono costituiti da due cifre seguite da un trattino.</span><span class="sxs-lookup"><span data-stu-id="effea-150">Determine whether the next three characters consist of two digits followed by a hyphen.</span></span>|  
+|`\d{2}-\d{7}`|<span data-ttu-id="effea-151">Se il criterio precedente viene soddisfatto, trova la corrispondenza con due cifre seguite da un trattino seguito da sette cifre.</span><span class="sxs-lookup"><span data-stu-id="effea-151">If the previous pattern matches, match two digits followed by a hyphen followed by seven digits.</span></span>|  
+|`\d{3}-\d{2}-\d{4}`|<span data-ttu-id="effea-152">Se il criterio precedente non viene soddisfatto, trova la corrispondenza con tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="effea-152">If the previous pattern does not match, match three decimal digits, a hyphen, two decimal digits, another hyphen, and four decimal digits.</span></span>|  
+|`\b`|<span data-ttu-id="effea-153">Trova la corrispondenza di un confine di parola.</span><span class="sxs-lookup"><span data-stu-id="effea-153">Match a word boundary.</span></span>|  
   
- [Torna all'inizio](#top)  
+ [<span data-ttu-id="effea-154">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="effea-154">Back to top</span></span>](#top)  
   
 <a name="Conditional_Group"></a>   
-## Corrispondenza condizionale in base a un gruppo di acquisizione valido  
- Tramite questo elemento di linguaggio viene effettuato un tentativo di corrispondenza con uno dei due modelli, a seconda dell'effettiva corrispondenza con un gruppo di acquisizione specificato. La sintassi è la seguente:  
+## <a name="conditional-matching-based-on-a-valid-captured-group"></a><span data-ttu-id="effea-155">Corrispondenza condizionale in base a un gruppo di acquisizione valido</span><span class="sxs-lookup"><span data-stu-id="effea-155">Conditional Matching Based on a Valid Captured Group</span></span>  
+ <span data-ttu-id="effea-156">Tramite questo elemento di linguaggio viene effettuato un tentativo di corrispondenza con uno dei due modelli, a seconda dell'effettiva corrispondenza con un gruppo di acquisizione specificato.</span><span class="sxs-lookup"><span data-stu-id="effea-156">This language element attempts to match one of two patterns depending on whether it has matched a specified capturing group.</span></span> <span data-ttu-id="effea-157">La sintassi è la seguente:</span><span class="sxs-lookup"><span data-stu-id="effea-157">Its syntax is:</span></span>  
   
- `(?(` *nome* `)` *sì* `|` *no* `)`  
+ <span data-ttu-id="effea-158">`(?(` *nome* `)` *sì* `|` *no* `)`</span><span class="sxs-lookup"><span data-stu-id="effea-158">`(?(` *name* `)` *yes* `|` *no* `)`</span></span>  
   
- oppure  
+ <span data-ttu-id="effea-159">oppure</span><span class="sxs-lookup"><span data-stu-id="effea-159">or</span></span>  
   
- `(?(` *numero* `)` *sì* `|` *no* `)`  
+ <span data-ttu-id="effea-160">`(?(` *numero* `)` *sì* `|` *no* `)`</span><span class="sxs-lookup"><span data-stu-id="effea-160">`(?(` *number* `)` *yes* `|` *no* `)`</span></span>  
   
- dove *nome* è il nome e *numero* è il numero di un gruppo di acquisizione, *sì* è l'espressione di cui trovare la corrispondenza se per *nome* o *numero* è disponibile una corrispondenza e *no* è l'espressione facoltativa di cui trovare la corrispondenza in caso contrario.  
+ <span data-ttu-id="effea-161">dove *nome* è il nome e *numero* è il numero di un gruppo di acquisizione, *sì* è l'espressione di cui trovare la corrispondenza se per *nome* o *numero* è disponibile una corrispondenza e *no* è l'espressione facoltativa di cui trovare la corrispondenza in caso contrario.</span><span class="sxs-lookup"><span data-stu-id="effea-161">where *name* is the name and *number* is the number of a capturing group, *yes* is the expression to match if *name* or *number* has a match, and *no* is the optional expression to match if it does not.</span></span>  
   
- Se *nome* non corrisponde al nome di un gruppo di acquisizione usato nel criterio di espressione regolare, il costrutto di alternanza viene interpretato come un test di espressione, come illustrato nella sezione precedente. In genere, ciò significa che *espressione* restituisce `false`. Se *numero* non corrisponde a un gruppo di acquisizione numerato usato nel criterio di espressione regolare, il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>.  
+ <span data-ttu-id="effea-162">Se *nome* non corrisponde al nome di un gruppo di acquisizione usato nel criterio di espressione regolare, il costrutto di alternanza viene interpretato come un test di espressione, come illustrato nella sezione precedente.</span><span class="sxs-lookup"><span data-stu-id="effea-162">If *name* does not correspond to the name of a capturing group that is used in the regular expression pattern, the alternation construct is interpreted as an expression test, as explained in the previous section.</span></span> <span data-ttu-id="effea-163">In genere, ciò significa che *espressione* restituisce `false`.</span><span class="sxs-lookup"><span data-stu-id="effea-163">Typically, this means that *expression* evaluates to `false`.</span></span> <span data-ttu-id="effea-164">Se *numero* non corrisponde a un gruppo di acquisizione numerato usato nel criterio di espressione regolare, il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="effea-164">If *number* does not correspond to a numbered capturing group that is used in the regular expression pattern, the regular expression engine throws an <xref:System.ArgumentException>.</span></span>  
   
- L'esempio seguente è una variante dell'esempio visualizzato nella sezione relativa ai [criteri di ricerca either\/or con &#124;](#Either_Or). L'esempio usa un gruppo di acquisizione denominato `n2` costituito da due cifre seguite da un trattino. Il costrutto di alternanza verifica se per questo gruppo di acquisizione è presente una corrispondenza nella stringa di input. In caso affermativo, il costrutto di alternanza tenta di trovare la corrispondenza con le ultime sette cifre delle nove cifre di un identificativo del datore di lavoro \(EIN\) degli Stati Uniti. In caso contrario, tenta di trovare la corrispondenza con le nove cifre di un numero di previdenza sociale \(SSN\) degli Stati Uniti.  
+ <span data-ttu-id="effea-165">L'esempio seguente è una variante dell'esempio visualizzato nella sezione relativa ai [criteri di ricerca either/or con &#124;](#Either_Or).</span><span class="sxs-lookup"><span data-stu-id="effea-165">The following example is a variation of the example that appears in the [Either/Or Pattern Matching with &#124;](#Either_Or) section.</span></span> <span data-ttu-id="effea-166">L'esempio usa un gruppo di acquisizione denominato `n2` costituito da due cifre seguite da un trattino.</span><span class="sxs-lookup"><span data-stu-id="effea-166">It uses a capturing group named `n2` that consists of two digits followed by a hyphen.</span></span> <span data-ttu-id="effea-167">Il costrutto di alternanza verifica se per questo gruppo di acquisizione è presente una corrispondenza nella stringa di input.</span><span class="sxs-lookup"><span data-stu-id="effea-167">The alternation construct tests whether this capturing group has been matched in the input string.</span></span> <span data-ttu-id="effea-168">In caso affermativo, il costrutto di alternanza tenta di trovare la corrispondenza con le ultime sette cifre delle nove cifre di un identificativo del datore di lavoro (EIN) degli Stati Uniti.</span><span class="sxs-lookup"><span data-stu-id="effea-168">If it has, the alternation construct attempts to match the last seven digits of a nine-digit U.S. Employer Identification Number (EIN).</span></span> <span data-ttu-id="effea-169">In caso contrario, tenta di trovare la corrispondenza con le nove cifre di un numero di previdenza sociale (SSN) degli Stati Uniti.</span><span class="sxs-lookup"><span data-stu-id="effea-169">If it has not, it attempts to match a nine-digit U.S. Social Security Number (SSN).</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- Il criterio di ricerca di espressioni regolari `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.  
+ <span data-ttu-id="effea-170">Il criterio di ricerca di espressioni regolari `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="effea-170">The regular expression pattern `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` is interpreted as shown in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`\b`|Inizia dal confine di una parola.|  
-|`(?<n2>\d{2}-)*`|Corrisponde a zero o una occorrenza di due cifre seguite da un trattino. Il nome di questo gruppo di acquisizione è `n2`.|  
-|`(?(n2)`|Verificare se per `n2` è stata individuata una corrispondenza nella stringa di input.|  
-|`)\d{7}`|Se per `n2` è stata individuata una corrispondenza, far corrispondere sette cifre decimali.|  
-|`&#124;\d{3}-\d{2}-\d{4}`|Se per `n2` non è stata trovata alcuna corrispondenza, far corrispondere tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
-|`\b`|Trova la corrispondenza di un confine di parola.|  
+|<span data-ttu-id="effea-171">Criterio</span><span class="sxs-lookup"><span data-stu-id="effea-171">Pattern</span></span>|<span data-ttu-id="effea-172">Descrizione</span><span class="sxs-lookup"><span data-stu-id="effea-172">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="effea-173">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="effea-173">Start at a word boundary.</span></span>|  
+|`(?<n2>\d{2}-)*`|<span data-ttu-id="effea-174">Corrisponde a zero o una occorrenza di due cifre seguite da un trattino.</span><span class="sxs-lookup"><span data-stu-id="effea-174">Match zero or one occurrence of two digits followed by a hyphen.</span></span> <span data-ttu-id="effea-175">Il nome di questo gruppo di acquisizione è `n2`.</span><span class="sxs-lookup"><span data-stu-id="effea-175">Name this capturing group `n2`.</span></span>|  
+|`(?(n2)`|<span data-ttu-id="effea-176">Verificare se per `n2` è stata individuata una corrispondenza nella stringa di input.</span><span class="sxs-lookup"><span data-stu-id="effea-176">Test whether `n2` was matched in the input string.</span></span>|  
+|`)\d{7}`|<span data-ttu-id="effea-177">Se per `n2` è stata individuata una corrispondenza, far corrispondere sette cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="effea-177">If `n2` was matched, match seven decimal digits.</span></span>|  
+|<code>&#124;\d{3}-\d{2}-\d{4}</code>|<span data-ttu-id="effea-178">Se per `n2` non è stata trovata alcuna corrispondenza, far corrispondere tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="effea-178">If `n2` was not matched, match three decimal digits, a hyphen, two decimal digits, another hyphen, and four decimal digits.</span></span>|  
+|`\b`|<span data-ttu-id="effea-179">Trova la corrispondenza di un confine di parola.</span><span class="sxs-lookup"><span data-stu-id="effea-179">Match a word boundary.</span></span>|  
   
- Nell'esempio seguente è illustrata una variante di questo esempio che usa un gruppo numerato anziché un gruppo denominato. Il criterio di espressione regolare è `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
+ <span data-ttu-id="effea-180">Nell'esempio seguente è illustrata una variante di questo esempio che usa un gruppo numerato anziché un gruppo denominato.</span><span class="sxs-lookup"><span data-stu-id="effea-180">A variation of this example that uses a numbered group instead of a named group is shown in the following example.</span></span> <span data-ttu-id="effea-181">Il criterio di espressione regolare è `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.</span><span class="sxs-lookup"><span data-stu-id="effea-181">Its regular expression pattern is `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  
   
-## Vedere anche  
- [Linguaggio di espressioni regolari \- Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a><span data-ttu-id="effea-182">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="effea-182">See Also</span></span>  
+ [<span data-ttu-id="effea-183">Linguaggio di espressioni regolari - Riferimento rapido</span><span class="sxs-lookup"><span data-stu-id="effea-183">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

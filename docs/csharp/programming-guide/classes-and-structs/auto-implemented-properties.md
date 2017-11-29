@@ -1,59 +1,40 @@
 ---
 title: "Proprietà implementate automaticamente (Guida per programmatori C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1aa923c6d8208c2d5451957c4112493d0acd561d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 92e0037b73f1054673ea8060b71af5bd4db13ca3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="auto-implemented-properties-c-programming-guide"></a>Proprietà implementate automaticamente (Guida per programmatori C#)
-In C# 3.0 e versioni successive, le proprietà implementate automaticamente rendono più concisa la dichiarazione di proprietà quando nelle funzioni di accesso della proprietà non è necessaria alcuna logica aggiuntiva. Consentono inoltre al codice client di creare oggetti. Quando si dichiara una proprietà come mostrato nel seguente esempio, il compilatore crea un campo sottostante privato anonimo accessibile solo tramite le funzioni di accesso `get` e `set` della proprietà.  
+# <a name="auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="93b4b-102">Proprietà implementate automaticamente (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="93b4b-102">Auto-Implemented Properties (C# Programming Guide)</span></span>
+<span data-ttu-id="93b4b-103">In C# 3.0 e versioni successive, le proprietà implementate automaticamente rendono più concisa la dichiarazione di proprietà quando nelle funzioni di accesso della proprietà non è necessaria alcuna logica aggiuntiva.</span><span class="sxs-lookup"><span data-stu-id="93b4b-103">In C# 3.0 and later, auto-implemented properties make property-declaration more concise when no additional logic is required in the property accessors.</span></span> <span data-ttu-id="93b4b-104">Consentono inoltre al codice client di creare oggetti.</span><span class="sxs-lookup"><span data-stu-id="93b4b-104">They also enable client code to create objects.</span></span> <span data-ttu-id="93b4b-105">Quando si dichiara una proprietà come mostrato nel seguente esempio, il compilatore crea un campo sottostante privato anonimo accessibile solo tramite le funzioni di accesso `get` e `set` della proprietà.</span><span class="sxs-lookup"><span data-stu-id="93b4b-105">When you declare a property as shown in the following example, the compiler creates a private, anonymous backing field that can only be accessed through the property's `get` and `set` accessors.</span></span>  
   
-## <a name="example"></a>Esempio  
- L'esempio seguente mostra una classe semplice con alcune proprietà implementate automaticamente:  
+## <a name="example"></a><span data-ttu-id="93b4b-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="93b4b-106">Example</span></span>  
+ <span data-ttu-id="93b4b-107">L'esempio seguente mostra una classe semplice con alcune proprietà implementate automaticamente:</span><span class="sxs-lookup"><span data-stu-id="93b4b-107">The following example shows a simple class that has some auto-implemented properties:</span></span>  
   
- [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
- In C# 6 e versioni successive, è possibile inizializzare le proprietà implementate automaticamente in modo simile ai campi:  
+ <span data-ttu-id="93b4b-108">In C# 6 e versioni successive, è possibile inizializzare le proprietà implementate automaticamente in modo simile ai campi:</span><span class="sxs-lookup"><span data-stu-id="93b4b-108">In C# 6 and later, you can initialize auto-implemented properties similarly to fields:</span></span>  
   
 ```csharp  
 public string FirstName { get; set; } = "Jane";  
 ```  
   
- La classe mostrata nell'esempio precedente è modificabile. Il codice client può modificare i valori negli oggetti dopo che sono stati creati. Nelle classi complesse che contengono un comportamento significativo (metodi) oltre ai dati, spesso è necessario disporre di proprietà pubbliche. Tuttavia, per le classi o gli struct di piccole dimensioni che incapsulano solo un set di valori (dati) e non hanno comportamenti oppure hanno comportamenti limitati, è consigliabile rendere gli oggetti non modificabili dichiarando la funzione di accesso set come [private](../../../csharp/language-reference/keywords/private.md) (non modificabile dai consumer) o dichiarando solo una funzione di accesso get (non modificabile, tranne che nel costruttore).  Per altre informazioni, vedere [Procedura: Implementare una classe leggera con proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).  
+ <span data-ttu-id="93b4b-109">La classe mostrata nell'esempio precedente è modificabile.</span><span class="sxs-lookup"><span data-stu-id="93b4b-109">The class that is shown in the previous example is mutable.</span></span> <span data-ttu-id="93b4b-110">Il codice client può modificare i valori negli oggetti dopo che sono stati creati.</span><span class="sxs-lookup"><span data-stu-id="93b4b-110">Client code can change the values in objects after they are created.</span></span> <span data-ttu-id="93b4b-111">Nelle classi complesse che contengono un comportamento significativo (metodi) oltre ai dati, spesso è necessario disporre di proprietà pubbliche.</span><span class="sxs-lookup"><span data-stu-id="93b4b-111">In complex classes that contain significant behavior (methods) as well as data, it is often necessary to have public properties.</span></span> <span data-ttu-id="93b4b-112">Tuttavia, per le classi o gli struct di piccole dimensioni che incapsulano solo un set di valori (dati) e non hanno comportamenti oppure hanno comportamenti limitati, è consigliabile rendere gli oggetti non modificabili dichiarando la funzione di accesso set come [private](../../../csharp/language-reference/keywords/private.md) (non modificabile dai consumer) o dichiarando solo una funzione di accesso get (non modificabile, tranne che nel costruttore).</span><span class="sxs-lookup"><span data-stu-id="93b4b-112">However, for small classes or structs that just encapsulate a set of values (data) and have little or no behaviors, you should either make the objects immutable by declaring the set accessor as [private](../../../csharp/language-reference/keywords/private.md) (immutable to consumers) or by declaring only a get accessor (immutable everywhere except the constructor).</span></span>  <span data-ttu-id="93b4b-113">Per altre informazioni, vedere [Procedura: Implementare una classe leggera con proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="93b4b-113">For more information, see [How to: Implement a Lightweight Class with Auto-Implemented Properties](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).</span></span>  
   
- Gli attributi sono consentiti nelle proprietà implementate automaticamente, ma ovviamente non nei campi sottostanti perché non sono accessibili dal codice sorgente. Se è necessario usare un attributo nel campo sottostante di una proprietà, è sufficiente creare una normale proprietà.  
+ <span data-ttu-id="93b4b-114">Gli attributi sono consentiti nelle proprietà implementate automaticamente, ma ovviamente non nei campi sottostanti perché non sono accessibili dal codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="93b4b-114">Attributes are permitted on auto-implemented properties but obviously not on the backing fields since those are not accessible from your source code.</span></span> <span data-ttu-id="93b4b-115">Se è necessario usare un attributo nel campo sottostante di una proprietà, è sufficiente creare una normale proprietà.</span><span class="sxs-lookup"><span data-stu-id="93b4b-115">If you must use an attribute on the backing field of a property, just create a regular property.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)
-
+## <a name="see-also"></a><span data-ttu-id="93b4b-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="93b4b-116">See Also</span></span>  
+ [<span data-ttu-id="93b4b-117">Proprietà</span><span class="sxs-lookup"><span data-stu-id="93b4b-117">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="93b4b-118">Modificatori</span><span class="sxs-lookup"><span data-stu-id="93b4b-118">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)

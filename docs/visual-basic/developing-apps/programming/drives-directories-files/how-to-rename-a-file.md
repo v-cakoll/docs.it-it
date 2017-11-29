@@ -1,81 +1,62 @@
 ---
 title: 'Procedura: rinominare un file in Visual Basic'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
-- files, renaming
+- files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 34316fabf63959389eee498a6063ac7c9a7b320a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f003cfc7c7880a47515f7328a0503072f3b02cbf
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>Procedura: rinominare un file in Visual Basic
-Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominare un file fornendo la posizione corrente, il nome file attuale e il nuovo nome file. Questo metodo non può essere usato per spostare un file. Per spostare e rinominare un file, usare il metodo `MoveFile`.  
+# <a name="how-to-rename-a-file-in-visual-basic"></a><span data-ttu-id="48cfa-102">Procedura: rinominare un file in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="48cfa-102">How to: Rename a File in Visual Basic</span></span>
+<span data-ttu-id="48cfa-103">Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominare un file fornendo la posizione corrente, il nome file attuale e il nuovo nome file.</span><span class="sxs-lookup"><span data-stu-id="48cfa-103">Use the `RenameFile` method of the `My.Computer.FileSystem` object to rename a file by supplying the current location, file name, and the new file name.</span></span> <span data-ttu-id="48cfa-104">Questo metodo non può essere usato per spostare un file. Per spostare e rinominare un file, usare il metodo `MoveFile`.</span><span class="sxs-lookup"><span data-stu-id="48cfa-104">This method cannot be used to move a file; use the `MoveFile` method to move and rename the file.</span></span>  
   
-### <a name="to-rename-a-file"></a>Per rinominare un file  
+### <a name="to-rename-a-file"></a><span data-ttu-id="48cfa-105">Per rinominare un file</span><span class="sxs-lookup"><span data-stu-id="48cfa-105">To rename a file</span></span>  
   
--   Usare il metodo `My.Computer.FileSystem.RenameFile`per rinominare un file. In questo esempio il file `Test.txt` viene rinominato in `SecondTest.txt`.  
+-   <span data-ttu-id="48cfa-106">Usare il metodo `My.Computer.FileSystem.RenameFile`per rinominare un file.</span><span class="sxs-lookup"><span data-stu-id="48cfa-106">Use the `My.Computer.FileSystem.RenameFile` method to rename a file.</span></span> <span data-ttu-id="48cfa-107">In questo esempio il file `Test.txt` viene rinominato in `SecondTest.txt`.</span><span class="sxs-lookup"><span data-stu-id="48cfa-107">This example renames the file named `Test.txt` to `SecondTest.txt`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
- Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella casella di selezione dei frammenti di codice il frammento si trova in **File system - Elaborazione di unità, cartelle e file**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ <span data-ttu-id="48cfa-108">Questo esempio di codice è disponibile anche come frammento di codice IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="48cfa-108">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="48cfa-109">Nella casella di selezione dei frammenti di codice il frammento si trova in **File system - Elaborazione di unità, cartelle e file**.</span><span class="sxs-lookup"><span data-stu-id="48cfa-109">In the code snippet picker, the snippet is located in **File system - Processing Drives, Folders, and Files**.</span></span> <span data-ttu-id="48cfa-110">Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).</span><span class="sxs-lookup"><span data-stu-id="48cfa-110">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="robust-programming"></a>Programmazione efficiente  
- Le seguenti condizioni possono generare un'eccezione:  
+## <a name="robust-programming"></a><span data-ttu-id="48cfa-111">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="48cfa-111">Robust Programming</span></span>  
+ <span data-ttu-id="48cfa-112">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="48cfa-112">The following conditions may cause an exception:</span></span>  
   
--   Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="48cfa-113">Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-113">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   `newName` contiene informazioni sul percorso (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="48cfa-114">`newName` contiene informazioni sul percorso (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-114">`newName` contains path information (<xref:System.ArgumentException>).</span></span>  
   
--   Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="48cfa-115">Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-115">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   `newName` è `Nothing` o una stringa vuota (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="48cfa-116">`newName` è `Nothing` o una stringa vuota (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-116">`newName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>).</span></span>  
   
--   Il file di origine non è valido o non esiste (<xref:System.IO.FileNotFoundException>).  
+-   <span data-ttu-id="48cfa-117">Il file di origine non è valido o non esiste (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-117">The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   Esiste un file o directory con il nome specificato in `newName` (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="48cfa-118">Esiste un file o directory con il nome specificato in `newName` (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-118">There is an existing file or directory with the name specified in `newName` (<xref:System.IO.IOException>).</span></span>  
   
--   La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="48cfa-119">La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-119">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   Il nome di un file o di una directory nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).  
+-   <span data-ttu-id="48cfa-120">Il nome di un file o di una directory nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-120">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="48cfa-121">L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
--   L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
+-   <span data-ttu-id="48cfa-122">L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="48cfa-122">The user does not have the required permission (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>   
- [Procedura: Spostare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)   
- [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)   
- [Procedura: Creare una copia di un file nella stessa directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)   
- [Procedura: creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-
+## <a name="see-also"></a><span data-ttu-id="48cfa-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="48cfa-123">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>  
+ [<span data-ttu-id="48cfa-124">Procedura: spostare un file</span><span class="sxs-lookup"><span data-stu-id="48cfa-124">How to: Move a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [<span data-ttu-id="48cfa-125">Creazione, eliminazione e spostamento di file e directory</span><span class="sxs-lookup"><span data-stu-id="48cfa-125">Creating, Deleting, and Moving Files and Directories</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [<span data-ttu-id="48cfa-126">Procedura: creare una copia di un file nella stessa directory</span><span class="sxs-lookup"><span data-stu-id="48cfa-126">How to: Create a Copy of a File in the Same Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [<span data-ttu-id="48cfa-127">Procedura: creare una copia di un file in una directory diversa</span><span class="sxs-lookup"><span data-stu-id="48cfa-127">How to: Create a Copy of a File in a Different Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)

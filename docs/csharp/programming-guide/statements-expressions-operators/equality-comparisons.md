@@ -1,54 +1,34 @@
 ---
 title: Confronto di uguaglianze (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- object equality [C#]
+helpviewer_keywords: object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="equality-comparisons-c-programming-guide"></a>Confronto di uguaglianze (Guida per programmatori C#)
-A volte è necessario confrontare due valori per verificarne l'uguaglianza. In alcuni casi si verifica l'*uguaglianza dei valori*, nota anche come *equivalenza*, ovvero se i valori contenuti nelle due variabili sono uguali. In altri casi, è necessario determinare se due variabili fanno riferimento allo stesso oggetto sottostante in memoria. Questo tipo di uguaglianza è detto *uguaglianza dei riferimenti* o *identità*. In questo argomento vengono descritti questi due tipi di uguaglianza e indicati i collegamenti ad altri argomenti per le informazioni dettagliate.  
+# <a name="equality-comparisons-c-programming-guide"></a><span data-ttu-id="c5a34-102">Confronto di uguaglianze (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="c5a34-102">Equality Comparisons (C# Programming Guide)</span></span>
+<span data-ttu-id="c5a34-103">A volte è necessario confrontare due valori per verificarne l'uguaglianza.</span><span class="sxs-lookup"><span data-stu-id="c5a34-103">It is sometimes necessary to compare two values for equality.</span></span> <span data-ttu-id="c5a34-104">In alcuni casi si verifica l'*uguaglianza dei valori*, nota anche come *equivalenza*, ovvero se i valori contenuti nelle due variabili sono uguali.</span><span class="sxs-lookup"><span data-stu-id="c5a34-104">In some cases, you are testing for *value equality*, also known as *equivalence*, which means that the values that are contained by the two variables are equal.</span></span> <span data-ttu-id="c5a34-105">In altri casi, è necessario determinare se due variabili fanno riferimento allo stesso oggetto sottostante in memoria.</span><span class="sxs-lookup"><span data-stu-id="c5a34-105">In other cases, you have to determine whether two variables refer to the same underlying object in memory.</span></span> <span data-ttu-id="c5a34-106">Questo tipo di uguaglianza è detto *uguaglianza dei riferimenti* o *identità*.</span><span class="sxs-lookup"><span data-stu-id="c5a34-106">This type of equality is called *reference equality*, or *identity*.</span></span> <span data-ttu-id="c5a34-107">In questo argomento vengono descritti questi due tipi di uguaglianza e indicati i collegamenti ad altri argomenti per le informazioni dettagliate.</span><span class="sxs-lookup"><span data-stu-id="c5a34-107">This topic describes these two kinds of equality and provides links to other topics for more information.</span></span>  
   
-## <a name="reference-equality"></a>Uguaglianza di riferimenti  
- Uguaglianza di riferimenti significa che due riferimenti ad oggetti puntano allo stesso oggetto sottostante. Ciò può verificarsi con un'assegnazione semplice, come illustrato nell'esempio seguente.  
+## <a name="reference-equality"></a><span data-ttu-id="c5a34-108">Uguaglianza di riferimenti</span><span class="sxs-lookup"><span data-stu-id="c5a34-108">Reference Equality</span></span>  
+ <span data-ttu-id="c5a34-109">Uguaglianza di riferimenti significa che due riferimenti ad oggetti puntano allo stesso oggetto sottostante.</span><span class="sxs-lookup"><span data-stu-id="c5a34-109">Reference equality means that two object references refer to the same underlying object.</span></span> <span data-ttu-id="c5a34-110">Ciò può verificarsi con un'assegnazione semplice, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="c5a34-110">This can occur through simple assignment, as shown in the following example.</span></span>  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
- In questo codice vengono creati due oggetti, ma dopo l'istruzione di assegnazione, entrambi i riferimenti fanno riferimento allo stesso oggetto. Di conseguenza, esiste un'uguaglianza dei riferimenti. Usare il metodo <xref:System.Object.ReferenceEquals%2A> per determinare se due riferimenti fanno riferimento allo stesso oggetto.  
+ <span data-ttu-id="c5a34-111">In questo codice vengono creati due oggetti, ma dopo l'istruzione di assegnazione, entrambi i riferimenti fanno riferimento allo stesso oggetto.</span><span class="sxs-lookup"><span data-stu-id="c5a34-111">In this code, two objects are created, but after the assignment statement, both references refer to the same object.</span></span> <span data-ttu-id="c5a34-112">Di conseguenza, esiste un'uguaglianza dei riferimenti.</span><span class="sxs-lookup"><span data-stu-id="c5a34-112">Therefore they have reference equality.</span></span> <span data-ttu-id="c5a34-113">Usare il metodo <xref:System.Object.ReferenceEquals%2A> per determinare se due riferimenti fanno riferimento allo stesso oggetto.</span><span class="sxs-lookup"><span data-stu-id="c5a34-113">Use the <xref:System.Object.ReferenceEquals%2A> method to determine whether two references refer to the same object.</span></span>  
   
- Il concetto di uguaglianza dei riferimenti si applica solo ai tipi di riferimento. Per gli oggetti di tipo di valore non può esistere l'uguaglianza dei riferimenti poiché quando un'istanza di un tipo di valore viene assegnata a una variabile, viene creata una copia del valore. Di conseguenza, non è possibile avere due struct unboxed che fanno riferimento alla stessa posizione in memoria. Se inoltre si usa <xref:System.Object.ReferenceEquals%2A> per confrontare due tipi valore, il risultato sarà sempre `false`, anche se i valori contenuti negli oggetti sono tutti identici. Ciò avviene perché ogni variabile è di tipo boxed in un'istanza separata dell'oggetto. Per altre informazioni, vedere [Procedura: Testare l'uguaglianza dei riferimenti (identità)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).  
+ <span data-ttu-id="c5a34-114">Il concetto di uguaglianza dei riferimenti si applica solo ai tipi di riferimento.</span><span class="sxs-lookup"><span data-stu-id="c5a34-114">The concept of reference equality applies only to reference types.</span></span> <span data-ttu-id="c5a34-115">Per gli oggetti di tipo di valore non può esistere l'uguaglianza dei riferimenti poiché quando un'istanza di un tipo di valore viene assegnata a una variabile, viene creata una copia del valore.</span><span class="sxs-lookup"><span data-stu-id="c5a34-115">Value type objects cannot have reference equality because when an instance of a value type is assigned to a variable, a copy of the value is made.</span></span> <span data-ttu-id="c5a34-116">Di conseguenza, non è possibile avere due struct unboxed che fanno riferimento alla stessa posizione in memoria.</span><span class="sxs-lookup"><span data-stu-id="c5a34-116">Therefore you can never have two unboxed structs that refer to the same location in memory.</span></span> <span data-ttu-id="c5a34-117">Se inoltre si usa <xref:System.Object.ReferenceEquals%2A> per confrontare due tipi valore, il risultato sarà sempre `false`, anche se i valori contenuti negli oggetti sono tutti identici.</span><span class="sxs-lookup"><span data-stu-id="c5a34-117">Furthermore, if you use <xref:System.Object.ReferenceEquals%2A> to compare two value types, the result will always be `false`, even if the values that are contained in the objects are all identical.</span></span> <span data-ttu-id="c5a34-118">Ciò avviene perché ogni variabile è di tipo boxed in un'istanza separata dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="c5a34-118">This is because each variable is boxed into a separate object instance.</span></span> <span data-ttu-id="c5a34-119">Per altre informazioni, vedere [Procedura: Testare l'uguaglianza dei riferimenti (identità)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).</span><span class="sxs-lookup"><span data-stu-id="c5a34-119">For more information, see [How to: Test for Reference Equality (Identity)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).</span></span>  
   
-## <a name="value-equality"></a>uguaglianza di valori  
- Uguaglianza di valori significa che due oggetti contengono lo stesso valore o gli stessi valori. Per i tipi di valore primitivi, ad esempio [int](../../../csharp/language-reference/keywords/int.md) o [bool](../../../csharp/language-reference/keywords/bool.md), i test per verificare l'uguaglianza di valori sono semplici. È possibile usare l'operatore [==](../../../csharp/language-reference/operators/equality-comparison-operator.md), come indicato nell'esempio seguente.  
+## <a name="value-equality"></a><span data-ttu-id="c5a34-120">uguaglianza di valori</span><span class="sxs-lookup"><span data-stu-id="c5a34-120">Value Equality</span></span>  
+ <span data-ttu-id="c5a34-121">Uguaglianza di valori significa che due oggetti contengono lo stesso valore o gli stessi valori.</span><span class="sxs-lookup"><span data-stu-id="c5a34-121">Value equality means that two objects contain the same value or values.</span></span> <span data-ttu-id="c5a34-122">Per i tipi di valore primitivi, ad esempio [int](../../../csharp/language-reference/keywords/int.md) o [bool](../../../csharp/language-reference/keywords/bool.md), i test per verificare l'uguaglianza di valori sono semplici.</span><span class="sxs-lookup"><span data-stu-id="c5a34-122">For primitive value types such as [int](../../../csharp/language-reference/keywords/int.md) or [bool](../../../csharp/language-reference/keywords/bool.md), tests for value equality are straightforward.</span></span> <span data-ttu-id="c5a34-123">È possibile usare l'operatore [==](../../../csharp/language-reference/operators/equality-comparison-operator.md), come indicato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="c5a34-123">You can use the [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) operator, as shown in the following example.</span></span>  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -61,22 +41,21 @@ if( b == a)
 }  
 ```  
   
- Per la maggior parte degli altri tipi, il test dell'uguaglianza di valori è più complesso poiché è necessario sapere in che modo viene definito dal tipo. Per le classi e gli struct con più campi o proprietà, l'uguaglianza di valori viene spesso definita in modo che tutti i campi o tutte le proprietà abbiano lo stesso valore. Ad esempio, due oggetti `Point` possono essere definiti equivalenti se pointA.X è uguale a pointB.X e pointA.Y è uguale a pointB.Y.  
+ <span data-ttu-id="c5a34-124">Per la maggior parte degli altri tipi, il test dell'uguaglianza di valori è più complesso poiché è necessario sapere in che modo viene definito dal tipo.</span><span class="sxs-lookup"><span data-stu-id="c5a34-124">For most other types, testing for value equality is more complex because it requires that you understand how the type defines it.</span></span> <span data-ttu-id="c5a34-125">Per le classi e gli struct con più campi o proprietà, l'uguaglianza di valori viene spesso definita in modo che tutti i campi o tutte le proprietà abbiano lo stesso valore.</span><span class="sxs-lookup"><span data-stu-id="c5a34-125">For classes and structs that have multiple fields or properties, value equality is often defined to mean that all fields or properties have the same value.</span></span> <span data-ttu-id="c5a34-126">Ad esempio, due oggetti `Point` possono essere definiti equivalenti se pointA.X è uguale a pointB.X e pointA.Y è uguale a pointB.Y.</span><span class="sxs-lookup"><span data-stu-id="c5a34-126">For example, two `Point` objects might be defined to be equivalent if pointA.X is equal to pointB.X and pointA.Y is equal to pointB.Y.</span></span>  
   
- Tuttavia, nessun requisito prevede che l'equivalenza sia basata su tutti i campi in un tipo. Può essere basata su un subset. Quando si confrontano i tipi di cui non si è proprietari, è necessario assicurarsi di sapere esattamente in che modo viene definita l'equivalenza per quel tipo. Per altre informazioni su come definire l'uguaglianza di valori nelle classi e negli struct, vedere [Procedura: Definire l'uguaglianza di valori per un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
+ <span data-ttu-id="c5a34-127">Tuttavia, nessun requisito prevede che l'equivalenza sia basata su tutti i campi in un tipo.</span><span class="sxs-lookup"><span data-stu-id="c5a34-127">However, there is no requirement that equivalence be based on all the fields in a type.</span></span> <span data-ttu-id="c5a34-128">Può essere basata su un subset.</span><span class="sxs-lookup"><span data-stu-id="c5a34-128">It can be based on a subset.</span></span> <span data-ttu-id="c5a34-129">Quando si confrontano i tipi di cui non si è proprietari, è necessario assicurarsi di sapere esattamente in che modo viene definita l'equivalenza per quel tipo.</span><span class="sxs-lookup"><span data-stu-id="c5a34-129">When you compare types that you do not own, you should make sure to understand specifically how equivalence is defined for that type.</span></span> <span data-ttu-id="c5a34-130">Per altre informazioni su come definire l'uguaglianza di valori nelle classi e negli struct, vedere [Procedura: Definire l'uguaglianza di valori per un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).</span><span class="sxs-lookup"><span data-stu-id="c5a34-130">For more information about how to define value equality in your own classes and structs, see [How to: Define Value Equality for a Type](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).</span></span>  
   
-### <a name="value-equality-for-floating-point-values"></a>Uguaglianza di valori per i valori a virgola mobile  
- I confronti di uguaglianza dei valori a virgola mobile ([double](../../../csharp/language-reference/keywords/double.md) e [float](../../../csharp/language-reference/keywords/float.md)) sono problematici a causa dell'imprecisione dell'aritmetica a virgola mobile nei computer binari. Per altre informazioni, vedere le note nell'argomento <xref:System.Double?displayProperty=fullName>.  
+### <a name="value-equality-for-floating-point-values"></a><span data-ttu-id="c5a34-131">Uguaglianza di valori per i valori a virgola mobile</span><span class="sxs-lookup"><span data-stu-id="c5a34-131">Value Equality for Floating Point Values</span></span>  
+ <span data-ttu-id="c5a34-132">I confronti di uguaglianza dei valori a virgola mobile ([double](../../../csharp/language-reference/keywords/double.md) e [float](../../../csharp/language-reference/keywords/float.md)) sono problematici a causa dell'imprecisione dell'aritmetica a virgola mobile nei computer binari.</span><span class="sxs-lookup"><span data-stu-id="c5a34-132">Equality comparisons of floating point values ([double](../../../csharp/language-reference/keywords/double.md) and [float](../../../csharp/language-reference/keywords/float.md)) are problematic because of the imprecision of floating point arithmetic on binary computers.</span></span> <span data-ttu-id="c5a34-133">Per altre informazioni, vedere le note nell'argomento <xref:System.Double?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c5a34-133">For more information, see the remarks in the topic <xref:System.Double?displayProperty=nameWithType>.</span></span>  
   
-## <a name="related-topics"></a>Argomenti correlati  
+## <a name="related-topics"></a><span data-ttu-id="c5a34-134">Argomenti correlati</span><span class="sxs-lookup"><span data-stu-id="c5a34-134">Related Topics</span></span>  
   
-|Titolo|Descrizione|  
+|<span data-ttu-id="c5a34-135">Titolo</span><span class="sxs-lookup"><span data-stu-id="c5a34-135">Title</span></span>|<span data-ttu-id="c5a34-136">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c5a34-136">Description</span></span>|  
 |-----------|-----------------|  
-|[Procedura: Testare l'uguaglianza dei riferimenti (identità)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Descrive come determinare se per due variabili esiste l'uguaglianza dei riferimenti.|  
-|[Procedura: Definire l'uguaglianza di valori per un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Descrive come specificare una definizione personalizzata di uguaglianza dei valori per un tipo.|  
-|[Guida per programmatori C#](../../../csharp/programming-guide/index.md)|Include collegamenti a informazioni dettagliate su funzionalità importanti del linguaggio C# e sulle funzionalità disponibili per C# attraverso .NET Framework.|  
-|[Tipi](../../../csharp/programming-guide/types/index.md)|Informazioni sul sistema di tipi C# e collegamenti a informazioni aggiuntive.|  
+|[<span data-ttu-id="c5a34-137">Procedura: Testare l'uguaglianza dei riferimenti (identità)</span><span class="sxs-lookup"><span data-stu-id="c5a34-137">How to: Test for Reference Equality (Identity)</span></span>](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|<span data-ttu-id="c5a34-138">Descrive come determinare se per due variabili esiste l'uguaglianza dei riferimenti.</span><span class="sxs-lookup"><span data-stu-id="c5a34-138">Describes how to determine whether two variables have reference equality.</span></span>|  
+|[<span data-ttu-id="c5a34-139">Procedura: Definire l'uguaglianza di valori per un tipo</span><span class="sxs-lookup"><span data-stu-id="c5a34-139">How to: Define Value Equality for a Type</span></span>](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|<span data-ttu-id="c5a34-140">Descrive come specificare una definizione personalizzata di uguaglianza dei valori per un tipo.</span><span class="sxs-lookup"><span data-stu-id="c5a34-140">Describes how to provide a custom definition of value equality for a type.</span></span>|  
+|[<span data-ttu-id="c5a34-141">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="c5a34-141">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)|<span data-ttu-id="c5a34-142">Include collegamenti a informazioni dettagliate su funzionalità importanti del linguaggio C# e sulle funzionalità disponibili per C# attraverso .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c5a34-142">Provides links to detailed information about important C# language features and features that are available to C# through the .NET Framework.</span></span>|  
+|[<span data-ttu-id="c5a34-143">Tipi</span><span class="sxs-lookup"><span data-stu-id="c5a34-143">Types</span></span>](../../../csharp/programming-guide/types/index.md)|<span data-ttu-id="c5a34-144">Informazioni sul sistema di tipi C# e collegamenti a informazioni aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="c5a34-144">Provides information about the C# type system and links to additional information.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="c5a34-145">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c5a34-145">See Also</span></span>  
+ [<span data-ttu-id="c5a34-146">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="c5a34-146">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)

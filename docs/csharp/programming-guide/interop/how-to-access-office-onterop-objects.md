@@ -1,12 +1,9 @@
 ---
 title: "Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - optional parameters [C#], Office programming
 - named and optional arguments [C#], Office programming
@@ -15,190 +12,174 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 25e83195d5f0d8a49e402a5a32e61940960b052a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ed3716e5c0d8cd143148522a2fb3aed5ec433ab
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
-Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.  
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a><span data-ttu-id="abd66-102">Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="abd66-102">How to: Access Office Interop Objects by Using Visual C# Features (C# Programming Guide)</span></span>
+<span data-ttu-id="abd66-103">Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office.</span><span class="sxs-lookup"><span data-stu-id="abd66-103">Visual C# has features that simplify access to Office API objects.</span></span> <span data-ttu-id="abd66-104">Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.</span><span class="sxs-lookup"><span data-stu-id="abd66-104">The new features include named and optional arguments, a new type called `dynamic`, and the ability to pass arguments to reference parameters in COM methods as if they were value parameters.</span></span>  
   
- In questo argomento si useranno le nuove funzionalità per scrivere codice che consente di creare e visualizzare un foglio di lavoro di Microsoft Office Excel. Quindi si scriverà il codice per aggiungere un documento di Office Word contenente un'icona che è collegata al foglio di lavoro di Excel.  
+ <span data-ttu-id="abd66-105">In questo argomento si useranno le nuove funzionalità per scrivere codice che consente di creare e visualizzare un foglio di lavoro di Microsoft Office Excel.</span><span class="sxs-lookup"><span data-stu-id="abd66-105">In this topic you will use the new features to write code that creates and displays a Microsoft Office Excel worksheet.</span></span> <span data-ttu-id="abd66-106">Quindi si scriverà il codice per aggiungere un documento di Office Word contenente un'icona che è collegata al foglio di lavoro di Excel.</span><span class="sxs-lookup"><span data-stu-id="abd66-106">You will then write code to add an Office Word document that contains an icon that is linked to the Excel worksheet.</span></span>  
   
- Per completare questa procedura dettagliata, è necessario aver installato nel computer Microsoft Office Excel 2007 e Microsoft Office Word 2007 o versioni successive.  
+ <span data-ttu-id="abd66-107">Per completare questa procedura dettagliata, è necessario aver installato nel computer Microsoft Office Excel 2007 e Microsoft Office Word 2007 o versioni successive.</span><span class="sxs-lookup"><span data-stu-id="abd66-107">To complete this walkthrough, you must have Microsoft Office Excel 2007 and Microsoft Office Word 2007, or later versions, installed on your computer.</span></span>  
   
- Se si usa un sistema operativo precedente a [!INCLUDE[windowsver](~/includes/windowsver-md.md)], assicurarsi che [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] sia installato.  
+ <span data-ttu-id="abd66-108">Se si usa un sistema operativo precedente a [!INCLUDE[windowsver](~/includes/windowsver-md.md)], assicurarsi che [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] sia installato.</span><span class="sxs-lookup"><span data-stu-id="abd66-108">If you are using an operating system that is older than [!INCLUDE[windowsver](~/includes/windowsver-md.md)], make sure that [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] is installed.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-new-console-application"></a>Per creare un nuovo progetto di applicazione console  
+### <a name="to-create-a-new-console-application"></a><span data-ttu-id="abd66-109">Per creare un nuovo progetto di applicazione console</span><span class="sxs-lookup"><span data-stu-id="abd66-109">To create a new console application</span></span>  
   
-1.  Avviare Visual Studio.  
+1.  <span data-ttu-id="abd66-110">Avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="abd66-110">Start Visual Studio.</span></span>  
   
-2.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
+2.  <span data-ttu-id="abd66-111">Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="abd66-111">On the **File** menu, point to **New**, and then click **Project**.</span></span> <span data-ttu-id="abd66-112">Verrà visualizzata la finestra di dialogo **Nuovo progetto** .</span><span class="sxs-lookup"><span data-stu-id="abd66-112">The **New Project** dialog box appears.</span></span>  
   
-3.  Nel riquadro **Modelli installati** espandere **Visual C#** e fare clic su **Windows**.  
+3.  <span data-ttu-id="abd66-113">Nel riquadro **Modelli installati** espandere **Visual C#** e fare clic su **Windows**.</span><span class="sxs-lookup"><span data-stu-id="abd66-113">In the **Installed Templates** pane, expand **Visual C#**, and then click **Windows**.</span></span>  
   
-4.  Nella parte superiore della finestra di dialogo **Nuovo progetto** assicurarsi che **.NET Framework 4**, o versione successiva, sia selezionato come framework di destinazione.  
+4.  <span data-ttu-id="abd66-114">Nella parte superiore della finestra di dialogo **Nuovo progetto** assicurarsi che **.NET Framework 4**, o versione successiva, sia selezionato come framework di destinazione.</span><span class="sxs-lookup"><span data-stu-id="abd66-114">Look at the top of the **New Project** dialog box to make sure that **.NET Framework 4** (or later version) is selected as a target framework.</span></span>  
   
-5.  Nel riquadro **Modelli** fare clic su **Applicazione console**.  
+5.  <span data-ttu-id="abd66-115">Nel riquadro **Modelli** fare clic su **Applicazione console**.</span><span class="sxs-lookup"><span data-stu-id="abd66-115">In the **Templates** pane, click **Console Application**.</span></span>  
   
-6.  Digitare un nome per il progetto nel campo **Nome**.  
+6.  <span data-ttu-id="abd66-116">Digitare un nome per il progetto nel campo **Nome**.</span><span class="sxs-lookup"><span data-stu-id="abd66-116">Type a name for your project in the **Name** field.</span></span>  
   
-7.  Fare clic su **OK**.  
+7.  <span data-ttu-id="abd66-117">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="abd66-117">Click **OK**.</span></span>  
   
-     Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.  
+     <span data-ttu-id="abd66-118">Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="abd66-118">The new project appears in **Solution Explorer**.</span></span>  
   
-### <a name="to-add-references"></a>Per aggiungere riferimenti  
+### <a name="to-add-references"></a><span data-ttu-id="abd66-119">Per aggiungere riferimenti</span><span class="sxs-lookup"><span data-stu-id="abd66-119">To add references</span></span>  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.  
+1.  <span data-ttu-id="abd66-120">In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="abd66-120">In **Solution Explorer**, right-click your project's name and then click **Add Reference**.</span></span> <span data-ttu-id="abd66-121">Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="abd66-121">The **Add Reference** dialog box appears.</span></span>  
   
-2.  Nella pagina **Assembly** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente** e, tenendo premuto CTRL, selezionare **Microsoft.Office.Interop.Excel**.  Se gli assembly non vengono visualizzati, può essere necessario verificare che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  <span data-ttu-id="abd66-122">Nella pagina **Assembly** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente** e, tenendo premuto CTRL, selezionare **Microsoft.Office.Interop.Excel**.</span><span class="sxs-lookup"><span data-stu-id="abd66-122">On the **Assemblies**  page, select **Microsoft.Office.Interop.Word** in the **Component Name** list, and then hold down the CTRL key and select **Microsoft.Office.Interop.Excel**.</span></span>  <span data-ttu-id="abd66-123">Se gli assembly non vengono visualizzati, può essere necessario verificare che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).</span><span class="sxs-lookup"><span data-stu-id="abd66-123">If you do not see the assemblies, you may need to ensure they are installed and displayed (see [How to: Install Office Primary Interop Assemblies](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))</span></span>  
   
-3.  Fare clic su **OK**.  
+3.  <span data-ttu-id="abd66-124">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="abd66-124">Click **OK**.</span></span>  
   
-### <a name="to-add-necessary-using-directives"></a>Per aggiungere le direttive using necessarie  
+### <a name="to-add-necessary-using-directives"></a><span data-ttu-id="abd66-125">Per aggiungere le direttive using necessarie</span><span class="sxs-lookup"><span data-stu-id="abd66-125">To add necessary using directives</span></span>  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file **Program.cs** e quindi fare clic su **Visualizza codice**.  
+1.  <span data-ttu-id="abd66-126">In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file **Program.cs** e quindi fare clic su **Visualizza codice**.</span><span class="sxs-lookup"><span data-stu-id="abd66-126">In **Solution Explorer**, right-click the **Program.cs** file and then click **View Code**.</span></span>  
   
-2.  Aggiungere le seguenti direttive `using` all'inizio del file di codice.  
+2.  <span data-ttu-id="abd66-127">Aggiungere le seguenti direttive `using` all'inizio del file di codice.</span><span class="sxs-lookup"><span data-stu-id="abd66-127">Add the following `using` directives to the top of the code file.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
   
-### <a name="to-create-a-list-of-bank-accounts"></a>Per creare un elenco di conti correnti bancari  
+### <a name="to-create-a-list-of-bank-accounts"></a><span data-ttu-id="abd66-128">Per creare un elenco di conti correnti bancari</span><span class="sxs-lookup"><span data-stu-id="abd66-128">To create a list of bank accounts</span></span>  
   
-1.  Incollare la seguente definizione di classe in **Program.cs**, sotto la classe `Program`.  
+1.  <span data-ttu-id="abd66-129">Incollare la seguente definizione di classe in **Program.cs**, sotto la classe `Program`.</span><span class="sxs-lookup"><span data-stu-id="abd66-129">Paste the following class definition into **Program.cs**, under the `Program` class.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
   
-2.  Aggiungere il seguente codice al metodo `Main` per creare un elenco `bankAccounts` contenente due conti.  
+2.  <span data-ttu-id="abd66-130">Aggiungere il seguente codice al metodo `Main` per creare un elenco `bankAccounts` contenente due conti.</span><span class="sxs-lookup"><span data-stu-id="abd66-130">Add the following code to the `Main` method to create a `bankAccounts` list that contains two accounts.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
   
-### <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Per dichiarare un metodo che consente di esportare informazioni sul conto in Excel  
+### <a name="to-declare-a-method-that-exports-account-information-to-excel"></a><span data-ttu-id="abd66-131">Per dichiarare un metodo che consente di esportare informazioni sul conto in Excel</span><span class="sxs-lookup"><span data-stu-id="abd66-131">To declare a method that exports account information to Excel</span></span>  
   
-1.  Aggiungere il seguente metodo alla classe `Program` per impostare un foglio di lavoro di Excel.  
+1.  <span data-ttu-id="abd66-132">Aggiungere il seguente metodo alla classe `Program` per impostare un foglio di lavoro di Excel.</span><span class="sxs-lookup"><span data-stu-id="abd66-132">Add the following method to the `Program` class to set up an Excel worksheet.</span></span>  
   
-     Il metodo [Add](http://go.microsoft.com/fwlink/?LinkId=210910) usa un parametro facoltativo per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nel codice seguente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     <span data-ttu-id="abd66-133">Il metodo [Add](http://go.microsoft.com/fwlink/?LinkId=210910) usa un parametro facoltativo per specificare un modello particolare.</span><span class="sxs-lookup"><span data-stu-id="abd66-133">Method [Add](http://go.microsoft.com/fwlink/?LinkId=210910) has an optional parameter for specifying a particular template.</span></span> <span data-ttu-id="abd66-134">I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro.</span><span class="sxs-lookup"><span data-stu-id="abd66-134">Optional parameters, new in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], enable you to omit the argument for that parameter if you want to use the parameter's default value.</span></span> <span data-ttu-id="abd66-135">Poiché nessun argomento viene inviato nel codice seguente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro.</span><span class="sxs-lookup"><span data-stu-id="abd66-135">Because no argument is sent in the following code, `Add` uses the default template and creates a new workbook.</span></span> <span data-ttu-id="abd66-136">L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `ExcelApp.Workbooks.Add(Type.Missing)`.</span><span class="sxs-lookup"><span data-stu-id="abd66-136">The equivalent statement in earlier versions of C# requires a placeholder argument: `ExcelApp.Workbooks.Add(Type.Missing)`.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
-2.  Aggiungere il codice seguente alla fine di `DisplayInExcel`. Il codice consente di inserire valori nelle prime due colonne della prima riga del foglio di lavoro.  
+2.  <span data-ttu-id="abd66-137">Aggiungere il codice seguente alla fine di `DisplayInExcel`.</span><span class="sxs-lookup"><span data-stu-id="abd66-137">Add the following code at the end of `DisplayInExcel`.</span></span> <span data-ttu-id="abd66-138">Il codice consente di inserire valori nelle prime due colonne della prima riga del foglio di lavoro.</span><span class="sxs-lookup"><span data-stu-id="abd66-138">The code inserts values into the first two columns of the first row of the worksheet.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
   
-3.  Aggiungere il codice seguente alla fine di `DisplayInExcel`. Il ciclo `foreach` inserisce le informazioni dall'elenco dei conti nelle prime due colonne delle righe successive del foglio di lavoro.  
+3.  <span data-ttu-id="abd66-139">Aggiungere il codice seguente alla fine di `DisplayInExcel`.</span><span class="sxs-lookup"><span data-stu-id="abd66-139">Add the following code at the end of `DisplayInExcel`.</span></span> <span data-ttu-id="abd66-140">Il ciclo `foreach` inserisce le informazioni dall'elenco dei conti nelle prime due colonne delle righe successive del foglio di lavoro.</span><span class="sxs-lookup"><span data-stu-id="abd66-140">The `foreach` loop puts the information from the list of accounts into the first two columns of successive rows of the worksheet.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
   
-4.  Aggiungere il seguente codice alla fine di `DisplayInExcel` per regolare la larghezza delle colonne in modo da adattarle al contenuto.  
+4.  <span data-ttu-id="abd66-141">Aggiungere il seguente codice alla fine di `DisplayInExcel` per regolare la larghezza delle colonne in modo da adattarle al contenuto.</span><span class="sxs-lookup"><span data-stu-id="abd66-141">Add the following code at the end of `DisplayInExcel` to adjust the column widths to fit the content.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
-     Le versioni precedenti di C# richiedono il cast esplicito per queste operazioni perché `ExcelApp.Columns[1]` restituisce un `Object`, e `AutoFit` è un metodo [Range](http://go.microsoft.com/fwlink/?LinkId=210911) di Excel. Le righe seguenti indicano il cast.  
+     <span data-ttu-id="abd66-142">Le versioni precedenti di C# richiedono il cast esplicito per queste operazioni perché `ExcelApp.Columns[1]` restituisce un `Object`, e `AutoFit` è un metodo [Range](http://go.microsoft.com/fwlink/?LinkId=210911) di Excel.</span><span class="sxs-lookup"><span data-stu-id="abd66-142">Earlier versions of C# require explicit casting for these operations because `ExcelApp.Columns[1]` returns an `Object`, and `AutoFit` is an Excel [Range](http://go.microsoft.com/fwlink/?LinkId=210911) method.</span></span> <span data-ttu-id="abd66-143">Le righe seguenti indicano il cast.</span><span class="sxs-lookup"><span data-stu-id="abd66-143">The following lines show the casting.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, converte automaticamente l'oggetto restituito `Object` in `dynamic` se si fa riferimento all'assembly con l'opzione del compilatore [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, allo stesso modo, se la proprietà **Incorpora tipi di interoperabilità** di Excel viene impostata su true. True è il valore predefinito di questa proprietà.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]<span data-ttu-id="abd66-144">, e versioni successive, converte automaticamente l'oggetto restituito `Object` in `dynamic` se si fa riferimento all'assembly con l'opzione del compilatore [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, allo stesso modo, se la proprietà **Incorpora tipi di interoperabilità** di Excel viene impostata su true.</span><span class="sxs-lookup"><span data-stu-id="abd66-144">, and later versions, converts the returned `Object` to `dynamic` automatically if the assembly is referenced by the [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) compiler option or, equivalently, if the Excel **Embed Interop Types** property is set to true.</span></span> <span data-ttu-id="abd66-145">True è il valore predefinito di questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="abd66-145">True is the default value for this property.</span></span>  
   
-### <a name="to-run-the-project"></a>Per eseguire il progetto  
+### <a name="to-run-the-project"></a><span data-ttu-id="abd66-146">Per eseguire il progetto</span><span class="sxs-lookup"><span data-stu-id="abd66-146">To run the project</span></span>  
   
-1.  Aggiungere la riga seguente alla fine di `Main`.  
+1.  <span data-ttu-id="abd66-147">Aggiungere la riga seguente alla fine di `Main`.</span><span class="sxs-lookup"><span data-stu-id="abd66-147">Add the following line at the end of `Main`.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
   
-2.  Premere CTRL+F5.  
+2.  <span data-ttu-id="abd66-148">Premere CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="abd66-148">Press CTRL+F5.</span></span>  
   
-     Viene visualizzato un foglio di lavoro di Excel che contiene i dati dei due conti.  
+     <span data-ttu-id="abd66-149">Viene visualizzato un foglio di lavoro di Excel che contiene i dati dei due conti.</span><span class="sxs-lookup"><span data-stu-id="abd66-149">An Excel worksheet appears that contains the data from the two accounts.</span></span>  
   
-### <a name="to-add-a-word-document"></a>Per aggiungere un documento di Word  
+### <a name="to-add-a-word-document"></a><span data-ttu-id="abd66-150">Per aggiungere un documento di Word</span><span class="sxs-lookup"><span data-stu-id="abd66-150">To add a Word document</span></span>  
   
-1.  Per illustrare altri modi in cui [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, consente di migliorare la programmazione di Office, il codice seguente apre un'applicazione Word e crea un'icona di collegamento al foglio di lavoro di Excel.  
+1.  <span data-ttu-id="abd66-151">Per illustrare altri modi in cui [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, consente di migliorare la programmazione di Office, il codice seguente apre un'applicazione Word e crea un'icona di collegamento al foglio di lavoro di Excel.</span><span class="sxs-lookup"><span data-stu-id="abd66-151">To illustrate additional ways in which [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], and later versions, enhances Office programming, the following code opens a Word application and creates an icon that links to the Excel worksheet.</span></span>  
   
-     Incollare il metodo `CreateIconInWordDoc`, fornito più avanti in questo passaggio, nella classe `Program`. `CreateIconInWordDoc` usa argomenti denominati e facoltativi per ridurre la complessità delle chiamate ai metodi di [Add](http://go.microsoft.com/fwlink/?LinkId=210937) e [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099). Queste chiamate incorporano altre due nuove funzionalità introdotte in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] che semplificano le chiamate ai metodi COM con parametri di riferimento. In primo luogo, è possibile inviare argomenti ai parametri di riferimento come se fossero parametri di valore. In altre parole, è possibile inviare i valori direttamente, senza creare una variabile per ogni parametro referenziato. Il compilatore genera variabili temporanee per conservare i valori degli argomenti ed elimina le variabili restituite dalla chiamata. In secondo luogo, è possibile omettere la parola chiave `ref` nell'elenco di argomenti.  
+     <span data-ttu-id="abd66-152">Incollare il metodo `CreateIconInWordDoc`, fornito più avanti in questo passaggio, nella classe `Program`.</span><span class="sxs-lookup"><span data-stu-id="abd66-152">Paste method `CreateIconInWordDoc`, provided later in this step, into the `Program` class.</span></span> <span data-ttu-id="abd66-153">`CreateIconInWordDoc` usa argomenti denominati e facoltativi per ridurre la complessità delle chiamate ai metodi di [Add](http://go.microsoft.com/fwlink/?LinkId=210937) e [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099).</span><span class="sxs-lookup"><span data-stu-id="abd66-153">`CreateIconInWordDoc` uses named and optional arguments to reduce the complexity of the method calls to [Add](http://go.microsoft.com/fwlink/?LinkId=210937) and [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099).</span></span> <span data-ttu-id="abd66-154">Queste chiamate incorporano altre due nuove funzionalità introdotte in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] che semplificano le chiamate ai metodi COM con parametri di riferimento.</span><span class="sxs-lookup"><span data-stu-id="abd66-154">These calls incorporate two other new features introduced in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] that simplify calls to COM methods that have reference parameters.</span></span> <span data-ttu-id="abd66-155">In primo luogo, è possibile inviare argomenti ai parametri di riferimento come se fossero parametri di valore.</span><span class="sxs-lookup"><span data-stu-id="abd66-155">First, you can send arguments to the reference parameters as if they were value parameters.</span></span> <span data-ttu-id="abd66-156">In altre parole, è possibile inviare i valori direttamente, senza creare una variabile per ogni parametro referenziato.</span><span class="sxs-lookup"><span data-stu-id="abd66-156">That is, you can send values directly, without creating a variable for each reference parameter.</span></span> <span data-ttu-id="abd66-157">Il compilatore genera variabili temporanee per conservare i valori degli argomenti ed elimina le variabili restituite dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="abd66-157">The compiler generates temporary variables to hold the argument values, and discards the variables when you return from the call.</span></span> <span data-ttu-id="abd66-158">In secondo luogo, è possibile omettere la parola chiave `ref` nell'elenco di argomenti.</span><span class="sxs-lookup"><span data-stu-id="abd66-158">Second, you can omit the `ref` keyword in the argument list.</span></span>  
   
-     Il metodo `Add` ha quattro parametri di riferimento, tutti facoltativi. In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], o versioni successive, è possibile omettere gli argomenti per alcuni o tutti i parametri se si vogliono usare i valori predefiniti. In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario fornire un argomento per ogni parametro e l'argomento deve essere una variabile perché i parametri sono di riferimento.  
+     <span data-ttu-id="abd66-159">Il metodo `Add` ha quattro parametri di riferimento, tutti facoltativi.</span><span class="sxs-lookup"><span data-stu-id="abd66-159">The `Add` method has four reference parameters, all of which are optional.</span></span> <span data-ttu-id="abd66-160">In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], o versioni successive, è possibile omettere gli argomenti per alcuni o tutti i parametri se si vogliono usare i valori predefiniti.</span><span class="sxs-lookup"><span data-stu-id="abd66-160">In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], or later versions, you can omit arguments for any or all of the parameters if you want to use their default values.</span></span> <span data-ttu-id="abd66-161">In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario fornire un argomento per ogni parametro e l'argomento deve essere una variabile perché i parametri sono di riferimento.</span><span class="sxs-lookup"><span data-stu-id="abd66-161">In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] and earlier versions, an argument must be provided for each parameter, and the argument must be a variable because the parameters are reference parameters.</span></span>  
   
-     Il metodo `PasteSpecial` inserisce il contenuto degli Appunti. Il metodo ha sette parametri di riferimento, tutti facoltativi. Il codice seguente consente di specificare gli argomenti per due di essi: `Link`, per creare un collegamento all'origine del contenuto degli Appunti e `DisplayAsIcon`, per visualizzare il collegamento come icona. In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], è possibile usare argomenti denominati per questi due parametri e omettere gli altri. Anche se si tratta di parametri di riferimento, non è necessario usare la parola chiave `ref` o creare variabili per inviarle come argomenti. È possibile inviare direttamente i valori. In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario inviare un argomento variabile per ogni parametro referenziato.  
+     <span data-ttu-id="abd66-162">Il metodo `PasteSpecial` inserisce il contenuto degli Appunti.</span><span class="sxs-lookup"><span data-stu-id="abd66-162">The `PasteSpecial` method inserts the contents of the Clipboard.</span></span> <span data-ttu-id="abd66-163">Il metodo ha sette parametri di riferimento, tutti facoltativi.</span><span class="sxs-lookup"><span data-stu-id="abd66-163">The method has seven reference parameters, all of which are optional.</span></span> <span data-ttu-id="abd66-164">Il codice seguente consente di specificare gli argomenti per due di essi: `Link`, per creare un collegamento all'origine del contenuto degli Appunti e `DisplayAsIcon`, per visualizzare il collegamento come icona.</span><span class="sxs-lookup"><span data-stu-id="abd66-164">The following code specifies arguments for two of them: `Link`, to create a link to the source of the Clipboard contents, and `DisplayAsIcon`, to display the link as an icon.</span></span> <span data-ttu-id="abd66-165">In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], è possibile usare argomenti denominati per questi due parametri e omettere gli altri.</span><span class="sxs-lookup"><span data-stu-id="abd66-165">In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], you can use named arguments for those two and omit the others.</span></span> <span data-ttu-id="abd66-166">Anche se si tratta di parametri di riferimento, non è necessario usare la parola chiave `ref` o creare variabili per inviarle come argomenti.</span><span class="sxs-lookup"><span data-stu-id="abd66-166">Although these are reference parameters, you do not have to use the `ref` keyword, or to create variables to send in as arguments.</span></span> <span data-ttu-id="abd66-167">È possibile inviare direttamente i valori.</span><span class="sxs-lookup"><span data-stu-id="abd66-167">You can send the values directly.</span></span> <span data-ttu-id="abd66-168">In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario inviare un argomento variabile per ogni parametro referenziato.</span><span class="sxs-lookup"><span data-stu-id="abd66-168">In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] and earlier versions, you must send a variable argument for each reference parameter.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
   
-     In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versioni precedenti del linguaggio, è necessario il codice più complesso seguente.  
+     <span data-ttu-id="abd66-169">In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versioni precedenti del linguaggio, è necessario il codice più complesso seguente.</span><span class="sxs-lookup"><span data-stu-id="abd66-169">In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] or earlier versions of the language, the following more complex code is required.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
   
-2.  Aggiungere la seguente istruzione dopo `Main`.  
+2.  <span data-ttu-id="abd66-170">Aggiungere la seguente istruzione dopo `Main`.</span><span class="sxs-lookup"><span data-stu-id="abd66-170">Add the following statement at the end of `Main`.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
   
-3.  Aggiungere la seguente istruzione dopo `DisplayInExcel`. Il metodo `Copy` aggiunge il foglio di lavoro negli Appunti.  
+3.  <span data-ttu-id="abd66-171">Aggiungere la seguente istruzione dopo `DisplayInExcel`.</span><span class="sxs-lookup"><span data-stu-id="abd66-171">Add the following statement at the end of `DisplayInExcel`.</span></span> <span data-ttu-id="abd66-172">Il metodo `Copy` aggiunge il foglio di lavoro negli Appunti.</span><span class="sxs-lookup"><span data-stu-id="abd66-172">The `Copy` method adds the worksheet to the Clipboard.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
   
-4.  Premere CTRL+F5.  
+4.  <span data-ttu-id="abd66-173">Premere CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="abd66-173">Press CTRL+F5.</span></span>  
   
-     Verrà visualizzato un documento di Word contenente un'icona. Fare doppio clic sull'icona per visualizzare il foglio di lavoro in primo piano.  
+     <span data-ttu-id="abd66-174">Verrà visualizzato un documento di Word contenente un'icona.</span><span class="sxs-lookup"><span data-stu-id="abd66-174">A Word document appears that contains an icon.</span></span> <span data-ttu-id="abd66-175">Fare doppio clic sull'icona per visualizzare il foglio di lavoro in primo piano.</span><span class="sxs-lookup"><span data-stu-id="abd66-175">Double-click the icon to bring the worksheet to the foreground.</span></span>  
   
-### <a name="to-set-the-embed-interop-types-property"></a>Per impostare la proprietà Incorpora tipi di interoperabilità  
+### <a name="to-set-the-embed-interop-types-property"></a><span data-ttu-id="abd66-176">Per impostare la proprietà Incorpora tipi di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="abd66-176">To set the Embed Interop Types property</span></span>  
   
-1.  Quando si chiama un tipo COM che non richiede un assembly di interoperabilità primario (PIA) in fase di esecuzione, sono possibili altri miglioramenti. Eliminando la dipendenza dai risultati dei PIA produce l'indipendenza dalla versione e semplifica la distribuzione. Per altre informazioni sui vantaggi della programmazione senza PIA, vedere [Procedura dettagliata: incorporamento di tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+1.  <span data-ttu-id="abd66-177">Quando si chiama un tipo COM che non richiede un assembly di interoperabilità primario (PIA) in fase di esecuzione, sono possibili altri miglioramenti.</span><span class="sxs-lookup"><span data-stu-id="abd66-177">Additional enhancements are possible when you call a COM type that does not require a primary interop assembly (PIA) at run time.</span></span> <span data-ttu-id="abd66-178">Eliminando la dipendenza dai risultati dei PIA produce l'indipendenza dalla versione e semplifica la distribuzione.</span><span class="sxs-lookup"><span data-stu-id="abd66-178">Removing the dependency on PIAs results in version independence and easier deployment.</span></span> <span data-ttu-id="abd66-179">Per altre informazioni sui vantaggi della programmazione senza PIA, vedere [Procedura dettagliata: incorporamento di tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).</span><span class="sxs-lookup"><span data-stu-id="abd66-179">For more information about the advantages of programming without PIAs, see [Walkthrough: Embedding Types from Managed Assemblies](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).</span></span>  
   
-     Inoltre, la programmazione è più semplice perché i tipi richiesti e restituiti dai metodi COM possono essere rappresentati usando il tipo `dynamic` anziché `Object`. Le variabili di tipo `dynamic` non saranno valutate fino al runtime, eliminando la necessità del cast esplicito. Per altre informazioni, vedere [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
+     <span data-ttu-id="abd66-180">Inoltre, la programmazione è più semplice perché i tipi richiesti e restituiti dai metodi COM possono essere rappresentati usando il tipo `dynamic` anziché `Object`.</span><span class="sxs-lookup"><span data-stu-id="abd66-180">In addition, programming is easier because the types that are required and returned by COM methods can be represented by using the type `dynamic` instead of `Object`.</span></span> <span data-ttu-id="abd66-181">Le variabili di tipo `dynamic` non saranno valutate fino al runtime, eliminando la necessità del cast esplicito.</span><span class="sxs-lookup"><span data-stu-id="abd66-181">Variables that have type `dynamic` are not evaluated until run time, which eliminates the need for explicit casting.</span></span> <span data-ttu-id="abd66-182">Per altre informazioni, vedere [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span><span class="sxs-lookup"><span data-stu-id="abd66-182">For more information, see [Using Type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span></span>  
   
-     In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], il comportamento predefinito consiste nell'incorporare le informazioni di tipo invece di usare i PIA. A causa di tale impostazione predefinita, molti degli esempi precedenti vengono semplificati perché non è necessario eseguire il cast esplicito. Ad esempio, la dichiarazione di `worksheet` in `DisplayInExcel` è scritta come `Excel._Worksheet workSheet = excelApp.ActiveSheet` piuttosto che `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Anche le chiamate a `AutoFit` nello stesso metodo richiederebbero il cast esplicito senza valore predefinito, perché `ExcelApp.Columns[1]` restituisce un `Object` e `AutoFit` è un metodo Excel. Nel codice seguente viene illustrato il cast.  
+     <span data-ttu-id="abd66-183">In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], il comportamento predefinito consiste nell'incorporare le informazioni di tipo invece di usare i PIA.</span><span class="sxs-lookup"><span data-stu-id="abd66-183">In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], embedding type information instead of using PIAs is default behavior.</span></span> <span data-ttu-id="abd66-184">A causa di tale impostazione predefinita, molti degli esempi precedenti vengono semplificati perché non è necessario eseguire il cast esplicito.</span><span class="sxs-lookup"><span data-stu-id="abd66-184">Because of that default, several of the previous examples are simplified because explicit casting is not required.</span></span> <span data-ttu-id="abd66-185">Ad esempio, la dichiarazione di `worksheet` in `DisplayInExcel` è scritta come `Excel._Worksheet workSheet = excelApp.ActiveSheet` piuttosto che `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`.</span><span class="sxs-lookup"><span data-stu-id="abd66-185">For example, the declaration of `worksheet` in `DisplayInExcel` is written as `Excel._Worksheet workSheet = excelApp.ActiveSheet` rather than `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`.</span></span> <span data-ttu-id="abd66-186">Anche le chiamate a `AutoFit` nello stesso metodo richiederebbero il cast esplicito senza valore predefinito, perché `ExcelApp.Columns[1]` restituisce un `Object` e `AutoFit` è un metodo Excel.</span><span class="sxs-lookup"><span data-stu-id="abd66-186">The calls to `AutoFit` in the same method also would require explicit casting without the default, because `ExcelApp.Columns[1]` returns an `Object`, and `AutoFit` is an Excel  method.</span></span> <span data-ttu-id="abd66-187">Nel codice seguente viene illustrato il cast.</span><span class="sxs-lookup"><span data-stu-id="abd66-187">The following code shows the casting.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-2.  Per modificare l'impostazione predefinita e usare i PIA anziché incorporare le informazioni sul tipo, espandere il nodo **Riferimenti** in **Esplora soluzioni** e selezionare **Microsoft.Office.Interop.Excel** o **Microsoft.Office.Interop.Word**.  
+2.  <span data-ttu-id="abd66-188">Per modificare l'impostazione predefinita e usare i PIA anziché incorporare le informazioni sul tipo, espandere il nodo **Riferimenti** in **Esplora soluzioni** e selezionare **Microsoft.Office.Interop.Excel** o **Microsoft.Office.Interop.Word**.</span><span class="sxs-lookup"><span data-stu-id="abd66-188">To change the default and use PIAs instead of embedding type information, expand the **References** node in **Solution Explorer** and then select **Microsoft.Office.Interop.Excel** or **Microsoft.Office.Interop.Word**.</span></span>  
   
-3.  Se non è possibile visualizzare la finestra **Proprietà**, premere **F4**.  
+3.  <span data-ttu-id="abd66-189">Se non è possibile visualizzare la finestra **Proprietà**, premere **F4**.</span><span class="sxs-lookup"><span data-stu-id="abd66-189">If you cannot see the **Properties** window, press **F4**.</span></span>  
   
-4.  Trovare **Incorpora tipi di interoperabilità** nell'elenco delle proprietà e modificarne il valore in **False**. Allo stesso modo, è possibile compilare usando l'opzione del compilatore [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) invece di [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) a un prompt dei comandi.  
+4.  <span data-ttu-id="abd66-190">Trovare **Incorpora tipi di interoperabilità** nell'elenco delle proprietà e modificarne il valore in **False**.</span><span class="sxs-lookup"><span data-stu-id="abd66-190">Find **Embed Interop Types** in the list of properties, and change its value to **False**.</span></span> <span data-ttu-id="abd66-191">Allo stesso modo, è possibile compilare usando l'opzione del compilatore [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) invece di [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) a un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="abd66-191">Equivalently, you can compile by using the [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) compiler option instead of [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) at a command prompt.</span></span>  
   
-### <a name="to-add-additional-formatting-to-the-table"></a>Per aggiungere ulteriore formattazione alla tabella  
+### <a name="to-add-additional-formatting-to-the-table"></a><span data-ttu-id="abd66-192">Per aggiungere ulteriore formattazione alla tabella</span><span class="sxs-lookup"><span data-stu-id="abd66-192">To add additional formatting to the table</span></span>  
   
-1.  Sostituire le due chiamate a `AutoFit` in `DisplayInExcel` con la seguente istruzione.  
+1.  <span data-ttu-id="abd66-193">Sostituire le due chiamate a `AutoFit` in `DisplayInExcel` con la seguente istruzione.</span><span class="sxs-lookup"><span data-stu-id="abd66-193">Replace the two calls to `AutoFit` in `DisplayInExcel` with the following statement.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
-     Il metodo [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=210948) ha sette parametri di valore, tutti facoltativi. Gli argomenti denominati e facoltativi consentono di specificare gli argomenti per nessuno, alcuni o tutti i parametri. Nell'istruzione precedente, viene fornito un argomento per uno solo dei parametri, `Format`. Poiché `Format` è il primo parametro nell'elenco, non è necessario fornire il nome del parametro. Tuttavia, l'istruzione potrebbe essere più facile da comprendere se si include il nome del parametro, come illustrato nel codice seguente.  
+     <span data-ttu-id="abd66-194">Il metodo [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=210948) ha sette parametri di valore, tutti facoltativi.</span><span class="sxs-lookup"><span data-stu-id="abd66-194">The [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=210948) method has seven value parameters, all of which are optional.</span></span> <span data-ttu-id="abd66-195">Gli argomenti denominati e facoltativi consentono di specificare gli argomenti per nessuno, alcuni o tutti i parametri.</span><span class="sxs-lookup"><span data-stu-id="abd66-195">Named and optional arguments enable you to provide arguments for none, some, or all of them.</span></span> <span data-ttu-id="abd66-196">Nell'istruzione precedente, viene fornito un argomento per uno solo dei parametri, `Format`.</span><span class="sxs-lookup"><span data-stu-id="abd66-196">In the previous statement, an argument is supplied for only one of the parameters, `Format`.</span></span> <span data-ttu-id="abd66-197">Poiché `Format` è il primo parametro nell'elenco, non è necessario fornire il nome del parametro.</span><span class="sxs-lookup"><span data-stu-id="abd66-197">Because `Format` is the first parameter in the parameter list, you do not have to provide the parameter name.</span></span> <span data-ttu-id="abd66-198">Tuttavia, l'istruzione potrebbe essere più facile da comprendere se si include il nome del parametro, come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="abd66-198">However, the statement might be easier to understand if the parameter name is included, as is shown in the following code.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
-2.  Premere CTRL + F5 per visualizzare il risultato. Altri formati sono elencati nell'enumerazione [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967).  
+2.  <span data-ttu-id="abd66-199">Premere CTRL + F5 per visualizzare il risultato.</span><span class="sxs-lookup"><span data-stu-id="abd66-199">Press CTRL+F5 to see the result.</span></span> <span data-ttu-id="abd66-200">Altri formati sono elencati nell'enumerazione [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967).</span><span class="sxs-lookup"><span data-stu-id="abd66-200">Other formats are listed in the [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967) enumeration.</span></span>  
   
-3.  Confrontare l'istruzione nel passaggio 1 con il codice seguente, che illustra gli argomenti necessari in [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versioni precedenti.  
+3.  <span data-ttu-id="abd66-201">Confrontare l'istruzione nel passaggio 1 con il codice seguente, che illustra gli argomenti necessari in [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versioni precedenti.</span><span class="sxs-lookup"><span data-stu-id="abd66-201">Compare the statement in step 1 with the following code, which shows the arguments that are required in [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] or earlier versions.</span></span>  
   
-     [!code-cs[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
   
-## <a name="example"></a>Esempio  
- Nel codice seguente viene illustrato l'esempio completo.  
+## <a name="example"></a><span data-ttu-id="abd66-202">Esempio</span><span class="sxs-lookup"><span data-stu-id="abd66-202">Example</span></span>  
+ <span data-ttu-id="abd66-203">Nel codice seguente viene illustrato l'esempio completo.</span><span class="sxs-lookup"><span data-stu-id="abd66-203">The following code shows the complete example.</span></span>  
   
- [!code-cs[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
+ [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Type.Missing?displayProperty=fullName>   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
- [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [Argomenti denominati e facoltativi](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
- [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="abd66-204">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="abd66-204">See Also</span></span>  
+ <xref:System.Type.Missing?displayProperty=nameWithType>  
+ [<span data-ttu-id="abd66-205">dynamic</span><span class="sxs-lookup"><span data-stu-id="abd66-205">dynamic</span></span>](../../../csharp/language-reference/keywords/dynamic.md)  
+ [<span data-ttu-id="abd66-206">Uso del tipo dinamico</span><span class="sxs-lookup"><span data-stu-id="abd66-206">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [<span data-ttu-id="abd66-207">Argomenti denominati e facoltativi</span><span class="sxs-lookup"><span data-stu-id="abd66-207">Named and Optional Arguments</span></span>](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [<span data-ttu-id="abd66-208">Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office</span><span class="sxs-lookup"><span data-stu-id="abd66-208">How to: Use Named and Optional Arguments in Office Programming</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
