@@ -1,74 +1,80 @@
 ---
-title: "Procedura: creare un effetto di testo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo linea di base"
-  - "tipi di carattere, di base"
-  - "tipi di carattere, linea sopra"
-  - "tipi di carattere, barrato"
-  - "tipi di carattere, sottolineato"
-  - "tipo linea sopra"
-  - "tipo barrato"
-  - "testo, decorazioni"
-  - "tipografia, decorazioni di testo"
-  - "tipo sottolineato"
+title: 'Procedura: creare un effetto di testo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [WPF], baseline
+- text [WPF], decorations
+- fonts [WPF], underline
+- fonts [WPF], overline
+- strikethrough type [WPF]
+- fonts [WPF], strikethrough
+- overline type [WPF]
+- underline type [WPF]
+- typography [WPF], text decorations
+- baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e9229ce86dbe640c4eb960c455dd049ff40b38d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un effetto di testo
-Un oggetto <xref:System.Windows.TextDecoration> rappresenta un ornamento visivo che è possibile aggiungere al testo.  Sono disponibili quattro tipi di effetti di testo: sottolineato, linea di base, barrato e linea sopra.  Nel seguente esempio vengono mostrate le posizioni di tali effetti in relazione al testo.  
+# <a name="how-to-create-a-text-decoration"></a>Procedura: creare un effetto di testo
+Oggetto <xref:System.Windows.TextDecoration> oggetto è un visual ornamenti, è possibile aggiungere testo. Sono disponibili quattro tipi di effetti del testo: sottolineato, linea di base, barrato e linea sopra. L'esempio seguente mostra la posizione delle decorazioni di testo rispetto al testo.  
   
- ![Diagramma della posizione delle decorazioni di testo](../../../../docs/framework/wpf/advanced/media/textdecoration01.png "TextDecoration01")  
-Esempio dei vari tipi di effetti di testo  
+ ![Diagramma di posizione delle decorazioni di testo](../../../../docs/framework/wpf/advanced/media/textdecoration01.gif "TextDecoration01")  
+Esempio di tipi di effetti di testo  
   
- Per aggiungere un effetto al testo, creare un oggetto <xref:System.Windows.TextDecoration> e modificarne le proprietà.  Utilizzare la proprietà <xref:System.Windows.TextDecoration.Location%2A> per specificare la posizione in cui sarà visualizzato l'effetto di testo, ad esempio la sottolineatura.  Utilizzare la proprietà <xref:System.Windows.TextDecoration.Pen%2A> per specificare l'aspetto dell'effetto di testo, ad esempio riempimento a tinta unita o sfumatura di colore.  Se non viene specificato alcun valore per la proprietà <xref:System.Windows.TextDecoration.Pen%2A>, gli effetti saranno impostati in modalità predefinita sullo stesso colore del testo.  Una volta definito un oggetto <xref:System.Windows.TextDecoration>, aggiungerlo alla raccolta <xref:System.Windows.TextDecorations> dell'oggetto di testo desiderato.  
+ Per aggiungere un effetto di testo, creare un <xref:System.Windows.TextDecoration> dell'oggetto e modificarne le proprietà. Utilizzare il <xref:System.Windows.TextDecoration.Location%2A> proprietà per specificare dove viene visualizzato l'effetto di testo, quali sottolineato. Utilizzare il <xref:System.Windows.TextDecoration.Pen%2A> proprietà per specificare l'aspetto dell'effetto di testo, ad esempio un riempimento a tinta unita o sfumatura di colore. Se non si specifica un valore per il <xref:System.Windows.TextDecoration.Pen%2A> proprietà, i valori predefiniti effetti sullo stesso colore del testo. Dopo aver definito una <xref:System.Windows.TextDecoration> dell'oggetto, aggiungerlo al <xref:System.Windows.TextDecorations> raccolta dell'oggetto testo desiderato.  
   
- Nell'esempio riportato di seguito viene mostrato un effetto di testo disegnato con un pennello a sfumatura lineare e una penna tratteggiata.  
+ Nell'esempio seguente viene illustrato un effetto di testo disegnato con pennello sfumato lineare e una penna tratteggiata.  
   
  ![Decorazione di testo con sottolineatura sfumata lineare](../../../../docs/framework/wpf/advanced/media/textdecoration02.png "TextDecoration02")  
-Esempio di sottolineatura disegnata con un pennello a sfumatura lineare e una penna tratteggiata  
+Esempio di un carattere di sottolineatura disegnata con una sfumatura lineare pennello e penna tratteggiata  
   
- L'oggetto <xref:System.Windows.Documents.Hyperlink> è un elemento del contenuto del flusso di livello inline che consente di ospitare collegamenti ipertestuali all'interno del contenuto del flusso.  Per impostazione predefinita, <xref:System.Windows.Documents.Hyperlink> utilizza un oggetto <xref:System.Windows.TextDecoration> per visualizzare una sottolineatura.  Gli oggetti <xref:System.Windows.TextDecoration> possono essere prestazione intensive da creare, in particolare se si hanno molti oggetti <xref:System.Windows.Documents.Hyperlink>.  Se gli elementi <xref:System.Windows.Documents.Hyperlink>, utilizzati sono molti è opportuno visualizzare una sottolineatura solo al momento della generazione di un evento, ad esempio l'evento <xref:System.Windows.ContentElement.MouseEnter>.  
+ Il <xref:System.Windows.Documents.Hyperlink> oggetto è un elemento di contenuto di flusso di livello inline che consente di ospitare collegamenti ipertestuali all'interno del contenuto di flusso. Per impostazione predefinita, <xref:System.Windows.Documents.Hyperlink> utilizza un <xref:System.Windows.TextDecoration> oggetto per visualizzare un carattere di sottolineatura. <xref:System.Windows.TextDecoration>gli oggetti possono essere prestazioni elevate per creare un'istanza, in particolare se si dispone di numerosi <xref:System.Windows.Documents.Hyperlink> oggetti. Se si usano ampiamente <xref:System.Windows.Documents.Hyperlink> elementi, si consiglia di provare a visualizzare un carattere di sottolineatura solo al momento della generazione di un evento, ad esempio il <xref:System.Windows.ContentElement.MouseEnter> evento.  
   
- Nell'esempio riportato di seguito, il collegamento "My MSN" presenta una sottolineatura dinamica, vale a dire che la sottolineatura viene visualizzata solo al momento della generazione dell'evento <xref:System.Windows.ContentElement.MouseEnter>.  
+ Nell'esempio seguente, la sottolineatura per il collegamento "My MSN" è dinamica, viene visualizzata solo quando il <xref:System.Windows.ContentElement.MouseEnter> evento viene generato.  
   
  ![Collegamenti ipertestuali con TextDecoration](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
 Collegamenti ipertestuali definiti con TextDecorations  
   
- Per ulteriori informazioni, vedere [Specificare se un collegamento ipertestuale è sottolineato](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
+ Per altre informazioni, vedere [Specificare se un collegamento ipertestuale è sottolineato](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
-## Esempio  
- Nel codice seguente, un effetto di testo con sottolineatura utilizza il valore del tipo di carattere predefinito.  
+## <a name="example"></a>Esempio  
+ Nell'esempio di codice seguente, un effetto di testo sottolineato viene utilizzato il valore di tipo di carattere predefinito.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
   
- Nel seguente esempio di codice, viene creato un effetto di testo con sottolineatura mediante l'utilizzo di un pennello a tinta unita per la penna.  
+ Nell'esempio di codice riportato di seguito, un effetto di testo sottolineato viene creato con un pennello tinta unita per la penna.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets2)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets2)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
   
- Nell'esempio di codice seguente, viene creato un effetto di testo con sottolineatura utilizzando un pennello a sfumatura lineare per la penna tratteggiata.  
+ Nell'esempio di codice seguente viene creato un effetto di testo sottolineato con pennello sfumato lineare per la penna tratteggiata.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
-## Vedere anche  
- <xref:System.Windows.TextDecoration>   
- <xref:System.Windows.Documents.Hyperlink>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.TextDecoration>  
+ <xref:System.Windows.Documents.Hyperlink>  
  [Specificare se un collegamento ipertestuale è sottolineato](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)

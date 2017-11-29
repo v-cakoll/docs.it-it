@@ -1,44 +1,49 @@
 ---
-title: "Procedura: creare una casella di testo Password con il controllo TextBox Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "caselle password, creazione"
-  - "PasswordChar (proprietà nelle caselle di testo)"
-  - "password, maschera di input"
-  - "password, Password (casella di testo)"
-  - "TextBox (controllo) [Windows Form], immissione di password"
+title: 'Procedura: creare una casella di testo Password con il controllo TextBox Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- TextBox control [Windows Forms], entering passwords
+- password boxes [Windows Forms], creating
+- PasswordChar property in text boxes
+- passwords [Windows Forms], input mask
+- passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: caf5cef9e23134715101545902e32e72d63c0aac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare una casella di testo Password con il controllo TextBox Windows Form
-Una casella di testo Password è una casella di testo di Windows Form che visualizza caratteri segnaposto mentre l'utente digita una stringa.  
+# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Procedura: creare una casella di testo Password con il controllo TextBox Windows Form
+Una casella della password è una casella di testo di Windows Form che consente di visualizzare caratteri segnaposto mentre l'utente digita una stringa.  
   
-### Per creare una casella di testo Password  
+### <a name="to-create-a-password-text-box"></a>Per creare una casella di testo password  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.TextBox.PasswordChar%2A> del controllo <xref:System.Windows.Forms.TextBox> su un carattere specifico.  
+1.  Impostare il <xref:System.Windows.Forms.TextBox.PasswordChar%2A> proprietà del <xref:System.Windows.Forms.TextBox> controllo a un carattere specifico.  
   
-     La proprietà <xref:System.Windows.Forms.TextBox.PasswordChar%2A> specifica il carattere visualizzato nella casella di testo.  Se ad esempio si desidera che vengano visualizzati degli asterischi che sostituiscano ogni carattere digitato nella casella password, specificare \* per la proprietà <xref:System.Windows.Forms.TextBox.PasswordChar%2A> nella finestra Proprietà.  Verrà visualizzato un asterisco indipendentemente dal carattere digitato dall'utente.  
+     Il <xref:System.Windows.Forms.TextBox.PasswordChar%2A> proprietà specifica il carattere visualizzato nella casella di testo. Ad esempio, se si desidera asterischi visualizzati nella casella password, specificare * per il <xref:System.Windows.Forms.TextBox.PasswordChar%2A> proprietà nella finestra Proprietà. Quindi, indipendentemente dal qual è il carattere di un utente digita nella casella di testo, viene visualizzato un asterisco.  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> \(facoltativo\).  La proprietà determina il numero di caratteri che è possibile digitare nella casella di testo.  Se si supera la lunghezza massima consentita, il sistema emetterà un segnale acustico e la casella di testo non accetterà ulteriori caratteri.  Si noti che è improbabile che si intenda eseguire tale operazione, in quanto la lunghezza massima di una password potrebbe rappresentare un'informazione utile per eventuali malintenzionati che tentino di indovinare la password stessa.  
+2.  (Facoltativo) Impostare il <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> proprietà. La proprietà determina il numero di caratteri può essere digitato nella casella di testo. Se viene superata la lunghezza massima, il sistema genera un segnale acustico e la casella di testo non accetta ulteriori caratteri. Si noti che non si consiglia di eseguire questa operazione come la lunghezza massima di una password possono essere utilizzata da utenti malintenzionati che tentano di indovinare la password.  
   
-     Nel codice qui di seguito viene illustrato come inizializzare una casella di testo che accetta una stringa di un massimo di 14 caratteri e visualizza una serie di asterischi al posto della stringa.  La routine `InitializeMyControl`  non viene eseguita automaticamente, ma deve essere richiamata.  
+     Esempio di codice seguente viene illustrato come inizializzare una casella di testo che accetta una stringa fino a 14 caratteri e visualizzano gli asterischi al posto della stringa. Il `InitializeMyControl` procedura non verrà eseguito automaticamente; deve essere chiamato.  
   
     > [!IMPORTANT]
-    >  Utilizzando la proprietà <xref:System.Windows.Forms.TextBox.PasswordChar%2A> su una casella di testo è possibile evitare che altri utenti scoprano la password di un utente al momento dell'accesso.  Questo metodo di sicurezza non impedisce l'archiviazione o la trasmissione della password dovuta alla logica dell'applicazione.  Poiché il testo non è crittografato in alcun modo, è opportuno considerarlo come dati riservati.  Anche se non appare come tale, la password verrà comunque considerata come stringa di solo testo, a meno che non sia stato implementato un ulteriore metodo di sicurezza.  
+    >  Utilizzo di <xref:System.Windows.Forms.TextBox.PasswordChar%2A> proprietà in una casella di testo può garantire che altri utenti non sarà in grado di determinare una password, se si osserva l'utente immetterlo. Questa misura di sicurezza non comprende una sorta di archiviazione o la trasmissione della password che possono verificarsi a causa della logica dell'applicazione. Poiché il testo immesso non è crittografato in alcun modo, è necessario considerare come qualsiasi altro tipo di dati riservati. Anche se non viene visualizzato di conseguenza, la password verrà comunque considerata come una stringa di testo normale (a meno che non è stato implementato un aggiuntiva di sicurezza).  
   
     ```vb  
     Private Sub InitializeMyControl()  
@@ -49,7 +54,6 @@ Una casella di testo Password è una casella di testo di Windows Form che visual
        ' The control will allow no more than 14 characters.  
        TextBox1.MaxLength = 14  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -62,7 +66,6 @@ Una casella di testo Password è una casella di testo di Windows Form che visual
        // The control will allow no more than 14 characters.  
        textBox1.MaxLength = 14;  
     }  
-  
     ```  
   
     ```cpp  
@@ -78,12 +81,12 @@ Una casella di testo Password è una casella di testo di Windows Form che visual
        }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.TextBox>   
- [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Procedura: controllare il punto di inserimento in un controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Procedura: creare una casella di testo in sola lettura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Procedura: inserire virgolette in una stringa](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [Procedura: selezionare testo nel controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [Procedura: visualizzare più righe nel controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.TextBox>  
+ [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [Procedura: Creare una casella di testo in sola lettura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Procedura: Inserire virgolette in una stringa](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [Procedura: Selezionare testo nel controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [Procedura: Visualizzare più righe nel controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  [Controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

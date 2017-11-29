@@ -1,34 +1,33 @@
 ---
-title: "Join Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryJoinIn"
-  - "vb.QueryJoin"
-  - "vb.QueryJoinOn"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [Visual Basic], Join"
-  - "Join statement"
-  - "Join clause"
+title: Clausola Join (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryJoinIn
+- vb.QueryJoin
+- vb.QueryJoinOn
+helpviewer_keywords:
+- queries [Visual Basic], Join
+- Join statement [Visual Basic]
+- Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Join Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Combina due raccolte in un'unica raccolta.  L'operazione di join è basata sulla corrispondenza di chiavi e utilizza l'operatore `Equals`.  
+# <a name="join-clause-visual-basic"></a>Clausola Join (Visual Basic)
+Combina due raccolte in un'unica raccolta. L'operazione di join è basata su chiavi corrispondenti e utilizza il `Equals` operatore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Join element In collection _  
@@ -37,44 +36,44 @@ Join element In collection _
 On key1 Equals key2 [ And key3 Equals key4 [... ]  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `element`  
- Necessario.  La variabile di controllo per la raccolta da unire.  
+ Obbligatorio. La variabile di controllo per la raccolta da unire in join.  
   
  `collection`  
- Necessario.  La raccolta da combinare con la raccolta identificata sul lato sinistro dell'operatore `Join`.  Una clausola `Join` può essere annidata in un'altra clausola `Join` o in una clausola `Group Join`.  
+ Obbligatorio. La raccolta da combinare con l'insieme identificato sul lato sinistro del `Join` operatore. Oggetto `Join` clausola può essere annidata in un'altra `Join` clausola, o in un `Group Join` clausola.  
   
  `joinClause`  
- Opzionale.  Uno o più clausole `Join` aggiuntive per perfezionare la query.  
+ Parametro facoltativo. Uno o più ulteriori `Join` clausole per perfezionare la query.  
   
  `groupJoinClause`  
- Opzionale.  Uno o più clausole `Group Join` aggiuntive per perfezionare la query.  
+ Parametro facoltativo. Uno o più ulteriori `Group Join` clausole per perfezionare la query.  
   
  `key1` `Equals` `key2`  
- Necessario.  Identifica le chiavi per le raccolte da unire.  È necessario utilizzare l'operatore `Equals` per confrontare le chiavi dalle raccolte da unire.  È possibile combinare condizioni di join utilizzando l'operatore `And` per identificare più chiavi.  Il parametro `key1` deve provenire dalla raccolta sul lato sinistro dell'operatore `Join`.  Il parametro `key2` deve provenire dalla raccolta sul lato destro dell'operatore `Join`.  
+ Obbligatorio. Identifica le chiavi per le raccolte da unire in join. È necessario utilizzare il `Equals` operatore per confrontare le chiavi dalle raccolte da unire in join. È possibile combinare le condizioni di join utilizzando il `And` operatore per identificare più chiavi. `key1`deve essere dall'insieme sul lato sinistro del `Join` operatore. `key2`deve essere dall'insieme sul lato destro del `Join` operatore.  
   
- Le chiavi utilizzate nella condizione di join possono essere espressioni che includono più di un elemento della raccolta.  Tuttavia ogni espressione di chiave può contenere solo elementi della rispettiva raccolta.  
+ Le chiavi usate nella condizione di join possono essere espressioni che includono più di un elemento dalla raccolta. Tuttavia, ogni espressione chiave può contenere solo gli elementi del rispettivo insieme.  
   
-## Note  
- La clausola `Join` combina due raccolte in base ai valori chiave corrispondenti delle raccolte da unire.  La raccolta risultante può contenere qualsiasi combinazione di valori dalla raccolta identificata sul lato sinistro dell'operatore `Join` e dalla raccolta identificata nella clausola `Join`.  La query restituirà solo risultati per cui la condizione specificata dall'operatore `Equals` è soddisfatta.  Equivale ad un `INNER JOIN` in SQL.  
+## <a name="remarks"></a>Note  
+ Il `Join` clausola combina due raccolte in base ai valori di chiave le raccolte da unire in join di corrispondenza. La raccolta risulta può contenere qualsiasi combinazione di valori dalla raccolta identificata sul lato sinistro del `Join` operatore e la raccolta identificato nel `Join` clausola. La query restituirà solo i risultati per cui la condizione specificata dal `Equals` operatore viene soddisfatta. Ciò equivale a un `INNER JOIN` in SQL.  
   
- È possibile utilizzare più clausole `Join` in una query per unire due o più raccolte in un'unica raccolta.  
+ È possibile utilizzare più `Join` clausole in una query per unire due o più raccolte in un'unica raccolta.  
   
- È possibile eseguire un join implicito per unire raccolte senza la clausola `Join`.  Per eseguire questa operazione, includere più clausole `In` nella clausola `From` e specificare una clausola `Where` che identifica le chiavi da utilizzare per il join.  
+ È possibile eseguire un join implicito per combinare le raccolte senza il `Join` clausola. A tale scopo, includere più `In` clausole il `From` clausola e specificare un `Where` clausola che identifica le chiavi che si desidera utilizzare per il join.  
   
- È possibile utilizzare la clausola `Group Join` per combinare più raccolte in un' unica raccolta gerarchica.  Equivale a `LEFT OUTER JOIN` in SQL.  
+ È possibile utilizzare il `Group Join` clausola per combinare più raccolte in un'unica raccolta gerarchica. Ciò equivale a un `LEFT OUTER JOIN` in SQL.  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come eseguire un join implicito per combinare un elenco di clienti con i rispettivi ordini.  
+## <a name="example"></a>Esempio  
+ Esempio di codice seguente esegue un join implicito per combinare un elenco di clienti con i relativi ordini.  
   
  [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
   
-## Esempio  
- Nell'esempio di codice seguente vengono unite due raccolte utilizzando la clausola `Join`.  
+## <a name="example"></a>Esempio  
+ Esempio di codice seguente crea un join tra due raccolte tramite la `Join` clausola.  
   
  [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
   
- In questo esempio viene prodotto un output simile al seguente:  
+ In questo esempio verrà produrrà un output simile al seguente:  
   
  `winlogon (968), Windows Logon`  
   
@@ -82,12 +81,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `cmd (5136), Command Window`  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come unire due raccolte utilizzando la clausola `Join`con due colonne di chiavi.  
+## <a name="example"></a>Esempio  
+ Esempio di codice seguente crea un join tra due raccolte tramite la `Join` clausola con due colonne chiave.  
   
  [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
   
- In questo esempio viene prodotto un output simile al seguente:  
+ Nell'esempio verrà produrrà un output simile al seguente:  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   
@@ -95,10 +94,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## Vedere anche  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Vedere anche  
+ [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Query](../../../visual-basic/language-reference/queries/queries.md)  
+ [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Clausola Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Clausola Where](../../../visual-basic/language-reference/queries/where-clause.md)

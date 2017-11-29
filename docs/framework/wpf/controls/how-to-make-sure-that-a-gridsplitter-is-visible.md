@@ -1,43 +1,45 @@
 ---
-title: "Procedura: assicurarsi che GridSplitter sia visibile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GridSplitter (controllo), assicurazione di visibilità"
+title: 'Procedura: assicurarsi che GridSplitter sia visibile'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e8692d356b1b20c7405b4478cef1d16c173389ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: assicurarsi che GridSplitter sia visibile
-In questo esempio viene illustrato come assicurarsi che un controllo <xref:System.Windows.Controls.GridSplitter> non sia nascosto da altri controlli in una classe <xref:System.Windows.Controls.Grid>.  
+# <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>Procedura: assicurarsi che GridSplitter sia visibile
+In questo esempio viene illustrato come assicurarsi che un <xref:System.Windows.Controls.GridSplitter> controllo non è nascosto da altri controlli in un <xref:System.Windows.Controls.Grid>.  
   
-## Esempio  
- Il rendering della proprietà <xref:System.Windows.Controls.Panel.Children%2A> di un controllo <xref:System.Windows.Controls.Grid> viene eseguito nell'ordine di definizione nel markup o nel codice.  I controlli <xref:System.Windows.Controls.GridSplitter> possono essere nascosti da altri controlli se non vengono definiti come ultimi elementi nella raccolta <xref:System.Windows.Controls.Panel.Children%2A> o se si assegna ad altri controlli un campo <xref:System.Windows.Controls.Panel.ZIndexProperty> più alto.  
+## <a name="example"></a>Esempio  
+ Il <xref:System.Windows.Controls.Panel.Children%2A> di un <xref:System.Windows.Controls.Grid> controllo vengono visualizzati in ordine di definizione nel markup o codice. <xref:System.Windows.Controls.GridSplitter>controlli da altri controlli possono essere nascosti se non vengono definiti come ultimi elementi nel <xref:System.Windows.Controls.Panel.Children%2A> insieme o se si assegna ad altri controlli più alto <xref:System.Windows.Controls.Panel.ZIndexProperty>.  
   
- Per evitare la presenza di controlli <xref:System.Windows.Controls.GridSplitter> nascosti, eseguire una delle operazioni seguenti.  
+ Per evitare nascosto <xref:System.Windows.Controls.GridSplitter> controlli, eseguire una delle operazioni seguenti.  
   
--   Verificare che i controlli <xref:System.Windows.Controls.GridSplitter> siano le ultime proprietà <xref:System.Windows.Controls.Panel.Children%2A> aggiunte alla classe <xref:System.Windows.Controls.Grid>.  Nell'esempio riportato di seguito viene illustrato l'oggetto <xref:System.Windows.Controls.GridSplitter> come ultimo elemento nella raccolta <xref:System.Windows.Controls.Panel.Children%2A> della classe <xref:System.Windows.Controls.Grid>.  
+-   Assicurarsi che <xref:System.Windows.Controls.GridSplitter> i controlli sono l'ultima <xref:System.Windows.Controls.Panel.Children%2A> aggiunti il <xref:System.Windows.Controls.Grid>. Nell'esempio seguente il <xref:System.Windows.Controls.GridSplitter> come l'ultimo elemento il <xref:System.Windows.Controls.Panel.Children%2A> insieme del <xref:System.Windows.Controls.Grid>.  
   
- [!code-xml[GridSplitterSnips#GridSplitterLastChild](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterlastchild)]  
+ [!code-xaml[GridSplitterSnips#GridSplitterLastChild](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterlastchild)]  
   
--   Impostare il campo <xref:System.Windows.Controls.Panel.ZIndexProperty> su <xref:System.Windows.Controls.GridSplitter> su un valore più alto rispetto a un controllo che, in caso contrario, lo nasconderebbe.  Nell'esempio riportato di seguito viene impostato un valore più alto del campo <xref:System.Windows.Controls.Panel.ZIndexProperty> per il controllo <xref:System.Windows.Controls.GridSplitter> rispetto al controllo <xref:System.Windows.Controls.Button>.  
+-   Impostare il <xref:System.Windows.Controls.Panel.ZIndexProperty> sul <xref:System.Windows.Controls.GridSplitter> è superiore a un controllo che sarebbe altrimenti nasconderlo. Nell'esempio seguente consente di <xref:System.Windows.Controls.GridSplitter> controllano un livello più elevato <xref:System.Windows.Controls.Panel.ZIndexProperty> rispetto di <xref:System.Windows.Controls.Button> controllo.  
   
- [!code-xml[GridSplitterSnips#GridSplitterZIndex](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterzindex)]  
+ [!code-xaml[GridSplitterSnips#GridSplitterZIndex](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterzindex)]  
   
--   Impostare i margini sul controllo che, in caso contrario, nasconderebbe <xref:System.Windows.Controls.GridSplitter> in modo tale che <xref:System.Windows.Controls.GridSplitter> sia esposto.  Nell'esempio riportato di seguito vengono impostati margini su un controllo che, in caso contrario, verrebbe sovrapposto e nasconderebbe l'oggetto <xref:System.Windows.Controls.GridSplitter>.  
+-   Impostare i margini del controllo che in caso contrario nasconderà la <xref:System.Windows.Controls.GridSplitter> in modo che il <xref:System.Windows.Controls.GridSplitter> viene esposta. Nell'esempio seguente imposta i margini su un controllo che in caso contrario, verrebbe sovrapposto e nascondere il <xref:System.Windows.Controls.GridSplitter>.  
   
- [!code-xml[GridSplitterSnips#GridSplitterMargin](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
+ [!code-xaml[GridSplitterSnips#GridSplitterMargin](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
   
-## Vedere anche  
- <xref:System.Windows.Controls.GridSplitter>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Controls.GridSplitter>  
  [Procedure relative](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

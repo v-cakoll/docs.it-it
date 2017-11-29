@@ -1,37 +1,42 @@
 ---
-title: "Procedura: impostare l&#39;immagine visualizzata da un controllo Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button (controllo) [Windows Form], immagini"
-  - "controlli [Windows Form], immagini"
-  - "esempi [Windows Form], controlli"
-  - "immagini [Windows Form], controlli Windows Form"
-  - "controlli Windows Form, immagini"
+title: 'Procedura: impostare l''immagine visualizzata da un controllo Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Button control [Windows Forms], images
+- Windows Forms controls, images
+- controls [Windows Forms], images
+- images [Windows Forms], Windows Forms controls
+- examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d9f4d806b39e6e1272ddbb60befdaf8c76e46b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare l&#39;immagine visualizzata da un controllo Windows Form
-In numerosi controlli Windows Form possono essere visualizzate immagini.  Tali immagini possono corrispondere a icone che illustrano la finalità del controllo, ad esempio l'icona di un dischetto su un pulsante indica il comando **Salva**.  In alternativa le icone possono corrispondere a immagini di sfondo per fornire al controllo l'aspetto e il comportamento desiderati.  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Procedura: impostare l'immagine visualizzata da un controllo Windows Form
+Vari controlli Windows Form consente di visualizzare immagini. Queste immagini possono essere le icone che illustrano la finalità del controllo, ad esempio un'icona del dischetto su un pulsante indica il **salvare** comando. In alternativa, le icone possono essere immagini di sfondo per fornire il controllo, l'aspetto e il comportamento desiderato.  
   
-### Per impostare l'immagine visualizzata da un controllo  
+### <a name="to-set-the-image-displayed-by-a-control"></a>Per impostare l'immagine visualizzata da un controllo  
   
-1.  Impostare la proprietà `Image` o `BackgroundImage` del controllo su un oggetto di tipo <xref:System.Drawing.Image>.  L'immagine viene di solito caricata da un file mediante il metodo <xref:System.Drawing.Image.FromFile%2A>.  
+1.  Impostare il controllo `Image` o `BackgroundImage` proprietà a un oggetto di tipo <xref:System.Drawing.Image>. In genere, si verrà caricata l'immagine da un file utilizzando il <xref:System.Drawing.Image.FromFile%2A> metodo.  
   
-     Nell'esempio di codice riportato di seguito il percorso impostato per la posizione dell'immagine corrisponde alla cartella **Immagini**,  inclusa nella maggior parte dei computer che eseguono un sistema operativo Windows.  Questa impostazione consente inoltre agli utenti con livelli minimi di accesso al sistema di eseguire l'applicazione in modo sicuro.  Per l'esempio è necessario un form a cui sia già stato aggiunto il controllo <xref:System.Windows.Forms.PictureBox>.  
+     Nell'esempio di codice riportato di seguito, il percorso impostato per la posizione dell'immagine è il **immagini** cartella. La maggior parte dei computer che eseguono il sistema operativo Windows includerà questa directory. Ciò consente inoltre agli utenti con livelli di accesso di sistema minimi eseguire l'applicazione in modo sicuro. Esempio di codice seguente richiede che si dispone già di un form con un <xref:System.Windows.Forms.PictureBox> controllo aggiunto.  
   
     ```vb  
     ' Replace the image named below  
@@ -40,7 +45,6 @@ In numerosi controlli Windows Form possono essere visualizzate immagini.  Tali i
        (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.MyPictures) _  
        & "\Image.gif")  
-  
     ```  
   
     ```csharp  
@@ -51,7 +55,6 @@ In numerosi controlli Windows Form possono essere visualizzate immagini.  Tali i
        (System.Environment.GetFolderPath  
        (System.Environment.SpecialFolder.MyPictures)  
        + @"\Image.gif");  
-  
     ```  
   
     ```cpp  
@@ -63,7 +66,7 @@ In numerosi controlli Windows Form possono essere visualizzate immagini.  Tali i
        "\\Image.gif"));  
     ```  
   
-## Vedere anche  
- <xref:System.Drawing.Image.FromFile%2A>   
- <xref:System.Drawing.Image>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Image.FromFile%2A>  
+ <xref:System.Drawing.Image>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>

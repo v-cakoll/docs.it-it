@@ -1,41 +1,44 @@
 ---
-title: "Procedura: animare una rotazione tridimensionale tramite fotogrammi chiave | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "3D (conversioni), animazione, con fotogrammi chiave (Rotation3DAnimation)"
-  - "animazione, 3D (conversioni), con fotogrammi chiave (Rotation3DAnimation)"
-  - "fotogrammi chiave, Rotation3DAnimation"
+title: 'Procedura: animare una rotazione tridimensionale tramite fotogrammi chiave'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], 3-D translations [WPF], with key frames (Rotation3DAnimation)
+- key frames [WPF], Rotation3DAnimation
+- 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8dad8934dacd64f31cf65d7517d8c48114522505
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: animare una rotazione tridimensionale tramite fotogrammi chiave
-Nell'esempio riportato di seguito, l'oggetto <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> viene utilizzato per far ruotare un oggetto tridimensionale mentre il relativo asse di rotazione viene animato generando un'oscillazione.  In questa animazione vengono utilizzati i fotogrammi chiave riportati di seguito:  
+# <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>Procedura: animare una rotazione tridimensionale tramite fotogrammi chiave
+Nell'esempio seguente, <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> viene utilizzato per far ruotare un oggetto 3D mentre l'asse di rotazione aggiunge un'animazione generando un'oscillazione"". Questa animazione utilizza i fotogrammi chiave seguenti:  
   
-1.  L'oggetto <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> viene utilizzato per creare un'interpolazione lineare e uniforme tra valori.  
+1.  <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame>viene utilizzato per creare un'interpolazione lineare uniforme tra i valori.  
   
-2.  <xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame> viene utilizzato per creare "salti" improvvisi tra valori \(senza interpolazione\).  
+2.  <xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame>viene utilizzato per creare "improvvisi" tra due valori (nessuna interpolazione).  
   
-3.  <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame> viene utilizzato per creare una transizione variabile tra valori in base alla proprietà <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A>.  Nell'esempio riportato di seguito, questa parte dell'animazione si avvia lentamente, ma accelera esponenzialmente verso la fine dell'intervallo di tempo.  
+3.  <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame>è possibile creare una transizione tra i valori in base alle variabile di <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> proprietà. Nell'esempio seguente, questa parte dell'animazione viene avviato lentamente, ma verso la fine dell'intervallo di tempo, consente di velocizzare in modo esponenziale.  
   
-## Esempio  
- [!code-xml[Animation3DGallery_snip#Rotation3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationUsingKeyFramesExample.xaml#rotation3danimationusingkeyframesexamplewholepage)]  
+## <a name="example"></a>Esempio  
+ [!code-xaml[Animation3DGallery_snip#Rotation3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationUsingKeyFramesExample.xaml#rotation3danimationusingkeyframesexamplewholepage)]  
   
-## Vedere anche  
- [Cenni preliminari sulla grafica tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)   
- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Animare una rotazione tridimensionale utilizzando gli storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)   
- [Aggiungere un'animazione a una rotazione tridimensionale tramite Rotation3DAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)   
- [Aggiungere un'animazione a una rotazione tridimensionale tramite quaternioni](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)   
- [Animare a una rotazione tridimensionale utilizzando i fotogrammi chiave \(QuaternionAnimationUsingKeyFrames\)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica sulla grafica tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
+ [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Animare una rotazione tridimensionale usando gli storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [Aggiungere un'animazione a una rotazione tridimensionale usando Rotation3DAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [Aggiungere un'animazione a una rotazione tridimensionale usando quaternioni](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [Animare a una rotazione tridimensionale usando i fotogrammi chiave (QuaternionAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)

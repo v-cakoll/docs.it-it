@@ -1,69 +1,73 @@
 ---
-title: "Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], creazione"
-  - "controlli [Windows Form], analisi dello stato di avanzamento"
-  - "FlashTrackBar (controllo personalizzato)"
-  - "avanzamento, visualizzazione [Windows Form]"
+title: 'Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], progress tracking
+- controls [Windows Forms], creating
+- progress [Windows Forms], reporting [Windows Forms]
+- FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55b3879b894658c9a649004348a198d004040af3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento
-Nell'esempio di codice riportato di seguito viene illustrato un controllo personalizzato, denominato `FlashTrackBar`, che può essere utilizzato per visualizzare il livello o lo stato di avanzamento di un'applicazione.  Il controllo utilizza una sfumatura per rappresentare visivamente l'avanzamento.  
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento
+L'esempio di codice seguente visualizza un controllo personalizzato denominato `FlashTrackBar` che può essere usato per visualizzare all'utente il livello o lo stato di avanzamento di un'applicazione. Usa una sfumatura per rappresentare visivamente lo stato di avanzamento.  
   
- Nel controllo `FlashTrackBar` vengono illustrati i concetti seguenti:  
+ Il controllo `FlashTrackBar` illustra i concetti seguenti:  
   
 -   Definizione di proprietà personalizzate.  
   
--   Definizione di eventi personalizzati.  \(`FlashTrackBar` definisce l'evento `ValueChanged`\).  
+-   Definizione di eventi personalizzati. (`FlashTrackBar` definisce l'evento `ValueChanged`.)  
   
--   Esecuzione dell'override del metodo <xref:System.Windows.Forms.Control.OnPaint%2A> per fornire la logica necessaria per la progettazione del controllo.  
+-   Si esegue l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo per fornire la logica per disegnare il controllo.  
   
--   Calcolo dell'area disponibile per disegnare il controllo mediante la proprietà <xref:System.Windows.Forms.Control.ClientRectangle%2A>.  `FlashTrackBar` esegue tale operazione nel metodo `OptimizedInvalidate`.  
+-   Calcolo dell'area disponibile per disegnare il controllo mediante il relativo <xref:System.Windows.Forms.Control.ClientRectangle%2A> proprietà. `FlashTrackBar` esegue questa operazione nel relativo metodo `OptimizedInvalidate`.  
   
--   Implementazione della serializzazione o della persistenza per una proprietà quando viene modificata in Progettazione Windows Form.  `FlashTrackBar` definisce i metodi `ShouldSerializeStartColor` e `ShouldSerializeEndColor` per la serializzazione delle proprietà `StartColor` e `EndColor`.  
+-   Implementazione della serializzazione o del salvataggio permanente per una proprietà quando viene modificata nella Progettazione Windows Form. `FlashTrackBar` definisce i metodi `ShouldSerializeStartColor` e `ShouldSerializeEndColor` per la serializzazione delle relative proprietà `StartColor` e `EndColor`.  
   
- Nella tabella riportata di seguito sono illustrate le proprietà personalizzate definite da `FlashTrackBar`.  
+ La tabella seguente elenca le proprietà personalizzate definite da `FlashTrackBar`.  
   
 |Proprietà|Descrizione|  
-|---------------|-----------------|  
-|`AllowUserEdit`|Indica se l'utente può modificare il valore del controllo FlashTrackBar selezionandolo e trascinandolo.|  
+|--------------|-----------------|  
+|`AllowUserEdit`|Indica se l'utente può modificare il valore del controllo FlashTrackBar tramite selezione e trascinamento.|  
 |`EndColor`|Specifica il colore finale della barra di avanzamento.|  
-|`DarkenBy`|Specifica di quanto scurire lo sfondo rispetto alla sfumatura in primo piano.|  
+|`DarkenBy`|Specifica di quanto scurire lo sfondo rispetto alla sfumatura di primo piano.|  
 |`Max`|Specifica il valore massimo della barra di avanzamento.|  
 |`Min`|Specifica il valore minimo della barra di avanzamento.|  
 |`StartColor`|Specifica il colore iniziale della sfumatura.|  
 |`ShowPercentage`|Indica se visualizzare una percentuale sulla sfumatura.|  
 |`ShowValue`|Indica se visualizzare il valore corrente sulla sfumatura.|  
-|`ShowGradient`|Indica se sulla barra di avanzamento deve essere visualizzata una sfumatura di colore che indica il valore corrente.|  
+|`ShowGradient`|Indica se l'indicatore di avanzamento deve visualizzare una sfumatura di colore che indica il valore corrente.|  
 |-   `Value`|Specifica il valore corrente della barra di avanzamento.|  
   
- Nella tabella riportata di seguito sono illustrati i membri aggiuntivi definiti da `FlashTrackBar:` l'evento proprietà modificata e il metodo che genera tale evento.  
+ La tabella seguente elenca membri aggiuntivi definiti dalla proprietà `FlashTrackBar:`: l'evento proprietà modificata e il metodo che genera tale evento.  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`ValueChanged`|L'evento che viene generato quando la proprietà `Value` della barra di avanzamento viene modificata.|  
+|`ValueChanged`|L'evento generato quando viene modificata la proprietà `Value` della barra di avanzamento.|  
 |`OnValueChanged`|Il metodo che genera l'evento `ValueChanged`.|  
   
 > [!NOTE]
->  `FlashTrackBar` utilizza la classe <xref:System.EventArgs> per i dati dell'evento e <xref:System.EventHandler> come delegato dell'evento.  
+>  `FlashTrackBar`Usa il <xref:System.EventArgs> classe per i dati dell'evento e <xref:System.EventHandler> delegato dell'evento.  
   
- Per gestire gli eventi *NomeEvento* corrispondenti, il controllo `FlashTrackBar` esegue l'override dei seguenti metodi ereditati da <xref:System.Windows.Forms.Control?displayProperty=fullName>:  
+ Per gestire il corrispondente *EventName* eventi, `FlashTrackBar` esegue l'override di metodi seguenti che eredita da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
 -   <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -75,7 +79,7 @@ Nell'esempio di codice riportato di seguito viene illustrato un controllo person
   
 -   <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- Per gestire gli eventi di proprietà modificata corrispondenti, il controllo `FlashTrackBar` esegue l'override dei seguenti metodi ereditati da <xref:System.Windows.Forms.Control?displayProperty=fullName>:  
+ Per gestire gli eventi di modifica della proprietà corrispondenti, `FlashTrackBar` esegue l'override di metodi seguenti che eredita da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
 -   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
@@ -83,8 +87,8 @@ Nell'esempio di codice riportato di seguito viene illustrato un controllo person
   
 -   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## Esempio  
- Il controllo `FlashTrackBar` definisce due editor di tipi con interfaccia utente, `FlashTrackBarValueEditor` e `FlashTrackBarDarkenByEditor`, riportati nei seguenti listati di codice.  La classe `HostApp` utilizza il controllo `FlashTrackBar` su un Windows Form.  
+## <a name="example"></a>Esempio  
+ Il controllo `FlashTrackBar` definisce due editor di tipi dell'interfaccia utente, `FlashTrackBarValueEditor` e `FlashTrackBarDarkenByEditor`, visualizzati negli elenchi di codice seguenti. La classe `HostApp` usa il controllo `FlashTrackBar` in un Windows Form.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
@@ -98,6 +102,6 @@ Nell'esempio di codice riportato di seguito viene illustrato un controllo person
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## Vedere anche  
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Estensione del supporto in fase di progettazione](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  [Nozioni fondamentali sullo sviluppo di controlli Windows Form](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

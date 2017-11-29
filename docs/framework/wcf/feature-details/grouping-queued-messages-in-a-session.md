@@ -1,27 +1,29 @@
 ---
-title: "Raggruppamento di messaggi in coda in una sessione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "code [WCF]. raggruppamento di messaggi"
+title: Raggruppamento di messaggi in coda in una sessione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0dbd9d28d56d8d473b9e92d977da409b74290224
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Raggruppamento di messaggi in coda in una sessione
+# <a name="grouping-queued-messages-in-a-session"></a>Raggruppamento di messaggi in coda in una sessione
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce una sessione che consente di raggruppare un set di messaggi correlati affinché vengano elaborati da un'unica applicazione ricevente. I messaggi appartenenti a una sessione devono appartenere alla stessa transazione. Poiché tutti i messaggi appartengono alla stessa transazione, se l'elaborazione di un messaggio non riesce viene eseguito il rollback dell'intera sessione. Le sessioni presentano comportamenti simili relativamente alle code di messaggi non recapitabili e alle code di messaggi non elaborabili. La proprietà di durata (TTL, Time To Live) impostata in un'associazione in coda configurata per una determinata sessione viene applicata all'intera sessione. Se allo scadere del TTL è stata inviata solo una parte dei messaggi, l'intera sessione viene inserita nella coda di messaggi non recapitabili. Analogamente, quando risulta impossibile inviare a un'applicazione alcuni messaggi di una sessione contenuti nella coda dell'applicazione, l'intera sessione viene inserita nella coda di messaggi non elaborabili (se disponibile).  
   
 ## <a name="message-grouping-example"></a>Esempio di raggruppamento di messaggi  
@@ -31,13 +33,13 @@ caps.handback.revision: 30
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Per configurare l'utilizzo di sessioni in un contratto di servizio  
   
-1.  Definire un contratto di servizio che richieda una sessione. Eseguire questa operazione con il <xref:System.ServiceModel.OperationContractAttribute> attributo e specificare:  
+1.  Definire un contratto di servizio che richieda una sessione. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationContractAttribute> e specificare:  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Poiché questi metodi non restituiscono alcun dato, contrassegnare le operazioni del contratto come unidirezionali. Questa operazione viene eseguita con il <xref:System.ServiceModel.OperationContractAttribute> attributo e specificare:  
+2.  Poiché questi metodi non restituiscono alcun dato, contrassegnare le operazioni del contratto come unidirezionali. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationContractAttribute> e specificare:  
   
     ```  
     [OperationContract(IsOneWay = true)]  
@@ -49,17 +51,17 @@ caps.handback.revision: 30
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Per ogni operazione del servizio è necessario specificare una transazione. Tale scopo, utilizzare il <xref:System.ServiceModel.OperationBehaviorAttribute> attributo. L'operazione che completa la transazione deve inoltre impostare la proprietà `TransactionAutoComplete` su `true`.  
+4.  Per ogni operazione del servizio è necessario specificare una transazione. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationBehaviorAttribute>. L'operazione che completa la transazione deve inoltre impostare la proprietà `TransactionAutoComplete` su `true`.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Configurare un endpoint che utilizza l'associazione `NetProfileMsmqBinding` fornita dal sistema.  
+5.  Configurare un endpoint che utilizza l'associazione `NetMsmqBinding` fornita dal sistema.  
   
-6.  Creare una coda transazionale utilizzando <xref:System.Messaging>. Tale coda può anche essere creata tramite il sistema di accodamento dei messaggi (MSMQ) o la console MMC. In tal caso, creare una coda transazionale.  
+6.  Creare una coda transazionale utilizzando lo spazio dei nomi <xref:System.Messaging>. Tale coda può anche essere creata tramite il sistema di accodamento dei messaggi (MSMQ) o la console MMC. In tal caso, creare una coda transazionale.  
   
-7.  Creare un host del servizio per il servizio utilizzando <xref:System.ServiceModel.ServiceHost>.  
+7.  Creare un host del servizio mediante la classe <xref:System.ServiceModel.ServiceHost>.  
   
 8.  Aprire l'host del servizio per rendere disponibile il servizio.  
   
@@ -93,5 +95,5 @@ caps.handback.revision: 30
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Sessioni e code](../../../../docs/framework/wcf/samples/sessions-and-queues.md)   
+ [Code e sessioni](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)

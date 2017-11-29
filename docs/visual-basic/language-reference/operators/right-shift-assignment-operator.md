@@ -1,66 +1,63 @@
 ---
-title: "&gt;&gt;= Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.>>="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "assignment statements, compound"
-  - "statements [Visual Basic], compound assignment"
-  - "operator >>= [Visual Basic]"
-  - "compound assignment statements"
-  - ">>= operator [Visual Basic]"
+title: '&gt;&gt;= Operatore (Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.>>=
+helpviewer_keywords:
+- assignment statements [Visual Basic], compound
+- statements [Visual Basic], compound assignment
+- operator >>= [Visual Basic]
+- compound assignment statements [Visual Basic]
+- '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0e7e388471b9adf424c55b1ad1042e5aed1ea8ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &gt;&gt;= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Esegue uno spostamento aritmetico a destra sul valore di una variabile o di una proprietà e riassegna il risultato alla variabile o alla proprietà.  
+# <a name="gtgt-operator-visual-basic"></a>&gt;&gt;= Operatore (Visual Basic)
+Esegue uno scorrimento aritmetico destro sul valore di una variabile o proprietà e assegna il risultato alla variabile o alla proprietà.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 variableorproperty >>= amount  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `variableorproperty`  
- Obbligatorio.  Variabile o proprietà di un tipo integrale \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` o `ULong`\).  
+ Obbligatorio. Variabile o proprietà di un tipo integrale (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`).  
   
  `amount`  
- Obbligatorio.  Espressione numerica di un tipo di dati che viene convertito verso il tipo più grande `Integer`.  
+ Obbligatorio. Espressione numerica di un tipo di dati che si amplia in `Integer`.  
   
-## Note  
- L'elemento a sinistra dell'operatore `>>=` può essere una semplice variabile scalare, una proprietà oppure un elemento di una matrice.  La variabile o la proprietà non può essere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>Note  
+ L'elemento sul lato sinistro del `>>=` operatore può essere una semplice variabile scalare, una proprietà o un elemento della matrice. La variabile o proprietà non può essere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- L'operatore di `>>=` innanzitutto esegue uno spostamento aritmetico a destra del valore della variabile o della proprietà.  L'operatore quindi assegnare il risultato dell' operazione di nuovo alla variabile o alla proprietà.  
+ Il `>>=` operatore esegue innanzitutto un aritmetico a destra sul valore della variabile o proprietà. L'operatore assegna il risultato dell'operazione alla variabile o alla proprietà.  
   
- Gli spostamenti aritmetici non sono circolari. In altre parole, i bit spostati oltre una delle estremità del risultato non vengono reintrodotti all'altra estremità.  In uno spostamento aritmetico a destra, i bit spostati oltre la posizione dei bit all'estrema destra vengono ignorati e il bit all'estrema sinistra viene propagato nelle posizioni di bit liberate a sinistra.  Questo significa che se `variableorproperty` ha un valore negativo, le posizioni liberate vengono impostate su uno.  Se `variableorproperty` ha un valore positivo o se il tipo di dati è senza segno, le posizioni liberate vengono impostate su zero.  
+ Aritmetici non sono circolare, ovvero i bit spostati oltre un'estremità del risultato non sono reintrodotto a altra estremità. In un aritmetico a destra, i bit spostati oltre la posizione del primo bit a destra vengono ignorati e il bit più a sinistra viene propagato nelle posizioni di bit liberate a sinistra. Questo significa che se `variableorproperty` ha un valore negativo, le posizioni liberate vengono impostate su uno. Se `variableorproperty` è positivo, oppure se il tipo di dati è un tipo senza segno, le posizioni liberate vengono impostate su zero.  
   
-## Overload  
- L'[\>\> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md) può essere sottoposto a *overload*. In altri termini, una classe o una struttura può ridefinirne il comportamento quando un operando specifica il tipo di tale classe o struttura.  L'esecuzione dell'overload dell'operatore `>>` ha effetto sul comportamento dell'operatore `>>=`.  Se il codice utilizza `>>=` su una classe o una struttura che esegue l'overload di `>>`, è importante comprendere il comportamento ridefinito di tale operatore.  Per ulteriori informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Overload  
+ Il [>> operatore](../../../visual-basic/language-reference/operators/right-shift-operator.md) può essere *overload*, il che significa che una classe o struttura ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. L'overload di `>>` operatore influisce sul comportamento del `>>=` operatore. Se il codice utilizza `>>=` in una classe o struttura che esegue l'overload `>>`, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito l'operatore `>>=` viene utilizzato per spostare a destra lo schema di bit di una variabile `Integer` in base al numero specificato e per assegnare il risultato alla variabile.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente usa il `>>=` operatore per spostare lo schema di bit di un `Integer` variabile destra al numero specificato e assegnare il risultato alla variabile.  
   
  [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-assignment-operator_1.vb)]  
   
-## Vedere anche  
- [\>\> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)   
- [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [Bit Shift Operators](../../../visual-basic/language-reference/operators/bit-shift-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatore >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
+ [Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [Operatori di spostamento bit](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)

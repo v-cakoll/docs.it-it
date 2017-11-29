@@ -1,42 +1,46 @@
 ---
-title: "Procedura: riempire figure aperte | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "figure, riempimento"
-  - "figure aperte, riempimento"
+title: 'Procedura: riempire figure aperte'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- open figures [Windows Forms], filling
+- figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a8a2d5a13cac97063bf2a04969928c859a5954d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: riempire figure aperte
-È possibile riempire un percorso passando un oggetto <xref:System.Drawing.Drawing2D.GraphicsPath> al metodo <xref:System.Drawing.Graphics.FillPath%2A>.  Il metodo <xref:System.Drawing.Graphics.FillPath%2A> consente di riempire il percorso in base alla modalità di riempimento attualmente impostata per il percorso; è possibile scegliere tra modalità alternata o a chiocciola.  Se il percorso contiene figure aperte, viene riempito come se fossero chiuse.  In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] una figura viene chiusa disegnando un linea retta tra il punto finale e il punto iniziale della figura.  
+# <a name="how-to-fill-open-figures"></a>Procedura: riempire figure aperte
+È possibile inserire un percorso passando un <xref:System.Drawing.Drawing2D.GraphicsPath> dell'oggetto per il <xref:System.Drawing.Graphics.FillPath%2A> metodo. Il <xref:System.Drawing.Graphics.FillPath%2A> metodo compila il percorso secondo la modalità di riempimento (alternativo o culling) attualmente impostato per il percorso. Se il percorso contiene figure aperte, il percorso viene inserito come se fossero chiuse. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]chiude una figura tracciando una linea retta tra il punto finale e il punto iniziale.  
   
-## Esempio  
- Nell'esempio che segue viene creato un percorso che contiene una figura aperta, un arco, e una figura chiusa, un'ellisse.  Con il metodo <xref:System.Drawing.Graphics.FillPath%2A> il percorso viene riempito in base alla modalità di riempimento predefinita, ovvero <xref:System.Drawing.Drawing2D.FillMode>.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente crea un percorso che abbia una figura aperta (un arco) e una figura chiusa (un'ellisse). Il <xref:System.Drawing.Graphics.FillPath%2A> metodo compila il percorso in base alla modalità di riempimento predefinito, ovvero <xref:System.Drawing.Drawing2D.FillMode.Alternate>.  
   
- Nell'esempio che segue è illustrato l'output del codice modificato.  Si noti che il percorso viene riempito, secondo <xref:System.Drawing.Drawing2D.FillMode>, come se la figura aperta fosse chiusa da una linea retta tracciata tra il punto finale e il punto iniziale della figura.  
+ Nella figura seguente mostra l'output del codice di esempio. Si noti che il percorso viene riempito (in base a <xref:System.Drawing.Drawing2D.FillMode.Alternate>) come se figura aperta sono stati chiusi da una linea retta tra il punto finale e il punto iniziale.  
   
- ![Percorso di apertura file](../../../../docs/framework/winforms/advanced/media/fillopenpath.png "FillOpenPath")  
+ ![Percorso di apertura](../../../../docs/framework/winforms/advanced/media/fillopenpath.png "FillOpenPath")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#11)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
   
-## Vedere anche  
- <xref:System.Drawing.Drawing2D.GraphicsPath>   
- [Percorsi di oggetti Graphics in GDI\+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Drawing2D.GraphicsPath>  
+ [Percorsi di oggetti Graphics in GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)

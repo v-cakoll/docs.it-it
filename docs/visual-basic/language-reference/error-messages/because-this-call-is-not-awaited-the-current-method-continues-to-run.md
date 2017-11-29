@@ -1,53 +1,35 @@
 ---
-title: "Poiché questa chiamata non può essere attesa, il metodo corrente continua prima del completamento della chiamata di | Documenti di Microsoft"
-ms.date: 2015-07-20
+title: "Poiché la chiamata non può essere attesa, l'esecuzione del metodo corrente continua prima del completamento della chiamata"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42358
 - vbc42358
-helpviewer_keywords:
-- BC42358
+helpviewer_keywords: BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a0d0a5e7c50bacc657a3f54a7f08036ede59cbfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Poiché la chiamata non può essere attesa, l'esecuzione del metodo corrente continua prima del completamento della chiamata
 Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrente continuerà prima del completamento della chiamata. È possibile applicare l'operatore "Await" al risultato della chiamata.  
   
- Il metodo corrente viene chiamato un metodo asincrono che restituisce un <xref:System.Threading.Tasks.Task>o <xref:System.Threading.Tasks.Task%601>e non si applica il [Await](../../../visual-basic/language-reference/operators/await-operator.md) nel risultato.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Con la chiamata al metodo asincrono viene avviata un'attività asincrona. Tuttavia, poiché non viene applicato alcun operatore `Await` , l'esecuzione del programma continua senza attendere il completamento dell'attività. Nella maggior parte dei casi questo comportamento non è quello previsto. Di solito altri aspetti del metodo chiamante dipendono dai risultati della chiamata o, come minimo, si prevede che il metodo chiamato venga completato prima della restituzione da parte del metodo contenente la chiamata.  
+ Con il metodo corrente viene chiamato un metodo asincrono che restituisce <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> e non applica l'operatore [Await](../../../visual-basic/language-reference/operators/await-operator.md) al risultato. Con la chiamata al metodo asincrono viene avviata un'attività asincrona. Tuttavia, poiché non viene applicato alcun operatore `Await` , l'esecuzione del programma continua senza attendere il completamento dell'attività. Nella maggior parte dei casi questo comportamento non è quello previsto. Di solito altri aspetti del metodo chiamante dipendono dai risultati della chiamata o, come minimo, si prevede che il metodo chiamato venga completato prima della restituzione da parte del metodo contenente la chiamata.  
   
- Un problema ugualmente importante riguarda cosa accade con le eccezioni generate nel metodo asincrono richiamato. Un'eccezione generata in un metodo che restituisce un <xref:System.Threading.Tasks.Task>o <xref:System.Threading.Tasks.Task%601>viene archiviato nell'attività restituita.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Se non si attende l'attività o si controllano in modo esplicito le eccezioni, l'eccezione viene persa. Se si attende l'attività, la relativa eccezione viene generata di nuovo.  
+ Un problema ugualmente importante riguarda cosa accade con le eccezioni generate nel metodo asincrono richiamato. Un'eccezione generata in un metodo che restituisce <xref:System.Threading.Tasks.Task> o  <xref:System.Threading.Tasks.Task%601> viene archiviata nell'attività restituita. Se non si attende l'attività o si controllano in modo esplicito le eccezioni, l'eccezione viene persa. Se si attende l'attività, la relativa eccezione viene generata di nuovo.  
   
  Come procedura consigliata, attendere sempre la chiamata.  
   
- Per impostazione predefinita, si tratta di un messaggio di avviso. Per ulteriori informazioni su come nascondere gli avvisi o considerarli come errori, vedere [configurazione degli avvisi in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Per impostazione predefinita, si tratta di un messaggio di avviso. Per ulteriori informazioni su come nascondere gli avvisi o considerarli come errori, vedere [configurazione degli avvisi in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **ID errore:** BC42358  
   
@@ -141,7 +123,7 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
   
      Una finestra semplice con un pulsante e una casella di testo viene visualizzata nella visualizzazione **Progettazione** di MainWindow.xaml.  
   
-     Per ulteriori informazioni sulla finestra di progettazione XAML, vedere [la creazione di un'interfaccia utente tramite XAML Designer](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Per informazioni su come compilare una semplice interfaccia utente, vedere la "per creare un'applicazione WPF" e "per progettare una finestra principale semplice WPF" sezioni di [procedura dettagliata: accesso al Web tramite Async e Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Per altre informazioni sulla finestra di progettazione XAML, vedere [Creazione di un'interfaccia utente tramite la finestra di progettazione XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Per informazioni su come compilare una semplice interfaccia utente, vedere le sezioni "Per creare un'applicazione WPF" e "Per progettare una finestra WPF MainWindow semplice" nella [Procedura dettagliata: Accesso al Web tramite Async e Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
   
 4.  Sostituire il codice in MainWindow.xaml.vb con quello riportato di seguito.  
   
@@ -228,6 +210,5 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
      L'output previsto viene visualizzato alla fine del codice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Await (operatore)](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [Operatore Await](../../../visual-basic/language-reference/operators/await-operator.md)  
  [Programmazione asincrona con Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md)
-

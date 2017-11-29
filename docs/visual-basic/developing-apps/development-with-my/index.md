@@ -1,44 +1,25 @@
 ---
 title: Sviluppo con My (Visual Basic)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- My.MyWpfExtension.Windows
-dev_langs:
-- VB
+f1_keywords: My.MyWpfExtension.Windows
 helpviewer_keywords:
 - My object
 - My namespace
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3dae5e12baeb82c238381fb9e144c434816dcfb4
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 2cf51e1f6292a61c071fe6d92f5fcbce4be84ff4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="development-with-my-visual-basic"></a>Sviluppo con My (Visual Basic)
 Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni che migliorano la produttività e aumentano la facilità d'uso, garantendo al tempo stesso maggiore potenza. Una di queste funzionalità, denominata `My`, consente di accedere a informazioni e istanze di oggetti predefinite correlate all'applicazione e al relativo ambiente di run-time. Queste informazioni sono organizzate in un formato riconoscibile tramite IntelliSense e delineato in modo logico in base all'uso.  
@@ -66,10 +47,9 @@ Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni
  Vengono forniti dettagli sulle caratteristiche di `My` disponibili per i diversi tipi di progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)   
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
  [Dipendenza di My dal tipo di progetto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
-

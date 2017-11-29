@@ -1,37 +1,41 @@
 ---
-title: "Procedura: individuare le modifiche degli attributi di formattazione nel controllo RichTextBox Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], caselle di testo"
-  - "RichTextBox (controllo) [Windows Form], rilevamento modifiche al tipo di carattere"
-  - "SelBold (proprietà)"
-  - "SelChange (evento)"
-  - "caselle di testo, rilevamento modifiche al tipo di carattere"
+title: 'Procedura: individuare le modifiche degli attributi di formattazione nel controllo RichTextBox Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], text boxes
+- RichTextBox control [Windows Forms], determining font changes
+- text boxes [Windows Forms], determining font changes
+- SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0dc272e26124acf5c6bd5cf3030941c26c021c49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: individuare le modifiche degli attributi di formattazione nel controllo RichTextBox Windows Form
-Generalmente il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form viene utilizzato per formattare del testo con attributi, quali opzioni dei caratteri o stili dei paragrafi.  È possibile che nell'applicazione sia necessario tenere traccia delle modifiche apportate alla formattazione del testo allo scopo di visualizzare una barra degli strumenti, come nel caso di molti programmi di elaborazione testi.  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Procedura: individuare le modifiche degli attributi di formattazione nel controllo RichTextBox Windows Form
+Un utilizzo comune di Windows Form <xref:System.Windows.Forms.RichTextBox> controllo formattazione del testo con attributi, ad esempio le opzioni di tipo di carattere o gli stili dei paragrafi. L'applicazione potrebbe essere necessario tenere traccia delle modifiche per la visualizzazione di una barra degli strumenti, come in molte applicazioni di elaborazione testi di formattazione del testo.  
   
-### Per rispondere alle modifiche degli attributi di formattazione  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a>Per rispondere alle modifiche degli attributi di formattazione  
   
-1.  Nel gestore eventi <xref:System.Windows.Forms.RichTextBox.SelectionChanged> scrivere il codice per eseguire un'azione appropriata in base al valore dell'attributo.  Nell'esempio qui di seguito viene modificato l'aspetto di un pulsante della barra degli strumenti in base al valore della proprietà <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>.  Il pulsante della barra degli strumenti verrà aggiornato solo quando il punto di inserimento viene spostato nel controllo.  
+1.  Scrivere codice nel <xref:System.Windows.Forms.RichTextBox.SelectionChanged> gestore eventi per eseguire un'azione appropriata a seconda del valore dell'attributo. Nell'esempio seguente viene modificato l'aspetto di un pulsante della barra degli strumenti in base al valore di <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> proprietà. Pulsante della barra degli strumenti verrà aggiornato solo quando il punto di inserimento verrà spostato nel controllo.  
   
-     Si presuppone l'esistenza di un form contenente un controllo <xref:System.Windows.Forms.RichTextBox> e un controllo <xref:System.Windows.Forms.ToolBar> che contiene a sua volta un pulsante della barra degli strumenti.  Per ulteriori informazioni sulle barre degli strumenti e i relativi pulsanti, vedere [Procedura: aggiungere pulsanti a un controllo ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md).  
+     Nell'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.RichTextBox> controllo e un <xref:System.Windows.Forms.ToolBar> controllo contenente un pulsante della barra degli strumenti. Per ulteriori informazioni sulle barre degli strumenti e i pulsanti della barra degli strumenti, vedere [procedura: aggiungere pulsanti a un controllo ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md).  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -45,7 +49,6 @@ Generalmente il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form v
            ToolBarButton1.Pushed = False  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -65,7 +68,6 @@ Generalmente il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form v
           toolBarButton1.Pushed = false;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -88,8 +90,8 @@ Generalmente il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form v
        }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.RichTextBox.SelectionChanged>   
- <xref:System.Windows.Forms.RichTextBox>   
- [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.RichTextBox.SelectionChanged>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

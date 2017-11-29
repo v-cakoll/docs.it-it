@@ -1,87 +1,85 @@
 ---
-title: "\ Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.\"
-  - "\"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "division operator, integer"
-  - "integer division operator"
-  - "zero, division by zero"
-  - "arithmetic operators, division"
-  - "division, by zero"
-  - "backslash (\) [Visual Basic]"
-  - "\ operator [Visual Basic]"
-  - "integer quotient"
-  - "math operators"
-  - "quotients, integer"
-  - "truncation, integer division"
+title: Operatore \ (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.\
+- '\'
+helpviewer_keywords:
+- division operator [Visual Basic], integer
+- integer division operator [Visual Basic]
+- zero, division by zero
+- arithmetic operators [Visual Basic], division
+- division [Visual Basic], by zero
+- backslash (\) [Visual Basic]
+- '\ operator [Visual Basic]'
+- integer quotient
+- math operators [Visual Basic]
+- quotients, integer
+- truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 38718b109b4b3865238267039908ea1d51d06229
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# \ Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Divide due numeri e restituisce un Integer.  
+# <a name="-operator-visual-basic"></a>Operatore \ (Visual Basic)
+Divide due numeri e restituisce un risultato intero.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 expression1 \ expression2  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `expression1`  
- Obbligatorio.  Qualsiasi espressione numerica.  
+ Obbligatorio. Qualsiasi espressione numerica.  
   
  `expression2`  
- Obbligatorio.  Qualsiasi espressione numerica.  
+ Obbligatorio. Qualsiasi espressione numerica.  
   
-## Tipi supportati  
- Tutti i tipi numerici, inclusi i tipi senza segno, a virgola mobile e `Decimal`.  
+## <a name="supported-types"></a>Tipi supportati  
+ Tutti i tipi numerici, inclusi i tipi senza segno a virgola mobile e `Decimal`.  
   
-## Risultato  
- Il risultato è il quoziente integer di `expression1` diviso per `expression2`, in cui l'eventuale resto viene ignorato e viene mantenuta solo la parte integer.  Questo meccanismo è noto come *troncamento*.  
+## <a name="result"></a>Risultato  
+ Il risultato è il quoziente di `expression1` diviso `expression2`, che le parti restanti e viene mantenuta solo la parte intera. Questo è noto come *troncamento*.  
   
- Il tipo di dati del risultato è un tipo numerico appropriato in base ai tipi di dati di `expression1` ed `expression2`.  Per informazioni, vedere le tabelle "Operazioni aritmetiche su valori integer" in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ Il tipo di dati del risultato è un tipo numerico appropriato per i tipi di dati di `expression1` e `expression2`. Vedere le tabelle "Calcoli di interi" in [tipi di dati di risultati di operatore](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
- L'[\/ Operator](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto nella parte frazionaria.  
+ Il [/ (operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto nella parte frazionaria.  
   
-## Note  
- Prima di eseguire la divisione, viene effettuato il tentativo di convertire eventuali espressioni numeriche a virgola mobile in `Long`.  Se `Option Strict` è `On`, si verifica un errore del compilatore.  Se `Option Strict` è `Off`, è possibile che si verifichi un'eccezione <xref:System.OverflowException> se il valore non è compreso nell'intervallo del [Long Data Type](../../../visual-basic/language-reference/data-types/long-data-type.md).  La conversione in `Long` è inoltre soggetta a un particolare tipo di *arrotondamento*.  Per ulteriori informazioni, vedere "Parti frazionarie" in [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+## <a name="remarks"></a>Note  
+ Prima di eseguire la divisione, Visual Basic tenta di convertire qualsiasi espressione numerica a virgola mobile a `Long`. Se `Option Strict` è `On`, si verifica un errore del compilatore. Se `Option Strict` è `Off`, un <xref:System.OverflowException> è possibile se il valore è compreso nell'intervallo del [tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md). La conversione a `Long` è anche soggetto a *arrotondamento*. Per ulteriori informazioni, vedere "Parti frazionarie" in [funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- Se `expression1` o `expression2` restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), tale parametro viene considerato uguale a zero.  
+ Se `expression1` o `expression2` restituisce [nulla](../../../visual-basic/language-reference/nothing.md), viene considerato pari a zero.  
   
-## Tentativo di divisione per zero  
- Se `expression2` restituisce zero, l'operatore `\` genera un'eccezione <xref:System.DivideByZeroException>.  Lo stesso vale per tutti i tipi di dati numerici degli operandi.  
+## <a name="attempted-division-by-zero"></a>Tentativo di divisione per Zero  
+ Se `expression2` restituisce zero, il `\` operatore genera un <xref:System.DivideByZeroException> eccezione. Questo vale per tutti i tipi di dati numerici degli operandi.  
   
 > [!NOTE]
->  L'operatore `\` può essere sottoposto a *overload*. In altri termini, una classe o una struttura può ridefinirne il comportamento quando un operando specifica il tipo di tale classe o struttura.  Se il codice utilizza l'operatore su una classe o una struttura di questo tipo, è importante comprendere il comportamento ridefinito di tale operatore.  Per ulteriori informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  Il `\` operatore può essere *overload*, il che significa che una classe o struttura ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice Usa l'operatore in una classe o una struttura, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito l'operatore `\` viene utilizzato per eseguire una divisione con Integer.  Il risultato è un Integer che rappresenta il quoziente integer dei due operandi, escluso il resto.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente usa il `\` operatore per eseguire la divisione di integer. Il risultato è un numero intero che rappresenta il quoziente di due operandi, con il resto.  
   
  [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
- Le espressioni nell'esempio precedente restituiscono rispettivamente i valori 2, 3, 33 e \-22.  
+ Nell'esempio precedente le espressioni restituiscono rispettivamente i valori 2, 3, 33 e -22.  
   
-## Vedere anche  
- [\\\= Operator](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)   
- [\/ Operator](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)   
- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>Vedere anche  
+ [\\= (Operatore)](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [/ Operatore (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
+ [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Operatori aritmetici in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

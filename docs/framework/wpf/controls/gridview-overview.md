@@ -1,127 +1,130 @@
 ---
-title: "Cenni preliminari su GridView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controlli, ListView"
-  - "GridView (modalità di visualizzazione)"
-  - "ListView (controlli), GridView (modalità di visualizzazione)"
+title: Cenni preliminari su GridView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GridView view mode [WPF]
+- ListView controls [WPF], GridView view mode
+- controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: 26
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 44574b5737873371f9a7bc9be2d851a8ae1e101b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari su GridView
-La modalità di visualizzazione <xref:System.Windows.Controls.GridView> rappresenta una delle modalità di visualizzazione di un controllo <xref:System.Windows.Controls.ListView>.  La classe <xref:System.Windows.Controls.GridView> e le relative classi di supporto consentono agli utenti di visualizzare raccolte di elementi in una tabella che utilizza in genere i pulsanti come intestazioni di colonna interattive.  In questo argomento viene presentata la classe <xref:System.Windows.Controls.GridView> e ne viene definito l'utilizzo.  
+# <a name="gridview-overview"></a>Cenni preliminari su GridView
+<xref:System.Windows.Controls.GridView>modalità di visualizzazione è una delle modalità di visualizzazione per un <xref:System.Windows.Controls.ListView> controllo. La <xref:System.Windows.Controls.GridView> classe e le relative classi di supporto consentono agli utenti di visualizzare raccolte di elementi in una tabella che utilizza in genere i pulsanti come intestazioni di colonna interattive. Questo argomento vengono presentate le <xref:System.Windows.Controls.GridView> classe e viene illustrato l'utilizzo.  
   
-   
+  
   
 <a name="DefiningaListViewthatusesGridViewView"></a>   
-## Definizione di visualizzazione GridView  
- La modalità di visualizzazione <xref:System.Windows.Controls.GridView> consente di elencare gli elementi dei dati associando i campi dati alle colonne e visualizzando un'intestazione di colonna che identifichi il campo.  Lo stile <xref:System.Windows.Controls.GridView> predefinito implementa i pulsanti come intestazioni di colonna.  Utilizzando i pulsanti per le intestazioni di colonna, è possibile implementare importanti funzionalità di interazione dell'utente; ad esempio, gli utenti possono fare clic sull'intestazione della colonna per ordinare i dati <xref:System.Windows.Controls.GridView> in base al contenuto di una specifica colonna.  
+## <a name="what-is-a-gridview-view"></a>Definizione della visualizzazione GridView  
+ Il <xref:System.Windows.Controls.GridView> modalità Visualizza un elenco di elementi di dati per l'associazione di campi di dati alle colonne e visualizzando un'intestazione di colonna per identificare il campo di visualizzazione. Il valore predefinito <xref:System.Windows.Controls.GridView> stile implementa i pulsanti come intestazioni di colonna. Utilizzando i pulsanti per le intestazioni di colonna, è possibile implementare funzionalità di interazione dell'utente che è importante; ad esempio, gli utenti possono selezionare l'intestazione di colonna per ordinare <xref:System.Windows.Controls.GridView> dati in base al contenuto di una colonna specifica.  
   
 > [!NOTE]
->  Il pulsante consente di controllare che gli utilizzi di <xref:System.Windows.Controls.GridView> per le intestazioni di colonna siano derivati da <xref:System.Windows.Controls.Primitives.ButtonBase>.  
+>  I controlli pulsante che <xref:System.Windows.Controls.GridView> viene utilizzato per le intestazioni di colonna derivati da <xref:System.Windows.Controls.Primitives.ButtonBase>.  
   
- Nell'immagine seguente viene mostrata una visualizzazione <xref:System.Windows.Controls.GridView> del contenuto di <xref:System.Windows.Controls.ListView>.  
+ La figura seguente mostra un <xref:System.Windows.Controls.GridView> visualizzare <xref:System.Windows.Controls.ListView> contenuto.  
   
  **Visualizzazione GridView del contenuto di ListView**  
   
- ![ListView con stile](../../../../docs/framework/wpf/controls/media/styledlistview.png "StyledListView")  
+ ![ListView con stile](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
   
- Le colonne <xref:System.Windows.Controls.GridView> sono rappresentate da oggetti <xref:System.Windows.Controls.GridViewColumn> che è possibile ridimensionare automaticamente in base al contenuto.  Se si desidera, è possibile impostare in modo esplicito un oggetto <xref:System.Windows.Controls.GridViewColumn> su una larghezza specifica.  È possibile ridimensionare le colonne trascinando la barra gripper tra le intestazioni di colonna.  È possibile inoltre aggiungere in modo dinamico, rimuovere, sostituire e riordinare le colonne, dal momento che tali funzionalità sono incorporate in <xref:System.Windows.Controls.GridView>.  Tuttavia, <xref:System.Windows.Controls.GridView> non è in grado di aggiornare direttamente i dati visualizzati.  
+ <xref:System.Windows.Controls.GridView>le colonne sono rappresentate da <xref:System.Windows.Controls.GridViewColumn> oggetti, che è possono ridimensionare automaticamente in base al contenuto. Facoltativamente, è possibile impostare in modo esplicito un <xref:System.Windows.Controls.GridViewColumn> alla larghezza. È possibile ridimensionare le colonne trascinando la barra gripper tra le intestazioni di colonna. È inoltre in modo dinamico aggiungere, rimuovere, sostituire e riordinare le colonne, poiché questa funzionalità è incorporata in <xref:System.Windows.Controls.GridView>. Tuttavia, <xref:System.Windows.Controls.GridView> non è possibile aggiornare direttamente i dati che vengono visualizzati.  
   
- Nell'esempio seguente viene illustrato come definire un oggetto <xref:System.Windows.Controls.GridView> in cui vengono visualizzati i dati dei dipendenti.  In questo esempio, <xref:System.Windows.Controls.ListView> definisce l'oggetto `EmployeeInfoDataSource` come <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>.  Le definizioni delle proprietà di <xref:System.Windows.Controls.GridViewColumn> associano il contenuto <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> alle categorie di dati `EmployeeInfoDataSource`.  
+ Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.GridView> che consente di visualizzare i dati dei dipendenti. In questo esempio, <xref:System.Windows.Controls.ListView> definisce il `EmployeeInfoDataSource` come il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Le definizioni delle proprietà <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> associare <xref:System.Windows.Controls.GridViewColumn> contenuto `EmployeeInfoDataSource` categorie di dati.  
   
- [!code-xml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- Nella figura seguente viene mostrata la tabella creata nell'esempio precedente.  
+ La figura seguente illustra la tabella creata nell'esempio precedente.  
   
- **Visualizzazione GridView dei dati provenienti da ItemsSource**  
+ **GridView visualizza i dati da ItemsSource**  
   
- ![ListView con output GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.png "ListViewGridView")  
+ ![ListView con output GridView ](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
   
 <a name="GridViewLayoutandStyle"></a>   
-## Layout e stile di una GridView  
- Le celle e l'intestazione delle colonne di un oggetto <xref:System.Windows.Controls.GridViewColumn> hanno la stessa larghezza.  Per impostazione predefinita, la larghezza di ogni colonna viene ridimensionata in base al contenuto.  Se lo si desidera, è possibile impostare una colonna su una larghezza fissa.  
+## <a name="gridview-layout-and-style"></a>Layout e stile di GridView  
+ Le celle della colonna e l'intestazione di colonna di un <xref:System.Windows.Controls.GridViewColumn> hanno la stessa larghezza. Per impostazione predefinita, la larghezza di ogni colonna viene ridimensionata in base al contenuto. Facoltativamente, è possibile impostare una colonna a larghezza fissa.  
   
- Il contenuto dei dati correlati viene visualizzato nelle righe orizzontali.  Ad esempio, nell'illustrazione precedente, il cognome, il nome e il numero ID di ciascun dipendente vengono visualizzati come un insieme, poiché sono disposti su una riga orizzontale.  
+ Il contenuto dei dati correlati viene visualizzato in righe orizzontali. Ad esempio, nell'illustrazione precedente il cognome, il nome e l'ID di ogni dipendente vengono visualizzati come un insieme perché appaiono in una riga orizzontale.  
   
 <a name="DefiningandStylingColumnsinaGridView"></a>   
-### Definizione e applicazione di stili alle colonne in una GridView  
- Nella definizione del campo dati da visualizzare in un oggetto <xref:System.Windows.Controls.GridViewColumn>, utilizzare le proprietà <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>, <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> o <xref:System.Windows.Controls.GridViewColumn.CellTemplateSelector%2A>.  La proprietà <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> ha la precedenza sulle proprietà dei modelli.  
+### <a name="defining-and-styling-columns-in-a-gridview"></a>Definizione e applicazione di stili alle colonne in GridView  
+ Quando si definisce il campo dei dati da visualizzare un <xref:System.Windows.Controls.GridViewColumn>, utilizzare il <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>, <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>, o <xref:System.Windows.Controls.GridViewColumn.CellTemplateSelector%2A> proprietà. Il <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> avrà la precedenza su una delle proprietà del modello.  
   
- Per specificare l'allineamento del contenuto in una colonna di un oggetto <xref:System.Windows.Controls.GridView>, definire una proprietà <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>.  Non utilizzare le proprietà <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> e <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> per il contenuto <xref:System.Windows.Controls.ListView> visualizzato utilizzando un oggetto <xref:System.Windows.Controls.GridView>.  
+ Per specificare l'allineamento del contenuto in una colonna di un <xref:System.Windows.Controls.GridView>, definire un <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>. Non utilizzare il <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> e <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> le proprietà per <xref:System.Windows.Controls.ListView> contenuto che viene visualizzato utilizzando un <xref:System.Windows.Controls.GridView>.  
   
- Per specificare le proprietà di modello e stile per le intestazioni di colonna, utilizzare le classi <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> e <xref:System.Windows.Controls.GridViewColumnHeader>.  Per ulteriori informazioni, vedere [Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).  
+ Per specificare le proprietà di modello e lo stile per le intestazioni di colonna, utilizzare il <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, e <xref:System.Windows.Controls.GridViewColumnHeader> classi. Per altre informazioni, vedere [Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).  
   
 <a name="AddingVisualElementstoaGridViewView"></a>   
-### Aggiunta di elementi visivi a una GridView  
- Per aggiungere elementi visivi, ad esempio i controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.Button>, a una modalità di visualizzazione <xref:System.Windows.Controls.GridView>, utilizzare i modelli o gli stili.  
+### <a name="adding-visual-elements-to-a-gridview"></a>Aggiunta di elementi visivi a GridView  
+ Per aggiungere elementi visivi, ad esempio <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.Button> controlli, a un <xref:System.Windows.Controls.GridView> modalità di visualizzazione, utilizzare i modelli o gli stili.  
   
- Se si definisce in modo esplicito un elemento visivo come elemento dei dati, sarà possibile visualizzarlo solo una volta in un oggetto <xref:System.Windows.Controls.GridView>.  Questa limitazione è dovuta al fatto che un elemento può avere un solo elemento padre e pertanto potrà essere visualizzato solo una volta nella [struttura ad albero visuale](GTMT).  
+ Se si definisce in modo esplicito un elemento visivo come un elemento di dati, può essere visualizzato solo una volta in un <xref:System.Windows.Controls.GridView>. Questa limitazione esiste perché un elemento può avere un solo padre e, di conseguenza, può essere visualizzato solo una volta nella struttura ad albero visuale.  
   
 <a name="StylingRowsinaGridViewView"></a>   
-### Applicazione di stili alle righe in una GridView  
- Utilizzare le classi <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> per formattare e visualizzare le righe di un oggetto <xref:System.Windows.Controls.GridView>.  Per un esempio della procedura di applicazione di stili alle righe in una modalità di visualizzazione <xref:System.Windows.Controls.GridView>, vedere [Applicare uno stile a una riga in un ListView che implementa una GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
+### <a name="styling-rows-in-a-gridview"></a>Applicazione di stili alle righe in GridView  
+ Utilizzare il <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> classi per formattare e visualizzare le righe di un <xref:System.Windows.Controls.GridView>. Per un esempio di come stili alle righe in un <xref:System.Windows.Controls.GridView> modalità di visualizzazione, vedere [disegnare una riga in un ListView That Implements GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
   
 <a name="AlignmentIssuesWhenUsingItemContainerStyle"></a>   
-### Problemi di allineamento durante l'utilizzo di ItemContainerStyle  
- Per evitare problemi di allineamento tra le intestazioni di colonna e le celle, non impostare una proprietà o specificare un modello che incida sulla larghezza di un elemento in un oggetto <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>.  Ad esempio, non impostare la proprietà <xref:System.Windows.FrameworkElement.Margin%2A> o specificare un oggetto <xref:System.Windows.Controls.ControlTemplate> che aggiunge un oggetto <xref:System.Windows.Controls.CheckBox> a un elemento <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> definito in un controllo <xref:System.Windows.Controls.ListView>.  Specificare invece le proprietà e i modelli che incidono direttamente sulla larghezza delle colonne nelle classi che definiscono una modalità di visualizzazione <xref:System.Windows.Controls.GridView>.  
+### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>Problemi di allineamento durante l'uso di ItemContainerStyle  
+ Per evitare problemi di allineamento tra le intestazioni di colonna e le celle, non impostare una proprietà o specificare un modello che influisce sulla larghezza di un elemento in un <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>. Ad esempio, non impostare il <xref:System.Windows.FrameworkElement.Margin%2A> proprietà oppure specificare un <xref:System.Windows.Controls.ControlTemplate> che aggiunge un <xref:System.Windows.Controls.CheckBox> per un <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> definito in un <xref:System.Windows.Controls.ListView> controllo. In alternativa, specificare le proprietà e i modelli che influiscono sulla larghezza della colonna direttamente per le classi che definiscono un <xref:System.Windows.Controls.GridView> modalità di visualizzazione.  
   
- Ad esempio, per aggiungere un oggetto <xref:System.Windows.Controls.CheckBox> alle righe nella modalità di visualizzazione <xref:System.Windows.Controls.GridView>, aggiungere l'oggetto <xref:System.Windows.Controls.CheckBox> a un oggetto <xref:System.Windows.DataTemplate> e impostare quindi la proprietà <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> su tale oggetto <xref:System.Windows.DataTemplate>.  
+ Ad esempio, per aggiungere un <xref:System.Windows.Controls.CheckBox> alle righe in <xref:System.Windows.Controls.GridView> modalità di visualizzazione, aggiungere il <xref:System.Windows.Controls.CheckBox> per un <xref:System.Windows.DataTemplate>e quindi impostare il <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> che proprietà <xref:System.Windows.DataTemplate>.  
   
 <a name="InteractingwithaGridViewControl"></a>   
-## Interazioni dell'utente con una GridView  
- Quando si utilizza un oggetto <xref:System.Windows.Controls.GridView> nell'applicazione, gli utenti possono interagire con l'oggetto <xref:System.Windows.Controls.GridView> e modificarne la formattazione.  Possono, ad esempio, riordinare le colonne, ridimensionare una colonna, selezionare gli elementi di una tabella e scorrere il contenuto.  È anche possibile definire un gestore eventi che risponda quando un utente fa clic sul pulsante dell'intestazione di colonna.  Il gestore eventi può eseguire operazioni quali l'ordinamento dei dati visualizzati nell'oggetto <xref:System.Windows.Controls.GridView> in base al contenuto di una colonna.  
+## <a name="user-interactions-with-a-gridview"></a>Interazioni dell'utente con GridView  
+ Quando si utilizza un <xref:System.Windows.Controls.GridView> nell'applicazione, gli utenti possono interagire con e modificarne la formattazione di <xref:System.Windows.Controls.GridView>. Ad esempio, gli utenti possono riordinare le colonne, ridimensionare una colonna, selezionare gli elementi in una tabella e scorrere il contenuto. È inoltre possibile definire un gestore eventi che risponda quando un utente fa clic sul pulsante di intestazione di colonna. Il gestore dell'evento può eseguire operazioni quali ordinamento dei dati che viene visualizzati nel <xref:System.Windows.Controls.GridView> in base al contenuto di una colonna.  
   
- Nell'elenco seguente vengono analizzate più dettagliatamente le funzionalità offerte dall'utilizzo di <xref:System.Windows.Controls.GridView> in relazione all'interazione dell'utente:  
+ Nell'elenco seguente vengono illustrati in dettaglio le funzionalità di utilizzo <xref:System.Windows.Controls.GridView> per l'interazione dell'utente:  
   
 -   **Riordinare le colonne con il metodo di trascinamento della selezione.**  
   
-     Gli utenti possono riordinare le colonne in un oggetto <xref:System.Windows.Controls.GridView> premendo il pulsante sinistro del mouse quando è posizionato su un'intestazione di colonna e trascinando quindi quella colonna in una nuova posizione.  Mentre l'utente trascina l'intestazione di colonna, viene visualizzata una versione mobile dell'intestazione, nonché una linea nera continua che indica dove inserire la colonna.  
+     Gli utenti possono riordinare le colonne in un <xref:System.Windows.Controls.GridView> premendo il pulsante sinistro del mouse mentre si trova su un'intestazione di colonna e quindi trascinare la colonna in una nuova posizione. Mentre l'utente trascina l'intestazione di colonna, viene visualizzata una versione a virgola mobile dell'intestazione e una linea nera continua che indica dove inserire la colonna.  
   
-     Se si desidera modificare lo stile predefinito per la versione mobile di un'intestazione, specificare un oggetto <xref:System.Windows.Controls.ControlTemplate> per un tipo <xref:System.Windows.Controls.GridViewColumnHeader> che viene attivato quando la proprietà <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> è impostata su <xref:System.Windows.Controls.GridViewColumnHeaderRole>.  Per ulteriori informazioni, vedere [Creare uno stile per un'intestazione di colonna GridView trascinata](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
+     Se si desidera modificare lo stile predefinito per la versione mobile di un'intestazione, specificare un <xref:System.Windows.Controls.ControlTemplate> per un <xref:System.Windows.Controls.GridViewColumnHeader> tipo che è attivata quando il <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> è impostata su <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Per altre informazioni vedere [Creare uno stile per un'intestazione di colonna GridView trascinata](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
 -   **Ridimensionare una colonna in base al contenuto.**  
   
-     Gli utenti possono fare doppio clic sulla barra gripper a destra di un'intestazione di colonna per adattare le dimensioni di una colonna al relativo contenuto.  
+     Gli utenti possono fare doppio clic sulla barra gripper a destra di un'intestazione di colonna per adattare le dimensioni di una colonna al contenuto.  
   
     > [!NOTE]
-    >  È possibile impostare la proprietà <xref:System.Windows.Controls.GridViewColumn.Width%2A> su `Double.NaN` per ottenere lo stesso risultato.  
+    >  È possibile impostare il <xref:System.Windows.Controls.GridViewColumn.Width%2A> proprietà `Double.NaN` per produrre lo stesso effetto.  
   
 -   **Selezionare gli elementi di una riga.**  
   
-     Gli utenti possono selezionare uno o più elementi di un oggetto <xref:System.Windows.Controls.GridView>.  
+     Gli utenti possono selezionare uno o più elementi in un <xref:System.Windows.Controls.GridView>.  
   
-     Se si desidera modificare lo <xref:System.Windows.Style> di un elemento selezionato, vedere [Utilizzare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
+     Se si desidera modificare il <xref:System.Windows.Style> di un elemento selezionato, vedere [utilizzare i trigger di creare gli elementi selezionati in un controllo ListView](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
--   **Scorrere il contenuto per visualizzare gli elementi inizialmente non visibili sullo schermo.**  
+-   **Scorrere per visualizzare il contenuto che non è inizialmente visibile sullo schermo.**  
   
-     Se le dimensioni dell'oggetto <xref:System.Windows.Controls.GridView> non sono abbastanza ampie da visualizzare tutti gli elementi, gli utenti possono scorrere in senso orizzontale o verticale utilizzando le barre di scorrimento, fornite da un controllo <xref:System.Windows.Controls.ScrollViewer>.  Un oggetto <xref:System.Windows.Controls.Primitives.ScrollBar> viene nascosto se tutto il contenuto è visibile in una direzione specifica.  Le intestazioni di colonna non scorrono mediante una barra di scorrimento verticale, ma scorrono in senso orizzontale.  
+     Se le dimensioni del <xref:System.Windows.Controls.GridView> è non sufficiente per visualizzare tutti gli elementi, gli utenti possono scorrere orizzontalmente o verticalmente usando le barre di scorrimento, che sono fornite da un <xref:System.Windows.Controls.ScrollViewer> controllo. Oggetto <xref:System.Windows.Controls.Primitives.ScrollBar> viene nascosto se tutto il contenuto è visibile in una direzione specifica. Le intestazioni di colonna non scorrono mediante una barra di scorrimento verticale, ma scorrono in senso orizzontale.  
   
--   **Interagire con le colonne facendo clic sui pulsanti delle intestazioni di colonna.**  
+-   **Interagire con le colonne facendo clic sui pulsanti di intestazione di colonna.**  
   
-     Quando gli utenti fanno clic su un pulsante dell'intestazione di colonna, possono ordinare i dati visualizzati nella colonna, se è stato fornito un algoritmo di ordinamento.  
+     Quando si fa clic su un pulsante di intestazione di colonna, è possibile ordinare i dati visualizzati nella colonna se è stato specificato un algoritmo di ordinamento.  
   
-     È possibile gestire l'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> per i pulsanti dell'intestazione di colonna in modo da rendere disponibili funzionalità quali un algoritmo di ordinamento.  Per gestire l'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> per una singola intestazione di colonna, impostare un gestore eventi su <xref:System.Windows.Controls.GridViewColumnHeader>.  Per impostare un gestore eventi in modo che gestisca l'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> per tutte le intestazioni di colonna, specificare per tale gestore il controllo <xref:System.Windows.Controls.ListView>.  
+     È possibile gestire il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventi per i pulsanti di intestazione di colonna per fornire funzionalità quali un algoritmo di ordinamento. Per gestire il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento per una singola intestazione di colonna, impostare un gestore eventi nel <xref:System.Windows.Controls.GridViewColumnHeader>. Per impostare un gestore eventi che gestisce il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventi per tutte le intestazioni di colonna, impostare il gestore nel <xref:System.Windows.Controls.ListView> controllo.  
   
 <a name="Obtaining_Other_Custom_Views"></a>   
-## Come ottenere altre visualizzazioni personalizzate  
- La classe <xref:System.Windows.Controls.GridView>, derivata dalla classe astratta <xref:System.Windows.Controls.ViewBase>, rappresenta solo una delle possibili modalità di visualizzazione della classe <xref:System.Windows.Controls.ListView>.  È possibile creare altre visualizzazioni personalizzate per <xref:System.Windows.Controls.ListView> derivandole dalla classe <xref:System.Windows.Controls.ViewBase>.  Per un esempio di una modalità di visualizzazione personalizzata, vedere [Creare una modalità di visualizzazione personalizzata per un oggetto ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+## <a name="obtaining-other-custom-views"></a>Ottenere altre visualizzazioni personalizzate  
+ Il <xref:System.Windows.Controls.GridView> derivata dalla classe di <xref:System.Windows.Controls.ViewBase> classe astratta, è solo una delle possibili modalità di visualizzazione per il <xref:System.Windows.Controls.ListView> classe. È possibile creare altre visualizzazioni personalizzate per <xref:System.Windows.Controls.ListView> mediante derivazione da di <xref:System.Windows.Controls.ViewBase> classe. Per un esempio di una modalità di visualizzazione personalizzata, vedere [Creare una modalità di visualizzazione personalizzata per un oggetto ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="GridViewSupportingClasses"></a>   
-## Classi che supportano GridView  
- Le classi seguenti supportano la modalità di visualizzazione <xref:System.Windows.Controls.GridView>.  
+## <a name="gridview-supporting-classes"></a>Classi che supportano GridView  
+ Le classi seguenti supportano il <xref:System.Windows.Controls.GridView> modalità di visualizzazione.  
   
 -   <xref:System.Windows.Controls.GridViewColumn>  
   
@@ -135,14 +138,14 @@ La modalità di visualizzazione <xref:System.Windows.Controls.GridView> rapprese
   
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
-## Vedere anche  
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.ListViewItem>   
- <xref:System.Windows.Controls.GridViewColumn>   
- <xref:System.Windows.Controls.GridViewColumnHeader>   
- <xref:System.Windows.Controls.GridViewRowPresenter>   
- <xref:System.Windows.Controls.GridViewHeaderRowPresenter>   
- <xref:System.Windows.Controls.ViewBase>   
- [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Ordinare una colonna GridView quando si fa clic su un'intestazione](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.ListViewItem>  
+ <xref:System.Windows.Controls.GridViewColumn>  
+ <xref:System.Windows.Controls.GridViewColumnHeader>  
+ <xref:System.Windows.Controls.GridViewRowPresenter>  
+ <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
+ <xref:System.Windows.Controls.ViewBase>  
+ [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [Ordinare una colonna GridView quando si fa clic su un'intestazione](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
  [Procedure relative](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

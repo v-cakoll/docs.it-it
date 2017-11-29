@@ -1,40 +1,46 @@
 ---
-title: "Procedura: disegnare un&#39;area con una sfumatura radiale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pennelli, disegno con sfumature radiali"
-  - "disegno, con sfumature radiali"
-  - "sfumature radiali, disegno"
+title: 'Procedura: disegnare un''area con una sfumatura radiale'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [WPF], painting with radial gradients
+- radial gradients [WPF], painting with
+- painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55b707e4738a77a8fb093071ef6f5105b2200c16
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: disegnare un&#39;area con una sfumatura radiale
-In questo esempio viene illustrato l'utilizzo della classe <xref:System.Windows.Media.RadialGradientBrush> per disegnare un'area con una sfumatura radiale.  
+# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Procedura: disegnare un'area con una sfumatura radiale
+In questo esempio viene illustrato come utilizzare la <xref:System.Windows.Media.RadialGradientBrush> classe per disegnare un'area con una sfumatura radiale.  
   
-## Esempio  
- Nell'esempio seguente viene utilizzato un oggetto <xref:System.Windows.Media.RadialGradientBrush> per disegnare un rettangolo con una sfumatura radiale che passa dal giallo al rosso al blu al verde limone.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.RadialGradientBrush> per disegnare un rettangolo con una sfumatura radiale che effettua la transizione da giallo a rosso blu per verde limone.  
   
  [!code-csharp[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/RadialGradientBrushSnippet.cs#simpleradialgradientexamplewholepage)]
  [!code-vb[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/radialgradientbrushsnippet.vb#simpleradialgradientexamplewholepage)]
- [!code-xml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
+ [!code-xaml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
   
- Nell'immagine seguente viene mostrata la sfumatura creata nell'esempio precedente.  I cursori sfumatura sono stati evidenziati.  
+ Nella figura seguente viene illustrata la sfumatura dell'esempio precedente. È stata evidenziata della sfumatura.  
   
- ![Cursori sfumatura in una sfumatura radiale](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk\_graphicsmm\_4gradientstops\_rg")  
+ ![Cursori sfumatura in una sfumatura radiale](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
 > [!NOTE]
->  Negli esempi di questo argomento viene utilizzato il sistema di coordinate predefinito per impostare i punti di controllo.  Il sistema di coordinate predefinito è relativo a un riquadro delimitatore del testo, dove 0 e 1 indicano rispettivamente lo 0% e il 100% del riquadro delimitatore del testo.  Tale sistema di coordinate può essere modificato impostando la proprietà <xref:System.Windows.Media.GradientBrush.MappingMode%2A> sul valore <xref:System.Windows.Media.BrushMappingMode>.  Un sistema di coordinate assoluto non è relativo a un riquadro delimitatore del testo.  I valori vengono interpretati direttamente nello spazio locale.  
+>  Gli esempi in questo argomento usano il sistema di coordinate per l'impostazione di punti di controllo. Il sistema di coordinate è relativo a un rettangolo di selezione: 0 indica 0 percento del rettangolo di selezione, mentre 1 indica 100% del rettangolo di selezione. È possibile modificare il sistema di coordinate impostando il <xref:System.Windows.Media.GradientBrush.MappingMode%2A> il valore della proprietà <xref:System.Windows.Media.BrushMappingMode.Absolute>. Un sistema di coordinate assoluto non è relativo a un rettangolo di selezione. I valori vengono interpretati direttamente nello spazio locale.  
   
- Per ulteriori esempi di <xref:System.Windows.Media.RadialGradientBrush>, vedere [Esempio Brush](http://go.microsoft.com/fwlink/?LinkID=159973) \(la pagina potrebbe essere in inglese\).  Per ulteriori informazioni sulle sfumature e su altri tipi di pennelli, vedere [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).
+ Per ulteriori <xref:System.Windows.Media.RadialGradientBrush> esempi, vedere il [esempio](http://go.microsoft.com/fwlink/?LinkID=159973). Per ulteriori informazioni sulle sfumature e altri tipi di pennelli, vedere [disegni con colori a tinta unita e sfumature Panoramica](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).

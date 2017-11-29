@@ -1,63 +1,64 @@
 ---
-title: "Procedura: bloccare i controlli di un Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], blocco"
-  - "controlli Windows Form, blocco"
+title: 'Procedura: bloccare i controlli di un Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, locking
+- controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 30808d2102a1be41381f0e07c9f0f37bfb4a5a56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: bloccare i controlli di un Windows Form
-Durante la progettazione dell'interfaccia utente di un'applicazione Windows è possibile bloccare i controlli, una volta posizionati correttamente, in modo che non vengano spostati o ridimensionati inavvertitamente quando si impostano altre proprietà.  
+# <a name="how-to-lock-controls-to-windows-forms"></a>Procedura: bloccare i controlli di un Windows Form
+Quando si progetta l'interfaccia utente (UI) dell'applicazione Windows, è possibile bloccare i controlli di una volta posizionati correttamente, in modo che non vengano spostati o ridimensionati quando si impostano altre proprietà inavvertitamente.  
   
- È inoltre possibile bloccare e sbloccare tutti i controlli sul form contemporaneamente, operazione che risulta particolarmente vantaggiosa in caso di form con numerosi controlli, oppure sbloccare singoli controlli.  Una volta posizionati tutti i controlli nei punti desiderati del form, bloccarli in modo da evitare spostamenti indesiderati.  
+ Inoltre, è possibile bloccare e sbloccare tutti i controlli del form in una sola volta, che è utile per i moduli con molti controlli, o è possibile sbloccare singoli controlli. Dopo aver posizionato tutti i controlli in cui si desidera utilizzarle sul form, bloccarle tutte per evitare lo spostamento errato.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per bloccare un controllo  
+### <a name="to-lock-a-control"></a>Per bloccare un controllo  
   
-1.  Nella finestra **Proprietà** fare clic sulla proprietà **Locked** e selezionare `true`.  Facendo doppio clic sul nome si attiva o si disattiva l'impostazione della proprietà.  
+1.  Nel **proprietà** finestra, fare clic su di **bloccato** proprietà e selezionare `true`. (Fare doppio clic sul nome attiva o disattiva l'impostazione della proprietà.)  
   
-     In alternativa, fare clic sul controllo con il pulsante destro del mouse e scegliere **Blocca controlli**.  
-  
-    > [!NOTE]
-    >  Il blocco dei controlli ne impedisce il trascinamento per modificarne le dimensioni o la posizione nell'area di progettazione.  È tuttavia possibile modificare le dimensioni o la posizione dei controlli mediante la finestra **Proprietà** oppure nel codice.  
-  
-### Per bloccare tutti i controlli in un form  
-  
-1.  Scegliere **Blocca controlli** dal menu **Formato**.  
+     In alternativa, il pulsante destro del controllo e scegliere **Blocca controlli**.  
   
     > [!NOTE]
-    >  Questo comando blocca anche le dimensioni del form, dato che il form stesso è un controllo.  
+    >  Il blocco dei controlli impedisce trascinati nell'area di progettazione in un percorso o la nuova dimensione. Tuttavia, è possibile comunque modificare dimensioni o la posizione dei controlli mediante il **proprietà** finestra o nel codice.  
   
-### Per sbloccare tutti i controlli bloccati in un form  
+### <a name="to-lock-all-the-controls-on-a-form"></a>Per bloccare tutti i controlli in un form  
   
-1.  Scegliere **Blocca controlli** dal menu **Formato**.  
+1.  Dal **formato** menu, scegliere **Blocca controlli**.  
   
-     Tutti i controlli precedentemente bloccati nel form vengono sbloccati.  
+    > [!NOTE]
+    >  Questo comando Blocca le dimensioni del form, poiché un form è un controllo.  
   
-### Per sbloccare singolarmente i controlli bloccati  
+### <a name="to-unlock-all-locked-controls-on-a-form"></a>Per sbloccare tutti i controlli bloccati in un form  
   
-1.  Nella finestra **Proprietà** fare clic sulla proprietà **Locked** e selezionare `false`.  Facendo doppio clic sul nome si attiva o si disattiva l'impostazione della proprietà.  
+1.  Dal **formato** menu, scegliere **Blocca controlli**.  
   
-## Vedere anche  
- [Controlli per Windows Form](../../../../docs/framework/winforms/controls/index.md)   
- [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
+     Tutti i controlli precedentemente bloccati nel form vengono sbloccate.  
+  
+### <a name="to-unlock-locked-controls-individually"></a>Per sbloccare singolarmente i controlli bloccati  
+  
+1.  Nel **proprietà** finestra, fare clic su di **bloccato** proprietà e selezionare `false`. (Fare doppio clic sul nome attiva o disattiva l'impostazione della proprietà.)  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)  
+ [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

@@ -1,47 +1,39 @@
 ---
-title: LINQ to XML (Visual Basic) | Documenti di Microsoft
+title: LINQ to XML (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f7386556-a6b9-40d5-92b6-e8701dc2c63e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1e2dc2fbfca573041bcb871354c50e68778162ef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: dccbb7a556932868519c752a3fda4a27fd6bede6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linq-to-xml-visual-basic"></a>LINQ to XML (Visual Basic)
-LINQ to XML fornisce un'interfaccia di programmazione XML in memoria che sfrutta il Framework .NET Language-Integrated Query (LINQ). LINQ to XML utilizza le più recenti funzionalità del linguaggio di .NET Framework e può essere paragonato a un'interfaccia di programmazione Strumentazione gestione Windows (DOM, Document Object Model) XML aggiornata e riprogettata.  
+LINQ to XML offre un'interfaccia di programmazione XML in memoria che usa .NET Language-Integrated Query (LINQ) Framework. LINQ to XML usa le funzionalità del linguaggio .NET Framework più recenti e può essere paragonato a un'interfaccia di programmazione XML DOM (Document Object Model) aggiornata e riprogettata.  
   
- Famiglia di tecnologie LINQ fornisce funzionalità di query congruenti per oggetti (LINQ to Objects), database relazionali (LINQ to SQL) e XML (LINQ to XML).  
+ La famiglia di tecnologie LINQ offre coerenza per l'esecuzione di query per oggetti (LINQ to Objects), database relazionali (LINQ to SQL) e XML (LINQ to XML).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- Vengono fornite informazioni introduttive su LINQ to XML, tra cui una panoramica concettuale e una panoramica del <xref:System.Xml.Linq?displayProperty=fullName>classi.</xref:System.Xml.Linq?displayProperty=fullName>  
+ Offre informazioni introduttive su LINQ to XML, incluse una panoramica concettuale e una panoramica delle classi <xref:System.Xml.Linq?displayProperty=nameWithType>.  
   
  [Guida per programmatori (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
- Vengono fornite informazioni di carattere concettuale e procedurale sulla programmazione con LINQ to XML.  
+ Offre informazioni concettuali e procedurali sulla programmazione con LINQ to XML.  
   
  [Riferimenti (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)  
- Fornisce documentazione di riferimento gestita puntatori a LINQ to XML.  
+ Specifica i puntatori alla documentazione di riferimento gestito di LINQ to XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)   
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+ [Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
+ [LINQ (Language-Integrated Query) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

@@ -1,66 +1,67 @@
 ---
-title: "Immissione di dati nel controllo DataGridView Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "immissione di dati, DataGridView (controllo)"
-  - "griglie dei dati, immissione di dati"
-  - "DataGridView (controllo) [Windows Form], immissione di dati"
+title: Immissione di dati nel controllo DataGridView Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], data entry
+- data entry [Windows Forms], dataGridView control
+- data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 39d5f7763ac7b5923f0eaec757df13d675971789
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Immissione di dati nel controllo DataGridView Windows Form
-Il controllo `DataGridView` fornisce diverse funzionalità che consentono di modificare la modalità di aggiunta o di modifica dei dati all'interno del controllo da parte degli utenti.  È possibile ad esempio rendere l'immissione dei dati più efficace fornendo valori predefiniti per le nuove righe e avvertendo gli utenti quando si verificano errori.  
+# <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Immissione di dati nel controllo DataGridView Windows Form
+Il `DataGridView` controllo fornisce diverse funzionalità che consentono modificare la modalità di aggiungere o modificare i dati nel controllo. Ad esempio, è possibile rendere immissione di dati più efficiente fornendo i valori predefiniti per le nuove righe e dagli avvisi agli utenti quando si verificano errori.  
   
-## In questa sezione  
- [Procedura: specificare la modalità di modifica per il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
- Viene illustrato come modificare il modo in cui gli utenti avviano la modifica delle celle.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Specificare la modalità di modifica per il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+ Viene descritto come modificare il modo in cui gli utenti di avviare la modifica delle celle.  
   
- [Procedura: specificare i valori predefiniti per le nuove righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
- Viene descritto come inserire anticipatamente i dati nelle righe dei nuovi record per risparmiare il tempo necessario per l'immissione dei dati.  
+ [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Viene descritto come per il popolamento preliminare della riga per nuovi record per ridurre i tempi di immissione di dati.  
   
- [Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
- Viene descritta in dettaglio la riga relativa ai nuovi record, incluse le informazioni su come nasconderla, sulla personalizzazione dell'aspetto e sui collegamenti con la raccolta <xref:System.Windows.Forms.DataGridView.Rows%2A>.  
+ [Uso della riga per i nuovi record del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
+ Viene descritta la riga per nuovi record di dettaglio, incluse le informazioni su come nascondere, sulla personalizzazione dell'aspetto e in correlazione con il <xref:System.Windows.Forms.DataGridView.Rows%2A> insieme.  
   
- [Procedura dettagliata: convalida di dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
- Viene illustrato come convalidare l'input dell'utente in modo da impedire errori di formattazione durante l'immissione dei dati.  
+ [Procedura dettagliata: convalida di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+ Viene descritto come convalidare l'input dell'utente per evitare errori di formattazione di immissione di dati.  
   
- [Procedura dettagliata: gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
- Viene illustrato come gestire gli errori di immissione dati che si verificano nell'origine dati durante il commit di un nuovo valore da parte dell'utente.  
+ [Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ Viene descritto come gestire gli errori di immissione dati che derivano dall'origine dati quando l'utente tenta di eseguire il commit di un nuovo valore.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
- Viene fornita la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
+ Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   
- <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=fullName>  
- Viene fornita la documentazione di riferimento per la proprietà <xref:System.Windows.Forms.DataGridView.EditMode%2A>.  
+ <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>  
+ Fornisce la documentazione di riferimento per la <xref:System.Windows.Forms.DataGridView.EditMode%2A> proprietà.  
   
- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=fullName>  
- Viene fornita la documentazione di riferimento per l'evento <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>.  
+ <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
+ Fornisce la documentazione di riferimento per il <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> evento.  
   
- <xref:System.Windows.Forms.DataGridView.DataError?displayProperty=fullName>  
- Viene fornita la documentazione di riferimento per l'evento <xref:System.Windows.Forms.DataGridView.DataError>.  
+ <xref:System.Windows.Forms.DataGridView.DataError?displayProperty=nameWithType>  
+ Fornisce la documentazione di riferimento per il <xref:System.Windows.Forms.DataGridView.DataError> evento.  
   
- <xref:System.Windows.Forms.DataGridView.CellValidating?displayProperty=fullName>  
- Viene fornita la documentazione di riferimento per l'evento <xref:System.Windows.Forms.DataGridView.CellValidating>.  
+ <xref:System.Windows.Forms.DataGridView.CellValidating?displayProperty=nameWithType>  
+ Fornisce la documentazione di riferimento per il <xref:System.Windows.Forms.DataGridView.CellValidating> evento.  
   
-## Sezioni correlate  
- [Visualizzazione di dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- Vengono forniti argomenti che descrivono come popolare il controllo manualmente o da un'origine dati esterna.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ Fornisce argomenti che descrivono come popolare il controllo con i dati manualmente o da un'origine dati esterna.  
   
-## Vedere anche  
- [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Tipi di colonna nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Tipi di colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

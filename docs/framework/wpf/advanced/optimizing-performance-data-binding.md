@@ -1,94 +1,97 @@
 ---
-title: "Ottimizzazione delle prestazioni: associazione dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "associazione dati, prestazioni"
-  - "associazione dati, prestazioni"
+title: 'Ottimizzazione delle prestazioni: associazione dati'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- binding data [WPF], performance
+- data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 36f7f1fa5aee672caea7d79fabfc0408c4186cdd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Ottimizzazione delle prestazioni: associazione dati
-L'associazione dati [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare e interagire con i dati.  È possibile associare gli elementi a numerose origini dati sotto forma di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+# <a name="optimizing-performance-data-binding"></a>Ottimizzazione delle prestazioni: associazione dati
+Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e interagire con essi. È possibile eseguire il data binding degli elementi a diverse origini dati sotto forma di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
- In questo argomento vengono forniti i requisiti relativi alle prestazioni dell'associazione dati.  
+ Questo argomento offre utili suggerimenti sulle prestazioni del data binding.  
   
-   
+
   
 <a name="HowDataBindingReferencesAreResolved"></a>   
-## Risoluzione dei riferimenti per l'associazione dati  
- Prima di trattare i problemi di prestazione legati all'associazione dati, è opportuno approfondire come i riferimenti agli oggetti per l'associazione dati vengano risolti dal motore di associazione dati di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] .  
+## <a name="how-data-binding-references-are-resolved"></a>Risoluzione dei riferimenti di data binding  
+ Prima di trattare i problemi di prestazioni del data binding, è opportuno scoprire come vengono risolti dal motore di data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] i riferimenti agli oggetti per il binding.  
   
- L'origine di un'associazione dati [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] può essere qualsiasi oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)].  È possibile stabilire associazioni a proprietà, proprietà secondarie o indici di un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)].  I riferimenti dell'associazione vengono risolti utilizzando la reflection di [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] o un oggetto <xref:System.ComponentModel.ICustomTypeDescriptor>.  Di seguito vengono descritti tre modi per risolvere riferimenti a oggetti per l'associazione.  
+ L'origine di un data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] può essere qualsiasi oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. È possibile eseguire il binding a proprietà, proprietà secondarie o indici di un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. I riferimenti di associazione vengono risolti tramite [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] reflection o <xref:System.ComponentModel.ICustomTypeDescriptor>. Di seguito vengono descritti i tre metodi disponibili per risolvere riferimenti a oggetti per il data binding.  
   
- Il primo metodo richiede l'utilizzo della reflection.  In questo caso, l'oggetto <xref:System.Reflection.PropertyInfo> viene utilizzato per individuare gli attributi della proprietà e per accedere ai metadati della proprietà.  Quando si utilizza l'interfaccia <xref:System.ComponentModel.ICustomTypeDescriptor>, il motore di associazione dati utilizza questa interfaccia per accedere ai valori della proprietà.  L'interfaccia <xref:System.ComponentModel.ICustomTypeDescriptor> è particolarmente utile nei casi in cui l'oggetto non dispone di un insieme statico di proprietà.  
+ Il primo metodo prevede l'uso della reflection. In questo caso, il <xref:System.Reflection.PropertyInfo> oggetto viene utilizzato per individuare gli attributi della proprietà e fornisce l'accesso ai metadati della proprietà. Quando si utilizza il <xref:System.ComponentModel.ICustomTypeDescriptor> , il motore di associazione di dati utilizza questa interfaccia per accedere ai valori di proprietà. Il <xref:System.ComponentModel.ICustomTypeDescriptor> interfaccia risulta particolarmente utile nei casi in cui l'oggetto dispone di un set statico di proprietà.  
   
- Le notifiche di modifica delle proprietà possono essere fornite implementando l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> o utilizzando le notifiche di modifica associate all'oggetto <xref:System.ComponentModel.TypeDescriptor>.  La strategia da preferire per l'implementazione delle notifiche di modifica delle proprietà consiste tuttavia nell'utilizzare l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>.  
+ Le notifiche di modifica di proprietà possono essere fornite mediante l'implementazione di <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia o mediante le notifiche di modifica associate il <xref:System.ComponentModel.TypeDescriptor>. Tuttavia, la strategia consigliata per l'implementazione di notifiche di modifica delle proprietà consiste nell'utilizzare <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
- Se l'oggetto di origine è un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e la proprietà di origine è una proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], il motore di associazione dati di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deve innanzitutto utilizzare la reflection sull'oggetto di origine per ottenere l'oggetto <xref:System.ComponentModel.TypeDescriptor> e quindi eseguire una query per un oggetto <xref:System.ComponentModel.PropertyDescriptor>.  Questa sequenza di operazioni di reflection richiede potenzialmente molto tempo da un punto di vista delle prestazioni.  
+ Se l'oggetto di origine è un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] oggetto e la proprietà di origine è un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] proprietà, il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] motore di associazione dati è prima di tutto usare la reflection sull'oggetto di origine per ottenere il <xref:System.ComponentModel.TypeDescriptor>, quindi eseguire una query per un <xref:System.ComponentModel.PropertyDescriptor>. Questa sequenza di operazioni di reflection richiede potenzialmente molto tempo da un punto di vista delle prestazioni.  
   
- Il secondo metodo di risoluzione dei riferimenti agli oggetti richiede un oggetto di origine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] che implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> e una proprietà di origine che è una proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)].  In questo caso, il motore di associazione dati utilizza direttamente la reflection sul tipo di origine e ottiene la proprietà necessaria.  Sebbene presenti requisiti del working set inferiori rispetto al primo metodo, non si tratta ancora del metodo ottimale.  
+ Il secondo metodo per la risoluzione di riferimenti a oggetti richiede un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] oggetto di origine che implementa il <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia e una proprietà di origine è un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] proprietà. In questo caso, il motore di data binding usa direttamente la reflection sul tipo di origine e ottiene la proprietà necessaria. Sebbene presenti requisiti del working set inferiori rispetto al primo metodo, non si tratta ancora del metodo ottimale.  
   
- Il terzo metodo di risoluzione dei riferimenti agli oggetti richiede un oggetto di origine <xref:System.Windows.DependencyObject> e una proprietà di origine <xref:System.Windows.DependencyProperty>.  In questo caso, non è richiesto l'utilizzo della reflection da parte del motore di associazione dati.  Il motore della proprietà e il motore di associazione dati risolvono il riferimento alla proprietà in modo indipendente.  Si tratta del metodo ottimale per la risoluzione dei riferimenti agli oggetti utilizzati per l'associazione dati.  
+ Il terzo metodo per la risoluzione di riferimenti a oggetti richiede un oggetto di origine che è un <xref:System.Windows.DependencyObject> e una proprietà di origine che è un <xref:System.Windows.DependencyProperty>. In questo caso, non è necessario che il motore di data binding usi la reflection: il motore della proprietà e il motore di data binding risolvono il riferimento alla proprietà in modo indipendente. Si tratta del metodo ottimale per la risoluzione dei riferimenti a oggetti usati per il data binding.  
   
- Nella tabella riportata di seguito viene confrontata la velocità di associazione dati della proprietà <xref:System.Windows.Controls.TextBlock.Text%2A> di milli elementi <xref:System.Windows.Controls.TextBlock> utilizzando questi tre metodi.  
+ Nella tabella seguente confronta la velocità del data binding di <xref:System.Windows.Controls.TextBlock.Text%2A> proprietà di mille <xref:System.Windows.Controls.TextBlock> elementi utilizzando questi tre metodi.  
   
-|**Associazione della proprietà Text di un TextBlock**|**Tempo di associazione \(ms\)**|**Tempo di rendering – include l'associazione \(ms\)**|  
-|-----------------------------------------------------------|--------------------------------------|------------------------------------------------------------|  
+|**Binding della proprietà Text di un TextBlock**|**Tempo di binding (ms)**|**Tempo di rendering: include il binding (ms)**|  
+|--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |A una proprietà di un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]|115|314|  
-|A una proprietà di un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] che implementa <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
-|A una proprietà <xref:System.Windows.DependencyProperty> di un oggetto <xref:System.Windows.DependencyObject>.|90|263|  
+|Per una proprietà di un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] oggetto che implementa<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|Per un <xref:System.Windows.DependencyProperty> di un <xref:System.Windows.DependencyObject>.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
-## Associazione a oggetti CLR di grandi dimensioni  
- Quando si stabilisce un'associazione dati a un singolo oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con migliaia di proprietà, l'impatto sulle prestazioni è notevole.  È possibile limitare questo impatto dividendo il singolo oggetto in più oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con un numero inferiore di proprietà.  Nella tabella vengono elencati i tempi di associazione e rendering per l'associazione dati a un singolo oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] di grandi dimensioni rispetto a più oggetti di dimensioni inferiori.  
+## <a name="binding-to-large-clr-objects"></a>Binding a oggetti CLR di grandi dimensioni  
+ L'esecuzione del data binding a un singolo oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con migliaia di proprietà si ripercuote in modo significativo sulle prestazioni. Per limitare questo impatto è possibile dividere il singolo oggetto in più oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con un numero inferiore di proprietà. La tabella illustra i tempi di binding e di rendering per il data binding a un singolo oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] di grandi dimensioni rispetto a più oggetti di dimensioni inferiori.  
   
-|**Associazione dati di 1000 oggetti TextBlock**|**Tempo di associazione \(ms\)**|**Tempo di rendering – include l'associazione \(ms\)**|  
-|-----------------------------------------------------|--------------------------------------|------------------------------------------------------------|  
+|**Data binding di 1000 oggetti TextBlock**|**Tempo di binding (ms)**|**Tempo di rendering: include il binding (ms)**|  
+|---------------------------------------------|-----------------------------|--------------------------------------------------|  
 |A un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con 1000 proprietà|950|1200|  
 |A 1000 oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con una proprietà|115|314|  
   
 <a name="Binding_to_an_ItemsSource"></a>   
-## Associazione a una proprietà ItemsSource  
- Si consideri uno scenario in cui un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> contiene un elenco di dipendenti da visualizzare in un controllo <xref:System.Windows.Controls.ListBox>.  Per creare una corrispondenza tra questi due oggetti, è necessario associare l'elenco dei dipendenti alla proprietà <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> del controllo <xref:System.Windows.Controls.ListBox>.  Si supponga ora che un nuovo dipendente si unisca al gruppo.  Si potrebbe pensare che per inserire questo nuovo dipendente nei valori <xref:System.Windows.Controls.ListBox> associati, sia semplicemente necessario aggiungerlo all'elenco dei dipendenti e attendere che tale modifica venga riconosciuta automaticamente dal motore di associazione dati.  Tale ipotesi finirebbe per rivelarsi falsa; in realtà, la modifica non verrà riflessa automaticamente nel controllo <xref:System.Windows.Controls.ListBox>.  L'oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]<xref:System.Collections.Generic.List%601>, infatti, non genera automaticamente un evento di modifica della raccolta.  Affinché l'oggetto <xref:System.Windows.Controls.ListBox> rilevi automaticamente le modifiche, è necessario ricreare l'elenco dei dipendenti e collegarlo nuovamente alla proprietà <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> del controllo <xref:System.Windows.Controls.ListBox>.  Questa soluzione funziona, ma produce un notevole impatto sulle prestazioni.  Ogni volta che la proprietà <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> del controllo <xref:System.Windows.Controls.ListBox> viene riassegnata a un nuovo oggetto, il controllo <xref:System.Windows.Controls.ListBox> elimina gli elementi precedenti e rigenera l'intero elenco.  L'impatto sulle prestazioni risulta maggiore se il controllo <xref:System.Windows.Controls.ListBox> viene mappato a un oggetto <xref:System.Windows.DataTemplate> complesso.  
+## <a name="binding-to-an-itemssource"></a>Binding a una proprietà ItemsSource  
+ Si consideri uno scenario in cui è presente un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> oggetto che contiene un elenco di dipendenti che si desidera visualizzare in un <xref:System.Windows.Controls.ListBox>. Per creare una corrispondenza tra questi due oggetti, è necessario associare l'elenco dei dipendenti per il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> proprietà del <xref:System.Windows.Controls.ListBox>. Si supponga ora che un nuovo dipendente si unisca al gruppo. Si potrebbe pensare che per inserire l'associazione di questo nuovo dipendente <xref:System.Windows.Controls.ListBox> valori, è semplicemente aggiungerlo all'elenco dei dipendenti e attendere che tale modifica venga riconosciuta automaticamente dal motore di associazione dati. Questo presupposto per rivelarsi false. in realtà, la modifica non verrà verrà riflessa nel <xref:System.Windows.Controls.ListBox> automaticamente. In questo modo il [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> oggetto non genera automaticamente un evento modificato della raccolta. Per ottenere il <xref:System.Windows.Controls.ListBox> per rendere effettive le modifiche, è necessario ricreare l'elenco dei dipendenti e ricollegarlo al <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> proprietà del <xref:System.Windows.Controls.ListBox>. Questa soluzione funziona, ma incide considerevolmente sulle prestazioni. Ogni volta che il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> di <xref:System.Windows.Controls.ListBox> a un nuovo oggetto, il <xref:System.Windows.Controls.ListBox> innanzitutto genera un'eccezione gli elementi precedenti e rigenera l'intero elenco. L'impatto sulle prestazioni risulta maggiore se il <xref:System.Windows.Controls.ListBox> esegue il mapping a un oggetto complesso <xref:System.Windows.DataTemplate>.  
   
- Una soluzione molto efficace a questo problema consiste nell'impostare l'elenco dei dipendenti come <xref:System.Collections.ObjectModel.ObservableCollection%601>.  Un oggetto <xref:System.Collections.ObjectModel.ObservableCollection%601> genera una notifica di modifica che il motore di associazione dati può ricevere.  L'evento aggiunge o rimuove un elemento da <xref:System.Windows.Controls.ItemsControl> senza la necessità che l'intero elenco venga rigenerato.  
+ Una soluzione molto efficace per questo problema consiste nel rendere l'elenco dei dipendenti un <xref:System.Collections.ObjectModel.ObservableCollection%601>. Un <xref:System.Collections.ObjectModel.ObservableCollection%601> oggetto genera una notifica di modifica che può ricevere dal motore di associazione dati. L'evento aggiunge o rimuove un elemento da un <xref:System.Windows.Controls.ItemsControl> senza la necessità di rigenerare l'intero elenco.  
   
- Nella tabella riportata di seguito è indicato il tempo necessario per l'aggiornamento del controllo <xref:System.Windows.Controls.ListBox> \(con la virtualizzazione dell'interfaccia utente disattivata\) quando viene aggiunto un elemento.  Il numero nella prima riga rappresenta il tempo trascorso quando l'oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]<xref:System.Collections.Generic.List%601> viene associato alla proprietà <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>dell'elemento <xref:System.Windows.Controls.ListBox>.  Il numero nella seconda riga rappresenta il tempo trascorso quando un oggetto <xref:System.Collections.ObjectModel.ObservableCollection%601> viene associato alla proprietà <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> dell'elemento <xref:System.Windows.Controls.ListBox>.  Si noti il notevole risparmio di tempo se si utilizza la strategia di associazione dati dell'oggetto <xref:System.Collections.ObjectModel.ObservableCollection%601>.  
+ Nella tabella riportata di seguito mostra il tempo necessario per aggiornare il <xref:System.Windows.Controls.ListBox> (con la virtualizzazione dell'interfaccia utente disattivata) quando viene aggiunto un elemento. Il numero della prima riga rappresenta il tempo trascorso durante il [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> è associato l'oggetto <xref:System.Windows.Controls.ListBox> dell'elemento <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Il numero nella seconda riga rappresenta il tempo trascorso quando un <xref:System.Collections.ObjectModel.ObservableCollection%601> è associato il <xref:System.Windows.Controls.ListBox> dell'elemento <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Si noti il risparmio di molto tempo usando il <xref:System.Collections.ObjectModel.ObservableCollection%601> strategia di associazione dati.  
   
-|**Associazione dati della proprietà ItemsSource**|**Tempo di aggiornamento per 1 elemento \(ms\)**|  
-|-------------------------------------------------------|------------------------------------------------------|  
-|A un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601>|1656|  
-|A un oggetto <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|**Data binding della proprietà ItemsSource**|**Tempo di aggiornamento per 1 elemento (ms)**|  
+|--------------------------------------|---------------------------------------|  
+|Per un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> oggetto|1656|  
+|Per un<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
-## Associare IList a un oggetto ItemsControl, non IEnumerable  
- Se è possibile scegliere tra l'associazione di un oggetto <xref:System.Collections.Generic.IList%601> o di un oggetto <xref:System.Collections.IEnumerable> a un oggetto <xref:System.Windows.Controls.ItemsControl>, scegliere <xref:System.Collections.Generic.IList%601>.  L'associazione di <xref:System.Collections.IEnumerable> a <xref:System.Windows.Controls.ItemsControl> impone in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] la creazione di un oggetto <xref:System.Collections.Generic.IList%601> wrapper, con conseguente calo delle prestazioni dovuto al sovraccarico non necessario di un secondo oggetto.  
+## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>Binding di IList a ItemsControl non IEnumerable  
+ Se si dispone di una scelta tra l'associazione un <xref:System.Collections.Generic.IList%601> o <xref:System.Collections.IEnumerable> per un <xref:System.Windows.Controls.ItemsControl> oggetto, scegliere il <xref:System.Collections.Generic.IList%601> oggetto. Associazione <xref:System.Collections.IEnumerable> per un <xref:System.Windows.Controls.ItemsControl> forza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per creare un wrapper <xref:System.Collections.Generic.IList%601> oggetto, con conseguente calo delle prestazioni per l'overhead superfluo di un secondo oggetto.  
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
-## Non convertire oggetti CLR in XML solo per l'associazione dati.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di eseguire l'associazione dati a contenuto [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. L'associazione dati a contenuto [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] è tuttavia più lenta rispetto all'associazione dati a oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)].  Non convertire dati di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a XML se l'unico scopo è l'associazione dati.  
+## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Non convertire oggetti CLR in XML solo per il data binding  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di eseguire il data binding a contenuti [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]; il data binding a contenuti [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], tuttavia, è più lento rispetto al data binding a oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Non convertire dati di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a XML se l'unico scopo è il data binding.  
   
-## Vedere anche  
- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Pianificazione delle prestazioni dell'applicazione](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [Sfruttare appieno l'hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [Layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Comportamento dell'oggetto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Risorse delle applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)   
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Procedura dettagliata: memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+## <a name="see-also"></a>Vedere anche  
+ [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [Pianificazione delle prestazioni dell'applicazione](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [Sfruttare appieno l'hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Comportamento dell'oggetto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [Risorse di applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [per](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
+ [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

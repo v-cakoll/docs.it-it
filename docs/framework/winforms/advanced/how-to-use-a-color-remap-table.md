@@ -1,45 +1,51 @@
 ---
-title: "Procedura: utilizzare una tabella di riassociazione cromatica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "tabelle di rimappatura dei colori, utilizzo"
-  - "tabelle del colore, rimappatura dei colori"
-  - "colori personalizzati, creazione con tabelle di rimappatura dei colori"
+title: 'Procedura: utilizzare una tabella di riassociazione cromatica'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- color tables [Windows Forms], remapping colors with
+- custom colors [Windows Forms], creating with color remap table
+- color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1c4399e98504a675cfbf63462b8dc964c677488e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare una tabella di riassociazione cromatica
-La riassociazione è il processo di conversione dei colori in un'immagine in base a una tabella di riassociazione cromatica.  Tale tabella è una matrice di oggetti <xref:System.Drawing.Imaging.ColorMap>.  Ogni oggetto <xref:System.Drawing.Imaging.ColorMap> contenuto nella matrice dispone di una proprietà <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> e di una proprietà <xref:System.Drawing.Imaging.ColorMap.NewColor%2A>.  
+# <a name="how-to-use-a-color-remap-table"></a>Procedura: utilizzare una tabella di riassociazione cromatica
+Modifica del mapping è il processo di conversione dei colori in un'immagine in base a una tabella di modifica del mapping dei colori. La tabella è una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti. Ogni <xref:System.Drawing.Imaging.ColorMap> oggetto nella matrice è un <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> proprietà e un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> proprietà.  
   
- Quando si disegna un'immagine con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], ciascun pixel dell'immagine viene confrontato con la matrice dei colori precedenti.  Se il colore di un pixel corrisponde a uno dei colori precedenti al pixel viene applicato il nuovo colore corrispondente.  I colori sono modificati solo a scopo di rendering; i valori cromatici veri e propri dell'immagine, memorizzati in un oggetto <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap>, non vengono modificati.  
+ Quando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] disegna un'immagine, ogni pixel dell'immagine viene confrontato con la matrice di colori precedente. Se il colore del pixel corrisponde a un colore precedente, viene modificato il colore per il nuovo colore corrispondente. I colori vengono modificati solo per il rendering, i valori di colore dell'immagine (archiviati in un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto) non vengono modificati.  
   
- Per disegnare un'immagine riassociata, inizializzare una matrice di oggetti <xref:System.Drawing.Imaging.ColorMap>.  Passare la matrice al metodo <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> di un oggetto <xref:System.Drawing.Imaging.ImageAttributes>, quindi passare l'oggetto <xref:System.Drawing.Imaging.ImageAttributes> al metodo <xref:System.Drawing.Graphics.DrawImage%2A> di un oggetto <xref:System.Drawing.Graphics>.  
+ Per disegnare un'immagine riassociata, inizializzare una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti. Passare la matrice di <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> metodo di un <xref:System.Drawing.Imaging.ImageAttributes> dell'oggetto e quindi passare il <xref:System.Drawing.Imaging.ImageAttributes> dell'oggetto per il <xref:System.Drawing.Graphics.DrawImage%2A> metodo di un <xref:System.Drawing.Graphics> oggetto.  
   
-## Esempio  
- Nell'esempio che segue viene creato un oggetto <xref:System.Drawing.Image> dal file RemapInput.bmp.  Nel codice viene creata una tabella di riassociazione cromatica costituita da un unico oggetto <xref:System.Drawing.Imaging.ColorMap>.  La proprietà <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> dell'oggetto `ColorRemap`  è il rosso e la proprietà <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> è il blu.  L'immagine viene disegnata una volta con e una volta senza riassociazione.  Tramite il processo di riassociazione tutti i pixel rossi vengono cambiati in blu.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene creato un <xref:System.Drawing.Image> oggetto dal file RemapInput. Il codice crea una tabella di riassociazione cromatica costituita da una singola <xref:System.Drawing.Imaging.ColorMap> oggetto. Il <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> proprietà del `ColorRemap` è rosso, oggetto e <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> proprietà è di colore blu. L'immagine viene disegnata una sola volta senza mapping e una volta con mapping. Il processo di modifica del mapping modifica tutti i pixel rossi blu.  
   
- Nell'illustrazione che segue si mostra l'immagine originale a sinistra e l'immagine riassociata a destra.  
+ Nella figura seguente mostra l'immagine originale a sinistra e l'immagine rimappato a destra.  
+  
+ ![Modifica del mapping dei colori](../../../../docs/framework/winforms/advanced/media/colortrans7.png "colortrans7")  
   
  [!code-csharp[System.Drawing.RecoloringImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.RecoloringImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
   
-## Vedere anche  
- [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
  [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

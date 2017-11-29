@@ -1,52 +1,54 @@
 ---
-title: "Estensione dei client | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estensioni del proxy [WCF]"
+title: Estensione dei client
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ed401f3c132cf2dd223e98a7e622a30de511139f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Estensione dei client
-In un'applicazione chiamante, il livello del modello di servizio è responsabile della conversione delle chiamate ai metodi contenute nel codice dell'applicazione in messaggi in uscita, del loro inserimento nei canali sottostanti, della conversione dei risultati in valori restituiti e parametri out nel codice dell'applicazione e della restituzione dei risultati al chiamante.Le estensioni del modello di servizi modificano o implementano il comportamento e le funzioni dell'esecuzione o della comunicazione relativamente a funzionalità del client o del dispatcher, comportamenti personalizzati, intercettazione di messaggi e parametri e altre funzionalità di estensibilità.  
+# <a name="extending-clients"></a>Estensione dei client
+In un'applicazione chiamante, il livello del modello di servizio è responsabile della conversione delle chiamate ai metodi contenute nel codice dell'applicazione in messaggi in uscita, del loro inserimento nei canali sottostanti, della conversione dei risultati in valori restituiti e parametri out nel codice dell'applicazione e della restituzione dei risultati al chiamante. Le estensioni del modello di servizi modificano o implementano il comportamento e le funzioni dell'esecuzione o della comunicazione relativamente a funzionalità del client o del dispatcher, comportamenti personalizzati, intercettazione di messaggi e parametri e altre funzionalità di estendibilità.  
   
- In questo argomento viene illustrato come utilizzare le classi <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation> in un'applicazione client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per modificare il comportamento di esecuzione predefinito di un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o per intercettare o modificare messaggi, parametri o valori restituiti prima o dopo il loro invio o recupero dal livello del canale.Per ulteriori informazioni sull'estensione della fase di esecuzione del servizio, vedere [Estensione di dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md).Per ulteriori informazioni sui comportamenti che modificano e inseriscono oggetti di personalizzazione nella fase di esecuzione del client, vedere [Configurazione ed estensione del runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ In questo argomento viene illustrato come utilizzare le classi <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation> in un'applicazione client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per modificare il comportamento di esecuzione predefinito di un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o per intercettare o modificare messaggi, parametri o valori restituiti prima o dopo il loro invio o recupero dal livello del canale. Per ulteriori informazioni sull'estensione di runtime del servizio, vedere [estensione dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Per ulteriori informazioni sui comportamenti che modificano e inserire oggetti di personalizzazione in fase di esecuzione il client, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
-## Client  
- In un client, un oggetto o un canale client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] converte le chiamate ai metodi in messaggi in uscita e i messaggi in ingresso in risultati di operazioni che vengono restituiti all'applicazione chiamante.Per ulteriori informazioni sui tipi di client, vedere [Architettura client WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).  
+## <a name="clients"></a>Client  
+ In un client, un oggetto o un canale client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] converte le chiamate ai metodi in messaggi in uscita e i messaggi in ingresso in risultati di operazioni che vengono restituiti all'applicazione chiamante. (Per ulteriori informazioni sui tipi di client, vedere [architettura Client WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  
   
- I tipi di client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dispongono di tipi in fase di esecuzione che gestiscono questa funzionalità a livello di endpoint e di operazione.Quando in un'applicazione viene eseguita una chiamata a un'operazione, la classe <xref:System.ServiceModel.Dispatcher.ClientOperation> converte gli oggetti in uscita in un messaggio, elabora gli intercettori, conferma che la chiamata in uscita è conforme al contratto di destinazione e passa il messaggio in uscita alla classe <xref:System.ServiceModel.Dispatcher.ClientRuntime>, che è responsabile della creazione e della gestione dei canali in uscita \(e dei canali in ingresso in caso di servizi duplex\), della gestione dell'elaborazione supplementare dei messaggi in uscita \(ad esempio la modifica dell'intestazione\), dell'elaborazione degli intercettori del messaggio in entrambe le direzioni e dell'instradamento delle chiamate duplex in ingresso all'oggetto <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sul lato client appropriato.Le classi <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.ClientRuntime> forniscono servizi simili quando i messaggi \(compresi gli errori\) vengono restituiti al client.  
+ I tipi di client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dispongono di tipi in fase di esecuzione che gestiscono questa funzionalità a livello di endpoint e di operazione. Quando in un'applicazione viene eseguita una chiamata a un'operazione, la classe <xref:System.ServiceModel.Dispatcher.ClientOperation> converte gli oggetti in uscita in un messaggio, elabora gli intercettori, conferma che la chiamata in uscita è conforme al contratto di destinazione e passa il messaggio in uscita alla classe <xref:System.ServiceModel.Dispatcher.ClientRuntime>, che è responsabile della creazione e della gestione dei canali in uscita (e dei canali in ingresso in caso di servizi duplex), della gestione dell'elaborazione supplementare dei messaggi in uscita (ad esempio la modifica dell'intestazione), dell'elaborazione degli intercettori del messaggio in entrambe le direzioni e dell'instradamento delle chiamate duplex in ingresso all'oggetto <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sul lato client appropriato. Le classi <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.ClientRuntime> forniscono servizi simili quando i messaggi (compresi gli errori) vengono restituiti al client.  
   
- Queste due classi di runtime costituiscono l'estensione principale per personalizzare l'elaborazione degli oggetti e dei canali client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].La classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> consente agli utenti di intercettare ed estendere l'esecuzione del client in tutti i messaggi del contratto.La classe <xref:System.ServiceModel.Dispatcher.ClientOperation> consente agli utenti di intercettare ed estendere l'esecuzione del client per tutti i messaggi di una determinata operazione.  
+ Queste due classi di runtime costituiscono l'estensione principale per personalizzare l'elaborazione degli oggetti e dei canali client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> consente agli utenti di intercettare ed estendere l'esecuzione del client in tutti i messaggi del contratto. La classe <xref:System.ServiceModel.Dispatcher.ClientOperation> consente agli utenti di intercettare ed estendere l'esecuzione del client per tutti i messaggi di una determinata operazione.  
   
- Per la modifica delle proprietà o l'inserimento di personalizzazioni, si utilizzano i comportamenti del contratto, dell'endpoint e dell'operazione.Per ulteriori informazioni su come utilizzare tali tipi di comportamenti per eseguire personalizzazioni del runtime del client, vedere [Configurazione ed estensione del runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Per la modifica delle proprietà o l'inserimento di personalizzazioni, si utilizzano i comportamenti del contratto, dell'endpoint e dell'operazione. Per ulteriori informazioni su come utilizzare questi tipi di comportamenti per eseguire le personalizzazioni di runtime client, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
-## Scenari  
+## <a name="scenarios"></a>Scenari  
  Esistono vari motivi per estendere il sistema client, tra cui:  
   
--   Convalida di messaggi personalizzata.È possibile che un utente desideri imporre che un messaggio sia valido per un certo schema.A tale scopo, implementare l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> e assegnare l'implementazione alla proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>.Per alcuni esempi, vedere [Procedura: ispezionare o modificare i messaggi sul client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) e [Procedura: ispezionare o modificare i messaggi sul client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+-   Convalida di messaggi personalizzata. È possibile che un utente desideri imporre che un messaggio sia valido per un certo schema. A tale scopo, implementare l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> e assegnare l'implementazione alla proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>. Per esempi, vedere [procedura: controllare o modificare i messaggi sul Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) e [procedura: controllare o modificare i messaggi sul Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
--   Registrazione di messaggi personalizzata.È possibile che un utente desideri controllare e registrare un set di messaggi dell'applicazione che passano attraverso un endpoint.Questa operazione può essere eseguita anche con le interfacce degli intercettori di messaggi.  
+-   Registrazione di messaggi personalizzata. È possibile che un utente desideri controllare e registrare un set di messaggi dell'applicazione che passano attraverso un endpoint. Questa operazione può essere eseguita anche con le interfacce degli intercettori di messaggi.  
   
--   Trasformazioni di messaggi personalizzate.Anziché modificare il codice dell'applicazione, è possibile che l'utente desideri applicare determinate trasformazioni al messaggio nel runtime \(ad esempio per il controllo delle versioni\).Anche in questo caso, l'operazione può essere eseguita con le interfacce degli intercettori di messaggi.  
+-   Trasformazioni di messaggi personalizzate. Anziché modificare il codice dell'applicazione, è possibile che l'utente desideri applicare determinate trasformazioni al messaggio nel runtime (ad esempio per il controllo delle versioni). Anche in questo caso, l'operazione può essere eseguita con le interfacce degli intercettori di messaggi.  
   
--   Modello di dati personalizzato.È possibile che un utente desideri un modello di dati o di serializzazione diverso da quelli supportati per impostazione predefinita in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] \(ovvero oggetti <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> e <xref:System.ServiceModel.Channels.Message?displayProperty=fullName>\).A questo scopo, è possibile implementare le interfacce dei formattatori di messaggi.Per ulteriori informazioni, vedere l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=fullName> e la proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=fullName>.  
+-   Modello di dati personalizzato. È possibile che un utente desideri un modello di dati o di serializzazione diverso da quelli supportati per impostazione predefinita in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (ovvero oggetti <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>). A questo scopo, è possibile implementare le interfacce dei formattatori di messaggi. Per ulteriori informazioni, vedere l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> e la proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType>.  
   
--   Convalida di parametri personalizzata.È possibile che un utente desideri imporre che i parametri tipizzati siano validi \(a differenza di XML\).A questo scopo, è possibile utilizzare le interfacce di controllo dei parametri.Per un esempio, vedere [Procedura: controllare o modificare i parametri](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) o [Convalida client](../../../../docs/framework/wcf/samples/client-validation.md).  
+-   Convalida di parametri personalizzata. È possibile che un utente desideri imporre che i parametri tipizzati siano validi (a differenza di XML). A questo scopo, è possibile usare le interfacce di controllo dei parametri. Per un esempio, vedere [procedura: controllare o modificare parametri](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) o [la convalida del Client](../../../../docs/framework/wcf/samples/client-validation.md).  
   
-### Utilizzo della classe ClientRuntime  
- La classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> è un punto di estensibilità a cui è possibile aggiungere oggetti di estensione che intercettano i messaggi ed estendono il comportamento del client.Gli oggetti di intercettamento possono elaborare tutti i messaggi di un contratto specifico, elaborare solo i messaggi di operazioni particolari, eseguire l'inizializzazione di un canale personalizzata e implementare altri comportamenti dell'applicazione client personalizzati.  
+### <a name="using-the-clientruntime-class"></a>Utilizzo della classe ClientRuntime  
+ La classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> è un punto di estensibilità a cui è possibile aggiungere oggetti di estensione che intercettano i messaggi ed estendono il comportamento del client. Gli oggetti di intercettamento possono elaborare tutti i messaggi di un contratto specifico, elaborare solo i messaggi di operazioni particolari, eseguire l'inizializzazione di un canale personalizzata e implementare altri comportamenti dell'applicazione client personalizzati.  
   
 -   La proprietà <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> restituisce l'oggetto runtime di invio per i client di callback avviati dal servizio.  
   
@@ -76,16 +78,16 @@ In un'applicazione chiamante, il livello del modello di servizio è responsabile
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
- Per estendere l'esecuzione del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] attraverso un intero client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], esaminare le proprietà disponibili sulla classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> per verificare se la modifica di una proprietà o l'implementazione di un'interfaccia e la relativa aggiunta a una proprietà crea la funzionalità desiderata.Una volta scelta una particolare estensione da compilare, inserirla nella proprietà <xref:System.ServiceModel.Dispatcher.ClientRuntime> appropriata implementando un comportamento del client che fornisca accesso alla classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> quando viene richiamato.  
+ Per estendere l'esecuzione del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] attraverso un intero client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], esaminare le proprietà disponibili sulla classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> per verificare se la modifica di una proprietà o l'implementazione di un'interfaccia e la relativa aggiunta a una proprietà crea la funzionalità desiderata. Una volta scelta una particolare estensione da compilare, inserirla nella proprietà <xref:System.ServiceModel.Dispatcher.ClientRuntime> appropriata implementando un comportamento del client che fornisca accesso alla classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> quando viene richiamato.  
   
- Per inserire oggetti di estensione personalizzati in una raccolta, è possibile utilizzare un comportamento dell'operazione \(un oggetto che implementa <xref:System.ServiceModel.Description.IOperationBehavior>\), un comportamento del contratto \(un oggetto che implementa <xref:System.ServiceModel.Description.IContractBehavior>\) o un comportamento dell'endpoint \(un oggetto che implementa <xref:System.ServiceModel.Description.IEndpointBehavior>\).L'oggetto del comportamento da installare viene aggiunto alla raccolta appropriata di comportamenti a livello di codice, in modo dichiarativo \(implementando un attributo personalizzato\) o implementando un oggetto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personalizzato per consentire al comportamento di essere inserito utilizzando un file di configurazione dell'applicazione.Per informazioni dettagliate, vedere [Configurazione ed estensione del runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Per inserire oggetti di estensione personalizzati in una raccolta, è possibile utilizzare un comportamento dell'operazione (un oggetto che implementa <xref:System.ServiceModel.Description.IOperationBehavior>), un comportamento del contratto (un oggetto che implementa <xref:System.ServiceModel.Description.IContractBehavior>) o un comportamento dell'endpoint (un oggetto che implementa <xref:System.ServiceModel.Description.IEndpointBehavior>). L'oggetto del comportamento da installare viene aggiunto alla raccolta appropriata di comportamenti a livello di codice, in modo dichiarativo (implementando un attributo personalizzato) o implementando un oggetto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personalizzato per consentire al comportamento di essere inserito utilizzando un file di configurazione dell'applicazione. Per informazioni dettagliate, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
- Per esempi che illustrano l'intercettazione in un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vedere [Procedura: ispezionare o modificare i messaggi sul client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+ Per esempi che illustrano l'intercettazione attraverso un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, vedere [procedura: controllare o modificare i messaggi sul Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
-### Utilizzo della classe ClientOperation  
- Nella classe <xref:System.ServiceModel.Dispatcher.ClientOperation> è possibile eseguire modifiche della fase di esecuzione del client e questa classe rappresenta il punto di inserimento per le estensioni personalizzate nell'ambito di una sola operazione del servizio.\(Per modificare il comportamento della fase di esecuzione del client per tutti i messaggi di un contratto, utilizzare la classe <xref:System.ServiceModel.Dispatcher.ClientRuntime>\).  
+### <a name="using-the-clientoperation-class"></a>Utilizzo della classe ClientOperation  
+ Nella classe <xref:System.ServiceModel.Dispatcher.ClientOperation> è possibile eseguire modifiche della fase di esecuzione del client e questa classe rappresenta il punto di inserimento per le estensioni personalizzate nell'ambito di una sola operazione del servizio. (Per modificare il comportamento della fase di esecuzione del client per tutti i messaggi di un contratto, utilizzare la classe <xref:System.ServiceModel.Dispatcher.ClientRuntime>).  
   
- Utilizzare la proprietà <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> per individuare l'oggetto <xref:System.ServiceModel.Dispatcher.ClientOperation> che rappresenta un'operazione specifica del servizio.Le proprietà seguenti consentono di inserire oggetti personalizzati nel sistema client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Usare la proprietà <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> per individuare l'oggetto <xref:System.ServiceModel.Dispatcher.ClientOperation> che rappresenta un'operazione specifica del servizio. Le proprietà seguenti consentono di inserire oggetti personalizzati nel sistema client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
 -   Utilizzare la proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> per inserire un'implementazione personalizzata dell'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> di un'operazione o per modificare il formattatore corrente.  
   
@@ -97,7 +99,7 @@ In un'applicazione chiamante, il livello del modello di servizio è responsabile
   
 -   Utilizzare la proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> per controllare la deserializzazione di un messaggio in entrata.  
   
--   Utilizzare la proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> per controllare l'azione WS\-Addressing del messaggio di richiesta.  
+-   Utilizzare la proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> per controllare l'azione WS-Addressing del messaggio di richiesta.  
   
 -   Utilizzare le proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> e <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> per specificare quali metodi del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vengono associati a un'operazione asincrona.  
   
@@ -113,16 +115,16 @@ In un'applicazione chiamante, il livello del modello di servizio è responsabile
   
 -   Utilizzare la proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> per controllare quale metodo viene mappato all'operazione.  
   
- Per estendere l'esecuzione del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in una sola operazione del servizio, esaminare le proprietà disponibili sulla classe <xref:System.ServiceModel.Dispatcher.ClientOperation> per verificare se la modifica di una proprietà o l'implementazione di un'interfaccia e la relativa aggiunta a una proprietà crea la funzionalità desiderata.Una volta scelta una particolare estensione da compilare, inserirla nella proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation> appropriata implementando un comportamento del client che fornisca accesso alla classe <xref:System.ServiceModel.Dispatcher.ClientOperation> quando viene richiamato.All'interno di tale comportamento è quindi possibile modificare la proprietà <xref:System.ServiceModel.Dispatcher.ClientRuntime> in base alle esigenze.  
+ Per estendere l'esecuzione del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in una sola operazione del servizio, esaminare le proprietà disponibili sulla classe <xref:System.ServiceModel.Dispatcher.ClientOperation> per verificare se la modifica di una proprietà o l'implementazione di un'interfaccia e la relativa aggiunta a una proprietà crea la funzionalità desiderata. Una volta scelta una particolare estensione da compilare, inserirla nella proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation> appropriata implementando un comportamento del client che fornisca accesso alla classe <xref:System.ServiceModel.Dispatcher.ClientOperation> quando viene richiamato. All'interno di tale comportamento è quindi possibile modificare la proprietà <xref:System.ServiceModel.Dispatcher.ClientRuntime> in base alle esigenze.  
   
- In genere, è sufficiente l'implementazione di un comportamento dell'operazione \(un oggetto che implementa l'interfaccia <xref:System.ServiceModel.Description.IOperationBehavior>\), ma è anche possibile utilizzare comportamenti dell'endpoint e del contratto per ottenere lo stesso risultato individuando la classe <xref:System.ServiceModel.Description.OperationDescription> per una particolare operazione e allegandovi il comportamento.Per informazioni dettagliate, vedere [Configurazione ed estensione del runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ In genere, è sufficiente l'implementazione di un comportamento dell'operazione (un oggetto che implementa l'interfaccia <xref:System.ServiceModel.Description.IOperationBehavior>), ma è anche possibile utilizzare comportamenti dell'endpoint e del contratto per ottenere lo stesso risultato individuando la classe <xref:System.ServiceModel.Description.OperationDescription> per una particolare operazione e allegandovi il comportamento. Per informazioni dettagliate, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
- Per utilizzare il comportamento personalizzato dalla configurazione, installare il comportamento utilizzando un gestore della sezione di configurazione dei comportamenti personalizzati.È inoltre possibile installare il comportamento creando un attributo personalizzato.  
+ Per utilizzare il comportamento personalizzato dalla configurazione, installare il comportamento utilizzando un gestore della sezione di configurazione dei comportamenti personalizzati. È inoltre possibile installare il comportamento creando un attributo personalizzato.  
   
- Per esempi che illustrano l'intercettazione in un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vedere [Procedura: controllare o modificare i parametri](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
+ Per esempi che illustrano l'intercettazione attraverso un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, vedere [procedura: controllare o modificare parametri](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
   
-## Vedere anche  
- <xref:System.ServiceModel.Dispatcher.ClientRuntime>   
- <xref:System.ServiceModel.Dispatcher.ClientOperation>   
- [Procedura: ispezionare o modificare i messaggi sul client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Dispatcher.ClientRuntime>  
+ <xref:System.ServiceModel.Dispatcher.ClientOperation>  
+ [Procedura: controllare o modificare i messaggi sul Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
  [Procedura: controllare o modificare i parametri](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

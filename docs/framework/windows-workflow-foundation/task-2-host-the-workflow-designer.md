@@ -1,42 +1,45 @@
 ---
-title: "Attivit&#224; 2: ospitare l&#39;utilit&#224; di progettazione del flusso di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Attività 2: ospitare l'utilità di progettazione del flusso di lavoro"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f3b35bf4150dc05c6bedaaebc65a0a188c5c782
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Attivit&#224; 2: ospitare l&#39;utilit&#224; di progettazione del flusso di lavoro
+# <a name="task-2-host-the-workflow-designer"></a>Attività 2: ospitare l'utilità di progettazione del flusso di lavoro
 In questo argomento viene descritta la procedura per ospitare un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione [!INCLUDE[avalon1](../../../includes/avalon1-md.md)].  
   
- Nella procedura viene configurato il controllo **Griglia** che contiene la finestra di progettazione, viene creata a livello di codice un'istanza di <xref:System.Activities.Presentation.WorkflowDesigner> che contiene un'attività <xref:System.Activities.Statements.Sequence> predefinita, vengono registrati i metadati della finestra di progettazione per fornire supporto della finestra di progettazione per tutte le attività predefinite e viene ospitato [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] nell'applicazione [!INCLUDE[avalon2](../../../includes/avalon2-md.md)].  
+ La procedura consente di configurare il **griglia** controllo che contiene la finestra di progettazione a livello di codice crea un'istanza del <xref:System.Activities.Presentation.WorkflowDesigner> che contiene un valore predefinito <xref:System.Activities.Statements.Sequence> attività registra i metadati della finestra di progettazione per fornire supporto della finestra di progettazione per le attività predefinite tutte e che ospita il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] nel [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] dell'applicazione.  
   
-### Per ospitare la finestra di progettazione del flusso di lavoro  
+### <a name="to-host-the-workflow-designer"></a>Per ospitare la finestra di progettazione del flusso di lavoro  
   
-1.  Aprire il progetto HostingApplication creato in [Attività 1: creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation//task-1-create-a-new-wpf-app.md).  
+1.  Aprire il HostingApplication progetto creato in [attività 1: creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
   
-2.  Regolare le dimensioni della finestra per semplificare l'utilizzo di [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].A tal fine, selezionare **MainWindow** nella finestra di progettazione, premere F4 per visualizzare la finestra **Proprietà**, quindi nella sezione **Layout** impostare su 600 il valore di **Larghezza** e su 350 il valore di **Altezza**.  
+2.  Regolare le dimensioni della finestra per semplificare l'uso di [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. A tale scopo, selezionare **MainWindow** nella finestra di progettazione, premere F4 per visualizzare il **proprietà** finestra e, nel **Layout** sezione, impostare il **larghezza** su un valore pari a 600 e **altezza** su un valore di 350.  
   
-3.  Impostare il nome della griglia selezionando il pannello **Griglia** nella finestra di progettazione \(fare clic sulla casella all'interno di **MainWindow**\) e impostando su "grid1" la proprietà **Name** nella parte superiore della finestra **Proprietà**.  
+3.  Impostare il nome della griglia selezionando il **griglia** pannello nella finestra di progettazione (fare clic sulla casella all'interno del **MainWindow**) e impostando il **nome** proprietà nella parte superiore del  **Proprietà** finestra su "grid1".  
   
-4.  Nella finestra **Proprietà** fare clic sui puntini di sospensione \(**…**\) accanto alla proprietà `ColumnDefinitions` per aprire la finestra di dialogo **Editor della raccolta**.  
+4.  Nel **proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto al `ColumnDefinitions` proprietà per aprire la **Editor della raccolta** la finestra di dialogo.  
   
-5.  Nella finestra di dialogo **Editor della raccolta** fare clic tre volte sul pulsante **Aggiungi** per inserire tre colonne nel layout.La prima colonna conterrà la **Casella degli strumenti**, la seconda ospiterà [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] e la terza colonna sarà utilizzata per il controllo proprietà.  
+5.  Nel **Editor della raccolta** la finestra di dialogo, fare clic su di **Aggiungi** tre volte per inserire tre colonne nel layout. La prima colonna conterrà il **della casella degli strumenti**, mentre la seconda ospiterà il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e la terza colonna verrà utilizzata per il controllo proprietà.  
   
-6.  Impostare la proprietà `Width` della colonna centrale sul valore "4\*".  
+6.  Impostare il `Width` proprietà della colonna centrale sul valore "4 *".  
   
-7.  Scegliere **OK** per salvare le modifiche.Il seguente codice XAML viene aggiunto al file MainWindow.xaml:  
+7.  Fare clic su **OK** per salvare le modifiche. Il seguente codice XAML viene aggiunto al file MainWindow.xaml:  
   
-    ```  
-  
+    ```xml  
     <Grid Name="grid1">  
         <Grid.ColumnDefinitions>  
             <ColumnDefinition />  
@@ -44,15 +47,13 @@ In questo argomento viene descritta la procedura per ospitare un'istanza di [!IN
             <ColumnDefinition />  
         </Grid.ColumnDefinitions>  
     </Grid>  
-  
     ```  
   
-8.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su MainWindow.xaml e selezionare **Visualizza codice**.Modificare il codice attenendosi ai passaggi seguenti:  
+8.  In **Esplora**, fare doppio clic su MainWindow. XAML e selezionare **Visualizza codice**. Modificare il codice attenendosi ai passaggi seguenti:  
   
     1.  Aggiungere gli spazi dei nomi seguenti:  
   
         ```csharp  
-  
         using System.Activities;  
         using System.Activities.Core.Presentation;  
         using System.Activities.Presentation;  
@@ -60,13 +61,11 @@ In questo argomento viene descritta la procedura per ospitare un'istanza di [!IN
         using System.Activities.Presentation.Toolbox;  
         using System.Activities.Statements;  
         using System.ComponentModel;  
-  
         ```  
   
     2.  Per dichiarare un campo membro privato per contenere un'istanza di <xref:System.Activities.Presentation.WorkflowDesigner>, aggiungere il codice seguente alla classe `MainWindow`.  
   
         ```csharp  
-  
         public partial class MainWindow : Window  
         {  
             private WorkflowDesigner wd;  
@@ -76,13 +75,11 @@ In questo argomento viene descritta la procedura per ospitare un'istanza di [!IN
                 InitializeComponent();  
             }  
         }  
-  
         ```  
   
-    3.  Aggiungere il metodo `AddDesigner` seguente alla classe `MainWindow`.Tramite l'implementazione viene creata un'istanza dell'oggetto <xref:System.Activities.Presentation.WorkflowDesigner>, viene aggiunta un'attività <xref:System.Activities.Statements.Sequence> che viene inserita nella colonna centrale della **Griglia** grid1.  
+    3.  Aggiungere il metodo `AddDesigner` seguente alla classe `MainWindow`. L'implementazione crea un'istanza di <xref:System.Activities.Presentation.WorkflowDesigner>, aggiunge un <xref:System.Activities.Statements.Sequence> attività e lo inserisce nella colonna centrale della grid1 **griglia**.  
   
         ```csharp  
-  
         private void AddDesigner()  
         {  
             //Create an instance of WorkflowDesigner class.  
@@ -97,22 +94,19 @@ In questo argomento viene descritta la procedura per ospitare un'istanza di [!IN
             //Add the designer canvas to the grid.  
             grid1.Children.Add(this.wd.View);  
         }  
-  
         ```  
   
-    4.  Registrare i metadati della finestra di progettazione per aggiungere il supporto della finestra di progettazione per tutte le attività incorporate.In questo modo sarà possibile spostare le attività dalla casella degli strumenti all'attività <xref:System.Activities.Statements.Sequence> originale in [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].A tal fine, aggiungere il metodo `RegisterMetadata` alla classe `MainWindow`.  
+    4.  Registrare i metadati della finestra di progettazione per aggiungere il supporto della finestra di progettazione per tutte le attività incorporate. In questo modo sarà possibile spostare le attività dalla casella degli strumenti all'attività <xref:System.Activities.Statements.Sequence> originale in [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. A tal fine, aggiungere il metodo `RegisterMetadata` alla classe `MainWindow`.  
   
         ```csharp  
-  
         private void RegisterMetadata()  
         {               
             DesignerMetadata dm = new DesignerMetadata();  
             dm.Register();  
         }  
-  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)] registrazione di ActivityDesigner, vedere [Procedura: Creare un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-activity-designer.md).  
+         [!INCLUDE[crabout](../../../includes/crabout-md.md)]registrazione di ActivityDesigner, vedere [procedura: creare un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
   
     5.  Nel costruttore della classe `MainWindow`, aggiungere chiamate ai metodi dichiarati precedentemente per registrare i metadati per il supporto della finestra di progettazione e per creare l'oggetto <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -127,17 +121,16 @@ In questo argomento viene descritta la procedura per ospitare un'istanza di [!IN
             // Add the WFF Designer  
             AddDesigner();  
         }  
-  
         ```  
   
         > [!NOTE]
-        >  Il metodo `RegisterMetadata` registra i metadati della finestra di progettazione di attività incorporate, inclusa l'attività <xref:System.Activities.Statements.Sequence>.Poiché il metodo `AddDesigner` utilizza l'attività <xref:System.Activities.Statements.Sequence>, è necessario chiamare innanzitutto il metodo `RegisterMetadata`.  
+        >  Il metodo `RegisterMetadata` registra i metadati della finestra di progettazione di attività incorporate, inclusa l'attività <xref:System.Activities.Statements.Sequence>. Poiché il metodo `AddDesigner` usa l'attività <xref:System.Activities.Statements.Sequence>, è necessario chiamare innanzitutto il metodo `RegisterMetadata`.  
   
 9. Premere F5 per compilare ed eseguire la soluzione.  
   
-10. Per informazioni su come aggiungere il supporto della **Casella degli strumenti** e di **PropertyGrid** alla finestra di progettazione del flusso di lavoro riallocata, vedere [Attività 3: creare i riquadri Casella degli strumenti e PropertyGrid](../../../docs/framework/windows-workflow-foundation//task-3-create-the-toolbox-and-propertygrid-panes.md).  
+10. Vedere [attività 3: creare la casella degli strumenti e PropertyGrid riquadri](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) per informazioni su come aggiungere **della casella degli strumenti** e **PropertyGrid** supportano alla finestra di progettazione del flusso di lavoro ospitata nuovamente.  
   
-## Vedere anche  
- [Riallocazione dell'utilità di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Attività 1: creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation//task-1-create-a-new-wpf-app.md)   
- [Attività 3: creare i riquadri Casella degli strumenti e PropertyGrid](../../../docs/framework/windows-workflow-foundation//task-3-create-the-toolbox-and-propertygrid-panes.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
+ [Attività 3: Creare i riquadri Casella degli strumenti e PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

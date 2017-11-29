@@ -1,39 +1,22 @@
 ---
-title: Stampa e generazione di rapporti (Visual Basic) | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Stampa e generazione di rapporti (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e4c522f279c097d92d3fe0ffa05dc56c705f50ca
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e51ca5482a87dca1661f8b7d78272b70da676359
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Stampa e generazione di rapporti (Visual Basic)
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]offre diverse opzioni per la stampa e i report. Gli argomenti seguenti forniscono informazioni generali e collegamenti per la documentazione relativa a stampa e reporting.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]offre diverse opzioni per la stampa e i report. Gli argomenti seguenti forniscono informazioni generali e collegamenti per la relativa documentazione relativa a stampa e creazione di report.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Componente PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)  
@@ -43,7 +26,7 @@ ms.lasthandoff: 03/13/2017
  Viene illustrato come stampare un form scorrevole utilizzando il `PrintForm` componente.  
   
  [Procedura: Stampare aree client e non client di un form](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- Viene illustrato come stampare aree client e non client di un form utilizzando la `PrintForm` componente.  
+ Viene illustrato come stampare aree client non sia il client di un form utilizzando la `PrintForm` componente.  
   
  [Procedura: Stampare l'area client di un form](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
  Viene illustrato come stampare l'area client di un form utilizzando la `PrintForm` componente.  

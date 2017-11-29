@@ -1,39 +1,45 @@
 ---
-title: "Procedura: aprire un file rilasciato in un controllo RichTextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "trascinamento [WPF], aprire un file rilasciato"
-  - "trascinamento [WPF], RichTextBox"
-  - "RichTextBox [WPF], trascinamento"
+title: 'Procedura: aprire un file rilasciato in un controllo RichTextBox'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- drag-and-drop [WPF], RichTextBox
+- RichTextBox [WPF], drag-and-drop
+- drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f65ecaf9c6ef34176967e1ebf9134ceee195036b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: aprire un file rilasciato in un controllo RichTextBox
-In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] tutti i controlli <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Documents.FlowDocument> dispongono di funzionalità di trascinamento della selezione incorporata.  La funzionalità incorporata consente il trascinamento della selezione di testo all'interno e tra i controlli.  Tuttavia, non consente di aprire un file rilasciando il file sul controllo.  Questi controlli inoltre contrassegnano gli eventi di trascinamento della selezione come gestiti.  Pertanto, per impostazione predefinita, non è possibile aggiungere i propri gestori eventi per fornire la funzionalità di apertura dei file rilasciati.  
+# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Procedura: aprire un file rilasciato in un controllo RichTextBox
+In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, e <xref:System.Windows.Documents.FlowDocument> tutti i controlli sono incorporate funzionalità di trascinamento e rilascio. La funzionalità incorporata consente di trascinamento e rilascio del testo all'interno e tra i controlli. Tuttavia, non consente l'apertura di un file eliminando il file nel controllo. Questi controlli inoltre contrassegnano gli eventi di trascinamento e rilascio come gestito. Di conseguenza, per impostazione predefinita, è possibile aggiungere i propri gestori eventi per fornire la funzionalità di apertura file rilasciati.  
   
- Per aggiungere gestione aggiuntiva per gli eventi di trascinamento della selezione in questi controlli, utilizzare il metodo <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> per aggiungere i gestori eventi per gli eventi di trascinamento della selezione.  Impostare il parametro `handledEventsToo` su `true` per fare in modo che il gestore specificato venga richiamato per eventi indirizzati già contrassegnati come gestiti da un altro elemento lungo la route dell'evento.  
+ Per aggiungere ulteriori operazioni di gestione per gli eventi di trascinamento e rilascio in questi controlli, utilizzare il <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> metodo per aggiungere i gestori eventi per gli eventi di trascinamento e rilascio. Impostare il `handledEventsToo` parametro `true` per il gestore specificato venga richiamato per un evento indirizzato è già stato contrassegnato come gestito da un altro elemento lungo la route dell'evento.  
   
 > [!TIP]
->  È possibile sostituire la funzionalità di trascinamento della selezione incorporata di <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Documents.FlowDocument> gestendo le versioni di anteprima degli eventi di trascinamento della selezione e contrassegnando gli eventi di anteprima come gestiti.  Questa operazione, tuttavia, disattiverà la funzionalità di trascinamento della selezione e non è consigliabile.  
+>  È possibile sostituire la funzionalità di trascinamento e rilascio predefinita di <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, e <xref:System.Windows.Documents.FlowDocument> gestendo le versioni di anteprima degli eventi di trascinamento e rilascio e contrassegnare gli eventi di anteprima come gestito. Tuttavia, questo disabiliterà la funzionalità di trascinamento e rilascio predefinita e non è consigliato.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come aggiungere gestori per gli eventi <xref:System.Windows.DragDrop.DragOver> e <xref:System.Windows.DragDrop.Drop> s un oggetto <xref:System.Windows.Controls.RichTextBox>.  In questo esempio viene utilizzato il metodo <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> e viene impostato il parametro `handledEventsToo` su `true`, in modo che i gestori degli eventi vengono richiamati anche se <xref:System.Windows.Controls.RichTextBox> contrassegna questi eventi come gestiti.  Il codice nei gestori eventi aggiunge la funzionalità di apertura di un file di testo rilasciato sull'oggetto <xref:System.Windows.Controls.RichTextBox>.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come aggiungere i gestori per il <xref:System.Windows.DragDrop.DragOver> e <xref:System.Windows.DragDrop.Drop> eventi su un <xref:System.Windows.Controls.RichTextBox>. Questo esempio viene utilizzato il <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> (metodo) e imposta il `handledEventsToo` parametro `true` in modo che verranno richiamati anche se i gestori degli eventi il <xref:System.Windows.Controls.RichTextBox> contrassegna questi eventi come gestito. Il codice nei gestori di eventi consente di aprire un file di testo che viene eliminato il <xref:System.Windows.Controls.RichTextBox>.  
   
- Per eseguire il test di questo esempio, trascinare un file di testo o un file RTF da Esplora risorse all'oggetto <xref:System.Windows.Controls.RichTextBox>.  Il file verrà aperto in <xref:System.Windows.Controls.RichTextBox>.  Se si preme il tasto MAIUSC prima del rilascio del file, il file verrà aperto come testo normale.  
+ Per testare questo esempio, trascinare un file di testo o un file di formato RTF RTF da Esplora risorse per il <xref:System.Windows.Controls.RichTextBox>. Il file verrà aperto nel <xref:System.Windows.Controls.RichTextBox>. Se si preme il tasto MAIUSC prima di eliminare il file, verrà aperto il file come testo normale.  
   
- [!code-xml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
+ [!code-xaml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
   
  [!code-csharp[DragDropSnippets#RtbHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#rtbhandlers)]
  [!code-vb[DragDropSnippets#RtbHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#rtbhandlers)]

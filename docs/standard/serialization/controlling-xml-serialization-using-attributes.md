@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - classes, serializing
 - XML serialization, examples
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: c00ceea5e9700b0e964b799684eea743c540992d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e921402980b1382761dd25d9cbbabda6b2c6a038
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controllo della serializzazione XML mediante attributi
 Gli attributi possono essere utilizzati per controllare la serializzazione XML di un oggetto o per creare un flusso XML alternativo dallo stesso set di classi. Per altri dettagli sulla creazione di un flusso XML alternativo, vedere [Procedura: Specificare un nome di elemento alternativo per un flusso XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
@@ -320,11 +317,10 @@ public class Group{
  Potrebbero presentarsi delle situazioni in cui un campo o una proprietà pubblica non necessitano della serializzazione. Ad esempio, un campo o una proprietà possono essere utilizzati per contenere metadati. In tali casi, applicare <xref:System.Xml.Serialization.XmlIgnoreAttribute> al campo o alla proprietà e <xref:System.Xml.Serialization.XmlSerializer> permetterà di ignorarli.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi per il controllo della serializzazione XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
- [Attributi per il controllo della serializzazione SOAP codificata](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)   
- [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Esempi di serializzazione XML](../../../docs/standard/serialization/examples-of-xml-serialization.md)   
- [Procedura: Specificare un nome di elemento alternativo per un flusso XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Attributi per il controllo della serializzazione XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [Attributi per il controllo della serializzazione SOAP codificata](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [Esempi di serializzazione XML](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
+ [Procedura: Specificare un nome di elemento alternativo per un flusso XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

@@ -1,61 +1,65 @@
 ---
-title: "Procedura: convertire i colori delle immagini | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "bitmap [Windows Form], modifica dei colori"
-  - "immagini (colori) [Windows Form]"
-  - "immagini [Windows Form], modifica dei colori"
+title: 'Procedura: convertire i colori delle immagini'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- bitmaps [Windows Forms], changing colors
+- images [Windows Forms], changing colors
+- image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c21d20b631d8e0cf68e370dd43b3f5e92144b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: convertire i colori delle immagini
-Una conversione consente di aggiungere un valore a una o più delle quattro componenti di colore.  Le voci della matrice di colore che rappresentano le traslazioni sono indicate nella tabella che segue.  
+# <a name="how-to-translate-image-colors"></a>Procedura: convertire i colori delle immagini
+Una traduzione aggiunge un valore a una o più di quattro componenti di colore. Le voci della matrice di colori che rappresentano le traduzioni sono indicate nella tabella riportata di seguito.  
   
 |Componente da convertire|Voce della matrice|  
-|------------------------------|------------------------|  
-|Rosso|\[4\]\[0\]|  
-|Verde|\[4\]\[1\]|  
-|Blu|\[4\]\[2\]|  
-|Alfa|\[4\]\[3\]|  
+|--------------------------------|------------------|  
+|Rosso|[4][0]|  
+|Verde|[4][1]|  
+|Blu|[4][2]|  
+|Alfa|[4][3]|  
   
-## Esempio  
- Nell'esempio che segue viene costruito un oggetto <xref:System.Drawing.Image> dal file ColorBars.bmp.  Nel codice viene quindi aggiunto 0,75 alla componente rossa di ogni pixel dell'immagine.  L'immagine originale viene disegnata accanto all'immagine trasformata.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene costruito un <xref:System.Drawing.Image> oggetto dal file ColorBars. Il codice aggiunge quindi 0,75 per il componente rosso di ogni pixel dell'immagine. L'immagine originale viene disegnato accanto all'immagine trasformata.  
   
- Nell'illustrazione che segue si mostra l'immagine originale a sinistra e l'immagine trasformata a destra.  
+ Nella figura seguente mostra l'immagine originale a sinistra e l'immagine trasformato a destra.  
   
  ![Conversione dei colori](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
   
- Nella tabella che segue sono elencati i vettori di colore per le quattro barre prima e dopo la conversione della componente rossa.  Si noti che, poiché il valore massimo per una componente di colore è 1, la componente rossa nella seconda riga non cambia.  Il valore minimo per una componente di colore è invece 0.  
+ Nella tabella seguente sono elencati i vettori di colore per le quattro barre prima e dopo la conversione di colore rossa. Si noti che, poiché il valore massimo per un componente di colore è 1, non modificare il componente rosso nella seconda riga. (In modo analogo, il valore minimo per un componente di colore è 0.)  
   
-|Originale|Convertito|  
-|---------------|----------------|  
-|Nero \(0, 0, 0, 1\)|\(0.75, 0, 0, 1\)|  
-|Rosso \(1, 0, 0, 1\)|\(1, 0, 0, 1\)|  
-|Verde \(0, 1, 0, 1\)|\(0.75, 1, 0, 1\)|  
-|Blu \(0, 0, 1, 1\)|\(0.75, 0, 1, 1\)|  
+|Originale|Tradotta|  
+|--------------|----------------|  
+|Nero (0, 0, 0, 1)|(0.75, 0, 0, 1)|  
+|Rosso (1, 0, 0, 1)|(1, 0, 0, 1)|  
+|Verde (0, 1, 0, 1)|(0.75, 1, 0, 1)|  
+|Blu (0, 0, 1, 1)|(0.75, 0, 1, 1)|  
   
  [!code-csharp[System.Drawing.RecoloringImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  Sostituire `ColorBars.bmp`  con il percorso e il nome del file di immagine validi per il sistema.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Sostituire `ColorBars.bmp` con un nome di file di immagine e un percorso valido per il sistema.  
   
-## Vedere anche  
- <xref:System.Drawing.Imaging.ColorMatrix>   
- <xref:System.Drawing.Imaging.ImageAttributes>   
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Imaging.ColorMatrix>  
+ <xref:System.Drawing.Imaging.ImageAttributes>  
+ [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)

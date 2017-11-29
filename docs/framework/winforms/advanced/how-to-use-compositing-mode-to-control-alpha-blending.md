@@ -1,67 +1,71 @@
 ---
-title: "Procedura: utilizzare la modalit&#224; di composizione per controllare la fusione alfa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "sfumatura alfa, composizione"
-  - "colori, sfumatura"
-  - "colori, controllo della trasparenza"
+title: "Procedura: utilizzare la modalità di composizione per controllare la fusione alfa"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- alpha blending [Windows Forms], compositing
+- colors [Windows Forms], blending
+- colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 564d46cb2d72ac63962657b39146489aaafd6a5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare la modalit&#224; di composizione per controllare la fusione alfa
-Possono verificarsi casi in cui è necessario creare un oggetto Bitmap fuori dallo schermo, con le caratteristiche che seguono:  
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Procedura: utilizzare la modalità di composizione per controllare la fusione alfa
+Può accadere quando si desidera creare una bitmap fuori schermo che presenta le caratteristiche seguenti:  
   
--   I colori hanno valori alfa inferiori a 255.  
+-   Colori hanno valori alfa minore di 255.  
   
--   Ai colori non viene applicata la fusione alfa quando si crea l'oggetto Bitmap.  
+-   I colori non sono alfa combinati tra loro durante la creazione di bitmap.  
   
--   A momento della visualizzazione dell'immagine bitmap completata ai colori dell'immagine viene applicata la fusione alfa rispetto ai colori di sfondo sulla periferica di visualizzazione.  
+-   Quando si visualizza l'immagine bitmap completata, i colori nella mappa di bit sono alpha sfumato con i colori di sfondo sul dispositivo di visualizzazione.  
   
- Per creare un'immagine bitmap con queste caratteristiche, costruire un oggetto <xref:System.Drawing.Bitmap> vuoto, quindi un oggetto <xref:System.Drawing.Graphics> basato sull'immagine.  Impostare la modalità di composizione dell'oggetto <xref:System.Drawing.Graphics> su <xref:System.Drawing.Drawing2D.CompositingMode?displayProperty=fullName>.  
+ Per creare una mappa di bit, creare uno spazio vuoto <xref:System.Drawing.Bitmap> dell'oggetto e quindi creare un <xref:System.Drawing.Graphics> oggetto basato sull'immagine. Impostare la modalità di composizione del <xref:System.Drawing.Graphics> oggetto <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   
-## Esempio  
- Nell'esempio che segue viene creato un oggetto <xref:System.Drawing.Graphics> basato su un oggetto <xref:System.Drawing.Bitmap>.  L'oggetto <xref:System.Drawing.Graphics> viene utilizzato insieme a due pennelli semitrasparenti, con alfa \= 160, per colorare l'immagine bitmap.  Utilizzando i pennelli semitrasparenti un ellisse viene riempito di colore rosso e uno di colore verde.  L'ellisse di colore verde risulta sovrapposta a quella di colore rosso, ma il verde non viene sfumato con il rosso perché la modalità di composizione dell'oggetto <xref:System.Drawing.Graphics> è impostata su <xref:System.Drawing.Drawing2D.CompositingMode>.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene creato un <xref:System.Drawing.Graphics> oggetto basato su un <xref:System.Drawing.Bitmap> oggetto. Il codice Usa il <xref:System.Drawing.Graphics> oggetto insieme a due pennelli semitrasparenti (alfa = 160) per colorare l'immagine bitmap. Il codice verrà inserito un'ellisse rossa e un'ellisse verde mediante i pennelli semitrasparenti. Ellisse di colore verde si sovrappone colore rosso, ma il verde non viene sfumato con il rosso perché la modalità di composizione del <xref:System.Drawing.Graphics> oggetto è impostato su <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>.  
   
- L'immagine bitmap viene disegnata due volte sullo schermo: una volta su sfondo bianco e una volta su sfondo multicolore.  I pixel dell'immagine bitmap che sono parte dei due ellissi hanno una componente alfa pari a 160, perciò gli ellissi risultano sfumati con i colori di sfondo dello schermo.  
+ Il codice la bitmap disegnata sullo schermo due volte: una volta su sfondo bianco e una volta su uno sfondo. Il pixel della bitmap che fanno parte di due ellissi presentano un componente alfa di 160, pertanto i puntini di sospensione sono combinati con i colori di sfondo sullo schermo.  
   
- Nell'illustrazione che segue si mostra l'output del codice.  Si noti che le ellissi sono sfumate rispetto allo sfondo, ma non l'una rispetto alle altre.  
+ Nella figura seguente mostra l'output dell'esempio di codice. Si noti che i puntini di sospensione sono combinati con lo sfondo, ma non sono combinati tra loro.  
   
- ![Copia origine](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
+ ![Copia di origine](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
   
- Il codice di esempio contiene l'istruzione seguente:  
+ L'esempio di codice contiene questa istruzione:  
   
  [!code-csharp[System.Drawing.AlphaBlending#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.AlphaBlending#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
- Per fare in modo che le ellissi siano sfumate l'una rispetto alle altre nonché rispetto allo sfondo modificare l'istruzione nel modo seguente:  
+ Se si desidera i puntini di sospensione per essere combinati tra loro e con lo sfondo, è possibile modificare l'istruzione per le operazioni seguenti:  
   
  [!code-csharp[System.Drawing.AlphaBlending#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.AlphaBlending#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
- Nell'illustrazione che segue si mostra l'output del codice modificato.  
+ Nella figura seguente mostra l'output del codice modificato.  
   
- ![Over origine](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
+ ![Origine su](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e` un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## Vedere anche  
- <xref:System.Drawing.Color.FromArgb%2A>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Color.FromArgb%2A>  
  [Linee e riempimenti con fusione alfa](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

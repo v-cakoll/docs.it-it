@@ -1,68 +1,65 @@
 ---
-title: "Is Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.is"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "comparison operators"
-  - "equivalent objects"
-  - "TypeOf...Is expression"
-  - "Is operator [Visual Basic]"
+title: Operatore Is (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.is
+helpviewer_keywords:
+- comparison operators [Visual Basic]
+- equivalent objects
+- TypeOf...Is expression
+- Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4b1f3f0fa1fd782550c08c816f47b7541399198e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Is Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Confronta due variabili di riferimento a un oggetto.  
+# <a name="is-operator-visual-basic"></a>Operatore Is (Visual Basic)
+Confronta due variabili di riferimento di oggetto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 result = object1 Is object2  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `result`  
- Obbligatorio.  Qualsiasi valore `Boolean`.  
+ Obbligatorio. Qualsiasi `Boolean` valore.  
   
  `object1`  
- Obbligatorio.  Qualsiasi nome `Object`.  
+ Obbligatorio. Qualsiasi `Object` nome.  
   
  `object2`  
- Obbligatorio.  Qualsiasi nome `Object`.  
+ Obbligatorio. Qualsiasi `Object` nome.  
   
-## Note  
- L'operatore `Is` determina se due riferimenti a oggetti si riferiscono allo stesso oggetto,  senza tuttavia eseguire alcun confronto di valori.  Se `object1` e `object2` fanno entrambi riferimento alla stessa istanza di oggetto, `result` sarà `True`. In caso contrario, `result` sarà `False`.  
+## <a name="remarks"></a>Note  
+ Il `Is` operatore determina se due riferimenti a oggetti si riferiscono allo stesso oggetto. Tuttavia, non esegue i confronti di valore. Se `object1` e `object2` si riferiscono entrambi alla stessa istanza di oggetto, `result` è `True`; in caso contrario, `result` è `False`.  
   
- `Is` può essere utilizzato anche con la parola chiave `TypeOf` per creare un'espressione `TypeOf`...`Is`, che consente di testare se una variabile oggetto è compatibile con un tipo di dati.  
+ `Is`può anche essere utilizzato con il `TypeOf` (parola chiave) per rendere un `TypeOf`... `Is` espressione, che verifica se una variabile oggetto è compatibile con un tipo di dati.  
   
 > [!NOTE]
->  La parola chiave `Is` viene anche utilizzata nell'[Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+>  Il `Is` (parola chiave) viene usato anche nel [Seleziona... Istruzione case](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito l'operatore `Is` viene utilizzato per confrontare coppie di riferimenti a oggetti.  I risultati vengono assegnati a un valore `Boolean` che indica se i due oggetti sono identici.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente usa il `Is` operatore per confrontare le coppie di riferimenti agli oggetti. I risultati vengono assegnati a un `Boolean` valore che indica se due oggetti sono identici.  
   
  [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
   
- Come illustrato nell'esempio precedente, è possibile utilizzare l'operatore `Is` per testare sia gli oggetti ad associazione anticipata che quelli ad associazione tardiva.  
+ Come illustrato nell'esempio precedente, è possibile utilizzare il `Is` operatore per testare sia con associazione anticipata e tardiva oggetti.  
   
-## Vedere anche  
- [TypeOf Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)   
- [IsNot Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatore TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [Operatore IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Operatori di confronto in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -1,31 +1,29 @@
 ---
-title: "Cannot convert anonymous type to expression tree because it contains a field that is used in the initialization of another field | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc36548"
-  - "vbc36548"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36548"
+title: Impossibile convertire il tipo anonimo in un albero delle espressioni. Il tipo anonimo contiene un campo usato nell'inizializzazione di un altro campo.
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc36548
+- vbc36548
+helpviewer_keywords: BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c2cf8a40060359393807cfb648c46fef9ed853af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cannot convert anonymous type to expression tree because it contains a field that is used in the initialization of another field
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Il compilatore non accetta la conversione di un tipo anonimo in una struttura ad albero dell'espressione quando una proprietà del tipo anonimo è utilizzata per inizializzare un'altra proprietà del tipo anonimo.  Nel codice riportato di seguito, ad esempio, `Prop1` viene dichiarato nell'elenco di inizializzazione e quindi utilizzato come valore iniziale per `Prop2`.  
+# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Impossibile convertire il tipo anonimo in un albero delle espressioni. Il tipo anonimo contiene un campo usato nell'inizializzazione di un altro campo.
+Il compilatore non accetta la conversione di un tipo anonimo in un albero delle espressioni quando una proprietà di tipo anonimo viene utilizzata per inizializzare un'altra proprietà di tipo anonimo. Ad esempio, nel codice seguente, `Prop1` viene dichiarato nell'elenco di inizializzazione e quindi utilizzato come valore iniziale per `Prop2`.  
   
-```vb#  
+```vb  
 Module M2  
   
     Sub ExpressionExample(Of T)(ByVal x As Expressions.Expression(Of Func(Of T)))  
@@ -41,9 +39,9 @@ End Module
   
  **ID errore:** BC36548  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Assegnare il valore iniziale per `Prop1` a una variabile locale.  Assegnare la variabile a `Prop1` e `Prop2`, come mostrato nel codice seguente.  
+-   Assegnare il valore iniziale per `Prop1` a una variabile locale. Assegnare la variabile sia `Prop1` e `Prop2`, come illustrato nel codice seguente.  
   
     ```  
     Sub Main()  
@@ -54,7 +52,7 @@ End Module
     End Sub  
     ```  
   
-## Vedere anche  
- [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Strutture ad albero dell'espressione](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md)   
- [Procedura: Usare strutture ad albero dell'espressione per la compilazione di query dinamiche](../Topic/How%20to:%20Use%20Expression%20Trees%20to%20Build%20Dynamic%20Queries%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Alberi delle espressioni](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche](http://msdn.microsoft.com/library/1e37e0cc-eef3-48bb-8b69-3adabf322735)

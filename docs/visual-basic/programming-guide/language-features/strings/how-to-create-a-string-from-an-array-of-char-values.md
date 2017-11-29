@@ -1,41 +1,40 @@
 ---
-title: "How to: Create a String from An Array of Char Values (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "examples [Visual Basic], arrays"
-  - "examples [Visual Basic], Char data type"
+title: 'Procedura: creare una stringa da una matrice di valori Char (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- examples [Visual Basic], arrays
+- examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 06e5c6923c26f3cb84b38475d6680523853d727d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a String from An Array of Char Values (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Nell'esempio riportato di seguito viene creata la stringa "abcd" da singoli caratteri.  
+# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Procedura: creare una stringa da una matrice di valori Char (Visual Basic)
+Questo esempio crea la stringa "abcd" da singoli caratteri.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
   
-## Compilazione del codice  
- Per questo metodo non vi sono requisiti particolari.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Questo metodo non ha presenta requisiti speciali.  
   
- La sintassi `"a"c`, in cui un singolo carattere `c` segue un singolo carattere tra virgolette, viene utilizzata per creare un carattere letterale.  
+ La sintassi `"a"c`, in cui un singolo `c` segue un singolo carattere tra virgolette, viene utilizzato per creare un carattere letterale.  
   
-## Programmazione efficiente  
- I caratteri null, ovvero equivalenti a `Chr(0)`, nella stringa generano risultati imprevisti quando si utilizza la stringa.  Il carattere null viene incluso nella stringa, ma i caratteri seguenti non vengono visualizzati in alcune situazioni.  
+## <a name="robust-programming"></a>Programmazione efficiente  
+ Caratteri null (equivalente a `Chr(0)`) nella stringa di produrre risultati imprevisti quando si utilizza la stringa. Il carattere null sarà incluso nella stringa, ma non caratteri che seguono il carattere null verranno visualizzati in alcune situazioni.  
   
-## Vedere anche  
- <xref:System.String>   
- [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md)   
- [Riepilogo dei tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.String>  
+ [Tipo di dati Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
+ [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

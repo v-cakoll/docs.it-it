@@ -1,66 +1,64 @@
 ---
-title: "Throw Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Throw"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "structured exception handling, throw statements"
-  - "try-catch exception handling, throw statements"
-  - "throw statement, about throw statements"
-  - "throwing exceptions, throw statement"
-  - "exception handling, throw statement"
-  - "On Error statement, throwing exceptions"
-  - "throwing exceptions"
-  - "exception handling, unstructured"
-  - "throw statement"
+title: Istruzione Throw (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Throw
+helpviewer_keywords:
+- structured exception handling, throw statements
+- try-catch exception handling, throw statements
+- throw statement [Visual Basic], about throw statements
+- throwing exceptions, throw statement
+- exception handling, throw statement
+- On Error statement [Visual Basic], throwing exceptions
+- throwing exceptions
+- exception handling, unstructured
+- throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 50ada551c32b8296f0dad2ae929ca9c81a14a711
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Throw Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Viene generata un'eccezione in una routine.  
+# <a name="throw-statement-visual-basic"></a>Istruzione Throw (Visual Basic)
+Genera un'eccezione all'interno di una stored procedure.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Throw [ expression ]  
 ```  
   
-## Parte  
+## <a name="part"></a>Parte  
  `expression`  
- Consente di fornire informazioni relative all'eccezione da generare.  Facoltativo quando risiede in un'istruzione `Catch`, in caso contrario è necessario.  
+ Vengono fornite informazioni sull'eccezione generata. Facoltativo quando risiede in un `Catch` istruzione, è necessario in caso contrario.  
   
-## Note  
- Tramite l'istruzione `Throw` viene generata un'eccezione che può essere gestita con un codice di gestione delle eccezioni strutturato \(`Try`...`Catch`...`Finally`\) oppure un codice di gestione delle eccezioni non strutturato \(`On Error GoTo`\).  L'istruzione `Throw` consente di intercettare gli errori presenti nel codice, poiché Visual Basic scorre lo stack di chiamate fino a trovare il codice di gestione delle eccezioni appropriato.  
+## <a name="remarks"></a>Note  
+ Il `Throw` istruzione genera un'eccezione che è possibile gestire con un codice di gestione delle eccezioni strutturata (`Try`... `Catch`... `Finally`) o il codice di gestione delle eccezioni non strutturato (`On Error GoTo`). È possibile utilizzare il `Throw` istruzione per intercettare gli errori all'interno del codice perché Visual Basic sposta verso l'alto lo stack di chiamate fino a individuare il codice di gestione delle eccezioni appropriato.  
   
- È possibile utilizzare un'istruzione `Throw` priva di espressioni soltanto in un'istruzione `Catch`, nel qual caso verrà nuovamente generata l'eccezione attualmente gestita dall'istruzione `Catch` stessa.  
+ Oggetto `Throw` istruzione senza un'espressione può essere utilizzata solo un `Catch` istruzione, in cui l'istruzione case, viene rigenerata l'eccezione attualmente gestita dal `Catch` istruzione.  
   
- L'istruzione `Throw` reimposta lo stack di chiamate per l'eccezione `expression`.  Se `expression` non viene fornito, lo stack di chiamate resta invariato.  È possibile accedere allo stack di chiamate per l'eccezione mediante la proprietà <xref:System.Exception.StackTrace%2A>.  
+ Il `Throw` istruzione Reimposta lo stack di chiamate per il `expression` eccezione. Se `expression` non viene specificato, lo stack di chiamate resta invariato. È possibile accedere lo stack di chiamate dell'eccezione tramite la <xref:System.Exception.StackTrace%2A> proprietà.  
   
-## Esempio  
- Nel codice seguente l'istruzione `Throw` viene utilizzata per generare un'eccezione:  
+## <a name="example"></a>Esempio  
+ Il codice seguente usa il `Throw` istruzione per generare un'eccezione:  
   
  [!code-vb[VbVbalrStatements#84](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/throw-statement_1.vb)]  
   
-## Requisiti  
- **Spazio dei nomi:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>Requisiti  
+ **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Modulo:** `Interaction`  
+ **Modulo:**`Interaction`  
   
- **Assembly:** Visual Basic Runtime Library \(in Microsoft.VisualBasic.dll\)  
+ **Assembly:** libreria di Runtime di Visual Basic (in Microsoft.VisualBasic.dll)  
   
-## Vedere anche  
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [On Error Statement](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Istruzione On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)
