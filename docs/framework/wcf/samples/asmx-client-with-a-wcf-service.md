@@ -1,30 +1,33 @@
 ---
-title: "Client ASMX con un servizio WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Client ASMX con un servizio WCF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 11ccb40fb4c29678ce0552da2dd8eb29c1ae561e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Client ASMX con un servizio WCF
-In questo esempio viene illustrato come creare un servizio utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e quindi accedere al servizio da un client non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio un client ASMX.  
+# <a name="asmx-client-with-a-wcf-service"></a><span data-ttu-id="45487-102">Client ASMX con un servizio WCF</span><span class="sxs-lookup"><span data-stu-id="45487-102">ASMX Client with a WCF Service</span></span>
+<span data-ttu-id="45487-103">In questo esempio viene illustrato come creare un servizio utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e quindi accedere al servizio da un client non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio un client ASMX.</span><span class="sxs-lookup"><span data-stu-id="45487-103">This sample demonstrates how to create a service using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and then access the service from a non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, such as an ASMX client.</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  <span data-ttu-id="45487-104">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="45487-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Questo esempio è costituito da un programma di console client \(.exe\) e da una libreria di servizi \(.dll\) ospitati da Internet Information Services \(IIS\).Il servizio implementa un contratto che definisce un modello di comunicazione request\/reply.Il contratto viene definito dall'interfaccia `ICalculator` che espone operazioni matematiche \(`Add`, `Subtract`, `Multiply` e `Divide`\).Il client ASMX esegue richieste sincrone a un'operazione matematica e il servizio risponde fornendo il risultato.  
+ <span data-ttu-id="45487-105">Questo esempio è costituito da un programma di console client (.exe) e da una libreria di servizi (.dll) ospitati da Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="45487-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="45487-106">Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.</span><span class="sxs-lookup"><span data-stu-id="45487-106">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="45487-107">Il contratto viene definito dall'interfaccia `ICalculator` che espone operazioni matematiche (`Add`, `Subtract`, `Multiply` e `Divide`).</span><span class="sxs-lookup"><span data-stu-id="45487-107">The contract is defined by the `ICalculator` interface, which exposes math operations (`Add`, `Subtract`, `Multiply`, and `Divide`).</span></span> <span data-ttu-id="45487-108">Il client ASMX esegue richieste sincrone a un'operazione matematica e il servizio risponde fornendo il risultato.</span><span class="sxs-lookup"><span data-stu-id="45487-108">The ASMX client makes synchronous requests to a math operation and the service replies with the result.</span></span>  
   
- Il servizio implementa un contratto `ICalculator`, come definito nel codice seguente.  
+ <span data-ttu-id="45487-109">Il servizio implementa un contratto `ICalculator`, come definito nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="45487-109">The service implements an `ICalculator` contract as defined in the following code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
@@ -39,30 +42,27 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);  
 }  
-  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> eseguono il mapping dei tipi CLR a una rappresentazione XML.<xref:System.Runtime.Serialization.DataContractSerializer> interpreta alcune rappresentazioni XML in modo diverso da XmlSerializer.I generatori proxy non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio Wsdl.exe, generano un'interfaccia più efficace quando si utilizza XmlSerializer.<xref:System.ServiceModel.XmlSerializerFormatAttribute> viene applicato all'interfaccia `ICalculator` per assicurare che venga utilizzato XmlSerializer per l'esecuzione di mapping dei tipi CLR a XML.L'implementazione del servizio calcola e restituisce il risultato appropriato.  
+ <span data-ttu-id="45487-110"><xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> eseguono il mapping dei tipi CLR a una rappresentazione XML.</span><span class="sxs-lookup"><span data-stu-id="45487-110">The <xref:System.Runtime.Serialization.DataContractSerializer> and <xref:System.Xml.Serialization.XmlSerializer> map CLR types to an XML representation.</span></span> <span data-ttu-id="45487-111"><xref:System.Runtime.Serialization.DataContractSerializer> interpreta alcune rappresentazioni XML in modo diverso da XmlSerializer.</span><span class="sxs-lookup"><span data-stu-id="45487-111">The <xref:System.Runtime.Serialization.DataContractSerializer> interprets some XML representations differently than XmlSerializer.</span></span> <span data-ttu-id="45487-112">I generatori proxy non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio Wsdl.exe, generano un'interfaccia più efficace quando si utilizza XmlSerializer.</span><span class="sxs-lookup"><span data-stu-id="45487-112">Non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proxy generators, such as Wsdl.exe, generate a more usable interface when the XmlSerializer is being used.</span></span> <span data-ttu-id="45487-113">Il <xref:System.ServiceModel.XmlSerializerFormatAttribute> è collegato il `ICalculator` interfaccia, per garantire che venga utilizzato XmlSerializer per il mapping dei tipi CLR in XML.</span><span class="sxs-lookup"><span data-stu-id="45487-113">The <xref:System.ServiceModel.XmlSerializerFormatAttribute> is applied to the `ICalculator` interface, to ensure that the XmlSerializer is used for mapping CLR types to XML.</span></span> <span data-ttu-id="45487-114">L'implementazione del servizio calcola e restituisce il risultato appropriato.</span><span class="sxs-lookup"><span data-stu-id="45487-114">The service implementation calculates and returns the appropriate result.</span></span>  
   
- Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante un file di configurazione \(Web.config\).L'endpoint è costituito da un indirizzo, un'associazione e un contratto.Il servizio espone l'endpoint dell'indirizzo di base fornito dall'host IIS.L'attributo `binding` è impostato su basicHttpBinding  per fornire la comunicazione HTTP mediante SOAP 1.1, che è conforme a WS\-BasicProfile 1.1, come illustrato nella configurazione di esempio seguente.  
+ <span data-ttu-id="45487-115">Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante un file di configurazione (Web.config).</span><span class="sxs-lookup"><span data-stu-id="45487-115">The service exposes a single endpoint for communicating with the service, defined using a configuration file (Web.config).</span></span> <span data-ttu-id="45487-116">L'endpoint è costituito da un indirizzo, un'associazione e un contratto.</span><span class="sxs-lookup"><span data-stu-id="45487-116">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="45487-117">Il servizio espone l'endpoint dell'indirizzo di base fornito dall'host IIS.</span><span class="sxs-lookup"><span data-stu-id="45487-117">The service exposes the endpoint at the base address provided by the Internet Information Services (IIS) host.</span></span> <span data-ttu-id="45487-118">L'attributo `binding` è impostato su basicHttpBinding  per fornire la comunicazione HTTP mediante SOAP 1.1, che è conforme a WS-BasicProfile 1.1, come illustrato nella configurazione di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="45487-118">The `binding` attribute is set to basicHttpBinding that provides HTTP communications using SOAP 1.1, which is compliant with WS-I BasicProfile 1.1 as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <services>  
-   <service   
-       name="Microsoft.ServiceModel.Samples.CalculatorService"  
-       behaviorConfiguration="CalculatorServiceBehavior">  
-       <!-- This endpoint is exposed at the base address provided by the host: http://localhost/servicemodelsamples/service.svc.  -->  
-      <endpoint address=""  
-               binding="basicHttpBinding"   
-               contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-   </service>  
+  <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+           behaviorConfiguration="CalculatorServiceBehavior">  
+    <!-- This endpoint is exposed at the base address provided by the host: http://localhost/servicemodelsamples/service.svc.  -->  
+    <endpoint address=""  
+              binding="basicHttpBinding"   
+              contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+  </service>  
 </services>  
-  
 ```  
   
- Il client ASMX comunica con il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzando un proxy tipizzato generato dall'utilità del linguaggio di descrizione dei servizi Web Microsoft \(WSDL\) \(Wsdl.exe\).Il proxy tipizzato è contenuto nel file generatedClient.cs.L'utilità WSDL recupera i metadati per il servizio specificato e genera un proxy tipizzato che può essere utilizzato da un client per comunicare.Per impostazione predefinita, il framework non espone metadati.Per esporre i metadati necessari per generare il proxy, è necessario aggiungere un [\<serviceMetadata\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) e impostare il relativo attributo `httpGetEnabled` su `True`, come illustrato nella configurazione seguente.  
+ <span data-ttu-id="45487-119">Il client ASMX comunica con il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzando un proxy tipizzato generato dall'utilità del linguaggio di descrizione dei servizi Web Microsoft (WSDL) (Wsdl.exe).</span><span class="sxs-lookup"><span data-stu-id="45487-119">The ASMX client communicates with the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service using a typed proxy that is generated by the Web Services Description Language (WSDL) utility (Wsdl.exe).</span></span> <span data-ttu-id="45487-120">Il proxy tipizzato è contenuto nel file generatedClient.cs.</span><span class="sxs-lookup"><span data-stu-id="45487-120">The typed proxy is contained in the file generatedClient.cs.</span></span> <span data-ttu-id="45487-121">L'utilità WSDL recupera i metadati per il servizio specificato e genera un proxy tipizzato che può essere utilizzato da un client per comunicare.</span><span class="sxs-lookup"><span data-stu-id="45487-121">The WSDL utility retrieves metadata for the specified service and generates a typed proxy for use by a client to communicate.</span></span> <span data-ttu-id="45487-122">Per impostazione predefinita, il framework non espone metadati.</span><span class="sxs-lookup"><span data-stu-id="45487-122">By default, the framework does not expose any metadata.</span></span> <span data-ttu-id="45487-123">Per esporre i metadati necessari per generare il proxy, è necessario aggiungere un [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) e impostare il relativo `httpGetEnabled` attributo `True` come illustrato nella configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="45487-123">To expose the metadata required to generate the proxy, you must add a [\<serviceMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) and set its `httpGetEnabled` attribute to `True` as shown in the following configuration.</span></span>  
   
-```  
+```xml  
 <behaviors>  
   <serviceBehaviors>  
     <behavior name="CalculatorServiceBehavior">  
@@ -76,24 +76,22 @@ public interface ICalculator
 </behaviors>  
 ```  
   
- Eseguire il comando seguente da un prompt dei comandi nella directory del client per generare il proxy tipizzato.  
+ <span data-ttu-id="45487-124">Eseguire il comando seguente da un prompt dei comandi nella directory del client per generare il proxy tipizzato.</span><span class="sxs-lookup"><span data-stu-id="45487-124">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
   
-```  
+```console  
 wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorServiceAddress http://localhost/servicemodelsamples/service.svc?wsdl  
-  
 ```  
   
- Utilizzando il proxy tipizzato generato, il client può accedere a uno specifico endpoint del servizio configurando l'indirizzo appropriato.Il client utilizza un file di configurazione \(App.config\) per specificare l'endpoint con il quale comunicare.  
+ <span data-ttu-id="45487-125">Utilizzando il proxy tipizzato generato, il client può accedere a uno specifico endpoint del servizio configurando l'indirizzo appropriato.</span><span class="sxs-lookup"><span data-stu-id="45487-125">By using the generated typed proxy, the client can access a given service endpoint by configuring the appropriate address.</span></span> <span data-ttu-id="45487-126">Il client utilizza un file di configurazione (App.config) per specificare l'endpoint con il quale comunicare.</span><span class="sxs-lookup"><span data-stu-id="45487-126">The client uses a configuration file (App.config) to specify the endpoint to communicate with.</span></span>  
   
-```  
+```xml  
 <appSettings>  
-      <add key="CalculatorServiceAddress"   
-      value="http://localhost/ServiceModelSamples/service.svc"/>  
+  <add key="CalculatorServiceAddress"   
+       value="http://localhost/ServiceModelSamples/service.svc"/>  
 </appSettings>  
-  
 ```  
   
- L'implementazione client costruisce un'istanza del proxy tipizzato per iniziare a comunicare con il servizio.  
+ <span data-ttu-id="45487-127">L'implementazione client costruisce un'istanza del proxy tipizzato per iniziare a comunicare con il servizio.</span><span class="sxs-lookup"><span data-stu-id="45487-127">The client implementation constructs an instance of the typed proxy to begin communicating with the service.</span></span>  
   
 ```  
 // Create a client to the CalculatorService.  
@@ -128,10 +126,9 @@ using (CalculatorService client = new CalculatorService())
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-  
 ```  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.Premere INVIO nella finestra del client per arrestare il client.  
+ <span data-ttu-id="45487-128">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="45487-128">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="45487-129">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="45487-129">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -140,27 +137,26 @@ Multiply(9,81.25) = 731.25
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="45487-130">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="45487-130">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="45487-131">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="45487-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="45487-132">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="45487-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="45487-133">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="45487-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] passaggio e restituzione di tipi di dati complessi, vedere: [Associazione dati in un client Windows Form](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [Associazione dati in un client Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md) e [Associazione dei dati in un client ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="45487-134">passaggio e restituzione di dati complessi tipi, vedere: [Data Binding in un Client di Windows Form](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [Data Binding in un Client Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), e [Data Binding in ASP.NET Client](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)</span><span class="sxs-lookup"><span data-stu-id="45487-134"> passing and returning complex data types see: [Data Binding in a Windows Forms Client](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [Data Binding in a Windows Presentation Foundation Client](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), and [Data Binding in an ASP.NET Client](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="45487-135">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="45487-135">The samples may already be installed on your machine.</span></span> <span data-ttu-id="45487-136">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="45487-136">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="45487-137">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="45487-137">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="45487-138">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="45487-138">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="45487-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="45487-139">See Also</span></span>

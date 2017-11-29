@@ -1,34 +1,37 @@
 ---
-title: "Associazioni MSMQ transazionali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Associazioni MSMQ transazionali
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: 50
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 50
+caps.latest.revision: "50"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 247627cdf52f7e08490cc95d88b4dd4ab539d97e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Associazioni MSMQ transazionali
-Questo esempio illustra come eseguire comunicazioni in coda transazionali utilizzando Accodamento messaggi \(MSMQ\).  
+# <a name="transacted-msmq-binding"></a><span data-ttu-id="e076f-102">Associazioni MSMQ transazionali</span><span class="sxs-lookup"><span data-stu-id="e076f-102">Transacted MSMQ Binding</span></span>
+<span data-ttu-id="e076f-103">Questo esempio illustra come eseguire comunicazioni in coda transazionali utilizzando Accodamento messaggi (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="e076f-103">This sample demonstrates how to perform transacted queued communication by using Message Queuing (MSMQ).</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  <span data-ttu-id="e076f-104">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="e076f-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Nella comunicazione in coda, il client comunica al servizio utilizzando una coda.Più precisamente, il client invia messaggi a una coda.Il servizio riceve messaggi dalla coda.Di conseguenza, per comunicare mediante una coda, il servizio e il client non devono essere in esecuzione contemporaneamente.  
+ <span data-ttu-id="e076f-105">Nella comunicazione in coda, il client comunica al servizio usando una coda.</span><span class="sxs-lookup"><span data-stu-id="e076f-105">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="e076f-106">Più precisamente, il client invia messaggi a una coda.</span><span class="sxs-lookup"><span data-stu-id="e076f-106">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="e076f-107">Il servizio riceve messaggi dalla coda.</span><span class="sxs-lookup"><span data-stu-id="e076f-107">The service receives messages from the queue.</span></span> <span data-ttu-id="e076f-108">Di conseguenza, per comunicare mediante una coda, il servizio e il client non devono essere in esecuzione contemporaneamente.</span><span class="sxs-lookup"><span data-stu-id="e076f-108">The service and client, therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- Quando vengono utilizzate transazioni per inviare e ricevere messaggi, di fatto vi sono due transazioni distinte.Quando il client invia messaggi all'interno dell'ambito di una transazione, questa è locale per il client e il gestore delle code client.Quando il servizio riceve messaggi all'interno dell'ambito di una transazione, questa è locale per il servizio e il gestore delle code di destinazione.È molto importante ricordare che il client e il servizio non partecipano alla stessa transazione; essi utilizzano invece transazioni diverse per le operazioni con la coda, quali l'invio e la ricezione.  
+ <span data-ttu-id="e076f-109">Quando vengono utilizzate transazioni per inviare e ricevere messaggi, di fatto vi sono due transazioni distinte.</span><span class="sxs-lookup"><span data-stu-id="e076f-109">When transactions are used to send and receive messages, there are actually two separate transactions.</span></span> <span data-ttu-id="e076f-110">Quando il client invia messaggi all'interno dell'ambito di una transazione, questa è locale per il client e il gestore delle code client.</span><span class="sxs-lookup"><span data-stu-id="e076f-110">When the client sends messages within the scope of a transaction, the transaction is local to the client and the client queue manager.</span></span> <span data-ttu-id="e076f-111">Quando il servizio riceve messaggi all'interno dell'ambito di una transazione, questa è locale per il servizio e il gestore delle code di destinazione.</span><span class="sxs-lookup"><span data-stu-id="e076f-111">When the service receives messages within the scope of the transaction, the transaction is local to the service and the receiving queue manager.</span></span> <span data-ttu-id="e076f-112">È molto importante ricordare che il client e il servizio non partecipano alla stessa transazione; essi utilizzano invece transazioni diverse per le operazioni con la coda, quali l'invio e la ricezione.</span><span class="sxs-lookup"><span data-stu-id="e076f-112">It is very important to remember that the client and the service are not participating in the same transaction; rather, they are using different transactions when performing their operations (such as send and receive) with the queue.</span></span>  
   
- In questo esempio, il client invia un batch di messaggi al servizio dall'interno dell'ambito di una transazione.I messaggi inviati alla coda vengono quindi ricevuti dal servizio fra l'ambito della transazione definito dal servizio.  
+ <span data-ttu-id="e076f-113">In questo esempio, il client invia un batch di messaggi al servizio dall'interno dell'ambito di una transazione.</span><span class="sxs-lookup"><span data-stu-id="e076f-113">In this sample, the client sends a batch of messages to the service from within the scope of a transaction.</span></span> <span data-ttu-id="e076f-114">I messaggi inviati alla coda vengono quindi ricevuti dal servizio fra l'ambito della transazione definito dal servizio.</span><span class="sxs-lookup"><span data-stu-id="e076f-114">The messages sent to the queue are then received by the service within the transaction scope defined by the service.</span></span>  
   
- Il contratto del servizio è `IOrderProcessor`, come mostrato nel codice di esempio seguente.L'interfaccia definisce un servizio unidirezionale adatto per l'utilizzo con le code.  
+ <span data-ttu-id="e076f-115">Il contratto del servizio è `IOrderProcessor`, come mostrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="e076f-115">The service contract is `IOrderProcessor`, as shown in the following sample code.</span></span> <span data-ttu-id="e076f-116">L'interfaccia definisce un servizio unidirezionale adatto per l'utilizzo con le code.</span><span class="sxs-lookup"><span data-stu-id="e076f-116">The interface defines a one-way service that is suitable for use with queues.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -39,10 +42,9 @@ public interface IOrderProcessor
 }  
 ```  
   
- Il comportamento del servizio definisce un comportamento dell'operazione con `TransactionScopeRequired` impostato su `true`.Questo assicura che lo stesso ambito della transazione che viene utilizzato per recuperare il messaggio dalla coda sia utilizzato da tutti i gestori di risorse ai quali accede il metodo.Garantisce anche che se il metodo genera un'eccezione, il messaggio viene restituito alla coda.Senza impostare questo comportamento dell'operazione, un canale in coda crea una transazione per leggere il messaggio dalla coda e ne esegue automaticamente il commit prima dell'invio in modo che se l'operazione non riesce, il messaggio va perduto.Lo scenario più comune per le operazioni del servizio è di inserirsi nella transazione che viene utilizzata per leggere il messaggio dalla coda, come dimostrato nel codice seguente.  
+ <span data-ttu-id="e076f-117">Il comportamento del servizio definisce un comportamento dell'operazione con `TransactionScopeRequired` impostato su `true`.</span><span class="sxs-lookup"><span data-stu-id="e076f-117">The service behavior defines an operation behavior with `TransactionScopeRequired` set to `true`.</span></span> <span data-ttu-id="e076f-118">Questo assicura che lo stesso ambito della transazione che viene usato per recuperare il messaggio dalla coda sia usato da tutti i gestori di risorse ai quali accede il metodo.</span><span class="sxs-lookup"><span data-stu-id="e076f-118">This ensures that the same transaction scope that is used to retrieve the message from the queue is used by any resource managers accessed by the method.</span></span> <span data-ttu-id="e076f-119">Garantisce anche che se il metodo genera un'eccezione, il messaggio viene restituito alla coda.</span><span class="sxs-lookup"><span data-stu-id="e076f-119">It also guarantees that if the method throws an exception, the message is returned to the queue.</span></span> <span data-ttu-id="e076f-120">Senza impostare questo comportamento dell'operazione, un canale in coda crea una transazione per leggere il messaggio dalla coda e ne esegue automaticamente il commit prima dell'invio in modo che se l'operazione non riesce, il messaggio va perduto.</span><span class="sxs-lookup"><span data-stu-id="e076f-120">Without setting this operation behavior, a queued channel creates a transaction to read the message from the queue and commits it automatically before dispatch such that if the operation fails, the message is lost.</span></span> <span data-ttu-id="e076f-121">Lo scenario più comune per le operazioni del servizio è di inserirsi nella transazione che viene utilizzata per leggere il messaggio dalla coda, come dimostrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="e076f-121">The most common scenario is for service operations to enlist in the transaction that is used to read the message from the queue, as demonstrated in the following code.</span></span>  
   
 ```  
-  
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -55,10 +57,9 @@ public interface IOrderProcessor
      }  
   …  
 }  
-  
 ```  
   
- Il servizio è indipendente.Quando si utilizza il trasporto MSMQ, la coda utilizzata deve essere creata in anticipo.Questa operazione può essere eseguita manualmente o mediante il codice.In questo esempio, il servizio contiene il codice necessario per verificare l'esistenza della coda e crearla se necessario.Il nome della coda viene letto dal file di configurazione.L'indirizzo di base viene utilizzato da [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy per il servizio.  
+ <span data-ttu-id="e076f-122">Il servizio è indipendente.</span><span class="sxs-lookup"><span data-stu-id="e076f-122">The service is self hosted.</span></span> <span data-ttu-id="e076f-123">Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo.</span><span class="sxs-lookup"><span data-stu-id="e076f-123">When using the MSMQ transport, the queue used must be created in advance.</span></span> <span data-ttu-id="e076f-124">Questa operazione può essere eseguita manualmente o mediante il codice.</span><span class="sxs-lookup"><span data-stu-id="e076f-124">This can be done manually or through code.</span></span> <span data-ttu-id="e076f-125">In questo esempio, il servizio contiene il codice necessario per verificare l'esistenza della coda e crearla se necessario.</span><span class="sxs-lookup"><span data-stu-id="e076f-125">In this sample, the service contains code to check for the existence of the queue and create the queue if it does not exist.</span></span> <span data-ttu-id="e076f-126">Il nome della coda viene letto dal file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="e076f-126">The queue name is read from the configuration file.</span></span> <span data-ttu-id="e076f-127">L'indirizzo di base viene utilizzato il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy al servizio.</span><span class="sxs-lookup"><span data-stu-id="e076f-127">The base address is used by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the proxy to the service.</span></span>  
   
 ```  
 // Host the service within this EXE console application.  
@@ -87,21 +88,20 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-  
 ```  
   
- Il nome della coda MSMQ viene specificato in una sezione appSettings del file di configurazione, come mostra la configurazione di esempio seguente.  
+ <span data-ttu-id="e076f-128">Il nome della coda MSMQ viene specificato in una sezione appSettings del file di configurazione, come mostra la configurazione di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="e076f-128">The MSMQ queue name is specified in an appSettings section of the configuration file, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <appSettings>  
     <add key="queueName" value=".\private$\ServiceModelSamplesTransacted" />  
 </appSettings>  
 ```  
   
 > [!NOTE]
->  Il nome della coda utilizza un punto \(.\) per il computer locale e barre rovesciate come separatori all'interno del percorso quando la coda viene creata utilizzando <xref:System.Messaging>.L'endpoint [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizza l'indirizzo della coda con uno schema net.msmq, utilizza "localhost" per indicare il computer locale e barre nel percorso.  
+>  <span data-ttu-id="e076f-129">Il nome della coda utilizza un punto (.) per il computer locale e barre rovesciate come separatori all'interno del percorso quando la coda viene creata utilizzando <xref:System.Messaging>.</span><span class="sxs-lookup"><span data-stu-id="e076f-129">The queue name uses a dot (.) for the local computer and backslash separators in its path when creating the queue using <xref:System.Messaging>.</span></span> <span data-ttu-id="e076f-130">L'endpoint [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizza l'indirizzo della coda con uno schema net.msmq, utilizza "localhost" per indicare il computer locale e barre nel percorso.</span><span class="sxs-lookup"><span data-stu-id="e076f-130">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoint uses the queue address with net.msmq scheme, uses "localhost" to denote the local computer, and uses forward slashes in its path.</span></span>  
   
- Il client crea un ambito di transazione.La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale alla coda vengono inviati tutti i messaggi o nessuno.Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A> nell'ambito della transazione.  
+ <span data-ttu-id="e076f-131">Il client crea un ambito di transazione.</span><span class="sxs-lookup"><span data-stu-id="e076f-131">The client creates a transaction scope.</span></span> <span data-ttu-id="e076f-132">La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale alla coda vengono inviati tutti i messaggi o nessuno.</span><span class="sxs-lookup"><span data-stu-id="e076f-132">Communication with the queue takes place within the scope of the transaction, causing it to be treated as an atomic unit where all messages are sent to the queue or none of the messages are sent to the queue.</span></span> <span data-ttu-id="e076f-133">Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A> nell'ambito della transazione.</span><span class="sxs-lookup"><span data-stu-id="e076f-133">The transaction is committed by calling <xref:System.Transactions.TransactionScope.Complete%2A> on the transaction scope.</span></span>  
   
 ```  
 // Create a client.  
@@ -143,15 +143,15 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();  
 ```  
   
- Per verificare che le transazioni stiano funzionando, modificare il client impostando l'ambito della transazione come commento, come mostra il codice di esempio seguente, ricompilare la soluzione ed eseguire il client.  
+ <span data-ttu-id="e076f-134">Per verificare che le transazioni stiano funzionando, modificare il client impostando l'ambito della transazione come commento, come mostra il codice di esempio seguente, ricompilare la soluzione ed eseguire il client.</span><span class="sxs-lookup"><span data-stu-id="e076f-134">To verify that transactions are working, modify the client by commenting the transaction scope as shown in the following sample code, rebuild the solution, and run the client.</span></span>  
   
 ```  
 //scope.Complete();  
 ```  
   
- Poiché la transazione non è stata completata, i messaggi non vengono inviati alla coda.  
+ <span data-ttu-id="e076f-135">Poiché la transazione non è stata completata, i messaggi non vengono inviati alla coda.</span><span class="sxs-lookup"><span data-stu-id="e076f-135">Because the transaction is not completed, the messages are not sent to the queue.</span></span>  
   
- Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client.È possibile osservare il servizio che riceve i messaggi dal client.Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.Notare che essendo utilizzato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente.È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.  
+ <span data-ttu-id="e076f-136">Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client.</span><span class="sxs-lookup"><span data-stu-id="e076f-136">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="e076f-137">È possibile osservare il servizio che riceve i messaggi dal client.</span><span class="sxs-lookup"><span data-stu-id="e076f-137">You can see the service receive messages from the client.</span></span> <span data-ttu-id="e076f-138">Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.</span><span class="sxs-lookup"><span data-stu-id="e076f-138">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="e076f-139">Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente.</span><span class="sxs-lookup"><span data-stu-id="e076f-139">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="e076f-140">È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.</span><span class="sxs-lookup"><span data-stu-id="e076f-140">You can run the client, shut it down, and then start up the service and it still receives the messages.</span></span>  
   
 ```  
 The service is ready.  
@@ -164,36 +164,35 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
                 Order LineItem: 890 of Red Widget @unit price: $45.89  
         Total cost of this order: $42461.56  
         Order status: Pending  
-  
 ```  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e076f-141">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="e076f-141">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="e076f-142">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e076f-142">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Se il servizio viene eseguito prima, verificherà la presenza della coda.Se la coda non è presente, il servizio ne creerà una.È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ.Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.  
+2.  <span data-ttu-id="e076f-143">Se il servizio viene eseguito prima, verificherà la presenza della coda.</span><span class="sxs-lookup"><span data-stu-id="e076f-143">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="e076f-144">Se la coda non è presente, il servizio ne creerà una.</span><span class="sxs-lookup"><span data-stu-id="e076f-144">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="e076f-145">È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ.</span><span class="sxs-lookup"><span data-stu-id="e076f-145">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="e076f-146">Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.</span><span class="sxs-lookup"><span data-stu-id="e076f-146">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  Aprire Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  <span data-ttu-id="e076f-147">Aprire Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e076f-147">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  Espandere la scheda **Funzionalità**.  
+    2.  <span data-ttu-id="e076f-148">Espandere il **funzionalità** scheda.</span><span class="sxs-lookup"><span data-stu-id="e076f-148">Expand the **Features** tab.</span></span>  
   
-    3.  Fare clic con il pulsante destro del mouse su **Code private**, quindi scegliere **Nuova** **coda privata**.  
+    3.  <span data-ttu-id="e076f-149">Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.</span><span class="sxs-lookup"><span data-stu-id="e076f-149">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  Selezionare la casella **Di transazione**.  
+    4.  <span data-ttu-id="e076f-150">Controllare il **transazionale** casella.</span><span class="sxs-lookup"><span data-stu-id="e076f-150">Check the **Transactional** box.</span></span>  
   
-    5.  Immettere `ServiceModelSamplesTransacted` come nome della nuova coda.  
+    5.  <span data-ttu-id="e076f-151">Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.</span><span class="sxs-lookup"><span data-stu-id="e076f-151">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  Per compilare l'edizione C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="e076f-152">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e076f-152">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Per eseguire l'esempio in un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="e076f-153">Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e076f-153">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
- Per impostazione predefinita, con l'associazione <xref:System.ServiceModel.NetMsmqBinding> la sicurezza del trasporto è abilitata.Nell'associazione sono presenti due proprietà importanti per la sicurezza del trasporto MSMQ: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>.Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`.Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ.Se si esegue questo esempio in un computer che non soddisfa questi criteri, si riceve un errore.  
+ <span data-ttu-id="e076f-154">Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata.</span><span class="sxs-lookup"><span data-stu-id="e076f-154">By default with the <xref:System.ServiceModel.NetMsmqBinding>, transport security is enabled.</span></span> <span data-ttu-id="e076f-155">Nell'associazione sono presenti due proprietà importanti per la sicurezza del trasporto MSMQ: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>.</span><span class="sxs-lookup"><span data-stu-id="e076f-155">There are two relevant properties for MSMQ transport security, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> and <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>.</span></span> <span data-ttu-id="e076f-156">Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`.</span><span class="sxs-lookup"><span data-stu-id="e076f-156">By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="e076f-157">Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ.</span><span class="sxs-lookup"><span data-stu-id="e076f-157">For MSMQ to provide the authentication and signing feature, it must be part of a domain and the Active Directory integration option for MSMQ must be installed.</span></span> <span data-ttu-id="e076f-158">Se si esegue questo esempio in un computer che non soddisfa questi criteri, si riceve un errore.</span><span class="sxs-lookup"><span data-stu-id="e076f-158">If you run this sample on a computer that does not satisfy these criteria, you receive an error.</span></span>  
   
-### Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a><span data-ttu-id="e076f-159">Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory</span><span class="sxs-lookup"><span data-stu-id="e076f-159">To run the sample on a computer joined to a workgroup or without Active Directory integration</span></span>  
   
-1.  Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nel codice di configurazione seguente.  
+1.  <span data-ttu-id="e076f-160">Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nel codice di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="e076f-160">If your computer is not part of a domain or does not have Active Directory integration installed, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration code.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <services>  
         <service name="Microsoft.ServiceModel.Samples.OrderProcessorService"  
@@ -233,21 +232,20 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
         </behaviors>  
   
       </system.serviceModel>  
-  
     ```  
   
-2.  Verificare di modificare la configurazione nel server e nel client prima di eseguire l'esempio.  
+2.  <span data-ttu-id="e076f-161">Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="e076f-161">Ensure that you change the configuration on both the server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  L'impostazione di `security``mode` su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e della sicurezza di `Message` su `None`.  
+    >  <span data-ttu-id="e076f-162">L'impostazione di `security``mode` su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e della sicurezza `Message` su `None`.</span><span class="sxs-lookup"><span data-stu-id="e076f-162">Setting `security``mode` to `None` is equivalent to setting <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, and `Message` security to `None`.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="e076f-163">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="e076f-163">The samples may already be installed on your computer.</span></span> <span data-ttu-id="e076f-164">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="e076f-164">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="e076f-165">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e076f-165">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e076f-166">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="e076f-166">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="e076f-167">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e076f-167">See Also</span></span>

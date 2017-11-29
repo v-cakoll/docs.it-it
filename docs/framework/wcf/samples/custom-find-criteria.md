@@ -1,38 +1,41 @@
 ---
-title: "Criteri di ricerca personalizzati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Criteri di ricerca personalizzati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d49661ff91477f2f53d180a10ae1c9b3b632461f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Criteri di ricerca personalizzati
-In questo esempio viene illustrato come creare una corrispondenza degli ambiti personalizzata utilizzando la logica e come implementare un servizio di individuazione personalizzato.I client utilizzano la funzionalità di corrispondenza degli ambiti personalizzata per rifinire ed eseguire l'ulteriore compilazione sulla funzionalità di individuazione fornita dal sistema di WCF Discovery.Lo scenario analizzato in questo esempio è il seguente:  
+# <a name="custom-find-criteria"></a><span data-ttu-id="3d542-102">Criteri di ricerca personalizzati</span><span class="sxs-lookup"><span data-stu-id="3d542-102">Custom Find Criteria</span></span>
+<span data-ttu-id="3d542-103">In questo esempio viene illustrato come creare una corrispondenza degli ambiti personalizzata utilizzando la logica e come implementare un servizio di individuazione personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3d542-103">This sample demonstrates how to create a custom scope match using logic and how to implement a custom discovery service.</span></span> <span data-ttu-id="3d542-104">I client utilizzano la funzionalità di corrispondenza degli ambiti personalizzata per rifinire ed eseguire l'ulteriore compilazione sulla funzionalità di individuazione fornita dal sistema di WCF Discovery.</span><span class="sxs-lookup"><span data-stu-id="3d542-104">Clients use custom scope matching functionality to refine and further build on top of the system-provided find functionality of WCF Discovery.</span></span> <span data-ttu-id="3d542-105">Lo scenario analizzato in questo esempio è il seguente:</span><span class="sxs-lookup"><span data-stu-id="3d542-105">The scenario this sample covers is as follows:</span></span>  
   
-1.  Un client esegue la ricerca di un servizio calcolatrice.  
+1.  <span data-ttu-id="3d542-106">Un client esegue la ricerca di un servizio calcolatrice.</span><span class="sxs-lookup"><span data-stu-id="3d542-106">A client is looking for a calculator service.</span></span>  
   
-2.  Per rifinirne la ricerca, il client deve utilizzare una regola per la corrispondenza degli ambiti personalizzata.  
+2.  <span data-ttu-id="3d542-107">Per rifinirne la ricerca, il client deve utilizzare una regola per la corrispondenza degli ambiti personalizzata.</span><span class="sxs-lookup"><span data-stu-id="3d542-107">To refine its search, the client must use a custom scope matching rule.</span></span>  
   
-3.  In base a questa regola, un servizio risponde al client se il relativo endpoint corrisponde a uno qualsiasi degli ambiti specificati dal client.  
+3.  <span data-ttu-id="3d542-108">In base a questa regola, un servizio risponde al client se il relativo endpoint corrisponde a uno qualsiasi degli ambiti specificati dal client.</span><span class="sxs-lookup"><span data-stu-id="3d542-108">According to this rule, a service responds back to the client if its endpoint matches any of the scopes specified by the client.</span></span>  
   
-## Dimostrazione  
+## <a name="demonstrates"></a><span data-ttu-id="3d542-109">Dimostrazione</span><span class="sxs-lookup"><span data-stu-id="3d542-109">Demonstrates</span></span>  
   
--   Creazione di un servizio di individuazione personalizzato.  
+-   <span data-ttu-id="3d542-110">Creazione di un servizio di individuazione personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3d542-110">Creating a custom discovery service.</span></span>  
   
--   Implementazione di una corrispondenza degli ambiti personalizzata mediante un algoritmo.  
+-   <span data-ttu-id="3d542-111">Implementazione di una corrispondenza degli ambiti personalizzata mediante un algoritmo.</span><span class="sxs-lookup"><span data-stu-id="3d542-111">Implementing a custom scope match by algorithm.</span></span>  
   
-## Discussione  
- Il client esegue la ricerca del criterio di corrispondenza di tipo "OR".Un servizio risponde se gli ambiti sui relativi endpoint corrispondono a uno qualsiasi degli ambiti forniti dal client.In questo caso, il client esegue la ricerca di un servizio calcolatrice che dispone di uno qualsiasi degli ambiti riportati nell'elenco seguente:  
+## <a name="discussion"></a><span data-ttu-id="3d542-112">Discussione</span><span class="sxs-lookup"><span data-stu-id="3d542-112">Discussion</span></span>  
+ <span data-ttu-id="3d542-113">Il client esegue la ricerca di tipo "OR" criteri di corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="3d542-113">The client is looking for "OR" type matching criteria.</span></span> <span data-ttu-id="3d542-114">Un servizio risponde se gli ambiti sui relativi endpoint corrispondono a uno qualsiasi degli ambiti forniti dal client.</span><span class="sxs-lookup"><span data-stu-id="3d542-114">A service responds back if the scopes on its endpoints match any of the scopes provided by the client.</span></span> <span data-ttu-id="3d542-115">In questo caso, il client esegue la ricerca di un servizio calcolatrice che dispone di uno qualsiasi degli ambiti riportati nell'elenco seguente:</span><span class="sxs-lookup"><span data-stu-id="3d542-115">In this case, the client is looking for a calculator service that has any of the scopes in the following list:</span></span>  
   
 1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -40,39 +43,39 @@ In questo esempio viene illustrato come creare una corrispondenza degli ambiti p
   
 3.  `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
   
- A tale scopo, il client indica ai servizi di utilizzare una regola per la corrispondenza degli ambiti personalizzata passando una corrispondenza degli ambiti personalizzata tramite URI.Per facilitare la corrispondenza degli ambiti personalizzata, il servizio deve utilizzare un servizio di individuazione personalizzato in grado di comprendere la regola per la corrispondenza degli ambiti personalizzata e di implementare la logica corrispondente associata.  
+ <span data-ttu-id="3d542-116">A tale scopo, il client indica ai servizi di utilizzare una regola per la corrispondenza degli ambiti personalizzata passando una corrispondenza degli ambiti personalizzata tramite URI.</span><span class="sxs-lookup"><span data-stu-id="3d542-116">To accomplish this, the client directs services to use a custom scope matching rule by passing in a custom scope match by URI.</span></span> <span data-ttu-id="3d542-117">Per facilitare la corrispondenza degli ambiti personalizzata, il servizio deve utilizzare un servizio di individuazione personalizzato in grado di comprendere la regola per la corrispondenza degli ambiti personalizzata e di implementare la logica corrispondente associata.</span><span class="sxs-lookup"><span data-stu-id="3d542-117">To facilitate the custom scope matching, the service must use a custom discovery service that understands the custom scope match rule and implements the associated matching logic.</span></span>  
   
- Nel progetto client aprire il file Program.cs.Si noti che il campo `ScopeMatchBy` dell'oggetto `FindCriteria` è impostato su un URI specifico.Questo identificatore viene inviato al servizio.Se il servizio non è in grado di comprendere questa regola, la richiesta di ricerca del client verrà ignorata.  
+ <span data-ttu-id="3d542-118">Nel progetto client aprire il file Program.cs.</span><span class="sxs-lookup"><span data-stu-id="3d542-118">In the client project, open the Program.cs file.</span></span> <span data-ttu-id="3d542-119">Si noti che il campo `ScopeMatchBy` dell'oggetto `FindCriteria` è impostato su un URI specifico.</span><span class="sxs-lookup"><span data-stu-id="3d542-119">Note that the `ScopeMatchBy` field of the `FindCriteria` object is set to a specific URI.</span></span> <span data-ttu-id="3d542-120">Questo identificatore viene inviato al servizio.</span><span class="sxs-lookup"><span data-stu-id="3d542-120">This identifier is sent to the service.</span></span> <span data-ttu-id="3d542-121">Se il servizio non è in grado di comprendere questa regola, la richiesta di ricerca del client verrà ignorata.</span><span class="sxs-lookup"><span data-stu-id="3d542-121">If the service does not understand this rule, it ignores the client’s find request.</span></span>  
   
- Aprire il progetto del servizio.Per implementare il servizio di individuazione personalizzato vengono utilizzati i tre file seguenti:  
+ <span data-ttu-id="3d542-122">Aprire il progetto del servizio.</span><span class="sxs-lookup"><span data-stu-id="3d542-122">Open the service project.</span></span> <span data-ttu-id="3d542-123">Per implementare il servizio di individuazione personalizzato vengono utilizzati i tre file seguenti:</span><span class="sxs-lookup"><span data-stu-id="3d542-123">Three files are used to implement the Custom Discovery Service:</span></span>  
   
-1.  **AsyncResult.cs**: si tratta dell'implementazione di `AsyncResult` richiesta dai metodi di individuazione.  
+1.  <span data-ttu-id="3d542-124">**AsyncResult.cs**: si tratta dell'implementazione del `AsyncResult` richiesto da metodi di individuazione.</span><span class="sxs-lookup"><span data-stu-id="3d542-124">**AsyncResult.cs**: This is the implementation of the `AsyncResult` that is required by Discovery methods.</span></span>  
   
-2.  **CustomDiscoveryService.cs**: questo file implementa il servizio di individuazione personalizzato.L'implementazione estende la classe <xref:System.ServiceModel.Discovery.DiscoveryService> ed esegue l'override dei metodi necessari.Si noti l'implementazione del metodo <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>.Il metodo esegue un controllo per determinare se la corrispondenza degli ambiti personalizzata definita da una regola è stata specificata dal client.Si tratta dello stesso URI personalizzato specificato dal client in precedenza.Se la regola personalizzata viene specificata, verrà seguito il percorso del codice che implementa la logica di corrispondenza "OR."  
+2.  <span data-ttu-id="3d542-125">**Customdiscoveryservice**: questo file implementa il servizio di individuazione personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3d542-125">**CustomDiscoveryService.cs**: This file implements the custom discovery service.</span></span> <span data-ttu-id="3d542-126">L'implementazione estende la classe <xref:System.ServiceModel.Discovery.DiscoveryService> ed esegue l'override dei metodi necessari.</span><span class="sxs-lookup"><span data-stu-id="3d542-126">The implementation extends the <xref:System.ServiceModel.Discovery.DiscoveryService> class and overrides the necessary methods.</span></span> <span data-ttu-id="3d542-127">Si noti l'implementazione del metodo <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>.</span><span class="sxs-lookup"><span data-stu-id="3d542-127">Note the implementation of the <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> method.</span></span> <span data-ttu-id="3d542-128">Il metodo esegue un controllo per determinare se la corrispondenza degli ambiti personalizzata definita da una regola è stata specificata dal client.</span><span class="sxs-lookup"><span data-stu-id="3d542-128">The method checks to see whether the custom scope match by rule was specified by the client.</span></span> <span data-ttu-id="3d542-129">Si tratta dello stesso URI personalizzato specificato dal client in precedenza.</span><span class="sxs-lookup"><span data-stu-id="3d542-129">This is the same custom URI that the client specified previously.</span></span> <span data-ttu-id="3d542-130">Se la regola personalizzata viene specificata, verrà seguito il percorso di codice che implementa la logica di corrispondenza "OR".</span><span class="sxs-lookup"><span data-stu-id="3d542-130">If the custom rule is specified, the code path that implements the "OR" match logic is followed.</span></span>  
   
-     Questa logica personalizzata passa attraverso tutti gli ambiti in ognuno degli endpoint di cui dispone il servizio.Se uno degli ambiti dell'endpoint corrisponde a uno qualsiasi degli ambiti forniti dal client, il servizio di individuazione aggiungerà tale endpoint alla risposta restituita al client.  
+     <span data-ttu-id="3d542-131">Questa logica personalizzata passa attraverso tutti gli ambiti in ognuno degli endpoint di cui dispone il servizio.</span><span class="sxs-lookup"><span data-stu-id="3d542-131">This custom logic goes through all of the scopes on each of the endpoints that the service has.</span></span> <span data-ttu-id="3d542-132">Se uno degli ambiti dell'endpoint corrisponde a uno qualsiasi degli ambiti forniti dal client, il servizio di individuazione aggiungerà tale endpoint alla risposta restituita al client.</span><span class="sxs-lookup"><span data-stu-id="3d542-132">If any of the endpoint's scopes match any of the scopes provided by the client, the discovery service adds that endpoint to the response that is sent back to the client.</span></span>  
   
-3.  **CustomDiscoveryExtension.cs**: l'ultimo passaggio nell'implementazione del servizio di individuazione consiste nel connettere questa implementazione del servizio di individuazione personalizzato all'host del servizio.La classe di supporto utilizzata in questo caso è `CustomDiscoveryExtension`.Questa classe estende la classe <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>.È necessario che l'utente esegua l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>.In questo caso, il metodo restituisce un'istanza del servizio personalizzato di individuazione creato in precedenza.`PublishedEndpoints` è un oggetto <xref:System.Collections.ObjectModel.ReadOnlyCollection> che contiene tutti gli endpoint delle applicazioni che vengono aggiunti all'oggetto <xref:System.ServiceModel.ServiceHost>.Il servizio di individuazione personalizzato utilizza questo oggetto per popolare l'elenco interno.Un utente ha la possibilità di aggiungere altri metadati dell'endpoint.  
+3.  <span data-ttu-id="3d542-133">**Customdiscoveryextension**: l'ultimo passaggio nell'implementazione del servizio di individuazione consiste nel connettere questa implementazione personalizzato Individuazione servizio all'host del servizio.</span><span class="sxs-lookup"><span data-stu-id="3d542-133">**CustomDiscoveryExtension.cs**: The last step in implementing the discovery service is to connect this implementation of the custom discover service to the service host.</span></span> <span data-ttu-id="3d542-134">La classe di supporto utilizzata in questo caso è `CustomDiscoveryExtension`.</span><span class="sxs-lookup"><span data-stu-id="3d542-134">The helper class used here is the `CustomDiscoveryExtension` class.</span></span> <span data-ttu-id="3d542-135">Questa classe estende la classe <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>.</span><span class="sxs-lookup"><span data-stu-id="3d542-135">This class extends the <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> class.</span></span> <span data-ttu-id="3d542-136">È necessario che l'utente esegua l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>.</span><span class="sxs-lookup"><span data-stu-id="3d542-136">The user must override the <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> method.</span></span> <span data-ttu-id="3d542-137">In questo caso, il metodo restituisce un'istanza del servizio di individuazione personalizzato creato in precedenza.</span><span class="sxs-lookup"><span data-stu-id="3d542-137">In this case, the method returns an instance of the custom discovery service that was created before.</span></span> <span data-ttu-id="3d542-138">`PublishedEndpoints` è un oggetto <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> che contiene tutti gli endpoint dell'applicazione che vengono aggiunti a <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="3d542-138">`PublishedEndpoints` is a <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> that contains all of the application endpoints that are added to the <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="3d542-139">Il servizio di individuazione personalizzato utilizza questo oggetto per popolare l'elenco interno.</span><span class="sxs-lookup"><span data-stu-id="3d542-139">The custom discovery service uses this to populate its internal list.</span></span> <span data-ttu-id="3d542-140">Un utente ha la possibilità di aggiungere altri metadati dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="3d542-140">A user can to add other endpoint metadata as well.</span></span>  
   
- Aprire infine Program.cs.Si noti che <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e `CustomDiscoveryExtension` vengono entrambi aggiunti all'host.Dopo avere eseguito questa operazione e aver fatto in modo che l'host disponga di un endpoint sul quale ricevere messaggi di individuazione, l'applicazione potrà utilizzare il servizio di individuazione personalizzato.  
+ <span data-ttu-id="3d542-141">Aprire infine Program.cs.</span><span class="sxs-lookup"><span data-stu-id="3d542-141">Lastly, open Program.cs.</span></span> <span data-ttu-id="3d542-142">Si noti che <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e `CustomDiscoveryExtension` vengono entrambi aggiunti all'host.</span><span class="sxs-lookup"><span data-stu-id="3d542-142">Note that both the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and `CustomDiscoveryExtension` are added to the host.</span></span> <span data-ttu-id="3d542-143">Dopo avere eseguito questa operazione e aver fatto in modo che l'host disponga di un endpoint sul quale ricevere messaggi di individuazione, l'applicazione potrà utilizzare il servizio di individuazione personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3d542-143">Once this is done and the host has an endpoint over which to receive discovery messages, the application can use the custom discovery service.</span></span>  
   
- Si osservi che il client è in grado di trovare il servizio senza conoscerne l'indirizzo.  
+ <span data-ttu-id="3d542-144">Si osservi che il client è in grado di trovare il servizio senza conoscerne l'indirizzo.</span><span class="sxs-lookup"><span data-stu-id="3d542-144">Observe that the client is able to find the service without knowing its address.</span></span>  
   
-#### Per impostare, compilare ed eseguire l'esempio  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3d542-145">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="3d542-145">To set up, build, and run the sample</span></span>  
   
-1.  Aprire la soluzione contenente il progetto.  
+1.  <span data-ttu-id="3d542-146">Aprire la soluzione contenente il progetto.</span><span class="sxs-lookup"><span data-stu-id="3d542-146">Open the solution that contains the project.</span></span>  
   
-2.  Compilare il progetto.  
+2.  <span data-ttu-id="3d542-147">Compilare il progetto.</span><span class="sxs-lookup"><span data-stu-id="3d542-147">Build the project.</span></span>  
   
-3.  Eseguire l'applicazione del servizio.  
+3.  <span data-ttu-id="3d542-148">Eseguire l'applicazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="3d542-148">Run the service application.</span></span>  
   
-4.  Eseguire l'applicazione client.  
+4.  <span data-ttu-id="3d542-149">Eseguire l'applicazione client.</span><span class="sxs-lookup"><span data-stu-id="3d542-149">Run the client application.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="3d542-150">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="3d542-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="3d542-151">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="3d542-151">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="3d542-152">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="3d542-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3d542-153">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="3d542-153">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

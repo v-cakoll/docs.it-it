@@ -1,55 +1,38 @@
 ---
-title: "Proprietà Axis XML (Visual Basic) | Documenti di Microsoft"
-ms.date: 2015-07-20
+title: "Proprietà Axis XML (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - XML axis properties [Visual Basic]
 - Visual Basic code, XML
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aa1dfa9d7c7e5af391ae46bbfa60581518647709
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9564d1d8c7b262e9532bd2fafd8ebd2582f47412
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="xml-axis-properties-visual-basic"></a>Proprietà Axis XML (Visual Basic)
-Negli argomenti di questa sezione descrivono la sintassi delle proprietà axis XML in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Le proprietà axis XML semplificano l'accesso a XML direttamente nel codice.  
+# <a name="xml-axis-properties-visual-basic"></a><span data-ttu-id="d4419-102">Proprietà Axis XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d4419-102">XML Axis Properties (Visual Basic)</span></span>
+<span data-ttu-id="d4419-103">Gli argomenti in questa sezione descrivono la sintassi della proprietà axis XML in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d4419-103">The topics in this section document the syntax of XML axis properties in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="d4419-104">Le proprietà axis XML semplificano l'accesso a XML direttamente nel codice.</span><span class="sxs-lookup"><span data-stu-id="d4419-104">The XML axis properties make it easy to access XML directly in your code.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a><span data-ttu-id="d4419-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="d4419-105">In This Section</span></span>  
   
-|Argomento|Descrizione|  
+|<span data-ttu-id="d4419-106">Argomento</span><span class="sxs-lookup"><span data-stu-id="d4419-106">Topic</span></span>|<span data-ttu-id="d4419-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d4419-107">Description</span></span>|  
 |-----------|-----------------|  
-|[Proprietà axis dell'attributo XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Viene descritto come accedere agli attributi di un <xref:System.Xml.Linq.XElement>oggetto.</xref:System.Xml.Linq.XElement>|  
-|[Proprietà Child Axis XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Viene descritto come accedere gli elementi figlio di un <xref:System.Xml.Linq.XElement>oggetto.</xref:System.Xml.Linq.XElement>|  
-|[Proprietà axis descendant XML](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Viene descritto come accedere ai discendenti di un <xref:System.Xml.Linq.XElement>oggetto.</xref:System.Xml.Linq.XElement>|  
-|[Proprietà dell'indicizzatore di estensione](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Viene descritto come accedere ai singoli elementi in una raccolta di <xref:System.Xml.Linq.XElement>o <xref:System.Xml.Linq.XAttribute>oggetti.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement>|  
-|[Proprietà Value XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Viene descritto come accedere al valore del primo elemento di una raccolta di <xref:System.Xml.Linq.XElement>o <xref:System.Xml.Linq.XAttribute>oggetti.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement>|  
+|[<span data-ttu-id="d4419-108">Proprietà axis dell'attributo XML</span><span class="sxs-lookup"><span data-stu-id="d4419-108">XML Attribute Axis Property</span></span>](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|<span data-ttu-id="d4419-109">Viene descritto come accedere gli attributi di un <xref:System.Xml.Linq.XElement> oggetto.</span><span class="sxs-lookup"><span data-stu-id="d4419-109">Describes how to access the attributes of an <xref:System.Xml.Linq.XElement> object.</span></span>|  
+|[<span data-ttu-id="d4419-110">Proprietà Child Axis XML</span><span class="sxs-lookup"><span data-stu-id="d4419-110">XML Child Axis Property</span></span>](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|<span data-ttu-id="d4419-111">Viene descritto come accedere gli elementi figlio di un <xref:System.Xml.Linq.XElement> oggetto.</span><span class="sxs-lookup"><span data-stu-id="d4419-111">Describes how to access the children of an <xref:System.Xml.Linq.XElement> object.</span></span>|  
+|[<span data-ttu-id="d4419-112">Proprietà axis descendant XML</span><span class="sxs-lookup"><span data-stu-id="d4419-112">XML Descendant Axis Property</span></span>](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|<span data-ttu-id="d4419-113">Viene descritto come accedere ai discendenti di un <xref:System.Xml.Linq.XElement> oggetto.</span><span class="sxs-lookup"><span data-stu-id="d4419-113">Describes how to access the descendants of an <xref:System.Xml.Linq.XElement> object.</span></span>|  
+|[<span data-ttu-id="d4419-114">Proprietà dell'indicizzatore di estensione</span><span class="sxs-lookup"><span data-stu-id="d4419-114">Extension Indexer Property</span></span>](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|<span data-ttu-id="d4419-115">Viene descritto come accedere ai singoli elementi in una raccolta di <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute> oggetti.</span><span class="sxs-lookup"><span data-stu-id="d4419-115">Describes how to access individual elements in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.</span></span>|  
+|[<span data-ttu-id="d4419-116">Proprietà Value XML</span><span class="sxs-lookup"><span data-stu-id="d4419-116">XML Value Property</span></span>](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|<span data-ttu-id="d4419-117">Viene descritto come accedere al valore del primo elemento di una raccolta di <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute> oggetti.</span><span class="sxs-lookup"><span data-stu-id="d4419-117">Describes how to access the value of the first element of a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="d4419-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d4419-118">See Also</span></span>  
+ [<span data-ttu-id="d4419-119">XML</span><span class="sxs-lookup"><span data-stu-id="d4419-119">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)

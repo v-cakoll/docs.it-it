@@ -1,40 +1,44 @@
 ---
-title: "1028 - CompleteTransactionContextWorkItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1028 - CompleteTransactionContextWorkItem
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95423f9d-d29a-460e-bcd8-096e80af5bd0
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 77ef22bd29c167b5be26ceb5360397d38c547c22
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 1028 - CompleteTransactionContextWorkItem
-## Proprietà  
+# <a name="1028---completetransactioncontextworkitem"></a><span data-ttu-id="a6b80-102">1028 - CompleteTransactionContextWorkItem</span><span class="sxs-lookup"><span data-stu-id="a6b80-102">1028 - CompleteTransactionContextWorkItem</span></span>
+## <a name="properties"></a><span data-ttu-id="a6b80-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a6b80-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1028|  
-|Parole chiave|WFRuntime|  
-|Livello|Dettagliato|  
-|Canale|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="a6b80-104">ID</span><span class="sxs-lookup"><span data-stu-id="a6b80-104">ID</span></span>|<span data-ttu-id="a6b80-105">1028</span><span class="sxs-lookup"><span data-stu-id="a6b80-105">1028</span></span>|  
+|<span data-ttu-id="a6b80-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="a6b80-106">Keywords</span></span>|<span data-ttu-id="a6b80-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="a6b80-107">WFRuntime</span></span>|  
+|<span data-ttu-id="a6b80-108">Livello</span><span class="sxs-lookup"><span data-stu-id="a6b80-108">Level</span></span>|<span data-ttu-id="a6b80-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="a6b80-109">Verbose</span></span>|  
+|<span data-ttu-id="a6b80-110">Canale</span><span class="sxs-lookup"><span data-stu-id="a6b80-110">Channel</span></span>|<span data-ttu-id="a6b80-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a6b80-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descrizione  
- Indica che TransactionContextWorkItem è completato.  
+## <a name="description"></a><span data-ttu-id="a6b80-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a6b80-112">Description</span></span>  
+ <span data-ttu-id="a6b80-113">Indica che TransactionContextWorkItem è completato.</span><span class="sxs-lookup"><span data-stu-id="a6b80-113">Indicates a TransactionContextWorkItem has completed.</span></span>  
   
-## Messaggio  
- TransactionContextWorkItem completato per l'attività '%1', DisplayName: '%2', InstanceId: '%3'.  
+## <a name="message"></a><span data-ttu-id="a6b80-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="a6b80-114">Message</span></span>  
+ <span data-ttu-id="a6b80-115">TransactionContextWorkItem completato per l'attività '%1', DisplayName: '%2', InstanceId: '%3'.</span><span class="sxs-lookup"><span data-stu-id="a6b80-115">A TransactionContextWorkItem has completed for Activity '%1', DisplayName: '%2', InstanceId: '%3'.</span></span>  
   
-## Dettagli  
+## <a name="details"></a><span data-ttu-id="a6b80-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="a6b80-116">Details</span></span>  
   
-|Nome elemento dati|Tipo elemento dati|Descrizione|  
-|------------------------|------------------------|-----------------|  
-|Attività|xs:string|Il nome del tipo di attività.|  
-|DisplayName|xs:string|Nome visualizzato dell'attività.|  
-|InstanceId|xs:string|L'ID dell'istanza dell'attività.|  
-|AppDomain|xs:string|Stringa restituita da AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="a6b80-117">Nome elemento dati</span><span class="sxs-lookup"><span data-stu-id="a6b80-117">Data Item Name</span></span>|<span data-ttu-id="a6b80-118">Tipo elemento dati</span><span class="sxs-lookup"><span data-stu-id="a6b80-118">Data Item Type</span></span>|<span data-ttu-id="a6b80-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a6b80-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="a6b80-120">Attività</span><span class="sxs-lookup"><span data-stu-id="a6b80-120">Activity</span></span>|<span data-ttu-id="a6b80-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="a6b80-121">xs:string</span></span>|<span data-ttu-id="a6b80-122">Il nome del tipo di attività.</span><span class="sxs-lookup"><span data-stu-id="a6b80-122">The type name of the activity.</span></span>|  
+|<span data-ttu-id="a6b80-123">DisplayName</span><span class="sxs-lookup"><span data-stu-id="a6b80-123">DisplayName</span></span>|<span data-ttu-id="a6b80-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="a6b80-124">xs:string</span></span>|<span data-ttu-id="a6b80-125">Nome visualizzato dell'attività.</span><span class="sxs-lookup"><span data-stu-id="a6b80-125">The display name of the activity.</span></span>|  
+|<span data-ttu-id="a6b80-126">InstanceId</span><span class="sxs-lookup"><span data-stu-id="a6b80-126">InstanceId</span></span>|<span data-ttu-id="a6b80-127">xs:string</span><span class="sxs-lookup"><span data-stu-id="a6b80-127">xs:string</span></span>|<span data-ttu-id="a6b80-128">L'ID dell'istanza dell'attività.</span><span class="sxs-lookup"><span data-stu-id="a6b80-128">The instance id of the activity.</span></span>|  
+|<span data-ttu-id="a6b80-129">AppDomain</span><span class="sxs-lookup"><span data-stu-id="a6b80-129">AppDomain</span></span>|<span data-ttu-id="a6b80-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="a6b80-130">xs:string</span></span>|<span data-ttu-id="a6b80-131">Stringa restituita da AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="a6b80-131">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
