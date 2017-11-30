@@ -9,14 +9,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
+ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
+ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf17b68514ff263b784bcb42d2015d27015328d9
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="pattern-matching"></a>Criteri di ricerca #
 
 I criteri verificano che un valore abbia una determinata *forma* e possono *estrarre* informazioni dal valore quando ha la forma corrispondente. I criteri di ricerca offrono una sintassi più concisa per gli algoritmi già in uso. Usando la sintassi esistente vengono già creati algoritmi di criteri di ricerca. Vengono scritte istruzioni `if` o `switch` che testano i valori. Quindi, quando le istruzioni corrispondono, si estraggono e si usano le informazioni del valore. I nuovi elementi di sintassi sono estensioni di istruzioni già note: `is` e `switch`. Queste nuove estensioni associano il test di un valore all'estrazione delle informazioni.
@@ -33,7 +31,7 @@ Procedendo nell'esempio, confrontare il codice a un eventuale codice strutturato
 
 Anziché iniziare con una definizione della forma astratta e l'aggiunta di diverse classi di forme specifiche, iniziare con definizioni di soli dati semplici per ogni forma geometrica:
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Definizioni delle forme")]
+[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 Da queste strutture scrivere un metodo che calcola l'area di una forma.
 
@@ -41,13 +39,13 @@ Da queste strutture scrivere un metodo che calcola l'area di una forma.
 
 Prima di C# 7, era necessario testare ogni tipo di una serie di istruzioni `if` e `is`:
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Criteri di tipo classico che usano is")]
+[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 Il codice precedente è un'espressione classica del *criterio di tipo*: si esegue il test di una variabile per determinarne il tipo ed eseguire un'azione diversa in base al tipo.
 
 Questo codice diventa più semplice con l'uso di estensioni dell'espressione `is` per l'assegnazione di una variabile se il test ha esito positivo:
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "Espressione del criterio is")]
+[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 In questa versione aggiornata l'espressione `is` esegue il test della variabile e la assegna a una nuova variabile del tipo appropriato. Si noti anche che questa versione include il tipo `Rectangle` che è uno `struct`. La nuova espressione `is` può essere usata con tipi di valore e tipi di riferimento.
 
@@ -70,12 +68,12 @@ Queste regole comportano l'impossibilità di accedere accidentalmente al risulta
 L'istruzione `switch` tradizionale era un'espressione di criteri che supportava i criteri costanti.
 Era possibile confrontare una variabile con qualsiasi costante in un'istruzione `case`:
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Istruzione switch classica")]
+[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 Gli unici criteri supportati dall'istruzione `switch` erano i criteri costanti. Era presente un'ulteriore limitazione ai tipi numerici e al tipo `string`.
 Queste limitazioni sono state rimosse ed è ora possibile scrivere un'istruzione `switch` usando i criteri di tipo:
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Calcolo con l'espressione 'switch'")]
+[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 L'istruzione `switch` di criteri di ricerca usa una sintassi già nota agli sviluppatori che hanno usato l'istruzione `switch` di tipo C. Viene valutata ogni istruzione `case` e viene eseguito il codice sottostante la condizione che corrisponde alla variabile di input. L'esecuzione del codice non può "passare" da un'espressione case alla successiva. La sintassi dell'istruzione `case` richiede che ogni `case` termini con `break`, `return` o `goto`.
 
@@ -93,7 +91,7 @@ Si noti che il caso `default` verrà eseguito solo se non corrispondano altre et
 
 È possibile creare casi speciali per le forme con area 0 usando una clausola `when` nell'etichetta `case`. Un quadrato con una lunghezza del lato pari a 0 o un cerchio con raggio pari a 0 ha un'area 0. Questa condizione viene specificata usando una clausola `when` nell'etichetta `case`:  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Calcolo di forme con area 0")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 Questa modifica illustra alcune considerazioni importanti sulla nuova sintassi. Innanzitutto, è possibile applicare più etichette `case` a una sezione `switch`. Il blocco di istruzioni viene eseguito quando una delle etichette è `true`. In questa istanza se l'espressione `switch` è un cerchio o un quadrato con area 0, il metodo restituisce la costante 0.
 
@@ -104,15 +102,37 @@ Tuttavia, non è possibile sapere *quale* variabile è stata assegnata in fase d
 
 Dopo aver aggiunto le forme con area 0, si aggiungono due tipi di forme aggiuntivi, un rettangolo e un triangolo:
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Aggiunta di rettangolo e triangolo")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
  Questo set di modifiche aggiunge etichette `case` per il caso degenere ed etichette e blocchi per ogni nuova forma. 
 
 È possibile infine aggiungere un caso `null` per assicurarsi che l'argomento non sia `null`:
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Aggiunta del caso null")]
+[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 Lo speciale comportamento del criterio `null` è interessante perché la costante `null` nel criterio non ha un tipo, ma può essere convertita in qualsiasi tipo di riferimento o nullable. Anziché convertire una costante `null` in un tipo, il linguaggio definisce che un valore `null` non corrisponderà ad alcun criterio del tipo, indipendentemente dal tipo in fase di compilazione della variabile. Questo comportamento rende il nuovo criterio del tipo basato su `switch` coerente con l'istruzione `is`: le istruzioni `is` restituiscono sempre `false` quando il valore controllato è `null`. È anche più semplice: dopo aver controllato il tipo, non è necessario un controllo null aggiuntivo. Questo è dimostrato dal fatto che non è presente alcun controllo null in nessuno dei blocchi di casi degli esempi precedenti: i controlli non sono necessari poiché la corrispondenza del criterio del tipo garantisce già un valore non null.
+
+## <a name="var-declarations-in-case-expressions"></a>`var`le dichiarazioni in `case` espressioni
+
+L'introduzione di `var` come una delle espressioni match introduce le nuove regole per la corrispondenza.
+
+La prima regola è che il `var` dichiarazione segue le regole di inferenza del tipo normale: il tipo viene dedotto il tipo statico dell'espressione switch. Da questa regola, il tipo corrisponde sempre.
+
+La seconda regola è che un `var` dichiarazione di non includere il controllo null che includono altre espressioni di tipo modello. Pertanto, la variabile può essere null e un controllo null è necessario in questo caso.
+
+Le due regole che indicano in molti casi, un `var` dichiarazione in un `case` espressione corrisponde alle stesse condizioni un `default` espressione.
+Perché è preferibile a qualsiasi case non predefinita di `default` caso, il `default` caso non verrà mai eseguita.
+
+> [!NOTE]
+> Il compilatore non genera un avviso in questi casi in cui un `default` case è stato scritto, ma non verrà mai eseguita. Questo comportamento è coerente con l'attuale `switch` comportamento dell'istruzione in cui sono stati elencati tutti i casi possibili.
+
+La terza regola introduce viene utilizzato in un `var` case può essere utile. Si supponga che si sta eseguendo un criterio di ricerca in cui l'input è una stringa e si sta cercando valori comando noto. È possibile scrivere simile al seguente:
+
+[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+
+Il `var` caso corrispondenze `null`, una stringa vuota o qualsiasi stringa che contiene solo spazi vuoti. Si noti che il codice precedente utilizza il `?.` operatore per assicurare che non accidentalmente genera un <xref:System.NullReferenceException>. Il `default` case gestisce qualsiasi altro valore di stringa non riconosciute dal parser comando.
+
+Questo è un esempio in cui si desidera considerare un `var` caso l'espressione che è diverso da quello di un `default` espressione.
 
 ## <a name="conclusions"></a>Conclusioni
 
@@ -120,5 +140,4 @@ I *costrutti dei criteri di ricerca* consentono di gestire in modo semplice il f
 I criteri di ricerca possono essere usati con qualsiasi tipo di dati. Vengono scritte espressioni che esaminano l'oggetto ed eseguono decisioni per il flusso di controllo in base alle condizioni.
 
 Confrontare il codice dell'esempio con la progettazione che deriverebbe dalla creazione di una gerarchia di classi per una `Shape` astratta e le forme derivate specifiche ognuna con la propria implementazione di un metodo virtuale per il calcolo dell'area. Spesso sarà possibile osservare che le espressioni di criteri di ricerca possono essere uno strumento utile quando si usano dati e si vogliono separare le esigenze di archiviazione di dati da quelle di comportamento.
-
 

@@ -1,14 +1,10 @@
 ---
 title: -resource (opzioni del compilatore C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /resource
-dev_langs:
-- CSharp
+f1_keywords: /resource
 helpviewer_keywords:
 - -resource compiler option [C#]
 - /resource compiler option [C#]
@@ -17,29 +13,14 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 726956275436e22723bc32b98b2b8b7c7df5fb12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fdb7be630300e11c2e63d88bd6add7d229714bfa
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resource-c-compiler-options"></a>/resource (opzioni del compilatore C#)
 Incorpora la risorsa specificata nel file di output.  
@@ -65,7 +46,7 @@ Incorpora la risorsa specificata nel file di output.
   
  Per impostazione predefinita, le risorse sono pubbliche nell'assembly quando vengono create tramite il compilatore C#. Per renderle private, specificare `private` come modificatore di accessibilità. Non è consentita alcuna accessibilità diversa da `public` o `private`.  
   
- Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=fullName>. Per tutte le altre risorse, usare i metodi `GetManifestResource`* della classe <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di runtime.  
+ Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Per tutte le altre risorse, usare il `GetManifestResource` metodi di <xref:System.Reflection.Assembly> classe per accedere alla risorsa in fase di esecuzione.  
   
  **/res** rappresenta la versione abbreviata di **/resource**.  
   
@@ -91,6 +72,5 @@ csc /resource:rf.resource in.cs
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
+ [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
-

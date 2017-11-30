@@ -1,39 +1,21 @@
 ---
 title: Classi generiche (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17ec9f5d26c01b7f7f7f95026bfdfaa88d709b60
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classi generiche (Guida per programmatori C#)
 Le classi generiche incapsulano operazioni che non sono specifiche di un determinato tipo di dati. L'uso più comune per le classi generiche è con raccolte come elenchi collegati, tabelle hash, stack, code, alberi e così via. Le operazioni come l'aggiunta e la rimozione di elementi dalla raccolta vengono eseguite praticamente allo stesso modo, indipendentemente dal tipo dei dati archiviati.  
@@ -62,36 +44,35 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
   
  Le regole per i parametri di tipo e i vincoli hanno diverse implicazioni per il comportamento delle classi generiche, in particolare riguardo a ereditarietà e accessibilità dei membri. Prima di continuare, è utile comprendere alcuni termini. Per una classe generica, il codice client `Node<T>,` può fare riferimento alla classe specificando un argomento tipo, per creare un tipo costruito chiuso (`Node<int>`). In alternativa, può lasciare il parametro di tipo non specificato, ad esempio quando si specifica una classe base generica, per creare un tipo costruito aperto (`Node<T>`). Le classi generiche possono ereditare da classi concrete, classi costruite chiuse o classi base costruite aperte:  
   
- [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
   
  Le classi non generiche, ovvero concrete, possono ereditare da classi base costruite chiuse, ma non da classi costruite aperte o da parametri di tipo, perché in fase di esecuzione il codice client non può in alcun modo specificare l'argomento tipo necessario per creare un'istanza della classe base.  
   
- [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
   
  Le classi generiche che ereditano da tipi costruiti aperti devono specificare gli argomenti tipo per qualsiasi parametro di tipo di classe base che non viene condiviso dalla classe che eredita, come mostrato nel codice seguente:  
   
- [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
   
  Le classi generiche che ereditano da tipi costruiti aperti devono specificare vincoli che implichino o siano un superset dei vincoli sul tipo di base:  
   
- [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
   
  I tipi generici possono usare più parametri di tipo e vincoli, in questo modo:  
   
- [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
   
  I tipo costruiti aperti e i tipi costruiti chiusi possono essere usati come parametri di metodo:  
   
- [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
   
  Se una classe generica implementa un'interfaccia, è possibile eseguire il cast di tutte le istanze della classe all'interfaccia.  
   
  Le classi generiche sono invariabili. In altri termini, se un parametro di input specifica un oggetto `List<BaseClass>`, se si prova a specificare un oggetto `List<DerivedClass>`, viene restituito un errore in fase di compilazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Generic>   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Generics](../../../csharp/programming-guide/generics/index.md)   
- [Saving the State of Enumerators](http://go.microsoft.com/fwlink/?LinkId=112390)  (Salvataggio dello stato degli enumeratori)  
+ <xref:System.Collections.Generic>  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Generics](../../../csharp/programming-guide/generics/index.md)  
+ [Salvare lo stato di enumeratori](http://go.microsoft.com/fwlink/?LinkId=112390)  
  [An Inheritance Puzzle, Part One](http://go.microsoft.com/fwlink/?LinkId=112380) (Indovinello sull'ereditarietà - Parte 1)
-

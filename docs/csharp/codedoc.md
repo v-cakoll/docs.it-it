@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
+ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0cb5725a70d94173c8596f818dcaa6eb2de13bcc
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
 
 I commenti in formato documentazione XML sono commenti speciali, aggiunti alla definizione di ogni tipo o membro definito dall'utente. Sono speciali perché possono essere elaborati dal compilatore per generare un file di documentazione XML in fase di compilazione.
@@ -27,10 +25,10 @@ I commenti in formato documentazione XML, come tutti gli altri commenti, vengono
 
 È possibile generare il file XML in fase di compilazione eseguendo una delle operazioni seguenti:
 
-- Se si sviluppa un'applicazione con .NET Core dalla riga di comando, è possibile aggiungere un [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) alla sezione `<PropertyGroup>` del file di progetto csproj. L'esempio seguente genera un file XML nella directory del progetto con lo stesso nome file radice del progetto:
+- Se si sviluppa un'applicazione con .NET Core dalla riga di comando, è possibile aggiungere un [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) alla sezione `<PropertyGroup>` del file di progetto csproj. L'esempio seguente genera un file XML nella directory del progetto con lo stesso nome di file dell'assembly principale:
 
    ```xml
-   <DocumentationFile>$(MSBuildProjectName).xml</DocumentationFile>
+   <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
    È anche possibile specificare l'esatto percorso assoluto o relativo e il nome del file XML. L'esempio seguente genera il file XML nella stessa directory della versione di debug di un'applicazione:
@@ -45,7 +43,7 @@ I commenti in formato documentazione XML, come tutti gli altri commenti, vengono
 
 I commenti in formato documentazione XML usano tre barre (`///`) e un corpo di commento in formato XML. Ad esempio:
 
-[!code-csharp[Commento in formato documentazione XML](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
+[!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
@@ -53,7 +51,7 @@ In questa sezione viene illustrato come documentare una semplice libreria matema
 
 Questo è il codice per la semplice libreria matematica:
 
-[!code-csharp[Libreria di esempio](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
+[!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
 La libreria di esempio supporta quattro operazioni aritmetiche principali, ovvero `add`, `subtract`, `multiply` e `divide` su tipi di dati `int` e `double`.
 
@@ -65,7 +63,7 @@ Come indicato precedentemente, è possibile usare i tag in formato documentazion
 Il tag `<summary>` aggiunge brevi informazioni su un tipo o membro.
 Ne viene illustrato l'uso aggiungendolo alla definizione di classe `Math` e al primo metodo `Add`. È possibile applicarlo al resto del codice.
 
-[!code-csharp[Tag summary](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
+[!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
 Il tag `<summary>` è molto importante ed è consigliabile includerlo perché il suo contenuto è l'origine principale di informazioni sul tipo o sul membro in IntelliSense o in un documento di riferimento all'API.
 
@@ -73,28 +71,28 @@ Il tag `<summary>` è molto importante ed è consigliabile includerlo perché il
 
 Il tag `<remarks>` integra le informazioni sui tipi o membri definiti dal tag `<summary>`. In questo esempio, sarà sufficiente aggiungerlo alla classe.
 
-[!code-csharp[Tag remarks](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
+[!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ### <a name="ltreturnsgt"></a>&lt;returns&gt;
 
 Il tag `<returns>` descrive il valore restituito di una dichiarazione di metodo.
 Come in precedenza, nell'esempio seguente viene illustrato il tag `<returns>` nel primo metodo `Add`. È possibile eseguire questa operazione su altri metodi.
 
-[!code-csharp[Tag returns](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
+[!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ### <a name="ltvaluegt"></a>&lt;value&gt;
 
 Il tag `<value>` è simile al tag `<returns>`, ad eccezione del fatto che viene usato per le proprietà.
 Se la libreria `Math` avesse una proprietà statica denominata `PI`, questo tag dovrebbe essere usato nel modo seguente:
 
-[!code-csharp[Tag value](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
+[!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
 ### <a name="ltexamplegt"></a>&lt;example&gt;
 
 Si usa il tag `<example>` per includere un esempio nella documentazione XML.
 Ciò comporta l'uso del tag `<code>` del figlio.
 
-[!code-csharp[Tag example](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
+[!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
 Il tag `code` mantiene le interruzioni di riga e il rientro per esempi più lunghi.
 
@@ -103,7 +101,7 @@ Il tag `code` mantiene le interruzioni di riga e il rientro per esempi più lung
 Si usa il tag `<para>` per formattare il contenuto all'interno del tag padre. `<para>` viene in genere usato all'interno di un tag, ad esempio `<remarks>` o `<returns>`, per dividere il testo in paragrafi.
 È possibile formattare il contenuto del tag `<remarks>` per la definizione delle classi.
 
-[!code-csharp[Tag para](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
+[!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
 ### <a name="ltcgt"></a>&lt;c&gt;
 
@@ -111,14 +109,14 @@ Nella formattazione si usa il tag `<c>` per contrassegnare parte del testo come 
 È simile al tag `<code>`, ma è inline. È utile quando si vuole visualizzare un esempio breve di codice come parte del contenuto del tag.
 Ora viene aggiornata la documentazione per la classe `Math`.
 
-[!code-csharp[Tag C](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
+[!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
 ### <a name="ltexceptiongt"></a>&lt;exception&gt;
 
 Tramite il tag `<exception>` è possibile comunicare agli sviluppatori che un metodo può generare eccezioni specifiche.
 Esaminando la libreria `Math`, è possibile vedere che entrambi i metodi `Add` generano un'eccezione se viene soddisfatta una determinata condizione. Nonostante non sia così ovvio, anche il metodo `Divide` integer genera eccezioni se il parametro `b` è uguale a zero. Aggiungere ora la documentazione sull'eccezione a questo metodo.
 
-[!code-csharp[Tag exception](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
+[!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
 L'attributo `cref` rappresenta un riferimento ad un'eccezione disponibile dall'ambiente di compilazione corrente.
 Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferimento. Il compilatore genererà un avviso se il relativo valore non può essere risolto.
@@ -127,7 +125,7 @@ Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferi
 
 Il tag `<see>` consente di creare un collegamento selezionabile per una pagina di documentazione per un altro elemento di codice. Nel prossimo esempio, verrà creato un collegamento selezionabile tra i due metodi `Add`.
 
-[!code-csharp[Tag see](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
+[!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
 L'attributo `cref` è **obbligatorio** e rappresenta un riferimento a un tipo o al suo membro disponibile dall'ambiente di compilazione corrente. Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferimento.
 
@@ -135,7 +133,7 @@ L'attributo `cref` è **obbligatorio** e rappresenta un riferimento a un tipo o 
 
 Il tag `<seealso>` si usa allo stesso modo del tag `<see>`. L'unica differenza è che il relativo contenuto viene in genere inserito in una sezione "Vedere anche". Di seguito si aggiungerà un tag `seealso` al metodo `Add` integer per fare riferimento ad altri metodi della classe che accettano parametri integer:
 
-[!code-csharp[Tag seealso](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
+[!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
 L'attributo `cref` rappresenta un riferimento a un tipo o al suo membro disponibile dall'ambiente di compilazione corrente.
 Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferimento.
@@ -144,34 +142,34 @@ Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferi
 
 Il tag `<param>` viene usato per descrivere i parametri del metodo. Di seguito viene illustrato un esempio sul metodo `Add` double. Il parametro descritto dal tag viene specificato nell'attributo `name` **obbligatorio**.
 
-[!code-csharp[Tag param](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
+[!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
 ### <a name="lttypeparamgt"></a>&lt;typeparam&gt;
 
 Il tag `<typeparam>` viene usato allo stesso modo del tag `<param>`, ma in dichiarazioni di tipo o di metodo generico per descrivere un parametro generico.
 Aggiungere un metodo generico semplice alla classe `Math` per verificare se una quantità è maggiore di un'altra.
 
-[!code-csharp[Tag typeparam](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
+[!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ### <a name="ltparamrefgt"></a>&lt;paramref&gt;
 
 A volte è possibile che durante la descrizione dell'operazione di un metodo in un tag `<summary>` si vuole fare un riferimento a un parametro. Il tag `<paramref>` è molto utile per questa operazione. Ora si aggiorna il riepilogo del metodo `Add` basato su double. Analogamente al tag `<param>`, il nome del parametro viene specificato nell'attributo `name` **obbligatorio**.
 
-[!code-csharp[Tag paramref](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
+[!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ### <a name="lttypeparamrefgt"></a>&lt;typeparamref&gt;
 
 Il tag `<typeparamref>` viene usato allo stesso modo del tag `<paramref>`, ma in dichiarazioni di tipo o di metodo generico per descrivere un parametro generico.
 È possibile usare lo stesso metodo generico creato in precedenza.
 
-[!code-csharp[Tag typeparamref](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
+[!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
 ### <a name="ltlistgt"></a>&lt;list&gt;
 
 Il tag `<list>` viene usato per formattare le informazioni sulla documentazione come elenco ordinato, elenco non ordinato o tabella.
 Creare un elenco non ordinato di ogni operazione matematica supportata dalla libreria `Math`.
 
-[!code-csharp[Tag list](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
+[!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 È possibile creare un elenco ordinato o una tabella sostituendo l'attributo `type` con `number` o `table` rispettivamente.
 
@@ -179,7 +177,7 @@ Creare un elenco non ordinato di ogni operazione matematica supportata dalla lib
 
 Dopo aver eseguito questa esercitazione e applicato i tag al codice, dove necessario, il codice dovrebbe ora essere simile al seguente:
 
-[!code-csharp[Libreria con tag](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
+[!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 Dal codice, è possibile generare un sito Web di documentazione dettagliata completa di riferimenti incrociati. Ciò però potrebbe rendere il codice più difficile da leggere.
 In quanto la presenza di un numero elevato di informazioni costituisce un problema molto serio per gli sviluppatori che vogliono contribuire al codice. Fortunatamente c'è un tag XML che consente di affrontare questo problema:
@@ -190,11 +188,11 @@ Il tag `<include>` consente di fare riferimento ai commenti in un file XML separ
 
 Ora si spostano tutti i tag XML in un file XML separato denominato `docs.xml`. È possibile assegnare al file un nome qualsiasi.
 
-[!code-xml[Codice XML di esempio](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
+[!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
 Nel codice XML precedente, i commenti in formato documentazione di ogni membro vengono visualizzati direttamente all'interno di un tag denominato dopo le operazioni eseguite. È possibile scegliere una strategia personalizzata. Ora che i commenti XML si trovano in un file separato, di seguito viene illustrato come il codice può essere reso più leggibile usando il tag `<include>`:
 
-[!code-csharp[Tag include](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
+[!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
 Infine si avrà un codice di nuovo leggibile e nessuna informazione sulla documentazione è andata persa. 
 
@@ -228,4 +226,3 @@ La documentazione del codice è consigliabile per vari motivi. Di seguito vengon
 [Commenti in formato documentazione XML (Guida per programmatori C#)](programming-guide/xmldoc/xml-documentation-comments.md)
 
 [Tag consigliati per i commenti della documentazione (Guida per programmatori C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

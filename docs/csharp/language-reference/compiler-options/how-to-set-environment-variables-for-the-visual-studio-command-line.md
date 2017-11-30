@@ -1,14 +1,10 @@
 ---
 title: 'Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio'
-ms.date: 2015-07-20
+ms.date: 09-29-2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.build.commandline
-dev_langs:
-- CSharp
+f1_keywords: cs.build.commandline
 helpviewer_keywords:
 - csc.exe, command-line builds
 - Visual C#, command-line builds
@@ -21,46 +17,34 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8012e310bb04ec3acef0790f9cd50ed42dd9286a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 569683169c6d7ae50c33ed06d3b365a663f16715
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio
-Il file vsvars32.bat imposta le variabili di ambiente necessarie per abilitare le compilazioni da riga di comando. Per altre informazioni su vsvars32.bat, vedere l[articolo della Knowledge Base Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).  
+
+Il file VsDevCmd.bat imposta le variabili di ambiente appropriate per abilitare le compilazioni da riga di comando. Per ulteriori informazioni su VsDevCmd.bat, vedere [della Knowledge Base Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).  
+
+> [!NOTE]
+> Il file VsDevCmd.bat è un nuovo file fornito con Visual Studio 2017. Visual Studio 2015 e versioni precedenti utilizzato VSVARS32.bat allo stesso scopo. Questo file è stato archiviato in \Programmi\Microsoft Visual Studio\\*versione*\Common7\Tools o programmi (x86) \Microsoft Visual Studio\\*versione*\Common7\Tools.
   
- Se la versione corrente di Visual Studio è installata in un computer che include anche la versione precedente di Visual Studio, non eseguire vsvars32.bat o vcvars32.bat da diverse versioni nella stessa finestra del prompt dei comandi.  
+Se la versione corrente di Visual Studio è installata in un computer che dispone anche di una versione precedente di Visual Studio, è necessario eseguire non VsDevCmd.bat e VSVARS32. BAT da diverse versioni nella stessa finestra del prompt dei comandi. In alternativa, è necessario eseguire il comando per ogni versione nella propria finestra.
   
-### <a name="to-run-vsvars32bat"></a>Per eseguire VSVARS32.BAT  
+### <a name="to-run-vsdevcmdbat"></a>Per eseguire VsDevCmd.BAT  
   
-1.  Dal menu **Start** aprire il **Prompt dei comandi per gli sviluppatori per VS2012**.  
+1.  Dal **avviare** menu, aprire il **prompt dei comandi per sviluppatori per Visual Studio 2017**.  È il **Visual Studio 2017** cartella.
   
-2.  Passare alla sottodirectory di installazione Programmi\Microsoft Visual Studio *Version*\Common7\Tools o Programmi (x86)\Microsoft Visual Studio *Version*\Common7\Tools.  
+2.  Modificare in \Programmi\Microsoft Visual Studio\\*versione*\\*offerta*\Common7\Tools o \Programmi file (x86) \Microsoft Visual Studio\\ *Versione*\\*offerta*\Common7\Tools sottodirectory dell'installazione.  (*Versione* è *2017* per la versione corrente. *Offerta* è uno dei *Enterprise*, *Professional* o *Community*.)
   
-3.  Eseguire VSVARS32.bat digitando **VSVARS32**.  
+3.  Eseguire VsDevCmd.bat digitando **VsDevCmd**.  
   
     > [!CAUTION]
-    >  Il file VSVARS32.bat può variare da computer a computer. Non sostituire un file VSVARS32.bat mancante o danneggiato con un file VSVARS32.bat da un altro computer. Rieseguire invece l'installazione per sostituire il file mancante.  
+    >  VsDevCmd.bat può variare da computer a computer. Non sostituire un file VsDevCmd.bat mancante o danneggiato con un VsDevCmd.bat da un altro computer. Rieseguire invece l'installazione per sostituire il file mancante.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-

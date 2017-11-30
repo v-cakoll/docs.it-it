@@ -1,39 +1,40 @@
 ---
-title: "Convalida XDR con XmlSchemaCollection | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Convalida XDR con XmlSchemaCollection
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Convalida XDR con XmlSchemaCollection
-Se lo schema XDR \(XML\-Data Reduced\) rispetto al quale si esegue la convalida è archiviato in **XmlSchemaCollection**, sarà associato all'URI dello spazio dei nomi specificato quando lo schema è stato aggiunto alla raccolta.  **XmlValidatingReader** associa l'URI dello spazio dei nomi nel documento XML allo schema che corrisponde a quell'URI nella raccolta.  
+# <a name="xdr-validation-with-xmlschemacollection"></a>Convalida XDR con XmlSchemaCollection
+Se lo schema XML-Data Reduced (XDR) si esegue la convalida rispetto è archiviato nel **XmlSchemaCollection**, questo viene associato allo spazio dei nomi URI specificato quando lo schema è stato aggiunto alla raccolta. **XmlValidatingReader** associa l'URI dello spazio dei nomi nel documento XML allo schema che corrisponde a quell'URI nella raccolta.  
   
 > [!IMPORTANT]
->  La classe <xref:System.Xml.Schema.XmlSchemaCollection> è obsoleta ed è stata sostituita dalla classe <xref:System.Xml.Schema.XmlSchemaSet>.  Per altre informazioni sulla classe <xref:System.Xml.Schema.XmlSchemaSet>, vedere [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  La classe <xref:System.Xml.Schema.XmlSchemaCollection> è obsoleta ed è stata sostituita dalla classe <xref:System.Xml.Schema.XmlSchemaSet>. Per ulteriori informazioni sul <xref:System.Xml.Schema.XmlSchemaSet> classe, vedere [XmlSchemaSet per la compilazione dello Schema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
- Se ad esempio l'elemento radice del documento XML è `<bookstore xmlns="urn:newbooks-schema">`, quando lo schema viene aggiunto a **XmlSchemaCollection**, fa riferimento allo stesso spazio dei nomi, nel modo seguente:  
+ Ad esempio, se l'elemento radice del documento XML è `<bookstore xmlns="urn:newbooks-schema">`, quando lo schema viene aggiunto per il **XmlSchemaCollection** fa riferimento lo stesso spazio dei nomi, come indicato di seguito:  
   
 ```  
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")  
 ```  
   
- Nell'esempio di codice seguente viene creato un **XmlValidatingReader** che accetta un **XmlTextReader** e aggiunge uno schema XDR, HeadCount.xdr, a **XmlSchemaCollection**.  
+ L'esempio di codice seguente crea un **XmlValidatingReader** che accetta un **XmlTextReader** e aggiunge uno schema XDR, HeadCount.xdr, al **XmlSchemaCollection**.  
   
 ```vb  
 Imports System  
@@ -142,7 +143,7 @@ namespace ValidationSample
   
  Di seguito viene indicato il contenuto del file di input, HeadCount.xml, da convalidare.  
   
-```  
+```xml  
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->  
 <HeadCount xmlns='xdrHeadCount'>  
    <Name>Waldo Pepper</Name>  
@@ -152,7 +153,7 @@ namespace ValidationSample
   
  Di seguito viene indicato il contenuto del file dello schema XDR, HeadCount.xdr, rispetto al quale eseguire la convalida.  
   
-```  
+```xml  
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">  
    <ElementType name="Name" content="textOnly"/>  
    <AttributeType name="Bldg" default="2"/>  
@@ -163,7 +164,7 @@ namespace ValidationSample
 </Schema>  
 ```  
   
-## Vedere anche  
- <xref:System.Xml.XmlValidatingReader.ValidationType%2A>   
- <xref:System.Xml.XmlValidatingReader.Settings%2A>   
- [Compilazione dello schema XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Xml.XmlValidatingReader.ValidationType%2A>  
+ <!--zz <xref:System.Xml.XmlValidatingReader.Settings%2A>-->  `System.Xml.XmlValidatingReader.Settings`  
+ [Compilazione dello Schema XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

@@ -1,35 +1,36 @@
 ---
-title: "Convalida XSD (XML Schema) con XmlSchemaCollection | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Convalida XSD (XML Schema) con XmlSchemaCollection
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ebe8a55cd5dd80be10553948c7765f81429c0957
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Convalida XSD (XML Schema) con XmlSchemaCollection
-È possibile usare il tipo <xref:System.Xml.Schema.XmlSchemaCollection> per convalidare un documento XML in base a schemi XSD \(XML Schema Definition Language\).  Il tipo <xref:System.Xml.Schema.XmlSchemaCollection> migliora le prestazioni archiviando gli schemi nella raccolta in modo che non vengano caricati in memoria ogni volta che viene eseguita la convalida.  Se lo schema esiste nella raccolta di schemi, l'attributo `schemaLocation` verrà usato per cercare lo schema nella raccolta.  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Convalida XSD (XML Schema) con XmlSchemaCollection
+È possibile usare il tipo <xref:System.Xml.Schema.XmlSchemaCollection> per convalidare un documento XML in base a schemi XSD (XML Schema Definition Language). Il tipo <xref:System.Xml.Schema.XmlSchemaCollection> migliora le prestazioni archiviando gli schemi nella raccolta in modo che non vengano caricati in memoria ogni volta che viene eseguita la convalida. Se lo schema esiste nella raccolta di schemi, l'attributo `schemaLocation` verrà usato per cercare lo schema nella raccolta.  
   
 > [!IMPORTANT]
->  La classe <xref:System.Xml.Schema.XmlSchemaCollection> è obsoleta ed è stata sostituita dalla classe <xref:System.Xml.Schema.XmlSchemaSet>.  Per altre informazioni sulla classe <xref:System.Xml.Schema.XmlSchemaSet>, vedere [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  La classe <xref:System.Xml.Schema.XmlSchemaCollection> è obsoleta ed è stata sostituita dalla classe <xref:System.Xml.Schema.XmlSchemaSet>. Per ulteriori informazioni sul <xref:System.Xml.Schema.XmlSchemaSet> classe, vedere [XmlSchemaSet per la compilazione dello Schema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
  Nell'esempio seguente viene illustrato l'elemento radice di un file di dati.  
   
-```  
+```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
     xmlns="urn:bookstore-schema"  
     elementFormDefault="qualified"  
@@ -58,7 +59,7 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- In genere, l'attributo `targetNamespace` viene usato per aggiungere la proprietà `namespaceURI` nel metodo <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> per l'oggetto <xref:System.Xml.Schema.XmlSchemaCollection>.  È possibile specificare un riferimento null prima di aggiungere lo schema al tipo <xref:System.Xml.Schema.XmlSchemaCollection>.  Per gli schemi senza uno spazio dei nomi è necessario usare una stringa vuota \(""\).  Nel tipo <xref:System.Xml.Schema.XmlSchemaCollection> può essere presente solo uno schema senza uno spazio dei nomi.  
+ In genere, l'attributo `targetNamespace` viene usato per aggiungere la proprietà `namespaceURI` nel metodo <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> per l'oggetto <xref:System.Xml.Schema.XmlSchemaCollection>. È possibile specificare un riferimento null prima di aggiungere lo schema al tipo <xref:System.Xml.Schema.XmlSchemaCollection>. Per gli schemi senza uno spazio dei nomi è necessario usare una stringa vuota (""). Nel tipo <xref:System.Xml.Schema.XmlSchemaCollection> può essere presente solo uno schema senza uno spazio dei nomi.  
   
  Nell'esempio di codice seguente viene aggiunto uno schema XML, HeadCount.xsd, al tipo <xref:System.Xml.Schema.XmlSchemaCollection> e viene eseguita la convalida di HeadCount.xml.  
   
@@ -133,7 +134,7 @@ namespace ValidationSample
   
  Di seguito viene indicato il contenuto del file di input, HeadCount.xml, da convalidare.  
   
-```  
+```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
 <hc:HeadCount xmlns:hc='xsdHeadCount'>  
    <Name>Waldo Pepper</Name>  
@@ -143,7 +144,7 @@ namespace ValidationSample
   
  Di seguito viene indicato il contenuto del file di XML Schema, HeadCount.xsd, in base al quale eseguire la convalida.  
   
-```  
+```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
    <xs:element name='HeadCount' type="HEADCOUNT"/>  
    <xs:complexType name="HEADCOUNT">  
@@ -155,7 +156,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- Nell'esempio di codice seguente viene creato un <xref:System.Xml.XmlValidatingReader> che accetta un <xref:System.Xml.XmlTextReader>.  Il file di input, sample4.xml, viene convalidato in base a XML Schema, sample4.xsd.  
+ Nell'esempio di codice seguente viene creato un <xref:System.Xml.XmlValidatingReader> che accetta un <xref:System.Xml.XmlTextReader>. Il file di input, sample4.xml, viene convalidato in base a XML Schema, sample4.xsd.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -181,7 +182,7 @@ while(vr.Read()) {
   
  Di seguito viene indicato il contenuto del file di input, sample4.xml, da convalidare.  
   
-```  
+```xml  
 <datatypes xmlns="datatypesTest">  
     <number>  
         <number_1>123</number_1>  
@@ -191,7 +192,7 @@ while(vr.Read()) {
   
  Di seguito viene indicato il contenuto del file di XML Schema, sample4.xsd, in base al quale eseguire la convalida.  
   
-```  
+```xml  
 <xs:schema   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     xmlns:tns="datatypesTest"   
@@ -214,8 +215,8 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## Vedere anche  
- <xref:System.Xml.XmlParserContext>   
- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=fullName>   
- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=fullName>   
- [Compilazione dello schema XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Xml.XmlParserContext>  
+ <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
+ <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
+ [Compilazione dello Schema XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

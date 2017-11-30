@@ -1,86 +1,89 @@
 ---
-title: "Exceptions in Managed Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "unhandled exceptions,in managed threads"
-  - "threading [.NET Framework],unhandled exceptions"
-  - "threading [.NET Framework],exceptions in managed threads"
-  - "managed threading"
+title: Eccezioni in thread gestiti
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unhandled exceptions,in managed threads
+- threading [.NET Framework],unhandled exceptions
+- threading [.NET Framework],exceptions in managed threads
+- managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Exceptions in Managed Threads
-A partire da .NET Framework versione 2.0, Common Language Runtime consente alla maggior parte delle eccezioni non gestite nei thread di proseguire normalmente.  Per questo motivo, nella maggior parte dei casi l'eccezione non gestita determina l'interruzione dell'applicazione.  
+# <a name="exceptions-in-managed-threads"></a>Eccezioni in thread gestiti
+A partire da .NET Framework versione 2.0, Common Language Runtime consente alla maggior parte delle eccezioni non gestite nei thread di proseguire normalmente. Nella maggior parte dei casi questo significa che l'eccezione non gestita provoca l'interruzione dell'applicazione.  
   
 > [!NOTE]
->  Questa è una modifica significativa rispetto a .NET Framework versioni 1.0 e 1.1, che forniscono un meccanismo di backstop per numerose eccezioni non gestite, ad esempio quelle che si verificano nei thread del pool.  Al riguardo, vedere [Modifica rispetto alle versioni precedenti](#ChangeFromPreviousVersions) più avanti in questo argomento.  
+>  Si tratta di una cambiamento significativo rispetto alle versioni 1.0 e 1.1 di .NET Framework, che forniscono una barriera per numerose eccezioni non gestite, ad esempio, eccezioni non gestite nel pool di thread. Vedere [Cambiamenti rispetto alle versioni precedenti](#ChangeFromPreviousVersions) più avanti in questo argomento.  
   
- Common Language Runtime fornisce un meccanismo di backstop per alcune eccezioni non gestite utilizzate per controllare il flusso di programma:  
+ Common Language Runtime fornisce una barriera per determinate eccezioni non gestite usate per controllare il flusso del programma:  
   
--   Viene generata un'eccezione <xref:System.Threading.ThreadAbortException> in un thread per effetto di una chiamata a <xref:System.Threading.Thread.Abort%2A>.  
+-   Oggetto <xref:System.Threading.ThreadAbortException> , viene generata in un thread perché <xref:System.Threading.Thread.Abort%2A> è stato chiamato.  
   
--   Viene generata un'eccezione <xref:System.AppDomainUnloadedException> in un thread perché è in corso lo scaricamento del dominio applicazione in cui il thread è in esecuzione.  
+-   Un <xref:System.AppDomainUnloadedException> , viene generata in un thread perché il dominio applicazione in cui è in esecuzione il thread è in corso lo scaricamento.  
   
--   Il thread viene interrotto da Common Language Runtime o da un processo host mediante la generazione di un'eccezione interna.  
+-   Common Language Runtime o un processo host termina il thread generando un'eccezione interna.  
   
- Se una qualsiasi di queste eccezioni non è gestita nei thread creati da Common Language Runtime, l'eccezione determina l'interruzione del thread, ma Common Language Runtime impedisce che prosegua ulteriormente.  
+ Se una qualsiasi di queste eccezioni viene gestita nei thread creati da Common Language Runtime, l'eccezione termina il thread, ma Common Language Runtime non consente all'eccezione di proseguire.  
   
- Se queste eccezioni non sono gestite nel thread principale o nei thread passati sotto il controllo di Common Language Runtime dal codice non gestito, proseguono normalmente e l'applicazione viene quindi interrotta.  
+ Se queste eccezioni vengono gestite nel thread principale o in thread immessi nel runtime dal codice non gestito, esse proseguono normalmente con una conseguente chiusura dell'applicazione.  
   
 > [!NOTE]
->  Common Language Runtime può generare un'eccezione non gestita prima che qualsiasi codice gestito riesca a installare un gestore eccezioni.  Anche se il codice gestito non può gestire in alcun modo tale eccezione, a quest'ultima viene consentito di proseguire normalmente.  
+>  È possibile che il runtime generi un'eccezione non gestita prima che qualsiasi codice gestito abbia avuto la possibilità di installare un gestore di eccezioni. Anche se il codice gestito non può gestire tale eccezione, all'eccezione è consentito proseguire normalmente.  
   
-## Esposizione dei problemi associati al threading durante le operazioni di sviluppo  
- Quando i thread possono avere automaticamente esito negativo, senza interrompere l'applicazione, è possibile che non vengano rilevati gravi problemi di programmazione.  Si tratta di un problema specifico di servizi e altre applicazioni eseguiti per periodi di tempo prolungati.  Non appena si verifica un errore nei thread, lo stato del programma inizia gradualmente a danneggiarsi.  È possibile che le prestazioni dell'applicazione diminuiscano e quest'ultima si blocchi.  
+## <a name="exposing-threading-problems-during-development"></a>Esposizione di problemi di threading durante lo sviluppo  
+ Quando nei thread si verifica un errore in modo silenzioso ma l'applicazione non viene terminata, è possibile che vengano rilevati gravi problemi di programmazione. Si tratta di un problema specifico dei servizi e delle altre applicazioni eseguite per periodi prolungati. In caso di errore dei thread, il programma viene gradualmente danneggiato. L'errore può influire negativamente sulle prestazioni dell'applicazione o l'applicazione potrebbe bloccarsi.  
   
- Quando si consente alle eccezioni non gestite nei thread di proseguire normalmente, finché il programma non termina automaticamente, è possibile esporre tali problemi durante le fasi di sviluppo e di verifica dell'applicazione.  I report di errore relativi alle interruzioni del programma supportano il debug.  
+ Consentire alle eccezioni non gestite nei thread di proseguire normalmente finché il sistema operativo non termina il programma permette di esporre tali problemi durante le fasi di sviluppo e test. I report di errore relativi alle chiusure dei programmi supportano il debug.  
   
 <a name="ChangeFromPreviousVersions"></a>   
-## Modifica rispetto alle versioni precedenti  
- La modifica più significativa apportata rispetto alle versioni precedenti riguarda i thread gestiti.  In .NET Framework versioni 1.0 e 1.1 Common Language Runtime fornisce un meccanismo di backstop per le eccezioni non gestite nelle seguenti situazioni:  
+## <a name="change-from-previous-versions"></a>Cambiamenti dalle versioni precedenti  
+ Il cambiamento più significativo riguarda i thread gestiti. In .NET Framework versioni 1.0 e 1.1, Common Language Runtime fornisce una barriera per le eccezioni non gestite nelle situazioni seguenti:  
   
--   Non esiste alcuna eccezione non gestita in un thread del pool.  Se un'attività genera un'eccezione di cui non esegue la gestione, Common Language Runtime stampa la traccia dello stack dell'eccezione nella console e quindi restituisce il thread nel relativo pool.  
+-   Non esiste alcun equivalente di un'eccezione non gestita in un pool di thread. Quando un'attività genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi restituisce il thread al pool di thread.  
   
--   Non esiste alcuna eccezione non gestita in un thread creato con il metodo <xref:System.Threading.Thread.Start%2A> della classe <xref:System.Threading.Thread>.  Quando il codice in esecuzione su tale thread genera un'eccezione di cui non esegue la gestione, Common Language Runtime stampa la traccia dello stack dell'eccezione nella console e quindi interrompe correttamente il thread.  
+-   Non è non esiste un'eccezione non gestita in un thread creato con il <xref:System.Threading.Thread.Start%2A> metodo la <xref:System.Threading.Thread> classe. Quando un codice in esecuzione su un thread simile genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi termina normalmente il thread.  
   
--   Non esiste alcuna eccezione non gestita nel thread finalizzatore.  Se un finalizzatore genera un'eccezione di cui non esegue la gestione, Common Language Runtime stampa la traccia dello stack dell'eccezione nella console e quindi ripristina l'esecuzione dei finalizzatori.  
+-   Non esiste alcun equivalente di un'eccezione non gestita nel thread finalizzatore. Se un finalizzatore genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e consente quindi al thread finalizzatore di riprendere l'esecuzione dei finalizzatori.  
   
- Lo stato in background o in primo piano di un thread gestito non influisce su questo comportamento.  
+ Lo stato in primo piano o in background di un thread gestito non influisce su tale comportamento.  
   
- Per le eccezioni non gestite in thread provenienti dal codice non gestito, la differenza è più sottile.  La finestra di dialogo per l'associazione JIT di Common Language Runtime viene visualizzata prima di quella del sistema operativo per le eccezioni gestite o native nei thread passati attraverso il codice nativo.  Il processo si interrompe in ogni caso.  
+ Per le eccezioni non gestite nei thread di origine nel codice non gestito, la differenza è più complessa. La finestra di dialogo dell'associazione JIT del runtime ha la precedenza sulla finestra di dialogo del sistema operativo per le eccezioni gestite o native nei thread passati attraverso il codice nativo. Il processo viene terminato in tutti i casi.  
   
-### Migrazione del codice  
- In genere, la modifica esporrà i problemi di programmazione, che in precedenza non venivano riconosciuti, affinché possano essere risolti.  In alcuni casi è tuttavia possibile che i programmatori abbiano usufruito della funzionalità di backstop di Common Language Runtime, ad esempio per interrompere i thread.  A seconda della situazione, è opportuno che prendano in considerazione una delle seguenti strategie di migrazione:  
+### <a name="migrating-code"></a>Migrazione del codice  
+ In generale, il cambiamento metterà in evidenza i problemi di programmazione in precedenza non riconosciuti in modo che possano essere risolti. In alcuni casi, tuttavia, i programmatori potrebbero aver sfruttato la barriera di runtime, ad esempio per interrompere i thread. A seconda della situazione, è necessario considerare una delle seguenti strategie di migrazione:  
   
--   Ristrutturare il codice in modo che i thread si interrompano normalmente alla ricezione di un segnale.  
+-   Ristrutturare il codice in modo che il thread venga chiuso normalmente quando viene ricevuto un segnale.  
   
--   Utilizzare il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> per interrompere il thread.  
+-   Utilizzare il <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metodo per interrompere il thread.  
   
--   Se è necessario che un thread venga interrotto perché l'operazione di arresto del processo possa continuare, trasformare il thread in un thread in background, in modo che termini automaticamente all'uscita dal processo.  
+-   Se un thread deve essere arrestato in modo che la terminazione del processo possa continuare, spostare il thread in background in modo che venga terminato automaticamente all'uscita dal processo.  
   
- In ogni caso la strategia deve rispettare le indicazioni guida per la progettazione relative alle eccezioni.  Per informazioni al riguardo, vedere [Linee guida di progettazione per le eccezioni](../../../docs/standard/design-guidelines/exceptions.md).  
+ In tutti i casi, la strategia deve rispettare le linee guida di progettazione per le eccezioni. Vedere [Linee guida di progettazione delle eccezioni](../../../docs/standard/design-guidelines/exceptions.md).  
   
-### Flag di compatibilità tra applicazioni  
- Come misura di compatibilità temporanea, gli amministratori possono inserire un flag di compatibilità nella sezione `<runtime>` del file di configurazione dell'applicazione.  In questo modo Common Language Runtime ripristinerà il comportamento previsto per le versioni 1.0 e 1.1.  
+### <a name="application-compatibility-flag"></a>Contrassegno della compatibilità delle applicazioni  
+ Come misura di compatibilità temporanea, gli amministratori possono inserire un contrassegno di compatibilità nella sezione `<runtime>` del file di configurazione dell'applicazione. In questo modo Common Language Runtime può ripristinare il comportamento delle versioni 1.0 e 1.1.  
   
-```  
+```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
-## Override degli host  
- In .NET Framework versione 2.0 un host non gestito può utilizzare l'interfaccia [ICLRPolicyManager](../../../ocs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) nell'API di hosting per eseguire l'override dei criteri predefiniti di Common Language Runtime relativi alle eccezioni non gestite.  Per l'impostazione dei criteri associati alle eccezioni non gestite viene utilizzata la funzione [ICLRPolicyManager::SetUnhandledExceptionPolicy](../Topic/ICLRPolicyManager::SetUnhandledExceptionPolicy%20Method.md).  
+## <a name="host-override"></a>Override dell'host  
+ In .NET Framework versione 2.0 un host non gestito può sfruttare l'interfaccia [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) nell'API di hosting per eseguire l'override del criterio predefinito dell'eccezione non gestita di Common Language Runtime. La funzione [ICLRPolicyManager:: SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) viene usata per impostare il criterio per le eccezioni non gestite.  
   
-## Vedere anche  
- [Managed Threading Basics](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Vedere anche  
+ [Nozioni di base sul threading gestito](../../../docs/standard/threading/managed-threading-basics.md)

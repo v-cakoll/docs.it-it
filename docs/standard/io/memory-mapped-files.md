@@ -1,87 +1,93 @@
 ---
-title: "File mappati alla memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comunicazione interprocesso"
-  - "file mappati alla memoria"
+title: File mappati alla memoria
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- memory-mapped files
+- inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: 24
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 2602d431aada7b3e0ee226eed319903492022ae9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# File mappati alla memoria
-Un file mappato alla memoria include il contenuto di un file nella memoria virtuale.  Questo mapping tra un file e lo spazio di memoria consente a un'applicazione, con più processi, di modificare il file leggendo e scrivendo direttamente nella memoria.  A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile utilizzare il codice gestito per accedere ai file mappati in memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati in memoria, come descritto nella [Gestione di file mappati in memoria in Win32](http://go.microsoft.com/fwlink/?linkid=180801) \(la pagina potrebbe essere in inglese\) nella libreria MSDN.  
+# <a name="memory-mapped-files"></a>File mappati alla memoria
+Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra uno spazio di memoria e di file consente a un'applicazione, con più processi modificare il file da leggere e scrivere direttamente alla memoria. A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile utilizzare codice gestito per accedere ai file mappati alla memoria nello stesso modo che le funzioni Windows native accedere ai file mappati alla memoria, come descritto in [gestione di file Win32](http://go.microsoft.com/fwlink/?linkid=180801).  
   
- Vi sono due tipi di file mappati alla memoria:  
+ Esistono due tipi di file mappati alla memoria:  
   
--   File mappati alla memoria salvati in modo permanente  
+-   File mappato alla memoria persistenti  
   
-     I file persistenti sono file mappati alla memoria associati a un file di origine su un disco.  Quando l'utilizzo del file da parte dell'ultimo processo termina, i dati vengono salvati nel file di origine sul disco.  Questi file mappati alla memoria sono adatti per l'utilizzo di file di origine di dimensioni molto grandi.  
+     File persistenti sono file mappato alla memoria associati a un file di origine in un disco. Quando l'ultimo processo ha completato l'utilizzo con il file, i dati vengono salvati nel file di origine sul disco. Questi file mappato alla memoria sono adatti per l'utilizzo di file di origine molto elevata.  
   
--   File mappati alla memoria non salvati in modo permanente  
+-   File mappato alla memoria non persistenti  
   
-     I file non persistenti sono file mappati alla memoria non associati a un file di origine su un disco.  Quando l'utilizzo del file da parte dell'ultimo processo termina, i dati vengono persi e il file viene recuperato dalla procedura di Garbage Collection.  Questi file sono adatti alla creazione di memoria condivisa per le comunicazioni interprocesso \(IPC\).  
+     File persistenti non sono file mappati alla memoria non sono associati a un file su disco. Quando l'ultimo processo ha completato l'utilizzo con il file, i dati vengono persi e il file viene recuperato da garbage collection. Questi file sono adatti per la creazione di memoria condivisa per le comunicazioni interprocesso (IPC).  
   
-## Processi, visualizzazioni e gestione della memoria  
- I file mappati alla memoria possono essere condivisi tra più processi.  I processi possono eseguire il mapping allo stesso file mappato alla memoria utilizzando un nome comune assegnato dal processo che ha creato il file.  
+## <a name="processes-views-and-managing-memory"></a>Processi, viste e gestione della memoria  
+ File mappato alla memoria possono essere condivisi tra più processi. Processi possono eseguire il mapping allo stesso file mappato alla memoria utilizzando un nome comune che viene assegnato dal processo di cui è stato creato.  
   
- Per utilizzare un file mappato alla memoria, è necessario creare una vista dell'intero file o di parte di esso.  È inoltre possibile creare più viste della stessa parte del file mappato alla memoria, creando in questo modo memoria simultanea.  Affinché due viste rimangano simultanee, è necessario che vengano create dallo stesso file mappato alla memoria.  
+ Per utilizzare un file mappato alla memoria, è necessario creare una visualizzazione dell'intero file mappato alla memoria o una parte di esso. È inoltre possibile creare più visualizzazioni alla stessa parte del file mappato alla memoria, in modo da creare memoria simultanea. Per le due viste rimangano simultanee, devono essere creati dallo stesso file mappato alla memoria.  
   
- L'utilizzo di più visualizzazioni può essere necessario anche se il file è più grande della dimensione dello spazio in memoria logico dell'applicazione disponibile per il mapping di memoria \(2 GB in un computer a 32 bit\).  
+ Visualizzazioni multiple potrebbero inoltre essere necessarie se il file è maggiore della dimensione dello spazio di memoria logica dell'applicazione disponibile per il mapping (2 GB in un computer a 32 bit) di memoria.  
   
- Esistono due tipi di visualizzazioni: visualizzazione di accesso al flusso e visualizzazione di accesso casuale.  Utilizzare le visualizzazioni di accesso al flusso per un accesso sequenziale a un file, consigliabile per i file non persistenti e la comunicazione interprocesso \(IPC\).  Le visualizzazioni di accesso casuale sono preferibili per l'utilizzo di file persistenti.  
+ Esistono due tipi di visualizzazioni: visualizzazione di accesso e visualizzazione di accesso casuale di flusso. Utilizzare le visualizzazioni di accesso di flusso per l'accesso sequenziale in un file. Questa è consigliata per i file non persistenti e IPC. Le visualizzazioni ad accesso casuale sono preferibili per l'utilizzo dei file persistenti.  
   
- L'accesso ai file mappati alla memoria viene eseguito tramite il gestore della memoria del sistema operativo, pertanto il file viene partizionato automaticamente in un numero di pagine e all'occorrenza viene eseguito l'accesso.  Non è necessario gestire manualmente la gestione della memoria.  
+ File mappati alla memoria sono accessibili tramite il gestore di memoria del sistema operativo, in modo che il file viene automaticamente partizionato in un numero di pagine e accedere in base alle esigenze. Non è necessario gestire personalmente la gestione della memoria.  
   
- Nell'illustrazione riportata di seguito viene mostrato come più processi possono disporre di visualizzazioni multiple e sovrapposte contemporaneamente nello stesso file mappato alla memoria.  
+ La figura seguente mostra come più processi possono avere più e sovrapposti viste nello stesso file mappato alla memoria nello stesso momento.  
   
- ![Visualizzazioni per un file mappato alla memoria](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-Visualizzazioni multiple e sovrapposte in un file mappato alla memoria  
+ ![Mostra visualizzazioni a una memoria &#45; il file mappato. ] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
+Più e sovrapposte viste in un file mappato alla memoria  
   
-## Programmazione con file mappati alla memoria  
- Nella tabella seguente viene fornita una guida per l'utilizzo di oggetti file mappati alla memoria e dei relativi membri.  
+## <a name="programming-with-memory-mapped-files"></a>Programmazione con i file mappati alla memoria  
+ Nella tabella seguente viene fornita una Guida per l'utilizzo di oggetti del file mappato alla memoria e i relativi membri.  
   
-|Task|Metodi o proprietà da utilizzare|  
-|----------|--------------------------------------|  
-|Per ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> che rappresenta un file mappato alla memoria persistente da un file su disco.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=fullName>.|  
-|Per ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> che rappresenta un file mappato alla memoria non persistente \(non associato a un file su disco\).|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=fullName>.<br /><br /> \- oppure \-<br /><br /> Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=fullName>.|  
-|Per ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> di un file mappato alla memoria esistente \(persistente o non persistente\).|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=fullName>.|  
-|Per ottenere un oggetto <xref:System.IO.UnmanagedMemoryStream> per una visualizzazione di accesso sequenziale al file mappato alla memoria.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=fullName>.|  
-|Per ottenere un oggetto <xref:System.IO.UnmanagedMemoryAccessor> per una visualizzazione di accesso casuale a un file mappato alla memoria.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=fullName>.|  
-|Per ottenere un oggetto <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> da utilizzare con codice non gestito.|Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=fullName>.<br /><br /> \- oppure \-<br /><br /> Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=fullName>.<br /><br /> \- oppure \-<br /><br /> Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=fullName>.|  
-|Per ritardare l'allocazione della memoria fino alla creazione di una visualizzazione \(solo file non persistenti\)<br /><br /> Per determinare la dimensione corrente di paging del sistema, utilizzare la proprietà <xref:System.Environment.SystemPageSize%2A?displayProperty=fullName>.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> con il valore <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions?displayProperty=fullName>.<br /><br /> \- oppure \-<br /><br /> Metodi <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> che dispongono di un'enumerazione <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> come parametro.|  
+|Attività|Metodi o proprietà da utilizzare|  
+|----------|----------------------------------|  
+|Per ottenere un <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> oggetto che rappresenta un file mappato alla memoria persistente da un file su disco.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>.|  
+|Per ottenere un <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> oggetto che rappresenta un file mappato alla memoria non persistente (non associato a un file su disco).|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>.|  
+|Per ottenere un <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> oggetto di un file mappato alla memoria esistente (persistente o non persistente).|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>.|  
+|Per ottenere un <xref:System.IO.UnmanagedMemoryStream> oggetto per una visualizzazione in sequenza a cui si accede al file mappato alla memoria.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>.|  
+|Per ottenere un <xref:System.IO.UnmanagedMemoryAccessor> dell'oggetto per una visualizzazione ad accesso casuale mappato alla memoria dannoso.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>.|  
+|Per ottenere un <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> oggetto da usare con codice non gestito.|Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
+|Per ritardare l'allocazione della memoria fino a una vista viene creata (solo file di non persistente).<br /><br /> (Per determinare le dimensioni della pagina corrente del sistema, utilizzare il <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> proprietà.)|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A>metodo con il <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> valore.<br /><br /> -oppure-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A>metodi che presentano un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> enumerazione come parametro.|  
   
-### Protezione  
- Quando si crea un file mappato alla memoria, è possibile applicare le autorizzazioni di accesso tramite i metodi seguenti che accettano un'enumerazione <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> come parametro:  
+### <a name="security"></a>Sicurezza  
+ È possibile applicare i diritti di accesso quando si crea un file mappato alla memoria, utilizzando i metodi seguenti che accettano un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> enumerazione come parametro:  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=fullName>  
+-   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=fullName>  
+-   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=fullName>  
+-   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
- È possibile specificare le autorizzazioni di accesso per l'apertura di un file mappato alla memoria esistente utilizzando i metodi <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> che accettano <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> come parametro.  
+ È possibile specificare i diritti di accesso per l'apertura di un file mappato alla memoria esistente utilizzando il <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> metodi che accettano un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> come parametro.  
   
- Inoltre, è possibile includere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> che contiene regole di accesso predefinite.  
+ Inoltre, è possibile includere un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> oggetto che contiene le regole di accesso predefinito.  
   
- Per applicare nuove regole di accesso a un file mappato alla memoria, utilizzare il metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl%2A>.  Per recuperare regole di accesso o di controllo da un file esistente, utilizzare il metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl%2A>.  
+ Per applicare le regole di accesso nuove o modificate in un file mappato alla memoria, utilizzare il <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl%2A> metodo. Per recuperare l'accesso o controllare le regole da un file esistente, utilizzare il <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl%2A> metodo.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
   
-### File mappati alla memoria salvati in modo permanente  
- I metodi <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> consentono di creare un file mappato alla memoria da un file esistente nel disco.  
+### <a name="persisted-memory-mapped-files"></a>File mappato alla memoria persistenti  
+ Il <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> metodi creano un file mappato alla memoria da un file esistente sul disco.  
   
- Nell'esempio seguente viene creata una vista mappata alla memoria di una parte di un file di dimensioni estremamente grandi e ne viene modificata una parte.  
+ Nell'esempio seguente viene creata una visualizzazione mappato alla memoria di una parte di un file molto grande e modifica di una parte di esso.  
   
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
@@ -91,34 +97,34 @@ Visualizzazioni multiple e sovrapposte in un file mappato alla memoria
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/cs/program.cs#1)]
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
-### File mappati alla memoria non salvati in modo permanente  
- I metodi <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> e <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> consentono di creare un file mappato alla memoria non mappato a un file esistente nel disco.  
+### <a name="non-persisted-memory-mapped-files"></a>File mappato alla memoria non persistenti  
+ Il <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> e <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> metodi consentono di creare un file mappato alla memoria non è mappato a un file esistente sul disco.  
   
- L'esempio seguente è composto da tre processi separati \(applicazioni console\) che scrivono valori booleani in un file mappato alla memoria.  Si verifica la sequenza di azioni seguente:  
+ Nell'esempio seguente è costituito da tre processi separati (applicazioni console) che scrivono i valori booleani in un file mappato alla memoria. Si verifica la sequenza di azioni seguente:  
   
-1.  `Process A` crea il file mappato alla memoria e scrive un valore in tale file.  
+1.  `Process A`Crea il file mappato alla memoria e scrive un valore.  
   
-2.  `Process B` apre il file mappato alla memoria e scrive un valore in tale file.  
+2.  `Process B`Apre il file mappato alla memoria e scrive un valore.  
   
-3.  `Process C` apre il file mappato alla memoria e scrive un valore in tale file.  
+3.  `Process C`Apre il file mappato alla memoria e scrive un valore.  
   
-4.  `Process A` legge e visualizza i valori del file mappato alla memoria.  
+4.  `Process A`legge e visualizza i valori del file mappato alla memoria.  
   
-5.  Dopo che il `Process A` ha terminato di utilizzare il file mappato alla memoria, il file viene recuperato immediatamente tramite Garbage Collection.  
+5.  Dopo aver `Process A` è terminato con il file mappato alla memoria, il file viene immediatamente recuperato tramite garbage collection.  
   
- Per eseguire l'esempio, effettuare le operazioni seguenti:  
+ Per eseguire questo esempio, eseguire le operazioni seguenti:  
   
-1.  Compilare le applicazioni e aprire tre finestre Prompt dei comandi.  
+1.  Compilare le applicazioni e aprire tre finestre prompt dei comandi.  
   
-2.  Nella prima finestra Prompt dei comandi, eseguire il `Process A`.  
+2.  Nella prima finestra prompt dei comandi, eseguire `Process A`.  
   
-3.  Nella seconda finestra Prompt dei comandi, eseguire il `Process B`.  
+3.  Nella seconda finestra prompt dei comandi, eseguire `Process B`.  
   
-4.  Tornare al `Process A` e premere INVIO.  
+4.  Tornare alla `Process A` e premere INVIO.  
   
-5.  Nella terza finestra Prompt dei comandi, eseguire il `Process C`.  
+5.  Nella terza finestra prompt dei comandi, eseguire `Process C`.  
   
-6.  Tornare al `Process A` e premere INVIO.  
+6.  Tornare alla `Process A` e premere INVIO.  
   
  L'output di `Process A` è indicato di seguito:  
   
@@ -130,7 +136,7 @@ Process B says: False
 Process C says: True  
 ```  
   
- **Processo A**  
+ **Processo**  
   
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_X#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_X#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/vb/program.vb#1)]  
@@ -145,5 +151,5 @@ Process C says: True
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
-## Vedere anche  
- [I\/O di file e di flussi](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di file e di flussi](../../../docs/standard/io/index.md)

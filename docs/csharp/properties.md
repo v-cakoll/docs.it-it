@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
+ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5d2d5d7074678383243e687d4b469606007e585
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="properties"></a>Proprietà
 
 Le proprietà sono elementi fondamentali in C#. Il linguaggio definisce la sintassi che consente agli sviluppatori di scrivere codice che esprime in modo preciso la finalità della progettazione.
@@ -151,7 +149,7 @@ public class Person
 
 L'accesso alla proprietà `FirstName` potrà quindi essere eseguito da qualsiasi codice, ma la proprietà potrà essere assegnata soltanto da altro codice della classe `Person`.
 
-È possibile aggiungere qualsiasi modificatore di accesso restrittivo alle funzioni di accesso set o get. Il modificatore di accesso inserito nella singola funzione di accesso deve essere più restrittivo del modificatore di accesso della definizione della proprietà. Il codice precedente è valido poiché la proprietà `FirstName` è `public` e la funzione di accesso set è `private`. Non è possibile dichiarare una proprietà `private` con una funzione di accesso `public`. Le dichiarazioni di proprietà possono anche essere dichiarate `protected`, `internal`, `protected internal` o `private`.   
+È possibile aggiungere qualsiasi modificatore di accesso restrittivo alle funzioni di accesso set o get. Il modificatore di accesso inserito nella singola funzione di accesso deve essere più restrittivo del modificatore di accesso della definizione della proprietà. Il codice precedente è valido poiché la proprietà `FirstName` è `public` e la funzione di accesso set è `private`. Non è possibile dichiarare una proprietà `private` con una funzione di accesso `public`. Dichiarazioni di proprietà possono essere dichiarate anche `protected`, `internal`, `protected internal`, `private protected` o addirittura `private`.   
 
 È anche consentito inserire il modificatore più restrittivo nella funzione di accesso `get`. Ad esempio, è possibile avere una proprietà `public` e limitare la funzione di accesso `get` a `private`. Questo scenario viene usato raramente.
 
@@ -317,4 +315,3 @@ Anche questo è un esempio di un caso in cui è possibile scrivere codice nelle 
 
 Le proprietà sono una forma di campi intelligenti in una classe o un oggetto. All'esterno dell'oggetto, vengono visualizzate come campi dell'oggetto. Tuttavia, le proprietà possono essere implementate usando l'intera gamma di funzionalità di C#.
 È possibile specificare la convalida, un'accessibilità diversa, la valutazione lazy o tutti i requisiti necessari negli scenari.
-

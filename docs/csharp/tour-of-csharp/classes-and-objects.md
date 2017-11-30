@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
+ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -74,6 +73,8 @@ A ogni membro di una classe è associata una caratteristica di accessibilità, c
     - Accesso limitato alla classe principale o alle classi derivate dalla classe principale
 * `private`
     - Accesso limitato a questa classe
+* `private protected`
+    - Accesso limitato per le classi contenitore derivato da all'interno tipo contenitore stesso assembly
 
 ## <a name="type-parameters"></a>Parametri di tipo
 
@@ -140,7 +141,7 @@ Un *parametro di output* viene usato per passare argomenti per riferimento. È s
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-Una *matrice di parametri* consente di passare un numero variabile di argomenti a un metodo. Una matrice di parametri viene dichiarata con il modificatore `params`. Solo l'ultimo parametro di un metodo può essere costituito da una matrice di parametri, che deve essere sempre di tipo unidimensionale. I metodi Write e WriteLine della classe `@System.Console` sono ottimi esempi per illustrare l'uso delle matrici di parametri. Vengono dichiarati come illustrato di seguito.
+Una *matrice di parametri* consente di passare un numero variabile di argomenti a un metodo. Una matrice di parametri viene dichiarata con il modificatore `params`. Solo l'ultimo parametro di un metodo può essere costituito da una matrice di parametri, che deve essere sempre di tipo unidimensionale. I metodi Write e WriteLine della classe <xref:System.Console?displayProperty=nameWithType> sono ottimi esempi per illustrare l'uso delle matrici di parametri. Vengono dichiarati come illustrato di seguito.
 
 [!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
@@ -301,4 +302,3 @@ L'istruzione `using` offre una soluzione più efficace per l'eliminazione di ogg
 >[!div class="step-by-step"]
 [Precedente](statements.md)
 [Successivo](structs.md)
-

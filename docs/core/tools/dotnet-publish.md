@@ -1,27 +1,23 @@
 ---
 title: Comando dotnet publish - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet publish consente di pubblicare il progetto .NET Core in una directory.
-keywords: dotnet-publish, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 08/12/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
+ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: db6e527a6132be0b6362c68945bb68884f5ad619
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Nome
 
 `dotnet publish`: inserisce l'applicazione e le relative dipendenze in una cartella per la distribuzione in un sistema host.
 
@@ -95,10 +91,11 @@ Non esegue un ripristino implicito quando si esegue il comando.
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Specifica il percorso della directory di output. Se non specificato, il percorso predefinito sarà *./bin/[configuration]/[framework]/* per una distribuzione dipendente da framework o *./bin/[configuration]/[framework]/[runtime]* per una distribuzione indipendente.
+Se viene fornito un percorso relativo, la directory di output generata è relativo al percorso del file di progetto, non alla directory di lavoro corrente.
 
 `--self-contained`
 
-Pubblica il runtime .NET Core con l'applicazione in modo che non sia necessario installare il runtime nel computer di destinazione. Se viene specificato un identificatore di runtime, il valore predefinito è `true`. Per altre informazioni sui diversi tipi di distribuzione, vedere [Distribuzione di applicazioni .NET Core](../deploying/index.md).
+Pubblica il runtime .NET Core con l'applicazione in modo che non sia necessario installare il runtime nel computer di destinazione. Se viene specificato un identificatore di runtime, il valore predefinito è `true`. Per ulteriori informazioni sui tipi di distribuzione diversi, vedere [la distribuzione di applicazioni .NET Core](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -133,6 +130,7 @@ Specifica uno o più [manifesti di destinazione](../deploying/runtime-store.md) 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Specifica il percorso della directory di output. Se non specificato, il percorso predefinito sarà *./bin/[configuration]/[framework]/* per una distribuzione dipendente da framework o *./bin/[configuration]/[framework]/[runtime]* per una distribuzione indipendente.
+Se viene fornito un percorso relativo, la directory di output generata è relativo al percorso del file di progetto, non alla directory di lavoro corrente.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -170,4 +168,3 @@ Pubblicare l'applicazione corrente usando il framework `netcoreapp1.1` e il runt
 
 * [Framework di destinazione](../../standard/frameworks.md)
 * [Catalogo RID (Runtime IDentifier)](../rid-catalog.md)
-

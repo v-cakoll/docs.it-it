@@ -12,11 +12,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 03ac8e41f8126c6b05eac82d143291a0de491969
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 8d527b728d0b4ac86a8dd98afb45a09585bd0c96
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="activity-relationships-validation"></a>Convalida di relazioni tra attività
 Il presente esempio è costituito da tre attività, `CreateCity`, `CreateState` e `CreateCountry`. `CreateCity` deve trovarsi all'interno di un'attività `CreateState` e `CreateState` deve trovarsi all'interno di un'attività `CreateCountry`. Ai fini di questo esempio, la logica di convalida è nel codice per l'attività `CreateState` e in XAML per l'attività `CreateCity`. Entrambi i vincoli presentano lo stesso comportamento.  
@@ -49,6 +49,4 @@ Il presente esempio è costituito da tre attività, `CreateCity`, `CreateState` 
 >   
 >  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`  
-  
-## <a name="see-also"></a>Vedere anche
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`

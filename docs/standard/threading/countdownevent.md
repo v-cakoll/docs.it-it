@@ -1,52 +1,57 @@
 ---
-title: "CountdownEvent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "synchronization primitives, CountdownEvent"
+title: CountdownEvent
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 9f953f6477abf1f4e0d6aaf79e67005172ff1144
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# CountdownEvent
-<xref:System.Threading.CountdownEvent?displayProperty=fullName> è una primitiva di sincronizzazione che sblocca i thread in attesa dopo essere stata segnalata un determinato numero di volte.  <xref:System.Threading.CountdownEvent> è progettato per scenari nei quali si dovrebbe altrimenti utilizzare un oggetto <xref:System.Threading.ManualResetEvent> o <xref:System.Threading.ManualResetEventSlim> e diminuire manualmente una variabile prima di segnalare l'evento.  Ad esempio, in uno scenario di divisione\/unione, è possibile creare un oggetto <xref:System.Threading.CountdownEvent> con un conteggio segnali pari a 5, quindi avviare cinque elementi di lavoro nel pool di thread e fare in modo che ogni elemento di lavoro chiami <xref:System.Threading.CountdownEvent.Signal%2A> quando viene completato.  Ogni chiamata a <xref:System.Threading.CountdownEvent.Signal%2A> diminuisce di 1 il conteggio segnali.  Nel thread principale, la chiamata a <xref:System.Threading.CountdownEvent.Wait%2A> si bloccherà fino a che il conteggio segnali non sarà zero.  
+# <a name="countdownevent"></a>CountdownEvent
+<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>è una primitiva di sincronizzazione che sblocca i thread in attesa dopo che è stato segnalato un certo numero di volte. <xref:System.Threading.CountdownEvent>è progettato per scenari in cui in caso contrario è necessario utilizzare un <xref:System.Threading.ManualResetEvent> o <xref:System.Threading.ManualResetEventSlim> e diminuire manualmente una variabile prima di segnalare l'evento. In uno scenario di divisione e unione, ad esempio, è possibile creare solo un <xref:System.Threading.CountdownEvent> che presenta un numero di segnale di 5 e quindi avviare cinque elementi di lavoro sul thread del pool e ogni chiamata di elemento di lavoro <xref:System.Threading.CountdownEvent.Signal%2A> quando viene completato. Ogni chiamata a <xref:System.Threading.CountdownEvent.Signal%2A> decrementa il conteggio segnali 1. Nel thread principale, la chiamata a <xref:System.Threading.CountdownEvent.Wait%2A> verrà bloccata finché il segnale di conteggio è zero.  
   
 > [!NOTE]
->  Nel caso di codice che non deve interagire con le API di sincronizzazione di .NET Framework legacy, considerare l'utilizzo di oggetti <xref:System.Threading.Tasks.Task?displayProperty=fullName> e\/o del metodo <xref:System.Threading.Tasks.Parallel.Invoke%2A> per un approccio ancora più semplice all'espressione del parallelismo di divisione\-unione.  
+>  Per il codice che non devono interagire con l'API di sincronizzazione di .NET Framework legacy, è consigliabile utilizzare <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> oggetti o <xref:System.Threading.Tasks.Parallel.Invoke%2A> metodo per un approccio ancora più semplice per esprimere il parallelismo fork-join.  
   
- <xref:System.Threading.CountdownEvent> presenta le seguenti funzionalità aggiuntive:  
+ <xref:System.Threading.CountdownEvent>dispone di queste funzionalità aggiuntive:  
   
--   L'operazione di attesa può essere annullata tramite token di annullamento.  
+-   L'operazione di attesa può essere annullata tramite i token di annullamento.  
   
--   Il conteggio segnali può essere incrementato dopo la creazione dell'istanza.  
+-   Il numero di segnale può essere incrementato dopo la creazione dell'istanza.  
   
--   Una volta che <xref:System.Threading.CountdownEvent.Wait%2A> è stato restituito mediante la chiamata al metodo <xref:System.Threading.CountdownEvent.Reset%2A>, le istanze possono essere riutilizzate.  
+-   Istanze possono essere riutilizzate dopo <xref:System.Threading.CountdownEvent.Wait%2A> ha restituito chiamando il <xref:System.Threading.CountdownEvent.Reset%2A> metodo.  
   
--   Le istanze espongono un oggetto <xref:System.Threading.WaitHandle> per l'integrazione con altre API di sincronizzazione di .NET Framework, ad esempio <xref:System.Threading.WaitHandle.WaitAll%2A>.  
+-   Le istanze espongono un <xref:System.Threading.WaitHandle> per l'integrazione con altre API di sincronizzazione di .NET Framework, ad esempio <xref:System.Threading.WaitHandle.WaitAll%2A>.  
   
-## Utilizzo di base  
- Nell'esempio seguente viene illustrato come utilizzare un oggetto <xref:System.Threading.CountdownEvent> con elementi di lavoro <xref:System.Threading.ThreadPool>.  
+## <a name="basic-usage"></a>Utilizzo di base  
+ Nell'esempio seguente viene illustrato come utilizzare un <xref:System.Threading.CountdownEvent> con <xref:System.Threading.ThreadPool> gli elementi di lavoro.  
   
  [!code-csharp[CDS_CountdownEvent#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#01)]
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
-## CountdownEvent con annullamento  
- Nell'esempio seguente viene illustrato come annullare l'operazione di attesa su <xref:System.Threading.CountdownEvent> tramite un token di annullamento.  Il modello di base segue il modello dell'annullamento unificato, introdotto in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  Per ulteriori informazioni, vedere [Cancellation in Managed Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
+## <a name="countdownevent-with-cancellation"></a>CountdownEvent con annullamento  
+ Nell'esempio seguente viene illustrato come annullare l'operazione di attesa in <xref:System.Threading.CountdownEvent> utilizzando un token di annullamento. Il modello di base segue il modello di annullamento unificato, che è stato introdotto in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Per ulteriori informazioni, vedere [annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  
   
- L'operazione di attesa non annulla i thread di segnalazione.  In genere, l'annullamento è applicato a un'operazione logica e ciò può includere l'attesa nell'evento e tutti gli elementi di lavoro che l'attesa sta sincronizzando.  In questo esempio, a ogni elemento di lavoro viene passata una copia dello stesso token di annullamento in modo che possa rispondere alla richiesta di annullamento.  
+ Si noti che l'operazione di attesa non annulla il thread di segnalazione. In genere, annullamento viene applicato a un'operazione logica e che può includere in attesa dell'evento, nonché tutti gli elementi di lavoro che sta sincronizzando il tempo di attesa. In questo esempio, ogni elemento di lavoro viene passato una copia del token di annullamento stesso in modo da poter rispondere alla richiesta di annullamento.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

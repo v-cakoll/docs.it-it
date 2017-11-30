@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
+ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 468c86f36fe71558dcd7a9150337f5a3cce066b8
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="indexers"></a>Indexers (Indicizzatori)
 
 Gli *indicizzatori* sono simili alle proprietà e per molti aspetti si basano sulle stesse funzionalità del linguaggio delle [proprietà](properties.md). Gli indicizzatori consentono proprietà *indicizzate*, ovvero proprietà a cui si fa riferimento tramite uno o più argomenti, che forniscono un indice per una raccolta di valori.
@@ -41,7 +39,7 @@ public int this[string key]
 }
 ```
 
-Da questo esempio iniziale è possibile rendersi conto della relazione tra la sintassi relativa alle proprietà e a quella relativa agli indicizzatori. Questa analogia si estende alla maggior parte delle regole della sintassi degli indicizzatori. Agli indicizzatori si possono applicare tutti i modificatori di accesso validi (public, protected internal, protected, internal o private). Possono essere sealed, virtual o abstract. Come per le proprietà, in un indicizzatore è possibile specificare modificatori di accesso diversi per le funzioni di accesso get e set.
+Da questo esempio iniziale è possibile rendersi conto della relazione tra la sintassi relativa alle proprietà e a quella relativa agli indicizzatori. Questa analogia si estende alla maggior parte delle regole della sintassi degli indicizzatori. Gli indicizzatori possono avere modificatori di accesso valido (pubblica, protetta interna, protetti, interna, privata o privata protetta). Possono essere sealed, virtual o abstract. Come per le proprietà, in un indicizzatore è possibile specificare modificatori di accesso diversi per le funzioni di accesso get e set.
 È anche possibile specificare indicizzatori di sola lettura (omettendo la funzione di accesso set) o indicizzatori di sola scrittura (omettendo la funzione di accesso get).
 
 È possibile applicare agli indicizzatori quasi tutto ciò che si apprende dall'uso delle proprietà. L'unica eccezione a tale regola è costituita dalle *proprietà implementate automaticamente*. Il compilatore non è sempre in grado di generare l'archiviazione corretta per un indicizzatore.
@@ -335,4 +333,3 @@ Gli sviluppatori usano il tipo `DateTime`, ma usano la proprietà `Date` per ass
 
 È necessario creare indicizzatori ogni volta che all'interno di una classe è presente un elemento analogo a una proprietà e tale proprietà rappresenta non un singolo valore, ma una raccolta di valori in cui ogni singolo elemento è identificato da un set di argomenti. Tali argomenti consentono di identificare in modo univoco un elemento della raccolta a cui fare riferimento.
 Gli indicizzatori estendono il concetto di [proprietà](properties.md), in cui un membro viene considerato come elemento dati all'esterno della classe, ma come metodo all'interno. Gli indicizzatori consentono agli argomenti di individuare un singolo elemento all'interno di una proprietà che rappresenta un set di elementi.
-

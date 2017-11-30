@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
+ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---libraries"></a>Portabilità in .NET Core - Librerie
 
 Questo articolo illustra la conversione del codice di librerie per .NET Core, in modo da supportare l'esecuzione multipiattaforma.
@@ -25,7 +23,8 @@ Questo articolo illustra la conversione del codice di librerie per .NET Core, in
 
 In questo articolo si presuppone che:
 
-- Venga usato Visual Studio 2017 o versione successiva. .NET Core non è supportato nelle versioni precedenti di Visual Studio.
+- Venga usato Visual Studio 2017 o versione successiva.
+  - .NET core non è supportato nelle versioni precedenti di Visual Studio
 - Si conosca il [processo di conversione consigliato](index.md).
 - Siano stati risolti eventuali problemi di [dipendenze di terze parti](third-party-deps.md).
 
@@ -56,7 +55,7 @@ Il fatto che un'API o una tecnologia non sia attualmente implementata non implic
 
 Gli AppDomain consentono di isolare le app una dall'altra. Per gli AppDomain è richiesto il supporto di runtime e sono in genere alquanto costosi. Non sono implementati in .NET Core. Non è prevista l'aggiunta di questa funzionalità in futuro. Per l'isolamento del codice, è consigliabile separare i processi o usare i contenitori in alternativa. Per il caricamento dinamico di assembly è consigliabile usare la nuova classe <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-Per semplificare la migrazione di codice da .NET Framework, parte della superficie dell'API <xref:System.AppDomain> è stata esposta in .NET Core. Alcune parti dell'API funzionano normalmente, (ad esempio <xref:System.AppDomain.UnhandledException?displayProperty=fullName>), alcuni membri non eseguono alcuna operazione (ad esempio, <xref:System.AppDomain.SetCachePath%2A>) e alcuni generano <xref:System.PlatformNotSupportedException> (ad esempio, <xref:System.AppDomain.CreateDomain%2A>). Controllare i tipi usati in base al [codice sorgente di riferimento `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) nel [repository di GitHub dotnet/corefx](https://github.com/dotnet/corefx) assicurandosi di selezionare il ramo corrispondente alla versione implementata.
+Per semplificare la migrazione di codice da .NET Framework, parte della superficie dell'API <xref:System.AppDomain> è stata esposta in .NET Core. Alcune parti dell'API funzionano normalmente, (ad esempio <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), alcuni membri non eseguono alcuna operazione (ad esempio, <xref:System.AppDomain.SetCachePath%2A>) e alcuni generano <xref:System.PlatformNotSupportedException> (ad esempio, <xref:System.AppDomain.CreateDomain%2A>). Controllare i tipi usati in base al [codice sorgente di riferimento `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) nel [repository di GitHub dotnet/corefx](https://github.com/dotnet/corefx) assicurandosi di selezionare il ramo corrispondente alla versione implementata.
 
 ### <a name="remoting"></a>Servizi remoti
 
@@ -197,4 +196,3 @@ In definitiva, l'entità del lavoro di conversione dipende in larga misura dal m
 1. Selezionare il successivo livello di codice da convertire e ripetere i passaggi precedenti.
 
 Iniziando con la base della libreria e spostandosi metodicamente dalla base testando ogni livello nel modo appropriato, la conversione diventa un processo sistematico in cui i problemi vengono isolati in un livello del codice alla volta.
-

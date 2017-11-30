@@ -7,18 +7,17 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 55329bed71be21a787d6e77d8c0ea67d607676b8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Nome
 
 `dotnet test`: driver di test .NET usato per eseguire gli unit test.
 
@@ -46,7 +45,7 @@ Il comando `dotnet test` viene usato per eseguire unit test in un determinato pr
 
 Anche i progetti di test devono specificare il Test Runner. Quest'ultimo viene specificato usando un normale elemento `<PackageReference>`, come illustrato nel file di progetto di esempio seguente:
 
-[!code-xml[Modello di base XUnit](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+[!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="arguments"></a>Argomenti
 
@@ -96,7 +95,7 @@ Non compila il progetto di test prima di eseguirlo.
 
 `--no-restore`
 
-Non eseguire un ripristino implicito quando si esegue il comando.
+Non esegue un ripristino implicito quando si esegue il comando.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -212,12 +211,11 @@ Le espressioni possono essere unite con operatori condizionali:
 | <code>&#124;</code>      | OR       |
 | `&`      | AND      |
 
-È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).
+È possibile includere le espressioni tra parentesi quando si utilizza operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).
 
 Per altre informazioni e per esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
 
 ## <a name="see-also"></a>Vedere anche
 
- [Framework e destinazioni](../../standard/frameworks.md)   
+ [Frameworks e destinazioni](../../standard/frameworks.md)  
  [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
-

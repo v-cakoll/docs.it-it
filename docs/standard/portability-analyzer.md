@@ -1,5 +1,5 @@
 ---
-title: .NET Portability Analyzer - .NET | Microsoft Docs
+title: .NET Portability Analyzer - .NET
 description: "Informazioni su come usare lo strumento .NET Portability Analyzer per valutare la portabilità del codice tra le diverse implementazioni di .NET."
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
+ms.openlocfilehash: c204af75283278d16bf661e76f2ec5ae0f1d0b3e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: adb1971c14c8ff8c147dba378ae0e9a5bc0fb5ad
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
 È possibile fare in modo che le librerie in uso siano multi-piattaforma e vedere quanto lavoro è necessario per rendere l'applicazione compatibile con altre implementazioni di .NET. [.NET Portability Analyzer](http://go.microsoft.com/fwlink/?LinkID=507467) è uno strumento che crea un report dettagliato sulla flessibilità del programma in tutte le implementazioni di .NET analizzando gli assembly. Portability Analyzer è offerto come estensione di Visual Studio e come applicazione della console.
@@ -52,4 +50,3 @@ Si vuole evitare di usare Visual Studio? È possibile usare Portability Analyzer
 Il report sulla portabilità di .NET viene salvato come file di Excel con *estensione xlsx* nella directory corrente. Altre informazioni sono disponibili nella scheda **Dettagli** della cartella di lavoro di Excel.
 
 Per altre informazioni su .NET Portability Analyzer, vedere la [documentazione di GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) e il video [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) (Panoramica rapida di .NET Portability Analyzer) in Channel 9.
-

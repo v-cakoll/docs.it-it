@@ -1,57 +1,57 @@
 ---
-title: "Compilazione e riutilizzo nelle espressioni regolari | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espressioni regolari di .NET Framework, compilazione"
-  - "espressioni regolari di .NET Framework, motori"
-  - "compilazione, espressioni regolari"
-  - "analisi di testo con espressioni regolari, compilazione"
-  - "corrispondenza al modello con espressioni regolari, compilazione"
-  - "espressioni regolari, compilazione"
-  - "espressioni regolari, motori"
-  - "ricerca con espressioni regolari, compilazione"
+title: Compilazione e riutilizzo nelle espressioni regolari
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parsing text with regular expressions, compilation
+- searching with regular expressions, compilation
+- .NET Framework regular expressions, engines
+- .NET Framework regular expressions, compilation
+- regular expressions, compilation
+- compilation, regular expressions
+- pattern-matching with regular expressions, compilation
+- regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 76acdf2d0d2f7805ec78ea44136bfc63441b9bc9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Compilazione e riutilizzo nelle espressioni regolari
-È possibile ottimizzare le prestazioni delle applicazioni in cui vengono ampiamente utilizzate le espressioni regolari comprendendo il modo in cui le espressioni vengono compilate dal motore delle espressioni regolari e la relativa memorizzazione nella cache.  In questo argomento vengono illustrate la compilazione e la memorizzazione nella cache.  
+# <a name="compilation-and-reuse-in-regular-expressions"></a>Compilazione e riutilizzo nelle espressioni regolari
+Se si comprendono le modalità con cui le espressioni regolari vengono compilate dal motore e vengono memorizzate nella cache, è possibile ottimizzare le prestazioni delle applicazioni che fanno ampio uso di espressioni regolari. In questo argomento vengono descritte sia la compilazione che la memorizzazione nella cache.  
   
-## espressioni regolari compilate  
- In base all'impostazione predefinita, il modulo delle espressioni regolari consente di compilare un'espressione regolare in una sequenza di istruzioni interne, ovvero di codici ad alto livello diversi dal linguaggio intermedio Microsoft o da MSIL.  Quando il modulo di gestione esegue un'espressione regolare, interpreta i codici interni.  
+## <a name="compiled-regular-expressions"></a>Espressioni regolari compilate  
+ Per impostazione predefinita, il motore delle espressioni regolari compila un'espressione regolare in una sequenza di istruzioni interne. Si tratta di codici di alto livello che sono diversi da Microsoft intermediate language, o MSIL. Quando il motore esegue un'espressione regolare, interpreta i codici interni.  
   
- Se un oggetto <xref:System.Text.RegularExpressions.Regex> viene costruito con l'opzione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>, l'espressione regolare verrà compilata nel codice MSIL esplicito anziché nelle istruzioni interne di alto livello utilizzate per le espressioni regolari.  In tal modo il compilatore JIT \(Just\-In\-Time\) di .NET Framework potrà convertire l'espressione nel codice macchina nativo del computer per ottenere prestazioni migliori.  
+ Se un <xref:System.Text.RegularExpressions.Regex> oggetto viene costruito con la <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opzione, verrà compilata l'espressione regolare per il codice MSIL esplicito invece di istruzioni di espressione regolare di alto livello interno. In questo modo il compilatore JIT di.NET può convertire l'espressione in codice macchina nativo per ottimizzare le prestazioni.  
   
- Non è tuttavia possibile scaricare il codice MSIL generato.  L'unico modo per scaricare il codice consiste nello scaricare l'intero dominio applicazione, cioè tutto il codice dell'applicazione.  Una volta compilata un'espressione regolare con l'opzione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>, .NET Framework non rilascia mai le risorse utilizzate dall'espressione compilata, anche se l'espressione regolare è stata creata da un oggetto <xref:System.Text.RegularExpressions.Regex> rilasciato a sua volta in un Garbage Collection.  
+Tuttavia, il codice MSIL generato non può essere scaricato. L'unico modo per scaricare il codice è scaricare un dominio dell'applicazione intero, ovvero, tutto il codice dell'applicazione. In effetti, una volta compilata un'espressione regolare con la <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opzione, non rilascia le risorse usate dall'espressione compilata, anche se l'espressione regolare è stata creata da un <xref:System.Text.RegularExpressions.Regex> oggetto che è a sua volta rilasciata a garbage collection.  
   
- Per evitare un utilizzo eccessivo di risorse, è necessario limitare il numero di espressioni regolari diverse compilate con l'opzione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  Se è necessario che un'applicazione utilizzi un numero elevato o illimitato di espressioni regolari, è consigliabile che tali espressioni siano interpretate e non compilate.  Nel caso si abbia invece un numero ridotto di espressioni regolari utilizzate ripetutamente, sarà preferibile compilarle con <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> per ottenere prestazioni migliori.  In alternativa è possibile utilizzare espressioni regolari precompilate.  È possibile compilare tutte le espressioni in una DLL riutilizzabile mediante il metodo <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A>,  in modo che non sia necessario compilare in fase di esecuzione, pur consentendo di usufruire della velocità delle espressioni regolari compilate.  
+ È necessario prestare attenzione limitare il numero di espressioni regolari che si compila con il <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opzione per evitare un utilizzo eccessivo di risorse. Se un'applicazione deve usare un numero elevato o illimitato di espressioni regolari, ogni espressione deve essere interpretata, non compilata. Tuttavia, se un numero ridotto di espressioni regolari utilizzato ripetutamente, sarà preferibile compilarle con <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> per ottenere prestazioni migliori. Un'alternativa consiste nell'utilizzare espressioni regolari precompilate. È possibile compilare tutte le espressioni in una DLL riutilizzabile tramite il <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> metodo. Questo evita la necessità di compilare in fase di esecuzione pur consentendo di usufruire della velocità delle espressioni regolari compilate.  
   
-## Cache delle espressioni regolari  
- Per migliorare le prestazioni, il motore delle espressioni regolari gestisce una cache a livello applicazione delle espressioni regolari compilate.  Nella cache vengono archiviati i criteri di ricerca di espressioni regolari utilizzati solo nelle chiamate al metodo statico. I criteri di ricerca di espressioni regolari forniti ai metodi di istanza non vengono memorizzati nella cache. In tal modo non è necessario riconvertire un'espressione in codice di alto livello ogni volta che la si utilizza.  
+## <a name="the-regular-expressions-cache"></a>La cache delle espressioni regolari  
+ Per migliorare le prestazioni, il motore delle espressioni regolari gestisce una cache a livello di applicazione delle espressioni regolari compilate. La cache memorizza i modelli di espressione regolare che vengono usati solo nelle chiamate di metodo statico. I modelli di espressione regolare specificati per i metodi di istanza non vengono memorizzati. Questo evita la necessità di analizzare nuovamente un'espressione nel codice di alto livello ogni volta che viene usata.  
   
- Il numero massimo di espressioni regolari memorizzate nella cache è determinato dal valore della proprietà <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=fullName> `static` \(`Shared` in Visual Basic\).  Per impostazione predefinita, il motore delle espressioni regolari memorizza nella cache fino a 15 espressioni regolari compilate.  Se il numero di espressioni regolari compilate supera la dimensione della cache, verrà eliminata l'espressione regolare utilizzata meno di recente e verrà memorizzata nella cache la nuova espressione regolare.  
+ Il numero massimo di espressioni regolari memorizzate nella cache è determinato dal valore della `static` (`Shared` in Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> proprietà. Per impostazione predefinita, il motore delle espressioni regolari memorizza nella cache fino a 15 espressioni regolari compilate. Se il numero di espressioni regolari compilate supera la dimensione della cache, l'espressione regolare usata meno di recente viene eliminata e viene memorizzata nella cache la nuova espressione regolare.  
   
-> [!IMPORTANT]
->  La modalità di memorizzazione nella cache delle espressioni regolari in .NET Framework versione 2.0 differisce notevolmente da quella in .NET Framework versioni 1.0 e 1.1.  In .NET Framework 1.0 e 1.1 vengono memorizzate nella cache tutte le espressioni regolari, sia quelle utilizzate nelle chiamate al metodo statico che quelle utilizzate nelle chiamate al metodo di istanza.  La cache viene espansa automaticamente per archiviare le nuove espressioni regolari.  In .NET Framework 2.0 vengono memorizzate nella cache solo le espressioni regolari utilizzate nelle chiamate al metodo statico.  Per impostazione predefinita, vengono memorizzate nella cache le ultime 15 espressioni regolari, sebbene la dimensione della cache possa essere regolata impostando il valore della proprietà <xref:System.Text.RegularExpressions.Regex.CacheSize%2A>.  
+ L'applicazione dell'utente può trarre vantaggio delle espressioni regolari precompilate in uno dei due modi seguenti:  
   
- L'applicazione utilizzata può sfruttare le espressioni regolari precompilate in uno dei due modi seguenti:  
+-   Utilizzando un metodo statico del <xref:System.Text.RegularExpressions.Regex> oggetto per definire l'espressione regolare. Se si usa un modello di espressione regolare che è già stato definito in un'altra chiamata di metodo statico, il motore delle espressioni regolari lo recupera dalla cache. In caso contrario il motore compila l'espressione regolare e la aggiunge alla cache.  
   
--   Utilizzando un metodo statico dell'oggetto <xref:System.Text.RegularExpressions.Regex> per definire l'espressione regolare.  Se si utilizza un criterio di ricerca di espressioni regolari già definito in un'altra chiamata al metodo statico, questo verrà recuperato dalla cache dal motore delle espressioni regolari.  In caso contrario, il motore compilerà l'espressione regolare aggiungendola nella cache.  
+-   Riutilizzando un'esistente <xref:System.Text.RegularExpressions.Regex> oggetto fino a quando il criterio di espressione regolare è necessario.  
   
--   Riutilizzando un oggetto <xref:System.Text.RegularExpressions.Regex> esistente purché sia necessario il relativo criterio di ricerca di espressioni regolari.  
+ A causa dell'overhead di istanze di oggetti e compilazione di espressioni regolari, creazione ed eliminazione rapidamente numerose <xref:System.Text.RegularExpressions.Regex> oggetti è un processo molto costoso. Per le applicazioni che utilizzano un numero elevato di espressioni regolari, è possibile ottimizzare le prestazioni mediante chiamate static `Regex` metodi e possibilmente aumentando le dimensioni della cache di espressione regolare.  
   
- A causa del sovraccarico dovuto alla creazione di istanze degli oggetti e alla compilazione di espressioni regolari, la creazione e la rapida eliminazione di numerosi oggetti <xref:System.Text.RegularExpressions.Regex> comportano un eccessivo dispendio di risorse.  Per le applicazioni che utilizzano molte espressioni regolari diverse, è possibile ottimizzare le prestazioni mediante le chiamate ai metodi `Regex` statici e aumentando eventualmente la dimensione della cache delle espressioni regolari.  
-  
-## Vedere anche  
- [Espressioni regolari di .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md)

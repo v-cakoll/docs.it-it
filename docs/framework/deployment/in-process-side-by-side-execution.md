@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>Esecuzione side-by-side in-process
 A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare l'hosting side-by-side in-process per eseguire più versioni di Common Language Runtime (CLR) in un unico processo. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
@@ -47,7 +40,7 @@ A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è 
   
 -   **Sviluppatori di applicazioni**. L'hosting side-by-side non ha praticamente alcun effetto che possa interessare gli sviluppatori di applicazioni. Per impostazione predefinita, le applicazioni vengono sempre eseguite con la versione di .NET Framework con cui sono state compilate. Questo non è stato modificato. Tuttavia, gli sviluppatori possono eseguire l'override di questo comportamento e indirizzare l'applicazione per l'esecuzione in una versione più recente di .NET Framework. Vedere [Scenario 2](#scenarios).  
   
--   **Sviluppatori di librerie e consumer**. L'hosting side-by-side non risolve i problemi di compatibilità che devono affrontare gli sviluppatori di librerie. Una libreria che viene caricata direttamente da un'applicazione, tramite un riferimento diretto o mediante una chiamata a <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>, continua a usare il runtime di <xref:System.AppDomain> in cui viene caricata. È consigliabile testare le librerie con tutte le versioni di .NET Framework che si vuole supportare. Se un'applicazione viene compilata usando il runtime di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ma include una libreria che è stata compilata usando un runtime precedente, tale libreria userà anche il runtime di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Tuttavia, se si ha un'applicazione compilata con un runtime precedente e una libreria compilata usando [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], è necessario forzare l'applicazione a usare anche [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Vedere [scenario 3](#scenarios).  
+-   **Sviluppatori di librerie e consumer**. L'hosting side-by-side non risolve i problemi di compatibilità che devono affrontare gli sviluppatori di librerie. Una libreria che viene caricata direttamente da un'applicazione, tramite un riferimento diretto o mediante una chiamata a <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, continua a usare il runtime di <xref:System.AppDomain> in cui viene caricata. È consigliabile testare le librerie con tutte le versioni di .NET Framework che si vuole supportare. Se un'applicazione viene compilata usando il runtime di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ma include una libreria che è stata compilata usando un runtime precedente, tale libreria userà anche il runtime di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Tuttavia, se si ha un'applicazione compilata con un runtime precedente e una libreria compilata usando [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], è necessario forzare l'applicazione a usare anche [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Vedere [scenario 3](#scenarios).  
   
 -   **Sviluppatori di componenti COM gestiti**. In passato, i componenti COM gestiti venivano eseguiti automaticamente usando la versione più recente del runtime installato nel computer. È ora possibile eseguire i componenti COM con la versione del runtime con cui sono stati compilati.  
   
@@ -189,6 +182,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento \<startup](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<avvio > elemento](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [Elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

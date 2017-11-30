@@ -21,14 +21,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 96bd12b69b84537415ddf2e0ae992ec179f32493
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: aa6a2e60e34f6c3a78343318ae102883da84e266
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>Metodo ISymUnmanagedBinder::GetReaderFromStream
-Dato un'interfaccia di metadati e un flusso che contiene l'archivio dei simboli, restituisce la corretta <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> simboli di struttura che verrà letto il debug dall'archivio di simboli specificato.  
+Data un'interfaccia di metadati e un flusso che contiene l'archivio dei simboli, restituisce il [ISymUnmanagedReader](isymunmanagedreader-interface.md) simboli di struttura che verrà letto il debug dall'archivio di simboli specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ HRESULT GetReaderFromStream(
  [in] Puntatore al flusso che contiene l'archivio dei simboli.  
   
  `pRetVal`  
- [out] Un puntatore che viene impostato sull'oggetto restituito <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interfaccia.  
+ [out] Un puntatore che viene impostato sull'oggetto restituito [ISymUnmanagedReader](isymunmanagedreader-interface.md) interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  

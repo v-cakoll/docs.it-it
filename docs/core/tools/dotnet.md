@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
-ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -48,7 +47,7 @@ Ogni funzionalità specifica viene implementata come un comando. Per usare la fu
 
 `--additionaldeps <PATH>`
 
-Percorso del file*deps.json* aggiuntivo.
+Percorso aggiuntivo *deps.json* file.
 
 `--additionalprobingpath <PATH>`
 
@@ -187,6 +186,8 @@ Ripristinare le dipendenze per una determinata applicazione:
 
 `dotnet restore`
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Compilare un progetto e le relative dipendenze in una determinata directory:
 
 `dotnet build`
@@ -208,4 +209,3 @@ Specifica il percorso dell'indice di manutenzione che l'host condiviso deve usar
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 Specifica se i dati relativi all'utilizzo degli strumenti .NET Core vengono raccolti e inviati a Microsoft. Impostare su `true` per rifiutare esplicitamente la funzionalità di telemetria (i valori accettati sono `true`, `1` o `yes`). In caso contrario, impostare su `false` per acconsentire esplicitamente alle funzionalità di telemetria (i valori accettati sono `false`, `0` o `no`). Se non è impostata, il valore predefinito è `false` e quindi la funzionalità di telemetria è attiva.
-

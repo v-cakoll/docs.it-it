@@ -8,27 +8,25 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
+ms.openlocfilehash: de9306e0ca29470aa532e1bbf6e14b1086e46306
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: fbc37ee82c431edadaee98be86caf50791d65133
-ms.contentlocale: it-it
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
+# <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Installare .NET Framework in Windows Vista e Windows Server 2008
 
-# <a name="install-the-net-framework-on-windows-vista"></a>Installare .NET Framework in Windows Vista
+È necessario .NET Framework per l'esecuzione di molte applicazioni in Windows. È possibile utilizzare le istruzioni seguenti per installarlo. Si potrebbe è arrivati a questa pagina dopo il tentativo di eseguire un'applicazione e visualizzare la finestra di dialogo seguente nel computer.
 
-Può essere necessario avere .NET Framework installato per eseguire determinate app in Windows Vista. Le istruzioni seguenti possono essere usate come supporto e variano a seconda della versione di .NET Framework richiesta.
+![Impossibile avviare l'applicazione](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-461-and-later"></a>.NET Framework 4.6.1 e versioni successive
-
-Non è possibile installare .NET Framework 4.6.1 o versioni successive in Windows Vista. In alternativa, è possibile eseguire l'aggiornamento a una versione successiva di Windows per usare .NET Framework 4.6.1 o versioni successive.
-
-.NET Framework 4.6.2 è incluso nell'[Aggiornamento dell'anniversario di Windows 10](https://www.microsoft.com/software-download/windows10).
+Queste istruzioni consentono di installare le versioni di .NET Framework, che è necessario. Il [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) è la versione più recente. Non è supportata in Windows Vista e Windows Server 2008. È incluso con il [autunno creatori di aggiornamento di Windows 10](https://www.microsoft.com/software-download/windows10) e [1709 versione di Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-È possibile installare [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) in Windows Vista.
+Il [.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) è la versione più recente supportata .NET Framework in Windows Vista e Windows Server 2008.
+
+Il [.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) supporta le applicazioni compilate per .NET Framework 4.0 a 4.6.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
@@ -36,7 +34,8 @@ Non è possibile installare .NET Framework 4.6.1 o versioni successive in Window
 
 .NET Framework 3.5 supporta le app create per .NET Framework da 1.0 a 3.5.
 
-## <a name="help"></a>?
+## <a name="see-also"></a>Vedere anche
 
-È possibile [contattare Microsoft per assistenza](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework) se non si riesce a installare la versione corretta di .NET Framework.
-
+[Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
+[Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
+[Installare .NET Framework per sviluppatori](guide-for-developers.md)

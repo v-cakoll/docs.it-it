@@ -12,11 +12,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b479e6129cc5ba158549294acf25d4b8f71a3ff4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6202d17741c276c03e80cedd979cbcf2f39ccc1f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="order-processing-with-policy"></a>Elaborazione di ordini con criteri
 Nell’esempio dei Criteri di elaborazione degli ordini vengono illustrate alcune delle funzionalità principali introdotte nel [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] di Windows Workflow Foundation (WF). Di seguito viene esposta una nuova funzionalità per il motore di regole WF:  
@@ -151,6 +151,4 @@ Another Order? (Y/N): n
 >   
 >  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`  
-  
-## <a name="see-also"></a>Vedere anche
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

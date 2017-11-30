@@ -1,44 +1,29 @@
 ---
 title: internal (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - internal_CSharpKeyword
 - internal
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- internal keyword [C#]
+helpviewer_keywords: internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a3b115022ed2b38dfcfbbfad3c5fc00e0203b255
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5674a78e2c317357c31d9e2661a25ce86cbf4f6a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="internal-c-reference"></a>internal (Riferimenti per C#)
-La parola chiave `internal` è un [modificatore di accesso](../../../csharp/language-reference/keywords/access-modifiers.md) per tipi e membri dei tipi. I tipi o membri interni sono accessibili solo all'interno di file nello stesso assembly, come nell'esempio seguente:  
+La parola chiave `internal` è un [modificatore di accesso](../../../csharp/language-reference/keywords/access-modifiers.md) per tipi e membri dei tipi. 
+  
+ > Questa pagina illustra `internal` accesso. Il `internal` parola chiave è anche in parte il [ `protected internal` ](./protected-internal.md) modificatore di accesso.
+  
+I tipi o membri interni sono accessibili solo all'interno di file nello stesso assembly, come nell'esempio seguente:  
   
 ```  
 public class BaseClass   
@@ -47,9 +32,7 @@ public class BaseClass
     internal static int x = 0;  
 }  
 ```  
-  
- I tipi o membri con modificatore di accesso `protected internal` sono accessibili dall'assembly corrente o dai tipi che derivano dalla classe che li contiene.  
-  
+
  Per un confronto di `internal` con altri modificatori di accesso, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md) e [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Per altre informazioni sugli assembly, vedere [Assembly e Global Assembly Cache](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
@@ -111,13 +94,12 @@ public class TestAccess
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Modificatori di accesso](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+ [Modificatori di accesso](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
  [protected](../../../csharp/language-reference/keywords/protected.md)
-

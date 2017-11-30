@@ -1,36 +1,37 @@
 ---
-title: "Mapping della gerarchia di oggetti in dati XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Mapping della gerarchia di oggetti in dati XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: 5
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1bf43922fb702988e9057f541833cd58d33c820a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Mapping della gerarchia di oggetti in dati XML
-Quando un documento XML è in memoria, la rappresentazione concettuale è un albero.  Nella programmazione, è possibile accedere ai nodi dell'albero mediante una gerarchia di oggetti.  Nell'esempio seguente viene illustrato come il contenuto XML viene convertito in nodi.  
+# <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapping della gerarchia di oggetti in dati XML
+Quando un documento XML è in memoria, la rappresentazione concettuale è un albero. Nella programmazione, è possibile accedere ai nodi dell'albero mediante una gerarchia di oggetti. Nell'esempio seguente viene illustrato come il contenuto XML viene convertito in nodi.  
   
- Mentre il codice XML viene letto nel DOM \(Document Object Model\) XML, i dati sono convertiti in nodi in cui vengono conservati metadati aggiuntivi, quali il tipo di nodo e i relativi valori.  Il tipo di nodo corrisponde al relativo oggetto e determina le operazioni che possono essere eseguite e le proprietà che possono essere impostate o recuperate.  
+ Mentre il codice XML viene letto nel DOM (Document Object Model) XML, i dati sono convertiti in nodi in cui vengono conservati metadati aggiuntivi, quali il tipo di nodo e i relativi valori. Il tipo di nodo corrisponde al relativo oggetto e determina le operazioni che possono essere eseguite e le proprietà che possono essere impostate o recuperate.  
   
  Si consideri ad esempio il seguente codice XML:  
   
  **Input**  
   
-```  
+```xml  
 <book>  
     <title>The Handmaid's Tale</title>  
 </book>  
@@ -38,16 +39,16 @@ Quando un documento XML è in memoria, la rappresentazione concettuale è un alb
   
  L'input è rappresentato in memoria come il seguente albero di nodi con la proprietà del tipo di nodo associata:  
   
- ![Albero nodo esempio](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple\_XML")  
+ ![albero nodo esempio](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Rappresentazione dell'albero dei nodi Book e Title  
   
- L'elemento `book` viene convertito in un oggetto **XmlElement**, l'elemento successivo `title` viene convertito anch'esso in **XmlElement**, mentre il contenuto degli elementi viene convertito in un oggetto **XmlText**.  Osservando i metodi e le proprietà **XmlElement**, si può notare che questi sono diversi dai metodi e dalle proprietà disponibili in un oggetto **XmlText**.  È quindi fondamentale sapere quale tipo di nodo diventerà il markup XML, perché in base a questo vengono determinate le operazioni che possono essere eseguite.  
+ Il `book` elemento diventa un **XmlElement** oggetto, l'elemento successivo, `title`, diventa un **XmlElement**, mentre il contenuto dell'elemento diventa un **XmlText** oggetto. Osservando il **XmlElement** metodi e proprietà, metodi e proprietà sono diverse dai metodi e le proprietà disponibili in un **XmlText** oggetto. È quindi fondamentale sapere quale tipo di nodo diventerà il markup XML, perché in base a questo vengono determinate le operazioni che possono essere eseguite.  
   
- Nell'esempio seguente vengono letti i dati XML e viene scritto un testo diverso a seconda del tipo di nodo,  usando come input il file di dati XML **items.xml**:  
+ Nell'esempio seguente vengono letti i dati XML e viene scritto un testo diverso a seconda del tipo di nodo, Utilizzando il seguente file di dati XML come input, **items.xml**:  
   
  **Input**  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <!-- This is a sample XML document -->  
 <!DOCTYPE Items [<!ENTITY number "123">]>  
@@ -61,7 +62,7 @@ Rappresentazione dell'albero dei nodi Book e Title
 </Items>  
 ```  
   
- Nel seguente esempio di codice viene letto il file **items.xml** e vengono visualizzate le informazioni per ogni tipo di nodo.  
+ Letture di esempio di codice seguente il **items.xml** file e visualizza le informazioni per ogni tipo di nodo.  
   
 ```vb  
 Imports System  
@@ -186,46 +187,45 @@ public class Sample
   
  **Output**  
   
-```  
-  
+```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
 ```  
   
  Esaminando l'input riga per riga e usando l'output generato dal codice, è possibile usare la tabella seguente per analizzare quale verifica del nodo ha generato determinate righe di output e capire quindi quali dati XML sono stati convertiti in un determinato tipo di nodo.  
   
 |Input|Output|Verifica del tipo di nodo|  
-|-----------|------------|-------------------------------|  
-|\<?xml version\="1.0"?\>|\<?xml version\='1.0'?\>|XmlNodeType.XmlDeclaration|  
-|\<\!\-\- This is a sample XML document \-\-\>|\<\!\-\-This is a sample XML document \-\-\>|XmlNodeType.Comment|  
-|\<\!DOCTYPE Items \[\<\!ENTITY number "123"\>\]\>|\<\!DOCTYPE Items \[\<\!ENTITY number "123"\>\]|XmlNodeType.DocumentType|  
-|\<Items\>|\<Items\>|XmlNodeType.Element|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|Test with an entity: &number;|Test with an entity: 123|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmNodeType.Element|  
+|-----------|------------|--------------------|  
+|\<? versione xml = "1.0"? >|\<? versione xml ='1.0 '? >|XmlNodeType.XmlDeclaration|  
+|\<!-Si tratta di un documento XML di esempio-->|\<!-Si tratta di un documento XML di esempio-->|XmlNodeType.Comment|  
+|\<! Gli elementi di tipo di documento [\<! Numero di entità "123" >] >|\<! Gli elementi di tipo di documento [\<! Numero di entità "123" >]|XmlNodeType.DocumentType|  
+|\<Gli elementi >|\<Gli elementi >|XmlNodeType.Element|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
+|Test con un'entità:&number;|Test with an entity: 123|XmlNodeType.Text|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmNodeType.Element|  
 |test with a child element|test with a child element|XmlNodeType.Text|  
-|\<more\>|\<more\>|XmlNodeType.Element|  
+|\<più >|\<più >|XmlNodeType.Element|  
 |stuff|stuff|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
 |test with a CDATA section|test with a CDATA section|XmlTest.Text|  
-|\<\!\[CDATA\[\<456\>\]\]\>|\<\!\[CDATA\[\<456\>\]\]\>|XmlTest.CDATA|  
+|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|XmlTest.CDATA|  
 |def|def|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|Test with a char entity: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<\!\-\- Fourteen chars in this element.\-\-\>|\<\-\-Fourteen chars in this element.\-\-\>|XmlNodeType.Comment|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
+|Test con un'entità di tipo char: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\<!---> Quattordici caratteri in questo elemento.|\<---> Quattordici caratteri in questo elemento.|XmlNodeType.Comment|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
 |1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<\/Items\>|\<\/Items\>|XmlNodeType.EndElement|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\</ Elementi >|\</ Elementi >|XmlNodeType.EndElement|  
   
  È necessario sapere quale tipo di nodo viene assegnato, poiché in base al tipo di nodo vengono determinate le operazioni valide e il tipo di proprietà che è possibile impostare e recuperare.  
   
- La creazione di nodi per spazi vuoti viene controllata quando i dati sono caricati nel DOM dal flag **PreserveWhitespace**.  Per altre informazioni, vedere [Gestione degli spazi vuoti e degli spazi vuoti significativi durante il caricamento del DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ Creazione di nodi per spazi vuoti viene controllata quando i dati vengono caricati nel DOM dal **PreserveWhitespace** flag. Per ulteriori informazioni, vedere [spazi vuoti e significativa la gestione di spazi vuoti durante il caricamento del DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
   
- Per aggiungere nuovi nodi al DOM, vedere [Inserimento di nodi in un documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).  Per rimuovere nodi dal DOM, vedere [Rimozione di nodi, contenuto e valori da un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  Per modificare il contenuto dei nodi nel DOM, vedere [Modifica di nodi, contenuto e valori in un documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ Per aggiungere nuovi nodi al DOM, vedere [inserimento di nodi in un documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Per rimuovere nodi dal DOM, vedere [rimozione di nodi, contenuto e valori da un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Per modificare il contenuto dei nodi nel DOM, vedere [modifica dei nodi, contenuto e valori in un documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
-## Vedere anche  
- [Modello DOM \(Document Object Model\) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche  
+ [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

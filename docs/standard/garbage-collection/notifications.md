@@ -1,126 +1,132 @@
 ---
-title: "Garbage Collection Notifications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, notifications"
+title: Notifiche di Garbage Collection
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords: garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 23
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 41a2ed9c5d239f1570955e87bb5b749e29830bc3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Garbage Collection Notifications
-In alcune situazioni un'operazione completa di garbage collection \(che è una collection di seconda generazione\) eseguita da Common Language Runtime può influire negativamente sulle prestazioni.  Questo può rappresentare un problema in modo particolare con server che elaborano grandi volumi di richieste. In questo caso, un processo di Garbage Collection lungo può provocare un timeout delle richieste.  Per impedire che si verifichi un'operazione completa di Garbage Collection durante un periodo critico, è possibile ricevere una notifica quando questa operazione sta per essere eseguita e intraprendere quindi un'azione per reindirizzare il carico di lavoro a un'altra istanza del server.  È anche possibile forzare una raccolta, purché l'istanza del server corrente non richieda l'elaborazione di richieste.  
+# <a name="garbage-collection-notifications"></a>Notifiche di Garbage Collection
+In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Può trattarsi di un problema particolarmente con server che elaborano grandi volumi di richieste. In questo caso, una lunga procedura di garbage collection può provocare un timeout della richiesta. Per evitare un insieme completo che si verifichino durante un periodo critico, si può ricevere notifiche di garbage collection completa sta per raggiungere e intraprendere azioni per reindirizzare il carico di lavoro a un'altra istanza del server. È possibile anche forzare una raccolta, condizione che l'istanza del server corrente non è necessario elaborare le richieste.  
   
- Il metodo <xref:System.GC.RegisterForFullGCNotification%2A> esegue la registrazione per la generazione di una notifica quando il runtime riconosce che sta per verificarsi un'operazione completa di Garbage Collection.  Questa notifica è composta da due parti: quando sta per verificarsi l'operazione completa di Garbage Collection e quando tale operazione è stata completata.  
+ Il <xref:System.GC.RegisterForFullGCNotification%2A> metodo registra la notifica quando il runtime rileva che sta per una garbage collection completa. Esistono due parti per questa notifica: quando sta per raggiungere la garbage collection completa e quando è stata completata la garbage collection completa.  
   
 > [!WARNING]
->  Solo il blocco delle operazioni di garbage collection genera notifiche.  Quando l'elemento di configurazione [\<gcConcurrent\>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è abilitato, le operazioni di Garbage Collection in background non genereranno le notifiche.  
+>  Le notifiche vengono generate solo in caso di blocco delle operazioni di Garbage Collection. Quando il [ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) elemento di configurazione è abilitata, le Garbage Collection in background non saranno generate notifiche.  
   
- Per determinare quando è stata generata una notifica, utilizzare i metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>.  In genere, questi metodi vengono utilizzati in un ciclo `while` per ottenere continuamente un'enumerazione <xref:System.GCNotificationStatus> che mostra lo stato della notifica.  Se il valore è <xref:System.GCNotificationStatus>, è possibile effettuare le operazioni seguenti:  
+ Per determinare quando è stata generata una notifica, utilizzare il <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> metodi. In genere, usare questi metodi in un `while` ciclo per ottenere continuamente una <xref:System.GCNotificationStatus> enumerazione che indica lo stato della notifica. Se il valore è <xref:System.GCNotificationStatus.Succeeded>, è possibile eseguire le operazioni seguenti:  
   
--   In risposta a una notifica ottenuta con il metodo <xref:System.GC.WaitForFullGCApproach%2A>, è possibile reindirizzare il carico di lavoro e possibilmente forzare una raccolta.  
+-   In risposta a una notifica ottenuta con la <xref:System.GC.WaitForFullGCApproach%2A> (metodo), è possibile reindirizzare il carico di lavoro e possibilmente forzare una raccolta.  
   
--   In risposta a una notifica ottenuta con il metodo <xref:System.GC.WaitForFullGCComplete%2A>, è possibile rendere disponibile l'istanza del server corrente per elaborare nuovamente le richieste.  È anche possibile raccogliere informazioni.  Ad esempio, è possibile utilizzare il metodo <xref:System.GC.CollectionCount%2A> per registrare il numero di raccolte.  
+-   In risposta a una notifica ottenuta con la <xref:System.GC.WaitForFullGCComplete%2A> (metodo), è possibile rendere l'istanza corrente di server disponibile per elaborare le richieste nuovamente. È anche possibile raccogliere informazioni. Ad esempio, è possibile utilizzare il <xref:System.GC.CollectionCount%2A> metodo per registrare il numero di raccolte.  
   
- I metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> sono progettati per essere utilizzati insieme.  L'utilizzo di uno senza l'altro può produrre risultati imprevisti.  
+ Il <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> metodi sono progettati per funzionare insieme. Utilizzo di uno senza l'altro può produrre risultati imprevisti.  
   
-## Operazione completa di Garbage Collection  
- Il runtime provoca un'operazione completa di Garbage Collection se si verifica uno degli scenari seguenti:  
+## <a name="full-garbage-collection"></a>Garbage Collection completa  
+ Il runtime genera un'operazione completa di garbage collection quando uno degli scenari seguenti sono vere:  
   
--   Una quantità sufficiente di memoria passa nella generazione 2 per generare la successiva raccolta di generazione 2.  
+-   Memoria insufficiente sia stato promosso alla generazione 2 per generare la raccolta di generazione 2 successiva.  
   
--   Una quantità sufficiente di memoria passa nell'heap degli oggetti grandi per generare la successiva raccolta di generazione 2.  
+-   Memoria insufficiente è stato promosso nell'heap oggetti grandi per generare la raccolta di generazione 2 successiva.  
   
--   Viene eseguita l'escalation di una raccolta di generazione 1 in una raccolta di generazione 2 a causa di altri fattori.  
+-   Una raccolta di generazione 1 viene riassegnata a una raccolta di generazione 2 a causa di altri fattori.  
   
- Le soglie specificate nel metodo <xref:System.GC.RegisterForFullGCNotification%2A> si applicano ai primi due scenari.  Tuttavia, nel primo scenario non si riceverà sempre la notifica nel momento proporzionale ai valori di soglia specificati, per due motivi:  
+ Le soglie specificate nel <xref:System.GC.RegisterForFullGCNotification%2A> metodo riguardano i primi due scenari. Tuttavia, nel primo scenario è non sempre riceveranno la notifica al momento proporzionale per i valori di soglia specificati per due motivi:  
   
--   Il runtime non controlla ogni allocazione di oggetti piccoli \(per motivi di prestazioni\).  
+-   Il runtime non controlla ogni allocazione di oggetti piccoli (per motivi di prestazioni).  
   
--   Solo le raccolte di generazione 1 passano la memoria nella generazione 2.  
+-   Generazione 1 raccolte innalzare di livello solo memoria alla generazione 2.  
   
- Anche il terzo scenario contribuisce ad aumentare l'incertezza sul momento in cui si riceverà la notifica.  Anche se non è garantita, questa soluzione si dimostra utile per attenuare gli effetti di un'operazione completa di Garbage Collection inopportuna, reindirizzando le richieste durante questo periodo o forzando la raccolta in un momento più favorevole.  
+ Il terzo scenario contribuisce inoltre all'incertezza di quando si riceveranno la notifica. Anche se non si tratta di una garanzia, esso si riveli utile per ridurre gli effetti di un inopportuna completa di garbage collection da reindirizzare le richieste durante questo periodo o forzando la raccolta quando possono essere gestita meglio.  
   
-## Parametri di soglia delle notifiche  
- Il metodo <xref:System.GC.RegisterForFullGCNotification%2A> include due parametri per specificare i valori di soglia degli oggetti di generazione 2 e dell'heap degli oggetti grandi.  Quando vengono raggiunti tali valori, dovrebbe essere generata una notifica di Garbage Collection.  Nella tabella seguente vengono descritti tali parametri.  
+## <a name="notification-threshold-parameters"></a>Parametri della soglia di notifica  
+ Il <xref:System.GC.RegisterForFullGCNotification%2A> metodo presenta due parametri per specificare i valori soglia degli oggetti di generazione 2 e l'heap oggetti grandi. Quando vengono soddisfatti questi valori, dovrebbe essere generata una notifica di garbage collection. Nella tabella seguente vengono descritti questi parametri.  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|`maxGenerationThreshold`|Numero compreso tra 1 e 99 che specifica quando generare la notifica in base agli oggetti passati alla generazione 2.|  
-|`largeObjectHeapThreshold`|Numero compreso tra 1 e 99 che specifica quando generare la notifica in base agli oggetti allocati nell'heap degli oggetti grandi.|  
+|`maxGenerationThreshold`|Un numero compreso tra 1 e 99 che specifica se la notifica deve essere generata basato sugli oggetti alzate di livello nella generazione 2.|  
+|`largeObjectHeapThreshold`|Un numero compreso tra 1 e 99 che specifica se la notifica deve essere generata basato sugli oggetti allocati nell'heap degli oggetti di grandi dimensioni.|  
   
- Se si specifica un valore troppo alto, esiste un'elevata probabilità che si riceverà una notifica, ma il periodo di attesa potrebbe essere eccessivamente lungo prima che il runtime provochi una raccolta.  Se si forza una raccolta, è possibile che venga recuperato un numero di oggetti maggiore rispetto a quelli che verrebbero recuperati se la raccolta viene provocata dal runtime.  
+ Se si specifica un valore troppo elevato, è presente un elevato livello di probabilità che si riceverà una notifica, ma potrebbe essere troppo lungo un periodo di attesa prima che il runtime determina un insieme. Se si forzare una raccolta, si potrebbero richiedere più oggetti verrebbero recuperati se il runtime determina la raccolta.  
   
- Se si specifica un valore eccessivamente basso, il runtime può provocare la raccolta prima che sia trascorso un periodo di tempo sufficiente per ricevere una notifica.  
+ Se si specifica un valore troppo basso, il runtime può provocare la raccolta prima che sia trascorso sufficiente tempo per ricevere una notifica.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- Nell'esempio seguente un gruppo di server gestisce le richieste Web in ingresso.  Per simulare il carico di lavoro dell'elaborazione delle richieste, vengono aggiunte matrici di byte a una raccolta <xref:System.Collections.Generic.List%601>.  Ogni server esegue la registrazione per una notifica di Garbage Collection, quindi avvia un thread sul metodo utente `WaitForFullGCProc` per controllare continuamente l'enumerazione <xref:System.GCNotificationStatus> restituita dai metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>.  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente, un gruppo di server richieste Web in ingresso. Per simulare il carico di lavoro dell'elaborazione delle richieste, le matrici di byte vengono aggiunti a un <xref:System.Collections.Generic.List%601> insieme. Ogni server registrato per notifica di un'operazione di garbage collection e quindi avvia un thread nel `WaitForFullGCProc` metodo utente per monitorare costantemente il <xref:System.GCNotificationStatus> enumerazione restituito dal <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> metodi.  
   
- I metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> chiamano i rispettivi metodi utente di gestione eventi quando viene generata una notifica:  
+ Il <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> metodi chiamano i rispettivi metodi utente di gestione degli eventi quando viene generata una notifica:  
   
 -   `OnFullGCApproachNotify`  
   
-     Questo metodo chiama il metodo utente `RedirectRequests` che indica al server di accodamento delle richieste di sospendere l'invio di richieste al server.  Questa situazione viene simulata impostando la variabile a livello di classe `bAllocate` su `false` in modo che non vengano più allocati oggetti.  
+     Questo metodo chiama il `RedirectRequests` metodo utente, che indica al server di Accodamento messaggi di richiesta di sospendere l'invio di richieste al server. Questa situazione viene simulata impostando la variabile a livello di classe `bAllocate` a `false` in modo che non vengano più allocati oggetti.  
   
-     Quindi, viene chiamato il metodo utente `FinishExistingRequests` per completare l'elaborazione delle richieste in sospeso al server.  Questa situazione viene simulata cancellando la raccolta <xref:System.Collections.Generic.List%601>.  
+     Successivamente, il `FinishExistingRequests` utente viene chiamato per completare l'elaborazione delle richieste in sospeso al server. Questa situazione viene simulata cancellando la <xref:System.Collections.Generic.List%601> insieme.  
   
-     Infine, viene forzata un'operazione di Garbage Collection perché il carico di lavoro è ridotto.  
+     Infine, una garbage collection è causata perché il carico di lavoro è chiaro.  
   
 -   `OnFullGCCompleteNotify`  
   
-     Questo metodo chiama il metodo utente `AcceptRequests` per riprendere ad accettare richieste, perché il server non è più soggetto a un'operazione completa di Garbage Collection.  Questa azione viene simulata impostando la variabile `bAllocate` su `true` in modo che gli oggetti possano riprendere a essere aggiunti alla raccolta <xref:System.Collections.Generic.List%601>.  
+     Questo metodo chiama il metodo dell'utente `AcceptRequests` per riprendere l'accettazione di richieste perché il server non è più soggetto a garbage collection completa. Questa azione viene simulata impostando il `bAllocate` variabile `true` in modo che gli oggetti possono riprendere l'aggiunta di <xref:System.Collections.Generic.List%601> insieme.  
   
- Il codice seguente contiene il metodo `Main` dell'esempio.  
+ Il codice seguente contiene il `Main` metodo dell'esempio.  
   
  [!code-cpp[GCNotification#2](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#2)]
  [!code-csharp[GCNotification#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#2)]
  [!code-vb[GCNotification#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#2)]  
   
- Il codice seguente contiene il metodo utente `WaitForFullGCProc`, che contiene un ciclo while continuo per le notifiche di Garbage Collection.  
+ Il codice seguente contiene il `WaitForFullGCProc` metodo utente, che contiene un ciclo while continuo per le notifiche di garbage collection.  
   
  [!code-cpp[GCNotification#8](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#8)]
  [!code-csharp[GCNotification#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#8)]
  [!code-vb[GCNotification#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#8)]  
   
- Il codice seguente contiene il metodo `OnFullGCApproachNotify` chiamato dal  
+ Il codice seguente contiene il `OnFullGCApproachNotify` metodo chiamato dal  
   
- metodo `WaitForFullGCProc`.  
+ Metodo `WaitForFullGCProc`.  
   
  [!code-cpp[GCNotification#5](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#5)]
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
  [!code-vb[GCNotification#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#5)]  
   
- Il codice seguente contiene il metodo `OnFullGCApproachComplete` chiamato dal  
+ Il codice seguente contiene il `OnFullGCApproachComplete` metodo chiamato dal  
   
- metodo `WaitForFullGCProc`.  
+ Metodo `WaitForFullGCProc`.  
   
  [!code-cpp[GCNotification#6](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#6)]
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]
  [!code-vb[GCNotification#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#6)]  
   
- Il codice seguente contiene i metodi utente chiamati dai metodi `OnFullGCApproachNotify` e `OnFullGCCompleteNotify`.  I metodi utente reindirizzano le richieste, completano le richieste esistenti, quindi riprendono le richieste dopo che si è verificata un'operazione completa di Garbage Collection.  
+ Il codice seguente contiene i metodi di utente che vengono chiamati dal `OnFullGCApproachNotify` e `OnFullGCCompleteNotify` metodi. I metodi utente reindirizzano le richieste, completano le richieste esistenti e quindi riprendono le richieste dopo un'operazione completa di garbage collection si è verificato.  
   
  [!code-cpp[GCNotification#9](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#9)]
  [!code-csharp[GCNotification#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#9)]
  [!code-vb[GCNotification#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#9)]  
   
- L'esempio di codice completo è riportato di seguito:  
+ L'esempio di codice completo è il seguente:  
   
  [!code-cpp[GCNotification#1](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#1)]
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

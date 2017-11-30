@@ -1,31 +1,32 @@
 ---
-title: "Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs
-**XmlNodeChangedEventArgs** incapsula gli argomenti passati ai gestori eventi registrati nell'oggetto **XmlDocument** per gestire gli eventi.  Nella tabella seguente viene fornita una descrizione degli eventi e della relativa generazione.  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs
+Il **XmlNodeChangedEventArgs** incapsula gli argomenti passati ai gestori eventi registrati nel **XmlDocument** oggetto per la gestione degli eventi. Nella tabella seguente viene fornita una descrizione degli eventi e della relativa generazione.  
   
 |Evento|Generato|  
-|------------|--------------|  
+|-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Quando un nodo che appartiene al documento corrente sta per essere inserito in un altro nodo.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Quando un nodo che appartiene al documento corrente è stato inserito in un altro nodo.|  
 |<xref:System.Xml.XmlDocument.NodeRemoving>|Quando un nodo che appartiene al documento corrente sta per essere rimosso dal documento.|  
@@ -34,7 +35,7 @@ caps.handback.revision: 3
 |<xref:System.Xml.XmlDocument.NodeChanged>|Quando il valore di un nodo è stato modificato.|  
   
 > [!NOTE]
->  Se l'uso della memoria di **XmlDataDocument** è completamente ottimizzato per usare l'archiviazione **DataSet**, è possibile che nessuno degli eventi precedenti venga generato da **XmlDataDocument** quando vengono apportate modifiche al **DataSet** sottostante.  Se tali eventi sono indispensabili, è necessario scorrere l'intero documento **XmlDocument** una volta per rendere l'uso della memoria non completamente ottimizzato.  
+>  Se il **XmlDataDocument** utilizzo della memoria è completamente ottimizzato per l'utilizzo di **DataSet** spazio di archiviazione, il **XmlDataDocument** potrebbe non generare gli eventi elencati in precedenza quando le modifiche sono apportate alla classe sottostante **DataSet**. Se è necessario di questi eventi, è necessario scorrere l'intero **XmlDocument** una volta per rendere l'utilizzo della memoria non completamente ottimizzato.  
   
  Nell'esempio di codice seguente viene illustrato come definire un gestore eventi e come aggiungerlo a un evento.  
   
@@ -79,9 +80,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Alcune operazioni DOM \(Document Object Model\) XML sono operazioni composte che possono determinare la generazione di più eventi.  Ad esempio, è possibile che **AppendChild** debba anche rimuovere il nodo aggiunto dal nodo padre precedente.  In questo caso, viene prima visualizzato un evento **NodeRemoved** generato, seguito da un evento **NodeInserted**.  Operazioni quali l'impostazione del codice **InnerXml** potrebbero restituire più eventi.  
+ Alcune operazioni DOM (Document Object Model) XML sono operazioni composte che possono determinare la generazione di più eventi. Ad esempio, **AppendChild** potrebbe anche essere necessario rimuovere il nodo aggiunto dal padre precedente. In questo caso, viene visualizzato un **NodeRemoved** evento generato prima, seguita da un **NodeInserted** evento. Operazioni quali l'impostazione **InnerXml** potrebbe generare più eventi.  
   
- Nell'esempio di codice seguente viene illustrata la creazione del gestore eventi e la gestione dell'evento **NodeInserted**.  
+ Esempio di codice seguente viene illustrata la creazione del gestore dell'evento e la gestione del **NodeInserted** evento.  
   
 ```vb  
 Imports System  
@@ -212,7 +213,7 @@ public class Sample
 } // End class   
 ```  
   
- Per altre informazioni, vedere [Membri XmlNodeChangeEventArgs](frlrfSystemXmlXmlNodeChangedEventArgsMembersTopic) e [Delegato XmlNodeChangedEventHandler](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic).  
+ Per altre informazioni, vedere <xref:System.Xml.XmlNodeChangedEventArgs> e <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
-## Vedere anche  
- [Modello DOM \(Document Object Model\) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche  
+ [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

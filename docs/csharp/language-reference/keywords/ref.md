@@ -1,42 +1,24 @@
 ---
 title: ref (Riferimenti per C#)
-ms.date: 2017-05-30
+ms.date: 05/30/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
 - ref
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 003125ca6218d42a919d8bb592b5454a7cb387c7
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -57,17 +39,17 @@ Quando viene usata nell'elenco di parametri di un metodo, la parola chiave `ref`
 
 Per usare un parametro `ref`, la definizione del metodo e il metodo chiamante devono usare in modo esplicito la parola chiave `ref`, come illustrato nell'esempio seguente.  
 
-[!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
 
 Un argomento passato a un parametro `ref` deve essere inizializzato prima di essere passato. Questo comportamento è diverso dai parametri [out](out.md), i cui argomenti non devono essere inizializzati in modo esplicito prima di essere passati.
 
 I membri di una classe non possono avere firme che differiscono solo per `ref` e `out`. Un errore del compilatore si verifica se l'unica differenza tra due membri di un tipo è che uno di essi ha un parametro `ref` e l'altro ha un parametro `out`. Il codice seguente, ad esempio, non viene compilato.  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
+ [!code-csharp[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
   
  È tuttavia possibile eseguire l'overload dei metodi quando un metodo ha un parametro `ref` o `out` e l'altro ha un parametro di valore, come illustrato nell'esempio seguente.
   
- [!code-cs[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
+ [!code-csharp[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
   
  In altre situazioni che richiedono la firma corrispondente, ad esempio nascondere o sottoporre a override, `ref` e `out` fanno parte della firma e non sono corrispondenti tra loro.  
   
@@ -85,7 +67,7 @@ I membri di una classe non possono avere firme che differiscono solo per `ref` e
 
 Negli esempi precedenti vengono passati tipi valore per riferimento. È anche possibile usare la parola chiave `ref` per passare tipi riferimento per riferimento. Il passaggio di un tipo riferimento per riferimento consente al metodo chiamato di sostituire l'oggetto a cui fa riferimento il parametro per riferimento nel chiamante. Il percorso di archiviazione dell'oggetto viene passato al metodo come valore del parametro referenziato. Se si modifica il valore nella posizione di archiviazione del parametro (in modo che punti a un nuovo oggetto), è anche possibile modificare il percorso di archiviazione a cui fa riferimento il chiamante. Nell'esempio seguente viene passata un'istanza di un tipo di riferimento come parametro `ref`.   
   
- [!code-cs[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
+ [!code-csharp[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
 
 Per altre informazioni su come passare i tipi di riferimento per valore e per riferimento, vedere [Passaggio di parametri di tipi di riferimento](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
@@ -106,7 +88,7 @@ Un valore restituito di riferimento viene definito mediante la parola chiave `re
    ref return Decimal.Zero;
    ``` 
 
-Affinché il chiamante modifichi lo stato di un oggetto, il valore restituito di riferimento deve essere archiviato in una variabile definita in modo esplicito come una [variabile locale ref](#ref-locals). 
+Affinché il chiamante modificare lo stato dell'oggetto, il riferimento restituito valore deve essere archiviato in una variabile definita in modo esplicito come un [locale ref](#ref-locals). 
 
 Per un esempio, vedere [Esempio di valori restituiti e variabili locali ref](#a-ref-returns-and-ref-locals-example)
 
@@ -128,18 +110,18 @@ Si noti che la parola chiave `ref` deve essere usata in entrambe le posizioni. I
 
 Nell'esempio seguente viene definita una classe `Book` che ha due campi <xref:System.String>, `Title` e `Author`. Definisce inoltre una classe `BookCollection` che include una matrice privata di oggetti `Book`. I singoli oggetti book vengono restituiti per riferimento chiamando il relativo metodo `GetBookByTitle`.
 
-[!code-cs[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
+[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
 
 Quando il chiamante archivia il valore restituito dal metodo `GetBookByTitle` come una variabile locale ref, le modifiche apportate al valore restituito dal chiamante vengono riflesse nell'oggetto `BookCollection`, come illustrato nell'esempio seguente.
 
-[!code-cs[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
+[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Passaggio di parametri](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
- [Parametri di metodo](../../../csharp/language-reference/keywords/method-parameters.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Passaggio di parametri](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+ [Parametri dei metodi](../../../csharp/language-reference/keywords/method-parameters.md)  
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)

@@ -1,54 +1,59 @@
 ---
-title: "How to: Handle Exceptions in a PLINQ Query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, how to handle exceptions"
+title: 'Procedura: gestire le eccezioni in una query PLINQ'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 209e0c1bf89f231d03647ae4351279bfdb172e68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Handle Exceptions in a PLINQ Query
-Il primo esempio di questo argomento mostra come gestire l'oggetto <xref:System.AggregateException?displayProperty=fullName> che può essere generato da una query PLINQ quando viene eseguita.  Nel secondo esempio viene mostrato come inserire blocchi try\-catch all'interno dei delegati, nel punto più vicino possibile a quello in cui verranno generate le eccezioni.  In questo modo sarà possibile rilevarle nel momento in cui si verificano e, in alcuni casi, continuare l'esecuzione della query.  Quando alle eccezioni è consentita la propagazione fino al thread di unione, è possibile che una query continui a elaborare alcuni elementi dopo la generazione dell'eccezione.  
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procedura: gestire le eccezioni in una query PLINQ
+Nel primo esempio in questo argomento viene illustrato come gestire il <xref:System.AggregateException?displayProperty=nameWithType> che possono essere generate da una query PLINQ quando viene eseguita. Nel secondo esempio viene illustrato come inserire i blocchi try-catch all'interno dei delegati, più vicino possibile a cui verrà generata l'eccezione. In questo modo, è possibile intercettarle appena che si verificano e probabilmente continuare l'esecuzione di query. Quando alle eccezioni è consentita la propagazione fino al thread di unione, è possibile che una query continui a elaborare alcuni elementi dopo la generazione dell'eccezione.  
   
- In alcuni casi, quando PLINQ esegue il fallback all'esecuzione sequenziale e si verifica un'eccezione, l'eccezione può essere propagata direttamente e non viene eseguito il wrapping in <xref:System.AggregateException>.  Inoltre, le eccezioni <xref:System.Threading.ThreadAbortException> vengono sempre propagate direttamente.  
+ In alcuni casi quando PLINQ esegue il fallback all'esecuzione sequenziale e si verifica un'eccezione, l'eccezione può essere propagata direttamente e non il wrapping in un <xref:System.AggregateException>. Inoltre, <xref:System.Threading.ThreadAbortException>vengono sempre propagate direttamente.  
   
 > [!NOTE]
->  Quando viene abilitato "Just My Code", Visual Studio si interromperà in corrispondenza della riga che genera l'eccezione e in cui viene visualizzato un messaggio di errore che indica che l'eccezione non è gestita dal codice utente. Questo errore è benigno.  È possibile premere F5 per continuare e visualizzare il comportamento di gestione delle eccezioni illustrato negli esempi riportati di seguito.  Per impedire l'interruzione di Visual Studio al primo errore, deselezionare semplicemente la casella di controllo "Just My Code" in **Strumenti, Opzioni, Debug, Generale**.  
+>  Quando "Just My Code" è abilitato, Visual interruzione sulla riga che genera l'eccezione e verrà visualizzato un messaggio di errore simile a "eccezione non gestita dal codice utente". Questo errore non è grave. È possibile premere F5 per continuare e osservare il comportamento di gestione delle eccezioni illustrato negli esempi seguenti. Per impedire l'interruzione per il primo errore di Visual Studio, deselezionare semplicemente la casella di controllo "Just My Code" **strumenti, opzioni, debug, generale**.  
 >   
->  Lo scopo di questo esempio è dimostrare l'utilizzo e potrebbe non essere eseguito più velocemente dell'equivalente query LINQ to Objects sequenziale.  Per ulteriori informazioni sull'aumento di velocità, vedere [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per ulteriori informazioni sull'aumento di velocità, vedere [comprensione aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
-## Esempio  
- In questo esempio viene mostrato come aggiungere i blocchi try\-catch nel codice che esegue la query per rilevare qualsiasi oggetto <xref:System.AggregateException?displayProperty=fullName> eventualmente generato.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene illustrato come inserire i blocchi try-catch intorno al codice che esegue la query per rilevare qualsiasi <xref:System.AggregateException?displayProperty=nameWithType>s che vengono generate.  
   
  [!code-csharp[PLINQ#41](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#41)]
  [!code-vb[PLINQ#41](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#41)]  
   
- In questo esempio, la query non può continuare dopo la generazione dell'eccezione.  Quando il codice dell'applicazione rileverà l'eccezione, PLINQ avrà già interrotto la query in tutti i thread.  
+ In questo esempio, la query non può continuare dopo la generazione dell'eccezione. Una volta che il codice dell'applicazione rileva l'eccezione, PLINQ è già stato arrestato la query su tutti i thread.  
   
-## Esempio  
- Nell'esempio seguente viene mostrato come aggiungere un blocco try\-catch in un delegato per consentire il rilevamento di un'eccezione senza tuttavia interrompere l'esecuzione della query.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come inserire un blocco try-catch a un delegato consentono di rilevare un'eccezione e continuare l'esecuzione della query.  
   
  [!code-csharp[PLINQ#42](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#42)]
  [!code-vb[PLINQ#42](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#42)]  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Per compilare ed eseguire questi esempi, copiarli nell'esempio PLINQ Data Sample e chiamare il metodo da Main.  
+-   Per compilare ed eseguire questi esempi, copiarli nell'esempio di PLINQ, dati di esempio e chiamare il metodo principale.  
   
-## Programmazione efficiente  
- Rilevare soltanto le eccezioni che si è in grado di gestire in modo tale da non danneggiare lo stato del programma.  
+## <a name="robust-programming"></a>Programmazione efficiente  
+ Non rilevare un'eccezione a meno che non si sa come gestire in modo tale da non danneggiare lo stato del programma.  
   
-## Vedere anche  
- <xref:System.Linq.ParallelEnumerable>   
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Linq.ParallelEnumerable>  
+ [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -1,79 +1,82 @@
 ---
-title: "Synchronizing Data for Multithreading | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "synchronization, threads"
-  - "threading [.NET Framework], synchronizing threads"
-  - "managed threading"
+title: Sincronizzazione dei dati per il multithreading
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization, threads
+- threading [.NET Framework], synchronizing threads
+- managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a17eba2f930fda06d643d78c73c117e89ae86928
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Synchronizing Data for Multithreading
-Quando più thread consentono di effettuare chiamate alle proprietà e ai metodi di un singolo oggetto, è indispensabile che tali chiamate siano sincronizzate.  In caso contrario, un thread potrebbe interrompere le operazioni di un altro thread e lo stato dell'oggetto potrebbe risultare non valido.  Una classe i cui membri sono protetti da tali interruzioni è detta thread\-safe.  
+# <a name="synchronizing-data-for-multithreading"></a>Sincronizzazione dei dati per il multithreading
+Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi di un singolo oggetto, è essenziale che tali chiamate siano sincronizzate. In caso contrario un thread potrebbe interrompere le operazioni eseguite da un altro thread e l'oggetto potrebbe rimanere in uno stato non valido. Una classe i cui membri sono protetti da tali interruzioni è detta thread-safe.  
   
- Common Language Infrastructure offre diverse strategie per sincronizzare l'accesso a membri di istanza e statici:  
+ L'infrastruttura CLI (Common Language Infrastructure) offre diverse strategie per sincronizzare l'accesso a membri statici e di istanza:  
   
--   Aree del codice sincronizzate.  È possibile utilizzare la classe <xref:System.Threading.Monitor> o il supporto del compilatore per questa classe per sincronizzare solo il blocco di codice necessario, migliorando le prestazioni.  
+-   Aree di codice sincronizzate. È possibile utilizzare il <xref:System.Threading.Monitor> il supporto di classe o del compilatore per questa classe sincronizzare solo il codice di blocco che ha bisogno, migliorando le prestazioni.  
   
--   Sincronizzazione manuale.  È possibile utilizzare gli oggetti di sincronizzazione forniti dalla libreria delle classi .NET.  Per informazioni, vedere [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md), in cui è inclusa una descrizione della classe <xref:System.Threading.Monitor>.  
+-   Sincronizzazione manuale. È possibile usare gli oggetti di sincronizzazione della libreria di classi .NET Framework. Vedere [panoramica delle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md), che include una discussione sulla <xref:System.Threading.Monitor> classe.  
   
--   Contesti sincronizzati.  È possibile utilizzare la classe <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> per attivare la sincronizzazione semplice e automatica per gli oggetti <xref:System.ContextBoundObject>.  
+-   Contesti sincronizzati. È possibile utilizzare il <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> per abilitare la sincronizzazione semplice e automatica per <xref:System.ContextBoundObject> oggetti.  
   
--   Classi Collection nello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=fullName>.  Queste classi forniscono operazioni di aggiunta e rimozione sincronizzate incorporate.  Per ulteriori informazioni, vedere [Raccolte thread\-safe](../../../docs/standard/collections/thread-safe/index.md).  
+-   Classi di raccolte di <xref:System.Collections.Concurrent?displayProperty=nameWithType> dello spazio dei nomi. Queste classi consentono di eseguire operazioni di aggiunta e rimozione incorporate sincronizzate. Per altre informazioni, vedere [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   
- Common Language Runtime fornisce un modello di thread in cui le classi rientrano in diverse categorie che è possibile sincronizzare in vari modi a seconda dei requisiti.  Nella tabella che segue viene indicato il tipo di supporto alla sincronizzazione fornito per campi e metodi con una determinata categoria di sincronizzazione.  
+ Common Language Runtime offre un modello di thread in cui le classi rientrano in un numero di categorie che possono essere sincronizzate in molti modi in base ai requisiti. La tabella seguente indica il supporto di sincronizzazione disponibile per campi e metodi con una determinata categoria di sincronizzazione.  
   
 |Categoria|Campi globali|Campi statici|Metodi statici|Campi di istanza|Metodi di istanza|Blocchi di codice specifici|  
-|---------------|-------------------|-------------------|--------------------|----------------------|-----------------------|---------------------------------|  
+|--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Nessuna sincronizzazione|No|No|No|No|No|No|  
-|Contesto di sincronizzazione|No|No|No|Sì|Sì|No|  
-|Aree del codice sincronizzate|No|No|Solo se contrassegnato|No|Solo se contrassegnato|Solo se contrassegnato|  
-|Sincronizzazione manuale|Manual|Manual|Manual|Manual|Manual|Manual|  
+|Contesto sincronizzato|No|No|No|Sì|Sì|No|  
+|Aree di codice sincronizzate|No|No|Solo se contrassegnato|No|Solo se contrassegnato|Solo se contrassegnato|  
+|Sincronizzazione manuale|Manuale|Manuale|Manuale|Manuale|Manuale|Manuale|  
   
-## Nessuna sincronizzazione  
- Si tratta dell'impostazione predefinita per gli oggetti.  Ogni thread può accedere a qualsiasi metodo o campo in qualsiasi momento.  Solo un thread alla volta deve poter accedere a questi oggetti.  
+## <a name="no-synchronization"></a>Nessuna sincronizzazione  
+ Questa è l'impostazione predefinita per gli oggetti. Qualsiasi thread può accedere a qualsiasi metodo o campo in qualsiasi momento. Un solo thread alla volta deve accedere a questi oggetti.  
   
-## Sincronizzazione manuale  
- La libreria delle classi .NET Framework fornisce una serie di classi per la sincronizzazione dei thread.  Per informazioni al riguardo, vedere [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+## <a name="manual-synchronization"></a>Sincronizzazione manuale  
+ La libreria di classi .NET Framework offre una serie di classi per la sincronizzazione dei thread. Vedere [Cenni preliminari sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
-## Aree del codice sincronizzate  
- È possibile utilizzare la classe <xref:System.Threading.Monitor> o una parola chiave del compilatore per sincronizzare blocchi di codice, metodi di istanza e metodi statici.  Non è disponibile alcun supporto per i campi statici sincronizzati.  
+## <a name="synchronized-code-regions"></a>Aree di codice sincronizzate  
+ È possibile utilizzare la <xref:System.Threading.Monitor> classe o una parola chiave del compilatore per sincronizzare i blocchi di codice, i metodi di istanza e i metodi statici. Non esiste un supporto per i campi statici sincronizzati.  
   
- Sia con Visual Basic che con C\# è possibile contrassegnare blocchi di codice con una particolare parola chiave del linguaggio, l'istruzione `lock` in C\# o `SyncLock` in Visual Basic.  Quando il codice viene eseguito da un thread, viene effettuato un tentativo di acquisire il blocco.  Se il blocco è già stato acquisito da un altro thread, il thread corrente si blocca finché il blocco non diventa disponibile.  Quando il thread esce dal blocco di codice sincronizzato, il blocco viene rilasciato, indipendentemente dalla modalità di uscita del thread dal blocco di codice.  
+ Sia Visual Basic che C# supportano il contrassegno delle aree di codice con una parola chiave del linguaggio specifico, l'istruzione `lock` in C# o l'istruzione `SyncLock` in Visual Basic. Quando il codice viene eseguito da un thread, viene effettuato un tentativo di acquisire il blocco. Se il blocco è già stato acquisito da un altro thread, il thread si blocca finché il blocco non diventa disponibile. Quando il thread esce dall'area di codice sincronizzata, il blocco viene rilasciato, indipendentemente dal modo in cui il thread esce dall'area.  
   
 > [!NOTE]
->  Le istruzioni `lock` e `SyncLock` vengono implementate tramite <xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=fullName>, pertanto è possibile utilizzare insieme altri metodi di <xref:System.Threading.Monitor> all'interno dell'area sincronizzata.  
+>  Il `lock` e `SyncLock` vengono implementate utilizzando <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, pertanto gli altri metodi di <xref:System.Threading.Monitor> può essere utilizzato in combinazione con le all'interno dell'area di sincronizzazione.  
   
- È anche possibile decorare un metodo con **MethodImplAttribute** e **MethodImplOptions.Synchronized**, in modo da avere lo stesso effetto di quando si utilizza **Monitor** o una delle parole chiave del compilatore per bloccare l'intero corpo del metodo.  
+ Si può anche decorare un metodo con **MethodImplAttribute** e **MethodImplOptions. Synchronized**, ottenendo lo stesso effetto dell'uso di **Monitor** o di una delle parole chiave del compilatore per bloccare l'intero corpo del metodo.  
   
- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=fullName> può essere utilizzato per interrompere le operazioni di blocco di un thread, quali l'attesa di accesso a un'area sincronizzata di codice.  **Thread.Interrupt** viene utilizzato anche per interrompere operazioni del thread quali <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>.  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>Consente di interrompere le operazioni di blocco, ad esempio in attesa dell'accesso a un'area di codice sincronizzata di un thread. **Interrupt** viene usato anche per interrompere thread operazioni, ad esempio <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  Non bloccare il tipo, ovvero `typeof(MyType)` in C\#, `GetType(MyType)` in Visual Basic o `MyType::typeid` in C\+\+, per proteggere i metodi `static` \(i metodi `Shared` in Visual Basic\).  Utilizzare invece un oggetto statico privato.  Analogamente, non utilizzare `this` in C\# \(`Me` in Visual Basic\) per bloccare i metodi di istanza.  Utilizzare invece un oggetto privato.  Una classe o istanza può venire bloccata da codice diverso da quello che si sta sviluppando, con conseguenti possibili deadlock o problemi di prestazioni.  
+>  Non bloccare il tipo, ovvero `typeof(MyType)` in C#, `GetType(MyType)` in Visual Basic o `MyType::typeid` in C++, per proteggere i metodi `static` (metodi `Shared` in Visual Basic). Usare invece un oggetto statico privato. Analogamente, non usare `this` in C# (`Me` in Visual Basic) per bloccare i metodi di istanza. Usare invece un oggetto privato. Una classe o istanza può essere bloccata da un codice diverso dal proprio, causando potenzialmente deadlock o problemi di prestazioni.  
   
-### Supporto del compilatore  
- Sia Visual Basic che C\# supportano una parola chiave del linguaggio che utilizza <xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=fullName> per bloccare l'oggetto.  Visual Basic supporta l'istruzione [SyncLock](../../../ocs/visual-basic/language-reference/statements/synclock-statement.md), mentre C\# supporta l'istruzione [lock](../Topic/lock%20Statement%20\(C%23%20Reference\).md).  
+### <a name="compiler-support"></a>Supporto del compilatore  
+ Visual Basic e c# supportano una parola chiave del linguaggio che utilizza <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> per bloccare l'oggetto. Visual Basic supporta l'istruzione [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md), C# supporta l'istruzione [lock](~/docs/csharp/language-reference/keywords/lock-statement.md).  
   
- In entrambi i casi, se viene generata un'eccezione nel blocco di codice, il blocco acquisito da **lock** o da **SyncLock** viene rilasciato automaticamente.  I compilatori C\# e Visual Basic creano un costrutto **try**\/**finally** con **Monitor.Enter** all'inizio e **Monitor.Exit** nel costrutto **finally**.  Se un'eccezione viene generata all'interno del blocco **lock** o **SyncLock**, il gestore **finally** viene eseguito per consentire l'esecuzione di eventuale lavoro di pulizia.  
+ In entrambi i casi, se viene generata un'eccezione nell'area di codice, il blocco acquisito da **lock** o **SyncLock** viene rilasciato automaticamente. I compilatori C# e Visual Basic creano un blocco **try**/**finally** con **Monitor.Enter** all'inizio del blocco try e **Monitor.Exit** nel blocco **finally**. Se viene generata un'eccezione all'interno del blocco **lock** o **SyncLock**, viene eseguito il gestore **finally** per consentire l'esecuzione di operazioni di pulizia.  
   
-## Contesto di sincronizzazione  
- È possibile utilizzare **SynchronizationAttribute** su qualsiasi **ContextBoundObject** per sincronizzare tutti i metodi e i campi di istanza.  Tutti gli oggetti nello stesso dominio del contesto condividono lo stesso blocco.  I thread multipli possono accedere a metodi e campi, ma è consentito solo ad un singolo thread alla volta.  
+## <a name="synchronized-context"></a>Contesto sincronizzato  
+ È possibile usare **SynchronizationAttribute** per qualsiasi **ContextBoundObject** per sincronizzare tutti i campi e i metodi di istanza. Tutti gli oggetti nello stesso dominio di contesto condividono lo stesso blocco. Più thread possono accedere ai metodi e ai campi, ma è consentito un singolo thread alla volta.  
   
-## Vedere anche  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>   
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)   
- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md)   
- [SyncLock Statement](../../../ocs/visual-basic/language-reference/statements/synclock-statement.md)   
- [Istruzione lock](../Topic/lock%20Statement%20\(C%23%20Reference\).md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+ [Thread e Threading](../../../docs/standard/threading/threads-and-threading.md)  
+ [Cenni preliminari sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+ [Istruzione SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+ [Istruzione lock](~/docs/csharp/language-reference/keywords/lock-statement.md)

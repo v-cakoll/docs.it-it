@@ -1,28 +1,29 @@
 ---
-title: "Recupero di nodi ordinati in base all&#39;indice | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Recupero di nodi ordinati in base all'indice
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 13d3077b1536d4e96cb9e4f1f09313dd793a906e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Recupero di nodi ordinati in base all&#39;indice
-Il DOM W3C descrive anche un NodeList, che ha la capacità di gestire un elenco ordinato di nodi, mentre i set non ordinati sono gestiti da **XmlNamedNodeMap**.  Il NodeList di Microsoft .NET Framework è denominato **XmlNodeList**.  I metodi e le proprietà che restituiscono un **XmlNodeList** sono:  
+# <a name="ordered-node-retrieval-by-index"></a>Recupero di nodi ordinati in base all'indice
+Il World Wide Web Consortium (W3C) XML oggetto modello DOM (Document) descrive anche un NodeList, che è in grado di gestire un elenco ordinato di nodi, mentre il set non ordinato di competenza di **XmlNamedNodeMap**. Viene chiamato il NodeList di Microsoft .NET Framework **XmlNodeList**. Metodi e proprietà che restituiscono un **XmlNodeList** sono:  
   
 -   XmlNode.ChildNodes  
   
@@ -32,7 +33,7 @@ Il DOM W3C descrive anche un NodeList, che ha la capacità di gestire un elenco 
   
 -   XmlNode.SelectNodes  
   
- **XmlNodeList** è provvisto di una proprietà **Count** che può essere usata per scrivere cicli di iterazione per scorrere i nodi nella **XmlNodeList**, come mostrato nell'esempio di codice seguente:  
+ Il **XmlNodeList** ha un **conteggio** proprietà che può essere usato per scrivere cicli per scorrere i nodi di **XmlNodeList**, come illustrato nell'esempio di codice seguente:  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -46,7 +47,6 @@ Dim doc as XmlDocument = new XmlDocument()
         ' Display all book titles in the Node List.  
         Console.WriteLine(elemList.ItemOf(i).InnerXml)  
     next  
-  
 ```  
   
 ```csharp  
@@ -62,7 +62,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- Oltre alla proprietà **Count**, è disponibile un metodo **GetEnumerator** che consente di eseguire un'iterazione di stile `foreach` sulla raccolta di nodi in **XmlNodeList**.  Nell'esempio di codice seguente viene illustrato l'uso dell'istruzione `foreach`:  
+ Oltre al **conteggio** proprietà, è presente un **GetEnumerator** metodo che fornisce, `foreach` sulla raccolta di nodi di iterazione di stile di **XmlNodeList**. Nell'esempio di codice seguente viene illustrato l'uso dell'istruzione `foreach`:  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -99,7 +99,7 @@ End While
   }  
 ```  
   
- Per altre informazioni sui metodi e sulle proprietà disponibili in **XmlNodeList**, vedere [Membri XmlNodeList](frlrfSystemXmlXmlNodeListMembersTopic).  
+ Per ulteriori informazioni sui metodi e proprietà disponibili sul **XmlNodeList**, vedere <xref:System.Xml.XmlNodeList>.  
   
-## Vedere anche  
- [Modello DOM \(Document Object Model\) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche  
+ [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

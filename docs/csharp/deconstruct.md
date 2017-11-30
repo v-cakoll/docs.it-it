@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Decostruzione di tuple e altri tipi #
 
@@ -34,7 +34,7 @@ In C# è incluso il supporto per la decostruzione di tuple, che consente di deco
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Esistono due modi per decostruire una tupla:
+Esistono tre modi per annullare una tupla:
 
 - È possibile dichiarare in modo esplicito il tipo di ogni campo all'interno di parentesi. Nell'esempio seguente viene usato questo approccio per decostruire la tupla con 3 elementi restituita dal metodo `QueryCityData`.
 
@@ -50,9 +50,15 @@ Esistono due modi per decostruire una tupla:
 
     Questo approccio è eccessivamente complesso e non è consigliato.
 
+- Infine, è possibile annullare la tupla in variabili che sono già state dichiarate.
+
+    [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
+
 Si noti che non è possibile usare un tipo specifico all'esterno delle parentesi, anche se ogni campo nella tupla presenta lo stesso tipo. Questa operazione genera l'errore del compilatore CS8136 "Nel form di decostruzione 'var (...)' non è consentito un tipo specifico per 'var'".
 
 Si noti anche che è necessario assegnare ogni elemento della tupla a una variabile. Se si omette un elemento, il compilatore genera l'errore CS8132: "Non è possibile decostruire una tupla di 'x' elementi in 'y' variabili".
+
+Si noti che non è possibile combinare le dichiarazioni e le assegnazioni di variabili esistenti sul lato sinistro di un'eliminazione. Il compilatore genera l'errore CS8184, "un'eliminazione non è possibile combinare dichiarazioni e le espressioni nella finestra di sinistra sul lato". Quando i membri includono variabili esistenti e appena dichiarate.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Decostruzione degli elementi della tupla con variabili discard
 

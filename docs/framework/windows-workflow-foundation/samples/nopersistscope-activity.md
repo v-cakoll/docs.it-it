@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 8813739f9e2f22cb94ed353f73a64562d3aeaa84
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f0dae84428f079dc3efb0c7ee620fa8c6ff87a8f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="nopersistscope-activity"></a>Attività NoPersistScope
 In questo esempio viene illustrato come modificare uno stato Non-serializable e Disposable all'interno di un flusso di lavoro. È importante che i flussi di lavoro non tentino di rendere persistente lo stato Non-serializable e che venga eseguita la pulizia degli oggetti eliminabili dopo essere stati usati nel flusso di lavoro.  
@@ -50,6 +50,4 @@ In questo esempio viene illustrato come modificare uno stato Non-serializable e 
 >   
 >  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NoPersistScope`  
-  
-## <a name="see-also"></a>Vedere anche
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NoPersistScope`

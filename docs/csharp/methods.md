@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
+ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: df8733c5c4532dc188ceb95d7bf236bcd2182b9f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="methods"></a>Metodi #
 
@@ -88,11 +87,11 @@ Quando si esegue una chiamata a un metodo è anche possibile usare *argomenti de
  <a name="inherited"></a>
  ##<a name="inherited-and-overridden-methods"></a>Metodi ereditati e sottoposti a override ##
 
-Oltre ai membri definiti in modo esplicito in un tipo, un tipo eredita i membri definiti nelle relative classi base. Poiché tutti i tipi del sistema di tipi gestiti ereditano direttamente o indirettamente dalla classe @System.Object, tutti i tipi di ereditano i relativi membri, ad esempio @System.Object.Equals(System.Object), @System.Object.GetType e @System.Object.ToString. L'esempio seguente definisce una classe `Person`, crea l'istanza di due oggetti `Person` e chiama il metodo `Person.Equals` per determinare se i due oggetti sono uguali. Il metodo `Equals`, tuttavia, non è definito nella classe `Person`; viene ereditato da @System.Object.
+Oltre ai membri definiti in modo esplicito in un tipo, un tipo eredita i membri definiti nelle relative classi base. Poiché tutti i tipi di sistema di tipi gestiti ereditano direttamente o indirettamente il <xref:System.Object> (classe), tutti i tipi di ereditano i relativi membri, ad esempio <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, e <xref:System.Object.ToString>. L'esempio seguente definisce una classe `Person`, crea l'istanza di due oggetti `Person` e chiama il metodo `Person.Equals` per determinare se i due oggetti sono uguali. Il metodo `Equals`, tuttavia, non è definito nella classe `Person`; viene ereditato da <xref:System.Object>.
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
-I tipi possono eseguire l'override dei membri ereditati usando la parola chiave `override` e specificando un'implementazione per il metodo sottoposto a override. La firma del metodo deve essere la stessa del metodo sottoposto a override. L'esempio seguente è simile a quello precedente, ad eccezione del fatto che viene eseguito l'override del metodo @Object.Equals(System.Object). Viene anche eseguito l'override del metodo @Object.GetHashCode poiché i due metodi devono fornire risultati coerenti.
+I tipi possono eseguire l'override dei membri ereditati usando la parola chiave `override` e specificando un'implementazione per il metodo sottoposto a override. La firma del metodo deve essere uguale a quella del metodo sottoposto a override. L'esempio seguente è simile a quello precedente, ad eccezione del fatto che viene eseguito l'override di <xref:System.Object.Equals(System.Object)> metodo. Viene anche eseguito l'override del metodo <xref:System.Object.GetHashCode> poiché i due metodi devono fornire risultati coerenti.
 
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
@@ -196,7 +195,7 @@ Per usare un valore restituito da un metodo, il metodo chiamante può usare la c
 
 L'uso di una variabile locale, in questo caso `result`, per archiviare un valore è facoltativo. Potrebbe migliorare la leggibilità del codice o potrebbe essere necessario se si desidera archiviare il valore originale dell'argomento per l'intero ambito del metodo.
 
-In alcuni casi, si vuole che il metodo restituisca più di un singolo valore. A questo scopo, a partire da C# 7.0 è possibile usare *tipi di tupla* e *letterali di tupla*. Il tipo di tupla definisce i tipi di dati degli elementi della tupla. I letterali di tupla specificano i valori effettivi della tupla restituita. Nell'esempio seguente `(string, string, string, int)` definisce il tipo di tupla restituito dal metodo `GetPersonalInfo`. L'espressione `(per.FirstName, per.MiddleName, per.LastName, per.Age)` è il letterale della tupla; il metodo restituisce il nome iniziale, centrale e finale e la durata di un oggetto `PersonInfo`.
+In alcuni casi, si vuole che il metodo restituisca più di un singolo valore. A questo scopo, a partire da C# 7.0 è possibile usare *tipi di tupla* e *letterali di tupla*. Il tipo di tupla definisce i tipi di dati degli elementi della tupla. I letterali di tupla specificano i valori effettivi della tupla restituita. Nell'esempio seguente, `(string, string, string, int)` definisce il tipo di tupla restituito dal `GetPersonalInfo` metodo. L'espressione `(per.FirstName, per.MiddleName, per.LastName, per.Age)` è il letterale della tupla; il metodo restituisce il nome iniziale, centrale e finale e la durata di un oggetto `PersonInfo`.
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -264,7 +263,7 @@ Se si contrassegna un metodo con il modificatore [async](language-reference/keyw
 > [!NOTE]
 > Un metodo async viene restituito al chiamante quando rileva il primo oggetto atteso che non è ancora completo o raggiunge la fine del metodo async, qualunque si verifichi prima.
 
-Un metodo asincrono può avere un tipo restituito @System.Threading.Tasks.Task<TResult>, @System.Threading.Tasks.Task o `void`. Il tipo restituito `void` viene usato principalmente per definire i gestori eventi in cui è necessario un tipo restituito `void`. Un metodo asincrono che restituisce `void` non può essere atteso e il chiamante di un metodo che restituisce void non può intercettare le eccezioni generate dal metodo. Questa limitazione verrà risolta al rilascio di C# 7 per consentire a un metodo asincrono di [restituire qualsiasi tipo attività](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Un metodo asincrono può avere un tipo restituito di <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, o `void`. Il tipo restituito `void` viene usato principalmente per definire i gestori eventi in cui è necessario un tipo restituito `void`. Un metodo asincrono che restituisce `void` non può essere atteso e il chiamante di un metodo che restituisce void non può intercettare le eccezioni generate dal metodo. Questa limitazione verrà risolta al rilascio di C# 7 per consentire a un metodo asincrono di [restituire qualsiasi tipo attività](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
 
 Nell'esempio seguente `DelayAsync` è un metodo asincrono con un'istruzione return che restituisce un valore Integer. Poiché si tratta di un metodo asincrono, la dichiarazione del metodo deve avere un tipo restituito di `Task<int>`. Poiché il tipo restituito è `Task<int>`, la valutazione dell'espressione `await` in `DoSomethingAsync` genera un numero intero come dimostra l'istruzione `int result = await delayTask` seguente.
 
@@ -295,7 +294,7 @@ Se il metodo restituisce `void` o è un metodo asincrono, il corpo del metodo de
 
 Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](language-reference/keywords/yield.md) per restituire un elemento alla volta. Quando viene raggiunta un'istruzione `yield return`, viene memorizzata la posizione corrente in modo che il chiamante possa richiedere l'elemento successivo della sequenza.
 
-Il tipo restituito di un iteratore può essere @System.Collections.IEnumerable, @System.Collections.Generic.IEnumerable%601, @System.Collections.IEnumerator o @System.Collections.Generic.IEnumerator%601.
+Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
 
 Per altre informazioni, vedere [Iteratori](programming-guide/concepts/iterators.md).
 
@@ -309,4 +308,3 @@ Per altre informazioni, vedere [Iteratori](programming-guide/concepts/iterators.
 [out](language-reference/keywords/out.md)   
 [ref](language-reference/keywords/ref.md)   
 [Passaggio di parametri](programming-guide/classes-and-structs/passing-parameters.md)
-

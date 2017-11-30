@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 8233db6bdf8c07bcc62f2e0f3819afb72dc10f5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: db4689ee58b48fad2e3696e5e64aa187710f4868
-ms.contentlocale: it-it
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-core-and-open-source"></a>Componenti di base e open-source di .NET
 Questo argomento fornisce una breve descrizione di .NET Core e illustra come trovare altre informazioni. Per l'elenco completo degli argomenti relativi a .NET Core, vedere la [Guida a .NET Core](../../core/index.md).
@@ -56,7 +54,6 @@ Questo argomento fornisce una breve descrizione di .NET Core e illustra come tro
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Home page di .NET core](https://www.microsoft.com/net/core)   
- [Guida a .NET Core](../../core/index.md)   
+ [Home page di .NET core](https://www.microsoft.com/net/core)  
+ [Guida a .NET Core](../../core/index.md)  
  [Documentazione di ASP.NET Core](/aspnet/core/)
-

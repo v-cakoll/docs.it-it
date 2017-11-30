@@ -1,40 +1,22 @@
 ---
 title: "Utilizzo delle proprietà (Guida per programmatori C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b1b1dbffa3af7fdaf1f3a93ecdf6183fe1c1cf2
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizzo delle proprietà (Guida per programmatori C#)
 Le proprietà combinano gli aspetti sia dei campi che dei metodi. Per l'utente di un oggetto, una proprietà si presenta come un campo: l'accesso alla proprietà richiede la stessa sintassi. Per il responsabile dell'implementazione di una classe, una proprietà è costituita da uno o due blocchi di codice, che rappresentano una funzione di accesso [get](../../../csharp/language-reference/keywords/get.md) e/o una funzione di accesso [set](../../../csharp/language-reference/keywords/set.md). Il blocco di codice per la funzione di accesso `get` viene eseguito al momento della lettura della proprietà; il blocco di codice per la funzione di accesso `set` viene eseguito quando viene assegnato un nuovo valore alla proprietà. Una proprietà senza una funzione di accesso `set` viene considerata di sola lettura. Una proprietà senza una funzione di accesso `get` viene considerata di sola scrittura. Una proprietà con entrambe le funzioni di accesso è di lettura/scrittura.  
@@ -45,7 +27,7 @@ Le proprietà combinano gli aspetti sia dei campi che dei metodi. Per l'utente d
   
  Le proprietà sono dichiarate nel blocco della classe specificando il livello di accesso del campo, seguito dal tipo della proprietà, seguito dal nome della proprietà, seguito da un blocco di codice che dichiara una funzione di accesso `get` e/o una funzione di accesso `set`. Ad esempio:  
   
- [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
+ [!code-csharp[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
  In questo esempio, `Month` è dichiarato come una proprietà in modo che la funzione di accesso `set` possa verificare che il valore `Month` sia compreso tra 1 e 12. La proprietà `Month` usa un campo privato per tenere traccia del valore effettivo. La posizione reale dei dati di una proprietà è spesso denominata "archivio di backup" della proprietà. Generalmente, le proprietà usano campi privati come archivio di backup. Il campo viene contrassegnato come privato per assicurare che possa essere modificato solo chiamando la proprietà. Per altre informazioni sulle restrizioni di accesso pubblico e privato, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
@@ -54,37 +36,37 @@ Le proprietà combinano gli aspetti sia dei campi che dei metodi. Per l'utente d
 ## <a name="the-get-accessor"></a>Funzione di accesso get  
  Il corpo della funzione di accesso `get` è simile a quello di un metodo. Deve restituire un valore del tipo di proprietà. L'esecuzione della funzione di accesso `get` è equivalente alla lettura del valore del campo. Ad esempio, quando si restituisce la variabile privata dalla funzione di accesso `get` e le ottimizzazioni sono abilitate, la chiamata al metodo della funzione di accesso `get` viene impostata come inline dal compilatore, pertanto non c'è alcun overhead di chiamata al metodo. Tuttavia, un metodo della funzione di accesso `get` virtuale non può essere impostato come inline perché il compilatore non può stabilire in fase di compilazione quale metodo potrebbe essere effettivamente chiamato in fase di esecuzione. Di seguito è riportata una funzione di accesso `get` che restituisce il valore di un campo privato `name`:  
   
- [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
+ [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
  Quando si fa riferimento alla proprietà, tranne che come destinazione di un'assegnazione, viene chiamata la funzione di accesso `get` per leggere il valore della proprietà. Ad esempio:  
   
- [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
+ [!code-csharp[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
  La funzione di accesso `get` deve terminare con un'istruzione [return](../../../csharp/language-reference/keywords/return.md) o [throw](../../../csharp/language-reference/keywords/throw.md) e il controllo non può uscire dal corpo della funzione di accesso.  
   
  È preferibile evitare di modificare lo stato dell'oggetto usando la funzione di accesso `get`. La seguente funzione di accesso, ad esempio, produce l'effetto collaterale di cambiare lo stato dell'oggetto ogni volta che si accede al campo `number`.  
   
- [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
+ [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
  La funzione di accesso `get` può essere usata per restituire il valore del campo o per calcolarlo e restituirlo. Ad esempio:  
   
- [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
+ [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
  Nel segmento di codice precedente, se non si assegna un valore alla proprietà `Name`, verrà restituito il valore NA.  
   
 ## <a name="the-set-accessor"></a>Funzione di accesso set  
  La funzione di accesso `set` è simile a un metodo il cui tipo restituito è [void](../../../csharp/language-reference/keywords/void.md). Usa un parametro implicito denominato `value`, il cui tipo è il tipo della proprietà. Nell'esempio seguente, viene aggiunta una funzione di accesso `set` alla proprietà `Name`:  
   
- [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
+ [!code-csharp[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
  Quando si assegna un valore alla proprietà, viene richiamata la funzione di accesso `set` tramite un argomento che fornisce il nuovo valore. Ad esempio:  
   
- [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
+ [!code-csharp[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   
  È un errore usare il nome del parametro implicito, `value`, per una dichiarazione di variabile locale in una funzione di accesso `set`.  
   
 ## <a name="remarks"></a>Note  
- Le proprietà possono essere contrassegnate come `public`, `private`, `protected`, `internal` o `protected internal`. Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere alla proprietà. Le funzioni di accesso `get` e `set` per la stessa proprietà possono avere modificatori di accesso diversi. Ad esempio, `get` potrebbe essere `public` per consentire l'accesso in sola lettura dall'esterno del tipo e `set` potrebbe essere `private` o `protected`. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Le proprietà possono essere contrassegnate come `public`, `private`, `protected`, `internal`, `protected internal` o `private protected`. Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere alla proprietà. Le funzioni di accesso `get` e `set` per la stessa proprietà possono avere modificatori di accesso diversi. Ad esempio, `get` potrebbe essere `public` per consentire l'accesso in sola lettura dall'esterno del tipo e `set` potrebbe essere `private` o `protected`. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Una proprietà può essere dichiarata come proprietà statica tramite la parola chiave `static`. Questo rende la proprietà disponibile per i chiamanti in qualsiasi momento, anche se non esiste alcuna istanza della classe. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
@@ -98,33 +80,32 @@ Le proprietà combinano gli aspetti sia dei campi che dei metodi. Per l'utente d
 ## <a name="example"></a>Esempio  
  Questo esempio illustra le proprietà di istanza, statiche e di sola lettura. Accetta il nome del dipendente dalla tastiera, incrementa `NumberOfEmployees` di 1 e visualizza il nome e il numero del dipendente.  
   
- [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
+ [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come accedere a una proprietà in una classe di base che è nascosta da un'altra proprietà con lo stesso nome in una classe derivata.  
   
- [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
+ [!code-csharp[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
   
  Di seguito sono riportati gli aspetti più importanti relativi all'esempio precedente:  
   
 -   La proprietà `Name` nella classe derivata nasconde la proprietà `Name` nella classe di base. In tal caso, viene usato il modificatore `new` nella dichiarazione della proprietà nella classe derivata:  
   
-     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
+     [!code-csharp[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
   
 -   Il cast `(Employee)` viene usato per accedere alla proprietà nascosta nella classe di base:  
   
-     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
+     [!code-csharp[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
   
      Per altre informazioni su come nascondere i membri, vedere [Modificatore new](../../../csharp/language-reference/keywords/new-modifier.md).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio, due classi, `Cube` e `Square`, implementano una classe astratta, `Shape`, ed eseguono l'override della proprietà astratta `Area`. Si noti l'uso del modificatore [override](../../../csharp/language-reference/keywords/override.md) nelle proprietà. Il programma accetta il lato come input e calcola le aree per il quadrato e il cubo. Inoltre, accetta l'area come input e calcola il lato corrispondente per il quadrato e il cubo.  
   
- [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
+ [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Proprietà dell'interfaccia](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)   
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Proprietà dell'interfaccia](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
  [Proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
-

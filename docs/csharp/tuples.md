@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
+ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
+ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
 ms.translationtype: HT
-ms.sourcegitcommit: 3ca0dce8053b9b0ac36728d6b1e00021df66345d
-ms.openlocfilehash: c0a4eda863ca586db9f712ed55fe675872981300
-ms.contentlocale: it-it
-ms.lasthandoff: 08/19/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="c-tuple-types"></a>Tipi di tupla di C# #
 
 Le tuple in C# sono tipi definiti tramite una sintassi leggera. I vantaggi includono una sintassi più semplice, regole per le conversioni basate su numero (note come cardinalità) e tipi di elementi, nonché regole coerenti per le copie e le assegnazioni. Come un compromesso, le tuple non supportano gli idiomi orientati agli oggetti associati all'ereditarietà. È possibile ottenere una panoramica della sezione nell'argomento [Tuples in the What's new in C# 7](whats-new/csharp-7.md#tuples) (Tuple in Novità di C# 7).
@@ -25,7 +23,7 @@ Le tuple in C# sono tipi definiti tramite una sintassi leggera. I vantaggi inclu
 Questo argomento descrive le regole del linguaggio che controllano le tuple in C# 7, le diverse modalità di uso delle stesse e una guida iniziale per l'uso delle tuple.
 
 > [!NOTE]
-> Le nuove funzionalità delle tuple richiedono i tipi @System.ValueTuple.
+> Le nuove funzionalità delle tuple richiedono i tipi <xref:System.ValueTuple>.
 > È necessario aggiungere il pacchetto NuGet [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) per usarlo nelle piattaforme che non includono i tipi.
 >
 > È simile ad altre funzionalità del linguaggio basate sui tipi resi disponibili nel framework. Alcuni esempi sono `async` e `await`, basati sull'interfaccia `INotifyCompletion`, e LINQ, basato su `IEnumerable<T>`. Tuttavia, il meccanismo di distribuzione sta cambiando perché .NET sta diventando più indipendente dalla piattaforma. .NET Framework potrebbe non essere sempre distribuito secondo la stessa cadenza del compilatore del linguaggio. Quando nuove funzionalità del linguaggio si basano su nuovi tipi, tali tipi saranno disponibili come pacchetti NuGet al momento della distribuzione delle funzionalità del linguaggio. Una volta che questi nuovi tipi vengono aggiunti all'API standard .NET e distribuiti come parte del framework, il requisito del pacchetto NuGet viene rimosso.
@@ -48,7 +46,7 @@ Le tuple sono contenitori di dati più semplici e flessibili rispetto ai tipi `c
 Lo struct `ValueTuple` include campi denominati `Item1`, `Item2`, `Item3` e così via, simili alle proprietà definite nei tipi `Tuple` esistenti.
 Questi nomi sono gli unici nomi che è possibile usare per le *tuple senza nome*. Quando non si forniscono alla tupla nomi alternativi per i campi, viene creata una tupla senza nome:
 
-[!code-csharp[Tupla senza nome](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Tupla senza nome")]
+[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
 La tupla nell'esempio precedente è stata inizializzata tramite costanti letterali e non avrà nomi di elemento creati con le *proiezioni dei nomi di campo di tupla* in C# 7.1.
 
@@ -57,15 +55,15 @@ Le tuple con nome dispongono ancora di elementi denominati `Item1`, `Item2`, `It
 Hanno tuttavia anche sinonimi per eventuali elementi a cui l'utente ha assegnato un nome.
 Creare una tupla con nome specificando i nomi per ogni elemento. Un modo consiste nello specificare i nomi come parte dell'inizializzazione della tupla:
 
-[!code-csharp[Tupla con nome](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Tupla con nome")]
+[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
 
 I sinonimi vengono gestiti dal compilatore e dal linguaggio in modo che sia possibile usare efficacemente le tuple con nome. Gli editor e gli IDE possono leggere questi nomi semantici tramite le API di Roslyn. In questo modo è possibile fare riferimento agli elementi di una tupla con nome tramite questi nomi semantici in qualsiasi punto dello stesso assembly. Il compilatore sostituisce i nomi definiti con equivalenti `Item*` durante la generazione dell'output compilato. Il Microsoft Intermediate Language (MSIL) compilato non include i nomi assegnati a questi elementi.
 
 A partire da C# 7.1, i nomi dei campi per una tupla possono essere forniti dalle variabili utilizzate per inizializzare la tupla. Si parla di **[inizializzatori di proiezione tupla](#tuple-projection-initializers)**. Il codice seguente crea una tupla denominata `accumulation` con elementi `count` (integer) e `sum` (double).
 
-[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Tupla con nome")]
+[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
-Il compilatore deve comunicare tali nomi creati per le tuple, restituiti dalle proprietà o dai metodi pubblici. In questi casi, il compilatore aggiunge un attributo @System.Runtime.CompilerServices.TupleElementNames al metodo. Questo attributo contiene una proprietà elenco @System.Runtime.CompilerServices.TupleElementNames.TransformNames che presenta i nomi assegnati a ognuno degli elementi nella tupla.
+Il compilatore deve comunicare tali nomi creati per le tuple, restituiti dalle proprietà o dai metodi pubblici. In questi casi, il compilatore aggiunge un attributo <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> al metodo. Questo attributo contiene una proprietà elenco <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> che presenta i nomi assegnati a ognuno degli elementi nella tupla.
 
 > [!NOTE]
 > Anche gli strumenti di sviluppo come Visual Studio consentono di leggere i metadati e di fornirli a IntelliSense e ad altre funzionalità tramite i nomi dei campi dei metadati.
@@ -77,11 +75,11 @@ Il compilatore deve comunicare tali nomi creati per le tuple, restituiti dalle p
 In generale, gli inizializzatori di proiezione tupla funzionano utilizzando i nomi di variabile o campo dal lato destro di un'istruzione di inizializzazione della tupla.
 Se viene fornito un nome esplicito, esso ha la precedenza su qualsiasi nome previsto. Nell'inizializzatore seguente, ad esempio, gli elementi sono `explicitFieldOne` e `explicitFieldTwo`, non `localVariableOne` e `localVariableTwo`:
 
-[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Tupla denominata in modo esplicito")]
+[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Per i campi in cui non viene fornito un nome esplicito, viene previsto un nome implicito applicabile. Si noti che non è obbligatorio fornire nomi semantici, in modo esplicito o implicito. L'inizializzatore seguente avrà nomi di campo `Item1` con valore `42`, e `StringContent` con valore "La risposta a tutto":
+Per i campi in cui non viene fornito un nome esplicito, viene previsto un nome implicito applicabile. Si noti che non è obbligatorio fornire nomi semantici, in modo esplicito o implicito. L'inizializzatore seguente avranno nomi di campo `Item1`, il cui valore è `42` e `StringContent`, il cui valore è "La risposta a tutti gli elementi":
 
-[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "Tupla mista")]
+[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
 Esistono due condizioni in cui i nomi dei campi candidati non sono previsti nel campo di tupla:
 
@@ -90,7 +88,7 @@ Esistono due condizioni in cui i nomi dei campi candidati non sono previsti nel 
 
 Queste condizioni evitano ogni ambiguità. Questi nomi creerebbero un'ambiguità se utilizzati come nomi di campo per un campo in una tupla. Nessuna di queste condizioni causa errori in fase di compilazione. Al contrario, per gli elementi senza nomi previsti non esistono nomi semantici previsti.  Gli esempi seguenti illustrano queste condizioni:
 
-[!code-csharp[Ambiguità](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "Tuple in cui non vengono eseguite proiezioni")]
+[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Queste situazioni non causano errori del compilatore perché sarebbe una modifica di rilievo per il codice scritto con C# 7.0, quando le proiezioni dei nomi di campo di tupla non erano disponibili.
 
@@ -100,14 +98,14 @@ Il linguaggio supporta l'assegnazione tra tipi di tupla che hanno lo stesso nume
 
 Considerare le variabili usate negli esempi seguenti:
 
-[!code-csharp[Creazione variabili](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Creazione variabili")]
+[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
 
 Le prime due variabili, `unnamed` e `anonymous`, non hanno nomi semantici forniti per gli elementi. I nomi dei campi sono `Item1` e `Item2`.
 Le ultime due variabili, `named` e `differentName`, hanno nomi semantici attribuiti agli elementi. Si noti che queste due tuple presentano nomi diversi per gli elementi.
 
 Tutte e quattro le tuple hanno lo stesso numero di elementi (noto come "cardinalità") e i tipi di tali elementi sono identici. Pertanto, tutte queste assegnazioni funzionano:
 
-[!code-csharp[Assegnazione variabili](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Assegnazione variabili")]
+[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Variable assignment")]
 
 Si noti che non sono assegnati i nomi delle tuple. I valori degli elementi vengono assegnati seguendo l'ordine degli elementi nella tupla.
 
@@ -124,7 +122,7 @@ named = differentShape;
 
 Uno degli usi più comuni per le tuple è come valore restituito dal metodo. Di seguito viene illustrato un esempio. Si consideri il metodo che calcola la deviazione standard per una sequenza di numeri:
 
-[!code-csharp[Deviazione standard](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Deviazione standard")]
+[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
 
 > [!NOTE]
 > Questi esempi calcolano la deviazione standard non corretta di esempio.
@@ -135,7 +133,7 @@ Si noti che le query LINQ vengono valutate in modo differito, quindi il calcolo 
 
 Esiste una formula alternativa che calcola la deviazione standard usando solo un'enumerazione della sequenza.  Questo calcolo produce due valori durante l'enumerazione della sequenza: la somma di tutti gli elementi nella sequenza e la somma di ogni valore quadrato:
 
-[!code-csharp[Formula della somma dei quadrati](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Calcolare la deviazione standard tramite la somma dei quadrati")]
+[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
 Questa versione enumera la sequenza esattamente una volta. Tuttavia, non si tratta di codice particolarmente riutilizzabile. Continuando a lavorare, si scoprirà che numerosi calcoli statistici usano il numero di elementi nella sequenza, la somma della sequenza e la somma dei quadrati della sequenza. Eseguiamo il refactoring di questo metodo e scriviamo un metodo di utilità che produce tutti e tre questi valori.
 
@@ -143,15 +141,15 @@ A questo punto le tuple diventano molto utili.
 
 Aggiorniamo questo metodo in modo tale che i tre valori calcolati durante l'enumerazione vengano archiviati in una tupla. Questa operazione consente di creare questa versione:
 
-[!code-csharp[Versione della tupla](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Eseguire il refactoring per usare le tuple")]
+[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Il supporto del refactoring di Visual Studio semplifica l'estrazione delle funzionalità per le statistiche principali in un metodo privato. Ciò offre un metodo `private static` che restituisce il tipo di tupla con tre valori di `Sum`, `SumOfSquares`, e `Count`:
+Refactoring supporto di Visual Studio rende più facile estrarre le funzionalità per le statistiche di base in un metodo privato. Ciò offre un metodo `private static` che restituisce il tipo di tupla con tre valori di `Sum`, `SumOfSquares`, e `Count`:
 
-[!code-csharp[Versione del metodo della tupla](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "Dopo l'estrazione del metodo di utilità")]
+[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
 Il linguaggio fornisce due opzioni aggiuntive che è possibile usare se si desidera apportare manualmente rapide modifiche. In primo luogo, è possibile usare la dichiarazione `var` per inizializzare il risultato della tupla dalla chiamata al metodo `ComputeSumAndSumOfSquares`. È anche possibile creare tre variabili discrete all'interno del metodo `ComputeSumAndSumOfSquares`. Di seguito è riportata la versione finale:
 
-[!code-csharp[Versione pulita della tupla](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "Dopo la pulizia finale")]
+[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
 Questa versione finale può essere usata per qualsiasi metodo che necessiti di questi tre valori o di sottoinsiemi di essi.
 
@@ -187,11 +185,11 @@ In genere, i risultati della query vengono proiettati in una sequenza di oggetti
 La restituzione di una sequenza di un tipo di tupla è semplice e i nomi e i tipi degli elementi sono disponibili in fase di compilazione e tramite gli strumenti IDE.
 Si consideri, ad esempio, un'applicazione ToDo. È possibile definire una classe simile alla seguente per rappresentare una singola voce nell'elenco ToDo:
 
-[!code-csharp[Voce ToDo](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "Voce ToDo")]
+[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
 
 Le applicazioni per dispositivi mobili possono supportare un modulo compresso delle voci ToDo correnti che visualizza solo il titolo. Questa query LINQ genera una proiezione che include solo l'ID e il titolo. Un metodo che restituisce una sequenza di tuple esprime in maniera accurata questa struttura:
 
-[!code-csharp[Query che restituisce una tupla](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query che restituisce una tupla")]
+[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
 
 > [!NOTE]
 > In C# 7.1, le proiezioni di tupla consentono di creare tuple con nome utilizzando gli elementi, in modo simile alla denominazione di proprietà in tipi anonimi. Nel codice precedente, l'istruzione `select` nella proiezione di query crea una tupla che contiene elementi `ID` e `Title`.
@@ -200,13 +198,13 @@ La tupla con nome può essere parte della firma. Consente al compilatore e agli 
 
 ## <a name="deconstruction"></a>Decostruzione
 
-È possibile decomprimere tutte le voci in una tupla *decostruendo* la tupla restituita da un metodo. Per la decostruzione delle tuple esistono due diversi approcci.  È prima possibile dichiarare il tipo di ogni campo all'interno di parentesi per creare variabili discrete per ognuno degli elementi nella tupla:
+È possibile decomprimere tutte le voci in una tupla *decostruendo* la tupla restituita da un metodo. Esistono tre diversi approcci per Decostruzione dei Tuple.  È prima possibile dichiarare il tipo di ogni campo all'interno di parentesi per creare variabili discrete per ognuno degli elementi nella tupla:
 
-[!code-csharp[Decostruzione](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Decostruzione")]
+[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
 È anche possibile dichiarare variabili tipizzate in modo implicito per ogni campo in una tupla usando la parola chiave `var` all'esterno delle parentesi:
 
-[!code-csharp[Decostruzione con Var](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Decostruzione con Var")]
+[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
 In aggiunta, è possibile usare la parola chiave `var` con una o tutte le dichiarazioni di variabili all'interno delle parentesi. 
 
@@ -216,27 +214,42 @@ In aggiunta, è possibile usare la parola chiave `var` con una o tutte le dichia
 
 Si noti che non è possibile usare un tipo specifico all'esterno delle parentesi, anche se ogni campo nella tupla presenta lo stesso tipo.
 
+È possibile annullare le tuple con dichiarazioni esistenti nonché:
+
+```csharp
+public class Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    public Point(int x, int y) => (X, Y) = (x, y);
+}
+```
+
+> [!WARNING]
+>  È possibile combinare le dichiarazioni esistenti con le dichiarazioni all'interno delle parentesi. Ad esempio, non sono consentita le operazioni seguenti: `(var x, y) = MyMethod();`. Viene prodotto un errore CS8184 perché *x* è dichiarato all'interno delle parentesi e *y* è dichiarato in precedenza in un' posizione.
+
 ### <a name="deconstructing-user-defined-types"></a>Decostruzione dei tipi definiti dall'utente
 
 Qualsiasi tipo di tupla può essere decostruito come illustrato in precedenza. È semplice anche abilitare la decostruzione sui tipi definiti dall'utente (classi, struct o perfino interfacce).
 
 L'autore del tipo può definire uno o più metodi `Deconstruct` che assegnano valori a qualsiasi numero di variabili `out` che rappresentano gli elementi di dati di cui il tipo è composto. Ad esempio, il tipo `Person` seguente definisce un metodo `Deconstruct` che decostruisce un oggetto persona negli elementi che ne rappresentano nome e cognome:
 
-[!code-csharp[Tipo con metodo di decostruzione](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Tipo con metodo di decostruzione")]
+[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
 Il metodo di decostruzione consente l'assegnazione da un `Person` a due stringhe, che rappresentano le proprietà `FirstName` e `LastName`:
 
-[!code-csharp[Tipo di decostruzione](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Decostruire un tipo classe")]
+[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 È possibile abilitare la decostruzione anche per i tipi non creati dall'utente.
 Il metodo `Deconstruct` può essere un metodo di estensione che decomprime i membri di dati accessibili di un oggetto. Nell'esempio seguente viene illustrato un tipo `Student`, derivato dal tipo `Person` e un metodo di estensione che decostruisce un `Student` in tre variabili, che rappresentano `FirstName`, `LastName` e `GPA`:
 
-[!code-csharp[Tipo con metodo di estensione deconstruct](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Tipo con metodo di estensione deconstruct")]
+[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
 Un oggetto `Student` dispone ora di due metodi `Deconstruct` di accesso: il metodo di estensione dichiarato per i tipi `Student` e i membri del tipo `Person`. Entrambi appartengono all'ambito, consentendo la decostruzione di un `Student` in due o tre variabili.
 Se si assegna uno studente a tre variabili, vengono restituiti nome, cognome e GPA. Se si assegna uno studente a due variabili, vengono restituiti solo nome e cognome.
 
-[!code-csharp[Decostruire con il metodo di estensione](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Decostruire un tipo classe tramite un metodo di estensione")]
+[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
 È necessario prestare particolare attenzione alla definizione di più metodi `Deconstruct` in una classe o in una gerarchia di classi. Più metodi `Deconstruct` che presentano lo stesso numero di parametri `out` possono rapidamente causare ambiguità. I chiamanti potrebbero non essere in grado di eseguire facilmente chiamate al metodo `Deconstruct` desiderato.
 
@@ -245,4 +258,3 @@ In questo esempio, vi è una minima possibilità di chiamata ambigua perché il 
 ## <a name="conclusion"></a>Conclusione 
 
 Il nuovo supporto per linguaggio e libreria per le tuple con nome rende più semplice lavorare con schemi che usano strutture di dati che archiviano più elementi, ma non definiscono il comportamento, come le classi e gli struct. Usare le tuple per questi tipi è semplice e veloce. Si ottengono tutti i vantaggi del controllo del tipo statico, senza la necessità di creare tipi tramite la sintassi più dettagliata `class` o `struct`. Anche in questo caso, risultano particolarmente utili per i metodi di utilità `private` o `internal`. Creare tipi definiti dall'utente, tipi `class` o `struct` quando i metodi pubblici restituiscono un valore che contiene più elementi.
-

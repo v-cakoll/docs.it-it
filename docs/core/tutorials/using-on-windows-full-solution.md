@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
+ms.openlocfilehash: 694201c1a2a2c373f62b0e0d8e3c1d8aa7e6e881
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b164198f5fbbae5ebc6164fc281dd7de8172b70
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Creazione di una soluzione .NET Core completa in Windows tramite Visual Studio 2017
 
 Visual Studio 2017 offre un ambiente completo per lo sviluppo di applicazioni .NET Core. Questo documento descrive le procedure necessarie per creare una soluzione .NET Core tipica contenente librerie riutilizzabili, funzionalità di test e librerie di terze parti. 
@@ -29,7 +27,7 @@ Seguire le istruzioni nella [pagina dei prerequisiti](../windows-prerequisites.m
 
 ### <a name="writing-the-library"></a>Scrittura della libreria
 
-1. In Visual Studio scegliere **File**, **Nuovo**, **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere il nodo **Visual C#**, scegliere il nodo **.NET Core** e quindi **Libreria di classi (.NET Standard)**. 
+1. In Visual Studio scegliere **File**, **Nuovo**, **Progetto**. Nel **nuovo progetto** finestra di dialogo, espandere il **Visual c#** nodo e scegliere il **.NET Standard** nodo e quindi scegliere **libreria di classi (.NET Standard)**. 
 
 2. Assegnare il nome "Library" al progetto e il nome "Golden" alla soluzione. Lasciare selezionata l'opzione **Crea directory per soluzione**. Fare clic su **OK**.
 
@@ -81,4 +79,3 @@ Seguire le istruzioni nella [pagina dei prerequisiti](../windows-prerequisites.m
 9. Premere F5 per eseguire l'applicazione.
 
    L'applicazione dovrebbe essere compilata senza errori e dovrebbe raggiungere il punto di interruzione. Dovrebbe inoltre essere possibile verificare che l'output dell'applicazione sia "The answer is 42".
-

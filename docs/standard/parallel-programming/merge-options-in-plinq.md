@@ -1,71 +1,76 @@
 ---
-title: "Merge Options in PLINQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, merge options"
+title: Opzioni di merge in PLINQ
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e9bf586c1805fc5b5f1cc5f96f4e6b08d80c199a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Merge Options in PLINQ
-Quando una query viene eseguita in parallelo, PLINQ esegue il partizionamento della sequenza di origine in modo che più thread possano funzionare simultaneamente su parti diverse, in genere in thread separati.  Se è necessario utilizzare i risultati in un solo thread, ad esempio in un ciclo `foreach` \(`For Each` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\), i risultati di ogni thread devono essere riuniti in un'unica sequenza.  Il tipo di unione eseguito da PLINQ dipende dagli operatori presenti nella query.  Ad esempio, gli operatori che impongono un nuovo ordine dei risultati devono memorizzare nel buffer tutti gli elementi di tutti i thread.  Dal punto di vista del thread consumer \(che è anche il thread dell'utente dell'applicazione\), è possibile che una query memorizzata completamente nel buffer resti in esecuzione per un notevole periodo di tempo prima di produrre il primo risultato.  Altri operatori, per impostazione predefinita, vengono memorizzati nel buffer solo in parte e producono risultati in batch.  L'operatore <xref:System.Linq.ParallelEnumerable.ForAll%2A> è l'unico a non essere memorizzato nel buffer per impostazione predefinita.  Produce immediatamente tutti gli elementi di tutti i thread.  
+# <a name="merge-options-in-plinq"></a>Opzioni di merge in PLINQ
+Quando una query è in esecuzione come partizioni PLINQ parallele, la sequenza di origine in modo che più thread possano funzionare su parti diverse contemporaneamente, in genere su un thread separato. Se i risultati devono essere utilizzati in un unico thread, ad esempio, in un `foreach` (`For Each` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) ciclo, quindi i risultati di ogni thread devono essere uniti in un'unica sequenza. Il tipo di unione che PLINQ esegue dipende dagli operatori presenti nella query. Ad esempio, gli operatori che impongono un nuovo ordine i risultati devono memorizzare nel buffer tutti gli elementi da tutti i thread. Dalla prospettiva del thread consumer, che corrisponde anche che dell'utente dell'applicazione, potrebbe essere eseguita una query completamente memorizzato nel buffer per un periodo di tempo prima che il primo risultato significativo. Altri operatori, per impostazione predefinita, sono parzialmente memorizzata nel buffer; producono i risultati in batch. Un operatore, <xref:System.Linq.ParallelEnumerable.ForAll%2A> non memorizzato nel buffer per impostazione predefinita. Restituisce tutti gli elementi di tutti i thread immediatamente.  
   
- Tramite il metodo <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A>, come illustrato nell'esempio seguente, è possibile fornire a PLINQ un suggerimento che indica il tipo di unione da eseguire.  
+ Tramite il <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> (metodo), come illustrato nell'esempio seguente, è possibile fornire un suggerimento a PLINQ che indica il tipo di unione da eseguire.  
   
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Per l'esempio completo, vedere [How to: Specify Merge Options in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Per un esempio completo, vedere [procedura: specificare le opzioni di Merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
- Se una determinata query non può supportare l'opzione richiesta, quest'ultima verrà semplicemente ignorata.  Nella maggior parte dei casi non è necessario specificare un'opzione di unione per una query PLINQ.  Tuttavia, in alcuni casi è possibile scoprire tramite test e misurazioni che l'esecuzione della query risulta più efficiente in una modalità non predefinita.  Questa opzione viene spesso utilizzata per forzare un operatore di fusione di blocchi a eseguire lo streaming dei propri risultati allo scopo di fornire un'interfaccia utente avente una capacità di risposta maggiore.  
+ Se la query specifica non supporta l'opzione richiesta, quindi l'opzione verrà ignorata. Nella maggior parte dei casi, non è necessario specificare un'opzione di merge per una query PLINQ. Tuttavia, in alcuni casi può risultare tramite test e misurazioni che una query viene eseguita meglio in una modalità non predefinito. Un utilizzo comune di questa opzione è per forzare un operatore di unione di blocco per trasmettere i risultati per fornire una maggiore efficienza di risposta interfaccia utente.  
   
-## ParallelMergeOptions  
- L'enumerazione <xref:System.Linq.ParallelMergeOptions> include le opzioni seguenti che specificano, per le forme di query supportate, come viene prodotto l'output finale della query quando i risultati vengono utilizzati in un unico thread:  
+## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
+ Il <xref:System.Linq.ParallelMergeOptions> enumerazione include le opzioni seguenti che specificano, per le forme di query supportate, come viene prodotto l'output finale della query quando vengono usati i risultati in un unico thread:  
   
 -   `Not Buffered`  
   
-     L'opzione <xref:System.Linq.ParallelMergeOptions> fa in modo che ogni elemento elaborato venga restituito da ogni thread appena viene prodotto.  Questo comportamento è analogo a uno "streaming" dell'output.  Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` conserva l'ordine degli elementi di origine.  Benché quando si usa `NotBuffered` i risultati vengano prodotti appena sono disponibili, il tempo complessivo per produrre tutti i risultati potrebbe comunque risultare maggiore rispetto al tempo che occorrerebbe utilizzando una delle altre opzioni di unione.  
+     Il <xref:System.Linq.ParallelMergeOptions.NotBuffered> opzione fa sì che ogni elemento elaborato venga restituito da ogni thread, non appena viene prodotto. Questo comportamento è analogo a "" il flusso di output. Se il <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operatore è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Anche se `NotBuffered` viene avviato, generando risultati non appena ma sono disponibili, il tempo totale necessario per generare tutti i risultati potrebbe comunque essere più lungo di utilizzando una delle altre opzioni di unione.  
   
 -   `Auto Buffered`  
   
-     Quando si utilizza l'opzione <xref:System.Linq.ParallelMergeOptions> la query raccoglie gli elementi in un buffer, quindi passa periodicamente il contenuto del buffer in un unico blocco al thread consumer.  Questo comportamento è analogo alla produzione dei dati di origine in "blocchi" anziché mediante lo "streaming" menzionato per l'opzione `NotBuffered`.  È possibile che `AutoBuffered` richieda più tempo di `NotBuffered` per rendere disponibile il primo elemento nel thread consumer.  La dimensione del buffer e l'esatto comportamento di produzione non sono configurabili e possono variare a seconda di vari fattori correlati alla query.  
+     Quando si utilizza l'opzione <xref:System.Linq.ParallelMergeOptions.AutoBuffered>, tramite la query vengono raccolti gli elementi in un buffer, quindi viene passato periodicamente il contenuto del buffer in un unico blocco al thread consumer. Questo comportamento è analogo a restituire i dati di origine in "blocchi" anziché il comportamento di "streaming" `NotBuffered`. `AutoBuffered`può richiedere più `NotBuffered` per rendere disponibile il primo elemento nel thread consumer. Le dimensioni del buffer e l'esatto comportamento di produzione non sono configurabili e possono variare a seconda di vari fattori correlati alla query.  
   
 -   `FullyBuffered`  
   
-     Quando si utilizza l'opzione <xref:System.Linq.ParallelMergeOptions> non viene prodotto alcun elemento finché l'output dell'intera query non è stato memorizzato nel buffer.  Benché quando si utilizza questa opzione sia possibile che occorrano tempi ancora più lunghi affinché il primo elemento sia disponibile nel thread consumer, è comunque possibile che i risultati completi vengano prodotti più velocemente rispetto a quando si utilizzano le altre opzioni.  
+     Il <xref:System.Linq.ParallelMergeOptions.FullyBuffered> opzione fa sì che l'output dell'intera query da memorizzare nel buffer prima di tutti gli elementi vengono restituiti. Quando si utilizza questa opzione, può richiedere più tempo prima che il primo elemento è disponibile nel thread consumer, ma i risultati completi possono comunque essere prodotti più veloce tramite le altre opzioni.  
   
-## Operatori di query che supportano le opzioni di unione  
- Nella tabella seguente vengono elencati gli operatori che supportano tutte le modalità delle opzioni di unione, con le limitazioni specificate.  
+## <a name="query-operators-that-support-merge-options"></a>Operatori di query che supportano le opzioni di unione  
+ Nella tabella seguente vengono elencati gli operatori che supportano tutte le modalità di opzione di unione, soggetto alle restrizioni specificate.  
   
 |Operatore|Restrizioni|  
-|---------------|-----------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Concat%2A>|Solo query non ordinate che presentano un'origine di tipo Array o List.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Solo query non ordinate che presentano un'origine di tipo Array o List.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|None|  
+|--------------|------------------|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Concat%2A>|Query non ordinate che hanno solo un'origine matrice o elenco.|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Query non ordinate che hanno solo un'origine matrice o elenco.|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|Nessuno|  
   
- Tutti gli altri operatori di query PLINQ possono ignorare le opzioni di unione fornite dall'utente.  Alcuni operatori di query, ad esempio <xref:System.Linq.ParallelEnumerable.Reverse%2A> e <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, possono produrre elementi solo dopo che tutti gli elementi sono stati prodotti e riordinati.  Pertanto, quando <xref:System.Linq.ParallelMergeOptions> viene utilizzato in una query che contiene anche un operatore quale <xref:System.Linq.ParallelEnumerable.Reverse%2A>, il comportamento dell'unione verrà applicato nella query solo dopo che tale operatore avrà prodotto i propri risultati.  
+ Tutti gli altri operatori di query PLINQ potrebbero ignorare le opzioni di unione fornito dall'utente. Alcuni operatori di query, ad esempio, <xref:System.Linq.ParallelEnumerable.Reverse%2A> e <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, possono produrre elementi fino a quando tutti i prodotti e riordinati. Pertanto, quando <xref:System.Linq.ParallelMergeOptions> viene utilizzato in una query che contiene anche un operatore, ad esempio <xref:System.Linq.ParallelEnumerable.Reverse%2A>, il comportamento di tipo merge non essere applicato nella query solo dopo che l'operatore ha generato i risultati.  
   
- La capacità di alcuni operatori di gestire le opzioni di unione dipende dal tipo della sequenza di origine e dall'eventuale uso precedente dell'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> nella query.  <xref:System.Linq.ParallelEnumerable.ForAll%2A> è sempre <xref:System.Linq.ParallelMergeOptions>. Produce immediatamente i propri elementi.  <xref:System.Linq.ParallelEnumerable.OrderBy%2A> è sempre <xref:System.Linq.ParallelMergeOptions>. Deve ordinare l'intero elenco prima di produrre elementi.  
+ La possibilità di alcuni operatori di gestire le opzioni di unione dipende dal tipo della sequenza di origine e se il <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operatore è stato utilizzato nella query. <xref:System.Linq.ParallelEnumerable.ForAll%2A>è sempre <xref:System.Linq.ParallelMergeOptions.NotBuffered> ; produce immediatamente gli elementi. <xref:System.Linq.ParallelEnumerable.OrderBy%2A>è sempre <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; deve ordinare l'intero elenco prima di produrre elementi.  
   
-## Vedere anche  
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)   
- [How to: Specify Merge Options in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+## <a name="see-also"></a>Vedere anche  
+ [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+ [Procedura: Specificare le opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

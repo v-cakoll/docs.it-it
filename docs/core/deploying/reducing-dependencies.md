@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
+ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 23d83f0402e35bc4bed31ef59a6fff0e28e01d35
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="reducing-package-dependencies-with-projectjson"></a>Riduzione delle dipendenze dei pacchetti con project.json
 
 Questo articolo descrive cosa è necessario conoscere sulla riduzione delle dipendenze dei pacchetti durante la creazione di librerie `project.json`. Al termine dell'articolo, si apprenderà come creare la libreria in modo che usi solo le dipendenze necessarie. 
@@ -32,11 +30,12 @@ Questo articolo descrive cosa è necessario conoscere sulla riduzione delle dipe
 Attualmente non è disponibile un comando `dotnet` ufficiale che consenta di ridurre il numero di riferimenti nel pacchetto.  È tuttavia possibile eseguire questa operazione manualmente.  Il processo generale è simile al seguente:
 
 1. Fare riferimento a `NETStandard.Library` versione `1.6.0` in una sezione `dependencies` di `project.json`.
-2. Ripristinare i pacchetti con `dotnet restore` dalla riga di comando.
+2. Ripristino dei pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)) dalla riga di comando.
 3. Esaminare il file `project.lock.json` e trovare la sezione `NETSTandard.Library`  in genere all'inizio del file.
 4. Copiare tutti i pacchetti elencati in `dependencies`.
 5. Rimuovere il riferimento `.NETStandard.Library` e sostituirlo con i pacchetti copiati.
 6. Rimuovere i riferimenti ai pacchetti non necessari.
+
 
 È possibile individuare i pacchetti non necessari in uno dei modi seguenti:
 
@@ -61,7 +60,7 @@ Per ridurre questa libreria, iniziare con il file `project.json` e aggiungere un
 }
 ```
 
-Successivamente, si ripristinano i pacchetti con `dotnet restore`, si analizza il file `project.lock.json` e si trovano tutti i pacchetti ripristinati per `NETSTandard.Library`.
+Successivamente, si ripristinano i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)), controllare il `project.lock.json` file e individuare tutti i pacchetti ripristinati per `NETSTandard.Library`.
 
 Di seguito è presentata la specifica sezione del file `project.lock.json` quando punta a `netstandard1.0`:
 
@@ -158,3 +157,5 @@ Di seguito un esempio di pacchetto dopo la riduzione delle dipendenze:
 
 A questo punto, l'impatto è ridotto rispetto a quello che avrebbe se dipendesse dal metapacchetto `NETStandard.Library`.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

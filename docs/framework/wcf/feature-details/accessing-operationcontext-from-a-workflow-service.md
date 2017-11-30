@@ -13,14 +13,14 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 11a6a1efad59ba5b9f3a143277909b63a5fe5e05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 3d18626412c0a6233c8792a4f19d5d05ef083333
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Accesso a OperationContext da un servizio flusso di lavoro
-Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata. Eseguire l'override di <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & autoUpgrade = True metodo che viene passato un riferimento di <xref:System.ServiceModel.OperationContext>. In questo argomento viene descritta l'implementazione della proprietà di esecuzione per recuperare un'intestazione personalizzata e un'attività personalizzata che esporrà tale proprietà a <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.  L'attività personalizzata implementerà lo stesso comportamento di un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` attività, ad eccezione che, quando un <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno, il <xref:System.ServiceModel.Activities.IReceiveMessageCallback> verrà chiamato e <xref:System.ServiceModel.OperationContext> verranno recuperate le informazioni.  Nell'argomento viene inoltre illustrato come accedere a <xref:System.ServiceModel.OperationContext> sul lato client per aggiungere intestazioni in uscita tramite l'interfaccia <xref:System.ServiceModel.Activities.ISendMessageCallback>.  
+Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata. Eseguire l'override del metodo <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> passato come riferimento a <xref:System.ServiceModel.OperationContext>. In questo argomento viene descritta l'implementazione della proprietà di esecuzione per recuperare un'intestazione personalizzata e un'attività personalizzata che esporrà tale proprietà a <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.  L'attività personalizzata implementerà lo stesso comportamento di un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` attività, ad eccezione che, quando un <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno, il <xref:System.ServiceModel.Activities.IReceiveMessageCallback> verrà chiamato e <xref:System.ServiceModel.OperationContext> verranno recuperate le informazioni.  Nell'argomento viene inoltre illustrato come accedere a <xref:System.ServiceModel.OperationContext> sul lato client per aggiungere intestazioni in uscita tramite l'interfaccia <xref:System.ServiceModel.Activities.ISendMessageCallback>.  
   
 ### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementare IReceiveMessageCallback sul lato servizio  
   

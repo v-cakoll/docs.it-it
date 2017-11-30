@@ -1,53 +1,59 @@
 ---
-title: "How to: Unlink Dataflow Blocks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dataflow blocks, unlinking in TPL"
-  - "Task Parallel Library, dataflows"
-  - "TPL dataflow library, unlinking dataflow blocks"
+title: 'Procedura: scollegare i blocchi di flussi di dati'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dataflow blocks, unlinking in TPL
+- Task Parallel Library, dataflows
+- TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 41f1b83fab6ff44e69ac2f010f70e6e254341f5e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Unlink Dataflow Blocks
-In questo documento viene descritto come scollegare un blocco di destinazione del flusso di dati dall'origine.  
+# <a name="how-to-unlink-dataflow-blocks"></a>Procedura: scollegare i blocchi di flussi di dati
+In questo documento viene descritto come scollegare un blocco di flussi di dati di destinazione dalla relativa origine.  
   
 > [!TIP]
->  La libreria del flusso di dati TPL \(spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  Per installare lo spazio dei nomi <xref:System.Threading.Tasks.Dataflow>, aprire il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere dal menu del progetto **Gestisci pacchetti NuGet** e scegliere cerca online il pacchetto `Microsoft.Tpl.Dataflow`.  
+>  La libreria del flusso di dati TPL (spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Per installare il <xref:System.Threading.Tasks.Dataflow> dello spazio dei nomi, Apri il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu progetto e cercare online il `Microsoft.Tpl.Dataflow` pacchetto.  
   
-## Esempio  
- Nell'esempio seguente vengono creati tre oggetti <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, ognuno dei quali chiama il metodo di `TrySolution` per calcolare un valore.  Questo esempio richiede solo il risultato della prima chiamata a `TrySolution` per finire.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente vengono creati tre oggetti <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, tramite ognuno dei quali viene chiamato il metodo `TrySolution` per calcolare un valore. Per questo esempio è necessario solo il risultato della prima chiamata a `TrySolution` per il completamento.  
   
  [!code-csharp[TPLDataflow_ReceiveAny#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_receiveany/cs/dataflowreceiveany.cs#1)]
  [!code-vb[TPLDataflow_ReceiveAny#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_receiveany/vb/dataflowreceiveany.vb#1)]  
   
- Per ottenere il valore dal primo oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> che termina, viene definito il metodo `ReceiveFromAny(T)`.  Il metodo `ReceiveFromAny(T)` accetta una matrice di oggetti <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> e collega ciascuno di questi oggetti a un oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>.  Quando si utilizza il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> per collegare un blocco di origine del flusso di dati a un blocco di destinazione, l'origine propaga i messaggi alla destinazione appena i dati diventano disponibili.  Poiché la classe <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> accetta solo il primo messaggio offerto, il metodo `ReceiveFromAny(T)` produce il risultato chiamando il metodo <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>.  Questo produce il primo messaggio offerto all'oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>.  Il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> dispone di una versione di overload che accetta un parametro <xref:System.Boolean>, `unlinkAfterOne` che, quando viene impostato a `True`, indica al blocco di origine di scollegarsi dalla destinazione dopo che la destinazione riceve un messaggio dall'origine.  Per l'oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> è importante scollegarsi dall'origine perché la relazione tra la matrice delle origini e l'oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> non è più richiesta dopo che l'oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> riceve un messaggio.  
+ Per ricevere il valore dal primo oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> completato, nell'esempio viene definito il metodo `ReceiveFromAny(T)`. Il metodo `ReceiveFromAny(T)` accetta una matrice di oggetti <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> e tramite esso viene collegato ognuno di questi oggetti a un oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>. Quando si utilizza il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> per collegare un blocco di flussi di dati di origine a un blocco di destinazione, tramite l'origine i messaggi vengono propagati nella destinazione quando i dati diventano disponibili. Poiché la classe <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> accetta solo il primo messaggio offerto, tramite il metodo `ReceiveFromAny(T)` viene generato il relativo risultato chiamando il metodo <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>. In questo modo viene generato il primo messaggio offerto all'oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>. Il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> dispone di una versione sottoposta a overload che accetta un parametro <xref:System.Boolean>, `unlinkAfterOne` che, quando viene impostato su `True`, indica al blocco di origine di scollegarsi dalla destinazione dopo la ricezione di un messaggio dall'origine da parte della destinazione. È importante per l'oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> scollegarsi dalle relative origini perché la relazione tra la matrice delle origini e l'oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> non è più richiesta dopo la ricezione di un messaggio da parte dell'oggetto <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>.  
   
- Per abilitare le chiamate rimanenti a `TrySolution` per terminare dopo che una di esse calcola un valore, il metodo `TrySolution` prende un oggetto <xref:System.Threading.CancellationToken> che viene annullato dopo la chiamata a `ReceiveFromAny(T)` ritorna.  Il metodo <xref:System.Threading.SpinWait.SpinUntil%2A> ritorna quando questo oggetto <xref:System.Threading.CancellationToken> viene annullato.  
+ Per abilitare il completamento delle chiamate rimanenti a `TrySolution` dopo che tramite una di esse viene calcolato un valore, il metodo `TrySolution` accetta un oggetto <xref:System.Threading.CancellationToken> che viene annullato dopo che la chiamata a `ReceiveFromAny(T)` ha restituito un valore. Tramite il metodo <xref:System.Threading.SpinWait.SpinUntil%2A> viene restituito un valore quando questo oggetto <xref:System.Threading.CancellationToken> viene annullato.  
   
-## Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio, oppure incollarlo in un file denominato `DataflowReceiveAny.cs` \(`DataflowReceiveAny.vb` per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) e quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll dataflowreceiveany. cs**  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
+ **vbc.exe /r:System.Threading.Tasks.Dataflow.dll dataflowreceiveany. vb**  
   
-## Programmazione efficiente  
+## <a name="robust-programming"></a>Programmazione efficiente  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

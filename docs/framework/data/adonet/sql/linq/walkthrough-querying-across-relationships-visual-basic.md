@@ -1,32 +1,36 @@
 ---
-title: "Procedura dettagliata: esecuzione di query tra relazioni (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura dettagliata: eseguire query tra relazioni (Visual Basic)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 05ae619a4d3a31c83a740572eae13fe7ef883a40
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura dettagliata: esecuzione di query tra relazioni (Visual Basic)
-In questa procedura dettagliata viene descritto l'uso delle *associazioni* [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per rappresentare relazioni di chiave esterna nel database.  
+# <a name="walkthrough-querying-across-relationships-visual-basic"></a>Procedura dettagliata: eseguire query tra relazioni (Visual Basic)
+Questa procedura dettagliata viene illustrato l'utilizzo di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare relazioni di chiave esterna nel database.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Questa procedura dettagliata è stata scritta usando Impostazioni di sviluppo di Visual Basic.  
   
-## Prerequisiti  
- È necessario avere completato la [Procedura dettagliata: modello a oggetti e query semplici \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md).  Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\\linqtest.  
+## <a name="prerequisites"></a>Prerequisiti  
+ È necessario avere completato [procedura dettagliata: oggetti modello e Query semplici (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest.  
   
-## Panoramica  
+## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da tre attività principali:  
   
 -   Aggiunta di una classe di entità per rappresentare la tabella Orders nel database di esempio Northwind.  
@@ -35,28 +39,28 @@ In questa procedura dettagliata viene descritto l'uso delle *associazioni* [!INC
   
 -   Creazione ed esecuzione di una query per testare il processo per ottenere informazioni su `Order` usando la classe `Customer`.  
   
-## Esecuzione del mapping delle relazioni tra tabelle  
+## <a name="mapping-relationships-across-tables"></a>Esecuzione del mapping delle relazioni tra tabelle  
  Dopo la definizione della classe `Customer`, creare la definizione della classe di entità `Order` includendo il codice seguente per indicare che `Orders.Customer` è correlata come chiave esterna a `Customers.CustomerID`.  
   
-#### Per aggiungere la classe di entità Order  
+#### <a name="to-add-the-order-entity-class"></a>Per aggiungere la classe di entità Order  
   
 -   Digitare o incollare il codice seguente dopo la classe `Customer`:  
   
      [!code-vb[DLinqWalk2VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#1)]  
   
-## Annotazione della classe Customer  
- In questo passaggio vengono aggiunte annotazioni alla classe `Customer` per indicare la relazione alla classe `Order`.  Questa aggiunta non è strettamente necessaria, in quanto la definizione della relazione in una direzione è sufficiente per creare il collegamento.  Tuttavia aggiungendo l'annotazione sarà possibile spostarsi facilmente tra gli oggetti in entrambe le direzioni.  
+## <a name="annotating-the-customer-class"></a>Annotazione della classe Customer  
+ In questo passaggio vengono aggiunte annotazioni alla classe `Customer` per indicare la relazione alla classe `Order`. Questa aggiunta non è strettamente necessaria, in quanto la definizione della relazione in una direzione è sufficiente per creare il collegamento. Tuttavia aggiungendo l'annotazione sarà possibile spostarsi facilmente tra gli oggetti in entrambe le direzioni.  
   
-#### Per annotare la classe Customer  
+#### <a name="to-annotate-the-customer-class"></a>Per annotare la classe Customer  
   
 -   Digitare o incollare il codice seguente nella classe `Customer`:  
   
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
-## Creazione ed esecuzione di un query sulla relazione Customer\-Order  
- A questo punto è possibile accedere direttamente agli oggetti `Order` dagli oggetti `Customer` o viceversa.  Non è necessario creare un *join* esplicito tra clienti e ordini.  
+## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Creazione ed esecuzione di un query sulla relazione Customer-Order  
+ A questo punto è possibile accedere direttamente agli oggetti `Order` dagli oggetti `Customer` o viceversa. Non è necessaria l'esplicita *join* tra customers e orders.  
   
-#### Per accedere agli oggetti Order usando oggetti Customer  
+#### <a name="to-access-order-objects-by-using-customer-objects"></a>Per accedere agli oggetti Order usando oggetti Customer  
   
 1.  Modificare il metodo `Sub Main` digitando o incollando il codice seguente nel metodo stesso:  
   
@@ -68,12 +72,12 @@ In questa procedura dettagliata viene descritto l'uso delle *associazioni* [!INC
   
 3.  Chiudere la finestra di messaggio per interrompere il debug.  
   
-## Creazione di una visualizzazione fortemente tipizzata del database  
- È molto più facile iniziare con una visualizzazione fortemente tipizzata del database.  Applicando la tipizzazione forte all'oggetto <xref:System.Data.Linq.DataContext>, si eviterà di eseguire chiamate a <xref:System.Data.Linq.DataContext.GetTable%2A>.  Quando si usa l'oggetto fortemente tipizzato <xref:System.Data.Linq.DataContext>, è possibile usare tabelle fortemente tipizzate in tutte le query.  
+## <a name="creating-a-strongly-typed-view-of-your-database"></a>Creazione di una visualizzazione fortemente tipizzata del database  
+ È molto più facile iniziare con una visualizzazione fortemente tipizzata del database. Applicando la tipizzazione forte all'oggetto <xref:System.Data.Linq.DataContext>, si eviterà di eseguire chiamate a <xref:System.Data.Linq.DataContext.GetTable%2A>. Quando si usa l'oggetto fortemente tipizzato <xref:System.Data.Linq.DataContext>, è possibile usare tabelle fortemente tipizzate in tutte le query.  
   
  Nei passaggi seguenti si creerà `Customers` come tabella fortemente tipizzata mappata alla tabella Customers nel database.  
   
-#### Per tipizzare fortemente l'oggetto DataContext  
+#### <a name="to-strongly-type-the-datacontext-object"></a>Per tipizzare fortemente l'oggetto DataContext  
   
 1.  Aggiungere il codice riportato di seguito sopra la dichiarazione della classe `Customer`.  
   
@@ -91,10 +95,10 @@ In questa procedura dettagliata viene descritto l'uso delle *associazioni* [!INC
   
 4.  Premere INVIO nella finestra Console per chiudere l'applicazione.  
   
-5.  Scegliere **Salva tutto** dal menu **File** se si desidera salvare questa applicazione.  
+5.  Nel **File** menu, fare clic su **Salva tutto** se si desidera salvare questa applicazione.  
   
-## Passaggi successivi  
- Nella successiva procedura dettagliata, [Procedura dettagliata: modifica dei dati \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md), verrà illustrato come modificare i dati.  Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
+## <a name="next-steps"></a>Passaggi successivi  
+ Nella procedura successiva ([procedura dettagliata: modifica di dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
   
-## Vedere anche  
- [Apprendimento tramite le procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vedere anche  
+ [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
