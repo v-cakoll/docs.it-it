@@ -1,44 +1,35 @@
 ---
 title: 'Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 78de99ed9b2a2d80c17cb013715a15f45f8fa2ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b09674690093ea89fcf59b79d90d34e9605b44a2
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche (C#)
-In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>. Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali. Il compilatore C# compila le query destinate a tali origini dati nel codice di un albero delle espressioni in runtime. Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.  
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a><span data-ttu-id="1a4d5-102">Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche (C#)</span><span class="sxs-lookup"><span data-stu-id="1a4d5-102">How to: Use Expression Trees to Build Dynamic Queries (C#)</span></span>
+<span data-ttu-id="1a4d5-103">In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-103">In LINQ, expression trees are used to represent structured queries that target sources of data that implement <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="1a4d5-104">Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-104">For example, the LINQ provider implements the <xref:System.Linq.IQueryable%601> interface for querying relational data stores.</span></span> <span data-ttu-id="1a4d5-105">Il compilatore C# compila le query destinate a tali origini dati nel codice di un albero delle espressioni in runtime.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-105">The C# compiler compiles queries that target such data sources into code that builds an expression tree at runtime.</span></span> <span data-ttu-id="1a4d5-106">Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-106">The query provider can then traverse the expression tree data structure and translate it into a query language appropriate for the data source.</span></span>  
   
- Gli alberi delle espressioni vengono usati in LINQ anche per rappresentare espressioni lambda assegnate a variabili di tipo <xref:System.Linq.Expressions.Expression%601>.  
+ <span data-ttu-id="1a4d5-107">Gli alberi delle espressioni vengono usati in LINQ anche per rappresentare espressioni lambda assegnate a variabili di tipo <xref:System.Linq.Expressions.Expression%601>.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-107">Expression trees are also used in LINQ to represent lambda expressions that are assigned to variables of type <xref:System.Linq.Expressions.Expression%601>.</span></span>  
   
- Questo argomento descrive come usare gli alberi delle espressioni per creare query LINQ dinamiche. Le query dinamiche sono utili quando le specifiche di una query non sono note in fase di compilazione. Supponiamo ad esempio che un'applicazione offra un'interfaccia utente che consente all'utente finale di specificare uno o più predicati per filtrare i dati. Per usare LINQ per l'esecuzione di query e creare query LINQ in runtime, un'applicazione di questo tipo deve usare alberi delle espressioni.  
+ <span data-ttu-id="1a4d5-108">Questo argomento descrive come usare gli alberi delle espressioni per creare query LINQ dinamiche.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-108">This topic describes how to use expression trees to create dynamic LINQ queries.</span></span> <span data-ttu-id="1a4d5-109">Le query dinamiche sono utili quando le specifiche di una query non sono note in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-109">Dynamic queries are useful when the specifics of a query are not known at compile time.</span></span> <span data-ttu-id="1a4d5-110">Supponiamo ad esempio che un'applicazione offra un'interfaccia utente che consente all'utente finale di specificare uno o più predicati per filtrare i dati.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-110">For example, an application might provide a user interface that enables the end user to specify one or more predicates to filter the data.</span></span> <span data-ttu-id="1a4d5-111">Per usare LINQ per l'esecuzione di query e creare query LINQ in runtime, un'applicazione di questo tipo deve usare alberi delle espressioni.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-111">In order to use LINQ for querying, this kind of application must use expression trees to create the LINQ query at runtime.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come usare alberi delle espressioni per costruire una query su un'origine dati `IQueryable` e quindi eseguirla. Il codice compila un albero delle espressioni per rappresentare la query seguente:  
+## <a name="example"></a><span data-ttu-id="1a4d5-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="1a4d5-112">Example</span></span>  
+ <span data-ttu-id="1a4d5-113">Nell'esempio seguente viene illustrato come usare alberi delle espressioni per costruire una query su un'origine dati `IQueryable` e quindi eseguirla.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-113">The following example shows you how to use expression trees to construct a query against an `IQueryable` data source and then execute it.</span></span> <span data-ttu-id="1a4d5-114">Il codice compila un albero delle espressioni per rappresentare la query seguente:</span><span class="sxs-lookup"><span data-stu-id="1a4d5-114">The code builds an expression tree to represent the following query:</span></span>  
   
  `companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16)).OrderBy(company => company)`  
   
- I metodi factory nello spazio dei nomi <xref:System.Linq.Expressions> vengono usati per creare alberi delle espressioni che rappresentano le espressioni che costituiscono la query complessiva. Le espressioni che rappresentano le chiamate ai metodi degli operatori query standard fanno riferimento alle implementazioni <xref:System.Linq.Queryable> di questi metodi. L'albero delle espressioni finale viene passato all'implementazione <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> del provider dell'origine dati `IQueryable` per creare una query eseguibile di tipo `IQueryable`. I risultati si ottengono enumerando tale variabile di query.  
+ <span data-ttu-id="1a4d5-115">I metodi factory nello spazio dei nomi <xref:System.Linq.Expressions> vengono usati per creare alberi delle espressioni che rappresentano le espressioni che costituiscono la query complessiva.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-115">The factory methods in the <xref:System.Linq.Expressions> namespace are used to create expression trees that represent the expressions that make up the overall query.</span></span> <span data-ttu-id="1a4d5-116">Le espressioni che rappresentano le chiamate ai metodi degli operatori query standard fanno riferimento alle implementazioni <xref:System.Linq.Queryable> di questi metodi.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-116">The expressions that represent calls to the standard query operator methods refer to the <xref:System.Linq.Queryable> implementations of these methods.</span></span> <span data-ttu-id="1a4d5-117">L'albero delle espressioni finale viene passato all'implementazione <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> del provider dell'origine dati `IQueryable` per creare una query eseguibile di tipo `IQueryable`.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-117">The final expression tree is passed to the <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> implementation of the provider of the `IQueryable` data source to create an executable query of type `IQueryable`.</span></span> <span data-ttu-id="1a4d5-118">I risultati si ottengono enumerando tale variabile di query.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-118">The results are obtained by enumerating that query variable.</span></span>  
   
 ```csharp  
 // Add a using directive for System.Linq.Expressions.  
@@ -113,20 +104,19 @@ foreach (string company in results)
 */  
 ```  
   
- Questo codice usa un numero fisso di espressioni nel predicato passato al metodo `Queryable.Where`. È tuttavia possibile scrivere un'applicazione che combini un numero variabile di espressioni di predicato a seconda dall'input dell'utente. È anche possibile variare gli operatori query standard chiamati nella query in base all'input dell'utente.  
+ <span data-ttu-id="1a4d5-119">Questo codice usa un numero fisso di espressioni nel predicato passato al metodo `Queryable.Where`.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-119">This code uses a fixed number of expressions in the predicate that is passed to the `Queryable.Where` method.</span></span> <span data-ttu-id="1a4d5-120">È tuttavia possibile scrivere un'applicazione che combini un numero variabile di espressioni di predicato a seconda dall'input dell'utente.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-120">However, you can write an application that combines a variable number of predicate expressions that depends on the user input.</span></span> <span data-ttu-id="1a4d5-121">È anche possibile variare gli operatori query standard chiamati nella query in base all'input dell'utente.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-121">You can also vary the standard query operators that are called in the query, depending on the input from the user.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compiling-the-code"></a><span data-ttu-id="1a4d5-122">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="1a4d5-122">Compiling the Code</span></span>  
   
--   Creare un nuovo progetto **Applicazione console**.  
+-   <span data-ttu-id="1a4d5-123">Creare un nuovo progetto **Applicazione console**.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-123">Create a new **Console Application** project.</span></span>  
   
--   Aggiungere un riferimento a System.Core.dll, se non è già presente.  
+-   <span data-ttu-id="1a4d5-124">Aggiungere un riferimento a System.Core.dll, se non è già presente.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-124">Add a reference to System.Core.dll if it is not already referenced.</span></span>  
   
--   Includere lo spazio dei nomi System.Linq.Expressions.  
+-   <span data-ttu-id="1a4d5-125">Includere lo spazio dei nomi System.Linq.Expressions.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-125">Include the System.Linq.Expressions namespace.</span></span>  
   
--   Copiare il codice dall'esempio e incollarlo nel metodo `Main`.  
+-   <span data-ttu-id="1a4d5-126">Copiare il codice dall'esempio e incollarlo nel metodo `Main`.</span><span class="sxs-lookup"><span data-stu-id="1a4d5-126">Copy the code from the example and paste it into the `Main` method.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Alberi delle espressioni (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Procedura: Eseguire alberi delle espressioni (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
- [Procedura: Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
-
+## <a name="see-also"></a><span data-ttu-id="1a4d5-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1a4d5-127">See Also</span></span>  
+ [<span data-ttu-id="1a4d5-128">Alberi delle espressioni (C#)</span><span class="sxs-lookup"><span data-stu-id="1a4d5-128">Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+ [<span data-ttu-id="1a4d5-129">Procedura: eseguire alberi delle espressioni (c#)</span><span class="sxs-lookup"><span data-stu-id="1a4d5-129">How to: Execute Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+ [<span data-ttu-id="1a4d5-130">Procedura: Specificare dinamicamente i filtri dei predicati in fase di esecuzione</span><span class="sxs-lookup"><span data-stu-id="1a4d5-130">How to: Dynamically Specify Predicate Filters at Runtime</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)

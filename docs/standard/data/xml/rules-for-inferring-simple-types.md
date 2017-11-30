@@ -1,90 +1,88 @@
 ---
-title: "Regole per l&#39;inferenza di tipi semplici | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Regole per l'inferenza di tipi semplici
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 9a74d111720eb9436f0cd71fd5acef7ea10939c0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Regole per l&#39;inferenza di tipi semplici
-Describes how the <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements.  
+# <a name="rules-for-inferring-simple-types"></a><span data-ttu-id="72d42-102">Regole per l'inferenza di tipi semplici</span><span class="sxs-lookup"><span data-stu-id="72d42-102">Rules for Inferring Simple Types</span></span>
+<span data-ttu-id="72d42-103">Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.</span><span class="sxs-lookup"><span data-stu-id="72d42-103">Describes how the <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements.</span></span>  
   
- La classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi come tipi semplici.  Contenuto della sezione vengono descritti i tipi che possono essere inferiti, la risoluzione delle differenze di più valori diversi in un unico tipo e la gestione degli attributi `xsi` di definizione dello schema.  
+ <span data-ttu-id="72d42-104">La classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi come tipi semplici.</span><span class="sxs-lookup"><span data-stu-id="72d42-104">The <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements as simple types.</span></span> <span data-ttu-id="72d42-105">Contenuto della sezione vengono descritti i tipi che possono essere inferiti, la risoluzione delle differenze di più valori diversi in un unico tipo e la gestione degli attributi `xsi` di definizione dello schema.</span><span class="sxs-lookup"><span data-stu-id="72d42-105">This section describes the potential inferred types, how multiple differing values are reconciled to a single type, and how schema-defining `xsi` attributes are handled.</span></span>  
   
-## Tipi inferiti  
- La classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce i valori di elementi e attributi come tipi semplici e include un attributo Type nello schema risultante.  Tutti i tipi inferiti sono tipi semplici.  I tipi o i facet di base non sono inclusi nello schema risultante.  
+## <a name="inferred-types"></a><span data-ttu-id="72d42-106">Tipi inferiti</span><span class="sxs-lookup"><span data-stu-id="72d42-106">Inferred Types</span></span>  
+ <span data-ttu-id="72d42-107">La classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce i valori di elementi e attributi come tipi semplici e include un attributo Type nello schema risultante.</span><span class="sxs-lookup"><span data-stu-id="72d42-107">The <xref:System.Xml.Schema.XmlSchemaInference> class infers element and attribute values as simple types and includes a type attribute in the resulting schema.</span></span> <span data-ttu-id="72d42-108">Tutti i tipi inferiti sono tipi semplici.</span><span class="sxs-lookup"><span data-stu-id="72d42-108">All inferred types are simple types.</span></span> <span data-ttu-id="72d42-109">I tipi o i facet di base non sono inclusi nello schema risultante.</span><span class="sxs-lookup"><span data-stu-id="72d42-109">No base types or facets are included as part of the resulting schema.</span></span>  
   
- I valori vengono esaminati singolarmente quando vengono rilevati nel documento XML.  Il tipo viene inferito per il valore riscontrato nel momento in cui viene esaminato.  Se è stato inferito un tipo per un attributo o un elemento e viene rilevato un valore per l'attributo o elemento che non corrisponde al tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> promuove il tipo per un set di regole.  Tali regole vengono illustrate nella sezione Promozione dei tipi, più avanti in questo argomento.  
+ <span data-ttu-id="72d42-110">I valori vengono esaminati singolarmente quando vengono rilevati nel documento XML.</span><span class="sxs-lookup"><span data-stu-id="72d42-110">Values are examined individually as they are encountered in the XML document.</span></span> <span data-ttu-id="72d42-111">Il tipo viene inferito per il valore riscontrato nel momento in cui viene esaminato.</span><span class="sxs-lookup"><span data-stu-id="72d42-111">The type is inferred for a value at the time it is examined.</span></span> <span data-ttu-id="72d42-112">Se è stato inferito un tipo per un attributo o un elemento e viene rilevato un valore per l'attributo o elemento che non corrisponde al tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> promuove il tipo per un set di regole.</span><span class="sxs-lookup"><span data-stu-id="72d42-112">If a type has been inferred for an attribute or element, and a value for the attribute or element is encountered that does not match the currently inferred type, the <xref:System.Xml.Schema.XmlSchemaInference> class promotes the type for each of a set of rules.</span></span> <span data-ttu-id="72d42-113">Tali regole vengono illustrate nella sezione Promozione dei tipi, più avanti in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="72d42-113">These rules are discussed in the Type Promotion section, later in this topic.</span></span>  
   
- Nella tabella seguente sono elencati i tipi che possono essere inferiti per lo schema risultante.  
+ <span data-ttu-id="72d42-114">Nella tabella seguente sono elencati i tipi che possono essere inferiti per lo schema risultante.</span><span class="sxs-lookup"><span data-stu-id="72d42-114">The following table lists the possible inferred types for the resulting schema.</span></span>  
   
-|Tipo semplice|Descrizione|  
-|-------------------|-----------------|  
-|boolean|True, false, 0, 1.|  
-|byte|Numeri interi nell'intervallo compreso tra \-128 e 127.|  
-|unsignedByte|Numeri interi nell'intervallo compreso tra 0 e 255.|  
-|short|Numeri interi nell'intervallo compreso tra \-32768 e 32767.|  
-|unsignedShort|Numeri interi nell'intervallo compreso tra 0 e 65535.|  
-|int|Numeri interi nell'intervallo compreso tra \-2147483648 e 2147483647.|  
-|unsignedInt|Numeri interi nell'intervallo compreso tra 0 e 4294967295.|  
-|long|Numeri interi nell'intervallo compreso tra \-9223372036854775808 e 9223372036854775807.|  
-|unsignedLong|Numeri interi nell'intervallo compreso tra 0 e 18446744073709551615.|  
-|integer|Un numero finito di cifre che può essere preceduto dal prefisso "\-".|  
-|decimal|Valori numerici che contengono da 0 a 28 cifre di precisione.|  
-|float|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente.  I valori decimali possono essere compresi tra \-16777216 e 16777216  I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici.  I valori speciali per float sono i seguenti: 0, \-0, INF \- INF, NaN.|  
-|double|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra \-9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici.  I valori speciali per float sono i seguenti: 0, \-0, INF \- INF, NaN.|  
-|duration|Formato della durata W3C.|  
-|dateTime|Formato dateTime W3C.|  
-|ora|Formato di ora W3C.|  
-|date|I valori relativi agli anni sono compresi tra 0001 e 9999.|  
-|gYearMonth|Formato dell'anno e del mese gregoriano W3C.|  
-|string|Uno o più caratteri Unicode.|  
+|<span data-ttu-id="72d42-115">Tipo semplice</span><span class="sxs-lookup"><span data-stu-id="72d42-115">Simple Type</span></span>|<span data-ttu-id="72d42-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="72d42-116">Description</span></span>|  
+|-----------------|-----------------|  
+|<span data-ttu-id="72d42-117">boolean</span><span class="sxs-lookup"><span data-stu-id="72d42-117">boolean</span></span>|<span data-ttu-id="72d42-118">True, false, 0, 1.</span><span class="sxs-lookup"><span data-stu-id="72d42-118">True, false, 0, 1.</span></span>|  
+|<span data-ttu-id="72d42-119">byte</span><span class="sxs-lookup"><span data-stu-id="72d42-119">byte</span></span>|<span data-ttu-id="72d42-120">Numeri interi nell'intervallo compreso tra -128 e 127.</span><span class="sxs-lookup"><span data-stu-id="72d42-120">Integers in the range of –128 to 127.</span></span>|  
+|<span data-ttu-id="72d42-121">unsignedByte</span><span class="sxs-lookup"><span data-stu-id="72d42-121">unsignedByte</span></span>|<span data-ttu-id="72d42-122">Numeri interi nell'intervallo compreso tra 0 e 255.</span><span class="sxs-lookup"><span data-stu-id="72d42-122">Integers in the range of 0 to 255.</span></span>|  
+|<span data-ttu-id="72d42-123">short</span><span class="sxs-lookup"><span data-stu-id="72d42-123">short</span></span>|<span data-ttu-id="72d42-124">Numeri interi nell'intervallo compreso tra -32768 e 32767.</span><span class="sxs-lookup"><span data-stu-id="72d42-124">Integers in the range of –32768 to 32767.</span></span>|  
+|<span data-ttu-id="72d42-125">unsignedShort</span><span class="sxs-lookup"><span data-stu-id="72d42-125">unsignedShort</span></span>|<span data-ttu-id="72d42-126">Numeri interi nell'intervallo compreso tra 0 e 65535.</span><span class="sxs-lookup"><span data-stu-id="72d42-126">Integers in the range of 0 to 65535.</span></span>|  
+|<span data-ttu-id="72d42-127">int</span><span class="sxs-lookup"><span data-stu-id="72d42-127">int</span></span>|<span data-ttu-id="72d42-128">Numeri interi nell'intervallo compreso tra -2147483648 e 2147483647.</span><span class="sxs-lookup"><span data-stu-id="72d42-128">Integers in the range of –2147483648 to 2147483647.</span></span>|  
+|<span data-ttu-id="72d42-129">unsignedInt</span><span class="sxs-lookup"><span data-stu-id="72d42-129">unsignedInt</span></span>|<span data-ttu-id="72d42-130">Numeri interi nell'intervallo compreso tra 0 e 4294967295.</span><span class="sxs-lookup"><span data-stu-id="72d42-130">Integers in the range of 0 to 4294967295.</span></span>|  
+|<span data-ttu-id="72d42-131">long</span><span class="sxs-lookup"><span data-stu-id="72d42-131">long</span></span>|<span data-ttu-id="72d42-132">Numeri interi nell'intervallo compreso tra -9223372036854775808 e 9223372036854775807.</span><span class="sxs-lookup"><span data-stu-id="72d42-132">Integers in the range of –9223372036854775808 to 9223372036854775807.</span></span>|  
+|<span data-ttu-id="72d42-133">unsignedLong</span><span class="sxs-lookup"><span data-stu-id="72d42-133">unsignedLong</span></span>|<span data-ttu-id="72d42-134">Numeri interi nell'intervallo compreso tra 0 e 18446744073709551615.</span><span class="sxs-lookup"><span data-stu-id="72d42-134">Integers in the range of 0 to 18446744073709551615.</span></span>|  
+|<span data-ttu-id="72d42-135">integer</span><span class="sxs-lookup"><span data-stu-id="72d42-135">integer</span></span>|<span data-ttu-id="72d42-136">Un numero finito di cifre che può essere preceduto dal prefisso "-".</span><span class="sxs-lookup"><span data-stu-id="72d42-136">A finite number of digits possibly prefixed with "-".</span></span>|  
+|<span data-ttu-id="72d42-137">decimal</span><span class="sxs-lookup"><span data-stu-id="72d42-137">decimal</span></span>|<span data-ttu-id="72d42-138">Valori numerici che contengono da 0 a 28 cifre di precisione.</span><span class="sxs-lookup"><span data-stu-id="72d42-138">Numerical values that contain from 0 to 28 digits of precision.</span></span>|  
+|<span data-ttu-id="72d42-139">float</span><span class="sxs-lookup"><span data-stu-id="72d42-139">float</span></span>|<span data-ttu-id="72d42-140">Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente.</span><span class="sxs-lookup"><span data-stu-id="72d42-140">Decimals optionally followed by "E" or "e" followed by an integer value representing the exponent.</span></span> <span data-ttu-id="72d42-141">I valori decimali possono essere compresi tra -16777216 e 16777216</span><span class="sxs-lookup"><span data-stu-id="72d42-141">Decimal values can be in the range of -16777216 to 16777216.</span></span> <span data-ttu-id="72d42-142">I valori dell'esponente tra –149 e 104.</span><span class="sxs-lookup"><span data-stu-id="72d42-142">Exponent values can be in the range of –149 to 104.</span></span><br /><br /> <span data-ttu-id="72d42-143">Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici.</span><span class="sxs-lookup"><span data-stu-id="72d42-143">Float allows for special values to represent infinity and non-numeric values.</span></span> <span data-ttu-id="72d42-144">I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.</span><span class="sxs-lookup"><span data-stu-id="72d42-144">Special values for float are: 0, -0, INF, -INF, NaN.</span></span>|  
+|<span data-ttu-id="72d42-145">double</span><span class="sxs-lookup"><span data-stu-id="72d42-145">double</span></span>|<span data-ttu-id="72d42-146">Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.</span><span class="sxs-lookup"><span data-stu-id="72d42-146">The same as float except decimal values can be in the range of -9007199254740992 to 9007199254740992, and exponent values can be in the range of –1075 to 970.</span></span><br /><br /> <span data-ttu-id="72d42-147">Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici.</span><span class="sxs-lookup"><span data-stu-id="72d42-147">Double allows for special values to represent infinity and non-numeric values.</span></span> <span data-ttu-id="72d42-148">I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.</span><span class="sxs-lookup"><span data-stu-id="72d42-148">Special values for float are: 0, -0, INF, -INF, NaN.</span></span>|  
+|<span data-ttu-id="72d42-149">duration</span><span class="sxs-lookup"><span data-stu-id="72d42-149">duration</span></span>|<span data-ttu-id="72d42-150">Formato della durata W3C.</span><span class="sxs-lookup"><span data-stu-id="72d42-150">The W3C duration format.</span></span>|  
+|<span data-ttu-id="72d42-151">dateTime</span><span class="sxs-lookup"><span data-stu-id="72d42-151">dateTime</span></span>|<span data-ttu-id="72d42-152">Formato dateTime W3C.</span><span class="sxs-lookup"><span data-stu-id="72d42-152">The W3C dateTime format.</span></span>|  
+|<span data-ttu-id="72d42-153">ora</span><span class="sxs-lookup"><span data-stu-id="72d42-153">time</span></span>|<span data-ttu-id="72d42-154">Formato di ora W3C.</span><span class="sxs-lookup"><span data-stu-id="72d42-154">The W3C time format.</span></span>|  
+|<span data-ttu-id="72d42-155">date</span><span class="sxs-lookup"><span data-stu-id="72d42-155">date</span></span>|<span data-ttu-id="72d42-156">I valori relativi agli anni sono compresi tra 0001 e 9999.</span><span class="sxs-lookup"><span data-stu-id="72d42-156">Year values are restricted from 0001 to 9999.</span></span>|  
+|<span data-ttu-id="72d42-157">gYearMonth</span><span class="sxs-lookup"><span data-stu-id="72d42-157">gYearMonth</span></span>|<span data-ttu-id="72d42-158">Formato dell'anno e del mese gregoriano W3C.</span><span class="sxs-lookup"><span data-stu-id="72d42-158">The W3C Gregorian month and year format.</span></span>|  
+|<span data-ttu-id="72d42-159">string</span><span class="sxs-lookup"><span data-stu-id="72d42-159">string</span></span>|<span data-ttu-id="72d42-160">Uno o più caratteri Unicode.</span><span class="sxs-lookup"><span data-stu-id="72d42-160">One or more Unicode characters.</span></span>|  
   
-## Promozione tipo  
- La classe <xref:System.Xml.Schema.XmlSchemaInference> esamina i valori di attributi ed elementi singolarmente.  Quando i valori vengono rilevati, viene inferito il tipo più restrittivo e senza segno.  Se è stato inferito un tipo per un attributo o elemento ed è stato rilevato un nuovo valore che non corrisponde al tipo inferito, quest'ultimo viene promosso a un nuovo tipo applicabile sia al tipo inferito che al nuovo valore.  Durante la promozione del tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti.  
+## <a name="type-promotion"></a><span data-ttu-id="72d42-161">Promozione tipo</span><span class="sxs-lookup"><span data-stu-id="72d42-161">Type Promotion</span></span>  
+ <span data-ttu-id="72d42-162">La classe <xref:System.Xml.Schema.XmlSchemaInference> esamina i valori di attributi ed elementi singolarmente.</span><span class="sxs-lookup"><span data-stu-id="72d42-162">The <xref:System.Xml.Schema.XmlSchemaInference> class examines attribute and element values one at a time.</span></span> <span data-ttu-id="72d42-163">Quando i valori vengono rilevati, viene inferito il tipo più restrittivo e senza segno.</span><span class="sxs-lookup"><span data-stu-id="72d42-163">As values are encountered, the most restrictive, unsigned type is inferred.</span></span> <span data-ttu-id="72d42-164">Se è stato inferito un tipo per un attributo o elemento ed è stato rilevato un nuovo valore che non corrisponde al tipo inferito, quest'ultimo viene promosso a un nuovo tipo applicabile sia al tipo inferito che al nuovo valore.</span><span class="sxs-lookup"><span data-stu-id="72d42-164">If a type has been inferred for an attribute or element, and a new value is encountered that does not match the currently inferred type, the inferred type is promoted to a new type that applies to both the currently inferred type and the new value.</span></span> <span data-ttu-id="72d42-165">Durante la promozione del tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti.</span><span class="sxs-lookup"><span data-stu-id="72d42-165">The <xref:System.Xml.Schema.XmlSchemaInference> class does consider previous values when promoting the inferred type.</span></span>  
   
- Ad esempio, si considerino i seguenti frammenti XML provenienti da due documenti XML:  
+ <span data-ttu-id="72d42-166">Ad esempio, si considerino i seguenti frammenti XML provenienti da due documenti XML:</span><span class="sxs-lookup"><span data-stu-id="72d42-166">For example, consider the following XML fragments from two XML documents:</span></span>  
   
  `<MyElement1 attr1="12" />`  
   
  `<MyElement1 attr1="52344" />`  
   
- Quando viene rilevato il primo valore `attr1`, il tipo di `attr1` viene inferito come `unsignedByte` in base al valore `12`.  Quando viene rilevato il secondo valore `attr1`, il tipo viene promosso a `unsignedShort` in base al tipo inferito di `unsignedByte` e al valore corrente `52344`.  
+ <span data-ttu-id="72d42-167">Quando viene rilevato il primo valore `attr1`, il tipo di `attr1` viene inferito come `unsignedByte` in base al valore `12`.</span><span class="sxs-lookup"><span data-stu-id="72d42-167">When the first `attr1` value is encountered, the type of `attr1` is inferred as `unsignedByte` based on the value `12`.</span></span> <span data-ttu-id="72d42-168">Quando viene rilevato il secondo valore `attr1`, il tipo viene promosso a `unsignedShort` in base al tipo inferito di `unsignedByte` e al valore corrente `52344`.</span><span class="sxs-lookup"><span data-stu-id="72d42-168">When the second `attr1` is encountered, the type is promoted to `unsignedShort` based on the currently inferred type of `unsignedByte` and the current value `52344`.</span></span>  
   
- Si consideri ora il seguente codice XML proveniente da due documenti XML:  
+ <span data-ttu-id="72d42-169">Si consideri ora il seguente codice XML proveniente da due documenti XML:</span><span class="sxs-lookup"><span data-stu-id="72d42-169">Now, consider the following XML from two XML documents:</span></span>  
   
  `<MyElement2 attr2="0" />`  
   
  `<MyElement2 attr2="true" />`  
   
- Quando viene rilevato il primo valore `attr2`, il tipo di `attr2` viene inferito come `unsignedByte` in base al valore `0`.  Quando viene rilevato il secondo valore `attr2`, il tipo viene promosso a `string` in base al tipo inferito di `unsignedByte` e al valore corrente `true`, poiché la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti durante la promozione del tipo dedotto.  Se tuttavia entrambe le istanze di `attr2` fossero state rilevate all'interno dello stesso documento XML e non in due documenti XML diversi come descritto in precedenza, `attr2` sarebbe stato inferito come `boolean`.  
+ <span data-ttu-id="72d42-170">Quando viene rilevato il primo valore `attr2`, il tipo di `attr2` viene inferito come `unsignedByte` in base al valore `0`.</span><span class="sxs-lookup"><span data-stu-id="72d42-170">When the first `attr2` value is encountered, the type of `attr2` is inferred as `unsignedByte` based on the value `0`.</span></span> <span data-ttu-id="72d42-171">Quando viene rilevato il secondo valore `attr2`, il tipo viene promosso a `string` in base al tipo inferito di `unsignedByte` e al valore corrente `true`, poiché la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti durante la promozione del tipo dedotto.</span><span class="sxs-lookup"><span data-stu-id="72d42-171">When the second `attr2` is encountered, the type is promoted to `string` based on the currently inferred type of `unsignedByte` and the current value `true` because the <xref:System.Xml.Schema.XmlSchemaInference> class does consider previous values when promoting the inferred type.</span></span> <span data-ttu-id="72d42-172">Se tuttavia entrambe le istanze di `attr2` fossero state rilevate all'interno dello stesso documento XML e non in due documenti XML diversi come descritto in precedenza, `attr2` sarebbe stato inferito come `boolean`.</span><span class="sxs-lookup"><span data-stu-id="72d42-172">However, if both instances of `attr2` were encountered in the same XML document and not in two different XML documents as illustrated above, `attr2` would have been inferred as `boolean`.</span></span>  
   
-### Attributi ignorati dallo spazio dei nomi dell'istanza di XML Schema all'indirizzo http:\/\/www.w3.org\/2001\/XMLSchema\-instance \(informazioni in lingua inglese\)  
- Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a><span data-ttu-id="72d42-173">Attributi ignorati dallo spazio dei nomi dell'istanza di XML Schema all'indirizzo http://www.w3.org/2001/XMLSchema-instance (informazioni in lingua inglese)</span><span class="sxs-lookup"><span data-stu-id="72d42-173">Ignored Attributes from the http://www.w3.org/2001/XMLSchema-instance Namespace</span></span>  
+ <span data-ttu-id="72d42-174">Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.</span><span class="sxs-lookup"><span data-stu-id="72d42-174">The following are schema-defining attributes that are ignored during schema inference.</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="72d42-175">Attributo</span><span class="sxs-lookup"><span data-stu-id="72d42-175">Attribute</span></span>|<span data-ttu-id="72d42-176">Descrizione</span><span class="sxs-lookup"><span data-stu-id="72d42-176">Description</span></span>|  
 |---------------|-----------------|  
-|`xsi:type`|Se viene rilevato un elemento con `xsi:type` specificato, l'attributo `xsi:type` viene ignorato.|  
-|`xsi:nil`|Se viene rilevato un elemento con un attributo `xsi:nil`, la dichiarazione dell'elemento nello schema inferito presenta il valore `nillable="true"`.  Un elemento con un attributo `xsi:nil` impostato su `true` non può contenere elementi figlio.|  
-|`xsi:schemaLocation`|Se rilevato, l'attributo `xsi:schemaLocation` viene ignorato.|  
-|`xsi:noNamespaceSchemaLocation`|Se rilevato, l'attributo `xsi:noNamespaceSchemaLocation` viene ignorato.|  
+|`xsi:type`|<span data-ttu-id="72d42-177">Se viene rilevato un elemento con `xsi:type` specificato, l'attributo `xsi:type` viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="72d42-177">If an element is encountered with `xsi:type` specified, the `xsi:type` is ignored.</span></span>|  
+|`xsi:nil`|<span data-ttu-id="72d42-178">Se viene rilevato un elemento con un attributo `xsi:nil`, la dichiarazione dell'elemento nello schema inferito presenta il valore `nillable="true"`.</span><span class="sxs-lookup"><span data-stu-id="72d42-178">If an element with an `xsi:nil` attribute is encountered, its element declaration in the inferred schema has the value of `nillable="true"`.</span></span> <span data-ttu-id="72d42-179">Un elemento con un attributo `xsi:nil` impostato su `true` non può contenere elementi figlio.</span><span class="sxs-lookup"><span data-stu-id="72d42-179">An element with an `xsi:nil` attribute set to `true` cannot have child elements.</span></span>|  
+|`xsi:schemaLocation`|<span data-ttu-id="72d42-180">Se rilevato, l'attributo `xsi:schemaLocation` viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="72d42-180">If `xsi:schemaLocation` is encountered, it is ignored.</span></span>|  
+|`xsi:noNamespaceSchemaLocation`|<span data-ttu-id="72d42-181">Se rilevato, l'attributo `xsi:noNamespaceSchemaLocation` viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="72d42-181">If `xsi:noNamespaceSchemaLocation` is encountered, it is ignored.</span></span>|  
   
-## Vedere anche  
- [SOM \(Schema Object Model\) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)   
- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)   
- [Regole per l'inferenza dello schema per tipi di nodo e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a><span data-ttu-id="72d42-182">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="72d42-182">See Also</span></span>  
+ [<span data-ttu-id="72d42-183">SOM (Schema Object Model) XML</span><span class="sxs-lookup"><span data-stu-id="72d42-183">XML Schema Object Model (SOM)</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [<span data-ttu-id="72d42-184">Inferenza degli schemi da documenti XML</span><span class="sxs-lookup"><span data-stu-id="72d42-184">Inferring Schemas from XML Documents</span></span>](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+ [<span data-ttu-id="72d42-185">Regole per l'inferenza di tipi di nodo dello Schema e struttura</span><span class="sxs-lookup"><span data-stu-id="72d42-185">Rules for Inferring Schema Node Types and Structure</span></span>](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

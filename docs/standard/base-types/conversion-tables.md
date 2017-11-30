@@ -1,80 +1,83 @@
 ---
-title: "Tabelle di conversione dei tipi in .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conversioni verso un tipo di dati più grande"
-  - "conversioni verso un tipo di dati più piccolo"
-  - "conversione dei tipi, tabella"
-  - "conversione dei tipi, conversione verso un tipo di dati più grande"
-  - "conversione dei tipi, conversione verso un tipo di dati più piccolo"
-  - "tipi di base, conversione"
-  - "tabelle [.NET Framework], conversione dei tipi"
-  - "tipi di dati [.NET Framework], conversione"
+title: Tabelle di conversione dei tipi in .NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- widening conversions
+- narrowing conversions
+- type conversion, table
+- converting types, narrowing conversions
+- converting types, widening conversions
+- base types, converting
+- tables [.NET Framework], type conversions
+- data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 327469f9a151b6ef7e1c42f6669c0a9dae7016fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tabelle di conversione dei tipi in .NET Framework
-Si parla di conversione di ampliamento quando un valore di un certo tipo viene convertito in un altro tipo di dimensioni identiche o maggiori.  Si parla di conversione di restrizione quando un valore di un certo tipo viene convertito in un valore di un altro tipo di dimensioni inferiori.  Nelle tabelle riportate in questa sezione sono illustrate le caratteristiche di entrambi i tipi di conversione.  
+# <a name="type-conversion-tables-in-net"></a><span data-ttu-id="298d6-102">Tabelle di conversione dei tipi in .NET</span><span class="sxs-lookup"><span data-stu-id="298d6-102">Type Conversion Tables in .NET</span></span>
+<span data-ttu-id="298d6-103">Si parla di conversione verso un tipo di dati più grande quando un valore di un certo tipo viene convertito in un altro tipo di dimensioni identiche o maggiori.</span><span class="sxs-lookup"><span data-stu-id="298d6-103">Widening conversion occurs when a value of one type is converted to another type that is of equal or greater size.</span></span> <span data-ttu-id="298d6-104">Si parla di conversione verso un tipo di dati più piccolo quando un valore di un certo tipo viene convertito in un valore di un altro tipo di dimensioni inferiori.</span><span class="sxs-lookup"><span data-stu-id="298d6-104">A narrowing conversion occurs when a value of one type is converted to a value of another type that is of a smaller size.</span></span> <span data-ttu-id="298d6-105">Le tabelle in questo argomento illustrano i comportamenti di entrambi i tipi di conversioni.</span><span class="sxs-lookup"><span data-stu-id="298d6-105">The tables in this topic illustrate the behaviors exhibited by both types of conversions.</span></span>  
   
-## Conversioni di ampliamento  
- Nella tabella riportata di seguito sono elencate le conversioni di ampliamento che possono essere eseguite senza alcuna perdita di informazioni.  
+## <a name="widening-conversions"></a><span data-ttu-id="298d6-106">conversioni verso un tipo di dati più grande</span><span class="sxs-lookup"><span data-stu-id="298d6-106">Widening Conversions</span></span>  
+ <span data-ttu-id="298d6-107">Nella tabella seguente vengono descritte le conversioni di ampliamento che possono essere eseguite senza perdita di informazioni.</span><span class="sxs-lookup"><span data-stu-id="298d6-107">The following table describes the widening conversions that can be performed without the loss of information.</span></span>  
   
-|Type|Conversione senza perdita di dati in|  
-|----------|------------------------------------------|  
-|<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.Int16>|<xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.UInt16>|<xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.Char>|<xref:System.UInt16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.Int32>|<xref:System.Int64>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.UInt32>|<xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double>, <xref:System.Decimal>|  
+|<span data-ttu-id="298d6-108">Tipo</span><span class="sxs-lookup"><span data-stu-id="298d6-108">Type</span></span>|<span data-ttu-id="298d6-109">Conversione senza perdita di dati in</span><span class="sxs-lookup"><span data-stu-id="298d6-109">Can be converted without data loss to</span></span>|  
+|----------|-------------------------------------------|  
+|<xref:System.Byte>|<span data-ttu-id="298d6-110"><xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span><span class="sxs-lookup"><span data-stu-id="298d6-110"><xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span></span>|  
+|<xref:System.SByte>|<span data-ttu-id="298d6-111"><xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span><span class="sxs-lookup"><span data-stu-id="298d6-111"><xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span></span>|  
+|<xref:System.Int16>|<span data-ttu-id="298d6-112"><xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span><span class="sxs-lookup"><span data-stu-id="298d6-112"><xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span></span>|  
+|<xref:System.UInt16>|<span data-ttu-id="298d6-113"><xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span><span class="sxs-lookup"><span data-stu-id="298d6-113"><xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span></span>|  
+|<xref:System.Char>|<span data-ttu-id="298d6-114"><xref:System.UInt16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span><span class="sxs-lookup"><span data-stu-id="298d6-114"><xref:System.UInt16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal></span></span>|  
+|<xref:System.Int32>|<span data-ttu-id="298d6-115"><xref:System.Int64>, <xref:System.Double>, <xref:System.Decimal></span><span class="sxs-lookup"><span data-stu-id="298d6-115"><xref:System.Int64>, <xref:System.Double>, <xref:System.Decimal></span></span>|  
+|<xref:System.UInt32>|<span data-ttu-id="298d6-116"><xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double>, <xref:System.Decimal></span><span class="sxs-lookup"><span data-stu-id="298d6-116"><xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double>, <xref:System.Decimal></span></span>|  
 |<xref:System.Int64>|<xref:System.Decimal>|  
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- Alcune conversioni di ampliamento verso <xref:System.Single> o <xref:System.Double> possono provocare una perdita di precisione.  Nella tabella seguente sono elencate le conversioni di ampliamento che possono generare una perdita di informazioni.  
+ <span data-ttu-id="298d6-117">Alcune conversioni di ampliamento verso <xref:System.Single> o <xref:System.Double> può causare una perdita di precisione.</span><span class="sxs-lookup"><span data-stu-id="298d6-117">Some widening conversions to <xref:System.Single> or <xref:System.Double> can cause a loss of precision.</span></span> <span data-ttu-id="298d6-118">Nella tabella seguente sono elencate le conversioni verso un tipo di dati più grande che possono generare una perdita di informazioni.</span><span class="sxs-lookup"><span data-stu-id="298d6-118">The following table describes the widening conversions that sometimes result in a loss of information.</span></span>  
   
-|Type|Conversione in|  
-|----------|--------------------|  
+|<span data-ttu-id="298d6-119">Tipo</span><span class="sxs-lookup"><span data-stu-id="298d6-119">Type</span></span>|<span data-ttu-id="298d6-120">Conversione in</span><span class="sxs-lookup"><span data-stu-id="298d6-120">Can be converted to</span></span>|  
+|----------|-------------------------|  
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
-|<xref:System.Int64>|<xref:System.Single>, <xref:System.Double>|  
-|<xref:System.UInt64>|<xref:System.Single>, <xref:System.Double>|  
-|<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
+|<xref:System.Int64>|<span data-ttu-id="298d6-121"><xref:System.Single>, <xref:System.Double></span><span class="sxs-lookup"><span data-stu-id="298d6-121"><xref:System.Single>, <xref:System.Double></span></span>|  
+|<xref:System.UInt64>|<span data-ttu-id="298d6-122"><xref:System.Single>, <xref:System.Double></span><span class="sxs-lookup"><span data-stu-id="298d6-122"><xref:System.Single>, <xref:System.Double></span></span>|  
+|<xref:System.Decimal>|<span data-ttu-id="298d6-123"><xref:System.Single>, <xref:System.Double></span><span class="sxs-lookup"><span data-stu-id="298d6-123"><xref:System.Single>, <xref:System.Double></span></span>|  
   
-## Conversioni di restrizione  
- Una conversione di restrizione verso <xref:System.Single> o <xref:System.Double> può provocare una perdita di informazioni.  Se il tipo di destinazione non è in grado di rappresentare in modo appropriato l'ordine di grandezza dell'origine, il tipo risultante viene impostato sulla costante `PositiveInfinity` o `NegativeInfinity`.  `PositiveInfinity` è il risultato della divisione di un numero positivo per zero e viene restituito anche quando il valore di un tipo <xref:System.Single> o <xref:System.Double> supera il valore del campo `MaxValue`.  `NegativeInfinity` è il risultato della divisione di un numero negativo per zero e viene restituito anche quando il valore di un tipo <xref:System.Single> o <xref:System.Double> è minore del valore del campo `MinValue`.  Una conversione da un tipo <xref:System.Double> a un tipo <xref:System.Single> potrebbe avere come risultato un valore `PositiveInfinity` o `NegativeInfinity`.  
+## <a name="narrowing-conversions"></a><span data-ttu-id="298d6-124">conversioni verso un tipo di dati più piccolo</span><span class="sxs-lookup"><span data-stu-id="298d6-124">Narrowing Conversions</span></span>  
+ <span data-ttu-id="298d6-125">Conversioni verso <xref:System.Single> o <xref:System.Double> può causare una perdita di informazioni.</span><span class="sxs-lookup"><span data-stu-id="298d6-125">A narrowing conversion to <xref:System.Single> or <xref:System.Double> can cause a loss of information.</span></span> <span data-ttu-id="298d6-126">Se il tipo di destinazione non è in grado di rappresentare in modo appropriato l'ordine di grandezza dell'origine, il tipo risultante viene impostato sulla costante `PositiveInfinity` o `NegativeInfinity`.</span><span class="sxs-lookup"><span data-stu-id="298d6-126">If the target type cannot properly express the magnitude of the source, the resulting type is set to the constant `PositiveInfinity` or `NegativeInfinity`.</span></span> <span data-ttu-id="298d6-127">`PositiveInfinity`risultato della divisione per zero di un numero positivo e viene restituito anche quando il valore di un <xref:System.Single> o <xref:System.Double> supera il valore del `MaxValue` campo.</span><span class="sxs-lookup"><span data-stu-id="298d6-127">`PositiveInfinity` results from dividing a positive number by zero and is also returned when the value of a <xref:System.Single> or <xref:System.Double> exceeds the value of the `MaxValue` field.</span></span> <span data-ttu-id="298d6-128">`NegativeInfinity`risultato della divisione per zero di un numero negativo e viene restituito anche quando il valore di un <xref:System.Single> o <xref:System.Double> è inferiore al valore del `MinValue` campo.</span><span class="sxs-lookup"><span data-stu-id="298d6-128">`NegativeInfinity` results from dividing a negative number by zero and is also returned when the value of a <xref:System.Single> or <xref:System.Double> falls below the value of the `MinValue` field.</span></span> <span data-ttu-id="298d6-129">Una conversione da un <xref:System.Double> per un <xref:System.Single> potrebbe essere `PositiveInfinity` o `NegativeInfinity`.</span><span class="sxs-lookup"><span data-stu-id="298d6-129">A conversion from a <xref:System.Double> to a <xref:System.Single> might result in `PositiveInfinity` or `NegativeInfinity`.</span></span>  
   
- Una conversione di restrizione può generare una perdita di informazioni anche per altri tipi di dati.  Viene tuttavia generato un evento <xref:System.OverflowException> se il valore di un tipo da convertire non rientra nell'intervallo specificato dai campi `MaxValue` e `MinValue` del tipo di destinazione e il processo di conversione viene controllato dal runtime in modo da assicurare che il valore del tipo di destinazione non superi `MaxValue` o `MinValue`.  Le conversioni eseguite mediante la classe <xref:System.Convert?displayProperty=fullName> vengono sempre controllate in questo modo.  
+ <span data-ttu-id="298d6-130">Una conversione verso un tipo di dati più piccolo può generare una perdita di informazioni anche per altri tipi di dati.</span><span class="sxs-lookup"><span data-stu-id="298d6-130">A narrowing conversion can also result in a loss of information for other data types.</span></span> <span data-ttu-id="298d6-131">Tuttavia, un <xref:System.OverflowException> viene generata se il valore di un tipo da convertire non rientra nell'intervallo specificato per il tipo di destinazione `MaxValue` e `MinValue` campi e la conversione è controllato dal runtime per assicurarsi che il valore di destinazione tipo non superi il `MaxValue` o `MinValue`.</span><span class="sxs-lookup"><span data-stu-id="298d6-131">However, an <xref:System.OverflowException> is thrown if the value of a type that is being converted falls outside of the range specified by the target type's `MaxValue` and `MinValue` fields, and the conversion is checked by the runtime to ensure that the value of the target type does not exceed its `MaxValue` or `MinValue`.</span></span> <span data-ttu-id="298d6-132">Le conversioni eseguite con la <xref:System.Convert?displayProperty=nameWithType> classe vengono sempre archiviate in questo modo.</span><span class="sxs-lookup"><span data-stu-id="298d6-132">Conversions that are performed with the <xref:System.Convert?displayProperty=nameWithType> class are always checked in this manner.</span></span>  
   
- Nella tabella seguente sono elencate le conversioni che generano un evento <xref:System.OverflowException> utilizzando la classe <xref:System.Convert?displayProperty=fullName> o qualsiasi conversione controllata se il valore del tipo convertito non rientra nell'intervallo specificato per il tipo risultante.  
+ <span data-ttu-id="298d6-133">Nella tabella seguente sono elencate le conversioni che generano un <xref:System.OverflowException> utilizzando <xref:System.Convert?displayProperty=nameWithType> o qualsiasi conversione controllata se il valore del tipo da convertire non rientra nell'intervallo specificato per il tipo risultante.</span><span class="sxs-lookup"><span data-stu-id="298d6-133">The following table lists conversions that throw an <xref:System.OverflowException> using <xref:System.Convert?displayProperty=nameWithType> or any checked conversion if the value of the type being converted is outside the defined range of the resulting type.</span></span>  
   
-|Type|Conversione in|  
-|----------|--------------------|  
+|<span data-ttu-id="298d6-134">Tipo</span><span class="sxs-lookup"><span data-stu-id="298d6-134">Type</span></span>|<span data-ttu-id="298d6-135">Conversione in</span><span class="sxs-lookup"><span data-stu-id="298d6-135">Can be converted to</span></span>|  
+|----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
-|<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  
-|<xref:System.Int16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16>|  
-|<xref:System.UInt16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>|  
-|<xref:System.Int32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>,<xref:System.UInt32>|  
-|<xref:System.UInt32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>|  
-|<xref:System.Int64>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>,<xref:System.UInt32>,<xref:System.UInt64>|  
-|<xref:System.UInt64>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>|  
-|<xref:System.Decimal>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
-|<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
-|<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
+|<xref:System.SByte>|<span data-ttu-id="298d6-136"><xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64></span><span class="sxs-lookup"><span data-stu-id="298d6-136"><xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64></span></span>|  
+|<xref:System.Int16>|<span data-ttu-id="298d6-137"><xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16></span><span class="sxs-lookup"><span data-stu-id="298d6-137"><xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16></span></span>|  
+|<xref:System.UInt16>|<span data-ttu-id="298d6-138"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16></span><span class="sxs-lookup"><span data-stu-id="298d6-138"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16></span></span>|  
+|<xref:System.Int32>|<span data-ttu-id="298d6-139"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>,<xref:System.UInt32></span><span class="sxs-lookup"><span data-stu-id="298d6-139"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>,<xref:System.UInt32></span></span>|  
+|<xref:System.UInt32>|<span data-ttu-id="298d6-140"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32></span><span class="sxs-lookup"><span data-stu-id="298d6-140"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32></span></span>|  
+|<xref:System.Int64>|<span data-ttu-id="298d6-141"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>,<xref:System.UInt32>,<xref:System.UInt64></span><span class="sxs-lookup"><span data-stu-id="298d6-141"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>,<xref:System.UInt32>,<xref:System.UInt64></span></span>|  
+|<xref:System.UInt64>|<span data-ttu-id="298d6-142"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64></span><span class="sxs-lookup"><span data-stu-id="298d6-142"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64></span></span>|  
+|<xref:System.Decimal>|<span data-ttu-id="298d6-143"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64></span><span class="sxs-lookup"><span data-stu-id="298d6-143"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64></span></span>|  
+|<xref:System.Single>|<span data-ttu-id="298d6-144"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64></span><span class="sxs-lookup"><span data-stu-id="298d6-144"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64></span></span>|  
+|<xref:System.Double>|<span data-ttu-id="298d6-145"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64></span><span class="sxs-lookup"><span data-stu-id="298d6-145"><xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64></span></span>|  
   
-## Vedere anche  
- <xref:System.Convert?displayProperty=fullName>   
- [Conversione di tipi in .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a><span data-ttu-id="298d6-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="298d6-146">See Also</span></span>  
+ <xref:System.Convert?displayProperty=nameWithType>  
+ [<span data-ttu-id="298d6-147">Conversione di tipi in .NET</span><span class="sxs-lookup"><span data-stu-id="298d6-147">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)

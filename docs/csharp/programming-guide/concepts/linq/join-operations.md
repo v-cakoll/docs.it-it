@@ -1,61 +1,51 @@
 ---
 title: Operazioni di join (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 158d035985dae0d1c1daf0f276a9df7b913f2263
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df2f88f2988a4c91730bcfc4e39f10e3471e4ddf
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="join-operations-c"></a>Operazioni di join (C#)
-Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  
+# <a name="join-operations-c"></a><span data-ttu-id="25a20-102">Operazioni di join (C#)</span><span class="sxs-lookup"><span data-stu-id="25a20-102">Join Operations (C#)</span></span>
+<span data-ttu-id="25a20-103">Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.</span><span class="sxs-lookup"><span data-stu-id="25a20-103">A *join* of two data sources is the association of objects in one data source with objects that share a common attribute in another data source.</span></span>  
   
- La creazione di un join è un'operazione importante nelle query che fanno riferimento a origini dati le cui relazioni reciproche non possono essere seguite direttamente. Nella programmazione orientata a oggetti ciò potrebbe corrispondere a una correlazione non modellata tra oggetti, ad esempio la direzione inversa di una relazione unidirezionale. Un esempio di relazione unidirezionale è costituito da una classe Customer che include una proprietà di tipo City, ma la classe City non include una proprietà che sia una raccolta di oggetti Customer. Se si ha un elenco di oggetti City e si vogliono trovare tutti i clienti in ogni città, è possibile usare un'operazione join per individuarli.  
+ <span data-ttu-id="25a20-104">La creazione di un join è un'operazione importante nelle query che fanno riferimento a origini dati le cui relazioni reciproche non possono essere seguite direttamente.</span><span class="sxs-lookup"><span data-stu-id="25a20-104">Joining is an important operation in queries that target data sources whose relationships to each other cannot be followed directly.</span></span> <span data-ttu-id="25a20-105">Nella programmazione orientata a oggetti ciò potrebbe corrispondere a una correlazione non modellata tra oggetti, ad esempio la direzione inversa di una relazione unidirezionale.</span><span class="sxs-lookup"><span data-stu-id="25a20-105">In object-oriented programming, this could mean a correlation between objects that is not modeled, such as the backwards direction of a one-way relationship.</span></span> <span data-ttu-id="25a20-106">Un esempio di relazione unidirezionale è costituito da una classe Customer che include una proprietà di tipo City, ma la classe City non include una proprietà che sia una raccolta di oggetti Customer.</span><span class="sxs-lookup"><span data-stu-id="25a20-106">An example of a one-way relationship is a Customer class that has a property of type City, but the City class does not have a property that is a collection of Customer objects.</span></span> <span data-ttu-id="25a20-107">Se si ha un elenco di oggetti City e si vogliono trovare tutti i clienti in ogni città, è possibile usare un'operazione join per individuarli.</span><span class="sxs-lookup"><span data-stu-id="25a20-107">If you have a list of City objects and you want to find all the customers in each city, you could use a join operation to find them.</span></span>  
   
- I metodi di join disponibili nel framework LINQ sono <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A>. Questi metodi eseguono equijoin, ovvero join che associano due origini dati in base all'uguaglianza delle rispettive chiavi. Per un confronto, si noti che Transact-SQL supporta operatori join diversi da 'uguale a', ad esempio l'operatore 'minore di'. In termini di database relazionale, <xref:System.Linq.Enumerable.Join%2A> implementa un inner join, ovvero un tipo di join in cui sono restituiti solo gli oggetti con una corrispondenza nell'altro set di dati. Il metodo <xref:System.Linq.Enumerable.GroupJoin%2A> non ha equivalenti diretti in termini di database relazionale, ma implementa un superset di inner join e left outer join. Un left outer join è un join che restituisce ogni elemento della prima origine dati (a sinistra), anche se non ha elementi correlati nell'altra origine dati.  
+ <span data-ttu-id="25a20-108">I metodi di join disponibili nel framework LINQ sono <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A>.</span><span class="sxs-lookup"><span data-stu-id="25a20-108">The join methods provided in the LINQ framework are <xref:System.Linq.Enumerable.Join%2A> and <xref:System.Linq.Enumerable.GroupJoin%2A>.</span></span> <span data-ttu-id="25a20-109">Questi metodi eseguono equijoin, ovvero join che associano due origini dati in base all'uguaglianza delle rispettive chiavi.</span><span class="sxs-lookup"><span data-stu-id="25a20-109">These methods perform equijoins, or joins that match two data sources based on equality of their keys.</span></span> <span data-ttu-id="25a20-110">Per un confronto, si noti che Transact-SQL supporta operatori join diversi da 'uguale a', ad esempio l'operatore 'minore di'. In termini di database relazionale, <xref:System.Linq.Enumerable.Join%2A> implementa un inner join, ovvero un tipo di join in cui sono restituiti solo gli oggetti con una corrispondenza nell'altro set di dati.</span><span class="sxs-lookup"><span data-stu-id="25a20-110">(For comparison, Transact-SQL supports join operators other than 'equals', for example the 'less than' operator.) In relational database terms, <xref:System.Linq.Enumerable.Join%2A> implements an inner join, a type of join in which only those objects that have a match in the other data set are returned.</span></span> <span data-ttu-id="25a20-111">Il metodo <xref:System.Linq.Enumerable.GroupJoin%2A> non ha equivalenti diretti in termini di database relazionale, ma implementa un superset di inner join e left outer join.</span><span class="sxs-lookup"><span data-stu-id="25a20-111">The <xref:System.Linq.Enumerable.GroupJoin%2A> method has no direct equivalent in relational database terms, but it implements a superset of inner joins and left outer joins.</span></span> <span data-ttu-id="25a20-112">Un left outer join è un join che restituisce ogni elemento della prima origine dati (a sinistra), anche se non ha elementi correlati nell'altra origine dati.</span><span class="sxs-lookup"><span data-stu-id="25a20-112">A left outer join is a join that returns each element of the first (left) data source, even if it has no correlated elements in the other data source.</span></span>  
   
- L'illustrazione seguente mostra una visualizzazione concettuale dei due set e degli elementi dei set che sono inclusi in un inner join o in un left outer join.  
+ <span data-ttu-id="25a20-113">L'illustrazione seguente mostra una visualizzazione concettuale dei due set e degli elementi dei set che sono inclusi in un inner join o in un left outer join.</span><span class="sxs-lookup"><span data-stu-id="25a20-113">The following illustration shows a conceptual view of two sets and the elements within those sets that are included in either an inner join or a left outer join.</span></span>  
   
- ![Due cerchi sovrapposti che indicano inner join&#47;outer join.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "Cerchi di join")  
+ <span data-ttu-id="25a20-114">![Due cerchi sovrapposti che indicano inner join&#47;outer join.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "Cerchi di join")</span><span class="sxs-lookup"><span data-stu-id="25a20-114">![Two overlapping circles showing inner&#47;outer.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")</span></span>  
   
-## <a name="methods"></a>Metodi  
+## <a name="methods"></a><span data-ttu-id="25a20-115">Metodi</span><span class="sxs-lookup"><span data-stu-id="25a20-115">Methods</span></span>  
   
-|Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
+|<span data-ttu-id="25a20-116">Nome metodo</span><span class="sxs-lookup"><span data-stu-id="25a20-116">Method Name</span></span>|<span data-ttu-id="25a20-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="25a20-117">Description</span></span>|<span data-ttu-id="25a20-118">Sintassi di espressione della query C#</span><span class="sxs-lookup"><span data-stu-id="25a20-118">C# Query Expression Syntax</span></span>|<span data-ttu-id="25a20-119">Altre informazioni</span><span class="sxs-lookup"><span data-stu-id="25a20-119">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Join|Unisce due sequenze in base a funzioni selector chiave ed estrae coppie di valori|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
-|GroupJoin|Unisce due sequenze in base a funzioni selector chiave e raggruppa le corrispondenze risultanti per ogni elemento.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="25a20-120">Join</span><span class="sxs-lookup"><span data-stu-id="25a20-120">Join</span></span>|<span data-ttu-id="25a20-121">Unisce due sequenze in base a funzioni selector chiave ed estrae coppie di valori</span><span class="sxs-lookup"><span data-stu-id="25a20-121">Joins two sequences based on key selector functions and extracts pairs of values.</span></span>|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="25a20-122">GroupJoin</span><span class="sxs-lookup"><span data-stu-id="25a20-122">GroupJoin</span></span>|<span data-ttu-id="25a20-123">Unisce due sequenze in base a funzioni selector chiave e raggruppa le corrispondenze risultanti per ogni elemento.</span><span class="sxs-lookup"><span data-stu-id="25a20-123">Joins two sequences based on key selector functions and groups the resulting matches for each element.</span></span>|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>   
- [Panoramica degli operatori query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
- [Formulare join e query di prodotto incrociato](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)   
- [Clausola join](../../../../csharp/language-reference/keywords/join-clause.md)   
- [Procedura: Eseguire un join usando chiavi composte](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)   
- [Procedura: Ordinare i risultati di una clausola join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [Procedura: Eseguire operazioni di join personalizzate](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)   
- [Procedura: Eseguire join raggruppati](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [Procedura: Eseguire inner join](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [Procedura: Eseguire left outer join](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="25a20-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="25a20-124">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="25a20-125">Cenni preliminari sugli operatori di query standard (C#)</span><span class="sxs-lookup"><span data-stu-id="25a20-125">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="25a20-126">Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="25a20-126">Anonymous Types</span></span>](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+ [<span data-ttu-id="25a20-127">Formulare query di prodotto incrociato e join</span><span class="sxs-lookup"><span data-stu-id="25a20-127">Formulate Joins and Cross-Product Queries</span></span>](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [<span data-ttu-id="25a20-128">Clausola join</span><span class="sxs-lookup"><span data-stu-id="25a20-128">join clause</span></span>](../../../../csharp/language-reference/keywords/join-clause.md)  
+ [<span data-ttu-id="25a20-129">Procedura: Eseguire un join usando una chiave composta</span><span class="sxs-lookup"><span data-stu-id="25a20-129">How to: Join by Using Composite Keys</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [<span data-ttu-id="25a20-130">Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="25a20-130">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [<span data-ttu-id="25a20-131">Procedura: Ordinare i risultati di una clausola join</span><span class="sxs-lookup"><span data-stu-id="25a20-131">How to: Order the Results of a Join Clause</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [<span data-ttu-id="25a20-132">Procedura: Eseguire operazioni di join personalizzate</span><span class="sxs-lookup"><span data-stu-id="25a20-132">How to: Perform Custom Join Operations</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
+ [<span data-ttu-id="25a20-133">Procedura: Eseguire dei join raggruppati</span><span class="sxs-lookup"><span data-stu-id="25a20-133">How to: Perform Grouped Joins</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [<span data-ttu-id="25a20-134">Procedura: Eseguire degli inner join</span><span class="sxs-lookup"><span data-stu-id="25a20-134">How to: Perform Inner Joins</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [<span data-ttu-id="25a20-135">Procedura: Eseguire i left outer join</span><span class="sxs-lookup"><span data-stu-id="25a20-135">How to: Perform Left Outer Joins</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+ [<span data-ttu-id="25a20-136">Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="25a20-136">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

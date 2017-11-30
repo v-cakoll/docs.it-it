@@ -1,47 +1,50 @@
 ---
-title: "Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mapping di maiuscole e minuscole"
-  - "maiuscole e minuscole (mapping personalizzati)"
-  - "impostazioni cultura, regole di ordinamento personalizzate"
-  - "regole di ordinamento personalizzate"
-  - "operazioni sulle stringhe indipendenti dalle impostazioni cultura, opzioni per l'esecuzione"
-  - "impostazioni cultura, maiuscole e minuscole (mapping personalizzati)"
-  - "operazioni sulle stringhe indipendenti dalle impostazioni cultura, overload di metodi"
+title: Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- case mappings
+- custom case mappings
+- culture, custom sorting rules
+- custom sorting rules
+- culture-insensitive string operations, options for performing
+- culture, custom case mappings
+- culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e703e9adc531b7d1695d3e9bbed61a2c0f62ad31
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura
-Per la maggior parte, i metodi di .NET Framework che eseguono operazioni sulle stringhe dipendenti dalle impostazioni cultura forniscono, per impostazione predefinita, overload dei metodi che consentono di specificare in modo esplicito le impostazioni cultura da utilizzare mediante il passaggio di un parametro <xref:System.Globalization.CultureInfo>.  Questi overload consentono di eliminare le variazioni legate alle impostazioni cultura in mapping tra maiuscole e minuscole e regole di ordinamento e garantiscono risultati indipendenti dalle impostazioni cultura.  
+# <a name="performing-culture-insensitive-string-operations"></a><span data-ttu-id="21c13-102">Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura</span><span class="sxs-lookup"><span data-stu-id="21c13-102">Performing Culture-Insensitive String Operations</span></span>
+<span data-ttu-id="21c13-103">La maggior parte dei metodi di .NET Framework che eseguono operazioni sulle stringhe dipendenti dalle impostazioni cultura per impostazione predefinita è fornire overload di metodi che consentono di specificare in modo esplicito le impostazioni cultura da utilizzare passando un <xref:System.Globalization.CultureInfo> parametro.</span><span class="sxs-lookup"><span data-stu-id="21c13-103">Most .NET Framework methods that perform culture-sensitive string operations by default provide method overloads that allow you to explicitly specify the culture to use by passing a <xref:System.Globalization.CultureInfo> parameter.</span></span> <span data-ttu-id="21c13-104">Questi overload consentono di eliminare le variazioni legate alle impostazioni cultura in mapping tra maiuscole e minuscole e regole di ordinamento e garantiscono risultati indipendenti dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="21c13-104">These overloads allow you to eliminate cultural variations in case mappings and sorting rules and guarantee culture-insensitive results.</span></span>  
   
- In questa sezione vengono forniti gli argomenti elencati di seguito, in cui viene illustrato come eseguire operazioni sulle stringhe indipendenti dalle impostazioni cultura utilizzando metodi .NET Framework che per impostazione predefinita sono dipendenti dalle impostazioni cultura.  
+ <span data-ttu-id="21c13-105">In questa sezione vengono forniti gli argomenti elencati di seguito, in cui viene illustrato come eseguire operazioni sulle stringhe indipendenti dalle impostazioni cultura usando metodi .NET Framework che per impostazione predefinita sono dipendenti dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="21c13-105">This section provides the following topics to demonstrate how to perform culture-insensitive string operations using .NET Framework methods that are culture-sensitive by default.</span></span>  
   
-## In questa sezione  
- [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)  
- Viene illustrato come utilizzare i metodi <xref:System.String.Compare%2A?displayProperty=fullName> e <xref:System.String.CompareTo%2A?displayProperty=fullName> per eseguire confronti di stringhe indipendenti dalle impostazioni cultura.  
+## <a name="in-this-section"></a><span data-ttu-id="21c13-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="21c13-106">In This Section</span></span>  
+ [<span data-ttu-id="21c13-107">Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura</span><span class="sxs-lookup"><span data-stu-id="21c13-107">Performing Culture-Insensitive String Comparisons</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)  
+ <span data-ttu-id="21c13-108">Viene descritto come utilizzare il <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metodi per eseguire confronti tra stringhe indipendente dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="21c13-108">Describes how to use the <xref:System.String.Compare%2A?displayProperty=nameWithType> and <xref:System.String.CompareTo%2A?displayProperty=nameWithType> methods to perform culture-insensitive string comparisons.</span></span>  
   
- [Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)  
- Viene illustrato come utilizzare i metodi <xref:System.String.ToUpper%2A?displayProperty=fullName>, <xref:System.String.ToLower%2A?displayProperty=fullName>, <xref:System.Char.ToUpper%2A?displayProperty=fullName> e <xref:System.Char.ToLower%2A?displayProperty=fullName> per eseguire modifiche delle lettere maiuscole e minuscole indipendenti dalle impostazioni cultura.  
+ [<span data-ttu-id="21c13-109">Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura</span><span class="sxs-lookup"><span data-stu-id="21c13-109">Performing Culture-Insensitive Case Changes</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)  
+ <span data-ttu-id="21c13-110">Viene descritto come utilizzare il <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> metodi per eseguire modifiche di maiuscole indipendente dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="21c13-110">Describes how to use the <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, and <xref:System.Char.ToLower%2A?displayProperty=nameWithType> methods to perform culture-insensitive case changes.</span></span>  
   
- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle raccolte](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)  
- Viene descritto come utilizzare le classi [CaseInsensitiveComparer](frlrfSystemCollectionsCaseInsensitiveComparerClassTopic), <xref:System.Collections.CaseInsensitiveHashCodeProvider> e [SortedList](frlrfSystemCollectionsSortedListClassTopic) e i metodi [ArrayList.Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx) e [CollectionsUtil.CreateCaseInsensitiveHashtable](frlrfSystemCollectionsSpecializedCollectionsUtilClassCreateCaseInsensitiveHashtableTopic) per eseguire operazioni indipendenti dalle impostazioni cultura nelle raccolte.  
+ [<span data-ttu-id="21c13-111">Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle raccolte</span><span class="sxs-lookup"><span data-stu-id="21c13-111">Performing Culture-Insensitive String Operations in Collections</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)  
+ <span data-ttu-id="21c13-112">Viene descritto come utilizzare il <xref:System.Collections.CaseInsensitiveComparer>, <xref:System.Collections.CaseInsensitiveHashCodeProvider> (classe), <xref:System.Collections.SortedList>, <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> e <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> per eseguire operazioni indipendenti dalle impostazioni cultura nelle raccolte.</span><span class="sxs-lookup"><span data-stu-id="21c13-112">Describes how to use the <xref:System.Collections.CaseInsensitiveComparer>, <xref:System.Collections.CaseInsensitiveHashCodeProvider> class, <xref:System.Collections.SortedList>, <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> and <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> to perform culture-insensitive operations in collections.</span></span>  
   
- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle matrici](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)  
- Viene illustrato come utilizzare i metodi <xref:System.Array.Sort%2A?displayProperty=fullName> e <xref:System.Array.BinarySearch%2A?displayProperty=fullName> per eseguire operazioni nelle matrici indipendenti dalle impostazioni cultura.  
+ [<span data-ttu-id="21c13-113">Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle matrici</span><span class="sxs-lookup"><span data-stu-id="21c13-113">Performing Culture-Insensitive String Operations in Arrays</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)  
+ <span data-ttu-id="21c13-114">Viene descritto come utilizzare il <xref:System.Array.Sort%2A?displayProperty=nameWithType> e <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> metodi per eseguire operazioni indipendenti dalle impostazioni cultura nelle matrici.</span><span class="sxs-lookup"><span data-stu-id="21c13-114">Describes how to use the <xref:System.Array.Sort%2A?displayProperty=nameWithType> and <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> methods to perform culture-insensitive operations in arrays.</span></span>  
   
-## Sezioni correlate  
- [Operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Vengono descritti i motivi per cui è opportuno tenere in considerazione le impostazioni cultura in occasione dell'esecuzione di operazioni sulle stringhe e vengono fornite indicazioni sui casi in cui devono essere eseguite operazioni dipendenti dalle impostazioni cultura o operazioni indipendenti dalle impostazioni cultura.
+## <a name="related-sections"></a><span data-ttu-id="21c13-115">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="21c13-115">Related Sections</span></span>  
+ [<span data-ttu-id="21c13-116">Operazioni sulle stringhe indipendenti dalle impostazioni cultura</span><span class="sxs-lookup"><span data-stu-id="21c13-116">Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ <span data-ttu-id="21c13-117">Vengono descritti i motivi per cui è opportuno tenere in considerazione le impostazioni cultura in occasione dell'esecuzione di operazioni sulle stringhe e vengono fornite indicazioni sui casi in cui devono essere eseguite operazioni dipendenti dalle impostazioni cultura o operazioni indipendenti dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="21c13-117">Describes why you should be aware of culture when performing operations on strings and provides guidelines for when to perform culture-sensitive operations and when to perform culture-insensitive operations.</span></span>

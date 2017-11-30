@@ -12,46 +12,44 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 57d522918d280c9a8a68fcd420b7216cc48216d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 70693af8582de084894275c832e451d7f0fee794
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
-# <a name="sending-and-handling-faults"></a><span data-ttu-id="9909a-102">Invio e gestione di errori</span><span class="sxs-lookup"><span data-stu-id="9909a-102">Sending and Handling Faults</span></span>
-<span data-ttu-id="9909a-103">In questo esempio viene illustrato come usare le attività di messaggistica <xref:System.ServiceModel.Activities.SendReply> e <xref:System.ServiceModel.Activities.ReceiveReply> per inviare e ricevere errori previsti e imprevisti.</span><span class="sxs-lookup"><span data-stu-id="9909a-103">This sample demonstrates how to use the <xref:System.ServiceModel.Activities.SendReply> and <xref:System.ServiceModel.Activities.ReceiveReply> messaging activities to send and receive expected and unexpected faults.</span></span> <span data-ttu-id="9909a-104">In questo scenario, la prima richiesta del client comporta un errore previsto incluso nella raccolta <xref:System.ServiceModel.Activities.Send.KnownTypes%2A>.</span><span class="sxs-lookup"><span data-stu-id="9909a-104">In this scenario, the first client request results in an expected fault that has been included in its <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> collection.</span></span> <span data-ttu-id="9909a-105">Le successive richieste del client comportano la ricezione di errori imprevisti, prima del completamento della richiesta finale.</span><span class="sxs-lookup"><span data-stu-id="9909a-105">The next few client requests result in receiving unexpected faults, before the final request succeeds.</span></span>  
+# <a name="sending-and-handling-faults"></a><span data-ttu-id="5cd41-102">Invio e gestione di errori</span><span class="sxs-lookup"><span data-stu-id="5cd41-102">Sending and Handling Faults</span></span>
+<span data-ttu-id="5cd41-103">In questo esempio viene illustrato come usare le attività di messaggistica <xref:System.ServiceModel.Activities.SendReply> e <xref:System.ServiceModel.Activities.ReceiveReply> per inviare e ricevere errori previsti e imprevisti.</span><span class="sxs-lookup"><span data-stu-id="5cd41-103">This sample demonstrates how to use the <xref:System.ServiceModel.Activities.SendReply> and <xref:System.ServiceModel.Activities.ReceiveReply> messaging activities to send and receive expected and unexpected faults.</span></span> <span data-ttu-id="5cd41-104">In questo scenario, la prima richiesta del client comporta un errore previsto incluso nella raccolta <xref:System.ServiceModel.Activities.Send.KnownTypes%2A>.</span><span class="sxs-lookup"><span data-stu-id="5cd41-104">In this scenario, the first client request results in an expected fault that has been included in its <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> collection.</span></span> <span data-ttu-id="5cd41-105">Le successive richieste del client comportano la ricezione di errori imprevisti, prima del completamento della richiesta finale.</span><span class="sxs-lookup"><span data-stu-id="5cd41-105">The next few client requests result in receiving unexpected faults, before the final request succeeds.</span></span>  
   
-## <a name="to-use-this-sample"></a><span data-ttu-id="9909a-106">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="9909a-106">To use this sample</span></span>  
+## <a name="to-use-this-sample"></a><span data-ttu-id="5cd41-106">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="5cd41-106">To use this sample</span></span>  
   
-1.  <span data-ttu-id="9909a-107">Aprire [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con autorizzazioni elevate facendo clic con il [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selezionando **Esegui come amministratore**.</span><span class="sxs-lookup"><span data-stu-id="9909a-107">Open [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] with elevated permissions, by right-clicking the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icon and selecting **Run as administrator**.</span></span>  
+1.  <span data-ttu-id="5cd41-107">Aprire [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con autorizzazioni elevate facendo clic con il [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selezionando **Esegui come amministratore**.</span><span class="sxs-lookup"><span data-stu-id="5cd41-107">Open [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] with elevated permissions, by right-clicking the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icon and selecting **Run as administrator**.</span></span>  
   
-2.  <span data-ttu-id="9909a-108">Aprire il file della soluzione Faults.sln.</span><span class="sxs-lookup"><span data-stu-id="9909a-108">Open the Faults.sln solution file.</span></span>  
+2.  <span data-ttu-id="5cd41-108">Aprire il file della soluzione Faults.sln.</span><span class="sxs-lookup"><span data-stu-id="5cd41-108">Open the Faults.sln solution file.</span></span>  
   
-3.  <span data-ttu-id="9909a-109">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="9909a-109">To build the solution, press CTRL+SHIFT+B.</span></span>  
+3.  <span data-ttu-id="5cd41-109">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="5cd41-109">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-4.  <span data-ttu-id="9909a-110">Eseguire il progetto del servizio.</span><span class="sxs-lookup"><span data-stu-id="9909a-110">Run the service project.</span></span>  
+4.  <span data-ttu-id="5cd41-110">Eseguire il progetto del servizio.</span><span class="sxs-lookup"><span data-stu-id="5cd41-110">Run the service project.</span></span>  
   
-    1.  <span data-ttu-id="9909a-111">In **Esplora**, fare doppio clic su di `FaultService` del progetto e selezionare **imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="9909a-111">In **Solution Explorer**, right-click the `FaultService` project and select **Set as StartUp Project**.</span></span>  
+    1.  <span data-ttu-id="5cd41-111">In **Esplora**, fare doppio clic su di `FaultService` del progetto e selezionare **imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="5cd41-111">In **Solution Explorer**, right-click the `FaultService` project and select **Set as StartUp Project**.</span></span>  
   
-    2.  <span data-ttu-id="9909a-112">Premere CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="9909a-112">Press CTRL+F5.</span></span>  
+    2.  <span data-ttu-id="5cd41-112">Premere CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="5cd41-112">Press CTRL+F5.</span></span>  
   
-5.  <span data-ttu-id="9909a-113">Aprire un'altra copia del [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con autorizzazioni elevate facendo clic con il [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selezionando **Esegui come amministratore**.</span><span class="sxs-lookup"><span data-stu-id="9909a-113">Open another copy of [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] with elevated permissions, by right-clicking the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icon and selecting **Run as administrator**.</span></span>  
+5.  <span data-ttu-id="5cd41-113">Aprire un'altra copia del [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con autorizzazioni elevate facendo clic con il [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selezionando **Esegui come amministratore**.</span><span class="sxs-lookup"><span data-stu-id="5cd41-113">Open another copy of [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] with elevated permissions, by right-clicking the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icon and selecting **Run as administrator**.</span></span>  
   
-6.  <span data-ttu-id="9909a-114">Aprire il file della soluzione Faults.sln.</span><span class="sxs-lookup"><span data-stu-id="9909a-114">Open the Faults.sln solution file.</span></span>  
+6.  <span data-ttu-id="5cd41-114">Aprire il file della soluzione Faults.sln.</span><span class="sxs-lookup"><span data-stu-id="5cd41-114">Open the Faults.sln solution file.</span></span>  
   
-7.  <span data-ttu-id="9909a-115">Eseguire il progetto del client.</span><span class="sxs-lookup"><span data-stu-id="9909a-115">Run the client project.</span></span>  
+7.  <span data-ttu-id="5cd41-115">Eseguire il progetto del client.</span><span class="sxs-lookup"><span data-stu-id="5cd41-115">Run the client project.</span></span>  
   
-    1.  <span data-ttu-id="9909a-116">In **Esplora**, fare doppio clic su di `FaultClient` del progetto e selezionare **imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="9909a-116">In **Solution Explorer**, right-click the `FaultClient` project and select **Set as StartUp Project**.</span></span>  
+    1.  <span data-ttu-id="5cd41-116">In **Esplora**, fare doppio clic su di `FaultClient` del progetto e selezionare **imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="5cd41-116">In **Solution Explorer**, right-click the `FaultClient` project and select **Set as StartUp Project**.</span></span>  
   
-    2.  <span data-ttu-id="9909a-117">Premere CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="9909a-117">Press CTRL+F5.</span></span>  
+    2.  <span data-ttu-id="5cd41-117">Premere CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="5cd41-117">Press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="9909a-118">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="9909a-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9909a-119">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="9909a-119">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="5cd41-118">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="5cd41-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5cd41-119">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="5cd41-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="9909a-120">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="9909a-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9909a-121">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="9909a-121">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="5cd41-120">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="5cd41-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5cd41-121">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="5cd41-121">This sample is located in the following directory.</span></span>  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Faults`  
-  
-## <a name="see-also"></a><span data-ttu-id="9909a-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9909a-122">See Also</span></span>
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Faults`

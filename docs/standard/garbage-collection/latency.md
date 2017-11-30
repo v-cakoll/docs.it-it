@@ -1,64 +1,67 @@
 ---
-title: "Latency Modes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, intrusiveness"
-  - "garbage collection, latency modes"
+title: "Modalità di latenza"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- garbage collection, intrusiveness
+- garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: 41
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Latency Modes
-Per recuperare oggetti, tramite il Garbage Collector devono essere arrestati tutti i thread in esecuzione in un'applicazione.   In alcune situazioni, ad esempio quando un'applicazione recupera dati o visualizza contenuto, un'operazione completa di Garbage Collection può verificarsi in un momento critico e può ostacolare le prestazioni.  È possibile rettificare l'ingerenza del Garbage Collector impostando la proprietà <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=fullName> su uno dei valori <xref:System.Runtime.GCLatencyMode?displayProperty=fullName>.  
+# <a name="latency-modes"></a><span data-ttu-id="e0ec0-102">Modalità di latenza</span><span class="sxs-lookup"><span data-stu-id="e0ec0-102">Latency Modes</span></span>
+<span data-ttu-id="e0ec0-103">Per recuperare oggetti, tramite il Garbage Collector devono essere arrestati tutti i thread in esecuzione in un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-103">To reclaim objects, the garbage collector must stop all the executing threads in an application.</span></span> <span data-ttu-id="e0ec0-104">In alcune situazioni, ad esempio quando un'applicazione recupera dati o visualizza contenuto, un'operazione completa di Garbage Collection può verificarsi in un momento critico e può ostacolare le prestazioni.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-104">In some situations, such as when an application retrieves data or displays content, a full garbage collection can occur at a critical time and impede performance.</span></span> <span data-ttu-id="e0ec0-105">È possibile rettificare l'ingerenza del Garbage Collector impostando la proprietà <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> su uno dei valori <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-105">You can adjust the intrusiveness of the garbage collector by setting the <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> property to one of the <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> values.</span></span>  
   
- La latenza si riferisce al momento dell'intrusione del Garbage Collector nell'applicazione.  Durante i periodi di bassa latenza, il Garbage Collector è più conservativo e meno intrusivo nel recupero degli oggetti.  Tramite l'enumerazione <xref:System.Runtime.GCLatencyMode?displayProperty=fullName> vengono fornite due impostazioni a bassa latenza:  
+ <span data-ttu-id="e0ec0-106">La latenza si riferisce al momento dell'intrusione del Garbage Collector nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-106">Latency refers to the time that the garbage collector intrudes in your application.</span></span> <span data-ttu-id="e0ec0-107">Durante i periodi di bassa latenza, il Garbage Collector è più conservativo e meno intrusivo nel recupero degli oggetti.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-107">During low latency periods, the garbage collector is more conservative and less intrusive in reclaiming objects.</span></span> <span data-ttu-id="e0ec0-108">Tramite l'enumerazione <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> vengono fornite due impostazioni a bassa latenza:</span><span class="sxs-lookup"><span data-stu-id="e0ec0-108">The <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> enumeration provides two low latency settings:</span></span>  
   
--   Tramite il campo <xref:System.Runtime.GCLatencyMode> vengono eliminate le raccolte di generazione 2 ed eseguite solo le raccolte di generazione 0 e 1.  Può essere usato solo per brevi periodi di tempo.  In caso di lunghi periodi, se viene usata una quantità elevata di memoria, tramite il Garbage Collector verrà attivata una raccolta mediante la quale è possibile mettere in pausa brevemente l'applicazione e interrompere un'operazione critica rispetto al tempo.  Questa impostazione è disponibile solo per le operazioni di Garbage Collection per workstation.  
+-   <span data-ttu-id="e0ec0-109">Tramite il campo <xref:System.Runtime.GCLatencyMode.LowLatency> vengono eliminate le raccolte di generazione 2 ed eseguite solo le raccolte di generazione 0 e 1.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-109"><xref:System.Runtime.GCLatencyMode.LowLatency> suppresses generation 2 collections and performs only generation 0 and 1 collections.</span></span> <span data-ttu-id="e0ec0-110">Può essere usato solo per brevi periodi di tempo.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-110">It can be used only for short periods of time.</span></span> <span data-ttu-id="e0ec0-111">In caso di lunghi periodi, se viene usata una quantità elevata di memoria, tramite il Garbage Collector verrà attivata una raccolta mediante la quale è possibile mettere in pausa brevemente l'applicazione e interrompere un'operazione critica rispetto al tempo.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-111">Over longer periods, if the system is under memory pressure, the garbage collector will trigger a collection, which can briefly pause the application and disrupt a time-critical operation.</span></span> <span data-ttu-id="e0ec0-112">Questa impostazione è disponibile solo per le operazioni di Garbage Collection per workstation.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-112">This setting is available only for workstation garbage collection.</span></span>  
   
--   Tramite il campo <xref:System.Runtime.GCLatencyMode> vengono eliminate le raccolte di generazione 2 in primo piano ed eseguite solo le raccolte di generazione 0, 1 e di generazione 2 in background.  Può essere usato per periodi di tempo più lunghi ed è disponibile per le operazioni di Garbage Collection per workstation e per server.  Questa impostazione non può essere usata se l'operazione di [Garbage Collection in modalità simultanea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è disabilitata.  
+-   <span data-ttu-id="e0ec0-113">Tramite il campo <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> vengono eliminate le raccolte di generazione 2 in primo piano ed eseguite solo le raccolte di generazione 0, 1 e di generazione 2 in background.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-113"><xref:System.Runtime.GCLatencyMode.SustainedLowLatency> suppresses foreground generation 2 collections and performs only generation 0, 1, and background generation 2 collections.</span></span> <span data-ttu-id="e0ec0-114">Può essere usato per periodi di tempo più lunghi ed è disponibile per le operazioni di Garbage Collection per workstation e per server.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-114">It can be used for longer periods of time, and is available for both workstation and server garbage collection.</span></span> <span data-ttu-id="e0ec0-115">Questa impostazione non può essere usata se l'operazione di [Garbage Collection in modalità simultanea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è disabilitata.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-115">This setting cannot be used if [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is disabled.</span></span>  
   
- Durante i periodi di bassa latenza, le raccolte di generazione 2 vengono soppresse eccetto nei seguenti casi:  
+ <span data-ttu-id="e0ec0-116">Durante i periodi di bassa latenza, le raccolte di generazione 2 vengono soppresse eccetto nei seguenti casi:</span><span class="sxs-lookup"><span data-stu-id="e0ec0-116">During low latency periods, generation 2 collections are suppressed unless the following occurs:</span></span>  
   
--   Il sistema riceve una notifica di memoria insufficiente dal sistema operativo.  
+-   <span data-ttu-id="e0ec0-117">Il sistema riceve una notifica di memoria insufficiente dal sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-117">The system receives a low memory notification from the operating system.</span></span>  
   
--   Il codice dell'applicazione induce una raccolta chiamando il metodo <xref:System.GC.Collect%2A?displayProperty=fullName> e specificando 2 per il parametro `generation`.  
+-   <span data-ttu-id="e0ec0-118">Il codice dell'applicazione induce una raccolta chiamando il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> e specificando 2 per il parametro `generation`.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-118">Your application code induces a collection by calling the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method and specifying 2 for the `generation` parameter.</span></span>  
   
- Nella tabella seguente sono elencati gli scenari di applicazioni per usare i valori <xref:System.Runtime.GCLatencyMode>.  
+ <span data-ttu-id="e0ec0-119">Nella tabella seguente sono elencati gli scenari di applicazioni per usare i valori <xref:System.Runtime.GCLatencyMode>.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-119">The following table lists the application scenarios for using the <xref:System.Runtime.GCLatencyMode> values.</span></span>  
   
-|Modalità di latenza|Scenari di applicazione|  
-|-------------------------|-----------------------------|  
-|<xref:System.Runtime.GCLatencyMode>|Per applicazioni che non hanno nessuna interfaccia utente o operazioni lato server.<br /><br /> Si tratta della modalità predefinita quando l'operazione di [Garbage Collection in modalità simultanea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è disabilitata.|  
-|<xref:System.Runtime.GCLatencyMode>|Per la maggior parte delle applicazioni che hanno una interfaccia utente.<br /><br /> Si tratta della modalità predefinita quando l'operazione di [Garbage Collection in modalità simultanea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è abilitata.|  
-|<xref:System.Runtime.GCLatencyMode>|Per le applicazioni con operazioni a breve termine, per cui il tempo riveste un'importanza significativa, durante le quali le interruzioni del Garbage Collector potrebbero rivelarsi dannose.  Ad esempio, applicazioni di rendering delle animazioni o che hanno funzioni di acquisizione dei dati.|  
-|<xref:System.Runtime.GCLatencyMode>|Per le applicazioni con operazioni per cui i tempi sono importanti per una durata contenuta, ma potenzialmente lunga, durante la quale le interruzioni del Garbage Collector potrebbero rivelarsi dannose.  Ad esempio, le applicazioni per cui sono richiesti tempi di risposta rapidi come i cambiamenti dei dati di mercato durante le ore di negoziazione.<br /><br /> Questa modalità comporta dimensioni dell'heap gestito maggiori rispetto ad altre.  Poiché non consente di comprimere l'heap gestito, è possibile avere una maggiore frammentazione.  Assicurarsi che sia disponibile memoria sufficiente.|  
+|<span data-ttu-id="e0ec0-120">Modalità di latenza</span><span class="sxs-lookup"><span data-stu-id="e0ec0-120">Latency mode</span></span>|<span data-ttu-id="e0ec0-121">Scenari di applicazione</span><span class="sxs-lookup"><span data-stu-id="e0ec0-121">Application scenarios</span></span>|  
+|------------------|---------------------------|  
+|<xref:System.Runtime.GCLatencyMode.Batch>|<span data-ttu-id="e0ec0-122">Per applicazioni che non hanno nessuna interfaccia utente o operazioni lato server.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-122">For applications that have no UI or server-side operations.</span></span><br /><br /> <span data-ttu-id="e0ec0-123">Si tratta della modalità predefinita quando l'operazione di [Garbage Collection in modalità simultanea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è disabilitata.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-123">This is the default mode when [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is disabled.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.Interactive>|<span data-ttu-id="e0ec0-124">Per la maggior parte delle applicazioni che hanno una interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-124">For most applications that have a UI.</span></span><br /><br /> <span data-ttu-id="e0ec0-125">Si tratta della modalità predefinita quando l'operazione di [Garbage Collection in modalità simultanea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è abilitata.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-125">This is the default mode when [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is enabled.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.LowLatency>|<span data-ttu-id="e0ec0-126">Per le applicazioni con operazioni a breve termine, per cui il tempo riveste un'importanza significativa, durante le quali le interruzioni del Garbage Collector potrebbero rivelarsi dannose.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-126">For applications that have short-term, time-sensitive operations during which interruptions from the garbage collector could be disruptive.</span></span> <span data-ttu-id="e0ec0-127">Ad esempio, applicazioni di rendering delle animazioni o che hanno funzioni di acquisizione dei dati.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-127">For example, applications that do animation rendering or data acquisition functions.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|<span data-ttu-id="e0ec0-128">Per le applicazioni con operazioni per cui i tempi sono importanti per una durata contenuta, ma potenzialmente lunga, durante la quale le interruzioni del Garbage Collector potrebbero rivelarsi dannose.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-128">For applications that have time-sensitive operations for a contained but potentially longer duration of time during which interruptions from the garbage collector could be disruptive.</span></span> <span data-ttu-id="e0ec0-129">Ad esempio, le applicazioni per cui sono richiesti tempi di risposta rapidi come i cambiamenti dei dati di mercato durante le ore di negoziazione.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-129">For example, applications that need quick response times as market data changes during trading hours.</span></span><br /><br /> <span data-ttu-id="e0ec0-130">Questa modalità comporta dimensioni dell'heap gestito maggiori rispetto ad altre.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-130">This mode results in a larger managed heap size than other modes.</span></span> <span data-ttu-id="e0ec0-131">Poiché non consente di comprimere l'heap gestito, è possibile avere una maggiore frammentazione.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-131">Because it does not compact the managed heap, higher fragmentation is possible.</span></span> <span data-ttu-id="e0ec0-132">Assicurarsi che sia disponibile memoria sufficiente.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-132">Ensure that sufficient memory is available.</span></span>|  
   
-## Linee guida per l'uso della bassa latenza  
- Quando si usa la modalità <xref:System.Runtime.GCLatencyMode>, tenere in considerazione le seguenti linee guida:  
+## <a name="guidelines-for-using-low-latency"></a><span data-ttu-id="e0ec0-133">Linee guida per l'uso della bassa latenza</span><span class="sxs-lookup"><span data-stu-id="e0ec0-133">Guidelines for Using Low Latency</span></span>  
+ <span data-ttu-id="e0ec0-134">Quando si usa la modalità <xref:System.Runtime.GCLatencyMode.LowLatency>, tenere in considerazione le seguenti linee guida:</span><span class="sxs-lookup"><span data-stu-id="e0ec0-134">When you use <xref:System.Runtime.GCLatencyMode.LowLatency> mode, consider the following guidelines:</span></span>  
   
--   Mantenere il periodo di tempo in bassa latenza più brevemente possibile.  
+-   <span data-ttu-id="e0ec0-135">Mantenere il periodo di tempo in bassa latenza più brevemente possibile.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-135">Keep the period of time in low latency as short as possible.</span></span>  
   
--   Evitare di allocare quantità di memoria elevate durante i periodi di bassa latenza.  Possono verificarsi notifiche di memoria insufficiente perché le operazioni di Garbage Collection recuperano meno oggetti.  
+-   <span data-ttu-id="e0ec0-136">Evitare di allocare quantità di memoria elevate durante i periodi di bassa latenza.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-136">Avoid allocating high amounts of memory during low latency periods.</span></span> <span data-ttu-id="e0ec0-137">Possono verificarsi notifiche di memoria insufficiente perché le operazioni di Garbage Collection recuperano meno oggetti.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-137">Low memory notifications can occur because garbage collection reclaims fewer objects.</span></span>  
   
--   In modalità di bassa latenza, ridurre al minimo il numero delle allocazioni effettuate, in particolare le allocazioni su Large Object Heap e oggetti bloccati.  
+-   <span data-ttu-id="e0ec0-138">In modalità di bassa latenza, ridurre al minimo il numero delle allocazioni effettuate, in particolare le allocazioni su Large Object Heap e oggetti bloccati.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-138">While in the low latency mode, minimize the number of allocations you make, in particular allocations onto the Large Object Heap and pinned objects.</span></span>  
   
--   Tenere presenti i thread che potrebbero essere in corso di allocazione.  Poiché l'impostazione delle proprietà <xref:System.Runtime.GCSettings.LatencyMode%2A> interessa l'intero processo, è possibile generare un'eccezione <xref:System.OutOfMemoryException> su qualsiasi thread eventualmente in corso di allocazione.  
+-   <span data-ttu-id="e0ec0-139">Tenere presenti i thread che potrebbero essere in corso di allocazione.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-139">Be aware of threads that could be allocating.</span></span> <span data-ttu-id="e0ec0-140">Poiché l'impostazione delle proprietà <xref:System.Runtime.GCSettings.LatencyMode%2A> interessa l'intero processo, è possibile generare un'eccezione <xref:System.OutOfMemoryException> su qualsiasi thread eventualmente in corso di allocazione.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-140">Because the <xref:System.Runtime.GCSettings.LatencyMode%2A> property setting is process-wide, you could generate an <xref:System.OutOfMemoryException> on any thread that may be allocating.</span></span>  
   
--   Eseguire il wrapping del codice di bassa latenza nelle aree a esecuzione vincolata \(per altre informazioni, vedere [Constrained Execution Regions](../../../docs/framework/performance/constrained-execution-regions.md)\).  
+-   <span data-ttu-id="e0ec0-141">Eseguire il wrapping del codice di bassa latenza nelle aree a esecuzione vincolata (per ulteriori informazioni, vedere [aree a esecuzione vincolata](../../../docs/framework/performance/constrained-execution-regions.md)).</span><span class="sxs-lookup"><span data-stu-id="e0ec0-141">Wrap the low latency code in constrained execution regions (for more information, see [Constrained Execution Regions](../../../docs/framework/performance/constrained-execution-regions.md)).</span></span>  
   
--   È possibile forzare le operazioni di Garbage Collection di generazione 2 durante un periodo di bassa latenza chiamando il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=fullName>.  
+-   <span data-ttu-id="e0ec0-142">È possibile forzare le operazioni di Garbage Collection di generazione 2 durante un periodo di bassa latenza chiamando il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e0ec0-142">You can force generation 2 collections during a low latency period by calling the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> method.</span></span>  
   
-## Vedere anche  
- <xref:System.GC?displayProperty=fullName>   
- [Raccolte indotte](../../../docs/standard/garbage-collection/induced.md)   
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="e0ec0-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e0ec0-143">See Also</span></span>  
+ <xref:System.GC?displayProperty=nameWithType>  
+ [<span data-ttu-id="e0ec0-144">Raccolte indotte</span><span class="sxs-lookup"><span data-stu-id="e0ec0-144">Induced Collections</span></span>](../../../docs/standard/garbage-collection/induced.md)  
+ [<span data-ttu-id="e0ec0-145">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="e0ec0-145">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

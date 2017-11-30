@@ -1,46 +1,52 @@
 ---
-title: "Task Cancellation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tasks, cancellation"
-  - "asynchronous task cancellation"
+title: "Annullamento delle attività"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- tasks, cancellation
+- asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 106c89ca9fcfb8bbab23b982cdc524ff78d21d15
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Task Cancellation
-Le classi <xref:System.Threading.Tasks.Task?displayProperty=fullName> e <xref:System.Threading.Tasks.Task%601?displayProperty=fullName> supportano l'annullamento tramite l'utilizzo dei token di annullamento in .NET Framework. Per altre informazioni, vedere [Cancellation in Managed Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md). Nelle classi Task l'annullamento comporta la cooperazione tra il delegato dell'utente, che rappresenta un'operazione annullabile, e il codice che ha richiesto l'annullamento.  Un annullamento riuscito prevede una chiamata al metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> da parte del codice richiedente nonché l'interruzione tempestiva dell'operazione da parte del delegato dell'utente. L'operazione può essere interrotta tramite una di queste opzioni:  
+# <a name="task-cancellation"></a><span data-ttu-id="a76c3-102">Annullamento delle attività</span><span class="sxs-lookup"><span data-stu-id="a76c3-102">Task Cancellation</span></span>
+<span data-ttu-id="a76c3-103">Le classi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> supportano l'annullamento tramite l'utilizzo dei token di annullamento in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a76c3-103">The <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> classes support cancellation through the use of cancellation tokens in the .NET Framework.</span></span> <span data-ttu-id="a76c3-104">Per ulteriori informazioni, vedere [annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md).</span><span class="sxs-lookup"><span data-stu-id="a76c3-104">For more information, see [Cancellation in Managed Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md).</span></span> <span data-ttu-id="a76c3-105">Nelle classi Task l'annullamento comporta la cooperazione tra il delegato dell'utente, che rappresenta un'operazione annullabile, e il codice che ha richiesto l'annullamento.</span><span class="sxs-lookup"><span data-stu-id="a76c3-105">In the Task classes, cancellation involves cooperation between the user delegate, which represents a cancelable operation and the code that requested the cancellation.</span></span>  <span data-ttu-id="a76c3-106">Un annullamento riuscito prevede la chiamata di codice che richiede il <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> metodo e il delegato dell'utente interruzione dell'operazione in modo tempestivo.</span><span class="sxs-lookup"><span data-stu-id="a76c3-106">A successful cancellation involves the requesting code calling the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method, and the user delegate terminating the operation in a timely manner.</span></span> <span data-ttu-id="a76c3-107">L'operazione può essere interrotta tramite una di queste opzioni:</span><span class="sxs-lookup"><span data-stu-id="a76c3-107">You can terminate the operation by using one of these options:</span></span>  
   
--   Completare l'esecuzione del delegato. In molti scenari questo approccio è sufficiente. Tuttavia, un'istanza di attività "annullata" in questo modo passa allo stato <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>, non allo stato <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>.  
+-   <span data-ttu-id="a76c3-108">Completare l'esecuzione del delegato.</span><span class="sxs-lookup"><span data-stu-id="a76c3-108">By simply returning from the delegate.</span></span> <span data-ttu-id="a76c3-109">In molti scenari questo approccio è sufficiente. Tuttavia, un'istanza di attività "annullata" in questo modo passa allo stato <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>, non allo stato <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a76c3-109">In many scenarios this is sufficient; however, a task instance that is canceled in this way transitions to the <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> state, not to the <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> state.</span></span>  
   
--   Generare un oggetto <xref:System.OperationCanceledException> e passare a quest'ultimo il token in cui è stato richiesto l'annullamento. Il modo preferito per eseguire queste operazioni è tramite il metodo <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>. Un'attività annullata in questo modo passa allo stato Canceled. Il codice chiamante può usare tale stato per verificare che l'attività ha risposto alla richiesta di annullamento.  
+-   <span data-ttu-id="a76c3-110">Generare un oggetto <xref:System.OperationCanceledException> e passare a quest'ultimo il token in cui è stato richiesto l'annullamento.</span><span class="sxs-lookup"><span data-stu-id="a76c3-110">By throwing a <xref:System.OperationCanceledException> and passing it the token on which cancellation was requested.</span></span> <span data-ttu-id="a76c3-111">Il modo preferito per eseguire queste operazioni è tramite il metodo <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> .</span><span class="sxs-lookup"><span data-stu-id="a76c3-111">The preferred way to do this is to use the <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> method.</span></span> <span data-ttu-id="a76c3-112">Un'attività annullata in questo modo passa allo stato Canceled. Il codice chiamante può usare tale stato per verificare che l'attività ha risposto alla richiesta di annullamento.</span><span class="sxs-lookup"><span data-stu-id="a76c3-112">A task that is canceled in this way transitions to the Canceled state, which the calling code can use to verify that the task responded to its cancellation request.</span></span>  
   
- Nell'esempio seguente viene mostrato il modello di base relativo all'annullamento di attività che genera l'eccezione. Notare che il token viene passato al delegato dell'utente e all'istanza di attività stessa.  
+ <span data-ttu-id="a76c3-113">Nell'esempio seguente viene mostrato il modello di base relativo all'annullamento di attività che genera l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="a76c3-113">The following example shows the basic pattern for task cancellation that throws the exception.</span></span> <span data-ttu-id="a76c3-114">Notare che il token viene passato al delegato dell'utente e all'istanza di attività stessa.</span><span class="sxs-lookup"><span data-stu-id="a76c3-114">Note that the token is passed to the user delegate and to the task instance itself.</span></span>  
   
  [!code-csharp[TPL_Cancellation#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/snippet02.cs#02)]
  [!code-vb[TPL_Cancellation#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/module1.vb#02)]  
   
- Per un esempio più esaustivo, vedere [How to: Cancel a Task and Its Children](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ <span data-ttu-id="a76c3-115">Per un esempio più esaustivo, vedere [procedura: annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).</span><span class="sxs-lookup"><span data-stu-id="a76c3-115">For a more complete example, see [How to: Cancel a Task and Its Children](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).</span></span>  
   
- Quando un'istanza dell'attività rileva un oggetto <xref:System.OperationCanceledException> generato dal codice utente, confronta il token dell'eccezione con il token associato, ovvero il token passato all'API che ha creato l'attività. Se i due token sono uguali e la proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token restituisce true, ciò viene interpretato dall'attività come una conferma di annullamento e passa allo stato Canceled. Se non si usa un metodo <xref:System.Threading.Tasks.Task.Wait%2A> o <xref:System.Threading.Tasks.Task.WaitAll%2A> per attendere l'attività, quest'ultima si limita a impostare il proprio stato su <xref:System.Threading.Tasks.TaskStatus>.  
+ <span data-ttu-id="a76c3-116">Quando un'istanza dell'attività rileva un oggetto <xref:System.OperationCanceledException> generato dal codice utente, confronta il token dell'eccezione con il token associato, ovvero il token passato all'API che ha creato l'attività.</span><span class="sxs-lookup"><span data-stu-id="a76c3-116">When a task instance observes an <xref:System.OperationCanceledException> thrown by user code, it compares the exception's token to its associated token (the one that was passed to the API that created the Task).</span></span> <span data-ttu-id="a76c3-117">Se i due token sono uguali e la proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token restituisce true, ciò viene interpretato dall'attività come una conferma di annullamento e passa allo stato Canceled.</span><span class="sxs-lookup"><span data-stu-id="a76c3-117">If they are the same and the token's <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> property returns true, the task interprets this as acknowledging cancellation and transitions to the Canceled state.</span></span> <span data-ttu-id="a76c3-118">Se non si usa un metodo <xref:System.Threading.Tasks.Task.Wait%2A> o <xref:System.Threading.Tasks.Task.WaitAll%2A> per attendere l'attività, quest'ultima si limita a impostare il proprio stato su <xref:System.Threading.Tasks.TaskStatus.Canceled>.</span><span class="sxs-lookup"><span data-stu-id="a76c3-118">If you do not use a <xref:System.Threading.Tasks.Task.Wait%2A> or <xref:System.Threading.Tasks.Task.WaitAll%2A> method to wait for the task, then the task just sets its status to <xref:System.Threading.Tasks.TaskStatus.Canceled>.</span></span>  
   
- Se si resta in attesa di un'attività che effettua la transizione allo stato Canceled, viene generata un'eccezione <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=fullName> \(di cui viene eseguito il wrapping in un'eccezione <xref:System.AggregateException>\). Notare che questa eccezione non indica una situazione di errore, bensì l'esito positivo di un annullamento. Di conseguenza la proprietà <xref:System.Threading.Tasks.Task.Exception%2A> dell'attività restituisce `null`.  
+ <span data-ttu-id="a76c3-119">Se si resta in attesa di un'attività che esegue la transizione allo stato Canceled, un <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> eccezione (il wrapping in un <xref:System.AggregateException> eccezione) viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="a76c3-119">If you are waiting on a Task that transitions to the Canceled state, a <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> exception (wrapped in an <xref:System.AggregateException> exception) is thrown.</span></span> <span data-ttu-id="a76c3-120">Notare che questa eccezione non indica una situazione di errore, bensì l'esito positivo di un annullamento.</span><span class="sxs-lookup"><span data-stu-id="a76c3-120">Note that this exception indicates successful cancellation instead of a faulty situation.</span></span> <span data-ttu-id="a76c3-121">Di conseguenza la proprietà <xref:System.Threading.Tasks.Task.Exception%2A> dell'attività restituisce `null`.</span><span class="sxs-lookup"><span data-stu-id="a76c3-121">Therefore, the task's <xref:System.Threading.Tasks.Task.Exception%2A> property returns `null`.</span></span>  
   
- Se la proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token restituisce false o se il token dell'eccezione non corrisponde a quello dell'attività, l'oggetto <xref:System.OperationCanceledException> viene trattato come un'eccezione normale, il che comporta la transizione dell'attività allo stato Faulted. Notare inoltre che anche la presenza di altre eccezioni comporterà il passaggio dell'attività allo stato Faulted. È possibile ottenere lo stato dell'attività completata nella proprietà <xref:System.Threading.Tasks.Task.Status%2A>.  
+ <span data-ttu-id="a76c3-122">Se la proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token restituisce false o se il token dell'eccezione non corrisponde a quello dell'attività, l'oggetto <xref:System.OperationCanceledException> viene trattato come un'eccezione normale, il che comporta la transizione dell'attività allo stato Faulted.</span><span class="sxs-lookup"><span data-stu-id="a76c3-122">If the token's <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> property returns false or if the exception's token does not match the Task's token, the <xref:System.OperationCanceledException> is treated like a normal exception, causing the Task to transition to the Faulted state.</span></span> <span data-ttu-id="a76c3-123">Notare inoltre che anche la presenza di altre eccezioni comporterà il passaggio dell'attività allo stato Faulted.</span><span class="sxs-lookup"><span data-stu-id="a76c3-123">Also note that the presence of other exceptions will also cause the Task to transition to the Faulted state.</span></span> <span data-ttu-id="a76c3-124">È possibile ottenere lo stato dell'attività completata nella proprietà <xref:System.Threading.Tasks.Task.Status%2A> .</span><span class="sxs-lookup"><span data-stu-id="a76c3-124">You can get the status of the completed task in the <xref:System.Threading.Tasks.Task.Status%2A> property.</span></span>  
   
- È possibile che un'attività continui a elaborare alcuni elementi dopo la richiesta di annullamento.  
+ <span data-ttu-id="a76c3-125">È possibile che un'attività continui a elaborare alcuni elementi dopo la richiesta di annullamento.</span><span class="sxs-lookup"><span data-stu-id="a76c3-125">It is possible that a task may continue to process some items after cancellation is requested.</span></span>  
   
-## Vedere anche  
- [Cancellation in Managed Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)   
- [How to: Cancel a Task and Its Children](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+## <a name="see-also"></a><span data-ttu-id="a76c3-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a76c3-126">See Also</span></span>  
+ [<span data-ttu-id="a76c3-127">Annullamento in thread gestiti</span><span class="sxs-lookup"><span data-stu-id="a76c3-127">Cancellation in Managed Threads</span></span>](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+ [<span data-ttu-id="a76c3-128">Procedura: Annullare un'attività e i relativi figli</span><span class="sxs-lookup"><span data-stu-id="a76c3-128">How to: Cancel a Task and Its Children</span></span>](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

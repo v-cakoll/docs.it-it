@@ -1,54 +1,55 @@
 ---
-title: "Trasformazioni XSLT con la classe XslTransform | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Trasformazioni XSLT con la classe XslTransform
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 619e37ab63735ea77d3afb0d94f284b2f310efc2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Trasformazioni XSLT con la classe XslTransform
+# <a name="xslt-transformations-with-the-xsltransform-class"></a><span data-ttu-id="5a5a1-102">Trasformazioni XSLT con la classe XslTransform</span><span class="sxs-lookup"><span data-stu-id="5a5a1-102">XSLT Transformations with the XslTransform Class</span></span>
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  È possibile eseguire le trasformazioni XSLT \(Extensible Stylesheet Language for Transformations\) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  <span data-ttu-id="5a5a1-103">La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5a5a1-103">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="5a5a1-104">È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-104">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="5a5a1-105">Vedere [utilizzando la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [la migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) per ulteriori informazioni.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-105">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- Lo scopo dell'XSLT \(Extensible Stylesheet Language Transformation\) è quello di trasformare il contenuto di un documento XML di origine in un altro documento di formato o struttura diversa, ad esempio, per trasformare il codice XML in HTML per l'uso su un sito Web o per trasformarlo in un documento che contenga solo i campi richiesti da un'applicazione.  Questo processo di trasformazione è specificato dalla raccomandazione W3C XSL Transformations \(XSLT\) versione 1.0, disponibile all'indirizzo www.w3.org\/TR\/xslt \(informazioni in lingua inglese\).  In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], la classe <xref:System.Xml.Xsl.XslTransform>, disponibile nello spazio dei nomi <xref:System.Xml.Xsl>, è il processore XSLT che implementa la funzionalità di questa specifica.  Alcune funzionalità non sono state implementate dalla raccomandazione W3C XSL Transformations \(XSLT\) versione 1.0 e sono elencate in [Output da un XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md).  Nella figura seguente è illustrata l'architettura di trasformazione di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ <span data-ttu-id="5a5a1-106">Lo scopo dell'XSLT (Extensible Stylesheet Language Transformation) è quello di trasformare il contenuto di un documento XML di origine in un altro documento di formato o struttura diversa, ad esempio, per trasformare il codice XML in HTML per l'uso su un sito Web o per trasformarlo in un documento che contenga solo i campi richiesti da un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-106">The goal of the XSLT is to transform the content of a source XML document into another document that is different in format or structure (for example, to transform XML into HTML for use on a Web site or to transform it into a document that contains only the fields required by an application).</span></span> <span data-ttu-id="5a5a1-107">Questo processo di trasformazione è specificato dalla raccomandazione XSLT World Wide Web Consortium (W3C) versione 1.0 disponibile all'indirizzo www.w3.org/TR/xslt.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-107">This transformation process is specified by the World Wide Web Consortium (W3C) XSLT version 1.0 recommendation located at www.w3.org/TR/xslt.</span></span> <span data-ttu-id="5a5a1-108">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], la classe <xref:System.Xml.Xsl.XslTransform>, disponibile nello spazio dei nomi <xref:System.Xml.Xsl>, è il processore XSLT che implementa la funzionalità di questa specifica.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-108">In the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], the <xref:System.Xml.Xsl.XslTransform> class, found in the <xref:System.Xml.Xsl> namespace, is the XSLT processor that implements the functionality of this specification.</span></span> <span data-ttu-id="5a5a1-109">Esistono un numero limitato di funzionalità che non sono state implementate dalla raccomandazione W3C XSLT 1.0, elencata in [output da un XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md).</span><span class="sxs-lookup"><span data-stu-id="5a5a1-109">There are a small number of features that have not been implemented from the W3C XSLT 1.0 recommendation, listed in [Outputs from an XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md).</span></span> <span data-ttu-id="5a5a1-110">Nella figura seguente è illustrata l'architettura di trasformazione di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5a5a1-110">The following figure shows the transformation architecture of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
-## Panoramica  
- ![Architettura di trasformazione XSLT](../../../../docs/standard/data/xml/media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")  
-Architettura di trasformazione  
+## <a name="overview"></a><span data-ttu-id="5a5a1-111">Panoramica</span><span class="sxs-lookup"><span data-stu-id="5a5a1-111">Overview</span></span>  
+ <span data-ttu-id="5a5a1-112">![Architettura di trasformazione XSLT](../../../../docs/standard/data/xml/media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")</span><span class="sxs-lookup"><span data-stu-id="5a5a1-112">![XSLT Transformation Architecture](../../../../docs/standard/data/xml/media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")</span></span>  
+<span data-ttu-id="5a5a1-113">Architettura di trasformazione</span><span class="sxs-lookup"><span data-stu-id="5a5a1-113">Transformation Architecture</span></span>  
   
- Per la selezione di parti di un documento XML, nella raccomandazione XSLT viene usato XPath \(XML Path Language\), ovvero un linguaggio di query usato per navigare nei nodi dell'albero di un documento.  Come illustrato nel diagramma, l'implementazione di XPath in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene usata per la selezione di parti di XML archiviate in varie classi, come un <xref:System.Xml.XmlDocument>, un <xref:System.Xml.XmlDataDocument> e un <xref:System.Xml.XPath.XPathDocument>.  <xref:System.Xml.XPath.XPathDocument> è un archivio dati XSLT ottimizzato che, se usato con <xref:System.Xml.Xsl.XslTransform>, fornisce trasformazioni XSLT con elevate prestazioni.  
+ <span data-ttu-id="5a5a1-114">Per la selezione di parti di un documento XML, nella raccomandazione XSLT viene usato XPath (XML Path Language), ovvero un linguaggio di query usato per navigare nei nodi dell'albero di un documento.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-114">The XSLT recommendation uses XML Path Language (XPath) to select parts of an XML document, where XPath is a query language used to navigate nodes of a document tree.</span></span> <span data-ttu-id="5a5a1-115">Come illustrato nel diagramma, l'implementazione di XPath in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene usata per la selezione di parti di XML archiviate in varie classi, come un <xref:System.Xml.XmlDocument>, un <xref:System.Xml.XmlDataDocument> e un <xref:System.Xml.XPath.XPathDocument>.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-115">As shown in the diagram, the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementation of XPath is used to select parts of XML stored in several classes, such as an <xref:System.Xml.XmlDocument>, an <xref:System.Xml.XmlDataDocument>, and an <xref:System.Xml.XPath.XPathDocument>.</span></span> <span data-ttu-id="5a5a1-116"><xref:System.Xml.XPath.XPathDocument> è un archivio dati XSLT ottimizzato che, se usato con <xref:System.Xml.Xsl.XslTransform>, fornisce trasformazioni XSLT con elevate prestazioni.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-116">An <xref:System.Xml.XPath.XPathDocument> is an optimized XSLT data store, and when used with <xref:System.Xml.Xsl.XslTransform>, it provides XSLT transformations with good performance.</span></span>  
   
- Nella tabella seguente sono elencate le classi più usate con <xref:System.Xml.Xsl.XslTransform>, XPath e le relative funzioni.  
+ <span data-ttu-id="5a5a1-117">Nella tabella seguente sono elencate le classi più usate con <xref:System.Xml.Xsl.XslTransform>, XPath e le relative funzioni.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-117">The following table list commonly uses classes when working with <xref:System.Xml.Xsl.XslTransform> and XPath and their function.</span></span>  
   
-|Classe o interfaccia|Funzione|  
-|--------------------------|--------------|  
-|<xref:System.Xml.XPath.XPathNavigator>|Si tratta di un'API che fornisce un modello di tipo cursore per la navigazione in un archivio nonché il supporto delle query XPath.  Non viene fornita la funzionalità di modifica dell'archivio sottostante.  Per la modifica, usare la classe <xref:System.Xml.XmlDocument>.|  
-|<xref:System.Xml.XPath.IXPathNavigable>|Si tratta di un'interfaccia che fornisce un metodo `CreateNavigator` a un <xref:System.Xml.XPath.XPathNavigator> per l'archivio.|  
-|<xref:System.Xml.XmlDocument>|Consente la modifica di questo documento.  Implementa <xref:System.Xml.XPath.IXPathNavigable>, consentendo scenari per la modifica di documenti in cui vengono successivamente richieste trasformazioni XSLT.  Per altre informazioni, vedere [Input di XmlDocument in XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md).|  
-|<xref:System.Xml.XmlDataDocument>|Derivato da <xref:System.Xml.XmlDocument>.  Supera i limiti dei modelli basati sui dati XML e relazionali usando un <xref:System.Data.DataSet> per ottimizzare l'archiviazione dei dati strutturati all'interno del documento XML, in base ai mapping specificati nel <xref:System.Data.DataSet>.  Implementa <xref:System.Xml.XPath.IXPathNavigable>, consentendo scenari in cui è possibile eseguire trasformazioni XSLT sui dati relazionali recuperati da un database.  Per altre informazioni, vedere [Integrazione di XML con dati relazionali e ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).|  
-|<xref:System.Xml.XPath.XPathDocument>|Questa classe è ottimizzata per l'elaborazione con <xref:System.Xml.Xsl.XslTransform> e per le query XPath. Fornisce una cache di sola lettura a elevate prestazioni.  Implementa <xref:System.Xml.XPath.IXPathNavigable> ed è l'archivio migliore da usare per le trasformazioni XSLT.|  
-|<xref:System.Xml.XPath.XPathNodeIterator>|Consente di navigare nei set di nodi XPath.  Tutti i metodi di selezione XPath di <xref:System.Xml.XPath.XPathNavigator> restituiscono un <xref:System.Xml.XPath.XPathNodeIterator>.  È possibile creare più oggetti <xref:System.Xml.XPath.XPathNodeIterator> nello stesso archivio, ognuno dei quali rappresenta un set di nodi selezionato.|  
+|<span data-ttu-id="5a5a1-118">Classe o interfaccia</span><span class="sxs-lookup"><span data-stu-id="5a5a1-118">Class or Interface</span></span>|<span data-ttu-id="5a5a1-119">Funzione</span><span class="sxs-lookup"><span data-stu-id="5a5a1-119">Function</span></span>|  
+|------------------------|--------------|  
+|<xref:System.Xml.XPath.XPathNavigator>|<span data-ttu-id="5a5a1-120">Si tratta di un'API che fornisce un modello di tipo cursore per la navigazione in un archivio nonché il supporto delle query XPath.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-120">It is an API that provides a cursor style model for navigating over a store, along with XPath query support.</span></span> <span data-ttu-id="5a5a1-121">Non viene fornita la funzionalità di modifica dell'archivio sottostante.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-121">It does not provide editing of the underlying store.</span></span> <span data-ttu-id="5a5a1-122">Per la modifica, usare la classe <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-122">For editing, use the <xref:System.Xml.XmlDocument> class.</span></span>|  
+|<xref:System.Xml.XPath.IXPathNavigable>|<span data-ttu-id="5a5a1-123">Si tratta di un'interfaccia che fornisce un metodo `CreateNavigator` a un <xref:System.Xml.XPath.XPathNavigator> per l'archivio.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-123">It is an interface that provides a `CreateNavigator` method to an <xref:System.Xml.XPath.XPathNavigator> for the store.</span></span>|  
+|<xref:System.Xml.XmlDocument>|<span data-ttu-id="5a5a1-124">Consente la modifica di questo documento.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-124">It enables editing of this document.</span></span> <span data-ttu-id="5a5a1-125">Implementa <xref:System.Xml.XPath.IXPathNavigable>, consentendo scenari per la modifica di documenti in cui vengono successivamente richieste trasformazioni XSLT.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-125">It implements <xref:System.Xml.XPath.IXPathNavigable>, allowing document-editing scenarios where XSLT transformations are subsequently required.</span></span> <span data-ttu-id="5a5a1-126">Per ulteriori informazioni, vedere [Input di XmlDocument in XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md).</span><span class="sxs-lookup"><span data-stu-id="5a5a1-126">For more information, see [XmlDocument Input to XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md).</span></span>|  
+|<xref:System.Xml.XmlDataDocument>|<span data-ttu-id="5a5a1-127">Derivato da <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-127">It is derived from the <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="5a5a1-128">Supera i limiti dei modelli basati sui dati XML e relazionali usando un <xref:System.Data.DataSet> per ottimizzare l'archiviazione dei dati strutturati all'interno del documento XML, in base ai mapping specificati nel <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-128">It bridges the relational and XML worlds by using a <xref:System.Data.DataSet> to optimize storage of structured data within the XML document according to specified mappings on the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="5a5a1-129">Implementa <xref:System.Xml.XPath.IXPathNavigable>, consentendo scenari in cui è possibile eseguire trasformazioni XSLT sui dati relazionali recuperati da un database.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-129">It implements <xref:System.Xml.XPath.IXPathNavigable>, allowing scenarios where XSLT transformations can be performed over relational data retrieved from a database.</span></span> <span data-ttu-id="5a5a1-130">Per ulteriori informazioni, vedere [integrazione di XML con dati relazionali e ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).</span><span class="sxs-lookup"><span data-stu-id="5a5a1-130">For more information, see [XML Integration with Relational Data and ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).</span></span>|  
+|<xref:System.Xml.XPath.XPathDocument>|<span data-ttu-id="5a5a1-131">Questa classe è ottimizzata per l'elaborazione con <xref:System.Xml.Xsl.XslTransform> e per le query XPath. Fornisce una cache di sola lettura a elevate prestazioni.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-131">This class is optimized for <xref:System.Xml.Xsl.XslTransform> processing and XPath queries, and it provides a read-only high performance cache.</span></span> <span data-ttu-id="5a5a1-132">Implementa <xref:System.Xml.XPath.IXPathNavigable> ed è l'archivio migliore da usare per le trasformazioni XSLT.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-132">It implements <xref:System.Xml.XPath.IXPathNavigable> and is the preferred store to use for XSLT transformations.</span></span>|  
+|<xref:System.Xml.XPath.XPathNodeIterator>|<span data-ttu-id="5a5a1-133">Consente di navigare nei set di nodi XPath.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-133">It provides navigation over XPath node sets.</span></span> <span data-ttu-id="5a5a1-134">Tutti i metodi di selezione XPath di <xref:System.Xml.XPath.XPathNavigator> restituiscono un <xref:System.Xml.XPath.XPathNodeIterator>.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-134">All XPath selection methods on the <xref:System.Xml.XPath.XPathNavigator> return an <xref:System.Xml.XPath.XPathNodeIterator>.</span></span> <span data-ttu-id="5a5a1-135">È possibile creare più oggetti <xref:System.Xml.XPath.XPathNodeIterator> nello stesso archivio, ognuno dei quali rappresenta un set di nodi selezionato.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-135">Multiple <xref:System.Xml.XPath.XPathNodeIterator> objects can be created over the same store, each representing a selected set of nodes.</span></span>|  
   
-## Estensioni XSLT di MSXML  
- Le funzioni `msxsl:script` e `msxsl:node-set` sono le uniche estensioni XSLT di MSXML \(Microsoft XML Core Services\) supportate dalla classe <xref:System.Xml.Xsl.XslTransform>.  
+## <a name="msxml-xslt-extensions"></a><span data-ttu-id="5a5a1-136">Estensioni XSLT di MSXML</span><span class="sxs-lookup"><span data-stu-id="5a5a1-136">MSXML XSLT Extensions</span></span>  
+ <span data-ttu-id="5a5a1-137">Le funzioni `msxsl:script` e `msxsl:node-set` sono le uniche estensioni XSLT di MSXML (Microsoft XML Core Services) supportate dalla classe <xref:System.Xml.Xsl.XslTransform>.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-137">The `msxsl:script` and `msxsl:node-set` functions are the only Microsoft XML Core Services (MSXML) XSLT extensions supported by the <xref:System.Xml.Xsl.XslTransform> class.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene caricato un foglio di stile XSLT, il file mydata.xml viene letto in un <xref:System.Xml.XPath.XPathDocument> e viene eseguita una trasformazione sui dati basata sul file fittizio myStyleSheet.xsl. L'output formattato viene quindi inviato alla console.  
+## <a name="example"></a><span data-ttu-id="5a5a1-138">Esempio</span><span class="sxs-lookup"><span data-stu-id="5a5a1-138">Example</span></span>  
+ <span data-ttu-id="5a5a1-139">Nell'esempio di codice seguente viene caricato un foglio di stile XSLT, il file mydata.xml viene letto in un <xref:System.Xml.XPath.XPathDocument> e viene eseguita una trasformazione sui dati basata sul file fittizio myStyleSheet.xsl. L'output formattato viene quindi inviato alla console.</span><span class="sxs-lookup"><span data-stu-id="5a5a1-139">The following code example loads an XSLT style sheet, reads a file called mydata.xml into an <xref:System.Xml.XPath.XPathDocument>, and performs a transformation on the data on a fictitious file called myStyleSheet.xsl, sending the formatted output to the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -71,7 +72,6 @@ Public Class Sample
         xslt.Transform(xpathdocument, Nothing, writer, Nothing)  
     End Sub 'Main  
 End Class 'Sample  
-  
 ```  
   
 ```csharp  
@@ -100,12 +100,12 @@ public class Sample
 }  
 ```  
   
-## Vedere anche  
- <xref:System.Xml.Xsl.XslTransform>   
- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)   
- [Implementazione di comportamenti discretionary nella classe XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)   
- [XPathNavigator nelle trasformazioni](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)   
- [XPathNodeIterator nelle trasformazioni](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)   
- [Input di XPathDocument in XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)   
- [Input di XmlDataDocument in XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)   
- [Input di XmlDocument in XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+## <a name="see-also"></a><span data-ttu-id="5a5a1-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5a5a1-140">See Also</span></span>  
+ <xref:System.Xml.Xsl.XslTransform>  
+ [<span data-ttu-id="5a5a1-141">Classe XslTransform implementa il processore XSLT</span><span class="sxs-lookup"><span data-stu-id="5a5a1-141">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [<span data-ttu-id="5a5a1-142">Implementazione di comportamenti Discretionary nella classe XslTransform</span><span class="sxs-lookup"><span data-stu-id="5a5a1-142">Implementation of Discretionary Behaviors in the XslTransform Class</span></span>](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
+ [<span data-ttu-id="5a5a1-143">XPathNavigator nelle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="5a5a1-143">XPathNavigator in Transformations</span></span>](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [<span data-ttu-id="5a5a1-144">XPathNodeIterator nelle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="5a5a1-144">XPathNodeIterator in Transformations</span></span>](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [<span data-ttu-id="5a5a1-145">Input di XPathDocument in XslTransform</span><span class="sxs-lookup"><span data-stu-id="5a5a1-145">XPathDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [<span data-ttu-id="5a5a1-146">Input di XmlDataDocument in XslTransform</span><span class="sxs-lookup"><span data-stu-id="5a5a1-146">XmlDataDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [<span data-ttu-id="5a5a1-147">Input di XmlDocument in XslTransform</span><span class="sxs-lookup"><span data-stu-id="5a5a1-147">XmlDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

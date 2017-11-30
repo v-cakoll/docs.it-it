@@ -1,78 +1,59 @@
 ---
 title: Costanti (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 81a085ff016fb9ee8f8a13167728c37ca799920a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 85273420e9e0dbf4b8f24568d97be127c85d5f42
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="constants-c-programming-guide"></a>Costanti (Guida per programmatori C#)
-Le costanti sono valori non modificabili, che sono noti nella fase di compilazione e non cambiano per la durata del programma. Le costanti vengono dichiarate con il modificatore [const](../../../csharp/language-reference/keywords/const.md). Solo i tipi incorporati C# (ad esclusione di <xref:System.Object?displayProperty=fullName>) possono essere dichiarati come `const`. Per l'elenco dei tipi incorporati, vedere [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md). I tipi definiti dall'utente, incluse le classi, gli struct e le matrici, non possono essere `const`. Usare il modificatore [readonly](../../../csharp/language-reference/keywords/readonly.md) per creare una classe, una matrice o uno struct che viene inizializzato una sola volta in fase di runtime (ad esempio in un costruttore) e successivamente non può più essere modificato.  
+# <a name="constants-c-programming-guide"></a><span data-ttu-id="62073-102">Costanti (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="62073-102">Constants (C# Programming Guide)</span></span>
+<span data-ttu-id="62073-103">Le costanti sono valori non modificabili, che sono noti nella fase di compilazione e non cambiano per la durata del programma.</span><span class="sxs-lookup"><span data-stu-id="62073-103">Constants are immutable values which are known at compile time and do not change for the life of the program.</span></span> <span data-ttu-id="62073-104">Le costanti vengono dichiarate con il modificatore [const](../../../csharp/language-reference/keywords/const.md).</span><span class="sxs-lookup"><span data-stu-id="62073-104">Constants are declared with the [const](../../../csharp/language-reference/keywords/const.md) modifier.</span></span> <span data-ttu-id="62073-105">Solo i tipi incorporati C# (ad esclusione di <xref:System.Object?displayProperty=nameWithType>) possono essere dichiarati come `const`.</span><span class="sxs-lookup"><span data-stu-id="62073-105">Only the C# built-in types (excluding <xref:System.Object?displayProperty=nameWithType>) may be declared as `const`.</span></span> <span data-ttu-id="62073-106">Per l'elenco dei tipi incorporati, vedere [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="62073-106">For a list of the built-in types, see [Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md).</span></span> <span data-ttu-id="62073-107">I tipi definiti dall'utente, incluse le classi, gli struct e le matrici, non possono essere `const`.</span><span class="sxs-lookup"><span data-stu-id="62073-107">User-defined types, including classes, structs, and arrays, cannot be `const`.</span></span> <span data-ttu-id="62073-108">Usare il modificatore [readonly](../../../csharp/language-reference/keywords/readonly.md) per creare una classe, una matrice o uno struct che viene inizializzato una sola volta in fase di runtime (ad esempio in un costruttore) e successivamente non può più essere modificato.</span><span class="sxs-lookup"><span data-stu-id="62073-108">Use the [readonly](../../../csharp/language-reference/keywords/readonly.md) modifier to create a class, struct, or array that is initialized one time at runtime (for example in a constructor) and thereafter cannot be changed.</span></span>  
   
- C# non supporta metodi, proprietà o eventi `const`.  
+ <span data-ttu-id="62073-109">C# non supporta metodi, proprietà o eventi `const`.</span><span class="sxs-lookup"><span data-stu-id="62073-109">C# does not support `const` methods, properties, or events.</span></span>  
   
- Il tipo enum consente di definire costanti denominate per i tipi incorporati interi (ad esempio `int`, `uint`, `long` e così via). Per altre informazioni, vedere [enum](../../../csharp/language-reference/keywords/enum.md).  
+ <span data-ttu-id="62073-110">Il tipo enum consente di definire costanti denominate per i tipi incorporati interi (ad esempio `int`, `uint`, `long` e così via).</span><span class="sxs-lookup"><span data-stu-id="62073-110">The enum type enables you to define named constants for integral built-in types (for example `int`, `uint`, `long`, and so on).</span></span> <span data-ttu-id="62073-111">Per altre informazioni, vedere [enum](../../../csharp/language-reference/keywords/enum.md).</span><span class="sxs-lookup"><span data-stu-id="62073-111">For more information, see [enum](../../../csharp/language-reference/keywords/enum.md).</span></span>  
   
- Le costanti devono essere inizializzate come vengono dichiarate. Ad esempio:  
+ <span data-ttu-id="62073-112">Le costanti devono essere inizializzate come vengono dichiarate.</span><span class="sxs-lookup"><span data-stu-id="62073-112">Constants must be initialized as they are declared.</span></span> <span data-ttu-id="62073-113">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="62073-113">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_1.cs)]  
+ [!code-csharp[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_1.cs)]  
   
- In questo esempio la costante `months` è sempre 12 e non può essere modificata neanche dalla stessa classe. In realtà, quando il compilatore incontra un identificatore costante nel codice sorgente C# (ad esempio `months`), lo sostituisce direttamente con il relativo valore letterale nel codice Intermediate Language (IL) che produce. Poiché non esiste alcun indirizzo di variabile associato a una costante in fase di esecuzione, i campi `const` non possono essere passati per riferimento e non possono sostituire un l-value in un'espressione.  
+ <span data-ttu-id="62073-114">In questo esempio la costante `months` è sempre 12 e non può essere modificata neanche dalla stessa classe.</span><span class="sxs-lookup"><span data-stu-id="62073-114">In this example, the constant `months` is always 12, and it cannot be changed even by the class itself.</span></span> <span data-ttu-id="62073-115">In realtà, quando il compilatore incontra un identificatore costante nel codice sorgente C# (ad esempio `months`), lo sostituisce direttamente con il relativo valore letterale nel codice Intermediate Language (IL) che produce.</span><span class="sxs-lookup"><span data-stu-id="62073-115">In fact, when the compiler encounters a constant identifier in C# source code (for example, `months`), it substitutes the literal value directly into the intermediate language (IL) code that it produces.</span></span> <span data-ttu-id="62073-116">Poiché non esiste alcun indirizzo di variabile associato a una costante in fase di esecuzione, i campi `const` non possono essere passati per riferimento e non possono sostituire un l-value in un'espressione.</span><span class="sxs-lookup"><span data-stu-id="62073-116">Because there is no variable address associated with a constant at run time, `const` fields cannot be passed by reference and cannot appear as an l-value in an expression.</span></span>  
   
 > [!NOTE]
->  Prestare attenzione quando si creano riferimenti a valori costanti definiti in un altro codice, ad esempio in file DLL. Se una nuova versione della DLL definisce un nuovo valore per la costante, il programma mantiene il vecchio valore letterale finché non viene ricompilato per la nuova versione.  
+>  <span data-ttu-id="62073-117">Prestare attenzione quando si creano riferimenti a valori costanti definiti in un altro codice, ad esempio in file DLL.</span><span class="sxs-lookup"><span data-stu-id="62073-117">Use caution when you refer to constant values defined in other code such as DLLs.</span></span> <span data-ttu-id="62073-118">Se una nuova versione della DLL definisce un nuovo valore per la costante, il programma mantiene il vecchio valore letterale finché non viene ricompilato per la nuova versione.</span><span class="sxs-lookup"><span data-stu-id="62073-118">If a new version of the DLL defines a new value for the constant, your program will still hold the old literal value until it is recompiled against the new version.</span></span>  
   
- È possibile dichiarare contemporaneamente più costanti dello stesso tipo, ad esempio:  
+ <span data-ttu-id="62073-119">È possibile dichiarare contemporaneamente più costanti dello stesso tipo, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="62073-119">Multiple constants of the same type can be declared at the same time, for example:</span></span>  
   
- [!code-cs[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_2.cs)]  
+ [!code-csharp[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_2.cs)]  
   
- L'espressione usata per inizializzare una costante può fare riferimento a un'altra costante, a condizione che crei un riferimento circolare. Ad esempio:  
+ <span data-ttu-id="62073-120">L'espressione usata per inizializzare una costante può fare riferimento a un'altra costante, a condizione che crei un riferimento circolare.</span><span class="sxs-lookup"><span data-stu-id="62073-120">The expression that is used to initialize a constant can refer to another constant if it does not create a circular reference.</span></span> <span data-ttu-id="62073-121">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="62073-121">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
+ [!code-csharp[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
- Le costanti possono essere contrassegnate come [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o `protected internal`. Questi modificatori definiscono l'accesso alla costante per gli utenti della classe. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ <span data-ttu-id="62073-122">Costanti possono essere contrassegnate come [pubblica](../../../csharp/language-reference/keywords/public.md), [privata](../../../csharp/language-reference/keywords/private.md), [protetti](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)o [protetto privato](../../../csharp/language-reference/keywords/private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="62073-122">Constants can be marked as [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) or [private protected](../../../csharp/language-reference/keywords/private-protected.md).</span></span> <span data-ttu-id="62073-123">Questi modificatori definiscono l'accesso alla costante per gli utenti della classe.</span><span class="sxs-lookup"><span data-stu-id="62073-123">These access modifiers define how users of the class can access the constant.</span></span> <span data-ttu-id="62073-124">Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="62073-124">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
- L’accesso alle costanti avviene come se fossero campi [statici](../../../csharp/language-reference/keywords/static.md), perché il valore della costante è lo stesso per tutte le istanze del tipo. Per dichiararle non viene usata la parola chiave `static`. Per accedere alla costante, le espressioni non incluse nella classe che la definisce devono usare il nome della classe seguito da un punto e dal nome della costante stessa. Ad esempio:  
+ <span data-ttu-id="62073-125">L’accesso alle costanti avviene come se fossero campi [statici](../../../csharp/language-reference/keywords/static.md), perché il valore della costante è lo stesso per tutte le istanze del tipo.</span><span class="sxs-lookup"><span data-stu-id="62073-125">Constants are accessed as if they were [static](../../../csharp/language-reference/keywords/static.md) fields because the value of the constant is the same for all instances of the type.</span></span> <span data-ttu-id="62073-126">Per dichiararle non viene usata la parola chiave `static`.</span><span class="sxs-lookup"><span data-stu-id="62073-126">You do not use the `static` keyword to declare them.</span></span> <span data-ttu-id="62073-127">Per accedere alla costante, le espressioni non incluse nella classe che la definisce devono usare il nome della classe seguito da un punto e dal nome della costante stessa.</span><span class="sxs-lookup"><span data-stu-id="62073-127">Expressions that are not in the class that defines the constant must use the class name, a period, and the name of the constant to access the constant.</span></span> <span data-ttu-id="62073-128">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="62073-128">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
+ [!code-csharp[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="62073-129">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="62073-129">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Tipi](../../../csharp/programming-guide/types/index.md)   
- [readonly](../../../csharp/language-reference/keywords/readonly.md)   
- [Immutability in C# Part One: Kinds of Immutability](http://go.microsoft.com/fwlink/?LinkId=112379) (Immutabilità in C# - Parte 1: tipi di immutabilità)
-
+## <a name="see-also"></a><span data-ttu-id="62073-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="62073-130">See Also</span></span>  
+ [<span data-ttu-id="62073-131">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="62073-131">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="62073-132">Classi e struct</span><span class="sxs-lookup"><span data-stu-id="62073-132">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="62073-133">Proprietà</span><span class="sxs-lookup"><span data-stu-id="62073-133">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="62073-134">Tipi</span><span class="sxs-lookup"><span data-stu-id="62073-134">Types</span></span>](../../../csharp/programming-guide/types/index.md)  
+ [<span data-ttu-id="62073-135">readonly</span><span class="sxs-lookup"><span data-stu-id="62073-135">readonly</span></span>](../../../csharp/language-reference/keywords/readonly.md)  
+ <span data-ttu-id="62073-136">[Immutability in C# Part One: Kinds of Immutability](http://go.microsoft.com/fwlink/?LinkId=112379) (Immutabilità in C# - Parte 1: tipi di immutabilità)</span><span class="sxs-lookup"><span data-stu-id="62073-136">[Immutability in C# Part One: Kinds of Immutability](http://go.microsoft.com/fwlink/?LinkId=112379)</span></span>

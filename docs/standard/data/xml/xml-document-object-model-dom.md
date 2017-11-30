@@ -1,32 +1,30 @@
 ---
-title: "Modello DOM (Document Object Model) XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: XML DOM (Document Object Model)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ff91e929876ceec8512e962b88795b6a8a29f3d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Modello DOM (Document Object Model) XML
-La classe DOM \(Document Object Model\) XML è una rappresentazione in memoria di un documento XML.  Il modello DOM consente di leggere e modificare un documento XML a livello di codice.  Anche la classe **XmlReader** è in grado di leggere un documento XML, tuttavia essa fornisce un accesso non memorizzato nella cache, di tipo forward\-only e di sola lettura.  Questo significa che con **XmlReader** non sono disponibili funzionalità per la modifica dei valori di un attributo o del contenuto di un elemento, né per l'inserimento e la rimozione di nodi.  La modifica è la funzione primaria del DOM.  È il modo comune e strutturato in cui i dati XML vengono rappresentati nella memoria, sebbene i dati XML effettivi siano archiviati in modo lineare all'interno di un file o quando provengono da un altro oggetto.  Di seguito sono riportati i dati XML.  
+# <a name="xml-document-object-model-dom"></a><span data-ttu-id="0cb63-102">XML DOM (Document Object Model)</span><span class="sxs-lookup"><span data-stu-id="0cb63-102">XML Document Object Model (DOM)</span></span>
+<span data-ttu-id="0cb63-103">La classe DOM (Document Object Model) XML è una rappresentazione in memoria di un documento XML.</span><span class="sxs-lookup"><span data-stu-id="0cb63-103">The XML Document Object Model (DOM) class is an in-memory representation of an XML document.</span></span> <span data-ttu-id="0cb63-104">Il modello DOM consente di leggere e modificare un documento XML a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="0cb63-104">The DOM allows you to programmatically read, manipulate, and modify an XML document.</span></span> <span data-ttu-id="0cb63-105">Il **XmlReader** classe legge anche XML; tuttavia, fornisce l'accesso non in cache, forward-only di sola lettura.</span><span class="sxs-lookup"><span data-stu-id="0cb63-105">The **XmlReader** class also reads XML; however, it provides non-cached, forward-only, read-only access.</span></span> <span data-ttu-id="0cb63-106">Ciò significa che non sono disponibili funzionalità per modificare i valori di un attributo o il contenuto di un elemento o la possibilità di inserire e rimuovere nodi con il **XmlReader**.</span><span class="sxs-lookup"><span data-stu-id="0cb63-106">This means that there are no capabilities to edit the values of an attribute or content of an element, or the ability to insert and remove nodes with the **XmlReader**.</span></span> <span data-ttu-id="0cb63-107">La modifica è la funzione primaria del DOM.</span><span class="sxs-lookup"><span data-stu-id="0cb63-107">Editing is the primary function of the DOM.</span></span> <span data-ttu-id="0cb63-108">È il modo comune e strutturato in cui i dati XML vengono rappresentati nella memoria, sebbene i dati XML effettivi siano archiviati in modo lineare all'interno di un file o quando provengono da un altro oggetto.</span><span class="sxs-lookup"><span data-stu-id="0cb63-108">It is the common and structured way that XML data is represented in memory, although the actual XML data is stored in a linear fashion when in a file or coming in from another object.</span></span> <span data-ttu-id="0cb63-109">Di seguito sono riportati i dati XML.</span><span class="sxs-lookup"><span data-stu-id="0cb63-109">The following is XML data.</span></span>  
   
-## Input  
+## <a name="input"></a><span data-ttu-id="0cb63-110">Input</span><span class="sxs-lookup"><span data-stu-id="0cb63-110">Input</span></span>  
   
-```  
+```xml  
 <?xml version="1.0"?>  
   <books>  
     <book>  
@@ -41,50 +39,50 @@ La classe DOM \(Document Object Model\) XML è una rappresentazione in memoria d
   </books>   
 ```  
   
- Nella figura seguente viene illustrato come è strutturata la memoria quando questi dati XML vengono letti nella struttura del DOM.  
+ <span data-ttu-id="0cb63-111">Nella figura seguente viene illustrato come è strutturata la memoria quando questi dati XML vengono letti nella struttura del DOM.</span><span class="sxs-lookup"><span data-stu-id="0cb63-111">The following illustration shows how memory is structured when this XML data is read into the DOM structure.</span></span>  
   
- ![Struttura del documento XML](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML\_To\_DOMTree")  
-Struttura del documento XML  
+ <span data-ttu-id="0cb63-112">![Struttura del documento XML](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree")</span><span class="sxs-lookup"><span data-stu-id="0cb63-112">![XML document structure](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree")</span></span>  
+<span data-ttu-id="0cb63-113">Struttura del documento XML</span><span class="sxs-lookup"><span data-stu-id="0cb63-113">XML document structure</span></span>  
   
- All'interno della struttura del documento XML, ogni cerchio di questa figura rappresenta un nodo, denominato oggetto **XmlNode**,  che costituisce l'oggetto di base nell'albero DOM.  La classe **XmlDocument**, che estende **XmlNode**, supporta i metodi per l'esecuzione di operazioni sul documento nella sua totalità, ad esempio il caricamento del documento in memoria o il salvataggio del documento XML in un file.  **XmlDocument** costituisce inoltre un modo per visualizzare e modificare i nodi nell'intero documento XML.  **XmlNode** e **XmlDocument** sono stati entrambi migliorati dal punto di vista delle prestazioni e dell'usabilità e dispongono di metodi e proprietà per:  
+ <span data-ttu-id="0cb63-114">All'interno della struttura del documento XML, ogni cerchio di questa figura rappresenta un nodo, che viene chiamato un **XmlNode** oggetto.</span><span class="sxs-lookup"><span data-stu-id="0cb63-114">Within the XML document structure, each circle in this illustration represents a node, which is called an **XmlNode** object.</span></span> <span data-ttu-id="0cb63-115">Il **XmlNode** oggetto è l'oggetto di base nell'albero DOM.</span><span class="sxs-lookup"><span data-stu-id="0cb63-115">The **XmlNode** object is the basic object in the DOM tree.</span></span> <span data-ttu-id="0cb63-116">Il **XmlDocument** (classe), che estende **XmlNode**, supporta i metodi per l'esecuzione di operazioni sul documento nel suo complesso (ad esempio, il caricamento in memoria o salvataggio del documento XML in un file.</span><span class="sxs-lookup"><span data-stu-id="0cb63-116">The **XmlDocument** class, which extends **XmlNode**, supports methods for performing operations on the document as a whole (for example, loading it into memory or saving the XML to a file.</span></span> <span data-ttu-id="0cb63-117">Inoltre, **XmlDocument** consente di visualizzare e modificare i nodi nell'intero documento XML.</span><span class="sxs-lookup"><span data-stu-id="0cb63-117">In addition, **XmlDocument** provides a means to view and manipulate the nodes in the entire XML document.</span></span> <span data-ttu-id="0cb63-118">Entrambi **XmlNode** e **XmlDocument** dispongono di miglioramenti delle prestazioni e usabilità e dispongono di metodi e proprietà per:</span><span class="sxs-lookup"><span data-stu-id="0cb63-118">Both **XmlNode** and **XmlDocument** have performance and usability enhancements and have methods and properties to:</span></span>  
   
--   Accedere e apportare modifiche ai nodi specifici del DOM, ad esempio ai nodi degli elementi, ai nodi di riferimento all'entità e così via.  
+-   <span data-ttu-id="0cb63-119">Accedere e apportare modifiche ai nodi specifici del DOM, ad esempio ai nodi degli elementi, ai nodi di riferimento all'entità e così via.</span><span class="sxs-lookup"><span data-stu-id="0cb63-119">Access and modify nodes specific to the DOM, such as element nodes, entity reference nodes, and so on.</span></span>  
   
--   Recuperare interi nodi, oltre alle informazioni contenute nel nodo, quali il testo in un nodo di elemento.  
+-   <span data-ttu-id="0cb63-120">Recuperare interi nodi, oltre alle informazioni contenute nel nodo, quali il testo in un nodo di elemento.</span><span class="sxs-lookup"><span data-stu-id="0cb63-120">Retrieve entire nodes, in addition to the information the node contains, such as the text in an element node.</span></span>  
   
     > [!NOTE]
-    >  Se la struttura e le funzionalità di modifica del DOM non sono richieste da un'applicazione, le classi **XmlReader** e **XmlWriter** forniscono un accesso al flusso XML non memorizzato nella cache e di tipo forward\-only.  Per altre informazioni, vedere <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>.  
+    >  <span data-ttu-id="0cb63-121">Se un'applicazione non richiede la struttura o le funzionalità di DOM, modifica il **XmlReader** e **XmlWriter** classi forniscono accesso tramite flusso non memorizzati nella cache e forward-only di XML.</span><span class="sxs-lookup"><span data-stu-id="0cb63-121">If an application does not require the structure or editing capabilities provided by the DOM, the **XmlReader** and **XmlWriter** classes provide non-cached, forward-only stream access to XML.</span></span> <span data-ttu-id="0cb63-122">Per altre informazioni, vedere <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="0cb63-122">For more information, see <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span>  
   
- Gli oggetti **Node** dispongono di un set di metodi e proprietà, oltre a caratteristiche di base ben definite.  Di seguito sono riportate alcune di queste caratteristiche.  
+ <span data-ttu-id="0cb63-123">**Nodo** oggetti dispongono di un set di metodi e proprietà, nonché le caratteristiche di base ben definite.</span><span class="sxs-lookup"><span data-stu-id="0cb63-123">**Node** objects have a set of methods and properties, as well as basic and well-defined characteristics.</span></span> <span data-ttu-id="0cb63-124">Di seguito sono riportate alcune di queste caratteristiche.</span><span class="sxs-lookup"><span data-stu-id="0cb63-124">Some of these characteristics are:</span></span>  
   
--   I nodi presentano un singolo nodo padre, ovvero quello al livello immediatamente superiore.  Gli unici nodi che non presentano nodi padre sono al livello radice del documento, in quanto si tratta dei nodi di primo livello contenenti il documento stesso e i frammenti di documento.  
+-   <span data-ttu-id="0cb63-125">I nodi presentano un singolo nodo padre, ovvero quello al livello immediatamente superiore.</span><span class="sxs-lookup"><span data-stu-id="0cb63-125">Nodes have a single parent node, a parent node being a node directly above them.</span></span> <span data-ttu-id="0cb63-126">Gli unici nodi che non presentano nodi padre sono al livello radice del documento, in quanto si tratta dei nodi di primo livello contenenti il documento stesso e i frammenti di documento.</span><span class="sxs-lookup"><span data-stu-id="0cb63-126">The only nodes that do not have a parent is the Document root, as it is the top-level node and contains the document itself and document fragments.</span></span>  
   
--   La maggior parte dei nodi può presentare più nodi figlio, ovvero quelli al livello immediatamente inferiore.  Di seguito viene riportato un elenco di tipi di nodi che possono contenere nodi figlio.  
+-   <span data-ttu-id="0cb63-127">La maggior parte dei nodi può presentare più nodi figlio, ovvero quelli al livello immediatamente inferiore.</span><span class="sxs-lookup"><span data-stu-id="0cb63-127">Most nodes can have multiple child nodes, which are nodes directly below them.</span></span> <span data-ttu-id="0cb63-128">Di seguito viene riportato un elenco di tipi di nodi che possono contenere nodi figlio.</span><span class="sxs-lookup"><span data-stu-id="0cb63-128">The following is a list of node types that can have child nodes.</span></span>  
   
-    -   **Documento**  
+    -   <span data-ttu-id="0cb63-129">**Documento**</span><span class="sxs-lookup"><span data-stu-id="0cb63-129">**Document**</span></span>  
   
-    -   **DocumentFragment**  
+    -   <span data-ttu-id="0cb63-130">**DocumentFragment**</span><span class="sxs-lookup"><span data-stu-id="0cb63-130">**DocumentFragment**</span></span>  
   
-    -   **EntityReference**  
+    -   <span data-ttu-id="0cb63-131">**EntityReference**</span><span class="sxs-lookup"><span data-stu-id="0cb63-131">**EntityReference**</span></span>  
   
-    -   **Elemento**  
+    -   <span data-ttu-id="0cb63-132">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="0cb63-132">**Element**</span></span>  
   
-    -   **Attributo**  
+    -   <span data-ttu-id="0cb63-133">**Attributo**</span><span class="sxs-lookup"><span data-stu-id="0cb63-133">**Attribute**</span></span>  
   
-     I nodi **XmlDeclaration**, **Notation**, **Entity**, **CDATASection**, **Text**, **Comment**, **ProcessingInstruction**  e **DocumentType** non contengono nodi figlio.  
+     <span data-ttu-id="0cb63-134">Il **XmlDeclaration**, **notazione**, **entità**, **CDATASection**, **testo**,  **Commento**, **ProcessingInstruction**, e **DocumentType** nodi non dispongono di nodi figlio.</span><span class="sxs-lookup"><span data-stu-id="0cb63-134">The **XmlDeclaration**, **Notation**, **Entity**, **CDATASection**, **Text**, **Comment**, **ProcessingInstruction**, and **DocumentType** nodes do not have child nodes.</span></span>  
   
--   I nodi che si trovano allo stesso livello, rappresentati nel diagramma dai nodi **book** e **pubinfo,** sono nodi di pari livello.  
+-   <span data-ttu-id="0cb63-135">Allo stesso livello, rappresentato nel diagramma dai nodi di **book** e **pubinfo** nodi, sono di pari livello.</span><span class="sxs-lookup"><span data-stu-id="0cb63-135">Nodes that are at the same level, represented in the diagram by the **book** and **pubinfo** nodes, are siblings.</span></span>  
   
- Una caratteristica del DOM è rappresentata dalla gestione degli attributi.  Gli attributi non sono nodi che fanno parte delle relazioni tra nodi padre, nodi figlio o nodi di pari livello,  ma sono considerati una proprietà del nodo dell'elemento e sono costituiti da una coppia composta da nome e valore.  Se, ad esempio, si dispone di dati XML costituiti da `format="dollar`" associato all'elemento `price`, il termine `format` è il nome, mentre il valore dell'attributo `format` è `dollar`.  Per recuperare l'attributo `format="dollar"` del nodo **price**, è necessario chiamare il metodo **GetAttribute** quando il cursore si trova in corrispondenza del nodo dell'elemento `price`.  Per altre informazioni, vedere [Accesso agli attributi nel DOM](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).  
+ <span data-ttu-id="0cb63-136">Una caratteristica del DOM è rappresentata dalla gestione degli attributi.</span><span class="sxs-lookup"><span data-stu-id="0cb63-136">One characteristic of the DOM is how it handles attributes.</span></span> <span data-ttu-id="0cb63-137">Gli attributi non sono nodi che fanno parte delle relazioni tra nodi padre, nodi figlio o nodi di pari livello,</span><span class="sxs-lookup"><span data-stu-id="0cb63-137">Attributes are not nodes that are part of the parent, child, and sibling relationships.</span></span> <span data-ttu-id="0cb63-138">ma sono considerati una proprietà del nodo dell'elemento e sono costituiti da una coppia composta da nome e valore.</span><span class="sxs-lookup"><span data-stu-id="0cb63-138">Attributes are considered a property of the element node and are made up of a name and a value pair.</span></span> <span data-ttu-id="0cb63-139">Se, ad esempio, si dispone di dati XML costituiti da `format="dollar`" associato all'elemento `price`, il termine `format` è il nome, mentre il valore dell'attributo `format` è `dollar`.</span><span class="sxs-lookup"><span data-stu-id="0cb63-139">For example, if you have XML data consisting of `format="dollar`" associated with the element `price`, the word `format` is the name, and the value of the `format` attribute is `dollar`.</span></span> <span data-ttu-id="0cb63-140">Per recuperare il `format="dollar"` attributo del **prezzo** nodo, si chiama il **GetAttribute** metodo quando il cursore si trova nel `price` nodo elemento.</span><span class="sxs-lookup"><span data-stu-id="0cb63-140">To retrieve the `format="dollar"` attribute of the **price** node, you call the **GetAttribute** method when the cursor is located at the `price` element node.</span></span> <span data-ttu-id="0cb63-141">Per ulteriori informazioni, vedere [accesso agli attributi nel DOM](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).</span><span class="sxs-lookup"><span data-stu-id="0cb63-141">For more information, see [Accessing Attributes in the DOM](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).</span></span>  
   
- Man mano che l'XML viene letto in memoria, vengono creati dei nodi.  Non tutti i nodi, tuttavia, sono dello stesso tipo.  Le regole e la sintassi di un elemento dell'XML sono diverse da quelle di un'istruzione di elaborazione.  Pertanto, mentre avviene la lettura di vari dati, viene assegnato un tipo di nodo a ogni nodo.  In base al tipo di nodo, vengono determinate le caratteristiche e la funzionalità del nodo.  
+ <span data-ttu-id="0cb63-142">Man mano che l'XML viene letto in memoria, vengono creati dei nodi.</span><span class="sxs-lookup"><span data-stu-id="0cb63-142">As XML is read into memory, nodes are created.</span></span> <span data-ttu-id="0cb63-143">Non tutti i nodi, tuttavia, sono dello stesso tipo.</span><span class="sxs-lookup"><span data-stu-id="0cb63-143">However, not all nodes are the same type.</span></span> <span data-ttu-id="0cb63-144">Le regole e la sintassi di un elemento dell'XML sono diverse da quelle di un'istruzione di elaborazione.</span><span class="sxs-lookup"><span data-stu-id="0cb63-144">An element in XML has different rules and syntax than a processing instruction.</span></span> <span data-ttu-id="0cb63-145">Pertanto, mentre avviene la lettura di vari dati, viene assegnato un tipo di nodo a ogni nodo.</span><span class="sxs-lookup"><span data-stu-id="0cb63-145">Therefore, as various data is read, a node type is assigned to each node.</span></span> <span data-ttu-id="0cb63-146">In base al tipo di nodo, vengono determinate le caratteristiche e la funzionalità del nodo.</span><span class="sxs-lookup"><span data-stu-id="0cb63-146">This node type determines the characteristics and functionality of the node.</span></span>  
   
- Per altre informazioni sui tipi di nodi generati in memoria, vedere [Tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md).  Per altre informazioni sugli oggetti creati nell'albero dei nodi, vedere [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
+ <span data-ttu-id="0cb63-147">Per ulteriori informazioni sui tipi di nodi generati in memoria, vedere [tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md).</span><span class="sxs-lookup"><span data-stu-id="0cb63-147">For more information on the types of nodes generated in memory, see [Types of XML Nodes](../../../../docs/standard/data/xml/types-of-xml-nodes.md).</span></span> <span data-ttu-id="0cb63-148">Per ulteriori informazioni sugli oggetti creati nell'albero dei nodi, vedere [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).</span><span class="sxs-lookup"><span data-stu-id="0cb63-148">For more information on the objects created in the node tree, see [Mapping the Object Hierarchy to XML Data](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).</span></span>  
   
- Le API disponibili nelle raccomandazioni W3C DOM Level 1 e Level 2 sono state estese per facilitare l'uso dei documenti XML.  Le classi, i metodi e le proprietà aggiuntive, oltre a supportare completamente gli standard W3C, aggiungono ulteriori funzionalità rispetto a quelle presenti nel modello DOM XML di W3C.  Grazie alle nuove classi è possibile accedere ai dati relazionali e usufruire di metodi per la sincronizzazione con i dati ADO.NET, esponendo simultaneamente i dati come XML.  Per altre informazioni, vedere [Sincronizzazione di un DataSet con un XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
+ <span data-ttu-id="0cb63-149">Le API disponibili nelle raccomandazioni W3C DOM Level 1 e Level 2 sono state estese per facilitare l'uso dei documenti XML.</span><span class="sxs-lookup"><span data-stu-id="0cb63-149">Microsoft has extended the APIs that are available in the World Wide Web Consortium (W3C) DOM Level 1 and Level 2 to make it easier to work with an XML document.</span></span> <span data-ttu-id="0cb63-150">Le classi, i metodi e le proprietà aggiuntive, oltre a supportare completamente gli standard W3C, aggiungono ulteriori funzionalità rispetto a quelle presenti nel modello DOM XML di W3C.</span><span class="sxs-lookup"><span data-stu-id="0cb63-150">While fully supporting the W3C standards, the additional classes, methods, and properties add functionality beyond what can be done using the W3C XML DOM.</span></span> <span data-ttu-id="0cb63-151">Grazie alle nuove classi è possibile accedere ai dati relazionali e usufruire di metodi per la sincronizzazione con i dati ADO.NET, esponendo simultaneamente i dati come XML.</span><span class="sxs-lookup"><span data-stu-id="0cb63-151">New classes enable you to access relational data, giving you methods for synchronizing with ADO.NET data, simultaneously exposing data as XML.</span></span> <span data-ttu-id="0cb63-152">Per ulteriori informazioni, vedere [la sincronizzazione di un set di dati con un XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).</span><span class="sxs-lookup"><span data-stu-id="0cb63-152">For more information, see [Synchronizing a DataSet with an XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).</span></span>  
   
- Il DOM è particolarmente utile per la lettura dei dati XML in memoria per modificarne la struttura, per aggiungere o rimuovere nodi o per modificare i dati appartenenti a un nodo come nel testo contenuto da un elemento.  Tuttavia, sono disponibili altre classi che sono più rapide del DOM in altri scenari.  Per ottenere accesso al flusso XML di tipo forward\-only e non memorizzato nella cache, usare **XmlReader** e **XmlWriter**.  Se invece è necessario un accesso casuale con un modello a cursore e **XPath**, usare la classe **XPathNavigator**.  
+ <span data-ttu-id="0cb63-153">Il DOM è particolarmente utile per la lettura dei dati XML in memoria per modificarne la struttura, per aggiungere o rimuovere nodi o per modificare i dati appartenenti a un nodo come nel testo contenuto da un elemento.</span><span class="sxs-lookup"><span data-stu-id="0cb63-153">The DOM is most useful for reading XML data into memory to change its structure, to add or remove nodes, or to modify the data held by a node as in the text contained by an element.</span></span> <span data-ttu-id="0cb63-154">Tuttavia, sono disponibili altre classi che sono più rapide del DOM in altri scenari.</span><span class="sxs-lookup"><span data-stu-id="0cb63-154">However, other classes are available that are faster than the DOM in other scenarios.</span></span> <span data-ttu-id="0cb63-155">Per l'accesso di flusso veloce, non in cache, di tipo forward-only di XML, utilizzare il **XmlReader** e **XmlWriter**.</span><span class="sxs-lookup"><span data-stu-id="0cb63-155">For fast, non-cached, forward-only stream access to XML, use the **XmlReader** and **XmlWriter**.</span></span> <span data-ttu-id="0cb63-156">Se è necessario un accesso casuale con un modello di cursore e **XPath**, utilizzare il **XPathNavigator** classe.</span><span class="sxs-lookup"><span data-stu-id="0cb63-156">If you need random access with a cursor model and **XPath**, use the **XPathNavigator** class.</span></span>  
   
-## Vedere anche  
- [Tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)   
- [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a><span data-ttu-id="0cb63-157">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0cb63-157">See Also</span></span>  
+ [<span data-ttu-id="0cb63-158">Tipi di nodi XML</span><span class="sxs-lookup"><span data-stu-id="0cb63-158">Types of XML Nodes</span></span>](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+ [<span data-ttu-id="0cb63-159">Mapping della gerarchia di oggetti in dati XML</span><span class="sxs-lookup"><span data-stu-id="0cb63-159">Mapping the Object Hierarchy to XML Data</span></span>](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

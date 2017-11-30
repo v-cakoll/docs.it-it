@@ -1,46 +1,52 @@
 ---
-title: "Interop with Other Asynchronous Patterns and Types | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework, and TAP"
-  - "asynchronous design patterns, .NET Framework"
-  - "TAP, .NET Framework support for"
-  - "Task-based Asynchronous Pattern, .NET Framework support for"
-  - ".NET Framework, asynchronous design patterns"
+title: "Interoperabilità con altri tipi e modelli asincroni"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- .NET Framework, and TAP
+- asynchronous design patterns, .NET Framework
+- TAP, .NET Framework support for
+- Task-based Asynchronous Pattern, .NET Framework support for
+- .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2e30b562b4795717df526c143df96607686a7582
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Interop with Other Asynchronous Patterns and Types
-In .NET Framework 1.0 è stato introdotto il modello <xref:System.IAsyncResult>, altrimenti noto come [Asynchronous Programming Model \(APM\)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) o modello `Begin/End`.  In .NET Framework 2.0 è stato aggiunto [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partire da .NET Framework 4, [Task\-based Asynchronous Pattern \(TAP\)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) sostituisce sia APM che EAP, ma consente di compilare facilmente le routine di migrazione dai modelli precedenti.  
+# <a name="interop-with-other-asynchronous-patterns-and-types"></a><span data-ttu-id="5e7ba-102">Interoperabilità con altri tipi e modelli asincroni</span><span class="sxs-lookup"><span data-stu-id="5e7ba-102">Interop with Other Asynchronous Patterns and Types</span></span>
+<span data-ttu-id="5e7ba-103">In .NET Framework 1.0 è stato introdotto il modello <xref:System.IAsyncResult> , altrimenti noto come [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o modello `Begin/End` .</span><span class="sxs-lookup"><span data-stu-id="5e7ba-103">The .NET Framework 1.0 introduced the <xref:System.IAsyncResult> pattern, otherwise known as the [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md), or the `Begin/End` pattern.</span></span>  <span data-ttu-id="5e7ba-104">In .NET Framework 2.0 è stato aggiunto [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span><span class="sxs-lookup"><span data-stu-id="5e7ba-104">The .NET Framework 2.0 added the [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span></span>  <span data-ttu-id="5e7ba-105">A partire da .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) sostituisce sia APM che EAP, ma consente di compilare facilmente le routine di migrazione dai modelli precedenti.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-105">Starting with the .NET Framework 4, the [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) supersedes both APM and EAP, but provides the ability to easily build migration routines from the earlier patterns.</span></span>  
   
- Contenuto dell'argomento:  
+ <span data-ttu-id="5e7ba-106">Contenuto dell'argomento:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-106">In this topic:</span></span>  
   
--   [Attività e APM](#APM) \([da APM a TAP](#ApmToTap) o [da TAP ad APM](#TapToApm)\)  
+-   <span data-ttu-id="5e7ba-107">[Attività e APM](#APM) ([da APM a TAP](#ApmToTap) o [da TAP ad APM](#TapToApm))</span><span class="sxs-lookup"><span data-stu-id="5e7ba-107">[Tasks and APM](#APM) ([from APM to TAP](#ApmToTap) or [from TAP to APM](#TapToApm))</span></span>  
   
--   [Attività e EAP](#EAP)  
+-   [<span data-ttu-id="5e7ba-108">Attività e EAP</span><span class="sxs-lookup"><span data-stu-id="5e7ba-108">Tasks and EAP</span></span>](#EAP)  
   
--   [Attività e handle di attesa](#WaitHandles) \([da handle di attesa a TAP](#WHToTap) o [da TAP a handle di attesa](#TapToWH)\)  
+-   <span data-ttu-id="5e7ba-109">[Attività e handle di attesa](#WaitHandles) ([da handle di attesa a TAP](#WHToTap) o [da TAP a handle di attesa](#TapToWH))</span><span class="sxs-lookup"><span data-stu-id="5e7ba-109">[Tasks and wait handles](#WaitHandles) ([from wait handles to TAP](#WHToTap) or [from TAP to wait handles](#TapToWH))</span></span>  
   
 <a name="APM"></a>   
-## Attività e modelli di programmazione asincrona \(APM\)  
+## <a name="tasks-and-the-asynchronous-programming-model-apm"></a><span data-ttu-id="5e7ba-110">Attività e modelli di programmazione asincrona (APM)</span><span class="sxs-lookup"><span data-stu-id="5e7ba-110">Tasks and the Asynchronous Programming Model (APM)</span></span>  
   
 <a name="ApmToTap"></a>   
-### Da APM a TAP  
- Poiché il modello [Asynchronous Programming Model \(APM\)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) è molto strutturato, è piuttosto facile compilare un wrapper per esporre l'implementazione APM come implementazione di TAP. Di fatto, .NET Framework, a partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], include le routine di supporto sotto forma di overload del metodo <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> per fornire questa conversione.  
+### <a name="from-apm-to-tap"></a><span data-ttu-id="5e7ba-111">da APM a TAP</span><span class="sxs-lookup"><span data-stu-id="5e7ba-111">From APM to TAP</span></span>  
+ <span data-ttu-id="5e7ba-112">Poiché il modello [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) è molto strutturato, è piuttosto facile compilare un wrapper per esporre l'implementazione APM come implementazione di TAP.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-112">Because the [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) pattern is very structured, it is quite easy to build a wrapper to expose an APM implementation as a TAP implementation.</span></span> <span data-ttu-id="5e7ba-113">Di fatto, .NET Framework, a partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], include le routine di supporto sotto forma di overload del metodo <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> per fornire questa conversione.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-113">In fact, the .NET Framework, starting with [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], includes helper routines in the form of <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> method overloads to provide this translation.</span></span>  
   
- Si consideri la classe <xref:System.IO.Stream> e i relativi metodi <xref:System.IO.Stream.BeginRead%2A> e <xref:System.IO.Stream.EndRead%2A>, che rappresentano l'equivalente di APM del metodo sincrono <xref:System.IO.Stream.Read%2A>:  
+ <span data-ttu-id="5e7ba-114">Si consideri la classe <xref:System.IO.Stream> e i relativi metodi <xref:System.IO.Stream.BeginRead%2A> e <xref:System.IO.Stream.EndRead%2A> , che rappresentano l'equivalente di APM del metodo sincrono <xref:System.IO.Stream.Read%2A> :</span><span class="sxs-lookup"><span data-stu-id="5e7ba-114">Consider the <xref:System.IO.Stream> class and its <xref:System.IO.Stream.BeginRead%2A> and <xref:System.IO.Stream.EndRead%2A> methods, which represent the APM counterpart to the synchronous <xref:System.IO.Stream.Read%2A> method:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Stream1.cs#1)]
  [!code-vb[Conceptual.AsyncInterop#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/stream1.vb#1)]  
@@ -49,72 +55,72 @@ In .NET Framework 1.0 è stato introdotto il modello <xref:System.IAsyncResult>,
 [!code-csharp[Conceptual.AsyncInterop#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Stream1.cs#3)]
 [!code-vb[Conceptual.AsyncInterop#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/stream1.vb#3)]  
   
- È possibile usare il metodo <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=fullName> per implementare un wrapper di TAP per questa operazione come segue:  
+ <span data-ttu-id="5e7ba-115">È possibile utilizzare il <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> metodo per implementare un wrapper di TAP per questa operazione, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-115">You can use the <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> method to implement a TAP wrapper for this operation as follows:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap1.cs#4)]
  [!code-vb[Conceptual.AsyncInterop#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap1.vb#4)]  
   
- Questa implementazione è simile alla seguente:  
+ <span data-ttu-id="5e7ba-116">Questa implementazione è simile alla seguente:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-116">This implementation is similar to the following:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap2.cs#5)]
  [!code-vb[Conceptual.AsyncInterop#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap2.vb#5)]  
   
 <a name="TapToApm"></a>   
-### Da TAP ad APM  
- Se l'infrastruttura esistente prevede il modello APM, sarà anche possibile creare un'implementazione di TAP e usarla dove è prevista un'implementazione APM.  Poiché le attività possono essere composte e tramite la classe <xref:System.Threading.Tasks.Task> viene implementato l'oggetto <xref:System.IAsyncResult>, a tal fine è possibile utilizzare una semplice funzione di supporto. Il codice seguente usa un'estensione della classe <xref:System.Threading.Tasks.Task%601>, ma è possibile usare una funzione quasi identica per le attività non generiche.  
+### <a name="from-tap-to-apm"></a><span data-ttu-id="5e7ba-117">da TAP ad APM</span><span class="sxs-lookup"><span data-stu-id="5e7ba-117">From TAP to APM</span></span>  
+ <span data-ttu-id="5e7ba-118">Se l'infrastruttura esistente prevede il modello APM, sarà anche possibile creare un'implementazione di TAP e usarla dove è prevista un'implementazione APM.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-118">If your existing infrastructure expects the APM pattern, you'll also want to take a TAP implementation and use it where an APM implementation is expected.</span></span>  <span data-ttu-id="5e7ba-119">Poiché le attività possono essere composte e tramite la classe <xref:System.Threading.Tasks.Task> viene implementato l'oggetto <xref:System.IAsyncResult>, a tal fine è possibile utilizzare una semplice funzione di supporto.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-119">Because tasks can be composed and  the <xref:System.Threading.Tasks.Task> class implements <xref:System.IAsyncResult>, you can use a straightforward helper function to do this.</span></span> <span data-ttu-id="5e7ba-120">Il codice seguente usa un'estensione della classe <xref:System.Threading.Tasks.Task%601> , ma è possibile usare una funzione quasi identica per le attività non generiche.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-120">The following code uses an extension of the <xref:System.Threading.Tasks.Task%601> class, but you can use an almost identical function for non-generic tasks.</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM1.cs#6)]
  [!code-vb[Conceptual.AsyncInterop#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM1.vb#6)]  
   
- Ora, si consideri il caso in cui si dispone dell'implementazione di TAP:  
+ <span data-ttu-id="5e7ba-121">Ora, si consideri il caso in cui si dispone dell'implementazione di TAP:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-121">Now, consider a case where you have the following TAP implementation:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#7)]
  [!code-vb[Conceptual.AsyncInterop#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#7)]  
   
- e si desidera fornire questa implementazione APM:  
+ <span data-ttu-id="5e7ba-122">e si desidera fornire questa implementazione APM:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-122">and you want to provide this APM implementation:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#8)]
  [!code-vb[Conceptual.AsyncInterop#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#8)]  
 [!code-csharp[Conceptual.AsyncInterop#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#9)]
 [!code-vb[Conceptual.AsyncInterop#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#9)]  
   
- Nell'esempio seguente viene illustrata una migrazione ad APM:  
+ <span data-ttu-id="5e7ba-123">Nell'esempio seguente viene illustrata una migrazione ad APM:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-123">The following example demonstrates one migration to APM:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#10)]
  [!code-vb[Conceptual.AsyncInterop#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#10)]  
   
 <a name="EAP"></a>   
-## Attività e modello asincrono basato su eventi \(EAP\)  
- Eseguire il wrapping di un'implementazione di [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) è un'operazione più complessa dell'esecuzione del wrapping di un modello APM, perché il modello EAP è più variabile e meno strutturato del modello APM.  A dimostrazione di quanto detto, il codice seguente esegue il wrapping del metodo `DownloadStringAsync`.`DownloadStringAsync` accetta un URI, genera l'evento `DownloadProgressChanged` durante il download per comunicare diverse statistiche sullo stato di avanzamento e genera l'evento `DownloadStringCompleted` quando ha terminato.  Il risultato finale è una stringa che contiene il contenuto della pagina all'URI specificato.  
+## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a><span data-ttu-id="5e7ba-124">Attività e modello asincrono basato su eventi (EAP)</span><span class="sxs-lookup"><span data-stu-id="5e7ba-124">Tasks and the Event-based Asynchronous Pattern (EAP)</span></span>  
+ <span data-ttu-id="5e7ba-125">Eseguire il wrapping di un'implementazione di [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) è un'operazione più complessa dell'esecuzione del wrapping di un modello APM, perché il modello EAP è più variabile e meno strutturato del modello APM.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-125">Wrapping an [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) implementation is more involved than wrapping an APM pattern, because the EAP pattern has more variation and less structure than the APM pattern.</span></span>  <span data-ttu-id="5e7ba-126">A dimostrazione di quanto detto, il codice seguente esegue il wrapping del metodo `DownloadStringAsync` .</span><span class="sxs-lookup"><span data-stu-id="5e7ba-126">To demonstrate, the following code wraps the `DownloadStringAsync` method.</span></span>  <span data-ttu-id="5e7ba-127">`DownloadStringAsync` accetta un URI, genera l'evento `DownloadProgressChanged` durante il download per comunicare diverse statistiche sullo stato di avanzamento e genera l'evento `DownloadStringCompleted` quando ha terminato.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-127">`DownloadStringAsync` accepts a URI, raises the `DownloadProgressChanged` event while downloading in order to report multiple statistics on progress, and raises the `DownloadStringCompleted` event when it's done.</span></span>  <span data-ttu-id="5e7ba-128">Il risultato finale è una stringa che contiene il contenuto della pagina all'URI specificato.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-128">The final result is a string that contains the contents of the page at the specified URI.</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  
   
 <a name="WaitHandles"></a>   
-## Attività e handle di attesa  
+## <a name="tasks-and-wait-handles"></a><span data-ttu-id="5e7ba-129">Attività e handle di attesa</span><span class="sxs-lookup"><span data-stu-id="5e7ba-129">Tasks and Wait Handles</span></span>  
   
 <a name="WHToTap"></a>   
-### Da handle di attesa a TAP  
- Sebbene gli handle di attesa non implementino un modello asincrono, gli sviluppatori avanzati possono usare la classe <xref:System.Threading.WaitHandle> e il metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=fullName> per le notifiche asincrone quando è impostato un handle di attesa.  È possibile eseguire il wrapping del metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> per abilitare un'alternativa basata su attività a qualsiasi attesa sincrona su un handle di attesa:  
+### <a name="from-wait-handles-to-tap"></a><span data-ttu-id="5e7ba-130">da handle di attesa a TAP</span><span class="sxs-lookup"><span data-stu-id="5e7ba-130">From Wait Handles to TAP</span></span>  
+ <span data-ttu-id="5e7ba-131">Sebbene gli handle di attesa non implementino un modello asincrono, gli sviluppatori avanzati possono usare il <xref:System.Threading.WaitHandle> classe e <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> metodo per le notifiche asincrone quando è impostato un handle di attesa.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-131">Although wait handles don't implement an asynchronous pattern, advanced developers may use the <xref:System.Threading.WaitHandle> class and the <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> method for asynchronous notifications when a wait handle is set.</span></span>  <span data-ttu-id="5e7ba-132">È possibile eseguire il wrapping del metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> per abilitare un'alternativa basata su attività a qualsiasi attesa sincrona su un handle di attesa:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-132">You can wrap the <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> method to enable a task-based alternative to any synchronous wait on a wait handle:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- Con questo metodo, è possibile usare le implementazioni di <xref:System.Threading.WaitHandle> esistenti nei metodi asincroni.  Ad esempio, se si desidera limitare il numero di operazioni asincrone eseguite in un momento specifico, è possibile usare un semaforo \(oggetto <xref:System.Threading.SemaphoreSlim?displayProperty=fullName>\).  È possibile limitare a *N* il numero di operazioni eseguite contemporaneamente inizializzando il conteggio del semaforo a *N*, rimanendo in attesa del semaforo ogni volta che si desidera eseguire un'operazione e rilasciando il semaforo quando l'operazione è terminata:  
+ <span data-ttu-id="5e7ba-133">Con questo metodo, è possibile usare le implementazioni di <xref:System.Threading.WaitHandle> esistenti nei metodi asincroni.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-133">With this method, you can use existing <xref:System.Threading.WaitHandle> implementations in asynchronous methods.</span></span>  <span data-ttu-id="5e7ba-134">Ad esempio, se si desidera limitare il numero di operazioni asincrone che sono in esecuzione in un determinato momento, è possibile usare un semaforo (un <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> oggetto).</span><span class="sxs-lookup"><span data-stu-id="5e7ba-134">For example, if you want to throttle the number of asynchronous operations that are executing at any particular time, you can utilize a semaphore (a <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> object).</span></span>  <span data-ttu-id="5e7ba-135">È possibile limitare a *N* il numero di operazioni eseguite contemporaneamente inizializzando il conteggio del semaforo a *N*, rimanendo in attesa del semaforo ogni volta che si desidera eseguire un'operazione e rilasciando il semaforo quando l'operazione è terminata:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-135">You can throttle to *N* the number of operations that run concurrently by initializing the semaphore’s count to *N*, waiting on the semaphore any time you want to perform an operation, and releasing the semaphore when you’re done with an operation:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
   
- È anche possibile creare un semaforo asincrono che non si basa sugli handle di attesa ma interagisce completamente con le attività. A questo scopo, è possibile usare tecniche quali quelle descritte in [Consuming the Task\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) per basare le strutture dei dati su <xref:System.Threading.Tasks.Task>.  
+ <span data-ttu-id="5e7ba-136">È anche possibile creare un semaforo asincrono che non si basa sugli handle di attesa ma interagisce completamente con le attività.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-136">You can also build an asynchronous semaphore that does not rely on wait handles and instead works completely with tasks.</span></span> <span data-ttu-id="5e7ba-137">A questo scopo, è possibile usare tecniche quali quelle descritte in [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) per basare le strutture dei dati su <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="5e7ba-137">To do this, you can use techniques such as those discussed in [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) for building data structures on top of <xref:System.Threading.Tasks.Task>.</span></span>  
   
 <a name="TapToWH"></a>   
-### Da TAP a handle di attesa  
- Come accennato in precedenza, la classe <xref:System.Threading.Tasks.Task> implementa <xref:System.IAsyncResult> e tale implementazione espone una proprietà <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A> che restituisce un handle di attesa che verrà impostato al completamento di <xref:System.Threading.Tasks.Task>.  È possibile ottenere un <xref:System.Threading.WaitHandle> per <xref:System.Threading.Tasks.Task> come segue:  
+### <a name="from-tap-to-wait-handles"></a><span data-ttu-id="5e7ba-138">da TAP a handle di attesa</span><span class="sxs-lookup"><span data-stu-id="5e7ba-138">From TAP to Wait Handles</span></span>  
+ <span data-ttu-id="5e7ba-139">Come accennato in precedenza, la classe <xref:System.Threading.Tasks.Task> implementa <xref:System.IAsyncResult>e tale implementazione espone una proprietà <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A> che restituisce un handle di attesa che verrà impostato al completamento di <xref:System.Threading.Tasks.Task> .</span><span class="sxs-lookup"><span data-stu-id="5e7ba-139">As previously mentioned, the <xref:System.Threading.Tasks.Task> class implements <xref:System.IAsyncResult>, and that implementation exposes an <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A> property that returns a wait handle that will be set when the <xref:System.Threading.Tasks.Task> completes.</span></span>  <span data-ttu-id="5e7ba-140">È possibile ottenere un <xref:System.Threading.WaitHandle> per <xref:System.Threading.Tasks.Task> come segue:</span><span class="sxs-lookup"><span data-stu-id="5e7ba-140">You can get a <xref:System.Threading.WaitHandle> for a <xref:System.Threading.Tasks.Task> as follows:</span></span>  
   
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]
  [!code-vb[Conceptual.AsyncInterop#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#14)]  
   
-## Vedere anche  
- [Task\-based Asynchronous Pattern \(TAP\)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)   
- [Implementing the Task\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)   
- [Consuming the Task\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+## <a name="see-also"></a><span data-ttu-id="5e7ba-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5e7ba-141">See Also</span></span>  
+ [<span data-ttu-id="5e7ba-142">Modello asincrono basato su attività (TAP)</span><span class="sxs-lookup"><span data-stu-id="5e7ba-142">Task-based Asynchronous Pattern (TAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [<span data-ttu-id="5e7ba-143">Implementazione del modello asincrono basato su attività</span><span class="sxs-lookup"><span data-stu-id="5e7ba-143">Implementing the Task-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="5e7ba-144">Utilizzo del modello asincrono basato su attività</span><span class="sxs-lookup"><span data-stu-id="5e7ba-144">Consuming the Task-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

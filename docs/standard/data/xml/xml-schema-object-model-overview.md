@@ -1,57 +1,55 @@
 ---
-title: "Cenni preliminari sul modello SOM XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Cenni preliminari sul modello SOM XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6a06de3f8fb6351d340e1c8f1bfe8f4105967e25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul modello SOM XML
-Il modello SOM \(Schema Object Model\) in Microsoft .NET Framework è un'API completa che consente di creare, modificare e convalidare schemi a livello di programmazione.  L'API del modello SOM agisce sui documenti di schema XML in modo simile a come il DOM agisce sui documenti XML.  I documenti di schema XML sono file XML validi che, una volta caricati nell'API del modello SOM, contengono informazioni sulla struttura e la validità di altri documenti XML conformi allo schema.  
+# <a name="xml-schema-object-model-overview"></a><span data-ttu-id="b82bb-102">Cenni preliminari sul modello SOM XML</span><span class="sxs-lookup"><span data-stu-id="b82bb-102">XML Schema Object Model Overview</span></span>
+<span data-ttu-id="b82bb-103">Il modello SOM (Schema Object Model) in Microsoft .NET Framework è un'API completa che consente di creare, modificare e convalidare schemi a livello di programmazione.</span><span class="sxs-lookup"><span data-stu-id="b82bb-103">The Schema Object Model (SOM) in the Microsoft .NET Framework is a rich API that allows you to create, edit, and validate schemas programmatically.</span></span> <span data-ttu-id="b82bb-104">L'API del modello SOM agisce sui documenti di schema XML in modo simile a come il DOM agisce sui documenti XML.</span><span class="sxs-lookup"><span data-stu-id="b82bb-104">The SOM operates on XML schema documents similarly to the way the Document Object Model (DOM) operates on XML documents.</span></span> <span data-ttu-id="b82bb-105">I documenti di schema XML sono file XML validi che, una volta caricati nell'API del modello SOM, contengono informazioni sulla struttura e la validità di altri documenti XML conformi allo schema.</span><span class="sxs-lookup"><span data-stu-id="b82bb-105">XML schema documents are valid XML files that, once loaded into the SOM, convey meaning about the structure and validity of other XML documents which conform to the schema.</span></span>  
   
- Uno schema è un documento XML che definisce una classe di documenti XML specificando la struttura o il modello dei documenti XML per un determinato schema.  Uno schema identifica i vincoli sul contenuto dei documenti XML e descrive il vocabolario \(regole o grammatica\) che i documenti XML conformi devono seguire per essere considerati validi con quel determinato schema.  La convalida di un documento XML è il processo che garantisce che il documento sia conforme alla grammatica specificata dallo schema.  
+ <span data-ttu-id="b82bb-106">Uno schema è un documento XML che definisce una classe di documenti XML specificando la struttura o il modello dei documenti XML per un determinato schema.</span><span class="sxs-lookup"><span data-stu-id="b82bb-106">A schema is an XML document that defines a class of XML documents by specifying the structure or model of XML documents for a particular schema.</span></span> <span data-ttu-id="b82bb-107">Uno schema identifica i vincoli sul contenuto dei documenti XML e descrive il vocabolario (regole o grammatica) che i documenti XML conformi devono seguire per essere considerati validi con quel determinato schema.</span><span class="sxs-lookup"><span data-stu-id="b82bb-107">A schema identifies the constraints on the content of the XML documents, and describes the vocabulary (rules or grammar) that compliant XML documents must follow in order to be considered schema-valid with that particular schema.</span></span> <span data-ttu-id="b82bb-108">La convalida di un documento XML è il processo che garantisce che il documento sia conforme alla grammatica specificata dallo schema.</span><span class="sxs-lookup"><span data-stu-id="b82bb-108">Validation of an XML document is the process that ensures that the document conforms to the grammar specified by the schema.</span></span>  
   
- Di seguito vengono illustrati alcuni modi con cui l'API SOM in .NET Framework consente di creare, modificare e convalidare gli schemi.  
+ <span data-ttu-id="b82bb-109">Di seguito vengono illustrati alcuni modi con cui l'API SOM in .NET Framework consente di creare, modificare e convalidare gli schemi.</span><span class="sxs-lookup"><span data-stu-id="b82bb-109">The following are ways the SOM API in the .NET Framework enables you to create, edit, and validate schemas.</span></span>  
   
--   Caricare e salvare schemi validi da e in file.  
+-   <span data-ttu-id="b82bb-110">Caricare e salvare schemi validi da e in file.</span><span class="sxs-lookup"><span data-stu-id="b82bb-110">Load and save valid schemas to and from files.</span></span>  
   
--   Creare schemi in memoria usando classi tipizzate in modo sicuro.  
+-   <span data-ttu-id="b82bb-111">Creare schemi in memoria usando classi tipizzate in modo sicuro.</span><span class="sxs-lookup"><span data-stu-id="b82bb-111">Create in-memory schemas using strongly typed classes.</span></span>  
   
--   Interagire con la classe <xref:System.Xml.Schema.XmlSchemaSet> per inserire nella cache, compilare e recuperare schemi.  
+-   <span data-ttu-id="b82bb-112">Interagire con la classe <xref:System.Xml.Schema.XmlSchemaSet> per inserire nella cache, compilare e recuperare schemi.</span><span class="sxs-lookup"><span data-stu-id="b82bb-112">Interact with the <xref:System.Xml.Schema.XmlSchemaSet> class to cache, compile, and retrieve schemas.</span></span>  
   
--   Interagire con il metodo <xref:System.Xml.XmlReader.Create%2A> della classe <xref:System.Xml.XmlReader> per convalidare documenti di istanza XML rispetto a schemi.  
+-   <span data-ttu-id="b82bb-113">Interagire con il metodo <xref:System.Xml.XmlReader.Create%2A> della classe <xref:System.Xml.XmlReader> per convalidare documenti di istanza XML rispetto a schemi.</span><span class="sxs-lookup"><span data-stu-id="b82bb-113">Interact with the <xref:System.Xml.XmlReader.Create%2A> method of the <xref:System.Xml.XmlReader> class to validate XML instance documents against schemas.</span></span>  
   
--   Compilare editor per la creazione e la conservazione di schemi.  
+-   <span data-ttu-id="b82bb-114">Compilare editor per la creazione e la conservazione di schemi.</span><span class="sxs-lookup"><span data-stu-id="b82bb-114">Build editors for creating and maintaining schemas.</span></span>  
   
--   Modificare in modo dinamico uno schema che può essere reso conforme e salvato per la convalida di documenti di istanza XML.  
+-   <span data-ttu-id="b82bb-115">Modificare in modo dinamico uno schema che può essere reso conforme e salvato per la convalida di documenti di istanza XML.</span><span class="sxs-lookup"><span data-stu-id="b82bb-115">Dynamically edit a schema that can be complied and saved for use in the validation of XML instance documents.</span></span>  
   
-## Schema Object Model \(SOM\)  
- Il modello SOM include una vasta gamma di classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=fullName> che corrispondono agli elementi in uno schema XML.  Ad esempio, l'elemento `<xsd:schema>...</xsd:schema>` è associato alla classe <xref:System.Xml.Schema.XmlSchema?displayProperty=fullName> e tutte le informazioni che possono essere contenute in un elemento `<xsd:schema/>` possono essere rappresentate usando la classe <xref:System.Xml.Schema.XmlSchema>.  Analogamente, gli elementi `<xsd:element>...</xsd:element>` e `<xsd:attribute>...</xsd:attribute>` sono associati rispettivamente alle classi <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=fullName> e <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=fullName>.  Questa associazione continua per tutti gli elementi di uno schema XML creando un modello SOM XML nello spazio dei nomi <xref:System.Xml.Schema> mostrato nel diagramma seguente.  
+## <a name="the-schema-object-model"></a><span data-ttu-id="b82bb-116">Schema Object Model (SOM)</span><span class="sxs-lookup"><span data-stu-id="b82bb-116">The Schema Object Model</span></span>  
+ <span data-ttu-id="b82bb-117">Il modello SOM include una vasta gamma di classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> che corrispondono agli elementi in uno schema XML.</span><span class="sxs-lookup"><span data-stu-id="b82bb-117">The SOM consists of an extensive set of classes in the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace corresponding to the elements in an XML schema.</span></span> <span data-ttu-id="b82bb-118">Ad esempio, l'elemento `<xsd:schema>...</xsd:schema>` è associato alla classe <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> e tutte le informazioni che possono essere contenute in un elemento `<xsd:schema/>` possono essere rappresentate usando la classe <xref:System.Xml.Schema.XmlSchema>.</span><span class="sxs-lookup"><span data-stu-id="b82bb-118">For example, the `<xsd:schema>...</xsd:schema>` element maps to the <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> class, and all the information that can be contained within an `<xsd:schema/>` element can be represented using the <xref:System.Xml.Schema.XmlSchema> class.</span></span> <span data-ttu-id="b82bb-119">Analogamente, gli elementi `<xsd:element>...</xsd:element>` e `<xsd:attribute>...</xsd:attribute>` sono associati rispettivamente alle classi <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> e <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b82bb-119">Similarly, the `<xsd:element>...</xsd:element>` and `<xsd:attribute>...</xsd:attribute>` elements map to the <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> and <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> classes respectively.</span></span> <span data-ttu-id="b82bb-120">Questa associazione continua per tutti gli elementi di uno schema XML creando un modello SOM XML nello spazio dei nomi <xref:System.Xml.Schema> mostrato nel diagramma seguente.</span><span class="sxs-lookup"><span data-stu-id="b82bb-120">This mapping continues for all the elements of an XML schema creating an XML schema object model in the <xref:System.Xml.Schema> namespace illustrated in the diagram that follows.</span></span>  
   
- ![Modello a oggetti Xml.Schema](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.png "XMLSchemaObjModelOverview")  
+ <span data-ttu-id="b82bb-121">![Modello a oggetti XML. schema](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")</span><span class="sxs-lookup"><span data-stu-id="b82bb-121">![System.Xml.Schema Object Model](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")</span></span>  
   
- Per altre informazioni su ogni classe nello spazio dei nomi <xref:System.Xml.Schema>, vedere la documentazione di riferimento relativa allo spazio dei nomi <xref:System.Xml.Schema> nella libreria di classi di .NET Framework.  
+ <span data-ttu-id="b82bb-122">Per altre informazioni su ogni classe nello spazio dei nomi <xref:System.Xml.Schema>, vedere la documentazione di riferimento relativa allo spazio dei nomi <xref:System.Xml.Schema> nella libreria di classi di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b82bb-122">For more information about each class in the <xref:System.Xml.Schema> namespace, see the <xref:System.Xml.Schema> namespace reference documentation in the .NET Framework class library.</span></span>  
   
-## Vedere anche  
- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)   
- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)   
- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)   
- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)   
- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)   
- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)   
- [Post\-Schema Compilation Infoset \(PSCI, infoset sulla compilazione post\-schema\)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a><span data-ttu-id="b82bb-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b82bb-123">See Also</span></span>  
+ [<span data-ttu-id="b82bb-124">Lettura e scrittura di schemi XML</span><span class="sxs-lookup"><span data-stu-id="b82bb-124">Reading and Writing XML Schemas</span></span>](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [<span data-ttu-id="b82bb-125">Compilazione di schemi XML</span><span class="sxs-lookup"><span data-stu-id="b82bb-125">Building XML Schemas</span></span>](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [<span data-ttu-id="b82bb-126">Attraversamento di schemi XML</span><span class="sxs-lookup"><span data-stu-id="b82bb-126">Traversing XML Schemas</span></span>](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [<span data-ttu-id="b82bb-127">Modifica di schemi XML</span><span class="sxs-lookup"><span data-stu-id="b82bb-127">Editing XML Schemas</span></span>](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [<span data-ttu-id="b82bb-128">Inclusione o importazione di schemi XML</span><span class="sxs-lookup"><span data-stu-id="b82bb-128">Including or Importing XML Schemas</span></span>](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [<span data-ttu-id="b82bb-129">XmlSchemaSet per la compilazione dello Schema</span><span class="sxs-lookup"><span data-stu-id="b82bb-129">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [<span data-ttu-id="b82bb-130">Post-Schema Compilation Infoset</span><span class="sxs-lookup"><span data-stu-id="b82bb-130">Post-Schema Compilation Infoset</span></span>](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

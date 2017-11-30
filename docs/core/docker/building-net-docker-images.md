@@ -2,227 +2,267 @@
 title: Compilazione di immagini Docker per .NET Core
 description: Informazioni sulle immagini Docker e su .NET Core
 keywords: .NET, .NET Core, Docker
-author: spboyer
-ms.author: shboyer
-ms.date: 09/06/2017
-ms.topic: article
+author: jralexander
+ms.author: johalex
+ms.date: 11/06/2017
+ms.topic: tutorial
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
+ms.custom: mvc
+manager: wpickett
+ms.openlocfilehash: 3ec2d5a58b46e332de41b618f1c3fac663b29bee
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: a0b6edbc13fddd8558f6677d25ce279147d761c3
-ms.openlocfilehash: efec7e390f029d2f0ab952e316976ad1c6408b0f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/08/2017
 ---
+# <a name="building-docker-images-for-net-core-applications"></a><span data-ttu-id="943c0-104">Compilazione di immagini Docker per applicazioni .NET Core</span><span class="sxs-lookup"><span data-stu-id="943c0-104">Building Docker Images for .NET Core Applications</span></span>
 
-#<a name="building-docker-images-for-net-core-applications"></a>Compilazione di immagini Docker per applicazioni .NET Core
+ <span data-ttu-id="943c0-105">In questa esercitazione, l'attenzione su come usare .NET Core in Docker.</span><span class="sxs-lookup"><span data-stu-id="943c0-105">In this tutorial, We focus on how to use .NET Core on Docker.</span></span> <span data-ttu-id="943c0-106">In primo luogo, è esplorare le immagini di Docker diverse offerte e gestiti da Microsoft e casi d'uso.</span><span class="sxs-lookup"><span data-stu-id="943c0-106">First, we explore the different Docker images offered and maintained by Microsoft, and use cases.</span></span> <span data-ttu-id="943c0-107">È quindi come compilare e dockerize un'app di ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="943c0-107">We then learn how to build and dockerize an ASP.NET Core app.</span></span>
 
- 
-> [!IMPORTANT]
-> È in corso il processo di aggiornamento di questo articolo per .NET Core 2.0. Le istruzioni seguenti sono obsolete. Ci scusiamo per qualsiasi inconveniente.
+<span data-ttu-id="943c0-108">Nel corso di questa esercitazione, si apprenderà:</span><span class="sxs-lookup"><span data-stu-id="943c0-108">During the course of this tutorial, you learn:</span></span>
+> [!div class="checklist"]
+> * <span data-ttu-id="943c0-109">Informazioni sulle immagini di Microsoft .NET Core Docker</span><span class="sxs-lookup"><span data-stu-id="943c0-109">Learn about Microsoft .NET Core Docker images</span></span> 
+> * <span data-ttu-id="943c0-110">Ottenere un ASP.NET Core app di esempio per Dockerize</span><span class="sxs-lookup"><span data-stu-id="943c0-110">Get an ASP.NET Core sample app to Dockerize</span></span>
+> * <span data-ttu-id="943c0-111">Eseguire localmente l'app di esempio ASP.NET</span><span class="sxs-lookup"><span data-stu-id="943c0-111">Run the ASP.NET sample app locally</span></span>
+> * <span data-ttu-id="943c0-112">Compilare ed eseguire l'esempio con Docker per i contenitori di Linux</span><span class="sxs-lookup"><span data-stu-id="943c0-112">Build and run the sample with Docker for Linux containers</span></span>
+> * <span data-ttu-id="943c0-113">Compilare ed eseguire l'esempio con i contenitori di Docker per Windows</span><span class="sxs-lookup"><span data-stu-id="943c0-113">Build and run the sample with Docker for Windows containers</span></span>
 
-Per comprendere in che modo usare insieme .NET Core e Docker, è necessario prima conoscere le diverse immagini Docker disponibili e i casi in cui è opportuno usarle. Di seguito verranno illustrate in modo dettagliato le variazioni offerte, verrà creata un'API Web ASP.NET Core, verranno usati gli strumenti Yeoman Docker per creare un contenitore sottoponibile a debug e verrà mostrato in che modo è possibile usare Visual Studio Code per l'esecuzione del processo. 
+## <a name="docker-image-optimizations"></a><span data-ttu-id="943c0-114">Ottimizzazioni delle immagini Docker</span><span class="sxs-lookup"><span data-stu-id="943c0-114">Docker Image Optimizations</span></span>
 
-## <a name="docker-image-optimizations"></a>Ottimizzazioni delle immagini Docker
+<span data-ttu-id="943c0-115">Quando si creano immagini Docker per gli sviluppatori, è opportuno concentrare l'attenzione su tre scenari principali:</span><span class="sxs-lookup"><span data-stu-id="943c0-115">When building Docker images for developers, we focused on three main scenarios:</span></span>
 
-Quando si creano immagini Docker per gli sviluppatori, è opportuno concentrare l'attenzione su tre scenari principali:
+* <span data-ttu-id="943c0-116">Immagini usate per sviluppare app .NET Core</span><span class="sxs-lookup"><span data-stu-id="943c0-116">Images used to develop .NET Core apps</span></span>
+* <span data-ttu-id="943c0-117">Immagini usate per compilare app .NET Core</span><span class="sxs-lookup"><span data-stu-id="943c0-117">Images used to build .NET Core apps</span></span>
+* <span data-ttu-id="943c0-118">Immagini usate per eseguire app .NET Core</span><span class="sxs-lookup"><span data-stu-id="943c0-118">Images used to run .NET Core apps</span></span>
 
-- Immagini usate per sviluppare app .NET Core
-- Immagini usate per compilare app .NET Core
-- Immagini usate per eseguire app .NET Core
+<span data-ttu-id="943c0-119">Perché tre immagini?</span><span class="sxs-lookup"><span data-stu-id="943c0-119">Why three images?</span></span>
+<span data-ttu-id="943c0-120">Durante lo sviluppo, compilazione e l'esecuzione di applicazioni nei contenitori, abbiamo diverse priorità.</span><span class="sxs-lookup"><span data-stu-id="943c0-120">When developing, building, and running containerized applications, we have different priorities.</span></span>
 
-Perché tre immagini?
-Durante lo sviluppo, la compilazione e l'esecuzione di applicazioni nei contenitori, è necessario tenere conto di diverse priorità.
-- **Sviluppo:** qual è la velocità di iterazione delle modifiche? È possibile eseguirne il debug? Le dimensioni dell'immagine non sono essenziali, mentre è importante la possibilità di apportare modifiche al codice e visualizzare rapidamente tali modifiche. Alcuni degli strumenti Microsoft, ad esempio [yo docker](https://aka.ms/yodocker), da usare in Visual Studio Code usano questa immagine durante la fase di sviluppo. 
-- **Compilazione:** quali sono gli elementi necessari per compilare l'app? Questi elementi includono il compilatore e qualsiasi altra dipendenza necessaria per ottimizzare i file binari. Questa immagine non è quella che verrà distribuita, ma piuttosto un'immagine usata per compilare il contenuto inserito in un'immagine di produzione. Questa immagine verrà usata nell'integrazione continuativa o nell'ambiente di compilazione. Ad esempio, anziché installare le dipendenze direttamente in un agente di compilazione, quest'ultimo creerà un'istanza dell'immagine di compilazione per compilare l'applicazione contenuta nell'immagine stessa con tutte le dipendenze necessarie. Per l'agente di compilazione è necessario soltanto sapere come eseguire questa immagine Docker. 
-- **Produzione:** con quale velocità è possibile distribuire e avviare l'immagine? Questa immagine ha dimensioni ridotte, motivo per cui può passare rapidamente attraverso la rete dal registro Docker agli host Docker. Il contenuto è pronto per l'esecuzione, rendendo minimo l'intervallo tra l'esecuzione Docker e l'elaborazione dei risultati. Nel modello Docker non modificabile non è necessaria la compilazione dinamica del codice. Il contenuto inserito in questa immagine sarà limitato ai file binari e al contenuto necessario per eseguire l'applicazione, ad esempio l'output pubblicato usando `dotnet publish` e contenente i file binari, le immagini e i file con estensione js e css compilati. Nel corso del tempo si vedranno immagini contenenti pacchetti PreJit.  
+* <span data-ttu-id="943c0-121">**Sviluppo:** la priorità è incentrata sulla scorrere rapidamente le modifiche e la possibilità di eseguire il debug delle modifiche.</span><span class="sxs-lookup"><span data-stu-id="943c0-121">**Development:**  The priority focuses on quickly iterate changes, and the ability to debug the changes.</span></span> <span data-ttu-id="943c0-122">Le dimensioni dell'immagine non sono importante, piuttosto possibile si apportano modifiche al codice e visualizzarli rapidamente?</span><span class="sxs-lookup"><span data-stu-id="943c0-122">The size of the image isn't as important, rather can you make changes to your code and see them quickly?</span></span>
 
-Anche se sono presenti più versioni dell'immagine .NET Core, tutte queste versioni condividono uno o più layer. La quantità di spazio su disco necessaria per l'archiviazione o per il delta per effettuare il pull dal Registro di sistema è molto minore dell'insieme delle immagini, perché tutte le immagini condividono lo stesso layer di base e potenzialmente altri layer.  
+* <span data-ttu-id="943c0-123">**Compilazione:** questa immagine contiene tutti gli elementi necessari per compilare l'app, che include il compilatore e delle dipendenze per ottimizzare i file binari.</span><span class="sxs-lookup"><span data-stu-id="943c0-123">**Build:** This image contains everything needed to compile your app, which includes the compiler and any other dependencies to optimize the binaries.</span></span>  <span data-ttu-id="943c0-124">Utilizzare l'immagine di compilazione per creare asset di che inserire in un'immagine di produzione.</span><span class="sxs-lookup"><span data-stu-id="943c0-124">You use the build image to create the assets you place into a production image.</span></span> <span data-ttu-id="943c0-125">Viene utilizzata l'immagine di compilazione per l'integrazione continua o in un ambiente di compilazione.</span><span class="sxs-lookup"><span data-stu-id="943c0-125">The build image would be used for continuous integration, or in a build environment.</span></span> <span data-ttu-id="943c0-126">Questo approccio consente a un agente di compilazione compilare e compilare l'applicazione (con tutte le dipendenze necessarie) in un'istanza di immagine di compilazione.</span><span class="sxs-lookup"><span data-stu-id="943c0-126">This approach allows a build agent to compile and build the application (with all the required dependencies) in a build image instance.</span></span> <span data-ttu-id="943c0-127">Per l'agente di compilazione è necessario soltanto sapere come eseguire questa immagine Docker.</span><span class="sxs-lookup"><span data-stu-id="943c0-127">Your build agent only needs to know how to run this Docker image.</span></span>
 
-## <a name="docker-image-variations"></a>Variazioni delle immagini Docker
+* <span data-ttu-id="943c0-128">**Produzione:** la velocità con cui è possibile distribuire e avviare l'immagine?</span><span class="sxs-lookup"><span data-stu-id="943c0-128">**Production:** How fast you can deploy and start your image?</span></span> <span data-ttu-id="943c0-129">Questa immagine è piccola, pertanto le prestazioni di rete dal Registro di sistema Docker per gli host Docker sono ottimizzata.</span><span class="sxs-lookup"><span data-stu-id="943c0-129">This image is small so network performance from your Docker Registry to your Docker hosts is optimized.</span></span> <span data-ttu-id="943c0-130">Il contenuto è pronto per l'esecuzione, rendendo minimo l'intervallo tra l'esecuzione Docker e l'elaborazione dei risultati.</span><span class="sxs-lookup"><span data-stu-id="943c0-130">The contents are ready to run enabling the fastest time from Docker run to processing results.</span></span> <span data-ttu-id="943c0-131">Compilazione dinamica del codice non è necessaria nel modello di Docker.</span><span class="sxs-lookup"><span data-stu-id="943c0-131">Dynamic code compilation isn't needed in the Docker model.</span></span> <span data-ttu-id="943c0-132">Il contenuto inserito in questa immagine sarà limitato ai file binari e al contenuto necessario per eseguire l'applicazione,</span><span class="sxs-lookup"><span data-stu-id="943c0-132">The content you place in this image would be limited to the binaries and content needed to run the application.</span></span>
 
-Per raggiungere gli obiettivi sopra descritti, in [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) sono disponibili varianti delle immagini.
+    <span data-ttu-id="943c0-133">Ad esempio, il `dotnet publish` output contiene:</span><span class="sxs-lookup"><span data-stu-id="943c0-133">For example, the `dotnet publish` output contains:</span></span>
 
-- `microsoft/dotnet:<version>-sdk` : ovvero **microsoft/dotnet:1.0.0-preview2-sdk**. Questa immagine contiene .NET Core SDK che include gli strumenti .NET Core e quelli dell'interfaccia della riga di comando. Questa immagine è mappata allo **scenario di sviluppo**. Usare questa immagine per operazioni locali di sviluppo, debug e testing unità, ad esempio tutte le attività di sviluppo eseguite prima dell'archiviazione del codice. Questa immagine può essere usata anche per gli scenari di **compilazione**.
+    * <span data-ttu-id="943c0-134">i file binari compilati</span><span class="sxs-lookup"><span data-stu-id="943c0-134">the compiled binaries</span></span>
+    * <span data-ttu-id="943c0-135">file con estensione js e CSS</span><span class="sxs-lookup"><span data-stu-id="943c0-135">.js and .css files</span></span>
 
-- `microsoft/dotnet:<version>-core` : ovvero **microsoft/dotnet:1.0.0-core**. Questa immagine esegue [applicazioni .NET Core portabili](../deploying/index.md) ed è ottimizzata per l'esecuzione dell'applicazione nella fase di **produzione**. Non contiene l'SDK ed è finalizzata all'acquisizione dell'output ottimizzato di `dotnet publish`. Il runtime portabile è adatto agli scenari Docker di contenitore poiché l'esecuzione di più contenitori trae vantaggio dai layer di immagine condivisi.  
 
-## <a name="alternative-images"></a>Immagini alternative
+<span data-ttu-id="943c0-136">Il motivo per includere il `dotnet publish` output del comando in un'immagine di produzione è quello di mantenere il ' dimensioni al minimo.</span><span class="sxs-lookup"><span data-stu-id="943c0-136">The reason to include the `dotnet publish` command output in your production image is to keep its' size to a minimum.</span></span>
 
-Oltre agli scenari ottimizzati di sviluppo, compilazione e produzione, Microsoft fornisce immagini aggiuntive:
+<span data-ttu-id="943c0-137">Alcune immagini .NET Core condividono livelli tra tag diversi, pertanto il tag più recente di download è un processo relativamente semplice.</span><span class="sxs-lookup"><span data-stu-id="943c0-137">Some .NET Core images share layers between different tags so downloading the latest tag is a relatively lightweight process.</span></span> <span data-ttu-id="943c0-138">Se si dispone di una versione precedente del computer, questa architettura consente di ridurre lo spazio su disco necessaria.</span><span class="sxs-lookup"><span data-stu-id="943c0-138">If you already have an older version on your machine, this architecture decreases the needed disk space.</span></span>
 
-- `microsoft/dotnet:<version>-onbuild` : ovvero **microsoft/dotnet:1.0.0-preview2-onbuild**. Contiene trigger [ONBUILD](https://docs.docker.com/engine/reference/builder/#/onbuild). La compilazione eseguirà il comando [COPY](https://docs.docker.com/engine/reference/builder/#/copy) sull'applicazione, eseguirà `dotnet restore` e creerà un'istruzione [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) `dotnet run` per eseguire l'applicazione al momento dell'esecuzione dell'immagine Docker. Anche se non si tratta di un'immagine ottimizzata per la produzione, alcuni utenti possono trovarla utile per copiare semplicemente il codice sorgente in un'immagine ed eseguirlo. 
+<span data-ttu-id="943c0-139">Quando più applicazioni utilizzano immagini comuni nello stesso computer, la memoria è condivisa tra le immagini più comuni.</span><span class="sxs-lookup"><span data-stu-id="943c0-139">When multiple applications use common images on the same machine, memory is shared between the common images.</span></span> <span data-ttu-id="943c0-140">Le immagini devono essere uguali a essere condivisi.</span><span class="sxs-lookup"><span data-stu-id="943c0-140">The images must be the same to be shared.</span></span>
 
-- `microsoft/dotnet:<version>-core-deps` : ovvero **microsoft/dotnet:1.0.0-core-deps**. Usare questa immagine, se si vogliono eseguire applicazioni autonome. Questa immagine contiene il sistema operativo con tutte le dipendenze native richieste da .NET Core. Può essere usata anche come immagine di base per compilazioni CoreFX o CoreCLR personalizzate. Mentre la variante **onbuild** è ottimizzata per inserire semplicemente il codice in un'immagine ed eseguirlo, questa immagine è ottimizzata per contenere soltanto le dipendenze del sistema operativo necessarie per l'esecuzione di app .NET Core per cui viene fornito anche il runtime di .NET. Questa immagine non è in genere ottimizzata per l'esecuzione di più contenitori .NET Core nello stesso host. Ciascuna immagine infatti include il runtime di .NET Core e di conseguenza la struttura multi-layer delle immagini non offrirà alcun vantaggio.   
+## <a name="docker-image-variations"></a><span data-ttu-id="943c0-141">Variazioni delle immagini Docker</span><span class="sxs-lookup"><span data-stu-id="943c0-141">Docker image variations</span></span>
 
-Versioni più recenti di ciascuna variante:
+<span data-ttu-id="943c0-142">Per ottenere gli obiettivi di cui sopra, forniamo varianti di immagine in [ `microsoft/dotnet` ](https://hub.docker.com/r/microsoft/dotnet/).</span><span class="sxs-lookup"><span data-stu-id="943c0-142">To achieve the goals above, we provide image variants under [`microsoft/dotnet`](https://hub.docker.com/r/microsoft/dotnet/).</span></span>
 
-- `microsoft/dotnet` o `microsoft/dotnet:latest` (include l'SDK)
-- `microsoft/dotnet:onbuild`
-- `microsoft/dotnet:core`
-- `microsoft/dotnet:core-deps`
+* <span data-ttu-id="943c0-143">`microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.0.0-sdk`) Questa immagine contiene .NET Core SDK, che include .NET Core e gli strumenti della riga di comando (CLI).</span><span class="sxs-lookup"><span data-stu-id="943c0-143">`microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.0.0-sdk`) This image contains the .NET Core SDK, which includes the .NET Core and Command Line Tools (CLI).</span></span> <span data-ttu-id="943c0-144">Questa immagine è mappata allo **scenario di sviluppo**.</span><span class="sxs-lookup"><span data-stu-id="943c0-144">This image maps to the **development scenario**.</span></span> <span data-ttu-id="943c0-145">Utilizzare questa immagine per lo sviluppo locale e il debug di unit test.</span><span class="sxs-lookup"><span data-stu-id="943c0-145">You use this image for local development, debugging, and unit testing.</span></span> <span data-ttu-id="943c0-146">Questa immagine può essere usata anche per gli scenari di **compilazione**.</span><span class="sxs-lookup"><span data-stu-id="943c0-146">This image can also be used for your **build** scenarios.</span></span> <span data-ttu-id="943c0-147">Utilizzando `microsoft/dotnet:sdk` fornisce sempre la versione più recente.</span><span class="sxs-lookup"><span data-stu-id="943c0-147">Using `microsoft/dotnet:sdk` always gives you the latest version.</span></span>
 
-Di seguito è riportato un elenco delle immagini dopo un'operazione `docker pull <imagename>` in un computer di sviluppo per mostrare le diverse dimensioni. Si noti che la variante di sviluppo/compilazione, `microsoft/dotnet:1.0.0-preview2-sdk`, ha dimensioni maggiori in quanto contiene l'SDK per lo sviluppo e la compilazione dell'applicazione. La variante di produzione, `microsoft/dotnet:core`, ha dimensioni minori, in quanto contiene soltanto il runtime di NET Core. L'immagine minima utilizzabile in Linux, `core-deps`, ha dimensioni abbastanza ridotte. L'applicazione, tuttavia, dovrà eseguire una copia privata del runtime di .NET con tale immagine. Dal momento che i contenitori sono già barriere private per l'isolamento, quando si eseguono più contenitori basati su .NET tale ottimizzazione andrà perduta. 
+> [!TIP]
+> <span data-ttu-id="943c0-148">Se non si conosce le proprie esigenze, si desidera utilizzare il `microsoft/dotnet:<version>-sdk` immagine.</span><span class="sxs-lookup"><span data-stu-id="943c0-148">If you are unsure about your needs, you want to use the `microsoft/dotnet:<version>-sdk` image.</span></span> <span data-ttu-id="943c0-149">Come l'immagine "fatto", è progettato per essere utilizzato come un'istruzione throw contenitore di stoccaggio montare il codice sorgente e avviare il contenitore per avviare l'app e come immagine di base per altre immagini da compilare.</span><span class="sxs-lookup"><span data-stu-id="943c0-149">As the "de facto" image, it's designed to be used as a throw away container (mount your source code and start the container to start your app), and as the base image to build other images from.</span></span>
 
-```
-REPOSITORY          TAG                     IMAGE ID            SIZE
-microsoft/dotnet    1.0.0-preview2-onbuild  19b6a6c4b1db        540.4 MB
-microsoft/dotnet    onbuild                 19b6a6c4b1db        540.4 MB
-microsoft/dotnet    1.0.0-preview2-sdk      a92c3d9ad0e7        540.4 MB
-microsoft/dotnet    core                    5224a9f2a2aa        253.2 MB
-microsoft/dotnet    1.0.0-core-deps         c981a2eebe0e        166.2 MB
-microsoft/dotnet    core-deps               c981a2eebe0e        166.2 MB
-microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
-microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
-```
+* <span data-ttu-id="943c0-150">`microsoft/dotnet:<version>-runtime`: Questa immagine contiene .NET Core (runtime e librerie) ed è ottimizzata per l'esecuzione di App .NET Core in **produzione**.</span><span class="sxs-lookup"><span data-stu-id="943c0-150">`microsoft/dotnet:<version>-runtime`: This image contains the .NET Core (runtime and libraries) and is optimized for running .NET Core apps in **production**.</span></span>
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="alternative-images"></a><span data-ttu-id="943c0-151">Immagini alternative</span><span class="sxs-lookup"><span data-stu-id="943c0-151">Alternative images</span></span>
 
-Per la compilazione e l'esecuzione è necessario che nel computer siano installati gli elementi seguenti:
+<span data-ttu-id="943c0-152">Oltre agli scenari ottimizzati di sviluppo, compilazione e produzione, Microsoft fornisce immagini aggiuntive:</span><span class="sxs-lookup"><span data-stu-id="943c0-152">In addition to the optimized scenarios of development, build and production, we provide additional images:</span></span>
 
-- [.NET Core](http://dot.net)
-- [Docker](https://www.docker.com/products/docker), per eseguire localmente i contenitori Docker
-- [Node.js](https://nodejs.org/)
-- [Generatore Yeoman per ASP.NET](https://github.com/omnisharp/generator-aspnet), per creare l'applicazione API Web
-- [Generatore Yeoman per Docker](http://aka.ms/yodocker), fornito da Microsoft
+* <span data-ttu-id="943c0-153">`microsoft/dotnet:<version>-runtime-deps`: il **runtime deps** immagine contiene il sistema operativo con tutte le dipendenze native necessari per .NET Core.</span><span class="sxs-lookup"><span data-stu-id="943c0-153">`microsoft/dotnet:<version>-runtime-deps`: The **runtime-deps** image contains the operating system with all of the native dependencies needed by .NET Core.</span></span> <span data-ttu-id="943c0-154">Questa immagine è per [applicazioni indipendente](https://docs.microsoft.com/dotnet/core/deploying/index).</span><span class="sxs-lookup"><span data-stu-id="943c0-154">This image is for [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/index).</span></span>
 
-Installare i generatori Yeoman per ASP.NET Core e Docker usando npm 
+<span data-ttu-id="943c0-155">Versioni più recenti di ciascuna variante:</span><span class="sxs-lookup"><span data-stu-id="943c0-155">Latest versions of each variant:</span></span>
 
-```
-npm install -g yo generator-aspnet generator-docker
-```
+* <span data-ttu-id="943c0-156">`microsoft/dotnet`o `microsoft/dotnet:latest` (alias per l'immagine SDK)</span><span class="sxs-lookup"><span data-stu-id="943c0-156">`microsoft/dotnet` or `microsoft/dotnet:latest` (alias for the SDK image)</span></span>
+* `microsoft/dotnet:sdk`
+* `microsoft/dotnet:runtime`
+* `microsoft/dotnet:runtime-deps`
 
-> [!NOTE]
-> Questo esempio userà [Visual Studio Code](http://code.visualstudio.com) per l'editor.
+## <a name="samples-to-explore"></a><span data-ttu-id="943c0-157">Esempi per l'esplorazione</span><span class="sxs-lookup"><span data-stu-id="943c0-157">Samples to explore</span></span>
 
-## <a name="creating-the-web-api-application"></a>Creazione dell'applicazione API Web
+* <span data-ttu-id="943c0-158">[In questo esempio di ASP.NET Core Docker](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) viene illustrato un modello migliore di procedure consigliate per la creazione di immagini Docker per ASP.NET Core App per la produzione.</span><span class="sxs-lookup"><span data-stu-id="943c0-158">[This ASP.NET Core Docker sample](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) demonstrates a best practice pattern for building Docker images for ASP.NET Core apps for production.</span></span> <span data-ttu-id="943c0-159">L'esempio funziona con contenitori di Linux e Windows.</span><span class="sxs-lookup"><span data-stu-id="943c0-159">The sample works with both Linux and Windows containers.</span></span>
 
-Come punto di riferimento, prima di inserire l'applicazione nei contenitori, eseguirla localmente. 
+* <span data-ttu-id="943c0-160">Questo esempio di .NET Core Docker viene illustrato un modello prassi migliori per [la creazione di immagini Docker per le applicazioni .NET Core per la produzione.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)</span><span class="sxs-lookup"><span data-stu-id="943c0-160">This .NET Core Docker sample demonstrates a best practice pattern for [building Docker images for .NET Core apps for production.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)</span></span>
 
-L'applicazione completata si trova nel repository [dotnet/docs su GitHub](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images). Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+## <a name="your-first-aspnet-core-docker-app"></a><span data-ttu-id="943c0-161">La prima app di ASP.NET Core Docker</span><span class="sxs-lookup"><span data-stu-id="943c0-161">Your first ASP.NET Core Docker app</span></span>
 
-Creare una directory per l'applicazione.
+<span data-ttu-id="943c0-162">Per questa esercitazione consente di utilizzare un'applicazione di esempio ASP.NET Core Docker per l'app a cui che si desidera dockerize.</span><span class="sxs-lookup"><span data-stu-id="943c0-162">For this tutorial, lets use an ASP.NET Core Docker sample application for the app we want to dockerize.</span></span> <span data-ttu-id="943c0-163">Questa applicazione di esempio ASP.NET Core Docker viene illustrato un modello prassi migliori per la creazione di immagini Docker per ASP.NET Core App per la produzione.</span><span class="sxs-lookup"><span data-stu-id="943c0-163">This ASP.NET Core Docker sample application demonstrates a best practice pattern for building Docker images for ASP.NET Core apps for production.</span></span> <span data-ttu-id="943c0-164">L'esempio funziona con contenitori di Linux e Windows.</span><span class="sxs-lookup"><span data-stu-id="943c0-164">The sample works with both Linux and Windows containers.</span></span>
 
-Aprire una sessione della riga di comando o terminal in tale directory e usare il generatore Yeoman ASP.NET digitando quanto segue:
-```
-yo aspnet
-```
+<span data-ttu-id="943c0-165">L'esempio Dockerfile crea un'immagine di Docker dell'applicazione ASP.NET Core in base di fuori dell'immagine di base di ASP.NET Core Runtime Docker.</span><span class="sxs-lookup"><span data-stu-id="943c0-165">The sample Dockerfile creates an ASP.NET Core application Docker image based off of the ASP.NET Core Runtime Docker base image.</span></span>
 
-Selezionare l'**applicazione API Web**, digitare **api** come nome dell'app, quindi premere INVIO.  Dopo che è stato eseguito lo scaffolding dell'applicazione, passare alla directory `/api` e ripristinare le dipendenze NuGet usando `dotnet restore`.
+<span data-ttu-id="943c0-166">Usa il [funzionalità di compilazione in più fasi Docker](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) per:</span><span class="sxs-lookup"><span data-stu-id="943c0-166">It uses the [Docker multi-stage build feature](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) to:</span></span>
 
-```
-cd api
-dotnet restore
-```
+* <span data-ttu-id="943c0-167">compilare l'esempio in un contenitore in base il **maggiore** immagine di base di ASP.NET Core compilazione Docker</span><span class="sxs-lookup"><span data-stu-id="943c0-167">build the sample in a container based on the **larger** ASP.NET Core Build Docker base image</span></span> 
+* <span data-ttu-id="943c0-168">Copia il risultato finale di compilazione in un'immagine di Docker in base il **più piccoli** immagine di base del Runtime di ASP.NET Core Docker</span><span class="sxs-lookup"><span data-stu-id="943c0-168">copies the final build result into a Docker image based on the **smaller** ASP.NET Core Docker Runtime base image</span></span>
 
-Testare l'applicazione usando `dotnet run` e i valori disponibili in **http://localhost:5000/api/values**
+> [!Note]
+> <span data-ttu-id="943c0-169">L'immagine di compilazione contiene strumenti necessari per compilare applicazioni, mentre l'immagine di runtime non.</span><span class="sxs-lookup"><span data-stu-id="943c0-169">The build image contains required tools to build applications while the runtime image does not.</span></span>
 
-```javascript
-[
-    "value1",
-    "value2"
-]
-```
+### <a name="prerequisites"></a><span data-ttu-id="943c0-170">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="943c0-170">Prerequisites</span></span>
 
-Usare `Ctrl+C` per arrestare l'applicazione.
+<span data-ttu-id="943c0-171">Per compilare ed eseguire, installare gli elementi seguenti:</span><span class="sxs-lookup"><span data-stu-id="943c0-171">To build and run, install the following items:</span></span>
 
-## <a name="adding-docker-support"></a>Aggiunta del supporto per Docker
+#### <a name="net-core-20-sdk"></a><span data-ttu-id="943c0-172">.NET core SDK 2.0</span><span class="sxs-lookup"><span data-stu-id="943c0-172">.NET Core 2.0 SDK</span></span>
 
-Per aggiungere al progetto il supporto per Docker usare il generatore Yeoman fornito da Microsoft. Questo generatore attualmente supporta progetti .NET Core, Node.js e Go mediante la creazione di un documento Dockerfile e di script che consentono di compilare ed eseguire progetti all'interno dei contenitori. Vengono aggiunti anche specifici file Visual Studio Code (launch.json, tasks.json) per il debug dell'editor e il supporto del riquadro comandi.
+* <span data-ttu-id="943c0-173">Installare [.NET Core SDK 2.0](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="943c0-173">Install [.NET Core SDK 2.0](https://www.microsoft.com/net/core).</span></span>
+
+* <span data-ttu-id="943c0-174">Installare l'editor di codice preferito, se hai già fatto.</span><span class="sxs-lookup"><span data-stu-id="943c0-174">Install your favorite code editor, if you haven't already.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="943c0-175">È necessario installare un editor di codice?</span><span class="sxs-lookup"><span data-stu-id="943c0-175">Need to install a code editor?</span></span> <span data-ttu-id="943c0-176">Provare a [Visual Studio](https://visualstudio.com/downloads)!</span><span class="sxs-lookup"><span data-stu-id="943c0-176">Try [Visual Studio](https://visualstudio.com/downloads)!</span></span>
+
+#### <a name="installing-docker-client"></a><span data-ttu-id="943c0-177">L'installazione Client di Docker</span><span class="sxs-lookup"><span data-stu-id="943c0-177">Installing Docker Client</span></span>
+
+<span data-ttu-id="943c0-178">Installare [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) o versione successiva del client Docker.</span><span class="sxs-lookup"><span data-stu-id="943c0-178">Install [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) or later of the Docker client.</span></span>
+
+<span data-ttu-id="943c0-179">Il client Docker può essere installato in:</span><span class="sxs-lookup"><span data-stu-id="943c0-179">The Docker client can be installed in:</span></span>
+
+* <span data-ttu-id="943c0-180">Distribuzioni di Linux</span><span class="sxs-lookup"><span data-stu-id="943c0-180">Linux distributions</span></span>
+
+   * [<span data-ttu-id="943c0-181">CentOS</span><span class="sxs-lookup"><span data-stu-id="943c0-181">CentOS</span></span>](https://www.docker.com/docker-centos-distribution)
+
+   * [<span data-ttu-id="943c0-182">Debian</span><span class="sxs-lookup"><span data-stu-id="943c0-182">Debian</span></span>](https://www.docker.com/docker-debian)
+
+   * [<span data-ttu-id="943c0-183">Fedora</span><span class="sxs-lookup"><span data-stu-id="943c0-183">Fedora</span></span>](https://www.docker.com/docker-fedora)
+
+   * [<span data-ttu-id="943c0-184">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="943c0-184">Ubuntu</span></span>](https://www.docker.com/docker-ubuntu)
+
+* [<span data-ttu-id="943c0-185">macOS</span><span class="sxs-lookup"><span data-stu-id="943c0-185">macOS</span></span>](https://docs.docker.com/docker-for-mac/)
+
+* <span data-ttu-id="943c0-186">[Windows](https://docs.docker.com/docker-for-windows/).</span><span class="sxs-lookup"><span data-stu-id="943c0-186">[Windows](https://docs.docker.com/docker-for-windows/).</span></span>
+
+#### <a name="installing-git-for-sample-repository"></a><span data-ttu-id="943c0-187">Installare Git per il repository di esempio</span><span class="sxs-lookup"><span data-stu-id="943c0-187">Installing Git for sample repository</span></span>
+
+* <span data-ttu-id="943c0-188">Installare [git](https://git-scm.com/download) se si desidera clonare il repository.</span><span class="sxs-lookup"><span data-stu-id="943c0-188">Install [git](https://git-scm.com/download) if you wish to clone the repository.</span></span>
+
+### <a name="getting-the-sample-application"></a><span data-ttu-id="943c0-189">L'applicazione di esempio</span><span class="sxs-lookup"><span data-stu-id="943c0-189">Getting the sample application</span></span>
+
+<span data-ttu-id="943c0-190">È il modo più semplice per ottenere il codice di esempio clonando la [repository di esempi](https://github.com/dotnet/dotnet-docker-samples) con git, seguendo le istruzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="943c0-190">The easiest way to get the sample is by cloning the [samples repository](https://github.com/dotnet/dotnet-docker-samples) with git, using the following instructions:</span></span> 
 
 ```console
-$ yo docker
-
-     _-----_     ╭──────────────────────────╮
-    |       |    │   Welcome to the Docker  │
-    |--(o)--|    │        generator!        │
-   `---------´   │     Let's add Docker     │
-    ( _´U`_ )    │  container magic to your │
-    /___A___\   /│           app!           │
-     |  ~  |     ╰──────────────────────────╯
-   __'.___.'__
- ´   `  |° ´ Y `
-
-? What language is your project using? (Use arrow keys)
-❯ .NET Core
-  Golang
-  Node.js
+git clone https://github.com/dotnet/dotnet-docker-samples/
 ```
 
-- Selezionare `.NET Core` come tipo di progetto
-- `rtm` per la versione di .NET Core
-- `Y` il progetto usa un server Web
-- `5000` la porta su cui l'applicazione API Web è in ascolto (http://localhost:5000)
-- `api` per il nome dell'immagine
-- `api` per il nome del servizio
-- `api` per il progetto di composizione 
-- `Y` per sovrascrivere il documento Dockerfile corrente
+<span data-ttu-id="943c0-191">È anche possibile scaricare il repository (è piccolo) come un file zip dal repository di esempi di .NET Core Docker.</span><span class="sxs-lookup"><span data-stu-id="943c0-191">You can also download the repository (it is small) as a zip from the .NET Core Docker samples repository.</span></span>
 
-Quando il generatore è completo, al progetto vengono aggiunti i file seguenti:
+### <a name="run-the-aspnet-app-locally"></a><span data-ttu-id="943c0-192">Eseguire localmente l'app ASP.NET</span><span class="sxs-lookup"><span data-stu-id="943c0-192">Run the ASP.NET app locally</span></span>
 
-- .vscode/launch.json
-- Dockerfile.debug
-- Dockerfile
-- docker-compose.debug.yml
-- docker-compose.yml
-- dockerTask.ps1
-- dockerTask.sh
-- .vscode/tasks.json
+<span data-ttu-id="943c0-193">Come punto di riferimento, prima di inserire l'applicazione nei contenitori, eseguirla localmente.</span><span class="sxs-lookup"><span data-stu-id="943c0-193">For a reference point, before we containerize the application, first run the application locally.</span></span>
 
-Il generatore crea due documenti Dockerfile.
+<span data-ttu-id="943c0-194">È possibile compilare ed eseguire l'applicazione localmente con .NET Core 2.0 SDK tramite i comandi seguenti (le istruzioni presuppongono la radice del repository):</span><span class="sxs-lookup"><span data-stu-id="943c0-194">You can build and run the application locally with the .NET Core 2.0 SDK using the following commands (The instructions assume the root of the repository):</span></span>
 
-**Dockerfile.debug**: questo file è basato sull'immagine **microsoft/dotnet:1.0.0-preview2-sdk** che, come si nota dall'elenco delle varianti di immagine, include SDK, interfaccia della riga di comando e .NET Core. Tale immagine sarà quella usata per lo sviluppo e il debug (F5). L'inclusione di tutti questi componenti crea un'immagine più grande, di dimensioni pari a circa 540 MB.
+```console
+cd aspnetapp
+dotnet run
+```
 
-**Dockerfile**: si tratta dell'immagine della versione basata su **microsoft/dotnet:1.0.0-core** e deve essere usata per la produzione. Quando eseguita, questa immagine è pari a circa 253 MB.
+<span data-ttu-id="943c0-195">Dopo l'avvio dell'applicazione, visitare **indirizzo http://localhost:5000/** nel web browser.</span><span class="sxs-lookup"><span data-stu-id="943c0-195">After the application starts, visit **http://localhost:5000** in your web browser.</span></span>
 
-### <a name="creating-the-docker-images"></a>Creazione di immagini Docker
-Usando lo script `dockerTask.sh` o `dockerTask.ps1` è possibile compilare o comporre l'immagine e il contenitore dell'applicazione **api** per un ambiente specifico. Compilare l'immagine di **debug** eseguendo il comando seguente.
+### <a name="build-and-run-the-sample-with-docker-for-linux-containers"></a><span data-ttu-id="943c0-196">Compilare ed eseguire l'esempio con Docker per i contenitori di Linux</span><span class="sxs-lookup"><span data-stu-id="943c0-196">Build and run the sample with Docker for Linux containers</span></span>
+
+<span data-ttu-id="943c0-197">È possibile compilare ed eseguire l'esempio in Docker usando i contenitori di Linux usando i comandi seguenti (le istruzioni presuppongono la radice del repository):</span><span class="sxs-lookup"><span data-stu-id="943c0-197">You can build and run the sample in Docker using Linux containers using the following commands (The instructions assume the root of the repository):</span></span>
+
+```console
+cd aspnetapp
+docker build -t aspnetapp .
+docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
+```
+
+> [!Note] <span data-ttu-id="943c0-198">Il `docker run` '-p' argomento mappe porta 5000 sul computer locale alla porta 80 del contenitore (il modulo di mapping di porta è `host:container`).</span><span class="sxs-lookup"><span data-stu-id="943c0-198">The `docker run` '-p' argument maps port 5000 on your local machine to port 80 in the container (the port mapping form is `host:container`).</span></span> <span data-ttu-id="943c0-199">Per ulteriori informazioni, vedere il [docker eseguire](https://docs.docker.com/engine/reference/commandline/exec/) riferimento ai parametri della riga di comando.</span><span class="sxs-lookup"><span data-stu-id="943c0-199">For more information, see the [docker run](https://docs.docker.com/engine/reference/commandline/exec/) reference on command-line parameters.</span></span>
+
+<span data-ttu-id="943c0-200">Dopo l'avvio dell'applicazione, visitare **indirizzo http://localhost:5000/** nel web browser.</span><span class="sxs-lookup"><span data-stu-id="943c0-200">After the application starts, visit **http://localhost:5000** in your web browser.</span></span>
+
+### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a><span data-ttu-id="943c0-201">Compilare ed eseguire l'esempio con i contenitori di Docker per Windows</span><span class="sxs-lookup"><span data-stu-id="943c0-201">Build and run the sample with Docker for Windows containers</span></span>
+
+<span data-ttu-id="943c0-202">È possibile compilare ed eseguire l'esempio in Docker usando i contenitori di Windows usando i comandi seguenti (le istruzioni presuppongono la radice del repository):</span><span class="sxs-lookup"><span data-stu-id="943c0-202">You can build and run the sample in Docker using Windows containers using the following commands (The instructions assume the root of the repository):</span></span>
+
+```console
+cd aspnetapp
+docker build -t aspnetapp .
+docker run -it --rm --name aspnetcore_sample aspnetapp
+```
+
+> [!IMPORTANT]
+> <span data-ttu-id="943c0-203">È necessario passare al **indirizzo IP contenitore** (in contrapposizione a http://localhost) nel browser direttamente quando si usano i contenitori di Windows.</span><span class="sxs-lookup"><span data-stu-id="943c0-203">You must navigate to the **container IP address** (as opposed to http://localhost) in your browser directly when using Windows containers.</span></span> <span data-ttu-id="943c0-204">È possibile ottenere l'indirizzo IP del contenitore con i passaggi seguenti:</span><span class="sxs-lookup"><span data-stu-id="943c0-204">You can get the IP address of your container with the following steps:</span></span>
+
+* <span data-ttu-id="943c0-205">Aprire il prompt dei comandi di un altro.</span><span class="sxs-lookup"><span data-stu-id="943c0-205">Open up another command prompt.</span></span>
+* <span data-ttu-id="943c0-206">Eseguire `docker ps` per visualizzare i contenitori in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="943c0-206">Run `docker ps` to see your running containers.</span></span> <span data-ttu-id="943c0-207">Il contenitore "aspnetcore_sample" deve essere presente.</span><span class="sxs-lookup"><span data-stu-id="943c0-207">The "aspnetcore_sample" container should be there.</span></span>
+* <span data-ttu-id="943c0-208">Eseguire `docker exec aspnetcore_sample ipconfig`.</span><span class="sxs-lookup"><span data-stu-id="943c0-208">Run `docker exec aspnetcore_sample ipconfig`.</span></span>
+* <span data-ttu-id="943c0-209">L'indirizzo IP di contenitore di copiare e incollare nel browser (ad esempio, 172.29.245.43).</span><span class="sxs-lookup"><span data-stu-id="943c0-209">Copy the container IP address and paste into your browser (for example, 172.29.245.43).</span></span>
+
+> [!Note]
+> <span data-ttu-id="943c0-210">Exec docker supporta i contenitori di identificazione con nome o hash.</span><span class="sxs-lookup"><span data-stu-id="943c0-210">Docker exec supports identifying containers with name or hash.</span></span> <span data-ttu-id="943c0-211">In questo esempio, viene utilizzato il nome (aspnetcore_sample).</span><span class="sxs-lookup"><span data-stu-id="943c0-211">The name (aspnetcore_sample) is used in our example.</span></span>
+
+<span data-ttu-id="943c0-212">Vedere l'esempio seguente di come ottenere l'indirizzo IP di un contenitore di Windows in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="943c0-212">See the following example of how to get the IP address of a running Windows container.</span></span>
+
+```console
+docker exec aspnetcore_sample ipconfig
+
+Windows IP Configuration
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : contoso.com
+   Link-local IPv6 Address . . . . . : fe80::1967:6598:124:cfa3%4
+   IPv4 Address. . . . . . . . . . . : 172.29.245.43
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . : 172.29.240.1
+```
+
+> [!Note]
+> <span data-ttu-id="943c0-213">Exec docker viene eseguito un nuovo comando in un contenitore in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="943c0-213">Docker exec runs a new command in a running container.</span></span> <span data-ttu-id="943c0-214">Per ulteriori informazioni, vedere il [riferimento a docker exec](https://docs.docker.com/engine/reference/commandline/exec/) sui parametri della riga di comando.</span><span class="sxs-lookup"><span data-stu-id="943c0-214">For more information, see the [docker exec reference](https://docs.docker.com/engine/reference/commandline/exec/) on command-line parameters.</span></span>
+
+<span data-ttu-id="943c0-215">È possibile creare un'applicazione che è possibile distribuire nell'ambiente di produzione in locale utilizzando il [dotnet pubblicare](../tools/dotnet-publish.md) comando.</span><span class="sxs-lookup"><span data-stu-id="943c0-215">You can produce an application that is ready to deploy to production locally using the [dotnet publish](../tools/dotnet-publish.md) command.</span></span>
+
+```console
+dotnet publish -c release -o published
+```
+
+> [!Note]
+> <span data-ttu-id="943c0-216">L'argomento di versione - c compila l'applicazione in modalità di rilascio (il valore predefinito è la modalità di debug).</span><span class="sxs-lookup"><span data-stu-id="943c0-216">The -c release argument builds the application in release mode (the default is debug mode).</span></span> <span data-ttu-id="943c0-217">Per ulteriori informazioni, vedere il [dotnet eseguire riferimento](../tools/dotnet-run.md) sui parametri della riga di comando.</span><span class="sxs-lookup"><span data-stu-id="943c0-217">For more information, see the [dotnet run reference](../tools/dotnet-run.md) on command-line parameters.</span></span>
+
+<span data-ttu-id="943c0-218">È possibile eseguire l'applicazione in **Windows** usando il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="943c0-218">You can run the application on **Windows** using the following command.</span></span>
+
+```console
+dotnet published\aspnetapp.dll
+```
+
+<span data-ttu-id="943c0-219">È possibile eseguire l'applicazione in **Linux** o **macOS** usando il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="943c0-219">You can run the application on **Linux** or **macOS** using the following command.</span></span>
 
 ```bash
-./dockerTask.sh build debug
+dotnet published/aspnetapp.dll
 ```
 
-L'immagine compilerà l'applicazione ASP.NET, eseguirà `dotnet restore`, aggiungerà il debugger all'immagine, imposterà un `ENTRYPOINT` e al termine copierà l'app nell'immagine. Il risultato è un'immagine Docker denominata *api* con un `TAG` di *debug*.  Vedere le immagini sul computer usando `docker images`.
+### <a name="docker-images-used-in-this-sample"></a><span data-ttu-id="943c0-220">Immagini docker usate in questo esempio</span><span class="sxs-lookup"><span data-stu-id="943c0-220">Docker Images used in this sample</span></span>
 
-```bash
-docker images
+<span data-ttu-id="943c0-221">Le immagini Docker seguenti vengono utilizzate in questo esempio</span><span class="sxs-lookup"><span data-stu-id="943c0-221">The following Docker images are used in this sample</span></span>
 
-REPOSITORY          TAG                  IMAGE ID            CREATED             SIZE
-api                 debug                70e89fbc5dbe        a few seconds ago   779.8 MB
-```
+* `microsoft/aspnetcore-build:2.0`
+* `microsoft/aspnetcore:2.0`
 
-Un altro modo per generare l'immagine ed eseguire l'applicazione all'interno del contenitore Docker consiste nell'aprire l'applicazione in Visual Studio Code e usare gli strumenti di debug. 
-
-Selezionare l'icona di debug nella barra delle visualizzazioni a sinistra di Visual Studio Code.
-
-![icona per il debug di Visual Studio Code](./media/building-net-docker-images/debugging_debugicon.png)
-
-Fare quindi clic sull'icona per la riproduzione o premere F5 per generare l'immagine e avviare l'applicazione all'interno del contenitore. L'applicazione API Web verrà avviata usando il Web browser predefinito in http://localhost:5000.
-
-![Visual Studio Code - Strumenti di debug Docker](./media/building-net-docker-images/docker-tools-vscode-f5.png)
-
-Nell'applicazione è possibile impostare punti di interruzione, passaggi e così via come se l'applicazione stessa fosse in esecuzione in locale sul computer di sviluppo e non all'interno del contenitore. Il vantaggio di eseguire il debug all'interno del contenitore consiste nel fatto che questa è la stessa immagine che verrà distribuita in un ambiente di produzione.
-
-Per la creazione dell'immagine della versione o di produzione è sufficiente eseguire questo comando dal terminale passando il nome di ambiente `release`.
-
-```bash
-./dockerTask build release
-```
-
-Il comando crea l'immagine basandosi sull'immagine di base **microsoft/dotnet:core** più piccola, esegue un [EXPOSE](https://docs.docker.com/engine/reference/builder/#/expose) sulla porta 5000, imposta l'[ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) per `dotnet api.dll` e lo copia nella directory `/app`. Non è presente alcun debugger, SDK o `dotnet restore` risultante in un'immagine molto più piccola. L'immagine è denominata **api** e ha un `TAG` di tipo **latest**.
-
-```
-REPOSITORY          TAG                  IMAGE ID            CREATED             SIZE
-api                 debug                70e89fbc5dbe        1 hour ago        779.8 MB
-api                 latest               ef17184c8de6        1 hour ago        260.7 MB
-```
-
-## <a name="summary"></a>Riepilogo
-
-L'uso del generatore Docker per aggiungere i file necessari all'applicazione API Web semplifica il processo di creazione delle versioni di sviluppo e produzione delle immagini.  Gli strumenti sono multipiattaforma e forniscono anche uno script PowerShell per ottenere gli stessi risultati riguardo all'integrazione di Windows e Visual Studio Code, con procedure per il debug dell'applicazione all'interno del contenitore. La comprensione delle varianti delle immagini e degli scenari di destinazione consente di ottimizzare i processi di sviluppo a ciclo interno, ottenendo al tempo stesso immagini ottimizzate per le distribuzioni di produzione.  
+<span data-ttu-id="943c0-222">La procedura è stata completata.</span><span class="sxs-lookup"><span data-stu-id="943c0-222">Congratulations!</span></span> <span data-ttu-id="943c0-223">sono disponibili solo:</span><span class="sxs-lookup"><span data-stu-id="943c0-223">you have just:</span></span>
+> [!div class="checklist"]
+> * <span data-ttu-id="943c0-224">Sono fornite informazioni su Microsoft .NET Core Docker images</span><span class="sxs-lookup"><span data-stu-id="943c0-224">Learned about Microsoft .NET Core Docker images</span></span>
+> * <span data-ttu-id="943c0-225">Ha ricevuto un ASP.NET Core app di esempio per Dockerize</span><span class="sxs-lookup"><span data-stu-id="943c0-225">Got an ASP.NET Core sample app to Dockerize</span></span>
+> * <span data-ttu-id="943c0-226">È stata eseguita l'app di esempio ASP.NET localmente</span><span class="sxs-lookup"><span data-stu-id="943c0-226">Ran the ASP.NET sample app locally</span></span>
+> * <span data-ttu-id="943c0-227">Compilato ed eseguito il codice di esempio con Docker per i contenitori di Linux</span><span class="sxs-lookup"><span data-stu-id="943c0-227">Built and ran the sample with Docker for Linux containers</span></span>
+> * <span data-ttu-id="943c0-228">Compilato ed eseguito il codice di esempio con i contenitori di Docker per Windows</span><span class="sxs-lookup"><span data-stu-id="943c0-228">Built and ran the sample with Docker for Windows containers</span></span>
 
 
+<span data-ttu-id="943c0-229">**Passaggi successivi**</span><span class="sxs-lookup"><span data-stu-id="943c0-229">**Next Steps**</span></span>
 
+<span data-ttu-id="943c0-230">Ecco alcuni dei passaggi da eseguire:</span><span class="sxs-lookup"><span data-stu-id="943c0-230">Here are some next steps you can take:</span></span>
+
+* [<span data-ttu-id="943c0-231">Utilizzo degli strumenti di Visual Studio Docker</span><span class="sxs-lookup"><span data-stu-id="943c0-231">Working with Visual Studio Docker Tools</span></span>](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
+* [<span data-ttu-id="943c0-232">Distribuzione di immagini Docker dal Registro di sistema contenitore di Azure per le istanze di contenitore di Azure</span><span class="sxs-lookup"><span data-stu-id="943c0-232">Deploying Docker Images from the Azure Container Registry to Azure Container Instances</span></span>](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
+* [<span data-ttu-id="943c0-233">Il debug con codice di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="943c0-233">Debugging with Visual Studio Code</span></span>](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) 
+* [<span data-ttu-id="943c0-234">Recupero mani nel con Visual Studio per Mac, contenitori e senza codice nel cloud</span><span class="sxs-lookup"><span data-stu-id="943c0-234">Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud</span></span>](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
+* [<span data-ttu-id="943c0-235">Introduzione a Docker e Visual Studio per Mac Lab</span><span class="sxs-lookup"><span data-stu-id="943c0-235">Getting Started with Docker and Visual Studio for Mac Lab</span></span>](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
+
+> [!Note]
+> <span data-ttu-id="943c0-236">Se non si dispone di una sottoscrizione di Azure, [Iscriviti oggi stesso](https://azure.microsoft.com/free/?b=16.48) per un account gratuito di 30 giorni e get 200 dollari di crediti di Azure per provare qualsiasi combinazione di servizi di Azure.</span><span class="sxs-lookup"><span data-stu-id="943c0-236">If you do not have an Azure subscription, [sign up today](https://azure.microsoft.com/free/?b=16.48) for a free 30-day account and get $200 in Azure Credits to try out any combination of Azure services.</span></span>

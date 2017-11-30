@@ -1,59 +1,57 @@
 ---
-title: "Modifica di nodi, contenuto e valori in un documento XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Modifica di nodi, contenuto e valori in un documento XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 00b923edb95852d9434db1b393df68fd9d0c8a1a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Modifica di nodi, contenuto e valori in un documento XML
-Sono disponibili molti modi per modificare i nodi e il contenuto in un documento.  È possibile:  
+# <a name="modifying-nodes-content-and-values-in-an-xml-document"></a><span data-ttu-id="f6608-102">Modifica di nodi, contenuto e valori in un documento XML</span><span class="sxs-lookup"><span data-stu-id="f6608-102">Modifying Nodes, Content, and Values in an XML Document</span></span>
+<span data-ttu-id="f6608-103">Sono disponibili molti modi per modificare i nodi e il contenuto in un documento.</span><span class="sxs-lookup"><span data-stu-id="f6608-103">There are many ways you can modify the nodes and content in a document.</span></span> <span data-ttu-id="f6608-104">È possibile:</span><span class="sxs-lookup"><span data-stu-id="f6608-104">You can:</span></span>  
   
--   Modificare il valore dei nodi usando la proprietà <xref:System.Xml.XmlNode.Value%2A>.  
+-   <span data-ttu-id="f6608-105">Modificare il valore dei nodi usando la proprietà <xref:System.Xml.XmlNode.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="f6608-105">Change the value of nodes using the <xref:System.Xml.XmlNode.Value%2A> property.</span></span>  
   
--   Modificare un intero set di nodi, sostituendoli con nodi nuovi.  Questa operazione viene eseguita tramite la proprietà <xref:System.Xml.XmlNode.InnerXml%2A>.  
+-   <span data-ttu-id="f6608-106">Modificare un intero set di nodi, sostituendoli con nodi nuovi.</span><span class="sxs-lookup"><span data-stu-id="f6608-106">Modify an entire set of nodes by replacing the nodes with new nodes.</span></span> <span data-ttu-id="f6608-107">Questa operazione viene eseguita tramite la proprietà <xref:System.Xml.XmlNode.InnerXml%2A>.</span><span class="sxs-lookup"><span data-stu-id="f6608-107">This is done using the <xref:System.Xml.XmlNode.InnerXml%2A> property.</span></span>  
   
--   Sostituire i nodi esistenti con nodi nuovi usando il metodo <xref:System.Xml.XmlNode.RemoveChild%2A>.  
+-   <span data-ttu-id="f6608-108">Sostituire i nodi esistenti con nodi nuovi usando il metodo <xref:System.Xml.XmlNode.RemoveChild%2A>.</span><span class="sxs-lookup"><span data-stu-id="f6608-108">Replace existing nodes with new nodes using the <xref:System.Xml.XmlNode.RemoveChild%2A> method.</span></span>  
   
--   Aggiungere ulteriori caratteri ai nodi che ereditano dalla classe <xref:System.Xml.XmlCharacterData> usando il metodo <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> o <xref:System.Xml.XmlCharacterData.ReplaceData%2A>.  
+-   <span data-ttu-id="f6608-109">Aggiungere ulteriori caratteri ai nodi che ereditano dalla classe <xref:System.Xml.XmlCharacterData> usando il metodo <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> o <xref:System.Xml.XmlCharacterData.ReplaceData%2A>.</span><span class="sxs-lookup"><span data-stu-id="f6608-109">Add additional characters to nodes that inherit from the <xref:System.Xml.XmlCharacterData> class using the <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A>, or <xref:System.Xml.XmlCharacterData.ReplaceData%2A> methods.</span></span>  
   
--   Modificare il contenuto rimuovendo una serie di caratteri con il metodo <xref:System.Xml.XmlCharacterData.DeleteData%2A> nei tipi di nodo che ereditano da <xref:System.Xml.XmlCharacterData>.  
+-   <span data-ttu-id="f6608-110">Modificare il contenuto rimuovendo una serie di caratteri con il metodo <xref:System.Xml.XmlCharacterData.DeleteData%2A> nei tipi di nodo che ereditano da <xref:System.Xml.XmlCharacterData>.</span><span class="sxs-lookup"><span data-stu-id="f6608-110">Modify the content by removing a range of characters using the <xref:System.Xml.XmlCharacterData.DeleteData%2A> method on node types that inherit from <xref:System.Xml.XmlCharacterData>.</span></span>  
   
- Una tecnica semplice per modificare il valore di un nodo consiste nell'usare `node.Value = "new value";`.  Nella tabella seguente sono elencati i tipi di nodo sui quali funziona quest'unica riga di codice ed esattamente quali dati verranno modificati per quel tipo di nodo.  
+ <span data-ttu-id="f6608-111">Una tecnica semplice per modificare il valore di un nodo consiste nell'usare `node.Value = "new value";`.</span><span class="sxs-lookup"><span data-stu-id="f6608-111">A simple technique for changing the value of a node is to use `node.Value = "new value";`.</span></span> <span data-ttu-id="f6608-112">Nella tabella seguente sono elencati i tipi di nodo sui quali funziona quest'unica riga di codice ed esattamente quali dati verranno modificati per quel tipo di nodo.</span><span class="sxs-lookup"><span data-stu-id="f6608-112">The following table lists the node types that this single line of code works on and exactly what data for that node type is changed.</span></span>  
   
-|Tipo di nodo|Dati modificati|  
-|------------------|---------------------|  
-|Attributo|Valore dell'attributo.|  
-|CDATASection|Contenuto di CDATASection.|  
-|Commento|Contenuto del commento.|  
-|ProcessingInstruction|Contenuto eccetto la destinazione.|  
-|Text|Il contenuto del testo.|  
-|XmlDeclaration|Il contenuto della dichiarazione, esclusi i markup `<?xml` e `?>`.|  
-|Whitespace|Il valore dello spazio vuoto.  È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.|  
-|SignificantWhitespace|Il valore dello spazio vuoto significativo.  È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.|  
+|<span data-ttu-id="f6608-113">Tipo di nodo</span><span class="sxs-lookup"><span data-stu-id="f6608-113">Node type</span></span>|<span data-ttu-id="f6608-114">Dati modificati</span><span class="sxs-lookup"><span data-stu-id="f6608-114">Data changed</span></span>|  
+|---------------|------------------|  
+|<span data-ttu-id="f6608-115">Attributo</span><span class="sxs-lookup"><span data-stu-id="f6608-115">Attribute</span></span>|<span data-ttu-id="f6608-116">Valore dell'attributo.</span><span class="sxs-lookup"><span data-stu-id="f6608-116">The value of the attribute.</span></span>|  
+|<span data-ttu-id="f6608-117">CDATASection</span><span class="sxs-lookup"><span data-stu-id="f6608-117">CDATASection</span></span>|<span data-ttu-id="f6608-118">Contenuto di CDATASection.</span><span class="sxs-lookup"><span data-stu-id="f6608-118">The content of the CDATASection.</span></span>|  
+|<span data-ttu-id="f6608-119">Commento</span><span class="sxs-lookup"><span data-stu-id="f6608-119">Comment</span></span>|<span data-ttu-id="f6608-120">Contenuto del commento.</span><span class="sxs-lookup"><span data-stu-id="f6608-120">The content of the comment.</span></span>|  
+|<span data-ttu-id="f6608-121">ProcessingInstruction</span><span class="sxs-lookup"><span data-stu-id="f6608-121">ProcessingInstruction</span></span>|<span data-ttu-id="f6608-122">Contenuto eccetto la destinazione.</span><span class="sxs-lookup"><span data-stu-id="f6608-122">The content, excluding the target.</span></span>|  
+|<span data-ttu-id="f6608-123">Text</span><span class="sxs-lookup"><span data-stu-id="f6608-123">Text</span></span>|<span data-ttu-id="f6608-124">Il contenuto del testo.</span><span class="sxs-lookup"><span data-stu-id="f6608-124">The content of the text.</span></span>|  
+|<span data-ttu-id="f6608-125">XmlDeclaration</span><span class="sxs-lookup"><span data-stu-id="f6608-125">XmlDeclaration</span></span>|<span data-ttu-id="f6608-126">Il contenuto della dichiarazione, esclusi i markup `<?xml` e `?>`.</span><span class="sxs-lookup"><span data-stu-id="f6608-126">The content of the declaration, excluding the `<?xml` and `?>` markup.</span></span>|  
+|<span data-ttu-id="f6608-127">Whitespace</span><span class="sxs-lookup"><span data-stu-id="f6608-127">Whitespace</span></span>|<span data-ttu-id="f6608-128">Il valore dello spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="f6608-128">The value of the white space.</span></span> <span data-ttu-id="f6608-129">È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.</span><span class="sxs-lookup"><span data-stu-id="f6608-129">You can set the value to be one of the four recognized XML white space characters: space, tab, CR, or LF.</span></span>|  
+|<span data-ttu-id="f6608-130">SignificantWhitespace</span><span class="sxs-lookup"><span data-stu-id="f6608-130">SignificantWhitespace</span></span>|<span data-ttu-id="f6608-131">Il valore dello spazio vuoto significativo.</span><span class="sxs-lookup"><span data-stu-id="f6608-131">The value of the significant white space.</span></span> <span data-ttu-id="f6608-132">È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.</span><span class="sxs-lookup"><span data-stu-id="f6608-132">You can set the value to be one of the four recognized XML white space characters: space, tab, CR, or LF.</span></span>|  
   
- Qualsiasi tipo di nodo non elencato nella tabella non è un tipo di nodo valido in base al quale impostare il valore.  Se si imposta un valore su qualsiasi altro tipo di nodo, viene generato un tipo <xref:System.InvalidOperationException>.  
+ <span data-ttu-id="f6608-133">Qualsiasi tipo di nodo non elencato nella tabella non è un tipo di nodo valido in base al quale impostare il valore.</span><span class="sxs-lookup"><span data-stu-id="f6608-133">Any node type not listed in the table is not a valid node type to set a value on.</span></span> <span data-ttu-id="f6608-134">Se si imposta un valore su qualsiasi altro tipo di nodo, viene generato un tipo <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="f6608-134">Setting a value on any other node type throws an <xref:System.InvalidOperationException>.</span></span>  
   
- La proprietà <xref:System.Xml.XmlNode.InnerXml%2A> consente di modificare il markup dei nodi figlio per il nodo corrente.  Se si imposta questa proprietà, i nodi figlio vengono sostituiti con il contenuto analizzato della stringa specificata.  L'analisi viene eseguita nel contesto dello spazio dei nomi corrente.  Inoltre, la proprietà <xref:System.Xml.XmlNode.InnerXml%2A> consente di rimuovere le dichiarazioni ridondanti dello spazio dei nomi.  Di conseguenza, anche in caso di numerose operazioni di taglia e incolla, le dimensioni del documento non aumenteranno a causa di dichiarazioni ridondanti dello spazio dei nomi.  Per un esempio di codice in cui viene illustrato l'effetto degli spazi dei nomi sull'operazione <xref:System.Xml.XmlNode.InnerXml%2A>, vedere la proprietà <xref:System.Xml.XmlDocument.InnerXml%2A>.  
+ <span data-ttu-id="f6608-135">La proprietà <xref:System.Xml.XmlNode.InnerXml%2A> consente di modificare il markup dei nodi figlio per il nodo corrente.</span><span class="sxs-lookup"><span data-stu-id="f6608-135">The <xref:System.Xml.XmlNode.InnerXml%2A> property changes the markup of the child nodes for the current node.</span></span> <span data-ttu-id="f6608-136">Se si imposta questa proprietà, i nodi figlio vengono sostituiti con il contenuto analizzato della stringa specificata.</span><span class="sxs-lookup"><span data-stu-id="f6608-136">Setting this property replaces the child nodes with the parsed contents of the given string.</span></span> <span data-ttu-id="f6608-137">L'analisi viene eseguita nel contesto dello spazio dei nomi corrente.</span><span class="sxs-lookup"><span data-stu-id="f6608-137">The parsing is done in the current namespace context.</span></span> <span data-ttu-id="f6608-138">Inoltre, la proprietà <xref:System.Xml.XmlNode.InnerXml%2A> consente di rimuovere le dichiarazioni ridondanti dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="f6608-138">In addition, <xref:System.Xml.XmlNode.InnerXml%2A> removes redundant namespace declarations.</span></span> <span data-ttu-id="f6608-139">Di conseguenza, anche in caso di numerose operazioni di taglia e incolla, le dimensioni del documento non aumenteranno a causa di dichiarazioni ridondanti dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="f6608-139">As a result, numerous cut and paste operations do not increase the size of your document with redundant namespace declarations.</span></span> <span data-ttu-id="f6608-140">Per un esempio di codice in cui viene illustrato l'effetto degli spazi dei nomi sull'operazione <xref:System.Xml.XmlNode.InnerXml%2A>, vedere la proprietà <xref:System.Xml.XmlDocument.InnerXml%2A>.</span><span class="sxs-lookup"><span data-stu-id="f6608-140">For a code example showing the effect of namespaces on the <xref:System.Xml.XmlNode.InnerXml%2A> operation, see the <xref:System.Xml.XmlDocument.InnerXml%2A> property.</span></span>  
   
- Quando vengono usati, i metodi <xref:System.Xml.XmlCharacterData.ReplaceData%2A> e <xref:System.Xml.XmlNode.RemoveChild%2A> restituiscono il nodo sostituito o rimosso,  che può quindi essere reinserito altrove nel DOM XML.  Il metodo <xref:System.Xml.XmlCharacterData.ReplaceData%2A> consente di eseguire due controlli di convalida sul nodo che viene inserito nel documento.  Il primo controllo assicura che il nodo stia diventando figlio di un nodo che può avere nodi figlio del suo tipo.  Il secondo controllo assicura che il nodo inserito non sia progenitore del nodo del quale sta diventando figlio.  In presenza della violazione di una di queste condizioni, viene generato un tipo <xref:System.InvalidOperationException>.  
+ <span data-ttu-id="f6608-141">Quando vengono usati, i metodi <xref:System.Xml.XmlCharacterData.ReplaceData%2A> e <xref:System.Xml.XmlNode.RemoveChild%2A> restituiscono il nodo sostituito o rimosso,</span><span class="sxs-lookup"><span data-stu-id="f6608-141">When using the <xref:System.Xml.XmlCharacterData.ReplaceData%2A> and <xref:System.Xml.XmlNode.RemoveChild%2A> methods, the methods return the replaced or removed node.</span></span> <span data-ttu-id="f6608-142">che può quindi essere reinserito altrove nel DOM XML.</span><span class="sxs-lookup"><span data-stu-id="f6608-142">This node can then be reinserted somewhere else in the XML Document Object Model (DOM).</span></span> <span data-ttu-id="f6608-143">Il metodo <xref:System.Xml.XmlCharacterData.ReplaceData%2A> consente di eseguire due controlli di convalida sul nodo che viene inserito nel documento.</span><span class="sxs-lookup"><span data-stu-id="f6608-143">The <xref:System.Xml.XmlCharacterData.ReplaceData%2A> method does two validation checks on the node being inserted into the document.</span></span> <span data-ttu-id="f6608-144">Il primo controllo assicura che il nodo stia diventando figlio di un nodo che può avere nodi figlio del suo tipo.</span><span class="sxs-lookup"><span data-stu-id="f6608-144">The first check ensures that the node is becoming a child of a node that can have child nodes of its type.</span></span> <span data-ttu-id="f6608-145">Il secondo controllo assicura che il nodo inserito non sia progenitore del nodo del quale sta diventando figlio.</span><span class="sxs-lookup"><span data-stu-id="f6608-145">The second check ensures that the node being inserted is not an ancestor of the node it is becoming a child of.</span></span> <span data-ttu-id="f6608-146">In presenza della violazione di una di queste condizioni, viene generato un tipo <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="f6608-146">Violating either of these conditions throws an <xref:System.InvalidOperationException>.</span></span>  
   
- L'aggiunta o la rimozione di un figlio in sola lettura da un nodo che può essere modificato è un'operazione valida.  Ma se si tenta di modificare il nodo in sola lettura, viene generato un tipo <xref:System.InvalidOperationException>.  Un esempio di questa situazione è la modifica dei nodi figlio di un nodo <xref:System.Xml.XmlEntityReference>.  Poiché i nodi figlio sono in sola lettura, non possono essere modificati  e se si tenta di modificarli, viene generato un tipo <xref:System.InvalidOperationException>.  
+ <span data-ttu-id="f6608-147">L'aggiunta o la rimozione di un figlio in sola lettura da un nodo che può essere modificato è un'operazione valida.</span><span class="sxs-lookup"><span data-stu-id="f6608-147">It is valid to add or remove a read-only child from a node that can be edited.</span></span> <span data-ttu-id="f6608-148">Ma se si tenta di modificare il nodo in sola lettura, viene generato un tipo <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="f6608-148">However, attempts to modify the read-only node itself throws an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="f6608-149">Un esempio di questa situazione è la modifica dei nodi figlio di un nodo <xref:System.Xml.XmlEntityReference>.</span><span class="sxs-lookup"><span data-stu-id="f6608-149">An example of this is modifying the children of an <xref:System.Xml.XmlEntityReference> node.</span></span> <span data-ttu-id="f6608-150">Poiché i nodi figlio sono in sola lettura, non possono essere modificati</span><span class="sxs-lookup"><span data-stu-id="f6608-150">The children are read-only and cannot be modified.</span></span> <span data-ttu-id="f6608-151">e se si tenta di modificarli, viene generato un tipo <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="f6608-151">Any attempt to modify them throws an <xref:System.InvalidOperationException>.</span></span>  
   
-## Vedere anche  
- [Modello DOM \(Document Object Model\) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="f6608-152">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f6608-152">See Also</span></span>  
+ [<span data-ttu-id="f6608-153">XML Document Object Model (DOM)</span><span class="sxs-lookup"><span data-stu-id="f6608-153">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

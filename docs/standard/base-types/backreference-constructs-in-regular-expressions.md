@@ -1,126 +1,132 @@
 ---
-title: "Costrutti di backreference nelle espressioni regolari | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espressioni regolari di .NET Framework, costrutti di backreference"
-  - "backreference"
-  - "costrutti, backreference"
-  - "espressioni regolari, costrutti di backreference"
+title: Costrutti di backreference nelle espressioni regolari
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- backreferences
+- constructs, backreference
+- .NET Framework regular expressions, backreference constructs
+- regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Costrutti di backreference nelle espressioni regolari
-I backreference forniscono un modo pratico per identificare un carattere ripetuto o una sottostringa all'interno di una stringa.  Ad esempio, se nella stringa di input sono contenute più occorrenze di una sottostringa arbitraria, è possibile creare una corrispondenza della prima occorrenza con un gruppo Capture, quindi utilizzare un backreference per individuare le corrispondenze con le occorrenze successive della sottostringa.  
+# <a name="backreference-constructs-in-regular-expressions"></a><span data-ttu-id="b57e6-102">Costrutti di backreference nelle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="b57e6-102">Backreference Constructs in Regular Expressions</span></span>
+<span data-ttu-id="b57e6-103">I backreference sono uno strumento utile per identificare un carattere ripetuto o una sottostringa all'interno di una stringa.</span><span class="sxs-lookup"><span data-stu-id="b57e6-103">Backreferences provide a convenient way to identify a repeated character or substring within a string.</span></span> <span data-ttu-id="b57e6-104">Se la stringa di input contiene ad esempio più occorrenze di una sottostringa arbitraria, è possibile trovare la prima occorrenza con un gruppo di acquisizione e usare un backreference per trovare le occorrenze successive della sottostringa.</span><span class="sxs-lookup"><span data-stu-id="b57e6-104">For example, if the input string contains multiple occurrences of an arbitrary substring, you can match the first occurrence with a capturing group, and then use a backreference to match subsequent occurrences of the substring.</span></span>  
   
 > [!NOTE]
->  Una sintassi separata è utilizzata per fare riferimento a gruppi di acquisizione denominati e numerati nelle stringhe di sostituzione.  Per ulteriori informazioni, vedere [Sostituzioni](../../../docs/standard/base-types/substitutions-in-regular-expressions.md).  
+>  <span data-ttu-id="b57e6-105">Per fare riferimento a gruppi di acquisizione denominati e numerati in stringhe sostitutive, si usa una sintassi separata.</span><span class="sxs-lookup"><span data-stu-id="b57e6-105">A separate syntax is used to refer to named and numbered capturing groups in replacement strings.</span></span> <span data-ttu-id="b57e6-106">Per altre informazioni, vedere [Substitutions](substitutions-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="b57e6-106">For more information, see [Substitutions](substitutions-in-regular-expressions.md).</span></span>  
   
- .NET Framework definisce elementi di linguaggio separati per fare riferimento a gruppi di acquisizione numerati e denominati.  Per ulteriori informazioni sui gruppi di acquisizione, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ <span data-ttu-id="b57e6-107">.NET definisce elementi di linguaggio separati per fare riferimento a gruppi di acquisizione denominati e numerati.</span><span class="sxs-lookup"><span data-stu-id="b57e6-107">.NET defines separate language elements to refer to numbered and named capturing groups.</span></span> <span data-ttu-id="b57e6-108">Per ulteriori informazioni sui gruppi di acquisizione, vedere [costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="b57e6-108">For more information about capturing groups, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
-## Backreference numerati  
- Un backreference numerato utilizza la sintassi seguente:  
+## <a name="numbered-backreferences"></a><span data-ttu-id="b57e6-109">Backreference numerati</span><span class="sxs-lookup"><span data-stu-id="b57e6-109">Numbered Backreferences</span></span>  
+ <span data-ttu-id="b57e6-110">Nei backreference numerati si usa la sintassi seguente:</span><span class="sxs-lookup"><span data-stu-id="b57e6-110">A numbered backreference uses the following syntax:</span></span>  
   
- `\` *number*  
+ <span data-ttu-id="b57e6-111">`\` *numero*</span><span class="sxs-lookup"><span data-stu-id="b57e6-111">`\` *number*</span></span>  
   
- dove *number* è la posizione ordinale di un gruppo di acquisizione nell'espressione regolare.  Ad esempio, `\4` corrisponde al contenuto del quarto gruppo di acquisizione.  Se il *number* non è definito nel criterio di espressione regolare, si verifica un errore di analisi e il motore delle espressioni regolari genera una <xref:System.ArgumentException>.  Ad esempio, l'espressione regolare `\b(\w+)\s\1` è valida perché `(\w+)` è il primo e l'unico gruppo di acquisizione nell'espressione.  D'altra parte, `\b(\w+)\s\2` non è valido e genera un'eccezione di argomento, perché non esiste alcun gruppo di acquisizione numerato `\2`.  
+ <span data-ttu-id="b57e6-112">dove *numero* è la posizione corretta del gruppo di acquisizione nell'espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="b57e6-112">where *number* is the ordinal position of the capturing group in the regular expression.</span></span> <span data-ttu-id="b57e6-113">Ad esempio, `\4` corrisponde al contenuto del quarto gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-113">For example, `\4` matches the contents of the fourth capturing group.</span></span> <span data-ttu-id="b57e6-114">Se *numero* non definito nel criterio di espressione regolare, si verifica un errore di analisi e il motore delle espressioni regolari genera un <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="b57e6-114">If *number* is not defined in the regular expression pattern, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span> <span data-ttu-id="b57e6-115">Ad esempio, l'espressione regolare `\b(\w+)\s\1` è valida, poiché `(\w+)` è il primo e l'unico gruppo di acquisizione nell'espressione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-115">For example, the regular expression `\b(\w+)\s\1` is valid, because `(\w+)` is the first and only capturing group in the expression.</span></span> <span data-ttu-id="b57e6-116">D'altra parte, `\b(\w+)\s\2` non è un'espressione valida e genera un'eccezione di argomento, perché non esistono gruppi di acquisizione numerati `\2`.</span><span class="sxs-lookup"><span data-stu-id="b57e6-116">On the other hand, `\b(\w+)\s\2` is invalid and throws an argument exception, because there is no capturing group numbered `\2`.</span></span>  
   
- Si noti l'ambiguità tra i codici di escape ottali \(ad esempio, `\16`\) e backreference `\`*number* che utilizzano la stessa notazione.  L'ambiguità viene risolta nel modo seguente:  
+ <span data-ttu-id="b57e6-117">Si noti l'ambiguità tra i codici di escape ottale (ad esempio `\16`) e `\` *numero* backreference che usano la stessa notazione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-117">Note the ambiguity between octal escape codes (such as `\16`) and `\`*number* backreferences that use the same notation.</span></span> <span data-ttu-id="b57e6-118">Questa ambiguità viene risolta nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="b57e6-118">This ambiguity is resolved as follows:</span></span>  
   
--   Le espressioni da `\1` a `\9` sono sempre interpretate come backreference, non come codici ottali.  
+-   <span data-ttu-id="b57e6-119">Le espressioni da `\1` a `\9` vengono sempre interpretate come backreference e non come codici ottali.</span><span class="sxs-lookup"><span data-stu-id="b57e6-119">The expressions `\1` through `\9` are always interpreted as backreferences, and not as octal codes.</span></span>  
   
--   Se la prima cifra di un'espressione composta da più cifre è 8 o 9 \(ad esempio `\80` o `\91`\), l'espressione verrà interpretata come un valore letterale.  
+-   <span data-ttu-id="b57e6-120">Se la prima cifra di un'espressione composta da più cifre è 8 o 9, ad esempio `\80` o `\91`, l'espressione viene interpretata come valore letterale.</span><span class="sxs-lookup"><span data-stu-id="b57e6-120">If the first digit of a multidigit expression is 8 or 9 (such as `\80` or `\91`), the expression as interpreted as a literal.</span></span>  
   
--   Le espressioni da `\10` e superiori vengono considerate backreference se sono presenti backreference corrispondenti a quel numero; in caso contrario, vengono interpretate come codici ottali.  
+-   <span data-ttu-id="b57e6-121">Le espressioni con numerazione a partire da `\10` vengono considerate backreference se esiste un backreference a tale numero; in caso contrario, vengono interpretate come codici ottali.</span><span class="sxs-lookup"><span data-stu-id="b57e6-121">Expressions from `\10` and greater are considered backreferences if there is a backreference corresponding to that number; otherwise, they are interpreted as octal codes.</span></span>  
   
--   L'inclusione di un riferimento a un numero di gruppo non definito in un'espressione regolare provoca un errore di analisi e il motore delle espressioni regolari genera un <xref:System.ArgumentException>.  
+-   <span data-ttu-id="b57e6-122">Se un'espressione regolare contiene un backreference in un numero di gruppo indefinito, si verifica un errore di analisi e il motore delle espressioni regolari genera un <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="b57e6-122">If a regular expression contains a backreference to an undefined group number, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span>  
   
- Se l'ambiguità costituisce un problema, è possibile utilizzare la notazione `\k<`*name*`>` che non è ambigua e non può essere confusa con la notazione peri numeri ottali.  Allo stesso modo, i codici esadecimali quali `\xdd` non sono ambigui e non possono quindi venire confusi con backreference.  
+ <span data-ttu-id="b57e6-123">Se l'ambiguità costituisce un problema, è possibile utilizzare il `\k<` *nome* `>` notazione, che è ambiguo e non può essere confuso con ottali.</span><span class="sxs-lookup"><span data-stu-id="b57e6-123">If the ambiguity is a problem, you can use the `\k<`*name*`>` notation, which is unambiguous and cannot be confused with octal character codes.</span></span> <span data-ttu-id="b57e6-124">Analogamente, i codici esadecimale come `\xdd` non sono ambigui e non possono essere confusi con backreference.</span><span class="sxs-lookup"><span data-stu-id="b57e6-124">Similarly, hexadecimal codes such as `\xdd` are unambiguous and cannot be confused with backreferences.</span></span>  
   
- Nel seguente esempio vengono individuati caratteri alfanumerici doppi in una stringa.  Definisce un'espressione regolare, `(\w)\1`, costituita dagli elementi seguenti.  
+ <span data-ttu-id="b57e6-125">L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa.</span><span class="sxs-lookup"><span data-stu-id="b57e6-125">The following example finds doubled word characters in a string.</span></span> <span data-ttu-id="b57e6-126">Viene definita un'espressione regolare `(\w)\1` costituita dagli elementi seguenti.</span><span class="sxs-lookup"><span data-stu-id="b57e6-126">It defines a regular expression, `(\w)\1`, which consists of the following elements.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`(\w)`|Corrisponde a un carattere alfanumerico e lo assegna al primo gruppo di acquisizione.|  
-|`\1`|Corrisponde al carattere successivo uguale al valore del primo gruppo di acquisizione.|  
+|<span data-ttu-id="b57e6-127">Elemento</span><span class="sxs-lookup"><span data-stu-id="b57e6-127">Element</span></span>|<span data-ttu-id="b57e6-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b57e6-128">Description</span></span>|  
+|-------------|-----------------|  
+|`(\w)`|<span data-ttu-id="b57e6-129">Trova la corrispondenza di un carattere alfanumerico e la assegna al primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-129">Match a word character and assign it to the first capturing group.</span></span>|  
+|`\1`|<span data-ttu-id="b57e6-130">Trova la corrispondenza del carattere successivo, uguale al valore del primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-130">Match the next character that is the same as the value of the first capturing group.</span></span>|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference1.cs#1)]
  [!code-vb[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference1.vb#1)]  
   
-## Backreference denominati  
- Un backreference denominato viene definito mediante la sintassi seguente:  
+## <a name="named-backreferences"></a><span data-ttu-id="b57e6-131">Backreference denominati</span><span class="sxs-lookup"><span data-stu-id="b57e6-131">Named Backreferences</span></span>  
+ <span data-ttu-id="b57e6-132">Per definire un backreference denominato, usare la sintassi seguente:</span><span class="sxs-lookup"><span data-stu-id="b57e6-132">A named backreference is defined by using the following syntax:</span></span>  
   
- `\k<` *name* `>`  
+ <span data-ttu-id="b57e6-133">`\k<` *nome* `>`</span><span class="sxs-lookup"><span data-stu-id="b57e6-133">`\k<` *name* `>`</span></span>  
   
- oppure:  
+ <span data-ttu-id="b57e6-134">oppure:</span><span class="sxs-lookup"><span data-stu-id="b57e6-134">or:</span></span>  
   
- `\k'` *name* `'`  
+ <span data-ttu-id="b57e6-135">`\k'` *name* `'`</span><span class="sxs-lookup"><span data-stu-id="b57e6-135">`\k'` *name* `'`</span></span>  
   
- dove *name* è il nome di un gruppo di acquisizione definito nel modello di espressione regolare.  Se il *name* non è definito nel criterio di espressione regolare, si verifica un errore di analisi e il motore delle espressioni regolari genera una <xref:System.ArgumentException>.  
+ <span data-ttu-id="b57e6-136">dove *nome* è il nome di un gruppo di acquisizione definito nel modello di espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="b57e6-136">where *name* is the name of a capturing group defined in the regular expression pattern.</span></span> <span data-ttu-id="b57e6-137">Se *nome* non definito nel criterio di espressione regolare, si verifica un errore di analisi e il motore delle espressioni regolari genera un <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="b57e6-137">If *name* is not defined in the regular expression pattern, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span>  
   
- Nel seguente esempio vengono individuati caratteri alfanumerici doppi in una stringa.  Definisce un'espressione regolare, `(?<char>\w)\k<char>`, costituita dagli elementi seguenti.  
+ <span data-ttu-id="b57e6-138">L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa.</span><span class="sxs-lookup"><span data-stu-id="b57e6-138">The following example finds doubled word characters in a string.</span></span> <span data-ttu-id="b57e6-139">Viene definita un'espressione regolare `(?<char>\w)\k<char>` costituita dagli elementi seguenti.</span><span class="sxs-lookup"><span data-stu-id="b57e6-139">It defines a regular expression, `(?<char>\w)\k<char>`, which consists of the following elements.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`(?<char>\w)`|Corrisponde a un carattere alfanumerico e lo assegna a un gruppo di acquisizione denominato `char`.|  
-|`\k<char>`|Corrisponde al carattere successivo uguale al valore del gruppo di acquisizione `char`.|  
+|<span data-ttu-id="b57e6-140">Elemento</span><span class="sxs-lookup"><span data-stu-id="b57e6-140">Element</span></span>|<span data-ttu-id="b57e6-141">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b57e6-141">Description</span></span>|  
+|-------------|-----------------|  
+|`(?<char>\w)`|<span data-ttu-id="b57e6-142">Corrisponde a un carattere alfanumerico e assegnarlo a un gruppo di acquisizione denominato `char`.</span><span class="sxs-lookup"><span data-stu-id="b57e6-142">Match a word character and assign it to a capturing group named `char`.</span></span>|  
+|`\k<char>`|<span data-ttu-id="b57e6-143">Corrisponde al carattere successivo è lo stesso valore di `char` gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-143">Match the next character that is the same as the value of the `char` capturing group.</span></span>|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
   
- Il *name* può anche essere la rappresentazione in forma di stringa di un numero.  Nell'esempio seguente viene utilizzata l'espressione regolare `(?<2>\w)\k<2>` per trovare caratteri alfanumerici doppi in una stringa.  
+ <span data-ttu-id="b57e6-144">Si noti che *nome* può anche essere la rappresentazione di stringa di un numero.</span><span class="sxs-lookup"><span data-stu-id="b57e6-144">Note that *name* can also be the string representation of a number.</span></span> <span data-ttu-id="b57e6-145">Nell'esempio seguente viene usata l'espressione regolare `(?<2>\w)\k<2>` per trovare caratteri alfanumerici doppi all'interno di una stringa.</span><span class="sxs-lookup"><span data-stu-id="b57e6-145">For example, the following example uses the regular expression `(?<2>\w)\k<2>` to find doubled word characters in a string.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
  [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
   
-## Corrispondenza dei backreference  
- Un riferimento a una corrispondenza memorizzata si riferisce alla definizione più recente di un gruppo \(quella che si trova subito a sinistra, quando l'analisi procede da sinistra a destra\).  Quando un gruppo genera più acquisizioni, un backreference farà riferimento all'acquisizione più recente.  
+## <a name="what-backreferences-match"></a><span data-ttu-id="b57e6-146">Corrispondenza dei backreference</span><span class="sxs-lookup"><span data-stu-id="b57e6-146">What Backreferences Match</span></span>  
+ <span data-ttu-id="b57e6-147">Un backreference fa riferimento alla definizione più recente di un gruppo, vale a dire alla definizione all'estrema sinistra, in caso di corrispondenza da sinistra a destra.</span><span class="sxs-lookup"><span data-stu-id="b57e6-147">A backreference refers to the most recent definition of a group (the definition most immediately to the left, when matching left to right).</span></span> <span data-ttu-id="b57e6-148">Quando un gruppo esegue più acquisizioni, un backreference fa riferimento all'acquisizione più recente.</span><span class="sxs-lookup"><span data-stu-id="b57e6-148">When a group makes multiple captures, a backreference refers to the most recent capture.</span></span>  
   
- Nell'esempio seguente viene incluso un modello di espressione regolare, `(?<1>a)(?<1>\1b)*`, che ridefinisce il gruppo denominato \\1.  Nella tabella riportata di seguito vengono descritti i singoli modelli nell'espressione regolare.  
+ <span data-ttu-id="b57e6-149">L'esempio seguente include un modello di espressione regolare `(?<1>a)(?<1>\1b)*`, che ridefinisce il gruppo denominato \1.</span><span class="sxs-lookup"><span data-stu-id="b57e6-149">The following example includes a regular expression pattern, `(?<1>a)(?<1>\1b)*`, which redefines the \1 named group.</span></span> <span data-ttu-id="b57e6-150">Nella tabella seguente sono descritti i modelli di espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="b57e6-150">The following table describes each pattern in the regular expression.</span></span>  
   
-|Modello|Descrizione|  
+|<span data-ttu-id="b57e6-151">Criterio</span><span class="sxs-lookup"><span data-stu-id="b57e6-151">Pattern</span></span>|<span data-ttu-id="b57e6-152">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b57e6-152">Description</span></span>|  
 |-------------|-----------------|  
-|`(?<1>a)`|Corrisponde al carattere "a" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
-|`(?<1>\1b)*`|Trova la corrispondenza per 0 o 1 occorrenza del gruppo denominato `1` insieme a una "b" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
+|`(?<1>a)`|<span data-ttu-id="b57e6-153">Corrispondenza con il carattere "a" e assegnare il risultato al gruppo di acquisizione denominato `1`.</span><span class="sxs-lookup"><span data-stu-id="b57e6-153">Match the character "a" and assign the result to the capturing group named `1`.</span></span>|  
+|`(?<1>\1b)*`|<span data-ttu-id="b57e6-154">Occorrenza di corrispondenza di 0 o 1 del gruppo denominato `1` insieme a un "b" e di assegnare il risultato al gruppo di acquisizione denominato `1`.</span><span class="sxs-lookup"><span data-stu-id="b57e6-154">Match 0 or 1 occurrence of the group named `1` along with a "b", and assign the result to the capturing group named `1`.</span></span>|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
   
- Nel confronto dell'espressione regolare con la stringa di input \("aababb"\), il motore delle espressioni regolari esegue le seguenti operazioni:  
+ <span data-ttu-id="b57e6-155">Confrontando l'espressione regolare con la stringa di input ("aababb"), il motore delle espressioni regolari esegue le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="b57e6-155">In comparing the regular expression with the input string ("aababb"), the regular expression engine performs the following operations:</span></span>  
   
-1.  parte dall'inizio della stringa e trova una corrispondenza riuscita per "a" con l'espressione `(?<1>a)`.  A questo punto il valore del gruppo `1` è "a".  
+1.  <span data-ttu-id="b57e6-156">Parte dall'inizio della stringa e trova una corrispondenza per "a" con l'espressione `(?<1>a)`.</span><span class="sxs-lookup"><span data-stu-id="b57e6-156">It starts at the beginning of the string, and successfully matches "a" with the expression `(?<1>a)`.</span></span> <span data-ttu-id="b57e6-157">Il valore di `1` gruppo è ora "a".</span><span class="sxs-lookup"><span data-stu-id="b57e6-157">The value of the `1` group is now "a".</span></span>  
   
-2.  Avanza al secondo carattere e trova una corrispondenza corretta della stringa "ab" con l'espressione `\1b` o "ab".  Assegna quindi il risultato, "ab", a `\1`.  
+2.  <span data-ttu-id="b57e6-158">Passa al secondo carattere e trova una corrispondenza per la stringa "ab" con l'espressione `\1b` o "ab".</span><span class="sxs-lookup"><span data-stu-id="b57e6-158">It advances to the second character, and successfully matches the string "ab" with the expression `\1b`, or "ab".</span></span> <span data-ttu-id="b57e6-159">Assegna il risultato "ab" a `\1`.</span><span class="sxs-lookup"><span data-stu-id="b57e6-159">It then assigns the result, "ab" to `\1`.</span></span>  
   
-3.  Avanza al quarto carattere.  Per l'espressione `(?<1>\1b)` una corrispondenza deve essere individuata zero o più volte, ai fini di una corrispondenza corretta alla stringa "abb" con l'espressione `\1b`.  Assegna il risultato, "abb", nuovamente a `\1`.  
+3.  <span data-ttu-id="b57e6-160">Passa al quarto carattere.</span><span class="sxs-lookup"><span data-stu-id="b57e6-160">It advances to the fourth character.</span></span> <span data-ttu-id="b57e6-161">Per l'espressione `(?<1>\1b)` la corrispondenza individuata deve essere zero o più volte, ai fini di una corrispondenza corretta della stringa "abb" con l'espressione `\1b`.</span><span class="sxs-lookup"><span data-stu-id="b57e6-161">The expression `(?<1>\1b)` is to be matched zero or more times, so it successfully matches the string "abb" with the expression `\1b`.</span></span> <span data-ttu-id="b57e6-162">Assegna il risultato "abb" nuovamente a `\1`.</span><span class="sxs-lookup"><span data-stu-id="b57e6-162">It assigns the result, "abb", back to `\1`.</span></span>  
   
- In questo esempio, `*` è un quantificatore di cicli \-\-viene eseguito ripetutamente finché il motore delle espressioni regolari non trova una corrispondenza con il modello che definisce.  I quantificatori di cicli non cancellano le definizioni di gruppi.  
+ <span data-ttu-id="b57e6-163">In questo esempio `*` è un quantificatore di cicli, vale a dire che viene eseguito ripetutamente finché il motore delle espressioni regolari non trova una corrispondenza con il modello che definisce.</span><span class="sxs-lookup"><span data-stu-id="b57e6-163">In this example, `*` is a looping quantifier -- it is evaluated repeatedly until the regular expression engine cannot match the pattern it defines.</span></span> <span data-ttu-id="b57e6-164">I quantificatori di cicli non cancellano le definizioni di gruppi.</span><span class="sxs-lookup"><span data-stu-id="b57e6-164">Looping quantifiers do not clear group definitions.</span></span>  
   
- Se un gruppo non ha acquisito alcuna sottostringa, un backreference a tale gruppo risulterà non definito e non verrà mai soddisfatto.  Ciò è illustrato dal modello di espressione regolare `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, definito nel modo seguente:  
+ <span data-ttu-id="b57e6-165">Se un gruppo non ha acquisito alcuna sottostringa, un backreference a tale gruppo risulterà non definito e non troverà mai corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="b57e6-165">If a group has not captured any substrings, a backreference to that group is undefined and never matches.</span></span> <span data-ttu-id="b57e6-166">Questo comportamento è illustrato il modello di espressione regolare `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, che viene definito come segue:</span><span class="sxs-lookup"><span data-stu-id="b57e6-166">This is illustrated by the regular expression pattern `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, which is defined as follows:</span></span>  
   
-|Modello|Descrizione|  
+|<span data-ttu-id="b57e6-167">Criterio</span><span class="sxs-lookup"><span data-stu-id="b57e6-167">Pattern</span></span>|<span data-ttu-id="b57e6-168">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b57e6-168">Description</span></span>|  
 |-------------|-----------------|  
-|`\b`|Inizia la corrispondenza sul confine di parola.|  
-|`(\p{Lu}{2})`|Corrisponde a due lettere maiuscole.  Primo gruppo di acquisizione.|  
-|`(\d{2})?`|Corrisponde a zero o a un'occorrenza di due cifre decimali.  Secondo gruppo di acquisizione.|  
-|`(\p{Lu}{2})`|Corrisponde a due lettere maiuscole.  Equivale al terzo gruppo di acquisizione.|  
-|`\b`|Termina la corrispondenza sul confine di parola.|  
+|`\b`|<span data-ttu-id="b57e6-169">Inizia la corrispondenza sul confine di parola.</span><span class="sxs-lookup"><span data-stu-id="b57e6-169">Begin the match on a word boundary.</span></span>|  
+|`(\p{Lu}{2})`|<span data-ttu-id="b57e6-170">Trova la corrispondenza di due maiuscole.</span><span class="sxs-lookup"><span data-stu-id="b57e6-170">Match two uppercase letters.</span></span> <span data-ttu-id="b57e6-171">Equivale al primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-171">This is the first capturing group.</span></span>|  
+|`(\d{2})?`|<span data-ttu-id="b57e6-172">Trova la corrispondenza di zero o di una occorrenza di due cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="b57e6-172">Match zero or one occurrence of two decimal digits.</span></span> <span data-ttu-id="b57e6-173">Equivale al secondo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-173">This is the second capturing group.</span></span>|  
+|`(\p{Lu}{2})`|<span data-ttu-id="b57e6-174">Trova la corrispondenza di due maiuscole.</span><span class="sxs-lookup"><span data-stu-id="b57e6-174">Match two uppercase letters.</span></span> <span data-ttu-id="b57e6-175">Equivale al terzo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="b57e6-175">This is the third capturing group.</span></span>|  
+|`\b`|<span data-ttu-id="b57e6-176">Termina la corrispondenza sul confine di parola.</span><span class="sxs-lookup"><span data-stu-id="b57e6-176">End the match on a word boundary.</span></span>|  
   
- Una stringa di input può corrispondere a questa espressione regolare anche se le due cifre decimali definite dal secondo gruppo di acquisizione non sono presenti.  L'esempio seguente mostra che anche se la corrispondenza viene eseguita correttamente, viene individuato un gruppo di acquisizione vuoto tra due gruppi di acquisizione con corrispondenza corretta.  
+ <span data-ttu-id="b57e6-177">Una stringa di input può corrispondere a questa espressione regolare, anche se le due cifre decimali definite dal secondo gruppo di acquisizione non sono presenti.</span><span class="sxs-lookup"><span data-stu-id="b57e6-177">An input string can match this regular expression even if the two decimal digits that are defined by the second capturing group are not present.</span></span> <span data-ttu-id="b57e6-178">L'esempio seguente illustra che, nonostante una corrispondenza corretta, viene individuato un gruppo di acquisizione vuoto tra due gruppi di acquisizione con corrispondenza corretta.</span><span class="sxs-lookup"><span data-stu-id="b57e6-178">The following example shows that even though the match is successful, an empty capturing group is found between two successful capturing groups.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
  [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  
   
-## Vedere anche  
- [Linguaggio di espressioni regolari \- Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a><span data-ttu-id="b57e6-179">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b57e6-179">See Also</span></span>  
+ [<span data-ttu-id="b57e6-180">Linguaggio di espressioni regolari - Riferimento rapido</span><span class="sxs-lookup"><span data-stu-id="b57e6-180">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

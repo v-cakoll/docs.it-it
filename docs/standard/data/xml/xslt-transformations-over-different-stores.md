@@ -1,33 +1,31 @@
 ---
-title: "Trasformazioni XSLT su diversi archivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Trasformazioni XSLT su diversi archivi
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b909b754c1d0d3007e06cd04376413d02cbc2f76
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Trasformazioni XSLT su diversi archivi
+# <a name="xslt-transformations-over-different-stores"></a><span data-ttu-id="50af7-102">Trasformazioni XSLT su diversi archivi</span><span class="sxs-lookup"><span data-stu-id="50af7-102">XSLT Transformations Over Different Stores</span></span>
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  È possibile eseguire le trasformazioni XSLT \(Extensible Stylesheet Language for Transformations\) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  <span data-ttu-id="50af7-103">La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="50af7-103">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="50af7-104">È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="50af7-104">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="50af7-105">Vedere [utilizzando la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [la migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) per ulteriori informazioni.</span><span class="sxs-lookup"><span data-stu-id="50af7-105">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- ADO.NET e le classi XML in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] costituiscono un modello di programmazione unificato per accedere ai dati.  Tali dati sono rappresentati come dati XML, vale a dire testo delimitato da tag e dati relazionali, ovvero tabelle composte da righe e colonne.  I dati XML in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vengono letti dall'XML da qualsiasi flusso di dati in alberi di nodi DOM, dove è possibile accedere ai dati a livello di programmazione, mentre ADO.NET fornisce il mezzo per accedere e modificare i dati relazionali all'interno di un oggetto <xref:System.Data.DataSet>.  
+ <span data-ttu-id="50af7-106">ADO.NET e le classi XML in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] costituiscono un modello di programmazione unificato per accedere ai dati.</span><span class="sxs-lookup"><span data-stu-id="50af7-106">The ADO.NET and the XML classes in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provide a unified programming model to access data.</span></span> <span data-ttu-id="50af7-107">Tali dati sono rappresentati come dati XML, vale a dire testo delimitato da tag e dati relazionali, ovvero tabelle composte da righe e colonne.</span><span class="sxs-lookup"><span data-stu-id="50af7-107">That data is represented as both XML data, which is text delimited by tags, and relational data, which is tables consisting of rows and columns.</span></span> <span data-ttu-id="50af7-108">I dati XML in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vengono letti dall'XML da qualsiasi flusso di dati in alberi di nodi DOM, dove è possibile accedere ai dati a livello di programmazione, mentre ADO.NET fornisce il mezzo per accedere e modificare i dati relazionali all'interno di un oggetto <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="50af7-108">The XML in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] reads XML data from any data stream into XML Document Object Model (DOM) node trees, where data can be accessed programmatically, while ADO.NET provides the means to access and manipulate relational data within a <xref:System.Data.DataSet> object.</span></span>  
   
- Il DOM XML fornisce l'accesso ai dati nei documenti XML e nelle classi aggiuntive per scrivere, leggere e spostarsi all'interno dei documenti XML.  Queste classi sono supportate nello spazio dei nomi <xref:System.Xml>, che unifica inoltre il DOM XML con i servizi di accesso ai dati forniti da ADO.NET.  L'oggetto <xref:System.Xml.XmlDataDocument> fornisce l'accesso relazionale ai dati.  Il tipo <xref:System.Xml.XmlDataDocument> associa il codice XML ai dati relazionali in un <xref:System.Data.DataSet> di ADO.NET.  In qualsiasi applicazione basata su [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vengono usate le classi nello spazio dei nomi <xref:System.Xml> per accedere e modificare i documenti XML e i dati relazionali nel tipo <xref:System.Xml.XmlDataDocument>.  Questa implementazione supporta le architetture a più livelli per la raccolta e la distribuzione dei dati.  Per altre informazioni, vedere [Integrazione di XML con dati relazionali e ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).  
+ <span data-ttu-id="50af7-109">Il DOM XML fornisce l'accesso ai dati nei documenti XML e nelle classi aggiuntive per scrivere, leggere e spostarsi all'interno dei documenti XML.</span><span class="sxs-lookup"><span data-stu-id="50af7-109">The XML DOM provides access to data in XML documents and additional classes to read, write, and navigate in XML documents.</span></span> <span data-ttu-id="50af7-110">Queste classi sono supportate nello spazio dei nomi <xref:System.Xml>, che unifica inoltre il DOM XML con i servizi di accesso ai dati forniti da ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="50af7-110">These classes are supported in the <xref:System.Xml> namespace, which also unifies the XML DOM with the data access services provided by ADO.NET.</span></span> <span data-ttu-id="50af7-111">L'oggetto <xref:System.Xml.XmlDataDocument> fornisce l'accesso relazionale ai dati.</span><span class="sxs-lookup"><span data-stu-id="50af7-111">The <xref:System.Xml.XmlDataDocument> provides relational access to data.</span></span> <span data-ttu-id="50af7-112">Il tipo <xref:System.Xml.XmlDataDocument> associa il codice XML ai dati relazionali in un <xref:System.Data.DataSet> di ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="50af7-112">The <xref:System.Xml.XmlDataDocument> maps XML to relational data in an ADO.NET <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="50af7-113">In qualsiasi applicazione basata su [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vengono usate le classi nello spazio dei nomi <xref:System.Xml> per accedere e modificare i documenti XML e i dati relazionali nel tipo <xref:System.Xml.XmlDataDocument>.</span><span class="sxs-lookup"><span data-stu-id="50af7-113">Any [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-based application can use the classes in the <xref:System.Xml> namespace to access and manipulate both XML documents and relational data in the <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="50af7-114">Questa implementazione supporta le architetture a più livelli per la raccolta e la distribuzione dei dati.</span><span class="sxs-lookup"><span data-stu-id="50af7-114">This implementation supports n-tiered architectures for collecting and distributing data.</span></span> <span data-ttu-id="50af7-115">Per ulteriori informazioni, vedere [integrazione di XML con dati relazionali e ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).</span><span class="sxs-lookup"><span data-stu-id="50af7-115">For more information, see [XML Integration with Relational Data and ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).</span></span>  
   
-## Vedere anche  
- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a><span data-ttu-id="50af7-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="50af7-116">See Also</span></span>  
+ [<span data-ttu-id="50af7-117">Classe XslTransform implementa il processore XSLT</span><span class="sxs-lookup"><span data-stu-id="50af7-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

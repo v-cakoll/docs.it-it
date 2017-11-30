@@ -1,60 +1,62 @@
 ---
-title: "Modifica di schemi XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Modifica di schemi XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Modifica di schemi XML
-La modifica di uno schema XML rappresenta una delle funzionalità più importanti del modello SOM \(Schema Object Model\).  È possibile usare tutte le proprietà del modello SOM precedenti alla compilazione dello schema per modificare i valori esistenti in uno schema XML.  Sarà quindi possibile ricompilare lo schema XML per riflettere le modifiche.  
+# <a name="editing-xml-schemas"></a><span data-ttu-id="4175f-102">Modifica di schemi XML</span><span class="sxs-lookup"><span data-stu-id="4175f-102">Editing XML Schemas</span></span>
+<span data-ttu-id="4175f-103">La modifica di uno schema XML rappresenta una delle funzionalità più importanti del modello SOM (Schema Object Model).</span><span class="sxs-lookup"><span data-stu-id="4175f-103">Editing an XML schema is one of the most important features of the Schema Object Model (SOM).</span></span> <span data-ttu-id="4175f-104">È possibile usare tutte le proprietà del modello SOM precedenti alla compilazione dello schema per modificare i valori esistenti in uno schema XML.</span><span class="sxs-lookup"><span data-stu-id="4175f-104">All of the pre-schema-compilation properties of the SOM can be used to change the existing values in an XML schema.</span></span> <span data-ttu-id="4175f-105">Sarà quindi possibile ricompilare lo schema XML per riflettere le modifiche.</span><span class="sxs-lookup"><span data-stu-id="4175f-105">The XML schema can then be recompiled to reflect the changes.</span></span>  
   
- Il primo passaggio della modifica di uno schema caricato nel modello SOM consiste nell'attraversare lo schema.  Prima di tentare di modificare uno schema, è necessario essere in grado di attraversare uno schema usando un'API del SOM.  È necessario inoltre conoscere le proprietà del set PSCI \(Post\-Schema\-Compilation\-Infoset\) precedenti e successive alla compilazione dello schema.  
+ <span data-ttu-id="4175f-106">Il primo passaggio della modifica di uno schema caricato nel modello SOM consiste nell'attraversare lo schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-106">The first step in editing a schema loaded into the SOM is to traverse the schema.</span></span> <span data-ttu-id="4175f-107">Prima di tentare di modificare uno schema, è necessario essere in grado di attraversare uno schema usando un'API del SOM.</span><span class="sxs-lookup"><span data-stu-id="4175f-107">You should be familiar with traversing a schema using the SOM API before you attempt to edit a schema.</span></span> <span data-ttu-id="4175f-108">È necessario inoltre conoscere le proprietà del set PSCI (Post-Schema-Compilation-Infoset) precedenti e successive alla compilazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-108">You should also be familiar with the pre- and post-schema-compilation properties of the Post-Schema-Compilation-Infoset (PSCI).</span></span>  
   
-## Modifica di uno schema XML  
- Contenuto della sezione vengono forniti due esempi di codice che consentono di modificare lo schema del cliente creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md).  Il primo esempio di codice aggiunge un nuovo elemento `PhoneNumber` all'elemento `Customer`, mentre il secondo aggiunge un nuovo attributo `Title` all'elemento `FirstName`.  Nel primo esempio, inoltre, per attraversare lo schema del cliente, viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=fullName> successiva alla compilazione dello schema, mentre nel secondo esempio di codice viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=fullName> precedente alla compilazione dello schema.  
+## <a name="editing-an-xml-schema"></a><span data-ttu-id="4175f-109">Modifica di uno schema XML</span><span class="sxs-lookup"><span data-stu-id="4175f-109">Editing an XML Schema</span></span>  
+ <span data-ttu-id="4175f-110">In questa sezione vengono forniti due esempi di codice, che modifica lo schema del cliente creato nel [compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md) argomento.</span><span class="sxs-lookup"><span data-stu-id="4175f-110">In this section, two code examples are provided, both of which edit the customer schema created in the [Building XML Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) topic.</span></span> <span data-ttu-id="4175f-111">Il primo esempio di codice aggiunge un nuovo elemento `PhoneNumber` all'elemento `Customer`, mentre il secondo aggiunge un nuovo attributo `Title` all'elemento `FirstName`.</span><span class="sxs-lookup"><span data-stu-id="4175f-111">The first code example adds a new `PhoneNumber` element to the `Customer` element and the second code example adds a new `Title` attribute to the `FirstName` element.</span></span> <span data-ttu-id="4175f-112">Nel primo esempio, inoltre, per attraversare lo schema del cliente, viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema, mentre nel secondo esempio di codice viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-112">The first sample also uses the post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> collection as the means of traversing the customer schema while the second code example uses the pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> collection.</span></span>  
   
-### Esempio dell'elemento PhoneNumber  
- Il primo esempio di codice aggiunge un nuovo elemento `PhoneNumber` all'elemento `Customer` dello schema del cliente.  L'esempio di codice consente di modificare lo schema del cliente eseguendo i passaggi seguenti.  
+### <a name="phonenumber-element-example"></a><span data-ttu-id="4175f-113">Esempio dell'elemento PhoneNumber</span><span class="sxs-lookup"><span data-stu-id="4175f-113">PhoneNumber Element Example</span></span>  
+ <span data-ttu-id="4175f-114">Il primo esempio di codice aggiunge un nuovo elemento `PhoneNumber` all'elemento `Customer` dello schema del cliente.</span><span class="sxs-lookup"><span data-stu-id="4175f-114">This first code example adds a new `PhoneNumber` element to the `Customer` element of the customer schema.</span></span> <span data-ttu-id="4175f-115">L'esempio di codice consente di modificare lo schema del cliente eseguendo i passaggi seguenti.</span><span class="sxs-lookup"><span data-stu-id="4175f-115">The code example edits the customer schema in the following steps.</span></span>  
   
-1.  Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila.  Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
+1.  <span data-ttu-id="4175f-116">Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila.</span><span class="sxs-lookup"><span data-stu-id="4175f-116">Adds the customer schema to a new <xref:System.Xml.Schema.XmlSchemaSet> object and then compiles it.</span></span> <span data-ttu-id="4175f-117">Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="4175f-117">Any schema validation warnings and errors encountered reading or compiling the schema are handled by the <xref:System.Xml.Schema.ValidationEventHandler> delegate.</span></span>  
   
-2.  Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>.  Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI \(Post\-Schema\-Compilation\-Infoset\).  
+2.  <span data-ttu-id="4175f-118">Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>.</span><span class="sxs-lookup"><span data-stu-id="4175f-118">Retrieves the compiled <xref:System.Xml.Schema.XmlSchema> object from the <xref:System.Xml.Schema.XmlSchemaSet> by iterating over the <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> property.</span></span> <span data-ttu-id="4175f-119">Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI (Post-Schema-Compilation-Infoset).</span><span class="sxs-lookup"><span data-stu-id="4175f-119">Because the schema is compiled, Post-Schema-Compilation-Infoset (PSCI) properties are accessible.</span></span>  
   
-3.  Crea l'elemento `PhoneNumber` mediante la classe <xref:System.Xml.Schema.XmlSchemaElement>, la restrizione del tipo semplice `xs:string` mediante le classi <xref:System.Xml.Schema.XmlSchemaSimpleType> e <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, aggiunge un facet pattern alla proprietà <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> della restrizione, quindi aggiunge la restrizione alla proprietà <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> del tipo semplice e il tipo semplice alla proprietà <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> dell'elemento `PhoneNumber`.  
+3.  <span data-ttu-id="4175f-120">Crea l'elemento `PhoneNumber` mediante la classe <xref:System.Xml.Schema.XmlSchemaElement>, la restrizione del tipo semplice `xs:string` mediante le classi <xref:System.Xml.Schema.XmlSchemaSimpleType> e <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, aggiunge un facet pattern alla proprietà <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> della restrizione, quindi aggiunge la restrizione alla proprietà <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> del tipo semplice e il tipo semplice alla proprietà <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> dell'elemento `PhoneNumber`.</span><span class="sxs-lookup"><span data-stu-id="4175f-120">Creates the `PhoneNumber` element using the <xref:System.Xml.Schema.XmlSchemaElement> class, the `xs:string` simple type restriction using the <xref:System.Xml.Schema.XmlSchemaSimpleType> and <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> classes, adds a pattern facet to the <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> property of the restriction, and adds the restriction to the <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> property of the simple type and the simple type to the <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> of the `PhoneNumber` element.</span></span>  
   
-4.  Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaElement> nella raccolta <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> della raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=fullName> successiva alla compilazione dello schema.  
+4.  <span data-ttu-id="4175f-121">Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaElement> nella raccolta <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> della raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-121">Iterates over each <xref:System.Xml.Schema.XmlSchemaElement> in the <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> collection of the post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> collection.</span></span>  
   
-5.  Se la proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> dell'elemento è `"Customer"`, recupera il tipo complesso dell'elemento `Customer` mediante la classe <xref:System.Xml.Schema.XmlSchemaComplexType> e la particella di sequenza del tipo complesso mediante la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
+5.  <span data-ttu-id="4175f-122">Se la proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> dell'elemento è `"Customer"`, recupera il tipo complesso dell'elemento `Customer` mediante la classe <xref:System.Xml.Schema.XmlSchemaComplexType> e la particella di sequenza del tipo complesso mediante la classe <xref:System.Xml.Schema.XmlSchemaSequence>.</span><span class="sxs-lookup"><span data-stu-id="4175f-122">If the <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> of the element is `"Customer"`, gets the complex type of the `Customer` element using the <xref:System.Xml.Schema.XmlSchemaComplexType> class and the sequence particle of the complex type using the <xref:System.Xml.Schema.XmlSchemaSequence> class.</span></span>  
   
-6.  Aggiunge il nuovo elemento `PhoneNumber` alla sequenza contenente gli elementi `FirstName` e `LastName` esistenti usando la raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> precedente allo schema della sequenza.  
+6.  <span data-ttu-id="4175f-123">Aggiunge il nuovo elemento `PhoneNumber` alla sequenza contenente gli elementi `FirstName` e `LastName` esistenti usando la raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> precedente allo schema della sequenza.</span><span class="sxs-lookup"><span data-stu-id="4175f-123">Adds the new `PhoneNumber` element to the sequence containing the existing `FirstName` and `LastName` elements using the pre-schema-compilation <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> collection of the sequence.</span></span>  
   
-7.  Infine, rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.  
+7.  <span data-ttu-id="4175f-124">Infine, rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.</span><span class="sxs-lookup"><span data-stu-id="4175f-124">Finally, reprocesses and compiles the modified <xref:System.Xml.Schema.XmlSchema> object using the <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> and <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> methods of the <xref:System.Xml.Schema.XmlSchemaSet> class and writes it to the console.</span></span>  
   
- Di seguito è riportato l'esempio di codice completo.  
+ <span data-ttu-id="4175f-125">Di seguito è riportato l'esempio di codice completo.</span><span class="sxs-lookup"><span data-stu-id="4175f-125">The following is the complete code example.</span></span>  
   
  [!code-cpp[XmlSchemaEditExample1#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaEditExample1/CPP/XmlSchemaEditExample1.cpp#1)]
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- Di seguito è riportato lo schema modificato del cliente e creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md).  
+ <span data-ttu-id="4175f-126">Di seguito è riportato lo schema del cliente modificati creato nel [compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md) argomento.</span><span class="sxs-lookup"><span data-stu-id="4175f-126">The following is the modified customer schema created in the [Building XML Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) topic.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <xs:schema xmlns:tns="http://www.tempuri.org" targetNamespace="http://www.tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:element name="Customer">  
@@ -62,13 +64,7 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
       <xs:sequence>  
         <xs:element name="FirstName" type="xs:string" />  
         <xs:element name="LastName" type="tns:LastNameType" />  
-        <xs:element name="PhoneNumber">  
-          <xs:simpleType>  
-            <xs:restriction base="xs:string">  
-              <xs:pattern value="\d{3}-\d{3}-\d(4)" />  
-            </xs:restriction>  
-          </xs:simpleType>  
-        </xs:element>  
+        <xs:element name="PhoneNumber">           <xs:simpleType>             <xs:restriction base="xs:string">               <xs:pattern value="\d{3}-\d{3}-\d(4)" />             </xs:restriction>           </xs:simpleType>         </xs:element>  
       </xs:sequence>  
       <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" /  
 >  
@@ -82,49 +78,49 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
 </xs:schema>  
 ```  
   
-### Esempio dell'attributo Title  
- Il secondo esempio di codice aggiunge un nuovo attributo `Title` all'elemento `FirstName` dello schema del cliente.  Nel primo esempio di codice il tipo dell'elemento `FirstName` è `xs:string`.  Per fare in modo che l'elemento `FirstName` presenti un attributo e un contenuto di stringa, è necessario modificarne il tipo impostandolo su un tipo complesso con un modello di contenuto derivato dall'estensione di contenuto semplice.  
+### <a name="title-attribute-example"></a><span data-ttu-id="4175f-127">Esempio dell'attributo Title</span><span class="sxs-lookup"><span data-stu-id="4175f-127">Title Attribute Example</span></span>  
+ <span data-ttu-id="4175f-128">Il secondo esempio di codice aggiunge un nuovo attributo `Title` all'elemento `FirstName` dello schema del cliente.</span><span class="sxs-lookup"><span data-stu-id="4175f-128">This second code example, adds a new `Title` attribute to the `FirstName` element of the customer schema.</span></span> <span data-ttu-id="4175f-129">Nel primo esempio di codice il tipo dell'elemento `FirstName` è `xs:string`.</span><span class="sxs-lookup"><span data-stu-id="4175f-129">In the first code example, the type of the `FirstName` element is `xs:string`.</span></span> <span data-ttu-id="4175f-130">Per fare in modo che l'elemento `FirstName` presenti un attributo e un contenuto di stringa, è necessario modificarne il tipo impostandolo su un tipo complesso con un modello di contenuto derivato dall'estensione di contenuto semplice.</span><span class="sxs-lookup"><span data-stu-id="4175f-130">For the `FirstName` element to have an attribute along with string content, its type must be changed to a complex type with a simple content extension content model.</span></span>  
   
- L'esempio di codice consente di modificare lo schema del cliente eseguendo i passaggi seguenti.  
+ <span data-ttu-id="4175f-131">L'esempio di codice consente di modificare lo schema del cliente eseguendo i passaggi seguenti.</span><span class="sxs-lookup"><span data-stu-id="4175f-131">The code example edits the customer schema in the following steps.</span></span>  
   
-1.  Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila.  Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
+1.  <span data-ttu-id="4175f-132">Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila.</span><span class="sxs-lookup"><span data-stu-id="4175f-132">Adds the customer schema to a new <xref:System.Xml.Schema.XmlSchemaSet> object and then compiles it.</span></span> <span data-ttu-id="4175f-133">Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="4175f-133">Any schema validation warnings and errors encountered reading or compiling the schema are handled by the <xref:System.Xml.Schema.ValidationEventHandler> delegate.</span></span>  
   
-2.  Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>.  Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI \(Post\-Schema\-Compilation\-Infoset\).  
+2.  <span data-ttu-id="4175f-134">Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>.</span><span class="sxs-lookup"><span data-stu-id="4175f-134">Retrieves the compiled <xref:System.Xml.Schema.XmlSchema> object from the <xref:System.Xml.Schema.XmlSchemaSet> by iterating over the <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> property.</span></span> <span data-ttu-id="4175f-135">Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI (Post-Schema-Compilation-Infoset).</span><span class="sxs-lookup"><span data-stu-id="4175f-135">Because the schema is compiled, Post-Schema-Compilation-Infoset (PSCI) properties are accessible.</span></span>  
   
-3.  Crea un nuovo tipo complesso per l'elemento `FirstName` usando la classe <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+3.  <span data-ttu-id="4175f-136">Crea un nuovo tipo complesso per l'elemento `FirstName` usando la classe <xref:System.Xml.Schema.XmlSchemaComplexType>.</span><span class="sxs-lookup"><span data-stu-id="4175f-136">Creates a new complex type for the `FirstName` element using the <xref:System.Xml.Schema.XmlSchemaComplexType> class.</span></span>  
   
-4.  Crea una nuova estensione di contenuto semplice, con un tipo di base di `xs:string`, usando le classi <xref:System.Xml.Schema.XmlSchemaSimpleContent> e <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.  
+4.  <span data-ttu-id="4175f-137">Crea una nuova estensione di contenuto semplice, con un tipo di base di `xs:string`, usando le classi <xref:System.Xml.Schema.XmlSchemaSimpleContent> e <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.</span><span class="sxs-lookup"><span data-stu-id="4175f-137">Creates a new simple content extension, with a base type of `xs:string`, using the <xref:System.Xml.Schema.XmlSchemaSimpleContent> and <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension> classes.</span></span>  
   
-5.  Crea il nuovo attributo `Title` usando la classe <xref:System.Xml.Schema.XmlSchemaAttribute>, con una proprietà <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> di `xs:string` e aggiunge l'attributo all'estensione di contenuto semplice.  
+5.  <span data-ttu-id="4175f-138">Crea il nuovo attributo `Title` usando la classe <xref:System.Xml.Schema.XmlSchemaAttribute>, con una proprietà <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> di `xs:string` e aggiunge l'attributo all'estensione di contenuto semplice.</span><span class="sxs-lookup"><span data-stu-id="4175f-138">Creates the new `Title` attribute using the <xref:System.Xml.Schema.XmlSchemaAttribute> class, with a <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> of `xs:string` and adds the attribute to the simple content extension.</span></span>  
   
-6.  Imposta il modello di contenuto del contenuto semplice sull'estensione di contenuto semplice e il modello di contenuto del tipo complesso sul contenuto semplice.  
+6.  <span data-ttu-id="4175f-139">Imposta il modello di contenuto del contenuto semplice sull'estensione di contenuto semplice e il modello di contenuto del tipo complesso sul contenuto semplice.</span><span class="sxs-lookup"><span data-stu-id="4175f-139">Sets the content model of the simple content to the simple content extension and the content model of the complex type to the simple content.</span></span>  
   
-7.  Aggiunge il nuovo tipo complesso alla raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=fullName> precedente alla compilazione dello schema.  
+7.  <span data-ttu-id="4175f-140">Aggiunge il nuovo tipo complesso alla raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-140">Adds the new complex type to the pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> collection.</span></span>  
   
-8.  Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaObject> nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=fullName> precedente alla compilazione dello schema.  
+8.  <span data-ttu-id="4175f-141">Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaObject> nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-141">Iterates over each <xref:System.Xml.Schema.XmlSchemaObject> in the pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> collection.</span></span>  
   
 > [!NOTE]
->  Dal momento che l'elemento `FirstName` non è un elemento globale nello schema, non è disponibile nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=fullName> o <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=fullName>.  L'esempio di codice individua l'elemento `FirstName` dopo aver individuato l'elemento `Customer`.  
+>  <span data-ttu-id="4175f-142">Dal momento che l'elemento `FirstName` non è un elemento globale nello schema, non è disponibile nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> o <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4175f-142">Because the `FirstName` element is not a global element in the schema, it is not available in the <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> or <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> collections.</span></span> <span data-ttu-id="4175f-143">L'esempio di codice individua l'elemento `FirstName` dopo aver individuato l'elemento `Customer`.</span><span class="sxs-lookup"><span data-stu-id="4175f-143">The code example locates the `FirstName` element by first locating the `Customer` element.</span></span>  
 >   
->  Nel primo esempio di codice lo schema era stato attraversato usando la raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=fullName> successiva alla compilazione dello schema.  In questo esempio, per attraversare lo schema viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=fullName> precedente alla compilazione dello schema.  Mentre entrambe le raccolte forniscono l'accesso agli elementi globali dello schema, lo scorrimento della raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A> richiede più tempo, poiché è necessario scorrere tutti gli elementi globali dello schema e poiché non sono presenti proprietà PSCI.  Le raccolte PSCI \(le proprietà <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=fullName>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=fullName>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=fullName> e così via\) forniscono l'accesso diretto agli elementi, agli attributi, ai tipi globali e alle relative proprietà PSCI.  
+>  <span data-ttu-id="4175f-144">Nel primo esempio di codice lo schema era stato attraversato usando la raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-144">The first code example traversed the schema using the post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> collection.</span></span> <span data-ttu-id="4175f-145">In questo esempio, per attraversare lo schema viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-145">In this sample, the pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> collection is used to traverse the schema.</span></span> <span data-ttu-id="4175f-146">Mentre entrambe le raccolte forniscono l'accesso agli elementi globali dello schema, lo scorrimento della raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A> richiede più tempo, poiché è necessario scorrere tutti gli elementi globali dello schema e poiché non sono presenti proprietà PSCI.</span><span class="sxs-lookup"><span data-stu-id="4175f-146">While both collections provide access to the global elements in the schema, iterating through the <xref:System.Xml.Schema.XmlSchema.Items%2A> collection is more time consuming because you must iterate over all global elements in the schema and it does not have any PSCI properties.</span></span> <span data-ttu-id="4175f-147">Le raccolte PSCI (le proprietà <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> e così via) forniscono l'accesso diretto agli elementi, agli attributi, ai tipi globali e alle relative proprietà PSCI.</span><span class="sxs-lookup"><span data-stu-id="4175f-147">The PSCI collections (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType>, and so on) provide direct access to their global elements, attributes, and types and their PSCI properties.</span></span>  
   
-1.  Se la proprietà <xref:System.Xml.Schema.XmlSchemaObject> è un elemento la cui proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> è `"Customer"`, vengono recuperati il tipo complesso dell'elemento `Customer` mediante la classe <xref:System.Xml.Schema.XmlSchemaComplexType> e la particella di sequenza del tipo complesso mediante la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
+1.  <span data-ttu-id="4175f-148">Se la proprietà <xref:System.Xml.Schema.XmlSchemaObject> è un elemento la cui proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> è `"Customer"`, vengono recuperati il tipo complesso dell'elemento `Customer` mediante la classe <xref:System.Xml.Schema.XmlSchemaComplexType> e la particella di sequenza del tipo complesso mediante la classe <xref:System.Xml.Schema.XmlSchemaSequence>.</span><span class="sxs-lookup"><span data-stu-id="4175f-148">If the <xref:System.Xml.Schema.XmlSchemaObject> is an element, whose <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> is `"Customer"`, gets the complex type of the `Customer` element using the <xref:System.Xml.Schema.XmlSchemaComplexType> class and the sequence particle of the complex type using the <xref:System.Xml.Schema.XmlSchemaSequence> class.</span></span>  
   
-2.  Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaParticle> nella raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=fullName> precedente alla compilazione dello schema.  
+2.  <span data-ttu-id="4175f-149">Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaParticle> nella raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="4175f-149">Iterates over each <xref:System.Xml.Schema.XmlSchemaParticle> in the pre-schema-compilation <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> collection.</span></span>  
   
-3.  Se il tipo <xref:System.Xml.Schema.XmlSchemaParticle> è un elemento e la relativa proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> è `"FirstName"`, imposta la proprietà <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> dell'elemento `FirstName` su nuovo tipo complesso `FirstName`.  
+3.  <span data-ttu-id="4175f-150">Se il tipo <xref:System.Xml.Schema.XmlSchemaParticle> è un elemento e la relativa proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> è `"FirstName"`, imposta la proprietà <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> dell'elemento `FirstName` su nuovo tipo complesso `FirstName`.</span><span class="sxs-lookup"><span data-stu-id="4175f-150">If the <xref:System.Xml.Schema.XmlSchemaParticle> is an element, who's <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> is `"FirstName"`, sets the <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> of the `FirstName` element to the new `FirstName` complex type.</span></span>  
   
-4.  Infine, rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.  
+4.  <span data-ttu-id="4175f-151">Infine, rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.</span><span class="sxs-lookup"><span data-stu-id="4175f-151">Finally, reprocesses and compiles the modified <xref:System.Xml.Schema.XmlSchema> object using the <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> and <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> methods of the <xref:System.Xml.Schema.XmlSchemaSet> class and writes it to the console.</span></span>  
   
- Di seguito è riportato l'esempio di codice completo.  
+ <span data-ttu-id="4175f-152">Di seguito è riportato l'esempio di codice completo.</span><span class="sxs-lookup"><span data-stu-id="4175f-152">The following is the complete code example.</span></span>  
   
  [!code-cpp[XmlSchemaEditExample2#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaEditExample2/CPP/XmlSchemaEditExample2.cpp#1)]
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- Di seguito è riportato lo schema modificato del cliente e creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md).  
+ <span data-ttu-id="4175f-153">Di seguito è riportato lo schema del cliente modificati creato nel [compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md) argomento.</span><span class="sxs-lookup"><span data-stu-id="4175f-153">The following is the modified customer schema created in the [Building XML Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) topic.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
 <xs:schema xmlns:tns="http://www.tempuri.org" targetNamespace="http://www.tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:element name="Customer">  
@@ -142,21 +138,15 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
       <xs:maxLength value="20" />  
     </xs:restriction>  
   </xs:simpleType>  
-  <xs:complexType name="FirstNameComplexType">  
-    <xs:simpleContent>  
-      <xs:extension base="xs:string">  
-        <xs:attribute name="Title" type="xs:string" />  
-      </xs:extension>  
-    </xs:simpleContent>  
-  </xs:complexType>  
+  <xs:complexType name="FirstNameComplexType">     <xs:simpleContent>       <xs:extension base="xs:string">         <xs:attribute name="Title" type="xs:string" />       </xs:extension>     </xs:simpleContent>   </xs:complexType>  
 </xs:schema>  
 ```  
   
-## Vedere anche  
- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)   
- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)   
- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)   
- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)   
- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)   
- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)   
- [Post\-Schema Compilation Infoset \(PSCI, infoset sulla compilazione post\-schema\)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a><span data-ttu-id="4175f-154">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4175f-154">See Also</span></span>  
+ [<span data-ttu-id="4175f-155">Panoramica del modello a oggetti dello Schema XML</span><span class="sxs-lookup"><span data-stu-id="4175f-155">XML Schema Object Model Overview</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [<span data-ttu-id="4175f-156">Lettura e scrittura di schemi XML</span><span class="sxs-lookup"><span data-stu-id="4175f-156">Reading and Writing XML Schemas</span></span>](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [<span data-ttu-id="4175f-157">Compilazione di schemi XML</span><span class="sxs-lookup"><span data-stu-id="4175f-157">Building XML Schemas</span></span>](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [<span data-ttu-id="4175f-158">Attraversamento di schemi XML</span><span class="sxs-lookup"><span data-stu-id="4175f-158">Traversing XML Schemas</span></span>](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [<span data-ttu-id="4175f-159">Inclusione o importazione di schemi XML</span><span class="sxs-lookup"><span data-stu-id="4175f-159">Including or Importing XML Schemas</span></span>](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [<span data-ttu-id="4175f-160">XmlSchemaSet per la compilazione dello Schema</span><span class="sxs-lookup"><span data-stu-id="4175f-160">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [<span data-ttu-id="4175f-161">Post-Schema Compilation Infoset</span><span class="sxs-lookup"><span data-stu-id="4175f-161">Post-Schema Compilation Infoset</span></span>](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

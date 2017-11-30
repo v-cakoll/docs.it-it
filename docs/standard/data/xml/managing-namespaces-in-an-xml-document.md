@@ -1,51 +1,49 @@
 ---
-title: "Gestione di spazi dei nomi in un documento XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Gestione di spazi dei nomi in un documento XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: e9761afe8b56e15edba6e0319cce9a02501a6bb0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Gestione di spazi dei nomi in un documento XML
-Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti.  Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML.  Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.  
+# <a name="managing-namespaces-in-an-xml-document"></a><span data-ttu-id="22814-102">Gestione di spazi dei nomi in un documento XML</span><span class="sxs-lookup"><span data-stu-id="22814-102">Managing Namespaces in an XML Document</span></span>
+<span data-ttu-id="22814-103">Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti.</span><span class="sxs-lookup"><span data-stu-id="22814-103">XML namespaces associate element and attribute names in an XML document with custom and predefined URIs.</span></span> <span data-ttu-id="22814-104">Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML.</span><span class="sxs-lookup"><span data-stu-id="22814-104">To create these associations, you define prefixes for namespace URIs, and use those prefixes to qualify element and attribute names in XML data.</span></span> <span data-ttu-id="22814-105">Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.</span><span class="sxs-lookup"><span data-stu-id="22814-105">Namespaces prevent element and attribute name collisions, and enable elements and attributes of the same name to be handled and validated differently.</span></span>  
   
 <a name="declare"></a>   
-## Dichiarazione degli spazi dei nomi  
- Per dichiarare uno spazio dei nomi in un elemento, usare l'attributo `xmlns:` riportato di seguito.  
+## <a name="declaring-namespaces"></a><span data-ttu-id="22814-106">Dichiarazione degli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="22814-106">Declaring namespaces</span></span>  
+ <span data-ttu-id="22814-107">Per dichiarare uno spazio dei nomi in un elemento, usare l'attributo `xmlns:` riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="22814-107">To declare a namespace on an element, you use the `xmlns:` attribute:</span></span>  
   
  `xmlns:<name>=<"uri">`  
   
- dove `<name>` è il prefisso dello spazio dei nomi e `<"uri">` è l'URI tramite cui viene identificato lo spazio dei nomi.  Al termine della dichiarazione, il prefisso può essere usato per qualificare elementi e attributi in un documento XML e associarli all'URI dello spazio dei nomi.  Poiché viene usato nell'intero documento, il prefisso dello spazio dei nomi deve essere breve.  
+ <span data-ttu-id="22814-108">dove `<name>` è il prefisso dello spazio dei nomi e `<"uri">` è l'URI tramite cui viene identificato lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="22814-108">where `<name>` is the namespace prefix and `<"uri">` is the URI that identifies the namespace.</span></span> <span data-ttu-id="22814-109">Al termine della dichiarazione, il prefisso può essere usato per qualificare elementi e attributi in un documento XML e associarli all'URI dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="22814-109">After you declare the prefix, you can use it to qualify elements and attributes in an XML document and associate them with the namespace URI.</span></span> <span data-ttu-id="22814-110">Poiché viene usato nell'intero documento, il prefisso dello spazio dei nomi deve essere breve.</span><span class="sxs-lookup"><span data-stu-id="22814-110">Because the namespace prefix is used throughout a document, it should be short in length.</span></span>  
   
- Nell'esempio vengono definiti due elementi `BOOK`.  Il primo elemento è qualificato dal prefisso `mybook`, mentre il secondo dal prefisso `bb`.  Ogni prefisso è associato a un diverso URI dello spazio dei nomi:  
+ <span data-ttu-id="22814-111">Nell'esempio vengono definiti due elementi `BOOK`.</span><span class="sxs-lookup"><span data-stu-id="22814-111">This example defines two `BOOK` elements.</span></span> <span data-ttu-id="22814-112">Il primo elemento è qualificato dal prefisso `mybook`, mentre il secondo dal prefisso `bb`.</span><span class="sxs-lookup"><span data-stu-id="22814-112">The first element element is qualified by the prefix, `mybook`, and the second element is qualified by the prefix, `bb`.</span></span> <span data-ttu-id="22814-113">Ogni prefisso è associato a un diverso URI dello spazio dei nomi:</span><span class="sxs-lookup"><span data-stu-id="22814-113">Each prefix is associated with a different namespace URI:</span></span>  
   
-```  
+```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
 <bb:BOOK xmlns:bb="urn:blueyonderairlines">  
 ```  
   
- Per indicare che un elemento fa parte di un determinato spazio dei nomi, aggiungervi il prefisso dello spazio dei nomi.  Ad esempio, se un elemento `Author` appartiene allo spazio dei nomi `mybook`, viene dichiarato come `<mybook:Author>`.  
+ <span data-ttu-id="22814-114">Per indicare che un elemento fa parte di un determinato spazio dei nomi, aggiungervi il prefisso dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="22814-114">To signify that an element is a part of a particular namespace, add the namespace prefix to it.</span></span> <span data-ttu-id="22814-115">Ad esempio, se un elemento `Author` appartiene allo spazio dei nomi `mybook`, viene dichiarato come `<mybook:Author>`.</span><span class="sxs-lookup"><span data-stu-id="22814-115">For example, if a `Author` element belongs to the `mybook` namespace, it is declared as `<mybook:Author>`.</span></span>  
   
 <a name="scope"></a>   
-## Ambito della dichiarazione  
- Uno spazio dei nomi entra in vigore dal punto della dichiarazione fino alla fine dell'elemento in cui è stato dichiarato.  In questo esempio, lo spazio dei nomi definito nell'elemento `BOOK` non è applicabile agli elementi esterni all'elemento `BOOK`, come l'elemento `Publisher`:  
+## <a name="declaration-scope"></a><span data-ttu-id="22814-116">Ambito della dichiarazione</span><span class="sxs-lookup"><span data-stu-id="22814-116">Declaration scope</span></span>  
+ <span data-ttu-id="22814-117">Uno spazio dei nomi entra in vigore dal punto della dichiarazione fino alla fine dell'elemento in cui è stato dichiarato.</span><span class="sxs-lookup"><span data-stu-id="22814-117">A namespace is effective from its point of declaration until the end of the element it was declared in.</span></span> <span data-ttu-id="22814-118">In questo esempio, lo spazio dei nomi definito nell'elemento `BOOK` non è applicabile agli elementi esterni all'elemento `BOOK`, come l'elemento `Publisher`:</span><span class="sxs-lookup"><span data-stu-id="22814-118">In this example, the namespace defined in the `BOOK` element doesn't apply to elements outside the `BOOK` element, such as the `Publisher` element:</span></span>  
   
-```  
+```xml  
 <Author>Joe Smith</Author>  
 <BOOK xmlns:book="http://www.contoso.com">  
     <title>My Wonderful Day</title>  
@@ -56,38 +54,38 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
 </Publisher>  
 ```  
   
- Uno spazio dei nomi deve essere dichiarato prima di poterlo usare, ma non deve trovarsi all'inizio del documento XML.  
+ <span data-ttu-id="22814-119">Uno spazio dei nomi deve essere dichiarato prima di poterlo usare, ma non deve trovarsi all'inizio del documento XML.</span><span class="sxs-lookup"><span data-stu-id="22814-119">A namespace must be declared before it can be used, but it doesn't have to appear at the top of the XML document.</span></span>  
   
- Quando si usano più spazi dei nomi in un documento XML, è possibile definire uno spazio dei nomi come spazio dei nomi predefinito per creare un documento più chiaro.  Lo spazio dei nomi predefinito viene dichiarato nell'elemento radice e si applica a tutti gli elementi non qualificati nel documento.  Gli spazi dei nomi predefiniti sono applicabili solo agli elementi, non agli attributi.  
+ <span data-ttu-id="22814-120">Quando si usano più spazi dei nomi in un documento XML, è possibile definire uno spazio dei nomi come spazio dei nomi predefinito per creare un documento più chiaro.</span><span class="sxs-lookup"><span data-stu-id="22814-120">When you use multiple namespaces in an XML document, you can define one namespace as the default namespace to create a cleaner looking document.</span></span> <span data-ttu-id="22814-121">Lo spazio dei nomi predefinito viene dichiarato nell'elemento radice e si applica a tutti gli elementi non qualificati nel documento.</span><span class="sxs-lookup"><span data-stu-id="22814-121">The default namespace is declared in the root element and applies to all unqualified elements in the document.</span></span> <span data-ttu-id="22814-122">Gli spazi dei nomi predefiniti sono applicabili solo agli elementi, non agli attributi.</span><span class="sxs-lookup"><span data-stu-id="22814-122">Default namespaces apply to elements only, not to attributes.</span></span>  
   
- Per usare lo spazio dei nomi predefinito, omettere il prefisso e i due punti dalla dichiarazione nell'elemento:  
+ <span data-ttu-id="22814-123">Per usare lo spazio dei nomi predefinito, omettere il prefisso e i due punti dalla dichiarazione nell'elemento:</span><span class="sxs-lookup"><span data-stu-id="22814-123">To use the default namespace, omit the prefix and the colon from the declaration on the element:</span></span>  
   
-```  
+```xml  
 <BOOK xmlns="http://www.contoso.com/books.dtd">  
 ```  
   
-## Gestione degli spazi dei nomi  
- Tramite la classe <xref:System.Xml.XmlNamespaceManager> viene archiviata una raccolta di URI dello spazio dei nomi e i relativi prefissi consentendo all'utente di cercare, aggiungere e rimuovere spazi dei nomi da questa raccolta.  In determinati contesti, questa classe viene richiesta per migliorare le prestazioni di elaborazione del codice XML.  Ad esempio, la classe <xref:System.Xml.Xsl.XsltContext> usa <xref:System.Xml.XmlNamespaceManager> per fornire il supporto XPath.  
+## <a name="managing-namespaces"></a><span data-ttu-id="22814-124">Gestione degli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="22814-124">Managing namespaces</span></span>  
+ <span data-ttu-id="22814-125">Tramite la classe <xref:System.Xml.XmlNamespaceManager> viene archiviata una raccolta di URI dello spazio dei nomi e i relativi prefissi consentendo all'utente di cercare, aggiungere e rimuovere spazi dei nomi da questa raccolta.</span><span class="sxs-lookup"><span data-stu-id="22814-125">The <xref:System.Xml.XmlNamespaceManager> class stores a collection of namespace URIs and their prefixes, and lets you look up, add, and remove namespaces from this collection.</span></span> <span data-ttu-id="22814-126">In determinati contesti, questa classe viene richiesta per migliorare le prestazioni di elaborazione del codice XML.</span><span class="sxs-lookup"><span data-stu-id="22814-126">In certain contexts, this class is required for better XML processing performance.</span></span> <span data-ttu-id="22814-127">Ad esempio, la classe <xref:System.Xml.Xsl.XsltContext> usa <xref:System.Xml.XmlNamespaceManager> per fornire il supporto XPath.</span><span class="sxs-lookup"><span data-stu-id="22814-127">For example, the <xref:System.Xml.Xsl.XsltContext> class uses <xref:System.Xml.XmlNamespaceManager> for XPath support.</span></span>  
   
- Tramite il gestore dello spazio dei nomi non viene eseguita alcuna convalida negli spazi dei nomi, tuttavia si presuppone che i prefissi e gli spazi dei nomi siano già stati verificati e siano conformi alla specifica [W3C Namespaces](http://www.w3.org/TR/REC-xml-names/).  
+ <span data-ttu-id="22814-128">La gestione dello spazio dei nomi non viene eseguita alcuna convalida negli spazi dei nomi, ma si presuppone che i prefissi e spazi dei nomi siano già stati verificati e rispettare il [spazi dei nomi W3C](http://www.w3.org/TR/REC-xml-names/) specifica.</span><span class="sxs-lookup"><span data-stu-id="22814-128">The namespace manager doesn't perform any validation on the namespaces, but assumes that prefixes and namespaces have already been verified and conform to the [W3C Namespaces](http://www.w3.org/TR/REC-xml-names/) specification.</span></span>  
   
 > [!NOTE]
->  Tramite [LINQ to XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/linq-to-xml.md) non viene usato <xref:System.Xml.XmlNamespaceManager> per la gestione degli spazi dei nomi.  Per informazioni sulla gestione di spazi dei nomi quando si usa LINQ to XML, vedere [Utilizzo degli spazi dei nomi XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) nella documentazione di LINQ.  
+>  <span data-ttu-id="22814-129">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) non utilizza <xref:System.Xml.XmlNamespaceManager> per gestire gli spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="22814-129">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) doesn't use <xref:System.Xml.XmlNamespaceManager> to manage namespaces.</span></span> <span data-ttu-id="22814-130">Vedere [utilizzo di spazi dei nomi XML](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) nella documentazione di LINQ per informazioni sulla gestione degli spazi dei nomi quando si usa LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="22814-130">See [Working with XML Namespaces](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) in the LINQ documentation for information about managing namespaces when using LINQ to XML.</span></span>  
   
- Di seguito sono riportate alcune attività di gestione e ricerca eseguibili con la classe <xref:System.Xml.XmlNamespaceManager>.  Per altre informazioni ed esempi, seguire i collegamenti alla pagina di riferimento per ogni metodo o proprietà.  
+ <span data-ttu-id="22814-131">Di seguito sono riportate alcune attività di gestione e ricerca eseguibili con la classe <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="22814-131">Here are some of the management and lookup tasks you can perform with the <xref:System.Xml.XmlNamespaceManager> class.</span></span> <span data-ttu-id="22814-132">Per altre informazioni ed esempi, seguire i collegamenti alla pagina di riferimento per ogni metodo o proprietà.</span><span class="sxs-lookup"><span data-stu-id="22814-132">For more information and examples, follow the links to the reference page for each method or property.</span></span>  
   
-|Per|Utilizzo|  
-|---------|--------------|  
-|Aggiungere uno spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
-|Rimuovere uno spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
-|Trovare l'URI per lo spazio dei nomi predefinito|Proprietà <xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>|  
-|Trovare l'URI per un prefisso dello spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>|  
-|Trovare il prefisso per un URI dello spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>|  
-|Ottenere un elenco di spazi dei nomi nel nodo corrente|Metodo <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>|  
-|Creare l'ambito di uno spazio dei nomi|Metodi <xref:System.Xml.XmlNamespaceManager.PushScope%2A> e <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
-|Verificare se un prefisso è definito nell'ambito corrente|Metodo <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
-|Ottenere la tabella dei nomi usata per ricercare i prefissi e gli URI|Proprietà <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
+|<span data-ttu-id="22814-133">Per</span><span class="sxs-lookup"><span data-stu-id="22814-133">To</span></span>|<span data-ttu-id="22814-134">Utilizzo</span><span class="sxs-lookup"><span data-stu-id="22814-134">Use</span></span>|  
+|--------|---------|  
+|<span data-ttu-id="22814-135">Aggiungere uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="22814-135">Add a namespace</span></span>|<span data-ttu-id="22814-136">Metodo <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="22814-136"><xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> method</span></span>|  
+|<span data-ttu-id="22814-137">Rimuovere uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="22814-137">Remove a namespace</span></span>|<span data-ttu-id="22814-138">Metodo <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="22814-138"><xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> method</span></span>|  
+|<span data-ttu-id="22814-139">Trovare l'URI per lo spazio dei nomi predefinito</span><span class="sxs-lookup"><span data-stu-id="22814-139">Find the URI for the default namespace</span></span>|<span data-ttu-id="22814-140">Proprietà <xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="22814-140"><xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> property</span></span>|  
+|<span data-ttu-id="22814-141">Trovare l'URI per un prefisso dello spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="22814-141">Find the URI for a namespace prefix</span></span>|<span data-ttu-id="22814-142">Metodo <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="22814-142"><xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> method</span></span>|  
+|<span data-ttu-id="22814-143">Trovare il prefisso per un URI dello spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="22814-143">Find the prefix for a namespace URI</span></span>|<span data-ttu-id="22814-144">Metodo <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A></span><span class="sxs-lookup"><span data-stu-id="22814-144"><xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> method</span></span>|  
+|<span data-ttu-id="22814-145">Ottenere un elenco di spazi dei nomi nel nodo corrente</span><span class="sxs-lookup"><span data-stu-id="22814-145">Get a list of namespaces in the current node</span></span>|<span data-ttu-id="22814-146">Metodo <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A></span><span class="sxs-lookup"><span data-stu-id="22814-146"><xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> method</span></span>|  
+|<span data-ttu-id="22814-147">Creare l'ambito di uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="22814-147">Scope a namespace</span></span>|<span data-ttu-id="22814-148">Metodi <xref:System.Xml.XmlNamespaceManager.PushScope%2A> e <xref:System.Xml.XmlNamespaceManager.PopScope%2A></span><span class="sxs-lookup"><span data-stu-id="22814-148"><xref:System.Xml.XmlNamespaceManager.PushScope%2A> and <xref:System.Xml.XmlNamespaceManager.PopScope%2A> methods</span></span>|  
+|<span data-ttu-id="22814-149">Verificare se un prefisso è definito nell'ambito corrente</span><span class="sxs-lookup"><span data-stu-id="22814-149">Check whether a prefix is defined in the current scope</span></span>|<span data-ttu-id="22814-150">Metodo <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="22814-150"><xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> method</span></span>|  
+|<span data-ttu-id="22814-151">Ottenere la tabella dei nomi usata per ricercare i prefissi e gli URI</span><span class="sxs-lookup"><span data-stu-id="22814-151">Get the name table used to look up prefixes and URIs</span></span>|<span data-ttu-id="22814-152">Proprietà <xref:System.Xml.XmlNamespaceManager.NameTable%2A></span><span class="sxs-lookup"><span data-stu-id="22814-152"><xref:System.Xml.XmlNamespaceManager.NameTable%2A> property</span></span>|  
   
-## Vedere anche  
- <xref:System.Xml.XmlNamespaceManager>   
- [Documenti e dati XML](../../../../docs/standard/data/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="22814-153">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="22814-153">See Also</span></span>  
+ <xref:System.Xml.XmlNamespaceManager>  
+ [<span data-ttu-id="22814-154">Documenti e dati XML</span><span class="sxs-lookup"><span data-stu-id="22814-154">XML Documents and Data</span></span>](../../../../docs/standard/data/xml/index.md)

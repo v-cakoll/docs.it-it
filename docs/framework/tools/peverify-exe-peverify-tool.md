@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - portable executable files, PEVerify
 - verifying MSIL and metadata
@@ -23,83 +17,82 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 855a1122eb4507912adca80878f78258b37d202d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01606ede139ef370817926df1dd82bcbfcbabafd
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="peverifyexe-peverify-tool"></a>Peverify.exe (strumento PEVerify)
-Lo strumento PEVerify aiuta gli sviluppatori che utilizzano il linguaggio MSIL (Microsoft Intermediate Language) per creare compilatori, motori di script e così via, a determinare se il codice MSIL creato e i metadati associati soddisfano i requisiti di indipendenza dai tipi. Alcuni compilatori generano codice di cui è verificabile l'indipendenza dai tipi solo se si evita di utilizzare determinati costrutti del linguaggio. Se, in qualità di sviluppatore, si utilizza un compilatore di questo tipo, sarà opportuno verificare di non aver compromesso l'indipendenza dai tipi del codice. In questa situazione è possibile eseguire lo strumento PEVerify sui file per controllare il codice MSIL e i metadati.  
+# <a name="peverifyexe-peverify-tool"></a><span data-ttu-id="3a642-102">Peverify.exe (strumento PEVerify)</span><span class="sxs-lookup"><span data-stu-id="3a642-102">Peverify.exe (PEVerify Tool)</span></span>
+<span data-ttu-id="3a642-103">Lo strumento PEVerify aiuta gli sviluppatori che utilizzano il linguaggio MSIL (Microsoft Intermediate Language) per creare compilatori, motori di script e così via, a determinare se il codice MSIL creato e i metadati associati soddisfano i requisiti di indipendenza dai tipi.</span><span class="sxs-lookup"><span data-stu-id="3a642-103">The PEVerify tool helps developers who generate Microsoft intermediate language (MSIL) (such as compiler writers, script engine developers, and so on) to determine whether their MSIL code and associated metadata meet type safety requirements.</span></span> <span data-ttu-id="3a642-104">Alcuni compilatori generano codice di cui è verificabile l'indipendenza dai tipi solo se si evita di utilizzare determinati costrutti del linguaggio.</span><span class="sxs-lookup"><span data-stu-id="3a642-104">Some compilers generate verifiably type-safe code only if you avoid using certain language constructs.</span></span> <span data-ttu-id="3a642-105">Se, in qualità di sviluppatore, si utilizza un compilatore di questo tipo, sarà opportuno verificare di non aver compromesso l'indipendenza dai tipi del codice.</span><span class="sxs-lookup"><span data-stu-id="3a642-105">If, as a developer, you are using such a compiler, you may want to verify that you have not compromised the type safety of your code.</span></span> <span data-ttu-id="3a642-106">In questa situazione è possibile eseguire lo strumento PEVerify sui file per controllare il codice MSIL e i metadati.</span><span class="sxs-lookup"><span data-stu-id="3a642-106">In this situation, you can run the PEVerify tool on your files to check the MSIL and metadata.</span></span>  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="3a642-107">Viene installato automaticamente con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="3a642-107">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="3a642-108">Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7.</span><span class="sxs-lookup"><span data-stu-id="3a642-108">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="3a642-109">Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="3a642-109">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- Al prompt dei comandi digitare quanto segue:  
+ <span data-ttu-id="3a642-110">Al prompt dei comandi digitare quanto segue:</span><span class="sxs-lookup"><span data-stu-id="3a642-110">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="3a642-111">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3a642-111">Syntax</span></span>  
   
 ```  
 peverify filename [options]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a><span data-ttu-id="3a642-112">Parametri</span><span class="sxs-lookup"><span data-stu-id="3a642-112">Parameters</span></span>  
   
-|Argomento|Descrizione|  
+|<span data-ttu-id="3a642-113">Argomento</span><span class="sxs-lookup"><span data-stu-id="3a642-113">Argument</span></span>|<span data-ttu-id="3a642-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3a642-114">Description</span></span>|  
 |--------------|-----------------|  
-|*filename*|File eseguibile di tipo PE per il quale controllare il codice MSIL e i metadati.|  
+|<span data-ttu-id="3a642-115">*filename*</span><span class="sxs-lookup"><span data-stu-id="3a642-115">*filename*</span></span>|<span data-ttu-id="3a642-116">File eseguibile di tipo PE per il quale controllare il codice MSIL e i metadati.</span><span class="sxs-lookup"><span data-stu-id="3a642-116">The portable executable (PE) file for which to check the MSIL and metadata.</span></span>|  
   
-|Opzione|Descrizione|  
+|<span data-ttu-id="3a642-117">Opzione</span><span class="sxs-lookup"><span data-stu-id="3a642-117">Option</span></span>|<span data-ttu-id="3a642-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3a642-118">Description</span></span>|  
 |------------|-----------------|  
-|**/break=** *maxErrorCount*|Interrompe la verifica dopo un numero di errori pari a *maxErrorCount*.<br /><br /> Questo parametro non è supportato in .NET Framework 2.0 o versione successiva.|  
-|**/clock**|Misura e segnala i seguenti tempi di verifica in millisecondi:<br /><br /> **MD Val. cycle**<br /> Ciclo di convalida dei metadati<br /><br /> **MD Val. pure**<br /> Pure di convalida dei metadati<br /><br /> **IL Ver. cycle**<br /> Ciclo di verifica di MSIL (Microsoft Intermediate Language)<br /><br /> **IL Ver pure**<br /> Pure di verifica MSIL<br /><br /> I tempi **MD Val. cycle** e **IL Ver. cycle** includono il tempo richiesto per l'esecuzione delle procedure di avvio e chiusura necessarie. I tempi **MD Val. pure** e **IL Ver pure** corrispondono al tempo richiesto solo per l'esecuzione della convalida o della verifica.|  
-|**/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/hresult**|Visualizza i codici di errore in formato esadecimale.|  
-|**/ignore=** *hex.code* [, *hex.code*]|Ignora i codici di errore specificati.|  
-|**/ignore=@** *responseFile*|Ignora i codici di errore elencati nel file di risposta specificato.|  
-|**/il**|Esegue i controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly specificato da *filename*. Vengono restituite descrizioni dettagliate per ogni problema rilevato, a meno che non si specifichi l'opzione **/quiet**.|  
-|**/md**|Esegue controlli di convalida dei metadati sull'assembly specificato da *filename*. Esamina l'intera struttura dei metadati nel file e segnala tutti i problemi di convalida rilevati.|  
-|**/nologo**|Evita la visualizzazione delle informazioni sul copyright e sulla versione del prodotto.|  
-|**/nosymbols**|In .NET Framework versione 2.0 evita la visualizzazione dei numeri di riga per compatibilità con le versioni precedenti.|  
-|**/quiet**|Specifica la modalità non interattiva. Evita la visualizzazione dell'output dei report dei problemi di verifica. Viene comunque indicato se il file è indipendente dai tipi, ma non vengono fornite informazioni sui problemi che impediscono la verifica dell'indipendenza dai tipi.|  
-|`/transparent`|Verifica solo i metodi trasparenti.|  
-|**/unique**|Ignora i codici di errore ripetuti.|  
-|**/verbose**|In .NET Framework versione 2.0 determina la visualizzazione di informazioni aggiuntive nei messaggi di verifica MSIL.|  
-|**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
+|<span data-ttu-id="3a642-119">**/break=** *maxErrorCount*</span><span class="sxs-lookup"><span data-stu-id="3a642-119">**/break=** *maxErrorCount*</span></span>|<span data-ttu-id="3a642-120">Interrompe la verifica dopo un numero di errori pari a *maxErrorCount*.</span><span class="sxs-lookup"><span data-stu-id="3a642-120">Aborts verification after *maxErrorCount* errors.</span></span><br /><br /> <span data-ttu-id="3a642-121">Questo parametro non è supportato in .NET Framework 2.0 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="3a642-121">This parameter is not supported in .NET Framework version 2.0 or later.</span></span>|  
+|<span data-ttu-id="3a642-122">**/clock**</span><span class="sxs-lookup"><span data-stu-id="3a642-122">**/clock**</span></span>|<span data-ttu-id="3a642-123">Misura e segnala i seguenti tempi di verifica in millisecondi:</span><span class="sxs-lookup"><span data-stu-id="3a642-123">Measures and reports the following verification times in milliseconds:</span></span><br /><br /> <span data-ttu-id="3a642-124">**MD Val. cycle**</span><span class="sxs-lookup"><span data-stu-id="3a642-124">**MD Val. cycle**</span></span><br /> <span data-ttu-id="3a642-125">Ciclo di convalida dei metadati</span><span class="sxs-lookup"><span data-stu-id="3a642-125">Metadata validation cycle</span></span><br /><br /> <span data-ttu-id="3a642-126">**MD Val. pure**</span><span class="sxs-lookup"><span data-stu-id="3a642-126">**MD Val. pure**</span></span><br /> <span data-ttu-id="3a642-127">Pure di convalida dei metadati</span><span class="sxs-lookup"><span data-stu-id="3a642-127">Metadata validation pure</span></span><br /><br /> <span data-ttu-id="3a642-128">**IL Ver. cycle**</span><span class="sxs-lookup"><span data-stu-id="3a642-128">**IL Ver. cycle**</span></span><br /> <span data-ttu-id="3a642-129">Ciclo di verifica di MSIL (Microsoft Intermediate Language)</span><span class="sxs-lookup"><span data-stu-id="3a642-129">Microsoft intermediate language (MSIL) verification cycle</span></span><br /><br /> <span data-ttu-id="3a642-130">**IL Ver pure**</span><span class="sxs-lookup"><span data-stu-id="3a642-130">**IL Ver pure**</span></span><br /> <span data-ttu-id="3a642-131">Pure di verifica MSIL</span><span class="sxs-lookup"><span data-stu-id="3a642-131">MSIL verification pure</span></span><br /><br /> <span data-ttu-id="3a642-132">I tempi **MD Val. cycle** e **IL Ver. cycle** includono il tempo richiesto per l'esecuzione delle procedure di avvio e chiusura necessarie.</span><span class="sxs-lookup"><span data-stu-id="3a642-132">The **MD Val. cycle** and **IL Ver. cycle** times include the time required to perform necessary startup and shutdown procedures.</span></span> <span data-ttu-id="3a642-133">I tempi **MD Val. pure** e **IL Ver pure** corrispondono al tempo richiesto solo per l'esecuzione della convalida o della verifica.</span><span class="sxs-lookup"><span data-stu-id="3a642-133">The **MD Val. pure** and **IL Ver pure** times reflect the time required to perform the validation or verification only.</span></span>|  
+|<span data-ttu-id="3a642-134">**/help**</span><span class="sxs-lookup"><span data-stu-id="3a642-134">**/help**</span></span>|<span data-ttu-id="3a642-135">Visualizza la sintassi e le opzioni di comando dello strumento.</span><span class="sxs-lookup"><span data-stu-id="3a642-135">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="3a642-136">**/hresult**</span><span class="sxs-lookup"><span data-stu-id="3a642-136">**/hresult**</span></span>|<span data-ttu-id="3a642-137">Visualizza i codici di errore in formato esadecimale.</span><span class="sxs-lookup"><span data-stu-id="3a642-137">Displays error codes in hexadecimal format.</span></span>|  
+|<span data-ttu-id="3a642-138">**/ignore=** *hex.code* [, *hex.code*]</span><span class="sxs-lookup"><span data-stu-id="3a642-138">**/ignore=** *hex.code* [, *hex.code*]</span></span>|<span data-ttu-id="3a642-139">Ignora i codici di errore specificati.</span><span class="sxs-lookup"><span data-stu-id="3a642-139">Ignores the specified error codes.</span></span>|  
+|<span data-ttu-id="3a642-140">**/ignore=@** *responseFile*</span><span class="sxs-lookup"><span data-stu-id="3a642-140">**/ignore=@** *responseFile*</span></span>|<span data-ttu-id="3a642-141">Ignora i codici di errore elencati nel file di risposta specificato.</span><span class="sxs-lookup"><span data-stu-id="3a642-141">Ignores the error codes listed in the specified response file.</span></span>|  
+|<span data-ttu-id="3a642-142">**/il**</span><span class="sxs-lookup"><span data-stu-id="3a642-142">**/il**</span></span>|<span data-ttu-id="3a642-143">Esegue i controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly specificato da *filename*.</span><span class="sxs-lookup"><span data-stu-id="3a642-143">Performs MSIL type safety verification checks for methods implemented in the assembly specified by *filename*.</span></span> <span data-ttu-id="3a642-144">Vengono restituite descrizioni dettagliate per ogni problema rilevato, a meno che non si specifichi l'opzione **/quiet**.</span><span class="sxs-lookup"><span data-stu-id="3a642-144">The tool returns detailed descriptions for each problem found unless you specify the **/quiet** option.</span></span>|  
+|<span data-ttu-id="3a642-145">**/md**</span><span class="sxs-lookup"><span data-stu-id="3a642-145">**/md**</span></span>|<span data-ttu-id="3a642-146">Esegue controlli di convalida dei metadati sull'assembly specificato da *filename*.</span><span class="sxs-lookup"><span data-stu-id="3a642-146">Performs metadata validation checks on the assembly specified by *filename*.</span></span> <span data-ttu-id="3a642-147">Esamina l'intera struttura dei metadati nel file e segnala tutti i problemi di convalida rilevati.</span><span class="sxs-lookup"><span data-stu-id="3a642-147">This walks the full metadata structure within the file and reports all validation problems encountered.</span></span>|  
+|<span data-ttu-id="3a642-148">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="3a642-148">**/nologo**</span></span>|<span data-ttu-id="3a642-149">Evita la visualizzazione delle informazioni sul copyright e sulla versione del prodotto.</span><span class="sxs-lookup"><span data-stu-id="3a642-149">Suppresses the display of product version and copyright information.</span></span>|  
+|<span data-ttu-id="3a642-150">**/nosymbols**</span><span class="sxs-lookup"><span data-stu-id="3a642-150">**/nosymbols**</span></span>|<span data-ttu-id="3a642-151">In .NET Framework versione 2.0 evita la visualizzazione dei numeri di riga per compatibilità con le versioni precedenti.</span><span class="sxs-lookup"><span data-stu-id="3a642-151">In the .NET Framework version 2.0, suppresses line numbers for backward compatibility.</span></span>|  
+|<span data-ttu-id="3a642-152">**/quiet**</span><span class="sxs-lookup"><span data-stu-id="3a642-152">**/quiet**</span></span>|<span data-ttu-id="3a642-153">Specifica la modalità non interattiva. Evita la visualizzazione dell'output dei report dei problemi di verifica.</span><span class="sxs-lookup"><span data-stu-id="3a642-153">Specifies quiet mode; suppresses output of the verification problem reports.</span></span> <span data-ttu-id="3a642-154">Viene comunque indicato se il file è indipendente dai tipi, ma non vengono fornite informazioni sui problemi che impediscono la verifica dell'indipendenza dai tipi.</span><span class="sxs-lookup"><span data-stu-id="3a642-154">Peverify.exe still reports whether the file is type safe, but does not report information on problems preventing type safety verification.</span></span>|  
+|`/transparent`|<span data-ttu-id="3a642-155">Verifica solo i metodi trasparenti.</span><span class="sxs-lookup"><span data-stu-id="3a642-155">Verify only the transparent methods.</span></span>|  
+|<span data-ttu-id="3a642-156">**/unique**</span><span class="sxs-lookup"><span data-stu-id="3a642-156">**/unique**</span></span>|<span data-ttu-id="3a642-157">Ignora i codici di errore ripetuti.</span><span class="sxs-lookup"><span data-stu-id="3a642-157">Ignores repeating error codes.</span></span>|  
+|<span data-ttu-id="3a642-158">**/verbose**</span><span class="sxs-lookup"><span data-stu-id="3a642-158">**/verbose**</span></span>|<span data-ttu-id="3a642-159">In .NET Framework versione 2.0 determina la visualizzazione di informazioni aggiuntive nei messaggi di verifica MSIL.</span><span class="sxs-lookup"><span data-stu-id="3a642-159">In the .NET Framework version 2.0, displays additional information in MSIL verification messages.</span></span>|  
+|<span data-ttu-id="3a642-160">**/?**</span><span class="sxs-lookup"><span data-stu-id="3a642-160">**/?**</span></span>|<span data-ttu-id="3a642-161">Visualizza la sintassi e le opzioni di comando dello strumento.</span><span class="sxs-lookup"><span data-stu-id="3a642-161">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Note  
- Common Language Runtime si basa sull'esecuzione indipendente dai tipi del codice dell'applicazione per applicare meccanismi di sicurezza e isolamento. In genere il codice di cui non è [verificabile l'indipendenza dai tipi](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) non può essere eseguito, anche se è possibile impostare criteri di sicurezza per consentire l'esecuzione del codice attendibile ma non verificabile.  
+## <a name="remarks"></a><span data-ttu-id="3a642-162">Note</span><span class="sxs-lookup"><span data-stu-id="3a642-162">Remarks</span></span>  
+ <span data-ttu-id="3a642-163">Common Language Runtime si basa sull'esecuzione indipendente dai tipi del codice dell'applicazione per applicare meccanismi di sicurezza e isolamento.</span><span class="sxs-lookup"><span data-stu-id="3a642-163">The common language runtime relies on the type-safe execution of application code to help enforce security and isolation mechanisms.</span></span> <span data-ttu-id="3a642-164">In genere il codice di cui non è [verificabile l'indipendenza dai tipi](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) non può essere eseguito, anche se è possibile impostare criteri di sicurezza per consentire l'esecuzione del codice attendibile ma non verificabile.</span><span class="sxs-lookup"><span data-stu-id="3a642-164">Normally, code that is not [verifiably type safe](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) cannot run, although you can set security policy to allow the execution of trusted but unverifiable code.</span></span>  
   
- Se non sono state specificate né l'opzione **/md** né l'opzione **/il** verranno eseguiti entrambi i tipi di controllo, iniziando dai controlli **/md**. Se non sono presenti errori vengono effettuati i controlli **/il**. Se si specifica sia **/md** sia **/il** i controlli **/il** vengono effettuati anche in presenza di errori nei metadati. Pertanto in assenza di errori nei metadati, **peverify** *filename* è equivalente a **peverify** *filename* **/md** **/il**.  
+ <span data-ttu-id="3a642-165">Se non sono state specificate né l'opzione **/md** né l'opzione **/il** verranno eseguiti entrambi i tipi di controllo,</span><span class="sxs-lookup"><span data-stu-id="3a642-165">If neither the **/md** nor **/il** options are specified, Peverify.exe performs both types of checks.</span></span> <span data-ttu-id="3a642-166">iniziando dai controlli **/md**.</span><span class="sxs-lookup"><span data-stu-id="3a642-166">Peverify.exe performs **/md** checks first.</span></span> <span data-ttu-id="3a642-167">Se non sono presenti errori vengono effettuati i controlli **/il**.</span><span class="sxs-lookup"><span data-stu-id="3a642-167">If there are no errors, **/il** checks are made.</span></span> <span data-ttu-id="3a642-168">Se si specifica sia **/md** sia **/il** i controlli **/il** vengono effettuati anche in presenza di errori nei metadati.</span><span class="sxs-lookup"><span data-stu-id="3a642-168">If you specify both **/md** and **/il**, **/il** checks are made even if there are errors in the metadata.</span></span> <span data-ttu-id="3a642-169">Pertanto in assenza di errori nei metadati, **peverify** *filename* è equivalente a **peverify** *filename* **/md** **/il**.</span><span class="sxs-lookup"><span data-stu-id="3a642-169">Thus, if there are no metadata errors, **peverify** *filename* is equivalent to **peverify** *filename* **/md** **/il**.</span></span>  
   
- Mediante Peverify.exe vengono eseguiti controlli di verifica completi del codice MSIL sulla base dell'analisi del flusso di dati nonché di un elenco di alcune centinaia di regole sui metadati validi. Per informazioni dettagliate sui controlli eseguiti da Peverify.exe, vedere le specifiche di convalida dei metadati e le specifiche del set di istruzioni MSIL nella cartella "Tools Developers Guide" di [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+ <span data-ttu-id="3a642-170">Mediante Peverify.exe vengono eseguiti controlli di verifica completi del codice MSIL sulla base dell'analisi del flusso di dati nonché di un elenco di alcune centinaia di regole sui metadati validi.</span><span class="sxs-lookup"><span data-stu-id="3a642-170">Peverify.exe performs comprehensive MSIL verification checks based on dataflow analysis plus a list of several hundred rules on valid metadata.</span></span> <span data-ttu-id="3a642-171">Per informazioni dettagliate sui controlli eseguiti da Peverify.exe, vedere le specifiche di convalida dei metadati e le specifiche del set di istruzioni MSIL nella cartella "Tools Developers Guide" di [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a642-171">For detailed information on the checks Peverify.exe performs, see the "Metadata Validation Specification" and the "MSIL Instruction Set Specification" in the Tools Developers Guide folder in the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span></span>  
   
- Si noti che in .NET Framework 2.0 o versione successiva sono supportate restituzioni `byref` verificabili specificate mediante le seguenti istruzioni MSIL: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` e `unbox`.  
+ <span data-ttu-id="3a642-172">Si noti che in .NET Framework 2.0 o versione successiva sono supportate restituzioni `byref` verificabili specificate mediante le seguenti istruzioni MSIL: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` e `unbox`.</span><span class="sxs-lookup"><span data-stu-id="3a642-172">Note that the .NET Framework version 2.0 or later supports verifiable `byref` returns specified using the following MSIL instructions: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` and `unbox`.</span></span>  
   
-## <a name="examples"></a>Esempi  
- Il comando che segue esegue controlli di convalida dei metadati e controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly `myAssembly.exe`.  
+## <a name="examples"></a><span data-ttu-id="3a642-173">Esempi</span><span class="sxs-lookup"><span data-stu-id="3a642-173">Examples</span></span>  
+ <span data-ttu-id="3a642-174">Il comando che segue esegue controlli di convalida dei metadati e controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly `myAssembly.exe`.</span><span class="sxs-lookup"><span data-stu-id="3a642-174">The following command performs metadata validation checks and MSIL type safety verification checks for methods implemented in the assembly `myAssembly.exe`.</span></span>  
   
 ```  
 peverify myAssembly.exe /md /il  
 ```  
   
- Al completamento della richiesta precedente, viene visualizzato il messaggio che segue.  
+ <span data-ttu-id="3a642-175">Al completamento della richiesta precedente, viene visualizzato il messaggio che segue.</span><span class="sxs-lookup"><span data-stu-id="3a642-175">Upon successful completion of the above request, Peverify.exe displays the following message.</span></span>  
   
 ```  
 All classes and methods in myAssembly.exe Verified  
 ```  
   
- Il comando che segue esegue controlli di convalida dei metadati e controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly `myAssembly.exe`. Viene visualizzato il tempo necessario per l'esecuzione di questi controlli.  
+ <span data-ttu-id="3a642-176">Il comando che segue esegue controlli di convalida dei metadati e controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly `myAssembly.exe`.</span><span class="sxs-lookup"><span data-stu-id="3a642-176">The following command performs metadata validation checks and MSIL type safety verification checks for methods implemented in the assembly `myAssembly.exe`.</span></span> <span data-ttu-id="3a642-177">Viene visualizzato il tempo necessario per l'esecuzione di questi controlli.</span><span class="sxs-lookup"><span data-stu-id="3a642-177">The tool displays the time required to perform these checks.</span></span>  
   
 ```  
 peverify myAssembly.exe /md /il /clock  
 ```  
   
- Al completamento della richiesta precedente, viene visualizzato il messaggio che segue.  
+ <span data-ttu-id="3a642-178">Al completamento della richiesta precedente, viene visualizzato il messaggio che segue.</span><span class="sxs-lookup"><span data-stu-id="3a642-178">Upon successful completion of the above request, Peverify.exe displays the following message.</span></span>  
   
 ```  
 All classes and methods in myAssembly.exe Verified  
@@ -110,34 +103,33 @@ Timing: Total run     320 msec
         IL Ver.pure   230 msec  
 ```  
   
- Il comando che segue esegue controlli di convalida dei metadati e controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly `myAssembly.exe`. Tuttavia, Peverify.exe si arresta quando raggiunge il conteggio di errori massimo di 100. Lo strumento ignora inoltre i codici di errore specificati.  
+ <span data-ttu-id="3a642-179">Il comando che segue esegue controlli di convalida dei metadati e controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly `myAssembly.exe`.</span><span class="sxs-lookup"><span data-stu-id="3a642-179">The following command performs metadata validation checks and MSIL type safety verification checks for methods implemented in the assembly `myAssembly.exe`.</span></span> <span data-ttu-id="3a642-180">Tuttavia, Peverify.exe si arresta quando raggiunge il conteggio di errori massimo di 100.</span><span class="sxs-lookup"><span data-stu-id="3a642-180">Peverify.exe stops, however, when it reaches the maximum error count of 100.</span></span> <span data-ttu-id="3a642-181">Lo strumento ignora inoltre i codici di errore specificati.</span><span class="sxs-lookup"><span data-stu-id="3a642-181">The tool also ignores the specified error codes.</span></span>  
   
 ```  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
- Il comando che segue produce lo stesso risultato dell'esempio precedente, ma specifica i codici di errore da ignorare nel file di risposta `ignoreErrors.rsp`.  
+ <span data-ttu-id="3a642-182">Il comando che segue produce lo stesso risultato dell'esempio precedente, ma specifica i codici di errore da ignorare nel file di risposta `ignoreErrors.rsp`.</span><span class="sxs-lookup"><span data-stu-id="3a642-182">The following command produces the same result as the above previous example, but specifies the error codes to ignore in the response file `ignoreErrors.rsp`.</span></span>  
   
 ```  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  
 ```  
   
- Il file di risposta può contenere un elenco di codici di errore separati da virgole.  
+ <span data-ttu-id="3a642-183">Il file di risposta può contenere un elenco di codici di errore separati da virgole.</span><span class="sxs-lookup"><span data-stu-id="3a642-183">The response file can contain a comma-separated list of error codes.</span></span>  
   
 ```  
 0x12345678, 0xABCD1234  
 ```  
   
- In alternativa, il file di risposta può essere formattato con un codice di errore per riga.  
+ <span data-ttu-id="3a642-184">In alternativa, il file di risposta può essere formattato con un codice di errore per riga.</span><span class="sxs-lookup"><span data-stu-id="3a642-184">Alternatively, the response file can be formatted with one error code per line.</span></span>  
   
 ```  
 0x12345678  
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)   
- [NIB: scrittura di codice indipendente dai tipi verificabile](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)   
- [Indipendenza dai tipi e sicurezza](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)   
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="3a642-185">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3a642-185">See Also</span></span>  
+ [<span data-ttu-id="3a642-186">Strumenti</span><span class="sxs-lookup"><span data-stu-id="3a642-186">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="3a642-187">NIB: Scrittura di codice indipendente dai tipi verificabile</span><span class="sxs-lookup"><span data-stu-id="3a642-187">NIB: Writing Verifiably Type-Safe Code</span></span>](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
+ [<span data-ttu-id="3a642-188">Indipendenza dai tipi e sicurezza</span><span class="sxs-lookup"><span data-stu-id="3a642-188">Type Safety and Security</span></span>](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
+ [<span data-ttu-id="3a642-189">Prompt dei comandi</span><span class="sxs-lookup"><span data-stu-id="3a642-189">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

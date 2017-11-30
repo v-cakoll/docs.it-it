@@ -1,15 +1,12 @@
 ---
 title: Argomenti denominati e facoltativi (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - parameters [C#], named
 - named arguments [C#]
@@ -19,132 +16,125 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 0dc2fcee3903b80816c98bab47e2b9a2e5ef78b0
-ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
-In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
+# <a name="named-and-optional-arguments-c-programming-guide"></a><span data-ttu-id="ee9ac-102">Argomenti denominati e facoltativi (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="ee9ac-102">Named and Optional Arguments (C# Programming Guide)</span></span>
+<span data-ttu-id="ee9ac-103">In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati introdotti gli argomenti denominati e facoltativi.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-103">[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduces named and optional arguments.</span></span> <span data-ttu-id="ee9ac-104">Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-104">*Named arguments* enable you to specify an argument for a particular parameter by associating the argument with the parameter's name rather than with the parameter's position in the parameter list.</span></span> <span data-ttu-id="ee9ac-105">Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-105">*Optional arguments* enable you to omit arguments for some parameters.</span></span> <span data-ttu-id="ee9ac-106">Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-106">Both techniques can be used with methods, indexers, constructors, and delegates.</span></span>  
   
- Quando si usano gli argomenti denominati e facoltativi, gli argomenti vengono valutati nell'ordine nel quale sono visualizzati nell'elenco di argomenti, non nell'elenco di parametri.  
+ <span data-ttu-id="ee9ac-107">Quando si usano gli argomenti denominati e facoltativi, gli argomenti vengono valutati nell'ordine nel quale sono visualizzati nell'elenco di argomenti, non nell'elenco di parametri.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-107">When you use named and optional arguments, the arguments are evaluated in the order in which they appear in the argument list, not the parameter list.</span></span>  
   
- I parametri denominati e facoltativi, se usati insieme, consentono di specificare gli argomenti solo per alcuni parametri di un elenco di parametri facoltativi. Questa funzionalità semplifica considerevolmente le chiamate alle interfacce COM, ad esempio alle API di automazione di Microsoft Office.  
+ <span data-ttu-id="ee9ac-108">I parametri denominati e facoltativi, se usati insieme, consentono di specificare gli argomenti solo per alcuni parametri di un elenco di parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-108">Named and optional parameters, when used together, enable you to supply arguments for only a few parameters from a list of optional parameters.</span></span> <span data-ttu-id="ee9ac-109">Questa funzionalità semplifica considerevolmente le chiamate alle interfacce COM, ad esempio alle API di automazione di Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-109">This capability greatly facilitates calls to COM interfaces such as the Microsoft Office Automation APIs.</span></span>  
   
-## <a name="named-arguments"></a>Argomenti denominati  
- Gli argomenti denominati evitano di dover ricordare o cercare l'ordine di parametri negli elenchi di parametri dei metodi chiamati. Il parametro per ogni argomento può essere specificato dal nome del parametro. Ad esempio, una funzione che calcola l'indice di massa corporea (BMI, Body Mass Index) può essere chiamata normalmente inviando gli argomenti relativi a peso e altezza in base alla posizione, nell'ordine definito dalla funzione.  
+## <a name="named-arguments"></a><span data-ttu-id="ee9ac-110">Argomenti denominati</span><span class="sxs-lookup"><span data-stu-id="ee9ac-110">Named Arguments</span></span>  
+ <span data-ttu-id="ee9ac-111">Gli argomenti denominati evitano di dover ricordare o cercare l'ordine di parametri negli elenchi di parametri dei metodi chiamati.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-111">Named arguments free you from the need to remember or to look up the order of parameters in the parameter lists of called methods.</span></span> <span data-ttu-id="ee9ac-112">Il parametro per ogni argomento può essere specificato dal nome del parametro.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-112">The parameter for each argument can be specified by parameter name.</span></span> <span data-ttu-id="ee9ac-113">Ad esempio, una funzione che visualizza i dettagli dell'ordine (ad esempio, il nome del venditore, nome prodotto & numero di ordine) può essere chiamato in modo standard inviando gli argomenti di posizione, nell'ordine definito dalla funzione.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-113">For example, a function that prints order details (such as, seller name, order number & product name) can be called in the standard way by sending arguments by position, in the order defined by the function.</span></span>
   
- `CalculateBMI(123, 64);`  
+ `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- Se non si ricorda l'ordine dei parametri ma se ne conoscono i nomi, è possibile inviare gli argomenti in qualsiasi ordine, ovvero prima il peso o prima l'altezza.  
+ <span data-ttu-id="ee9ac-114">Se si conoscono i nomi non si ricorda l'ordine dei parametri, è possibile inviare gli argomenti in qualsiasi ordine.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-114">If you do not remember the order of the parameters but know their names, you can send the arguments in any order.</span></span>  
   
- `CalculateBMI(weight: 123, height: 64);`  
+ `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
- `CalculateBMI(height: 64, weight: 123);`  
+ `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Gli argomenti denominati migliorano anche la leggibilità del codice identificando che cosa rappresenta ogni argomento.  
+ <span data-ttu-id="ee9ac-115">Gli argomenti denominati migliorano anche la leggibilità del codice identificando che cosa rappresenta ogni argomento.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-115">Named arguments also improve the readability of your code by identifying what each argument represents.</span></span> <span data-ttu-id="ee9ac-116">Nel metodo di esempio riportato di seguito, il `sellerName` non può essere null o spazi vuoti.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-116">In the example method below, the `sellerName` cannot be null or whitespace.</span></span> <span data-ttu-id="ee9ac-117">Sia come `sellerName` e `productName` sono di tipi stringa, anziché inviare argomenti in base alla posizione, è opportuno utilizzare argomenti denominati per evitare ambiguità tra i due e ridurre la confusione per chiunque legga il codice.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-117">As both `sellerName` and `productName` are string types, instead of sending arguments by position, it makes sense to use named arguments to disambiguate the two and reduce confusion for anyone reading the code.</span></span>
   
- Un argomento denominato può seguire gli argomenti posizionali, come illustrato di seguito.  
+ <span data-ttu-id="ee9ac-118">Argomenti denominati, se usato con argomenti posizionali, sono validi, purché</span><span class="sxs-lookup"><span data-stu-id="ee9ac-118">Named arguments, when used with positional arguments, are valid as long as</span></span> 
+
+- <span data-ttu-id="ee9ac-119">essi non è seguiti da tutti gli argomenti posizionali, o</span><span class="sxs-lookup"><span data-stu-id="ee9ac-119">they're not followed by any positional arguments, or</span></span>
+
+ `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
+
+- <span data-ttu-id="ee9ac-120">_a partire da c# 7.2_, vengono utilizzati nella posizione corretta.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-120">_starting with C# 7.2_, they're used in the correct position.</span></span> <span data-ttu-id="ee9ac-121">Nell'esempio seguente, il parametro `orderNum` è nella posizione corretta, ma non è denominato in modo esplicito.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-121">In the example below, the parameter `orderNum` is in the correct position but isn't explicitly named.</span></span>
+
+ `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- `CalculateBMI(123, height: 64);`  
+ <span data-ttu-id="ee9ac-122">Tuttavia, in ordine di argomenti denominati non sono validi se si sta aggiungendo argomenti posizionali.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-122">However, out-of-order named arguments are invalid if they're followed by positional arguments.</span></span>
+
+ ```csharp
+ // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
+ PrintOrderDetails(productName: "Red Mug", 31, "Gift Shop");
+ ```
   
- Un argomento posizionale non può, tuttavia, seguire un argomento denominato. L'istruzione seguente causa un errore di compilazione.  
+## <a name="example"></a><span data-ttu-id="ee9ac-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="ee9ac-123">Example</span></span>  
+ <span data-ttu-id="ee9ac-124">Il codice seguente implementa gli esempi di questa sezione con alcuni altri.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-124">The following code implements the examples from this section along with some additional ones.</span></span>  
   
- `//CalculateBMI(weight: 123, 64);`  
+ [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
-## <a name="example"></a>Esempio  
- Il codice seguente implementa gli esempi di questa sezione.  
+## <a name="optional-arguments"></a><span data-ttu-id="ee9ac-125">Argomenti facoltativi</span><span class="sxs-lookup"><span data-stu-id="ee9ac-125">Optional Arguments</span></span>  
+ <span data-ttu-id="ee9ac-126">La definizione di un metodo, un costruttore, un indicizzatore o un delegato può specificare che i parametri sono obbligatori o facoltativi.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-126">The definition of a method, constructor, indexer, or delegate can specify that its parameters are required or that they are optional.</span></span> <span data-ttu-id="ee9ac-127">Tutte le chiamate devono specificare gli argomenti per tutti i parametri obbligatori, ma possono omettere gli argomenti per i parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-127">Any call must provide arguments for all required parameters, but can omit arguments for optional parameters.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
+ <span data-ttu-id="ee9ac-128">Ogni parametro facoltativo ha un valore predefinito incluso nella definizione.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-128">Each optional parameter has a default value as part of its definition.</span></span> <span data-ttu-id="ee9ac-129">Se per il parametro non viene inviato alcun argomento, viene usato il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-129">If no argument is sent for that parameter, the default value is used.</span></span> <span data-ttu-id="ee9ac-130">Il valore predefinito deve essere uno dei tipi di espressioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="ee9ac-130">A default value must be one of the following types of expressions:</span></span>  
   
-## <a name="optional-arguments"></a>Argomenti facoltativi  
- La definizione di un metodo, un costruttore, un indicizzatore o un delegato può specificare che i parametri sono obbligatori o facoltativi. Tutte le chiamate devono specificare gli argomenti per tutti i parametri obbligatori, ma possono omettere gli argomenti per i parametri facoltativi.  
+-   <span data-ttu-id="ee9ac-131">un'espressione costante;</span><span class="sxs-lookup"><span data-stu-id="ee9ac-131">a constant expression;</span></span>  
   
- Ogni parametro facoltativo ha un valore predefinito incluso nella definizione. Se per il parametro non viene inviato alcun argomento, viene usato il valore predefinito. Il valore predefinito deve essere uno dei tipi di espressioni seguenti:  
+-   <span data-ttu-id="ee9ac-132">un'espressione del form `new ValType()`, dove `ValType` è un tipo di valore, ad esempio [enum](../../../csharp/language-reference/keywords/enum.md) o [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);</span><span class="sxs-lookup"><span data-stu-id="ee9ac-132">an expression of the form `new ValType()`, where `ValType` is a value type, such as an [enum](../../../csharp/language-reference/keywords/enum.md) or a [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);</span></span>  
   
--   un'espressione costante;  
+-   <span data-ttu-id="ee9ac-133">un'espressione del form [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), dove `ValType` è un tipo di valore.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-133">an expression of the form [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md),  where `ValType` is a value type.</span></span>  
   
--   un'espressione del form `new ValType()`, dove `ValType` è un tipo di valore, ad esempio [enum](../../../csharp/language-reference/keywords/enum.md) o [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);  
+ <span data-ttu-id="ee9ac-134">I parametri facoltativi sono definiti alla fine dell'elenco di parametri, dopo eventuali parametri obbligatori.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-134">Optional parameters are defined at the end of the parameter list, after any required parameters.</span></span> <span data-ttu-id="ee9ac-135">Se il chiamante specifica un argomento per un parametro di una successione di parametri facoltativi, deve specificare gli argomenti per tutti i parametri facoltativi precedenti.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-135">If the caller provides an argument for any one of a succession of optional parameters, it must provide arguments for all preceding optional parameters.</span></span> <span data-ttu-id="ee9ac-136">I gap delimitati da virgole nell'elenco di argomenti non sono supportati.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-136">Comma-separated gaps in the argument list are not supported.</span></span> <span data-ttu-id="ee9ac-137">Nel codice seguente, ad esempio, il metodo di istanza `ExampleMethod` viene definito con un parametro obbligatorio e due parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-137">For example, in the following code, instance method `ExampleMethod` is defined with one required and two optional parameters.</span></span>  
   
--   un'espressione del form [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), dove `ValType` è un tipo di valore.  
+ [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
- I parametri facoltativi sono definiti alla fine dell'elenco di parametri, dopo eventuali parametri obbligatori. Se il chiamante specifica un argomento per un parametro di una successione di parametri facoltativi, deve specificare gli argomenti per tutti i parametri facoltativi precedenti. I gap delimitati da virgole nell'elenco di argomenti non sono supportati. Nel codice seguente, ad esempio, il metodo di istanza `ExampleMethod` viene definito con un parametro obbligatorio e due parametri facoltativi.  
-  
- [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
-  
- La chiamata seguente a `ExampleMethod` genera un errore del compilatore, poiché viene specificato un argomento per il terzo parametro ma non per il secondo.  
+ <span data-ttu-id="ee9ac-138">La chiamata seguente a `ExampleMethod` genera un errore del compilatore, poiché viene specificato un argomento per il terzo parametro ma non per il secondo.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-138">The following call to `ExampleMethod` causes a compiler error, because an argument is provided for the third parameter but not for the second.</span></span>  
   
  `//anExample.ExampleMethod(3, ,4);`  
   
- Se, tuttavia, si conosce il nome del terzo parametro, è possibile usare un argomento denominato per eseguire l'attività.  
+ <span data-ttu-id="ee9ac-139">Se, tuttavia, si conosce il nome del terzo parametro, è possibile usare un argomento denominato per eseguire l'attività.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-139">However, if you know the name of the third parameter, you can use a named argument to accomplish the task.</span></span>  
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense usa le parentesi per indicare parametri facoltativi, come mostrato nell'immagine seguente.  
+ <span data-ttu-id="ee9ac-140">IntelliSense usa le parentesi per indicare parametri facoltativi, come mostrato nell'immagine seguente.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-140">IntelliSense uses brackets to indicate optional parameters, as shown in the following illustration.</span></span>  
   
- ![Informazioni rapide di IntelliSense per il metodo ExampleMethod.](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-Parametri facoltativi in ExampleMethod  
+ <span data-ttu-id="ee9ac-141">![Informazioni rapide di IntelliSense per il metodo ExampleMethod.](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")</span><span class="sxs-lookup"><span data-stu-id="ee9ac-141">![IntelliSense Quick Info for method ExampleMethod.](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")</span></span>  
+<span data-ttu-id="ee9ac-142">Parametri facoltativi in ExampleMethod</span><span class="sxs-lookup"><span data-stu-id="ee9ac-142">Optional parameters in ExampleMethod</span></span>  
   
 > [!NOTE]
->  È possibile anche dichiarare parametri facoltativi usando la classe .NET <xref:System.Runtime.InteropServices.OptionalAttribute>. I parametri `OptionalAttribute` non richiedono un valore predefinito.  
+>  <span data-ttu-id="ee9ac-143">È possibile anche dichiarare parametri facoltativi usando la classe .NET <xref:System.Runtime.InteropServices.OptionalAttribute>.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-143">You can also declare optional parameters by using the .NET <xref:System.Runtime.InteropServices.OptionalAttribute> class.</span></span> <span data-ttu-id="ee9ac-144">I parametri `OptionalAttribute` non richiedono un valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-144">`OptionalAttribute` parameters do not require a default value.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente il costruttore per `ExampleClass` ha un solo parametro facoltativo. Il metodo di istanza `ExampleMethod` ha un solo parametro obbligatorio, `required`, e due parametri facoltativi, `optionalstr` e `optionalint`. Il codice in `Main` illustra i diversi modi in cui è possibile richiamare il costruttore e il metodo.  
+## <a name="example"></a><span data-ttu-id="ee9ac-145">Esempio</span><span class="sxs-lookup"><span data-stu-id="ee9ac-145">Example</span></span>  
+ <span data-ttu-id="ee9ac-146">Nell'esempio seguente il costruttore per `ExampleClass` ha un solo parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-146">In the following example, the constructor for `ExampleClass` has one parameter, which is optional.</span></span> <span data-ttu-id="ee9ac-147">Il metodo di istanza `ExampleMethod` ha un solo parametro obbligatorio, `required`, e due parametri facoltativi, `optionalstr` e `optionalint`.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-147">Instance method `ExampleMethod` has one required parameter, `required`, and two optional parameters, `optionalstr` and `optionalint`.</span></span> <span data-ttu-id="ee9ac-148">Il codice in `Main` illustra i diversi modi in cui è possibile richiamare il costruttore e il metodo.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-148">The code in `Main` shows the different ways in which the constructor and method can be invoked.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
-## <a name="com-interfaces"></a>Interfacce COM  
- Gli argomenti denominati e facoltativi, insieme al supporto per gli oggetti dinamici e ad altri miglioramenti, aumentano considerevolmente l'interoperabilità con le API COM, quali le API di automazione di Office.  
+## <a name="com-interfaces"></a><span data-ttu-id="ee9ac-149">Interfacce COM</span><span class="sxs-lookup"><span data-stu-id="ee9ac-149">COM Interfaces</span></span>  
+ <span data-ttu-id="ee9ac-150">Gli argomenti denominati e facoltativi, insieme al supporto per gli oggetti dinamici e ad altri miglioramenti, aumentano considerevolmente l'interoperabilità con le API COM, quali le API di automazione di Office.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-150">Named and optional arguments, along with support for dynamic objects and other enhancements, greatly improve interoperability with COM APIs, such as Office Automation APIs.</span></span>  
   
- Ad esempio, il metodo [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) nell'interfaccia [Range](http://go.microsoft.com/fwlink/?LinkId=148196) di Microsoft Office Excel ha sette parametri facoltativi. Questi parametri sono illustrati nell'immagine seguente.  
+ <span data-ttu-id="ee9ac-151">Ad esempio, il metodo [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) nell'interfaccia [Range](http://go.microsoft.com/fwlink/?LinkId=148196) di Microsoft Office Excel ha sette parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-151">For example, the [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) method in the Microsoft Office Excel [Range](http://go.microsoft.com/fwlink/?LinkId=148196) interface has seven parameters, all of which are optional.</span></span> <span data-ttu-id="ee9ac-152">Questi parametri sono illustrati nell'immagine seguente.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-152">These parameters are shown in the following illustration.</span></span>  
   
- ![Informazioni rapide di IntelliSense per il metodo AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-Parametri di AutoFormat  
+ <span data-ttu-id="ee9ac-153">![Informazioni rapide di IntelliSense per il metodo AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")</span><span class="sxs-lookup"><span data-stu-id="ee9ac-153">![IntelliSense Quick Info for the AutoFormat method.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")</span></span>  
+<span data-ttu-id="ee9ac-154">Parametri di AutoFormat</span><span class="sxs-lookup"><span data-stu-id="ee9ac-154">AutoFormat parameters</span></span>  
   
- In C# 3.0 e versioni precedenti è necessario un argomento per ogni parametro, come illustrato nell'esempio seguente.  
+ <span data-ttu-id="ee9ac-155">In C# 3.0 e versioni precedenti è necessario un argomento per ogni parametro, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-155">In C# 3.0 and earlier versions, an argument is required for each parameter, as shown in the following example.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
- È tuttavia possibile semplificare in modo sostanziale la chiamata a `AutoFormat` mediante argomenti denominati e facoltativi, introdotti in C# 4.0. Gli argomenti denominati e facoltativi consentono di omettere l'argomento per un parametro facoltativo se non si vuole modificare il valore predefinito del parametro. Nella chiamata seguente viene specificato un valore per uno solo dei sette parametri.  
+ <span data-ttu-id="ee9ac-156">È tuttavia possibile semplificare in modo sostanziale la chiamata a `AutoFormat` mediante argomenti denominati e facoltativi, introdotti in C# 4.0.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-156">However, you can greatly simplify the call to `AutoFormat` by using named and optional arguments, introduced in C# 4.0.</span></span> <span data-ttu-id="ee9ac-157">Gli argomenti denominati e facoltativi consentono di omettere l'argomento per un parametro facoltativo se non si vuole modificare il valore predefinito del parametro.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-157">Named and optional arguments enable you to omit the argument for an optional parameter if you do not want to change the parameter's default value.</span></span> <span data-ttu-id="ee9ac-158">Nella chiamata seguente viene specificato un valore per uno solo dei sette parametri.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-158">In the following call, a value is specified for only one of the seven parameters.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
- Per altre informazioni ed esempi, vedere [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) e [Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ <span data-ttu-id="ee9ac-159">Per altre informazioni ed esempi, vedere [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) e [Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).</span><span class="sxs-lookup"><span data-stu-id="ee9ac-159">For more information and examples, see [How to: Use Named and Optional Arguments in Office Programming](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) and [How to: Access Office Interop Objects by Using Visual C# Features](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).</span></span>  
   
-## <a name="overload-resolution"></a>Overload Resolution  
- L'uso di argomenti denominati e facoltativi influisce sulla risoluzione dell'overload nei modi seguenti:  
+## <a name="overload-resolution"></a><span data-ttu-id="ee9ac-160">Overload Resolution</span><span class="sxs-lookup"><span data-stu-id="ee9ac-160">Overload Resolution</span></span>  
+ <span data-ttu-id="ee9ac-161">L'uso di argomenti denominati e facoltativi influisce sulla risoluzione dell'overload nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="ee9ac-161">Use of named and optional arguments affects overload resolution in the following ways:</span></span>  
   
--   Un metodo, un indicizzatore o un costruttore è un candidato per l'esecuzione se ogni parametro è facoltativo o corrisponde, per nome o per posizione, a un solo argomento nell'istruzione chiamante e tale argomento può essere convertito nel tipo del parametro.  
+-   <span data-ttu-id="ee9ac-162">Un metodo, un indicizzatore o un costruttore è un candidato per l'esecuzione se ogni parametro è facoltativo o corrisponde, per nome o per posizione, a un solo argomento nell'istruzione chiamante e tale argomento può essere convertito nel tipo del parametro.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-162">A method, indexer, or constructor is a candidate for execution if each of its parameters either is optional or corresponds, by name or by position, to a single argument in the calling statement, and that argument can be converted to the type of the parameter.</span></span>  
   
--   Se è disponibile più di un candidato, agli argomenti specificati in modo esplicito vengono applicate le regole di risoluzione dell'overload per le conversioni preferite. Gli argomenti omessi per i parametri facoltativi vengono ignorati.  
+-   <span data-ttu-id="ee9ac-163">Se è disponibile più di un candidato, agli argomenti specificati in modo esplicito vengono applicate le regole di risoluzione dell'overload per le conversioni preferite.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-163">If more than one candidate is found, overload resolution rules for preferred conversions are applied to the arguments that are explicitly specified.</span></span> <span data-ttu-id="ee9ac-164">Gli argomenti omessi per i parametri facoltativi vengono ignorati.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-164">Omitted arguments for optional parameters are ignored.</span></span>  
   
--   Se due candidati sono giudicati ugualmente validi, la preferenza va a un candidato che non ha parametri facoltativi per i quali sono stati omessi gli argomenti nella chiamata. Si tratta di una conseguenza di una preferenza generale nella risoluzione dell'overload per i candidati che hanno un numero di parametri inferiore.  
+-   <span data-ttu-id="ee9ac-165">Se due candidati sono giudicati ugualmente validi, la preferenza va a un candidato che non ha parametri facoltativi per i quali sono stati omessi gli argomenti nella chiamata.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-165">If two candidates are judged to be equally good, preference goes to a candidate that does not have optional parameters for which arguments were omitted in the call.</span></span> <span data-ttu-id="ee9ac-166">Si tratta di una conseguenza di una preferenza generale nella risoluzione dell'overload per i candidati che hanno un numero di parametri inferiore.</span><span class="sxs-lookup"><span data-stu-id="ee9ac-166">This is a consequence of a general preference in overload resolution for candidates that have fewer parameters.</span></span>  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="ee9ac-167">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="ee9ac-167">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
- [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)
-
+## <a name="see-also"></a><span data-ttu-id="ee9ac-168">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ee9ac-168">See Also</span></span>  
+ [<span data-ttu-id="ee9ac-169">Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office</span><span class="sxs-lookup"><span data-stu-id="ee9ac-169">How to: Use Named and Optional Arguments in Office Programming</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+ [<span data-ttu-id="ee9ac-170">Uso del tipo dinamico</span><span class="sxs-lookup"><span data-stu-id="ee9ac-170">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [<span data-ttu-id="ee9ac-171">Uso dei costruttori</span><span class="sxs-lookup"><span data-stu-id="ee9ac-171">Using Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [<span data-ttu-id="ee9ac-172">Uso degli indicizzatori</span><span class="sxs-lookup"><span data-stu-id="ee9ac-172">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)

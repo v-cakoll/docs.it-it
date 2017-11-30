@@ -1,592 +1,603 @@
 ---
-title: "Classi di caratteri nelle espressioni regolari | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espressioni regolari di .NET Framework, classi di caratteri"
-  - "classi di caratteri"
-  - "caratteri, sintassi corrispondente"
-  - "espressioni regolari, classi di caratteri"
+title: Classi di caratteri nelle espressioni regolari
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- character classes
+- regular expressions, character classes
+- characters, matching syntax
+- .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 52
+caps.latest.revision: "58"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Classi di caratteri nelle espressioni regolari
-Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può verificarsi in una stringa di input per trovare una corrispondenza.  Il linguaggio delle espressioni regolari di .NET Framework supporta le seguenti classi di caratteri:  
+# <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="cd471-102">Classi di caratteri nelle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="cd471-102">Character Classes in Regular Expressions</span></span>
+<span data-ttu-id="cd471-103"><a name="Top"></a> Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può verificarsi in una stringa di input per trovare una corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="cd471-103"><a name="Top"></a> A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="cd471-104">Il linguaggio delle espressioni regolari di .NET supporta le classi di caratteri seguenti:</span><span class="sxs-lookup"><span data-stu-id="cd471-104">The regular expression language in .NET supports the following character classes:</span></span>  
   
--   Gruppi di caratteri positivi.  Un carattere nella stringa di input deve corrispondere a un set di caratteri specificato.  Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup).  
+-   <span data-ttu-id="cd471-105">Gruppi di caratteri positivi.</span><span class="sxs-lookup"><span data-stu-id="cd471-105">Positive character groups.</span></span> <span data-ttu-id="cd471-106">Un carattere nella stringa di input deve corrispondere a un set di caratteri specificato.</span><span class="sxs-lookup"><span data-stu-id="cd471-106">A character in the input string must match one of a specified set of characters.</span></span> <span data-ttu-id="cd471-107">Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup).</span><span class="sxs-lookup"><span data-stu-id="cd471-107">For more information, see [Positive Character Group](#PositiveGroup).</span></span>  
   
--   Gruppi di caratteri negativi.  Un carattere nella stringa di input non deve corrispondere a un set di caratteri specificato.  Per altre informazioni, vedere [Gruppo di caratteri negativi](#NegativeGroup).  
+-   <span data-ttu-id="cd471-108">Gruppi di caratteri negativi.</span><span class="sxs-lookup"><span data-stu-id="cd471-108">Negative character groups.</span></span> <span data-ttu-id="cd471-109">Un carattere nella stringa di input non deve corrispondere a un set di caratteri specificato.</span><span class="sxs-lookup"><span data-stu-id="cd471-109">A character in the input string must not match one of a specified set of characters.</span></span> <span data-ttu-id="cd471-110">Per altre informazioni, vedere [Gruppo di caratteri negativi](#NegativeGroup).</span><span class="sxs-lookup"><span data-stu-id="cd471-110">For more information, see [Negative Character Group](#NegativeGroup).</span></span>  
   
--   Qualsiasi carattere.  Il carattere `.` \(punto\) in un'espressione regolare è un carattere jolly che corrisponde a qualsiasi carattere, eccetto `\n`.  Per altre informazioni, vedere [Qualsiasi carattere](#AnyCharacter).  
+-   <span data-ttu-id="cd471-111">Qualsiasi carattere.</span><span class="sxs-lookup"><span data-stu-id="cd471-111">Any character.</span></span> <span data-ttu-id="cd471-112">Il carattere `.` (punto) in un'espressione regolare è un carattere jolly che corrisponde a qualsiasi carattere, eccetto `\n`.</span><span class="sxs-lookup"><span data-stu-id="cd471-112">The `.` (dot or period) character in a regular expression is a wildcard character that matches any character except `\n`.</span></span> <span data-ttu-id="cd471-113">Per altre informazioni, vedere [Qualsiasi carattere](#AnyCharacter).</span><span class="sxs-lookup"><span data-stu-id="cd471-113">For more information, see [Any Character](#AnyCharacter).</span></span>  
   
--   Categoria generale Unicode o blocco denominato.  Per trovare una corrispondenza, un carattere nella stringa di input deve appartenere a una particolare categoria Unicode o essere compreso in un intervallo contiguo di caratteri Unicode.  Per altre informazioni, vedere [Categoria Unicode o blocco Unicode](#CategoryOrBlock).  
+-   <span data-ttu-id="cd471-114">Categoria generale Unicode o blocco denominato.</span><span class="sxs-lookup"><span data-stu-id="cd471-114">A general Unicode category or named block.</span></span> <span data-ttu-id="cd471-115">Per trovare una corrispondenza, un carattere nella stringa di input deve appartenere a una particolare categoria Unicode o essere compreso in un intervallo contiguo di caratteri Unicode.</span><span class="sxs-lookup"><span data-stu-id="cd471-115">A character in the input string must be a member of a particular Unicode category or must fall within a contiguous range of Unicode characters for a match to succeed.</span></span> <span data-ttu-id="cd471-116">Per altre informazioni, vedere [Categoria Unicode o blocco Unicode](#CategoryOrBlock).</span><span class="sxs-lookup"><span data-stu-id="cd471-116">For more information, see [Unicode Category or Unicode Block](#CategoryOrBlock).</span></span>  
   
--   Categoria Unicode generale o blocco denominato.  Per trovare una corrispondenza, un carattere nella stringa di input non deve appartenere a una particolare categoria Unicode o non deve essere compreso in un intervallo contiguo di caratteri Unicode.  Per altre informazioni, vedere [Categoria Unicode negativa o blocco Unicode](#NegativeCategoryOrBlock).  
+-   <span data-ttu-id="cd471-117">Categoria Unicode generale o blocco denominato.</span><span class="sxs-lookup"><span data-stu-id="cd471-117">A negative general Unicode category or named block.</span></span> <span data-ttu-id="cd471-118">Per trovare una corrispondenza, un carattere nella stringa di input non deve appartenere a una particolare categoria Unicode o non deve essere compreso in un intervallo contiguo di caratteri Unicode.</span><span class="sxs-lookup"><span data-stu-id="cd471-118">A character in the input string must not be a member of a particular Unicode category or must not fall within a contiguous range of Unicode characters for a match to succeed.</span></span> <span data-ttu-id="cd471-119">Per altre informazioni, vedere [Categoria Unicode negativa o blocco Unicode](#NegativeCategoryOrBlock).</span><span class="sxs-lookup"><span data-stu-id="cd471-119">For more information, see [Negative Unicode Category or Unicode Block](#NegativeCategoryOrBlock).</span></span>  
   
--   Carattere alfanumerico.  Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode appropriata per i caratteri alfanumerico.  Per altre informazioni, vedere [Carattere alfanumerico](#WordCharacter).  
+-   <span data-ttu-id="cd471-120">Carattere alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-120">A word character.</span></span> <span data-ttu-id="cd471-121">Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode appropriata per i caratteri alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-121">A character in the input string can belong to any of the Unicode categories that are appropriate for characters in words.</span></span> <span data-ttu-id="cd471-122">Per altre informazioni, vedere [Carattere alfanumerico](#WordCharacter).</span><span class="sxs-lookup"><span data-stu-id="cd471-122">For more information, see [Word Character](#WordCharacter).</span></span>  
   
--   Carattere non alfanumerico.  Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode che non sia un carattere alfanumerico.  Per altre informazioni, vedere [Carattere non alfanumerico](#NonWordCharacter).  
+-   <span data-ttu-id="cd471-123">Carattere non alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-123">A non-word character.</span></span> <span data-ttu-id="cd471-124">Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode che non sia un carattere alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-124">A character in the input string can belong to any Unicode category that is not a word character.</span></span> <span data-ttu-id="cd471-125">Per altre informazioni, vedere [Carattere non alfanumerico](#NonWordCharacter).</span><span class="sxs-lookup"><span data-stu-id="cd471-125">For more information, see [Non-Word Character](#NonWordCharacter).</span></span>  
   
--   Spazio vuoto.  Un carattere nella stringa di input può essere qualsiasi carattere separatore Unicode, nonché un numero qualsiasi di caratteri di controllo.  Per altre informazioni, vedere [Spazio vuoto](#WhitespaceCharacter).  
+-   <span data-ttu-id="cd471-126">Spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-126">A white-space character.</span></span> <span data-ttu-id="cd471-127">Un carattere nella stringa di input può essere qualsiasi carattere separatore Unicode, nonché un numero qualsiasi di caratteri di controllo.</span><span class="sxs-lookup"><span data-stu-id="cd471-127">A character in the input string can be any Unicode separator character, as well as any one of a number of control characters.</span></span> <span data-ttu-id="cd471-128">Per altre informazioni, vedere [Spazio vuoto](#WhitespaceCharacter).</span><span class="sxs-lookup"><span data-stu-id="cd471-128">For more information, see [White-Space Character](#WhitespaceCharacter).</span></span>  
   
--   Carattere diverso da uno spazio vuoto.  Un carattere nella stringa di input può essere qualsiasi carattere diverso da uno spazio vuoto.  Per altre informazioni, vedere [Carattere diverso da uno spazio vuoto](#NonWhitespaceCharacter).  
+-   <span data-ttu-id="cd471-129">Carattere diverso da uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-129">A non-white-space character.</span></span> <span data-ttu-id="cd471-130">Un carattere nella stringa di input può essere qualsiasi carattere diverso da uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-130">A character in the input string can be any character that is not a white-space character.</span></span> <span data-ttu-id="cd471-131">Per altre informazioni, vedere [Carattere diverso da uno spazio vuoto](#NonWhitespaceCharacter).</span><span class="sxs-lookup"><span data-stu-id="cd471-131">For more information, see [Non-White-Space Character](#NonWhitespaceCharacter).</span></span>  
   
--   Cifra decimale.  Un carattere nella stringa di input può essere qualsiasi numero di caratteri classificati come cifre decimali Unicode.  Per altre informazioni, vedere [Carattere decimale numerico](#DigitCharacter).  
+-   <span data-ttu-id="cd471-132">Cifra decimale.</span><span class="sxs-lookup"><span data-stu-id="cd471-132">A decimal digit.</span></span> <span data-ttu-id="cd471-133">Un carattere nella stringa di input può essere qualsiasi numero di caratteri classificati come cifre decimali Unicode.</span><span class="sxs-lookup"><span data-stu-id="cd471-133">A character in the input string can be any of a number of characters classified as Unicode decimal digits.</span></span> <span data-ttu-id="cd471-134">Per altre informazioni, vedere [Carattere cifra decimale](#DigitCharacter).</span><span class="sxs-lookup"><span data-stu-id="cd471-134">For more information, see [Decimal Digit Character](#DigitCharacter).</span></span>  
   
--   Cifra non decimale.  Un carattere nella stringa di input può essere qualsiasi carattere tranne una cifra decimale Unicode.  Per altre informazioni, vedere [Carattere decimale numerico](#NonDigitCharacter).  
+-   <span data-ttu-id="cd471-135">Cifra non decimale.</span><span class="sxs-lookup"><span data-stu-id="cd471-135">A non-decimal digit.</span></span> <span data-ttu-id="cd471-136">Un carattere nella stringa di input può essere qualsiasi carattere tranne una cifra decimale Unicode.</span><span class="sxs-lookup"><span data-stu-id="cd471-136">A character in the input string can be anything other than a Unicode decimal digit.</span></span> <span data-ttu-id="cd471-137">Per altre informazioni, vedere [Carattere cifra decimale](#NonDigitCharacter).</span><span class="sxs-lookup"><span data-stu-id="cd471-137">For more information, see [Decimal Digit Character](#NonDigitCharacter).</span></span>  
   
- .NET Framework supporta espressioni di sottrazione di classi di caratteri che consentono di definire un set di caratteri come risultato dell'esclusione di una classe di caratteri da un'altra classe di caratteri.  Per altre informazioni, vedere [Sottrazione di classi di caratteri](#CharacterClassSubtraction).  
+ <span data-ttu-id="cd471-138">.NET supporta espressioni di sottrazione di classi di caratteri che consentono di definire un set di caratteri come risultato dell'esclusione di una classe di caratteri da un'altra classe di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-138">.NET supports character class subtraction expressions, which enables you to define a set of characters as the result of excluding one character class from another character class.</span></span> <span data-ttu-id="cd471-139">Per altre informazioni, vedere [Sottrazione di classi di caratteri](#CharacterClassSubtraction).</span><span class="sxs-lookup"><span data-stu-id="cd471-139">For more information, see [Character Class Subtraction](#CharacterClassSubtraction).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="cd471-140">Classi corrispondenti caratteri per categoria, ad esempio caratteri [\w](#WordCharacter) per la corrispondenza di caratteri alfanumerici o [\p {}](#CategoryOrBlock) per corrispondere a una categoria Unicode, si basano sulla <xref:System.Globalization.CharUnicodeInfo> classe per fornire informazioni di carattere categorie.</span><span class="sxs-lookup"><span data-stu-id="cd471-140">Character classes that match characters by category, such as [\w](#WordCharacter) to match word characters or [\p{}](#CategoryOrBlock) to match a Unicode category, rely on the <xref:System.Globalization.CharUnicodeInfo> class to provide information about character categories.</span></span>  <span data-ttu-id="cd471-141">A partire da [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/).</span><span class="sxs-lookup"><span data-stu-id="cd471-141">Starting with the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], character categories are based on [The Unicode Standard, Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/).</span></span> <span data-ttu-id="cd471-142">Da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], si basano sullo [standard Unicode, versione 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).</span><span class="sxs-lookup"><span data-stu-id="cd471-142">In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] through the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], they are based on [The Unicode Standard, Version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).</span></span>  
   
 <a name="PositiveGroup"></a>   
-## Gruppo di caratteri positivi: \[ \]  
- Un gruppo di caratteri positivi specifica un elenco di caratteri che possono essere presenti in una stringa di input per trovare una corrispondenza.  È possibile specificare l'elenco di caratteri singolarmente, come intervallo o entrambi.  
+## <a name="positive-character-group--"></a><span data-ttu-id="cd471-143">Gruppo di caratteri positivi: [ ]</span><span class="sxs-lookup"><span data-stu-id="cd471-143">Positive Character Group: [ ]</span></span>  
+ <span data-ttu-id="cd471-144">Un gruppo di caratteri positivi specifica un elenco di caratteri che possono essere presenti in una stringa di input per trovare una corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="cd471-144">A positive character group specifies a list of characters, any one of which may appear in an input string for a match to occur.</span></span> <span data-ttu-id="cd471-145">È possibile specificare l'elenco di caratteri singolarmente, come intervallo o entrambi.</span><span class="sxs-lookup"><span data-stu-id="cd471-145">This list of characters may be specified individually, as a range, or both.</span></span>  
   
- Di seguito viene indicata la sintassi per specificare un elenco di singoli caratteri:  
+ <span data-ttu-id="cd471-146">Di seguito viene indicata la sintassi per specificare un elenco di singoli caratteri:</span><span class="sxs-lookup"><span data-stu-id="cd471-146">The syntax for specifying a list of individual characters is as follows:</span></span>  
   
- \[*character\_group*\]  
+ <span data-ttu-id="cd471-147">[*character_group*]</span><span class="sxs-lookup"><span data-stu-id="cd471-147">[*character_group*]</span></span>  
   
- dove  *character\_group* è un elenco dei singoli caratteri che possono apparire nella stringa di input affinché una corrispondenza riesca.  *character\_group* può contenere qualsiasi combinazione di uno o più caratteri letterali, [caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o classi di caratteri.  
+ <span data-ttu-id="cd471-148">dove *character_group* è un elenco dei singoli caratteri che possono essere inclusi nella stringa di input affinché una corrispondenza riesca.</span><span class="sxs-lookup"><span data-stu-id="cd471-148">where *character_group* is a list of the individual characters that can appear in the input string for a match to succeed.</span></span> <span data-ttu-id="cd471-149">*character_group* può contenere qualsiasi combinazione di uno o più caratteri letterali, [caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o classi di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-149">*character_group* can consist of any combination of one or more literal characters, [escape characters](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), or character classes.</span></span>  
   
- Di seguito viene indicata la sintassi per specificare un intervallo di caratteri:  
+ <span data-ttu-id="cd471-150">Di seguito viene indicata la sintassi per specificare un intervallo di caratteri:</span><span class="sxs-lookup"><span data-stu-id="cd471-150">The syntax for specifying a range of characters is as follows:</span></span>  
   
 ```  
 [firstCharacter-lastCharacter]  
 ```  
   
- dove *firstCharacter* è il carattere che inizia l'intervallo e *lastCharacter* è il carattere che lo termina.  Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino \(\-\), quindi l'ultimo carattere della serie.  Due caratteri sono contigui se hanno punti di codice Unicode adiacenti.  
+ <span data-ttu-id="cd471-151">dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacter* è il carattere alla fine dell'intervallo.</span><span class="sxs-lookup"><span data-stu-id="cd471-151">where *firstCharacter* is the character that begins the range and *lastCharacter* is the character that ends the range.</span></span> <span data-ttu-id="cd471-152">Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino (-), quindi l'ultimo carattere della serie.</span><span class="sxs-lookup"><span data-stu-id="cd471-152">A character range is a contiguous series of characters defined by specifying the first character in the series, a hyphen (-), and then the last character in the series.</span></span> <span data-ttu-id="cd471-153">Due caratteri sono contigui se hanno punti di codice Unicode adiacenti.</span><span class="sxs-lookup"><span data-stu-id="cd471-153">Two characters are contiguous if they have adjacent Unicode code points.</span></span>  
   
- Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti classi di caratteri positivi.  
+ <span data-ttu-id="cd471-154">Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti classi di caratteri positivi.</span><span class="sxs-lookup"><span data-stu-id="cd471-154">Some common regular expression patterns that contain positive character classes are listed in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`[aeiou]`|Corrisponde a tutte le vocali.|  
-|`[\p{P}\d]`|Corrisponde a tutti i caratteri di punteggiatura e tutte le cifre decimali.|  
-|`[\s\p{P}]`|Corrisponde a tutti gli spazi vuoti e ai caratteri di punteggiatura.|  
+|<span data-ttu-id="cd471-155">Criterio</span><span class="sxs-lookup"><span data-stu-id="cd471-155">Pattern</span></span>|<span data-ttu-id="cd471-156">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-156">Description</span></span>|  
+|-------------|-----------------|  
+|`[aeiou]`|<span data-ttu-id="cd471-157">Corrisponde a tutte le vocali.</span><span class="sxs-lookup"><span data-stu-id="cd471-157">Match all vowels.</span></span>|  
+|`[\p{P}\d]`|<span data-ttu-id="cd471-158">Corrisponde a tutti i caratteri di punteggiatura e tutte le cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="cd471-158">Match all punctuation and decimal digit characters.</span></span>|  
+|`[\s\p{P}]`|<span data-ttu-id="cd471-159">Corrisponde a tutti gli spazi vuoti e ai caratteri di punteggiatura.</span><span class="sxs-lookup"><span data-stu-id="cd471-159">Match all white-space and punctuation.</span></span>|  
   
- Nell'esempio seguente viene definito un gruppo di caratteri positivi contenente i caratteri "a" ed "e" in modo che la stringa di input contenga obbligatoriamente le parole "grey" o "gray" seguite da un'altra parola perché si verifichi una corrispondenza.  
+ <span data-ttu-id="cd471-160">Nell'esempio seguente viene definito un gruppo di caratteri positivi contenente i caratteri "a" ed "e" in modo che la stringa di input contenga obbligatoriamente le parole "grey" o "gray" seguite da un'altra parola perché si verifichi una corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="cd471-160">The following example defines a positive character group that contains the characters "a" and "e" so that the input string must contain the words "grey" or "gray" followed by another word for a match to occur.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/positivecharclasses.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/positivecharclasses.vb#1)]  
   
- L'espressione regolare `gr[ae]y\s\S+?[\s|\p{P}]` viene definita come segue:  
+ <span data-ttu-id="cd471-161">L'espressione regolare `gr[ae]y\s\S+?[\s|\p{P}]` viene definita come segue:</span><span class="sxs-lookup"><span data-stu-id="cd471-161">The regular expression `gr[ae]y\s\S+?[\s|\p{P}]` is defined as follows:</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`gr`|Corrisponde ai caratteri letterali "gr".|  
-|`[ae]`|Corrisponde a una "a" o una "e".|  
-|`y\s`|Corrisponde al carattere letterale "y" seguito da uno spazio vuoto.|  
-|`\S+?`|Corrisponde a uno o più spazi vuoti, ma al minor numero possibile.|  
-|`[\s\p{P}]`|Corrisponde a uno spazio vuoto o a un segno di punteggiatura.|  
+|<span data-ttu-id="cd471-162">Criterio</span><span class="sxs-lookup"><span data-stu-id="cd471-162">Pattern</span></span>|<span data-ttu-id="cd471-163">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-163">Description</span></span>|  
+|-------------|-----------------|  
+|`gr`|<span data-ttu-id="cd471-164">Corrisponde ai caratteri letterali "gr".</span><span class="sxs-lookup"><span data-stu-id="cd471-164">Match the literal characters "gr".</span></span>|  
+|`[ae]`|<span data-ttu-id="cd471-165">Corrisponde a una "a" o una "e".</span><span class="sxs-lookup"><span data-stu-id="cd471-165">Match either an "a" or an "e".</span></span>|  
+|`y\s`|<span data-ttu-id="cd471-166">Corrisponde al carattere letterale "y" seguito da uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-166">Match the literal character "y" followed by a white-space character.</span></span>|  
+|`\S+?`|<span data-ttu-id="cd471-167">Corrisponde a uno o più spazi vuoti, ma al minor numero possibile.</span><span class="sxs-lookup"><span data-stu-id="cd471-167">Match one or more non-white-space characters, but as few as possible.</span></span>|  
+|`[\s\p{P}]`|<span data-ttu-id="cd471-168">Corrisponde a uno spazio vuoto o a un segno di punteggiatura.</span><span class="sxs-lookup"><span data-stu-id="cd471-168">Match either a white-space character or a punctuation mark.</span></span>|  
   
- Le corrispondenze dell'esempio seguente sono relative a parole che iniziano con una lettera maiuscola qualsiasi.  Viene usata la sottoespressione `[A-Z]` per rappresentare l'intervallo di lettere maiuscole da A a Z.  
+ <span data-ttu-id="cd471-169">Le corrispondenze dell'esempio seguente sono relative a parole che iniziano con una lettera maiuscola qualsiasi.</span><span class="sxs-lookup"><span data-stu-id="cd471-169">The following example matches words that begin with any capital letter.</span></span> <span data-ttu-id="cd471-170">Viene usata la sottoespressione `[A-Z]` per rappresentare l'intervallo di lettere maiuscole da A a Z.</span><span class="sxs-lookup"><span data-stu-id="cd471-170">It uses the subexpression `[A-Z]` to represent the range of capital letters from A to Z.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/range.cs#3)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/range.vb#3)]  
   
- L'espressione regolare `\b[A-Z]\w*\b` viene definita come illustrato nella tabella seguente.  
+ <span data-ttu-id="cd471-171">L'espressione regolare `\b[A-Z]\w*\b` viene definita come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-171">The regular expression `\b[A-Z]\w*\b` is defined as shown in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`\b`|Inizia dal confine di una parola.|  
-|`[A-Z]`|Corrisponde a qualsiasi carattere maiuscolo da A a Z.|  
-|`\w*`|Trova la corrispondenza di zero o più caratteri alfanumerici.|  
-|`\b`|Trova la corrispondenza di un confine di parola.|  
+|<span data-ttu-id="cd471-172">Criterio</span><span class="sxs-lookup"><span data-stu-id="cd471-172">Pattern</span></span>|<span data-ttu-id="cd471-173">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-173">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="cd471-174">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-174">Start at a word boundary.</span></span>|  
+|`[A-Z]`|<span data-ttu-id="cd471-175">Corrisponde a qualsiasi carattere maiuscolo da A a Z.</span><span class="sxs-lookup"><span data-stu-id="cd471-175">Match any uppercase character from A to Z.</span></span>|  
+|`\w*`|<span data-ttu-id="cd471-176">Trova la corrispondenza di zero o più caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="cd471-176">Match zero or more word characters.</span></span>|  
+|`\b`|<span data-ttu-id="cd471-177">Trova la corrispondenza di un confine di parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-177">Match a word boundary.</span></span>|  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-178">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-178">Back to Top</span></span>](#Top)  
   
 <a name="NegativeGroup"></a>   
-## Gruppo di caratteri negativi: \[^\]  
- Un gruppo di caratteri negativi specifica un elenco di caratteri che non devono essere presenti in una stringa di input per trovare una corrispondenza.  È possibile specificare l'elenco di caratteri singolarmente, come intervallo o entrambi.  
+## <a name="negative-character-group-"></a><span data-ttu-id="cd471-179">Gruppo di caratteri negativi: [^]</span><span class="sxs-lookup"><span data-stu-id="cd471-179">Negative Character Group: [^]</span></span>  
+ <span data-ttu-id="cd471-180">Un gruppo di caratteri negativi specifica un elenco di caratteri che non devono essere presenti in una stringa di input per trovare una corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="cd471-180">A negative character group specifies a list of characters that must not appear in an input string for a match to occur.</span></span> <span data-ttu-id="cd471-181">È possibile specificare l'elenco di caratteri singolarmente, come intervallo o entrambi.</span><span class="sxs-lookup"><span data-stu-id="cd471-181">The list of characters may be specified individually, as a range, or both.</span></span>  
   
- Di seguito viene indicata la sintassi per specificare un elenco di singoli caratteri:  
+ <span data-ttu-id="cd471-182">Di seguito viene indicata la sintassi per specificare un elenco di singoli caratteri:</span><span class="sxs-lookup"><span data-stu-id="cd471-182">The syntax for specifying a list of individual characters is as follows:</span></span>  
   
- \[*^character\_group*\]  
+ <span data-ttu-id="cd471-183">[*^character_group*]</span><span class="sxs-lookup"><span data-stu-id="cd471-183">[*^character_group*]</span></span>  
   
- dove  *character\_group* è un elenco dei singoli caratteri che non possono apparire nella stringa di input affinché una corrispondenza riesca.  *character\_group* può contenere qualsiasi combinazione di uno o più caratteri letterali, [caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o classi di caratteri.  
+ <span data-ttu-id="cd471-184">dove *character_group* è un elenco dei singoli caratteri che non possono essere inclusi nella stringa di input affinché una corrispondenza riesca.</span><span class="sxs-lookup"><span data-stu-id="cd471-184">where *character_group* is a list of the individual characters that cannot appear in the input string for a match to succeed.</span></span> <span data-ttu-id="cd471-185">*character_group* può contenere qualsiasi combinazione di uno o più caratteri letterali, [caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o classi di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-185">*character_group* can consist of any combination of one or more literal characters, [escape characters](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), or character classes.</span></span>  
   
- Di seguito viene indicata la sintassi per specificare un intervallo di caratteri:  
+ <span data-ttu-id="cd471-186">Di seguito viene indicata la sintassi per specificare un intervallo di caratteri:</span><span class="sxs-lookup"><span data-stu-id="cd471-186">The syntax for specifying a range of characters is as follows:</span></span>  
   
- \[^*firstCharacter*\-*lastCharacter*\]  
+ <span data-ttu-id="cd471-187">[^*firstCharacter*-*lastCharacter*]</span><span class="sxs-lookup"><span data-stu-id="cd471-187">[^*firstCharacter*-*lastCharacter*]</span></span>  
   
- dove *firstCharacter* è il carattere che inizia l'intervallo e *lastCharacter* è il carattere che lo termina.  Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino \(\-\), quindi l'ultimo carattere della serie.  Due caratteri sono contigui se hanno punti di codice Unicode adiacenti.  
+ <span data-ttu-id="cd471-188">dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacter* è il carattere alla fine dell'intervallo.</span><span class="sxs-lookup"><span data-stu-id="cd471-188">where *firstCharacter* is the character that begins the range, and *lastCharacter* is the character that ends the range.</span></span> <span data-ttu-id="cd471-189">Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino (-), quindi l'ultimo carattere della serie.</span><span class="sxs-lookup"><span data-stu-id="cd471-189">A character range is a contiguous series of characters defined by specifying the first character in the series, a hyphen (-), and then the last character in the series.</span></span> <span data-ttu-id="cd471-190">Due caratteri sono contigui se hanno punti di codice Unicode adiacenti.</span><span class="sxs-lookup"><span data-stu-id="cd471-190">Two characters are contiguous if they have adjacent Unicode code points.</span></span>  
   
- Due o più intervalli di caratteri possono essere concatenati.  Ad esempio, per specificare l'intervallo di cifre decimali comprese tra "0" e "9", l'intervallo di lettere minuscole comprese tra "a" e "f" e l'intervallo di lettere maiuscole comprese tra "A" e "F", usare `[0-9a-fA-F]`.  
+ <span data-ttu-id="cd471-191">Due o più intervalli di caratteri possono essere concatenati.</span><span class="sxs-lookup"><span data-stu-id="cd471-191">Two or more character ranges can be concatenated.</span></span> <span data-ttu-id="cd471-192">Ad esempio, per specificare l'intervallo di cifre decimali comprese tra "0" e "9", l'intervallo di lettere minuscole comprese tra "a" e "f" e l'intervallo di lettere maiuscole comprese tra "A" e "F", usare `[0-9a-fA-F]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-192">For example, to specify the range of decimal digits from "0" through "9", the range of lowercase letters from "a" through "f", and the range of uppercase letters from "A" through "F", use `[0-9a-fA-F]`.</span></span>  
   
- L'accento circonflesso iniziale \(`^`\) in un gruppo di caratteri negativi è obbligatorio e indica che tale gruppo è un gruppo di caratteri negativi anziché un gruppo di caratteri positivi.  
+ <span data-ttu-id="cd471-193">L'accento circonflesso iniziale (`^`) in un gruppo di caratteri negativi è obbligatorio e indica che tale gruppo è un gruppo di caratteri negativi anziché un gruppo di caratteri positivi.</span><span class="sxs-lookup"><span data-stu-id="cd471-193">The leading carat character (`^`) in a negative character group is mandatory and indicates the character group is a negative character group instead of a positive character group.</span></span>  
   
 > [!IMPORTANT]
->  Un gruppo di caratteri negativi in un criterio di ricerca di espressioni regolari più grande non è un'asserzione di larghezza zero.  Ovvero, dopo avere valutato il gruppo di caratteri negativi, il motore delle espressioni regolari avanza di un carattere nella stringa di input.  
+>  <span data-ttu-id="cd471-194">Un gruppo di caratteri negativi in un criterio di ricerca di espressioni regolari più grande non è un'asserzione di larghezza zero.</span><span class="sxs-lookup"><span data-stu-id="cd471-194">A negative character group in a larger regular expression pattern is not a zero-width assertion.</span></span> <span data-ttu-id="cd471-195">Ovvero, dopo avere valutato il gruppo di caratteri negativi, il motore delle espressioni regolari avanza di un carattere nella stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-195">That is, after evaluating the negative character group, the regular expression engine advances one character in the input string.</span></span>  
   
- Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti gruppi di caratteri negativi.  
+ <span data-ttu-id="cd471-196">Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti gruppi di caratteri negativi.</span><span class="sxs-lookup"><span data-stu-id="cd471-196">Some common regular expression patterns that contain negative character groups are listed in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`[^aeiou]`|Corrisponde a tutti i caratteri eccetto le vocali.|  
-|`[^\p{P}\d]`|Corrisponde a tutti i caratteri eccetto caratteri di punteggiatura e cifre decimali.|  
+|<span data-ttu-id="cd471-197">Criterio</span><span class="sxs-lookup"><span data-stu-id="cd471-197">Pattern</span></span>|<span data-ttu-id="cd471-198">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-198">Description</span></span>|  
+|-------------|-----------------|  
+|`[^aeiou]`|<span data-ttu-id="cd471-199">Corrisponde a tutti i caratteri eccetto le vocali.</span><span class="sxs-lookup"><span data-stu-id="cd471-199">Match all characters except vowels.</span></span>|  
+|`[^\p{P}\d]`|<span data-ttu-id="cd471-200">Corrisponde a tutti i caratteri eccetto caratteri di punteggiatura e cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="cd471-200">Match all characters except punctuation and decimal digit characters.</span></span>|  
   
- Le corrispondenze dell'esempio seguente sono relative a tutte le parole che iniziano con i caratteri "th" e non sono seguite dalla lettera "o".  
+ <span data-ttu-id="cd471-201">Le corrispondenze dell'esempio seguente sono relative a tutte le parole che iniziano con i caratteri "th" e non sono seguite dalla lettera "o".</span><span class="sxs-lookup"><span data-stu-id="cd471-201">The following example matches any word that begins with the characters "th" and is not followed by an "o".</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/negativecharclasses.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/negativecharclasses.vb#2)]  
   
- L'espressione regolare `\bth[^o]\w+\b` viene definita come illustrato nella tabella seguente.  
+ <span data-ttu-id="cd471-202">L'espressione regolare `\bth[^o]\w+\b` viene definita come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-202">The regular expression `\bth[^o]\w+\b` is defined as shown in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`\b`|Inizia dal confine di una parola.|  
-|`th`|Corrisponde ai caratteri letterali "th".|  
-|`[^o]`|Corrisponde a tutti i caratteri diversi da "o".|  
-|`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
-|`\b`|Terminare al confine di una parola.|  
+|<span data-ttu-id="cd471-203">Criterio</span><span class="sxs-lookup"><span data-stu-id="cd471-203">Pattern</span></span>|<span data-ttu-id="cd471-204">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-204">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="cd471-205">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-205">Start at a word boundary.</span></span>|  
+|`th`|<span data-ttu-id="cd471-206">Corrisponde ai caratteri letterali "th".</span><span class="sxs-lookup"><span data-stu-id="cd471-206">Match the literal characters "th".</span></span>|  
+|`[^o]`|<span data-ttu-id="cd471-207">Corrisponde a tutti i caratteri diversi da "o".</span><span class="sxs-lookup"><span data-stu-id="cd471-207">Match any character that is not an "o".</span></span>|  
+|`\w+`|<span data-ttu-id="cd471-208">Trova la corrispondenza di uno o più caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="cd471-208">Match one or more word characters.</span></span>|  
+|`\b`|<span data-ttu-id="cd471-209">Terminare al confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-209">End at a word boundary.</span></span>|  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-210">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-210">Back to Top</span></span>](#Top)  
   
 <a name="AnyCharacter"></a>   
-## Qualsiasi carattere: .  
- Il carattere punto \(.\) corrisponde a qualsiasi carattere eccetto `\n` \(carattere di nuova riga, \\u000A\), con le due qualificazioni seguenti:  
+## <a name="any-character-"></a><span data-ttu-id="cd471-211">Qualsiasi carattere: .</span><span class="sxs-lookup"><span data-stu-id="cd471-211">Any Character: .</span></span>  
+ <span data-ttu-id="cd471-212">Il carattere punto (.) corrisponde a qualsiasi carattere eccetto `\n` (carattere di nuova riga, \u000A), con le due qualificazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="cd471-212">The period character (.) matches any character except `\n` (the newline character, \u000A), with the following two qualifications:</span></span>  
   
--   Se un criterio di ricerca di espressioni regolari viene modificato dall'opzione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> o se la parte del criterio contenente la classe di caratteri `.` viene modificata dall'opzione `s`, `.` corrisponde a qualsiasi carattere.  Per altre informazioni, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+-   <span data-ttu-id="cd471-213">Se un criterio di ricerca di espressioni regolari viene modificato dall'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> o se la parte del criterio contenente la classe di caratteri `.` viene modificata dall'opzione `s`, `.` corrisponde a qualsiasi carattere.</span><span class="sxs-lookup"><span data-stu-id="cd471-213">If a regular expression pattern is modified by the <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> option, or if the portion of the pattern that contains the `.` character class is modified by the `s` option, `.` matches any character.</span></span> <span data-ttu-id="cd471-214">Per altre informazioni, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-214">For more information, see [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
-     Nell'esempio seguente viene illustrato il diverso comportamento della classe di caratteri `.` per impostazione predefinita e con l'opzione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  L'espressione regolare `^.+` parte dall'inizio della stringa e individua una corrispondenza per ogni carattere.  Per impostazione predefinita, la corrispondenza termina alla fine della prima riga. Il criterio di ricerca di espressioni regolari trova la corrispondenza del carattere di ritorno a capo, `\r` o \\u000D, ma non di `\n`.  Poiché l'opzione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> interpreta l'intera stringa di input come riga singola, ottiene una corrispondenza per ogni carattere nella stringa di input, incluso `\n`.  
+     <span data-ttu-id="cd471-215">Nell'esempio seguente viene illustrato il diverso comportamento della classe di caratteri `.` per impostazione predefinita e con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="cd471-215">The following example illustrates the different behavior of the `.` character class by default and with the <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> option.</span></span> <span data-ttu-id="cd471-216">L'espressione regolare `^.+` parte dall'inizio della stringa e individua una corrispondenza per ogni carattere.</span><span class="sxs-lookup"><span data-stu-id="cd471-216">The regular expression `^.+` starts at the beginning of the string and matches every character.</span></span> <span data-ttu-id="cd471-217">Per impostazione predefinita, la corrispondenza termina alla fine della prima riga. Il criterio di ricerca di espressioni regolari trova la corrispondenza del carattere di ritorno a capo, `\r` o \u000D, ma non di `\n`.</span><span class="sxs-lookup"><span data-stu-id="cd471-217">By default, the match ends at the end of the first line; the regular expression pattern matches the carriage return character, `\r` or \u000D, but it does not match `\n`.</span></span> <span data-ttu-id="cd471-218">Poiché l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpreta l'intera stringa di input come riga singola, ottiene una corrispondenza per ogni carattere nella stringa di input, incluso `\n`.</span><span class="sxs-lookup"><span data-stu-id="cd471-218">Because the <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> option interprets the entire input string as a single line, it matches every character in the input string, including `\n`.</span></span>  
   
      [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere eccetto `\n`, la classe di caratteri `.` corrisponde anche a `\r` \(il carattere di ritorno a capo, \\u000D\).  
+>  <span data-ttu-id="cd471-219">Poiché corrisponde a qualsiasi carattere eccetto `\n`, la classe di caratteri `.` corrisponde anche a `\r` (il carattere di ritorno a capo, \u000D).</span><span class="sxs-lookup"><span data-stu-id="cd471-219">Because it matches any character except `\n`, the `.` character class also matches `\r` (the carriage return character, \u000D).</span></span>  
   
--   In un gruppo di caratteri positivi o negativi un punto viene interpretato come carattere punto letterale e non come classe di caratteri.  Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup) e [Gruppo di caratteri negativi](#NegativeGroup) descritti in precedenza in questo argomento.  Nell'esempio seguente viene fornita un'illustrazione mediante la definizione di un'espressione regolare che include il carattere punto \(`.`\) sia come classe di caratteri che come membro di un gruppo di caratteri positivi.  L'espressione regolare `\b.*[.?!;:](\s|\z)` inizia in corrispondenza di confine di parola, corrisponde a qualsiasi carattere fino a quando non incontra uno dei quattro segni di punteggiatura, incluso un punto, quindi individua la corrispondenza con uno spazio vuoto o con la fine della stringa.  
+-   <span data-ttu-id="cd471-220">In un gruppo di caratteri positivi o negativi un punto viene interpretato come carattere punto letterale e non come classe di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-220">In a positive or negative character group, a period is treated as a literal period character, and not as a character class.</span></span> <span data-ttu-id="cd471-221">Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup) e [Gruppo di caratteri negativi](#NegativeGroup) descritti in precedenza in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="cd471-221">For more information, see [Positive Character Group](#PositiveGroup) and [Negative Character Group](#NegativeGroup) earlier in this topic.</span></span> <span data-ttu-id="cd471-222">Nell'esempio seguente viene fornita un'illustrazione mediante la definizione di un'espressione regolare che include il carattere punto (`.`) sia come classe di caratteri che come membro di un gruppo di caratteri positivi.</span><span class="sxs-lookup"><span data-stu-id="cd471-222">The following example provides an illustration by defining a regular expression that includes the period character (`.`) both as a character class and as a member of a positive character group.</span></span> <span data-ttu-id="cd471-223">L'espressione regolare `\b.*[.?!;:](\s|\z)` inizia in corrispondenza di confine di parola, corrisponde a qualsiasi carattere fino a quando non incontra uno dei quattro segni di punteggiatura, incluso un punto, quindi individua la corrispondenza con uno spazio vuoto o con la fine della stringa.</span><span class="sxs-lookup"><span data-stu-id="cd471-223">The regular expression `\b.*[.?!;:](\s|\z)` begins at a word boundary, matches any character until it encounters one of four punctuation marks, including a period, and then matches either a white-space character or the end of the string.</span></span>  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere, l'elemento di linguaggio `.` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere.  Per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  <span data-ttu-id="cd471-224">Poiché corrisponde a qualsiasi carattere, l'elemento di linguaggio `.` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere.</span><span class="sxs-lookup"><span data-stu-id="cd471-224">Because it matches any character, the `.` language element is often used with a lazy quantifier if a regular expression pattern attempts to match any character multiple times.</span></span> <span data-ttu-id="cd471-225">Per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-225">For more information, see [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span></span>  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-226">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-226">Back to Top</span></span>](#Top)  
   
 <a name="CategoryOrBlock"></a>   
-## Categoria Unicode o blocco Unicode: \\p{}  
- Lo standard Unicode assegna una categoria generale a ogni carattere.  Ad esempio, un carattere particolare può essere una lettera maiuscola \(rappresentata dalla categoria `Lu`\), una cifra decimale \(la categoria `Nd`\), un simbolo matematico \(la categoria `Sm`\) o un separatore di paragrafo \(la categoria `Zl`\).  Anche set di caratteri specifici nello standard Unicode occupano un intervallo specifico o un blocco di punti di codice consecutivi.  Il set di caratteri latini si trova ad esempio da \\u0000 a \\u007F, mentre il set di caratteri arabi si trova da \\u0600 a \\u06FF.  
+## <a name="unicode-category-or-unicode-block-p"></a><span data-ttu-id="cd471-227">Categoria Unicode o blocco Unicode: \p{}</span><span class="sxs-lookup"><span data-stu-id="cd471-227">Unicode Category or Unicode Block: \p{}</span></span>  
+ <span data-ttu-id="cd471-228">Lo standard Unicode assegna una categoria generale a ogni carattere.</span><span class="sxs-lookup"><span data-stu-id="cd471-228">The Unicode standard assigns each character a general category.</span></span> <span data-ttu-id="cd471-229">Ad esempio, un carattere particolare può essere una lettera maiuscola (rappresentata dalla categoria `Lu`), una cifra decimale (la categoria `Nd`), un simbolo matematico (la categoria `Sm`) o un separatore di paragrafo (la categoria `Zl`).</span><span class="sxs-lookup"><span data-stu-id="cd471-229">For example, a particular character can be an uppercase letter (represented by the `Lu` category), a decimal digit (the `Nd` category), a math symbol (the `Sm` category), or a paragraph separator (the `Zl` category).</span></span> <span data-ttu-id="cd471-230">Anche set di caratteri specifici nello standard Unicode occupano un intervallo specifico o un blocco di punti di codice consecutivi.</span><span class="sxs-lookup"><span data-stu-id="cd471-230">Specific character sets in the Unicode standard also occupy a specific range or block of consecutive code points.</span></span> <span data-ttu-id="cd471-231">Il set di caratteri latini si trova ad esempio da \u0000 a \u007F, mentre il set di caratteri arabi si trova da \u0600 a \u06FF.</span><span class="sxs-lookup"><span data-stu-id="cd471-231">For example, the basic Latin character set is found from \u0000 through \u007F, while the Arabic character set is found from \u0600 through \u06FF.</span></span>  
   
- Costrutto dell'espressione regolare  
+ <span data-ttu-id="cd471-232">Costrutto dell'espressione regolare</span><span class="sxs-lookup"><span data-stu-id="cd471-232">The regular expression construct</span></span>  
   
- `\p{` *name* `}`  
+ <span data-ttu-id="cd471-233">`\p{` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="cd471-233">`\p{` *name* `}`</span></span>  
   
- corrisponde a qualsiasi carattere appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato.  Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) più avanti in questo argomento.  Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) più avanti in questo argomento.  
+ <span data-ttu-id="cd471-234">corrisponde a qualsiasi carattere appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato.</span><span class="sxs-lookup"><span data-stu-id="cd471-234">matches any character that belongs to a Unicode general category or named block, where *name* is the category abbreviation or named block name.</span></span> <span data-ttu-id="cd471-235">Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) successiva in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="cd471-235">For a list of category abbreviations, see the [Supported Unicode General Categories](#SupportedUnicodeGeneralCategories) section later in this topic.</span></span> <span data-ttu-id="cd471-236">Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) successiva in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="cd471-236">For a list of named blocks, see the [Supported Named Blocks](#SupportedNamedBlocks) section later in this topic.</span></span>  
   
- Nell'esempio seguente viene usato il costrutto `\p{`*name*`}` per individuare una corrispondenza per una categoria generale Unicode \(in questo caso la categoria `Pd` o Punctuation, Dash\) e un blocco denominato \(i blocchi denominati `IsGreek` e `IsBasicLatin`\).  
+ <span data-ttu-id="cd471-237">L'esempio seguente usa il costrutto `\p{`*name*`}` per individuare una corrispondenza per una categoria generale Unicode (in questo caso la categoria `Pd` o Punctuation,Dash) e un blocco denominato (i blocchi denominati `IsGreek` e `IsBasicLatin`).</span><span class="sxs-lookup"><span data-stu-id="cd471-237">The following example uses the `\p{`*name*`}` construct to match both a Unicode general category (in this case, the `Pd`, or Punctuation,Dash category) and a named block (the `IsGreek` and `IsBasicLatin` named blocks).</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
   
- L'espressione regolare `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` viene definita come illustrato nella tabella seguente.  
+ <span data-ttu-id="cd471-238">L'espressione regolare `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` viene definita come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-238">The regular expression `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` is defined as shown in the following table.</span></span>  
   
-|Criterio|Descrizione|  
-|--------------|-----------------|  
-|`\b`|Inizia dal confine di una parola.|  
-|`\p{IsGreek}+`|Corrisponde a uno o più caratteri greci.|  
-|`(\s)?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
-|`(\p{IsGreek}+(\s)?)+`|Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri greci seguiti da zero o da uno spazio vuoto.|  
-|`\p{Pd}`|Corrisponde a un carattere "Pd" \(Punctuation, Dash\).|  
-|`\s`|Trova la corrispondenza con uno spazio vuoto.|  
-|`\p{IsBasicLatin}+`|Corrisponde a uno o più caratteri latini di base.|  
-|`(\s)?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
-|`(\p{IsBasicLatin}+(\s)?)+`|Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri latini di base seguiti da zero o da uno spazio vuoto.|  
+|<span data-ttu-id="cd471-239">Criterio</span><span class="sxs-lookup"><span data-stu-id="cd471-239">Pattern</span></span>|<span data-ttu-id="cd471-240">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-240">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="cd471-241">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-241">Start at a word boundary.</span></span>|  
+|`\p{IsGreek}+`|<span data-ttu-id="cd471-242">Corrisponde a uno o più caratteri greci.</span><span class="sxs-lookup"><span data-stu-id="cd471-242">Match one or more Greek characters.</span></span>|  
+|`(\s)?`|<span data-ttu-id="cd471-243">Trova la corrispondenza di uno o nessuno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-243">Match zero or one white-space character.</span></span>|  
+|`(\p{IsGreek}+(\s)?)+`|<span data-ttu-id="cd471-244">Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri greci seguiti da zero o da uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-244">Match the pattern of one or more Greek characters followed by zero or one white-space characters one or more times.</span></span>|  
+|`\p{Pd}`|<span data-ttu-id="cd471-245">Corrisponde a un carattere "Pd" (Punctuation, Dash).</span><span class="sxs-lookup"><span data-stu-id="cd471-245">Match a Punctuation, Dash character.</span></span>|  
+|`\s`|<span data-ttu-id="cd471-246">Trova la corrispondenza con uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-246">Match a white-space character.</span></span>|  
+|`\p{IsBasicLatin}+`|<span data-ttu-id="cd471-247">Corrisponde a uno o più caratteri latini di base.</span><span class="sxs-lookup"><span data-stu-id="cd471-247">Match one or more basic Latin characters.</span></span>|  
+|`(\s)?`|<span data-ttu-id="cd471-248">Trova la corrispondenza di uno o nessuno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-248">Match zero or one white-space character.</span></span>|  
+|`(\p{IsBasicLatin}+(\s)?)+`|<span data-ttu-id="cd471-249">Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri latini di base seguiti da zero o da uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-249">Match the pattern of one or more basic Latin characters followed by zero or one white-space characters one or more times.</span></span>|  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-250">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-250">Back to Top</span></span>](#Top)  
   
 <a name="NegativeCategoryOrBlock"></a>   
-## Categoria Unicode negativa o blocco Unicode: \\P {}  
- Lo standard Unicode assegna una categoria generale a ogni carattere.  Ad esempio, un carattere particolare può essere una lettera maiuscola \(rappresentata dalla categoria `Lu`\), una cifra decimale \(la categoria `Nd`\), un simbolo matematico \(la categoria `Sm`\) o un separatore di paragrafo \(la categoria `Zl`\).  Anche set di caratteri specifici nello standard Unicode occupano un intervallo specifico o un blocco di punti di codice consecutivi.  Il set di caratteri latini si trova ad esempio da \\u0000 a \\u007F, mentre il set di caratteri arabi si trova da \\u0600 a \\u06FF.  
+## <a name="negative-unicode-category-or-unicode-block-p"></a><span data-ttu-id="cd471-251">Categoria Unicode negativa o blocco Unicode: \P {}</span><span class="sxs-lookup"><span data-stu-id="cd471-251">Negative Unicode Category or Unicode Block: \P{}</span></span>  
+ <span data-ttu-id="cd471-252">Lo standard Unicode assegna una categoria generale a ogni carattere.</span><span class="sxs-lookup"><span data-stu-id="cd471-252">The Unicode standard assigns each character a general category.</span></span> <span data-ttu-id="cd471-253">Ad esempio, un carattere particolare può essere una lettera maiuscola (rappresentata dalla categoria `Lu`), una cifra decimale (la categoria `Nd`), un simbolo matematico (la categoria `Sm`) o un separatore di paragrafo (la categoria `Zl`).</span><span class="sxs-lookup"><span data-stu-id="cd471-253">For example, a particular character can be an uppercase letter (represented by the `Lu` category), a decimal digit (the `Nd` category), a math symbol (the `Sm` category), or a paragraph separator (the `Zl` category).</span></span> <span data-ttu-id="cd471-254">Anche set di caratteri specifici nello standard Unicode occupano un intervallo specifico o un blocco di punti di codice consecutivi.</span><span class="sxs-lookup"><span data-stu-id="cd471-254">Specific character sets in the Unicode standard also occupy a specific range or block of consecutive code points.</span></span> <span data-ttu-id="cd471-255">Il set di caratteri latini si trova ad esempio da \u0000 a \u007F, mentre il set di caratteri arabi si trova da \u0600 a \u06FF.</span><span class="sxs-lookup"><span data-stu-id="cd471-255">For example, the basic Latin character set is found from \u0000 through \u007F, while the Arabic character set is found from \u0600 through \u06FF.</span></span>  
   
- Costrutto dell'espressione regolare  
+ <span data-ttu-id="cd471-256">Costrutto dell'espressione regolare</span><span class="sxs-lookup"><span data-stu-id="cd471-256">The regular expression construct</span></span>  
   
- `\P{` *name* `}`  
+ <span data-ttu-id="cd471-257">`\P{` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="cd471-257">`\P{` *name* `}`</span></span>  
   
- corrisponde a qualsiasi carattere non appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato.  Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) più avanti in questo argomento.  Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) più avanti in questo argomento.  
+ <span data-ttu-id="cd471-258">corrisponde a qualsiasi carattere non appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato.</span><span class="sxs-lookup"><span data-stu-id="cd471-258">matches any character that does not belong to a Unicode general category or named block, where *name* is the category abbreviation or named block name.</span></span> <span data-ttu-id="cd471-259">Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) successiva in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="cd471-259">For a list of category abbreviations, see the [Supported Unicode General Categories](#SupportedUnicodeGeneralCategories) section later in this topic.</span></span> <span data-ttu-id="cd471-260">Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) successiva in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="cd471-260">For a list of named blocks, see the [Supported Named Blocks](#SupportedNamedBlocks) section later in this topic.</span></span>  
   
- L'esempio seguente usa il costrutto `\P{`*name*`}` per rimuovere qualsiasi simbolo di valuta \(in questo caso la categoria `Sc` o Symbol, Currency\) dalle stringhe numeriche.  
+ <span data-ttu-id="cd471-261">L'esempio seguente usa il costrutto `\P{`*name*`}` per rimuovere qualsiasi simbolo di valuta (in questo caso la categoria `Sc` o Symbol, Currency) dalle stringhe numeriche.</span><span class="sxs-lookup"><span data-stu-id="cd471-261">The following example uses the `\P{`*name*`}` construct to remove any currency symbols (in this case, the `Sc`, or Symbol, Currency category) from numeric strings.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
- Il criterio di ricerca di espressioni regolari `(\P{Sc})+` corrisponde a uno o più caratteri che non siano simboli di valuta e rimuove efficacemente qualsiasi simbolo di valuta dalla stringa del risultato.  
+ <span data-ttu-id="cd471-262">Il criterio di ricerca di espressioni regolari `(\P{Sc})+` corrisponde a uno o più caratteri che non siano simboli di valuta e rimuove efficacemente qualsiasi simbolo di valuta dalla stringa del risultato.</span><span class="sxs-lookup"><span data-stu-id="cd471-262">The regular expression pattern `(\P{Sc})+` matches one or more characters that are not currency symbols; it effectively strips any currency symbol from the result string.</span></span>  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-263">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-263">Back to Top</span></span>](#Top)  
   
 <a name="WordCharacter"></a>   
-## Carattere alfanumerico: \\w  
- `\w` trova la corrispondenza con qualsiasi carattere alfanumerico.  Un carattere alfanumerico è un membro di una delle categorie Unicode elencate nella seguente tabella.  
+## <a name="word-character-w"></a><span data-ttu-id="cd471-264">Carattere alfanumerico: \w</span><span class="sxs-lookup"><span data-stu-id="cd471-264">Word Character: \w</span></span>  
+ <span data-ttu-id="cd471-265">`\w` trova la corrispondenza con qualsiasi carattere alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-265">`\w` matches any word character.</span></span> <span data-ttu-id="cd471-266">Un carattere alfanumerico è un membro di una delle categorie Unicode elencate nella seguente tabella.</span><span class="sxs-lookup"><span data-stu-id="cd471-266">A word character is a member of any of the Unicode categories listed in the following table.</span></span>  
   
-|Categoria|Descrizione|  
-|---------------|-----------------|  
-|Ll|Letter, Lowercase|  
-|Lu|Letter, Uppercase|  
-|Lt|Letter, Titlecase|  
-|Lo|Letter, Other|  
-|Lm|Letter, Modifier|  
-|Nd|Number, Decimal Digit|  
-|Pc|Punctuation, Connector.  Questa categoria include dieci caratteri, tra cui quello più comunemente usato è \(\_\) LOWLINE, u\+005F.|  
+|<span data-ttu-id="cd471-267">Categoria</span><span class="sxs-lookup"><span data-stu-id="cd471-267">Category</span></span>|<span data-ttu-id="cd471-268">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-268">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="cd471-269">Ll</span><span class="sxs-lookup"><span data-stu-id="cd471-269">Ll</span></span>|<span data-ttu-id="cd471-270">Letter, Lowercase</span><span class="sxs-lookup"><span data-stu-id="cd471-270">Letter, Lowercase</span></span>|  
+|<span data-ttu-id="cd471-271">Lu</span><span class="sxs-lookup"><span data-stu-id="cd471-271">Lu</span></span>|<span data-ttu-id="cd471-272">Letter, Uppercase</span><span class="sxs-lookup"><span data-stu-id="cd471-272">Letter, Uppercase</span></span>|  
+|<span data-ttu-id="cd471-273">Lt</span><span class="sxs-lookup"><span data-stu-id="cd471-273">Lt</span></span>|<span data-ttu-id="cd471-274">Letter, Titlecase</span><span class="sxs-lookup"><span data-stu-id="cd471-274">Letter, Titlecase</span></span>|  
+|<span data-ttu-id="cd471-275">Lo</span><span class="sxs-lookup"><span data-stu-id="cd471-275">Lo</span></span>|<span data-ttu-id="cd471-276">Letter, Other</span><span class="sxs-lookup"><span data-stu-id="cd471-276">Letter, Other</span></span>|  
+|<span data-ttu-id="cd471-277">Lm</span><span class="sxs-lookup"><span data-stu-id="cd471-277">Lm</span></span>|<span data-ttu-id="cd471-278">Letter, Modifier</span><span class="sxs-lookup"><span data-stu-id="cd471-278">Letter, Modifier</span></span>|  
+|<span data-ttu-id="cd471-279">Mn</span><span class="sxs-lookup"><span data-stu-id="cd471-279">Mn</span></span>|<span data-ttu-id="cd471-280">Mark, Nonspacing</span><span class="sxs-lookup"><span data-stu-id="cd471-280">Mark, Nonspacing</span></span>|  
+|<span data-ttu-id="cd471-281">Nd</span><span class="sxs-lookup"><span data-stu-id="cd471-281">Nd</span></span>|<span data-ttu-id="cd471-282">Number, Decimal Digit</span><span class="sxs-lookup"><span data-stu-id="cd471-282">Number, Decimal Digit</span></span>|  
+|<span data-ttu-id="cd471-283">Pc</span><span class="sxs-lookup"><span data-stu-id="cd471-283">Pc</span></span>|<span data-ttu-id="cd471-284">Punctuation, Connector.</span><span class="sxs-lookup"><span data-stu-id="cd471-284">Punctuation, Connector.</span></span> <span data-ttu-id="cd471-285">Questa categoria include dieci caratteri, tra cui quello più comunemente usato è (_) LOWLINE, u+005F.</span><span class="sxs-lookup"><span data-stu-id="cd471-285">This category includes ten characters, the most commonly used of which is the LOWLINE character (_), u+005F.</span></span>|  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\w` equivale a `[a-zA-Z_0-9]`.  Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento della corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="cd471-286">Se viene specificato il comportamento conforme a ECMAScript, `\w` equivale a `[a-zA-Z_0-9]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-286">If ECMAScript-compliant behavior is specified, `\w` is equivalent to `[a-zA-Z_0-9]`.</span></span> <span data-ttu-id="cd471-287">Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-287">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere alfanumerico, l'elemento di linguaggio `\w` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere alfanumerico, seguito da un carattere alfanumerico specifico.  Per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  <span data-ttu-id="cd471-288">Poiché corrisponde a qualsiasi carattere alfanumerico, l'elemento di linguaggio `\w` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere alfanumerico, seguito da un carattere alfanumerico specifico.</span><span class="sxs-lookup"><span data-stu-id="cd471-288">Because it matches any word character, the `\w` language element is often used with a lazy quantifier if a regular expression pattern attempts to match any word character multiple times, followed by a specific word character.</span></span> <span data-ttu-id="cd471-289">Per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-289">For more information, see [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span></span>  
   
- Nell'esempio seguente viene usato l'elemento di linguaggio `\w` per individuare una corrispondenza con i caratteri duplicati in una parola.  L'esempio definisce un criterio di ricerca di espressioni regolari, `(\w)\1`, che può essere interpretato nel modo seguente.  
+ <span data-ttu-id="cd471-290">Nell'esempio seguente viene usato l'elemento di linguaggio `\w` per individuare una corrispondenza con i caratteri duplicati in una parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-290">The following example uses the `\w` language element to match duplicate characters in a word.</span></span> <span data-ttu-id="cd471-291">L'esempio definisce un criterio di ricerca di espressioni regolari, `(\w)\1`, che può essere interpretato nel modo seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-291">The example defines a regular expression pattern, `(\w)\1`, which can be interpreted as follows.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|\(\\w\)|Corrisponde a un carattere alfanumerico.  Equivale al primo gruppo di acquisizione.|  
-|\\1|Corrisponde al valore della prima acquisizione.|  
+|<span data-ttu-id="cd471-292">Elemento</span><span class="sxs-lookup"><span data-stu-id="cd471-292">Element</span></span>|<span data-ttu-id="cd471-293">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-293">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="cd471-294">(\w)</span><span class="sxs-lookup"><span data-stu-id="cd471-294">(\w)</span></span>|<span data-ttu-id="cd471-295">Corrisponde a un carattere alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-295">Match a word character.</span></span> <span data-ttu-id="cd471-296">Equivale al primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="cd471-296">This is the first capturing group.</span></span>|  
+|<span data-ttu-id="cd471-297">\1</span><span class="sxs-lookup"><span data-stu-id="cd471-297">\1</span></span>|<span data-ttu-id="cd471-298">Corrisponde al valore della prima acquisizione.</span><span class="sxs-lookup"><span data-stu-id="cd471-298">Match the value of the first capture.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-299">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-299">Back to Top</span></span>](#Top)  
   
 <a name="NonWordCharacter"></a>   
-## Carattere non alfanumerico: \\W  
- `\W` trova la corrispondenza con qualsiasi carattere non alfanumerico.  L'elemento di linguaggio \\W è equivalente alla classe di caratteri seguente:  
+## <a name="non-word-character-w"></a><span data-ttu-id="cd471-300">Carattere non alfanumerico: \W</span><span class="sxs-lookup"><span data-stu-id="cd471-300">Non-Word Character: \W</span></span>  
+ <span data-ttu-id="cd471-301">`\W` trova la corrispondenza con qualsiasi carattere non alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-301">`\W` matches any non-word character.</span></span> <span data-ttu-id="cd471-302">L'elemento di linguaggio \W è equivalente alla classe di caratteri seguente:</span><span class="sxs-lookup"><span data-stu-id="cd471-302">The \W language element is equivalent to the following character class:</span></span>  
   
 ```  
 [^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
 ```  
   
- In altre parole, corrisponde a tutti i caratteri, ad eccezione di quelli elencati nella tabella seguente.  
+ <span data-ttu-id="cd471-303">In altre parole, trova corrispondenza con tutti i caratteri, ad eccezione di quelli nelle categorie Unicode elencati nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-303">In other words, it matches any character except for those in the Unicode categories listed in the following table.</span></span>  
   
-|Categoria|Descrizione|  
-|---------------|-----------------|  
-|Ll|Letter, Lowercase|  
-|Lu|Letter, Uppercase|  
-|Lt|Letter, Titlecase|  
-|Lo|Letter, Other|  
-|Lm|Letter, Modifier|  
-|Nd|Number, Decimal Digit|  
-|Pc|Punctuation, Connector.  Questa categoria include dieci caratteri, tra cui quello più comunemente usato è \(\_\) LOWLINE, u\+005F.|  
+|<span data-ttu-id="cd471-304">Categoria</span><span class="sxs-lookup"><span data-stu-id="cd471-304">Category</span></span>|<span data-ttu-id="cd471-305">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-305">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="cd471-306">Ll</span><span class="sxs-lookup"><span data-stu-id="cd471-306">Ll</span></span>|<span data-ttu-id="cd471-307">Letter, Lowercase</span><span class="sxs-lookup"><span data-stu-id="cd471-307">Letter, Lowercase</span></span>|  
+|<span data-ttu-id="cd471-308">Lu</span><span class="sxs-lookup"><span data-stu-id="cd471-308">Lu</span></span>|<span data-ttu-id="cd471-309">Letter, Uppercase</span><span class="sxs-lookup"><span data-stu-id="cd471-309">Letter, Uppercase</span></span>|  
+|<span data-ttu-id="cd471-310">Lt</span><span class="sxs-lookup"><span data-stu-id="cd471-310">Lt</span></span>|<span data-ttu-id="cd471-311">Letter, Titlecase</span><span class="sxs-lookup"><span data-stu-id="cd471-311">Letter, Titlecase</span></span>|  
+|<span data-ttu-id="cd471-312">Lo</span><span class="sxs-lookup"><span data-stu-id="cd471-312">Lo</span></span>|<span data-ttu-id="cd471-313">Letter, Other</span><span class="sxs-lookup"><span data-stu-id="cd471-313">Letter, Other</span></span>|  
+|<span data-ttu-id="cd471-314">Lm</span><span class="sxs-lookup"><span data-stu-id="cd471-314">Lm</span></span>|<span data-ttu-id="cd471-315">Letter, Modifier</span><span class="sxs-lookup"><span data-stu-id="cd471-315">Letter, Modifier</span></span>|  
+|<span data-ttu-id="cd471-316">Mn</span><span class="sxs-lookup"><span data-stu-id="cd471-316">Mn</span></span>|<span data-ttu-id="cd471-317">Mark, Nonspacing</span><span class="sxs-lookup"><span data-stu-id="cd471-317">Mark, Nonspacing</span></span>|  
+|<span data-ttu-id="cd471-318">Nd</span><span class="sxs-lookup"><span data-stu-id="cd471-318">Nd</span></span>|<span data-ttu-id="cd471-319">Number, Decimal Digit</span><span class="sxs-lookup"><span data-stu-id="cd471-319">Number, Decimal Digit</span></span>|  
+|<span data-ttu-id="cd471-320">Pc</span><span class="sxs-lookup"><span data-stu-id="cd471-320">Pc</span></span>|<span data-ttu-id="cd471-321">Punctuation, Connector.</span><span class="sxs-lookup"><span data-stu-id="cd471-321">Punctuation, Connector.</span></span> <span data-ttu-id="cd471-322">Questa categoria include dieci caratteri, tra cui quello più comunemente usato è (_) LOWLINE, u+005F.</span><span class="sxs-lookup"><span data-stu-id="cd471-322">This category includes ten characters, the most commonly used of which is the LOWLINE character (_), u+005F.</span></span>|  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\W` equivale a `[^a-zA-Z_0-9]`.  Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento della corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="cd471-323">Se viene specificato il comportamento conforme a ECMAScript, `\W` equivale a `[^a-zA-Z_0-9]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-323">If ECMAScript-compliant behavior is specified, `\W` is equivalent to `[^a-zA-Z_0-9]`.</span></span> <span data-ttu-id="cd471-324">Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-324">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere non alfanumerico, l'elemento di linguaggio `\W` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere non alfanumerico, seguito da un carattere non alfanumerico specifico.  Per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  <span data-ttu-id="cd471-325">Poiché corrisponde a qualsiasi carattere non alfanumerico, l'elemento di linguaggio `\W` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere non alfanumerico, seguito da un carattere non alfanumerico specifico.</span><span class="sxs-lookup"><span data-stu-id="cd471-325">Because it matches any non-word character, the `\W` language element is often used with a lazy quantifier if a regular expression pattern attempts to match any non-word character multiple times followed by a specific non-word character.</span></span> <span data-ttu-id="cd471-326">Per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-326">For more information, see [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span></span>  
   
- L'esempio seguente illustra la classe di caratteri `\W`.  Definisce un criterio di ricerca di espressioni regolari, `\b(\w+)(\W){1,2}`, che corrisponde a una parola seguita da uno o due caratteri non alfanumerici, ad esempio uno spazio vuoto o un segno di punteggiatura.  L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
+ <span data-ttu-id="cd471-327">L'esempio seguente illustra la classe di caratteri `\W`.</span><span class="sxs-lookup"><span data-stu-id="cd471-327">The following example illustrates the `\W` character class.</span></span>  <span data-ttu-id="cd471-328">Definisce un criterio di ricerca di espressioni regolari, `\b(\w+)(\W){1,2}`, che corrisponde a una parola seguita da uno o due caratteri non alfanumerici, ad esempio uno spazio vuoto o un segno di punteggiatura.</span><span class="sxs-lookup"><span data-stu-id="cd471-328">It defines a regular expression pattern, `\b(\w+)(\W){1,2}`, that matches a word followed by one or two non-word characters, such as white space or punctuation.</span></span> <span data-ttu-id="cd471-329">L'espressione regolare viene interpretata come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-329">The regular expression is interpreted as shown in the following table.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|\\b|Inizia la corrispondenza sul confine di parola.|  
-|\(\\w\+\)|Trova la corrispondenza di uno o più caratteri alfanumerici.  Equivale al primo gruppo di acquisizione.|  
-|\(\\W\){1,2}|Ottiene una o due volte una corrispondenza con un carattere non alfanumerico.  Equivale al secondo gruppo di acquisizione.|  
+|<span data-ttu-id="cd471-330">Elemento</span><span class="sxs-lookup"><span data-stu-id="cd471-330">Element</span></span>|<span data-ttu-id="cd471-331">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-331">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="cd471-332">\b</span><span class="sxs-lookup"><span data-stu-id="cd471-332">\b</span></span>|<span data-ttu-id="cd471-333">Inizia la corrispondenza sul confine di parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-333">Begin the match at a word boundary.</span></span>|  
+|<span data-ttu-id="cd471-334">(\w+)</span><span class="sxs-lookup"><span data-stu-id="cd471-334">(\w+)</span></span>|<span data-ttu-id="cd471-335">Trova la corrispondenza di uno o più caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="cd471-335">Match one or more word characters.</span></span> <span data-ttu-id="cd471-336">Equivale al primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="cd471-336">This is the first capturing group.</span></span>|  
+|<span data-ttu-id="cd471-337">(\W){1,2}</span><span class="sxs-lookup"><span data-stu-id="cd471-337">(\W){1,2}</span></span>|<span data-ttu-id="cd471-338">Ottiene una o due volte una corrispondenza con un carattere non alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-338">Match a non-word character either one or two times.</span></span> <span data-ttu-id="cd471-339">Equivale al secondo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="cd471-339">This is the second capturing group.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwordchar1.cs#9)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwordchar1.vb#9)]  
   
- Poiché l'oggetto <xref:System.Text.RegularExpressions.Group> per il secondo gruppo di acquisizione contiene un solo carattere non alfanumerico acquisito, nell'esempio vengono recuperati tutti i caratteri non alfanumerici acquisiti dall'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=fullName>.  
+ <span data-ttu-id="cd471-340">Poiché l'oggetto <xref:System.Text.RegularExpressions.Group> per il secondo gruppo di acquisizione contiene un solo carattere non alfanumerico acquisito, nell'esempio vengono recuperati tutti i caratteri non alfanumerici acquisiti dall'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="cd471-340">Because the <xref:System.Text.RegularExpressions.Group> object for the second capturing group contains only a single captured non-word character, the example retrieves all captured non-word characters from the <xref:System.Text.RegularExpressions.CaptureCollection> object that is returned by the <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> property.</span></span>  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-341">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-341">Back to Top</span></span>](#Top)  
   
 <a name="WhitespaceCharacter"></a>   
-## Spazio vuoto: \\s  
- `\s` trova la corrispondenza con qualsiasi spazio vuoto.  È equivalente alle sequenze di escape e alle categorie Unicode elencate nella tabella seguente.  
+## <a name="white-space-character-s"></a><span data-ttu-id="cd471-342">Spazio vuoto: \s</span><span class="sxs-lookup"><span data-stu-id="cd471-342">White-Space Character: \s</span></span>  
+ <span data-ttu-id="cd471-343">`\s` trova la corrispondenza con qualsiasi spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-343">`\s` matches any white-space character.</span></span> <span data-ttu-id="cd471-344">È equivalente alle sequenze di escape e alle categorie Unicode elencate nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-344">It is equivalent to the escape sequences and Unicode categories listed in the following table.</span></span>  
   
-|Categoria|Descrizione|  
-|---------------|-----------------|  
-|`\f`|Carattere di avanzamento modulo, \\u000C.|  
-|`\n`|Carattere di nuova riga, \\u000A.|  
-|`\r`|Carattere di ritorno a capo, \\u000D.|  
-|`\t`|Carattere di tabulazione, \\u0009.|  
-|`\v`|Carattere di tabulazione verticale, \\u000B.|  
-|`\x85`|Puntini di sospensione o carattere NEXT LINE \(NEL\) \(...\), \\u0085.|  
-|`\p{Z}`|Corrisponde a qualsiasi carattere separatore.|  
-  
- Se viene specificato il comportamento conforme a ECMAScript, `\s` equivale a `[\f\n\r\t\v]`.  Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento della corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
-  
- L'esempio seguente illustra la classe di caratteri `\s`.  Definisce un criterio di ricerca di espressioni regolari, `\b\w+(e)?s(\s|$)`, che corrisponde a una parola che termina in "s" o "es" seguita da uno spazio vuoto o dalla fine della stringa di input.  L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
-  
-|Elemento|Descrizione|  
+|<span data-ttu-id="cd471-345">Categoria</span><span class="sxs-lookup"><span data-stu-id="cd471-345">Category</span></span>|<span data-ttu-id="cd471-346">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-346">Description</span></span>|  
 |--------------|-----------------|  
-|\\b|Inizia la corrispondenza sul confine di parola.|  
-|\\w\+|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
-|\(e\)?|Ottiene zero o una volta la corrispondenza con una "e".|  
-|s|Corrisponde a una "s".|  
-|\(\\s&#124;$\)|Corrisponde a uno spazio vuoto o alla fine della stringa di input.|  
+|`\f`|<span data-ttu-id="cd471-347">Carattere di avanzamento modulo, \u000C.</span><span class="sxs-lookup"><span data-stu-id="cd471-347">The form feed character, \u000C.</span></span>|  
+|`\n`|<span data-ttu-id="cd471-348">Carattere di nuova riga, \u000A.</span><span class="sxs-lookup"><span data-stu-id="cd471-348">The newline character, \u000A.</span></span>|  
+|`\r`|<span data-ttu-id="cd471-349">Carattere di ritorno a capo, \u000D.</span><span class="sxs-lookup"><span data-stu-id="cd471-349">The carriage return character, \u000D.</span></span>|  
+|`\t`|<span data-ttu-id="cd471-350">Carattere di tabulazione, \u0009.</span><span class="sxs-lookup"><span data-stu-id="cd471-350">The tab character, \u0009.</span></span>|  
+|`\v`|<span data-ttu-id="cd471-351">Carattere di tabulazione verticale, \u000B.</span><span class="sxs-lookup"><span data-stu-id="cd471-351">The vertical tab character, \u000B.</span></span>|  
+|`\x85`|<span data-ttu-id="cd471-352">Puntini di sospensione o carattere NEXT LINE (NEL) (...), \u0085.</span><span class="sxs-lookup"><span data-stu-id="cd471-352">The ellipsis or NEXT LINE (NEL) character (…), \u0085.</span></span>|  
+|`\p{Z}`|<span data-ttu-id="cd471-353">Corrisponde a qualsiasi carattere separatore.</span><span class="sxs-lookup"><span data-stu-id="cd471-353">Matches any separator character.</span></span>|  
+  
+ <span data-ttu-id="cd471-354">Se viene specificato il comportamento conforme a ECMAScript, `\s` equivale a `[ \f\n\r\t\v]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-354">If ECMAScript-compliant behavior is specified, `\s` is equivalent to `[ \f\n\r\t\v]`.</span></span> <span data-ttu-id="cd471-355">Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-355">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
+  
+ <span data-ttu-id="cd471-356">L'esempio seguente illustra la classe di caratteri `\s`.</span><span class="sxs-lookup"><span data-stu-id="cd471-356">The following example illustrates the `\s` character class.</span></span> <span data-ttu-id="cd471-357">Definisce un criterio di ricerca di espressioni regolari, `\b\w+(e)?s(\s|$)`, che corrisponde a una parola che termina in "s" o "es" seguita da uno spazio vuoto o dalla fine della stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-357">It defines a regular expression pattern, `\b\w+(e)?s(\s|$)`, that matches a word ending in either "s" or "es" followed by either a white-space character or the end of the input string.</span></span> <span data-ttu-id="cd471-358">L'espressione regolare viene interpretata come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-358">The regular expression is interpreted as shown in the following table.</span></span>  
+  
+|<span data-ttu-id="cd471-359">Elemento</span><span class="sxs-lookup"><span data-stu-id="cd471-359">Element</span></span>|<span data-ttu-id="cd471-360">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-360">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="cd471-361">\b</span><span class="sxs-lookup"><span data-stu-id="cd471-361">\b</span></span>|<span data-ttu-id="cd471-362">Inizia la corrispondenza sul confine di parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-362">Begin the match at a word boundary.</span></span>|  
+|<span data-ttu-id="cd471-363">\w+</span><span class="sxs-lookup"><span data-stu-id="cd471-363">\w+</span></span>|<span data-ttu-id="cd471-364">Trova la corrispondenza di uno o più caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="cd471-364">Match one or more word characters.</span></span>|  
+|<span data-ttu-id="cd471-365">(e)?</span><span class="sxs-lookup"><span data-stu-id="cd471-365">(e)?</span></span>|<span data-ttu-id="cd471-366">Ottiene zero o una volta la corrispondenza con una "e".</span><span class="sxs-lookup"><span data-stu-id="cd471-366">Match an "e" either zero or one time.</span></span>|  
+|<span data-ttu-id="cd471-367">s</span><span class="sxs-lookup"><span data-stu-id="cd471-367">s</span></span>|<span data-ttu-id="cd471-368">Corrisponde a una "s".</span><span class="sxs-lookup"><span data-stu-id="cd471-368">Match an "s".</span></span>|  
+|<span data-ttu-id="cd471-369">(\s&#124;$)</span><span class="sxs-lookup"><span data-stu-id="cd471-369">(\s&#124;$)</span></span>|<span data-ttu-id="cd471-370">Corrisponde a uno spazio vuoto o alla fine della stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-370">Match either a whitespace character or the end of the input string.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-371">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-371">Back to Top</span></span>](#Top)  
   
 <a name="NonWhitespaceCharacter"></a>   
-## Carattere diverso da uno spazio vuoto: \\S  
- `\S` trova la corrispondenza con qualsiasi carattere diverso da uno spazio.  È equivalente al criterio di ricerca di espressioni regolari `[^\f\n\r\t\v\x85\p{Z}]` o è il contrario del criterio di ricerca di espressioni regolari equivalente a `\s`, che corrisponde a spazi vuoti.  Per altre informazioni, vedere [Spazio vuoto: \\s](#WhitespaceCharacter).  
+## <a name="non-white-space-character-s"></a><span data-ttu-id="cd471-372">Carattere diverso da uno spazio vuoto: \S</span><span class="sxs-lookup"><span data-stu-id="cd471-372">Non-White-Space Character: \S</span></span>  
+ <span data-ttu-id="cd471-373">`\S` trova la corrispondenza con qualsiasi carattere diverso da uno spazio.</span><span class="sxs-lookup"><span data-stu-id="cd471-373">`\S` matches any non-white-space character.</span></span> <span data-ttu-id="cd471-374">È equivalente al criterio di ricerca di espressioni regolari `[^\f\n\r\t\v\x85\p{Z}]` o è il contrario del criterio di ricerca di espressioni regolari equivalente a `\s`, che corrisponde a spazi vuoti.</span><span class="sxs-lookup"><span data-stu-id="cd471-374">It is equivalent to the `[^\f\n\r\t\v\x85\p{Z}]` regular expression pattern, or the opposite of the regular expression pattern that is equivalent to `\s`, which matches white-space characters.</span></span> <span data-ttu-id="cd471-375">Per altre informazioni, vedere [Spazio vuoto: \s](#WhitespaceCharacter).</span><span class="sxs-lookup"><span data-stu-id="cd471-375">For more information, see [White-Space Character: \s](#WhitespaceCharacter).</span></span>  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\S` equivale a `[^ \f\n\r\t\v]`.  Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento della corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="cd471-376">Se viene specificato il comportamento conforme a ECMAScript, `\S` equivale a `[^ \f\n\r\t\v]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-376">If ECMAScript-compliant behavior is specified, `\S` is equivalent to  `[^ \f\n\r\t\v]`.</span></span> <span data-ttu-id="cd471-377">Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-377">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
- L'esempio seguente illustra l'elemento di linguaggio `\S`.  Il criterio di espressione regolare `\b(\S+)\s?` corrisponde a stringhe delimitate da spazi vuoti.  Il secondo elemento nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> della corrispondenza contiene la stringa corrispondente.  L'espressione regolare può essere interpretata come indicato nella tabella seguente.  
+ <span data-ttu-id="cd471-378">L'esempio seguente illustra l'elemento di linguaggio `\S`.</span><span class="sxs-lookup"><span data-stu-id="cd471-378">The following example illustrates the `\S` language element.</span></span> <span data-ttu-id="cd471-379">Il criterio di espressione regolare `\b(\S+)\s?` corrisponde a stringhe delimitate da spazi vuoti.</span><span class="sxs-lookup"><span data-stu-id="cd471-379">The regular expression pattern `\b(\S+)\s?` matches strings that are delimited by white-space characters.</span></span> <span data-ttu-id="cd471-380">Il secondo elemento nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> della corrispondenza contiene la stringa corrispondente.</span><span class="sxs-lookup"><span data-stu-id="cd471-380">The second element in the match's <xref:System.Text.RegularExpressions.GroupCollection> object contains the matched string.</span></span> <span data-ttu-id="cd471-381">L'espressione regolare può essere interpretata come indicato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-381">The regular expression can be interpreted as shown in the following table.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`\b`|Inizia la corrispondenza sul confine di parola.|  
-|`(\S+)`|Trova la corrispondenza con uno o più caratteri diversi dallo spazio vuoto.  Equivale al primo gruppo di acquisizione.|  
-|`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
+|<span data-ttu-id="cd471-382">Elemento</span><span class="sxs-lookup"><span data-stu-id="cd471-382">Element</span></span>|<span data-ttu-id="cd471-383">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-383">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="cd471-384">Inizia la corrispondenza sul confine di parola.</span><span class="sxs-lookup"><span data-stu-id="cd471-384">Begin the match at a word boundary.</span></span>|  
+|`(\S+)`|<span data-ttu-id="cd471-385">Trova la corrispondenza con uno o più caratteri diversi dallo spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-385">Match one or more non-white-space characters.</span></span> <span data-ttu-id="cd471-386">Equivale al primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="cd471-386">This is the first capturing group.</span></span>|  
+|`\s?`|<span data-ttu-id="cd471-387">Trova la corrispondenza di uno o nessuno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-387">Match zero or one white-space character.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-388">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-388">Back to Top</span></span>](#Top)  
   
 <a name="DigitCharacter"></a>   
-## Carattere cifra decimale: \\d  
- `\d` trova la corrispondenza con qualsiasi cifra decimale.  È equivalente al criterio di ricerca di espressioni regolari `\p{Nd}` che include le cifre decimali standard da 0 a 9 e le cifre decimali di diversi altri set di caratteri.  
+## <a name="decimal-digit-character-d"></a><span data-ttu-id="cd471-389">Carattere cifra decimale: \d</span><span class="sxs-lookup"><span data-stu-id="cd471-389">Decimal Digit Character: \d</span></span>  
+ <span data-ttu-id="cd471-390">`\d` trova la corrispondenza con qualsiasi cifra decimale.</span><span class="sxs-lookup"><span data-stu-id="cd471-390">`\d` matches any decimal digit.</span></span> <span data-ttu-id="cd471-391">È equivalente al criterio di ricerca di espressioni regolari `\p{Nd}` che include le cifre decimali standard da 0 a 9 e le cifre decimali di diversi altri set di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-391">It is equivalent to the `\p{Nd}` regular expression pattern, which includes the standard decimal digits 0-9 as well as the decimal digits of a number of other character sets.</span></span>  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\d` equivale a `[0-9]`.  Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento della corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="cd471-392">Se viene specificato il comportamento conforme a ECMAScript, `\d` equivale a `[0-9]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-392">If ECMAScript-compliant behavior is specified, `\d` is equivalent to  `[0-9]`.</span></span> <span data-ttu-id="cd471-393">Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-393">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
- L'esempio seguente illustra l'elemento di linguaggio `\d`.  Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada.  Il criterio di ricerca di espressioni regolari `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
+ <span data-ttu-id="cd471-394">L'esempio seguente illustra l'elemento di linguaggio `\d`.</span><span class="sxs-lookup"><span data-stu-id="cd471-394">The following example illustrates the `\d` language element.</span></span> <span data-ttu-id="cd471-395">Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada.</span><span class="sxs-lookup"><span data-stu-id="cd471-395">It tests whether an input string represents a valid telephone number in the United States and Canada.</span></span> <span data-ttu-id="cd471-396">Il criterio di ricerca di espressioni regolari `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-396">The regular expression pattern `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` is defined as shown in the following table.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
-|`\(?`|Corrisponde a zero o a un carattere letterale "\(".|  
-|`\d{3}`|Trova la corrispondenza con tre cifre decimali.|  
-|`\)?`|Corrisponde a zero o a un carattere letterale "\)".|  
-|`[\s-]`|Corrisponde a un trattino o a uno spazio vuoto.|  
-|`(\(?  \d{3}\)?[\s-])?`|Trova la corrispondenza zero o una volta con una parentesi di apertura facoltativa seguita da tre cifre decimali, una parentesi di chiusura facoltativa e uno spazio vuoto o un trattino.  Equivale al primo gruppo di acquisizione.|  
-|`\d{3}-\d{4}`|Corrisponde a tre cifre decimali seguite da un trattino e da altre quattro cifre decimali.|  
-|`$`|Trova la corrispondenza con la fine della stringa di input.|  
+|<span data-ttu-id="cd471-397">Elemento</span><span class="sxs-lookup"><span data-stu-id="cd471-397">Element</span></span>|<span data-ttu-id="cd471-398">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-398">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="cd471-399">Inizia la corrispondenza all'inizio della stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-399">Begin the match at the beginning of the input string.</span></span>|  
+|`\(?`|<span data-ttu-id="cd471-400">Corrisponde a zero o a un carattere letterale "(".</span><span class="sxs-lookup"><span data-stu-id="cd471-400">Match zero or one literal "(" character.</span></span>|  
+|`\d{3}`|<span data-ttu-id="cd471-401">Trova la corrispondenza con tre cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="cd471-401">Match three decimal digits.</span></span>|  
+|`\)?`|<span data-ttu-id="cd471-402">Corrisponde a zero o a un carattere letterale ")".</span><span class="sxs-lookup"><span data-stu-id="cd471-402">Match zero or one literal ")" character.</span></span>|  
+|`[\s-]`|<span data-ttu-id="cd471-403">Corrisponde a un trattino o a uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="cd471-403">Match a hyphen or a white-space character.</span></span>|  
+|`(\(?\d{3}\)?[\s-])?`|<span data-ttu-id="cd471-404">Trova la corrispondenza zero o una volta con una parentesi di apertura facoltativa seguita da tre cifre decimali, una parentesi di chiusura facoltativa e uno spazio vuoto o un trattino.</span><span class="sxs-lookup"><span data-stu-id="cd471-404">Match an optional opening parenthesis followed by three decimal digits, an optional closing parenthesis, and either a white-space character or a hyphen zero or one time.</span></span> <span data-ttu-id="cd471-405">Equivale al primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="cd471-405">This is the first capturing group.</span></span>|  
+|`\d{3}-\d{4}`|<span data-ttu-id="cd471-406">Corrisponde a tre cifre decimali seguite da un trattino e da altre quattro cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="cd471-406">Match three decimal digits followed by a hyphen and four more decimal digits.</span></span>|  
+|`$`|<span data-ttu-id="cd471-407">Trova la corrispondenza con la fine della stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-407">Match the end of the input string.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-408">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-408">Back to Top</span></span>](#Top)  
   
 <a name="NonDigitCharacter"></a>   
-## Carattere non numerico: \\D  
- `\D` trova la corrispondenza con qualsiasi carattere non numerico.  È equivalente al criterio di ricerca di espressioni regolari `\P{Nd}`.  
+## <a name="non-digit-character-d"></a><span data-ttu-id="cd471-409">Carattere non numerico: \D</span><span class="sxs-lookup"><span data-stu-id="cd471-409">Non-Digit Character: \D</span></span>  
+ <span data-ttu-id="cd471-410">`\D` trova la corrispondenza con qualsiasi carattere non numerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-410">`\D` matches any non-digit character.</span></span> <span data-ttu-id="cd471-411">È equivalente al criterio di ricerca di espressioni regolari `\P{Nd}`.</span><span class="sxs-lookup"><span data-stu-id="cd471-411">It is equivalent to the `\P{Nd}` regular expression pattern.</span></span>  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\D` equivale a `[^0-9]`.  Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento della corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="cd471-412">Se viene specificato il comportamento conforme a ECMAScript, `\D` equivale a `[^0-9]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-412">If ECMAScript-compliant behavior is specified, `\D` is equivalent to  `[^0-9]`.</span></span> <span data-ttu-id="cd471-413">Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="cd471-413">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
- Nell'esempio seguente viene illustrato l'elemento di linguaggio \\D.  Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali.  Il criterio di ricerca di espressioni regolari `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
+ <span data-ttu-id="cd471-414">Nell'esempio seguente viene illustrato l'elemento di linguaggio \D.</span><span class="sxs-lookup"><span data-stu-id="cd471-414">The following example illustrates the \D language element.</span></span> <span data-ttu-id="cd471-415">Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali.</span><span class="sxs-lookup"><span data-stu-id="cd471-415">It tests whether a string such as a part number consists of the appropriate combination of decimal and non-decimal characters.</span></span> <span data-ttu-id="cd471-416">Il criterio di ricerca di espressioni regolari `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-416">The regular expression pattern `^\D\d{1,5}\D*$` is defined as shown in the following table.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
-|`\D`|Corrisponde a un carattere non numerico.|  
-|`\d{1,5}`|Corrisponde a una fino a cinque cifre decimali.|  
-|`\D*`|Corrisponde a zero, uno o più caratteri non decimali.|  
-|`$`|Trova la corrispondenza con la fine della stringa di input.|  
+|<span data-ttu-id="cd471-417">Elemento</span><span class="sxs-lookup"><span data-stu-id="cd471-417">Element</span></span>|<span data-ttu-id="cd471-418">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-418">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="cd471-419">Inizia la corrispondenza all'inizio della stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-419">Begin the match at the beginning of the input string.</span></span>|  
+|`\D`|<span data-ttu-id="cd471-420">Corrisponde a un carattere non numerico.</span><span class="sxs-lookup"><span data-stu-id="cd471-420">Match a non-digit character.</span></span>|  
+|`\d{1,5}`|<span data-ttu-id="cd471-421">Corrisponde a una fino a cinque cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="cd471-421">Match from one to five decimal digits.</span></span>|  
+|`\D*`|<span data-ttu-id="cd471-422">Corrisponde a zero, uno o più caratteri non decimali.</span><span class="sxs-lookup"><span data-stu-id="cd471-422">Match zero, one, or more non-decimal characters.</span></span>|  
+|`$`|<span data-ttu-id="cd471-423">Trova la corrispondenza con la fine della stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-423">Match the end of the input string.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-424">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-424">Back to Top</span></span>](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
-## Categorie generali Unicode supportate  
- In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito.  Per altre informazioni, vedere le sezioni relative al formato di File UCD e ai valori di categoria generale nel [database di caratteri unicode](http://go.microsoft.com/fwlink/?LinkId=57650).  
+## <a name="supported-unicode-general-categories"></a><span data-ttu-id="cd471-425">Categorie generali Unicode supportate</span><span class="sxs-lookup"><span data-stu-id="cd471-425">Supported Unicode General Categories</span></span>  
+ <span data-ttu-id="cd471-426">In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito.</span><span class="sxs-lookup"><span data-stu-id="cd471-426">Unicode defines the general categories listed in the following table.</span></span> <span data-ttu-id="cd471-427">Per altre informazioni, vedere gli argomenti correlati "UCD File Format" (Formato di file UCD) e "General Category Values" (Valori di categoria generale) in [Unicode Character Database](http://go.microsoft.com/fwlink/?LinkId=57650) (Database di caratteri Unicode).</span><span class="sxs-lookup"><span data-stu-id="cd471-427">For more information, see the "UCD File Format" and "General Category Values" subtopics at the [Unicode Character Database](http://go.microsoft.com/fwlink/?LinkId=57650).</span></span>  
   
-|Categoria|Descrizione|  
-|---------------|-----------------|  
-|`Lu`|Letter, Uppercase|  
-|`Ll`|Letter, Lowercase|  
-|`Lt`|Letter, Titlecase|  
-|`Lm`|Letter, Modifier|  
-|`Lo`|Letter, Other|  
-|`L`|Tutti i caratteri alfanumerici.  Sono inclusi i caratteri `Lu`, `Ll`, `Lt`, `Lm` e `Lo`.|  
-|`Mn`|Mark, Nonspacing|  
-|`Mc`|Mark, Spacing Combining|  
-|`Me`|Mark, Enclosing|  
-|`M`|Tutti i contrassegni diacritici.  Sono incluse le categorie `Mn`, `Mc` e `Me`.|  
-|`Nd`|Number, Decimal Digit|  
-|`Nl`|Number, Letter|  
-|`No`|Number, Other|  
-|`N`|Tutti i numeri.  Sono incluse le categorie `Nd`, `Nl` e `No`.|  
-|`Pc`|Punctuation, Connector|  
-|`Pd`|Punctuation, Dash|  
-|`Ps`|Punctuation, Open|  
-|`Pe`|Punctuation, Close|  
-|`Pi`|Punctuation, Initial quote \(può comportarsi come Ps o Pe a seconda dell'utilizzo\)|  
-|`Pf`|Punctuation, Final quote \(può comportarsi come Ps o Pe a seconda dell'utilizzo\)|  
-|`Po`|Punctuation, Other|  
-|`P`|Tutti i caratteri di punteggiatura.  Sono incluse le categorie `Pc`, `Pd`, `Ps`, `Pe`, `Pi`, `Pf` e `Po`.|  
-|`Sm`|Symbol, Math|  
-|`Sc`|Symbol, Currency|  
-|`Sk`|Symbol, Modifier|  
-|`So`|Symbol, Other|  
-|`S`|Tutti i simboli.  Sono incluse le categorie `Sm`, `Sc`, `Sk` e `So`.|  
-|`Zs`|Separator, Space|  
-|`Zl`|Separator, Line|  
-|`Zp`|Separator, Paragraph|  
-|`Z`|Tutti i caratteri separatori.  Sono incluse le categorie `Zs`, `Zl` e `Zp`.|  
-|`Cc`|Other, Control|  
-|`Cf`|Other, Format|  
-|`Cs`|Other, Surrogate|  
-|`Co`|Other, Private Use|  
-|`Cn`|Other, Not Assigned \(nessun carattere ha questa proprietà\)|  
-|`C`|Tutti i caratteri di controllo.  Sono incluse le categorie `Cc`, `Cf`, `Cs`, `Co` e `Cn`.|  
+|<span data-ttu-id="cd471-428">Categoria</span><span class="sxs-lookup"><span data-stu-id="cd471-428">Category</span></span>|<span data-ttu-id="cd471-429">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-429">Description</span></span>|  
+|--------------|-----------------|  
+|`Lu`|<span data-ttu-id="cd471-430">Letter, Uppercase</span><span class="sxs-lookup"><span data-stu-id="cd471-430">Letter, Uppercase</span></span>|  
+|`Ll`|<span data-ttu-id="cd471-431">Letter, Lowercase</span><span class="sxs-lookup"><span data-stu-id="cd471-431">Letter, Lowercase</span></span>|  
+|`Lt`|<span data-ttu-id="cd471-432">Letter, Titlecase</span><span class="sxs-lookup"><span data-stu-id="cd471-432">Letter, Titlecase</span></span>|  
+|`Lm`|<span data-ttu-id="cd471-433">Letter, Modifier</span><span class="sxs-lookup"><span data-stu-id="cd471-433">Letter, Modifier</span></span>|  
+|`Lo`|<span data-ttu-id="cd471-434">Letter, Other</span><span class="sxs-lookup"><span data-stu-id="cd471-434">Letter, Other</span></span>|  
+|`L`|<span data-ttu-id="cd471-435">Tutti i caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="cd471-435">All letter characters.</span></span> <span data-ttu-id="cd471-436">Sono inclusi i caratteri `Lu`, `Ll`, `Lt`, `Lm` e `Lo`.</span><span class="sxs-lookup"><span data-stu-id="cd471-436">This includes the `Lu`, `Ll`, `Lt`, `Lm`, and `Lo` characters.</span></span>|  
+|`Mn`|<span data-ttu-id="cd471-437">Mark, Nonspacing</span><span class="sxs-lookup"><span data-stu-id="cd471-437">Mark, Nonspacing</span></span>|  
+|`Mc`|<span data-ttu-id="cd471-438">Mark, Spacing Combining</span><span class="sxs-lookup"><span data-stu-id="cd471-438">Mark, Spacing Combining</span></span>|  
+|`Me`|<span data-ttu-id="cd471-439">Mark, Enclosing</span><span class="sxs-lookup"><span data-stu-id="cd471-439">Mark, Enclosing</span></span>|  
+|`M`|<span data-ttu-id="cd471-440">Tutti i contrassegni diacritici.</span><span class="sxs-lookup"><span data-stu-id="cd471-440">All diacritic marks.</span></span> <span data-ttu-id="cd471-441">Sono incluse le categorie `Mn`, `Mc` e `Me`.</span><span class="sxs-lookup"><span data-stu-id="cd471-441">This includes the `Mn`, `Mc`, and `Me` categories.</span></span>|  
+|`Nd`|<span data-ttu-id="cd471-442">Number, Decimal Digit</span><span class="sxs-lookup"><span data-stu-id="cd471-442">Number, Decimal Digit</span></span>|  
+|`Nl`|<span data-ttu-id="cd471-443">Number, Letter</span><span class="sxs-lookup"><span data-stu-id="cd471-443">Number, Letter</span></span>|  
+|`No`|<span data-ttu-id="cd471-444">Number, Other</span><span class="sxs-lookup"><span data-stu-id="cd471-444">Number, Other</span></span>|  
+|`N`|<span data-ttu-id="cd471-445">Tutti i numeri.</span><span class="sxs-lookup"><span data-stu-id="cd471-445">All numbers.</span></span> <span data-ttu-id="cd471-446">Sono incluse le categorie `Nd`, `Nl` e `No`.</span><span class="sxs-lookup"><span data-stu-id="cd471-446">This includes the `Nd`, `Nl`, and `No` categories.</span></span>|  
+|`Pc`|<span data-ttu-id="cd471-447">Punctuation, Connector</span><span class="sxs-lookup"><span data-stu-id="cd471-447">Punctuation, Connector</span></span>|  
+|`Pd`|<span data-ttu-id="cd471-448">Punctuation, Dash</span><span class="sxs-lookup"><span data-stu-id="cd471-448">Punctuation, Dash</span></span>|  
+|`Ps`|<span data-ttu-id="cd471-449">Punctuation, Open</span><span class="sxs-lookup"><span data-stu-id="cd471-449">Punctuation, Open</span></span>|  
+|`Pe`|<span data-ttu-id="cd471-450">Punctuation, Close</span><span class="sxs-lookup"><span data-stu-id="cd471-450">Punctuation, Close</span></span>|  
+|`Pi`|<span data-ttu-id="cd471-451">Punctuation, Initial quote (può comportarsi come Ps o Pe a seconda dell'utilizzo)</span><span class="sxs-lookup"><span data-stu-id="cd471-451">Punctuation, Initial quote (may behave like Ps or Pe depending on usage)</span></span>|  
+|`Pf`|<span data-ttu-id="cd471-452">Punctuation, Final quote (può comportarsi come Ps o Pe a seconda dell'utilizzo)</span><span class="sxs-lookup"><span data-stu-id="cd471-452">Punctuation, Final quote (may behave like Ps or Pe depending on usage)</span></span>|  
+|`Po`|<span data-ttu-id="cd471-453">Punctuation, Other</span><span class="sxs-lookup"><span data-stu-id="cd471-453">Punctuation, Other</span></span>|  
+|`P`|<span data-ttu-id="cd471-454">Tutti i caratteri di punteggiatura.</span><span class="sxs-lookup"><span data-stu-id="cd471-454">All punctuation characters.</span></span> <span data-ttu-id="cd471-455">Sono incluse le categorie `Pc`, `Pd`, `Ps`, `Pe`, `Pi`, `Pf` e `Po`.</span><span class="sxs-lookup"><span data-stu-id="cd471-455">This includes the `Pc`, `Pd`, `Ps`, `Pe`, `Pi`, `Pf`, and `Po` categories.</span></span>|  
+|`Sm`|<span data-ttu-id="cd471-456">Symbol, Math</span><span class="sxs-lookup"><span data-stu-id="cd471-456">Symbol, Math</span></span>|  
+|`Sc`|<span data-ttu-id="cd471-457">Symbol, Currency</span><span class="sxs-lookup"><span data-stu-id="cd471-457">Symbol, Currency</span></span>|  
+|`Sk`|<span data-ttu-id="cd471-458">Symbol, Modifier</span><span class="sxs-lookup"><span data-stu-id="cd471-458">Symbol, Modifier</span></span>|  
+|`So`|<span data-ttu-id="cd471-459">Symbol, Other</span><span class="sxs-lookup"><span data-stu-id="cd471-459">Symbol, Other</span></span>|  
+|`S`|<span data-ttu-id="cd471-460">Tutti i simboli.</span><span class="sxs-lookup"><span data-stu-id="cd471-460">All symbols.</span></span> <span data-ttu-id="cd471-461">Sono incluse le categorie `Sm`, `Sc`, `Sk` e `So`.</span><span class="sxs-lookup"><span data-stu-id="cd471-461">This includes the `Sm`, `Sc`, `Sk`, and `So` categories.</span></span>|  
+|`Zs`|<span data-ttu-id="cd471-462">Separator, Space</span><span class="sxs-lookup"><span data-stu-id="cd471-462">Separator, Space</span></span>|  
+|`Zl`|<span data-ttu-id="cd471-463">Separator, Line</span><span class="sxs-lookup"><span data-stu-id="cd471-463">Separator, Line</span></span>|  
+|`Zp`|<span data-ttu-id="cd471-464">Separator, Paragraph</span><span class="sxs-lookup"><span data-stu-id="cd471-464">Separator, Paragraph</span></span>|  
+|`Z`|<span data-ttu-id="cd471-465">Tutti i caratteri separatori.</span><span class="sxs-lookup"><span data-stu-id="cd471-465">All separator characters.</span></span> <span data-ttu-id="cd471-466">Sono incluse le categorie `Zs`, `Zl` e `Zp`.</span><span class="sxs-lookup"><span data-stu-id="cd471-466">This includes the `Zs`, `Zl`, and `Zp` categories.</span></span>|  
+|`Cc`|<span data-ttu-id="cd471-467">Other, Control</span><span class="sxs-lookup"><span data-stu-id="cd471-467">Other, Control</span></span>|  
+|`Cf`|<span data-ttu-id="cd471-468">Other, Format</span><span class="sxs-lookup"><span data-stu-id="cd471-468">Other, Format</span></span>|  
+|`Cs`|<span data-ttu-id="cd471-469">Other, Surrogate</span><span class="sxs-lookup"><span data-stu-id="cd471-469">Other, Surrogate</span></span>|  
+|`Co`|<span data-ttu-id="cd471-470">Other, Private Use</span><span class="sxs-lookup"><span data-stu-id="cd471-470">Other, Private Use</span></span>|  
+|`Cn`|<span data-ttu-id="cd471-471">Other, Not Assigned (nessun carattere ha questa proprietà)</span><span class="sxs-lookup"><span data-stu-id="cd471-471">Other, Not Assigned (no characters have this property)</span></span>|  
+|`C`|<span data-ttu-id="cd471-472">Tutti i caratteri di controllo.</span><span class="sxs-lookup"><span data-stu-id="cd471-472">All control characters.</span></span> <span data-ttu-id="cd471-473">Sono incluse le categorie `Cc`, `Cf`, `Cs`, `Co` e `Cn`.</span><span class="sxs-lookup"><span data-stu-id="cd471-473">This includes the `Cc`, `Cf`, `Cs`, `Co`, and `Cn` categories.</span></span>|  
   
- È possibile determinare la categoria Unicode di qualsiasi particolare carattere passando tale carattere al metodo <xref:System.Char.GetUnicodeCategory%2A>.  L'esempio seguente usa il metodo <xref:System.Char.GetUnicodeCategory%2A> per determinare la categoria di ogni elemento in una matrice che contiene caratteri latini selezionati.  
+ <span data-ttu-id="cd471-474">È possibile determinare la categoria Unicode di qualsiasi particolare carattere passando tale carattere al metodo <xref:System.Char.GetUnicodeCategory%2A>.</span><span class="sxs-lookup"><span data-stu-id="cd471-474">You can determine the Unicode category of any particular character by passing that character to the <xref:System.Char.GetUnicodeCategory%2A> method.</span></span> <span data-ttu-id="cd471-475">L'esempio seguente usa il metodo <xref:System.Char.GetUnicodeCategory%2A> per determinare la categoria di ogni elemento in una matrice che contiene caratteri latini selezionati.</span><span class="sxs-lookup"><span data-stu-id="cd471-475">The following example uses the <xref:System.Char.GetUnicodeCategory%2A> method to determine the category of each element in an array that contains selected Latin characters.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-476">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-476">Back to Top</span></span>](#Top)  
   
 <a name="SupportedNamedBlocks"></a>   
-## Blocchi denominati supportati  
- In .NET Framework sono disponibili i blocchi denominati elencati nella tabella riportata di seguito.  Il set di blocchi denominati supportati è basato su Unicode 4.0 e Perl 5.6.  
+## <a name="supported-named-blocks"></a><span data-ttu-id="cd471-477">Blocchi denominati supportati</span><span class="sxs-lookup"><span data-stu-id="cd471-477">Supported Named Blocks</span></span>  
+ <span data-ttu-id="cd471-478">In .NET sono supportati i blocchi denominati elencati nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-478">.NET provides the named blocks listed in the following table.</span></span> <span data-ttu-id="cd471-479">Il set di blocchi denominati supportati è basato su Unicode 4.0 e Perl 5.6.</span><span class="sxs-lookup"><span data-stu-id="cd471-479">The set of supported named blocks is based on Unicode 4.0 and Perl 5.6.</span></span>  
   
-|Intervallo di punti di codice|Nome del blocco|  
-|-----------------------------------|---------------------|  
-|0000 \- 007F|`IsBasicLatin`|  
-|0080 \- 00FF|`IsLatin-1Supplement`|  
-|0100 \- 017F|`IsLatinExtended-A`|  
-|0180 \- 024F|`IsLatinExtended-B`|  
-|0250 \- 02AF|`IsIPAExtensions`|  
-|02B0 \- 02FF|`IsSpacingModifierLetters`|  
-|0300 \- 036F|`IsCombiningDiacriticalMarks`|  
-|0370 \- 03FF|`IsGreek`<br /><br /> \-oppure\-<br /><br /> `IsGreekandCoptic`|  
-|0400 \- 04FF|`IsCyrillic`|  
-|0500 \- 052F|`IsCyrillicSupplement`|  
-|0530 \- 058F|`IsArmenian`|  
-|0590 \- 05FF|`IsHebrew`|  
-|0600 \- 06FF|`IsArabic`|  
-|0700 \- 074F|`IsSyriac`|  
-|0780 \- 07BF|`IsThaana`|  
-|0900 \- 097F|`IsDevanagari`|  
-|0980 \- 09FF|`IsBengali`|  
-|0A00 \- 0A7F|`IsGurmukhi`|  
-|0A80 \- 0AFF|`IsGujarati`|  
-|0B00 \- 0B7F|`IsOriya`|  
-|0B80 \- 0BFF|`IsTamil`|  
-|0C00 \- 0C7F|`IsTelugu`|  
-|0C80 \- 0CFF|`IsKannada`|  
-|0D00 \- 0D7F|`IsMalayalam`|  
-|0D80 \- 0DFF|`IsSinhala`|  
-|0E00 \- 0E7F|`IsThai`|  
-|0E80 \- 0EFF|`IsLao`|  
-|0F00 \- 0FFF|`IsTibetan`|  
-|1000 \- 109F|`IsMyanmar`|  
-|10A0 \- 10FF|`IsGeorgian`|  
-|1100 \- 11FF|`IsHangulJamo`|  
-|1200 \- 137F|`IsEthiopic`|  
-|13A0 \- 13FF|`IsCherokee`|  
-|1400 \- 167F|`IsUnifiedCanadianAboriginalSyllabics`|  
-|1680 \- 169F|`IsOgham`|  
-|16A0 \- 16FF|`IsRunic`|  
-|1700 \- 171F|`IsTagalog`|  
-|1720 \- 173F|`IsHanunoo`|  
-|1740 \- 175F|`IsBuhid`|  
-|1760 \- 177F|`IsTagbanwa`|  
-|1780 \- 17FF|`IsKhmer`|  
-|1800 \- 18AF|`IsMongolian`|  
-|1900 \- 194F|`IsLimbu`|  
-|1950 \- 197F|`IsTaiLe`|  
-|19E0 \- 19FF|`IsKhmerSymbols`|  
-|1D00 \- 1D7F|`IsPhoneticExtensions`|  
-|1E00 \- 1EFF|`IsLatinExtendedAdditional`|  
-|1F00 \- 1FFF|`IsGreekExtended`|  
-|2000 \- 206F|`IsGeneralPunctuation`|  
-|2070 \- 209F|`IsSuperscriptsandSubscripts`|  
-|20A0 \- 20CF|`IsCurrencySymbols`|  
-|20D0 \- 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \-oppure\-<br /><br /> `IsCombiningMarksforSymbols`|  
-|2100 \- 214F|`IsLetterlikeSymbols`|  
-|2150 \- 218F|`IsNumberForms`|  
-|2190 \- 21FF|`IsArrows`|  
-|2200 \- 22FF|`IsMathematicalOperators`|  
-|2300 \- 23FF|`IsMiscellaneousTechnical`|  
-|2400 \- 243F|`IsControlPictures`|  
-|2440 \- 245F|`IsOpticalCharacterRecognition`|  
-|2460 \- 24FF|`IsEnclosedAlphanumerics`|  
-|2500 \- 257F|`IsBoxDrawing`|  
-|2580 \- 259F|`IsBlockElements`|  
-|25A0 \- 25FF|`IsGeometricShapes`|  
-|2600 \- 26FF|`IsMiscellaneousSymbols`|  
-|2700 \- 27BF|`IsDingbats`|  
-|27C0 \- 27EF|`IsMiscellaneousMathematicalSymbols-A`|  
-|27F0 \- 27FF|`IsSupplementalArrows-A`|  
-|2800 \- 28FF|`IsBraillePatterns`|  
-|2900 \- 297F|`IsSupplementalArrows-B`|  
-|2980 \- 29FF|`IsMiscellaneousMathematicalSymbols-B`|  
-|2A00 \- 2AFF|`IsSupplementalMathematicalOperators`|  
-|2B00 \- 2BFF|`IsMiscellaneousSymbolsandArrows`|  
-|2E80 \- 2EFF|`IsCJKRadicalsSupplement`|  
-|2F00 \- 2FDF|`IsKangxiRadicals`|  
-|2FF0 \- 2FFF|`IsIdeographicDescriptionCharacters`|  
-|3000 \- 303F|`IsCJKSymbolsandPunctuation`|  
-|3040 \- 309F|`IsHiragana`|  
-|30A0 \- 30FF|`IsKatakana`|  
-|3100 \- 312F|`IsBopomofo`|  
-|3130 \- 318F|`IsHangulCompatibilityJamo`|  
-|3190 \- 319F|`IsKanbun`|  
-|31A0 \- 31BF|`IsBopomofoExtended`|  
-|31F0 \- 31FF|`IsKatakanaPhoneticExtensions`|  
-|3200 \- 32FF|`IsEnclosedCJKLettersandMonths`|  
-|3300 \- 33FF|`IsCJKCompatibility`|  
-|3400 \- 4DBF|`IsCJKUnifiedIdeographsExtensionA`|  
-|4DC0 \- 4DFF|`IsYijingHexagramSymbols`|  
-|4E00 \- 9FFF|`IsCJKUnifiedIdeographs`|  
-|A000 \- A48F|`IsYiSyllables`|  
-|A490 \- A4CF|`IsYiRadicals`|  
-|AC00 \- D7AF|`IsHangulSyllables`|  
-|D800 \- DB7F|`IsHighSurrogates`|  
-|DB80 \- DBFF|`IsHighPrivateUseSurrogates`|  
-|DC00 \- DFFF|`IsLowSurrogates`|  
-|E000 \- F8FF|`IsPrivateUse` o `IsPrivateUseArea`|  
-|F900 \- FAFF|`IsCJKCompatibilityIdeographs`|  
-|FB00 \- FB4F|`IsAlphabeticPresentationForms`|  
-|FB50 \- FDFF|`IsArabicPresentationForms-A`|  
-|FE00 \- FE0F|`IsVariationSelectors`|  
-|FE20 \- FE2F|`IsCombiningHalfMarks`|  
-|FE30 \- FE4F|`IsCJKCompatibilityForms`|  
-|FE50 \- FE6F|`IsSmallFormVariants`|  
-|FE70 \- FEFF|`IsArabicPresentationForms-B`|  
-|FF00 \- FFEF|`IsHalfwidthandFullwidthForms`|  
-|FFF0 \- FFFF|`IsSpecials`|  
+|<span data-ttu-id="cd471-480">Intervallo di punti di codice</span><span class="sxs-lookup"><span data-stu-id="cd471-480">Code point range</span></span>|<span data-ttu-id="cd471-481">Nome del blocco</span><span class="sxs-lookup"><span data-stu-id="cd471-481">Block name</span></span>|  
+|----------------------|----------------|  
+|<span data-ttu-id="cd471-482">0000 - 007F</span><span class="sxs-lookup"><span data-stu-id="cd471-482">0000 - 007F</span></span>|`IsBasicLatin`|  
+|<span data-ttu-id="cd471-483">0080 - 00FF</span><span class="sxs-lookup"><span data-stu-id="cd471-483">0080 - 00FF</span></span>|`IsLatin-1Supplement`|  
+|<span data-ttu-id="cd471-484">0100 - 017F</span><span class="sxs-lookup"><span data-stu-id="cd471-484">0100 - 017F</span></span>|`IsLatinExtended-A`|  
+|<span data-ttu-id="cd471-485">0180 - 024F</span><span class="sxs-lookup"><span data-stu-id="cd471-485">0180 - 024F</span></span>|`IsLatinExtended-B`|  
+|<span data-ttu-id="cd471-486">0250 - 02AF</span><span class="sxs-lookup"><span data-stu-id="cd471-486">0250 - 02AF</span></span>|`IsIPAExtensions`|  
+|<span data-ttu-id="cd471-487">02B0 - 02FF</span><span class="sxs-lookup"><span data-stu-id="cd471-487">02B0 - 02FF</span></span>|`IsSpacingModifierLetters`|  
+|<span data-ttu-id="cd471-488">0300 - 036F</span><span class="sxs-lookup"><span data-stu-id="cd471-488">0300 - 036F</span></span>|`IsCombiningDiacriticalMarks`|  
+|<span data-ttu-id="cd471-489">0370 - 03FF</span><span class="sxs-lookup"><span data-stu-id="cd471-489">0370 - 03FF</span></span>|`IsGreek`<br /><br /> <span data-ttu-id="cd471-490">-oppure-</span><span class="sxs-lookup"><span data-stu-id="cd471-490">-or-</span></span><br /><br /> `IsGreekandCoptic`|  
+|<span data-ttu-id="cd471-491">0400 - 04FF</span><span class="sxs-lookup"><span data-stu-id="cd471-491">0400 - 04FF</span></span>|`IsCyrillic`|  
+|<span data-ttu-id="cd471-492">0500 - 052F</span><span class="sxs-lookup"><span data-stu-id="cd471-492">0500 - 052F</span></span>|`IsCyrillicSupplement`|  
+|<span data-ttu-id="cd471-493">0530 - 058F</span><span class="sxs-lookup"><span data-stu-id="cd471-493">0530 - 058F</span></span>|`IsArmenian`|  
+|<span data-ttu-id="cd471-494">0590 - 05FF</span><span class="sxs-lookup"><span data-stu-id="cd471-494">0590 - 05FF</span></span>|`IsHebrew`|  
+|<span data-ttu-id="cd471-495">0600 - 06FF</span><span class="sxs-lookup"><span data-stu-id="cd471-495">0600 - 06FF</span></span>|`IsArabic`|  
+|<span data-ttu-id="cd471-496">0700 - 074F</span><span class="sxs-lookup"><span data-stu-id="cd471-496">0700 - 074F</span></span>|`IsSyriac`|  
+|<span data-ttu-id="cd471-497">0780 - 07BF</span><span class="sxs-lookup"><span data-stu-id="cd471-497">0780 - 07BF</span></span>|`IsThaana`|  
+|<span data-ttu-id="cd471-498">0900 - 097F</span><span class="sxs-lookup"><span data-stu-id="cd471-498">0900 - 097F</span></span>|`IsDevanagari`|  
+|<span data-ttu-id="cd471-499">0980 - 09FF</span><span class="sxs-lookup"><span data-stu-id="cd471-499">0980 - 09FF</span></span>|`IsBengali`|  
+|<span data-ttu-id="cd471-500">0A00 - 0A7F</span><span class="sxs-lookup"><span data-stu-id="cd471-500">0A00 - 0A7F</span></span>|`IsGurmukhi`|  
+|<span data-ttu-id="cd471-501">0A80 - 0AFF</span><span class="sxs-lookup"><span data-stu-id="cd471-501">0A80 - 0AFF</span></span>|`IsGujarati`|  
+|<span data-ttu-id="cd471-502">0B00 - 0B7F</span><span class="sxs-lookup"><span data-stu-id="cd471-502">0B00 - 0B7F</span></span>|`IsOriya`|  
+|<span data-ttu-id="cd471-503">0B80 - 0BFF</span><span class="sxs-lookup"><span data-stu-id="cd471-503">0B80 - 0BFF</span></span>|`IsTamil`|  
+|<span data-ttu-id="cd471-504">0C00 - 0C7F</span><span class="sxs-lookup"><span data-stu-id="cd471-504">0C00 - 0C7F</span></span>|`IsTelugu`|  
+|<span data-ttu-id="cd471-505">0C80 - 0CFF</span><span class="sxs-lookup"><span data-stu-id="cd471-505">0C80 - 0CFF</span></span>|`IsKannada`|  
+|<span data-ttu-id="cd471-506">0D00 - 0D7F</span><span class="sxs-lookup"><span data-stu-id="cd471-506">0D00 - 0D7F</span></span>|`IsMalayalam`|  
+|<span data-ttu-id="cd471-507">0D80 - 0DFF</span><span class="sxs-lookup"><span data-stu-id="cd471-507">0D80 - 0DFF</span></span>|`IsSinhala`|  
+|<span data-ttu-id="cd471-508">0E00 - 0E7F</span><span class="sxs-lookup"><span data-stu-id="cd471-508">0E00 - 0E7F</span></span>|`IsThai`|  
+|<span data-ttu-id="cd471-509">0E80 - 0EFF</span><span class="sxs-lookup"><span data-stu-id="cd471-509">0E80 - 0EFF</span></span>|`IsLao`|  
+|<span data-ttu-id="cd471-510">0F00 - 0FFF</span><span class="sxs-lookup"><span data-stu-id="cd471-510">0F00 - 0FFF</span></span>|`IsTibetan`|  
+|<span data-ttu-id="cd471-511">1000 - 109F</span><span class="sxs-lookup"><span data-stu-id="cd471-511">1000 - 109F</span></span>|`IsMyanmar`|  
+|<span data-ttu-id="cd471-512">10A0 - 10FF</span><span class="sxs-lookup"><span data-stu-id="cd471-512">10A0 - 10FF</span></span>|`IsGeorgian`|  
+|<span data-ttu-id="cd471-513">1100 - 11FF</span><span class="sxs-lookup"><span data-stu-id="cd471-513">1100 - 11FF</span></span>|`IsHangulJamo`|  
+|<span data-ttu-id="cd471-514">1200 - 137F</span><span class="sxs-lookup"><span data-stu-id="cd471-514">1200 - 137F</span></span>|`IsEthiopic`|  
+|<span data-ttu-id="cd471-515">13A0 - 13FF</span><span class="sxs-lookup"><span data-stu-id="cd471-515">13A0 - 13FF</span></span>|`IsCherokee`|  
+|<span data-ttu-id="cd471-516">1400 - 167F</span><span class="sxs-lookup"><span data-stu-id="cd471-516">1400 - 167F</span></span>|`IsUnifiedCanadianAboriginalSyllabics`|  
+|<span data-ttu-id="cd471-517">1680 - 169F</span><span class="sxs-lookup"><span data-stu-id="cd471-517">1680 - 169F</span></span>|`IsOgham`|  
+|<span data-ttu-id="cd471-518">16A0 - 16FF</span><span class="sxs-lookup"><span data-stu-id="cd471-518">16A0 - 16FF</span></span>|`IsRunic`|  
+|<span data-ttu-id="cd471-519">1700 - 171F</span><span class="sxs-lookup"><span data-stu-id="cd471-519">1700 - 171F</span></span>|`IsTagalog`|  
+|<span data-ttu-id="cd471-520">1720 - 173F</span><span class="sxs-lookup"><span data-stu-id="cd471-520">1720 - 173F</span></span>|`IsHanunoo`|  
+|<span data-ttu-id="cd471-521">1740 - 175F</span><span class="sxs-lookup"><span data-stu-id="cd471-521">1740 - 175F</span></span>|`IsBuhid`|  
+|<span data-ttu-id="cd471-522">1760 - 177F</span><span class="sxs-lookup"><span data-stu-id="cd471-522">1760 - 177F</span></span>|`IsTagbanwa`|  
+|<span data-ttu-id="cd471-523">1780 - 17FF</span><span class="sxs-lookup"><span data-stu-id="cd471-523">1780 - 17FF</span></span>|`IsKhmer`|  
+|<span data-ttu-id="cd471-524">1800 - 18AF</span><span class="sxs-lookup"><span data-stu-id="cd471-524">1800 - 18AF</span></span>|`IsMongolian`|  
+|<span data-ttu-id="cd471-525">1900 - 194F</span><span class="sxs-lookup"><span data-stu-id="cd471-525">1900 - 194F</span></span>|`IsLimbu`|  
+|<span data-ttu-id="cd471-526">1950 - 197F</span><span class="sxs-lookup"><span data-stu-id="cd471-526">1950 - 197F</span></span>|`IsTaiLe`|  
+|<span data-ttu-id="cd471-527">19E0 - 19FF</span><span class="sxs-lookup"><span data-stu-id="cd471-527">19E0 - 19FF</span></span>|`IsKhmerSymbols`|  
+|<span data-ttu-id="cd471-528">1D00 - 1D7F</span><span class="sxs-lookup"><span data-stu-id="cd471-528">1D00 - 1D7F</span></span>|`IsPhoneticExtensions`|  
+|<span data-ttu-id="cd471-529">1E00 - 1EFF</span><span class="sxs-lookup"><span data-stu-id="cd471-529">1E00 - 1EFF</span></span>|`IsLatinExtendedAdditional`|  
+|<span data-ttu-id="cd471-530">1F00 - 1FFF</span><span class="sxs-lookup"><span data-stu-id="cd471-530">1F00 - 1FFF</span></span>|`IsGreekExtended`|  
+|<span data-ttu-id="cd471-531">2000 - 206F</span><span class="sxs-lookup"><span data-stu-id="cd471-531">2000 - 206F</span></span>|`IsGeneralPunctuation`|  
+|<span data-ttu-id="cd471-532">2070 - 209F</span><span class="sxs-lookup"><span data-stu-id="cd471-532">2070 - 209F</span></span>|`IsSuperscriptsandSubscripts`|  
+|<span data-ttu-id="cd471-533">20A0 - 20CF</span><span class="sxs-lookup"><span data-stu-id="cd471-533">20A0 - 20CF</span></span>|`IsCurrencySymbols`|  
+|<span data-ttu-id="cd471-534">20D0 - 20FF</span><span class="sxs-lookup"><span data-stu-id="cd471-534">20D0 - 20FF</span></span>|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> <span data-ttu-id="cd471-535">-oppure-</span><span class="sxs-lookup"><span data-stu-id="cd471-535">-or-</span></span><br /><br /> `IsCombiningMarksforSymbols`|  
+|<span data-ttu-id="cd471-536">2100 - 214F</span><span class="sxs-lookup"><span data-stu-id="cd471-536">2100 - 214F</span></span>|`IsLetterlikeSymbols`|  
+|<span data-ttu-id="cd471-537">2150 - 218F</span><span class="sxs-lookup"><span data-stu-id="cd471-537">2150 - 218F</span></span>|`IsNumberForms`|  
+|<span data-ttu-id="cd471-538">2190 - 21FF</span><span class="sxs-lookup"><span data-stu-id="cd471-538">2190 - 21FF</span></span>|`IsArrows`|  
+|<span data-ttu-id="cd471-539">2200 - 22FF</span><span class="sxs-lookup"><span data-stu-id="cd471-539">2200 - 22FF</span></span>|`IsMathematicalOperators`|  
+|<span data-ttu-id="cd471-540">2300 - 23FF</span><span class="sxs-lookup"><span data-stu-id="cd471-540">2300 - 23FF</span></span>|`IsMiscellaneousTechnical`|  
+|<span data-ttu-id="cd471-541">2400 - 243F</span><span class="sxs-lookup"><span data-stu-id="cd471-541">2400 - 243F</span></span>|`IsControlPictures`|  
+|<span data-ttu-id="cd471-542">2440 - 245F</span><span class="sxs-lookup"><span data-stu-id="cd471-542">2440 - 245F</span></span>|`IsOpticalCharacterRecognition`|  
+|<span data-ttu-id="cd471-543">2460 - 24FF</span><span class="sxs-lookup"><span data-stu-id="cd471-543">2460 - 24FF</span></span>|`IsEnclosedAlphanumerics`|  
+|<span data-ttu-id="cd471-544">2500 - 257F</span><span class="sxs-lookup"><span data-stu-id="cd471-544">2500 - 257F</span></span>|`IsBoxDrawing`|  
+|<span data-ttu-id="cd471-545">2580 - 259F</span><span class="sxs-lookup"><span data-stu-id="cd471-545">2580 - 259F</span></span>|`IsBlockElements`|  
+|<span data-ttu-id="cd471-546">25A0 - 25FF</span><span class="sxs-lookup"><span data-stu-id="cd471-546">25A0 - 25FF</span></span>|`IsGeometricShapes`|  
+|<span data-ttu-id="cd471-547">2600 - 26FF</span><span class="sxs-lookup"><span data-stu-id="cd471-547">2600 - 26FF</span></span>|`IsMiscellaneousSymbols`|  
+|<span data-ttu-id="cd471-548">2700 - 27BF</span><span class="sxs-lookup"><span data-stu-id="cd471-548">2700 - 27BF</span></span>|`IsDingbats`|  
+|<span data-ttu-id="cd471-549">27C0 - 27EF</span><span class="sxs-lookup"><span data-stu-id="cd471-549">27C0 - 27EF</span></span>|`IsMiscellaneousMathematicalSymbols-A`|  
+|<span data-ttu-id="cd471-550">27F0 - 27FF</span><span class="sxs-lookup"><span data-stu-id="cd471-550">27F0 - 27FF</span></span>|`IsSupplementalArrows-A`|  
+|<span data-ttu-id="cd471-551">2800 - 28FF</span><span class="sxs-lookup"><span data-stu-id="cd471-551">2800 - 28FF</span></span>|`IsBraillePatterns`|  
+|<span data-ttu-id="cd471-552">2900 - 297F</span><span class="sxs-lookup"><span data-stu-id="cd471-552">2900 - 297F</span></span>|`IsSupplementalArrows-B`|  
+|<span data-ttu-id="cd471-553">2980 - 29FF</span><span class="sxs-lookup"><span data-stu-id="cd471-553">2980 - 29FF</span></span>|`IsMiscellaneousMathematicalSymbols-B`|  
+|<span data-ttu-id="cd471-554">2A00 - 2AFF</span><span class="sxs-lookup"><span data-stu-id="cd471-554">2A00 - 2AFF</span></span>|`IsSupplementalMathematicalOperators`|  
+|<span data-ttu-id="cd471-555">2B00 - 2BFF</span><span class="sxs-lookup"><span data-stu-id="cd471-555">2B00 - 2BFF</span></span>|`IsMiscellaneousSymbolsandArrows`|  
+|<span data-ttu-id="cd471-556">2E80 - 2EFF</span><span class="sxs-lookup"><span data-stu-id="cd471-556">2E80 - 2EFF</span></span>|`IsCJKRadicalsSupplement`|  
+|<span data-ttu-id="cd471-557">2F00 - 2FDF</span><span class="sxs-lookup"><span data-stu-id="cd471-557">2F00 - 2FDF</span></span>|`IsKangxiRadicals`|  
+|<span data-ttu-id="cd471-558">2FF0 - 2FFF</span><span class="sxs-lookup"><span data-stu-id="cd471-558">2FF0 - 2FFF</span></span>|`IsIdeographicDescriptionCharacters`|  
+|<span data-ttu-id="cd471-559">3000 - 303F</span><span class="sxs-lookup"><span data-stu-id="cd471-559">3000 - 303F</span></span>|`IsCJKSymbolsandPunctuation`|  
+|<span data-ttu-id="cd471-560">3040 - 309F</span><span class="sxs-lookup"><span data-stu-id="cd471-560">3040 - 309F</span></span>|`IsHiragana`|  
+|<span data-ttu-id="cd471-561">30A0 - 30FF</span><span class="sxs-lookup"><span data-stu-id="cd471-561">30A0 - 30FF</span></span>|`IsKatakana`|  
+|<span data-ttu-id="cd471-562">3100 - 312F</span><span class="sxs-lookup"><span data-stu-id="cd471-562">3100 - 312F</span></span>|`IsBopomofo`|  
+|<span data-ttu-id="cd471-563">3130 - 318F</span><span class="sxs-lookup"><span data-stu-id="cd471-563">3130 - 318F</span></span>|`IsHangulCompatibilityJamo`|  
+|<span data-ttu-id="cd471-564">3190 - 319F</span><span class="sxs-lookup"><span data-stu-id="cd471-564">3190 - 319F</span></span>|`IsKanbun`|  
+|<span data-ttu-id="cd471-565">31A0 - 31BF</span><span class="sxs-lookup"><span data-stu-id="cd471-565">31A0 - 31BF</span></span>|`IsBopomofoExtended`|  
+|<span data-ttu-id="cd471-566">31F0 - 31FF</span><span class="sxs-lookup"><span data-stu-id="cd471-566">31F0 - 31FF</span></span>|`IsKatakanaPhoneticExtensions`|  
+|<span data-ttu-id="cd471-567">3200 - 32FF</span><span class="sxs-lookup"><span data-stu-id="cd471-567">3200 - 32FF</span></span>|`IsEnclosedCJKLettersandMonths`|  
+|<span data-ttu-id="cd471-568">3300 - 33FF</span><span class="sxs-lookup"><span data-stu-id="cd471-568">3300 - 33FF</span></span>|`IsCJKCompatibility`|  
+|<span data-ttu-id="cd471-569">3400 - 4DBF</span><span class="sxs-lookup"><span data-stu-id="cd471-569">3400 - 4DBF</span></span>|`IsCJKUnifiedIdeographsExtensionA`|  
+|<span data-ttu-id="cd471-570">4DC0 - 4DFF</span><span class="sxs-lookup"><span data-stu-id="cd471-570">4DC0 - 4DFF</span></span>|`IsYijingHexagramSymbols`|  
+|<span data-ttu-id="cd471-571">4E00 - 9FFF</span><span class="sxs-lookup"><span data-stu-id="cd471-571">4E00 - 9FFF</span></span>|`IsCJKUnifiedIdeographs`|  
+|<span data-ttu-id="cd471-572">A000 - A48F</span><span class="sxs-lookup"><span data-stu-id="cd471-572">A000 - A48F</span></span>|`IsYiSyllables`|  
+|<span data-ttu-id="cd471-573">A490 - A4CF</span><span class="sxs-lookup"><span data-stu-id="cd471-573">A490 - A4CF</span></span>|`IsYiRadicals`|  
+|<span data-ttu-id="cd471-574">AC00 - D7AF</span><span class="sxs-lookup"><span data-stu-id="cd471-574">AC00 - D7AF</span></span>|`IsHangulSyllables`|  
+|<span data-ttu-id="cd471-575">D800 - DB7F</span><span class="sxs-lookup"><span data-stu-id="cd471-575">D800 - DB7F</span></span>|`IsHighSurrogates`|  
+|<span data-ttu-id="cd471-576">DB80 - DBFF</span><span class="sxs-lookup"><span data-stu-id="cd471-576">DB80 - DBFF</span></span>|`IsHighPrivateUseSurrogates`|  
+|<span data-ttu-id="cd471-577">DC00 - DFFF</span><span class="sxs-lookup"><span data-stu-id="cd471-577">DC00 - DFFF</span></span>|`IsLowSurrogates`|  
+|<span data-ttu-id="cd471-578">E000 - F8FF</span><span class="sxs-lookup"><span data-stu-id="cd471-578">E000 - F8FF</span></span>|<span data-ttu-id="cd471-579">`IsPrivateUse` o `IsPrivateUseArea`</span><span class="sxs-lookup"><span data-stu-id="cd471-579">`IsPrivateUse` or `IsPrivateUseArea`</span></span>|  
+|<span data-ttu-id="cd471-580">F900 - FAFF</span><span class="sxs-lookup"><span data-stu-id="cd471-580">F900 - FAFF</span></span>|`IsCJKCompatibilityIdeographs`|  
+|<span data-ttu-id="cd471-581">FB00 - FB4F</span><span class="sxs-lookup"><span data-stu-id="cd471-581">FB00 - FB4F</span></span>|`IsAlphabeticPresentationForms`|  
+|<span data-ttu-id="cd471-582">FB50 - FDFF</span><span class="sxs-lookup"><span data-stu-id="cd471-582">FB50 - FDFF</span></span>|`IsArabicPresentationForms-A`|  
+|<span data-ttu-id="cd471-583">FE00 - FE0F</span><span class="sxs-lookup"><span data-stu-id="cd471-583">FE00 - FE0F</span></span>|`IsVariationSelectors`|  
+|<span data-ttu-id="cd471-584">FE20 - FE2F</span><span class="sxs-lookup"><span data-stu-id="cd471-584">FE20 - FE2F</span></span>|`IsCombiningHalfMarks`|  
+|<span data-ttu-id="cd471-585">FE30 - FE4F</span><span class="sxs-lookup"><span data-stu-id="cd471-585">FE30 - FE4F</span></span>|`IsCJKCompatibilityForms`|  
+|<span data-ttu-id="cd471-586">FE50 - FE6F</span><span class="sxs-lookup"><span data-stu-id="cd471-586">FE50 - FE6F</span></span>|`IsSmallFormVariants`|  
+|<span data-ttu-id="cd471-587">FE70 - FEFF</span><span class="sxs-lookup"><span data-stu-id="cd471-587">FE70 - FEFF</span></span>|`IsArabicPresentationForms-B`|  
+|<span data-ttu-id="cd471-588">FF00 - FFEF</span><span class="sxs-lookup"><span data-stu-id="cd471-588">FF00 - FFEF</span></span>|`IsHalfwidthandFullwidthForms`|  
+|<span data-ttu-id="cd471-589">FFF0 - FFFF</span><span class="sxs-lookup"><span data-stu-id="cd471-589">FFF0 - FFFF</span></span>|`IsSpecials`|  
   
- [Torna all'inizio](#Top)  
+ [<span data-ttu-id="cd471-590">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="cd471-590">Back to Top</span></span>](#Top)  
   
 <a name="CharacterClassSubtraction"></a>   
-## Sottrazione di classi di caratteri: \[base\_group \- excluded\_group\] \[\]  
- Una classe di caratteri definisce un set di caratteri.  La sottrazione di classi di caratteri produce un set di caratteri che è il risultato dell'esclusione dei caratteri di una classe di caratteri da un'altra classe di caratteri.  
+## <a name="character-class-subtraction-basegroup---excludedgroup"></a><span data-ttu-id="cd471-591">Sottrazione di classi di caratteri: [base_group - excluded_group] []</span><span class="sxs-lookup"><span data-stu-id="cd471-591">Character Class Subtraction: [base_group - [excluded_group]]</span></span>  
+ <span data-ttu-id="cd471-592">Una classe di caratteri definisce un set di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-592">A character class defines a set of characters.</span></span> <span data-ttu-id="cd471-593">La sottrazione di classi di caratteri produce un set di caratteri che è il risultato dell'esclusione dei caratteri di una classe di caratteri da un'altra classe di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-593">Character class subtraction yields a set of characters that is the result of excluding the characters in one character class from another character class.</span></span>  
   
- Un'espressione di sottrazione di classi di caratteri ha il formato seguente:  
+ <span data-ttu-id="cd471-594">Un'espressione di sottrazione di classi di caratteri ha il formato seguente:</span><span class="sxs-lookup"><span data-stu-id="cd471-594">A character class subtraction expression has the following form:</span></span>  
   
- `[` *base\_group* `-[` *excluded\_group* `]]`  
+ <span data-ttu-id="cd471-595">`[` *base_group* `-[` *excluded_group* `]]`</span><span class="sxs-lookup"><span data-stu-id="cd471-595">`[` *base_group* `-[` *excluded_group* `]]`</span></span>  
   
- Le parentesi quadre \(`[]`\) e il trattino \(`-`\) sono obbligatori.  *base\_group*è un [gruppo di caratteri positivi](#PositiveGroup) o un [gruppo di caratteri negativi](#NegativeGroup).  Il componente *excluded\_group* è un altro gruppo di caratteri positivi o negativi o un'altra espressione di sottrazione di classi di caratteri, \(ovvero è possibile annidare espressioni di sottrazione di classi di caratteri\).  
+ <span data-ttu-id="cd471-596">Le parentesi quadre (`[]`) e il trattino (`-`) sono obbligatori.</span><span class="sxs-lookup"><span data-stu-id="cd471-596">The square brackets (`[]`) and hyphen (`-`) are mandatory.</span></span> <span data-ttu-id="cd471-597">*base_group* è un [gruppo di caratteri positivi](#PositiveGroup) o un [gruppo di caratteri negativi](#NegativeGroup).</span><span class="sxs-lookup"><span data-stu-id="cd471-597">The *base_group* is a [positive character group](#PositiveGroup) or a [negative character group](#NegativeGroup).</span></span> <span data-ttu-id="cd471-598">Il componente *excluded_group* è un altro gruppo di caratteri positivi o negativi o un'altra espressione di sottrazione di classi di caratteri, ovvero è possibile annidare espressioni di sottrazione di classi di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-598">The *excluded_group* component is another positive or negative character group, or another character class subtraction expression (that is, you can nest character class subtraction expressions).</span></span>  
   
- Si supponga ad esempio di disporre di un gruppo di base costituito dall'intervallo di caratteri compresi tra "a" e "z".  Per definire il set di caratteri costituito dal gruppo di base con l'esclusione del carattere "m", usare `[a-z-[m]]`.  Per definire il set di caratteri costituito dal gruppo di base con l'esclusione del set di caratteri "d", "j" e "p", usare `[a-z-[djp]]`.  Per definire il set di caratteri costituito dal gruppo di base con l'esclusione dell'intervallo di caratteri compresi tra "m" e "p", usare `[a-z-[m-p]]`.  
+ <span data-ttu-id="cd471-599">Si supponga ad esempio di disporre di un gruppo di base costituito dall'intervallo di caratteri compresi tra "a" e "z".</span><span class="sxs-lookup"><span data-stu-id="cd471-599">For example, suppose you have a base group that consists of the character range from "a" through "z".</span></span> <span data-ttu-id="cd471-600">Per definire il set di caratteri costituito dal gruppo di base con l'esclusione del carattere "m", usare `[a-z-[m]]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-600">To define the set of characters that consists of the base group except for the character "m", use `[a-z-[m]]`.</span></span> <span data-ttu-id="cd471-601">Per definire il set di caratteri costituito dal gruppo di base con l'esclusione del set di caratteri "d", "j" e "p", usare `[a-z-[djp]]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-601">To define the set of characters that consists of the base group except for the set of characters "d", "j", and "p", use `[a-z-[djp]]`.</span></span> <span data-ttu-id="cd471-602">Per definire il set di caratteri costituito dal gruppo di base con l'esclusione dell'intervallo di caratteri compresi tra "m" e "p", usare `[a-z-[m-p]]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-602">To define the set of characters that consists of the base group except for the character range from "m" through "p", use `[a-z-[m-p]]`.</span></span>  
   
- Si consideri l'espressione di sottrazione di classi di caratteri annidata `[a-z-[d-w-[m-o]]]`.  L'espressione viene valutata partendo dall'intervallo di caratteri più interno verso quello più esterno.  Innanzitutto, l'intervallo di caratteri compresi tra "m" e "o" viene sottratto dall'intervallo di caratteri compresi tra "d" e "w", producendo il set di caratteri compresi tra "d" e "l" e tra "p" e "w".  Tale set viene quindi sottratto dall'intervallo di caratteri compreso tra "a" e "z", producendo il set di caratteri `[abcmnoxyz]`.  
+ <span data-ttu-id="cd471-603">Si consideri l'espressione di sottrazione di classi di caratteri annidata `[a-z-[d-w-[m-o]]]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-603">Consider the nested character class subtraction expression, `[a-z-[d-w-[m-o]]]`.</span></span> <span data-ttu-id="cd471-604">L'espressione viene valutata partendo dall'intervallo di caratteri più interno verso quello più esterno.</span><span class="sxs-lookup"><span data-stu-id="cd471-604">The expression is evaluated from the innermost character range outward.</span></span> <span data-ttu-id="cd471-605">Innanzitutto, l'intervallo di caratteri compresi tra "m" e "o" viene sottratto dall'intervallo di caratteri compresi tra "d" e "w", producendo il set di caratteri compresi tra "d" e "l" e tra "p" e "w".</span><span class="sxs-lookup"><span data-stu-id="cd471-605">First, the character range from "m" through "o" is subtracted from the character range "d" through "w", which yields the set of characters from "d" through "l" and "p" through "w".</span></span> <span data-ttu-id="cd471-606">Tale set viene quindi sottratto dall'intervallo di caratteri compreso tra "a" e "z", producendo il set di caratteri `[abcmnoxyz]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-606">That set is then subtracted from the character range from "a" through "z", which yields the set of characters `[abcmnoxyz]`.</span></span>  
   
- È possibile usare qualsiasi classe di caratteri con sottrazione di classi di caratteri.  Per definire il set di caratteri costituito da tutti i caratteri Unicode compresi tra \\u0000 e \\uFFFF eccetto gli spazi vuoti \(`\s`\), i caratteri nella categoria generale punteggiatura \(`\p{P}`\), i caratteri nel blocco denominato `IsGreek` \(`\p{IsGreek}`\) e il carattere di controllo Unicode NEXT LINE \(\\x85\), usare `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.  
+ <span data-ttu-id="cd471-607">È possibile usare qualsiasi classe di caratteri con sottrazione di classi di caratteri.</span><span class="sxs-lookup"><span data-stu-id="cd471-607">You can use any character class with character class subtraction.</span></span> <span data-ttu-id="cd471-608">Per definire il set di caratteri costituito da tutti i caratteri Unicode compresi tra \u0000 e \uFFFF eccetto gli spazi vuoti (`\s`), i caratteri nella categoria generale punteggiatura (`\p{P}`), i caratteri nel blocco denominato `IsGreek` (`\p{IsGreek}`) e il carattere di controllo Unicode NEXT LINE (\x85), usare `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-608">To define the set of characters that consists of all Unicode characters from \u0000 through \uFFFF except white-space characters (`\s`), the characters in the punctuation general category (`\p{P}`), the characters in the `IsGreek` named block (`\p{IsGreek}`), and the Unicode NEXT LINE control character (\x85), use `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.</span></span>  
   
- Scegliere le classi di caratteri per un'espressione di sottrazione di classi di caratteri che produrrà risultati utili.  Evitare espressioni che producono set di caratteri vuoti, che non hanno corrispondenze o che equivalgono al gruppo di base originale.  Ad esempio, il set vuoto è il risultato dell'espressione `[\p{IsBasicLatin}-[\x00-\x7F]]`, che sottrae tutti i caratteri compresi nell'intervallo di caratteri `IsBasicLatin` dalla categoria generale `IsBasicLatin`.  Analogamente, il gruppo di base originale è il risultato dell'espressione `[a-z-[0-9]]`.  Questo è dovuto al fatto che il gruppo di base, ovvero l'intervallo dei caratteri compresi tra le lettere "a" e "z", non contiene alcun carattere del gruppo escluso, ovvero dell'intervallo dei caratteri compresi tra le cifre decimali "0" e "9".  
+ <span data-ttu-id="cd471-609">Scegliere le classi di caratteri per un'espressione di sottrazione di classi di caratteri che produrrà risultati utili.</span><span class="sxs-lookup"><span data-stu-id="cd471-609">Choose character classes for a character class subtraction expression that will yield useful results.</span></span> <span data-ttu-id="cd471-610">Evitare espressioni che producono set di caratteri vuoti, che non hanno corrispondenze o che equivalgono al gruppo di base originale.</span><span class="sxs-lookup"><span data-stu-id="cd471-610">Avoid an expression that yields an empty set of characters, which cannot match anything, or an expression that is equivalent to the original base group.</span></span> <span data-ttu-id="cd471-611">Ad esempio, il set vuoto è il risultato dell'espressione `[\p{IsBasicLatin}-[\x00-\x7F]]`, che sottrae tutti i caratteri compresi nell'intervallo di caratteri `IsBasicLatin` dalla categoria generale `IsBasicLatin`.</span><span class="sxs-lookup"><span data-stu-id="cd471-611">For example, the empty set is the result of the expression `[\p{IsBasicLatin}-[\x00-\x7F]]`, which subtracts all characters in the `IsBasicLatin` character range from the `IsBasicLatin` general category.</span></span> <span data-ttu-id="cd471-612">Analogamente, il gruppo di base originale è il risultato dell'espressione `[a-z-[0-9]]`.</span><span class="sxs-lookup"><span data-stu-id="cd471-612">Similarly, the original base group is the result of the expression `[a-z-[0-9]]`.</span></span>  <span data-ttu-id="cd471-613">Questo è dovuto al fatto che il gruppo di base, ovvero l'intervallo dei caratteri compresi tra le lettere "a" e "z", non contiene alcun carattere del gruppo escluso, ovvero dell'intervallo dei caratteri compresi tra le cifre decimali "0" e "9".</span><span class="sxs-lookup"><span data-stu-id="cd471-613">This is because the base group, which is the character range of letters from "a" through "z", does not contain any characters in the excluded group, which is the character range of decimal digits from "0" through "9".</span></span>  
   
- Nell'esempio seguente viene definita un'espressione regolare, `^[0-9-[2468]]+$`, che corrisponde a zero e a cifre dispari in una stringa di input.  L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
+ <span data-ttu-id="cd471-614">Nell'esempio seguente viene definita un'espressione regolare, `^[0-9-[2468]]+$`, che corrisponde a zero e a cifre dispari in una stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-614">The following example defines a regular expression, `^[0-9-[2468]]+$`, that matches zero and odd digits in an input string.</span></span>  <span data-ttu-id="cd471-615">L'espressione regolare viene interpretata come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="cd471-615">The regular expression is interpreted as shown in the following table.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|^|Inizia la corrispondenza all'inizio della stringa di input.|  
-|`[0-9-[2468]]+`|Corrisponde a una o più occorrenze di qualsiasi carattere da 0 a 9 ad eccezione di 2, 4, 6 e 8.  In altre parole, corrisponde a una o più occorrenze di zero o di una cifra dispari.|  
-|$|Termina la ricerca della corrispondenza alla fine della stringa di input.|  
+|<span data-ttu-id="cd471-616">Elemento</span><span class="sxs-lookup"><span data-stu-id="cd471-616">Element</span></span>|<span data-ttu-id="cd471-617">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd471-617">Description</span></span>|  
+|-------------|-----------------|  
+|^|<span data-ttu-id="cd471-618">Inizia la corrispondenza all'inizio della stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-618">Begin the match at the start of the input string.</span></span>|  
+|`[0-9-[2468]]+`|<span data-ttu-id="cd471-619">Corrisponde a una o più occorrenze di qualsiasi carattere da 0 a 9 ad eccezione di 2, 4, 6 e 8.</span><span class="sxs-lookup"><span data-stu-id="cd471-619">Match one or more occurrences of any character from 0 to 9 except for 2, 4, 6, and 8.</span></span> <span data-ttu-id="cd471-620">In altre parole, corrisponde a una o più occorrenze di zero o di una cifra dispari.</span><span class="sxs-lookup"><span data-stu-id="cd471-620">In other words, match one or more occurrences of zero or an odd digit.</span></span>|  
+|$|<span data-ttu-id="cd471-621">Termina la ricerca della corrispondenza alla fine della stringa di input.</span><span class="sxs-lookup"><span data-stu-id="cd471-621">End the match at the end of the input string.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## Vedere anche  
- <xref:System.Char.GetUnicodeCategory%2A>   
- [Linguaggio di espressioni regolari \- Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)   
- [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a><span data-ttu-id="cd471-622">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cd471-622">See Also</span></span>  
+ <xref:System.Char.GetUnicodeCategory%2A>  
+ [<span data-ttu-id="cd471-623">Linguaggio di espressioni regolari - Riferimento rapido</span><span class="sxs-lookup"><span data-stu-id="cd471-623">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [<span data-ttu-id="cd471-624">Opzioni di espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="cd471-624">Regular Expression Options</span></span>](../../../docs/standard/base-types/regular-expression-options.md)

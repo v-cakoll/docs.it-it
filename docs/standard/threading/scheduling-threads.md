@@ -1,29 +1,32 @@
 ---
-title: "Scheduling Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], scheduling"
-  - "scheduling threads"
+title: Pianificazione di thread
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], scheduling
+- scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2e1fb7d61b8e250884b2c57cad8c5106bc77787a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Scheduling Threads
-Ad ogni thread è assegnata una priorità.  Ai thread creati all'interno di Common Language Runtime viene inizialmente assegnata la priorità **ThreadPriority.Normal**.  Quelli creati all'esterno del runtime mantengono la priorità che avevano prima di entrare nell'ambiente gestito.  È possibile ottenere o impostare la priorità di qualsiasi thread con la proprietà **Thread.Priority** .  
+# <a name="scheduling-threads"></a><span data-ttu-id="ff9dc-102">Pianificazione di thread</span><span class="sxs-lookup"><span data-stu-id="ff9dc-102">Scheduling Threads</span></span>
+<span data-ttu-id="ff9dc-103">Ogni thread ha una priorità di thread assegnata.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-103">Every thread has a thread priority assigned to it.</span></span> <span data-ttu-id="ff9dc-104">Thread creati all'interno di common language runtime viene inizialmente assegnata la priorità di **ThreadPriority**.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-104">Threads created within the common language runtime are initially assigned the priority of **ThreadPriority.Normal**.</span></span> <span data-ttu-id="ff9dc-105">Thread creati all'esterno del runtime conservano la priorità che avevano prima di entrare nell'ambiente gestito.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-105">Threads created outside the runtime retain the priority they had before they entered the managed environment.</span></span> <span data-ttu-id="ff9dc-106">È possibile ottenere o impostare la priorità di un thread con il **Priority** proprietà.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-106">You can get or set the priority of any thread with the **Thread.Priority** property.</span></span>  
   
- La pianificazione dell'esecuzione dei thread viene stabilita in base alle relative priorità.  Sebbene i thread siano in esecuzione all'interno dell'ambiente di esecuzione, a tutti vengono assegnate porzioni del tempo del processore da parte del sistema operativo.  I dettagli dell'algoritmo di pianificazione utilizzato per determinare l'ordine in cui i thread vengono eseguiti varia in base al sistema operativo.  In alcuni, infatti, viene sempre pianificata per prima l'esecuzione del thread con la priorità più alta, tra quelli di cui è possibile l'esecuzione  Se più thread con la stessa priorità sono tutti disponibili, l'utilità di pianificazione scorre in ciclo i thread a quella priorità, assegnando a ciascuno di essi una porzione di tempo fissa in cui effettuare l'esecuzione.  Se un thread con una priorità più alta è disponibile, non verranno eseguiti i thread a priorità più bassa.  Quando non sono più disponibili thread eseguibili a una determinata priorità, l'utilità di pianificazione passa alla priorità più bassa successiva e pianifica l'esecuzione dei thread che hanno quella priorità.  Se diventa eseguibile un thread a priorità più alta, il thread a priorità più bassa viene interrotto e viene nuovamente consentita l'esecuzione del primo.  Nel sistema operativo possono inoltre essere regolate dinamicamente le priorità del thread man mano che l'interfaccia utente di un'applicazione viene spostata tra il primo piano e il background.  In altri sistemi operativi è possibile che si opti per l'utilizzo di un algoritmo di pianificazione differente.  
+ <span data-ttu-id="ff9dc-107">I thread sono pianificati per l'esecuzione in base alla priorità.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-107">Threads are scheduled for execution based on their priority.</span></span> <span data-ttu-id="ff9dc-108">Anche se l'esecuzione di thread all'interno del runtime, tutti i thread vengono assegnati gli intervalli di tempo processore dal sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-108">Even though threads are executing within the runtime, all threads are assigned processor time slices by the operating system.</span></span> <span data-ttu-id="ff9dc-109">I dettagli dell'algoritmo di pianificazione utilizzato per determinare l'ordine in cui vengono eseguiti i thread varia con ogni sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-109">The details of the scheduling algorithm used to determine the order in which threads are executed varies with each operating system.</span></span> <span data-ttu-id="ff9dc-110">In alcuni sistemi operativi, il thread con la priorità più alta (dei thread che possono essere eseguite) è sempre pianificato da eseguire prima.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-110">Under some operating systems, the thread with the highest priority (of those threads that can be executed) is always scheduled to run first.</span></span> <span data-ttu-id="ff9dc-111">Se più thread, con la stessa priorità sono tutti disponibili, l'utilità di pianificazione consente di scorrere i thread presenti in tale priorità, assegnazione di un intervallo di tempo predefinito in cui eseguire ogni thread.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-111">If multiple threads with the same priority are all available, the scheduler cycles through the threads at that priority, giving each thread a fixed time slice in which to execute.</span></span> <span data-ttu-id="ff9dc-112">Fino a quando un thread con una priorità più alta è disponibile per l'esecuzione, i thread con priorità inferiore non verranno eseguiti.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-112">As long as a thread with a higher priority is available to run, lower priority threads do not get to execute.</span></span> <span data-ttu-id="ff9dc-113">Quando sono presenti thread eseguibile non è più una determinata priorità, l'utilità di pianificazione si sposta la priorità più bassa successiva e pianifica il thread di priorità per l'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-113">When there are no more runnable threads at a given priority, the scheduler moves to the next lower priority and schedules the threads at that priority for execution.</span></span> <span data-ttu-id="ff9dc-114">Se un thread con priorità maggiore diventa runnable, viene interrotto il thread con priorità inferiore e il thread con priorità superiore è possibile eseguire ancora una volta.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-114">If a higher priority thread becomes runnable, the lower priority thread is preempted and the higher priority thread is allowed to execute once again.</span></span> <span data-ttu-id="ff9dc-115">Nella parte superiore di tutte le risposte, il sistema operativo anche regolare le priorità dei thread in modo dinamico come un'interfaccia utente di spostamento tra i primo piano e sfondo.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-115">On top of all that, the operating system can also adjust thread priorities dynamically as an application's user interface is moved between foreground and background.</span></span> <span data-ttu-id="ff9dc-116">Altri sistemi operativi è possibile scegliere di utilizzare un algoritmo di programmazione diverso.</span><span class="sxs-lookup"><span data-stu-id="ff9dc-116">Other operating systems might choose to use a different scheduling algorithm.</span></span>  
   
-## Vedere anche  
- [Using Threads and Threading](../../../docs/standard/threading/using-threads-and-threading.md)   
- [Managed and Unmanaged Threading in Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+## <a name="see-also"></a><span data-ttu-id="ff9dc-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff9dc-117">See Also</span></span>  
+ [<span data-ttu-id="ff9dc-118">Utilizzo di thread e threading</span><span class="sxs-lookup"><span data-stu-id="ff9dc-118">Using Threads and Threading</span></span>](../../../docs/standard/threading/using-threads-and-threading.md)  
+ [<span data-ttu-id="ff9dc-119">Threading gestito e non gestito in Windows</span><span class="sxs-lookup"><span data-stu-id="ff9dc-119">Managed and Unmanaged Threading in Windows</span></span>](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

@@ -1,52 +1,50 @@
 ---
-title: "Rimozione di attributi da un nodo di elemento nel DOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Rimozione di attributi da un nodo di elemento nel DOM
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b4ca08d8080c2116ce05634a544c91780869b165
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Rimozione di attributi da un nodo di elemento nel DOM
-Sono disponibili numerosi metodi per rimuovere gli attributi.  Una tecnica consiste nel rimuoverli dalla raccolta di attributi.  Per eseguire questa operazione, attenersi alla procedura seguente:  
+# <a name="removing-attributes-from-an-element-node-in-the-dom"></a><span data-ttu-id="b5c68-102">Rimozione di attributi da un nodo di elemento nel DOM</span><span class="sxs-lookup"><span data-stu-id="b5c68-102">Removing Attributes from an Element Node in the DOM</span></span>
+<span data-ttu-id="b5c68-103">Sono disponibili numerosi metodi per rimuovere gli attributi.</span><span class="sxs-lookup"><span data-stu-id="b5c68-103">There are many ways to remove attributes.</span></span> <span data-ttu-id="b5c68-104">Una tecnica consiste nel rimuoverli dalla raccolta di attributi.</span><span class="sxs-lookup"><span data-stu-id="b5c68-104">One technique is to remove them from the attribute collection.</span></span> <span data-ttu-id="b5c68-105">Per eseguire questa operazione, attenersi alla procedura seguente:</span><span class="sxs-lookup"><span data-stu-id="b5c68-105">To do this, the following steps are performed:</span></span>  
   
-1.  Ottenere la raccolta di attributi dall'elemento usando `XmlAttributeCollection attrs = elem.Attributes;`.  
+1.  <span data-ttu-id="b5c68-106">Ottenere la raccolta di attributi dall'elemento usando `XmlAttributeCollection attrs = elem.Attributes;`.</span><span class="sxs-lookup"><span data-stu-id="b5c68-106">Get the attribute collection from the element using `XmlAttributeCollection attrs = elem.Attributes;`.</span></span>  
   
-2.  Rimuovere l'attributo dalla raccolta di attributi, usando uno dei metodi seguenti:  
+2.  <span data-ttu-id="b5c68-107">Rimuovere l'attributo dalla raccolta di attributi, usando uno dei metodi seguenti:</span><span class="sxs-lookup"><span data-stu-id="b5c68-107">Remove the attribute from the attribute collection using one of three methods:</span></span>  
   
-    -   Usare il metodo <xref:System.Xml.XmlAttributeCollection.Remove%2A> per rimuovere un attributo specifico.  
+    -   <span data-ttu-id="b5c68-108">Usare il metodo <xref:System.Xml.XmlAttributeCollection.Remove%2A> per rimuovere un attributo specifico.</span><span class="sxs-lookup"><span data-stu-id="b5c68-108">Use <xref:System.Xml.XmlAttributeCollection.Remove%2A> to remove a specific attribute.</span></span>  
   
-    -   Usare il metodo <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> per rimuovere tutti gli attributi dalla raccolta e lasciarne privo l'elemento.  
+    -   <span data-ttu-id="b5c68-109">Usare il metodo <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> per rimuovere tutti gli attributi dalla raccolta e lasciarne privo l'elemento.</span><span class="sxs-lookup"><span data-stu-id="b5c68-109">Use <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> to remove all attributes from the collection and leave the element with no attributes.</span></span>  
   
-    -   Usare il metodo <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> per rimuovere un attributo dalla raccolta usando il relativo numero di indice.  
+    -   <span data-ttu-id="b5c68-110">Usare il metodo <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> per rimuovere un attributo dalla raccolta usando il relativo numero di indice.</span><span class="sxs-lookup"><span data-stu-id="b5c68-110">Use <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> to remove an attribute from the attribute collection by using its index number.</span></span>  
   
- I metodi seguenti consentono di rimuovere gli attributi dal nodo dell'elemento.  
+ <span data-ttu-id="b5c68-111">I metodi seguenti consentono di rimuovere gli attributi dal nodo dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="b5c68-111">The following methods remove attributes from the element node.</span></span>  
   
--   Usare il metodo <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> per rimuovere la raccolta di attributi.  
+-   <span data-ttu-id="b5c68-112">Usare il metodo <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> per rimuovere la raccolta di attributi.</span><span class="sxs-lookup"><span data-stu-id="b5c68-112">Use <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> to remove the attribute collection.</span></span>  
   
--   Usare il metodo <xref:System.Xml.XmlElement.RemoveAttribute%2A> per rimuovere un singolo attributo dalla raccolta in base al nome.  
+-   <span data-ttu-id="b5c68-113">Usare il metodo <xref:System.Xml.XmlElement.RemoveAttribute%2A> per rimuovere un singolo attributo dalla raccolta in base al nome.</span><span class="sxs-lookup"><span data-stu-id="b5c68-113">Use <xref:System.Xml.XmlElement.RemoveAttribute%2A> to remove a single attribute by name from the collection.</span></span>  
   
--   Usare il metodo <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> per rimuovere un singolo attributo dalla raccolta in base al numero di indice.  
+-   <span data-ttu-id="b5c68-114">Usare il metodo <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> per rimuovere un singolo attributo dalla raccolta in base al numero di indice.</span><span class="sxs-lookup"><span data-stu-id="b5c68-114">Use <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> to remove a single attribute by index number from the collection.</span></span>  
   
- Un'altra alternativa consiste nell'ottenere l'elemento, ottenere l'attributo dalla raccolta di attributi e rimuovere direttamente il nodo dell'attributo.  Per ottenere l'attributo dalla raccolta di attributi, è possibile usare un nome, `XmlAttribute attr = attrs["attr_name"];`, un indice, `XmlAttribute attr = attrs[0];`, o qualificare completamente il nome con lo spazio dei nomi `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
+ <span data-ttu-id="b5c68-115">Un'altra alternativa consiste nell'ottenere l'elemento, ottenere l'attributo dalla raccolta di attributi e rimuovere direttamente il nodo dell'attributo.</span><span class="sxs-lookup"><span data-stu-id="b5c68-115">One more alternative is to get the element, get the attribute from the attribute collection, and remove the attribute node directly.</span></span> <span data-ttu-id="b5c68-116">Per ottenere l'attributo dalla raccolta di attributi, è possibile usare un nome, `XmlAttribute attr = attrs["attr_name"];`, un indice, `XmlAttribute attr = attrs[0];`, o qualificare completamente il nome con lo spazio dei nomi `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.</span><span class="sxs-lookup"><span data-stu-id="b5c68-116">To get the attribute from the attribute collection, you can use a name, `XmlAttribute attr = attrs["attr_name"];`, an index `XmlAttribute attr = attrs[0];`, or by fully qualifying the name with the namespace `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.</span></span>  
   
- Qualunque sia il metodo usato per rimuovere gli attributi, la rimozione di attributi definiti come attributi predefiniti nella DTD è soggetta ad alcuni limiti specifici.  Non è possibile rimuovere gli attributi predefiniti a meno che non venga rimosso l'elemento al quale appartengono.  Gli attributi predefiniti devono essere sempre presenti negli elementi per cui sono dichiarati.  Quando si rimuove un attributo predefinito da un tipo <xref:System.Xml.XmlAttributeCollection> o da un tipo <xref:System.Xml.XmlElement>, viene inserito un attributo di sostituzione nel tipo <xref:System.Xml.XmlAttributeCollection> dell'elemento, inizializzato in base al valore predefinito che era stato dichiarato.  Se un elemento è stato definito come `<book att1="1" att2="2" att3="3"></book>`, si avrà un elemento `book` con tre attributi predefiniti dichiarati.  L'implementazione DOM XML garantisce che fintanto che esisterà, l'elemento `book`  avrà questi tre attributi predefiniti, `att1`, `att2` e `att3`.  
+ <span data-ttu-id="b5c68-117">Qualunque sia il metodo usato per rimuovere gli attributi, la rimozione di attributi definiti come attributi predefiniti nella DTD è soggetta ad alcuni limiti specifici.</span><span class="sxs-lookup"><span data-stu-id="b5c68-117">Regardless of the method used to remove attributes, there are special limitations on removing attributes that are defined as default attributes in the document type definition (DTD).</span></span> <span data-ttu-id="b5c68-118">Non è possibile rimuovere gli attributi predefiniti a meno che non venga rimosso l'elemento al quale appartengono.</span><span class="sxs-lookup"><span data-stu-id="b5c68-118">Default attributes cannot be removed unless the element they belong to is removed.</span></span> <span data-ttu-id="b5c68-119">Gli attributi predefiniti devono essere sempre presenti negli elementi per cui sono dichiarati.</span><span class="sxs-lookup"><span data-stu-id="b5c68-119">Default attributes are always present for elements that have default attributes declared.</span></span> <span data-ttu-id="b5c68-120">Quando si rimuove un attributo predefinito da un tipo <xref:System.Xml.XmlAttributeCollection> o da un tipo <xref:System.Xml.XmlElement>, viene inserito un attributo di sostituzione nel tipo <xref:System.Xml.XmlAttributeCollection> dell'elemento, inizializzato in base al valore predefinito che era stato dichiarato.</span><span class="sxs-lookup"><span data-stu-id="b5c68-120">Removing a default attribute from an <xref:System.Xml.XmlAttributeCollection> or from the <xref:System.Xml.XmlElement> results in a replacement attribute inserted into the <xref:System.Xml.XmlAttributeCollection> of the element, initialized to the default value that was declared.</span></span> <span data-ttu-id="b5c68-121">Se un elemento è stato definito come `<book att1="1" att2="2" att3="3"></book>`, si avrà un elemento `book` con tre attributi predefiniti dichiarati.</span><span class="sxs-lookup"><span data-stu-id="b5c68-121">If you have an element defined as `<book att1="1" att2="2" att3="3"></book>`, then you have a `book` element with three default attributes declared.</span></span> <span data-ttu-id="b5c68-122">L'implementazione del modello oggetto documento (DOM) XML garantisce che fintanto `book` elemento esiste, dispone di questi tre attributi predefiniti `att1`, `att2`, e `att3`.</span><span class="sxs-lookup"><span data-stu-id="b5c68-122">The XML Document Object Model (DOM) implementation guarantees that as long as this `book` element exists, it has these three default attributes of `att1`, `att2`, and `att3`.</span></span>  
   
- Quando viene chiamato con <xref:System.Xml.XmlAttribute>, il metodo <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> imposta il valore dell'attributo su String.Empty, in quanto un attributo non può esistere senza un valore.  
+ <span data-ttu-id="b5c68-123">Quando viene chiamato con <xref:System.Xml.XmlAttribute>, il metodo <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> imposta il valore dell'attributo su String.Empty, in quanto un attributo non può esistere senza un valore.</span><span class="sxs-lookup"><span data-stu-id="b5c68-123">When called with an <xref:System.Xml.XmlAttribute>, the <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> method sets the value of the attribute to String.Empty, as an attribute cannot exist without a value.</span></span>  
   
-## Vedere anche  
- [Modello DOM \(Document Object Model\) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="b5c68-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b5c68-124">See Also</span></span>  
+ [<span data-ttu-id="b5c68-125">XML Document Object Model (DOM)</span><span class="sxs-lookup"><span data-stu-id="b5c68-125">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

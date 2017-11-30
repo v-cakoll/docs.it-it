@@ -1,33 +1,34 @@
 ---
-title: "Lettura di dati XML con XPathDocument e XmlDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Lettura di dati XML con XPathDocument e XmlDocument
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 607d9d3616db0d0bd431fa2ca0b6aee03a85f896
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Lettura di dati XML con XPathDocument e XmlDocument
-Sono disponibili due metodi per leggere un documento XML nello spazio dei nomi <xref:System.Xml.XPath?displayProperty=fullName>.  Un metodo consiste nel leggere un documento XML usando la classe di sola lettura <xref:System.Xml.XPath.XPathDocument>, l'altro consiste nel leggere un documento XML usando la classe modificabile <xref:System.Xml.XmlDocument> nello spazio dei nomi <xref:System.Xml?displayProperty=fullName>.  
+# <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a><span data-ttu-id="2cf58-102">Lettura di dati XML con XPathDocument e XmlDocument</span><span class="sxs-lookup"><span data-stu-id="2cf58-102">Reading XML Data using XPathDocument and XmlDocument</span></span>
+<span data-ttu-id="2cf58-103">Sono disponibili due metodi per leggere un documento XML nello spazio dei nomi <xref:System.Xml.XPath?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2cf58-103">There are two ways to read an XML document in the <xref:System.Xml.XPath?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="2cf58-104">Un metodo consiste nel leggere un documento XML usando la classe di sola lettura <xref:System.Xml.XPath.XPathDocument>, l'altro consiste nel leggere un documento XML usando la classe modificabile <xref:System.Xml.XmlDocument> nello spazio dei nomi <xref:System.Xml?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2cf58-104">One is to read an XML document using the read-only <xref:System.Xml.XPath.XPathDocument> class and the other is to read an XML document using the editable <xref:System.Xml.XmlDocument> class in the <xref:System.Xml?displayProperty=nameWithType> namespace.</span></span>  
   
-## Lettura di documenti XML con la classe XPathDocument  
- La classe <xref:System.Xml.XPath.XPathDocument> fornisce una rappresentazione in memoria rapida e di sola lettura di un documento XML usando il modello di dati XPath.  Le istanze della classe <xref:System.Xml.XPath.XPathDocument> vengono create usando uno dei sei costruttori disponibili.  Tali costruttori consentono di leggere un documento XML usando un oggetto <xref:System.IO.Stream>, <xref:System.IO.TextReader> o <xref:System.Xml.XmlReader> nonché il percorso `string` di un file XML.  
+## <a name="reading-xml-documents-using-the-xpathdocument-class"></a><span data-ttu-id="2cf58-105">Lettura di documenti XML con la classe XPathDocument</span><span class="sxs-lookup"><span data-stu-id="2cf58-105">Reading XML Documents using the XPathDocument Class</span></span>  
+ <span data-ttu-id="2cf58-106">La classe <xref:System.Xml.XPath.XPathDocument> fornisce una rappresentazione in memoria rapida e di sola lettura di un documento XML usando il modello di dati XPath.</span><span class="sxs-lookup"><span data-stu-id="2cf58-106">The <xref:System.Xml.XPath.XPathDocument> class provides a fast, read-only, in-memory representation of an XML document using the XPath data model.</span></span> <span data-ttu-id="2cf58-107">Le istanze della classe <xref:System.Xml.XPath.XPathDocument> vengono create usando uno dei sei costruttori disponibili.</span><span class="sxs-lookup"><span data-stu-id="2cf58-107">Instances of the <xref:System.Xml.XPath.XPathDocument> class are created using one of its six constructors.</span></span> <span data-ttu-id="2cf58-108">Tali costruttori consentono di leggere un documento XML usando un oggetto <xref:System.IO.Stream>, <xref:System.IO.TextReader> o <xref:System.Xml.XmlReader> nonché il percorso `string` di un file XML.</span><span class="sxs-lookup"><span data-stu-id="2cf58-108">These constructors allow you to read an XML document using a <xref:System.IO.Stream>, <xref:System.IO.TextReader>, or <xref:System.Xml.XmlReader> object, as well as the `string` path to an XML file.</span></span>  
   
- Nell'esempio seguente viene illustrato l'uso del costruttore `string` della classe <xref:System.Xml.XPath.XPathDocument> per leggere un documento XML.  
+ <span data-ttu-id="2cf58-109">Nell'esempio seguente viene illustrato l'uso del costruttore <xref:System.Xml.XPath.XPathDocument> della classe `string` per leggere un documento XML.</span><span class="sxs-lookup"><span data-stu-id="2cf58-109">The following example illustrates using the <xref:System.Xml.XPath.XPathDocument> class's `string` constructor to read an XML document.</span></span>  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -37,10 +38,10 @@ Dim document As XPathDocument = New XPathDocument("books.xml")
 XPathDocument document = new XPathDocument("books.xml");  
 ```  
   
-## Lettura di documenti XML con la classe XmlDocument Class  
- La classe <xref:System.Xml.XmlDocument> è una rappresentazione in memoria modificabile di un documento XML implementando i componenti di base delle specifiche Document Object Model \(DOM\) Level 1 e Level 2 di W3C.  Le istanze della classe <xref:System.Xml.XmlDocument> vengono create usando uno dei tre costruttori disponibili.  È possibile creare un nuovo oggetto vuoto <xref:System.Xml.XmlDocument> chiamando il costruttore della classe <xref:System.Xml.XmlDocument> senza parametri.  Dopo che il costruttore è stato chiamato, usare il metodo <xref:System.Xml.XmlDocument.Load%2A> per caricare i dati XML nel nuovo oggetto <xref:System.Xml.XmlDocument> da un oggetto <xref:System.IO.Stream>, <xref:System.IO.TextReader> o <xref:System.Xml.XmlReader>, oppure usare il percorso `string` di un file XML.  
+## <a name="reading-xml-documents-using-the-xmldocument-class"></a><span data-ttu-id="2cf58-110">Lettura di documenti XML con la classe XmlDocument Class</span><span class="sxs-lookup"><span data-stu-id="2cf58-110">Reading XML Documents using the XmlDocument Class</span></span>  
+ <span data-ttu-id="2cf58-111">La classe <xref:System.Xml.XmlDocument> è una rappresentazione in memoria modificabile di un documento XML implementando i componenti di base delle specifiche Document Object Model (DOM) Level 1 e Level 2 di W3C.</span><span class="sxs-lookup"><span data-stu-id="2cf58-111">The <xref:System.Xml.XmlDocument> class is an editable in-memory representation of an XML document implementing W3C Document Object Model (DOM) Level 1 Core and Core DOM Level 2.</span></span> <span data-ttu-id="2cf58-112">Le istanze della classe <xref:System.Xml.XmlDocument> vengono create usando uno dei tre costruttori disponibili.</span><span class="sxs-lookup"><span data-stu-id="2cf58-112">Instances of the <xref:System.Xml.XmlDocument> class are created using one of its three constructors.</span></span> <span data-ttu-id="2cf58-113">È possibile creare un nuovo oggetto vuoto <xref:System.Xml.XmlDocument> chiamando il costruttore della classe <xref:System.Xml.XmlDocument> senza parametri.</span><span class="sxs-lookup"><span data-stu-id="2cf58-113">You can create a new, empty <xref:System.Xml.XmlDocument> object by calling the <xref:System.Xml.XmlDocument> class constructor with no parameters.</span></span> <span data-ttu-id="2cf58-114">Dopo che il costruttore è stato chiamato, usare il metodo <xref:System.Xml.XmlDocument.Load%2A> per caricare i dati XML nel nuovo oggetto <xref:System.Xml.XmlDocument> da un oggetto <xref:System.IO.Stream>, <xref:System.IO.TextReader> o <xref:System.Xml.XmlReader>, oppure usare il percorso `string` di un file XML.</span><span class="sxs-lookup"><span data-stu-id="2cf58-114">After calling the constructor, use the <xref:System.Xml.XmlDocument.Load%2A> method to load XML data into the new <xref:System.Xml.XmlDocument> object from a <xref:System.IO.Stream>, <xref:System.IO.TextReader>, or <xref:System.Xml.XmlReader> object, as well as the `string` path to an XML file.</span></span>  
   
- Nell'esempio seguente viene illustrato l'uso del costruttore della classe <xref:System.Xml.XmlDocument> senza parametri e del metodo <xref:System.Xml.XmlDocument.Load%2A> per leggere un documento XML.  
+ <span data-ttu-id="2cf58-115">Nell'esempio seguente viene illustrato l'uso del costruttore della classe <xref:System.Xml.XmlDocument> senza parametri e del metodo <xref:System.Xml.XmlDocument.Load%2A> per leggere un documento XML.</span><span class="sxs-lookup"><span data-stu-id="2cf58-115">The following example illustrates using the <xref:System.Xml.XmlDocument> class constructor with no parameters and the <xref:System.Xml.XmlDocument.Load%2A> method to read an XML document.</span></span>  
   
 ```vb  
 Dim document As XmlDocument = New XmlDocument()  
@@ -52,37 +53,37 @@ XmlDocument document = new XmlDocument();
 document.Load("books.xml");  
 ```  
   
-## Determinazione della codifica di un documento XML  
- È possibile usare un oggetto <xref:System.Xml.XmlReader> per leggere un documento XML e per creare oggetti <xref:System.Xml.XPath.XPathDocument> e <xref:System.Xml.XmlDocument>, come illustrato nelle sezioni precedenti.  Tuttavia, un oggetto <xref:System.Xml.XmlReader> può leggere i dati non codificati e, di conseguenza, non fornisce alcuna informazione relativa alla codifica.  
+## <a name="determining-the-encoding-of-an-xml-document"></a><span data-ttu-id="2cf58-116">Determinazione della codifica di un documento XML</span><span class="sxs-lookup"><span data-stu-id="2cf58-116">Determining the Encoding of an XML Document</span></span>  
+ <span data-ttu-id="2cf58-117">È possibile usare un oggetto <xref:System.Xml.XmlReader> per leggere un documento XML e per creare oggetti <xref:System.Xml.XPath.XPathDocument> e <xref:System.Xml.XmlDocument>, come illustrato nelle sezioni precedenti.</span><span class="sxs-lookup"><span data-stu-id="2cf58-117">An <xref:System.Xml.XmlReader> object can be used to read an XML document and to create <xref:System.Xml.XPath.XPathDocument> and <xref:System.Xml.XmlDocument> objects as shown in the previous sections.</span></span> <span data-ttu-id="2cf58-118">Tuttavia, un oggetto <xref:System.Xml.XmlReader> può leggere i dati non codificati e, di conseguenza, non fornisce alcuna informazione relativa alla codifica.</span><span class="sxs-lookup"><span data-stu-id="2cf58-118">However, an <xref:System.Xml.XmlReader> object may read data that is not encoded and as a result does not provide any encoding information.</span></span>  
   
- La classe <xref:System.Xml.XmlTextReader> eredita dalla classe <xref:System.Xml.XmlReader>, fornisce informazioni sulla codifica usando la relativa proprietà <xref:System.Xml.XmlTextReader.Encoding%2A> e può essere usata per creare un oggetto <xref:System.Xml.XPath.XPathDocument> o un oggetto <xref:System.Xml.XmlDocument>.  
+ <span data-ttu-id="2cf58-119">La classe <xref:System.Xml.XmlTextReader> eredita dalla classe <xref:System.Xml.XmlReader>, fornisce informazioni sulla codifica usando la relativa proprietà <xref:System.Xml.XmlTextReader.Encoding%2A> e può essere usata per creare un oggetto <xref:System.Xml.XPath.XPathDocument> o un oggetto <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="2cf58-119">The <xref:System.Xml.XmlTextReader> class inherits from the <xref:System.Xml.XmlReader> class, provides encoding information using its <xref:System.Xml.XmlTextReader.Encoding%2A> property, and can be used to create an <xref:System.Xml.XPath.XPathDocument> object or <xref:System.Xml.XmlDocument> object.</span></span>  
   
- Per altre informazioni sulle informazioni di codifica fornite dalla classe <xref:System.Xml.XmlTextReader>, vedere la proprietà <xref:System.Xml.XmlTextReader.Encoding%2A> nella documentazione di riferimento per la classe <xref:System.Xml.XmlTextReader>.  
+ <span data-ttu-id="2cf58-120">Per altre informazioni sulle informazioni di codifica fornite dalla classe <xref:System.Xml.XmlTextReader>, vedere la proprietà <xref:System.Xml.XmlTextReader.Encoding%2A> nella documentazione di riferimento per la classe <xref:System.Xml.XmlTextReader>.</span><span class="sxs-lookup"><span data-stu-id="2cf58-120">For more information about the encoding information provided by the <xref:System.Xml.XmlTextReader> class, see the <xref:System.Xml.XmlTextReader.Encoding%2A> property in the <xref:System.Xml.XmlTextReader> class reference documentation.</span></span>  
   
-## Creazione di oggetti XPathNavigator  
- Dopo che è stato letto un documento XML in un oggetto <xref:System.Xml.XPath.XPathDocument> o in un oggetto <xref:System.Xml.XmlDocument>, è possibile creare un oggetto <xref:System.Xml.XPath.XPathNavigator> per selezionare, valutare, esplorare e, in alcuni casi, modificare i dati XML sottostanti.  
+## <a name="creating-xpathnavigator-objects"></a><span data-ttu-id="2cf58-121">Creazione di oggetti XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2cf58-121">Creating XPathNavigator Objects</span></span>  
+ <span data-ttu-id="2cf58-122">Dopo che è stato letto un documento XML in un oggetto <xref:System.Xml.XPath.XPathDocument> o in un oggetto <xref:System.Xml.XmlDocument>, è possibile creare un oggetto <xref:System.Xml.XPath.XPathNavigator> per selezionare, valutare, esplorare e, in alcuni casi, modificare i dati XML sottostanti.</span><span class="sxs-lookup"><span data-stu-id="2cf58-122">After you have read an XML document into either an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object, you can create an <xref:System.Xml.XPath.XPathNavigator> object to select, evaluate, navigate, and in some cases, edit the underlying XML data.</span></span>  
   
- Sia la classe <xref:System.Xml.XPath.XPathDocument> che la classe <xref:System.Xml.XmlDocument>, oltre alla classe <xref:System.Xml.XmlNode>, implementano l'interfaccia <xref:System.Xml.XPath.IXPathNavigable> dello spazio dei nomi <xref:System.Xml.XPath?displayProperty=fullName>.  Di conseguenza, tutte le tre classi forniscono un metodo <xref:System.Xml.XPath.IXPathNavigable.CreateNavigator%2A> che restituisce un oggetto <xref:System.Xml.XPath.XPathNavigator>.  
+ <span data-ttu-id="2cf58-123">Sia la classe <xref:System.Xml.XPath.XPathDocument> che la classe <xref:System.Xml.XmlDocument>, oltre alla classe <xref:System.Xml.XmlNode>, implementano l'interfaccia <xref:System.Xml.XPath.IXPathNavigable> dello spazio dei nomi <xref:System.Xml.XPath?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2cf58-123">Both the <xref:System.Xml.XPath.XPathDocument> and <xref:System.Xml.XmlDocument> classes, in addition to the <xref:System.Xml.XmlNode> class, implement the <xref:System.Xml.XPath.IXPathNavigable> interface of the <xref:System.Xml.XPath?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="2cf58-124">Di conseguenza, tutte le tre classi forniscono un metodo <xref:System.Xml.XPath.IXPathNavigable.CreateNavigator%2A> che restituisce un oggetto <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="2cf58-124">As a result, all three classes provide a <xref:System.Xml.XPath.IXPathNavigable.CreateNavigator%2A> method that returns an <xref:System.Xml.XPath.XPathNavigator> object.</span></span>  
   
-### Modifica di documenti XML con la classe XPathNavigator  
- Oltre a selezionare, valutare ed esplorare i dati XML, in alcuni casi la classe <xref:System.Xml.XPath.XPathNavigator> può essere usata per modificare un documento XML, in base all'oggetto che l'ha creato.  
+### <a name="editing-xml-documents-using-the-xpathnavigator-class"></a><span data-ttu-id="2cf58-125">Modifica di documenti XML con la classe XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2cf58-125">Editing XML Documents using the XPathNavigator Class</span></span>  
+ <span data-ttu-id="2cf58-126">Oltre a selezionare, valutare ed esplorare i dati XML, in alcuni casi la classe <xref:System.Xml.XPath.XPathNavigator> può essere usata per modificare un documento XML, in base all'oggetto che l'ha creato.</span><span class="sxs-lookup"><span data-stu-id="2cf58-126">In addition to selecting, evaluating, and navigating XML data, the <xref:System.Xml.XPath.XPathNavigator> class can be used to edit an XML document in some cases, based on the object that created it.</span></span>  
   
- La classe <xref:System.Xml.XPath.XPathDocument> è di sola lettura mentre la classe <xref:System.Xml.XmlDocument> è modificabile. Di conseguenza non è possibile usare gli oggetti <xref:System.Xml.XPath.XPathNavigator> creati da un oggetto <xref:System.Xml.XPath.XPathDocument> per modificare un documento XML, mentre è possibile usare quelli creati da un oggetto <xref:System.Xml.XmlDocument>.  La classe <xref:System.Xml.XPath.XPathDocument> deve essere usata solo per leggere un documento XML.  Se è necessario modificare un documento XML o se è richiesto l'accesso a funzionalità aggiuntive fornite dalla classe <xref:System.Xml.XmlDocument>, come la gestione degli eventi, è necessario usare la classe <xref:System.Xml.XmlDocument>.  
+ <span data-ttu-id="2cf58-127">La classe <xref:System.Xml.XPath.XPathDocument> è di sola lettura mentre la classe <xref:System.Xml.XmlDocument> è modificabile. Di conseguenza non è possibile usare gli oggetti <xref:System.Xml.XPath.XPathNavigator> creati da un oggetto <xref:System.Xml.XPath.XPathDocument> per modificare un documento XML, mentre è possibile usare quelli creati da un oggetto <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="2cf58-127">The <xref:System.Xml.XPath.XPathDocument> class is read-only while the <xref:System.Xml.XmlDocument> class is editable and as a result, <xref:System.Xml.XPath.XPathNavigator> objects created from an <xref:System.Xml.XPath.XPathDocument> object cannot be used to edit an XML document while those created from an <xref:System.Xml.XmlDocument> object can.</span></span> <span data-ttu-id="2cf58-128">La classe <xref:System.Xml.XPath.XPathDocument> deve essere usata solo per leggere un documento XML.</span><span class="sxs-lookup"><span data-stu-id="2cf58-128">The <xref:System.Xml.XPath.XPathDocument> class should be used to read an XML document only.</span></span> <span data-ttu-id="2cf58-129">Se è necessario modificare un documento XML o se è richiesto l'accesso a funzionalità aggiuntive fornite dalla classe <xref:System.Xml.XmlDocument>, come la gestione degli eventi, è necessario usare la classe <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="2cf58-129">In cases where you need to edit an XML document, or require access to the additional functionality provided by the <xref:System.Xml.XmlDocument> class, like event handling, the <xref:System.Xml.XmlDocument> class should be used.</span></span>  
   
- La proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> della classe <xref:System.Xml.XPath.XPathNavigator> consente di specificare se un oggetto <xref:System.Xml.XPath.XPathNavigator> può modificare i dati XML.  
+ <span data-ttu-id="2cf58-130">La proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> della classe <xref:System.Xml.XPath.XPathNavigator> consente di specificare se un oggetto <xref:System.Xml.XPath.XPathNavigator> può modificare i dati XML.</span><span class="sxs-lookup"><span data-stu-id="2cf58-130">The <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property of the <xref:System.Xml.XPath.XPathNavigator> class specifies if an <xref:System.Xml.XPath.XPathNavigator> object may edit XML data.</span></span>  
   
- Nella tabella seguente viene descritto il valore della proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> per ogni classe.  
+ <span data-ttu-id="2cf58-131">Nella tabella seguente viene descritto il valore della proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> per ogni classe.</span><span class="sxs-lookup"><span data-stu-id="2cf58-131">The following table describes the value of the <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property for each class.</span></span>  
   
-|Implementazione di <xref:System.Xml.XPath.IXPathNavigable>|Valore di <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>|  
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<span data-ttu-id="2cf58-132">Implementazione di <xref:System.Xml.XPath.IXPathNavigable></span><span class="sxs-lookup"><span data-stu-id="2cf58-132"><xref:System.Xml.XPath.IXPathNavigable> Implementation</span></span>|<span data-ttu-id="2cf58-133">Valore di <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A></span><span class="sxs-lookup"><span data-stu-id="2cf58-133"><xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> Value</span></span>|  
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Xml.XPath.XPathDocument>|`false`|  
 |<xref:System.Xml.XmlDocument>|`true`|  
   
-## Vedere anche  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Accesso ai dati XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)   
- [Modifica di dati XML con XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)   
- [Convalida dello schema con XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+## <a name="see-also"></a><span data-ttu-id="2cf58-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2cf58-134">See Also</span></span>  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [<span data-ttu-id="2cf58-135">Elaborazione di dati XML con il modello di dati XPath</span><span class="sxs-lookup"><span data-stu-id="2cf58-135">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="2cf58-136">Accesso ai dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2cf58-136">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="2cf58-137">Modifica dei dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2cf58-137">Editing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="2cf58-138">Convalida dello schema con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2cf58-138">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

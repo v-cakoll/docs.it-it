@@ -1,49 +1,54 @@
 ---
-title: "How to: Cancel a Task and Its Children | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tasks, how to cancel"
+title: "Procedura: Annullare un'attività e i relativi figli"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 374068694a3aa9724905964717dc5e77c09fc0ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Cancel a Task and Its Children
-In questi esempi viene mostrato come eseguire le attività seguenti:  
+# <a name="how-to-cancel-a-task-and-its-children"></a><span data-ttu-id="67165-102">Procedura: Annullare un'attività e i relativi figli</span><span class="sxs-lookup"><span data-stu-id="67165-102">How to: Cancel a Task and Its Children</span></span>
+<span data-ttu-id="67165-103">Questi esempi illustrano come eseguire le attività seguenti:</span><span class="sxs-lookup"><span data-stu-id="67165-103">These examples show how to perform the following tasks:</span></span>  
   
-1.  Creazione e avvio di un'attività annullabile.  
+1.  <span data-ttu-id="67165-104">Creare e avviare un'attività annullabile.</span><span class="sxs-lookup"><span data-stu-id="67165-104">Create and start a cancelable task.</span></span>  
   
-2.  Passaggio di un token di annullamento al delegato dell'utente e facoltativamente all'istanza dell'attività.  
+2.  <span data-ttu-id="67165-105">Passare un token di annullamento al delegato dell'utente e, facoltativamente, per l'istanza dell'attività.</span><span class="sxs-lookup"><span data-stu-id="67165-105">Pass a cancellation token to your user delegate and optionally to the task instance.</span></span>  
   
-3.  Rilevamento della richiesta di annullamento nel delegato dell'utente e risposta a tale richiesta.  
+3.  <span data-ttu-id="67165-106">Rilevare e rispondere alla richiesta di annullamento nel delegato dell'utente.</span><span class="sxs-lookup"><span data-stu-id="67165-106">Notice and respond to the cancellation request in your user delegate.</span></span>  
   
-4.  Rilevamento facoltativo dell'annullamento dell'attività nel thread chiamante.  
+4.  <span data-ttu-id="67165-107">Facoltativamente, si noti sul thread chiamante che l'attività è stata annullata.</span><span class="sxs-lookup"><span data-stu-id="67165-107">Optionally notice on the calling thread that the task was canceled.</span></span>  
   
- Il thread chiamante non termina forzatamente l'attività, bensì si limita a segnalare la richiesta di annullamento.  Se l'attività è già in esecuzione, è responsabilità del delegato dell'utente rilevare la richiesta e rispondere in modo appropriato.  Se l'annullamento viene richiesto prima dell'esecuzione dell'attività, il delegato dell'utente non viene eseguito e l'oggetto attività passa allo stato Canceled.  
+ <span data-ttu-id="67165-108">Il thread chiamante non termina forzatamente dell'attività. indica solo che la richiesta di annullamento.</span><span class="sxs-lookup"><span data-stu-id="67165-108">The calling thread does not forcibly end the task; it only signals that cancellation is requested.</span></span> <span data-ttu-id="67165-109">Se l'attività è già in esecuzione, è responsabilità del delegato dell'utente si noti che la richiesta e rispondere in modo appropriato.</span><span class="sxs-lookup"><span data-stu-id="67165-109">If the task is already running, it is up to the user delegate to notice the request and respond appropriately.</span></span> <span data-ttu-id="67165-110">Se la richiesta di annullamento prima dell'esecuzione di attività, il delegato dell'utente non viene mai eseguito e l'oggetto attività passa allo stato Canceled.</span><span class="sxs-lookup"><span data-stu-id="67165-110">If cancellation is requested before the task runs, then the user delegate is never executed and the task object transitions into the Canceled state.</span></span>  
   
-## Esempio  
- In questo esempio viene mostrato come terminare un oggetto <xref:System.Threading.Tasks.Task> e i relativi figli in risposta a una richiesta di annullamento.  Viene inoltre mostrato che quando un delegato dell'utente viene terminato mediante la generazione di un oggetto <xref:System.Threading.Tasks.TaskCanceledException>, il thread chiamante può utilizzare facoltativamente il metodo <xref:System.Threading.Tasks.Task.Wait%2A> o il metodo <xref:System.Threading.Tasks.Task.WaitAll%2A> per attendere il completamento delle attività.  In questo caso, si deve utilizzare un blocco `try/catch` per gestire le eccezioni nel thread chiamante.  
+## <a name="example"></a><span data-ttu-id="67165-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="67165-111">Example</span></span>  
+ <span data-ttu-id="67165-112">In questo esempio viene illustrato come terminare una <xref:System.Threading.Tasks.Task> e relativi elementi figlio in risposta a una richiesta di annullamento.</span><span class="sxs-lookup"><span data-stu-id="67165-112">This example shows how to terminate a <xref:System.Threading.Tasks.Task> and its children in response to a cancellation request.</span></span> <span data-ttu-id="67165-113">Viene inoltre mostrato che quando un delegato dell'utente viene terminato generando un oggetto <xref:System.Threading.Tasks.TaskCanceledException>, tramite il thread chiamante è possibile utilizzare facoltativamente il metodo <xref:System.Threading.Tasks.Task.Wait%2A> o il metodo <xref:System.Threading.Tasks.Task.WaitAll%2A> per attendere il completamento delle attività.</span><span class="sxs-lookup"><span data-stu-id="67165-113">It also shows that when a user delegate terminates by throwing a <xref:System.Threading.Tasks.TaskCanceledException>, the calling thread can optionally use the <xref:System.Threading.Tasks.Task.Wait%2A> method or <xref:System.Threading.Tasks.Task.WaitAll%2A> method to wait for the tasks to finish.</span></span> <span data-ttu-id="67165-114">In questo caso, è necessario utilizzare un blocco `try/catch` per gestire le eccezioni nel thread chiamante.</span><span class="sxs-lookup"><span data-stu-id="67165-114">In this case, you must use a `try/catch` block to handle the exceptions on the calling thread.</span></span>  
   
  [!code-csharp[TPL_Cancellation#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/cancel1.cs#04)]
  [!code-vb[TPL_Cancellation#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/cancel1.vb#04)]  
   
- La classe <xref:System.Threading.Tasks.Task?displayProperty=fullName> è completamente integrata con il modello di annullamento basato sui tipi <xref:System.Threading.CancellationTokenSource?displayProperty=fullName> e <xref:System.Threading.CancellationToken?displayProperty=fullName>.  Per ulteriori informazioni, vedere [Cancellation in Managed Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md) e [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ <span data-ttu-id="67165-115">Il <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> classe è completamente integrata con il modello di annullamento che si basa sul <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> e <xref:System.Threading.CancellationToken?displayProperty=nameWithType> tipi.</span><span class="sxs-lookup"><span data-stu-id="67165-115">The <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> class is fully integrated with the cancellation model that is based on the <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> and <xref:System.Threading.CancellationToken?displayProperty=nameWithType> types.</span></span> <span data-ttu-id="67165-116">Per ulteriori informazioni, vedere [annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md) e [annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md).</span><span class="sxs-lookup"><span data-stu-id="67165-116">For more information, see [Cancellation in Managed Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md) and [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Threading.CancellationTokenSource?displayProperty=fullName>   
- <xref:System.Threading.CancellationToken?displayProperty=fullName>   
- <xref:System.Threading.Tasks.Task?displayProperty=fullName>   
- <xref:System.Threading.Tasks.Task%601?displayProperty=fullName>   
- [Task Parallelism](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)   
- [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)   
- [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a><span data-ttu-id="67165-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="67165-117">See Also</span></span>  
+ <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>  
+ <xref:System.Threading.CancellationToken?displayProperty=nameWithType>  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
+ <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
+ [<span data-ttu-id="67165-118">Programmazione asincrona basata su attività</span><span class="sxs-lookup"><span data-stu-id="67165-118">Task-based Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
+ [<span data-ttu-id="67165-119">Attività figlio connesse e disconnesse</span><span class="sxs-lookup"><span data-stu-id="67165-119">Attached and Detached Child Tasks</span></span>](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)  
+ [<span data-ttu-id="67165-120">Espressioni lambda in PLINQ e TPL</span><span class="sxs-lookup"><span data-stu-id="67165-120">Lambda Expressions in PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

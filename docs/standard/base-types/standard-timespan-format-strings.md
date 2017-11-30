@@ -1,137 +1,143 @@
 ---
-title: "Stringhe di formato TimeSpan standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "identificatori di formato, intervallo di tempo standard"
-  - "identificatori di formato, intervalli di tempo"
-  - "stringhe di formato"
-  - "formattazione [.NET Framework], ora"
-  - "formattazione [.NET Framework], intervalli di tempo"
-  - "stringhe di formato standard, intervalli di tempo"
-  - "stringhe di formato di intervallo di tempo standard"
-  - "stringhe di formato TimeSpan standard"
-  - "ora [.NET Framework], formattazione"
-  - "intervalli di tempo [.NET Framework], formattazione"
+title: Stringhe di formato TimeSpan standard
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- format specifiers, standard time interval
+- format strings
+- standard time interval format strings
+- standard format strings, time intervals
+- format specifiers, time intervals
+- time intervals [.NET Framework], formatting
+- time [.NET Framework], formatting
+- formatting [.NET Framework], time
+- standard TimeSpan format strings
+- formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stringhe di formato TimeSpan standard
-Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione.  Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato.  Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+# <a name="standard-timespan-format-strings"></a><span data-ttu-id="4ab62-102">Stringhe di formato TimeSpan standard</span><span class="sxs-lookup"><span data-stu-id="4ab62-102">Standard TimeSpan Format Strings</span></span>
+<span data-ttu-id="4ab62-103"><a name="Top"></a>Standard <xref:System.TimeSpan> stringa di formato viene utilizzato un singolo identificatore di formato per definire la rappresentazione testuale di un <xref:System.TimeSpan> valore risultante da un'operazione di formattazione.</span><span class="sxs-lookup"><span data-stu-id="4ab62-103"><a name="Top"></a> A standard <xref:System.TimeSpan> format string uses a single format specifier to define the text representation of a <xref:System.TimeSpan> value that results from a formatting operation.</span></span> <span data-ttu-id="4ab62-104">Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato.</span><span class="sxs-lookup"><span data-stu-id="4ab62-104">Any format string that contains more than one character, including white space, is interpreted as a custom <xref:System.TimeSpan> format string.</span></span> <span data-ttu-id="4ab62-105">Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).</span><span class="sxs-lookup"><span data-stu-id="4ab62-105">For more information, see [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .</span></span>  
   
- Le rappresentazione di stringa dei valori <xref:System.TimeSpan> vengono prodotte da chiamate agli overload del metodo <xref:System.TimeSpan.ToString%2A?displayProperty=fullName>, nonché dai metodi che supportano la formattazione composita, come <xref:System.String.Format%2A?displayProperty=fullName>.  Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md) e [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di formattazione.  
+ <span data-ttu-id="4ab62-106">Le rappresentazione di stringa dei valori <xref:System.TimeSpan> vengono prodotte da chiamate agli overload del metodo <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, nonché dai metodi che supportano la formattazione composita, come <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4ab62-106">The string representations of <xref:System.TimeSpan> values are produced by calls to the overloads of the <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> method, as well as by methods that support composite formatting, such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4ab62-107">Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md) e [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="4ab62-107">For more information, see [Formatting Types](../../../docs/standard/base-types/formatting-types.md) and [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).</span></span> <span data-ttu-id="4ab62-108">Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di formattazione.</span><span class="sxs-lookup"><span data-stu-id="4ab62-108">The following example illustrates the use of standard format strings in formatting operations.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- Le stringhe di formato <xref:System.TimeSpan> standard sono usate anche dai metodi <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> e <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> per definire il formato richieste delle stringhe di input per le operazioni di analisi  \(l'analisi converte la rappresentazione di stringa di un valore in tale valore\). Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di analisi.  
+ <span data-ttu-id="4ab62-109">Le stringhe di formato <xref:System.TimeSpan> standard sono usate anche dai metodi <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> e <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> per definire il formato richieste delle stringhe di input per le operazioni di analisi</span><span class="sxs-lookup"><span data-stu-id="4ab62-109">Standard <xref:System.TimeSpan> format strings are also used by the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> and <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> methods to define the required format of input strings for parsing operations.</span></span> <span data-ttu-id="4ab62-110">(l'analisi converte la rappresentazione di stringa di un valore in tale valore). Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di analisi.</span><span class="sxs-lookup"><span data-stu-id="4ab62-110">(Parsing converts the string representation of a value to that value.) The following example illustrates the use of standard format strings in parsing operations.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> Nella tabella seguente sono elencati gli identificatori di formato di intervallo di tempo standard.  
+<span data-ttu-id="4ab62-111"><a name="top"></a> Nella tabella seguente sono elencati gli identificatori di formato di intervallo di tempo standard.</span><span class="sxs-lookup"><span data-stu-id="4ab62-111"><a name="top"></a> The following table lists the standard time interval format specifiers.</span></span>  
   
-|Identificatore di formato|Nome|Descrizione|Esempi|  
-|-------------------------------|----------|-----------------|------------|  
-|"c"|Formato di costante \(invariante\)|Questo identificatore non è dipendente dalle impostazioni cultura.  Assume il formato `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`<br /><br /> \(le stringhe di formato "t" e "T" producono gli stessi risultati\).<br /><br /> Altre informazioni: [Identificatore di formato di valuta \("C"\)](#Constant).|`TimeSpan.Zero` \-\> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` \-\> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` \-\> 3.17:25:30.5000000|  
-|"g"|Formato breve generale|Questo identificatore restituisce informazioni strettamente necessarie.  È basato sulle impostazioni cultura e assume il formato `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Altre informazioni: [Identificatore di formato breve generale \("g"\)](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` \-\> 1:3:16:50.5 \(en\-US\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` \-\> 1:3:16:50,5 \(fr\-FR\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` \-\> 1:3:16:50.599 \(en\-US\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` \-\> 1:3:16:50,599 \(fr\-FR\)|  
-|"G"|Formato esteso generale|Questo identificatore restituisce sempre giorni e sette cifre frazionarie.  È basato sulle impostazioni cultura e assume il formato `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Altre informazioni: [Identificatore di formato esteso generale \("G"\)](#GeneralLong).|`New TimeSpan(18, 30, 0)` \-\> 0:18:30:00.0000000 \(en\-US\)<br /><br /> `New TimeSpan(18, 30, 0)` \-\> 0:18:30:00,0000000 \(fr\-FR\)|  
+|<span data-ttu-id="4ab62-112">Identificatore di formato</span><span class="sxs-lookup"><span data-stu-id="4ab62-112">Format specifier</span></span>|<span data-ttu-id="4ab62-113">Nome</span><span class="sxs-lookup"><span data-stu-id="4ab62-113">Name</span></span>|<span data-ttu-id="4ab62-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4ab62-114">Description</span></span>|<span data-ttu-id="4ab62-115">Esempi</span><span class="sxs-lookup"><span data-stu-id="4ab62-115">Examples</span></span>|  
+|----------------------|----------|-----------------|--------------|  
+|<span data-ttu-id="4ab62-116">"c"</span><span class="sxs-lookup"><span data-stu-id="4ab62-116">"c"</span></span>|<span data-ttu-id="4ab62-117">Formato di costante (invariante)</span><span class="sxs-lookup"><span data-stu-id="4ab62-117">Constant (invariant) format</span></span>|<span data-ttu-id="4ab62-118">Questo identificatore non è dipendente dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="4ab62-118">This specifier is not culture-sensitive.</span></span> <span data-ttu-id="4ab62-119">Assume il formato `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`</span><span class="sxs-lookup"><span data-stu-id="4ab62-119">It takes the form `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.</span></span><br /><br /> <span data-ttu-id="4ab62-120">(le stringhe di formato "t" e "T" producono gli stessi risultati).</span><span class="sxs-lookup"><span data-stu-id="4ab62-120">(The "t" and "T" format strings produce the same results.)</span></span><br /><br /> <span data-ttu-id="4ab62-121">Altre informazioni: [Identificatore di formato di costante ("c")](#Constant).</span><span class="sxs-lookup"><span data-stu-id="4ab62-121">More information: [The Constant ("c") Format Specifier](#Constant).</span></span>|<span data-ttu-id="4ab62-122">`TimeSpan.Zero` -> 00:00:00</span><span class="sxs-lookup"><span data-stu-id="4ab62-122">`TimeSpan.Zero` -> 00:00:00</span></span><br /><br /> <span data-ttu-id="4ab62-123">`New TimeSpan(0, 0, 30, 0)` -> 00:30:00</span><span class="sxs-lookup"><span data-stu-id="4ab62-123">`New TimeSpan(0, 0, 30, 0)` -> 00:30:00</span></span><br /><br /> <span data-ttu-id="4ab62-124">`New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000</span><span class="sxs-lookup"><span data-stu-id="4ab62-124">`New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000</span></span>|  
+|<span data-ttu-id="4ab62-125">"g"</span><span class="sxs-lookup"><span data-stu-id="4ab62-125">"g"</span></span>|<span data-ttu-id="4ab62-126">Formato breve generale</span><span class="sxs-lookup"><span data-stu-id="4ab62-126">General short format</span></span>|<span data-ttu-id="4ab62-127">Questo identificatore restituisce informazioni strettamente necessarie.</span><span class="sxs-lookup"><span data-stu-id="4ab62-127">This specifier outputs only what is needed.</span></span> <span data-ttu-id="4ab62-128">È basato sulle impostazioni cultura e assume il formato `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.</span><span class="sxs-lookup"><span data-stu-id="4ab62-128">It is culture-sensitive and takes the form `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.</span></span><br /><br /> <span data-ttu-id="4ab62-129">Altre informazioni: [Identificatore di formato breve generale ("g")](#GeneralShort).</span><span class="sxs-lookup"><span data-stu-id="4ab62-129">More information: [The General Short ("g") Format Specifier](#GeneralShort).</span></span>|<span data-ttu-id="4ab62-130">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)</span><span class="sxs-lookup"><span data-stu-id="4ab62-130">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)</span></span><br /><br /> <span data-ttu-id="4ab62-131">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="4ab62-131">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)</span></span><br /><br /> <span data-ttu-id="4ab62-132">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)</span><span class="sxs-lookup"><span data-stu-id="4ab62-132">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)</span></span><br /><br /> <span data-ttu-id="4ab62-133">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="4ab62-133">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)</span></span>|  
+|<span data-ttu-id="4ab62-134">"G"</span><span class="sxs-lookup"><span data-stu-id="4ab62-134">"G"</span></span>|<span data-ttu-id="4ab62-135">Formato esteso generale</span><span class="sxs-lookup"><span data-stu-id="4ab62-135">General long format</span></span>|<span data-ttu-id="4ab62-136">Questo identificatore restituisce sempre giorni e sette cifre frazionarie.</span><span class="sxs-lookup"><span data-stu-id="4ab62-136">This specifier always outputs days and seven fractional digits.</span></span> <span data-ttu-id="4ab62-137">È basato sulle impostazioni cultura e assume il formato `[-]d’:’hh’:’mm’:’ss.fffffff`.</span><span class="sxs-lookup"><span data-stu-id="4ab62-137">It is culture-sensitive and takes the form `[-]d’:’hh’:’mm’:’ss.fffffff`.</span></span><br /><br /> <span data-ttu-id="4ab62-138">Altre informazioni: [Identificatore di formato esteso generale ("G")](#GeneralLong).</span><span class="sxs-lookup"><span data-stu-id="4ab62-138">More information: [The General Long ("G") Format Specifier](#GeneralLong).</span></span>|<span data-ttu-id="4ab62-139">`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)</span><span class="sxs-lookup"><span data-stu-id="4ab62-139">`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)</span></span><br /><br /> <span data-ttu-id="4ab62-140">`New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="4ab62-140">`New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)</span></span>|  
   
 <a name="Constant"></a>   
-## Identificatore di formato di costante \("C"\).  
- L'identificatore di formato "c" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> nel formato seguente:  
+## <a name="the-constant-c-format-specifier"></a><span data-ttu-id="4ab62-141">Identificatore di formato di costante ("C").</span><span class="sxs-lookup"><span data-stu-id="4ab62-141">The Constant ("c") Format Specifier</span></span>  
+ <span data-ttu-id="4ab62-142">L'identificatore di formato "c" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> nel formato seguente:</span><span class="sxs-lookup"><span data-stu-id="4ab62-142">The "c" format specifier returns the string representation of a <xref:System.TimeSpan> value in the following form:</span></span>  
   
- \[\-\]\[*d*.\]*hh*:*mm*:*ss*\[.*fffffff*\]  
+ <span data-ttu-id="4ab62-143">[-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]</span><span class="sxs-lookup"><span data-stu-id="4ab62-143">[-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]</span></span>  
   
- Gli elementi tra parentesi quadre \(\[e\]\) sono facoltativi.  Il punto \(.\) e i due punti \(:\) sono simboli letterali.  La tabella seguente descrive gli elementi rimanenti.  
+ <span data-ttu-id="4ab62-144">Gli elementi tra parentesi quadre ([e]) sono facoltativi.</span><span class="sxs-lookup"><span data-stu-id="4ab62-144">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="4ab62-145">Il punto (.) e i due punti (:) sono simboli letterali.</span><span class="sxs-lookup"><span data-stu-id="4ab62-145">The period (.) and colon (:) are literal symbols.</span></span> <span data-ttu-id="4ab62-146">La tabella seguente descrive gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="4ab62-146">The following table describes the remaining elements.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|*\-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
-|*d*|Numero di giorni facoltativo, senza zeri iniziali.|  
-|*hh*|Numero di ore, nell'intervallo compreso tra "00" e "23".|  
-|*mm*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
-|*ss*|Numero di secondi, nell'intervallo compreso tra "0" e "59".|  
-|*fffffff*|La parte frazionaria facoltativa di un secondo.  Il valore può variare da "0000001" \(un tick oppure un decimilionesimo di secondo\) e "9999999" \(9.999.999 decimilionesimi di secondo, o un secondo meno di un tick\).|  
+|<span data-ttu-id="4ab62-147">Elemento</span><span class="sxs-lookup"><span data-stu-id="4ab62-147">Element</span></span>|<span data-ttu-id="4ab62-148">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4ab62-148">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="4ab62-149">Un segno negativo facoltativo, che indica un intervallo di tempo negativo.</span><span class="sxs-lookup"><span data-stu-id="4ab62-149">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="4ab62-150">*d*</span><span class="sxs-lookup"><span data-stu-id="4ab62-150">*d*</span></span>|<span data-ttu-id="4ab62-151">Numero di giorni facoltativo, senza zeri iniziali.</span><span class="sxs-lookup"><span data-stu-id="4ab62-151">The optional number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="4ab62-152">*hh*</span><span class="sxs-lookup"><span data-stu-id="4ab62-152">*hh*</span></span>|<span data-ttu-id="4ab62-153">Numero di ore, nell'intervallo compreso tra "00" e "23".</span><span class="sxs-lookup"><span data-stu-id="4ab62-153">The number of hours, which ranges from "00" to "23".</span></span>|  
+|<span data-ttu-id="4ab62-154">*mm*</span><span class="sxs-lookup"><span data-stu-id="4ab62-154">*mm*</span></span>|<span data-ttu-id="4ab62-155">Numero di minuti, nell'intervallo compreso tra "00" e "59".</span><span class="sxs-lookup"><span data-stu-id="4ab62-155">The number of minutes, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="4ab62-156">*ss*</span><span class="sxs-lookup"><span data-stu-id="4ab62-156">*ss*</span></span>|<span data-ttu-id="4ab62-157">Numero di secondi, nell'intervallo compreso tra "0" e "59".</span><span class="sxs-lookup"><span data-stu-id="4ab62-157">The number of seconds, which ranges from "0" to "59".</span></span>|  
+|<span data-ttu-id="4ab62-158">*fffffff*</span><span class="sxs-lookup"><span data-stu-id="4ab62-158">*fffffff*</span></span>|<span data-ttu-id="4ab62-159">La parte frazionaria facoltativa di un secondo.</span><span class="sxs-lookup"><span data-stu-id="4ab62-159">The optional fractional portion of a second.</span></span>  <span data-ttu-id="4ab62-160">Il valore può variare da "0000001" (un tick oppure un decimilionesimo di secondo) e "9999999" (9.999.999 decimilionesimi di secondo, o un secondo meno di un tick).</span><span class="sxs-lookup"><span data-stu-id="4ab62-160">Its value can range from "0000001" (one tick, or one ten-millionth of a second)  to "9999999" (9,999,999 ten-millionths of a second, or one second less one tick).</span></span>|  
   
- A differenza degli identificatori di formato "g" e "G", l'identificatore di formato "c" non è dipendente dalle impostazioni cultura.  Produce la rappresentazione di stringa di un valore <xref:System.TimeSpan> invariante e comune a tutte le versioni precedenti di.NET Framework prima di [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. "  c" è la stringa di formato <xref:System.TimeSpan> predefinita; il metodo <xref:System.TimeSpan.ToString?displayProperty=fullName> formatta un valore di intervallo di tempo usando la stringa di formato "c".  
+ <span data-ttu-id="4ab62-161">A differenza degli identificatori di formato "g" e "G", l'identificatore di formato "c" non è dipendente dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="4ab62-161">Unlike the "g" and "G" format specifiers, the "c" format specifier is not culture-sensitive.</span></span> <span data-ttu-id="4ab62-162">Produce la rappresentazione di stringa di un valore <xref:System.TimeSpan> invariante e comune a tutte le versioni precedenti di.NET Framework prima di [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4ab62-162">It produces the string representation of a <xref:System.TimeSpan> value that is invariant and that is common to all previous versions of the .NET Framework before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="4ab62-163">il valore predefinito è "c" <xref:System.TimeSpan> stringa di formato; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metodo formatta un valore di intervallo di tempo usando la stringa di formato "c".</span><span class="sxs-lookup"><span data-stu-id="4ab62-163">"c" is the default <xref:System.TimeSpan> format string; the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method formats a time interval value by using the "c" format string.</span></span>  
   
 > [!NOTE]
->  <xref:System.TimeSpan> supporta anche le stringhe di formato standard "t" e "T", che hanno un comportamento identico alla stringa di formato standard "c".  
+>  <span data-ttu-id="4ab62-164"><xref:System.TimeSpan> supporta anche le stringhe di formato standard "t" e "T", che hanno un comportamento identico alla stringa di formato standard "c".</span><span class="sxs-lookup"><span data-stu-id="4ab62-164"><xref:System.TimeSpan> also supports the "t" and "T" standard format strings, which are identical in behavior to the "c" standard format string.</span></span>  
   
- Nell'esempio seguente viene creata un'istanza di due oggetti <xref:System.TimeSpan>, usati per eseguire operazioni aritmetiche e viene visualizzato il risultato.  In ogni caso, viene usata la formattazione composita per visualizzare il valore <xref:System.TimeSpan> con l'identificatore di formato "c".  
+ <span data-ttu-id="4ab62-165">Nell'esempio seguente viene creata un'istanza di due oggetti <xref:System.TimeSpan>, usati per eseguire operazioni aritmetiche e viene visualizzato il risultato.</span><span class="sxs-lookup"><span data-stu-id="4ab62-165">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="4ab62-166">In ogni caso, viene usata la formattazione composita per visualizzare il valore <xref:System.TimeSpan> con l'identificatore di formato "c".</span><span class="sxs-lookup"><span data-stu-id="4ab62-166">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "c" format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
   
- [Torna alla tabella](#Top)  
+ [<span data-ttu-id="4ab62-167">Torna alla tabella</span><span class="sxs-lookup"><span data-stu-id="4ab62-167">Back to table</span></span>](#Top)  
   
 <a name="GeneralShort"></a>   
-## Identificatore di formato generale \("g"\)  
- L'identificatore di formato <xref:System.TimeSpan> "g" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> in un formato compresso includendo solo gli elementi necessari.  Ha il formato seguente:  
+## <a name="the-general-short-g-format-specifier"></a><span data-ttu-id="4ab62-168">Identificatore di formato generale ("g")</span><span class="sxs-lookup"><span data-stu-id="4ab62-168">The General Short ("g") Format Specifier</span></span>  
+ <span data-ttu-id="4ab62-169">L'identificatore di formato <xref:System.TimeSpan> "g" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> in un formato compresso includendo solo gli elementi necessari.</span><span class="sxs-lookup"><span data-stu-id="4ab62-169">The "g" <xref:System.TimeSpan> format specifier returns the string representation of a <xref:System.TimeSpan> value in a compact form by including only the elements that are necessary.</span></span> <span data-ttu-id="4ab62-170">Ha il formato seguente:</span><span class="sxs-lookup"><span data-stu-id="4ab62-170">It has the following form:</span></span>  
   
- \[\-\]\[*d*:\]*h*:*mm*:*ss*\[.*FFFFFFF*\]  
+ <span data-ttu-id="4ab62-171">[-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]</span><span class="sxs-lookup"><span data-stu-id="4ab62-171">[-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]</span></span>  
   
- Gli elementi tra parentesi quadre \(\[e\]\) sono facoltativi.  I due punti \(:\) sono un simbolo letterale.  La tabella seguente descrive gli elementi rimanenti.  
+ <span data-ttu-id="4ab62-172">Gli elementi tra parentesi quadre ([e]) sono facoltativi.</span><span class="sxs-lookup"><span data-stu-id="4ab62-172">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="4ab62-173">I due punti (:) sono un simbolo letterale.</span><span class="sxs-lookup"><span data-stu-id="4ab62-173">The colon (:) is a literal symbol.</span></span> <span data-ttu-id="4ab62-174">La tabella seguente descrive gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="4ab62-174">The following table describes the remaining elements.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|*\-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
-|*d*|Numero di giorni facoltativo, senza zeri iniziali.|  
-|*h*|Numero di ore, compreso tra "0" e "23", senza zeri iniziali.|  
-|*mm*|Numero di minuti, compreso tra "00" e "59".|  
-|*ss*|Numero di secondi, compreso tra "00" e "59".|  
-|*.*|Il separatore dei secondi frazionari.  È equivalente alla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata senza gli override dell'utente.|  
-|*FFFFFFF*|Frazioni di secondo.  Viene visualizzato il minor numero di cifre possibile.|  
+|<span data-ttu-id="4ab62-175">Elemento</span><span class="sxs-lookup"><span data-stu-id="4ab62-175">Element</span></span>|<span data-ttu-id="4ab62-176">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4ab62-176">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="4ab62-177">Un segno negativo facoltativo, che indica un intervallo di tempo negativo.</span><span class="sxs-lookup"><span data-stu-id="4ab62-177">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="4ab62-178">*d*</span><span class="sxs-lookup"><span data-stu-id="4ab62-178">*d*</span></span>|<span data-ttu-id="4ab62-179">Numero di giorni facoltativo, senza zeri iniziali.</span><span class="sxs-lookup"><span data-stu-id="4ab62-179">The optional number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="4ab62-180">*h*</span><span class="sxs-lookup"><span data-stu-id="4ab62-180">*h*</span></span>|<span data-ttu-id="4ab62-181">Numero di ore, compreso tra "0" e "23", senza zeri iniziali.</span><span class="sxs-lookup"><span data-stu-id="4ab62-181">The number of hours, which ranges from "0" to "23", with no leading zeros.</span></span>|  
+|<span data-ttu-id="4ab62-182">*mm*</span><span class="sxs-lookup"><span data-stu-id="4ab62-182">*mm*</span></span>|<span data-ttu-id="4ab62-183">Numero di minuti, compreso tra "00" e "59".</span><span class="sxs-lookup"><span data-stu-id="4ab62-183">The number of minutes, which ranges from "00" to "59"..</span></span>|  
+|<span data-ttu-id="4ab62-184">*ss*</span><span class="sxs-lookup"><span data-stu-id="4ab62-184">*ss*</span></span>|<span data-ttu-id="4ab62-185">Numero di secondi, compreso tra "00" e "59".</span><span class="sxs-lookup"><span data-stu-id="4ab62-185">The number of seconds, which ranges from "00" to "59"..</span></span>|  
+|<span data-ttu-id="4ab62-186">*.*</span><span class="sxs-lookup"><span data-stu-id="4ab62-186">*.*</span></span>|<span data-ttu-id="4ab62-187">Il separatore dei secondi frazionari.</span><span class="sxs-lookup"><span data-stu-id="4ab62-187">The fractional seconds separator.</span></span> <span data-ttu-id="4ab62-188">È equivalente alla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata senza gli override dell'utente.</span><span class="sxs-lookup"><span data-stu-id="4ab62-188">It is equivalent to the specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property without user overrides.</span></span>|  
+|<span data-ttu-id="4ab62-189">*FFFFFFF*</span><span class="sxs-lookup"><span data-stu-id="4ab62-189">*FFFFFFF*</span></span>|<span data-ttu-id="4ab62-190">Frazioni di secondo.</span><span class="sxs-lookup"><span data-stu-id="4ab62-190">The fractional seconds.</span></span> <span data-ttu-id="4ab62-191">Viene visualizzato il minor numero di cifre possibile.</span><span class="sxs-lookup"><span data-stu-id="4ab62-191">As few digits as possible are displayed.</span></span>|  
   
- Come l'identificatore di formato "G", l'identificatore di formato "g" viene localizzato.  Il separatore delle frazioni di secondo si basa sulla cultura corrente oppure su una proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata.  
+ <span data-ttu-id="4ab62-192">Come l'identificatore di formato "G", l'identificatore di formato "g" viene localizzato.</span><span class="sxs-lookup"><span data-stu-id="4ab62-192">Like the "G" format specifier, the "g" format specifier is localized.</span></span> <span data-ttu-id="4ab62-193">Il separatore delle frazioni di secondo si basa sulla cultura corrente oppure su una proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata.</span><span class="sxs-lookup"><span data-stu-id="4ab62-193">Its fractional seconds separator is based on either the current culture or a specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property.</span></span>  
   
- Nell'esempio seguente viene creata un'istanza di due oggetti <xref:System.TimeSpan>, usati per eseguire operazioni aritmetiche e viene visualizzato il risultato.  In ogni caso, viene usata la formattazione composita per visualizzare il valore <xref:System.TimeSpan> con l'identificatore di formato "g".  Inoltre, formatta il valore <xref:System.TimeSpan> usando le convenzioni di formattazione della lingua corrente del sistema \(ovvero, in questo caso, Inglese \- Stati Uniti o en\-US\) e il Francese \- Francia \(fr\-FR\).  
+ <span data-ttu-id="4ab62-194">Nell'esempio seguente viene creata un'istanza di due oggetti <xref:System.TimeSpan>, usati per eseguire operazioni aritmetiche e viene visualizzato il risultato.</span><span class="sxs-lookup"><span data-stu-id="4ab62-194">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="4ab62-195">In ogni caso, viene usata la formattazione composita per visualizzare il valore <xref:System.TimeSpan> con l'identificatore di formato "g".</span><span class="sxs-lookup"><span data-stu-id="4ab62-195">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "g" format specifier.</span></span> <span data-ttu-id="4ab62-196">Inoltre, formatta il valore <xref:System.TimeSpan> usando le convenzioni di formattazione della lingua corrente del sistema (ovvero, in questo caso, Inglese - Stati Uniti o en-US) e il Francese - Francia (fr-FR).</span><span class="sxs-lookup"><span data-stu-id="4ab62-196">In addition, it formats the <xref:System.TimeSpan> value by using the formatting conventions of the current system culture (which, in this case, is English - United States or en-US) and the French - France (fr-FR) culture.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
   
- [Torna alla tabella](#Top)  
+ [<span data-ttu-id="4ab62-197">Torna alla tabella</span><span class="sxs-lookup"><span data-stu-id="4ab62-197">Back to table</span></span>](#Top)  
   
 <a name="GeneralLong"></a>   
-## Identificatore di formato esteso generale \("G"\)  
- L'identificatore di formato <xref:System.TimeSpan> "G" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> in un formato esteso che include sempre sia i giorni sia le frazioni di secondo.  La stringa risultante dall'identificatore di formato standard "G" ha il seguente formato:  
+## <a name="the-general-long-g-format-specifier"></a><span data-ttu-id="4ab62-198">Identificatore di formato esteso generale ("G")</span><span class="sxs-lookup"><span data-stu-id="4ab62-198">The General Long ("G") Format Specifier</span></span>  
+ <span data-ttu-id="4ab62-199">L'identificatore di formato <xref:System.TimeSpan> "G" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> in un formato esteso che include sempre sia i giorni sia le frazioni di secondo.</span><span class="sxs-lookup"><span data-stu-id="4ab62-199">The "G" <xref:System.TimeSpan> format specifier returns the string representation of a <xref:System.TimeSpan> value in a long form that always includes both days and fractional seconds.</span></span> <span data-ttu-id="4ab62-200">La stringa risultante dall'identificatore di formato standard "G" ha il seguente formato:</span><span class="sxs-lookup"><span data-stu-id="4ab62-200">The string that results from the "G" standard format specifier has the following form:</span></span>  
   
- \[\-\]*d*:*hh*:*mm*:*ss*.*fffffff*  
+ <span data-ttu-id="4ab62-201">[-]*d*:*hh*:*mm*:*ss*.*fffffff*</span><span class="sxs-lookup"><span data-stu-id="4ab62-201">[-]*d*:*hh*:*mm*:*ss*.*fffffff*</span></span>  
   
- Gli elementi tra parentesi quadre \(\[e\]\) sono facoltativi.  I due punti \(:\) sono un simbolo letterale.  La tabella seguente descrive gli elementi rimanenti.  
+ <span data-ttu-id="4ab62-202">Gli elementi tra parentesi quadre ([e]) sono facoltativi.</span><span class="sxs-lookup"><span data-stu-id="4ab62-202">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="4ab62-203">I due punti (:) sono un simbolo letterale.</span><span class="sxs-lookup"><span data-stu-id="4ab62-203">The colon (:) is a literal symbol.</span></span> <span data-ttu-id="4ab62-204">La tabella seguente descrive gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="4ab62-204">The following table describes the remaining elements.</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|*\-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
-|*d*|Il numero di giorni, senza zeri iniziali.|  
-|*hh*|Numero di ore, nell'intervallo compreso tra "00" e "23".|  
-|*mm*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
-|*ss*|Numero di secondi, nell'intervallo compreso tra "00" e "59".|  
-|*.*|Il separatore dei secondi frazionari.  È equivalente alla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata senza gli override dell'utente.|  
-|*fffffff*|Frazioni di secondo.|  
+|<span data-ttu-id="4ab62-205">Elemento</span><span class="sxs-lookup"><span data-stu-id="4ab62-205">Element</span></span>|<span data-ttu-id="4ab62-206">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4ab62-206">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="4ab62-207">Un segno negativo facoltativo, che indica un intervallo di tempo negativo.</span><span class="sxs-lookup"><span data-stu-id="4ab62-207">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="4ab62-208">*d*</span><span class="sxs-lookup"><span data-stu-id="4ab62-208">*d*</span></span>|<span data-ttu-id="4ab62-209">Il numero di giorni, senza zeri iniziali.</span><span class="sxs-lookup"><span data-stu-id="4ab62-209">The number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="4ab62-210">*hh*</span><span class="sxs-lookup"><span data-stu-id="4ab62-210">*hh*</span></span>|<span data-ttu-id="4ab62-211">Numero di ore, nell'intervallo compreso tra "00" e "23".</span><span class="sxs-lookup"><span data-stu-id="4ab62-211">The number of hours, which ranges from "00" to "23".</span></span>|  
+|<span data-ttu-id="4ab62-212">*mm*</span><span class="sxs-lookup"><span data-stu-id="4ab62-212">*mm*</span></span>|<span data-ttu-id="4ab62-213">Numero di minuti, nell'intervallo compreso tra "00" e "59".</span><span class="sxs-lookup"><span data-stu-id="4ab62-213">The number of minutes, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="4ab62-214">*ss*</span><span class="sxs-lookup"><span data-stu-id="4ab62-214">*ss*</span></span>|<span data-ttu-id="4ab62-215">Numero di secondi, nell'intervallo compreso tra "00" e "59".</span><span class="sxs-lookup"><span data-stu-id="4ab62-215">The number of seconds, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="4ab62-216">*.*</span><span class="sxs-lookup"><span data-stu-id="4ab62-216">*.*</span></span>|<span data-ttu-id="4ab62-217">Il separatore dei secondi frazionari.</span><span class="sxs-lookup"><span data-stu-id="4ab62-217">The fractional seconds separator.</span></span> <span data-ttu-id="4ab62-218">È equivalente alla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata senza gli override dell'utente.</span><span class="sxs-lookup"><span data-stu-id="4ab62-218">It is equivalent to the specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property without user overrides.</span></span>|  
+|<span data-ttu-id="4ab62-219">*fffffff*</span><span class="sxs-lookup"><span data-stu-id="4ab62-219">*fffffff*</span></span>|<span data-ttu-id="4ab62-220">Frazioni di secondo.</span><span class="sxs-lookup"><span data-stu-id="4ab62-220">The fractional seconds.</span></span>|  
   
- Come l'identificatore di formato "G", l'identificatore di formato "g" viene localizzato.  Il separatore delle frazioni di secondo si basa sulla cultura corrente oppure su una proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata.  
+ <span data-ttu-id="4ab62-221">Come l'identificatore di formato "G", l'identificatore di formato "g" viene localizzato.</span><span class="sxs-lookup"><span data-stu-id="4ab62-221">Like the "G" format specifier, the "g" format specifier is localized.</span></span> <span data-ttu-id="4ab62-222">Il separatore delle frazioni di secondo si basa sulla cultura corrente oppure su una proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata.</span><span class="sxs-lookup"><span data-stu-id="4ab62-222">Its fractional seconds separator is based on either the current culture or a specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property.</span></span>  
   
- Nell'esempio seguente viene creata un'istanza di due oggetti <xref:System.TimeSpan>, usati per eseguire operazioni aritmetiche e viene visualizzato il risultato.  In ogni caso, viene usata la formattazione composita per visualizzare il valore <xref:System.TimeSpan> con l'identificatore di formato "G".  Inoltre, formatta il valore <xref:System.TimeSpan> usando le convenzioni di formattazione della lingua corrente del sistema \(ovvero, in questo caso, Inglese \- Stati Uniti o en\-US\) e il Francese \- Francia \(fr\-FR\).  
+ <span data-ttu-id="4ab62-223">Nell'esempio seguente viene creata un'istanza di due oggetti <xref:System.TimeSpan>, usati per eseguire operazioni aritmetiche e viene visualizzato il risultato.</span><span class="sxs-lookup"><span data-stu-id="4ab62-223">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="4ab62-224">In ogni caso, viene usata la formattazione composita per visualizzare il valore <xref:System.TimeSpan> con l'identificatore di formato "G".</span><span class="sxs-lookup"><span data-stu-id="4ab62-224">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "G" format specifier.</span></span> <span data-ttu-id="4ab62-225">Inoltre, formatta il valore <xref:System.TimeSpan> usando le convenzioni di formattazione della lingua corrente del sistema (ovvero, in questo caso, Inglese - Stati Uniti o en-US) e il Francese - Francia (fr-FR).</span><span class="sxs-lookup"><span data-stu-id="4ab62-225">In addition, it formats the <xref:System.TimeSpan> value by using the formatting conventions of the current system culture (which, in this case, is English - United States or en-US) and the French - France (fr-FR) culture.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
   
- [Torna alla tabella](#Top)  
+ [<span data-ttu-id="4ab62-226">Torna alla tabella</span><span class="sxs-lookup"><span data-stu-id="4ab62-226">Back to table</span></span>](#Top)  
   
-## Vedere anche  
- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)   
- [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)   
- [Analisi di stringhe](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a><span data-ttu-id="4ab62-227">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4ab62-227">See Also</span></span>  
+ [<span data-ttu-id="4ab62-228">Formattazione di tipi</span><span class="sxs-lookup"><span data-stu-id="4ab62-228">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="4ab62-229">Stringhe di formato TimeSpan personalizzate</span><span class="sxs-lookup"><span data-stu-id="4ab62-229">Custom TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+ [<span data-ttu-id="4ab62-230">Analisi di stringhe</span><span class="sxs-lookup"><span data-stu-id="4ab62-230">Parsing Strings</span></span>](../../../docs/standard/base-types/parsing-strings.md)

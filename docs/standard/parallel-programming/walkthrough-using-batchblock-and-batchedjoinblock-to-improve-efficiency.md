@@ -1,124 +1,130 @@
 ---
-title: "Walkthrough: Using BatchBlock and BatchedJoinBlock to Improve Efficiency | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Task Parallel Library, dataflows"
-  - "TPL dataflow library, improving efficiency"
+title: 'Procedura dettagliata: utilizzo di BatchBlock e BatchedJoinBlock per migliorare l''efficienza'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Task Parallel Library, dataflows
+- TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: bc74b4acc5b29395c05e7c8302caefeb51718282
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Walkthrough: Using BatchBlock and BatchedJoinBlock to Improve Efficiency
-La libreria del flusso di dati TPL fornisce le classi <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=fullName> e <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=fullName> in modo da ricevere e memorizzazione nel buffer i dati da una o più origini quindi passare all'esterno i dati memorizzati nel buffer come una raccolta unica.  Questo meccanismo di divisione in gruppi è utile quando si raccolgono dati da una o più origini e quindi si elaborano più elementi di dati come gruppo.  Ad esempio, si consideri un'applicazione che utilizza il flusso di dati per inserire i record in un database.  Questa operazione può risultare più efficace se più elementi vengono inseriti contemporaneamente anziché uno alla volta in sequenza.  In questo documento viene descritto come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> per migliorare l'efficienza di tali operazioni di inserimento del database.  Viene descritto inoltre come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> per acquisire i risultati e tutte le eccezioni che si verificano quando il programma legge da un database.  
+# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a><span data-ttu-id="1fcdc-102">Procedura dettagliata: utilizzo di BatchBlock e BatchedJoinBlock per migliorare l'efficienza</span><span class="sxs-lookup"><span data-stu-id="1fcdc-102">Walkthrough: Using BatchBlock and BatchedJoinBlock to Improve Efficiency</span></span>
+<span data-ttu-id="1fcdc-103">La libreria del flusso di dati TPL fornisce la <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> classi in modo che è possibile ricevere e buffer di dati da una o più origini e quindi vengono propagati all'esterno come una raccolta di dati memorizzati nel buffer.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-103">The TPL Dataflow Library provides the <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> classes so that you can receive and buffer data from one or more sources and then propagate out that buffered data as one collection.</span></span> <span data-ttu-id="1fcdc-104">Questo meccanismo di batch è utile quando si raccolgono dati da una o più origini e quindi elaborare più elementi di dati come un batch.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-104">This batching mechanism is useful when you collect data from one or more sources and then process multiple data elements as a batch.</span></span> <span data-ttu-id="1fcdc-105">Ad esempio, si consideri un'applicazione che utilizza i flussi di dati per inserire i record in un database.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-105">For example, consider an application that uses dataflow to insert records into a database.</span></span> <span data-ttu-id="1fcdc-106">Questa operazione può essere più efficiente se più elementi vengono inseriti nello stesso momento anziché uno alla volta, in modo sequenziale.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-106">This operation can be more efficient if multiple items are inserted at the same time instead of one at a time sequentially.</span></span> <span data-ttu-id="1fcdc-107">Questo documento viene descritto come utilizzare il <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> operazioni di inserimento di classe per migliorare l'efficienza di tale database.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-107">This document describes how to use the <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> class to improve the efficiency of such database insert operations.</span></span> <span data-ttu-id="1fcdc-108">Viene inoltre descritto come utilizzare la <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> classe per acquisire i risultati e tutte le eccezioni che si verificano quando il programma legge da un database.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-108">It also describes how to use the <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> class to capture both the results and any exceptions that occur when the program reads from a database.</span></span>  
   
 > [!TIP]
->  La libreria del flusso di dati TPL \(spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  Per installare lo spazio dei nomi <xref:System.Threading.Tasks.Dataflow>, aprire il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu del progetto e scegliere cerca online il pacchetto `Microsoft.Tpl.Dataflow`.  
+>  <span data-ttu-id="1fcdc-109">La libreria del flusso di dati TPL (spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1fcdc-109">The TPL Dataflow Library (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> namespace) is not distributed with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="1fcdc-110">Per installare il <xref:System.Threading.Tasks.Dataflow> dello spazio dei nomi, Apri il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu progetto e cercare online il `Microsoft.Tpl.Dataflow` pacchetto.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-110">To install the <xref:System.Threading.Tasks.Dataflow> namespace, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the Project menu, and search online for the `Microsoft.Tpl.Dataflow` package.</span></span>  
   
-## Prerequisiti  
+## <a name="prerequisites"></a><span data-ttu-id="1fcdc-111">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="1fcdc-111">Prerequisites</span></span>  
   
-1.  Leggere la sezione dei blocchi di join nel documento [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) prima di iniziare questa procedura dettagliata.  
+1.  <span data-ttu-id="1fcdc-112">Leggere la sezione di blocchi Join nel [flussi di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) documento prima di iniziare questa procedura dettagliata.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-112">Read the Join Blocks section in the [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) document before you start this walkthrough.</span></span>  
   
-2.  Assicurarsi di disporre di una copia del database Northwind, Northwind.sdf, disponibile nel computer.  Questo file si trova in genere nella cartella %Program Files%\\Microsoft SQL Server Compact Edition\\v3.5\\Samples\\.  
+2.  <span data-ttu-id="1fcdc-113">Verificare di disporre di una copia del database Northwind, sdf, disponibile nel computer.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-113">Ensure that you have a copy of the Northwind database, Northwind.sdf, available on your computer.</span></span> <span data-ttu-id="1fcdc-114">Questo file si trova in genere nella cartella % Files%\Microsoft SQL Server Compact Edition\v3.5\Samples.\\.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-114">This file is typically located in the folder %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.</span></span>  
   
     > [!IMPORTANT]
-    >  In alcune versioni di Windows, non è possibile effettuare la connessione a Northwind.sdf se è in esecuzione [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] in modalità non\-amministratore.  Per la connessione a Northwind.sdf, avviare [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un prompt dei comandi [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] in modalità **Esegui come amministratore**.  
+    >  <span data-ttu-id="1fcdc-115">In alcune versioni di Windows, è possibile connettersi a sdf se [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] è in esecuzione in modalità senza privilegi di amministratore.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-115">In some versions of Windows, you cannot connect to Northwind.sdf if [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] is running in a non-administrator mode.</span></span> <span data-ttu-id="1fcdc-116">Per connettersi a sdf, avviare [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] prompt dei comandi nel **Esegui come amministratore** modalità.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-116">To connect to Northwind.sdf, start [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] or a [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] command prompt in the **Run as administrator** mode.</span></span>  
   
- In questa procedura dettagliata sono contenute le sezioni seguenti:  
+ <span data-ttu-id="1fcdc-117">Questa procedura dettagliata contiene le sezioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="1fcdc-117">This walkthrough contains the following sections:</span></span>  
   
--   [Creazione dell'applicazione console](#creating)  
+-   [<span data-ttu-id="1fcdc-118">Creazione dell'applicazione Console</span><span class="sxs-lookup"><span data-stu-id="1fcdc-118">Creating the Console Application</span></span>](#creating)  
   
--   [Definizione della classe Dipendente](#employeeClass)  
+-   [<span data-ttu-id="1fcdc-119">Definizione della classe dipendente</span><span class="sxs-lookup"><span data-stu-id="1fcdc-119">Defining the Employee Class</span></span>](#employeeClass)  
   
--   [Definizione delle Operazioni del Database dei Dipendenti](#operations)  
+-   [<span data-ttu-id="1fcdc-120">Definizione di operazioni di Database di dipendenti</span><span class="sxs-lookup"><span data-stu-id="1fcdc-120">Defining Employee Database Operations</span></span>](#operations)  
   
--   [Aggiunta di Dati dei Dipendenti al Database senza utilizzare il Buffer](#nonBuffering)  
+-   [<span data-ttu-id="1fcdc-121">Aggiunta di dati dipendenti al Database senza l'utilizzo del buffer</span><span class="sxs-lookup"><span data-stu-id="1fcdc-121">Adding Employee Data to the Database without Using Buffering</span></span>](#nonBuffering)  
   
--   [Utilizzo di Buffer per Aggiungere i Dati dei Dipendenti al Database](#buffering)  
+-   [<span data-ttu-id="1fcdc-122">Utilizzo del buffer per aggiungere i dati dei dipendenti nel database</span><span class="sxs-lookup"><span data-stu-id="1fcdc-122">Using Buffering to Add Employee Data to the Database</span></span>](#buffering)  
   
--   [Utilizzo di Join bufferizzata per leggere i dati dei dipendenti dal database](#bufferedJoin)  
+-   [<span data-ttu-id="1fcdc-123">Utilizzando Join memorizzato nel buffer per leggere i dati dei dipendenti dal Database</span><span class="sxs-lookup"><span data-stu-id="1fcdc-123">Using Buffered Join to Read Employee Data from the Database</span></span>](#bufferedJoin)  
   
--   [Esempio completo](#complete)  
+-   [<span data-ttu-id="1fcdc-124">Esempio completo</span><span class="sxs-lookup"><span data-stu-id="1fcdc-124">The Complete Example</span></span>](#complete)  
   
 <a name="creating"></a>   
-## Creazione dell'applicazione console  
+## <a name="creating-the-console-application"></a><span data-ttu-id="1fcdc-125">Creazione dell'applicazione Console</span><span class="sxs-lookup"><span data-stu-id="1fcdc-125">Creating the Console Application</span></span>  
   
 <a name="consoleApp"></a>   
-1.  In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], creare un progetto **Applicazione Console** in Visual C\# o Visual Basic.  In questo documento, il progetto viene denominato `DataflowBatchDatabase`.  
+1.  <span data-ttu-id="1fcdc-126">In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], creare un Visual c# o Visual Basic **applicazione Console** progetto.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-126">In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], create a Visual C# or Visual Basic **Console Application** project.</span></span> <span data-ttu-id="1fcdc-127">In questo documento, il progetto viene denominato `DataflowBatchDatabase`.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-127">In this document, the project is named `DataflowBatchDatabase`.</span></span>  
   
-2.  Nel progetto, aggiungere un riferimento a System.Data.SqlServerCe.dll e un riferimento a System.Threading.Tasks.Dataflow.dll.  
+2.  <span data-ttu-id="1fcdc-128">Nel progetto, aggiungere un riferimento a System.Data.SqlServerCe.dll e un riferimento a System.Threading.Tasks.Dataflow.dll.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-128">In your project, add a reference to System.Data.SqlServerCe.dll and a reference to System.Threading.Tasks.Dataflow.dll.</span></span>  
   
-3.  Assicurarsi che Form1.cs \(Form1.vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) contenga le seguenti istruzioni `using` \(`Imports` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\).  
+3.  <span data-ttu-id="1fcdc-129">Verificare che in Form1.cs (Form1. vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contiene quanto segue `using` (`Imports` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) le istruzioni.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-129">Ensure that Form1.cs (Form1.vb for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contains the following `using` (`Imports` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) statements.</span></span>  
   
      [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
      [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]  
   
-4.  Aggiungere i seguenti membri dati alla classe `Program`.  
+4.  <span data-ttu-id="1fcdc-130">Aggiungere i membri dei dati seguenti alla classe `Program`.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-130">Add the following data members to the `Program` class.</span></span>  
   
      [!code-csharp[TPLDataflow_BatchDatabase#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#2)]
      [!code-vb[TPLDataflow_BatchDatabase#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#2)]  
   
 <a name="employeeClass"></a>   
-## Definizione della classe Dipendente  
- Aggiungere alla classe `Program` la classe `Employee`.  
+## <a name="defining-the-employee-class"></a><span data-ttu-id="1fcdc-131">Definizione della classe dipendente</span><span class="sxs-lookup"><span data-stu-id="1fcdc-131">Defining the Employee Class</span></span>  
+ <span data-ttu-id="1fcdc-132">Aggiungere il `Program` classe il `Employee` classe.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-132">Add to the `Program` class the `Employee` class.</span></span>  
   
  [!code-csharp[TPLDataflow_BatchDatabase#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#3)]
  [!code-vb[TPLDataflow_BatchDatabase#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#3)]  
   
- La classe `Employee` contiene tre proprietà `EmployeeID`, `LastName` e `FirstName`.  Queste proprietà corrispondono alle colonne `Employee ID`, `Last Name` e `First Name` nella tabella `Employees` del database Northwind.  Per questa dimostrazione, la classe `Employee` definisce anche il metodo `Random`, che crea un oggetto `Employee` con valori casuali per le proprietà.  
+ <span data-ttu-id="1fcdc-133">Il `Employee` classe contiene tre proprietà, `EmployeeID`, `LastName`, e `FirstName`.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-133">The `Employee` class contains three properties, `EmployeeID`, `LastName`, and `FirstName`.</span></span> <span data-ttu-id="1fcdc-134">Queste proprietà corrispondono al `Employee ID`, `Last Name`, e `First Name` colonne il `Employees` tabella nel database Northwind.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-134">These properties correspond to the `Employee ID`, `Last Name`, and `First Name` columns in the `Employees` table in the Northwind database.</span></span> <span data-ttu-id="1fcdc-135">Per questa dimostrazione, il `Employee` classe definisce inoltre il `Random` metodo, che crea un `Employee` oggetto con valori casuali per le relative proprietà.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-135">For this demonstration, the `Employee` class also defines the `Random` method, which creates an `Employee` object that has random values for its properties.</span></span>  
   
 <a name="operations"></a>   
-## Definizione delle Operazioni del Database dei Dipendenti  
- Aggiungere alla classe `Program` i metodi `InsertEmployees`, `GetEmployeeCount` e `GetEmployeeID`.  
+## <a name="defining-employee-database-operations"></a><span data-ttu-id="1fcdc-136">Definizione di operazioni di Database di dipendenti</span><span class="sxs-lookup"><span data-stu-id="1fcdc-136">Defining Employee Database Operations</span></span>  
+ <span data-ttu-id="1fcdc-137">Aggiungere il `Program` classe il `InsertEmployees`, `GetEmployeeCount`, e `GetEmployeeID` metodi.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-137">Add to the `Program` class the `InsertEmployees`, `GetEmployeeCount`, and `GetEmployeeID` methods.</span></span>  
   
  [!code-csharp[TPLDataflow_BatchDatabase#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#4)]
  [!code-vb[TPLDataflow_BatchDatabase#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#4)]  
   
- Il metodo `InsertEmployees` aggiunge nuovi record dipendente al database.  Il metodo `GetEmployeeCount` recupera il numero di voci nella tabella `Employees`.  Il metodo `GetEmployeeID` recupera l'identificatore del primo dipendente con il nome specificato.  Ognuno di questi metodi accetta una stringa di connessione al database Northwind e utilizza le funzionalità nello spazio dei nomi `System.Data.SqlServerCe` per comunicare con il database.  
+ <span data-ttu-id="1fcdc-138">Il `InsertEmployees` metodo aggiunge nuovi record employee nel database.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-138">The `InsertEmployees` method adds new employee records to the database.</span></span> <span data-ttu-id="1fcdc-139">Il `GetEmployeeCount` metodo recupera il numero di voci di `Employees` tabella.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-139">The `GetEmployeeCount` method retrieves the number of entries in the `Employees` table.</span></span> <span data-ttu-id="1fcdc-140">Il `GetEmployeeID` che consente di recuperare l'identificatore del primo dipendente che ha il nome fornito.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-140">The `GetEmployeeID` method retrieves the identifier of the first employee that has the provided name.</span></span> <span data-ttu-id="1fcdc-141">Ognuno di questi metodi accetta una stringa di connessione al database Northwind e utilizza la funzionalità nel `System.Data.SqlServerCe` dello spazio dei nomi per comunicare con il database.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-141">Each of these methods takes a connection string to the Northwind database and uses functionality in the `System.Data.SqlServerCe` namespace to communicate with the database.</span></span>  
   
 <a name="nonBuffering"></a>   
-## Aggiunta di Dati dei Dipendenti al Database senza utilizzare il Buffer  
- Aggiungere alla classe `Program` i metodi `AddEmployees` e `PostRandomEmployees`.  
+## <a name="adding-employee-data-to-the-database-without-using-buffering"></a><span data-ttu-id="1fcdc-142">Aggiunta di dati dipendenti al Database senza l'utilizzo del buffer</span><span class="sxs-lookup"><span data-stu-id="1fcdc-142">Adding Employee Data to the Database Without Using Buffering</span></span>  
+ <span data-ttu-id="1fcdc-143">Aggiungere il `Program` classe il `AddEmployees` e `PostRandomEmployees` metodi.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-143">Add to the `Program` class the `AddEmployees` and `PostRandomEmployees` methods.</span></span>  
   
  [!code-csharp[TPLDataflow_BatchDatabase#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#5)]
  [!code-vb[TPLDataflow_BatchDatabase#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#5)]  
   
- Il metodo `AddEmployees` aggiunge dati casuali del dipendente al database tramite il flusso di dati.  Crea un oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> che chiama il metodo `InsertEmployees` per aggiungere una voce dipendente al database.  Il metodo `AddEmployees` chiama quindi il metodo `PostRandomEmployees` per inserire più oggetti `Employee` all'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>.  Il metodo `AddEmployees` attende che tutte le operazioni di inserimento finiscano.  
+ <span data-ttu-id="1fcdc-144">Il `AddEmployees` metodo aggiunge i dati dei dipendenti casuali al database utilizzando i flussi di dati.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-144">The `AddEmployees` method adds random employee data to the database by using dataflow.</span></span> <span data-ttu-id="1fcdc-145">Crea un <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> che chiama il `InsertEmployees` metodo per aggiungere una voce di dipendente per il database.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-145">It creates an <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object that calls the `InsertEmployees` method to add an employee entry to the database.</span></span> <span data-ttu-id="1fcdc-146">Il `AddEmployees` chiama quindi il `PostRandomEmployees` metodo per registrare più `Employee` oggetti per il <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> oggetto.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-146">The `AddEmployees` method then calls the `PostRandomEmployees` method to post multiple `Employee` objects to the <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object.</span></span> <span data-ttu-id="1fcdc-147">Il `AddEmployees` metodo attende quindi per tutte le operazioni al fine di inserimento.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-147">The `AddEmployees` method then waits for all insert operations to finish.</span></span>  
   
 <a name="buffering"></a>   
-## Utilizzo di Buffer per Aggiungere i Dati dei Dipendenti al Database  
- Aggiungere alla classe `Program` il metodo `AddEmployeesBatched`.  
+## <a name="using-buffering-to-add-employee-data-to-the-database"></a><span data-ttu-id="1fcdc-148">Utilizzo del buffer per aggiungere i dati dei dipendenti nel database</span><span class="sxs-lookup"><span data-stu-id="1fcdc-148">Using Buffering to Add Employee Data to the Database</span></span>  
+ <span data-ttu-id="1fcdc-149">Aggiungere il `Program` classe il `AddEmployeesBatched` metodo.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-149">Add to the `Program` class the `AddEmployeesBatched` method.</span></span>  
   
  [!code-csharp[TPLDataflow_BatchDatabase#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#6)]
  [!code-vb[TPLDataflow_BatchDatabase#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#6)]  
   
- Questo metodo è simile a `AddEmployees`, con la differenza che utilizza anche la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> per la memorizzazione nel buffer di più oggetti `Employee` prima di inviare tali oggetti all'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>.  Poiché la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> propaga più elementi come una raccolta, l'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> viene modificato per lavorare su un array di oggetti `Employee`.  Come nel metodo `AddEmployees`, `AddEmployeesBatched` chiama il metodo `PostRandomEmployees` per inserire più oggetti `Employee`; tuttavia, `AddEmployeesBatched` inserisce questi oggetti nell'oggetto <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>.  Il metodo `AddEmployeesBatched`  attende anche che tutte le operazioni di inserimento finiscano.  
+ <span data-ttu-id="1fcdc-150">Questo metodo è simile a `AddEmployees`, ad eccezione del fatto che viene utilizzato anche il <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> classe per memorizzare nel buffer più `Employee` oggetti prima dell'invio di tali oggetti per il <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> oggetto.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-150">This method resembles `AddEmployees`, except that it also uses the <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> class to buffer multiple `Employee` objects before it sends those objects to the <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object.</span></span> <span data-ttu-id="1fcdc-151">Poiché il <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> classe propaga più elementi come una raccolta, il <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> oggetto viene modificato per funzionare su una matrice di `Employee` oggetti.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-151">Because the <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> class propagates out multiple elements as a collection, the <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object is modified to act on an array of `Employee` objects.</span></span> <span data-ttu-id="1fcdc-152">Come nel `AddEmployees` (metodo), `AddEmployeesBatched` chiamate il `PostRandomEmployees` metodo per registrare più `Employee` oggetti; tuttavia, `AddEmployeesBatched` invia questi oggetti per il <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> oggetto.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-152">As in the `AddEmployees` method, `AddEmployeesBatched` calls the `PostRandomEmployees` method to post multiple `Employee` objects; however, `AddEmployeesBatched` posts these objects to the <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> object.</span></span> <span data-ttu-id="1fcdc-153">Il `AddEmployeesBatched` metodo attende inoltre che tutte le operazioni al fine di inserimento.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-153">The `AddEmployeesBatched`  method also waits for all insert operations to finish.</span></span>  
   
 <a name="bufferedJoin"></a>   
-## Utilizzo di Join bufferizzata per leggere i dati dei dipendenti dal database  
- Aggiungere alla classe `Program` il metodo `GetRandomEmployees`.  
+## <a name="using-buffered-join-to-read-employee-data-from-the-database"></a><span data-ttu-id="1fcdc-154">Utilizzando Join memorizzato nel buffer per leggere i dati dei dipendenti dal Database</span><span class="sxs-lookup"><span data-stu-id="1fcdc-154">Using Buffered Join to Read Employee Data from the Database</span></span>  
+ <span data-ttu-id="1fcdc-155">Aggiungere il `Program` classe il `GetRandomEmployees` metodo.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-155">Add to the `Program` class the `GetRandomEmployees` method.</span></span>  
   
  [!code-csharp[TPLDataflow_BatchDatabase#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#7)]
  [!code-vb[TPLDataflow_BatchDatabase#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#7)]  
   
- Questo metodo visualizza le informazioni sui dipendenti casuali nella console.  Crea diversi oggetti casuali `Employee` e chiama il metodo `GetEmployeeID` per recuperare l'identificatore univoco per ogni oggetto.  Poiché il metodo `GetEmployeeID` genera un'eccezione se non esiste alcun dipendente corrispondente al nome e cognome specificato, il metodo `GetRandomEmployees` utilizza la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> per archiviare oggetti `Employee` per le chiamate riuscite a `GetEmployeeID` e oggetti <xref:System.Exception?displayProperty=fullName> per le chiamate che falliscono.  L'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> in questo esempio agisce su un oggetto <xref:System.Tuple%602> che contiene un elenco di oggetti `Employee` e un elenco di oggetti <xref:System.Exception>.  L'oggetto <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> propaga questi dati quando la somma degli oggetti `Employee` e <xref:System.Exception> ricevuti equivale alle dimensioni del batch.  
+ <span data-ttu-id="1fcdc-156">Questo metodo visualizza informazioni sui dipendenti casuali nella console.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-156">This method prints information about random employees to the console.</span></span> <span data-ttu-id="1fcdc-157">Crea più casuale `Employee` oggetti e le chiamate di `GetEmployeeID` metodo per recuperare l'identificatore univoco per ogni oggetto.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-157">It creates several random `Employee` objects and calls the `GetEmployeeID` method to retrieve the unique identifier for each object.</span></span> <span data-ttu-id="1fcdc-158">Poiché il `GetEmployeeID` metodo genera un'eccezione se nessun dipendente corrispondenti con nomi e cognomi specificati, il `GetRandomEmployees` metodo utilizza il <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> classe per archiviare `Employee` oggetti per le chiamate con esito positivo per `GetEmployeeID` e <xref:System.Exception?displayProperty=nameWithType> oggetti per le chiamate che non riescono.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-158">Because the `GetEmployeeID` method throws an exception if there is no matching employee with the given first and last names, the `GetRandomEmployees` method uses the <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> class to store `Employee` objects for successful calls to `GetEmployeeID` and <xref:System.Exception?displayProperty=nameWithType> objects for calls that fail.</span></span> <span data-ttu-id="1fcdc-159">Il <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> oggetto in questo esempio agisce su un <xref:System.Tuple%602> oggetto che contiene un elenco di `Employee` oggetti e un elenco di <xref:System.Exception> oggetti.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-159">The <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object in this example acts on a <xref:System.Tuple%602> object that holds a list of `Employee` objects and a list of <xref:System.Exception> objects.</span></span> <span data-ttu-id="1fcdc-160">Il <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> oggetto propaga questi dati quando la somma della classe ricevuta `Employee` e <xref:System.Exception> il numero di oggetti è uguale alla dimensione di batch.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-160">The <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> object propagates out this data when the sum of the received `Employee` and <xref:System.Exception> object counts equals the batch size.</span></span>  
   
 <a name="complete"></a>   
-## Esempio completo  
- Nell'esempio seguente viene illustrato il codice completo.  Il metodo `Main` confronta il tempo necessario per eseguire gli inserimenti in batch del database rispetto al tempo per eseguire l'inserimento non in batch.  Viene inoltre illustrato l'utilizzo di join bufferizzato per leggere i dati dei dipendenti dal database e anche segnalare errori.  
+## <a name="the-complete-example"></a><span data-ttu-id="1fcdc-161">Esempio completo</span><span class="sxs-lookup"><span data-stu-id="1fcdc-161">The Complete Example</span></span>  
+ <span data-ttu-id="1fcdc-162">L'esempio seguente mostra il codice completo.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-162">The following example shows the complete code.</span></span> <span data-ttu-id="1fcdc-163">Il `Main` metodo confronta il tempo necessario per eseguire le operazioni di inserimento in batch di database rispetto al tempo per eseguire le operazioni di inserimento del database non in batch.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-163">The `Main` method compares the time that is required to perform batched database insertions versus the time to perform non-batched database insertions.</span></span> <span data-ttu-id="1fcdc-164">Viene inoltre illustrato l'utilizzo di join memorizzato nel buffer per leggere i dati dei dipendenti dal database e anche la segnalazione errori.</span><span class="sxs-lookup"><span data-stu-id="1fcdc-164">It also demonstrates the use of buffered join to read employee data from the database and also report errors.</span></span>  
   
  [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
  [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]  
   
-## Vedere anche  
- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="1fcdc-165">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1fcdc-165">See Also</span></span>  
+ [<span data-ttu-id="1fcdc-166">Flusso di dati</span><span class="sxs-lookup"><span data-stu-id="1fcdc-166">Dataflow</span></span>](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

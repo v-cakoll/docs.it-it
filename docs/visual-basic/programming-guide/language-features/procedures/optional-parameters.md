@@ -1,80 +1,78 @@
 ---
-title: "Optional Parameters (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "parameters, optional"
-  - "Visual Basic code, procedures"
-  - "procedures, optional arguments"
-  - "optional arguments"
-  - "named arguments, and optional arguments"
-  - "optional parameters"
-  - "Optional keyword, optional arguments"
-  - "arguments [Visual Basic], optional"
-  - "optional arguments, and named arguments"
+title: Parametri facoltativi (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- parameters [Visual Basic], optional
+- Visual Basic code, procedures
+- procedures [Visual Basic], optional arguments
+- optional arguments
+- named arguments [Visual Basic], and optional arguments
+- optional parameters
+- Optional keyword [Visual Basic], optional arguments
+- arguments [Visual Basic], optional
+- optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e57023f594cfe4cd79d59cc8541fcf18018de0ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Optional Parameters (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-È possibile specificare che un parametro di routine è facoltativo e non è necessario fornire alcun argomento quando la routine viene chiamata.  I *parametri facoltativi* sono indicati dalla parola chiave `Optional` nella definizione della routine.  È necessario attenersi alle regole che seguono:  
+# <a name="optional-parameters-visual-basic"></a><span data-ttu-id="a5cc0-102">Parametri facoltativi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a5cc0-102">Optional Parameters (Visual Basic)</span></span>
+<span data-ttu-id="a5cc0-103">È possibile specificare che un parametro di routine è facoltativo e non è necessario fornire alcun argomento quando la routine viene chiamata.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-103">You can specify that a procedure parameter is optional and no argument has to be supplied for it when the procedure is called.</span></span> <span data-ttu-id="a5cc0-104">*Parametri facoltativi* sono indicate con la `Optional` parola chiave nella definizione della routine.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-104">*Optional parameters* are indicated by the `Optional` keyword in the procedure definition.</span></span> <span data-ttu-id="a5cc0-105">È necessario attenersi alle regole che seguono:</span><span class="sxs-lookup"><span data-stu-id="a5cc0-105">The following rules apply:</span></span>  
   
--   È necessario che ciascun parametro facoltativo nella definizione della routine specifichi un valore predefinito.  
+-   <span data-ttu-id="a5cc0-106">È necessario che ciascun parametro facoltativo nella definizione della routine specifichi un valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-106">Every optional parameter in the procedure definition must specify a default value.</span></span>  
   
--   È necessario che tale valore predefinito per un parametro facoltativo sia un'espressione costante.  
+-   <span data-ttu-id="a5cc0-107">È necessario che tale valore predefinito per un parametro facoltativo sia un'espressione costante.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-107">The default value for an optional parameter must be a constant expression.</span></span>  
   
--   Ciascun parametro che segue un parametro facoltativo nella definizione della routine deve essere anch'esso facoltativo.  
+-   <span data-ttu-id="a5cc0-108">Ciascun parametro che segue un parametro facoltativo nella definizione della routine deve essere anch'esso facoltativo.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-108">Every parameter following an optional parameter in the procedure definition must also be optional.</span></span>  
   
- Nella sintassi seguente viene illustrata una dichiarazione di routine con un parametro facoltativo:  
+ <span data-ttu-id="a5cc0-109">Nella sintassi seguente viene illustrata una dichiarazione di routine con un parametro facoltativo:</span><span class="sxs-lookup"><span data-stu-id="a5cc0-109">The following syntax shows a procedure declaration with an optional parameter:</span></span>  
   
-```  
-Sub sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 = defaultvalue)  
+```vb  
+Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 = defaultvalue)  
 ```  
   
-## Chiamata di routine con parametri facoltativi  
- Quando si chiama una routine con un parametro facoltativo, è possibile scegliere se fornire l'argomento o meno.  Se non lo si fornisce, la routine utilizza il valore predefinito dichiarato per quel parametro.  
+## <a name="calling-procedures-with-optional-parameters"></a><span data-ttu-id="a5cc0-110">Chiamata di routine con parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="a5cc0-110">Calling Procedures with Optional Parameters</span></span>  
+ <span data-ttu-id="a5cc0-111">Quando si chiama una routine con un parametro facoltativo, è possibile scegliere se fornire l'argomento o meno.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-111">When you call a procedure with an optional parameter, you can choose whether to supply the argument.</span></span> <span data-ttu-id="a5cc0-112">Se non lo si fornisce, la routine utilizza il valore predefinito dichiarato per quel parametro.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-112">If you do not, the procedure uses the default value declared for that parameter.</span></span>  
   
- Quando si omettono uno o più argomenti facoltativi nell'elenco degli argomenti, utilizzare virgole in sequenza per contrassegnarne la posizione.  La chiamata di esempio che segue fornisce il primo e il quarto argomento, ma non il secondo o il terzo:  
+ <span data-ttu-id="a5cc0-113">Quando si omettono uno o più argomenti facoltativi nell'elenco degli argomenti, utilizzare virgole in sequenza per contrassegnarne la posizione.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-113">When you omit one or more optional arguments in the argument list, you use successive commas to mark their positions.</span></span> <span data-ttu-id="a5cc0-114">La chiamata di esempio che segue fornisce il primo e il quarto argomento, ma non il secondo o il terzo:</span><span class="sxs-lookup"><span data-stu-id="a5cc0-114">The following example call supplies the first and fourth arguments but not the second or third:</span></span>  
   
+```vb  
+Sub name(argument 1, , , argument 4)  
 ```  
   
-sub name(argument 1, , , argument 4)  
-```  
+ <span data-ttu-id="a5cc0-115">Nell'esempio riportato di seguito vengono effettuate diverse chiamate alla funzione `MsgBox`.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-115">The following example makes several calls to the `MsgBox` function.</span></span> <span data-ttu-id="a5cc0-116">`MsgBox` include un parametro obbligatorio e due parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-116">`MsgBox` has one required parameter and two optional parameters.</span></span>  
   
- Nell'esempio riportato di seguito vengono effettuate diverse chiamate alla funzione `MsgBox` che include un parametro obbligatorio e due parametri facoltativi.  
-  
- Nella prima chiamata a `MsgBox` vengono forniti tutti e tre gli argomenti nell'ordine in cui sono definiti da `MsgBox`.  Nella seconda chiamata viene fornito solo l'argomento obbligatorio.  Nella terza e quarta chiamata vengono forniti il primo e il terzo argomento.  Nella terza chiamata gli argomenti vengono forniti in base alla posizione, nella quarta in base al nome.  
+ <span data-ttu-id="a5cc0-117">Nella prima chiamata a `MsgBox` vengono forniti tutti e tre gli argomenti nell'ordine in cui sono definiti da `MsgBox`.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-117">The first call to `MsgBox` supplies all three arguments in the order that `MsgBox` defines them.</span></span> <span data-ttu-id="a5cc0-118">Nella seconda chiamata viene fornito solo l'argomento obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-118">The second call supplies only the required argument.</span></span> <span data-ttu-id="a5cc0-119">Nella terza e quarta chiamata vengono forniti il primo e il terzo argomento.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-119">The third and fourth calls supply the first and third arguments.</span></span> <span data-ttu-id="a5cc0-120">Nella terza chiamata gli argomenti vengono forniti in base alla posizione, nella quarta in base al nome.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-120">The third call does this by position, and the fourth call does it by name.</span></span>  
   
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
-## Determinazione dell'eventuale presenza di un argomento facoltativo  
- Una routine non può rilevare, in fase di esecuzione, se un determinato argomento è stato omesso o se il codice di chiamata ha fornito in modo esplicito il valore predefinito.  Se è necessario fare questa distinzione, è possibile impostare come predefinito un valore improbabile.  La routine riportata di seguito definisce il parametro facoltativo `office` e ne verifica il valore predefinito,  `QJZ`, per controllare se è stato omesso nella chiamata:  
+## <a name="determining-whether-an-optional-argument-is-present"></a><span data-ttu-id="a5cc0-121">Determinazione dell'eventuale presenza di un argomento facoltativo</span><span class="sxs-lookup"><span data-stu-id="a5cc0-121">Determining Whether an Optional Argument Is Present</span></span>  
+ <span data-ttu-id="a5cc0-122">Una routine non può rilevare, in fase di esecuzione, se un determinato argomento è stato omesso o se il codice di chiamata ha fornito in modo esplicito il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-122">A procedure cannot detect at run time whether a given argument has been omitted or the calling code has explicitly supplied the default value.</span></span> <span data-ttu-id="a5cc0-123">Se è necessario fare questa distinzione, è possibile impostare come predefinito un valore improbabile.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-123">If you need to make this distinction, you can set an unlikely value as the default.</span></span> <span data-ttu-id="a5cc0-124">La procedura seguente definisce il parametro facoltativo `office`e verifica il valore predefinito, `QJZ`, per vedere se è stato omesso nella chiamata:</span><span class="sxs-lookup"><span data-stu-id="a5cc0-124">The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:</span></span>  
   
  [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
- Se il parametro facoltativo è un tipo di riferimento come `String`, è possibile utilizzare `Nothing` come valore predefinito, a meno che esso non sia un valore previsto per l'argomento.  
+ <span data-ttu-id="a5cc0-125">Se il parametro facoltativo è un tipo di riferimento come `String`, è possibile utilizzare `Nothing` come valore predefinito, a meno che esso non sia un valore previsto per l'argomento.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-125">If the optional parameter is a reference type such as a `String`, you can use `Nothing` as the default value, provided this is not an expected value for the argument.</span></span>  
   
-## Parametri facoltativi e overload  
- Un altro modo per definire una routine con parametri facoltativi consiste nell'utilizzare l'overload.  Nel caso di un parametro facoltativo, è possibile definire due versioni di overload della routine, una con il parametro e l'altra senza.  Questo metodo diventa più complesso con l'aumentare del numero dei parametri facoltativi,  tuttavia ha il vantaggio di assicurare che il programma di chiamata fornisca tutti gli argomenti facoltativi.  
+## <a name="optional-parameters-and-overloading"></a><span data-ttu-id="a5cc0-126">Parametri facoltativi e overload</span><span class="sxs-lookup"><span data-stu-id="a5cc0-126">Optional Parameters and Overloading</span></span>  
+ <span data-ttu-id="a5cc0-127">Un altro modo per definire una routine con parametri facoltativi consiste nell'utilizzare l'overload.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-127">Another way to define a procedure with optional parameters is to use overloading.</span></span> <span data-ttu-id="a5cc0-128">Nel caso di un parametro facoltativo, è possibile definire due versioni di overload della routine, una con il parametro e l'altra senza.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-128">If you have one optional parameter, you can define two overloaded versions of the procedure, one accepting the parameter and one without it.</span></span> <span data-ttu-id="a5cc0-129">Questo metodo diventa più complesso con l'aumentare del numero dei parametri facoltativi,</span><span class="sxs-lookup"><span data-stu-id="a5cc0-129">This approach becomes more complicated as the number of optional parameters increases.</span></span> <span data-ttu-id="a5cc0-130">tuttavia ha il vantaggio di assicurare che il programma di chiamata fornisca tutti gli argomenti facoltativi.</span><span class="sxs-lookup"><span data-stu-id="a5cc0-130">However, its advantage is that you can be absolutely sure whether the calling program supplied each optional argument.</span></span>  
   
-## Vedere anche  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Passing Arguments by Position and by Name](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [Parameter Arrays](../../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)   
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a><span data-ttu-id="a5cc0-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a5cc0-131">See Also</span></span>  
+ [<span data-ttu-id="a5cc0-132">Routine</span><span class="sxs-lookup"><span data-stu-id="a5cc0-132">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="a5cc0-133">Parametri e argomenti delle routine</span><span class="sxs-lookup"><span data-stu-id="a5cc0-133">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="a5cc0-134">Passaggio di argomenti per valore e per riferimento</span><span class="sxs-lookup"><span data-stu-id="a5cc0-134">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="a5cc0-135">Passaggio di argomenti in base alla posizione e al nome</span><span class="sxs-lookup"><span data-stu-id="a5cc0-135">Passing Arguments by Position and by Name</span></span>](./passing-arguments-by-position-and-by-name.md)  
+ [<span data-ttu-id="a5cc0-136">Matrici di parametri</span><span class="sxs-lookup"><span data-stu-id="a5cc0-136">Parameter Arrays</span></span>](./parameter-arrays.md)  
+ [<span data-ttu-id="a5cc0-137">Overload della routine</span><span class="sxs-lookup"><span data-stu-id="a5cc0-137">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="a5cc0-138">Optional</span><span class="sxs-lookup"><span data-stu-id="a5cc0-138">Optional</span></span>](../../../../visual-basic/language-reference/modifiers/optional.md)  
+ [<span data-ttu-id="a5cc0-139">ParamArray</span><span class="sxs-lookup"><span data-stu-id="a5cc0-139">ParamArray</span></span>](../../../../visual-basic/language-reference/modifiers/paramarray.md)

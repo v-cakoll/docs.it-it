@@ -1,107 +1,113 @@
 ---
-title: "Costrutti vari nelle espressioni regolari | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espressioni regolari di .NET Framework, costrutti vari"
-  - "costrutti, varie"
-  - "espressioni regolari, costrutti vari"
+title: Costrutti vari nelle espressioni regolari
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- constructs, miscellaneous
+- .NET Framework regular expressions, miscellaneous constructs
+- regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 9b33d196a7af9bc5a1f81c1624bbd98fea074319
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Costrutti vari nelle espressioni regolari
-Le espressioni regolari in .NET Framework includono tre costrutti di linguaggio misti.  Consente di abilitare o disabilitare opzioni di corrispondenza specifiche all'interno di un modello di espressione regolare.  I due restanti consentono di includere commenti in un'espressione regolare.  
+# <a name="miscellaneous-constructs-in-regular-expressions"></a><span data-ttu-id="610d0-102">Costrutti vari nelle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="610d0-102">Miscellaneous Constructs in Regular Expressions</span></span>
+<span data-ttu-id="610d0-103">Le espressioni regolari in .NET includono tre costrutti vari di linguaggio.</span><span class="sxs-lookup"><span data-stu-id="610d0-103">Regular expressions in .NET include three miscellaneous language constructs.</span></span> <span data-ttu-id="610d0-104">Uno consente di abilitare o disabilitare opzioni di corrispondenza specifiche all'interno di un modello dell'espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="610d0-104">One lets you enable or disable particular matching options in the middle of a regular expression pattern.</span></span> <span data-ttu-id="610d0-105">I restanti due consentono di includere commenti in un'espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="610d0-105">The remaining two let you include comments in a regular expression.</span></span>  
   
-## Opzioni Inline  
- È possibile impostare o disabilitare opzioni del criterio di ricerca specifiche per parte di un'espressione regolare tramite la sintassi  
+## <a name="inline-options"></a><span data-ttu-id="610d0-106">Opzioni inline</span><span class="sxs-lookup"><span data-stu-id="610d0-106">Inline Options</span></span>  
+ <span data-ttu-id="610d0-107">È possibile impostare o disabilitare opzioni di corrispondenza specifiche del modello per una parte di espressione regolare usando la sintassi</span><span class="sxs-lookup"><span data-stu-id="610d0-107">You can set or disable specific pattern matching options for part of a regular expression by using the syntax</span></span>  
   
 ```  
 (?imnsx-imnsx)  
 ```  
   
- Si elencano le opzioni che si desidera attivare dopo il punto interrogativo e le opzioni che si desidera disabilitare dopo il segno di sottrazione.  Nella tabella seguente viene descritta ciascuna opzione.  Per ulteriori informazioni su ogni opzione, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="610d0-108">Elencare le opzioni da abilitare dopo il punto interrogativo e le opzioni da disabilitare dopo il segno di sottrazione.</span><span class="sxs-lookup"><span data-stu-id="610d0-108">You list the options you want to enable after the question mark, and the options you want to disable after the minus sign.</span></span> <span data-ttu-id="610d0-109">Nella tabella seguente viene descritta ciascuna opzione.</span><span class="sxs-lookup"><span data-stu-id="610d0-109">The following table describes each option.</span></span> <span data-ttu-id="610d0-110">Per altre informazioni su ciascuna opzione, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="610d0-110">For more information about each option, see [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|`i`|Corrispondenza che non fa distinzione tra maiuscole e minuscole.|  
-|`m`|Modalità multiriga.|  
-|`n`|Solo acquisizioni esplicite. \(Le parentesi non funzionano come gruppi di acquisizione.\)|  
-|`s`|Modalità a riga singola.|  
-|`x`|Ignora spazi vuoti non validi e consenti i commenti in modalità X.|  
+|<span data-ttu-id="610d0-111">Opzione</span><span class="sxs-lookup"><span data-stu-id="610d0-111">Option</span></span>|<span data-ttu-id="610d0-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="610d0-112">Description</span></span>|  
+|------------|-----------------|  
+|`i`|<span data-ttu-id="610d0-113">Corrispondenza senza distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="610d0-113">Case-insensitive matching.</span></span>|  
+|`m`|<span data-ttu-id="610d0-114">Modalità multiriga.</span><span class="sxs-lookup"><span data-stu-id="610d0-114">Multiline mode.</span></span>|  
+|`n`|<span data-ttu-id="610d0-115">Solo acquisizioni esplicite.</span><span class="sxs-lookup"><span data-stu-id="610d0-115">Explicit captures only.</span></span> <span data-ttu-id="610d0-116">Le parentesi non fungono da gruppi di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="610d0-116">(Parentheses do not act as capturing groups.)</span></span>|  
+|`s`|<span data-ttu-id="610d0-117">Modalità a riga singola.</span><span class="sxs-lookup"><span data-stu-id="610d0-117">Single-line mode.</span></span>|  
+|`x`|<span data-ttu-id="610d0-118">Ignora gli spazi vuoti senza escape e consente commenti in modalità X.</span><span class="sxs-lookup"><span data-stu-id="610d0-118">Ignore unescaped white space, and allow x-mode comments.</span></span>|  
   
- Qualsiasi modifica nelle opzioni dell'espressione regolare definita dal costrutto `(?imnsx-imnsx)` rimane attiva fino alla fine del gruppo di inclusione.  
+ <span data-ttu-id="610d0-119">Qualsiasi modifica nelle opzioni di espressione regolare definito dal `(?imnsx-imnsx)` costruire rimane attivo fino alla fine del gruppo di inclusione.</span><span class="sxs-lookup"><span data-stu-id="610d0-119">Any change in regular expression options defined by the `(?imnsx-imnsx)` construct remains in effect until the end of the enclosing group.</span></span>  
   
 > [!NOTE]
->  Il costrutto di raggruppamento `(?imnsx-imnsx:`*subexpression*`)` fornisce la funzionalità identica per una sottoespressione.  Per ulteriori informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  <span data-ttu-id="610d0-120">Il `(?imnsx-imnsx:` *sottoespressione* `)` costrutto di raggruppamento fornisce funzionalità identiche per una sottoespressione.</span><span class="sxs-lookup"><span data-stu-id="610d0-120">The `(?imnsx-imnsx:`*subexpression*`)` grouping construct provides identical functionality for a subexpression.</span></span> <span data-ttu-id="610d0-121">Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="610d0-121">For more information, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
- Nell'esempio seguente vengono utilizzate le opzioni `i`, `n` e `x` per attivare la mancata distinzione tra maiuscole e minuscole e le acquisizioni esplicite, e per ignorare lo spazio vuoto nel criterio dell'espressione regolare all'interno di un'espressione regolare.  
+ <span data-ttu-id="610d0-122">L'esempio seguente usa il `i`, `n`, e `x` opzioni per abilitare tra maiuscole e minuscole e le acquisizioni esplicite e per ignorare gli spazi vuoti nel criterio di espressione regolare all'interno di un'espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="610d0-122">The following example uses the `i`, `n`, and `x` options to enable case insensitivity and explicit captures, and to ignore white space in the regular expression pattern in the middle of a regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
   
- Nell'esempio vengono definite due espressioni regolari.  Il primo, `\b(D\w+)\s(d\w+)\b`, corrisponde a due parole consecutive che iniziano con una "D" maiuscola e una "d" minuscola.  La seconda espressione regolare, `\b(D\w+)(?ixn) \s (d\w+) \b`, utilizza opzioni inline per modificare questo modello, come descritto nella tabella seguente.  Un confronto dei risultati conferma l'effetto del costrutto `(?ixn)`.  
+ <span data-ttu-id="610d0-123">Nell'esempio vengono definite due espressioni regolari.</span><span class="sxs-lookup"><span data-stu-id="610d0-123">The example defines two regular expressions.</span></span> <span data-ttu-id="610d0-124">La prima, `\b(D\w+)\s(d\w+)\b`, corrisponde a due parole consecutive che iniziano con una "D" maiuscola e una "d" minuscola.</span><span class="sxs-lookup"><span data-stu-id="610d0-124">The first, `\b(D\w+)\s(d\w+)\b`, matches two consecutive words that begin with an uppercase "D" and a lowercase "d".</span></span> <span data-ttu-id="610d0-125">La seconda espressione regolare, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opzioni inline per modificare questo modello, come descritto nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="610d0-125">The second regular expression, `\b(D\w+)(?ixn) \s (d\w+) \b`, uses inline options to modify this pattern, as described in the following table.</span></span> <span data-ttu-id="610d0-126">Confrontando i risultati viene confermato l'effetto del costrutto `(?ixn)`.</span><span class="sxs-lookup"><span data-stu-id="610d0-126">A comparison of the results confirms the effect of the `(?ixn)` construct.</span></span>  
   
-|Modello|Descrizione|  
+|<span data-ttu-id="610d0-127">Criterio</span><span class="sxs-lookup"><span data-stu-id="610d0-127">Pattern</span></span>|<span data-ttu-id="610d0-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="610d0-128">Description</span></span>|  
 |-------------|-----------------|  
-|`\b`|Iniziare dal confine di una parola.|  
-|`(D\w+)`|Corrisponde a una "D" maiuscola seguita da uno o più caratteri alfanumerici.  Si tratta del primo gruppo di acquisizione.|  
-|`(?ixn)`|Da questo punto in avanti, effettuare confronti senza distinzione tra maiuscole e minuscole, fare solo acquisizioni esplicite e ignorare gli spazi vuoti nel criterio di espressione regolare.|  
-|`\s`|Trovare la corrispondenza di uno spazio vuoto.|  
-|`(d\w+)`|Corrisponde a una "d" maiuscola o minuscola seguita da uno o più caratteri alfanumerici.  Questo gruppo non viene acquisito perché è stata attivata l'opzione `n` \(acquisizione esplicita\).|  
-|`\b`|Trovare la corrispondenza di un confine di parola.|  
+|`\b`|<span data-ttu-id="610d0-129">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="610d0-129">Start at a word boundary.</span></span>|  
+|`(D\w+)`|<span data-ttu-id="610d0-130">Trovare la corrispondenza di una "D" maiuscola seguita da uno o più caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="610d0-130">Match a capital "D" followed by one or more word characters.</span></span> <span data-ttu-id="610d0-131">Equivale al primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="610d0-131">This is the first capture group.</span></span>|  
+|`(?ixn)`|<span data-ttu-id="610d0-132">Da questo momento eseguire confronti senza distinzione tra maiuscole e minuscole, eseguire solo acquisizioni esplicite e ignorare gli spazi vuoti nel modello dell'espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="610d0-132">From this point on, make comparisons case-insensitive, make only explicit captures, and ignore white space in the regular expression pattern.</span></span>|  
+|`\s`|<span data-ttu-id="610d0-133">Trova la corrispondenza con uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="610d0-133">Match a white-space character.</span></span>|  
+|`(d\w+)`|<span data-ttu-id="610d0-134">Trovare la corrispondenza di una "d" minuscola seguita da uno o più caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="610d0-134">Match an uppercase or lowercase "d" followed by one or more word characters.</span></span> <span data-ttu-id="610d0-135">Questo gruppo non viene acquisito in quanto il `n` è stata abilitata l'opzione (acquisizione esplicita)...</span><span class="sxs-lookup"><span data-stu-id="610d0-135">This group is not captured because the `n` (explicit capture) option was enabled..</span></span>|  
+|`\b`|<span data-ttu-id="610d0-136">Trova la corrispondenza di un confine di parola.</span><span class="sxs-lookup"><span data-stu-id="610d0-136">Match a word boundary.</span></span>|  
   
-## Commento Inline  
- Il costrutto `(?#` *comment*`)` consente di includere un commento inline in un'espressione regolare.  Il motore delle espressioni regolari non utilizza parti del commento nella corrispondenza tra modelli, anche se il commento è incluso nella stringa restituita dal metodo <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=fullName>.  Il commento termina in corrispondenza della prima parentesi chiusa.  
+## <a name="inline-comment"></a><span data-ttu-id="610d0-137">Commento inline</span><span class="sxs-lookup"><span data-stu-id="610d0-137">Inline Comment</span></span>  
+ <span data-ttu-id="610d0-138">Il `(?#` *commento* `)` costrutto consente di includere un commento inline in un'espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="610d0-138">The `(?#` *comment*`)` construct lets you include an inline comment in a regular expression.</span></span> <span data-ttu-id="610d0-139">Il motore delle espressioni regolari Usa qualsiasi parte del commento nella corrispondenza, anche se il commento è incluso nella stringa restituita dal <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> metodo.</span><span class="sxs-lookup"><span data-stu-id="610d0-139">The regular expression engine does not use any part of the comment in pattern matching, although the comment is included in the string that is returned by the <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="610d0-140">Il commento termina in corrispondenza della prima parentesi chiusa.</span><span class="sxs-lookup"><span data-stu-id="610d0-140">The comment ends at the first closing parenthesis.</span></span>  
   
- Nell'esempio riportato di seguito viene ripetuto il primo modello di espressione regolare dell'esempio fornito nella sezione precedente.  Aggiunge due commenti inline all'espressione regolare per indicare se il confronto prevede la distinzione tra maiuscole e minuscole.  Il modello dell'espressione regolare, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, viene definito nel seguente modo.  
+ <span data-ttu-id="610d0-141">Nell'esempio seguente viene ripetuto il primo criterio dell'espressione regolare dell'esempio nella sezione precedente.</span><span class="sxs-lookup"><span data-stu-id="610d0-141">The following example repeats the first regular expression pattern from the example in the previous section.</span></span> <span data-ttu-id="610d0-142">Vengono aggiunti due commenti inline all'espressione regolare per indicare se il confronto fa distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="610d0-142">It adds two inline comments to the regular expression to indicate whether the comparison is case-sensitive.</span></span> <span data-ttu-id="610d0-143">Il modello dell'espressione regolare, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, viene definito nel modo seguente.</span><span class="sxs-lookup"><span data-stu-id="610d0-143">The regular expression pattern, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, is defined as follows.</span></span>  
   
-|Modello|Descrizione|  
+|<span data-ttu-id="610d0-144">Criterio</span><span class="sxs-lookup"><span data-stu-id="610d0-144">Pattern</span></span>|<span data-ttu-id="610d0-145">Descrizione</span><span class="sxs-lookup"><span data-stu-id="610d0-145">Description</span></span>|  
 |-------------|-----------------|  
-|`\b`|Iniziare dal confine di una parola.|  
-|`(?# case-sensitive comparison)`|Commento.  Non influisce sul comportamento dei criteri di ricerca.|  
-|`(D\w+)`|Corrisponde a una "D" maiuscola seguita da uno o più caratteri alfanumerici.  Primo gruppo di acquisizione.|  
-|`\s`|Trovare la corrispondenza di uno spazio vuoto.|  
-|`(?ixn)`|Da questo punto in avanti, effettuare confronti senza distinzione tra maiuscole e minuscole, fare solo acquisizioni esplicite e ignorare gli spazi vuoti nel criterio di espressione regolare.|  
-|`(?#case-insensitive comparison)`|Commento.  Non influisce sul comportamento dei criteri di ricerca.|  
-|`(d\w+)`|Corrisponde a una "d" maiuscola o minuscola seguita da uno o più caratteri alfanumerici.  Si tratta del secondo gruppo di acquisizione.|  
-|`\b`|Trovare la corrispondenza di un confine di parola.|  
+|`\b`|<span data-ttu-id="610d0-146">Inizia dal confine di una parola.</span><span class="sxs-lookup"><span data-stu-id="610d0-146">Start at a word boundary.</span></span>|  
+|`(?# case-sensitive comparison)`|<span data-ttu-id="610d0-147">Un commento.</span><span class="sxs-lookup"><span data-stu-id="610d0-147">A comment.</span></span> <span data-ttu-id="610d0-148">Non influisce sul comportamento della corrispondenza tra modelli.</span><span class="sxs-lookup"><span data-stu-id="610d0-148">It does not affect pattern-matching behavior.</span></span>|  
+|`(D\w+)`|<span data-ttu-id="610d0-149">Trovare la corrispondenza di una "D" maiuscola seguita da uno o più caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="610d0-149">Match a capital "D" followed by one or more word characters.</span></span> <span data-ttu-id="610d0-150">Equivale al primo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="610d0-150">This is the first capturing group.</span></span>|  
+|`\s`|<span data-ttu-id="610d0-151">Trova la corrispondenza con uno spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="610d0-151">Match a white-space character.</span></span>|  
+|`(?ixn)`|<span data-ttu-id="610d0-152">Da questo momento eseguire confronti senza distinzione tra maiuscole e minuscole, eseguire solo acquisizioni esplicite e ignorare gli spazi vuoti nel modello dell'espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="610d0-152">From this point on, make comparisons case-insensitive, make only explicit captures, and ignore white space in the regular expression pattern.</span></span>|  
+|`(?#case-insensitive comparison)`|<span data-ttu-id="610d0-153">Un commento.</span><span class="sxs-lookup"><span data-stu-id="610d0-153">A comment.</span></span> <span data-ttu-id="610d0-154">Non influisce sul comportamento della corrispondenza tra modelli.</span><span class="sxs-lookup"><span data-stu-id="610d0-154">It does not affect pattern-matching behavior.</span></span>|  
+|`(d\w+)`|<span data-ttu-id="610d0-155">Trovare la corrispondenza di una "d" minuscola seguita da uno o più caratteri alfanumerici.</span><span class="sxs-lookup"><span data-stu-id="610d0-155">Match an uppercase or lowercase "d" followed by one or more word characters.</span></span> <span data-ttu-id="610d0-156">Equivale al secondo gruppo di acquisizione.</span><span class="sxs-lookup"><span data-stu-id="610d0-156">This is the second capture group.</span></span>|  
+|`\b`|<span data-ttu-id="610d0-157">Trova la corrispondenza di un confine di parola.</span><span class="sxs-lookup"><span data-stu-id="610d0-157">Match a word boundary.</span></span>|  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous2.cs#2)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
-## Commento a fine riga  
- Un simbolo di cancelletto \(`#`\) contrassegna un commento in modalità x che inizia dal valore senza caratteri escape \# alla fine del criterio di espressione regolare e continua fino alla fine della riga.  Per utilizzare questo costrutto, è necessario attivare l'opzione `x` \(tramite opzioni inline\) o fornire il valore <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> al parametro `option` in caso di creazione di un'istanza dell'oggetto <xref:System.Text.RegularExpressions.Regex> o di chiamata a un metodo statico di <xref:System.Text.RegularExpressions.Regex>.  
+## <a name="end-of-line-comment"></a><span data-ttu-id="610d0-158">Commento di fine riga</span><span class="sxs-lookup"><span data-stu-id="610d0-158">End-of-Line Comment</span></span>  
+ <span data-ttu-id="610d0-159">Un simbolo di cancelletto (`#`) contrassegna un commento in modalità x, che inizia in corrispondenza del carattere di escape # alla fine del criterio di espressione regolare e continua fino alla fine della riga.</span><span class="sxs-lookup"><span data-stu-id="610d0-159">A number sign (`#`)marks an x-mode comment, which starts at the unescaped # character at the end of the regular expression pattern and continues until the end of the line.</span></span> <span data-ttu-id="610d0-160">Per utilizzare questo costrutto, è necessario attivare il `x` opzione (tramite le opzioni inline) o specificare il <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> valore per il `option` parametro quando si crea il <xref:System.Text.RegularExpressions.Regex> oggetto o la chiamata a un valore statico <xref:System.Text.RegularExpressions.Regex> metodo.</span><span class="sxs-lookup"><span data-stu-id="610d0-160">To use this construct, you must either enable the `x` option (through inline options) or supply the <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> value to the `option` parameter when instantiating the <xref:System.Text.RegularExpressions.Regex> object or calling a static <xref:System.Text.RegularExpressions.Regex> method.</span></span>  
   
- Nell'esempio seguente viene illustrato il costrutto del commento di fine riga.  Determina se una stringa è una stringa di formato composto che include almeno un elemento di formato.  Nella tabella riportata di seguito vengono descritti i costrutti nel modello dell'espressione regolare:  
+ <span data-ttu-id="610d0-161">L'esempio seguente illustra il costrutto del commento di fine riga.</span><span class="sxs-lookup"><span data-stu-id="610d0-161">The following example illustrates the end-of-line comment construct.</span></span> <span data-ttu-id="610d0-162">Determina se una stringa è una stringa di formato composito che include almeno un elemento di formato.</span><span class="sxs-lookup"><span data-stu-id="610d0-162">It determines whether a string is a composite format string that includes at least one format item.</span></span> <span data-ttu-id="610d0-163">La tabella seguente descrive i costrutti nel modello dell'espressione regolare:</span><span class="sxs-lookup"><span data-stu-id="610d0-163">The following table describes the constructs in the regular expression pattern:</span></span>  
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Modello|Descrizione|  
+|<span data-ttu-id="610d0-164">Criterio</span><span class="sxs-lookup"><span data-stu-id="610d0-164">Pattern</span></span>|<span data-ttu-id="610d0-165">Descrizione</span><span class="sxs-lookup"><span data-stu-id="610d0-165">Description</span></span>|  
 |-------------|-----------------|  
-|`\{`|Corrisponde a una parentesi graffa aperta.|  
-|`\d+`|Corrisponde a una o più cifre decimali.|  
-|`(,-*\d+)*`|Corrisponde a zero o a un'occorrenza di una virgola, seguita da un segno di sottrazione facoltativo, seguito da una o più cifre decimali.|  
-|`(\:\w{1,4}?)*`|Corrisponde a zero o a un'occorrenza del segno dei due punti, seguito da 1\-4 spazi vuoti \(ma comunque il minor numero di caratteri possibile\).|  
-|`(?#case insensitive comparison)`|Commento inline.  Non ha alcun effetto sul comportamento dei criteri di ricerca.|  
-|`\}`|Corrisponde a una parentesi graffa di chiusura.|  
-|`(?x)`|Attiva l'opzione per ignorare gli spazi vuoti nei motivi per riconoscere il commento a fine riga.|  
-|`# Looks for a composite format item.`|Un commento a fine riga.|  
+|`\{`|<span data-ttu-id="610d0-166">Trovare la corrispondenza con una parentesi graffa di apertura.</span><span class="sxs-lookup"><span data-stu-id="610d0-166">Match an opening brace.</span></span>|  
+|`\d+`|<span data-ttu-id="610d0-167">Trova la corrispondenza con una o più cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="610d0-167">Match one or more decimal digits.</span></span>|  
+|`(,-*\d+)*`|<span data-ttu-id="610d0-168">Trovare la corrispondenza con zero o una occorrenza di una virgola, seguita da un segno di sottrazione, seguito da una o più cifre decimali.</span><span class="sxs-lookup"><span data-stu-id="610d0-168">Match zero or one occurrence of a comma, followed by an optional minus sign, followed by one or more decimal digits.</span></span>|  
+|`(\:\w{1,4}?)*`|<span data-ttu-id="610d0-169">Trovare la corrispondenza con zero o una occorrenza del segno di due punti, seguito dal numero minimo possibile di caratteri di spazio vuoto tra uno e quattro.</span><span class="sxs-lookup"><span data-stu-id="610d0-169">Match zero or one occurrence of a colon, followed by one to four, but as few as possible, white-space characters.</span></span>|  
+|`(?#case insensitive comparison)`|<span data-ttu-id="610d0-170">Un commento inline.</span><span class="sxs-lookup"><span data-stu-id="610d0-170">An inline comment.</span></span> <span data-ttu-id="610d0-171">Non ha effetto sul comportamento della corrispondenza tra modelli.</span><span class="sxs-lookup"><span data-stu-id="610d0-171">It has no effect on pattern-matching behavior.</span></span>|  
+|`\}`|<span data-ttu-id="610d0-172">Trovare la corrispondenza con una parentesi graffa di chiusura.</span><span class="sxs-lookup"><span data-stu-id="610d0-172">Match a closing brace.</span></span>|  
+|`(?x)`|<span data-ttu-id="610d0-173">Abilitare l'opzione per ignorare gli spazi vuoti nel modello in modo che il commento di fine riga venga riconosciuto.</span><span class="sxs-lookup"><span data-stu-id="610d0-173">Enable the ignore pattern white-space option so that the end-of-line comment will be recognized.</span></span>|  
+|`# Looks for a composite format item.`|<span data-ttu-id="610d0-174">Un commento di fine riga.</span><span class="sxs-lookup"><span data-stu-id="610d0-174">An end-of-line comment.</span></span>|  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- Anziché fornire il costrutto `(?x)` nell'espressione regolare, sarebbe stato possibile riconoscere il commento chiamando il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=fullName> e passandogli il valore di enumerazione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  
+ <span data-ttu-id="610d0-175">Si noti che, invece di fornire il `(?x)` costruire nell'espressione regolare, il commento potrebbe anche riconosciuto chiamando il <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metodo e passando il <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> valore di enumerazione.</span><span class="sxs-lookup"><span data-stu-id="610d0-175">Note that, instead of providing the `(?x)` construct in the regular expression, the comment could also have been recognized by calling the <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> method and passing it the <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> enumeration value.</span></span>  
   
-## Vedere anche  
- [Linguaggio di espressioni regolari \- Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a><span data-ttu-id="610d0-176">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="610d0-176">See Also</span></span>  
+ [<span data-ttu-id="610d0-177">Linguaggio di espressioni regolari - Riferimento rapido</span><span class="sxs-lookup"><span data-stu-id="610d0-177">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

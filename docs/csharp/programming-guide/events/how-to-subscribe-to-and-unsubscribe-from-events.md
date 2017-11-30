@@ -1,65 +1,47 @@
 ---
 title: 'Procedura: sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: deeed6f6b572e04780f0eda1e7e42f1dd6233567
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
-ms.contentlocale: it-it
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedura: sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)
-Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a><span data-ttu-id="36e68-102">Procedura: sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="36e68-102">How to: Subscribe to and Unsubscribe from Events (C# Programming Guide)</span></span>
+<span data-ttu-id="36e68-103">Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento.</span><span class="sxs-lookup"><span data-stu-id="36e68-103">You subscribe to an event that is published by another class when you want to write custom code that is called when that event is raised.</span></span> <span data-ttu-id="36e68-104">È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.</span><span class="sxs-lookup"><span data-stu-id="36e68-104">For example, you might subscribe to a button's `click` event in order to make your application do something useful when the user clicks the button.</span></span>  
   
-### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Per sottoscrivere gli eventi usando l'IDE di Visual Studio  
+### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a><span data-ttu-id="36e68-105">Per sottoscrivere gli eventi usando l'IDE di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="36e68-105">To subscribe to events by using the Visual Studio IDE</span></span>  
   
-1.  Se la finestra **Proprietà** non viene visualizzata, nella visualizzazione **Progettazione** fare clic con il pulsante destro del mouse sul modulo o sul controllo per cui si vuole creare un gestore eventi e selezionare **Proprietà**.  
+1.  <span data-ttu-id="36e68-106">Se la finestra **Proprietà** non viene visualizzata, nella visualizzazione **Progettazione** fare clic con il pulsante destro del mouse sul modulo o sul controllo per cui si vuole creare un gestore eventi e selezionare **Proprietà**.</span><span class="sxs-lookup"><span data-stu-id="36e68-106">If you cannot see the **Properties** window, in **Design** view, right-click the form or control for which you want to create an event handler, and select **Properties**.</span></span>  
   
-2.  Nella parte superiore della finestra **Proprietà** fare clic sull'icona **Eventi**.  
+2.  <span data-ttu-id="36e68-107">Nella parte superiore della finestra **Proprietà** fare clic sull'icona **Eventi**.</span><span class="sxs-lookup"><span data-stu-id="36e68-107">On top of the **Properties** window, click the **Events** icon.</span></span>  
   
-3.  Fare doppio clic sull'evento che si vuole creare, ad esempio sull'evento `Load`.  
+3.  <span data-ttu-id="36e68-108">Fare doppio clic sull'evento che si vuole creare, ad esempio sull'evento `Load`.</span><span class="sxs-lookup"><span data-stu-id="36e68-108">Double-click the event that you want to create, for example the `Load` event.</span></span>  
   
-     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] crea un metodo del gestore eventi vuoto e lo aggiunge al codice. In alternativa, è possibile aggiungere manualmente il codice nella visualizzazione **Codice**. Ad esempio, le righe di codice seguenti dichiarano un metodo del gestore eventi che verrà chiamato quando la classe `Form` genera l'evento `Load`.  
+     [!INCLUDE[csprcs](~/includes/csprcs-md.md)]<span data-ttu-id="36e68-109"> crea un metodo del gestore eventi vuoto e lo aggiunge al codice.</span><span class="sxs-lookup"><span data-stu-id="36e68-109"> creates an empty event handler method and adds it to your code.</span></span> <span data-ttu-id="36e68-110">In alternativa, è possibile aggiungere manualmente il codice nella visualizzazione **Codice**.</span><span class="sxs-lookup"><span data-stu-id="36e68-110">Alternatively you can add the code manually in **Code** view.</span></span> <span data-ttu-id="36e68-111">Ad esempio, le righe di codice seguenti dichiarano un metodo del gestore eventi che verrà chiamato quando la classe `Form` genera l'evento `Load`.</span><span class="sxs-lookup"><span data-stu-id="36e68-111">For example, the following lines of code declare an event handler method that will be called when the `Form` class raises the `Load` event.</span></span>  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
+     [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
-     La riga di codice necessaria per sottoscrivere l'evento viene generata automaticamente nel metodo `InitializeComponent` nel file Form1.Designer.cs del progetto. La riga ha un aspetto simile a quanto riportato di seguito:  
+     <span data-ttu-id="36e68-112">La riga di codice necessaria per sottoscrivere l'evento viene generata automaticamente nel metodo `InitializeComponent` nel file Form1.Designer.cs del progetto.</span><span class="sxs-lookup"><span data-stu-id="36e68-112">The line of code that is required to subscribe to the event is also automatically generated in the `InitializeComponent` method in the Form1.Designer.cs file in your project.</span></span> <span data-ttu-id="36e68-113">La riga ha un aspetto simile a quanto riportato di seguito:</span><span class="sxs-lookup"><span data-stu-id="36e68-113">It resembles this:</span></span>  
   
     ```  
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-### <a name="to-subscribe-to-events-programmatically"></a>Per sottoscrivere gli eventi a livello di codice  
+### <a name="to-subscribe-to-events-programmatically"></a><span data-ttu-id="36e68-114">Per sottoscrivere gli eventi a livello di codice</span><span class="sxs-lookup"><span data-stu-id="36e68-114">To subscribe to events programmatically</span></span>  
   
-1.  Definire un metodo del gestore eventi la cui firma corrisponda alla firma del delegato per l'evento. Se ad esempio l'evento è basato sul tipo di delegato <xref:System.EventHandler>, il codice riportato di seguito rappresenta lo stub del metodo:  
+1.  <span data-ttu-id="36e68-115">Definire un metodo del gestore eventi la cui firma corrisponda alla firma del delegato per l'evento.</span><span class="sxs-lookup"><span data-stu-id="36e68-115">Define an event handler method whose signature matches the delegate signature for the event.</span></span> <span data-ttu-id="36e68-116">Se ad esempio l'evento è basato sul tipo di delegato <xref:System.EventHandler>, il codice riportato di seguito rappresenta lo stub del metodo:</span><span class="sxs-lookup"><span data-stu-id="36e68-116">For example, if the event is based on the <xref:System.EventHandler> delegate type, the following code represents the method stub:</span></span>  
   
     ```  
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -68,19 +50,19 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
     }  
     ```  
   
-2.  Usare l'operatore di assegnazione di addizione (`+=`) per associare il gestore eventi all'evento. Nell'esempio seguente si supponga che a un oggetto denominato `publisher` sia associato un evento denominato `RaiseCustomEvent`. Si noti che per la classe subscriber è necessario un riferimento alla classe publisher per sottoscrivere gli eventi corrispondenti.  
+2.  <span data-ttu-id="36e68-117">Usare l'operatore di assegnazione di addizione (`+=`) per associare il gestore eventi all'evento.</span><span class="sxs-lookup"><span data-stu-id="36e68-117">Use the addition assignment operator (`+=`) to attach your event handler to the event.</span></span> <span data-ttu-id="36e68-118">Nell'esempio seguente si supponga che a un oggetto denominato `publisher` sia associato un evento denominato `RaiseCustomEvent`.</span><span class="sxs-lookup"><span data-stu-id="36e68-118">In the following example, assume that an object named `publisher` has an event named `RaiseCustomEvent`.</span></span> <span data-ttu-id="36e68-119">Si noti che per la classe subscriber è necessario un riferimento alla classe publisher per sottoscrivere gli eventi corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="36e68-119">Note that the subscriber class needs a reference to the publisher class in order to subscribe to its events.</span></span>  
   
     ```  
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
-     Si noti che la sintassi precedente è nuova in C# 2.0. Equivale esattamente alla sintassi di C# 1.0, in cui è necessario creare in modo esplicito il delegato incapsulante tramite la parola chiave `new`:  
+     <span data-ttu-id="36e68-120">Si noti che la sintassi precedente è nuova in C# 2.0.</span><span class="sxs-lookup"><span data-stu-id="36e68-120">Note that the previous syntax is new in C# 2.0.</span></span> <span data-ttu-id="36e68-121">Equivale esattamente alla sintassi di C# 1.0, in cui è necessario creare in modo esplicito il delegato incapsulante tramite la parola chiave `new`:</span><span class="sxs-lookup"><span data-stu-id="36e68-121">It is exactly equivalent to the C# 1.0 syntax in which the encapsulating delegate must be explicitly created by using the `new` keyword:</span></span>  
   
     ```  
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     È possibile aggiungere un gestore eventi anche tramite un'espressione lambda:  
+     <span data-ttu-id="36e68-122">È possibile aggiungere un gestore eventi anche tramite un'espressione lambda:</span><span class="sxs-lookup"><span data-stu-id="36e68-122">An event handler can also be added by using a lambda expression:</span></span>  
   
     ```  
     public Form1()  
@@ -92,11 +74,11 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
     }  
     ```  
   
-     Per altre informazioni, vedere [Procedura: Usare espressioni lambda al di fuori di LINQ (Guida per programmatori C#)](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
+     <span data-ttu-id="36e68-123">Per altre informazioni, vedere [Procedura: Usare espressioni lambda al di fuori di LINQ (Guida per programmatori C#)](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).</span><span class="sxs-lookup"><span data-stu-id="36e68-123">For more information, see [How to: Use Lambda Expressions Outside LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).</span></span>  
   
-### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Per sottoscrivere gli eventi usando un metodo anonimo  
+### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a><span data-ttu-id="36e68-124">Per sottoscrivere gli eventi usando un metodo anonimo</span><span class="sxs-lookup"><span data-stu-id="36e68-124">To subscribe to events by using an anonymous method</span></span>  
   
--   Se non è necessario annullare la sottoscrizione di un evento in un secondo momento, è possibile usare l'operatore di assegnazione di addizione (`+=`) per associare un metodo anonimo all'evento. Nell'esempio seguente si supponga che a un oggetto denominato `publisher` sia associato un evento denominato `RaiseCustomEvent` e che sia stata definita una classe `CustomEventArgs` con informazioni specializzate sull'evento. Si noti che per la classe subscriber è necessario un riferimento alla classe `publisher` per sottoscrivere gli eventi corrispondenti.  
+-   <span data-ttu-id="36e68-125">Se non è necessario annullare la sottoscrizione di un evento in un secondo momento, è possibile usare l'operatore di assegnazione di addizione (`+=`) per associare un metodo anonimo all'evento.</span><span class="sxs-lookup"><span data-stu-id="36e68-125">If you will not have to unsubscribe to an event later, you can use the addition assignment operator (`+=`) to attach an anonymous method to the event.</span></span> <span data-ttu-id="36e68-126">Nell'esempio seguente si supponga che a un oggetto denominato `publisher` sia associato un evento denominato `RaiseCustomEvent` e che sia stata definita una classe `CustomEventArgs` con informazioni specializzate sull'evento.</span><span class="sxs-lookup"><span data-stu-id="36e68-126">In the following example, assume that an object named `publisher` has an event named `RaiseCustomEvent` and that a `CustomEventArgs` class has also been defined to carry some kind of specialized event information.</span></span> <span data-ttu-id="36e68-127">Si noti che per la classe subscriber è necessario un riferimento alla classe `publisher` per sottoscrivere gli eventi corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="36e68-127">Note that the subscriber class needs a reference to `publisher` in order to subscribe to its events.</span></span>  
   
     ```  
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -106,25 +88,24 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
     };  
     ```  
   
-     È importante notare che non si può annullare facilmente la sottoscrizione di un evento se per la sottoscrizione è stata usata una funzione anonima. Per annullare la sottoscrizione in questo scenario, è necessario tornare al codice in cui è stato sottoscritto l'evento, archiviare il metodo anonimo in una variabile del delegato e quindi aggiungere il delegato all'evento. In generale è consigliabile non usare funzioni anonime per sottoscrivere eventi se si prevede di dover annullare la sottoscrizione all'evento in un punto successivo nel codice. Per altre informazioni sulle funzioni anonime, vedere [Funzioni anonime](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+     <span data-ttu-id="36e68-128">È importante notare che non si può annullare facilmente la sottoscrizione di un evento se per la sottoscrizione è stata usata una funzione anonima.</span><span class="sxs-lookup"><span data-stu-id="36e68-128">It is important to notice that you cannot easily unsubscribe from an event if you used an anonymous function to subscribe to it.</span></span> <span data-ttu-id="36e68-129">Per annullare la sottoscrizione in questo scenario, è necessario tornare al codice in cui è stato sottoscritto l'evento, archiviare il metodo anonimo in una variabile del delegato e quindi aggiungere il delegato all'evento.</span><span class="sxs-lookup"><span data-stu-id="36e68-129">To unsubscribe in this scenario, it is necessary to go back to the code where you subscribe to the event, store the anonymous method in a delegate variable, and then add the delegate to the event.</span></span> <span data-ttu-id="36e68-130">In generale è consigliabile non usare funzioni anonime per sottoscrivere eventi se si prevede di dover annullare la sottoscrizione all'evento in un punto successivo nel codice.</span><span class="sxs-lookup"><span data-stu-id="36e68-130">In general, we recommend that you do not use anonymous functions to subscribe to events if you will have to unsubscribe from the event at some later point in your code.</span></span> <span data-ttu-id="36e68-131">Per altre informazioni sulle funzioni anonime, vedere [Funzioni anonime](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).</span><span class="sxs-lookup"><span data-stu-id="36e68-131">For more information about anonymous functions, see [Anonymous Functions](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).</span></span>  
   
-## <a name="unsubscribing"></a>Annullamento della sottoscrizione  
- Per evitare che il gestore eventi venga chiamato al momento della generazione dell'evento, annullare la sottoscrizione all'evento stesso. Per evitare di perdere risorse, è necessario annullare la sottoscrizione agli eventi prima di eliminare un oggetto sottoscrittore. Finché non si annulla la sottoscrizione di un evento, il delegato multicast sottostante all'evento nell'oggetto publisher contiene un riferimento al delegato che incapsula il gestore eventi del sottoscrittore. Finché l'oggetto publisher include tale riferimento, l'oggetto subscriber non verrà eliminato dal processo di Garbage Collection.  
+## <a name="unsubscribing"></a><span data-ttu-id="36e68-132">Annullamento della sottoscrizione</span><span class="sxs-lookup"><span data-stu-id="36e68-132">Unsubscribing</span></span>  
+ <span data-ttu-id="36e68-133">Per evitare che il gestore eventi venga chiamato al momento della generazione dell'evento, annullare la sottoscrizione all'evento stesso.</span><span class="sxs-lookup"><span data-stu-id="36e68-133">To prevent your event handler from being invoked when the event is raised, unsubscribe from the event.</span></span> <span data-ttu-id="36e68-134">Per evitare di perdere risorse, è necessario annullare la sottoscrizione agli eventi prima di eliminare un oggetto sottoscrittore.</span><span class="sxs-lookup"><span data-stu-id="36e68-134">In order to prevent resource leaks, you should unsubscribe from events before you dispose of a subscriber object.</span></span> <span data-ttu-id="36e68-135">Finché non si annulla la sottoscrizione di un evento, il delegato multicast sottostante all'evento nell'oggetto publisher contiene un riferimento al delegato che incapsula il gestore eventi del sottoscrittore.</span><span class="sxs-lookup"><span data-stu-id="36e68-135">Until you unsubscribe from an event, the multicast delegate that underlies the event in the publishing object has a reference to the delegate that encapsulates the subscriber's event handler.</span></span> <span data-ttu-id="36e68-136">Finché l'oggetto publisher include tale riferimento, l'oggetto subscriber non verrà eliminato dal processo di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="36e68-136">As long as the publishing object holds that reference, garbage collection will not delete your subscriber object.</span></span>  
   
-#### <a name="to-unsubscribe-from-an-event"></a>Per annullare la sottoscrizione di un evento  
+#### <a name="to-unsubscribe-from-an-event"></a><span data-ttu-id="36e68-137">Per annullare la sottoscrizione di un evento</span><span class="sxs-lookup"><span data-stu-id="36e68-137">To unsubscribe from an event</span></span>  
   
--   Usare l'operatore di assegnazione di sottrazione (`-=`):  
+-   <span data-ttu-id="36e68-138">Usare l'operatore di assegnazione di sottrazione (`-=`):</span><span class="sxs-lookup"><span data-stu-id="36e68-138">Use the subtraction assignment operator (`-=`) to unsubscribe from an event:</span></span>  
   
     ```  
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
-     Quando tutti i sottoscrittori hanno annullato la sottoscrizione a un evento, l'istanza dell'evento nella classe publisher viene impostata su `null`.  
+     <span data-ttu-id="36e68-139">Quando tutti i sottoscrittori hanno annullato la sottoscrizione a un evento, l'istanza dell'evento nella classe publisher viene impostata su `null`.</span><span class="sxs-lookup"><span data-stu-id="36e68-139">When all subscribers have unsubscribed from an event, the event instance in the publisher class is set to `null`.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi](../../../csharp/programming-guide/events/index.md)   
- [event](../../../csharp/language-reference/keywords/event.md)   
- [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)   
- [Operatore -= (Riferimenti per C#)](../../language-reference/operators/subtraction-assignment-operator.md)   
- [Operatore +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)
-
+## <a name="see-also"></a><span data-ttu-id="36e68-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="36e68-140">See Also</span></span>  
+ [<span data-ttu-id="36e68-141">Eventi</span><span class="sxs-lookup"><span data-stu-id="36e68-141">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="36e68-142">event</span><span class="sxs-lookup"><span data-stu-id="36e68-142">event</span></span>](../../../csharp/language-reference/keywords/event.md)  
+ [<span data-ttu-id="36e68-143">Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="36e68-143">How to: Publish Events that Conform to .NET Framework Guidelines</span></span>](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+ [<span data-ttu-id="36e68-144">-= Operatore (riferimenti per c#)</span><span class="sxs-lookup"><span data-stu-id="36e68-144">-= Operator (C# Reference)</span></span>](../../language-reference/operators/subtraction-assignment-operator.md)  
+ [<span data-ttu-id="36e68-145">Operatore +=</span><span class="sxs-lookup"><span data-stu-id="36e68-145">+= Operator</span></span>](../../../csharp/language-reference/operators/addition-assignment-operator.md)

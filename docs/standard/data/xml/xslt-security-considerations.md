@@ -1,71 +1,69 @@
 ---
-title: "Considerazioni sulla sicurezza XSLT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Considerazioni sulla sicurezza XSLT
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 560a0866a526caf4c8fe129209d0077374306a9f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Considerazioni sulla sicurezza XSLT
-Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevoli prestazioni e flessibilità.  Sono incluse numerose funzionalità utili che possono essere usate anche da origini esterne.  Per usare XSLT senza problemi, è necessario comprendere i tipi di problemi di sicurezza che si possono verificare durante l'uso di XSLT e le strategie di base che è possibile applicare per limitare tali rischi.  
+# <a name="xslt-security-considerations"></a><span data-ttu-id="55ef4-102">Considerazioni sulla sicurezza XSLT</span><span class="sxs-lookup"><span data-stu-id="55ef4-102">XSLT Security Considerations</span></span>
+<span data-ttu-id="55ef4-103">Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevoli prestazioni e flessibilità.</span><span class="sxs-lookup"><span data-stu-id="55ef4-103">The XSLT language has a rich set of features that give you a great deal of power and flexibility.</span></span> <span data-ttu-id="55ef4-104">Sono incluse numerose funzionalità utili che possono essere usate anche da origini esterne.</span><span class="sxs-lookup"><span data-stu-id="55ef4-104">It includes many features that, while useful, could also be exploited by outside sources.</span></span> <span data-ttu-id="55ef4-105">Per usare XSLT senza problemi, è necessario comprendere i tipi di problemi di sicurezza che si possono verificare durante l'uso di XSLT e le strategie di base che è possibile applicare per limitare tali rischi.</span><span class="sxs-lookup"><span data-stu-id="55ef4-105">In order to use XSLT safely, you must understand the types of security issues that arise when using XSLT, and the basic strategies that you can employ to mitigate these risks.</span></span>  
   
-## Estensioni XSLT  
- Due estensioni XSLT note sono gli script di fogli di stile e gli oggetti estensioni.  Queste estensioni consentono al processore XSLT di eseguire il codice.  
+## <a name="xslt-extensions"></a><span data-ttu-id="55ef4-106">Estensioni XSLT</span><span class="sxs-lookup"><span data-stu-id="55ef4-106">XSLT Extensions</span></span>  
+ <span data-ttu-id="55ef4-107">Due estensioni XSLT note sono gli script di fogli di stile e gli oggetti estensioni.</span><span class="sxs-lookup"><span data-stu-id="55ef4-107">Two popular XSLT extensions are style sheet scripting and extension objects.</span></span> <span data-ttu-id="55ef4-108">Queste estensioni consentono al processore XSLT di eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="55ef4-108">These extensions allow the XSLT processor to execute code.</span></span>  
   
--   Gli oggetti estensioni consentono di aggiungere funzionalità di programmazione alle trasformazioni XSL.  
+-   <span data-ttu-id="55ef4-109">Gli oggetti estensioni consentono di aggiungere funzionalità di programmazione alle trasformazioni XSL.</span><span class="sxs-lookup"><span data-stu-id="55ef4-109">Extension objects add programming capabilities to XSL transformations.</span></span>  
   
--   Gli script possono essere incorporati nel foglio di stile usando l'elemento di estensione `msxsl:script`.  
+-   <span data-ttu-id="55ef4-110">Gli script possono essere incorporati nel foglio di stile usando l'elemento di estensione `msxsl:script`.</span><span class="sxs-lookup"><span data-stu-id="55ef4-110">Scripts can be embedded in the style sheet using the `msxsl:script` extension element.</span></span>  
   
-### Oggetti estensione  
- Gli oggetti estensione vengono aggiunti usando il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  È richiesto il set di autorizzazioni FullTrust per supportare gli oggetti estensioni.  In tal modo si assicura che non si verificherà un'elevazione delle autorizzazioni quando viene eseguito il codice dell'oggetto estensioni.  Un tentativo di chiamata al metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> senza le autorizzazioni FullTrust genererà un'eccezione di sicurezza.  
+### <a name="extension-objects"></a><span data-ttu-id="55ef4-111">Oggetti estensione</span><span class="sxs-lookup"><span data-stu-id="55ef4-111">Extension Objects</span></span>  
+ <span data-ttu-id="55ef4-112">Gli oggetti estensione vengono aggiunti usando il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="55ef4-112">Extension objects are added using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="55ef4-113">È richiesto il set di autorizzazioni FullTrust per supportare gli oggetti estensioni.</span><span class="sxs-lookup"><span data-stu-id="55ef4-113">The FullTrust permission set is required to support extension objects.</span></span> <span data-ttu-id="55ef4-114">In tal modo si assicura che non si verificherà un'elevazione delle autorizzazioni quando viene eseguito il codice dell'oggetto estensioni.</span><span class="sxs-lookup"><span data-stu-id="55ef4-114">This ensures that elevation of permissions does not happen when extension object code is executed.</span></span> <span data-ttu-id="55ef4-115">Un tentativo di chiamata al metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> senza le autorizzazioni FullTrust genererà un'eccezione di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="55ef4-115">Attempting to call the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method without FullTrust permissions results in a security exception being thrown.</span></span>  
   
-### Script di foglio di stile  
- Gli script possono essere incorporati in un foglio di stile usando l'elemento di estensione `msxsl:script`.  Il supporto degli script è una funzionalità opzionale della classe <xref:System.Xml.Xsl.XslCompiledTransform> e per impostazione predefinita è disabilitata.  È possibile abilitare l'inserimento di script impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=fullName> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
+### <a name="style-sheet-scripts"></a><span data-ttu-id="55ef4-116">Script di foglio di stile</span><span class="sxs-lookup"><span data-stu-id="55ef4-116">Style Sheet Scripts</span></span>  
+ <span data-ttu-id="55ef4-117">Gli script possono essere incorporati in un foglio di stile usando l'elemento di estensione `msxsl:script`.</span><span class="sxs-lookup"><span data-stu-id="55ef4-117">Scripts can be embedded in a style sheet using the `msxsl:script` extension element.</span></span> <span data-ttu-id="55ef4-118">Il supporto degli script è una funzionalità opzionale della classe <xref:System.Xml.Xsl.XslCompiledTransform> e per impostazione predefinita è disabilitata.</span><span class="sxs-lookup"><span data-stu-id="55ef4-118">Script support is an optional feature on the <xref:System.Xml.Xsl.XslCompiledTransform> class that is disabled by default.</span></span> <span data-ttu-id="55ef4-119">È possibile abilitare l'inserimento di script impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="55ef4-119">Scripting can be enabled by setting the <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> property to `true` and passing the <xref:System.Xml.Xsl.XsltSettings> object to the <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> method.</span></span>  
   
-#### Indicazioni  
- Abilitare l'inserimento di script solo se il foglio di stile proviene da un'origine attendibile.  Se non è possibile verificare l'origine del foglio di stile o se il foglio di stile non deriva da un'origine attendibile, passarlo in `null` per l'argomento delle impostazioni XSLT.  
+#### <a name="guidelines"></a><span data-ttu-id="55ef4-120">Indicazioni</span><span class="sxs-lookup"><span data-stu-id="55ef4-120">Guidelines</span></span>  
+ <span data-ttu-id="55ef4-121">Abilitare l'inserimento di script solo se il foglio di stile proviene da un'origine attendibile.</span><span class="sxs-lookup"><span data-stu-id="55ef4-121">Enable scripting only when the style sheet comes from a trusted source.</span></span> <span data-ttu-id="55ef4-122">Se non è possibile verificare l'origine del foglio di stile o se il foglio di stile non deriva da un'origine attendibile, passarlo in `null` per l'argomento delle impostazioni XSLT.</span><span class="sxs-lookup"><span data-stu-id="55ef4-122">If you cannot verify the source of the style sheet, or if the style sheet does not come from a trusted source, pass in `null` for the XSLT settings argument.</span></span>  
   
-## Risorse esterne  
- Il linguaggio XSLT dispone di funzioni come `xsl:import`, `xsl:include` o `document()`, dove il processore deve risolvere riferimenti all'URI.  La classe <xref:System.Xml.XmlResolver> viene usata per risolvere risorse esterne.  Può essere necessario risolvere le risorse esterne nei seguenti due casi:  
+## <a name="external-resources"></a><span data-ttu-id="55ef4-123">Risorse esterne</span><span class="sxs-lookup"><span data-stu-id="55ef4-123">External Resources</span></span>  
+ <span data-ttu-id="55ef4-124">Il linguaggio XSLT dispone di funzioni come `xsl:import`, `xsl:include` o `document()`, dove il processore deve risolvere riferimenti all'URI.</span><span class="sxs-lookup"><span data-stu-id="55ef4-124">The XSLT language has features such as `xsl:import`, `xsl:include`, or the `document()` function, where the processor needs to resolve URI references.</span></span> <span data-ttu-id="55ef4-125">La classe <xref:System.Xml.XmlResolver> viene usata per risolvere risorse esterne.</span><span class="sxs-lookup"><span data-stu-id="55ef4-125">The <xref:System.Xml.XmlResolver> class is used to resolve external resources.</span></span> <span data-ttu-id="55ef4-126">Può essere necessario risolvere le risorse esterne nei seguenti due casi:</span><span class="sxs-lookup"><span data-stu-id="55ef4-126">External resources may need to be resolved in the following two cases:</span></span>  
   
--   Quando si compila un foglio di stile, viene usato il tipo <xref:System.Xml.XmlResolver> per la risoluzione di `xsl:import` e `xsl:include`.  
+-   <span data-ttu-id="55ef4-127">Quando si compila un foglio di stile, viene usato il tipo <xref:System.Xml.XmlResolver> per la risoluzione di `xsl:import` e `xsl:include`.</span><span class="sxs-lookup"><span data-stu-id="55ef4-127">When compiling a style sheet, the <xref:System.Xml.XmlResolver> is used for `xsl:import` and `xsl:include` resolution.</span></span>  
   
--   Quando si esegue la trasformazione, viene usato il tipo <xref:System.Xml.XmlResolver> per risolvere la funzione `document()`.  
+-   <span data-ttu-id="55ef4-128">Quando si esegue la trasformazione, viene usato il tipo <xref:System.Xml.XmlResolver> per risolvere la funzione `document()`.</span><span class="sxs-lookup"><span data-stu-id="55ef4-128">When executing the transformation, the <xref:System.Xml.XmlResolver> is used to resolve the `document()` function.</span></span>  
   
     > [!NOTE]
-    >  Per impostazione predefinita, la funzione `document()` è disabilitata nella classe <xref:System.Xml.Xsl.XslCompiledTransform>.  È possibile abilitare la funzione impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=fullName> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
+    >  <span data-ttu-id="55ef4-129">Per impostazione predefinita, la funzione `document()` è disabilitata nella classe <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="55ef4-129">The `document()` function is disabled by default on the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="55ef4-130">È possibile abilitare la funzione impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="55ef4-130">This feature can be enabled by setting the <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> property to `true` and passing the <xref:System.Xml.Xsl.XsltSettings> object to the <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> method.</span></span>  
   
- I metodi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> includono ciascuno overload che accettano un tipo <xref:System.Xml.XmlResolver> come argomento.  Se non viene specificato alcun tipo <xref:System.Xml.XmlResolver>, viene usato un tipo predefinito <xref:System.Xml.XmlUrlResolver> senza credenziali.  
+ <span data-ttu-id="55ef4-131">I metodi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> includono ciascuno overload che accettano un tipo <xref:System.Xml.XmlResolver> come argomento.</span><span class="sxs-lookup"><span data-stu-id="55ef4-131">The <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> and <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> methods each include overloads that accept an <xref:System.Xml.XmlResolver> as one of its arguments.</span></span> <span data-ttu-id="55ef4-132">Se non viene specificato alcun tipo <xref:System.Xml.XmlResolver>, viene usato un tipo predefinito <xref:System.Xml.XmlUrlResolver> senza credenziali.</span><span class="sxs-lookup"><span data-stu-id="55ef4-132">If an <xref:System.Xml.XmlResolver> is not specified, a default <xref:System.Xml.XmlUrlResolver> with no credentials is used.</span></span>  
   
-#### Indicazioni  
- Abilitare la funzione `document()` solo se il foglio di stile proviene da un'origine attendibile.  
+#### <a name="guidelines"></a><span data-ttu-id="55ef4-133">Indicazioni</span><span class="sxs-lookup"><span data-stu-id="55ef4-133">Guidelines</span></span>  
+ <span data-ttu-id="55ef4-134">Abilitare la funzione `document()` solo se il foglio di stile proviene da un'origine attendibile.</span><span class="sxs-lookup"><span data-stu-id="55ef4-134">Enable the `document()` function only when the style sheet comes from a trusted source.</span></span>  
   
- Nell'elenco seguente viene descritto quando può essere necessario specificare un oggetto <xref:System.Xml.XmlResolver>:  
+ <span data-ttu-id="55ef4-135">Nell'elenco seguente viene descritto quando può essere necessario specificare un oggetto <xref:System.Xml.XmlResolver>:</span><span class="sxs-lookup"><span data-stu-id="55ef4-135">The following list describes when you may want to specify an <xref:System.Xml.XmlResolver> object:</span></span>  
   
--   Se il processo XSLT richiede l'accesso a una risorsa di rete che richiede l'autenticazione, è possibile usare un tipo <xref:System.Xml.XmlResolver> con le credenziali necessarie.  
+-   <span data-ttu-id="55ef4-136">Se il processo XSLT richiede l'accesso a una risorsa di rete che richiede l'autenticazione, è possibile usare un tipo <xref:System.Xml.XmlResolver> con le credenziali necessarie.</span><span class="sxs-lookup"><span data-stu-id="55ef4-136">If the XSLT process needs to access a network resource that requires authentication, you can use an <xref:System.Xml.XmlResolver> with the necessary credentials.</span></span>  
   
--   Se si desidera limitare le risorse a cui può accedere il processo XSLT, è possibile usare un <xref:System.Xml.XmlSecureResolver> con il set di autorizzazioni corretto.  Usare la classe <xref:System.Xml.XmlSecureResolver> se è necessario aprire una risorsa che non si controlla o che non è considerata affidabile.  
+-   <span data-ttu-id="55ef4-137">Se si desidera limitare le risorse a cui può accedere il processo XSLT, è possibile usare un <xref:System.Xml.XmlSecureResolver> con il set di autorizzazioni corretto.</span><span class="sxs-lookup"><span data-stu-id="55ef4-137">If you want to restrict the resources that the XSLT process can access, you can use an <xref:System.Xml.XmlSecureResolver> with the correct permission set.</span></span> <span data-ttu-id="55ef4-138">Usare la classe <xref:System.Xml.XmlSecureResolver> se è necessario aprire una risorsa che non si controlla o che non è considerata affidabile.</span><span class="sxs-lookup"><span data-stu-id="55ef4-138">Use the <xref:System.Xml.XmlSecureResolver> class if you need to open a resource that you do not control, or that is untrusted.</span></span>  
   
--   Se si desidera personalizzare il comportamento, è possibile implementare la propria classe <xref:System.Xml.XmlResolver> e usarla per risolvere le risorse.  
+-   <span data-ttu-id="55ef4-139">Se si desidera personalizzare il comportamento, è possibile implementare la propria classe <xref:System.Xml.XmlResolver> e usarla per risolvere le risorse.</span><span class="sxs-lookup"><span data-stu-id="55ef4-139">If you want to customize behavior, you can implement your own <xref:System.Xml.XmlResolver> class and use it to resolve resources.</span></span>  
   
--   Se si desidera assicurarsi che non venga eseguito l'accesso ad alcuna risorsa esterna, è possibile specificare `null` per l'argomento <xref:System.Xml.XmlResolver>.  
+-   <span data-ttu-id="55ef4-140">Se si desidera assicurarsi che non venga eseguito l'accesso ad alcuna risorsa esterna, è possibile specificare `null` per l'argomento <xref:System.Xml.XmlResolver>.</span><span class="sxs-lookup"><span data-stu-id="55ef4-140">If you want to ensure that no external resources are accessed, you can specify `null` for the <xref:System.Xml.XmlResolver> argument.</span></span>  
   
-## Vedere anche  
- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)   
- [Risoluzione delle risorse esterne durante l'elaborazione XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)   
- [Code Access Security](http://msdn.microsoft.com/it-it/23a20143-241d-4fe5-9d9f-3933fd594c03)
+## <a name="see-also"></a><span data-ttu-id="55ef4-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="55ef4-141">See Also</span></span>  
+ [<span data-ttu-id="55ef4-142">Trasformazioni XSLT</span><span class="sxs-lookup"><span data-stu-id="55ef4-142">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [<span data-ttu-id="55ef4-143">Risolvere risorse esterne durante l'elaborazione XSLT</span><span class="sxs-lookup"><span data-stu-id="55ef4-143">Resolving External Resources During XSLT Processing</span></span>](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
+ [<span data-ttu-id="55ef4-144">Sicurezza dall'accesso di codice</span><span class="sxs-lookup"><span data-stu-id="55ef4-144">Code Access Security</span></span>](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)

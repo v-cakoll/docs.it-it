@@ -1,57 +1,52 @@
 ---
-title: "Classe e propriet&#224; dell&#39;eccezione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Exception (classe)"
-  - "eccezioni, Exception (classe)"
+title: "Classe e proprietà dell'eccezione"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exceptions, Exception class
+- Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/21/2017
 ---
-# Classe e propriet&#224; dell&#39;eccezione
-La classe <xref:System.Exception> rappresenta la classe base da cui ereditano le eccezioni.  Gli oggetti eccezione costituiscono per la maggior parte istanze di classi derivate da **Exception**, ma è possibile generare come eccezione qualsiasi oggetto derivato dalla classe <xref:System.Object>.  Si noti che non tutti i linguaggi supportano la generazione e l'intercettazione di oggetti non derivati da **Exception**.  Nella quasi totalità dei casi è consigliabile generare e intercettare solo oggetti **Exception**.  
+# <a name="exception-class-and-properties"></a><span data-ttu-id="fdc9b-102">Classe e proprietà dell'eccezione</span><span class="sxs-lookup"><span data-stu-id="fdc9b-102">Exception class and properties</span></span>
+
+<span data-ttu-id="fdc9b-103">La classe <xref:System.Exception> è la classe di base da cui vengono ereditate le eccezioni.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-103">The <xref:System.Exception> class is the base class from which exceptions inherit.</span></span> <span data-ttu-id="fdc9b-104">Ad esempio, la gerarchia della classe <xref:System.InvalidCastException> è illustrata di seguito:</span><span class="sxs-lookup"><span data-stu-id="fdc9b-104">For example, the <xref:System.InvalidCastException> class hierarchy is as follows:</span></span>
+
+```
+Object
+  Exception
+    SystemException
+       InvalidCastException
+```
+
+<span data-ttu-id="fdc9b-105">La classe <xref:System.Exception> include le proprietà seguenti che facilitano la comprensione di un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-105">The <xref:System.Exception> class has the following properties that help make understanding an exception easier.</span></span>
+
+| <span data-ttu-id="fdc9b-106">Nome proprietà</span><span class="sxs-lookup"><span data-stu-id="fdc9b-106">Property Name</span></span> | <span data-ttu-id="fdc9b-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fdc9b-107">Description</span></span> |
+| ------------- | ----------- |
+| <xref:System.Exception.Data> | <span data-ttu-id="fdc9b-108"><xref:System.Collections.IDictionary> contenente dati arbitrari in coppie chiave-valore.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-108">An <xref:System.Collections.IDictionary> that holds arbitrary data in key-value pairs.</span></span> |
+| <xref:System.Exception.HelpLink> | <span data-ttu-id="fdc9b-109">Può contenere un URL (o URN) di un file della Guida che offre informazioni dettagliate sulla causa di un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-109">Can hold a URL (or URN) to a help file that provides extensive information about the cause of an exception.</span></span> |
+| <xref:System.Exception.InnerException> | <span data-ttu-id="fdc9b-110">Questa proprietà può essere usata per creare e mantenere una serie di eccezioni durante la gestione delle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-110">This property can be used to create and preserve a series of exceptions during exception handling.</span></span> <span data-ttu-id="fdc9b-111">È possibile usarla per creare una nuova eccezione contenente le eccezioni rilevate in precedenza.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-111">You can use it to create a new exception that contains previously caught exceptions.</span></span> <span data-ttu-id="fdc9b-112">L'eccezione originale può essere acquisita dalla seconda eccezione nella proprietà <xref:System.Exception.InnerException>, consentendo al codice che gestisce la seconda eccezione di esaminare le informazioni aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-112">The original exception can be captured by the second exception in the <xref:System.Exception.InnerException> property, allowing code that handles the second exception to examine the additional information.</span></span> <span data-ttu-id="fdc9b-113">Ad esempio, si supponga di avere un metodo che riceve un argomento non formattato correttamente.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-113">For example, suppose you have a method that receives an argument that's improperly formatted.</span></span>  <span data-ttu-id="fdc9b-114">Il codice tenta di leggere l'argomento, ma viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-114">The code tries to read the argument, but an exception is thrown.</span></span> <span data-ttu-id="fdc9b-115">Il metodo rileva l'eccezione e genera <xref:System.FormatException>.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-115">The method catches the exception and throws a <xref:System.FormatException>.</span></span> <span data-ttu-id="fdc9b-116">Per migliorare la capacità del chiamante di determinare il motivo per il quale viene generata un'eccezione, è a volte utile che un metodo rilevi un'eccezione generata da una routine di supporto e quindi generi un'eccezione più indicativa dell'errore che si è verificato.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-116">To improve the caller's ability to determine the reason an exception is thrown, it is sometimes desirable for a method to catch an exception thrown by a helper routine and then throw an exception more indicative of the error that has occurred.</span></span> <span data-ttu-id="fdc9b-117">Sarà possibile creare un'eccezione nuova e più significativa in cui il riferimento all'eccezione interna può essere impostato sull'eccezione originale.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-117">A new and more meaningful exception can be created, where the inner exception reference can be set to the original exception.</span></span> <span data-ttu-id="fdc9b-118">Questa eccezione più significativa può quindi essere inviata al chiamante.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-118">This more meaningful exception can then be thrown to the caller.</span></span> <span data-ttu-id="fdc9b-119">Si noti che con questa funzionalità è possibile creare una serie di eccezioni collegate che termina con l'eccezione che è stata generata per prima.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-119">Note that with this functionality, you can create a series of linked exceptions that ends with the exception that was thrown first.</span></span> |
+| <xref:System.Exception.Message> | <span data-ttu-id="fdc9b-120">Offre informazioni dettagliate sulla causa di un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-120">Provides details about the cause of an exception.</span></span>
+| <xref:System.Exception.Source> | <span data-ttu-id="fdc9b-121">Ottiene o imposta il nome dell'oggetto o dell'applicazione che ha generato l'errore.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-121">Gets or sets the name of the application or the object that causes the error.</span></span> |
+| <xref:System.Exception.StackTrace>| <span data-ttu-id="fdc9b-122">Contiene un'analisi dello stack che può essere usata per determinare dove si è verificato un errore.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-122">Contains a stack trace that can be used to determine where an error occurred.</span></span> <span data-ttu-id="fdc9b-123">L'analisi dello stack include il nome del file di origine e il numero di riga del programma, se sono disponibili informazioni di debug.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-123">The stack trace includes the source file name and program line number if debugging information is available.</span></span> |
+
+<span data-ttu-id="fdc9b-124">La maggior parte delle classi che ereditano da <xref:System.Exception> non implementano membri aggiuntivi né offrono funzionalità supplementari, ma si limitano a ereditare da <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-124">Most of the classes that inherit from <xref:System.Exception> do not implement additional members or provide additional functionality; they simply inherit from <xref:System.Exception>.</span></span> <span data-ttu-id="fdc9b-125">Per questa ragione, le informazioni più importanti per un'eccezione si trovano nella gerarchia delle classi delle eccezioni, nel nome dell'eccezione e nelle informazioni contenute nell'eccezione.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-125">Therefore, the most important information for an exception can be found in the hierarchy of exception classes, the exception name, and the information contained in the exception.</span></span>
+
+<span data-ttu-id="fdc9b-126">Si consiglia di generare e intercettare solo oggetti che derivano da <xref:System.Exception>, ma è possibile generare qualsiasi oggetto che deriva dalla <xref:System.Object> classe come un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-126">We recommend that you throw and catch only objects that derive from <xref:System.Exception>, but you can throw any object that derives from the <xref:System.Object> class as an exception.</span></span> <span data-ttu-id="fdc9b-127">Si noti che non tutti i linguaggi supportano la generazione e il rilevamento degli oggetti che non derivano da <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="fdc9b-127">Note that not all languages support throwing and catching objects that do not derive from <xref:System.Exception>.</span></span>
   
- La classe **Exception** presenta varie proprietà che semplificano la comprensione delle eccezioni.  Queste proprietà includono:  
-  
--   La proprietà <xref:System.Exception.StackTrace%2A>.  
-  
-     Contiene una traccia dello stack utilizzabile per determinare se si è verificato un errore.  La traccia dello stack include il nome del file di origine e il numero di riga del programma, se sono disponibili informazioni di debug.  
-  
--   La proprietà <xref:System.Exception.InnerException%2A>.  
-  
-     Utilizzabile per creare e preservare una serie di eccezioni durante la gestione delle eccezioni stesse.  È possibile utilizzare questa proprietà per creare una nuova eccezione contenente eccezioni intercettate in precedenza.  L'eccezione originale può essere catturata dalla seconda eccezione della proprietà **InnerException**, consentendo al codice che gestisce la seconda eccezione di esaminare le informazioni aggiuntive.  
-  
-     Si supponga ad esempio di disporre di un metodo con cui viene letto un file e vengono formattati i dati.  Nel codice viene tentata la lettura del contenuto del file, ma viene generata un'eccezione FileException.  Il metodo intercetta l'eccezione FileException e genera un'eccezione BadFormatException.  In questo caso è possibile salvare FileException nella proprietà **InnerException** di BadFormatException.  
-  
-     Per consentire al chiamante di determinare più facilmente la ragione alla base della generazione di un'eccezione, è talvolta utile che un metodo intercetti un'eccezione generata da una routine di supporto, generando a propria volta un'eccezione più indicativa dell'errore che si è verificato.  Verrà creata un'eccezione nuova e più significativa, nella quale si imposta per l'eccezione interna un riferimento all'eccezione originale.  Tale eccezione più significativa potrà quindi essere generata per il chiamante.  Si noti che, grazie a questa funzionalità, è possibile creare una serie di eccezioni collegate che termina con la prima eccezione generata.  
-  
--   La proprietà <xref:System.Exception.Message%2A>.  
-  
-     Fornisce informazioni dettagliate sulla causa di un'eccezione.  **Message** è la lingua specificata nella proprietà proprietà <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName> del thread che genera l'eccezione.  
-  
--   La proprietà <xref:System.Exception.HelpLink%2A>.  
-  
-     Può contenere l'URL \(o URN\) di un file della Guida in cui sono fornite informazioni dettagliate sulla causa di un'eccezione.  
-  
--   Proprietà <xref:System.Exception.Data%2A>  
-  
-     Si tratta di una proprietà IDictionary che conserva dati arbitrari in coppie chiave\-valore.  
-  
- La maggior parte delle classi che ereditano dall'oggetto **Exception** non implementano membri aggiuntivi né forniscono funzionalità supplementari; si limitano a ereditare dall'oggetto **Exception**\\.  È pertanto possibile trovare le informazioni più importanti per un'eccezione nella gerarchia delle eccezioni, nel nome dell'eccezione e nelle informazioni contenute nell'eccezione stessa.  
-  
-## Vedere anche  
- [Gerarchia delle eccezioni](../../../docs/standard/exceptions/exception-hierarchy.md)   
- [Nozioni fondamentali sulla gestione delle eccezioni](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
- [Suggerimenti per le eccezioni](../../../docs/standard/exceptions/best-practices-for-exceptions.md)   
- [Eccezioni](../../../docs/standard/exceptions/index.md)
+## <a name="see-also"></a><span data-ttu-id="fdc9b-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fdc9b-128">See Also</span></span>  
+[<span data-ttu-id="fdc9b-129">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="fdc9b-129">Exceptions</span></span>](index.md)

@@ -1,41 +1,47 @@
 ---
-title: "Lambda Expressions in PLINQ and TPL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Func delegate, creating with lambda expression"
-  - "Action delegate, creating with lambda expression"
-  - "lambda expressions, with Action and Func"
+title: Espressioni lambda in PLINQ e TPL
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Func delegate, creating with lambda expression
+- Action delegate, creating with lambda expression
+- lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 79ab0f4427e0f37259f88cd3ec0762d1582481f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Lambda Expressions in PLINQ and TPL
-La libreria Task Parallel Library \(TPL\) contiene molti metodi che accettano come parametri di input una delle famiglie di delegati <xref:System.Func%601?displayProperty=fullName> o <xref:System.Action?displayProperty=fullName>.  Questi delegati vengono utilizzati per passare la logica di programma personalizzata al ciclo, all'attività o alla query parallela.  Negli esempi di codice per TPL e PLINQ si utilizzano espressioni lambda per creare istanze di tali delegati come blocchi di codice inline.  In questo argomento viene fornita una breve introduzione ai delegati Func e Action e viene illustrato come utilizzare le espressioni lambda in TPL e PLINQ.  
+# <a name="lambda-expressions-in-plinq-and-tpl"></a><span data-ttu-id="9dcac-102">Espressioni lambda in PLINQ e TPL</span><span class="sxs-lookup"><span data-stu-id="9dcac-102">Lambda Expressions in PLINQ and TPL</span></span>
+<span data-ttu-id="9dcac-103">Task Parallel Library (TPL) sono disponibili numerosi metodi che accettano un il <xref:System.Func%601?displayProperty=nameWithType> o <xref:System.Action?displayProperty=nameWithType> famiglia dei delegati come parametri di input.</span><span class="sxs-lookup"><span data-stu-id="9dcac-103">The Task Parallel Library (TPL) contains many methods that take one of the <xref:System.Func%601?displayProperty=nameWithType> or <xref:System.Action?displayProperty=nameWithType> family of delegates as input parameters.</span></span> <span data-ttu-id="9dcac-104">Questi delegati vengono usati per passare la logica di programma personalizzata al ciclo, all'attività o alla query parallela.</span><span class="sxs-lookup"><span data-stu-id="9dcac-104">You use these delegates to pass in your custom program logic to the parallel loop, task or query.</span></span> <span data-ttu-id="9dcac-105">Gli esempi di codice per TPL e PLINQ usano espressioni lambda per creare istanze dei delegati come blocchi di codice inline.</span><span class="sxs-lookup"><span data-stu-id="9dcac-105">The code examples for TPL as well as PLINQ use lambda expressions to create instances of those delegates as inline code blocks.</span></span> <span data-ttu-id="9dcac-106">Questo argomento offre una breve introduzione a Func e Action e illustra come usare le espressioni lambda in TPL e PLINQ.</span><span class="sxs-lookup"><span data-stu-id="9dcac-106">This topic provides a brief introduction to Func and Action and shows you how to use lambda expressions in the Task Parallel Library and PLINQ.</span></span>  
   
- **Nota** Per ulteriori informazioni sui delegati in generale, vedere [Delegati](../Topic/Delegates%20\(C%23%20Programming%20Guide\).md) e [Delegates](../Topic/Delegates%20\(Visual%20Basic\).md).  Per ulteriori informazioni sulle espressioni lambda in C\# e [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], vedere [Espressioni lambda](../Topic/Lambda%20Expressions%20\(C%23%20Programming%20Guide\).md) e [Lambda Expressions](../Topic/Lambda%20Expressions%20\(Visual%20Basic\).md).  
+ <span data-ttu-id="9dcac-107">**Nota** Per altre informazioni generali sui delegati, vedere [Delegati (Guida per programmatori C#)](../../csharp/programming-guide/delegates/index.md) e [Delegati (Visual Basic)](../../visual-basic/programming-guide/language-features/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="9dcac-107">**Note** For more information about delegates in general, see [Delegates](../../csharp/programming-guide/delegates/index.md) and [Delegates](../../visual-basic/programming-guide/language-features/delegates/index.md).</span></span> <span data-ttu-id="9dcac-108">Per altre informazioni sulle espressioni lambda in C# e [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], vedere [Espressioni lambda (Guida per programmatori C#)](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) e [Espressioni lambda (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="9dcac-108">For more information about lambda expressions in C# and [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], see [Lambda Expressions](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) and [Lambda Expressions](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
   
-## Delegato Func  
- Un delegato `Func` incapsula un metodo che restituisce un valore.  In una firma Func, l'ultimo parametro di tipo o quello più a destra specifica sempre il tipo restituito.  Una causa comune degli errori del compilatore è dovuta al tentativo di passare due parametri di input a <xref:System.Func%602?displayProperty=fullName>, poiché in effetti questo tipo accetta un solo parametro di input.  Nella libreria di classi .NET Framework sono definite 17 versioni di `Func`: <xref:System.Func%601?displayProperty=fullName>, <xref:System.Func%602?displayProperty=fullName>, <xref:System.Func%603?displayProperty=fullName> e così via fino a <xref:System.Func%6017?displayProperty=fullName>.  
+## <a name="func-delegate"></a><span data-ttu-id="9dcac-109">Delegato Func</span><span class="sxs-lookup"><span data-stu-id="9dcac-109">Func Delegate</span></span>  
+ <span data-ttu-id="9dcac-110">Un delegato `Func` incapsula un metodo che restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="9dcac-110">A `Func` delegate encapsulates a method that returns a value.</span></span> <span data-ttu-id="9dcac-111">In una firma Func l'ultimo parametro di tipo o quello più a destra specifica sempre il tipo restituito.</span><span class="sxs-lookup"><span data-stu-id="9dcac-111">In a Func signature, the last or rightmost type parameter always specifies the return type.</span></span> <span data-ttu-id="9dcac-112">Una causa comune di errori del compilatore consiste nel provare a passare due parametri di input per un <xref:System.Func%602?displayProperty=nameWithType>; in fatto di questo tipo accetta solo un parametro di input.</span><span class="sxs-lookup"><span data-stu-id="9dcac-112">One common cause of compiler errors is to attempt to pass in two input parameters to a <xref:System.Func%602?displayProperty=nameWithType>; in fact this type takes only one input parameter.</span></span> <span data-ttu-id="9dcac-113">Libreria di classi Framework definisce 17 versioni di `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>, e così via fino a <xref:System.Func%6017?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9dcac-113">The Framework Class Library defines 17 versions of `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>, and so on up through <xref:System.Func%6017?displayProperty=nameWithType>.</span></span>  
   
-## Delegato Action  
- Un delegato <xref:System.Action?displayProperty=fullName> incapsula un metodo \(Sub in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) che non restituisce valori oppure restituisce [void](../Topic/void%20\(C%23%20Reference\).md).  In una firma di tipo Action i parametri di tipo rappresentano solo parametri di input.  Analogamente a Func, nella libreria di classi .NET Framework sono definite 17 versioni di Action, da una versione priva di parametri di tipo fino a una versione avente 16 parametri di tipo.  
+## <a name="action-delegate"></a><span data-ttu-id="9dcac-114">Delegato Action</span><span class="sxs-lookup"><span data-stu-id="9dcac-114">Action Delegate</span></span>  
+ <span data-ttu-id="9dcac-115">Oggetto <xref:System.Action?displayProperty=nameWithType> delegato incapsula un metodo (Sub in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) che non restituisce un valore oppure restituiscono [void](~/docs/csharp/language-reference/keywords/void.md).</span><span class="sxs-lookup"><span data-stu-id="9dcac-115">A <xref:System.Action?displayProperty=nameWithType> delegate encapsulates a method (Sub in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) that does not return a value, or returns [void](~/docs/csharp/language-reference/keywords/void.md).</span></span> <span data-ttu-id="9dcac-116">In una firma di tipo Action i parametri di tipo rappresentano solo parametri di input.</span><span class="sxs-lookup"><span data-stu-id="9dcac-116">In an Action type signature, the type parameters represent only input parameters.</span></span> <span data-ttu-id="9dcac-117">Analogamente a Func, la libreria di classi Framework definisce 17 versioni di Action, da una versione priva di parametri di tipo fino a una versione con 16 parametri di tipo.</span><span class="sxs-lookup"><span data-stu-id="9dcac-117">Like Func, the Framework Class Library defines 17 versions of Action, from a version that has no type parameters up through a version that has 16 type parameters.</span></span>  
   
-## Esempio  
- Nell'esempio seguente per il metodo <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=fullName> viene illustrato come esprimere i delegati Func e Action utilizzando espressioni lambda.  
+## <a name="example"></a><span data-ttu-id="9dcac-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="9dcac-118">Example</span></span>  
+ <span data-ttu-id="9dcac-119">Nell'esempio seguente per il <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> metodo illustra come express delegati sia Func e Action mediante le espressioni lambda.</span><span class="sxs-lookup"><span data-stu-id="9dcac-119">The following example for the <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> method shows how to express both Func and Action delegates by using lambda expressions.</span></span>  
   
  [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
  [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]  
   
-## Vedere anche  
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a><span data-ttu-id="9dcac-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9dcac-120">See Also</span></span>  
+ [<span data-ttu-id="9dcac-121">Programmazione parallela</span><span class="sxs-lookup"><span data-stu-id="9dcac-121">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)

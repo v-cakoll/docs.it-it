@@ -1,46 +1,49 @@
 ---
-title: "Operazioni pipe in .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pipe [.NET Framework]"
-  - "pipe (operazioni) [.NET Framework]"
-  - "comunicazione interprocesso [.NET Framework], pipe"
-  - "I/O [.NET Framework], pipe"
+title: Operazioni pipe in .NET Framework
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pipes [.NET Framework]
+- pipe operations [.NET Framework]
+- interprocess communication [.NET Framework], pipes
+- I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 879e5a73417f9347224bc22b397814b83972751c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Operazioni pipe in .NET Framework
-Le pipe forniscono un mezzo per la comunicazione interprocesso.  Esistono due tipi di pipe:  
+# <a name="pipe-operations-in-the-net-framework"></a><span data-ttu-id="211b0-102">Operazioni pipe in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="211b0-102">Pipe Operations in the .NET Framework</span></span>
+<span data-ttu-id="211b0-103">Pipe forniscono un mezzo per la comunicazione interprocesso.</span><span class="sxs-lookup"><span data-stu-id="211b0-103">Pipes provide a means for interprocess communication.</span></span> <span data-ttu-id="211b0-104">Esistono due tipi di pipe:</span><span class="sxs-lookup"><span data-stu-id="211b0-104">There are two types of pipes:</span></span>  
   
--   Unnamed pipe.  
+-   <span data-ttu-id="211b0-105">Unnamed pipe.</span><span class="sxs-lookup"><span data-stu-id="211b0-105">Anonymous pipes.</span></span>  
   
-     Le unnamed pipe forniscono la comunicazione interprocesso su un computer locale.  Richiedono meno sovraccarico delle named pipe ma offrono servizi limitati.  Le unnamed pipe sono unidirezionali e non possono essere utilizzate su una rete.  Supportano solo una singola istanza del server.  Sono utili per la comunicazione tra thread o tra processi padre e figlio dove gli handle della pipe possono essere passati facilmente al processo figlio quando viene creato.  
+     <span data-ttu-id="211b0-106">Le unnamed pipe forniscono la comunicazione interprocesso in un computer locale.</span><span class="sxs-lookup"><span data-stu-id="211b0-106">Anonymous pipes provide interprocess communication on a local computer.</span></span> <span data-ttu-id="211b0-107">Le unnamed pipe comportano un sovraccarico minore rispetto alle named pipe, ma offrono servizi limitati.</span><span class="sxs-lookup"><span data-stu-id="211b0-107">Anonymous pipes require less overhead than named pipes but offer limited services.</span></span> <span data-ttu-id="211b0-108">Le unnamed pipe sono unidirezionali e non possono essere utilizzate in una rete.</span><span class="sxs-lookup"><span data-stu-id="211b0-108">Anonymous pipes are one-way and cannot be used over a network.</span></span> <span data-ttu-id="211b0-109">Supportano solo una singola istanza del server.</span><span class="sxs-lookup"><span data-stu-id="211b0-109">They support only a single server instance.</span></span> <span data-ttu-id="211b0-110">Le unnamed pipe sono utili per la comunicazione tra thread o tra processi padre e figlio in cui gli handle di pipe possono essere facilmente passati al processo figlio quando viene creato.</span><span class="sxs-lookup"><span data-stu-id="211b0-110">Anonymous pipes are useful for communication between threads, or between parent and child processes where the pipe handles can be easily passed to the child process when it is created.</span></span>  
   
-     In .NET Framework le unnamed pipe vengono implementate utilizzando le classi <xref:System.IO.Pipes.AnonymousPipeClientStream> e <xref:System.IO.Pipes.AnonymousPipeServerStream>.  
+     <span data-ttu-id="211b0-111">In .NET Framework, si implementano le unnamed pipe mediante il <xref:System.IO.Pipes.AnonymousPipeServerStream> e <xref:System.IO.Pipes.AnonymousPipeClientStream> classi.</span><span class="sxs-lookup"><span data-stu-id="211b0-111">In the .NET Framework, you implement anonymous pipes by using the <xref:System.IO.Pipes.AnonymousPipeServerStream> and <xref:System.IO.Pipes.AnonymousPipeClientStream> classes.</span></span>  
   
-     Vedere [Procedura: utilizzare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
+     <span data-ttu-id="211b0-112">Vedere [procedura: utilizzare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).</span><span class="sxs-lookup"><span data-stu-id="211b0-112">See [How to: Use Anonymous Pipes for Local Interprocess Communication](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).</span></span>  
   
--   Named pipe.  
+-   <span data-ttu-id="211b0-113">Named pipe.</span><span class="sxs-lookup"><span data-stu-id="211b0-113">Named pipes.</span></span>  
   
-     Le named pipe forniscono la comunicazione interprocesso tra un server pipe e uno o più client pipe.  Le named pipe possono essere unidirezionali o duplex.  Supportano la comunicazione basata su messaggi e consentono a più client di connettersi simultaneamente al processo server utilizzando lo stesso nome di pipe.  Supportano inoltre la rappresentazione, che consente ai processi di connessione di utilizzare le proprie autorizzazioni sui server remoti.  
+     <span data-ttu-id="211b0-114">Named pipe forniscono la comunicazione interprocesso tra un server di pipe e uno o più client pipe.</span><span class="sxs-lookup"><span data-stu-id="211b0-114">Named pipes provide interprocess communication between a pipe server and one or more pipe clients.</span></span> <span data-ttu-id="211b0-115">Named pipe possono essere unidirezionale o duplex.</span><span class="sxs-lookup"><span data-stu-id="211b0-115">Named pipes can be one-way or duplex.</span></span> <span data-ttu-id="211b0-116">Supportano la comunicazione basata su messaggi e consentire a più client di connettersi contemporaneamente al processo del server utilizzando lo stesso nome di pipe.</span><span class="sxs-lookup"><span data-stu-id="211b0-116">They support message-based communication and allow multiple clients to connect simultaneously to the server process using the same pipe name.</span></span> <span data-ttu-id="211b0-117">Named pipe supportano inoltre la rappresentazione, che consente ai processi di connessione utilizzare le proprie autorizzazioni nei server remoti.</span><span class="sxs-lookup"><span data-stu-id="211b0-117">Named pipes also support impersonation, which enables connecting processes to use their own permissions on remote servers.</span></span>  
   
-     In .NET Framework, le named pipe vengono implementate utilizzando le classi <xref:System.IO.Pipes.NamedPipeClientStream> e <xref:System.IO.Pipes.NamedPipeServerStream>.  
+     <span data-ttu-id="211b0-118">In .NET Framework, named pipe vengono implementate utilizzando il <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream> classi.</span><span class="sxs-lookup"><span data-stu-id="211b0-118">In the .NET Framework, you implement named pipes by using the <xref:System.IO.Pipes.NamedPipeServerStream> and <xref:System.IO.Pipes.NamedPipeClientStream> classes.</span></span>  
   
-     Vedere [Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
+     <span data-ttu-id="211b0-119">Vedere [procedura: utilizzare le Named pipe per la comunicazione interprocesso rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).</span><span class="sxs-lookup"><span data-stu-id="211b0-119">See [How to: Use Named Pipes for Network Interprocess Communication](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).</span></span>  
   
-## Vedere anche  
- [I\/O di file e di flussi](../../../docs/standard/io/index.md)   
- [Procedura: utilizzare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)   
- [Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+## <a name="see-also"></a><span data-ttu-id="211b0-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="211b0-120">See Also</span></span>  
+ [<span data-ttu-id="211b0-121">I/O di file e di flussi</span><span class="sxs-lookup"><span data-stu-id="211b0-121">File and Stream I-O</span></span>](../../../docs/standard/io/index.md)  
+ [<span data-ttu-id="211b0-122">Procedura: Usare le unnamed pipe per la comunicazione interprocesso locale</span><span class="sxs-lookup"><span data-stu-id="211b0-122">How to: Use Anonymous Pipes for Local Interprocess Communication</span></span>](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+ [<span data-ttu-id="211b0-123">Procedura: Usare le named pipe per la comunicazione interprocesso in rete</span><span class="sxs-lookup"><span data-stu-id="211b0-123">How to: Use Named Pipes for Network Interprocess Communication</span></span>](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
