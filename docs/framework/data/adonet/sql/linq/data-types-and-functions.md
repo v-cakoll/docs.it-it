@@ -1,44 +1,47 @@
 ---
-title: "Tipi di dati e funzioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tipi di dati e funzioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 809fc9290070deb304c44018102874d6a56fdd11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tipi di dati e funzioni
-Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ to SQL per membri, costrutti e cast CRL \(Common Language Runtime\).  I membri e i costrutti supportati sono disponibili per l'uso in query LINQ to SQL.  
+# <a name="data-types-and-functions"></a><span data-ttu-id="926e2-102">Tipi di dati e funzioni</span><span class="sxs-lookup"><span data-stu-id="926e2-102">Data Types and Functions</span></span>
+<span data-ttu-id="926e2-103">Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ to SQL per membri, costrutti e cast CRL (Common Language Runtime).</span><span class="sxs-lookup"><span data-stu-id="926e2-103">The topics listed in the following table describe LINQ to SQL support for members, constructs, and casts of the common language runtime (CLR).</span></span> <span data-ttu-id="926e2-104">I membri e i costrutti supportati sono disponibili per l'uso in query LINQ to SQL.</span><span class="sxs-lookup"><span data-stu-id="926e2-104">Supported members and constructs are available to use in your LINQ to SQL queries.</span></span>  
   
- Se un elemento non è supportato nella tabella vuole dire che LINQ to SQL non è in grado di convertire il membro, costrutto o cast CLR per l'esecuzione in SQL Server.  Gli elementi possono essere ancora usati nel codice, ma devono essere valutati prima che la query venga convertita in Transact\-SQL o dopo che i risultati siano stati recuperati dal database.  
+ <span data-ttu-id="926e2-105">Se un elemento non è supportato nella tabella vuole dire che LINQ to SQL non è in grado di convertire il membro, costrutto o cast CLR per l'esecuzione in SQL Server.</span><span class="sxs-lookup"><span data-stu-id="926e2-105">An unsupported item in the table means that LINQ to SQL cannot translate the CLR member, construct, or cast for execution on the SQL Server.</span></span> <span data-ttu-id="926e2-106">Gli elementi possono essere ancora usati nel codice, ma devono essere valutati prima che la query venga convertita in Transact-SQL o dopo che i risultati siano stati recuperati dal database.</span><span class="sxs-lookup"><span data-stu-id="926e2-106">You may still be able to use them in your code, but they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-|Argomento|Descrizione|  
-|---------------|-----------------|  
-|[Mapping di tipi SQL\-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Viene fornita una matrice dettagliata dei mapping tra tipi CLR e tipi SQL Server.|  
-|[Tipi di dati di base](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Tipi di dati Boolean](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Semantica Null](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|Fornisce i collegamenti ad argomenti su [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in cui sono descritti i problemi relativi a elementi null e nullable.|  
-|[Operatori numerici e di confronto](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Operatori di sequenza](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Metodi System.Convert](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Metodi System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|Viene descritto il supporto LINQ to SQL per i membri della struttura <xref:System.DateTime?displayProperty=fullName>.|  
-|[Metodi System.DateTimeOffset](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|Viene descritto il supporto LINQ to SQL per i membri della struttura <xref:System.DateTimeOffset?displayProperty=fullName>.|  
-|[Metodi System.Math](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Metodi System.Object](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Metodi System.String](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Metodi System.TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|Viene descritto il supporto LINQ to SQL per i membri della struttura <xref:System.TimeSpan?displayProperty=fullName>.|  
-|[Funzionalità non supportata](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Viene descritta la funzionalità non supportata in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|<span data-ttu-id="926e2-107">Argomento</span><span class="sxs-lookup"><span data-stu-id="926e2-107">Topic</span></span>|<span data-ttu-id="926e2-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="926e2-108">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="926e2-109">Mapping dei tipi CLR SQL</span><span class="sxs-lookup"><span data-stu-id="926e2-109">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|<span data-ttu-id="926e2-110">Viene fornita una matrice dettagliata dei mapping tra tipi CLR e tipi SQL Server.</span><span class="sxs-lookup"><span data-stu-id="926e2-110">Provides a detailed matrix of mappings between CLR types and SQL Server types.</span></span>|  
+|[<span data-ttu-id="926e2-111">Tipi di dati di base</span><span class="sxs-lookup"><span data-stu-id="926e2-111">Basic Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|<span data-ttu-id="926e2-112">Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-112">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="926e2-113">Tipi di dati Boolean</span><span class="sxs-lookup"><span data-stu-id="926e2-113">Boolean Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|<span data-ttu-id="926e2-114">Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-114">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="926e2-115">Semantica null</span><span class="sxs-lookup"><span data-stu-id="926e2-115">Null Semantics</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|<span data-ttu-id="926e2-116">Vengono forniti i collegamenti ad argomenti su [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in cui sono descritti i problemi relativi a elementi null e nullable.</span><span class="sxs-lookup"><span data-stu-id="926e2-116">Provides links to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] topics that discuss null and nullable issues.</span></span>|  
+|[<span data-ttu-id="926e2-117">Numerici e operatori di confronto</span><span class="sxs-lookup"><span data-stu-id="926e2-117">Numeric and Comparison Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|<span data-ttu-id="926e2-118">Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-118">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="926e2-119">Operatori di sequenza</span><span class="sxs-lookup"><span data-stu-id="926e2-119">Sequence Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|<span data-ttu-id="926e2-120">Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-120">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="926e2-121">Metodi System. Convert</span><span class="sxs-lookup"><span data-stu-id="926e2-121">System.Convert Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|<span data-ttu-id="926e2-122">Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-122">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="926e2-123">Metodi System. DateTime</span><span class="sxs-lookup"><span data-stu-id="926e2-123">System.DateTime Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|<span data-ttu-id="926e2-124">Viene descritto il supporto LINQ to SQL per i membri della struttura <xref:System.DateTime?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="926e2-124">Describes LINQ to SQL support for members of the <xref:System.DateTime?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="926e2-125">Metodi System. DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="926e2-125">System.DateTimeOffset Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|<span data-ttu-id="926e2-126">Viene descritto il supporto LINQ to SQL per i membri della struttura <xref:System.DateTimeOffset?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="926e2-126">Describes LINQ to SQL support for members of the <xref:System.DateTimeOffset?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="926e2-127">Metodi System. Math</span><span class="sxs-lookup"><span data-stu-id="926e2-127">System.Math Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|<span data-ttu-id="926e2-128">Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-128">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="926e2-129">Metodi System. Object</span><span class="sxs-lookup"><span data-stu-id="926e2-129">System.Object Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|<span data-ttu-id="926e2-130">Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-130">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="926e2-131">Metodi System. String</span><span class="sxs-lookup"><span data-stu-id="926e2-131">System.String Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|<span data-ttu-id="926e2-132">Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-132">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="926e2-133">Metodi System. TimeSpan</span><span class="sxs-lookup"><span data-stu-id="926e2-133">System.TimeSpan Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|<span data-ttu-id="926e2-134">Viene descritto il supporto LINQ to SQL per i membri della struttura <xref:System.TimeSpan?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="926e2-134">Describes LINQ to SQL support for members of the <xref:System.TimeSpan?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="926e2-135">Funzionalità non supportate</span><span class="sxs-lookup"><span data-stu-id="926e2-135">Unsupported Functionality</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|<span data-ttu-id="926e2-136">Viene descritta la funzionalità non supportata in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="926e2-136">Describes functionality that is not supported in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
   
-## Vedere anche  
- [Mancata corrispondenza tra tipi SQL e CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)   
- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [.NET Framework Class Library in Visual Studio](http://msdn.microsoft.com/it-it/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a><span data-ttu-id="926e2-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="926e2-137">See Also</span></span>  
+ [<span data-ttu-id="926e2-138">Mancata corrispondenza di tipo SQL-CLR</span><span class="sxs-lookup"><span data-stu-id="926e2-138">SQL-CLR Type Mismatches</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ [<span data-ttu-id="926e2-139">Riferimento</span><span class="sxs-lookup"><span data-stu-id="926e2-139">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="926e2-140">Libreria di classi .NET framework in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="926e2-140">.NET Framework Class Library in Visual Studio</span></span>](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)

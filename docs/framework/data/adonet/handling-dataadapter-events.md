@@ -1,49 +1,55 @@
 ---
-title: "Gestione degli eventi di DataAdapter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gestione di eventi DataAdapter
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b6ca32ac1b0af1f290a9c2b2e33c51efa7a3b149
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Gestione degli eventi di DataAdapter
-<xref:System.Data.Common.DataAdapter> di ADO.NET espone tre eventi che è possibile usare per rispondere alle modifiche apportate ai dati nell'origine dati.  Nella tabella seguente vengono descritti gli eventi di `DataAdapter`.  
+# <a name="handling-dataadapter-events"></a><span data-ttu-id="51348-102">Gestione di eventi DataAdapter</span><span class="sxs-lookup"><span data-stu-id="51348-102">Handling DataAdapter Events</span></span>
+<span data-ttu-id="51348-103"><xref:System.Data.Common.DataAdapter> di ADO.NET espone tre eventi che è possibile usare per rispondere alle modifiche apportate ai dati nell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="51348-103">The ADO.NET <xref:System.Data.Common.DataAdapter> exposes three events that you can use to respond to changes made to data at the data source.</span></span> <span data-ttu-id="51348-104">Nella tabella seguente vengono descritti gli eventi di `DataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="51348-104">The following table shows the `DataAdapter` events.</span></span>  
   
-|Evento|Descrizione|  
-|------------|-----------------|  
-|`RowUpdating`|Sta per iniziare un'operazione UPDATE, INSERT o DELETE su una riga tramite la chiamata a uno dei metodi `Update`.|  
-|`RowUpdated`|È stata completata un'operazione UPDATE, INSERT o DELETE su una riga tramite la chiamata a uno dei metodi `Update`.|  
-|`FillError`|Si è verificato un errore durante un'operazione `Fill`.|  
-  
-## RowUpdating e RowUpdated  
- `RowUpdating` viene generato prima che un aggiornamento a una riga di <xref:System.Data.DataSet> sia stato elaborato nell'origine dati.  `RowUpdated` viene generato dopo che un aggiornamento a una riga di `DataSet` è stato elaborato nell'origine dati.  Di conseguenza, è possibile usare `RowUpdating` per modificare il comportamento dell'aggiornamento prima che venga eseguito, in modo da fornire una gestione aggiuntiva quando verrà eseguito l'aggiornamento, conservare un riferimento a una riga aggiornata, annullare l'aggiornamento corrente e pianificarlo per un processo in batch che verrà eseguito successivamente e così via.  `RowUpdated` risulta utile per rispondere a errori ed eccezioni che si verificano durante l'aggiornamento.  È possibile aggiungere le informazioni sugli errori al `DataSet` così come riprovare la logica e così via.  
-  
- Gli argomenti <xref:System.Data.Common.RowUpdatingEventArgs> e <xref:System.Data.Common.RowUpdatedEventArgs> passati agli eventi `RowUpdating` e `RowUpdated` includono una proprietà `Command` che fa riferimento all'oggetto `Command` usato per eseguire l'aggiornamento, una proprietà `Row` che fa riferimento all'oggetto `DataRow` contenente le informazioni aggiornate, una proprietà `StatementType` relativa al tipo di aggiornamento eseguito, l'oggetto `TableMapping`, se applicabile, e lo `Status` dell'operazione.  
-  
- È possibile usare la proprietà `Status` per determinare se si è verificato un errore durante l'operazione ed eventualmente per controllare le operazioni relative alle righe correnti e risultanti.  Quando si verifica l'evento, la proprietà `Status` sarà uguale a `Continue` o `ErrorsOccurred`.  Nella tabella seguente sono indicati i valori su cui è possibile impostare la proprietà `Status` per controllare le operazioni successive durante l'aggiornamento.  
-  
-|Stato|Descrizione|  
+|<span data-ttu-id="51348-105">Evento</span><span class="sxs-lookup"><span data-stu-id="51348-105">Event</span></span>|<span data-ttu-id="51348-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="51348-106">Description</span></span>|  
 |-----------|-----------------|  
-|`Continue`|Continua l'operazione di aggiornamento.|  
-|`ErrorsOccurred`|Interrompe l'operazione di aggiornamento e genera un'eccezione.|  
-|`SkipCurrentRow`|Ignora la riga corrente e continua l'operazione di aggiornamento.|  
-|`SkipAllRemainingRows`|Interrompe l'operazione di aggiornamento, ma non genera un'eccezione.|  
+|`RowUpdating`|<span data-ttu-id="51348-107">Sta per iniziare un'operazione UPDATE, INSERT o DELETE su una riga tramite la chiamata a uno dei metodi `Update`.</span><span class="sxs-lookup"><span data-stu-id="51348-107">An UPDATE, INSERT, or DELETE operation on a row (by a call to one of the `Update` methods) is about to begin.</span></span>|  
+|`RowUpdated`|<span data-ttu-id="51348-108">È stata completata un'operazione UPDATE, INSERT o DELETE su una riga tramite la chiamata a uno dei metodi `Update`.</span><span class="sxs-lookup"><span data-stu-id="51348-108">An UPDATE, INSERT, or DELETE operation on a row (by a call to one of the `Update` methods) is complete.</span></span>|  
+|`FillError`|<span data-ttu-id="51348-109">Si è verificato un errore durante un'operazione `Fill`.</span><span class="sxs-lookup"><span data-stu-id="51348-109">An error has occurred during a `Fill` operation.</span></span>|  
   
- Se si imposta la proprietà `Status` su `ErrorsOccurred`, verrà generata un'eccezione.  È possibile controllare l'eccezione generata impostando la proprietà `Errors` sull'eccezione desiderata.  Se si usa uno degli altri valori di `Status` non verrà generata alcuna eccezione.  
+## <a name="rowupdating-and-rowupdated"></a><span data-ttu-id="51348-110">RowUpdating e RowUpdated</span><span class="sxs-lookup"><span data-stu-id="51348-110">RowUpdating and RowUpdated</span></span>  
+ <span data-ttu-id="51348-111">`RowUpdating` viene generato prima che un aggiornamento a una riga di <xref:System.Data.DataSet> sia stato elaborato nell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="51348-111">`RowUpdating` is raised before any update to a row from the <xref:System.Data.DataSet> has been processed at the data source.</span></span> <span data-ttu-id="51348-112">`RowUpdated` viene generato dopo che un aggiornamento a una riga di `DataSet` è stato elaborato nell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="51348-112">`RowUpdated` is raised after any update to a row from the `DataSet` has been processed at the data source.</span></span> <span data-ttu-id="51348-113">Di conseguenza, è possibile usare `RowUpdating` per modificare il comportamento dell'aggiornamento prima che venga eseguito, in modo da fornire una gestione aggiuntiva quando verrà eseguito l'aggiornamento, conservare un riferimento a una riga aggiornata, annullare l'aggiornamento corrente e pianificarlo per un processo in batch che verrà eseguito successivamente e così via.</span><span class="sxs-lookup"><span data-stu-id="51348-113">As a result, you can use `RowUpdating` to modify update behavior before it happens, to provide additional handling when an update will occur, to retain a reference to an updated row, to cancel the current update and schedule it for a batch process to be processed later, and so on.</span></span> <span data-ttu-id="51348-114">`RowUpdated` risulta utile per rispondere a errori ed eccezioni che si verificano durante l'aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="51348-114">`RowUpdated` is useful for responding to errors and exceptions that occur during the update.</span></span> <span data-ttu-id="51348-115">È possibile aggiungere le informazioni sugli errori al `DataSet` così come riprovare la logica e così via.</span><span class="sxs-lookup"><span data-stu-id="51348-115">You can add error information to the `DataSet`, as well as retry logic, and so on.</span></span>  
   
- È inoltre possibile usare la proprietà `ContinueUpdateOnError` per gestire gli errori relativi alle righe aggiornate.  Se `DataAdapter.ContinueUpdateOnError` è `true`, quando un aggiornamento di una riga determina la generazione di un'eccezione, il testo dell'eccezione viene inserito nelle informazioni `RowError` della stessa riga e l'elaborazione continua senza generare un'eccezione.  In questo modo è possibile rispondere agli errori quando l'evento `Update` è completato, a differenza di quanto avviene con l'evento `RowUpdated` che consente di rispondere agli errori nel momento in cui si verificano.  
+ <span data-ttu-id="51348-116">Gli argomenti <xref:System.Data.Common.RowUpdatingEventArgs> e <xref:System.Data.Common.RowUpdatedEventArgs> passati agli eventi `RowUpdating` e `RowUpdated` includono una proprietà `Command` che fa riferimento all'oggetto `Command` usato per eseguire l'aggiornamento, una proprietà `Row` che fa riferimento all'oggetto `DataRow` contenente le informazioni aggiornate, una proprietà `StatementType` relativa al tipo di aggiornamento eseguito, l'oggetto `TableMapping`, se applicabile, e lo `Status` dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="51348-116">The <xref:System.Data.Common.RowUpdatingEventArgs> and <xref:System.Data.Common.RowUpdatedEventArgs> arguments passed to the `RowUpdating` and `RowUpdated` events include the following: a `Command` property that references the `Command` object being used to perform the update; a `Row` property that references the `DataRow` object containing the updated information; a `StatementType` property for what type of update is being performed; the `TableMapping`, if applicable; and the `Status` of the operation.</span></span>  
   
- Nell'esempio di codice seguente viene illustrato come aggiungere e rimuovere i gestori eventi.  Il gestore dell'evento `RowUpdating` scrive un log di tutti i record eliminati con un timestamp.  Il gestore dell'evento `RowUpdated` aggiunge le informazioni sugli errori alla proprietà `RowError` della riga nel `DataSet`, evita la generazione dell'eccezione e continua l'elaborazione, riproducendo quindi il comportamento di `ContinueUpdateOnError` \= `true`.  
+ <span data-ttu-id="51348-117">È possibile usare la proprietà `Status` per determinare se si è verificato un errore durante l'operazione ed eventualmente per controllare le operazioni relative alle righe correnti e risultanti.</span><span class="sxs-lookup"><span data-stu-id="51348-117">You can use the `Status` property to determine if an error has occurred during the operation and, if desired, to control the actions against the current and resulting rows.</span></span> <span data-ttu-id="51348-118">Quando si verifica l'evento, la proprietà `Status` sarà uguale a `Continue` o `ErrorsOccurred`.</span><span class="sxs-lookup"><span data-stu-id="51348-118">When the event occurs, the `Status` property equals either `Continue` or `ErrorsOccurred`.</span></span> <span data-ttu-id="51348-119">Nella tabella seguente sono indicati i valori su cui è possibile impostare la proprietà `Status` per controllare le operazioni successive durante l'aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="51348-119">The following table shows the values to which you can set the `Status` property in order to control later actions during the update.</span></span>  
+  
+|<span data-ttu-id="51348-120">Stato</span><span class="sxs-lookup"><span data-stu-id="51348-120">Status</span></span>|<span data-ttu-id="51348-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="51348-121">Description</span></span>|  
+|------------|-----------------|  
+|`Continue`|<span data-ttu-id="51348-122">Continua l'operazione di aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="51348-122">Continue the update operation.</span></span>|  
+|`ErrorsOccurred`|<span data-ttu-id="51348-123">Interrompe l'operazione di aggiornamento e genera un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="51348-123">Abort the update operation and throw an exception.</span></span>|  
+|`SkipCurrentRow`|<span data-ttu-id="51348-124">Ignora la riga corrente e continua l'operazione di aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="51348-124">Ignore the current row and continue the update operation.</span></span>|  
+|`SkipAllRemainingRows`|<span data-ttu-id="51348-125">Interrompe l'operazione di aggiornamento, ma non genera un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="51348-125">Abort the update operation but do not throw an exception.</span></span>|  
+  
+ <span data-ttu-id="51348-126">Se si imposta la proprietà `Status` su `ErrorsOccurred`, verrà generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="51348-126">Setting the `Status` property to `ErrorsOccurred` causes an exception to be thrown.</span></span> <span data-ttu-id="51348-127">È possibile controllare l'eccezione generata impostando la proprietà `Errors` sull'eccezione desiderata.</span><span class="sxs-lookup"><span data-stu-id="51348-127">You can control which exception is thrown by setting the `Errors` property to the desired exception.</span></span> <span data-ttu-id="51348-128">Se si usa uno degli altri valori di `Status` non verrà generata alcuna eccezione.</span><span class="sxs-lookup"><span data-stu-id="51348-128">Using one of the other values for `Status` prevents an exception from being thrown.</span></span>  
+  
+ <span data-ttu-id="51348-129">È inoltre possibile usare la proprietà `ContinueUpdateOnError` per gestire gli errori relativi alle righe aggiornate.</span><span class="sxs-lookup"><span data-stu-id="51348-129">You can also use the `ContinueUpdateOnError` property to handle errors for updated rows.</span></span> <span data-ttu-id="51348-130">Se `DataAdapter.ContinueUpdateOnError` è `true`, quando un aggiornamento di una riga determina la generazione di un'eccezione, il testo dell'eccezione viene inserito nelle informazioni `RowError` della stessa riga e l'elaborazione continua senza generare un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="51348-130">If `DataAdapter.ContinueUpdateOnError` is `true`, when an update to a row results in an exception being thrown, the text of the exception is placed into the `RowError` information of the particular row, and processing continues without throwing an exception.</span></span> <span data-ttu-id="51348-131">In questo modo è possibile rispondere agli errori quando l'evento `Update` è completato, a differenza di quanto avviene con l'evento `RowUpdated` che consente di rispondere agli errori nel momento in cui si verificano.</span><span class="sxs-lookup"><span data-stu-id="51348-131">This enables you to respond to errors when the `Update` is complete, in contrast to the `RowUpdated` event, which enables you to respond to errors when the error is encountered.</span></span>  
+  
+ <span data-ttu-id="51348-132">Nell'esempio di codice seguente viene illustrato come aggiungere e rimuovere i gestori eventi.</span><span class="sxs-lookup"><span data-stu-id="51348-132">The following code sample shows how to both add and remove event handlers.</span></span> <span data-ttu-id="51348-133">Il gestore dell'evento `RowUpdating` scrive un log di tutti i record eliminati con un timestamp.</span><span class="sxs-lookup"><span data-stu-id="51348-133">The `RowUpdating` event handler writes a log of all deleted records with a time stamp.</span></span> <span data-ttu-id="51348-134">Il `RowUpdated` gestore eventi aggiunge informazioni sull'errore per il `RowError` proprietà della riga del `DataSet`, Elimina l'eccezione e continua l'elaborazione (il comportamento del mirroring `ContinueUpdateOnError`  =  `true`).</span><span class="sxs-lookup"><span data-stu-id="51348-134">The `RowUpdated` event handler adds error information to the `RowError` property of the row in the `DataSet`, suppresses the exception, and continues processing (mirroring the behavior of `ContinueUpdateOnError` = `true`).</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -128,21 +134,21 @@ protected static void OnRowUpdated(
 }  
 ```  
   
-## FillError  
- `DataAdapter` genera l'evento `FillError` quando si verifica un errore durante un'operazione `Fill`.  Questo tipo di errore si verifica solitamente quando i dati nella riga che viene aggiunta non possono essere convertiti in un tipo .NET Framework senza una perdita di precisione.  
+## <a name="fillerror"></a><span data-ttu-id="51348-135">FillError</span><span class="sxs-lookup"><span data-stu-id="51348-135">FillError</span></span>  
+ <span data-ttu-id="51348-136">`DataAdapter` genera l'evento `FillError` quando si verifica un errore durante un'operazione `Fill`.</span><span class="sxs-lookup"><span data-stu-id="51348-136">The `DataAdapter` issues the `FillError` event when an error occurs during a `Fill` operation.</span></span> <span data-ttu-id="51348-137">Questo tipo di errore si verifica solitamente quando i dati nella riga che viene aggiunta non possono essere convertiti in un tipo .NET Framework senza una perdita di precisione.</span><span class="sxs-lookup"><span data-stu-id="51348-137">This type of error commonly occurs when the data in the row being added could not be converted to a .NET Framework type without some loss of precision.</span></span>  
   
- Se si verifica un errore durante un'operazione `Fill`, la riga corrente non verrà aggiunta a `DataTable`.  L'evento `FillError` consente di risolvere l'errore e aggiungere la riga o di ignorare la riga esclusa e continuare l'operazione `Fill`.  
+ <span data-ttu-id="51348-138">Se si verifica un errore durante un'operazione `Fill`, la riga corrente non verrà aggiunta a `DataTable`.</span><span class="sxs-lookup"><span data-stu-id="51348-138">If an error occurs during a `Fill` operation, the current row is not added to the `DataTable`.</span></span> <span data-ttu-id="51348-139">L'evento `FillError` consente di risolvere l'errore e aggiungere la riga o di ignorare la riga esclusa e continuare l'operazione `Fill`.</span><span class="sxs-lookup"><span data-stu-id="51348-139">The `FillError` event enables you to resolve the error and add the row, or to ignore the excluded row and continue the `Fill` operation.</span></span>  
   
- `FillErrorEventArgs` passato all'evento `FillError` può contenere diverse proprietà che consentono di rispondere agli errori e di risolverli.  Nella tabella seguente sono illustrate le proprietà dell'oggetto `FillErrorEventArgs`.  
+ <span data-ttu-id="51348-140">`FillErrorEventArgs` passato all'evento `FillError` può contenere diverse proprietà che consentono di rispondere agli errori e di risolverli.</span><span class="sxs-lookup"><span data-stu-id="51348-140">The `FillErrorEventArgs` passed to the `FillError` event can contain several properties that enable you to respond to and resolve errors.</span></span> <span data-ttu-id="51348-141">Nella tabella seguente sono illustrate le proprietà dell'oggetto `FillErrorEventArgs`.</span><span class="sxs-lookup"><span data-stu-id="51348-141">The following table shows the properties of the `FillErrorEventArgs` object.</span></span>  
   
-|Proprietà|Descrizione|  
-|---------------|-----------------|  
-|`Errors`|`Exception` generata.|  
-|`DataTable`|Oggetto `DataTable` in fase di riempimento quando si è verificato l'errore.|  
-|`Values`|Matrice di oggetti contenente i valori della riga in fase di inserimento quando si è verificato l'errore.  I riferimenti ordinali della matrice di `Values` corrispondono ai riferimenti ordinali delle colonne della riga che viene aggiunta.  `Values[0]`, ad esempio, è il valore che era stato aggiunto come prima colonna della riga.|  
-|`Continue`|Consente di scegliere se generare o meno una Exception.  Se si imposta la proprietà `Continue` su `false`, l'operazione `Fill` corrente verrà interrotta e verrà generata un'eccezione.  Se si imposta `Continue` su `true`, l'operazione `Fill` continuerà nonostante l'errore.|  
+|<span data-ttu-id="51348-142">Proprietà</span><span class="sxs-lookup"><span data-stu-id="51348-142">Property</span></span>|<span data-ttu-id="51348-143">Descrizione</span><span class="sxs-lookup"><span data-stu-id="51348-143">Description</span></span>|  
+|--------------|-----------------|  
+|`Errors`|<span data-ttu-id="51348-144">`Exception` generata.</span><span class="sxs-lookup"><span data-stu-id="51348-144">The `Exception` that occurred.</span></span>|  
+|`DataTable`|<span data-ttu-id="51348-145">Oggetto `DataTable` in fase di riempimento quando si è verificato l'errore.</span><span class="sxs-lookup"><span data-stu-id="51348-145">The `DataTable` object being filled when the error occurred.</span></span>|  
+|`Values`|<span data-ttu-id="51348-146">Matrice di oggetti contenente i valori della riga in fase di inserimento quando si è verificato l'errore.</span><span class="sxs-lookup"><span data-stu-id="51348-146">An array of objects that contains the values of the row being added when the error occurred.</span></span> <span data-ttu-id="51348-147">I riferimenti ordinali della matrice di `Values` corrispondono ai riferimenti ordinali delle colonne della riga che viene aggiunta.</span><span class="sxs-lookup"><span data-stu-id="51348-147">The ordinal references of the `Values` array correspond to the ordinal references of the columns of the row being added.</span></span> <span data-ttu-id="51348-148">`Values[0]`, ad esempio, è il valore che era stato aggiunto come prima colonna della riga.</span><span class="sxs-lookup"><span data-stu-id="51348-148">For example, `Values[0]` is the value that was being added as the first column of the row.</span></span>|  
+|`Continue`|<span data-ttu-id="51348-149">Consente di scegliere se generare o meno una Exception.</span><span class="sxs-lookup"><span data-stu-id="51348-149">Allows you to choose whether or not to throw an exception.</span></span> <span data-ttu-id="51348-150">Se si imposta la proprietà `Continue` su `false`, l'operazione `Fill` corrente verrà interrotta e verrà generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="51348-150">Setting the `Continue` property to `false` will halt the current `Fill` operation, and an exception will be thrown.</span></span> <span data-ttu-id="51348-151">Se si imposta `Continue` su `true`, l'operazione `Fill` continuerà nonostante l'errore.</span><span class="sxs-lookup"><span data-stu-id="51348-151">Setting `Continue` to `true` continues the `Fill` operation despite the error.</span></span>|  
   
- Nell'esempio di codice seguente viene aggiunto un gestore per l'evento `FillError` di `DataAdapter`.  Nel codice dell'evento `FillError` viene determinato se esiste il rischio potenziale di una perdita di precisione e viene fornita la possibilità di rispondere all'eccezione.  
+ <span data-ttu-id="51348-152">Nell'esempio di codice seguente viene aggiunto un gestore per l'evento `FillError` di `DataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="51348-152">The following code example adds an event handler for the `FillError` event of the `DataAdapter`.</span></span> <span data-ttu-id="51348-153">Nel codice dell'evento `FillError` viene determinato se esiste il rischio potenziale di una perdita di precisione e viene fornita la possibilità di rispondere all'eccezione.</span><span class="sxs-lookup"><span data-stu-id="51348-153">In the `FillError` event code, the example determines if there is the potential for precision loss, providing the opportunity to respond to the exception.</span></span>  
   
 ```vb  
 AddHandler adapter.FillError, New FillErrorEventHandler( _  
@@ -190,9 +196,9 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 }  
 ```  
   
-## Vedere anche  
- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Gestione di eventi dataset](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)   
- [Gestione degli eventi di DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)   
- [Eventi](../../../../docs/standard/events/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="51348-154">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="51348-154">See Also</span></span>  
+ [<span data-ttu-id="51348-155">DataAdapter e DataReader</span><span class="sxs-lookup"><span data-stu-id="51348-155">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="51348-156">Gestione di eventi di set di dati</span><span class="sxs-lookup"><span data-stu-id="51348-156">Handling DataSet Events</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
+ [<span data-ttu-id="51348-157">Gestione degli eventi di DataTable</span><span class="sxs-lookup"><span data-stu-id="51348-157">Handling DataTable Events</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [<span data-ttu-id="51348-158">Eventi</span><span class="sxs-lookup"><span data-stu-id="51348-158">Events</span></span>](../../../../docs/standard/events/index.md)  
+ [<span data-ttu-id="51348-159">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="51348-159">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

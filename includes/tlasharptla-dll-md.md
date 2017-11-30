@@ -1,1 +1,1 @@
-libreria a collegamento dinamico (DLL)
+<span data-ttu-id="a17a8-101">libreria a collegamento dinamico (DLL)</span><span class="sxs-lookup"><span data-stu-id="a17a8-101">dynamic-link library (DLL)</span></span>
