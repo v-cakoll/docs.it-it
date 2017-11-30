@@ -1,86 +1,87 @@
 ---
-title: "How Keyboard Input Works | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "keyboard input, about keyboard input"
-  - "keyboards, keyboard input"
-  - "Windows Forms, keyboard input"
+title: Funzionamento dell'input da tastiera
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard input [Windows Forms], about keyboard input
+- keyboards [Windows Forms], keyboard input
+- Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f45d01da6f9a851a0e51f9d614e84a3fba91e4d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How Keyboard Input Works
-Gli input della tastiera vengono elaborati in Windows Form mediante la generazione di eventi della tastiera in risposta a messaggi di Windows.  La maggior parte delle applicazioni Windows Form elabora gli input della tastiera solo tramite la gestione dei relativi eventi.  È tuttavia necessario comprendere il funzionamento dei messaggi della tastiera per implementare scenari di input della tastiera più avanzati, come l'intercettazione dei tasti prima che vengano inviati a un controllo.  In questo argomento vengono descritti i tipi di dati riconosciuti da Windows Form e viene fornita una panoramica sulla modalità di invio dei messaggi della tastiera.  Per informazioni sugli eventi della tastiera, vedere [Using Keyboard Events](../../../docs/framework/winforms/using-keyboard-events.md).  
+# <a name="how-keyboard-input-works"></a>Funzionamento dell'input da tastiera
+Windows Forms elabora gli input della tastiera generando eventi di tastiera in risposta ai messaggi di Windows. La maggioranza delle applicazioni Windows Forms elabora gli input della tastiera tramite la gestione dei relativi eventi. Tuttavia è necessario conoscere il funzionano dei messaggi della tastiera per poter implementare scenari più avanzati di input dalla tastiera, ad esempio l'intercettazione dei tasti prima che raggiungano un controllo. Questo argomento descrive i tipi di dati di tasti che Windows Forms riconosce e fornisce una panoramica del modo in cui vengono instradati i messaggi della tastiera. Per informazioni sugli eventi della tastiera, vedere [Utilizzo degli eventi di tastiera](../../../docs/framework/winforms/using-keyboard-events.md).  
   
-## Tipi di tasti  
- Windows Form identifica gli input della tastiera come codici di tasti virtuali rappresentati dall'enumerazione bit per bit <xref:System.Windows.Forms.Keys>.  Con l'enumerazione <xref:System.Windows.Forms.Keys>, è possibile combinare la pressione di una serie di tasti per ottenere un valore singolo.  Questi valori corrispondono ai valori associati ai messaggi di Windows WM\_KEYDOWN e WM\_SYSKEYDOWN.  La maggior parte delle pressioni fisiche dei tasti può essere rilevata gestendo l'evento <xref:System.Windows.Forms.Control.KeyDown> o l'evento <xref:System.Windows.Forms.Control.KeyUp>.  I tasti carattere costituiscono un sottoinsieme dell'enumerazione <xref:System.Windows.Forms.Keys> e corrispondono ai valori associati ai messaggi di Windows WM\_CHAR e WM\_SYSCHAR.  Se la combinazione dei tasti premuti produce un carattere, è possibile individuare il carattere gestendo l'evento <xref:System.Windows.Forms.Control.KeyPress>.  In alternativa, è possibile utilizzare la classe <xref:Microsoft.VisualBasic.Devices.Keyboard>, esposta dall'interfaccia di programmazione di Visual Basic, per individuare i tasti premuti e inviare i tasti.  Per ulteriori informazioni, vedere [Accessing the Keyboard](../Topic/Accessing%20the%20Keyboard%20\(Visual%20Basic\).md).  
+## <a name="types-of-keys"></a>Tipi di tasti  
+ Windows Form identifica l'input da tastiera come codici di tasto virtuale rappresentati dai bit per bit <xref:System.Windows.Forms.Keys> enumerazione. Con il <xref:System.Windows.Forms.Keys> enumerazione, è possibile combinare una serie di tasti premute per ottenere un singolo valore. Questi valori corrispondono ai valori che accompagnano i messaggi di Windows WM_KEYDOWN e WM_SYSKEYDOWN. È possibile rilevare le pressioni dei tasti fisiche più gestendo il <xref:System.Windows.Forms.Control.KeyDown> o <xref:System.Windows.Forms.Control.KeyUp> eventi. Le chiavi di carattere sono un sottoinsieme del <xref:System.Windows.Forms.Keys> enumerazione e corrispondono ai valori associati ai messaggi Windows WM_CHAR e WM_SYSCHAR. Se la combinazione di tasti premuti produce un carattere, è possibile rilevare il carattere gestendo il <xref:System.Windows.Forms.Control.KeyPress> evento. In alternativa, è possibile utilizzare <xref:Microsoft.VisualBasic.Devices.Keyboard>, esposta dall'interfaccia di programmazione Visual Basic, per individuare i tasti premuti e inviare le chiavi. Per altre informazioni, vedere [Accesso alla tastiera](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
   
-## Ordine degli eventi della tastiera  
- Come riportato in precedenza, in un controllo possono verificarsi 3 eventi collegati alla tastiera.  Nella sequenza descritta di seguito è illustrato l'ordine generale degli eventi.  
+## <a name="order-of-keyboard-events"></a>Ordine degli eventi di tastiera  
+ Come indicato in precedenza, ci sono 3 eventi correlati alla tastiera che possono verificarsi in un controllo. La sequenza seguente illustra l'ordine generale degli eventi:  
   
-1.  L'utente preme il tasto "a", il tasto viene pre\-elaborato e inviato e viene generato un evento <xref:System.Windows.Forms.Control.KeyDown>.  
+1.  L'utente preme il tasto "a", la chiave viene pre-elaborata, inviato e un <xref:System.Windows.Forms.Control.KeyDown> si verifica l'evento.  
   
-2.  L'utente tiene premuto il tasto "a", il tasto viene pre\-elaborato e inviato e viene generato un evento <xref:System.Windows.Forms.Control.KeyPress>.  
+2.  L'utente tiene premuto il tasto "a", la chiave viene pre-elaborata, inviato e un <xref:System.Windows.Forms.Control.KeyPress> si verifica l'evento.  
   
-     Questo evento si verifica più volte per il tempo in cui l'utente tiene premuto il tasto.  
+     Questo evento si verifica più volte quando l'utente tiene premuto un tasto.  
   
-3.  L'utente rilascia il tasto "a", il tasto viene pre\-elaborato e inviato e viene generato un evento <xref:System.Windows.Forms.Control.KeyUp>.  
+3.  L'utente rilascia il tasto "a, la chiave" viene pre-elaborato, invio e un <xref:System.Windows.Forms.Control.KeyUp> si verifica l'evento.  
   
-## Pre\-elaborazione dei tasti  
- Come altri messaggi, i messaggi della tastiera sono elaborati nel metodo <xref:System.Windows.Forms.Control.WndProc%2A> di un form o di un controllo.  Tuttavia, prima che i messaggi della tastiera vengano elaborati, il metodo <xref:System.Windows.Forms.Control.PreProcessMessage%2A> chiama uno o più metodi che possono essere sottoposti a override per gestire tasti di caratteri speciali e tasti fisici.  È possibile eseguire l'override di questi metodi per individuare e filtrare alcuni tasti prima che i messaggi vengano elaborati dal controllo.  Nella tabella riportata di seguito viene illustrata l'azione da effettuare e il relativo metodo, secondo l'ordine di esecuzione dei metodi.  
+## <a name="preprocessing-keys"></a>Pre-elaborazione dei tasti  
+ Come gli altri messaggi, vengono elaborati i messaggi della tastiera nel <xref:System.Windows.Forms.Control.WndProc%2A> metodo di un form o controllo. Tuttavia, prima di tastiera i messaggi vengono elaborati, la <xref:System.Windows.Forms.Control.PreProcessMessage%2A> metodo chiama uno o più metodi che possono essere sostituiti per gestire le chiavi di un carattere speciale e chiavi fisiche. È possibile eseguire l'override di questi metodi per rilevare e filtrare alcuni tasti prima che i messaggi vengano elaborati dal controllo. La tabella seguente mostra l'azione che viene eseguita e il relativo metodo correlato che si verifica, nell'ordine in cui il metodo si verifica.  
   
-### Pre\-elaborazione per un evento KeyDown  
+### <a name="preprocessing-for-a-keydown-event"></a>Pre-elaborazione per un evento KeyDown  
   
-|Azione|Metodo collegato|Note|  
-|------------|----------------------|----------|  
-|Verificare la presenza di un tasto di comando, ad esempio un tasto di scelta rapida o un tasto di scelta rapida di menu.|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|Questo metodo elabora un tasto di comando, che ha la precedenza sui tasti normali.  Se il metodo restituisce `true`, il messaggio del tasto non viene inviato e non vengono generati eventi del tasto.  Se restituisce `false`, viene chiamato il metodo <xref:System.Windows.Forms.Control.IsInputKey%2A>`.`|  
-|Verificare la presenza di un tasto speciale che richieda la pre\-elaborazione o di un tasto carattere normale che deve generare un evento <xref:System.Windows.Forms.Control.KeyDown> ed essere inviato a un controllo.|<xref:System.Windows.Forms.Control.IsInputKey%2A>|Se il metodo restituisce `true`, il controllo è un carattere normale e viene generato un evento <xref:System.Windows.Forms.Control.KeyDown>.  Se restituisce `false`, viene chiamato il metodo <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>. **Note:**  Per verificare che un controllo ottenga un tasto o una combinazione di tasti, è possibile gestire l'evento <xref:System.Windows.Forms.Control.PreviewKeyDown> e impostare la proprietà <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> di <xref:System.Windows.Forms.PreviewKeyDownEventArgs> su `true` per il tasto o i tasti desiderati.|  
-|Verificare la presenza di un tasto di navigazione \(ESC, TAB, ritorno a capo o tasti di direzione\).|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|Questo metodo elabora un tasto fisico che impiega funzionalità speciali all'interno del controllo, come il passaggio dello stato di attivazione dal controllo al controllo padre e viceversa.  Se il controllo diretto non gestisce il tasto, viene chiamato il metodo <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> sul controllo padre e così via fino al primo controllo nella gerarchia.  Se il metodo restituisce `true`, la pre\-elaborazione è completa e non vengono generati eventi del tasto.  Se restituisce `false`, viene generato un evento <xref:System.Windows.Forms.Control.KeyDown>.|  
+|Operazione|Metodo correlato|Note|  
+|------------|--------------------|-----------|  
+|Cercare un tasto di comando, ad esempio un tasto acceleratore o un tasto di menu di scelta rapida.|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|Questo metodo elabora un tasto di comando, che ha la precedenza sui tasti normali. Se questo metodo restituisce `true`, il messaggio del tasto non viene inviato e non si verifica alcun evento del tasto. Se restituisce `false`, <xref:System.Windows.Forms.Control.IsInputKey%2A> viene chiamato`.`|  
+|Verificare la presenza di un tasto speciale che richiede pre-elaborazione o un tasto carattere normale che deve generare un <xref:System.Windows.Forms.Control.KeyDown> evento ed essere inviato a un controllo.|<xref:System.Windows.Forms.Control.IsInputKey%2A>|Se il metodo restituisce `true`, significa che il controllo è un carattere normale e un <xref:System.Windows.Forms.Control.KeyDown> viene generato l'evento. Se `false`, <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> viene chiamato. **Nota:** per garantire un controllo ottiene una chiave o una combinazione di chiavi, è possibile gestire il <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e set <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> del <xref:System.Windows.Forms.PreviewKeyDownEventArgs> per `true` per uno o più tasti desiderata.|  
+|Cercare un tasto di spostamento (ESC, TAB, INVIO o tasti di direzione).|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|Questo metodo elabora un tasto fisico che impiega funzionalità speciali all'interno del controllo, ad esempio spostando lo stato attivo tra il controllo e il relativo elemento padre. Se il controllo diretto non gestisce la chiave, il <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> viene chiamato sul controllo padre e così via per il controllo di livello più alto nella gerarchia. Se questo metodo restituisce `true`, la pre-elaborazione è completa e non viene generato alcun evento di tasto. Se restituisce `false`, <xref:System.Windows.Forms.Control.KeyDown> si verifica l'evento.|  
   
-### Pre\-elaborazione per un evento KeyPress  
+### <a name="preprocessing-for-a-keypress-event"></a>Pre-elaborazione per un evento KeyPress  
   
-|Azione|Metodo collegato|Note|  
-|------------|----------------------|----------|  
-|Verificare che il tasto sia un carattere normale che dovrà essere elaborato dal controllo|<xref:System.Windows.Forms.Control.IsInputChar%2A>|Se il carattere è un carattere normale, questo metodo restituisce `true`, viene generato l'evento <xref:System.Windows.Forms.Control.KeyPress> e non si verifica alcuna ulteriore pre\-elaborazione.  In caso contrario, verrà chiamato il metodo <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>.|  
-|Verificare che il carattere rappresenti un tasto di scelta \(come &OK su un pulsante\)|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|Questo metodo, simile al metodo <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>, viene chiamato nella parte superiore della gerarchia dei controlli.  Se il controllo è un controllo contenitore, viene verificata la presenza di tasti di scelta chiamando il metodo <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> sul controllo stesso e sui controlli figlio.  Se <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> restituisce `true`, l'evento <xref:System.Windows.Forms.Control.KeyPress> non viene generato.|  
+|Operazione|Metodo correlato|Note|  
+|------------|--------------------|-----------|  
+|Verificare se il tasto è un carattere normale che deve essere elaborato dal controllo|<xref:System.Windows.Forms.Control.IsInputChar%2A>|Se il carattere è un carattere normale, questo metodo restituisce `true`, <xref:System.Windows.Forms.Control.KeyPress> evento viene generato e senza ulteriore pre-elaborazione si verifica. In caso contrario <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> verrà chiamato.|  
+|Verificare se il carattere è un tasto di scelta (ad esempio &OK su un pulsante)|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|Questo metodo, simile a <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>, verrà chiamata la gerarchia dei controlli. Se il controllo è un controllo contenitore, viene verificata per i tasti di scelta chiamando <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> su se stesso e i relativi controlli figlio. Se <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> restituisce `true`, <xref:System.Windows.Forms.Control.KeyPress> non vengono generati eventi.|  
   
-## Elaborazione dei messaggi della tastiera  
- Una volta che i messaggi della tastiera raggiungono il metodo <xref:System.Windows.Forms.Control.WndProc%2A> di un form o di un controllo, vengono elaborati da un gruppo di metodi che è possibile sottoporre a override.  Ciascuno di questi metodi restituisce un valore <xref:System.Boolean> che specifica se il messaggio della tastiera è stato elaborato e utilizzato dal controllo.  Se uno dei metodi restituisce `true`, il messaggio viene considerato gestito e non viene passato al controllo base o al controllo padre per l'ulteriore elaborazione.  In caso contrario, il messaggio rimane nella relativa coda e può essere elaborato in un altro metodo nel controllo base o nel controllo padre.  Nella tabella riportata di seguito sono riportati i metodi che elaborano i messaggi della tastiera.  
+## <a name="processing-keyboard-messages"></a>Elaborazione dei messaggi della tastiera  
+ Dopo che i messaggi della tastiera raggiungono il <xref:System.Windows.Forms.Control.WndProc%2A> metodo di un form o controllo, vengono elaborati da un set di metodi che possono essere sostituite. Ognuno di questi metodi restituisce un <xref:System.Boolean> valore che specifica se il messaggio della tastiera è stato elaborato e utilizzato dal controllo. Se uno dei metodi restituisce `true`, il messaggio viene considerato gestito e non viene passato alla base o all'elemento padre del controllo per un'ulteriore elaborazione. In caso contrario il messaggio rimane nella coda dei messaggi e può essere elaborato in un altro metodo nella base o nell'elemento padre del controllo. La tabella seguente presenta i metodi che elaborano i messaggi della tastiera.  
   
 |Metodo|Note|  
-|------------|----------|  
-|<xref:System.Windows.Forms.Control.ProcessKeyMessage%2A>|Questo metodo elabora tutti i messaggi della tastiera ricevuti dal metodo <xref:System.Windows.Forms.Control.WndProc%2A> del controllo.|  
-|<xref:System.Windows.Forms.Control.ProcessKeyPreview%2A>|Questo metodo invia il messaggio della tastiera al controllo padre del controllo.  Se <xref:System.Windows.Forms.Control.ProcessKeyPreview%2A> restituisce `true`, non viene generato alcun evento della tastiera. In caso contrario, viene chiamato il metodo <xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A>.|  
-|<xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A>|Questo metodo genera gli eventi <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress> e <xref:System.Windows.Forms.Control.KeyUp>, a seconda dei casi.|  
+|------------|-----------|  
+|<xref:System.Windows.Forms.Control.ProcessKeyMessage%2A>|Questo metodo elabora tutti i messaggi della tastiera che vengono ricevuti i <xref:System.Windows.Forms.Control.WndProc%2A> metodo del controllo.|  
+|<xref:System.Windows.Forms.Control.ProcessKeyPreview%2A>|Questo metodo invia il messaggio della tastiera all'elemento padre del controllo. Se <xref:System.Windows.Forms.Control.ProcessKeyPreview%2A> restituisce `true`, viene generato alcun evento chiave, in caso contrario <xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A> viene chiamato.|  
+|<xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A>|Questo metodo genera il <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, e <xref:System.Windows.Forms.Control.KeyUp> , gli eventi appropriati.|  
   
-## Override dei metodi della tastiera  
- Quando un messaggio della tastiera viene pre\-elaborato ed elaborato, sono disponibili per l'override molti metodi. Alcuni di essi sono tuttavia preferibili ad altri.  Nella tabella riportata di seguito sono descritte le attività che è possibile eseguire e i metodi migliori per sottoporre a override i metodi della tastiera.  Per ulteriori informazioni sull'override dei metodi, vedere [NOT IN BUILD: Overriding Properties and Methods](http://msdn.microsoft.com/it-it/2167e8f5-1225-4b13-9ebd-02591ba90213).  
+## <a name="overriding-keyboard-methods"></a>Override dei metodi della tastiera  
+ Sono disponibili molti metodi di cui eseguire l'override quando un messaggio della tastiera viene pre-elaborato ed elaborato, tuttavia alcuni metodi sono preferibili ad altri. La tabella seguente mostra le attività che è possibile eseguire e il modo migliore per eseguire l'override dei metodi della tastiera. Per ulteriori informazioni sull'override dei metodi, vedere [si esegue l'override di proprietà e i metodi delle classi derivate](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md#overriding-properties-and-methods-in-derived-classes).  
   
-|Task|Metodo|  
+|Attività|Metodo|  
 |----------|------------|  
-|Intercettare un tasto di navigazione e generare l'evento <xref:System.Windows.Forms.Control.KeyDown>,  ad esempio per gestire i tasti TAB e ritorno a capo in una casella di testo.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Note:**  In alternativa, è possibile gestire l'evento <xref:System.Windows.Forms.Control.PreviewKeyDown> e impostare <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> di <xref:System.Windows.Forms.PreviewKeyDownEventArgs> su `true` per il tasto o i tasti desiderati.|  
-|Gestire input speciali o di navigazione in un controllo,  ad esempio se si desidera utilizzare i tasti freccia nel controllo elenco per selezionare un altro elemento.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>.|  
-|Intercettare un tasto di navigazione e generare l'evento <xref:System.Windows.Forms.Control.KeyPress>,  ad esempio se si desidera disporre di più tasti freccia da premere per accelerare lo spostamento tra gli elementi in un controllo casella di selezione.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Gestire input speciali o di navigazione durante un evento <xref:System.Windows.Forms.Control.KeyPress>,  ad esempio se si desidera tenere premuto il tasto "r" per selezionare gli elementi che iniziano con la lettera r in un controllo elenco.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>.|  
-|Gestire tasti di scelta personalizzati, ad esempio se si desidera gestire tasti di scelta presenti su pulsanti creati dal proprietario in una barra degli strumenti.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
+|Una chiave di navigazione di intercettare e generare un <xref:System.Windows.Forms.Control.KeyDown> evento. Ad esempio si desidera che TAB e INVIO siano gestiti in una casella di testo.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Nota:** in alternativa, è possibile gestire il <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e set <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> del <xref:System.Windows.Forms.PreviewKeyDownEventArgs> per `true` per uno o più tasti desiderata.|  
+|Eseguire la gestione di input speciali o dello spostamento su un controllo. Ad esempio si desidera che l'uso dei tasti di direzione nel controllo elenco cambi la voce selezionata.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>.|  
+|Una chiave di navigazione di intercettare e generare un <xref:System.Windows.Forms.Control.KeyPress> evento. Ad esempio in un controllo casella di selezione si desidera che più pressioni di un tasto di direzione accelerino lo spostamento tra le voci.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
+|Eseguire la gestione speciale di input o di navigazione durante un <xref:System.Windows.Forms.Control.KeyPress> evento. Ad esempio, in un controllo elenco, tenendo premuto il tasto "r" si passa fra le voci che iniziano con la lettera r.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>.|  
+|Eseguire una gestione personalizzata dei tasti di scelta; ad esempio, si desidera gestire i tasti di scelta sui pulsanti disegnati dal proprietario contenuti in una barra degli strumenti.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Keys>   
- <xref:System.Windows.Forms.Control.WndProc%2A>   
- <xref:System.Windows.Forms.Control.PreProcessMessage%2A>   
- [My.Computer.Keyboard Object](../../../ocs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)   
- [Accessing the Keyboard](../Topic/Accessing%20the%20Keyboard%20\(Visual%20Basic\).md)   
- [Using Keyboard Events](../../../docs/framework/winforms/using-keyboard-events.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.Keys>  
+ <xref:System.Windows.Forms.Control.WndProc%2A>  
+ <xref:System.Windows.Forms.Control.PreProcessMessage%2A>  
+ [Oggetto My.Computer.Keyboard](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)  
+ [Accesso alla tastiera](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
+ [Utilizzo degli eventi di tastiera](../../../docs/framework/winforms/using-keyboard-events.md)

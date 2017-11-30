@@ -1,45 +1,48 @@
 ---
-title: "Procedura: specificare la propriet&#224; FillBehavior di un oggetto Timeline che ha raggiunto la fine del periodo di attivit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FillBehavior (proprietà per sequenze temporali inattive)"
-  - "sequenze temporali, FillBehavior (proprietà)"
+title: "Procedura: specificare la proprietà FillBehavior di un oggetto Timeline che ha raggiunto la fine del periodo di attività"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FillBehavior property for inactive timelines [WPF]
+- Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b6617bdaa14f405e54af1709f0cf985911c56ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: specificare la propriet&#224; FillBehavior di un oggetto Timeline che ha raggiunto la fine del periodo di attivit&#224;
-In questo esempio viene illustrato come specificare la proprietà <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> per l'oggetto <xref:System.Windows.Media.Animation.Timeline> inattivo di una proprietà animata.  
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Procedura: specificare la proprietà FillBehavior di un oggetto Timeline che ha raggiunto la fine del periodo di attività
+In questo esempio viene illustrato come specificare il <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> per l'oggetto inattivo <xref:System.Windows.Media.Animation.Timeline> di una proprietà animata.  
   
-## Esempio  
- La proprietà <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> di un oggetto <xref:System.Windows.Media.Animation.Timeline> determina ciò che si verifica per il valore di una proprietà animata quando non viene animata, ossia quando l'oggetto <xref:System.Windows.Media.Animation.Timeline> è inattivo ma il relativo oggetto <xref:System.Windows.Media.Animation.Timeline> padre è nel periodo di attività o di attesa,  ad esempio se al termine di un'animazione il valore di una proprietà animata rimane impostato sul valore finale o se viene ripristinato il valore esistente prima dell'inizio dell'animazione.  
+## <a name="example"></a>Esempio  
+ Il <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> proprietà di un <xref:System.Windows.Media.Animation.Timeline> determina cosa accade per il valore di una proprietà animata quando non viene animata, vale a dire quando il <xref:System.Windows.Media.Animation.Timeline> è inattivo ma il relativo elemento padre <xref:System.Windows.Media.Animation.Timeline> si trova all'interno di attività o periodo di attesa. Ad esempio, una proprietà animata rimane alla fine dopo l'animazione termina o se viene ripristinato il valore che aveva prima dell'inizio dell'animazione?  
   
- Nell'esempio seguente viene utilizzato un oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> per animare la proprietà <xref:System.Windows.FrameworkElement.Width%2A> di due rettangoli.  Ogni rettangolo utilizza un oggetto <xref:System.Windows.Media.Animation.Timeline> diverso.  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.Animation.DoubleAnimation> per animare la <xref:System.Windows.FrameworkElement.Width%2A> di due rettangoli. Ogni rettangolo utilizza un altro <xref:System.Windows.Media.Animation.Timeline> oggetto.  
   
- Un oggetto <xref:System.Windows.Media.Animation.Timeline> include una proprietà <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> impostata su <xref:System.Windows.Media.Animation.FillBehavior>. In questo caso al termine dell'oggetto <xref:System.Windows.Media.Animation.Timeline>, viene ripristinato il valore della larghezza del rettangolo esistente prima dell'animazione.  L'altro oggetto <xref:System.Windows.Media.Animation.Timeline> include una proprietà <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> impostata su <xref:System.Windows.Media.Animation.FillBehavior>. In questo caso al termine dell'oggetto <xref:System.Windows.Media.Animation.Timeline>, la larghezza rimane impostata sul valore finale.  
+ Un <xref:System.Windows.Media.Animation.Timeline> ha un <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> che è impostato su <xref:System.Windows.Media.Animation.FillBehavior.Stop>, che comporta la larghezza del rettangolo per tornare al relativo non animati valore quando il <xref:System.Windows.Media.Animation.Timeline> termina. L'altro <xref:System.Windows.Media.Animation.Timeline> ha un <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> di <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, che comporta la larghezza di rimanere al termine valore quando il <xref:System.Windows.Media.Animation.Timeline> termina.  
   
- [!code-xml[timingbehaviors_snip#FillBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
+ [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
   
- Per l'esempio completo, vedere [Raccolta di esempi di animazioni](http://go.microsoft.com/fwlink/?LinkID=159969) \(la pagina potrebbe essere in inglese\).  
+ Per l'esempio completo, vedere [raccolta](http://go.microsoft.com/fwlink/?LinkID=159969).  
   
-## Vedere anche  
- <xref:System.Windows.Media.Animation.DoubleAnimation>   
- <xref:System.Windows.FrameworkElement.Width%2A>   
- <xref:System.Windows.Media.Animation.Timeline>   
- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>   
- <xref:System.Windows.Media.Animation.FillBehavior>   
- <xref:System.Windows.Media.Animation.FillBehavior>   
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Animation and Timing](http://msdn.microsoft.com/it-it/7d83765b-d5ae-41b1-b423-80206e1124aa)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Media.Animation.DoubleAnimation>  
+ <xref:System.Windows.FrameworkElement.Width%2A>  
+ <xref:System.Windows.Media.Animation.Timeline>  
+ <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>  
+ <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+ <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>  
+ [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animazione e temporizzazione](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

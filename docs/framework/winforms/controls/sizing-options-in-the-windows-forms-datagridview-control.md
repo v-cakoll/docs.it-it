@@ -1,59 +1,60 @@
 ---
-title: "Opzioni di ridimensionamento nel controllo DataGridView Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "griglie dei dati, ridimensionamento di colonne"
-  - "griglie dei dati, ridimensionamento di righe"
-  - "griglie dei dati, opzioni di ridimensionamento"
-  - "DataGridView (controllo) [Windows Form], ridimensionamento di colonne"
-  - "DataGridView (controllo) [Windows Form], ridimensionamento di righe"
-  - "DataGridView (controllo) [Windows Form], opzioni di ridimensionamento"
+title: Opzioni di ridimensionamento nel controllo DataGridView Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], row sizing
+- data grids [Windows Forms], column sizing
+- DataGridView control [Windows Forms], column sizing
+- DataGridView control [Windows Forms], sizing options
+- data grids [Windows Forms], row sizing
+- data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-caps.latest.revision: 29
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a4819f0c4596c34312bf689d57cca687641d6a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Opzioni di ridimensionamento nel controllo DataGridView Windows Form
-Le dimensioni di righe, colonne e intestazioni del controllo <xref:System.Windows.Forms.DataGridView> possono variare in seguito a diverse occorrenze.  Tali occorrenze sono illustrate nella tabella che segue.  
+# <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opzioni di ridimensionamento nel controllo DataGridView Windows Form
+<xref:System.Windows.Forms.DataGridView>intestazioni, colonne e righe è possono modificare le dimensioni in seguito a diverse occorrenze. La tabella seguente illustra tali occorrenze.  
   
 |Occorrenza|Descrizione|  
 |----------------|-----------------|  
-|Ridimensionamento effettuato dall'utente|Gli utenti possono effettuare ridimensionamenti trascinando o facendo doppio clic sui divisori di righe, colonne o intestazioni.|  
-|Ridimensionamento dei controlli|In modalità di riempimento di colonna, la larghezza delle colonne cambia al variare della larghezza del controllo, ad esempio quando il controllo è ancorato al form padre e l'utente ridimensiona il form.|  
-|Modifica del valore della cella|Nelle modalità di ridimensionamento automatico basato sul contenuto, le dimensioni variano in funzione dei nuovi valori visualizzati.|  
-|Chiamata ai metodi|Il ridimensionamento in base al contenuto a livello di codice consente di effettuare ridimensionamenti opportunistici in base ai valori delle celle al momento della chiamata ai metodi.|  
-|Impostazione di proprietà|È possibile anche impostare valori specifici di altezza e larghezza.|  
+|Ridimensionamento di utente|Gli utenti possono effettuare ridimensionamenti trascinando o facendo doppio clic sui separatori di riga o colonna intestazione.|  
+|Ridimensionamento dei controlli|Nella modalità di riempimento di colonna, la larghezza delle colonne di modificare la larghezza del controllo cambia; ad esempio, quando il controllo viene ancorato al form padre e l'utente ridimensiona il form.|  
+|Modifica del valore della cella|In modalità di ridimensionamento automatico basato sul contenuto, le dimensioni variano in funzione dei nuovi valori visualizzati.|  
+|Chiamata al metodo|Ridimensionamento di basata sul contenuto a livello di codice consente di rendere ridimensionamenti opportunistici in base ai valori di cella al momento della chiamata al metodo.|  
+|Impostazione della proprietà|È inoltre possibile impostare i valori di larghezza e altezza.|  
   
- Per impostazione predefinita, è abilitato il ridimensionamento effettuato dall'utente, è disabilitato il ridimensionamento automatico e i valori delle celle più ampi delle rispettive colonne vengono troncati.  
+ Per impostazione predefinita, il ridimensionamento dell'utente è abilitato, il ridimensionamento automatico è disabilitato e i valori delle celle con dimensioni maggiori rispetto alle colonne vengono tagliati.  
   
- Nella tabella seguente sono illustrati gli scenari utilizzabili per adattare il comportamento predefinito o utilizzare specifiche opzioni di ridimensionamento per ottenere effetti particolari.  
+ Nella tabella seguente vengono illustrati scenari che è possibile utilizzare per regolare il comportamento predefinito o da utilizzare specifiche opzioni di ridimensionamento per ottenere effetti particolari.  
   
 |Scenario|Implementazione|  
-|--------------|---------------------|  
-|Utilizzare la modalità di riempimento di colonna per visualizzare dati di dimensioni simili in un numero di colonne relativamente ridotto che occupa l'intera larghezza del controllo senza visualizzare la barra di scorrimento orizzontale.|Impostare la proprietà <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> su <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>.|  
-|Utilizzare la modalità di riempimento di colonna con valori visualizzati di dimensioni diverse.|Impostare la proprietà <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> su <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>.  Inizializzare la larghezza relativa delle colonne impostando le proprietà <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> delle colonne o chiamando il metodo <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> del controllo dopo aver popolato il controllo con i dati.|  
-|Utilizzare la modalità di riempimento di colonna con valori di importanza diversa.|Impostare la proprietà <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> su <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>.  Impostare valori ampi per la proprietà <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> delle colonne in cui devono sempre essere visualizzati dei dati o utilizzare un'opzione di ridimensionamento diversa dalla modalità di riempimento per colonne specifiche.|  
-|Utilizzare la modalità di riempimento di colonna per evitare la visualizzazione dello sfondo del controllo.|Impostare la proprietà <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> dell'ultima colonna su <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> e utilizzare altre opzioni di ridimensionamento per le altre colonne.  Se le altre colonne utilizzano una quantità eccessiva dello spazio disponibile, impostare la proprietà <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> dell'ultima colonna.|  
-|Visualizzare una colonna di larghezza fissa, ad esempio una colonna di icone o di ID.|Impostare la proprietà <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> su <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> e la proprietà <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> su <xref:System.Windows.Forms.DataGridViewTriState> per la colonna.  Inizializzare la larghezza della colonna impostando la proprietà <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> o chiamando il metodo <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> del controllo dopo aver popolato il controllo con i dati.|  
-|Adattare automaticamente le dimensioni ogni volta che varia il contenuto delle celle per evitarne il troncamento e ottimizzare l'utilizzo dello spazio.|Impostare una proprietà di ridimensionamento automatico su un valore che rappresenta una modalità di ridimensionamento basato sul contenuto.  Per evitare una riduzione delle prestazioni durante l'utilizzo di grandi quantità di dati, utilizzare una modalità di ridimensionamento che prenda in considerazione solo le righe visualizzate.|  
-|Adattare le dimensioni ai valori nelle righe visualizzate per evitare riduzioni di prestazioni con un numero di righe elevato.|Utilizzare i valori di enumerazione appropriati della modalità di ridimensionamento automatico o a livello di codice.  Per adattare le dimensioni ai valori nelle righe appena visualizzate durante lo scorrimento, effettuare una chiamata a un metodo di ridimensionamento in un gestore eventi <xref:System.Windows.Forms.DataGridView.Scroll>.  Per personalizzare il ridimensionamento con doppio clic in modo da determinare le nuove dimensioni solo con i valori nelle righe visualizzate, effettuare una chiamata a un metodo di ridimensionamento in un gestore eventi <xref:System.Windows.Forms.DataGridView.RowDividerDoubleClick> o <xref:System.Windows.Forms.DataGridView.ColumnDividerDoubleClick>.|  
-|Adattare le dimensioni al contenuto delle celle solo in specifici momenti per evitare riduzioni di prestazioni o consentire il ridimensionamento effettuato dall'utente.|Effettuare una chiamata a un metodo di ridimensionamento basato sul contenuto in un gestore eventi.  Utilizzare ad esempio l'evento <xref:System.Windows.Forms.DataGridView.DataBindingComplete> per inizializzare le dimensioni dopo l'associazione e gestire l'evento <xref:System.Windows.Forms.DataGridView.CellValidated> o <xref:System.Windows.Forms.DataGridView.CellValueChanged> per compensare le dimensioni nelle modifiche effettuate dall'utente in un'origine dati associata.|  
-|Adattare l'altezza delle righe al contenuto di celle su più righe.|Accertarsi che la larghezza delle colonne sia appropriata per la visualizzazione di paragrafi di testo e utilizzare il ridimensionamento di riga automatico o a livello di codice basato sul contenuto per adattare l'altezza.  Assicurarsi inoltre che le celle con contenuto su più righe vengano visualizzate con un valore di stile <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> pari a <xref:System.Windows.Forms.DataGridViewTriState>.<br /><br /> Di solito si utilizza una modalità di ridimensionamento automatico delle colonne per conservare la larghezza delle colonne o impostarle su una larghezza specifica prima che venga adattata l'altezza delle righe.|  
+|--------------|--------------------|  
+|Usa modalità di riempimento di colonna per la visualizzazione dati in un numero relativamente ridotto di colonne che occupano l'intera larghezza del controllo senza visualizzare la barra di scorrimento orizzontale di dimensioni simili.|Impostare la proprietà <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> su <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>.|  
+|Utilizzare con la modalità riempimento colonna Visualizza valori di dimensioni variabili.|Impostare la proprietà <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> su <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>. Inizializzare la larghezza delle colonne relativo impostando la colonna <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> proprietà o chiamando il controllo <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> metodo dopo aver compilato il controllo con i dati.|  
+|Utilizzare la modalità di riempimento colonna con valori di importanza diversa.|Impostare la proprietà <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> su <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>. Impostare grande <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> valori per le colonne che devono sempre visualizzare alcuni dei dati o utilizzare un'opzione di ridimensionamento diversa da riempire modalità per colonne specifiche.|  
+|Utilizzare la modalità di riempimento colonna per evitare la visualizzazione lo sfondo del controllo.|Impostare il <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> proprietà della colonna ultimo <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> e utilizzare altre opzioni di ridimensionamento per le altre colonne. Se le altre colonne utilizzano una quantità eccessiva di spazio disponibile, impostare il <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> proprietà dell'ultima colonna.|  
+|Visualizzare una colonna a larghezza fissa, ad esempio un'icona o una colonna ID.|Impostare <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> a <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None> e <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> a <xref:System.Windows.Forms.DataGridViewTriState.False> per la colonna. Inizializzare la larghezza impostando il <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> proprietà o chiamando il controllo <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> metodo dopo aver compilato il controllo con i dati.|  
+|Regolare le dimensioni automaticamente ogni volta che il contenuto delle celle modifica per evitare il ritaglio e per ottimizzare l'utilizzo dello spazio.|Impostare una proprietà di ridimensionamento automatico su un valore che rappresenta una modalità di ridimensionamento basato sul contenuto. Per evitare una riduzione delle prestazioni quando si lavora con grandi quantità di dati, utilizzare una modalità di ridimensionamento che calcola solo le righe visualizzate.|  
+|Adattare le dimensioni i valori nelle righe visualizzate per evitare effetti negativi sulle prestazioni quando si lavora con molte righe.|Utilizzare i valori di enumerazione della modalità di ridimensionamento appropriata con il ridimensionamento automatico o a livello di codice. Per regolare le dimensioni i valori nelle righe appena visualizzate durante lo scorrimento, chiamare un metodo di ridimensionamento in un <xref:System.Windows.Forms.DataGridView.Scroll> gestore dell'evento. Fare doppio clic su utente di personalizzare il ridimensionamento in modo che solo i valori nelle righe visualizzate determinano le nuove dimensioni, chiamare un metodo di ridimensionamento in un <xref:System.Windows.Forms.DataGridView.RowDividerDoubleClick> o <xref:System.Windows.Forms.DataGridView.ColumnDividerDoubleClick> gestore dell'evento.|  
+|Adattare le dimensioni contenuto delle celle solo in orari specifici per evitare effetti negativi sulle prestazioni o per consentire il ridimensionamento dell'utente.|Chiamare un metodo di ridimensionamento basato sul contenuto in un gestore eventi. Ad esempio, utilizzare il <xref:System.Windows.Forms.DataGridView.DataBindingComplete> eventi per inizializzare le dimensioni dopo l'associazione e gestire il <xref:System.Windows.Forms.DataGridView.CellValidated> o <xref:System.Windows.Forms.DataGridView.CellValueChanged> evento per regolare le dimensioni per compensare le modifiche o modifiche dell'utente in un'origine dati associata.|  
+|Modificare l'altezza delle righe per il contenuto delle celle su più righe.|Verificare che la larghezza delle colonne siano appropriate per la visualizzazione dei paragrafi di testo e utilizzare ridimensionamento di righe basato sul contenuto automatico o a livello di codice per regolare l'altezza. Verificare inoltre che le celle con contenuto su più righe vengono visualizzate utilizzando un <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> il valore di stile di cella <xref:System.Windows.Forms.DataGridViewTriState.True>.<br /><br /> In genere, si utilizzerà una modalità di ridimensionamento automatico delle colonne per mantenere la larghezza delle colonne o set su una larghezza specifica prima regolata.|  
   
-## Ridimensionamento con il mouse  
- Per impostazione predefinita, gli utenti possono ridimensionare righe, colonne e intestazioni che non utilizzano una modalità di ridimensionamento automatico basato sui valori delle celle.  Per impedire agli utenti il ridimensionamento con altre modalità, come ad esempio la modalità di riempimento di colonna, impostare almeno una delle seguenti proprietà del controllo <xref:System.Windows.Forms.DataGridView>:  
+## <a name="resizing-with-the-mouse"></a>Ridimensionamento con il Mouse  
+ Per impostazione predefinita, gli utenti possono ridimensionare le righe, colonne e le intestazioni che non utilizzano una modalità di ridimensionamento automatico in base ai valori di cella. Per impedire agli utenti di ridimensionamento con altre modalità, ad esempio la modalità di riempimento di colonna, impostare una o più dei seguenti <xref:System.Windows.Forms.DataGridView> proprietà:  
   
 -   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
@@ -63,25 +64,25 @@ Le dimensioni di righe, colonne e intestazioni del controllo <xref:System.Window
   
 -   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
- È inoltre possibile impedire il ridimensionamento di singole righe o colonne impostando le rispettive proprietà <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>.  Per impostazione predefinita, il valore della proprietà <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> si basa sul valore della proprietà <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> delle colonne e sul valore della proprietà <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> delle righe.  Se tuttavia si imposta in maniera esplicita la proprietà <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> su <xref:System.Windows.Forms.DataGridViewTriState> o su <xref:System.Windows.Forms.DataGridViewTriState>, il valore specificato avrà la precedenza sul valore del controllo di tale riga o colonna.  Impostare <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> su <xref:System.Windows.Forms.DataGridViewTriState> per ripristinare l'ereditarietà.  
+ È inoltre possibile impedire agli utenti di ridimensionare le singole righe o colonne impostando i relativi <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> proprietà. Per impostazione predefinita, il <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> valore della proprietà è basato sul <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> valore della proprietà per le colonne e <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> valore della proprietà per le righe. Se si imposta in modo esplicito <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> a <xref:System.Windows.Forms.DataGridViewTriState.True> o <xref:System.Windows.Forms.DataGridViewTriState.False>, tuttavia, gli override del valore specificato è il valore di controllo per tale riga o colonna. Impostare <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> a <xref:System.Windows.Forms.DataGridViewTriState.NotSet> per ripristinare l'ereditarietà.  
   
- Poiché <xref:System.Windows.Forms.DataGridViewTriState> ripristina l'ereditarietà dei valori, la proprietà <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> non restituirà mai un valore <xref:System.Windows.Forms.DataGridViewTriState> a meno che la riga o la colonna non sia stata aggiunta a un controllo <xref:System.Windows.Forms.DataGridView>.  Quando è necessario stabilire se il valore della proprietà <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> di una riga o di una colonna è ereditato, esaminare la proprietà <xref:System.Windows.Forms.DataGridViewElement.State%2A> corrispondente.  Se il valore <xref:System.Windows.Forms.DataGridViewElement.State%2A> include il flag <xref:System.Windows.Forms.DataGridViewElementStates>, il valore della proprietà <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> non è ereditato.  
+ Poiché <xref:System.Windows.Forms.DataGridViewTriState.NotSet> Ripristina l'ereditarietà del valore, il <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> proprietà non restituisce mai un <xref:System.Windows.Forms.DataGridViewTriState.NotSet> valore a meno che la riga o colonna non è stato aggiunto a un <xref:System.Windows.Forms.DataGridView> controllo. Se è necessario determinare se il <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> valore della proprietà di una riga o colonna viene ereditato, esaminare il relativo <xref:System.Windows.Forms.DataGridViewElement.State%2A> proprietà. Se il <xref:System.Windows.Forms.DataGridViewElement.State%2A> valore include il <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet> flag, il <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> valore della proprietà non viene ereditato.  
   
-## Ridimensionamento automatico  
- Sono disponibili due tipi di ridimensionamento automatico nel controllo <xref:System.Windows.Forms.DataGridView>: modalità di riempimento di colonna e ridimensionamento automatico basato sul contenuto.  
+## <a name="automatic-sizing"></a>Ridimensionamento automatico  
+ Esistono due tipi di ridimensionamento automatico nel <xref:System.Windows.Forms.DataGridView> controllo: modalità di riempimento di colonna e il ridimensionamento automatico basato sul contenuto.  
   
- Con la modalità di riempimento di colonna, le colonne visibili nel controllo occuperanno l'intera larghezza dell'area di visualizzazione del controllo.  Per ulteriori informazioni su questa modalità, vedere [Modalità di riempimento di colonna nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+ Modalità di riempimento di colonna, le colonne visibili nel controllo per riempire la larghezza dell'area di visualizzazione del controllo. Per ulteriori informazioni su questa modalità, vedere [modalità di riempimento delle colonne nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
   
- È possibile anche configurare righe, colonne e intestazioni per adattarne automaticamente le dimensioni al contenuto delle celle.  In questo caso, il ridimensionamento viene eseguito ad ogni variazione del contenuto delle celle.  
+ È anche possibile configurare le righe, colonne e intestazioni di regolare automaticamente le dimensioni per adattarsi al contenuto della cella. In questo caso, il ridimensionamento viene eseguito ogni volta che cambia il contenuto delle celle.  
   
 > [!NOTE]
->  Se si conservano i valori delle celle in una cache di dati personalizzata utilizzando la modalità virtuale, il ridimensionamento automatico viene eseguito ogni volta che l'utente modifica il valore di una cella, mentre non viene eseguito quando si modifica un valore memorizzato nella cache all'esterno di un gestore eventi <xref:System.Windows.Forms.DataGridView.CellValuePushed>.  In questo caso, effettuare una chiamata al metodo <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> per costringere il controllo ad aggiornare la visualizzazione della cella e ad applicare le modalità di ridimensionamento automatico correnti.  
+>  Se si gestiscono i valori di cella in una cache di dati personalizzati utilizzando la modalità virtuale, il ridimensionamento automatico si verifica quando l'utente modifica il valore di una cella ma non si verifica quando si modifica un valore memorizzato nella cache di fuori di un <xref:System.Windows.Forms.DataGridView.CellValuePushed> gestore dell'evento. In questo caso, chiamare il <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> metodo per forzare il controllo per aggiornare la visualizzazione della cella e applicare la modalità di ridimensionamento automatico corrente.  
   
- Se il ridimensionamento automatico basato sul contenuto viene abilitato per una sola dimensione, ovvero solo per le righe e non per le colonne o viceversa, e anche la proprietà <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> è abilitata, il ridimensionamento automatico verrà eseguito ogni volta che varia anche l'altra dimensione.  Se ad esempio le righe, e non le colonne, sono configurate per il ridimensionamento automatico e la proprietà <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> è abilitata, gli utenti potranno trascinare i divisori di colonne per modificare le dimensioni di una colonna. Contemporaneamente, l'altezza delle righe verrà adattata automaticamente per consentire la visualizzazione completa del contenuto delle celle.  
+ Se il ridimensionamento automatico basato sul contenuto è abilitato per una sola dimensione, che, per righe, ma non colonne o per le colonne ma non le righe, e <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> è abilitata, si verifica anche ogni volta che l'altra dimensione. Se, ad esempio, righe e colonne non sono configurate per il ridimensionamento automatico e <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> è abilitata, gli utenti possono trascinare i separatori di colonna per modificare la larghezza di una colonna e l'altezza delle righe verrà regolato automaticamente in modo che il contenuto delle celle è ancora completamente visualizzato.  
   
- Se si configurano sia le righe che le colonne al ridimensionamento automatico basato sul contenuto e la proprietà <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> è abilitata, il controllo <xref:System.Windows.Forms.DataGridView> adatterà le dimensioni ogni volta che cambia il contenuto delle celle e utilizzerà un rapporto ideale di altezza per larghezza delle celle nel calcolo delle nuove dimensioni.  
+ Se si configura sia righe e colonne per il ridimensionamento automatico basato sul contenuto e <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> è abilitato, il <xref:System.Windows.Forms.DataGridView> controllo adatterà le dimensioni, ogni volta che il contenuto delle celle cambia e utilizzerà un rapporto di altezza e la larghezza delle celle ideale nel calcolo delle dimensioni di nuovo.  
   
- Per configurare la modalità di ridimensionamento per intestazioni e righe e per colonne che non superano il valore del controllo, impostare almeno una delle seguenti proprietà di <xref:System.Windows.Forms.DataGridView>:  
+ Per configurare la modalità di ridimensionamento per le intestazioni e le righe e per le colonne che non superano il valore del controllo, impostare uno o più dei seguenti <xref:System.Windows.Forms.DataGridView> proprietà:  
   
 -   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
@@ -91,26 +92,26 @@ Le dimensioni di righe, colonne e intestazioni del controllo <xref:System.Window
   
 -   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
- Per ignorare la modalità di ridimensionamento di colonna del controllo per una singola colonna, impostare la proprietà <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> corrispondente su un valore diverso da <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>.  La modalità di ridimensionamento di una colonna è in realtà determinato dalla relativa proprietà <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>.  Il valore di questa proprietà si basa sul valore della proprietà <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> della colonna, a meno che tale valore non sia <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>, nel qual caso viene ereditato il valore della proprietà <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> del controllo.  
+ Per eseguire l'override di modalità di ridimensionamento di colonne del controllo per una singola colonna, impostare il relativo <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> proprietà su un valore diverso da <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>. La modalità di ridimensionamento per una colonna è determinata dal relativo <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> proprietà. Il valore di questa proprietà è in base alla colonna <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> valore della proprietà, a meno che tale valore sia <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, nel qual caso il controllo <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> valore ereditato.  
   
- Utilizzare con cautela il ridimensionamento automatico basato sul contenuto quando si ha a che fare con grandi quantità di dati.  Per evitare riduzioni di prestazioni, utilizzare le modalità di ridimensionamento automatico che calcolano le dimensioni in base alle sole righe visualizzate anziché analizzare ogni riga del controllo.  Per ottenere prestazioni ottimali, utilizzare invece il ridimensionamento a livello di codice in modo da poter eseguire il ridimensionamento in momenti specifici, ad esempio immediatamente dopo il caricamento di nuovi dati.  
+ Utilizzare in base al contenuto il ridimensionamento automatico con cautela quando si lavora con grandi quantità di dati. Per evitare effetti negativi sulle prestazioni, utilizzare la modalità di ridimensionamento automatico che consentono di calcolare le dimensioni basato solo su righe visualizzate anziché un'analisi di ogni riga nel controllo. Per ottenere prestazioni ottimali, utilizzare a livello di codice invece il ridimensionamento in modo da poter ridimensionare in momenti specifici, ad esempio immediatamente dopo i nuovi dati verrà caricato.  
   
- Le modalità di ridimensionamento automatico basato sul contenuto non hanno effetto su righe, colonne o intestazioni nascoste con l'impostazione della proprietà <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> di righe o colonne o delle proprietà <xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A> o <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> del controllo su `false`.  Se ad esempio una colonna viene nascosta dopo averla ridimensionata automaticamente per adattarla a un valore elevato di cella, le dimensioni di tale colonna nascosta non varieranno se la riga contenente il valore elevato di cella viene eliminata.  Poiché il ridimensionamento automatico non viene eseguito quando cambia la visibilità, il ripristino della proprietà <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> della colonna su `true` non implicherà l'esecuzione di un nuovo calcolo delle dimensioni in base al contenuto corrente.  
+ Modalità di ridimensionamento automatico basato sul contenuto non influiscono le righe, colonne o intestazioni nascoste impostando la riga o colonna <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> proprietà o il controllo <xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A> o <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> proprietà `false`. Ad esempio, se una colonna viene nascosto dopo che viene ridimensionata automaticamente per contenere un valore di cella di grandi dimensioni, la colonna nascosta non modificherà la dimensione se viene eliminata la riga contenente il valore della cella di grandi dimensioni. Ridimensionamento automatico non si verifica quando cambia la visibilità, pertanto la modifica della colonna <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> proprietà nuovamente a `true` non forza il ricalcolo delle dimensioni in base al contenuto corrente.  
   
- Il ridimensionamento basato sul contenuto a livello di codice non ha effetto su righe, colonne e intestazioni, a prescindere dalla loro visibilità.  
+ Ridimensionamento di basata sul contenuto a livello di codice influisce sulle righe, colonne e intestazioni indipendentemente dalla visibilità.  
   
-## Ridimensionamento a livello di codice  
- Quando è disabilitato il ridimensionamento automatico, è possibile impostare a livello di codice la larghezza o l'altezza esatta di righe, colonne o intestazioni attraverso le seguenti proprietà:  
+## <a name="programmatic-resizing"></a>Il ridimensionamento a livello di codice  
+ Quando il ridimensionamento automatico è disabilitato, è possibile impostare a livello di codice la larghezza esatta o l'altezza delle righe, colonne o intestazioni attraverso le proprietà seguenti:  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
- È inoltre possibile ridimensionare a livello di codice righe, colonne e intestazioni per adattarne il contenuto utilizzando i seguenti metodi:  
+ Anche a livello di codice, è possibile ridimensionare righe, colonne e intestazioni in base al contenuto nei modi seguenti:  
   
 -   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
@@ -124,45 +125,45 @@ Le dimensioni di righe, colonne e intestazioni del controllo <xref:System.Window
   
 -   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
- Questi metodi permettono di ridimensionare righe, colonne o intestazioni una sola volta anziché configurarle per il ridimensionamento continuo.  Le nuove dimensioni vengono calcolate automaticamente per visualizzare il contenuto di tutte le celle senza troncamenti.  Quando tuttavia a livello di codice si ridimensionano le colonne i cui valori della proprietà <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> sono uguali a <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>, viene utilizzata la larghezza calcolata in base al contenuto per adattare in maniera proporzionale i valori della proprietà <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> delle colonne, quindi viene calcolata la larghezza effettiva delle colonne in base a queste nuove proporzioni affinché tutte le colonne occupino l'area di visualizzazione disponibile del controllo.  
+ Questi metodi verranno ridimensionare righe, colonne, o intestazioni una sola volta anziché configurarli per il ridimensionamento continuo. Le nuove dimensioni vengono calcolate automaticamente per visualizzare tutto il contenuto senza troncamenti. Quando si ridimensionano a livello di programmazione le colonne contenenti <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> i valori della proprietà <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, tuttavia, la larghezza calcolata in base al contenuto consentono di modificare in modo proporzionale la colonna <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> i valori delle proprietà e la colonna effettivamente larghezze sono quindi viene calcolata in base a queste nuove proporzioni affinché tutte le colonne riempire l'area di visualizzazione disponibile del controllo.  
   
- Il ridimensionamento automatico a livello di codice è utile per evitare riduzioni di prestazioni dovute al ridimensionamento continuo.  È inoltre utile per fornire le dimensioni iniziali per righe, colonne e intestazioni modificabili dall'utente e per la modalità di riempimento di colonna.  
+ Il ridimensionamento a livello di codice è utile per evitare effetti negativi sulle prestazioni con il ridimensionamento continuo. È inoltre utile fornire le dimensioni iniziali per le intestazioni, colonne e righe ridimensionabili dall'utente e per la modalità di riempimento di colonna.  
   
- Di solito si effettuano chiamate ai metodi di ridimensionamento a livello di codice in momenti specifici.  È possibile ad esempio ridimensionare a livello di codice tutte le colonne subito dopo il caricamento dei dati oppure ridimensionare a livello di codice una specifica riga dopo aver modificato un particolare valore di cella.  
+ In genere si chiamerà i metodi di ridimensionamento a livello di codice in momenti specifici. Ad esempio, si potrebbero ridimensionare a livello di programmazione tutte le colonne immediatamente dopo il caricamento dei dati oppure si può ridimensionare a livello di codice una riga specifica dopo che è stato modificato un valore di cella determinato.  
   
-## Personalizzazione del ridimensionamento basato sul contenuto  
- È possibile personalizzare il ridimensionamento di tipi di celle, righe e colonne del controllo <xref:System.Windows.Forms.DataGridView> derivato effettuando l'override dei metodi <xref:System.Windows.Forms.DataGridViewCell.GetPreferredSize%2A?displayProperty=fullName>, <xref:System.Windows.Forms.DataGridViewRow.GetPreferredHeight%2A?displayProperty=fullName> o <xref:System.Windows.Forms.DataGridViewColumn.GetPreferredWidth%2A?displayProperty=fullName> oppure effettuando chiamate agli overload di metodi di ridimensionamento protetti in un controllo <xref:System.Windows.Forms.DataGridView> derivato.  Gli overload di metodi di ridimensionamento protetti sono progettati per il funzionamento abbinato, in modo da ottenere un rapporto ideale di altezza per larghezza delle celle ed evitare la sovrapposizione di celle con larghezza o altezza maggiore.  Se ad esempio si effettua una chiamata all'overload `AutoResizeRows(DataGridViewAutoSizeRowsMode,Boolean)` del metodo <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A> e si passa un valore di `false` per il parametro <xref:System.Boolean>, l'overload calcolerà l'altezza e la larghezza ideali delle celle della riga, ma adatterà solo l'altezza delle righe.  Sarà quindi necessario effettuare una chiamata al metodo <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> per adattare la larghezza delle colonne al valore calcolato ideale.  
+## <a name="customizing-content-based-sizing-behavior"></a>Personalizzazione del comportamento di ridimensionamento in base al contenuto  
+ È possibile personalizzare i comportamenti di ridimensionamento quando si lavora con derivata <xref:System.Windows.Forms.DataGridView> tipi di cella, riga e colonna eseguendo l'override di <xref:System.Windows.Forms.DataGridViewCell.GetPreferredSize%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridViewRow.GetPreferredHeight%2A?displayProperty=nameWithType>, o <xref:System.Windows.Forms.DataGridViewColumn.GetPreferredWidth%2A?displayProperty=nameWithType> metodi o chiamando protetto ridimensionamento overload del metodo in una classe <xref:System.Windows.Forms.DataGridView> controllo. Gli overload del metodo di ridimensionamento protetti sono progettate per funzionare in coppie per ottenere un rapporto di altezza e la larghezza delle celle ideale, evitando celle eccessivamente larghezza e un'altezza. Ad esempio, se si chiama il `AutoResizeRows(DataGridViewAutoSizeRowsMode,Boolean)` overload di <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A> metodo e passa un valore di `false` per il <xref:System.Boolean> parametro, l'overload calcolerà l'altezza e larghezza ideali per le celle nella riga, ma verrà regolare l'altezza delle righe solo. È quindi necessario chiamare il <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> metodo per regolare la larghezza delle colonne al valore calcolato ideale.  
   
-## Opzioni di ridimensionamento basato sul contenuto  
- Le enumerazioni utilizzate dalle proprietà e dai metodi di ridimensionamento presentano valori simili per il ridimensionamento basato sul contenuto.  Con questi valori, è possibile limitare le celle da utilizzare per il calcolo delle dimensioni preferite.  Nel caso di tutte le enumerazioni di ridimensionamento, i valori i cui nomi fanno riferimento alle celle visualizzate limiteranno il calcolo alle celle presenti nelle righe visualizzate.  L'esclusione delle righe è utile per evitare una riduzione delle prestazioni quando si utilizzano grandi quantità di righe.  È inoltre possibile limitare i calcoli ai valori delle celle con o senza intestazioni.  
+## <a name="content-based-sizing-options"></a>Opzioni di ridimensionamento basato sul contenuto  
+ Le enumerazioni utilizzate dai metodi e proprietà di ridimensionamento avere valori simili per il ridimensionamento basato sul contenuto. Con questi valori, è possibile limitare le celle vengono utilizzate per calcolare le dimensioni preferite. Per tutte le enumerazioni di ridimensionamento, i valori con nomi che fanno riferimento alle celle visualizzate limitano il calcolo alle celle nelle righe visualizzate. Esclusione di righe è utile per evitare una riduzione delle prestazioni quando si lavora con grandi quantità di righe. È inoltre possibile limitare i calcoli in valori di cella nelle celle di intestazione o di altro tipo.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeRowMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>   
- <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>   
- <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>   
- [Ridimensionamento di colonne e righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)   
- [Modalità di riempimento di colonna nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)   
- [Procedura: impostare le modalità dimensionamento del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeRowMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>  
+ <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>  
+ <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>  
+ [Ridimensionamento di colonne e righe nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
+ [Modalità di riempimento di colonna nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ [Procedura: Impostare le modalità dimensionamento del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

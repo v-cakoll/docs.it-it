@@ -1,46 +1,51 @@
 ---
-title: "Procedura: modificare le dimensioni o la posizione di un&#39;immagine in fase di esecuzione (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], PictureBox (controllo)"
-  - "immagini [Windows Form], controllo del posizionamento nel controllo PictureBox [Windows Form]"
-  - "PictureBox (controllo) [Windows Form], dimensioni e allineamento di immagini"
-  - "immagini, controllo del posizionamento nel controllo PictureBox [Windows Form]"
+title: 'Procedura: modificare le dimensioni o la posizione di un''immagine in fase di esecuzione (Windows Form)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- images [Windows Forms], controlling placement in PictureBox control [Windows Forms]
+- examples [Windows Forms], PictureBox control
+- PictureBox control [Windows Forms], picture size and alignment
+- pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df67871b0b133297a6f53ff9e4a42c7630a5f56d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: modificare le dimensioni o la posizione di un&#39;immagine in fase di esecuzione (Windows Form)
-Se si desidera utilizzare il controllo <xref:System.Windows.Forms.PictureBox> di Windows Form in un form, è possibile impostarne la proprietà <xref:System.Windows.Forms.PictureBox.SizeMode%2A> su:  
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procedura: modificare le dimensioni o la posizione di un'immagine in fase di esecuzione (Windows Form)
+Se si utilizza Windows Form <xref:System.Windows.Forms.PictureBox> controllo in un form, è possibile impostare il <xref:System.Windows.Forms.PictureBox.SizeMode%2A> proprietà in modo da:  
   
--   Allineare l'angolo superiore sinistro dell'immagine con l'angolo superiore sinistro del controllo.  
+-   Allineamento nell'angolo superiore sinistro dell'immagine con l'angolo superiore sinistro del controllo  
   
--   Centrare l'immagine all'interno del controllo.  
+-   Centrare l'immagine all'interno del controllo  
   
--   Regolare le dimensioni del controllo in modo che possa contenere l'immagine da visualizzare.  
+-   Regolare le dimensioni del controllo per adattare l'immagine da visualizzare  
   
--   Estendere l'eventuale immagine visualizzata dal controllo in modo che corrisponda alle dimensioni del controllo stesso.  
+-   Estensione qualsiasi immagine da visualizzare per adattarla al controllo  
   
- L'estensione di un'immagine, soprattutto se in formato bitmap, può causare una perdita di qualità.  Rispetto alle immagini bitmap, i metafile, che sono elenchi di istruzioni grafiche per la creazione di immagini in fase di esecuzione, risultano più adatti a essere estesi.  
+ Estensione di un'immagine (in particolare se in formato bitmap) può causare una perdita della qualità dell'immagine. Metafile, che sono elenchi di istruzioni di grafica per la creazione di immagini in fase di esecuzione, sono più adatti per l'estensione rispetto alle immagini bitmap.  
   
-### Per impostare la proprietà SizeMode in fase di esecuzione  
+### <a name="to-set-the-sizemode-property-at-run-time"></a>Per impostare la proprietà in fase di esecuzione  
   
-1.  Impostare <xref:System.Windows.Forms.PictureBox.SizeMode%2A> su <xref:System.Windows.Forms.PictureBoxSizeMode> \(impostazione predefinita\), <xref:System.Windows.Forms.PictureBoxSizeMode>, <xref:System.Windows.Forms.PictureBoxSizeMode> o <xref:System.Windows.Forms.PictureBoxSizeMode>.  Se si imposta su <xref:System.Windows.Forms.PictureBoxSizeMode>, l'immagine viene inserita nell'angolo superiore sinistro del controllo. Se l'immagine è più grande del controllo, i bordi inferiore e destro vengono tagliati.  Se si imposta su <xref:System.Windows.Forms.PictureBoxSizeMode>, l'immagine viene allineata al centro nel controllo. Se l'immagine è più grande del controllo, i bordi esterni dell'immagine vengono tagliati.  Se si imposta su <xref:System.Windows.Forms.PictureBoxSizeMode>, le dimensioni del controllo vengono adattate alle dimensioni dell'immagine.  Se si imposta su <xref:System.Windows.Forms.PictureBoxSizeMode>, avviene il contrario, ovvero le dimensioni dell'immagine vengono adattate alle dimensioni del controllo.  
+1.  Impostare <xref:System.Windows.Forms.PictureBox.SizeMode%2A> a <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (impostazione predefinita), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, o <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>indica che l'immagine viene posizionata nell'angolo superiore sinistro del controllo. Se l'immagine è più grande del controllo, vengono tagliati relativi bordi inferiori e destro. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>indica che l'immagine viene centrata all'interno del controllo; Se l'immagine è più grande del controllo, vengono tagliati bordi esterni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>significa che le dimensioni del controllo vengano regolata per le dimensioni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>è l'opposto e significa che le dimensioni dell'immagine vengono adattate alle dimensioni del controllo.  
   
-     Nell'esempio seguente il percorso impostato per la posizione dell'immagine coincide con la cartella Documenti.  Questa scelta è dovuta al fatto che si suppone che questa directory sia presente sulla maggior parte dei computer con sistema operativo Windows.  La scelta di questa posizione consente inoltre di eseguire l'applicazione senza problemi agli utenti che dispongono di livelli di accesso minimo.  Nell'esempio riportato di seguito si presuppone che un controllo <xref:System.Windows.Forms.PictureBox> sia già stato aggiunto al form.  
+     Nell'esempio seguente, il percorso impostato per la posizione dell'immagine è la cartella documenti. Ciò accade in quanto è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows includerà questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. Nell'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.PictureBox> controllo già aggiunto.  
   
     ```vb  
     Private Sub StretchPic()  
@@ -54,7 +59,6 @@ Se si desidera utilizzare il controllo <xref:System.Windows.Forms.PictureBox> di
        (System.Environment.SpecialFolder.Personal) _  
        & "\Image.gif")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +74,6 @@ Se si desidera utilizzare il controllo <xref:System.Windows.Forms.PictureBox> di
        (System.Environment.SpecialFolder.Personal) _  
        + @"\Image.gif")  
     }  
-  
     ```  
   
     ```cpp  
@@ -89,9 +92,9 @@ Se si desidera utilizzare il controllo <xref:System.Windows.Forms.PictureBox> di
        }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.PictureBox>   
- [Procedura: caricare un'immagine utilizzando la finestra di progettazione](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [Cenni preliminari sul controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [Procedura: impostare le immagini in fase di esecuzione](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.PictureBox>  
+ [Procedura: Caricare un'immagine usando la finestra di progettazione](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [Panoramica sul controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [Procedura: Impostare le immagini in fase di esecuzione](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
  [Controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

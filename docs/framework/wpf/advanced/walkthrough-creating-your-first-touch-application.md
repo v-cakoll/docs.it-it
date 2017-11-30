@@ -1,93 +1,99 @@
 ---
-title: "Procedura dettagliata: creazione della prima applicazione a tocco | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creazione di un'applicazione touchscreen [WPF]"
-  - "creazione di un'applicazione sensibile al tocco [WPF]"
-  - "applicazioni touchscreen [WPF], creazione"
-  - "applicazioni sensibili al tocco [WPF], creazione"
+title: 'Procedura dettagliata: creazione della prima applicazione a tocco'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- creating a touch-sensitive application [WPF]
+- touchscreen applications [WPF], creating
+- touch-sensitive applications [WPF], creating
+- creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee85a5d8764fc27205cf09e1af43069b25096ef1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: creazione della prima applicazione a tocco
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente alle applicazioni di rispondere al tocco.  È ad esempio possibile interagire con un'applicazione utilizzando uno o più dita su un dispositivo sensibile al tocco, ad esempio un touchscreen. In questa procedura dettagliata viene creata un'applicazione che consente all'utente di spostarsi, ridimensionare o ruotare un singolo oggetto tramite tocco.  
+# <a name="walkthrough-creating-your-first-touch-application"></a>Procedura dettagliata: creazione della prima applicazione a tocco
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]consente alle applicazioni di rispondere al tocco. Ad esempio, è possibile interagire con un'applicazione utilizzando uno o più dita su un dispositivo di tocco sensibili, ad esempio un touchscreen, che questa procedura dettagliata viene creata un'applicazione che consente all'utente di spostare, ridimensionare o ruotare un oggetto tramite tocco.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
 -   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
   
 -   Windows 7.  
   
--   Un dispositivo in grado di accettare l'input tocco, ad esempio un touchscreen che supporta Windows Touch.  
+-   Un dispositivo che accetta l'input, ad esempio un touchscreen, che supporta Windows Touch tocco.  
   
- È inoltre necessario disporre di una conoscenza di base della modalità di creazione di un'applicazione in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], in particolare della modalità di sottoscrizione e di gestione di un evento.  Per ulteriori informazioni, vedere [Procedura dettagliata: introduzione a WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Inoltre, occorre una conoscenza di come creare un'applicazione in base [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], in particolare come sottoscrivere e gestire un evento. Per ulteriori informazioni, vedere [procedura dettagliata: applicazione desktop WPF prima](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## Creazione dell'applicazione  
+## <a name="creating-the-application"></a>Creare l'applicazione  
   
-#### Per creare l'applicazione  
+#### <a name="to-create-the-application"></a>Per creare l'applicazione  
   
-1.  Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C\# denominato `BasicManipulation`.  Per ulteriori informazioni, vedere [Procedura: creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/it-it/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `BasicManipulation`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
-2.  Sostituire il contenuto di MainWindow.xaml con il codice XAML riportato di seguito.  
+2.  Sostituire il contenuto di MainWindow. XAML con il seguente codice XAML.  
   
-     Questo markup consente di creare un'applicazione semplice contenente un oggetto <xref:System.Windows.Shapes.Rectangle> di colore rosso su un oggetto <xref:System.Windows.Controls.Canvas>.  La proprietà <xref:System.Windows.UIElement.IsManipulationEnabled%2A> di <xref:System.Windows.Shapes.Rectangle> viene impostata su true in modo che possa ricevere gli eventi di modifica.  L'applicazione sottoscrive gli eventi <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta> e <xref:System.Windows.UIElement.ManipulationInertiaStarting>.  Questi eventi contengono la logica per spostare <xref:System.Windows.Shapes.Rectangle> quando l'utente lo modifica.  
+     Questo codice crea un'applicazione semplice che contiene un rosso <xref:System.Windows.Shapes.Rectangle> su un <xref:System.Windows.Controls.Canvas>. Il <xref:System.Windows.UIElement.IsManipulationEnabled%2A> proprietà del <xref:System.Windows.Shapes.Rectangle> è impostata su true in modo che possa ricevere eventi di modifica. L'applicazione sottoscrive il <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, e <xref:System.Windows.UIElement.ManipulationInertiaStarting> eventi. Questi eventi contengono la logica per spostare il <xref:System.Windows.Shapes.Rectangle> quando l'utente lo modifica.  
   
-     [!code-xml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
+     [!code-xaml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Se si utilizza Visual Basic, nella prima riga di MainWindow.xaml sostituire `x:Class="BasicManipulation.MainWindow"` con `x:Class="MainWindow"`.  
+3.  Se si utilizza Visual Basic, nella prima riga di MainWindow. XAML, sostituire `x:Class="BasicManipulation.MainWindow"` con `x:Class="MainWindow"`.  
   
-4.  Nella classe `MainWindow` aggiungere il gestore eventi <xref:System.Windows.UIElement.ManipulationStarting>.  
+4.  Nel `MainWindow` classe, aggiungere le seguenti <xref:System.Windows.UIElement.ManipulationStarting> gestore dell'evento.  
   
-     L'evento <xref:System.Windows.UIElement.ManipulationStarting> si verifica quando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rileva l'inizio della modifica di un oggetto tramite input tocco.  Nel codice viene specificato che la posizione della modifica deve essere relativa a <xref:System.Windows.Window> impostando la proprietà <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>.  
+     Il <xref:System.Windows.UIElement.ManipulationStarting> evento si verifica quando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rileva un tocco input inizia a modificare un oggetto. Il codice specifica che la posizione della modifica deve essere relativo al <xref:System.Windows.Window> impostando il <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> proprietà.  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]  
   
-5.  Nella classe `MainWindow` aggiungere il gestore eventi <xref:System.Windows.Input.ManipulationDelta>.  
+5.  Nel `MainWindow` classe, aggiungere le seguenti <xref:System.Windows.Input.ManipulationDelta> gestore dell'evento.  
   
-     L'evento <xref:System.Windows.Input.ManipulationDelta> si verifica quando la posizione viene modificata tramite input tocco e può verificarsi più volte durante la modifica.  L'evento può inoltre verificarsi dopo il sollevamento di un dito.  Ad esempio, se l'utente sposta un dito su uno schermo, l'evento <xref:System.Windows.Input.ManipulationDelta> si verifica più volte durante lo spostamento del dito.  Quando l'utente solleva un dito dallo schermo, l'evento <xref:System.Windows.Input.ManipulationDelta> continua a verificarsi per simulare l'inerzia.  
+     Il <xref:System.Windows.Input.ManipulationDelta> evento si verifica quando il tocco cambia la posizione di input e può ricorrere più volte durante una manipolazione. L'evento può verificarsi anche dopo la generazione di un dito. Se l'utente trascina un dito su uno schermo, ad esempio il <xref:System.Windows.Input.ManipulationDelta> evento si verifica più volte durante lo spostamento di un dito. Quando l'utente solleva un dito dallo schermo, il <xref:System.Windows.Input.ManipulationDelta> evento continua a verificarsi per simulare l'inerzia.  
   
-     Nel codice viene applicata la proprietà <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> alla proprietà <xref:System.Windows.UIElement.RenderTransform%2A> dell'oggetto <xref:System.Windows.Shapes.Rectangle> in modo da spostarlo mentre l'utente sposta l'input tocco.  Viene inoltre verificato se l'oggetto <xref:System.Windows.Shapes.Rectangle> si trova al di fuori dei limiti dell'oggetto <xref:System.Windows.Window> quando l'evento si verifica durante l'inerzia.  In caso affermativo, l'applicazione chiama il metodo <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=fullName> per terminare la modifica.  
+     Il codice si applica il <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> per il <xref:System.Windows.UIElement.RenderTransform%2A> del <xref:System.Windows.Shapes.Rectangle> per spostarlo quando l'utente sposta il tocco di input. Controlla inoltre se il <xref:System.Windows.Shapes.Rectangle> è esterno ai limiti del <xref:System.Windows.Window> quando l'evento si verifica durante l'inerzia. In tal caso, l'applicazione chiama il <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> metodo per terminare la modifica.  
   
      [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]  
   
-6.  Nella classe `MainWindow` aggiungere il gestore eventi <xref:System.Windows.UIElement.ManipulationInertiaStarting>.  
+6.  Nel `MainWindow` classe, aggiungere le seguenti <xref:System.Windows.UIElement.ManipulationInertiaStarting> gestore dell'evento.  
   
-     L'evento <xref:System.Windows.UIElement.ManipulationInertiaStarting> si verifica quando l'utente solleva tutte le dita dallo schermo.  Nel codice viene impostata la velocità iniziale e la decelerazione per il movimento, l'espansione e la rotazione del rettangolo.  
+     Il <xref:System.Windows.UIElement.ManipulationInertiaStarting> evento si verifica quando l'utente solleva tutte le dita dallo schermo. Il codice imposta la velocità iniziale e decelerazione per lo spostamento, espansione e la rotazione del rettangolo.  
   
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]  
   
 7.  Compilare ed eseguire il progetto.  
   
-     Nella finestra verrà visualizzato un quadrato di colore rosso.  
+     Verrà visualizzato un quadrato rosso vengono visualizzati nella finestra.  
   
-## Verifica dell'applicazione  
- Per testare l'applicazione, provare a eseguire le modifiche che seguono.  Si noti che è possibile eseguire più modifiche contemporaneamente.  
+## <a name="testing-the-application"></a>Verifica dell'applicazione  
+ Per testare l'applicazione, provare le seguenti modifiche. Si noti che è possibile eseguire più di una delle seguenti operazioni nello stesso momento.  
   
--   Per spostare <xref:System.Windows.Shapes.Rectangle>, posizionare un dito su <xref:System.Windows.Shapes.Rectangle> e spostare il dito sullo schermo.  
+-   Per spostare il <xref:System.Windows.Shapes.Rectangle>, inserire un dito sul <xref:System.Windows.Shapes.Rectangle> e spostare il dito sullo schermo.  
   
--   Per ridimensionare <xref:System.Windows.Shapes.Rectangle>, posizionare due dita su <xref:System.Windows.Shapes.Rectangle> e aprire o chiudere le dita.  
+-   Per ridimensionare il <xref:System.Windows.Shapes.Rectangle>, posizionare due dita sul <xref:System.Windows.Shapes.Rectangle> e aprire o chiudere ogni dita.  
   
--   Per ruotare <xref:System.Windows.Shapes.Rectangle>, posizionare due dita su <xref:System.Windows.Shapes.Rectangle> e ruotare un dito intorno all'altro.  
+-   Per ruotare il <xref:System.Windows.Shapes.Rectangle>, posizionare due dita sul <xref:System.Windows.Shapes.Rectangle> e ruotare un dito intorno a altro.  
   
- Per causa l'inerzia, sollevare velocemente le dita dallo schermo durante l'esecuzione delle modifiche precedenti.  L'oggetto <xref:System.Windows.Shapes.Rectangle> continuerà a venire spostato, ridimensionato o ruotato per qualche secondo prima che si fermi.  
+ Per fare in modo inerzia, sollevare velocemente le dita dallo schermo quando si eseguono modifiche precedenti. Il <xref:System.Windows.Shapes.Rectangle> continuerà a spostare, ridimensionare o ruotare per alcuni secondi prima di interrompere.  
   
-## Vedere anche  
- <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=fullName>
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>

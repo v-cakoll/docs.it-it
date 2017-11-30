@@ -1,70 +1,71 @@
 ---
-title: "Unione delle voci di menu nel controllo MenuStrip Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MenuStrip, unione"
-  - "unione, concetti generali"
+title: Unione delle voci di menu nel controllo MenuStrip Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip [Windows Forms], merging
+- merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8e042b3f7b0a2a2e40b8fba33fca6c147086df6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Unione delle voci di menu nel controllo MenuStrip Windows Form
-Se si dispone di un'applicazione con interfaccia a documenti multipli \(MDI\), è possibile unire voci di menu o interi menu del form figlio nei menu del form padre.  
+# <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Unione delle voci di menu nel controllo MenuStrip Windows Form
+Se si dispone di un'applicazione con interfaccia a documenti multipli (MDI), è possibile unire le voci di menu o interi menu del form figlio nel menu del form padre.  
   
- In questo argomento vengono descritti i concetti di base associati al merging di voci di menu in un'applicazione MDI.  
+ Questo argomento descrive i concetti di base associati all'unione di voci di menu in un'applicazione MDI.  
   
-## Concetti generali  
- Le procedure di merging coinvolgono un controllo di destinazione e un controllo di origine:  
+## <a name="general-concepts"></a>Concetti generali  
+ Le procedure di unione coinvolgono una destinazione e un controllo del codice sorgente:  
   
--   La destinazione è il controllo <xref:System.Windows.Forms.MenuStrip> sul form padre principale o MDI in cui viene eseguito il merge delle voci di menu.  
+-   La destinazione è il <xref:System.Windows.Forms.MenuStrip> controllo sul principale o form padre MDI in cui vengono unite le voci di menu.  
   
--   L'origine è il controllo <xref:System.Windows.Forms.MenuStrip> sul form figlio MDI che contiene le voci di menu da unire nel menu di destinazione.  
+-   L'origine è il <xref:System.Windows.Forms.MenuStrip> controllo sul form figlio MDI che contiene le voci di menu che si desidera unire nel menu di destinazione.  
   
- La proprietà <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> identifica la voce di menu nel cui elenco a discesa verranno inseriti i titoli dei figlio MDI del form padre MDI corrente.  Ad esempio, in genere vengono elencati i form figlio MDI che sono attualmente aperti nel menu **Finestra**.  
+ Il <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> proprietà identifica la voce di menu, il cui elenco di riepilogo a discesa verrà popolato con i titoli di MDI corrente padre figlio MDI del form. Ad esempio, in genere vengono elencati gli elementi figlio MDI attualmente aperte nel **finestra** menu.  
   
- La proprietà <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> identifica quali voci di menu provengono da un controllo <xref:System.Windows.Forms.MenuStrip> in un form figlio MDI.  
+ Il <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> proprietà identifica quali voci di menu provengono da un <xref:System.Windows.Forms.MenuStrip> in un form figlio MDI.  
   
- È possibile unire le voci di menu manualmente o automaticamente.  Le procedure di unione sono identiche per entrambi i metodi, ma l'unione viene attivata in modo diverso, come descritto nelle sezioni "Unione manuale" e "Unione automatica" più avanti in questo argomento.  Nell'unione manuale e automatica ogni azione di unione influisce sulla successiva.  
+ È possibile unire le voci di menu manualmente o automaticamente. Unire le voci di menu nello stesso modo per entrambi i metodi, ma l'unione viene attivata in modo diverso, come descritto nelle sezioni "Unione manuale" e "Unione automatica" più avanti in questo argomento. L'unione manuale e automatica, ogni azione di tipo merge influisce l'azione successiva di tipo merge.  
   
- Il merging con <xref:System.Windows.Forms.MenuStrip> sposta le voci di menu da un controllo <xref:System.Windows.Forms.ToolStrip> a un altro anziché duplicarle, come avviene invece con <xref:System.Windows.Forms.MainMenu>.  
+ <xref:System.Windows.Forms.MenuStrip>l'unione, voci di menu viene spostato da uno <xref:System.Windows.Forms.ToolStrip> a un altro anziché duplicarle, come nel caso di <xref:System.Windows.Forms.MainMenu>.  
   
-## Valori di MergeAction  
- Per impostare l'azione di unione nelle voci di menu nel controllo <xref:System.Windows.Forms.MenuStrip> di origine, utilizzare la proprietà <xref:System.Windows.Forms.MergeAction>.  
+## <a name="mergeaction-values"></a>Valori di MergeAction  
+ Per impostare l'azione di unione nelle voci di menu nell'origine <xref:System.Windows.Forms.MenuStrip> utilizzando il <xref:System.Windows.Forms.MergeAction> proprietà.  
   
- Nella tabella seguente vengono descritti il significato e l'utilizzo tipico delle azioni di unione disponibili.  
+ Nella tabella seguente viene descritto il significato e l'utilizzo tipico di azioni di unione disponibili.  
   
 |Valore di MergeAction|Descrizione|Utilizzo tipico|  
-|---------------------------|-----------------|---------------------|  
-|<xref:System.Windows.Forms.MergeAction>|\(Impostazione predefinita\) Aggiunge l'elemento di origine alla fine della raccolta dell'elemento di destinazione.|Aggiunta di voci di menu alla fine del menu quando parte del programma viene attivata.|  
-|<xref:System.Windows.Forms.MergeAction>|Aggiunge l'elemento di origine alla raccolta dell'elemento di destinazione, nella posizione specificata dalla proprietà <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> impostata nell'elemento di origine.|Aggiunta di voci di menu al centro o all'inizio del menu quando parte del programma viene attivata.<br /><br /> Se il valore di <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> è uguale per entrambe le voci di menu, vengono aggiunte in ordine inverso.  Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> in modo appropriato per mantenere l'ordine originale.|  
-|<xref:System.Windows.Forms.MergeAction>|Cerca una corrispondenza di testo o, se non la trova, utilizza il valore <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> e quindi sostituisce la voce di menu di destinazione corrispondente con la voce di menu di origine.|Sostituzione di una voce di menu di destinazione con una voce di menu di origine con lo stesso nome che ha una funzione diversa.|  
-|<xref:System.Windows.Forms.MergeAction>|Cerca una corrispondenza di testo o, se non la trova, utilizza il valore <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> e quindi aggiunge tutti gli elementi a discesa dell'origine nella destinazione.|Compilazione di una struttura di menu che inserisce o aggiunge voci di menu in un sottomenu o rimuove voci di menu da un sottomenu.  Ad esempio, è possibile aggiungere una voce di menu da un figlio MDI a un menu **Salva con nome** del controllo <xref:System.Windows.Forms.MenuStrip> principale.<br /><br /> <xref:System.Windows.Forms.MergeAction> consente di spostarsi nella struttura di menu senza eseguire alcuna azione.  Fornisce un modo per valutare gli elementi successivi.|  
-|<xref:System.Windows.Forms.MergeAction>|Cerca una corrispondenza di testo o, se non la trova, utilizza il valore <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> e quindi rimuove l'elemento dalla destinazione.|Rimozione di una voce di menu dal controllo <xref:System.Windows.Forms.MenuStrip> di destinazione.|  
+|-----------------------|-----------------|-----------------|  
+|<xref:System.Windows.Forms.MergeAction.Append>|(Impostazione predefinita) Aggiunge l'elemento di origine alla fine della raccolta dell'elemento di destinazione.|Aggiunta voci di menu alla fine del menu quando viene attivata una parte del programma.|  
+|<xref:System.Windows.Forms.MergeAction.Insert>|Aggiunge l'elemento di origine alla raccolta dell'elemento di destinazione, nel percorso specificato per il <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> impostata sull'elemento di origine.|Aggiunta voci di menu al centro o l'inizio del menu quando viene attivata una parte del programma.<br /><br /> Se il valore di <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> è uguale per entrambe le voci di menu, vengono aggiunti in ordine inverso. Impostare <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> in modo appropriato per mantenere l'ordine originale.|  
+|<xref:System.Windows.Forms.MergeAction.Replace>|Trova una corrispondenza di testo o Usa il <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valore se non viene trovato e quindi lo sostituisce la voce di menu di destinazione corrispondente alla voce di menu di origine.|Sostituzione di una voce di menu di destinazione con una voce di menu di origine con lo stesso nome che esegue un'operazione diversa.|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Trova una corrispondenza di testo o Usa il <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valore se non viene trovato e quindi aggiunge tutte le voci di menu a discesa dall'origine alla destinazione.|Compilazione di una struttura di menu che inserisce o aggiunge voci di menu in un sottomenu o rimuove le voci di menu da un sottomenu. Ad esempio, è possibile aggiungere una voce di menu da un figlio MDI di una funzione main <xref:System.Windows.Forms.MenuStrip> **Salva con nome** menu.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly>Consente di spostarsi nella struttura di menu senza eseguire alcuna azione. Fornisce un modo per valutare gli elementi successivi.|  
+|<xref:System.Windows.Forms.MergeAction.Remove>|Trova una corrispondenza di testo o Usa il <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valore se non viene trovato e quindi rimuove l'elemento dalla destinazione.|Rimozione di una voce di menu dalla destinazione <xref:System.Windows.Forms.MenuStrip>.|  
   
-## Unione manuale  
- Solo i controlli <xref:System.Windows.Forms.MenuStrip> partecipano all'unione manuale.  Per combinare gli elementi di altri controlli, ad esempio <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.StatusStrip>, è necessario unirli manualmente, eseguendo una chiamata ai metodi <xref:System.Windows.Forms.ToolStripManager.Merge%2A> e <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> nel codice secondo necessità.  
+## <a name="manual-merging"></a>Unione manuale  
+ Solo <xref:System.Windows.Forms.MenuStrip> controlli partecipano all'unione automatica. Per combinare gli elementi di altri controlli, ad esempio <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.StatusStrip> controlli, è necessario unirli manualmente, mediante la chiamata di <xref:System.Windows.Forms.ToolStripManager.Merge%2A> e <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> metodi nel codice come richiesto.  
   
-## Unione automatica  
- È possibile utilizzare l'unione automatica per le applicazioni MDI attivando il form di origine.  Per utilizzare un controllo <xref:System.Windows.Forms.MenuStrip> in un'applicazione MDI, impostare la proprietà <xref:System.Windows.Forms.Form.MainMenuStrip%2A> sul controllo <xref:System.Windows.Forms.MenuStrip> di destinazione in modo che le azioni di unione eseguite sul controllo <xref:System.Windows.Forms.MenuStrip> di origine si riflettano nel controllo <xref:System.Windows.Forms.MenuStrip> di destinazione.  
+## <a name="automatic-merging"></a>Unione automatica  
+ È possibile utilizzare l'unione automatica per le applicazioni MDI attivando il modulo di origine. Per utilizzare un <xref:System.Windows.Forms.MenuStrip> in un'applicazione MDI, impostare il <xref:System.Windows.Forms.Form.MainMenuStrip%2A> proprietà di destinazione <xref:System.Windows.Forms.MenuStrip> in modo che le azioni di unione eseguita sull'origine <xref:System.Windows.Forms.MenuStrip> vengono riflesse nella destinazione <xref:System.Windows.Forms.MenuStrip>.  
   
- È possibile generare l'unione automatica attivando il controllo <xref:System.Windows.Forms.MenuStrip> sull'origine MDI.  Dopo l'attivazione, il controllo <xref:System.Windows.Forms.MenuStrip> di origine viene unito nella destinazione MDI.  Quando un nuovo form diventa attivo, l'unione viene annullata sull'ultimo form e generata sul nuovo form.  È possibile controllare questo comportamento impostando la proprietà <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> secondo necessità in ogni controllo <xref:System.Windows.Forms.ToolStripItem> e impostando la proprietà <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> in ogni controllo <xref:System.Windows.Forms.MenuStrip>.  
+ È possibile attivare l'unione automatica attivando il <xref:System.Windows.Forms.MenuStrip> sull'origine MDI. Dopo l'attivazione, l'origine <xref:System.Windows.Forms.MenuStrip> viene unito nella destinazione MDI. Quando un nuovo form diventa attivo, l'unione è annullata sull'ultimo form e attivato il nuovo modulo. È possibile controllare questo comportamento impostando la <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> proprietà in base alle esigenze in ogni <xref:System.Windows.Forms.ToolStripItem>e impostando il <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> proprietà in ogni <xref:System.Windows.Forms.MenuStrip>.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolStripManager>   
- <xref:System.Windows.Forms.MenuStrip>   
- [Controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)   
- [Procedura: creare un elenco di finestre MDI con MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)   
- [Procedura: impostare l'unione automatica dei menu per applicazioni MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.ToolStripManager>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ [Controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [Procedura: Creare un elenco di finestre MDI con MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ [Procedura: Impostare l'unione automatica dei menu per applicazioni MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

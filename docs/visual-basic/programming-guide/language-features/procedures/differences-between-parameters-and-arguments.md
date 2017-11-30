@@ -1,59 +1,58 @@
 ---
-title: "Differences Between Parameters and Arguments (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, arguments"
-  - "procedures, parameters"
-  - "parameters, and arguments"
-  - "procedure arguments"
-  - "Visual Basic code, procedures"
-  - "arguments [Visual Basic], and parameters"
-  - "procedure parameters"
-  - "parameters, definition"
+title: Differenze tra parametri e argomenti (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], parameters
+- parameters [Visual Basic], and arguments
+- procedure arguments
+- Visual Basic code, procedures
+- arguments [Visual Basic], and parameters
+- procedure parameters
+- parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b6613c64a24ef18239422b69f8b5320eadc95b92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Differences Between Parameters and Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Nella maggior parte dei casi una routine richiede alcune informazioni sulle circostanze in cui è stata chiamata.  Una routine che esegue attività ripetute o condivise utilizza informazioni diverse per ogni chiamata.  Tali informazioni sono costituite da variabili, costanti ed espressioni passate alla routine al momento della chiamata.  
+# <a name="differences-between-parameters-and-arguments-visual-basic"></a>Differenze tra parametri e argomenti (Visual Basic)
+Nella maggior parte dei casi, una routine deve avere alcune informazioni sulle circostanze in cui è stato chiamato. Una routine che esegue attività ripetute o condivise utilizza informazioni diverse per ogni chiamata. Queste informazioni è costituito da variabili, costanti ed espressioni che viene passato alla routine quando viene chiamato.  
   
- Per comunicare le informazioni alla routine, quest'ultima definisce un *parametro* a cui il codice chiamante passa un *argomento*.  Il parametro può essere paragonato a un'area di parcheggio e l'argomento a un'automobile.  Così come diverse automobili possono parcheggiare nella stessa area in momenti diversi, il codice chiamante può passare un argomento differente allo stesso parametro ogni volta che chiama la routine.  
+ Per comunicare le informazioni per la procedura, la routine definisce un *parametro*, e il codice chiamante passa una *argomento* a tale parametro. È possibile considerare il parametro come spazio di parcheggio e l'argomento a un'automobile. Così come diverse automobili possono parcheggiare in uno spazio di parcheggio in momenti diversi, il codice chiamante può passare un argomento differente per lo stesso parametro ogni volta che si chiama la routine.  
   
-## Parametri  
- Un *parametro* rappresenta un valore da passare alla routine al momento della chiamata.  La dichiarazione della routine ne definisce i parametri.  
+## <a name="parameters"></a>Parametri  
+ Oggetto *parametro* rappresenta un valore che la procedura prevede di passare al momento della chiamata. La dichiarazione della routine definisce i parametri.  
   
- Quando si definisce una routine `Function` o `Sub`, è necessario specificare un *elenco di parametri* tra parentesi immediatamente dopo il nome della routine.  Per ciascun parametro è necessario indicare un nome, un tipo di dati e un meccanismo di passaggio \([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\).  È possibile anche indicare che un parametro è facoltativo.  Ciò significa che il codice che effettua la chiamata non deve passare un valore per il parametro.  
+ Quando si definisce un `Function` o `Sub` procedura, si specifica un *elenco parametri* tra parentesi immediatamente dopo il nome della stored procedure. Per ogni parametro, specificare un nome, un tipo di dati e un meccanismo di passaggio ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). È anche possibile indicare che un parametro è facoltativo. Ciò significa che il codice chiamante non dispone di passare un valore per tale.  
   
- Il nome di ciascun parametro funge da *variabile locale* all'interno della routine   e viene utilizzato come qualsiasi altra variabile.  
+ Il nome di ogni parametro viene utilizzato come un *variabile locale* nella procedura. Utilizzare il nome del parametro la stessa modalità di utilizzo di qualsiasi altra variabile.  
   
-## Argomenti  
- Un *argomento* rappresenta il valore passato al parametro di una routine quando quest'ultima viene chiamata.  Gli argomenti vengono forniti dal codice chiamante al momento della chiamata.  
+## <a name="arguments"></a>Argomenti  
+ Un *argomento* rappresenta il valore passato a un parametro di procedura quando si chiama la routine. Il codice chiamante fornisce gli argomenti quando viene chiamata la procedura.  
   
- Quando si chiama una routine `Function` o `Sub`, è necessario includere un *elenco di argomenti* tra parentesi immediatamente dopo il nome della routine.  Ciascun argomento corrisponde al parametro nella stessa posizione nell'elenco.  
+ Quando si chiama un `Function` o `Sub` procedura, include un *elenco di argomenti* tra parentesi immediatamente dopo il nome della stored procedure. Ciascun argomento corrisponde al parametro nella stessa posizione nell'elenco.  
   
- A differenza della definizione del parametro, gli argomenti non includono nomi.  Ogni argomento è un'espressione, che può contenere zero o più variabili, costanti e valori letterali.  Il tipo di dati dell'espressione valutata in genere corrisponde al tipo di dati definito per il parametro corrispondente. In ogni caso deve essere convertibile nel tipo del parametro.  
+ A differenza di definizione dei parametri, argomenti non hanno nomi. Ogni argomento è un'espressione che può contenere zero o più variabili, costanti e valori letterali. Il tipo di dati dell'espressione valutata in genere deve corrispondere al tipo di dati definito per il parametro corrispondente, e in ogni caso deve essere convertibile nel tipo di parametro.  
   
-## Vedere anche  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Routine Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Routine Property](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [How to: Define a Parameter for a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Recursive Procedures](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+## <a name="see-also"></a>Vedere anche  
+ [Routine](./index.md)  
+ [Routine Sub](./sub-procedures.md)  
+ [Routine Function](./function-procedures.md)  
+ [Routine Property](./property-procedures.md)  
+ [Routine di operatore](./operator-procedures.md)  
+ [Procedura: Definire un parametro per una routine](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)  
+ [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)  
+ [Routine ricorsive](./recursive-procedures.md)  
+ [Overload della routine](./procedure-overloading.md)

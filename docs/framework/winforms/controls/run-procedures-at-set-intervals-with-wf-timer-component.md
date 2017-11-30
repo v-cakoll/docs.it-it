@@ -1,55 +1,60 @@
 ---
-title: "Procedura: eseguire routine a intervalli predefiniti con il componente Timer Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], timer"
-  - "inizializzazione, Timer (componenti)"
-  - "routine, intervalli di tempo specifici"
-  - "Timer (componente) [Windows Form], inizializzazione"
-  - "timer, intervalli evento"
-  - "timer, basato su Windows"
+title: 'Procedura: eseguire routine a intervalli predefiniti con il componente Timer Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], timers
+- timers [Windows Forms], event intervals
+- initialization [Windows Forms], Timer components
+- timers [Windows Forms], Windows-based
+- Timer component [Windows Forms], initializing
+- procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: af16d1e2c3ef683a6e3da4197a30af58d7758a0e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: eseguire routine a intervalli predefiniti con il componente Timer Windows Form
-A volte può essere necessario creare una routine che venga eseguita a intervalli di tempo specificati fino alla conclusione di un ciclo oppure al termine di un intervallo di tempo predefinito.  Il componente <xref:System.Windows.Forms.Timer> rende possibile una procedura di questo tipo.  
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Procedura: eseguire routine a intervalli predefiniti con il componente Timer Windows Form
+A volte può essere necessario creare una routine che venga eseguita a intervalli di tempo specificati fino alla conclusione di un ciclo oppure al termine di un intervallo di tempo predefinito. Il componente <xref:System.Windows.Forms.Timer> rende possibile una procedura di questo tipo.  
   
- Questo componente è progettato per l'ambiente Windows Form.  Se è necessario un timer adatto a un ambiente server, vedere [Introduction to Server\-Based Timers](http://msdn.microsoft.com/it-it/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+ Questo componente è progettato per l'ambiente Windows Form. Per informazioni su un timer adatto a un ambiente server, vedere [Introduzione ai timer basati su server](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
   
 > [!NOTE]
->  L'uso del componente <xref:System.Windows.Forms.Timer> presenta alcune limitazioni.  Per altre informazioni, vedere [Limitazioni della proprietà Interval del componente Timer di Windows Form](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).  
+>  L'uso del componente <xref:System.Windows.Forms.Timer> presenta alcune limitazioni. Per ulteriori informazioni, vedere [limitazioni della proprietà Interval del componente Timer di Windows Form](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).  
   
-### Per eseguire una routine a intervalli predefiniti con il componente Timer  
+### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Per eseguire una routine a intervalli predefiniti con il componente Timer  
   
-1.  Aggiungere un oggetto <xref:System.Windows.Forms.Timer> al form.  Per informazioni su come eseguire questa operazione a livello di codice, vedere la sezione Esempio più avanti.  [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] supporta anche l'aggiunta di componenti a un form.  Vedere anche [Procedura: Aggiungere controlli senza interfaccia a un Windows Form](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
+1.  Aggiungere un oggetto <xref:System.Windows.Forms.Timer> al form. Per informazioni su come eseguire questa operazione a livello di codice, vedere la sezione Esempio più avanti. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] supporta anche l'aggiunta di componenti a un form. Vedere anche [procedura: aggiungere controlli senza un'interfaccia utente di Windows Form](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.Timer.Interval%2A> \(in millisecondi\) per il timer.  Questa proprietà determina il tempo che dovrà trascorrere prima che la routine venga eseguita nuovamente.  
+2.  Impostare la proprietà <xref:System.Windows.Forms.Timer.Interval%2A> (in millisecondi) per il timer. Questa proprietà determina il tempo che dovrà trascorrere prima che la routine venga eseguita nuovamente.  
   
     > [!NOTE]
-    >  Quanto maggiore è la frequenza con cui si verifica un evento timer, tanto maggiore sarà il tempo di attività del processore richiesto per rispondere all'evento.  Ciò può rallentare le prestazioni complessive.  Non impostare un intervallo minore del necessario.  
+    >  Quanto maggiore è la frequenza con cui si verifica un evento timer, tanto maggiore sarà il tempo di attività del processore richiesto per rispondere all'evento. Ciò può rallentare le prestazioni complessive. Non impostare un intervallo minore del necessario.  
   
-3.  Scrivere il codice appropriato nel gestore eventi per <xref:System.Windows.Forms.Timer.Tick>.  Il codice scritto in questo evento verrà eseguito con l'intervallo specificato nella proprietà <xref:System.Windows.Forms.Timer.Interval%2A>.  
+3.  Scrivere il codice appropriato nel gestore eventi per <xref:System.Windows.Forms.Timer.Tick>. Il codice scritto in questo evento verrà eseguito con l'intervallo specificato nella proprietà <xref:System.Windows.Forms.Timer.Interval%2A>.  
   
-4.  Impostare la proprietà <xref:System.Windows.Forms.Timer.Enabled%2A> su `true` per avviare il timer.  Si verificherà l'evento <xref:System.Windows.Forms.Timer.Tick> e la routine verrà eseguita con l'intervallo impostato.  
+4.  Impostare la proprietà <xref:System.Windows.Forms.Timer.Enabled%2A> su `true` per avviare il timer. Si verificherà l'evento <xref:System.Windows.Forms.Timer.Tick> e la routine verrà eseguita con l'intervallo impostato.  
   
-5.  Al momento appropriato, impostare la proprietà <xref:System.Windows.Forms.Timer.Enabled%2A> su `false` per impedire che la routine venga eseguita di nuovo.  L'impostazione dell'intervallo su `0` non determinerà l'arresto del timer.  
+5.  Al momento appropriato, impostare la proprietà <xref:System.Windows.Forms.Timer.Enabled%2A> su `false` per impedire che la routine venga eseguita di nuovo. Impostazione dell'intervallo su `0` non causa l'arresto del timer.  
   
-## Esempio  
- Questo primo esempio tiene traccia dell'ora del giorno in incrementi di un secondo.  Usa un componente <xref:System.Windows.Forms.Button>, un componente <xref:System.Windows.Forms.Label>, e un componente <xref:System.Windows.Forms.Timer> in un form.  La proprietà <xref:System.Windows.Forms.Timer.Interval%2A> è impostata su 1000, ovvero su un secondo.  Nell'evento <xref:System.Windows.Forms.Timer.Tick> la didascalia dell'etichetta viene impostata sull'ora corrente.  Quando si fa clic sul pulsante, la proprietà <xref:System.Windows.Forms.Timer.Enabled%2A> viene impostata su `false`, impedendo l'aggiornamento della didascalia dell'etichetta da parte del timer.  L'esempio di codice seguente richiede la disponibilità di un form con un controllo <xref:System.Windows.Forms.Button> denominato `Button1`, un controllo <xref:System.Windows.Forms.Timer> denominato `Timer1` e un controllo <xref:System.Windows.Forms.Label> denominato `Label1`.  
+## <a name="example"></a>Esempio  
+ Questo primo esempio tiene traccia dell'ora del giorno in incrementi di un secondo. Usa un componente <xref:System.Windows.Forms.Button>, un componente <xref:System.Windows.Forms.Label>, e un componente <xref:System.Windows.Forms.Timer> in un form. La proprietà <xref:System.Windows.Forms.Timer.Interval%2A> è impostata su 1000, ovvero su un secondo. Nell'evento <xref:System.Windows.Forms.Timer.Tick> la didascalia dell'etichetta viene impostata sull'ora corrente. Quando si fa clic sul pulsante, la proprietà <xref:System.Windows.Forms.Timer.Enabled%2A> viene impostata su `false`, impedendo l'aggiornamento della didascalia dell'etichetta da parte del timer. Esempio di codice seguente è necessario disporre un form con un <xref:System.Windows.Forms.Button> controllo denominato `Button1`, <xref:System.Windows.Forms.Timer> controllo denominato `Timer1`e un <xref:System.Windows.Forms.Label> controllo denominato `Label1`.  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -75,7 +80,6 @@ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.Event
          Timer1.Enabled = True  
       End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -112,7 +116,6 @@ private void Button1_Click(object sender, EventArgs e)
     Timer1.Enabled = true;  
   }  
 }  
-  
 ```  
   
 ```cpp  
@@ -153,11 +156,10 @@ private:
          timer1->Enabled = true;  
       }  
    }  
-  
 ```  
   
-## Esempio  
- Questo secondo esempio di codice viene eseguita una routine ogni 600 millisecondi, fino al termine di un ciclo.  L'esempio di codice seguente richiede la disponibilità di un form con un controllo <xref:System.Windows.Forms.Button> denominato `Button1`, un controllo <xref:System.Windows.Forms.Timer> denominato `Timer1` e un controllo <xref:System.Windows.Forms.Label> denominato `Label1`.  
+## <a name="example"></a>Esempio  
+ Questo secondo esempio di codice viene eseguita una routine ogni 600 millisecondi, fino al termine di un ciclo. Esempio di codice seguente è necessario disporre un form con un <xref:System.Windows.Forms.Button> controllo denominato `Button1`, <xref:System.Windows.Forms.Timer> controllo denominato `Timer1`e un <xref:System.Windows.Forms.Label> controllo denominato `Label1`.  
   
 ```vb  
 ' This variable will be the loop counter.  
@@ -182,7 +184,6 @@ Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Han
       Label1.Text = "Procedures Run: " & counter.ToString  
    End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -215,7 +216,6 @@ private void timer1_Tick(object sender, System.EventArgs e)
       label1.Text = "Procedures Run: " + counter.ToString();  
       }  
 }  
-  
 ```  
   
 ```cpp  
@@ -252,7 +252,7 @@ private:
    }  
 ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Timer>   
- [Componente Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)   
- [Cenni preliminari sul componente Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.Timer>  
+ [Componente Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ [Panoramica sul componente Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

@@ -1,36 +1,34 @@
 ---
-title: "&#39;&lt;methodname&gt;&#39; has multiple definitions with identical signatures | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30269"
-  - "bc30269"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30269"
+title: "&#39; &lt;NomeMetodo&gt;&#39; dispone di più definizioni con firme identiche"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30269
+- bc30269
+helpviewer_keywords: BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1a71d51690d6318a559a94ac81de625289d7587d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;&lt;methodname&gt;&#39; has multiple definitions with identical signatures
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una dichiarazione di routine `Function` o `Sub` utilizza lo stesso nome di routine e lo stesso elenco di argomenti di una dichiarazione precedente.  Una causa possibile è un tentativo di overload della routine originale.  Le routine sottoposte a overload devono avere elenchi di argomenti differenti.  
+# <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39; &lt;NomeMetodo&gt;&#39; dispone di più definizioni con firme identiche
+Oggetto `Function` o `Sub` dichiarazione di routine utilizza l'elenco di procedure identiche nome e l'argomento di una dichiarazione precedente. Una possibile causa è un tentativo di eseguire l'overload di routine originale. Le routine di overload devono avere elenchi di argomenti diverso.  
   
  **ID errore:** BC30269  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Cambiare il nome della routine o l'elenco degli argomenti, oppure rimuovere la dichiarazione duplicata.  
+-   Modificare il nome della stored procedure o l'elenco di argomenti o rimuovere la dichiarazione duplicata.  
   
-## Vedere anche  
- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Considerations in Overloading Procedures](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Considerazioni sull'overload di routine](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)

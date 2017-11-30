@@ -1,88 +1,87 @@
 ---
-title: "Partial Methods (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PartialMethod"
-  - "PartialMethod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "custom logic into code [Visual Basic]"
-  - "partial methods [Visual Basic]"
-  - "partial, methods [Visual Basic]"
-  - "methods [Visual Basic], partial methods"
-  - "inserting custom logic into code"
+title: Metodi parziali (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PartialMethod
+- PartialMethod
+helpviewer_keywords:
+- custom logic into code [Visual Basic]
+- partial methods [Visual Basic]
+- partial [Visual Basic], methods [Visual Basic]
+- methods [Visual Basic], partial methods
+- inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Partial Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-I metodi parziali consentono agli sviluppatori di inserire una logica personalizzata nel codice.  In genere, il codice è parte di una classe generata nella finestra di progettazione.  I metodi parziali vengono definiti in una classe parziale creata da un generatore di codice e si utilizzano comunemente per notificare che si è verificata qualche modifica.  Consentono allo sviluppatore di specificare un comportamento personalizzato in funzione della modifica.  
+# <a name="partial-methods-visual-basic"></a>Metodi parziali (Visual Basic)
+Metodi parziali consentono agli sviluppatori di inserire la logica personalizzata nel codice. In genere, il codice è parte di una classe generato da progettazione. Metodi parziali sono definiti in una classe parziale che viene creata da un generatore di codice e vengono utilizzati frequentemente per fornire la notifica che un elemento è stato modificato. Consentono allo sviluppatore di specificare un comportamento personalizzato in risposta alla modifica.  
   
- La finestra di progettazione del generatore di codice definisce solo la firma del metodo e una o più chiamate al metodo.  Gli sviluppatori possono fornire le implementazioni per il metodo se desiderano personalizzare il comportamento del codice generato.  Quando non viene fornita alcuna implementazione, le chiamate al metodo vengono rimosse dal compilatore, per evitare un ulteriore sovraccarico nelle prestazioni.  
+ La finestra di progettazione del generatore di codice definisce solo la firma del metodo e uno o più chiamate al metodo. Gli sviluppatori possono quindi fornire le implementazioni del metodo, se si desidera personalizzare il comportamento del codice generato. Quando viene fornita alcuna implementazione, le chiamate al metodo vengono rimossi dal compilatore, risultante in nessun overhead di prestazioni.  
   
-## Dichiarazione  
- Il codice generato contrassegna la definizione di un metodo parziale posizionando la parola chiave `Partial` all'inizio della riga della firma.  
+## <a name="declaration"></a>Dichiarazione  
+ Il codice generato contrassegna la definizione di un metodo parziale inserendo la parola chiave `Partial` all'inizio della riga della firma.  
   
-```vb#  
+```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
- La definizione deve soddisfare le seguenti condizioni:  
+ La definizione deve soddisfare le condizioni seguenti:  
   
--   Il metodo deve essere un `Sub`, non una `Function`.  
+-   Il metodo deve essere un `Sub`, non un `Function`.  
   
 -   Il corpo del metodo deve essere lasciato vuoto.  
   
 -   Il modificatore di accesso deve essere `Private`.  
   
-## Implementazione  
- L'implementazione consiste principalmente nell'inserire il corpo del metodo parziale.  L'implementazione è in genere in una classe parziale separata dalla definizione e è scritta da un sviluppatore che desidera estendere il codice generato.  
+## <a name="implementation"></a>Implementazione  
+ L'implementazione è costituita principalmente nell'inserire il corpo del metodo parziale. L'implementazione è in genere in una classe parziale separata dalla definizione e viene scritto da uno sviluppatore che desidera estendere il codice generato.  
   
-```vb#  
+```vb  
 Private Sub QuantityChanged()  
 '    Code for executing the desired action.  
 End Sub  
 ```  
   
- Nell'esempio precedente viene esattamente duplicata la firma nella dichiarazione, ma sono possibili variazioni.  In particolare, è possibile aggiungere altri modificatori, ad esempio `Overloads` o `Overrides`.  È consentito un solo modificatore `Overrides`.  Per ulteriori informazioni sui modificatori di metodo, vedere [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ La firma nella dichiarazione consente di duplicare esattamente l'esempio precedente, ma sono possibili variazioni. In particolare, è possano aggiungere altri modificatori, ad esempio `Overloads` o `Overrides`. Un solo `Overrides` modificatore è consentito. Per ulteriori informazioni sui modificatori di metodo, vedere [istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## Utilizzare  
- Si chiama un metodo parziale come si chiamerebbe qualsiasi altra procedura `Sub`.  Se il metodo è stato implementato, gli argomenti vengono valutati e viene eseguito il corpo del metodo.  Tuttavia,occorre ricordare che l'implementazione di un metodo parziale è facoltativa.  Se il metodo non viene implementato, una chiamata non ha effetto e le espressioni passate come argomenti al metodo non vengono valutate.  
+## <a name="use"></a>Uso  
+ Si chiama un metodo parziale procedendo come per qualsiasi altro `Sub` stored procedure. Se è stato implementato il metodo, gli argomenti vengono valutati e viene eseguito il corpo del metodo. Tuttavia, tenere presente che l'implementazione di un metodo parziale è facoltativa. Se non è stato implementato il metodo, una chiamata non ha alcun effetto e non vengono valutate le espressioni passate come argomenti al metodo.  
   
-## Esempio  
- In un file denominato Product.Designer.vb, definire una classe `Product` che ha una proprietà `Quantity`.  
+## <a name="example"></a>Esempio  
+ In un file denominato Product.Designer.vb, definire un `Product` classe che ha un `Quantity` proprietà.  
   
  [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
   
- In un file denominato Product.vb, fornire un'implementazione per `QuantityChanged`.  
+ In un file denominato Product. vb, fornire un'implementazione per `QuantityChanged`.  
   
  [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
   
- Infine, nel metodo Main di un progetto, dichiarare un'istanza `Product` e fornire un valore iniziale per la relativa proprietà `Quantity`.  
+ Infine, nel metodo Main di un progetto, dichiarare un `Product` istanza e fornire un valore iniziale per il relativo `Quantity` proprietà.  
   
  [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
   
- Comparirà una finestra che visualizza questo messaggio:  
+ Verrà visualizzata una finestra di messaggio che viene visualizzato questo messaggio:  
   
  `Quantity was changed to 100`  
   
-## Vedere anche  
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Optional Parameters](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
- [Generazione di codice in LINQ to SQL](../Topic/Code%20Generation%20in%20LINQ%20to%20SQL.md)   
- [Aggiunta della logica di business utilizzando i metodi parziali](../Topic/Adding%20Business%20Logic%20By%20Using%20Partial%20Methods.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Routine Sub](./sub-procedures.md)  
+ [Parametri facoltativi](./optional-parameters.md)  
+ [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [Generazione di codice in LINQ to SQL](https://msdn.microsoft.com/library/bb399400)  
+ [Aggiunta di logica di Business mediante metodi parziali](https://msdn.microsoft.com/library/bb546176)

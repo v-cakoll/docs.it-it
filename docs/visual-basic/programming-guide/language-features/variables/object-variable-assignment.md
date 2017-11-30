@@ -1,37 +1,36 @@
 ---
-title: "Object Variable Assignment (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Nothing keyword, object variable assignment"
-  - "object variables, initializing"
-  - "variables [Visual Basic], initializing"
-  - "objects [Visual Basic], current instance"
-  - "object variables, assigning"
-  - "variables [Visual Basic], object variables"
-  - "current instance, defined"
-  - "variables [Visual Basic], assigning"
-  - "assignment statements, object variable assignment"
-  - "Me keyword, as object variable"
+title: Assegnazione di variabili oggetto (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Nothing keyword [Visual Basic], object variable assignment
+- object variables [Visual Basic], initializing
+- variables [Visual Basic], initializing
+- objects [Visual Basic], current instance
+- object variables [Visual Basic], assigning
+- variables [Visual Basic], object variables
+- current instance [Visual Basic], defined
+- variables [Visual Basic], assigning
+- assignment statements [Visual Basic], object variable assignment
+- Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Object Variable Assignment (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Per assegnare un oggetto a una variabile oggetto si utilizza generalmente una normale istruzione di assegnazione.  È possibile assegnare un'espressione dell'oggetto o la parola chiave [Nothing](../../../../visual-basic/language-reference/nothing.md), come illustrato nell'esempio che segue.  
+# <a name="object-variable-assignment-visual-basic"></a>Assegnazione di variabili oggetto (Visual Basic)
+Utilizzare una normale istruzione di assegnazione per assegnare un oggetto a una variabile oggetto. È possibile assegnare un'espressione di oggetto o [nulla](../../../../visual-basic/language-reference/nothing.md) (parola chiave), come nell'esempio riportato di seguito viene illustrato.  
   
 ```  
 Dim thisObject As Object  
@@ -41,20 +40,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing` indica che attualmente alla variabile non è assegnato alcun oggetto.  
+ `Nothing`indica che è presente alcun oggetto attualmente assegnato alla variabile.  
   
-## Inizializzazione  
- Quando il codice inizia l'esecuzione, le variabili oggetto vengono inizializzate a `Nothing`.  Le variabili, le cui dichiarazioni includono l'inizializzazione, vengono reinizializzate in base ai valori specificati al momento dell'esecuzione delle istruzioni di dichiarazione.  
+## <a name="initialization"></a>Inizializzazione  
+ Quando il codice inizia l'esecuzione, l'oggetto le variabili vengono inizializzate su `Nothing`. Quelli il cui dichiarazioni includono l'inizializzazione vengono reinizializzati per i valori specificati quando vengono eseguite le istruzioni di dichiarazione.  
   
- È possibile includere l'inizializzazione nella dichiarazione utilizzando la parola chiave [New](../../../../visual-basic/language-reference/operators/new-operator.md).  Le istruzioni di dichiarazione seguenti consentono di dichiarare le variabili oggetto `testUri` e `ver` e di assegnare a tali variabili oggetti specifici.  Ciascuna istruzione utilizza i costruttori con overload della classe appropriata per inizializzare l'oggetto.  
+ È possibile includere nella dichiarazione di inizializzazione utilizzando il [New](../../../../visual-basic/language-reference/operators/new-operator.md) (parola chiave). Le seguenti istruzioni di dichiarazione dichiarano le variabili oggetto `testUri` e `ver` e assegnare loro oggetti specifici. Ognuno utilizza uno dei costruttori di overload della classe appropriata per inizializzare l'oggetto.  
   
 ```  
 Dim testUri As New System.Uri("http://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## Dissociazione  
- L'impostazione di una variabile oggetto su `Nothing` interrompe l'associazione delle variabili con oggetti specifici.  Questo impedisce di modificare involontariamente l'oggetto modificando la variabile  e consente di controllare se la variabile oggetto punta a un oggetto valido, come nell'esempio che segue.  
+## <a name="disassociation"></a>Annullamento dell'associazione  
+ Impostare una variabile oggetto `Nothing` interrompe l'associazione della variabile con un oggetto specifico. Ciò impedisce di modificare accidentalmente l'oggetto modificando la variabile. Consente inoltre di verificare se la variabile oggetto punta a un oggetto valido, come illustrato nell'esempio seguente.  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -62,16 +61,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- Se l'oggetto cui la variabile si riferisce si trova in un'altra applicazione, questo controllo non può determinare se l'applicazione è stata chiusa o ha semplicemente invalidato l'oggetto.  
+ Se l'oggetto che fa riferimento la variabile in un'altra applicazione, il test non è possibile determinare se l'applicazione ha terminato o semplicemente invalidato l'oggetto.  
   
- Una variabile oggetto con valore `Nothing` viene definita anche *riferimento null*.  
+ Una variabile oggetto con un valore di `Nothing` viene chiamato anche un *riferimento null*.  
   
-## Istanza corrente  
- L'*istanza corrente* di un oggetto è l'istanza nella quale il codice è attualmente in esecuzione.  Poiché tutto il codice viene eseguito all'interno di una routine, l'istanza corrente è quella nella quale è stata richiamata la routine.  
+## <a name="current-instance"></a>Istanza corrente  
+ Il *istanza corrente* di un oggetto è quello in cui è attualmente in esecuzione il codice. Poiché tutto il codice viene eseguito all'interno di una routine, l'istanza corrente è quello in cui è stata richiamata la procedura.  
   
- La parola chiave `Me` funge da variabile oggetto che fa riferimento all'istanza corrente.  Se una routine non è [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), può utilizzare la parola chiave `Me` per ottenere un puntatore all'istanza corrente.  Le routine condivise non possono essere associate a un'istanza specifica di una classe.  
+ Il `Me` (parola chiave) agisce come una variabile oggetto che fa riferimento all'istanza corrente. Se non è una procedura [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), è possibile usare il `Me` (parola chiave) per ottenere un puntatore all'istanza corrente. Procedure condivise non possono essere associate a un'istanza specifica di una classe.  
   
- L'utilizzo della parola chiave `Me` è particolarmente utile per il passaggio dell'istanza corrente a una routine in un altro modulo.  Si supponga, ad esempio, di disporre di un certo numero di documenti XML a cui si desidera aggiungere testo standard.  Nell'esempio che segue viene definita la routine che consente di eseguire tale operazione.  
+ Utilizzando `Me` è particolarmente utile per passare l'istanza corrente a una routine in un altro modulo. Si supponga, ad esempio, si dispone di un numero di documenti XML e si desidera aggiungere del testo standard di tutti gli elementi. Nell'esempio seguente definisce una routine a tale scopo.  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -79,16 +78,16 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- Ogni oggetto del documento XML può quindi chiamare la routine e passare la rispettiva istanza corrente come argomento.  Nell'esempio che segue viene illustrato quanto descritto.  
+ Ogni oggetto documento XML può quindi chiamare la routine e passa l'istanza corrente come argomento. Nell'esempio che segue viene illustrato quanto descritto.  
   
 ```  
 addStandardText(Me)  
 ```  
   
-## Vedere anche  
- [Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Object Variable Declaration](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [Object Variable Values](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)   
- [How to: Make an Object Variable Not Refer to Any Instance](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)   
- [Me, My, MyBase, and MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Vedere anche  
+ [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [Dichiarazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [Procedura: dichiarare una variabile oggetto e assegnarle un oggetto in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
+ [Procedura: impostare una variabile oggetto in modo che non faccia riferimento ad alcuna istanza](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
+ [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

@@ -1,43 +1,42 @@
 ---
-title: "Procedura: dedurre tipi e nomi di propriet&#224; nelle dichiarazioni di tipo anonimo (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "deduzione di nomi delle proprietà [Visual Basic]"
-  - "tipi anonimi [Visual Basic], deduzione di nomi e tipi delle proprietà"
-  - "deduzione di tipi delle proprietà [Visual Basic]"
+title: "Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- inferring property names [Visual Basic]
+- anonymous types [Visual Basic], inferring property names and types
+- inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 66b9f8c0346f74ff631969bda122de7913a551c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: dedurre tipi e nomi di propriet&#224; nelle dichiarazioni di tipo anonimo (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo (Visual Basic)
 I tipi anonimi non offrono alcun meccanismo per specificare direttamente i tipi di dati delle proprietà. I tipi di tutte le proprietà vengono dedotti. Nell'esempio seguente, i tipi di `Name` e `Price` vengono dedotti direttamente dai valori usati per inizializzarli.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
   
  I tipi anonimi possono anche dedurre i nomi e i tipi delle proprietà da altre origini. Le sezioni che seguono forniscono un elenco delle circostanze in cui l'inferenza è possibile e alcuni esempi di situazioni in cui non lo è.  
   
-## Inferenza corretta  
+## <a name="successful-inference"></a>Inferenza corretta  
   
-#### I tipi anonimi possono dedurre i nomi e i tipi delle proprietà dalle origini seguenti:  
+#### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>I tipi anonimi possono dedurre i nomi e i tipi delle proprietà dalle origini seguenti:  
   
 -   Dai nomi di variabili. Il tipo anonimo `anonProduct` avrà due proprietà, `productName` e `productPrice`. I relativi tipi di dati saranno quelli delle variabili originali, `String` e `Double`, rispettivamente.  
   
      [!code-vb[VbVbalrAnonymousTypes#11](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_2.vb)]  
   
--   Dai nomi di proprietà o di campo di altri oggetti. Si consideri ad esempio un oggetto `car` di tipo `CarClass` che include le proprietà `Name` e `ID`. Per creare una nuova istanza di tipo anonimo, `car1`, con le proprietà `Name` e `ID` inizializzate con i valori dell'oggetto `car`, è possibile scrivere quanto segue:  
+-   Dai nomi di proprietà o di campo di altri oggetti. Si consideri ad esempio un oggetto `car` di tipo `CarClass` che include le proprietà `Name` e `ID` . Per creare una nuova istanza di tipo anonimo, `car1`, con le proprietà `Name` e `ID` inizializzate con i valori dell'oggetto `car` , è possibile scrivere quanto segue:  
   
      [!code-vb[VbVbalrAnonymousTypes#34](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_3.vb)]  
   
@@ -49,7 +48,7 @@ I tipi anonimi non offrono alcun meccanismo per specificare direttamente i tipi 
   
      [!code-vb[VbVbalrAnonymousTypes#12](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_5.vb)]  
   
-     Il tipo risultante per `anon` avrebbe una proprietà, `Book`, di tipo <xref:System.Collections.IEnumerable>\(di XElement\).  
+     Il tipo risultante per `anon` avrebbe una proprietà, `Book`, di tipo <xref:System.Collections.IEnumerable>(di XElement).  
   
 -   Da una funzione che non ha parametri, ad esempio `SomeFunction` nell'esempio seguente.  
   
@@ -61,9 +60,9 @@ I tipi anonimi non offrono alcun meccanismo per specificare direttamente i tipi 
   
      [!code-vb[VbVbalrAnonymousTypes#13](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_6.vb)]  
   
-## Inferenze non corrette  
+## <a name="inference-failures"></a>Inferenze non corrette  
   
-#### In molte circostanze l'inferenza del nome non avrà successo, come illustrato negli esempi seguenti:  
+#### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>In molte circostanze l'inferenza del nome non avrà successo, come illustrato negli esempi seguenti:  
   
 -   L'inferenza deriva dalla chiamata di un metodo, di un costruttore o di una proprietà con parametri che richiedono argomenti. La dichiarazione precedente di `anon1` ha esito negativo se `someFunction` ha uno o più argomenti.  
   
@@ -129,8 +128,8 @@ I tipi anonimi non offrono alcun meccanismo per specificare direttamente i tipi 
   
      [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
   
-## Vedere anche  
- [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [Key](../../../../visual-basic/language-reference/modifiers/key.md)

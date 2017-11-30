@@ -1,64 +1,82 @@
 ---
-title: "Long Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Long"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "identifier type characters, &"
-  - "numbers, whole"
-  - "whole numbers"
-  - "integral data types"
-  - "& identifier type character"
-  - "integer numbers"
-  - "literal type characters, L"
-  - "numbers, integer"
-  - "integers, data types"
-  - "L literal type character"
-  - "integers, types"
-  - "Long keyword"
-  - "data types [Visual Basic], integral"
-  - "data types [Visual Basic], assigning"
-  - "Long data type"
+title: Tipo di dati Long (Visual Basic)
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Long
+helpviewer_keywords:
+- identifier type characters [Visual Basic], &
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- '& identifier type character'
+- integer numbers
+- literal type characters [Visual Basic], L
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- L literal type character [Visual Basic]
+- integers [Visual Basic], types
+- Long keyword [Visual Basic]
+- data types [Visual Basic], integral
+- data types [Visual Basic], assigning
+- Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 1e21ed43ddc6efb018df0581faed1ebf270ab3ca
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Long Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+# <a name="long-data-type-visual-basic"></a>Tipo di dati Long (Visual Basic)
 
-Contiene valori integer a 64 bit \(8 byte\) con segno compresi nell'intervallo tra \-9.223.372.036.854.775.808 e 9.223.372.036.854.775.807 \(9,2...E\+18\).  
+Contiene valori integer a 64 bit (8 byte) nell'intervallo compreso tra -9.223.372.036.854.775.808 e 9.223.372.036.854.775.807 (9.2 … E + 18).  
   
-## Note  
- Utilizzare il tipo di dati `Long` per contenere numeri interi troppo grandi per essere compresi nel tipo di dati `Integer`.  
+## <a name="remarks"></a>Note
+
+ Utilizzare il `Long` il tipo di dati per contenere numeri interi che sono troppo grandi per il `Integer` tipo di dati.  
   
- Il valore predefinito di `Long` è 0.  
+ Il valore predefinito di `Long` è 0.
+
+## <a name="literal-assignments"></a>Assegnazioni di valori letterali 
+
+È possibile dichiarare e inizializzare un `Long` variabile assegnando il valore letterale decimale, valore letterale esadecimale, un valore letterale ottale, o (a partire da Visual Basic 2017) un valore letterale binario. Se il valore letterale integer è esterno all'intervallo di `Long`, vale a dire se è minore di <xref:System.Int64.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.Int64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione.
+
+Nell'esempio seguente, i valori interi uguali a 4.294.967.296 rappresentati come valori letterali decimali, esadecimali o binari vengono assegnati a valori `Long`.
   
-## Suggerimenti per la programmazione  
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]  
+
+> [!NOTE]
+> Utilizzare il prefisso `&h` o `&H` per indicare un valore letterale esadecimale, il prefisso `&b` o `&B` per indicare un valore letterale binario e il prefisso `&o` o `&O` per indicare un valore letterale ottale. I valori letterali decimali non hanno prefissi.
+
+A partire da Visual Basic 2017, è inoltre possibile utilizzare il carattere di sottolineatura, `_`, come un separatore di cifre per migliorare la leggibilità, come nell'esempio seguente viene illustrato.
+
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
+
+Valori letterali numerici possono includere anche il `L` [carattere tipo](../../programming-guide\language-features\data-types/type-characters.md) per indicare il `Long` il tipo di dati, come illustrato nell'esempio seguente.
+
+```vb
+Dim number = &H0FAC0326L
+```
+
+## <a name="programming-tips"></a>Suggerimenti sulla programmazione
+
+-   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che `Long` ha una larghezza di dati diversi (32 bit) in altri ambienti. Se si passa un argomento a 32 bit a tale componente, dichiararla come `Integer` anziché `Long` nel nuovo codice Visual Basic.  
   
--   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che in altri ambienti i tipi `Long` hanno un'ampiezza dei dati diversa \(32 bit\).  Se si passa un argomento a 32 bit a un componente di questo tipo, nel nuovo codice Visual Basic è necessario eseguirne la dichiarazione come `Integer` anziché come `Long`.  
+-   **Ampliamento.** Il `Long` può ampliarsi nel tipo di dati `Decimal`, `Single`, o `Double`. È pertanto possibile convertire `Long` in uno di questi tipi senza generare un errore <xref:System.OverflowException?displayProperty=nameWithType>.  
   
-     Inoltre, l'automazione non supporta i numeri interi a 64 bit in Windows 95, Windows 98 Windows o Windows 2000.  Non è possibile passare un argomento Visual Basic `Long` a un componente di automazione su questi sistemi operativi.  
+-   **Caratteri tipo.** Aggiungendo il carattere di tipo letterale `L` a un valore letterale, se ne determina la conversione nel tipo di dati `Long`. Aggiungendo il carattere identificatore di tipo `&` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Long`.  
   
--   **Conversione verso un tipo di dati più grande.** Il tipo di dati `Long` viene convertito verso il tipo più `Decimal`, `Single` o `Double`.  È pertanto possibile convertire `Long` in uno di questi tipi senza generare un errore <xref:System.OverflowException?displayProperty=fullName>.  
-  
--   **Caratteri tipo.** Aggiungendo il carattere di tipo letterale `L` a un valore letterale, se ne determina la conversione nel tipo di dati `Long`.  Aggiungendo il carattere identificatore di tipo `&` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Long`.  
-  
--   **Tipo Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Int64?displayProperty=fullName>.  
-  
-## Vedere anche  
- <xref:System.Int64>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Int64?displayProperty=nameWithType>.  
+
+## <a name="see-also"></a>Vedere anche
+
+<xref:System.Int64>[Tipi di dati](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+[Tipo di dati integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
+[Tipo di dati short](../../../visual-basic/language-reference/data-types/short-data-type.md)   
+[Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
+[Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
+[Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

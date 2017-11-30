@@ -1,38 +1,42 @@
 ---
-title: "Cenni preliminari sull&#39;utilizzo di controlli in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form]"
-  - "controlli personalizzati [Windows Form]"
-  - "Windows Form, controlli"
+title: Cenni preliminari sull'utilizzo di controlli in Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, controls
+- controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sull&#39;utilizzo di controlli in Windows Form
-In questo argomento verranno descritti gli elementi essenziali di un'applicazione Windows Form e verrà illustrato un semplice esempio in cui vengono utilizzati controlli e gestiti eventi in un'applicazione Windows Form.  
+# <a name="overview-of-using-controls-in-windows-forms"></a>Cenni preliminari sull'utilizzo di controlli in Windows Form
+In questo argomento vengono descritti gli elementi fondamentali di un'applicazione Windows Form e fornisce un esempio semplice che utilizza i controlli e gestisce gli eventi in un'applicazione Windows Form.  
   
-## Applicazioni Windows Form semplici  
- Un'applicazione Windows Form presenta almeno i seguenti elementi:  
+## <a name="simple-windows-forms-applications"></a>Applicazioni Windows Form semplici  
+ Come minimo, un'applicazione Windows Forms include gli elementi seguenti:  
   
--   Una o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=fullName>.  
+-   Una o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   Un metodo `Main` che richiama il metodo `static` \(`shared` in Visual Basic\) <xref:System.Windows.Forms.Application.Run%2A> passando un'istanza di <xref:System.Windows.Forms.Form>.  Il metodo <xref:System.Windows.Forms.Application.Run%2A> elabora i messaggi inviati dal sistema operativo all'applicazione.  
+-   Oggetto `Main` metodo che richiama il `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> metodo e passa un <xref:System.Windows.Forms.Form> istanza a esso. Il <xref:System.Windows.Forms.Application.Run%2A> metodo elabora i messaggi dal sistema operativo per l'applicazione.  
   
- Nell'esempio di codice che segue vengono illustrati gli elementi essenziali di un'applicazione Windows Form.  
+ Esempio di codice seguente mostra gli elementi essenziali di un'applicazione Windows Form.  
   
 ```vb  
 Option Explicit  
@@ -80,8 +84,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## Utilizzo di controlli in un'applicazione Windows Form  
- Nell'esempio di codice che segue viene mostrata un'applicazione semplice per illustrare le modalità con cui le applicazioni Windows Form utilizzano i controlli e gestiscono gli eventi.  L'esempio consiste in tre pulsanti su un form; quando si fa clic su uno di essi viene modificato il colore di sfondo.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Utilizzo dei controlli in un'applicazione Windows Form  
+ Esempio di codice seguente illustra un'applicazione semplice che illustra come le applicazioni Windows Form usano i controlli e la gestione degli eventi. L'esempio è costituito da tre pulsanti di un form. ogni pulsante Modifica il colore di sfondo quando si fa clic.  
   
 ```vb  
 Option Explicit  
@@ -229,6 +233,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## Vedere anche  
- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [Nozioni fondamentali sullo sviluppo di controlli Windows Form](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

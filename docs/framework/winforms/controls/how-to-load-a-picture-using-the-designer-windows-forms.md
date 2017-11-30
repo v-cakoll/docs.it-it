@@ -1,60 +1,61 @@
 ---
-title: "Procedura: caricare un&#39;immagine utilizzando la finestra di progettazione (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "form, visualizzazione di immagini"
-  - "immagini [Windows Form], visualizzazione su Windows Form"
-  - "formati immagine"
-  - "PictureBox (controllo) [Windows Form], aggiunta di immagini"
-  - "immagini, visualizzazione"
+title: 'Procedura: caricare un''immagine utilizzando la finestra di progettazione (Windows Form)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- picture formats
+- images [Windows Forms], displaying on Windows Forms
+- pictures [Windows Forms], displaying
+- forms [Windows Forms], displaying images
+- PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9049bf5f9467401bff098459b8f5ed55c1ee1975
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: caricare un&#39;immagine utilizzando la finestra di progettazione (Windows Form)
-Il controllo <xref:System.Windows.Forms.PictureBox> di Windows Form consente di caricare e visualizzare un'immagine in un form in fase di progettazione, impostando la proprietà <xref:System.Windows.Forms.PictureBox.Image%2A> su un'immagine valida.  Nella tabella seguente sono riportati i tipi di file validi.  
+# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Procedura: caricare un'immagine utilizzando la finestra di progettazione (Windows Form)
+Windows Form <xref:System.Windows.Forms.PictureBox> (controllo), è possibile caricare e visualizzare un'immagine in un form in fase di progettazione, impostando il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà su un'immagine valida. La tabella seguente illustra i tipi di file consentiti.  
   
-|Type|Estensione del nome file|  
-|----------|------------------------------|  
-|Bitmap|BMP|  
-|Icona|ICO|  
-|GIF|GIF|  
+|Tipo|Estensione di file|  
+|----------|-------------------------|  
+|Bitmap|file con estensione bmp|  
+|Icona|ico|  
+|GIF|.gif|  
 |Metafile|WMF|  
-|JPEG|JPG|  
+|JPEG|jpg|  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per visualizzare un'immagine in fase di progettazione  
+### <a name="to-display-a-picture-at-design-time"></a>Per visualizzare un'immagine in fase di progettazione  
   
-1.  Creare un controllo <xref:System.Windows.Forms.PictureBox> in un form.  
+1.  Disegnare un <xref:System.Windows.Forms.PictureBox> controllo in un form.  
   
-2.  Nella finestra Proprietà selezionare la proprietà <xref:System.Windows.Forms.PictureBox.Image%2A>, quindi fare clic sul pulsante con i puntini di sospensione per visualizzare la finestra di dialogo **Apri**.  
+2.  Nella finestra Proprietà, selezionare il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà, quindi fare clic sul pulsante con i puntini di sospensione per visualizzare il **aprire** la finestra di dialogo.  
   
-3.  Se si desidera utilizzare file di tipo particolare, ad esempio file GIF, selezionare il tipo dalla casella **Tipo file**.  
+3.  Se si sta cercando un tipo di file specifico (ad esempio, il file con estensione gif), selezionarla nel **i file di tipo** casella.  
   
-4.  Selezionare il file che si desidera utilizzare.  
+4.  Selezionare il file che si desidera visualizzare.  
   
-### Per rimuovere l'immagine in fase di progettazione  
+### <a name="to-clear-the-picture-at-design-time"></a>Per rimuovere l'immagine in fase di progettazione  
   
-1.  Nella finestra **Proprietà** selezionare la proprietà <xref:System.Windows.Forms.PictureBox.Image%2A> e fare clic con il pulsante destro del mouse sull'anteprima visualizzata a sinistra del nome dell'oggetto immagine.  Scegliere **Reimposta**.  
+1.  Nel **proprietà** finestra, seleziona il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà e il pulsante destro del mouse l'immagine di anteprima di piccole dimensioni che viene visualizzato a sinistra del nome dell'oggetto immagine. Scegliere **reimpostare**.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.PictureBox>   
- [Cenni preliminari sul controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [Procedura: modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)   
- [Procedura: impostare le immagini in fase di esecuzione](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.PictureBox>  
+ [Panoramica sul controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ [Procedura: Impostare le immagini in fase di esecuzione](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
  [Controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

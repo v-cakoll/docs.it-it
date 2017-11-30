@@ -1,36 +1,35 @@
 ---
-title: "Optional (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Optional"
-  - "vb.optional"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Optional keyword, contexts"
-  - "Optional keyword"
+title: Optional (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Optional
+- vb.optional
+helpviewer_keywords:
+- Optional keyword [Visual Basic], contexts
+- Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3aa01c2c1ae731c8fe00fdee24521760db69e624
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Optional (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Specifica che è possibile omettere un argomento di routine quando si chiama la routine.  
+# <a name="optional-visual-basic"></a>Optional (Visual Basic)
+Specifica che un argomento di routine può essere omesso quando viene chiamata la procedura.  
   
-## Note  
- Per ogni parametro facoltativo, è necessario specificare un'espressione costante come valore predefinito del parametro.  Se l'espressione restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), il valore predefinito del tipo di dati valore viene utilizzato come valore predefinito del parametro.  
+## <a name="remarks"></a>Note  
+ Per ogni parametro facoltativo, è necessario specificare un'espressione costante come valore predefinito di tale parametro. Se l'espressione restituisce [nulla](../../../visual-basic/language-reference/nothing.md), il valore predefinito del tipo di dati di valore viene utilizzato come valore predefinito del parametro.  
   
- Se l'elenco di parametri contiene un parametro facoltativo, ciascun parametro dall'deve essere facoltativo.  
+ Se l'elenco dei parametri contiene un parametro facoltativo, ogni parametro che segue deve essere facoltativo.  
   
- Il modificatore `Optional` può essere utilizzato nei seguenti contesti:  
+ Il modificatore `Optional` può essere usato nei contesti seguenti:  
   
 -   [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
@@ -41,13 +40,13 @@ Specifica che è possibile omettere un argomento di routine quando si chiama la 
 -   [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  Nel chiamare una routine con o senza parametri facoltativi, è possibile passare gli argomenti tramite posizione o per nome.  Per ulteriori informazioni, vedere [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
+>  Quando si chiama una routine con o senza parametri facoltativi, è possibile passare argomenti in base alla posizione o al nome. Per ulteriori informazioni, vedere [il passaggio di argomenti in base alla posizione e al nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
   
 > [!NOTE]
->  È inoltre possibile definire una routine con parametri facoltativi utilizzando l'overload.  Se si dispone di un parametro facoltativo, è possibile definire due versioni di overload della routine, di che accetta il parametro e che non fa.  Per ulteriori informazioni, vedere [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+>  È inoltre possibile definire una routine con parametri facoltativi utilizzando l'overload. Se si dispone di un parametro facoltativo, è possibile definire due versioni di overload della routine, una che accetta il parametro e uno senza. Per ulteriori informazioni, vedere [overload di routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
-## Esempio  
- Nell'esempio seguente viene definita una routine con un parametro facoltativo.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente definisce una routine che ha un parametro facoltativo.  
   
 ```  
 Public Function FindMatches(ByRef values As List(Of String),  
@@ -68,12 +67,12 @@ Public Function FindMatches(ByRef values As List(Of String),
 End Function  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come chiamare una routine con gli argomenti passati dalla posizione e gli argomenti passati per nome.  La routine presenta due parametri facoltativi.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come chiamare una routine con gli argomenti passati in base alla posizione e con gli argomenti passati per nome. La procedura include due parametri facoltativi.  
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## Vedere anche  
- [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)   
- [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Elenco dei parametri](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Parametri facoltativi](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
  [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)

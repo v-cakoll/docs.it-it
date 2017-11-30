@@ -1,35 +1,38 @@
 ---
-title: "Procedura: impostare una durata per un&#39;animazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animazione, durata"
-  - "durata delle animazioni"
-  - "sequenze temporali, description"
+title: 'Procedura: impostare una durata per un''animazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], duration
+- Timelines [WPF], description
+- duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9560e9d0a2809ae8f55a060eaec3b271539d5f94
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare una durata per un&#39;animazione
-<xref:System.Windows.Media.Animation.Timeline> rappresenta un intervallo di tempo la cui durata è determinata dall'oggetto <xref:System.Windows.Duration> della sequenza temporale.  Quando <xref:System.Windows.Media.Animation.Timeline> raggiunge la fine della propria durata, la riproduzione viene interrotta.  Se <xref:System.Windows.Media.Animation.Timeline> ha sequenze temporali figlio, anche la relativa riproduzione viene interrotta.  Nel caso di un'animazione, <xref:System.Windows.Duration> specifica il tempo impiegato dall'animazione per la transizione dal valore iniziale a quello finale.  
+# <a name="how-to-set-a-duration-for-an-animation"></a>Procedura: impostare una durata per un'animazione
+Oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un intervallo di tempo e la lunghezza del segmento varia a seconda della sequenza temporale <xref:System.Windows.Duration>. Quando un <xref:System.Windows.Media.Animation.Timeline> raggiunge la fine della durata, la riproduzione viene interrotta. Se il <xref:System.Windows.Media.Animation.Timeline> ha sequenze temporali figlio, la relativa riproduzione anche interrotta. Nel caso di un'animazione, la <xref:System.Windows.Duration> specifica il tempo impiegato dall'animazione per la transizione dal valore iniziale al valore finale.  
   
- È possibile specificare un oggetto <xref:System.Windows.Duration> con un tempo specifico finito o il valore speciale <xref:System.Windows.Duration.Automatic%2A> o <xref:System.Windows.Duration.Forever%2A>.  La durata di un'animazione deve essere sempre un valore temporale, poiché un'animazione deve sempre disporre di una durata definita e finita, in caso contrario l'animazione non sarebbe in grado di stabilire come effettuare la transizione tra i valori di destinazione.  Le sequenze temporali contenitore \(oggetti <xref:System.Windows.Media.Animation.TimelineGroup>\), ad esempio <xref:System.Windows.Media.Animation.Storyboard> e <xref:System.Windows.Media.Animation.ParallelTimeline>, hanno una durata predefinita di <xref:System.Windows.Duration.Automatic%2A>, che implica che tali sequenze temporali terminano automaticamente quando viene interrotta la riproduzione dell'ultima sequenza figlio.  
+ È possibile specificare un <xref:System.Windows.Duration> con un specifico tempo finito o il valore speciale <xref:System.Windows.Duration.Automatic%2A> o <xref:System.Windows.Duration.Forever%2A>. Durata di un'animazione deve essere sempre un valore di ora, perché un'animazione deve sempre avere una lunghezza definita, finita, in caso contrario, l'animazione sarebbe in grado di eseguire la transizione tra i valori di destinazione. Le sequenze temporali contenitore (<xref:System.Windows.Media.Animation.TimelineGroup> oggetti), ad esempio <xref:System.Windows.Media.Animation.Storyboard> e <xref:System.Windows.Media.Animation.ParallelTimeline>, hanno una durata predefinita di <xref:System.Windows.Duration.Automatic%2A>, ovvero terminano automaticamente al termine dell'esecuzione dell'ultimo figlio.  
   
- Nell'esempio riportato di seguito, vengono animati la larghezza, l'altezza e colore di riempimento di <xref:System.Windows.Shapes.Rectangle>.  Le durate sono impostate su sequenze temporali di animazione e contenitore i cui effetti di animazione risultanti includono il controllo della velocità percepita di un'animazione e l'override della durata delle sequenze temporali figlio con la durata di una sequenza temporale contenitore.  
+ Nel seguente esempio, la larghezza, altezza e riempimento colore di un <xref:System.Windows.Shapes.Rectangle> viene animata. Le durate sono impostate su sequenze temporali di animazione e il contenitore risultante in effetti di animazione, tra cui il controllo della velocità percepita di un'animazione e l'override della durata delle sequenze temporali figlio con la durata della sequenza temporale di un contenitore.  
   
-## Esempio  
- [!code-xml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
+## <a name="example"></a>Esempio  
+ [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
-## Vedere anche  
- <xref:System.Windows.Duration>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Duration>  
  [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

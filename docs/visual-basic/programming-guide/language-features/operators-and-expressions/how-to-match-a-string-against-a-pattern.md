@@ -1,94 +1,93 @@
 ---
-title: "How to: Match a String against a Pattern (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "comparison operators, comparing strings"
-  - "pattern matching"
-  - "strings [Visual Basic], comparing"
-  - "string comparison [Visual Basic], operators"
-  - "Visual Basic code, operators"
-  - "pattern matching, string comparison"
-  - "string comparison [Visual Basic]"
-  - "Like operator [Visual Basic], pattern matching"
-  - "pattern matching, empty strings"
-  - "operators [Visual Basic], comparison"
+title: 'Procedura: confrontare una stringa con un modello (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- comparison operators [Visual Basic], comparing strings
+- pattern matching
+- strings [Visual Basic], comparing
+- string comparison [Visual Basic], operators
+- Visual Basic code, operators
+- pattern matching [Visual Basic], string comparison
+- string comparison [Visual Basic]
+- Like operator [Visual Basic], pattern matching
+- pattern matching, empty strings
+- operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 83433bdb41df0ce40d0979f3f44603f10ba1c7d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Match a String against a Pattern (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Per verificare se un'espressione dell'oggetto [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) soddisfa un modello, è possibile utilizzare l'operatore [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procedura: confrontare una stringa con un modello (Visual Basic)
+Se si desidera determinare se un'espressione del [tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md) soddisfa un modello, è possibile utilizzare il [operatore Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
- L'operatore `Like` accetta due operandi.  L'operando di sinistra è un'espressione stringa, mentre l'operando di destra è una stringa contenente il modello da utilizzare per il confronto.  `Like` restituisce un valore `Boolean` che indica se l'espressione stringa soddisfa il modello.  
+ `Like`accetta due operandi. L'operando sinistro è un'espressione stringa e l'operando destro è una stringa contenente il modello da utilizzare per la corrispondenza. `Like`Restituisce un `Boolean` valore che indica se l'espressione stringa soddisfa il modello.  
   
- È possibile confrontare ciascun carattere incluso nell'espressione stringa con un carattere specifico, un carattere jolly, un elenco o un intervallo di caratteri.  Le posizioni delle specifiche nella stringa modello corrispondono alle posizioni dei caratteri da confrontare nell'espressione stringa.  
+ È possibile associare ogni carattere incluso nell'espressione stringa con un carattere specifico, un carattere jolly, un elenco di caratteri o un intervallo di caratteri. Le posizioni delle specifiche nella stringa modello corrispondono alle posizioni dei caratteri per cui trovare una corrispondenza nell'espressione stringa.  
   
-### Per confrontare un carattere incluso nell'espressione stringa con un carattere specifico  
+### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Per confrontare un carattere incluso nell'espressione stringa con un carattere specifico  
   
--   Inserire il carattere specifico direttamente nella stringa modello.  Alcuni caratteri speciali devono essere racchiusi da parentesi \(`[ ]`\).  Per ulteriori informazioni, vedere [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
+-   Inserire il carattere specifico direttamente nella stringa di modello. Alcuni caratteri speciali devono essere racchiusi tra parentesi (`[ ]`). Per ulteriori informazioni, vedere [operatore Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
-     Il seguente esempio consente di verificare se l'oggetto `myString` è costituito esattamente dal singolo carattere `H`.  
+     Nell'esempio seguente viene verificato se `myString` costituito esattamente il singolo carattere `H`.  
   
      [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
   
-### Per confrontare un carattere incluso nell'espressione stringa con un carattere jolly  
+### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Per confrontare un carattere incluso nell'espressione stringa con un carattere jolly  
   
--   Inserire un punto interrogativo \(`?`\) nella stringa modello.  Qualsiasi carattere valido in questa posizione determina una corrispondenza corretta.  
+-   Inserire un punto interrogativo (`?`) nella stringa di modello. Qualsiasi carattere valido in questa posizione determina una corrispondenza corretta.  
   
-     Il seguente esempio consente di verificare se l'oggetto `myString` è costituito dal singolo carattere `W` seguito da due caratteri qualsiasi.  
+     Nell'esempio seguente viene verificato se `myString` costituito dal singolo carattere `W` seguita da due caratteri di tutti i valori.  
   
      [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
   
-### Per confrontare un carattere incluso nell'espressione stringa con un elenco di caratteri  
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Per confrontare un carattere nell'espressione stringa in un elenco di caratteri  
   
--   Inserire le parentesi nella stringa modello \(`[ ]`\) e racchiudere tra le parentesi l'elenco di caratteri.  Non separare i caratteri con virgole o altri separatori.  Qualsiasi carattere incluso nell'elenco determina una corrispondenza corretta.  
+-   Inserire le parentesi (`[ ]`) nella stringa di modello e all'interno delle parentesi inserire l'elenco dei caratteri. Non separare i caratteri con virgole o qualsiasi altro separatore. Qualsiasi carattere singolo nell'elenco determina una corrispondenza corretta.  
   
-     Il seguente esempio consente di verificare se l'oggetto `myString` è costituito da un qualsiasi carattere valido seguito da un solo carattere `A`, `C`, o `E`.  
+     Nell'esempio seguente viene verificato se `myString` è costituito da qualsiasi carattere valido seguito da esattamente uno dei caratteri `A`, `C`, o `E`.  
   
      [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
   
-     In questo tipo di confronto viene fatta distinzione tra maiuscole e minuscole.  
+     Si noti che questa corrispondenza tra maiuscole e minuscole.  
   
-### Per confrontare un carattere incluso nell'espressione stringa con un intervallo di caratteri  
+### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Per confrontare un carattere incluso nell'espressione stringa con un intervallo di caratteri  
   
--   Inserire le parentesi nella stringa modello \(`[ ]`\) e racchiudere tra le parentesi il carattere minore e quello maggiore dell'intervallo, separati da un trattino \(`–`\).  Qualsiasi carattere incluso nell'intervallo determina una corrispondenza corretta.  
+-   Inserire le parentesi (`[ ]`) nella stringa di modello e racchiudere tra parentesi i caratteri minimo e massimo dell'intervallo, separati da un trattino (`–`). Qualsiasi carattere singolo compreso nell'intervallo determina una corrispondenza corretta.  
   
-     Il seguente esempio consente di verificare se l'oggetto `myString` è costituito dai caratteri `num` seguiti da un solo carattere `i`, `j`, `k`, `l`, `m`, o `n`.  
+     Nell'esempio seguente viene verificato se `myString` costituito dai caratteri `num` seguiti da un solo i caratteri `i`, `j`, `k`, `l`, `m`, o `n`.  
   
      [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
   
-     In questo tipo di confronto viene fatta distinzione tra maiuscole e minuscole.  
+     Si noti che questa corrispondenza tra maiuscole e minuscole.  
   
-## Confronto di stringhe vuote  
- L'operatore `Like` considera la sequenza `[]` come una stringa di lunghezza zero \(`""`\).  È possibile utilizzare la sequenza `[]` per verificare se l'espressione stringa è completamente vuota, ma non per verificare se è vuota una particolare posizione all'interno dell'espressione stringa.  Se si desidera verificare una posizione vuota, è possibile utilizzare l'operatore `Like` più volte.  
+## <a name="matching-empty-strings"></a>Confronto di stringhe vuote  
+ `Like`considera la sequenza `[]` come una stringa di lunghezza zero (`""`). È possibile utilizzare `[]` per verificare se l'intera espressione stringa è vuoto, ma non può essere utilizzato per verificare se una determinata posizione nell'espressione stringa è vuota. Se una posizione vuota è una delle opzioni è necessario per il test, è possibile utilizzare `Like` più volte.  
   
-#### Per confrontare un carattere incluso nell'espressione stringa con un elenco di caratteri o con nessun carattere  
+#### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Per confrontare un carattere nell'espressione stringa in un elenco di caratteri o alcun carattere  
   
-1.  Chiamare due volte l'operatore `Like` sulla stessa espressione stringa e connettere le due chiamate con l'operatore [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) o [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1.  Chiamare il `Like` operatore due volte nella stessa espressione di tipo string e connettere le due chiamate con il [operatore o](../../../../visual-basic/language-reference/operators/or-operator.md) o [OrElse (operatore)](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
-2.  Nella stringa modello per la prima clausola `Like`, è necessario inserire l'elenco di caratteri racchiuso tra parentesi \(`[ ]`\).  
+2.  Nella stringa di modello per la prima `Like` clausola, includere l'elenco di caratteri racchiusi tra parentesi quadre (`[ ]`).  
   
-3.  Nella stringa modello per la seconda clausola `Like` non inserire alcun carattere nella posizione in questione.  
+3.  Nella stringa di modello per il secondo `Like` clausola, non inserire alcun carattere in corrispondenza della posizione in questione.  
   
-     Il seguente esempio consente di verificare il numero telefonico di sette cifre `phoneNum` che deve essere composto da tre cifre seguite da uno spazio, da un trattino \(`–`\), da un punto \(`.`\) o da nessun carattere, e quindi da altre quattro cifre.  
+     Nell'esempio seguente verifica il numero di telefono di sette cifre `phoneNum` per esattamente tre cifre numeriche, seguita da uno spazio, un trattino (`–`), un periodo (`.`), o nessun carattere, seguita da quattro cifre.  
   
      [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
-## Vedere anche  
- [Comparison Operators](../../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [Operators and Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md)   
- [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatori di confronto](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [Operatori ed espressioni](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Operatore Like](../../../../visual-basic/language-reference/operators/like-operator.md)  
+ [Tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md)

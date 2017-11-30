@@ -1,59 +1,58 @@
 ---
-title: "Differences Between Modifiable and Nonmodifiable Arguments (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, arguments"
-  - "procedure arguments"
-  - "arguments [Visual Basic], nonmodifiable"
-  - "Visual Basic code, procedures"
-  - "arguments [Visual Basic], modifiable"
+title: Differenze tra argomenti modificabili e non modificabili (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedure arguments
+- arguments [Visual Basic], nonmodifiable
+- Visual Basic code, procedures
+- arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ab108d064f5c6740f80328a9b6db4785334550ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Differences Between Modifiable and Nonmodifiable Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Quando si chiama una routine, generalmente si passano uno o più argomenti.  Ogni argomento corrisponde a un elemento di programmazione sottostante.  Sia gli elementi sottostanti che gli argomenti stessi possono essere modificabili o meno.  
+# <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Differenze tra argomenti modificabili e non modificabili (Visual Basic)
+Quando si chiama una routine, in genere passato uno o più argomenti. Ciascun argomento corrisponde a un elemento di programmazione sottostante. Sia gli elementi sottostanti e gli argomenti stessi possono essere modificabili o meno.  
   
-## Elementi modificabili e non modificabili  
- Un elemento di programmazione può essere un *elemento modificabile*, ovvero con un valore che può essere modificato, o un *elemento non modificabile*, ovvero con  un valore che resta fisso in seguito alla relativa creazione.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>Elementi modificabili e non modificabili  
+ Può essere un elemento di programmazione un *elemento modificabile*, che può essere modificata, o un *modificabile*, che ha un valore fisso, dopo essere stato creato.  
   
- Nella tabella riportata di seguito sono elencati elementi di programmazione modificabili e non modificabili.  
+ Nella tabella seguente sono elencati gli elementi di programmazione modificabili e non modificabili.  
   
 |Elementi modificabili|Elementi non modificabili|  
-|---------------------------|-------------------------------|  
-|Variabili locali dichiarate all'interno delle routine, incluse le variabili oggetto, ad eccezione di quelle di sola lettura|Variabili, campi e proprietà di sola lettura|  
-|Campi \(variabili membro di moduli, classi e strutture\), ad eccezione di quelli di sola lettura|Costanti e valori letterali|  
-|Proprietà, ad eccezione di quelle di sola lettura|Membri di enumerazione|  
-|Elementi di matrice|Espressioni \(anche se i relativi elementi sono modificabili\)|  
+|-------------------------|----------------------------|  
+|Le variabili locali (dichiarate all'interno di procedure), incluse le variabili di oggetto, ad eccezione di sola lettura|Proprietà, campi e le variabili di sola lettura|  
+|Campi (variabili membro delle classi, moduli e strutture), ad eccezione di sola lettura|Costanti e valori letterali|  
+|Proprietà, ad eccezione di sola lettura|Membri dell'enumerazione|  
+|Elementi della matrice|Espressioni (anche se i relativi elementi sono modificabili)|  
   
-## Argomenti modificabili e non modificabili  
- Un *argomento modificabile* contiene un elemento sottostante modificabile.  È possibile memorizzare un nuovo valore nel codice chiamante in qualsiasi momento, nonché modificare l'elemento sottostante di tale codice mediante il codice della routine se l'argomento viene passato [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>Argomenti modificabili e  
+ Oggetto *argomento modificabile* è un attributo con un elemento sottostante modificabile. Il codice chiamante può archiviare un nuovo valore in qualsiasi momento, e se si passa l'argomento [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), il codice nella procedura possa inoltre modificare l'elemento sottostante nel codice chiamante.  
   
- Un *argomento non modificabile* contiene un elemento sottostante non modificabile o viene passato [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  Non è possibile modificare l'elemento sottostante nel codice chiamante mediante la routine, anche se si tratta di un elemento modificabile.  Se è un elemento non modificabile, non può essere modificato mediante il codice chiamante.  
+ Oggetto *argomento non modificabile* non contiene un elemento sottostante non modificabile o è passato [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). La procedura non è possibile modificare l'elemento sottostante nel codice chiamante, anche se si tratta di un elemento modificabile. Se si tratta di un elemento non è modificabile, il codice non è possibile modificarlo.  
   
- La routine chiamata può modificare la rispettiva copia locale di un argomento non modificabile, ma tale modifica non ha effetto sull'elemento sottostante nel codice chiamante.  
+ La routine chiamata potrebbe modificare la copia locale di un argomento non è modificabile, ma tale modifica non ha effetto sull'elemento sottostante nel codice chiamante.  
   
-## Vedere anche  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Differences Between Passing an Argument By Value and By Reference](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)   
- [How to: Change the Value of a Procedure Argument](../../../../visual-basic/programming-guide/language-features/procedures/how-to-change-the-value-of-a-procedure-argument.md)   
- [How to: Protect a Procedure Argument Against Value Changes](../../../../visual-basic/programming-guide/language-features/procedures/how-to-protect-a-procedure-argument-against-value-changes.md)   
- [How to: Force an Argument to Be Passed by Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-force-an-argument-to-be-passed-by-value.md)   
- [Passing Arguments by Position and by Name](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Vedere anche  
+ [Routine](./index.md)  
+ [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)  
+ [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)  
+ [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)  
+ [Differenze tra il passaggio di un argomento per valore e per riferimento](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
+ [Procedura: cambiare il valore di un argomento di routine](./how-to-change-the-value-of-a-procedure-argument.md)  
+ [Procedura: impedire la modifica del valore di un argomento di una routine](./how-to-protect-a-procedure-argument-against-value-changes.md)  
+ [Procedura: forzare il passaggio di un argomento per valore](./how-to-force-an-argument-to-be-passed-by-value.md)  
+ [Passaggio di argomenti in base alla posizione e al nome](./passing-arguments-by-position-and-by-name.md)  
+ [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

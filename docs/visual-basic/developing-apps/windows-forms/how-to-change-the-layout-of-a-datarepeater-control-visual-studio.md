@@ -1,59 +1,61 @@
 ---
-title: "How to: Change the Layout of a DataRepeater Control (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, changing layout style"
-  - "DataRepeater, changing orientation"
+title: 'Procedura: modificare il layout di un controllo DataRepeater (Visual Studio)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataRepeater, changing layout style
+- DataRepeater, changing orientation
 ms.assetid: 33aa8fd5-ac63-4bd0-ba13-8c2ab17e7824
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 94c5f8f5e83578ca0a82b479ef5ef359738df5f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Change the Layout of a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Il controllo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> può essere visualizzato con un orientamento verticale, in cui gli elementi scorrono verticalmente, o orizzontale, in cui gli elementi scorrono orizzontalmente.  È possibile modificare l'orientamento in fase di progettazione o in fase di esecuzione, modificando la proprietà <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>.  Se la proprietà <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> viene modificata in fase di esecuzione, ridimensionare <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> e riposizionare i controlli figlio.  
+# <a name="how-to-change-the-layout-of-a-datarepeater-control-visual-studio"></a>Procedura: modificare il layout di un controllo DataRepeater (Visual Studio)
+Il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controllo può essere visualizzato in verticale (elementi di scorrimento verticale) o orizzontale (elementi di scorrimento orizzontale) orientamento. È possibile modificare l'orientamento in fase di progettazione o in fase di esecuzione modificando il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> proprietà. Se si modifica il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> proprietà in fase di esecuzione, è anche possibile ridimensionare il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> e riposizionare i controlli figlio.  
   
 > [!NOTE]
->  Se i controlli vengono riposizionati su <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> in fase di esecuzione, chiamare i metodi <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A> e <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A> all'inizio e alla fine del blocco di codice di riposizionamento dei controlli.  
+>  Se si riposizionano controlli su di <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> in fase di esecuzione, sarà necessario chiamare il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A> e <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A> metodi all'inizio e alla fine del blocco di codice che riposiziona i controlli.  
   
-### Per modificare il layout in fase di progettazione  
+### <a name="to-change-the-layout-at-design-time"></a>Per modificare il layout in fase di progettazione  
   
-1.  In Progettazione Windows Form selezionare il controllo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+1.  In Progettazione Windows Form, selezionare il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controllo.  
   
     > [!NOTE]
-    >  Selezionare il bordo esterno del controllo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> facendo clic nell'area inferiore del controllo anziché nell'area <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> superiore.  
+    >  È necessario selezionare il bordo esterno del <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controllo facendo clic nell'area inferiore del controllo, non nella parte superiore <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> area.  
   
-2.  Nella finestra Proprietà, impostare la proprietà <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> su <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>.  
+2.  Nella finestra Proprietà impostare il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> una proprietà <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>.  
   
-### Per modificare il layout in fase di esecuzione  
+### <a name="to-change-the-layout-at-run-time"></a>Per modificare il layout in fase di esecuzione  
   
-1.  Aggiungere al gestore eventi `Click` di un pulsante o menu il codice riportato di seguito:  
+1.  Aggiungere il codice seguente di un pulsante o menu `Click` gestore eventi:  
   
-     [!code-cs[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_1.vb)]  
   
-2.  Nella maggior parte dei casi, per ridimensionare <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> e adattare la disposizione dei controlli al nuovo orientamento è consigliabile aggiungere codice simile a quello riportato nella sezione Esempio.  
+2.  Nella maggior parte dei casi, è possibile aggiungere codice analogo a quanto illustrato nella sezione di esempio per ridimensionare il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> e ridisporre i controlli per adattarli al nuovo orientamento.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene mostrato come rispondere all'evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyleChanged> in un gestore eventi.  Per questo esempio è necessario disporre di un controllo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denominato `DataRepeater1` in un form e che il relativo oggetto <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> contenga due controlli <xref:System.Windows.Forms.TextBox> denominati `TextBox1` e `TextBox2`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come rispondere al <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyleChanged> evento in un gestore eventi. In questo esempio si suppone una <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controllo denominato `DataRepeater1` in un form e che il relativo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> contengono due <xref:System.Windows.Forms.TextBox> controlli denominati `TextBox1` e `TextBox2`.  
   
- [!code-cs[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_2.cs)]
+ [!code-csharp[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_2.cs)]
  [!code-vb[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_2.vb)]  
   
-## Vedere anche  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A>   
- [Introduction to the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Troubleshooting the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)   
- [How to: Change the Appearance of a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A>  
+ [Introduzione al controllo DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Risoluzione dei problemi relativi al controllo DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
+ [Procedura: Modificare l'aspetto di un controllo DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)

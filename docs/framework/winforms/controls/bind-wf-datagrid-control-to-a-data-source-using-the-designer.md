@@ -1,85 +1,86 @@
 ---
-title: "Procedura: associare il controllo DataGrid Windows Form a un&#39;origine dati mediante la finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli con associazione"
-  - "controlli con associazione, controllo DataGrid"
-  - "associazione dati, controllo DataGrid"
-  - "controlli con associazione a dati, DataGrid"
-  - "DataGrid (controllo) [Windows Form], associazione dati"
-  - "dataset [Windows Form], associazione al controllo DataGrid"
-  - "controlli Windows Form, associazione dati"
+title: 'Procedura: associare il controllo DataGrid Windows Form a un''origine dati mediante la finestra di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- datasets [Windows Forms], binding to DataGrid control
+- data binding [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], data binding
+- Windows Forms controls, data binding
+- bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 378f1d80392ae7b2058d5c3b2d987e4810cbd07b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: associare il controllo DataGrid Windows Form a un&#39;origine dati mediante la finestra di progettazione
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Procedura: associare il controllo DataGrid Windows Form a un'origine dati mediante la finestra di progettazione
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Il controllo <xref:System.Windows.Forms.DataGrid> Windows Form è specificamente progettato per la visualizzazione di informazioni di un'origine dati.  Per associare il controllo in fase di progettazione, impostare le proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> oppure, in fase di esecuzione, chiamare il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>.  Sebbene sia possibile visualizzare dati da numerose origini dati, quelle più comuni sono i dataset e le visualizzazioni dati.  
+ Windows Form <xref:System.Windows.Forms.DataGrid> controllo è progettato specificamente per visualizzare le informazioni da un'origine dati. Per associare il controllo in fase di progettazione impostando il <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> , proprietà o in fase di esecuzione chiamando il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo. Sebbene sia possibile visualizzare i dati da un'ampia gamma di origini dati, le cause più comuni sono i set di dati e le visualizzazioni dati.  
   
- Se l'origine dati è disponibile in fase di progettazione, ad esempio se il form contiene un'istanza di un dataset o di una visualizzazione dati, sarà possibile associare la griglia all'origine dati in fase di progettazione.  Sarà quindi possibile visualizzare in anteprima la disposizione dei dati all'interno della griglia  
+ Se l'origine dati è disponibile in fase di progettazione, ad esempio, se il form contiene un'istanza di un set di dati o una vista dati, è possibile associare la griglia per l'origine dati in fase di progettazione. È quindi possibile visualizzare in anteprima l'aspetto dei dati nella griglia.  
   
- e associare la griglia a livello di codice, in fase di esecuzione.  Ciò risulta utile quando si desidera impostare un'origine dati in base alle informazioni ottenute in fase di esecuzione.  L'applicazione, ad esempio, potrebbe consentire all'utente di specificare il nome di una tabella da visualizzare.  Questa funzionalità è inoltre necessaria quando l'origine dati non esiste in fase di progettazione,  come nel caso di matrici, raccolte, dataset non tipizzati e visualizzatori di dati.  
+ È anche possibile associare la griglia a livello di codice in fase di esecuzione. Ciò è utile quando si desidera impostare un'origine dati in base alle informazioni ottenute in fase di esecuzione. Ad esempio, l'applicazione potrebbe consentire all'utente di specificare il nome di una tabella da visualizzare. È inoltre necessaria nelle situazioni in cui l'origine dati non esiste in fase di progettazione. Sono incluse origini dati, ad esempio matrici, raccolte, dataset non tipizzati e lettori di dati.  
   
- Nella seguente procedura è richiesto un progetto **Applicazione Windows** con un form contenente un controllo <xref:System.Windows.Forms.DataGrid>.  Per informazioni sull'impostazione di tali progetti, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  Per impostazione predefinita, in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] il controllo <xref:System.Windows.Forms.DataGrid> non si trova nella **Casella degli strumenti**.  Per informazioni su come aggiungerlo, vedere [How to: Add Items to the Toolbox](http://msdn.microsoft.com/it-it/458e119e-17fe-450b-b889-e31c128bd7e0).  Inoltre, in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] è possibile utilizzare la finestra **Origini dati** per l'associazione di dati in fase di progettazione.  Per ulteriori informazioni, vedere [Associazione di controlli ai dati in Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md).  
+ La procedura seguente richiede un **applicazione Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni sull'impostazione di un progetto, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> controllo non sarà il **della casella degli strumenti** per impostazione predefinita. Per informazioni su come aggiungerlo, vedere [procedura: aggiungere elementi alla casella degli strumenti](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0). Inoltre in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], è possibile utilizzare il **origini dati** finestra per l'associazione dati in fase di progettazione. Per ulteriori informazioni vedere [associare i controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per associare il controllo DataGrid a una singola tabella nella finestra di progettazione  
+### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Per associare il controllo DataGrid a una singola tabella nella finestra di progettazione  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> del controllo su un oggetto contenente gli elementi di dati ai quali si desidera effettuare l'associazione.  
+1.  Impostare il controllo <xref:System.Windows.Forms.DataGrid.DataSource%2A> proprietà all'oggetto contenente gli elementi di dati a cui si desidera associare.  
   
-2.  Se l'origine dati è un dataset, impostare la proprietà <xref:System.Windows.Forms.DataGrid.DataMember%2A> sul nome della tabella alla quale si desidera effettuare l'associazione.  
+2.  Se l'origine dati è un set di dati, impostare il <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà sul nome della tabella da associare.  
   
-3.  Se l'origine dati è un dataset o una visualizzazione dati basata su una tabella di dataset, aggiungere codice al form per riempire il dataset.  
+3.  Se l'origine dati è un set di dati o una vista di dati basato su una tabella di set di dati, aggiungere codice al form per riempire il set di dati.  
   
-     L'esatto codice utilizzato dipende da dove il dataset ottiene i dati.  Se il dataset viene popolato direttamente da un database, verrà chiamato il metodo `Fill` di un adattatore dati, come nell'esempio di codice riportato di seguito, nel quale viene popolato un dataset denominato `DsCategories1`:  
+     Il codice esatto che è utilizzare dipende in cui il set di dati Ottiene i dati. Se il set di dati viene popolato direttamente da un database, si chiama in genere il `Fill` metodo di un adattatore di dati, come nell'esempio di codice seguente, che popola un set di dati denominato `DsCategories1`:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
-  
     ```  
   
     ```csharp  
     sqlDataAdapter1.Fill(DsCategories1);  
-  
     ```  
   
     ```cpp  
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  Se lo si desidera, aggiungere alla griglia gli stili di tabella e di colonna appropriati.  
+4.  (Facoltativo) Aggiungere gli stili tabella appropriata e gli stili di colonna nella griglia.  
   
-     Se non viene definito alcuno stile di tabella, la tabella verrà ugualmente visualizzata, ma con una formattazione minima e con tutte le colonne visibili.  
+     Se sono presenti nessuno stile di tabella, verrà visualizzato nella tabella, ma con una formattazione minima e con tutte le colonne visibili.  
   
-### Per associare il controllo DataGrid a più tabelle in un dataset nella finestra di progettazione  
+### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Per associare il controllo DataGrid a più tabelle in un set di dati nella finestra di progettazione  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> del controllo su un oggetto contenente gli elementi di dati ai quali si desidera effettuare l'associazione.  
+1.  Impostare il controllo <xref:System.Windows.Forms.DataGrid.DataSource%2A> proprietà all'oggetto contenente gli elementi di dati a cui si desidera associare.  
   
-2.  Se il dataset contiene tabelle correlate, ovvero se contiene un oggetto relazione, impostare la proprietà <xref:System.Windows.Forms.DataGrid.DataMember%2A> sul nome della tabella padre.  
+2.  Se il set di dati contiene tabelle correlate (ovvero, se contiene un oggetto relation), impostare il <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà sul nome della tabella padre.  
   
-3.  Aggiungere codice per il riempimento del dataset.  
+3.  Scrivere codice per riempire il set di dati.  
   
-## Vedere anche  
- [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Procedura: aggiungere tabelle e colonne al controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)   
- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Associazione ai dati di Windows Form](../../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [Accesso ai dati in Visual Studio](../Topic/Accessing%20data%20in%20Visual%20Studio.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [Data binding in Windows Form](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

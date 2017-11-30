@@ -1,46 +1,51 @@
 ---
-title: "Procedura: impostare il testo visualizzato da un controllo di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button (controllo) [Windows Form], testo dei pulsanti"
-  - "Button (controllo) [Windows Form], visualizzazione di testo"
-  - "pulsanti, testo"
-  - "didascalie, impostazione"
-  - "didascalie, controlli Windows Form"
-  - "controlli [Windows Form], didascalie"
-  - "esempi [Windows Form], controlli"
-  - "form, didascalie"
-  - "etichette, aggiunta al controllo CommandButton"
-  - "StdFont (oggetto) e didascalia CommandButton"
-  - "testo"
-  - "Text (proprietà), controllo Windows Form"
-  - "testo, controlli Windows Form"
-  - "Windows Form, didascalie"
+title: 'Procedura: impostare il testo visualizzato da un controllo di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms, captions
+- Button control [Windows Forms], button text
+- StdFont object and CommandButton caption
+- captions [Windows Forms], Windows Forms controls
+- Text property [Windows Forms], Windows Forms control
+- Button control [Windows Forms], text display
+- labels [Windows Forms], adding to CommandButton control
+- buttons [Windows Forms], text
+- captions [Windows Forms], setting
+- text
+- examples [Windows Forms], controls
+- text [Windows Forms], Windows Forms controls
+- controls [Windows Forms], captions
+- forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a81c2202400968b4d4c95b40de7476fbd68d6182
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare il testo visualizzato da un controllo di Windows Form
-I controlli Windows Form in genere visualizzano il testo relativo alla funzione principale del controllo.  Un controllo <xref:System.Windows.Forms.Button>, ad esempio, solitamente visualizza una didascalia indicante l'azione che verrà eseguita quando si sceglie il pulsante.  Per tutti i controlli, il testo può essere impostato o restituito mediante la proprietà <xref:System.Windows.Forms.Control.Text%2A>.  È possibile modificare il tipo di carattere usando la proprietà <xref:System.Windows.Forms.Control.Font%2A>.  È anche possibile impostare il testo nella finestra di progettazione.  Vedere anche [Procedura: Creare tasti di scelta per i controlli Windows Form usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [Procedura: Impostare il testo visualizzato da un controllo Windows Form usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [Procedura: Impostare l'immagine visualizzata da un controllo Windows Form usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedura: impostare il testo visualizzato da un controllo di Windows Form
+I controlli Windows Form in genere visualizzano il testo relativo alla funzione principale del controllo. Un controllo <xref:System.Windows.Forms.Button>, ad esempio, solitamente visualizza una didascalia indicante l'azione che verrà eseguita quando si sceglie il pulsante. Per tutti i controlli, il testo può essere impostato o restituito mediante la proprietà <xref:System.Windows.Forms.Control.Text%2A>. È possibile modificare il tipo di carattere usando la proprietà <xref:System.Windows.Forms.Control.Font%2A>. È anche possibile impostare il testo nella finestra di progettazione.  Vedere anche [procedura: creare accesso chiavi per Windows Form controlli usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [come: impostare il testo visualizzato da un controllo Form Windows mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [come: impostare l'immagine Visualizzato da un controllo utilizzando la finestra di progettazione Windows Form](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).  
   
-### Per impostare il testo visualizzato da un controllo a livello di codice  
+### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Per impostare il testo visualizzato da un controllo a livello di codice  
   
 1.  Impostare la proprietà <xref:System.Windows.Forms.Control.Text%2A> su una stringa.  
   
-     Per creare un tasto di scelta sottolineato, includere una e commerciale \(&\) prima della lettera che corrisponderà al tasto di scelta.  
+     Per creare un tasto di scelta sottolineato, includere una e commerciale (&) prima della lettera che corrisponderà al tasto di scelta.  
   
 2.  Impostare la proprietà <xref:System.Windows.Forms.Control.Font%2A> su un oggetto di tipo <xref:System.Drawing.Font>.  
   
@@ -55,14 +60,14 @@ I controlli Windows Form in genere visualizzano il testo relativo alla funzione 
        GraphicsUnit.Point);  
     ```  
   
-    ```cpp#  
+    ```cpp  
     button1->Text = "Click here to save changes";  
     button1->Font = new System::Drawing::Font("Arial",  
        10, FontStyle::Bold, GraphicsUnit::Point);  
     ```  
   
     > [!NOTE]
-    >  È possibile usare un carattere di escape per visualizzare un carattere speciale in elementi dell'interfaccia utente in cui tale carattere verrebbe in genere interpretato in modo diverso, ad esempio nelle voci di menu.  Nella riga di codice seguente, ad esempio, il testo della voce di menu viene impostato in modo che appaia come "& Now For Something Completely Different":  
+    >  È possibile usare un carattere di escape per visualizzare un carattere speciale in elementi dell'interfaccia utente in cui tale carattere verrebbe in genere interpretato in modo diverso, ad esempio nelle voci di menu. Nella riga di codice seguente, ad esempio, il testo della voce di menu viene impostato in modo che appaia come "& Now For Something Completely Different":  
   
     ```vb  
     MPMenuItem.Text = "&& Now For Something Completely Different"  
@@ -72,12 +77,11 @@ I controlli Windows Form in genere visualizzano il testo relativo alla funzione 
     mpMenuItem.Text = "&& Now For Something Completely Different";  
     ```  
   
-    ```cpp#  
+    ```cpp  
     mpMenuItem->Text = "&& Now For Something Completely Different";  
-  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Control.Text%2A?displayProperty=fullName>   
- [Procedura: creare tasti di scelta per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)   
- [Procedura: rispondere alla selezione dei pulsanti di Windows Form](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>  
+ [Procedura: Creare tasti di scelta per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [Procedura: Rispondere alla selezione dei pulsanti di Windows Form](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)

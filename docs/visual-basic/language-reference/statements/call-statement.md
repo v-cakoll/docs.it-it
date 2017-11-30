@@ -1,58 +1,56 @@
 ---
-title: "Call Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Call"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, Call statement"
-  - "Call statement"
-  - "procedures, calling"
+title: Istruzione Call (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Call
+helpviewer_keywords:
+- procedures [Visual Basic], Call statement
+- Call statement [Visual Basic]
+- procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c72450fd6f931f36f640d3e384a6fd38d57a7a23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Call Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consente di trasferire un controllo a una routine `Function`, `Sub` oppure a una routine della libreria a collegamento dinamico \(DLL\).  
+# <a name="call-statement-visual-basic"></a>Istruzione Call (Visual Basic)
+Trasferisce il controllo a un `Function`, `Sub`, o una routine di libreria a collegamento dinamico (DLL).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-[ Call ] procedureName [ (argumentList) ]  
+[ Call ] procedureName [ (argumentList) ]  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `procedureName`  
- Obbligatorio.  Nome della routine da chiamare.  
+ Obbligatorio. Nome della routine da chiamare.  
   
  `argumentList`  
- Parametro facoltativo.  Elenco di variabili o espressioni che costituiscono gli argomenti passati alla routine quando viene chiamata.  Gli argomenti sono separati da una virgola.  Se specificato, è necessario che la parte `argumentList` sia racchiusa tra parentesi.  
+ Parametro facoltativo. Elenco di variabili o espressioni che rappresentano gli argomenti passati alla procedura quando viene chiamato. Più argomenti sono separati da virgole. Se si includono `argumentList`, è necessario racchiuderlo tra parentesi.  
   
-## Note  
- È possibile utilizzare la parola chiave di `Call` quando si chiama una routine.  Per la maggior parte delle chiamate di routine, non è necessario utilizzare la parola chiave.  
+## <a name="remarks"></a>Note  
+ È possibile utilizzare il `Call` parola chiave quando si chiama una routine. Per la maggior parte delle chiamate di procedura, non è necessario utilizzare questa parola chiave.  
   
- In genere si utilizza la parola chiave di `Call` quando l'espressione chiamata non inizia con un identificatore.  L'utilizzo della parola chiave di `Call` per altri utilizzi non è consigliato.  
+ In genere si usa il `Call` (parola chiave) quando l'espressione di chiamata non inizia con un identificatore. Utilizzare il `Call` (parola chiave) per altri utilizzi non è consigliato.  
   
- Se la routine restituisce un valore, l'istruzione `Call` lo ignora.  
+ Se la routine restituisce un valore, il `Call` istruzione lo ignora.  
   
-## Esempio  
- Nel codice seguente a due esempi in cui la parola chiave di `Call` è necessaria per chiamare una routine.  In entrambi gli esempi, l'espressione chiamata non inizia con un identificatore.  
+## <a name="example"></a>Esempio  
+ Il codice riportato di seguito sono illustrati due esempi in cui il `Call` parola chiave è necessaria chiamare una routine. In entrambi gli esempi, l'espressione di chiamata non inizia con un identificatore.  
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
-## Vedere anche  
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

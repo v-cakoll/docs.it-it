@@ -1,49 +1,52 @@
 ---
-title: "Procedura: implementare la convalida dell&#39;associazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "associazione, convalida"
-  - "associazione dati, convalida dell'associazione"
-  - "convalida dell'associazione"
+title: 'Procedura: implementare la convalida dell''associazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validation of binding [WPF]
+- data binding [WPF], validation of binding
+- binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec860cc9cc58febd98d8642c98a50ec296592d02
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: implementare la convalida dell&#39;associazione
-In questo esempio viene mostrato come utilizzare un oggetto <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e un trigger dello stile per fornire un feedback visivo e informare l'utente quando viene immesso un valore non valido in base a una regola di convalida personalizzata.  
+# <a name="how-to-implement-binding-validation"></a>Procedura: implementare la convalida dell'associazione
+In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e un trigger di stile per fornire indicazioni visive per informare l'utente quando viene immesso un valore non valido, in base a una regola di convalida personalizzata.  
   
-## Esempio  
- Il contenuto di testo dell'oggetto <xref:System.Windows.Controls.TextBox> dell'esempio seguente è associato alla proprietà `Age` \(di tipo int\) di un oggetto [origine di associazione](GTMT) denominato `ods`.  L'associazione viene configurata per utilizzare una regola di convalida denominata `AgeRangeRule` in modo che se l'utente immette caratteri non numerici o un valore inferiore a 21 o maggiore di 130, accanto alla casella di testo viene visualizzato un punto esclamativo rosso e quando l'utente sposta il mouse sulla casella di testo viene visualizzata una descrizione comandi con il messaggio di errore.  
+## <a name="example"></a>Esempio  
+ Il contenuto di testo di <xref:System.Windows.Controls.TextBox> nell'esempio seguente viene associato al `Age` proprietà (di tipo int di un oggetto di origine di associazione denominato) `ods`. Il binding è configurato per l'uso di una regola di convalida denominata `AgeRangeRule` in modo che, se l'utente immette un carattere non numerico o un valore minore di 21 o maggiore di 130, appare un punto esclamativo rosso accanto alla casella di testo e viene visualizzata una descrizione comando con il messaggio di errore quando l'utente sposta il puntatore del mouse sulla casella di testo.  
   
- [!code-xml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
+ [!code-xaml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
   
- Nell'esempio seguente viene mostrata l'implementazione di `AgeRangeRule` che eredita da <xref:System.Windows.Controls.ValidationRule> ed esegue l'override del metodo <xref:System.Windows.Controls.ValidationRule.Validate%2A>.  Il metodo Int32.Parse\(\) viene chiamato sul valore per assicurarsi che non contenga caratteri non validi.  Il metodo <xref:System.Windows.Controls.ValidationRule.Validate%2A> restituisce <xref:System.Windows.Controls.ValidationResult> che indica se il valore è valido in base al fatto che venga rilevata un'eccezione durante l'analisi e che il valore di durata non rientri nell'intervallo compreso tra i limiti inferiore e superiore.  
+ Nell'esempio seguente viene illustrata l'implementazione di `AgeRangeRule`, che eredita da <xref:System.Windows.Controls.ValidationRule> ed esegue l'override di <xref:System.Windows.Controls.ValidationRule.Validate%2A> metodo. Il metodo Int32.Parse() viene chiamato sul valore per verificare che non contenga caratteri non validi. Il <xref:System.Windows.Controls.ValidationRule.Validate%2A> metodo restituisce un <xref:System.Windows.Controls.ValidationResult> che indica se il valore è valido in base se viene intercettata un'eccezione durante l'analisi e indica se il valore di durata di fuori di limiti inferiore e superiore.  
   
  [!code-csharp[BindValidation#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
   
- Nell'esempio seguente viene mostrato l'oggetto <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` personalizzato che crea un punto esclamativo rosso per notificare all'utente un errore di convalida.  I modelli di controllo vengono utilizzati per ridefinire l'aspetto di un controllo.  
+ Nell'esempio seguente viene personalizzata <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` che crea un punto esclamativo rosso per notificare all'utente di un errore di convalida. Vengono usati modelli specifici per ridefinire l'aspetto di un controllo.  
   
- [!code-xml[BindValidation#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
+ [!code-xaml[BindValidation#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
   
- Come mostrato nell'esempio seguente, l'oggetto <xref:System.Windows.Controls.ToolTip> che visualizza il messaggio di errore viene creato utilizzando lo stile denominato `textBoxInError`.  Se il valore di <xref:System.Windows.Controls.Validation.HasError%2A> è `true`, il trigger imposta la descrizione comandi dell'oggetto <xref:System.Windows.Controls.TextBox> corrente sul primo errore di convalida.  L'oggetto <xref:System.Windows.Data.Binding.RelativeSource%2A> viene impostato su <xref:System.Windows.Data.RelativeSourceMode> che fa riferimento all'elemento corrente.  
+ Come illustrato nell'esempio seguente, il <xref:System.Windows.Controls.ToolTip> che visualizza il messaggio di errore viene creato utilizzando lo stile denominato `textBoxInError`. Se il valore di <xref:System.Windows.Controls.Validation.HasError%2A> è `true`, il trigger imposta la descrizione dell'oggetto corrente <xref:System.Windows.Controls.TextBox> sul primo errore di convalida. Il <xref:System.Windows.Data.Binding.RelativeSource%2A> è impostato su <xref:System.Windows.Data.RelativeSourceMode.Self>, che fa riferimento all'elemento corrente.  
   
- [!code-xml[BindValidation#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+ [!code-xaml[BindValidation#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
   
- Per l'esempio completo, vedere [Esempio Binding Validation](http://go.microsoft.com/fwlink/?LinkID=159972) \(la pagina potrebbe essere in inglese\).  
+ Per l'esempio completo, vedere [Binding Validation Sample (Esempio di convalida binding)](http://go.microsoft.com/fwlink/?LinkID=159972).  
   
- Notare che se non si fornisce un oggetto <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> personalizzato, il modello di errori predefinito sembra fornire un feedback visivo all'utente, quando si verifica un errore di convalida.  Per ulteriori informazioni, vedere "Convalida dei dati" in [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md).  Inoltre, in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene fornita una regola di convalida incorporata che rileva le eccezioni generate durante l'aggiornamento della proprietà dell'origine di associazione.  Per ulteriori informazioni, vedere <xref:System.Windows.Controls.ExceptionValidationRule>.  
+ Si noti che se non si specifica un oggetto personalizzato <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> viene visualizzato il modello di errore predefinita per fornire feedback visivo all'utente quando si verifica un errore di convalida. Per altre informazioni, vedere "Convalida dei dati" in [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce anche una regola di convalida integrata che controlla le eccezioni generate durante l'aggiornamento della proprietà di origine del binding. Per altre informazioni, vedere <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
-## Vedere anche  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Procedure relative](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
