@@ -1,1 +1,1 @@
-interfacce utente grafiche (GUI)
+<span data-ttu-id="7387e-101">interfacce utente grafiche (GUI)</span><span class="sxs-lookup"><span data-stu-id="7387e-101">graphical user interfaces (GUIs)</span></span>

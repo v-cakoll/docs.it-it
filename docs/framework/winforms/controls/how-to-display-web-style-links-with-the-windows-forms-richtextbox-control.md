@@ -1,44 +1,49 @@
 ---
-title: "Procedura: visualizzare collegamenti ipertestuali con il controllo RichTextBox Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], caselle di testo"
-  - "RichTextBox (controllo) [Windows Form], collegamento a pagine Web"
-  - "caselle di testo, visualizzazione di collegamenti Web"
+title: 'Procedura: visualizzare collegamenti ipertestuali con il controllo RichTextBox Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- text boxes [Windows Forms], displaying Web links
+- examples [Windows Forms], text boxes
+- RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5391c48720e68a8a7e6e0fb7735252d00025adc6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: visualizzare collegamenti ipertestuali con il controllo RichTextBox Windows Form
-Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di visualizzare collegamenti Web colorati e sottolineati.  È possibile scrivere il codice che apre una finestra del browser nella quale viene visualizzato il sito Web specificato nel testo del collegamento quando si fa clic sul collegamento.  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="f74e4-102">Procedura: visualizzare collegamenti ipertestuali con il controllo RichTextBox Windows Form</span><span class="sxs-lookup"><span data-stu-id="f74e4-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="f74e4-103">Windows Form <xref:System.Windows.Forms.RichTextBox> controllo può visualizzare i collegamenti Web colorati e sottolineati.</span><span class="sxs-lookup"><span data-stu-id="f74e4-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="f74e4-104">È possibile scrivere codice che apre una finestra del browser che mostra il sito Web specificato nel testo del collegamento quando viene selezionato il collegamento.</span><span class="sxs-lookup"><span data-stu-id="f74e4-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
   
-### Per definire un collegamento a una pagina Web con il controllo RichTextBox  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="f74e4-105">Il collegamento a una pagina Web con il controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="f74e4-105">To link to a Web page with the RichTextBox control</span></span>  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.Text%2A> su una stringa che include un URL valido, ad esempio "http:\/\/www.microsoft.com\/italy\/".  
+1.  <span data-ttu-id="f74e4-106">Impostare il <xref:System.Windows.Forms.RichTextBox.Text%2A> proprietà in una stringa che include un URL valido (ad esempio, "http://www.microsoft.com/").</span><span class="sxs-lookup"><span data-stu-id="f74e4-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
   
-2.  Assicurarsi che la proprietà <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> sia impostata su `true` \(impostazione predefinita\).  
+2.  <span data-ttu-id="f74e4-107">Verificare che il <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> è impostata su `true` (impostazione predefinita).</span><span class="sxs-lookup"><span data-stu-id="f74e4-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
   
-3.  Creare una nuova istanza globale dell'oggetto <xref:System.Diagnostics.Process>.  
+3.  <span data-ttu-id="f74e4-108">Creare una nuova istanza globale di <xref:System.Diagnostics.Process> oggetto.</span><span class="sxs-lookup"><span data-stu-id="f74e4-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
   
-4.  Scrivere un gestore eventi per l'evento <xref:System.Windows.Forms.RichTextBox.LinkClicked> che invia al browser il testo desiderato.  
+4.  <span data-ttu-id="f74e4-109">Scrivere un gestore eventi per il <xref:System.Windows.Forms.RichTextBox.LinkClicked> evento che invia al browser il testo desiderato.</span><span class="sxs-lookup"><span data-stu-id="f74e4-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
   
-     Nell'esempio qui di seguito, l'evento <xref:System.Windows.Forms.RichTextBox.LinkClicked> consente di aprire un'istanza di Internet Explorer con l'URL specificato nella proprietà <xref:System.Windows.Forms.RichTextBox.Text%2A> del controllo <xref:System.Windows.Forms.RichTextBox>.  Nell'esempio si presuppone l'esistenza di un form contenente un controllo <xref:System.Windows.Forms.RichTextBox>.  
+     <span data-ttu-id="f74e4-110">Nell'esempio seguente, il <xref:System.Windows.Forms.RichTextBox.LinkClicked> evento consente di aprire un'istanza di Internet Explorer per l'URL specificato nella <xref:System.Windows.Forms.RichTextBox.Text%2A> proprietà del <xref:System.Windows.Forms.RichTextBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f74e4-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="f74e4-111">Questo esempio si presuppone un form con un <xref:System.Windows.Forms.RichTextBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="f74e4-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
     > [!IMPORTANT]
-    >  Durante la chiamata al metodo <xref:System.Diagnostics.Process.Start%2A?displayProperty=fullName> verrà generata un'eccezione <xref:System.Security.SecurityException> se si esegue il codice in un contesto parzialmente attendibile, poiché non si dispone di privilegi sufficienti.  Per ulteriori informazioni, vedere [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  <span data-ttu-id="f74e4-112">Nella chiamata di <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> metodo, si verificherà un <xref:System.Security.SecurityException> eccezione se si esegue il codice in un contesto parzialmente attendibile a causa di privilegi sufficienti.</span><span class="sxs-lookup"><span data-stu-id="f74e4-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="f74e4-113">Per altre informazioni, vedere [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).</span><span class="sxs-lookup"><span data-stu-id="f74e4-113">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -50,7 +55,6 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di vi
           ' with link text as URL.  
           p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -63,7 +67,6 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di vi
        // with link text as URL.  
        p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);  
     }  
-  
     ```  
   
     ```cpp  
@@ -81,19 +84,18 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di vi
        }  
     ```  
   
-     \([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) È necessario inizializzare il processo `p`. Per effettuare questa operazione, includere la seguente istruzione nel costruttore del form:  
+     <span data-ttu-id="f74e4-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) È necessario inizializzare processo `p`, che è possibile effettuare includendo l'istruzione seguente nel costruttore del form:</span><span class="sxs-lookup"><span data-stu-id="f74e4-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
+     <span data-ttu-id="f74e4-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Inserire il codice seguente nel costruttore del form per registrare il gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="f74e4-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
        System.Windows.Forms.LinkClickedEventHandler  
        (this.richTextBox1_LinkClicked);  
-  
     ```  
   
     ```cpp  
@@ -102,13 +104,12 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di vi
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     È importante arrestare immediatamente il processo creato una volta completate le operazioni desiderate.  Con riferimento al codice sopra riportato, il codice per arrestare il processo sarà simile al seguente:  
+     <span data-ttu-id="f74e4-116">È importante arrestare immediatamente il processo che è stato creato dopo aver completato le operazioni desiderate.</span><span class="sxs-lookup"><span data-stu-id="f74e4-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="f74e4-117">Riferimento al codice presentato in precedenza, il codice per arrestare il processo potrebbe essere simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="f74e4-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
   
     ```vb  
     Public Sub StopWebProcess()  
        p.Kill()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -116,7 +117,6 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di vi
     {  
        p.Kill();  
     }  
-  
     ```  
   
     ```cpp  
@@ -126,9 +126,9 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di vi
     }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>   
- <xref:System.Windows.Forms.RichTextBox.LinkClicked>   
- <xref:System.Windows.Forms.RichTextBox>   
- [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f74e4-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f74e4-118">See Also</span></span>  
+ <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>  
+ <xref:System.Windows.Forms.RichTextBox.LinkClicked>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [<span data-ttu-id="f74e4-119">Controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="f74e4-119">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="f74e4-120">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="f74e4-120">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -1,1 +1,1 @@
-Microsoft Windows Rights Management (RM)
+<span data-ttu-id="80dbe-101">Microsoft Windows Rights Management (RM)</span><span class="sxs-lookup"><span data-stu-id="80dbe-101">Microsoft Windows Rights Management (RM)</span></span>

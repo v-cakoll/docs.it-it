@@ -1,57 +1,55 @@
 ---
-title: "OVERLAPS (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: OVERLAPS (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b3544eac58fe168c5f2e6a355e8cf97b4598bb76
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# OVERLAPS (Entity SQL)
-Determina se due raccolte includono elementi comuni.  
+# <a name="overlaps-entity-sql"></a><span data-ttu-id="bee55-102">OVERLAPS (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="bee55-102">OVERLAPS (Entity SQL)</span></span>
+<span data-ttu-id="bee55-103">Determina se due raccolte includono elementi comuni.</span><span class="sxs-lookup"><span data-stu-id="bee55-103">Determines whether two collections have common elements.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="bee55-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bee55-104">Syntax</span></span>  
   
 ```  
-  
 expression OVERLAPS expression  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a><span data-ttu-id="bee55-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="bee55-105">Arguments</span></span>  
  `expression`  
- Qualsiasi espressione di query valida che restituisce una raccolta da confrontare con la raccolta restituita da un'altra espressione di query. Tutte le espressioni devono essere dello stesso tipo o di un tipo di base o derivato comune di `expression`.  
+ <span data-ttu-id="bee55-106">Qualsiasi espressione di query valida che restituisce una raccolta da confrontare con la raccolta restituita da un'altra espressione di query.</span><span class="sxs-lookup"><span data-stu-id="bee55-106">Any valid query expression that returns a collection to compare with the collection returned from another query expression.</span></span> <span data-ttu-id="bee55-107">Tutte le espressioni devono essere dello stesso tipo o di un tipo di base o derivato comune di `expression`.</span><span class="sxs-lookup"><span data-stu-id="bee55-107">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
   
-## Valore restituito  
- `true` se le due raccolte includono elementi comuni; in caso contrario, `false`.  
+## <a name="return-value"></a><span data-ttu-id="bee55-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="bee55-108">Return Value</span></span>  
+ <span data-ttu-id="bee55-109">`true` se le due raccolte includono elementi comuni; in caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="bee55-109">`true` if the two collections have common elements; otherwise, `false`.</span></span>  
   
-## Note  
- OVERLAPS fornisce l'equivalente dal punto di vista funzionale di``quanto segue:  
+## <a name="remarks"></a><span data-ttu-id="bee55-110">Note</span><span class="sxs-lookup"><span data-stu-id="bee55-110">Remarks</span></span>  
+ <span data-ttu-id="bee55-111">OVERLAPS fornisce funzionalmente equivalente al seguente:</span><span class="sxs-lookup"><span data-stu-id="bee55-111">OVERLAPS provides functionally equivalent tothe following:</span></span>  
   
  `EXISTS ( expression INTERSECT expression )`  
   
- OVERLAPS è uno degli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Tutti gli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono valutati da sinistra a destra. Per informazioni sulla priorità degli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)], vedere [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
+ <span data-ttu-id="bee55-112">OVERLAPS è uno degli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="bee55-112">OVERLAPS is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="bee55-113">Tutti gli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono valutati da sinistra a destra.</span><span class="sxs-lookup"><span data-stu-id="bee55-113">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="bee55-114">Per informazioni sulla priorità per il [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatori sui set, vedere [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="bee55-114">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span></span>  
   
-## Esempio  
- Nella query Entity SQL seguente viene usato l'operatore OVERLAPS per determinare se due raccolte hanno un valore comune. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
+## <a name="example"></a><span data-ttu-id="bee55-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="bee55-115">Example</span></span>  
+ <span data-ttu-id="bee55-116">Nella query Entity SQL seguente viene usato l'operatore OVERLAPS per determinare se due raccolte hanno un valore comune.</span><span class="sxs-lookup"><span data-stu-id="bee55-116">The following Entity SQL query uses the OVERLAPS operator to determines whether two collections have a common value.</span></span> <span data-ttu-id="bee55-117">La query è basata sul modello Sales di AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="bee55-117">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="bee55-118">Per compilare ed eseguire questa query, effettuare le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="bee55-118">To compile and run this, follow these steps:</span></span>  
   
-1.  Seguire la procedura indicata in [Procedura: eseguire una query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="bee55-119">Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="bee55-119">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery`:  
+2.  <span data-ttu-id="bee55-120">Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="bee55-120">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
-## Vedere anche  
- [Riferimenti a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="bee55-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bee55-121">See Also</span></span>  
+ [<span data-ttu-id="bee55-122">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="bee55-122">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

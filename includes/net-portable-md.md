@@ -1,1 +1,1 @@
-Libreria di classi portabile
+<span data-ttu-id="e80a6-101">Libreria di classi portabile</span><span class="sxs-lookup"><span data-stu-id="e80a6-101">Portable Class Library</span></span>

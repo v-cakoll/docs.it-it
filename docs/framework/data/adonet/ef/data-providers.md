@@ -1,37 +1,40 @@
 ---
-title: "Provider di dati Entity Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Provider di dati Entity Framework
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f52ab1be62f6e196bc1c8aa8874d5aa440ba606f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Provider di dati Entity Framework
-Questa sezione fornisce informazioni su provider di dati che supportano [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+# <a name="entity-framework-data-providers"></a><span data-ttu-id="9aca7-102">Provider di dati Entity Framework</span><span class="sxs-lookup"><span data-stu-id="9aca7-102">Entity Framework Data Providers</span></span>
+<span data-ttu-id="9aca7-103">Questa sezione fornisce informazioni su provider di dati che supportano [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9aca7-103">This section provides information on data providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
-## In questa sezione  
- [Provider EntityClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
- Viene illustrato il provider di dati EntityClient  che consente di trasformare le query su un modello di dati in un albero dei comandi canonico.  L'albero dei comandi può essere quindi usato da un provider di dati [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] per [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="9aca7-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="9aca7-104">In This Section</span></span>  
+ [<span data-ttu-id="9aca7-105">Provider EntityClient per Entity Framework</span><span class="sxs-lookup"><span data-stu-id="9aca7-105">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
+ <span data-ttu-id="9aca7-106">Viene illustrato il provider di dati EntityClient</span><span class="sxs-lookup"><span data-stu-id="9aca7-106">Describes the EntityClient data provider.</span></span> <span data-ttu-id="9aca7-107">che consente di trasformare le query su un modello di dati in un albero dei comandi canonico.</span><span class="sxs-lookup"><span data-stu-id="9aca7-107">This provider transforms queries against a data model into a canonical command tree.</span></span> <span data-ttu-id="9aca7-108">L'albero dei comandi può essere quindi usato da un provider di dati [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] per [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9aca7-108">The command tree can then be consumed by a [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] data provider for the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
- [SqlClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- Descrive il provider di dati [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] che supporta [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] per l'uso con un database [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+ [<span data-ttu-id="9aca7-109">SqlClient per Entity Framework</span><span class="sxs-lookup"><span data-stu-id="9aca7-109">SqlClient for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
+ <span data-ttu-id="9aca7-110">Viene descritto il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] provider di dati che supporta il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] per l'utilizzo con un [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] database.</span><span class="sxs-lookup"><span data-stu-id="9aca7-110">Describes the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] data provider that supports the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] for use with a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] database.</span></span>  
   
-## Sezioni correlate  
- [Entity Framework \(SQL Server Compact\)](http://go.microsoft.com/fwlink/?LinkId=135638)  
- Descrive le limitazioni del provider e come usare [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] con un database SQL Server Compact.  
+## <a name="related-sections"></a><span data-ttu-id="9aca7-111">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="9aca7-111">Related Sections</span></span>  
+ [<span data-ttu-id="9aca7-112">Entity Framework (SQL Server Compact)</span><span class="sxs-lookup"><span data-stu-id="9aca7-112">Entity Framework (SQL Server Compact)</span></span>](http://go.microsoft.com/fwlink/?LinkId=135638)  
+ <span data-ttu-id="9aca7-113">Descrive le limitazioni del provider e come usare [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] con un database SQL Server Compact.</span><span class="sxs-lookup"><span data-stu-id="9aca7-113">Describes provider limitations and how to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] with a SQL Server Compact database.</span></span>  
   
- [Provider di terze parti per Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699)  
- Elenco dei provider di dati di terze parti attualmente disponibili per Entity Framework.  
+ [<span data-ttu-id="9aca7-114">Provider di terze parti per Entity Framework</span><span class="sxs-lookup"><span data-stu-id="9aca7-114">Third-Party Providers for the Entity Framework</span></span>](http://go.microsoft.com/fwlink/?LinkId=143699)  
+ <span data-ttu-id="9aca7-115">Elenco dei provider di dati di terze parti attualmente disponibili per Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="9aca7-115">List of the third-party data providers currently available for the Entity Framework.</span></span>  
   
-## Vedere anche  
- [Utilizzo di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+## <a name="see-also"></a><span data-ttu-id="9aca7-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9aca7-116">See Also</span></span>  
+ [<span data-ttu-id="9aca7-117">Utilizzo di provider di dati</span><span class="sxs-lookup"><span data-stu-id="9aca7-117">Working with Data Providers</span></span>](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

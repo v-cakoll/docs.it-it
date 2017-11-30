@@ -1,76 +1,75 @@
 ---
-title: "Procedura: impostare la maschera di input | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.MaskPropertyEditor"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MaskedTextBox (controllo) [Windows Form]"
+title: 'Procedura: impostare la maschera di input'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: net.ComponentModel.MaskPropertyEditor
+helpviewer_keywords: MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c136bd5bdacec04a011f728694550fb66ae6d897
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: impostare la maschera di input
-Il controllo casella di testo mascherata è un controllo casella di testo avanzato che supporta una sintassi dichiarativa per l'accettazione o il rifiuto dell'input dell'utente.  Impostando la proprietà Mask, è possibile specificare l'input dell'utente consentito senza che sia necessario scrivere nell'applicazione una logica di convalida personalizzata.  Per ulteriori informazioni, vedere la sezione relativa alle osservazioni della classe <xref:System.Windows.Forms.MaskedTextBox>.  
+# <a name="how-to-set-the-input-mask"></a><span data-ttu-id="18e6c-102">Procedura: impostare la maschera di input</span><span class="sxs-lookup"><span data-stu-id="18e6c-102">How to: Set the Input Mask</span></span>
+<span data-ttu-id="18e6c-103">Il controllo casella di testo mascherata è un controllo casella di testo avanzato che supporta una sintassi dichiarativa per accettare o rifiutare l'input dell'utente.</span><span class="sxs-lookup"><span data-stu-id="18e6c-103">The masked text box control is an enhanced text box control that supports a declarative syntax for accepting or rejecting user input.</span></span> <span data-ttu-id="18e6c-104">Impostando la proprietà maschera, è possibile specificare l'input dell'utente consentito senza scrivere una logica di convalida personalizzato nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="18e6c-104">By setting the Mask property, you can specify the allowable user input without writing any custom validation logic in your application.</span></span> <span data-ttu-id="18e6c-105">Per ulteriori informazioni, vedere la sezione Note della <xref:System.Windows.Forms.MaskedTextBox> classe.</span><span class="sxs-lookup"><span data-stu-id="18e6c-105">For more information, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox> class.</span></span>  
   
-## Impostazione manuale della proprietà Mask  
- Se si ha dimestichezza con i caratteri supportati dalla proprietà Mask, è possibile immetterla manualmente.  Per un riepilogo dei caratteri supportati dalla proprietà Mask, vedere la sezione relativa alle osservazioni della proprietà <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>.  
+## <a name="setting-the-mask-property-manually"></a><span data-ttu-id="18e6c-106">Impostare la proprietà maschera manualmente</span><span class="sxs-lookup"><span data-stu-id="18e6c-106">Setting the Mask Property Manually</span></span>  
+ <span data-ttu-id="18e6c-107">Se si ha familiarità con i caratteri che supporta la proprietà maschera, è possibile immettere manualmente.</span><span class="sxs-lookup"><span data-stu-id="18e6c-107">If you are familiar with the characters that the Mask property supports, you can enter it manually.</span></span> <span data-ttu-id="18e6c-108">Per un riepilogo dei caratteri che supporta la proprietà maschera, vedere la sezione Note della <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="18e6c-108">For a summary of the characters that the Mask property supports, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-#### Per impostare manualmente la proprietà Mask  
+#### <a name="to-set-the-mask-property-manually"></a><span data-ttu-id="18e6c-109">Impostare la proprietà maschera manualmente</span><span class="sxs-lookup"><span data-stu-id="18e6c-109">To set the Mask property manually</span></span>  
   
-1.  Nella visualizzazione **Progettazione** selezionare un oggetto <xref:System.Windows.Forms.MaskedTextBox>.  
+1.  <span data-ttu-id="18e6c-110">In **progettazione** visualizzazione, selezionare un <xref:System.Windows.Forms.MaskedTextBox>.</span><span class="sxs-lookup"><span data-stu-id="18e6c-110">In **Design** view, select a <xref:System.Windows.Forms.MaskedTextBox>.</span></span>  
   
-2.  Nella finestra **Proprietà** individuare la proprietà <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>.  
+2.  <span data-ttu-id="18e6c-111">Nel **proprietà** finestra, individuare il <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="18e6c-111">In the **Properties** window, locate the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-3.  Digitare la maschera desiderata.  Ad esempio, digitare `###`.  
+3.  <span data-ttu-id="18e6c-112">Digitare la maschera che si desidera.</span><span class="sxs-lookup"><span data-stu-id="18e6c-112">Type the mask that you want.</span></span> <span data-ttu-id="18e6c-113">Ad esempio, digitare `###`.</span><span class="sxs-lookup"><span data-stu-id="18e6c-113">For example, type `###`.</span></span>  
   
-## Utilizzo della finestra di dialogo Maschera di input  
- La finestra di dialogo Maschera di input fornisce alcune maschere di input predefinite.  È inoltre possibile modificare le maschere predefinite o immettere manualmente una maschera personalizzata.  
+## <a name="using-the-input-mask-dialog-box"></a><span data-ttu-id="18e6c-114">Nella finestra di dialogo maschera di Input</span><span class="sxs-lookup"><span data-stu-id="18e6c-114">Using the Input Mask Dialog Box</span></span>  
+ <span data-ttu-id="18e6c-115">La finestra di dialogo maschera di Input fornisce alcune maschere di input predefinite.</span><span class="sxs-lookup"><span data-stu-id="18e6c-115">The Input Mask dialog box provides some predefined input masks.</span></span> <span data-ttu-id="18e6c-116">È inoltre possibile modificare le maschere predefinite o immettere manualmente la propria mask.</span><span class="sxs-lookup"><span data-stu-id="18e6c-116">You can also change the predefined masks or enter your own mask manually.</span></span>  
   
-#### Per aprire la finestra di dialogo Maschera di input  
+#### <a name="to-open-the-input-mask-dialog-box"></a><span data-ttu-id="18e6c-117">Per aprire la finestra di dialogo maschera di Input</span><span class="sxs-lookup"><span data-stu-id="18e6c-117">To open the Input Mask dialog box</span></span>  
   
-1.  Nella visualizzazione **Progettazione** selezionare un oggetto <xref:System.Windows.Forms.MaskedTextBox>.  
+1.  <span data-ttu-id="18e6c-118">In **progettazione** visualizzazione, selezionare un <xref:System.Windows.Forms.MaskedTextBox>.</span><span class="sxs-lookup"><span data-stu-id="18e6c-118">In **Design** view, select a <xref:System.Windows.Forms.MaskedTextBox>.</span></span>  
   
-    1.  Fare clic sullo smart tag per aprire il riquadro **Attività MaskedTextBox**.  
+    1.  <span data-ttu-id="18e6c-119">Fare clic sullo smart tag per aprire la **attività MaskedTextBox** pannello.</span><span class="sxs-lookup"><span data-stu-id="18e6c-119">Click the smart tag to open the **MaskedTextBox Tasks** panel.</span></span>  
   
-    2.  Fare clic su **Imposta maschera**.  
+    2.  <span data-ttu-id="18e6c-120">Fare clic su **Imposta maschera**.</span><span class="sxs-lookup"><span data-stu-id="18e6c-120">Click **Set Mask**.</span></span>  
   
-     \- oppure \-  
+     <span data-ttu-id="18e6c-121">\- oppure -</span><span class="sxs-lookup"><span data-stu-id="18e6c-121">\- or -</span></span>  
   
-    1.  Nella finestra **Proprietà** selezionare la proprietà <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>.  
+    1.  <span data-ttu-id="18e6c-122">Nel **proprietà** finestra, seleziona il <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="18e6c-122">In the **Properties** window, select the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-    2.  Fare clic sul pulsante con i puntini di sospensione nella colonna relativa al valore della proprietà.  
+    2.  <span data-ttu-id="18e6c-123">Fare clic sul pulsante con puntini di sospensione nella colonna valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="18e6c-123">Click the ellipsis button in the property value column.</span></span>  
   
-     Verrà visualizzata la finestra di dialogo **Maschera di input**.  
+     <span data-ttu-id="18e6c-124">Il **maschera di Input** viene visualizzata la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="18e6c-124">The **Input Mask** dialog box appears.</span></span>  
   
-#### Per utilizzare la finestra di dialogo Maschera di input  
+#### <a name="to-use-the-input-mask-dialog-box"></a><span data-ttu-id="18e6c-125">Utilizzare la finestra di dialogo maschera di Input</span><span class="sxs-lookup"><span data-stu-id="18e6c-125">To use the Input Mask dialog box</span></span>  
   
-1.  \(Facoltativo\) Fare clic su una delle maschere predefinite nell'elenco.  
+1.  <span data-ttu-id="18e6c-126">(Facoltativo) Fare clic su una delle maschere predefinite nell'elenco.</span><span class="sxs-lookup"><span data-stu-id="18e6c-126">(Optional) Click one of the predefined masks in the list.</span></span>  
   
-2.  \(Facoltativo\) Modificare la maschera predefinita nella casella **Maschera**.  
+2.  <span data-ttu-id="18e6c-127">(Facoltativo) Modificare la maschera predefinita nel **Mask** casella.</span><span class="sxs-lookup"><span data-stu-id="18e6c-127">(Optional) Edit the predefined mask in the **Mask** box.</span></span>  
   
-3.  \(Facoltativo\) Digitare una nuova maschera nella casella **Maschera**.  In altri termini, non è necessario utilizzare una delle maschere predefinite.  
+3.  <span data-ttu-id="18e6c-128">(Facoltativo) Digitare una nuova maschera nel **Mask** casella.</span><span class="sxs-lookup"><span data-stu-id="18e6c-128">(Optional) Type a new mask in the **Mask** box.</span></span> <span data-ttu-id="18e6c-129">Vale a dire, non è necessario utilizzare una delle maschere predefinite.</span><span class="sxs-lookup"><span data-stu-id="18e6c-129">That is, you do not have to use one of the predefined masks.</span></span>  
   
     > [!NOTE]
-    >  Nella casella Anteprima vengono visualizzati i caratteri visibili all'utente nel controllo <xref:System.Windows.Forms.MaskedTextBox>.  Questi caratteri consentono all'utente di immettere i dati correttamente.  
+    >  <span data-ttu-id="18e6c-130">Finestra di anteprima vengono visualizzati i caratteri che l'utente visualizza nel <xref:System.Windows.Forms.MaskedTextBox>.</span><span class="sxs-lookup"><span data-stu-id="18e6c-130">The Preview box displays the characters that the user sees in the <xref:System.Windows.Forms.MaskedTextBox>.</span></span> <span data-ttu-id="18e6c-131">Questi caratteri sono una Guida per consentire all'utente di immettere correttamente i dati.</span><span class="sxs-lookup"><span data-stu-id="18e6c-131">These characters are a guide to help the user enter the data correctly.</span></span>  
   
-4.  Selezionare o deselezionare la casella di controllo **Utilizza ValidatingType**.  La casella di controllo **Utilizza ValidatingType** specifica se un tipo di dati viene utilizzato per verificare l'immissione dei dati da parte dell'utente.   Per ulteriori informazioni, vedere la proprietà <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>.  
+4.  <span data-ttu-id="18e6c-132">Selezionare o deselezionare il **utilizza ValidatingType** casella di controllo.</span><span class="sxs-lookup"><span data-stu-id="18e6c-132">Select or clear the **Use ValidatingType** check box.</span></span> <span data-ttu-id="18e6c-133">Il **utilizza ValidatingType** casella di controllo specifica se un tipo di dati viene utilizzato per verificare l'input di dati dall'utente.</span><span class="sxs-lookup"><span data-stu-id="18e6c-133">The **Use ValidatingType** check box specifies whether a data type is used to verify the data input by the user.</span></span> <span data-ttu-id="18e6c-134">Per altre informazioni, vedere la proprietà <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>.</span><span class="sxs-lookup"><span data-stu-id="18e6c-134">For more information, see the <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property.</span></span>  
   
-5.  Scegliere **OK**.  
+5.  <span data-ttu-id="18e6c-135">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="18e6c-135">Click **OK**.</span></span>  
   
-     La maschera viene immessa nella proprietà **Mask** della finestra **Proprietà**.  
+     <span data-ttu-id="18e6c-136">La maschera viene immessa nel **Mask** proprietà il **proprietà** finestra.</span><span class="sxs-lookup"><span data-stu-id="18e6c-136">The mask is entered in the **Mask** property in the **Properties** window.</span></span>  
   
-## Vedere anche  
- [Procedura dettagliata: utilizzo del controllo MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a><span data-ttu-id="18e6c-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="18e6c-137">See Also</span></span>  
+ [<span data-ttu-id="18e6c-138">Procedura dettagliata: Utilizzo del controllo MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="18e6c-138">Walkthrough: Working with the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

@@ -8,33 +8,30 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 4cda35e71de77c63b2b4f414446c3af06fb407b1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b28d80951cb2d71f8f8fb532710f738fecdf8508
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-deserialize-an-object"></a>Procedura: deserializzare un oggetto
-Quando si deserializza un oggetto, il formato di trasporto determina se verrà creato un flusso o un oggetto file. Una volta determinato il formato di trasporto, è possibile chiamare i metodi <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>, in base alle necessità.  
+# <a name="how-to-deserialize-an-object"></a><span data-ttu-id="80ea1-102">Procedura: deserializzare un oggetto</span><span class="sxs-lookup"><span data-stu-id="80ea1-102">How to: Deserialize an Object</span></span>
+<span data-ttu-id="80ea1-103">Quando si deserializza un oggetto, il formato di trasporto determina se verrà creato un flusso o un oggetto file.</span><span class="sxs-lookup"><span data-stu-id="80ea1-103">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="80ea1-104">Una volta determinato il formato di trasporto, è possibile chiamare i metodi <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>, in base alle necessità.</span><span class="sxs-lookup"><span data-stu-id="80ea1-104">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>  
   
-### <a name="to-deserialize-an-object"></a>Per deserializzare un oggetto  
+### <a name="to-deserialize-an-object"></a><span data-ttu-id="80ea1-105">Per deserializzare un oggetto</span><span class="sxs-lookup"><span data-stu-id="80ea1-105">To deserialize an object</span></span>  
   
-1.  Construire un <xref:System.Xml.Serialization.XmlSerializer> che utilizza il tipo dell'oggetto da deserializzare.  
+1.  <span data-ttu-id="80ea1-106">Construire un <xref:System.Xml.Serialization.XmlSerializer> che utilizza il tipo dell'oggetto da deserializzare.</span><span class="sxs-lookup"><span data-stu-id="80ea1-106">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>  
   
-2.  Chiamare il metodo <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> per produrre una replica dell'oggetto. Durante la deserializzazione, è necessario eseguire il cast dell'oggetto restituito al tipo dell'originale, come illustrato nell'esempio riportato di seguito, in cui viene deserializzato l'oggetto in un file (sebbene possa anche essere deserializzato in un flusso).  
+2.  <span data-ttu-id="80ea1-107">Chiamare il metodo <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> per produrre una replica dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="80ea1-107">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="80ea1-108">Durante la deserializzazione, è necessario eseguire il cast dell'oggetto restituito al tipo dell'originale, come illustrato nell'esempio riportato di seguito, in cui viene deserializzato l'oggetto in un file (sebbene possa anche essere deserializzato in un flusso).</span><span class="sxs-lookup"><span data-stu-id="80ea1-108">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object into a file (although it could also be deserialized into a stream).</span></span>  
   
     ```vb  
     Dim myObject As MySerializableClass  
@@ -63,7 +60,6 @@ Quando si deserializza un oggetto, il formato di trasporto determina se verrà c
     mySerializer.Deserialize(myFileStream)  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-
+## <a name="see-also"></a><span data-ttu-id="80ea1-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="80ea1-109">See Also</span></span>  
+ [<span data-ttu-id="80ea1-110">Introduzione alla serializzazione XML</span><span class="sxs-lookup"><span data-stu-id="80ea1-110">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [<span data-ttu-id="80ea1-111">Procedura: Serializzare un oggetto</span><span class="sxs-lookup"><span data-stu-id="80ea1-111">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)

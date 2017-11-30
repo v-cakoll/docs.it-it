@@ -1,19 +1,13 @@
 ---
-title: reentrancy MDA
+title: rientranza (MDA)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged code, debugging
 - transitioning threads unmanaged to managed code
@@ -26,42 +20,41 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: beefdb130c953c30d50d948ef9add7ad9d867e45
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a54a985abbc59aea0eeb46cc74560485e86b897d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="reentrancy-mda"></a>reentrancy MDA
-L'assistente al debug gestito `reentrancy` viene attivato quando viene effettuato un tentativo di transizione da codice nativo a codice gestito nei casi in cui un precedente passaggio da codice gestito a nativo non è stato eseguito mediante una transizione ordinata.  
+# <a name="reentrancy-mda"></a><span data-ttu-id="0b8c9-102">rientranza (MDA)</span><span class="sxs-lookup"><span data-stu-id="0b8c9-102">reentrancy MDA</span></span>
+<span data-ttu-id="0b8c9-103">L'assistente al debug gestito `reentrancy` viene attivato quando viene effettuato un tentativo di transizione da codice nativo a codice gestito nei casi in cui un precedente passaggio da codice gestito a nativo non è stato eseguito mediante una transizione ordinata.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-103">The `reentrancy` managed debugging assistant (MDA) is activated when an attempt is made to transition from native to managed code in cases where a prior switch from managed to native code was not performed through an orderly transition.</span></span>  
   
-## <a name="symptoms"></a>Sintomi  
- L'heap di oggetti è danneggiato o si stanno verificando altri errori gravi durante la transizione da codice nativo a codice gestito.  
+## <a name="symptoms"></a><span data-ttu-id="0b8c9-104">Sintomi</span><span class="sxs-lookup"><span data-stu-id="0b8c9-104">Symptoms</span></span>  
+ <span data-ttu-id="0b8c9-105">L'heap di oggetti è danneggiato o si stanno verificando altri errori gravi durante la transizione da codice nativo a codice gestito.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-105">The object heap is corrupted or other serious errors are occurring when transitioning from native to managed code.</span></span>  
   
- I thread che passano da codice nativo a codice gestito e viceversa devono eseguire una transizione ordinata. Alcuni punti di estendibilità di basso livello nel sistema operativo, ad esempio il gestore di eccezioni con vettori, consentono tuttavia il passaggio da codice gestito a codice nativo senza eseguire una transizione ordinata.  Questi passaggi avvengono sotto il controllo del sistema operativo, invece che di Common Language Runtime (CLR).  Il codice nativo eseguito in questi punti di estendibilità deve evitare il callback nel codice gestito.  
+ <span data-ttu-id="0b8c9-106">I thread che passano da codice nativo a codice gestito e viceversa devono eseguire una transizione ordinata.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-106">Threads that switch between native and managed code in either direction must perform an orderly transition.</span></span> <span data-ttu-id="0b8c9-107">Alcuni punti di estendibilità di basso livello nel sistema operativo, ad esempio il gestore di eccezioni con vettori, consentono tuttavia il passaggio da codice gestito a codice nativo senza eseguire una transizione ordinata.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-107">However, certain low-level extensibility points in the operating system, such as the vectored exception handler, allow switches from managed to native code without performing an orderly transition.</span></span>  <span data-ttu-id="0b8c9-108">Questi passaggi avvengono sotto il controllo del sistema operativo, invece che di Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="0b8c9-108">These switches are under operating system control, rather than under common language runtime (CLR) control.</span></span>  <span data-ttu-id="0b8c9-109">Il codice nativo eseguito in questi punti di estendibilità deve evitare il callback nel codice gestito.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-109">Any native code that executes inside these extensibility points must avoid calling back into managed code.</span></span>  
   
-## <a name="cause"></a>Causa  
- Un punto di estendibilità di basso livello del sistema operativo, ad esempio il gestore di eccezioni con vettori, è stato attivato durante l'esecuzione di codice gestito.  Il codice dell'applicazione che viene richiamato tramite tale punto di estendibilità sta cercando di eseguire il callback nel codice gestito.  
+## <a name="cause"></a><span data-ttu-id="0b8c9-110">Causa</span><span class="sxs-lookup"><span data-stu-id="0b8c9-110">Cause</span></span>  
+ <span data-ttu-id="0b8c9-111">Un punto di estendibilità di basso livello del sistema operativo, ad esempio il gestore di eccezioni con vettori, è stato attivato durante l'esecuzione di codice gestito.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-111">A low-level operating system extensibility point, such as the vectored exception handler, has activated while executing managed code.</span></span>  <span data-ttu-id="0b8c9-112">Il codice dell'applicazione che viene richiamato tramite tale punto di estendibilità sta cercando di eseguire il callback nel codice gestito.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-112">The application code that is invoked through that extensibility point is attempting to call back into managed code.</span></span>  
   
- Questo problema è sempre causato dal codice dell'applicazione.  
+ <span data-ttu-id="0b8c9-113">Questo problema è sempre causato dal codice dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-113">This problem is always caused by application code.</span></span>  
   
-## <a name="resolution"></a>Risoluzione  
- Esaminare l'analisi dello stack per il thread che ha attivato questo assistente al debug gestito.  Il thread sta cercando di eseguire una chiamata non valida nel codice gestito.  L'analisi dello stack indica il codice dell'applicazione che usa il punto di estendibilità, il codice del sistema operativo che fornisce il punto di estendibilità e il codice gestito interrotto dal punto di estendibilità.  
+## <a name="resolution"></a><span data-ttu-id="0b8c9-114">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="0b8c9-114">Resolution</span></span>  
+ <span data-ttu-id="0b8c9-115">Esaminare l'analisi dello stack per il thread che ha attivato questo assistente al debug gestito.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-115">Examine the stack trace for the thread that has activated this MDA.</span></span>  <span data-ttu-id="0b8c9-116">Il thread sta cercando di eseguire una chiamata non valida nel codice gestito.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-116">The thread is attempting to illegally call into managed code.</span></span>  <span data-ttu-id="0b8c9-117">L'analisi dello stack indica il codice dell'applicazione che usa il punto di estendibilità, il codice del sistema operativo che fornisce il punto di estendibilità e il codice gestito interrotto dal punto di estendibilità.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-117">The stack trace should reveal the application code using this extensibility point, the operating system code that provides this extensibility point, and the managed code that was interrupted by the extensibility point.</span></span>  
   
- Si noterà, ad esempio, che l'assistente al debug gestito viene attivato in un tentativo di chiamare il codice gestito da un gestore di eccezioni con vettori.  Nello stack sarà possibile vedere il codice di gestione delle eccezioni del sistema operativo e il codice gestito che genera un'eccezione come <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.  
+ <span data-ttu-id="0b8c9-118">Si noterà, ad esempio, che l'assistente al debug gestito viene attivato in un tentativo di chiamare il codice gestito da un gestore di eccezioni con vettori.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-118">For example, you will see the MDA activated in an attempt to call managed code from inside a vectored exception handler.</span></span>  <span data-ttu-id="0b8c9-119">Nello stack sarà possibile vedere il codice di gestione delle eccezioni del sistema operativo e il codice gestito che genera un'eccezione come <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-119">On the stack you will see the operating system exception handling code and some managed code triggering an exception such as a <xref:System.DivideByZeroException> or an <xref:System.AccessViolationException>.</span></span>  
   
- In questo esempio la risoluzione corretta consiste nell'implementare il gestore di eccezioni con vettori completamente nel codice non gestito.  
+ <span data-ttu-id="0b8c9-120">In questo esempio la risoluzione corretta consiste nell'implementare il gestore di eccezioni con vettori completamente nel codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-120">In this example, the correct resolution is to implement the vectored exception handler completely in unmanaged code.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
- L'assistente al debug gestito non ha alcun effetto su CLR.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="0b8c9-121">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="0b8c9-121">Effect on the Runtime</span></span>  
+ <span data-ttu-id="0b8c9-122">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-122">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a>Output  
- L'assistente al debug gestito indica il tentativo di reentrancy non valida.  Esaminare lo stack del thread per determinare il motivo per cui ciò si verifica e come risolvere il problema. Di seguito è riportato l'output di esempio.  
+## <a name="output"></a><span data-ttu-id="0b8c9-123">Output</span><span class="sxs-lookup"><span data-stu-id="0b8c9-123">Output</span></span>  
+ <span data-ttu-id="0b8c9-124">L'assistente al debug gestito indica il tentativo di reentrancy non valida.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-124">The MDA reports that illegal reentrancy is being attempted.</span></span>  <span data-ttu-id="0b8c9-125">Esaminare lo stack del thread per determinare il motivo per cui ciò si verifica e come risolvere il problema.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-125">Examine the thread's stack to determine why this is happening and how to correct the problem.</span></span> <span data-ttu-id="0b8c9-126">Di seguito è riportato l'output di esempio.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-126">The following is sample output.</span></span>  
   
 ```  
 Additional Information: Attempting to call into managed code without   
@@ -71,7 +64,7 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## <a name="configuration"></a>Configurazione  
+## <a name="configuration"></a><span data-ttu-id="0b8c9-127">Configurazione</span><span class="sxs-lookup"><span data-stu-id="0b8c9-127">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -81,8 +74,8 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 </mdaConfig>  
 ```  
   
-## <a name="example"></a>Esempio  
- Il codice seguente causa la generazione di un'eccezione <xref:System.AccessViolationException>.  Nelle versioni di Windows che supportano la gestione delle eccezioni con vettori, ciò causa la chiamata del gestore di eccezioni con vettori gestito.  Se l'assistente al debug gestito `reentrancy` è abilitato, verrà attivato durante il tentativo di chiamata a `MyHandler` dal codice di supporto di gestione delle eccezioni con vettori del sistema operativo.  
+## <a name="example"></a><span data-ttu-id="0b8c9-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="0b8c9-128">Example</span></span>  
+ <span data-ttu-id="0b8c9-129">Il codice seguente causa la generazione di un'eccezione <xref:System.AccessViolationException>.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-129">The following code example causes an <xref:System.AccessViolationException> to be thrown.</span></span>  <span data-ttu-id="0b8c9-130">Nelle versioni di Windows che supportano la gestione delle eccezioni con vettori, ciò causa la chiamata del gestore di eccezioni con vettori gestito.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-130">On versions of Windows that support vectored exception handling, this will cause the managed vectored exception handler to be called.</span></span>  <span data-ttu-id="0b8c9-131">Se l'assistente al debug gestito `reentrancy` è abilitato, verrà attivato durante il tentativo di chiamata a `MyHandler` dal codice di supporto di gestione delle eccezioni con vettori del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="0b8c9-131">If the `reentrancy` MDA is enabled, the MDA will activate during the attempted call to `MyHandler` from the operating system's vectored exception handling support code.</span></span>  
   
 ```  
 using System;  
@@ -119,6 +112,5 @@ public class Reenter
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="0b8c9-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0b8c9-132">See Also</span></span>  
+ [<span data-ttu-id="0b8c9-133">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="0b8c9-133">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

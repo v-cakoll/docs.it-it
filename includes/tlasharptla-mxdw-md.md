@@ -1,1 +1,1 @@
-Microsoft XPS Document Writer
+<span data-ttu-id="b6231-101">Microsoft XPS Document Writer</span><span class="sxs-lookup"><span data-stu-id="b6231-101">Microsoft XPS Document Writer</span></span>

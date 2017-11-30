@@ -1,1 +1,1 @@
-Servizio trasferimento intelligente in background (BITS) Microsoft
+<span data-ttu-id="390b0-101">Servizio trasferimento intelligente in background (BITS) Microsoft</span><span class="sxs-lookup"><span data-stu-id="390b0-101">Microsoft Background Intelligent Transfer Service (BITS)</span></span>

@@ -1,73 +1,75 @@
 ---
-title: "Procedura: configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "regolazione dell'impostazione di scadenza del contenuto"
-  - "applicazioni, distribuzione"
-  - "configurazione di server Web per la distribuzione di applicazioni WPF"
-  - "impostazione di scadenza del contenuto, regolazione"
-  - "distribuzione di applicazioni"
-  - "estensioni file, registrazione"
-  - "MIME (tipi), registrazione"
-  - "registrazione di estensioni di file"
-  - "registrazione di tipi MIME"
-  - "server Web, configurazione per la distribuzione di applicazioni WPF"
+title: 'Procedura: configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MIME types [WPF], registering
+- adjusting content expiration setting [WPF]
+- registering file extensions [WPF]
+- deploying applications [WPF]
+- applications [WPF], deploying
+- Web servers [WPF], configuring to deploy WPF applications
+- configuring Web servers to deploy WPF applications [WPF]
+- content expiration setting [WPF], adjusting
+- file extensions [WPF], registering
+- registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: faff58f146aed7b309674157a5990cbce43dfb1f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF
-È possibile distribuire un'applicazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dalla maggior parte dei server Web, purché siano configurati con i tipi [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] appropriati.  Per impostazione predefinita, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] è configurato con questi tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], tuttavia [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] e [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] non lo sono.  
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a><span data-ttu-id="4a800-102">Procedura: configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF</span><span class="sxs-lookup"><span data-stu-id="4a800-102">How to: Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>
+<span data-ttu-id="4a800-103">È possibile distribuire un'applicazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dalla maggior parte dei server Web, purché siano configurati con i tipi [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] appropriati.</span><span class="sxs-lookup"><span data-stu-id="4a800-103">You can deploy a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application from most Web servers, as long as they are configured with the appropriate [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] types.</span></span> <span data-ttu-id="4a800-104">Per impostazione predefinita, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] è configurato con questi tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], tuttavia [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] e [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] non lo sono.</span><span class="sxs-lookup"><span data-stu-id="4a800-104">By default, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] is configured with these [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types, but [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] and [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] are not.</span></span>  
   
- In questo argomento viene illustrato come configurare [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] e [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] per distribuire le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <span data-ttu-id="4a800-105">Questo argomento descrive come configurare [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] e [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] per distribuire le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-105">This topic describes how to configure [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] and [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] to deploy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  
   
-   
   
 > [!NOTE]
->  È possibile controllare la stringa *UserAgent* nel Registro di sistema per determinare se in un sistema è installato [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].  Per informazioni dettagliate e uno script che esamina la stringa *UserAgent* da determinare se [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] è installato in un sistema, vedere [Verificare se .NET Framework 3.0 è installato](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
+>  <span data-ttu-id="4a800-106">È possibile controllare la stringa *UserAgent* nel Registro di sistema per determinare se in un sistema è installato [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-106">You can check the *UserAgent* string in the registry to determine whether a system has [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installed.</span></span> <span data-ttu-id="4a800-107">Per informazioni dettagliate e uno script che esamina la stringa *UserAgent* per determinare se [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] è installato in un sistema, vedere [Procedura: verificare se .NET Framework 3.0 è installato](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).</span><span class="sxs-lookup"><span data-stu-id="4a800-107">For details and a script that examines the *UserAgent* string to determine whether [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] is installed on a system, see [Detect Whether the .NET Framework 3.0 Is Installed](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).</span></span>  
   
 <a name="content_expiration"></a>   
-## Regolare l'impostazione di scadenza del contenuto  
- È necessario regolare l'impostazione della scadenza del contenuto su 1 minuto.  Di seguito viene illustrato come eseguire questa operazione con [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].  
+## <a name="adjust-the-content-expiration-setting"></a><span data-ttu-id="4a800-108">Regolare l'impostazione di scadenza del contenuto</span><span class="sxs-lookup"><span data-stu-id="4a800-108">Adjust the Content Expiration Setting</span></span>  
+ <span data-ttu-id="4a800-109">È necessario regolare l'impostazione della scadenza del contenuto su 1 minuto.</span><span class="sxs-lookup"><span data-stu-id="4a800-109">You should adjust the content expiration setting to 1 minute.</span></span> <span data-ttu-id="4a800-110">Di seguito viene illustrato come eseguire questa operazione con [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-110">The following procedure outlines how to do this with [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].</span></span>  
   
-1.  Fare clic sul menu **Start**, scegliere **Strumenti di amministrazione**, quindi fare clic su **Gestione Internet Information Services \(IIS\)**.  È anche possibile avviare questa applicazione dalla riga di comando con "%SystemRoot%\\system32\\inetsrv\\iis.msc".  
+1.  <span data-ttu-id="4a800-111">Fare clic sul menu **Start**, scegliere **Strumenti di amministrazione**, quindi fare clic su **Gestione Internet Information Services (IIS)**.</span><span class="sxs-lookup"><span data-stu-id="4a800-111">Click the **Start** menu, point to **Administrative Tools**, and click **Internet Information Services (IIS) Manager**.</span></span> <span data-ttu-id="4a800-112">È anche possibile avviare questa applicazione dalla riga di comando con "%SystemRoot%\system32\inetsrv\iis.msc".</span><span class="sxs-lookup"><span data-stu-id="4a800-112">You can also launch this application from the command line with "%SystemRoot%\system32\inetsrv\iis.msc".</span></span>  
   
-2.  Espandere la struttura ad albero di [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] fino a trovare il nodo **Sito Web predefinito**.  
+2.  <span data-ttu-id="4a800-113">Espandere la struttura ad albero di [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] fino a trovare il nodo **Sito Web predefinito**.</span><span class="sxs-lookup"><span data-stu-id="4a800-113">Expand the [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] tree until you find the **Default Web site** node.</span></span>  
   
-3.  Fare clic con il pulsante destro del mouse su **Sito Web predefinito** e scegliere **Proprietà** dal menu di scelta rapida.  
+3.  <span data-ttu-id="4a800-114">Fare clic con il pulsante destro del mouse su **Sito Web predefinito** e scegliere **Proprietà** dal menu contestuale.</span><span class="sxs-lookup"><span data-stu-id="4a800-114">Right-click **Default Web site** and select **Properties** from the context menu.</span></span>  
   
-4.  Selezionare la scheda **Intestazioni HTTP** e fare clic su "Abilita scadenza contenuto"  
+4.  <span data-ttu-id="4a800-115">Selezionare la scheda **Intestazioni HTTP** e fare clic su "Abilita scadenza contenuto".</span><span class="sxs-lookup"><span data-stu-id="4a800-115">Select the **HTTP Headers** tab and click "Enable Content Expiration".</span></span>  
   
-5.  Impostare il contenuto in modo che scada dopo 1 minuto.  
+5.  <span data-ttu-id="4a800-116">Impostare il contenuto in modo che scada dopo 1 minuto.</span><span class="sxs-lookup"><span data-stu-id="4a800-116">Set the content to expire after 1 minute.</span></span>  
   
 <a name="register_mime_types"></a>   
-## Registrare tipi MIME ed estensioni file  
- Per consentire al browser del sistema del client di caricare il gestore corretto, è necessario registrare diversi tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] ed estensioni file.  È necessario aggiungere i seguenti tipi:  
+## <a name="register-mime-types-and-file-extensions"></a><span data-ttu-id="4a800-117">Registrare tipi MIME ed estensioni file</span><span class="sxs-lookup"><span data-stu-id="4a800-117">Register MIME Types and File Extensions</span></span>  
+ <span data-ttu-id="4a800-118">Per consentire al browser sul sistema del client di caricare il gestore corretto, occorre registrare diversi tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] ed estensioni file.</span><span class="sxs-lookup"><span data-stu-id="4a800-118">You must register several [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types and file extensions so that the browser on the client's system can load the correct handler.</span></span> <span data-ttu-id="4a800-119">È necessario aggiungere i seguenti tipi:</span><span class="sxs-lookup"><span data-stu-id="4a800-119">You need to add the following types:</span></span>  
   
-|Estensione|Tipo MIME|  
-|----------------|---------------|  
-|.manifest|application\/manifest|  
-|.xaml|application\/xaml\+xml|  
-|.application|application\/x\-ms\-application|  
-|.xbap|application\/x\-ms\-xbap|  
-|deploy|application\/octet\-stream|  
-|.xps|application\/vnd.ms\-xpsdocument|  
+|<span data-ttu-id="4a800-120">Estensione</span><span class="sxs-lookup"><span data-stu-id="4a800-120">Extension</span></span>|<span data-ttu-id="4a800-121">Tipo MIME</span><span class="sxs-lookup"><span data-stu-id="4a800-121">MIME Type</span></span>|  
+|---------------|---------------|  
+|<span data-ttu-id="4a800-122">.manifest</span><span class="sxs-lookup"><span data-stu-id="4a800-122">.manifest</span></span>|<span data-ttu-id="4a800-123">application/manifest</span><span class="sxs-lookup"><span data-stu-id="4a800-123">application/manifest</span></span>|  
+|<span data-ttu-id="4a800-124">.xaml</span><span class="sxs-lookup"><span data-stu-id="4a800-124">.xaml</span></span>|<span data-ttu-id="4a800-125">application/xaml+xml</span><span class="sxs-lookup"><span data-stu-id="4a800-125">application/xaml+xml</span></span>|  
+|<span data-ttu-id="4a800-126">.application</span><span class="sxs-lookup"><span data-stu-id="4a800-126">.application</span></span>|<span data-ttu-id="4a800-127">application/x-ms-application</span><span class="sxs-lookup"><span data-stu-id="4a800-127">application/x-ms-application</span></span>|  
+|<span data-ttu-id="4a800-128">.xbap</span><span class="sxs-lookup"><span data-stu-id="4a800-128">.xbap</span></span>|<span data-ttu-id="4a800-129">application/x-ms-xbap</span><span class="sxs-lookup"><span data-stu-id="4a800-129">application/x-ms-xbap</span></span>|  
+|<span data-ttu-id="4a800-130">.deploy</span><span class="sxs-lookup"><span data-stu-id="4a800-130">.deploy</span></span>|<span data-ttu-id="4a800-131">application/octet-stream</span><span class="sxs-lookup"><span data-stu-id="4a800-131">application/octet-stream</span></span>|  
+|<span data-ttu-id="4a800-132">.xps</span><span class="sxs-lookup"><span data-stu-id="4a800-132">.xps</span></span>|<span data-ttu-id="4a800-133">application/vnd.ms-xpsdocument</span><span class="sxs-lookup"><span data-stu-id="4a800-133">application/vnd.ms-xpsdocument</span></span>|  
   
 > [!NOTE]
->  Non è necessario registrare tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] o estensioni file nei sistemi client.  Questi vengono registrati automaticamente quando si installa [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)].  
+>  <span data-ttu-id="4a800-134">Non è necessario registrare tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] o estensioni file nei sistemi client.</span><span class="sxs-lookup"><span data-stu-id="4a800-134">You do not need to register [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types or file extensions on client systems.</span></span> <span data-ttu-id="4a800-135">Questi vengono registrati automaticamente quando si installa [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-135">They are registered automatically when you install [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)].</span></span>  
   
- Nell'esempio [!INCLUDE[TLA#tla_visualbscrpt](../../../../includes/tlasharptla-visualbscrpt-md.md)] seguente i tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] necessari vengono aggiunti automaticamente a [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].  Per utilizzare lo script, copiare il codice in un file vbs sul server.  Quindi, eseguire lo script eseguendo il file dalla riga di comando oppure facendo doppio clic sul file in [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].  
+ <span data-ttu-id="4a800-136">Nell'esempio [!INCLUDE[TLA#tla_visualbscrpt](../../../../includes/tlasharptla-visualbscrpt-md.md)] seguente i tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] necessari vengono aggiunti automaticamente a [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-136">The following [!INCLUDE[TLA#tla_visualbscrpt](../../../../includes/tlasharptla-visualbscrpt-md.md)] sample automatically adds the necessary [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types to [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].</span></span> <span data-ttu-id="4a800-137">Per utilizzare lo script, copiare il codice in un file con estensione vbs sul server.</span><span class="sxs-lookup"><span data-stu-id="4a800-137">To use the script, copy the code to a .vbs file on your server.</span></span> <span data-ttu-id="4a800-138">Quindi, eseguire lo script eseguendo il file dalla riga di comando oppure facendo doppio clic sul file in [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-138">Then, run the script by running the file from the command line or double-clicking the file in [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].</span></span>  
   
 ```  
 ' This script adds the necessary Windows Presentation Foundation MIME types   
@@ -130,9 +132,9 @@ End Sub
 ```  
   
 > [!NOTE]
->  Se lo script viene eseguito più volte, vengono create voci di mappa [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] multiple nella metabase [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].  
+>  <span data-ttu-id="4a800-139">Se lo script viene eseguito più volte, si creano voci di mapping [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] multiple nella metabase [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-139">Running this script multiple times creates multiple [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] map entries in the [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase.</span></span>  
   
- Dopo avere eseguito questo script, potrebbe non essere possibile visualizzare tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] aggiuntivi da [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)][!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)].  Tuttavia, questi tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] sono stati aggiunti alla metabase [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].  Mediante lo script seguente saranno visualizzati tutti i tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] della metabase [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].  
+ <span data-ttu-id="4a800-140">Dopo avere eseguito questo script, potrebbe non essere possibile visualizzare tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] aggiuntivi da [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)] di [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-140">After you have run this script, you may not see additional [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types from the [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)].</span></span> <span data-ttu-id="4a800-141">Tuttavia, questi tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] sono stati aggiunti alla metabase [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-141">However, these [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types have been added to the [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase.</span></span> <span data-ttu-id="4a800-142">Mediante lo script seguente saranno visualizzati tutti i tipi [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] nella metabase [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a800-142">The following script will display all the [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types in the [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase.</span></span>  
   
 ```  
 ' This script lists the MIME types for an IIS Server.  
@@ -151,6 +153,6 @@ For Each mimeMap In allMimeMaps
 Next  
 ```  
   
- Salvare lo script come file `.vbs` \(ad esempio, `DiscoverIISMimeTypes.vbs`\) ed eseguirlo dal prompt dei comandi utilizzando il comando seguente:  
+ <span data-ttu-id="4a800-143">Salvare lo script come file `.vbs` (ad esempio, `DiscoverIISMimeTypes.vbs`) ed eseguirlo dal prompt dei comandi utilizzando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="4a800-143">Save the script as a `.vbs` file (for example, `DiscoverIISMimeTypes.vbs`) and run it from the command prompt using the following command:</span></span>  
   
  `cscript DiscoverIISMimeTypes.vbs`

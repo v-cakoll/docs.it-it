@@ -1,1 +1,1 @@
-Windows XP SP2
+<span data-ttu-id="d5fe6-101">Windows XP SP2</span><span class="sxs-lookup"><span data-stu-id="d5fe6-101">Windows XP SP2</span></span>

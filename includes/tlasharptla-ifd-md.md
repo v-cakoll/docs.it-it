@@ -1,1 +1,1 @@
-Image File Directory (IFD)
+<span data-ttu-id="00078-101">Image File Directory (IFD)</span><span class="sxs-lookup"><span data-stu-id="00078-101">image file directory (IFD)</span></span>

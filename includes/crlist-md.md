@@ -1,1 +1,1 @@
-Per un elenco di
+<span data-ttu-id="04365-101">Per un elenco di</span><span class="sxs-lookup"><span data-stu-id="04365-101">For a list of</span></span>

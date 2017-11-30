@@ -1,82 +1,67 @@
 ---
-title: Digitare i caratteri (Visual Basic) | Documenti di Microsoft
+title: Caratteri tipo (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - '&H prefix for hexadecimal values'
-- hexadecimal literals
-- F literal type character
+- hexadecimal literals [Visual Basic]
+- F literal type character [Visual Basic]
 - '& identifier type character'
-- type characters
-- octal literals
-- literals, hexadecimal
+- type characters [Visual Basic]
+- octal literals [Visual Basic]
+- literals [Visual Basic], hexadecimal
 - '&O prefix for octal values'
-- literals, default types
+- literals [Visual Basic], default types
 - defaults, literal types
-- C literal type character
-- type characters, literal
+- C literal type character [Visual Basic]
+- type characters [Visual Basic], literal
 - $ identifier type character
-- L literal type character
-- UI literal type characters
-- default literal types
-- D literal type character
-- literals, octal
-- S literal type character
+- L literal type character [Visual Basic]
+- UI literal type characters [Visual Basic]
+- default literal types [Visual Basic]
+- D literal type character [Visual Basic]
+- literals [Visual Basic], octal
+- S literal type character [Visual Basic]
 - '! identifier type character'
-- US literal type characters
+- US literal type characters [Visual Basic]
 - '% identifier type character'
 - data types [Visual Basic], type characters
-- characters, identifier type
-- type characters, identifier
+- characters [Visual Basic], identifier type
+- type characters [Visual Basic], identifier
 - '# identifier type character'
-- identifier type characters
-- literal type characters
-- I literal type character
-- R literal type character
+- identifier type characters [Visual Basic]
+- literal type characters [Visual Basic]
+- I literal type character [Visual Basic]
+- R literal type character [Visual Basic]
 - '@ identifier type character'
-- UL literal type characters
-- literal types, default
+- UL literal type characters [Visual Basic]
+- literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e112e7d221ef8e7a660094306bbb242c988e843
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2bd017db40fc28c78e960a889947cc7323e3e156
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="type-characters-visual-basic"></a>Caratteri tipo (Visual Basic)
-Oltre a specificare un tipo di dati in un'istruzione di dichiarazione, è possibile forzare il tipo di dati di alcuni elementi di programmazione con un *tipo di carattere*. Il tipo di carattere deve seguire immediatamente l'elemento, senza i caratteri di qualsiasi tipo.  
+# <a name="type-characters-visual-basic"></a><span data-ttu-id="5e2f4-102">Digitare i caratteri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e2f4-102">Type characters (Visual Basic)</span></span>
+
+<span data-ttu-id="5e2f4-103">Oltre a specificare un tipo di dati in un'istruzione di dichiarazione, è possibile forzare il tipo di dati di alcuni elementi di programmazione con un *carattere tipo*.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-103">In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements with a *type character*.</span></span> <span data-ttu-id="5e2f4-104">Il tipo di carattere deve seguire immediatamente l'elemento, senza i caratteri di qualsiasi tipo.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-104">The type character must immediately follow the element, with no intervening characters of any kind.</span></span>
+
+<span data-ttu-id="5e2f4-105">Il tipo di carattere non è parte del nome dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-105">The type character is not part of the name of the element.</span></span> <span data-ttu-id="5e2f4-106">Un elemento definito con un carattere di tipo può fare riferimento senza il tipo di carattere.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-106">An element defined with a type character can be referenced without the type character.</span></span>
+
+## <a name="identifier-type-characters"></a><span data-ttu-id="5e2f4-107">Caratteri di tipo identificatore</span><span class="sxs-lookup"><span data-stu-id="5e2f4-107">Identifier type characters</span></span>
+
+<span data-ttu-id="5e2f4-108">Visual Basic fornisce un set di *caratteri identificatori di tipo* che è possibile utilizzare in una dichiarazione per specificare il tipo di dati di una variabile o costante.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-108">Visual Basic supplies a set of *identifier type characters* that you can use in a declaration to specify the data type of a variable or constant.</span></span> <span data-ttu-id="5e2f4-109">Nella tabella seguente mostra i caratteri di tipo identificatore disponibile con esempi di utilizzo.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-109">The following table shows the available identifier type characters with examples of usage.</span></span>
   
- Il tipo di carattere non è parte del nome dell'elemento. Un elemento definito con un carattere di tipo può fare riferimento senza il carattere di tipo.  
-  
-## <a name="identifier-type-characters"></a>Caratteri di tipo identificatore  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]fornisce un set di *caratteri identificatori di tipo*, che è possibile utilizzare in una dichiarazione per specificare il tipo di dati di una variabile o costante. Nella tabella seguente mostra i caratteri di tipo identificatore disponibile con esempi di utilizzo.  
-  
-|Carattere di tipo identificatore|Tipo di dati|Esempio|  
+|<span data-ttu-id="5e2f4-110">Carattere di tipo identificatore</span><span class="sxs-lookup"><span data-stu-id="5e2f4-110">Identifier type character</span></span>|<span data-ttu-id="5e2f4-111">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="5e2f4-111">Data type</span></span>|<span data-ttu-id="5e2f4-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="5e2f4-112">Example</span></span>|  
 |-------------------------------|---------------|-------------|  
 |`%`|`Integer`|`Dim L%`|  
 |`&`|`Long`|`Dim M&`|  
@@ -85,70 +70,82 @@ Oltre a specificare un tipo di dati in un'istruzione di dichiarazione, è possib
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- Non esiste alcun carattere di tipo identificatore per il `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, o `UShort` tipi di dati, o per qualsiasi tipo di dati compositi, ad esempio matrici o strutture.  
+ <span data-ttu-id="5e2f4-113">Non esiste alcun carattere di tipo identificatore per il `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, o `UShort` tipi di dati, o uno tipi di dati composti, ad esempio matrici o strutture.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-113">No identifier type characters exist for the `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort` data types, or for any composite data types such as arrays or structures.</span></span>
+
+<span data-ttu-id="5e2f4-114">In alcuni casi, è possibile aggiungere il `$` carattere a una funzione di Visual Basic, ad esempio `Left$` anziché `Left`, per ottenere un valore restituito di tipo `String`.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-114">In some cases, you can append the `$` character to a Visual Basic function, for example `Left$` instead of `Left`, to obtain a returned value of type `String`.</span></span>
+
+<span data-ttu-id="5e2f4-115">In tutti i casi, il carattere di tipo identificatore deve seguire immediatamente il nome dell'identificatore.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-115">In all cases, the identifier type character must immediately follow the identifier name.</span></span>
+
+## <a name="literal-type-characters"></a><span data-ttu-id="5e2f4-116">Caratteri di tipo effettivo</span><span class="sxs-lookup"><span data-stu-id="5e2f4-116">Literal type characters</span></span>
+
+<span data-ttu-id="5e2f4-117">Oggetto *letterale* è una rappresentazione testuale di un particolare valore di un tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-117">A *literal* is a textual representation of a particular value of a data type.</span></span>  
+
+### <a name="default-literal-types"></a><span data-ttu-id="5e2f4-118">Tipi di valore letterale predefinito</span><span class="sxs-lookup"><span data-stu-id="5e2f4-118">Default literal types</span></span>
+
+<span data-ttu-id="5e2f4-119">Il modulo di un valore letterale come appare nel codice in genere determina il tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-119">The form of a literal as it appears in your code ordinarily determines its data type.</span></span> <span data-ttu-id="5e2f4-120">Nella tabella seguente vengono illustrati questi tipi di valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-120">The following table shows these default types.</span></span>  
   
- In alcuni casi, è possibile aggiungere il `$` carattere per un [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] funzione, ad esempio `Left$` anziché `Left`, per ottenere un valore restituito di tipo `String`.  
-  
- In tutti i casi, il carattere di tipo identificatore deve seguire immediatamente il nome dell'identificatore.  
-  
-## <a name="literal-type-characters"></a>Caratteri di tipo effettivo  
- Oggetto *letterale* è una rappresentazione testuale di un determinato valore di un tipo di dati.  
-  
-### <a name="default-literal-types"></a>Tipi di valore letterale predefinito  
- Il modulo di un valore letterale come appare nel codice in genere determina il tipo di dati. Nella tabella seguente vengono illustrati questi tipi di valore predefinito.  
-  
-|Formato testuale del valore letterale|Tipo di dati predefinito|Esempio|  
+|<span data-ttu-id="5e2f4-121">Formato testuale del valore letterale</span><span class="sxs-lookup"><span data-stu-id="5e2f4-121">Textual form of literal</span></span>|<span data-ttu-id="5e2f4-122">Tipo di dati predefinito</span><span class="sxs-lookup"><span data-stu-id="5e2f4-122">Default data type</span></span>|<span data-ttu-id="5e2f4-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="5e2f4-123">Example</span></span>|  
 |-----------------------------|-----------------------|-------------|  
-|Numerico, senza parte frazionaria|`Integer`|`2147483647`|  
-|Numerico, senza parte frazionaria, troppo grande per`Integer`|`Long`|`2147483648`|  
-|Numerico, parte frazionaria|`Double`|`1.2`|  
-|Racchiuso tra virgolette doppie|`String`|`"A"`|  
-|Racchiuso tra simboli di cancelletto|`Date`|`#5/17/1993 9:32 AM#`|  
+|<span data-ttu-id="5e2f4-124">Numerico, senza parte frazionaria</span><span class="sxs-lookup"><span data-stu-id="5e2f4-124">Numeric, no fractional part</span></span>|`Integer`|`2147483647`|  
+|<span data-ttu-id="5e2f4-125">Numerico, senza parte frazionaria, troppo grande per`Integer`</span><span class="sxs-lookup"><span data-stu-id="5e2f4-125">Numeric, no fractional part, too large for `Integer`</span></span>|`Long`|`2147483648`|  
+|<span data-ttu-id="5e2f4-126">Numerico, parte frazionaria</span><span class="sxs-lookup"><span data-stu-id="5e2f4-126">Numeric, fractional part</span></span>|`Double`|`1.2`|  
+|<span data-ttu-id="5e2f4-127">Racchiuso tra virgolette doppie</span><span class="sxs-lookup"><span data-stu-id="5e2f4-127">Enclosed in double quotation marks</span></span>|`String`|`"A"`|  
+|<span data-ttu-id="5e2f4-128">Racchiuso tra simboli di cancelletto</span><span class="sxs-lookup"><span data-stu-id="5e2f4-128">Enclosed within number signs</span></span>|`Date`|`#5/17/1993 9:32 AM#`|  
+
+### <a name="forced-literal-types"></a><span data-ttu-id="5e2f4-129">Tipi letterali forzati</span><span class="sxs-lookup"><span data-stu-id="5e2f4-129">Forced literal types</span></span>
+
+<span data-ttu-id="5e2f4-130">Visual Basic fornisce un set di *caratteri di tipo letterale*, indica che è possibile utilizzare per forzare un valore letterale di un tipo di dati diverso da quello assumere la forma.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-130">Visual Basic supplies a set of *literal type characters*, which you can use to force a literal to assume a data type other than the one its form indicates.</span></span> <span data-ttu-id="5e2f4-131">Questo caso aggiungendo il carattere alla fine del valore letterale.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-131">You do this by appending the character to the end of the literal.</span></span> <span data-ttu-id="5e2f4-132">Nella tabella seguente mostra i caratteri di tipo letterale disponibili con esempi di utilizzo.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-132">The following table shows the available literal type characters with examples of usage.</span></span>
   
-### <a name="forced-literal-types"></a>Tipi letterali forzati  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]fornisce un set di *caratteri di tipo letterale*, indica che è possibile utilizzare per imporre un valore letterale può assumere un tipo di dati diverso da quello dal form. Fatto questo, aggiungendo il carattere alla fine del valore letterale. Nella tabella seguente mostra i caratteri di tipo letterale disponibili con esempi di utilizzo.  
-  
-|Carattere di tipo letterale|Tipo di dati|Esempio|  
+|<span data-ttu-id="5e2f4-133">Carattere di tipo letterale</span><span class="sxs-lookup"><span data-stu-id="5e2f4-133">Literal type character</span></span>|<span data-ttu-id="5e2f4-134">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="5e2f4-134">Data type</span></span>|<span data-ttu-id="5e2f4-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="5e2f4-135">Example</span></span>|  
 |----------------------------|---------------|-------------|  
-|`S`|`Short`|`I = 347S`|  
-|`I`|`Integer`|`J = 347I`|  
-|`L`|`Long`|`K = 347L`|  
-|`D`|`Decimal`|`X = 347D`|  
-|`F`|`Single`|`Y = 347F`|  
-|`R`|`Double`|`Z = 347R`|  
-|`US`|`UShort`|`L = 347US`|  
-|`UI`|`UInteger`|`M = 347UI`|  
-|`UL`|`ULong`|`N = 347UL`|  
-|`C`|`Char`|`Q = "."C`|  
+|`S`|`Short`|`I = 347S`|
+|`I`|`Integer`|`J = 347I`|
+|`L`|`Long`|`K = 347L`|
+|`D`|`Decimal`|`X = 347D`|
+|`F`|`Single`|`Y = 347F`|
+|`R`|`Double`|`Z = 347R`|
+|`US`|`UShort`|`L = 347US`|
+|`UI`|`UInteger`|`M = 347UI`|
+|`UL`|`ULong`|`N = 347UL`|
+|`C`|`Char`|`Q = "."C`|
+
+<span data-ttu-id="5e2f4-136">Non esiste alcun carattere di tipo di valore letterale per il `Boolean`, `Byte`, `Date`, `Object`, `SByte`, o `String` tipi di dati, o per qualsiasi tipo di dati composta, ad esempio matrici o strutture.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-136">No literal type characters exist for the `Boolean`, `Byte`, `Date`, `Object`, `SByte`, or `String` data types, or for any composite data types such as arrays or structures.</span></span>
+
+<span data-ttu-id="5e2f4-137">Valori letterali possono inoltre utilizzare i caratteri identificatori di tipo (`%`, `&`, `@`, `!`, `#`, `$`), analogamente a variabili, costanti ed espressioni.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-137">Literals can also use the identifier type characters (`%`, `&`, `@`, `!`, `#`, `$`), as can variables, constants, and expressions.</span></span> <span data-ttu-id="5e2f4-138">Tuttavia, caratteri di tipo letterale (`S`, `I`, `L`, `D`, `F`, `R`, `C`) può essere utilizzato solo con valori letterali.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-138">However, the literal type characters (`S`, `I`, `L`, `D`, `F`, `R`, `C`) can be used only with literals.</span></span>
+
+<span data-ttu-id="5e2f4-139">In tutti i casi, il carattere di tipo di valore letterale deve seguire immediatamente il valore letterale.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-139">In all cases, the literal type character must immediately follow the literal value.</span></span>
+
+## <a name="hexadecimal-binary-and-octal-literals"></a><span data-ttu-id="5e2f4-140">Valori letterali esadecimali, binari e ottali</span><span class="sxs-lookup"><span data-stu-id="5e2f4-140">Hexadecimal, binary, and octal literals</span></span>
+
+<span data-ttu-id="5e2f4-141">In genere, il compilatore interpreta un valore letterale integer per il sistema di numeri decimali (base 10).</span><span class="sxs-lookup"><span data-stu-id="5e2f4-141">The compiler normally interprets an integer literal to be in the decimal (base 10) number system.</span></span> <span data-ttu-id="5e2f4-142">È inoltre possibile definire un valore letterale integer come un numero esadecimale (base 16) con il `&H` prefisso, come numero binario (base 2) con il `&B` prefisso e come un ottale (base 8) numero con la `&O` prefisso.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-142">You can also define an integer literal as a hexadecimal (base 16) number with the `&H` prefix, as a binary (base 2) number with the `&B` prefix, and as an octal (base 8) number with the `&O` prefix.</span></span> <span data-ttu-id="5e2f4-143">Le cifre che seguono il prefisso devono essere appropriate per il sistema di numeri.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-143">The digits that follow the prefix must be appropriate for the number system.</span></span> <span data-ttu-id="5e2f4-144">Questa condizione è illustrata nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-144">The following table illustrates this.</span></span>  
   
- Non esiste alcun carattere di tipo letterale per il `Boolean`, `Byte`, `Date`, `Object`, `SByte`, o `String` tipi di dati, o per qualsiasi tipo di dati compositi, ad esempio matrici o strutture.  
-  
- Valori letterali possono inoltre utilizzare i caratteri identificatori di tipo (`%`, `&`, `@`, `!`, `#`, `$`), analogamente a variabili, costanti ed espressioni. Tuttavia, caratteri di tipo letterale (`S`, `I`, `L`, `D`, `F`, `R`, `C`) può essere utilizzato solo con i valori letterali.  
-  
- In tutti i casi, il carattere di tipo letterale deve seguire immediatamente il valore letterale.  
-  
-## <a name="hexadecimal-and-octal-literals"></a>Valori letterali esadecimali e ottali  
- Generalmente, il compilatore interpreta un valore letterale integer per il sistema di numero decimale (base 10). È possibile forzare letterale sia un valore integer esadecimale (base 16) con il `&H` prefisso ed è possibile imporle ottale (base 8) con il `&O` prefisso. Le cifre che seguono il prefisso devono essere appropriate per il sistema numerico. Questa condizione è illustrata nella tabella seguente.  
-  
-|Numero di base|Prefisso|Cifre valide|Esempio|  
-|-----------------|------------|------------------------|-------------|  
-|Esadecimale (base 16)|`&H`|0-9 e a-F|`&HFFFF`|  
-|Ottale (base 8)|`&O`|0-7|`&O77`|  
-  
- È possibile seguire un valore letterale con prefisso con un carattere di tipo letterale. Nell'esempio seguente viene illustrata questa operazione.  
-  
-```  
-Dim counter As Short = &H8000S  
-Dim flags As UShort = &H8000US  
-```  
-  
- Nell'esempio precedente, `counter` ha il valore decimale compreso tra -32768, e `flags` ha il valore decimale-32768.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Tipi di valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Risoluzione dei tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+|<span data-ttu-id="5e2f4-145">Numero di base</span><span class="sxs-lookup"><span data-stu-id="5e2f4-145">Number base</span></span>|<span data-ttu-id="5e2f4-146">Prefisso</span><span class="sxs-lookup"><span data-stu-id="5e2f4-146">Prefix</span></span>|<span data-ttu-id="5e2f4-147">Valori di cifra valida</span><span class="sxs-lookup"><span data-stu-id="5e2f4-147">Valid digit values</span></span>|<span data-ttu-id="5e2f4-148">Esempio</span><span class="sxs-lookup"><span data-stu-id="5e2f4-148">Example</span></span>|
+|-----------------|------------|------------------------|-------------|
+|<span data-ttu-id="5e2f4-149">Esadecimale (base 16)</span><span class="sxs-lookup"><span data-stu-id="5e2f4-149">Hexadecimal (base 16)</span></span>|`&H`|<span data-ttu-id="5e2f4-150">0-9 e A-F</span><span class="sxs-lookup"><span data-stu-id="5e2f4-150">0-9 and A-F</span></span>|`&HFFFF`|
+|<span data-ttu-id="5e2f4-151">Binario (base 2)</span><span class="sxs-lookup"><span data-stu-id="5e2f4-151">Binary (base 2)</span></span>|`0B`|<span data-ttu-id="5e2f4-152">0-1</span><span class="sxs-lookup"><span data-stu-id="5e2f4-152">0-1</span></span>|`&B01111100`|
+|<span data-ttu-id="5e2f4-153">Ottale (base 8)</span><span class="sxs-lookup"><span data-stu-id="5e2f4-153">Octal (base 8)</span></span>|`&O`|<span data-ttu-id="5e2f4-154">0-7</span><span class="sxs-lookup"><span data-stu-id="5e2f4-154">0-7</span></span>|`&O77`|
+
+<span data-ttu-id="5e2f4-155">A partire da Visual Basic 2017, è possibile utilizzare il carattere di sottolineatura (`_`) come separatore di gruppi per migliorare la leggibilità di un valore letterale integrale.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-155">Starting in Visual Basic 2017, you can use the underscore character (`_`) as a group separator to enhance the readability of an integral literal.</span></span> <span data-ttu-id="5e2f4-156">L'esempio seguente usa il `_` carattere per raggruppare un valore letterale binario in gruppi di 8 bit:</span><span class="sxs-lookup"><span data-stu-id="5e2f4-156">The following example uses the `_` character to group a binary literal into 8-bit groups:</span></span>
+
+```vb
+Dim number As Integer = &B00100010_11000101_11001111_11001101
+```
+
+<span data-ttu-id="5e2f4-157">È possibile seguire un valore letterale con prefisso con un carattere di tipo di valore letterale.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-157">You can follow a prefixed literal with a literal type character.</span></span> <span data-ttu-id="5e2f4-158">Nell'esempio seguente viene illustrata questa operazione.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-158">The following example shows this.</span></span>
+
+```vb
+Dim counter As Short = &H8000S
+Dim flags As UShort = &H8000US
+```
+
+<span data-ttu-id="5e2f4-159">Nell'esempio precedente, `counter` ha il valore decimale compreso tra -32768, e `flags` ha il valore decimale 32768.</span><span class="sxs-lookup"><span data-stu-id="5e2f4-159">In the previous example, `counter` has the decimal value of -32768, and `flags` has the decimal value of +32768.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="5e2f4-160">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5e2f4-160">See Also</span></span>
+
+ [<span data-ttu-id="5e2f4-161">Tipi di dati</span><span class="sxs-lookup"><span data-stu-id="5e2f4-161">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="5e2f4-162">Tipi di dati elementari</span><span class="sxs-lookup"><span data-stu-id="5e2f4-162">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="5e2f4-163">Tipi valore e tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="5e2f4-163">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="5e2f4-164">Conversioni di tipi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5e2f4-164">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="5e2f4-165">Risoluzione dei problemi relativi ai tipi di dati</span><span class="sxs-lookup"><span data-stu-id="5e2f4-165">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="5e2f4-166">Dichiarazione di variabile</span><span class="sxs-lookup"><span data-stu-id="5e2f4-166">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [<span data-ttu-id="5e2f4-167">Tipi di dati</span><span class="sxs-lookup"><span data-stu-id="5e2f4-167">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
