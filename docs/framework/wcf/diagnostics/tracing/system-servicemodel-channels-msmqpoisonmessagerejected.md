@@ -1,32 +1,35 @@
 ---
-title: "System.ServiceModel.Channels.MsmqPoisonMessageRejected | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqPoisonMessageRejected
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0e64b9bd-1f12-43df-a189-d7be3c2bace1
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 87c6cef7420976c26cd1e9027f134818339273af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqPoisonMessageRejected
-Messaggio non elaborabile rifiutato.  
+# <a name="systemservicemodelchannelsmsmqpoisonmessagerejected"></a><span data-ttu-id="be212-102">System.ServiceModel.Channels.MsmqPoisonMessageRejected</span><span class="sxs-lookup"><span data-stu-id="be212-102">System.ServiceModel.Channels.MsmqPoisonMessageRejected</span></span>
+<span data-ttu-id="be212-103">Messaggio non elaborabile rifiutato.</span><span class="sxs-lookup"><span data-stu-id="be212-103">Poison message rejected.</span></span>  
   
-## Descrizione  
- La traccia indica che è stato rilevato e successivamente rifiutato un messaggio non elaborabile.Ciò accade quando la proprietà `ReceiveErrorHandling` su NetMsmqBinding o MsmqIntegrationBinding è impostata su `Reject`.Un messaggio rifiutato viene recapitato nuovamente alla [coda di messaggi non recapitabili](http://go.microsoft.com/fwlink/?LinkId=99544) del mittente.  
+## <a name="description"></a><span data-ttu-id="be212-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="be212-104">Description</span></span>  
+ <span data-ttu-id="be212-105">La traccia indica che è stato rilevato e successivamente rifiutato un messaggio non elaborabile.</span><span class="sxs-lookup"><span data-stu-id="be212-105">The trace indicates that a poison message was encountered and subsequently rejected.</span></span> <span data-ttu-id="be212-106">Ciò accade quando la proprietà `ReceiveErrorHandling` su NetMsmqBinding o MsmqIntegrationBinding è impostata su `Reject`.</span><span class="sxs-lookup"><span data-stu-id="be212-106">This occurs when the `ReceiveErrorHandling` property on the NetMsmqBinding or MsmqIntegrationBinding is set to `Reject`.</span></span> <span data-ttu-id="be212-107">Un messaggio respinto viene recapitato al mittente [recapitabili](http://go.microsoft.com/fwlink/?LinkId=99544).</span><span class="sxs-lookup"><span data-stu-id="be212-107">A rejected message is delivered back to the sender’s [Dead-Letter Queue](http://go.microsoft.com/fwlink/?LinkId=99544).</span></span>  
   
- Per ulteriori dettagli su quando i messaggi diventano non elaborabili e su come configurare il servizio per gestire tali messaggi in modo appropriato, vedere [Gestione dei messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkId=99546).Per ulteriori dettagli su cosa significa un messaggio rifiutato in MSMQ, vedere la pagina [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkId=99548) \(la pagina potrebbe essere in inglese\).  
+ <span data-ttu-id="be212-108">Vedere [dei messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkId=99546) per ulteriori informazioni su quando i messaggi diventano non elaborabili e su come configurare il servizio per gestirli nel modo appropriato.</span><span class="sxs-lookup"><span data-stu-id="be212-108">See [Poison-Message Handling](http://go.microsoft.com/fwlink/?LinkId=99546) for more details on when messages become poison and how to configure your service to handle them appropriately.</span></span> <span data-ttu-id="be212-109">Vedere [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkId=99548) per ulteriori informazioni sul significato di un messaggio respinto in MSMQ.</span><span class="sxs-lookup"><span data-stu-id="be212-109">See [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkId=99548) for more details on what a rejected message means in MSMQ.</span></span>  
   
-## Vedere anche  
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)   
- [Gestione dei messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkId=99546)   
- [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkId=99548)
+## <a name="see-also"></a><span data-ttu-id="be212-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="be212-110">See Also</span></span>  
+ [<span data-ttu-id="be212-111">Traccia</span><span class="sxs-lookup"><span data-stu-id="be212-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="be212-112">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="be212-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="be212-113">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="be212-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [<span data-ttu-id="be212-114">Messaggi non elaborabili</span><span class="sxs-lookup"><span data-stu-id="be212-114">Poison-Message Handling</span></span>](http://go.microsoft.com/fwlink/?LinkId=99546)  
+ [<span data-ttu-id="be212-115">MQMarkMessageRejected</span><span class="sxs-lookup"><span data-stu-id="be212-115">MQMarkMessageRejected</span></span>](http://go.microsoft.com/fwlink/?LinkId=99548)

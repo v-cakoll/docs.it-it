@@ -1,114 +1,118 @@
 ---
-title: "Rappresentazione tramite matrici delle trasformazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "trasformazioni affini"
-  - "trasformazioni composte"
-  - "trasformazioni lineari"
-  - "matrici"
-  - "trasformazioni, composte"
-  - "trasformazioni, lineari"
-  - "trasformazioni, rappresentazione tramite matrici"
-  - "trasformazioni, conversione"
-  - "conversioni nella rappresentazione tramite matrici"
-  - "vettori"
+title: Rappresentazione tramite matrici delle trasformazioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- composite transformations
+- transformations [Windows Forms], linear
+- matrices
+- translations in matrix representation
+- transformations [Windows Forms], composite
+- vectors
+- linear transformations
+- transformations [Windows Forms], matrix representation of
+- transformations [Windows Forms], translation
+- affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10babac22fd94bd00b14b7f861fe99469d3ecbda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Rappresentazione tramite matrici delle trasformazioni
-Una matrice m×n è costituita da un insieme di numeri ordinati in righe m e colonne n.  Nell'immagine seguente vengono mostrate alcune matrici.  
+# <a name="matrix-representation-of-transformations"></a><span data-ttu-id="8d991-102">Rappresentazione tramite matrici delle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="8d991-102">Matrix Representation of Transformations</span></span>
+<span data-ttu-id="8d991-103">Una matrice di n × m è un set di numeri disposti in righe m e n colonne.</span><span class="sxs-lookup"><span data-stu-id="8d991-103">An m×n matrix is a set of numbers arranged in m rows and n columns.</span></span> <span data-ttu-id="8d991-104">Nella figura seguente mostra alcune matrici.</span><span class="sxs-lookup"><span data-stu-id="8d991-104">The following illustration shows several matrices.</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.png "AboutGdip05\_art04")  
+ <span data-ttu-id="8d991-105">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")</span><span class="sxs-lookup"><span data-stu-id="8d991-105">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")</span></span>  
   
- È possibile sommare due matrici con le stesse dimensioni effettuando la somma degli elementi corrispondenti.  Nell'esempio seguente viene mostrata la somma di due matrici.  
+ <span data-ttu-id="8d991-106">È possibile aggiungere due matrici delle stesse dimensioni mediante l'aggiunta di singoli elementi.</span><span class="sxs-lookup"><span data-stu-id="8d991-106">You can add two matrices of the same size by adding individual elements.</span></span> <span data-ttu-id="8d991-107">Nella figura seguente mostra due esempi di aggiunta di una matrice.</span><span class="sxs-lookup"><span data-stu-id="8d991-107">The following illustration shows two examples of matrix addition.</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.png "AboutGdip05\_art05")  
+ <span data-ttu-id="8d991-108">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")</span><span class="sxs-lookup"><span data-stu-id="8d991-108">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")</span></span>  
   
- È possibile moltiplicare una matrice m×n per una matrice n×p. Si otterrà una matrice m×p.  È necessario che il numero di colonne della prima matrice corrisponda al numero di righe della seconda matrice.  È ad esempio possibile moltiplicare una matrice 4×2 per una matrice 2×3, in modo da ottenere una matrice 4×3.  
+ <span data-ttu-id="8d991-109">Una matrice di n × m può essere moltiplicata per una matrice di p × n, e il risultato è una matrice di p × m.</span><span class="sxs-lookup"><span data-stu-id="8d991-109">An m×n matrix can be multiplied by an n×p matrix, and the result is an m×p matrix.</span></span> <span data-ttu-id="8d991-110">Il numero di colonne nella prima matrice deve essere lo stesso come il numero di righe della seconda matrice.</span><span class="sxs-lookup"><span data-stu-id="8d991-110">The number of columns in the first matrix must be the same as the number of rows in the second matrix.</span></span> <span data-ttu-id="8d991-111">Ad esempio, una matrice 4 × 2 può essere moltiplicata per una matrice 2 × 3 per produrre una matrice 4 × 3.</span><span class="sxs-lookup"><span data-stu-id="8d991-111">For example, a 4×2 matrix can be multiplied by a 2×3 matrix to produce a 4×3 matrix.</span></span>  
   
- I punti su un piano e le righe e le colonne di una matrice possono essere considerati come vettori.  Ad esempio \(2, 5\) è un vettore con due componenti e \(3, 7, 1\) un vettore con tre componenti.  Il prodotto scalare di due vettori viene definito come segue:  
+ <span data-ttu-id="8d991-112">Punti nel piano e le righe e colonne di una matrice possono essere considerati come vettori.</span><span class="sxs-lookup"><span data-stu-id="8d991-112">Points in the plane and rows and columns of a matrix can be thought of as vectors.</span></span> <span data-ttu-id="8d991-113">Ad esempio, (2, 5) è un vettore con due componenti e (3, 7, 1) è un vettore con tre componenti.</span><span class="sxs-lookup"><span data-stu-id="8d991-113">For example, (2, 5) is a vector with two components, and (3, 7, 1) is a vector with three components.</span></span> <span data-ttu-id="8d991-114">Il prodotto scalare di due vettori viene definito come segue:</span><span class="sxs-lookup"><span data-stu-id="8d991-114">The dot product of two vectors is defined as follows:</span></span>  
   
- \(a, b\) • \(c, d\) \= ac \+ bd  
+ <span data-ttu-id="8d991-115">(a, b) • (c, d) = ac + bd</span><span class="sxs-lookup"><span data-stu-id="8d991-115">(a, b) • (c, d) = ac + bd</span></span>  
   
- \(a, b, c\) • \(d, e, f\) \= ad \+ be \+ cf  
+ <span data-ttu-id="8d991-116">(a, b, c) • (d, e, f) = ad essere + + cf</span><span class="sxs-lookup"><span data-stu-id="8d991-116">(a, b, c) • (d, e, f) = ad + be + cf</span></span>  
   
- Il prodotto scalare di \(2, 3\) e \(5, 4\) ad esempio è pari a \(2\)\(5\) \+ \(3\)\(4\) \= 22.  Il prodotto scalare di \(2, 5, 1\) e \(4, 3, 1\) è pari a \(2\)\(4\) \+ \(5\)\(3\) \+ \(1\)\(1\) \= 24.  Si noti che il prodotto scalare di due vettori è un numero, non un vettore.  Si noti inoltre che è possibile calcolare il prodotto scalare solo se i due vettori hanno lo stesso numero di componenti.  
+ <span data-ttu-id="8d991-117">Ad esempio, il prodotto scalare di (2, 3) e (5, 4) è (2)(5) + (3)(4) = 22.</span><span class="sxs-lookup"><span data-stu-id="8d991-117">For example, the dot product of (2, 3) and (5, 4) is (2)(5) + (3)(4) = 22.</span></span> <span data-ttu-id="8d991-118">Il prodotto scalare di (2, 5, 1) e (4, 3, 1) è (2)(4) + (5)(3) + (1)(1) = 24.</span><span class="sxs-lookup"><span data-stu-id="8d991-118">The dot product of (2, 5, 1) and (4, 3, 1) is (2)(4) + (5)(3) + (1)(1) = 24.</span></span> <span data-ttu-id="8d991-119">Si noti che il prodotto scalare di due vettori è un numero, non un altro vettore.</span><span class="sxs-lookup"><span data-stu-id="8d991-119">Note that the dot product of two vectors is a number, not another vector.</span></span> <span data-ttu-id="8d991-120">Si noti inoltre che è possibile calcolare il prodotto scalare solo se i due vettori hanno lo stesso numero di componenti.</span><span class="sxs-lookup"><span data-stu-id="8d991-120">Also note that you can calculate the dot product only if the two vectors have the same number of components.</span></span>  
   
- Si ponga A\(i, j\) come voce della matrice A nella ima riga e nella jma colonna.  A\(3, 2\) ad esempio è la voce della matrice A nella 3a riga e nella 2a colonna.  Si supponga che A, B e C siano matrici e che AB \= C.  Le voci di C vengono calcolate come segue.  
+ <span data-ttu-id="8d991-121">Consentire A(i, j) essere la voce nella matrice a nella riga e colonna jma.</span><span class="sxs-lookup"><span data-stu-id="8d991-121">Let A(i, j) be the entry in matrix A in the ith row and the jth column.</span></span> <span data-ttu-id="8d991-122">Ad esempio (3, 2) è la voce della matrice nella riga 3 e nella colonna 2.</span><span class="sxs-lookup"><span data-stu-id="8d991-122">For example A(3, 2) is the entry in matrix A in the 3rd row and the 2nd column.</span></span> <span data-ttu-id="8d991-123">Si supponga che A, B e C sono matrici e AB = C. Le voci di C vengono calcolate come segue:</span><span class="sxs-lookup"><span data-stu-id="8d991-123">Suppose A, B, and C are matrices, and AB = C. The entries of C are calculated as follows:</span></span>  
   
- C\(i, j\) \= \(riga i di A\) • \(colonna j di B\)  
+ <span data-ttu-id="8d991-124">C (i, j) = • (riga i di a) (colonna j di B)</span><span class="sxs-lookup"><span data-stu-id="8d991-124">C(i, j) = (row i of A) • (column j of B)</span></span>  
   
- Nell'immagine seguente vengono riportati svariati esempi di moltiplicazione di matrici.  
+ <span data-ttu-id="8d991-125">Nella figura seguente mostra alcuni esempi di moltiplicazione.</span><span class="sxs-lookup"><span data-stu-id="8d991-125">The following illustration shows several examples of matrix multiplication.</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.png "AboutGdip05\_art06")  
+ <span data-ttu-id="8d991-126">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")</span><span class="sxs-lookup"><span data-stu-id="8d991-126">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")</span></span>  
   
- Se si considera un punto del piano come matrice 1x2, è possibile trasformare tale punto moltiplicandolo per una matrice 2x2.  Nell'immagine seguente vengono mostrate svariate trasformazioni applicate al punto \(2, 1\).  
+ <span data-ttu-id="8d991-127">Se si ritiene di un punto in un piano come 1 matrice × 2, è possibile trasformare tale punto moltiplicandolo per una matrice 2x2.</span><span class="sxs-lookup"><span data-stu-id="8d991-127">If you think of a point in a plane as a 1×2 matrix, you can transform that point by multiplying it by a 2×2 matrix.</span></span> <span data-ttu-id="8d991-128">Nella figura seguente mostra diverse trasformazioni applicate al punto di (2, 1).</span><span class="sxs-lookup"><span data-stu-id="8d991-128">The following illustration shows several transformations applied to the point (2, 1).</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05\_art07")  
+ <span data-ttu-id="8d991-129">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")</span><span class="sxs-lookup"><span data-stu-id="8d991-129">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")</span></span>  
   
- Tutte le trasformazioni mostrate nell'immagine precedente sono trasformazioni lineari.  Determinati tipi di trasformazioni, quale la traslazione, non sono lineari. Non è quindi possibile esprimerle come moltiplicazione per una matrice 2x2.  Si supponga che si desideri partire dal punto \(2, 1\), ruotarlo di 90 gradi, traslarlo di 3 unità nella direzione x e di 4 unità nella direzione y.  È possibile ottenere questo risultato tramite una moltiplicazione di matrici seguita da una somma di matrici.  
+ <span data-ttu-id="8d991-130">Tutte le trasformazioni illustrate nella figura precedente sono trasformazioni lineari.</span><span class="sxs-lookup"><span data-stu-id="8d991-130">All of the transformations shown in the preceding figure are linear transformations.</span></span> <span data-ttu-id="8d991-131">Altre trasformazioni, ad esempio di conversione, non sono lineari e non possono essere espressa come moltiplicazione per una matrice 2x2.</span><span class="sxs-lookup"><span data-stu-id="8d991-131">Certain other transformations, such as translation, are not linear, and cannot be expressed as multiplication by a 2×2 matrix.</span></span> <span data-ttu-id="8d991-132">Si supponga che si desidera iniziare con il punto (2, 1), ruotare di 90 gradi, convertirlo 3 unità nella direzione x e 4 unità nella direzione y.</span><span class="sxs-lookup"><span data-stu-id="8d991-132">Suppose you want to start with the point (2, 1), rotate it 90 degrees, translate it 3 units in the x direction, and translate it 4 units in the y direction.</span></span> <span data-ttu-id="8d991-133">Questo scopo, è possibile tramite una moltiplicazione seguita dall'aggiunta di una matrice.</span><span class="sxs-lookup"><span data-stu-id="8d991-133">You can accomplish this by using a matrix multiplication followed by a matrix addition.</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05\_art08")  
+ <span data-ttu-id="8d991-134">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")</span><span class="sxs-lookup"><span data-stu-id="8d991-134">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")</span></span>  
   
- Una trasformazione lineare \(moltiplicazione per una matrice 2x2\) seguita da una traslazione \(aggiunta di una matrice 1x2\) viene definita trasformazione affine.  In alternativa alla memorizzazione di una trasformazione affine in una coppia di matrici \(una per la parte lineare e una per la traslazione\), è possibile memorizzare l'intera trasformazione in una matrice 3x3.  Perché questa operazione sia possibile, è necessario memorizzare un punto del piano in una matrice 1x3 specificando una terza coordinata fittizia.  Si imposta di solito ogni terza coordinata come equivalente a 1.  Il punto \(2, 1\) ad esempio viene rappresentato dalla matrice \[2 1 1\].  Nell'immagine seguente viene mostrata una trasformazione affine \(rotazione di 90 gradi; traslazione di 3 unità nella direzione x e 4 unità nella direzione y\) espressa come moltiplicazione per una singola matrice 3x3.  
+ <span data-ttu-id="8d991-135">Una trasformazione lineare (moltiplicazione per una matrice 2x2) seguita da una traduzione (aggiunta di una matrice di × 2 1) viene chiamata una trasformazione affine.</span><span class="sxs-lookup"><span data-stu-id="8d991-135">A linear transformation (multiplication by a 2×2 matrix) followed by a translation (addition of a 1×2 matrix) is called an affine transformation.</span></span> <span data-ttu-id="8d991-136">Un'alternativa all'archiviazione in una coppia di matrici (uno per la parte lineare) e uno per la traduzione di trasformazione affine consiste nell'archiviare l'intera trasformazione in una matrice 3x3.</span><span class="sxs-lookup"><span data-stu-id="8d991-136">An alternative to storing an affine transformation in a pair of matrices (one for the linear part and one for the translation) is to store the entire transformation in a 3×3 matrix.</span></span> <span data-ttu-id="8d991-137">Per utilizzare questo un punto del piano deve essere archiviato in una matrice di 1 × 3 con una coordinata 3rd fittizia.</span><span class="sxs-lookup"><span data-stu-id="8d991-137">To make this work, a point in the plane must be stored in a 1×3 matrix with a dummy 3rd coordinate.</span></span> <span data-ttu-id="8d991-138">La tecnica consueto consiste nell'apportare tutte le coordinate 3 uguale a 1.</span><span class="sxs-lookup"><span data-stu-id="8d991-138">The usual technique is to make all 3rd coordinates equal to 1.</span></span> <span data-ttu-id="8d991-139">Ad esempio, il punto (2, 1) è rappresentato dalla matrice [2 1 1].</span><span class="sxs-lookup"><span data-stu-id="8d991-139">For example, the point (2, 1) is represented by the matrix [2 1 1].</span></span> <span data-ttu-id="8d991-140">La figura seguente mostra una trasformazione affine (Ruota di 90 gradi; traslazione 3 unità nella direzione x e 4 unità nella direzione y) espressa come moltiplicazione per un singolo 3x3.</span><span class="sxs-lookup"><span data-stu-id="8d991-140">The following illustration shows an affine transformation (rotate 90 degrees; translate 3 units in the x direction, 4 units in the y direction) expressed as multiplication by a single 3×3 matrix.</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.png "AboutGdip05\_art09")  
+ <span data-ttu-id="8d991-141">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")</span><span class="sxs-lookup"><span data-stu-id="8d991-141">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")</span></span>  
   
- Il punto \(2, 1\) dell'esempio precedente è associato al punto \(2, 6\).  Si noti che la terza colonna della matrice 3x3 contiene i numeri 0, 0, 1.  Questi valori saranno sempre utilizzati per la matrice 3x3 di una trasformazione affine.  I numeri più importanti sono i sei numeri contenuti nelle colonne 1 e 2.  La porzione 2x2 superiore sinistra della matrice rappresenta la parte lineare della trasformazione e le prime due voci della 3a riga rappresentano la traslazione.  
+ <span data-ttu-id="8d991-142">Nell'esempio precedente, il punto (2, 1) viene eseguito il mapping per il punto (2, 6).</span><span class="sxs-lookup"><span data-stu-id="8d991-142">In the preceding example, the point (2, 1) is mapped to the point (2, 6).</span></span> <span data-ttu-id="8d991-143">Si noti che la terza colonna della matrice 3x3 contiene i numeri da 0, 0, 1.</span><span class="sxs-lookup"><span data-stu-id="8d991-143">Note that the third column of the 3×3 matrix contains the numbers 0, 0, 1.</span></span> <span data-ttu-id="8d991-144">Questo sarà sempre nel caso per la matrice 3x3 di trasformazione affine.</span><span class="sxs-lookup"><span data-stu-id="8d991-144">This will always be the case for the 3×3 matrix of an affine transformation.</span></span> <span data-ttu-id="8d991-145">I numeri più importanti sono i sei numeri nelle colonne 1 e 2.</span><span class="sxs-lookup"><span data-stu-id="8d991-145">The important numbers are the six numbers in columns 1 and 2.</span></span> <span data-ttu-id="8d991-146">L'angolo superiore sinistro porzione 2x2 della matrice rappresenta la parte della trasformazione lineare e le prime due voci nella riga 3 rappresentano la traduzione.</span><span class="sxs-lookup"><span data-stu-id="8d991-146">The upper-left 2×2 portion of the matrix represents the linear part of the transformation, and the first two entries in the 3rd row represent the translation.</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05\_art10")  
+ <span data-ttu-id="8d991-147">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")</span><span class="sxs-lookup"><span data-stu-id="8d991-147">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")</span></span>  
   
- In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è possibile memorizzare una trasformazione affine in un oggetto <xref:System.Drawing.Drawing2D.Matrix>.  Poiché la terza colonna di una matrice che rappresenta una trasformazione affine contiene sempre i valori \(0, 0, 1\), quando si costruisce un oggetto <xref:System.Drawing.Drawing2D.Matrix> è necessario specificare solo i sei numeri contenuti nelle prime due colonne.  L'istruzione `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` consente di costruire la matrice mostrata nell'immagine precedente.  
+ <span data-ttu-id="8d991-148">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è possibile archiviare una trasformazione affine in un <xref:System.Drawing.Drawing2D.Matrix> oggetto.</span><span class="sxs-lookup"><span data-stu-id="8d991-148">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] you can store an affine transformation in a <xref:System.Drawing.Drawing2D.Matrix> object.</span></span> <span data-ttu-id="8d991-149">Poiché la terza colonna di una matrice che rappresenta una trasformazione affine è sempre (0, 0, 1), quando costruisce è necessario specificare solo i numeri di sei nelle prime due colonne un <xref:System.Drawing.Drawing2D.Matrix> oggetto.</span><span class="sxs-lookup"><span data-stu-id="8d991-149">Because the third column of a matrix that represents an affine transformation is always (0, 0, 1), you specify only the six numbers in the first two columns when you construct a <xref:System.Drawing.Drawing2D.Matrix> object.</span></span> <span data-ttu-id="8d991-150">L'istruzione `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` costruisce la matrice mostrata nella figura precedente.</span><span class="sxs-lookup"><span data-stu-id="8d991-150">The statement `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` constructs the matrix shown in the preceding figure.</span></span>  
   
-## Trasformazioni composte  
- Una trasformazione composta è costituita da una sequenza di trasformazioni, una di seguito all'altra.  Si prendano in considerazione le matrici e le trasformazioni riportate nell'elenco seguente:  
+## <a name="composite-transformations"></a><span data-ttu-id="8d991-151">Trasformazioni composte</span><span class="sxs-lookup"><span data-stu-id="8d991-151">Composite Transformations</span></span>  
+ <span data-ttu-id="8d991-152">Una trasformazione composita è una sequenza di trasformazioni, un seguito dagli altri.</span><span class="sxs-lookup"><span data-stu-id="8d991-152">A composite transformation is a sequence of transformations, one followed by the other.</span></span> <span data-ttu-id="8d991-153">Considerare le matrici e le trasformazioni nell'elenco seguente:</span><span class="sxs-lookup"><span data-stu-id="8d991-153">Consider the matrices and transformations in the following list:</span></span>  
   
 |||  
 |-|-|  
-|Matrice A|Ruotare di 90 gradi|  
-|Matrice B|Ridimensionare per un fattore di 2 nella direzione x|  
-|Matrice C|Traslare di 3 unità nella direzione y|  
+|<span data-ttu-id="8d991-154">Matrice</span><span class="sxs-lookup"><span data-stu-id="8d991-154">Matrix A</span></span>|<span data-ttu-id="8d991-155">Ruotare di 90 gradi</span><span class="sxs-lookup"><span data-stu-id="8d991-155">Rotate 90 degrees</span></span>|  
+|<span data-ttu-id="8d991-156">Matrice B</span><span class="sxs-lookup"><span data-stu-id="8d991-156">Matrix B</span></span>|<span data-ttu-id="8d991-157">Scala per un fattore pari a 2 nella direzione x</span><span class="sxs-lookup"><span data-stu-id="8d991-157">Scale by a factor of 2 in the x direction</span></span>|  
+|<span data-ttu-id="8d991-158">Matrice di C</span><span class="sxs-lookup"><span data-stu-id="8d991-158">Matrix C</span></span>|<span data-ttu-id="8d991-159">Tradurre 3 unità nella direzione y</span><span class="sxs-lookup"><span data-stu-id="8d991-159">Translate 3 units in the y direction</span></span>|  
   
- Se si parte dal punto \(2, 1\) \- rappresentato dalla matrice \[2 1 1\] \- e si moltiplica per A, poi per B, quindi per C, il punto \(2, 1\) subirà le tre trasformazioni nell'ordine specificato.  
+ <span data-ttu-id="8d991-160">Se si inizia con il punto (2, 1), rappresentato dalla matrice [1 1 2]: e moltiplicare A, B, quindi quindi C, il punto (2, 1) subirà le tre trasformazioni nell'ordine elencato.</span><span class="sxs-lookup"><span data-stu-id="8d991-160">If we start with the point (2, 1) — represented by the matrix [2 1 1] — and multiply by A, then B, then C, the point (2, 1) will undergo the three transformations in the order listed.</span></span>  
   
- \[2 1 1\]ABC \= \[\-2 5 1\]  
+ <span data-ttu-id="8d991-161">[2 1 1] ABC = [1 DI 5-2]</span><span class="sxs-lookup"><span data-stu-id="8d991-161">[2 1 1]ABC = [-2 5 1]</span></span>  
   
- Anziché memorizzare le tre parti della trasformazione composta in tre matrici distinte, è possibile moltiplicare A, B e C contemporaneamente per ottenere una singola matrice 3x3 in cui memorizzare l'intera trasformazione composta.  Si supponga che ABC \= D.  Un punto moltiplicato per D darà quindi lo stesso risultato di un punto moltiplicato per A, poi per B, quindi per C.  
+ <span data-ttu-id="8d991-162">Anziché memorizzare le tre parti della trasformazione composita in tre matrici distinte, è possibile moltiplicare A, B e C insieme per ottenere un singolo 3x3 che archivia l'intera trasformazione composta.</span><span class="sxs-lookup"><span data-stu-id="8d991-162">Rather than store the three parts of the composite transformation in three separate matrices, you can multiply A, B, and C together to get a single 3×3 matrix that stores the entire composite transformation.</span></span> <span data-ttu-id="8d991-163">Si supponga che ABC = D. Quindi un punto moltiplicato per D offre lo stesso risultato di un punto moltiplicato per A, quindi B, quindi C.</span><span class="sxs-lookup"><span data-stu-id="8d991-163">Suppose ABC = D. Then a point multiplied by D gives the same result as a point multiplied by A, then B, then C.</span></span>  
   
- \[2 1 1\]D \= \[\-2 5 1\]  
+ <span data-ttu-id="8d991-164">[2 1 1] D = [1 DI 5-2]</span><span class="sxs-lookup"><span data-stu-id="8d991-164">[2 1 1]D = [-2 5 1]</span></span>  
   
- Nell'immagine seguente vengono mostrate le matrici A, B, C e D.  
+ <span data-ttu-id="8d991-165">La figura seguente mostra le matrici A, B, C e D.</span><span class="sxs-lookup"><span data-stu-id="8d991-165">The following illustration shows the matrices A, B, C, and D.</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.png "AboutGdip05\_art12")  
+ <span data-ttu-id="8d991-166">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")</span><span class="sxs-lookup"><span data-stu-id="8d991-166">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")</span></span>  
   
- La possibilità di formare la matrice di una trasformazione composta tramite la moltiplicazione delle matrici di trasformazione individuali implica che è possibile memorizzare in un singolo oggetto <xref:System.Drawing.Drawing2D.Matrix> qualunque sequenza di trasformazioni affini.  
+ <span data-ttu-id="8d991-167">Il fatto che la matrice di una trasformazione composta può essere formata dalla moltiplicazione di matrici di trasformazione individuali significa che qualsiasi sequenza di trasformazioni affini può essere archiviato in una singola <xref:System.Drawing.Drawing2D.Matrix> oggetto.</span><span class="sxs-lookup"><span data-stu-id="8d991-167">The fact that the matrix of a composite transformation can be formed by multiplying the individual transformation matrices means that any sequence of affine transformations can be stored in a single <xref:System.Drawing.Drawing2D.Matrix> object.</span></span>  
   
 > [!CAUTION]
->  L'ordine di una trasformazione composta è importante.  La rotazione seguita dal ridimensionamento e infine dalla traslazione non fornisce in genere lo stesso risultato del ridimensionamento seguito dalla rotazione e infine dalla traslazione.  Analogamente, l'ordine di moltiplicazione delle matrici è essenziale.  ABC non corrisponde generalmente a BAC.  
+>  <span data-ttu-id="8d991-168">L'ordine di una trasformazione composta è importante.</span><span class="sxs-lookup"><span data-stu-id="8d991-168">The order of a composite transformation is important.</span></span> <span data-ttu-id="8d991-169">In generale, ruotare, ridimensionare e quindi convertire non è la stessa scala, rotazione e quindi convertire.</span><span class="sxs-lookup"><span data-stu-id="8d991-169">In general, rotate, then scale, then translate is not the same as scale, then rotate, then translate.</span></span> <span data-ttu-id="8d991-170">Analogamente, l'ordine di moltiplicazione è importante.</span><span class="sxs-lookup"><span data-stu-id="8d991-170">Similarly, the order of matrix multiplication is important.</span></span> <span data-ttu-id="8d991-171">In generale, ABC non è uguale a BAC.</span><span class="sxs-lookup"><span data-stu-id="8d991-171">In general, ABC is not the same as BAC.</span></span>  
   
- Nella classe <xref:System.Drawing.Drawing2D.Matrix> sono disponibili svariati metodi per la compilazione di una trasformazione composta: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A> e <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>.  L'esempio seguente consente di creare la matrice di una trasformazione composta che esegue prima di tutto una rotazione di 30 gradi, quindi un ridimensionamento con fattore 2 nella direzione y e infine una traslazione di 5 unità nella direzione x:  
+ <span data-ttu-id="8d991-172">Il <xref:System.Drawing.Drawing2D.Matrix> classe fornisce numerosi metodi per la creazione di una trasformazione composta: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, e <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>.</span><span class="sxs-lookup"><span data-stu-id="8d991-172">The <xref:System.Drawing.Drawing2D.Matrix> class provides several methods for building a composite transformation: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, and <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>.</span></span> <span data-ttu-id="8d991-173">L'esempio seguente crea la matrice di trasformazione composita prima ruotata di 30 gradi, quindi ridimensiona di un fattore pari a 2 nella direzione y, quindi converte di 5 unità nella direzione x:</span><span class="sxs-lookup"><span data-stu-id="8d991-173">The following example creates the matrix of a composite transformation that first rotates 30 degrees, then scales by a factor of 2 in the y direction, and then translates 5 units in the x direction:</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
   
- Nell'immagine seguente viene mostrata la matrice.  
+ <span data-ttu-id="8d991-174">Nella figura seguente viene illustrata la matrice.</span><span class="sxs-lookup"><span data-stu-id="8d991-174">The following illustration shows the matrix.</span></span>  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.png "AboutGdip05\_art13")  
+ <span data-ttu-id="8d991-175">![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")</span><span class="sxs-lookup"><span data-stu-id="8d991-175">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")</span></span>  
   
-## Vedere anche  
- [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Utilizzo di trasformazioni nel codice gestito GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="8d991-176">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8d991-176">See Also</span></span>  
+ [<span data-ttu-id="8d991-177">Sistemi di coordinate e trasformazioni</span><span class="sxs-lookup"><span data-stu-id="8d991-177">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="8d991-178">Uso di trasformazioni nel codice gestito GDI+</span><span class="sxs-lookup"><span data-stu-id="8d991-178">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

@@ -1,66 +1,69 @@
 ---
-title: "Procedura: compilare oggetti Table a livello di codice | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creazione, tabelle (a livello di codice)"
-  - "documenti, creazione di tabelle a livello di codice"
-  - "tabelle, creazione a livello di codice"
+title: 'Procedura: Compilare oggetti Table a livello di codice'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ef961bb219f201cf5fe32a5b2bbdf70ef45e73b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: compilare oggetti Table a livello di codice
-Negli esempi riportati di seguito viene illustrato come creare un elemento <xref:System.Windows.Documents.Table> a livello di codice e compilarlo con contenuto.  Il contenuto della tabella è ripartito in cinque righe \(rappresentate da oggetti <xref:System.Windows.Documents.TableRow> contenuti in un oggetto <xref:System.Windows.Documents.Table.RowGroups%2A>\) e sei colonne \(rappresentate da oggetti <xref:System.Windows.Documents.TableColumn>\).  Le righe vengono utilizzate per scopi di presentazione diversi, ad esempio una riga è destinata a contenere il titolo dell'intera tabella, una riga di intestazione a descrivere le colonne di dati nella tabella e una riga di piè di pagina a fornire informazioni di riepilogo.  Si noti che i concetti di righe del "titolo", "intestazione" e "piè di pagina" non sono inerenti la tabella, ma fanno semplicemente riferimento a righe con caratteristiche diverse.  Le celle della tabella ospitano il contenuto effettivo, che può essere costituito da testo, immagini o qualsiasi altro elemento [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+# <a name="how-to-build-a-table-programmatically"></a><span data-ttu-id="27b19-102">Procedura: Compilare oggetti Table a livello di codice</span><span class="sxs-lookup"><span data-stu-id="27b19-102">How to: Build a Table Programmatically</span></span>
+<span data-ttu-id="27b19-103">Gli esempi seguenti mostrano come creare a livello di codice un <xref:System.Windows.Documents.Table> e popolarlo con contenuto.</span><span class="sxs-lookup"><span data-stu-id="27b19-103">The following examples show how to programmatically create a <xref:System.Windows.Documents.Table> and populate it with content.</span></span> <span data-ttu-id="27b19-104">Il contenuto della tabella viene ripartito cinque righe (rappresentati da <xref:System.Windows.Documents.TableRow> gli oggetti contenuti un <xref:System.Windows.Documents.Table.RowGroups%2A> oggetto) e sei colonne (rappresentato da <xref:System.Windows.Documents.TableColumn> oggetti).</span><span class="sxs-lookup"><span data-stu-id="27b19-104">The contents of the table are apportioned into five rows (represented by <xref:System.Windows.Documents.TableRow> objects contained in a <xref:System.Windows.Documents.Table.RowGroups%2A> object) and six columns (represented by <xref:System.Windows.Documents.TableColumn> objects).</span></span> <span data-ttu-id="27b19-105">Le righe vengono usate per scopi di presentazione diversi, ad esempio una riga è destinata a contenere il titolo dell'intera tabella, una riga di intestazione a descrivere le colonne di dati nella tabella e una riga di piè di pagina a fornire informazioni di riepilogo.</span><span class="sxs-lookup"><span data-stu-id="27b19-105">The rows are used for different presentation purposes, including a title row intended to title the entire table, a header row to describe the columns of data in the table, and a footer row with summary information.</span></span>  <span data-ttu-id="27b19-106">Si noti che i concetti di righe di "titolo", "intestazione" e "piè di pagina" non sono inerenti alla tabella, ma fanno semplicemente riferimento a righe con caratteristiche diverse.</span><span class="sxs-lookup"><span data-stu-id="27b19-106">Note that the notion of "title", "header", and "footer" rows are not inherent to the table; these are simply rows with different characteristics.</span></span> <span data-ttu-id="27b19-107">Le celle di tabella contengono il contenuto effettivo, che può essere costituito da testo, immagini o qualsiasi altro [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] elemento.</span><span class="sxs-lookup"><span data-stu-id="27b19-107">Table cells contain the actual content, which can be comprised of text, images, or nearly any other [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] element.</span></span>  
   
-## Esempio  
- Viene innanzitutto creato un oggetto <xref:System.Windows.Documents.FlowDocument> per ospitare l'elemento <xref:System.Windows.Documents.Table>, quindi viene creato un nuovo elemento <xref:System.Windows.Documents.Table> e aggiunto al contenuto di <xref:System.Windows.Documents.FlowDocument>.  
+## <a name="example"></a><span data-ttu-id="27b19-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="27b19-108">Example</span></span>  
+ <span data-ttu-id="27b19-109">Prima di tutto, un <xref:System.Windows.Documents.FlowDocument> viene creato all'host di <xref:System.Windows.Documents.Table>e un nuovo <xref:System.Windows.Documents.Table> viene creato e aggiunto al contenuto del <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="27b19-109">First, a <xref:System.Windows.Documents.FlowDocument> is created to host the <xref:System.Windows.Documents.Table>, and a new <xref:System.Windows.Documents.Table> is created and added to the contents of the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
-## Esempio  
- Successivamente, vengono creati sei oggetti <xref:System.Windows.Documents.TableColumn> e aggiunti alla raccolta <xref:System.Windows.Documents.Table.Columns%2A> della tabella, con l'applicazione di alcuni elementi di formattazione.  
+## <a name="example"></a><span data-ttu-id="27b19-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="27b19-110">Example</span></span>  
+ <span data-ttu-id="27b19-111">Successivamente, sei <xref:System.Windows.Documents.TableColumn> gli oggetti vengono creati e aggiunti alla tabella <xref:System.Windows.Documents.Table.Columns%2A> raccolta, con alcune formattazione applicata.</span><span class="sxs-lookup"><span data-stu-id="27b19-111">Next, six <xref:System.Windows.Documents.TableColumn> objects are created and added to the table's <xref:System.Windows.Documents.Table.Columns%2A> collection, with some formatting applied.</span></span>  
   
 > [!NOTE]
->  Si noti che la raccolta <xref:System.Windows.Documents.Table.Columns%2A> della tabella utilizza un'indicizzazione a base zero standard.  
+>  <span data-ttu-id="27b19-112">Si noti che la tabella <xref:System.Windows.Documents.Table.Columns%2A> insieme utilizza l'indicizzazione in base zero standard.</span><span class="sxs-lookup"><span data-stu-id="27b19-112">Note that the table's <xref:System.Windows.Documents.Table.Columns%2A> collection uses standard zero-based indexing.</span></span>  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
-## Esempio  
- Viene quindi creata una riga del titolo e aggiunta alla tabella con l'applicazione di alcuni elementi di formattazione.  La riga del titolo può contenere una sola cella che si estende su tutte e sei le colonne della tabella.  
+## <a name="example"></a><span data-ttu-id="27b19-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="27b19-113">Example</span></span>  
+ <span data-ttu-id="27b19-114">Viene quindi creata una riga del titolo che viene aggiunta alla tabella con l'applicazione di alcuni elementi di formattazione.</span><span class="sxs-lookup"><span data-stu-id="27b19-114">Next, a title row is created and added to the table with some formatting applied.</span></span>  <span data-ttu-id="27b19-115">La riga del titolo può contenere una sola cella che si estende su tutte e sei le colonne della tabella.</span><span class="sxs-lookup"><span data-stu-id="27b19-115">The title row happens to contain a single cell that spans all six columns in the table.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
  [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
-## Esempio  
- Viene quindi creata e aggiunta alla tabella una riga di intestazione, per la quale vengono create celle in cui viene inserito contenuto.  
+## <a name="example"></a><span data-ttu-id="27b19-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="27b19-116">Example</span></span>  
+ <span data-ttu-id="27b19-117">Successivamente, viene creata e aggiunta alla tabella una riga di intestazione, per la quale vengono create celle in cui viene inserito contenuto.</span><span class="sxs-lookup"><span data-stu-id="27b19-117">Next, a header row is created and added to the table, and the cells in the header row are created and populated with content.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
  [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
-## Esempio  
- In seguito, viene creata e aggiunta alla tabella una riga per i dati, per la quale vengono create celle in cui viene inserito contenuto.  La compilazione di questa riga è simile alla compilazione della riga di intestazione, con l'applicazione di una formattazione leggermente diversa.  
+## <a name="example"></a><span data-ttu-id="27b19-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="27b19-118">Example</span></span>  
+ <span data-ttu-id="27b19-119">Successivamente, viene creata e aggiunta alla tabella una riga per i dati, per la quale vengono create celle in cui viene inserito contenuto.</span><span class="sxs-lookup"><span data-stu-id="27b19-119">Next, a row for data is created and added to the table, and the cells in this row are created and populated with content.</span></span>  <span data-ttu-id="27b19-120">La compilazione di questa riga è simile alla compilazione della riga di intestazione, con l'applicazione di una formattazione leggermente diversa.</span><span class="sxs-lookup"><span data-stu-id="27b19-120">Building this row is similar to building the header row, with slightly different formatting applied.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
  [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
-## Esempio  
- Infine, viene creata, aggiunta e formattata una riga a piè di pagina.  Analogamente alla riga del titolo, il piè di pagina contiene una sola cella che si estende su tutte e sei colonne della tabella.  
+## <a name="example"></a><span data-ttu-id="27b19-121">Esempio</span><span class="sxs-lookup"><span data-stu-id="27b19-121">Example</span></span>  
+ <span data-ttu-id="27b19-122">Infine, viene creata, aggiunta e formattata una riga di piè di pagina.</span><span class="sxs-lookup"><span data-stu-id="27b19-122">Finally, a footer row is created, added, and formatted.</span></span>  <span data-ttu-id="27b19-123">Analogamente alla riga del titolo, il piè di pagina contiene una sola cella che si estende su tutte e sei le colonne della tabella.</span><span class="sxs-lookup"><span data-stu-id="27b19-123">Like the title row, the footer contains a single cell that spans all six columns in the table.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## Vedere anche  
- [Cenni preliminari sull'elemento Table](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a><span data-ttu-id="27b19-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="27b19-124">See Also</span></span>  
+ [<span data-ttu-id="27b19-125">Cenni preliminari sull'elemento Table</span><span class="sxs-lookup"><span data-stu-id="27b19-125">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)

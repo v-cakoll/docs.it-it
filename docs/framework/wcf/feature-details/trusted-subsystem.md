@@ -1,61 +1,67 @@
 ---
-title: "Sottosistema attendibile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sottosistema attendibile
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 229efd7fed9b8aeb1effff7bd4358930ab8c44ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Sottosistema attendibile
-Un client accede a uno o più servizi Web distribuiti in una rete.I servizi Web sono progettati per far sì che l'accesso alle risorse aggiuntive \(ad esempio database o altri servizi Web\) sia incapsulato nella logica di business del servizio Web.Queste risorse devono essere protette da accessi non autorizzati.Nella figura seguente viene illustrato un processo di sottosistema attendibile.  
+# <a name="trusted-subsystem"></a><span data-ttu-id="047d2-102">Sottosistema attendibile</span><span class="sxs-lookup"><span data-stu-id="047d2-102">Trusted Subsystem</span></span>
+<span data-ttu-id="047d2-103">Un client accede a uno o più servizi Web distribuiti in una rete.</span><span class="sxs-lookup"><span data-stu-id="047d2-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="047d2-104">I servizi Web sono progettati per far sì che l'accesso alle risorse aggiuntive (ad esempio database o altri servizi Web) sia incapsulato nella logica di business del servizio Web.</span><span class="sxs-lookup"><span data-stu-id="047d2-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="047d2-105">Queste risorse devono essere protette da accessi non autorizzati.</span><span class="sxs-lookup"><span data-stu-id="047d2-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="047d2-106">Nella figura seguente viene illustrato un processo di sottosistema attendibile.</span><span class="sxs-lookup"><span data-stu-id="047d2-106">The following illustration depicts a trusted subsystem process.</span></span>  
   
- ![Sottosistema attendibile](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc\_TrustedSubsystemc")  
+ <span data-ttu-id="047d2-107">![Sottosistema attendibile](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="047d2-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
   
- Nei passaggi seguenti viene descritto il processo di sottosistema attendibile:  
+ <span data-ttu-id="047d2-108">Nei passaggi seguenti viene descritto il processo di sottosistema attendibile:</span><span class="sxs-lookup"><span data-stu-id="047d2-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
   
-1.  Il client invia una richiesta al sottosistema attendibile, insieme alle credenziali.  
+1.  <span data-ttu-id="047d2-109">Il client invia una richiesta al sottosistema attendibile, insieme alle credenziali.</span><span class="sxs-lookup"><span data-stu-id="047d2-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
   
-2.  Il sottosistema attendibile autentica e autorizza l'utente.  
+2.  <span data-ttu-id="047d2-110">Il sottosistema attendibile autentica e autorizza l'utente.</span><span class="sxs-lookup"><span data-stu-id="047d2-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
   
-3.  Il sottosistema attendibile invia un messaggio di richiesta alla risorsa remota.La richiesta è accompagnata dalle credenziali per il sottosistema attendibile \(o per l'account del servizio in cui viene eseguito il processo del sottosistema attendibile\).  
+3.  <span data-ttu-id="047d2-111">Il sottosistema attendibile invia un messaggio di richiesta alla risorsa remota.</span><span class="sxs-lookup"><span data-stu-id="047d2-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="047d2-112">La richiesta è accompagnata dalle credenziali per il sottosistema attendibile (o per l'account del servizio in cui viene eseguito il processo del sottosistema attendibile).</span><span class="sxs-lookup"><span data-stu-id="047d2-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
   
-4.  La risorsa back\-end autentica e autorizza il sottosistema attendibile.Elabora quindi la richiesta e invia una risposta al sottosistema attendibile.  
+4.  <span data-ttu-id="047d2-113">La risorsa back-end autentica e autorizza il sottosistema attendibile.</span><span class="sxs-lookup"><span data-stu-id="047d2-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="047d2-114">Elabora quindi la richiesta e invia una risposta al sottosistema attendibile.</span><span class="sxs-lookup"><span data-stu-id="047d2-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
   
-5.  Il sottosistema attendibile elabora la risposta e invia la propria risposta al client.  
+5.  <span data-ttu-id="047d2-115">Il sottosistema attendibile elabora la risposta e invia la propria risposta al client.</span><span class="sxs-lookup"><span data-stu-id="047d2-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
   
-|Caratteristica|Descrizione|  
+|<span data-ttu-id="047d2-116">Caratteristica</span><span class="sxs-lookup"><span data-stu-id="047d2-116">Characteristic</span></span>|<span data-ttu-id="047d2-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="047d2-117">Description</span></span>|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Messaggio|  
-|Interoperabilità|Solo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
-|Autenticazione \(servizio\)|Il servizio del token di sicurezza autentica e autorizza i client.|  
-|Autenticazione \(client\)|Il sottosistema attendibile autentica il client e la risorsa autentica il servizio del sottosistema attendibile.|  
-|Integrità|Sì|  
-|Riservatezza|Sì|  
-|Trasporto|HTTP tra il client e il servizio del sottosistema attendibile.<br /><br /> NET.TCP tra il servizio del sottosistema attendibile e la risorsa \(servizio back\-end\).|  
-|Associazione|<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|<span data-ttu-id="047d2-118">Modalità di sicurezza</span><span class="sxs-lookup"><span data-stu-id="047d2-118">Security Mode</span></span>|<span data-ttu-id="047d2-119">Messaggio</span><span class="sxs-lookup"><span data-stu-id="047d2-119">Message</span></span>|  
+|<span data-ttu-id="047d2-120">Interoperabilità</span><span class="sxs-lookup"><span data-stu-id="047d2-120">Interoperability</span></span>|<span data-ttu-id="047d2-121">Solo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="047d2-121">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] only.</span></span>|  
+|<span data-ttu-id="047d2-122">Autenticazione (servizio)</span><span class="sxs-lookup"><span data-stu-id="047d2-122">Authentication (service)</span></span>|<span data-ttu-id="047d2-123">Il servizio del token di sicurezza autentica e autorizza i client.</span><span class="sxs-lookup"><span data-stu-id="047d2-123">Security token service authenticates and authorizes clients.</span></span>|  
+|<span data-ttu-id="047d2-124">Autenticazione (client)</span><span class="sxs-lookup"><span data-stu-id="047d2-124">Authentication (client)</span></span>|<span data-ttu-id="047d2-125">Il sottosistema attendibile autentica il client e la risorsa autentica il servizio del sottosistema attendibile.</span><span class="sxs-lookup"><span data-stu-id="047d2-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
+|<span data-ttu-id="047d2-126">Integrità</span><span class="sxs-lookup"><span data-stu-id="047d2-126">Integrity</span></span>|<span data-ttu-id="047d2-127">Sì</span><span class="sxs-lookup"><span data-stu-id="047d2-127">Yes</span></span>|  
+|<span data-ttu-id="047d2-128">Riservatezza</span><span class="sxs-lookup"><span data-stu-id="047d2-128">Confidentiality</span></span>|<span data-ttu-id="047d2-129">Sì</span><span class="sxs-lookup"><span data-stu-id="047d2-129">Yes</span></span>|  
+|<span data-ttu-id="047d2-130">Trasporto</span><span class="sxs-lookup"><span data-stu-id="047d2-130">Transport</span></span>|<span data-ttu-id="047d2-131">HTTP tra il client e il servizio del sottosistema attendibile.</span><span class="sxs-lookup"><span data-stu-id="047d2-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="047d2-132">NET.TCP tra il servizio del sottosistema attendibile e la risorsa (servizio back-end).</span><span class="sxs-lookup"><span data-stu-id="047d2-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
+|<span data-ttu-id="047d2-133">Binding</span><span class="sxs-lookup"><span data-stu-id="047d2-133">Binding</span></span>|<span data-ttu-id="047d2-134"><xref:System.ServiceModel.WSHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="047d2-134"><xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
   
-## Risorsa \(servizio back\-end\)  
+## <a name="resource-back-end-service"></a><span data-ttu-id="047d2-135">Risorsa (servizio back-end)</span><span class="sxs-lookup"><span data-stu-id="047d2-135">Resource (Back-End Service)</span></span>  
   
-### Codice  
- Nel codice seguente viene illustrato come creare un endpoint del servizio per la risorsa che utilizza la protezione del trasporto sul protocollo di trasporto TCP.  
+### <a name="code"></a><span data-ttu-id="047d2-136">Codice</span><span class="sxs-lookup"><span data-stu-id="047d2-136">Code</span></span>  
+ <span data-ttu-id="047d2-137">Nel codice seguente viene illustrato come creare un endpoint del servizio per la risorsa che utilizza la protezione del trasporto sul protocollo di trasporto TCP.</span><span class="sxs-lookup"><span data-stu-id="047d2-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### Configurazione  
- Nella configurazione seguente viene impostato lo stesso endpoint che utilizza la configurazione.  
+### <a name="configuration"></a><span data-ttu-id="047d2-138">Configurazione</span><span class="sxs-lookup"><span data-stu-id="047d2-138">Configuration</span></span>  
+ <span data-ttu-id="047d2-139">Nella configurazione seguente viene impostato lo stesso endpoint che utilizza la configurazione.</span><span class="sxs-lookup"><span data-stu-id="047d2-139">The following configuration sets up the same endpoint using configuration.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -91,23 +97,23 @@ Un client accede a uno o più servizi Web distribuiti in una rete.I servizi Web 
 </configuration>  
 ```  
   
-## Sottosistema attendibile  
+## <a name="trusted-subsystem"></a><span data-ttu-id="047d2-140">Sottosistema attendibile</span><span class="sxs-lookup"><span data-stu-id="047d2-140">Trusted Subsystem</span></span>  
   
-### Codice  
- Nel codice seguente viene illustrato come creare un endpoint del servizio per il sottosistema attendibile che utilizza la protezione del messaggio sul protocollo HTTP e un nome utente e una password per l'autenticazione.  
+### <a name="code"></a><span data-ttu-id="047d2-141">Codice</span><span class="sxs-lookup"><span data-stu-id="047d2-141">Code</span></span>  
+ <span data-ttu-id="047d2-142">Nel codice seguente viene illustrato come creare un endpoint del servizio per il sottosistema attendibile che utilizza la protezione del messaggio sul protocollo HTTP e un nome utente e una password per l'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="047d2-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
  [!code-vb[TrustedSubSystems#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#1)]  
   
- Nel codice seguente viene illustrato un servizio in un sottosistema attendibile che comunica con un servizio back\-end utilizzando la protezione del trasporto sul protocollo di trasporto TCP.  
+ <span data-ttu-id="047d2-143">Nel codice seguente viene illustrato un servizio in un sottosistema attendibile che comunica con un servizio back-end utilizzando la protezione del trasporto sul protocollo di trasporto TCP.</span><span class="sxs-lookup"><span data-stu-id="047d2-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### Configurazione  
- Nella configurazione seguente viene impostato lo stesso endpoint che utilizza la configurazione.Si notino le due associazioni: una protegge il servizio ospitato nel sottosistema attendibile e l'altra comunica tra il sottosistema attendibile e il servizio back\-end.  
+### <a name="configuration"></a><span data-ttu-id="047d2-144">Configurazione</span><span class="sxs-lookup"><span data-stu-id="047d2-144">Configuration</span></span>  
+ <span data-ttu-id="047d2-145">Nella configurazione seguente viene impostato lo stesso endpoint che utilizza la configurazione.</span><span class="sxs-lookup"><span data-stu-id="047d2-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="047d2-146">Si notino le due associazioni: una protegge il servizio ospitato nel sottosistema attendibile e l'altra comunica tra il sottosistema attendibile e il servizio back-end.</span><span class="sxs-lookup"><span data-stu-id="047d2-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -167,18 +173,18 @@ Un client accede a uno o più servizi Web distribuiti in una rete.I servizi Web 
 </configuration>  
 ```  
   
-## Client  
+## <a name="client"></a><span data-ttu-id="047d2-147">Client</span><span class="sxs-lookup"><span data-stu-id="047d2-147">Client</span></span>  
   
-### Codice  
- Nel codice seguente viene illustrato come creare il client che comunica con il sottosistema attendibile utilizzando la protezione del messaggio sul protocollo HTTP e un nome utente e una password per l'autenticazione.  
+### <a name="code"></a><span data-ttu-id="047d2-148">Codice</span><span class="sxs-lookup"><span data-stu-id="047d2-148">Code</span></span>  
+ <span data-ttu-id="047d2-149">Nel codice seguente viene illustrato come creare il client che comunica con il sottosistema attendibile utilizzando la protezione del messaggio sul protocollo HTTP e un nome utente e una password per l'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="047d2-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### Configurazione  
- Nel codice seguente viene configurato il client in modo che utilizzi la protezione del messaggio sul protocollo HTTP e un nome utente e una password per l'autenticazione.Il nome utente e la password possono essere specificati solo tramite codice \(non è configurabile\).  
+### <a name="configuration"></a><span data-ttu-id="047d2-150">Configurazione</span><span class="sxs-lookup"><span data-stu-id="047d2-150">Configuration</span></span>  
+ <span data-ttu-id="047d2-151">Nel codice seguente viene configurato il client in modo che utilizzi la protezione del messaggio sul protocollo HTTP e un nome utente e una password per l'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="047d2-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="047d2-152">Il nome utente e la password possono essere specificati solo tramite codice (non è configurabile).</span><span class="sxs-lookup"><span data-stu-id="047d2-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -214,6 +220,6 @@ Un client accede a uno o più servizi Web distribuiti in una rete.I servizi Web 
 </configuration>  
 ```  
   
-## Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Modello di sicurezza per Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="047d2-153">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="047d2-153">See Also</span></span>  
+ [<span data-ttu-id="047d2-154">Cenni preliminari sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="047d2-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="047d2-155">Modello di sicurezza per Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="047d2-155">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -5,45 +5,42 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6ec8d0a93354fcea17b27321d59174f2e53a47f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d9e4bdc26815feab7910e7518f7cd691a1f4dece
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="reflection-and-net-native"></a>Reflection e .NET Native
-In .NET Framework, lo sviluppo gestito supporta la metaprogrammazione attraverso l'API di reflection. La reflection consente di controllare gli oggetti in un'applicazione, chiamare metodi su oggetti individuati tramite ispezione, generare nuovi tipi in fase di esecuzione e supporta molti altri scenari di codice dinamico. Supporta anche la serializzazione e la deserializzazione, che consente di mantenere e successivamente ripristinare i valori dei campi di un oggetto. Tutti questi scenari richiedono che il compilatore JIT just-in-time di .NET Framework generi codice nativo basato sui metadati disponibili.  
+# <a name="reflection-and-net-native"></a><span data-ttu-id="a41cb-102">Reflection e .NET Native</span><span class="sxs-lookup"><span data-stu-id="a41cb-102">Reflection and .NET Native</span></span>
+<span data-ttu-id="a41cb-103">In .NET Framework, lo sviluppo gestito supporta la metaprogrammazione attraverso l'API di reflection.</span><span class="sxs-lookup"><span data-stu-id="a41cb-103">In the .NET Framework, managed development supports metaprogramming through the reflection API.</span></span> <span data-ttu-id="a41cb-104">La reflection consente di controllare gli oggetti in un'applicazione, chiamare metodi su oggetti individuati tramite ispezione, generare nuovi tipi in fase di esecuzione e supporta molti altri scenari di codice dinamico.</span><span class="sxs-lookup"><span data-stu-id="a41cb-104">Reflection allows you to inspect objects in an app, call methods on objects discovered through inspection, generate new types at run time, and supports many other dynamic code scenarios.</span></span> <span data-ttu-id="a41cb-105">Supporta anche la serializzazione e la deserializzazione, che consente di mantenere e successivamente ripristinare i valori dei campi di un oggetto.</span><span class="sxs-lookup"><span data-stu-id="a41cb-105">It also supports serialization and deserialization, which allows an object's field values to be persisted and later restored.</span></span> <span data-ttu-id="a41cb-106">Tutti questi scenari richiedono che il compilatore JIT just-in-time di .NET Framework generi codice nativo basato sui metadati disponibili.</span><span class="sxs-lookup"><span data-stu-id="a41cb-106">These scenarios all require the .NET Framework just-in-time (JIT) compiler to generate native code based on available metadata.</span></span>  
   
- Il runtime di [!INCLUDE[net_native](../../../includes/net-native-md.md)] non include un compilatore JIT. Di conseguenza, tutto il codice nativo necessario deve essere generato in anticipo. Viene usato un set di regole euristiche per determinare quale codice deve essere generato, ma tale euristica non può coprire tutti i possibili scenari di metaprogrammazione.  È quindi necessario fornire suggerimenti per questi scenari di metaprogrammazione usando [direttive di runtime](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Se il codice di implementazione o i metadati necessari non sono disponibili in fase di esecuzione, l'app genera un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) o [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md). Sono disponibili due strumenti di risoluzione dei problemi che genereranno la voce appropriata per il file di direttive di runtime che elimina l'eccezione:  
+ <span data-ttu-id="a41cb-107">Il runtime di [!INCLUDE[net_native](../../../includes/net-native-md.md)] non include un compilatore JIT.</span><span class="sxs-lookup"><span data-stu-id="a41cb-107">The [!INCLUDE[net_native](../../../includes/net-native-md.md)] runtime doesn't include a JIT compiler.</span></span> <span data-ttu-id="a41cb-108">Di conseguenza, tutto il codice nativo necessario deve essere generato in anticipo.</span><span class="sxs-lookup"><span data-stu-id="a41cb-108">As a result, all necessary native code must be generated in advance.</span></span> <span data-ttu-id="a41cb-109">Viene usato un set di regole euristiche per determinare quale codice deve essere generato, ma tale euristica non può coprire tutti i possibili scenari di metaprogrammazione.</span><span class="sxs-lookup"><span data-stu-id="a41cb-109">A set of heuristics is used to determine what code should be generated, but these heuristics cannot cover all possible metaprogramming scenarios.</span></span>  <span data-ttu-id="a41cb-110">È quindi necessario fornire suggerimenti per questi scenari di metaprogrammazione usando [direttive di runtime](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span><span class="sxs-lookup"><span data-stu-id="a41cb-110">Therefore, you must provide hints for these metaprogramming scenarios by using [runtime directives](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span> <span data-ttu-id="a41cb-111">Se il codice di implementazione o i metadati necessari non sono disponibili in fase di esecuzione, l'app genera un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) o [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="a41cb-111">If the necessary metadata or implementation code is not available at runtime, your app throws a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md), or [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) exception.</span></span> <span data-ttu-id="a41cb-112">Sono disponibili due strumenti di risoluzione dei problemi che genereranno la voce appropriata per il file di direttive di runtime che elimina l'eccezione:</span><span class="sxs-lookup"><span data-stu-id="a41cb-112">Two troubleshooters are available that will generate the appropriate entry for your runtime directives file that eliminates the exception:</span></span>  
   
--   Lo [strumento di risoluzione dei problemi MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) per i tipi.  
+-   <span data-ttu-id="a41cb-113">Lo [strumento di risoluzione dei problemi MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) per i tipi.</span><span class="sxs-lookup"><span data-stu-id="a41cb-113">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/type.html) for types.</span></span>  
   
--   Lo [strumento di risoluzione dei problemi MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) per i metodi.  
+-   <span data-ttu-id="a41cb-114">Lo [strumento di risoluzione dei problemi MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) per i metodi.</span><span class="sxs-lookup"><span data-stu-id="a41cb-114">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/method.html) for methods.</span></span>  
   
 > [!NOTE]
->  Per una panoramica del processo di compilazione di .NET Native e informazioni di base sui motivi per cui è necessario un file di direttive di runtime, vedere [Compilazione e .NET Native](../../../docs/framework/net-native/net-native-and-compilation.md).  
+>  <span data-ttu-id="a41cb-115">Per una panoramica del processo di compilazione di .NET Native e informazioni di base sui motivi per cui è necessario un file di direttive di runtime, vedere [Compilazione e .NET Native](../../../docs/framework/net-native/net-native-and-compilation.md).</span><span class="sxs-lookup"><span data-stu-id="a41cb-115">For an overview of the .NET Native compilation process that provides background on why a runtime directives file is needed, see [.NET Native and Compilation](../../../docs/framework/net-native/net-native-and-compilation.md).</span></span>  
   
- Inoltre, [!INCLUDE[net_native](../../../includes/net-native-md.md)] non consente di effettuare la reflection di membri privati della libreria di classi .NET Framework. Ad esempio, una chiamata alla proprietà <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=fullName> per recuperare i campi di un tipo libreria di classi di .NET Framework restituisce solo campi pubblici o protetti.  
+ <span data-ttu-id="a41cb-116">Inoltre, [!INCLUDE[net_native](../../../includes/net-native-md.md)] non consente di effettuare la reflection di membri privati della libreria di classi .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a41cb-116">In addition, [!INCLUDE[net_native](../../../includes/net-native-md.md)] doesn't allow you to reflect over private members of the .NET Framework class library.</span></span> <span data-ttu-id="a41cb-117">Ad esempio, una chiamata alla proprietà <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> per recuperare i campi di un tipo libreria di classi di .NET Framework restituisce solo campi pubblici o protetti.</span><span class="sxs-lookup"><span data-stu-id="a41cb-117">For example, a call to the <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> property to retrieve the fields of a .NET Framework class library type returns only public or protected fields.</span></span>  
   
- Negli argomenti seguenti sono riportate le nozioni e la documentazione necessarie a supportare la reflection e la serializzazione nelle applicazioni di riferimento:  
+ <span data-ttu-id="a41cb-118">Negli argomenti seguenti sono riportate le nozioni e la documentazione necessarie a supportare la reflection e la serializzazione nelle applicazioni di riferimento:</span><span class="sxs-lookup"><span data-stu-id="a41cb-118">The following topics provide the conceptual and reference documentation that you need to support reflection and serialization in your apps:</span></span>  
   
--   [API basate sulla reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+-   [<span data-ttu-id="a41cb-119">API basate sulla reflection</span><span class="sxs-lookup"><span data-stu-id="a41cb-119">APIs That Rely on Reflection</span></span>](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
--   [Riferimento all'API Reflection](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
+-   [<span data-ttu-id="a41cb-120">Riferimento all'API Reflection</span><span class="sxs-lookup"><span data-stu-id="a41cb-120">Reflection API Reference</span></span>](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+-   [<span data-ttu-id="a41cb-121">Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="a41cb-121">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilazione di app con .NET Native](../../../docs/framework/net-native/index.md)   
- [.NET Native e compilazione](../../../docs/framework/net-native/net-native-and-compilation.md)
-
+## <a name="see-also"></a><span data-ttu-id="a41cb-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a41cb-122">See Also</span></span>  
+ [<span data-ttu-id="a41cb-123">Compilazione di app con .NET Native</span><span class="sxs-lookup"><span data-stu-id="a41cb-123">Compiling Apps with .NET Native</span></span>](../../../docs/framework/net-native/index.md)  
+ [<span data-ttu-id="a41cb-124">.NET Native e compilazione</span><span class="sxs-lookup"><span data-stu-id="a41cb-124">.NET Native and Compilation</span></span>](../../../docs/framework/net-native/net-native-and-compilation.md)

@@ -1,5 +1,5 @@
 ---
-title: Criteri di cache basati sulla posizione
+title: criteri di cache basati sulla posizione
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -26,45 +21,43 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a5b4bf67db3fcbb70d2a93f35976d8d9b4b3a028
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="location-based-cache-policies"></a>Criteri di cache basati sulla posizione
-I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci memorizzate nella cache valide in base alla posizione da cui è possibile ricavare la risorsa richiesta. Una risorsa memorizzata nella cache è valida se l'uso non viola i requisiti di riconvalida specificati dal server. I criteri di cache basati sulla posizione vengono creati a livello di codice usando un costruttore di classe <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. Il tipo dei criteri basati sulla posizione viene passato al costruttore usando un valore di enumerazione <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Per esempi di codice che creano criteri di cache basati sulla posizione, vedere [Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Le sezioni seguenti illustrano i diversi tipi di criteri di cache basati sulla posizione per le risorse Hypertext Transfer Protocol (HTTP e HTTPS).  
+# <a name="location-based-cache-policies"></a><span data-ttu-id="9b829-102">criteri di cache basati sulla posizione</span><span class="sxs-lookup"><span data-stu-id="9b829-102">Location-Based Cache Policies</span></span>
+<span data-ttu-id="9b829-103">I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci memorizzate nella cache valide in base alla posizione da cui è possibile ricavare la risorsa richiesta.</span><span class="sxs-lookup"><span data-stu-id="9b829-103">A location-based cache policy defines the freshness of valid cached entries based on where the requested resource can be taken from.</span></span> <span data-ttu-id="9b829-104">Una risorsa memorizzata nella cache è valida se l'uso non viola i requisiti di riconvalida specificati dal server.</span><span class="sxs-lookup"><span data-stu-id="9b829-104">A cached resource is valid if using it does not does not violate server-specified revalidation requirements.</span></span> <span data-ttu-id="9b829-105">I criteri di cache basati sulla posizione vengono creati a livello di codice usando un costruttore di classe <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>.</span><span class="sxs-lookup"><span data-stu-id="9b829-105">A location-based cache policy is created programmatically by using a <xref:System.Net.Cache.RequestCachePolicy> or <xref:System.Net.Cache.HttpRequestCachePolicy> class constructor.</span></span> <span data-ttu-id="9b829-106">Il tipo dei criteri basati sulla posizione viene passato al costruttore usando un valore di enumerazione <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>.</span><span class="sxs-lookup"><span data-stu-id="9b829-106">The type of location-based policy is passed to the constructor using a <xref:System.Net.Cache.RequestCacheLevel> or <xref:System.Net.Cache.HttpRequestCacheLevel> enumeration value.</span></span> <span data-ttu-id="9b829-107">Per esempi di codice che creano criteri di cache basati sulla posizione, vedere [Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md).</span><span class="sxs-lookup"><span data-stu-id="9b829-107">For code examples that create location-based cache policies, see [How to: Set a Location-Based Cache Policy for an Application](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md).</span></span> <span data-ttu-id="9b829-108">Le sezioni seguenti illustrano i diversi tipi di criteri di cache basati sulla posizione per le risorse Hypertext Transfer Protocol (HTTP e HTTPS).</span><span class="sxs-lookup"><span data-stu-id="9b829-108">The following sections explain each type of location-based cache policy for Hypertext Transfer Protocol (http and https) resources.</span></span>  
   
-## <a name="cache-if-available-policy"></a>CacheIfAvailable (criterio)  
- Se una risorsa richiesta valida è nella cache locale, viene usata la risorsa memorizzata nella cache. In caso contrario, la richiesta per la risorsa viene inviata al server. Se la risorsa richiesta è disponibile in qualsiasi cache tra il client e il server, la richiesta può essere soddisfatta da una cache intermedia.  
+## <a name="cache-if-available-policy"></a><span data-ttu-id="9b829-109">CacheIfAvailable (criterio)</span><span class="sxs-lookup"><span data-stu-id="9b829-109">Cache If Available Policy</span></span>  
+ <span data-ttu-id="9b829-110">Se una risorsa richiesta valida è nella cache locale, viene usata la risorsa memorizzata nella cache. In caso contrario, la richiesta per la risorsa viene inviata al server.</span><span class="sxs-lookup"><span data-stu-id="9b829-110">If a valid requested resource is in the local cache, the cached resource is used; otherwise, the request for the resource is sent to the server.</span></span> <span data-ttu-id="9b829-111">Se la risorsa richiesta è disponibile in qualsiasi cache tra il client e il server, la richiesta può essere soddisfatta da una cache intermedia.</span><span class="sxs-lookup"><span data-stu-id="9b829-111">If the requested resource is available in any cache between the client and the server, the request can be satisfied by an intermediate cache.</span></span>  
   
-## <a name="cache-only-policy"></a>CacheOnly (criterio)  
- Se una risorsa richiesta valida è nella cache locale, viene usata la risorsa memorizzata nella cache. Quando viene specificato questo livello di criteri di cache, viene generata un'eccezione <xref:System.Net.WebException> se l'elemento non è presente nella cache locale.  
+## <a name="cache-only-policy"></a><span data-ttu-id="9b829-112">CacheOnly (criterio)</span><span class="sxs-lookup"><span data-stu-id="9b829-112">Cache Only Policy</span></span>  
+ <span data-ttu-id="9b829-113">Se una risorsa richiesta valida è nella cache locale, viene usata la risorsa memorizzata nella cache.</span><span class="sxs-lookup"><span data-stu-id="9b829-113">If a valid requested resource is in the local cache, the cached resource is used.</span></span> <span data-ttu-id="9b829-114">Quando viene specificato questo livello di criteri di cache, viene generata un'eccezione <xref:System.Net.WebException> se l'elemento non è presente nella cache locale.</span><span class="sxs-lookup"><span data-stu-id="9b829-114">When this cache policy level is specified, a <xref:System.Net.WebException> exception is thrown if the item is not in the local cache.</span></span>  
   
-## <a name="cache-or-next-cache-only-policy"></a>CacheOrNextCacheOnly (criterio)  
- Se una risorsa richiesta valida è nella cache locale o in una cache intermedia nella rete locale, viene usata la risorsa memorizzata nella cache. In caso contrario, viene generata un'eccezione <xref:System.Net.WebException>. Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando la direttiva di controllo della cache only-if-cached.  
+## <a name="cache-or-next-cache-only-policy"></a><span data-ttu-id="9b829-115">CacheOrNextCacheOnly (criterio)</span><span class="sxs-lookup"><span data-stu-id="9b829-115">Cache Or Next Cache Only Policy</span></span>  
+ <span data-ttu-id="9b829-116">Se una risorsa richiesta valida è nella cache locale o in una cache intermedia nella rete locale, viene usata la risorsa memorizzata nella cache.</span><span class="sxs-lookup"><span data-stu-id="9b829-116">If a valid requested resource is in the local cache or an intermediate cache on the local area network, the cached resource is used.</span></span> <span data-ttu-id="9b829-117">In caso contrario, viene generata un'eccezione <xref:System.Net.WebException>.</span><span class="sxs-lookup"><span data-stu-id="9b829-117">Otherwise, a <xref:System.Net.WebException> exception is thrown.</span></span> <span data-ttu-id="9b829-118">Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando la direttiva di controllo della cache only-if-cached.</span><span class="sxs-lookup"><span data-stu-id="9b829-118">In the HTTP caching protocol, this is achieved using the only-if-cached cache control directive.</span></span>  
   
-## <a name="no-cache-no-store-policy"></a>NoCacheNoStore (criterio)  
- Una risorsa richiesta non viene mai usata dalla cache né inserita nella cache. Se una risorsa richiesta è presente nella cache locale, viene rimossa. Questo livello di criteri indica alle cache intermedie di rimuovere la risorsa. Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando la direttiva di controllo della cache no-store.  
+## <a name="no-cache-no-store-policy"></a><span data-ttu-id="9b829-119">NoCacheNoStore (criterio)</span><span class="sxs-lookup"><span data-stu-id="9b829-119">No Cache No Store Policy</span></span>  
+ <span data-ttu-id="9b829-120">Una risorsa richiesta non viene mai usata dalla cache né inserita nella cache.</span><span class="sxs-lookup"><span data-stu-id="9b829-120">A requested resource is never used from any cache and is never placed in any cache.</span></span> <span data-ttu-id="9b829-121">Se una risorsa richiesta è presente nella cache locale, viene rimossa.</span><span class="sxs-lookup"><span data-stu-id="9b829-121">If a requested resource is present in the local cache, it is removed.</span></span> <span data-ttu-id="9b829-122">Questo livello di criteri indica alle cache intermedie di rimuovere la risorsa.</span><span class="sxs-lookup"><span data-stu-id="9b829-122">This policy level indicates to intermediate caches that they should also remove the resource.</span></span> <span data-ttu-id="9b829-123">Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando la direttiva di controllo della cache no-store.</span><span class="sxs-lookup"><span data-stu-id="9b829-123">In the HTTP caching protocol, this is achieved using the no-store cache control directive.</span></span>  
   
-## <a name="refresh-policy"></a>Refresh (criterio)  
- Una risorsa richiesta può essere usata se viene ottenuta dal server o trovata in una cache diversa dalla cache locale. Prima che la richiesta possa essere soddisfatta da una cache intermedia, tale cache deve riconvalidare la voce memorizzata nella cache con il server. Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando la direttiva di controllo della cache max-age = 0 e l'intestazione Pragma no-cache.  
+## <a name="refresh-policy"></a><span data-ttu-id="9b829-124">Refresh (criterio)</span><span class="sxs-lookup"><span data-stu-id="9b829-124">Refresh Policy</span></span>  
+ <span data-ttu-id="9b829-125">Una risorsa richiesta può essere usata se viene ottenuta dal server o trovata in una cache diversa dalla cache locale.</span><span class="sxs-lookup"><span data-stu-id="9b829-125">A requested resource can be used if it is obtained from the server or found in a cache other than the local cache.</span></span> <span data-ttu-id="9b829-126">Prima che la richiesta possa essere soddisfatta da una cache intermedia, tale cache deve riconvalidare la voce memorizzata nella cache con il server.</span><span class="sxs-lookup"><span data-stu-id="9b829-126">Before the request can be satisfied by an intermediate cache, that cache must revalidate its cached entry with the server.</span></span> <span data-ttu-id="9b829-127">Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando la direttiva di controllo della cache max-age = 0 e l'intestazione Pragma no-cache.</span><span class="sxs-lookup"><span data-stu-id="9b829-127">In the HTTP caching protocol, this is achieved using the max-age = 0 cache control directive and the no-cache Pragma header.</span></span>  
   
-## <a name="reload-policy"></a>reload (criterio)  
- Le risorse richieste devono essere ottenute dal server. La risposta può essere salvata nella cache locale. Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando la direttiva di controllo della cache no-cache e l'intestazione Pragma no-cache.  
+## <a name="reload-policy"></a><span data-ttu-id="9b829-128">reload (criterio)</span><span class="sxs-lookup"><span data-stu-id="9b829-128">Reload Policy</span></span>  
+ <span data-ttu-id="9b829-129">Le risorse richieste devono essere ottenute dal server.</span><span class="sxs-lookup"><span data-stu-id="9b829-129">Requested resources must be obtained from the server.</span></span> <span data-ttu-id="9b829-130">La risposta può essere salvata nella cache locale.</span><span class="sxs-lookup"><span data-stu-id="9b829-130">The response might be saved in the local cache.</span></span> <span data-ttu-id="9b829-131">Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando la direttiva di controllo della cache no-cache e l'intestazione Pragma no-cache.</span><span class="sxs-lookup"><span data-stu-id="9b829-131">In the HTTP caching protocol, this is achieved using the no-cache cache control directive and the no-cache Pragma header.</span></span>  
   
-## <a name="revalidate-policy"></a>Revalidate (criterio)  
- Confronta la copia della risorsa nella cache con la copia nel server. Se la copia nel server è più recente, viene usata per soddisfare la richiesta e la copia nella cache viene sostituita. Se la copia nella cache corrisponde alla copia nel server, viene usata la copia memorizzata nella cache. Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando una richiesta condizionale.  
+## <a name="revalidate-policy"></a><span data-ttu-id="9b829-132">Revalidate (criterio)</span><span class="sxs-lookup"><span data-stu-id="9b829-132">Revalidate Policy</span></span>  
+ <span data-ttu-id="9b829-133">Confronta la copia della risorsa nella cache con la copia nel server.</span><span class="sxs-lookup"><span data-stu-id="9b829-133">Compares the copy of the resource in the cache with the copy on the server.</span></span> <span data-ttu-id="9b829-134">Se la copia nel server è più recente, viene usata per soddisfare la richiesta e la copia nella cache viene sostituita.</span><span class="sxs-lookup"><span data-stu-id="9b829-134">If the copy on the server is newer, it is used to satisfy the request and replaces the copy in the cache.</span></span> <span data-ttu-id="9b829-135">Se la copia nella cache corrisponde alla copia nel server, viene usata la copia memorizzata nella cache.</span><span class="sxs-lookup"><span data-stu-id="9b829-135">If the copy in the cache is the same as the server copy, the cached copy is used.</span></span> <span data-ttu-id="9b829-136">Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando una richiesta condizionale.</span><span class="sxs-lookup"><span data-stu-id="9b829-136">In the HTTP caching protocol, this is achieved using a conditional request.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)   
- [Criteri di cache basati sul tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
- [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="9b829-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9b829-137">See Also</span></span>  
+ [<span data-ttu-id="9b829-138">Gestione della cache per le applicazioni di rete</span><span class="sxs-lookup"><span data-stu-id="9b829-138">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="9b829-139">Criteri di cache</span><span class="sxs-lookup"><span data-stu-id="9b829-139">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="9b829-140">Criteri di cache basati sull'ora</span><span class="sxs-lookup"><span data-stu-id="9b829-140">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="9b829-141">Configurazione della memorizzazione nella cache per applicazioni di rete</span><span class="sxs-lookup"><span data-stu-id="9b829-141">Configuring Caching in Network Applications</span></span>](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [<span data-ttu-id="9b829-142">Elemento \<requestCaching> (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="9b829-142">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

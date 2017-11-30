@@ -1,58 +1,41 @@
 ---
-title: Informazioni di riferimento di .NET framework (Visual Basic) | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Informazioni di riferimento su .NET Framework (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- language reference, .NET Framework
-- .NET Framework, reference
-- .NET Framework class library, reference information
+- language reference [Visual Basic], .NET Framework
+- .NET Framework [Visual Basic], reference
+- .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df8355ec3ca2bdedf3d483ee70be7598a5a08e33
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: c5c2824b3af8753dbb90577fe47cf63d2dc793ff
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# <a name="net-framework-reference-information-visual-basic"></a>Informazioni di riferimento su .NET Framework (Visual Basic)
-In questo argomento vengono forniti collegamenti a informazioni su come lavorare con le [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] libreria di classi.  
+# <a name="net-framework-reference-information-visual-basic"></a><span data-ttu-id="15d8f-102">Informazioni di riferimento su .NET Framework (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15d8f-102">.NET Framework Reference Information (Visual Basic)</span></span>
+<span data-ttu-id="15d8f-103">In questo argomento vengono forniti collegamenti a informazioni su come lavorare con i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] libreria di classi.</span><span class="sxs-lookup"><span data-stu-id="15d8f-103">This topic provides links to information about how to work with the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class library.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Introduzione](http://msdn.microsoft.com/library/c693fd34-88fe-4d90-b332-19eeadf3b7e7)  
- Offre una panoramica completa di .NET Framework, oltre ai collegamenti a risorse aggiuntive.  
+## <a name="related-sections"></a><span data-ttu-id="15d8f-104">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="15d8f-104">Related Sections</span></span>  
+ [<span data-ttu-id="15d8f-105">Introduzione</span><span class="sxs-lookup"><span data-stu-id="15d8f-105">Getting Started</span></span>](../../framework/get-started/index.md)  
+ <span data-ttu-id="15d8f-106">Offre una panoramica completa di .NET Framework, oltre ai collegamenti a risorse aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="15d8f-106">Provides a comprehensive overview of the .NET Framework and links to additional resources.</span></span>  
   
- [Panoramica della libreria di classi](https://msdn.microsoft.com/library/hfa3fa08)  
- Introduce le classi, interfacce e tipi di valore che consentono di velocizzare e ottimizzare il processo di sviluppo e forniscono l'accesso alle funzionalità del sistema.  
+ [<span data-ttu-id="15d8f-107">Panoramica della libreria di classi</span><span class="sxs-lookup"><span data-stu-id="15d8f-107">Class Library Overview</span></span>](https://msdn.microsoft.com/library/hfa3fa08)  
+ <span data-ttu-id="15d8f-108">Introduce le classi, interfacce e tipi di valore che consentono di velocizzare e ottimizzare il processo di sviluppo e fornire l'accesso alle funzionalità del sistema.</span><span class="sxs-lookup"><span data-stu-id="15d8f-108">Introduces the classes, interfaces, and value types that help expedite and optimize the development process and provide access to system functionality.</span></span>  
   
- [Guida di sviluppo](https://msdn.microsoft.com/library/hh156542)  
- Fornisce una Guida per tutte le attività e le aree principali per lo sviluppo di applicazioni, inclusa la creazione, configurazione, debug, la protezione e la distribuzione dell'applicazione. In questo argomento fornisce anche informazioni dinamiche programmazione, interoperabilità, estendibilità, gestione della memoria e threading.  
+ [<span data-ttu-id="15d8f-109">Guida di sviluppo</span><span class="sxs-lookup"><span data-stu-id="15d8f-109">Development Guide</span></span>](https://msdn.microsoft.com/library/hh156542)  
+ <span data-ttu-id="15d8f-110">Fornisce una Guida per tutte le aree principali e attività per lo sviluppo di applicazioni, incluse la creazione, configurazione, debug, la protezione e la distribuzione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="15d8f-110">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application.</span></span> <span data-ttu-id="15d8f-111">In questo argomento fornisce anche informazioni dinamiche programmazione, interoperabilità, estendibilità, gestione della memoria e threading.</span><span class="sxs-lookup"><span data-stu-id="15d8f-111">This topic also provides information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  
   
- [Strumenti](https://msdn.microsoft.com/library/d9kh6s92)  
- Vengono descritti gli strumenti che è possibile utilizzare per sviluppare, configurare e distribuire applicazioni utilizzando le tecnologie .NET Framework.  
+ [<span data-ttu-id="15d8f-112">Strumenti</span><span class="sxs-lookup"><span data-stu-id="15d8f-112">Tools</span></span>](https://msdn.microsoft.com/library/d9kh6s92)  
+ <span data-ttu-id="15d8f-113">Vengono descritti gli strumenti che è possibile utilizzare per sviluppare, configurare e distribuire applicazioni tramite le tecnologie .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="15d8f-113">Describes the tools that you can use to develop, configure, and deploy applications by using .NET Framework technologies.</span></span>  
   
- [Esempi di .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
- Fornisce collegamenti alle applicazioni di esempio che illustrano le tecnologie .NET Framework.  
+ [<span data-ttu-id="15d8f-114">Esempi di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="15d8f-114">.NET Framework Samples</span></span>](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ <span data-ttu-id="15d8f-115">Vengono forniti collegamenti ad applicazioni di esempio che illustrano le tecnologie .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="15d8f-115">Provides links to sample applications that demonstrate .NET Framework technologies.</span></span>  
   
- [Libreria di classi .NET framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
- Vengono fornite sintassi, esempi di codice e informazioni correlate per ogni classe negli spazi dei nomi .NET Framework.
+ [<span data-ttu-id="15d8f-116">Libreria di classi .NET Framework</span><span class="sxs-lookup"><span data-stu-id="15d8f-116">.NET Framework Class Library</span></span>](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ <span data-ttu-id="15d8f-117">Fornisce la sintassi, esempi di codice e informazioni correlate per ogni classe negli spazi dei nomi .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="15d8f-117">Provides syntax, code examples, and related information for each class in the .NET Framework namespaces.</span></span>

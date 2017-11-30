@@ -1,99 +1,102 @@
 ---
-title: "Endpoint: indirizzi, associazioni e contratti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "endpoint [WCF]"
-  - "WCF [WCF], endpoint"
-  - "Windows Communication Foundation [WCF], endpoint"
+title: 'Endpoint: indirizzi, associazioni e contratti'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- endpoints [WCF]
+- Windows Communication Foundation [WCF], endpoints
+- WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c1ee80307e0db82f4744970844754a910e81ca3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Endpoint: indirizzi, associazioni e contratti
-La comunicazione con un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] si verifica interamente tramite gli *endpoint* del servizio.Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="endpoints-addresses-bindings-and-contracts"></a><span data-ttu-id="37537-102">Endpoint: indirizzi, associazioni e contratti</span><span class="sxs-lookup"><span data-stu-id="37537-102">Endpoints: Addresses, Bindings, and Contracts</span></span>
+<span data-ttu-id="37537-103">Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servizio avviene tramite il *endpoint* del servizio.</span><span class="sxs-lookup"><span data-stu-id="37537-103">All communication with a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="37537-104">Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="37537-104">Endpoints provide clients access to the functionality offered by a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- Ogni endpoint è costituito da quattro proprietà:  
+ <span data-ttu-id="37537-105">Ogni endpoint è costituito da quattro proprietà:</span><span class="sxs-lookup"><span data-stu-id="37537-105">Each endpoint consists of four properties:</span></span>  
   
--   Un indirizzo che indica dove si trova l'endpoint.  
+-   <span data-ttu-id="37537-106">Un indirizzo che indica dove si trova l'endpoint.</span><span class="sxs-lookup"><span data-stu-id="37537-106">An address that indicates where the endpoint can be found.</span></span>  
   
--   Un'associazione che specifica in che modo un client può comunicare con l'endpoint.  
+-   <span data-ttu-id="37537-107">Un'associazione che specifica in che modo un client può comunicare con l'endpoint.</span><span class="sxs-lookup"><span data-stu-id="37537-107">A binding that specifies how a client can communicate with the endpoint.</span></span>  
   
--   Un contratto che identifica le operazioni disponibili.  
+-   <span data-ttu-id="37537-108">Un contratto che identifica le operazioni disponibili.</span><span class="sxs-lookup"><span data-stu-id="37537-108">A contract that identifies the operations available.</span></span>  
   
--   Un set di comportamenti che specificano dettagli di implementazione locali dell'endpoint.  
+-   <span data-ttu-id="37537-109">Un set di comportamenti che specificano dettagli di implementazione locali dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="37537-109">A set of behaviors that specify local implementation details of the endpoint.</span></span>  
   
- In questo argomento viene illustrata la struttura di un endpoint e viene spiegato come tale struttura viene rappresentata nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="37537-110">In questo argomento viene illustrata la struttura di un endpoint e viene spiegato come tale struttura viene rappresentata nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="37537-110">This topic discusses this endpoint structure and explains how it is represented in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] object model.</span></span>  
   
-## Struttura di un endpoint  
- Ogni endpoint è costituito dagli elementi seguenti:  
+## <a name="the-structure-of-an-endpoint"></a><span data-ttu-id="37537-111">Struttura di un endpoint</span><span class="sxs-lookup"><span data-stu-id="37537-111">The Structure of an Endpoint</span></span>  
+ <span data-ttu-id="37537-112">Ogni endpoint è costituito dagli elementi seguenti:</span><span class="sxs-lookup"><span data-stu-id="37537-112">Each endpoint consists of the following:</span></span>  
   
--   Indirizzo: l'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio.Nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'indirizzo è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>.Una classe <xref:System.ServiceModel.EndpointAddress> contiene:  
+-   <span data-ttu-id="37537-113">Indirizzo: l'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="37537-113">Address: The address uniquely identifies the endpoint and tells potential consumers of the service where it is located.</span></span> <span data-ttu-id="37537-114">Nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'indirizzo è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>.</span><span class="sxs-lookup"><span data-stu-id="37537-114">It is represented in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] object model by the <xref:System.ServiceModel.EndpointAddress> class.</span></span> <span data-ttu-id="37537-115">Una classe <xref:System.ServiceModel.EndpointAddress> contiene:</span><span class="sxs-lookup"><span data-stu-id="37537-115">An <xref:System.ServiceModel.EndpointAddress> class contains:</span></span>  
   
-    -   Una proprietà <xref:System.ServiceModel.EndpointAddress.Uri%2A>, che rappresenta l'indirizzo del servizio.  
+    -   <span data-ttu-id="37537-116">Una proprietà <xref:System.ServiceModel.EndpointAddress.Uri%2A>, che rappresenta l'indirizzo del servizio.</span><span class="sxs-lookup"><span data-stu-id="37537-116">A <xref:System.ServiceModel.EndpointAddress.Uri%2A> property, which represents the address of the service.</span></span>  
   
-    -   Una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio e una raccolta di intestazioni di messaggio facoltative.Le intestazioni di messaggio facoltative vengono utilizzate per fornire ulteriori informazioni di indirizzamento più dettagliate, per identificare o interagire con l'endpoint.  
+    -   <span data-ttu-id="37537-117">Una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio e una raccolta di intestazioni di messaggio facoltative.</span><span class="sxs-lookup"><span data-stu-id="37537-117">An <xref:System.ServiceModel.EndpointAddress.Identity%2A> property, which represents the security identity of the service and a collection of optional message headers.</span></span> <span data-ttu-id="37537-118">Le intestazioni di messaggio facoltative vengono utilizzate per fornire ulteriori informazioni di indirizzamento più dettagliate, per identificare o interagire con l'endpoint.</span><span class="sxs-lookup"><span data-stu-id="37537-118">The optional message headers are used to provide additional and more detailed addressing information to identify or interact with the endpoint.</span></span>  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Specifica di un indirizzo endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="37537-119">[Specificando un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="37537-119"> [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
--   Associazione: l'associazione specifica la modalità di comunicazione con l'endpoint,vale a dire:  
+-   <span data-ttu-id="37537-120">Associazione: l'associazione specifica la modalità di comunicazione con l'endpoint,</span><span class="sxs-lookup"><span data-stu-id="37537-120">Binding: The binding specifies how to communicate with the endpoint.</span></span> <span data-ttu-id="37537-121">vale a dire:</span><span class="sxs-lookup"><span data-stu-id="37537-121">This includes:</span></span>  
   
-    -   Il protocollo di trasporto da utilizzare \(ad esempio, TCP o HTTP\).  
+    -   <span data-ttu-id="37537-122">Il protocollo di trasporto da utilizzare (ad esempio, TCP o HTTP).</span><span class="sxs-lookup"><span data-stu-id="37537-122">The transport protocol to use (for example, TCP or HTTP).</span></span>  
   
-    -   La codifica da utilizzare per i messaggi \(ad esempio, testo o binaria\).  
+    -   <span data-ttu-id="37537-123">La codifica da utilizzare per i messaggi (ad esempio, testo o binaria).</span><span class="sxs-lookup"><span data-stu-id="37537-123">The encoding to use for the messages (for example, text or binary).</span></span>  
   
-    -   I necessari requisiti di sicurezza \(ad esempio, la protezione dei messaggi SSL o SOAP\).  
+    -   <span data-ttu-id="37537-124">I necessari requisiti di sicurezza (ad esempio, la protezione dei messaggi SSL o SOAP).</span><span class="sxs-lookup"><span data-stu-id="37537-124">The necessary security requirements (for example, SSL or SOAP message security).</span></span>  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Panoramica delle associazioni WCF](../../../../docs/framework/wcf/bindings-overview.md).Nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], un'associazione è rappresentata dalla classe astratta di base <xref:System.ServiceModel.Channels.Binding>.Per la maggior parte degli scenari, gli utenti possono utilizzare una delle associazioni fornite dal sistema.Per ulteriori informazioni, vedere [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="37537-125">[Panoramica delle associazioni WCF](../../../../docs/framework/wcf/bindings-overview.md).</span><span class="sxs-lookup"><span data-stu-id="37537-125"> [WCF Bindings Overview](../../../../docs/framework/wcf/bindings-overview.md).</span></span> <span data-ttu-id="37537-126">Nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], un'associazione è rappresentata dalla classe astratta di base <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="37537-126">A binding is represented in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] object model by the abstract base class <xref:System.ServiceModel.Channels.Binding>.</span></span> <span data-ttu-id="37537-127">Per la maggior parte degli scenari, gli utenti possono utilizzare una delle associazioni fornite dal sistema.</span><span class="sxs-lookup"><span data-stu-id="37537-127">For most scenarios, users can use one of the system-provided bindings.</span></span> <span data-ttu-id="37537-128">Per ulteriori informazioni, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="37537-128">For more information, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>  
   
--   Contratti: il contratto delinea la funzionalità che l'endpoint espone al client.Un contratto specifica:  
+-   <span data-ttu-id="37537-129">Contratti: il contratto delinea la funzionalità che l'endpoint espone al client.</span><span class="sxs-lookup"><span data-stu-id="37537-129">Contracts: The contract outlines what functionality the endpoint exposes to the client.</span></span> <span data-ttu-id="37537-130">Un contratto specifica:</span><span class="sxs-lookup"><span data-stu-id="37537-130">A contract specifies:</span></span>  
   
-    -   Quali operazioni possono essere chiamate da un client.  
+    -   <span data-ttu-id="37537-131">Quali operazioni possono essere chiamate da un client.</span><span class="sxs-lookup"><span data-stu-id="37537-131">What operations can be called by a client.</span></span>  
   
-    -   La forma del messaggio.  
+    -   <span data-ttu-id="37537-132">La forma del messaggio.</span><span class="sxs-lookup"><span data-stu-id="37537-132">The form of the message.</span></span>  
   
-    -   Il tipo di parametri di input o di dati necessario per chiamare l'operazione.  
+    -   <span data-ttu-id="37537-133">Il tipo di parametri di input o di dati necessario per chiamare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="37537-133">The type of input parameters or data required to call the operation.</span></span>  
   
-    -   Il tipo di elaborazione o di messaggio di risposta che il client può aspettarsi.  
+    -   <span data-ttu-id="37537-134">Il tipo di elaborazione o di messaggio di risposta che il client può aspettarsi.</span><span class="sxs-lookup"><span data-stu-id="37537-134">What type of processing or response message the client can expect.</span></span>  
   
-     Per ulteriori informazioni sulla definizione di un contratto, vedere [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md).  
+     <span data-ttu-id="37537-135">Per ulteriori informazioni sulla definizione di un contratto, vedere [progettazione contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="37537-135">For more information about defining a contract, see [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).</span></span>  
   
--   Comportamenti: è possibile utilizzare i comportamenti dell'endpoint per personalizzare il comportamento locale dell'endpoint del servizio.I comportamenti dell'endpoint realizzano questo obiettivo partecipando al processo di generazione di un runtime [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Un esempio di comportamento dell'endpoint è rappresentato dalla proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, che consente di specificare un indirizzo di ascolto diverso dall'indirizzo SOAP o WSDL \(Web Services Description Language\).[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   <span data-ttu-id="37537-136">Comportamenti: è possibile utilizzare i comportamenti dell'endpoint per personalizzare il comportamento locale dell'endpoint del servizio.</span><span class="sxs-lookup"><span data-stu-id="37537-136">Behaviors: You can use endpoint behaviors to customize the local behavior of the service endpoint.</span></span> <span data-ttu-id="37537-137">I comportamenti dell'endpoint realizzano questo obiettivo partecipando nel processo di compilazione un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]runtime.</span><span class="sxs-lookup"><span data-stu-id="37537-137">Endpoint behaviors achieve this by participating in the process of building a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]runtime.</span></span> <span data-ttu-id="37537-138">Un esempio di comportamento dell'endpoint è rappresentato dalla proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, che consente di specificare un indirizzo di ascolto diverso dall'indirizzo SOAP o WSDL (Web Services Description Language).</span><span class="sxs-lookup"><span data-stu-id="37537-138">An example of an endpoint behavior is the <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> property, which allows you to specify a different listening address than the SOAP or Web Services Description Language (WSDL) address.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="37537-139">[ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).</span><span class="sxs-lookup"><span data-stu-id="37537-139"> [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).</span></span>  
   
-## Definizione di endpoint  
- È possibile specificare l'endpoint di un servizio in modo imperativo, tramite codice, o in modo dichiarativo, tramite la configurazione.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: creare un endpoint di servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) e [Procedura: creare un endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+## <a name="defining-endpoints"></a><span data-ttu-id="37537-140">Definizione di endpoint</span><span class="sxs-lookup"><span data-stu-id="37537-140">Defining Endpoints</span></span>  
+ <span data-ttu-id="37537-141">È possibile specificare l'endpoint di un servizio in modo imperativo, tramite codice, o in modo dichiarativo, tramite la configurazione.</span><span class="sxs-lookup"><span data-stu-id="37537-141">You can specify the endpoint for a service either imperatively using code or declaratively through configuration.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="37537-142">[Procedura: creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) e [procedura: creare un Endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).</span><span class="sxs-lookup"><span data-stu-id="37537-142"> [How to: Create a Service Endpoint in Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) and [How to: Create a Service Endpoint in Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).</span></span>  
   
-## Argomenti della sezione  
- In questa sezione viene illustrato lo scopo di associazioni, endpoint e indirizzi; viene descritto come configurare un'associazione e un endpoint e viene dimostrato come utilizzare il comportamento `ClientVia` e la proprietà `ListenUri`.  
+## <a name="in-this-section"></a><span data-ttu-id="37537-143">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="37537-143">In This Section</span></span>  
+ <span data-ttu-id="37537-144">Contenuto della sezione viene illustrato lo scopo di associazioni, endpoint e indirizzi; viene descritto come configurare un'associazione e un endpoint e viene dimostrato come utilizzare il comportamento `ClientVia` e la proprietà `ListenUri`.</span><span class="sxs-lookup"><span data-stu-id="37537-144">This section explains the purpose of bindings, endpoints, and addresses; shows how to configure a binding and an endpoint; and demonstrates how to use the `ClientVia` behavior and `ListenUri` property.</span></span>  
   
- [Indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- Viene descritto come vengono indirizzati gli endpoint in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="37537-145">Indirizzi</span><span class="sxs-lookup"><span data-stu-id="37537-145">Addresses</span></span>](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
+ <span data-ttu-id="37537-146">Viene descritto come vengono indirizzati gli endpoint in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="37537-146">Describes how endpoints are addressed in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [Associazioni](../../../../docs/framework/wcf/feature-details/bindings.md)  
- Viene descritto come vengono utilizzate le associazioni per specificare i dettagli sul trasporto, la codifica e il protocollo necessari per consentire la comunicazione tra client e servizi.  
+ [<span data-ttu-id="37537-147">Associazioni</span><span class="sxs-lookup"><span data-stu-id="37537-147">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ <span data-ttu-id="37537-148">Viene descritto come vengono utilizzate le associazioni per specificare i dettagli sul trasporto, la codifica e il protocollo necessari per consentire la comunicazione tra client e servizi.</span><span class="sxs-lookup"><span data-stu-id="37537-148">Describes how bindings are used to specify the transport, encoding, and protocol details required for clients and services to communicate with each other.</span></span>  
   
- [Contratti](../../../../docs/framework/wcf/feature-details/contracts.md)  
- Viene descritto in che modo i contratti definiscono i metodi di un servizio.  
+ [<span data-ttu-id="37537-149">Contratti</span><span class="sxs-lookup"><span data-stu-id="37537-149">Contracts</span></span>](../../../../docs/framework/wcf/feature-details/contracts.md)  
+ <span data-ttu-id="37537-150">Viene descritto in che modo i contratti definiscono i metodi di un servizio.</span><span class="sxs-lookup"><span data-stu-id="37537-150">Describes how contracts define the methods of a service.</span></span>  
   
- [Procedura: creare un endpoint di servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- Viene descritto come creare un endpoint del servizio nella configurazione.  
+ [<span data-ttu-id="37537-151">Procedura: creare un Endpoint del servizio nella configurazione</span><span class="sxs-lookup"><span data-stu-id="37537-151">How to: Create a Service Endpoint in Configuration</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ <span data-ttu-id="37537-152">Viene descritto come creare un endpoint del servizio nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="37537-152">Describes how to create a service endpoint in configuration.</span></span>  
   
- [Procedura: creare un endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
- Viene descritto come creare un endpoint del servizio nel codice.  
+ [<span data-ttu-id="37537-153">Procedura: creare un Endpoint del servizio nel codice</span><span class="sxs-lookup"><span data-stu-id="37537-153">How to: Create a Service Endpoint in Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ <span data-ttu-id="37537-154">Viene descritto come creare un endpoint del servizio nel codice.</span><span class="sxs-lookup"><span data-stu-id="37537-154">Describes how to create a service endpoint in code.</span></span>  
   
- [Procedura: usare Svcutil.exe per convalidare il codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
- Viene descritto come rilevare errori in implementazioni e configurazioni del servizio senza ospitare il servizio, tramite lo strumento [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ [<span data-ttu-id="37537-155">Procedura: usare Svcutil.exe per convalidare il codice del servizio compilato</span><span class="sxs-lookup"><span data-stu-id="37537-155">How to: Use Svcutil.exe to Validate Compiled Service Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ <span data-ttu-id="37537-156">Viene descritto come individuare gli errori nelle configurazioni e le implementazioni del servizio senza ospitare il servizio utilizzando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="37537-156">Describes how to detect errors in service implementations and configurations without hosting the service using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>  
   
-## Vedere anche  
- [Configurazione dei servizi](../../../../docs/framework/wcf/configuring-services.md)   
- [Estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="37537-157">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="37537-157">See Also</span></span>  
+ [<span data-ttu-id="37537-158">Configurazione dei servizi</span><span class="sxs-lookup"><span data-stu-id="37537-158">Configuring Services</span></span>](../../../../docs/framework/wcf/configuring-services.md)  
+ [<span data-ttu-id="37537-159">Estensione delle associazioni</span><span class="sxs-lookup"><span data-stu-id="37537-159">Extending Bindings</span></span>](../../../../docs/framework/wcf/extending/extending-bindings.md)

@@ -1,25 +1,28 @@
 ---
-title: "Esempio di feed di diagnostica autonomo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esempio di feed di diagnostica autonomo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c95a2e1e1790633df77e7c4ecd6603e68321e478
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Esempio di feed di diagnostica autonomo
-Questo esempio dimostra come creare un feed in formato RSS o ATOM di diffusione con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  Si tratta di un programma "Hello World" di base che illustra le funzionalità di base del modello a oggetti e descrive come configurarlo in un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="stand-alone-diagnostics-feed-sample"></a><span data-ttu-id="6cdc8-102">Esempio di feed di diagnostica autonomo</span><span class="sxs-lookup"><span data-stu-id="6cdc8-102">Stand-Alone Diagnostics Feed Sample</span></span>
+<span data-ttu-id="6cdc8-103">Questo esempio dimostra come creare un feed in formato RSS o ATOM di diffusione con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6cdc8-103">This sample demonstrates how to create an RSS/Atom feed for syndication with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="6cdc8-104">Si tratta di un programma "Hello World" di base che illustra le funzionalità di base del modello a oggetti e descrive come configurarlo in un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6cdc8-104">It is a basic "Hello World" program that shows the basics of the object model and how to set it up on a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modella i feed di diffusione in forma di operazioni di servizio che restituiscono un tipo di dati speciale, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>.  Le istanze dell’elemento <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> possono serializzare un feed in entrambi i formati RSS 2.0 e ATOM, 1.0.  Nell'esempio di codice seguente viene illustrato il contratto usato.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="6cdc8-105"> modella i feed di diffusione in forma di operazioni di servizio che restituiscono un tipo di dati speciale, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-105"> models syndication feeds as service operations that return a special data type, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>.</span></span> <span data-ttu-id="6cdc8-106">Le istanze dell’elemento <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> possono serializzare un feed in entrambi i formati RSS 2.0 e ATOM, 1.0.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-106">Instances of <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> can serialize a feed into both the RSS 2.0 and Atom 1.0 formats.</span></span> <span data-ttu-id="6cdc8-107">Nell'esempio di codice seguente viene illustrato il contratto usato.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-107">The following sample code shows the contract used.</span></span>  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -39,9 +42,9 @@ Questo esempio dimostra come creare un feed in formato RSS o ATOM di diffusione 
     }  
 ```  
   
- L'operazione `GetProcesses` è annotata con l'attributo <xref:System.ServiceModel.Web.WebGetAttribute> che consente di controllare come [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] invia richieste HTTP GET alle operazioni di servizio e di specificare il formato dei messaggi inviati.  
+ <span data-ttu-id="6cdc8-108">L'operazione `GetProcesses` è annotata con l'attributo <xref:System.ServiceModel.Web.WebGetAttribute> che consente di controllare come [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] invia richieste HTTP GET alle operazioni di servizio e di specificare il formato dei messaggi inviati.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-108">The `GetProcesses` operation is annotated with the <xref:System.ServiceModel.Web.WebGetAttribute> attribute that enables you to control how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dispatches HTTP GET requests to service operations and specify the format of the messages sent.</span></span>  
   
- Come tutti i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i feed di diffusione possono essere indipendenti o ospitati in qualsiasi applicazione gestita.  Per funzionare correttamente, i servizi di diffusione richiedono un'associazione specifica \(<xref:System.ServiceModel.WebHttpBinding>\) e un comportamento dell'endpoint specifico \(<xref:System.ServiceModel.Description.WebHttpBehavior>\).  La nuova classe <xref:System.ServiceModel.Web.WebServiceHost> fornisce una API appropriata per la creazione degli endpoint senza configurazione specifica.  
+ <span data-ttu-id="6cdc8-109">Come tutti i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i feed di diffusione possono essere indipendenti o ospitati in qualsiasi applicazione gestita.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-109">Like any [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, syndication feeds can be self hosted in any managed application.</span></span> <span data-ttu-id="6cdc8-110">Per funzionare correttamente, i servizi di diffusione richiedono un'associazione specifica (<xref:System.ServiceModel.WebHttpBinding>) e un comportamento dell'endpoint specifico (<xref:System.ServiceModel.Description.WebHttpBehavior>).</span><span class="sxs-lookup"><span data-stu-id="6cdc8-110">Syndication services require a specific binding (the <xref:System.ServiceModel.WebHttpBinding>) and a specific endpoint behavior (the <xref:System.ServiceModel.Description.WebHttpBehavior>) to function correctly.</span></span> <span data-ttu-id="6cdc8-111">La nuova classe <xref:System.ServiceModel.Web.WebServiceHost> fornisce una API appropriata per la creazione degli endpoint senza configurazione specifica.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-111">The new <xref:System.ServiceModel.Web.WebServiceHost> class provides a convenient API for creating such endpoints without specific configuration.</span></span>  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -50,15 +53,15 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
             //using the proper binding (the WebHttpBinding) and endpoint behavior (the WebHttpBehavior)  
 ```  
   
- In alternativa, è possibile usare <xref:System.ServiceModel.Activation.WebServiceHostFactory> dall'interno di un file con estensione svc ospitato in IIS per fornire una funzionalità equivalente \(questa tecnica non viene dimostrata in questo codice di esempio\).  
+ <span data-ttu-id="6cdc8-112">In alternativa, è possibile usare <xref:System.ServiceModel.Activation.WebServiceHostFactory> dall'interno di un file con estensione svc ospitato in IIS per fornire una funzionalità equivalente (questa tecnica non viene dimostrata in questo codice di esempio).</span><span class="sxs-lookup"><span data-stu-id="6cdc8-112">Alternatively, you can use <xref:System.ServiceModel.Activation.WebServiceHostFactory> from within an IIS-hosted .svc file to provide equivalent functionality (this technique is not demonstrated in this sample code).</span></span>  
   
 ```  
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Dato che il servizio riceve richieste usando l’ HTTP GET standard, per accedere al servizio è possibile usare qualsiasi client che supporta il formato RSS o ATOM.  Ad esempio, è possibile visualizzare l'output di questo servizio visitando http:\/\/localhost:8000\/diagnostics\/feed\/?format\=atom o http:\/\/localhost:8000\/diagnostics\/feed\/?format\=rss in un browser che supporta il formato RSS, come Internet Explorer 7.  
+ <span data-ttu-id="6cdc8-113">Dato che il servizio riceve richieste usando l’ HTTP GET standard, per accedere al servizio è possibile usare qualsiasi client che supporta il formato RSS o ATOM.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-113">Because this service receives requests using the standard HTTP GET, you can use any RSS or ATOM-aware client to access the service.</span></span> <span data-ttu-id="6cdc8-114">Ad esempio, è possibile visualizzare l'output di questo servizio visitando http://localhost:8000/diagnostics/feed/?format=atom o http://localhost:8000/diagnostics/feed/?format=rss in un browser che supporta il formato RSS, come Internet Explorer 7.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-114">For example, you can view the output of this service by navigating to http://localhost:8000/diagnostics/feed/?format=atom or http://localhost:8000/diagnostics/feed/?format=rss in an RSS-aware browser such as Internet Explorer 7.</span></span>  
   
- È inoltre possibile usare [Modalità di mapping del modello a oggetti di diffusione WCF ad Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) per leggere i dati diffusi ed elaborarli usando codice imperativo.  
+ <span data-ttu-id="6cdc8-115">È inoltre possibile utilizzare il [come il WCF diffusione oggetto modello esegue il mapping a Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) per leggere dati diffusi ed elaborazione mediante codice imperativo.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-115">You can also use the [How the WCF Syndication Object Model Maps to Atom and RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) to read syndicated data and process it using imperative code.</span></span>  
   
 ```  
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
@@ -81,25 +84,25 @@ foreach (SyndicationItem i in feed.Items)
 }  
 ```  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6cdc8-116">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="6cdc8-116">To set up, build, and run the sample</span></span>  
   
-1.  Verificare di disporre dell'autorizzazione di registrazione dell'indirizzo necessaria per HTTP e HTTPS nel computer, come illustrato nelle istruzioni di installazione in [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="6cdc8-117">Assicurarsi di disporre dell'autorizzazione di registrazione indirizzo destra per HTTP e HTTPS nel computer come descritto nel set di istruzioni in [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6cdc8-117">Ensure that you have the right address registration permission for HTTP and HTTPS on the computer as explained in the set up instructions in [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Compilare la soluzione.  
+2.  <span data-ttu-id="6cdc8-118">Compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-118">Build the solution.</span></span>  
   
-3.  Eseguire l'applicazione console.  
+3.  <span data-ttu-id="6cdc8-119">Eseguire l'applicazione console.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-119">Run the console application.</span></span>  
   
-4.  Durante l'esecuzione dell'applicazione console, è possibile visitare la pagina http:\/\/localhost:8000\/diagnostics\/feed\/?format\=atom\/ o http:\/\/localhost:8000\/diagnostics\/feed\/?format\=rss in un browser che supporta il formato RSS.  
+4.  <span data-ttu-id="6cdc8-120">Durante l'esecuzione dell'applicazione console, è possibile visitare la pagina http://localhost:8000/diagnostics/feed/?format=atom/ o http://localhost:8000/diagnostics/feed/?format=rss in un browser che supporta il formato RSS.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-120">While the console application is running, navigate to http://localhost:8000/diagnostics/feed/?format=atom or http://localhost:8000/diagnostics/feed/?format=rss using an RSS-aware browser.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.  Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="6cdc8-121">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-121">The samples may already be installed on your computer.</span></span> <span data-ttu-id="6cdc8-122">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-122">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="6cdc8-123">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="6cdc8-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6cdc8-124">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="6cdc8-124">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
-## Vedere anche  
- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [Diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a><span data-ttu-id="6cdc8-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6cdc8-125">See Also</span></span>  
+ [<span data-ttu-id="6cdc8-126">Modello di programmazione HTTP Web WCF</span><span class="sxs-lookup"><span data-stu-id="6cdc8-126">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [<span data-ttu-id="6cdc8-127">Diffusione WCF</span><span class="sxs-lookup"><span data-stu-id="6cdc8-127">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

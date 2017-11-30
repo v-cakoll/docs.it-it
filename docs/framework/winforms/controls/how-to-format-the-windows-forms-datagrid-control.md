@@ -1,93 +1,98 @@
 ---
-title: "Procedura: formattare il controllo DataGrid di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "colori, applicazione a controlli DataGrid"
-  - "colonne [Windows Form], controllo DataGrid"
-  - "colonne [Windows Form], formattazione nel controllo DataGrid"
-  - "DataGrid (controllo) [Windows Form], stili predefiniti"
-  - "DataGrid (controllo) [Windows Form], formattazione"
-  - "formattazione [Windows Form]"
-  - "tabelle [Windows Form], formattazione nel controllo DataGrid"
+title: 'Procedura: formattare il controllo DataGrid di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- columns [Windows Forms], DataGrid control
+- colors [Windows Forms], applying to DataGrid controls
+- DataGrid control [Windows Forms], formatting
+- columns [Windows Forms], formatting in DataGrid control
+- DataGrid control [Windows Forms], default styles
+- tables [Windows Forms], formatting in DataGrid control
+- formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8518fdcaca7ebed65d0923b9bc1fe1a6797b97c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: formattare il controllo DataGrid di Windows Form
+# <a name="how-to-format-the-windows-forms-datagrid-control"></a><span data-ttu-id="8486a-102">Procedura: formattare il controllo DataGrid di Windows Form</span><span class="sxs-lookup"><span data-stu-id="8486a-102">How to: Format the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="8486a-103">Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.</span><span class="sxs-lookup"><span data-stu-id="8486a-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="8486a-104">Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="8486a-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- L'utilizzo di colori diversi per le parti di un controllo <xref:System.Windows.Forms.DataGrid> può contribuire ad agevolare la lettura e l'interpretazione delle informazioni in esso contenute.  È possibile applicare i colori alle righe e alle colonne.  La visualizzazione delle righe e delle colonne può inoltre essere attivata o disattivata a discrezione dell'utente.  
+ <span data-ttu-id="8486a-105">L'applicazione di colori diversi alle varie parti di un <xref:System.Windows.Forms.DataGrid> il controllo è utile per rendere più semplice leggere e interpretare le informazioni in essa contenuti.</span><span class="sxs-lookup"><span data-stu-id="8486a-105">Applying different colors to various parts of a <xref:System.Windows.Forms.DataGrid> control can help to make the information in it easier to read and interpret.</span></span> <span data-ttu-id="8486a-106">Colore può essere applicato in righe e colonne.</span><span class="sxs-lookup"><span data-stu-id="8486a-106">Color can be applied to rows and columns.</span></span> <span data-ttu-id="8486a-107">Righe e colonne possono inoltre essere nascoste o visualizzate a propria discrezione.</span><span class="sxs-lookup"><span data-stu-id="8486a-107">Rows and columns can also be hidden or shown at your discretion.</span></span>  
   
- La formattazione del controllo <xref:System.Windows.Forms.DataGrid> è caratterizzata da tre aspetti di base.  È possibile impostare proprietà per stabilire uno stile predefinito da utilizzare per la visualizzazione dei dati.  A partire da tale base, è quindi possibile personalizzare l'aspetto di alcune tabelle visualizzate in fase di esecuzione.  È infine possibile modificare le colonne da visualizzare nella griglia dei dati, nonché i colori e gli altri attributi di formattazione.  
+ <span data-ttu-id="8486a-108">Esistono tre aspetti di base di formattazione di <xref:System.Windows.Forms.DataGrid> controllo.</span><span class="sxs-lookup"><span data-stu-id="8486a-108">There are three basic aspects of formatting the <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="8486a-109">È possibile impostare proprietà per definire uno stile predefinito in cui vengono visualizzati dati.</span><span class="sxs-lookup"><span data-stu-id="8486a-109">You can set properties to establish a default style in which data is displayed.</span></span> <span data-ttu-id="8486a-110">Da tale base, è quindi possibile personalizzare il modo in cui che vengono visualizzate determinate tabelle in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="8486a-110">From that base, you can then customize the way certain tables are displayed at run time.</span></span> <span data-ttu-id="8486a-111">Infine, è possibile modificare le colonne da visualizzare nella griglia dei dati, nonché i colori e altro formattazione che viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="8486a-111">Finally, you can modify which columns are displayed in the data grid as well as the colors and other formatting that is shown.</span></span>  
   
- Il primo passaggio per la formattazione di una griglia dei dati può prevedere l'impostazione delle proprietà del controllo <xref:System.Windows.Forms.DataGrid>.  Le selezioni relative al colore e al formato costituiscono la base di partenza per apportare modifiche sulla base delle tabelle e delle colonne dati visualizzate.  
+ <span data-ttu-id="8486a-112">Come passaggio iniziale per la formattazione di una griglia dati, è possibile impostare le proprietà del <xref:System.Windows.Forms.DataGrid> stesso.</span><span class="sxs-lookup"><span data-stu-id="8486a-112">As an initial step in formatting a data grid, you can set the properties of the <xref:System.Windows.Forms.DataGrid> itself.</span></span> <span data-ttu-id="8486a-113">Queste scelte di colore e il formato formano una base da cui è quindi possibile apportare modifiche a seconda delle tabelle di dati e le colonne visualizzate.</span><span class="sxs-lookup"><span data-stu-id="8486a-113">These color and format choices form a base from which you can then make changes depending on the data tables and columns displayed.</span></span>  
   
-### Per stabilire uno stile predefinito per il controllo DataGrid  
+### <a name="to-establish-a-default-style-for-the-datagrid-control"></a><span data-ttu-id="8486a-114">Per stabilire uno stile predefinito per il controllo DataGrid</span><span class="sxs-lookup"><span data-stu-id="8486a-114">To establish a default style for the DataGrid control</span></span>  
   
-1.  Impostare le seguenti proprietà a seconda dei casi:  
+1.  <span data-ttu-id="8486a-115">Impostare le proprietà seguenti come appropriato:</span><span class="sxs-lookup"><span data-stu-id="8486a-115">Set the following properties as appropriate:</span></span>  
   
-    |Proprietà|Descrizione|  
-    |---------------|-----------------|  
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La proprietà <xref:System.Windows.Forms.DataGrid.BackColor%2A> consente di definire il colore delle righe pari della griglia.  Quando si imposta la proprietà <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> su un colore diverso, tutte le righe dispari vengono impostate sul nuovo colore \(righe 1, 3, 5 e così via\).|  
-    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Colore di sfondo delle righe pari della griglia \(righe 0, 2, 4, 6 e così via\).|  
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Mentre le proprietà <xref:System.Windows.Forms.DataGrid.BackColor%2A> e <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> determinano il colore delle righe della griglia, la proprietà <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> consente di stabilire il colore dell'area non occupata da righe, visibile solo quando si scorre la griglia fino alla fine, oppure se la griglia comprende solo poche righe.|  
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Stile del bordo della griglia; uno dei valori di enumerazione di <xref:System.Windows.Forms.BorderStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Colore di sfondo della didascalia della finestra della griglia, visualizzata appena sopra la griglia.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Carattere della didascalia nella parte superiore della griglia.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Colore di sfondo della didascalia della finestra della griglia.|  
-    |<xref:System.Windows.Forms.Control.Font%2A>|Carattere utilizzato per visualizzare il testo nella griglia.|  
-    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Colore del carattere utilizzato per la visualizzazione dei dati nelle righe della griglia.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Colore delle linee della griglia dei dati.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Stile delle linee di separazione delle celle nella griglia; uno dei valori di enumerazione di <xref:System.Windows.Forms.DataGridLineStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Colore di sfondo delle intestazioni di riga e colonna.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Carattere utilizzato per le intestazioni di colonna.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Colore di primo piano delle intestazioni di colonna della griglia, compreso il testo dell'intestazione e i segni più\/meno \(\+\/\-\) che consentono di espandere le righe quando vengono visualizzate più tabelle correlate.|  
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Colore del testo di tutti i collegamenti presenti nella griglia dei dati, compresi quelli alle tabelle figlio, al nome della relazione e così via.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|Colore di sfondo delle righe padre in una tabella figlio.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|Colore di primo piano delle righe padre in una tabella figlio.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Consente di stabilire se i nomi della tabella e delle colonne vengono visualizzati nella riga padre tramite l'enumerazione <xref:System.Windows.Forms.DataGridParentRowsLabelStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Larghezza predefinita \(in pixel\) delle colonne della griglia.  Impostare questa proprietà prima di reimpostare le proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> \(singolarmente o tramite il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\). In caso contrario, la proprietà non avrà effetto.<br /><br /> Specificare un valore superiore a 0.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Altezza predefinita \(in pixel\) delle righe della griglia.  Impostare questa proprietà prima di reimpostare le proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> \(singolarmente o tramite il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\). In caso contrario, la proprietà non avrà effetto.<br /><br /> Specificare un valore superiore a 0.|  
-    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|Larghezza delle intestazioni di riga della griglia.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Colore di sfondo quando si seleziona una cella o una riga.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Colore di primo piano quando si seleziona una cella o una riga.|  
+    |<span data-ttu-id="8486a-116">Proprietà</span><span class="sxs-lookup"><span data-stu-id="8486a-116">Property</span></span>|<span data-ttu-id="8486a-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8486a-117">Description</span></span>|  
+    |--------------|-----------------|  
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<span data-ttu-id="8486a-118">Il <xref:System.Windows.Forms.DataGrid.BackColor%2A> proprietà definisce il colore delle righe pari della griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-118">The <xref:System.Windows.Forms.DataGrid.BackColor%2A> property defines the color of the even-numbered rows of the grid.</span></span> <span data-ttu-id="8486a-119">Quando si imposta la <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> su un colore diverso, ogni riga è impostata su questo nuovo colore (righe 1, 3, 5 e così via).</span><span class="sxs-lookup"><span data-stu-id="8486a-119">When you set the <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> property to a different color, every other row is set to this new color (rows 1, 3, 5, and so on).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|<span data-ttu-id="8486a-120">Il colore di sfondo delle righe pari della griglia (righe 0, 2, 4, 6 e così via).</span><span class="sxs-lookup"><span data-stu-id="8486a-120">The background color of the even-numbered rows of the grid (rows 0, 2, 4, 6, and so on).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|<span data-ttu-id="8486a-121">Mentre il <xref:System.Windows.Forms.DataGrid.BackColor%2A> e <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> proprietà determina il colore delle righe nella griglia, il <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> proprietà determina il colore dell'area senza righe, che è visibile solo quando si scorre la griglia nella parte inferiore, o se solo alcune righe sono contenute in la griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-121">Whereas the <xref:System.Windows.Forms.DataGrid.BackColor%2A> and <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> properties determines the color of rows in the grid, the <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> property determines the color of the nonrow area, which is only visible when the grid is scrolled to the bottom, or if only a few rows are contained in the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|<span data-ttu-id="8486a-122">Stile del bordo della griglia, uno del <xref:System.Windows.Forms.BorderStyle> valori di enumerazione.</span><span class="sxs-lookup"><span data-stu-id="8486a-122">The grid's border style, one of the <xref:System.Windows.Forms.BorderStyle> enumeration values.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|<span data-ttu-id="8486a-123">Il colore di sfondo del titolo della finestra della griglia visualizzata immediatamente sopra la griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-123">The background color of the grid's window caption which appears immediately above the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|<span data-ttu-id="8486a-124">Il tipo di carattere della didascalia nella parte superiore della griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-124">The font of the caption at the top of the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|<span data-ttu-id="8486a-125">Il colore di sfondo del titolo della finestra della griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-125">The background color of the grid's window caption.</span></span>|  
+    |<xref:System.Windows.Forms.Control.Font%2A>|<span data-ttu-id="8486a-126">Il tipo di carattere utilizzato per visualizzare il testo nella griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-126">The font used to display the text in the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|<span data-ttu-id="8486a-127">Il colore del tipo di carattere visualizzato per i dati nelle righe della griglia di dati.</span><span class="sxs-lookup"><span data-stu-id="8486a-127">The color of the font displayed by the data in the rows of the data grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|<span data-ttu-id="8486a-128">Il colore delle linee della griglia della griglia di dati.</span><span class="sxs-lookup"><span data-stu-id="8486a-128">The color of the grid lines of the data grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|<span data-ttu-id="8486a-129">Lo stile delle linee che separano le celle della griglia, uno del <xref:System.Windows.Forms.DataGridLineStyle> valori di enumerazione.</span><span class="sxs-lookup"><span data-stu-id="8486a-129">The style of the lines separating the cells of the grid, one of the <xref:System.Windows.Forms.DataGridLineStyle> enumeration values.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|<span data-ttu-id="8486a-130">Il colore di sfondo delle intestazioni di riga e colonna.</span><span class="sxs-lookup"><span data-stu-id="8486a-130">The background color of row and column headers.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|<span data-ttu-id="8486a-131">Il tipo di carattere utilizzato per le intestazioni di colonna.</span><span class="sxs-lookup"><span data-stu-id="8486a-131">The font used for the column headers.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|<span data-ttu-id="8486a-132">Il colore di primo piano delle intestazioni di colonna della griglia, compresi il testo dell'intestazione di colonna e le icone più/meno (per espandere le righe quando sono visualizzate più tabelle correlate).</span><span class="sxs-lookup"><span data-stu-id="8486a-132">The foreground color of the grid's column headers, including the column header text and the plus/minus glyphs (to expand rows when multiple related tables are displayed).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|<span data-ttu-id="8486a-133">Il colore del testo di tutti i collegamenti nella griglia dei dati, inclusi i collegamenti alle tabelle figlio, il nome della relazione e così via.</span><span class="sxs-lookup"><span data-stu-id="8486a-133">The color of text of all the links in the data grid, including links to child tables, the relation name, and so on.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|<span data-ttu-id="8486a-134">In una tabella figlio, questo è il colore di sfondo delle righe padre.</span><span class="sxs-lookup"><span data-stu-id="8486a-134">In a child table, this is the background color of the parent rows.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|<span data-ttu-id="8486a-135">In una tabella figlio, questo è il colore di primo piano delle righe padre.</span><span class="sxs-lookup"><span data-stu-id="8486a-135">In a child table, this is the foreground color of the parent rows.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|<span data-ttu-id="8486a-136">Determina se i nomi di tabella e di colonna vengono visualizzati nella riga padre, tramite il <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> enumerazione.</span><span class="sxs-lookup"><span data-stu-id="8486a-136">Determines whether the table and column names are displayed in the parent row, by means of the <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> enumeration.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|<span data-ttu-id="8486a-137">Larghezza predefinita (in pixel) delle colonne della griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-137">The default width (in pixels) of columns in the grid.</span></span> <span data-ttu-id="8486a-138">Impostare questa proprietà prima di reimpostare il <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà (sia separatamente, o tramite il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo), o la proprietà non avrà alcun effetto.</span><span class="sxs-lookup"><span data-stu-id="8486a-138">Set this property before resetting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties (either separately, or through the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method), or the property will have no effect.</span></span><br /><br /> <span data-ttu-id="8486a-139">La proprietà non può essere impostata su un valore minore di 0.</span><span class="sxs-lookup"><span data-stu-id="8486a-139">The property cannot be set to a value less than 0.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|<span data-ttu-id="8486a-140">Altezza della riga, in pixel, di righe nella griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-140">The row height (in pixels) of rows in the grid.</span></span> <span data-ttu-id="8486a-141">Impostare questa proprietà prima di reimpostare il <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà (sia separatamente, o tramite il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo), o la proprietà non avrà alcun effetto.</span><span class="sxs-lookup"><span data-stu-id="8486a-141">Set this property before resetting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties (either separately, or through the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method), or the property will have no effect.</span></span><br /><br /> <span data-ttu-id="8486a-142">La proprietà non può essere impostata su un valore minore di 0.</span><span class="sxs-lookup"><span data-stu-id="8486a-142">The property cannot be set to a value less than 0.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|<span data-ttu-id="8486a-143">La larghezza delle intestazioni di riga della griglia.</span><span class="sxs-lookup"><span data-stu-id="8486a-143">The width of the row headers of the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|<span data-ttu-id="8486a-144">Quando una riga o cella è selezionata, questo è il colore di sfondo.</span><span class="sxs-lookup"><span data-stu-id="8486a-144">When a row or cell is selected, this is the background color.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|<span data-ttu-id="8486a-145">Quando una riga o cella è selezionata, questo è il colore primo piano.</span><span class="sxs-lookup"><span data-stu-id="8486a-145">When a row or cell is selected, this is the foreground color.</span></span>|  
   
     > [!NOTE]
-    >  Durante la personalizzazione dei colori dei controlli, tenere presente che il controllo potrebbe risultare inaccessibile se il numero di colori disponibili è limitato, ad esempio a rosso e verde.  Per ovviare a questo problema, utilizzare i colori disponibili nella tavolozza **Colori di sistema**.  
+    >  <span data-ttu-id="8486a-146">Tenere presente, quando si personalizzano i colori dei controlli, che è possibile impostare il controllo inaccessibile scelta colori (ad esempio, rosso e verde).</span><span class="sxs-lookup"><span data-stu-id="8486a-146">Keep in mind, when customizing the colors of controls, that it is possible to make the control inaccessible, due to poor color choice (for example, red and green).</span></span> <span data-ttu-id="8486a-147">Utilizzare i colori disponibili nel **colori di sistema** tavolozza per evitare questo problema.</span><span class="sxs-lookup"><span data-stu-id="8486a-147">Use the colors available on the **System Colors** palette to avoid this issue.</span></span>  
   
-     Nelle procedure riportate di seguito si presuppone che il form contenga un controllo <xref:System.Windows.Forms.DataGrid> associato a una tabella dati.  Per ulteriori informazioni, vedere [Associazione del controllo DataGrid Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+     <span data-ttu-id="8486a-148">Le procedure seguenti si presuppongono il modulo contiene un <xref:System.Windows.Forms.DataGrid> controllo associato a una tabella di dati.</span><span class="sxs-lookup"><span data-stu-id="8486a-148">The following procedures assume your form has a <xref:System.Windows.Forms.DataGrid> control bound to a data table.</span></span> <span data-ttu-id="8486a-149">Per ulteriori informazioni, vedere [il controllo DataGrid Windows Form di associazione a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span><span class="sxs-lookup"><span data-stu-id="8486a-149">For more information, see [Binding the Windows Forms DataGrid Control to a Data Source](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span></span>  
   
-### Per impostare lo stile di tabella e colonne di una tabella dati a livello di codice  
+### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a><span data-ttu-id="8486a-150">Per impostare lo stile di tabella e colonna di una tabella di dati a livello di codice</span><span class="sxs-lookup"><span data-stu-id="8486a-150">To set the table and column style of a data table programmatically</span></span>  
   
-1.  Creare un nuovo stile di tabella e impostarne le proprietà.  
+1.  <span data-ttu-id="8486a-151">Creare un nuovo stile di tabella e impostarne le proprietà.</span><span class="sxs-lookup"><span data-stu-id="8486a-151">Create a new table style and set its properties.</span></span>  
   
-2.  Creare un nuovo stile di colonna e impostarne le proprietà.  
+2.  <span data-ttu-id="8486a-152">Creare uno stile di colonna e impostarne le proprietà.</span><span class="sxs-lookup"><span data-stu-id="8486a-152">Create a column style and set its properties.</span></span>  
   
-3.  Aggiungere lo stile di colonna alla raccolta degli stili di colonna degli stili di tabella.  
+3.  <span data-ttu-id="8486a-153">Aggiungere lo stile di colonna alla raccolta di stili colonna stili di tabella.</span><span class="sxs-lookup"><span data-stu-id="8486a-153">Add the column style to the table style's column styles collection.</span></span>  
   
-4.  Aggiungere lo stile di tabella alla raccolta degli stili di tabella della griglia.  
+4.  <span data-ttu-id="8486a-154">Aggiungere lo stile di tabella alla raccolta di stili di tabella della griglia dati.</span><span class="sxs-lookup"><span data-stu-id="8486a-154">Add the table style to the data grid's table styles collection.</span></span>  
   
-5.  Nell'esempio riportato di seguito, creare un'istanza di un nuovo <xref:System.Windows.Forms.DataGridTableStyle> e impostare la relativa proprietà <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>.  
+5.  <span data-ttu-id="8486a-155">Nell'esempio seguente, creare un'istanza di un nuovo <xref:System.Windows.Forms.DataGridTableStyle> e impostare il relativo <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="8486a-155">In the example below, create an instance of a new <xref:System.Windows.Forms.DataGridTableStyle> and set its <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> property.</span></span>  
   
-6.  Creare una nuova istanza di un controllo **GridColumnStyle** e impostarne la proprietà **MappingName** ed eventuali altre proprietà relative al layout e alla visualizzazione.  
+6.  <span data-ttu-id="8486a-156">Creare una nuova istanza di un **GridColumnStyle** e impostare il relativo **MappingName** (e alcune altre proprietà di layout e visualizzazione).</span><span class="sxs-lookup"><span data-stu-id="8486a-156">Create a new instance of a **GridColumnStyle** and set its **MappingName** (and some other layout and display properties).</span></span>  
   
-7.  Ripetere i passaggi da 2 a 6 per ogni stile di colonna da creare.  
+7.  <span data-ttu-id="8486a-157">Ripetere i passaggi da 2 a 6 per ogni stile di colonna che si desidera creare.</span><span class="sxs-lookup"><span data-stu-id="8486a-157">Repeat steps 2 through 6 for each column style you want to create.</span></span>  
   
-     Nell'esempio seguente viene illustrata la creazione di un controllo <xref:System.Windows.Forms.DataGridTextBoxColumn>, poiché nella colonna deve essere visualizzato un nome.  Viene inoltre aggiunto lo stile di colonna all'insieme <xref:System.Windows.Forms.GridColumnStylesCollection> dello stile di tabella e lo stile di tabella all'insieme <xref:System.Windows.Forms.GridTableStylesCollection> della griglia dei dati.  
+     <span data-ttu-id="8486a-158">Nell'esempio seguente viene illustrato come un <xref:System.Windows.Forms.DataGridTextBoxColumn> viene creato, perché è un nome da visualizzare nella colonna.</span><span class="sxs-lookup"><span data-stu-id="8486a-158">The following example illustrates how a <xref:System.Windows.Forms.DataGridTextBoxColumn> is created, because a name is to be displayed in the column.</span></span> <span data-ttu-id="8486a-159">È inoltre lo stile di colonna per aggiungere il <xref:System.Windows.Forms.GridColumnStylesCollection> dello stile di tabella, e lo stile di tabella per la <xref:System.Windows.Forms.GridTableStylesCollection> della griglia di dati.</span><span class="sxs-lookup"><span data-stu-id="8486a-159">Additionally, you add the column style to the <xref:System.Windows.Forms.GridColumnStylesCollection> of the table style, and you add the table style to the <xref:System.Windows.Forms.GridTableStylesCollection> of the data grid.</span></span>  
   
     ```vb  
     Private Sub CreateAuthorFirstNameColumn()  
@@ -109,7 +114,6 @@ caps.handback.revision: 14
        ' the GridTableStylesCollection.   
        myDataGrid.TableStyles.Add(TSAuthors)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -133,7 +137,6 @@ caps.handback.revision: 14
        // the GridTableStylesCollection.   
        dataGrid1.TableStyles.Add(TSAuthors);  
     }  
-  
     ```  
   
     ```cpp  
@@ -160,9 +163,9 @@ caps.handback.revision: 14
        }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.GridTableStylesCollection>   
- <xref:System.Windows.Forms.GridColumnStylesCollection>   
- <xref:System.Windows.Forms.DataGrid>   
- [Procedura: eliminare o nascondere colonne nel controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)   
- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8486a-160">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8486a-160">See Also</span></span>  
+ <xref:System.Windows.Forms.GridTableStylesCollection>  
+ <xref:System.Windows.Forms.GridColumnStylesCollection>  
+ <xref:System.Windows.Forms.DataGrid>  
+ [<span data-ttu-id="8486a-161">Procedura: Eliminare o nascondere colonne nel controllo DataGrid Windows Form</span><span class="sxs-lookup"><span data-stu-id="8486a-161">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [<span data-ttu-id="8486a-162">Controllo DataGrid</span><span class="sxs-lookup"><span data-stu-id="8486a-162">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

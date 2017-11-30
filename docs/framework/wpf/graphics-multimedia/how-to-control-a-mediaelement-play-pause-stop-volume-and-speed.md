@@ -1,42 +1,48 @@
 ---
-title: "Procedura: controllare un oggetto MediaElement (Play, Pause, Stop, Volume e Speed) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controllo della riproduzione di contenuti multimediali"
-  - "supporto, controllo della riproduzione"
-  - "elementi multimediali, controllo della riproduzione di contenuti multimediali"
-  - "riproduzione di contenuti multimediali, controllo"
+title: 'Procedura: controllare un oggetto MediaElement (Play, Pause, Stop, Volume e Speed)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- playback of media [WPF], controlling
+- controlling playback of media [WPF]
+- multimedia [WPF], controlling playback of media
+- media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7362c57afa3d5615ffaa0616823a954a2d577cfe
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: controllare un oggetto MediaElement (Play, Pause, Stop, Volume e Speed)
-Nell'esempio riportato di seguito viene illustrato come controllare la riproduzione dei supporti multimediali tramite <xref:System.Windows.Controls.MediaElement>.  In questo esempio viene creato un semplice lettore multimediale che consente di riprodurre, mettere in pausa, interrompere e andare avanti e indietro all'interno del contenuto del supporto multimediale, oltre a regolare volume e velocità.  
+# <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a><span data-ttu-id="a3c9f-102">Procedura: controllare un oggetto MediaElement (Play, Pause, Stop, Volume e Speed)</span><span class="sxs-lookup"><span data-stu-id="a3c9f-102">How to: Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>
+<span data-ttu-id="a3c9f-103">Nell'esempio seguente viene illustrato come controllare la riproduzione dei supporti tramite un <xref:System.Windows.Controls.MediaElement>.</span><span class="sxs-lookup"><span data-stu-id="a3c9f-103">The following example shows how to control playback of media using a <xref:System.Windows.Controls.MediaElement>.</span></span> <span data-ttu-id="a3c9f-104">Nell'esempio viene creato un lettore multimediale semplice che consente di riprodurre, sospendere, arrestare e andare avanti e indietro nei supporti, nonché modificare il rapporto di velocità e volume.</span><span class="sxs-lookup"><span data-stu-id="a3c9f-104">The example creates a simple media player that allows you to play, pause, stop, and skip back and forth in the media as well as adjust the volume and speed ratio.</span></span>  
   
-## Esempio  
- Nel codice riportato di seguito viene creata l'interfaccia utente.  
+## <a name="example"></a><span data-ttu-id="a3c9f-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="a3c9f-105">Example</span></span>  
+ <span data-ttu-id="a3c9f-106">Il codice seguente crea l'interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="a3c9f-106">The code below creates the UI.</span></span>  
   
 > [!NOTE]
->  La proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> di <xref:System.Windows.Controls.MediaElement> deve essere impostata su `Manual` per essere in grado di interrompere, mettere in pausa e riprodurre in modo interattivo il supporto multimediale.  
+>  <span data-ttu-id="a3c9f-107">Il <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> proprietà di <xref:System.Windows.Controls.MediaElement> deve essere impostato su `Manual` per essere in grado di arrestarsi in modo interattivo, sospendere e riprodurre i contenuti multimediali.</span><span class="sxs-lookup"><span data-stu-id="a3c9f-107">The <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> property of <xref:System.Windows.Controls.MediaElement> must be set to `Manual` in order to be able to interactively stop, pause, and play the media.</span></span>  
   
- [!code-xml[MediaGallery_snip#MediaElementExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml#mediaelementexamplewholepage)]  
+ [!code-xaml[MediaGallery_snip#MediaElementExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml#mediaelementexamplewholepage)]  
   
-## Esempio  
- Nel codice riportato di seguito viene implementata la funzionalità dei controlli interfaccia utente.  I metodi <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A> e <xref:System.Windows.Controls.MediaElement.Stop%2A> vengono utilizzati, rispettivamente, per riprodurre, mettere in pausa e interrompere il supporto multimediale.  La modifica della proprietà <xref:System.Windows.Controls.MediaElement.Position%2A> di <xref:System.Windows.Controls.MediaElement> consente di spostarsi nel contenuto del supporto multimediale.  Infine, le proprietà <xref:System.Windows.Controls.MediaElement.Volume%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> vengono utilizzate per regolare il volume e la velocità di riproduzione del supporto multimediale.  
+## <a name="example"></a><span data-ttu-id="a3c9f-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="a3c9f-108">Example</span></span>  
+ <span data-ttu-id="a3c9f-109">Il codice seguente implementa la funzionalità dei controlli dell'interfaccia utente di esempio.</span><span class="sxs-lookup"><span data-stu-id="a3c9f-109">The code below implements the functionality of the sample UI controls.</span></span> <span data-ttu-id="a3c9f-110">Il <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, e <xref:System.Windows.Controls.MediaElement.Stop%2A> metodi vengono utilizzati rispettivamente riprodurre, sospendere e arrestare i contenuti multimediali.</span><span class="sxs-lookup"><span data-stu-id="a3c9f-110">The <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, and <xref:System.Windows.Controls.MediaElement.Stop%2A> methods are used to respectively play, pause and stop the media.</span></span> <span data-ttu-id="a3c9f-111">Modifica il <xref:System.Windows.Controls.MediaElement.Position%2A> proprietà del <xref:System.Windows.Controls.MediaElement> consente di spostarsi nel supporto.</span><span class="sxs-lookup"><span data-stu-id="a3c9f-111">Changing the <xref:System.Windows.Controls.MediaElement.Position%2A> property of the <xref:System.Windows.Controls.MediaElement> allows you to skip around in the media.</span></span> <span data-ttu-id="a3c9f-112">Infine, il <xref:System.Windows.Controls.MediaElement.Volume%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> vengono utilizzate per regolare la velocità di riproduzione e volume dei supporti.</span><span class="sxs-lookup"><span data-stu-id="a3c9f-112">Finally, the <xref:System.Windows.Controls.MediaElement.Volume%2A> and <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> properties are used to adjust the volume and playback speed of the media.</span></span>  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaElementExample.xaml.cs#codebehindmediaelementexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  
   
-## Vedere anche  
- [Controllare un MediaElement utilizzando uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)
+## <a name="see-also"></a><span data-ttu-id="a3c9f-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a3c9f-113">See Also</span></span>  
+ [<span data-ttu-id="a3c9f-114">Controllare un MediaElement usando uno storyboard</span><span class="sxs-lookup"><span data-stu-id="a3c9f-114">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)
