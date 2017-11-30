@@ -1,406 +1,406 @@
 ---
-title: "Strumento Editor di configurazione (SvcConfigEditor.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "File di configurazione"
-  - "schema dei file di configurazione"
-  - "file di configurazione"
-  - "file di configurazione, creazione"
+title: Strumento Editor di configurazione (SvcConfigEditor.exe)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration files, creating
+- configuration files
+- Configuration file
+- configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-caps.latest.revision: 45
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 45
+caps.latest.revision: "45"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 27c1a240817be169decbb0bbbac9fc78b189fc2d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Strumento Editor di configurazione (SvcConfigEditor.exe)
-L'Editor di configurazione dei servizi \(SvcConfigEditor.exe\) di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente ad amministratori e sviluppatori di creare e modificare le impostazioni di configurazione per i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tramite un'interfaccia utente grafica.Con questo strumento è possibile gestire le impostazioni di associazioni, comportamenti, servizi e diagnostica [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] senza la necessità di modificare direttamente i file di configurazione XML.  
+# <a name="configuration-editor-tool-svcconfigeditorexe"></a><span data-ttu-id="3fbdf-102">Strumento Editor di configurazione (SvcConfigEditor.exe)</span><span class="sxs-lookup"><span data-stu-id="3fbdf-102">Configuration Editor Tool (SvcConfigEditor.exe)</span></span>
+<span data-ttu-id="3fbdf-103">L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente ad amministratori e sviluppatori di creare e modificare le impostazioni di configurazione per i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tramite un'interfaccia utente grafica.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-103">The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration Editor (SvcConfigEditor.exe) allows administrators and developers to create and modify configuration settings for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services using a graphical user interface.</span></span> <span data-ttu-id="3fbdf-104">Con questo strumento è possibile gestire le impostazioni di associazioni, comportamenti, servizi e diagnostica [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] senza la necessità di modificare direttamente i file di configurazione XML.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-104">With this tool, you can manage settings for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bindings, behaviors, services, and diagnostics without having to directly edit XML configuration files.</span></span>  
   
- L'Editor di configurazione dei servizi si trova nella cartella C:\\Programmi\\Microsoft SDKs\\Windows\\v6.0\\Bin.  
+ <span data-ttu-id="3fbdf-105">L'Editor di configurazione dei servizi si trova nella cartella C:\Programmi\Microsoft SDKs\Windows\v6.0\Bin.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-105">Service Configuration Editor can be found in the C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin folder.</span></span>  
   
-## Editor di configurazione dei servizi di WCF  
- L'Editor di configurazione dei servizi dispone di una procedura guidata che descrive le fasi per configurare un servizio o un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].Si consiglia di utilizzare direttamente la procedura guidata anziché l'editor.  
+## <a name="the-wcf-configuration-editor"></a><span data-ttu-id="3fbdf-106">Editor di configurazione dei servizi di WCF</span><span class="sxs-lookup"><span data-stu-id="3fbdf-106">The WCF Configuration Editor</span></span>  
+ <span data-ttu-id="3fbdf-107">L'Editor di configurazione dei servizi dispone di una procedura guidata che descrive le fasi per configurare un servizio o un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3fbdf-107">Service Configuration Editor comes with a wizard that guides you through all the steps in configuring a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service or client.</span></span> <span data-ttu-id="3fbdf-108">Si consiglia di utilizzare direttamente la procedura guidata anziché l'editor.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-108">You are strongly advised to use the wizard instead of the editor directly.</span></span>  
   
- Se si dispone già di alcuni file di configurazione conformi allo schema System.Configuration standard, tramite l'interfaccia utente è possibile gestire impostazioni specifiche relative ad associazioni, comportamenti, servizi e diagnostica.Oltre alle impostazioni dei file di configurazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] esistenti, l'Editor di configurazione dei servizi consente di gestire file eseguibili, servizi COM\+ e servizi ospitati su Web.Quando si apre un servizio ospitato su Web con l'Editor di configurazione dei servizi, vengono visualizzate sia la configurazione del servizio stesso che le sezioni di configurazione ereditate dei nodi di livello superiore.  
+ <span data-ttu-id="3fbdf-109">Se si dispone già di alcuni file di configurazione conformi allo schema System.Configuration standard, tramite l'interfaccia utente è possibile gestire impostazioni specifiche relative ad associazioni, comportamenti, servizi e diagnostica.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-109">If you already have some configuration files that comply with the standard System.Configuration schema, you can manage specific settings for bindings, behavior, services, and diagnostics with the user interface.</span></span> <span data-ttu-id="3fbdf-110">Oltre alle impostazioni dei file di configurazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] esistenti, l'Editor di configurazione dei servizi consente di gestire file eseguibili, servizi COM+ e servizi ospitati su Web.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-110">The Service Configuration Editor enables you to manage the settings for existing [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration files as well as executable files, COM+ services, and Web-hosted services.</span></span> <span data-ttu-id="3fbdf-111">Quando si apre un servizio ospitato su Web con l'Editor di configurazione dei servizi, vengono visualizzate sia la configurazione del servizio stesso che le sezioni di configurazione ereditate dei nodi di livello superiore.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-111">When opening a Web-hosted service with Service Configuration Editor, both the service’s own configuration and inherited configurations sections of upper level nodes are shown.</span></span>  
   
- Dato che le impostazioni di configurazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] si trovano nella sezione `<system.serviceModel>` del file di configurazione, l'editor opera esclusivamente sul contenuto di questo elemento e non accede gli altri elementi nello stesso file.È possibile accedere direttamente ai file di configurazione esistenti oppure selezionare un assembly contenente un servizio, una directory virtuale o un servizio COM\+.L'editor carica il file di configurazione per quel particolare servizio e consente all'utente di aggiungere elementi nuovi o di modificare elementi esistenti annidati nella sezione `<system.serviceModel>` del file di configurazione.  
+ <span data-ttu-id="3fbdf-112">Dato che le impostazioni di configurazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] si trovano nella sezione `<system.serviceModel>` del file di configurazione, l'editor opera esclusivamente sul contenuto di questo elemento e non accede gli altri elementi nello stesso file.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-112">Because [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration settings are located in the `<system.serviceModel>` section of the configuration file, the editor operates exclusively on the content of this element and does not access other elements in the same file.</span></span> <span data-ttu-id="3fbdf-113">È possibile accedere direttamente ai file di configurazione esistenti oppure selezionare un assembly contenente un servizio, una directory virtuale o un servizio COM+.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-113">You can navigate to existing configuration files directly or you can select an assembly that contains a service, virtual directory, or COM+ service.</span></span> <span data-ttu-id="3fbdf-114">L'editor carica il file di configurazione per quel particolare servizio e consente all'utente di aggiungere elementi nuovi o di modificare elementi esistenti annidati nella sezione `<system.serviceModel>` del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-114">The editor loads the configuration file for that particular service and allows the user to either add new elements or edit existing elements nested in the `<system.serviceModel>` section of the configuration file.</span></span>  
   
- L'editor supporta IntelliSense e richiede la conformità con lo schema.L'editor garantisce che l’output risultante sia conforme con lo schema del file di configurazione e che i valori dei dati siano sintatticamente corretti.Tuttavia, l'editor non garantisce che il file di configurazione siano semanticamente validi.In altre parole, l'editor non garantisce che il file di configurazione pussa funzionare con il servizio che configura.  
+ <span data-ttu-id="3fbdf-115">L'editor supporta IntelliSense e richiede la conformità con lo schema.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-115">The editor supports IntelliSense and enforces schema compliance.</span></span> <span data-ttu-id="3fbdf-116">L'editor garantisce che l’output risultante sia conforme con lo schema del file di configurazione e che i valori dei dati siano sintatticamente corretti.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-116">The resulting output is guaranteed to comply with the schema of the configuration file and to have syntactically correct data values.</span></span> <span data-ttu-id="3fbdf-117">Tuttavia, l'editor non garantisce che il file di configurazione siano semanticamente validi.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-117">However, the editor does not guarantee that the configuration file is semantically valid.</span></span> <span data-ttu-id="3fbdf-118">In altre parole, l'editor non garantisce che il file di configurazione pussa funzionare con il servizio che configura.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-118">In other words, the editor does not guarantee that the configuration file can work with the service it configures.</span></span>  
   
 > [!CAUTION]
->  L'editor non può cancellare un elemento di configurazione dal file di configurazione una volta che l’elemento è stato modificato.Ad esempio, se si utilizza l'editor per impostare il nome dell'endpoint su una stringa non vuota e per salvarlo, il file di configurazione avrà il contenuto mostrato nell'esempio seguente:  
+>  <span data-ttu-id="3fbdf-119">L'editor non può cancellare un elemento di configurazione dal file di configurazione una volta che l’elemento è stato modificato.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-119">The editor cannot purge a configuration element from the configuration file once you have modified the element.</span></span> <span data-ttu-id="3fbdf-120">Ad esempio, se si utilizza l'editor per impostare il nome dell'endpoint su una stringa non vuota e per salvarlo, il file di configurazione avrà il contenuto mostrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-120">For example, if you use the editor to set the endpoint name to a non-empty string and save it, the configuration file has the following content, as shown in the following example.</span></span>  
 >   
 >  `<endpoint binding="basicHttpBinding" name="somename" />`  
 >   
->  Se si tenta di rimuovere il nome impostandolo su una stringa vuota e salvando il file, il file di configurazione contiene ancora l'attributo `name`, come mostrato nell'esempio seguente.  
+>  <span data-ttu-id="3fbdf-121">Se si tenta di rimuovere il nome impostandolo su una stringa vuota e salvando il file, il file di configurazione contiene ancora l'attributo `name`, come mostrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-121">If you attempt to remove the name by setting it to an empty string and save the file, the configuration file still contains the `name` attribute, as shown in the following example.</span></span>  
 >   
 >  `<endpoint binding="basicHttpBinding" name="" />`  
 >   
->  Per cancellare l'attributo è necessario modificare manualmente l'elemento utilizzando un altro editor di testo.  
+>  <span data-ttu-id="3fbdf-122">Per cancellare l'attributo si deve modificare manualmente l'elemento utilizzando un altro editor di testo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-122">To purge the attribute, you must manually edit the element using another text editor.</span></span>  
 >   
->  È necessario prestare particolare attenzione a questo problema quando si utilizza l'elemento `issueToken` del comportamento dell’endpoint `clientCredential`.In particolare, l'attributo `address` del sottoelemento `localIssuer` non deve essere una stringa vuota.Se si è modificato l'attributo `address` utilizzando l'Editor di configurazione e si desidera rimuoverlo completamente, è necessario utilizzare uno strumento diverso dall'Editor.In caso contrario, l'attributo conterrà una stringa vuota e l'applicazione genererà un'eccezione.  
+>  <span data-ttu-id="3fbdf-123">È necessario prestare particolare attenzione a questo problema quando si utilizza l'elemento `issueToken` del comportamento dell’endpoint `clientCredential`.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-123">You should be especially careful with this issue when you use the `issueToken` element of the `clientCredential` Endpoint behavior.</span></span> <span data-ttu-id="3fbdf-124">In particolare, l'attributo `address` del sottoelemento `localIssuer` non deve essere una stringa vuota.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-124">Specifically, the `address` attribute of its `localIssuer` sub-element must not be an empty string.</span></span> <span data-ttu-id="3fbdf-125">Se si è modificato l'attributo `address` utilizzando l'Editor di configurazione e si desidera rimuoverlo completamente, è necessario utilizzare uno strumento diverso dall'Editor.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-125">If you have modified the `address` attribute using the Configuration Editor and want to remove it completely, you should do so using a tool other than the Editor.</span></span> <span data-ttu-id="3fbdf-126">In caso contrario, l'attributo conterrà una stringa vuota e l'applicazione genererà un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-126">Otherwise, the attribute contains an empty string and your application throws an exception.</span></span>  
   
-## Utilizzo dell'Editor di configurazione  
- L'Editor di configurazione dei servizi si trova nel seguente percorso di installazione di Windows SDK:  
+## <a name="using-the-configuration-editor"></a><span data-ttu-id="3fbdf-127">Utilizzo dell’Editor di configurazione</span><span class="sxs-lookup"><span data-stu-id="3fbdf-127">Using the Configuration Editor</span></span>  
+ <span data-ttu-id="3fbdf-128">L'Editor di configurazione dei servizi si trova nel seguente percorso di installazione di Windows SDK:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-128">The Service Configuration Editor can be found at the following Windows SDK installation location:</span></span>  
   
- C:\\Programmi\\Microsoft SDKs\\Windows\\v6.0\\Bin\\SvcConfigEditor.exe  
+ <span data-ttu-id="3fbdf-129">C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe</span><span class="sxs-lookup"><span data-stu-id="3fbdf-129">C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe</span></span>  
   
- Dopo avere avviato l'Editor di configurazione dei servizi, è possibile utilizzare il menu **File\/Apri** per cercare il servizio o l’assembly che si desidera gestire.È possibile aprire direttamente file di configurazione, cercare i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] \/COM \+ e aprire i file di configurazione per i servizi ospitati su Web.  
+ <span data-ttu-id="3fbdf-130">Dopo aver avviato l'Editor di configurazione del servizio, è possibile utilizzare il **File/Apri** menu per cercare il servizio o l'assembly che si desidera gestire.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-130">After you launch the Service Configuration Editor, you can use the **File/Open** menu to browse for the service or assembly you want to manage.</span></span> <span data-ttu-id="3fbdf-131">È possibile aprire direttamente file di configurazione, cercare i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /COM + e aprire i file di configurazione per i servizi ospitati su Web.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-131">You can open configuration files directly, browse for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /COM+ services, and open configuration files for Web-hosted services.</span></span>  
   
- L'interfaccia utente dell'Editor di configurazione dei servizi è suddivisa nelle aree seguenti:  
+ <span data-ttu-id="3fbdf-132">L'interfaccia utente dell'Editor di configurazione dei servizi è suddivisa nelle aree seguenti:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-132">The Service Configuration Editor's user interface is divided into the following areas:</span></span>  
   
--   Il riquadro di visualizzazione struttura ad albero, in cui gli elementi di configurazione sono visualizzati in una struttura ad albero a sinistra.Per eseguire operazioni sulla struttura ad albero è possibile fare clic con il pulsante destro del mouse sui nodi.  
+-   <span data-ttu-id="3fbdf-133">Il riquadro di visualizzazione albero, in cui gli elementi di configurazione sono visualizzati in una struttura ad albero a sinistra.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-133">Tree View Pane, which displays configuration elements in a tree structure on the left.</span></span> <span data-ttu-id="3fbdf-134">Per eseguire operazioni sulla struttura è possibile fare clic con il pulsante destro del mouse sui nodi.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-134">You can perform operations in the tree by right-clicking the nodes.</span></span>  
   
--   Il riquadro attività, in cui le attività comuni degli elementi correnti sono visualizzate nell'angolo inferiore sinistro della finestra.  
+-   <span data-ttu-id="3fbdf-135">Il riquadro attività, in cui le attività comuni degli elementi correnti sono visualizzate nell'angolo inferiore sinistro della finestra.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-135">Task Pane, which displays common tasks for current elements on the lower-left of the window</span></span>  
   
--   Il riquadro dettagli, in cui vengono visualizzate le impostazioni dettagliate del nodo di configurazione selezionato nella visualizzazione struttura ad albero a destra.  
+-   <span data-ttu-id="3fbdf-136">Il riquadro dettagli, in cui vengono visualizzate le impostazioni dettagliate del nodo di configurazione selezionato nella visualizzazione albero a destra.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-136">Detail Pane, which displays detailed settings of the configuration node selected in the Tree View on the right.</span></span>  
   
-### Apertura di un file di configurazione  
+### <a name="opening-a-configuration-file"></a><span data-ttu-id="3fbdf-137">Apertura di un file di configurazione</span><span class="sxs-lookup"><span data-stu-id="3fbdf-137">Opening a Configuration File</span></span>  
   
-1.  Avviare l'Editor di configurazione dei servizi. A tale scopo, utilizzare una finestra di comando per passare al percorso di installazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e quindi digitare `SvcConfigEditor.exe`.  
+1.  <span data-ttu-id="3fbdf-138">Avviare l'Editor di configurazione di servizi tramite una finestra di comando per passare al [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] percorso di installazione e quindi digitare `SvcConfigEditor.exe`.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-138">Start Service Configuration Editor by using a command window to navigate to your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installation location, and then type `SvcConfigEditor.exe`.</span></span>  
   
-2.  Scegliere **Apri** dal menu **File** e fare clic sul tipo di file che si desidera gestire.  
+2.  <span data-ttu-id="3fbdf-139">Dal **File** dal menu **aprire** e fare clic sul tipo di file che si desidera gestire.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-139">From the **File** menu, select **Open** and click the type of file you want to manage.</span></span>  
   
-3.  Nella finestra di dialogo **Apri**, passare al file specifico che si desidera gestire e fare doppio clic su di esso.  
+3.  <span data-ttu-id="3fbdf-140">Nel **aprire** finestra di dialogo casella, passare al file specifico che si desidera gestire e fare doppio clic.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-140">In the **Open** dialog box, navigate to the specific file you want to manage and double-click it.</span></span>  
   
- Il visualizzatore segue automaticamente il percorso dell'unione delle configurazioni e crea una visualizzazione della configurazione unita.Ad esempio, la configurazione effettiva di un servizio non ospitato è una combinazione di Machine.config e App.config.Le modifiche vengono apportate al file attivo nell'editor SvcConfigEditor.Se si desidera modificare un file specifico all'interno del percorso di unione delle configurazioni, è necessario aprirlo direttamente.  
-  
-> [!NOTE]
->  L'Editor di configurazione ricarica il file di configurazione attualmente aperto quando quest’ultimo è stato modificato fuori dell'Editor.Quando si verifica questa condizione, tutte le modifiche che non sono state salvate in modo durevole nell'Editor verranno perse.Se il nuovo caricamento si verifica costantemente, la causa più probabile è un servizio che accede continuamente al file di configurazione, ad esempio un software antivirus in esecuzione in background.Per risolvere questo problema, assicurarsi che l'Editor di configurazione sia l'unico processo che può accedere al file quando è aperto.  
-  
-### Services  
- Nel nodo **Servizi** vengono visualizzati tutti i servizi attualmente assegnati presenti nel file di configurazione.Ogni sottonodo della struttura ad albero corrisponde a un sottoelemento dell'elemento \<`services`\> del file di configurazione.  
-  
- Quando si fa clic sul nodo **Servizi** viene visualizzata la Pagina di riepilogo del servizio. Nel **Riquadro dettagli** disponibile in tale pagina è possibile visualizzare o eseguire attività.  
-  
-#### Creazione di una nuova configurazione di un servizio  
- Per creare una nuova configurazione di un servizio, è possibile procedere nei modi seguenti:  
-  
--   Utilizzo di una procedura guidata: fare clic sul collegamento **Crea un nuovo servizio** nel Riquadro attività o nella Pagina di riepilogo per avviare la procedura guidata.Questa operazione può inoltre essere eseguita scegliendo **File** \-\> **Aggiungi nuovo elemento**.  
-  
--   Creazione manuale: è possibile fare clic con il pulsante destro del mouse sul nodo **Servizi** e scegliere **Nuovo servizio**.  
-  
-#### Creazione di una nuova configurazione di endpoint di servizio  
- Per creare una nuova configurazione di endpoint di servizio, è possibile procedere nei modi seguenti:  
-  
--   Creazione tramite una procedura guidata: fare clic sul collegamento **Crea un nuovo endpoint del servizio** nel Riquadro attività o nella Pagina di riepilogo per avviare la procedura guidata.Questa operazione può inoltre essere eseguita scegliendo **File** \-\> **Aggiungi nuovo elemento**.  
-  
--   Creazione manuale: dopo aver creato un servizio è possibile fare clic con il pulsante destro del mouse sul nodo **Endpoint** e scegliere “**Nuovo endpoint del servizio**”.  
-  
-#### Modifica della configurazione di un servizio  
-  
-1.  Fare clic su un nodo **Servizio**.  
-  
-2.  Modificare le impostazioni nelle griglie delle proprietà.  
-  
-#### Modifica della configurazione di un endpoint di servizio  
-  
-1.  Fare clic su un nodo **Endpoint di servizio**.  
-  
-2.  Modificare le impostazioni nelle griglie delle proprietà.  
-  
-#### Aggiunta di un indirizzo di base  
-  
-1.  Fare clic sul nodo **Host**.  
-  
-2.  Fare clic sul pulsante **Nuovo** nella sezione **Indirizzi di base**.  
-  
-3.  Immettere l'indirizzo URI di base nella finestra di dialogo.  
-  
-4.  Scegliere **OK**.  
+ <span data-ttu-id="3fbdf-141">Il visualizzatore segue automaticamente il percorso dell'unione delle configurazioni e crea una visualizzazione della configurazione unita.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-141">The viewer automatically follows the configuration merge path and creates a view of the merged configuration.</span></span> <span data-ttu-id="3fbdf-142">Ad esempio, la configurazione effettiva di un servizio non ospitato è una combinazione di Machine.config e App.config. Le modifiche vengono apportate al file attivo nell'editor SvcConfigEditor.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-142">For example, the actual configuration of a non-hosted service is a combination of Machine.config and App.config. Any changes are applied to the active file in the SvcConfigEditor.</span></span> <span data-ttu-id="3fbdf-143">Se si desidera modificare un file specifico all'interno del percorso di unione delle configurazioni, è necessario aprirlo direttamente.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-143">If you want to edit a specific file in the configuration merge path, you should open it directly.</span></span>  
   
 > [!NOTE]
->  Non è possibile modificare il valore di [\<FiltriPrefissoIndirizzoBase\>](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) in questo strumento.Per aggiungere o modificare questo elemento è necessario utilizzare un editor di testo o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+>  <span data-ttu-id="3fbdf-144">L'Editor di configurazione ricarica il file di configurazione attualmente aperto quando quest’ultimo è stato modificato fuori dell'Editor.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-144">Configuration Editor reloads the currently opened configuration file when the latter has been modified outside the Editor.</span></span> <span data-ttu-id="3fbdf-145">Quando si verifica questa condizione, tutte le modifiche che non sono state salvate in modo durevole nell'Editor verranno perse.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-145">When this happens, all the changes that are not durably saved inside the Editor are lost.</span></span> <span data-ttu-id="3fbdf-146">Se il nuovo caricamento si verifica costantemente, la causa più probabile è un servizio che accede continuamente al file di configurazione, ad esempio un software antivirus in esecuzione in background.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-146">If reloading happens consistently, the most likely cause is a service that constantly accesses the configuration file, for example, an antivirus software running in the background.</span></span> <span data-ttu-id="3fbdf-147">Per risolvere questo problema, assicurarsi che l'Editor di configurazione sia l’unico processo solo che può accedere al file quando è aperto.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-147">To resolve this, ensure that Configuration Editor is the only process that can access the file when it is opened.</span></span>  
   
-### Client  
- Nel nodo **Client** vengono visualizzati tutti gli endpoint client contenuti nel file di configurazione.Ogni sottonodo della struttura ad albero corrisponde a un sottoelemento dell'elemento \<`client`\> del file di configurazione.  
+### <a name="services"></a><span data-ttu-id="3fbdf-148">Servizi</span><span class="sxs-lookup"><span data-stu-id="3fbdf-148">Services</span></span>  
+ <span data-ttu-id="3fbdf-149">Il **servizi** nodo consente di visualizzare tutti i servizi attualmente assegnati nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-149">The **Services** node displays all of the services currently assigned in the configuration file.</span></span> <span data-ttu-id="3fbdf-150">Ogni nodo secondario nella struttura corrisponde a un sottoelemento di <`services`> elemento nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-150">Each sub-node in the tree corresponds to a sub-element of the <`services`> element in the configuration file.</span></span>  
   
- Quando si fa clic sul nodo **Client** viene visualizzata la **Pagina di riepilogo** del client. Nel **Riquadro dettagli** disponibile in questa pagina è possibile visualizzare o eseguire attività.  
+ <span data-ttu-id="3fbdf-151">Quando si fa clic il **servizi** nodo, è possibile visualizzare o eseguire attività nel servizio di pagina di riepilogo di **dettaglio** riquadro.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-151">When you click the **Services** node, you can view or perform tasks on the service Summary Page in the **Detail** Pane.</span></span>  
   
-#### Creazione di una nuova configurazione di endpoint client  
- Per creare una nuova configurazione di endpoint client, è possibile procedere nei modi seguenti:  
+#### <a name="creating-a-new-service-configuration"></a><span data-ttu-id="3fbdf-152">Creazione di una nuova configurazione di un servizio</span><span class="sxs-lookup"><span data-stu-id="3fbdf-152">Creating a new Service Configuration</span></span>  
+ <span data-ttu-id="3fbdf-153">Per creare una nuova configurazione di un servizio, è possibile procedere nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-153">You can create a new service configuration in the following ways:</span></span>  
   
--   Creazione tramite procedura guidata: fare clic sul collegamento **Crea un nuovo client** nel **Riquadro attività** nella parte inferiore sinistra della finestra o nella **Pagina di riepilogo** per avviare la procedura guidata.Questa operazione può inoltre essere eseguita scegliendo **File** \-\> **Aggiungi nuovo elemento**.Verrà richiesto di individuare la posizione della configurazione del servizio, da cui viene generata la configurazione client.A questo punto è possibile specificare l'endpoint del servizio a cui connettersi.  
+-   <span data-ttu-id="3fbdf-154">Tramite una procedura guidata: fare clic sul collegamento **creare un nuovo servizio...**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-154">Using a Wizard: Click the link **Create a New Service…**</span></span> <span data-ttu-id="3fbdf-155">nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-155">on the Task Pane or Summary Page to launch the wizard.</span></span> <span data-ttu-id="3fbdf-156">È inoltre possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-156">You can also do so in the **File** menu -> **Add New Item**.</span></span>  
   
--   Creazione manuale: fare clic con il pulsante destro del mouse sul nodo **Endpoint** in **Client**, quindi scegliere **Nuovo endpoint client**.  
+-   <span data-ttu-id="3fbdf-157">Creare manualmente: È possibile fare doppio clic il **servizi** nodo e scegliere **nuovo servizio**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-157">Create manually: You can right-click the **Services** node and choose **New Service**.</span></span>  
   
-#### Modifica di una configurazione di endpoint client  
+#### <a name="creating-a-new-service-endpoint-configuration"></a><span data-ttu-id="3fbdf-158">Creazione di una nuova configurazione di endpoint di servizio</span><span class="sxs-lookup"><span data-stu-id="3fbdf-158">Creating a new Service Endpoint Configuration</span></span>  
+ <span data-ttu-id="3fbdf-159">Per creare una nuova configurazione di endpoint di servizio, è possibile procedere nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-159">You can create a new service endpoint configuration in the following ways:</span></span>  
   
-1.  Fare clic su un nodo **Endpoint client**.  
+-   <span data-ttu-id="3fbdf-160">Creazione tramite una procedura guidata: fare clic sul collegamento **creare un nuovo Endpoint del servizio...**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-160">Create using a Wizard: click the link **Create a New Service Endpoint…**</span></span> <span data-ttu-id="3fbdf-161">nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-161">on the Task Pane or Summary Page to launch the wizard.</span></span> <span data-ttu-id="3fbdf-162">È inoltre possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-162">You can also do so in the **File** menu -> **Add New Item**.</span></span>  
   
-2.  Modificare le impostazioni nelle griglie delle proprietà.  
+-   <span data-ttu-id="3fbdf-163">Creare manualmente: una volta creato un servizio, è possibile fare doppio clic il **endpoint** nodo e scegliere "**nuovo Endpoint del servizio**".</span><span class="sxs-lookup"><span data-stu-id="3fbdf-163">Create manually: Once you created a Service, you can right-click the **Endpoints** node and choose "**New Service Endpoint**".</span></span>  
   
-### Endpoint standard  
- Gli endpoint standard sono endpoint specializzati in cui uno o più aspetti dell'indirizzo, del contratto e dell'associazione sono impostati sui valori predefiniti.  
+#### <a name="editing-a-service-configuration"></a><span data-ttu-id="3fbdf-164">Modifica della configurazione di un servizio</span><span class="sxs-lookup"><span data-stu-id="3fbdf-164">Editing a Service Configuration</span></span>  
   
- Tali impostazioni di configurazione sono archiviate nel nodo **Endpoint standard**.Nel nodo **Endpoint standard** vengono visualizzate tutte le impostazioni dell'endpoint standard del file di configurazione.Ogni sottonodo della struttura ad albero corrisponde a un sottoelemento dell'elemento `<standardEndpoints>` del file di configurazione.  
+1.  <span data-ttu-id="3fbdf-165">Fare clic su un **servizio** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-165">Click a **Service** node.</span></span>  
   
- Quando si fa clic sul nodo **Endpoint standard**, viene visualizzata la **Pagina di riepilogo** dell'endpoint standard. Nel **Riquadro dettagli** disponibile in tale pagina è possibile visualizzare o eseguire attività.  
+2.  <span data-ttu-id="3fbdf-166">Modificare le impostazioni nelle griglie delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-166">Edit the settings in the property grids.</span></span>  
   
-#### Creazione di una nuova configurazione di endpoint standard  
- Per creare una nuova configurazione di endpoint standard, è possibile procedere nei modi seguenti:  
+#### <a name="editing-a-service-endpoint-configuration"></a><span data-ttu-id="3fbdf-167">Modifica della configurazione di un endpoint di servizio</span><span class="sxs-lookup"><span data-stu-id="3fbdf-167">Editing a Service Endpoint Configuration</span></span>  
   
--   Fare clic con il pulsante destro del mouse sul nodo **Endpoint standard** e scegliere **Configurazione nuovo endpoint standard**. Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.  
+1.  <span data-ttu-id="3fbdf-168">Fare clic su un **Endpoint del servizio** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-168">Click a **Service Endpoint** node.</span></span>  
   
--   Selezionare il nodo **Endpoint standard** e fare clic su **Configurazione nuovo endpoint standard** nel **riquadro attività** in basso a sinistra nella finestra.  
+2.  <span data-ttu-id="3fbdf-169">Modificare le impostazioni nelle griglie delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-169">Edit the settings in the property grids.</span></span>  
   
- Verrà visualizzata la finestra di dialogo **Crea un nuovo endpoint standard** in cui sono elencati tutti i tipi di endpoint standard registrati.  
+#### <a name="adding-a-base-address"></a><span data-ttu-id="3fbdf-170">Aggiunta di un indirizzo di base</span><span class="sxs-lookup"><span data-stu-id="3fbdf-170">Adding a Base Address</span></span>  
   
-#### Visualizzazione e modifica di una configurazione di endpoint standard  
- Per aprire una configurazione di endpoint standard per la visualizzazione e la modifica, è possibile procedere nei modi seguenti:  
+1.  <span data-ttu-id="3fbdf-171">Fare clic su di **Host** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-171">Click the **Host** node.</span></span>  
   
--   Fare clic per espandere il nodo **Endpoint standard** e fare clic sul rispettivo sottonodo dell'endpoint.  
+2.  <span data-ttu-id="3fbdf-172">Fare clic su di **New...**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-172">Click the **New…**</span></span> <span data-ttu-id="3fbdf-173">pulsante di **gli indirizzi di Base** sezione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-173">button in the **Base Addresses** section.</span></span>  
   
--   Fare clic sul nodo **Endpoint standard** e sul rispettivo endpoint nel riquadro dei dettagli.  
+3.  <span data-ttu-id="3fbdf-174">Immettere l'indirizzo URI di base nella finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-174">Type in the base address URI in the dialog box.</span></span>  
   
- Gli attributi dell'endpoint vengono visualizzati nel riquadro di destra per la modifica.  
-  
-#### Eliminazione di una configurazione di endpoint standard  
- Per eliminare una configurazione di endpoint standard, è possibile procedere nei modi seguenti:  
-  
--   Fare clic per espandere il nodo **Endpoint standard** e fare clic con il pulsante destro del mouse sul rispettivo sottonodo dell'endpoint.Utilizzare il comando di contesto **Elimina configurazione endpoint standard** per eliminare l'endpoint.  
-  
--   Fare clic sul nodo **Endpoint standard**.Nel riquadro **Attività** fare clic su **Elimina configurazione endpoint standard**.  
-  
- Se si utilizza l'endpoint standard, viene visualizzato un messaggio di avviso quando si tenta di eliminarlo: **Endpoint standard in uso. Se lo si elimina ora, assicurarsi di eliminare tutti i relativi riferimenti presenti in altre parti della configurazione \(ad esempio, nell'endpoint del servizio\). In caso contrario la configurazione non sarà valida e non potrà essere aperta in seguito. Eliminare l'endpoint standard?”**  
-  
-### Associazione  
- Le configurazioni di associazione consentono di configurare le associazioni sugli endpoint.Tali impostazioni di configurazione vengono archiviate nel nodo **Associazione**.Gli endpoint fanno riferimento alle configurazioni di associazione in base al nome. Inoltre, più endpoint possono fare riferimento a una stessa configurazione di associazione.  
-  
- Nel nodo **Associazioni** vengono visualizzate tutte le impostazioni di associazione contenute nel file di configurazione.Ogni sottonodo della struttura ad albero corrisponde a un sottoelemento dell'elemento \<`bindings`\> del file di configurazione.  
-  
- Quando si fa clic sul nodo **Associazioni** viene visualizzata la **Pagina di riepilogo** dell’associazione. Nel **Riquadro dettagli** disponibile in questa pagina è possibile visualizzare o eseguire attività.  
-  
-#### Creazione di una nuova configurazione di associazione  
- Per creare una nuova configurazione dell’associazione, è possibile procedere nei modi seguenti.  
-  
--   Fare clic con il pulsante destro del mouse sul nodo **Associazioni** e scegliere **Nuova configurazione dell’associazione**… Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.  
-  
--   Selezionare il nodo **Associazioni**, quindi fare clic su **Nuova configurazione dell'associazione** nel **riquadro attività** nella parte inferiore sinistra della finestra.  
-  
--   Nella pagina di riepilogo del servizio o del client, scegliere **Fare clic per creare** nel campo **Configurazione dell'associazione** per creare una configurazione di associazione per l'endpoint corrispondente.  
-  
-#### Aggiunta di estensioni degli elementi di associazione a un'associazione personalizzata  
-  
-1.  Selezionare l'associazione a cui si desidera aggiungere un elemento di estensione.  
-  
-2.  Scegliere **Aggiungi**.  
-  
-3.  Nell'elenco di estensioni disponibili, selezionare l'estensione degli elementi di associazione che si desidera aggiungere.Per selezionare più elementi, premere contemporaneamente CTRL.  
-  
-4.  Scegliere **Aggiungi**.  
-  
-#### Impostazione della posizione dell'estensione in un'associazione personalizzata  
- Un'associazione personalizzata è una raccolta di elementi di associazione organizzati in uno stack.Ogni elemento di associazione dello stack può essere configurato in modo specifico.L'ordine delle estensioni degli elementi di associazione in un'associazione personalizzata indica la posizione occupata da ogni estensione nello stack.Gli elementi all'inizio dello stack vengono applicati per primi.Per modificare l'ordine:  
-  
-1.  Selezionare il nodo dell'associazione personalizzata.  
-  
-2.  Selezionare un elemento di estensione dell'associazione nella sezione **Posizione dell'estensione degli elementi di associazione**.  
-  
-3.  Utilizzare il pulsante **Su** o **Giù** a sinistra dell'elenco per modificare la posizione dell'elemento selezionato.  
-  
-#### Modifica della configurazione di estensioni degli elementi di associazione in un'associazione personalizzata  
-  
-1.  Selezionare il nodo dell'associazione nella struttura ad albero.  
-  
-2.  Selezionare l'associazione personalizzata contenente l'elemento che si desidera modificare.  
-  
-3.  Selezionare l'estensione degli elementi di associazione che si desidera modificare.Le impostazioni dell'elemento verranno visualizzate nel riquadro di destra, in cui è inoltre possibile modificarle.  
-  
-### Diagnostica  
- Nel nodo **Diagnostica** vengono visualizzate tutte le impostazioni di diagnostica contenute nel file di configurazione.Consente di attivare e disattivare i contatori delle prestazioni, abilitare o disabilitare Strumentazione gestione Windows \(WMI\), nonché di configurare le funzionalità di traccia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e di registrazione dei messaggi di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].Le impostazioni del nodo **Diagnostica** corrispondono alla sezione \<`system.diagnostics`\> e alla sezione `<diagnostics>` in `<system.serviceModel>`del file di configurazione.  
-  
- Quando si fa clic sul nodo **Diagnostica** viene visualizzata la **Pagina di riepilogo** della diagnostica. Nel **Riquadro dettagli** disponibile in tale pagina è possibile visualizzare o eseguire attività.  
-  
-#### Configurazione dei contatori delle prestazioni e di WMI  
-  
-1.  Fare clic sul nodo **Diagnostica**.  
-  
-2.  Fare clic su **Attiva\/Disattiva contatori delle prestazioni**.Il contatore delle prestazioni prevede tre stati: Disattivo \(predefinito\), Solo servizio e Tutto.Il collegamento consente di attivare\/disattivare l'impostazione degli stati.  
-  
-#### Configurazione del provider WMI  
-  
-1.  Fare clic sul nodo **Diagnostica**.  
-  
-2.  Per abilitare il provider WMI, fare clic sul collegamento **Abilita Provider WMI**.  
-  
-#### Abilitazione della traccia WCF  
- È possibile creare un file di traccia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con le proprietà standard oppure configurare un file di traccia personalizzato.  
-  
-1.  Fare clic sul nodo **Diagnostica**.  
-  
-2.  Fare clic su **Abilita Traccia**.  
-  
-3.  Fare clic sul collegamento **Livello traccia** per modificare il livello di traccia.Esistono sei livelli di traccia: Disattivo, Critico, Errore, Avviso, Informazioni e Dettagliato.Le opzioni **Traccia attività** e **Propaga attività** consentono di utilizzare la funzionalità di traccia delle attività di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
-  
-4.  Fare clic sul nome del listener di traccia per specificare il file e le opzioni di traccia.  
-  
-#### Abilitazione della registrazione WCF  
- È possibile creare un file di traccia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con le proprietà standard oppure configurare un file di traccia personalizzato.  
-  
-1.  Fare clic sul nodo **Diagnostica**.  
-  
-2.  Fare clic su **Abilita Registrazione messaggi**.  
-  
-3.  Fare clic sul collegamento **Livello log** per regolare il livello.Esistono tre livelli di log: Messaggi in formato non valido, Messaggi servizio e Messaggi trasporto.  
-  
-4.  Fare clic sul nome del listener per specificare le opzioni e il file di log.  
+4.  <span data-ttu-id="3fbdf-175">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-175">Click **OK**.</span></span>  
   
 > [!NOTE]
->  Se si desidera scaricare automaticamente i log dei messaggi e dei file di traccia alla chiusura dell'applicazione, abilitare l'opzione **Cancellazione automatica registro**.  
+>  <span data-ttu-id="3fbdf-176">Non è possibile modificare il valore di [ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) all'interno di questo strumento.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-176">You cannot edit the value of [\<baseAddressPrefixFilters>](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) inside this tool.</span></span> <span data-ttu-id="3fbdf-177">Per aggiungere o modificare questo elemento è necessario utilizzare un editor di testo o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3fbdf-177">To add or modify this element, you should use a text editor or [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span></span>  
   
- Nella **Pagina di riepilogo** della **Diagnostica** è possibile eseguire le attività di configurazione di diagnostica più comuni.Se tuttavia si desidera modificare manualmente le impostazioni Listener e Origini, è necessario espandere il nodo **Diagnostica** e modificare le impostazioni dei nodi **Registrazione messaggi**, **Listener** e **Origini**.  
+### <a name="client"></a><span data-ttu-id="3fbdf-178">Client</span><span class="sxs-lookup"><span data-stu-id="3fbdf-178">Client</span></span>  
+ <span data-ttu-id="3fbdf-179">Il **Client** nodo consente di visualizzare tutti gli endpoint client nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-179">The **Client** node displays all of the client endpoints in the configuration file.</span></span> <span data-ttu-id="3fbdf-180">Ogni nodo secondario nella struttura corrisponde a un sottoelemento di <`client`> elemento nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-180">Every sub-node in the tree corresponds to a sub-element of the <`client`> element in the configuration file.</span></span>  
   
-#### Abilitazione della tracciatura o della registrazione dei messaggi personalizzata di WCF  
+ <span data-ttu-id="3fbdf-181">Quando si fa clic il **Client** nodo, è possibile visualizzare o eseguire attività sul client **pagina riepilogo** nel **riquadro dei dettagli**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-181">When you click the **Client** node, you can view or perform tasks on the client **Summary Page** in the **Detail Pane**.</span></span>  
   
-1.  Fare clic sul nodo **Diagnostica** e quindi espanderlo.  
+#### <a name="creating-a-new-client-endpoint-configuration"></a><span data-ttu-id="3fbdf-182">Creazione di una nuova configurazione di endpoint client</span><span class="sxs-lookup"><span data-stu-id="3fbdf-182">Creating a new Client Endpoint Configuration</span></span>  
+ <span data-ttu-id="3fbdf-183">Per creare una nuova configurazione di endpoint client, è possibile procedere nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-183">You can create a new client endpoint configuration in the following ways:</span></span>  
   
-2.  Fare clic con il pulsante destro del mouse sul nodo **Listener** e scegliere **Nuovo listener**.  
+-   <span data-ttu-id="3fbdf-184">Creazione tramite procedura guidata: fare clic sul collegamento **creare un nuovo Client...**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-184">Create by Wizard: Click the link **Create a New Client…**</span></span> <span data-ttu-id="3fbdf-185">nel **riquadro** in basso a sinistra della finestra, o **pagina riepilogo** per avviare la procedura guidata.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-185">on the **Task Pane** on the lower-left of the window, or **Summary Page** to launch the wizard.</span></span> <span data-ttu-id="3fbdf-186">È inoltre possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-186">You can also do so in the **File** menu -> **Add New Item**.</span></span> <span data-ttu-id="3fbdf-187">Verrà richiesto di individuare la posizione della configurazione del servizio, da cui viene generata la configurazione client.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-187">The wizard prompts you to point to the location of the service configuration, from which the client configuration is generated.</span></span> <span data-ttu-id="3fbdf-188">A questo punto è possibile specificare l'endpoint del servizio a cui connettersi.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-188">You can then choose the service endpoint to connect to.</span></span>  
   
-3.  Immettere il nome del file di traccia nel campo **InitData**.È possibile fare clic sul pulsante con i puntini di sospensione \(…\) per selezionare un percorso specifico.  
+-   <span data-ttu-id="3fbdf-189">Creare manualmente: destro la **endpoint** nodo **Client**e scegliere **nuovo Endpoint Client**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-189">Create manually: Right-click the **Endpoints** node under **Client**, and choose **New Client Endpoint**.</span></span>  
   
-4.  Se si fa clic sulla riga **TypeName** viene visualizzato un pulsante con i puntini di sospensione “…”.Fare clic su questo pulsante per aprire il **Browser dei tipi di listener di traccia**, in cui è possibile cercare i listener di traccia preconfigurati già installati.  
+#### <a name="editing-a-client-endpoint-configuration"></a><span data-ttu-id="3fbdf-190">Modifica di una configurazione di endpoint client</span><span class="sxs-lookup"><span data-stu-id="3fbdf-190">Editing a Client Endpoint Configuration</span></span>  
   
-5.  Nella sezione **Origine**,fare clic su **Aggiungi** per aprire una finestra di dialogo contenente un menu a discesa in cui sono elencate le origini di traccia disponibili.Scegliere un'origine di traccia e quindi fare clic su **OK**.  
+1.  <span data-ttu-id="3fbdf-191">Fare clic su un **Endpoint Client** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-191">Click a **Client Endpoint** node.</span></span>  
   
-6.  Per modificare le impostazioni di registrazione dei messaggi, fare clic sul nodo **Registrazione messaggi**.Le impostazioni possono essere modificate nella griglia delle proprietà.  
+2.  <span data-ttu-id="3fbdf-192">Modificare le impostazioni nelle griglie delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-192">Edit the settings in the property grids.</span></span>  
   
-### Avanzate  
+### <a name="standard-endpoint"></a><span data-ttu-id="3fbdf-193">Endpoint standard</span><span class="sxs-lookup"><span data-stu-id="3fbdf-193">Standard Endpoint</span></span>  
+ <span data-ttu-id="3fbdf-194">Gli endpoint standard sono endpoint specializzati in cui uno o più aspetti dell'indirizzo, del contratto e dell'associazione sono impostati sui valori predefiniti.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-194">Standard endpoints are specialized endpoints that have one or more aspects of the address, contract and binding set to default values.</span></span>  
   
-#### Comportamenti  
- Nel nodo **Comportamenti** vengono visualizzati i comportamenti attualmente definiti nel file di configurazione.  
+ <span data-ttu-id="3fbdf-195">Tali impostazioni di configurazione vengono archiviate nel **Endpoint Standard** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-195">Such configuration settings are stored in the **Standard Endpoint** node.</span></span> <span data-ttu-id="3fbdf-196">Il **Endpoint Standard** nodo consente di visualizzare tutte le impostazioni di endpoint standard nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-196">The **Standard Endpoint** node displays all of the standard endpoint settings in the configuration file.</span></span> <span data-ttu-id="3fbdf-197">Ogni nodo secondario nella struttura corrisponde a un sottoelemento dell'elemento nel `<standardEndpoints>` elemento nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-197">Every sub-node in the tree corresponds to a sub-element in the `<standardEndpoints>` element in the configuration file.</span></span>  
   
- Le configurazioni dei comportamenti consentono di impostare i comportamenti di endpoint e servizi.Tali impostazioni di configurazione sono archiviate nel nodo **Avanzate** in **Comportamenti del servizio** e **Comportamenti endpoint**.I comportamenti del servizio sono utilizzati dai servizi, mentre i comportamenti degli endpoint sono utilizzati dagli endpoint.  
+ <span data-ttu-id="3fbdf-198">Quando si fa clic il **Endpoint Standard** nodo, è possibile visualizzare o eseguire attività di endpoint standard **pagina riepilogo** nel **riquadro dei dettagli**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-198">When you click the **Standard Endpoint** node, you can view or perform tasks on the standard endpoint **Summary Page** in the **Detail Pane**.</span></span>  
   
- I comportamenti sono una raccolta di elementi di estensione organizzati in uno stack.L'elemento all'inizio dello stack viene applicato per primo.Ogni elemento di estensione può essere configurato in modo specifico.  
+#### <a name="creating-a-new-standard-endpoint-configuration"></a><span data-ttu-id="3fbdf-199">Creazione di una nuova configurazione di endpoint standard</span><span class="sxs-lookup"><span data-stu-id="3fbdf-199">Creating a New Standard Endpoint Configuration</span></span>  
+ <span data-ttu-id="3fbdf-200">Per creare una nuova configurazione di endpoint standard, è possibile procedere nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-200">You can create a new standard endpoint configuration in the following ways:</span></span>  
   
-##### Creazione di una nuova configurazione di un comportamento  
- Per creare una nuova configurazione di un comportamento, è possibile procedere nei due modi seguenti:  
+-   <span data-ttu-id="3fbdf-201">Fare doppio clic su di **Endpoint Standard** nodo e selezionare **configurazione nuovo Endpoint Standard...**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-201">Right-click the **Standard Endpoint** node and select **New Standard Endpoint Configuration…**</span></span> <span data-ttu-id="3fbdf-202">Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-202">Select the binding type in the dialog box and click **OK**.</span></span>  
   
--   Fare clic con il pulsante destro del mouse su uno dei nodi dei comportamenti e scegliere “**Nuova configurazione del comportamento…**  
+-   <span data-ttu-id="3fbdf-203">Selezionare il **Endpoint Standard** nodo e fare clic su **configurazione nuovo Endpoint Standard...**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-203">Select the **Standard Endpoint** node and click **New Standard Endpoint Configuration…**</span></span> <span data-ttu-id="3fbdf-204">nel **riquadro** in basso a sinistra della finestra.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-204">in the **Task Pane** on the lower-left of the window.</span></span>  
   
--   Selezionare uno dei nodi dei comportamenti e fare clic su **Nuova configurazione del comportamento** nel **riquadro attività** nella parte inferiore sinistra della finestra.  
+ <span data-ttu-id="3fbdf-205">Il **creando un nuovo Endpoint Standard** la finestra di dialogo Visualizza ed elenca registrati tutti i tipi di endpoint standard.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-205">The **Creating a New Standard Endpoint** dialog box displays and lists all registered standard endpoint types.</span></span>  
   
-##### Aggiunta di estensioni degli elementi del comportamento a un comportamento  
+#### <a name="viewing-and-editing-a-standard-endpoint-configuration"></a><span data-ttu-id="3fbdf-206">Visualizzazione e modifica di una configurazione di endpoint standard</span><span class="sxs-lookup"><span data-stu-id="3fbdf-206">Viewing and Editing a Standard Endpoint Configuration</span></span>  
+ <span data-ttu-id="3fbdf-207">Per aprire una configurazione di endpoint standard per la visualizzazione e la modifica, è possibile procedere nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-207">You can open a standard endpoint configuration for viewing and editing in the following ways:</span></span>  
   
-1.  Selezionare uno dei nodi dei comportamenti.  
+-   <span data-ttu-id="3fbdf-208">Fare clic per espandere il **Endpoint Standard** nodo e fare clic sul sottonodo rispettivi endpoint.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-208">Click to expand the **Standard Endpoint** node and click the respective endpoint sub-node.</span></span>  
   
-2.  Selezionare il comportamento che si desidera modificare.  
+-   <span data-ttu-id="3fbdf-209">Fare clic su di **Endpoint Standard** nodo e fare clic sul rispettivo endpoint nel riquadro dei dettagli.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-209">Click the **Standard Endpoint** node and click the respective endpoint on the Detail pane.</span></span>  
   
-3.  Scegliere **Aggiungi**.  
+ <span data-ttu-id="3fbdf-210">Gli attributi dell'endpoint vengono visualizzati nel riquadro di destra per la modifica.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-210">Attributes for the endpoint are shown in the right pane for editing.</span></span>  
   
-4.  Nell'elenco di estensioni disponibili, selezionare l'estensione degli elementi del comportamento che si desidera aggiungere.  
+#### <a name="deleting-a-standard-endpoint-configuration"></a><span data-ttu-id="3fbdf-211">Eliminazione di una configurazione di endpoint standard</span><span class="sxs-lookup"><span data-stu-id="3fbdf-211">Deleting a Standard Endpoint Configuration</span></span>  
+ <span data-ttu-id="3fbdf-212">Per eliminare una configurazione di endpoint standard, è possibile procedere nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-212">You can delete a standard endpoint configuration in the following ways:</span></span>  
   
-5.  Scegliere **Aggiungi**.  
+-   <span data-ttu-id="3fbdf-213">Fare clic per espandere il **Endpoint Standard** nodo e pulsante destro del mouse sul sottonodo dell'endpoint corrispondente.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-213">Click to expand the **Standard Endpoint** node and right-click the respective endpoint sub-node.</span></span> <span data-ttu-id="3fbdf-214">Utilizzare il comando di contesto **Elimina configurazione Endpoint Standard** eliminare l'endpoint.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-214">Use the context command **Delete Standard Endpoint Configuration** to delete the endpoint.</span></span>  
   
-##### Impostazione della posizione dell'estensione in un Comportamento  
- I comportamenti sono raccolte di elementi organizzati in uno stack.Ogni elemento dello stack può essere configurato in modo specifico.L'ordine delle estensioni degli elementi di comportamento in un comportamento indica la posizione occupata da ogni estensione nello stack.Gli elementi all'inizio dello stack vengono applicati per primi.Per modificare l'ordine:  
+-   <span data-ttu-id="3fbdf-215">Fare clic su di **Endpoint Standard** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-215">Click the **Standard Endpoint** node.</span></span> <span data-ttu-id="3fbdf-216">Nel **attività** riquadro, fare clic su **Elimina configurazione Endpoint Standard**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-216">In the **Task** pane, click **Delete Standard Endpoint Configuration**.</span></span>  
   
-1.  selezionare uno dei nodi dei comportamenti.  
+ <span data-ttu-id="3fbdf-217">Se si utilizza l'endpoint standard, viene visualizzato un messaggio di avviso quando si tenta di eliminarlo: **Endpoint standard in uso. Se lo si elimina ora, assicurarsi di eliminare tutti i relativi riferimenti presenti in altre parti della configurazione (ad esempio, nell'endpoint del servizio). In caso contrario la configurazione non sarà valida e non potrà essere aperta in seguito. Confermare se che si desidera eliminare l'endpoint standard?"**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-217">If the standard endpoint is in used, a warning message is displayed when you attempt to delete it: **The standard endpoint is in use. If you delete it now, please be sure to delete all of its references in other parts of the configuration (for example, in the service endpoint or client endpoint). Otherwise, the configuration will be invalid and cannot be opened next time. Are you sure you want to delete the standard endpoint?"**</span></span>  
   
-2.  Selezionare il comportamento che si desidera modificare.  
+### <a name="binding"></a><span data-ttu-id="3fbdf-218">Binding</span><span class="sxs-lookup"><span data-stu-id="3fbdf-218">Binding</span></span>  
+ <span data-ttu-id="3fbdf-219">Le configurazioni di associazione consentono di configurare le associazioni sugli endpoint.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-219">Binding configurations are used to configure bindings on endpoints.</span></span> <span data-ttu-id="3fbdf-220">Tali impostazioni di configurazione vengono archiviate nel **associazione** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-220">Such configuration settings are stored in the **Binding** node.</span></span> <span data-ttu-id="3fbdf-221">Gli endpoint fanno riferimento alle configurazioni di associazione in base al nome. Inoltre, più endpoint possono fare riferimento a una stessa configurazione di associazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-221">Endpoints reference binding configurations by name and multiple endpoints can reference a single binding configuration.</span></span>  
   
-3.  Selezionare un elemento di estensione del comportamento nella sezione **Posizione dell'estensione degli elementi di comportamento**.  
+ <span data-ttu-id="3fbdf-222">Il **associazioni** nodo vengono visualizzate tutte le impostazioni dell'associazione nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-222">The **Bindings** node displays all of the binding settings in the configuration file.</span></span> <span data-ttu-id="3fbdf-223">Ogni nodo secondario nella struttura corrisponde a un sottoelemento dell'elemento nel <`bindings`> elemento nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-223">Every sub-node in the tree corresponds to a sub-element in the <`bindings`> element in the configuration file.</span></span>  
   
-4.  Utilizzare il pulsante **Su** o **Giù** a sinistra dell'elenco per modificare la posizione dell'elemento selezionato.  
+ <span data-ttu-id="3fbdf-224">Quando si fa clic il **associazioni** nodo, è possibile visualizzare o eseguire operazioni sull'associazione **pagina riepilogo** nel **riquadro dei dettagli**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-224">When you click the **Bindings** node, you can view or perform tasks on the binding **Summary Page** in the **Detail Pane**.</span></span>  
   
-##### Modifica della configurazione delle estensioni degli elementi del comportamento  
+#### <a name="creating-a-new-binding-configuration"></a><span data-ttu-id="3fbdf-225">Creazione di una nuova configurazione di associazione</span><span class="sxs-lookup"><span data-stu-id="3fbdf-225">Creating a New Binding Configuration</span></span>  
+ <span data-ttu-id="3fbdf-226">Per creare una nuova configurazione dell’associazione, è possibile procedere nei modi seguenti.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-226">You can create a new binding configuration in the following ways.</span></span>  
   
-1.  Selezionare uno dei nodi dei comportamenti nella struttura ad albero.  
+-   <span data-ttu-id="3fbdf-227">Fare doppio clic su di **associazioni** nodo e selezionare **nuova configurazione dell'associazione**...</span><span class="sxs-lookup"><span data-stu-id="3fbdf-227">Right-click the **Bindings** node and select **New Binding Configuration**…</span></span> <span data-ttu-id="3fbdf-228">Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-228">Select the binding type in the dialog box and click **OK**.</span></span>  
   
-2.  Selezionare il comportamento contenente l'elemento che si desidera modificare.  
+-   <span data-ttu-id="3fbdf-229">Selezionare il **associazioni** nodo e fare clic su **nuova configurazione dell'associazione**...</span><span class="sxs-lookup"><span data-stu-id="3fbdf-229">Select the **Bindings** node and click **New Binding Configuration**…</span></span> <span data-ttu-id="3fbdf-230">nel **riquadro** in basso a sinistra della finestra.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-230">in the **Task Pane** on the lower-left of the window.</span></span>  
   
-3.  Selezionare l'estensione dell'elemento del comportamento che si desidera modificare.Le impostazioni dell'elemento sono visualizzate nel riquadro a destra, in cui è inoltre possibile modificarle.  
+-   <span data-ttu-id="3fbdf-231">Nella pagina Riepilogo servizio o client, fare clic su **fare clic per creare** nel **configurazione dell'associazione** campo per creare una configurazione di associazione per l'endpoint corrispondente.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-231">In the service or client summary page, click **Click to Create** in the **Binding Configuration** field to create a binding configuration for the corresponding endpoint.</span></span>  
   
-#### ProtocolMapping  
- In questa sezione è possibile impostare i tipi di associazione predefiniti per i vari protocolli, quali http, tcp, MSMQ e net.pipe, tramite il mapping definito tra gli schemi di indirizzi dei protocolli e le possibili associazioni.È inoltre possibile aggiungere nuovi mapping ad altri protocolli.  
+#### <a name="adding-binding-element-extensions-to-a-custom-binding"></a><span data-ttu-id="3fbdf-232">Aggiunta di estensioni degli elementi di associazione a un'associazione personalizzata</span><span class="sxs-lookup"><span data-stu-id="3fbdf-232">Adding Binding Element Extensions to a Custom Binding</span></span>  
   
-#### Estensioni  
- Le nuove estensioni delle associazioni, degli elementi delle associazioni, degli endpoint standard e dei comportamenti possono essere registrate per essere utilizzate nella configurazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].Ogni estensione è costituita da una coppia nome\/tipo.Il primo elemento della coppia definisce il nome dell'estensione nella configurazione, mentre il secondo implementa l'estensione.Esistono quattro tipi di estensione:  
+1.  <span data-ttu-id="3fbdf-233">Selezionare l'associazione a cui si desidera aggiungere un elemento di estensione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-233">Select the binding you want to add an extension element to.</span></span>  
   
--   Le estensioni delle associazioni definiscono un intero tipo di associazione.Esempio: `basicHttpBinding`.  
+2.  <span data-ttu-id="3fbdf-234">Fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-234">Click **Add**.</span></span>  
   
--   Le estensioni degli elementi di associazione definiscono un elemento di un'associazione.Esempio: `textMessageEncoding`.  
+3.  <span data-ttu-id="3fbdf-235">Nell'elenco di estensioni disponibili, selezionare l'estensione degli elementi di associazione che si desidera aggiungere.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-235">From the list of available extensions, select the binding element extension you want to add.</span></span> <span data-ttu-id="3fbdf-236">Per selezionare più elementi, premere contemporaneamente CTRL.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-236">To select multiple items, press the CTRL key simultaneously.</span></span>  
   
--   Le estensioni degli endpoint standard definiscono un endpoint standard intero.Esempio: `discoveryEndpoint`.  
+4.  <span data-ttu-id="3fbdf-237">Fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-237">Click **Add**.</span></span>  
   
--   Le estensioni degli elementi di comportamento definiscono un elemento di un comportamento.Esempio: `clientVia`.  
+#### <a name="adjusting-the-extension-position-in-a-custom-binding"></a><span data-ttu-id="3fbdf-238">Impostazione della posizione dell'estensione in un'associazione personalizzata</span><span class="sxs-lookup"><span data-stu-id="3fbdf-238">Adjusting the Extension Position in a Custom Binding</span></span>  
+ <span data-ttu-id="3fbdf-239">Un'associazione personalizzata è una raccolta di elementi di associazione organizzati in uno stack.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-239">A custom binding is a collection of binding elements that form a stack.</span></span> <span data-ttu-id="3fbdf-240">Ogni elemento di associazione dello stack può essere configurato in modo specifico.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-240">Each binding element on the stack has its own configuration settings.</span></span> <span data-ttu-id="3fbdf-241">L'ordine delle estensioni degli elementi di associazione in un'associazione personalizzata indica la posizione occupata da ogni estensione nello stack.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-241">The order of the binding element extensions in a custom binding indicates their positions in the stack.</span></span> <span data-ttu-id="3fbdf-242">Gli elementi all'inizio dello stack vengono applicati per primi.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-242">Elements at the top of the stack are applied first.</span></span> <span data-ttu-id="3fbdf-243">Per modificare l'ordine:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-243">To change the ordering:</span></span>  
   
- Le estensioni registrate nella configurazione possono essere utilizzate come qualsiasi altro componente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dello stesso tipo.  
+1.  <span data-ttu-id="3fbdf-244">Selezionare il nodo dell'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-244">Select the custom binding node.</span></span>  
   
-##### Aggiunta di una nuova estensione  
- Selezionare uno dei nodi delle estensioni nei nodi avanzati:  
+2.  <span data-ttu-id="3fbdf-245">Selezionare un elemento di estensione di associazione nel **posizione dell'estensione di elemento di associazione** sezione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-245">Select one binding extension element in the **Binding Element Extension Position** section.</span></span>  
   
-1.  fare clic su **Nuovo**.  
+3.  <span data-ttu-id="3fbdf-246">Utilizzare il **backup** o **verso il basso** pulsante sul lato sinistro dell'elenco per modificare la posizione dell'elemento selezionato.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-246">Use the **Up** or **Down** button on the left side of the list to change the position of the selected element.</span></span>  
   
-2.  Immettere un nome e un tipo.  
+#### <a name="editing-the-configuration-of-binding-element-extensions-in-a-custom-binding"></a><span data-ttu-id="3fbdf-247">Modifica della configurazione di estensioni degli elementi di associazione in un'associazione personalizzata</span><span class="sxs-lookup"><span data-stu-id="3fbdf-247">Editing the Configuration of Binding Element Extensions in a Custom Binding</span></span>  
   
-3.  Scegliere **OK**.  
+1.  <span data-ttu-id="3fbdf-248">Selezionare il nodo dell'associazione nell'albero.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-248">Select the binding node in the tree.</span></span>  
   
-4.  L'estensione verrà quindi visualizzata nella sezione appropriata dell'editor.Se ad esempio si aggiunge un'estensione di un elemento di un comportamento, questa verrà visualizzata nell'elenco delle estensioni disponibili.  
+2.  <span data-ttu-id="3fbdf-249">Selezionare l'associazione personalizzata contenente l'elemento che si desidera modificare.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-249">Select the custom binding that contains the element you want to edit.</span></span>  
   
-#### Ambiente host  
- Questa sezione consente di definire le impostazioni di creazione delle istanze per l'ambiente host del servizio.  
+3.  <span data-ttu-id="3fbdf-250">Selezionare l'estensione degli elementi di associazione che si desidera modificare.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-250">Select the binding element extension you want to edit.</span></span> <span data-ttu-id="3fbdf-251">Le impostazioni dell'elemento verranno visualizzate nel riquadro di destra, in cui è inoltre possibile modificarle.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-251">The settings of the element appear in the right pane, where they can be edited.</span></span>  
   
-### Creazione di un file di configurazione utilizzando la procedura guidata  
- Uno dei sistemi disponibili per la creazione di nuovo file di configurazione consiste nell'utilizzo della Creazione guidata nuovo elemento del servizio.La procedura guidata consente di individuare i tipi di servizio e gli altri elementi compatibili con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installati nel computer, incluse le applicazioni COM\+ e le directory virtuali ospitate su Web, e quindi carica tali elementi in modo da semplificare notevolmente la creazione della configurazione.  
+### <a name="diagnostics"></a><span data-ttu-id="3fbdf-252">Diagnostica</span><span class="sxs-lookup"><span data-stu-id="3fbdf-252">Diagnostics</span></span>  
+ <span data-ttu-id="3fbdf-253">Il **diagnostica** nodo vengono visualizzate tutte le impostazioni di diagnostica nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-253">The **Diagnostics** node displays all of the diagnostic settings in the configuration file.</span></span> <span data-ttu-id="3fbdf-254">Consente di attivare e disattivare i contatori delle prestazioni, abilitare o disabilitare Strumentazione gestione Windows (WMI), nonché di configurare le funzionalità di traccia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e di registrazione dei messaggi di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3fbdf-254">It enables you to turn performance counters on or off, enable or disable Windows Management Instrumentation (WMI), configure [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tracing, and configure [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] message logging.</span></span> <span data-ttu-id="3fbdf-255">Le impostazioni di **diagnostica** nodo corrisponde al <`system.diagnostics`> sezione e `<diagnostics>` sezione `<system.serviceModel>` nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-255">The settings in the **Diagnostics** node correspond to the <`system.diagnostics`> section, and `<diagnostics>` section in `<system.serviceModel>` in the configuration file.</span></span>  
   
-#### Creazione di un file di configurazione  
+ <span data-ttu-id="3fbdf-256">Quando si fa clic il **diagnostica** nodo, è possibile visualizzare o eseguire attività di diagnostica **pagina riepilogo** nel **riquadro dei dettagli**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-256">When you click the **Diagnostics** node, you can view or perform tasks on the diagnostics **Summary Page** in the **Detail Pane**.</span></span>  
   
-1.  Avviare l'Editor di configurazione dei servizi. A tale scopo, utilizzare una finestra di comando per passare al percorso di installazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e quindi digitare `SvcConfigEditor.exe`.  
+#### <a name="configuring-performance-counters-and-wmi"></a><span data-ttu-id="3fbdf-257">Configurazione dei contatori delle prestazioni e di WMI</span><span class="sxs-lookup"><span data-stu-id="3fbdf-257">Configuring performance counters and WMI</span></span>  
   
-2.  Scegliere **Apri** dal menu **File**, quindi, a seconda del tipo di file di configurazione che si desidera creare, fare clic su **Eseguibile**, **Servizio COM\+** o **Servizio WebHosted**.  
+1.  <span data-ttu-id="3fbdf-258">Fare clic su di **diagnostica** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-258">Click the **Diagnostics** node.</span></span>  
   
-3.  Nella finestra di dialogo **Apri**, passare al file specifico per cui si desidera creare un file di configurazione e quindi fare doppio clic su di esso.  
+2.  <span data-ttu-id="3fbdf-259">Fare clic su **attivare o disattivare i contatori delle prestazioni**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-259">Click **Toggle Performance Counters**.</span></span> <span data-ttu-id="3fbdf-260">Il contatore delle prestazioni prevede tre stati: Disattivo (predefinito), Solo servizio e Tutto.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-260">The performance counter has three states: Off (default), ServiceOnly, and All.</span></span> <span data-ttu-id="3fbdf-261">Il collegamento consente di attivare/disattivare l'impostazione degli stati.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-261">Clicking the link toggles the setting among these three states.</span></span>  
   
-4.  Scegliere **Aggiungi nuovo elemento** dal menu **File** e fare clic su **Servizio**.Verrà avviata la Creazione guidata nuovo elemento del servizio.  
+#### <a name="configuring-wmi-provider"></a><span data-ttu-id="3fbdf-262">Configurazione del provider WMI</span><span class="sxs-lookup"><span data-stu-id="3fbdf-262">Configuring WMI Provider</span></span>  
   
-5.  Attenersi alle istruzioni fornite nella procedura guidata per creare il nuovo servizio.  
+1.  <span data-ttu-id="3fbdf-263">Fare clic su di **diagnostica** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-263">Click the **Diagnostics** node.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-264">Per abilitare il provider WMI, fare clic su di **Abilita Provider WMI** collegamento.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-264">To enable WMI provider, click the **Enable WMI Provider** link.</span></span>  
+  
+#### <a name="enabling-wcf-tracing"></a><span data-ttu-id="3fbdf-265">Abilitazione della traccia WCF</span><span class="sxs-lookup"><span data-stu-id="3fbdf-265">Enabling WCF Tracing</span></span>  
+ <span data-ttu-id="3fbdf-266">È possibile creare un file di traccia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con le proprietà standard oppure configurare un file di traccia personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-266">You can create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] trace file with standard properties or set up a custom trace file.</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-267">Fare clic su di **diagnostica** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-267">Click the **Diagnostics** node.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-268">Fare clic su **abilitare la traccia**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-268">Click **Enable Tracing**.</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-269">Fare clic su di **livello di traccia** collegamento per regolare il livello di traccia.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-269">Click the **Trace Level** link to adjust the trace level.</span></span> <span data-ttu-id="3fbdf-270">Esistono sei livelli di traccia: Disattivo, Critico, Errore, Avviso, Informazioni e Dettagliato.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-270">There are six trace levels: Off, Critical, Error, Warning, Information, and Verbose.</span></span> <span data-ttu-id="3fbdf-271">Il **traccia attività** e **Propaga attività** opzione consentono di utilizzare il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] funzionalità di traccia di attività.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-271">The **Activity Tracing** and **Propagate Activity** option enable you to use the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] activity tracing feature.</span></span>  
+  
+4.  <span data-ttu-id="3fbdf-272">Fare clic sul nome del listener di traccia per specificare il file e le opzioni di traccia.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-272">Click the trace listener name to specify the trace file and options.</span></span>  
+  
+#### <a name="enabling-wcf-logging"></a><span data-ttu-id="3fbdf-273">Abilitazione della registrazione WCF</span><span class="sxs-lookup"><span data-stu-id="3fbdf-273">Enabling WCF Logging</span></span>  
+ <span data-ttu-id="3fbdf-274">È possibile creare un file di traccia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con le proprietà standard oppure configurare un file di traccia personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-274">You can create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] trace file with standard properties or set up a custom trace file.</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-275">Fare clic su di **diagnostica** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-275">Click the **Diagnostics** node.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-276">Fare clic su **abilitare la registrazione dei messaggi**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-276">Click **Enable Message Logging**.</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-277">Fare clic su di **livello di registrazione** collegamento per regolare il livello di registrazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-277">Click the **Log Level** link to adjust the log level.</span></span> <span data-ttu-id="3fbdf-278">Esistono tre livelli di log: Messaggi in formato non valido, Messaggi servizio e Messaggi trasporto.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-278">There are three log levels: Malformed, Service, and Transport.</span></span>  
+  
+4.  <span data-ttu-id="3fbdf-279">Fare clic sul nome del listener per specificare le opzioni e il file di log.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-279">Click the listener name to specify the log file and options.</span></span>  
   
 > [!NOTE]
->  Se si desidera utilizzare NetPeerTcpBinding dal file di configurazione creato tramite la Procedura guidata, si deve aggiungere manualmente un elemento di configurazione dell’associazione e modificare l'attributo `mode` dell’elemento `security` in “None”.  
+>  <span data-ttu-id="3fbdf-280">Se si desidera che i registri di traccia e dei messaggi per essere scaricato automaticamente alla chiusura dell'applicazione, abilitare il **cancellazione automatica registro** opzione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-280">If you want the trace and message logs to be flushed automatically when your application is closed, enable the **Auto Flush** option.</span></span>  
   
-## Configurazione di COM\+  
- L'Editor di configurazione dei servizi consente di creare un nuovo file di configurazione per un'applicazione COM\+ esistente o di modificare una configurazione COM\+ esistente.Il nodo **Contratto COM** è visibile solo quando il file di configurazione contiene la sezione \<`comContract`\>.  
+ <span data-ttu-id="3fbdf-281">Il **diagnostica** **pagina riepilogo** consente di eseguire le attività più comuni di configurazione di diagnostica.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-281">The **Diagnostics** **Summary Page** enables you to accomplish the most common tasks in configuring diagnostics.</span></span> <span data-ttu-id="3fbdf-282">Tuttavia, se si desidera modificare manualmente le impostazioni listener e origini, è necessario espandere il **diagnostica** nodo e modificare le impostazioni in **registrazione messaggi**, **listener** e **Origini** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-282">However, if you want to manually edit the Listeners and Sources settings, you must expand the **Diagnostics** node and edit settings in **Message Logging**, **Listeners** and **Sources** node.</span></span>  
   
-### Creazione di una nuova configurazione COM\+  
- Prima di creare una nuova configurazione COM\+, verificare che l'applicazione COM\+ sia stata installata in Servizi componenti e registrata nella Global Assembly Cache \(GAC\).  
+#### <a name="enabling-wcf-custom-tracing-or-message-logging"></a><span data-ttu-id="3fbdf-283">Abilitazione della traccia o della registrazione dei messaggi personalizzata di WCF</span><span class="sxs-lookup"><span data-stu-id="3fbdf-283">Enabling WCF Custom Tracing or Message Logging</span></span>  
   
-1.  Scegliere **File** \-\> **Integra** \-\> **Applicazione COM\+**. Questa operazione determina la chiusura del file attualmente aperto.Se il file corrente contiene dati non salvati, verrà visualizzata la finestra di dialogo Salva.Verrà quindi avviata l'**Integrazione guidata COM\+**.  
+1.  <span data-ttu-id="3fbdf-284">Fare clic su di **diagnostica** nodo ed espanderlo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-284">Click the **Diagnostics** node, and expand it.</span></span>  
   
-2.  Nella prima pagina, selezionare l'applicazione COM\+ nella struttura ad albero.Se risulta impossibile individuare l'applicazione COM\+ nella struttura ad albero, verificare che sia stata installata in Servizi componenti e registrata nella Global Assembly Cache \(GAC\).  
+2.  <span data-ttu-id="3fbdf-285">Fare doppio clic su di **listener** nodo e selezionare **nuovo Listener**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-285">Right-click the **Listeners** node and select **New Listener**.</span></span>  
   
-3.  Nella pagina successiva, selezionare i metodi che si desidera esporre come servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].Tutti i metodi supportati dell'applicazione COM\+ sono visualizzati e selezionati per impostazione predefinita.  
+3.  <span data-ttu-id="3fbdf-286">Digitare il nome del file di traccia nel **InitData** campo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-286">Type in the trace file name in the **InitData** field.</span></span> <span data-ttu-id="3fbdf-287">È possibile fare clic sul pulsante "…" per selezionare un percorso.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-287">You can click the "…" button to browse to a path.</span></span>  
   
-4.  Scegliere un metodo di hosting.  
+4.  <span data-ttu-id="3fbdf-288">Fare clic su di **TypeName** riga viene visualizzato un pulsante "…".</span><span class="sxs-lookup"><span data-stu-id="3fbdf-288">Clicking the **TypeName** line displays a "…" button.</span></span> <span data-ttu-id="3fbdf-289">Fare clic su questo pulsante per aprire la **Browser dei tipi di Listener di traccia**, che è possibile utilizzare per individuare i listener di traccia preconfigurati già installati.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-289">Click this button to open the **Trace Listener Type Browser**, which you can use to find pre-configured trace listeners that are already installed.</span></span>  
   
-5.  Configurare le altre impostazioni secondo le istruzioni della procedura guidata.  
+5.  <span data-ttu-id="3fbdf-290">Si noti il **origine** sezione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-290">Note the **Source** section.</span></span> <span data-ttu-id="3fbdf-291">Fare clic su **Aggiungi** in questa sezione per aprire una finestra di dialogo contenente un menu a discesa, in cui sono elencate origini di traccia disponibili.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-291">Click **Add** in this section to open a dialog box with a drop-down menu, which lists available tracing sources.</span></span> <span data-ttu-id="3fbdf-292">Selezionare un'origine di traccia e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-292">Select a tracing source and click **OK**.</span></span>  
   
-6.  L'Editor di configurazione dei servizi utilizza in background ComSvcConfig.exe per generare un file di configurazione.Al termine di questa operazione sarà possibile esaminare un riepilogo e quindi uscire dalla procedura guidata.Verrà automaticamente aperto il file di configurazione in modo da consentirne la modifica diretta.  
+6.  <span data-ttu-id="3fbdf-293">Per modificare le impostazioni di registrazione dei messaggi, fare clic su di **registrazione messaggi** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-293">To edit Message Logging settings, click the **Message Logging** node.</span></span> <span data-ttu-id="3fbdf-294">Le impostazioni possono essere modificate nella griglia delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-294">You can edit the settings in the property grid.</span></span>  
   
-### Modifica di una configurazione COM\+ esistente  
+### <a name="advanced"></a><span data-ttu-id="3fbdf-295">Avanzate</span><span class="sxs-lookup"><span data-stu-id="3fbdf-295">Advanced</span></span>  
   
-1.  Nel menu **File** \-\> scegliere **Apri** \-\> **COM\+ Service**…  
+#### <a name="behaviors"></a><span data-ttu-id="3fbdf-296">comportamenti</span><span class="sxs-lookup"><span data-stu-id="3fbdf-296">Behaviors</span></span>  
+ <span data-ttu-id="3fbdf-297">Il **comportamenti** nodo vengono visualizzati i comportamenti attualmente definiti nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-297">The **Behaviors** node displays the behaviors that are currently defined in the configuration file.</span></span>  
   
-2.  Selezionare nell'elenco il servizio COM\+ che si desidera modificare.  
+ <span data-ttu-id="3fbdf-298">Le configurazioni dei comportamenti consentono di impostare i comportamenti di endpoint e servizi.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-298">Behavior configurations are used to configure behaviors of endpoints and services.</span></span> <span data-ttu-id="3fbdf-299">Tali impostazioni di configurazione vengono archiviate nel **avanzate** nodo **i comportamenti del servizio** e **i comportamenti dell'Endpoint**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-299">Such configuration settings are stored in the **Advanced** node under **Service Behaviors** and **Endpoint Behaviors**.</span></span> <span data-ttu-id="3fbdf-300">I comportamenti del servizio sono utilizzati dai servizi, mentre i comportamenti degli endpoint sono utilizzati dagli endpoint.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-300">Service behaviors are used by services; whereas endpoint behaviors by endpoints.</span></span>  
   
-3.  Modificare le impostazioni di configurazione nel nodo **Contratti COM**.  
+ <span data-ttu-id="3fbdf-301">I comportamenti sono una raccolta di elementi di estensione organizzati in uno stack.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-301">Behaviors are a collection of extension elements that for a stack.</span></span> <span data-ttu-id="3fbdf-302">L'elemento all'inizio dello stack viene applicato per primo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-302">The element at the top of the stack is applied first.</span></span> <span data-ttu-id="3fbdf-303">Ogni elemento di estensione può essere configurato in modo specifico.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-303">Each extension element can have its own configuration.</span></span>  
+  
+##### <a name="creating-a-new-behavior-configuration"></a><span data-ttu-id="3fbdf-304">Creazione di una nuova configurazione di un comportamento</span><span class="sxs-lookup"><span data-stu-id="3fbdf-304">Creating a new Behavior Configuration</span></span>  
+ <span data-ttu-id="3fbdf-305">Per creare una nuova configurazione di un comportamento, è possibile procedere nei due modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-305">You can create a new behavior configuration in two ways.</span></span>  
+  
+-   <span data-ttu-id="3fbdf-306">Fare doppio clic su uno dei nodi dei comportamenti e selezionare "**nuova configurazione del comportamento...**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-306">Right-click one of the behavior nodes and select "**New Behavior Configuration…**</span></span>  
+  
+-   <span data-ttu-id="3fbdf-307">Selezionare uno dei nodi dei comportamenti e fare clic su di **nuova configurazione del comportamento**...</span><span class="sxs-lookup"><span data-stu-id="3fbdf-307">Select one of the behavior nodes and click the **New Behavior Configuration**…</span></span> <span data-ttu-id="3fbdf-308">nel **riquadro** in basso a sinistra della finestra.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-308">in the **Task Pane** on the lower-left of the window.</span></span>  
+  
+##### <a name="adding-behavior-element-extensions-to-a-behavior"></a><span data-ttu-id="3fbdf-309">Aggiunta di estensioni degli elementi del comportamento a un comportamento</span><span class="sxs-lookup"><span data-stu-id="3fbdf-309">Adding Behavior Element Extensions to a Behavior</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-310">selezionare uno dei nodi dei comportamenti.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-310">Select one of the behavior nodes.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-311">Selezionare il comportamento che si desidera modificare.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-311">Select the behavior you want edit.</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-312">Fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-312">Click **Add**.</span></span>  
+  
+4.  <span data-ttu-id="3fbdf-313">Nell'elenco di estensioni disponibili, selezionare l'estensione degli elementi del comportamento che si desidera aggiungere.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-313">From the list of available extensions, select the behavior element extension you want to add.</span></span>  
+  
+5.  <span data-ttu-id="3fbdf-314">Fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-314">Click **Add**.</span></span>  
+  
+##### <a name="adjusting-the-extension-position-in-a-behavior"></a><span data-ttu-id="3fbdf-315">Impostazione della posizione dell'estensione in un Comportamento</span><span class="sxs-lookup"><span data-stu-id="3fbdf-315">Adjusting the Extension Position in a Behavior</span></span>  
+ <span data-ttu-id="3fbdf-316">I comportamenti sono raccolte di elementi organizzati in uno stack.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-316">Behaviors are collections of elements that form a stack.</span></span> <span data-ttu-id="3fbdf-317">Ogni elemento dello stack può essere configurato in modo specifico.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-317">Each element on the stack has its own configuration.</span></span> <span data-ttu-id="3fbdf-318">L'ordine delle estensioni degli elementi di comportamento in un comportamento indica la posizione occupata da ogni estensione nello stack.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-318">The order of the behavior element extensions in a behavior indicates their positions in the stack.</span></span> <span data-ttu-id="3fbdf-319">Gli elementi all'inizio dello stack vengono applicati per primi.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-319">Elements at the top of the stack are applied first.</span></span> <span data-ttu-id="3fbdf-320">Per modificare l'ordine:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-320">To change the ordering:</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-321">selezionare uno dei nodi dei comportamenti.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-321">Select one of the behavior nodes.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-322">Selezionare il comportamento che si desidera modificare.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-322">Select the behavior you want edit.</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-323">Selezionare un elemento di estensione di comportamento nella **posizione dell'estensione di elemento di comportamento** sezione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-323">Select a behavior extension element in the **Behavior Element Extension Position** section.</span></span>  
+  
+4.  <span data-ttu-id="3fbdf-324">Utilizzare il **backup** o **verso il basso** pulsante sul lato sinistro dell'elenco per modificare la posizione dell'elemento selezionato.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-324">Use the **Up** or **Down** button on the left side of the list to change the position of the selected element.</span></span>  
+  
+##### <a name="editing-the-configuration-of-behavior-element-extensions"></a><span data-ttu-id="3fbdf-325">Modifica della configurazione delle estensioni degli elementi del comportamento</span><span class="sxs-lookup"><span data-stu-id="3fbdf-325">Editing the Configuration of Behavior Element Extensions</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-326">Selezionare uno dei nodi dei comportamenti nell'albero.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-326">Select one of the behavior nodes in the tree.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-327">Selezionare il comportamento contenente l'elemento che si desidera modificare.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-327">Select the behavior that contains the element you want to edit.</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-328">Selezionare l'estensione dell'elemento del comportamento che si desidera modificare.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-328">Select the behavior element extension you want to edit.</span></span> <span data-ttu-id="3fbdf-329">Le impostazioni dell'elemento sono visualizzate nel riquadro a destra, in cui è inoltre possibile modificarle.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-329">The settings of the element appear in the right pane where they can be edited.</span></span>  
+  
+#### <a name="protocolmapping"></a><span data-ttu-id="3fbdf-330">ProtocolMapping</span><span class="sxs-lookup"><span data-stu-id="3fbdf-330">ProtocolMapping</span></span>  
+ <span data-ttu-id="3fbdf-331">Contenuto della sezione è possibile impostare i tipi di associazione predefiniti per i vari protocolli, quali http, tcp, MSMQ e net.pipe, tramite il mapping definito tra gli schemi di indirizzi dei protocolli e le possibili associazioni.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-331">This section allows you to set default binding types for different protocols such as http, tcp, MSMQ or net.pipe through defined mapping between protocol address schemes and the possible bindings.</span></span> <span data-ttu-id="3fbdf-332">È inoltre possibile aggiungere nuovi mapping ad altri protocolli.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-332">You can also add new mappings to other protocols.</span></span>  
+  
+#### <a name="extensions"></a><span data-ttu-id="3fbdf-333">Estensioni</span><span class="sxs-lookup"><span data-stu-id="3fbdf-333">Extensions</span></span>  
+ <span data-ttu-id="3fbdf-334">Le nuove estensioni delle associazioni, degli elementi delle associazioni, degli endpoint standard e dei comportamenti possono essere registrate per essere utilizzate nella configurazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3fbdf-334">New binding extensions, binding element extensions, standard endpoint extensions and behavior extensions can be registered for use in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration.</span></span> <span data-ttu-id="3fbdf-335">Ogni estensione è costituita da una coppia nome/tipo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-335">Extensions are name/type pairs.</span></span> <span data-ttu-id="3fbdf-336">Il primo elemento della coppia definisce il nome dell'estensione nella configurazione, mentre il secondo implementa l'estensione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-336">The name defines the name of the extension in configuration, whereas the type implements the extension.</span></span> <span data-ttu-id="3fbdf-337">Esistono quattro tipi di estensione:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-337">There are four types of extensions:</span></span>  
+  
+-   <span data-ttu-id="3fbdf-338">Le estensioni di associazione definiscono un intero tipo di associazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-338">Binding extensions define an entire binding type.</span></span> <span data-ttu-id="3fbdf-339">Esempio: `basicHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-339">Example: `basicHttpBinding`.</span></span>  
+  
+-   <span data-ttu-id="3fbdf-340">Le estensioni degli elementi di associazione definiscono un elemento di un'associazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-340">Binding element extensions define an element of a binding.</span></span> <span data-ttu-id="3fbdf-341">Esempio: `textMessageEncoding`.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-341">Example: `textMessageEncoding`.</span></span>  
+  
+-   <span data-ttu-id="3fbdf-342">Le estensioni degli endpoint standard definiscono un endpoint standard intero.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-342">Standard endpoint extensions define an entire standard endpoint.</span></span> <span data-ttu-id="3fbdf-343">Esempio: `discoveryEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-343">Example: `discoveryEndpoint`.</span></span>  
+  
+-   <span data-ttu-id="3fbdf-344">Le estensioni degli elementi di un comportamento definiscono un elemento di un comportamento.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-344">Behavior element extensions define an element of a behavior.</span></span> <span data-ttu-id="3fbdf-345">Esempio: `clientVia`.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-345">Example: `clientVia`.</span></span>  
+  
+ <span data-ttu-id="3fbdf-346">Le estensioni registrate nella configurazione possono essere utilizzate come qualsiasi altro componente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dello stesso tipo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-346">Extensions that have been registered in configuration can be used like any other [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] component of the same type.</span></span>  
+  
+##### <a name="adding-a-new-extension"></a><span data-ttu-id="3fbdf-347">Aggiunta di una nuova estensione</span><span class="sxs-lookup"><span data-stu-id="3fbdf-347">Adding a new extension</span></span>  
+ <span data-ttu-id="3fbdf-348">Selezionare uno dei nodi delle estensioni nei nodi avanzati:</span><span class="sxs-lookup"><span data-stu-id="3fbdf-348">Select one of the extension nodes in the advanced nodes:</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-349">Fare clic su **Nuovo**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-349">Click **New**.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-350">Immettere un nome e un tipo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-350">Enter a name and type.</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-351">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-351">Click **OK**.</span></span>  
+  
+4.  <span data-ttu-id="3fbdf-352">L'estensione verrà quindi visualizzata nella sezione appropriata dell'editor.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-352">The extension now appears in the appropriate place in the Editor.</span></span> <span data-ttu-id="3fbdf-353">Se ad esempio si aggiunge un'estensione di un elemento di un comportamento, questa verrà visualizzata nell'elenco delle estensioni disponibili.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-353">For example, if you add a behavior element extension, it appears in the list of available extensions.</span></span>  
+  
+#### <a name="hosting-environment"></a><span data-ttu-id="3fbdf-354">Ambiente host</span><span class="sxs-lookup"><span data-stu-id="3fbdf-354">Hosting Environment</span></span>  
+ <span data-ttu-id="3fbdf-355">Questa sezione consente di definire le impostazioni di creazione delle istanze per l'ambiente host del servizio.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-355">This section allows you to define instantiation settings for the service hosting environment.</span></span>  
+  
+### <a name="creating-a-configuration-file-using-the-wizard"></a><span data-ttu-id="3fbdf-356">Creazione di un File di configurazione utilizzando la procedura guidata</span><span class="sxs-lookup"><span data-stu-id="3fbdf-356">Creating a Configuration File Using the Wizard</span></span>  
+ <span data-ttu-id="3fbdf-357">Un modo per creare un nuovo file di configurazione è tramite la Creazione guidata nuovo elemento del servizio.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-357">One way to create a new configuration file is to use the New Service Element Wizard.</span></span> <span data-ttu-id="3fbdf-358">La procedura guidata consente di individuare i tipi di servizio e gli altri elementi compatibili con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installati nel computer, incluse le applicazioni COM+ e le directory virtuali ospitate su Web, e quindi carica tali elementi in modo da semplificare notevolmente la creazione della configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-358">The wizard finds the installed service types and other elements compatible with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] on the computer, including COM+ and Web-hosted virtual directories, and loads them to make creating the configuration much more streamlined.</span></span>  
+  
+#### <a name="creating-a-configuration-file"></a><span data-ttu-id="3fbdf-359">Creazione di un file di configurazione</span><span class="sxs-lookup"><span data-stu-id="3fbdf-359">Creating a Configuration File</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-360">Avviare l'Editor di configurazione di servizi tramite una finestra di comando per passare al [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] percorso di installazione e quindi digitare `SvcConfigEditor.exe`.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-360">Start Service Configuration Editor by using a command window to navigate to your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installation location, and then type `SvcConfigEditor.exe`.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-361">Dal **File** dal menu **aprire** e fare clic su **eseguibile**, **COM+ Service**, o **WebHosted Service**, a seconda del tipo di file di configurazione che si desidera creare.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-361">From the **File** menu, select **Open** and click **Executable**, **COM+ Service**, or **WebHosted Service**, depending on the type of configuration file you want to create.</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-362">Nel **aprire** finestra di dialogo casella, passare al file specifico che si desidera creare un file di configurazione e fare doppio clic.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-362">In the **Open** dialog box, navigate to the specific file you want to create a configuration file for and double-click it.</span></span>  
+  
+4.  <span data-ttu-id="3fbdf-363">Nel **File** dal menu **Aggiungi nuovo elemento** e fare clic su **servizio**.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-363">In the **File** menu, point to **Add New Item** and click **Service**.</span></span> <span data-ttu-id="3fbdf-364">Verrà avviata la Creazione guidata nuovo elemento del servizio.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-364">The New Service Element Wizard opens.</span></span>  
+  
+5.  <span data-ttu-id="3fbdf-365">Attenersi alle istruzioni fornite nella procedura guidata per creare il nuovo servizio.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-365">Follow the steps in the wizard to create the new service.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="3fbdf-366">Se si desidera utilizzare NetPeerTcpBinding dal file di configurazione creato tramite la Procedura guidata, si deve aggiungere manualmente un elemento di configurazione dell’associazione e modificare l'attributo `mode` dell’elemento `security` in “None”.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-366">If you want to use the NetPeerTcpBinding from the configuration file generated by the Wizard, you have to manually add a binding configuration element and modify the `mode` attribute of its `security` element to "None".</span></span>  
+  
+## <a name="configuring-com"></a><span data-ttu-id="3fbdf-367">Configurazione di COM+</span><span class="sxs-lookup"><span data-stu-id="3fbdf-367">Configuring COM+</span></span>  
+ <span data-ttu-id="3fbdf-368">L'Editor di configurazione dei servizi consente di creare un nuovo file di configurazione per un'applicazione COM+ esistente o di modificare una configurazione COM+ esistente.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-368">The Service Configuration Editor enables you to create a new configuration file for an existing COM+ application, or edit an existing COM+ configuration.</span></span> <span data-ttu-id="3fbdf-369">Il **contratto COM** nodo è visibile solo quando il <`comContract`> sezione esiste nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-369">The **COM Contract** node is only visible when the <`comContract`> section exists in the configuration file.</span></span>  
+  
+### <a name="creating-a-new-com-configuration"></a><span data-ttu-id="3fbdf-370">Creazione di una nuova configurazione COM+</span><span class="sxs-lookup"><span data-stu-id="3fbdf-370">Creating a New COM+ Configuration</span></span>  
+ <span data-ttu-id="3fbdf-371">Prima di creare una nuova configurazione COM+, verificare che l'applicazione COM+ sia stata installata in Servizi componenti e registrata nella Global Assembly Cache (GAC).</span><span class="sxs-lookup"><span data-stu-id="3fbdf-371">Before creating a new COM+ configuration, make sure that your COM+ application is installed in Component Services, and registered in the Global Assembly Cache (GAC).</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-372">Selezionare **File** -> menu **integrazione** -> **dell'applicazione COM+.**</span><span class="sxs-lookup"><span data-stu-id="3fbdf-372">Select **File** menu -> **Integrate** -> **COM+ Application.**</span></span> <span data-ttu-id="3fbdf-373">Questa operazione determina la chiusura del file attualmente aperto.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-373">This operation closes the current opened file.</span></span> <span data-ttu-id="3fbdf-374">Se il file corrente contiene dati non salvati, verrà visualizzata la finestra di dialogo Salva.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-374">If there is unsaved data in the current file, a Save dialog appears.</span></span> <span data-ttu-id="3fbdf-375">Il **integrazione guidata COM+** viene quindi avviata.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-375">The **COM+ Integration Wizard** is then launched.</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-376">Nella prima pagina selezionare l'applicazione COM+ nell'albero.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-376">In the first page, select the COM+ application from the tree.</span></span> <span data-ttu-id="3fbdf-377">Se risulta impossibile individuare l'applicazione COM+ nell'albero, verificare che sia stata installata in Servizi componenti e registrata nella Global Assembly Cache (GAC).</span><span class="sxs-lookup"><span data-stu-id="3fbdf-377">If you cannot find your COM+ application in the tree, verify that it is installed in the Component Services and registered in the Global Assembly Cache (GAC).</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-378">Nella pagina successiva, selezionare i metodi che si desidera esporre come servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3fbdf-378">In the next page, select which method(s) you want to expose as [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="3fbdf-379">Tutti i metodi supportati dell'applicazione COM+ sono visualizzati e selezionati per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-379">All the supported methods in the COM+ application are displayed and selected by default.</span></span>  
+  
+4.  <span data-ttu-id="3fbdf-380">Scegliere un metodo di hosting.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-380">Choose a hosting method.</span></span>  
+  
+5.  <span data-ttu-id="3fbdf-381">Configurare le altre impostazioni secondo le istruzioni della procedura guidata.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-381">Configure other settings according to the guides in the wizard.</span></span>  
+  
+6.  <span data-ttu-id="3fbdf-382">L'Editor di configurazione dei servizi utilizza in background ComSvcConfig.exe per generare un file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-382">Service Configuration Editor utilizes ComSvcConfig.exe in the background to generate configuration file.</span></span> <span data-ttu-id="3fbdf-383">Al termine di questa operazione sarà possibile esaminare un riepilogo e quindi uscire dalla procedura guidata.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-383">After this is completed, you can view a summary and exit the wizard.</span></span> <span data-ttu-id="3fbdf-384">Verrà automaticamente aperto il file di configurazione in modo da consentirne la modifica diretta.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-384">The generated configuration file is opened so that you can edit it directly.</span></span>  
+  
+### <a name="editing-an-existing-com-configuration"></a><span data-ttu-id="3fbdf-385">Modifica di una configurazione COM+ esistente</span><span class="sxs-lookup"><span data-stu-id="3fbdf-385">Editing an Existing COM+ Configuration</span></span>  
+  
+1.  <span data-ttu-id="3fbdf-386">Selezionare **File** -> menu **aprire** -> **COM+ Service**...</span><span class="sxs-lookup"><span data-stu-id="3fbdf-386">Select **File** menu -> **Open** -> **COM+ Service**…</span></span>  
+  
+2.  <span data-ttu-id="3fbdf-387">Selezionare nell'elenco il servizio COM+ che si desidera modificare.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-387">Select the COM+ Service you want to edit from the list.</span></span>  
+  
+3.  <span data-ttu-id="3fbdf-388">Modificare le impostazioni di configurazione di **contratti COM** nodo.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-388">Edit configuration settings in the **COM Contracts** node.</span></span>  
   
     > [!NOTE]
-    >  È inoltre possibile aprire e modificare direttamente un file di configurazione contenente contratti COM.  
+    >  <span data-ttu-id="3fbdf-389">È inoltre possibile aprire e modificare direttamente un file di configurazione contenente contratti COM.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-389">You can also directly open and edit a configuration file that contains COM contracts.</span></span>  
   
-## Sicurezza  
- Un file di configurazione del servizio generato dall'Editor di configurazione non è necessariamente protetto.Fare riferimento alla documentazione [Sicurezza](../../../docs/framework/wcf/feature-details/security.md) per verificare come proteggere i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+## <a name="security"></a><span data-ttu-id="3fbdf-390">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="3fbdf-390">Security</span></span>  
+ <span data-ttu-id="3fbdf-391">Un file di configurazione del servizio generato dall'Editor di configurazione non è necessariamente protetto.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-391">A service configuration file generated by the Configuration Editor is not guaranteed to be secure.</span></span> <span data-ttu-id="3fbdf-392">Consultare la [sicurezza](../../../docs/framework/wcf/feature-details/security.md) documentazione per informazioni su come proteggere il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizi.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-392">Please refer to the [Security](../../../docs/framework/wcf/feature-details/security.md) documentation to find out how to secure your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services.</span></span>  
   
- L’Editor di Configurazione, inoltre, può essere utilizzato solo per leggere e scrivere elementi di configurazione  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] validi.Lo strumento ignora elementi conformi allo schema, definiti dall'utente.Inoltre, non tenta di rimuovere questi elementi dal file di configurazione o di determinarne gli effetti sugli elementi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] conosciuti.L’utente è tenuto a determinare se questi elementi possono costituire una minaccia per l'applicazione o il sistema.
+ <span data-ttu-id="3fbdf-393">L’Editor di Configurazione, inoltre, può essere utilizzato solo per leggere e scrivere elementi di configurazione  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] validi.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-393">In addition, the Configuration Editor can only be used to read and write valid [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration elements.</span></span> <span data-ttu-id="3fbdf-394">Lo strumento ignora elementi conformi allo schema, definiti dall'utente.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-394">The tool ignores schema-compliant, user-defined elements.</span></span> <span data-ttu-id="3fbdf-395">Inoltre, non tenta di rimuovere questi elementi dal file di configurazione o di determinarne gli effetti sugli elementi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] conosciuti.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-395">It also does not attempt remove these elements from the configuration file or determine their effects on the known [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] elements.</span></span> <span data-ttu-id="3fbdf-396">L’utente è tenuto a determinare se questi elementi possono costituire una minaccia per l'applicazione o il sistema.</span><span class="sxs-lookup"><span data-stu-id="3fbdf-396">It is the user’s responsibility to determine whether these elements pose a threat to the application or the system.</span></span>

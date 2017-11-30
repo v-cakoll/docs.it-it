@@ -1,1 +1,1 @@
-.NET Framework 4 Client Profile
+<span data-ttu-id="d652d-101">.NET Framework 4 Client Profile</span><span class="sxs-lookup"><span data-stu-id="d652d-101">.NET Framework 4 Client Profile</span></span>

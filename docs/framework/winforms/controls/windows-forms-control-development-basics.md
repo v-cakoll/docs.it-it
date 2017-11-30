@@ -1,46 +1,47 @@
 ---
-title: "Nozioni fondamentali sullo sviluppo di controlli Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], creazione"
-  - "controlli personalizzati [Windows Form], tipi derivati"
-  - "concetti di programmazione, controlli Windows Form"
+title: Nozioni fondamentali sullo sviluppo di controlli Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], derivation types
+- programming concepts [Windows Forms], Windows Forms controls
+- controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca2bac983e25ab7453230a6718fe7eaa98e82275
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Nozioni fondamentali sullo sviluppo di controlli Windows Form
-Un controllo di Windows Form è una classe derivata direttamente o indirettamente da <xref:System.Windows.Forms.Control?displayProperty=fullName>.  Nell'elenco che segue sono descritti scenari comuni per lo sviluppo di controlli Windows Form.  
+# <a name="windows-forms-control-development-basics"></a><span data-ttu-id="dd080-102">Nozioni fondamentali sullo sviluppo di controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="dd080-102">Windows Forms Control Development Basics</span></span>
+<span data-ttu-id="dd080-103">Un controllo Windows Form è una classe che deriva direttamente o indirettamente da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="dd080-103">A Windows Forms control is a class that derives directly or indirectly from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span> <span data-ttu-id="dd080-104">Nell'elenco seguente vengono descritti scenari comuni per lo sviluppo di controlli Windows Form:</span><span class="sxs-lookup"><span data-stu-id="dd080-104">The following list describes common scenarios for developing Windows Forms controls:</span></span>  
   
--   Combinazione di controlli esistenti in modo da creare un controllo composito.  
+-   <span data-ttu-id="dd080-105">Combinazione di controlli esistenti per la creazione di un controllo composito.</span><span class="sxs-lookup"><span data-stu-id="dd080-105">Combining existing controls to author a composite control.</span></span>  
   
-     I controlli compositi incapsulano un'interfaccia utente riutilizzabile come controllo.  Un esempio di controllo composito è un controllo costituito da una casella di testo e da un pulsante Reimposta.  Le finestre di progettazione visive offrono un ricco supporto per la creazione di controlli compositi.  Per modificare un controllo composito è necessario derivarlo da <xref:System.Windows.Forms.UserControl?displayProperty=fullName>.  La classe base <xref:System.Windows.Forms.UserControl> fornisce il routing da tastiera per i controlli figlio e consente il funzionamento di tali controlli come gruppo.  Per ulteriori informazioni, vedere [Sviluppo di un controllo Windows Form composto](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
+     <span data-ttu-id="dd080-106">Controlli composti incapsulano un'interfaccia utente che può essere riutilizzata come un controllo.</span><span class="sxs-lookup"><span data-stu-id="dd080-106">Composite controls encapsulate a user interface that can be reused as a control.</span></span> <span data-ttu-id="dd080-107">Un esempio di un controllo composito è un controllo che include una casella di testo e un pulsante Reimposta.</span><span class="sxs-lookup"><span data-stu-id="dd080-107">An example of a composite control is a control that consists of a text box and a reset button.</span></span> <span data-ttu-id="dd080-108">Finestre di progettazione visiva offrono supporto avanzato per la creazione di controlli compositi.</span><span class="sxs-lookup"><span data-stu-id="dd080-108">Visual designers offer rich support for creating composite controls.</span></span> <span data-ttu-id="dd080-109">Per creare un controllo composito, derivare da <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="dd080-109">To author a composite control, derive from <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>.</span></span> <span data-ttu-id="dd080-110">La classe di base <xref:System.Windows.Forms.UserControl> fornisce il routing della tastiera per i controlli figlio e consente l'utilizzo come un gruppo di controlli figlio.</span><span class="sxs-lookup"><span data-stu-id="dd080-110">The base class <xref:System.Windows.Forms.UserControl> provides keyboard routing for child controls and enables child controls to work as a group.</span></span> <span data-ttu-id="dd080-111">Per altre informazioni, vedere [Sviluppo di un controllo Windows Form composito](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="dd080-111">For more information, see [Developing a Composite Windows Forms Control](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).</span></span>  
   
--   Estensione di un controllo esistente per personalizzarlo o associarvi funzionalità aggiuntive.  
+-   <span data-ttu-id="dd080-112">Estensione di un controllo esistente per personalizzarlo o aggiungere funzionalità.</span><span class="sxs-lookup"><span data-stu-id="dd080-112">Extending an existing control to customize it or to add to its functionality.</span></span>  
   
-     Sono esempi di controlli estesi un pulsante di cui non è possibile modificare il colore e un pulsante che presenta una proprietà aggiuntiva che registra il numero di volte in cui viene fatto clic sul pulsante stesso.  È possibile personalizzare qualsiasi controllo Windows Form derivando un altro controllo da esso, quindi eseguendo l'override o l'aggiunta di proprietà, metodi ed eventi.  
+     <span data-ttu-id="dd080-113">Sono esempi di controlli estesi di un pulsante, il cui colore non può essere modificato e un pulsante che dispone di una proprietà aggiuntiva che tiene traccia di quante volte è stato fatto clic.</span><span class="sxs-lookup"><span data-stu-id="dd080-113">A button whose color cannot be changed and a button that has an additional property that tracks how many times it has been clicked are examples of extended controls.</span></span> <span data-ttu-id="dd080-114">È possibile personalizzare qualsiasi controllo Windows Form che deriva da esso e si esegue l'override o l'aggiunta di proprietà, metodi ed eventi.</span><span class="sxs-lookup"><span data-stu-id="dd080-114">You can customize any Windows Forms control by deriving from it and overriding or adding properties, methods, and events.</span></span>  
   
--   Creazione di un controllo che non combina o estende controlli esistenti.  
+-   <span data-ttu-id="dd080-115">Creazione di un controllo che non è possibile combinare o estendere i controlli esistenti.</span><span class="sxs-lookup"><span data-stu-id="dd080-115">Authoring a control that does not combine or extend existing controls.</span></span>  
   
-     In questo scenario occorre derivare il controllo dalla classe base <xref:System.Windows.Forms.Control>.  È possibile sia eseguire l'override di proprietà, metodi ed eventi della classe base sia aggiungerne di nuovi.  Per un'introduzione, vedere [Procedura: sviluppare un controllo di Windows Form semplice](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+     <span data-ttu-id="dd080-116">In questo scenario, è necessario derivare il controllo dalla classe di base <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="dd080-116">In this scenario, derive your control from the base class <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="dd080-117">È possibile aggiungere, nonché eseguire l'override di proprietà, metodi ed eventi della classe di base.</span><span class="sxs-lookup"><span data-stu-id="dd080-117">You can add as well as override properties, methods, and events of the base class.</span></span> <span data-ttu-id="dd080-118">Per iniziare, vedere [procedura: sviluppare un controllo Windows Form semplice](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="dd080-118">To get started, see [How to: Develop a Simple Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).</span></span>  
   
- La classe base per i controlli di Windows Forms <xref:System.Windows.Forms.Control> fornisce l'infrastruttura necessaria per la visualizzazione nelle applicazioni basate su Windows sul lato client.  <xref:System.Windows.Forms.Control> rende disponibile un handle di finestra, gestisce il routing dei messaggi e fornisce eventi del mouse e della tastiera oltre a numerosi altri eventi dell'interfaccia utente.  Inoltre offre un layout avanzato e presenta proprietà specifiche per la visualizzazione, quali <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>,<xref:System.Windows.Forms.Control.Width%2A> e molte altre.  Fornisce infine funzionalità di sicurezza, supporto del threading e interoperabilità con controlli ActiveX.  Dal momento che una parte così consistente dell'infrastruttura è fornita dalla classe base, è relativamente semplice sviluppare controlli Windows Form personalizzati.  
+ <span data-ttu-id="dd080-119">La classe base per controlli Windows Form, <xref:System.Windows.Forms.Control>, fornisce l'infrastruttura necessaria per la visualizzazione nelle applicazioni client basate su Windows.</span><span class="sxs-lookup"><span data-stu-id="dd080-119">The base class for Windows Forms controls, <xref:System.Windows.Forms.Control>, provides the plumbing required for visual display in client-side Windows-based applications.</span></span> <span data-ttu-id="dd080-120"><xref:System.Windows.Forms.Control>fornisce un handle di finestra, gestisce il routing dei messaggi e fornisce gli eventi di tastiera e mouse, così come molti altri utente gli eventi di interfaccia.</span><span class="sxs-lookup"><span data-stu-id="dd080-120"><xref:System.Windows.Forms.Control> provides a window handle, handles message routing, and provides mouse and keyboard events as well as many other user interface events.</span></span> <span data-ttu-id="dd080-121">Fornisce un layout avanzato e dispone di proprietà specifiche per la visualizzazione, ad esempio <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e molti altri.</span><span class="sxs-lookup"><span data-stu-id="dd080-121">It provides advanced layout and has properties specific to visual display, such as <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, and many others.</span></span> <span data-ttu-id="dd080-122">Inoltre, offre sicurezza, il supporto del threading e interoperabilità con i controlli ActiveX.</span><span class="sxs-lookup"><span data-stu-id="dd080-122">Additionally, it provides security, threading support, and interoperability with ActiveX controls.</span></span> <span data-ttu-id="dd080-123">Poiché gran parte dell'infrastruttura viene definita dalla classe di base, è relativamente semplice sviluppare i propri controlli Windows Form.</span><span class="sxs-lookup"><span data-stu-id="dd080-123">Because so much of the infrastructure is provided by the base class, it is relatively easy to develop your own Windows Forms controls.</span></span>  
   
-## Vedere anche  
- [Procedura: sviluppare un controllo di Windows Form semplice](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)   
- [Sviluppo di un controllo Windows Form composto](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)   
- [Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)   
- [Tipi di controlli personalizzati](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="dd080-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dd080-124">See Also</span></span>  
+ [<span data-ttu-id="dd080-125">Procedura: Sviluppare un controllo di Windows Form semplice</span><span class="sxs-lookup"><span data-stu-id="dd080-125">How to: Develop a Simple Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
+ [<span data-ttu-id="dd080-126">Sviluppo di un controllo di Windows Form composto</span><span class="sxs-lookup"><span data-stu-id="dd080-126">Developing a Composite Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
+ [<span data-ttu-id="dd080-127">Procedura: Creare un controllo di Windows Form che visualizzi lo stato di avanzamento</span><span class="sxs-lookup"><span data-stu-id="dd080-127">How to: Create a Windows Forms Control That Shows Progress</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)  
+ [<span data-ttu-id="dd080-128">Tipi di controlli personalizzati</span><span class="sxs-lookup"><span data-stu-id="dd080-128">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

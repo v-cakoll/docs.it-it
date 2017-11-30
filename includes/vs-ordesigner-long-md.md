@@ -1,1 +1,1 @@
-Object Relational Designer
+<span data-ttu-id="b91b1-101">Object Relational Designer</span><span class="sxs-lookup"><span data-stu-id="b91b1-101">Object Relational Designer</span></span>

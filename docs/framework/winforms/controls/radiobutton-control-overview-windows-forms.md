@@ -1,44 +1,44 @@
 ---
-title: "Cenni preliminari sul controllo RadioButton (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RadioButton"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pulsanti di opzione, informazioni sui pulsanti di opzione"
-  - "pulsanti di opzione, rilevamento stato"
-  - "RadioButton (controllo) [Windows Form], informazioni sul controllo RadioButton"
-  - "RadioButton (controllo) [Windows Form], rilevamento stato"
+title: Cenni preliminari sul controllo RadioButton (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RadioButton
+helpviewer_keywords:
+- RadioButton control [Windows Forms], about RadioButton control
+- RadioButton control [Windows Forms], determining state
+- radio buttons [Windows Forms], determining state
+- radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ac0a04c506919ef807a3f8c5ed5aa75ee998f64a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul controllo RadioButton (Windows Form)
-I controlli <xref:System.Windows.Forms.RadioButton> Windows Form presentano all'utente un insieme di due o più opzioni in cui è possibile selezionare una sola opzione.  Nonostante possa apparire simile, il funzionamento dei pulsanti di opzione e delle caselle di controllo è fondamentalmente diverso. Se si seleziona un pulsante di opzione, non sarà infatti possibile selezionarne anche un altro all'interno dello stesso gruppo.  È invece possibile selezionare più di una casella di controllo.  Si crea un pulsante di opzione al fine di mostrare all'utente una serie di opzioni di cui è consentito selezionarne una sola.  
+# <a name="radiobutton-control-overview-windows-forms"></a><span data-ttu-id="f6a19-102">Cenni preliminari sul controllo RadioButton (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="f6a19-102">RadioButton Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="f6a19-103">Windows Form <xref:System.Windows.Forms.RadioButton> controlli presentano all'utente un set di due o più opzioni si escludono a vicenda.</span><span class="sxs-lookup"><span data-stu-id="f6a19-103">Windows Forms <xref:System.Windows.Forms.RadioButton> controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="f6a19-104">Mentre i pulsanti di opzione e caselle di controllo sembra funzionare in modo analogo, sussiste una differenza importante: quando un utente seleziona un pulsante di opzione, non è possibile selezionare anche altri pulsanti di opzione nello stesso gruppo.</span><span class="sxs-lookup"><span data-stu-id="f6a19-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span> <span data-ttu-id="f6a19-105">Al contrario, è possibile selezionare un numero qualsiasi di caselle di controllo.</span><span class="sxs-lookup"><span data-stu-id="f6a19-105">In contrast, any number of check boxes can be selected.</span></span> <span data-ttu-id="f6a19-106">Definizione di un gruppo di pulsanti di opzione indica all'utente, "Di seguito è un insieme di opzioni da cui è possibile scegliere una sola".</span><span class="sxs-lookup"><span data-stu-id="f6a19-106">Defining a radio button group tells the user, "Here is a set of choices from which you can choose one and only one."</span></span>  
   
-## Utilizzo del controllo  
- Quando si seleziona un controllo <xref:System.Windows.Forms.RadioButton>, la proprietà <xref:System.Windows.Forms.RadioButton.Checked%2A> viene impostata su `true` e viene richiamato il gestore dell'evento <xref:System.Windows.Forms.Control.Click>.  L'evento <xref:System.Windows.Forms.RadioButton.CheckedChanged> viene generato quando il valore della proprietà <xref:System.Windows.Forms.RadioButton.Checked%2A> viene modificato.  Se la proprietà <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> è impostata su `true` \(impostazione predefinita\), quando si seleziona il pulsante di opzione tutti gli altri pulsanti all'interno del gruppo vengono automaticamente deselezionati.  Questa proprietà viene in genere impostata su `false` solo quando si utilizza del codice per verificare che il pulsante di opzione selezionato sia un'opzione disponibile.  Il testo visualizzato all'interno del controllo viene impostato con la proprietà <xref:System.Windows.Forms.Control.Text%2A>, che può contenere tasti di scelta rapida.  Un tasto di scelta consente di scegliere il controllo mediante la pressione del tasto ALT e del tasto assegnato.  Per ulteriori informazioni, vedere [Procedura: creare tasti di scelta per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) e [Procedura: impostare il testo visualizzato da un controllo di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+## <a name="using-the-control"></a><span data-ttu-id="f6a19-107">Utilizzo del controllo</span><span class="sxs-lookup"><span data-stu-id="f6a19-107">Using the Control</span></span>  
+ <span data-ttu-id="f6a19-108">Quando un <xref:System.Windows.Forms.RadioButton> si fa clic sul controllo, il relativo <xref:System.Windows.Forms.RadioButton.Checked%2A> è impostata su `true` e <xref:System.Windows.Forms.Control.Click> gestore eventi viene chiamato.</span><span class="sxs-lookup"><span data-stu-id="f6a19-108">When a <xref:System.Windows.Forms.RadioButton> control is clicked, its <xref:System.Windows.Forms.RadioButton.Checked%2A> property is set to `true` and the <xref:System.Windows.Forms.Control.Click> event handler is called.</span></span> <span data-ttu-id="f6a19-109">Il <xref:System.Windows.Forms.RadioButton.CheckedChanged> evento viene generato quando il valore della <xref:System.Windows.Forms.RadioButton.Checked%2A> le modifiche alle proprietà.</span><span class="sxs-lookup"><span data-stu-id="f6a19-109">The <xref:System.Windows.Forms.RadioButton.CheckedChanged> event is raised when the value of the <xref:System.Windows.Forms.RadioButton.Checked%2A> property changes.</span></span> <span data-ttu-id="f6a19-110">Se il <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> è impostata su `true` (impostazione predefinita), quando si seleziona il pulsante di opzione tutti gli altri utenti nel gruppo vengono automaticamente deselezionati.</span><span class="sxs-lookup"><span data-stu-id="f6a19-110">If the <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> property is set to `true` (the default), when the radio button is selected all others in the group are automatically cleared.</span></span> <span data-ttu-id="f6a19-111">Questa proprietà viene in genere impostato solo su `false` quando il codice di convalida viene utilizzato per verificare che il pulsante di opzione selezionato sia un'opzione disponibile.</span><span class="sxs-lookup"><span data-stu-id="f6a19-111">This property is usually only set to `false` when validation code is used to make sure the radio button selected is an allowable option.</span></span> <span data-ttu-id="f6a19-112">Il testo visualizzato all'interno del controllo viene impostato con la <xref:System.Windows.Forms.Control.Text%2A> proprietà, che può contenere i tasti di scelta rapida.</span><span class="sxs-lookup"><span data-stu-id="f6a19-112">The text displayed within the control is set with the <xref:System.Windows.Forms.Control.Text%2A> property, which can contain access key shortcuts.</span></span> <span data-ttu-id="f6a19-113">Una chiave di accesso consente all'utente di "fare clic su" controllo premendo il tasto ALT con la chiave di accesso.</span><span class="sxs-lookup"><span data-stu-id="f6a19-113">An access key enables a user to "click" the control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="f6a19-114">Per ulteriori informazioni, vedere [procedura: creazione di chiavi per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) e [procedura: impostare il testo visualizzato da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="f6a19-114">For more information, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) and [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span>  
   
- Quando viene selezionato, il controllo <xref:System.Windows.Forms.RadioButton> viene visualizzato come un pulsante di comando attivato, se la proprietà <xref:System.Windows.Forms.RadioButton.Appearance%2A> è impostata su <xref:System.Windows.Forms.Appearance>.  I pulsanti di opzione possono inoltre visualizzare immagini utilizzando le proprietà <xref:System.Windows.Forms.ButtonBase.Image%2A> e <xref:System.Windows.Forms.ButtonBase.ImageList%2A>.  Per ulteriori informazioni, vedere [Procedura: impostare l'immagine visualizzata da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ <span data-ttu-id="f6a19-115">Il <xref:System.Windows.Forms.RadioButton> controllo viene visualizzato come un pulsante di comando, viene visualizzata sia stato attivato se è selezionata, se il <xref:System.Windows.Forms.RadioButton.Appearance%2A> è impostata su <xref:System.Windows.Forms.Appearance.Button>.</span><span class="sxs-lookup"><span data-stu-id="f6a19-115">The <xref:System.Windows.Forms.RadioButton> control can appear like a command button, which appears to have been depressed if selected, if the <xref:System.Windows.Forms.RadioButton.Appearance%2A> property is set to <xref:System.Windows.Forms.Appearance.Button>.</span></span> <span data-ttu-id="f6a19-116">Pulsanti di opzione possono inoltre visualizzare immagini utilizzando la <xref:System.Windows.Forms.ButtonBase.Image%2A> e <xref:System.Windows.Forms.ButtonBase.ImageList%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="f6a19-116">Radio buttons can also display images using the <xref:System.Windows.Forms.ButtonBase.Image%2A> and <xref:System.Windows.Forms.ButtonBase.ImageList%2A> properties.</span></span> <span data-ttu-id="f6a19-117">Per ulteriori informazioni, vedere [procedura: impostare l'immagine visualizzata da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="f6a19-117">For more information, see [How to: Set the Image Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.RadioButton>   
- [Cenni preliminari sul controllo Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [Cenni preliminari sul controllo GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)   
- [Cenni preliminari sul controllo CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [Procedura: creare tasti di scelta per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)   
- [Procedura: impostare il testo visualizzato da un controllo di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [Procedura: raggruppare controlli RadioButton Windows Form in modo che funzionino come set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)   
- [Controllo RadioButton](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f6a19-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f6a19-118">See Also</span></span>  
+ <xref:System.Windows.Forms.RadioButton>  
+ [<span data-ttu-id="f6a19-119">Panoramica sul controllo Panel</span><span class="sxs-lookup"><span data-stu-id="f6a19-119">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f6a19-120">Panoramica sul controllo GroupBox</span><span class="sxs-lookup"><span data-stu-id="f6a19-120">GroupBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f6a19-121">Panoramica sul controllo CheckBox</span><span class="sxs-lookup"><span data-stu-id="f6a19-121">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f6a19-122">Procedura: Creare tasti di scelta per i controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="f6a19-122">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [<span data-ttu-id="f6a19-123">Procedura: Impostare il testo visualizzato da un controllo Windows Form</span><span class="sxs-lookup"><span data-stu-id="f6a19-123">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="f6a19-124">Procedura: Raggruppare controlli RadioButton Windows Form in modo che funzionino come set</span><span class="sxs-lookup"><span data-stu-id="f6a19-124">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [<span data-ttu-id="f6a19-125">Controllo RadioButton</span><span class="sxs-lookup"><span data-stu-id="f6a19-125">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

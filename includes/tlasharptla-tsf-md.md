@@ -1,1 +1,1 @@
-Framework servizi di testo
+<span data-ttu-id="97d38-101">Framework servizi di testo</span><span class="sxs-lookup"><span data-stu-id="97d38-101">Text Services Framework (TSF)</span></span>

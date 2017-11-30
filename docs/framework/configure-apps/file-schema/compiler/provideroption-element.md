@@ -1,79 +1,82 @@
 ---
-title: "Elemento &lt;providerOption&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "provideroption"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "elemento <provideroption>"
-  - "elemento <provideroption>"
-  - "providerOption"
+title: '&lt;providerOption&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: provideroption
+helpviewer_keywords:
+- <provideroption> element
+- providerOptions
+- provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-caps.latest.revision: 22
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3a01a64ab8828104e8404f7d4efdd7b37eea373e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;providerOption&gt;
-Specifica gli attributi di versione del compilatore per un provider di linguaggi.  
+# <a name="ltprovideroptiongt-element"></a><span data-ttu-id="d55e2-102">&lt;providerOption&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="d55e2-102">&lt;providerOption&gt; Element</span></span>
+<span data-ttu-id="d55e2-103">Specifica gli attributi di versione del compilatore per un provider del linguaggio.</span><span class="sxs-lookup"><span data-stu-id="d55e2-103">Specifies the compiler version attributes for a language provider.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="d55e2-104">\<Elemento di configurazione ></span><span class="sxs-lookup"><span data-stu-id="d55e2-104">\<configuration Element></span></span>  
+<span data-ttu-id="d55e2-105">\<Elemento System. CodeDom ></span><span class="sxs-lookup"><span data-stu-id="d55e2-105">\<system.codedom Element></span></span>  
+<span data-ttu-id="d55e2-106">\<Elemento compilers ></span><span class="sxs-lookup"><span data-stu-id="d55e2-106">\<compilers Element></span></span>  
+<span data-ttu-id="d55e2-107">\<compilatore > elemento</span><span class="sxs-lookup"><span data-stu-id="d55e2-107">\<compiler> Element</span></span>  
+<span data-ttu-id="d55e2-108">\<providerOption > elemento</span><span class="sxs-lookup"><span data-stu-id="d55e2-108">\<providerOption> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d55e2-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d55e2-109">Syntax</span></span>  
+  
+```xml  
 <providerOption  
   name="option-name"  
   value="option-value"  
 />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d55e2-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="d55e2-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="d55e2-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="d55e2-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="d55e2-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="d55e2-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="d55e2-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="d55e2-113">Attribute</span></span>|<span data-ttu-id="d55e2-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d55e2-114">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|Attributo obbligatorio.<br /><br /> Specifica il nome dell'opzione; ad esempio, "CompilerVersion".|  
-|`value`|Attributo obbligatorio.<br /><br /> Specifica il valore dell'opzione; ad esempio, "v3.5".|  
+|`name`|<span data-ttu-id="d55e2-115">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="d55e2-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="d55e2-116">Specifica il nome dell'opzione. ad esempio, "CompilerVersion".</span><span class="sxs-lookup"><span data-stu-id="d55e2-116">Specifies the name of the option; for example, "CompilerVersion".</span></span>|  
+|`value`|<span data-ttu-id="d55e2-117">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="d55e2-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="d55e2-118">Specifica il valore per l'opzione. ad esempio, "v 3.5".</span><span class="sxs-lookup"><span data-stu-id="d55e2-118">Specifies the value for the option; for example, "v3.5".</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="d55e2-119">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="d55e2-119">Child Elements</span></span>  
+ <span data-ttu-id="d55e2-120">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="d55e2-120">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="d55e2-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="d55e2-121">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[Elemento \<Configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|È l'elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni per .NET Framework.|  
-|[Elemento \<system.codedom\>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.|  
-|[Elemento \<compilers\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Contenitore degli elementi di configurazione del compilatore. Contiene o meno elementi `<compiler>`.|  
-|[Elemento \<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Specifica gli attributi di configurazione del compilatore per un provider di linguaggio.|  
+|<span data-ttu-id="d55e2-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="d55e2-122">Element</span></span>|<span data-ttu-id="d55e2-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d55e2-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d55e2-124">Elemento \<configuration></span><span class="sxs-lookup"><span data-stu-id="d55e2-124">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="d55e2-125">Elemento radice in ogni file di configurazione usato dal Common Language Runtime e dalle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d55e2-125">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="d55e2-126">\<System. CodeDom > elemento</span><span class="sxs-lookup"><span data-stu-id="d55e2-126">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="d55e2-127">Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.</span><span class="sxs-lookup"><span data-stu-id="d55e2-127">Specifies compiler configuration settings for available language providers.</span></span>|  
+|[<span data-ttu-id="d55e2-128">\<i compilatori > elemento</span><span class="sxs-lookup"><span data-stu-id="d55e2-128">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|<span data-ttu-id="d55e2-129">Contenitore per elementi di configurazione del compilatore. contiene zero o più `<compiler>` elementi.</span><span class="sxs-lookup"><span data-stu-id="d55e2-129">Container for compiler configuration elements; contains zero or more `<compiler>` elements.</span></span>|  
+|<span data-ttu-id="d55e2-130">[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) (Elemento <compiler>)</span><span class="sxs-lookup"><span data-stu-id="d55e2-130">[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)</span></span>|<span data-ttu-id="d55e2-131">Specifica gli attributi di configurazione del compilatore per un provider del linguaggio.</span><span class="sxs-lookup"><span data-stu-id="d55e2-131">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-## Note  
- In .NET Framework versione 3.5 i provider di codice CodeDOM \(Code Document Object Model\) possono supportare opzioni specifiche del provider utilizzando l'elemento `<providerOption>`.  
+## <a name="remarks"></a><span data-ttu-id="d55e2-132">Note</span><span class="sxs-lookup"><span data-stu-id="d55e2-132">Remarks</span></span>  
+ <span data-ttu-id="d55e2-133">In .NET Framework versione 3.5, il provider di codice Code Document Object Model (CodeDOM) può supportare opzioni specifiche del provider utilizzando il `<providerOption>` elemento.</span><span class="sxs-lookup"><span data-stu-id="d55e2-133">In the .NET Framework version 3.5, Code Document Object Model (CodeDOM) code providers can support provider-specific options by using the `<providerOption>` element.</span></span>  
   
- In .NET Framework 3.5 sono inclusi gli assembly .NET Framework 2.0 aggiornati e i nuovi assembly versione 3.5 contenenti nuovi tipi.  I provider di codice Microsoft C\# e Visual Basic sono contenuti negli assembly .NET Framework 2.0, che però sono stati aggiornati per supportare i compilatori versione 3.5.  Per impostazione predefinita, i provider di codice aggiornati generano codice per i compilatori versione 2.0.  È possibile utilizzare l'elemento `<providerOption>` per modificare la versione del compilatore di destinazione in 3.5.  Per farlo, specificare "CompilerVersion" per l'attributo `name` e "v3.5" per l'attributo `value`.  È necessario inserire la lettera minuscola "v" prima del numero di versione.  
+ <span data-ttu-id="d55e2-134">.NET Framework 3.5 include gli assembly di .NET Framework 2.0 aggiornati e fornisce nuovi assembly versione 3.5 contenenti nuovi tipi.</span><span class="sxs-lookup"><span data-stu-id="d55e2-134">The .NET Framework 3.5 includes updated .NET Framework 2.0 assemblies and provides new version 3.5 assemblies that contain new types.</span></span> <span data-ttu-id="d55e2-135">I provider di codice Microsoft c# e Visual Basic sono contenuti in assembly .NET Framework 2.0, ma sono stati aggiornati per supportare i compilatori versione 3.5.</span><span class="sxs-lookup"><span data-stu-id="d55e2-135">The Microsoft C# and Visual Basic code providers are contained in .NET Framework 2.0 assemblies but have been updated to support version 3.5 compilers.</span></span> <span data-ttu-id="d55e2-136">Per impostazione predefinita, i provider di codice aggiornato generano codice per i compilatori versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="d55e2-136">By default, the updated code providers generate code for version 2.0 compilers.</span></span> <span data-ttu-id="d55e2-137">È possibile utilizzare il `<providerOption>` elemento per modificare la versione del compilatore di destinazione in 3.5.</span><span class="sxs-lookup"><span data-stu-id="d55e2-137">You can use the `<providerOption>` element to change the target compiler version to 3.5.</span></span> <span data-ttu-id="d55e2-138">A tale scopo, specificare "CompilerVersion" per il `name` attributo e "v 3.5" per il `value` attributo.</span><span class="sxs-lookup"><span data-stu-id="d55e2-138">To do this, specify "CompilerVersion" for the `name` attribute and "v3.5" for the `value` attribute.</span></span> <span data-ttu-id="d55e2-139">È necessario anteporre il numero di versione con una lettera minuscola "v".</span><span class="sxs-lookup"><span data-stu-id="d55e2-139">You must precede the version number with a lower-case "v".</span></span>  
   
- È possibile rendere globale la specifica della versione aggiungendo l'elemento `<providerOption>` al file Machine.config o al file radice Web.config di .NET Framework 2.0.  Se si aggiorna la versione del compilatore predefinita in 3.5 nel file Machine.config, è possibile modificarla di nuovo in 2.0 per ogni singola applicazione utilizzando l'elemento `<providerOption>` nel file di configurazione dell'applicazione.  
+ <span data-ttu-id="d55e2-140">È possibile rendere la specifica della versione globale aggiungendo il `<providerOption>` elemento per il file Machine. config di .NET Framework 2.0 o un file Web. config radice.</span><span class="sxs-lookup"><span data-stu-id="d55e2-140">You can make the version specification global by adding the `<providerOption>` element to the .NET Framework 2.0 Machine.config or root Web.config file.</span></span> <span data-ttu-id="d55e2-141">Se si aggiorna la versione del compilatore predefinita in 3.5 nel file Machine. config, è possibile ripristinare 2.0 per ogni applicazione utilizzando il `<providerOption>` elemento nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d55e2-141">If you update the default compiler version to 3.5 in the Machine.config file, you can change it back to 2.0 on a per-application basis by using the `<providerOption>` element in the application configuration file.</span></span>  
   
- Gli implementatori di provider di codice CodeDOM possono elaborare opzioni personalizzate fornendo un costruttore che accetta un parametro `providerOptions` di tipo <xref:System.Collections.Generic.IDictionary%602>.  
+ <span data-ttu-id="d55e2-142">Gli implementatori di provider di codice codeDOM possono elaborare opzioni personalizzate fornendo un costruttore che accetta un `providerOptions` parametro di tipo <xref:System.Collections.Generic.IDictionary%602>.</span><span class="sxs-lookup"><span data-stu-id="d55e2-142">CodeDOM code provider implementers can process custom options by providing a constructor that takes a `providerOptions` parameter of type <xref:System.Collections.Generic.IDictionary%602>.</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come specificare l'utilizzo della versione 3.5 del provider di codice C\#.  
+## <a name="example"></a><span data-ttu-id="d55e2-143">Esempio</span><span class="sxs-lookup"><span data-stu-id="d55e2-143">Example</span></span>  
+ <span data-ttu-id="d55e2-144">Nell'esempio seguente viene illustrato come specificare la versione 3.5 del provider di codice c# deve essere utilizzata.</span><span class="sxs-lookup"><span data-stu-id="d55e2-144">The following example demonstrates how to specify that version 3.5 of the C# code provider should be used.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.codedom>  
     <compilers>  
@@ -95,10 +98,10 @@ Specifica gli attributi di versione del compilatore per un provider di linguaggi
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.CodeDom.Compiler.CompilerInfo>   
- <xref:System.CodeDom.Compiler.CodeDomProvider>   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Elemento \<compilers\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)   
- [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)   
- [Elemento compiler per compilers per compilation \(schema delle impostazioni ASP.NET\)](http://msdn.microsoft.com/it-it/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+## <a name="see-also"></a><span data-ttu-id="d55e2-145">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d55e2-145">See Also</span></span>  
+ <xref:System.CodeDom.Compiler.CompilerInfo>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider>  
+ [<span data-ttu-id="d55e2-146">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="d55e2-146">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="d55e2-147">\<i compilatori > elemento</span><span class="sxs-lookup"><span data-stu-id="d55e2-147">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ <span data-ttu-id="d55e2-148">[Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md) (Specifica di nomi di tipo completi)</span><span class="sxs-lookup"><span data-stu-id="d55e2-148">[Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)</span></span>  
+ [<span data-ttu-id="d55e2-149">compilatore elemento per i compilatori per compilation (Schema delle impostazioni ASP.NET)</span><span class="sxs-lookup"><span data-stu-id="d55e2-149">compiler Element for compilers for compilation (ASP.NET Settings Schema)</span></span>](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

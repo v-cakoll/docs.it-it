@@ -1,59 +1,63 @@
 ---
-title: "How to: Create Application Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "application settings, Windows Forms"
-  - "application settings, creating"
+title: 'Procedura: creare le impostazioni dell''applicazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- application settings [Windows Forms], Windows Forms
+- application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 481239b472ced5ef6251b665dad16e83a170607d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create Application Settings
-Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazione e associarle alle proprietà nel form o nei controlli del form, in modo che queste impostazioni vengano caricate e salvate automaticamente in fase di esecuzione.  
+# <a name="how-to-create-application-settings"></a><span data-ttu-id="f2135-102">Procedura: creare le impostazioni dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="f2135-102">How to: Create Application Settings</span></span>
+<span data-ttu-id="f2135-103">Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazione e associarle alle proprietà nel form o nei controlli del form, in modo che queste impostazioni vengano caricate e salvate automaticamente in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="f2135-103">Using managed code, you can create new application settings and bind them to properties on your form or your form's controls, so that these settings are loaded and saved automatically at run time.</span></span>  
   
- Nella routine seguente, viene creata manualmente una classe wrapper che deriva da <xref:System.Configuration.ApplicationSettingsBase>.  A questa classe è possibile aggiungere una proprietà accessibile pubblicamente per ogni impostazione dell'applicazione da esporre.  
+ <span data-ttu-id="f2135-104">Nella routine seguente, viene creata manualmente una classe wrapper che deriva da <xref:System.Configuration.ApplicationSettingsBase>.</span><span class="sxs-lookup"><span data-stu-id="f2135-104">In the following procedure, you manually create a wrapper class that derives from <xref:System.Configuration.ApplicationSettingsBase>.</span></span> <span data-ttu-id="f2135-105">A questa classe è possibile aggiungere una proprietà accessibile pubblicamente per ogni impostazione dell'applicazione da esporre.</span><span class="sxs-lookup"><span data-stu-id="f2135-105">To this class you add a publicly accessible property for each application setting that you want to expose.</span></span>  
   
- È anche possibile eseguire questa routine usando la quantità minima di codice nella finestra di progettazione di Visual Studio.  Vedere anche [Procedura: Creare le impostazioni applicazione usando la finestra di progettazione](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ <span data-ttu-id="f2135-106">È anche possibile eseguire questa routine usando la quantità minima di codice nella finestra di progettazione di Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f2135-106">You can also perform this procedure using minimal code in the Visual Studio designer.</span></span>  <span data-ttu-id="f2135-107">Vedere anche [procedura: creare applicazioni le impostazioni utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="f2135-107">Also see [How to: Create Application Settings Using the Designer](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).</span></span>  
   
-### Per creare nuove impostazioni dell'applicazione a livello di codice  
+### <a name="to-create-new-application-settings-programmatically"></a><span data-ttu-id="f2135-108">Per creare nuove impostazioni dell'applicazione a livello di codice</span><span class="sxs-lookup"><span data-stu-id="f2135-108">To create new Application Settings programmatically</span></span>  
   
-1.  Aggiungere una nuova classe al progetto e rinominarlo.  Per questa routine la classe verrà chiamata  `MyUserSettings`.  Modificare la definizione della classe in modo che la classe derivi da <xref:System.Configuration.ApplicationSettingsBase>.  
+1.  <span data-ttu-id="f2135-109">Aggiungere una nuova classe al progetto e rinominarlo.</span><span class="sxs-lookup"><span data-stu-id="f2135-109">Add a new class to your project, and rename it.</span></span> <span data-ttu-id="f2135-110">Per questa procedura, è la classe verrà chiamata `MyUserSettings`.</span><span class="sxs-lookup"><span data-stu-id="f2135-110">For this procedure, we will call this class `MyUserSettings`.</span></span> <span data-ttu-id="f2135-111">Modificare la definizione della classe in modo che la classe derivi da <xref:System.Configuration.ApplicationSettingsBase>.</span><span class="sxs-lookup"><span data-stu-id="f2135-111">Change the class definition so that the class derives from <xref:System.Configuration.ApplicationSettingsBase>.</span></span>  
   
-2.  Definire una proprietà in questa classe wrapper per ogni impostazione dell'applicazione richiesta e applicare la proprietà con <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, in base all'ambito dell'impostazione.  Per altre informazioni sull'ambito delle impostazioni, vedere [Cenni preliminari sulle impostazioni delle applicazioni](../../../../docs/framework/winforms/advanced/application-settings-overview.md).  A questo punto, il codice dovrebbe risultare simile al seguente:  
+2.  <span data-ttu-id="f2135-112">Definire una proprietà in questa classe wrapper per ogni impostazione dell'applicazione richiesta e applicare la proprietà con <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, in base all'ambito dell'impostazione.</span><span class="sxs-lookup"><span data-stu-id="f2135-112">Define a property on this wrapper class for each application setting you require, and apply that property with either the <xref:System.Configuration.ApplicationScopedSettingAttribute> or <xref:System.Configuration.UserScopedSettingAttribute>, depending on the scope of the setting.</span></span> <span data-ttu-id="f2135-113">Per ulteriori informazioni sull'ambito delle impostazioni, vedere [Application Settings Overview](../../../../docs/framework/winforms/advanced/application-settings-overview.md).</span><span class="sxs-lookup"><span data-stu-id="f2135-113">For more information about settings scope, see [Application Settings Overview](../../../../docs/framework/winforms/advanced/application-settings-overview.md).</span></span> <span data-ttu-id="f2135-114">A questo punto, il codice dovrebbe risultare simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="f2135-114">By now, your code should look like this:</span></span>  
   
      [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  Creare un'istanza della classe wrapper nell'applicazione.  Generalmente è un membro privato del form principale.  Dopo aver definito la classe, è necessario associarla a una proprietà. In questo caso, la proprietà <xref:System.Windows.Forms.Form.BackColor%2A> del form.  È possibile farlo con il gestore eventi del form,  `Load` .  
+3.  <span data-ttu-id="f2135-115">Creare un'istanza della classe wrapper nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="f2135-115">Create an instance of this wrapper class in your application.</span></span> <span data-ttu-id="f2135-116">Generalmente è un membro privato del form principale.</span><span class="sxs-lookup"><span data-stu-id="f2135-116">It will commonly be a private member of the main form.</span></span> <span data-ttu-id="f2135-117">Dopo aver definito la classe, è necessario associarla a una proprietà. In questo caso, la proprietà <xref:System.Windows.Forms.Form.BackColor%2A> del form.</span><span class="sxs-lookup"><span data-stu-id="f2135-117">Now that you have defined your class, you need to bind it to a property; in this case, the <xref:System.Windows.Forms.Form.BackColor%2A> property of your form.</span></span> <span data-ttu-id="f2135-118">È possibile effettuare questa del modulo `Load` gestore dell'evento.</span><span class="sxs-lookup"><span data-stu-id="f2135-118">You can accomplish this in your form's `Load` event handler.</span></span>  
   
      [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
   
-4.  Se si fornisce un modo per modificare le impostazioni in fase di esecuzione, sarà necessario salvare le impostazioni correnti dell'utente su disco quando il form viene chiuso altrimenti le modifiche andranno perse.  
+4.  <span data-ttu-id="f2135-119">Se si fornisce un modo per modificare le impostazioni in fase di esecuzione, sarà necessario salvare le impostazioni correnti dell'utente su disco quando il form viene chiuso altrimenti le modifiche andranno perse.</span><span class="sxs-lookup"><span data-stu-id="f2135-119">If you provide a way to change settings at run time, you will need to save the user's current settings to disk when your form closes, or else these changes will be lost.</span></span>  
   
      [!code-csharp[ApplicationSettings.Create#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
      [!code-vb[ApplicationSettings.Create#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  
   
-     È stata creata una nuova impostazione dell’applicazione, che è stata associata correttamente alla proprietà specificata.  
+     <span data-ttu-id="f2135-120">È stata creata una nuova impostazione dell’applicazione, che è stata associata correttamente alla proprietà specificata.</span><span class="sxs-lookup"><span data-stu-id="f2135-120">You have now successfully created a new application setting and bound it to the specified property.</span></span>  
   
-## Sicurezza di .NET Framework  
- Il provider di impostazioni predefinito, <xref:System.Configuration.LocalFileSettingsProvider>, memorizza le informazioni nei file di configurazione come testo normale.  Questo riduce la protezione dell'accesso ai file fornito dal sistema operativo per l'utente corrente.  Per questo motivo, è necessario prestare attenzione alle informazioni archiviate nei file di configurazione.  Ad esempio, un utilizzo comune per le impostazioni dell'applicazione consiste nell'archiviare le stringhe di connessione che puntano all'archivio dati dell'applicazione.  Tuttavia, per motivi di sicurezza, queste stringhe non devono includere le password.  Per altre informazioni sulle stringhe di connessione, vedere <xref:System.Configuration.SpecialSetting>.  
+## <a name="net-framework-security"></a><span data-ttu-id="f2135-121">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f2135-121">.NET Framework Security</span></span>  
+ <span data-ttu-id="f2135-122">Il provider di impostazioni predefinito, <xref:System.Configuration.LocalFileSettingsProvider>, memorizza le informazioni nei file di configurazione come testo normale.</span><span class="sxs-lookup"><span data-stu-id="f2135-122">The default settings provider, <xref:System.Configuration.LocalFileSettingsProvider>, persists information to configuration files as plain text.</span></span> <span data-ttu-id="f2135-123">Questo riduce la protezione dell'accesso ai file fornito dal sistema operativo per l'utente corrente.</span><span class="sxs-lookup"><span data-stu-id="f2135-123">This limits security to the file access security provided by the operating system for the current user.</span></span> <span data-ttu-id="f2135-124">Per questo motivo, è necessario prestare attenzione alle informazioni archiviate nei file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="f2135-124">Because of this, care must be taken with the information stored in configuration files.</span></span> <span data-ttu-id="f2135-125">Ad esempio, un utilizzo comune per le impostazioni dell'applicazione consiste nell'archiviare le stringhe di connessione che puntano all'archivio dati dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="f2135-125">For example, one common use for application settings is to store connection strings that point to the application's data store.</span></span> <span data-ttu-id="f2135-126">Tuttavia, per motivi di sicurezza, queste stringhe non devono includere le password.</span><span class="sxs-lookup"><span data-stu-id="f2135-126">However, because of security concerns, such strings should not include passwords.</span></span> <span data-ttu-id="f2135-127">Per altre informazioni sulle stringhe di connessione, vedere <xref:System.Configuration.SpecialSetting>.</span><span class="sxs-lookup"><span data-stu-id="f2135-127">For more information about connection strings, see <xref:System.Configuration.SpecialSetting>.</span></span>  
   
-## Vedere anche  
- <xref:System.Configuration.SpecialSettingAttribute>   
- <xref:System.Configuration.LocalFileSettingsProvider>   
- [Cenni preliminari sulle impostazioni delle applicazioni](../../../../docs/framework/winforms/advanced/application-settings-overview.md)   
- [How to: Validate Application Settings](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a><span data-ttu-id="f2135-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f2135-128">See Also</span></span>  
+ <xref:System.Configuration.SpecialSettingAttribute>  
+ <xref:System.Configuration.LocalFileSettingsProvider>  
+ [<span data-ttu-id="f2135-129">Cenni preliminari sulle impostazioni delle applicazioni</span><span class="sxs-lookup"><span data-stu-id="f2135-129">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
+ [<span data-ttu-id="f2135-130">Procedura: Convalidare le impostazioni applicazione</span><span class="sxs-lookup"><span data-stu-id="f2135-130">How to: Validate Application Settings</span></span>](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

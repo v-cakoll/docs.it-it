@@ -1,70 +1,73 @@
 ---
-title: "Implementing the UI Automation Dock Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, dock"
-  - "dock control pattern"
-  - "UI Automation, dock control pattern"
+title: Implementazione del pattern di controllo Dock di automazione interfaccia utente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, dock
+- dock control pattern
+- UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-caps.latest.revision: 23
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 68c3dcdb1d8f15f312dea40ae59a3b1a4736c484
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Dock Control Pattern
+# <a name="implementing-the-ui-automation-dock-control-pattern"></a><span data-ttu-id="e7232-102">Implementazione del pattern di controllo Dock di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="e7232-102">Implementing the UI Automation Dock Control Pattern</span></span>
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="e7232-103">Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="e7232-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="e7232-104">Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="e7232-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IDockProvider>, incluse le informazioni relative alle proprietà. Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
+ <span data-ttu-id="e7232-105">In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IDockProvider>, incluse le informazioni relative alle proprietà.</span><span class="sxs-lookup"><span data-stu-id="e7232-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IDockProvider>, including information about properties.</span></span> <span data-ttu-id="e7232-106">Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.</span><span class="sxs-lookup"><span data-stu-id="e7232-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- Il pattern di controllo <xref:System.Windows.Automation.DockPattern> viene usato per esporre le proprietà di ancoraggio di un controllo all'interno di un contenitore di ancoraggio. Un contenitore di ancoraggio è un controllo che consente di disporre gli elementi figlio orizzontalmente e verticalmente, uno rispetto all'altro. Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="e7232-107">Il pattern di controllo <xref:System.Windows.Automation.DockPattern> viene usato per esporre le proprietà di ancoraggio di un controllo all'interno di un contenitore di ancoraggio.</span><span class="sxs-lookup"><span data-stu-id="e7232-107">The <xref:System.Windows.Automation.DockPattern> control pattern is used to expose the dock properties of a control within a docking container.</span></span> <span data-ttu-id="e7232-108">Un contenitore di ancoraggio è un controllo che consente di disporre gli elementi figlio orizzontalmente e verticalmente, uno rispetto all'altro.</span><span class="sxs-lookup"><span data-stu-id="e7232-108">A docking container is a control that allows you to arrange child elements horizontally and vertically, relative to each other.</span></span> <span data-ttu-id="e7232-109">Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="e7232-109">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
- ![Contenitore di ancoraggio con due elementi figlio ancorati](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA\_DockPattern\_DockingExample")  
-Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi" è impostata su DockPosition.Right e la finestra "Elenco errori" è impostata su DockPosition.Bottom  
+ <span data-ttu-id="e7232-110">![Contenitore di ancoraggio con due elementi figlio ancorati. ] (../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")</span><span class="sxs-lookup"><span data-stu-id="e7232-110">![Docking container with two docked children.](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")</span></span>  
+<span data-ttu-id="e7232-111">Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi" è impostata su DockPosition.Right e la finestra "Elenco errori" è impostata su DockPosition.Bottom</span><span class="sxs-lookup"><span data-stu-id="e7232-111">Docking Example from Visual Studio Where "Class View" Window Is DockPosition.Right and "Error List" Window Is DockPosition.Bottom</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Linee guida e convenzioni di implementazione  
- Quando si implementa il pattern di controllo Dock, tenere presenti le linee guida e le convenzioni seguenti:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="e7232-112">Linee guida e convenzioni di implementazione</span><span class="sxs-lookup"><span data-stu-id="e7232-112">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="e7232-113">Quando si implementa il pattern di controllo Dock, tenere presenti le linee guida e le convenzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="e7232-113">When implementing the Dock control pattern, note the following guidelines and conventions:</span></span>  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> non espone le proprietà del contenitore di ancoraggio o le proprietà dei controlli ancorati vicino al controllo corrente all'interno del contenitore di ancoraggio.  
+-   <span data-ttu-id="e7232-114"><xref:System.Windows.Automation.Provider.IDockProvider> non espone le proprietà del contenitore di ancoraggio o le proprietà dei controlli ancorati vicino al controllo corrente all'interno del contenitore di ancoraggio.</span><span class="sxs-lookup"><span data-stu-id="e7232-114"><xref:System.Windows.Automation.Provider.IDockProvider> does not expose any properties of the docking container or any properties of controls that are docked adjacent to the current control within the docking container.</span></span>  
   
--   I controlli vengono ancorati reciprocamente in base al relativo ordine z corrente, ovvero più elevata è la posizione nell'ordine z, più lontano verrà inserito il controllo rispetto al bordo specificato del contenitore di ancoraggio.  
+-   <span data-ttu-id="e7232-115">I controlli vengono ancorati reciprocamente in base al relativo ordine z corrente, ovvero più elevata è la posizione nell'ordine z, più lontano verrà inserito il controllo rispetto al bordo specificato del contenitore di ancoraggio.</span><span class="sxs-lookup"><span data-stu-id="e7232-115">Controls are docked relative to each other based on their current z-order; the higher their z-order placement, the farther they are placed from the specified edge of the docking container.</span></span>  
   
--   Se il contenitore di ancoraggio viene ridimensionato, i controlli ancorati all'interno del contenitore verranno riposizionati e allineati allo stesso bordo a cui sono stati originariamente ancorati. I controlli ancorati verranno inoltre ridimensionati per riempire lo spazio all'interno del contenitore in base al comportamento di ancoraggio della relativa proprietà <xref:System.Windows.Automation.DockPosition>. Ad esempio, se viene specificata la proprietà <xref:System.Windows.Automation.DockPosition>, i lati destro e sinistro del controllo verranno espansi in modo da riempire lo spazio disponibile. Se viene specificata la proprietà <xref:System.Windows.Automation.DockPosition>, tutti e quattro i lati del controllo verranno espansi in modo da riempire lo spazio disponibile.  
+-   <span data-ttu-id="e7232-116">Se il contenitore di ancoraggio viene ridimensionato, i controlli ancorati all'interno del contenitore verranno riposizionati e allineati allo stesso bordo a cui sono stati originariamente ancorati.</span><span class="sxs-lookup"><span data-stu-id="e7232-116">If the docking container is resized, any docked controls within the container will be repositioned flush to the same edge to which they were originally docked.</span></span> <span data-ttu-id="e7232-117">I controlli ancorati verranno inoltre ridimensionati per riempire lo spazio all'interno del contenitore in base al comportamento di ancoraggio della relativa proprietà <xref:System.Windows.Automation.DockPosition>.</span><span class="sxs-lookup"><span data-stu-id="e7232-117">The docked controls will also resize to fill any space within the container according to the docking behavior of their <xref:System.Windows.Automation.DockPosition>.</span></span> <span data-ttu-id="e7232-118">Ad esempio, se viene specificata la proprietà <xref:System.Windows.Automation.DockPosition.Top> , i lati destro e sinistro del controllo verranno espansi in modo da riempire lo spazio disponibile.</span><span class="sxs-lookup"><span data-stu-id="e7232-118">For example, if <xref:System.Windows.Automation.DockPosition.Top> is specified, the left and right sides of the control will expand to fill any available space.</span></span> <span data-ttu-id="e7232-119">Se viene specificata la proprietà <xref:System.Windows.Automation.DockPosition.Fill> , tutti e quattro i lati del controllo verranno espansi in modo da riempire lo spazio disponibile.</span><span class="sxs-lookup"><span data-stu-id="e7232-119">If <xref:System.Windows.Automation.DockPosition.Fill> is specified, all four sides of the control will expand to fill any available space.</span></span>  
   
--   In un sistema con più monitor i controlli devono essere ancorati al lato sinistro o destro del monitor corrente. Se ciò non è possibile, devono essere ancorati al lato sinistro del monitor all'estrema sinistra o al lato destro del monitor all'estrema destra.  
+-   <span data-ttu-id="e7232-120">In un sistema con più monitor i controlli devono essere ancorati al lato sinistro o destro del monitor corrente.</span><span class="sxs-lookup"><span data-stu-id="e7232-120">On a multi-monitor system, controls should dock to the left or right side of the current monitor.</span></span> <span data-ttu-id="e7232-121">Se ciò non è possibile, devono essere ancorati al lato sinistro del monitor all'estrema sinistra o al lato destro del monitor all'estrema destra.</span><span class="sxs-lookup"><span data-stu-id="e7232-121">If that is not possible, they should dock to the left side of the leftmost monitor or the right side of the rightmost monitor.</span></span>  
   
 <a name="Required_Members_for_IDockProvider"></a>   
-## Membri obbligatori per IDockProvider  
- Le proprietà e i metodi seguenti sono obbligatori per l'implementazione dell'interfaccia IDockProvider.  
+## <a name="required-members-for-idockprovider"></a><span data-ttu-id="e7232-122">Membri obbligatori per IDockProvider</span><span class="sxs-lookup"><span data-stu-id="e7232-122">Required Members for IDockProvider</span></span>  
+ <span data-ttu-id="e7232-123">Le proprietà e i metodi seguenti sono obbligatori per l'implementazione dell'interfaccia IDockProvider.</span><span class="sxs-lookup"><span data-stu-id="e7232-123">The following properties and methods are required for implementing the IDockProvider interface.</span></span>  
   
-|Membri obbligatori|Tipo di membro|Note|  
-|------------------------|--------------------|----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Metodo|Nessuna|  
+|<span data-ttu-id="e7232-124">Membri obbligatori</span><span class="sxs-lookup"><span data-stu-id="e7232-124">Required members</span></span>|<span data-ttu-id="e7232-125">Tipo di membro</span><span class="sxs-lookup"><span data-stu-id="e7232-125">Member type</span></span>|<span data-ttu-id="e7232-126">Note</span><span class="sxs-lookup"><span data-stu-id="e7232-126">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|<span data-ttu-id="e7232-127">Proprietà</span><span class="sxs-lookup"><span data-stu-id="e7232-127">Property</span></span>|<span data-ttu-id="e7232-128">Nessuna</span><span class="sxs-lookup"><span data-stu-id="e7232-128">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|<span data-ttu-id="e7232-129">Metodo</span><span class="sxs-lookup"><span data-stu-id="e7232-129">Method</span></span>|<span data-ttu-id="e7232-130">Nessuna</span><span class="sxs-lookup"><span data-stu-id="e7232-130">None</span></span>|  
   
- Questo pattern di controllo non è associato a eventi.  
+ <span data-ttu-id="e7232-131">Questo pattern di controllo non è associato a eventi.</span><span class="sxs-lookup"><span data-stu-id="e7232-131">This control pattern has no associated events.</span></span>  
   
 <a name="Exceptions"></a>   
-## Eccezioni  
- I provider devono generare le eccezioni seguenti.  
+## <a name="exceptions"></a><span data-ttu-id="e7232-132">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="e7232-132">Exceptions</span></span>  
+ <span data-ttu-id="e7232-133">I provider devono generare le eccezioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="e7232-133">Providers must throw the following exceptions.</span></span>  
   
-|Tipo di eccezione|Condizione|  
-|-----------------------|----------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   Un controllo non è in grado di implementare lo stile di ancoraggio richiesto.|  
+|<span data-ttu-id="e7232-134">Tipo di eccezione</span><span class="sxs-lookup"><span data-stu-id="e7232-134">Exception type</span></span>|<span data-ttu-id="e7232-135">Condizione</span><span class="sxs-lookup"><span data-stu-id="e7232-135">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> <span data-ttu-id="e7232-136">-Quando un controllo non è in grado di eseguire lo stile di ancoraggio richiesto.</span><span class="sxs-lookup"><span data-stu-id="e7232-136">-   When a control is not able to execute the requested dock style.</span></span>|  
   
-## Vedere anche  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="e7232-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e7232-137">See Also</span></span>  
+ [<span data-ttu-id="e7232-138">Cenni preliminari sui pattern di controllo automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="e7232-138">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="e7232-139">Supportare pattern di controllo in un Provider di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="e7232-139">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="e7232-140">Pattern di controllo di automazione interfaccia utente per i client</span><span class="sxs-lookup"><span data-stu-id="e7232-140">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="e7232-141">Panoramica dell'albero di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="e7232-141">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="e7232-142">Utilizzare la memorizzazione nella cache in automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="e7232-142">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

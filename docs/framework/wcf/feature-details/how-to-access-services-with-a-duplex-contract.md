@@ -1,42 +1,44 @@
 ---
-title: "Procedura: accedere ai servizi con un contratto duplex | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "contratti duplex [WCF]"
+title: 'Procedura: accedere ai servizi con un contratto duplex'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e4c273e674fb7cb0f2801d9858d598baab5973a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: accedere ai servizi con un contratto duplex
-Una funzionalità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è la possibilità di creare un servizio che utilizza un modello di messaggistica duplex.Questo modello consente a un servizio di comunicare con il client tramite un callback.In questo argomento vengono illustrati i passaggi per creare un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in una classe client che implementa l'interfaccia di callback.  
+# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="272fe-102">Procedura: accedere ai servizi con un contratto duplex</span><span class="sxs-lookup"><span data-stu-id="272fe-102">How to: Access Services with a Duplex Contract</span></span>
+<span data-ttu-id="272fe-103">Una funzionalità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è la possibilità di creare un servizio che utilizza un modello di messaggistica duplex.</span><span class="sxs-lookup"><span data-stu-id="272fe-103">One feature of [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="272fe-104">Questo modello consente a un servizio di comunicare con il client tramite un callback.</span><span class="sxs-lookup"><span data-stu-id="272fe-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="272fe-105">In questo argomento vengono illustrati i passaggi per creare un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in una classe client che implementa l'interfaccia di callback.</span><span class="sxs-lookup"><span data-stu-id="272fe-105">This topic shows the steps to create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client in a client class that implements the callback interface.</span></span>  
   
- Un'associazione duale espone l'indirizzo IP del client al servizio.Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.  
+ <span data-ttu-id="272fe-106">Un'associazione duale espone l'indirizzo IP del client al servizio.</span><span class="sxs-lookup"><span data-stu-id="272fe-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="272fe-107">Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.</span><span class="sxs-lookup"><span data-stu-id="272fe-107">The client should use security to ensure that it connects only to services it trusts.</span></span>  
   
- Per un'esercitazione sulla creazione di servizi e client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base, vedere [Esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md).  
+ <span data-ttu-id="272fe-108">Per un'esercitazione sulla creazione di base [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio e client, vedere [esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="272fe-108">For a tutorial on creating a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  
   
-### Per accedere a un servizio duplex  
+### <a name="to-access-a-duplex-service"></a><span data-ttu-id="272fe-109">Per accedere a un servizio duplex</span><span class="sxs-lookup"><span data-stu-id="272fe-109">To access a duplex service</span></span>  
   
-1.  Creare un servizio che contiene due interfacce.La prima interfaccia è per il servizio, la seconda è per il callback.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] creazione di un servizio duplex, vedere [Procedura: creare un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+1.  <span data-ttu-id="272fe-110">Creare un servizio che contiene due interfacce.</span><span class="sxs-lookup"><span data-stu-id="272fe-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="272fe-111">La prima interfaccia è per il servizio, la seconda è per il callback.</span><span class="sxs-lookup"><span data-stu-id="272fe-111">The first interface is for the service, the second is for the callback.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="272fe-112">creazione di un servizio duplex, vedere [procedura: creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span><span class="sxs-lookup"><span data-stu-id="272fe-112"> creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>  
   
-2.  Eseguire il servizio.  
+2.  <span data-ttu-id="272fe-113">Eseguire il servizio.</span><span class="sxs-lookup"><span data-stu-id="272fe-113">Run the service.</span></span>  
   
-3.  Utilizzare lo [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare contratti \(interfacce\) per il client.Per informazioni su tale procedura, vedere [Procedura: creare un client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+3.  <span data-ttu-id="272fe-114">Utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare contratti (interfacce) per il client.</span><span class="sxs-lookup"><span data-stu-id="272fe-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="272fe-115">Per informazioni su come eseguire questa operazione, vedere [procedura: creare un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="272fe-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>  
   
-4.  Implementare l'interfaccia di callback nella classe client, come illustrato nell'esempio seguente.  
+4.  <span data-ttu-id="272fe-116">Implementare l'interfaccia di callback nella classe client, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="272fe-116">Implement the callback interface in the client class, as shown in the following example.</span></span>  
   
     ```csharp  
     public class CallbackHandler : ICalculatorDuplexCallback  
@@ -62,10 +64,9 @@ Una funzionalità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è 
             Console.Writeline("Equation({0})", equation)  
         End Sub  
     End Class  
-  
     ```  
   
-5.  Creare un'istanza della classe <xref:System.ServiceModel.InstanceContext>.Il costruttore richiede un'istanza della classe client.  
+5.  <span data-ttu-id="272fe-117">Creare un'istanza della classe <xref:System.ServiceModel.InstanceContext>.</span><span class="sxs-lookup"><span data-stu-id="272fe-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="272fe-118">Il costruttore richiede un'istanza della classe client.</span><span class="sxs-lookup"><span data-stu-id="272fe-118">The constructor requires an instance of the client class.</span></span>  
   
     ```csharp  
     InstanceContext site = new InstanceContext(new CallbackHandler());  
@@ -75,7 +76,7 @@ Una funzionalità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è 
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  Creare un'istanza del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzando il costruttore che richiede un oggetto <xref:System.ServiceModel.InstanceContext>.Il secondo parametro del costruttore è il nome di un endpoint contenuto nel file di configurazione.  
+6.  <span data-ttu-id="272fe-119">Creare un'istanza del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzando il costruttore che richiede un oggetto <xref:System.ServiceModel.InstanceContext>.</span><span class="sxs-lookup"><span data-stu-id="272fe-119">Create an instance of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="272fe-120">Il secondo parametro del costruttore è il nome di un endpoint contenuto nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="272fe-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -86,19 +87,19 @@ Una funzionalità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è 
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  Chiamare i metodi del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] secondo le esigenze.  
+7.  <span data-ttu-id="272fe-121">Chiamare i metodi del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] secondo le esigenze.</span><span class="sxs-lookup"><span data-stu-id="272fe-121">Call the methods of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client as required.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene descritto come creare una classe client che accede a un contratto duplex.  
+## <a name="example"></a><span data-ttu-id="272fe-122">Esempio</span><span class="sxs-lookup"><span data-stu-id="272fe-122">Example</span></span>  
+ <span data-ttu-id="272fe-123">Nell'esempio di codice seguente viene descritto come creare una classe client che accede a un contratto duplex.</span><span class="sxs-lookup"><span data-stu-id="272fe-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>  
   
  [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
  [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]  
   
-## Sicurezza di .NET Framework  
+## <a name="net-framework-security"></a><span data-ttu-id="272fe-124">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="272fe-124">.NET Framework Security</span></span>  
   
-## Vedere anche  
- [Esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md)   
- [Procedura: creare un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)   
- [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [Procedura: creare un client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [Procedura: usare ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a><span data-ttu-id="272fe-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="272fe-125">See Also</span></span>  
+ [<span data-ttu-id="272fe-126">Esercitazione introduttiva</span><span class="sxs-lookup"><span data-stu-id="272fe-126">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="272fe-127">Procedura: creare un contratto Duplex</span><span class="sxs-lookup"><span data-stu-id="272fe-127">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [<span data-ttu-id="272fe-128">Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="272fe-128">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="272fe-129">Procedura: Creare un client</span><span class="sxs-lookup"><span data-stu-id="272fe-129">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="272fe-130">Procedura: usare ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="272fe-130">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

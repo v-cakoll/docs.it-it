@@ -1,25 +1,28 @@
 ---
-title: "Il file specificato da FileName non usa la codifica specificata da FileEncoding | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: Il file specificato da FileName non usa la codifica specificata da FileEncoding
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 2129f8df-96cd-4c2e-a4ca-f08a49f07d3f
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: dfa6525a029f60fbe821e18f9d9a9cbb61d14432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Il file specificato da FileName non usa la codifica specificata da FileEncoding
-Si è provato a leggere da un file, ma la codifica specificata non è usata dal file.  
+# <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a><span data-ttu-id="62274-102">Il file specificato da FileName non usa la codifica specificata da FileEncoding</span><span class="sxs-lookup"><span data-stu-id="62274-102">File specified by FileName does not use the encoding specified by FileEncoding</span></span>
+<span data-ttu-id="62274-103">Si è provato a leggere da un file, ma la codifica specificata non è usata dal file.</span><span class="sxs-lookup"><span data-stu-id="62274-103">An attempt has been made to read from a file, but the specified encoding is not used by the file.</span></span>  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="62274-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="62274-104">To correct this error</span></span>  
   
--   Verificare che la codifica file fornita sia corretta.  
+-   <span data-ttu-id="62274-105">Verificare che la codifica file fornita sia corretta.</span><span class="sxs-lookup"><span data-stu-id="62274-105">Check to make sure you are supplying the correct file encoding.</span></span>  
   
-## Vedere anche  
- [Metodo My.Computer.FileSystem.ReadAllText](http://msdn.microsoft.com/it-it/3a7ac8be-fb1d-4087-bc65-167d6754d57f)   
- [My.Computer.FileSystem Object](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)   
- [File Encodings](../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)   
- [How to: Read from Text Files](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+## <a name="see-also"></a><span data-ttu-id="62274-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="62274-106">See Also</span></span>  
+ [<span data-ttu-id="62274-107">Metodo ReadAllText</span><span class="sxs-lookup"><span data-stu-id="62274-107">My.Computer.FileSystem.ReadAllText Method</span></span>](http://msdn.microsoft.com/en-us/3a7ac8be-fb1d-4087-bc65-167d6754d57f)  
+ [<span data-ttu-id="62274-108">Oggetto My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="62274-108">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+ [<span data-ttu-id="62274-109">Codifiche dei file</span><span class="sxs-lookup"><span data-stu-id="62274-109">File Encodings</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [<span data-ttu-id="62274-110">Procedura: leggere da file di testo</span><span class="sxs-lookup"><span data-stu-id="62274-110">How to: Read from Text Files</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

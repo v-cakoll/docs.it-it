@@ -7,82 +7,75 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: edf493f0999dc78e6b1065176f1638b23667d9b3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5d110d49ed93c1c53c257e4c01c3fc68eb2e0b0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="peer-to-peer-networking-scenarios"></a>Scenari di rete peer-to-peer
-Una rete peer-to-peer supporta o ottimizza gli scenari seguenti:  
+# <a name="peer-to-peer-networking-scenarios"></a><span data-ttu-id="17c98-102">Scenari di rete peer-to-peer</span><span class="sxs-lookup"><span data-stu-id="17c98-102">Peer-to-Peer Networking Scenarios</span></span>
+<span data-ttu-id="17c98-103">Una rete peer-to-peer supporta o ottimizza gli scenari seguenti:</span><span class="sxs-lookup"><span data-stu-id="17c98-103">Peer-to-peer networking enables or enhances the following scenarios:</span></span>  
   
-## <a name="real-time-communications-rtc"></a>Comunicazioni in tempo reale  
+## <a name="real-time-communications-rtc"></a><span data-ttu-id="17c98-104">Comunicazioni in tempo reale</span><span class="sxs-lookup"><span data-stu-id="17c98-104">Real-Time Communications (RTC)</span></span>  
   
--   Messaggistica immediata senza server  
+-   <span data-ttu-id="17c98-105">Messaggistica immediata senza server</span><span class="sxs-lookup"><span data-stu-id="17c98-105">Serverless Instant Messaging</span></span>  
   
- Le comunicazioni in tempo reale sono già una realtà. Gli utenti di computer possono comunicare via chat e intrattenere conversazioni vocali o video con altri utenti. Tuttavia, molti dei programmi esistenti e dei relativi protocolli di comunicazione si basano sui server per funzionare. Se si partecipa a una rete wireless ad hoc o si fa parte di una rete isolata, non è possibile usare queste funzionalità di comunicazione in tempo reale. La tecnologia peer-to-peer consente l'estensione delle tecnologie di comunicazione in tempo reale a questi ambienti di rete aggiuntivi.  
+ <span data-ttu-id="17c98-106">Le comunicazioni in tempo reale sono già una realtà.</span><span class="sxs-lookup"><span data-stu-id="17c98-106">RTC exists today.</span></span> <span data-ttu-id="17c98-107">Gli utenti di computer possono comunicare via chat e intrattenere conversazioni vocali o video con altri utenti.</span><span class="sxs-lookup"><span data-stu-id="17c98-107">Computer users can chat and have voice or video conversations with their peers today.</span></span> <span data-ttu-id="17c98-108">Tuttavia, molti dei programmi esistenti e dei relativi protocolli di comunicazione si basano sui server per funzionare.</span><span class="sxs-lookup"><span data-stu-id="17c98-108">However, many of the existing programs and their communications protocols rely on servers to function.</span></span> <span data-ttu-id="17c98-109">Se si partecipa a una rete wireless ad hoc o si fa parte di una rete isolata, non è possibile usare queste funzionalità di comunicazione in tempo reale.</span><span class="sxs-lookup"><span data-stu-id="17c98-109">If you are participating in an ad-hoc wireless network or are a part of an isolated network, you are unable to use these RTC facilities.</span></span> <span data-ttu-id="17c98-110">La tecnologia peer-to-peer consente l'estensione delle tecnologie di comunicazione in tempo reale a questi ambienti di rete aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="17c98-110">Peer-to-peer technology allows the extension of RTC technologies to these additional networking environments.</span></span>  
   
--   Matchmaking e gioco in tempo reale  
+-   <span data-ttu-id="17c98-111">Matchmaking e gioco in tempo reale</span><span class="sxs-lookup"><span data-stu-id="17c98-111">Real-time matchmaking and gameplay</span></span>  
   
- Come le comunicazioni in tempo reale, oggi è già disponibile anche la possibilità di giocare con altri in tempo reale. Esistono molti siti di gioco basati sul Web che riuniscono la community dei giocatori tramite Internet e offrono la possibilità di trovare gli altri giocatori con interessi simili e giocare insieme. Il problema è che i siti di giochi sono disponibili solo in Internet e sono rivolti ai giocatori appassionati che amano mettersi alla prova con i migliori giocatori nel mondo. Questi siti tengono traccia di dati statistici e li mettono a disposizione per agevolare questo processo. Questi siti non consentono però a un giocatore di configurare un gioco ad hoc tra amici in svariati ambienti di rete. Una rete peer-to-peer può offrire questa funzionalità.  
+ <span data-ttu-id="17c98-112">Come le comunicazioni in tempo reale, oggi è già disponibile anche la possibilità di giocare con altri in tempo reale.</span><span class="sxs-lookup"><span data-stu-id="17c98-112">Similar to RTC, real-time game play exists today.</span></span> <span data-ttu-id="17c98-113">Esistono molti siti di gioco basati sul Web che riuniscono la community dei giocatori tramite Internet</span><span class="sxs-lookup"><span data-stu-id="17c98-113">There are many Web-based game sites that cater to the gaming community via the Internet.</span></span> <span data-ttu-id="17c98-114">e offrono la possibilità di trovare gli altri giocatori con interessi simili e giocare insieme.</span><span class="sxs-lookup"><span data-stu-id="17c98-114">They offer the ability to find other gamers with similar interests and play a game together.</span></span> <span data-ttu-id="17c98-115">Il problema è che i siti di giochi sono disponibili solo in Internet e sono rivolti ai giocatori appassionati che amano mettersi alla prova con i migliori giocatori nel mondo.</span><span class="sxs-lookup"><span data-stu-id="17c98-115">The problem is that the game sites exist only on the Internet and are geared toward the avid gamer who wants to play against the best gamers in the world.</span></span> <span data-ttu-id="17c98-116">Questi siti tengono traccia di dati statistici e li mettono a disposizione per agevolare questo processo.</span><span class="sxs-lookup"><span data-stu-id="17c98-116">These sites track and provide the statistics to help in the process.</span></span> <span data-ttu-id="17c98-117">Questi siti non consentono però a un giocatore di configurare un gioco ad hoc tra amici in svariati ambienti di rete.</span><span class="sxs-lookup"><span data-stu-id="17c98-117">However, these sites do not allow a gamer to set up an ad-hoc game among friends in a variety of networking environments.</span></span> <span data-ttu-id="17c98-118">Una rete peer-to-peer può offrire questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="17c98-118">Peer-to-peer networking can provide this capability.</span></span>  
   
-## <a name="collaboration"></a>Collaborazione  
+## <a name="collaboration"></a><span data-ttu-id="17c98-119">Collaborazione</span><span class="sxs-lookup"><span data-stu-id="17c98-119">Collaboration</span></span>  
   
--   Aree di lavoro per singoli progetti con obiettivi specifici  
+-   <span data-ttu-id="17c98-120">Aree di lavoro per singoli progetti con obiettivi specifici</span><span class="sxs-lookup"><span data-stu-id="17c98-120">Project workspaces solving a goal</span></span>  
   
- Le applicazioni per aree di lavoro condivise consentono di creare gruppi di lavoro ad hoc e quindi consentono ai proprietari del gruppo di lavoro di popolare l'area di lavoro condivisa con gli strumenti e il contenuto che permetterà al gruppo di risolvere un problema. Può trattarsi di bacheche per messaggi, strumenti di produttività e file.  
+ <span data-ttu-id="17c98-121">Le applicazioni per aree di lavoro condivise consentono di creare gruppi di lavoro ad hoc e quindi consentono ai proprietari del gruppo di lavoro di popolare l'area di lavoro condivisa con gli strumenti e il contenuto che permetterà al gruppo di risolvere un problema.</span><span class="sxs-lookup"><span data-stu-id="17c98-121">Shared workspace applications allow for the creation of ad-hoc workgroups and then allow the workgroup owners to populate the shared workspace with the tools and content that will allow the group to solve a problem.</span></span> <span data-ttu-id="17c98-122">Può trattarsi di bacheche per messaggi, strumenti di produttività e file.</span><span class="sxs-lookup"><span data-stu-id="17c98-122">This could include message boards, productivity tools, and files.</span></span>  
   
--   Condivisione di file con altri utenti  
+-   <span data-ttu-id="17c98-123">Condivisione di file con altri utenti</span><span class="sxs-lookup"><span data-stu-id="17c98-123">Sharing files with others</span></span>  
   
- Una funzionalità secondaria della condivisione di un'area di lavoro per un progetto è la possibilità di condividere file. Sebbene questa possibilità esista già con la versione corrente di Windows, può essere migliorata tramite una rete peer-to-peer per rendere il contenuto di file disponibile in un modo semplice e accessibile. La possibilità di accedere facilmente all'incredibile quantità di contenuti disponibili ai margini di Internet o in ambienti informatici ad hoc aumenta il valore delle reti di computer.  
+ <span data-ttu-id="17c98-124">Una funzionalità secondaria della condivisione di un'area di lavoro per un progetto è la possibilità di condividere file.</span><span class="sxs-lookup"><span data-stu-id="17c98-124">A subset of project workspace sharing is the ability to share files.</span></span> <span data-ttu-id="17c98-125">Sebbene questa possibilità esista già con la versione corrente di Windows, può essere migliorata tramite una rete peer-to-peer per rendere il contenuto di file disponibile in un modo semplice e accessibile.</span><span class="sxs-lookup"><span data-stu-id="17c98-125">Although this ability exists today with the current version of Windows, it can be enhanced through peer-to-peer networking to make file content available in an easy and friendly way.</span></span> <span data-ttu-id="17c98-126">La possibilità di accedere facilmente all'incredibile quantità di contenuti disponibili ai margini di Internet o in ambienti informatici ad hoc aumenta il valore delle reti di computer.</span><span class="sxs-lookup"><span data-stu-id="17c98-126">Allowing easy access to the incredible wealth of content at the edge of the Internet or in ad-hoc computing environments increases the value of network computing.</span></span>  
   
--   Condivisione di esperienze  
+-   <span data-ttu-id="17c98-127">Condivisione di esperienze</span><span class="sxs-lookup"><span data-stu-id="17c98-127">Sharing experiences</span></span>  
   
- Con la sempre maggiore diffusione della connettività wireless, le reti peer-to-peer consentono di essere online in un gruppo di peer e di condividere esperienze in tempo reale, ad esempio un tramonto, un concerto o una vacanza.  
+ <span data-ttu-id="17c98-128">Con la sempre maggiore diffusione della connettività wireless, le reti peer-to-peer consentono di essere online in un gruppo di peer e di condividere esperienze in tempo reale, ad esempio un tramonto, un concerto o una vacanza.</span><span class="sxs-lookup"><span data-stu-id="17c98-128">With wireless connectivity becoming more prevalent, peer-to-peer networking allows you to be online in a group of peers and to be able to share your experiences (such as a sunset, a rock concert, or a vacation cruise) while they are occurring.</span></span>  
   
-## <a name="content-distribution"></a>Distribuzione del contenuto  
+## <a name="content-distribution"></a><span data-ttu-id="17c98-129">Distribuzione del contenuto</span><span class="sxs-lookup"><span data-stu-id="17c98-129">Content Distribution</span></span>  
   
--   Messaggi di testo  
+-   <span data-ttu-id="17c98-130">Messaggi di testo</span><span class="sxs-lookup"><span data-stu-id="17c98-130">Text messages</span></span>  
   
- Una rete peer-to-peer può consentire la diffusione di informazioni basate su testo sotto forma di file o messaggi a un ampio gruppo di utenti. Un esempio è un elenco di notizie.  
-  
--  
-  
--   Audio e video  
-  
- Le reti peer-to-peer possono anche supportare la distribuzione di informazioni audio o video a un ampio gruppo di utenti, ad esempio una riunione aziendale o un concerto. Per distribuire il contenuto, è necessario configurare server ad alta capacità per la raccolta e la distribuzione del carico a centinaia o migliaia di utenti. Con una rete peer-to-peer, solo un numero limitato di peer otterrebbe in effetti il contenuto dai server centralizzati. Questi peer distribuirebbero le informazioni ad altre persone che le invierebbero ad altri e così via. Il carico della distribuzione del contenuto viene distribuito ai peer nel cloud. Un peer che vuole ricevere il contenuto individua il peer di distribuzione più vicino e ottiene il contenuto da tale peer.  
+ <span data-ttu-id="17c98-131">Una rete peer-to-peer può consentire la diffusione di informazioni basate su testo sotto forma di file o messaggi a un ampio gruppo di utenti.</span><span class="sxs-lookup"><span data-stu-id="17c98-131">Peer-to-peer networking can allow for the dissemination of text-based information in the form of files or messages to a large group of users.</span></span> <span data-ttu-id="17c98-132">Un esempio è un elenco di notizie.</span><span class="sxs-lookup"><span data-stu-id="17c98-132">An example is a news list.</span></span>  
   
 -  
   
--   Distribuzione degli aggiornamenti dei prodotti  
+-   <span data-ttu-id="17c98-133">Audio e video</span><span class="sxs-lookup"><span data-stu-id="17c98-133">Audio and video</span></span>  
   
- Una rete peer-to-peer può inoltre rappresentare un meccanismo efficiente per distribuire il software, ad esempio gli aggiornamenti dei prodotti (aggiornamenti della sicurezza e Service Pack). Un peer con una connessione a un server di distribuzione software può ottenere l'aggiornamento del prodotto e propagarlo agli altri membri del gruppo.  
-  
--  
-  
-## <a name="distributed-processing"></a>Elaborazione distribuita  
-  
--   Suddivisione e distribuzione di un'attività  
-  
- Un'attività di elaborazione estesa può essere suddivisa in attività più piccole distinte, adatte alle risorse di elaborazione di un peer. Un peer può occuparsi della suddivisione dell'attività di elaborazione estesa e quindi la rete peer-to-peer può distribuire le singole attività ai peer separati nel gruppo. Ogni peer esegue l'attività di elaborazione assegnata e restituisce il risultato a un punto di raccolta centralizzato.  
-  
--   Aggregazione di risorse dei computer  
-  
- Un altro modo per utilizzare la rete peer-to-peer per l'elaborazione distribuita consiste nell'eseguire in ogni peer programmi eseguiti durante i periodi di inattività del processore e che fanno parte di un'attività di elaborazione più grande coordinata da un server centrale. Aggregando i processori di più computer, la rete peer-to-peer può trasformare un gruppo di computer peer in un grande processore parallelo per attività di elaborazione estese.  
+ <span data-ttu-id="17c98-134">Le reti peer-to-peer possono anche supportare la distribuzione di informazioni audio o video a un ampio gruppo di utenti, ad esempio una riunione aziendale o un concerto.</span><span class="sxs-lookup"><span data-stu-id="17c98-134">Peer-to-peer networking can also allow for the dissemination of audio or video information to a large group of users, such as a large concert or company meeting.</span></span> <span data-ttu-id="17c98-135">Per distribuire il contenuto, è necessario configurare server ad alta capacità per la raccolta e la distribuzione del carico a centinaia o migliaia di utenti.</span><span class="sxs-lookup"><span data-stu-id="17c98-135">To distribute the content today, you must configure high-capacity servers to collect and distribute the load to hundreds or thousands of users.</span></span> <span data-ttu-id="17c98-136">Con una rete peer-to-peer, solo un numero limitato di peer otterrebbe in effetti il contenuto dai server centralizzati.</span><span class="sxs-lookup"><span data-stu-id="17c98-136">With peer-to-peer networking, only a handful of peers would actually get their content from the centralized servers.</span></span> <span data-ttu-id="17c98-137">Questi peer distribuirebbero le informazioni ad altre persone che le invierebbero ad altri e così via.</span><span class="sxs-lookup"><span data-stu-id="17c98-137">These peers would flood this information out to a few more people who send it to others, and so on.</span></span> <span data-ttu-id="17c98-138">Il carico della distribuzione del contenuto viene distribuito ai peer nel cloud.</span><span class="sxs-lookup"><span data-stu-id="17c98-138">The load of distributing the content is distributed to the peers in the cloud.</span></span> <span data-ttu-id="17c98-139">Un peer che vuole ricevere il contenuto individua il peer di distribuzione più vicino e ottiene il contenuto da tale peer.</span><span class="sxs-lookup"><span data-stu-id="17c98-139">A peer that wants to receive the content would find the closest distributing peer and get the content from them.</span></span>  
   
 -  
   
-## <a name="see-also"></a>Vedere anche  
+-   <span data-ttu-id="17c98-140">Distribuzione degli aggiornamenti dei prodotti</span><span class="sxs-lookup"><span data-stu-id="17c98-140">Distribution of product updates</span></span>  
+  
+ <span data-ttu-id="17c98-141">Una rete peer-to-peer può inoltre rappresentare un meccanismo efficiente per distribuire il software, ad esempio gli aggiornamenti dei prodotti (aggiornamenti della sicurezza e Service Pack).</span><span class="sxs-lookup"><span data-stu-id="17c98-141">Peer-to-peer networking can also provide an efficient mechanism to distribute software such as product updates (security updates and service packs).</span></span> <span data-ttu-id="17c98-142">Un peer con una connessione a un server di distribuzione software può ottenere l'aggiornamento del prodotto e propagarlo agli altri membri del gruppo.</span><span class="sxs-lookup"><span data-stu-id="17c98-142">A peer that has a connection to a software distribution server can obtain the product update and propagate it to the other members of its group.</span></span>  
+  
+-  
+  
+## <a name="distributed-processing"></a><span data-ttu-id="17c98-143">Elaborazione distribuita</span><span class="sxs-lookup"><span data-stu-id="17c98-143">Distributed Processing</span></span>  
+  
+-   <span data-ttu-id="17c98-144">Suddivisione e distribuzione di un'attività</span><span class="sxs-lookup"><span data-stu-id="17c98-144">Division and distribution of a task</span></span>  
+  
+ <span data-ttu-id="17c98-145">Un'attività di elaborazione estesa può essere suddivisa in attività più piccole distinte, adatte alle risorse di elaborazione di un peer.</span><span class="sxs-lookup"><span data-stu-id="17c98-145">A large computing task can first be divided into separate smaller computing tasks well suited to the computing resources of a peer.</span></span> <span data-ttu-id="17c98-146">Un peer può occuparsi della suddivisione dell'attività di elaborazione estesa</span><span class="sxs-lookup"><span data-stu-id="17c98-146">A peer could do the dividing of the large computing task.</span></span> <span data-ttu-id="17c98-147">e quindi la rete peer-to-peer può distribuire le singole attività ai peer separati nel gruppo.</span><span class="sxs-lookup"><span data-stu-id="17c98-147">Then, peer-to-peer networking can distribute the individual tasks to the separate peers in the group.</span></span> <span data-ttu-id="17c98-148">Ogni peer esegue l'attività di elaborazione assegnata e restituisce il risultato a un punto di raccolta centralizzato.</span><span class="sxs-lookup"><span data-stu-id="17c98-148">Each peer performs its computing task and reports its result back to a centralized accumulation point.</span></span>  
+  
+-   <span data-ttu-id="17c98-149">Aggregazione di risorse dei computer</span><span class="sxs-lookup"><span data-stu-id="17c98-149">Aggregation of computer resources</span></span>  
+  
+ <span data-ttu-id="17c98-150">Un altro modo per utilizzare la rete peer-to-peer per l'elaborazione distribuita consiste nell'eseguire in ogni peer programmi eseguiti durante i periodi di inattività del processore e che fanno parte di un'attività di elaborazione più grande coordinata da un server centrale.</span><span class="sxs-lookup"><span data-stu-id="17c98-150">Another way to utilize peer-to-peer networking for distributed processing is to run programs on each peer that run during idle processor times and are part of a larger computing task that is coordinated by a central server.</span></span> <span data-ttu-id="17c98-151">Aggregando i processori di più computer, la rete peer-to-peer può trasformare un gruppo di computer peer in un grande processore parallelo per attività di elaborazione estese.</span><span class="sxs-lookup"><span data-stu-id="17c98-151">By aggregating the processors of multiple computers, peer-to-peer networking can turn a group of peer computers into a large parallel processor for large computing tasks.</span></span>  
+  
+-  
+  
+## <a name="see-also"></a><span data-ttu-id="17c98-152">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="17c98-152">See Also</span></span>  
  <xref:System.Net.PeerToPeer.Collaboration>
-

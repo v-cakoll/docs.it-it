@@ -1,1 +1,1 @@
-Per altre informazioni su
+<span data-ttu-id="a0cea-101">Per altre informazioni su</span><span class="sxs-lookup"><span data-stu-id="a0cea-101">For more information about</span></span>

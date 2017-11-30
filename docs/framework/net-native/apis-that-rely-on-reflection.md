@@ -5,39 +5,37 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fec340bf90eaf5b49f73e3af1281e7d6e3f35d5b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2f8bb112cb4277a59296cabdc495d45f40bb7e1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="apis-that-rely-on-reflection"></a>API basate sulla reflection
-In alcuni casi, l'uso della reflection nel codice non è scontato, quindi la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)] non conserva i metadati necessari al runtime. In questo argomento vengono illustrati modelli di programmazione o API comuni non considerati parte dell'API di reflection ma basati sulla reflection per una corretta esecuzione. Se vengono usati nel codice sorgente, è possibile aggiungere informazioni su di essi al file di direttive di runtime (.rd.xml) in modo che le chiamate a queste API non generino un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o altre eccezioni al runtime.  
+# <a name="apis-that-rely-on-reflection"></a><span data-ttu-id="4fc9b-102">API basate sulla reflection</span><span class="sxs-lookup"><span data-stu-id="4fc9b-102">APIs That Rely on Reflection</span></span>
+<span data-ttu-id="4fc9b-103">In alcuni casi, l'uso della reflection nel codice non è scontato, quindi la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)] non conserva i metadati necessari al runtime.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-103">In some cases, the use of reflection in code isn't obvious, and so the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain doesn't preserve metadata that is needed at run time.</span></span> <span data-ttu-id="4fc9b-104">In questo argomento vengono illustrati modelli di programmazione o API comuni non considerati parte dell'API di reflection ma basati sulla reflection per una corretta esecuzione.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-104">This topic covers some common APIs or common programming patterns that aren't considered part of the reflection API but that rely on reflection to execute successfully.</span></span> <span data-ttu-id="4fc9b-105">Se vengono usati nel codice sorgente, è possibile aggiungere informazioni su di essi al file di direttive di runtime (.rd.xml) in modo che le chiamate a queste API non generino un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o altre eccezioni al runtime.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-105">If you use them in your source code, you can add information about them to the runtime directives (.rd.xml) file so that calls to these APIs do not throw a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception or some other exception at run time.</span></span>  
   
-## <a name="typemakegenerictype-method"></a>Metodo Type.MakeGenericType  
- È possibile creare dinamicamente un'istanza di un tipo generico `AppClass<T>` chiamando il metodo <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> usando un codice simile al seguente:  
+## <a name="typemakegenerictype-method"></a><span data-ttu-id="4fc9b-106">Metodo Type.MakeGenericType</span><span class="sxs-lookup"><span data-stu-id="4fc9b-106">Type.MakeGenericType method</span></span>  
+ <span data-ttu-id="4fc9b-107">È possibile creare dinamicamente un'istanza di un tipo generico `AppClass<T>` chiamando il metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> usando un codice simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="4fc9b-107">You can dynamically instantiate a generic type `AppClass<T>` by calling the <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> method by using code like this:</span></span>  
   
  [!code-csharp[ProjectN#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/type_makegenerictype1.cs#1)]  
   
- Per una corretta esecuzione del codice al runtime, sono necessari diversi elementi di metadati. Prima di tutto, sono richiesti metadati `Browse` per il tipo generico privo di istanze, `AppClass<T>`:  
+ <span data-ttu-id="4fc9b-108">Per una corretta esecuzione del codice al runtime, sono necessari diversi elementi di metadati.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-108">For this code to succeed at run time, several items of metadata are required.</span></span> <span data-ttu-id="4fc9b-109">Prima di tutto, sono richiesti metadati `Browse` per il tipo generico privo di istanze, `AppClass<T>`:</span><span class="sxs-lookup"><span data-stu-id="4fc9b-109">The first is `Browse` metadata for the uninstantiated generic type, `AppClass<T>`:</span></span>  
   
 ```xml  
 <Type Name="App1.AppClass`1" Browse="Required PublicAndInternal" />  
 ```  
   
- Questo assicura l'esito positivo della chiamata al metodo <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=fullName> e la restituzione di un oggetto <xref:System.Type> valido.  
+ <span data-ttu-id="4fc9b-110">Questo assicura l'esito positivo della chiamata al metodo <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> e la restituzione di un oggetto <xref:System.Type> valido.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-110">This allows the <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> method call to succeed and return a valid <xref:System.Type> object.</span></span>  
   
- Tuttavia, anche se si aggiungono i metadati per il tipo generico privo di istanze, la chiamata al metodo <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> genera un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md):  
+ <span data-ttu-id="4fc9b-111">Tuttavia, anche se si aggiungono i metadati per il tipo generico privo di istanze, la chiamata al metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> genera un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md):</span><span class="sxs-lookup"><span data-stu-id="4fc9b-111">But even when you add metadata for the uninstantiated generic type, calling the <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> method throws a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception:</span></span>  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
@@ -45,33 +43,33 @@ This operation cannot be carried out as metadata for the following type was remo
 App1.AppClass`1<System.Int32>.  
 ```  
   
- È possibile aggiungere la seguente direttiva di runtime al file di direttive di runtime per aggiungere i metadati `Activate` per la specifica creazione di un'istanza in `AppClass<T>` di <xref:System.Int32?displayProperty=fullName>:  
+ <span data-ttu-id="4fc9b-112">È possibile aggiungere la seguente direttiva di runtime al file di direttive di runtime per aggiungere i metadati `Activate` per la specifica creazione di un'istanza in `AppClass<T>` di <xref:System.Int32?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="4fc9b-112">You can add the following run-time directive to the runtime directives file to add `Activate` metadata for the specific instantiation over `AppClass<T>` of <xref:System.Int32?displayProperty=nameWithType>:</span></span>  
   
 ```xml  
 <TypeInstantiation Name="App1.AppClass" Arguments="System.Int32"   
                    Activate="Required Public" />  
 ```  
   
- Le singole creazioni di istanze in `AppClass<T>` richiedono direttive separate se vengono create con il metodo <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> e non vengono usate staticamente.  
+ <span data-ttu-id="4fc9b-113">Le singole creazioni di istanze in `AppClass<T>` richiedono direttive separate se vengono create con il metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> e non vengono usate staticamente.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-113">Each different instantiation over `AppClass<T>` requires a separate directive if it is being created with the <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> method and not used statically.</span></span>  
   
-## <a name="methodinfomakegenericmethod-method"></a>Metodo MethodInfo.MakeGenericMethod  
- In una classe `Class1` con un metodo generico `GetMethod<T>(T t)`, `GetMethod` può essere richiamato mediante reflection usando un codice simile al seguente:  
+## <a name="methodinfomakegenericmethod-method"></a><span data-ttu-id="4fc9b-114">Metodo MethodInfo.MakeGenericMethod</span><span class="sxs-lookup"><span data-stu-id="4fc9b-114">MethodInfo.MakeGenericMethod method</span></span>  
+ <span data-ttu-id="4fc9b-115">In una classe `Class1` con un metodo generico `GetMethod<T>(T t)`, `GetMethod` può essere richiamato mediante reflection usando un codice simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="4fc9b-115">Given a class `Class1` with a generic method `GetMethod<T>(T t)`, `GetMethod` can be invoked through reflection by using code like this:</span></span>  
   
  [!code-csharp[ProjectN#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/makegenericmethod1.cs#2)]  
   
- Per una corretta esecuzione, questo codice richiede diversi elementi di metadati:  
+ <span data-ttu-id="4fc9b-116">Per una corretta esecuzione, questo codice richiede diversi elementi di metadati:</span><span class="sxs-lookup"><span data-stu-id="4fc9b-116">To run successfully, this code requires several items of metadata:</span></span>  
   
--   I metadati `Browse` per il tipo di metodo da chiamare.  
+-   <span data-ttu-id="4fc9b-117">I metadati `Browse` per il tipo di metodo da chiamare.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-117">`Browse` metadata for the type whose method you want to call.</span></span>  
   
--   I metadati `Browse` per il metodo da chiamare.  Se si tratta di un metodo pubblico, l'aggiunta di metadati `Browse` pubblici per il tipo contenitore include anche il metodo.  
+-   <span data-ttu-id="4fc9b-118">I metadati `Browse` per il metodo da chiamare.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-118">`Browse` metadata for the method you want to call.</span></span>  <span data-ttu-id="4fc9b-119">Se si tratta di un metodo pubblico, l'aggiunta di metadati `Browse` pubblici per il tipo contenitore include anche il metodo.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-119">If it is a public method, adding public `Browse` metadata for the containing type includes the method, too.</span></span>  
   
--   I metadati dinamici per il metodo da chiamare, in modo che il delegato di chiamata della reflection non venga rimosso dalla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Se i metadati dinamici non sono disponibili per il metodo, viene generata la seguente eccezione quando viene chiamato il metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName>:  
+-   <span data-ttu-id="4fc9b-120">I metadati dinamici per il metodo da chiamare, in modo che il delegato di chiamata della reflection non venga rimosso dalla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4fc9b-120">Dynamic metadata for the method you want to call, so that the reflection invocation delegate is not removed by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain.</span></span> <span data-ttu-id="4fc9b-121">Se i metadati dinamici non sono disponibili per il metodo, viene generata la seguente eccezione quando viene chiamato il metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="4fc9b-121">If dynamic metadata is missing for the method, the following exception is thrown when the <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> method is called:</span></span>  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
     ```  
   
- Le seguenti direttive di runtime assicurano la disponibilità di tutti i metadati necessari:  
+ <span data-ttu-id="4fc9b-122">Le seguenti direttive di runtime assicurano la disponibilità di tutti i metadati necessari:</span><span class="sxs-lookup"><span data-stu-id="4fc9b-122">The following runtime directives ensure that all required metadata is available:</span></span>  
   
 ```xml  
 <Type Name="App1.Class1" Browse="Required PublicAndInternal">  
@@ -79,14 +77,14 @@ App1.AppClass`1<System.Int32>.
 </Type>  
 ```  
   
- È necessaria una direttiva `MethodInstantiation` per ogni singola creazione di un'istanza del metodo richiamato dinamicamente; l'elemento `Arguments` viene aggiornato per riflettere ogni singolo argomento di creazione di un'istanza.  
+ <span data-ttu-id="4fc9b-123">È necessaria una direttiva `MethodInstantiation` per ogni singola creazione di un'istanza del metodo richiamato dinamicamente; l'elemento `Arguments` viene aggiornato per riflettere ogni singolo argomento di creazione di un'istanza.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-123">A `MethodInstantiation` directive is required for each different instantiation of the method that is dynamically invoked, and the `Arguments` element is updated to reflect each different instantiation argument.</span></span>  
   
-## <a name="arraycreateinstance-and-typemaketypearray-methods"></a>Metodi Array.CreateInstance e Type.MakeTypeArray  
- Il seguente esempio chiama i metodi <xref:System.Type.MakeArrayType%2A?displayProperty=fullName> e <xref:System.Array.CreateInstance%2A?displayProperty=fullName> in un tipo `Class1`.  
+## <a name="arraycreateinstance-and-typemaketypearray-methods"></a><span data-ttu-id="4fc9b-124">Metodi Array.CreateInstance e Type.MakeTypeArray</span><span class="sxs-lookup"><span data-stu-id="4fc9b-124">Array.CreateInstance and Type.MakeTypeArray methods</span></span>  
+ <span data-ttu-id="4fc9b-125">Il seguente esempio chiama i metodi <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> e <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> in un tipo `Class1`.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-125">The following example calls the <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> and <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> methods on a type, `Class1`.</span></span>  
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  
   
- Se non sono presenti i metadati della matrice, si verificano i seguenti errori:  
+ <span data-ttu-id="4fc9b-126">Se non sono presenti i metadati della matrice, si verificano i seguenti errori:</span><span class="sxs-lookup"><span data-stu-id="4fc9b-126">If no array metadata is present, the following error results:</span></span>  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
@@ -96,13 +94,12 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- I metadati `Browse` per il tipo di matrice sono richiesti per la creazione dinamica di un'istanza.  La seguente direttiva di runtime consente la creazione dinamica di un'istanza di `Class1[]`.  
+ <span data-ttu-id="4fc9b-127">I metadati `Browse` per il tipo di matrice sono richiesti per la creazione dinamica di un'istanza.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-127">`Browse` metadata for the array type is required to dynamically instantiate it.</span></span>  <span data-ttu-id="4fc9b-128">La seguente direttiva di runtime consente la creazione dinamica di un'istanza di `Class1[]`.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-128">The following runtime directive allows dynamic instantiation of `Class1[]`.</span></span>  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)   
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-
+## <a name="see-also"></a><span data-ttu-id="4fc9b-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4fc9b-129">See Also</span></span>  
+ [<span data-ttu-id="4fc9b-130">Introduzione</span><span class="sxs-lookup"><span data-stu-id="4fc9b-130">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)  
+ [<span data-ttu-id="4fc9b-131">Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="4fc9b-131">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

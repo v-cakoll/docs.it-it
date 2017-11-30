@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -24,23 +22,22 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d18e1f2575481522e54c6c50256418ac026dfb7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3df78be14da96d0bb7b8875a5c7532c003d1dbc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-client-sockets"></a>Uso di socket client
-Prima di poter avviare una conversazione tramite un <xref:System.Net.Sockets.Socket>, è necessario creare una pipe di dati tra l'applicazione e il dispositivo remoto. Anche se esistono altre famiglie di indirizzi di rete e protocolli, questo esempio mostra come creare una connessione TCP/IP a un servizio remoto.  
+# <a name="using-client-sockets"></a><span data-ttu-id="e0637-102">Uso di socket client</span><span class="sxs-lookup"><span data-stu-id="e0637-102">Using Client Sockets</span></span>
+<span data-ttu-id="e0637-103">Prima di poter avviare una conversazione tramite un <xref:System.Net.Sockets.Socket>, è necessario creare una pipe di dati tra l'applicazione e il dispositivo remoto.</span><span class="sxs-lookup"><span data-stu-id="e0637-103">Before you can initiate a conversation through a <xref:System.Net.Sockets.Socket>, you must create a data pipe between your application and the remote device.</span></span> <span data-ttu-id="e0637-104">Anche se esistono altre famiglie di indirizzi di rete e protocolli, questo esempio mostra come creare una connessione TCP/IP a un servizio remoto.</span><span class="sxs-lookup"><span data-stu-id="e0637-104">Although other network address families and protocols exist, this example shows how to create a TCP/IP connection to a remote service.</span></span>  
   
- TCP/IP usa un indirizzo di rete e un numero di porta del servizio per identificare in modo univoco un servizio. L'indirizzo di rete identifica un determinato dispositivo in rete. Il numero di porta identifica il servizio specifico in tale dispositivo a cui connettersi. La combinazione di indirizzo di rete e porta del servizio viene denominata endpoint, rappresentato in .NET Framework dalla classe <xref:System.Net.EndPoint>. Viene definito un discendente di **EndPoint** per ogni famiglia di indirizzi supportata. Per la famiglia di indirizzi IP, la classe è <xref:System.Net.IPEndPoint>.  
+ <span data-ttu-id="e0637-105">TCP/IP usa un indirizzo di rete e un numero di porta del servizio per identificare in modo univoco un servizio.</span><span class="sxs-lookup"><span data-stu-id="e0637-105">TCP/IP uses a network address and a service port number to uniquely identify a service.</span></span> <span data-ttu-id="e0637-106">L'indirizzo di rete identifica un determinato dispositivo in rete. Il numero di porta identifica il servizio specifico in tale dispositivo a cui connettersi.</span><span class="sxs-lookup"><span data-stu-id="e0637-106">The network address identifies a specific device on the network; the port number identifies the specific service on that device to connect to.</span></span> <span data-ttu-id="e0637-107">La combinazione di indirizzo di rete e porta del servizio viene denominata endpoint, rappresentato in .NET Framework dalla classe <xref:System.Net.EndPoint>.</span><span class="sxs-lookup"><span data-stu-id="e0637-107">The combination of network address and service port is called an endpoint, which is represented in the .NET Framework by the <xref:System.Net.EndPoint> class.</span></span> <span data-ttu-id="e0637-108">Viene definito un discendente di **EndPoint** per ogni famiglia di indirizzi supportata. Per la famiglia di indirizzi IP, la classe è <xref:System.Net.IPEndPoint>.</span><span class="sxs-lookup"><span data-stu-id="e0637-108">A descendant of **EndPoint** is defined for each supported address family; for the IP address family, the class is <xref:System.Net.IPEndPoint>.</span></span>  
   
- La classe <xref:System.Net.Dns> fornisce servizi DNS alle applicazioni che usano i servizi TCP/IP Internet. Il metodo <xref:System.Net.Dns.Resolve%2A> richiede a un server DNS di eseguire il mapping di un nome descrittivo di dominio (ad esempio "host.contoso.com") a un indirizzo Internet numerico (ad esempio 192.168.1.1). **Resolve** restituisce una voce <xref:System.Net.IPHostEntry> che contiene un elenco di indirizzi e alias per il nome richiesto. Nella maggior parte dei casi, è possibile usare il primo indirizzo restituito nella matrice <xref:System.Net.IPHostEntry.AddressList%2A>. Il codice seguente ottiene un <xref:System.Net.IPAddress> contenente l'indirizzo IP del server host.contoso.com.  
+ <span data-ttu-id="e0637-109">La classe <xref:System.Net.Dns> fornisce servizi DNS alle applicazioni che usano i servizi TCP/IP Internet.</span><span class="sxs-lookup"><span data-stu-id="e0637-109">The <xref:System.Net.Dns> class provides domain-name services to applications that use TCP/IP Internet services.</span></span> <span data-ttu-id="e0637-110">Il metodo <xref:System.Net.Dns.Resolve%2A> richiede a un server DNS di eseguire il mapping di un nome descrittivo di dominio (ad esempio "host.contoso.com") a un indirizzo Internet numerico (ad esempio 192.168.1.1).</span><span class="sxs-lookup"><span data-stu-id="e0637-110">The <xref:System.Net.Dns.Resolve%2A> method queries a DNS server to map a user-friendly domain name (such as "host.contoso.com") to a numeric Internet address (such as 192.168.1.1).</span></span> <span data-ttu-id="e0637-111">**Resolve** restituisce una voce <xref:System.Net.IPHostEntry> che contiene un elenco di indirizzi e alias per il nome richiesto.</span><span class="sxs-lookup"><span data-stu-id="e0637-111">**Resolve** returns an <xref:System.Net.IPHostEntry> that contains a list of addresses and aliases for the requested name.</span></span> <span data-ttu-id="e0637-112">Nella maggior parte dei casi, è possibile usare il primo indirizzo restituito nella matrice <xref:System.Net.IPHostEntry.AddressList%2A>.</span><span class="sxs-lookup"><span data-stu-id="e0637-112">In most cases, you can use the first address returned in the <xref:System.Net.IPHostEntry.AddressList%2A> array.</span></span> <span data-ttu-id="e0637-113">Il codice seguente ottiene un <xref:System.Net.IPAddress> contenente l'indirizzo IP del server host.contoso.com.</span><span class="sxs-lookup"><span data-stu-id="e0637-113">The following code gets an <xref:System.Net.IPAddress> containing the IP address for the server host.contoso.com.</span></span>  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.Resolve("host.contoso.com")  
@@ -52,7 +49,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- IANA (Internet Assigned Numbers Authority) definisce i numeri di porta per i servizi comuni. Per altre informazioni, vedere www.iana.org/assignments/port-numbers. Altri servizi possono avere numeri di porta registrati nell'intervallo da 1024 a 65.535. Il codice seguente combina l'indirizzo IP per host.contoso.com con un numero di porta per creare un endpoint remoto per una connessione.  
+ <span data-ttu-id="e0637-114">IANA (Internet Assigned Numbers Authority) definisce i numeri di porta per i servizi comuni. Per altre informazioni, vedere www.iana.org/assignments/port-numbers.</span><span class="sxs-lookup"><span data-stu-id="e0637-114">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (for more information, see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="e0637-115">Altri servizi possono avere numeri di porta registrati nell'intervallo da 1024 a 65.535.</span><span class="sxs-lookup"><span data-stu-id="e0637-115">Other services can have registered port numbers in the range 1,024 to 65,535.</span></span> <span data-ttu-id="e0637-116">Il codice seguente combina l'indirizzo IP per host.contoso.com con un numero di porta per creare un endpoint remoto per una connessione.</span><span class="sxs-lookup"><span data-stu-id="e0637-116">The following code combines the IP address for host.contoso.com with a port number to create a remote endpoint for a connection.</span></span>  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  
@@ -62,7 +59,7 @@ Dim ipe As New IPEndPoint(ipAddress, 11000)
 IPEndPoint ipe = new IPEndPoint(ipAddress,11000);  
 ```  
   
- Dopo aver determinato l'indirizzo del dispositivo remoto e aver scelto la porta da usare per la connessione, l'applicazione può tentare di stabilire una connessione con il dispositivo remoto. L'esempio seguente usa un **IPEndPoint** esistente per connettersi a un dispositivo remoto e intercetta le eventuali eccezioni generate.  
+ <span data-ttu-id="e0637-117">Dopo aver determinato l'indirizzo del dispositivo remoto e aver scelto la porta da usare per la connessione, l'applicazione può tentare di stabilire una connessione con il dispositivo remoto.</span><span class="sxs-lookup"><span data-stu-id="e0637-117">After determining the address of the remote device and choosing a port to use for the connection, the application can attempt to establish a connection with the remote device.</span></span> <span data-ttu-id="e0637-118">L'esempio seguente usa un **IPEndPoint** esistente per connettersi a un dispositivo remoto e intercetta le eventuali eccezioni generate.</span><span class="sxs-lookup"><span data-stu-id="e0637-118">The following example uses an existing **IPEndPoint** to connect to a remote device and catches any exceptions that are thrown.</span></span>  
   
 ```vb  
 Try  
@@ -89,9 +86,8 @@ try {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di un socket client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Uso di un socket client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [Procedura: Creare un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
- [Socket](../../../docs/framework/network-programming/sockets.md)
-
+## <a name="see-also"></a><span data-ttu-id="e0637-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e0637-119">See Also</span></span>  
+ [<span data-ttu-id="e0637-120">Uso di un Socket Client sincrono</span><span class="sxs-lookup"><span data-stu-id="e0637-120">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [<span data-ttu-id="e0637-121">Utilizzo di un Socket Client asincrono</span><span class="sxs-lookup"><span data-stu-id="e0637-121">Using an Asynchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [<span data-ttu-id="e0637-122">Procedura: Creare un socket</span><span class="sxs-lookup"><span data-stu-id="e0637-122">How to: Create a Socket</span></span>](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+ [<span data-ttu-id="e0637-123">Socket</span><span class="sxs-lookup"><span data-stu-id="e0637-123">Sockets</span></span>](../../../docs/framework/network-programming/sockets.md)
