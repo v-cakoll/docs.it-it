@@ -1,66 +1,70 @@
 ---
-title: "Procedura: creare oggetti Graphics per disegnare | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, creazione di immagini"
-  - "grafica [Windows Form], creazione"
-  - "Graphics (classe)"
-  - "immagini [Windows Form], creazione"
+title: 'Procedura: creare oggetti Graphics per disegnare'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- graphics [Windows Forms], creating
+- images [Windows Forms], creating
+- GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72f1af49a5c64395e018707d1f71cc0feaa2d22c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare oggetti Graphics per disegnare
-Prima di poter creare linee e forme, eseguire il rendering di testo o visualizzare e modificare immagini con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario creare un oggetto <xref:System.Drawing.Graphics>.  L'oggetto <xref:System.Drawing.Graphics> rappresenta un'area di disegno [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], ed è l'oggetto utilizzato per la creazione di immagini grafiche.  
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Procedura: creare oggetti Graphics per disegnare
+Prima di poter creare linee e forme, il rendering del testo, visualizzare e modificare immagini con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario creare un <xref:System.Drawing.Graphics> oggetto. Il <xref:System.Drawing.Graphics> oggetto rappresenta un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie di disegno ed è l'oggetto che viene utilizzato per creare immagini grafiche.  
   
- La gestione della grafica implica due passaggi fondamentali:  
+ Durante l'utilizzo di grafici sono disponibili due passaggi:  
   
-1.  Creazione di un oggetto <xref:System.Drawing.Graphics>.  
+1.  Creazione di un <xref:System.Drawing.Graphics> oggetto.  
   
-2.  Utilizzo dell'oggetto <xref:System.Drawing.Graphics> per creare linee e forme, eseguire il rendering di testo oppure visualizzare e modificare immagini.  
+2.  Utilizzo di <xref:System.Drawing.Graphics> oggetto disegnare linee e forme, il rendering del testo, o visualizzare e modificare immagini.  
   
-## Creazione di un oggetto Graphics  
- Un oggetto Graphics può essere creato in diversi modi.  
+## <a name="creating-a-graphics-object"></a>Creazione di un oggetto Graphics  
+ Può creare un oggetto graphics in diversi modi.  
   
-#### Per creare un oggetto Graphics  
+#### <a name="to-create-a-graphics-object"></a>Per creare un oggetto graphics  
   
--   Ricevere un riferimento a un oggetto Graphics nell'ambito di <xref:System.Windows.Forms.PaintEventArgs> nell'evento <xref:System.Windows.Forms.Control.Paint> di un form o di un controllo.  In questo modo viene in genere ottenuto un riferimento a un oggetto Graphics quando si crea codice di disegno per un controllo.  Analogamente, è inoltre possibile ottenere un oggetto Graphics come proprietà di <xref:System.Drawing.Printing.PrintPageEventArgs> quando si gestisce l'evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> per un <xref:System.Drawing.Printing.PrintDocument>.  
+-   Ricevere un riferimento a un oggetto grafico come parte di <xref:System.Windows.Forms.PaintEventArgs> nel <xref:System.Windows.Forms.Control.Paint> evento di un form o controllo. Si tratta in genere come ottenere un riferimento a un oggetto grafico durante la creazione di codice di disegno di un controllo. Analogamente, è possibile ottenere un oggetto graphics come proprietà del <xref:System.Drawing.Printing.PrintPageEventArgs> quando si gestisce il <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento per un <xref:System.Drawing.Printing.PrintDocument>.  
   
-     In alternativa  
+     -oppure-  
   
--   Chiamare il metodo <xref:System.Windows.Forms.Control.CreateGraphics%2A> di un controllo o form per ottenere un riferimento a un oggetto <xref:System.Drawing.Graphics> che rappresenta la superficie di disegno di tale controllo o form.  Utilizzare questo metodo se si desidera disegnare in un form o controllo già esistente.  
+-   Chiamare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo di un controllo o un form per ottenere un riferimento a un <xref:System.Drawing.Graphics> oggetto che rappresenta l'area di disegno di tale controllo o un form. Utilizzare questo metodo se si desidera disegnare su un form o controllo che esiste già.  
   
-     In alternativa  
+     -oppure-  
   
--   Creare un oggetto <xref:System.Drawing.Graphics> da qualsiasi oggetto che eredita da <xref:System.Drawing.Image>.  Questo metodo risulta utile quando si desidera modificare un'immagine già esistente.  
+-   Creare un <xref:System.Drawing.Graphics> oggetto da qualsiasi oggetto che eredita da <xref:System.Drawing.Image>. Questo approccio è utile quando si desidera modificare un'immagine già esistente.  
   
-     Queste procedure verranno illustrate in modo approfondito nelle sezioni seguenti.  
+     Le sezioni seguenti forniscono informazioni dettagliate su ciascuno di questi processi.  
   
-## PaintEventArgs nel gestore dell'evento Paint  
- Al momento della programmazione di <xref:System.Windows.Forms.PaintEventHandler> per i controlli o <xref:System.Drawing.Printing.PrintDocument.PrintPage> per un <xref:System.Drawing.Printing.PrintDocument>, un oggetto Graphics viene fornito come proprietà di <xref:System.Windows.Forms.PaintEventArgs> oppure <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+## <a name="painteventargs-in-the-paint-event-handler"></a>PaintEventArgs nel gestore dell'evento Paint  
+ Durante la programmazione di <xref:System.Windows.Forms.PaintEventHandler> per i controlli o <xref:System.Drawing.Printing.PrintDocument.PrintPage> per un <xref:System.Drawing.Printing.PrintDocument>, viene fornito un oggetto grafico come una delle proprietà di <xref:System.Windows.Forms.PaintEventArgs> o <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
-#### Per ottenere un riferimento a un oggetto Graphics da PaintEventArgs dell'evento Paint  
+#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Per ottenere un riferimento a un oggetto Graphics da PaintEventArgs nell'evento di disegno  
   
-1.  Dichiarare l'oggetto <xref:System.Drawing.Graphics>.  
+1.  Dichiarare il <xref:System.Drawing.Graphics> oggetto.  
   
-2.  Assegnare la variabile in modo che faccia riferimento all'oggetto <xref:System.Drawing.Graphics> passato come parte di <xref:System.Windows.Forms.PaintEventArgs>.  
+2.  Assegnare la variabile per fare riferimento al <xref:System.Drawing.Graphics> oggetto passato come parte di <xref:System.Windows.Forms.PaintEventArgs>.  
   
-3.  Inserire il codice per disegnare il form o il controllo.  
+3.  Inserire il codice per disegnare il form o controllo.  
   
-     Nell'esempio seguente viene illustrato come creare un riferimento a un oggetto <xref:System.Drawing.Graphics> da un oggetto <xref:System.Windows.Forms.PaintEventArgs> nell'evento <xref:System.Windows.Forms.Control.Paint>:  
+     Nell'esempio seguente viene illustrato come fare riferimento a un <xref:System.Drawing.Graphics> dall'oggetto di <xref:System.Windows.Forms.PaintEventArgs> nel <xref:System.Windows.Forms.Control.Paint> evento:  
   
     ```vb  
     Private Sub Form1_Paint(sender As Object, pe As PaintEventArgs) Handles _  
@@ -70,7 +74,6 @@ Prima di poter creare linee e forme, eseguire il rendering di testo o visualizza
        Dim g As Graphics = pe.Graphics  
        ' Insert code to paint the form here.  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -82,7 +85,6 @@ Prima di poter creare linee e forme, eseguire il rendering di testo o visualizza
        Graphics g = pe.Graphics;  
        // Insert code to paint the form here.  
     }  
-  
     ```  
   
     ```cpp  
@@ -97,19 +99,18 @@ Prima di poter creare linee e forme, eseguire il rendering di testo o visualizza
        }  
     ```  
   
-## Metodo CreateGraphics  
- È anche possibile utilizzare il metodo <xref:System.Windows.Forms.Control.CreateGraphics%2A> di un controllo o form per ottenere un riferimento a un oggetto <xref:System.Drawing.Graphics> che rappresenta la superficie di disegno di tale controllo o form.  
+## <a name="creategraphics-method"></a>Metodo CreateGraphics  
+ È inoltre possibile utilizzare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo di un controllo o un form per ottenere un riferimento a un <xref:System.Drawing.Graphics> oggetto che rappresenta l'area di disegno di tale controllo o un form.  
   
-#### Per creare un oggetto Graphics con il metodo CreateGraphics  
+#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>Per creare un oggetto grafico con il metodo CreateGraphics  
   
--   Chiamare il metodo <xref:System.Windows.Forms.Control.CreateGraphics%2A> del form o del controllo su cui eseguire il rendering della grafica.  
+-   Chiamare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo del form o controllo su cui si desidera eseguire il rendering di grafica.  
   
     ```vb  
     Dim g as Graphics  
     ' Sets g to a Graphics object representing the drawing surface of the  
     ' control or form g is a member of.  
     g = Me.CreateGraphics  
-  
     ```  
   
     ```csharp  
@@ -117,7 +118,6 @@ Prima di poter creare linee e forme, eseguire il rendering di testo o visualizza
     // Sets g to a graphics object representing the drawing surface of the  
     // control or form g is a member of.  
     g = this.CreateGraphics();  
-  
     ```  
   
     ```cpp  
@@ -127,26 +127,24 @@ Prima di poter creare linee e forme, eseguire il rendering di testo o visualizza
     g = this->CreateGraphics();  
     ```  
   
-## Creazione da un oggetto Image  
- È inoltre possibile creare un oggetto Graphics da qualsiasi oggetto che derivi dalla classe <xref:System.Drawing.Image>.  
+## <a name="create-from-an-image-object"></a>Il nome di un oggetto Image  
+ Inoltre, è possibile creare un oggetto graphics da qualsiasi oggetto che deriva dalla <xref:System.Drawing.Image> classe.  
   
-#### Per creare un oggetto Graphics da un oggetto Image  
+#### <a name="to-create-a-graphics-object-from-an-image"></a>Per creare un oggetto Graphics da un'immagine  
   
--   Chiamare il metodo <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=fullName> specificando il nome della variabile Image da cui creare un oggetto <xref:System.Drawing.Graphics>.  
+-   Chiamare il <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> metodo, specificando il nome della variabile di immagine da cui si desidera creare un <xref:System.Drawing.Graphics> oggetto.  
   
-     Nell'esempio che segue viene illustrato come utilizzare un oggetto <xref:System.Drawing.Bitmap>:  
+     Nell'esempio seguente viene illustrato come utilizzare un <xref:System.Drawing.Bitmap> oggetto:  
   
     ```vb  
     Dim myBitmap as New Bitmap("C:\Documents and Settings\Joe\Pics\myPic.bmp")  
     Dim g as Graphics = Graphics.FromImage(myBitmap)  
-  
     ```  
   
     ```csharp  
     Bitmap myBitmap = new Bitmap(@"C:\Documents and   
        Settings\Joe\Pics\myPic.bmp");  
     Graphics g = Graphics.FromImage(myBitmap);  
-  
     ```  
   
     ```cpp  
@@ -156,34 +154,36 @@ Prima di poter creare linee e forme, eseguire il rendering di testo o visualizza
     ```  
   
 > [!NOTE]
->  È possibile creare oggetti <xref:System.Drawing.Graphics> solo da file BMP non indicizzati, quali file BMP a 16, 24 e 32 bit.  Ciascun pixel di file BMP non indicizzati contiene un colore, a differenza dei pixel dei file BMP indicizzati che contengono un indice a una tabella dei colori.  
+>  È possibile creare solo <xref:System.Drawing.Graphics> oggetti dai file BMP non indicizzati, ad esempio file con estensione bmp a 16 bit, a 24 bit e a 32 bit. Ogni pixel del file con estensione BMP non indicizzata contiene un colore, a differenza di pixel del file BMP indicizzati che contengono un indice per una tabella a colori.  
   
-## Creazione e modifica di forme e immagini  
- Una volta creato, l'oggetto <xref:System.Drawing.Graphics> può essere utilizzato per creare linee e forme, eseguire il rendering di testo oppure visualizzare e modificare immagini.  Di seguito sono riportati i principali oggetti utilizzati con l'oggetto <xref:System.Drawing.Graphics>:  
+-  
   
--   Classe <xref:System.Drawing.Pen>: utilizzata per creare linee, tracciare forme oppure eseguire il rendering di altre rappresentazioni geometriche.  
+## <a name="drawing-and-manipulating-shapes-and-images"></a>Creazione e modifica di immagini e forme  
+ Dopo averlo creato, un <xref:System.Drawing.Graphics> oggetto può essere utilizzato per disegnare linee e forme, il rendering del testo, o visualizzare e modificare immagini. Gli oggetti principali utilizzati con il <xref:System.Drawing.Graphics> oggetto sono:  
   
--   Classe <xref:System.Drawing.Brush>: utilizzata per riempire aree di grafica, quali forme, immagini o testo riempiti.  
+-   La <xref:System.Drawing.Pen> classe, utilizzati per disegno di linee, tracciare forme o per il rendering di altre rappresentazioni geometriche.  
   
--   Classe <xref:System.Drawing.Font>: fornisce una descrizione delle forme da utilizzare per il rendering di testo.  
+-   La <xref:System.Drawing.Brush> classe, utilizzata per riempire le aree di grafica, ad esempio testo, immagini o forme piene.  
   
--   Struttura <xref:System.Drawing.Color>: rappresenta i diversi colori da visualizzare.  
+-   La <xref:System.Drawing.Font> classe, viene fornita una descrizione delle forme da utilizzare durante il rendering di testo.  
   
-#### Per utilizzare l'oggetto Graphics creato  
+-   Il <xref:System.Drawing.Color> struttura, ovvero rappresenta i diversi colori da visualizzare.  
   
--   Dagli oggetti sopra elencati scegliere quello appropriato al disegno che si desidera tracciare.  
+#### <a name="to-use-the-graphics-object-you-have-created"></a>Utilizzare l'oggetto di grafica che è stato creato  
   
-     Per ulteriori informazioni, vedere i seguenti argomenti:  
+-   Utilizzare l'oggetto appropriato elencata in precedenza per disegnare gli elementi necessari.  
   
-    |Per eseguire il rendering di|Vedere|  
-    |----------------------------------|------------|  
-    |Righe|[Procedura: disegnare una linea in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |forme a confronto|[Procedura: creare una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Text|[Procedura: disegnare testo in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |Immagini|[Procedura: eseguire il rendering delle immagini con GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+     Per altre informazioni, vedere i seguenti argomenti:  
   
-## Vedere anche  
- [Guida introduttiva alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)   
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Procedura: eseguire il rendering delle immagini con GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+    |Per eseguire il rendering|Vedere|  
+    |---------------|---------|  
+    |Linee|[Procedura: Disegnare una linea in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
+    |Forme|[Procedura: Creare una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
+    |Testo|[Procedura: Disegnare testo in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
+    |Immagini|[Procedura: Eseguire il rendering delle immagini con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Introduzione alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Procedura: Eseguire il rendering delle immagini con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

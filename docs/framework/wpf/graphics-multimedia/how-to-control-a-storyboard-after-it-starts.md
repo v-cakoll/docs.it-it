@@ -1,51 +1,56 @@
 ---
-title: "Procedura: controllare uno storyboard in seguito al relativo avvio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Storyboard, controllo dopo l'avvio"
+title: 'Procedura: controllare uno storyboard in seguito al relativo avvio'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b28cdf3b653925a5856c0bc9def5aebb9fdc6c14
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: controllare uno storyboard in seguito al relativo avvio
-In questo esempio viene illustrato come utilizzare codice per controllare <xref:System.Windows.Media.Animation.Storyboard> dopo l'avvio.  Per controllare uno storyboard in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilizzare gli oggetti <xref:System.Windows.Trigger> e <xref:System.Windows.TriggerAction>. Per un esempio, vedere [Utilizzare i trigger di eventi per controllare uno storyboard in seguito al relativo avvio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+# <a name="how-to-control-a-storyboard-after-it-starts"></a>Procedura: controllare uno storyboard in seguito al relativo avvio
+In questo esempio viene illustrato come utilizzare codice per controllare un <xref:System.Windows.Media.Animation.Storyboard> dopo l'avvio. Per controllare uno storyboard in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilizzare <xref:System.Windows.Trigger> e <xref:System.Windows.TriggerAction> oggetti; ad esempio, vedere [utilizzare trigger di evento per controllare un Storyboard dopo l'avvio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
- Per avviare uno storyboard, viene utilizzato il relativo metodo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>, che distribuisce le animazioni dello storyboard alle proprietà animate e avvia lo storyboard.  
+ Per avviare uno storyboard, utilizzare il relativo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metodo, che distribuisce le animazioni dello storyboard per la proprietà animate e avvia lo storyboard.  
   
- Per rendere controllabile uno storyboard, viene utilizzato il metodo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> e viene specificato **true** come secondo parametro.  È quindi possibile utilizzare i metodi interattivi dello storyboard per sospendere, riprendere, cercare, interrompere, accelerare o rallentare lo storyboard oppure andare avanti fino alla fine del segmento di tempo.  Di seguito viene fornito un elenco dei metodi interattivi dello storyboard:  
+ Per rendere controllabile uno storyboard, si utilizza il <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> (metodo) e specificare **true** come secondo parametro. È quindi possibile utilizzare metodi interattivi dello storyboard per sospendere, riprendere, cercare, arrestare, accelerare o rallentare lo storyboard o spostarlo al periodo di riempimento. Di seguito è riportato un elenco di metodi interattivi dello storyboard:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: sospende lo storyboard.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Sospende lo storyboard.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: riprende uno storyboard sospeso.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Consente di riprendere uno storyboard sospeso.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: imposta la velocità interattiva dello storyboard.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Imposta la velocità interattiva dello storyboard.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: cerca la posizione specificata nello storyboard.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Cerca lo storyboard nel percorso specificato.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: cerca la posizione specificata nello storyboard.  A differenza del metodo <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>, questa operazione viene elaborata prima del tick successivo.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Cerca lo storyboard nel percorso specificato. A differenza di <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> (metodo), questa operazione viene elaborata prima del tick successivo.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: fa avanzare lo storyboard fino alla fine del segmento di tempo, se presente.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Sposta lo storyboard al periodo di riempimento, se presente.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: interrompe lo storyboard.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Interrompe lo storyboard.  
   
- Nell'esempio riportato di seguito vengono utilizzati vari metodi di storyboard per controllare in modo interattivo uno storyboard.  
+ Nell'esempio seguente, vengono utilizzati vari metodi di storyboard per controllare in modo interattivo uno storyboard.  
   
- **Nota:** per un esempio di controllo di uno storyboard tramite trigger con [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vedere [Utilizzare i trigger di eventi per controllare uno storyboard in seguito al relativo avvio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ **Nota:** per vedere un esempio di controllo di uno storyboard tramite trigger con [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vedere [utilizzare i trigger di evento per controllare un Storyboard dopo l'avvio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
  [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
-## Vedere anche  
- [Utilizzare i trigger di eventi per controllare uno storyboard in seguito al relativo avvio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+## <a name="see-also"></a>Vedere anche  
+ [Usare i trigger di eventi per controllare uno storyboard in seguito al relativo avvio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

@@ -1,29 +1,35 @@
 ---
-title: "Procedura: scambiare messaggi in coda con endpoint WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: scambiare messaggi in coda con endpoint WCF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4b52fe96bc88f09b807640dedcc54a8468dc26e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: scambiare messaggi in coda con endpoint WCF
+# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: scambiare messaggi in coda con endpoint WCF
 Le code garantiscono una messaggistica affidabile tra un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], anche se il servizio non è disponibile al momento della comunicazione. Nelle procedure seguenti viene spiegato come assicurare una comunicazione durevole tra un client e un servizio utilizzando l'associazione in coda standard in caso di implementazione del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- In questa sezione viene illustrato come utilizzare <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione in coda tra un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client e un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio.  
+ Contenuto della sezione viene spiegato come utilizzare <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione in coda tra un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Per utilizzare l'accodamento in un servizio WCF  
   
-1.  Definire un contratto di servizio utilizzando un'interfaccia contrassegnata con il <xref:System.ServiceModel.ServiceContractAttribute>. Contrassegnare le operazioni nell'interfaccia che fanno parte del contratto di servizio con il <xref:System.ServiceModel.OperationContractAttribute> e specificarli come unidirezionali, poiché viene restituita alcuna risposta al metodo. Nel codice seguente sono contenuti un esempio di contratto di servizio semplice e la relativa definizione di operazione.  
+1.  Definire un contratto di servizio utilizzando un'interfaccia contrassegnata con <xref:System.ServiceModel.ServiceContractAttribute>. Contrassegnare con <xref:System.ServiceModel.OperationContractAttribute> le operazioni che nell'interfaccia fanno parte del contratto di servizio e specificare che sono unidirezionali dal momento che non viene restituita alcuna risposta al metodo. Nel codice seguente sono contenuti un esempio di contratto di servizio semplice e la relativa definizione di operazione.  
   
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
@@ -38,18 +44,18 @@ Le code garantiscono una messaggistica affidabile tra un client e un servizio [!
      [!code-csharp[S_Msmq_Transacted#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#3)]
      [!code-vb[S_Msmq_Transacted#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#3)]  
   
-     Si noti che il <xref:System.ServiceModel.OperationBehaviorAttribute> sul `SubmitPurchaseOrder` metodo. In tal modo viene specificato che questa operazione deve essere chiamata all'interno di una transazione e che la transazione viene completata automaticamente quando il metodo è stato completato.  
+     Si noti <xref:System.ServiceModel.OperationBehaviorAttribute> sul metodo `SubmitPurchaseOrder`. In tal modo viene specificato che questa operazione deve essere chiamata all'interno di una transazione e che la transazione viene completata automaticamente quando il metodo è stato completato.  
   
-4.  Creare una coda transazionale utilizzando <xref:System.Messaging>. È possibile scegliere di creare la coda mediante la console MMC (Microsoft Management Console) MSMQ. In tal caso, avere cura di creare una coda transazionale.  
+4.  Creare una coda transazionale utilizzando lo spazio dei nomi <xref:System.Messaging>. È possibile scegliere di creare la coda mediante la console MMC (Microsoft Management Console) MSMQ. In tal caso, avere cura di creare una coda transazionale.  
   
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Definire un <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifica l'indirizzo del servizio e utilizza lo standard <xref:System.ServiceModel.NetMsmqBinding> associazione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configurazione, vedere [la configurazione di applicazioni di Windows Communication Foundation](http://msdn.microsoft.com/it-it/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Definire un oggetto <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo del servizio e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configurazione, vedere [la configurazione di applicazioni di Windows Communication Foundation](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
-6.  Creare un host per il `OrderProcessing` service utilizzando <xref:System.ServiceModel.ServiceHost> che legge i messaggi dalla coda e li elabora. Aprire l'host del servizio per rendere disponibile il servizio. Visualizzare un messaggio che indichi all'utente di premere un tasto qualsiasi per terminare il servizio. Chiamare `ReadLine` per attendere che il tasto venga premuto, quindi chiudere il servizio.  
+6.  Creare un host per il servizio `OrderProcessing` utilizzando l'elemento <xref:System.ServiceModel.ServiceHost> che legge i messaggi dalla coda e li elabora. Aprire l'host del servizio per rendere disponibile il servizio. Visualizzare un messaggio che indichi all'utente di premere un tasto qualsiasi per terminare il servizio. Chiamare `ReadLine` per attendere che il tasto venga premuto, quindi chiudere il servizio.  
   
      [!code-csharp[S_Msmq_Transacted#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#6)]
      [!code-vb[S_Msmq_Transacted#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#6)]  
@@ -62,7 +68,7 @@ Le code garantiscono una messaggistica affidabile tra un client e un servizio [!
     svcutil http://localhost:8000/ServiceModelSamples/service  
     ```  
   
-2.  Definire un <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifica l'indirizzo e utilizza lo standard <xref:System.ServiceModel.NetMsmqBinding> binding, come illustrato nell'esempio seguente.  
+2.  Definire un <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard, come illustrato nell'esempio seguente.  
   
   
   
@@ -88,12 +94,12 @@ Le code garantiscono una messaggistica affidabile tra un client e un servizio [!
   
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.NetMsmqBinding>   
- [Associazioni MSMQ transazionali](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)   
- [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)   
- [Procedura: scambiare messaggi con endpoint WCF e applicazioni di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)   
- [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)   
- [L'installazione di Microsoft Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)   
- [Esempi di associazione di integrazione di Accodamento messaggi](http://msdn.microsoft.com/it-it/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)   
- [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)   
+ <xref:System.ServiceModel.NetMsmqBinding>  
+ [Associazioni MSMQ transazionali](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+ [Accodamento messaggi in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Procedura: scambiare messaggi con endpoint WCF e applicazioni di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Esempi di associazione di integrazione di Accodamento messaggi](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Accodamento messaggi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Sicurezza del messaggio su Accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

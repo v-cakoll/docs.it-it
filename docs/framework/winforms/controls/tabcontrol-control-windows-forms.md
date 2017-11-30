@@ -1,59 +1,60 @@
 ---
-title: "Controllo TabControl (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "finestre di dialogo, creazione con più pagine"
-  - "finestre di dialogo a più pagine"
-  - "proprietà (pagine), creazione"
-  - "controlli delle schede"
-  - "controlli delle schede, creazione"
-  - "finestre di dialogo a schede"
-  - "TabControl (controllo) [Windows Form]"
+title: Controllo TabControl (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TabControl control [Windows Forms]
+- tab controls
+- tab controls [Windows Forms], creating
+- multipage dialog boxes
+- dialog boxes [Windows Forms], creating multipage
+- property pages [Windows Forms], creating
+- tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fdeb5011e5f44eb45d553045c2f89b97f9e4d100
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Controllo TabControl (Windows Form)
-Il controllo `TabControl` di Windows Form consente di visualizzare più schede, come i divisori di un raccoglitore o le etichette di una serie di cartelle da archivio.  Le schede possono contenere immagini e altri controlli.  Il controllo `TabControl` può essere usato per creare pagine delle proprietà.  
+# <a name="tabcontrol-control-windows-forms"></a>Controllo TabControl (Windows Form)
+Il controllo `TabControl` di Windows Form consente di visualizzare più schede, come i divisori di un raccoglitore o le etichette di una serie di cartelle da archivio. Le schede possono contenere immagini e altri controlli. Il controllo `TabControl` può essere usato per creare pagine delle proprietà.  
   
-## In questa sezione  
- [Cenni preliminari sul controllo TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica del controllo TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
- [Procedura: aggiungere un controllo a un oggetto TabPage](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Procedura: Aggiungere un controllo a un oggetto TabPage](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
  Fornisce indicazioni per la visualizzazione dei controlli in schede.  
   
- [Procedura: aggiungere e rimuovere schede tramite il controllo TabControl Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [Procedura: Aggiungere e rimuovere schede con il controllo TabControl di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
  Fornisce indicazioni per l'aggiunta e rimozione di schede nella finestra di progettazione o nel codice.  
   
- [Procedura: modificare l'aspetto del controllo TabControl Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ [Procedura: Modificare l'aspetto del controllo TabControl di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
  Fornisce indicazioni per la regolazione delle proprietà che influiscono sull'aspetto delle singole schede.  
   
- [Procedura: disabilitare le schede](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [Procedura: Disabilitare le schede](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  Illustra come limitare l'accesso a una pagina della scheda, eventualmente in base alle credenziali utente.  
   
- Vedere anche [Procedura: Aggiungere e rimuovere schede con il controllo TabControl Windows Form mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [Procedura: Aggiungere un controllo a una pagina della scheda mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ Vedere anche [procedura: aggiungere e rimuovere schede con Windows Form TabControl usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [procedura: aggiungere un controllo a una pagina della scheda mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.TabControl>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
-## Sezioni correlate  
- [Dialog Boxes in Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Finestre di dialogo in Windows Form](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
  Fornisce un elenco di attività per le finestre di dialogo, che spesso contengono schede.  
   
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

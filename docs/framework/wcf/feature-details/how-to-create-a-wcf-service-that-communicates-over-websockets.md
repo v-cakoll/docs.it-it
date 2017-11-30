@@ -1,25 +1,28 @@
 ---
-title: "Procedura: creare un servizio WCF che comunica tramite WebSockets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un servizio WCF che comunica tramite WebSockets'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49a0eeaedd9b41a7c4149aacc0193454f4691b1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un servizio WCF che comunica tramite WebSockets
-I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  La tecnologia WebSockets viene usata quando <xref:System.ServiceModel.NetHttpBinding> determina che il contratto di servizio definisce un contratto di callback.  In questo argomento viene descritto come implementare un servizio e un client WCF in cui viene usato l'oggetto <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedura: creare un servizio WCF che comunica tramite WebSockets
+I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  La tecnologia WebSockets viene usata quando <xref:System.ServiceModel.NetHttpBinding> determina che il contratto di servizio definisce un contratto di callback. In questo argomento viene descritto come implementare un servizio e un client WCF in cui viene usato l'oggetto <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  
   
-### Definire il servizio  
+### <a name="define-the-service"></a>Definire il servizio  
   
 1.  Definire un contratto di callback  
   
@@ -66,7 +69,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
         }  
     ```  
   
-     L'operazione del servizio `StartSendingQuotes` viene implementata come chiamata asincrona.  Si recupera il canale di callback usando `OperationContext` e, se il canale è aperto, si effettua una chiamata asincrona sul canale di callback.  
+     L'operazione del servizio `StartSendingQuotes` viene implementata come chiamata asincrona. Si recupera il canale di callback usando `OperationContext` e, se il canale è aperto, si effettua una chiamata asincrona sul canale di callback.  
   
 4.  Configurare il servizio  
   
@@ -97,9 +100,9 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
     </configuration>  
     ```  
   
-     Il file di configurazione del servizio si basa sugli endpoint predefiniti di WCF.  La sezione `<protocolMapping>` viene usata per specificare che `NetHttpBinding` deve essere usato per gli endpoint predefiniti creati.  
+     Il file di configurazione del servizio si basa sugli endpoint predefiniti di WCF. La sezione `<protocolMapping>` viene usata per specificare che `NetHttpBinding` deve essere usato per gli endpoint predefiniti creati.  
   
-### Definire il client  
+### <a name="define-the-client"></a>Definire il client  
   
 1.  Implementare il contratto di callback.  
   
@@ -138,7 +141,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
         }  
         ```  
   
-         L'oggetto CallbackHandler viene ripetuto di seguito per maggiore chiarezza.  L'applicazione client crea un nuovo oggetto InstanceContext e specifica l'implementazione dell'interfaccia di callback.  Successivamente, crea un'istanza della classe proxy che invia un riferimento all'oggetto InstanceContext appena creato.  Quando il client chiama il servizio, quest'ultimo chiamerà il client mediante il contratto di callback specificato.  
+         L'oggetto CallbackHandler viene ripetuto di seguito per maggiore chiarezza. L'applicazione client crea un nuovo oggetto InstanceContext e specifica l'implementazione dell'interfaccia di callback. Successivamente, crea un'istanza della classe proxy che invia un riferimento all'oggetto InstanceContext appena creato. Quando il client chiama il servizio, quest'ultimo chiamerà il client mediante il contratto di callback specificato.  
   
     2.  Configurare il client  
   
@@ -167,7 +170,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
   
          Per la configurazione del client è sufficiente specificare l'endpoint lato client usando `NetHttpBinding`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Di seguito è riportato il codice completo usato in questo argomento.  
   
 ```csharp  
@@ -196,7 +199,6 @@ namespace Server
         Task SendQuote(string code, double value);  
     }  
 }  
-  
 ```  
   
 ```  
@@ -326,6 +328,6 @@ namespace Client
 </configuration>  
 ```  
   
-## Vedere anche  
- [Operazioni sincrone e asincrone](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Operazioni sincrone e asincrone](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
  [Uso di NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

@@ -1,55 +1,57 @@
 ---
-title: "Esempio della guida introduttiva | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Esempi di base [WCF], guida introduttiva"
+title: Esempio della guida introduttiva
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 60
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 60
+caps.latest.revision: "60"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dda172904f55330700d1cf3e6e5e2c3462118c91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Esempio della guida introduttiva
-Nell'esempio della guida introduttiva viene illustrato come implementare un servizio tipico e un client tipico utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Questo esempio è la base per tutti gli altri esempi di tecnologia di base.  
+# <a name="getting-started-sample"></a>Esempio della guida introduttiva
+Nell'esempio della guida introduttiva viene illustrato come implementare un servizio tipico e un client tipico utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Questo esempio è la base per tutti gli altri esempi di tecnologia di base.  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
- Il servizio descrive le operazioni eseguite in un contratto di servizio che espone pubblicamente come metadati.Il servizio contiene inoltre il codice per implementare le operazioni.  
+ Il servizio descrive le operazioni che esegue in un contratto di servizio che espone pubblicamente come metadati. Il servizio contiene inoltre il codice per implementare le operazioni.  
   
- Il client contiene una definizione del contratto di servizio e una classe proxy per accedere al servizio.Il codice proxy viene generato dai metadati del servizio utilizzando lo strumento [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Il client contiene una definizione del contratto di servizio e una classe proxy per accedere al servizio. Viene generato il codice del proxy da metadati del servizio utilizzando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
- Su [!INCLUDE[wv](../../../../includes/wv-md.md)], il servizio è ospitato in Windows Activation Service \(WAS\).Su [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] è ospitato da Internet Information Services \(IIS\) e ASP.NET.Ospitare un servizio in IIS o WAS consente l'attivazione automatica del servizio quando si esegue l'accesso per la prima volta.  
+ Su [!INCLUDE[wv](../../../../includes/wv-md.md)], il servizio è ospitato in Windows Activation Service (WAS). Su [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] è ospitato da Internet Information Services (IIS) e ASP.NET. Ospitare un servizio in IIS o WAS consente l'attivazione automatica del servizio quando si esegue l'accesso per la prima volta.  
   
 > [!NOTE]
->  Se si desidera iniziare con un esempio che ospita il servizio in un'applicazione console anziché in IIS, vedere l'esempio [Servizio indipendente](../../../../docs/framework/wcf/samples/self-host.md).  
+>  Se si preferisce iniziare con un esempio che ospita il servizio in un'applicazione console invece di IIS, vedere il [indipendente](../../../../docs/framework/wcf/samples/self-host.md) esempio.  
   
- Il servizio e il client specificano i dettagli di accesso nelle impostazioni del file di configurazione, dettagli che forniscono flessibilità al momento della distribuzione.Questi dettagli comprendono una definizione dell'endpoint che specifica un indirizzo, un associazione e un contratto.L'associazione specifica i dettagli di trasporto e di sicurezza per la modalità di accesso al servizio.  
+ Il servizio e il client specificano i dettagli di accesso nelle impostazioni del file di configurazione, dettagli che forniscono flessibilità al momento della distribuzione. Questi dettagli comprendono una definizione dell'endpoint che specifica un indirizzo, un associazione e un contratto. L'associazione specifica i dettagli di trasporto e di sicurezza per la modalità di accesso al servizio.  
   
  Il servizio configura un comportamento in fase di esecuzione per pubblicare i metadati.  
   
- Il servizio implementa un contratto che definisce il modello di comunicazione request\/reply.Il contratto è definito dall'interfaccia `ICalculator` che espone operazioni matematiche \(somma, sottrazione, moltiplicazione e divisione\).Il client esegue richieste a un'operazione matematica specificata e il servizio risponde fornendo il risultato.Il servizio implementa un contratto `ICalculator` definito nel codice seguente.  
+ Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta. Il contratto è definito dall'interfaccia `ICalculator` che espone operazioni matematiche (somma, sottrazione, moltiplicazione e divisione). Il client esegue richieste a un'operazione matematica specificata e il servizio risponde fornendo il risultato. Il servizio implementa un contratto `ICalculator` definito nel codice seguente.  
   
 ```vb  
 ' Define a service contract.  
@@ -64,7 +66,6 @@ Nell'esempio della guida introduttiva viene illustrato come implementare un serv
         <OperationContract()>  
         Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
     End Interface  
-  
 ```  
   
 ```csharp  
@@ -81,7 +82,6 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);  
 }  
-  
 ```  
   
  L'implementazione del servizio calcola e restituisce il risultato appropriato, come illustrato nell'esempio di codice seguente.  
@@ -106,7 +106,6 @@ Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Impleme
 Return n1 / n2  
 End Function  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -130,10 +129,9 @@ public class CalculatorService : ICalculator
         return n1 / n2;  
     }  
 }  
-  
 ```  
   
- Il servizio espone un endpoint per comunicare con il servizio che viene definito mediante un file di configurazione \(Web.config\), come illustrato nella configurazione di esempio seguente.  
+ Il servizio espone un endpoint per comunicare con il servizio che viene definito mediante un file di configurazione (Web.config), come illustrato nella configurazione di esempio seguente.  
   
 ```xaml  
 <services>  
@@ -148,14 +146,13 @@ public class CalculatorService : ICalculator
        ...  
     </service>  
 </services>  
-  
 ```  
   
- Il servizio espone l'endpoint dell'indirizzo di base fornito dall'host IIS o WAS.L'associazione è configurata con una classe <xref:System.ServiceModel.WSHttpBinding> standard che fornisce comunicazione HTTP e protocolli del servizio Web standard per l'indirizzamento e la sicurezza.Il contratto rappresenta il `ICalculator` implementato dal servizio.  
+ Il servizio espone l'endpoint dell'indirizzo di base fornito dall'host IIS o WAS. L'associazione è configurata con una classe <xref:System.ServiceModel.WSHttpBinding> standard che fornisce comunicazione HTTP e protocolli del servizio Web standard per l'indirizzamento e la sicurezza. Il contratto rappresenta il `ICalculator` implementato dal servizio.  
   
- In questa configurazione un client sullo stesso computer può accedere al servizio da http:\/\/localhost\/servicemodelsamples\/service.svc.Affinché i client presenti nei computer remoti accedano al servizio, è necessario specificare un nome di dominio completo anziché localhost.  
+ In questa configurazione un client sullo stesso computer può accedere al servizio da http://localhost/servicemodelsamples/service.svc. Affinché i client presenti nei computer remoti accedano al servizio, è necessario specificare un nome di dominio completo anziché localhost.  
   
- Per impostazione predefinita il framework non espone metadati.Per questa ragione, il servizio attiva la classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ed espone un endpoint di scambio metadati \(MEX\) su http:\/\/localhost\/servicemodelsamples\/service.svc\/mex.Nella configurazione seguente viene illustrata questa evenienza.  
+ Per impostazione predefinita il framework non espone metadati. Per questa ragione, il servizio attiva la classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ed espone un endpoint di scambio metadati (MEX) su http://localhost/servicemodelsamples/service.svc/mex. Nella configurazione seguente viene illustrata questa evenienza.  
   
 ```xaml  
 <system.serviceModel>  
@@ -185,7 +182,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- Il client comunica utilizzando un tipo di contratto specificato mediante una classe client generata dallo strumento [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).Questo client generato è contenuto nel file generatedClient.cs o generatedClient.vb.Questa utilità recupera metadati per un servizio specificato e genera un client che viene utilizzato dall'applicazione client per comunicare utilizzando un tipo di contratto specificato.Il servizio ospitato deve essere disponibile per generare il codice client, perché il servizio viene utilizzato per recuperare i metadati aggiornati.  
+ Il client comunica con un tipo di contratto specificato usando una classe client generata dal [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Questo client generato è contenuto nel file generatedClient.cs o generatedClient.vb. Questa utilità recupera metadati per un servizio specificato e genera un client che viene utilizzato dall'applicazione client per comunicare utilizzando un tipo di contratto specificato. Il servizio ospitato deve essere disponibile per generare il codice client, perché il servizio viene utilizzato per recuperare i metadati aggiornati.  
   
  Eseguire il comando seguente dal prompt dei comandi SDK nella directory del client per generare il proxy tipizzato:  
   
@@ -197,7 +194,7 @@ svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Sam
   
  `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`  
   
- Utilizzando il client generato, il client può accedere a un endpoint del servizio specificato configurando l'indirizzo e l'associazione appropriati.Analogamente al servizio, il client utilizza un file di configurazione \(App.config\) per specificare l'endpoint con il quale desidera comunicare.La configurazione dell'endpoint client è costituita da un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto, come illustrato nell'esempio seguente.  
+ Utilizzando il client generato, il client può accedere a un endpoint del servizio specificato configurando l'indirizzo e l'associazione appropriati. Analogamente al servizio, il client utilizza un file di configurazione (App.config) per specificare l'endpoint con il quale desidera comunicare. La configurazione dell'endpoint client è costituita da un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto, come illustrato nell'esempio seguente.  
   
 ```xaml  
 <client>  
@@ -206,7 +203,6 @@ svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Sam
          binding="wsHttpBinding"   
          contract=" Microsoft.ServiceModel.Samples.ICalculator" />  
 </client>  
-  
 ```  
   
  L'implementazione del client crea un'istanza del client e utilizza l'interfaccia tipizzata per avviare la comunicazione con il servizio, come illustrato nell'esempio di codice seguente.  
@@ -240,7 +236,6 @@ result = client.Divide(value1, value2)
 Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)  
   
 'Closing the client gracefully closes the connection and cleans up resources  
-  
 ```  
   
 ```csharp  
@@ -273,10 +268,9 @@ Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
   
 //Closing the client releases all communication resources.  
 client.Close();  
-  
 ```  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.Premere INVIO nella finestra del client per arrestare il client.  
+ Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -285,19 +279,18 @@ Multiply(9,81.25) = 731.25
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
- Nell'esempio della guida introduttiva viene illustrata la modalità standard per creare un servizio e un client.Altri [Di base](../../../../docs/framework/wcf/samples/basic-sample.md) si basano su questo esempio per illustrare funzionalità del prodotto specifiche.  
+ Nell'esempio della guida introduttiva viene illustrata la modalità standard per creare un servizio e un client. L'altro [base](../../../../docs/framework/wcf/samples/basic-sample.md) compilazione in questo esempio per illustrare le caratteristiche di prodotto specifico.  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di aver eseguito la  [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## Vedere anche  
- [Procedura: ospitare un servizio WCF in un'applicazione gestita](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Procedura: Ospitare un servizio WCF in un'applicazione gestita](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
  [Procedura: ospitare un servizio WCF in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

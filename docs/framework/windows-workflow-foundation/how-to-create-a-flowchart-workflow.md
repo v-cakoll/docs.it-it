@@ -1,77 +1,84 @@
 ---
-title: "Procedura: creare un flusso di lavoro del diagramma di flusso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un flusso di lavoro del diagramma di flusso'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 570e51c3b9c8ee227a9c5688fc7caa1b4a0d9c6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un flusso di lavoro del diagramma di flusso
-I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate.In questo argomento viene illustrata in dettaglio la creazione di un flusso di lavoro in cui vengono utilizzate sia attività incorporate, ad esempio <xref:System.Activities.Statements.Flowchart>, sia attività personalizzate dell'argomento [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) precedente.Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
+# <a name="how-to-create-a-flowchart-workflow"></a>Procedura: creare un flusso di lavoro del diagramma di flusso
+I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. Passaggi in questo argomento per la creazione di un flusso di lavoro che utilizza entrambe le attività predefinite, ad esempio il <xref:System.Activities.Statements.Flowchart> attività e le attività personalizzate dal precedente [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) argomento. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
   
 > [!NOTE]
->  Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti.Per completare questo argomento, è necessario completare prima [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md).  
+>  Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti. Per completare questo argomento, è necessario prima completare [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Per scaricare una versione completa dell'esercitazione, vedere [Windows Workflow Foundation \(WF45\) \- esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Per scaricare una versione completa dell'esercitazione, vedere [Windows Workflow Foundation (WF45) - esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
-### Per creare il flusso di lavoro  
+### <a name="to-create-the-workflow"></a>Per creare il flusso di lavoro  
   
-1.  Fare clic con il pulsante destro del mouse su **NumberGuessWorkflowActivities** in **Esplora soluzioni** e selezionare **Aggiungi**, **Nuovo elemento**.  
+1.  Fare doppio clic su **NumberGuessWorkflowActivities** in **Esplora** e selezionare **Aggiungi**, **nuovo elemento**.  
   
-2.  Nel nodo **Installato**, **Elementi comuni**, selezionare **Flusso di lavoro**.Selezionare **Attività** dall'elenco **Flusso di lavoro**.  
+2.  Nel **installato**, **elementi comuni** nodo, seleziona **flusso di lavoro**. Selezionare **attività** dal **flusso di lavoro** elenco.  
   
-3.  Digitare `FlowchartNumberGuessWorkflow` nella casella **Nome**, quindi fare clic su **Aggiungi**.  
+3.  Tipo `FlowchartNumberGuessWorkflow` nel **nome** casella e fare clic su **Aggiungi**.  
   
-4.  Trascinare un'attività **Flowchart** dalla sezione **Diagramma di flusso** della **Casella degli strumenti** e rilasciarla sull'etichetta **Rilasciare l'attività** nell'area di progettazione del flusso di lavoro.  
+4.  Trascinare un **diagramma di flusso** attività dal **diagramma di flusso** sezione del **della casella degli strumenti** e rilasciarla il **Rilascia attività qui** etichetta nel area di progettazione del flusso di lavoro.  
   
-### Per creare variabili e argomenti del flusso di lavoro  
+### <a name="to-create-the-workflow-variables-and-arguments"></a>Per creare variabili e argomenti del flusso di lavoro  
   
-1.  Fare doppio clic su **FlowchartNumberGuessWorkflow.xaml** in **Esplora soluzioni** per visualizzare il flusso di lavoro nella finestra di progettazione nel caso non sia già visibile.  
+1.  Fare doppio clic su **Flowchartnumberguessworkflow** in **Esplora** per visualizzare il flusso di lavoro nella finestra di progettazione, se non è già visualizzato.  
   
-2.  Fare clic su **Argomenti** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il riquadro **Argomenti**.  
+2.  Fare clic su **argomenti** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il **argomenti** riquadro.  
   
 3.  Fare clic su **Crea argomento**.  
   
-4.  Digitare `MaxNumber` nella casella **Nome**, selezionare **Interno** dall'elenco a discesa **Direzione**, selezionare **Int32** dall'elenco a discesa **Tipo di argomento**, quindi premere INVIO per salvare l'argomento.  
+4.  Tipo `MaxNumber` nel **nome** , quindi selezionare **In** dal **direzione** elenco a discesa, seleziona **Int32** dal **Tipo di argomento** elenco a discesa e quindi premere INVIO per salvare l'argomento.  
   
 5.  Fare clic su **Crea argomento**.  
   
-6.  Digitare `Turns` nella casella **Nome** che si trova sotto l'argomento `MaxNumber` appena aggiunto, selezionare **Esterno** dall'elenco a discesa **Direzione**, selezionare **Int32** dall'elenco a discesa **Tipo di argomento**, quindi premere INVIO.  
+6.  Tipo `Turns` nel **nome** casella che si trova sotto appena aggiunta `MaxNumber` argomento, selezionare **Out** dal **direzione** -elenco a discesa, seleziona  **Int32** dal **tipo di argomento** elenco a discesa e quindi premere INVIO.  
   
-7.  Fare clic su **Argomenti** nel lato inferiore sinistro di ActivityDesigner per chiudere il riquadro **Argomenti**.  
+7.  Fare clic su **argomenti** nel lato inferiore sinistro dell'ActivityDesigner per chiudere la **argomenti** riquadro.  
   
-8.  Fare clic su **Variabili** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il riquadro **Variabili**.  
+8.  Fare clic su **variabili** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il **variabili** riquadro.  
   
-9. Fare clic su **Crea variabile**.  
+9. Fare clic su **creare variabile**.  
   
     > [!TIP]
-    >  Se non viene visualizzata la casella **Crea variabile**, fare clic sull'attività <xref:System.Activities.Statements.Flowchart> nella finestra di progettazione del flusso di lavoro per selezionarla.  
+    >  Se non **Crea variabile** viene visualizzata, fare clic su di <xref:System.Activities.Statements.Flowchart> attività nell'area di progettazione del flusso di lavoro per selezionarla.  
   
-10. Digitare `Guess` nella casella **Nome**, selezionare **Int32** dall'elenco a discesa **Tipo di variabile**, quindi premere INVIO per salvare la variabile.  
+10. Tipo `Guess` nel **nome** , quindi selezionare **Int32** dal **tipo di variabile** elenco a discesa e quindi premere INVIO per salvare la variabile.  
   
-11. Fare clic su **Crea variabile**.  
+11. Fare clic su **creare variabile**.  
   
-12. Digitare `Target` nella casella **Nome**, selezionare **Int32** dall'elenco a discesa **Tipo di variabile**, quindi premere INVIO per salvare la variabile.  
+12. Tipo `Target` nel **nome** , quindi selezionare **Int32** dal **tipo di variabile** elenco a discesa e quindi premere INVIO per salvare la variabile.  
   
-13. Fare clic su **Variabili** nel lato inferiore sinistro di ActivityDesigner per chiudere il riquadro **Variabili**.  
+13. Fare clic su **variabili** nel lato inferiore sinistro dell'ActivityDesigner per chiudere la **variabili** riquadro.  
   
-### Per aggiungere le attività del flusso di lavoro  
+### <a name="to-add-the-workflow-activities"></a>Per aggiungere le attività del flusso di lavoro  
   
-1.  Trascinare un'attività **Assign** dalla sezione **Primitive** della **Casella degli strumenti** e passarla sul nodo **Avvio**, che si trova nella parte superiore del diagramma di flusso.Quando l'attività **Assign** si trova sul nodo **Avvio** verranno visualizzati tre triangoli intorno al nodo **Avvio**.Rilasciare l'attività **Assign** sul triangolo che si trova direttamente sotto il nodo **Avvio**.In questo modo, i due elementi verranno collegati tra loro e l'attività **Assign** verrà designata come prima attività nel diagramma di flusso.  
+1.  Trascinare un **assegnare** attività dal **primitive** sezione del **della casella degli strumenti** e passarla sul **avviare** nodo, nella parte superiore del diagramma di flusso. Quando il **assegnare** attività è posizionato il **avviare** nodo, verranno visualizzati tre triangoli intorno il **avviare** nodo. Eliminare il **assegnare** attività sul triangolo che si trova direttamente sotto il **avviare** nodo. Questo verrà collegare i due elementi e designa il **assegnare** attività come la prima attività nel diagramma di flusso.  
   
     > [!NOTE]
-    >  È possibile designare le attività come attività iniziali nel diagramma di flusso anche collegandole manualmente al nodo iniziale.A tale scopo, posizionare il mouse sul nodo **Avvio**, fare clic su uno dei rettangoli visualizzati quando il mouse si trova sul nodo **Avvio**, trascinare la linea di connessione sull'attività desiderata e rilasciarla su uno dei rettangoli visualizzati.È anche possibile definire un'attività come attività iniziale facendo clic con il pulsante destro del mouse su di essa e scegliendo **Imposta come StartNode**.  
+    >  È possibile designare le attività come attività iniziali nel diagramma di flusso anche collegandole manualmente al nodo iniziale. A tale scopo, posizionare il mouse sopra il **avviare** nodo, fare clic su uno dei rettangoli visualizzati quando il mouse è posizionato il **avviare** nodo e trascinare la connessione di riga sull'attività desiderata e rilasciarla su uno di i rettangoli visualizzati. È inoltre possibile designare e attività come attività iniziale facendo clic it e scegliendo **imposta come StartNode**.  
   
-2.  Digitare `Target` nella casella **A** e l'espressione seguente nella casella **Immettere un'espressione C\#** o **Immettere un'espressione VB**.  
+2.  Tipo `Target` nel **a** casella e l'espressione seguente nella **immettere un'espressione c#** o **immettere un'espressione VB** casella.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -82,11 +89,11 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```  
   
     > [!TIP]
-    >  Se la finestra **Casella degli strumenti** non è visualizzata, scegliere **Casella degli strumenti** dal menu **Visualizza**.  
+    >  Se il **della casella degli strumenti** non verrà visualizzata la finestra, selezionare **della casella degli strumenti** dal **vista** menu.  
   
-3.  Trascinare un'attività **Prompt** dalla sezione **NumberGuessWorkflowActivities** della **Casella degli strumenti**, rilasciarla sotto l'attività **Assign** del passaggio precedente e connettere l'attività **Prompt** all'attività **Assign**.Esistono tre modi per connettere le due attività.Il primo consiste nel connetterle quando si rilascia l'attività **Prompt** sul flusso di lavoro.Mentre si trascina l'attività **Prompt** verso il flusso di lavoro, posizionarla sopra l'attività **Assign** e rilasciarla su uno dei quattro triangoli che vengono visualizzati quando l'attività **Prompt** si trova sopra l'attività **Assign**.Il secondo modo consiste nel rilasciare l'attività **Prompt** sul flusso di lavoro in corrispondenza della posizione desiderata.Passare il mouse sull'attività **Assign** e trascinare uno dei rettangoli visualizzati fino all'attività **Prompt**.Trascinare il mouse in modo che la linea di connessione dall'attività **Assign** venga connessa a uno dei rettangoli dell'attività **Prompt** e rilasciare il pulsante del mouse.Il terzo modo è molto simile al primo eccetto per il fatto che invece di trascinare l'attività **Prompt** dalla **Casella degli strumenti**, la si trascina dalla propria posizione sull'area di progettazione del flusso di lavoro, la si posiziona sull'attività **Assign** e la si rilascia su uno dei triangoli visualizzati.  
+3.  Trascinare un **prompt dei comandi** attività dal **NumberGuessWorkflowActivities** sezione del **della casella degli strumenti**, rilasciarlo di sotto di **assegnare** attività dal precedente passaggio e collegare il **Prompt** attività per il **assegnare** attività. Esistono tre modi per connettere le due attività. La prima consiste nel connetterle quando si elimina il **Prompt** attività del flusso di lavoro. Mentre si trascina il **prompt dei comandi** attività al flusso di lavoro, posizionarla sopra il **assegnare** attività e rilasciarla su uno dei quattro triangoli visualizzati quando il **Prompt** attività è posizionato il **assegnare** attività. Il secondo modo consiste nel rilasciare il **Prompt** attività sul flusso di lavoro nella posizione desiderata. Quindi, posizionare il mouse sopra il **assegnare** attività e trascinare uno dei rettangoli visualizzati fino al **prompt dei comandi** attività. Trascinare il mouse in modo che la linea di connessione dal **assegnare** attività si connette a uno dei rettangoli del **Prompt** attività e quindi rilasciare il pulsante del mouse. Il terzo modo è molto simile al primo, tranne il fatto che invece di trascinare il **Prompt** attività dal **della casella degli strumenti**, si trascina dalla relativa posizione nell'area di progettazione del flusso di lavoro, posizionarla sopra il  **Assegnare** , attività e rilasciarlo su uno dei triangoli visualizzati.  
   
-4.  Nella **Finestra Proprietà** per l'attività **Prompt** digitare `"EnterGuess"`, incluse le virgolette, nella casella del valore della proprietà **BookmarkName**.Digitare `Guess` nella casella del valore della proprietà **Result** e digitare l'espressione seguente nella casella della proprietà **Text**.  
+4.  Nel **finestra proprietà** per il **Prompt** attività, digitare `"EnterGuess"` incluse le virgolette nel **BookmarkName** casella valore della proprietà. Tipo `Guess` nel **risultato** casella valore di proprietà e digitare l'espressione seguente nella **testo** casella della proprietà.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -97,13 +104,13 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```  
   
     > [!TIP]
-    >  Se la **Finestra proprietà** non è visualizzata, scegliere **Finestra Proprietà** dal menu **Visualizza**.  
+    >  Se il **finestra proprietà** non è visualizzata, selezionare **finestra proprietà** dal **vista** menu.  
   
-5.  Trascinare un'attività **Assign** dalla sezione **Primitive** della **Casella degli strumenti** e connetterla utilizzando uno dei metodi descritti nel passaggio precedente in modo che si trovi sotto l'attività **Prompt**.  
+5.  Trascinare un **assegnare** attività dal **primitive** sezione il **della casella degli strumenti** e connetterla usando uno dei metodi descritti nel passaggio precedente, in modo che si trovi sotto il  **Prompt dei comandi** attività.  
   
-6.  Digitare `Turns` nella casella **A** e `Turns + 1` nella casella **Immettere un'espressione C\#** o **Immettere un'espressione VB**.  
+6.  Tipo `Turns` nel **a** casella e `Turns + 1` nel **immettere un'espressione c#** o **immettere un'espressione VB** casella.  
   
-7.  Trascinare **FlowDecision** dalla sezione **Diagramma di flusso** della **Casella degli strumenti** e connetterla sotto l'attività **Assign**.Nella **Finestra proprietà** digitare l'espressione seguente nella casella del valore della proprietà **Condition**.  
+7.  Trascinare un **FlowDecision** dal **diagramma di flusso** sezione il **della casella degli strumenti** e connetterla sotto il **assegnare** attività. Nel **finestra proprietà**, digitare l'espressione seguente nella **condizione** casella valore della proprietà.  
   
     ```vb  
     Guess = Target  
@@ -113,50 +120,50 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     Guess == Target  
     ```  
   
-8.  Trascinare un'altra attività **FlowDecision** dalla **Casella degli strumenti** e rilasciarla sotto la prima.Connettere le due attività trascinando dal rettangolo con etichetta **False** nell'attività **FlowDecision** superiore al rettangolo all'inizio della seconda attività **FlowDecision**.  
+8.  Trascinare un'altra **FlowDecision** attività di **della casella degli strumenti** e rilasciarlo sotto il primo. Connettere le due attività trascinando dal rettangolo con etichetta **False** in alto **FlowDecision** attività per il rettangolo nella parte superiore del secondo **FlowDecision**attività.  
   
     > [!TIP]
-    >  Se non vengono visualizzate le etichette **True** e **False** su **FlowDecision**, passare il mouse su **FlowDecision**.  
+    >  Se non viene visualizzato il **True** e **False** etichette del **FlowDecision**, posizionare il mouse sopra il **FlowDecision**.  
   
-9. Fare clic sulla seconda attività **FlowDecision** per selezionarla.Nella **Finestra proprietà** digitare l'espressione seguente nella casella del valore della proprietà **Condition**.  
+9. Fare clic sul secondo **FlowDecision** attività per selezionarlo. Nel **finestra proprietà**, digitare l'espressione seguente nella **condizione** casella valore della proprietà.  
   
-    ```vb-c#  
+    ```
     Guess < Target  
     ```  
   
-10. Trascinare due attività **WriteLine** dalla sezione **Primitive** della **Casella degli strumenti** e rilasciarle in modo che siano affiancate sotto le due attività **FlowDecision**.Connettere l'azione **True** dell'attività **FlowDecision** inferiore all'attività **WriteLine** più a sinistra e l'azione **False** all'attività **WriteLine** più a destra.  
+10. Trascinare due **WriteLine** le attività dal **primitive** sezione la **della casella degli strumenti** e rilasciarle in modo che siano affiancate sotto le due **FlowDecision**  attività. Connettere il **True** azione della parte inferiore **FlowDecision** attività più a sinistra **WriteLine** attività e il **False** azione per il all'estrema destra **WriteLine** attività.  
   
-11. Fare clic sull'attività **WriteLine** più a sinistra per selezionarla e digitare l'espressione seguente nella casella del valore della proprietà **Text** nella **Finestra proprietà**.  
+11. Fare clic su quello all'estrema sinistra **WriteLine** attività per selezionarla e digitare l'espressione seguente nella **testo** nella casella valore della proprietà di **finestra proprietà**.  
   
-    ```vb-c#  
+    ```
     "Your guess is too low."  
     ```  
   
-12. Connettere **WriteLine** a sinistra dell'attività **Prompt** posizionata sopra.  
+12. Connettere il **WriteLine** sul lato sinistro del **prompt dei comandi** attività sopra di esso.  
   
-13. Fare clic sull'attività **WriteLine** più a destra per selezionarla e digitare l'espressione seguente nella casella del valore della proprietà **Text** nella **Finestra proprietà**.  
+13. Fare clic su all'estrema destra **WriteLine** attività per selezionarla e digitare l'espressione seguente nella **testo** nella casella valore della proprietà di **finestra proprietà**.  
   
-    ```vb-c#  
+    ```
     "Your guess is too high."  
     ```  
   
-14. Connettere l'attività **WriteLine** a destra dell'attività **Prompt** posizionata sopra.  
+14. Connettere il **WriteLine** attività sul lato destro del **prompt dei comandi** attività sopra di esso.  
   
      Nell'esempio seguente viene illustrato il flusso di lavoro completato.  
   
-     ![Windows Workflow Foundation completato](../../../docs/framework/windows-workflow-foundation//media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
+     ![Windows Workflow Foundation completato](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
   
-### Per compilare il flusso di lavoro  
+### <a name="to-build-the-workflow"></a>Per compilare il flusso di lavoro  
   
-1.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+1.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-     Per istruzioni sull'esecuzione del flusso di lavoro, vedere l'argomento successivo [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md).Se è già stato completato il passaggio [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) con uno stile di flusso di lavoro diverso e si desidera eseguirlo tramite il flusso di lavoro del diagramma di flusso da questo passaggio, andare alla sezione [Per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md#BKMK_ToRunTheApplication) di [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md).  
+     Per istruzioni su come eseguire il flusso di lavoro, vedere l'argomento successivo, [procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Se è già stata completata la [come: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) spostarsi con uno stile diverso del flusso di lavoro e desidera eseguirlo tramite il flusso di lavoro di diagramma di flusso tramite questo passaggio, ignorare il [per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)sezione [procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
-## Vedere anche  
- <xref:System.Activities.Statements.Flowchart>   
- <xref:System.Activities.Statements.FlowDecision>   
- [Programmazione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//programming.md)   
- [Progettazione di flussi di lavoro](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)   
- [Esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)   
- [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md)   
- [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Activities.Statements.Flowchart>  
+ <xref:System.Activities.Statements.FlowDecision>  
+ [Programmazione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [Progettazione di flussi di lavoro](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [Esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ [Procedura: Creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Procedura: Eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

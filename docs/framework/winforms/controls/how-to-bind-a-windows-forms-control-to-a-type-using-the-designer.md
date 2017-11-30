@@ -1,68 +1,69 @@
 ---
-title: "Procedura: associare un controllo Windows Form a un tipo mediante la finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource (componente) [Windows Form], associazione a un tipo"
-  - "controlli [Windows Form], associazione a un tipo"
-  - "tipi [Windows Form], associazione dei controlli"
+title: 'Procedura: associare un controllo Windows Form a un tipo mediante la finestra di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], binding to a type
+- BindingSource component [Windows Forms], binding to a type
+- types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 215a69a47b0588e45fcc28202dce4c6210b1dfe6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: associare un controllo Windows Form a un tipo mediante la finestra di progettazione
-Quando si compilano controlli che interagiscono con dati, è a volte necessario associare un controllo a un tipo anziché a un oggetto.  In genere si preferisce associare un controllo a un tipo in fase di progettazione, quando i dati potrebbero non essere disponibili, ma si desidera che nei controlli associati a dati vengano comunque visualizzati i dati dell'interfaccia pubblica di un tipo.  Nella procedura descritta di seguito viene illustrato come creare un nuovo componente <xref:System.Windows.Forms.BindingSource> associato a un tipo, quindi come associare una delle proprietà del tipo alla proprietà <xref:System.Windows.Forms.TextBox.Text%2A> di una classe <xref:System.Windows.Forms.TextBox>.  
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Procedura: associare un controllo Windows Form a un tipo mediante la finestra di progettazione
+Quando si compilano controlli che interagiscono con i dati, a volte è necessario associare un controllo a un tipo anziché a un oggetto. Di solito è necessario associare un controllo a un tipo in fase di progettazione, quando i dati potrebbero non essere disponibili, ma i controlli associati ai dati devono comunque visualizzare i dati provenienti dall'interfaccia pubblica di un tipo. Le procedure seguenti viene illustrato come creare un nuovo <xref:System.Windows.Forms.BindingSource> che è associato a un tipo e quindi come associare una delle proprietà del tipo per il <xref:System.Windows.Forms.TextBox.Text%2A> proprietà di un <xref:System.Windows.Forms.TextBox>.  
   
-### Per associare il componente BindingSource a un tipo  
+### <a name="to-bind-the-bindingsource-to-a-type"></a>Per associare BindingSource a un tipo  
   
-1.  Creare un progetto Windows Form.  
+1.  Creare un nuovo progetto Windows Forms.  
   
-     Per ulteriori informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Per altre informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  Nella visualizzazione **Progettazione** trascinare un componente <xref:System.Windows.Forms.BindingSource> nel form.  
+2.  In **progettazione** visualizzare, trascinare un <xref:System.Windows.Forms.BindingSource> componente al form.  
   
-3.  Nella finestra **Proprietà** fare clic sulla freccia relativa alla proprietà <xref:System.Windows.Forms.BindingSource.DataSource%2A>.  
+3.  Nel **proprietà** finestra, fare clic sulla freccia per la <xref:System.Windows.Forms.BindingSource.DataSource%2A> proprietà.  
   
-4.  Nell'editor del tipo di interfaccia utente **DataSource** fare clic su **Aggiungi origine dati progetto**.  
+4.  Nell'**editor di tipo con interfaccia utente DataSource** fare clic su **Aggiungi origine dati progetto**.  
   
-5.  Nella pagina **Seleziona un tipo di origine dati** selezionare **Oggetto** e fare clic su **Avanti**.  
+5.  Nella pagina **Selezionare un tipo di origine dati** selezionare **Oggetto** e fare clic su **Avanti**.  
   
-6.  Selezionare il tipo con cui si desidera creare un'associazione:  
+6.  Selezionare il tipo da associare:  
   
-    -   Se il tipo con cui si desidera creare un'associazione è nel progetto corrente o se l'assembly che contiene il tipo è già stato aggiunto come riferimento, espandere i nodi per trovare il tipo desiderato, quindi selezionarlo.  
+    -   Se il tipo da associare è nel progetto corrente o l'assembly che contiene il tipo è già stato aggiunto come riferimento, espandere i nodi per trovare il tipo desiderato e quindi selezionarlo.  
   
-         In alternativa  
+         -oppure-  
   
-    -   Se il tipo che si desidera associare è in un altro assembly, attualmente non presente nell'elenco di riferimenti, fare clic su **Aggiungi riferimento**, quindi sulla scheda **Progetti**.  Selezionare il progetto contenente l'oggetto business desiderato e fare clic su **OK**.  Poiché il progetto verrà visualizzato nell'elenco di assembly, sarà possibile espandere i nodi per trovare il tipo desiderato e selezionarlo.  
+    -   Se il tipo da associare è in un altro assembly, attualmente non presente nell'elenco di riferimenti, fare clic su **Aggiungi riferimento**, quindi fare clic sulla scheda **Progetti**. Selezionare il progetto che contiene l'oggetto business desiderato e fare clic su **OK**. Il progetto verrà visualizzato nell'elenco di assembly e sarà possibile espandere i nodi per trovare il tipo desiderato e quindi selezionarlo.  
   
         > [!NOTE]
-        >  Se si desidera associare un tipo in un framework o assembly Microsoft, deselezionare la casella di controllo **Nascondi assembly che iniziano con Microsoft o System**.  
+        >  Se si vuole associare un tipo in un framework o assembly Microsoft, deselezionare la casella di controllo **Nascondi assembly che iniziano con Microsoft o System**.  
   
-7.  Fare clic su **Avanti**, quindi su **Fine**.  
+7.  Scegliere **Avanti**e quindi fare clic su **Fine**.  
   
-### Per associare il controllo al componente BindingSource  
+### <a name="to-bind-the-control-to-the-bindingsource"></a>Per associare il controllo a BindingSource  
   
-1.  Aggiungere una classe <xref:System.Windows.Forms.TextBox> al form.  
+1.  Aggiungere un tipo <xref:System.Windows.Forms.TextBox> al form.  
   
-2.  Nella finestra **Proprietà** espandere il nodo **\(DataBindings\)**.  
+2.  Nella finestra **Proprietà** espandere il nodo **(DataBindings)** .  
   
-3.  Fare clic sulla freccia posta accanto alla proprietà <xref:System.Windows.Forms.TextBox.Text%2A>.  
+3.  Fare clic sulla freccia accanto al <xref:System.Windows.Forms.TextBox.Text%2A> proprietà.  
   
-4.  Nell'editor del tipo di interfaccia utente **DataSource** espandere il nodo relativo al componente <xref:System.Windows.Forms.BindingSource> precedentemente aggiunto e selezionare la proprietà del tipo associato che si desidera associare alla proprietà <xref:System.Windows.Forms.TextBox.Text%2A> della classe <xref:System.Windows.Forms.TextBox>.  
+4.  Nel **editor del tipo di interfaccia utente DataSource**, espandere il nodo per il <xref:System.Windows.Forms.BindingSource> aggiunto in precedenza e selezionare la proprietà del tipo associato che si desidera associare il <xref:System.Windows.Forms.TextBox.Text%2A> proprietà del <xref:System.Windows.Forms.TextBox>.  
   
-## Vedere anche  
- [Il componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)   
- [Procedura: associare un controllo Windows Form a un tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)   
- [Associazione di controlli ai dati in Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)
+## <a name="see-also"></a>Vedere anche  
+ [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Procedura: Associare un controllo di Windows Form a un tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ [Associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

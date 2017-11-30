@@ -1,111 +1,108 @@
 ---
-title: "Adding Printable Reports to Visual Studio Applications | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "printing [Visual Studio], reports"
-  - "reports, printing in Visual Studio"
+title: Aggiunta di rapporti stampabili ad applicazioni Visual Studio
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- printing [Visual Studio], reports
+- reports [Visual Basic], printing in Visual Studio
 ms.assetid: 93928405-ef41-495e-bce2-9d43d5a7080a
-caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4ce2a8b12d8202a9f201a82b0d4a571249210d48
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Adding Printable Reports to Visual Studio Applications
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-In Visual Studio vengono supportate diverse soluzioni di report per consentire di aggiungere funzionalità avanzate per il report di dati alle applicazioni Visual Basic.  È possibile creare e aggiungere report tramite controlli ReportViewer, Crystal Reports o SQL Server Reporting Services.  
+# <a name="adding-printable-reports-to-visual-studio-applications"></a>Aggiunta di rapporti stampabili ad applicazioni Visual Studio
+Visual Studio supporta un'ampia gamma di soluzioni di report che consentono di aggiungere report per le applicazioni Visual Basic di dati avanzati. È possibile creare e aggiungere i report utilizzando i controlli ReportViewer, Crystal Reports o SQL Server Reporting Services.  
   
 > [!NOTE]
->  SQL Server Reporting Services fa parte di SQL Server 2005 anziché di Visual Studio.  Reporting Services è presente unicamente nei sistemi in cui è stato installato SQL Server 2005.  
+>  SQL Server Reporting Services fa parte di SQL Server 2005 anziché Visual Studio. In Reporting Services non installato nel sistema, a meno che non è installato SQL Server 2005.  
   
-## Cenni preliminari sulle tecnologie di generazione report Microsoft in applicazioni Visual Basic  
- Per utilizzare una tecnologia di generazione report Microsoft in un'applicazione, scegliere uno degli approcci seguenti:  
+## <a name="overview-of-microsoft-reporting-technology-in-visual-basic-applications"></a>Panoramica di Microsoft Reporting tecnologia nelle applicazioni Visual Basic  
+ Per utilizzare una tecnologia nell'applicazione di report di Microsoft, scegliere uno degli approcci seguenti:  
   
--   Aggiungere una o più istanze di un controllo ReportViewer a un'applicazione Windows Visual Basic.  
+-   Aggiungere uno o più istanze di un controllo ReportViewer a un'applicazione Windows di Visual Basic.  
   
--   Integrare a livello di codice SQL Server Reporting Services tramite l'effettuazione di chiamate al servizio Web Report Server.  
+-   Integrare SQL Server Reporting Services a livello di codice vengono eseguite mediante chiamate al servizio Web ReportServer.  
   
--   Utilizzare il controllo ReportViewer e Microsoft SQL Server 2005 Reporting Services insieme, impiegando il controllo come visualizzatore di report e un server di report come elaboratore di report.  È importante precisare che per potere utilizzare insieme un server di report e il controllo ReportViewer è necessario disporre della versione SQL Server 2005 di Reporting Services.  
+-   Utilizzare il controllo ReportViewer e Microsoft SQL Server 2005 Reporting Services insieme, utilizzando il controllo come visualizzatore di report e un server di report come un elaboratore di report. Si noti che, se si desidera utilizzare un server di report e il controllo ReportViewer insieme, è necessario utilizzare la versione di SQL Server 2005 Reporting Services.  
   
-## Utilizzo dei controlli ReportViewer  
- Il modo più semplice di integrare la funzionalità di report in un'applicazione Windows Visual Basic è aggiungere il controllo ReportViewer a un form nell'applicazione.  Il controllo aggiunge direttamente all'applicazione funzionalità di elaborazione di report e fornisce una progettazione report integrata, in modo da consentire la compilazione di report utilizzando dati da qualsiasi oggetto dati ADO.NET.  Un'API completa fornisce accesso a livello di codice al controllo e ai report, per consentire la configurazione della funzionalità in fase di esecuzione.  
+## <a name="using-reportviewer-controls"></a>Utilizzo dei controlli ReportViewer  
+ Il modo più semplice per incorporare la funzionalità di report in un'applicazione Windows di Visual Basic consiste nell'aggiungere il controllo ReportViewer a un form nell'applicazione. Il controllo aggiunge direttamente all'applicazione funzionalità di elaborazione di report e fornisce una finestra di progettazione report integrata in modo che è possibile compilare report utilizzando dati da qualsiasi oggetto dati ADO.NET. Un'API completa fornisce l'accesso programmatico al controllo e i report in modo che sia possibile configurare le funzionalità di runtime.  
   
- ReportViewer fornisce funzionalità integrate di elaborazione e visualizzazione dei report in un unico controllo dati, liberamente distribuibile.  Scegliere i controlli ReportViewer se sono necessarie le seguenti funzionalità di report:  
+ ReportViewer fornisce l'elaborazione del report predefiniti e la visualizzazione di funzionalità in un controllo dati singolo, distribuibile. Scegliere i che controlli ReportViewer se sono necessarie le seguenti funzionalità di report:  
   
--   Elaborazione di report nell'applicazione client.  Verrà visualizzato un report elaborato in un'area di visualizzazione fornita dal controllo.  
+-   Elaborazione di report nell'applicazione client. Un report elaborato viene visualizzata in un'area di visualizzazione fornita dal controllo.  
   
--   Associazione dati a tabelle dati ADO.NET.  È possibile creare report che utilizzano istanze <xref:System.Data.DataTable> fornite al controllo.  È inoltre possibile eseguire l'associazione diretta agli oggetti business.  
+-   Associazione di dati alle tabelle di dati ADO.NET. È possibile creare report che utilizzano <xref:System.Data.DataTable> istanze fornite al controllo. È anche possibile associare direttamente a oggetti business.  
   
--   Controlli ridistribuibili che possono essere inclusi nell'applicazione.  
+-   Controlli ridistribuibili che è possibile includere nell'applicazione.  
   
--   Funzionalità di runtime quali navigazione da una pagina all'altra, stampa, ricerca e formati di esportazione.  Una barra degli strumenti di ReportViewer fornisce supporto per tali operazioni.  
+-   Funzionalità di runtime, ad esempio navigazione tra le pagine, la stampa, la ricerca e formati di esportazione. Una barra degli strumenti di ReportViewer fornisce supporto per queste operazioni.  
   
- Per utilizzare il controllo ReportViewer è possibile trascinarlo dalla sezione **Dati** della Casella degli strumenti di Visual Studio in un form dell'applicazione Windows Visual Basic.  
+ Per utilizzare il controllo ReportViewer, è possibile trascinarlo dal **dati** sezione degli strumenti Visual Studio in un form nell'applicazione Windows di Visual Basic.  
   
-### Creazione di report in Visual Studio per controlli ReportViewer  
- Per compilare un report da eseguire in ReportViewer, aggiungere un modello **Report** al progetto.  In Visual Studio viene creato un file di definizione del report per il client \(con estensione rdlc\), viene aggiunto il file al progetto e viene aperta una progettazione report integrata nell'area di lavoro di Visual Studio.  
+### <a name="creating-reports-in-visual-studio-for-reportviewer-controls"></a>Creazione di report in Visual Studio per i controlli ReportViewer  
+ Per compilare un report eseguito in ReportViewer, aggiungere un **Report** modello al progetto. Visual Studio crea un file di definizione report client (con estensione rdlc), il file viene aggiunto al progetto e apre una finestra di progettazione report integrata nell'area di lavoro di Visual Studio.  
   
- La Progettazione report di Visual Studio si integra con la finestra **Origini dati**.  Quando si trascina un campo dalla finestra **Origini dati** in un report, la Progettazione report copia i metadati sull'origine dati nel file di definizione del report.  I metadati sono utilizzati dal controllo ReportViewer per generare automaticamente codice con associazione a dati.  
+ Progettazione Report di Visual Studio si integra con il **origini dati** finestra. Quando si trascina un campo da di **origini dati** finestra per il report, progettazione Report copia i metadati sull'origine dati nel file di definizione del report. Questi metadati vengono utilizzati dal controllo ReportViewer per generare automaticamente il codice di associazione dati.  
   
- In Progettazione report di Visual Studio non è inclusa la funzionalità di anteprima.  Per visualizzare in anteprima il report, eseguire l'applicazione e visualizzare in anteprima il report incorporato.  
+ Progettazione Report di Visual Studio non include la funzionalità di anteprima. Per visualizzare in anteprima il report, eseguire l'applicazione e visualizzare in anteprima il report incorporato.  
   
-||  
-|-|  
-|Per aggiungere all'applicazione funzionalità di report di base|  
-|1.  Trascinare un controllo ReportViewer dalla scheda **Dati** della **Casella degli strumenti** nel form.<br />2.  Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  Nella finestra di dialogo **Aggiungi nuovo elemento** fare clic sull'icona **Report**, quindi scegliere **Aggiungi**.<br />     Verrà aperta la Progettazione report nell'ambiente di sviluppo e verrà aggiunto un file di report \(rdlc\) al progetto.<br />3.  Trascinare gli elementi del report dalla **Casella degli strumenti** al layout del report e disporli nel modo desiderato.<br />4.  Trascinare i campi dalla finestra **Origini dati** sugli elementi del report nel layout del report.|  
+|Per aggiungere funzionalità di report di base dell'applicazione|  
+|---|    
+|1.  Trascinare un controllo ReportViewer dal **dati** scheda della finestra di **della casella degli strumenti** nel form.<br />2.  Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**. Nel **Aggiungi nuovo elemento** la finestra di dialogo, seleziona il **Report** icona e fare clic su **Aggiungi**.<br />     Verrà visualizzata la finestra di progettazione di Report nell'ambiente di sviluppo e un file di report (con estensione rdlc) viene aggiunto al progetto.<br />3.  Trascinare gli elementi del report dal **della casella degli strumenti** nel layout del report e disporli nel modo desiderato.<br />4.  Trascinare i campi dal **origini dati** finestra per gli elementi del report nel layout del report.|  
   
-## Utilizzo di Reporting Services in applicazioni Visual Basic  
- Reporting Services è una tecnologia per la generazione di report basata su server, inclusa in SQL Server.  Reporting Services comprende funzionalità aggiuntive che non si trovano nei controlli ReportViewer.  Scegliere Reporting Services se sono necessarie le funzionalità seguenti:  
+## <a name="using-reporting-services-in-visual-basic-applications"></a>Utilizzo di Reporting Services nelle applicazioni Visual Basic  
+ Reporting Services è una tecnologia di creazione di report basato su server fornita con SQL Server. Reporting Services include funzionalità aggiuntive non disponibili nei controlli ReportViewer. Scegliere Reporting Services se si necessita di una delle seguenti funzionalità:  
   
--   Distribuzione scalabile ed elaborazione di report sul lato server che forniscano prestazioni migliorate per report complessi o di lunga esecuzione e per attività di report con volumi elevati.  
+-   Distribuzione con scalabilità orizzontale e l'elaborazione del report sul lato server che offre prestazioni migliori per i report complessi o con esecuzione prolungata e per l'attività di report con volumi elevati.  
   
--   Elaborazione dati e di report integrata, con supporto per controlli di report personalizzati e formati di output con rendering sofisticato.  
+-   Formati di output dei dati integrati e l'elaborazione del report, con supporto per controlli report personalizzati e avanzate per il rendering.  
   
--   Elaborazione di report pianificata, con la possibilità di specificare il momento di esecuzione dei report.  
+-   Pianificare l'elaborazione del report in modo che è possibile specificare esattamente quando i report vengono eseguiti.  
   
--   Distribuzione di report dietro sottoscrizione, tramite posta elettronica o in percorsi di condivisione file.  
+-   Distribuzione di report basato su sottoscrizione tramite posta elettronica o a percorsi di condivisione file.  
   
--   Report ad\-hoc, che consente agli utenti la creazione di report in base alle esigenze.  
+-   Il reporting ad hoc in modo che gli utenti di business possono creare report in base alle esigenze.  
   
--   Sottoscrizioni basate su dati che indirizzano output di report personalizzati a un elenco dinamico di destinatari.  
+-   Sottoscrizioni guidate dai dati che indirizzare l'output del report personalizzato a un elenco dinamico di destinatari.  
   
--   Estensioni personalizzate per elaborazione dati, invio di report, autenticazione personalizzata e rendering di report.  
+-   Estensioni personalizzate per l'elaborazione dati, il recapito del report, l'autenticazione personalizzata e il rendering del report.  
   
- Server di report implementato come servizio Web.  Il codice dell'applicazione deve includere chiamate al servizio Web, per accedere ai report e ad altri metadati.  Il servizio Web fornisce accesso completo a livello di codice a un'istanza del server di report.  
+ Il server di report viene implementato come servizio Web. Il codice dell'applicazione deve includere le chiamate al servizio Web per accedere ai report e altri metadati. Il servizio Web fornisce accesso a livello di codice completo per un'istanza del server di report.  
   
- Poiché Reporting Services è una tecnologia di generazione report basata su Web, nel visualizzatore in modalità predefinita vengono mostrati report il cui rendering è in formato HTML.  Se non si desidera utilizzare il formato HTML come formato predefinito di presentazione di report, è necessario scrivere un visualizzatore di report personalizzato per l'applicazione.  
+ Poiché Reporting Services è una tecnologia di creazione di report basata sul Web, il visualizzatore predefinito Mostra i report che vengono eseguito il rendering in formato HTML. Se non si desidera utilizzare HTML come formato di presentazione del report predefinito, è necessario scrivere un visualizzatore di report personalizzato per l'applicazione.  
   
-### Creazione di report in Visual Studio per Reporting Services  
- Per compilare report da eseguire in un server di report, creare file di definizioni di applicazioni \(con estensione rdl\) in Visual Studio tramite Business Intelligence Development Studio, incluso in SQL Server 2005.  
+### <a name="creating-reports-in-visual-studio-for-reporting-services"></a>Creazione di report in Visual Studio per Reporting Services  
+ Per compilare i report eseguiti in un server di report, creare definizione del report (con estensione rdl) file in Visual Studio tramite Business Intelligence Development Studio, incluso in SQL Server 2005.  
   
 > [!NOTE]
->  Per utilizzare SQL Server Reporting Services e Business Intelligence Development Studio è necessario che nel computer in uso sia installato SQL Server 2005.  
+>  È necessario disporre di SQL Server 2005 installato per utilizzare SQL Server Reporting Services e Business Intelligence Development Studio.  
   
- Business Intelligence Development Studio aggiunge modelli di progetto specifici per i componenti di SQL Server.  Per creare report è possibile scegliere tra i modelli di **Progetto Report Server** o **Creazione guidata progetto Report Server**.  È possibile specificare connessioni a origini dati e query a diversi tipi di origini dati, tra cui SQL Server, Oracle, Analysis Services, XML e SQL Server Integration Services.  Una scheda **Dati**, una scheda **Layout** e una scheda **Anteprima** consentono di definire i dati, creare layout di report e visualizzare l'anteprima dei report nella stessa area di lavoro.  
+ Business Intelligence Development Studio aggiunge modelli di progetto che sono specifici dei componenti di SQL Server. Per creare report, è possibile scegliere tra la **progetto Server Report** o **Creazione guidata progetto Server di Report** modelli. È possibile specificare le connessioni alle origini dati e query per un'ampia gamma di tipi di origine dati, inclusi SQL Server, Oracle, Analysis Services, XML e SQL Server Integration Services. Oggetto **dati** scheda **Layout** scheda e **anteprima** scheda consentono di definire i dati, creare un layout del report e visualizzare in anteprima dei report nella stessa area di lavoro.  
   
- Le definizioni di report che vengono compilate per il controllo o per il server di report possono essere riutilizzate in entrambe le tecnologie.  
+ Le definizioni compilazione per il controllo o il server di report può essere riutilizzato in entrambe le tecnologie di report.  
   
-||  
-|-|  
-|Per creare un report da eseguire in un server di report|  
-|1.  Scegliere **Nuovo** dal menu **File**.<br />     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.<br />2.  Nel riquadro **Tipi progetto** fare clic su **Progetti Business Intelligence**.<br />3.  Nel riquadro Modelli fare clic su **Progetto Report Server** o su **Creazione guidata progetto Report Server**.|  
+|Per creare un report eseguito in un server di report|  
+|---|    
+|1.  Nel **File** menu, scegliere **New**.<br />     Verrà visualizzata la finestra di dialogo **Nuovo progetto** .<br />2.  Nel **tipi di progetto** riquadro, fare clic su **progetti Business Intelligence**.<br />3.  Nel riquadro Modelli selezionare **progetto Server Report** o **Creazione guidata progetto Server di Report**.|  
   
-## Utilizzo simultaneo di controlli ReportViewer e di SQL Server Reporting Services  
- I controlli ReportViewer e SQL Server 2005 Reporting Services possono essere utilizzati insieme nella stessa applicazione.  
+## <a name="using-reportviewer-controls-and-sql-server-reporting-services-together"></a>Utilizzo di controlli ReportViewer e SQL Server Reporting Services insieme  
+ I controlli ReportViewer e SQL Server 2005 Reporting Services possono essere utilizzate insieme nella stessa applicazione.  
   
 -   Il controllo ReportViewer fornisce un visualizzatore che viene utilizzato per visualizzare i report nell'applicazione.  
   
--   Tramite Reporting Services vengono invece forniti i report e viene eseguita l'elaborazione completa in un server remoto.  
+-   Reporting Services fornisce i report e consente di eseguire tutta l'elaborazione in un server remoto.  
   
- È possibile configurare il controllo ReportViewer per la visualizzazione di report che vengono archiviati ed elaborati in un server di report remoto di Reporting Services.  Questo tipo di configurazione viene chiamato *modalità di elaborazione remota*.  Nella modalità di elaborazione remota, il controllo richiede un report che è archiviato in un server di report remoto.  Nel server di report viene eseguita l'elaborazione completa del report, l'elaborazione dei dati e il rendering del report.  Viene quindi restituito al controllo e visualizzato nell'area di visualizzazione un report di cui è stato eseguito il rendering.  
+ Il controllo ReportViewer può essere configurato per visualizzare i report archiviati ed elaborati in un server di report di Reporting Services remoto. Questo tipo di configurazione è denominato *modalità di elaborazione remota*. In modalità di elaborazione remota il controllo richiede un report che viene archiviato in un server di report remoto. Il server di report esegue tutte l'elaborazione del report, l'elaborazione dati e il rendering del report. Un report eseguito il rendering viene restituito al controllo e visualizzato nell'area di visualizzazione.  
   
- I report che vengono eseguiti in un server di report supportano formati di esportazione aggiuntivi, sono dotati di implementazione di parametrizzazione dei report differente, utilizzano i tipi di origini dati supportati dal server di report ed è possibile accedervi tramite il modello di autorizzazione basato sui ruoli nel server di report.  
+ I report eseguiti su un supporto di server di report aggiuntivo formati di esportazione, dispone di un'implementazione di parametrizzazione di report diverso, utilizzare i tipi di origine dati che sono supportati dal server di report e si accede tramite il modello di autorizzazione basata sui ruoli nel server di report.  
   
- Per utilizzare la modalità di elaborazione remota, specificare l'URL e il percorso del report per server durante la configurazione del controllo ReportViewer.
+ Per utilizzare la modalità di elaborazione remota, specificare l'URL e il percorso di un server di report quando si configura il controllo ReportViewer.

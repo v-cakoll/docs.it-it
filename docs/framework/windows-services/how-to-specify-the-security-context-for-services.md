@@ -1,56 +1,59 @@
 ---
-title: "How to: Specify the Security Context for Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows Service applications, security"
-  - "security [Visual Studio], contexts"
-  - "contexts, Visual Studio security"
-  - "security [Visual Studio], service applications"
-  - "ServiceProcessInstaller class, security context"
-  - "services, security"
-  - "ServiceInstaller class, security context"
+title: 'Procedura: specificare il contesto di sicurezza per i servizi'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Service applications, security
+- security [Visual Studio], contexts
+- contexts, Visual Studio security
+- security [Visual Studio], service applications
+- ServiceProcessInstaller class, security context
+- services, security
+- ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 50a9c6ff7f02cda4475aa5390181fa5d410af161
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Specify the Security Context for Services
-In base all'impostazione predefinita, i servizi vengono eseguiti in un contesto di sicurezza diverso rispetto a quello dell'utente connesso.  Il contesto è quello dell'account di sistema predefinito, `LocalSystem`, che fornisce ai servizi privilegi di accesso alle risorse di sistema diversi da quelli dell'utente.  È possibile modificare questo comportamento per specificare un account utente diverso in base al quale eseguire il servizio.  
+# <a name="how-to-specify-the-security-context-for-services"></a>Procedura: specificare il contesto di sicurezza per i servizi
+Per impostazione predefinita, i servizi eseguiti in un contesto di sicurezza diverso rispetto a quello dell'utente connesso. Vengono eseguiti nel contesto dell'account di sistema predefinito, i servizi chiamato `LocalSystem`, che concede privilegi di accesso diversi a risorse di sistema rispetto all'utente. È possibile modificare questo comportamento per specificare un account utente diverso in cui eseguire il servizio.  
   
- Impostare il contesto di sicurezza modificando la proprietà <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> per il processo nel quale viene eseguito il servizio.  Tale proprietà consente di assegnare al servizio uno dei quattro tipi di account seguenti:  
+ Impostare il contesto di sicurezza modificando la <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> proprietà per il processo in cui viene eseguito il servizio. Questa proprietà consente di impostare il servizio in uno dei quattro tipi di account:  
   
--   `User`, che genera la richiesta del sistema di immettere un nome utente e una password validi al momento dell'installazione del servizio e comporta l'esecuzione del servizio nel contesto di un account specificato da un singolo utente della rete.  
+-   `User`, che comporta il sistema per la richiesta di un nome utente valido e una password quando il servizio viene installato ed eseguito nel contesto di un account specificato da un singolo utente della rete.  
   
--   `LocalService`, che comporta l'esecuzione del servizio nel contesto di un account che opera come utente non privilegiato nel computer locale e presenta credenziali anonime a tutti i server remoti.  
+-   `LocalService`, che viene eseguita nel contesto di un account che opera come utente senza privilegi nel computer locale e presenta credenziali anonime a tutti i server remoti.  
   
--   `LocalSystem`, che viene eseguita nel contesto di un account che sono associati privilegi locali e presenta le credenziali del computer a tutti i server remoti,  
+-   `LocalSystem`, che viene eseguita nel contesto di un account che fornisce privilegi locali estesi e presenta le credenziali del computer per tutti i server remoti.  
   
--   `NetworkService`, che comporta l'esecuzione del servizio nel contesto di un account che opera come utente non privilegiato nel computer locale e presenta le credenziali del computer a tutti i server remoti.  
+-   `NetworkService`, che viene eseguita nel contesto di un account che opera come utente senza privilegi nel computer locale e presenta le credenziali del computer per tutti i server remoti.  
   
- Per ulteriori informazioni, vedere l'enumerazione <xref:System.ServiceProcess.ServiceAccount>.  
+ Per altre informazioni, vedere l'enumerazione <xref:System.ServiceProcess.ServiceAccount>.  
   
-### Per specificare il contesto di sicurezza per un servizio  
+### <a name="to-specify-the-security-context-for-a-service"></a>Per specificare il contesto di sicurezza per un servizio  
   
-1.  Dopo aver creato il servizio, aggiungere i programmi di installazione necessari.  Per ulteriori informazioni, vedere [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Dopo aver creato il servizio, aggiungere i programmi di installazione necessari per tale. Per ulteriori informazioni, vedere [procedura: aggiungere programmi di installazione per l'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  Nella finestra di progettazione accedere alla classe `ProjectInstaller`, quindi fare clic sul programma di installazione del processo del servizio utilizzato.  
+2.  Nella finestra di progettazione, accedere la `ProjectInstaller` classe e fare clic su installazione del processo del servizio per il servizio in uso.  
   
     > [!NOTE]
-    >  Per ciascuna applicazione di servizio, nella classe `ProjectInstaller` esistono almeno due componenti di installazione, ossia un componente per installare i processi per tutti i servizi del progetto e un programma di installazione per ciascun servizio contenuto nell'applicazione.  In questo caso, selezionare <xref:System.ServiceProcess.ServiceProcessInstaller>.  
+    >  Per ogni applicazione di servizio, sono disponibili almeno due componenti di installazione di `ProjectInstaller` classe, uno per installare i processi per tutti i servizi nel progetto e un programma di installazione per ogni servizio contiene l'applicazione. In questo caso, si desidera selezionare <xref:System.ServiceProcess.ServiceProcessInstaller>.  
   
-3.  Nella finestra **Proprietà** impostare <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> sul valore appropriato.  
+3.  Nel **proprietà** finestra, impostare il <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> sul valore appropriato.  
   
-## Vedere anche  
- [Introduction to Windows Service Applications](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)   
- [How to: Create Windows Services](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>Vedere anche  
+ [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

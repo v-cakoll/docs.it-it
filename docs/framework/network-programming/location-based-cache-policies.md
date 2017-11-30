@@ -1,5 +1,5 @@
 ---
-title: Criteri di cache basati sulla posizione
+title: criteri di cache basati sulla posizione
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -26,18 +21,17 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a5b4bf67db3fcbb70d2a93f35976d8d9b4b3a028
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="location-based-cache-policies"></a>Criteri di cache basati sulla posizione
+# <a name="location-based-cache-policies"></a>criteri di cache basati sulla posizione
 I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci memorizzate nella cache valide in base alla posizione da cui è possibile ricavare la risorsa richiesta. Una risorsa memorizzata nella cache è valida se l'uso non viola i requisiti di riconvalida specificati dal server. I criteri di cache basati sulla posizione vengono creati a livello di codice usando un costruttore di classe <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. Il tipo dei criteri basati sulla posizione viene passato al costruttore usando un valore di enumerazione <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Per esempi di codice che creano criteri di cache basati sulla posizione, vedere [Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Le sezioni seguenti illustrano i diversi tipi di criteri di cache basati sulla posizione per le risorse Hypertext Transfer Protocol (HTTP e HTTPS).  
   
 ## <a name="cache-if-available-policy"></a>CacheIfAvailable (criterio)  
@@ -62,9 +56,8 @@ I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci
  Confronta la copia della risorsa nella cache con la copia nel server. Se la copia nel server è più recente, viene usata per soddisfare la richiesta e la copia nella cache viene sostituita. Se la copia nella cache corrisponde alla copia nel server, viene usata la copia memorizzata nella cache. Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando una richiesta condizionale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)   
- [Criteri di cache basati sul tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
+ [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)  
+ [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

@@ -1,28 +1,31 @@
 ---
-title: "Procedura: specificare credenziali di sicurezza del canale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: specificare credenziali di sicurezza del canale'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: specificare credenziali di sicurezza del canale
-Il moniker dei servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente alle applicazioni COM di chiamare servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La maggior parte dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede al client di specificare credenziali per l'autenticazione e l'autorizzazione. Quando viene chiamato un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] da un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio da un'applicazione COM, è possibile utilizzare il <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaccia per specificare le credenziali. In questo argomento verrà illustrate varie modalità per specificare le credenziali utilizzando il <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaccia.  
+# <a name="how-to-specify-channel-security-credentials"></a>Procedura: specificare credenziali di sicurezza del canale
+Il moniker dei servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente alle applicazioni COM di chiamare servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La maggior parte dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede al client di specificare credenziali per l'autenticazione e l'autorizzazione. Quando viene chiamato un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] da un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] da un'applicazione COM, per specificare le credenziali è possibile usare l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> è un'interfaccia basata su IDispatch e non sarà possibile ottenere la funzionalità IntelliSense nell'ambiente di Visual Studio.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> è un'interfaccia basata su IDispatch nella quale non viene visualizzata la funzionalità IntelliSense nell'ambiente Visual Studio.  
   
- In questo articolo verrà utilizzato il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio definito nel [esempio sulla sicurezza dei messaggi](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ In questo articolo verrà utilizzato il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio definito nel [messaggio di esempio per la sicurezza](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Per specificare un certificato client  
   
@@ -57,7 +60,7 @@ Il moniker dei servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] c
   
 7.  Eseguire l'applicazione Visual Basic e verificare i risultati.  
   
-     Nell'applicazione Visual Basic verrà visualizzata una finestra di messaggio con il risultato relativo alla chiamata di Add(3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> o <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> può anche essere utilizzato al posto di <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> per impostare il certificato Client:  
+     Nell'applicazione Visual Basic verrà visualizzata una finestra di messaggio con il risultato relativo alla chiamata di Add(3, 4). Per impostare il certificato client è inoltre possibile usare <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> o <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> al posto di <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29>:  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -98,7 +101,7 @@ Il moniker dei servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] c
 4.  Eseguire l'applicazione Visual Basic e verificare i risultati. Nell'applicazione Visual Basic verrà visualizzata una finestra di messaggio con il risultato relativo alla chiamata di Add(3, 4).  
   
     > [!NOTE]
-    >  L'associazione specificata nel moniker del servizio in questo esempio è stata impostata su WSHttpBinding_ICalculator. Si noti inoltre che è necessario fornire un nome utente valido e una password nella chiamata a <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
+    >  L'associazione specificata nel moniker del servizio in questo esempio è stata impostata su WSHttpBinding_ICalculator. Nella chiamata a <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> è inoltre necessario fornire un nome utente e una password validi.  
   
 ### <a name="to-specify-windows-credentials"></a>Per specificare credenziali di Windows.  
   
@@ -128,9 +131,9 @@ Il moniker dei servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] c
   
 ### <a name="to-specify-an-issue-token"></a>Per specificare un token di pubblicazione  
   
-1.  I token di pubblicazione vengono usati soltanto per applicazioni che usano la protezione federata. Per ulteriori informazioni sulla protezione federata, vedere [federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) e [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1.  I token di pubblicazione vengono usati soltanto per applicazioni che usano la protezione federata. Per ulteriori informazioni sulla sicurezza federata, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) e [federazione esempio](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-     Esempio di codice Visual Basic seguente viene illustrato come chiamare il <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> metodo:  
+     L'esempio di codice Visual Basic seguente mostra come chiamare il metodo <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>:  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -142,11 +145,11 @@ Il moniker dei servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] c
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     Per ulteriori informazioni sui parametri per questo metodo, vedere <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
+     Per altre informazioni sui parametri relativi a questo metodo, vedere <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Federazione](../../../../docs/framework/wcf/feature-details/federation.md)   
- [Procedura: configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
- [Procedura: creare un Client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [Sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
+ [Federazione](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [Procedura: configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Procedura: creare un Client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Associazioni e protezione](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

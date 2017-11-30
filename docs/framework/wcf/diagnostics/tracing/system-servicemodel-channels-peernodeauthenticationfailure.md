@@ -1,34 +1,37 @@
 ---
-title: "System.ServiceModel.Channels.PeerNodeAuthenticationFailure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.PeerNodeAuthenticationFailure
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b50f782-ca06-4a82-aa7f-71f78ddc5177
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b09d7fc476d5eed7f7c534fdde46cb18eeac30d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.PeerNodeAuthenticationFailure
+# <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a>System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 L’handshake di sicurezza con un router adiacente potenziale non è riuscito.  
   
-## Descrizione  
- Questa traccia si verifica quando si tenta di stabilire una connessione protetta con un router adiacente.Tale situazione può verificarsi a causa di credenziali insufficienti o incorrette.  
+## <a name="description"></a>Descrizione  
+ Questa traccia si verifica quando si tenta di stabilire una connessione protetta con un router adiacente. Tale situazione può verificarsi a causa di credenziali insufficienti o incorrette.  
   
- PeerChannel riconosce un solo tipo di token per identificazione sicura, i certificati X.509 che offrono un modello sicuro di identità basato sul tipo di autenticazione e di autorizzazione che può essere implementato.PeerChannel fornisce inoltre il supporto per applicazioni semplici tramite l'utilizzo di password.Le password possono essere utilizzate solo per consentire l'accesso alla sessione, non per eseguire l'autenticazione dei messaggi.Ciò è dovuto al fatto che è difficile e inappropriato utilizzare per l'autenticazione dell'origine un token simmetrico condiviso da un gruppo di peer.  
+ PeerChannel riconosce un solo tipo di token per identificazione sicura, i certificati X.509 che offrono un modello sicuro di identità basato sul tipo di autenticazione e di autorizzazione che può essere implementato. PeerChannel fornisce inoltre il supporto per applicazioni semplici tramite l'utilizzo di password. Le password possono essere utilizzate solo per consentire l'accesso alla sessione, non per eseguire l'autenticazione dei messaggi. Ciò è dovuto al fatto che è difficile e inappropriato utilizzare per l'autenticazione dell'origine un token simmetrico condiviso da un gruppo di peer.  
   
-## Risoluzione dei problemi  
+## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Assicurarsi che tutti i router adiacenti abbiano le credenziali di sicurezza appropriate.  
   
-## Vedere anche  
- [Protezione del canale peer](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)   
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Protezione del canale peer](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
+ [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Utilizzo delle tracce per risolvere i problemi dell'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

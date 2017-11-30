@@ -1,44 +1,48 @@
 ---
-title: "Procedura: modificare l&#39;aspetto del componente ColorDialog di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "finestra di dialogo dei colori, configurazione dell'aspetto"
-  - "ColorDialog (componente), esempi"
-  - "ColorDialog (componente), formattazione dell'aspetto"
+title: 'Procedura: modificare l''aspetto del componente ColorDialog di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ColorDialog component [Windows Forms], examples
+- ColorDialog component [Windows Forms], formatting appearance
+- color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 11edb1019b8fedde368d712ab27dd0954a2de50a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: modificare l&#39;aspetto del componente ColorDialog di Windows Form
-È possibile configurare l'aspetto e alcune delle proprietà del componente <xref:System.Windows.Forms.ColorDialog> di Windows Form.  La finestra di dialogo è composta da due sezioni: in una sono riportati i colori di base e nell'altra è possibile definire colori personalizzati.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Procedura: modificare l'aspetto del componente ColorDialog di Windows Form
+È possibile configurare l'aspetto di Windows Form <xref:System.Windows.Forms.ColorDialog> componente con un numero di proprietà. Nella finestra di dialogo include due sezioni, ovvero uno che mostra i colori di base e uno che consente all'utente di definire colori personalizzati.  
   
- La maggior parte delle proprietà limita il numero di colori che l'utente può selezionare dalla finestra di dialogo.  Se la proprietà <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> è impostata su `true`, verrà consentito all'utente di definire colori personalizzati.  Se la proprietà <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> è impostata su `true`, la finestra di dialogo verrà espansa per la definizione dei colori personalizzati. In caso contrario, sarà necessario scegliere il pulsante "Definisci colori personalizzati".  Quando la proprietà <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> è impostata su `true`, nella finestra di dialogo vengono visualizzati tutti i colori disponibili nell'insieme dei colori di base.  Se la proprietà <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> è impostata su `true`, l'utente non potrà selezionare colori con retinatura e saranno disponibili soltanto colori a tinta unita.  
+ La maggior parte delle proprietà limitare i colori, l'utente può selezionare nella finestra di dialogo. Se il <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> è impostata su `true`, l'utente è autorizzato a definire colori personalizzati. Il <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> proprietà `true` se la finestra di dialogo verrà espansa per definire colori personalizzati; in caso contrario l'utente deve fare clic su un pulsante "Definisci colori personalizzati". Quando il <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> è impostata su `true`, la finestra di dialogo consente di visualizzare tutti i colori disponibili nel set di colori di base. Se il <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> è impostata su `true`, l'utente non è possibile selezionare i colori con dithering; solo i colori a tinta unita sono disponibili per la selezione.  
   
- Se la proprietà <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> è impostata su `true`, nella finestra di dialogo verrà visualizzato il pulsante ?.  Quando l'utente sceglie il pulsante ?, viene generato l'evento <xref:System.Windows.Forms.CommonDialog.HelpRequest> del componente <xref:System.Windows.Forms.ColorDialog>.  
+ Se il <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> è impostata su `true`, viene visualizzato un pulsante della Guida nella finestra di dialogo. Quando l'utente fa clic sul pulsante Guida il <xref:System.Windows.Forms.ColorDialog> del componente <xref:System.Windows.Forms.CommonDialog.HelpRequest> viene generato l'evento.  
   
-### Per configurare l'aspetto della finestra di dialogo dei colori  
+### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>Per configurare l'aspetto della finestra di dialogo colore  
   
-1.  Impostare le proprietà <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> e <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> sui valori desiderati.  
+1.  Impostare il <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, e <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> proprietà sui valori desiderati.  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  
     ColorDialog1.AnyColor = True  
     ColorDialog1.SolidColorOnly = False  
     ColorDialog1.ShowHelp = True  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ caps.handback.revision: 13
     colorDialog1.AnyColor = true;  
     colorDialog1.SolidColorOnly = false;  
     colorDialog1.ShowHelp = true;  
-  
     ```  
   
     ```cpp  
@@ -56,7 +59,7 @@ caps.handback.revision: 13
     colorDialog1->ShowHelp = true;  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ColorDialog>   
- [Componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.ColorDialog>  
+ [Componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
  [Cenni preliminari sul componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - resource files, .resources files
 - resource files, .resx files
@@ -28,16 +22,15 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c9ece6deab2fa414861bdb7c76a2093464156395
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5dcafccd1046bd47616ae42c6ce8a117f341a83f
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (generatore di file di risorse)
 Il generatore di file di risorse (Resgen.exe) converte i file di testo (.txt o .restext) e i file di risorse basati su XML (.resx) in file binari Common Language Runtime (.resources) incorporabili in un eseguibile binario o in un assembly satellite di runtime. Vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
@@ -317,7 +310,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  *nomeclasse*  
  Nome della classe di risorse fortemente tipizzata. Deve corrispondere al nome radice del file .resources. Se ad esempio Resgen.exe genera un file .resources denominato MyCompany.Libraries.Strings.resources, il nome della classe di risorse fortemente tipizzata è Strings. Se *nomeclasse* viene omesso, la classe generata viene derivata dal nome radice di `outputFilename`. Se `outputFilename` viene omesso, la classe generata viene derivata dal nome radice di `inputFilename`.  
   
- *nomeclasse* non può contenere caratteri non validi, ad esempio spazi incorporati. Se *nomeclasse* **contiene spazi incorporati o se viene generato per impostazione predefinita a partire da *nomeFileInput* e *nomeFileInput* contiene spazi incorporati, Resgen.exe sostituisce tutti i caratteri non validi con un carattere di sottolineatura (_).  
+ *nomeclasse* non può contenere caratteri non validi, ad esempio spazi incorporati. Se *nomeclasse* contiene spazi incorporati o se *viene* generato per impostazione predefinita a partire da *nomeFileInput* e *nomeFileInput* contiene spazi incorporati, Resgen.exe sostituisce tutti i caratteri non validi con un carattere di sottolineatura (_).  
   
  *filename*  
  Nome del file della classe.  
@@ -345,9 +338,8 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)   
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)   
- [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
+ [Strumenti](../../../docs/framework/tools/index.md)  
+ [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)  
+ [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

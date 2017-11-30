@@ -1,40 +1,40 @@
 ---
-title: "Cenni preliminari sul componente FolderBrowserDialog (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FolderBrowserDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "directory [Windows Form], abilitazione dell'esplorazione nelle applicazioni"
-  - "FolderBrowserDialog (componente) [Windows Form], informazioni"
-  - "cartelle [Windows Form], abilitazione dell'esplorazione nelle applicazioni"
+title: Cenni preliminari sul componente FolderBrowserDialog (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FolderBrowserDialog
+helpviewer_keywords:
+- FolderBrowserDialog component [Windows Forms], about FolderBrowserDialog
+- directories [Windows Forms], enabling browsing in applications
+- folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d7fab1dbe01c5b21e510841b1541150f6152ab0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul componente FolderBrowserDialog (Windows Form)
-Il componente <xref:System.Windows.Forms.FolderBrowserDialog> di Windows Form è una finestra di dialogo modale utilizzata per l'individuazione e la selezione di cartelle.  Nel componente <xref:System.Windows.Forms.FolderBrowserDialog> è inoltre possibile creare nuove cartelle.  
+# <a name="folderbrowserdialog-component-overview-windows-forms"></a>Cenni preliminari sul componente FolderBrowserDialog (Windows Form)
+Windows Form <xref:System.Windows.Forms.FolderBrowserDialog> componente è una finestra di dialogo modale che viene utilizzato per l'esplorazione e la selezione di cartelle. Inoltre è possibile creare nuove cartelle dall'interno di <xref:System.Windows.Forms.FolderBrowserDialog> componente.  
   
 > [!NOTE]
->  Per selezionare file anziché cartelle, utilizzare il componente [OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md).  
+>  Per selezionare i file, cartelle, invece di utilizzare il [OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) componente.  
   
- Il componente <xref:System.Windows.Forms.FolderBrowserDialog> viene visualizzato in fase di esecuzione utilizzando il metodo <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  Impostare la proprietà <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> per stabilire la cartella attiva e le eventuali sottocartelle visualizzate nella visualizzazione struttura ad albero della finestra di dialogo.  Una volta visualizzata la finestra di dialogo, è possibile utilizzare la proprietà <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> per ottenere il percorso della cartella selezionata.  
+ Il <xref:System.Windows.Forms.FolderBrowserDialog> componente viene visualizzato in fase di esecuzione usando il <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodo. Impostare il <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> proprietà per determinare la cartella di primo piano ed eventuali sottocartelle che verranno visualizzato all'interno della visualizzazione albero nella finestra di dialogo. Una volta la finestra di dialogo, è possibile utilizzare il <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> proprietà per ottenere il percorso della cartella in cui è stato selezionato.  
   
- Quando viene aggiunto a un form, il componente <xref:System.Windows.Forms.FolderBrowserDialog> è visualizzato nella barra delle applicazioni nella parte inferiore di Progettazione Windows Form.  
+ Quando viene aggiunto a un modulo, il <xref:System.Windows.Forms.FolderBrowserDialog> componente viene visualizzato nella barra delle applicazioni nella parte inferiore della finestra di progettazione Windows Form.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.FolderBrowserDialog>   
- [Procedura: scegliere cartelle con il componente FolderBrowserDialog di Windows Form](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.FolderBrowserDialog>  
+ [Procedura: Scegliere cartelle con il componente FolderBrowserDialog di Windows Form](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
  [Componente FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

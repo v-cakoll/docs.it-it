@@ -1,75 +1,76 @@
 ---
-title: "Procedura: associare controlli Windows Form al componente BindingSource utilizzando la finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource (componente) [Windows Form], associazione di controlli"
-  - "controlli [Windows Form], associazione"
-  - "associazione dati, BindingSource (componente)"
+title: 'Procedura: associare controlli Windows Form al componente BindingSource utilizzando la finestra di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], binding
+- BindingSource component [Windows Forms], binding controls
+- data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 18e89d0a236d3b370c521b73dfb640a09137a5dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: associare controlli Windows Form al componente BindingSource utilizzando la finestra di progettazione
-Dopo aver aggiunto controlli al form e determinato l'interfaccia utente desiderata per l'applicazione, è possibile associare i controlli a un'origine dati affinché, in fase di esecuzione, gli utenti siano in grado di modificare e salvare i dati correlati all'applicazione.  
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Procedura: associare controlli Windows Form al componente BindingSource utilizzando la finestra di progettazione
+Dopo aver aggiunto controlli al form e determinare l'interfaccia utente per l'applicazione, è possibile associare i controlli a un'origine dati, in modo che, in fase di esecuzione, gli utenti possono modificare e salvare i dati correlati all'applicazione.  
   
- L'associazione di un controllo o di una serie di controlli in Windows Form è un'operazione di semplice esecuzione se si utilizza il controllo <xref:System.Windows.Forms.BindingSource>, che funge da ponte tra i controlli di un form e l'origine dati.  
+ Associazione di un controllo o una serie di controlli in Windows Form viene eseguita più facilmente utilizzando il <xref:System.Windows.Forms.BindingSource> controllo che funge da ponte tra i controlli nel form e l'origine dati.  
   
- È possibile associare ai dati uno o più controlli. Nella procedura riportata di seguito un controllo <xref:System.Windows.Forms.TextBox> viene associato a un'origine dati.  
+ Uno o più controlli in un form possono essere associati a dati. Nella procedura seguente, un <xref:System.Windows.Forms.TextBox> è associato a un'origine dati.  
   
- Per completare la procedura si presuppone che si esegua l'associazione a un'origine dati derivata da un database.  Per ulteriori informazioni sulla creazione di origini dati da altri archivi di dati, vedere [Cenni preliminari sulle origini dati](../Topic/Add%20new%20data%20sources.md).  
+ Per completare la procedura, si presuppone che verrà associato a un'origine di dati derivata da un database. Per ulteriori informazioni sulla creazione di origini dati da altri archivi di dati, vedere [aggiungere nuove origini dati](/visualstudio/data-tools/add-new-data-sources).  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per associare un controllo in fase di progettazione  
+### <a name="to-bind-a-control-at-design-time"></a>Per associare un controllo in fase di progettazione  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.TextBox> sul form.  
+1.  Trascinare un <xref:System.Windows.Forms.TextBox> controllo sul form.  
   
-2.  Nella finestra **Proprietà**:  
+2.  Nel **proprietà** finestra:  
   
-    1.  Espandere il nodo **\(DataBindings\)**.  
+    1.  Espandere il **(DataBindings)** nodo.  
   
-    2.  Fare clic sulla freccia posta accanto alla proprietà <xref:System.Windows.Forms.TextBox.Text%2A>.  
+    2.  Fare clic sulla freccia accanto al <xref:System.Windows.Forms.TextBox.Text%2A> proprietà.  
   
-         Verrà aperto l'editor di tipi dell'interfaccia utente **DataSource**.  
+         Il **DataSource** verrà aperto l'editor di tipo dell'interfaccia utente.  
   
-         Se un'origine dati è stata già configurata per il progetto o il form, verrà visualizzata.  
+         Se un'origine dati è stata configurata in precedenza per il progetto o un modulo, viene visualizzato.  
   
-3.  Fare clic su **Aggiungi origine dati progetto** per eseguire la connessione con i dati e creare un'origine dati.  
+3.  Fare clic su **Aggiungi origine dati progetto** per connettersi ai dati e creare un'origine dati.  
   
-4.  Nella pagina iniziale della **Configurazione guidata origine dati** scegliere **Avanti**.  
+4.  Nella pagina iniziale della **Configurazione guidata origine dati** fare clic su **Avanti**.  
   
-5.  Nella pagina **Seleziona un tipo di origine dati** selezionare **Database**.  
+5.  Nel **scegliere un tipo di origine dati** selezionare **Database**.  
   
-6.  Nella pagina **Seleziona connessione dati** selezionare una connessione dati dall'elenco di connessioni disponibili.  Se la connessione dati desiderata non è disponibile, selezionare **Nuova connessione** per creare una nuova connessione dati.  
+6.  Nel **Seleziona connessione dati** pagina, selezionare una connessione dati dall'elenco di connessioni disponibili. Se la connessione dati desiderata non è disponibile, selezionare **nuova connessione** per creare una nuova connessione dati.  
   
-7.  Selezionare **Sì, salva la connessione con nome** per salvare la stringa di connessione nel file di configurazione dell'applicazione.  
+7.  Selezionare **Sì, Salva la connessione** per salvare la stringa di connessione nel file di configurazione dell'applicazione.  
   
-8.  Selezionare gli oggetti di database da inserire nell'applicazione.  A tal fine selezionare un campo di una tabella che si desidera venga visualizzato dalla classe <xref:System.Windows.Forms.TextBox>.  
+8.  Selezionare gli oggetti database da inserire nell'applicazione. In questo caso, selezionare un campo in una tabella che si desidera il <xref:System.Windows.Forms.TextBox> da visualizzare.  
   
-9. Se lo si desidera, sostituire il nome del DataSet predefinito.  
+9. Se si vuole, sostituire il nome predefinito del set di dati.  
   
-10. Fare clic su **Fine**.  
+10. Scegliere **Fine**.  
   
-11. Nella finestra **Proprietà** fare nuovamente clic sulla freccia accanto alla proprietà <xref:System.Windows.Forms.TextBox.Text%2A>.  Nell'editor di tipi dell'interfaccia utente **DataSource** selezionare il nome del campo al quale associare la classe <xref:System.Windows.Forms.TextBox>.  
+11. Nel **proprietà** finestra, fare clic sulla freccia accanto al <xref:System.Windows.Forms.TextBox.Text%2A> proprietà nuovamente. Nel **DataSource** editor del tipo di interfaccia utente di selezionare il nome del campo a cui associare il <xref:System.Windows.Forms.TextBox> per.  
   
-     L'editor di tipi dell'interfaccia utente **DataSource** verrà chiuso e il DataSet, il componente <xref:System.Windows.Forms.BindingSource> e l'adattatore di tabelle specifici della connessione dati verranno aggiunti al form.  
+     Il **DataSource** dell'interfaccia utente digitare editor viene chiuso e il set di dati, <xref:System.Windows.Forms.BindingSource> e adattatore di tabella specifico di connessione dati verranno aggiunti al form.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.BindingNavigator>   
- [Cenni preliminari sulle origini dati](../Topic/Add%20new%20data%20sources.md)   
- [Origini dati \(finestra\)](../Topic/Data%20Sources%20Window.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ [Aggiungi nuova origine dati](/visualstudio/data-tools/add-new-data-sources)  
+ [Finestra Origini dati](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)
