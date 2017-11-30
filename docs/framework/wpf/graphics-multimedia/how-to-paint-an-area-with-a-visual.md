@@ -1,39 +1,45 @@
 ---
-title: "Procedura: disegnare un&#39;area con un oggetto Visual | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pennelli, disegno con oggetti Visual"
-  - "disegno"
-  - "elementi visivi, disegno"
+title: 'Procedura: disegnare un''area con un oggetto Visual'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- painting [WPF]
+- visuals [WPF], painting with
+- brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4cd1bafb528613f15ec5eb597179bc0dd05ace0f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: disegnare un&#39;area con un oggetto Visual
-In questo esempio viene illustrato come utilizzare la classe <xref:System.Windows.Media.VisualBrush> per disegnare un'area con <xref:System.Windows.Media.Visual>.  
+# <a name="how-to-paint-an-area-with-a-visual"></a><span data-ttu-id="a4534-102">Procedura: disegnare un'area con un oggetto Visual</span><span class="sxs-lookup"><span data-stu-id="a4534-102">How to: Paint an Area with a Visual</span></span>
+<span data-ttu-id="a4534-103">In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media.VisualBrush> classe per disegnare un'area con un <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="a4534-103">This example shows how to use the <xref:System.Windows.Media.VisualBrush> class to paint an area with a <xref:System.Windows.Media.Visual>.</span></span>  
   
- Nell'esempio riportato di seguito vengono utilizzati numerosi controlli e un pannello come sfondo di un rettangolo.  
+ <span data-ttu-id="a4534-104">Nell'esempio seguente, vengono utilizzati numerosi controlli e un pannello come sfondo di un rettangolo.</span><span class="sxs-lookup"><span data-stu-id="a4534-104">In the following example, several controls and a panel are used as the background of a rectangle.</span></span>  
   
-## Esempio  
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
+## <a name="example"></a><span data-ttu-id="a4534-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="a4534-105">Example</span></span>  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- Per ulteriori informazioni su <xref:System.Windows.Media.VisualBrush> e per esempi aggiuntivi, vedere i Cenni preliminari su [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ <span data-ttu-id="a4534-106">Per ulteriori informazioni su <xref:System.Windows.Media.VisualBrush> e ulteriori esempi, vedere il [il disegno di immagini, disegni e oggetti visivi](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) Panoramica.</span><span class="sxs-lookup"><span data-stu-id="a4534-106">For more information about <xref:System.Windows.Media.VisualBrush> and additional examples, see the [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) overview.</span></span>  
   
- Questo esempio di codice fa parte di un esempio più esaustivo fornito per la classe <xref:System.Windows.Media.VisualBrush>.  Per l'esempio completo, vedere [Esempio VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049) \(la pagina potrebbe essere in inglese\).  
+ <span data-ttu-id="a4534-107">Questo esempio di codice fa parte di un esempio più esaustivo disponibile per la <xref:System.Windows.Media.VisualBrush> classe.</span><span class="sxs-lookup"><span data-stu-id="a4534-107">This code example is part of a larger example provided for the <xref:System.Windows.Media.VisualBrush> class.</span></span> <span data-ttu-id="a4534-108">Per l'esempio completo, vedere il [esempio VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049).</span><span class="sxs-lookup"><span data-stu-id="a4534-108">For the complete sample, see the [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049).</span></span>  
   
-## Vedere anche  
- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="a4534-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a4534-109">See Also</span></span>  
+ [<span data-ttu-id="a4534-110">Disegnare con oggetti Image, Drawing e Visual</span><span class="sxs-lookup"><span data-stu-id="a4534-110">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

@@ -1,39 +1,38 @@
 ---
-title: "Object Data Type | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Object"
-  - "vb.Variant"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "object variables, Object type"
-  - "data types [Visual Basic], assigning"
-  - "Object data type"
-  - "Object data type, reference"
+title: Object Data Type
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Object
+- vb.Variant
+helpviewer_keywords:
+- object variables [Visual Basic], Object type
+- data types [Visual Basic], assigning
+- Object data type
+- Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Object Data Type
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Contiene indirizzi riferiti a oggetti.  A una variabile `Object` è possibile assegnare qualsiasi tipo di riferimento \(stringa, matrice, classe o interfaccia\).  Una variabile `Object` può inoltre fare riferimento a qualsiasi tipo di valore \(numerico, `Boolean`, `Char`, `Date`, struttura o enumerazione\).  
+# <a name="object-data-type"></a><span data-ttu-id="5d6f1-102">Object Data Type</span><span class="sxs-lookup"><span data-stu-id="5d6f1-102">Object Data Type</span></span>
+<span data-ttu-id="5d6f1-103">Contiene gli indirizzi che fanno riferimento a oggetti.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-103">Holds addresses that refer to objects.</span></span> <span data-ttu-id="5d6f1-104">È possibile assegnare qualsiasi tipo riferimento (stringa, matrice, classe o interfaccia) a un `Object` variabile.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-104">You can assign any reference type (string, array, class, or interface) to an `Object` variable.</span></span> <span data-ttu-id="5d6f1-105">Un `Object` variabile può inoltre fare riferimento ai dati di qualsiasi tipo di valore (numerico, `Boolean`, `Char`, `Date`, struttura o enumerazione).</span><span class="sxs-lookup"><span data-stu-id="5d6f1-105">An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).</span></span>  
   
-## Note  
- Il tipo di dati `Object` può fare riferimento a dati di qualsiasi tipo, comprese le istanze di oggetto riconosciute dall'applicazione.  Utilizzare il tipo di dati `Object` quando in fase di compilazione non si conosce il tipo di dati a cui potrebbe fare riferimento la variabile.  
+## <a name="remarks"></a><span data-ttu-id="5d6f1-106">Note</span><span class="sxs-lookup"><span data-stu-id="5d6f1-106">Remarks</span></span>  
+ <span data-ttu-id="5d6f1-107">Il `Object` tipo di dati può fare riferimento ai dati di qualsiasi tipo di dati, inclusi qualsiasi istanza dell'oggetto riconosciuto dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-107">The `Object` data type can point to data of any data type, including any object instance your application recognizes.</span></span> <span data-ttu-id="5d6f1-108">Utilizzare `Object` quando non si conosce in fase di compilazione può scegliere il tipo di dati la variabile.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-108">Use `Object` when you do not know at compile time what data type the variable might point to.</span></span>  
   
- Il valore predefinito di `Object` è `Nothing`, un riferimento null.  
+ <span data-ttu-id="5d6f1-109">Il valore predefinito di `Object` è `Nothing` (un riferimento null).</span><span class="sxs-lookup"><span data-stu-id="5d6f1-109">The default value of `Object` is `Nothing` (a null reference).</span></span>  
   
-## Tipi di dati  
- A una variabile `Object` è possibile assegnare una variabile, una costante o un'espressione di qualsiasi tipo di dati.  Per stabilire il tipo di dati a cui fa attualmente riferimento una variabile `Object`, è possibile utilizzare il metodo <xref:System.Type.GetTypeCode%2A> della classe <xref:System.Type?displayProperty=fullName>.  Questa condizione è illustrata nell'esempio che segue.  
+## <a name="data-types"></a><span data-ttu-id="5d6f1-110">Riepilogo dei tipi di dati</span><span class="sxs-lookup"><span data-stu-id="5d6f1-110">Data Types</span></span>  
+ <span data-ttu-id="5d6f1-111">È possibile assegnare una variabile, costante o espressione di qualsiasi tipo di dati per un `Object` variabile.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-111">You can assign a variable, constant, or expression of any data type to an `Object` variable.</span></span> <span data-ttu-id="5d6f1-112">Per determinare il tipo di dati un `Object` variabile fa attualmente riferimento a, è possibile utilizzare il <xref:System.Type.GetTypeCode%2A> metodo la <xref:System.Type?displayProperty=nameWithType> classe.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-112">To determine the data type an `Object` variable currently refers to, you can use the <xref:System.Type.GetTypeCode%2A> method of the <xref:System.Type?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="5d6f1-113">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-113">The following example illustrates this.</span></span>  
   
 ```  
 Dim myObject As Object  
@@ -42,29 +41,29 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())  
 ```  
   
- Il tipo di dati `Object` è un tipo di riferimento.  Quando fa riferimento a dati di un tipo di valore, tuttavia, una variabile `Object` viene considerata un tipo di valore.  
+ <span data-ttu-id="5d6f1-114">Il `Object` tipo di dati è un tipo di riferimento.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-114">The `Object` data type is a reference type.</span></span> <span data-ttu-id="5d6f1-115">Tuttavia, Visual Basic considera un `Object` variabile come tipo di valore quando fa riferimento a un tipo di valore.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-115">However, Visual Basic treats an `Object` variable as a value type when it refers to data of a value type.</span></span>  
   
-## Memoria  
- Indipendentemente dal tipo di dati a cui fa riferimento, una variabile `Object` non contiene il valore dei dati stesso bensì un puntatore al valore.  Utilizza sempre quattro byte della memoria del computer, ma questo non comprende lo spazio di archiviazione necessario per i dati che rappresentano il valore della variabile.  A causa del codice che utilizza il puntatore per individuare i dati, l'accesso alle variabili `Object` che contengono tipi valore risulta leggermente più lento rispetto alle variabili di tipo esplicito.  
+## <a name="storage"></a><span data-ttu-id="5d6f1-116">Archiviazione</span><span class="sxs-lookup"><span data-stu-id="5d6f1-116">Storage</span></span>  
+ <span data-ttu-id="5d6f1-117">Indipendentemente dal tipo di dati fa riferimento a un `Object` variabile non contiene il valore dati stesso, mentre un puntatore al valore.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-117">Whatever data type it refers to, an `Object` variable does not contain the data value itself, but rather a pointer to the value.</span></span> <span data-ttu-id="5d6f1-118">Utilizza sempre quattro byte nella memoria del computer, ma non include lo spazio di archiviazione per i dati che rappresenta il valore della variabile.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-118">It always uses four bytes in computer memory, but this does not include the storage for the data representing the value of the variable.</span></span> <span data-ttu-id="5d6f1-119">A causa di codice che utilizza l'indicatore di misura per individuare i dati, `Object` variabili che contengono i tipi di valore sono leggermente più lente accedere a in modo esplicito le variabili tipizzate.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-119">Because of the code that uses the pointer to locate the data, `Object` variables holding value types are slightly slower to access than explicitly typed variables.</span></span>  
   
-## Suggerimenti per la programmazione  
+## <a name="programming-tips"></a><span data-ttu-id="5d6f1-120">Suggerimenti per la programmazione</span><span class="sxs-lookup"><span data-stu-id="5d6f1-120">Programming Tips</span></span>  
   
--   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di puntatore in altri ambienti non sono compatibili con il tipo `Object` Visual Basic.  
+-   <span data-ttu-id="5d6f1-121">**Considerazioni sull'interoperabilità.**</span><span class="sxs-lookup"><span data-stu-id="5d6f1-121">**Interop Considerations.**</span></span> <span data-ttu-id="5d6f1-122">Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di puntatore in altri ambienti non sono compatibili con Visual Basic `Object` tipo.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-122">If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that pointer types in other environments are not compatible with the Visual Basic `Object` type.</span></span>  
   
--   **Prestazioni.** Una variabile dichiarata con il tipo `Object` è abbastanza flessibile da contenere un riferimento a qualsiasi oggetto.  Quando, tuttavia, su una variabile di questo tipo si richiama un metodo o una proprietà, si verifica sempre l'*associazione tardiva* \(in fase di esecuzione\).  Per imporre l'*associazione anticipata* \(in fase di compilazione\) e ottenere prestazioni migliori, dichiarare la variabile con un nome classe specifico oppure eseguirne il cast al tipo di dati specifico.  
+-   <span data-ttu-id="5d6f1-123">**Prestazioni.**</span><span class="sxs-lookup"><span data-stu-id="5d6f1-123">**Performance.**</span></span> <span data-ttu-id="5d6f1-124">Una variabile dichiarata con la `Object` tipo è sufficientemente flessibile per contenere un riferimento a qualsiasi oggetto.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-124">A variable you declare with the `Object` type is flexible enough to contain a reference to any object.</span></span> <span data-ttu-id="5d6f1-125">Tuttavia, quando si richiama un metodo o una proprietà di queste variabili, si verifica sempre *ad associazione tardiva* (in fase di esecuzione).</span><span class="sxs-lookup"><span data-stu-id="5d6f1-125">However, when you invoke a method or property on such a variable, you always incur *late binding* (at run time).</span></span> <span data-ttu-id="5d6f1-126">Per forzare *associazione anticipata* (in fase di compilazione) e prestazioni migliori, dichiarare la variabile con un nome di classe specifico o eseguirne il cast al tipo di dati specifico.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-126">To force *early binding* (at compile time) and better performance, declare the variable with a specific class name, or cast it to the specific data type.</span></span>  
   
-     Quando si dichiara una variabile oggetto, provare a utilizzare un tipo di classe specifico, ad esempio <xref:System.OperatingSystem>, invece del tipo `Object` generalizzato.  È inoltre consigliabile utilizzare la classe più specifica disponibile, ad esempio <xref:System.Windows.Forms.TextBox> invece di <xref:System.Windows.Forms.Control>, in modo da poter accedere alle proprietà e ai metodi rispettivi.  È in genere possibile utilizzare la casella di riepilogo **Classi** del **Visualizzatore oggetti** per cercare i nomi delle classi disponibili.  
+     <span data-ttu-id="5d6f1-127">Quando si dichiara una variabile oggetto, provare a utilizzare un tipo di classe specifici, ad esempio <xref:System.OperatingSystem>, anziché il generalizzato `Object` tipo.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-127">When you declare an object variable, try to use a specific class type, for example <xref:System.OperatingSystem>, instead of the generalized `Object` type.</span></span> <span data-ttu-id="5d6f1-128">È inoltre necessario utilizzare la classe più specifica disponibile, ad esempio <xref:System.Windows.Forms.TextBox> anziché <xref:System.Windows.Forms.Control>, in modo che i relativi metodi e proprietà, è possibile accedere.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-128">You should also use the most specific class available, such as <xref:System.Windows.Forms.TextBox> instead of <xref:System.Windows.Forms.Control>, so that you can access its properties and methods.</span></span> <span data-ttu-id="5d6f1-129">In genere, è possibile utilizzare il **classi** nell'elenco di **Visualizzatore oggetti** per trovare i nomi delle classi disponibili.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-129">You can usually use the **Classes** list in the **Object Browser** to find available class names.</span></span>  
   
--   **Conversione verso un tipo di dati più grande.** Tutti i tipi di dati e tutti i tipi di riferimento vengono convertiti nel tipo di dati `Object` più grande.  In altre parole, è possibile convertire in `Object` qualsiasi tipo senza che si verifichi un errore <xref:System.OverflowException?displayProperty=fullName>.  
+-   <span data-ttu-id="5d6f1-130">**Ampliamento.**</span><span class="sxs-lookup"><span data-stu-id="5d6f1-130">**Widening.**</span></span> <span data-ttu-id="5d6f1-131">Tutti i tipi di dati e tutti i tipi di riferimento vengono ampliati al `Object` tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-131">All data types and all reference types widen to the `Object` data type.</span></span> <span data-ttu-id="5d6f1-132">È pertanto possibile convertire qualsiasi tipo per `Object` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-132">This means you can convert any type to `Object` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>  
   
-     Se, tuttavia, si esegue la conversione tra tipi di valori e `Object`, vengono eseguite le operazioni di *boxing* e *unboxing* che determinano un rallentamento dell'esecuzione.  
+     <span data-ttu-id="5d6f1-133">Tuttavia, se è la conversione tra tipi di valore e `Object`, Visual Basic esegue le operazioni di *boxing* e *unboxing*, che rendono l'esecuzione più lenta.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-133">However, if you convert between value types and `Object`, Visual Basic performs operations called *boxing* and *unboxing*, which make execution slower.</span></span>  
   
--   **Caratteri tipo.** `Object` non ha alcun carattere di tipo letterale o carattere identificatore di tipo.  
+-   <span data-ttu-id="5d6f1-134">**Caratteri tipo.**</span><span class="sxs-lookup"><span data-stu-id="5d6f1-134">**Type Characters.**</span></span> <span data-ttu-id="5d6f1-135">`Object`non dispone di alcun carattere di tipo letterale o un carattere di tipo identificatore.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-135">`Object` has no literal type character or identifier type character.</span></span>  
   
--   **Tipo Framework.** Il tipo corrispondente in .NET Framework è la classe <xref:System.Object?displayProperty=fullName>.  
+-   <span data-ttu-id="5d6f1-136">**Tipo di Framework.**</span><span class="sxs-lookup"><span data-stu-id="5d6f1-136">**Framework Type.**</span></span> <span data-ttu-id="5d6f1-137">Il tipo corrispondente in .NET Framework è la <xref:System.Object?displayProperty=nameWithType> classe.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-137">The corresponding type in the .NET Framework is the <xref:System.Object?displayProperty=nameWithType> class.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrata una variabile `Object` che fa riferimento a un'istanza di oggetto.  
+## <a name="example"></a><span data-ttu-id="5d6f1-138">Esempio</span><span class="sxs-lookup"><span data-stu-id="5d6f1-138">Example</span></span>  
+ <span data-ttu-id="5d6f1-139">Nell'esempio seguente viene illustrato un `Object` variabile che punta a un'istanza dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="5d6f1-139">The following example illustrates an `Object` variable pointing to an object instance.</span></span>  
   
 ```  
 Dim objDb As Object  
@@ -73,11 +72,11 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)  
 ```  
   
-## Vedere anche  
- <xref:System.Object>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [How to: Determine Whether Two Objects Are Related](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)   
- [How to: Determine Whether Two Objects Are Identical](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+## <a name="see-also"></a><span data-ttu-id="5d6f1-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5d6f1-140">See Also</span></span>  
+ <xref:System.Object>  
+ [<span data-ttu-id="5d6f1-141">Tipi di dati</span><span class="sxs-lookup"><span data-stu-id="5d6f1-141">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="5d6f1-142">Funzioni di conversione del tipo</span><span class="sxs-lookup"><span data-stu-id="5d6f1-142">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="5d6f1-143">Riepilogo della conversione</span><span class="sxs-lookup"><span data-stu-id="5d6f1-143">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="5d6f1-144">Uso efficiente dei tipi di dati</span><span class="sxs-lookup"><span data-stu-id="5d6f1-144">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [<span data-ttu-id="5d6f1-145">Procedura: determinare se due oggetti sono correlati</span><span class="sxs-lookup"><span data-stu-id="5d6f1-145">How to: Determine Whether Two Objects Are Related</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
+ [<span data-ttu-id="5d6f1-146">Procedura: determinare se due oggetti sono identici</span><span class="sxs-lookup"><span data-stu-id="5d6f1-146">How to: Determine Whether Two Objects Are Identical</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

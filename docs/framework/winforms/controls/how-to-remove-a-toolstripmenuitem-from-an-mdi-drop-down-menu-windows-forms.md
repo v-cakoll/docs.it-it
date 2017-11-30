@@ -1,62 +1,66 @@
 ---
-title: "Procedura: rimuovere un ToolStripMenuItem da un menu a discesa MDI (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI, unione di voci di menu"
-  - "voci di menu, rimozione da menu a discesa MDI"
-  - "MenuStrip (controllo) [Windows Form], unione"
-  - "MenuStrip (controllo) [Windows Form], rimozione"
+title: 'Procedura: rimuovere un ToolStripMenuItem da un menu a discesa MDI (Windows Form)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], removing from MDI drop-down menus
+- MenuStrip control [Windows Forms], merging
+- MenuStrip control [Windows Forms], removing
+- MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b265544b45ad0614985fdc1d8dbf6f9c0b909ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: rimuovere un ToolStripMenuItem da un menu a discesa MDI (Windows Form)
-In alcune applicazioni il tipo di una finestra figlio MDI \(Multiple Document Interface, interfaccia a documenti multipli\) può essere diverso dalla finestra padre MDI.  La finestra padre MDI, ad esempio, potrebbe essere un foglio di lavoro mentre la finestra figlio MDI un grafico.  In tal caso è necessario aggiornare il contenuto del menu del padre MDI con quello del menu del figlio MDI in quanto sono attivate finestre figlio MDI di tipi diversi.  
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a><span data-ttu-id="96516-102">Procedura: rimuovere un ToolStripMenuItem da un menu a discesa MDI (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="96516-102">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu (Windows Forms)</span></span>
+<span data-ttu-id="96516-103">In alcune applicazioni, il tipo di una finestra figlio di interfaccia a documenti multipli (MDI, Multiple Document Interface) può essere diverso dalla finestra padre MDI.</span><span class="sxs-lookup"><span data-stu-id="96516-103">In some applications, the kind of a multiple-document interface (MDI) child window can be different from the MDI parent window.</span></span> <span data-ttu-id="96516-104">Ad esempio, il padre MDI potrebbe essere un foglio di calcolo, mentre il figlio MDI potrebbe essere un grafico.</span><span class="sxs-lookup"><span data-stu-id="96516-104">For example, the MDI parent might be a spreadsheet, and the MDI child might be a chart.</span></span> <span data-ttu-id="96516-105">In tal caso, è consigliabile aggiornare il contenuto del menu del padre MDI con il contenuto del menu del figlio MDI in quanto vengono attivate finestre figlio MDI di tipi diversi.</span><span class="sxs-lookup"><span data-stu-id="96516-105">In that case, you want to update the contents of the MDI parent's menu with the contents of the MDI child's menu as MDI child windows of different kinds are activated.</span></span>  
   
- Nella procedura riportata di seguito sono utilizzate le proprietà <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> e <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> per rimuovere una voce di menu dalla parte a discesa del menu del padre MDI.  Se la finestra figlio MDI viene chiusa, le voci di menu rimosse dal menu del padre MDI vengono ripristinate.  
+ <span data-ttu-id="96516-106">La procedura seguente usa il <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, e <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> proprietà per rimuovere una voce di menu dall'elenco a discesa del menu del padre MDI.</span><span class="sxs-lookup"><span data-stu-id="96516-106">The following procedure uses the <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, and <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span> <span data-ttu-id="96516-107">Chiudere la finestra figlio MDI Ripristina le voci di menu rimosso al menu del padre MDI.</span><span class="sxs-lookup"><span data-stu-id="96516-107">Closing the MDI child window restores the removed menu items to the MDI parent menu.</span></span>  
   
-### Per rimuovere un MenuStrip da un menu a discesa MDI  
+### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a><span data-ttu-id="96516-108">Per rimuovere un MenuStrip da un menu a discesa MDI</span><span class="sxs-lookup"><span data-stu-id="96516-108">To remove a MenuStrip from an MDI drop-down menu</span></span>  
   
-1.  Creare un form e impostarne la proprietà <xref:System.Windows.Forms.Form.IsMdiContainer%2A> su `true`.  
+1.  <span data-ttu-id="96516-109">Creare un form e impostarne la proprietà <xref:System.Windows.Forms.Form.IsMdiContainer%2A> su `true`.</span><span class="sxs-lookup"><span data-stu-id="96516-109">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
   
-2.  Aggiungere una classe <xref:System.Windows.Forms.MenuStrip> a `Form1` e impostare la proprietà <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> di <xref:System.Windows.Forms.MenuStrip> su `true`.  
+2.  <span data-ttu-id="96516-110">Aggiungere <xref:System.Windows.Forms.MenuStrip> a `Form1` e impostare la proprietà <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> di <xref:System.Windows.Forms.MenuStrip> su `true`.</span><span class="sxs-lookup"><span data-stu-id="96516-110">Add a <xref:System.Windows.Forms.MenuStrip> to `Form1` and set the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property of the <xref:System.Windows.Forms.MenuStrip> to `true`.</span></span>  
   
-3.  Aggiungere una voce di menu di primo livello a `Form1`<xref:System.Windows.Forms.MenuStrip> e impostarne  <xref:System.Windows.Forms.Control.Text%2A> proprietà di  `&File`.  
+3.  <span data-ttu-id="96516-111">Aggiungere una voce di menu di primo livello a `Form1`<xref:System.Windows.Forms.MenuStrip> e impostare la relativa proprietà <xref:System.Windows.Forms.Control.Text%2A> su `&File`.</span><span class="sxs-lookup"><span data-stu-id="96516-111">Add a top-level menu item to the `Form1`<xref:System.Windows.Forms.MenuStrip> and set its <xref:System.Windows.Forms.Control.Text%2A> property to `&File`.</span></span>  
   
-4.  Aggiungere tre voci di sottomenu alla voce di menu `&File` e impostare le relative proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> su `&Open`, `&Import from` e `E&xit`.  
+4.  <span data-ttu-id="96516-112">Aggiungere tre voci di sottomenu per il `&File` voce di menu e impostare i relativi <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà `&Open`, `&Import from`, e `E&xit`.</span><span class="sxs-lookup"><span data-stu-id="96516-112">Add three submenu items to the `&File` menu item and set their <xref:System.Windows.Forms.ToolStripItem.Text%2A> properties to `&Open`, `&Import from`, and `E&xit`.</span></span>  
   
-5.  Aggiungere due voci di sottomenu alla voce di sottomenu `&Import from` e impostare le relative proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> su `&Word` e `&Excel`.  
+5.  <span data-ttu-id="96516-113">Aggiungere due voci di sottomenu per il `&Import from` voce di sottomenu e impostare i relativi <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà `&Word` e `&Excel`.</span><span class="sxs-lookup"><span data-stu-id="96516-113">Add two submenu items to the `&Import from` submenu item and set their <xref:System.Windows.Forms.ToolStripItem.Text%2A> properties to `&Word` and `&Excel`.</span></span>  
   
-6.  Aggiungere un form al progetto, aggiungere una classe <xref:System.Windows.Forms.MenuStrip> al form e impostare  <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> proprietà di  `Form2`<xref:System.Windows.Forms.MenuStrip> in  `true`.  
+6.  <span data-ttu-id="96516-114">Aggiungere un form al progetto, aggiungere <xref:System.Windows.Forms.MenuStrip> al form e impostare la proprietà <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> del `Form2`<xref:System.Windows.Forms.MenuStrip> su `true`.</span><span class="sxs-lookup"><span data-stu-id="96516-114">Add a form to the project, add a <xref:System.Windows.Forms.MenuStrip> to the form, and set the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property of the `Form2`<xref:System.Windows.Forms.MenuStrip> to `true`.</span></span>  
   
-7.  Aggiungere una voce di menu di primo livello a `Form2`<xref:System.Windows.Forms.MenuStrip> e impostarne  <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà di  `&File`.  
+7.  <span data-ttu-id="96516-115">Aggiungere una voce di menu di primo livello a `Form2`<xref:System.Windows.Forms.MenuStrip> e impostare la relativa proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> su `&File`.</span><span class="sxs-lookup"><span data-stu-id="96516-115">Add a top-level menu item to the `Form2`<xref:System.Windows.Forms.MenuStrip> and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&File`.</span></span>  
   
-8.  Aggiungere una voce di sottomenu `&Import from` al menu `&File` di `Form2` e aggiungere una voce di sottomenu `&Word` al menu `&File`.  
+8.  <span data-ttu-id="96516-116">Aggiungere un `&Import from` voce del sottomenu al `&File` dal menu di `Form2`e aggiungere un `&Word` voce del sottomenu al `&File` menu.</span><span class="sxs-lookup"><span data-stu-id="96516-116">Add an `&Import from` submenu item to the `&File` menu of `Form2`, and add an `&Word` submenu item to the `&File` menu.</span></span>  
   
-9. Impostare le proprietà <xref:System.Windows.Forms.MergeAction> e <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> delle voci di menu di `Form2` come indicato nella tabella seguente.  
+9. <span data-ttu-id="96516-117">Impostare il <xref:System.Windows.Forms.MergeAction> e <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> le proprietà del `Form2` voci di menu, come illustrato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="96516-117">Set the <xref:System.Windows.Forms.MergeAction> and <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> properties of the `Form2` menu items as shown in the following table.</span></span>  
   
-    |Voce di menu di Form2|Valore di MergeAction|Valore di MergeIndex|  
-    |---------------------------|---------------------------|--------------------------|  
-    |File|MatchOnly|\-1|  
-    |Import from|MatchOnly|\-1|  
-    |Word|Rimozione|\-1|  
+    |<span data-ttu-id="96516-118">Voce di menu Form2</span><span class="sxs-lookup"><span data-stu-id="96516-118">Form2 menu item</span></span>|<span data-ttu-id="96516-119">Valore di MergeAction</span><span class="sxs-lookup"><span data-stu-id="96516-119">MergeAction value</span></span>|<span data-ttu-id="96516-120">Valore di MergeIndex</span><span class="sxs-lookup"><span data-stu-id="96516-120">MergeIndex value</span></span>|  
+    |---------------------|-----------------------|----------------------|  
+    |<span data-ttu-id="96516-121">File</span><span class="sxs-lookup"><span data-stu-id="96516-121">File</span></span>|<span data-ttu-id="96516-122">MatchOnly</span><span class="sxs-lookup"><span data-stu-id="96516-122">MatchOnly</span></span>|<span data-ttu-id="96516-123">-1</span><span class="sxs-lookup"><span data-stu-id="96516-123">-1</span></span>|  
+    |<span data-ttu-id="96516-124">Importare da</span><span class="sxs-lookup"><span data-stu-id="96516-124">Import from</span></span>|<span data-ttu-id="96516-125">MatchOnly</span><span class="sxs-lookup"><span data-stu-id="96516-125">MatchOnly</span></span>|<span data-ttu-id="96516-126">-1</span><span class="sxs-lookup"><span data-stu-id="96516-126">-1</span></span>|  
+    |<span data-ttu-id="96516-127">Parola</span><span class="sxs-lookup"><span data-stu-id="96516-127">Word</span></span>|<span data-ttu-id="96516-128">Rimuovi</span><span class="sxs-lookup"><span data-stu-id="96516-128">Remove</span></span>|<span data-ttu-id="96516-129">-1</span><span class="sxs-lookup"><span data-stu-id="96516-129">-1</span></span>|  
   
-10. in `Form1`, creare un gestore eventi per  <xref:System.Windows.Forms.Control.Click> evento di  `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. <span data-ttu-id="96516-130">In `Form1`, creare un gestore eventi per il <xref:System.Windows.Forms.Control.Click> evento del `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="96516-130">In `Form1`, create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-11. All'interno del gestore eventi inserire codice simile a quello dell'esempio riportato di seguito per creare e visualizzare nuove istanze di `Form2` come istanze figlio MDI di `Form1`:  
+11. <span data-ttu-id="96516-131">Nel gestore eventi inserire codice simile al seguente esempio di codice per creare e visualizzare nuove istanze di `Form2` come finestre figlio MDI di `Form1`:</span><span class="sxs-lookup"><span data-stu-id="96516-131">Within the event handler, insert code similar to the following code example to create and display new instances of `Form2` as MDI children of `Form1`:</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -66,12 +70,9 @@ In alcune applicazioni il tipo di una finestra figlio MDI \(Multiple Document In
         'Display the new form.  
             NewMDIChild.Show()  
     End Sub  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void openToolStripMenuItem_Click(object sender, EventArgs e)  
     {  
         Form2 newMDIChild = new Form2();  
@@ -80,33 +81,30 @@ In alcune applicazioni il tipo di una finestra figlio MDI \(Multiple Document In
         // Display the new form.  
             newMDIChild.Show();  
     }  
-  
     ```  
   
-12. Inserire codice simile al seguente esempio di codice in `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> per registrare il gestore eventi.  
+12. <span data-ttu-id="96516-132">Inserire codice analogo al seguente esempio di codice nel `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> per registrare il gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="96516-132">Place code similar to the following code example in the `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
     EventArgs) Handles openToolStripMenuItem.Click  
-  
     ```  
   
     ```csharp  
     this.openToolStripMenuItem.Click += new _  
     System.EventHandler(this.openToolStripMenuItem_Click);  
-  
     ```  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="96516-133">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="96516-133">Compiling the Code</span></span>  
+ <span data-ttu-id="96516-134">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="96516-134">This example requires:</span></span>  
   
--   Due controlli <xref:System.Windows.Forms.Form> denominati `Form1` e `Form2`.  
+-   <span data-ttu-id="96516-135">Due controlli <xref:System.Windows.Forms.Form> denominati `Form1` e `Form2`.</span><span class="sxs-lookup"><span data-stu-id="96516-135">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
   
--   Un controllo <xref:System.Windows.Forms.MenuStrip> nel controllo `Form1` denominato `menuStrip1` e un controllo <xref:System.Windows.Forms.MenuStrip> nel controllo `Form2` denominato `menuStrip2`.  
+-   <span data-ttu-id="96516-136">Un controllo <xref:System.Windows.Forms.MenuStrip> su `Form1` denominato `menuStrip1` e un controllo <xref:System.Windows.Forms.MenuStrip> su `Form2` denominato `menuStrip2`.</span><span class="sxs-lookup"><span data-stu-id="96516-136">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
   
--   Riferimenti agli assembly <xref:System?displayProperty=fullName> e <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   <span data-ttu-id="96516-137">Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="96516-137">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## Vedere anche  
- [Procedura: creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Procedura: creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [Cenni preliminari sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="96516-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="96516-138">See Also</span></span>  
+ [<span data-ttu-id="96516-139">Procedura: Creare form padre MDI</span><span class="sxs-lookup"><span data-stu-id="96516-139">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [<span data-ttu-id="96516-140">Procedura: Creare form figlio MDI</span><span class="sxs-lookup"><span data-stu-id="96516-140">How to: Create MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [<span data-ttu-id="96516-141">Panoramica sul controllo MenuStrip</span><span class="sxs-lookup"><span data-stu-id="96516-141">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

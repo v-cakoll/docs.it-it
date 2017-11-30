@@ -1,88 +1,87 @@
 ---
-title: "Partial Methods (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PartialMethod"
-  - "PartialMethod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "custom logic into code [Visual Basic]"
-  - "partial methods [Visual Basic]"
-  - "partial, methods [Visual Basic]"
-  - "methods [Visual Basic], partial methods"
-  - "inserting custom logic into code"
+title: Metodi parziali (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PartialMethod
+- PartialMethod
+helpviewer_keywords:
+- custom logic into code [Visual Basic]
+- partial methods [Visual Basic]
+- partial [Visual Basic], methods [Visual Basic]
+- methods [Visual Basic], partial methods
+- inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Partial Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-I metodi parziali consentono agli sviluppatori di inserire una logica personalizzata nel codice.  In genere, il codice è parte di una classe generata nella finestra di progettazione.  I metodi parziali vengono definiti in una classe parziale creata da un generatore di codice e si utilizzano comunemente per notificare che si è verificata qualche modifica.  Consentono allo sviluppatore di specificare un comportamento personalizzato in funzione della modifica.  
+# <a name="partial-methods-visual-basic"></a><span data-ttu-id="a0c3d-102">Metodi parziali (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0c3d-102">Partial Methods (Visual Basic)</span></span>
+<span data-ttu-id="a0c3d-103">Metodi parziali consentono agli sviluppatori di inserire la logica personalizzata nel codice.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-103">Partial methods enable developers to insert custom logic into code.</span></span> <span data-ttu-id="a0c3d-104">In genere, il codice è parte di una classe generato da progettazione.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-104">Typically, the code is part of a designer-generated class.</span></span> <span data-ttu-id="a0c3d-105">Metodi parziali sono definiti in una classe parziale che viene creata da un generatore di codice e vengono utilizzati frequentemente per fornire la notifica che un elemento è stato modificato.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-105">Partial methods are defined in a partial class that is created by a code generator, and they are commonly used to provide notification that something has been changed.</span></span> <span data-ttu-id="a0c3d-106">Consentono allo sviluppatore di specificare un comportamento personalizzato in risposta alla modifica.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-106">They enable the developer to specify custom behavior in response to the change.</span></span>  
   
- La finestra di progettazione del generatore di codice definisce solo la firma del metodo e una o più chiamate al metodo.  Gli sviluppatori possono fornire le implementazioni per il metodo se desiderano personalizzare il comportamento del codice generato.  Quando non viene fornita alcuna implementazione, le chiamate al metodo vengono rimosse dal compilatore, per evitare un ulteriore sovraccarico nelle prestazioni.  
+ <span data-ttu-id="a0c3d-107">La finestra di progettazione del generatore di codice definisce solo la firma del metodo e uno o più chiamate al metodo.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-107">The designer of the code generator defines only the method signature and one or more calls to the method.</span></span> <span data-ttu-id="a0c3d-108">Gli sviluppatori possono quindi fornire le implementazioni del metodo, se si desidera personalizzare il comportamento del codice generato.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-108">Developers can then provide implementations for the method if they want to customize the behavior of the generated code.</span></span> <span data-ttu-id="a0c3d-109">Quando viene fornita alcuna implementazione, le chiamate al metodo vengono rimossi dal compilatore, risultante in nessun overhead di prestazioni.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-109">When no implementation is provided, calls to the method are removed by the compiler, resulting in no additional performance overhead.</span></span>  
   
-## Dichiarazione  
- Il codice generato contrassegna la definizione di un metodo parziale posizionando la parola chiave `Partial` all'inizio della riga della firma.  
+## <a name="declaration"></a><span data-ttu-id="a0c3d-110">Dichiarazione</span><span class="sxs-lookup"><span data-stu-id="a0c3d-110">Declaration</span></span>  
+ <span data-ttu-id="a0c3d-111">Il codice generato contrassegna la definizione di un metodo parziale inserendo la parola chiave `Partial` all'inizio della riga della firma.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-111">The generated code marks the definition of a partial method by placing the keyword `Partial` at the start of the signature line.</span></span>  
   
-```vb#  
+```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
- La definizione deve soddisfare le seguenti condizioni:  
+ <span data-ttu-id="a0c3d-112">La definizione deve soddisfare le condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="a0c3d-112">The definition must meet the following conditions:</span></span>  
   
--   Il metodo deve essere un `Sub`, non una `Function`.  
+-   <span data-ttu-id="a0c3d-113">Il metodo deve essere un `Sub`, non un `Function`.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-113">The method must be a `Sub`, not a `Function`.</span></span>  
   
--   Il corpo del metodo deve essere lasciato vuoto.  
+-   <span data-ttu-id="a0c3d-114">Il corpo del metodo deve essere lasciato vuoto.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-114">The body of the method must be left empty.</span></span>  
   
--   Il modificatore di accesso deve essere `Private`.  
+-   <span data-ttu-id="a0c3d-115">Il modificatore di accesso deve essere `Private`.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-115">The access modifier must be `Private`.</span></span>  
   
-## Implementazione  
- L'implementazione consiste principalmente nell'inserire il corpo del metodo parziale.  L'implementazione è in genere in una classe parziale separata dalla definizione e è scritta da un sviluppatore che desidera estendere il codice generato.  
+## <a name="implementation"></a><span data-ttu-id="a0c3d-116">Implementazione</span><span class="sxs-lookup"><span data-stu-id="a0c3d-116">Implementation</span></span>  
+ <span data-ttu-id="a0c3d-117">L'implementazione è costituita principalmente nell'inserire il corpo del metodo parziale.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-117">The implementation consists primarily of filling in the body of the partial method.</span></span> <span data-ttu-id="a0c3d-118">L'implementazione è in genere in una classe parziale separata dalla definizione e viene scritto da uno sviluppatore che desidera estendere il codice generato.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-118">The implementation is typically in a separate partial class from the definition, and is written by a developer who wants to extend the generated code.</span></span>  
   
-```vb#  
+```vb  
 Private Sub QuantityChanged()  
 '    Code for executing the desired action.  
 End Sub  
 ```  
   
- Nell'esempio precedente viene esattamente duplicata la firma nella dichiarazione, ma sono possibili variazioni.  In particolare, è possibile aggiungere altri modificatori, ad esempio `Overloads` o `Overrides`.  È consentito un solo modificatore `Overrides`.  Per ulteriori informazioni sui modificatori di metodo, vedere [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ <span data-ttu-id="a0c3d-119">La firma nella dichiarazione consente di duplicare esattamente l'esempio precedente, ma sono possibili variazioni.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-119">The previous example duplicates the signature in the declaration exactly, but variations are possible.</span></span> <span data-ttu-id="a0c3d-120">In particolare, è possano aggiungere altri modificatori, ad esempio `Overloads` o `Overrides`.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-120">In particular, other modifiers can be added, such as `Overloads` or `Overrides`.</span></span> <span data-ttu-id="a0c3d-121">Un solo `Overrides` modificatore è consentito.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-121">Only one `Overrides` modifier is permitted.</span></span> <span data-ttu-id="a0c3d-122">Per ulteriori informazioni sui modificatori di metodo, vedere [istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).</span><span class="sxs-lookup"><span data-stu-id="a0c3d-122">For more information about method modifiers, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).</span></span>  
   
-## Utilizzare  
- Si chiama un metodo parziale come si chiamerebbe qualsiasi altra procedura `Sub`.  Se il metodo è stato implementato, gli argomenti vengono valutati e viene eseguito il corpo del metodo.  Tuttavia,occorre ricordare che l'implementazione di un metodo parziale è facoltativa.  Se il metodo non viene implementato, una chiamata non ha effetto e le espressioni passate come argomenti al metodo non vengono valutate.  
+## <a name="use"></a><span data-ttu-id="a0c3d-123">Uso</span><span class="sxs-lookup"><span data-stu-id="a0c3d-123">Use</span></span>  
+ <span data-ttu-id="a0c3d-124">Si chiama un metodo parziale procedendo come per qualsiasi altro `Sub` stored procedure.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-124">You call a partial method as you would call any other `Sub` procedure.</span></span> <span data-ttu-id="a0c3d-125">Se è stato implementato il metodo, gli argomenti vengono valutati e viene eseguito il corpo del metodo.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-125">If the method has been implemented, the arguments are evaluated and the body of the method is executed.</span></span> <span data-ttu-id="a0c3d-126">Tuttavia, tenere presente che l'implementazione di un metodo parziale è facoltativa.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-126">However, remember that implementing a partial method is optional.</span></span> <span data-ttu-id="a0c3d-127">Se non è stato implementato il metodo, una chiamata non ha alcun effetto e non vengono valutate le espressioni passate come argomenti al metodo.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-127">If the method is not implemented, a call to it has no effect, and expressions passed as arguments to the method are not evaluated.</span></span>  
   
-## Esempio  
- In un file denominato Product.Designer.vb, definire una classe `Product` che ha una proprietà `Quantity`.  
+## <a name="example"></a><span data-ttu-id="a0c3d-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="a0c3d-128">Example</span></span>  
+ <span data-ttu-id="a0c3d-129">In un file denominato Product.Designer.vb, definire un `Product` classe che ha un `Quantity` proprietà.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-129">In a file named Product.Designer.vb, define a `Product` class that has a `Quantity` property.</span></span>  
   
  [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
   
- In un file denominato Product.vb, fornire un'implementazione per `QuantityChanged`.  
+ <span data-ttu-id="a0c3d-130">In un file denominato Product. vb, fornire un'implementazione per `QuantityChanged`.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-130">In a file named Product.vb, provide an implementation for `QuantityChanged`.</span></span>  
   
  [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
   
- Infine, nel metodo Main di un progetto, dichiarare un'istanza `Product` e fornire un valore iniziale per la relativa proprietà `Quantity`.  
+ <span data-ttu-id="a0c3d-131">Infine, nel metodo Main di un progetto, dichiarare un `Product` istanza e fornire un valore iniziale per il relativo `Quantity` proprietà.</span><span class="sxs-lookup"><span data-stu-id="a0c3d-131">Finally, in the Main method of a project, declare a `Product` instance and provide an initial value for its `Quantity` property.</span></span>  
   
  [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
   
- Comparirà una finestra che visualizza questo messaggio:  
+ <span data-ttu-id="a0c3d-132">Verrà visualizzata una finestra di messaggio che viene visualizzato questo messaggio:</span><span class="sxs-lookup"><span data-stu-id="a0c3d-132">A message box should appear that displays this message:</span></span>  
   
  `Quantity was changed to 100`  
   
-## Vedere anche  
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Optional Parameters](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
- [Generazione di codice in LINQ to SQL](../Topic/Code%20Generation%20in%20LINQ%20to%20SQL.md)   
- [Aggiunta della logica di business utilizzando i metodi parziali](../Topic/Adding%20Business%20Logic%20By%20Using%20Partial%20Methods.md)
+## <a name="see-also"></a><span data-ttu-id="a0c3d-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a0c3d-133">See Also</span></span>  
+ [<span data-ttu-id="a0c3d-134">Istruzione Sub</span><span class="sxs-lookup"><span data-stu-id="a0c3d-134">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="a0c3d-135">Routine Sub</span><span class="sxs-lookup"><span data-stu-id="a0c3d-135">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="a0c3d-136">Parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="a0c3d-136">Optional Parameters</span></span>](./optional-parameters.md)  
+ [<span data-ttu-id="a0c3d-137">Partial</span><span class="sxs-lookup"><span data-stu-id="a0c3d-137">Partial</span></span>](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [<span data-ttu-id="a0c3d-138">Generazione di codice in LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="a0c3d-138">Code Generation in LINQ to SQL</span></span>](https://msdn.microsoft.com/library/bb399400)  
+ [<span data-ttu-id="a0c3d-139">Aggiunta di logica di Business mediante metodi parziali</span><span class="sxs-lookup"><span data-stu-id="a0c3d-139">Adding Business Logic By Using Partial Methods</span></span>](https://msdn.microsoft.com/library/bb546176)

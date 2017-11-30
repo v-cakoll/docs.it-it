@@ -1,69 +1,73 @@
 ---
-title: "Cenni preliminari sulla grafica vettoriale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "sistemi coordinati"
-  - "grafica, immagini vettoriali"
-  - "punti finali inclusivi"
+title: Cenni preliminari sulla grafica vettoriale
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- inclusive-inclusive endpoints
+- coordinate systems
+- graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7bb3247f531a0dac83657e118fb53ebaf708ec9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sulla grafica vettoriale
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] consente di tracciare linee, rettangoli e altre forme su un sistema di coordinate.  È possibile scegliere tra svariati sistemi di coordinate, ma l'origine del sistema di coordinate predefinito si trova nell'angolo superiore sinistro, con asse x rivolto verso sinistra e asse y rivolto verso il basso.  L'unità di misura del sistema di coordinate predefinito è il pixel.  
+# <a name="vector-graphics-overview"></a><span data-ttu-id="31975-102">Cenni preliminari sulla grafica vettoriale</span><span class="sxs-lookup"><span data-stu-id="31975-102">Vector Graphics Overview</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="31975-103">Consente di disegnare linee, rettangoli e altre forme in un sistema di coordinate.</span><span class="sxs-lookup"><span data-stu-id="31975-103"> draws lines, rectangles, and other shapes on a coordinate system.</span></span> <span data-ttu-id="31975-104">È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate è l'origine nell'angolo superiore sinistro con l'asse x a destra e l'asse y rivolta verso il basso.</span><span class="sxs-lookup"><span data-stu-id="31975-104">You can choose from a variety of coordinate systems, but the default coordinate system has the origin in the upper-left corner with the x-axis pointing to the right and the y-axis pointing down.</span></span> <span data-ttu-id="31975-105">L'unità di misura nel sistema di coordinate predefinito è il pixel.</span><span class="sxs-lookup"><span data-stu-id="31975-105">The unit of measure in the default coordinate system is the pixel.</span></span>  
   
-## Blocchi predefiniti di GDI\+  
- ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.png "AboutGdip02\_Art01")  
+## <a name="the-building-blocks-of-gdi"></a><span data-ttu-id="31975-106">I blocchi predefiniti di GDI+</span><span class="sxs-lookup"><span data-stu-id="31975-106">The Building Blocks of GDI+</span></span>  
+ <span data-ttu-id="31975-107">![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")</span><span class="sxs-lookup"><span data-stu-id="31975-107">![Vector graphic](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")</span></span>  
   
- Il monitor di un computer crea il proprio schermo su una matrice rettangolare di punti definiti elementi di immagine o pixel.  Il numero di pixel visualizzati sullo schermo dipende dal tipo di monitor in uso e il numero di pixel visualizzati su un monitor specifico può solitamente essere configurato fino a un dato livello dall'utente.  
+ <span data-ttu-id="31975-108">Un monitor del computer crea la visualizzazione in una matrice rettangolare di punti definiti elementi immagine o pixel.</span><span class="sxs-lookup"><span data-stu-id="31975-108">A computer monitor creates its display on a rectangular array of dots called picture elements or pixels.</span></span> <span data-ttu-id="31975-109">Il numero di pixel che vengono visualizzati sullo schermo varia da un monitor alla successiva e il numero di pixel che vengono visualizzati su un monitor specifico può essere configurato in una certa misura in genere dall'utente.</span><span class="sxs-lookup"><span data-stu-id="31975-109">The number of pixels that appear on the screen varies from one monitor to the next, and the number of pixels that appear on an individual monitor can usually be configured to some extent by the user.</span></span>  
   
- ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.png "AboutGdip02\_Art02")  
+ <span data-ttu-id="31975-110">![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")</span><span class="sxs-lookup"><span data-stu-id="31975-110">![Vector graphic](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")</span></span>  
   
- Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per tracciare una linea, un rettangolo o una curva, si forniscono determinate informazioni sull'elemento da tracciare.  È ad esempio possibile tracciare una linea specificando due punti, oppure un rettangolo specificando un punto, un'altezza e una larghezza.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] opera unitamente al software del driver video per determinare i pixel da attivare per mostrare la linea, il rettangolo o la curva.  Nell'immagine seguente vengono mostrati i pixel attivati per visualizzare una linea che unisce il punto \(4, 2\) e il punto \(12, 8\).  
+ <span data-ttu-id="31975-111">Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una riga, un rettangolo o una curva, si forniscono determinate informazioni sull'elemento da disegnare.</span><span class="sxs-lookup"><span data-stu-id="31975-111">When you use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to draw a line, rectangle, or curve, you provide certain key information about the item to be drawn.</span></span> <span data-ttu-id="31975-112">Ad esempio, è possibile specificare una riga, fornendo due punti ed è possibile specificare un rettangolo fornendo un punto, un'altezza e larghezza.</span><span class="sxs-lookup"><span data-stu-id="31975-112">For example, you can specify a line by providing two points, and you can specify a rectangle by providing a point, a height, and a width.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="31975-113">funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel che devono essere accesi per mostrare la riga, nel rettangolo o curva.</span><span class="sxs-lookup"><span data-stu-id="31975-113"> works in conjunction with the display driver software to determine which pixels must be turned on to show the line, rectangle, or curve.</span></span> <span data-ttu-id="31975-114">Nella figura seguente mostra i pixel che vengono attivati per visualizzare una linea tra il punto (4, 2) per il punto (12, 8).</span><span class="sxs-lookup"><span data-stu-id="31975-114">The following illustration shows the pixels that are turned on to display a line from the point (4, 2) to the point (12, 8).</span></span>  
   
- ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.png "AboutGdip02\_Art03")  
+ <span data-ttu-id="31975-115">![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")</span><span class="sxs-lookup"><span data-stu-id="31975-115">![Vector graphic](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")</span></span>  
   
- Nel corso del tempo determinati blocchi predefiniti si sono dimostrati più efficaci per la creazione di immagini bidimensionali.  Nell'elenco seguente sono riportati tali blocchi predefiniti, tutti supportati da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ <span data-ttu-id="31975-116">Nel corso del tempo, determinati blocchi predefiniti sono rivelati utili per la creazione di immagini bidimensionali.</span><span class="sxs-lookup"><span data-stu-id="31975-116">Over time, certain basic building blocks have proven to be the most useful for creating two-dimensional pictures.</span></span> <span data-ttu-id="31975-117">Questi blocchi predefiniti, tutti supportati da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], figurano nell'elenco seguente:</span><span class="sxs-lookup"><span data-stu-id="31975-117">These building blocks, which are all supported by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], are given in the following list:</span></span>  
   
--   Righe  
+-   <span data-ttu-id="31975-118">Linee</span><span class="sxs-lookup"><span data-stu-id="31975-118">Lines</span></span>  
   
--   Rettangoli  
+-   <span data-ttu-id="31975-119">Rettangoli</span><span class="sxs-lookup"><span data-stu-id="31975-119">Rectangles</span></span>  
   
--   Ellissi  
+-   <span data-ttu-id="31975-120">Puntini di sospensione</span><span class="sxs-lookup"><span data-stu-id="31975-120">Ellipses</span></span>  
   
--   Archi  
+-   <span data-ttu-id="31975-121">Archi</span><span class="sxs-lookup"><span data-stu-id="31975-121">Arcs</span></span>  
   
--   Poligoni  
+-   <span data-ttu-id="31975-122">Poligoni</span><span class="sxs-lookup"><span data-stu-id="31975-122">Polygons</span></span>  
   
--   Spline di tipo Cardinal  
+-   <span data-ttu-id="31975-123">Spline cardinali</span><span class="sxs-lookup"><span data-stu-id="31975-123">Cardinal splines</span></span>  
   
--   Spline di Bézier  
+-   <span data-ttu-id="31975-124">spline di Bézier</span><span class="sxs-lookup"><span data-stu-id="31975-124">Bezier splines</span></span>  
   
-## Metodi per disegnare con un oggetto Graphics  
- La classe <xref:System.Drawing.Graphics> in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] offre i metodi seguenti per disegnare gli elementi inclusi nell'elenco precedente: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> \(per le spline di tipo Cardinal\) e <xref:System.Drawing.Graphics.DrawBezier%2A>.  Tutti questi metodi sono sottoposti a overload, ovvero ogni metodo supporta svariati elenchi di parametri diversi.  Ad esempio, una variazione del metodo <xref:System.Drawing.Graphics.DrawLine%2A> riceve un oggetto <xref:System.Drawing.Pen> e quattro interi, mentre un'altra variazione del metodo <xref:System.Drawing.Graphics.DrawLine%2A> riceve un oggetto <xref:System.Drawing.Pen> e due oggetti <xref:System.Drawing.Point>.  
+## <a name="methods-for-drawing-with-a-graphics-object"></a><span data-ttu-id="31975-125">Metodi per disegnare con un oggetto Graphics</span><span class="sxs-lookup"><span data-stu-id="31975-125">Methods For Drawing with a Graphics Object</span></span>  
+ <span data-ttu-id="31975-126">Il <xref:System.Drawing.Graphics> classe [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce i seguenti metodi di disegno degli elementi nell'elenco precedente: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (per spline cardinali), e <xref:System.Drawing.Graphics.DrawBezier%2A>.</span><span class="sxs-lookup"><span data-stu-id="31975-126">The <xref:System.Drawing.Graphics> class in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] provides the following methods for drawing the items in the previous list: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (for cardinal splines), and <xref:System.Drawing.Graphics.DrawBezier%2A>.</span></span> <span data-ttu-id="31975-127">Ognuno di questi metodi è in overload; ovvero, ogni metodo supporta diversi elenchi di parametri diversi.</span><span class="sxs-lookup"><span data-stu-id="31975-127">Each of these methods is overloaded; that is, each method supports several different parameter lists.</span></span> <span data-ttu-id="31975-128">Ad esempio, una variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e quattro valori integer, mentre un'altra variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e due <xref:System.Drawing.Point> oggetti.</span><span class="sxs-lookup"><span data-stu-id="31975-128">For example, one variation of the <xref:System.Drawing.Graphics.DrawLine%2A> method receives a <xref:System.Drawing.Pen> object and four integers, while another variation of the <xref:System.Drawing.Graphics.DrawLine%2A> method receives a <xref:System.Drawing.Pen> object and two <xref:System.Drawing.Point> objects.</span></span>  
   
- Ai metodi per tracciare linee, rettangoli e spline Bézier sono associati più metodi correlati che consentono di disegnare più elementi in un'unica chiamata: <xref:System.Drawing.Graphics.DrawLines%2A>, <xref:System.Drawing.Graphics.DrawRectangles%2A> e <xref:System.Drawing.Graphics.DrawBeziers%2A>.  Al metodo <xref:System.Drawing.Graphics.DrawCurve%2A> inoltre è associato un metodo correlato <xref:System.Drawing.Graphics.DrawClosedCurve%2A>, che consente di chiudere una curva collegandone il punto finale e il punto iniziale.  
+ <span data-ttu-id="31975-129">I metodi per tracciare linee, rettangoli e spline di Bézier sono associati più metodi che consentono di disegnare diversi elementi in una singola chiamata: <xref:System.Drawing.Graphics.DrawLines%2A>, <xref:System.Drawing.Graphics.DrawRectangles%2A>, e <xref:System.Drawing.Graphics.DrawBeziers%2A>.</span><span class="sxs-lookup"><span data-stu-id="31975-129">The methods for drawing lines, rectangles, and Bézier splines have plural companion methods that draw several items in a single call: <xref:System.Drawing.Graphics.DrawLines%2A>, <xref:System.Drawing.Graphics.DrawRectangles%2A>, and <xref:System.Drawing.Graphics.DrawBeziers%2A>.</span></span> <span data-ttu-id="31975-130">Inoltre, il <xref:System.Drawing.Graphics.DrawCurve%2A> metodo ha un metodo correlato <xref:System.Drawing.Graphics.DrawClosedCurve%2A>, che si chiude una curva connettendo il punto finale della curva a partire dalla punto.</span><span class="sxs-lookup"><span data-stu-id="31975-130">Also, the <xref:System.Drawing.Graphics.DrawCurve%2A> method has a companion method, <xref:System.Drawing.Graphics.DrawClosedCurve%2A>, that closes a curve by connecting the ending point of the curve to the starting point.</span></span>  
   
- Tutti i metodi di disegno della classe <xref:System.Drawing.Graphics> vengono utilizzati insieme a un oggetto <xref:System.Drawing.Pen>.  Per tracciare un qualsiasi elemento, è necessario creare almeno due oggetti: un oggetto <xref:System.Drawing.Graphics> e un oggetto <xref:System.Drawing.Pen>.  Nell'oggetto <xref:System.Drawing.Pen> vengono memorizzati gli attributi, quali lo spessore e il colore della linea, dell'elemento da tracciare.  L'oggetto <xref:System.Drawing.Pen> viene passato come uno degli argomenti del metodo di disegno.  Una variazione del metodo <xref:System.Drawing.Graphics.DrawLine%2A> ad esempio riceve un oggetto <xref:System.Drawing.Pen> e quattro interi, come illustrato nell'esempio seguente, che consentono di tracciare un rettangolo con larghezza 100, altezza 50 e angolo superiore sinistro di \(20, 10\):  
+ <span data-ttu-id="31975-131">Tutti i metodi di disegno di <xref:System.Drawing.Graphics> classe funzionare in combinazione con un <xref:System.Drawing.Pen> oggetto.</span><span class="sxs-lookup"><span data-stu-id="31975-131">All of the drawing methods of the <xref:System.Drawing.Graphics> class work in conjunction with a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="31975-132">Per creare qualsiasi oggetto, è necessario creare almeno due oggetti: un <xref:System.Drawing.Graphics> oggetto e un <xref:System.Drawing.Pen> oggetto.</span><span class="sxs-lookup"><span data-stu-id="31975-132">To draw anything, you must create at least two objects: a <xref:System.Drawing.Graphics> object and a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="31975-133">Il <xref:System.Drawing.Pen> oggetto archivia gli attributi, ad esempio spessore e colore, dell'elemento da disegnare.</span><span class="sxs-lookup"><span data-stu-id="31975-133">The <xref:System.Drawing.Pen> object stores attributes, such as line width and color, of the item to be drawn.</span></span> <span data-ttu-id="31975-134">Il <xref:System.Drawing.Pen> oggetto viene passato come uno degli argomenti del metodo di disegno.</span><span class="sxs-lookup"><span data-stu-id="31975-134">The <xref:System.Drawing.Pen> object is passed as one of the arguments to the drawing method.</span></span> <span data-ttu-id="31975-135">Ad esempio, una variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e quattro valori integer, come illustrato nell'esempio seguente, che disegna un rettangolo con una larghezza pari a 100 e un'altezza pari a 50 e un angolo superiore sinistro di (20, 10):</span><span class="sxs-lookup"><span data-stu-id="31975-135">For example, one variation of the <xref:System.Drawing.Graphics.DrawLine%2A> method receives a <xref:System.Drawing.Pen> object and four integers as shown in the following example, which draws a rectangle with a width of 100, a height of 50 and an upper-left corner of (20, 10):</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
  [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
-## Vedere anche  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Procedura: creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+## <a name="see-also"></a><span data-ttu-id="31975-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="31975-136">See Also</span></span>  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ [<span data-ttu-id="31975-137">Linee, curve e forme</span><span class="sxs-lookup"><span data-stu-id="31975-137">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="31975-138">Procedura: Creare oggetti Graphics per disegnare</span><span class="sxs-lookup"><span data-stu-id="31975-138">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)

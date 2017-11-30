@@ -1,56 +1,61 @@
 ---
-title: "Intercettazione dell&#39;input dello stilo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "architettura, System.Windows.Input.StylusPlugIns"
-  - "InkCanvas, aggiunta di plug-in"
-  - "plug-in, stilo"
-  - "StylusPlugIns (architettura)"
-  - "System.Windows.Input.StylusPlugIns (architettura)"
+title: Intercettazione dell'input dello stilo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- 'architecture [WPF], '
+- ', '
+- ', '
+- ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 611a2d2de56025e2f1b5add6106294834586f9af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Intercettazione dell&#39;input dello stilo
-L'architettura <xref:System.Windows.Input.StylusPlugIns> fornisce un meccanismo per l'implementazione del controllo di basso livello sull'input di <xref:System.Windows.Input.Stylus> e la creazione di oggetti <xref:System.Windows.Ink.Stroke> di input penna.  La classe <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> fornisce un meccanismo per implementare il comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali.  
+# <a name="intercepting-input-from-the-stylus"></a><span data-ttu-id="6db0e-102">Intercettazione dell'input dello stilo</span><span class="sxs-lookup"><span data-stu-id="6db0e-102">Intercepting Input from the Stylus</span></span>
+<span data-ttu-id="6db0e-103">Il <xref:System.Windows.Input.StylusPlugIns> architettura fornisce un meccanismo per l'implementazione di controllo di basso livello su <xref:System.Windows.Input.Stylus> input e la creazione di input penna <xref:System.Windows.Ink.Stroke> oggetti.</span><span class="sxs-lookup"><span data-stu-id="6db0e-103">The <xref:System.Windows.Input.StylusPlugIns> architecture provides a mechanism for implementing low-level control over <xref:System.Windows.Input.Stylus> input and the creation of digital ink <xref:System.Windows.Ink.Stroke> objects.</span></span> <span data-ttu-id="6db0e-104">La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornisce un meccanismo per implementare un comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali.</span><span class="sxs-lookup"><span data-stu-id="6db0e-104">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> class provides a mechanism for you to implement custom behavior and apply it to the stream of data coming from the stylus device for the optimal performance.</span></span>  
   
- In questo argomento sono contenute le seguenti sottosezioni:  
+ <span data-ttu-id="6db0e-105">In questo argomento sono contenute le seguenti sottosezioni:</span><span class="sxs-lookup"><span data-stu-id="6db0e-105">This topic contains the following subsections:</span></span>  
   
--   [Architettura](#Architecture)  
+-   [<span data-ttu-id="6db0e-106">Architettura</span><span class="sxs-lookup"><span data-stu-id="6db0e-106">Architecture</span></span>](#Architecture)  
   
--   [Implementazione dei plug-in dello stilo](#ImplementingStylusPlugins)  
+-   [<span data-ttu-id="6db0e-107">Implementazione di Plug-in dello stilo</span><span class="sxs-lookup"><span data-stu-id="6db0e-107">Implementing Stylus Plug-ins</span></span>](#ImplementingStylusPlugins)  
   
--   [Aggiunta del plug-in a un InkCanvas](#AddingYourPluginToAnInkCanvas)  
+-   [<span data-ttu-id="6db0e-108">Aggiungere il plug-in per un oggetto InkCanvas</span><span class="sxs-lookup"><span data-stu-id="6db0e-108">Adding Your Plug-in to an InkCanvas</span></span>](#AddingYourPluginToAnInkCanvas)  
   
--   [Conclusione](#Conclusion)  
+-   [<span data-ttu-id="6db0e-109">Conclusione</span><span class="sxs-lookup"><span data-stu-id="6db0e-109">Conclusion</span></span>](#Conclusion)  
   
 <a name="Architecture"></a>   
-## Architettura  
- La classe <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> rappresenta l'evoluzione delle API [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409), descritte nel documento [Accesso e modifica dell'input penna](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409), in [Microsoft Windows XP Tablet PC Edition Software Development Kit 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)  
+## <a name="architecture"></a><span data-ttu-id="6db0e-110">Architettura</span><span class="sxs-lookup"><span data-stu-id="6db0e-110">Architecture</span></span>  
+ <span data-ttu-id="6db0e-111">Il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> è l'evoluzione del [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) API, descritte in [accesso e la modifica di Input penna](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)nella [Software di Microsoft Windows XP Tablet PC Edition Kit di sviluppo 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409).</span><span class="sxs-lookup"><span data-stu-id="6db0e-111">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> is the evolution of the [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) APIs, described in [Accessing and Manipulating Pen Input](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409), in the [Microsoft Windows XP Tablet PC Edition Software Development Kit 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409).</span></span>  
   
- Ogni oggetto <xref:System.Windows.UIElement> include una proprietà <xref:System.Windows.UIElement.StylusPlugIns%2A> che corrisponde a un oggetto <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  È possibile aggiungere un oggetto <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> alla proprietà <xref:System.Windows.UIElement.StylusPlugIns%2A> di un elemento per modificare i dati di <xref:System.Windows.Input.StylusPoint> al momento della generazione.  I dati di <xref:System.Windows.Input.StylusPoint> sono costituiti da tutte le proprietà supportate dal digitalizzatore del sistema, inclusi i dati dei punti <xref:System.Windows.Input.StylusPoint.X%2A> e <xref:System.Windows.Input.StylusPoint.Y%2A> e i dati <xref:System.Windows.Input.StylusPoint.PressureFactor%2A>.  
+ <span data-ttu-id="6db0e-112">Ogni <xref:System.Windows.UIElement> ha un <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà che è un <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span><span class="sxs-lookup"><span data-stu-id="6db0e-112">Each <xref:System.Windows.UIElement> has a <xref:System.Windows.UIElement.StylusPlugIns%2A> property that is a <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span></span> <span data-ttu-id="6db0e-113">È possibile aggiungere un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> a un elemento <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà per modificare <xref:System.Windows.Input.StylusPoint> dati man mano che viene generati.</span><span class="sxs-lookup"><span data-stu-id="6db0e-113">You can add a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> to an element's <xref:System.Windows.UIElement.StylusPlugIns%2A> property to manipulate <xref:System.Windows.Input.StylusPoint> data as it is generated.</span></span> <span data-ttu-id="6db0e-114"><xref:System.Windows.Input.StylusPoint>i dati sono costituiti da tutte le proprietà supportate dal digitalizzatore del sistema, inclusi il <xref:System.Windows.Input.StylusPoint.X%2A> e <xref:System.Windows.Input.StylusPoint.Y%2A> punto dati, nonché <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> dati.</span><span class="sxs-lookup"><span data-stu-id="6db0e-114"><xref:System.Windows.Input.StylusPoint> data consists of all the properties supported by the system digitizer, including the <xref:System.Windows.Input.StylusPoint.X%2A> and <xref:System.Windows.Input.StylusPoint.Y%2A> point data, as well as <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> data.</span></span>  
   
- Gli oggetti <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> vengono inseriti direttamente nel flusso di dati provenienti dal dispositivo <xref:System.Windows.Input.Stylus> quando si aggiunge l'oggetto <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> alla proprietà <xref:System.Windows.UIElement.StylusPlugIns%2A>.  L'ordine in cui i plug\-in vengono aggiunti alla raccolta <xref:System.Windows.UIElement.StylusPlugIns%2A> definisce l'ordine in cui riceveranno i dati <xref:System.Windows.Input.StylusPoint>.  Ad esempio, se si aggiunge un plug\-in di filtro che restringe l'input ad una particolare area e quindi si aggiunge un plug\-in che riconosce i movimenti quando vengono scritti, tale plug\-in riceverà dati <xref:System.Windows.Input.StylusPoint> filtrati.  
+ <span data-ttu-id="6db0e-115">Il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> gli oggetti vengono inseriti direttamente nel flusso di dati provenienti dal <xref:System.Windows.Input.Stylus> dispositivo quando si aggiunge il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> per il <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="6db0e-115">Your <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects are inserted directly into the stream of data coming from the <xref:System.Windows.Input.Stylus> device when you add the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> to the <xref:System.Windows.UIElement.StylusPlugIns%2A> property.</span></span> <span data-ttu-id="6db0e-116">L'ordine in cui vengono aggiunti i plug-in per il <xref:System.Windows.UIElement.StylusPlugIns%2A> raccolta definisce l'ordine in cui riceveranno <xref:System.Windows.Input.StylusPoint> dati.</span><span class="sxs-lookup"><span data-stu-id="6db0e-116">The order in which plug-ins are added to the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection dictates the order in which they will receive <xref:System.Windows.Input.StylusPoint> data.</span></span> <span data-ttu-id="6db0e-117">Ad esempio, se si aggiunge un plug-in filtro che limita l'input a una determinata area e quindi aggiungere un plug-in che riconosce quando vengono scritti, il plug-in riceverà filtrato <xref:System.Windows.Input.StylusPoint> dati.</span><span class="sxs-lookup"><span data-stu-id="6db0e-117">For example, if you add a filter plug-in that restricts input to a particular region, and then add a plug-in that recognizes gestures as they are written, the plug-in that recognizes gestures will receive filtered <xref:System.Windows.Input.StylusPoint> data.</span></span>  
   
 <a name="ImplementingStylusPlugins"></a>   
-## Implementazione dei plug\-in dello stilo  
- Per implementare un plug\-in, derivare una classe da <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  Questa classe viene applicata al flusso di dati provenienti dall'oggetto <xref:System.Windows.Input.Stylus>.  In questa classe è possibile modificare i valori dei dati <xref:System.Windows.Input.StylusPoint>.  
+## <a name="implementing-stylus-plug-ins"></a><span data-ttu-id="6db0e-118">Implementazione di Plug-in dello stilo</span><span class="sxs-lookup"><span data-stu-id="6db0e-118">Implementing Stylus Plug-ins</span></span>  
+ <span data-ttu-id="6db0e-119">Per implementare un plug-in, derivare una classe da <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span><span class="sxs-lookup"><span data-stu-id="6db0e-119">To implement a plug-in, derive a class from <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span></span> <span data-ttu-id="6db0e-120">Questa classe viene applicata al flusso di dati provenienti dal <xref:System.Windows.Input.Stylus>.</span><span class="sxs-lookup"><span data-stu-id="6db0e-120">This class is applied o the stream of data as it comes in from the <xref:System.Windows.Input.Stylus>.</span></span> <span data-ttu-id="6db0e-121">In questa classe è possibile modificare i valori del <xref:System.Windows.Input.StylusPoint> dati.</span><span class="sxs-lookup"><span data-stu-id="6db0e-121">In this class you can modify the values of the <xref:System.Windows.Input.StylusPoint> data.</span></span>  
   
 > [!CAUTION]
->  Se una classe <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> genera o causa un'eccezione, l'applicazione verrà chiusa.  È necessario svolgere test accurati sui controlli che utilizzano un oggetto <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> e utilizzare un controllo solo se si è certi che l'oggetto <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> non genererà un'eccezione.  
+>  <span data-ttu-id="6db0e-122">Se un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> genera o genera un'eccezione, l'applicazione verrà chiusa.</span><span class="sxs-lookup"><span data-stu-id="6db0e-122">If a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> throws or causes an exception, the application will close.</span></span> <span data-ttu-id="6db0e-123">È consigliabile verificare accuratamente i controlli che utilizzano un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> e utilizzare un controllo solo se si è certi di <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> non genererà un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="6db0e-123">You should thoroughly test controls that consume a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> and only use a control if you are certain the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> will not throw an exception.</span></span>  
   
- Nell'esempio seguente viene illustrato un plug\-in che restringe l'input dello stilo modificando i valori <xref:System.Windows.Input.StylusPoint.X%2A> e <xref:System.Windows.Input.StylusPoint.Y%2A> nei dati <xref:System.Windows.Input.StylusPoint> provenienti dal dispositivo <xref:System.Windows.Input.Stylus>.  
+ <span data-ttu-id="6db0e-124">Nell'esempio seguente viene illustrato un plug-in che limita l'input con stilo modificando il <xref:System.Windows.Input.StylusPoint.X%2A> e <xref:System.Windows.Input.StylusPoint.Y%2A> i valori di <xref:System.Windows.Input.StylusPoint> provengono dati man mano che il <xref:System.Windows.Input.Stylus> dispositivo.</span><span class="sxs-lookup"><span data-stu-id="6db0e-124">The following example demonstrates a plug-in that restricts the stylus input by modifying the <xref:System.Windows.Input.StylusPoint.X%2A> and <xref:System.Windows.Input.StylusPoint.Y%2A> values in the <xref:System.Windows.Input.StylusPoint> data as it comes in from the <xref:System.Windows.Input.Stylus> device.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -58,23 +63,23 @@ L'architettura <xref:System.Windows.Input.StylusPlugIns> fornisce un meccanismo 
 [!code-vb[AdvancedInkTopicsSamples#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
-## Aggiunta del plug\-in a un InkCanvas  
- Il modo più semplice per utilizzare il plug\-in personalizzato consiste nell'implementare una classe che deriva da InkCanvas e aggiungerla alla proprietà <xref:System.Windows.UIElement.StylusPlugIns%2A>.  
+## <a name="adding-your-plug-in-to-an-inkcanvas"></a><span data-ttu-id="6db0e-125">Aggiungere il plug-in per un oggetto InkCanvas</span><span class="sxs-lookup"><span data-stu-id="6db0e-125">Adding Your Plug-in to an InkCanvas</span></span>  
+ <span data-ttu-id="6db0e-126">Il modo più semplice per utilizzare il plug-in personalizzato consiste nell'implementare una classe che deriva da InkCanvas e aggiungerla al <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="6db0e-126">The easiest way to use your custom plug-in is to implement a class that derives from InkCanvas and add it to the <xref:System.Windows.UIElement.StylusPlugIns%2A> property.</span></span>  
   
- Nell'esempio seguente viene illustrato un oggetto <xref:System.Windows.Controls.InkCanvas> personalizzato che filtra l'input penna.  
+ <span data-ttu-id="6db0e-127">Nell'esempio seguente viene illustrato un personalizzato <xref:System.Windows.Controls.InkCanvas> che filtra l'input penna.</span><span class="sxs-lookup"><span data-stu-id="6db0e-127">The following example demonstrates a custom <xref:System.Windows.Controls.InkCanvas> that filters the ink.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
- Se si aggiunge un oggetto `FilterInkCanvas` all'applicazione e la si esegue, si noterà che l'input penna viene limitato a un'area solo dopo che l'utente completa un tratto.  Ciò è dovuto al fatto che l'oggetto <xref:System.Windows.Controls.InkCanvas> include una proprietà <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> che corrisponde a un oggetto <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> ed è già un membro della raccolta <xref:System.Windows.UIElement.StylusPlugIns%2A>.  L'oggetto <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> personalizzato aggiunto alla raccolta <xref:System.Windows.UIElement.StylusPlugIns%2A> riceve i dati <xref:System.Windows.Input.StylusPoint> dopo che <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> riceve dati.  Di conseguenza, i dati <xref:System.Windows.Input.StylusPoint> verranno filtrati solo dopo che l'utente solleva la penna per terminare un tratto.  Per filtrare l'input penna via via che viene tracciato dall'utente, è necessario inserire l'oggetto `FilterPlugin` prima dell'oggetto <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  
+ <span data-ttu-id="6db0e-128">Se si aggiunge un `FilterInkCanvas` all'applicazione e l'esecuzione, si noterà che l'input penna viene limitato a un'area solo dopo il completamento di un tratto.</span><span class="sxs-lookup"><span data-stu-id="6db0e-128">If you add a `FilterInkCanvas` to your application and run it, you will notice that the ink isn't restricted to a region until after the user completes a stroke.</span></span> <span data-ttu-id="6db0e-129">In questo modo il <xref:System.Windows.Controls.InkCanvas> ha un <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> proprietà, che è un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> ed è già un membro del <xref:System.Windows.UIElement.StylusPlugIns%2A> insieme.</span><span class="sxs-lookup"><span data-stu-id="6db0e-129">This is because the <xref:System.Windows.Controls.InkCanvas> has a <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> property, which is a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> and is already a member of the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection.</span></span> <span data-ttu-id="6db0e-130">Personalizzata <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> aggiunto per il <xref:System.Windows.UIElement.StylusPlugIns%2A> raccolta riceve il <xref:System.Windows.Input.StylusPoint> dati dopo <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> riceve i dati.</span><span class="sxs-lookup"><span data-stu-id="6db0e-130">The custom <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> you added to the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection receives the <xref:System.Windows.Input.StylusPoint> data after <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> receives data.</span></span> <span data-ttu-id="6db0e-131">Di conseguenza, il <xref:System.Windows.Input.StylusPoint> dati non verranno filtrati fino a dopo che l'utente solleva la penna per terminare un tratto.</span><span class="sxs-lookup"><span data-stu-id="6db0e-131">As a result, the <xref:System.Windows.Input.StylusPoint> data will not be filtered until after the user lifts the pen to end a stroke.</span></span> <span data-ttu-id="6db0e-132">Per filtrare l'input penna che l'utente viene tracciato, è necessario inserire il `FilterPlugin` prima di <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span><span class="sxs-lookup"><span data-stu-id="6db0e-132">To filter the ink as the user draws it, you must insert the `FilterPlugin` before the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span></span>  
   
- Nel codice C\# seguente viene illustrato un oggetto <xref:System.Windows.Controls.InkCanvas> personalizzato che filtra l'input penna via via che viene tracciato.  
+ <span data-ttu-id="6db0e-133">Il codice c# seguente viene illustrato un personalizzato <xref:System.Windows.Controls.InkCanvas> che filtra l'input penna che viene disegnato.</span><span class="sxs-lookup"><span data-stu-id="6db0e-133">The following C# code demonstrates a custom <xref:System.Windows.Controls.InkCanvas> that filters the ink as it is drawn.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
-## Conclusione  
- Derivando le classi <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> e inserendole nelle raccolte <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, è possibile migliorare notevolmente il comportamento dell'input penna.  Ottenendo l'accesso ai dati <xref:System.Windows.Input.StylusPoint> mentre vengono generati, è possibile personalizzare l'input <xref:System.Windows.Input.Stylus>.  Grazie all'accesso di basso livello ai dati <xref:System.Windows.Input.StylusPoint>, è possibile implementare la raccolta e il rendering dell'input penna con prestazioni ottimali per l'applicazione.  
+## <a name="conclusion"></a><span data-ttu-id="6db0e-134">Conclusione</span><span class="sxs-lookup"><span data-stu-id="6db0e-134">Conclusion</span></span>  
+ <span data-ttu-id="6db0e-135">Derivando <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classi e inserendoli in <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> raccolte, è possibile migliorare notevolmente il comportamento della penna.</span><span class="sxs-lookup"><span data-stu-id="6db0e-135">By deriving your own <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classes and inserting them into <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> collections, you can greatly enhance the behavior of your digital ink.</span></span> <span data-ttu-id="6db0e-136">È possibile accedere il <xref:System.Windows.Input.StylusPoint> dati man mano che viene generati, offrendo la possibilità di personalizzare il <xref:System.Windows.Input.Stylus> input.</span><span class="sxs-lookup"><span data-stu-id="6db0e-136">You have access to the <xref:System.Windows.Input.StylusPoint> data as it is generated, giving you the opportunity to customize the <xref:System.Windows.Input.Stylus> input.</span></span> <span data-ttu-id="6db0e-137">Perché si dispone di accesso di basso livello per il <xref:System.Windows.Input.StylusPoint> dati, è possibile implementare la raccolta di input penna e il rendering con prestazioni ottimali per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="6db0e-137">Because you have such low-level access to the <xref:System.Windows.Input.StylusPoint> data, you can implement ink collection and rendering with optimal performance for your application.</span></span>  
   
-## Vedere anche  
- [Gestione avanzata dell'input penna](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)   
- [Accesso e modifica dell'input penna](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="6db0e-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6db0e-138">See Also</span></span>  
+ [<span data-ttu-id="6db0e-139">Gestione avanzata dell'input penna</span><span class="sxs-lookup"><span data-stu-id="6db0e-139">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
+ [<span data-ttu-id="6db0e-140">L'accesso e modifica dell'Input penna</span><span class="sxs-lookup"><span data-stu-id="6db0e-140">Accessing and Manipulating Pen Input</span></span>](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

@@ -1,73 +1,73 @@
 ---
-title: "Architettura del controllo DataGridView (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView (controllo) [Windows Form], architettura"
+title: Architettura del controllo DataGridView (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb44a32e63fd7a0ff0e480c205d5459da2ce2bd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Architettura del controllo DataGridView (Windows Form)
-Il controllo <xref:System.Windows.Forms.DataGridView> e le relative classi sono progettati per costituire un sistema flessibile ed estendibile per la visualizzazione e la modifica di dati in formato tabulare.  Queste classi sono contenute tutte nello spazio dei nomi <xref:System.Windows.Forms?displayProperty=fullName> e sono contrassegnate con il prefisso "DataGridView".  
+# <a name="datagridview-control-architecture-windows-forms"></a><span data-ttu-id="f5b74-102">Architettura del controllo DataGridView (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="f5b74-102">DataGridView Control Architecture (Windows Forms)</span></span>
+<span data-ttu-id="f5b74-103">Il <xref:System.Windows.Forms.DataGridView> controllo e le relative classi sono progettate per essere un sistema flessibile ed estendibile per la visualizzazione e modifica di dati tabulari.</span><span class="sxs-lookup"><span data-stu-id="f5b74-103">The <xref:System.Windows.Forms.DataGridView> control and its related classes are designed to be a flexible, extensible system for displaying and editing tabular data.</span></span> <span data-ttu-id="f5b74-104">Queste classi sono contenute nel <xref:System.Windows.Forms?displayProperty=nameWithType> dello spazio dei nomi e nomi con il prefisso "DataGridView".</span><span class="sxs-lookup"><span data-stu-id="f5b74-104">These classes are all contained in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace, and they are all named with the "DataGridView" prefix.</span></span>  
   
-## Elementi dell'architettura  
- Le principali classi correlate <xref:System.Windows.Forms.DataGridView> derivano da <xref:System.Windows.Forms.DataGridViewElement>.  Nel modello a oggetti riportato di seguito viene illustrata la gerarchia di ereditarietà di <xref:System.Windows.Forms.DataGridViewElement>.  
+## <a name="architecture-elements"></a><span data-ttu-id="f5b74-105">Elementi dell'architettura</span><span class="sxs-lookup"><span data-stu-id="f5b74-105">Architecture Elements</span></span>  
+ <span data-ttu-id="f5b74-106">Il database primario <xref:System.Windows.Forms.DataGridView> classi correlate derivano da <xref:System.Windows.Forms.DataGridViewElement>.</span><span class="sxs-lookup"><span data-stu-id="f5b74-106">The primary <xref:System.Windows.Forms.DataGridView> companion classes derive from <xref:System.Windows.Forms.DataGridViewElement>.</span></span> <span data-ttu-id="f5b74-107">Il modello a oggetti seguente viene illustrato il <xref:System.Windows.Forms.DataGridViewElement> gerarchia di ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="f5b74-107">The following object model illustrates the <xref:System.Windows.Forms.DataGridViewElement> inheritance hierarchy.</span></span>  
   
- ![Modello a oggetti DataGridViewElement](../../../../docs/framework/winforms/controls/media/datagridviewelement.png "DataGridViewElement")  
-Modello a oggetti DataGridViewElement  
+ <span data-ttu-id="f5b74-108">![Modello a oggetti DataGridViewElement](../../../../docs/framework/winforms/controls/media/datagridviewelement.gif "DataGridViewElement")</span><span class="sxs-lookup"><span data-stu-id="f5b74-108">![DataGridViewElement Object Model](../../../../docs/framework/winforms/controls/media/datagridviewelement.gif "DataGridViewElement")</span></span>  
+<span data-ttu-id="f5b74-109">Modello a oggetti DataGridViewElement</span><span class="sxs-lookup"><span data-stu-id="f5b74-109">DataGridViewElement object model</span></span>  
   
- La classe <xref:System.Windows.Forms.DataGridViewElement> fornisce un riferimento al controllo padre <xref:System.Windows.Forms.DataGridView> e dispone di una proprietà <xref:System.Windows.Forms.DataGridViewElement.State%2A> che contiene un valore che rappresenta una combinazione dei valori dell'enumerazione <xref:System.Windows.Forms.DataGridViewElementStates>.  
+ <span data-ttu-id="f5b74-110">Il <xref:System.Windows.Forms.DataGridViewElement> classe fornisce un riferimento all'elemento padre <xref:System.Windows.Forms.DataGridView> controllare e ha un <xref:System.Windows.Forms.DataGridViewElement.State%2A> proprietà che contiene un valore che rappresenta una combinazione di valori dal <xref:System.Windows.Forms.DataGridViewElementStates> enumerazione.</span><span class="sxs-lookup"><span data-stu-id="f5b74-110">The <xref:System.Windows.Forms.DataGridViewElement> class provides a reference to the parent <xref:System.Windows.Forms.DataGridView> control and has a <xref:System.Windows.Forms.DataGridViewElement.State%2A> property, which holds a value that represents a combination of values from the <xref:System.Windows.Forms.DataGridViewElementStates> enumeration.</span></span>  
   
- Nelle sezioni che seguono le classi correlate <xref:System.Windows.Forms.DataGridView> vengono illustrate in modo dettagliato.  
+ <span data-ttu-id="f5b74-111">Le sezioni seguenti descrivono il <xref:System.Windows.Forms.DataGridView> complementare classi in modo più dettagliato.</span><span class="sxs-lookup"><span data-stu-id="f5b74-111">The following sections describe the <xref:System.Windows.Forms.DataGridView> companion classes in more detail.</span></span>  
   
-### DataGridViewElementStates  
- L'enumerazione <xref:System.Windows.Forms.DataGridViewElementStates> contiene i valori indicati di seguito.  
+### <a name="datagridviewelementstates"></a><span data-ttu-id="f5b74-112">Oggetto DataGridViewElementStates</span><span class="sxs-lookup"><span data-stu-id="f5b74-112">DataGridViewElementStates</span></span>  
+ <span data-ttu-id="f5b74-113">Il <xref:System.Windows.Forms.DataGridViewElementStates> enumerazione contiene i valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="f5b74-113">The <xref:System.Windows.Forms.DataGridViewElementStates> enumeration contains the following values:</span></span>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
   
- I valori di questa enumerazione possono essere combinati con operatori logici bit per bit, per cui la proprietà <xref:System.Windows.Forms.DataGridViewElement.State%2A> è in grado di esprimere più di uno stato alla volta.  Ad esempio, la classe <xref:System.Windows.Forms.DataGridViewElement> può essere contemporaneamente nello stato <xref:System.Windows.Forms.DataGridViewElementStates>, <xref:System.Windows.Forms.DataGridViewElementStates> e <xref:System.Windows.Forms.DataGridViewElementStates>.  
+ <span data-ttu-id="f5b74-114">I valori di questa enumerazione possono essere combinati con gli operatori logici OR bit per bit, pertanto la <xref:System.Windows.Forms.DataGridViewElement.State%2A> proprietà in grado di esprimere più di uno stato in una sola volta.</span><span class="sxs-lookup"><span data-stu-id="f5b74-114">The values of this enumeration can be combined with the bitwise logical operators, so the <xref:System.Windows.Forms.DataGridViewElement.State%2A> property can express more than one state at once.</span></span> <span data-ttu-id="f5b74-115">Ad esempio, un <xref:System.Windows.Forms.DataGridViewElement> che può essere contemporaneamente <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>, e <xref:System.Windows.Forms.DataGridViewElementStates.Visible>.</span><span class="sxs-lookup"><span data-stu-id="f5b74-115">For example, a <xref:System.Windows.Forms.DataGridViewElement> can be simultaneously <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>, and <xref:System.Windows.Forms.DataGridViewElementStates.Visible>.</span></span>  
   
-### Celle e bande  
- Il controllo <xref:System.Windows.Forms.DataGridView> comprende due tipi fondamentali di oggetti: celle e bande.  Tutte le celle derivano dalla classe base <xref:System.Windows.Forms.DataGridViewCell>.  I due tipi di bande, <xref:System.Windows.Forms.DataGridViewColumn> e <xref:System.Windows.Forms.DataGridViewRow>, derivano entrambi dalla classe base <xref:System.Windows.Forms.DataGridViewBand>.  
+### <a name="cells-and-bands"></a><span data-ttu-id="f5b74-116">Le celle e bande</span><span class="sxs-lookup"><span data-stu-id="f5b74-116">Cells and Bands</span></span>  
+ <span data-ttu-id="f5b74-117">Il <xref:System.Windows.Forms.DataGridView> controllo comprende due tipi fondamentali di oggetti: celle e bande.</span><span class="sxs-lookup"><span data-stu-id="f5b74-117">The <xref:System.Windows.Forms.DataGridView> control comprises two fundamental kinds of objects: cells and bands.</span></span> <span data-ttu-id="f5b74-118">Tutte le celle derivano il <xref:System.Windows.Forms.DataGridViewCell> classe di base.</span><span class="sxs-lookup"><span data-stu-id="f5b74-118">All cells derive from the <xref:System.Windows.Forms.DataGridViewCell> base class.</span></span> <span data-ttu-id="f5b74-119">I due tipi di bande, <xref:System.Windows.Forms.DataGridViewColumn> e <xref:System.Windows.Forms.DataGridViewRow>, entrambi derivano dalla <xref:System.Windows.Forms.DataGridViewBand> classe di base.</span><span class="sxs-lookup"><span data-stu-id="f5b74-119">The two kinds of bands, <xref:System.Windows.Forms.DataGridViewColumn> and <xref:System.Windows.Forms.DataGridViewRow>, both derive from the <xref:System.Windows.Forms.DataGridViewBand> base class.</span></span>  
   
- Il controllo <xref:System.Windows.Forms.DataGridView> interagisce con diverse classi, ma quelle utilizzate più di frequente sono <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn> e <xref:System.Windows.Forms.DataGridViewRow>.  
+ <span data-ttu-id="f5b74-120">Il <xref:System.Windows.Forms.DataGridView> controllo interagisce con diverse classi, ma sono i più comuni <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn>, e <xref:System.Windows.Forms.DataGridViewRow>.</span><span class="sxs-lookup"><span data-stu-id="f5b74-120">The <xref:System.Windows.Forms.DataGridView> control interoperates with several classes, but the most commonly encountered are <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn>, and <xref:System.Windows.Forms.DataGridViewRow>.</span></span>  
   
-### DataGridViewCell  
- La cella è l'unità di base di interazione per la classe <xref:System.Windows.Forms.DataGridView>.  La visualizzazione si basa sulle celle e l'immissione dei dati viene spesso eseguita mediante le celle.  È possibile accedere alle celle utilizzando la raccolta <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> della classe <xref:System.Windows.Forms.DataGridViewRow> e accedere alle celle selezionate utilizzando la raccolta <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> del controllo <xref:System.Windows.Forms.DataGridView>.  Nel modello a oggetti riportato di seguito vengono illustrati tale utilizzo e la gerarchia di ereditarietà di <xref:System.Windows.Forms.DataGridViewCell>.  
+### <a name="datagridviewcell"></a><span data-ttu-id="f5b74-121">Oggetto DataGridViewCell</span><span class="sxs-lookup"><span data-stu-id="f5b74-121">DataGridViewCell</span></span>  
+ <span data-ttu-id="f5b74-122">La cella è l'unità fondamentale di interazione per i <xref:System.Windows.Forms.DataGridView>.</span><span class="sxs-lookup"><span data-stu-id="f5b74-122">The cell is the fundamental unit of interaction for the <xref:System.Windows.Forms.DataGridView>.</span></span> <span data-ttu-id="f5b74-123">La visualizzazione si basa sulle celle e immissione di dati viene spesso eseguita tramite le celle.</span><span class="sxs-lookup"><span data-stu-id="f5b74-123">Display is centered on cells, and data entry is often performed through cells.</span></span> <span data-ttu-id="f5b74-124">È possibile accedere alle celle con il <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> insieme del <xref:System.Windows.Forms.DataGridViewRow> classe ed è possibile accedere alle celle selezionate utilizzando il <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> insieme del <xref:System.Windows.Forms.DataGridView> controllo.</span><span class="sxs-lookup"><span data-stu-id="f5b74-124">You can access cells by using the <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> collection of the <xref:System.Windows.Forms.DataGridViewRow> class, and you can access the selected cells by using the <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> collection of the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="f5b74-125">Il modello a oggetti seguente viene illustrato l'utilizzo e Mostra il <xref:System.Windows.Forms.DataGridViewCell> gerarchia di ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="f5b74-125">The following object model illustrates this usage and shows the <xref:System.Windows.Forms.DataGridViewCell> inheritance hierarchy.</span></span>  
   
- ![Modello a oggetti DataGridViewCell](../../../../docs/framework/winforms/controls/media/datagridviewcell.png "DataGridViewCell")  
-Modello a oggetti DataGridViewCell  
+ <span data-ttu-id="f5b74-126">![Modello a oggetti DataGridViewCell](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")</span><span class="sxs-lookup"><span data-stu-id="f5b74-126">![DataGridViewCell Object Model](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")</span></span>  
+<span data-ttu-id="f5b74-127">Modello a oggetti DataGridViewCell</span><span class="sxs-lookup"><span data-stu-id="f5b74-127">DataGridViewCell object model</span></span>  
   
- Il tipo <xref:System.Windows.Forms.DataGridViewCell> è una classe base astratta, da cui derivano tutti i tipi di cella.  <xref:System.Windows.Forms.DataGridViewCell> e i tipi derivati non sono controlli Windows Form, ma alcuni di essi contengono controlli Windows Form.  Tutte le funzionalità di modifica supportate da una cella sono in genere gestite da un controllo inserito.  
+ <span data-ttu-id="f5b74-128">Il <xref:System.Windows.Forms.DataGridViewCell> tipo è una classe base astratta da cui derivano tutti i tipi di cella.</span><span class="sxs-lookup"><span data-stu-id="f5b74-128">The <xref:System.Windows.Forms.DataGridViewCell> type is an abstract base class, from which all cell types derive.</span></span> <span data-ttu-id="f5b74-129"><xref:System.Windows.Forms.DataGridViewCell>e i tipi derivati non sono controlli Windows Form, ma alcuni controlli Windows Form host.</span><span class="sxs-lookup"><span data-stu-id="f5b74-129"><xref:System.Windows.Forms.DataGridViewCell> and its derived types are not Windows Forms controls, but some host Windows Forms controls.</span></span> <span data-ttu-id="f5b74-130">Supportato da una cella qualsiasi funzionalità di modifica viene in genere gestita da un controllo ospitato.</span><span class="sxs-lookup"><span data-stu-id="f5b74-130">Any editing functionality supported by a cell is typically handled by a hosted control.</span></span>  
   
- Gli oggetti <xref:System.Windows.Forms.DataGridViewCell> non controllano le funzionalità relative all'aspetto e al disegno alla stessa maniera dei controlli Windows Form.  Al contrario, il controllo <xref:System.Windows.Forms.DataGridView> determina l'aspetto dei relativi oggetti <xref:System.Windows.Forms.DataGridViewCell>.  È possibile modificare in modo significativo l'aspetto e il comportamento delle celle interagendo con le proprietà e gli eventi del controllo <xref:System.Windows.Forms.DataGridView>.  Se i requisiti di personalizzazione necessari vanno oltre le capacità del controllo <xref:System.Windows.Forms.DataGridView>, è possibile implementare una classe personalizzata derivata da <xref:System.Windows.Forms.DataGridViewCell> o da una delle classi figlie.  
+ <span data-ttu-id="f5b74-131"><xref:System.Windows.Forms.DataGridViewCell>gli oggetti non controllare l'aspetto e le funzionalità di disegno nello stesso modo dei controlli Windows Form.</span><span class="sxs-lookup"><span data-stu-id="f5b74-131"><xref:System.Windows.Forms.DataGridViewCell> objects do not control their own appearance and painting features in the same way as Windows Forms controls.</span></span> <span data-ttu-id="f5b74-132">Al contrario, il <xref:System.Windows.Forms.DataGridView> è responsabile per l'aspetto del relativo <xref:System.Windows.Forms.DataGridViewCell> oggetti.</span><span class="sxs-lookup"><span data-stu-id="f5b74-132">Instead, the <xref:System.Windows.Forms.DataGridView> is responsible for the appearance of its <xref:System.Windows.Forms.DataGridViewCell> objects.</span></span> <span data-ttu-id="f5b74-133">È possibile modificare in modo significativo l'aspetto e il comportamento di celle tramite l'interazione con il <xref:System.Windows.Forms.DataGridView> proprietà e gli eventi del controllo.</span><span class="sxs-lookup"><span data-stu-id="f5b74-133">You can significantly affect the appearance and behavior of cells by interacting with the <xref:System.Windows.Forms.DataGridView> control's properties and events.</span></span> <span data-ttu-id="f5b74-134">Quando si dispone di requisiti speciali per le personalizzazioni che vanno oltre le capacità del <xref:System.Windows.Forms.DataGridView> (controllo), è possibile implementare la propria classe che deriva da <xref:System.Windows.Forms.DataGridViewCell> o una delle relative classi figlio.</span><span class="sxs-lookup"><span data-stu-id="f5b74-134">When you have special requirements for customizations that are beyond the capabilities of the <xref:System.Windows.Forms.DataGridView> control, you can implement your own class that derives from <xref:System.Windows.Forms.DataGridViewCell> or one of its child classes.</span></span>  
   
- Nell'elenco riportato di seguito sono riportate le classi che derivano da <xref:System.Windows.Forms.DataGridViewCell>.  
+ <span data-ttu-id="f5b74-135">L'elenco seguente mostra le classi derivate da <xref:System.Windows.Forms.DataGridViewCell>:</span><span class="sxs-lookup"><span data-stu-id="f5b74-135">The following list shows the classes derived from <xref:System.Windows.Forms.DataGridViewCell>:</span></span>  
   
 -   <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
   
@@ -89,17 +89,17 @@ Modello a oggetti DataGridViewCell
   
 -   <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
   
--   Tipi di celle personalizzate  
+-   <span data-ttu-id="f5b74-136">I tipi di cella personalizzato</span><span class="sxs-lookup"><span data-stu-id="f5b74-136">Your custom cell types</span></span>  
   
-### DataGridViewColumn  
- Lo schema dell'archivio dati collegato del controllo <xref:System.Windows.Forms.DataGridView> è espresso nelle colonne del controllo <xref:System.Windows.Forms.DataGridView>.  È possibile accedere alle colonne del controllo <xref:System.Windows.Forms.DataGridView> utilizzando la raccolta <xref:System.Windows.Forms.DataGridView.Columns%2A>.  È possibile accedere alle colonne selezionate utilizzando la raccolta <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>.  Nel modello a oggetti riportato di seguito vengono illustrati tale utilizzo e la gerarchia di ereditarietà di <xref:System.Windows.Forms.DataGridViewColumn>.  
+### <a name="datagridviewcolumn"></a><span data-ttu-id="f5b74-137">Elemento DataGridViewColumn</span><span class="sxs-lookup"><span data-stu-id="f5b74-137">DataGridViewColumn</span></span>  
+ <span data-ttu-id="f5b74-138">Lo schema del <xref:System.Windows.Forms.DataGridView> archivio dati collegati del controllo è espresso il <xref:System.Windows.Forms.DataGridView> colonne del controllo.</span><span class="sxs-lookup"><span data-stu-id="f5b74-138">The schema of the <xref:System.Windows.Forms.DataGridView> control's attached data store is expressed in the <xref:System.Windows.Forms.DataGridView> control's columns.</span></span> <span data-ttu-id="f5b74-139">È possibile accedere il <xref:System.Windows.Forms.DataGridView> colonne del controllo utilizzando il <xref:System.Windows.Forms.DataGridView.Columns%2A> insieme.</span><span class="sxs-lookup"><span data-stu-id="f5b74-139">You can access the <xref:System.Windows.Forms.DataGridView> control's columns by using the <xref:System.Windows.Forms.DataGridView.Columns%2A> collection.</span></span> <span data-ttu-id="f5b74-140">È possibile accedere alle colonne selezionate utilizzando il <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> insieme.</span><span class="sxs-lookup"><span data-stu-id="f5b74-140">You can access the selected columns by using the <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> collection.</span></span> <span data-ttu-id="f5b74-141">Il modello a oggetti seguente viene illustrato l'utilizzo e Mostra il <xref:System.Windows.Forms.DataGridViewColumn> gerarchia di ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="f5b74-141">The following object model illustrates this usage and shows the <xref:System.Windows.Forms.DataGridViewColumn> inheritance hierarchy.</span></span>  
   
- ![Modello a oggetti DataGridViewColumn](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.png "DataGridViewColumn")  
-Modello a oggetti DataGridViewColumn  
+ <span data-ttu-id="f5b74-142">![Modello a oggetti DataGridViewColumn](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.gif "DataGridViewColumn")</span><span class="sxs-lookup"><span data-stu-id="f5b74-142">![DataGridViewColumn Object Model](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.gif "DataGridViewColumn")</span></span>  
+<span data-ttu-id="f5b74-143">Modello a oggetti DataGridViewColumn</span><span class="sxs-lookup"><span data-stu-id="f5b74-143">DataGridViewColumn object model</span></span>  
   
- Per alcuni dei tipi di celle principali sono presenti tipi di colonne corrispondenti,  derivate dalla classe base <xref:System.Windows.Forms.DataGridViewColumn>.  
+ <span data-ttu-id="f5b74-144">Alcuni dei tipi di cella chiave hanno tipi di colonna corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="f5b74-144">Some of the key cell types have corresponding column types.</span></span> <span data-ttu-id="f5b74-145">Questi sono derivati dalla <xref:System.Windows.Forms.DataGridViewColumn> classe di base.</span><span class="sxs-lookup"><span data-stu-id="f5b74-145">These are derived from the <xref:System.Windows.Forms.DataGridViewColumn> base class.</span></span>  
   
- Nell'elenco seguente sono riportate le classi che derivano da <xref:System.Windows.Forms.DataGridViewColumn>.  
+ <span data-ttu-id="f5b74-146">L'elenco seguente mostra le classi derivate da <xref:System.Windows.Forms.DataGridViewColumn>:</span><span class="sxs-lookup"><span data-stu-id="f5b74-146">The following list shows the classes derived from <xref:System.Windows.Forms.DataGridViewColumn>:</span></span>  
   
 -   <xref:System.Windows.Forms.DataGridViewButtonColumn>  
   
@@ -113,44 +113,44 @@ Modello a oggetti DataGridViewColumn
   
 -   <xref:System.Windows.Forms.DataGridViewLinkColumn>  
   
--   Tipi di colonne personalizzati  
+-   <span data-ttu-id="f5b74-147">Tipi di colonna personalizzati</span><span class="sxs-lookup"><span data-stu-id="f5b74-147">Your custom column types</span></span>  
   
-### Controlli di modifica DataGridView  
- Per le celle che supportano funzionalità di modifica avanzate viene in genere utilizzato un controllo inserito derivato da un controllo Windows Form.  Questi controlli implementano anche l'interfaccia <xref:System.Windows.Forms.IDataGridViewEditingControl>.  Nel modello a oggetti riportato di seguito viene illustrato l'utilizzo di questi controlli.  
+### <a name="datagridview-editing-controls"></a><span data-ttu-id="f5b74-148">Controlli di modifica DataGridView</span><span class="sxs-lookup"><span data-stu-id="f5b74-148">DataGridView Editing Controls</span></span>  
+ <span data-ttu-id="f5b74-149">Le celle che supportano le funzionalità avanzate di modifica in genere utilizzano un controllo derivato da un controllo Windows Form.</span><span class="sxs-lookup"><span data-stu-id="f5b74-149">Cells that support advanced editing functionality typically use a hosted control that is derived from a Windows Forms control.</span></span> <span data-ttu-id="f5b74-150">Questi controlli implementano anche il <xref:System.Windows.Forms.IDataGridViewEditingControl> interfaccia.</span><span class="sxs-lookup"><span data-stu-id="f5b74-150">These controls also implement the <xref:System.Windows.Forms.IDataGridViewEditingControl> interface.</span></span> <span data-ttu-id="f5b74-151">Il modello a oggetti seguente viene illustrato l'utilizzo di questi controlli.</span><span class="sxs-lookup"><span data-stu-id="f5b74-151">The following object model illustrates the usage of these controls.</span></span>  
   
- ![Modello a oggetti del controllo di modifica DataGridView](../../../../docs/framework/winforms/controls/media/datagridviewediting.png "DataGridViewEditing")  
-Modello a oggetti del controllo di modifica DataGridView  
+ <span data-ttu-id="f5b74-152">![Modello oggetto di controllo di modifica DataGridView](../../../../docs/framework/winforms/controls/media/datagridviewediting.gif "DataGridViewEditing")</span><span class="sxs-lookup"><span data-stu-id="f5b74-152">![DataGridView Editing Control Object Model](../../../../docs/framework/winforms/controls/media/datagridviewediting.gif "DataGridViewEditing")</span></span>  
+<span data-ttu-id="f5b74-153">Modifica modello a oggetti controllo DataGridView</span><span class="sxs-lookup"><span data-stu-id="f5b74-153">DataGridView editing control object model</span></span>  
   
- I controlli di modifica riportati di seguito vengono forniti con il controllo <xref:System.Windows.Forms.DataGridView>.  
+ <span data-ttu-id="f5b74-154">Vengono forniti i seguenti controlli di modificando con il <xref:System.Windows.Forms.DataGridView> controllo:</span><span class="sxs-lookup"><span data-stu-id="f5b74-154">The following editing controls are provided with the <xref:System.Windows.Forms.DataGridView> control:</span></span>  
   
 -   <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
   
 -   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
- Per informazioni sulla creazione di controlli di modifica personalizzati, vedere [Procedura: inserire controlli in celle del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ <span data-ttu-id="f5b74-155">Per informazioni sulla creazione di controlli personalizzati di modifica, vedere [come: i controlli Host nelle celle del controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span><span class="sxs-lookup"><span data-stu-id="f5b74-155">For information about creating your own editing controls, see [How to: Host Controls in Windows Forms DataGridView Cells](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span></span>  
   
- Nella tabella riportata di seguito viene illustrata la relazione tra i tipi di celle, i tipi di colonne e i controlli di modifica.  
+ <span data-ttu-id="f5b74-156">Nella tabella seguente viene illustrata la relazione tra i tipi di cella, i tipi di colonna e i controlli di modifica.</span><span class="sxs-lookup"><span data-stu-id="f5b74-156">The following table illustrates the relationship among cell types, column types, and editing controls.</span></span>  
   
-|Tipo di cella|Controllo inserito|Tipo di colonna|  
-|-------------------|------------------------|---------------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|n\/d|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|n\/d|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
+|<span data-ttu-id="f5b74-157">Tipo di cella</span><span class="sxs-lookup"><span data-stu-id="f5b74-157">Cell type</span></span>|<span data-ttu-id="f5b74-158">Controllo ospitato</span><span class="sxs-lookup"><span data-stu-id="f5b74-158">Hosted control</span></span>|<span data-ttu-id="f5b74-159">Tipo di colonna</span><span class="sxs-lookup"><span data-stu-id="f5b74-159">Column type</span></span>|  
+|---------------|--------------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|<span data-ttu-id="f5b74-160">n/d</span><span class="sxs-lookup"><span data-stu-id="f5b74-160">n/a</span></span>|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|<span data-ttu-id="f5b74-161">n/d</span><span class="sxs-lookup"><span data-stu-id="f5b74-161">n/a</span></span>|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
-|<xref:System.Windows.Forms.DataGridViewImageCell>|n\/d|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|n\/d|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewImageCell>|<span data-ttu-id="f5b74-162">n/d</span><span class="sxs-lookup"><span data-stu-id="f5b74-162">n/a</span></span>|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|<span data-ttu-id="f5b74-163">n/d</span><span class="sxs-lookup"><span data-stu-id="f5b74-163">n/a</span></span>|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
-### DataGridViewRow  
- La classe <xref:System.Windows.Forms.DataGridViewRow> consente la visualizzazione di campi di dati di un record dell'archivio dati a cui il controllo <xref:System.Windows.Forms.DataGridView> è collegato.  È possibile accedere alle righe del controllo <xref:System.Windows.Forms.DataGridView> utilizzando la raccolta <xref:System.Windows.Forms.DataGridView.Rows%2A>.  È possibile accedere alle righe selezionate utilizzando la raccolta <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>.  Nel modello a oggetti riportato di seguito vengono illustrati tale utilizzo e la gerarchia di ereditarietà di <xref:System.Windows.Forms.DataGridViewRow>.  
+### <a name="datagridviewrow"></a><span data-ttu-id="f5b74-164">DataGridViewRow</span><span class="sxs-lookup"><span data-stu-id="f5b74-164">DataGridViewRow</span></span>  
+ <span data-ttu-id="f5b74-165">Il <xref:System.Windows.Forms.DataGridViewRow> Visualizza di classe campi dati di un record dai dati di archivio a cui il <xref:System.Windows.Forms.DataGridView> controllo associato.</span><span class="sxs-lookup"><span data-stu-id="f5b74-165">The <xref:System.Windows.Forms.DataGridViewRow> class displays a record's data fields from the data store to which the <xref:System.Windows.Forms.DataGridView> control is attached.</span></span> <span data-ttu-id="f5b74-166">È possibile accedere il <xref:System.Windows.Forms.DataGridView> righe del controllo utilizzando il <xref:System.Windows.Forms.DataGridView.Rows%2A> insieme.</span><span class="sxs-lookup"><span data-stu-id="f5b74-166">You can access the <xref:System.Windows.Forms.DataGridView> control's rows by using the <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.</span></span> <span data-ttu-id="f5b74-167">È possibile accedere alle righe selezionate utilizzando il <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> insieme.</span><span class="sxs-lookup"><span data-stu-id="f5b74-167">You can access the selected rows by using the <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> collection.</span></span> <span data-ttu-id="f5b74-168">Il modello a oggetti seguente viene illustrato l'utilizzo e Mostra il <xref:System.Windows.Forms.DataGridViewRow> gerarchia di ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="f5b74-168">The following object model illustrates this usage and shows the <xref:System.Windows.Forms.DataGridViewRow> inheritance hierarchy.</span></span>  
   
- ![Modello a oggetti DataGridViewRow](../../../../docs/framework/winforms/controls/media/datagridviewrow.png "DataGridViewRow")  
-Modello a oggetti DataGridViewRow  
+ <span data-ttu-id="f5b74-169">![Modello a oggetti DataGridViewRow](../../../../docs/framework/winforms/controls/media/datagridviewrow.gif "DataGridViewRow")</span><span class="sxs-lookup"><span data-stu-id="f5b74-169">![DataGridViewRow Object Model](../../../../docs/framework/winforms/controls/media/datagridviewrow.gif "DataGridViewRow")</span></span>  
+<span data-ttu-id="f5b74-170">Modello a oggetti DataGridViewRow</span><span class="sxs-lookup"><span data-stu-id="f5b74-170">DataGridViewRow object model</span></span>  
   
- È possibile derivare tipi personalizzati dalla classe <xref:System.Windows.Forms.DataGridViewRow>, anche se in genere non è necessario.  Il controllo <xref:System.Windows.Forms.DataGridView> dispone di diversi eventi relativi alle righe e di proprietà per la personalizzazione del comportamento degli oggetti <xref:System.Windows.Forms.DataGridViewRow>.  
+ <span data-ttu-id="f5b74-171">È possibile derivare tipi personalizzati dalla <xref:System.Windows.Forms.DataGridViewRow> classe, anche se ciò corrisponderà in genere non necessario.</span><span class="sxs-lookup"><span data-stu-id="f5b74-171">You can derive your own types from the <xref:System.Windows.Forms.DataGridViewRow> class, although this will typically not be necessary.</span></span> <span data-ttu-id="f5b74-172">Il <xref:System.Windows.Forms.DataGridView> controllo dispone di numerosi eventi correlati alla riga e proprietà per personalizzare il comportamento del relativo <xref:System.Windows.Forms.DataGridViewRow> oggetti.</span><span class="sxs-lookup"><span data-stu-id="f5b74-172">The <xref:System.Windows.Forms.DataGridView> control has several row-related events and properties for customizing the behavior of its <xref:System.Windows.Forms.DataGridViewRow> objects.</span></span>  
   
- Se si attiva la proprietà <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> del controllo <xref:System.Windows.Forms.DataGridView>, come ultima riga verrà visualizzata una riga speciale per l'aggiunta di nuove righe.  Questa riga fa parte della raccolta <xref:System.Windows.Forms.DataGridView.Rows%2A>, ma dispone di funzionalità speciali per le quali potrebbe essere necessaria particolare attenzione.  Per ulteriori informazioni, vedere [Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="f5b74-173">Se si abilita il <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> viene visualizzata una riga speciale per l'aggiunta di nuove righe di proprietà, come l'ultima riga.</span><span class="sxs-lookup"><span data-stu-id="f5b74-173">If you enable the <xref:System.Windows.Forms.DataGridView> control's <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> property, a special row for adding new rows appears as the last row.</span></span> <span data-ttu-id="f5b74-174">Questa riga fa parte di <xref:System.Windows.Forms.DataGridView.Rows%2A> raccolta, ma dispone di funzionalità speciali che potrebbero richiedere attenzione.</span><span class="sxs-lookup"><span data-stu-id="f5b74-174">This row is part of the <xref:System.Windows.Forms.DataGridView.Rows%2A> collection, but it has special functionality that may require your attention.</span></span> <span data-ttu-id="f5b74-175">Per ulteriori informazioni, vedere [mediante la riga dei nuovi record nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="f5b74-175">For more information, see [Using the Row for New Records in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## Vedere anche  
- [Cenni preliminari sul controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)   
- [Personalizzazione del controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)   
- [Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="f5b74-176">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f5b74-176">See Also</span></span>  
+ [<span data-ttu-id="f5b74-177">Panoramica sul controllo DataGridView</span><span class="sxs-lookup"><span data-stu-id="f5b74-177">DataGridView Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f5b74-178">Personalizzazione del controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="f5b74-178">Customizing the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="f5b74-179">Uso della riga per i nuovi record del controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="f5b74-179">Using the Row for New Records in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

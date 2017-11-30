@@ -1,54 +1,57 @@
 ---
-title: "Attributo PresentationOptions:Freeze | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Freezable (elementi)"
-  - "Freeze (attributo)"
-  - "PresentationOptions (prefisso)"
+title: Attributo PresentationOptions:Freeze
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Freeze attribute [WPF]
+- Freezable elements [WPF]
+- PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8f1a876f65941afb159d4c3d8904ab4426d9177
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Attributo PresentationOptions:Freeze
-Consente di impostare lo stato di <xref:System.Windows.Freezable.IsFrozen%2A> su `true` sull'elemento <xref:System.Windows.Freezable> che lo contiene.  Il comportamento predefinito per <xref:System.Windows.Freezable> senza l'attributo `PresentationOptions:Freeze` specificato presuppone che <xref:System.Windows.Freezable.IsFrozen%2A> sia `false` al momento del caricamento e dipendente dal comportamento di <xref:System.Windows.Freezable> generale in fase di esecuzione.  
+# <a name="presentationoptionsfreeze-attribute"></a><span data-ttu-id="5c95e-102">Attributo PresentationOptions:Freeze</span><span class="sxs-lookup"><span data-stu-id="5c95e-102">PresentationOptions:Freeze Attribute</span></span>
+<span data-ttu-id="5c95e-103">Imposta il <xref:System.Windows.Freezable.IsFrozen%2A> allo stato `true` nel contenitore <xref:System.Windows.Freezable> elemento.</span><span class="sxs-lookup"><span data-stu-id="5c95e-103">Sets the <xref:System.Windows.Freezable.IsFrozen%2A> state to `true` on the containing <xref:System.Windows.Freezable> element.</span></span> <span data-ttu-id="5c95e-104">Il comportamento predefinito per un <xref:System.Windows.Freezable> senza il `PresentationOptions:Freeze` l'attributo specificato è che <xref:System.Windows.Freezable.IsFrozen%2A> è `false` in fase di caricamento e che dipendono dal generale <xref:System.Windows.Freezable> comportamento in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="5c95e-104">Default behavior for a <xref:System.Windows.Freezable> without the `PresentationOptions:Freeze` attribute specified is that <xref:System.Windows.Freezable.IsFrozen%2A> is `false` at load time, and dependent on general <xref:System.Windows.Freezable> behavior at runtime.</span></span>  
   
-## Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="5c95e-105">Uso della sintassi XAML per gli attributi</span><span class="sxs-lookup"><span data-stu-id="5c95e-105">XAML Attribute Usage</span></span>  
   
 ```  
 <object  
   xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
   mc:Ignorable="PresentationOptions">  
-    <freezableElement PresentationOptions:Freeze="true"/>  
+    <freezableElement PresentationOptions:Freeze="true"/>  
 </object>  
 ```  
   
-## Valori XAML  
+## <a name="xaml-values"></a><span data-ttu-id="5c95e-106">Valori XAML</span><span class="sxs-lookup"><span data-stu-id="5c95e-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`PresentationOptions`|Prefisso dello spazio dei nomi XML, che può essere qualsiasi stringa di prefisso valida in base alla specifica XML 1.0.  In questa discussione, il prefisso `PresentationOptions` viene utilizzato per scopi di identificazione.|  
-|`freezableElement`|Elemento che crea un'istanza di qualsiasi classe derivata di <xref:System.Windows.Freezable>.|  
+|`PresentationOptions`|<span data-ttu-id="5c95e-107">Un prefisso di spazio dei nomi XML, che può essere una stringa valida, secondo la specifica XML 1.0.</span><span class="sxs-lookup"><span data-stu-id="5c95e-107">An XML namespace prefix, which can be any valid prefix string, per the XML 1.0 specification.</span></span> <span data-ttu-id="5c95e-108">Il prefisso `PresentationOptions` viene utilizzato per scopi di identificazione in questa documentazione.</span><span class="sxs-lookup"><span data-stu-id="5c95e-108">The prefix `PresentationOptions` is used for identification purposes in this documentation.</span></span>|  
+|`freezableElement`|<span data-ttu-id="5c95e-109">Un elemento che crea un'istanza di una classe derivata di <xref:System.Windows.Freezable>.</span><span class="sxs-lookup"><span data-stu-id="5c95e-109">An element that instantiates any derived class of <xref:System.Windows.Freezable>.</span></span>|  
   
-## Note  
- L'attributo `Freeze` è il solo attributo o altro elemento di programmazione definito nello spazio dei nomi XML `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`.  L'attributo `Freeze` viene specificamente incluso in questo spazio dei nomi speciale in modo da poter essere definito come ignorable, utilizzando [Attributo mc:Ignorable](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) come parte delle dichiarazioni dell'elemento radice.  Il motivo per cui `Freeze` deve essere in grado di essere impostato come ignorable è che non tutte le implementazioni del processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sono in grado di bloccare <xref:System.Windows.Freezable> al momento del caricamento; questa funzionalità non fa parte della specifica [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+## <a name="remarks"></a><span data-ttu-id="5c95e-110">Note</span><span class="sxs-lookup"><span data-stu-id="5c95e-110">Remarks</span></span>  
+ <span data-ttu-id="5c95e-111">Il `Freeze` attributo è l'unico attributo o altri elementi di programmazione definito nel `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` spazio dei nomi XML.</span><span class="sxs-lookup"><span data-stu-id="5c95e-111">The `Freeze` attribute is the only attribute or other programming element defined in the `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` XML namespace.</span></span> <span data-ttu-id="5c95e-112">Il `Freeze` attributo esiste in questo spazio dei nomi speciale, in particolare, in modo che può essere definito come ignorable, utilizzando [mc: attributo Ignorable](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) come parte di dichiarazioni dell'elemento radice.</span><span class="sxs-lookup"><span data-stu-id="5c95e-112">The `Freeze` attribute exists in this special namespace specifically so that it can be designated as ignorable, using [mc:Ignorable Attribute](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) as part of the root element declarations.</span></span> <span data-ttu-id="5c95e-113">Il motivo che `Freeze` deve essere in grado di essere impostato come ignorable è perché non tutti i [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] le implementazioni del processore sono in grado di bloccare un <xref:System.Windows.Freezable> in fase di caricamento; questa funzionalità non è in parte il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] specifica.</span><span class="sxs-lookup"><span data-stu-id="5c95e-113">The reason that `Freeze` must be able to be ignorable is because not all [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor implementations are able to freeze a <xref:System.Windows.Freezable> at load time; this capability is not part of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] specification.</span></span>  
   
- La possibilità di elaborare l'attributo `Freeze` è specificamente incorporata nell processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che elabora [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per le applicazioni compilate.  L'attributo non è supportato da tutte le classi e la sintassi degli attributi non è estendibile o modificabile.  Se si sta implementando il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è possibile scegliere di affiancare il comportamento di blocco del processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)][!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in caso di elaborazione dell'attributo `Freeze` sugli elementi <xref:System.Windows.Freezable> al momento del caricamento.  
+ <span data-ttu-id="5c95e-114">La possibilità di elaborare il `Freeze` attributo è stato compilato appositamente per il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore che elabora [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per le applicazioni compilate.</span><span class="sxs-lookup"><span data-stu-id="5c95e-114">The ability to process the `Freeze` attribute is specifically built in to the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor that processes [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] for compiled applications.</span></span> <span data-ttu-id="5c95e-115">L'attributo non è supportato da qualsiasi classe e la sintassi di attributo non è estendibile o modificabile.</span><span class="sxs-lookup"><span data-stu-id="5c95e-115">The attribute is not supported by any class, and the attribute syntax is not extensible or modifiable.</span></span> <span data-ttu-id="5c95e-116">Se si sta implementando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è possibile scegliere di parallela il comportamento di blocco del processore il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore durante l'elaborazione di `Freeze` attributo <xref:System.Windows.Freezable> elementi in fase di caricamento.</span><span class="sxs-lookup"><span data-stu-id="5c95e-116">If you are implementing your own [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor you can choose to parallel the freezing behavior of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor when processing the `Freeze` attribute on <xref:System.Windows.Freezable> elements at load time.</span></span>  
   
- Qualsiasi valore per l’attributo `Freeze` diverso da `true` \(in cui non viene applicata la distinzione tra maiuscole e minuscole\) genera un errore al momento del caricamento.  \(la specifica dell'attributo `Freeze` come `false` non costituisce un errore, ma rappresenta già l’impostazione predefinita, quindi impostare l'attributo su `false` non genera alcun effetto\).  
+ <span data-ttu-id="5c95e-117">Qualsiasi valore per il `Freeze` attributo diverso da `true` (non maiuscole / minuscole) genera un errore in fase di caricamento.</span><span class="sxs-lookup"><span data-stu-id="5c95e-117">Any value for the `Freeze` attribute other than `true` (not case sensitive) generates a load time error.</span></span> <span data-ttu-id="5c95e-118">(Specificare il `Freeze` attributo `false` non è un errore, ma che è già il valore predefinito, pertanto l'impostazione `false` non esegue alcuna operazione).</span><span class="sxs-lookup"><span data-stu-id="5c95e-118">(Specifying the `Freeze` attribute as `false` is not an error, but that is already the default, so setting to `false` does nothing).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Freezable>   
- [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [Attributo mc:Ignorable](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)
+## <a name="see-also"></a><span data-ttu-id="5c95e-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5c95e-119">See Also</span></span>  
+ <xref:System.Windows.Freezable>  
+ [<span data-ttu-id="5c95e-120">Cenni preliminari sugli oggetti Freezable</span><span class="sxs-lookup"><span data-stu-id="5c95e-120">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="5c95e-121">Attributo mc:Ignorable</span><span class="sxs-lookup"><span data-stu-id="5c95e-121">mc:Ignorable Attribute</span></span>](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)

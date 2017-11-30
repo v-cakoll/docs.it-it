@@ -7,24 +7,22 @@ helpviewer_keywords:
 - binary serialization, basic serialization
 - serialization, basic serialization
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
-dev_langs:
-- CSharp
-caps.latest.revision: 7
+dev_langs: CSharp
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 334fe65c41e283f9ea6335183da1b2dab53e30af
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1e059fa92f88501853236c3e6632525646bc7a19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="basic-serialization"></a>Serializzazione di base
+# <a name="basic-serialization"></a><span data-ttu-id="1a41b-102">Serializzazione di base</span><span class="sxs-lookup"><span data-stu-id="1a41b-102">Basic serialization</span></span>
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-Il modo più semplice per rendere serializzabile una classe è contrassegnarla con l'attributo <xref:System.SerializableAttribute>, come illustrato di seguito.  
+<span data-ttu-id="1a41b-103">Il modo più semplice per rendere serializzabile una classe è contrassegnarla con l'attributo <xref:System.SerializableAttribute>, come illustrato di seguito.</span><span class="sxs-lookup"><span data-stu-id="1a41b-103">The easiest way to make a class serializable is to mark it with the <xref:System.SerializableAttribute> as follows.</span></span>  
   
 ```csharp  
 [Serializable]  
@@ -35,7 +33,7 @@ public class MyObject {
 }  
 ```  
   
-L'esempio di codice seguente illustra come è possibile serializzare un'istanza della classe in un file.  
+<span data-ttu-id="1a41b-104">L'esempio di codice seguente illustra come è possibile serializzare un'istanza della classe in un file.</span><span class="sxs-lookup"><span data-stu-id="1a41b-104">The following code example shows how an instance of this class can be serialized to a file.</span></span>  
   
 ```csharp  
 MyObject obj = new MyObject();  
@@ -48,9 +46,9 @@ formatter.Serialize(stream, obj);
 stream.Close();  
 ```  
   
-In questo esempio viene utilizzato un formattatore binario per eseguire la serializzazione. È sufficiente creare un'istanza del flusso e il formattatore che si vuole usare e quindi chiamare il metodo **Serialize** sul formattatore. Il flusso e l'oggetto da serializzare vengono forniti a questa chiamata come parametri. Sebbene non sia stato dimostrato in modo esplicito in questo esempio, verranno serializzate tutte le variabili del membro di una classe, anche quelle contrassegnate come private. Da questo punto di vista, la serializzazione binaria differisce dalla classe <xref:System.Xml.Serialization.XmlSerializer>, che serializza solo campi pubblici. Per informazioni sull'esclusione di variabili membro dalla serializzazione binaria, vedere [Selezione selettiva](selective-serialization.md).  
+<span data-ttu-id="1a41b-105">In questo esempio viene utilizzato un formattatore binario per eseguire la serializzazione.</span><span class="sxs-lookup"><span data-stu-id="1a41b-105">This example uses a binary formatter to do the serialization.</span></span> <span data-ttu-id="1a41b-106">È sufficiente creare un'istanza del flusso e il formattatore che si vuole usare e quindi chiamare il metodo **Serialize** sul formattatore.</span><span class="sxs-lookup"><span data-stu-id="1a41b-106">All you need to do is create an instance of the stream and the formatter you intend to use, and then call the **Serialize** method on the formatter.</span></span> <span data-ttu-id="1a41b-107">Il flusso e l'oggetto da serializzare vengono forniti a questa chiamata come parametri.</span><span class="sxs-lookup"><span data-stu-id="1a41b-107">The stream and the object to serialize are provided as parameters to this call.</span></span> <span data-ttu-id="1a41b-108">Sebbene non sia stato dimostrato in modo esplicito in questo esempio, verranno serializzate tutte le variabili del membro di una classe, anche quelle contrassegnate come private.</span><span class="sxs-lookup"><span data-stu-id="1a41b-108">Although it is not explicitly demonstrated in this example, all member variables of a class will be serialized—even variables marked as private.</span></span> <span data-ttu-id="1a41b-109">Da questo punto di vista, la serializzazione binaria differisce dalla classe <xref:System.Xml.Serialization.XmlSerializer>, che serializza solo campi pubblici.</span><span class="sxs-lookup"><span data-stu-id="1a41b-109">In this aspect, binary serialization differs from the <xref:System.Xml.Serialization.XmlSerializer> class, which only serializes public fields.</span></span> <span data-ttu-id="1a41b-110">Per informazioni sull'esclusione di variabili membro dalla serializzazione binaria, vedere [Selezione selettiva](selective-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="1a41b-110">For information on excluding member variables from binary serialization, see [Selective Serialization](selective-serialization.md).</span></span>  
   
-Il ripristino dell'oggetto allo stato antecedente risulta molto semplice. Per prima cosa, creare un flusso per la lettura e un oggetto <xref:System.Runtime.Serialization.Formatter> e quindi istruire il formattatore in modo che deserializzi l'oggetto. Nell'esempio di codice riportato di seguito viene illustrato come fare.  
+<span data-ttu-id="1a41b-111">Il ripristino dell'oggetto allo stato antecedente risulta molto semplice.</span><span class="sxs-lookup"><span data-stu-id="1a41b-111">Restoring the object back to its former state is just as easy.</span></span> <span data-ttu-id="1a41b-112">Per prima cosa, creare un flusso per la lettura e un oggetto <xref:System.Runtime.Serialization.Formatter> e quindi istruire il formattatore in modo che deserializzi l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="1a41b-112">First, create a stream for reading and a <xref:System.Runtime.Serialization.Formatter>, and then instruct the formatter to deserialize the object.</span></span> <span data-ttu-id="1a41b-113">Nell'esempio di codice riportato di seguito viene illustrato come fare.</span><span class="sxs-lookup"><span data-stu-id="1a41b-113">The code example below shows how this is done.</span></span>  
   
 ```csharp  
 IFormatter formatter = new BinaryFormatter();  
@@ -64,9 +62,9 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-La classe <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> usata in precedenza è molto efficiente e produce un flusso di byte compatto. Tutti gli oggetti serializzati con questo formattatore possono inoltre essere deserializzati con lo stesso formattatore, rendendolo uno strumento ideale per la serializzazione di oggetti che saranno deserializzati su .NET Framework. È importante notare che i costruttori non vengono chiamati quando un oggetto viene deserializzato. Questo vincolo è posizionato sulla deserializzazione per motivi di prestazioni. Tuttavia, in tal modo vengono violati alcuni dei normali contratti stabiliti tra il runtime e il writer dell'oggetto e gli sviluppatori devono essere certi di comprendere le ramificazioni quando contrassegnano un oggetto come serializzabile.  
+<span data-ttu-id="1a41b-114">La classe <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> usata in precedenza è molto efficiente e produce un flusso di byte compatto.</span><span class="sxs-lookup"><span data-stu-id="1a41b-114">The <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> used above is very efficient and produces a compact byte stream.</span></span> <span data-ttu-id="1a41b-115">Tutti gli oggetti serializzati con questo formattatore possono inoltre essere deserializzati con lo stesso formattatore, rendendolo uno strumento ideale per la serializzazione di oggetti che saranno deserializzati su .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1a41b-115">All objects serialized with this formatter can also be deserialized with it, which makes it an ideal tool for serializing objects that will be deserialized on the .NET Framework.</span></span> <span data-ttu-id="1a41b-116">È importante notare che i costruttori non vengono chiamati quando un oggetto viene deserializzato.</span><span class="sxs-lookup"><span data-stu-id="1a41b-116">It is important to note that constructors are not called when an object is deserialized.</span></span> <span data-ttu-id="1a41b-117">Questo vincolo è posizionato sulla deserializzazione per motivi di prestazioni.</span><span class="sxs-lookup"><span data-stu-id="1a41b-117">This constraint is placed on deserialization for performance reasons.</span></span> <span data-ttu-id="1a41b-118">Tuttavia, in tal modo vengono violati alcuni dei normali contratti stabiliti tra il runtime e il writer dell'oggetto e gli sviluppatori devono essere certi di comprendere le ramificazioni quando contrassegnano un oggetto come serializzabile.</span><span class="sxs-lookup"><span data-stu-id="1a41b-118">However, this violates some of the usual contracts the runtime makes with the object writer, and developers should ensure that they understand the ramifications when marking an object as serializable.</span></span>  
   
-Se la portabilità è un requisito, usare invece <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. È sufficiente sostituire **BinaryFormatter** nel codice sopra riportato con **SoapFormatter** e quindi chiamare **Serialize** e **Deserialize**, come nel caso precedente. Questo formattatore produce il seguente output per l'esempio utilizzato in precedenza.  
+<span data-ttu-id="1a41b-119">Se la portabilità è un requisito, usare invece <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.</span><span class="sxs-lookup"><span data-stu-id="1a41b-119">If portability is a requirement, use the <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> instead.</span></span> <span data-ttu-id="1a41b-120">È sufficiente sostituire **BinaryFormatter** nel codice sopra riportato con **SoapFormatter** e quindi chiamare **Serialize** e **Deserialize**, come nel caso precedente.</span><span class="sxs-lookup"><span data-stu-id="1a41b-120">Simply replace the **BinaryFormatter** in the code above with **SoapFormatter,** and call **Serialize** and **Deserialize** as before.</span></span> <span data-ttu-id="1a41b-121">Questo formattatore produce il seguente output per l'esempio utilizzato in precedenza.</span><span class="sxs-lookup"><span data-stu-id="1a41b-121">This formatter produces the following output for the example used above.</span></span>  
   
 ```xml  
 <SOAP-ENV:Envelope  
@@ -89,7 +87,7 @@ Se la portabilità è un requisito, usare invece <xref:System.Runtime.Serializat
 </SOAP-ENV:Envelope>  
 ```  
   
-È importante tenere presente che l'attributo [Serializable](xref:System.SerializableAttribute) non può essere ereditato. Se una nuova classe viene derivata da `MyObject`, tale classe deve anche essere contrassegnata con l'attributo; in caso contrario non sarà possibile serializzarla. Se, ad esempio, si tenta di serializzare un'istanza della classe seguente, si riceve un'eccezione <xref:System.Runtime.Serialization.SerializationException> in cui si specifica che il tipo `MyStuff` non è contrassegnato come serializzabile.  
+<span data-ttu-id="1a41b-122">È importante tenere presente che l'attributo [Serializable](xref:System.SerializableAttribute) non può essere ereditato.</span><span class="sxs-lookup"><span data-stu-id="1a41b-122">It's important to note that the [Serializable](xref:System.SerializableAttribute) attribute cannot be inherited.</span></span> <span data-ttu-id="1a41b-123">Se una nuova classe viene derivata da `MyObject`, tale classe deve anche essere contrassegnata con l'attributo; in caso contrario non sarà possibile serializzarla.</span><span class="sxs-lookup"><span data-stu-id="1a41b-123">If you derive a new class from `MyObject`, the new class must be marked with the attribute as well, or it cannot be serialized.</span></span> <span data-ttu-id="1a41b-124">Se, ad esempio, si tenta di serializzare un'istanza della classe seguente, si riceve un'eccezione <xref:System.Runtime.Serialization.SerializationException> in cui si specifica che il tipo `MyStuff` non è contrassegnato come serializzabile.</span><span class="sxs-lookup"><span data-stu-id="1a41b-124">For example, when you attempt to serialize an instance of the class below, you'll get a <xref:System.Runtime.Serialization.SerializationException> informing you that the `MyStuff` type is not marked as serializable.</span></span>  
   
 ```csharp  
 public class MyStuff : MyObject   
@@ -98,9 +96,8 @@ public class MyStuff : MyObject
 }  
 ```  
   
- Benché utile, l'utilizzo dell'attributo [Serializable](xref:System.SerializableAttribute) presenta alcune limitazioni, come dimostrato in precedenza. Fare riferimento alle [Linee guida relative alla serializzazione](serialization-guidelines.md) per informazioni sul momento in cui è opportuno contrassegnare una classe per la serializzazione. La serializzazione non può essere aggiunta a una classe dopo essere stata compilata.  
+ <span data-ttu-id="1a41b-125">Benché utile, l'utilizzo dell'attributo [Serializable](xref:System.SerializableAttribute) presenta alcune limitazioni, come dimostrato in precedenza.</span><span class="sxs-lookup"><span data-stu-id="1a41b-125">Using the [Serializable](xref:System.SerializableAttribute) attribute is convenient, but it has limitations as previously demonstrated.</span></span> <span data-ttu-id="1a41b-126">Fare riferimento alle [Linee guida relative alla serializzazione](serialization-guidelines.md) per informazioni sul momento in cui è opportuno contrassegnare una classe per la serializzazione.</span><span class="sxs-lookup"><span data-stu-id="1a41b-126">Refer to the [Serialization Guidelines](serialization-guidelines.md) for information about when you should mark a class for serialization.</span></span> <span data-ttu-id="1a41b-127">La serializzazione non può essere aggiunta a una classe dopo essere stata compilata.</span><span class="sxs-lookup"><span data-stu-id="1a41b-127">Serialization cannot be added to a class after it has been compiled.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Serializzazione binaria](binary-serialization.md)   
- [Serializzazione SOAP e XML](xml-and-soap-serialization.md)
-
+## <a name="see-also"></a><span data-ttu-id="1a41b-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1a41b-128">See also</span></span>  
+ [<span data-ttu-id="1a41b-129">Serializzazione binaria</span><span class="sxs-lookup"><span data-stu-id="1a41b-129">Binary Serialization</span></span>](binary-serialization.md)  
+ [<span data-ttu-id="1a41b-130">Serializzazione SOAP e XML</span><span class="sxs-lookup"><span data-stu-id="1a41b-130">XML and SOAP Serialization</span></span>](xml-and-soap-serialization.md)

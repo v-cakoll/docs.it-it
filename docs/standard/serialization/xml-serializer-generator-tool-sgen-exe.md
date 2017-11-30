@@ -8,65 +8,63 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 8655523db0e90ab3d8c4d4055f876ba3f71d4a8d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 73669fcfd74f9c4948c8ec976ff3271c72f1033a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="xml-serializer-generator-tool-sgenexe"></a>Strumento per la generazione di serializzatori XML (Sgen.exe)
-Lo strumento per la generazione di serializzatori XML (Sgen.exe) consente di creare un assembly di serializzazione XML per i tipi in un assembly specificato al fine di migliorare le prestazioni di avvio di un oggetto <xref:System.Xml.Serialization.XmlSerializer> quando serializza o deserializza oggetti dei tipi specificati.  
+# <a name="xml-serializer-generator-tool-sgenexe"></a><span data-ttu-id="cab99-102">Strumento per la generazione di serializzatori XML (Sgen.exe)</span><span class="sxs-lookup"><span data-stu-id="cab99-102">XML Serializer Generator Tool (Sgen.exe)</span></span>
+<span data-ttu-id="cab99-103">Lo strumento per la generazione di serializzatori XML (Sgen.exe) consente di creare un assembly di serializzazione XML per i tipi in un assembly specificato al fine di migliorare le prestazioni di avvio di un oggetto <xref:System.Xml.Serialization.XmlSerializer> quando serializza o deserializza oggetti dei tipi specificati.</span><span class="sxs-lookup"><span data-stu-id="cab99-103">The XML Serializer Generator creates an XML serialization assembly for types in a specified assembly in order to improve the startup performance of a <xref:System.Xml.Serialization.XmlSerializer> when it serializes or deserializes objects of the specified types.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="cab99-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cab99-104">Syntax</span></span>  
   
 ```  
 sgen [options]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a><span data-ttu-id="cab99-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cab99-105">Parameters</span></span>  
   
-|Opzione|Descrizione|  
+|<span data-ttu-id="cab99-106">Opzione</span><span class="sxs-lookup"><span data-stu-id="cab99-106">Option</span></span>|<span data-ttu-id="cab99-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cab99-107">Description</span></span>|  
 |------------|-----------------|  
-|**/a**[**ssembly**]**:***nomefile*|Genera il codice di serializzazione per tutti i tipi contenuti nell'assembly o nell'eseguibile specificato da *nomefile*. È possibile indicare un solo nome file. Se questo argomento viene ripetuto, verrà utilizzato l'ultimo nome file.|  
-|**/c[ompiler]:** *opzioni*|Specifica l'opzione da passare al compilatore C#. Tutte le opzioni di csc.exe vengono supportate dopo essere state passate al compilatore. Questa opzione può essere utilizzata per specificare che l'assembly deve essere firmato e per indicare il file di chiave.|  
-|**/d**[**ebug**]|Genera un'immagine utilizzabile con un debugger.|  
-|**/f[orce]**|Impone la sovrascrittura di un assembly esistente con lo stesso nome. Il valore predefinito è **false**.|  
-|**/help o /?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/k**[**eep**]|Impedisce l'eliminazione dei file di origine generati e di altri file temporanei al termine della compilazione nell'assembly di serializzazione. Questa opzione può essere utilizzata per determinare se lo strumento genera codice di serializzazione per un determinato tipo.|  
-|**/n**[**ologo**]|Elimina la visualizzazione del messaggio di avvio Microsoft.|  
-|**/o**[**ut**]**:***percorso*|Specifica la directory in cui salvare l'assembly generato. **Nota:** il nome dell'assembly generato è composto dal nome dell'assembly di input e da "xmlSerializers.dll".|  
-|**/p**[**roxytypes**]|Genera codice di serializzazione solo per i tipi proxy del servizio Web XML.|  
-|**/r**[**eference**]**:***fileassembly*|Specifica gli assembly a cui fanno riferimento i tipi che richiedono la serializzazione XML. Accetta più file di assembly separati da virgole.|  
-|**/s**[**ilent**]|Evita la visualizzazione dei messaggi di operazione riuscita.|  
-|**/t**[**ype**]**:***tipo*|Genera codice di serializzazione solo per il tipo specificato.|  
-|**/v**[**erbose**]|Visualizza output dettagliato per il debug. Elenca i tipi dell'assembly di destinazione che non possono essere serializzati con <xref:System.Xml.Serialization.XmlSerializer>.|  
-|**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
+|<span data-ttu-id="cab99-108">**/a**[**ssembly**]**:***nomefile*</span><span class="sxs-lookup"><span data-stu-id="cab99-108">**/a**[**ssembly**]**:***filename*</span></span>|<span data-ttu-id="cab99-109">Genera il codice di serializzazione per tutti i tipi contenuti nell'assembly o nell'eseguibile specificato da *nomefile*.</span><span class="sxs-lookup"><span data-stu-id="cab99-109">Generates serialization code for all the types contained in the assembly or executable specified by *filename*.</span></span> <span data-ttu-id="cab99-110">È possibile indicare un solo nome file.</span><span class="sxs-lookup"><span data-stu-id="cab99-110">Only one file name can be provided.</span></span> <span data-ttu-id="cab99-111">Se questo argomento viene ripetuto, verrà utilizzato l'ultimo nome file.</span><span class="sxs-lookup"><span data-stu-id="cab99-111">If this argument is repeated, the last file name is used.</span></span>|  
+|<span data-ttu-id="cab99-112">**/c[ompiler]:** *opzioni*</span><span class="sxs-lookup"><span data-stu-id="cab99-112">**/c[ompiler]:** *options*</span></span>|<span data-ttu-id="cab99-113">Specifica l'opzione da passare al compilatore C#.</span><span class="sxs-lookup"><span data-stu-id="cab99-113">Specifies the options to pass to the C# compiler.</span></span> <span data-ttu-id="cab99-114">Tutte le opzioni di csc.exe vengono supportate dopo essere state passate al compilatore.</span><span class="sxs-lookup"><span data-stu-id="cab99-114">All csc.exe options are supported as they are passed to the compiler.</span></span> <span data-ttu-id="cab99-115">Questa opzione può essere utilizzata per specificare che l'assembly deve essere firmato e per indicare il file di chiave.</span><span class="sxs-lookup"><span data-stu-id="cab99-115">This can be used to specify that the assembly should be signed and to specify the key file.</span></span>|  
+|<span data-ttu-id="cab99-116">**/d**[**ebug**]</span><span class="sxs-lookup"><span data-stu-id="cab99-116">**/d**[**ebug**]</span></span>|<span data-ttu-id="cab99-117">Genera un'immagine utilizzabile con un debugger.</span><span class="sxs-lookup"><span data-stu-id="cab99-117">Generates an image that can be used with a debugger.</span></span>|  
+|<span data-ttu-id="cab99-118">**/f[orce]**</span><span class="sxs-lookup"><span data-stu-id="cab99-118">**/f[orce]**</span></span>|<span data-ttu-id="cab99-119">Impone la sovrascrittura di un assembly esistente con lo stesso nome.</span><span class="sxs-lookup"><span data-stu-id="cab99-119">Forces the overwriting of an existing assembly of the same name.</span></span> <span data-ttu-id="cab99-120">Il valore predefinito è **false**.</span><span class="sxs-lookup"><span data-stu-id="cab99-120">The default is **false**.</span></span>|  
+|<span data-ttu-id="cab99-121">**/help o /?**</span><span class="sxs-lookup"><span data-stu-id="cab99-121">**/help or /?**</span></span>|<span data-ttu-id="cab99-122">Visualizza la sintassi e le opzioni di comando dello strumento.</span><span class="sxs-lookup"><span data-stu-id="cab99-122">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="cab99-123">**/k**[**eep**]</span><span class="sxs-lookup"><span data-stu-id="cab99-123">**/k**[**eep**]</span></span>|<span data-ttu-id="cab99-124">Impedisce l'eliminazione dei file di origine generati e di altri file temporanei al termine della compilazione nell'assembly di serializzazione.</span><span class="sxs-lookup"><span data-stu-id="cab99-124">Suppresses the deletion of the generated source files and other temporary files after they have been compiled into the serialization assembly.</span></span> <span data-ttu-id="cab99-125">Questa opzione può essere utilizzata per determinare se lo strumento genera codice di serializzazione per un determinato tipo.</span><span class="sxs-lookup"><span data-stu-id="cab99-125">This can be used to determine whether the tool is generating serialization code for a particular type.</span></span>|  
+|<span data-ttu-id="cab99-126">**/n**[**ologo**]</span><span class="sxs-lookup"><span data-stu-id="cab99-126">**/n**[**ologo**]</span></span>|<span data-ttu-id="cab99-127">Elimina la visualizzazione del messaggio di avvio Microsoft.</span><span class="sxs-lookup"><span data-stu-id="cab99-127">Suppresses the display of the Microsoft startup banner.</span></span>|  
+|<span data-ttu-id="cab99-128">**/o**[**ut**]**:***percorso*</span><span class="sxs-lookup"><span data-stu-id="cab99-128">**/o**[**ut**]**:***path*</span></span>|<span data-ttu-id="cab99-129">Specifica la directory in cui salvare l'assembly generato.</span><span class="sxs-lookup"><span data-stu-id="cab99-129">Specifies the directory in which to save the generated assembly.</span></span> <span data-ttu-id="cab99-130">**Nota:** il nome dell'assembly generato è composto dal nome dell'assembly di input e da "xmlSerializers.dll".</span><span class="sxs-lookup"><span data-stu-id="cab99-130">**Note:**  The name of the generated assembly is composed of the name of the input assembly plus "xmlSerializers.dll".</span></span>|  
+|<span data-ttu-id="cab99-131">**/p**[**roxytypes**]</span><span class="sxs-lookup"><span data-stu-id="cab99-131">**/p**[**roxytypes**]</span></span>|<span data-ttu-id="cab99-132">Genera codice di serializzazione solo per i tipi proxy del servizio Web XML.</span><span class="sxs-lookup"><span data-stu-id="cab99-132">Generates serialization code only for the XML Web service proxy types.</span></span>|  
+|<span data-ttu-id="cab99-133">**/r**[**eference**]**:***fileassembly*</span><span class="sxs-lookup"><span data-stu-id="cab99-133">**/r**[**eference**]**:***assemblyfiles*</span></span>|<span data-ttu-id="cab99-134">Specifica gli assembly a cui fanno riferimento i tipi che richiedono la serializzazione XML.</span><span class="sxs-lookup"><span data-stu-id="cab99-134">Specifies the assemblies that are referenced by the types requiring XML serialization.</span></span> <span data-ttu-id="cab99-135">Accetta più file di assembly separati da virgole.</span><span class="sxs-lookup"><span data-stu-id="cab99-135">Accepts multiple assembly files separated by commas.</span></span>|  
+|<span data-ttu-id="cab99-136">**/s**[**ilent**]</span><span class="sxs-lookup"><span data-stu-id="cab99-136">**/s**[**ilent**]</span></span>|<span data-ttu-id="cab99-137">Evita la visualizzazione dei messaggi di operazione riuscita.</span><span class="sxs-lookup"><span data-stu-id="cab99-137">Suppresses the display of success messages.</span></span>|  
+|<span data-ttu-id="cab99-138">**/t**[**ype**]**:***tipo*</span><span class="sxs-lookup"><span data-stu-id="cab99-138">**/t**[**ype**]**:***type*</span></span>|<span data-ttu-id="cab99-139">Genera codice di serializzazione solo per il tipo specificato.</span><span class="sxs-lookup"><span data-stu-id="cab99-139">Generates serialization code only for the specified type.</span></span>|  
+|<span data-ttu-id="cab99-140">**/v**[**erbose**]</span><span class="sxs-lookup"><span data-stu-id="cab99-140">**/v**[**erbose**]</span></span>|<span data-ttu-id="cab99-141">Visualizza output dettagliato per il debug.</span><span class="sxs-lookup"><span data-stu-id="cab99-141">Displays verbose output for debugging.</span></span> <span data-ttu-id="cab99-142">Elenca i tipi dell'assembly di destinazione che non possono essere serializzati con <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="cab99-142">Lists types from the target assembly that cannot be serialized with the <xref:System.Xml.Serialization.XmlSerializer>.</span></span>|  
+|<span data-ttu-id="cab99-143">**/?**</span><span class="sxs-lookup"><span data-stu-id="cab99-143">**/?**</span></span>|<span data-ttu-id="cab99-144">Visualizza la sintassi e le opzioni di comando dello strumento.</span><span class="sxs-lookup"><span data-stu-id="cab99-144">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Note  
- Quando lo strumento per la generazione di serializzatori XML non viene utilizzato, un oggetto <xref:System.Xml.Serialization.XmlSerializer> genera codice e un assembly di serializzazione per ogni tipo ogni volta che viene eseguita un'applicazione. Per migliorare le prestazioni dell'avvio della serializzazione XML, utilizzare lo strumento Sgen.exe per generare gli assembly in anticipo. Tali assembly potranno quindi essere distribuiti insieme all'applicazione.  
+## <a name="remarks"></a><span data-ttu-id="cab99-145">Note</span><span class="sxs-lookup"><span data-stu-id="cab99-145">Remarks</span></span>  
+ <span data-ttu-id="cab99-146">Quando lo strumento per la generazione di serializzatori XML non viene utilizzato, un oggetto <xref:System.Xml.Serialization.XmlSerializer> genera codice e un assembly di serializzazione per ogni tipo ogni volta che viene eseguita un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="cab99-146">When the XML Serializer Generator is not used, a <xref:System.Xml.Serialization.XmlSerializer> generates serialization code and a serialization assembly for each type every time an application is run.</span></span> <span data-ttu-id="cab99-147">Per migliorare le prestazioni dell'avvio della serializzazione XML, utilizzare lo strumento Sgen.exe per generare gli assembly in anticipo.</span><span class="sxs-lookup"><span data-stu-id="cab99-147">To improve the performance of XML serialization startup, use the Sgen.exe tool to generate those assemblies the assemblies in advance.</span></span> <span data-ttu-id="cab99-148">Tali assembly potranno quindi essere distribuiti insieme all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="cab99-148">These assemblies can then be deployed with the application.</span></span>  
   
- Lo strumento per la generazione di serializzatori XML può inoltre migliorare le prestazioni dei client che utilizzano i proxy del servizio Web XML per comunicare con i server, in quanto il processo di serializzazione non influisce sulle prestazioni quando il tipo viene caricato per la prima volta.  
+ <span data-ttu-id="cab99-149">Lo strumento per la generazione di serializzatori XML può inoltre migliorare le prestazioni dei client che utilizzano i proxy del servizio Web XML per comunicare con i server, in quanto il processo di serializzazione non influisce sulle prestazioni quando il tipo viene caricato per la prima volta.</span><span class="sxs-lookup"><span data-stu-id="cab99-149">The XML Serializer Generator can also improve the performance of clients that use XML Web service proxies to communicate with servers because the serialization process will not incur a performance hit when the type is loaded the first time.</span></span>  
   
- Gli assembly generati non possono essere utilizzati sul lato server di un servizio Web. Questo strumento è destinato esclusivamente ai client del servizio Web e agli scenari di serializzazione manuale.  
+ <span data-ttu-id="cab99-150">Gli assembly generati non possono essere utilizzati sul lato server di un servizio Web.</span><span class="sxs-lookup"><span data-stu-id="cab99-150">These generated assemblies cannot be used on the server side of a Web service.</span></span> <span data-ttu-id="cab99-151">Questo strumento è destinato esclusivamente ai client del servizio Web e agli scenari di serializzazione manuale.</span><span class="sxs-lookup"><span data-stu-id="cab99-151">This tool is only for Web service clients and manual serialization scenarios.</span></span>  
   
- Se l'assembly contenente il tipo da serializzare è denominato MyType.dll, l'assembly di serializzazione associato verrà denominato MyType.XmlSerializers.dll.  
+ <span data-ttu-id="cab99-152">Se l'assembly contenente il tipo da serializzare è denominato MyType.dll, l'assembly di serializzazione associato verrà denominato MyType.XmlSerializers.dll.</span><span class="sxs-lookup"><span data-stu-id="cab99-152">If the assembly containing the type to serialize is named MyType.dll, then the associated serialization assembly will be named MyType.XmlSerializers.dll.</span></span>  
   
-## <a name="examples"></a>Esempi  
- Il comando seguente crea un assembly denominato Data.XmlSerializers.dll per la serializzazione di tutti i tipi contenuti nell'assembly denominato Data.dll.  
+## <a name="examples"></a><span data-ttu-id="cab99-153">Esempi</span><span class="sxs-lookup"><span data-stu-id="cab99-153">Examples</span></span>  
+ <span data-ttu-id="cab99-154">Il comando seguente crea un assembly denominato Data.XmlSerializers.dll per la serializzazione di tutti i tipi contenuti nell'assembly denominato Data.dll.</span><span class="sxs-lookup"><span data-stu-id="cab99-154">The following command creates an assembly named Data.XmlSerializers.dll for serializing all the types contained in the assembly named Data.dll.</span></span>  
   
 ```  
 sgen Data.dll   
 ```  
   
- Il codice che deve serializzare e deserializzare i tipi in Data.dll può fare riferimento all'assembly Data.XmlSerializers.dll.  
+ <span data-ttu-id="cab99-155">Il codice che deve serializzare e deserializzare i tipi in Data.dll può fare riferimento all'assembly Data.XmlSerializers.dll.</span><span class="sxs-lookup"><span data-stu-id="cab99-155">The Data.XmlSerializers.dll assembly can be referenced from code that needs to serialize and deserialize the types in Data.dll.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)   
- [Panoramica dei servizi Web XML](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)   
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="cab99-156">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cab99-156">See Also</span></span>  
+ [<span data-ttu-id="cab99-157">Strumenti</span><span class="sxs-lookup"><span data-stu-id="cab99-157">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="cab99-158">Panoramica dei servizi Web XML</span><span class="sxs-lookup"><span data-stu-id="cab99-158">XML Web Services Overview</span></span>](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+ [<span data-ttu-id="cab99-159">Prompt dei comandi</span><span class="sxs-lookup"><span data-stu-id="cab99-159">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

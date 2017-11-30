@@ -1,38 +1,42 @@
 ---
-title: "Cenni preliminari sull&#39;utilizzo di controlli in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form]"
-  - "controlli personalizzati [Windows Form]"
-  - "Windows Form, controlli"
+title: Cenni preliminari sull'utilizzo di controlli in Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, controls
+- controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sull&#39;utilizzo di controlli in Windows Form
-In questo argomento verranno descritti gli elementi essenziali di un'applicazione Windows Form e verrà illustrato un semplice esempio in cui vengono utilizzati controlli e gestiti eventi in un'applicazione Windows Form.  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="8521b-102">Cenni preliminari sull'utilizzo di controlli in Windows Form</span><span class="sxs-lookup"><span data-stu-id="8521b-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="8521b-103">In questo argomento vengono descritti gli elementi fondamentali di un'applicazione Windows Form e fornisce un esempio semplice che utilizza i controlli e gestisce gli eventi in un'applicazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="8521b-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## Applicazioni Windows Form semplici  
- Un'applicazione Windows Form presenta almeno i seguenti elementi:  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="8521b-104">Applicazioni Windows Form semplici</span><span class="sxs-lookup"><span data-stu-id="8521b-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="8521b-105">Come minimo, un'applicazione Windows Forms include gli elementi seguenti:</span><span class="sxs-lookup"><span data-stu-id="8521b-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   Una o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=fullName>.  
+-   <span data-ttu-id="8521b-106">Una o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8521b-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   Un metodo `Main` che richiama il metodo `static` \(`shared` in Visual Basic\) <xref:System.Windows.Forms.Application.Run%2A> passando un'istanza di <xref:System.Windows.Forms.Form>.  Il metodo <xref:System.Windows.Forms.Application.Run%2A> elabora i messaggi inviati dal sistema operativo all'applicazione.  
+-   <span data-ttu-id="8521b-107">Oggetto `Main` metodo che richiama il `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> metodo e passa un <xref:System.Windows.Forms.Form> istanza a esso.</span><span class="sxs-lookup"><span data-stu-id="8521b-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="8521b-108">Il <xref:System.Windows.Forms.Application.Run%2A> metodo elabora i messaggi dal sistema operativo per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="8521b-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- Nell'esempio di codice che segue vengono illustrati gli elementi essenziali di un'applicazione Windows Form.  
+ <span data-ttu-id="8521b-109">Esempio di codice seguente mostra gli elementi essenziali di un'applicazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="8521b-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -80,8 +84,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## Utilizzo di controlli in un'applicazione Windows Form  
- Nell'esempio di codice che segue viene mostrata un'applicazione semplice per illustrare le modalità con cui le applicazioni Windows Form utilizzano i controlli e gestiscono gli eventi.  L'esempio consiste in tre pulsanti su un form; quando si fa clic su uno di essi viene modificato il colore di sfondo.  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="8521b-110">Utilizzo dei controlli in un'applicazione Windows Form</span><span class="sxs-lookup"><span data-stu-id="8521b-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="8521b-111">Esempio di codice seguente illustra un'applicazione semplice che illustra come le applicazioni Windows Form usano i controlli e la gestione degli eventi.</span><span class="sxs-lookup"><span data-stu-id="8521b-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="8521b-112">L'esempio è costituito da tre pulsanti di un form. ogni pulsante Modifica il colore di sfondo quando si fa clic.</span><span class="sxs-lookup"><span data-stu-id="8521b-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -229,6 +233,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## Vedere anche  
- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Nozioni fondamentali sullo sviluppo di controlli Windows Form](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="8521b-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8521b-113">See Also</span></span>  
+ [<span data-ttu-id="8521b-114">Sviluppo di controlli Windows Form personalizzati con .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8521b-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="8521b-115">Nozioni fondamentali sullo sviluppo di controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="8521b-115">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

@@ -1,90 +1,73 @@
 ---
-title: 'Procedura: forzare un argomento sia passati per valore (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: forzare il passaggio di un argomento per valore (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, arguments
-- procedures, parameters
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], parameters
 - procedure arguments
 - Visual Basic code, procedures
 - arguments [Visual Basic], ByVal
 - arguments [Visual Basic], passing by value
 - procedure parameters
-- procedures, calling
+- procedures [Visual Basic], calling
 - arguments [Visual Basic], in parentheses
-- procedure arguments, in parentheses
+- procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eea3466534f1797170ae4bc72afbcba899929911
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fdb2df7e114f49c23db9f5b322ca9dd32135ac88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Procedura: forzare il passaggio di un argomento per valore (Visual Basic)
-La dichiarazione della routine determina il meccanismo di passaggio. Se un parametro dichiarato [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] prevede di passare all'argomento corrispondente per riferimento. In questo modo la procedura modificare il valore dell'elemento di programmazione sottostante all'argomento nel codice chiamante. Se si desidera proteggere l'elemento sottostante da tale modifica, è possibile eseguire l'override di `ByRef` meccanismo di passaggio della procedura chiamata racchiudendo il nome dell'argomento tra parentesi. Tali parentesi vengono aggiunte le parentesi che racchiudono l'elenco di argomenti nella chiamata.  
+# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a><span data-ttu-id="9dce3-102">Procedura: forzare il passaggio di un argomento per valore (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9dce3-102">How to: Force an Argument to Be Passed by Value (Visual Basic)</span></span>
+<span data-ttu-id="9dce3-103">La dichiarazione di routine determina il meccanismo di passaggio.</span><span class="sxs-lookup"><span data-stu-id="9dce3-103">The procedure declaration determines the passing mechanism.</span></span> <span data-ttu-id="9dce3-104">Se un parametro è dichiarato [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] prevede di passare all'argomento corrispondente per riferimento.</span><span class="sxs-lookup"><span data-stu-id="9dce3-104">If a parameter is declared [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] expects to pass the corresponding argument by reference.</span></span> <span data-ttu-id="9dce3-105">In questo modo la procedura modificare il valore dell'elemento di programmazione sottostante all'argomento nel codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="9dce3-105">This allows the procedure to change the value of the programming element underlying the argument in the calling code.</span></span> <span data-ttu-id="9dce3-106">Se si desidera proteggere l'elemento sottostante da tale modifica, è possibile eseguire l'override di `ByRef` meccanismo di passaggio della procedura chiamata racchiudendo il nome dell'argomento tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="9dce3-106">If you wish to protect the underlying element against such change, you can override the `ByRef` passing mechanism in the procedure call by enclosing the argument name in parentheses.</span></span> <span data-ttu-id="9dce3-107">Tali parentesi vengono aggiunte le parentesi che racchiude l'elenco di argomenti nella chiamata.</span><span class="sxs-lookup"><span data-stu-id="9dce3-107">These parentheses are in addition to the parentheses enclosing the argument list in the call.</span></span>  
   
- Il codice chiamante non può ignorare un [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) meccanismo.  
+ <span data-ttu-id="9dce3-108">Il codice chiamante non è possibile sostituire un [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) meccanismo.</span><span class="sxs-lookup"><span data-stu-id="9dce3-108">The calling code cannot override a [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mechanism.</span></span>  
   
-### <a name="to-force-an-argument-to-be-passed-by-value"></a>Per forzare un argomento sia passati per valore  
+### <a name="to-force-an-argument-to-be-passed-by-value"></a><span data-ttu-id="9dce3-109">Per forzare un argomento sia passati per valore</span><span class="sxs-lookup"><span data-stu-id="9dce3-109">To force an argument to be passed by value</span></span>  
   
--   Se viene dichiarato il parametro corrispondente `ByVal` nella procedura, non è necessario eseguire passaggi aggiuntivi. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]già prevede di passare l'argomento per valore.  
+-   <span data-ttu-id="9dce3-110">Se il parametro corrispondente viene dichiarato `ByVal` nella procedura, non è necessario eseguire passaggi aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="9dce3-110">If the corresponding parameter is declared `ByVal` in the procedure, you do not need to take any additional steps.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="9dce3-111">già prevede di passare l'argomento per valore.</span><span class="sxs-lookup"><span data-stu-id="9dce3-111"> already expects to pass the argument by value.</span></span>  
   
--   Se viene dichiarato il parametro corrispondente `ByRef` nella routine, racchiudere l'argomento tra parentesi nella chiamata di procedura.  
+-   <span data-ttu-id="9dce3-112">Se il parametro corrispondente viene dichiarato `ByRef` nella procedura, racchiudere l'argomento tra parentesi nella chiamata di procedura.</span><span class="sxs-lookup"><span data-stu-id="9dce3-112">If the corresponding parameter is declared `ByRef` in the procedure, enclose the argument in parentheses in the procedure call.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente esegue l'override di un `ByRef` dichiarazione del parametro. Nella chiamata che forza `ByVal`, notare i due livelli di parentesi.  
+## <a name="example"></a><span data-ttu-id="9dce3-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="9dce3-113">Example</span></span>  
+ <span data-ttu-id="9dce3-114">Nell'esempio seguente esegue l'override di un `ByRef` dichiarazione di parametro.</span><span class="sxs-lookup"><span data-stu-id="9dce3-114">The following example overrides a `ByRef` parameter declaration.</span></span> <span data-ttu-id="9dce3-115">Nella chiamata che forza `ByVal`, tenere presente i due livelli di parentesi.</span><span class="sxs-lookup"><span data-stu-id="9dce3-115">In the call that forces `ByVal`, note the two levels of parentheses.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#39;](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
   
- [!code-vb[&#40; VbVbcnProcedures](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
   
- Quando `str` è racchiuso tra parentesi aggiuntive nell'elenco degli argomenti, il `setNewString` routine non può modificare il valore del codice chiamante e `MsgBox` Visualizza "Non può essere sostituito se passato ByVal". Quando `str` non viene racchiusa tra parentesi aggiuntive, la routine può modificare, e `MsgBox` Visualizza "È un nuovo valore per l'argomento inString".  
+ <span data-ttu-id="9dce3-116">Quando `str` è racchiuso tra parentesi aggiuntive nell'elenco degli argomenti, il `setNewString` routine non può modificare il valore nel codice chiamante, e `MsgBox` Visualizza "Non può essere sostituito se passato ByVal".</span><span class="sxs-lookup"><span data-stu-id="9dce3-116">When `str` is enclosed in extra parentheses within the argument list, the `setNewString` procedure cannot change its value in the calling code, and `MsgBox` displays "Cannot be replaced if passed ByVal".</span></span> <span data-ttu-id="9dce3-117">Quando `str` non viene racchiusa tra parentesi aggiuntive, la routine può modificarlo, e `MsgBox` Visualizza "This is a un nuovo valore per l'argomento inString".</span><span class="sxs-lookup"><span data-stu-id="9dce3-117">When `str` is not enclosed in extra parentheses, the procedure can change it, and `MsgBox` displays "This is a new value for the inString argument."</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Quando si passa una variabile per riferimento, è necessario utilizzare il `ByRef` (parola chiave) per specificare tale meccanismo.  
+## <a name="compiling-the-code"></a><span data-ttu-id="9dce3-118">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="9dce3-118">Compiling the Code</span></span>  
+ <span data-ttu-id="9dce3-119">Quando si passa una variabile per riferimento, è necessario utilizzare il `ByRef` (parola chiave) per specificare tale meccanismo.</span><span class="sxs-lookup"><span data-stu-id="9dce3-119">When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.</span></span>  
   
- Il valore predefinito in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] gli argomenti vengono passati per valore. Tuttavia, è buona norma includere una programmazione di [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave) con ogni parametro dichiarato. In questo modo il codice più facile da leggere.  
+ <span data-ttu-id="9dce3-120">Il valore predefinito in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gli argomenti vengono passati per valore.</span><span class="sxs-lookup"><span data-stu-id="9dce3-120">The default in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] is to pass arguments by value.</span></span> <span data-ttu-id="9dce3-121">Tuttavia, è buona norma includere una programmazione di [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave) con ogni parametro dichiarato.</span><span class="sxs-lookup"><span data-stu-id="9dce3-121">However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter.</span></span> <span data-ttu-id="9dce3-122">Questo rende il codice più facile da leggere.</span><span class="sxs-lookup"><span data-stu-id="9dce3-122">This makes your code easier to read.</span></span>  
   
-## <a name="robust-programming"></a>Programmazione efficiente  
- Se una routine dichiara un parametro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), la corretta esecuzione del codice potrebbe dipendere la possibilità di modificare l'elemento sottostante nel codice chiamante. Se il codice chiamante esegue l'override di questo meccanismo di chiamata racchiudendo l'argomento tra parentesi, o se viene passato un argomento non modificabile, la routine non può modificare l'elemento sottostante. Ciò potrebbe produrre risultati imprevisti nel codice chiamante.  
+## <a name="robust-programming"></a><span data-ttu-id="9dce3-123">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="9dce3-123">Robust Programming</span></span>  
+ <span data-ttu-id="9dce3-124">Se una routine dichiara un parametro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), la corretta esecuzione del codice potrebbe dipendere in grado di modificare l'elemento sottostante nel codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="9dce3-124">If a procedure declares a parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the correct execution of the code might depend on being able to change the underlying element in the calling code.</span></span> <span data-ttu-id="9dce3-125">Se il codice chiamante esegue l'override di questo meccanismo di chiamata racchiudendo l'argomento tra parentesi, o se passa un argomento non modificabile, la procedura non è possibile modificare l'elemento sottostante.</span><span class="sxs-lookup"><span data-stu-id="9dce3-125">If the calling code overrides this calling mechanism by enclosing the argument in parentheses, or if it passes a nonmodifiable argument, the procedure cannot change the underlying element.</span></span> <span data-ttu-id="9dce3-126">Ciò potrebbe produrre risultati imprevisti nel codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="9dce3-126">This might produce unexpected results in the calling code.</span></span>  
   
-## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- È sempre presente un potenziale rischio per consentire a una procedura per modificare il valore sottostante a un argomento nel codice chiamante. Assicurarsi che si prevede che il valore modificato e in grado di verificare la validità prima di utilizzarlo.  
+## <a name="net-framework-security"></a><span data-ttu-id="9dce3-127">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9dce3-127">.NET Framework Security</span></span>  
+ <span data-ttu-id="9dce3-128">È sempre un potenziale rischio per consentire a una stored procedure per modificare il valore sottostante a un argomento nel codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="9dce3-128">There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code.</span></span> <span data-ttu-id="9dce3-129">Verificare che si prevede che questo valore da modificare e prepararsi a verificare la validità prima di utilizzarlo.</span><span class="sxs-lookup"><span data-stu-id="9dce3-129">Make sure you expect this value to be changed, and be prepared to check it for validity before using it.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedure](./index.md)   
- [Gli argomenti e parametri di routine](./procedure-parameters-and-arguments.md)   
- [Procedura: passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)   
- [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)   
- [Differenze tra argomenti modificabili e](./differences-between-modifiable-and-nonmodifiable-arguments.md)   
- [Differenze tra il passaggio di un argomento per valore e per riferimento](./differences-between-passing-an-argument-by-value-and-by-reference.md)   
- [Procedura: modificare il valore di un argomento di routine](./how-to-change-the-value-of-a-procedure-argument.md)   
- [Procedura: proteggere un argomento di routine modifica del valore](./how-to-protect-a-procedure-argument-against-value-changes.md)   
- [Passaggio di argomenti in base alla posizione e in base al nome](./passing-arguments-by-position-and-by-name.md)   
- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a><span data-ttu-id="9dce3-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9dce3-130">See Also</span></span>  
+ [<span data-ttu-id="9dce3-131">Routine</span><span class="sxs-lookup"><span data-stu-id="9dce3-131">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="9dce3-132">Parametri e argomenti delle routine</span><span class="sxs-lookup"><span data-stu-id="9dce3-132">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="9dce3-133">Procedura: Passare argomenti a una routine</span><span class="sxs-lookup"><span data-stu-id="9dce3-133">How to: Pass Arguments to a Procedure</span></span>](./how-to-pass-arguments-to-a-procedure.md)  
+ [<span data-ttu-id="9dce3-134">Passaggio di argomenti per valore e per riferimento</span><span class="sxs-lookup"><span data-stu-id="9dce3-134">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="9dce3-135">Differenze tra argomenti modificabili e non modificabili</span><span class="sxs-lookup"><span data-stu-id="9dce3-135">Differences Between Modifiable and Nonmodifiable Arguments</span></span>](./differences-between-modifiable-and-nonmodifiable-arguments.md)  
+ [<span data-ttu-id="9dce3-136">Differenze tra il passaggio di un argomento per valore e per riferimento</span><span class="sxs-lookup"><span data-stu-id="9dce3-136">Differences Between Passing an Argument By Value and By Reference</span></span>](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
+ [<span data-ttu-id="9dce3-137">Procedura: cambiare il valore di un argomento di routine</span><span class="sxs-lookup"><span data-stu-id="9dce3-137">How to: Change the Value of a Procedure Argument</span></span>](./how-to-change-the-value-of-a-procedure-argument.md)  
+ [<span data-ttu-id="9dce3-138">Procedura: impedire la modifica del valore di un argomento di una routine</span><span class="sxs-lookup"><span data-stu-id="9dce3-138">How to: Protect a Procedure Argument Against Value Changes</span></span>](./how-to-protect-a-procedure-argument-against-value-changes.md)  
+ [<span data-ttu-id="9dce3-139">Passaggio di argomenti in base alla posizione e al nome</span><span class="sxs-lookup"><span data-stu-id="9dce3-139">Passing Arguments by Position and by Name</span></span>](./passing-arguments-by-position-and-by-name.md)  
+ [<span data-ttu-id="9dce3-140">Tipi valore e tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="9dce3-140">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

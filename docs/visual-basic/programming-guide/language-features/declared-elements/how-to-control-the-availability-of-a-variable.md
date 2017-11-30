@@ -1,88 +1,87 @@
 ---
-title: "How to: Control the Availability of a Variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "access levels, declared elements"
-  - "Private keyword, accessing variables"
-  - "access levels, variables"
-  - "Public keyword, accessing variables"
-  - "Friend keyword, accessing variables"
-  - "variables [Visual Basic], access level"
-  - "declared elements, access level"
-  - "Protected keyword, accessing variables"
+title: "Procedura: controllare la disponibilità di una variabile (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- access levels, declared elements
+- Private keyword [Visual Basic], accessing variables
+- access levels, variables
+- Public keyword [Visual Basic], accessing variables
+- Friend keyword [Visual Basic], accessing variables
+- variables [Visual Basic], access level
+- declared elements [Visual Basic], access level
+- Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 004fb101661fadeaee084e1f9374ca8332ac7234
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Control the Availability of a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-È possibile controllare la disponibilità di una variabile specificando il relativo *livello di accesso*.  Il livello di accesso determina quali parti di codice dispongono delle autorizzazioni di lettura e scrittura sulla variabile.  
+# <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a><span data-ttu-id="e74c9-102">Procedura: controllare la disponibilità di una variabile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e74c9-102">How to: Control the Availability of a Variable (Visual Basic)</span></span>
+<span data-ttu-id="e74c9-103">È possibile controllare la disponibilità di una variabile specificando il relativo *livello di accesso*.</span><span class="sxs-lookup"><span data-stu-id="e74c9-103">You control the availability of a variable by specifying its *access level*.</span></span> <span data-ttu-id="e74c9-104">Il livello di accesso determina il codice dispone dell'autorizzazione di lettura o scrittura per la variabile.</span><span class="sxs-lookup"><span data-stu-id="e74c9-104">The access level determines what code has permission to read or write to the variable.</span></span>  
   
--   Le *variabili membro* \(definite a livello di modulo e all'esterno di una qualsiasi routine\) vengono impostate automaticamente sull'accesso pubblico. Questo significa che tali variabili sono accessibili da qualsiasi codice in cui sono visibili.  Per modificare questa impostazione è possibile specificare un modificatore di accesso.  
+-   <span data-ttu-id="e74c9-105">*Variabili membro* (definito a livello di modulo e all'esterno di qualsiasi routine) predefinito per l'accesso pubblico, ovvero qualsiasi codice che è possibile visualizzarli possa accedervi.</span><span class="sxs-lookup"><span data-stu-id="e74c9-105">*Member variables* (defined at module level and outside any procedure) default to public access, which means any code that can see them can access them.</span></span> <span data-ttu-id="e74c9-106">È possibile modificare questo specificando un modificatore di accesso.</span><span class="sxs-lookup"><span data-stu-id="e74c9-106">You can change this by specifying an access modifier.</span></span>  
   
--   Le *variabili locali* \(definite all'interno di una routine\) dovrebbero avere accesso pubblico, ma in realtà sono accessibili soltanto dal codice all'interno della routine in cui sono dichiarate.  Non è possibile modificare il livello di accesso di una variabile locale, ma è possibile modificare quello della routine che la contiene.  
+-   <span data-ttu-id="e74c9-107">*Le variabili locali* (definito all'interno di una stored procedure) nominalmente hanno accesso pubblico, sebbene può accedervi solo codice all'interno della routine.</span><span class="sxs-lookup"><span data-stu-id="e74c9-107">*Local variables* (defined inside a procedure) nominally have public access, although only code within their procedure can access them.</span></span> <span data-ttu-id="e74c9-108">Non è possibile modificare il livello di accesso di una variabile locale, ma è possibile modificare il livello di accesso della routine che lo contiene.</span><span class="sxs-lookup"><span data-stu-id="e74c9-108">You cannot change the access level of a local variable, but you can change the access level of the procedure that contains it.</span></span>  
   
- Per ulteriori informazioni, vedere [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ <span data-ttu-id="e74c9-109">Per ulteriori informazioni, vedere [accedere livelli in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="e74c9-109">For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## Accesso pubblico e privato  
+## <a name="private-and-public-access"></a><span data-ttu-id="e74c9-110">Accesso pubblico e privato</span><span class="sxs-lookup"><span data-stu-id="e74c9-110">Private and Public Access</span></span>  
   
-#### Per rendere una variabile accessibile soltanto dall'interno del modulo, della classe o della struttura in cui è dichiarata  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a><span data-ttu-id="e74c9-111">Per rendere accessibile solo dall'interno il modulo, classe o struttura di una variabile</span><span class="sxs-lookup"><span data-stu-id="e74c9-111">To make a variable accessible only from within its module, class, or structure</span></span>  
   
-1.  Inserire l'[Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) relativa alla variabile all'interno del modulo, della classe o della struttura ma all'esterno di una qualsiasi routine.  
+1.  <span data-ttu-id="e74c9-112">Sul posto di [Dim (istruzione)](../../../../visual-basic/language-reference/statements/dim-statement.md) per la variabile all'interno di modulo, classe o struttura, ma all'esterno di qualsiasi routine.</span><span class="sxs-lookup"><span data-stu-id="e74c9-112">Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
   
-2.  Includere la parola chiave [Private](../../../../visual-basic/language-reference/modifiers/private.md) nell'istruzione `Dim`.  
+2.  <span data-ttu-id="e74c9-113">Includere il [privata](../../../../visual-basic/language-reference/modifiers/private.md) parola chiave nel `Dim` istruzione.</span><span class="sxs-lookup"><span data-stu-id="e74c9-113">Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.</span></span>  
   
-     È possibile fare riferimento alla variabile da qualsiasi punto all'interno del modulo, della classe o della struttura, ma non dall'esterno.  
+     <span data-ttu-id="e74c9-114">È possibile leggere o scrivere alla variabile da un punto qualsiasi all'interno di modulo, classe o struttura, ma non dall'esterno.</span><span class="sxs-lookup"><span data-stu-id="e74c9-114">You can read or write to the variable from anywhere within the module, class, or structure, but not from outside it.</span></span>  
   
-#### Per rendere una variabile accessibile da qualsiasi codice in cui è visibile  
+#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a><span data-ttu-id="e74c9-115">Per rendere accessibile da qualsiasi codice che può essere visualizzato una variabile</span><span class="sxs-lookup"><span data-stu-id="e74c9-115">To make a variable accessible from any code that can see it</span></span>  
   
-1.  Per una variabile membro, inserire l'istruzione `Dim` relativa alla variabile all'interno di un modulo, di una classe o di una struttura, ma all'esterno di una qualsiasi routine.  
+1.  <span data-ttu-id="e74c9-116">Per una variabile membro, inserire il `Dim` istruzione per la variabile all'interno di un modulo, classe o struttura, ma all'esterno di qualsiasi routine.</span><span class="sxs-lookup"><span data-stu-id="e74c9-116">For a member variable, place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.</span></span>  
   
-2.  Includere la parola chiave [Public](../../../../visual-basic/language-reference/modifiers/public.md) nell'istruzione `Dim`.  
+2.  <span data-ttu-id="e74c9-117">Includere il [pubblica](../../../../visual-basic/language-reference/modifiers/public.md) parola chiave nel `Dim` istruzione.</span><span class="sxs-lookup"><span data-stu-id="e74c9-117">Include the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.</span></span>  
   
-     È possibile fare riferimento alla variabile da qualsiasi codice che interagisca con l'assembly in uso.  
+     <span data-ttu-id="e74c9-118">È possibile leggere o scrivere nella variabile da qualsiasi codice che interagisce con l'assembly.</span><span class="sxs-lookup"><span data-stu-id="e74c9-118">You can read or write to the variable from any code that interoperates with your assembly.</span></span>  
   
- In alternativa  
+ <span data-ttu-id="e74c9-119">-oppure-</span><span class="sxs-lookup"><span data-stu-id="e74c9-119">-or-</span></span>  
   
-1.  Per una variabile locale, inserire l'istruzione `Dim` relativa alla variabile all'interno di una routine.  
+1.  <span data-ttu-id="e74c9-120">Per una variabile locale, inserire il `Dim` istruzione per la variabile all'interno di una stored procedure.</span><span class="sxs-lookup"><span data-stu-id="e74c9-120">For a local variable, place the `Dim` statement for the variable inside a procedure.</span></span>  
   
-2.  Non includere la parola chiave `Public` nell'istruzione `Dim`.  
+2.  <span data-ttu-id="e74c9-121">Non includere il `Public` parola chiave nel `Dim` istruzione.</span><span class="sxs-lookup"><span data-stu-id="e74c9-121">Do not include the `Public` keyword in the `Dim` statement.</span></span>  
   
-     È possibile fare riferimento alla variabile da qualsiasi punto all'interno della routine, ma non dall'esterno.  
+     <span data-ttu-id="e74c9-122">È possibile leggere o scrivere alla variabile da un punto qualsiasi all'interno della routine, ma non dall'esterno.</span><span class="sxs-lookup"><span data-stu-id="e74c9-122">You can read or write to the variable from anywhere within the procedure, but not from outside it.</span></span>  
   
-## Accesso Protected e Friend  
- È possibile limitare il livello di accesso di una variabile alla relativa classe e alle eventuali classi derivate oppure al relativo assembly.  È anche possibile specificare entrambe queste limitazioni, in modo da consentire l'accesso da qualsiasi classe derivata o da qualsiasi altro punto nello stesso assembly.  A questo scopo è necessario combinare le parole chiave `Protected` e `Friend` nella stessa dichiarazione.  
+## <a name="protected-and-friend-access"></a><span data-ttu-id="e74c9-123">Protetto e l'accesso Friend</span><span class="sxs-lookup"><span data-stu-id="e74c9-123">Protected and Friend Access</span></span>  
+ <span data-ttu-id="e74c9-124">È possibile limitare il livello di accesso di una variabile di classe e tutte le classi derivate, o al relativo assembly.</span><span class="sxs-lookup"><span data-stu-id="e74c9-124">You can limit the access level of a variable to its class and any derived classes, or to its assembly.</span></span> <span data-ttu-id="e74c9-125">È inoltre possibile specificare l'unione di queste limitazioni, che consente l'accesso dal codice in qualsiasi classe derivata o in qualsiasi altra posizione nello stesso assembly.</span><span class="sxs-lookup"><span data-stu-id="e74c9-125">You can also specify the union of these limitations, which allows access from code in any derived class or in any other place in the same assembly.</span></span> <span data-ttu-id="e74c9-126">A questo scopo è necessario combinare il `Protected` e `Friend` parole chiave nella stessa dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="e74c9-126">You specify this union by combining the `Protected` and `Friend` keywords in the same declaration.</span></span>  
   
-#### Per rendere una variabile accessibile soltanto dall'interno della relativa classe e da eventuali classi derivate  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a><span data-ttu-id="e74c9-127">Per rendere accessibile solo dall'interno di classe e tutte le classi derivate di una variabile</span><span class="sxs-lookup"><span data-stu-id="e74c9-127">To make a variable accessible only from within its class and any derived classes</span></span>  
   
-1.  Inserire l'istruzione `Dim` relativa alla variabile all'interno di una classe, ma all'esterno di una qualsiasi routine.  
+1.  <span data-ttu-id="e74c9-128">Sul posto di `Dim` istruzione per la variabile all'interno di una classe, ma all'esterno di qualsiasi routine.</span><span class="sxs-lookup"><span data-stu-id="e74c9-128">Place the `Dim` statement for the variable inside a class, but outside any procedure.</span></span>  
   
-2.  Includere la parola chiave [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) nell'istruzione `Dim`.  
+2.  <span data-ttu-id="e74c9-129">Includere il [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) parola chiave nel `Dim` istruzione.</span><span class="sxs-lookup"><span data-stu-id="e74c9-129">Include the [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the `Dim` statement.</span></span>  
   
-     È possibile fare riferimento alla variabile da qualsiasi punto all'interno della classe nonché da qualsiasi classe derivata, ma non dall'esterno di una classe inclusa nella catena di derivazione.  
+     <span data-ttu-id="e74c9-130">Consente di leggere o scrivere alla variabile da un punto qualsiasi all'interno della classe, nonché dall'interno di qualsiasi classe derivata da esso, ma non dall'esterno di qualsiasi classe nella catena di derivazione.</span><span class="sxs-lookup"><span data-stu-id="e74c9-130">You can read or write to the variable from anywhere within the class, as well as from within any class derived from it, but not from outside any class in the derivation chain.</span></span>  
   
-#### Per rendere accessibile una variabile soltanto dall'interno dello stesso assembly  
+#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a><span data-ttu-id="e74c9-131">Per rendere accessibile solo dall'interno dello stesso assembly di una variabile</span><span class="sxs-lookup"><span data-stu-id="e74c9-131">To make a variable accessible only from within the same assembly</span></span>  
   
-1.  Inserire l'istruzione `Dim` relative alla variabile all'interno di un modulo, di una classe o di una struttura, ma all'esterno di una qualsiasi routine.  
+1.  <span data-ttu-id="e74c9-132">Sul posto di `Dim` istruzione per la variabile all'interno di un modulo, classe o struttura, ma all'esterno di qualsiasi routine.</span><span class="sxs-lookup"><span data-stu-id="e74c9-132">Place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.</span></span>  
   
-2.  Includere la parola chiave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) nell'istruzione `Dim`.  
+2.  <span data-ttu-id="e74c9-133">Includere il [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) parola chiave nel `Dim` istruzione.</span><span class="sxs-lookup"><span data-stu-id="e74c9-133">Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the `Dim` statement.</span></span>  
   
-     È possibile fare riferimento alla variabile da qualsiasi punto all'interno del modulo, della classe o della struttura, nonché da qualsiasi codice nello stesso assembly, ma non dall'esterno dell'assembly.  
+     <span data-ttu-id="e74c9-134">È possibile leggere o scrivere alla variabile da un punto qualsiasi all'interno di modulo, classe o struttura, nonché da qualsiasi codice nello stesso assembly, ma non dall'esterno dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="e74c9-134">You can read or write to the variable from anywhere within the module, class, or structure, as well as from any code in the same assembly, but not from outside the assembly.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito vengono illustrate alcune dichiarazioni di variabili con livelli di accesso `Public`, `Protected`, `Friend`, `Protected Friend` e `Private`.  Quando l'istruzione `Dim` specifica un livello di accesso, non è necessario includere la parola chiave `Dim`.  
+## <a name="example"></a><span data-ttu-id="e74c9-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="e74c9-135">Example</span></span>  
+ <span data-ttu-id="e74c9-136">L'esempio seguente mostra le dichiarazioni di variabili con `Public`, `Protected`, `Friend`, `Protected Friend`, e `Private` livelli di accesso.</span><span class="sxs-lookup"><span data-stu-id="e74c9-136">The following example shows declarations of variables with `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private` access levels.</span></span> <span data-ttu-id="e74c9-137">Si noti che quando il `Dim` istruzione specifica un livello di accesso, non è necessario includere il `Dim` (parola chiave).</span><span class="sxs-lookup"><span data-stu-id="e74c9-137">Note that when the `Dim` statement specifies an access level, you do not need to include the `Dim` keyword.</span></span>  
   
 ```  
 Public Class classForEverybody  
@@ -92,13 +91,13 @@ Protected Friend stringForProjectAndHeirs As String
 Private numberForMeOnly As Integer  
 ```  
   
-## Sicurezza di .NET Framework  
- Più restrittivo è il livello di accesso di una variabile, minori saranno le probabilità che la variabile possa essere utilizzata in modo improprio da un codice dannoso.  
+## <a name="net-framework-security"></a><span data-ttu-id="e74c9-138">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e74c9-138">.NET Framework Security</span></span>  
+ <span data-ttu-id="e74c9-139">Più restrittivo il livello di accesso di una variabile, minori saranno le probabilità di codice dannoso può rendere non corretto utilizzano di esso.</span><span class="sxs-lookup"><span data-stu-id="e74c9-139">The more restrictive the access level of a variable, the smaller the chances that malicious code can make improper use of it.</span></span>  
   
-## Vedere anche  
- [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Public](../../../../visual-basic/language-reference/modifiers/public.md)   
- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)   
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../../visual-basic/language-reference/modifiers/private.md)
+## <a name="see-also"></a><span data-ttu-id="e74c9-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e74c9-140">See Also</span></span>  
+ [<span data-ttu-id="e74c9-141">Livelli di accesso in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e74c9-141">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="e74c9-142">Istruzione Dim</span><span class="sxs-lookup"><span data-stu-id="e74c9-142">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="e74c9-143">Public</span><span class="sxs-lookup"><span data-stu-id="e74c9-143">Public</span></span>](../../../../visual-basic/language-reference/modifiers/public.md)  
+ [<span data-ttu-id="e74c9-144">Protected</span><span class="sxs-lookup"><span data-stu-id="e74c9-144">Protected</span></span>](../../../../visual-basic/language-reference/modifiers/protected.md)  
+ [<span data-ttu-id="e74c9-145">Friend</span><span class="sxs-lookup"><span data-stu-id="e74c9-145">Friend</span></span>](../../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="e74c9-146">Private</span><span class="sxs-lookup"><span data-stu-id="e74c9-146">Private</span></span>](../../../../visual-basic/language-reference/modifiers/private.md)

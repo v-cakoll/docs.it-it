@@ -1,37 +1,40 @@
 ---
-title: "Procedura: utilizzare i colori di sistema in una sfumatura | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sfumature, colori di sistema"
-  - "colori di sistema nelle sfumature"
+title: 'Procedura: utilizzare i colori di sistema in una sfumatura'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- gradients [WPF], system colors in
+- system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 105e22588f68d999811f5482342d53851a4d25eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare i colori di sistema in una sfumatura
-Per utilizzare un colore di sistema in una sfumatura, vengono utilizzate le proprietà statiche *\<ColoreSistema\>*Color e *\<ColoreSistema\>*ColorKey della classe <xref:System.Windows.SystemColors> per ottenere un riferimento al colore, dove *\<ColoreSistema\>* è il nome del colore di sistema desiderato.  Utilizzare le proprietà *\<ColoreSistema\>*ColorKey quando si desidera creare un riferimento dinamico che viene automaticamente aggiornato quando viene modificato il tema del sistema.  In caso contrario, utilizzare le proprietà *\<ColoreSistema\>*Color.  
+# <a name="how-to-use-system-colors-in-a-gradient"></a><span data-ttu-id="3ec60-102">Procedura: utilizzare i colori di sistema in una sfumatura</span><span class="sxs-lookup"><span data-stu-id="3ec60-102">How to: Use System Colors in a Gradient</span></span>
+<span data-ttu-id="3ec60-103">Per utilizzare un colore di sistema in una sfumatura, si utilizza il  *\<SystemColor >*colore e  *\<SystemColor >*ColorKey proprietà statiche della <xref:System.Windows.SystemColors> classe per ottenere un riferimento al colore, in cui  *\<SystemColor >* è il nome del colore di sistema desiderato.</span><span class="sxs-lookup"><span data-stu-id="3ec60-103">To use a system color in a gradient, you use the *\<SystemColor>*Color and *\<SystemColor>*ColorKey static properties of the <xref:System.Windows.SystemColors> class to obtain a reference to the color, where *\<SystemColor>* is the name of the desired system color.</span></span> <span data-ttu-id="3ec60-104">Utilizzare il  *\<SystemColor >*ColorKey proprietà quando si desidera creare un riferimento dinamico viene aggiornato automaticamente quando cambia il tema del sistema.</span><span class="sxs-lookup"><span data-stu-id="3ec60-104">Use the *\<SystemColor>*ColorKey properties when you want to create a dynamic reference that updates automatically as the system theme changes.</span></span> <span data-ttu-id="3ec60-105">In caso contrario, utilizzare il  *\<SystemColor >*proprietà dei colori.</span><span class="sxs-lookup"><span data-stu-id="3ec60-105">Otherwise, use the *\<SystemColor>*Color properties.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito vengono utilizzate risorse di colore di sistema dinamiche per creare una sfumatura.  
+## <a name="example"></a><span data-ttu-id="3ec60-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="3ec60-106">Example</span></span>  
+ <span data-ttu-id="3ec60-107">L'esempio seguente usa risorse di colore di sistema dinamiche per creare una sfumatura.</span><span class="sxs-lookup"><span data-stu-id="3ec60-107">The following example uses dynamic system color resources to create a gradient.</span></span>  
   
- [!code-xml[brushsamples_snip#GraphicsMMDynamicSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemColorExample.xaml#graphicsmmdynamicsystemcolorgradientexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemColorExample.xaml#graphicsmmdynamicsystemcolorgradientexamplewholepage)]  
   
- Nell'esempio successivo vengono utilizzate risorse di colore di sistema statiche per creare una sfumatura.  
+ <span data-ttu-id="3ec60-108">L'esempio seguente usa risorse di colore di sistema statiche per creare una sfumatura.</span><span class="sxs-lookup"><span data-stu-id="3ec60-108">The next example uses static system color resources to create a gradient.</span></span>  
   
- [!code-xml[brushsamples_snip#GraphicsMMStaticSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemColorExample.xaml#graphicsmmstaticsystemcolorgradientexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemColorExample.xaml#graphicsmmstaticsystemcolorgradientexamplewholepage)]  
   
-## Vedere anche  
- <xref:System.Windows.SystemColors>   
- [Disegnare un'area con un pennello di sistema](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)   
- [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3ec60-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3ec60-109">See Also</span></span>  
+ <xref:System.Windows.SystemColors>  
+ [<span data-ttu-id="3ec60-110">Disegnare un'area con un pennello di sistema</span><span class="sxs-lookup"><span data-stu-id="3ec60-110">Paint an Area with a System Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="3ec60-111">Cenni sul disegno con colori a tinta unita e sfumature</span><span class="sxs-lookup"><span data-stu-id="3ec60-111">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

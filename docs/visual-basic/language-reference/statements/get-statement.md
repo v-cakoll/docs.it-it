@@ -1,84 +1,81 @@
 ---
-title: "Get Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Get"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Get statement, syntax"
-  - "Get statement"
-  - "properties [Visual Basic], read-only"
-  - "read-only properties"
-  - "Get keyword"
-  - "property procedures, Get statements"
+title: Istruzione Get
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Get
+helpviewer_keywords:
+- Get statement [Visual Basic], syntax
+- Get statement [Visual Basic]
+- properties [Visual Basic], read-only
+- read-only properties
+- Get keyword [Visual Basic]
+- property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Get Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consente di dichiarare una routine di proprietà `Get` utilizzata per recuperare il valore di una proprietà.  
+# <a name="get-statement"></a><span data-ttu-id="356e8-102">Istruzione Get</span><span class="sxs-lookup"><span data-stu-id="356e8-102">Get Statement</span></span>
+<span data-ttu-id="356e8-103">Dichiara un `Get` routine della proprietà utilizzata per recuperare il valore di una proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-103">Declares a `Get` property procedure used to retrieve the value of a property.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="356e8-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="356e8-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] Get()  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ] Get()  
+    [ statements ]  
 End Get  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="356e8-105">Parti</span><span class="sxs-lookup"><span data-stu-id="356e8-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Termine|Definizione|  
-|`attributelist`|Parametro facoltativo.  Vedere [Elenco degli attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facoltativo per al massimo una delle istruzioni `Get` e `Set` in questa proprietà e può essere  ad esempio uno dei seguenti:<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Parametro facoltativo.  Una o più istruzioni eseguite quando viene chiamata la routine di proprietà `Get`.|  
-|`End Get`|Obbligatorio.  Consente di terminare la definizione della routine di proprietà `Get`.|  
+|<span data-ttu-id="356e8-106">Termine</span><span class="sxs-lookup"><span data-stu-id="356e8-106">Term</span></span>|<span data-ttu-id="356e8-107">Definizione</span><span class="sxs-lookup"><span data-stu-id="356e8-107">Definition</span></span>|  
+|---|---|  
+|`attributelist`|<span data-ttu-id="356e8-108">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="356e8-108">Optional.</span></span> <span data-ttu-id="356e8-109">Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).</span><span class="sxs-lookup"><span data-stu-id="356e8-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="356e8-110">Facoltativo per al massimo una del `Get` e `Set` istruzioni in questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-110">Optional on at most one of the `Get` and `Set` statements in this property.</span></span> <span data-ttu-id="356e8-111">Può essere uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="356e8-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="356e8-112">-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="356e8-112">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="356e8-113">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="356e8-113">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="356e8-114">-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="356e8-114">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="356e8-115">Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="356e8-115">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`statements`|<span data-ttu-id="356e8-116">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="356e8-116">Optional.</span></span> <span data-ttu-id="356e8-117">Uno o più istruzioni che vengono eseguite quando il `Get` viene chiamata una routine della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-117">One or more statements that run when the `Get` property procedure is called.</span></span>|  
+|`End Get`|<span data-ttu-id="356e8-118">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="356e8-118">Required.</span></span> <span data-ttu-id="356e8-119">Termina la definizione del `Get` routine della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-119">Terminates the definition of the `Get` property procedure.</span></span>|  
   
-## Note  
- Per ogni proprietà deve esistere una routine di proprietà `Get` a meno che la proprietà non sia contrassegnata come `WriteOnly`.  La routine `Get` viene utilizzata per ottenere il valore corrente della proprietà.  
+## <a name="remarks"></a><span data-ttu-id="356e8-120">Note</span><span class="sxs-lookup"><span data-stu-id="356e8-120">Remarks</span></span>  
+ <span data-ttu-id="356e8-121">Ogni proprietà deve avere un `Get` routine della proprietà, a meno che la proprietà è contrassegnata come `WriteOnly`.</span><span class="sxs-lookup"><span data-stu-id="356e8-121">Every property must have a `Get` property procedure unless the property is marked `WriteOnly`.</span></span> <span data-ttu-id="356e8-122">Il `Get` procedure viene utilizzata per restituire il valore corrente della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-122">The `Get` procedure is used to return the current value of the property.</span></span>  
   
- In Visual Basic viene automaticamente chiamata la routine `Get` di una proprietà quando un'espressione richiede il valore della proprietà.  
+ <span data-ttu-id="356e8-123">Visual Basic chiama automaticamente una proprietà `Get` procedure quando un'espressione richiede il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-123">Visual Basic automatically calls a property's `Get` procedure when an expression requests the property's value.</span></span>  
   
- All'interno del corpo della dichiarazione di proprietà possono essere contenute solo le routine `Get` e `Set` della proprietà fra le istruzioni [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) e `End Property`.  Non è possibile memorizzare altro all'infuori di queste routine.  In particolare, non è possibile memorizzare il valore corrente della proprietà.  Questo valore va memorizzarlo al di fuori della proprietà. Se lo si inserisce all'interno di una delle routine infatti, l'altra non potrà accedervi.  In genere questo valore viene memorizzato in una variabile [Private](../../../visual-basic/language-reference/modifiers/private.md) dichiarata allo stesso livello della proprietà.  Una routine `Get` deve essere definita all'interno della proprietà a cui si riferisce.  
+ <span data-ttu-id="356e8-124">Il corpo della dichiarazione di proprietà può contenere solo della proprietà `Get` e `Set` procedure tra il [istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md) e `End Property` istruzione.</span><span class="sxs-lookup"><span data-stu-id="356e8-124">The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement.</span></span> <span data-ttu-id="356e8-125">Non può contenere qualsiasi elemento diverso da tali procedure.</span><span class="sxs-lookup"><span data-stu-id="356e8-125">It cannot store anything other than those procedures.</span></span> <span data-ttu-id="356e8-126">In particolare, è possibile archiviare il valore della proprietà corrente.</span><span class="sxs-lookup"><span data-stu-id="356e8-126">In particular, it cannot store the property's current value.</span></span> <span data-ttu-id="356e8-127">È necessario archiviare il valore di fuori della proprietà, perché se archiviata all'interno di una delle routine della proprietà, routine della proprietà non può accedere.</span><span class="sxs-lookup"><span data-stu-id="356e8-127">You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it.</span></span> <span data-ttu-id="356e8-128">In genere questo consiste nell'archiviare il valore in un [privata](../../../visual-basic/language-reference/modifiers/private.md) variabile dichiarata allo stesso livello della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-128">The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property.</span></span> <span data-ttu-id="356e8-129">È necessario definire un `Get` routine all'interno della proprietà a cui viene applicata.</span><span class="sxs-lookup"><span data-stu-id="356e8-129">You must define a `Get` procedure inside the property to which it applies.</span></span>  
   
- La routine `Get` assume per impostazione predefinita il livello di accesso della proprietà che la contiene, a meno che non si utilizzi il parametro `accessmodifier` nell'istruzione `Get`.  
+ <span data-ttu-id="356e8-130">Il `Get` procedure per impostazione predefinita il livello di accesso della proprietà che la contiene meno di utilizzare `accessmodifier` nel `Get` istruzione.</span><span class="sxs-lookup"><span data-stu-id="356e8-130">The `Get` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Get` statement.</span></span>  
   
-## Regole  
+## <a name="rules"></a><span data-ttu-id="356e8-131">Regole</span><span class="sxs-lookup"><span data-stu-id="356e8-131">Rules</span></span>  
   
--   **Livelli di accesso misto.** Se si definisce una proprietà di lettura\/scrittura, è eventualmente possibile specificare un livello di accesso diverso per la routine `Get` o `Set`, ma non per entrambe.  Il livello di accesso della routine deve essere più restrittivo rispetto a quello della proprietà.  Se ad esempio la proprietà è dichiarata `Friend`, la routine `Get` può essere dichiarata `Private`, ma non `Public`.  
+-   <span data-ttu-id="356e8-132">**Livelli di accesso misti.**</span><span class="sxs-lookup"><span data-stu-id="356e8-132">**Mixed Access Levels.**</span></span> <span data-ttu-id="356e8-133">Se si definisce una proprietà di lettura / scrittura, è possibile specificare facoltativamente un livello di accesso diverso per il `Get` o `Set` routine, ma non entrambi.</span><span class="sxs-lookup"><span data-stu-id="356e8-133">If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both.</span></span> <span data-ttu-id="356e8-134">In questo caso, il livello di accesso della routine deve essere più restrittivo a livello di accesso della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-134">If you do this, the procedure access level must be more restrictive than the property's access level.</span></span> <span data-ttu-id="356e8-135">Ad esempio, se viene dichiarata la proprietà `Friend`, è possibile dichiarare il `Get` procedura `Private`, ma non `Public`.</span><span class="sxs-lookup"><span data-stu-id="356e8-135">For example, if the property is declared `Friend`, you can declare the `Get` procedure `Private`, but not `Public`.</span></span>  
   
-     Se si sta definendo una proprietà `ReadOnly`, la routine `Get` rappresenta l'intera proprietà.  Non è possibile dichiarare un livello di accesso diverso per `Get` in quanto altrimenti per la proprietà verrebbero specificati due livelli di accesso.  
+     <span data-ttu-id="356e8-136">Se si sta definendo un `ReadOnly` proprietà, il `Get` procedure rappresenta l'intera proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-136">If you are defining a `ReadOnly` property, the `Get` procedure represents the entire property.</span></span> <span data-ttu-id="356e8-137">Non è possibile dichiarare un accesso diverso livello per `Get`, poiché verrebbero specificati due livelli di accesso per la proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-137">You cannot declare a different access level for `Get`, because that would set two access levels for the property.</span></span>  
   
--   **Tipo restituito.** L'[Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) può dichiarare il tipo di dati del valore restituito.  La routine `Get` restituisce automaticamente quel tipo di dati.  È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia.  
+-   <span data-ttu-id="356e8-138">**Tipo restituito.**</span><span class="sxs-lookup"><span data-stu-id="356e8-138">**Return Type.**</span></span> <span data-ttu-id="356e8-139">Il [istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md) può dichiarare il tipo di dati del valore restituito.</span><span class="sxs-lookup"><span data-stu-id="356e8-139">The [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) can declare the data type of the value it returns.</span></span> <span data-ttu-id="356e8-140">Il `Get` routine restituisce automaticamente quel tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="356e8-140">The `Get` procedure automatically returns that data type.</span></span> <span data-ttu-id="356e8-141">È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia.</span><span class="sxs-lookup"><span data-stu-id="356e8-141">You can specify any data type or the name of an enumeration, structure, class, or interface.</span></span>  
   
-     Se nell'istruzione `Property` non è specificato `returntype`, la routine restituisce `Object`.  
+     <span data-ttu-id="356e8-142">Se il `Property` istruzione specifica `returntype`, la stored procedure restituisce `Object`.</span><span class="sxs-lookup"><span data-stu-id="356e8-142">If the `Property` statement does not specify `returntype`, the procedure returns `Object`.</span></span>  
   
-## Comportamento  
+## <a name="behavior"></a><span data-ttu-id="356e8-143">Comportamento</span><span class="sxs-lookup"><span data-stu-id="356e8-143">Behavior</span></span>  
   
--   **Chiusura di una routine.** Quando la routine `Get` torna al codice chiamante, l'esecuzione continua all'interno dell'istruzione che ha richiesto il valore della proprietà.  
+-   <span data-ttu-id="356e8-144">**Restituzione da una stored Procedure.**</span><span class="sxs-lookup"><span data-stu-id="356e8-144">**Returning from a Procedure.**</span></span> <span data-ttu-id="356e8-145">Quando il `Get` routine restituisce al codice chiamante, l'esecuzione continua all'interno dell'istruzione che ha richiesto il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-145">When the `Get` procedure returns to the calling code, execution continues within the statement that requested the property value.</span></span>  
   
-     Le routine di proprietà `Get` possono restituire un valore utilizzando l'[Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) oppure assegnando il valore restituito al nome della proprietà.  Per ulteriori informazioni, vedere "Valore restituito" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     <span data-ttu-id="356e8-146">`Get`le routine della proprietà possono restituire un valore utilizzando il [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) o assegnando il valore restituito per il nome della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-146">`Get` property procedures can return a value using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or by assigning the return value to the property name.</span></span> <span data-ttu-id="356e8-147">Per ulteriori informazioni, vedere "Valore restituito" in [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).</span><span class="sxs-lookup"><span data-stu-id="356e8-147">For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).</span></span>  
   
-     Le istruzioni `Exit Property` e `Return` consentono di uscire immediatamente da una routine di proprietà.  Qualsiasi numero delle istruzioni `Exit Property` e `Return` può essere visualizzato in un punto qualsiasi della procedura ed è possibile mescolare le istruzioni `Exit Property` e `Return`.  
+     <span data-ttu-id="356e8-148">Il `Exit Property` e `Return` istruzioni di uscire immediatamente da una routine di proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-148">The `Exit Property` and `Return` statements cause an immediate exit from a property procedure.</span></span> <span data-ttu-id="356e8-149">Un numero qualsiasi di `Exit Property` e `Return` istruzioni possono trovarsi in qualsiasi punto della procedura, ed è possibile combinare `Exit Property` e `Return` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="356e8-149">Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.</span></span>  
   
--   **Valore restituito.** Per ottenere un valore da una routine `Get` è possibile assegnare il valore al nome della proprietà oppure includerlo in un'[Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).  L'istruzione `Return` assegna il valore restituito della routine `Get` e contemporaneamente consente di uscire dalla routine.  
+-   <span data-ttu-id="356e8-150">**Valore restituito.**</span><span class="sxs-lookup"><span data-stu-id="356e8-150">**Return Value.**</span></span> <span data-ttu-id="356e8-151">Per restituire un valore da un `Get` procedura, è possibile assegnare il valore per il nome della proprietà o includerlo in un [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md).</span><span class="sxs-lookup"><span data-stu-id="356e8-151">To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).</span></span> <span data-ttu-id="356e8-152">Il `Return` istruzione assegna contemporaneamente il `Get` procedure restituire valore e di uscire dalla routine.</span><span class="sxs-lookup"><span data-stu-id="356e8-152">The `Return` statement simultaneously assigns the `Get` procedure return value and exits the procedure.</span></span>  
   
-     Se si utilizza l'istruzione `Exit Property` senza assegnare un valore al nome della proprietà, la routine `Get` restituisce il valore predefinito per il tipo di dati della proprietà.  Per ulteriori informazioni, vedere "Valore restituito" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     <span data-ttu-id="356e8-153">Se si utilizza `Exit Property` senza assegnare un valore per il nome della proprietà di `Get` procedura restituisce il valore predefinito per il tipo di dati della proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-153">If you use `Exit Property` without assigning a value to the property name, the `Get` procedure returns the default value for the property's data type.</span></span> <span data-ttu-id="356e8-154">Per ulteriori informazioni, vedere "Valore restituito" in [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).</span><span class="sxs-lookup"><span data-stu-id="356e8-154">For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).</span></span>  
   
-     Nell'esempio seguente sono illustrati due metodi che consentono alla proprietà di sola lettura `quoteForTheDay` di restituire il valore contenuto nella variabile privata `quoteValue`.  
+     <span data-ttu-id="356e8-155">Nell'esempio seguente viene illustrata la proprietà di sola lettura in due modi `quoteForTheDay` può restituire il valore della variabile privata `quoteValue`.</span><span class="sxs-lookup"><span data-stu-id="356e8-155">The following example illustrates two ways the read-only property `quoteForTheDay` can return the value held in the private variable `quoteValue`.</span></span>  
   
      [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_1.vb)]  
   
@@ -86,14 +83,14 @@ End Get
   
      [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_3.vb)]  
   
-## Esempio  
- Nell'esempio seguente l'istruzione `Get` viene utilizzata per restituire il valore di una proprietà.  
+## <a name="example"></a><span data-ttu-id="356e8-156">Esempio</span><span class="sxs-lookup"><span data-stu-id="356e8-156">Example</span></span>  
+ <span data-ttu-id="356e8-157">L'esempio seguente usa il `Get` istruzione per restituire il valore di una proprietà.</span><span class="sxs-lookup"><span data-stu-id="356e8-157">The following example uses the `Get` statement to return the value of a property.</span></span>  
   
  [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
-## Vedere anche  
- [Set Statement](../../../visual-basic/language-reference/statements/set-statement.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Walkthrough: Defining Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+## <a name="see-also"></a><span data-ttu-id="356e8-158">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="356e8-158">See Also</span></span>  
+ [<span data-ttu-id="356e8-159">Istruzione Set</span><span class="sxs-lookup"><span data-stu-id="356e8-159">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [<span data-ttu-id="356e8-160">Istruzione Property</span><span class="sxs-lookup"><span data-stu-id="356e8-160">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="356e8-161">Istruzione Exit</span><span class="sxs-lookup"><span data-stu-id="356e8-161">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="356e8-162">Oggetti e classi</span><span class="sxs-lookup"><span data-stu-id="356e8-162">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [<span data-ttu-id="356e8-163">Procedura dettagliata: Definizione delle classi</span><span class="sxs-lookup"><span data-stu-id="356e8-163">Walkthrough: Defining Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

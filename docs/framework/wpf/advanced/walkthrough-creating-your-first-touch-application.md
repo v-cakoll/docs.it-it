@@ -1,93 +1,99 @@
 ---
-title: "Procedura dettagliata: creazione della prima applicazione a tocco | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creazione di un'applicazione touchscreen [WPF]"
-  - "creazione di un'applicazione sensibile al tocco [WPF]"
-  - "applicazioni touchscreen [WPF], creazione"
-  - "applicazioni sensibili al tocco [WPF], creazione"
+title: 'Procedura dettagliata: creazione della prima applicazione a tocco'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- creating a touch-sensitive application [WPF]
+- touchscreen applications [WPF], creating
+- touch-sensitive applications [WPF], creating
+- creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee85a5d8764fc27205cf09e1af43069b25096ef1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: creazione della prima applicazione a tocco
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente alle applicazioni di rispondere al tocco.  È ad esempio possibile interagire con un'applicazione utilizzando uno o più dita su un dispositivo sensibile al tocco, ad esempio un touchscreen. In questa procedura dettagliata viene creata un'applicazione che consente all'utente di spostarsi, ridimensionare o ruotare un singolo oggetto tramite tocco.  
+# <a name="walkthrough-creating-your-first-touch-application"></a><span data-ttu-id="415c5-102">Procedura dettagliata: creazione della prima applicazione a tocco</span><span class="sxs-lookup"><span data-stu-id="415c5-102">Walkthrough: Creating Your First Touch Application</span></span>
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="415c5-103">consente alle applicazioni di rispondere al tocco.</span><span class="sxs-lookup"><span data-stu-id="415c5-103"> enables applications to respond to touch.</span></span> <span data-ttu-id="415c5-104">Ad esempio, è possibile interagire con un'applicazione utilizzando uno o più dita su un dispositivo di tocco sensibili, ad esempio un touchscreen, che questa procedura dettagliata viene creata un'applicazione che consente all'utente di spostare, ridimensionare o ruotare un oggetto tramite tocco.</span><span class="sxs-lookup"><span data-stu-id="415c5-104">For example, you can interact with an application by using one or more fingers on a touch-sensitive device, such as a touchscreen This walkthrough creates an application that enables the user to move, resize, or rotate a single object by using touch.</span></span>  
   
-## Prerequisiti  
- Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
+## <a name="prerequisites"></a><span data-ttu-id="415c5-105">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="415c5-105">Prerequisites</span></span>  
+ <span data-ttu-id="415c5-106">Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="415c5-106">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
+-   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]<span data-ttu-id="415c5-107">.</span><span class="sxs-lookup"><span data-stu-id="415c5-107">.</span></span>  
   
--   Windows 7.  
+-   <span data-ttu-id="415c5-108">Windows 7.</span><span class="sxs-lookup"><span data-stu-id="415c5-108">Windows 7.</span></span>  
   
--   Un dispositivo in grado di accettare l'input tocco, ad esempio un touchscreen che supporta Windows Touch.  
+-   <span data-ttu-id="415c5-109">Un dispositivo che accetta l'input, ad esempio un touchscreen, che supporta Windows Touch tocco.</span><span class="sxs-lookup"><span data-stu-id="415c5-109">A device that accepts touch input, such as a touchscreen, that supports Windows Touch.</span></span>  
   
- È inoltre necessario disporre di una conoscenza di base della modalità di creazione di un'applicazione in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], in particolare della modalità di sottoscrizione e di gestione di un evento.  Per ulteriori informazioni, vedere [Procedura dettagliata: introduzione a WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ <span data-ttu-id="415c5-110">Inoltre, occorre una conoscenza di come creare un'applicazione in base [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], in particolare come sottoscrivere e gestire un evento.</span><span class="sxs-lookup"><span data-stu-id="415c5-110">Additionally, you should have a basic understanding of how to create an application in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], especially how to subscribe to and handle an event.</span></span> <span data-ttu-id="415c5-111">Per ulteriori informazioni, vedere [procedura dettagliata: applicazione desktop WPF prima](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="415c5-111">For more information, see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>  
   
-## Creazione dell'applicazione  
+## <a name="creating-the-application"></a><span data-ttu-id="415c5-112">Creare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="415c5-112">Creating the Application</span></span>  
   
-#### Per creare l'applicazione  
+#### <a name="to-create-the-application"></a><span data-ttu-id="415c5-113">Per creare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="415c5-113">To create the application</span></span>  
   
-1.  Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C\# denominato `BasicManipulation`.  Per ulteriori informazioni, vedere [Procedura: creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/it-it/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  <span data-ttu-id="415c5-114">Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `BasicManipulation`.</span><span class="sxs-lookup"><span data-stu-id="415c5-114">Create a new WPF Application project in Visual Basic or Visual C# named `BasicManipulation`.</span></span> <span data-ttu-id="415c5-115">Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span><span class="sxs-lookup"><span data-stu-id="415c5-115">For more information, see [How to: Create a New WPF Application Project](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span></span>  
   
-2.  Sostituire il contenuto di MainWindow.xaml con il codice XAML riportato di seguito.  
+2.  <span data-ttu-id="415c5-116">Sostituire il contenuto di MainWindow. XAML con il seguente codice XAML.</span><span class="sxs-lookup"><span data-stu-id="415c5-116">Replace the contents of MainWindow.xaml with the following XAML.</span></span>  
   
-     Questo markup consente di creare un'applicazione semplice contenente un oggetto <xref:System.Windows.Shapes.Rectangle> di colore rosso su un oggetto <xref:System.Windows.Controls.Canvas>.  La proprietà <xref:System.Windows.UIElement.IsManipulationEnabled%2A> di <xref:System.Windows.Shapes.Rectangle> viene impostata su true in modo che possa ricevere gli eventi di modifica.  L'applicazione sottoscrive gli eventi <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta> e <xref:System.Windows.UIElement.ManipulationInertiaStarting>.  Questi eventi contengono la logica per spostare <xref:System.Windows.Shapes.Rectangle> quando l'utente lo modifica.  
+     <span data-ttu-id="415c5-117">Questo codice crea un'applicazione semplice che contiene un rosso <xref:System.Windows.Shapes.Rectangle> su un <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="415c5-117">This markup creates a simple application that contains a red <xref:System.Windows.Shapes.Rectangle> on a <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="415c5-118">Il <xref:System.Windows.UIElement.IsManipulationEnabled%2A> proprietà del <xref:System.Windows.Shapes.Rectangle> è impostata su true in modo che possa ricevere eventi di modifica.</span><span class="sxs-lookup"><span data-stu-id="415c5-118">The <xref:System.Windows.UIElement.IsManipulationEnabled%2A> property of the <xref:System.Windows.Shapes.Rectangle> is set to true so that it will receive manipulation events.</span></span> <span data-ttu-id="415c5-119">L'applicazione sottoscrive il <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, e <xref:System.Windows.UIElement.ManipulationInertiaStarting> eventi.</span><span class="sxs-lookup"><span data-stu-id="415c5-119">The application subscribes to the <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, and <xref:System.Windows.UIElement.ManipulationInertiaStarting> events.</span></span> <span data-ttu-id="415c5-120">Questi eventi contengono la logica per spostare il <xref:System.Windows.Shapes.Rectangle> quando l'utente lo modifica.</span><span class="sxs-lookup"><span data-stu-id="415c5-120">These events contain the logic to move the <xref:System.Windows.Shapes.Rectangle> when the user manipulates it.</span></span>  
   
-     [!code-xml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
+     [!code-xaml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Se si utilizza Visual Basic, nella prima riga di MainWindow.xaml sostituire `x:Class="BasicManipulation.MainWindow"` con `x:Class="MainWindow"`.  
+3.  <span data-ttu-id="415c5-121">Se si utilizza Visual Basic, nella prima riga di MainWindow. XAML, sostituire `x:Class="BasicManipulation.MainWindow"` con `x:Class="MainWindow"`.</span><span class="sxs-lookup"><span data-stu-id="415c5-121">If you are using Visual Basic, in the first line of MainWindow.xaml, replace `x:Class="BasicManipulation.MainWindow"` with `x:Class="MainWindow"`.</span></span>  
   
-4.  Nella classe `MainWindow` aggiungere il gestore eventi <xref:System.Windows.UIElement.ManipulationStarting>.  
+4.  <span data-ttu-id="415c5-122">Nel `MainWindow` classe, aggiungere le seguenti <xref:System.Windows.UIElement.ManipulationStarting> gestore dell'evento.</span><span class="sxs-lookup"><span data-stu-id="415c5-122">In the `MainWindow` class, add the following <xref:System.Windows.UIElement.ManipulationStarting> event handler.</span></span>  
   
-     L'evento <xref:System.Windows.UIElement.ManipulationStarting> si verifica quando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rileva l'inizio della modifica di un oggetto tramite input tocco.  Nel codice viene specificato che la posizione della modifica deve essere relativa a <xref:System.Windows.Window> impostando la proprietà <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>.  
+     <span data-ttu-id="415c5-123">Il <xref:System.Windows.UIElement.ManipulationStarting> evento si verifica quando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rileva un tocco input inizia a modificare un oggetto.</span><span class="sxs-lookup"><span data-stu-id="415c5-123">The <xref:System.Windows.UIElement.ManipulationStarting> event occurs when [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] detects that touch input begins to manipulate an object.</span></span> <span data-ttu-id="415c5-124">Il codice specifica che la posizione della modifica deve essere relativo al <xref:System.Windows.Window> impostando il <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="415c5-124">The code specifies that the position of the manipulation should be relative to the <xref:System.Windows.Window> by setting the <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> property.</span></span>  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]  
   
-5.  Nella classe `MainWindow` aggiungere il gestore eventi <xref:System.Windows.Input.ManipulationDelta>.  
+5.  <span data-ttu-id="415c5-125">Nel `MainWindow` classe, aggiungere le seguenti <xref:System.Windows.Input.ManipulationDelta> gestore dell'evento.</span><span class="sxs-lookup"><span data-stu-id="415c5-125">In the `MainWindow` class, add the following <xref:System.Windows.Input.ManipulationDelta> event handler.</span></span>  
   
-     L'evento <xref:System.Windows.Input.ManipulationDelta> si verifica quando la posizione viene modificata tramite input tocco e può verificarsi più volte durante la modifica.  L'evento può inoltre verificarsi dopo il sollevamento di un dito.  Ad esempio, se l'utente sposta un dito su uno schermo, l'evento <xref:System.Windows.Input.ManipulationDelta> si verifica più volte durante lo spostamento del dito.  Quando l'utente solleva un dito dallo schermo, l'evento <xref:System.Windows.Input.ManipulationDelta> continua a verificarsi per simulare l'inerzia.  
+     <span data-ttu-id="415c5-126">Il <xref:System.Windows.Input.ManipulationDelta> evento si verifica quando il tocco cambia la posizione di input e può ricorrere più volte durante una manipolazione.</span><span class="sxs-lookup"><span data-stu-id="415c5-126">The <xref:System.Windows.Input.ManipulationDelta> event occurs when the touch input changes position and can occur multiple times during a manipulation.</span></span> <span data-ttu-id="415c5-127">L'evento può verificarsi anche dopo la generazione di un dito.</span><span class="sxs-lookup"><span data-stu-id="415c5-127">The event can also occur after a finger is raised.</span></span> <span data-ttu-id="415c5-128">Se l'utente trascina un dito su uno schermo, ad esempio il <xref:System.Windows.Input.ManipulationDelta> evento si verifica più volte durante lo spostamento di un dito.</span><span class="sxs-lookup"><span data-stu-id="415c5-128">For example, if the user drags a finger across a screen, the <xref:System.Windows.Input.ManipulationDelta> event occurs multiple times as the finger moves.</span></span> <span data-ttu-id="415c5-129">Quando l'utente solleva un dito dallo schermo, il <xref:System.Windows.Input.ManipulationDelta> evento continua a verificarsi per simulare l'inerzia.</span><span class="sxs-lookup"><span data-stu-id="415c5-129">When the user raises a finger from the screen, the <xref:System.Windows.Input.ManipulationDelta> event keeps occurring to simulate inertia.</span></span>  
   
-     Nel codice viene applicata la proprietà <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> alla proprietà <xref:System.Windows.UIElement.RenderTransform%2A> dell'oggetto <xref:System.Windows.Shapes.Rectangle> in modo da spostarlo mentre l'utente sposta l'input tocco.  Viene inoltre verificato se l'oggetto <xref:System.Windows.Shapes.Rectangle> si trova al di fuori dei limiti dell'oggetto <xref:System.Windows.Window> quando l'evento si verifica durante l'inerzia.  In caso affermativo, l'applicazione chiama il metodo <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=fullName> per terminare la modifica.  
+     <span data-ttu-id="415c5-130">Il codice si applica il <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> per il <xref:System.Windows.UIElement.RenderTransform%2A> del <xref:System.Windows.Shapes.Rectangle> per spostarlo quando l'utente sposta il tocco di input.</span><span class="sxs-lookup"><span data-stu-id="415c5-130">The code applies the <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> to the <xref:System.Windows.UIElement.RenderTransform%2A> of the <xref:System.Windows.Shapes.Rectangle> to move it as the user moves the touch input.</span></span> <span data-ttu-id="415c5-131">Controlla inoltre se il <xref:System.Windows.Shapes.Rectangle> è esterno ai limiti del <xref:System.Windows.Window> quando l'evento si verifica durante l'inerzia.</span><span class="sxs-lookup"><span data-stu-id="415c5-131">It also checks whether the <xref:System.Windows.Shapes.Rectangle> is outside the bounds of the <xref:System.Windows.Window> when the event occurs during inertia.</span></span> <span data-ttu-id="415c5-132">In tal caso, l'applicazione chiama il <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> metodo per terminare la modifica.</span><span class="sxs-lookup"><span data-stu-id="415c5-132">If so, the application calls the <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> method to end the manipulation.</span></span>  
   
      [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]  
   
-6.  Nella classe `MainWindow` aggiungere il gestore eventi <xref:System.Windows.UIElement.ManipulationInertiaStarting>.  
+6.  <span data-ttu-id="415c5-133">Nel `MainWindow` classe, aggiungere le seguenti <xref:System.Windows.UIElement.ManipulationInertiaStarting> gestore dell'evento.</span><span class="sxs-lookup"><span data-stu-id="415c5-133">In the `MainWindow` class, add the following <xref:System.Windows.UIElement.ManipulationInertiaStarting> event handler.</span></span>  
   
-     L'evento <xref:System.Windows.UIElement.ManipulationInertiaStarting> si verifica quando l'utente solleva tutte le dita dallo schermo.  Nel codice viene impostata la velocità iniziale e la decelerazione per il movimento, l'espansione e la rotazione del rettangolo.  
+     <span data-ttu-id="415c5-134">Il <xref:System.Windows.UIElement.ManipulationInertiaStarting> evento si verifica quando l'utente solleva tutte le dita dallo schermo.</span><span class="sxs-lookup"><span data-stu-id="415c5-134">The <xref:System.Windows.UIElement.ManipulationInertiaStarting> event occurs when the user raises all fingers from the screen.</span></span> <span data-ttu-id="415c5-135">Il codice imposta la velocità iniziale e decelerazione per lo spostamento, espansione e la rotazione del rettangolo.</span><span class="sxs-lookup"><span data-stu-id="415c5-135">The code sets the initial velocity and deceleration for the movement, expansion, and rotation of the rectangle.</span></span>  
   
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]  
   
-7.  Compilare ed eseguire il progetto.  
+7.  <span data-ttu-id="415c5-136">Compilare ed eseguire il progetto.</span><span class="sxs-lookup"><span data-stu-id="415c5-136">Build and run the project.</span></span>  
   
-     Nella finestra verrà visualizzato un quadrato di colore rosso.  
+     <span data-ttu-id="415c5-137">Verrà visualizzato un quadrato rosso vengono visualizzati nella finestra.</span><span class="sxs-lookup"><span data-stu-id="415c5-137">You should see a red square appear in the window.</span></span>  
   
-## Verifica dell'applicazione  
- Per testare l'applicazione, provare a eseguire le modifiche che seguono.  Si noti che è possibile eseguire più modifiche contemporaneamente.  
+## <a name="testing-the-application"></a><span data-ttu-id="415c5-138">Verifica dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="415c5-138">Testing the Application</span></span>  
+ <span data-ttu-id="415c5-139">Per testare l'applicazione, provare le seguenti modifiche.</span><span class="sxs-lookup"><span data-stu-id="415c5-139">To test the application, try the following manipulations.</span></span> <span data-ttu-id="415c5-140">Si noti che è possibile eseguire più di una delle seguenti operazioni nello stesso momento.</span><span class="sxs-lookup"><span data-stu-id="415c5-140">Note that you can do more than one of the following at the same time.</span></span>  
   
--   Per spostare <xref:System.Windows.Shapes.Rectangle>, posizionare un dito su <xref:System.Windows.Shapes.Rectangle> e spostare il dito sullo schermo.  
+-   <span data-ttu-id="415c5-141">Per spostare il <xref:System.Windows.Shapes.Rectangle>, inserire un dito sul <xref:System.Windows.Shapes.Rectangle> e spostare il dito sullo schermo.</span><span class="sxs-lookup"><span data-stu-id="415c5-141">To move the <xref:System.Windows.Shapes.Rectangle>, put a finger on the <xref:System.Windows.Shapes.Rectangle> and move the finger across the screen.</span></span>  
   
--   Per ridimensionare <xref:System.Windows.Shapes.Rectangle>, posizionare due dita su <xref:System.Windows.Shapes.Rectangle> e aprire o chiudere le dita.  
+-   <span data-ttu-id="415c5-142">Per ridimensionare il <xref:System.Windows.Shapes.Rectangle>, posizionare due dita sul <xref:System.Windows.Shapes.Rectangle> e aprire o chiudere ogni dita.</span><span class="sxs-lookup"><span data-stu-id="415c5-142">To resize the <xref:System.Windows.Shapes.Rectangle>, put two fingers on the <xref:System.Windows.Shapes.Rectangle> and move the fingers closer together or farther apart from each other.</span></span>  
   
--   Per ruotare <xref:System.Windows.Shapes.Rectangle>, posizionare due dita su <xref:System.Windows.Shapes.Rectangle> e ruotare un dito intorno all'altro.  
+-   <span data-ttu-id="415c5-143">Per ruotare il <xref:System.Windows.Shapes.Rectangle>, posizionare due dita sul <xref:System.Windows.Shapes.Rectangle> e ruotare un dito intorno a altro.</span><span class="sxs-lookup"><span data-stu-id="415c5-143">To rotate the <xref:System.Windows.Shapes.Rectangle>, put two fingers on the <xref:System.Windows.Shapes.Rectangle> and rotate the fingers around each other.</span></span>  
   
- Per causa l'inerzia, sollevare velocemente le dita dallo schermo durante l'esecuzione delle modifiche precedenti.  L'oggetto <xref:System.Windows.Shapes.Rectangle> continuerà a venire spostato, ridimensionato o ruotato per qualche secondo prima che si fermi.  
+ <span data-ttu-id="415c5-144">Per fare in modo inerzia, sollevare velocemente le dita dallo schermo quando si eseguono modifiche precedenti.</span><span class="sxs-lookup"><span data-stu-id="415c5-144">To cause inertia, quickly raise your fingers from the screen as you perform the previous manipulations.</span></span> <span data-ttu-id="415c5-145">Il <xref:System.Windows.Shapes.Rectangle> continuerà a spostare, ridimensionare o ruotare per alcuni secondi prima di interrompere.</span><span class="sxs-lookup"><span data-stu-id="415c5-145">The <xref:System.Windows.Shapes.Rectangle> will continue to move, resize, or rotate for a few seconds before it stops.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=fullName>
+## <a name="see-also"></a><span data-ttu-id="415c5-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="415c5-146">See Also</span></span>  
+ <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>

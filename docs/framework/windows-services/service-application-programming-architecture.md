@@ -1,74 +1,80 @@
 ---
-title: "Service Application Programming Architecture | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ServiceController components, programming architecture"
-  - "ServiceBase class, service states"
-  - "Windows Service applications, code model"
-  - "services, programming architecture"
-  - "ServiceController class"
-  - "services, states"
-  - "ServiceProcessInstaller class, service application code model"
-  - "Windows Service applications, states"
+title: Architettura di programmazione delle applicazioni di servizio
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ServiceController components, programming architecture
+- ServiceBase class, service states
+- Windows Service applications, code model
+- services, programming architecture
+- ServiceController class
+- services, states
+- ServiceProcessInstaller class, service application code model
+- Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: 15
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: e9c16f2e603a3ce9bbc59be4e01aa492239d2c63
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Service Application Programming Architecture
-Le applicazioni di servizio Windows sono basate su una classe che eredita dalla classe <xref:System.ServiceProcess.ServiceBase?displayProperty=fullName>.  Per determinare il comportamento del servizio si esegue l'override dei metodi di questa classe e se ne definiscono le funzionalità.  
+# <a name="service-application-programming-architecture"></a><span data-ttu-id="c36b6-102">Architettura di programmazione delle applicazioni di servizio</span><span class="sxs-lookup"><span data-stu-id="c36b6-102">Service Application Programming Architecture</span></span>
+<span data-ttu-id="c36b6-103">Le applicazioni di servizio Windows sono basate su una classe che eredita dalla <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> classe.</span><span class="sxs-lookup"><span data-stu-id="c36b6-103">Windows Service applications are based on a class that inherits from the <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="c36b6-104">Eseguire l'override di metodi da questa classe e definire le funzionalità per utilizzarli per determinare il comportamento del servizio.</span><span class="sxs-lookup"><span data-stu-id="c36b6-104">You override methods from this class and define functionality for them to determine how your service behaves.</span></span>  
   
- Di seguito vengono riportate le classi principali legate alla creazione del servizio.  
+ <span data-ttu-id="c36b6-105">Le classi principali coinvolte nella creazione del servizio sono:</span><span class="sxs-lookup"><span data-stu-id="c36b6-105">The main classes involved in service creation are:</span></span>  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=fullName> \- L'override dei metodi dalla classe <xref:System.ServiceProcess.ServiceBase> viene eseguito quando si crea un servizio e si definisce il codice per stabilire il funzionamento del servizio in tale classe ereditata.  
+-   <span data-ttu-id="c36b6-106"><xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>-Si esegue l'override di metodi di <xref:System.ServiceProcess.ServiceBase> classe durante la creazione di un servizio e definire il codice per determinare il funzionamento del servizio in questa classe ereditata.</span><span class="sxs-lookup"><span data-stu-id="c36b6-106"><xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — You override methods from the <xref:System.ServiceProcess.ServiceBase> class when creating a service and define the code to determine how your service functions in this inherited class.</span></span>  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=fullName> e <xref:System.ServiceProcess.ServiceInstaller?displayProperty=fullName> \- Consentono di installare e di disinstallare il servizio.  
+-   <span data-ttu-id="c36b6-107"><xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>e <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> : consentono di installare e disinstallare il servizio.</span><span class="sxs-lookup"><span data-stu-id="c36b6-107"><xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> and <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> —You use these classes to install and uninstall your service.</span></span>  
   
- Per modificare il servizio, è inoltre possibile utilizzare una classe denominata <xref:System.ServiceProcess.ServiceController>.  Questa classe non è legata alla creazione di un servizio, ma può essere utilizzata per avviare, interrompere e passare i comandi al servizio, nonché per restituire una serie di enumerazioni.  
+ <span data-ttu-id="c36b6-108">Inoltre, una classe denominata <xref:System.ServiceProcess.ServiceController> può essere utilizzato per modificare il servizio.</span><span class="sxs-lookup"><span data-stu-id="c36b6-108">In addition, a class named <xref:System.ServiceProcess.ServiceController> can be used to manipulate the service itself.</span></span> <span data-ttu-id="c36b6-109">Questa classe non viene eseguita la creazione di un servizio, ma può essere utilizzata per avviare e arrestare il servizio, passare a esso i comandi e restituire una serie di enumerazioni.</span><span class="sxs-lookup"><span data-stu-id="c36b6-109">This class is not involved in the creation of a service, but can be used to start and stop the service, pass commands to it, and return a series of enumerations.</span></span>  
   
-## Definizione del comportamento del servizio  
- Nella classe di servizio, si esegue l'override delle funzioni della classe base che stabiliscono ciò che accade quando lo stato del servizio viene modificato in Gestione controllo servizi.  La classe <xref:System.ServiceProcess.ServiceBase> espone i metodi riportati di seguito. Per aggiungere un comportamento personalizzato, è possibile eseguire l'override di tali metodi.  
+## <a name="defining-your-services-behavior"></a><span data-ttu-id="c36b6-110">La definizione del comportamento del servizio</span><span class="sxs-lookup"><span data-stu-id="c36b6-110">Defining Your Service's Behavior</span></span>  
+ <span data-ttu-id="c36b6-111">Nella classe del servizio, si esegue l'override delle funzioni della classe base che determinano ciò che accade quando lo stato del servizio viene modificato in Gestione controllo servizi.</span><span class="sxs-lookup"><span data-stu-id="c36b6-111">In your service class, you override base class functions that determine what happens when the state of your service is changed in the Services Control Manager.</span></span> <span data-ttu-id="c36b6-112">La <xref:System.ServiceProcess.ServiceBase> classe espone i metodi seguenti, che è possibile eseguire l'override per aggiungere un comportamento personalizzato.</span><span class="sxs-lookup"><span data-stu-id="c36b6-112">The <xref:System.ServiceProcess.ServiceBase> class exposes the following methods, which you can override to add custom behavior.</span></span>  
   
-|Metodo|Eseguirne l'override per|  
-|------------|------------------------------|  
-|<xref:System.ServiceProcess.ServiceBase.OnStart%2A>|Indicare quali operazioni devono essere eseguite quando il servizio viene avviato.  Per un'esecuzione utile del servizio, occorre scrivere il codice in questa routine.|  
-|<xref:System.ServiceProcess.ServiceBase.OnPause%2A>|Indicare quali operazioni devono essere eseguite quando il servizio viene sospeso.|  
-|<xref:System.ServiceProcess.ServiceBase.OnStop%2A>|Indicare quali operazioni devono essere eseguite quando il servizio viene arrestato.|  
-|<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>|Indicare quali operazioni devono essere eseguite quando il servizio riprende il normale funzionamento dopo la sospensione.|  
-|<xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>|Indicare quali operazioni devono essere eseguite prima della chiusura del sistema, nel caso in cui il servizio sia in esecuzione in quel momento.|  
-|<xref:System.ServiceProcess.ServiceBase.OnCustomCommand%2A>|Indicare quali operazioni devono essere eseguite quando il servizio riceve un comando personalizzato.  Per ulteriori informazioni sui comandi personalizzati, visitare MSDN Online.|  
-|<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|Indicare quali operazioni devono essere eseguite quando il servizio riceve un evento di risparmio energia, come quelli che indicano lo stato di batteria scarica o sospensione.|  
+|<span data-ttu-id="c36b6-113">Metodo</span><span class="sxs-lookup"><span data-stu-id="c36b6-113">Method</span></span>|<span data-ttu-id="c36b6-114">Eseguire l'override per</span><span class="sxs-lookup"><span data-stu-id="c36b6-114">Override to</span></span>|  
+|------------|-----------------|  
+|<xref:System.ServiceProcess.ServiceBase.OnStart%2A>|<span data-ttu-id="c36b6-115">Indicare quali azioni devono essere eseguite quando viene avviato il servizio.</span><span class="sxs-lookup"><span data-stu-id="c36b6-115">Indicate what actions should be taken when your service starts running.</span></span> <span data-ttu-id="c36b6-116">È necessario scrivere codice in questa procedura per il servizio eseguire operazioni utili.</span><span class="sxs-lookup"><span data-stu-id="c36b6-116">You must write code in this procedure for your service to perform useful work.</span></span>|  
+|<xref:System.ServiceProcess.ServiceBase.OnPause%2A>|<span data-ttu-id="c36b6-117">Indicare l'azione da eseguire quando il servizio viene sospesa.</span><span class="sxs-lookup"><span data-stu-id="c36b6-117">Indicate what should happen when your service is paused.</span></span>|  
+|<xref:System.ServiceProcess.ServiceBase.OnStop%2A>|<span data-ttu-id="c36b6-118">Indicare l'azione da eseguire quando si arresta il servizio.</span><span class="sxs-lookup"><span data-stu-id="c36b6-118">Indicate what should happen when your service stops running.</span></span>|  
+|<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>|<span data-ttu-id="c36b6-119">Indicare l'azione da intraprendere quando il servizio riprende il normale funzionamento dopo essere stato sospeso.</span><span class="sxs-lookup"><span data-stu-id="c36b6-119">Indicate what should happen when your service resumes normal functioning after being paused.</span></span>|  
+|<xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>|<span data-ttu-id="c36b6-120">Indicare l'azione da eseguire prima il sistema in corso l'arresto, se il servizio è in esecuzione in quel momento.</span><span class="sxs-lookup"><span data-stu-id="c36b6-120">Indicate what should happen just prior to your system shutting down, if your service is running at that time.</span></span>|  
+|<xref:System.ServiceProcess.ServiceBase.OnCustomCommand%2A>|<span data-ttu-id="c36b6-121">Indicare l'azione da eseguire quando il servizio riceve un comando personalizzato.</span><span class="sxs-lookup"><span data-stu-id="c36b6-121">Indicate what should happen when your service receives a custom command.</span></span> <span data-ttu-id="c36b6-122">Per ulteriori informazioni sui comandi personalizzati, vedere MSDN online.</span><span class="sxs-lookup"><span data-stu-id="c36b6-122">For more information on custom commands, see MSDN online.</span></span>|  
+|<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|<span data-ttu-id="c36b6-123">Indicare come il servizio deve rispondere quando viene ricevuto un evento di risparmio energia, ad esempio una batteria in esaurimento o sospeso.</span><span class="sxs-lookup"><span data-stu-id="c36b6-123">Indicate how the service should respond when a power management event is received, such as a low battery or suspended operation.</span></span>|  
   
 > [!NOTE]
->  Tali metodi rappresentano gli stati che il servizio assume nel corso della propria durata, passando da uno stato al successivo.  Il servizio, ad esempio, non risponde a un comando <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> prima che venga chiamato il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.  
+>  <span data-ttu-id="c36b6-124">Questi metodi rappresentano gli Stati che il servizio viene convogliato attraverso il ciclo di vita; le transizioni del servizio da uno stato al successivo.</span><span class="sxs-lookup"><span data-stu-id="c36b6-124">These methods represent states that the service moves through in its lifetime; the service transitions from one state to the next.</span></span> <span data-ttu-id="c36b6-125">Ad esempio, non si otterranno mai il servizio per rispondere a un <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> comando prima di <xref:System.ServiceProcess.ServiceBase.OnStart%2A> è stato chiamato.</span><span class="sxs-lookup"><span data-stu-id="c36b6-125">For example, you will never get the service to respond to an <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> command before <xref:System.ServiceProcess.ServiceBase.OnStart%2A> has been called.</span></span>  
   
- Esistono diverse altre proprietà e metodi interessanti,  tra cui:  
+ <span data-ttu-id="c36b6-126">Esistono diverse altre proprietà e metodi di interesse.</span><span class="sxs-lookup"><span data-stu-id="c36b6-126">There are several other properties and methods that are of interest.</span></span> <span data-ttu-id="c36b6-127">tra cui:</span><span class="sxs-lookup"><span data-stu-id="c36b6-127">These include:</span></span>  
   
--   Il metodo <xref:System.ServiceProcess.ServiceBase.Run%2A> della classe <xref:System.ServiceProcess.ServiceBase>.  Si tratta del punto di ingresso principale del servizio.  Quando si crea un servizio utilizzando il modello Servizio Windows, il codice viene inserito nel metodo `Main` dell'applicazione per eseguire il servizio.  Il codice è simile al seguente:  
+-   <span data-ttu-id="c36b6-128">Il <xref:System.ServiceProcess.ServiceBase.Run%2A> metodo la <xref:System.ServiceProcess.ServiceBase> classe.</span><span class="sxs-lookup"><span data-stu-id="c36b6-128">The <xref:System.ServiceProcess.ServiceBase.Run%2A> method on the <xref:System.ServiceProcess.ServiceBase> class.</span></span> <span data-ttu-id="c36b6-129">Questo è il punto di ingresso principale per il servizio.</span><span class="sxs-lookup"><span data-stu-id="c36b6-129">This is the main entry point for the service.</span></span> <span data-ttu-id="c36b6-130">Quando si crea un servizio utilizzando il modello di servizio Windows, il codice viene inserito all'interno dell'applicazione `Main` metodo per eseguire il servizio.</span><span class="sxs-lookup"><span data-stu-id="c36b6-130">When you create a service using the Windows Service template, code is inserted in your application's `Main` method to run the service.</span></span> <span data-ttu-id="c36b6-131">Questo codice simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="c36b6-131">This code looks like this:</span></span>  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  In questi esempi viene utilizzata una matrice di tipo <xref:System.ServiceProcess.ServiceBase>, in cui è possibile aggiungere ciascun servizio contenuto nell'applicazione. Di conseguenza, è possibile eseguire tutti i servizi contemporaneamente.  Se si crea un unico servizio, tuttavia, è possibile non utilizzare la matrice, dichiarare un nuovo oggetto che eredita dalla classe <xref:System.ServiceProcess.ServiceBase> e successivamente eseguirlo.  Per un esempio, vedere [How to: Write Services Programmatically](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  <span data-ttu-id="c36b6-132">Negli esempi viene utilizzata una matrice di tipo <xref:System.ServiceProcess.ServiceBase>, in cui ogni servizio contiene l'applicazione può essere aggiunto e quindi tutti i servizi possono essere eseguiti insieme.</span><span class="sxs-lookup"><span data-stu-id="c36b6-132">These examples use an array of type <xref:System.ServiceProcess.ServiceBase>, into which each service your application contains can be added, and then all of the services can be run together.</span></span> <span data-ttu-id="c36b6-133">Se si crea solo un singolo servizio, tuttavia, è possibile scegliere di non utilizzare la matrice e, dichiarare un nuovo oggetto che eredita da <xref:System.ServiceProcess.ServiceBase> e quindi eseguirlo.</span><span class="sxs-lookup"><span data-stu-id="c36b6-133">If you are only creating a single service, however, you might choose not to use the array and simply declare a new object inheriting from <xref:System.ServiceProcess.ServiceBase> and then run it.</span></span> <span data-ttu-id="c36b6-134">Per un esempio, vedere [procedura: scrivere servizi a livello di codice](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).</span><span class="sxs-lookup"><span data-stu-id="c36b6-134">For an example, see [How to: Write Services Programmatically](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).</span></span>  
   
--   Una serie di proprietà della classe <xref:System.ServiceProcess.ServiceBase>,  che definiscono i metodi da chiamare nel servizio.  Quando la proprietà <xref:System.ServiceProcess.ServiceBase.CanStop%2A>, ad esempio, è impostata su `true`, è possibile chiamare il metodo <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  Quando la proprietà <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> è impostata su `true`,è possibile chiamare i metodi <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>.  Quando una di queste proprietà viene impostata su `true`, è pertanto necessario eseguire l'override dei metodi associati e definirne l'elaborazione.  
+-   <span data-ttu-id="c36b6-135">Una serie di proprietà di <xref:System.ServiceProcess.ServiceBase> classe.</span><span class="sxs-lookup"><span data-stu-id="c36b6-135">A series of properties on the <xref:System.ServiceProcess.ServiceBase> class.</span></span> <span data-ttu-id="c36b6-136">Consentono di determinare quali metodi possono essere chiamati sul servizio.</span><span class="sxs-lookup"><span data-stu-id="c36b6-136">These determine what methods can be called on your service.</span></span> <span data-ttu-id="c36b6-137">Ad esempio, quando il <xref:System.ServiceProcess.ServiceBase.CanStop%2A> è impostata su `true`, <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metodo sul servizio può essere chiamato.</span><span class="sxs-lookup"><span data-stu-id="c36b6-137">For example, when the <xref:System.ServiceProcess.ServiceBase.CanStop%2A> property is set to `true`, the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method on your service can be called.</span></span> <span data-ttu-id="c36b6-138">Quando il <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> è impostata su `true`, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> metodi possono essere chiamati.</span><span class="sxs-lookup"><span data-stu-id="c36b6-138">When the <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> property is set to `true`, the <xref:System.ServiceProcess.ServiceBase.OnPause%2A> and <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> methods can be called.</span></span> <span data-ttu-id="c36b6-139">Quando si imposta una di queste proprietà per `true`, è quindi necessario eseguire l'override e definire operazioni di elaborazione per i metodi associati.</span><span class="sxs-lookup"><span data-stu-id="c36b6-139">When you set one of these properties to `true`, you should then override and define processing for the associated methods.</span></span>  
   
     > [!NOTE]
-    >  Per un funzionamento corretto, è necessario che il servizio esegua l'override almeno dei metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
+    >  <span data-ttu-id="c36b6-140">Il servizio deve eseguire l'override almeno <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> siano utili.</span><span class="sxs-lookup"><span data-stu-id="c36b6-140">Your service must override at least <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> to be useful.</span></span>  
   
- Per comunicare con un servizio esistente e controllarne il comportamento, è inoltre possibile utilizzare un componente denominato <xref:System.ServiceProcess.ServiceController>.  
+ <span data-ttu-id="c36b6-141">È inoltre possibile utilizzare un componente denominato il <xref:System.ServiceProcess.ServiceController> per comunicare con e controllare il comportamento di un servizio esistente.</span><span class="sxs-lookup"><span data-stu-id="c36b6-141">You can also use a component called the <xref:System.ServiceProcess.ServiceController> to communicate with and control the behavior of an existing service.</span></span>  
   
-## Vedere anche  
- [Introduction to Windows Service Applications](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [How to: Create Windows Services](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a><span data-ttu-id="c36b6-142">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c36b6-142">See Also</span></span>  
+ [<span data-ttu-id="c36b6-143">Introduzione alle applicazioni di servizio Windows</span><span class="sxs-lookup"><span data-stu-id="c36b6-143">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [<span data-ttu-id="c36b6-144">Procedura: creare servizi Windows</span><span class="sxs-lookup"><span data-stu-id="c36b6-144">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)

@@ -1,53 +1,52 @@
 ---
-title: "Optional (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Optional"
-  - "vb.optional"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Optional keyword, contexts"
-  - "Optional keyword"
+title: Optional (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Optional
+- vb.optional
+helpviewer_keywords:
+- Optional keyword [Visual Basic], contexts
+- Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3aa01c2c1ae731c8fe00fdee24521760db69e624
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Optional (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Specifica che è possibile omettere un argomento di routine quando si chiama la routine.  
+# <a name="optional-visual-basic"></a><span data-ttu-id="32ebb-102">Optional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="32ebb-102">Optional (Visual Basic)</span></span>
+<span data-ttu-id="32ebb-103">Specifica che un argomento di routine può essere omesso quando viene chiamata la procedura.</span><span class="sxs-lookup"><span data-stu-id="32ebb-103">Specifies that a procedure argument can be omitted when the procedure is called.</span></span>  
   
-## Note  
- Per ogni parametro facoltativo, è necessario specificare un'espressione costante come valore predefinito del parametro.  Se l'espressione restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), il valore predefinito del tipo di dati valore viene utilizzato come valore predefinito del parametro.  
+## <a name="remarks"></a><span data-ttu-id="32ebb-104">Note</span><span class="sxs-lookup"><span data-stu-id="32ebb-104">Remarks</span></span>  
+ <span data-ttu-id="32ebb-105">Per ogni parametro facoltativo, è necessario specificare un'espressione costante come valore predefinito di tale parametro.</span><span class="sxs-lookup"><span data-stu-id="32ebb-105">For each optional parameter, you must specify a constant expression as the default value of that parameter.</span></span> <span data-ttu-id="32ebb-106">Se l'espressione restituisce [nulla](../../../visual-basic/language-reference/nothing.md), il valore predefinito del tipo di dati di valore viene utilizzato come valore predefinito del parametro.</span><span class="sxs-lookup"><span data-stu-id="32ebb-106">If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.</span></span>  
   
- Se l'elenco di parametri contiene un parametro facoltativo, ciascun parametro dall'deve essere facoltativo.  
+ <span data-ttu-id="32ebb-107">Se l'elenco dei parametri contiene un parametro facoltativo, ogni parametro che segue deve essere facoltativo.</span><span class="sxs-lookup"><span data-stu-id="32ebb-107">If the parameter list contains an optional parameter, every parameter that follows it must also be optional.</span></span>  
   
- Il modificatore `Optional` può essere utilizzato nei seguenti contesti:  
+ <span data-ttu-id="32ebb-108">Il modificatore `Optional` può essere usato nei contesti seguenti:</span><span class="sxs-lookup"><span data-stu-id="32ebb-108">The `Optional` modifier can be used in these contexts:</span></span>  
   
--   [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [<span data-ttu-id="32ebb-109">Istruzione Declare</span><span class="sxs-lookup"><span data-stu-id="32ebb-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [<span data-ttu-id="32ebb-110">Istruzione Function</span><span class="sxs-lookup"><span data-stu-id="32ebb-110">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [<span data-ttu-id="32ebb-111">Istruzione Property</span><span class="sxs-lookup"><span data-stu-id="32ebb-111">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [<span data-ttu-id="32ebb-112">Istruzione Sub</span><span class="sxs-lookup"><span data-stu-id="32ebb-112">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  Nel chiamare una routine con o senza parametri facoltativi, è possibile passare gli argomenti tramite posizione o per nome.  Per ulteriori informazioni, vedere [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
+>  <span data-ttu-id="32ebb-113">Quando si chiama una routine con o senza parametri facoltativi, è possibile passare argomenti in base alla posizione o al nome.</span><span class="sxs-lookup"><span data-stu-id="32ebb-113">When calling a procedure with or without optional parameters, you can pass arguments by position or by name.</span></span> <span data-ttu-id="32ebb-114">Per ulteriori informazioni, vedere [il passaggio di argomenti in base alla posizione e al nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span><span class="sxs-lookup"><span data-stu-id="32ebb-114">For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span></span>  
   
 > [!NOTE]
->  È inoltre possibile definire una routine con parametri facoltativi utilizzando l'overload.  Se si dispone di un parametro facoltativo, è possibile definire due versioni di overload della routine, di che accetta il parametro e che non fa.  Per ulteriori informazioni, vedere [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+>  <span data-ttu-id="32ebb-115">È inoltre possibile definire una routine con parametri facoltativi utilizzando l'overload.</span><span class="sxs-lookup"><span data-stu-id="32ebb-115">You can also define a procedure with optional parameters by using overloading.</span></span> <span data-ttu-id="32ebb-116">Se si dispone di un parametro facoltativo, è possibile definire due versioni di overload della routine, una che accetta il parametro e uno senza.</span><span class="sxs-lookup"><span data-stu-id="32ebb-116">If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t.</span></span> <span data-ttu-id="32ebb-117">Per ulteriori informazioni, vedere [overload di routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="32ebb-117">For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene definita una routine con un parametro facoltativo.  
+## <a name="example"></a><span data-ttu-id="32ebb-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="32ebb-118">Example</span></span>  
+ <span data-ttu-id="32ebb-119">Nell'esempio seguente definisce una routine che ha un parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="32ebb-119">The following example defines a procedure that has an optional parameter.</span></span>  
   
 ```  
 Public Function FindMatches(ByRef values As List(Of String),  
@@ -68,12 +67,12 @@ Public Function FindMatches(ByRef values As List(Of String),
 End Function  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come chiamare una routine con gli argomenti passati dalla posizione e gli argomenti passati per nome.  La routine presenta due parametri facoltativi.  
+## <a name="example"></a><span data-ttu-id="32ebb-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="32ebb-120">Example</span></span>  
+ <span data-ttu-id="32ebb-121">Nell'esempio seguente viene illustrato come chiamare una routine con gli argomenti passati in base alla posizione e con gli argomenti passati per nome.</span><span class="sxs-lookup"><span data-stu-id="32ebb-121">The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name.</span></span> <span data-ttu-id="32ebb-122">La procedura include due parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="32ebb-122">The procedure has two optional parameters.</span></span>  
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## Vedere anche  
- [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)   
- [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="32ebb-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="32ebb-123">See Also</span></span>  
+ [<span data-ttu-id="32ebb-124">Elenco dei parametri</span><span class="sxs-lookup"><span data-stu-id="32ebb-124">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [<span data-ttu-id="32ebb-125">Parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="32ebb-125">Optional Parameters</span></span>](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+ [<span data-ttu-id="32ebb-126">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="32ebb-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

@@ -1,52 +1,55 @@
 ---
-title: "Attributi e commenti di localizzazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "localizzazione, attributi"
-  - "localizzazione, commenti"
+title: Attributi e commenti di localizzazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- localization [WPF], attributes
+- localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Attributi e commenti di localizzazione
-I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono proprietà all'interno del codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], usati dagli sviluppatori per fornire regole o suggerimenti per i localizzatori.  I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero.  Gli attributi di localizzabilità vengono utilizzati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare.  I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione desidera includere.  
+# <a name="localization-attributes-and-comments"></a><span data-ttu-id="55f65-102">Attributi e commenti di localizzazione</span><span class="sxs-lookup"><span data-stu-id="55f65-102">Localization Attributes and Comments</span></span>
+<span data-ttu-id="55f65-103">I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono proprietà all'interno del codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] usate dagli sviluppatori per fornire regole e suggerimenti per la localizzazione.</span><span class="sxs-lookup"><span data-stu-id="55f65-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] localization comments are properties, inside [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] source code, supplied by developers to provide rules and hints for localization.</span></span> <span data-ttu-id="55f65-104">I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero.</span><span class="sxs-lookup"><span data-stu-id="55f65-104">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] localization comments contain two sets of information: localizability attributes and free-form localization comments.</span></span> <span data-ttu-id="55f65-105">Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare.</span><span class="sxs-lookup"><span data-stu-id="55f65-105">Localizability attributes are used by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Localization API to indicate which resources are to be localized.</span></span> <span data-ttu-id="55f65-106">I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.</span><span class="sxs-lookup"><span data-stu-id="55f65-106">Free-form comments are any information that the application author wants to include.</span></span>  
   
-   
+
   
 <a name="Localizer_Comments_"></a>   
-## Commenti di localizzazione  
- Se gli autori dell'applicazione di markup necessitano di elementi specifici nel codice [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], ad esempio vincoli relativi alla lunghezza del testo, alla famiglia o alla dimensione dei caratteri, possono trasmettere queste informazioni ai localizzatori con commenti nel codice [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  Di seguito viene riportato il processo di aggiunta di commenti al codice sorgente:  
+## <a name="localization-comments"></a><span data-ttu-id="55f65-107">Commenti di localizzazione</span><span class="sxs-lookup"><span data-stu-id="55f65-107">Localization Comments</span></span>  
+ <span data-ttu-id="55f65-108">Se gli autori dell'applicazione di markup necessitano di elementi specifici nel codice [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], ad esempio vincoli relativi alla lunghezza del testo, alla famiglia o alle dimensioni del carattere, possono trasmettere queste informazioni ai localizzatori con commenti nel codice [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="55f65-108">If markup application authors have requirements for specific elements in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], such as constraints on text length, font family, or font size, they can convey this information to localizers with comments in the [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] code.</span></span> <span data-ttu-id="55f65-109">Il processo di aggiunta di commenti al codice sorgente è il seguente:</span><span class="sxs-lookup"><span data-stu-id="55f65-109">The process for adding comments to source code is as follows:</span></span>  
   
-1.  Lo sviluppatore dell'applicazione aggiunge i commenti di localizzazione al codice sorgente di [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
+1.  <span data-ttu-id="55f65-110">Lo sviluppatore dell'applicazione aggiunge i commenti di localizzazione al codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="55f65-110">Application developer adds localization comments to [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] source code.</span></span>  
   
-2.  Durante il processo di compilazione, nel file proj è possibile specificare se mantenere i commenti di localizzazione in formato libero nell'assembly oppure se rimuoverne una parte o tutti.  I commenti rimossi vengono collocati in un file separato.  L'opzione viene specificata utilizzando un tag `LocalizationDirectivesToLocFile`, ad esempio:  
+2.  <span data-ttu-id="55f65-111">Durante il processo di compilazione, nel file con estensione proj è possibile specificare se mantenere i commenti di localizzazione in formato libero nell'assembly, se rimuoverne una parte o se rimuoverli tutti.</span><span class="sxs-lookup"><span data-stu-id="55f65-111">During the build process, you can specify in the .proj file whether to leave the free-form localization comments in the assembly, strip out part of the comments, or strip out all the comments.</span></span> <span data-ttu-id="55f65-112">I commenti rimossi vengono inseriti in un file separato.</span><span class="sxs-lookup"><span data-stu-id="55f65-112">The stripped-out comments are placed in a separate file.</span></span> <span data-ttu-id="55f65-113">Per indicare la scelta si usa un tag `LocalizationDirectivesToLocFile`, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="55f65-113">You specify your option using a `LocalizationDirectivesToLocFile` tag, eg:</span></span>  
   
-     `<LocalizationDirectivesToLocFile>` *valore* `</LocalizationDirectivesToLocFile>`  
+     <span data-ttu-id="55f65-114">`<LocalizationDirectivesToLocFile>` *valore* `</LocalizationDirectivesToLocFile>`</span><span class="sxs-lookup"><span data-stu-id="55f65-114">`<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`</span></span>  
   
-3.  Di seguito vengono riportati i valori che è possibile assegnare:  
+3.  <span data-ttu-id="55f65-115">I valori che è possibile assegnare sono:</span><span class="sxs-lookup"><span data-stu-id="55f65-115">The values that can be assigned are:</span></span>  
   
-    -   **None**: i commenti e gli attributi rimangono entrambi nell'assembly e non viene generato alcun file separato.  
+    -   <span data-ttu-id="55f65-116">**None**: sia i commenti che gli attributi rimangono nell'assembly e non viene generato alcun file separato.</span><span class="sxs-lookup"><span data-stu-id="55f65-116">**None** - Both comments and attributes stay inside the assembly and no separate file is generated.</span></span>  
   
-    -   **CommentsOnly**: dall'assembly vengono rimossi solo i commenti, che vengono collocati nel LocFile separato.  
+    -   <span data-ttu-id="55f65-117">**CommentsOnly**: dall'assembly vengono rimossi solo i commenti, che vengono inseriti nel LocFile separato.</span><span class="sxs-lookup"><span data-stu-id="55f65-117">**CommentsOnly** - Strips only the comments from the assembly and places them in the separate LocFile.</span></span>  
   
-    -   **All**: dall'assembly vengono rimossi sia i commenti, sia gli attributi che vengono collocati entrambi in un LocFile separato.  
+    -   <span data-ttu-id="55f65-118">**All**: dall'assembly vengono rimossi sia i commenti che gli attributi, che vengono inseriti entrambi in un LocFile separato.</span><span class="sxs-lookup"><span data-stu-id="55f65-118">**All** - Strips both the comments and the attributes from the assembly and places them both in a separate LocFile.</span></span>  
   
-4.  Se le risorse localizzabili vengono estratte da [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], gli attributi di localizzazione vengono rispettati dall'API di localizzazione di [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].  
+4.  <span data-ttu-id="55f65-119">Se le risorse localizzabili vengono estratte da [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], l'API di localizzazione di [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] rispetta gli attributi di localizzabilità.</span><span class="sxs-lookup"><span data-stu-id="55f65-119">When localizable resources are extracted from [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], the localizability attributes are respected by the [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] Localization API.</span></span>  
   
-5.  I file dei commenti di localizzazione, nei quali sono contenuti solo commenti in formato libero, vengono incorporati al processo di localizzazione in un secondo momento.  
+5.  <span data-ttu-id="55f65-120">I file dei commenti di localizzazione, nei quali sono contenuti solo commenti in formato libero, vengono incorporati al processo di localizzazione in un secondo momento.</span><span class="sxs-lookup"><span data-stu-id="55f65-120">Localization comment files, containing only free-form comments, are incorporated into the localization process at a later time.</span></span>  
   
- Nell'esempio riportato di seguito viene illustrato come aggiungere commenti di localizzazione a un file [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
+ <span data-ttu-id="55f65-121">L'esempio seguente illustra come aggiungere commenti di localizzazione a un file [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="55f65-121">The following example shows how to add localization comments to a [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] file.</span></span>  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -66,48 +69,48 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  `</TextBlock>`  
   
- Nell'esempio precedente, nella sezione Localization.Attributes erano disponibili gli attributi di localizzazione, mentre nella sezione Localization.Comments i commenti in formato libero.  Nella tabella riportata di seguito vengono illustrati gli attributi, i commenti e il relativo significato per il localizzatore.  
+ <span data-ttu-id="55f65-122">Nella sezione Localization.Attributes dell'esempio precedente sono disponibili gli attributi di localizzazione, mentre nella sezione Localization.Comments sono disponibili i commenti in formato libero.</span><span class="sxs-lookup"><span data-stu-id="55f65-122">In the previous sample the Localization.Attributes section contains the localization attributes and the Localization.Comments section the free-form comments.</span></span> <span data-ttu-id="55f65-123">La tabella seguente illustra gli attributi, i commenti e il relativo significato per il localizzatore.</span><span class="sxs-lookup"><span data-stu-id="55f65-123">The following tables show the attributes and comments and their meaning to the localizer.</span></span>  
   
-|Attributi di localizzazione|Significato|  
-|---------------------------------|-----------------|  
-|$Content \(testo leggibile immodificabile\)|Il contenuto dell'elemento TextBlock non può essere modificato.  I localizzatori non possono modificare la parola "Microsoft".  Il contenuto è visibile \(leggibile\) al localizzatore.  La categoria del contenuto è testo.|  
-|FontFamily \(leggibile immodificabile\)|La proprietà della famiglia di caratteri dell'elemento TextBlock non può essere modificata, ma è visibile al localizzatore.|  
+|<span data-ttu-id="55f65-124">Attributi di localizzazione</span><span class="sxs-lookup"><span data-stu-id="55f65-124">Localization attributes</span></span>|<span data-ttu-id="55f65-125">Significato</span><span class="sxs-lookup"><span data-stu-id="55f65-125">Meaning</span></span>|  
+|-----------------------------|-------------|  
+|<span data-ttu-id="55f65-126">$Content (testo leggibile non modificabile)</span><span class="sxs-lookup"><span data-stu-id="55f65-126">$Content (Unmodifiable Readable Text)</span></span>|<span data-ttu-id="55f65-127">Il contenuto dell'elemento TextBlock non può essere modificato.</span><span class="sxs-lookup"><span data-stu-id="55f65-127">Contents of the TextBlock element cannot be modified.</span></span> <span data-ttu-id="55f65-128">I localizzatori non possono modificare la parola "Microsoft".</span><span class="sxs-lookup"><span data-stu-id="55f65-128">Localizers cannot change the word "Microsoft".</span></span> <span data-ttu-id="55f65-129">Il contenuto è visibile (leggibile) per il localizzatore.</span><span class="sxs-lookup"><span data-stu-id="55f65-129">The content is visible (Readable) to the localizer.</span></span> <span data-ttu-id="55f65-130">La categoria del contenuto è testo.</span><span class="sxs-lookup"><span data-stu-id="55f65-130">The category of the content is text.</span></span>|  
+|<span data-ttu-id="55f65-131">FontFamily (leggibile non modificabile)</span><span class="sxs-lookup"><span data-stu-id="55f65-131">FontFamily (Unmodifiable Readable)</span></span>|<span data-ttu-id="55f65-132">La proprietà della famiglia di caratteri dell'elemento TextBlock non può essere modificata, ma è visibile per il localizzatore.</span><span class="sxs-lookup"><span data-stu-id="55f65-132">The font family property of the TextBlock element cannot be changed but it is visible to the localizer.</span></span>|  
   
-|Commenti di localizzazione in formato libero|Significato|  
-|--------------------------------------------------|-----------------|  
-|$Content \(marchio\)|L'autore dell'applicazione indica al localizzatore che il contenuto dell'elemento TextBlock è un marchio.|  
-|FontSize \(dimensione del carattere del marchio\)|L'autore dell'applicazione indica che la proprietà della dimensione del carattere deve rispettare la dimensione standard del marchio.|  
+|<span data-ttu-id="55f65-133">Commenti di localizzazione in formato libero</span><span class="sxs-lookup"><span data-stu-id="55f65-133">Localization free-form comments</span></span>|<span data-ttu-id="55f65-134">Significato</span><span class="sxs-lookup"><span data-stu-id="55f65-134">Meaning</span></span>|  
+|--------------------------------------|-------------|  
+|<span data-ttu-id="55f65-135">$Content (marchio)</span><span class="sxs-lookup"><span data-stu-id="55f65-135">$Content (Trademark)</span></span>|<span data-ttu-id="55f65-136">L'autore dell'applicazione indica al localizzatore che il contenuto dell'elemento TextBlock è un marchio.</span><span class="sxs-lookup"><span data-stu-id="55f65-136">The application author tells the localizer that the content in the TextBlock element is a trademark.</span></span>|  
+|<span data-ttu-id="55f65-137">FontSize (dimensioni del carattere del marchio)</span><span class="sxs-lookup"><span data-stu-id="55f65-137">FontSize (Trademark font size)</span></span>|<span data-ttu-id="55f65-138">L'autore dell'applicazione indica che la proprietà delle dimensioni del carattere deve rispettare la dimensione standard del marchio.</span><span class="sxs-lookup"><span data-stu-id="55f65-138">The application author indicates that the font size property should follow the standard trademark size.</span></span>|  
   
-### Attributi di localizzabilità  
- Le informazioni disponibili nella sezione Localization.Attributes contengono un elenco di coppie: il nome del valore di destinazione e i valori di localizzabilità associati.  Il nome di destinazione può essere un nome di proprietà o il nome speciale $Content.  Se si tratta di un nome di proprietà, il valore di destinazione è il valore della proprietà.  Se si tratta di $Content, il valore di destinazione è il contenuto dell'elemento.  
+### <a name="localizability-attributes"></a><span data-ttu-id="55f65-139">Attributi di localizzabilità</span><span class="sxs-lookup"><span data-stu-id="55f65-139">Localizability Attributes</span></span>  
+ <span data-ttu-id="55f65-140">Le informazioni disponibili nella sezione Localization.Attributes contengono un elenco di coppie: il nome del valore di destinazione e i valori di localizzabilità associati.</span><span class="sxs-lookup"><span data-stu-id="55f65-140">The information in Localization.Attributes contains a list of pairs: the targeted value name and the associated localizability values.</span></span> <span data-ttu-id="55f65-141">Il nome di destinazione può essere un nome di proprietà o il nome speciale $Content.</span><span class="sxs-lookup"><span data-stu-id="55f65-141">The target name can be a property name or the special $Content name.</span></span> <span data-ttu-id="55f65-142">Se si tratta di un nome di proprietà, il valore di destinazione è il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="55f65-142">If it is a property name, the targeted value is the value of the property.</span></span> <span data-ttu-id="55f65-143">Se si tratta di $Content, il valore di destinazione è il contenuto dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="55f65-143">If it is $Content, the target value is the content of the element.</span></span>  
   
- Sono disponibili tre tipi di attributi:  
+ <span data-ttu-id="55f65-144">Sono disponibili tre tipi di attributi:</span><span class="sxs-lookup"><span data-stu-id="55f65-144">There are three types of attributes:</span></span>  
   
--   **Category**.  Specifica se un valore può essere modificato con uno strumento del localizzatore.  Vedere <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+-   <span data-ttu-id="55f65-145">**Category**.</span><span class="sxs-lookup"><span data-stu-id="55f65-145">**Category**.</span></span> <span data-ttu-id="55f65-146">Specifica se un valore può essere modificato con uno strumento del localizzatore.</span><span class="sxs-lookup"><span data-stu-id="55f65-146">This specifies whether a value should be modifiable from a localizer tool.</span></span> <span data-ttu-id="55f65-147">Vedere <xref:System.Windows.LocalizabilityAttribute.Category%2A>.</span><span class="sxs-lookup"><span data-stu-id="55f65-147">See <xref:System.Windows.LocalizabilityAttribute.Category%2A>.</span></span>  
   
--   **Readability**.  Specifica se uno strumento del localizzatore è in grado di leggere \(e visualizzare\) un valore.  Vedere <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+-   <span data-ttu-id="55f65-148">**Leggibilità**.</span><span class="sxs-lookup"><span data-stu-id="55f65-148">**Readability**.</span></span> <span data-ttu-id="55f65-149">Specifica se uno strumento del localizzatore deve essere in grado di leggere (e visualizzare) un valore.</span><span class="sxs-lookup"><span data-stu-id="55f65-149">This specifies whether a localizer tool should read (and display) a value.</span></span> <span data-ttu-id="55f65-150">Vedere <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.</span><span class="sxs-lookup"><span data-stu-id="55f65-150">See <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.</span></span>  
   
--   **Modifiability**.  Specifica se uno strumento del localizzatore consente la modifica di un valore.  Vedere <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+-   <span data-ttu-id="55f65-151">**Modificabilità**.</span><span class="sxs-lookup"><span data-stu-id="55f65-151">**Modifiability**.</span></span> <span data-ttu-id="55f65-152">Specifica se uno strumento del localizzatore consente la modifica di un valore.</span><span class="sxs-lookup"><span data-stu-id="55f65-152">This specifies whether a localizer tool allows a value to be modified.</span></span> <span data-ttu-id="55f65-153">Vedere <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.</span><span class="sxs-lookup"><span data-stu-id="55f65-153">See <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.</span></span>  
   
- Questi attributi possono essere specificati in qualsiasi ordine, delimitandoli con uno spazio.  Nel caso in cui vengano specificati attributi duplicati, l'ultimo sostituirà i precedenti.  Ad esempio, Localization.Attributes \= "Unmodifiable Modifiable" imposta Modifiability su Modifiable poiché questo è l'ultimo valore.  
+ <span data-ttu-id="55f65-154">Questi attributi possono essere specificati in qualsiasi ordine e devono essere delimitati da uno spazio.</span><span class="sxs-lookup"><span data-stu-id="55f65-154">These attributes can be specified in any order delimited by a space.</span></span> <span data-ttu-id="55f65-155">Nel caso in cui vengano specificati attributi duplicati, l'ultimo sostituisce i precedenti.</span><span class="sxs-lookup"><span data-stu-id="55f65-155">In case duplicate attributes are specified, the last attribute will override former ones.</span></span> <span data-ttu-id="55f65-156">Ad esempio, Localization.Attributes = "Unmodifiable Modifiable" imposta Modifiability su Modifiable poiché questo è l'ultimo valore.</span><span class="sxs-lookup"><span data-stu-id="55f65-156">For example, Localization.Attributes = "Unmodifiable Modifiable" sets Modifiability to Modifiable because it is the last value.</span></span>  
   
- Gli attribuiti Modifiability e Readability sono di facile comprensione.  L'attributo Category fornisce categorie predefinite che supportano il localizzatore nella traduzione del testo.  Categorie quali Text, Label e Title offrono al localizzatore informazioni sulla modalità di traduzione del testo.  Sono disponibili anche categorie speciali: None, Inherit, Ignore e NeverLocalize.  
+ <span data-ttu-id="55f65-157">Gli attributi Modifiability e Readability sono di facile comprensione.</span><span class="sxs-lookup"><span data-stu-id="55f65-157">Modifiability and Readability are self-explanatory.</span></span> <span data-ttu-id="55f65-158">L'attributo Category fornisce categorie predefinite che supportano il localizzatore nella traduzione del testo.</span><span class="sxs-lookup"><span data-stu-id="55f65-158">The Category attribute provides predefined categories that help the localizer when translating text.</span></span> <span data-ttu-id="55f65-159">Categorie quali Text, Label e Title offrono al localizzatore informazioni sulla modalità di traduzione del testo.</span><span class="sxs-lookup"><span data-stu-id="55f65-159">Categories, such as, Text, Label, and Title give the localizer information about how to translate the text.</span></span> <span data-ttu-id="55f65-160">Sono disponibili anche categorie speciali: None, Inherit, Ignore e NeverLocalize.</span><span class="sxs-lookup"><span data-stu-id="55f65-160">There are also special categories: None, Inherit, Ignore, and NeverLocalize.</span></span>  
   
- Nella tabella riportata di seguito viene illustrato il significato delle categorie speciali.  
+ <span data-ttu-id="55f65-161">La tabella seguente illustra il significato delle categorie speciali.</span><span class="sxs-lookup"><span data-stu-id="55f65-161">The following table shows the meaning of the special categories.</span></span>  
   
-|Categoria|Significato|  
-|---------------|-----------------|  
-|Nessuno|Il valore di destinazione non dispone di una categoria definita.|  
-|Inherit|Il valore di destinazione eredita la categoria dall'elemento padre.|  
-|Ignora|Il valore di destinazione viene ignorato nel processo di localizzazione.  Questa categoria influisce solo sul valore corrente  e non sui nodi figlio.|  
-|NeverLocalize|Il valore corrente non può essere localizzato.  Questa categoria viene ereditata dagli elementi figlio di un elemento.|  
+|<span data-ttu-id="55f65-162">Categoria</span><span class="sxs-lookup"><span data-stu-id="55f65-162">Category</span></span>|<span data-ttu-id="55f65-163">Significato</span><span class="sxs-lookup"><span data-stu-id="55f65-163">Meaning</span></span>|  
+|--------------|-------------|  
+|<span data-ttu-id="55f65-164">Nessuno</span><span class="sxs-lookup"><span data-stu-id="55f65-164">None</span></span>|<span data-ttu-id="55f65-165">Per il valore di destinazione non è definita alcuna categoria.</span><span class="sxs-lookup"><span data-stu-id="55f65-165">Targeted value has no defined category.</span></span>|  
+|<span data-ttu-id="55f65-166">Eredita</span><span class="sxs-lookup"><span data-stu-id="55f65-166">Inherit</span></span>|<span data-ttu-id="55f65-167">Il valore di destinazione eredita la categoria dall'elemento padre.</span><span class="sxs-lookup"><span data-stu-id="55f65-167">Targeted value inherits its category from its parent.</span></span>|  
+|<span data-ttu-id="55f65-168">Ignore</span><span class="sxs-lookup"><span data-stu-id="55f65-168">Ignore</span></span>|<span data-ttu-id="55f65-169">Il valore di destinazione viene ignorato nel processo di localizzazione.</span><span class="sxs-lookup"><span data-stu-id="55f65-169">Targeted value is ignored in the localization process.</span></span> <span data-ttu-id="55f65-170">Questa categoria influisce solo sul valore corrente</span><span class="sxs-lookup"><span data-stu-id="55f65-170">Ignore affects only the current value.</span></span> <span data-ttu-id="55f65-171">e non sui nodi figlio.</span><span class="sxs-lookup"><span data-stu-id="55f65-171">It will not affect child nodes.</span></span>|  
+|<span data-ttu-id="55f65-172">NeverLocalize</span><span class="sxs-lookup"><span data-stu-id="55f65-172">NeverLocalize</span></span>|<span data-ttu-id="55f65-173">Il valore corrente non può essere localizzato.</span><span class="sxs-lookup"><span data-stu-id="55f65-173">Current value cannot be localized.</span></span> <span data-ttu-id="55f65-174">Questa categoria viene ereditata dagli elementi figlio di un elemento.</span><span class="sxs-lookup"><span data-stu-id="55f65-174">This category is inherited by the children of an element.</span></span>|  
   
 <a name="Localization_Comments"></a>   
-## Commenti di localizzazione  
- Nella sezione Localization.Comments sono contenute le stringhe in formato libero relative al valore di destinazione.  Gli sviluppatori dell'applicazione possono aggiungere informazioni per offrire ai localizzatori suggerimenti sulla modalità di traduzione del testo delle applicazioni.  Il formato dei commenti può essere una qualsiasi stringa racchiusa tra "\(\)".  Utilizzare "\\" per i caratteri di escape.  
+## <a name="localization-comments"></a><span data-ttu-id="55f65-175">Commenti di localizzazione</span><span class="sxs-lookup"><span data-stu-id="55f65-175">Localization Comments</span></span>  
+ <span data-ttu-id="55f65-176">La sezione Localization.Comments contiene le stringhe in formato libero relative al valore di destinazione.</span><span class="sxs-lookup"><span data-stu-id="55f65-176">Localization.Comments contains free-form strings concerning the targeted value.</span></span> <span data-ttu-id="55f65-177">Gli sviluppatori dell'applicazione possono aggiungere informazioni per offrire ai localizzatori suggerimenti sulla modalità di traduzione del testo delle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="55f65-177">Application developers can add information to give localizers hints about how the applications text should be translated.</span></span> <span data-ttu-id="55f65-178">Il formato dei commenti può essere una qualsiasi stringa racchiusa tra "()".</span><span class="sxs-lookup"><span data-stu-id="55f65-178">The format of the comments can be any string surrounded by "()".</span></span> <span data-ttu-id="55f65-179">Usare '\\' come carattere di escape.</span><span class="sxs-lookup"><span data-stu-id="55f65-179">Use '\\' to escape characters.</span></span>  
   
-## Vedere anche  
- [Globalizzazione per WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)   
- [Utilizzare il layout automatico per creare un pulsante](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)   
- [Utilizzare una griglia per il layout automatico](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)   
- [Localizzare un'applicazione](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+## <a name="see-also"></a><span data-ttu-id="55f65-180">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="55f65-180">See Also</span></span>  
+ [<span data-ttu-id="55f65-181">Globalizzazione per WPF</span><span class="sxs-lookup"><span data-stu-id="55f65-181">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [<span data-ttu-id="55f65-182">Utilizzare un layout automatico per creare un pulsante</span><span class="sxs-lookup"><span data-stu-id="55f65-182">Use Automatic Layout to Create a Button</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="55f65-183">Usare una griglia per il layout automatico</span><span class="sxs-lookup"><span data-stu-id="55f65-183">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
+ [<span data-ttu-id="55f65-184">Localizzare un'applicazione</span><span class="sxs-lookup"><span data-stu-id="55f65-184">Localize an Application</span></span>](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)

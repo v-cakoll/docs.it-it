@@ -1,46 +1,52 @@
 ---
-title: "Procedura: aggiungere un gestore eventi mediante codice | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestori eventi, aggiunta"
-  - "XAML, aggiunta di gestori eventi"
+title: 'Procedura: aggiungere un gestore eventi mediante codice'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- event handlers [WPF], adding
+- XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 348136a1feaf6e0a0824cf183a2eeec4e10b77fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere un gestore eventi mediante codice
-In questo esempio viene illustrato come aggiungere un gestore eventi a un elemento mediante codice.  
+# <a name="how-to-add-an-event-handler-using-code"></a><span data-ttu-id="2ac79-102">Procedura: aggiungere un gestore eventi mediante codice</span><span class="sxs-lookup"><span data-stu-id="2ac79-102">How to: Add an Event Handler Using Code</span></span>
+<span data-ttu-id="2ac79-103">In questo esempio viene illustrato come aggiungere un gestore eventi a un elemento utilizzando il codice.</span><span class="sxs-lookup"><span data-stu-id="2ac79-103">This example shows how to add an event handler to an element by using code.</span></span>  
   
- Se si desidera aggiungere un gestore eventi a un elemento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e la pagina del markup che contiene l'elemento è già stata caricata, è necessario aggiungere il gestore mediante codice.  In alternativa, se si sta compilando la struttura ad albero dell'elemento per un'applicazione interamente mediante codice senza dichiarare alcun elemento utilizzando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è possibile chiamare metodi specifici per aggiungere gestori eventi alla struttura ad albero dell'elemento costruita.  
+ <span data-ttu-id="2ac79-104">Se si desidera aggiungere un gestore eventi per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elemento e la pagina di markup che contiene l'elemento è già stato caricato, è necessario aggiungere il gestore mediante codice.</span><span class="sxs-lookup"><span data-stu-id="2ac79-104">If you want to add an event handler to a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] element, and the markup page that contains the element has already been loaded, you must add the handler using code.</span></span> <span data-ttu-id="2ac79-105">In alternativa, se si sta compilando l'albero degli elementi di un'applicazione interamente mediante codice e non la dichiarazione di tutti gli elementi usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è possibile chiamare i metodi specifici per aggiungere gestori eventi per la struttura dell'elemento costruito.</span><span class="sxs-lookup"><span data-stu-id="2ac79-105">Alternatively, if you are building up the element tree for an application entirely using code and not declaring any elements using [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can call specific methods to add event handlers to the constructed element tree.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene aggiunto un nuovo oggetto <xref:System.Windows.Controls.Button> a una pagina esistente definita inizialmente in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  Un file code\-behind implementa un metodo del gestore eventi, quindi aggiunge tale metodo come nuovo gestore eventi in <xref:System.Windows.Controls.Button>.  
+## <a name="example"></a><span data-ttu-id="2ac79-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="2ac79-106">Example</span></span>  
+ <span data-ttu-id="2ac79-107">Nell'esempio seguente aggiunge un nuovo <xref:System.Windows.Controls.Button> a una pagina esistente definita inizialmente in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2ac79-107">The following example adds a new <xref:System.Windows.Controls.Button> to an existing page that is initially defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="2ac79-108">Un file code-behind implementa un metodo del gestore eventi e quindi aggiunge tale metodo come un nuovo gestore eventi nel <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="2ac79-108">A code-behind file implements an event handler method and then adds that method as a new event handler on the <xref:System.Windows.Controls.Button>.</span></span>  
   
- Nell'esempio di [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] viene utilizzato l'operatore `+=` per assegnare un gestore a un evento.  Si tratta dello stesso operatore utilizzato per assegnare un gestore nel modello di gestione eventi [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].  [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] non supporta questo operatore come mezzo per l'aggiunta di gestori eventi.  Richiede invece una delle due tecniche seguenti:  
+ <span data-ttu-id="2ac79-109">Il [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] esempio Usa il `+=` operatore per assegnare un gestore a un evento.</span><span class="sxs-lookup"><span data-stu-id="2ac79-109">The [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] example uses the `+=` operator to assign a handler to an event.</span></span> <span data-ttu-id="2ac79-110">Questo è lo stesso operatore utilizzato per assegnare un gestore di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] modello di gestione degli eventi.</span><span class="sxs-lookup"><span data-stu-id="2ac79-110">This is the same operator that is used to assign a handler in the [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] event handling model.</span></span> [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]<span data-ttu-id="2ac79-111">non supporta questo operatore come mezzo per l'aggiunta di gestori eventi.</span><span class="sxs-lookup"><span data-stu-id="2ac79-111"> does not support this operator as a means of adding event handlers.</span></span> <span data-ttu-id="2ac79-112">Richiede invece una delle due tecniche seguenti:</span><span class="sxs-lookup"><span data-stu-id="2ac79-112">It instead requires one of two techniques:</span></span>  
   
--   Utilizzare il metodo <xref:System.Windows.UIElement.AddHandler%2A>, con un operatore `AddressOf`, per fare riferimento all'implementazione del gestore eventi.  
+-   <span data-ttu-id="2ac79-113">Utilizzare il <xref:System.Windows.UIElement.AddHandler%2A> metodo, insieme con un `AddressOf` operatore, fare riferimento all'implementazione del gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="2ac79-113">Use the <xref:System.Windows.UIElement.AddHandler%2A> method, together with an `AddressOf` operator, to reference the event handler implementation.</span></span>  
   
--   Utilizzare la parola chiave `Handles` come parte della definizione del gestore eventi.  Questa tecnica non viene illustrata in questo argomento; vedere [Visual Basic e la gestione degli eventi WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+-   <span data-ttu-id="2ac79-114">Utilizzare il `Handles` (parola chiave) come parte della definizione del gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="2ac79-114">Use the `Handles` keyword as part of the event handler definition.</span></span> <span data-ttu-id="2ac79-115">Questa tecnica non viene visualizzata in questo contesto. vedere [Visual Basic e la gestione degli eventi di WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).</span><span class="sxs-lookup"><span data-stu-id="2ac79-115">This technique is not shown here; see [Visual Basic and WPF Event Handling](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).</span></span>  
   
- [!code-xml[RoutedEventAddRemoveHandler#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventAddRemoveHandler#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
  [!code-csharp[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml.cs#handler)]
  [!code-vb[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  L'aggiunta di un gestore eventi nella pagina [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] inizialmente analizzata è molto più semplice.  All'interno dell'elemento oggetto a cui si desidera aggiungere il gestore eventi, aggiungere un attributo che corrisponda al nome dell'evento da gestire.  Specificare quindi il valore di tale attributo come nome del metodo del gestore eventi definito nel file code\-behind della pagina [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  Per ulteriori informazioni, vedere [Cenni preliminari su XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) o [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+>  <span data-ttu-id="2ac79-116">Aggiunta di un gestore eventi in inizialmente analizzata [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagina è molto più semplice.</span><span class="sxs-lookup"><span data-stu-id="2ac79-116">Adding an event handler in the initially parsed [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page is much simpler.</span></span> <span data-ttu-id="2ac79-117">All'interno dell'elemento oggetto in cui si desidera aggiungere il gestore dell'evento, aggiungere un attributo che corrisponde al nome dell'evento che si desidera gestire.</span><span class="sxs-lookup"><span data-stu-id="2ac79-117">Within the object element where you want to add the event handler, add an attribute that matches the name of the event that you want to handle.</span></span> <span data-ttu-id="2ac79-118">Quindi specificare il valore dell'attributo come nome del metodo del gestore eventi definiti nel file di codice il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagina.</span><span class="sxs-lookup"><span data-stu-id="2ac79-118">Then specify the value of that attribute as the name of the event handler method that you defined in the code-behind file of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="2ac79-119">Per ulteriori informazioni, vedere [Panoramica di XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) o [indirizzato Cenni preliminari sugli eventi](../../../../docs/framework/wpf/advanced/routed-events-overview.md).</span><span class="sxs-lookup"><span data-stu-id="2ac79-119">For more information, see [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) or [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md).</span></span>  
   
-## Vedere anche  
- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [Procedure relative](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="2ac79-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2ac79-120">See Also</span></span>  
+ [<span data-ttu-id="2ac79-121">Cenni preliminari sugli eventi indirizzati</span><span class="sxs-lookup"><span data-stu-id="2ac79-121">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="2ac79-122">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="2ac79-122">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)

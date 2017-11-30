@@ -1,46 +1,46 @@
 ---
-title: "Cenni preliminari sul controllo ToolStripContainer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripContainer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barre degli strumenti [Windows Form], raggruppamento verticale/orizzontale incorporato"
-  - "ToolStripContainer (controllo) [Windows Form], informazioni sul controllo ToolStripContainer"
+title: Cenni preliminari sul controllo ToolStripContainer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripContainer
+helpviewer_keywords:
+- toolbars [Windows Forms], built-in rafting
+- ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4abc783961177a55cdb81cefd21ed2d7aefb0620
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul controllo ToolStripContainer
-Un controllo <xref:System.Windows.Forms.ToolStripContainer> dispone di pannelli sul lato sinistro, destro, superiore e inferiore per il posizionamento e il raggruppamento verticale\/orizzontale di controlli <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.StatusStrip>.  Più controlli <xref:System.Windows.Forms.ToolStrip> vengono disposti in verticale se inseriti nel controllo <xref:System.Windows.Forms.ToolStripContainer> di sinistra o di destra.  Vengono disposti in orizzontale se inseriti nel controllo <xref:System.Windows.Forms.ToolStripContainer> superiore o inferiore.  È possibile utilizzare l'oggetto <xref:System.Windows.Forms.ToolStripContentPanel> centrale di <xref:System.Windows.Forms.ToolStripContainer> per posizionare controlli tradizionali nel form.  
+# <a name="toolstripcontainer-control-overview"></a><span data-ttu-id="798a5-102">Cenni preliminari sul controllo ToolStripContainer</span><span class="sxs-lookup"><span data-stu-id="798a5-102">ToolStripContainer Control Overview</span></span>
+<span data-ttu-id="798a5-103">Oggetto <xref:System.Windows.Forms.ToolStripContainer> contiene dei pannelli sui relativi sinistro, destro, superiore e inferiore per posizionare e raggruppare <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controlli.</span><span class="sxs-lookup"><span data-stu-id="798a5-103">A <xref:System.Windows.Forms.ToolStripContainer> has panels on its left, right, top, and bottom sides for positioning and rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> controls.</span></span> <span data-ttu-id="798a5-104">Più controlli <xref:System.Windows.Forms.ToolStrip> vengono raggruppati verticalmente se li si inserisce nell'oggetto <xref:System.Windows.Forms.ToolStripContainer> di sinistra o di destra.</span><span class="sxs-lookup"><span data-stu-id="798a5-104">Multiple <xref:System.Windows.Forms.ToolStrip> controls stack vertically if you put them in the left or right <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="798a5-105">Vengono raggruppati orizzontalmente se li si inserisce nell'oggetto <xref:System.Windows.Forms.ToolStripContainer> in alto o in basso.</span><span class="sxs-lookup"><span data-stu-id="798a5-105">They stack horizontally if you put them in the top or bottom <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="798a5-106">È possibile usare l'oggetto <xref:System.Windows.Forms.ToolStripContentPanel> centrale di <xref:System.Windows.Forms.ToolStripContainer> per posizionare i tradizionali controlli sul form.</span><span class="sxs-lookup"><span data-stu-id="798a5-106">You can use the central <xref:System.Windows.Forms.ToolStripContentPanel> of the <xref:System.Windows.Forms.ToolStripContainer> to position traditional controls on the form.</span></span>  
   
- Alcuni o tutti i controlli <xref:System.Windows.Forms.ToolStripContainer> possono essere selezionati direttamente in fase di progettazione e possono essere eliminati.  Tutti i pannelli di un controllo <xref:System.Windows.Forms.ToolStripContainer> sono espandibili e comprimibili e vengono ridimensionati in funzione dei controlli che contengono.  
+ <span data-ttu-id="798a5-107">Alcuni o tutti i controlli <xref:System.Windows.Forms.ToolStripContainer> sono direttamente selezionabili in fase di progettazione e possono essere eliminati.</span><span class="sxs-lookup"><span data-stu-id="798a5-107">Any or all <xref:System.Windows.Forms.ToolStripContainer> controls are directly selectable at design time and can be deleted.</span></span> <span data-ttu-id="798a5-108">Ogni pannello di un <xref:System.Windows.Forms.ToolStripContainer> è espandibile e comprimibile e viene ridimensionato con i controlli in esso contenuti.</span><span class="sxs-lookup"><span data-stu-id="798a5-108">Each panel of a <xref:System.Windows.Forms.ToolStripContainer> is expandable and collapsible, and resizes with the controls that it contains.</span></span>  
   
-### Membri di ToolStripContainer importanti  
+### <a name="important-toolstripcontainer-members"></a><span data-ttu-id="798a5-109">Membri importanti di ToolStripContainer</span><span class="sxs-lookup"><span data-stu-id="798a5-109">Important ToolStripContainer Members</span></span>  
   
-|Nome|Descrizione|  
+|<span data-ttu-id="798a5-110">Nome</span><span class="sxs-lookup"><span data-stu-id="798a5-110">Name</span></span>|<span data-ttu-id="798a5-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="798a5-111">Description</span></span>|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|Ottiene il pannello inferiore dell'oggetto <xref:System.Windows.Forms.ToolStripContainer>.|  
-|<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|Ottiene o imposta un valore che indica se il pannello inferiore dell'oggetto <xref:System.Windows.Forms.ToolStripContainer> è visibile.|  
-|<xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanel%2A>|Ottiene il pannello sinistro dell'oggetto <xref:System.Windows.Forms.ToolStripContainer>.|  
-|<xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanelVisible%2A>|Ottiene o imposta un valore che indica se il pannello sinistro di <xref:System.Windows.Forms.ToolStripContainer> è visibile.|  
-|<xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanel%2A>|Ottiene il pannello destro di <xref:System.Windows.Forms.ToolStripContainer>.|  
-|<xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanelVisible%2A>|Ottiene o imposta un valore che indica se il pannello destro di <xref:System.Windows.Forms.ToolStripContainer> è visibile.|  
-|<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A>|Ottiene il pannello superiore di <xref:System.Windows.Forms.ToolStripContainer>.|  
-|<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|Ottiene o imposta un valore che indica se il pannello superiore di <xref:System.Windows.Forms.ToolStripContainer> è visibile.|  
+|<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|<span data-ttu-id="798a5-112">Ottiene il pannello inferiore del <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="798a5-112">Gets the bottom panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|<span data-ttu-id="798a5-113">Ottiene o imposta un valore che indica se il riquadro inferiore del <xref:System.Windows.Forms.ToolStripContainer> è visibile.</span><span class="sxs-lookup"><span data-stu-id="798a5-113">Gets or sets a value indicating whether the bottom panel of the <xref:System.Windows.Forms.ToolStripContainer> is visible.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanel%2A>|<span data-ttu-id="798a5-114">Ottiene il pannello di sinistra di <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="798a5-114">Gets the left panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanelVisible%2A>|<span data-ttu-id="798a5-115">Ottiene o imposta un valore che indica se il riquadro sinistro del <xref:System.Windows.Forms.ToolStripContainer> è visibile.</span><span class="sxs-lookup"><span data-stu-id="798a5-115">Gets or sets a value indicating whether the left panel of the <xref:System.Windows.Forms.ToolStripContainer> is visible.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanel%2A>|<span data-ttu-id="798a5-116">Ottiene il pannello di destra la <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="798a5-116">Gets the right panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanelVisible%2A>|<span data-ttu-id="798a5-117">Ottiene o imposta un valore che indica se il riquadro destro del <xref:System.Windows.Forms.ToolStripContainer> è visibile.</span><span class="sxs-lookup"><span data-stu-id="798a5-117">Gets or sets a value indicating whether the right panel of the <xref:System.Windows.Forms.ToolStripContainer> is visible.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A>|<span data-ttu-id="798a5-118">Ottiene il riquadro superiore del <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="798a5-118">Gets the top panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|<span data-ttu-id="798a5-119">Ottiene o imposta un valore che indica se il riquadro superiore del <xref:System.Windows.Forms.ToolStripContainer> è visibile.</span><span class="sxs-lookup"><span data-stu-id="798a5-119">Gets or sets a value indicating whether the top panel of the <xref:System.Windows.Forms.ToolStripContainer> is visible.</span></span>|  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolStripContainer>   
+## <a name="see-also"></a><span data-ttu-id="798a5-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="798a5-120">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>

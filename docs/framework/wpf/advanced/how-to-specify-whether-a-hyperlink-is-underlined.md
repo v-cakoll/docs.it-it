@@ -1,45 +1,48 @@
 ---
-title: "Procedura: specificare se un collegamento ipertestuale &#232; sottolineato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classi, TextDecoration"
-  - "Hyperlink (tipo di controllo)"
-  - "TextDecoration (classe)"
+title: "Procedura: specificare se un collegamento ipertestuale è sottolineato"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Hyperlink control type [WPF]
 ms.assetid: 3996cfe6-1dac-4835-aeb3-c719ce9cfee5
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7914b3b3332b7ea0abe05b3048b5016888e2d93e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: specificare se un collegamento ipertestuale &#232; sottolineato
-L'oggetto <xref:System.Windows.Documents.Hyperlink> è un elemento del contenuto del flusso di livello inline che consente di ospitare collegamenti ipertestuali all'interno del contenuto del flusso.  Per impostazione predefinita, <xref:System.Windows.Documents.Hyperlink> utilizza un oggetto <xref:System.Windows.TextDecoration> per visualizzare una sottolineatura.  Gli oggetti <xref:System.Windows.TextDecoration> possono essere prestazione intensive da creare, in particolare se si hanno molti oggetti <xref:System.Windows.Documents.Hyperlink>.  Se gli elementi <xref:System.Windows.Documents.Hyperlink>, utilizzati sono molti è opportuno visualizzare una sottolineatura solo al momento della generazione di un evento, ad esempio l'evento <xref:System.Windows.ContentElement.MouseEnter>.  
+# <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a><span data-ttu-id="98f1d-102">Procedura: specificare se un collegamento ipertestuale è sottolineato</span><span class="sxs-lookup"><span data-stu-id="98f1d-102">How to: Specify Whether a Hyperlink is Underlined</span></span>
+<span data-ttu-id="98f1d-103">Il <xref:System.Windows.Documents.Hyperlink> oggetto è un elemento di contenuto di flusso di livello inline che consente di ospitare collegamenti ipertestuali all'interno del contenuto di flusso.</span><span class="sxs-lookup"><span data-stu-id="98f1d-103">The <xref:System.Windows.Documents.Hyperlink> object is an inline-level flow content element that allows you to host hyperlinks within the flow content.</span></span> <span data-ttu-id="98f1d-104">Per impostazione predefinita, <xref:System.Windows.Documents.Hyperlink> utilizza un <xref:System.Windows.TextDecoration> oggetto per visualizzare un carattere di sottolineatura.</span><span class="sxs-lookup"><span data-stu-id="98f1d-104">By default, <xref:System.Windows.Documents.Hyperlink> uses a <xref:System.Windows.TextDecoration> object to display an underline.</span></span> <span data-ttu-id="98f1d-105"><xref:System.Windows.TextDecoration>gli oggetti possono essere prestazioni elevate per creare un'istanza, in particolare se si dispone di numerosi <xref:System.Windows.Documents.Hyperlink> oggetti.</span><span class="sxs-lookup"><span data-stu-id="98f1d-105"><xref:System.Windows.TextDecoration> objects can be performance intensive to instantiate, particularly if you have many <xref:System.Windows.Documents.Hyperlink> objects.</span></span> <span data-ttu-id="98f1d-106">Se si usano ampiamente <xref:System.Windows.Documents.Hyperlink> elementi, si consiglia di provare a visualizzare un carattere di sottolineatura solo al momento della generazione di un evento, ad esempio il <xref:System.Windows.ContentElement.MouseEnter> evento.</span><span class="sxs-lookup"><span data-stu-id="98f1d-106">If you make extensive use of <xref:System.Windows.Documents.Hyperlink> elements, you may want to consider showing an underline only when triggering an event, such as the <xref:System.Windows.ContentElement.MouseEnter> event.</span></span>  
   
- Nell'esempio riportato di seguito, il collegamento "My MSN" presenta una sottolineatura dinamica, vale a dire che la sottolineatura viene visualizzata solo al momento della generazione dell'evento <xref:System.Windows.ContentElement.MouseEnter>.  
+ <span data-ttu-id="98f1d-107">Nell'esempio seguente, la sottolineatura per il collegamento "My MSN" è dinamica, viene visualizzata solo quando il <xref:System.Windows.ContentElement.MouseEnter> evento viene generato.</span><span class="sxs-lookup"><span data-stu-id="98f1d-107">In the following example, the underline for the "My MSN" link is dynamic—it only appears when the <xref:System.Windows.ContentElement.MouseEnter> event is triggered.</span></span>  
   
- ![Collegamenti ipertestuali con TextDecoration](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
-Collegamenti ipertestuali definiti con TextDecorations  
+ <span data-ttu-id="98f1d-108">![Collegamenti ipertestuali con TextDecoration](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")</span><span class="sxs-lookup"><span data-stu-id="98f1d-108">![Hyperlinks displaying TextDecorations](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")</span></span>  
+<span data-ttu-id="98f1d-109">Collegamenti ipertestuali definiti con TextDecorations</span><span class="sxs-lookup"><span data-stu-id="98f1d-109">Hyperlinks defined with TextDecorations</span></span>  
   
-## Esempio  
- Nell'esempio di markup riportato di seguito viene illustrato un oggetto <xref:System.Windows.Documents.Hyperlink> definito con e senza sottolineatura:  
+## <a name="example"></a><span data-ttu-id="98f1d-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="98f1d-110">Example</span></span>  
+ <span data-ttu-id="98f1d-111">Nell'esempio di codice seguente viene illustrato un <xref:System.Windows.Documents.Hyperlink> definito con e senza un carattere di sottolineatura:</span><span class="sxs-lookup"><span data-stu-id="98f1d-111">The following markup sample shows a <xref:System.Windows.Documents.Hyperlink> defined with and without an underline:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
+ [!code-xaml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
   
- Nell'esempio di codice riportato di seguito viene illustrato come creare una sottolineatura per <xref:System.Windows.Documents.Hyperlink> sull'evento <xref:System.Windows.ContentElement.MouseEnter> e come rimuoverla sull'evento <xref:System.Windows.ContentElement.MouseLeave>.  
+ <span data-ttu-id="98f1d-112">Esempio di codice riportato di seguito viene illustrato come creare un carattere di sottolineatura per il <xref:System.Windows.Documents.Hyperlink> sul <xref:System.Windows.ContentElement.MouseEnter> evento e rimuoverlo nel <xref:System.Windows.ContentElement.MouseLeave> evento.</span><span class="sxs-lookup"><span data-stu-id="98f1d-112">The following code sample shows how to create an underline for the <xref:System.Windows.Documents.Hyperlink> on the <xref:System.Windows.ContentElement.MouseEnter> event, and remove it on the <xref:System.Windows.ContentElement.MouseLeave> event.</span></span>  
   
  [!code-csharp[Performance#PerformanceSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml.cs#performancesnippet15)]
  [!code-vb[Performance#PerformanceSnippet15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/hyperlink.xaml.vb#performancesnippet15)]  
   
-## Vedere anche  
- <xref:System.Windows.TextDecoration>   
- <xref:System.Windows.Documents.Hyperlink>   
- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Creare un effetto di testo](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)
+## <a name="see-also"></a><span data-ttu-id="98f1d-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="98f1d-113">See Also</span></span>  
+ <xref:System.Windows.TextDecoration>  
+ <xref:System.Windows.Documents.Hyperlink>  
+ [<span data-ttu-id="98f1d-114">Ottimizzazione delle prestazioni di applicazioni WPF</span><span class="sxs-lookup"><span data-stu-id="98f1d-114">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="98f1d-115">Creare un effetto di testo</span><span class="sxs-lookup"><span data-stu-id="98f1d-115">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)

@@ -1,71 +1,73 @@
 ---
-title: "Cenni preliminari sulla classe Menu | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controllo Menu"
-  - "controlli, Menu"
+title: Cenni preliminari sulla classe Menu
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Menu control [WPF]
+- controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 81611e7c5f509314b10e3188106870bdc67dfb0e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Cenni preliminari sulla classe Menu
-Il <xref:System.Windows.Controls.Menu> classe consente di organizzare gli elementi associati a comandi e gestori di eventi in ordine gerarchico. Ogni <xref:System.Windows.Controls.Menu> elemento contiene una raccolta di <xref:System.Windows.Controls.MenuItem> elementi.  
+# <a name="menu-overview"></a><span data-ttu-id="50605-102">Cenni preliminari sulla classe Menu</span><span class="sxs-lookup"><span data-stu-id="50605-102">Menu Overview</span></span>
+<span data-ttu-id="50605-103">La <xref:System.Windows.Controls.Menu> classe consente di organizzare gli elementi associati a comandi e gestori eventi in ordine gerarchico.</span><span class="sxs-lookup"><span data-stu-id="50605-103">The <xref:System.Windows.Controls.Menu> class enables you to organize elements associated with commands and event handlers in a hierarchical order.</span></span> <span data-ttu-id="50605-104">Ogni <xref:System.Windows.Controls.Menu> elemento contiene una raccolta di <xref:System.Windows.Controls.MenuItem> elementi.</span><span class="sxs-lookup"><span data-stu-id="50605-104">Each <xref:System.Windows.Controls.Menu> element contains a collection of <xref:System.Windows.Controls.MenuItem> elements.</span></span>  
   
-   
   
 <a name="menu_control"></a>   
-## <a name="menu-control"></a>Controllo menu  
- Il <xref:System.Windows.Controls.Menu> consente di visualizzare un elenco di elementi che specificano le opzioni per un'applicazione o i comandi. In genere, facendo clic su un <xref:System.Windows.Controls.MenuItem> viene aperto un sottomenu o impedisce a un'applicazione eseguire un comando.  
+## <a name="menu-control"></a><span data-ttu-id="50605-105">Controllo Menu</span><span class="sxs-lookup"><span data-stu-id="50605-105">Menu Control</span></span>  
+ <span data-ttu-id="50605-106">Il <xref:System.Windows.Controls.Menu> consente di visualizzare un elenco di elementi che specificano le opzioni per un'applicazione o i comandi.</span><span class="sxs-lookup"><span data-stu-id="50605-106">The <xref:System.Windows.Controls.Menu> control presents a list of items that specify commands or options for an application.</span></span> <span data-ttu-id="50605-107">In genere, facendo clic su un <xref:System.Windows.Controls.MenuItem> viene aperto un sottomenu o fa sì che un'applicazione eseguire un comando.</span><span class="sxs-lookup"><span data-stu-id="50605-107">Typically, clicking a <xref:System.Windows.Controls.MenuItem> opens a submenu or causes an application to carry out a command.</span></span>  
   
 <a name="creating_menus"></a>   
-## <a name="creating-menus"></a>Creazione di menu  
- Nell'esempio seguente viene creato un <xref:System.Windows.Controls.Menu> di modificare il testo in un <xref:System.Windows.Controls.TextBox>. Il <xref:System.Windows.Controls.Menu> contiene <xref:System.Windows.Controls.MenuItem> gli oggetti che utilizzano il <xref:System.Windows.Controls.MenuItem.Command%2A>, <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>, e <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> proprietà e <xref:System.Windows.Controls.MenuItem.Checked>, <xref:System.Windows.Controls.MenuItem.Unchecked>, e <xref:System.Windows.Controls.MenuItem.Click> eventi.  
+## <a name="creating-menus"></a><span data-ttu-id="50605-108">Creazione di menu</span><span class="sxs-lookup"><span data-stu-id="50605-108">Creating Menus</span></span>  
+ <span data-ttu-id="50605-109">Nell'esempio seguente viene creato un <xref:System.Windows.Controls.Menu> per modificare il testo in un <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="50605-109">The following example creates a <xref:System.Windows.Controls.Menu> to manipulate text in a <xref:System.Windows.Controls.TextBox>.</span></span> <span data-ttu-id="50605-110">Il <xref:System.Windows.Controls.Menu> contiene <xref:System.Windows.Controls.MenuItem> gli oggetti che utilizzano il <xref:System.Windows.Controls.MenuItem.Command%2A>, <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>, e <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> proprietà e <xref:System.Windows.Controls.MenuItem.Checked>, <xref:System.Windows.Controls.MenuItem.Unchecked>, e <xref:System.Windows.Controls.MenuItem.Click> eventi.</span><span class="sxs-lookup"><span data-stu-id="50605-110">The <xref:System.Windows.Controls.Menu> contains <xref:System.Windows.Controls.MenuItem> objects that use the <xref:System.Windows.Controls.MenuItem.Command%2A>, <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>, and <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> properties and the <xref:System.Windows.Controls.MenuItem.Checked>, <xref:System.Windows.Controls.MenuItem.Unchecked>, and <xref:System.Windows.Controls.MenuItem.Click> events.</span></span>  
   
- [!code-xml[MenuItemCommandsAndEvents#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
+ [!code-xaml[MenuItemCommandsAndEvents#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
   
  [!code-csharp[MenuItemCommandsAndEvents#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
  [!code-vb[MenuItemCommandsAndEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="menus_with_shortcutkeys"></a>   
-## <a name="menuitems-with-keyboard-shortcuts"></a>Oggetti MenuItem con tasti di scelta rapida  
- Tasti di scelta rapida sono combinazioni di caratteri che possono essere immessi con la tastiera per richiamare <xref:System.Windows.Controls.Menu> comandi. Ad esempio, il collegamento per **copia** CTRL + c. Sono disponibili due proprietà da utilizzare con voci di menu e tasti di scelta rapida:<xref:System.Windows.Controls.MenuItem.InputGestureText%2A> o <xref:System.Windows.Controls.MenuItem.Command%2A>.  
+## <a name="menuitems-with-keyboard-shortcuts"></a><span data-ttu-id="50605-111">MenuItems con abbreviazioni da tastiera</span><span class="sxs-lookup"><span data-stu-id="50605-111">MenuItems with Keyboard Shortcuts</span></span>  
+ <span data-ttu-id="50605-112">Tasti di scelta rapida sono combinazioni di caratteri che possono essere immessi con la tastiera per richiamare <xref:System.Windows.Controls.Menu> comandi.</span><span class="sxs-lookup"><span data-stu-id="50605-112">Keyboard shortcuts are character combinations that can be entered with the keyboard to invoke <xref:System.Windows.Controls.Menu> commands.</span></span> <span data-ttu-id="50605-113">Il collegamento per **Copia** ad esempio è CTRL+C.</span><span class="sxs-lookup"><span data-stu-id="50605-113">For example, the shortcut for **Copy** is CTRL+C.</span></span> <span data-ttu-id="50605-114">Sono disponibili due proprietà da utilizzare con voci di menu e tasti di scelta rapida:<xref:System.Windows.Controls.MenuItem.InputGestureText%2A> o <xref:System.Windows.Controls.MenuItem.Command%2A>.</span><span class="sxs-lookup"><span data-stu-id="50605-114">There are two properties to use with keyboard shortcuts and menu items —<xref:System.Windows.Controls.MenuItem.InputGestureText%2A> or <xref:System.Windows.Controls.MenuItem.Command%2A>.</span></span>  
   
 <a name="menus_inputgesturetext"></a>   
-### <a name="inputgesturetext"></a>InputGestureText  
- Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Controls.MenuItem.InputGestureText%2A> proprietà per assegnare il testo di scelta rapida da tastiera per <xref:System.Windows.Controls.MenuItem> controlli. In questo modo solo i tasti di scelta rapida nella voce di menu.  Non viene associato il comando con il <xref:System.Windows.Controls.MenuItem>. L'applicazione deve gestire l'input dell'utente per eseguire l'azione.  
+### <a name="inputgesturetext"></a><span data-ttu-id="50605-115">InputGestureText</span><span class="sxs-lookup"><span data-stu-id="50605-115">InputGestureText</span></span>  
+ <span data-ttu-id="50605-116">Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Controls.MenuItem.InputGestureText%2A> proprietà a cui assegnare il testo di scelta rapida da tastiera per <xref:System.Windows.Controls.MenuItem> controlli.</span><span class="sxs-lookup"><span data-stu-id="50605-116">The following example shows how to use the <xref:System.Windows.Controls.MenuItem.InputGestureText%2A> property to assign keyboard shortcut text to <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="50605-117">In questo modo nella voce di menu vengono inserite solo le abbreviazioni da tastiera.</span><span class="sxs-lookup"><span data-stu-id="50605-117">This only places the keyboard shortcut in the menu item.</span></span>  <span data-ttu-id="50605-118">Non associare il comando con il <xref:System.Windows.Controls.MenuItem>.</span><span class="sxs-lookup"><span data-stu-id="50605-118">It does not associate the command with the <xref:System.Windows.Controls.MenuItem>.</span></span> <span data-ttu-id="50605-119">L'applicazione deve gestire l'input dell'utente per eseguire l'azione.</span><span class="sxs-lookup"><span data-stu-id="50605-119">The application must handle the user's input to carry out the action.</span></span>  
   
- [!code-xml[MenuEvent#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
+ [!code-xaml[MenuEvent#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
   
 <a name="menus_commands"></a>   
-### <a name="command"></a>Comando  
- Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Controls.MenuItem.Command%2A> proprietà per associare il **aprire** e **salvare** comandi con <xref:System.Windows.Controls.MenuItem> controlli. La proprietà command non associa solo un comando con un <xref:System.Windows.Controls.MenuItem>, ma fornisce anche il testo di input da utilizzare come un collegamento.  
+### <a name="command"></a><span data-ttu-id="50605-120">Comando</span><span class="sxs-lookup"><span data-stu-id="50605-120">Command</span></span>  
+ <span data-ttu-id="50605-121">Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Controls.MenuItem.Command%2A> proprietà per associare il **aprire** e **salvare** comandi con <xref:System.Windows.Controls.MenuItem> controlli.</span><span class="sxs-lookup"><span data-stu-id="50605-121">The following example shows how to use the <xref:System.Windows.Controls.MenuItem.Command%2A> property to associate the **Open** and **Save** commands with <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="50605-122">La proprietà command non associa solo un comando con un <xref:System.Windows.Controls.MenuItem>, ma fornisce anche il testo di input da utilizzare come un collegamento.</span><span class="sxs-lookup"><span data-stu-id="50605-122">Not only does the command property associate a command with a <xref:System.Windows.Controls.MenuItem>, but it also supplies the input gesture text to use as a shortcut.</span></span>  
   
- [!code-xml[MenuEvent#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
+ [!code-xaml[MenuEvent#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
   
- Il <xref:System.Windows.Controls.MenuItem> classe include inoltre un <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> proprietà che specifica l'elemento in cui si verifica il comando. Se <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> non è impostata, l'elemento con lo stato attivo riceve il comando. Per ulteriori informazioni sui comandi, vedere [panoramica dei comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+ <span data-ttu-id="50605-123">Il <xref:System.Windows.Controls.MenuItem> classe include inoltre un <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> proprietà che specifica l'elemento in cui si verifica il comando.</span><span class="sxs-lookup"><span data-stu-id="50605-123">The <xref:System.Windows.Controls.MenuItem> class also has a <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> property, which specifies the element where the command occurs.</span></span> <span data-ttu-id="50605-124">Se <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> non è impostata, l'elemento con stato attivo della tastiera riceve il comando.</span><span class="sxs-lookup"><span data-stu-id="50605-124">If <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> is not set, the element that has keyboard focus receives the command.</span></span> <span data-ttu-id="50605-125">Per altre informazioni sui comandi vedere [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="50605-125">For more information about commands, see [Commanding Overview](../../../../docs/framework/wpf/advanced/commanding-overview.md).</span></span>  
   
 <a name="menu_styling"></a>   
-## <a name="menu-styling"></a>Stile di menu  
- Con gli stili, è possibile modificare in modo significativo l'aspetto e il comportamento di <xref:System.Windows.Controls.Menu> controlli senza dover scrivere un controllo personalizzato. Oltre a impostare proprietà di visualizzazione, è inoltre possibile applicare un <xref:System.Windows.Style> a singole parti di un controllo, modificare il comportamento di parti del controllo tramite le proprietà, o aggiungere parti aggiuntive o modificare il layout di un controllo. Gli esempi seguenti illustrano i diversi modi per aggiungere un <xref:System.Windows.Style> per un <xref:System.Windows.Controls.Menu> controllo.  
+## <a name="menu-styling"></a><span data-ttu-id="50605-126">Applicazione di stili al testo</span><span class="sxs-lookup"><span data-stu-id="50605-126">Menu Styling</span></span>  
+ <span data-ttu-id="50605-127">Con lo stile di controllo, è possibile modificare drasticamente l'aspetto e il comportamento di <xref:System.Windows.Controls.Menu> controlli senza dover scrivere un controllo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="50605-127">With control styling, you can dramatically change the appearance and behavior of <xref:System.Windows.Controls.Menu> controls without having to write a custom control.</span></span> <span data-ttu-id="50605-128">Oltre a impostare la proprietà visive, è inoltre possibile applicare un <xref:System.Windows.Style> a singole parti di un controllo, il comportamento di parti del controllo tramite le proprietà, modificare o aggiungere parti aggiuntive o modificare il layout di un controllo.</span><span class="sxs-lookup"><span data-stu-id="50605-128">In addition to setting visual properties, you can also apply a <xref:System.Windows.Style> to individual parts of a control, change the behavior of parts of the control through properties, or add additional parts or change the layout of a control.</span></span> <span data-ttu-id="50605-129">Gli esempi seguenti illustrano diversi modi per aggiungere un <xref:System.Windows.Style> per un <xref:System.Windows.Controls.Menu> controllo.</span><span class="sxs-lookup"><span data-stu-id="50605-129">The following examples demonstrate several ways to add a <xref:System.Windows.Style> to a <xref:System.Windows.Controls.Menu> control.</span></span>  
   
- Nel primo esempio di codice definisce una <xref:System.Windows.Style> chiamato `Simple` che mostra come utilizzare le impostazioni di sistema correnti nello stile. Il codice assegna il colore di `MenuHighlightBrush` come colore di sfondo del menu e `MenuTextBrush` come colore di primo piano del menu. Si noti l'uso delle chiavi di risorsa per assegnare i pennelli.  
+ <span data-ttu-id="50605-130">Nel primo esempio di codice definisce un <xref:System.Windows.Style> chiamato `Simple` che viene illustrato come utilizzare le impostazioni di sistema correnti nello stile.</span><span class="sxs-lookup"><span data-stu-id="50605-130">The first code example defines a <xref:System.Windows.Style> called `Simple` that shows how to use the current system settings in your style.</span></span> <span data-ttu-id="50605-131">Il codice assegna il colore di `MenuHighlightBrush` come colore di sfondo del menu e `MenuTextBrush` come colore di primo piano del menu.</span><span class="sxs-lookup"><span data-stu-id="50605-131">The code assigns the color of the `MenuHighlightBrush` as the menu's background color and the `MenuTextBrush` as the menu's foreground color.</span></span> <span data-ttu-id="50605-132">Si noti l'uso delle chiavi di risorsa per assegnare i pennelli.</span><span class="sxs-lookup"><span data-stu-id="50605-132">Notice that you use resource keys to assign the brushes.</span></span>  
   
- [!code-xml[MenuStylesSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
+ [!code-xaml[MenuStylesSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
   
- Nell'esempio seguente viene utilizzato <xref:System.Windows.Trigger> gli elementi che consentono di modificare l'aspetto di un <xref:System.Windows.Controls.MenuItem> in risposta a eventi che si verificano nel <xref:System.Windows.Controls.Menu>. Quando si sposta il puntatore del mouse sul <xref:System.Windows.Controls.Menu>, il colore di primo piano e le caratteristiche del carattere delle voci di menu Modifica.  
+ <span data-ttu-id="50605-133">L'esempio seguente usa <xref:System.Windows.Trigger> gli elementi che consentono di modificare l'aspetto di un <xref:System.Windows.Controls.MenuItem> in risposta a eventi che si verificano nel <xref:System.Windows.Controls.Menu>.</span><span class="sxs-lookup"><span data-stu-id="50605-133">The following sample uses <xref:System.Windows.Trigger> elements that enable you to change the appearance of a <xref:System.Windows.Controls.MenuItem> in response to events that occur on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="50605-134">Quando si sposta il puntatore del mouse su di <xref:System.Windows.Controls.Menu>, il colore primo piano e le caratteristiche del carattere delle voci di menu Modifica.</span><span class="sxs-lookup"><span data-stu-id="50605-134">When you move the mouse over the <xref:System.Windows.Controls.Menu>, the foreground color and the font characteristics of the menu items change.</span></span>  
   
- [!code-xml[MenuStylesSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
+ [!code-xaml[MenuStylesSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempio di raccolta di controlli WPF](http://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a><span data-ttu-id="50605-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="50605-135">See Also</span></span>  
+ [<span data-ttu-id="50605-136">Esempio di raccolta di controlli WPF</span><span class="sxs-lookup"><span data-stu-id="50605-136">WPF Controls Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160053)
