@@ -1,86 +1,87 @@
 ---
-title: "Visualizzazione di dati nel controllo DataGridView Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "dati [Windows Form], visualizzazione in formato tabella"
-  - "griglie dei dati, visualizzazione di dati"
-  - "DataGridView (controllo) [Windows Form], visualizzazione di dati"
-  - "visualizzazione di dati, griglie dei dati"
+title: Visualizzazione di dati nel controllo DataGridView Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], displaying in tabular format
+- data grids [Windows Forms], displaying data
+- displaying data [Windows Forms], data grids
+- DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 839a4fd8052578e32e4d46d10e07aa52a1f23d90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Visualizzazione di dati nel controllo DataGridView Windows Form
-Il controllo `DataGridView` è utilizzato per visualizzare i dati di numerose origini dati esterne.  In alternativa, è possibile aggiungere righe e colonne al controllo e popolarlo manualmente con dati.  
+# <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Visualizzazione di dati nel controllo DataGridView Windows Form
+Il `DataGridView` controllo viene utilizzato per visualizzare i dati da un'ampia gamma di origini dati esterne. In alternativa, è possibile aggiungere righe e colonne al controllo e popolare manualmente i dati.  
   
- Quando si associa il controllo a un'origine dati, è possibile creare automaticamente colonne in base allo schema dell'origine dati.  Se tali colonne non vengono visualizzate nel modo previsto, è possibile nasconderle, rimuoverle o disporle diversamente.  Si possono anche aggiungere colonne non associate per visualizzare dati supplementari non appartenenti all'origine dati.  
+ Quando si associa il controllo a un'origine dati, è possibile generare colonne automaticamente in base allo schema dell'origine dati. Se tali colonne non sono visualizzate come desiderato, nascondere, rimuovere o ridisporre li. È anche possibile aggiungere colonne per visualizzare dati supplementari non provenienti dall'origine dati.  
   
- Inoltre, è possibile visualizzare i dati utilizzando formati standard, ad esempio il formato della valuta, o personalizzare il formato di visualizzazione per presentare i dati in qualsiasi modo richiesto, ad esempio modificando il colore di sfondo per i numeri negativi o sostituendo i valori delle stringhe con immagini corrispondenti.  
+ Inoltre, è possibile visualizzare i dati utilizzando i formati standard (ad esempio, il formato di valuta) oppure è possibile personalizzare il formato di visualizzazione per presentare i dati, tuttavia è necessario (ad esempio la modifica del colore di sfondo per i numeri negativi o sostituendo i valori stringa con immagini) corrispondente.  
   
-## In questa sezione  
- [Modalità di visualizzazione dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
- Vengono descritte le opzioni per popolare il controllo con dati.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Modalità di visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
+ Vengono descritte le opzioni per popolare il controllo con i dati.  
   
  [Formattazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
- Vengono descritte le opzioni per formattare i valori visualizzati nelle celle.  
+ Vengono descritte le opzioni per la formattazione di valori visualizzati nelle celle.  
   
- [Procedura dettagliata: creazione di un controllo DataGridView Windows Form non associato](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
- Viene illustrato come inserire manualmente i dati nel controllo.  
+ [Procedura dettagliata: Creazione di un controllo DataGridView di Windows Form non associato](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ Viene descritto come popolare manualmente i dati nel controllo.  
   
- [Procedura: associare dati al controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- Viene illustrato come popolare il controllo con dati associandolo a un oggetto `BindingSource` contenente informazioni ricavate da un database.  
+ [Procedura: Associare dati al controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+ Viene descritto come popolare il controllo con dati associandolo a un `BindingSource` che contiene informazioni estratte da un database.  
   
- [Procedura: generare automaticamente le colonne in un controllo DataGridView associato ai dati di Windows Form](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
- Viene illustrato come creare automaticamente colonne in base a un'origine dati associata.  
+ [Procedura: Generare automaticamente le colonne in un controllo DataGridView associato ai dati di Windows Form](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+ Viene descritto come generare automaticamente le colonne in base a un'origine dati associata.  
   
- [Procedure: rimuovere le colonne generate automaticamente da un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
- Viene illustrato come nascondere o eliminare le colonne create automaticamente da un'origine dati associata.  
+ [Procedura: Rimuovere le colonne generate automaticamente da un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+ Viene descritto come nascondere o eliminare colonne generate automaticamente da un'origine dati associata.  
   
- [Procedura: modificare l'ordine delle colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
- Viene illustrato come ridisporre le colonne create automaticamente da un'origine dati associata.  
+ [Procedura: Modificare l'ordine delle colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+ Viene descritto come riorganizzare le colonne generate automaticamente da un'origine dati associata.  
   
- [Procedura: aggiungere una colonna non associata a un controllo DataGridView di Windows Form associato ai dati](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
- Viene descritto come completare i dati provenienti da un'origine dati associata visualizzando altre colonne non associate.  
+ [Procedura: Aggiungere una colonna non associata a un controllo DataGridView di Windows Form associato ai dati](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
+ Viene descritto come integrare dati da un'origine dati associata visualizzando altre colonne non associate.  
   
- [Procedura: associare oggetti ai controlli DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
- Viene descritto come associare il controllo a una raccolta di oggetti arbitrari in modo che ciascun oggetto venga visualizzato in una propria riga.  
+ [Procedura: Associare oggetti ai controlli DataGridView di Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ Viene descritto come associare il controllo a una raccolta di oggetti arbitrari in modo che ogni oggetto viene visualizzato nella propria riga.  
   
- [Procedura: accedere a oggetti associati a righe DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ [Procedura: Accedere a oggetti associati a righe di DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
  Viene descritto come recuperare un oggetto associato a una particolare riga del controllo.  
   
- [Procedura dettagliata: creazione di un form Master\-Details mediante due controlli DataGridView Windows Form](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagrids.md)  
- Viene illustrato come visualizzare i dati provenienti da due tabelle di database correlate in modo che i valori visualizzati in un controllo `DataGridView` dipendano dalla riga attualmente selezionata in un altro controllo.  
+ [Procedura dettagliata: Creazione di un form Master-Details con due controlli DataGridView di Windows Form](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
+ Viene descritto come visualizzare i dati di due tabelle di database correlati in modo che i valori mostrati in uno `DataGridView` controllo dipendono la riga attualmente selezionata in un altro controllo.  
   
- [Procedura: formattare dati personalizzati in un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- Viene descritto come gestire l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName> per modificare l'aspetto delle celle in base ai rispettivi valori.  
+ [Procedura: Formattare dati personalizzati in un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+ Viene descritto come gestire il <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> evento per modificare l'aspetto delle celle in base ai relativi valori.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
- Viene fornita la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
+ Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>  
- Viene fornita la documentazione di riferimento per la proprietà <xref:System.Windows.Forms.DataGridView.DataSource%2A>.  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
+ Fornisce la documentazione di riferimento per la <xref:System.Windows.Forms.DataGridView.DataSource%2A> proprietà.  
   
  <xref:System.Windows.Forms.BindingSource>  
- Viene fornita la documentazione di riferimento per il componente <xref:System.Windows.Forms.BindingSource>.  
+ Fornisce la documentazione di riferimento per il componente <xref:System.Windows.Forms.BindingSource>.  
   
-## Sezioni correlate  
- [Immissione di dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- Vengono forniti argomenti in cui è descritto come modificare la modalità di aggiunta e modifica dei dati nel controllo.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Immissione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ Fornisce argomenti che spiegano come cambiare la modalità di aggiunta e modifica dei dati nel controllo da parte degli utenti.  
   
-## Vedere anche  
- [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Tipi di colonna nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Tipi di colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

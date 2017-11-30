@@ -1,103 +1,100 @@
 ---
-title: "And Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.And"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operators [Visual Basic], bitwise"
-  - "logical conjunction"
-  - "bitwise AND operator [Visual Basic]"
-  - "conjunction operator"
-  - "And operator [Visual Basic]"
-  - "bitwise operators, AND operator"
-  - "operators [Visual Basic], conjunction"
-  - "bitwise comparison"
+title: Operatore And (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.And
+helpviewer_keywords:
+- operators [Visual Basic], bitwise
+- logical conjunction
+- bitwise AND operator [Visual Basic]
+- conjunction operator [Visual Basic]
+- And operator [Visual Basic]
+- bitwise operators [Visual Basic], AND operator
+- operators [Visual Basic], conjunction
+- bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 83e1f9df11152f88ef0db24a794026d6f5888a2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# And Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Esegue una congiunzione logica tra due espressioni `Boolean` oppure una congiunzione bit per bit tra due espressioni numeriche.  
+# <a name="and-operator-visual-basic"></a>Operatore And (Visual Basic)
+Esegue una congiunzione logica su due `Boolean` espressioni oppure una congiunzione bit per bit su due espressioni numeriche.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 result = expression1 And expression2  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `result`  
- Obbligatorio.  Qualsiasi espressione `Boolean` o numerica.  Nel caso di un confronto tra valori booleani, `result` rappresenta la congiunzione logica di due valori `Boolean`.  Nel caso di operazioni bit per bit, `result` è invece un valore numerico che rappresenta la congiunzione bit per bit di due schemi di bit numerici.  
+ Obbligatorio. Qualsiasi `Boolean` o espressione numerica. Confronto di valori booleani, `result` rappresenta la congiunzione logica di due `Boolean` valori. Operazioni bit per bit, `result` è un valore numerico che rappresenta la congiunzione bit per bit di due schemi di bit numerici.  
   
  `expression1`  
- Obbligatorio.  Qualsiasi espressione `Boolean` o numerica.  
+ Obbligatorio. Qualsiasi `Boolean` o espressione numerica.  
   
  `expression2`  
- Obbligatorio.  Qualsiasi espressione `Boolean` o numerica.  
+ Obbligatorio. Qualsiasi `Boolean` o espressione numerica.  
   
-## Note  
- Per un confronto tra valori booleani, `result` è `True` soltanto se `expression1` ed `expression2` restituiscono entrambi `True`.  Nella tabella riportata di seguito viene illustrato come si determina il valore di `result`.  
+## <a name="remarks"></a>Note  
+ Confronto di valori booleani, `result` è `True` se e solo se entrambi `expression1` e `expression2` restituiscono `True`. Nella tabella seguente viene illustrato come `result` è determinata.  
   
-|Se `expression1` è|Ed `expression2` è|Il valore di `result` sarà|  
-|------------------------|------------------------|--------------------------------|  
+|Se `expression1` è|E `expression2` è|Il valore di `result` è|  
+|-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
 |`False`|`True`|`False`|  
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  In un confronto tra valori booleani l'operatore `And` valuta sempre entrambe le espressioni, inclusa l'eventuale esecuzione di chiamate di routine.  L'[AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md) esegue un'operazione di *corto circuito*. In altri termini, se `expression1` è `False`, `expression2` non verrà valutata.  
+>  In un confronto booleano, il `And` operatore valuta sempre entrambe le espressioni, che potrebbe includere chiamate di procedura. Il [Operatore AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md) esegue *corto circuito*, che significa che se `expression1` è `False`, quindi `expression2` non viene valutato.  
   
- Se applicato a valori numerici, l'operatore `And` esegue un confronto bit per bit tra bit che occupano la stessa posizione in due espressioni numeriche e imposta il bit corrispondente in `result` in base ai valori riportati nella seguente tabella.  
+ Quando applicato a valori numerici, di `And` operatore esegue un confronto bit per bit di bit in due espressioni numeriche e imposta il bit nel corrispondente `result` in base alla tabella seguente.  
   
-|Se il bit nel parametro `expression1` è|E il bit in `expression2` è|Il bit in `result` sarà|  
-|---------------------------------------------|---------------------------------|-----------------------------|  
+|Se in bit in `expression1` è|E il bit in `expression2` è|Il bit `result` è|  
+|--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|0|  
 |0|1|0|  
 |0|0|0|  
   
 > [!NOTE]
->  Poiché il livello di precedenza degli operatori logici e bit per bit è inferiore rispetto a quello degli operatori aritmetici e relazionali, è necessario racchiudere tra parentesi le operazioni bit per bit per garantire un risultato accurato.  
+>  Poiché gli operatori logici e bit per bit hanno una precedenza inferiore a altri operatori aritmetici e relazionali, qualsiasi operazione bit per bit devono essere racchiuse tra parentesi per garantire risultati accurati.  
   
-## Tipi di dati  
- Se gli operandi sono costituiti da un'espressione `Boolean` e un'espressione numerica, l'espressione `Boolean` verrà convertita in un valore numerico \(–1 per `True` e 0 per `False`\) e verrà eseguita un'operazione bit per bit.  
+## <a name="data-types"></a>Riepilogo dei tipi di dati  
+ Se gli operandi sono costituiti da uno `Boolean` espressione e un'espressione numerica, Visual Basic converte il `Boolean` espressione in un valore numerico (– 1 per `True` e 0 per `False`) ed esegue un'operazione bit per bit.  
   
- Nel caso di un confronto tra valori booleani il tipo di dati del risultato sarà `Boolean`,  mentre per un confronto bit per bit il tipo di dati del risultato sarà un tipo numerico appropriato ai tipi di dati di `expression1` e `expression2`.  Per informazioni, vedere la tabella "Confronti relazionali e bit per bit" in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ Per un confronto booleano, il tipo di dati del risultato è `Boolean`. Per un confronto bit per bit, il tipo di dati del risultato è un tipo numerico appropriato per i tipi di dati di `expression1` e `expression2`. Vedere la tabella "Confronti relazionali e bit per bit" in [tipi di dati di risultati di operatore](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 > [!NOTE]
->  L'operatore `And` può essere sottoposto a *overload*. In altri termini, una classe o una struttura può ridefinirne il comportamento quando un operando specifica il tipo di tale classe o struttura.  Se il codice utilizza l'operatore su una classe o una struttura di questo tipo, è importante comprendere il comportamento ridefinito di tale operatore.  Per ulteriori informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  Il `And` operatore può essere *overload*, il che significa che una classe o struttura ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice Usa l'operatore in una classe o una struttura, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito l'operatore `And` viene utilizzato per eseguire una congiunzione logica tra due espressioni.  Il risultato è un valore `Boolean` che indica se entrambe le espressioni sono `True`.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente usa il `And` operatore per eseguire una congiunzione logica tra due espressioni. Il risultato è un `Boolean` valore che indica se entrambe le espressioni sono `True`.  
   
  [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
   
- I risultati ottenuti dall'esempio precedente sono rispettivamente `True` e `False`.  
+ Nell'esempio precedente produce i risultati di `True` e `False`, rispettivamente.  
   
-## Esempio  
- Nell'esempio riportato di seguito l'operatore `And` viene utilizzato per eseguire la congiunzione logica tra i singoli bit di due espressioni numeriche.  Il bit nello schema dei risultati viene impostato se i bit corrispondenti negli operandi sono entrambi impostati su 1.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente usa il `And` operatore per eseguire la congiunzione logica tra i singoli bit di due espressioni numeriche. Il bit nel risultato viene impostato se i bit corrispondenti negli operandi sono entrambe impostate su 1.  
   
  [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
   
- I risultati ottenuti dall'esempio precedente sono rispettivamente 8, 2 e 0.  
+ Nell'esempio precedente produce risultati di 8, 2 e 0, rispettivamente.  
   
-## Vedere anche  
- [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md)   
- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatori logici e bit per bit (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Operatore AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md)  
+ [Operatori logici e bit per bit in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

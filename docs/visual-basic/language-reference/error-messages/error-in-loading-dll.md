@@ -1,44 +1,42 @@
 ---
-title: "Error in loading DLL (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID48"
-dev_langs: 
-  - "VB"
+title: Errore di caricamento della DLL (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cc557dcc6709178b6519adb56f31debcbd1d1c39
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Error in loading DLL (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una libreria a collegamento dinamico \(DLL\) è una libreria specificata nella clausola `Lib` di un'istruzione `Declare`.  Alcune cause possibili di questo errore sono:  
+# <a name="error-in-loading-dll-visual-basic"></a>Errore di caricamento della DLL (Visual Basic)
+Una libreria di collegamento dinamico (DLL) è una libreria specificata nel `Lib` clausola di un `Declare` istruzione. Possibili cause di questo errore includono:  
   
 -   Il file non è un eseguibile DLL.  
   
 -   Il file non è una DLL di Microsoft Windows.  
   
--   La DLL fa riferimento a un'altra DLL che non esiste.  
+-   La DLL fa riferimento a un'altra DLL che non è presente.  
   
--   La DLL o la DLL a cui si fa riferimento non si trova nella directory specificata nel percorso.  
+-   La DLL o riferimento non è in una directory specificata nel percorso.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Se il file è un file di testo di origine e non un eseguibile DLL, deve essere compilato e collegato a un form eseguibile DLL.  
+-   Se il file è un file di testo di origine e pertanto non eseguibile DLL, deve essere compilato e collegato a un modulo eseguibile DLL.  
   
--   Se il file non è una DLL di Microsoft Windows, procurarsi l'equivalente di Microsoft Windows.  
+-   Se il file non è una DLL di Microsoft Windows, è possibile ottenere l'equivalente di Microsoft Windows.  
   
--   Se la DLL fa riferimento a un'altra DLL che non è presente, procurarsela e renderla disponibile.  
+-   Se la DLL fa riferimento a un'altra DLL che non è presente, ottenere la DLL di cui viene fatto riferimento e renderli disponibili.  
   
--   Se la DLL o la DLL a cui si fa riferimento non si trova nella directory specificata dal percorso, spostarla in una directory con riferimento.  
+-   Se la DLL o riferimento non è in una directory specificata dal percorso, spostare il file DLL in una directory a cui fa riferimento.  
   
-## Vedere anche  
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

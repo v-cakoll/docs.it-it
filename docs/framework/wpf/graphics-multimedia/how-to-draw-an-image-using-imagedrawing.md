@@ -1,44 +1,45 @@
 ---
-title: "Procedura: disegnare un’immagine con ImageDrawing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classi, ImageDrawing"
-  - "disegno, immagini"
-  - "grafica, disegno di immagini"
-  - "ImageDrawing (classe)"
-  - "immagini, disegno"
+title: "Procedura: disegnare un’immagine con ImageDrawing"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawing [WPF], images
+- graphics [WPF], drawing images
+- images [WPF], drawing
 ms.assetid: df28ab41-25fb-4ab3-b51d-7f695b24f55e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2d975d33bb3c102e5294d78dc76d8136ab521953
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: disegnare un’immagine con ImageDrawing
-In questo esempio viene illustrato come utilizzare un oggetto <xref:System.Windows.Media.ImageDrawing> per disegnare un'immagine.  Un oggetto <xref:System.Windows.Media.ImageDrawing> consente di visualizzare un oggetto <xref:System.Windows.Media.ImageSource> con gli oggetti <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.DrawingImage> o <xref:System.Windows.Media.Visual>.  Per disegnare un'immagine, creare un oggetto <xref:System.Windows.Media.ImageDrawing> e impostarne le proprietà <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=fullName> e <xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=fullName>.  La proprietà <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=fullName> specifica l'immagine da disegnare e la proprietà <xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=fullName> specifica la posizione e la dimensione di ciascuna immagine.  
+# <a name="how-to-draw-an-image-using-imagedrawing"></a>Procedura: disegnare un’immagine con ImageDrawing
+In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.ImageDrawing> per disegnare un'immagine. Un <xref:System.Windows.Media.ImageDrawing> consente di visualizzare un <xref:System.Windows.Media.ImageSource> con un <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.DrawingImage>, o <xref:System.Windows.Media.Visual>. Per disegnare un'immagine, si crea un <xref:System.Windows.Media.ImageDrawing> e impostare il relativo <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType> e <xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType> proprietà. Il <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType> proprietà specifica l'immagine da disegnare e <xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType> proprietà specifica la posizione e le dimensioni di ogni immagine.  
   
-## Esempio  
- Nell'esempio seguente viene creato un disegno composto utilizzando quattro oggetti <xref:System.Windows.Media.ImageDrawing>.  Questo esempio produce l'immagine che segue:  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene creato un disegno composto utilizzando quattro <xref:System.Windows.Media.ImageDrawing> oggetti. Questo esempio produce il seguente immagine:  
   
- ![Alcuni oggetti DrawingImage](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagedrawingexample.png "graphicsmm\_ImageDrawingExample")  
+ ![Alcuni oggetti DrawingImage](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagedrawingexample.jpg "graphicsmm_ImageDrawingExample")  
 Quattro oggetti ImageDrawing  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawingExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawingexample)]
- [!code-xml[DrawingMiscSnippets_snip#ImageDrawingExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/ImageDrawingExample.xaml#imagedrawingexample)]  
+ [!code-xaml[DrawingMiscSnippets_snip#ImageDrawingExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/ImageDrawingExample.xaml#imagedrawingexample)]  
   
- Per un esempio in cui viene mostrato un modo semplice per visualizzare un'immagine senza utilizzare <xref:System.Windows.Media.ImageDrawing>, vedere [Utilizzare l'elemento di immagine](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md).  
+ Per un esempio che illustra un modo semplice per visualizzare un'immagine senza utilizzare <xref:System.Windows.Media.ImageDrawing>, vedere [usare l'elemento immagine](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md).  
   
-## Vedere anche  
- <xref:System.Windows.Freezable.Freeze%2A>   
- <xref:System.Windows.Controls.Image>   
- [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
- [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Freezable.Freeze%2A>  
+ <xref:System.Windows.Controls.Image>  
+ [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [Attributo PresentationOptions:Freeze](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)

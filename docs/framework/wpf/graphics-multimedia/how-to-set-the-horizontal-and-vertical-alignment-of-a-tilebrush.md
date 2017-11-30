@@ -1,83 +1,89 @@
 ---
-title: "Procedura: impostare l&#39;allineamento orizzontale e verticale di un TileBrush | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "allineamento, TileBrush"
-  - "allineamento orizzontale di oggetti TileBrush"
-  - "TileBrush, allineamento"
-  - "allineamento verticale di oggetti TileBrush"
+title: 'Procedura: impostare l''allineamento orizzontale e verticale di un TileBrush'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF], alignment of
+- vertical alignment of TileBrushes [WPF]
+- aligning [WPF], TileBrushes
+- horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c581bb167c020e9e4f0de26b0e17e7a1d70704e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare l&#39;allineamento orizzontale e verticale di un TileBrush
-In questo esempio viene illustrato come controllare l'allineamento orizzontale e verticale del contenuto in un elemento affiancato.  Per controllare l'allineamento orizzontale e verticale di un oggetto <xref:System.Windows.Media.TileBrush>, utilizzare le relative proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A>.  
+# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Procedura: impostare l'allineamento orizzontale e verticale di un TileBrush
+Questo esempio spiega come controllare l'allineamento orizzontale e verticale del contenuto in una tessera. Per controllare l'allineamento orizzontale e verticale di un <xref:System.Windows.Media.TileBrush>, utilizzare il relativo <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà.  
   
- Le proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> di un oggetto <xref:System.Windows.Media.TileBrush> vengono utilizzate quando vengono soddisfatte le condizioni seguenti:  
+ Il <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> le proprietà di un <xref:System.Windows.Media.TileBrush> vengono utilizzati quando viene soddisfatta una delle condizioni seguenti:  
   
--   Il valore della proprietà <xref:System.Windows.Media.TileBrush.Stretch%2A> è <xref:System.Windows.Media.Stretch> o <xref:System.Windows.Media.Stretch> e le proprietà <xref:System.Windows.Media.TileBrush.Viewbox%2A> e <xref:System.Windows.Media.TileBrush.Viewport%2A> presentano [proporzioni](GTMT) diverse.  
+-   Il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà <xref:System.Windows.Media.Stretch.Uniform> o <xref:System.Windows.Media.Stretch.UniformToFill> e <xref:System.Windows.Media.TileBrush.Viewbox%2A> e <xref:System.Windows.Media.TileBrush.Viewport%2A> presentano proporzioni diverse.  
   
--   Il valore della proprietà <xref:System.Windows.Media.TileBrush.Stretch%2A> è <xref:System.Windows.Media.Stretch> e le proprietà <xref:System.Windows.Media.TileBrush.Viewbox%2A> e <xref:System.Windows.Media.TileBrush.Viewport%2A> presentano dimensioni diverse.  
+-   Il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà <xref:System.Windows.Media.Stretch.None> e <xref:System.Windows.Media.TileBrush.Viewbox%2A> e <xref:System.Windows.Media.TileBrush.Viewport%2A> sono di dimensioni diverse.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene allineato il contenuto di un oggetto <xref:System.Windows.Media.DrawingBrush> che è un tipo di <xref:System.Windows.Media.TileBrush>, all'angolo superiore sinistro del relativo elemento affiancato.  Per allineare il contenuto, nell'esempio viene impostata la proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> dell'oggetto <xref:System.Windows.Media.DrawingBrush> su <xref:System.Windows.Media.AlignmentX> e la proprietà <xref:System.Windows.Media.TileBrush.AlignmentY%2A> su <xref:System.Windows.Media.AlignmentY>.  Questo esempio produce l'output che segue.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene allineato il contenuto di un <xref:System.Windows.Media.DrawingBrush>, che è un tipo di <xref:System.Windows.Media.TileBrush>, nell'angolo superiore sinistro del relativo elemento. Per allineare il contenuto, nell'esempio viene impostata la <xref:System.Windows.Media.TileBrush.AlignmentX%2A> proprietà del <xref:System.Windows.Media.DrawingBrush> a <xref:System.Windows.Media.AlignmentX.Left> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà <xref:System.Windows.Media.AlignmentY.Top>. Questo esempio produce il seguente output:  
   
- ![TileBrush con allineamento in alto a sinistra](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm\_TileBrushAlignmentExampleTopLeft")  
+ ![TileBrush con torna all'inizio &#45; l'allineamento a sinistra](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
 TileBrush con contenuto allineato all'angolo superiore sinistro  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushtopleftalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmentinline)]  
   
-## Esempio  
- Nell'esempio successivo viene allineato il contenuto di un oggetto <xref:System.Windows.Media.DrawingBrush> all'angolo inferiore destro del relativo elemento affiancato impostando la proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> su <xref:System.Windows.Media.AlignmentX> e la proprietà <xref:System.Windows.Media.TileBrush.AlignmentY%2A> su <xref:System.Windows.Media.AlignmentY>.  Nell'esempio viene prodotto il seguente output.  
+## <a name="example"></a>Esempio  
+ Nell'esempio successivo viene allineato il contenuto di un <xref:System.Windows.Media.DrawingBrush> nell'angolo in basso a destra del relativo elemento impostando la <xref:System.Windows.Media.TileBrush.AlignmentX%2A> proprietà <xref:System.Windows.Media.AlignmentX.Right> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà <xref:System.Windows.Media.AlignmentY.Bottom>. Questo esempio produce l'output seguente.  
   
- ![TileBrush con allineamento in basso a destra](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm\_TileBrushAlignmentExampleBottomRight")  
-TileBrush con contenuto allineato all'angolo inferiore destro  
+ ![TileBrush con inferiore &#45; l'allineamento a destra](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
+TileBrush con contenuto allineato all'angolo in basso a destra  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushbottomrightalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
   
-## Esempio  
- Nell'esempio successivo viene allineato il contenuto di un oggetto <xref:System.Windows.Media.DrawingBrush> all'angolo superiore sinistro del relativo elemento affiancato impostando la proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> su <xref:System.Windows.Media.AlignmentX> e la proprietà <xref:System.Windows.Media.TileBrush.AlignmentY%2A> su <xref:System.Windows.Media.AlignmentY>.  Vengono inoltre impostati <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.TileMode%2A> dell'oggetto <xref:System.Windows.Media.DrawingBrush> affinché producano un modello di elementi affiancati.  Nell'esempio viene prodotto il seguente output.  
+## <a name="example"></a>Esempio  
+ Nell'esempio successivo viene allineato il contenuto di un <xref:System.Windows.Media.DrawingBrush> nell'angolo superiore sinistro del relativo elemento impostando la <xref:System.Windows.Media.TileBrush.AlignmentX%2A> proprietà <xref:System.Windows.Media.AlignmentX.Left> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà <xref:System.Windows.Media.AlignmentY.Top>. Imposta inoltre il <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.TileMode%2A> del <xref:System.Windows.Media.DrawingBrush> per produrre un modello di riquadro. Questo esempio produce l'output seguente.  
   
- ![TileBrush affiancato con allineamento in alto a sinistra](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm\_TileBrushAlignmentExampleTopLeftTiled")  
-Modello di elementi affiancati con contenuto allineato all'elemento base in alto a sinistra  
+ ![TileBrush affiancato con torna all'inizio &#45; l'allineamento a sinistra](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
+Modello di tessera con contenuto allineato all'angolo superiore sinistro nella tessera di base  
   
- Nella figura viene evidenziato un elemento base per illustrare in che modo viene allineato il contenuto.  Si noti che l'impostazione della proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> non ha effetto poiché il contenuto dell'oggetto <xref:System.Windows.Media.DrawingBrush> riempie completamente l'elemento base in orizzontale.  
+ L'illustrazione evidenzia una tessera di base, in modo da mostrarne il modo in cui è allineato il contenuto. Si noti che il <xref:System.Windows.Media.TileBrush.AlignmentX%2A> impostazione non ha effetto poiché il contenuto del <xref:System.Windows.Media.DrawingBrush> riempie completamente la tessera di base in orizzontale.  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmenttiledinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushtopleftalignmenttiledinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmenttiledinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmenttiledinline)]  
   
-## Esempio  
- Nell'esempio finale viene allineato il contenuto di un oggetto <xref:System.Windows.Media.DrawingBrush> affiancato all'angolo inferiore destro del relativo elemento base impostando la proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> su <xref:System.Windows.Media.AlignmentX> e la proprietà <xref:System.Windows.Media.TileBrush.AlignmentY%2A> su <xref:System.Windows.Media.AlignmentY>.  Nell'esempio viene prodotto il seguente output.  
+## <a name="example"></a>Esempio  
+ Nell'esempio finale viene allineato il contenuto di una classe <xref:System.Windows.Media.DrawingBrush> in basso a destra della tessera di base tramite l'impostazione di <xref:System.Windows.Media.TileBrush.AlignmentX%2A> proprietà <xref:System.Windows.Media.AlignmentX.Right> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà <xref:System.Windows.Media.AlignmentY.Bottom>. Questo esempio produce l'output seguente.  
   
- ![TileBrush affiancato con allineamento in basso a destra](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm\_TileBrushAlignmentExampleBottomRightTiled")  
-Modello di elementi affiancati con contenuto allineato all'elemento base in basso a destra  
+ ![Oggetto affiancamento di TileBrush con inferiore &#45; allineamento a destra](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
+Modello di tessera con contenuto allineato all'angolo inferiore destro nella tessera di base  
   
- Anche in questo caso l'impostazione della proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> non ha effetto poiché il contenuto dell'oggetto <xref:System.Windows.Media.DrawingBrush> riempie completamente l'elemento base in orizzontale.  
+ Nuovamente, il <xref:System.Windows.Media.TileBrush.AlignmentX%2A> impostazione non ha effetto poiché il contenuto del <xref:System.Windows.Media.DrawingBrush> riempie completamente la tessera di base in orizzontale.  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushbottomrightalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
   
- Negli esempi vengono utilizzati oggetti <xref:System.Windows.Media.DrawingBrush> per illustrare le modalità di utilizzo delle proprietà <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A>.  Queste proprietà si comportano in modo identico per tutti i pennelli di elementi affiancati: <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush> e <xref:System.Windows.Media.VisualBrush>.  Per ulteriori informazioni sui pennelli di elementi affiancati, vedere [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Gli esempi usano <xref:System.Windows.Media.DrawingBrush> oggetti per illustrare come <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà vengono utilizzate. Queste proprietà si comportano in modo identico per tutti i pennelli tessera: <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, e <xref:System.Windows.Media.VisualBrush>. Per altre informazioni sui pennelli tessera, vedere [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
-## Vedere anche  
- <xref:System.Windows.Media.DrawingBrush>   
- <xref:System.Windows.Media.ImageBrush>   
- <xref:System.Windows.Media.VisualBrush>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Media.DrawingBrush>  
+ <xref:System.Windows.Media.ImageBrush>  
+ <xref:System.Windows.Media.VisualBrush>  
  [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

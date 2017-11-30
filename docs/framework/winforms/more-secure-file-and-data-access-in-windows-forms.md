@@ -1,61 +1,65 @@
 ---
-title: "More Secure File and Data Access in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [Windows Forms], file access"
-  - "registry [Windows Forms]"
-  - "data access [Windows Forms]"
-  - "database access (Windows Forms security)"
-  - "data [Windows Forms], secure access"
-  - "file access [Windows Forms]"
-  - "security [Windows Forms], data access"
+title: "File e accesso ai dati più protetti in Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- security [Windows Forms], file access
+- registry [Windows Forms]
+- data access [Windows Forms]
+- database access (Windows Forms security)
+- data [Windows Forms], secure access
+- file access [Windows Forms]
+- security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f447df16aab29b91da6f34b8afd812dea2d109ef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# More Secure File and Data Access in Windows Forms
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa le autorizzazioni per proteggere le risorse e i dati.  Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione.  Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
+# <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più protetti in Windows Form
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa le autorizzazioni per proteggere le risorse e i dati. Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione. Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
   
- Quando si rileva una restrizione di sicurezza, sono disponibili due opzioni: dichiarare l'autorizzazione \(supponendo che sia stata concessa all'applicazione\) o usare una versione della funzionalità scritta per operare in caso di attendibilità parziale.  Le sezioni seguenti illustrano come usare il file, il database e l'accesso al Registro di sistema da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
-  
-> [!NOTE]
->  Per impostazione predefinita, gli strumenti che generano distribuzioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] configurano queste distribuzioni in modo che richiedano l'attendibilità totale ai computer su cui sono in esecuzione.  Se si desiderano i vantaggi in termini di sicurezza derivanti dall'esecuzione con l'attendibilità parziale, è necessario cambiare questa impostazione predefinita in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o in uno degli strumenti di [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] \(Mage.exe o MageUI.exe\).  Per altre informazioni sulla sicurezza di Windows Form e su come determinare il livello di attendibilità appropriato per l'applicazione, vedere [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
-  
-## Accesso ai file  
- La classe <xref:System.Security.Permissions.FileIOPermission> controlla l'accesso a file e cartelle in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  Per impostazione predefinita, il sistema di sicurezza non concede <xref:System.Security.Permissions.FileIOPermission> agli ambienti con attendibilità parziale, ad esempio la Intranet locale e le aree Internet.  Un'applicazione che richiede l'accesso ai file può comunque funzionare in questi ambienti se si modifica la progettazione dell'applicazione o si usano metodi diversi per accedere ai file.  Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso agli stessi siti e alle stesse directory, di riconnettersi al sito di origine e di leggere dalla directory di installazione.  Per impostazione predefinita, all'area Internet è concesso solo il diritto di riconnettersi al sito di origine.  
-  
-### File specificati dall'utente  
- Se non sono disponibili autorizzazioni di accesso ai file, è possibile chiedere all'utente di fornire informazioni specifiche sui file usando la classe <xref:System.Windows.Forms.OpenFileDialog> o <xref:System.Windows.Forms.SaveFileDialog>.  Questa interazione utente fornisce una discreta garanzia che l'applicazione non possa caricare file riservati o sovrascrivere file importanti in modo intenzionalmente dannoso.  I metodi <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> e <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> forniscono l'accesso ai file in lettura e scrittura aprendo il flusso di file per il file specificato dall'utente.  I metodi consentono anche di proteggere il file dell'utente nascondendo il percorso del file.  
+ Quando si rileva una restrizione di sicurezza, sono disponibili due opzioni: dichiarare l'autorizzazione (supponendo che sia stata concessa all'applicazione) o usare una versione della funzionalità scritta per operare in caso di attendibilità parziale. Le sezioni seguenti illustrano come usare il file, il database e l'accesso al Registro di sistema da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
   
 > [!NOTE]
->  Queste autorizzazioni variano a seconda del fatto che l'applicazione sia nell'area Internet o nell'area Intranet.  Le applicazioni dell'area Internet possono usare solo <xref:System.Windows.Forms.OpenFileDialog>, mentre le applicazioni Intranet hanno un'autorizzazione senza restrizioni per le finestre di dialogo per la gestione dei file.  
+>  Per impostazione predefinita, gli strumenti che generano distribuzioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] configurano queste distribuzioni in modo che richiedano l'attendibilità totale ai computer su cui sono in esecuzione. Se si desiderano i vantaggi in termini di sicurezza derivanti dall'esecuzione con l'attendibilità parziale, è necessario cambiare questa impostazione predefinita in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o in uno degli strumenti di [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] (Mage.exe o MageUI.exe). Per ulteriori informazioni sulla sicurezza di Windows Form e su come determinare il livello di attendibilità appropriato per l'applicazione, vedere [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
- La classe <xref:System.Security.Permissions.FileDialogPermission> specifica il tipo di finestra di dialogo per la gestione dei file che può essere usato dall'applicazione.  La seguente tabella mostra il valore di cui è necessario disporre per usare ogni classe <xref:System.Windows.Forms.FileDialog>.  
+## <a name="file-access"></a>Accesso ai file  
+ La classe <xref:System.Security.Permissions.FileIOPermission> controlla l'accesso a file e cartelle in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Per impostazione predefinita, il sistema di sicurezza non concede <xref:System.Security.Permissions.FileIOPermission> agli ambienti con attendibilità parziale, ad esempio la Intranet locale e le aree Internet. Un'applicazione che richiede l'accesso ai file può comunque funzionare in questi ambienti se si modifica la progettazione dell'applicazione o si usano metodi diversi per accedere ai file. Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso agli stessi siti e alle stesse directory, di riconnettersi al sito di origine e di leggere dalla directory di installazione. Per impostazione predefinita, all'area Internet è concesso solo il diritto di riconnettersi al sito di origine.  
+  
+### <a name="user-specified-files"></a>File specificati dall'utente  
+ Se non sono disponibili autorizzazioni di accesso ai file, è possibile chiedere all'utente di fornire informazioni specifiche sui file usando la classe <xref:System.Windows.Forms.OpenFileDialog> o <xref:System.Windows.Forms.SaveFileDialog>. Questa interazione utente fornisce una discreta garanzia che l'applicazione non possa caricare file riservati o sovrascrivere file importanti in modo intenzionalmente dannoso. I metodi <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> e <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> forniscono l'accesso ai file in lettura e scrittura aprendo il flusso di file per il file specificato dall'utente. I metodi consentono anche di proteggere il file dell'utente nascondendo il percorso del file.  
+  
+> [!NOTE]
+>  Queste autorizzazioni variano a seconda del fatto che l'applicazione sia nell'area Internet o nell'area Intranet. Le applicazioni dell'area Internet possono usare solo <xref:System.Windows.Forms.OpenFileDialog>, mentre le applicazioni Intranet hanno un'autorizzazione senza restrizioni per le finestre di dialogo per la gestione dei file.  
+  
+ La classe <xref:System.Security.Permissions.FileDialogPermission> specifica il tipo di finestra di dialogo per la gestione dei file che può essere usato dall'applicazione. La seguente tabella mostra il valore di cui è necessario disporre per usare ogni classe <xref:System.Windows.Forms.FileDialog>.  
   
 |Classe|Valore di accesso necessario|  
-|------------|----------------------------------|  
-|<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess>|  
-|<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess>|  
+|-----------|---------------------------|  
+|<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Open>|  
+|<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
 >  L'autorizzazione specifica viene richiesta solo dopo che il metodo <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> viene effettivamente chiamato.  
   
- L'autorizzazione per visualizzare una finestra di dialogo per la gestione dei file non concede all'applicazione l'accesso completo a tutti i membri delle classi <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>e <xref:System.Windows.Forms.SaveFileDialog>.  Per le autorizzazioni esattamente necessarie per chiamare ogni metodo, vedere l'argomento di riferimento per tale metodo nella documentazione della libreria di classi di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ L'autorizzazione per visualizzare una finestra di dialogo per la gestione dei file non concede all'applicazione l'accesso completo a tutti i membri delle classi <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>e <xref:System.Windows.Forms.SaveFileDialog>. Per le autorizzazioni esattamente necessarie per chiamare ogni metodo, vedere l'argomento di riferimento per tale metodo nella documentazione della libreria di classi di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Il seguente esempio di codice usa il metodo <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> per aprire un file specificato dall'utente in un controllo <xref:System.Windows.Forms.RichTextBox>.  L'esempio richiede <xref:System.Security.Permissions.FileDialogPermission> e il valore dell'enumerazione <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> associata.  L'esempio illustra come gestire <xref:System.Security.SecurityException> per determinare se disabilitare la funzionalità di salvataggio.  Questo esempio richiede che <xref:System.Windows.Forms.Form> disponga di un controllo <xref:System.Windows.Forms.Button> denominato `ButtonOpen` e di un controllo <xref:System.Windows.Forms.RichTextBox> denominato `RtfBoxMain`.  
+ Il seguente esempio di codice usa il metodo <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> per aprire un file specificato dall'utente in un controllo <xref:System.Windows.Forms.RichTextBox>. L'esempio richiede <xref:System.Security.Permissions.FileDialogPermission> e il valore dell'enumerazione <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> associata. L'esempio illustra come gestire <xref:System.Security.SecurityException> per determinare se disabilitare la funzionalità di salvataggio. Questo esempio richiede che <xref:System.Windows.Forms.Form> disponga di un controllo <xref:System.Windows.Forms.Button> denominato `ButtonOpen` e di un controllo <xref:System.Windows.Forms.RichTextBox> denominato `RtfBoxMain`.  
   
 > [!NOTE]
 >  La logica di programmazione per la funzionalità di salvataggio non è illustrata nell'esempio.  
@@ -95,7 +99,6 @@ Private Sub ButtonOpen_Click(ByVal sender As System.Object, _
         End Try  
     End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -140,12 +143,12 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  In [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], assicurarsi di aggiungere il codice per abilitare il gestore eventi.  Usando il codice dell'esempio precedente, il seguente codice mostra come abilitare il gestore eventi.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  In [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], assicurarsi di aggiungere il codice per abilitare il gestore eventi. Usando il codice dell'esempio precedente, il seguente codice mostra come abilitare il gestore eventi.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
-### Altri file  
- Talvolta sarà necessario leggere o scrivere in file non specificati dall'utente, ad esempio quando si devono rendere persistenti le impostazioni dell'applicazione.  Nelle aree Internet e Intranet locale, l'applicazione non disporrà delle autorizzazioni per archiviare i dati in un file locale.  Tuttavia, l'applicazione potrà archiviare dati nello spazio di memorizzazione isolato.  Lo spazio di memorizzazione isolato è un raggruppamento dati astratto, non un percorso di archiviazione specifico, contenente uno o più file dello spazio di memorizzazione isolato, denominati archivi, che includono i percorsi di directory in cui sono effettivamente memorizzati i dati.  Non sono necessarie autorizzazioni di accesso ai file, ad esempio <xref:System.Security.Permissions.FileIOPermission>. La classe <xref:System.Security.Permissions.IsolatedStoragePermission> controlla invece le autorizzazioni per lo spazio di memorizzazione isolato.  Per impostazione predefinita, le applicazioni eseguite nelle aree Internet e Intranet locale possono archiviare i dati usando lo spazio di memorizzazione isolato. Tuttavia, le impostazioni come la quota disco possono variare.  Per altre informazioni sullo spazio di memorizzazione isolato, vedere [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md).  
+### <a name="other-files"></a>Altri file  
+ Talvolta sarà necessario leggere o scrivere in file non specificati dall'utente, ad esempio quando si devono rendere persistenti le impostazioni dell'applicazione. Nelle aree Internet e Intranet locale, l'applicazione non disporrà delle autorizzazioni per archiviare i dati in un file locale. Tuttavia, l'applicazione potrà archiviare dati nello spazio di memorizzazione isolato. Lo spazio di memorizzazione isolato è un raggruppamento dati astratto, non un percorso di archiviazione specifico, contenente uno o più file dello spazio di memorizzazione isolato, denominati archivi, che includono i percorsi di directory in cui sono effettivamente memorizzati i dati. Non sono necessarie autorizzazioni di accesso ai file, ad esempio <xref:System.Security.Permissions.FileIOPermission>. La classe <xref:System.Security.Permissions.IsolatedStoragePermission> controlla invece le autorizzazioni per lo spazio di memorizzazione isolato. Per impostazione predefinita, le applicazioni eseguite nelle aree Internet e Intranet locale possono archiviare i dati usando lo spazio di memorizzazione isolato. Tuttavia, le impostazioni come la quota disco possono variare. Per ulteriori informazioni sull'archiviazione isolata, vedere [spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md).  
   
- L'esempio seguente usa lo spazio di memorizzazione isolato per scrivere dati in un file contenuto in un archivio.  L'esempio richiede <xref:System.Security.Permissions.IsolatedStorageFilePermission> e il valore dell'enumerazione <xref:System.Security.Permissions.IsolatedStorageContainment>.  L'esempio illustra come leggere e scrivere alcuni valori delle proprietà del controllo <xref:System.Windows.Forms.Button> in un file nello spazio di memorizzazione isolato.  La funzione `Read` verrà chiamata dopo l'avvio dell'applicazione e la funzione `Write` verrà chiamata prima della chiusura dell'applicazione.  L'esempio richiede che le funzioni `Read` e `Write` esistano come membri di un oggetto <xref:System.Windows.Forms.Form> contenente un controllo <xref:System.Windows.Forms.Button>denominato `MainButton`.  
+ L'esempio seguente usa lo spazio di memorizzazione isolato per scrivere dati in un file contenuto in un archivio. L'esempio richiede <xref:System.Security.Permissions.IsolatedStorageFilePermission> e il valore dell'enumerazione <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. L'esempio illustra come leggere e scrivere alcuni valori delle proprietà del controllo <xref:System.Windows.Forms.Button> in un file nello spazio di memorizzazione isolato. La funzione `Read` verrà chiamata dopo l'avvio dell'applicazione e la funzione `Write` verrà chiamata prima della chiusura dell'applicazione. Nell'esempio si presuppone che il `Read` e `Write` funzioni esistano come membri di un <xref:System.Windows.Forms.Form> che contiene un <xref:System.Windows.Forms.Button> controllo denominato `MainButton`.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   
@@ -242,7 +245,6 @@ Public Sub Write()
         writer.Close()  
     End Try  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -356,20 +358,20 @@ public void Write()
 }  
 ```  
   
-## Accesso a database  
- Le autorizzazioni necessarie per accedere a un database variano in base al provider del database. Tuttavia, solo le applicazioni in esecuzione con le autorizzazioni appropriate possono accedere a un database tramite una connessione dati.  Per altre informazioni sulle autorizzazioni necessarie per accedere a un database, vedere [Sicurezza dall'accesso di codice e ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+## <a name="database-access"></a>Accesso a database  
+ Le autorizzazioni necessarie per accedere a un database variano in base al provider del database. Tuttavia, solo le applicazioni in esecuzione con le autorizzazioni appropriate possono accedere a un database tramite una connessione dati. Per ulteriori informazioni sulle autorizzazioni necessarie per accedere a un database, vedere [sicurezza dall'accesso di codice e ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Se non è possibile accedere direttamente a un database, perché si desidera che l'applicazione venga eseguita con attendibilità parziale, è possibile usare un servizio Web come alternativa per accedere ai dati.  Un servizio Web è un componente software accessibile a livello di codice in una rete.  Con i servizi Web, le applicazioni possono condividere dati tra le aree dei gruppi di codice.  Per impostazione predefinita, alle applicazioni nelle aree Internet e Intranet locale viene concesso il diritto di accedere ai relativi siti di origine. Questo consente a tali applicazioni di chiamare un servizio Web ospitato nello stesso server.  Per altre informazioni, vedere [Servizi Web in ASP.NET AJAX](http://msdn.microsoft.com/it-it/8290e543-7eff-47a4-aace-681f3c07229b) o [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
+ Se non è possibile accedere direttamente a un database, perché si desidera che l'applicazione venga eseguita con attendibilità parziale, è possibile usare un servizio Web come alternativa per accedere ai dati. Un servizio Web è un componente software accessibile a livello di codice in una rete. Con i servizi Web, le applicazioni possono condividere dati tra le aree dei gruppi di codice. Per impostazione predefinita, alle applicazioni nelle aree Internet e Intranet locale viene concesso il diritto di accedere ai relativi siti di origine. Questo consente a tali applicazioni di chiamare un servizio Web ospitato nello stesso server. Per ulteriori informazioni vedere [servizi Web in ASP.NET AJAX](http://msdn.microsoft.com/en-us/8290e543-7eff-47a4-aace-681f3c07229b) o [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
   
-## Accesso al Registro di sistema  
- La classe <xref:System.Security.Permissions.RegistryPermission> controlla l'accesso al Registro di sistema del sistema operativo.  Per impostazione predefinita, solo le applicazioni in esecuzione in locale possono accedere al Registro di sistema.  <xref:System.Security.Permissions.RegistryPermission> concede a un'applicazione solo il diritto di provare ad accedere al Registro di sistema. Non garantisce l'accesso, perché il sistema operativo continua ad applicare la sicurezza al Registro di sistema.  
+## <a name="registry-access"></a>Accesso al Registro di sistema  
+ La classe <xref:System.Security.Permissions.RegistryPermission> controlla l'accesso al Registro di sistema del sistema operativo. Per impostazione predefinita, solo le applicazioni in esecuzione in locale possono accedere al Registro di sistema.  <xref:System.Security.Permissions.RegistryPermission> concede a un'applicazione solo il diritto di provare ad accedere al Registro di sistema. Non garantisce l'accesso, perché il sistema operativo continua ad applicare la sicurezza al Registro di sistema.  
   
- Poiché non è possibile accedere al Registro di sistema con l'attendibilità parziale, potrebbe essere necessario trovare altri metodi di archiviazione dei dati.  Quando si archiviano le impostazioni dell'applicazione, usare lo spazio di memorizzazione isolato invece del Registro di sistema.  Lo spazio di memorizzazione isolato può essere usato anche per archiviare altri file specifici dell'applicazione.  È anche possibile archiviare informazioni di applicazioni globali relative al server o al sito di origine, perché, per impostazione predefinita, a un'applicazione viene concesso il diritto di accedere al sito di origine.  
+ Poiché non è possibile accedere al Registro di sistema con l'attendibilità parziale, potrebbe essere necessario trovare altri metodi di archiviazione dei dati. Quando si archiviano le impostazioni dell'applicazione, usare lo spazio di memorizzazione isolato invece del Registro di sistema. Lo spazio di memorizzazione isolato può essere usato anche per archiviare altri file specifici dell'applicazione. È anche possibile archiviare informazioni di applicazioni globali relative al server o al sito di origine, perché, per impostazione predefinita, a un'applicazione viene concesso il diritto di accedere al sito di origine.  
   
-## Vedere anche  
- [More Secure Printing in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)   
- [Additional Security Considerations in Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)   
- [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md)   
- [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)   
- [Mage.exe \(Strumento per la generazione e la modifica di manifesti\)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)   
- [MageUI.exe \(Manifest Generation and Editing Tool, Graphical Client\)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>Vedere anche  
+ [Stampa più sicura in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Considerazioni aggiuntive sulla sicurezza in Windows Form](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [Panoramica della sicurezza in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Sicurezza di Windows Form](../../../docs/framework/winforms/windows-forms-security.md)  
+ [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

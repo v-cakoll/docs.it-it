@@ -1,51 +1,52 @@
 ---
-title: "Grafica a doppio buffer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "doppio buffer"
-  - "esempi [Windows Form], grafica a doppio buffer"
-  - "sfarfallio, riduzione con doppio buffer"
-  - "grafica, a doppio buffer"
+title: Grafica a doppio buffer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- double buffering
+- graphics [Windows Forms], double-buffered
+- flicker [Windows Forms], reducing with double buffering
+- examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89413e0958366dd39c62bfaedb7e36471123bc22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Grafica a doppio buffer
-Lo sfarfallio è un problema comune nella programmazione di grafica.  Le operazioni di tipo grafico che richiedono più operazioni di disegno complesse possono determinare un apparente sfarfallio delle immagini visualizzate oppure attribuire loro un aspetto non accettabile.  Per risolvere questi problemi, .NET Framework consente di accedere al doppio buffering.  
+# <a name="double-buffered-graphics"></a>Grafica a doppio buffer
+Lo sfarfallio è un problema comune della programmazione della grafica. Le operazioni di grafica che richiedono più operazioni complesse di disegno possono causare lo sfarfallio o altri gravi problemi delle immagini sottoposte a rendering. Per risolvere questi problemi, .NET Framework fornisce l'accesso al doppio buffer.  
   
- Il doppio buffering utilizza una buffer di memoria per risolvere i problemi di sfarfallio associati a operazioni di disegno multiple.  Quando il doppio buffering è attivo, di tutte le operazioni di disegno viene eseguito il rendering anzitutto in un buffer di memoria anziché sull'area del disegno sullo schermo.  Una volta completate tutte le operazioni di disegno, il buffer di memoria viene copiato direttamente nell'area di disegno associata.  Dato che sullo schermo viene eseguita una sola operazione di tipo grafico, lo sfarfallio dell'immagine associato alle operazioni di disegno più complesse viene eliminato.  
+ Il doppio buffer usa un buffer di memoria per risolvere i problemi di sfarfallio associati a più operazioni di disegno. Quando il doppio buffer è abilitato, tutte le operazioni di disegno vengono prima sottoposte a rendering in un buffer di memoria invece che nella superficie di disegno visualizzata. Dopo che tutte le operazioni di disegno sono state completate, il buffer di memoria viene copiato direttamente nella superficie di disegno associata. Poiché sullo schermo viene eseguita una sola operazione di disegno, lo sfarfallio dell'immagine associato alle operazioni di disegno complesse viene eliminato.  
   
-## Doppio buffering predefinito  
- Il modo più rapido per utilizzare il doppio buffering nelle applicazioni è applicare il doppio buffering predefinito per form e controlli fornito da .NET Framework.  È possibile attivare il doppio buffering predefinito per Windows Form e controlli modificati per Windows impostando la proprietà <xref:System.Windows.Forms.Control.DoubleBuffered%2A> su `true` oppure utilizzando il metodo <xref:System.Windows.Forms.Control.SetStyle%2A>.  Per ulteriori informazioni, vedere [Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md).  
+## <a name="default-double-buffering"></a>Doppio buffer predefinito  
+ Il modo più semplice per usare il doppio buffer nelle applicazioni consiste nell'usare il doppio buffer predefinito per form e controlli disponibile in .NET Framework. È possibile abilitare il doppio buffering per Windows Form predefinito e modificati per i controlli di Windows mediante l'impostazione di <xref:System.Windows.Forms.Control.DoubleBuffered%2A> proprietà `true` o utilizzando il <xref:System.Windows.Forms.Control.SetStyle%2A> metodo. Per altre informazioni, vedere [Procedura: Ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md).  
   
-## Gestione manuale della grafica memorizzata nel buffer  
- Per scenari di doppio buffering più avanzati, ad esempio animazioni o gestione avanzata della memoria, è possibile utilizzare le classi .NET Framework per implementare una logica di buffering doppio personalizzata.  La classe responsabile per l'allocazione e la gestione dei singoli buffer grafici è la classe <xref:System.Drawing.BufferedGraphicsContext>.  Ogni applicazione dispone di una propria istanza di <xref:System.Drawing.BufferedGraphicsContext> che gestisce la totalità del buffering doppio predefinito per l'applicazione.  Nella maggioranza dei casi per ogni applicazione sarà disponibile un unico dominio, quindi generalmente per ogni applicazione sarà presente un oggetto <xref:System.Drawing.BufferedGraphicsContext> predefinito.  Le istanze <xref:System.Drawing.BufferedGraphicsContext> predefinite vengono gestite dalla classe <xref:System.Drawing.BufferedGraphicsManager>.  È possibile recuperare un riferimento all'istanza di <xref:System.Drawing.BufferedGraphicsContext> predefinita chiamando la [proprietà BufferedGraphicsManager.Current](frlrfSystemDrawingBufferedGraphicsManagerClassCurrentTopic).  È inoltre possibile creare un'istanza di <xref:System.Drawing.BufferedGraphicsContext> dedicata, che consente di migliorare le prestazioni in applicazioni a elevato contenuto grafico.  Per informazioni su come creare un'istanza di <xref:System.Drawing.BufferedGraphicsContext>, vedere [Procedura: gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+## <a name="manually-managing-buffered-graphics"></a>Gestione manuale delle immagini memorizzate nel buffer  
+ Per scenari di doppio buffer più avanzati, ad esempio l'animazione o la gestione avanzata della memoria, è possibile usare le classi di .NET Framework per implementare la propria logica di doppio buffer. La classe responsabile per l'allocazione e gestione dei singoli buffer grafici è la <xref:System.Drawing.BufferedGraphicsContext> classe. Ogni dominio applicazione con il proprio valore predefinito <xref:System.Drawing.BufferedGraphicsContext> dell'istanza che gestisce tutto il buffering doppio predefinito per tale applicazione. Nella maggior parte dei casi esisterà un solo dominio applicazione per ogni applicazione, pertanto non c'è in genere un valore predefinito <xref:System.Drawing.BufferedGraphicsContext> per ogni applicazione. Predefinito <xref:System.Drawing.BufferedGraphicsContext> gestite da istanze di <xref:System.Drawing.BufferedGraphicsManager> classe. È possibile recuperare un riferimento all'impostazione predefinita <xref:System.Drawing.BufferedGraphicsContext> istanza chiamando il <xref:System.Drawing.BufferedGraphicsManager.Current%2A>. È inoltre possibile creare una dedicata <xref:System.Drawing.BufferedGraphicsContext> istanza, che può migliorare le prestazioni per applicazioni grafiche. Per informazioni su come creare un <xref:System.Drawing.BufferedGraphicsContext> dell'istanza, vedere [procedura: gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
   
-## Visualizzazione manuale della grafica memorizzata nel buffer  
- È possibile utilizzare un'istanza della classe <xref:System.Drawing.BufferedGraphicsContext> per creare buffer per grafica chiamando il [metodo BufferedGraphicsContext.Allocate](frlrfSystemDrawingBufferedGraphicsContextClassAllocateTopic), che restituisce un'istanza della classe <xref:System.Drawing.BufferedGraphics>.  Un oggetto <xref:System.Drawing.BufferedGraphics> gestisce un buffer di memoria associato a una superficie di rendering, ad esempio un form o un controllo.  
+## <a name="manually-displaying-buffered-graphics"></a>Visualizzazione manuale della grafica memorizzata nel buffer  
+ È possibile utilizzare un'istanza di <xref:System.Drawing.BufferedGraphicsContext> classe per creare il buffer di grafica chiamando il <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A?displayProperty=nameWithType>, che restituisce un'istanza del <xref:System.Drawing.BufferedGraphics> classe. Oggetto <xref:System.Drawing.BufferedGraphics> oggetto gestisce un buffer di memoria che è associato a una superficie di rendering, ad esempio un form o controllo.  
   
- Dopo la creazione dell'istanza, la classe <xref:System.Drawing.BufferedGraphics> gestisce il rendering in un buffer grafico in memoria.  È possibile eseguire il rendering di grafica nel buffer di memoria tramite la [proprietà BufferedGraphics.Graphics](frlrfSystemDrawingBufferedGraphicsClassGraphicsTopic), che espone un oggetto <xref:System.Drawing.Graphics> che rappresenta direttamente il buffer di memoria.  È possibile disegnare in questo oggetto <xref:System.Drawing.Graphics> esattamente come si farebbe con un oggetto <xref:System.Drawing.Graphics> che rappresenta un'area di disegno.  Una volta disegnati gli elementi grafici nel buffer, è possibile utilizzare il [metodo BufferedGraphics.Render](frlrfSystemDrawingBufferedGraphicsClassRenderTopic) per copiare il contenuto del buffer nell'area di disegno sullo schermo.  
+ Dopo che viene creata un'istanza, la <xref:System.Drawing.BufferedGraphics> classe gestisce il rendering in un buffer di grafica in memoria. È possibile eseguire il rendering di grafica nel buffer di memoria tramite il <xref:System.Drawing.BufferedGraphics.Graphics%2A>, che espone un <xref:System.Drawing.Graphics> oggetto che rappresenta direttamente il buffer di memoria. È possibile disegnare in questo <xref:System.Drawing.Graphics> oggetto esattamente come farebbe con un <xref:System.Drawing.Graphics> oggetto che rappresenta un'area di disegno. Tutti gli elementi grafici sono stati disegnati nel buffer, è possibile utilizzare il <xref:System.Drawing.BufferedGraphics.Render%2A?displayProperty=nameWithType> per copiare il contenuto del buffer nell'area di disegno sullo schermo.  
   
- Per ulteriori informazioni sull'utilizzo della classe <xref:System.Drawing.BufferedGraphics>, vedere [Rendering manuale di grafica memorizzata nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md).  Per ulteriori informazioni sul rendering di elementi grafici, vedere [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ Per ulteriori informazioni sull'utilizzo di <xref:System.Drawing.BufferedGraphics> classe, vedere [Rendering manuale di grafica memorizzata nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md). Per altre informazioni sul rendering della grafica, vedere [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
   
-## Vedere anche  
- <xref:System.Drawing.BufferedGraphics>   
- <xref:System.Drawing.BufferedGraphicsContext>   
- <xref:System.Drawing.BufferedGraphicsManager>   
- [Procedura: eseguire il rendering manuale di grafica memorizzata nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)   
- [Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)   
- [Procedura: gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.BufferedGraphics>  
+ <xref:System.Drawing.BufferedGraphicsContext>  
+ <xref:System.Drawing.BufferedGraphicsManager>  
+ [Procedura: Eseguire il rendering manuale di grafica memorizzata nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
+ [Procedura: Ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ [Procedura: Gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
  [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

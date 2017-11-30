@@ -1,38 +1,41 @@
 ---
-title: "Procedura: attivare la riproduzione multimediale con un evento utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sincronizzazione della riproduzione di contenuti multimediali con eventi"
-  - "riproduzione di contenuti multimediali, la sincronizzazione con eventi"
-  - "supporto, sincronizzazione della riproduzione con eventi"
-  - "riproduzione dei supporti multimediali, la sincronizzazione con eventi"
+title: 'Procedura: attivare la riproduzione multimediale con un evento utente'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronizing media playback with events [WPF]
+- playback of media [WPF], synchronizing with events
+- media [WPF], synchronizing playback with events
+- multimedia [WPF], synchronizing media playback with events
 ms.assetid: c4dbe632-6e7f-4d7f-9df5-98737a758bc3
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 39d50fc23be4a5cdf4df90cd6fa96466acc738aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: attivare la riproduzione multimediale con un evento utente
-In questo esempio viene illustrato come sincronizzare la riproduzione multimediale con un evento.  
+# <a name="how-to-trigger-media-playback-with-a-user-event"></a>Procedura: attivare la riproduzione multimediale con un evento utente
+Questo esempio spiega come sincronizzare la riproduzione multimediale con un evento.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la <xref:System.Windows.Controls.MediaElement> controllo e il <xref:System.Windows.Media.MediaTimeline> classe per riprodurre un suono che si verifica quando l'utente fa clic su un <xref:System.Windows.Controls.Button>.  
+ L'esempio seguente usa il <xref:System.Windows.Controls.MediaElement> controllo e <xref:System.Windows.Media.MediaTimeline> classe per riprodurre un suono che si verifica quando l'utente fa clic su un <xref:System.Windows.Controls.Button>.  
   
- [!code-xml[MediaGallery_snippet#SoundFromUserEventExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundFromUserEventExample.xaml#soundfromusereventexamplewholepage)]  
+ [!code-xaml[MediaGallery_snippet#SoundFromUserEventExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundFromUserEventExample.xaml#soundfromusereventexamplewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Controls.MediaElement>   
- <xref:System.Windows.Media.MediaTimeline>   
- <xref:System.Windows.EventTrigger.RoutedEvent%2A>   
- <xref:System.Windows.Media.Animation.Storyboard>   
- [Procedure](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)   
- [Grafica e Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ <xref:System.Windows.Controls.MediaElement>  
+ <xref:System.Windows.Media.MediaTimeline>  
+ <xref:System.Windows.EventTrigger.RoutedEvent%2A>  
+ <xref:System.Windows.Media.Animation.Storyboard>  
+ [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
+ [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)

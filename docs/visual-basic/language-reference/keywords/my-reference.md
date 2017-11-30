@@ -1,40 +1,39 @@
 ---
-title: "My Reference (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My feature"
-  - "My reference"
+title: Riferimenti a oggetti My (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My feature
+- My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9cf23a3cc435f3ddea778b368716a35dde90656c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# My Reference (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-La funzionalità `My` semplifica e accelera le operazioni di programmazione grazie a un accesso intuitivo ai metodi, alle proprietà e agli eventi di uso comune.  Nella tabella riportata di seguito sono elencati gli oggetti contenuti in `My` e le azioni che è possibile eseguire con ognuno di essi.  
+# <a name="my-reference-visual-basic"></a>Riferimenti a oggetti My (Visual Basic)
+Il `My` funzionalità rende più veloce e semplice la programmazione fornendo accesso intuitivo a metodi di usati comune, proprietà ed eventi. Questa tabella sono elencati gli oggetti contenuti in `My`e le azioni che possono essere eseguite con ognuna.  
   
-|**Azione**|**Object**|  
+|**Azione**|**Oggetto**|  
 |----------------|----------------|  
-|Accesso ai servizi e alle informazioni delle applicazioni.|L'oggetto `My.Application` è costituito dalle classi seguenti:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> fornisce i membri disponibili in tutti i progetti.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> fornisce i membri disponibili nelle applicazioni Windows Form.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> fornisce i membri disponibili nelle applicazioni console.|  
-|Accesso al computer host e ai relativi servizi, dati e risorse.|`My.Computer` \(<xref:Microsoft.VisualBasic.Devices.Computer>\)|  
-|Accesso ai form del progetto corrente.|[My.Forms Object](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Accesso al registro applicazioni.|`My.Application.Log` \(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>\)|  
-|Accesso alla richiesta Web corrente.|[My.Request Object](../../../visual-basic/language-reference/objects/my-request-object.md)|  
-|Accesso agli elementi delle risorse.|[My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
-|Accesso alla risposta Web corrente.|[My.Response Object](../../../visual-basic/language-reference/objects/my-response-object.md)|  
-|Accesso alle impostazioni a livello utente e applicazione.|[My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
-|Accesso al contesto di sicurezza dell'utente corrente.|`My.User` \(<xref:Microsoft.VisualBasic.ApplicationServices.User>\)|  
-|Accesso ai servizi Web XML a cui fa riferimento il progetto corrente.|[My.WebServices Object](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|Accede ai servizi e le informazioni dell'applicazione.|L'oggetto `My.Application` è costituito dalle classi seguenti:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> specifica i membri disponibili in tutti i progetti.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> specifica i membri disponibili nelle applicazioni Windows Form.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> specifica i membri disponibili nelle applicazioni console.|  
+|L'accesso al computer host e relativi alle risorse, servizi e dati.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
+|Accesso ai form nel progetto corrente.|[Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Accesso al registro applicazioni.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
+|L'accesso alla richiesta web corrente.|[Oggetto My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)|  
+|L'accesso agli elementi di risorsa.|[Oggetto My.Resources](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
+|L'accesso alla risposta web corrente.|[Oggetto My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)|  
+|Accesso alle impostazioni del livelli di applicazione e dell'utente.|[Oggetto My.Settings](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
+|Accesso al contesto di sicurezza dell'utente corrente.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
+|L'accesso ai servizi Web XML a cui fa riferimento il progetto corrente.|[Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
-## Vedere anche  
- [Overview of the Visual Basic Application Model](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)   
- [Development with My](../../../visual-basic/developing-apps/development-with-my/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sul modello di applicazione Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
+ [Sviluppo con My](../../../visual-basic/developing-apps/development-with-my/index.md)

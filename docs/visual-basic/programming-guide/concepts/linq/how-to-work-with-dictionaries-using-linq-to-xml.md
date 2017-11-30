@@ -1,33 +1,28 @@
 ---
-title: 'Procedura: utilizzare dizionari in LINQ to XML (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: utilizzare dizionari tramite LINQ to XML (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3441e513012ba24419a3c5330cdb2f75f5ca394f
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: dc7290a3afca22ffc92914efacdb768a72e2aef7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Procedura: utilizzare dizionari in LINQ to XML (Visual Basic)
-Spesso risulta utile eseguire la conversione in XML di varie strutture dati e la riconversione di altre strutture dati in XML. In questo argomento viene illustrata un'implementazione specifica di questo approccio generale convertendo un <xref:System.Collections.Generic.Dictionary%602>in XML e viceversa.</xref:System.Collections.Generic.Dictionary%602>  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Procedura: utilizzare dizionari tramite LINQ to XML (Visual Basic)
+Spesso risulta utile eseguire la conversione in XML di varie strutture dati e la riconversione di altre strutture dati in XML. In questo argomento è illustrata un'implementazione specifica di questo approccio generale con la conversione di un oggetto <xref:System.Collections.Generic.Dictionary%602> in XML e viceversa.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio utilizza i valori letterali XML e una query in un'espressione incorporata. La query proietta nuovi <xref:System.Xml.Linq.XElement>oggetti, che diventano quindi il nuovo contenuto per il `Root` <xref:System.Xml.Linq.XElement>oggetto.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement>  
+ Questo esempio Usa valori letterali XML e una query in un'espressione incorporata. La query proietta nuovi <xref:System.Xml.Linq.XElement> oggetti, che quindi diventano il nuovo contenuto per il `Root` <xref:System.Xml.Linq.XElement> oggetto.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -86,4 +81,3 @@ Child4:Value4
   
 ## <a name="see-also"></a>Vedere anche  
  [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-

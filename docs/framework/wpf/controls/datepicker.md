@@ -1,36 +1,39 @@
 ---
-title: "DatePicker | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controlli [WPF], DatePicker"
-  - "DatePicker (controllo) [WPF]"
+title: DatePicker
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], DatePicker
+- DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cd5c7c796ee9d51a216368de3f3b04c10a5a3acd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# DatePicker
-Il controllo <xref:System.Windows.Controls.DatePicker> consente all'utente di selezionare una data digitandola in un campo di testo o utilizzando un controllo <xref:System.Windows.Controls.Calendar> a discesa.  
+# <a name="datepicker"></a>DatePicker
+Il <xref:System.Windows.Controls.DatePicker> controllo consente all'utente di selezionare una data digitandola in un campo di testo o utilizzando un elenco a discesa <xref:System.Windows.Controls.Calendar> controllo.  
   
- Nell'immagine riportata di seguito viene illustrato un oggetto <xref:System.Windows.Controls.DatePicker>.  
+ La figura seguente mostra un <xref:System.Windows.Controls.DatePicker>.  
   
- ![Controllo DatePicker](../../../../docs/framework/wpf/controls/media/ndp-datepicker.png "NDP\_DatePicker")  
+ ![Controllo DatePicker](../../../../docs/framework/wpf/controls/media/ndp-datepicker.png "NDP_DatePicker")  
 Controllo DatePicker  
   
- Molte proprietà del controllo <xref:System.Windows.Controls.DatePicker> sono per la gestione dell'oggetto <xref:System.Windows.Controls.Calendar> incorporato e funzionano esattamente come la proprietà equivalente in <xref:System.Windows.Controls.Calendar>.  In particolare, le proprietà <xref:System.Windows.Controls.DatePicker.IsTodayHighlighted%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.FirstDayOfWeek%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.BlackoutDates%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.DisplayDateStart%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.DisplayDateEnd%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.DisplayDate%2A?displayProperty=fullName> e <xref:System.Windows.Controls.DatePicker.SelectedDate%2A?displayProperty=fullName> funzionano esattamente come le corrispondenti proprietà di <xref:System.Windows.Controls.Calendar>.  Per ulteriori informazioni, vedere <xref:System.Windows.Controls.Calendar>.  
+ Numero di un <xref:System.Windows.Controls.DatePicker> sono proprietà del controllo per la gestione relativo predefinito <xref:System.Windows.Controls.Calendar>e la funzione in modo identico alla proprietà equivalenti in <xref:System.Windows.Controls.Calendar>. In particolare, il <xref:System.Windows.Controls.DatePicker.IsTodayHighlighted%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.FirstDayOfWeek%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.BlackoutDates%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDateStart%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDateEnd%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDate%2A?displayProperty=nameWithType>, e <xref:System.Windows.Controls.DatePicker.SelectedDate%2A?displayProperty=nameWithType> le proprietà funzionano in modo identico alle loro <xref:System.Windows.Controls.Calendar> controparti. Per altre informazioni, vedere <xref:System.Windows.Controls.Calendar>.  
   
- Gli utenti possono digitare una data direttamente in un campo di testo che imposta la proprietà <xref:System.Windows.Controls.DatePicker.Text%2A>.  Se <xref:System.Windows.Controls.DatePicker> non è in grado di convertire la stringa immessa in una data valida viene generato l'evento <xref:System.Windows.Controls.DatePicker.DateValidationError>.  Per impostazione predefinita viene generata un'eccezione, ma un gestore eventi per <xref:System.Windows.Controls.DatePicker.DateValidationError> può impostare la proprietà <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A> su `false` ed evitare così la generazione dell'eccezione.  
+ Gli utenti possono immettere una data direttamente in un campo di testo, che imposta il <xref:System.Windows.Controls.DatePicker.Text%2A> proprietà. Se il <xref:System.Windows.Controls.DatePicker> non è possibile convertire la stringa immessa una data valida, il <xref:System.Windows.Controls.DatePicker.DateValidationError> verrà generato l'evento. Per impostazione predefinita, questo causa un'eccezione, ma un gestore eventi per <xref:System.Windows.Controls.DatePicker.DateValidationError> possibile impostare il <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A> proprietà `false` e impedire la generazione di un'eccezione.  
   
-## Vedere anche  
- [Controlli](../../../../docs/framework/wpf/controls/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controlli](../../../../docs/framework/wpf/controls/index.md)  
  [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)

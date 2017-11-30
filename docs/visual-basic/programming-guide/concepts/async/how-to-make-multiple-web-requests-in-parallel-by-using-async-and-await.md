@@ -1,40 +1,31 @@
 ---
-title: "Procedura: effettuare più richieste Web in parallelo tramite Async e Await (Visual Basic) | Documenti di Microsoft"
+title: "Procedura: effettuare più richieste Web in parallelo tramite Async e Await (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e4c41cc3813a9f96d944d115c6aaa5c5842a629b
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a9b96e8acf9f5453ac035769ea7b279c4fedadfb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedura: effettuare più richieste Web in parallelo tramite Async e Await (Visual Basic)
-In un metodo asincrono, le attività vengono avviate quando vengono creati. Il [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operatore viene applicato all'attività in corrispondenza del punto nel metodo in cui è Impossibile continuare l'elaborazione fino al termine dell'attività. Spesso un'attività è atteso appena creato, come illustrato nell'esempio seguente.  
+In un metodo asincrono le attività vengono avviate al momento della creazione. Il [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operatore viene applicato all'attività in corrispondenza del punto nel metodo in cui è Impossibile continuare l'elaborazione fino al completamento dell'attività. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
 ```  
   
- Tuttavia, è possibile separare la creazione dell'attività che non dipendono dal completamento dell'attività da attendere l'attività se il programma dispone di altre attività da eseguire.  
+ Tuttavia, è possibile separare la creazione dalla messa in attesa dell'attività se il programma ha altro lavoro da eseguire che non dipende dal completamento dell'attività.  
   
 ```vb  
 ' The following line creates and starts the task.  
@@ -49,32 +40,32 @@ Dim myTask = someWebAccessMethodAsync(url)
 Dim result = Await myTask  
 ```  
   
- Tra l'avvio di un'attività e, in attesa, è possibile avviare altre attività. Le attività aggiuntive eseguite in modo implicito in parallelo, ma non gli altri thread vengono creati.  
+ Tra l'avvio di un'attività e la messa in attesa, è possibile avviare altre attività. Le attività aggiuntive vengono eseguite in modo implicito in parallelo, ma non vengono creati thread aggiuntivi.  
   
- Il seguente programma inizia tre download web asincrono e quindi li attende nell'ordine in cui vengono chiamati. Si noti che, quando si esegue il programma, che non sempre alla fine dell'attività nell'ordine in cui sono creati e atteso. Avviano l'esecuzione quando vengono creati e uno o più delle attività potrebbe terminare prima che il metodo raggiunga le espressioni await.  
+ Il programma seguente avvia tre download Web asincroni e quindi li mette in attesa nell'ordine in cui vengono chiamati. Si noti che, quando si esegue il programma, non sempre le attività finiscono nell'ordine in cui sono state create e messe in attesa. Vengono avviate al momento della creazione ed è possibile che una o più di una finiscano prima che il metodo raggiunga le espressioni await.  
   
 > [!NOTE]
->  Per completare il progetto, è necessario Visual Studio 2012 o versione successiva e .NET Framework 4.5 o versioni successive installato nel computer.  
+>  Per completare il progetto, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.  
   
- Ad esempio un altro che avvii più operazioni contemporaneamente, vedere [procedura: estendere la Async Walkthrough da tramite Task. whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Ad esempio un altro che inizia a più attività contemporaneamente, vedere [procedura: estendere la Async Walkthrough mediante tramite Task. whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- È possibile scaricare il codice per questo esempio dalla [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=254906).  
+ È possibile scaricare il codice per l'esempio da [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=254906) (Esempi di codice per sviluppatori).  
   
 ### <a name="to-set-up-the-project"></a>Per impostare il progetto  
   
-1.  Per configurare un'applicazione WPF, completare i passaggi seguenti. È possibile trovare istruzioni dettagliate per le operazioni in [procedura dettagliata: accesso al Web tramite Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Per configurare un'applicazione WPF, completare i passaggi seguenti. È possibile trovare istruzioni dettagliate per i vari passaggi [procedura dettagliata: accesso al Web da utilizzare Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Creare un'applicazione WPF che contiene una casella di testo e un pulsante. Denominare il pulsante `startButton`e la casella di testo Nome `resultsTextBox`.  
+    -   Creare un'applicazione WPF che contenga una casella di testo e un pulsante. Denominare il pulsante `startButton` e la casella di testo `resultsTextBox`.  
   
-    -   Aggiungere un riferimento per <xref:System.Net.Http>.</xref:System.Net.Http>  
+    -   Aggiunge un riferimento a <xref:System.Net.Http>.  
   
-    -   Nel file MainWindow.xaml.vb, aggiungere un `Imports` istruzione per `System.Net.Http`.  
+    -   Nel file. Xaml. vb, aggiungere un `Imports` istruzione per `System.Net.Http`.  
   
 ### <a name="to-add-the-code"></a>Per aggiungere il codice  
   
-1.  Nella finestra di progettazione, MainWindow. XAML, fare doppio clic sul pulsante per creare il `startButton_Click` gestore dell'evento nel file MainWindow.xaml.vb.  
+1.  Nella finestra di progettazione, MainWindow. XAML, fare doppio clic sul pulsante per creare il `startButton_Click` gestore dell'evento in VB.  
   
-2.  Copiare il codice seguente e incollarlo nel corpo di `startButton_Click` in MainWindow.xaml.vb.  
+2.  Copiare il codice seguente e incollarlo nel corpo della `startButton_Click` in VB.  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -82,15 +73,15 @@ Dim result = Await myTask
     resultsTextBox.Text &= vbCrLf & "Control returned to button1_Click."  
     ```  
   
-     Il codice chiama un metodo asincrono, `CreateMultipleTasksAsync`, le unità di cui l'applicazione.  
+     Il codice chiama un metodo asincrono, `CreateMultipleTasksAsync`, che avvia l'applicazione.  
   
-3.  Aggiungere i seguenti metodi di supporto al progetto:  
+3.  Aggiungere i metodi di supporto seguenti al progetto:  
   
-    -   `ProcessURLAsync`utilizza un <xref:System.Net.Http.HttpClient>metodo per scaricare il contenuto di un sito Web come una matrice di byte.</xref:System.Net.Http.HttpClient> Il metodo di supporto, `ProcessURLAsync` quindi Visualizza e restituisce la lunghezza della matrice.  
+    -   `ProcessURLAsync` usa un metodo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web come matrice di byte. Il metodo di supporto `ProcessURLAsync` visualizza e restituisce la lunghezza della matrice.  
   
-    -   `DisplayResults`Visualizza il numero di byte nella matrice di byte per ogni URL. Questa visualizzazione mostra quando ogni attività ha terminato il download.  
+    -   `DisplayResults` visualizza il numero di byte della matrice di byte per ogni URL. Questa visualizzazione indica quando ogni attività ha terminato il download.  
   
-     Copiare i metodi seguenti e incollarli dopo il `startButton_Click` gestore dell'evento nel file MainWindow.xaml.vb.  
+     Copiare i metodi seguenti e incollarli dopo il `startButton_Click` gestore dell'evento in VB.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -112,17 +103,17 @@ Dim result = Await myTask
     End Sub  
     ```  
   
-4.  Infine, definire metodo `CreateMultipleTasksAsync`, che consente di eseguire la procedura seguente.  
+4.  Infine, definire il metodo `CreateMultipleTasksAsync`, che esegue i passaggi seguenti.  
   
-    -   Il metodo dichiara un `HttpClient` oggetto, è necessario accedere al metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>in `ProcessURLAsync`.</xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>  
+    -   Il metodo dichiara un oggetto `HttpClient`, che è necessario per accedere al metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.  
   
-    -   Il metodo crea e avvia le tre attività di tipo <xref:System.Threading.Tasks.Task%601>, dove `TResult` è un numero intero.</xref:System.Threading.Tasks.Task%601> Di al termine di ogni attività, `DisplayResults` Visualizza l'URL dell'attività e la lunghezza del contenuto scaricato. Poiché le attività sono in esecuzione in modo asincrono, l'ordine in cui vengono visualizzati i risultati potrebbero essere diversi da quello in cui sono stati dichiarati.  
+    -   Il metodo crea e avvia tre attività di tipo <xref:System.Threading.Tasks.Task%601>, dove `TResult` è un numero intero. Al termine di ogni attività, `DisplayResults` vengono visualizzati l'URL dell'attività e la lunghezza del contenuto scaricato. Poiché le attività sono in esecuzione in modo asincrono, l'ordine in cui vengono visualizzati i risultati potrebbe essere diverso da quello in cui le attività sono stati dichiarate.  
   
-    -   Il metodo attenderà il completamento di ogni attività. Ogni `Await` operatore sospende l'esecuzione di `CreateMultipleTasksAsync` finché non viene completata l'attività attesa. L'operatore recupera inoltre il valore restituito dalla chiamata a `ProcessURLAsync` da ogni attività completata.  
+    -   Il metodo attende il completamento di ogni attività. Ogni operatore `Await` sospende l'esecuzione di `CreateMultipleTasksAsync` finché non viene completata l'attività in attesa. L'operatore recupera anche il valore restituito dalla chiamata a `ProcessURLAsync` da ogni attività completata.  
   
-    -   Quando sono state completate le attività e sono stati recuperati i valori interi, il metodo somma le lunghezze dei siti Web e viene visualizzato il risultato.  
+    -   Quando sono state completate le attività e sono stati recuperati i valori interi, il metodo somma le lunghezze dei siti Web e visualizza il risultato.  
   
-     Copiare il metodo seguente e incollarlo in una soluzione.  
+     Copiare il metodo seguente e incollarlo nella soluzione.  
   
     ```vb  
     Private Async Function CreateMultipleTasksAsync() As Task  
@@ -156,7 +147,7 @@ Dim result = Await myTask
   
 5.  Premere il tasto F5 per eseguire il programma e quindi scegliere il pulsante **Start** .  
   
-     Eseguire il programma più volte per verificare che le tre attività non completate sempre nello stesso ordine e che l'ordine in cui vengono completate non è necessariamente l'ordine in cui creazione e di attesa.  
+     Eseguire il programma più volte per verificare che le tre attività non vengano completate sempre nello stesso ordine e che l'ordine in cui vengono completate non è necessariamente l'ordine in cui sono state create e messe in attesa.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente contiene l'esempio completo.  
@@ -222,7 +213,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Accesso al Web tramite Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Procedura: estendere la procedura dettagliata asincrona tramite Task. whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-
+ [Procedura dettagliata: Accesso al Web con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

@@ -1,51 +1,55 @@
 ---
-title: "Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "celle, visualizzazione di immagini"
-  - "griglie dei dati, visualizzazione di immagini in celle"
-  - "griglie dei dati, visualizzazione in griglie"
-  - "DataGridView (controllo) [Windows Form], visualizzazione di immagini"
+title: 'Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cells [Windows Forms], displaying images
+- data grids [Windows Forms], displaying in grids
+- DataGridView control [Windows Forms], displaying images
+- data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b2e06298d0ead9a2dd9fa554af0c42df5d61d56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form
-In una riga di dati è possibile visualizzare un'immagine o un elemento grafico.  Spesso si tratta della fotografia di un dipendente o di un logo aziendale.  
+# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form
+Un'immagine o un grafico è uno dei valori che è possibile visualizzare in una riga di dati. Spesso, questi elementi grafici assumono la forma di fotografia di un dipendente o un logo aziendale.  
   
- L'inserimento delle immagini è semplice se i dati sono visualizzati in un controllo <xref:System.Windows.Forms.DataGridView>,  in quanto tale controllo gestisce a livello nativo qualsiasi formato di immagine supportato dalla classe <xref:System.Drawing.Image> nonché il formato OLE utilizzato da alcuni database.  
+ L'inserimento delle immagini è semplice quando si visualizzano dati all'interno di <xref:System.Windows.Forms.DataGridView> controllo. Il <xref:System.Windows.Forms.DataGridView> qualsiasi formato di immagine supportato da e gestisce in modo nativo la <xref:System.Drawing.Image> classe, nonché OLE immagine formato utilizzato da alcuni database.  
   
- Se l'origine dati del controllo <xref:System.Windows.Forms.DataGridView> presenta una colonna di tipo image, le immagini verranno visualizzate automaticamente dal controllo <xref:System.Windows.Forms.DataGridView>.  
+ Se il <xref:System.Windows.Forms.DataGridView> origine dati del controllo dispone di una colonna di immagini, verranno visualizzati automaticamente dal <xref:System.Windows.Forms.DataGridView> controllo.  
   
- L'esempio di codice riportato di seguito illustra come estrarre un'icona da una risorsa incorporata e convertirla in una bitmap da visualizzare in ogni cella di una colonna di tipo image.  Per un altro esempio in cui i valori di testo delle celle vengono convertiti in immagini, vedere [Procedura: formattare dati personalizzati in un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+ Esempio di codice riportato di seguito viene illustrato come estrarre un'icona da una risorsa incorporata e convertirlo in una bitmap da visualizzare in ogni cella di una colonna di tipo image. Ad esempio un altro che sostituisce i valori delle celle testuali con immagini corrispondenti, vedere [procedura: personalizzare la formattazione dei dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#050](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
--   Un controllo <xref:System.Windows.Forms.DataGridView> denominato`dataGridView1`.  
+-   Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`.  
   
--   Una risorsa con icona incorporata denominata `tree.ico`.  
+-   Una risorsa icona incorporata denominata `tree.ico`.  
   
--   Riferimenti agli assembly <xref:System?displayProperty=fullName>, <xref:System.Windows.Forms?displayProperty=fullName> e <xref:System.Drawing?displayProperty=fullName>.  
+-   Riferimenti agli assembly <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> e <xref:System.Drawing?displayProperty=nameWithType>.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
- [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)   
- [Procedura: formattare dati personalizzati in un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.DataGridView>  
+ [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Procedura: Formattare dati personalizzati in un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

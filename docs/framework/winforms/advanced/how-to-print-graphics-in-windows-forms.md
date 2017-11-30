@@ -1,42 +1,46 @@
 ---
-title: "How to: Print Graphics in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "graphics, printing"
-  - "printing [Windows Forms], graphics"
+title: 'Procedura: stampare grafica in Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- graphics [Windows Forms], printing
+- printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5f495135b3210f430c887451844bec8b154db33c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Print Graphics in Windows Forms
-Spesso nell'applicazione per Windows è necessario stampare grafica.  La classe <xref:System.Drawing.Graphics> fornisce metodi per visualizzare oggetti su una periferica, ad esempio un monitor o una stampante.  
+# <a name="how-to-print-graphics-in-windows-forms"></a>Procedura: stampare grafica in Windows Form
+Spesso, è possibile stampare grafica nell'applicazione basata su Windows. La <xref:System.Drawing.Graphics> classe fornisce metodi per disegnare oggetti in un dispositivo, ad esempio un monitor o una stampante.  
   
-### Per stampare la grafica  
+### <a name="to-print-graphics"></a>Per stampare la grafica  
   
-1.  Aggiungere un componente <xref:System.Drawing.Printing.PrintDocument> al form.  
+1.  Aggiungere un <xref:System.Drawing.Printing.PrintDocument> componente al form.  
   
-2.  Nel gestore eventi <xref:System.Drawing.Printing.PrintDocument.PrintPage>, utilizzare la proprietà <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> della classe <xref:System.Drawing.Printing.PrintPageEventArgs> per fornire alla stampante le informazioni relative al tipo di grafica da stampare.  
+2.  Nel <xref:System.Drawing.Printing.PrintDocument.PrintPage> gestore dell'evento, utilizzare il <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> proprietà del <xref:System.Drawing.Printing.PrintPageEventArgs> classe per indicare la stampante nella quale tipo di grafica da stampare.  
   
-     Nel seguente esempio di codice viene illustrato un gestore eventi utilizzato per creare un'ellisse di colore blu all'interno di un rettangolo di delimitazione.  La posizione e le dimensioni del rettangolo sono le seguenti: inizio a 100, 150 con larghezza pari a 250 e altezza pari a 250.  
+     Esempio di codice seguente viene illustrato un gestore eventi utilizzato per creare un'ellisse blu all'interno di un rettangolo di delimitazione. Il rettangolo è il percorso e delle dimensioni seguenti: a partire da 100, 150 con una larghezza pari a 250 e un'altezza pari a 250.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
        e.Graphics.FillEllipse(Brushes.Blue, New Rectangle(100, 150, 250, 250))  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ Spesso nell'applicazione per Windows è necessario stampare grafica.  La classe 
        e.Graphics.FillRectangle(Brushes.Blue,   
          new Rectangle(100, 150, 250, 250));  
     }  
-  
     ```  
   
     ```cpp  
@@ -59,13 +62,12 @@ Spesso nell'applicazione per Windows è necessario stampare grafica.  La classe 
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
        System.Drawing.Printing.PrintPageEventHandler  
        (this.printDocument1_PrintPage);  
-  
     ```  
   
     ```cpp  
@@ -74,7 +76,7 @@ Spesso nell'applicazione per Windows è necessario stampare grafica.  La classe 
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## Vedere anche  
- <xref:System.Drawing.Graphics>   
- <xref:System.Drawing.Brush>   
- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Graphics>  
+ <xref:System.Drawing.Brush>  
+ [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

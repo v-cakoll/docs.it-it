@@ -1,54 +1,60 @@
 ---
-title: "Procedura: ruotare un oggetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "grafica, rotazione di oggetti"
-  - "rotazione di oggetti"
+title: 'Procedura: ruotare un oggetto'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], rotating objects [WPF]
+- rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b9b6212ed6c50faf73a6d3531f001a1b7e72d33
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ruotare un oggetto
-In questo esempio viene illustrato come ruotare un oggetto.  Viene innanzitutto creato un oggetto <xref:System.Windows.Media.RotateTransform> e quindi si specifica il relativo valore <xref:System.Windows.Media.RotateTransform.Angle%2A> in gradi.  
+# <a name="how-to-rotate-an-object"></a>Procedura: ruotare un oggetto
+Questo esempio spiega come ruotare un oggetto. Nell'esempio viene creata una <xref:System.Windows.Media.RotateTransform> e quindi specifica relativa <xref:System.Windows.Media.RotateTransform.Angle%2A> in gradi.  
   
- Nell'esempio seguente un oggetto <xref:System.Windows.Shapes.Polyline> viene ruotato di 45 gradi intorno all'angolo superiore sinistro.  
+ Nell'esempio seguente consente di ruotare un <xref:System.Windows.Shapes.Polyline> 45 gradi rispetto all'angolo superiore sinistro dell'oggetto.  
   
-## Esempio  
- [!code-xml[Transforms_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineabouttopleft)]  
+## <a name="example"></a>Esempio  
+ [!code-xaml[Transforms_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineabouttopleft)]  
   
  [!code-csharp[Transforms_Procedural_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/RotateTransformExample.cs#rotatepolylineabouttopleft)]
  [!code-vb[Transforms_Procedural_snip#RotatePolylineAboutTopLeft](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/RotateTransformExample.vb#rotatepolylineabouttopleft)]  
   
- Le proprietà <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> di <xref:System.Windows.Media.RotateTransform> specificano il punto intorno al quale viene ruotato l'oggetto.  Questo punto centrale è espresso nello spazio delle coordinate dell'elemento trasformato.  Per impostazione predefinita, la rotazione viene applicata in corrispondenza di \(0,0\), che è l'angolo superiore sinistro dell'oggetto da trasformare.  
+ Il <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> le proprietà del <xref:System.Windows.Media.RotateTransform> specificare il punto in cui l'oggetto viene ruotato. Il punto centrale viene espresso nello spazio delle coordinate dell'elemento trasformato. Per impostazione predefinita, la rotazione viene applicata a (0,0), ovvero l'angolo superiore sinistro dell'oggetto da trasformare.  
   
- Nell'esempio seguente viene ruotato un oggetto <xref:System.Windows.Shapes.Polyline> di 45 gradi in senso orario intorno al punto \(25,50\).  
+ L'esempio seguente viene ruotato un <xref:System.Windows.Shapes.Polyline> dell'oggetto in senso orario di 45 gradi rispetto al punto (25,50).  
   
- [!code-xml[Transforms_snip#RotatePolylineAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineaboutcenter)]  
+ [!code-xaml[Transforms_snip#RotatePolylineAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineaboutcenter)]  
   
  [!code-csharp[Transforms_Procedural_snip#RotatePolylineAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/RotateTransformExample.cs#rotatepolylineaboutcenter)]
  [!code-vb[Transforms_Procedural_snip#RotatePolylineAboutCenter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/RotateTransformExample.vb#rotatepolylineaboutcenter)]  
   
- Nell'immagine seguente sono illustrati i risultati dell'applicazione di <xref:System.Windows.Media.Transform> ai due oggetti.  
+ La figura seguente mostra i risultati dell'applicazione un <xref:System.Windows.Media.Transform> ai due oggetti.  
   
- ![Rotazioni di 45 gradi con punti centrali diversi](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.png "wcpsdk\_graphicsmm\_rotatetransform45degrees")  
-Due oggetti che ruotano di 45 gradi rispetto a centri rotazionali diversi  
+ ![45 degree rotations with different center points](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
+Due oggetti che ruotano di 45 gradi da centri di rotazione diversi  
   
- L'oggetto <xref:System.Windows.Shapes.Polyline> negli esempi precedenti è <xref:System.Windows.UIElement>.  Quando si applica <xref:System.Windows.Media.Transform> alla proprietà <xref:System.Windows.UIElement.RenderTransform%2A> di un oggetto <xref:System.Windows.UIElement>, è possibile utilizzare la proprietà <xref:System.Windows.UIElement.RenderTransformOrigin%2A> per specificare un'origine per ogni <xref:System.Windows.Media.Transform> che si applica all'elemento.  Poiché la proprietà <xref:System.Windows.UIElement.RenderTransformOrigin%2A> utilizza coordinate relative, è possibile applicare una trasformazione al centro dell'elemento anche se non se ne conoscono le dimensioni.  Per ulteriori informazioni e un esempio, vedere [Specificare l'origine di una trasformazione utilizzando valori relativi](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md).  
+ Il <xref:System.Windows.Shapes.Polyline> negli esempi precedenti è un <xref:System.Windows.UIElement>. Quando si applica un <xref:System.Windows.Media.Transform> per il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà di un <xref:System.Windows.UIElement>, è possibile utilizzare il <xref:System.Windows.UIElement.RenderTransformOrigin%2A> proprietà per specificare un'origine per ogni <xref:System.Windows.Media.Transform> applicabili all'elemento. Poiché il <xref:System.Windows.UIElement.RenderTransformOrigin%2A> proprietà utilizza coordinate relative, è possibile applicare una trasformazione al centro dell'elemento, anche se non si conosce la dimensione. Per ulteriori informazioni e per un esempio, vedere [specificare l'origine di una matrice di trasformazione utilizzando valori relativi](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md).  
   
- Per l'esempio completo, vedere [Esempio di trasformazioni bidimensionali](http://go.microsoft.com/fwlink/?LinkID=158252) \(la pagina potrebbe essere in inglese\).  
+ Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](http://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## Vedere anche  
- <xref:System.Windows.Media.Transform>   
- [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Media.Transform>  
+ [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

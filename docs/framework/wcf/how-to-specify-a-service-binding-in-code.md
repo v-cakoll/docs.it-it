@@ -1,36 +1,42 @@
 ---
-title: "Procedura: specificare un&#39;associazione al servizio in codice | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: specificare un''associazione al servizio in codice'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 64d33b268c736b3dba333b767bee7fedb487397b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: specificare un&#39;associazione al servizio in codice
+# <a name="how-to-specify-a-service-binding-in-code"></a>Procedura: specificare un'associazione al servizio in codice
 In questo esempio viene definito un contratto `ICalculator` per un servizio di calcolatrice. Il servizio viene implementato nella classe `CalculatorService` e il relativo endpoint viene quindi definito in codice, dove si specifica che il servizio deve utilizzare la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
- La procedura in genere consigliata consiste nello specificare le informazioni su associazione e indirizzo nella configurazione in modo dichiarativo anziché in modo imperativo nel codice.La definizione di endpoint nel codice non è generalmente pratica perché le associazioni e gli indirizzi per un servizio distribuito sono solitamente diversi da quelli utilizzati durante lo sviluppo del servizio.Più in generale, se le informazioni su associazione e indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare o distribuire nuovamente l'applicazione.  
+ La procedura solitamente consigliata consiste nello specificare in modo dichiarativo l'associazione e le informazioni dell'indirizzo nella configurazione anziché in modo imperativo nel codice. In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio. Più in generale, se le informazioni su associazione e indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare o distribuire nuovamente l'applicazione.  
   
- Per una descrizione di come configurare questo servizio utilizzando elementi di configurazione anziché tramite codice, vedere [Procedura: specificare un'associazione al servizio in configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+ Per una descrizione di come configurare questo servizio utilizzando gli elementi di configurazione invece di codice, vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-### Per specificare in codice l'utilizzo dell'associazione BasicHttpBinding per il servizio  
+### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>Per specificare in codice l'utilizzo dell'associazione BasicHttpBinding per il servizio  
   
 1.  Definire un contratto di servizio per il tipo di servizio.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2.  Implementare il contratto di servizio in una classe di servizio.  
+2.  Implementare il contratto di servizio in una classe del servizio.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
@@ -45,13 +51,13 @@ In questo esempio viene definito un contratto `ICalculator` per un servizio di c
      [!code-csharp[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#4)]
      [!code-vb[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#4)]  
   
-### Per modificare i valori predefiniti delle proprietà dell'associazione  
+### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Per modificare i valori predefiniti delle proprietà dell'associazione  
   
-1.  Per modificare uno dei valori di proprietà predefiniti della classe <xref:System.ServiceModel.BasicHttpBinding>, impostare il valore di proprietà dell'associazione sul nuovo valore prima di creare l'host.Ad esempio, per modificare i valori di timeout di apertura e chiusura predefiniti da 1 minuto a 2 minuti, utilizzare il codice seguente:  
+1.  Per modificare uno dei valori di proprietà predefiniti della classe <xref:System.ServiceModel.BasicHttpBinding>, impostare il valore di proprietà dell'associazione sul nuovo valore prima di creare l'host. Ad esempio, per modificare i valori di timeout di apertura e chiusura predefiniti da 1 minuto a 2 minuti, utilizzare il codice seguente:  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#5)]
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  
   
-## Vedere anche  
- [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
- [Specifica di un indirizzo endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Specifica di un indirizzo dell'endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

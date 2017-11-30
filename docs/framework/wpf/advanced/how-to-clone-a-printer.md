@@ -1,69 +1,75 @@
 ---
-title: "Procedura: duplicare una stampante | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "duplicazione di code di stampa"
-  - "duplicazione di stampanti"
-  - "code di stampa"
-  - "code di stampa, duplicazione"
-  - "stampanti, duplicazione"
+title: 'Procedura: duplicare una stampante'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- print queues [WPF]
+- cloning printers [WPF]
+- printers [WPF], cloning
+- print queues [WPF], cloning
+- cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 303cb9c1c5b6521839987a56cdc008eac0559cf1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: duplicare una stampante
-Molte aziende desiderano, in un determinato momento, comprare più stampanti dello stesso modello.  In genere, queste vengono installate con impostazioni di configurazione praticamente identiche.  L'installazione delle stampanti una ad una può comportare tempi lunghi e un rischio di errori.  Lo spazio dei nomi <xref:System.Printing.IndexedProperties?displayProperty=fullName> e la classe <xref:System.Printing.PrintServer.InstallPrintQueue%2A> esposti con [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] consentono l'installazione istantanea di un numero di code di stampa indeterminato, che vengono duplicate in base a una coda di stampa esistente.  
+# <a name="how-to-clone-a-printer"></a>Procedura: duplicare una stampante
+A un certo punto, la maggior parte delle aziende acquisterà più stampanti dello stesso modello. In genere, questi vengono installati con le impostazioni di configurazione praticamente identico. Installazione di ogni stampante può richiedere molto tempo e soggetta a errori. Il <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> dello spazio dei nomi e <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe esposta con [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] consente di installare immediatamente qualsiasi numero di code di stampa aggiuntive che vengono clonati da una coda di stampa esistente.  
   
-## Esempio  
- Nell'esempio riportato di seguito, viene duplicata una seconda coda di stampa in base a una coda di stampa esistente.  La seconda differisce dalla prima solo in relazione al nome, alla posizione, alla porta e allo stato condiviso.  I passaggi principali di questa procedura sono indicati di seguito.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente, viene duplicata una seconda coda di stampa da una coda di stampa esistente. Il secondo è diverso dal primo solo nel relativo nome, percorso, porta e lo stato condiviso. Come indicato di seguito sono riportati i passaggi principali per eseguire questa operazione.  
   
-1.  Creare un oggetto <xref:System.Printing.PrintQueue> per la stampante esistente che sarà duplicata.  
+1.  Creare un <xref:System.Printing.PrintQueue> oggetto per la stampante esistente che sta per essere clonata.  
   
-2.  Creare un oggetto <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> dall'oggetto <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> di <xref:System.Printing.PrintQueue>.  La proprietà <xref:System.Collections.DictionaryEntry.Value%2A> di ciascun elemento di questo dizionario è un oggetto di uno dei tipi derivati da <xref:System.Printing.IndexedProperties.PrintProperty>.  È possibile impostare il valore di un elemento di questo dizionario in due modi.  
+2.  Creare un <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> dal <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> del <xref:System.Printing.PrintQueue>. Il <xref:System.Collections.DictionaryEntry.Value%2A> proprietà di ciascuna voce del dizionario è un oggetto di uno dei tipi derivati da <xref:System.Printing.IndexedProperties.PrintProperty>. Esistono due modi per impostare il valore di una voce nel dizionario.  
   
-    -   Utilizzare i metodi **Remove** e <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> del dizionario per rimuovere l'elemento e quindi aggiungerlo nuovamente con il valore desiderato.  
+    -   Utilizzare il dizionario **rimuovere** e <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> metodi per rimuovere la voce e quindi aggiungerlo nuovamente con il valore desiderato.  
   
-    -   Utilizzare il metodo <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> del dizionario.  
+    -   Utilizzare il dizionario <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> metodo.  
   
-     Entrambi i metodi vengono illustrati nell'esempio riportato di seguito.  
+     Nell'esempio seguente vengono illustrate entrambe le direzioni.  
   
-3.  Creare un oggetto <xref:System.Printing.IndexedProperties.PrintBooleanProperty> e impostare <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> su "IsShared" e <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> su `true`.  
+3.  Creare un <xref:System.Printing.IndexedProperties.PrintBooleanProperty> e impostare il relativo <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> su "IsShared" e il relativo <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> a `true`.  
   
-4.  Utilizzare l'oggetto <xref:System.Printing.IndexedProperties.PrintBooleanProperty> come valore dell'elemento "IsShared" di <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>.  
+4.  Utilizzare il <xref:System.Printing.IndexedProperties.PrintBooleanProperty> oggetto come valore del <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>della voce "IsShared".  
   
-5.  Creare un oggetto <xref:System.Printing.IndexedProperties.PrintStringProperty> e impostare <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> su "ShareName" e <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> su un valore di <xref:System.String> appropriato.  
+5.  Creare un <xref:System.Printing.IndexedProperties.PrintStringProperty> e impostare il relativo <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> per "Nomecondivisione" e il relativo <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> al relativo <xref:System.String>.  
   
-6.  Utilizzare l'oggetto <xref:System.Printing.IndexedProperties.PrintStringProperty> come valore dell'elemento "ShareName" di <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>.  
+6.  Utilizzare il <xref:System.Printing.IndexedProperties.PrintStringProperty> oggetto come valore del <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>della voce "Nomecondivisione".  
   
-7.  Creare un oggetto <xref:System.Printing.IndexedProperties.PrintStringProperty> e impostare <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> su "Location" e <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> su un valore di <xref:System.String> appropriato.  
+7.  Creare un altro <xref:System.Printing.IndexedProperties.PrintStringProperty> e impostare il relativo <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> "Posizione" e il relativo <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> al relativo <xref:System.String>.  
   
-8.  Utilizzare il secondo oggetto <xref:System.Printing.IndexedProperties.PrintStringProperty> come valore dell'elemento "Location" di <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>.  
+8.  Utilizzare la seconda <xref:System.Printing.IndexedProperties.PrintStringProperty> oggetto come valore del <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>della voce "Location".  
   
-9. Creare una matrice di <xref:System.String>.  Ogni elemento è il nome di una porta del server.  
+9. Creare una matrice di <xref:System.String>s. Ogni elemento è il nome di una porta nel server.  
   
 10. Utilizzare <xref:System.Printing.PrintServer.InstallPrintQueue%2A> per installare la nuova stampante con i nuovi valori.  
   
- Di seguito viene riportato un esempio.  
+ Un esempio è inferiore.  
   
  [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
  [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
-## Vedere anche  
- <xref:System.Printing.IndexedProperties>   
- <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>   
- <xref:System.Printing.LocalPrintServer>   
- <xref:System.Printing.PrintQueue>   
- <xref:System.Collections.DictionaryEntry>   
- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [Cenni preliminari sulla stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Printing.IndexedProperties>  
+ <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>  
+ <xref:System.Printing.LocalPrintServer>  
+ <xref:System.Printing.PrintQueue>  
+ <xref:System.Collections.DictionaryEntry>  
+ [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)

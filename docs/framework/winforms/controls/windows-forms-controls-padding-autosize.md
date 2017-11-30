@@ -1,204 +1,205 @@
 ---
-title: "Procedura dettagliata: disposizione di controlli Windows Form utilizzando spaziatura, margini e la propriet&#224; AutoSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Margin.Bottom"
-  - "Margin.Left"
-  - "Margin.Top"
-  - "Margin.All"
-  - "Margin.Right"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "AutoSize (proprietà), procedure dettagliate"
-  - "layout [Windows Form], margini e riempimento"
-  - "Margin (proprietà) [Windows Form], procedure dettagliate"
-  - "Padding (proprietà) [Windows Form], procedure dettagliate"
-  - "procedure dettagliate [Windows Form], layout"
-  - "Windows Form, layout"
+title: "Procedura dettagliata: disposizione di controlli Windows Form utilizzando spaziatura, margini e la proprietà AutoSize"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Margin.Bottom
+- Margin.Left
+- Margin.Top
+- Margin.All
+- Margin.Right
+helpviewer_keywords:
+- Margin property [Windows Forms], walkthroughs
+- walkthroughs [Windows Forms], layout
+- AutoSize property [Windows Forms], walkthroughs
+- Padding property [Windows Forms], walkthroughs
+- layout [Windows Forms], margins and padding
+- Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2dce58776af84b1f4c733ddce2553e4b18b1b824
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: disposizione di controlli Windows Form utilizzando spaziatura, margini e la propriet&#224; AutoSize
-Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form.  A tale scopo, **Progettazione Windows Form** offre diversi strumenti di layout.  Tre importanti proprietà presenti in tutti i controlli Windows Form sono <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A> e <xref:System.Windows.Forms.Control.AutoSize%2A>.  
+# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Procedura dettagliata: disposizione di controlli Windows Form utilizzando spaziatura, margini e la proprietà AutoSize
+Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Il **Progettazione Windows Form** offre diversi strumenti di layout a questo scopo. Tre dei più importanti sono le <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, e <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà, sono presenti in tutti i controlli Windows Form.  
   
- La proprietà <xref:System.Windows.Forms.Control.Margin%2A> consente di definire lo spazio intorno al controllo per mantenere gli altri controlli a una specifica distanza dai bordi del controllo.  
+ La proprietà <xref:System.Windows.Forms.Control.Margin%2A> definisce lo spazio intorno al controllo per mantenere gli altri controlli a una specifica distanza dai bordi del controllo stesso.  
   
- La proprietà <xref:System.Windows.Forms.Control.Padding%2A> consente di definire lo spazio all'interno di un controllo per mantenere il contenuto del controllo, ad esempio il valore della proprietà <xref:System.Windows.Forms.Control.Text%2A>, a una specifica distanza dai bordi del controllo.  
+ La proprietà <xref:System.Windows.Forms.Control.Padding%2A> definisce lo spazio all'interno di un controllo per mantenere il contenuto del controllo, ad esempio il valore della proprietà <xref:System.Windows.Forms.Control.Text%2A>, a una specifica distanza dai bordi del controllo stesso.  
   
- Nell'illustrazione che segue sono visibili le proprietà <xref:System.Windows.Forms.Control.Padding%2A> e <xref:System.Windows.Forms.Control.Margin%2A> in un controllo.  
+ L'illustrazione seguente mostra le proprietà <xref:System.Windows.Forms.Control.Padding%2A> e <xref:System.Windows.Forms.Control.Margin%2A> in un controllo.  
   
- ![Spaziatura e margine per controlli Windows Form](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS\_WinFormPadMargin")  
+ ![Spaziatura e margini per Windows Form controlli](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- La proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> indica a un controllo di eseguire automaticamente il ridimensionamento in base al contenuto.  Il ridimensionamento non verrà eseguito per un valore inferiore a quello originale della proprietà <xref:System.Windows.Forms.Control.Size%2A> e verrà tenuto in considerazione il valore della proprietà <xref:System.Windows.Forms.Control.Padding%2A>.  
+ Il <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà indica un controllo di ridimensionato automaticamente in base al relativo contenuto. Scheda non verrà ridimensionata automaticamente in modo da essere minore del valore di quello originale <xref:System.Windows.Forms.Control.Size%2A> proprietà e verrà tenuto in considerazione per il valore del relativo <xref:System.Windows.Forms.Control.Padding%2A> proprietà.  
   
- Di seguito vengono elencate le attività illustrate nella procedura dettagliata:  
+ Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
 -   Creazione di un progetto Windows Form  
   
--   Impostazione dei margini dei controlli  
+-   Impostazione dei margini per i controlli  
   
--   Impostazione della spaziatura interna dei controlli  
+-   Impostazione della spaziatura dei controlli  
   
 -   Ridimensionamento automatico dei controlli  
   
- Al termine, si saranno acquisite le informazioni circa il ruolo delle importanti funzionalità di layout.  
+ Al termine, si avrà una migliore comprensione del ruolo svolto da queste importanti funzionalità di layout.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Prerequisiti  
- Per completare questa procedura dettagliata, è necessario disporre di quanto segue:  
+## <a name="prerequisites"></a>Prerequisiti  
+ Per completare questa procedura dettagliata, è necessario:  
   
--   Disporre di autorizzazioni sufficienti per creare ed eseguire progetti di applicazioni Windows Form nel computer dove è installato Visual Studio.  
+-   Disporre di autorizzazioni sufficienti creare ed eseguire progetti di applicazione Windows Form nel computer in cui è installato Visual Studio.  
   
-## Creazione del progetto  
- Il primo passaggio indica come creare il progetto e impostare il form.  
+## <a name="creating-the-project"></a>Creazione del progetto  
+ Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.  
   
-#### Per creare il progetto  
+#### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Creare un progetto **Applicazione Windows** denominato `LayoutExample`.  Per ulteriori informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Creare un **applicazione Windows** progetto denominato `LayoutExample`. Per ulteriori informazioni, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
   
-2.  Selezionare il form in **Progettazione Windows Form**.  
+2.  Selezionare il form nel **Progettazione Windows Form**.  
   
-## Impostazione dei margini dei controlli  
- Tramite la proprietà <xref:System.Windows.Forms.Control.Margin%2A> è possibile impostare la distanza predefinita tra i controlli.  Quando si sposta un controllo vicino ad un altro controllo, verrà visualizzata una guida di allineamento che indica i margini per i due controlli.  Inoltre, il controllo che si sta spostando viene bloccato in posizione alla distanza definita dai margini.  
+## <a name="setting-margins-for-your-controls"></a>Impostazione dei margini per i controlli  
+ È possibile impostare la distanza tra i controlli mediante il <xref:System.Windows.Forms.Control.Margin%2A> proprietà. Quando si sposta un controllo vicino a un altro controllo, viene visualizzata una Guida di allineamento che mostra i margini per i due controlli. Il controllo a cui che si desidera spostare anche verrà bloccata la distanza definito per i margini.  
   
-#### Per disporre i controlli nel form utilizzando la proprietà per margini  
+#### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a>Per disporre i controlli nel form utilizzando la proprietà Margin  
   
-1.  Trascinare due controlli <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel form.  
+1.  Trascinare due <xref:System.Windows.Forms.Button> dei controlli di **della casella degli strumenti** nel form.  
   
-2.  Selezionare uno dei controlli <xref:System.Windows.Forms.Button> e spostarlo accanto all'altro fino quasi a farli toccare.  
+2.  Selezionare una del <xref:System.Windows.Forms.Button> controlla e spostarlo accanto a altro, fino a quando non si stanno pressoché toccando.  
   
-     Si osservi la guida di allineamento che viene visualizzata tra i controlli  indicante la distanza calcolata dalla somma dei valori <xref:System.Windows.Forms.Control.Margin%2A> dei due controlli.  Il controllo che si sta spostando si blocca in posizione a tale distanza.  Per informazioni dettagliate, vedere [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Osservare la Guida di allineamento che viene visualizzato tra di essi. La distanza è la somma dei due controlli <xref:System.Windows.Forms.Control.Margin%2A> valori. Il controllo che si sta spostando si blocca questa distanza. Per informazioni dettagliate, vedere [procedura dettagliata: disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
-3.  Modificare la proprietà <xref:System.Windows.Forms.Control.Margin%2A> di uno dei controlli espandendo la voce <xref:System.Windows.Forms.Control.Margin%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.All%2A> su 20.  
+3.  Modifica il <xref:System.Windows.Forms.Control.Margin%2A> proprietà di uno dei controlli espandendo il <xref:System.Windows.Forms.Control.Margin%2A> voce il **proprietà** finestra e impostando il <xref:System.Windows.Forms.Padding.All%2A> proprietà a 20.  
   
-4.  Selezionare uno dei controlli <xref:System.Windows.Forms.Button> e spostarlo accanto all'altro.  
+4.  Selezionare una del <xref:System.Windows.Forms.Button> controlla e spostarlo accanto a altro.  
   
-     La guida di allineamento che definisce la somma dei valori dei margini diventa più lunga e il controllo si blocca a una distanza maggiore dall'altro controllo.  
+     Guida di allineamento che definisce la somma dei valori di margine è più lungo e che il controllo si blocca a una distanza maggiore da altro controllo.  
   
-5.  Modificare la proprietà <xref:System.Windows.Forms.Control.Margin%2A> del controllo selezionato espandendo la voce <xref:System.Windows.Forms.Control.Margin%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.Top%2A> su 5.  
+5.  Modifica il <xref:System.Windows.Forms.Control.Margin%2A> proprietà del controllo selezionato espandendo il <xref:System.Windows.Forms.Control.Margin%2A> voce il **proprietà** finestra e impostando il <xref:System.Windows.Forms.Padding.Top%2A> proprietà fino a 5.  
   
-6.  Spostare il controllo selezionato sotto l'altro controllo e osservare che la guida di allineamento è più breve.  Spostare il controllo selezionato a sinistra dell'altro controllo e osservare che la guida di allineamento mantiene il valore ottenuto al passaggio 4.  
+6.  Spostare il controllo selezionato sotto l'altro controllo e osservare che la Guida di allineamento è più breve. Spostare il controllo selezionato a sinistra di altro controllo e osservare che la Guida di allineamento mantiene il valore ottenuto nel passaggio 4.  
   
-7.  È possibile impostare ogni aspetto della proprietà <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, su differenti valori oppure è possibile impostarli tutti su uno stesso valore con la proprietà <xref:System.Windows.Forms.Padding.All%2A>.  
+7.  È possibile impostare ogni aspetto del <xref:System.Windows.Forms.Control.Margin%2A> proprietà <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, su valori diversi oppure è possibile impostarle tutte sullo stesso valore con il <xref:System.Windows.Forms.Padding.All%2A> proprietà.  
   
-## Impostazione della spaziatura interna dei controlli  
- Per ottenere esattamente il layout necessario per l'applicazione, spesso i controlli contengono controlli figlio.  Per specificare la vicinanza del bordo del controllo figlio al bordo del controllo padre, utilizzare la proprietà <xref:System.Windows.Forms.Control.Padding%2A> del controllo padre insieme alla proprietà <xref:System.Windows.Forms.Control.Margin%2A> del controllo figlio.  La proprietà <xref:System.Windows.Forms.Control.Padding%2A> viene anche utilizzata per controllare la vicinanza del contenuto di un controllo, ad esempio la proprietà <xref:System.Windows.Forms.Control.Text%2A> di un controllo <xref:System.Windows.Forms.Button>, ai bordi.  
+## <a name="setting-padding-for-your-controls"></a>Impostazione della spaziatura dei controlli  
+ Per ottenere il layout preciso richiesto per l'applicazione, i controlli spesso conterrà i controlli figlio. Quando si desidera specificare la vicinanza del bordo del controllo figlio al bordo del controllo padre, utilizzare il controllo padre <xref:System.Windows.Forms.Control.Padding%2A> proprietà in combinazione con il controllo figlio <xref:System.Windows.Forms.Control.Margin%2A> proprietà. Il <xref:System.Windows.Forms.Control.Padding%2A> proprietà viene utilizzata anche per controllare la vicinanza del contenuto di un controllo (ad esempio, un <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Text%2A> proprietà) per i bordi.  
   
-#### Per disporre i controlli nel form utilizzando la spaziatura interna  
+#### <a name="to-arrange-controls-on-your-form-using-padding"></a>Per disporre i controlli nel form utilizzando spaziatura interna  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  
+1.  Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form.  
   
-2.  Modificare il valore della proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> del controllo <xref:System.Windows.Forms.Button> su `true`.  
+2.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.AutoSize%2A>, su `true`.  
   
-3.  Modificare la proprietà <xref:System.Windows.Forms.Control.Padding%2A> espandendo la voce <xref:System.Windows.Forms.Control.Padding%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.All%2A> su 5.  
+3.  Modifica il <xref:System.Windows.Forms.Control.Padding%2A> espandendo il <xref:System.Windows.Forms.Control.Padding%2A> voce il **proprietà** finestra e impostando il <xref:System.Windows.Forms.Padding.All%2A> proprietà fino a 5.  
   
-     Il controllo si espande per fornire lo spazio per la nuova spaziatura interna.  
+     Il controllo si espande per lasciare spazio per il riempimento di nuovo.  
   
-4.  Trascinare un controllo <xref:System.Windows.Forms.GroupBox> dalla **Casella degli strumenti** al form.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel controllo <xref:System.Windows.Forms.GroupBox>.  Posizionare il controllo <xref:System.Windows.Forms.Button> in modo da allinearlo all'angolo inferiore destro del controllo <xref:System.Windows.Forms.GroupBox>.  
+4.  Trascinare un <xref:System.Windows.Forms.GroupBox> controllo il **della casella degli strumenti** nel form. Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel <xref:System.Windows.Forms.GroupBox> controllo. Posizione di <xref:System.Windows.Forms.Button> controllare in modo che sia allineato con l'angolo inferiore destro del <xref:System.Windows.Forms.GroupBox> controllo.  
   
-     Quando il controllo <xref:System.Windows.Forms.Button> si avvicina ai bordi inferiore e destro del controllo <xref:System.Windows.Forms.GroupBox> vengono visualizzate le guide di allineamento.  Tali guide di allineamento corrispondono alla proprietà <xref:System.Windows.Forms.Control.Margin%2A> di <xref:System.Windows.Forms.Button>.  
+     Osservare le guide di allineamento che appaiono come il <xref:System.Windows.Forms.Button> controllo si avvicina ai bordi inferiore e destro del <xref:System.Windows.Forms.GroupBox> controllo. Tali guide di allineamento corrispondono al <xref:System.Windows.Forms.Control.Margin%2A> proprietà del <xref:System.Windows.Forms.Button>.  
   
-5.  Modificare il valore della proprietà <xref:System.Windows.Forms.Control.Padding%2A> del controllo <xref:System.Windows.Forms.GroupBox> espandendo la voce <xref:System.Windows.Forms.Control.Padding%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.All%2A> su 20.  
+5.  Modifica il <xref:System.Windows.Forms.GroupBox> del controllo <xref:System.Windows.Forms.Control.Padding%2A> espandendo il <xref:System.Windows.Forms.Control.Padding%2A> voce il **proprietà** finestra e impostando il <xref:System.Windows.Forms.Padding.All%2A> proprietà a 20.  
   
-6.  Selezionare il controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.GroupBox> e spostarlo verso il centro di <xref:System.Windows.Forms.GroupBox>.  
+6.  Selezionare il <xref:System.Windows.Forms.Button> controllo all'interno di <xref:System.Windows.Forms.GroupBox> controllare e spostarlo verso il centro del <xref:System.Windows.Forms.GroupBox>.  
   
-     Le guide di allineamento vengono visualizzate a una distanza maggiore dai bordi del controllo <xref:System.Windows.Forms.GroupBox>.  Tale distanza corrisponde alla somma della proprietà <xref:System.Windows.Forms.Control.Margin%2A> del controllo <xref:System.Windows.Forms.Button> e della proprietà <xref:System.Windows.Forms.Control.Padding%2A> del controllo <xref:System.Windows.Forms.GroupBox>.  
+     Le guide di allineamento vengono visualizzati a una distanza maggiore dai bordi del <xref:System.Windows.Forms.GroupBox> controllo. La distanza è la somma del <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Margin%2A> proprietà e <xref:System.Windows.Forms.GroupBox> del controllo <xref:System.Windows.Forms.Control.Padding%2A> proprietà.  
   
-## Ridimensionamento automatico dei controlli  
- In alcune applicazioni, la dimensione di un controllo in fase di esecuzione non è uguale a quella della fase di progettazione.  Il testo di un controllo <xref:System.Windows.Forms.Button>, ad esempio, potrebbe essere ottenuto da un database e avere una lunghezza non definibile in anticipo.  
+## <a name="automatically-sizing-your-controls"></a>Ridimensionamento automatico dei controlli  
+ In alcune applicazioni, le dimensioni di un controllo non sarà lo stesso in fase di esecuzione è stato in fase di progettazione. Il testo di un <xref:System.Windows.Forms.Button> controllo, ad esempio, può essere eseguito da un database e la lunghezza non noto in anticipo.  
   
- Quando la proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> è impostata su `true`, il controllo viene automaticamente ridimensionato in base al contenuto.  Per ulteriori informazioni, vedere [Cenni preliminari sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ Quando il <xref:System.Windows.Forms.Control.AutoSize%2A> è impostata su `true`, il controllo verrà ridimensionato in base al relativo contenuto. Per ulteriori informazioni, vedere [Cenni preliminari sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
-#### Per disporre i controlli nel form utilizzando la proprietà AutoSize  
+#### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>Per disporre i controlli nel form utilizzando la proprietà AutoSize  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  
+1.  Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form.  
   
-2.  Modificare il valore della proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> del controllo <xref:System.Windows.Forms.Button> su `true`.  
+2.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.AutoSize%2A>, su `true`.  
   
-3.  Modificare la proprietà <xref:System.Windows.Forms.Control.Text%2A> del controllo <xref:System.Windows.Forms.Button> su "La stringa per la proprietà Text di questo pulsante è lunga".  
+3.  Modifica il <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Text%2A> proprietà su "**di questo pulsante è una stringa lunga per la proprietà Text**."  
   
-     Eseguita la modifica, il controllo <xref:System.Windows.Forms.Button> viene ridimensionato per adattarsi al nuovo testo.  
+     Quando si esegue il commit della modifica, il <xref:System.Windows.Forms.Button> controllo viene ridimensionata per adattarsi al nuovo testo.  
   
-4.  Trascinare un altro controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel form.  
+4.  Trascinare un'altra <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form.  
   
-5.  Modificare la proprietà <xref:System.Windows.Forms.Control.Text%2A> del controllo <xref:System.Windows.Forms.Button> su "La stringa per la proprietà Text di questo pulsante è lunga".  
+5.  Modifica il <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Text%2A> proprietà su "**di questo pulsante è una stringa lunga per la proprietà Text.**"  
   
-     Eseguita la modifica, il controllo <xref:System.Windows.Forms.Button> non verrà ridimensionato e il testo viene troncato al bordo destro del controllo.  
+     Quando si esegue il commit della modifica, il <xref:System.Windows.Forms.Button> controllo viene ridimensionato automaticamente e il testo viene ritagliato in base al bordo destro del controllo.  
   
-6.  Modificare la proprietà <xref:System.Windows.Forms.Control.Padding%2A> espandendo la voce <xref:System.Windows.Forms.Control.Padding%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.All%2A> su 5.  
+6.  Modifica il <xref:System.Windows.Forms.Control.Padding%2A> espandendo il <xref:System.Windows.Forms.Control.Padding%2A> voce il **proprietà** finestra e impostando il <xref:System.Windows.Forms.Padding.All%2A> proprietà fino a 5.  
   
-     Il testo all'interno del controllo viene troncato per tutti i quattro i lati.  
+     Il testo interno del controllo viene troncato in tutti e quattro i lati.  
   
-7.  Modificare la proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> del controllo <xref:System.Windows.Forms.Button> su `true`.  
+7.  Modifica il <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà `true`.  
   
-     Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato per includere l'intera stringa.  È stata inoltre aggiunta la spaziatura interna intorno al testo e il controllo <xref:System.Windows.Forms.Button> quindi si è espanso nelle quattro direzioni.  
+     Il <xref:System.Windows.Forms.Button> controllo viene ridimensionato automaticamente in modo da includere l'intera stringa. Inoltre, la spaziatura interna aggiunti intorno al testo, causando il <xref:System.Windows.Forms.Button> controllo per espandere in tutte e quattro le direzioni.  
   
-8.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  Posizionarlo accanto all'angolo inferiore destro del form.  
+8.  Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel form. Posizionarlo in prossimità dell'angolo inferiore destro del form.  
   
-9. Modificare il valore della proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> del controllo <xref:System.Windows.Forms.Button> su `true`.  
+9. Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.AutoSize%2A>, su `true`.  
   
-10. Impostare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> del controllo <xref:System.Windows.Forms.Button> su <xref:System.Windows.Forms.AnchorStyles>, <xref:System.Windows.Forms.AnchorStyles>.  
+10. Impostare il <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Anchor%2A> proprietà <xref:System.Windows.Forms.AnchorStyles.Right>, <xref:System.Windows.Forms.AnchorStyles.Bottom>.  
   
-11. Modificare la proprietà <xref:System.Windows.Forms.Control.Text%2A> del controllo <xref:System.Windows.Forms.Button> su "La stringa per la proprietà Text di questo pulsante è lunga".  
+11. Modifica il <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Text%2A> proprietà su "**di questo pulsante è una stringa lunga per la proprietà Text.**"  
   
-     Eseguita la modifica, il controllo <xref:System.Windows.Forms.Button> viene ridimensionato verso sinistra.  In generale, il ridimensionamento automatico aumenta la dimensione di un controllo nella direzione opposta all'impostazione della proprietà <xref:System.Windows.Forms.Control.Anchor%2A>.  
+     Quando si esegue il commit della modifica, il <xref:System.Windows.Forms.Button> controllo viene ridimensionato verso sinistra. In generale, ridimensionamento automatico aumenta le dimensioni di un controllo nella direzione opposta relativo <xref:System.Windows.Forms.Control.Anchor%2A> l'impostazione della proprietà.  
   
-## Proprietà AutoSize e AutoSizeMode  
- Alcuni controlli supportano la proprietà `AutoSizeMode` che consente di determinare in modo più capillare il ridimensionamento automatico di un controllo.  
+## <a name="autosize-and-autosizemode-properties"></a>Proprietà AutoSize e AutoSizeMode  
+ Alcuni controlli supportano il `AutoSizeMode` proprietà, che offre un controllo più accurato il comportamento di ridimensionamento automatico di un controllo.  
   
-#### Per utilizzare la proprietà AutoSizeMode  
+#### <a name="to-use-the-autosizemode-property"></a>Utilizzare la proprietà AutoSizeMode  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.Panel> dalla **Casella degli strumenti** al form.  
+1.  Trascinare un <xref:System.Windows.Forms.Panel> controllo il **della casella degli strumenti** nel form.  
   
-2.  Impostare il valore della proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> del controllo <xref:System.Windows.Forms.Panel> su `true`.  
+2.  Impostare il valore della <xref:System.Windows.Forms.Panel> del controllo <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà `true`.  
   
-3.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel controllo <xref:System.Windows.Forms.Panel>.  
+3.  Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nel <xref:System.Windows.Forms.Panel> controllo.  
   
-4.  Posizionare il controllo <xref:System.Windows.Forms.Button> accanto all'angolo inferiore destro del controllo <xref:System.Windows.Forms.Panel>.  
+4.  Sul posto di <xref:System.Windows.Forms.Button> controllo nell'angolo inferiore destro del <xref:System.Windows.Forms.Panel> controllo.  
   
-5.  Selezionare il controllo <xref:System.Windows.Forms.Panel> e agganciare il quadratino di ridimensionamento inferiore destro.  Ridimensionare il controllo <xref:System.Windows.Forms.Panel> in modo che sia più grande e più piccolo.  
+5.  Selezionare il <xref:System.Windows.Forms.Panel> controllo e trascinare il quadratino di ridimensionamento in basso a destra. Ridimensionare il <xref:System.Windows.Forms.Panel> controllo sia superiore e inferiore.  
   
     > [!NOTE]
-    >  È possibile ridimensionare liberamente il controllo <xref:System.Windows.Forms.Panel>, ma non è possibile renderlo più piccolo della posizione dell'angolo inferiore destro del controllo <xref:System.Windows.Forms.Button>.  Tale comportamento è specificato dal valore predefinito <xref:System.Windows.Forms.AutoSizeMode> della proprietà `AutoSizeMode`.  
+    >  È possibile ridimensionare liberamente il <xref:System.Windows.Forms.Panel> il controllo, ma è possibile renderlo più piccolo della posizione del <xref:System.Windows.Forms.Button> nell'angolo in basso a destra del controllo. Questo comportamento è specificato dal valore predefinito del `AutoSizeMode` proprietà, ovvero <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>.  
   
-6.  Impostare il valore della proprietà `AutoSizeMode` del controllo <xref:System.Windows.Forms.Panel> su <xref:System.Windows.Forms.AutoSizeMode>.  
+6.  Impostare il valore della <xref:System.Windows.Forms.Panel> del controllo `AutoSizeMode` proprietà <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.  
   
-     Il controllo <xref:System.Windows.Forms.Panel> viene ridimensionato in modo da circondare il controllo <xref:System.Windows.Forms.Button>.  Non è possibile ridimensionare il controllo <xref:System.Windows.Forms.Panel>.  
+     Il <xref:System.Windows.Forms.Panel> viene ridimensionato in modo da racchiudere il <xref:System.Windows.Forms.Button> controllo. Non è possibile ridimensionare il <xref:System.Windows.Forms.Panel> controllo.  
   
-7.  Trascinare il controllo <xref:System.Windows.Forms.Button> verso l'angolo superiore sinistro del controllo <xref:System.Windows.Forms.Panel>.  
+7.  Trascinare il <xref:System.Windows.Forms.Button> controllo verso l'angolo superiore sinistro del <xref:System.Windows.Forms.Panel> controllo.  
   
-     Il controllo <xref:System.Windows.Forms.Panel> viene ridimensionato in base alla nuova posizione del controllo <xref:System.Windows.Forms.Button>.  
+     Il <xref:System.Windows.Forms.Panel> controllo viene ridimensionato per il <xref:System.Windows.Forms.Button> nuova posizione del controllo.  
   
-## Passaggi successivi  
- Vi sono molte altre funzionalità di layout per la disposizione dei controlli nelle applicazioni Windows Form.  Di seguito sono elencate alcune combinazioni che si potrebbero provare:  
+## <a name="next-steps"></a>Passaggi successivi  
+ Sono disponibili molte altre funzionalità di layout per disporre i controlli nelle applicazioni Windows Form. Ecco alcune combinazioni di cui che è possibile provare:  
   
--   Compilare un form utilizzando un controllo <xref:System.Windows.Forms.TableLayoutPanel>.  Per informazioni dettagliate, vedere [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  Provare a modificare i valori della proprietà <xref:System.Windows.Forms.Control.Padding%2A> del controllo <xref:System.Windows.Forms.TableLayoutPanel> e della proprietà <xref:System.Windows.Forms.Control.Margin%2A> per i controlli figlio.  
+-   Compilare un form utilizzando un <xref:System.Windows.Forms.TableLayoutPanel> controllo. Per informazioni dettagliate, vedere [procedura dettagliata: disposizione dei controlli in Windows Form utilizzando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Provare a modificare i valori del <xref:System.Windows.Forms.TableLayoutPanel> del controllo <xref:System.Windows.Forms.Control.Padding%2A> , proprietà, nonché <xref:System.Windows.Forms.Control.Margin%2A> proprietà per i controlli figlio.  
   
--   Provare lo stesso esperimento utilizzando un controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  Per informazioni dettagliate, vedere [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+-   Provare lo stesso esperimento utilizzando un <xref:System.Windows.Forms.FlowLayoutPanel> controllo. Per informazioni dettagliate, vedere [procedura dettagliata: disposizione dei controlli in Windows Form utilizzando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Provare ad ancorare i controlli figlio in un controllo <xref:System.Windows.Forms.Panel>.  La proprietà <xref:System.Windows.Forms.Control.Padding%2A> è più generica rispetto alla proprietà <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> ed è possibile provarlo inserendo un controllo figlio in un controllo <xref:System.Windows.Forms.Panel> e impostando la proprietà <xref:System.Windows.Forms.Control.Dock%2A> del controllo figlio <xref:System.Windows.Forms.DockStyle>.  Impostare la proprietà <xref:System.Windows.Forms.Control.Padding%2A> del controllo <xref:System.Windows.Forms.Panel> su differenti valori e notare l'effetto.  
+-   Provare ad ancorare i controlli figlio in un <xref:System.Windows.Forms.Panel> controllo. Il <xref:System.Windows.Forms.Control.Padding%2A> proprietà è una più generica la <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> , proprietà ed è possibile provarlo che ciò avviene inserendo un controllo figlio in un <xref:System.Windows.Forms.Panel> controllo e l'impostazione del controllo figlio <xref:System.Windows.Forms.Control.Dock%2A> proprietà <xref:System.Windows.Forms.DockStyle.Fill>. Impostare il <xref:System.Windows.Forms.Panel> del controllo <xref:System.Windows.Forms.Control.Padding%2A> proprietà diversi valori e notare l'effetto.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Control.AutoSize%2A>   
- <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>   
- <xref:System.Windows.Forms.Control.Margin%2A>   
- <xref:System.Windows.Forms.Control.Padding%2A>   
- [Cenni preliminari sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.Control.AutoSize%2A>  
+ <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>  
+ <xref:System.Windows.Forms.Control.Margin%2A>  
+ <xref:System.Windows.Forms.Control.Padding%2A>  
+ [Panoramica sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [Procedura dettagliata: disposizione dei controlli in Windows Form usando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

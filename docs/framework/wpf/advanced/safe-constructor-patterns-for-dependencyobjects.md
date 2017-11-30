@@ -1,48 +1,51 @@
 ---
-title: "Modelli di costruttore sicuri per DependencyObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelli di costruttore per DependencyObject"
-  - "DependencyObject, modelli di costruttore"
-  - "FXCop (strumento)"
+title: Modelli di costruttore sicuri per DependencyObject
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constructor patterns for dependency objects [WPF]
+- dependency objects [WPF], constructor patterns
+- FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 43a38406a3c9cc171944448fce2fa2f70c483baa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Modelli di costruttore sicuri per DependencyObject
-In genere, i costruttori di classe non devono chiamare callback quali metodi virtuali o delegati, in quanto possono essere chiamati come inizializzazione di base di costruttori per una classe derivata.  L'utilizzo di elementi virtuali può avvenire a un stato incompleto dell'inizializzazione di qualsiasi dato oggetto.  Tuttavia, il sistema di proprietà stesso chiama ed espone internamente i callback come parte del sistema di proprietà di dipendenza.  Un'operazione semplice quale l'impostazione del valore di una proprietà di dipendenza con la chiamata di <xref:System.Windows.DependencyObject.SetValue%2A> potrebbe includere un callback in un punto qualsiasi del processo di determinazione.  Per questa ragione, è necessario impostare i valori delle proprietà di dipendenza all'interno del corpo di un costruttore con una certa attenzione, in quanto tale operazione può divenire problematica se il tipo viene utilizzato come classe di base.  Di seguito, viene documentato un modello particolare per l'implementazione di costruttori <xref:System.Windows.DependencyObject> che evitano problemi specifici con gli stati delle proprietà di dipendenza e i callback inerenti.  
+# <a name="safe-constructor-patterns-for-dependencyobjects"></a>Modelli di costruttore sicuri per DependencyObject
+In genere, i costruttori di classe non devono chiamare callback come metodi virtuali o delegati, in quanto possono essere chiamati come inizializzazione di base di costruttori per una classe derivata. L'uso di elementi virtuali può avvenire in un stato incompleto dell'inizializzazione di qualsiasi dato oggetto. Il sistema di proprietà stesso, tuttavia, chiama ed espone internamente i callback come parte del sistema di proprietà di dipendenza. Un'operazione semplice come l'impostazione di un valore di proprietà di dipendenza con <xref:System.Windows.DependencyObject.SetValue%2A> chiamata potrebbe include un callback in un punto qualsiasi nella determinazione. Per questa ragione, occorre prestare attenzione quando si impostano i valori delle proprietà di dipendenza all'interno del corpo di un costruttore, perché l'operazione può divenire problematica se il tipo viene usato come classe di base. È un modello specifico per l'implementazione <xref:System.Windows.DependencyObject> costruttori che evitano problemi specifici con gli stati di proprietà di dipendenza e il callback inerenti documentata qui.  
   
-   
+ 
   
 <a name="Property_System_Virtual_Methods"></a>   
-## Metodi virtuali del sistema di proprietà  
- I metodi virtuali o callback seguenti vengono chiamati potenzialmente durante i calcoli della chiamata a <xref:System.Windows.DependencyObject.SetValue%2A> che imposta un valore della proprietà di dipendenza: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>.  Ognuno di questi metodi virtuali o callback serve a uno scopo particolare nell'espansione della versatilità del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e delle proprietà di dipendenza.  Per ulteriori informazioni sulla modalità di utilizzo di questi elementi virtuali allo scopo di personalizzare la determinazione del valore della proprietà, vedere [Callback e convalida delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+## <a name="property-system-virtual-methods"></a>Metodi virtuali del sistema di proprietà  
+ I seguenti metodi virtuali o i callback vengono chiamati potenzialmente durante i calcoli del <xref:System.Windows.DependencyObject.SetValue%2A> chiamata che imposta un valore di proprietà di dipendenza: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Ognuno di questi metodi virtuali o callback serve a uno scopo particolare nell'espansione della versatilità del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e delle proprietà di dipendenza. Per altre informazioni su come usare questi elementi virtuali per personalizzare la determinazione del valore della proprietà, vedere [Callback e convalida delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
   
-### Confronto tra l'imposizione della regola FXCop eMetodi virtuali del sistema di proprietà  
- Se si utilizza lo strumento Microsoft FXCop come parte del processo di compilazione e si effettua la derivazione da determinate classi del framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che chiamano il costruttore di base o si implementano le proprietà di dipendenza personalizzate sulle classi derivate, è possibile che si verifichi la violazione di una particolare regola FXCop.  La stringa del nome di questa violazione è:  
+### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Confronto tra l'imposizione della regola FXCop e metodi virtuali del sistema di proprietà  
+ Se si usa lo strumento Microsoft FXCop come parte del processo di compilazione e si esegue la derivazione da determinate classi del framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che chiamano il costruttore di base oppure si implementano proprietà di dipendenza personalizzate sulle classi derivate, può verificarsi la violazione di una particolare regola FXCop. La stringa del nome di questa violazione è:  
   
  `DoNotCallOverridableMethodsInConstructors`  
   
- Si tratta di una regola che fa parte dell'insieme di regole pubblico predefinito per FXCop.  È possibile che questa regola segnali una traccia tramite il sistema di proprietà di dipendenza che eventualmente chiama il metodo virtuale di un sistema di proprietà di dipendenza.  La violazione di questa regola potrebbe continuare ad apparire persino dopo avere seguito i modelli del costruttore raccomandati illustrati in questo argomento, pertanto potrebbe essere necessario disabilitare o eliminare la regola nella configurazione dell'insieme di regole FXCop.  
+ Si tratta di una regola che fa parte del set di regole pubblico predefinito per FXCop. È possibile che questa regola segnali una traccia tramite il sistema di proprietà di dipendenza che infine chiama il metodo virtuale di un sistema di proprietà di dipendenza. La violazione di questa regola potrebbe continuare ad apparire anche dopo avere seguito i modelli del costruttore consigliati illustrati in questo argomento, pertanto potrebbe essere necessario disabilitare o eliminare la regola nella configurazione del set di regole FXCop.  
   
-### La maggior parte dei problemi è causata dalla derivazione delle classi e dal mancato utilizzo delle classi esistenti  
- I problemi segnalati da questa regola si verificano quando una classe implementata con i metodi virtuali nella relativa sequenza di costruzione viene successivamente derivata.  Se la classe viene contrassegnata come sealed oppure si sa o si decide che la classe non sarà derivata, le considerazioni qui illustrate e i problemi che hanno motivato la regola FXCop non si applicano a questa situazione.  Tuttavia, se si stanno creando classi in modo che vengano utilizzate come classi di base, ad esempio se si stanno creando dei modelli o un insieme di librerie di controlli espandibile, è necessario seguire i modelli consigliati in questo argomento relativamente ai costruttori.  
+### <a name="most-issues-come-from-deriving-classes-not-using-existing-classes"></a>La maggior parte dei problemi è causata dalla derivazione delle classi e dal mancato uso delle classi esistenti  
+ I problemi segnalati da questa regola si verificano quando una classe implementata con metodi virtuali nella relativa sequenza di costruzione viene successivamente derivata. Se la classe viene contrassegnata come sealed oppure si sa o si decide che la classe non sarà derivata, le considerazioni qui illustrate e i problemi che hanno motivato la regola FXCop non si applicano a questa situazione. Se tuttavia se si stanno creando classi in modo che vengano usate come classi di base, ad esempio se si stanno creando modelli o un set di librerie di controlli espandibile, è consigliabile seguire i modelli raccomandati in questo argomento per i costruttori.  
   
-### I costruttori predefiniti devono inizializzare tutti i valori richiesti dai callback  
- Tutti i membri dell'istanza utilizzati dagli override o dai callback della classe \(i callback dall'elenco della sezione relativa agli elementi virtuali del sistema di proprietà\) devono essere inizializzati all'interno del costruttore predefinito della classe, anche se alcuni di quei valori sono valori "reali" di parametri di costruttori non predefiniti.  
+### <a name="default-constructors-must-initialize-all-values-requested-by-callbacks"></a>I costruttori predefiniti devono inizializzare tutti i valori richiesti dai callback  
+ Tutti i membri dell'istanza usati dagli override o dai callback della classe (i callback dall'elenco della sezione relativa agli elementi virtuali del sistema di proprietà) devono essere inizializzati all'interno del costruttore predefinito della classe, anche se alcuni di quei valori sono valori "reali" di parametri di costruttori non predefiniti.  
   
- L'esempio di codice seguente \(e gli esempi successivi\) è un esempio di pseudo codice C\# nel quale questa regola viene violata e in cui viene illustrato il problema:  
+ L'esempio di codice seguente e i successivi sono esempi di pseudo codice C# in cui questa regola viene violata e in cui viene illustrato il problema:  
   
 ```  
 public class MyClass : DependencyObject  
@@ -69,15 +72,15 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- Quando il codice dell'applicazione chiama `new MyClass(objectvalue)`, questo a sua volta chiama il costruttore predefinito e i costruttori della classe di base.  Successivamente imposta `Property1 = object1`, che chiama il metodo virtuale `OnPropertyChanged` sull'oggetto <xref:System.Windows.DependencyObject> `MyClass` proprietario.  L'override fa riferimento a `_myList`, che non è stato ancora inizializzato.  
+ Quando il codice dell'applicazione chiama `new MyClass(objectvalue)`, questo a sua volta chiama il costruttore predefinito e i costruttori della classe di base. Successivamente imposta `Property1 = object1`, che chiama il metodo virtuale `OnPropertyChanged` sull'oggetto di appartenenza `MyClass` <xref:System.Windows.DependencyObject>.  L'override fa riferimento a `_myList`, che non è stato ancora inizializzato.  
   
- Un modo per evitare questi problemi consiste nell'assicurarsi che i callback utilizzino solo altre proprietà di dipendenza e che ciascuna di tali proprietà di dipendenza disponga di un valore predefinito stabilito come parte dei relativi metadati registrati.  
+ Un modo per evitare questi problemi consiste nel verificare che i callback usino solo altre proprietà di dipendenza e che ognuna di esse abbia un valore predefinito stabilito come parte dei relativi metadati registrati.  
   
 <a name="Safe_Constructor_Patterns"></a>   
-## Modelli di costruttore sicuri  
- Per evitare i rischi di un'inizializzazione incompleta nel caso in cui la classe sia utilizzata come classe di base, seguire questi modelli:  
+## <a name="safe-constructor-patterns"></a>Modelli di costruttore sicuri  
+ Per evitare i rischi di un'inizializzazione incompleta nel caso in cui la classe sia usata come classe di base, seguire questi modelli:  
   
-#### Costruttori predefiniti che chiamano l'inizializzazione di base  
+#### <a name="default-constructors-calling-base-initialization"></a>Costruttori predefiniti che chiamano l'inizializzazione di base  
  Implementare questi costruttori che chiamano l'impostazione predefinita di base:  
   
 ```  
@@ -89,8 +92,8 @@ public MyClass : SomeBaseClass {
 }  
 ```  
   
-#### Costruttori non predefiniti \(a scelta\), che non corrispondono ad alcuna firma di base  
- Se questi costruttori utilizzano dei parametri per impostare le proprietà di dipendenza nell'inizializzazione, chiamare innanzitutto il costruttore predefinito della propria classe per l'inizializzazione, quindi utilizzare i parametri per impostare le proprietà di dipendenza.  Tali proprietà potrebbero essere proprietà di dipendenza definite dalla classe o proprietà di dipendenza ereditate dalle classi di base; tuttavia, in entrambi i casi utilizzare il modello seguente:  
+#### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Costruttori non predefiniti (di comodo), che non corrispondono ad alcuna firma di base  
+ Se questi costruttori usano parametri per impostare le proprietà di dipendenza nell'inizializzazione, chiamare prima di tutto il costruttore predefinito della propria classe per l'inizializzazione, quindi usare i parametri per impostare le proprietà di dipendenza. Queste ultime potrebbero essere proprietà di dipendenza definite dalla classe o proprietà di dipendenza ereditate dalle classi di base. In entrambi i casi, tuttavia, usare il modello seguente:  
   
 ```  
 public MyClass : SomeBaseClass {  
@@ -102,8 +105,8 @@ public MyClass : SomeBaseClass {
 }  
 ```  
   
-#### Costruttori non predefiniti \(a scelta\), che corrispondono alle firme di base  
- Anziché chiamare il costruttore di base con la stessa applicazione di parametri, chiamare nuovamente il costruttore predefinito della propria classe.  Non chiamare l'inizializzatore di base; al contrario, è necessario chiamare `this()`.  A questo punto riprodurre il comportamento del costruttore originale utilizzando i parametri passati come valori per l'impostazione delle proprietà rilevanti.  Per informazioni sulla definizione delle proprietà che si desidera impostare tramite determinati parametri, utilizzare la documentazione originale del costruttore di base:  
+#### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>Costruttori non predefiniti (di comodo), che corrispondono alle firme di base  
+ Anziché chiamare il costruttore di base con la stessa parametrizzazione, chiamare nuovamente il costruttore predefinito della propria classe. Non chiamare l'inizializzatore di base, bensì chiamare `this()`. A questo punto, riprodurre il comportamento del costruttore originale usando i parametri passati come valori per l'impostazione delle proprietà pertinenti. Per informazioni sulla determinazione delle proprietà da impostare tramite determinati parametri, usare la documentazione originale del costruttore di base:  
   
 ```  
 public MyClass : SomeBaseClass {  
@@ -115,13 +118,13 @@ public MyClass : SomeBaseClass {
 }  
 ```  
   
-#### Deve corrispondere a tutte le firme  
- Per i casi in cui il tipo di base dispone di più firme, è necessario associare tutte le firme possibili a un'implementazione personalizzata del costruttore che utilizza il modello di chiamata del costruttore predefinito della classe consigliato prima di impostare ulteriori proprietà.  
+#### <a name="must-match-all-signatures"></a>Deve corrispondere a tutte le firme  
+ Per i casi in cui il tipo di base ha più firme, è necessario associare tutte le firme possibili a un'implementazione personalizzata del costruttore che usi il modello consigliato di chiamare il costruttore predefinito della classe prima di impostare ulteriori proprietà.  
   
-#### Impostazione delle proprietà di dipendenza con SetValue  
- Questi stessi modelli si applicano se si sta impostando una proprietà che non dispone di un wrapper per un'impostazione pratica delle proprietà, per cui i valori vengono impostati con <xref:System.Windows.DependencyObject.SetValue%2A>.  Le chiamate a <xref:System.Windows.DependencyObject.SetValue%2A> che passano tramite parametri di costruttore devono inoltre chiamare il costruttore predefinito della classe per l'inizializzazione.  
+#### <a name="setting-dependency-properties-with-setvalue"></a>Impostazione delle proprietà di dipendenza con SetValue  
+ Questi stessi modelli si applicano se si imposta una proprietà che non dispongono di un wrapper per praticità di impostazione di proprietà e impostare i valori con <xref:System.Windows.DependencyObject.SetValue%2A>. Le chiamate a <xref:System.Windows.DependencyObject.SetValue%2A> che passano tramite i parametri del costruttore deve anche chiamare il costruttore della classe predefinito per l'inizializzazione.  
   
-## Vedere anche  
- [Proprietà Dependency personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [Cenni preliminari sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Sicurezza della proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+## <a name="see-also"></a>Vedere anche  
+ [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Sicurezza delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

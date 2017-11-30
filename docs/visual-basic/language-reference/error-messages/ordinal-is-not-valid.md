@@ -1,40 +1,38 @@
 ---
-title: "Ordinal is not valid | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID452"
-dev_langs: 
-  - "VB"
+title: Ordinale non valido
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d31d0fba19cc16004c0b56786af30603d0c509ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Ordinal is not valid
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-La chiamata a una libreria a collegamento dinamico \(DLL\) indica di utilizzare un numero al posto di un nome di routine, tramite la sintassi `#num`.  Le cause possibili dell'errore sono le seguenti:  
+# <a name="ordinal-is-not-valid"></a>Ordinale non valido
+La chiamata a una libreria di collegamento dinamico (DLL) indica di usare un numero anziché un nome di stored procedure, tramite il `#num` sintassi. Questo errore sono le seguenti cause possibili:  
   
--   Il tentativo di convertire l'espressione `#num` in un ordinale non è riuscito.  
+-   Un tentativo di convertire il `#num` espressione in un ordinale non è riuscito.  
   
--   L'espressione `#num` non specifica alcuna funzione nella DLL.  
+-   Il `#num` specificato non specifica alcuna funzione nella DLL.  
   
--   Una libreria dei tipi ha una dichiarazione non valida, il che comporta l'utilizzo interno di un numero ordinale non valido.  
+-   Una libreria dei tipi è una dichiarazione non valida risultante utilizzo interno di un numero ordinale non valido.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Assicurarsi che l'espressione rappresenti un numero valido, oppure chiamare la routine tramite nome.  
+1.  Verificare che l'espressione rappresenta un numero valido o chiamare la routine in base al nome.  
   
-2.  Assicurarsi che `#num` identifichi una funzione valida nella DLL.  
+2.  Assicurarsi che `#num` identifica una funzione nella DLL valida.  
   
-3.  Isolare la chiamata alla routine responsabile del problema, inserendo i commenti al di fuori del codice.  Scrivere un'istruzione `Declare` per la routine e riferire il problema al fornitore della libreria dei tipi.  
+3.  Isolare la chiamata di routine che provoca il problema Commentando il codice. Scrivere un `Declare` istruzione per la procedura e il problema al fornitore della libreria dei tipi di report.  
   
-## Vedere anche  
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

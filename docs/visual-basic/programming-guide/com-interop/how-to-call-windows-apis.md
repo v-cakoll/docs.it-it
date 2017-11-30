@@ -1,52 +1,51 @@
 ---
-title: "How to: Call Windows APIs (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "API calls"
-  - "Windows API, calling"
-  - "API calls, platform invoke"
-  - "calls, stored procedures"
+title: 'Procedura: chiamare API di Windows (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- API calls [Visual Basic]
+- Windows API, calling
+- API calls [Visual Basic], platform invoke
+- calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a219e031cdd36c713db8dcee6cc1da3849c9cf93
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Call Windows APIs (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Nell'esempio riportato di seguito la funzione `MessageBox` viene definita e chiamata nel file user32.dll, quindi a essa viene passata una stringa.  
+# <a name="how-to-call-windows-apis-visual-basic"></a>Procedura: chiamare API di Windows (Visual Basic)
+In questo esempio definisce e chiama il `MessageBox` funzione User32. dll e quindi passa una stringa a esso.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
 -   Un riferimento allo spazio dei nomi <xref:System>.  
   
-## Programmazione efficiente  
+## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il metodo non è statico, è astratto oppure è stato definito in precedenza.  Il tipo padre è un'interfaccia oppure la lunghezza del *nome* o di *nomeDll* è zero.  \(<xref:System.ArgumentException>\)  
+-   Il metodo non è statico, è di tipo abstract o è già stato definito. Il tipo padre è un'interfaccia o la lunghezza di *nome* o *NomeDLL* è zero. (<xref:System.ArgumentException>)  
   
--   Il *nome* o il *nomeDll* è `Nothing`.  \(<xref:System.ArgumentNullException>\)  
+-   Il *nome* o *NomeDLL* è `Nothing`. (<xref:System.ArgumentNullException>)  
   
--   Il tipo contenitore è stato creato in precedenza utilizzando `CreateType`.  \(<xref:System.InvalidOperationException>\)  
+-   Il tipo contenitore è stato creato in precedenza con `CreateType`. (<xref:System.InvalidOperationException>)  
   
-## Vedere anche  
- [A Closer Look at Platform Invoke](http://msdn.microsoft.com/it-it/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)   
- [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md)   
- [Consuming Unmanaged DLL Functions](../Topic/Consuming%20Unmanaged%20DLL%20Functions.md)   
- [Defining a Method with Reflection Emit](http://msdn.microsoft.com/it-it/84fd3bf6-628f-41aa-83d9-b990cf926e81)   
- [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)   
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni dettagliate su Platform Invoke](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+ [Esempi di platform invoke](../../../framework/interop/platform-invoke-examples.md)  
+ [Utilizzo di funzioni di DLL non gestite](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
+ [Definizione di un metodo con Reflection Emit](http://msdn.microsoft.com/en-us/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
+ [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+ [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)

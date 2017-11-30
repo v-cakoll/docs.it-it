@@ -1,48 +1,47 @@
 ---
-title: "ParamArray (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ParamArray"
-  - "ParamArray"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ParamArray keyword"
-  - "ParamArray keyword, syntax"
+title: ParamArray (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.ParamArray
+- ParamArray
+helpviewer_keywords:
+- ParamArray keyword [Visual Basic]
+- ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 06770f05aabedcf13cc9af1970a2c511a30c73b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# ParamArray (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Specifica l'utilizzo di una matrice facoltativa di elementi del tipo specificato da parte di un parametro di routine.  `ParamArray` può essere utilizzato solo nell'ultimo parametro di un elenco di parametri.  
+# <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
+Specifica che un parametro di routine accetta una matrice facoltativa di elementi del tipo specificato. `ParamArray`può essere utilizzato solo nel parametro ultimo di un elenco di parametri.  
   
-## Note  
- `ParamArray` consente di passare alla routine un numero arbitrario di argomenti.  Un parametro `ParamArray` viene sempre passato utilizzando [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
+## <a name="remarks"></a>Note  
+ `ParamArray`Consente di passare un numero arbitrario di argomenti per la procedura. Oggetto `ParamArray` parametro sempre è dichiarato mediante [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
   
- È possibile specificare uno o più argomenti per un parametro `ParamArray` passando una matrice del tipo di dati appropriato, un elenco di valori separati da virgole oppure nessun elemento.  Per ulteriori informazioni, vedere la sezione relativa alla chiamata di ParamArray in [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+ È possibile fornire uno o più argomenti a un `ParamArray` parametro passando una matrice di dati appropriato, un elenco delimitato da virgole dei valori o non di tipo. Per ulteriori informazioni, vedere "Chiamata di ParamArray" [matrici di parametro](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
 > [!IMPORTANT]
->  Ogni volta che viene utilizzata una matrice che può essere di dimensioni indefinite, esiste il rischio di sovraccarico della capacità interna dell'applicazione.  Se si accetta una matrice di parametri dal codice chiamante, è necessario verificarne la lunghezza ed effettuare le operazioni appropriate nel caso in cui le dimensioni siano eccessive per l'applicazione.  
+>  Ogni volta che gestisce una matrice che può essere elevata per un periodo illimitato, c'è un rischio di sovraccaricare capacità interna dell'applicazione. Se si accetta una matrice di parametri dal codice chiamante, è necessario verificarne la lunghezza e adottare se è troppo grande per l'applicazione.  
   
- Il modificatore `ParamArray` può essere utilizzato nei seguenti contesti:  
+ Il modificatore `ParamArray` può essere usato nei contesti seguenti:  
   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vedere anche  
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)   
- [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+## <a name="see-also"></a>Vedere anche  
+ [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)  
+ [Matrici di parametri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)

@@ -1,33 +1,25 @@
 ---
-title: 'Procedura: scrivere dati oggetto in un File XML (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: scrivere dati oggetto in un File XML (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 146ccb7b1999049106d5f0be1ce78e740dfcf060
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: df461f9b560dac45add0d7c82ff4938b0a7b1e62
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Procedura: scrivere dati oggetto in un File XML (Visual Basic)
-TIl esempio scrive l'oggetto da una classe in un file XML utilizzando la <xref:System.Xml.Serialization.XmlSerializer>classe.</xref:System.Xml.Serialization.XmlSerializer>  
+Questo esempio scrive l'oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Esempio  
   
@@ -55,23 +47,23 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- La classe deve avere un costruttore pubblico senza parametri.  
+ La classe deve avere un costruttore public senza parametri.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   La classe da serializzare non dispone di un costruttore pubblico senza parametri.  
+-   La classe da serializzare non ha un costruttore pubblico senza parametri.  
   
--   Il file esiste ed è di sola lettura (<xref:System.IO.IOException>).</xref:System.IO.IOException>  
+-   Il file esiste ed è di sola lettura (<xref:System.IO.IOException>).  
   
--   Il percorso è troppo lungo (<xref:System.IO.PathTooLongException>).</xref:System.IO.PathTooLongException>  
+-   Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).  
   
--   Il disco è pieno (<xref:System.IO.IOException>).</xref:System.IO.IOException>  
+-   Il disco è pieno (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Questo esempio crea un nuovo file, se il file non esiste già. Se un'applicazione deve creare un file, l'applicazione deve `Create` accesso per la cartella. Se il file esiste già, l'applicazione deve solo `Write` accedere, un privilegio inferiore. Dove possibile, è più sicuro creare il file durante la distribuzione e concedere solo `Read` accesso a un singolo file, anziché `Create` accesso per una cartella.  
+ Questo esempio crea un nuovo file, se il file non esiste. Se un'applicazione deve creare un file, deve avere accesso `Create` alla cartella. Se il file esiste già, per l'applicazione è sufficiente l'accesso `Write`, un privilegio di livello inferiore. Se possibile, è più sicuro creare il file durante la distribuzione e concedere l'accesso `Read` a un unico file, anziché l'accesso `Create` a una cartella.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.IO.StreamWriter></xref:System.IO.StreamWriter>   
- [Procedura: leggere dati oggetto in un File XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
+ <xref:System.IO.StreamWriter>  
+ [Procedura: Leggere dati oggetto in un file XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
  [Serializzazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

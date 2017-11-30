@@ -1,60 +1,59 @@
 ---
-title: "How to: Hold More Than One Value in a Variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "classes [Visual Basic], composite data types"
-  - "composite types"
-  - "composite data types"
-  - "data types [Visual Basic], composite"
-  - "arrays [Visual Basic], composite data types"
-  - "structures, composite data types"
-  - "arrays [Visual Basic], compilation errors"
-  - "types [Visual Basic], composite"
+title: "Procedura: inserire più valori in una variabile (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- classes [Visual Basic], composite data types
+- composite types [Visual Basic]
+- composite data types [Visual Basic]
+- data types [Visual Basic], composite
+- arrays [Visual Basic], composite data types
+- structures [Visual Basic], composite data types
+- arrays [Visual Basic], compilation errors
+- types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c8c567ec2ba01d094819c98a2937af75cd105956
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Hold More Than One Value in a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Per poter contenere più valori, una variabile deve essere dichiarata come *tipo di dati composito*.  
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedura: inserire più valori in una variabile (Visual Basic)
+Una variabile contiene più di un valore se si dichiara come un *tipo di dati composito*.  
   
- I [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) comprendono strutture, matrici e classi.  Una variabile di tipo composito può contenere una combinazione di tipi di dati elementari e altri tipi compositi.  Le strutture e le classi possono contenere sia codice che dati.  
+ [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) includono classi, matrici e strutture. Una variabile di un tipo di dati composito può contenere una combinazione di tipi di dati elementari e altri tipi compositi. Classi e le strutture possono contenere codice, nonché i dati.  
   
-### Per inserire più valori in una variabile  
+### <a name="to-hold-more-than-one-value-in-a-variable"></a>Per contenere più di un valore in una variabile  
   
 1.  Determinare il tipo di dati composito che si desidera utilizzare per la variabile.  
   
-2.  Definire il tipo di dati composito, se non è già stato definito, affinché possa essere utilizzato dalla variabile.  
+2.  Se il tipo di dati composito non è già stato definito, è possibile definirlo in modo che la variabile è possibile utilizzarlo.  
   
-    -   Definire una struttura con un'[Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).  
+    -   Definire una struttura con un [istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
-    -   Definire una matrice con un'[Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).  
+    -   Definire una matrice con un [Dim (istruzione)](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-    -   Definire una classe con un'[Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).  
+    -   Definire una classe con un [istruzione Class](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
-3.  Dichiarare la variabile con un'istruzione `Dim`.  
+3.  Dichiarare la variabile con un `Dim` istruzione.  
   
-4.  Dopo il nome della variabile inserire una clausola `As`.  
+4.  Dopo il nome della variabile con un `As` clausola.  
   
-5.  Dopo la parola chiave `As` inserire il nome del tipo di dati composito appropriato.  
+5.  Seguire il `As` (parola chiave) con il nome del tipo di dati composito appropriato.  
   
-## Vedere anche  
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

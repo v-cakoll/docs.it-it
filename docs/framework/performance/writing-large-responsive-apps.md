@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ec275cb904b90b87193e3ed72ef89a127d1fbea
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#.  
@@ -33,7 +31,8 @@ Questo articolo include suggerimenti per il miglioramento delle prestazioni dell
   
  Quando gli utenti finali interagiscono con l'app, si aspettano che sia reattiva.  La digitazione o la gestione dei comandi non devono essere mai bloccate.  Le informazioni di supporto devono essere visualizzate rapidamente o scomparire se l'utente continua a digitare.  L'app deve evitare di bloccare il thread dell'interfaccia utente con calcoli di lunga durata, che potrebbero dare l'impressione di lentezza dell'app.  
   
- Per altre informazioni sui nuovi compilatori, visitare il sito relativo al [progetto open source .NET Compiler Platform ("Roslyn")](http://roslyn.codeplex.com/).  
+ Per ulteriori informazioni sui compilatori Roslyn, visitare il [dotnet/roslyn](https://github.com/dotnet/roslyn) repository in GitHub.
+ <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>Considerazioni essenziali  
  Quando si ottimizzano le prestazioni e si creano app .NET Framework reattive, occorre prestare attenzione alle considerazioni seguenti.  
@@ -62,7 +61,7 @@ Questo articolo include suggerimenti per il miglioramento delle prestazioni dell
 ### <a name="boxing"></a>Boxing  
  La [conversione boxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md) si verifica quando si esegue il wrapping in un oggetto di tipi di valori che normalmente si trovano nello stack o in strutture di dati,  ovvero quando si alloca un oggetto per l'inclusione dei dati e quindi si restituisce un puntatore a quell'oggetto.  La conversione boxing dei valori è a volte eseguita in .NET Framework a causa della firma di un metodo o del tipo di posizione di archiviazione.  Il wrapping di un tipo di valore in un oggetto provoca l'allocazione di memoria.  Molte operazioni di conversione boxing possono comportare megabyte o gigabyte di allocazioni nell'app e quindi l'app provocherà più operazioni di Garbage Collection. I compilatori di linguaggi e .NET Framework evitano la conversione boxing quando possibile, ma a volte questa conversione si verifica in modo imprevisto.  
   
- Per verificare la conversione boxing in PerfView, aprire una traccia ed esaminare gli stack di allocazione heap corrispondenti al nome di processo dell'app. Occorre ricordare che PerfView crea report relativi a tutti i processi.  Se alle allocazioni sono associati tipi quali <xref:System.Int32?displayProperty=fullName> e <xref:System.Char?displayProperty=fullName>, si sta eseguendo la conversione boxing dei tipi di valore.  Se si sceglie uno di questi tipi, saranno visualizzati gli stack e le funzioni in cui ne è eseguita la conversione boxing.  
+ Per verificare la conversione boxing in PerfView, aprire una traccia ed esaminare gli stack di allocazione heap corrispondenti al nome di processo dell'app. Occorre ricordare che PerfView crea report relativi a tutti i processi.  Se alle allocazioni sono associati tipi quali <xref:System.Int32?displayProperty=nameWithType> e <xref:System.Char?displayProperty=nameWithType>, si sta eseguendo la conversione boxing dei tipi di valore.  Se si sceglie uno di questi tipi, saranno visualizzati gli stack e le funzioni in cui ne è eseguita la conversione boxing.  
   
  **Esempio 1: Metodi di stringa e argomenti di tipo valore**  
   
@@ -135,7 +134,7 @@ public class BoxingExample
 ((int)color).GetHashCode()  
 ```  
   
- Un'altra causa comune della conversione boxing sui tipi di enumerazione è costituita dal metodo <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName>.  È necessario eseguire la conversione boxing dell'argomento passato a <xref:System.Enum.HasFlag%28System.Enum%29>.  Nella maggior parte dei casi, la sostituzione di chiamate a <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName> con un test bit per bit risulta più semplice e non comporta la creazione di allocazioni.  
+ Un'altra causa comune della conversione boxing sui tipi di enumerazione è costituita dal metodo <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType>.  È necessario eseguire la conversione boxing dell'argomento passato a <xref:System.Enum.HasFlag%28System.Enum%29>.  Nella maggior parte dei casi, la sostituzione di chiamate a <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> con un test bit per bit risulta più semplice e non comporta la creazione di allocazioni.  
   
  Occorre ricordare la prima considerazione sulle prestazioni, ovvero non ottimizzare con troppo anticipo, e non iniziare a riscrivere in questo modo tutto il codice.    È necessario essere consapevoli dei costi relativi alla conversione boxing, ma cambiare il codice solo dopo la profilatura dell'app e l'individuazione delle aree sensibili.  
   
@@ -334,7 +333,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  Le due allocazioni di `new`, una per la classe di ambiente e una per il delegato, sono ora esplicite.  
   
- Esaminare ora la chiamata a `FirstOrDefault`. Anche questo metodo di estensione nel tipo <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> comporta un'allocazione.  Poiché `FirstOrDefault` accetta un oggetto <xref:System.Collections.Generic.IEnumerable%601> come primo argomento, è possibile espandere la chiamata al codice seguente (semplificato leggermente per questo esempio):  
+ Esaminare ora la chiamata a `FirstOrDefault`. Anche questo metodo di estensione nel tipo <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> comporta un'allocazione.  Poiché `FirstOrDefault` accetta un oggetto <xref:System.Collections.Generic.IEnumerable%601> come primo argomento, è possibile espandere la chiamata al codice seguente (semplificato leggermente per questo esempio):  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ...  
@@ -421,7 +420,7 @@ class Compilation { /*...*/
   
  **Correzione per l'esempio 6**  
   
- Per rimuovere l'allocazione <xref:System.Threading.Tasks.Task> completata, è possibile memorizzare nella cache l'oggetto Task con il risultato completato:  
+ Per rimuovere completato <xref:System.Threading.Tasks.Task> allocazione, è possibile memorizzare nella cache l'oggetto Task con il risultato completato:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -471,13 +470,12 @@ class Compilation { /*...*/
 -   Le allocazioni sono importantissime: il team responsabile della piattaforma del compilatore si è impegnato principalmente nel migliorare le prestazioni dei nuovi compilatori da questo punto di vista.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Video di presentazione di questo argomento](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)   
- [Guida per principianti alla profilatura delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [Prestazioni](../../../docs/framework/performance/index.md)   
- [Suggerimenti sulle prestazioni di .NET](http://msdn.microsoft.com/library/ms973839.aspx)   
- [Strumento di analisi delle prestazioni di Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)   
- [Find Application Bottlenecks with Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  (Trovare i colli di bottiglia delle applicazioni con il profiler di Visual Studio)  
- [Esercitazioni di Channel 9 su PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)   
- [High-level Performance Tips](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  (Suggerimenti sulle prestazioni di alto livello)  
- [Progetto open source .NET Compiler Platform ("Roslyn")](http://roslyn.codeplex.com/)
-
+ [Video di presentazione di questo argomento](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [Guida per principianti alla profilatura delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+ [Prestazioni](../../../docs/framework/performance/index.md)  
+ [Suggerimenti sulle prestazioni .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Strumento di analisi delle prestazioni di Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Individuare i colli di bottiglia con il Profiler di Visual Studio](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Channel 9 esercitazioni di PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [Suggerimenti sulle prestazioni di alto livello](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [dotnet/roslyn repository in GitHub](https://github.com/dotnet/roslyn)

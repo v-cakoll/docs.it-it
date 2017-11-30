@@ -1,74 +1,73 @@
 ---
-title: "User-Defined Data Type | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "UserDefined"
-  - "UDT"
-  - "vb.UDT"
-  - "User-Defined"
-  - "vb.UserDefined"
-  - "vb.User-Defined"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "user-defined data types, Visual Basic"
-  - "user-defined types"
-  - "structures, as user-defined data types"
-  - "user-defined types, Visual Basic"
-  - "user-defined types, structure declaration"
-  - "user-defined types, structures in Visual Basic"
-  - "user-defined data types, structure declaration"
-  - "data types [Visual Basic], assigning"
-  - "Structure statement"
-  - "data types [Visual Basic], user-defined"
-  - "user-defined data types, structures in Visual Basic"
-  - "user-defined data types"
-  - "types [Visual Basic], user-defined"
+title: Tipo di dati definito dall'utente
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- UserDefined
+- UDT
+- vb.UDT
+- User-Defined
+- vb.UserDefined
+- vb.User-Defined
+helpviewer_keywords:
+- user-defined data types [Visual Basic], Visual Basic
+- user-defined types
+- structures [Visual Basic], as user-defined data types
+- user-defined types [Visual Basic], Visual Basic
+- user-defined types [Visual Basic], structure declaration
+- user-defined types [Visual Basic], structures in Visual Basic
+- user-defined data types [Visual Basic], structure declaration
+- data types [Visual Basic], assigning
+- Structure statement [Visual Basic]
+- data types [Visual Basic], user-defined
+- user-defined data types [Visual Basic], structures in Visual Basic
+- user-defined data types
+- types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7e1876d61a2ce89b04c6e5061b868f0be365639f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# User-Defined Data Type
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Contiene dati nel formato definito  dall'istruzione `Structure`.  
+# <a name="user-defined-data-type"></a>Tipo di dati definito dall'utente
+Contiene i dati in un formato definito. Il `Structure` istruzione definisce il formato.  
   
- Le versioni precedenti di Visual Basic supportano il tipo definito dall'utente,  mentre la versione corrente lo espande in una *struttura*.  Una struttura rappresenta una concatenazione di uno o più *membri* di vari tipi di dati.  In Visual Basic una struttura viene considerata come una singola unità, anche se è possibile accedere ai relativi membri singolarmente.  
+ Le versioni precedenti di Visual Basic supportano il tipo definito dall'utente (UDT). La versione corrente lo espande in un *struttura*. Una struttura è una concatenazione di uno o più *membri* vari tipi di dati. Viene considerata una struttura di una singola unità, anche se è inoltre possibile accedere singolarmente i relativi membri.  
   
-## Note  
- Definire e utilizzare un tipo di dati in formato struttura quando è necessario combinare diversi tipi di dati in una singola unità oppure quando nessuno dei tipi di dati elementari soddisfa le esigenze specifiche.  
+## <a name="remarks"></a>Note  
+ Definire e utilizzare un tipo di dati di struttura quando è necessario combinare diversi tipi di dati in una singola unità, o quando nessuno dei tipi di dati elementare servire le proprie esigenze.  
   
- Il valore predefinito di un tipo di dati in formato struttura è costituito dalla combinazione dei valori predefiniti di ciascuno dei relativi membri.  
+ Il valore predefinito di un tipo di dati di struttura è costituito dalla combinazione dei valori predefiniti di ognuno dei relativi membri.  
   
-## Formato della dichiarazione  
- Una dichiarazione di struttura inizia con l'[Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) e termina con l'istruzione `End` `Structure`.  Nell'istruzione `Structure` è presente il nome della struttura, che corrisponde anche all'identificatore del tipo di dati definito dalla struttura.  Tale identificatore può essere utilizzato da altre parti del codice per dichiarare variabili, parametri e valori restituiti da funzioni come appartenenti al tipo di dati della struttura.  
+## <a name="declaration-format"></a>Formato di dichiarazione  
+ Una dichiarazione di struttura inizia con il [istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina con il `End``Structure` istruzione. Il `Structure` istruzione fornisce il nome della struttura, che è anche l'identificatore del tipo di dati consiste nel definire la struttura. Altre parti del codice è possono utilizzare questo identificatore per dichiarare le variabili, parametri e funzione di restituire i valori per questo tipo di struttura dati.  
   
- Le dichiarazioni contenute tra le istruzioni `Structure` ed `End` `Structure` definiscono i membri della struttura.  
+ Le dichiarazioni tra il `Structure` e `End``Structure` istruzioni definiscano i membri della struttura.  
   
-## Livelli di accesso ai membri  
- È necessario dichiarare ciascun membro utilizzando un'[Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) o un'istruzione in cui venga specificato il livello di accesso, ad esempio [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md) o [Private](../../../visual-basic/language-reference/modifiers/private.md).  Se si utilizza un'istruzione `Dim`, il livello di accesso predefinito è Public.  
+## <a name="member-access-levels"></a>Livelli di accesso di membro  
+ È necessario dichiarare ogni membro utilizzando un [Dim (istruzione)](../../../visual-basic/language-reference/statements/dim-statement.md) o un'istruzione che specifica il livello di accesso, ad esempio [pubblica](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), o [privato](../../../visual-basic/language-reference/modifiers/private.md). Se si utilizza un `Dim` istruzione, impostazioni predefinite a livello di accesso al ruolo public.  
   
-## Suggerimenti per la programmazione  
+## <a name="programming-tips"></a>Suggerimenti per la programmazione  
   
--   **Consumo di memoria.** Come nel caso di tutti i tipi di dati compositi, il calcolo del consumo di memoria totale di una struttura in base alla somma delle allocazioni di memoria nominali dei relativi membri presenta alcuni rischi.  Non è inoltre possibile supporre con certezza che l'ordine di archiviazione in memoria corrisponda esattamente all'ordine di dichiarazione.  Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> all'istruzione `Structure`.  
+-   **Utilizzo di memoria.** Come con tutti i tipi di dati compositi, è possibile calcolare in modo sicuro il consumo di memoria totale di una struttura sommando le allocazioni di memoria nominali dei relativi membri. Inoltre, non è possibile presupporre che l'ordine di archiviazione in memoria è identico all'ordine di dichiarazione. Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare il <xref:System.Runtime.InteropServices.StructLayoutAttribute> attributo la `Structure` istruzione.  
   
--   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi definiti dall'utente in altri ambienti non sono compatibili con i tipi di struttura Visual Basic.  
+-   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi definiti dall'utente in altri ambienti non sono compatibili con Visual Basic i tipi di struttura.  
   
--   **Conversione verso un tipo di dati più grande.** Non è prevista alcuna conversione automatica da o verso un qualsiasi tipo di dati in formato struttura.  Per definire gli operatori di conversione sulla struttura, è possibile utilizzare l'[Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md) e dichiarare ciascun operatore come `Widening` o `Narrowing`.  
+-   **Ampliamento.** Non è una conversione automatica a o da qualsiasi tipo di dati della struttura. È possibile definire gli operatori di conversione per la struttura utilizzando il [Operator (istruzione)](../../../visual-basic/language-reference/statements/operator-statement.md), ed è possibile dichiarare ogni operatore di conversione da `Widening` o `Narrowing`.  
   
--   **Caratteri tipo.** I tipi di dati in formato struttura non hanno alcun carattere di tipo letterale o carattere identificatore di tipo.  
+-   **Caratteri tipo.** Tipi di dati di struttura non dispongono di alcun carattere di tipo letterale o un carattere di tipo identificatore.  
   
--   **Tipo Framework.** Non esiste alcun tipo corrispondente in .NET Framework.  Tutte le strutture ereditano dalla classe .NET Framework <xref:System.ValueType?displayProperty=fullName>, ma nessuna struttura singola corrisponde a <xref:System.ValueType?displayProperty=fullName>.  
+-   **Tipo di Framework.** Non vi è alcun tipo corrispondente in .NET Framework. Tutte le strutture ereditano dalla classe di .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ma nessuna struttura singola corrisponde a <xref:System.ValueType?displayProperty=nameWithType>.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato il profilo della dichiarazione di una struttura.  
+## <a name="example"></a>Esempio  
+ Nell'esempio che segue viene illustrata la struttura della dichiarazione di una struttura.  
   
 ```  
 [Public | Protected | Friend | Protected Friend | Private] Structure structname  
@@ -78,14 +77,14 @@ Contiene dati nel formato definito  dall'istruzione `Structure`.
 End Structure  
 ```  
   
-## Vedere anche  
- <xref:System.ValueType>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ValueType>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [Tipi di dati](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

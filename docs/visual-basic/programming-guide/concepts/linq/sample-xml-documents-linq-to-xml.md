@@ -1,33 +1,25 @@
 ---
-title: Esempio di documenti XML (LINQ to XML) | Documenti di Microsoft
+title: Documenti XML di esempio (LINQ to XML)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d2ba4eec12b3a51c912ed4d531f4de9f80ffa332
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: db9837d5dbe09b3045d88dc68e429877b39559f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Documenti XML di esempio (LINQ to XML)
-I file di esempio seguente vengono utilizzati in esempi di codice e frammenti di codice in tutta la [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentazione.  
+I file di esempio seguenti vengono usati negli esempi e nei frammenti di codice in tutta la documentazione [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 > [!NOTE]
 >  Le società, le organizzazioni, i prodotti, i nomi di dominio, gli indirizzi di posta elettronica, i loghi, le persone, i luoghi e gli eventi di esempio qui riportati sono fittizi. Nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, logo, persona, luogo o evento è intenzionale o può essere presupposta.  
@@ -43,7 +35,7 @@ I file di esempio seguente vengono utilizzati in esempi di codice e frammenti di
 |[File XML di esempio: configurazione di test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Documento XML che contiene pseudo-dati di configurazione di test.|  
 |[File XML di esempio: configurazione di test in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|Documento XML in uno spazio dei nomi che contiene pseudo-dati di configurazione di test.|  
 |[File XML di esempio: clienti e ordini (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|Documento XML che contiene clienti e ordini.|  
-|[File XSD di esempio: clienti e ordini](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Un Xml Schema Definition (XSD) che convalida il [File XML di esempio: Customers e Orders (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
+|[File XSD di esempio: clienti e ordini](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Un file Xml Schema Definition (XSD) che convalida [File XML di esempio: clienti e ordini (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
 |[File XML di esempio: clienti e ordini in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Documento XML in uno spazio dei nomi che contiene clienti e ordini.|  
 |[File XML di esempio: dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Documento XML che contiene dati adatti per somme e raggruppamenti.|  
 |[File XML di esempio: dati numerici in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Documento XML in uno spazio dei nomi che contiene dati adatti per somme e raggruppamenti.|  

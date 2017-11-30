@@ -1,90 +1,99 @@
 ---
-title: "Controlli Windows Form in .NET Framework per funzione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli Windows Form, funzioni .NET Framework"
+title: Controlli Windows Form per funzione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], by function
+- Windows Forms, controls by function
+- Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5c49c42b02511fea66c88544bf689b2b05e788ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Controlli Windows Form in .NET Framework per funzione
-Nella tabella seguente sono elencati i controlli Windows Form in base alla funzione generale.  
+# <a name="windows-forms-controls-by-function"></a>Controlli Windows Form per funzione
+Windows Form offre i controlli e componenti che eseguono una serie di funzioni. Nella tabella seguente sono elencati i controlli Windows Form e i componenti in base alla funzione generale. Inoltre, in cui sono presenti più controlli che svolgono la stessa funzione, il controllo consigliato viene elencato con una nota relativa al controllo sostituiva. In una tabella successiva, sono elencati i controlli sostituiti con sostitutivi consigliati.  
+  
+> [!NOTE]
+>  Le tabelle seguenti elencano non ciascun controllo o un componente, che è possibile usare in Windows Form. per un elenco più completo, vedere [controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+  
+## <a name="recommended-controls-and-components-by-function"></a>Controlli e componenti dalla funzione consigliati  
   
 |Funzione|Controllo|Descrizione|  
-|--------------|---------------|-----------------|  
-|Modifica del testo|<xref:System.Windows.Forms.TextBox>|Viene consentito l'input di dati modificabili su più righe da parte dell'utente.|  
-||<xref:System.Windows.Forms.ToolStripTextBox>|Viene consentito l'input di dati modificabili su più righe da parte dell'utente.|  
-||<xref:System.Windows.Forms.RichTextBox>|Viene consentito agli utenti di immettere, visualizzare e modificare testo formattato.|  
-|Visualizzazione del testo in sola lettura|<xref:System.Windows.Forms.Label>|Viene visualizzato testo che non può essere modificato dall'utente.|  
-||<xref:System.Windows.Forms.ToolStripLabel>|Viene visualizzato testo che non può essere modificato dall'utente.|  
-||<xref:System.Windows.Forms.LinkLabel>|Viene consentito aggiungere collegamenti ipertestuali alle applicazioni Windows Form.|  
-||<xref:System.Windows.Forms.StatusBar>|Vengono visualizzate informazioni sullo stato relative al controllo che possiede lo stato attivo.|  
-||<xref:System.Windows.Forms.ToolStripStatusLabel>|Vengono visualizzate informazioni sullo stato relative al controllo che possiede lo stato attivo.|  
-|Selezione da un elenco|<xref:System.Windows.Forms.CheckedListBox>|Viene visualizzato un elenco di elementi con una casella di controllo accanto a ciascun elemento.|  
-||<xref:System.Windows.Forms.ComboBox>|Vengono visualizzati dati in una casella combinata a discesa.|  
-||<xref:System.Windows.Forms.ToolStripComboBox>|Vengono visualizzati dati in una casella combinata a discesa.|  
-||<xref:System.Windows.Forms.DomainUpDown>|Vengono visualizzate stringhe di testo che l'utente può scorrere e selezionare.|  
-||<xref:System.Windows.Forms.ListBox>|Viene visualizzato un elenco di elementi grafici \(icone\) e di testo.|  
-||<xref:System.Windows.Forms.ListView>|Viene visualizzato un elenco di elementi con le relative icone, come in Esplora risorse.|  
-||<xref:System.Windows.Forms.NumericUpDown>|Vengono visualizzati numeri che l'utente può scorrere e selezionare.|  
-||<xref:System.Windows.Forms.TreeView>|Viene visualizzata una gerarchia di nodi che può essere espansa o compressa.|  
-|Visualizzazione grafica|<xref:System.Windows.Forms.PictureBox>|Vengono visualizzate immagini in formato bitmap, GIF, JPEG, metafile o icona.|  
-|Memorizzazione di grafica|<xref:System.Windows.Forms.ImageList>|Vengono visualizzate immagini in altri controlli.|  
-|Impostazione di valori|<xref:System.Windows.Forms.CheckBox>|Viene visualizzata una casella di controllo che indica se una condizione è attiva o inattiva.|  
-||<xref:System.Windows.Forms.CheckedListBox>|Viene visualizzato un elenco di elementi con una casella di controllo accanto a ciascun elemento.|  
-||<xref:System.Windows.Forms.RadioButton>|Viene visualizzato un insieme di due o più opzioni che si escludono reciprocamente.|  
-||<xref:System.Windows.Forms.TrackBar>|Viene consentito la navigazione all'interno di grandi quantità di dati oppure la regolazione in modo visivo di un'impostazione numerica.|  
-|Impostazione della data|<xref:System.Windows.Forms.DateTimePicker>|Viene consentito all'utente di selezionare una singola voce da un elenco di date o ore.|  
-||<xref:System.Windows.Forms.MonthCalendar>|Viene fornita agli utenti un'interfaccia grafica intuitiva per la visualizzazione e l'impostazione delle informazioni relative alla data.|  
-|Finestre di dialogo|<xref:System.Windows.Forms.ColorDialog>|Viene consentito all'utente di selezionare un colore da una tavolozza all'interno di una finestra di dialogo preconfigurata e di aggiungere colori personalizzati alla tavolozza.|  
-||<xref:System.Windows.Forms.FolderBrowserDialog>|Viene visualizzata un'interfaccia tramite la quale gli utenti possono individuare e selezionare una directory o crearne una nuova.|  
-||<xref:System.Windows.Forms.FontDialog>|Vengono esposti i tipi di carattere attualmente installati nel sistema.|  
-||<xref:System.Windows.Forms.OpenFileDialog>|Viene consentito agli utenti di aprire i file mediante una finestra di dialogo preconfigurata.|  
-||<xref:System.Windows.Forms.PageSetupDialog>|Vengono impostati i dettagli della pagina per la stampa in una finestra di dialogo preconfigurata.|  
-||<xref:System.Windows.Forms.PrintDialog>|Vengono selezionate una stampante e le pagine da stampare e vengono indicate altre impostazioni relative alla stampa.|  
-||<xref:System.Drawing.Printing.PrintDocument>|Vengono impostate le proprietà che descrivono cosa stampare e viene stampato il documento nelle applicazioni Windows.|  
-||<xref:System.Windows.Forms.PrintPreviewControl>|Viene consentito di creare una finestra di dialogo o un componente PrintPreview personalizzato anziché utilizzare la versione preconfigurata.|  
-||<xref:System.Windows.Forms.PrintPreviewDialog>|Viene visualizzato un documento così come apparirà nella stampa.|  
-||<xref:System.Windows.Forms.SaveFileDialog>|Vengono selezionati i file da salvare e la posizione in cui devono essere salvati.|  
-|Controlli menu|<xref:System.Windows.Forms.MainMenu>|Viene visualizzato un menu in fase di esecuzione.|  
-||<xref:System.Windows.Forms.MenuStrip>|Viene visualizzato un menu in fase di esecuzione.|  
-||<xref:System.Windows.Forms.ContextMenu>|Viene fornito agli utenti un menu facilmente accessibile dei comandi associati all'oggetto selezionato utilizzati più frequentemente.|  
-||<xref:System.Windows.Forms.ContextMenuStrip>|Viene fornito agli utenti un menu facilmente accessibile dei comandi associati all'oggetto selezionato utilizzati più frequentemente.|  
-|Comandi|<xref:System.Windows.Forms.Button>|Viene fornito un pulsante standard che può essere scelto dall'utente per svolgere determinate operazioni.|  
-||<xref:System.Windows.Forms.LinkLabel>|Viene consentito aggiungere collegamenti ipertestuali alle applicazioni Windows Form.|  
-||<xref:System.Windows.Forms.NotifyIcon>|Vengono visualizzate icone per i processi eseguiti in background che altrimenti non disporrebbero di un'interfaccia utente.|  
-||<xref:System.Windows.Forms.ToolBar>|Vengono visualizzati menu e pulsanti con un'immagine bitmap associata per l'attivazione di comandi.|  
-||<xref:System.Windows.Forms.ToolStrip>|Viene consentito di creare barre degli strumenti e menu personalizzati nelle applicazioni Windows Form.|  
-|Raggruppamento di altri controlli|<xref:System.Windows.Forms.Panel>|Viene fornito un raggruppamento identificabile per gli altri controlli e viene consentito lo scorrimento.|  
-||<xref:System.Windows.Forms.GroupBox>|Viene fornito un raggruppamento identificabile per gli altri controlli.|  
-||<xref:System.Windows.Forms.TabControl>|Vengono visualizzate più schede che possono contenere immagini o altri controlli.|  
-|Dati|<xref:System.Windows.Forms.DataGrid>|Vengono visualizzati dati in formato tabellare da un dataset; è consentito l'aggiornamento dell'origine dati.|  
-||<xref:System.Windows.Forms.DataGridView>|Viene fornita un'interfaccia utente ai dataset [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], consentendo la visualizzazione dei dati in formato tabellare e l'esecuzione di aggiornamenti dell'origine dati.|  
-|Navigazione|<xref:System.Windows.Forms.HScrollBar>|Vengono fornite barre di navigazione che consentono di navigare all'interno di un elenco di elementi oppure di grandi quantità di dati mediante lo scorrimento orizzontale in un'applicazione o in un controllo.|  
-||<xref:System.Windows.Forms.VScrollBar>|Vengono fornite barre di navigazione che consentono di navigare all'interno di un elenco di elementi oppure di grandi quantità di dati mediante lo scorrimento verticale in un'applicazione o in un controllo.|  
-|Informazioni utente|<xref:System.Windows.Forms.ErrorProvider>|Vengono visualizzate le informazioni sugli errori in modo non invadente.|  
-||<xref:System.Windows.Forms.HelpProvider>|Un file HTML della Guida viene associato a un'applicazione Windows.|  
-|Web|<xref:System.Windows.Forms.WebBrowser>|Viene illustrato l'hosting di pagine Web e vengono fornite funzionalità del browser Internet all'applicazione.|  
-|Funzionalità multitasking|<xref:System.ComponentModel.BackgroundWorker>|Viene consentita l'esecuzione di operazioni elaborate e lunghe in background su un thread diverso dal thread UI principale dell'applicazione.|  
-|Strumenti di supporto dell'interfaccia utente|<xref:System.Windows.Forms.ProgressBar>|Viene rappresentato graficamente lo stato di avanzamento di un'operazione fino al completamento.|  
-||<xref:System.Windows.Forms.ToolStripProgressBar>|Viene rappresentato graficamente lo stato di avanzamento di un'operazione fino al completamento.|  
-||<xref:System.Windows.Forms.SplitContainer>|Viene consentito all'utente di ridimensionare un controllo ancorato.|  
-||<xref:System.Windows.Forms.Timer>|Viene generato un evento a intervalli regolari.|  
-||<xref:System.Windows.Forms.ToolTip>|Viene visualizzato testo quando l'utente posiziona il puntatore su un altro controllo.|  
+|--------------|-------------|-----------------|  
+|Visualizzazione dei dati|Controllo <xref:System.Windows.Forms.DataGridView>|Il <xref:System.Windows.Forms.DataGridView> controllo fornisce una tabella personalizzabile per la visualizzazione dei dati. La <xref:System.Windows.Forms.DataGridView> classe consente la personalizzazione di celle, righe, colonne e i bordi. **Nota:** il <xref:System.Windows.Forms.DataGridView> controllo fornisce diverse funzionalità di base e avanzate che non sono presenti nel <xref:System.Windows.Forms.DataGrid> controllo. Per ulteriori informazioni, vedere [differenze tra il Windows Form controlli DataGridView e DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Spostamento e l'associazione dati|<xref:System.Windows.Forms.BindingSource>componente|Semplifica l'associazione dei controlli in un form ai dati, fornendo la gestione delle valute, la notifica delle modifiche e altri servizi.|  
+||Controllo <xref:System.Windows.Forms.BindingNavigator>|Fornisce un'interfaccia di tipo barra degli strumenti per esplorare e modificare i dati in un form.|  
+|Modifica del testo|Controllo <xref:System.Windows.Forms.TextBox>|Visualizza il testo immesso in fase di progettazione che può essere modificato dagli utenti in fase di esecuzione, o modificata a livello di codice.|  
+||Controllo <xref:System.Windows.Forms.RichTextBox>|Consente il testo da visualizzare con formattazione in formato testo normale o RTF (RICH).|  
+||Controllo <xref:System.Windows.Forms.MaskedTextBox>|Vincola il formato dell'input utente|  
+|Visualizzazione di informazioni (in sola lettura)|Controllo <xref:System.Windows.Forms.Label>|Viene visualizzato del testo che gli utenti non possono modificare direttamente.|  
+||Controllo <xref:System.Windows.Forms.LinkLabel>|Visualizza il testo come un collegamento ipertestuale e genera un evento quando l'utente fa clic sul testo speciale. In genere il testo è un collegamento a un'altra finestra o un sito Web.|  
+||Controllo <xref:System.Windows.Forms.StatusStrip>|Visualizza le informazioni di stato corrente dell'applicazione utilizzando un'area del frame, in genere nella parte inferiore di un form padre.|  
+||Controllo <xref:System.Windows.Forms.ProgressBar>|Visualizza lo stato corrente di un'operazione per l'utente.|  
+|Visualizzazione delle pagine Web|Controllo <xref:System.Windows.Forms.WebBrowser>|Consente all'utente di spostarsi tra le pagine Web all'interno del form.|  
+|Selezione da un elenco|Controllo <xref:System.Windows.Forms.CheckedListBox>|Visualizza un elenco di elementi, ognuno accompagnati da una casella di controllo di scorrimento.|  
+||Controllo <xref:System.Windows.Forms.ComboBox>|Visualizza un elenco a discesa di elementi.|  
+||Controllo <xref:System.Windows.Forms.DomainUpDown>|Visualizza un elenco di elementi di testo che gli utenti possono scorrere mediante i pulsanti su e giù.|  
+||Controllo <xref:System.Windows.Forms.ListBox>|Visualizza un elenco di elementi grafici (icone) e di testo.|  
+||Controllo <xref:System.Windows.Forms.ListView>|Visualizza gli elementi in una delle quattro diverse visualizzazioni. Le visualizzazioni includono solo testo, testo con icone piccole, il testo con icone grandi e una visualizzazione dettagli.|  
+||Controllo <xref:System.Windows.Forms.NumericUpDown>|Visualizza un elenco di numeri che agli utenti di scorrere con pulsanti su e giù.|  
+||Controllo <xref:System.Windows.Forms.TreeView>|Visualizza una raccolta gerarchica di oggetti del nodo che può essere costituita da testo con icone o caselle di controllo facoltative.|  
+|Visualizzazione grafica|Controllo <xref:System.Windows.Forms.PictureBox>|File di grafica consente di visualizzare, ad esempio le bitmap e icone, in un frame.|  
+|Archiviazione di grafica|Controllo <xref:System.Windows.Forms.ImageList>|Funge da repository per le immagini. <xref:System.Windows.Forms.ImageList>controlli e le immagini che contengono possono essere riutilizzate da un'applicazione al successivo.|  
+|Impostazione del valore|Controllo <xref:System.Windows.Forms.CheckBox>|Visualizza una casella di controllo e l'etichetta di testo. In genere utilizzato per impostare le opzioni.|  
+||Controllo <xref:System.Windows.Forms.CheckedListBox>|Visualizza un elenco di elementi, ognuno accompagnati da una casella di controllo di scorrimento.|  
+||Controllo <xref:System.Windows.Forms.RadioButton>|Visualizza un pulsante che può essere attivato o disattivata.|  
+||Controllo <xref:System.Windows.Forms.TrackBar>|Consente agli utenti di impostare i valori su una scala spostando "thumb" lungo la scala.|  
+|Impostazione della data|Controllo <xref:System.Windows.Forms.DateTimePicker>|Visualizza un calendario con interfaccia grafico per consentire agli utenti di selezionare una data o ora.|  
+||Controllo <xref:System.Windows.Forms.MonthCalendar>|Visualizza un calendario con interfaccia grafico per consentire agli utenti di selezionare un intervallo di date.|  
+|Finestre di dialogo|Controllo <xref:System.Windows.Forms.ColorDialog>|Consente di visualizzare la finestra di dialogo per la selezione colori che consente agli utenti di impostare il colore di un elemento di interfaccia.|  
+||Controllo <xref:System.Windows.Forms.FontDialog>|Visualizza una finestra di dialogo che consente agli utenti di impostare un tipo di carattere e i relativi attributi.|  
+||Controllo <xref:System.Windows.Forms.OpenFileDialog>|Visualizza una finestra di dialogo che consente agli utenti di individuare e selezionare un file.|  
+||Controllo <xref:System.Windows.Forms.PrintDialog>|Visualizza una finestra di dialogo che consente agli utenti di selezionare una stampante e impostare i relativi attributi.|  
+||Controllo <xref:System.Windows.Forms.PrintPreviewDialog>|Visualizza una finestra di dialogo che consente di visualizzare modalità un controllo <xref:System.Drawing.Printing.PrintDocument> componente apparirà in stampa.|  
+||Controllo <xref:System.Windows.Forms.FolderBrowserDialog>|Visualizza una finestra di dialogo che consente agli utenti di esplorare, creare e infine selezionare una cartella|  
+||Controllo <xref:System.Windows.Forms.SaveFileDialog>|Visualizza una finestra di dialogo che consente agli utenti di salvare un file.|  
+|Controlli menu|Controllo <xref:System.Windows.Forms.MenuStrip>|Consente di creare menu personalizzati. **Nota:** il <xref:System.Windows.Forms.MenuStrip> è progettato per sostituire il <xref:System.Windows.Forms.MainMenu> controllo.|  
+||Controllo <xref:System.Windows.Forms.ContextMenuStrip>|Crea i menu di scelta rapida personalizzato. **Nota:** il <xref:System.Windows.Forms.ContextMenuStrip> è progettato per sostituire il <xref:System.Windows.Forms.ContextMenu> controllo.|  
+|Comandi:|Controllo <xref:System.Windows.Forms.Button>|Avvia, arresta o interrompe un processo.|  
+||Controllo <xref:System.Windows.Forms.LinkLabel>|Visualizza il testo come un collegamento ipertestuale e genera un evento quando l'utente fa clic sul testo speciale. In genere il testo è un collegamento a un'altra finestra o un sito Web.|  
+||Controllo <xref:System.Windows.Forms.NotifyIcon>|Visualizza un'icona nell'area di notifica dello stato della barra delle applicazioni che rappresenta un'applicazione in esecuzione in background.|  
+||Controllo <xref:System.Windows.Forms.ToolStrip>|Consente di creare barre degli strumenti che può contenere un Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer o un aspetto personalizzato, con o senza temi e con supporto per l'overflow e il riordino degli elementi in fase di esecuzione. **Nota:** il <xref:System.Windows.Forms.ToolStrip> controllo è progettato per sostituire il <xref:System.Windows.Forms.ToolBar> controllo.|  
+|Guida dell'utente|<xref:System.Windows.Forms.HelpProvider>componente|Fornisce la Guida in linea o popup per i controlli.|  
+||<xref:System.Windows.Forms.ToolTip>componente|Fornisce una finestra popup che consente di visualizzare una breve descrizione dello scopo del controllo quando l'utente posiziona il puntatore del mouse sul controllo.|  
+|Raggruppamento di altri controlli.|Controllo <xref:System.Windows.Forms.Panel>|Consente di raggruppare un set di controlli in un frame senza etichetta, che è possibile scorrere.|  
+||Controllo <xref:System.Windows.Forms.GroupBox>|Su un frame non scorrevole con etichette, di raggruppare un set di controlli (ad esempio i pulsanti di opzione).|  
+||Controllo <xref:System.Windows.Forms.TabControl>|Fornisce una pagina a schede per l'organizzazione e l'accesso in modo efficiente gli oggetti raggruppati.|  
+||Controllo <xref:System.Windows.Forms.SplitContainer>|Fornisce due pannelli separati da una barra mobile. **Nota:** il <xref:System.Windows.Forms.SplitContainer> controllo è progettato per sostituire il <xref:System.Windows.Forms.Splitter> controllo.|  
+||Controllo <xref:System.Windows.Forms.TableLayoutPanel>|Viene illustrato un pannello il cui contenuto è dinamicamente disposto in una griglia composta di righe e colonne.|  
+||Controllo <xref:System.Windows.Forms.FlowLayoutPanel>|Rappresenta un pannello che imposta il layout del contenuto orizzontalmente o verticalmente in modo dinamico.|  
+|Audio|Controllo <xref:System.Media.SoundPlayer>|Riproduce file audio in formato WAV. Suoni possono essere caricati o riprodotto in modo asincrono.|  
   
-## Vedere anche  
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
+## <a name="superseded-controls-and-components-by-function"></a>Controlli e componenti dalla funzione sostituiti  
+  
+|Funzione|Controllo sostituito|Sostitutiva consigliata|  
+|--------------|------------------------|-----------------------------|  
+|Visualizzazione dei dati|<xref:System.Windows.Forms.DataGrid>|<xref:System.Windows.Forms.DataGridView>|  
+|Visualizzazione di informazioni (controlli di sola lettura)|<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
+|Controlli menu|<xref:System.Windows.Forms.ContextMenu>|<xref:System.Windows.Forms.ContextMenuStrip>|  
+||<xref:System.Windows.Forms.MainMenu>|<xref:System.Windows.Forms.MenuStrip>|  
+|Comandi:|<xref:System.Windows.Forms.ToolBar>|<xref:System.Windows.Forms.ToolStrip>|  
+||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
+|Layout del form|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

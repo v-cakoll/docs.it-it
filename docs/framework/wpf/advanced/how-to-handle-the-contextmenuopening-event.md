@@ -1,69 +1,71 @@
 ---
-title: "Procedura: gestire l&#39;evento ContextMenuOpening | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ContextMenuOpening (evento)"
+title: 'Procedura: gestire l''evento ContextMenuOpening'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 61048a8db67986c55e1a1b07d62d5142069dd63e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: gestire l&#39;evento ContextMenuOpening
-L'evento <xref:System.Windows.FrameworkElement.ContextMenuOpening> può essere gestito in un'applicazione per modificare un menu di scelta rapida esistente prima di visualizzare o eliminare il menu che sarebbe altrimenti visualizzato impostando la proprietà <xref:System.Windows.RoutedEventArgs.Handled%2A> su `true` nei dati dell'evento.  In genere, l'impostazione di <xref:System.Windows.RoutedEventArgs.Handled%2A> su `true` nei dati dell'evento consente di sostituire completamente il menu con un nuovo oggetto <xref:System.Windows.Controls.ContextMenu>, rendendo talvolta necessario l'annullamento dell'operazione e l'avvio di una nuova apertura.  Se si scrivono gestori per l'evento <xref:System.Windows.FrameworkElement.ContextMenuOpening>, è necessario tenere in considerazione eventuali problemi di temporizzazione tra un controllo <xref:System.Windows.Controls.ContextMenu> e il servizio responsabile dell'apertura e del posizionamento dei menu di scelta rapida per i controlli in genere.  In questo argomento vengono descritte alcune delle tecniche del codice per diversi scenari di apertura dei menu di scelta rapida e viene illustrato un caso in cui si verifica il problema della temporizzazione.  
+# <a name="how-to-handle-the-contextmenuopening-event"></a>Procedura: gestire l'evento ContextMenuOpening
+Il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento può essere gestito in un'applicazione per modificare un contesto menu esistente prima di visualizzare o eliminare il menu che sarebbe altrimenti visualizzato impostando il <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà `true` nei dati dell'evento. La ragione più comune per l'impostazione <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` dati dell'evento consiste nella sostituzione menu interamente con un nuovo <xref:System.Windows.Controls.ContextMenu> dell'oggetto, che talvolta richiede l'annullamento dell'operazione e avviare una nuova apertura. Se si scrivono i gestori per il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento, è necessario essere consapevoli dei problemi di temporizzazione tra un <xref:System.Windows.Controls.ContextMenu> controllo e il servizio è responsabile dell'apertura e la posizione del menu di scelta rapida per i controlli in generale. In questo argomento vengono illustrate alcune delle tecniche di codice per diversi menu di scelta rapida aprire scenari e viene illustrato un caso in cui il problema di temporizzazione entra in gioco.  
   
- Esistono molti scenari per la gestione dell'evento <xref:System.Windows.FrameworkElement.ContextMenuOpening>:  
+ Esistono diversi scenari per la gestione di <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento:  
   
--   Modifica delle voci di menu prima della visualizzazione.  
+-   Modificare le voci di menu prima della visualizzazione.  
   
--   Sostituzione di tutto il menu prima della visualizzazione.  
+-   Sostituire l'intero menu prima della visualizzazione.  
   
--   Eliminazione completa di qualsiasi menu di scelta rapida esistente e conseguente assenza di visualizzazione di menu di questo tipo.  
+-   Completamente l'eliminazione di qualsiasi menu di scelta rapida esistente e la visualizzazione non menu di scelta rapida.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-## Modifica delle voci di menu prima della visualizzazione  
- La modifica delle voci di menu esistenti è abbastanza semplice e si tratta probabilmente dello scenario più comune.  Tale operazione in genere viene eseguita per aggiungere o sottrarre opzioni del menu di scelta rapida in risposta alle informazioni sullo stato corrente dell'applicazione o a informazioni particolari sullo stato, disponibili come proprietà per l'oggetto in cui viene richiesto il menu di scelta rapida.  
+## <a name="adjusting-the-menu-items-before-display"></a>Modificare le voci di Menu prima della visualizzazione  
+ La regolazione delle voci di menu esistenti è piuttosto semplice e probabilmente lo scenario più comune. È possibile farlo per poter aggiungere o sottrarre opzioni del menu contestuale in risposta alle informazioni sullo stato corrente dell'applicazione o informazioni sullo stato determinato che sono disponibile come proprietà nell'oggetto in cui è richiesto il menu di scelta rapida.  
   
- La tecnica generale consiste nell'ottenere l'origine dell'evento, vale a dire il controllo specifico selezionato con un clic del pulsante destro del mouse, acquisendone la proprietà <xref:System.Windows.FrameworkElement.ContextMenu%2A>.  È possibile verificare la raccolta <xref:System.Windows.Controls.ItemsControl.Items%2A> per vedere quali sono le voci del menu di scelta rapida già presenti nel menu e successivamente aggiungere o rimuovere nuove voci appropriate <xref:System.Windows.Controls.MenuItem> dalla raccolta.  
+ La tecnica generale consiste nell'ottenere l'origine dell'evento, ovvero il controllo specifico selezionato, il <xref:System.Windows.FrameworkElement.ContextMenu%2A> proprietà da esso. In genere si desidera controllare il <xref:System.Windows.Controls.ItemsControl.Items%2A> insieme per visualizzare le voci del menu contestuale già esiste nel menu e quindi aggiungere o rimuovere new appropriato <xref:System.Windows.Controls.MenuItem> elementi a o dalla raccolta.  
   
  [!code-csharp[ContextMenuOpeningHandlers#AddItemNoHandle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#additemnohandle)]  
   
-## Sostituzione di tutto il menu prima della visualizzazione  
- La sostituzione di tutto il menu di scelta rapida rappresenta uno scenario alternativo.  Naturalmente, per rimuovere tutte le voci di un menu di scelta rapida esistente e aggiungerne di nuove iniziando dall'elemento zero è anche possibile utilizzare una variazione del codice precedente.  Tuttavia, l'approccio più intuitivo per sostituire tutte le voci del menu di scelta rapida consiste nel creare un nuovo oggetto <xref:System.Windows.Controls.ContextMenu>, popolarlo con delle voci, quindi impostare la proprietà <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName> di un controllo come un nuovo oggetto <xref:System.Windows.Controls.ContextMenu>.  
+## <a name="replacing-the-entire-menu-before-display"></a>Sostituire l'intero Menu prima della visualizzazione  
+ Uno scenario alternativo è se si desidera sostituire il menu contestuale intero. Naturalmente è possibile utilizzare anche una variante dell'esempio precedente, rimuovere tutti gli elementi di un menu di scelta rapida esistente e aggiungerne di nuovi, iniziando dall'elemento zero. Ma è l'approccio più intuitivo per sostituire tutte le voci di menu di scelta rapida per creare un nuovo <xref:System.Windows.Controls.ContextMenu>viene popolato con gli elementi e quindi impostare il <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> proprietà di un controllo che sarà il nuovo <xref:System.Windows.Controls.ContextMenu>.  
   
- Di seguito viene riportato il semplice codice di gestione per la sostituzione di un oggetto <xref:System.Windows.Controls.ContextMenu>.  Il codice fa riferimento a un metodo `BuildMenu` personalizzato, separato poiché viene chiamato da più di uno dei gestori di esempio.  
+ Ecco il codice del gestore semplice per la sostituzione di un <xref:System.Windows.Controls.ContextMenu>. Il codice fa riferimento a un oggetto personalizzato `BuildMenu` metodo separato perché viene chiamato da più di uno dei gestori di esempio.  
   
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceNoReopen](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacenoreopen)]  
   
  [!code-csharp[ContextMenuOpeningHandlers#BuildMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#buildmenu)]  
   
- Tuttavia, se si utilizza questo stile di gestore per <xref:System.Windows.FrameworkElement.ContextMenuOpening>, è possibile che si verifichi un problema di temporizzazione, se l'oggetto per cui si sta impostando <xref:System.Windows.Controls.ContextMenu> non dispone di un menu di scelta rapida preesistente.  Quando un utente fa clic con il pulsante destro del mouse su un controllo, viene generato un oggetto <xref:System.Windows.FrameworkElement.ContextMenuOpening> anche se quello esistente <xref:System.Windows.Controls.ContextMenu> è vuoto o null.  Tuttavia, in questo caso, qualsiasi nuovo oggetto <xref:System.Windows.Controls.ContextMenu> impostato per l'elemento di origine non può più essere visualizzato per motivi di tempo.  Inoltre, se l'utente fa nuovamente clic con il pulsante destro del mouse, questa volta viene visualizzato il nuovo oggetto <xref:System.Windows.Controls.ContextMenu>, il valore risulta diverso da null e il gestore sostituirà e visualizzerà correttamente il menu alla successiva esecuzione.  Ne conseguono due possibili soluzioni alternative:  
+ Tuttavia, se si utilizza questo stile di gestore per <xref:System.Windows.FrameworkElement.ContextMenuOpening>, è possibile esporre un problema di temporizzazione potenzialmente se l'oggetto a cui si sta impostando il <xref:System.Windows.Controls.ContextMenu> non dispone di un menu di scelta rapida preesistente. Quando un utente fa un controllo, <xref:System.Windows.FrameworkElement.ContextMenuOpening> viene generato anche se l'oggetto esistente <xref:System.Windows.Controls.ContextMenu> è vuoto o null. Ma in questo caso, qualsiasi nuovo <xref:System.Windows.Controls.ContextMenu> è impostata sull'origine elemento arriva troppo tardi per poter essere visualizzati. Inoltre, se l'utente a fare doppio clic su una seconda volta, questa volta, il nuovo <xref:System.Windows.Controls.ContextMenu> visualizzata, il valore è non null e il gestore correttamente sostituirà e visualizzare il menu quando il gestore esegue una seconda volta. Ciò suggerisce due possibili soluzioni:  
   
-1.  Assicurarsi che i gestori <xref:System.Windows.FrameworkElement.ContextMenuOpening> vengano sempre eseguiti in controlli che dispongono di almeno un oggetto <xref:System.Windows.Controls.ContextMenu> segnaposto che si desidera sostituire con il codice di gestione.  In questo caso, è ancora possibile utilizzare il gestore riportato nell'esempio precedente, assegnando tuttavia un oggetto <xref:System.Windows.Controls.ContextMenu> segnaposto nel markup iniziale:  
+1.  Assicurare che <xref:System.Windows.FrameworkElement.ContextMenuOpening> gestori sempre eseguiti in controlli che dispongono di almeno un segnaposto <xref:System.Windows.Controls.ContextMenu> disponibili, che si desidera essere sostituito con il codice del gestore. In questo caso, è comunque possibile utilizzare il gestore mostrato nell'esempio precedente, ma in genere si desidera assegnare un segnaposto <xref:System.Windows.Controls.ContextMenu> nel markup iniziale:  
   
-     [!code-xml[ContextMenuOpeningHandlers#XAMLWithInitCM](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
+     [!code-xaml[ContextMenuOpeningHandlers#XAMLWithInitCM](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
   
-2.  Si presupponga che il valore <xref:System.Windows.Controls.ContextMenu> iniziale sia null, in base a una logica preliminare.  È possibile controllare se l'oggetto <xref:System.Windows.Controls.ContextMenu> è null o utilizzare un flag all'interno del codice per verificare se il gestore è stato eseguito almeno una volta.  Dal momento che si presuppone che l'oggetto <xref:System.Windows.Controls.ContextMenu> stia per essere visualizzato, il gestore utilizzato imposta <xref:System.Windows.RoutedEventArgs.Handled%2A> su `true` nei dati dell'evento.  Per l'oggetto <xref:System.Windows.Controls.ContextMenuService> responsabile della visualizzazione del menu di scelta rapida, un valore `true` per <xref:System.Windows.RoutedEventArgs.Handled%2A> nei dati dell'evento rappresenta una richiesta di annullamento della visualizzazione della combinazione menu di scelta rapida\/controllo che ha generato l'evento.  
+2.  Si supponga che iniziale <xref:System.Windows.Controls.ContextMenu> valore potrebbe essere null, in base a logica preliminare. È possibile archiviarla <xref:System.Windows.Controls.ContextMenu> è null o utilizzare un flag nel codice per verificare se il gestore è stato eseguito almeno una volta. Poiché è presupporre che il <xref:System.Windows.Controls.ContextMenu> sta per essere visualizzato, il gestore, quindi imposta <xref:System.Windows.RoutedEventArgs.Handled%2A> per `true` nei dati dell'evento. Per il <xref:System.Windows.Controls.ContextMenuService> responsabile per la visualizzazione del menu contesto, un `true` valore per <xref:System.Windows.RoutedEventArgs.Handled%2A> nell'evento dati rappresentano una richiesta per annullare la visualizzazione per il menu di scelta rapida della combinazione / controllo che ha generato l'evento.  
   
- Dopo aver eliminato il menu di scelta rapida potenzialmente sospetto, il passaggio successivo consiste nella creazione di un nuovo menu e nella relativa visualizzazione.  L'impostazione di un nuovo menu è fondamentalmente uguale al gestore precedente: viene compilato un nuovo oggetto <xref:System.Windows.Controls.ContextMenu>, che sarà utilizzato per impostare la proprietà <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName> dell'origine del controllo.  Il passaggio aggiuntivo consiste nel forzare a questo punto la visualizzazione del menu di scelta rapida, in quanto il primo tentativo è stato evitato.  Per forzare la visualizzazione, impostare la proprietà <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=fullName> su `true` all'interno del gestore.  Prestare attenzione all'esecuzione di questa operazione, poiché l'apertura del menu di scelta rapida nel gestore genera nuovamente l'evento <xref:System.Windows.FrameworkElement.ContextMenuOpening>.  Se si accede nuovamente al gestore, l'evento diventa ricorsivo all'infinito.  Pertanto, è necessario sempre verificare la presenza di un valore `null` o utilizzare un flag quando si apre un menu di scelta rapida dall'interno di un gestore eventi <xref:System.Windows.FrameworkElement.ContextMenuOpening>.  
+ Dopo aver eliminato il menu contestuale potenzialmente sospetti, il passaggio successivo consiste nel fornire uno nuovo, quindi visualizzarlo. L'impostazione di un nuovo menu è fondamentalmente lo stesso gestore precedente: si crea un nuovo <xref:System.Windows.Controls.ContextMenu> e impostare l'origine di controllo <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> proprietà con esso. Il passaggio aggiuntivo è che ora è necessario forzare la visualizzazione del menu di scelta rapida, perché è stata eliminata al primo tentativo. Per forzare la visualizzazione, impostare il <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=nameWithType> proprietà `true` all'interno del gestore. Prestare attenzione quando si esegue questa operazione, poiché aprendo il menu di scelta rapida nel gestore genera il <xref:System.Windows.FrameworkElement.ContextMenuOpening> nuovo evento. Se si accede nuovamente al gestore, diventa all'infinito ricorsiva. È per questo motivo è sempre necessario verificare la presenza di `null` o utilizzare un flag, se si apre un menu di scelta rapida dall'interno un <xref:System.Windows.FrameworkElement.ContextMenuOpening> gestore dell'evento.  
   
-## Eliminazione di tutti i menu di scelta rapida esistenti e conseguente assenza di visualizzazione di menu di questo tipo  
- Lo scenario finale, vale a dire la scrittura di un gestore che elimina completamente un menu è insolito.  Se un controllo specifico non è destinato alla visualizzazione di un menu di scelta rapida, esistono altre modalità più appropriate per assicurare che questa situazione non si verifichi, rispetto all'eliminazione del menu nel momento in cui un utente lo richiede.  Se tuttavia si desidera utilizzare il gestore per eliminare un menu di scelta rapida senza visualizzare nulla, il gestore deve semplicemente impostare <xref:System.Windows.RoutedEventArgs.Handled%2A> su `true` nei dati dell'evento.  L'oggetto <xref:System.Windows.Controls.ContextMenuService> responsabile della visualizzazione di un menu di scelta rapida verificherà i dati evento dell'evento generato sul controllo.  Se l'evento è stato contrassegnato come <xref:System.Windows.RoutedEventArgs.Handled%2A> in un punto della route, l'azione di apertura del menu di scelta rapida che ha iniziato l'evento viene eliminata.  
+## <a name="suppressing-any-existing-context-menu-and-displaying-no-context-menu"></a>Eliminazione di qualsiasi menu di scelta rapida esistente e la visualizzazione di alcun menu di scelta rapida  
+ Nello scenario finale, scrivere un gestore che elimina completamente, un menu è comune. Se un determinato controllo non deve per visualizzare un menu di scelta rapida, sono disponibili modi più appropriati per assicurare che questa rispetto all'eliminazione del menu solo quando un utente lo richiede. Se si desidera utilizzare il gestore per eliminare un menu di scelta rapida senza visualizzare nulla, allora il gestore deve semplicemente impostare <xref:System.Windows.RoutedEventArgs.Handled%2A> per `true` nei dati dell'evento. Il <xref:System.Windows.Controls.ContextMenuService> che è responsabile della visualizzazione di un menu di scelta rapida controllerà i dati dell'evento dell'evento generato sul controllo. Se l'evento è stato contrassegnato come <xref:System.Windows.RoutedEventArgs.Handled%2A> in qualsiasi punto della route, quindi l'azione scelta rapida aprire che ha avviato l'evento è eliminata.  
   
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
-## Vedere anche  
- <xref:System.Windows.Controls.ContextMenu>   
- <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName>   
- [Cenni preliminari sugli elementi di base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)   
- [Cenni preliminari sull'oggetto ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Controls.ContextMenu>  
+ <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>  
+ [Cenni preliminari sugli elementi di base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [Panoramica sull'oggetto ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)

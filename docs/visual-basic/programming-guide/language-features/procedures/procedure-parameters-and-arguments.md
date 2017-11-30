@@ -1,81 +1,80 @@
 ---
-title: "Procedure Parameters and Arguments (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, arguments"
-  - "procedures, argument lists"
-  - "values, passing to procedures"
-  - "arguments [Visual Basic], passing"
-  - "procedures, parameters"
-  - "Visual Basic code, argument lists"
-  - "Visual Basic code, procedures"
-  - "parameters, Visual Basic procedures"
-  - "parameters, lists"
-  - "arguments [Visual Basic], Visual Basic procedures"
-  - "arguments [Visual Basic], procedures"
-  - "parameter lists"
-  - "Visual Basic code, parameter lists"
-  - "argument lists"
-  - "procedures, parameter lists"
+title: Parametri e argomenti delle routine (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], argument lists
+- values [Visual Basic], passing to procedures
+- arguments [Visual Basic], passing
+- procedures [Visual Basic], parameters
+- Visual Basic code, argument lists
+- Visual Basic code, procedures
+- parameters [Visual Basic], Visual Basic procedures
+- parameters [Visual Basic], lists
+- arguments [Visual Basic], Visual Basic procedures
+- arguments [Visual Basic], procedures
+- parameter lists [Visual Basic]
+- Visual Basic code, parameter lists
+- argument lists [Visual Basic]
+- procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedure Parameters and Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Nella maggior parte dei casi una routine richiede alcune informazioni sulle circostanze in cui è stata chiamata.  Una routine che esegue attività ripetute o condivise utilizza informazioni diverse per ogni chiamata.  Tali informazioni sono costituite da variabili, costanti ed espressioni passate alla routine al momento della chiamata.  
+# <a name="procedure-parameters-and-arguments-visual-basic"></a>Parametri e argomenti delle routine (Visual Basic)
+Nella maggior parte dei casi, una stored procedure richiede alcune informazioni sulle circostanze in cui è stato chiamato. Una routine che esegue attività ripetute o condivise utilizza informazioni diverse per ogni chiamata. Queste informazioni è costituito da variabili, costanti ed espressioni che viene passato alla routine quando viene chiamato.  
   
- Un *parametro* rappresenta un valore da fornire alla routine al momento della chiamata.  La dichiarazione della routine ne definisce i parametri.  
+ Oggetto *parametro* rappresenta un valore che la procedura prevede di specificare quando viene chiamato. La dichiarazione della routine definisce i parametri.  
   
- È possibile definire una routine senza parametri oppure con uno o più parametri.  La parte della definizione della routine in cui sono specificati i parametri è denominata *elenco di parametri*.  
+ È possibile definire una routine con senza parametri, un parametro di uno o più. La parte della definizione della routine che specifica i parametri viene chiamata il *elenco parametri*.  
   
- Un *argomento* rappresenta il valore fornito al parametro di una routine quando quest'ultima viene chiamata.  Gli argomenti vengono forniti dal codice chiamante al momento della chiamata.  La parte della chiamata di routine in cui sono specificati gli argomenti è definita *elenco di argomenti*.  
+ Un *argomento* rappresenta il valore fornito per un parametro di routine quando si chiama la routine. Il codice chiamante fornisce gli argomenti quando viene chiamata la procedura. La parte della chiamata di routine che specifica gli argomenti viene chiamata il *elenco di argomenti*.  
   
- Nell'illustrazione riportata di seguito è rappresentato il codice che chiama la routine `safeSquareRoot` da due posizioni diverse.  Nella prima chiamata il valore della variabile `x` \(4.0\) viene passato al parametro `number`, quindi il valore restituito in `root` \(2.0\) viene assegnato alla variabile `y`.  Nella seconda chiamata il valore letterale 9.0 viene passato a `number`, quindi il valore restituito \(3.0\) viene assegnato alla variabile `z`.  
+ La figura seguente illustra la procedura di chiamata del codice `safeSquareRoot` da due posizioni diverse. La prima chiamata passa il valore della variabile `x` (4.0) per il parametro `number`e il valore restituito in `root` (2.0) viene assegnato alla variabile `y`. La seconda chiamata passa il valore letterale 9.0 per `number`e assegna il valore restituito (3.0) variabile `z`.  
   
- ![Diagramma grafico del passaggio di un argomento a un parametro](../../../../visual-basic/programming-guide/language-features/procedures/media/parametersargue.gif "ParametersArgue")  
-Passaggio di un argomento a un parametro  
+ ![Diagramma grafico del passaggio di argomento al parametro](./media/parametersargue.gif "ParametersArgue")  
+Passa un argomento a un parametro  
   
- Per ulteriori informazioni, vedere [Differences Between Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  
+ Per ulteriori informazioni, vedere [le differenze tra parametri e argomenti](./differences-between-parameters-and-arguments.md).  
   
-## Tipo di dati dei parametri  
- La definizione di un tipo di dati per un parametro avviene mediante la specifica della clausola `As` nella relativa dichiarazione.  La funzione che segue, ad esempio, accetta una stringa e un Integer.  
+## <a name="parameter-data-type"></a>Tipo di dati di parametro  
+ Si definisce un tipo di dati per un parametro utilizzando il `As` clausola nella relativa dichiarazione. Ad esempio, la funzione seguente accetta una stringa e un numero intero.  
   
  [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
- Se l'opzione di controllo dei tipi \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) è `Off,` la clausola `As` è facoltativa, a meno che non venga utilizzata da qualche parametro e di conseguenza debba essere utilizzata da tutti i parametri.  Se il controllo dei tipi è `On`, la clausola `As` è obbligatoria per tutti i parametri di routine.  
+ Se il controllo dei tipi passa ([istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) è `Off,` il `As` clausola è facoltativa, ad eccezione del fatto che un qualsiasi parametro utilizzata da tutti i parametri devono essere utilizzata. Il controllo di tipo `On`, `As` clausola è obbligatoria per tutti i parametri di stored procedure.  
   
- Se il codice chiamante prevede la specifica di un argomento con un tipo di dati diverso da quello del parametro corrispondente, ad esempio `Byte` a un parametro `String`, deve eseguire una delle seguenti operazioni:  
+ Se il codice chiamante prevede di fornire un argomento con un tipo di dati diverso da quello del parametro corrispondente, come `Byte` per un `String` parametro, è necessario eseguire una delle operazioni seguenti:  
   
--   Specificare solo argomenti con tipi di dati che vengano convertiti nel tipo di dati più grande del parametro corrispondente.  
+-   Specificare solo gli argomenti con i tipi di dati che vengono ampliati al tipo di dati del parametro.  
   
--   Impostare `Option Strict Off` in modo da consentire conversioni implicite in tipi di dati più piccoli.  
+-   Impostare `Option Strict Off` per consentire conversioni implicite verso un; o  
   
--   Oppure utilizzare una parola chiave di conversione per convertire in modo esplicito il tipo di dati.  
+-   Utilizzare una parola chiave di conversione per convertire esplicitamente il tipo di dati.  
   
-### Parametri di tipo  
- Una *routine generica* definisce inoltre uno o più *parametri di tipo* oltre ai normali parametri.  Una routine generica consente al codice chiamante di passare tipi di dati diversi ogni volta che chiama la routine, in modo che i tipi di dati possano essere adattati ai requisiti di ciascuna singola chiamata.  Per informazioni, vedere [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+### <a name="type-parameters"></a>Parametri di tipo  
+ Oggetto *routine generica* definisce anche una o più *parametri di tipo* oltre ai normali parametri. Una routine generica consente al codice chiamante passare i tipi di dati diversi ogni volta che viene chiamata la routine, in modo che la possibilità di personalizzare i tipi di dati per i requisiti di ogni singola chiamata. Vedere [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
-## Vedere anche  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Routine Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Routine Property](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [How to: Define a Parameter for a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Routine](./index.md)  
+ [Routine Sub](./sub-procedures.md)  
+ [Routine Function](./function-procedures.md)  
+ [Routine Property](./property-procedures.md)  
+ [Routine di operatore](./operator-procedures.md)  
+ [Procedura: Definire un parametro per una routine](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)  
+ [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)  
+ [Overload della routine](./procedure-overloading.md)  
+ [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

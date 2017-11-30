@@ -1,41 +1,33 @@
 ---
-title: 'Procedura: modificare strutture ad albero di espressione (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: modificare alberi delle espressioni (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fb4e818eed7d6547e091c914d40b3ce87af59512
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 28a79a2dc8817a3fc6c7f3e2e01c1270d2981334
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>Procedura: modificare strutture ad albero di espressione (Visual Basic)
-In questo argomento viene illustrato come modificare un albero delle espressioni. Gli alberi delle espressioni non sono modificabili, il che significa che non può essere modificati direttamente. Per modificare un albero delle espressioni, è necessario creare una copia di una struttura esistente e quando si crea la copia, apportare le modifiche necessarie. È possibile utilizzare la <xref:System.Linq.Expressions.ExpressionVisitor>classe per attraversare una struttura esistente e copiare ogni nodo visitato.</xref:System.Linq.Expressions.ExpressionVisitor>  
+# <a name="how-to-modify-expression-trees-visual-basic"></a>Procedura: modificare alberi delle espressioni (Visual Basic)
+In questo argomento viene illustrato come modificare un albero delle espressioni. Gli alberi delle espressioni non sono modificabili, il che significa che non possono essere modificati direttamente. Per modificare un albero delle espressioni, è necessario creare una copia dell'albero esistente e solo in seguito apportare le modifiche necessarie. È possibile usare la classe <xref:System.Linq.Expressions.ExpressionVisitor> per attraversare un albero delle espressioni esistente e copiare ogni nodo visitato.  
   
 ### <a name="to-modify-an-expression-tree"></a>Per modificare un albero delle espressioni  
   
-1.  Creare un nuovo **applicazione Console** progetto.  
+1.  Creare un nuovo progetto **Applicazione console**.  
   
 2.  Aggiungere un `Imports` istruzione per il file per il `System.Linq.Expressions` dello spazio dei nomi.  
   
-3.  Aggiungere la `AndAlsoModifier` classe al progetto.  
+3.  Aggiungere la classe `AndAlsoModifier` al progetto.  
   
     ```vb  
     Public Class AndAlsoModifier  
@@ -61,11 +53,11 @@ In questo argomento viene illustrato come modificare un albero delle espressioni
     End Class  
     ```  
   
-     Questa classe eredita la <xref:System.Linq.Expressions.ExpressionVisitor>classe ed è specializzata per modificare le espressioni che rappresentano condizionale `AND` operations.</xref:System.Linq.Expressions.ExpressionVisitor> Queste operazioni vengono modificate da un'istruzione condizionale `AND` a un'istruzione condizionale `OR`. A tale scopo, la classe esegue l'override di <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A>metodo del tipo di base, poiché condizionale `AND` le espressioni sono rappresentate come espressioni binarie.</xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> Nel `VisitBinary` (metodo), se l'espressione che viene passato al metodo rappresenta un'istruzione condizionale `AND` operazione, il codice costruisce una nuova espressione che contiene il condizionale `OR` operatore anziché condizionale `AND` operatore. Se l'espressione che viene passato a `VisitBinary` non rappresenta un'istruzione condizionale `AND` operazione, il metodo rinvia all'implementazione della classe base. I metodi della classe base costruiscono nodi sono come le strutture ad albero dell'espressione viene passati, ma i nodi dispongono delle strutture sub sostituite con le strutture ad albero dell'espressione che sono generati in modo ricorsivo dal visitatore.  
+     La classe eredita la classe <xref:System.Linq.Expressions.ExpressionVisitor> ed è specializzata per modificare le espressioni che rappresentano operazioni `AND` condizionali. Modifica tali operazioni da un'operazione `AND` condizionale a un'operazione `OR` condizionale. A tale scopo, la classe esegue l'override del metodo <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> del tipo di base, perché le espressioni `AND` condizionali sono rappresentate come espressioni binarie. Se l'espressione che viene passata al metodo `VisitBinary` rappresenta un'operazione `AND` condizionale, il codice costruisce una nuova espressione che contiene l'operatore condizionale `OR` anziché l'operatore condizionale `AND`. Se l'espressione che viene passata a `VisitBinary` non rappresenta un'operazione `AND` condizionale, il metodo rimanda all'implementazione della classe base. I metodi della classe base costruiscono nodi uguali agli alberi delle espressione passati, ma i sottoalberi dei nodi vengono sostituiti con gli alberi delle espressioni che vengono generati in modo ricorsivo dal visitatore.  
   
 4.  Aggiungere un `Imports` istruzione per il file per il `System.Linq.Expressions` dello spazio dei nomi.  
   
-5.  Aggiungere codice per il `Main` metodo nel file Module1. vb per creare una struttura ad albero dell'espressione e passarla al metodo a cui verrà modificato in modo.  
+5.  Aggiungere codice per il `Main` metodo nel file Module1. vb per creare un albero delle espressioni e passarlo al metodo a cui è necessario modificarlo.  
   
     ```vb  
     Dim expr As Expression(Of Func(Of String, Boolean)) = _  
@@ -83,10 +75,10 @@ In questo argomento viene illustrato come modificare un albero delle espressioni
     ' name => ((name.Length > 10) || name.StartsWith("G"))  
     ```  
   
-     Il codice crea un'espressione che contiene un'istruzione condizionale `AND` operazione. Viene quindi creata un'istanza del `AndAlsoModifier` classe e viene passata l'espressione per il `Modify` metodo di questa classe. Per mostrare le modifiche restituite originale e le strutture ad albero dell'espressione modificata.  
+     Il codice crea un'espressione che contiene un'operazione `AND` condizionale. Viene quindi creata un'istanza della classe `AndAlsoModifier` e l'espressione viene passata al metodo `Modify` della classe. Sia l'albero delle espressioni originale che quello modificato vengono inclusi nell'output per illustrare le modifiche.  
   
 6.  Compilare l'applicazione ed eseguirla.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: eseguire alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
+ [Procedura: eseguire alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
  [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

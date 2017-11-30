@@ -1,39 +1,39 @@
 ---
-title: "Cenni preliminari sul controllo RichTextBox (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RichTextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "RichTextBox (controllo) [Windows Form], informazioni sul controllo RichTextBox"
-  - "caselle di testo, informazioni sulle caselle di testo"
+title: Cenni preliminari sul controllo RichTextBox (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RichTextBox
+helpviewer_keywords:
+- RichTextBox control [Windows Forms], about RichTextBox control
+- text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4278f569a789ca6e8466e0b8e71557446b63955e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul controllo RichTextBox (Windows Form)
-Il controllo <xref:System.Windows.Forms.RichTextBox> di Windows Form viene utilizzato per visualizzare, immettere e modificare testo formattato.  Oltre alle funzionalità offerte dal controllo <xref:System.Windows.Forms.TextBox>, il controllo <xref:System.Windows.Forms.RichTextBox> consente di visualizzare tipi di carattere, colori e collegamenti, caricare da un file un testo e immagini incorporate e trovare caratteri specificati.  Il controllo <xref:System.Windows.Forms.RichTextBox> viene generalmente utilizzato per fornire funzionalità di visualizzazione e modifica del testo simili a quelle offerte da programmi di elaborazione testi quali Microsoft Word.  Analogamente al controllo <xref:System.Windows.Forms.TextBox>, il controllo <xref:System.Windows.Forms.RichTextBox> è in grado di visualizzare barre di scorrimento. A differenza di <xref:System.Windows.Forms.TextBox>, tuttavia, consente di visualizzare per impostazione predefinita entrambe le barre di scorrimento, orizzontale e verticale, per le quali fornisce impostazioni aggiuntive.  
+# <a name="richtextbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo RichTextBox (Windows Form)
+Windows Form <xref:System.Windows.Forms.RichTextBox> controllo viene utilizzato per la visualizzazione, l'immissione e la modifica del testo con formattazione. Il <xref:System.Windows.Forms.RichTextBox> controllo esegue tutto il <xref:System.Windows.Forms.TextBox> dal controllo, ma può anche visualizzare i tipi di carattere, colori e collegamenti; caricare testo e immagini incorporate da un file; e trovare i caratteri specificati. Il <xref:System.Windows.Forms.RichTextBox> controllo viene in genere utilizzato per fornire funzionalità simili alle applicazioni di elaborazione di testi, ad esempio Microsoft Word di visualizzazione e modifica di testo. Come il <xref:System.Windows.Forms.TextBox> (controllo), il <xref:System.Windows.Forms.RichTextBox> controllo può visualizzare le barre di scorrimento; ma a differenza di <xref:System.Windows.Forms.TextBox> controllo, l'impostazione predefinita è per visualizzare le barre di scorrimento orizzontali e verticali in base alle necessità, e include impostazioni aggiuntive barra di scorrimento.  
   
-## Utilizzo del controllo RichTextBox  
- Come per il controllo <xref:System.Windows.Forms.TextBox>, il testo visualizzato viene impostato mediante la proprietà <xref:System.Windows.Forms.RichTextBox.Text%2A>.  Il controllo <xref:System.Windows.Forms.RichTextBox> è dotato di numerose proprietà per la formattazione del testo.  Per informazioni dettagliate su queste proprietà, vedere [Procedura: impostare gli attributi dei caratteri per il controllo RichTextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) e [Procedura: impostare rientri, rientri sporgenti e paragrafi puntati con il controllo RichTextBox Windows Form](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md).  Per la modifica dei file, i metodi <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> e <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> consentono di visualizzare e scrivere diversi formati di file, quali testo normale, testo normale Unicode e formato RTF \(Rich Text Format\).  Per un elenco dei formati di file supportati, vedere [Enumerazione RichTextBoxStreamType](frlrfSystemWindowsFormsRichTextBoxStreamTypeClassTopic).  È inoltre disponibile il metodo <xref:System.Windows.Forms.RichTextBox.Find%2A> per trovare stringhe di testo o caratteri specifici.  
+## <a name="working-with-the-richtextbox-control"></a>Utilizzo del controllo RichTextBox  
+ Come con la <xref:System.Windows.Forms.TextBox> , il testo visualizzato per impostare controllo, il <xref:System.Windows.Forms.RichTextBox.Text%2A> proprietà. Il <xref:System.Windows.Forms.RichTextBox> controllo è disponibili varie proprietà per formattare il testo. Per informazioni dettagliate su queste proprietà, vedere [Procedura: Impostare gli attributi dei caratteri per il controllo RichTextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) e [Procedura: Impostare rientri, rientri sporgenti e paragrafi puntati con il controllo RichTextBox Windows Form](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md). Per modificare i file, il <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> e <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> metodi è possono visualizzare e scrivere diversi formati di file, inclusi testo normale, testo normale Unicode e formato RTF (Rich Text). I formati di file possibili sono elencati <xref:System.Windows.Forms.RichTextBoxStreamType>. È possibile utilizzare il <xref:System.Windows.Forms.RichTextBox.Find%2A> metodo per trovare stringhe di testo o caratteri specifici.  
   
- Il controllo <xref:System.Windows.Forms.RichTextBox> può inoltre essere utilizzato per collegamenti ipertestuali, impostando la proprietà <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> su `true` e scrivendo del codice per gestire l'evento <xref:System.Windows.Forms.RichTextBox.LinkClicked>.  Per ulteriori informazioni, vedere [Procedura: visualizzare collegamenti ipertestuali con il controllo RichTextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md).  Per impedire la modifica totale o parziale da parte dell'utente del testo incluso nel controllo, impostare la proprietà <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> su `true`.  
+ È inoltre possibile utilizzare un <xref:System.Windows.Forms.RichTextBox> controllo per i collegamenti ipertestuali impostando il <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> proprietà `true` e la scrittura di codice per gestire il <xref:System.Windows.Forms.RichTextBox.LinkClicked> evento. Per altre informazioni, vedere [Procedura: Visualizzare collegamenti ipertestuali con il controllo RichTextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md). È possibile impedire che l'utente modifica totale o parziale del testo nel controllo impostando il <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> proprietà `true`.  
   
- In un controllo <xref:System.Windows.Forms.RichTextBox> è possibile annullare e ripristinare la maggior parte delle operazioni di modifica chiamando i metodi <xref:System.Windows.Forms.TextBoxBase.Undo%2A> e <xref:System.Windows.Forms.RichTextBox.Redo%2A>.  Il metodo <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> consente di determinare se l'ultima operazione annullata dall'utente può essere riapplicata al controllo.  
+ È possibile annullare e ripristinare la maggior parte delle operazioni di modifica in un <xref:System.Windows.Forms.RichTextBox> controllo chiamando la <xref:System.Windows.Forms.TextBoxBase.Undo%2A> e <xref:System.Windows.Forms.RichTextBox.Redo%2A> metodi. Il <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> metodo consente di determinare se l'ultima operazione annullata dall'utente possa essere riapplicata al controllo.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.RichTextBox>   
- [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)

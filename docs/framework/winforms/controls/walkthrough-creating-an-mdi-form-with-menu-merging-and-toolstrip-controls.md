@@ -1,222 +1,226 @@
 ---
-title: "Procedura dettagliata: creazione di un form MDI con unione di menu e controlli ToolStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI (form)"
-  - "MDI (form), creazione"
-  - "MDI (form), procedure dettagliate"
-  - "MDI, creazione di form"
-  - "form con interfaccia a documenti multipli"
-  - "barre degli strumenti [Windows Form]"
-  - "ToolStrip (controllo) [Windows Form]"
-  - "ToolStripPanel (controllo) [Windows Form]"
+title: 'Procedura dettagliata: creazione di un form MDI con unione di menu e controlli ToolStrip'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- toolbars [Windows Forms]
+- ToolStripPanel control [Windows Forms]
+- MDI [Windows Forms], creating forms
+- multiple document interface forms
+- MDI forms
+- ToolStrip control [Windows Forms]
+- MDI forms [Windows Forms], creating
+- MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bca5439f247951496d82c03b57ec1fa0e21a8271
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: creazione di un form MDI con unione di menu e controlli ToolStrip
-Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=fullName> supporta le applicazioni MDI \(Multiple Document Interface, interfaccia a documenti multipli\), mentre il controllo <xref:System.Windows.Forms.MenuStrip> supporta l'unione di menu.  I form MDI possono inoltre utilizzare i controlli <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedura dettagliata: creazione di un form MDI con unione di menu e controlli ToolStrip
+Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supporta le applicazioni MDI (Multiple Document Interface, interfaccia a documenti multipli), mentre il controllo <xref:System.Windows.Forms.MenuStrip> supporta l'unione di menu. I form MDI possono inoltre usare i controlli <xref:System.Windows.Forms.ToolStrip>.  
   
- In questa procedura dettagliata viene illustrato come utilizzare i controlli <xref:System.Windows.Forms.ToolStripPanel> con un form MDI.  Il form supporta anche l'unione di menu con i menu figlio.  Nella procedura dettagliata verranno illustrate le seguenti attività:  
+ Questa procedura dettagliata viene illustrato come utilizzare <xref:System.Windows.Forms.ToolStripPanel> controlli con un form MDI. Il form supporta anche l'unione dei menu con menu figlio. Nella procedura dettagliata vengono illustrate le attività seguenti:  
   
--   Creazione di un progetto Windows Form  
+-   Creazione di un progetto Windows Form.  
   
--   Creazione del menu principale del form.  Il nome effettivo del menu potrà variare  
+-   Creazione del menu principale per il modulo. Il nome effettivo del menu variano.  
   
--   Aggiunta del controllo <xref:System.Windows.Forms.ToolStripPanel> alla **Casella degli strumenti**  
+-   Aggiunta di <xref:System.Windows.Forms.ToolStripPanel> controllo il **della casella degli strumenti**.  
   
--   Creazione di un form figlio  
+-   Creazione di un form figlio.  
   
--   Disposizione dei controlli <xref:System.Windows.Forms.ToolStripPanel> in base all'ordine Z  
+-   Disposizione <xref:System.Windows.Forms.ToolStripPanel> controlli in base all'ordine z.  
   
- Al termine, si otterrà un form MDI che supporta l'unione dei menu e l'utilizzo di controlli <xref:System.Windows.Forms.ToolStrip> mobili.  
+ Al termine, sarà necessario un form MDI che supporta l'unione di menu e mobili <xref:System.Windows.Forms.ToolStrip> controlli.  
   
- Per copiare il codice nell'argomento corrente come un elenco singolo, vedere [Procedura: creare un form MDI con unione di menu e controlli ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+ Per copiare il codice in questo argomento come elenco singolo, vedere [procedura: creare un Form MDI con unione di Menu e controlli ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Prerequisiti  
- Per completare questa procedura dettagliata, è necessario disporre di quanto segue:  
+## <a name="prerequisites"></a>Prerequisiti  
+ Per completare questa procedura dettagliata, è necessario:  
   
--   Disporre di autorizzazioni sufficienti per creare ed eseguire progetti di applicazioni Windows Form sul computer sul quale è installato [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+-   Disporre di autorizzazioni sufficienti creare ed eseguire progetti di applicazione Windows Form nel computer in cui [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] è installato.  
   
-## Creazione del progetto  
- Il primo passaggio indica come creare il progetto e impostare il form.  
+## <a name="creating-the-project"></a>Creazione del progetto  
+ Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.  
   
-#### Per creare il progetto  
+#### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Creare un progetto Applicazione Windows denominato MdiForm.  
+1.  Creare un progetto applicazione Windows denominato **MDI**.  
   
-     Per ulteriori informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Per altre informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  In Progettazione Windows Form selezionare il form.  
+2.  In Progettazione Windows Form, selezionare il form.  
   
-3.  Nella finestra Proprietà impostare il valore della proprietà <xref:System.Windows.Forms.Form.IsMdiContainer%2A> su `true`.  
+3.  Nella finestra Proprietà impostare il valore della <xref:System.Windows.Forms.Form.IsMdiContainer%2A> a `true`.  
   
-## Creazione del menu principale  
- Il form MDI padre contiene il menu principale.  Il menu principale presenta un'unica voce di menu denominata **Finestra**,  che può essere utilizzata per creare form figlio.  Le voci di menu dei form figlio vengono unite nel menu principale.  
+## <a name="creating-the-main-menu"></a>Creazione del Menu principale  
+ Form padre MDI contiene il menu principale. Nel menu principale contiene una voce **finestra**. Con il **finestra** voce di menu, è possibile creare form figlio. Voci di menu da form figlio vengono unite nel menu principale.  
   
-#### Per creare il menu principale  
+#### <a name="to-create-the-main-menu"></a>Per creare menu principale  
   
-1.  Dalla **Casella degli strumenti** trascinare un controllo <xref:System.Windows.Forms.MenuStrip> nel form.  
+1.  Dal **della casella degli strumenti**, trascinare un <xref:System.Windows.Forms.MenuStrip> controllo nel form.  
   
-2.  Aggiungere un oggetto <xref:System.Windows.Forms.ToolStripMenuItem> al controllo <xref:System.Windows.Forms.MenuStrip> e denominarlo Finestra.  
+2.  Aggiungere un <xref:System.Windows.Forms.ToolStripMenuItem> per il <xref:System.Windows.Forms.MenuStrip> controllare e denominarlo **finestra**.  
   
-3.  Fare clic sul controllo <xref:System.Windows.Forms.MenuStrip>.  
+3.  Selezionare il controllo <xref:System.Windows.Forms.MenuStrip>.  
   
-4.  Nella finestra Proprietà impostare il valore della proprietà <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> su `ToolStripMenuItem1`.  
+4.  Nella finestra Proprietà impostare il valore della <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> proprietà `ToolStripMenuItem1`.  
   
-5.  Aggiungere un elemento secondario alla voce di menu **Finestra** e denominarlo Nuova.  
+5.  Aggiungere un elemento secondario per il **finestra** voce di menu e quindi nome dell'elemento secondario **New**.  
   
-6.  Nella finestra Proprietà fare clic su **Eventi**.  
+6.  Nella finestra Proprietà fare clic su **eventi**.  
   
-7.  Fare doppio clic sull'evento <xref:System.Windows.Forms.ToolStripItem.Click>.  
+7.  Fare doppio clic su di <xref:System.Windows.Forms.ToolStripItem.Click> evento.  
   
-     In Progettazione Windows Form verrà generato un gestore eventi per l'evento <xref:System.Windows.Forms.ToolStripItem.Click>.  
+     Progettazione Windows Form genera un gestore eventi per il <xref:System.Windows.Forms.ToolStripItem.Click> evento.  
   
-8.  Inserire il codice riportato di seguito nel gestore eventi.  
+8.  Inserire il codice seguente nel gestore eventi.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]  
   
-## Aggiunta del controllo ToolStripPanel alla Casella degli strumenti  
- Quando si utilizzano controlli <xref:System.Windows.Forms.MenuStrip> con un form MDI è necessario disporre del controllo <xref:System.Windows.Forms.ToolStripPanel>.  Per compilare il form MDI in Progettazione Windows Form occorre aggiungere il controllo <xref:System.Windows.Forms.ToolStripPanel> alla **Casella degli strumenti**.  
+## <a name="adding-the-toolstrippanel-control-to-the-toolbox"></a>Aggiunta del controllo ToolStripPanel alla casella degli strumenti  
+ Quando si utilizza <xref:System.Windows.Forms.MenuStrip> controlli con un form MDI è necessario disporre di <xref:System.Windows.Forms.ToolStripPanel> controllo. È necessario aggiungere il <xref:System.Windows.Forms.ToolStripPanel> controllo il **della casella degli strumenti** per compilare il form MDI in Progettazione Windows Form.  
   
-#### Per aggiungere il controllo ToolStripPanel alla Casella degli strumenti  
+#### <a name="to-add-the-toolstrippanel-control-to-the-toolbox"></a>Per aggiungere il controllo ToolStripPanel alla casella degli strumenti  
   
-1.  Aprire la **Casella degli strumenti** e scegliere la scheda **Tutti i Windows Form** per visualizzare i controlli Windows Form disponibili.  
+1.  Aprire il **della casella degli strumenti**e quindi fare clic su di **tutti i Windows Form** scheda per visualizzare i controlli Windows Form disponibili.  
   
-2.  Fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida, quindi scegliere **Scegli elementi**.  
+2.  Per aprire il menu di scelta rapida e scegliere **Scegli elementi**.  
   
-3.  Nella finestra di dialogo **Scegli elementi della Casella degli strumenti** scorrere in basso nella colonna **Nome** finché non viene individuato **ToolStripPanel**.  
+3.  Nel **Scegli elementi della casella degli strumenti** la finestra di dialogo, scorrere verso il basso il **nome** colonna fino a individuare **ToolStripPanel**.  
   
-4.  Selezionare la casella di controllo accanto a **ToolStripPanel**, quindi scegliere **OK**.  
+4.  Selezionare la casella di controllo da **ToolStripPanel**, quindi fare clic su **OK**.  
   
-     Il controllo <xref:System.Windows.Forms.ToolStripPanel> verrà visualizzato nella **Casella degli strumenti**.  
+     Il <xref:System.Windows.Forms.ToolStripPanel> verrà visualizzato un controllo di **della casella degli strumenti**.  
   
-## Creazione di un form figlio  
- In questa procedura verrà definita una classe separata per il form figlio con un proprio controllo <xref:System.Windows.Forms.MenuStrip>.  Le voci di menu di questo form vengono unite a quelle del form padre.  
+## <a name="creating-a-child-form"></a>Creazione di un Form figlio  
+ In questa procedura, definire una classe di form figlio separata che dispone di una propria <xref:System.Windows.Forms.MenuStrip> controllo. Le voci di menu per questo form vengono unite con quelle del form padre.  
   
-#### Per definire un form figlio  
+#### <a name="to-define-a-child-form"></a>Per definire un form figlio  
   
-1.  Aggiungere al progetto un nuovo form denominato `ChildForm`.  
+1.  Aggiungere un nuovo form denominato `ChildForm` al progetto.  
   
-     Per ulteriori informazioni, vedere [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/it-it/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+     Per ulteriori informazioni, vedere [procedura: aggiungere Windows Form a un progetto](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   
-2.  Dalla **Casella degli strumenti** trascinare un controllo <xref:System.Windows.Forms.MenuStrip> nel form figlio.  
+2.  Dal **della casella degli strumenti**, trascinare un <xref:System.Windows.Forms.MenuStrip> controllo nel form figlio.  
   
-3.  Fare clic sul glifo dello smart tag del controllo <xref:System.Windows.Forms.MenuStrip> \(![Glifo Smart Tag](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) e quindi selezionare **Modifica elementi**.  
+3.  Fare clic sul <xref:System.Windows.Forms.MenuStrip> glifo dello smart tag del controllo (![Smart Tag glifo](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), quindi selezionare **Modifica elementi**.  
   
-4.  Nella finestra di dialogo **Editor della raccolta Items** aggiungere un nuovo oggetto <xref:System.Windows.Forms.ToolStripMenuItem> denominato ChildMenuItem al menu figlio.  
+4.  Nel **Editor della raccolta Items** finestra di dialogo, aggiungere un nuovo <xref:System.Windows.Forms.ToolStripMenuItem> denominato **ChildMenuItem** al menu figlio.  
   
-     Per ulteriori informazioni, vedere [ToolStrip Items Collection Editor](http://msdn.microsoft.com/it-it/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
+     Per ulteriori informazioni, vedere [Editor raccolta Items di ToolStrip](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
   
-## Test del form  
+## <a name="testing-the-form"></a>Il modulo di test  
   
-#### Per eseguire il test del form  
+#### <a name="to-test-your-form"></a>Per verificare il modulo  
   
-1.  Premere F5 per compilare ed eseguire il form.  
+1.  Premere F5 per compilare ed eseguire il modulo.  
   
-2.  Scegliere **Nuovo** dal menu **Finestra**.  
+2.  Fare clic su di **finestra** voce di menu per aprire il menu e quindi fare clic su **New**.  
   
-     Nell'area client MDI del form verrà creato un nuovo form figlio.  Il menu del form figlio verrà unito al menu principale.  
+     Nell'area di client MDI del form, viene creato un nuovo form figlio. Menu del form figlio verrà unito nel menu principale.  
   
 3.  Chiudere il form figlio.  
   
-     Il menu del form figlio verrà rimosso dal menu principale.  
+     Menu del form figlio viene rimosso dal menu principale.  
   
-4.  Fare clic più volte su **Nuova**.  
+4.  Fare clic su **New** più volte.  
   
-     I form figlio verranno elencati automaticamente all'interno del menu **Finestra** perché viene assegnata la proprietà <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> del controllo <xref:System.Windows.Forms.MenuStrip>.  
+     I form figlio automaticamente sono elencati sotto la W**finestra** perché la voce del menu di <xref:System.Windows.Forms.MenuStrip> del controllo <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> proprietà viene assegnato.  
   
-## Aggiunta del supporto ToolStrip  
- In questa procedura verranno aggiunti quattro controlli <xref:System.Windows.Forms.ToolStrip> al form MDI padre.  Ciascun controllo <xref:System.Windows.Forms.ToolStrip> verrà aggiunto all'interno di un controllo <xref:System.Windows.Forms.ToolStripPanel>, ancorato al bordo del form.  
+## <a name="adding-toolstrip-support"></a>Aggiunta del supporto di ToolStrip  
+ In questa procedura, si aggiungeranno quattro <xref:System.Windows.Forms.ToolStrip> controlli al form padre MDI. Ogni <xref:System.Windows.Forms.ToolStrip> controllo viene aggiunto all'interno di un <xref:System.Windows.Forms.ToolStripPanel> controllo viene ancorato al bordo del form.  
   
-#### Per aggiungere controlli ToolStrip al form MDI padre  
+#### <a name="to-add-toolstrip-controls-to-the-mdi-parent-form"></a>Per aggiungere controlli ToolStrip al form padre MDI  
   
-1.  Dalla **Casella degli strumenti** trascinare un controllo <xref:System.Windows.Forms.ToolStripPanel> nel form.  
+1.  Dal **della casella degli strumenti**, trascinare un <xref:System.Windows.Forms.ToolStripPanel> controllo nel form.  
   
-2.  Dopo aver selezionato il controllo <xref:System.Windows.Forms.ToolStripPanel>, fare doppio clic sul controllo <xref:System.Windows.Forms.ToolStrip> nella **Casella degli strumenti**.  
+2.  Con il <xref:System.Windows.Forms.ToolStripPanel> controllo selezionato, fare doppio clic sul <xref:System.Windows.Forms.ToolStrip> controllo il **della casella degli strumenti**.  
   
-     Verrà creato un controllo <xref:System.Windows.Forms.ToolStrip> nel controllo <xref:System.Windows.Forms.ToolStripPanel>.  
+     Oggetto <xref:System.Windows.Forms.ToolStrip> controllo viene creato nel <xref:System.Windows.Forms.ToolStripPanel> controllo.  
   
-3.  Fare clic sul controllo <xref:System.Windows.Forms.ToolStripPanel>.  
+3.  Selezionare il controllo <xref:System.Windows.Forms.ToolStripPanel>.  
   
-4.  Nella finestra Proprietà impostare il valore della proprietà <xref:System.Windows.Forms.Control.Dock%2A> del controllo su <xref:System.Windows.Forms.DockStyle>.  
+4.  Nella finestra Proprietà modificare il valore del controllo <xref:System.Windows.Forms.Control.Dock%2A> proprietà <xref:System.Windows.Forms.DockStyle.Left>.  
   
-     Il controllo <xref:System.Windows.Forms.ToolStripPanel> verrà ancorato al bordo sinistro del form, al di sotto del menu principale.  L'area client MDI verrà ridimensionata per adattarla al controllo <xref:System.Windows.Forms.ToolStripPanel>.  
+     Il <xref:System.Windows.Forms.ToolStripPanel> controllare il controllo viene ancorato al lato sinistro del form, di sotto del menu principale. L'area client MDI viene ridimensionato il <xref:System.Windows.Forms.ToolStripPanel> controllo.  
   
 5.  Ripetere i passaggi da 1 a 4.  
   
-     Ancorare il nuovo controllo <xref:System.Windows.Forms.ToolStripPanel> alla parte superiore del form.  
+     Ancorare il nuovo <xref:System.Windows.Forms.ToolStripPanel> controllo nella parte superiore del form.  
   
-     Il controllo <xref:System.Windows.Forms.ToolStripPanel> verrà ancorato al di sotto del menu principale, ma a destra del primo controllo <xref:System.Windows.Forms.ToolStripPanel>.  Questo passaggio dimostra l'importanza dell'ordine Z per il corretto posizionamento dei controlli <xref:System.Windows.Forms.ToolStripPanel>.  
+     Il <xref:System.Windows.Forms.ToolStripPanel> controllo viene ancorato di sotto del menu principale, ma a destra del primo <xref:System.Windows.Forms.ToolStripPanel> controllo. Questo passaggio viene illustrata l'importanza dell'ordine z per il corretto posizionamento <xref:System.Windows.Forms.ToolStripPanel> controlli.  
   
-6.  Ripetere i passaggi da 1 a 4 per due o più controlli <xref:System.Windows.Forms.ToolStripPanel>.  
+6.  Ripetere i passaggi da 1 a 4 per altre due <xref:System.Windows.Forms.ToolStripPanel> controlli.  
   
-     Ancorare i nuovi controlli <xref:System.Windows.Forms.ToolStripPanel> al bordo destro e al bordo inferiore del form.  
+     Ancorare il nuovo <xref:System.Windows.Forms.ToolStripPanel> controlli a destra e inferiore del form.  
   
-## Disposizione dei controlli ToolStripPanel in base all'ordine Z  
- La posizione di un controllo <xref:System.Windows.Forms.ToolStripPanel> ancorato nel form MDI è determinata dalla posizione del controllo nell'ordine Z.  È possibile definire facilmente l'ordine Z dei controlli nella finestra Struttura documento.  
+## <a name="arranging-toolstrippanel-controls-by-z-order"></a>Disposizione dei controlli ToolStripPanel dall'ordine Z  
+ La posizione di un ancorato <xref:System.Windows.Forms.ToolStripPanel> controllo sul form MDI è determinato dalla posizione del controllo nell'ordine z. È possibile disporre facilmente l'ordine z dei controlli nella finestra Struttura documento.  
   
-#### Per disporre i controlli ToolStripPanel in base all'ordine Z  
+#### <a name="to-arrange-toolstrippanel-controls-by-z-order"></a>Per disporre i controlli ToolStripPanel dall'ordine Z  
   
-1.  Scegliere **Altre finestre** dal menu **Visualizza**, quindi fare clic su **Struttura documento**.  
+1.  Nel **vista** menu, fare clic su **altre finestre**, quindi fare clic su **struttura documento**.  
   
-     La disposizione dei controlli <xref:System.Windows.Forms.ToolStripPanel> ottenuta dalla procedura precedente non è quella standard,  perché l'ordine Z non è corretto.  Utilizzare la finestra Struttura documento per cambiare l'ordine Z dei controlli.  
+     La disposizione del <xref:System.Windows.Forms.ToolStripPanel> controlli della procedura precedente è conforme allo standard. In questo modo l'ordine z non è corretto. Utilizzare la finestra Struttura documento per modificare l'ordine z dei controlli.  
   
 2.  Nella finestra Struttura documento selezionare **ToolStripPanel4**.  
   
-3.  Fare clic ripetutamente sulla freccia verso il basso finché **ToolStripPanel4** non sarà spostato alla fine dell'elenco.  
+3.  Fare clic sul pulsante freccia in giù più volte, fino a **ToolStripPanel4** nella parte inferiore dell'elenco.  
   
-     Il controllo **ToolStripPanel4** verrà ancorato al bordo inferiore del form, al di sotto degli altri controlli.  
+     Il **ToolStripPanel4** controllo è ancorato alla parte inferiore del form, di sotto degli altri controlli.  
   
 4.  Selezionare **ToolStripPanel2**.  
   
-5.  Fare clic una sola volta sul pulsante della freccia in basso per collocare il controllo in terza posizione nell'elenco.  
+5.  Fare clic sul pulsante freccia in giù una volta per posizionare il controllo terzo nell'elenco.  
   
-     Il controllo **ToolStripPanel2** verrà ancorato al bordo superiore del form, al di sotto del menu principale e al di sopra degli altri controlli.  
+     Il **ToolStripPanel2** controllo viene ancorato alla parte superiore del modulo, di sotto del menu principale e di sopra degli altri controlli.  
   
-6.  Selezionare alcuni controlli nella finestra **Struttura documento** e spostarli in posizioni diverse nell'ordine Z.  Notare l'effetto dell'ordine Z sul posizionamento dei controlli ancorati.  Premere CTRL\-Z o scegliere **Annulla** dal menu **Modifica** per annullare le modifiche.  
+6.  Selezionare vari controlli di **struttura documento** finestra e spostarli in posizioni diverse nell'ordine z. Notare l'effetto dello z-order sul posizionamento dei controlli ancorati. Utilizzare CTRL-Z o **Annulla** sul **modifica** menu per annullare le modifiche.  
   
-## Verifica  
+## <a name="checkpoint"></a>Checkpoint  
   
-#### Per eseguire il test del form  
+#### <a name="to-test-your-form"></a>Per verificare il modulo  
   
-1.  Premere F5 per compilare ed eseguire il form.  
+1.  Premere F5 per compilare ed eseguire il modulo.  
   
-2.  Fare clic sul riquadro di ridimensionamento di un controllo <xref:System.Windows.Forms.ToolStrip> e trascinare il controllo in posizioni diverse sul form.  
+2.  Fare clic su riquadro di ridimensionamento di un <xref:System.Windows.Forms.ToolStrip> controllo e trascinare il controllo in diverse posizioni nel form.  
   
-     È possibile trascinare un controllo <xref:System.Windows.Forms.ToolStrip> da un controllo <xref:System.Windows.Forms.ToolStripPanel> all'altro.  
+     È possibile trascinare un <xref:System.Windows.Forms.ToolStrip> controllo da uno <xref:System.Windows.Forms.ToolStripPanel> controllo a un altro.  
   
-## Passaggi successivi  
- In questa procedura dettagliata è stato creato un form MDI padre con controlli <xref:System.Windows.Forms.ToolStrip> e unione di menu.  È possibile utilizzare la famiglia di controlli <xref:System.Windows.Forms.ToolStrip> per molte altre finalità:  
+## <a name="next-steps"></a>Passaggi successivi  
+ In questa procedura dettagliata creato un form padre MDI con <xref:System.Windows.Forms.ToolStrip> unione dei menu e controlli. È possibile utilizzare il <xref:System.Windows.Forms.ToolStrip> famiglia di controlli per molte altre operazioni:  
   
--   Creazione di menu di scelta rapida per i controlli con la classe <xref:System.Windows.Forms.ContextMenuStrip>.  Per ulteriori informazioni, vedere [Cenni preliminari sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+-   Creare menu di scelta rapida per i controlli con <xref:System.Windows.Forms.ContextMenuStrip>. Per ulteriori informazioni, vedere [Cenni preliminari sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   
--   Creazione di un form con un menu standard a compilazione automatica.  Per ulteriori informazioni, vedere [Procedura dettagliata: inserimento di voci di menu standard in un form](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
+-   Creare un form con un menu standard popolato automaticamente. Per ulteriori informazioni, vedere [procedura dettagliata: fornire le voci di Menu Standard a un Form](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Attribuzione di un aspetto professionale ai controlli <xref:System.Windows.Forms.ToolStrip>.  Per ulteriori informazioni, vedere [Procedura: impostare il renderer ToolStrip per un'applicazione](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
+-   Assegnare il <xref:System.Windows.Forms.ToolStrip> controlla un aspetto professionale. Per ulteriori informazioni, vedere [procedura: impostare il ToolStrip Renderer per un'applicazione](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
-## Vedere anche  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- [Procedura: creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Procedura: creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [Procedura: inserire un MenuStrip in un menu a discesa MDI](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [Procedura: Creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [Procedura: Inserire un MenuStrip in un menu a discesa MDI](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
  [Controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

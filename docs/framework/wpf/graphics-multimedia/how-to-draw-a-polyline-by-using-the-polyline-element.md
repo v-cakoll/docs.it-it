@@ -1,49 +1,52 @@
 ---
-title: "Procedura: disegnare una polilinea utilizzando l&#39;elemento polilinea | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "linee collegate"
-  - "disegno, polilinee"
-  - "grafica [WPF], polilinee"
-  - "linee, collegate (vedere polilinee)"
-  - "polilinee, disegno"
+title: 'Procedura: disegnare una polilinea utilizzando l''elemento polilinea'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connected lines [WPF]
+- polylines [WPF], drawing
+- graphics [WPF], polylines
+- lines [WPF], connected (see polylines)
+- drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5fa8cafdaf7856e95129f648da1d4b4ccb2f54eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: disegnare una polilinea utilizzando l&#39;elemento polilinea
-In questo esempio viene illustrato come disegnare una polilinea, ovvero una serie di righe collegate, utilizzando l'elemento <xref:System.Windows.Shapes.Polyline>.  
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Procedura: disegnare una polilinea utilizzando l'elemento polilinea
+In questo esempio viene illustrato come disegnare una polilinea, ovvero una serie di linee collegate, utilizzando il <xref:System.Windows.Shapes.Polyline> elemento.  
   
- Per disegnare una polilinea, creare un elemento <xref:System.Windows.Shapes.Polyline> e utilizzare la relativa proprietà <xref:System.Windows.Shapes.Polyline.Points%2A> per specificare i vertici della forma.  Infine, utilizzare le proprietà <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> per descrivere i contorni della polilinea perché una linea senza un tratto è invisibile.  
+ Per disegnare una polilinea, creare un <xref:System.Windows.Shapes.Polyline> elemento e utilizzare il relativo <xref:System.Windows.Shapes.Polyline.Points%2A> proprietà per specificare i vertici della forma. Infine, utilizzare il <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> per descrivere la polilinea spiegare perché una riga senza tratto è invisibile.  
   
 > [!NOTE]
->  Poiché l'elemento <xref:System.Windows.Shapes.Polyline> non è una forma chiusa, la proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> non produce effetti, anche se si chiudono intenzionalmente i contorni della forma.  Per creare una forma chiusa con una proprietà <xref:System.Windows.Shapes.Shape.Fill%2A>, utilizzare un elemento <xref:System.Windows.Shapes.Polygon>.  
+>  Poiché il <xref:System.Windows.Shapes.Polyline> l'elemento non è una forma chiusa, la <xref:System.Windows.Shapes.Shape.Fill%2A> proprietà ha effetto, anche se si chiude intenzionalmente il contorno della forma. Per creare una forma chiusa con un <xref:System.Windows.Shapes.Shape.Fill%2A>, utilizzare un <xref:System.Windows.Shapes.Polygon> elemento.  
   
- Nell'esempio riportato di seguito vengono disegnati due elementi <xref:System.Windows.Shapes.Polyline> all'interno di un oggetto <xref:System.Windows.Controls.Canvas>.  
+ Nell'esempio seguente disegna due <xref:System.Windows.Shapes.Polyline> elementi all'interno di un <xref:System.Windows.Controls.Canvas>.  
   
-## Esempio  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], la sintassi valida per i punti è un elenco delimitato da spazi di coppie di coordinate x e y separate da virgole.  
+## <a name="example"></a>Esempio  
+ In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], la sintassi valida per i punti di è un elenco delimitato da virgole di coppie di coordinate x e y separate da virgole.  
   
- [!code-xml[drawingwithshapeelements#PolylineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
+ [!code-xaml[drawingwithshapeelements#PolylineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
   
- Anche se in questo esempio viene utilizzato un oggetto <xref:System.Windows.Controls.Canvas> per contenere le polilinee, è possibile utilizzare elementi polilinea, e tutti gli altri elementi forma, con qualsiasi oggetto <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta contenuto non testuale.  
+ Sebbene questo esempio viene utilizzato un <xref:System.Windows.Controls.Canvas> per contenere la polilinea, è possibile utilizzare elementi polilinea (e tutti gli altri elementi forma) con qualsiasi <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta il contenuto non di testo.  
   
- Questo esempio è stato estratto da un esempio più ampio; per la versione completa, vedere [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037) \(la pagina potrebbe essere in inglese\).  
+ In questo esempio fa parte di un esempio più ampio; per l'esempio completo, vedere [esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## Vedere anche  
- <xref:System.Windows.Shapes.Polyline>   
- <xref:System.Windows.Shapes.Polygon>   
- <xref:System.Windows.Shapes.Shape>   
- [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Shapes.Polyline>  
+ <xref:System.Windows.Shapes.Polygon>  
+ <xref:System.Windows.Shapes.Shape>  
+ [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037)  
  [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)

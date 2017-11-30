@@ -1,262 +1,265 @@
 ---
-title: "Procedura dettagliata: creazione di un pulsante tramite Microsoft Expression Blend | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pulsanti"
-  - "conversione, forma in pulsante"
-  - "Expression Blend [Progettazione WPF]"
+title: 'Procedura dettagliata: creazione di un pulsante tramite Microsoft Expression Blend'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- buttons [WPF]
+- converting [WPF], shape to button
+- Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1371fdc3582e2ebe052442b15ecb2d5cf0b2865a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: creazione di un pulsante tramite Microsoft Expression Blend
-In questa procedura dettagliata vengono illustrate le varie fasi del processo di creazione di un pulsante personalizzato di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tramite Microsoft Expression Blend.  
+# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procedura dettagliata: creazione di un pulsante tramite Microsoft Expression Blend
+In questa procedura dettagliata è illustrato il processo di creazione di un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pulsante personalizzato mediante Microsoft Expression Blend.  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend funziona mediante la generazione di [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], compilato in modo da rendere eseguibile il programma.  Se si preferisce utilizzare direttamente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], esiste un'altra procedura dettagliata che consente di creare la stessa applicazione utilizzando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] con [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] anziché con Blend.  Per ulteriori informazioni, vedere [Creare un pulsante tramite XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md).  
+>  Microsoft Expression Blend funziona generando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] che viene quindi compilata per rendere il programma eseguibile. Se preferisce utilizzare [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] direttamente, è disponibile un'altra procedura dettagliata che viene creato utilizzando la stessa applicazione [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] con [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] anziché Blend. Vedere [creare un pulsante utilizzando il codice XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) per ulteriori informazioni.  
   
- Nella figura seguente viene illustrato il pulsante personalizzato che sarà creato.  
+ Nella figura seguente mostra il pulsante personalizzato che verrà creato.  
   
- ![Pulsante personalizzato che verrà creato](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.png "custom\_button\_blend\_Intro")  
+ ![Pulsante personalizzato che verrà creato](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
   
-## Convertire una forma in un pulsante  
- Nella prima parte di questa procedura verrà creato l'aspetto del pulsante personalizzato.  A tale scopo, è necessario innanzitutto convertire un rettangolo in un pulsante.  Aggiungere quindi altre forme al modello, creando un pulsante dall'aspetto più complesso.  All'inizio, è più opportuno cominciare con la personalizzazione di un pulsante standard.  Dal momento che un pulsante è dotato di funzionalità incorporate non necessarie, per i pulsanti personalizzati, è più semplice iniziare con un rettangolo.  
+## <a name="convert-a-shape-to-a-button"></a>Convertire una forma in un pulsante  
+ Nella prima parte di questa procedura dettagliata creare l'aspetto del pulsante personalizzato. A tale scopo, innanzitutto è necessario convertire un rettangolo a un pulsante. Aggiungere quindi altre forme per il modello del pulsante di creazione di un pulsante esaminando più complesso. Perché non dispone di un pulsante normale e personalizzare il report? Poiché un pulsante è una funzionalità integrata che non è necessaria; per i pulsanti personalizzati, è facile iniziare con un rettangolo.  
   
-#### Per creare un nuovo progetto con Expression Blend  
+#### <a name="to-create-a-new-project-in-expression-blend"></a>Per creare un nuovo progetto in Expression Blend  
   
-1.  Avviare Expression Blend.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, **Microsoft Expression**, quindi fare clic su **Microsoft Expression Blend**.  
+1.  Avviare Expression Blend. (Fare clic su **avviare**, scegliere **tutti i programmi**, scegliere **Microsoft Expression**, quindi fare clic su **Microsoft Expression Blend**.)  
   
-2.  Se necessario, ingrandire l'applicazione.  
+2.  Ottimizzare l'applicazione.  
   
 3.  Scegliere **Nuovo progetto** dal menu **File**.  
   
-4.  Selezionare **Applicazione standard \(.exe\)**.  
+4.  Selezionare **applicazione Standard (.exe)**.  
   
-5.  Assegnare al progetto il nome `Pulsante personalizzato`, quindi fare clic su **OK**.  
+5.  Denominare il progetto `CustomButton` e premere **OK**.  
   
- A questo punto è disponibile un progetto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] vuoto.  È possibile premere F5 per eseguire l'applicazione.  Come previsto, l'applicazione è costituita solo da una finestra vuota.  Successivamente, creare un rettangolo arrotondato e convertirlo in un pulsante.  
+ A questo punto si dispone di uno spazio vuoto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] progetto. È possibile premere F5 per eseguire l'applicazione. Come prevedibile, l'applicazione è costituita solo da una finestra vuota. Successivamente, creare un rettangolo arrotondato e convertirlo in un pulsante.  
   
-#### Convertire un rettangolo in un pulsante  
+#### <a name="to-convert-a-rectangle-to-a-button"></a>Per convertire un rettangolo a un pulsante  
   
-1.  **Impostare la proprietà Sfondo della finestra su nero:** Selezionare la finestra, fare clic su **Scheda proprietà** e impostare la proprietà <xref:System.Windows.Controls.Control.Background%2A> su `Black`.  
+1.  **Impostare la proprietà di sfondo della finestra su nero:** selezionare la finestra, fare clic su di **scheda proprietà**e impostare il <xref:System.Windows.Controls.Control.Background%2A> proprietà `Black`.  
   
-     ![Procedura di impostazione dello sfondo di un pulsante sul nero](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom\_button\_blend\_ChangeBackground")  
+     ![Come impostare lo sfondo di un pulsante sul nero](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")  
   
-2.  **Disegnare un rettangolo delle dimensioni di un pulsante della finestra:** selezionare lo strumento rettangolo dal pannello degli strumenti di sinistra e trascinarlo nella finestra.  
+2.  **Disegna un rettangolo approssimativamente alle dimensioni di un pulsante della finestra:** selezionare lo strumento rettangolo nel riquadro sinistro dello strumento e trascinare il rettangolo nella finestra.  
   
-     ![Procedura di disegno di un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom\_button\_blend\_DrawRect")  
+     ![Come disegnare un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")  
   
-3.  **Arrotondare gli angoli del rettangolo:** trascinare i punti di controllo del rettangolo o impostare direttamente le proprietà <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>.  Impostare i valori di <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> su 20.  
+3.  **Arrotondare gli angoli del rettangolo:** trascinare i punti di controllo del rettangolo oppure impostare direttamente la <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> proprietà. Impostare i valori di <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> a 20.  
   
-     ![Procedura di arrotondamento degli angoli di un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom\_button\_blend\_RoundCorners")  
+     ![Come rendere arrotondare gli angoli del rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")  
   
-4.  **Trasformare il rettangolo in un pulsante:** selezionare il rettangolo.  Scegliere **Crea pulsante** dal menu **Strumenti**.  
+4.  **Modificare il rettangolo in un pulsante:** selezionare il rettangolo. Nel **strumenti** menu, fare clic su **Crea pulsante**.  
   
-     ![Procedura di trasformazione di una forma in un pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom\_button\_blend\_MakeButton")  
+     ![Come convertire una forma in un pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")  
   
-5.  **Specificare l'ambito dello stile\/modello:** verrà visualizzata una finestra di dialogo.  
+5.  **Specificare l'ambito dello stile/modello:** verrà visualizzata una finestra di dialogo.  
   
-     ![Finestra di dialogo "Crea risorsa stile"](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom\_button\_blend\_MakeButton2")  
+     ![La finestra di dialogo "Crea risorsa stile"](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
-     Selezionare **Applica a tutti** per **Nome di risorsa \(chiave\)**.  In questo modo verranno applicati il modello e lo stile risultanti a tutti gli oggetti pulsante.  Scegliere **Applicazione** per **Definisci in**.  In questo modo il modello e lo stile risultanti saranno relativi all'intera applicazione.  Quando si impostano i valori in queste due caselle, il modello e lo stile del pulsante vengono applicati a tutti i pulsanti nell'intera applicazione e qualsiasi pulsante creato nell'applicazione utilizzerà questo modello per impostazione predefinita.  
+     Per **nome (chiave)**selezionare **applica a tutte**.  In questo modo il modello si applicano a tutti gli oggetti che sono disponibili pulsanti e lo stile risulta. Per **definire in**selezionare **applicazione**. In questo modo il modello all'intera applicazione e lo stile risultanti. Quando si impostano i valori in queste due caselle, il modello e stile del pulsante si applicano a tutti i pulsanti all'interno dell'intera applicazione e qualsiasi pulsante creato nell'applicazione, per impostazione predefinita, questo modello verrà utilizzato.  
   
-## Modificare il modello del pulsante  
- A questo punto si dispone di un rettangolo modificato in un pulsante.  In questa sezione è possibile modificare il modello del pulsante e personalizzarne ulteriormente l'aspetto.  
+## <a name="edit-the-button-template"></a>Modificare il modello di pulsante  
+ È ora un rettangolo che è stato modificato in un pulsante. In questa sezione sarà di modificare il modello del pulsante e di personalizzare l'aspetto.  
   
-#### Per modificare il modello del pulsante al fine di cambiarne l'aspetto.  
+#### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a>Per modificare il modello di pulsante per modificare l'aspetto del pulsante  
   
-1.  **Accedere alla visualizzazione di modifica del modello:** per personalizzare ulteriormente l'aspetto del pulsante, è necessario modificarne il modello.  Questo modello è stato creato al momento della conversione del rettangolo in pulsante.  Per modificare il modello del pulsante, fare clic con il pulsante destro del mouse e selezionare **Modifica parti di controllo \(modello\)**, quindi **Modifica modello**.  
+1.  **Passare alla visualizzazione di modifica del modello:** per personalizzare ulteriormente l'aspetto del pulsante, è necessario modificare il modello di pulsante. Questo modello è stato creato al momento della conversione del rettangolo in un pulsante. Per modificare il modello di pulsante, fare doppio clic sul pulsante e selezionare **Modifica parti del controllo (modello)** e quindi **modifica modello**.  
   
-     ![Procedura di modifica di un modello](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom\_button\_blend\_EditTemplate")  
+     ![Come modificare un modello](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")  
   
-     A questo punto, nell'editor modelli il pulsante è suddiviso in <xref:System.Windows.Shapes.Rectangle> e <xref:System.Windows.Controls.ContentPresenter>.  L'oggetto <xref:System.Windows.Controls.ContentPresenter> viene utilizzato per presentare il contenuto all'interno del pulsante \(ad esempio, la stringa "Pulsante"\).  Il rettangolo e l'oggetto <xref:System.Windows.Controls.ContentPresenter> vengono entrambi disposti all'interno di un oggetto <xref:System.Windows.Controls.Grid>.  
+     Nella finestra dell'editor dei modelli, si noti che il pulsante è ora suddiviso in un <xref:System.Windows.Shapes.Rectangle> e <xref:System.Windows.Controls.ContentPresenter>. Il <xref:System.Windows.Controls.ContentPresenter> viene utilizzato per presentare il contenuto all'interno del pulsante (ad esempio, la stringa "Pulsante"). Sia il rettangolo e <xref:System.Windows.Controls.ContentPresenter> sono posizionati all'interno di un <xref:System.Windows.Controls.Grid>.  
   
-     ![Componenti nella presentazione di un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom\_button\_blend\_TemplatePanel")  
+     ![I componenti nella presentazione di un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")  
   
-2.  **Modificare i nomi dei componenti del modello:** fare clic con il pulsante destro del mouse sul rettangolo nell'inventario dei modelli, modificare il nome <xref:System.Windows.Shapes.Rectangle> da "\[Rettangolo\]" a "Rettangolo esterno" e da "\[ContentPresenter\]" a "myContentPresenter".  
+2.  **Modificare i nomi dei componenti modello:** destro il rettangolo nell'inventario dei modelli, modifica il <xref:System.Windows.Shapes.Rectangle> nome da "[rettangolo]" a "Rettangolo esterno" e "[ContentPresenter]" in "myContentPresenter".  
   
-     ![Procedura di ridenominazione di un componente di un modello](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom\_button\_blend\_RenameComponents")  
+     ![Come rinominare un componente di un modello](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")  
   
-3.  **Modificare il rettangolo in modo che sia vuoto all'interno:** selezionare **Rettangolo esterno** e impostare <xref:System.Windows.Shapes.Shape.Fill%2A> su "Trasparente" e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> su 5.  
+3.  **Modificare il rettangolo in modo che sia vuoto all'interno di ():** selezionare **rettangolo esterno** e impostare <xref:System.Windows.Shapes.Shape.Fill%2A> su "Transparent" e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> a 5.  
   
-     ![Procedura per rendere vuoto un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom\_button\_blend\_ChangeRectProperties")  
+     ![Come rendere vuoto un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")  
   
-     Impostare <xref:System.Windows.Shapes.Shape.Stroke%2A> su un colore qualsiasi per il modello.  A tale scopo, fare clic sulla casella bianca accanto a **Stroke**, selezionare **Espressione personalizzata** e digitare "{TemplateBinding Background}" nella finestra di dialogo.  
+     Impostare quindi la <xref:System.Windows.Shapes.Shape.Stroke%2A> il colore di qualsiasi il modello sarà. A tale scopo, fare clic sulla casella bianca accanto a **tratto**selezionare **espressione personalizzata**, digitare "{TemplateBinding Background}" nella finestra di dialogo.  
   
-     ![Procedura di impostazione dell'uso del colore del modello](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom\_button\_blend\_TemplateStroke")  
+     ![Come impostare l'utilizzo il colore del modello](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")  
   
-4.  **Creare un rettangolo interno:** a questo punto, creare un altro rettangolo \(denominarlo "Rettangolo interno"\) e posizionarlo simmetricamente all'interno di **Rettangolo esterno**.  Per questo tipo di operazione, è preferibile ingrandire il pulsante nell'area di modifica.  
-  
-    > [!NOTE]
-    >  Il rettangolo potrebbe apparire diverso da quello nella figura \(ad esempio, potrebbe avere gli angoli arrotondati\).  
-  
-     ![Procedura di creazione di un rettangolo all'interno di un altro rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom\_button\_blend\_innerRectangleProperties")  
-  
-5.  **Spostare ContentPresenter all'inizio:** a questo punto è possibile che il testo "Pulsante" non risulterà più visibile  perché **Rettangolo interno** si trova sopra **myContentPresenter**.  Per risolvere il problema, trascinare **myContentPresenter** sotto **Rettangolo interno**.  Riposizionare i rettangoli e **myContentPresenter** per renderli simili a quelli riportati di seguito.  
+4.  **Creare un rettangolo interno:** a questo punto, creare un altro rettangolo (denominarlo "rettangolo interno") e posizionarlo simmetricamente all'interno di **rettangolo esterno** . Per questo tipo di lavoro, si desidererà probabilmente eseguire lo zoom per ingrandire il pulsante nell'area di modifica.  
   
     > [!NOTE]
-    >  In alternativa, è inoltre possibile posizionare **myContentPresenter** in alto facendo clic con il pulsante destro del mouse su di esso e premendo **Avvia inoltro**.  
+    >  Il rettangolo potrebbe apparire diverso rispetto a quello nella figura (ad esempio, potrebbe avere gli angoli arrotondati).  
   
-     ![Procedura di spostamento di un pulsante sopra un altro pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom\_button\_blend\_innerRectangle2")  
+     ![Come creare un rettangolo all'interno di un altro rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")  
   
-6.  **Modificare l'aspetto di Rettangolo interno:** impostare i valori <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> su 20.  In aggiunta, impostare <xref:System.Windows.Shapes.Shape.Fill%2A> sullo sfondo del modello mediante l'espressione personalizzata "{TemplateBinding Background}", quindi <xref:System.Windows.Shapes.Shape.Stroke%2A> su "trasparente".  Le impostazioni per gli oggetti <xref:System.Windows.Shapes.Shape.Fill%2A> e <xref:System.Windows.Shapes.Shape.Stroke%2A> di**Rettangolo interno** sono l'opposto di quelle per **Rettangolo esterno**.  
-  
-     ![Procedura di modifica dell'aspetto di un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom\_button\_blend\_glassRectangleProperties1")  
-  
-7.  **Sovrapporre un livello effetto cristallo:** l'ultima parte della personalizzazione dell'aspetto del pulsante consiste nell'aggiungere un effetto cristallo.  Questo effetto è costituito da un terzo rettangolo.  Poiché l'effetto cristallo ricopre l'intero pulsante, quest'ultimo rettangolo ha dimensioni simili a quelle di **Rettangolo esterno**.  Pertanto, è possibile creare un rettangolo mediante una semplice copia di **Rettangolo esterno**.  Evidenziare **Rettangolo esterno** e utilizzare CTRL\+C e CTRL\+V per eseguire una copia.  Denominare questo nuovo rettangolo "glassCube".  
-  
-8.  **Se necessario, riposizionare glassCube:**se **glassCube** non è già posizionato in modo da coprire l'intero pulsante, trascinarlo in posizione.  
-  
-9. **Conferire a glassCube una forma leggermente diversa rispetto a Rettangolo esterno:** modificare le proprietà di **glassCube**.  Iniziare impostando le proprietà <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> su 10 e l'oggetto <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> su 2.  
-  
-     ![Impostazioni dell'aspetto di glassCube](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom\_button\_blend\_GlassCubeAppearance")  
-  
-10. **Conferire a glassCube l'effetto cristallo:** impostare <xref:System.Windows.Shapes.Shape.Fill%2A> su un aspetto simile al vetro mediante una sfumatura lineare che sia opaca al 75% e che alterni i colori bianco e trasparente disposti in sei intervalli regolari.  Impostare i cursori sfumatura su:  
-  
-    -   Cursore sfumatura 1: bianco, con un valore alfa pari al 75%  
-  
-    -   Cursore sfumatura 2: trasparente  
-  
-    -   Cursore sfumatura 3: bianco, con un valore alfa pari al 75%  
-  
-    -   Cursore sfumatura 4: trasparente  
-  
-    -   Cursore sfumatura 5: bianco, con un valore alfa pari al 75%  
-  
-    -   Cursore sfumatura 6: trasparente  
-  
-     In questo modo viene creato un effetto cristallo "ondulato".  
-  
-     ![Rettangolo con effetto trasparente](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom\_button\_blend\_glassRectangleProperties2")  
-  
-11. **Nascondere lo strato di cristallo:** ora che è visibile l'aspetto dello strato di cristallo, accedere al **Riquadro aspetto** del **Pannello proprietà** e impostare l'Opacità allo 0% per nasconderlo.  Nelle sezioni successive verranno utilizzati trigger di proprietà e di eventi per visualizzare e modificare l'effetto cristallo.  
-  
-     ![Procedura per nascondere il rettangolo trasparente](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom\_button\_glassRectangleProperties3")  
-  
-## Personalizzare il comportamento del pulsante  
- A questo punto, è stata personalizzata la presentazione del pulsante modificandone il modello, ma ancora non è in grado di rispondere alle azioni dell'utente come un comune pulsante \(ad esempio, cambiando aspetto quando il mouse vi si trova sopra, quando riceve lo stato attivo o vi si fa clic\). Le due procedure che seguono descrivono come compilare comportamenti come questi nel pulsante personalizzato.  È opportuno iniziare con i trigger di proprietà semplici e aggiungere poi trigger di evento e animazioni.  
-  
-#### Per impostare i trigger di proprietà  
-  
-1.  **Creare un trigger di proprietà nuovo:** con l'elemento **glassCube** selezionato, fare clic su **\+ Proprietà** nel pannello **Trigger**  \(vedere la figura che segue il passaggio successivo\).  In questo modo viene creato un trigger di proprietà predefinito.  
-  
-2.  **Fare in modo che il trigger utilizzi la proprietà IsMouseOver:** modificare la proprietà in <xref:System.Windows.UIElement.IsMouseOver%2A>.  In questo modo è possibile attivare il trigger di proprietà quando la proprietà <xref:System.Windows.UIElement.IsMouseOver%2A> è `true` \(quando l'utente punta al pulsante con il mouse\).  
-  
-     ![Procedura di impostazione di un trigger su una proprietà](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom\_button\_blend\_IsMousedOverPropertyTrigger")  
-  
-3.  **IsMouseOver consente di attivare un'opacità del 100% per glassCube:** verrà visualizzato **Registrazione trigger attivata** \(vedere la figura precedente\).  Di conseguenza qualsiasi modifica apportata ai valori di proprietà di **glassCube** durante la registrazione diventa un'azione eseguita quando <xref:System.Windows.UIElement.IsMouseOver%2A> è `true`.  Durante la registrazione, modificare l'oggetto <xref:System.Windows.UIElement.Opacity%2A> di **glassCube** in 100%.  
-  
-     ![Procedura di impostazione dell'opacità di un pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom\_button\_blend\_IsMousedOverPropertyTrigger2")  
-  
-     È stato creato il primo trigger di proprietà.  Il **Pannello triggers**  dell'editor ha registrato che l'oggetto <xref:System.Windows.UIElement.Opacity%2A> è stato cambiato in 100%.  
-  
-     ![Pannello "Trigger"](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerinfo.png "custom\_button\_blend\_PropertyTriggerInfo")  
-  
-     Premere F5 per eseguire l'applicazione e allontanare o avvicinare il puntatore del mouse al pulsante.  È possibile vedere l'effetto cristallo comparire quando il mouse viene spostato sul pulsante e scomparire quando il puntatore se ne allontana.  
-  
-4.  **IsMouseOver consente di modificare il valore del tratto:** provare ora ad associare altre azioni al trigger <xref:System.Windows.UIElement.IsMouseOver%2A>.  Mentre la registrazione continua, spostare la selezione da **glassCube** a **Rettangolo esterno**.  Impostare l'oggetto <xref:System.Windows.Shapes.Shape.Stroke%2A> di **Rettangolo esterno** sull'espressione personalizzata di "{DynamicResource {x:Static SystemColors.HighlightBrushKey}}".  In questo modo viene impostato <xref:System.Windows.Shapes.Shape.Stroke%2A> sul colore di evidenziazione standard utilizzato dai pulsanti.  Premere F5 per visualizzare l'effetto quando si posiziona il puntatore del mouse sul pulsante.  
-  
-     ![Procedura di impostazione del tratto sul colore di evidenziazione](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom\_button\_blend\_IsMousedOverPropertyTrigger3")  
-  
-5.  **IsMouseOver consente di attivare il testo sfuocato:** provare ora ad associare un'altra azione al trigger di proprietà <xref:System.Windows.UIElement.IsMouseOver%2A>.  Rendere il contenuto del pulsante leggermente sfuocato quando vi viene sovrapposto l'effetto cristallo.  A tale scopo, è possibile applicare una sfocatura <xref:System.Windows.Media.Effects.BitmapEffect> a <xref:System.Windows.Controls.ContentPresenter> \(**myContentPresenter**\).  
-  
-     ![Procedura di sfocatura del contenuto di un pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom\_button\_blend\_PropertyTriggerWithBitMapEffect")  
+5.  **Spostare ContentPresenter nella parte superiore:** a questo punto, è possibile che il "Pulsante" testo non sarà più visibile. Se si tratta di questa operazione, infatti, **rettangolo interno** si trova sopra il **myContentPresenter**. Per risolvere questo problema, è possibile trascinare **myContentPresenter** sotto **rettangolo interno**. Riposizionare i rettangoli e **myContentPresenter** per un aspetto simile al seguente.  
   
     > [!NOTE]
-    >  Per ripristinare lo stato del **Pannello proprietà** a quello precedente l'operazione di ricerca dell'oggetto <xref:System.Windows.Media.Effects.BitmapEffect>, eliminare il testo dalla **Casella di ricerca**.  
+    >  In alternativa, è anche possibile posizionare **myContentPresenter** in primo piano facendo clic destro e premendo **inviare rollforward**.  
   
-     A questo punto, è stato utilizzato un trigger di proprietà con diverse azioni associate per creare un comportamento di evidenziazione in corrispondenza dell'entrata o uscita del puntatore del mouse dall'area del pulsante.  Un ulteriore comportamento tipico di un pulsante è quello di evidenziarsi quando dispone dello stato attivo \(ad esempio, dopo il clic\).  È possibile aggiungere questo comportamento mediante un altro trigger di proprietà della proprietà <xref:System.Windows.UIElement.IsFocused%2A>.  
+     ![Come spostare un pulsante sopra un altro pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")  
   
-6.  **Creare un trigger di proprietà per IsFocused:** utilizzando la stessa procedura di <xref:System.Windows.UIElement.IsMouseOver%2A> \(vedere il primo passaggio di questa sezione\), creare un altro trigger di proprietà per la proprietà <xref:System.Windows.UIElement.IsFocused%2A>.  Mentre **Registrazione trigger attivata**, aggiungere le seguenti azioni al trigger:  
+6.  **Modificare l'aspetto del rettangolo interno:** impostare il <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> valori a 20. Inoltre, impostare il <xref:System.Windows.Shapes.Shape.Fill%2A> allo sfondo del modello utilizzando l'espressione personalizzata "{TemplateBinding Background}") e impostare <xref:System.Windows.Shapes.Shape.Stroke%2A> su "transparent". Si noti che le impostazioni per il <xref:System.Windows.Shapes.Shape.Fill%2A> e <xref:System.Windows.Shapes.Shape.Stroke%2A> di **rettangolo interno** sono l'opposto di quelli per **rettangolo esterno**.  
   
-    -   **glassCube** ottiene un <xref:System.Windows.UIElement.Opacity%2A> del 100%.  
+     ![Come modificare l'aspetto di un rettangolo](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")  
   
-    -   **Rettangolo esterno** ottiene un valore dell'espressione personalizzata <xref:System.Windows.Shapes.Shape.Stroke%2A> di "{DynamicResource {x:Static SystemColors.HighlightBrushKey}}".  
+7.  **Aggiungere un effetto cristallo in primo piano:** nella parte finale della personalizzazione dell'aspetto del pulsante consiste nell'aggiungere un effetto cristallo in primo piano. Questo effetto cristallo è costituito da un rettangolo di terzo. Poiché l'effetto cristallo ricopre l'intero pulsante, il rettangolo con effetto cristallo è dimensioni simile al **rettangolo esterno**. Pertanto, creare un rettangolo da una semplice copia del **rettangolo esterno**. Evidenziare **rettangolo esterno** e utilizzare CTRL + C e CTRL + V per creare una copia. Denominare il nuovo rettangolo "glassCube".  
   
- L'aggiunta di animazioni al pulsante costituisce l'ultimo passaggio di questa procedura dettagliata.  Queste animazioni verranno attivate da eventi, in particolare dagli eventi <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.  
+8.  **Se necessario, riposizionare glassCube:** se **glassCube** è non è già posizionato in modo che copre l'intero pulsante, trascinarlo nella posizione desiderata.  
   
-#### Per utilizzare trigger di eventi e animazioni al fine di aggiungere l'interattività  
+9. **Assegnare glassCube una forma leggermente diversa rispetto a rettangolo esterno:** modificare le proprietà di **glassCube**. Iniziare impostando il <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> proprietà a 10 e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> a 2.  
   
-1.  **Creare un trigger di evento MouseEnter:** aggiungere un nuovo trigger di evento e selezionare <xref:System.Windows.UIElement.MouseEnter> come evento da utilizzare nel trigger.  
+     ![Le impostazioni dell'aspetto di glassCube](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")  
   
-     ![Procedura di creazione di un trigger per l'evento MouseEnter](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom\_button\_blend\_MouseOverEventTrigger")  
+10. **Conferire a glassCube trasparente:** impostare il <xref:System.Windows.Shapes.Shape.Fill%2A> su un aspetto utilizzando una sfumatura lineare che è opaca al 75% e alterna tra i colori bianco e trasparente oltre 6 circa in modo uniforme la spaziatura tra gli intervalli. Questo è il valore da impostare lo sfumatura:  
   
-2.  **Creare una sequenza temporale dell'animazione:** successivamente, associare una sequenza temporale dell'animazione all'evento <xref:System.Windows.UIElement.MouseEnter>.  
+    -   Cursore sfumatura 1: Bianco con un valore alfa pari al 75%  
   
-     ![Procedura di aggiunta di una sequenza temporale di animazione a un evento](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom\_button\_blend\_MouseOverEventTrigger2")  
+    -   Sfumatura 2: trasparente  
   
-     Una volta premuto **OK** per creare una nuova sequenza temporale, verrà visualizzato un **Pannello sequenza temporale** e "Registrazione sequenza temporale attiva" sarà visibile nel pannello di progettazione.  In tal modo è possibile avviare la registrazione delle modifiche alla proprietà nella sequenza temporale \(modifiche alla proprietà animata\).  
+    -   Cursore sfumatura 3: Bianco con un valore alfa pari al 75%  
+  
+    -   Sfumatura 4: trasparente  
+  
+    -   Cursore sfumatura 5: Bianco con un valore alfa pari al 75%  
+  
+    -   Sfumatura 6: trasparente  
+  
+     Crea un effetto cristallo "ondulata".  
+  
+     ![Un rettangolo con effetto cristallo](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")  
+  
+11. **Nascondere l'effetto cristallo:** ora che è il livello cristallo aspetto, analizzare il **riquadro aspetto** del **Pannello proprietà** e impostare l'opacità allo 0% per nasconderlo. Nelle sezioni successive, utilizzeremo i trigger di proprietà ed eventi per visualizzare e modificare l'effetto cristallo.  
+  
+     ![Come nascondere il rettangolo con effetto cristallo](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")  
+  
+## <a name="customize-the-button-behavior"></a>Personalizzare il comportamento del pulsante  
+ A questo punto, sono state personalizzate la presentazione del pulsante modificandone il modello, ma il pulsante non rispondere alle azioni dell'utente come pulsanti tipico (ad esempio, modifica dell'aspetto al passaggio del puntatore del mouse, riceve lo stato attivo e facendo clic su.) Le due procedure che seguono viene illustrato come compilare comportamenti come questi nel pulsante personalizzato. Si sarà iniziano con i trigger di proprietà semplice e quindi aggiungere trigger di evento e le animazioni.  
+  
+#### <a name="to-set-property-triggers"></a>Per impostare i trigger di proprietà  
+  
+1.  **Creare un nuovo trigger di proprietà:** con **glassCube** selezionato, fare clic su **+ proprietà** nel **trigger** pannello (vedere la figura che segue il passaggio successivo). Verrà creato un trigger di proprietà con un trigger di proprietà predefinito.  
+  
+2.  **Impostare la proprietà utilizzata dal trigger come IsMouseOver:** modificare la proprietà in <xref:System.Windows.UIElement.IsMouseOver%2A>. In questo modo, si attiva quando il trigger di proprietà di <xref:System.Windows.UIElement.IsMouseOver%2A> proprietà `true` (quando l'utente deve scegliere il pulsante con il mouse).  
+  
+     ![Come impostare un trigger su una proprietà](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")  
+  
+3.  **IsMouseOver consente di opacità del 100% per glassCube:** si noti che il **registrazione Trigger** (vedere la figura precedente). Ciò significa che le modifiche apportate ai valori della proprietà di **glassCube** mentre registrazione diventerà un'azione che ha luogo quando <xref:System.Windows.UIElement.IsMouseOver%2A> è `true`. Durante la registrazione, modificare il <xref:System.Windows.UIElement.Opacity%2A> di **glassCube** al 100%.  
+  
+     ![Come impostare l'opacità di un pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")  
+  
+     Il primo trigger di proprietà è stata creata. Si noti che il **pannello trigger** dell'editor ha registrato il <xref:System.Windows.UIElement.Opacity%2A> per essere modificato in 100%.  
+  
+     ![The "Triggers" panel](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerinfo.png "custom_button_blend_PropertyTriggerInfo")  
+  
+     Premere F5 per eseguire l'applicazione e spostare il puntatore del mouse su e disattivare il pulsante. Si dovrebbe essere visualizzato quando l'effetto cristallo del puntatore del mouse sul pulsante e quando il puntatore esce.  
+  
+4.  **Modifica del valore di tracciare IsMouseOver trigger:** consente di associare altre azioni con il <xref:System.Windows.UIElement.IsMouseOver%2A> trigger. Durante la registrazione continua, spostare la selezione da **glassCube** a **rettangolo esterno**. Impostare quindi la <xref:System.Windows.Shapes.Shape.Stroke%2A> di **rettangolo esterno** per l'espressione personalizzata di "{DynamicResource {X:Static SystemColors. HighlightBrushKey}}". Consente di impostare il <xref:System.Windows.Shapes.Shape.Stroke%2A> di evidenziazione standard utilizzato dai pulsanti di colore. Premere F5 per visualizzare l'effetto quando si passa il mouse su di esso.  
+  
+     ![Come impostare il tratto sul colore di evidenziazione](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")  
+  
+5.  **Testo sfocato IsMouseOver consente di:** possibile associare un'altra azione per il <xref:System.Windows.UIElement.IsMouseOver%2A> trigger di proprietà. Visualizzare il contenuto del pulsante leggermente sfocata quando viene visualizzato l'effetto cristallo su di esso. A tale scopo, è possibile applicare una sfocatura <xref:System.Windows.Media.Effects.BitmapEffect> per il <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).  
+  
+     ![Procedura di sfocatura del contenuto di un pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")  
   
     > [!NOTE]
-    >  Per visualizzare l'effetto, potrebbe essere necessario ridimensionare la finestra e\/o i pannelli.  
+    >  Per restituire il **Pannello proprietà** su quello che era prima l'operazione di ricerca per <xref:System.Windows.Media.Effects.BitmapEffect>, cancellare il testo dal **casella di ricerca**.  
   
-     ![Pannello della sequenza temporale](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom\_button\_blend\_MouseOverEventTrigger3")  
+     A questo punto, è stato utilizzato un trigger di proprietà con diverse azioni associate per creare il comportamento di evidenziazione per quando il puntatore del mouse entra ed esce dall'area del pulsante. È un altro comportamento tipico per un pulsante per evidenziare con lo stato attivo (come dopo il clic). È possibile aggiungere questo comportamento aggiungendo un altro trigger di proprietà per il <xref:System.Windows.UIElement.IsFocused%2A> proprietà.  
   
-3.  **Creare un fotogramma chiave:** per creare un'animazione, selezionare l'oggetto che si desidera animare, creare due o più fotogrammi chiave nella sequenza temporale e per ciascuno di essi impostare i valori di proprietà tra i quali si desidera interpolare l'animazione.  La figura seguente facilita la creazione di un fotogramma chiave.  
+6.  **Creare trigger di proprietà per IsFocused:** utilizzando la stessa procedura utilizzata per <xref:System.Windows.UIElement.IsMouseOver%2A> (vedere il primo passaggio di questa sezione), creare un altro trigger di proprietà per il <xref:System.Windows.UIElement.IsFocused%2A> proprietà. Mentre **registrazione Trigger**, aggiungere le seguenti azioni al trigger:  
   
-     ![Procedura di creazione di un fotogramma chiave](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom\_button\_blend\_MouseOverEventTrigger4")  
+    -   **glassCube** Ottiene un <xref:System.Windows.UIElement.Opacity%2A> del 100%.  
   
-4.  **Ridurre glassCube a questo fotogramma chiave:** con il secondo fotogramma selezionato, ridurre le dimensioni di **glassCube** al 90% delle dimensioni originali mediante **Trasformazione della dimensione** .  
+    -   **Rettangolo esterno** Ottiene un <xref:System.Windows.Shapes.Shape.Stroke%2A> valore espressione personalizzata di "{DynamicResource {X:Static SystemColors. HighlightBrushKey}}".  
   
-     ![Procedura di riduzione delle dimensioni di un pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom\_button\_blend\_SizeTransform")  
+ Come passaggio finale in questa procedura dettagliata, si aggiungerà le animazioni al pulsante. Le animazioni verranno attivate da eventi, in particolare, il <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventi.  
   
-     ‎Premere F5 per eseguire l'applicazione.  Spostare il puntatore del mouse sul pulsante.  Si noti che l'effetto cristallo si riduce alla parte superiore del pulsante.  
+#### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>Utilizzare i trigger di evento e le animazioni per aggiungere interattività  
   
-5.  **Creare un altro trigger di evento associandovi un'animazione diversa:** provare ora ad aggiungere un'altra animazione.  Utilizzare una procedura simile a quella usata per creare l'animazione del trigger di evento precedente:  
+1.  **Creare un Trigger di evento MouseEnter:** aggiungere un nuovo trigger di evento e selezionare <xref:System.Windows.UIElement.MouseEnter> dell'evento da utilizzare nel trigger.  
   
-    1.  Creare un nuovo trigger di evento mediante l'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.  
+     ![Come creare un trigger di evento MouseEnter](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")  
   
-    2.  Associare una nuova sequenza temporale con l'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.  
+2.  **Creare una sequenza temporale di animazione:** successivamente, associare una sequenza temporale di animazione per il <xref:System.Windows.UIElement.MouseEnter> evento.  
   
-     ![Procedura di creazione di una nuova sequenza temporale](../../../../docs/framework/wpf/controls/media/custom-button-blend-clickeventtrigger1.png "custom\_button\_blend\_ClickEventTrigger1")  
+     ![Come aggiungere una sequenza temporale di animazione a un evento](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")  
   
-    1.  Per questa sequenza temporale creare due fotogrammi chiave, il primo a 0,0 secondi, il secondo a 0,3.  
+     Dopo aver premuto **OK** per creare una nuova sequenza temporale, un **pannello della sequenza temporale** viene visualizzata e "Registrazione della sequenza temporale" è visibile nel Pannello di progettazione. Ciò significa che è possibile avviare la registrazione delle modifiche di proprietà nella sequenza temporale (proprietà animare modifiche).  
   
-    2.  Con il fotogramma chiave a 0,3 secondi evidenziato, impostare **Ruota l'angolo di trasformazione** su 360 gradi.  
+    > [!NOTE]
+    >  Potrebbe essere necessario ridimensionare la finestra e/o i pannelli per visualizzare la visualizzazione.  
   
-     ![Procedura di creazione di una trasformazione rotativa](../../../../docs/framework/wpf/controls/media/custom-button-blend-rotatetransform.gif "custom\_button\_blend\_RotateTransform")  
+     ![Il pannello della sequenza temporale](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")  
   
-    1.  ‎Premere F5 per eseguire l'applicazione.  Fare clic sul pulsante.  Si noti che l'effetto cristallo ruota.  
+3.  **Creare un fotogramma chiave:** per creare un'animazione, selezionare l'oggetto a cui si desidera aggiungere un'animazione, creare due o più fotogrammi chiave sulla sequenza temporale e per i fotogrammi chiave, impostare i valori di proprietà si desidera che l'animazione per interpolare tra. Nella figura seguente illustra la creazione di un fotogramma chiave.  
   
-## Conclusione  
- La creazione di un pulsante personalizzato è stata completata.  Questo è stato possibile utilizzando un modello di pulsante applicato a tutti i pulsanti dell'applicazione.  Se si esce dalla modalità di modifica modelli \(vedere la figura seguente\) e si creano più pulsanti, si noterà che l'aspetto e il comportamento saranno simili a quelli del pulsante personalizzato, piuttosto che di quello predefinito.  
+     ![Come creare un fotogramma chiave](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")  
   
- ![Modello di pulsante personalizzato](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "custom\_button\_blend\_ScopeUp")  
+4.  **Compattare glassCube in questo fotogramma chiave:** con il secondo fotogramma chiave selezionato, ridurre la dimensione del **glassCube** al 90% dell'intero con il **dimensioni trasformare**.  
   
- ![Più pulsanti che usano lo stesso modello](../../../../docs/framework/wpf/controls/media/custom-button-blend-createmultiplebuttons.png "custom\_button\_blend\_CreateMultipleButtons")  
+     ![Come ridurre le dimensioni di un pulsante](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")  
   
- ‎Premere F5 per eseguire l'applicazione.  Fare clic sui pulsanti e osservare come si comportino tutti allo stesso modo.  
+     Premere F5 per eseguire l'applicazione. Spostare il puntatore del mouse su di esso. Si noti che riduce l'effetto cristallo sopra il pulsante.  
   
- Tenere presente che durante la personalizzazione del modello la proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> di **Rettangolo interno** e quella <xref:System.Windows.Shapes.Shape.Stroke%2A> di **Rettangolo esterno** erano state impostate sullo sfondo del modello \({TemplateBinding Background}\).  Per questo motivo, quando si imposta il colore di sfondo dei singolo pulsanti, lo sfondo impostato verrà utilizzato per le rispettive proprietà.  Provare ora a sostituire gli sfondi.  Nelle figure seguenti, sono state utilizzate diverse sfumature.  Pertanto, sebbene un modello sia utile per la personalizzazione generale di controlli quali i pulsanti, è possibile modificare sia i controlli che i modelli al fine di renderli diversi gli uni dagli altri.  
+5.  **Creare un altro Trigger di evento e associare un'animazione diversa:** aggiungere un'altra animazione. Utilizzare una procedura simile a quella usata per creare l'animazione di trigger di evento precedente:  
   
- ![Pulsanti con lo stesso modello e aspetto diverso](../../../../docs/framework/wpf/controls/media/custom-button-blend-blendconclusion.png "custom\_button\_blend\_BlendConclusion")  
+    1.  Creare un nuovo evento trigger utilizzando il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
   
- In conclusione, nel processo di personalizzazione di un modello di pulsante è stato descritto come effettuare le operazioni seguenti in Microsoft Expression Blend:  
+    2.  Associare una nuova sequenza temporale con il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+  
+     ![Come creare una nuova sequenza temporale](../../../../docs/framework/wpf/controls/media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
+  
+    1.  Per questa sequenza temporale, creare due fotogrammi chiave, in secondi compreso tra 0,0 e la seconda 0,3 secondi.  
+  
+    2.  Con il fotogramma chiave 0,3 secondi evidenziato, impostare il **ruotare l'angolo di trasformazione** a 360 gradi.  
+  
+     ![Come creare una trasformazione rotativa](../../../../docs/framework/wpf/controls/media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
+  
+    1.  Premere F5 per eseguire l'applicazione. Fare clic sul pulsante. Si noti che l'effetto cristallo ruota.  
+  
+## <a name="conclusion"></a>Conclusione  
+ È stato completato un pulsante personalizzato. È stato fatto, questa operazione utilizzando un modello di pulsante che è stato applicato a tutti i pulsanti nell'applicazione. Se si esce dalla modalità di modifica modelli (vedere la figura seguente) e creare più pulsanti, si noterà che l'aspetto e comportamento del pulsante personalizzato anziché come pulsante predefinito.  
+  
+ ![Il modello di pulsante personalizzato](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "custom_button_blend_ScopeUp")  
+  
+ ![Più pulsanti che utilizzano lo stesso modello](../../../../docs/framework/wpf/controls/media/custom-button-blend-createmultiplebuttons.png "custom_button_blend_CreateMultipleButtons")  
+  
+ Premere F5 per eseguire l'applicazione. Fare clic sui pulsanti e notare come tutti lo stesso comportamento.  
+  
+ Tenere presente che anche se sono stati personalizzazione del modello è impostata la <xref:System.Windows.Shapes.Shape.Fill%2A> proprietà di **rettangolo interno** e <xref:System.Windows.Shapes.Shape.Stroke%2A> proprietà **rettangolo esterno** sullo sfondo del modello ({ TemplateBinding Background}). Per questo motivo, quando si imposta il colore di sfondo dei singoli pulsanti, lo sfondo impostato verrà utilizzato per le rispettive proprietà. Provare a modificare ora gli sfondi. Nella figura seguente, vengono utilizzate diverse sfumature. Pertanto, anche se è utile per la personalizzazione generale dei controlli pulsante di un modello, controlli con modelli di possono essere modificati per esaminare diversi tra loro.  
+  
+ ![Pulsanti con lo stesso modello aspetto differente](../../../../docs/framework/wpf/controls/media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")  
+  
+ In conclusione, nel processo di personalizzazione di un modello di pulsante è stato descritto come eseguire le operazioni seguenti in Microsoft Expression Blend:  
   
 -   Personalizzare l'aspetto di un controllo.  
   
--   Impostare i trigger di proprietà.  I trigger di proprietà sono utili poiché è possibile utilizzarli su molti oggetti, non solo sui controlli.  
+-   Impostare i trigger di proprietà. I trigger di proprietà sono molto utili perché possono essere utilizzati nella maggior parte degli oggetti, non solo i controlli.  
   
--   Impostare i trigger di evento.  I trigger di evento sono utili poiché è possibile utilizzarli su molti oggetti, non solo sui controlli.  
+-   Impostare i trigger di evento. I trigger di evento sono molto utili perché possono essere utilizzati nella maggior parte degli oggetti, non solo i controlli.  
   
 -   Creare animazioni.  
   
--   Varie: creare sfumature, aggiungere BitmapEffects, utilizzare trasformazioni e impostare le proprietà di base degli oggetti.  
+-   Creare varie: sfumature, aggiungere BitmapEffects, utilizzare le trasformazioni e impostare le proprietà di base di oggetti.  
   
-## Vedere anche  
- [Creare un pulsante tramite XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [Cenni preliminari sugli effetti bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Creare un pulsante usando XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
+ [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Panoramica sugli effetti bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

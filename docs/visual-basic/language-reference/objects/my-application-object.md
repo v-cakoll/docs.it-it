@@ -1,42 +1,40 @@
 ---
-title: "My.Application Object | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Application object"
+title: Oggetto My.Application
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-caps.latest.revision: 26
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 856b1f8fea560264a287260e35bbcec65b49cfa8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# My.Application Object
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Fornisce proprietà, metodi ed eventi correlati all'applicazione corrente.  
+# <a name="myapplication-object"></a>Oggetto My.Application
+Fornisce le proprietà, metodi ed eventi correlati all'applicazione corrente.  
   
-## Note  
- Per informazioni sui metodi e le proprietà di `My.Application` oggetto, vedere le risorse seguenti:  
+## <a name="remarks"></a>Note  
+ Per informazioni sui metodi e proprietà del `My.Application` , vedere le risorse seguenti:  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> per i membri disponibili in tutti i progetti.  
+-   <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>per i membri che sono disponibili in tutti i progetti.  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> per i membri disponibili nelle applicazioni Windows Form.  
+-   <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>per i membri che sono disponibili nelle applicazioni Windows Form.  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> per i membri disponibili nelle applicazioni console.  
+-   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>per i membri che sono disponibili nelle applicazioni console.  
   
-## Requisiti  
- **Spazio dei nomi:** <xref:Microsoft.VisualBasic.ApplicationServices>  
+## <a name="requirements"></a>Requisiti  
+ **Namespace:**<xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **classe:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> \(la classe base <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> fornisce i membri disponibili nelle applicazioni console e la relativa classe base <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> fornisce i membri disponibili in tutti i progetti di\)  
+ **Classe:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (la classe di base <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> fornisce i membri disponibili nelle applicazioni console e la relativa classe base <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> fornisce i membri che sono disponibili in tutti i progetti)  
   
- **Assembly:** Visual Basic Runtime Library \(in Microsoft.VisualBasic.dll\)  
+ **Assembly:** libreria di Runtime di Visual Basic (in Microsoft.VisualBasic.dll)  
   
-## Vedere anche  
- [My.Application.Info Object](../../../visual-basic/language-reference/objects/my-application-info-object.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Oggetto My.Application.Info](../../../visual-basic/language-reference/objects/my-application-info-object.md)  
  [Oggetto My.Application.Log](../../../visual-basic/language-reference/objects/my-application-log-object.md)

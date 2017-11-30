@@ -1,98 +1,102 @@
 ---
-title: "Cenni preliminari sulla gestione di applicazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestione applicazioni [WPF]"
+title: Cenni preliminari sulla gestione di applicazioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-caps.latest.revision: 56
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 52
+caps.latest.revision: "56"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sulla gestione di applicazioni
-Tutte le applicazioni tendono a condividere un insieme comune di funzionalità che si applica all'implementazione e alla gestione.  In questo argomento viene fornita una panoramica delle funzionalità in <xref:System.Windows.Application> classe per creare e gestire applicazioni.  
-  
+# <a name="application-management-overview"></a>Cenni preliminari sulla gestione di applicazioni
+Tutte le applicazioni tendono a condividere un set comune di funzionalità relative all'implementazione e alla gestione di applicazioni. In questo argomento viene fornita una panoramica delle funzionalità di <xref:System.Windows.Application> classe per la creazione e la gestione delle applicazioni.  
    
   
-## Classe Application  
- in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], la funzionalità con ambito di applicazione vengono incapsulate in  <xref:System.Windows.Application> classe.  <xref:System.Windows.Application> la classe include le funzionalità seguenti:  
+## <a name="the-application-class"></a>Classe Application  
+ In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], le funzionalità comuni con ambito di applicazione sono incapsulata nel <xref:System.Windows.Application> classe. La <xref:System.Windows.Application> classe include le funzionalità seguenti:  
   
--   Controllo della durata di un'applicazione e interazione con la stessa.  
+-   Interazione con il ciclo di vita dell'applicazione e relativa verifica.  
   
--   Recupero ed elaborazione dei parametri della riga di comando.  
+-   Recupero ed elaborazione di parametri della riga di comando.  
   
--   Rilevamento e risposta a eccezioni non gestite.  
+-   Rilevamento delle eccezioni non gestite e riposta a tali eccezioni.  
   
 -   Condivisione di proprietà e risorse con ambito di applicazione.  
   
--   Gestione di finestre in applicazioni autonome.  
+-   Gestione delle finestre in applicazioni autonome.  
   
--   Rilevamento e gestione di navigazione.  
+-   Verifica e gestione della navigazione.  
   
 <a name="The_Application_Class"></a>   
-## Come eseguire attività comuni utilizzando la classe di applicazione  
- Se non si è interessati in dettaglio tutti di <xref:System.Windows.Application> classificare, i la tabella seguente sono alcune delle comuni attività per  <xref:System.Windows.Application> e viene descritto come eseguirle.  Visualizzando l'API e argomenti correlati, è possibile trovare ulteriori informazioni e un codice di esempio.  
+## <a name="how-to-perform-common-tasks-using-the-application-class"></a>Come eseguire attività comuni con la classe Application  
+ Se non si è interessati a tutti i dettagli del <xref:System.Windows.Application> (classe), nella tabella seguente sono elencate alcune delle attività comuni per <xref:System.Windows.Application> e viene descritto come eseguirle. Visualizzando l'API e gli argomenti correlati, è possibile trovare altre informazioni e il codice di esempio.  
   
-|Task|Approccio|  
-|----------|---------------|  
-|ottenere un oggetto che rappresenta l'applicazione corrente|Utilizzare la proprietà <xref:System.Windows.Application.Current%2A?displayProperty=fullName>.|  
-|Aggiungere uno schermo di avvio a un'applicazione|Vedere [Aggiunta di una schermata iniziale in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).|  
-|Avviare un'applicazione|Utilizzare il metodo <xref:System.Windows.Application.Run%2A?displayProperty=fullName>.|  
-|Arrestare un'applicazione|Utilizzare il metodo <xref:System.Windows.Application.Shutdown%2A> dell'oggetto <xref:System.Windows.Application.Current%2A?displayProperty=fullName>.|  
-|Ottenere gli argomenti della riga di comando|gestire <xref:System.Windows.Application.Startup?displayProperty=fullName> l'evento e viene utilizzato  <xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=fullName> proprietà.  per un esempio, vedere <xref:System.Windows.Application.Startup?displayProperty=fullName> evento.|  
-|Ottenere e impostare il codice di uscita di applicazione|impostare <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=fullName> proprietà di  <xref:System.Windows.Application.Exit?displayProperty=fullName> il gestore eventi chiama o  <xref:System.Windows.Application.Shutdown%2A> metodo e passare in un Integer.|  
-|Rilevare e risolvere le eccezioni non gestite|Gestire l'evento <xref:System.Windows.Application.DispatcherUnhandledException>.|  
-|ottenere e impostare le risorse con ambito di applicazione|Utilizzare la proprietà <xref:System.Windows.Application.Resources%2A?displayProperty=fullName>.|  
-|Utilizzare un dizionario risorse con ambito di applicazione|Vedere [Utilizzare un dizionario di risorse dell'ambito dell'applicazione](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md).|  
-|ottenere e impostare le proprietà con ambito di applicazione|Utilizzare la proprietà <xref:System.Windows.Application.Properties%2A?displayProperty=fullName>.|  
-|ottenere e salvare lo stato di un'applicazione|Vedere [Rendere persistenti e ripristinare le proprietà dell'ambito dell'applicazione nelle sessioni dell'applicazione](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
-|Gestire i file di dati non di codice, inclusi i file di risorse, i file di dati e i file del sito di origine.|Vedere [File di dati e di risorse dell'applicazione WPF.](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
-|Gestione di finestre in applicazioni autonome|Vedere [Cenni preliminari sulle finestre WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
-|Per rilevare e gestire la navigazione|Vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
+|Attività|Approccio|  
+|----------|--------------|  
+|Ottenere un oggetto che rappresenta l'applicazione corrente|Usare la proprietà <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType>.|  
+|Aggiungere una schermata di avvio a un'applicazione|Vedere [aggiungere una schermata in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).|  
+|Avviare un'applicazione|Usare il metodo <xref:System.Windows.Application.Run%2A?displayProperty=nameWithType>.|  
+|Arrestare un'applicazione|Utilizzare il <xref:System.Windows.Application.Shutdown%2A> metodo il <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> oggetto.|  
+|Ottenere argomenti dalla riga di comando|Gestire il <xref:System.Windows.Application.Startup?displayProperty=nameWithType> evento e l'utilizzo di <xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType> proprietà. Per un esempio, vedere il <xref:System.Windows.Application.Startup?displayProperty=nameWithType> evento.|  
+|Ottenere e impostare il codice di uscita dell'applicazione|Impostare il <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType> proprietà il <xref:System.Windows.Application.Exit?displayProperty=nameWithType> gestore eventi o chiamare il <xref:System.Windows.Application.Shutdown%2A> (metodo) e passare un numero intero.|  
+|Rilevare eccezioni non gestite e rispondervi|Gestire il <xref:System.Windows.Application.DispatcherUnhandledException> evento.|  
+|Ottenere e impostare le risorse con ambito di applicazione|Usare la proprietà <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>.|  
+|Usare un dizionario risorse con ambito di applicazione|Vedere [utilizzare un dizionario risorse applicazione](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md).|  
+|Ottenere e impostare proprietà con ambito di applicazione|Usare la proprietà <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType>.|  
+|Ottenere e salvare lo stato di un'applicazione|Vedere [persistente e ripristinare le proprietà dell'ambito di applicazione tra le sessioni dell'applicazione](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
+|Gestire file di dati non di codice, tra cui file di risorse, file di contenuto e file del sito di origine.|Vedere [risorse dell'applicazione WPF, contenuto e i file di dati](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
+|Gestire le finestre in applicazioni autonome|Vedere [Cenni preliminari su Windows WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
+|Verificare e gestire la navigazione|Vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   
-## Definizione di applicazione  
- Per utilizzare la funzionalità di <xref:System.Windows.Application> classe, è necessario implementare una definizione di applicazione.  Una definizione di applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]è una classe che deriva da <xref:System.Windows.Application> ed è configurata con un'impostazione [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] speciale.  
+## <a name="the-application-definition"></a>Definizione dell'applicazione  
+ Utilizzare la funzionalità del <xref:System.Windows.Application> (classe), è necessario implementare una definizione di applicazione. Oggetto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definizione dell'applicazione è una classe che deriva da <xref:System.Windows.Application> ed è configurato con una speciale [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] impostazione.  
   
-### Implementazione di una definizione di applicazione  
- Una definizione di applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tipica viene implementata mediante markup e code\-behind.  In questo modo è possibile utilizzare il markup per impostare in modo dichiarativo le proprietà dell'applicazione, le risorse e registrare gli eventi, gestendo al contempo gli eventi e implementando il comportamento specifico dell'applicazione nel code\-behind.  
+### <a name="implementing-an-application-definition"></a>Implementazione di una definizione di applicazione  
+ Una tipica [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definizione dell'applicazione viene implementata utilizzando sia markup e code-behind. Questo approccio permette di usare il markup per impostare in modo dichiarativo proprietà e risorse dell'applicazione e registrare eventi, gestendo gli eventi e implementando il comportamento specifico dell'applicazione nel code-behind.  
   
- Nell'esempio seguente viene illustrato come implementare una definizione di applicazione tramite markup e code\-behind:  
+ L'esempio seguente mostra come implementare una definizione di applicazione tramite markup e code-behind:  
   
- [!code-xml[ApplicationSnippets#ApplicationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
+ [!code-xaml[ApplicationSnippets#ApplicationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
   
  [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
  [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
   
- Per consentire il funzionamento congiunto di un file di markup e un file code\-behind, è necessario soddisfare le seguenti condizioni:  
+ Per poter usare un file di markup e un file code-behind insieme, devono verificarsi le condizioni seguenti:  
   
--   Nel markup, l'elemento `Application` deve includere l'attributo `x:Class`.  Quando l'applicazione viene compilata, la presenza di `x:Class` nel file di markup fa sì che [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] crei una classe `partial` derivante da <xref:System.Windows.Application> e avente il nome specificato dall'attributo `x:Class`.  Questo richiede l'aggiunta di una dichiarazione dello spazio dei nomi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] per lo schema [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] \(`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`\).  
+-   Nel markup di `Application` elemento deve includere il `x:Class` attributo. Quando l'applicazione viene compilata, l'esistenza di `x:Class` nel markup file fa sì che [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] per creare un `partial` classe che deriva da <xref:System.Windows.Application> e ha il nome specificato per il `x:Class` attributo. Questa operazione richiede l'aggiunta di un [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dichiarazione dello spazio dei nomi per il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dello schema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ).  
   
--   Nel code\-behind, la classe deve essere una classe `partial` con lo stesso nome specificato dall'attributo `x:Class` nel markup e deve derivare da <xref:System.Windows.Application>.  In questo modo il file code\-behind può essere associato alla classe `partial` generata per il file di markup durante la compilazione dell'applicazione \(vedere [Compilazione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)\).  
+-   Nel code-behind, la classe deve essere un `partial` classe con lo stesso nome specificato per il `x:Class` attributo nel markup e deve derivare da <xref:System.Windows.Application>. In questo modo il file code-behind può essere associato il `partial` classe generata per il file di markup quando l'applicazione viene compilata (vedere [compilazione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
->  Quando si crea un nuovo progetto di applicazione WPF o di applicazione browser WPF utilizzando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], una definizione di applicazione viene inclusa per impostazione predefinita e definita tramite markup e code\-behind.  
+>  Quando si crea un nuovo progetto applicazione WPF o applicazione Browser WPF utilizzando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], una definizione di applicazione è incluso per impostazione predefinita e viene definita utilizzando sia markup e code-behind.  
   
- Questo codice è il requisito minimo necessario per implementare una definizione di applicazione.  È tuttavia necessario creare una configurazione [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] aggiuntiva per la definizione di applicazione prima di compilare ed eseguire l'applicazione.  
+ Questo codice è quello minimo necessario per implementare una definizione di applicazione. Tuttavia, un'ulteriore [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] configurazione deve essere apportata alla definizione dell'applicazione prima di compilare ed eseguire l'applicazione.  
   
-### Configurazione della definizione di applicazione per MSBuild  
- L'esecuzione delle applicazioni autonome e delle [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] richiede l'implementazione di un determinato livello di infrastruttura.  La parte più importante di questa infrastruttura è il punto di ingresso.  Quando un'applicazione viene avviata da un utente, il sistema operativo chiama il punto di ingresso, una funzione nota per l'avvio di applicazioni.  
+### <a name="configuring-the-application-definition-for-msbuild"></a>Configurazione di una definizione di applicazione per MSBuild  
+ Applicazioni autonome e [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] prima che possano eseguire è necessaria l'implementazione di un determinato livello di infrastruttura. La parte più importante di questa infrastruttura è il punto di ingresso. Quando un'applicazione viene avviata da un utente, il sistema operativo chiama il punto di ingresso, che è una funzione ben nota per l'avvio delle applicazioni.  
   
- In precedenza, occorreva che gli sviluppatori scrivessero personalmente l'intero codice o parte di esso, a seconda della tecnologia.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genera invece questo codice quando il file di markup della definizione di applicazione viene configurato come elemento `ApplicationDefinition` [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)], come illustrato nel seguente file di progetto [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]:  
+ Tradizionalmente, gli sviluppatori hanno sempre dovuto scrivere personalmente questo codice, interamente o in parte, a seconda della tecnologia. Tuttavia, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genera questo codice quando il file di markup della definizione di applicazione è configurato come un [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` elemento, come illustrato nell'esempio seguente [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] file di progetto:  
   
-```  
+```xml  
 <Project   
   DefaultTargets="Build"  
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+                        xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   ...  
   <ApplicationDefinition Include="App.xaml" />  
   <Compile Include="App.xaml.cs" />  
@@ -100,282 +104,281 @@ Tutte le applicazioni tendono a condividere un insieme comune di funzionalità c
 </Project>  
 ```  
   
- Poiché il file code\-behind contiene codice, viene contrassegnato come elemento `Compile` [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)], come vuole la prassi.  
+ Poiché il file code-behind contiene codice, viene contrassegnato come un [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elemento, come è normale.  
   
- L'applicazione di queste configurazioni [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] ai file di markup e code\-behind di una definizione di applicazione fa sì che [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] generi codice analogo a quello riportato di seguito:  
+ L'applicazione di questi [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] fa sì che le configurazioni per i file di markup e code-behind di una definizione di applicazione [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] per generare codice simile al seguente:  
   
  [!code-csharp[AppDefAugSnippets#AppDefAugCODE1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs#appdefaugcode1)]
  [!code-vb[AppDefAugSnippets#AppDefAugCODE1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb#appdefaugcode1)]  
 [!code-csharp[AppDefAugSnippets#AppDefAugCODE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs#appdefaugcode2)]
 [!code-vb[AppDefAugSnippets#AppDefAugCODE2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb#appdefaugcode2)]  
   
- Il codice risultante integra la definizione di applicazione con un codice di infrastruttura aggiuntivo, il quale include il metodo del punto di ingresso `Main`.  L'attributo <xref:System.STAThreadAttribute> viene applicato al metodo `Main` per indicare che il thread principale dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] per l'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] è un thread STA, necessario nel caso di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Quando viene chiamato, `Main` crea una nuova istanza di `App` prima di chiamare il metodo `InitializeComponent` per registrare gli eventi e impostare le proprietà implementate nel markup.  Poiché `InitializeComponent` viene generato da WPF, non sarà necessario chiamarlo in modo esplicito da una definizione di applicazione, come avviene invece per le implementazioni di <xref:System.Windows.Controls.Page> e <xref:System.Windows.Window>.  Infine viene chiamato il metodo <xref:System.Windows.Application.Run%2A> per avviare l'applicazione.  
+ Il codice risultante integra la definizione di applicazione con codice di un'infrastruttura aggiuntiva, che include il metodo del punto di ingresso `Main`. Il <xref:System.STAThreadAttribute> attributo viene applicato al `Main` metodo per indicare che principale [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread per il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione è un thread STA, è necessario per [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni. Quando viene chiamato, `Main` crea una nuova istanza della `App` prima di chiamare il `InitializeComponent` per registrare gli eventi e impostare le proprietà che vengono implementate nel markup. Poiché `InitializeComponent` viene generato automaticamente, non è necessario chiamare in modo esplicito `InitializeComponent` da una definizione di applicazione, come avviene invece per <xref:System.Windows.Controls.Page> e <xref:System.Windows.Window> implementazioni. Infine, il <xref:System.Windows.Application.Run%2A> metodo viene chiamato per avviare l'applicazione.  
   
 <a name="Getting_the_Current_Application"></a>   
-## Ottenere l'applicazione corrente  
- Poiché la funzionalità di <xref:System.Windows.Application> la classe è condivisa tra un'applicazione, potrebbe essere necessario sostenere una sola istanza di  <xref:System.Windows.Application> classe per  <xref:System.AppDomain>.  Per fare in modo che questo accada, la classe <xref:System.Windows.Application> viene implementata come classe Singleton \(vedere [Implementing Singleton in C\#](http://go.microsoft.com/fwlink/?LinkId=100567) \- informazioni in lingua inglese\), la quale crea un'unica istanza di se stessa e ne fornisce l'accesso condiviso mediante la proprietà <xref:System.Windows.Application.Current%2A> `static`.  
+## <a name="getting-the-current-application"></a>Recupero dell'applicazione corrente  
+ Poiché la funzionalità del <xref:System.Windows.Application> classe vengono condivise tra un'applicazione, può essere presente solo un'istanza del <xref:System.Windows.Application> classe <xref:System.AppDomain>. Per applicare questa operazione, il <xref:System.Windows.Application> classe viene implementata come una classe singleton (vedere [Implementing Singleton in c#](http://go.microsoft.com/fwlink/?LinkId=100567)), che crea una singola istanza di se stesso e fornisce accesso condiviso ai con il `static` <xref:System.Windows.Application.Current%2A> proprietà.  
   
- Nel codice riportato di seguito viene illustrato come acquisire un riferimento all'oggetto <xref:System.Windows.Application> per <xref:System.AppDomain> corrente.  
+ Il codice seguente viene illustrato come acquisire un riferimento di <xref:System.Windows.Application> oggetto per l'oggetto corrente <xref:System.AppDomain>.  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
- <xref:System.Windows.Application.Current%2A> restituisce un riferimento a un'istanza della classe <xref:System.Windows.Application>.  Per ottenere un riferimento alla classe derivata <xref:System.Windows.Application> è necessario eseguire il cast del valore della proprietà <xref:System.Windows.Application.Current%2A>, come illustrato nell'esempio che segue.  
+ <xref:System.Windows.Application.Current%2A>Restituisce un riferimento a un'istanza di <xref:System.Windows.Application> classe. Se si desidera un riferimento al <xref:System.Windows.Application> è necessario eseguire il cast di classe derivata di <xref:System.Windows.Application.Current%2A> proprietà, come illustrato nell'esempio seguente.  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
   
- Il valore di <xref:System.Windows.Application.Current%2A> può essere controllato in qualsiasi momento nel corso della durata di un oggetto <xref:System.Windows.Application>.  Tuttavia, è necessario prestare attenzione.  Una volta creata un'istanza della classe <xref:System.Windows.Application>, lo stato dell'oggetto <xref:System.Windows.Application> diventa incoerente per un determinato periodo di tempo.  Durante questo periodo, <xref:System.Windows.Application> esegue le varie attività di inizializzazione richieste dal codice per l'esecuzione, incluso stabilire l'infrastruttura dell'applicazione, impostare le proprietà e registrare gli eventi.  Se si tenta di utilizzare l'oggetto <xref:System.Windows.Application> durante questo periodo, il codice potrebbe avere risultati imprevisti, in particolare se dipende dalle varie proprietà di <xref:System.Windows.Application> impostate.  
+ È possibile controllare il valore di <xref:System.Windows.Application.Current%2A> in qualsiasi momento nel corso della durata di un <xref:System.Windows.Application> oggetto. Tuttavia, è bene fare attenzione. Dopo il <xref:System.Windows.Application> viene creata un'istanza di classe, non vi è un intervallo durante il quale lo stato del <xref:System.Windows.Application> oggetto non è coerente. Durante questo periodo, <xref:System.Windows.Application> esegue le varie attività di inizializzazione necessarie per il codice da eseguire, tra cui stabilire l'infrastruttura dell'applicazione, l'impostazione di proprietà e registrazione degli eventi. Se si tenta di utilizzare il <xref:System.Windows.Application> oggetto durante questo periodo, il codice potrebbe avere risultati imprevisti, in particolare se le varie dipende <xref:System.Windows.Application> proprietà da impostare.  
   
- Nel momento in cui <xref:System.Windows.Application> completa le operazioni di inizializzazione, ha inizio la reale durata.  
+ Quando <xref:System.Windows.Application> completa l'operazione di inizializzazione, la sua durata ha inizio reale.  
   
 <a name="Application_Lifetime"></a>   
-## Durata dell'applicazione  
- La durata di un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] è segnata da diversi eventi generati da <xref:System.Windows.Application>, grazie ai quali è possibile sapere quando l'applicazione è stata avviata, attivata e disattivata, nonché chiusa.  
+## <a name="application-lifetime"></a>Ciclo di vita dell'applicazione  
+ La durata di un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] contrassegnata da vari eventi generati dall'applicazione <xref:System.Windows.Application> per informare l'utente quando è stata avviata l'applicazione, è stata attivata e disattivata ed è stato chiuso.  
   
-   
   
 <a name="Splash_Screen"></a>   
-### Schermata iniziale  
- A partire da [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], è possibile specificare un'immagine da utilizzare in una finestra di avvio o *schermata iniziale*.  La classe <xref:System.Windows.SplashScreen> agevola la visualizzazione di una finestra di avvio mentre l'applicazione viene caricata.  La finestra <xref:System.Windows.SplashScreen> viene creata e visualizzata prima che venga chiamato <xref:System.Windows.Application.Run%2A>.  Per ulteriori informazioni, vedere [Tempo di avvio delle applicazioni](../../../../docs/framework/wpf/advanced/application-startup-time.md) e [Aggiunta di una schermata iniziale in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+### <a name="splash-screen"></a>Schermata iniziale  
+ A partire dal [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], è possibile specificare un'immagine da utilizzare in una finestra di avvio, o *schermata*. La <xref:System.Windows.SplashScreen> classe rende facile visualizzare una finestra di avvio durante il caricamento dell'applicazione. Il <xref:System.Windows.SplashScreen> finestra viene creata e visualizzata prima <xref:System.Windows.Application.Run%2A> viene chiamato. Per ulteriori informazioni, vedere [tempo di avvio applicazione](../../../../docs/framework/wpf/advanced/application-startup-time.md) e [aggiungere una schermata in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
-### Avvio di un'applicazione  
- Una volta chiamato <xref:System.Windows.Application.Run%2A> e inizializzata l'applicazione, questa è pronta per essere eseguita.  Questo momento corrisponde al momento in cui viene generato l'evento <xref:System.Windows.Application.Startup>:  
+### <a name="starting-an-application"></a>Avvio di un'applicazione  
+ Dopo aver <xref:System.Windows.Application.Run%2A> viene chiamato e l'applicazione viene inizializzato, l'applicazione è pronta per l'esecuzione. In questo momento corrisponde al momento il <xref:System.Windows.Application.Startup> evento:  
   
  [!code-csharp[ApplicationStartupSnippets#StartupCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#startupcodebehind1)]
  [!code-vb[ApplicationStartupSnippets#StartupCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#startupcodebehind1)]  
 [!code-csharp[ApplicationStartupSnippets#StartupCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#startupcodebehind2)]
 [!code-vb[ApplicationStartupSnippets#StartupCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#startupcodebehind2)]  
   
- A questo punto della durata di un'applicazione, l'operazione più comune da eseguire è la visualizzazione di un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ A questo punto la durata di un'applicazione, la cosa più comune da fare è mostrare un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
 <a name="Showing_a_User_Interface"></a>   
-### Visualizzazione di un'interfaccia utente  
- Gran parte delle applicazioni [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] autonome aprono un oggetto <xref:System.Windows.Window> una volta iniziata l'esecuzione.  Il gestore eventi <xref:System.Windows.Application.Startup> è uno dei percorsi da cui è possibile eseguire questa operazione, come illustrato nel codice che segue.  
+### <a name="showing-a-user-interface"></a>Visualizzazione di un'interfaccia utente  
+ La maggior parte delle autonomo [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] applicazioni aprono un <xref:System.Windows.Window> all'inizio in esecuzione. Il <xref:System.Windows.Application.Startup> gestore dell'evento è una posizione da cui è possibile eseguire questa operazione, come illustrato nel codice seguente.  
   
- [!code-xml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
+ [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
  [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  Per impostazione predefinita, il primo oggetto <xref:System.Windows.Window> di cui viene creata un'istanza in un'applicazione autonoma diventa la finestra principale dell'applicazione.  A questo oggetto <xref:System.Windows.Window> fa riferimento la proprietà <xref:System.Windows.Application.MainWindow%2A?displayProperty=fullName>.  Il valore della proprietà <xref:System.Windows.Application.MainWindow%2A> può essere modificato a livello di codice se si desidera che la finestra principale sia una finestra diversa dal primo oggetto <xref:System.Windows.Window> di cui è stata creata un'istanza.  
+>  Il primo <xref:System.Windows.Window> deve essere creata un'istanza in un computer autonomo applicazione diventa la finestra principale dell'applicazione per impostazione predefinita. Questo <xref:System.Windows.Window> oggetto fa riferimento il <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> proprietà. Il valore della <xref:System.Windows.Application.MainWindow%2A> proprietà può essere modificata a livello di programmazione se una finestra diversa rispetto alla prima creazione di un'istanza <xref:System.Windows.Window> deve essere la finestra principale.  
   
- Al primo avvio di un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], è probabile che si verifichi uno spostamento su un oggetto <xref:System.Windows.Controls.Page>,  come illustrato nel codice che segue.  
+ Quando un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] inizialmente, è molto probabile che uno spostamento su un <xref:System.Windows.Controls.Page>. Questo comportamento viene mostrato nel codice seguente.  
   
- [!code-xml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
+ [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
  [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
  [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
   
- Se <xref:System.Windows.Application.Startup> viene gestito per la sola apertura di un oggetto <xref:System.Windows.Window> o lo spostamento su un oggetto <xref:System.Windows.Controls.Page>, è possibile impostare l'attributo `StartupUri` nel markup.  
+ Se si gestisce <xref:System.Windows.Application.Startup> di aprire solo un <xref:System.Windows.Window> o passare a un <xref:System.Windows.Controls.Page>, è possibile impostare il `StartupUri` invece dell'attributo nel markup.  
   
- Nell'esempio seguente viene illustrato come utilizzare <xref:System.Windows.Application.StartupUri%2A> da un'applicazione autonoma per aprire un oggetto <xref:System.Windows.Window>.  
+ Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Application.StartupUri%2A> da un'applicazione autonoma per aprire un <xref:System.Windows.Window>.  
   
- [!code-xml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
+ [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
- Nell'esempio seguente viene illustrato come utilizzare <xref:System.Windows.Application.StartupUri%2A> da un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] per spostarsi su un oggetto <xref:System.Windows.Controls.Page>.  
+ Nell'esempio seguente viene illustrato come utilizzare <xref:System.Windows.Application.StartupUri%2A> da un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] per passare a un <xref:System.Windows.Controls.Page>.  
   
- [!code-xml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
+ [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
  Questo markup ha lo stesso effetto del codice precedente per l'apertura di una finestra.  
   
 > [!NOTE]
->  Per ulteriori informazioni sulla navigazione, vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  Per ulteriori informazioni sulla navigazione, vedere [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
- L'evento <xref:System.Windows.Application.Startup> deve essere gestito per l'apertura di un oggetto <xref:System.Windows.Window> nei seguenti casi: se è necessario crearne un'istanza tramite un costruttore non predefinito, se è necessario impostarne le proprietà o sottoscriverne gli eventi prima di visualizzarlo oppure se occorre elaborare gli argomenti della riga di comando forniti in fase di avvio dell'applicazione.  
+ È necessario gestire il <xref:System.Windows.Application.Startup> evento per aprire un <xref:System.Windows.Window> se è necessario crearne un'istanza tramite un costruttore non predefinito, è necessario impostare le relative proprietà o sottoscrivere gli eventi prima di visualizzarlo o è necessario elaborare gli argomenti della riga di comando che sono stati forniti quando è stata avviata l'applicazione.  
   
 <a name="Processing_Command_Line_Arguments"></a>   
-### Elaborazione degli argomenti della riga di comando  
- In [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)], le applicazioni autonome possono essere avviate da un prompt dei comandi oppure dal desktop.  In entrambi i casi, gli argomenti della riga di comando possono essere passati all'applicazione. Nell'esempio che segue viene illustrata un'applicazione avviata con un unico argomento della riga di comando, "\/StartMinimized":  
+### <a name="processing-command-line-arguments"></a>Elaborazione di argomenti della riga di comando  
+ In [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)], applicazioni autonome possono essere avviate da un prompt dei comandi o sul desktop. In entrambi i casi, è possibile passare argomenti della riga di comando all'applicazione. L'esempio seguente mostra un'applicazione avviata con un singolo argomento della riga di comando, "/StartMinimized":  
   
  `wpfapplication.exe /StartMinimized`  
   
- Durante l'inizializzazione dell'applicazione, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] recupera gli argomenti della riga di comando dal sistema operativo e li passa al gestore eventi <xref:System.Windows.Application.Startup> tramite la proprietà <xref:System.Windows.StartupEventArgs.Args%2A> del parametro <xref:System.Windows.StartupEventArgs>.  Gli argomenti della riga di comando possono essere recuperati e archiviati tramite codice analogo a quello riportato di seguito.  
+ Durante l'inizializzazione dell'applicazione, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] recupera gli argomenti della riga di comando del sistema operativo e li passa al <xref:System.Windows.Application.Startup> gestore tramite il <xref:System.Windows.StartupEventArgs.Args%2A> proprietà del <xref:System.Windows.StartupEventArgs> parametro. È possibile recuperare e archiviare gli argomenti della riga di comando usando un frammento di codice simile al seguente.  
   
- [!code-xml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
+ [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
  [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
  [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
- Il codice gestisce <xref:System.Windows.Application.Startup> per controllare se l'argomento della riga di comando **\/StartMinimized** è stato fornito; in caso affermativo, apre la finestra principale con <xref:System.Windows.WindowState> equivalente a <xref:System.Windows.WindowState>.  Poiché la proprietà <xref:System.Windows.Window.WindowState%2A> deve essere impostata a livello di codice, l'oggetto <xref:System.Windows.Window> principale deve essere esplicitamente aperto nel codice.  
+ Il codice gestisce <xref:System.Windows.Application.Startup> per verificare se il **/StartMinimized** è stato specificato l'argomento della riga di comando; in caso affermativo, apre la finestra principale con una <xref:System.Windows.WindowState> di <xref:System.Windows.WindowState.Minimized>. Si noti che poiché il <xref:System.Windows.Window.WindowState%2A> deve essere impostata a livello di programmazione principale <xref:System.Windows.Window> deve essere aperto in modo esplicito nel codice.  
   
- Le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] non possono recuperare ed elaborare gli argomenti della riga di comando poiché vengono avviate mediante distribuzione [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] \(vedere [Distribuzione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)\).  Tuttavia sono in grado di recuperare ed elaborare i parametri delle stringhe di query dagli URL utilizzati per l'avvio.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]non è possibile recuperare ed elaborare gli argomenti della riga di comando, poiché vengono avviate tramite [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] distribuzione (vedere [distribuzione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). Tuttavia, possono recuperare ed elaborare parametri della stringa di query dagli URL usati per avviarle.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
-### Attivazione e disattivazione di un'applicazione  
- [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] consente agli utenti di passare da un'applicazione all'altra. Il metodo più comune consiste nell'utilizzo della combinazione di tasti ALT\+TAB.  Per passare a un'applicazione, occorre che questa disponga di un oggetto <xref:System.Windows.Window> visibile e selezionabile da parte di un utente.  L'oggetto <xref:System.Windows.Window> attualmente selezionato rappresenta la *finestra attiva*, nota anche come *finestra in primo piano*, ed è l'oggetto <xref:System.Windows.Window> che riceve l'input dall'utente. L'applicazione alla quale appartiene la finestra attiva è definita *applicazione attiva* o *applicazione in primo piano*. Di seguito vengono riportati i casi in cui un'applicazione diventa l'applicazione attiva:  
+### <a name="application-activation-and-deactivation"></a>Attivazione e disattivazione dell'applicazione  
+ [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] permette agli utenti di passare tra applicazioni diverse. A questo scopo, il modo più comune consiste nell'usare la combinazione di tasti ALT+TAB. Un'applicazione può solo essere attivata se dispone di un oggetto visibile <xref:System.Windows.Window> che un utente può selezionare. Oggetto attualmente selezionato <xref:System.Windows.Window> è il *finestra attiva* (noto anche come il *finestra in primo piano*) ed è il <xref:System.Windows.Window> che riceve l'input dell'utente. L'applicazione con la finestra attiva è il *applicazione attiva* (o *applicazione in primo piano*). Un'applicazione diventa l'applicazione attiva nei casi seguenti:  
   
--   Viene avviata e visualizza un oggetto <xref:System.Windows.Window>.  
+-   Viene avviata e viene illustrato un <xref:System.Windows.Window>.  
   
--   Un utente passa da un'altra applicazione a quella in questione selezionando un oggetto <xref:System.Windows.Window> nella stessa.  
+-   Un utente passa da un'altra applicazione selezionando un <xref:System.Windows.Window> nell'applicazione.  
   
- È possibile rilevare quando un'applicazione diventa attiva mediante gestione dell'evento <xref:System.Windows.Application.Activated?displayProperty=fullName>.  
+ È possibile rilevare quando un'applicazione diventa attiva gestendo il <xref:System.Windows.Application.Activated?displayProperty=nameWithType> evento.  
   
- Allo stesso modo, un'applicazione diventa inattiva nei seguenti casi:  
+ Analogamente, un'applicazione può diventare inattiva nei casi seguenti:  
   
--   Un utente passa dall'applicazione corrente a un'altra applicazione.  
+-   Un utente passa a un'altra applicazione da quella corrente.  
   
--   L'applicazione viene chiusa.  
+-   L'applicazione viene arrestata.  
   
- È possibile rilevare quando un'applicazione diventa inattiva mediante gestione dell'evento <xref:System.Windows.Application.Deactivated?displayProperty=fullName>.  
+ È possibile rilevare quando un'applicazione diventa inattiva gestendo il <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> evento.  
   
- Nel codice seguente viene illustrato come gestire gli eventi <xref:System.Windows.Application.Activated> e <xref:System.Windows.Application.Deactivated> per determinare se un'applicazione è attiva o meno.  
+ Il codice seguente viene illustrato come gestire il <xref:System.Windows.Application.Activated> e <xref:System.Windows.Application.Deactivated> eventi per determinare se un'applicazione è attiva.  
   
- [!code-xml[ApplicationActivationSnippets#DetectActivationStateXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
+ [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
   
  [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
  [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
   
- Anche <xref:System.Windows.Window> può essere attivato e disattivato.  Per ulteriori informazioni, vedere <xref:System.Windows.Window.Activated?displayProperty=fullName> e <xref:System.Windows.Window.Deactivated?displayProperty=fullName>.  
+ Oggetto <xref:System.Windows.Window> può inoltre essere attivata e disattivata. Per altre informazioni, vedere <xref:System.Windows.Window.Activated?displayProperty=nameWithType> e <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Per quanto riguarda le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Activated?displayProperty=fullName> e <xref:System.Windows.Application.Deactivated?displayProperty=fullName> non vengono generati.  
+>  Né <xref:System.Windows.Application.Activated?displayProperty=nameWithType> né <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> viene generato per [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
   
 <a name="Application_Shutdown"></a>   
-### Chiusura di un'applicazione  
- La durata di un'applicazione termina quando questa viene chiusa per uno dei seguenti motivi:  
+### <a name="application-shutdown"></a>Arresto dell'applicazione  
+ Il ciclo di vita di un'applicazione termina all'arresto dell'applicazione, che può essere dovuto ai motivi seguenti:  
   
--   Un utente chiude tutti gli oggetti <xref:System.Windows.Window>.  
+-   Un utente chiude ogni <xref:System.Windows.Window>.  
   
--   Un utente chiude l'oggetto <xref:System.Windows.Window> principale.  
+-   Un utente chiude l'oggetto principale <xref:System.Windows.Window>.  
   
--   Un utente termina la sessione di [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] mediante disconnessione o spegnimento del computer.  
+-   Un utente termina la [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] sessione mediante disconnessione o chiusura.  
   
 -   È stata soddisfatta una condizione specifica dell'applicazione.  
   
- Per facilitare la gestione della chiusura di un'applicazione, <xref:System.Windows.Application> fornisce il metodo <xref:System.Windows.Application.Shutdown%2A>, la proprietà <xref:System.Windows.Application.ShutdownMode%2A> e gli eventi <xref:System.Windows.Application.SessionEnding> ed <xref:System.Windows.Application.Exit>.  
+ Per gestire la chiusura dell'applicazione, <xref:System.Windows.Application> fornisce il <xref:System.Windows.Application.Shutdown%2A> (metodo), il <xref:System.Windows.Application.ShutdownMode%2A> , proprietà e il <xref:System.Windows.Application.SessionEnding> e <xref:System.Windows.Application.Exit> eventi.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A> può essere chiamato unicamente da applicazioni dotate di <xref:System.Security.Permissions.UIPermission>.  Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonome possiedono sempre questa autorizzazione.  Le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] in esecuzione nella sandbox di sicurezza con attendibilità parziale dell'area Internet non dispongono invece di tale autorizzazione.  
+>  <xref:System.Windows.Application.Shutdown%2A>può essere chiamato solo da applicazioni che hanno <xref:System.Security.Permissions.UIPermission>. Autonomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni dispongono sempre di questa autorizzazione. Tuttavia, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] in esecuzione in una sandbox di sicurezza con attendibilità parziale dell'area Internet non è necessario.  
   
-#### Modalità di chiusura  
- La maggior parte delle applicazioni vengono chiuse in seguito a chiusura di tutte le finestre o della finestra principale.  Talvolta però la chiusura di un'applicazione viene determinata da altre condizioni specifiche della stessa.  Tali condizioni possono essere specificate impostando <xref:System.Windows.Application.ShutdownMode%2A> con uno dei valori di enumerazione <xref:System.Windows.ShutdownMode> seguenti:  
+#### <a name="shutdown-mode"></a>Modalità di arresto  
+ La maggior parte delle applicazioni viene arrestata quando vengono chiuse tutte le finestre o quando viene chiusa la finestra principale. A volte, tuttavia, l'arresto può essere determinato da altre condizioni specifiche dell'applicazione. È possibile specificare le condizioni in cui l'applicazione verrà chiusa impostando <xref:System.Windows.Application.ShutdownMode%2A> con uno dei seguenti <xref:System.Windows.ShutdownMode> valori di enumerazione:  
   
--   <xref:System.Windows.ShutdownMode>  
+-   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode>  
+-   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode>  
+-   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
- Il valore predefinito di <xref:System.Windows.Application.ShutdownMode%2A> è <xref:System.Windows.ShutdownMode>, il quale determina la chiusura automatica di un'applicazione quando l'ultima finestra di questa viene chiusa dall'utente.  Tuttavia è anche possibile fare in modo che l'applicazione venga chiusa quando si chiude la finestra principale. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] esegue automaticamente tale operazione se si imposta <xref:System.Windows.Application.ShutdownMode%2A> su <xref:System.Windows.ShutdownMode>,  Questa operazione viene mostrata nell'esempio seguente.  
+ Il valore predefinito di <xref:System.Windows.Application.ShutdownMode%2A> è <xref:System.Windows.ShutdownMode.OnLastWindowClose>, il che significa che un'applicazione viene automaticamente chiuso quando l'ultima finestra nell'applicazione viene chiusa dall'utente. Tuttavia, se l'applicazione deve essere arrestato quando la finestra principale è chiusa, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] in modo che se si imposta <xref:System.Windows.Application.ShutdownMode%2A> a <xref:System.Windows.ShutdownMode.OnMainWindowClose>. come illustrato nell'esempio riportato di seguito.  
   
- [!code-xml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
+ [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
- In presenza di condizioni di chiusura specifiche dell'applicazione, impostare <xref:System.Windows.Application.ShutdownMode%2A> su <xref:System.Windows.ShutdownMode>.  In questo caso, per chiudere un'applicazione sarà necessario chiamare in modo esplicito il metodo <xref:System.Windows.Application.Shutdown%2A>; in caso contrario, l'applicazione continuerà a essere eseguita anche se tutte le finestre sono chiuse.  <xref:System.Windows.Application.Shutdown%2A> viene chiamato in modo implicito quando <xref:System.Windows.Application.ShutdownMode%2A> è impostato su <xref:System.Windows.ShutdownMode> o <xref:System.Windows.ShutdownMode>.  
+ Quando si dispone di condizioni di arresto specifici dell'applicazione, impostare <xref:System.Windows.Application.ShutdownMode%2A> a <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. In questo caso, è necessario chiudere un'applicazione in modo esplicito chiamando il <xref:System.Windows.Application.Shutdown%2A> metodo; in caso contrario, l'applicazione continuerà l'esecuzione anche se tutte le finestre vengono chiusi. Si noti che <xref:System.Windows.Application.Shutdown%2A> viene chiamato in modo implicito quando il <xref:System.Windows.Application.ShutdownMode%2A> è <xref:System.Windows.ShutdownMode.OnLastWindowClose> o <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
 > [!NOTE]
->  Se si imposta <xref:System.Windows.Application.ShutdownMode%2A> da un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], tale impostazione verrà ignorata. Un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] viene sempre chiusa in caso di spostamento dalla stessa in un browser oppure quando il browser che la ospita viene chiuso.  Per ulteriori informazioni, vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  <xref:System.Windows.Application.ShutdownMode%2A>può essere impostato da un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], ma viene ignorato; un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] viene sempre chiuso quando si ci si sposta in un browser o se il browser che ospita il [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] è chiuso. Per altre informazioni, vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
-#### Fine della sessione  
- Le condizioni di chiusura descritte dalla proprietà <xref:System.Windows.Application.ShutdownMode%2A> sono specifiche di un'applicazione.  In alcuni casi, tuttavia, è possibile che un'applicazione venga chiusa in seguito a una condizione esterna.  La condizione esterna più comune si verifica quando un utente termina la sessione di [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] mediante le seguenti azioni:  
+#### <a name="session-ending"></a>Fine della sessione  
+ Le condizioni di chiusura che sono descritti i <xref:System.Windows.Application.ShutdownMode%2A> proprietà sono specifiche di un'applicazione. In alcuni casi, tuttavia, un'applicazione può essere arrestata come conseguenza di una condizione esterna. La condizione esterna più comune si verifica quando un utente termina la [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] sessione mediante le seguenti azioni:  
   
 -   Disconnessione  
   
--   Spegnimento  
+-   Arresto  
   
 -   Riavvio  
   
 -   Ibernazione  
   
- Per rilevare la fine di una sessione di [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)], è possibile gestire l'evento <xref:System.Windows.Application.SessionEnding>, come illustrato nell'esempio che segue.  
+ Per rilevare quando un [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] sessione termina, è possibile gestire il <xref:System.Windows.Application.SessionEnding> evento, come illustrato nell'esempio seguente.  
   
- [!code-xml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
+ [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
  [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
  [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
- In questo esempio, il codice controlla la proprietà <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> per stabilire come viene terminata la sessione di [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  Utilizza quindi questo valore per visualizzare un messaggio di conferma per l'utente.  Se l'utente decide che la sessione non deve terminare, il codice imposta <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> su `true` per impedire la fine della sessione di [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+ In questo esempio, il codice controlla il <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> proprietà per determinare come [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] di chiusura della sessione. Il codice usa quindi questo valore per visualizzare un messaggio di conferma all'utente. Se l'utente non desidera terminare la sessione, il codice imposta <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> a `true` per impedire la [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] sessione da terminare.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding> non viene generato per le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
+>  <xref:System.Windows.Application.SessionEnding>non viene generato per [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
   
-#### Exit  
- Quando un'applicazione viene chiusa, è possibile che debba eseguire alcune operazioni di elaborazione finale, ad esempio mantenere lo stato dell'applicazione.  In questi casi è possibile gestire l'evento <xref:System.Windows.Application.Exit>.  
+#### <a name="exit"></a>Esci  
+ Quando un'applicazione viene arrestata, potrebbe dover eseguire alcune attività di elaborazione, come il salvataggio permanente dello stato dell'applicazione. In questi casi, è possibile gestire il <xref:System.Windows.Application.Exit> evento.  
   
- [!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+ [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
+[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
   
  [!code-csharp[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistappscopepropertiescodebehind1)]
  [!code-vb[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistappscopepropertiescodebehind1)]  
 [!code-csharp[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistappscopepropertiescodebehind2)]
 [!code-vb[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistappscopepropertiescodebehind2)]  
   
- Per l'esempio completo, vedere [Rendere persistenti e ripristinare le proprietà dell'ambito dell'applicazione nelle sessioni dell'applicazione](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).  
+ Per un esempio completo, vedere [persistente e ripristinare le proprietà dell'ambito dell'applicazione tra sessioni dell'applicazione](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).  
   
- <xref:System.Windows.Application.Exit> può essere gestito sia da applicazioni autonome che da applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  Per quanto concerne le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> viene generato nei seguenti casi:  
+ <xref:System.Windows.Application.Exit>possono essere gestite da applicazioni autonome e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Per [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> viene generato nei casi seguenti:  
   
--   L'utente si sposta da un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
+-   Un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ci si sposta.  
   
--   In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], la scheda che ospita l'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] viene chiusa.  
+-   In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], quando la scheda che ospita il [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] è chiuso.  
   
--   Il browser viene chiuso.  
+-   Viene chiuso il browser.  
   
-#### Codice di uscita  
- Nella maggior parte dei casi le applicazioni vengono avviate dal sistema operativo in risposta a una richiesta dell'utente.  Tuttavia è possibile che un'applicazione venga avviata da un'altra applicazione per eseguire un'attività specifica.  Quando l'applicazione avviata viene chiusa, è possibile che l'altra applicazione voglia conoscere la condizione che ne ha determinato la chiusura.  In questi casi, [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] consente alle applicazioni di restituire un codice di uscita al momento della chiusura.  Per impostazione predefinita, le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] restituiscono un codice di uscita con valore pari a 0.  
+#### <a name="exit-code"></a>Codice di uscita  
+ Nella maggior parte dei casi, le applicazioni vengono avviate dal sistema operativo in risposta a una richiesta dell'utente. Tuttavia, un'applicazione può essere avviata da un'altra applicazione per l'esecuzione di alcune attività specifiche. Quando l'applicazione avviata viene arrestata, l'applicazione che ne esegue l'avvio potrebbe voler identificare la condizione in base alla quale è stata arrestata l'applicazione avviata. In queste situazioni, [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] consente alle applicazioni di restituire un codice di uscita al momento della chiusura. Per impostazione predefinita, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] le applicazioni di restituire un valore di codice di uscita pari a 0.  
   
 > [!NOTE]
->  Quando si esegue il debug da [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], il codice di uscita viene visualizzato nella finestra **Output** alla chiusura dell'applicazione, in un messaggio analogo a quello riportato di seguito:  
+>  Quando esegue il debug da [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], in cui viene visualizzato il codice di uscita di **Output** finestra quando l'applicazione viene arrestato, in un messaggio che sarà simile alla seguente:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
->  Per aprire la finestra **Output**, scegliere **Output** dal menu **Visualizza**.  
+>  Si apre il **Output** dalla finestra **Output** sul **vista** menu.  
   
- Per modificare il codice di uscita è possibile chiamare l'overload di <xref:System.Windows.Application.Shutdown%28System.Int32%29>, il quale accetta un argomento integer come codice di uscita:  
+ Per modificare il codice di uscita, è possibile chiamare il <xref:System.Windows.Application.Shutdown%28System.Int32%29> overload che accetta un argomento integer per il codice di uscita:  
   
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- È possibile rilevare e modificare il valore del codice di uscita mediante gestione dell'evento <xref:System.Windows.Application.Exit>.  Al gestore eventi <xref:System.Windows.Application.Exit> viene passato un oggetto <xref:System.Windows.ExitEventArgs> che consente di accedere al codice di uscita con la proprietà <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>.  Per ulteriori informazioni, vedere <xref:System.Windows.Application.Exit>.  
+ È possibile rilevare il valore del codice di uscita e modificarla, gestendo la <xref:System.Windows.Application.Exit> evento. Il <xref:System.Windows.Application.Exit> gestore eventi viene passato un <xref:System.Windows.ExitEventArgs> che fornisce l'accesso al codice di uscita con il <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> proprietà. Per altre informazioni, vedere <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
->  Il codice di uscita può essere impostato sia nelle applicazioni autonome che nelle applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  Tuttavia, nel caso delle applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] il valore del codice viene ignorato.  
+>  È possibile impostare il codice di uscita in applicazioni autonome e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Tuttavia, il valore del codice di uscita viene ignorato per [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
   
 <a name="Unhandled_Exceptions"></a>   
-### Eccezioni non gestite  
- Talvolta un'applicazione può essere chiusa in condizioni anomale, ad esempio in seguito alla generazione di un'eccezione imprevista.  In questo caso, è possibile che l'applicazione non disponga del codice necessario a rilevare ed elaborare l'eccezione.  Si avrà quindi un'eccezione non gestita e, prima della chiusura dell'applicazione, verrà visualizzata una notifica simile a quella riportata nella figura che segue.  
+### <a name="unhandled-exceptions"></a>Eccezioni non gestite  
+ A volte un'applicazione può essere arrestata in base a condizioni anomale, ad esempio quando viene generata un'eccezione imprevista. In questo caso, l'applicazione potrebbe non avere il codice per rilevare ed elaborare l'eccezione. Questo tipo di eccezione è un'eccezione non gestita. Prima che l'applicazione venga chiusa, viene visualizzata una notifica simile a quella mostrata nella figura seguente.  
   
  ![Notifica di eccezione non gestita](../../../../docs/framework/wpf/app-development/media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
   
- Dal punto di vista dell'esperienza utente, è preferibile evitare questo comportamento predefinito dell'applicazione nei modi che seguono:  
+ Dal punto di vista dell'esperienza utente, è preferibile per un'applicazione evitare il comportamento predefinito eseguendo alcune o tutte le operazioni seguenti:  
   
--   Visualizzando informazioni di facile comprensione.  
+-   Visualizzare informazioni descrittive.  
   
--   Tentando di mantenere in esecuzione un'applicazione.  
+-   Tentare di mantenere in esecuzione un'applicazione.  
   
--   Registrando informazioni sull'eccezione dettagliate e facilmente comprensibili per lo sviluppatore nel registro eventi di [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   La registrazione di informazioni dettagliate, semplice, eccezioni di [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] registro eventi.  
   
- L'implementazione di questo supporto dipende dalla possibilità di rilevare o meno le eccezioni non gestite, motivo per cui viene generato l'evento <xref:System.Windows.Application.DispatcherUnhandledException>.  
+ Implementazione di questo supporto dipende in grado di rilevare le eccezioni non gestite, cioè che cosa il <xref:System.Windows.Application.DispatcherUnhandledException> evento viene generato per.  
   
- [!code-xml[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
+ [!code-xaml[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
  [!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind1)]
  [!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind1)]  
 [!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind2)]
 [!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind2)]  
   
- Al gestore eventi <xref:System.Windows.Application.DispatcherUnhandledException> viene passato un parametro <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> contenente informazioni contestuali riguardo l'eccezione non gestita, inclusa l'eccezione stessa \(<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=fullName>\).  È possibile utilizzare queste informazioni per stabilire come gestire l'eccezione.  
+ Il <xref:System.Windows.Application.DispatcherUnhandledException> gestore eventi viene passato un <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> parametro che contiene le informazioni contestuali relative all'eccezione non gestita, inclusa l'eccezione stessa (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>). È possibile usare queste informazioni per determinare come gestire l'eccezione.  
   
- Quando si gestisce <xref:System.Windows.Application.DispatcherUnhandledException>, è necessario impostare la proprietà <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=fullName> su `true`; in caso contrario, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] continua a considerare l'eccezione come non gestita e ripristina il comportamento predefinito descritto in precedenza.  Se viene generata un'eccezione non gestita e l'evento <xref:System.Windows.Application.DispatcherUnhandledException> non è gestito oppure l'evento è gestito e <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> è impostato su `false`, l'applicazione viene immediatamente chiusa.  Inoltre, non vengono generati altri eventi <xref:System.Windows.Application>.  Di conseguenza, è necessario gestire <xref:System.Windows.Application.DispatcherUnhandledException> nel caso in cui l'applicazione possieda un codice da eseguire prima della chiusura.  
+ Quando si gestisce <xref:System.Windows.Application.DispatcherUnhandledException>, è necessario impostare il <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType> proprietà `true`; in caso contrario, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ancora considera la generazione dell'eccezione non gestita e viene ripristinato il comportamento predefinito descritto in precedenza. Se viene generata un'eccezione non gestita e la <xref:System.Windows.Application.DispatcherUnhandledException> evento non viene gestito o l'evento è gestito e <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> è impostato su `false`, l'applicazione viene chiusa immediatamente. Inoltre, nessun altro <xref:System.Windows.Application> vengono generati eventi. Di conseguenza, è necessario gestire <xref:System.Windows.Application.DispatcherUnhandledException> se l'applicazione dispone di codice da eseguita prima l'arresto dell'applicazione.  
   
- Benché possa essere determinata da un'eccezione non gestita, in genere la chiusura di un'applicazione avviene in risposta a una richiesta dell'utente, come illustrato nella sezione che segue.  
+ Benché un'applicazione possa essere arrestata come conseguenza di un'eccezione non gestita, in genere viene arrestata in risposta a una richiesta dell'utente, come descritto nella prossima sezione.  
   
 <a name="Application_Lifetime_Events"></a>   
-### Eventi di durata dell'applicazione  
- La durata delle applicazioni autonome e delle applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] non è esattamente la stessa. Nella figura che segue vengono illustrati gli eventi principali nella durata di un'applicazione autonoma con la relativa sequenza di generazione.  
+### <a name="application-lifetime-events"></a>Eventi del ciclo di vita dell'applicazione  
+ Applicazioni autonome e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] non è esattamente la stessa durata. La figura seguente mostra gli eventi principali nel ciclo di vita di un'applicazione autonoma, nella sequenza in cui vengono generati.  
   
- ![Applicazione autonoma &#45; Eventi dell'oggetto Application](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview\_ApplicationObjectEvents")  
+ ![Applicazione indipendente &#45; Eventi dell'oggetto Application](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
   
- Allo stesso modo, vengono illustrati anche gli eventi principali nella durata di un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] con la relativa sequenza di generazione.  
+ Analogamente, la figura seguente illustra gli eventi principali nella durata di un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]e viene illustrata la sequenza in cui vengono generati.  
   
- ![XBAP &#45; Eventi dell'oggetto Application](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview\_ApplicationObjectEvents\_xbap")  
+ ![XBAP &#45; Eventi dell'oggetto Application](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
-## Vedere anche  
- <xref:System.Windows.Application>   
- [Cenni preliminari sulle finestre WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)   
- [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md)   
- [File di dati e di risorse dell'applicazione WPF.](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)   
- [URI di tipo pack in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)   
- [Application Model: How\-to Topics](http://msdn.microsoft.com/it-it/76771b09-3688-4d1c-8818-9b3f4cf39a30)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Application>  
+ [Panoramica sulle finestre WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
+ [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
+ [URI di tipo pack in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Il modello di applicazione: Procedure](http://msdn.microsoft.com/en-us/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
  [Sviluppo di applicazioni](../../../../docs/framework/wpf/app-development/index.md)

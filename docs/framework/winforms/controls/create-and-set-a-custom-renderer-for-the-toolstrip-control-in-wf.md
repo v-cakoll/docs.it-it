@@ -1,41 +1,45 @@
 ---
-title: "Procedura: creare e impostare un renderer personalizzato per il controllo ToolStrip in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], barre degli strumenti"
-  - "barre degli strumenti [Windows Form], rendering"
-  - "ToolStrip (controllo) [Windows Form], rendering personalizzato"
-  - "ToolStrip (controllo) [Windows Form], rendering"
+title: 'Procedura: creare e impostare un renderer personalizzato per il controllo ToolStrip in Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], custom rendering
+- toolbars [Windows Forms], rendering
+- examples [Windows Forms], toolbars
+- ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f63ff0a7336ae80ce5652cf3e4c6c7dd409882a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare e impostare un renderer personalizzato per il controllo ToolStrip in Windows Form
-I controlli <xref:System.Windows.Forms.ToolStrip> forniscono un semplice supporto per temi e stili.  Per ottenere un aspetto e un comportamento completamente personalizzati, impostare la proprietà <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName> o la proprietà <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=fullName> su un renderer personalizzato.  
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Procedura: creare e impostare un renderer personalizzato per il controllo ToolStrip in Windows Form
+<xref:System.Windows.Forms.ToolStrip>i controlli forniscono un semplice supporto per temi e stili. È possibile ottenere completamente personalizzato aspetto e comportamento (aspetto) impostando il <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> proprietà o <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> proprietà da un renderer personalizzato.  
   
- È possibile assegnare renderer a ogni singolo controllo <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip> o <xref:System.Windows.Forms.StatusStrip> oppure è possibile utilizzare la proprietà <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> per influenzare tutti gli oggetti impostando la proprietà <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=fullName> su <xref:System.Windows.Forms.ToolStripRenderMode?displayProperty=fullName>.  
+ È possibile assegnare renderer a ogni singolo <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, o <xref:System.Windows.Forms.StatusStrip> controllo oppure è possibile utilizzare il <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> proprietà influiscono su tutti gli oggetti impostando il <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> proprietà <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  La proprietà <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> restituisce <xref:System.Windows.Forms.ToolStripRenderMode> solo se il valore della proprietà <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName> è diverso da `null`.  
+>  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>Restituisce <xref:System.Windows.Forms.ToolStripRenderMode.Custom> solo se il valore di <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> non `null`.  
   
-### Per creare un renderer personalizzato  
+### <a name="to-create-a-custom-renderer"></a>Per creare un renderer personalizzato  
   
-1.  Estendere la classe <xref:System.Windows.Forms.ToolStripRenderer>.  
+1.  Estendere la <xref:System.Windows.Forms.ToolStripRenderer> classe.  
   
-2.  Implementare il rendering personalizzato desiderato eseguendo l'override di membri *On…* appropriati.  
+2.  Implementare desiderato per il rendering personalizzata eseguendo l'override appropriato *in...* membri  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -47,12 +51,9 @@ I controlli <xref:System.Windows.Forms.ToolStrip> forniscono un semplice support
             MyBase.OnRenderItemText(e)  
         End Sub  
     End Class  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     public class RedTextRenderer : _  
         System.Windows.Forms.ToolStripRenderer  
     {  
@@ -64,45 +65,36 @@ I controlli <xref:System.Windows.Forms.ToolStrip> forniscono un semplice support
            base.OnRenderItemText(e);  
         }  
     }  
-  
     ```  
   
-### Per impostare come corrente il renderer personalizzato  
+### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Per impostare il renderer personalizzato per il renderer corrente  
   
-1.  Per impostare il renderer personalizzato per un <xref:System.Windows.Forms.ToolStrip>, impostare la proprietà <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName> sul renderer personalizzato.  
+1.  Per impostare il renderer personalizzato per uno <xref:System.Windows.Forms.ToolStrip>, impostare il <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> proprietà renderer personalizzato.  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     toolStrip1.Renderer = new RedTextRenderer();  
-  
     ```  
   
-2.  In alternativa, per impostare il renderer personalizzato per tutte le classi <xref:System.Windows.Forms.ToolStrip> contenute nell'applicazione, impostare la proprietà <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=fullName> sul renderer personalizzato e impostare la proprietà <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> su <xref:System.Windows.Forms.ToolStripRenderMode>.  
+2.  O impostare il renderer personalizzato per tutti i <xref:System.Windows.Forms.ToolStrip> le classi contenute nell'applicazione: impostare il <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> proprietà al renderer personalizzato e impostare il <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> proprietà <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  
     ToolStripManager.Renderer = New RedTextRenderer()  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode;  
     ToolStripManager.Renderer = new RedTextRenderer();  
-  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>   
- <xref:System.Windows.Forms.ToolStripRenderer>   
- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>   
- [Cenni preliminari sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Architettura del controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>  
+ <xref:System.Windows.Forms.ToolStripRenderer>  
+ <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>  
+ [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [Architettura del controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
  [Riepilogo della tecnologia ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

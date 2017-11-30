@@ -1,40 +1,44 @@
 ---
-title: "Procedura: convalidare l&#39;input con il controllo DataGrid Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid (controllo) [Windows Form], esempi"
-  - "DataGrid (controllo) [Windows Form], convalida dell'input"
-  - "esempi [Windows Form], controllo DataGrid"
-  - "input utente, convalida"
-  - "convalida, input utente"
+title: 'Procedura: convalidare l''input con il controllo DataGrid Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGrid control [Windows Forms], examples
+- user input [Windows Forms], validating
+- examples [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], validating input
+- validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f5e0c366f71f602be2bb1508a6abb00d3d0c83ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: convalidare l&#39;input con il controllo DataGrid Windows Form
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Procedura: convalidare l'input con il controllo DataGrid Windows Form
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Sono disponibili due tipi di convalida dell'input per il controllo <xref:System.Windows.Forms.DataGrid> Windows Form.  Se l'utente tenta di immettere un valore relativo a un tipo di dati inaccettabile per la cella, ad esempio una stringa anziché un intero, il nuovo valore non valido verrà sostituito con il valore precedente.  Questa convalida dell'input viene eseguita automaticamente e non può essere personalizzata.  
+ Sono disponibili due tipi di convalida dell'input per Windows Form <xref:System.Windows.Forms.DataGrid> controllo. Se l'utente tenta di immettere un valore di un tipo di dati accettabile per la cella, ad esempio una stringa in un numero intero, il nuovo valore non valido viene sostituito con il valore precedente. Questo tipo di convalida dell'input viene eseguito automaticamente e non può essere personalizzato.  
   
- L'altro tipo di convalida dell'input può essere utilizzato per rifiutare tutti i dati inaccettabili, ad esempio un valore 0 in un campo che deve essere maggiore o uguale a 1 oppure una stringa non corretta.  Questa operazione viene eseguita nel dataset mediante la scrittura di un gestore eventi per l'evento <xref:System.Data.DataTable.ColumnChanging> o <xref:System.Data.DataTable.RowChanging>.  Nell'esempio qui di seguito viene utilizzato l'evento <xref:System.Data.DataTable.ColumnChanging>, poiché il valore non accettabile non viene ammesso specificamente per la colonna "Product".  È possibile utilizzare l'evento <xref:System.Data.DataTable.RowChanging> per verificare che il valore di una colonna "End Date" sia successivo a quello della colonna "Start Date", presente nella stessa riga.  
+ L'altro tipo di convalida dell'input è utilizzabile per rifiutare tutti i dati non valido, ad esempio un valore 0 in un campo che deve essere maggiore o uguale a 1 o una stringa non corretta. Questa operazione viene eseguita nel set di dati scrivendo un gestore eventi per il <xref:System.Data.DataTable.ColumnChanging> o <xref:System.Data.DataTable.RowChanging> evento. Nell'esempio seguente viene utilizzato il <xref:System.Data.DataTable.ColumnChanging> evento perché il valore non valido non è consentito per la colonna "Prodotto" in particolare. È possibile utilizzare il <xref:System.Data.DataTable.RowChanging> evento per verificare che il valore di una colonna di tipo "Fine" sia successivo rispetto alla colonna "Data di inizio" nella stessa riga.  
   
-### Per convalidare l'input dell'utente  
+### <a name="to-validate-user-input"></a>Per convalidare l'input dell'utente  
   
-1.  Scrivere il codice per gestire l'evento <xref:System.Data.DataTable.ColumnChanging> della tabella interessata.  Quando viene rilevato un input non corretto, chiamare il metodo <xref:System.Data.DataRow.SetColumnError%2A> dell'oggetto <xref:System.Data.DataRow>.  
+1.  Scrivere codice per gestire il <xref:System.Data.DataTable.ColumnChanging> eventi per la tabella appropriata. Quando viene rilevato un input, chiamare il <xref:System.Data.DataRow.SetColumnError%2A> metodo il <xref:System.Data.DataRow> oggetto.  
   
     ```vb  
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _  
@@ -51,7 +55,6 @@ caps.handback.revision: 14
           End If  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,19 +73,17 @@ caps.handback.revision: 14
           }  
        }  
     }  
-  
     ```  
   
-2.  Connettere il gestore eventi all'evento in questione.  
+2.  Connettere il gestore eventi all'evento.  
   
-     Inserire il codice qui di seguito nell'evento <xref:System.Windows.Forms.Form.Load> del form o nel relativo costruttore.  
+     Sul posto il seguente codice all'interno di uno il modulo <xref:System.Windows.Forms.Form.Load> eventi o nel relativo costruttore.  
   
     ```vb  
     ' Assumes the grid is bound to a dataset called customersDataSet1  
     ' with a table called Customers.  
     ' Put this code in the form's Load event or its constructor.  
     AddHandler customersDataSet1.Tables("Customers").ColumnChanging, AddressOf Customers_ColumnChanging  
-  
     ```  
   
     ```csharp  
@@ -90,11 +91,10 @@ caps.handback.revision: 14
     // with a table called Customers.  
     // Put this code in the form's Load event or its constructor.  
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);  
-  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGrid>   
- <xref:System.Data.DataTable.ColumnChanging>   
- <xref:System.Data.DataRow.SetColumnError%2A>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.DataGrid>  
+ <xref:System.Data.DataTable.ColumnChanging>  
+ <xref:System.Data.DataRow.SetColumnError%2A>  
  [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

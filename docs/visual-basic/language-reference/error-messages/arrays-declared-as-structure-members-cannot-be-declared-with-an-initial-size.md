@@ -1,36 +1,34 @@
 ---
-title: "Arrays declared as structure members cannot be declared with an initial size | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc31043"
-  - "bc31043"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC31043"
+title: Le matrici dichiarate come membri di struttura non possono essere dichiarate con una grandezza iniziale
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc31043
+- bc31043
+helpviewer_keywords: BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 983154a144a79991c86db5056ad0e0e563a3ba73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Arrays declared as structure members cannot be declared with an initial size
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una matrice di una struttura è stata dichiarata con una dimensione iniziale.  Non è possibile inizializzare alcun elemento di una struttura e la dichiarazione della dimensione di una matrice rappresenta una forma di inizializzazione.  
+# <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>Le matrici dichiarate come membri di struttura non possono essere dichiarate con una grandezza iniziale
+Matrice in una struttura è dichiarata con una dimensione iniziale. Non è possibile inizializzare qualsiasi elemento di struttura e la dichiarazione di una dimensione di matrice è una forma di inizializzazione.  
   
  **ID errore:** BC31043  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Definire la matrice della struttura come dinamica \(senza dimensione iniziale\).  
+1.  Definire la matrice della struttura come dinamica (dimensione iniziale).  
   
-2.  Se è necessaria una matrice di una determinata dimensione, è possibile ridimensionare una matrice dinamica con un'[ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) quando il codice è in esecuzione.  Questa condizione è illustrata nell'esempio che segue.  
+2.  Se è necessaria una determinata dimensione della matrice, è possibile ridimensionare una matrice dinamica con un [istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) quando viene eseguito il codice. Questa condizione è illustrata nell'esempio seguente.  
   
     ```  
     Structure demoStruct  
@@ -43,6 +41,6 @@ Una matrice di una struttura è stata dichiarata con una dimensione iniziale.  N
     End Sub  
     ```  
   
-## Vedere anche  
- [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [How to: Declare a Structure](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+## <a name="see-also"></a>Vedere anche  
+ [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Procedura: Dichiarare una struttura](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

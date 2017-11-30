@@ -1,32 +1,37 @@
 ---
-title: "Procedura: impostare un pulsante Windows Form come pulsante di annullamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button (controllo) [Windows Form], come pulsante Annulla"
-  - "pulsanti, pulsanti Annulla"
+title: 'Procedura: impostare un pulsante Windows Form come pulsante di annullamento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- buttons [Windows Forms], cancel buttons
+- Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bbdf2ec4f2353662f1077b9d95966e0a2ebd316
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare un pulsante Windows Form come pulsante di annullamento
-In qualsiasi Windows Form è possibile designare un controllo <xref:System.Windows.Forms.Button> come pulsante di annullamento.  Il pulsante di annullamento viene scelto ogni volta che si preme ESC, anche se lo stato attivo è detenuto da un altro controllo del form.  Il pulsante di annullamento viene in genere programmato per consentire all'utente di abbandonare l'esecuzione di un'operazione senza intraprendere un'azione specifica.  
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>Procedura: impostare un pulsante Windows Form come pulsante di annullamento
+In qualsiasi forma di Windows, è possibile designare un <xref:System.Windows.Forms.Button> controllo pulsante di annullamento. Ogni volta che l'utente preme il tasto ESC, indipendentemente da quale altro controllo nel form ha lo stato attivo, viene scelto un pulsante Annulla. Il pulsante di annullamento viene in genere programmato per consentire all'utente di abbandonare l'operazione senza intraprendere alcuna azione.  
   
-### Per designare il pulsante di annullamento  
+### <a name="to-designate-the-cancel-button"></a>Per designare il pulsante Annulla  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.Form.CancelButton%2A> del form sul controllo <xref:System.Windows.Forms.Button> appropriato.  
+1.  Imposta la proprietà <xref:System.Windows.Forms.Form.CancelButton%2A> proprietà appropriati <xref:System.Windows.Forms.Button> controllo.  
   
     ```vb  
     Private Sub SetCancelButton(ByVal myCancelBtn As Button)  
@@ -49,10 +54,10 @@ In qualsiasi Windows Form è possibile designare un controllo <xref:System.Windo
        }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Form.CancelButton%2A>   
- [Cenni preliminari sul controllo Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Modalità di selezione di un controllo Button Windows Form](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Procedura: rispondere alla selezione dei pulsanti di Windows Form](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Procedura: designare un pulsante Windows Form come pulsante di conferma](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.Form.CancelButton%2A>  
+ [Panoramica sul controllo Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [Modalità di selezione di un controllo Button di Windows Form](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [Procedura: Rispondere alla selezione dei pulsanti di Windows Form](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [Procedura: Designare un pulsante Windows Form come pulsante di conferma](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
  [Controllo Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

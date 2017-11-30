@@ -1,104 +1,103 @@
 ---
-title: "Type Conversion Functions (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.CUShort"
-  - "vb.csng"
-  - "vb.CDate"
-  - "CByte"
-  - "CSng"
-  - "vb.CDec"
-  - "CBool"
-  - "CStr"
-  - "vb.CULng"
-  - "CDec"
-  - "CVErr"
-  - "CDbl"
-  - "CShort"
-  - "vb.CObj"
-  - "vb.CVErr"
-  - "CULng"
-  - "vb.cdbl"
-  - "vb.cbool"
-  - "CObj"
-  - "CDate"
-  - "CLng"
-  - "vb.cstr"
-  - "vb.cbyte"
-  - "vb.clng"
-  - "vb.CChar"
-  - "CUShort"
-  - "vb.CUInt"
-  - "vb.cint"
-  - "vb.CShort"
-  - "CInt"
-  - "CUInt"
-  - "CChar"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CDate function"
-  - "CByte function"
-  - "Integer data type, converting"
-  - "string conversion, conversion functions"
-  - "fractions"
-  - "data types [Visual Basic], converting"
-  - "text, converting"
-  - "CDec function"
-  - "Char data type, converting"
-  - "type conversion, functions for"
-  - "Single data type, converting"
-  - "numbers, rounding"
-  - "rounding numbers, type conversion"
-  - "CUShort function"
-  - "Long data type, converting"
-  - "return values, data types"
-  - "single-precision numbers, converting"
-  - "data type conversion, functions for"
-  - "CStr function"
-  - "times, converting"
-  - "CSng function"
-  - "conversions, type conversion functions"
-  - "CBool function"
-  - "CDbl function"
-  - "CUInt function"
-  - "Currency data type, conversion functions"
-  - "numbers, converting"
-  - "Double data type, converting"
-  - "CLng function"
-  - "CSByte function"
-  - "double-precision numbers"
-  - "Decimal data type, converting"
-  - "Boolean data type, converting"
-  - "integers, type conversion functions"
-  - "dates, converting"
-  - "CULng function"
-  - "CInt function"
-  - "Date data type, converting"
-  - "Byte data type, converting"
-  - "String data type, converting"
-  - "CChar function"
-  - "banker's rounding"
-  - "Short data type, converting"
-  - "rounding numbers, banker's rounding"
-  - "type conversion, Visual Basic vs. .NET Framework"
+title: Funzioni di conversione del tipo (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.CUShort
+- vb.csng
+- vb.CDate
+- CByte
+- CSng
+- vb.CDec
+- CBool
+- CStr
+- vb.CULng
+- CDec
+- CVErr
+- CDbl
+- CShort
+- vb.CObj
+- vb.CVErr
+- CULng
+- vb.cdbl
+- vb.cbool
+- CObj
+- CDate
+- CLng
+- vb.cstr
+- vb.cbyte
+- vb.clng
+- vb.CChar
+- CUShort
+- vb.CUInt
+- vb.cint
+- vb.CShort
+- CInt
+- CUInt
+- CChar
+helpviewer_keywords:
+- CDate function
+- CByte function
+- Integer data type [Visual Basic], converting
+- string conversion [Visual Basic], conversion functions
+- fractions
+- data types [Visual Basic], converting
+- text, converting
+- CDec function
+- Char data type [Visual Basic], converting
+- type conversion [Visual Basic], functions for
+- Single data type [Visual Basic], converting
+- numbers [Visual Basic], rounding
+- rounding numbers [Visual Basic], type conversion
+- CUShort function
+- Long data type [Visual Basic], converting
+- return values [Visual Basic], data types
+- single-precision numbers [Visual Basic], converting
+- data type conversion [Visual Basic], functions for
+- CStr function
+- times [Visual Basic], converting
+- CSng function
+- conversions [Visual Basic], type conversion functions
+- CBool function
+- CDbl function
+- CUInt function
+- Currency data type [Visual Basic], conversion functions
+- numbers [Visual Basic], converting
+- Double data type [Visual Basic], converting
+- CLng function
+- CSByte function
+- double-precision numbers
+- Decimal data type [Visual Basic], converting
+- Boolean data type [Visual Basic], converting
+- integers [Visual Basic], type conversion functions
+- dates [Visual Basic], converting
+- CULng function
+- CInt function
+- Date data type [Visual Basic], converting
+- Byte data type [Visual Basic], converting
+- String data type [Visual Basic], converting
+- CChar function
+- banker's rounding
+- Short data type [Visual Basic], converting
+- rounding numbers [Visual Basic], banker's rounding
+- type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Type Conversion Functions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Queste funzioni vengono compilate inline, ossia il codice di conversione fa parte del codice con cui viene valutata l'espressione.  Talvolta non sono presenti chiamate a una routine per effettuare la conversione e questo contribuisce al miglioramento delle prestazioni.  Ciascuna funzione consente la conversione di un'espressione in un tipo di dati specifico.  
+# <a name="type-conversion-functions-visual-basic"></a>Funzioni di conversione del tipo (Visual Basic)
+Queste funzioni vengono compilate inline, ovvero che la conversione di codice fa parte del codice che valuta l'espressione. A volte non sussiste alcuna chiamata a una stored procedure per eseguire la conversione, che migliora le prestazioni. Ogni funzione forza un'espressione al tipo di dati specifico.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 CBool(expression)  
@@ -119,163 +118,163 @@ CULng(expression)
 CUShort(expression)  
 ```  
   
-## Parte  
+## <a name="part"></a>Parte  
  `expression`  
- Obbligatorio.  Qualsiasi espressione del tipo di dati di origine.  
+ Obbligatorio. Qualsiasi espressione del tipo di dati di origine.  
   
-## Tipo di dati del valore restituito  
- Il nome della funzione determina il tipo di dati del valore restituito, come illustrato nella tabella riportata di seguito.  
+## <a name="return-value-data-type"></a>Tipo di dati di valore restituito  
+ Il nome della funzione determina il tipo di dati del valore che viene restituito, come illustrato nella tabella seguente.  
   
-|Nome funzione|Tipo di dati restituito|Intervallo per l'argomento `expression`|  
-|-------------------|-----------------------------|---------------------------------------------|  
-|`CBool`|[Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Qualsiasi espressione `Char`, `String` o numerica valida.|  
-|`CByte`|[Byte Data Type](../../../visual-basic/language-reference/data-types/byte-data-type.md)|Da 0 a 255 \(senza segno\). Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CChar`|[Char Data Type](../../../visual-basic/language-reference/data-types/char-data-type.md)|Qualsiasi espressione `Char` o `String` valida. Viene convertito solo il primo carattere di un'espressione `String`. Il valore può essere compreso tra 0 e 65.535 \(senza segno\).|  
-|`CDate`|[Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md)|Qualsiasi rappresentazione valida di data e ora.|  
-|`CDbl`|[Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md)|Da \-1,79769313486231570E\+308 a \-4,94065645841246544E\-324 per valori negativi; da 4,94065645841246544E\-324 a 1,79769313486231570E\+308 per valori positivi.|  
-|`CDec`|[Decimal Data Type](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|\+\/\-79.228.162.514.264.337.593.543.950.335 per numeri con fattore di divisione zero, ossia numeri senza decimali.  Per numeri con 28 posizioni decimali, l'intervallo è \+\/\-7,9228162514264337593543950335.  Il numero più basso possibile diverso da zero è 0,0000000000000000000000000001 \(\+\/\-1E\-28\).|  
-|`CInt`|[Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)|Da \-2.147.483.648 a 2.147.483.647. Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CLng`|[Long Data Type](../../../visual-basic/language-reference/data-types/long-data-type.md)|Da \-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807. Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CObj`|[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualsiasi espressione valida.|  
-|`CSByte`|[SByte Data Type](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Da \-128 a 127. Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CShort`|[Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md)|Da \-32.768 a 32.767. Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CSng`|[Single Data Type](../../../visual-basic/language-reference/data-types/single-data-type.md)|Da \-3,402823E\+38 a \-1,401298E\-45 per valori negativi; da 1,401298E\-45 a 3,402823E\+38 per valori positivi.|  
-|`CStr`|[String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md)|I valori restituiti da `CStr` variano in base all'argomento `expression`.  Vedere [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
-|`CUInt`|[UInteger Data Type](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Da 0 a 4.294.967.295 \(senza segno\). Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CULng`|[ULong Data Type](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Da 0 a 18.446.744.073.709.551.615 \(senza segno\). Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
-|`CUShort`|[UShort Data Type](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Da 0 a 65.535 \(senza segno\). Le parti frazionarie vengono arrotondate.<sup>1</sup>|  
+|Nome della funzione|Tipo di dati restituito|Intervallo per `expression` argomento|  
+|-------------------|----------------------|-------------------------------------|  
+|`CBool`|[Tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Qualsiasi `Char` o `String` o espressione numerica.|  
+|`CByte`|[Tipo di dati Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|da 0 a 255 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CChar`|[Tipo di dati Char](../../../visual-basic/language-reference/data-types/char-data-type.md)|Qualsiasi `Char` o `String` espressione; solo primo carattere di un `String` viene convertito; valore può essere 0 e 65535 (senza segno).|  
+|`CDate`|[Tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|Qualsiasi rappresentazione valida di una data e ora.|  
+|`CDbl`|[Tipo di dati Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570 e + 308 e - 4, 94065645841246544E-324 per valori negativi. 4, 94065645841246544E-324 e 1.79769313486231570 e + 308 per i valori positivi.|  
+|`CDec`|[Tipo di dati Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-79.228.162.514.264.337.593.543.950.335 per zero-numeri, ovvero numeri senza cifre decimali. Per i numeri con 28 cifre decimali, l'intervallo è + /-7,9228162514264337593543950335. Il minor numero possibile di diverso da zero è 0,0000000000000000000000000001 (+ /-1E-28).|  
+|`CInt`|[Tipo di dati Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|tra -2.147.483.648 e 2.147.483.647. parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CLng`|[Tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807; parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CObj`|[Tipo di dati Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualsiasi espressione valida.|  
+|`CSByte`|[Tipo di dati SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|-128 e 127; parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CShort`|[Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|tra -32.768 e 32.767. parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CSng`|[Tipo di dati Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3, 402823E + 38 a - 1, 401298E-45 per valori negativi. 1, 401298E-45 a 3, 402823E + 38 per i valori positivi.|  
+|`CStr`|[Tipo di dati String](../../../visual-basic/language-reference/data-types/string-data-type.md)|Restituisce per `CStr` dipendono il `expression` argomento. Vedere [valori restituiti dalla funzione CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
+|`CUInt`|[Tipo di dati UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|da 0 a 4.294.967.295 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CULng`|[Tipo di dati ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|da 0 a 18.446.744.073.709.551.615 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CUShort`|[Tipo di dati UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|tra 0 e 65.535 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup>|  
   
- <sup>1</sup> Alle parti frazionarie può essere applicato uno speciale tipo di *arrotondamento*.  Per ulteriori informazioni, vedere la sezione relativa alle osservazioni.  
+ <sup>1</sup> parti frazionarie possono essere soggetta a un tipo speciale di arrotondamento chiamato *arrotondamento*. Per ulteriori informazioni, vedere "la sezione Osservazioni".  
   
-## Note  
- Di norma si consiglia di utilizzare le funzioni di conversione dei tipi di Visual Basic anziché i metodi .NET Framework, ad esempio `ToString()`, sulla classe <xref:System.Convert> oppure su una singola classe o struttura di tipi.  Le funzioni di Visual Basic sono state appositamente progettate per l'interazione ottimale con il codice Visual Basic e contribuiscono a rendere il codice sorgente più breve e più facilmente leggibile.  Inoltre, i metodi di conversione .NET Framework non producono sempre gli stessi risultati delle funzioni di Visual Basic, ad esempio quando vengono convertiti valori `Boolean` in `Integer`.  Per ulteriori informazioni, vedere [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+## <a name="remarks"></a>Note  
+ Come regola, utilizzare le funzioni di conversione di tipo Visual Basic anziché i metodi di .NET Framework, ad esempio `ToString()`, entrambi nel <xref:System.Convert> classe o in una classe o struttura di tipo individuale. Le funzioni di Visual Basic sono progettate per l'interazione ottimale con codice di Visual Basic e rendono il codice sorgente più breve e facile da leggere. Inoltre, i metodi di conversione di .NET Framework non producono sempre gli stessi risultati di funzioni di Visual Basic, ad esempio durante la conversione `Boolean` a `Integer`. Per ulteriori informazioni, vedere [risoluzione dei problemi dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-## Comportamento  
+## <a name="behavior"></a>Comportamento  
   
--   **Coercizione.** In generale, è possibile utilizzare le funzioni di conversione dei tipi di dati per assegnare il risultato di un'operazione a uno specifico tipo di dati anziché al tipo predefinito.  È possibile, ad esempio, utilizzare `CDec` per eseguire operazioni aritmetiche su valori decimali nei casi in cui in genere si effettuano operazioni a precisione singola, a precisione doppia o con valori integer.  
+-   **Coercizione.** In generale, è possibile utilizzare le funzioni di conversione di tipo di dati per assegnare il risultato di un'operazione a un particolare tipo di dati anziché il tipo di dati predefinito. Ad esempio, utilizzare `CDec` per forzare l'aritmetica decimale nei casi in cui e con precisione singola e precisione doppia o calcoli di interi normalmente avrà luogo.  
   
--   **Conversioni non riuscite.** Se il valore `expression` passato alla funzione non è compreso nell'intervallo del tipo di dati in cui viene convertito, verrà generata un'eccezione <xref:System.OverflowException>.  
+-   **Conversioni non riuscite.** Se il `expression` passato alla funzione è compreso nell'intervallo del tipo di dati a cui si desidera convertire, un <xref:System.OverflowException> si verifica.  
   
--   **Parti frazionarie.** Quando si converte un valore non integrale in un tipo integrale, le funzioni di conversione dei valori integer \(`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng` e `CUShort`\) rimuovono la parte frazionaria e arrotondano il valore all'integer più vicino.  
+-   **Parti frazionarie.** Quando si converte un valore non integrale in un tipo integrale tipo, le funzioni di conversione di integer (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, e `CUShort`) rimuovere il frazionari parte e arrotondare il valore all'intero più vicino.  
   
-     Se la parte frazionaria corrisponde esattamente a 0,5, le funzioni di conversione dei valori integer la arrotondano al valore integer pari più vicino.  Ad esempio, 0,5 si arrotonda a 0, e 1,5 e 2,5 si arrotondano entrambi a 2.  Alcune volte viene chiamato *arrotondamento* e ha lo scopo di compensare la distorsione che potrebbe accumularsi quando si aggiungono molti numeri di questo tipo.  
+     Se la parte frazionaria è esattamente 0,5, arrotondano le funzioni di conversione di valori integer per l'intero pari più vicino. Ad esempio 0,5 verrà arrotondato a 0 e 1,5 e 2,5 che entrambi arrotondato a 2. Talvolta chiamato *arrotondamento*, e il suo scopo consiste nel compensare la distorsione che potrebbero accumularsi quando aggiungono molti tali numeri.  
   
-     `CInt` e `CLng` differiscono dalle funzioni <xref:Microsoft.VisualBasic.Conversion.Int%2A> e <xref:Microsoft.VisualBasic.Conversion.Fix%2A> che troncano la parte frazionaria di un numero anziché arrotondarla.  Le funzioni `Fix` e `Int`, inoltre, restituiscono sempre un valore dello stesso tipo di quello passato.  
+     `CInt`e `CLng` diversi dal <xref:Microsoft.VisualBasic.Conversion.Int%2A> e <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funzioni, che, anziché arrotondare troncano, la parte frazionaria di un numero. Inoltre, `Fix` e `Int` restituiscono sempre un valore dello stesso tipo di dati di quello passato.  
   
--   **Conversioni di data\/ora.** Utilizzare la funzione <xref:Microsoft.VisualBasic.Information.IsDate%2A> per determinare se è possibile convertire un valore in una data e ora.  `CDate` riconosce valori letterali di data e ora, ma non i valori numerici.  Per convertire un valore `Date` di Visual Basic 6.0 in un valore `Date` di Visual Basic 2005 o versioni successive, è possibile utilizzare il metodo <xref:System.DateTime.FromOADate%2A?displayProperty=fullName>.  
+-   **Conversioni di data e ora.** Utilizzare il <xref:Microsoft.VisualBasic.Information.IsDate%2A> funzione per determinare se un valore può essere convertito in una data e ora. `CDate`riconosce i valori letterali di data e ora, ma i valori non numerici. Per convertire un Visual Basic 6.0 `Date` valore un `Date` valore in Visual Basic 2005 o versioni successive, è possibile utilizzare il <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> metodo.  
   
--   **Valori di data\/ora neutri.** Il [Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md) contiene sempre informazioni sia sulla data che sull'ora.  Ai fini della conversione del tipo, Visual Basic considera 1\/1\/0001 \(1 gennaio dell'anno 1\) come *valore neutro* per la data e 00:00:00 \(mezzanotte\) come valore neutro per l'ora.  Se si converte un valore `Date` in una stringa, `CStr` non include i valori neutri nella stringa risultante.  Se ad esempio il valore `#January 1, 0001 9:30:00#` viene convertito in una stringa, il risultato sarà "9:30:00 AM" e le informazioni sulla data non verranno visualizzate.  Le informazioni della data, tuttavia, sono comunque presenti nel valore `Date` originale e possono essere recuperate con funzioni quali <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+-   **Neutro valori data/ora.** Il [tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md) contiene sempre le informazioni sia data e ora. Ai fini della conversione del tipo, Visual Basic considera 1/1/0001 (1 ° gennaio dell'anno 1) da un *valore neutro* per la data e 00:00:00 (mezzanotte) come valore neutro per l'ora. Se si converte un `Date` , una stringa a valore `CStr` non include valori neutri nella stringa risultante. Ad esempio, se si converte `#January 1, 0001 9:30:00#` in una stringa, il risultato è "9:30:00 AM"; le informazioni sulla data viene eliminate. Tuttavia, le informazioni sulla data è ancora presente nell'originale `Date` valore e possono essere recuperate con funzioni, ad esempio <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> (funzione).  
   
--   **Sensibilità alle impostazioni cultura.** Le funzioni di conversione dei tipi che riguardano le stringhe eseguono conversioni in base alle impostazioni cultura correnti per l'applicazione.  La funzione `CDate`, ad esempio, riconosce i formati di data in base alle impostazioni locali del sistema.  È necessario specificare il giorno, il mese e l'anno nell'ordine corretto in base alle impostazioni locali utilizzate. In caso contrario, è possibile che la data non venga interpretata correttamente.  Un formato di data esteso contenente la stringa del giorno della settimana, ad esempio "mercoledì", non viene riconosciuto.  
+-   **Distinzione di impostazioni cultura.** Le funzioni di conversione di tipo che riguardano le stringhe eseguono conversioni in base alle impostazioni cultura correnti per l'applicazione. Ad esempio, `CDate` riconosce i formati di data in base all'impostazione delle impostazioni locali del sistema. È necessario specificare il giorno, mese e anno nell'ordine corretto delle impostazioni locali o la data potrebbe non essere interpretata correttamente. Se contiene una stringa di giorno della settimana, ad esempio "Mercoledì", un formato di data estesa non è riconosciuto.  
   
-     Se è necessario eseguire la conversione in o da una rappresentazione di stringa di un valore in un formato diverso da quello specificato dalle impostazioni locali, non è possibile utilizzare le funzioni di conversione dei tipi di Visual Basic.  A tale scopo, utilizzare i metodi `ToString(IFormatProvider)` e `Parse(String, IFormatProvider)` del tipo di valore.  Utilizzare ad esempio <xref:System.Double.Parse%2A?displayProperty=fullName> per la conversione di una stringa in un tipo `Double` e <xref:System.Double.ToString%2A?displayProperty=fullName> per la conversione di un valore di tipo `Double` in una stringa.  
+     Se è necessario convertire verso o da una rappresentazione di stringa di un valore in un formato diverso da quello specificato dalle impostazioni locali, è possibile utilizzare le funzioni di conversione di tipo Visual Basic. A tale scopo, utilizzare il `ToString(IFormatProvider)` e `Parse(String, IFormatProvider)` metodi del tipo di valore. Ad esempio, utilizzare <xref:System.Double.Parse%2A?displayProperty=nameWithType> quando si converte una stringa in un `Double`e utilizzare <xref:System.Double.ToString%2A?displayProperty=nameWithType> durante la conversione di un valore di tipo `Double` in una stringa.  
   
-## Funzione CType  
- La [funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md) accetta un secondo argomento, `typename`, e assegna `expression` a `typename`. `typename` può essere un qualsiasi tipo di dati, struttura, classe o interfaccia per cui esiste una conversione valida.  
+## <a name="ctype-function"></a>CType Function  
+ Il [CType (funzione)](../../../visual-basic/language-reference/functions/ctype-function.md) accetta un secondo argomento `typename`e assegna `expression` a `typename`, dove `typename` può essere qualsiasi tipo di dati, struttura, classe o interfaccia a cui è presente una conversione valida.  
   
- Per un confronto di `CType` con le altre parole chiave di conversione dei tipi, vedere [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) e [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).  
+ Per un confronto tra `CType` con l'altra tipo parole chiave di conversione, vedere [operatore DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) e [operatore TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
-## Esempio di CBool  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CBool` per convertire espressioni in valori `Boolean`.  Se un'espressione restituisce un valore diverso da zero, `CBool` restituisce `True`, altrimenti restituisce `False`.  
+## <a name="cbool-example"></a>Esempio di CBool  
+ L'esempio seguente usa il `CBool` funzione per convertire le espressioni di `Boolean` valori. Se un'espressione restituisce un valore diverso da zero, `CBool` restituisce `True`; in caso contrario, restituisce `False`.  
   
  [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
   
-## Esempio di CByte  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CByte` per convertire un'espressione in un valore `Byte`.  
+## <a name="cbyte-example"></a>Esempio di CByte  
+ L'esempio seguente usa il `CByte` funzione per convertire un'espressione in un `Byte`.  
   
  [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
   
-## Esempio di CChar  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CChar` per convertire il primo carattere di un'espressione `String` in un tipo `Char`.  
+## <a name="cchar-example"></a>Esempio di CChar  
+ L'esempio seguente usa il `CChar` funzione per convertire il primo carattere di un `String` espressione da un `Char` tipo.  
   
  [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
   
- L'argomento di input per `CChar` deve essere costituito da un tipo di dati `Char` o `String`.  La funzione `CChar` non può essere utilizzata per convertire un numero in un carattere. `CChar` non è infatti in grado di accettare tipi di dati numerici.  Nell'esempio riportato di seguito viene ottenuto un numero che rappresenta un punto di codice \(codice carattere\) e viene convertito nel carattere corrispondente.  È possibile utilizzare la funzione <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> per ottenere la stringa di cifre, `CInt` per convertire la stringa nel tipo `Integer` e `ChrW` per convertire il numero nel tipo `Char`.  
+ Argomento di input per `CChar` deve essere di tipo di dati `Char` o `String`. Non è possibile utilizzare `CChar` per convertire un numero in un carattere, perché `CChar` non può accettare un tipo di dati numerici. Nell'esempio seguente viene ottenuto un numero che rappresenta un punto di codice (codice carattere) e converte il carattere corrispondente. Usa il <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> funzione per ottenere la stringa di cifre, `CInt` per convertire la stringa al tipo `Integer`, e `ChrW` effettuare la conversione al tipo `Char`.  
   
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
-## Esempio di CDate  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CDate` per convertire stringhe in valori `Date`.  Non è in genere consigliabile definire a livello di codice le date e le ore come stringhe \(come illustrato in questo esempio\).  Utilizzare invece valori letterali di data e ora, quali \#Feb 12, 1969\# e \#4:35:47 PM\#.  
+## <a name="cdate-example"></a>Esempio di CDate  
+ L'esempio seguente usa il `CDate` funzione per convertire le stringhe in `Date` valori. In generale, non è consigliabile impostare come hardcoded date e ore come stringhe (come illustrato in questo esempio). Utilizzare valori letterali di data e ora, ad esempio #Feb 12, &#1969; e # 4:45:23 PM # invece.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
-## Esempio di CDbl  
+## <a name="cdbl-example"></a>Esempio di CDbl  
  [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
   
-## Esempio di CDec  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CDec` per convertire un valore numerico in `Decimal`.  
+## <a name="cdec-example"></a>Esempio di CDec  
+ L'esempio seguente usa il `CDec` funzione per convertire un valore numerico per `Decimal`.  
   
  [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
   
-## Esempio di CInt  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CInt` per convertire un valore nel tipo `Integer`.  
+## <a name="cint-example"></a>Esempio di CInt  
+ L'esempio seguente usa il `CInt` funzione per convertire un valore `Integer`.  
   
  [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
   
-## Esempio di CLng  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CLng` per convertire valori nel tipo `Long`.  
+## <a name="clng-example"></a>Esempio di CLng  
+ L'esempio seguente usa il `CLng` funzione per convertire i valori per `Long`.  
   
  [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
   
-## Esempio di CObj  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CObj` per convertire un valore numerico in `Object`.  La variabile `Object` contiene solo un puntatore a quattro byte che fa riferimento al valore `Double` assegnato.  
+## <a name="cobj-example"></a>Esempio di CObj  
+ L'esempio seguente usa il `CObj` funzione per convertire un valore numerico per `Object`. Il `Object` variabile contiene solo un puntatore a quattro byte, che fa riferimento al `Double` valore assegnato a esso.  
   
  [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
-## Esempio di CSByte  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CSByte` per convertire un valore numerico in `SByte`.  
+## <a name="csbyte-example"></a>Esempio di CSByte  
+ L'esempio seguente usa il `CSByte` funzione per convertire un valore numerico per `SByte`.  
   
  [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
   
-## Esempio di CShort  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CShort` per convertire un valore numerico in `Short`.  
+## <a name="cshort-example"></a>Esempio di CShort  
+ L'esempio seguente usa il `CShort` funzione per convertire un valore numerico per `Short`.  
   
  [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
   
-## Esempio di CSng  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CSng` per convertire valori nel tipo `Single`.  
+## <a name="csng-example"></a>Esempio di CSng  
+ L'esempio seguente usa il `CSng` funzione per convertire i valori per `Single`.  
   
  [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
   
-## Esempio di CStr  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CStr` per convertire un valore numerico in `String`.  
+## <a name="cstr-example"></a>Esempio di funzione CStr  
+ L'esempio seguente usa il `CStr` funzione per convertire un valore numerico per `String`.  
   
  [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
   
- Nell'esempio riportato di seguito viene utilizzata la funzione `CStr` per convertire valori `Date` in valori `String`.  
+ L'esempio seguente usa il `CStr` funzione per convertire `Date` valori `String` valori.  
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- La funzione `CStr` visualizza sempre un valore `Date` nel formato breve standard per le impostazioni locali correnti, ad esempio "6\/15\/2003 4:35:47 PM".  Tuttavia, `CStr` elimina i *valori neutri* 1\/1\/0001 per la data e 00:00:00 per l'ora.  
+ `CStr`Visualizza sempre un `Date` valore nel formato breve standard per le impostazioni locali correnti, ad esempio, "6/15/2003 4:35:47 PM". Tuttavia, `CStr` Sopprime il *valori neutri* di 1/1/0001 per la data e 00:00:00 per il periodo di tempo.  
   
- Per informazioni dettagliate sui valori restituiti da `CStr`, vedere [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
+ Per informazioni dettagliate sui valori restituiti da `CStr`, vedere [valori restituiti dalla funzione CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   
-## Esempio di CUInt  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CUInt` per convertire un valore numerico in `UInteger`.  
+## <a name="cuint-example"></a>Esempio di CUInt  
+ L'esempio seguente usa il `CUInt` funzione per convertire un valore numerico per `UInteger`.  
   
  [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
   
-## Esempio di CULng  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CULng` per convertire un valore numerico in `ULong`.  
+## <a name="culng-example"></a>Esempio di CULng  
+ L'esempio seguente usa il `CULng` funzione per convertire un valore numerico per `ULong`.  
   
  [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
   
-## Esempio di CUShort  
- Nell'esempio riportato di seguito viene utilizzata la funzione `CUShort` per convertire un valore numerico in `UShort`.  
+## <a name="cushort-example"></a>Esempio di CUShort  
+ L'esempio seguente usa il `CUShort` funzione per convertire un valore numerico per `UShort`.  
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## Vedere anche  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>   
- <xref:Microsoft.VisualBasic.Strings.Format%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Str%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>   
- [Conversion Functions](../../../visual-basic/language-reference/functions/conversion-functions.md)   
- [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Format%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
+ [Funzioni di conversione](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [Conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

@@ -1,44 +1,27 @@
 ---
-title: RemoveHandler (istruzione) | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Istruzione RemoveHandler
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.RemoveHandlerMethod
 - vb.RemoveHandler
 - RemoveHandler
-dev_langs:
-- VB
 helpviewer_keywords:
-- RemoveHandler keyword
-- RemoveHandler statement
+- RemoveHandler keyword [Visual Basic]
+- RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d35de576bd9e267800acc2a9bfd5761dd977622f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 82d130c6536df7d72977a028333293b4e0ee89de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="removehandler-statement"></a>Istruzione RemoveHandler
 Rimuove l'associazione tra un evento e un gestore eventi.  
@@ -57,16 +40,16 @@ RemoveHandler event, AddressOf eventhandler
 |`eventhandler`|Il nome della routine che gestisce l'evento.|  
   
 ## <a name="remarks"></a>Note  
- Il `AddHandler` e `RemoveHandler` istruzioni consentono di avviare e interrompere la gestione degli eventi per un evento specifico in qualsiasi momento durante l'esecuzione del programma.  
+ Il `AddHandler` e `RemoveHandler` istruzioni consentono di avviare e arrestare la gestione degli eventi per un evento specifico in qualsiasi momento durante l'esecuzione del programma.  
   
 > [!NOTE]
 >  Per gli eventi personalizzati, il `RemoveHandler` istruzione richiama l'evento `RemoveHandler` della funzione di accesso. Per ulteriori informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Esempio  
- [!code-vb[VbVbalrEvents n.&17;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [AddHandler (istruzione)](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [Handle](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)   
+ [Istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)  
  [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)
