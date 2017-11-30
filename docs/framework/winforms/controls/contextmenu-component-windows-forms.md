@@ -1,52 +1,53 @@
 ---
-title: "Componente ContextMenu (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "menu di scelta rapida, per Windows Form"
-  - "ContextMenu (componente) [Windows Form]"
-  - "menu, menu di scelta rapida"
-  - "menu, menu di scelta rapida"
-  - "scelta rapida (menu)"
-  - "menu di scelta rapida, ContextMenu (componente)"
-  - "Windows Form, menu"
+title: Componente ContextMenu (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- menus [Windows Forms], shortcut menus
+- Windows Forms, menus
+- pop-up menus
+- ContextMenu component [Windows Forms]
+- menus [Windows Forms], context menus
+- context menus [Windows Forms], for Windows Forms
+- shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6c3c0122eceab8b59bed15391e076863c5a2f144
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Componente ContextMenu (Windows Form)
+# <a name="contextmenu-component-windows-forms"></a>Componente ContextMenu (Windows Form)
 > [!NOTE]
->  Benché `MenuStrip` e `ContextMenuStrip` sostituiscano i controlli <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> delle versioni precedenti aggiungendovi funzionalità, <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> vengono mantenuti per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  
+>  Sebbene `MenuStrip` e `ContextMenuStrip` sostituire e aggiungere funzionalità a di <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> controlli delle versioni precedenti, <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> vengono mantenuti per compatibilità con le versioni precedenti e un utilizzo futuro, se si sceglie.  
   
- Il componente `ContextMenu` di Windows Form viene utilizzato per offrire agli utenti un menu di scelta rapida facilmente accessibile di comandi utilizzati di frequente, associati all'oggetto selezionato.  Le voci di un menu di scelta rapida sono spesso un sottoinsieme delle voci dei menu principali visualizzati in altri punti dell'applicazione.  I menu di scelta rapida vengono in genere richiamati facendo clic con il pulsante destro del mouse  e in Windows Form possono essere associati ad altri controlli.  
+ Windows Form `ContextMenu` componente viene utilizzato per fornire agli utenti con un menu di scelta rapida facilmente accessibile di comandi utilizzati frequentemente vengono associati all'oggetto selezionato. Gli elementi in un menu di scelta rapida sono spesso un sottoinsieme degli elementi dei menu principali vengono visualizzati in un' posizione nell'applicazione. Menu di scelta rapida sono in genere disponibili facendo clic con il mouse. In Windows Form sono associati ad altri controlli.  
   
-## In questa sezione  
- [Cenni preliminari sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
- Vengono presentati i concetti generali relativi al componente `ContextMenu`, che consente agli utenti di creare menu dei comandi utilizzati frequentemente associati a un oggetto selezionato.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
+ Introduce i concetti generali relativi il `ContextMenu` componente, che consente agli utenti di creare i menu dei comandi utilizzati frequentemente associati a un oggetto selezionato.  
   
- [Procedura: aggiungere e rimuovere voci di menu tramite il componente ContextMenu Windows Form](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
- Viene illustrato come aggiungere o rimuovere voci nei menu di scelta rapida in Windows Form.  
+ [Procedura: Aggiungere e rimuovere voci di menu tramite il componente ContextMenu di Windows Form](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Windows Form.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.ContextMenu>  
- Vengono fornite informazioni di riferimento sulla classe <xref:System.Windows.Forms.ContextMenu> e sui relativi membri.  
+ Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.ContextMenu> e sui relativi membri.  
   
-## Sezioni correlate  
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Viene fornito un elenco completo dei controlli Windows Form, con l'indicazione dei collegamenti alle informazioni sul relativo utilizzo.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.MenuStrip>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

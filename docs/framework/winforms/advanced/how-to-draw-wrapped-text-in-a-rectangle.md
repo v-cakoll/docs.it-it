@@ -1,57 +1,61 @@
 ---
-title: "Procedura: creare testo disposto su pi&#249; righe in un rettangolo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "stringhe [Windows Form], creazione in un rettangolo"
-  - "testo [Windows Form], creazione in un rettangolo"
-  - "Windows Form, disegno di testo in un rettangolo"
+title: "Procedura: creare testo disposto su più righe in un rettangolo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, drawing text in a rectangle
+- text [Windows Forms], drawing in a rectangle
+- strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 773216c30adf1c684ec705a909038354aab0fec9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare testo disposto su pi&#249; righe in un rettangolo
-È possibile creare testo disposto su più righe in un rettangolo utilizzando il metodo di overload <xref:System.Drawing.Graphics.DrawString%2A> della classe <xref:System.Drawing.Graphics> che accetta un parametro <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF>.  Verranno inoltre utilizzate una classe <xref:System.Drawing.Brush> e una classe <xref:System.Drawing.Font>.  
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procedura: creare testo disposto su più righe in un rettangolo
+È possibile disegnare il testo a capo in un rettangolo con il <xref:System.Drawing.Graphics.DrawString%2A> metodo di overload di <xref:System.Drawing.Graphics> classe che accetta un <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF> parametro. Si utilizzerà inoltre un <xref:System.Drawing.Brush> e <xref:System.Drawing.Font>.  
   
- È possibile creare testo disposto su più righe in un rettangolo anche utilizzando il metodo di overload <xref:System.Windows.Forms.TextRenderer.DrawText%2A> della classe <xref:System.Windows.Forms.TextRenderer> che accetta una struttura <xref:System.Drawing.Rectangle> e un parametro <xref:System.Windows.Forms.TextFormatFlags>.  Verranno inoltre utilizzate una classe <xref:System.Drawing.Color> e una classe <xref:System.Drawing.Font>.  
+ È possibile creare testo sottoposta a wrapping in un rettangolo con il <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodo di overload di <xref:System.Windows.Forms.TextRenderer> che accetta un <xref:System.Drawing.Rectangle> e un <xref:System.Windows.Forms.TextFormatFlags> parametro. Si utilizzerà inoltre un <xref:System.Drawing.Color> e <xref:System.Drawing.Font>.  
   
- Nell'immagine riportata di seguito viene illustrato il risultato della creazione di testo nel rettangolo quando si utilizza il metodo <xref:System.Drawing.Graphics.DrawString%2A>.  
+ Nella figura seguente viene illustrato l'output di testo nel rettangolo quando si utilizza il <xref:System.Drawing.Graphics.DrawString%2A> metodo.  
   
- ![Testo caratteri](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")  
+ ![Tipi di carattere testo](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")  
   
-### Per creare testo disposto su più righe in un rettangolo con GDI\+  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>Per disegnare il wrapping di testo in un rettangolo con GDI+  
   
-1.  Utilizzare il metodo di overload <xref:System.Drawing.Graphics.DrawString%2A> per passare il testo desiderato, la struttura <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF>, la classe <xref:System.Drawing.Font> e la classe <xref:System.Drawing.Brush>.  
+1.  Utilizzare il <xref:System.Drawing.Graphics.DrawString%2A> metodo di overload, passare il testo desiderato, <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Font> e <xref:System.Drawing.Brush>.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
      [!code-vb[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
   
-### Per creare testo disposto su più righe in un rettangolo con GDI  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>Per disegnare il wrapping di testo in un rettangolo con GDI  
   
-1.  Utilizzare il valore dell'enumerazione <xref:System.Windows.Forms.TextFormatFlags> per specificare che il testo dovrà essere disposto su più righe con il metodo di overload <xref:System.Windows.Forms.TextRenderer.DrawText%2A> che passa il testo desiderato, la struttura <xref:System.Drawing.Rectangle>, la classe <xref:System.Drawing.Font> e la struttura <xref:System.Drawing.Color>.  
+1.  Utilizzare il <xref:System.Windows.Forms.TextFormatFlags> il valore di enumerazione per specificare il testo deve essere racchiuso tra i <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodo di overload, passare il testo desiderato, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Font> e <xref:System.Drawing.Color>.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
      [!code-vb[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a>Compilazione del codice  
  Gli esempi precedenti richiedono:  
   
--   <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+-   <xref:System.Windows.Forms.PaintEventArgs>`e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## Vedere anche  
- [Procedura: creare testo con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)   
- [Utilizzo di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
- [Procedura: creare caratteri e gruppi di caratteri](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)   
- [Procedura: creare testo in una posizione specificata](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura: Creare testo con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [Uso di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [Procedura: Creare caratteri e gruppi di caratteri](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ [Procedura: Creare testo in una posizione specificata](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)

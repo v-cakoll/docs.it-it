@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f483fba5ade9d33588a946984ca914b95cd1f18
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2569ac2ec170e5ac137751d790d41c2ab6cf0262
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lttypegt-element-net-native"></a>Elemento &lt;Type&gt; (.NET Native)
 Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una struttura.  
@@ -52,9 +50,9 @@ Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una 
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|  
 |`Serialize`|Serializzazione|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a costruttori, campi e proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie quali il serializzatore JSON di Newtonsoft.|  
-|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
+|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi di riferimento a Windows Runtime e COM.|  
 |`MarshalDelegate`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.|  
 |`MarshalStructure`|Interoperabilità|Attributo facoltativo. Controlla i criteri per il marshalling dei tipi di valore al codice nativo.|  
@@ -105,10 +103,10 @@ Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una 
   
  Un elemento `<Type>` di un tipo generico applica i relativi criteri a tutte le istanze che non dispongono di propri criteri. I criteri di tipi generici costruiti sono definiti dall'elemento [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- Se il tipo è un tipo generico, il nome è decorato da un simbolo di accento grave ( \`) seguito dal relativo numero di parametri generici. Ad esempio, l'attributo `Name` di un elemento `<Type>` per la classe <xref:System.Collections.Generic.List%601?displayProperty=fullName> viene visualizzato come `Name="System.Collections.Generic.List`1"`.  
+ Se il tipo è un tipo generico, il nome è decorato da un simbolo di accento grave ( \`) seguito dal relativo numero di parametri generici. Ad esempio, l'attributo `Name` di un elemento `<Type>` per la classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> viene visualizzato come `Name="System.Collections.Generic.List`1"`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene usata la reflection per visualizzare le informazioni su campi, proprietà e metodi della classe <xref:System.Collections.Generic.List%601?displayProperty=fullName>. La variabile `b` nell'esempio è un controllo [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx). Poiché l'esempio recupera semplicemente le informazioni sul tipo, la disponibilità dei metadati è controllata dall'impostazione dei criteri `Browse`.  
+ Nell'esempio seguente viene usata la reflection per visualizzare le informazioni su campi, proprietà e metodi della classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variabile `b` nell'esempio è un controllo [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx). Poiché l'esempio recupera semplicemente le informazioni sul tipo, la disponibilità dei metadati è controllata dall'impostazione dei criteri `Browse`.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -126,11 +124,11 @@ Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una 
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene usata la reflection per recuperare un oggetto <xref:System.Reflection.PropertyInfo> che rappresenta la proprietà <xref:System.String.Chars%2A?displayProperty=fullName>. Viene quindi usato il metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=fullName> per recuperare il valore del settimo carattere in una stringa e visualizzare tutti i caratteri nella stringa. La variabile `b` nell'esempio è un controllo [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
+ Nell'esempio seguente viene usata la reflection per recuperare un oggetto <xref:System.Reflection.PropertyInfo> che rappresenta la proprietà <xref:System.String.Chars%2A?displayProperty=nameWithType>. Viene quindi usato il metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> per recuperare il valore del settimo carattere in una stringa e visualizzare tutti i caratteri nella stringa. La variabile `b` nell'esempio è un controllo [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Poiché i metadati relativi all'oggetto <xref:System.String> non sono disponibili, la chiamata al metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=fullName> genera un'eccezione <xref:System.NullReferenceException> in fase di esecuzione quando compilato con la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:  
+ Poiché i metadati relativi all'oggetto <xref:System.String> non sono disponibili, la chiamata al metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> genera un'eccezione <xref:System.NullReferenceException> in fase di esecuzione quando compilato con la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -142,7 +140,6 @@ Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una 
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
-

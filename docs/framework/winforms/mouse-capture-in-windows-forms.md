@@ -1,34 +1,34 @@
 ---
-title: "Mouse Capture in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "mouse, capture"
+title: Mouse capture in Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8004b05ea25341a142bfcfd9ae812ee3bebd6d5b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Mouse Capture in Windows Forms
-Per *mouse capture* si intende l'assunzione del comando dell'input completo del mouse da parte di un controllo.  Quando un controllo detiene il mouse capture, riceve l'input del mouse anche se il puntatore non rientra nei suoi limiti.  
+# <a name="mouse-capture-in-windows-forms"></a>Mouse capture in Windows Form
+*L'input del mouse* indica quando un controllo accetta i comandi di input del mouse tutti. Quando un controllo ha acquisito il mouse, riceve l'input del mouse o meno il puntatore si trova all'interno dei bordi.  
   
-## Impostazione di mouse capture  
- In Windows Form il mouse capture viene acquisito da un controllo quando l'utente preme un pulsante del mouse sul controllo e viene rilasciato dal controllo quando l'utente rilascia il pulsante del mouse.  
+## <a name="setting-mouse-capture"></a>Impostazione di Mouse Capture  
+ In Windows Form viene acquisito il mouse dal controllo quando l'utente preme un pulsante del mouse su un controllo, mentre il puntatore del mouse viene rilasciato dal controllo quando l'utente rilascia il pulsante del mouse.  
   
- La proprietà <xref:System.Windows.Forms.Control.Capture%2A> della classe <xref:System.Windows.Forms.Control> specifica se un controllo detiene il mouse capture.  Per determinare il momento in cui un controllo perde il mouse capture, gestire l'evento <xref:System.Windows.Forms.Control.MouseCaptureChanged>.  
+ Il <xref:System.Windows.Forms.Control.Capture%2A> proprietà la <xref:System.Windows.Forms.Control> classe specifica se un controllo ha acquisito il mouse. Per determinare quando un controllo perde il mouse capture, gestire il <xref:System.Windows.Forms.Control.MouseCaptureChanged> evento.  
   
- Solo la finestra in primo piano può ricevere l'input del mouse.  Quando una finestra in background tenta di acquisire il mouse capture, riceve messaggi solo per gli eventi del mouse che si verificano quando il puntatore rientra nella parte visibile della finestra.  Anche quando il mouse capture avviene nella finestra in primo piano, inoltre, è sempre possibile fare clic su un'altra finestra per portarla in primo piano.  Quando avviene il mouse capture, i tasti di scelta rapida non sono attivi.  
+ Solo la finestra di primo piano è possibile acquisire il mouse. Quando una finestra di sfondo tenta di acquisire il mouse, la finestra riceve i messaggi solo per gli eventi del mouse che si verificano quando il puntatore del mouse è all'interno della parte visibile della finestra. Inoltre, anche se la finestra di primo piano ha acquisito il mouse, l'utente può comunque fare clic su un'altra finestra portarla in primo piano. Quando viene acquisito il mouse, tasti di scelta rapida non funzionano.  
   
-## Vedere anche  
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Vedere anche  
+ [Input del mouse in un'applicazione Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

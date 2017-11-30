@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - elements [.NET Framework], network configuration elements
 - sending data, network configuration elements
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a101b3d6ebf1c884bce08077a1138a4ab6376d1f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: ca4a0000d85c8fbac9a723beeda51f9c7886ed8c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-settings-schema"></a>Schema delle impostazioni di rete
 Tramite le impostazioni di rete viene specificata la modalità di connessione a Internet di .NET Framework. La tabella seguente descrive la funzione di ogni elemento di configurazione figlio dell'[elemento \<system.Net> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
@@ -46,7 +39,7 @@ Tramite le impostazioni di rete viene specificata la modalità di connessione a 
 |[Elemento \<defaultProxy> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Specifica il server proxy usato per le richieste HTTP indirizzate a Internet.|  
 |[Elemento \<mailSettings> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Contiene le impostazioni per le opzioni di invio della posta elettronica.|  
 |[Elemento \<requestCaching> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Specifica i moduli usati per richiedere informazioni da host Internet.|  
-|[Elemento \<requestCaching> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?displayProperty=fullName>.|  
+|[Elemento \<requestCaching> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?displayProperty=nameWithType>.|  
 |[Elemento \<webRequestModules> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli usati per richiedere informazioni da host Internet.|  
   
  Tramite le impostazioni URI viene specificata la modalità di gestione da parte di .NET Framework degli indirizzi Web espressi tramite Uniform Resource Identifier (URI). La tabella seguente descrive la funzione di ogni elemento di configurazione figlio dell'[elemento \<Uri> (impostazioni URI)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).  
@@ -58,6 +51,5 @@ Tramite le impostazioni di rete viene specificata la modalità di connessione a 
 |[Elemento \<schemeSettings> (impostazioni URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di applicazioni Internet](../../../../../docs/framework/network-programming/configuring-internet-applications.md)   
+ [Configurazione di applicazioni Internet](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-

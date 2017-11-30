@@ -1,103 +1,102 @@
 ---
-title: "Access Levels in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "members, accessing in Visual Basic"
-  - "Friend access modifier"
-  - "access levels, declared elements"
-  - "access levels"
-  - "access modifiers"
-  - "Public access modifier"
-  - "Protected access modifier"
-  - "Protected Friend access modifier"
-  - "Private access modifier"
-  - "declared elements, access level"
+title: Livelli di accesso in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- members [Visual Basic], accessing in Visual Basic
+- Friend access modifier
+- access levels, declared elements
+- access levels
+- access modifiers
+- Public access modifier
+- Protected access modifier
+- Protected Friend access modifier
+- Private access modifier
+- declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 87e43ac7e813cece1179bdaf24c86fa62adcb438
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Access Levels in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Il *livello di accesso* di un elemento dichiarato indica l'ampiezza della capacità di accesso all'elemento, ossia specifica le parti di codice che dispongono delle autorizzazioni di lettura o scrittura sull'elemento.  Questo valore dipende non solo dal modo in cui viene dichiarato l'elemento stesso ma anche dal livello di accesso del relativo contenitore.  Un codice che non può accedere a un elemento contenitore non può accedere ai relativi elementi contenuti, inclusi quelli dichiarati come `Public`.  Ad esempio, è possibile accedere a una variabile `Public` in una struttura `Private` dall'interno della classe contenente la struttura, ma non dall'esterno della classe.  
+# <a name="access-levels-in-visual-basic"></a>Livelli di accesso in Visual Basic
+Il *livello di accesso* di un elemento dichiarato è l'estensione della possibilità di accedervi, vale a dire, il codice dispone dell'autorizzazione di lettura o scrittura. Ciò dipende non solo dalla modalità di dichiarazione dell'elemento stesso, ma anche dal livello di accesso del contenitore dell'elemento. Codice che non può accedere a un elemento contenitore non può accedere ai relativi elementi contenuti, anche quelli dichiarati come `Public`. Ad esempio, un `Public` variabile in un `Private` struttura accessibili dall'interno della classe che contiene la struttura, ma non dall'esterno della classe.  
   
-## Public  
- La parola chiave [Public](../../../../visual-basic/language-reference/modifiers/public.md) nell'istruzione di dichiarazione indica che è possibile accedere agli elementi da qualsiasi codice all'interno dello stesso progetto, da altri progetti che fanno riferimento al progetto e da qualsiasi assembly compilato dal progetto.  Nel codice riportato di seguito è illustrato un esempio di dichiarazione `Public`.  
+## <a name="public"></a>Public  
+ Il [pubblica](../../../../visual-basic/language-reference/modifiers/public.md) la parola chiave nell'istruzione di dichiarazione specifica che gli elementi siano accessibili da qualsiasi codice nello stesso progetto, da altri progetti che fanno riferimento al progetto e da qualsiasi assembly compilato dal progetto. Nel codice seguente viene illustrato un esempio `Public` dichiarazione.  
   
 ```  
 Public Class classForEverybody  
 ```  
   
- È possibile utilizzare la parola chiave `Public` solo a livello di modulo, di interfaccia o di spazio dei nomi.  Questo significa che è possibile dichiarare un elemento Public a livello di file di origine o di spazio dei nomi oppure all'interno di un'interfaccia, di un modulo, di una classe o di una struttura, ma non in una routine.  
+ È possibile utilizzare `Public` solo a livello di modulo, interfaccia o spazio dei nomi. Ciò significa che è possibile dichiarare un elemento pubblico a livello di un file di origine o di spazio dei nomi, o all'interno di un'interfaccia, modulo, classe o struttura, ma non in una stored procedure.  
   
-## Protected  
- La parola chiave [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) nell'istruzione di dichiarazione indica che è possibile accedere agli elementi solo dall'interno della stessa classe o da una classe da essa derivata.  Nel codice riportato di seguito è illustrato un esempio di dichiarazione `Protected`.  
+## <a name="protected"></a>Protetta  
+ Il [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) parola chiave nell'istruzione di dichiarazione specifica che gli elementi è accessibile solo dall'interno della stessa classe o da una classe derivata da questa classe. Nel codice seguente viene illustrato un esempio `Protected` dichiarazione.  
   
 ```  
 Protected Class classForMyHeirs  
 ```  
   
- È possibile utilizzare la parola chiave `Protected` solo a livello di classe e solo quando si dichiara un membro di una classe.  Questo significa che è possibile dichiarare un elemento Protected in una classe ma non a livello di file di origine o di spazio dei nomi né all'interno di un'interfaccia, di un modulo, di una struttura o di una routine.  
+ È possibile utilizzare `Protected` solo alla classe di livello e solo quando si dichiara un membro di una classe. Ciò significa che è possibile dichiarare un elemento protetto in una classe, ma non a livello di un file di origine o di spazio dei nomi o all'interno di un'interfaccia, modulo, struttura o stored procedure.  
   
-## Friend  
- La parola chiave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) nell'istruzione di dichiarazione indica che è possibile accedere agli elementi dall'interno dello stesso assembly, ma non dall'esterno dell'assembly.  Nel codice riportato di seguito è illustrato un esempio di dichiarazione `Friend`.  
+## <a name="friend"></a>Friend  
+ Il [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) la parola chiave nell'istruzione di dichiarazione specifica che gli elementi è possibile accedere dall'interno dello stesso assembly, ma non dall'esterno dell'assembly. Nel codice seguente viene illustrato un esempio `Friend` dichiarazione.  
   
 ```  
 Friend stringForThisProject As String  
 ```  
   
- È possibile utilizzare la parola chiave `Friend` solo a livello di modulo, di interfaccia o di spazio dei nomi.  Questo significa che è possibile dichiarare un elemento Friend a livello di file di origine o di spazio dei nomi oppure all'interno di un'interfaccia, di un modulo, di una classe o di una struttura, ma non in una routine.  
+ È possibile utilizzare `Friend` solo a livello di modulo, interfaccia o spazio dei nomi. Ciò significa che è possibile dichiarare un elemento friend a livello di un file di origine o di spazio dei nomi, o all'interno di un'interfaccia, modulo, classe o struttura, ma non in una stored procedure.  
   
-## Protected Friend  
- L'utilizzo di entrambe le parole chiave `Protected` e `Friend` nell'istruzione di dichiarazione indica che è possibile accedere agli elementi dalle classi derivate e\/o dall'interno dello stesso assembly.  Nel codice riportato di seguito è illustrato un esempio di dichiarazione `Protected` `Friend`.  
+## <a name="protected-friend"></a>Protected Friend  
+ Il `Protected` e `Friend` le parole chiave nell'istruzione di dichiarazione indica che è possano accedere agli elementi dalle classi derivate o dall'interno dello stesso assembly o entrambi. Nel codice seguente viene illustrato un esempio `Protected Friend` dichiarazione.  
   
 ```  
 Protected Friend stringForProjectAndHeirs As String  
 ```  
   
- È possibile utilizzare `Protected` `Friend` solo a livello di classe e solo quando si dichiara un membro di una classe.  Questo significa che è possibile dichiarare un elemento Protected Friend in una classe ma non a livello di file di origine o di spazio dei nomi né all'interno di un'interfaccia, di un modulo, di una struttura o di una routine.  
+ È possibile utilizzare `Protected Friend` solo alla classe di livello e solo quando si dichiara un membro di una classe. Ciò significa che è possibile dichiarare un elemento protected friend in una classe, ma non a livello di un file di origine o di spazio dei nomi o all'interno di un'interfaccia, modulo, struttura o stored procedure.  
   
-## Private  
- La parola chiave [Private](../../../../visual-basic/language-reference/modifiers/private.md) nell'istruzione di dichiarazione indica che è possibile accedere agli elementi solo dall'interno dello stesso modulo, classe o struttura.  Nel codice riportato di seguito è illustrato un esempio di dichiarazione `Private`.  
+## <a name="private"></a>Private  
+ Il [privata](../../../../visual-basic/language-reference/modifiers/private.md) la parola chiave nell'istruzione di dichiarazione specifica che gli elementi siano accessibili solo da all'interno di modulo, classe o struttura stessa. Nel codice seguente viene illustrato un esempio `Private` dichiarazione.  
   
 ```  
 Private numberForMeOnly As Integer  
 ```  
   
- È possibile utilizzare la parola chiave `Private` solo a livello di modulo.  Questo significa che è possibile dichiarare un elemento Private all'interno di un modulo, di una classe o di una struttura ma non a livello di file di origine o di spazio dei nomi né dall'interno di un'interfaccia o di una routine.  
+ Si può usare `Private` solo a livello di modulo. Ciò significa che è possibile dichiarare un elemento private all'interno di un modulo, classe o struttura, ma non a livello di un file di origine o di spazio dei nomi, in un'interfaccia o in una stored procedure.  
   
- A livello di modulo, l'istruzione `Dim` senza alcuna parola chiave relativa al livello di accesso equivale a una dichiarazione `Private`.  È possibile comunque utilizzare la parola chiave `Private` per rendere più semplice la lettura e l'interpretazione del codice.  
+ A livello di modulo, il `Dim` istruzione senza alcuna parola chiave livello di accesso è equivalente a un `Private` dichiarazione. Tuttavia, è consigliabile utilizzare il `Private` (parola chiave) per rendere il codice più facile da leggere e interpretare.  
   
-## Modificatori di accesso  
- Le parole chiave che specificano il livello di accesso sono dette *modificatori di accesso*.  Nella seguente tabella viene effettuato un confronto tra i vari modificatori di accesso.  
+## <a name="access-modifiers"></a>Modificatori di accesso  
+ Le parole chiave che specificano il livello di accesso vengono chiamate *modificatori di accesso*. Nella tabella seguente vengono confrontati i modificatori di accesso.  
   
 |Modificatore di accesso|Livello di accesso concesso|Elementi che è possibile dichiarare con questo livello di accesso|Contesto della dichiarazione all'interno del quale è possibile utilizzare questo modificatore|  
-|-----------------------------|---------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|  
-|`Public`|Illimitato<br /><br /> L'accesso a un elemento Public è consentito a qualsiasi parte di codice in cui tale elemento è visibile.|Interfacce<br /><br /> Moduli<br /><br /> Classi<br /><br /> Strutture<br /><br /> Membri di struttura<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|File di origine<br /><br /> Spazio dei nomi<br /><br /> Interfaccia<br /><br /> Modulo<br /><br /> Classe<br /><br /> Struttura|  
-|`Protected`|Derivazionale<br /><br /> L'accesso a un elemento Protected è consentito al codice della classe che dichiara tale elemento o di una classe da essa derivata.|Interfacce<br /><br /> Classi<br /><br /> Strutture<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|Classe|  
-|`Friend`|Assembly:<br /><br /> L'accesso a un elemento Friend è consentito al codice dell'assembly che dichiara tale elemento.|Interfacce<br /><br /> Moduli<br /><br /> Classi<br /><br /> Strutture<br /><br /> Membri di struttura<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|File di origine<br /><br /> Spazio dei nomi<br /><br /> Interfaccia<br /><br /> Modulo<br /><br /> Classe<br /><br /> Struttura|  
-|`Protected` `Friend`|Unione di `Protected` e `Friend`<br /><br /> L'accesso a un elemento Protected Friend è consentito al codice della stessa classe o dello stesso assembly di tale elemento oppure al codice di una qualsiasi classe derivata dalla classe dell'elemento.|Interfacce<br /><br /> Classi<br /><br /> Strutture<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|Classe|  
-|`Private`|Contesto della dichiarazione<br /><br /> L'accesso a un elemento Private è consentito al codice del tipo che dichiara tale elemento, incluso il codice dei tipi contenuti.|Interfacce<br /><br /> Classi<br /><br /> Strutture<br /><br /> Membri di struttura<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|Modulo<br /><br /> Classe<br /><br /> Struttura|  
+|---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
+|`Public`|Senza restrizioni:<br /><br /> Può accedere qualsiasi codice che è possibile visualizzare un elemento pubblico|Interfacce<br /><br /> Moduli<br /><br /> Classi<br /><br /> Strutture<br /><br /> Membri di struttura<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|File di origine<br /><br /> Spazio dei nomi<br /><br /> Interfaccia<br /><br /> Modulo<br /><br /> Classe<br /><br /> Struttura|  
+|`Protected`|Derivazionali:<br /><br /> La classe che dichiara un elemento protetto, o una classe derivata da esso, è possibile accedere all'elemento di codice|Interfacce<br /><br /> Classi<br /><br /> Strutture<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|Classe|  
+|`Friend`|Assembly:<br /><br /> Codice dell'assembly che dichiara che un elemento friend può accedervi|Interfacce<br /><br /> Moduli<br /><br /> Classi<br /><br /> Strutture<br /><br /> Membri di struttura<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|File di origine<br /><br /> Spazio dei nomi<br /><br /> Interfaccia<br /><br /> Modulo<br /><br /> Classe<br /><br /> Struttura|  
+|`Protected` `Friend`|Unione di `Protected` e `Friend`:<br /><br /> Il codice nella stessa classe o nello stesso assembly, come un elemento protected friend o una qualsiasi classe derivata dalla classe dell'elemento accesso è consentito.|Interfacce<br /><br /> Classi<br /><br /> Strutture<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|Classe|  
+|`Private`|Contesto della dichiarazione:<br /><br /> Codice del tipo che dichiara un elemento private, incluso il codice dei tipi di contenuto, è possibile accedere all'elemento|Interfacce<br /><br /> Classi<br /><br /> Strutture<br /><br /> Membri di struttura<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|Modulo<br /><br /> Classe<br /><br /> Struttura|  
   
-## Vedere anche  
- [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)   
- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)   
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [Dichiarazione di variabili](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
+ [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Caratteristiche di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [Procedura: controllare la disponibilità di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
+ [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

@@ -1,60 +1,64 @@
 ---
-title: "Procedura: ruotare i colori | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "colori, rotazione"
-  - "esempi [Windows Form], rotazione dei colori"
+title: 'Procedura: ruotare i colori'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- colors [Windows Forms], rotating
+- examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c82a77ff3d643afc0ddd542868a96c17d31ef336
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ruotare i colori
-È difficile visualizzare la rotazione in uno spazio cromatico quadridimensionale.  È possibile semplificare la visualizzazione di tale rotazione supponendo di mantenere fissa una delle componenti di colore.  Si supponga di mantenere fissa a 1 la componente alfa, che è completamente opaca.  Sarà quindi possibile visualizzare uno spazio cromatico tridimensionale con assi del rosso, del verde e del blu, come mostrato nell'illustrazione che segue.  
+# <a name="how-to-rotate-colors"></a>Procedura: ruotare i colori
+Rotazione in uno spazio colore quadridimensionale è difficile da visualizzare. È possibile rendere più semplice per visualizzare la rotazione, supponendo di mantenere uno dei componenti di colore predefiniti. Si supponga di mantenere il componente alfa pari a 1 (completamente opaco). È quindi possibile visualizzare uno spazio tridimensionale colore degli assi del rosso, verde e blu come illustrato nella figura seguente.  
   
- ![Ricolorazione](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")  
+ ![Nuova colorazione](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")  
   
- È possibile considerare un colore come un punto nello spazio tridimensionale.  Il punto \(1, 0, 0\) dello spazio, ad esempio, rappresenta il colore rosso, il punto \(0, 1, 0\) il colore verde.  
+ Un colore può essere considerato come un punto nello spazio 3D. Ad esempio, il punto in uno spazio (1, 0, 0) rappresenta il colore rosso e il punto in uno spazio (0, 1, 0) rappresenta il colore verde.  
   
- Nell'illustrazione che segue si mostra cosa significhi ruotare il colore \(1, 0, 0\) di un angolo di 60 gradi sul piano rosso\-verde.  La rotazione su un piano parallelo al piano rosso\-verde può essere vista come una rotazione rispetto all'asse del blu.  
+ Nell'illustrazione seguente significato ruotare il colore (1, 0, 0) di un angolo di 60 gradi nel piano verde a rosso. Rotazione in un piano parallelo al piano verde a rosso può essere considerata come la rotazione intorno all'asse blu.  
   
- ![Ricolorazione](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")  
+ ![Nuova colorazione](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")  
   
- Nell'illustrazione che segue si mostra come inizializzare una matrice di colori per eseguire rotazioni rispetto a ciascuno dei tre assi delle coordinate rosso, verde e blu.  
+ Nella figura seguente viene illustrato come inizializzare una matrice di colori per eseguire rotazioni su ciascuno dei tre assi delle coordinate (rosso, verde e blu).  
   
- ![Ricolorazione](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")  
+ ![Nuova colorazione](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")  
   
-## Esempio  
- Nell'esempio che segue viene applicata una rotazione a 60 gradi sull'asse del blu a un'immagine monocromatica \(1, 0, 0,6\).  La rotazione viene effettuata su un piano parallelo al piano rosso\-verde.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente accetta un'immagine è monocromatica (1, 0, 0,6) e applica una rotazione di 60 gradi sull'asse del blu. Angolo di rotazione viene effettuata su un piano parallelo al piano verde a rosso.  
   
- Nell'illustrazione che segue si mostra l'immagine originale a sinistra e l'immagine dopo la rotazione di colori a destra.  
+ Nella figura seguente mostra l'immagine originale sulla sinistra e l'immagine ruotata colore a destra.  
   
  ![Rotazione dei colori](../../../../docs/framework/winforms/advanced/media/colortrans5.png "colortrans5")  
   
- Nell'illustrazione che segue viene mostrata una visualizzazione della rotazione dei colori eseguita nel codice riportato di seguito.  
+ Nella figura seguente mostra una visualizzazione della rotazione colore eseguita nel codice seguente.  
   
- ![Ricolorazione](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")  
+ ![Nuova colorazione](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")  
   
  [!code-csharp[System.Drawing.RotateColors#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.RotateColors#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  Sostituire `RotationInput.bmp` con il nome e il percorso di un file di immagine validi nel computer in uso.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Sostituire `RotationInput.bmp` con un nome di file di immagine e un percorso valido per il sistema.  
   
-## Vedere anche  
- <xref:System.Drawing.Imaging.ColorMatrix>   
- <xref:System.Drawing.Imaging.ImageAttributes>   
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Imaging.ColorMatrix>  
+ <xref:System.Drawing.Imaging.ImageAttributes>  
+ [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)

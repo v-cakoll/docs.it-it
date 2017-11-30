@@ -1,70 +1,69 @@
 ---
-title: "Logical and Bitwise Operators in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "short-circuiting"
-  - "Boolean expressions"
-  - "logical operators, Boolean expressions"
-  - "operators [Visual Basic], logical"
-  - "AndAlso operator"
-  - "Not operator [Visual Basic], Boolean expressions"
-  - "Xor operator [Visual Basic], Boolean expressions"
-  - "And operator [Visual Basic], logical operators"
-  - "logical operators"
-  - "expressions [Visual Basic], Boolean"
-  - "Or operator, logical operators"
-  - "Visual Basic code, operators"
-  - "short-circuiting, logical operators"
-  - "logical operators, short-circuiting"
-  - "Visual Basic code, expressions"
-  - "logical operators, binary"
-  - "OrElse operator [Visual Basic]"
-  - "logical operators, unary"
+title: Operatori logici e bit per bit in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- short-circuiting
+- Boolean expressions
+- logical operators [Visual Basic], Boolean expressions
+- operators [Visual Basic], logical
+- AndAlso operator [Visual Basic]
+- Not operator [Visual Basic], Boolean expressions
+- Xor operator [Visual Basic], Boolean expressions
+- And operator [Visual Basic], logical operators
+- logical operators [Visual Basic]
+- expressions [Visual Basic], Boolean
+- Or operator [Visual Basic], logical operators
+- Visual Basic code, operators
+- short-circuiting [Visual Basic], logical operators
+- logical operators [Visual Basic], short-circuiting
+- Visual Basic code, expressions
+- logical operators [Visual Basic], binary
+- OrElse operator [Visual Basic]
+- logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ba48f722a11e93f82ae99aa407c3096a964e5ddd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Logical and Bitwise Operators in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Gli operatori logici confrontano le espressioni `Boolean` e restituiscono il risultato `Boolean`.  Gli operatori `And`, `Or`, `AndAlso`, `OrElse` e `Xor` sono *binari* in quanto prendono due operandi, mentre l'operatore `Not` è *unario* in quanto prende un unico operando.  Alcuni di questi operatori possono inoltre eseguire operazioni logiche bit per bit sui valori integrali.  
+# <a name="logical-and-bitwise-operators-in-visual-basic"></a>Operatori logici e bit per bit in Visual Basic
+Gli operatori logici confrontano `Boolean` espressioni e restituire un `Boolean` risultato. Il `And`, `Or`, `AndAlso`, `OrElse`, e `Xor` gli operatori sono *binario* perché accettano due operandi, mentre il `Not` operatore *unario* poiché accetta un singolo operando. Alcuni di questi operatori possono inoltre eseguire operazioni logiche bit per bit su valori integrali.  
   
-## Operatore logico unario  
- L'[Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md) esegue una *negazione* logica su un'espressione `Boolean`.  Viene generato il risultato contrario logico del suo operando.  Se l'espressione restituisce `True`, `Not` restituirà `False`; se l'espressione restituisce `False`, `Not` restituirà `True`.  Questa condizione è illustrata nell'esempio che segue.  
+## <a name="unary-logical-operator"></a>Operatore logico unario  
+ Il [operatore Not](../../../../visual-basic/language-reference/operators/not-operator.md) esegue logico *negazione* su un `Boolean` espressione. Restituisce l'opposto logico del relativo operando. Se l'espressione restituisce `True`, quindi `Not` restituisce `False`; se l'espressione restituisce `False`, quindi `Not` restituisce `True`. Questa condizione è illustrata nell'esempio seguente.  
   
  [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
   
-## Operatori logici binari  
- L'[And Operator](../../../../visual-basic/language-reference/operators/and-operator.md) esegue una *congiunzione* logica su due espressioni `Boolean`.  Se entrambe le espressioni restituiscono `True`, `And` restituirà `True`.  Se almeno una delle espressioni restituisce `False`, `And` restituirà `False`.  
+## <a name="binary-logical-operators"></a>Operatori logici binari  
+ Il [operatore e](../../../../visual-basic/language-reference/operators/and-operator.md) esegue logico *insieme* su due `Boolean` espressioni. Se entrambe le espressioni restituiscono `True`, quindi `And` restituisce `True`. Se almeno una delle espressioni restituisce `False`, quindi `And` restituisce `False`.  
   
- L'[Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) esegue una *disgiunzione* logica o un'*inclusione* su due espressioni `Boolean`.  Se una delle espressioni restituisce `True` o se entrambe restituiscono `True`, `Or` restituirà `True`.  Se una delle espressioni restituisce `True`, `Or` restituisce `False`.  
+ Il [operatore o](../../../../visual-basic/language-reference/operators/or-operator.md) esegue logico *disgiunzione* o *inclusione* su due `Boolean` espressioni. Se un'espressione restituisce `True`, o entrambi restituiscono `True`, quindi `Or` restituisce `True`. Se nessuna delle due espressioni restituisce `True`, `Or` restituisce `False`.  
   
- L'[Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md) esegue un' *esclusione* logica su due espressioni `Boolean`.  Se esattamente un'espressione restituisce `True`, ma non entrambe, `Xor` restituirà `True`.  Se entrambe le espressioni restituiscono `True` o entrambe restituiscono `False`, `Xor` restituirà `False`.  
+ Il [operatore Xor](../../../../visual-basic/language-reference/operators/xor-operator.md) esegue logico *esclusione* su due `Boolean` espressioni. Se esattamente un'espressione viene valutata `True`, ma non ad entrambi, `Xor` restituisce `True`. Se entrambe le espressioni restituiscono `True` o entrambi restituiscono `False`, `Xor` restituisce `False`.  
   
- Nell'esempio illustrato vengono illustrati gli operatori `And`, `Or` e `Xor`.  
+ Nell'esempio seguente viene illustrato il `And`, `Or`, e `Xor` operatori.  
   
  [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
   
-## Operatori logici di corto circuito  
- L'[AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md) è molto simile all'operatore `And`, in quanto anch'esso esegue una congiunzione logica tra due espressioni `Boolean`.  La differenza fondamentale tra le due consiste nel fatto che `AndAlso` mostra un comportamento di tipo *short circuit*.  Se la prima espressione in un'espressione `AndAlso` restituisce `False`, la seconda espressione non verrà valutata in quanto non può alterare il risultato finale e `AndAlso` restituisce `False`.  
+## <a name="short-circuiting-logical-operations"></a>Corto circuito di operazioni logiche  
+ Il [AndAlso (operatore)](../../../../visual-basic/language-reference/operators/andalso-operator.md) è molto simile al `And` operatore, in quanto esegue inoltre congiunzione logica su due `Boolean` espressioni. La differenza principale tra i due è che `AndAlso` presenta *corto circuito* comportamento. Se la prima espressione in un `AndAlso` espressione viene valutata `False`, quindi la seconda espressione non viene valutata in quanto non può alterare il risultato finale e `AndAlso` restituisce `False`.  
   
- Analogamente, l'[OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md) esegue una disgiunzione logica short circuit tra due espressioni `Boolean`.  Se la prima espressione in un'espressione `OrElse` restituisce `True`, la seconda espressione non verrà valutata in quanto non può alterare il risultato finale e `OrElse` restituisce `True`.  
+ Analogamente, il [operatore OrElse](../../../../visual-basic/language-reference/operators/orelse-operator.md) esegue una congiunzione logica su due `Boolean` espressioni. Se la prima espressione in un `OrElse` espressione viene valutata `True`, quindi la seconda espressione non viene valutata in quanto non può alterare il risultato finale e `OrElse` restituisce `True`.  
   
-### Vantaggi e svantaggi dello short\-circuit  
- Lo short\-circuit può migliorare le prestazioni non valutando un'espressione che non può alterare il risultato dell'operazione logica.  Tuttavia se tale espressione esegue operazioni aggiuntive, lo short\-circuit ignorerà quelle azioni.  Se l'espressione include una chiamata a una procedura `Function` ad esempio, quella procedura non verrà chiamata se si esegue un corto circuito dell'espressione e se qualsiasi codice aggiuntivo contenuto nella `Function` non viene eseguito.  Pertanto, la funzione potrebbe venire eseguita solo occasionalmente e potrebbe non venire testata correttamente.  In alternativa la logica di programma potrebbe dipendere dal codice nella `Function`.  
+### <a name="short-circuiting-trade-offs"></a>Short-circuit  
+ Corto circuito può migliorare le prestazioni non valutando un'espressione che non è possibile modificare il risultato dell'operazione logica. Tuttavia, se tale espressione esegue operazioni aggiuntive, corto circuito ignora tali azioni. Ad esempio, se l'espressione include una chiamata a un `Function` procedure, che procedure non viene chiamata se l'espressione è esegue un corto circuito, e qualsiasi altro codice contenuto nel `Function` non viene eseguito. Pertanto, la funzione potrebbe essere eseguita solo occasionalmente e potrebbe non essere completata correttamente. La logica di programma potrebbe dipendere dal codice nel `Function`.  
   
- Nell'esempio seguente viene illustrata la differenza tra `And`, `Or` e le loro controparti di corto circuito.  
+ Nell'esempio seguente viene illustrata la differenza tra `And`, `Or`e le relative controparti di corto circuite.  
   
  [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
   
@@ -72,42 +71,42 @@ Gli operatori logici confrontano le espressioni `Boolean` e restituiscono il ris
   
  [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
   
- Nell'esempio illustrato in precedenza, si noti che una parte del codice importante in `checkIfValid()` non viene eseguita quando viene eseguito un "corto circuito" della chiamata.  La prima istruzione `If` chiama `checkIfValid()` anche se `12 > 45` restituisce `False`, in quanto non viene eseguito il corto circuito di `And`.  La seconda istruzione `If` non chiama `checkIfValid()`, in quanto quando `12 > 45` restituisce `False`, `AndAlso` provoca un corto circuito della seconda espressione.  La terza istruzione `If` chiama `checkIfValid()` anche se `12 < 45` restituisce `True`, in quando non viene eseguito il corto circuito di `Or`.  La quarta istruzione `If` non chiama `checkIfValid()`, in quanto quando `12 < 45` restituisce `True`, `OrElse` provoca un corto circuito della seconda espressione.  
+ Nell'esempio precedente, si noti che alcune importanti codice all'interno di `checkIfValid()` non viene eseguito quando la chiamata è esegue un corto circuita. Il primo `If` istruzione chiama `checkIfValid()` anche se `12 > 45` restituisce `False`perché `And` non di corto circuito. Il secondo `If` istruzione non chiama `checkIfValid()`, perché quando `12 > 45` restituisce `False`, `AndAlso` provoca un corto circuito la seconda espressione. Il terzo `If` istruzione chiama `checkIfValid()` anche se `12 < 45` restituisce `True`perché `Or` non di corto circuito. Il quarto `If` istruzione non chiama `checkIfValid()`, perché quando `12 < 45` restituisce `True`, `OrElse` provoca un corto circuito la seconda espressione.  
   
-## Operazioni bit per bit  
- Le operazioni bit per bit valutano due valori integrali nella forma binaria \(base 2\).  Esse confrontano i bit in posizioni corrispondenti quindi assegnare i valori in base al confronto.  Nell'esempio riportato di seguito viene illustrato l'operatore `And`.  
+## <a name="bitwise-operations"></a>Operazioni bit per bit  
+ Le operazioni bit per bit restituiscono due valori integrali in forma binaria (base 2). Si confrontano i bit in posizioni corrispondenti e quindi assegnare valori in base al confronto. Nell'esempio seguente viene illustrato il `And` operatore.  
   
  [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
   
- Nell'esempio precedente il valore `x` viene impostato su 1.  Questa situazione si verifica per i seguenti motivi:  
+ Nell'esempio precedente imposta il valore di `x` su 1. Ciò si verifica per i motivi seguenti:  
   
 -   I valori vengono considerati come binari:  
   
-     3 in forma binaria \= 011  
+     3 in formato binario = 011  
   
-     5 in forma binaria \= 101  
+     5 in formato binario = 101  
   
--   L'operatore `And` confronta le rappresentazioni binarie, una posizione binaria \(bit\) alla volta.  Se entrambi i bit in una determinata posizione sono 1, nel risultato viene inserito 1 in quella posizione.  Se uno dei bit è 0, nel risultato viene inserito 0 in quella posizione.  Nell'esempio illustrato in precedenza si ottiene il seguente risultato:  
+-   Il `And` operatore confronta le rappresentazioni binarie, una posizione binaria (bit) alla volta. Se entrambi i bit in una determinata posizione sono 1, 1 viene inserito in tale posizione nel risultato. Se un bit è 0, 0 viene inserito in tale posizione nel risultato. Nell'esempio precedente si procede come indicato di seguito:  
   
-     011 \(3 in forma binaria\)  
+     011 (3 in formato binario)  
   
-     101 \(5 in forma binaria\)  
+     101 (5 in formato binario)  
   
-     001 \(il risultato, in forma binaria\)  
+     001 (il risultato in formato binario)  
   
--   Il risultato viene considerato come decimale.  Il valore 001 è la rappresentazione binaria di 1, quindi `x` \= 1.  
+-   Il risultato viene considerato come separatore decimale. Il valore 001 è la rappresentazione binaria di 1, in modo `x` = 1.  
   
- L'operazione `Or` bit per bit è simile, tranne per il fatto che viene assegnato un 1 al bit risultante se uno o entrambi i bit paragonati corrisponde a 1.  `Xor` assegna un 1 al bit risultante se esattamente uno dei bit paragonati \(non entrambi\) corrisponde a 1.  `Not` accetta un operando singolo e inverte tutti i bit, incluso il bit del segno e assegna il valore al risultato.  Ciò significa che per i numeri positivi firmati, `Not` restituisce sempre un valore negativo e per i numeri negativi `Not` restituisce sempre un valore positivo o pari a zero.  
+ Bit per bit `Or` operazione è simile, ad eccezione del fatto che se uno o entrambi i bit confrontati è 1, 1 viene assegnato al bit del risultato. `Xor`Assegna un 1 al bit del risultato, se uno dei bit confrontati (non entrambi) è 1. `Not`accetta un singolo operando e inverte tutti i bit, incluso il bit di segno e assegna tale valore al risultato. Ciò significa che per i numeri positivi firmati, `Not` restituisce sempre un valore negativo e per i numeri negativi `Not` restituisce sempre un valore positivo o zero.  
   
- Gli operatori `AndAlso` e `OrElse` non supportano le operazioni bit per bit.  
+ Il `AndAlso` e `OrElse` operatori non supportano operazioni bit per bit.  
   
 > [!NOTE]
->  Le operazioni bit per bit possono essere eseguite solo sui tipi integrali.  I valori a virgola mobile devono essere convertiti in tipi integrali prima che possa proseguire l'operazione bit per bit.  
+>  Operazioni bit per bit possono essere eseguite solo su tipi integrali. Valori a virgola mobile devono essere convertiti in tipi integrali affinché possa continuare l'operazione bit per bit.  
   
-## Vedere anche  
- [Logical\/Bitwise Operators](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Boolean Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   
- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)   
- [Efficient Combination of Operators](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatori logici e bit per bit (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [Espressioni booleane](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
+ [Operatori aritmetici in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [Operatori di concatenazione in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
+ [Combinazione efficace di operatori](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

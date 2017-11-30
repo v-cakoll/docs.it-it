@@ -1,68 +1,72 @@
 ---
-title: "Elemento &lt;nameEntry&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<nameEntry> (elemento)"
-  - "nameEntry (elemento)"
+title: '&lt;nameEntry&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry
+helpviewer_keywords:
+- <nameEntry> element
+- nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 507c71b5c13deeb7c1a81b6a4dd9604c3bd919f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;nameEntry&gt;
-Esegue il mapping del nome di una classe su un nome di algoritmo descrittivo consentendo l'uso di più nomi descrittivi per un'unica classe.  
+# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; elemento
+Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.  
   
-## Sintassi  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<cryptoNameMapping >  
+\<nameEntry >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <nameEntry name="friendly name" Class="class name" />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome descrittivo dell'algoritmo implementato dalla classe di crittografia.|  
-|**classe**|Attributo obbligatorio.<br /><br /> Specifica il valore per l'attributo **name** nell'elemento [\<cryptoClass\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md).|  
+|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome descrittivo dell'algoritmo che implementa la classe di crittografia.|  
+|**class**|Attributo obbligatorio.<br /><br /> Specifica il valore per il **nome** attributo la [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`system.web`|Specifica l'elemento radice per la sezione di configurazione ASP.NET.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`system.web`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
-## Note  
- L'attributo **name** può essere il nome di una delle classi astratte individuate nello spazio dei nomi <xref:System.Security.Cryptography>.  Quando si chiama il metodo **Create** su una classe astratta di crittografia, il nome di tale classe viene passato al metodo [Security.CryptoConfig.CreateFromName](frlrfSystemSecurityCryptographyCryptoConfigClassCreateFromNameTopic).  **CreateFromName** restituisce un'istanza del tipo indicato dall'attributo **class**.  Se l'attributo **name** è un nome breve, ad esempio RSA, è possibile utilizzare tale nome quando si chiama il metodo **CreateFromName**.  
+## <a name="remarks"></a>Note  
+ Il **nome** attributo può essere il nome di una delle classi astratte, vedere il <xref:System.Security.Cryptography> dello spazio dei nomi. Quando si chiama il **crea** su una classe astratta di crittografia, il nome della classe astratta viene passato per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> metodo. **CreateFromName** restituisce un'istanza del tipo indicato per la **classe** attributo. Se il **nome** attributo è un nome breve, ad esempio RSA, è possibile utilizzare tale nome quando si chiama il **CreateFromName** metodo.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'elemento **\<nameEntry\>** per fare riferimento a una classe di crittografia e configurare il runtime.  È quindi possibile passare la stringa "RSA" al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> e utilizzare il metodo <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un oggetto `MyCryptoRSAClass`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<nameEntry >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime. È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e utilizzare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un `MyCryptoRSAClass` oggetto.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -81,8 +85,8 @@ Esegue il mapping del nome di una classe su un nome di algoritmo descrittivo con
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)  
  [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

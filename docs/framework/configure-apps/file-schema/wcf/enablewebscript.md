@@ -1,51 +1,59 @@
 ---
-title: "&lt;enableWebScript&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;enableWebScript&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cfb6981947b457d5fdad59e96bdcd6937b9abd02
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;enableWebScript&gt;
+# <a name="ltenablewebscriptgt"></a>&lt;enableWebScript&gt;
 Questo elemento attiva il comportamento dell'endpoint che rende possibile l'uso del servizio da pagine Web ASP.NET AJAX.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<i comportamenti >  
+\<endpointBehaviors >  
+\<comportamento >  
+\<enableWebScript >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <enableWebScript />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<comportamento\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica l'insieme di comportamenti dell'endpoint.|  
+|-------------|-----------------|  
+|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica l'insieme di comportamenti dell'endpoint.|  
   
-## Note  
- Questo comportamento deve essere usato solo in combinazione con l'associazione standard [\<webHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) o con l'elemento di associazione [\<webMessageEncoding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md).  Per altre informazioni su questo comportamento, vedere <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
+## <a name="remarks"></a>Note  
+ Questo comportamento deve essere utilizzato solo in combinazione con il [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) associazione standard, o [ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) elemento di associazione.  Per altre informazioni su questo comportamento, vedere <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>   
- <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>   
- [Integrazione AJAX e supporto JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)   
- [\<webHttp\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>  
+ <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>  
+ [Integrazione AJAX e supporto JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
+ [\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)

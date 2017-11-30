@@ -1,85 +1,86 @@
 ---
-title: "Procedura: spostare i ToolStripMenuItems | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "voci di menu, taglia e incolla"
-  - "voci di menu, trascinamento della selezione"
-  - "voci di menu, spostamento"
-  - "menu, disposizione di elementi"
-  - "MenuStrip (controllo) [Windows Form], disposizione di elementi"
-  - "ToolStripMenuItems, taglia e incolla"
-  - "ToolStripMenuItems, trascinamento della selezione"
-  - "ToolStripMenuItems, spostamento"
+title: 'Procedura: spostare i ToolStripMenuItems'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStripMenuItems [Windows Forms], moving
+- menus [Windows Forms], arranging items
+- ToolStripMenuItems [Windows Forms], dragging and dropping
+- menu items [Windows Forms], moving
+- menu items [Windows Forms], cutting and pasting
+- menu items [Windows Forms], dragging and dropping
+- MenuStrip control [Windows Forms], arranging items
+- ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 342eeeb2d156488605f244da0112869a371dfa97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: spostare i ToolStripMenuItems
-In fase di progettazione, è possibile spostare interi menu di primo livello e i relativi elementi in un punto diverso dell'oggetto <xref:System.Windows.Forms.MenuStrip>.  È possibile anche spostare i singoli elementi fra menu di primo livello o cambiare la posizione degli elementi all'interno di un menu.  
+# <a name="how-to-move-toolstripmenuitems"></a>Procedura: spostare i ToolStripMenuItems
+In fase di progettazione, è possibile spostare menu di primo livello e i relativi elementi in un'altra posizione <xref:System.Windows.Forms.MenuStrip>. È inoltre possibile spostare singole voci di menu tra menu di primo livello o modificare la posizione delle voci di menu all'interno di un menu.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per spostare un menu di primo livello e i relativi elementi in un'altra posizione di primo livello  
+### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>Per spostare un menu di primo livello e le voci di menu in un'altra posizione di primo livello  
   
-1.  Fare clic e mantenere premuto il tasto sinistro del mouse sull'elemento da spostare.  
+1.  Fare clic e tenere premuto il pulsante sinistro del mouse sul menu che si desidera spostare.  
   
-2.  Trascinare il punto di inserimento sul menu di primo livello che precede la nuova posizione stabilita e rilasciare il tasto sinistro del mouse.  
+2.  Trascinare il punto di inserimento per il menu di primo livello che precede la nuova posizione e rilasciare il pulsante sinistro del mouse.  
   
-     Il menu selezionato si sposta a destra del punto di inserimento.  
+     Il menu selezionato viene spostato a destra del punto di inserimento.  
   
-### Per spostare un menu di primo livello e i relativi elementi in una posizione a discesa  
+### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>Per spostare un menu di primo livello e i relativi elementi in un percorso di elenco a discesa  
   
-1.  Fare clic sul menu da spostare con il pulsante sinistro del mouse e premere CTRL \+ X oppure fare clic con il pulsante destro del mouse e selezionare **Taglia** dal menu di scelta rapida.  
+1.  Fare clic sul menu che si desidera spostare e premere CTRL + X, o il menu di scelta rapida e selezionare **Taglia** dal menu di scelta rapida.  
   
-2.  Nel menu di primo livello di destinazione, fare clic con il pulsante sinistro del mouse al di sopra della nuova posizione stabilita e premere CTRL \+ V oppure fare clic con il pulsante destro del mouse al di sopra della nuova posizione stabilita e selezionare **Incolla** dal menu di scelta rapida.  
+2.  Nel menu di primo livello di destinazione, fare clic sulla voce di menu sopra la nuova posizione individuata e premere CTRL + V, o la voce di menu sopra la nuova posizione di mouse e scegliere **Incolla** dal menu di scelta rapida.  
   
-     Il menu tagliato viene inserito dopo l'elemento di menu selezionato.  
+     Il menu che si taglia viene inserito dopo la voce di menu selezionata.  
   
-### Per spostare un elemento di menu all'interno di un menu usando l'editor della raccolta Items  
+### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>Per spostare una voce di menu all'interno di un menu utilizzando l'Editor della raccolta Items  
   
-1.  Fare clic con il pulsante destro del mouse sul menu che contiene l'elemento da spostare.  
+1.  Menu di scelta rapida che contiene la voce di menu che si desidera spostare.  
   
-2.  Scegliere **Modifica DropDownItems** dal menu di scelta rapida.  
+2.  Nel menu di scelta rapida, scegliere **Modifica DropDownItems**.  
   
-3.  Nell'**editor della raccolta Items**, fare clic con il pulsante sinistro del mouse sull'elemento di menu da spostare.  
+3.  Nel **Editor della raccolta Items**, fare clic sulla voce di menu che si desidera spostare.  
   
-4.  Utilizzare i tasti freccia SU e GIÙ per spostare l'elemento all'interno del menu.  
+4.  Fare clic sui tasti freccia su e giù per spostare la voce di menu all'interno del menu.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
-### Per spostare un elemento all'interno di un menu utilizzando la tastiera  
+### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a>Per spostare una voce di menu all'interno di un menu utilizzando la tastiera  
   
-1.  Tenere premuto ALT.  
+1.  Premere e tenere premuto il tasto ALT.  
   
-2.  Fare clic e mantenere premuto il tasto sinistro del mouse sull'elemento da spostare.  
+2.  Fare clic e tenere premuto il pulsante sinistro del mouse sulla voce di menu che si desidera spostare.  
   
-3.  Trascinare l'elemento nella nuova posizione, quindi rilasciare il pulsante sinistro del mouse.  
+3.  Trascinare la voce di menu nella nuova posizione e rilasciare il pulsante sinistro del mouse.  
   
-### Per spostare un elemento in un'altro menu  
+### <a name="to-move-a-menu-item-to-another-menu"></a>Per spostare una voce di menu in un altro menu  
   
-1.  Fare clic sull'elemento di menu da spostare con il pulsante sinistro del mouse e premere CTRL \+ X oppure fare clic con il pulsante destro del mouse sull'elemento di menu e scegliere **Taglia** dal menu di scelta rapida.  
+1.  Fare clic sulla voce di menu che si desidera spostare e premere CTRL + X, o la voce di menu e scegliere **Taglia** dal menu di scelta rapida.  
   
-2.  Fare clic con il pulsante sinistro del mouse sul menu che conterrà l'elemento tagliato.  
+2.  Fare clic sul menu che conterrà la voce di menu che si taglia.  
   
-3.  Fare clic con il pulsante sinistro sull'elemento che precede la nuova posizione stabilita e premere CTRL \+ V oppure fare clic con il pulsante destro del mouse sull'elemento che precede la nuova posizione stabilita e selezionare **Incolla** dal menu di scelta rapida.  
+3.  Fare clic sulla voce di menu che precede la nuova posizione individuata e premere CTRL + V oppure fare clic sulla voce di menu che precede la nuova posizione e selezionare **Incolla** dal menu di scelta rapida.  
   
-     L'elemento tagliato viene inserito dopo l'elemento di menu selezionato.  
+     La voce di menu che si taglia viene inserita dopo la voce di menu selezionata.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [Cenni preliminari sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [Panoramica sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 151a46a1d0f5ae5ae58508bdb3cab5bbb86f07ef
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: fc5554193d93f2a88fd9e6d1c1af7923a23b2280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5
 ## <a name="applies-to"></a>Si applica a  
@@ -37,32 +35,32 @@ ms.lasthandoff: 08/21/2017
 ### <a name="assembly-and-namespace-changes"></a>Modifiche apportate agli assembly e agli spazi dei nomi  
  In Windows Identity Foundation 3.5 tutte le classi sono contenute nell'assembly `Microsoft.IdentityModel` (microsoft.identitymicrosoft.identitymodel.dll). In Windows Identity Foundation 4.5 le classi sono state suddivise tra questi assembly: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) e `System.ServiceModel` (System.ServiceModel.dll).  
   
- Le classi di Windows Identity Foundation 3.5 sono tutte contenute in uno degli spazi dei nomi `Microsoft.IdentityModel`, ad esempio `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web`e così via. In Windows Identity Foundation 4.5 le classi sono ora distribuite tra gli spazi dei nomi [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004), lo spazio dei nomi <xref:System.Security.Claims?displayProperty=fullName> e lo spazio dei nomi <xref:System.ServiceModel.Security?displayProperty=fullName>. Oltre a questa riorganizzazione, alcune classi di Windows Identity Foundation 3.5 sono state eliminate in Windows Identity Foundation 4.5.  
+ Le classi di Windows Identity Foundation 3.5 sono tutte contenute in uno degli spazi dei nomi `Microsoft.IdentityModel`, ad esempio `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web`e così via. In Windows Identity Foundation 4.5 le classi sono ora distribuite tra gli spazi dei nomi [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004), lo spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType> e lo spazio dei nomi <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Oltre a questa riorganizzazione, alcune classi di Windows Identity Foundation 3.5 sono state eliminate in Windows Identity Foundation 4.5.  
   
  La tabella seguente mostra alcuni degli spazi dei nomi più importanti di Windows Identity Foundation 4.5 e il tipo di classi in essi contenute. Per informazioni più dettagliate sul mapping degli spazi dei nomi tra Windows Identity Foundation 3.5 e Windows Identity Foundation 4.5 e sulle classi e sugli spazi dei nomi eliminati in Windows Identity Foundation 4.5, vedere [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md).  
   
 |Spazio dei nomi di Windows Identity Foundation 4.5|Descrizione|  
 |-----------------------|-----------------|  
-|<xref:System.IdentityModel?displayProperty=fullName>|Contiene le classi che rappresentano trasformazioni dei cookie, servizi token di sicurezza e lettori di dizionario XML specializzati. Contiene le classi di questi spazi dei nomi di Windows Identity Foundation 3.5: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.SecurityTokenService` e `Microsoft.IdentityModel.Threading`.|  
-|<xref:System.Security.Claims?displayProperty=fullName>|Contiene le classi che rappresentano attestazioni, identità basate sulle attestazioni, entità basate sulle attestazioni e altri elementi modello di identità basati sulle attestazioni. Contiene le classi dello spazio dei nomi `Microsoft.IdentityModel.Claims`.|  
-|<xref:System.IdentityModel.Tokens?displayProperty=fullName>|Contiene le classi che rappresentano token di sicurezza, gestori di token di sicurezza e altri elementi token di sicurezza. Contiene le classi di questi spazi dei nomi di Windows Identity Foundation 3.5: `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Tokens.Saml11` e `Microsoft.IdentityModel.Tokens.Saml2`.|  
-|<xref:System.IdentityModel.Services?displayProperty=fullName>|Contiene le classi usate in scenari passivi (WS-Federation). Contiene le classi dello spazio dei nomi `Microsoft.IdentityModel.Web`.|  
-|<xref:System.ServiceModel.Security?displayProperty=fullName>|Le classi che rappresentano contratti, canali, host servizio e altri elementi WCF usati in scenari attivi (WS-Trust) sono ora inclusi in questo spazio dei nomi. In Windows Identity Foundation 3.5 queste classi sono incluse nello spazio dei nomi `Microsoft.IdentityModel.Protocols.WSTrust`.|  
+|<xref:System.IdentityModel?displayProperty=nameWithType>|Contiene le classi che rappresentano trasformazioni dei cookie, servizi token di sicurezza e lettori di dizionario XML specializzati. Contiene le classi di questi spazi dei nomi di Windows Identity Foundation 3.5: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.SecurityTokenService` e `Microsoft.IdentityModel.Threading`.|  
+|<xref:System.Security.Claims?displayProperty=nameWithType>|Contiene le classi che rappresentano attestazioni, identità basate sulle attestazioni, entità basate sulle attestazioni e altri elementi modello di identità basati sulle attestazioni. Contiene le classi dello spazio dei nomi `Microsoft.IdentityModel.Claims`.|  
+|<xref:System.IdentityModel.Tokens?displayProperty=nameWithType>|Contiene le classi che rappresentano token di sicurezza, gestori di token di sicurezza e altri elementi token di sicurezza. Contiene le classi di questi spazi dei nomi di Windows Identity Foundation 3.5: `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Tokens.Saml11` e `Microsoft.IdentityModel.Tokens.Saml2`.|  
+|<xref:System.IdentityModel.Services?displayProperty=nameWithType>|Contiene le classi usate in scenari passivi (WS-Federation). Contiene le classi dello spazio dei nomi `Microsoft.IdentityModel.Web`.|  
+|<xref:System.ServiceModel.Security?displayProperty=nameWithType>|Le classi che rappresentano contratti, canali, host servizio e altri elementi WCF usati in scenari attivi (WS-Trust) sono ora inclusi in questo spazio dei nomi. In Windows Identity Foundation 3.5 queste classi sono incluse nello spazio dei nomi `Microsoft.IdentityModel.Protocols.WSTrust`.|  
   
 > [!IMPORTANT]
->  Questi spazi dei nomi `System.IdentityModel` contengono classi che implementano il modello di identità basato sulle attestazioni di WCF: <xref:System.IdentityModel.Claims?displayProperty=fullName>, <xref:System.IdentityModel.Policy?displayProperty=fullName> e <xref:System.IdentityModel.Selectors?displayProperty=fullName>. Il modello di identità basato sulle attestazioni di WCF è stato sostituito da WIF. Non usare le classi in questi tre spazi dei nomi per la compilazione di soluzioni basate su WIF.  
+>  Questi spazi dei nomi `System.IdentityModel` contengono classi che implementano il modello di identità basato sulle attestazioni di WCF: <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> e <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>. Il modello di identità basato sulle attestazioni di WCF è stato sostituito da WIF. Non usare le classi in questi tre spazi dei nomi per la compilazione di soluzioni basate su WIF.  
   
 ### <a name="changes-due-to-net-integration"></a>Modifiche necessarie per l'integrazione in .NET  
- Windows Identity Foundation è ora integrato in .NET Framework. La maggior parte delle classi di identità ed entità .NET deriva ora da <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> e <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName>. In Windows Identity Foundation 4.5 sono state apportate le modifiche seguenti:  
+ Windows Identity Foundation è ora integrato in .NET Framework. La maggior parte delle classi di identità ed entità .NET deriva ora da <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> e <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>. In Windows Identity Foundation 4.5 sono state apportate le modifiche seguenti:  
   
--   Le classi di Windows Identity Foundation che rappresentano attestazioni, identità ed entità sono ora incluse nello spazio dei nomi <xref:System.Security.Claims?displayProperty=fullName>.  
+-   Le classi di Windows Identity Foundation che rappresentano attestazioni, identità ed entità sono ora incluse nello spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType>.  
   
     > [!IMPORTANT]
-    >  Lo spazio dei nomi <xref:System.IdentityModel.Claims?displayProperty=fullName> contiene classi che rappresentano elementi nel modello di identità basato sulle attestazioni di WCF. Molte di queste classi hanno gli stessi nomi delle classi di Windows Identity Foundation, ad esempio `Claims`. Non usare queste classi per la compilazione di soluzioni basate su Windows Identity Foundation.  
+    >  Lo spazio dei nomi <xref:System.IdentityModel.Claims?displayProperty=nameWithType> contiene classi che rappresentano elementi nel modello di identità basato sulle attestazioni di WCF. Molte di queste classi hanno gli stessi nomi delle classi di Windows Identity Foundation, ad esempio `Claims`. Non usare queste classi per la compilazione di soluzioni basate su Windows Identity Foundation.  
   
--   Le classi di identità ed entità .NET derivano ora direttamente da <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> e <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName>, che rappresentano identità ed entità basate sulle attestazioni. Per questo motivo, le interfacce `IClaimsIdentity` e `IClaimsPrincipal` di Windows Identity Foundation 3.5 non sono più necessarie né disponibili in Windows Identity Foundation 4.5.  
+-   Le classi di identità ed entità .NET derivano ora direttamente da <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> e <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>, che rappresentano identità ed entità basate sulle attestazioni. Per questo motivo, le interfacce `IClaimsIdentity` e `IClaimsPrincipal` di Windows Identity Foundation 3.5 non sono più necessarie né disponibili in Windows Identity Foundation 4.5.  
   
--   Poiché le classi di identità ed entità .NET come <xref:System.Security.Principal.WindowsIdentity?displayProperty=fullName> e <xref:System.Security.Principal.WindowsPrincipal?displayProperty=fullName> derivano ora da <xref:System.Security.Claims.ClaimsIdentity> e <xref:System.Security.Claims.ClaimsPrincipal>, includono funzionalità per le attestazioni integrate. Per questo motivo, le classi di identità ed entità specifiche delle attestazioni come `WindowsClaimsIdentity` e `WindowsClaimsPrincipal` disponibili in Windows Identity Foundation 3.5 non sono più necessarie e non sono incluse in Windows Identity Foundation 4.5.  
+-   Poiché le classi di identità ed entità .NET come <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> e <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> derivano ora da <xref:System.Security.Claims.ClaimsIdentity> e <xref:System.Security.Claims.ClaimsPrincipal>, includono funzionalità per le attestazioni integrate. Per questo motivo, le classi di identità ed entità specifiche delle attestazioni come `WindowsClaimsIdentity` e `WindowsClaimsPrincipal` disponibili in Windows Identity Foundation 3.5 non sono più necessarie e non sono incluse in Windows Identity Foundation 4.5.  
   
 ### <a name="other-changes-to-wif-functionality"></a>Altre modifiche apportate alle funzionalità di Windows Identity Foundation  
  Oltre alle modifiche relative agli spazi dei nomi e quelle necessarie per l'integrazione con .NET, in Windows Identity Foundation 4.5 sono state introdotte le modifiche alle funzionalità indicate di seguito.  
@@ -118,9 +116,9 @@ ms.lasthandoff: 08/21/2017
 <a name="BKMK_ToolingChanges"></a>   
 ### <a name="passive-ws-federation-scenarios"></a>Scenari passivi (WS-Federation):  
   
--   Le classi che supportano gli scenari passivi sono state spostate nello spazio dei nomi <xref:System.IdentityModel.Services?displayProperty=fullName>. In Windows Identity Foundation 3.5 queste classi sono incluse nello spazio dei nomi `Microsoft.IdentityModel.Web`.  
+-   Le classi che supportano gli scenari passivi sono state spostate nello spazio dei nomi <xref:System.IdentityModel.Services?displayProperty=nameWithType>. In Windows Identity Foundation 3.5 queste classi sono incluse nello spazio dei nomi `Microsoft.IdentityModel.Web`.  
   
--   Le classi incluse nello spazio dei nomi `Microsoft.IdentityModel.Web.Configuration` sono state spostate in <xref:System.IdentityModel.Services.Configuration?displayProperty=fullName>. Queste classi rappresentano oggetti specifici della configurazione in scenari passivi.  
+-   Le classi incluse nello spazio dei nomi `Microsoft.IdentityModel.Web.Configuration` sono state spostate in <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>. Queste classi rappresentano oggetti specifici della configurazione in scenari passivi.  
   
 -   `FederatedPasssiveSignInControl` non è più supportato. Tutte le classi incluse nello spazio dei nomi `Microsoft.IdentityModel.Web.Controls` sono state rimosse da Windows Identity Foundation 4.5.  
   
@@ -128,7 +126,7 @@ ms.lasthandoff: 08/21/2017
   
 ### <a name="active-wcfws-trust-scenarios"></a>Scenari attivi (WCF/WS-Trust):  
   
--   Lo spazio dei nomi `Microsoft.IdentityModel.Protocols.WSTrust` è stato suddiviso prevalentemente tra due spazi dei nomi in Windows Identity Foundation 4.5. Le classi che rappresentano elementi specifici del protocollo WS-Trust si trovano ora in <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName>. Sono incluse le classi come <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken>. Le classi che rappresentano contratti di servizio, canali, host servizio e altri elementi coinvolti nell'uso di WS-Trust in applicazioni WCF sono stati spostati in <xref:System.ServiceModel.Security?displayProperty=fullName>, ad esempio l'interfaccia <xref:System.ServiceModel.Security.IWSTrust13AsyncContract>.  
+-   Lo spazio dei nomi `Microsoft.IdentityModel.Protocols.WSTrust` è stato suddiviso prevalentemente tra due spazi dei nomi in Windows Identity Foundation 4.5. Le classi che rappresentano elementi specifici del protocollo WS-Trust si trovano ora in <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=nameWithType>. Sono incluse le classi come <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken>. Le classi che rappresentano contratti di servizio, canali, host servizio e altri elementi coinvolti nell'uso di WS-Trust in applicazioni WCF sono stati spostati in <xref:System.ServiceModel.Security?displayProperty=nameWithType>, ad esempio l'interfaccia <xref:System.ServiceModel.Security.IWSTrust13AsyncContract>.  
   
 -   La configurazione di un'applicazione WCF per l'uso di Windows Identity Foundation è stata notevolmente semplificata. Nelle versioni precedenti `Microsoft.IdentityModel.Configuration.ConfigureServiceHostBehaviorExtensionElement` deve essere aggiunto come estensione di comportamento e questa funzionalità viene quindi usata per integrare Windows Identity Foundation nel comportamento del servizio specificando un elemento `<federatedServiceHostConfiguration>`. Windows Identity Foundation 4.5 è stato integrato ancora di più con WCF. È ora possibile abilitare Windows Identity Foundation in un servizio WCF specificando l'attributo `useIdentityConfiguration` nell'elemento `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>`, come nel codice XML seguente:  
   
@@ -182,8 +180,7 @@ add-windowsfeature windows-identity-foundation
 >  Poiché molte delle classi in Windows Identity Foundation 3.5 e Windows Identity Foundation 4.5 condividono gli stessi nomi, quando si usano Windows Identity Foundation 3.5 e Windows Identity Foundation 4.5 insieme, assicurarsi di usare nomi di classe completi o alias dello spazio dei nomi per distinguere tra le classi di Windows Identity Foundation 3.5 e quelle di Windows Identity Foundation 4.5.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Schema di configurazione di Windows Identity Foundation](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)   
- [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)   
- [Novità di Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)   
+ [Schema di configurazione di WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
+ [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+ [Novità di Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
  [Identity and Access Tool per Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
-
