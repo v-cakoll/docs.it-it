@@ -1,256 +1,261 @@
 ---
-title: "Cenni preliminari sugli storyboard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "storyboard (sintassi)"
-  - "sintassi, Storyboard"
-  - "sequenze temporali"
+title: Cenni preliminari sugli storyboard
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Storyboard syntax [WPF]
+- syntax [WPF], Storyboard
+- timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 26
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c90fb49a8fb5c63a3bf680bbbe5347db881d500b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sugli storyboard
-In questo argomento viene illustrato come utilizzare gli oggetti <xref:System.Windows.Media.Animation.Storyboard> per organizzare e applicare animazioni.  Viene illustrato come modificare in modo interattivo gli oggetti <xref:System.Windows.Media.Animation.Storyboard> e come utilizzare la sintassi indiretta relativa alle proprietà.  
+# <a name="storyboards-overview"></a>Cenni preliminari sugli storyboard
+In questo argomento viene illustrato come utilizzare <xref:System.Windows.Media.Animation.Storyboard> oggetti per organizzare e applicare le animazioni. Viene descritto come modificare in modo interattivo <xref:System.Windows.Media.Animation.Storyboard> oggetti e descrive indiretta destinazioni delle proprietà.  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## Prerequisiti  
- Per comprendere questo argomento, è necessario conoscere i diversi tipi di animazione e le relative funzionalità di base.  Per un'introduzione alle animazioni, vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  È inoltre consigliabile conoscere le modalità di utilizzo delle proprietà collegate.  Per ulteriori informazioni sulle proprietà collegate, vedere [Cenni preliminari sulle proprietà associate](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
+## <a name="prerequisites"></a>Prerequisiti  
+ Per comprendere questo argomento, è necessario conoscere i diversi tipi di animazione e le relative funzionalità di base. Per un'introduzione alle animazioni, vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). È anche necessario sapere come usare le proprietà associate. Per altre informazioni sulle proprietà associate, vedere [Cenni preliminari sulle proprietà associate](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
   
 <a name="whatisatimeline"></a>   
-## Definizione di storyboard  
- Le animazioni non sono l'unico tipo utile di sequenza temporale.  Vengono fornite altre classi di sequenze temporali per organizzare insiemi di sequenze e per applicare sequenze alle proprietà.  Le sequenze temporali contenitore derivano dalla classe <xref:System.Windows.Media.Animation.TimelineGroup> e includono <xref:System.Windows.Media.Animation.ParallelTimeline> e <xref:System.Windows.Media.Animation.Storyboard>.  
+## <a name="what-is-a-storyboard"></a>Che cos'è uno storyboard?  
+ Le animazioni non sono l'unico tipo utile della sequenza temporale. Sono disponibili altre classi di sequenze temporali per organizzare set di sequenze temporali e per applicare le sequenze temporali alle proprietà. Le sequenze temporali contenitore derivano dal <xref:System.Windows.Media.Animation.TimelineGroup> classe e includere <xref:System.Windows.Media.Animation.ParallelTimeline> e <xref:System.Windows.Media.Animation.Storyboard>.  
   
- Uno <xref:System.Windows.Media.Animation.Storyboard> è un tipo di sequenza temporale contenitore che fornisce informazioni per le sequenze in essa contenute.  Uno storyboard può contenere qualsiasi tipo di <xref:System.Windows.Media.Animation.Timeline>, incluse altre animazioni e altre sequenze temporali contenitore.  Gli oggetti <xref:System.Windows.Media.Animation.Storyboard> consentono di combinare sequenze temporali che influiscono su numerosi oggetti e proprietà in una singola struttura ad albero di sequenze, semplificando l'organizzazione e il controllo di comportamenti di temporizzazione complessi.  Si supponga, ad esempio, di voler disporre di un pulsante avente le tre caratteristiche riportate di seguito.  
+ Oggetto <xref:System.Windows.Media.Animation.Storyboard> è un tipo di sequenza temporale contenitore che fornisce informazioni per le sequenze in essa contenute. Uno Storyboard può contenere qualsiasi tipo di <xref:System.Windows.Media.Animation.Timeline>, tra cui altre sequenze temporali di contenitore e le animazioni. <xref:System.Windows.Media.Animation.Storyboard>gli oggetti consentono di combinare le sequenze temporali che influiscono su numerosi oggetti e proprietà in una singola struttura ad albero, semplificando l'organizzazione e il controllo di comportamenti di temporizzazione complessi. Si supponga, ad esempio, di volere un pulsante che esegua queste tre operazioni.  
   
--   Aumentare di volume e cambiare colore quando viene selezionato.  
+-   Aumentare le dimensioni e cambiare colore quando l'utente seleziona il pulsante.  
   
--   Ridursi e tornare nuovamente alle dimensioni originali quando viene fatto clic su di esso.  
+-   Ridursi e tornare nuovamente alle dimensioni originali quando si fa clic su di esso.  
   
 -   Comprimersi e perdere il 50% di opacità quando viene disabilitato.  
   
- In questo caso, si dispone di più set di animazioni applicabili allo stesso oggetto e si desidera eseguirli in momenti diversi, a seconda dello stato del pulsante.  Gli oggetti <xref:System.Windows.Media.Animation.Storyboard> consentono di organizzare le animazioni e di applicarle in gruppi a uno o più oggetti.  
+ In questo caso, si dispone di più set di animazioni che vengono applicati allo stesso oggetto e si desiderano riprodurre in momenti diversi, a seconda dello stato del pulsante. <xref:System.Windows.Media.Animation.Storyboard>gli oggetti consentono di organizzare le animazioni e applicarle a uno o più oggetti in gruppi.  
   
 <a name="wherecanyouuseastoryboard"></a>   
-## Dove utilizzare uno storyboard  
- Un oggetto <xref:System.Windows.Media.Animation.Storyboard> può essere utilizzato per animare le [proprietà di dipendenza](GTMT) di classi che supportano l'animazione. Per ulteriori informazioni sul supporto delle classi per le animazioni, vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)\).  Poiché lo storyboard è una funzionalità a livello di framework, l'oggetto deve appartenere all'oggetto <xref:System.Windows.NameScope> di <xref:System.Windows.FrameworkElement> o di <xref:System.Windows.FrameworkContentElement>.  
+## <a name="where-can-you-use-a-storyboard"></a>Dov'è possibile usare uno storyboard?  
+ Oggetto <xref:System.Windows.Media.Animation.Storyboard> può essere utilizzato per aggiungere un'animazione di classi che supportano le proprietà di dipendenza (per ulteriori informazioni su cosa costituisce una classe che supporta l'animazione, vedere il [panoramica dell'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)). Tuttavia, poiché lo storyboard è una funzionalità a livello di framework, l'oggetto deve appartenere al <xref:System.Windows.NameScope> di un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>.  
   
- È ad esempio possibile utilizzare uno <xref:System.Windows.Media.Animation.Storyboard> per eseguire le operazioni riportate di seguito:  
+ Ad esempio, è possibile utilizzare un <xref:System.Windows.Media.Animation.Storyboard> per eseguire le operazioni seguenti:  
   
--   Animare un oggetto <xref:System.Windows.Media.SolidColorBrush> \(elemento non framework\) che consente di disegnare lo sfondo di un pulsante \(un tipo di <xref:System.Windows.FrameworkElement>\)  
+-   Animare un <xref:System.Windows.Media.SolidColorBrush> (elemento Non framework) che disegna lo sfondo di un pulsante (un tipo di <xref:System.Windows.FrameworkElement>),  
   
--   Animare un oggetto <xref:System.Windows.Media.SolidColorBrush> \(elemento non framework\) che consente di disegnare il riempimento di un oggetto <xref:System.Windows.Media.GeometryDrawing> \(elemento non framework\) visualizzato tramite un oggetto <xref:System.Windows.Controls.Image> \(<xref:System.Windows.FrameworkElement>\).  
+-   Animare un <xref:System.Windows.Media.SolidColorBrush> (elemento Non framework) che disegna il riempimento di un <xref:System.Windows.Media.GeometryDrawing> (elemento Non framework) visualizzati utilizzando un <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
   
--   Nel codice, animare un oggetto <xref:System.Windows.Media.SolidColorBrush> dichiarato da una classe che contiene anche un oggetto <xref:System.Windows.FrameworkElement>, se l'oggetto <xref:System.Windows.Media.SolidColorBrush> ha registrato il relativo nome con <xref:System.Windows.FrameworkElement>.  
+-   Nel codice, animare un <xref:System.Windows.Media.SolidColorBrush> dichiarato da una classe che contiene anche un <xref:System.Windows.FrameworkElement>, se il <xref:System.Windows.Media.SolidColorBrush> registrato il relativo nome con cui <xref:System.Windows.FrameworkElement>.  
   
- Non è tuttavia possibile utilizzare uno <xref:System.Windows.Media.Animation.Storyboard> per animare un oggetto <xref:System.Windows.Media.SolidColorBrush> che non ha registrato il proprio nome con <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> oppure che non è stato utilizzato per impostare una proprietà di un oggetto <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>.  
+ Tuttavia, non sarà possibile utilizzare un <xref:System.Windows.Media.Animation.Storyboard> animare un <xref:System.Windows.Media.SolidColorBrush> che non è stato registrato il nome con un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, o non è stato utilizzato per impostare una proprietà di un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>.  
   
 <a name="applyanimationswithastoryboard"></a>   
-## Come applicare animazioni con uno storyboard  
- Per utilizzare uno <xref:System.Windows.Media.Animation.Storyboard> per organizzare e applicare animazioni, è necessario aggiungere le animazioni come sequenze temporali figlio dello <xref:System.Windows.Media.Animation.Storyboard>.  La classe <xref:System.Windows.Media.Animation.Storyboard> fornisce le proprietà collegate <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=fullName> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=fullName>.  Queste proprietà devono essere impostate su un'animazione per specificare la proprietà e l'oggetto di destinazione relativi.  
+## <a name="how-to-apply-animations-with-a-storyboard"></a>Come applicare animazioni con uno storyboard  
+ Per utilizzare un <xref:System.Windows.Media.Animation.Storyboard> per organizzare e applicare le animazioni, è necessario aggiungere le animazioni come sequenze temporali figlio del <xref:System.Windows.Media.Animation.Storyboard>. Il <xref:System.Windows.Media.Animation.Storyboard> classe fornisce il <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=nameWithType> le proprietà associate. Impostare queste proprietà su un'animazione per specificare l'oggetto di destinazione e la proprietà relativi.  
   
- Per applicare animazioni alle relative destinazioni, dare inizio allo <xref:System.Windows.Media.Animation.Storyboard> utilizzando un'azione trigger o un metodo.  In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilizzare un oggetto <xref:System.Windows.Media.Animation.BeginStoryboard> con <xref:System.Windows.EventTrigger>, <xref:System.Windows.Trigger> o <xref:System.Windows.DataTrigger>.  Nel codice, è anche possibile utilizzare il metodo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>.  
+ Per applicare le animazioni alle destinazioni, iniziare il <xref:System.Windows.Media.Animation.Storyboard> utilizzando un'azione di trigger o un metodo. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], si utilizza un <xref:System.Windows.Media.Animation.BeginStoryboard> dell'oggetto con un <xref:System.Windows.EventTrigger>, <xref:System.Windows.Trigger>, o <xref:System.Windows.DataTrigger>. Nel codice, è inoltre possibile utilizzare il <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metodo.  
   
- Nella tabella seguente sono riportate le diverse posizioni in cui è supportata la tecnica di inizio di ciascuno <xref:System.Windows.Media.Animation.Storyboard>: per istanza, stile, modello di controllo e modello di dati.    Per istanza" si riferisce alla tecnica di applicare un'animazione o uno storyboard direttamente a istanze di un oggetto, piuttosto che in uno stile, un modello di controllo o un modello di dati.  
+ La tabella seguente illustra le diverse posizioni in cui ogni <xref:System.Windows.Media.Animation.Storyboard> iniziare tecnica è supportata: per ogni istanza, stile, modello di controllo e il modello di dati. "Per istanza" si riferisce alla tecnica di applicazione di un'animazione o uno storyboard direttamente a istanze di un oggetto, piuttosto che in uno stile, un modello di controllo o un modello di dati.  
   
-|Storyboard iniziato utilizzando…|Per istanza|Stile|Modello di controllo|Modello di dati|Esempio|  
-|--------------------------------------|-----------------|-----------|--------------------------|---------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e <xref:System.Windows.EventTrigger>|Sì|Sì|Sì|Sì|[Animare una proprietà utilizzando uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e <xref:System.Windows.Trigger> della proprietà|No|Sì|Sì|Sì|[Attivare un'animazione quando il valore di una proprietà viene modificato](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e <xref:System.Windows.DataTrigger>|No|Sì|Sì|Sì|[How to: Trigger an Animation When Data Changes](http://msdn.microsoft.com/it-it/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|Storyboard iniziato usando…|Per istanza|Stile|Modello di controllo|Modello di dati|Esempio|  
+|--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>e un oggetto<xref:System.Windows.EventTrigger>|Sì|Sì|Sì|Sì|[Animare una proprietà utilizzando uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>e una proprietà<xref:System.Windows.Trigger>|No|Sì|Sì|Sì|[Attivare un'animazione quando il valore di una proprietà viene modificato](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>e un<xref:System.Windows.DataTrigger>|No|Sì|Sì|Sì|[Procedura: Attivare un'animazione quando i dati vengono modificati](http://msdn.microsoft.com/en-us/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |Metodo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sì|No|No|No|[Animare una proprietà utilizzando uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
- Nell'esempio riportato di seguito viene utilizzato uno <xref:System.Windows.Media.Animation.Storyboard> per animare la proprietà <xref:System.Windows.FrameworkElement.Width%2A> di un elemento <xref:System.Windows.Shapes.Rectangle> e la proprietà <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un oggetto <xref:System.Windows.Media.SolidColorBrush> utilizzato per disegnare quel <xref:System.Windows.Shapes.Rectangle>.  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.Animation.Storyboard> per animare la <xref:System.Windows.FrameworkElement.Width%2A> di un <xref:System.Windows.Shapes.Rectangle> elemento e il <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> usato per disegnare che <xref:System.Windows.Shapes.Rectangle>.  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#1)]  
   
  [!code-csharp[storyboards_ovw_snip#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#100)]  
   
- Nelle sezioni riportate di seguito vengono descritte più dettagliatamente le proprietà collegate <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>.  
+ Le sezioni seguenti descrivono il <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> associate in modo più dettagliato.  
   
 <a name="targetingelementsandfreezables"></a>   
-## Elementi del framework, elementi di contenuto del framework e oggetti Freezable  
- Nella sezione precedente è stato specificato che per trovare la relativa destinazione un'animazione deve conoscere il nome e la proprietà da animare relativi.  Per specificare la proprietà da animare,è sufficiente impostare la proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=fullName> con il nome della proprietà da animare.  Specificare il nome dell'oggetto di cui animare la proprietà impostando la proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=fullName> sull'animazione.  
+## <a name="targeting-framework-elements-framework-content-elements-and-freezables"></a>Elementi del framework, elementi di contenuto del framework e oggetti Freezable  
+ Nella sezione precedente è stato indicato che per trovare la relativa destinazione un'animazione deve conoscere il nome e la proprietà relativi cui aggiungere un'animazione. Specifica la proprietà da animare è semplice: è sufficiente impostare <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=nameWithType> con il nome della proprietà da animare.  Specificare il nome dell'oggetto a cui si desidera aggiungere un'animazione impostando la proprietà di <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> proprietà l'animazione.  
   
- Affinché la proprietà <xref:System.Windows.Setter.TargetName%2A> sia funzionante, l'oggetto di destinazione deve avere un nome.  La procedura di assegnazione di un nome a un oggetto <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] non corrisponde a quella utilizzata per assegnare un nome a un oggetto <xref:System.Windows.Freezable>.  
+ Per il <xref:System.Windows.Setter.TargetName%2A> proprietà funzioni, l'oggetto di destinazione deve avere un nome. L'assegnazione di un nome di un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è diverso rispetto all'assegnazione di un nome per un <xref:System.Windows.Freezable> oggetto.  
   
- Gli elementi del framework sono classi che ereditano dalla classe <xref:System.Windows.FrameworkElement>.  Elementi del framework di questo tipo sono rappresentati ad esempio da <xref:System.Windows.Window>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Button> e <xref:System.Windows.Shapes.Rectangle>.  Praticamente tutte le finestre, i pannelli e i controlli sono elementi.  Gli elementi di contenuto del framework sono classi che ereditano dalla classe <xref:System.Windows.FrameworkContentElement>.  Elementi di contenuto del framework di questo tipo sono rappresentati ad esempio da <xref:System.Windows.Documents.FlowDocument> e <xref:System.Windows.Documents.Paragraph>.  Se non si è in grado di stabilire se un tipo è un elemento del framework o un elemento di contenuto del framework, verificare se dispone della proprietà Name.  In caso affermativo, si tratta probabilmente di un elemento del framework o di un elemento di contenuto del framework.  Per avere la certezza, controllare la sezioneGerarchia di ereditarietà della pagina relativa al tipo.  
+ Gli elementi del Framework sono classi che ereditano dalla <xref:System.Windows.FrameworkElement> classe. Esempi di elementi di framework <xref:System.Windows.Window>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Button>, e <xref:System.Windows.Shapes.Rectangle>. Praticamente tutte le finestre, i pannelli e i controlli sono elementi. Gli elementi di contenuto del Framework sono classi che ereditano dalla <xref:System.Windows.FrameworkContentElement> classe. Esempi di elementi con contenuto framework <xref:System.Windows.Documents.FlowDocument> e <xref:System.Windows.Documents.Paragraph>. Se non si sa se un tipo è un elemento del framework o un elemento di contenuto del framework, verificare la presenza di una proprietà Name. Se è presente, è probabile che sia un elemento del framework o un elemento di contenuto del framework. Per esserne certi, verificare la sezione Gerarchia di ereditarietà della relativa pagina di tipo.  
   
- Per utilizzare come destinazione un elemento del framework o un elemento di contenuto del framework in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], impostare la relativa proprietà <xref:System.Windows.FrameworkElement.Name%2A>.  Nel codice è inoltre necessario utilizzare il metodo <xref:System.Windows.NameScope.RegisterName%2A> per registrare il nome dell'elemento con l'elemento per il quale è stato creato un oggetto <xref:System.Windows.NameScope>.  
+ Per abilitare l'assegnazione di un elemento framework o di un elemento di contenuto del framework in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], impostare il relativo <xref:System.Windows.FrameworkElement.Name%2A> proprietà. Nel codice, è inoltre necessario utilizzare il <xref:System.Windows.NameScope.RegisterName%2A> metodo per registrare il nome dell'elemento con l'elemento per cui è stato creato un <xref:System.Windows.NameScope>.  
   
- Nell'esempio riportato di seguito, ricavato dall'esempio precedente, viene assegnato il nome `MyRectangle` a <xref:System.Windows.Shapes.Rectangle>, un tipo di <xref:System.Windows.FrameworkElement>.  
+ Nell'esempio seguente, tratto dall'esempio precedente, assegna il nome `MyRectangle` un <xref:System.Windows.Shapes.Rectangle>, un tipo di <xref:System.Windows.FrameworkElement>.  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#2)]  
   
  [!code-csharp[storyboards_ovw_snip#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#102)]  
   
- Dopo l'assegnazione del nome all'elemento, è possibile animare una proprietà.  
+ Dopo aver impostato un nome, è possibile aggiungere un'animazione a una proprietà di quell'elemento.  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#5)]  
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- I tipi <xref:System.Windows.Freezable> sono classi che ereditano dalla classe <xref:System.Windows.Freezable>.  Esempi di oggetti <xref:System.Windows.Freezable> includono <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform> e <xref:System.Windows.Media.GradientStop>.  
+ <xref:System.Windows.Freezable>i tipi sono classi che ereditano dalla <xref:System.Windows.Freezable> classe. Esempi di <xref:System.Windows.Freezable> includono <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, e <xref:System.Windows.Media.GradientStop>.  
   
- Per utilizzare come destinazione un oggetto <xref:System.Windows.Freezable> tramite un'animazione in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilizzare [Direttiva x:Name](../../../../docs/framework/xaml-services/x-name-directive.md) per assegnare ad esso un nome.  Nel codice è necessario utilizzare il metodo <xref:System.Windows.NameScope.RegisterName%2A> per registrare il suo nome con l'elemento per il quale è stato creato un oggetto <xref:System.Windows.NameScope>.  
+ Per abilitare l'assegnazione di un <xref:System.Windows.Freezable> tramite un'animazione in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], si utilizza il [direttiva X:Name](../../../../docs/framework/xaml-services/x-name-directive.md) per assegnare un nome. Nel codice utilizza il <xref:System.Windows.NameScope.RegisterName%2A> metodo per registrare il proprio nome di elemento per cui è stato creato un <xref:System.Windows.NameScope>.  
   
- Nell'esempio riportato di seguito viene assegnato un nome all'oggetto <xref:System.Windows.Freezable>.  
+ Nell'esempio seguente viene assegnato un nome di un <xref:System.Windows.Freezable> oggetto.  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#3)]  
   
  [!code-csharp[storyboards_ovw_snip#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#103)]  
   
- L'oggetto può essere impostato come destinazione di un'animazione.  
+ L'oggetto può essere quindi impostato come destinazione da un'animazione.  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#7)]  
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- Gli oggetti <xref:System.Windows.Media.Animation.Storyboard> utilizzano ambiti di nomi per risolvere la proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>.  Per ulteriori informazioni sugli ambiti di nomi WPF, vedere [NameScope XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  Se si omette la proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>, l'animazione considera come destinazione l'elemento su cui è stata definita o, nel caso di stili, l'elemento con stile.  
+ <xref:System.Windows.Media.Animation.Storyboard>gli oggetti utilizzano gli ambiti dei nomi per risolvere il <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> proprietà. Per altre informazioni sugli ambiti dei nomi WPF, vedere [NameScope XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Se il <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> proprietà viene omessa, l'elemento su cui è stato definito o, nel caso di stili, l'elemento con stile ha come destinazione l'animazione.  
   
- Talvolta non è possibile assegnare un nome a un oggetto <xref:System.Windows.Freezable>.  Se, ad esempio, un oggetto <xref:System.Windows.Freezable> viene dichiarato come una risorsa o utilizzato per impostare un valore di proprietà in uno stile, non è possibile assegnare ad esso un nome.  Poiché non dispone di un nome, non può essere impostato direttamente come destinazione, ma solo indirettamente.  Nelle sezioni riportate di seguito viene illustrato come impostare indirettamente le destinazioni.  
+ Talvolta non è possibile assegnare un nome di un <xref:System.Windows.Freezable> oggetto. Ad esempio, se un <xref:System.Windows.Freezable> viene dichiarato come una risorsa o utilizzato per impostare un valore della proprietà in uno stile, non è possibile assegnare un nome. Poiché non dispone di un nome, non è possibile impostarlo direttamente come destinazione, ma può essere impostato indirettamente. Le sezioni seguenti descrivono come usare l'impostazione indiretta delle destinazioni.  
   
 <a name="pathsyntaxforchangeable"></a>   
-## Impostazione indiretta delle destinazioni  
- In alcuni casi, un oggetto <xref:System.Windows.Freezable> non può essere impostato direttamente come destinazione da un'animazione, ad esempio quando l'oggetto <xref:System.Windows.Freezable> viene dichiarato come una risorsa o utilizzato per impostare un valore di proprietà in uno stile.  In questi casi, anche se non è possibile impostarlo direttamente come destinazione, è ancora possibile animare l'oggetto <xref:System.Windows.Freezable>.  Anziché impostare la proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> con il nome dell'oggetto <xref:System.Windows.Freezable>, assegnare ad esso il nome dell'elemento a cui "appartiene" l'oggetto <xref:System.Windows.Freezable>. Ad esempio, un oggetto <xref:System.Windows.Media.SolidColorBrush> utilizzato per impostare la proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> di un elemento rettangolo appartiene a quel rettangolo.  Per animare il pennello, impostare la proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> dell'animazione con una catena di proprietà che inizia dalla proprietà dell'elemento del framework o dell'elemento di contenuto del framework impostato con l'oggetto <xref:System.Windows.Freezable> e termina con la proprietà <xref:System.Windows.Freezable> da animare.  
+## <a name="indirect-targeting"></a>Impostazione indiretta delle destinazioni  
+ Talvolta un <xref:System.Windows.Freezable> non può essere la destinazione direttamente da un'animazione, ad esempio quando il <xref:System.Windows.Freezable> viene dichiarato come una risorsa o utilizzato per impostare un valore della proprietà in uno stile. In questi casi, anche se è possibile destinazione direttamente, è ancora possibile animare la <xref:System.Windows.Freezable> oggetto. Anziché impostare la <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> proprietà con il nome del <xref:System.Windows.Freezable>, assegnare ad esso il nome dell'elemento a cui il <xref:System.Windows.Freezable> "appartiene". Ad esempio, un <xref:System.Windows.Media.SolidColorBrush> utilizzato per impostare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un rettangolo elemento appartiene a questo rettangolo. Per animare il pennello, impostare l'animazione <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> con una catena di proprietà che inizia in corrispondenza la proprietà dell'elemento del framework o elemento di contenuto del framework di <xref:System.Windows.Freezable> è stato utilizzato per impostare e termina con il <xref:System.Windows.Freezable> proprietà da animare.  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#33](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#33)]  
   
  [!code-csharp[storyboards_ovw_snip#134](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#134)]  
   
- Se l'oggetto <xref:System.Windows.Freezable> è bloccato, viene creato un duplicato e tale duplicato verrà animato.  In questo caso, la proprietà <xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A> dell'oggetto originale continua a restituire `false`, perché l'oggetto originale non è effettivamente animato.  Per ulteriori informazioni sulla duplicazione, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Si noti che, se il <xref:System.Windows.Freezable> è bloccata, verrà eseguito un duplicato e tale duplicato verrà animato. In questo caso, l'oggetto originale <xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A> proprietà continua a restituire `false`, perché l'oggetto originale non è effettivamente animato. Per ulteriori informazioni sulla clonazione, vedere il [panoramica sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
- Quando si impostano indirettamente le destinazioni delle proprietà, è possibile impostare come destinazioni oggetti che non esistono.  Si supponga, ad esempio, che la proprietà <xref:System.Windows.Controls.Control.Background%2A> di un pulsante sia stata impostata con un oggetto <xref:System.Windows.Media.SolidColorBrush> e si sia tentato di animare la relativa proprietà Color quando in realtà era stato utilizzato un oggetto <xref:System.Windows.Media.LinearGradientBrush> per impostare la proprietà Background del pulsante.  In questi casi, non viene generata alcuna eccezione; l'animazione non avrà un effetto visibile perché <xref:System.Windows.Media.LinearGradientBrush> non reagisce alle modifiche apportate alla proprietà <xref:System.Windows.Media.SolidColorBrush.Color%2A>.  
+ Si noti inoltre che, quando si usa l'impostazione indiretta delle destinazioni di proprietà, è possibile impostare come destinazione oggetti che non esistono. Ad esempio, si potrebbe supporre che il <xref:System.Windows.Controls.Control.Background%2A> di un pulsante è stato impostato con un <xref:System.Windows.Media.SolidColorBrush> e si tenta di aggiungere un'animazione a colore, quando in realtà un <xref:System.Windows.Media.LinearGradientBrush> è stato utilizzato per impostare lo sfondo del pulsante. In questi casi, viene generata alcuna eccezione; l'animazione non ha un effetto visibile perché <xref:System.Windows.Media.LinearGradientBrush> non rispondere alle modifiche apportate al <xref:System.Windows.Media.SolidColorBrush.Color%2A> proprietà.  
   
- Nelle sezioni riportate di seguito viene illustrato in dettaglio come impostare in modo indiretto le destinazioni delle proprietà.  
+ Le sezioni seguenti descrivono la sintassi dell'impostazione indiretta delle destinazioni di proprietà in modo più dettagliato.  
   
 <a name="xamlsyntaxchangeableproperty"></a>   
-### Impostazione indiretta della destinazione di una proprietà di un oggetto Freezable in XAML  
- Per impostare come destinazione una proprietà di un oggetto Freezable in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilizzare la sintassi riportata di seguito.  
+### <a name="indirectly-targeting-a-property-of-a-freezable-in-xaml"></a>Impostazione indiretta della destinazione di una proprietà di un oggetto Freezable in XAML  
+ Per impostare come destinazione una proprietà di un oggetto freezable in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilizzare la sintassi seguente.  
   
 ||  
 |-|  
-|*ElementPropertyName*`.`*FreezablePropertyName*|  
+|*ElementPropertyName* `.` *FreezablePropertyName*|  
   
- Percorso  
+ Dove  
   
--   *ElementPropertyName* è la proprietà dell'oggetto <xref:System.Windows.FrameworkElement> impostato tramite l'oggetto <xref:System.Windows.Freezable> e  
+-   *ElementPropertyName* è la proprietà del <xref:System.Windows.FrameworkElement> che il <xref:System.Windows.Freezable> utilizzato per impostare, e  
   
--   *FreezablePropertyName* è la proprietà dell'oggetto <xref:System.Windows.Freezable> da animare.  
+-   *FreezablePropertyName* è la proprietà del <xref:System.Windows.Freezable> per aggiungere un'animazione.  
   
- Nel codice riportato di seguito viene illustrato come animare la proprietà <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un oggetto <xref:System.Windows.Media.SolidColorBrush> utilizzato per la proprietà  
+ Il codice seguente viene illustrato come animare la <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> utilizzato per impostare il  
   
- <xref:System.Windows.Shapes.Shape.Fill%2A> di un elemento rettangolo.  
+ <xref:System.Windows.Shapes.Shape.Fill%2A>di un elemento rettangolo.  
   
+ [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
+ Talvolta è necessario impostare come destinazione un oggetto freezable contenuto in una raccolta o una matrice.  
   
- Talvolta, è necessario impostare come destinazione un oggetto Freezable contenuto in una raccolta o in una matrice.  
-  
- Per impostare come destinazione un oggetto Freezable contenuto in una raccolta, utilizzare la sintassi del percorso riportata di seguito.  
+ Per impostare come destinazione un oggetto freezable contenuto in una raccolta, usare la sintassi del tracciato seguente.  
   
 ||  
 |-|  
 |*ElementPropertyName* `.Children[` *CollectionIndex* `].` *FreezablePropertyName*|  
   
- Dove *CollectionIndex* è l'indice dell'oggetto nella matrice o nella raccolta.  
+ Dove *CollectionIndex* è l'indice dell'oggetto nella matrice o raccolta.  
   
- Si supponga, ad esempio, che alla proprietà <xref:System.Windows.UIElement.RenderTransform%2A> di un rettangolo sia applicata una risorsa <xref:System.Windows.Media.TransformGroup> e di volere animare una delle trasformazioni in essa contenute.  
+ Ad esempio, si supponga che un rettangolo ha un <xref:System.Windows.Media.TransformGroup> risorsa applicata alla relativa <xref:System.Windows.UIElement.RenderTransform%2A> proprietà e si desidera aggiungere un'animazione a una delle trasformazioni contiene.  
   
+ [!code-xaml[storyboards_ovw_snip_XAML#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#34)]  
   
+ Il codice seguente viene illustrato come animare la <xref:System.Windows.Media.RotateTransform.Angle%2A> proprietà del <xref:System.Windows.Media.RotateTransform> illustrato nell'esempio precedente.  
   
- Nell'esempio di codice riportato di seguito viene illustrato come animare la proprietà <xref:System.Windows.Media.RotateTransform.Angle%2A> dell'oggetto <xref:System.Windows.Media.RotateTransform> illustrato nel precedente esempio.  
-  
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#35](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#35)]  
   
 <a name="targetingpropertyofchangeableincode"></a>   
-### Impostazione indiretta della destinazione di una proprietà di un oggetto Freezable nel codice  
- Nel codice creare un oggetto <xref:System.Windows.PropertyPath>.  Quando si crea l'oggetto <xref:System.Windows.PropertyPath>, si specifica una proprietà <xref:System.Windows.PropertyPath.Path%2A> e una proprietà <xref:System.Windows.PropertyPath.PathParameters%2A>.  
+### <a name="indirectly-targeting-a-property-of-a-freezable-in-code"></a>Impostazione indiretta della destinazione di una proprietà di un oggetto Freezable nel codice  
+ Nel codice, si crea un <xref:System.Windows.PropertyPath> oggetto. Quando si crea il <xref:System.Windows.PropertyPath>, si specifica un <xref:System.Windows.PropertyPath.Path%2A> e <xref:System.Windows.PropertyPath.PathParameters%2A>.  
   
- Per creare <xref:System.Windows.PropertyPath.PathParameters%2A>, si crea una matrice di tipo <xref:System.Windows.DependencyProperty> che contiene un elenco di campi dell'identificatore di proprietà di dipendenza.  Il primo campo dell'identificatore è per la proprietà dell'oggetto <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> impostato tramite l'oggetto <xref:System.Windows.Freezable>.  Il campo dell'identificatore successivo rappresenta la proprietà dell'oggetto <xref:System.Windows.Freezable> da impostare come destinazione.  Considerarlo come una catena di proprietà che collega l'oggetto <xref:System.Windows.Freezable> all'oggetto <xref:System.Windows.FrameworkElement>.  
+ Per creare <xref:System.Windows.PropertyPath.PathParameters%2A>, si crea una matrice di tipo <xref:System.Windows.DependencyProperty> che contiene un elenco di campi di identificatore di proprietà di dipendenza. È il primo campo dell'identificatore della proprietà del <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> che il <xref:System.Windows.Freezable> utilizzato per impostare. Il campo dell'identificatore successivo rappresenta la proprietà del <xref:System.Windows.Freezable> di destinazione. Considerarlo come una catena di proprietà che si connette il <xref:System.Windows.Freezable> per il <xref:System.Windows.FrameworkElement> oggetto.  
   
- Di seguito è riportato un esempio di una catena di proprietà di dipendenza che imposta come destinazione la proprietà <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un oggetto <xref:System.Windows.Media.SolidColorBrush> utilizzato per impostare la proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> di un elemento rettangolo.  
+ Di seguito è riportato un esempio di una catena di proprietà di dipendenza che ha come destinazione il <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> utilizzato per impostare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un elemento rettangolo.  
   
  [!code-csharp[storyboards_ovw_snip#135](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#135)]  
   
- È inoltre necessario specificare una proprietà <xref:System.Windows.PropertyPath.Path%2A>.  <xref:System.Windows.PropertyPath.Path%2A> è un oggetto <xref:System.String> che indica alla proprietà <xref:System.Windows.PropertyPath.Path%2A> come interpretare la proprietà <xref:System.Windows.PropertyPath.PathParameters%2A>.  Viene utilizzata la seguente sintassi.  
+ È inoltre necessario specificare un <xref:System.Windows.PropertyPath.Path%2A>. A <xref:System.Windows.PropertyPath.Path%2A> è un <xref:System.String> che indica il <xref:System.Windows.PropertyPath.Path%2A> come interpretare il <xref:System.Windows.PropertyPath.PathParameters%2A>. Usa la sintassi seguente.  
   
 ||  
 |-|  
-|`(`*OwnerPropertyArrayIndex*`).(`*FreezablePropertyArrayIndex*`)`|  
+|`(` *OwnerPropertyArrayIndex* `).(` *FreezablePropertyArrayIndex* `)`|  
   
- Percorso  
+ Dove  
   
--   *OwnerPropertyArrayIndex* è l'indice della matrice <xref:System.Windows.DependencyProperty> che contiene l'identificatore della proprietà dell'oggetto <xref:System.Windows.FrameworkElement> impostato tramite <xref:System.Windows.Freezable> e  
+-   *OwnerPropertyArrayIndex* è l'indice del <xref:System.Windows.DependencyProperty> matrice che contiene l'identificatore del <xref:System.Windows.FrameworkElement> proprietà dell'oggetto che il <xref:System.Windows.Freezable> utilizzato per impostare, e  
   
--   *FreezablePropertyArrayIndex* è l'indice della matrice <xref:System.Windows.DependencyProperty> che contiene l'identificatore della proprietà da impostare come destinazione.  
+-   *FreezablePropertyArrayIndex* è l'indice del <xref:System.Windows.DependencyProperty> matrice che contiene l'identificatore della proprietà di destinazione.  
   
- Nell'esempio riportato di seguito viene illustrata la proprietà <xref:System.Windows.PropertyPath.Path%2A> associata alla proprietà <xref:System.Windows.PropertyPath.PathParameters%2A> definita nel precedente esempio.  
+ Nell'esempio seguente il <xref:System.Windows.PropertyPath.Path%2A> associata al <xref:System.Windows.PropertyPath.PathParameters%2A> definito nell'esempio precedente.
   
  [!code-csharp[storyboards_ovw_snip#PropertyChainAndPath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#propertychainandpath)]  
   
- Nell'esempio riportato di seguito viene combinato il codice degli esempi precedenti per animare la proprietà <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un oggetto <xref:System.Windows.Media.SolidColorBrush> utilizzato per impostare la proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> di un elemento rettangolo.  
+ L'esempio seguente unisce il codice negli esempi precedenti per animare la <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> utilizzato per impostare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un elemento rettangolo.  
   
  [!code-csharp[storyboards_ovw_snip#137](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#137)]  
   
- Talvolta, è necessario impostare come destinazione un oggetto Freezable contenuto in una raccolta o in una matrice.  Si supponga, ad esempio, che alla proprietà <xref:System.Windows.UIElement.RenderTransform%2A> di un rettangolo sia applicata una risorsa <xref:System.Windows.Media.TransformGroup> e di volere animare una delle trasformazioni in essa contenute.  
+ Talvolta è necessario impostare come destinazione un oggetto freezable contenuto in una raccolta o una matrice. Ad esempio, si supponga che un rettangolo ha un <xref:System.Windows.Media.TransformGroup> risorsa applicata alla relativa <xref:System.Windows.UIElement.RenderTransform%2A> proprietà e si desidera aggiungere un'animazione a una delle trasformazioni contiene.  
   
- [!code-xml[storyboards_ovw_snip#142](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml#142)]  
+ [!code-xaml[storyboards_ovw_snip#142](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml#142)]  
   
- Per impostare come destinazione un oggetto <xref:System.Windows.Freezable> contenuto in una raccolta, utilizzare la sintassi del percorso riportata di seguito.  
+ Destinazione un <xref:System.Windows.Freezable> è contenuto in una raccolta, utilizzare la seguente sintassi del percorso.  
   
 ||  
 |-|  
-|`(`*OwnerPropertyArrayIndex*`).(` *CollectionChildrenPropertyArrayIndex*`)` `[`*CollectionIndex* `].(`*FreezablePropertyArrayIndex*`)`|  
+|`(` *OwnerPropertyArrayIndex* `).(` *CollectionChildrenPropertyArrayIndex* `)` `[` *CollectionIndex* `].(` *FreezablePropertyArrayIndex* `)`|  
   
- Dove *CollectionIndex* è l'indice dell'oggetto nella matrice o nella raccolta.  
+ Dove *CollectionIndex* è l'indice dell'oggetto nella matrice o raccolta.  
   
- Per impostare come destinazione la proprietà <xref:System.Windows.Media.RotateTransform.Angle%2A> dell'oggetto <xref:System.Windows.Media.RotateTransform>, la seconda trasformazione in <xref:System.Windows.Media.TransformGroup>, utilizzare le proprietà <xref:System.Windows.PropertyPath.Path%2A> e <xref:System.Windows.PropertyPath.PathParameters%2A>.  
+ Alla destinazione di <xref:System.Windows.Media.RotateTransform.Angle%2A> proprietà del <xref:System.Windows.Media.RotateTransform>, la seconda trasformazione nel <xref:System.Windows.Media.TransformGroup>, è necessario utilizzare la seguente <xref:System.Windows.PropertyPath.Path%2A> e <xref:System.Windows.PropertyPath.PathParameters%2A>.  
   
  [!code-csharp[storyboards_ovw_snip#139](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#139)]  
   
- Nell'esempio riportato di seguito viene illustrato il codice completo per animare la proprietà <xref:System.Windows.Media.RotateTransform.Angle%2A> di un oggetto <xref:System.Windows.Media.RotateTransform> contenuto in un <xref:System.Windows.Media.TransformGroup>.  
+ Nell'esempio seguente viene illustrato il codice completo per l'animazione di <xref:System.Windows.Media.RotateTransform.Angle%2A> di un <xref:System.Windows.Media.RotateTransform> contenuti all'interno di un <xref:System.Windows.Media.TransformGroup>.  
   
  [!code-csharp[storyboards_ovw_snip#138](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#138)]  
   
-### Impostazione indiretta della destinazione con un oggetto Freezable come punto di partenza  
- Nelle sezioni precedenti veniva illustrato come impostare indirettamente come destinazione un oggetto <xref:System.Windows.Freezable> partendo da un oggetto <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> e creando una catena di proprietà a una proprietà secondaria <xref:System.Windows.Freezable>.  È inoltre possibile utilizzare un oggetto <xref:System.Windows.Freezable> come punto di partenza e impostare indirettamente come destinazione una delle proprietà secondarie dell'oggetto <xref:System.Windows.Freezable>.  È tuttavia necessario tenere conto di un'ulteriore limitazione quando si utilizza un oggetto <xref:System.Windows.Freezable> come punto di partenza per l'impostazione indiretta delle destinazioni: l'oggetto <xref:System.Windows.Freezable> iniziale e ogni oggetto <xref:System.Windows.Freezable> presente tra esso e la proprietà secondaria impostata indirettamente come destinazione non deve essere bloccato.  
+### <a name="indirectly-targeting-with-a-freezable-as-the-starting-point"></a>Impostazione indiretta della destinazione con un oggetto Freezable come punto di partenza  
+ Nelle sezioni precedenti descrivono indirettamente riferimento a un <xref:System.Windows.Freezable> a partire da un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> e la creazione di una catena di proprietà per un <xref:System.Windows.Freezable> delle sottoproprietà. È inoltre possibile utilizzare un <xref:System.Windows.Freezable> come un avvio di un punto e indirettamente riferimento a una delle relative <xref:System.Windows.Freezable> sottoproprietà. Un'ulteriore restrizione si applica quando si utilizza un <xref:System.Windows.Freezable> come punto di partenza per indiretta: l'avvio <xref:System.Windows.Freezable> e ogni <xref:System.Windows.Freezable> tra questo e di sottoproprietà indirettamente come destinazione non deve essere bloccato.  
   
 <a name="controllable_storyboards"></a>   
-## Controllo interattivo di uno storyboard in XAML  
- Per avviare uno storyboard in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], utilizzare un'azione trigger <xref:System.Windows.Media.Animation.BeginStoryboard>.  <xref:System.Windows.Media.Animation.BeginStoryboard> distribuisce le animazioni agli oggetti e alle proprietà che vengono animati, quindi avvia lo storyboard.  Per informazioni dettagliate su questo processo, vedere [Cenni preliminari sull'animazione e sul sistema di temporizzazione](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md). Se si assegna un nome allo <xref:System.Windows.Media.Animation.BeginStoryboard> specificando la relativa proprietà <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>, è possibile renderlo controllabile.  È quindi possibile controllare in modo interattivo lo storyboard dopo il suo avvio.  Di seguito è riportato un elenco di azioni dello storyboard controllabili che è possibile utilizzare con trigger di evento per controllare uno storyboard.  
+## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Controllo interattivo di uno storyboard in XAML  
+ Per avviare uno storyboard in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], si utilizza un <xref:System.Windows.Media.Animation.BeginStoryboard> azione attivata. <xref:System.Windows.Media.Animation.BeginStoryboard>distribuisce le animazioni agli oggetti e proprietà animate e avvia lo storyboard. (Per informazioni dettagliate su questo processo, vedere il [animazione e temporizzazione System Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Se si assegna il <xref:System.Windows.Media.Animation.BeginStoryboard> specificando un nome di relativo <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> proprietà consentono di uno storyboard controllabile. È quindi possibile controllare in modo interattivo lo storyboard dopo l'avvio. Di seguito è riportato un elenco di azioni dello storyboard controllabili da usare con i trigger di evento per controllare uno storyboard.  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: sospende lo storyboard.  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>: Sospende lo storyboard.  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: riprende uno storyboard sospeso.  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Consente di riprendere uno storyboard sospeso.  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: modifica la velocità dello storyboard.  
+-   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Modifica la velocità dello storyboard.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: sposta uno storyboard alla fine del periodo di riempimento, se presente.  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Sposta uno storyboard alla fine del periodo di riempimento, se presente.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: interrompe lo storyboard.  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>: Interrompe lo storyboard.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: rimuove lo storyboard.  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Rimuove lo storyboard.  
   
- Nell'esempio riportato di seguito vengono utilizzate azioni di storyboard controllabili per controllare in modo interattivo uno storyboard.  
+ Nell'esempio seguente le azioni di storyboard controllabili vengono usate per controllare uno storyboard in modo interattivo.  
   
- [!code-xml[animation_ovws_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snip/CS/ControllableStoryboardExample.xaml#controllablestoryboardexamplewholepage)]  
+ [!code-xaml[animation_ovws_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snip/CS/ControllableStoryboardExample.xaml#controllablestoryboardexamplewholepage)]  
   
 <a name="controllable_storyboards_procedural"></a>   
-## Controllo interattivo di uno storyboard tramite il codice  
- Negli esempi precedenti veniva illustrato come eseguire animazioni utilizzando azioni trigger.  Nel codice, è inoltre possibile controllare uno storyboard utilizzando metodi interattivi della classe <xref:System.Windows.Media.Animation.Storyboard>.  Per rendere interattivo uno <xref:System.Windows.Media.Animation.Storyboard> nel codice, è necessario utilizzare l'overload appropriato del metodo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> dello storyboard e specificare `true` per renderlo controllabile.  Per ulteriori informazioni, vedere la pagina <xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkElement%2CSystem.Boolean%29>.  
+## <a name="interactively-controlling-a-storyboard-by-using-code"></a>Controllo interattivo di uno storyboard tramite il codice  
+ Gli esempi precedenti hanno illustrato come aggiungere animazioni tramite le azioni trigger. Nel codice, è inoltre possibile controllare uno storyboard utilizzando metodi interattivi della <xref:System.Windows.Media.Animation.Storyboard> classe. Per un <xref:System.Windows.Media.Animation.Storyboard> per rendere interattivo nel codice, è necessario utilizzare l'overload appropriato dello storyboard <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> (metodo) e specificare `true` per renderlo controllabile. Vedere il <xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkElement%2CSystem.Boolean%29> pagina per altre informazioni.  
   
- Di seguito sono elencati i metodi che è possibile utilizzare per modificare uno <xref:System.Windows.Media.Animation.Storyboard> dopo il suo avvio:  
+ Nell'elenco seguente sono illustrati i metodi che possono essere utilizzati per manipolare una <xref:System.Windows.Media.Animation.Storyboard> dopo l'avvio:  
   
 -   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
   
@@ -264,50 +269,50 @@ In questo argomento viene illustrato come utilizzare gli oggetti <xref:System.Wi
   
 -   <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
   
- Il vantaggio derivante dall'utilizzo di questi metodi è che non è necessario creare oggetti <xref:System.Windows.Trigger> o <xref:System.Windows.TriggerAction>; è sufficiente disporre di un riferimento allo <xref:System.Windows.Media.Animation.Storyboard> controllabile che si desidera modificare.  
+ Il vantaggio dell'utilizzo di questi metodi è che non è necessario creare <xref:System.Windows.Trigger> o <xref:System.Windows.TriggerAction> oggetti, è sufficiente un riferimento a controllabile che <xref:System.Windows.Media.Animation.Storyboard> si desidera modificare.  
   
- **Nota:** tutte le azioni interattive eseguite in un oggetto <xref:System.Windows.Media.Animation.Clock>, e di conseguenza in uno <xref:System.Windows.Media.Animation.Storyboard> avranno luogo in corrispondenza del tick successivo del motore di temporizzazione che precederà di poco il rendering successivo.  Ad esempio, se si utilizza il metodo <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> per passare a un altro punto di un'animazione, il valore della proprietà non cambia immediatamente, ma al tick successivo del motore di temporizzazione.  
+ **Nota:** tutte le azioni interattive effettuate su un <xref:System.Windows.Media.Animation.Clock>e, pertanto anche su un <xref:System.Windows.Media.Animation.Storyboard> verificherà al tick successivo del motore di temporizzazione che precederà il rendering successivo. Ad esempio, se si utilizza il <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metodo per passare a un altro punto di un'animazione, il valore della proprietà non cambia immediatamente, invece, il valore viene modificato al tick successivo del motore di temporizzazione.  
   
- Nell'esempio riportato di seguito viene illustrato come applicare e controllare le animazioni utilizzando i metodi interattivi della classe <xref:System.Windows.Media.Animation.Storyboard>.  
+ Nell'esempio seguente viene illustrato come applicare e controllare le animazioni utilizzando i metodi interattivi della <xref:System.Windows.Media.Animation.Storyboard> classe.  
   
  [!code-csharp[animation_ovws_procedural_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/ControllableStoryboardExample.cs#controllablestoryboardexamplewholepage)]
  [!code-vb[animation_ovws_procedural_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/controllablestoryboardexample.vb#controllablestoryboardexamplewholepage)]  
   
 <a name="usingstoryboardsinstyles"></a>   
-## Animazione in uno stile  
- È possibile utilizzare gli oggetti <xref:System.Windows.Media.Animation.Storyboard> per definire animazioni in uno <xref:System.Windows.Style>.  L'esecuzione di animazioni con uno <xref:System.Windows.Media.Animation.Storyboard> in uno <xref:System.Windows.Style> presenta delle analogie con l'utilizzo di uno <xref:System.Windows.Media.Animation.Storyboard> in altre situazioni, con le tre eccezioni seguenti:  
+## <a name="animate-in-a-style"></a>Aggiungere un'animazione in uno stile  
+ È possibile utilizzare <xref:System.Windows.Media.Animation.Storyboard> oggetti per definire le animazioni in un <xref:System.Windows.Style>. Animazione con un <xref:System.Windows.Media.Animation.Storyboard> in un <xref:System.Windows.Style> è simile all'utilizzo di un <xref:System.Windows.Media.Animation.Storyboard> altrove, con le tre eccezioni seguenti:  
   
--   Non si specifica una proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; lo <xref:System.Windows.Media.Animation.Storyboard> imposta sempre come destinazione l'elemento a cui viene applicato lo <xref:System.Windows.Style>.  Per impostare come destinazione gli oggetti <xref:System.Windows.Freezable>, è necessario utilizzare la modalità indiretta.  Per ulteriori informazioni sulla modalità indiretta, vedere la sezione [Impostazione indiretta delle destinazioni](#pathsyntaxforchangeable).  
+-   Non si specifica un <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; <xref:System.Windows.Media.Animation.Storyboard> sempre l'elemento a cui è destinato il <xref:System.Windows.Style> viene applicato. Destinazione <xref:System.Windows.Freezable> oggetti, è necessario utilizzare indiretta. Per ulteriori informazioni sulla modalità indiretta, vedere il [indiretta](#pathsyntaxforchangeable) sezione.  
   
--   Non è possibile specificare una proprietà <xref:System.Windows.EventTrigger.SourceName%2A> per un oggetto <xref:System.Windows.EventTrigger> o <xref:System.Windows.Trigger>.  
+-   Non è possibile specificare un <xref:System.Windows.EventTrigger.SourceName%2A> per un <xref:System.Windows.EventTrigger> o <xref:System.Windows.Trigger>.  
   
--   Non è possibile utilizzare espressioni di associazione dati o riferimenti di risorsa dinamici per impostare valori di proprietà di <xref:System.Windows.Media.Animation.Storyboard> o animazioni  perché quanto contenuto in uno <xref:System.Windows.Style> deve essere thread\-safe e il sistema di temporizzazione deve utilizzare il metodo <xref:System.Windows.Freezable.Freeze%2A> sugli oggetti <xref:System.Windows.Media.Animation.Storyboard> per renderli thread\-safe.  Non è possibile bloccare uno <xref:System.Windows.Media.Animation.Storyboard> se lo storyboard stesso e le relative sequenze temporali figlio contengono espressioni di associazione dati o riferimenti di risorsa dinamici.  Per ulteriori informazioni sul blocco e su altre funzionalità <xref:System.Windows.Freezable>, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+-   È possibile utilizzare espressioni di associazione dati o riferimenti a risorse dinamiche per impostare <xref:System.Windows.Media.Animation.Storyboard> o i valori delle proprietà di animazione. Poiché tutti gli elementi all'interno di un <xref:System.Windows.Style> deve essere thread-safe, e il sistema di temporizzazione deve <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> oggetti in modo thread-safe. Oggetto <xref:System.Windows.Media.Animation.Storyboard> non può essere bloccato se è o le sequenze temporali figlio contengono espressioni di associazione dati o riferimenti a risorse dinamiche. Per ulteriori informazioni sul blocco e altri su <xref:System.Windows.Freezable> funzionalità, vedere il [panoramica sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
--   In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], non è possibile dichiarare gestori eventi per eventi animazione o <xref:System.Windows.Media.Animation.Storyboard>.  
+-   In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è possibile dichiarare i gestori eventi per <xref:System.Windows.Media.Animation.Storyboard> o eventi di animazione.  
   
- Per un esempio in cui viene illustrato come dichiarare uno storyboard in uno stile, vedere l'esempio [Aggiungere un'animazione in uno stile](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md).  
+ Per un esempio che illustra come definire uno storyboard in uno stile, vedere il [Animate in uno stile](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md) esempio.  
   
 <a name="defineAStoryboardInAControlTemplateSection"></a>   
-## Animazione in un ControlTemplate  
- È possibile utilizzare gli oggetti <xref:System.Windows.Media.Animation.Storyboard> per definire animazioni in un oggetto <xref:System.Windows.Controls.ControlTemplate>.  L'esecuzione di animazioni con uno <xref:System.Windows.Media.Animation.Storyboard> in un oggetto <xref:System.Windows.Controls.ControlTemplate> presenta delle analogie con l'utilizzo di uno <xref:System.Windows.Media.Animation.Storyboard> in altre situazioni, con le due eccezioni seguenti:  
+## <a name="animate-in-a-controltemplate"></a>Eseguire un'animazione in un ControlTemplate  
+ È possibile utilizzare <xref:System.Windows.Media.Animation.Storyboard> oggetti per definire le animazioni in un <xref:System.Windows.Controls.ControlTemplate>. Animazione con un <xref:System.Windows.Media.Animation.Storyboard> in un <xref:System.Windows.Controls.ControlTemplate> è simile all'utilizzo di un <xref:System.Windows.Media.Animation.Storyboard> altrove, con le due eccezioni seguenti:  
   
--   La proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> può unicamente fare riferimento agli oggetti figlio dell'oggetto <xref:System.Windows.Controls.ControlTemplate>.  La proprietà <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> non è specificata, la destinazione dell'animazione è rappresentata dall'elemento a cui viene applicato l'oggetto <xref:System.Windows.Controls.ControlTemplate>.  
+-   Il <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> possono fare riferimento solo agli oggetti figlio del <xref:System.Windows.Controls.ControlTemplate>. Se <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> non viene specificato, l'elemento a cui è destinato l'animazione di <xref:System.Windows.Controls.ControlTemplate> viene applicato.  
   
--   La proprietà <xref:System.Windows.EventTrigger.SourceName%2A> di un oggetto <xref:System.Windows.EventTrigger> o <xref:System.Windows.Trigger> può unicamente fare riferimento agli oggetti figlio dell'oggetto <xref:System.Windows.Controls.ControlTemplate>.  
+-   Il <xref:System.Windows.EventTrigger.SourceName%2A> per un <xref:System.Windows.EventTrigger> o <xref:System.Windows.Trigger> possono fare riferimento solo agli oggetti figlio del <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Non è possibile utilizzare espressioni di associazione dati o riferimenti di risorsa dinamici per impostare valori di proprietà di <xref:System.Windows.Media.Animation.Storyboard> o animazioni  perché quanto contenuto in uno <xref:System.Windows.Controls.ControlTemplate> deve essere thread\-safe e il sistema di temporizzazione deve utilizzare il metodo <xref:System.Windows.Freezable.Freeze%2A> sugli oggetti <xref:System.Windows.Media.Animation.Storyboard> per renderli thread\-safe.  Non è possibile bloccare uno <xref:System.Windows.Media.Animation.Storyboard> se lo storyboard stesso e le relative sequenze temporali figlio contengono espressioni di associazione dati o riferimenti di risorsa dinamici.  Per ulteriori informazioni sul blocco e su altre funzionalità <xref:System.Windows.Freezable>, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+-   È possibile utilizzare espressioni di associazione dati o riferimenti a risorse dinamiche per impostare <xref:System.Windows.Media.Animation.Storyboard> o i valori delle proprietà di animazione. Poiché tutti gli elementi all'interno di un <xref:System.Windows.Controls.ControlTemplate> deve essere thread-safe, e il sistema di temporizzazione deve <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> oggetti in modo thread-safe. Oggetto <xref:System.Windows.Media.Animation.Storyboard> non può essere bloccato se è o le sequenze temporali figlio contengono espressioni di associazione dati o riferimenti a risorse dinamiche. Per ulteriori informazioni sul blocco e altri su <xref:System.Windows.Freezable> funzionalità, vedere il [panoramica sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
--   In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], non è possibile dichiarare gestori eventi per eventi animazione o <xref:System.Windows.Media.Animation.Storyboard>.  
+-   In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è possibile dichiarare i gestori eventi per <xref:System.Windows.Media.Animation.Storyboard> o eventi di animazione.  
   
- Per un esempio in cui viene illustrato come definire uno storyboard in un oggetto <xref:System.Windows.Controls.ControlTemplate>, vedere l'esempio [Eseguire un'animazione in un ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md).  
+ Per un esempio che illustra come definire uno storyboard in un <xref:System.Windows.Controls.ControlTemplate>, vedere il [Animate in ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md) esempio.  
   
 <a name="animateWhenAPropertyValueChanges"></a>   
-## Esecuzione di un'animazione quando viene modificato il valore di una proprietà  
- Negli stili e nei modelli di controllo, è possibile utilizzare oggetti Trigger per avviare uno storyboard alla modifica di una proprietà.  Per i relativi esempi, vedere [Attivare un'animazione quando il valore di una proprietà viene modificato](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md) e [Eseguire un'animazione in un ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md).  
+## <a name="animate-when-a-property-value-changes"></a>Aggiungere un'animazione quando viene modificato il valore di una proprietà  
+ Negli stili e nei modelli di controllo è possibile usare oggetti Trigger per avviare uno storyboard quando una proprietà viene modificata. Per esempi, vedere [Trigger animazione quando una proprietà cambia un valore di](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md) e [Animate in ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md).  
   
- Le animazioni applicate tramite oggetti <xref:System.Windows.Trigger> di proprietà dimostrano un comportamento più complesso rispetto alle animazioni <xref:System.Windows.EventTrigger> o a quelle avviate tramite i metodi <xref:System.Windows.Media.Animation.Storyboard>.  Vengono fornite con animazioni definite da altri oggetti <xref:System.Windows.Trigger>, ma possono essere combinate con animazioni <xref:System.Windows.EventTrigger> e con animazioni attivate tramite metodi.  
+ Le animazioni applicate tramite proprietà <xref:System.Windows.Trigger> oggetti si comportano in modo più complesso rispetto a <xref:System.Windows.EventTrigger> animazioni o a quelle avviate tramite <xref:System.Windows.Media.Animation.Storyboard> metodi.  Essi "handoff" con le animazioni definite da altri <xref:System.Windows.Trigger> oggetti, ma possono essere combinate con <xref:System.Windows.EventTrigger> e le animazioni basate su metodo.  
   
-## Vedere anche  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Cenni preliminari sulle tecniche di animazione delle proprietà](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Cenni preliminari sulle tecniche di animazione delle proprietà](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
  [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

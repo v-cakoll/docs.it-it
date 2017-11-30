@@ -5,29 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8f87b17cc451b05186eee1e3228c38a05c945fd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2c26b3b538517c216aa31b2cfa0c6174a9b76ab1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Esempio di interoperabilità: client COM e server .NET
 Questo esempio illustra l'interazione di un [Client COM](#cpconcominteropsamplecomclientnetserveranchor1) e di un [server .NET](#cpconcominteropsamplecomclientnetserveranchor2) per l'esecuzione di calcoli per un mutuo. In questo esempio il client crea e chiama un'istanza della classe gestita `Loan`, passa quattro argomenti, uno dei quali uguale a zero, all'istanza e visualizza i calcoli. Diversi esempi di codice di questo esempio vengono presentati in vari punti della sezione.  
@@ -403,4 +399,3 @@ namespace LoanLib {
   
 ## <a name="see-also"></a>Vedere anche  
  [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-

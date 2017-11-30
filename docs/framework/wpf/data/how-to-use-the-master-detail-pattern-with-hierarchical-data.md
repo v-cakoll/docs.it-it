@@ -1,48 +1,51 @@
 ---
-title: "Procedura: utilizzare il modello Master-Details con dati gerarchici | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "associazione dati, paradigma dati Master-Detail"
-  - "paradigma dati Master-Detail"
+title: 'Procedura: utilizzare il modello Master-Details con dati gerarchici'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [WPF], Master-Detail data paradigm
+- Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bb546a3429012a49ee7652a3470460935fc76d70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare il modello Master-Details con dati gerarchici
-In questo esempio viene illustrato come implementare lo scenario Master\-Details.  
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procedura: utilizzare il modello Master-Details con dati gerarchici
+In questo esempio viene illustrato come implementare uno scenario master-details.  
   
-## Esempio  
- In questo esempio, `LeagueList` è una raccolta di `Leagues`.  Ogni `League` ha un `Name` e una raccolta di `Divisions` e ciascuna `Division` ha un nome e una raccolta di `Teams`.  Ogni `Team` ha un nome.  
+## <a name="example"></a>Esempio  
+ In questo esempio, `LeagueList` è una raccolta di `Leagues`. Ogni `League` ha un `Name` e una raccolta di `Divisions`e ogni `Division` ha un nome e una raccolta di `Teams`. Ogni `Team` ha un nome.  
   
- [!code-xml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
-[!code-xml[MasterDetail#HowTo2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
+ [!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
+[!code-xaml[MasterDetail#HowTo2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
   
- Di seguito è disponibile una schermata dell'esempio.  Il controllo <xref:System.Windows.Controls.ListBox> `Divisions` consente di rilevare automaticamente le selezioni nel controllo <xref:System.Windows.Controls.ListBox> `Leagues` e di visualizzare i dati corrispondenti.  Il controllo <xref:System.Windows.Controls.ListBox> `Teams` consente di rilevare le selezioni negli altri due controlli <xref:System.Windows.Controls.ListBox>.  
+ Lo screenshot seguente mostra l'esempio. Il `Divisions` <xref:System.Windows.Controls.ListBox> automaticamente tiene traccia delle selezioni nel `Leagues` <xref:System.Windows.Controls.ListBox> e visualizzare i dati corrispondenti. Il `Teams` <xref:System.Windows.Controls.ListBox> tiene traccia delle selezioni negli altri due <xref:System.Windows.Controls.ListBox> controlli.  
   
- ![Esempio Master Detail Data](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![Master &#45; ad esempio di dettaglio](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
   
- Si notino i due aspetti dell'esempio riportati di seguito:  
+ I due elementi per rilevare in questo esempio sono:  
   
-1.  I tre controlli <xref:System.Windows.Controls.ListBox> sono associati alla stessa origine.  La proprietà <xref:System.Windows.Data.Binding.Path%2A> è dell'associazione viene impostata per specificare quale livello di dati deve essere visualizzato dal controllo <xref:System.Windows.Controls.ListBox>.  
+1.  I tre <xref:System.Windows.Controls.ListBox> associare i controlli alla stessa origine. Impostare il <xref:System.Windows.Data.Binding.Path%2A> proprietà dell'associazione per specificare il livello di dati di cui si desidera il <xref:System.Windows.Controls.ListBox> da visualizzare.  
   
-2.  È necessario impostare la proprietà <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> su `true` sui controlli <xref:System.Windows.Controls.ListBox> di cui si intende rilevare le selezioni.  L'impostazione di questa proprietà assicura che l'elemento selezionato sia sempre impostato come <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>.  In alternativa, se <xref:System.Windows.Controls.ListBox> ottiene i dati da un oggetto <xref:System.Windows.Data.CollectionViewSource>, la selezione e la valuta vengono sincronizzate automaticamente.  
+2.  È necessario impostare il <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> proprietà `true` sul <xref:System.Windows.Controls.ListBox> controlli dei quali la selezione si tiene traccia. L'impostazione di questa proprietà garantisce che l'elemento selezionato è sempre impostato come il <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. In alternativa, se il <xref:System.Windows.Controls.ListBox> Ottiene i dati da un <xref:System.Windows.Data.CollectionViewSource>, la selezione e valuta sincronizzate automaticamente.  
   
- La tecnica varia leggermente se si utilizzano dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  Per un esempio, vedere [Utilizzare il modello Master\-Details con dati XML gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
+ La tecnica è leggermente diversa quando si utilizza [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati. Per un esempio, vedere [utilizzare il modello Master-Details con dati XML gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
-## Vedere anche  
- <xref:System.Windows.HierarchicalDataTemplate>   
- [Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)   
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Cenni preliminari sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.HierarchicalDataTemplate>  
+ [Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)  
  [Procedure relative](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

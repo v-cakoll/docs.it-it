@@ -1,61 +1,65 @@
 ---
-title: "&lt;system.identityModel.services&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;System&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
-caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a5f0b6b207fbd51504149fd5c245f41ef89f17f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.identityModel.services&gt;
-Sezione di configurazione per l'autenticazione utilizzando il protocollo WS\-Federation.  
+# <a name="ltsystemidentitymodelservicesgt"></a>&lt;System&gt;
+Sezione di configurazione per l'autenticazione tramite il protocollo WS-Federation.  
   
- \<system.identityModel.services\>  
+ \<System >  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```xml  
 <system.identityModel.services>  
-  <federationConfiguration name=xs:string identityConfigurationName=xs:string>  
-  </federationConfiguration>  
+  <federationConfiguration name=xs:string identityConfigurationName=xs:string>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
- Nessuno  
+### <a name="attributes"></a>Attributi  
+ Nessuna  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Contiene le impostazioni che configurano il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\) e il <xref:System.IdentityModel.Services.SessionAuthenticationModule> moduli HTTP \(SAM\).|  
+|-------------|-----------------|  
+|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Contiene le impostazioni che configurano il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e <xref:System.IdentityModel.Services.SessionAuthenticationModule> moduli HTTP (SAM).|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
  Nessuno  
   
-## Note  
- Aggiungere una `<system.identityModel.services>` sezione al file di configurazione dell'applicazione per fornire le impostazioni per il SAM e WSFAM.  
+## <a name="remarks"></a>Note  
+ Aggiungere un `<system.identityModel.services>` sezione al file di configurazione dell'applicazione per fornire le impostazioni per le WSFAM SAM.  
   
 > [!IMPORTANT]
->  Quando si utilizza il <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o la <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo di accesso basato sui crediti nel codice, attestazioni authorization manager \(<xref:System.Security.Claims.ClaimsAuthorizationManager>\) e criteri utilizzati per prendere decisioni di autorizzazione vengono configurati mediante un `<identityConfiguration>` elemento a cui fa riferimento in modo implicito o esplicito da un `<federationConfiguration>` elemento in questa sezione.  Per ulteriori informazioni, vedere la  **note** sotto il [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento.  
+>  Quando si utilizza il <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo di accesso basato sulle attestazioni nel codice, la gestione di autorizzazione delle attestazioni (<xref:System.Security.Claims.ClaimsAuthorizationManager>) e criteri che consentono di prendere decisioni di autorizzazione vengono configurati mediante un `<identityConfiguration>` elemento a cui fa riferimento in modo implicito o esplicito da un `<federationConfiguration>` elemento in questa sezione. Per ulteriori informazioni, vedere il **osservazioni** sotto il [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento.  
   
- Il `<system.identityModel.services>` sezione è rappresentato dal <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> classe.  L'insieme di figlio `<federationConfiguration>` elementi configurati nella sezione è rappresentato dal <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> classe.  
+ Il `<system.identityModel.services>` sezione è rappresentata dalla <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> classe. La raccolta di figlio `<federationConfiguration>` elementi configurati nella sezione è rappresentato dalla <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> classe.  
   
-## Esempio  
- Il file XML riportato di seguito viene illustrato come aggiungere una `<system.identityModel.services>` sezione in un file di configurazione.  È innanzitutto necessario aggiungere le dichiarazioni di sezione per entrambi i `<system.identityModel.services>` sezione e il `<system.identityModel>` le sezioni.  \(Quando si aggiunge un `<system.identityModel.services>` sezione, è inoltre necessario aggiungere una dichiarazione per il `<system.identityModel>` sezione per garantire che un valore predefinito `<identityConfiguration>` sezione può essere creati da Common Language runtime, se necessario.\) Dopo aver aggiunto le dichiarazioni di sezione, è possibile configurare le impostazioni di autenticazione federata sotto il `<system.identityModel.services>` elemento.  
+## <a name="example"></a>Esempio  
+ Il codice XML seguente viene illustrato come aggiungere un `<system.identityModel.services>` sezione in un file di configurazione. È innanzitutto necessario aggiungere le dichiarazioni della sezione per entrambi i `<system.identityModel.services>` sezione e `<system.identityModel>` sezioni. (Quando si aggiunge un `<system.identityModel.services>` sezione, è necessario aggiungere una dichiarazione per il `<system.identityModel>` sezione per garantire che un valore predefinito `<identityConfiguration>` sezione possa essere creata dal runtime se necessario.) Dopo che sono state aggiunte le dichiarazioni di sezione, è possibile configurare le impostazioni di autenticazione federata sotto il `<system.identityModel.services>` elemento.  
   
-```  
+```xml  
 <configuration>  
   <configSections>  
     <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />  

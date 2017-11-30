@@ -1,138 +1,140 @@
 ---
-title: "Cenni preliminari sui comportamenti temporali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comportamenti, temporizzazione"
-  - "comportamenti di temporizzazione"
+title: Cenni preliminari sui comportamenti temporali
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- timing behaviors [WPF]
+- behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ac6671033a439051b062ddae70649a63bacd4979
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sui comportamenti temporali
-In questo argomento vengono descritti i comportamenti temporali delle animazioni e di altri oggetti <xref:System.Windows.Media.Animation.Timeline>.  
+# <a name="timing-behaviors-overview"></a>Cenni preliminari sui comportamenti temporali
+In questo argomento vengono descritti i comportamenti temporali delle animazioni e di altri <xref:System.Windows.Media.Animation.Timeline> oggetti.  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## Prerequisiti  
- Per comprendere questo argomento, è necessario conoscere le funzionalità di base dell'animazione.  Per ulteriori informazioni, vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+## <a name="prerequisites"></a>Prerequisiti  
+ Per comprendere questo argomento, è necessario conoscere le funzionalità di base delle animazioni. Per ulteriori informazioni, vedere il [panoramica dell'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
 <a name="timelinetypes"></a>   
-## Tipi di sequenza temporale  
- Un oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un intervallo di tempo.  Fornisce proprietà che consentono di specificare la lunghezza dell'intervallo, il momento di inizio, il numero di ripetizioni, la velocità di avanzamento dell'intervallo e così via.  
+## <a name="timeline-types"></a>Tipi di sequenza temporale  
+ Oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un segmento di tempo. Offre proprietà che consentono di specificare la lunghezza di tale intervallo, il momento di inizio, il numero di ripetizioni, la velocità di avanzamento dell'intervallo e così via.  
   
- Le classi che ereditano dalla classe della sequenza temporale offrono funzionalità aggiuntive, ad esempio la riproduzione di animazioni e contenuti multimediali.  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono disponibili forniti i seguenti tipi di oggetto <xref:System.Windows.Media.Animation.Timeline>.  
+ Le classi che ereditano dalla classe della sequenza temporale offrono funzionalità aggiuntive, ad esempio la riproduzione di animazioni e file multimediali. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornisce le seguenti <xref:System.Windows.Media.Animation.Timeline> tipi.  
   
 |Tipo di sequenza temporale|Descrizione|  
-|--------------------------------|-----------------|  
-|<xref:System.Windows.Media.Animation.AnimationTimeline>|Classe base astratta per oggetti <xref:System.Windows.Media.Animation.Timeline> che generano valori di output per l'animazione delle proprietà.|  
-|<xref:System.Windows.Media.MediaTimeline>|Genera output da un file multimediale.|  
-|<xref:System.Windows.Media.Animation.ParallelTimeline>|Tipo di <xref:System.Windows.Media.Animation.TimelineGroup> che raggruppa e controlla oggetti <xref:System.Windows.Media.Animation.Timeline> figlio.|  
-|<xref:System.Windows.Media.Animation.Storyboard>|Tipo di <xref:System.Windows.Media.Animation.ParallelTimeline> che fornisce informazioni di destinazione per gli oggetti Timeline che contiene.|  
-|<xref:System.Windows.Media.Animation.Timeline>|Classe base astratta che definisce i comportamenti temporali.|  
-|<xref:System.Windows.Media.Animation.TimelineGroup>|Classe astratta per oggetti <xref:System.Windows.Media.Animation.Timeline> che possono contenere altri oggetti <xref:System.Windows.Media.Animation.Timeline>.|  
+|-------------------|-----------------|  
+|<xref:System.Windows.Media.Animation.AnimationTimeline>|Classe base astratta per <xref:System.Windows.Media.Animation.Timeline> gli oggetti che generano valori di output per tali proprietà.|  
+|<xref:System.Windows.Media.MediaTimeline>|Genera l'output da un file multimediale.|  
+|<xref:System.Windows.Media.Animation.ParallelTimeline>|Un tipo di <xref:System.Windows.Media.Animation.TimelineGroup> che i gruppi e controlli figlio <xref:System.Windows.Media.Animation.Timeline> oggetti.|  
+|<xref:System.Windows.Media.Animation.Storyboard>|Un tipo di <xref:System.Windows.Media.Animation.ParallelTimeline> che fornisce informazioni per gli oggetti della sequenza temporale che contiene.|  
+|<xref:System.Windows.Media.Animation.Timeline>|Classe di base astratta che definisce i comportamenti temporali.|  
+|<xref:System.Windows.Media.Animation.TimelineGroup>|Classe astratta per <xref:System.Windows.Media.Animation.Timeline> gli oggetti che possono contenere altre <xref:System.Windows.Media.Animation.Timeline> oggetti.|  
   
 <a name="propertiesthatcontroltimelinelength"></a>   
-## Proprietà che controllano la lunghezza di una sequenza temporale  
- Un oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un intervallo di tempo. La lunghezza di una sequenza temporale può essere descritta in modi diversi.  Nella tabella riportata di seguito vengono definiti vari termini per la descrizione della lunghezza di una sequenza temporale.  
+## <a name="properties-that-control-the-length-of-a-timeline"></a>Proprietà che controllano la lunghezza di una sequenza temporale  
+ Oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un intervallo di tempo e la lunghezza di una sequenza temporale può essere descritto in modi diversi. La tabella seguente definisce vari termini per descrivere la lunghezza di una sequenza temporale.  
   
 |Termine|Descrizione|Proprietà||||  
-|-------------|-----------------|---------------|-|-|-|  
-|Durata semplice|Periodo di tempo impiegato da una sequenza temporale per compiere una sola iterazione in avanti.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
-|Una ripetizione|Periodo di tempo impiegato da una sequenza temporale per essere riprodotta una volta e, se la proprietà <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> è true, per essere riprodotta una volta in senso inverso.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|Periodo attivo|Periodo di tempo impiegato da una sequenza temporale per completare tutte le ripetizioni specificate dalla relativa proprietà <xref:System.Windows.Media.Animation.RepeatBehavior>.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|----------|-----------------|----------------|-|-|-|  
+|Durata semplice|Periodo di tempo impiegato da una sequenza temporale per compiere una singola iterazione in avanti.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
+|Una ripetizione|Il periodo di tempo impiegato da una sequenza temporale per riprodotta una volta e, se il <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> è true, riprodurre con le versioni precedenti di una volta.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
+|Periodo attivo|Il periodo di tempo impiegato da una sequenza temporale per completare tutte le ripetizioni specificate dal relativo <xref:System.Windows.Media.Animation.RepeatBehavior> proprietà.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
-### Proprietà Duration  
- Come accennato in precedenza, un oggetto Timeline rappresenta un intervallo di tempo.  La lunghezza di tale intervallo è determinata dalla proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> della sequenza temporale.  Quando una sequenza temporale raggiunge la fine della propria durata, la riproduzione viene interrotta.  Se la sequenza temporale ha sequenze temporali figlie, anche la loro riproduzione viene interrotta.  Nel caso di un'animazione, la proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> specifica il tempo impiegato dall'animazione per la transizione dal valore iniziale a quello finale.  In alcuni casi, la durata di una sequenza temporale è detta *durata semplice*, per distinguere tra la durata di una singola iterazione e il periodo di tempo totale impiegato dalla riproduzione dell'animazione, incluse le ripetizioni.  È possibile specificare una durata utilizzando un valore temporale finito o il valore speciale <xref:System.Windows.Duration.Automatic%2A> o <xref:System.Windows.Duration.Forever%2A>.  La durata di un'animazione deve restituire un valore <xref:System.Windows.Duration.TimeSpan%2A>, in modo da poter eseguire la transizione tra valori.  
+### <a name="the-duration-property"></a>Proprietà Duration  
+ Come accennato in precedenza, una sequenza temporale rappresenta un intervallo di tempo. La lunghezza del segmento è la sequenza temporale <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Quando una sequenza temporale raggiunge la fine della propria durata, la riproduzione viene interrotta. Se la sequenza temporale dispone di sequenze temporali figlio, anche la loro riproduzione viene interrotta. Nel caso di un'animazione, la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> specifica il tempo impiegato dall'animazione per la transizione dal valore iniziale al valore finale. Una sequenza temporale è detta relativo *durata semplice*, per distinguere tra la durata di una singola iterazione e la lunghezza totale del tempo di riproduzione dell'animazione, incluse le ripetizioni. È possibile specificare una durata utilizzando un valore di tempo finito o i valori speciali <xref:System.Windows.Duration.Automatic%2A> o <xref:System.Windows.Duration.Forever%2A>. Durata di un'animazione deve restituire un <xref:System.Windows.Duration.TimeSpan%2A> valore, pertanto è possibile eseguire la transizione tra i valori.  
   
- Nell'esempio riportato di seguito viene illustrato un oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> con una proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di cinque secondi.  
+ Nell'esempio seguente un <xref:System.Windows.Media.Animation.DoubleAnimation> con un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di cinque secondi.  
   
+ [!code-xaml[animation_ovws_snippet#AnimationWith5SecondDurationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#animationwith5seconddurationinline)]  
   
+ Le sequenze temporali contenitore, ad esempio <xref:System.Windows.Media.Animation.Storyboard> e <xref:System.Windows.Media.Animation.ParallelTimeline>, hanno una durata predefinita di <xref:System.Windows.Duration.Automatic%2A>, ovvero terminano automaticamente al termine dell'esecuzione dell'ultimo figlio. Nell'esempio seguente un <xref:System.Windows.Media.Animation.Storyboard> cui <xref:System.Windows.Media.Animation.Timeline.Duration%2A> si risolve in cinque secondi, quanto tempo servirebbe per tutti i relativi elementi figlio <xref:System.Windows.Media.Animation.DoubleAnimation> oggetti da completare.  
   
- Le sequenze temporali del contenitore, ad esempio <xref:System.Windows.Media.Animation.Storyboard> e <xref:System.Windows.Media.Animation.ParallelTimeline>, hanno una durata predefinita di <xref:System.Windows.Duration.Automatic%2A>, che implica che tali sequenze temporali terminano automaticamente quando viene interrotta la riproduzione dell'ultima sequenza figlio.  Nell'esempio riportato di seguito viene illustrato un oggetto <xref:System.Windows.Media.Animation.Storyboard> la cui proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> restituisce cinque secondi, il periodo di tempo richiesto per il completamento di tutti gli oggetti <xref:System.Windows.Media.Animation.DoubleAnimation> figlio.  
+ [!code-xaml[animation_ovws_snippet#ContainerTimelineExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelineexampleinline)]  
   
+ Impostando il <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale contenitore per un <xref:System.Windows.Duration.TimeSpan%2A> valore, è possibile forzare di riprodurre superiori o inferiori a figlio <xref:System.Windows.Media.Animation.Timeline> degli oggetti. Se si imposta la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> su un valore che è minore della lunghezza dell'elemento figlio della sequenza temporale contenitore <xref:System.Windows.Media.Animation.Timeline> oggetti, l'elemento figlio <xref:System.Windows.Media.Animation.Timeline> oggetti interrompere l'esecuzione quando il contenitore della sequenza temporale. L'esempio seguente imposta il <xref:System.Windows.Media.Animation.Timeline.Duration%2A> del <xref:System.Windows.Media.Animation.Storyboard> degli esempi precedenti per tre secondi. Di conseguenza, il primo <xref:System.Windows.Media.Animation.DoubleAnimation> viene interrotto dopo tre secondi, quando dispone di animazione per 60 la larghezza del rettangolo di destinazione.  
   
-  
- L'impostazione della proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale contenitore su un valore <xref:System.Windows.Duration.TimeSpan%2A> consente di imporre una riproduzione più lunga o più breve rispetto a quella degli oggetti <xref:System.Windows.Media.Animation.Timeline> figlio.  Se si imposta <xref:System.Windows.Media.Animation.Timeline.Duration%2A> su un valore inferiore alla lunghezza degli oggetti <xref:System.Windows.Media.Animation.Timeline> figlio della sequenza temporale contenitore, la riproduzione degli oggetti <xref:System.Windows.Media.Animation.Timeline> figlio viene interrotta al termine della sequenza temporale contenitore.  Nell'esempio riportato di seguito viene impostata su tre secondi la proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> dell'oggetto <xref:System.Windows.Media.Animation.Storyboard> degli esempi precedenti.  Di conseguenza, l'avanzamento del primo oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> viene interrotto dopo tre secondi, quando è stata eseguita l'animazione della larghezza del rettangolo di destinazione per un valore pari a 60.  
-  
-  
+ [!code-xaml[animation_ovws_snippet#ContainerTimelineWithShorterDurationExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelinewithshorterdurationexampleinline)]  
   
 <a name="repeatinganimations"></a>   
-### Proprietà RepeatBehavior  
- La proprietà <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> di un oggetto <xref:System.Windows.Media.Animation.Timeline> determina il numero di ripetizioni della durata semplice di una sequenza temporale.  Utilizzando la proprietà <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, è possibile specificare il numero di volte in cui la sequenza temporale viene riprodotta \(proprietà <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> di iterazione\) oppure il periodo di tempo totale di esecuzione \(proprietà <xref:System.Windows.Media.Animation.RepeatBehavior.Duration%2A> di ripetizione\).  In entrambi i casi, l'animazione viene eseguita dall'inizio alla fine per il numero di volte necessario per completare il conteggio o la durata richiesta.  Per impostazione predefinita, le sequenze temporali presentano un conteggio di iterazioni pari a `1.0`, il che significa che vengono riprodotte una sola volta senza ripetizioni.  
+### <a name="the-repeatbehavior-property"></a>Proprietà RepeatBehavior  
+ Il <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> proprietà di un <xref:System.Windows.Media.Animation.Timeline> controlla quante volte si ripete la propria durata semplice. Utilizzo di <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> proprietà, è possibile specificare quante volte la riproduzione della sequenza temporale (un'iterazione <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A>) o la lunghezza totale del tempo deve essere riprodotto (una ripetizione <xref:System.Windows.Media.Animation.RepeatBehavior.Duration%2A>). In entrambi i casi l'animazione viene eseguita dall'inizio alla fine per il numero di volte necessario per completare il conteggio o la durata richiesti. Per impostazione predefinita, le sequenze temporali hanno un conteggio di iterazioni di `1.0`, vale a dire che vengono riprodotte una sola volta e non vengono ripetuti.  
   
- Nell'esempio riportato di seguito viene utilizzata la proprietà <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> per riprodurre due volte la durata semplice di un oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> specificando un conteggio di iterazioni.  
+ L'esempio seguente usa il <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> proprietà per rendere un <xref:System.Windows.Media.Animation.DoubleAnimation> riprodurre per due volte la propria durata semplice specificando un conteggio delle iterazioni.  
   
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehavior2xExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior2xexampleinline)]  
   
+ L'esempio seguente viene utilizzata la <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> proprietà per rendere il <xref:System.Windows.Media.Animation.DoubleAnimation> riprodurre per metà della durata normale.  
   
- Nell'esempio successivo viene utilizzata la proprietà <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> per riprodurre l'oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> per metà della relativa durata semplice.  
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehavior05xExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior05xexampleinline)]  
   
+ Se si imposta la <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> proprietà di un <xref:System.Windows.Media.Animation.Timeline> per <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, <xref:System.Windows.Media.Animation.Timeline> viene ripetuto finché non viene interrotto in modo interattivo o dal sistema di temporizzazione. L'esempio seguente usa il <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> proprietà per rendere il <xref:System.Windows.Media.Animation.DoubleAnimation> riprodurre in modo indefinito.  
   
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehaviorForeverExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehaviorforeverexampleinline)]  
   
- L'impostazione della proprietà <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> di un oggetto <xref:System.Windows.Media.Animation.Timeline> su <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A> determina la ripetizione di <xref:System.Windows.Media.Animation.Timeline> finché non viene interrotto in modo interattivo o da parte del sistema di temporizzazione.  Nell'esempio riportato di seguito viene utilizzata la proprietà <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> per riprodurre <xref:System.Windows.Media.Animation.DoubleAnimation> in modo illimitato.  
-  
-  
-  
- Per un altro esempio, vedere [Ripetere un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md).  
+ Per un altro esempio, vedere [ripetere un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md).  
   
 <a name="autoreverseproperty"></a>   
-### Proprietà AutoReverse  
- La proprietà <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> specifica se un oggetto <xref:System.Windows.Media.Animation.Timeline> verrà riprodotto in senso inverso alla fine di ogni iterazione in avanti.  Nell'esempio riportato di seguito la proprietà <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> di un oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> viene impostata su `true`; di conseguenza l'oggetto viene animato da zero a 100 e, successivamente, da 100 a zero.  La riproduzione ha una durata totale di 10 secondi.  
+### <a name="the-autoreverse-property"></a>Proprietà AutoReverse  
+ Il <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> proprietà specifica se un <xref:System.Windows.Media.Animation.Timeline> verrà riprodotto in senso inverso alla fine di ogni iterazione in avanti. Nell'esempio seguente viene impostato il <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> proprietà di un <xref:System.Windows.Media.Animation.DoubleAnimation> a `true`; di conseguenza, aggiunge un'animazione da zero a 100, quindi da 100 a zero. La riproduzione ha una durata totale di 10 secondi.  
   
+ [!code-xaml[animation_ovws_snippet#TBAutoReverseExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverseexampleinline)]  
   
+ Quando si utilizza un <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> valore per specificare il <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> di un <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> proprietà di tale <xref:System.Windows.Media.Animation.Timeline> è `true`, una sola ripetizione è costituita da uno iterazione in avanti seguita da uno con le versioni precedenti dell'iterazione.  L'esempio seguente imposta il <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> del <xref:System.Windows.Media.Animation.DoubleAnimation> dell'esempio precedente per un <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> di due. Di conseguenza, il <xref:System.Windows.Media.Animation.DoubleAnimation> viene riprodotto per 20 secondi: inoltrare per inoltrare i cinque secondi, con le versioni precedenti per cinque secondi, per 5 secondi e quindi in senso inverso per cinque secondi.  
   
- Quando si utilizza un valore <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> per specificare la proprietà <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> di un oggetto <xref:System.Windows.Media.Animation.Timeline> e la proprietà <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> di <xref:System.Windows.Media.Animation.Timeline> è `true`, una sola ripetizione è costituita da un'iterazione in avanti seguita da un'iterazione in senso inverso.  Nell'esempio riportato di seguito la proprietà <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> dell'oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> dell'esempio precedente viene impostata su una proprietà <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> pari a due.  Di conseguenza, l'oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> viene riprodotto per 20 secondi: in avanti per cinque secondi, in senso inverso per cinque secondi, nuovamente in avanti per cinque secondi, quindi in senso inverso per cinque secondi.  
+ [!code-xaml[animation_ovws_snippet#TBAutoReverseRepeatExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverserepeatexampleinline)]  
   
-  
-  
- Se una sequenza temporale contenitore ha oggetti <xref:System.Windows.Media.Animation.Timeline> figlio, questi vengono invertiti in corrispondenza dell'inversione della sequenza temporale contenitore.  Per ulteriori esempi, vedere [Specificare se una sequenza temporale viene invertita automaticamente](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md).  
+ Se dispone di una sequenza temporale contenitore figlio <xref:System.Windows.Media.Animation.Timeline> oggetti, essi invertire quando il contenitore della sequenza temporale. Per ulteriori esempi, vedere [specificare se una sequenza temporale invertito automaticamente](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md).  
   
 <a name="timelinebegin"></a>   
-## Proprietà BeginTime  
- La proprietà <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> consente di specificare il momento di avvio di una sequenza temporale.  Il momento di avvio di una sequenza temporale è relativo alla sequenza temporale padre.  Un momento di avvio pari a zero secondi indica che la sequenza temporale viene avviata all'avvio della sequenza padre. Qualsiasi altro valore crea un offset tra il momento di avvio della riproduzione della sequenza temporale padre e quello della sequenza temporale figlio.  Ad esempio, un momento di avvio di due secondi indica che la riproduzione della sequenza temporale viene avviata quando la sequenza temporale padre ha raggiunto un valore di due secondi.  Per impostazione predefinita, il momento di avvio di tutte le sequenze temporali è pari a zero secondi.  È inoltre possibile impostare il momento di avvio di una sequenza temporale su `null`, per impedire l'avvio della sequenza temporale.  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], specificare null tramite l'[Estensione del markup x:Null](../../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+## <a name="the-begintime-property"></a>Proprietà BeginTime  
+ Il <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> proprietà consente di specificare l'inizio di una sequenza temporale.  Il momento di avvio di una sequenza temporale è relativo alla sequenza temporale padre. Un momento di avvio pari a zero secondi indica che la sequenza temporale viene avviata all'avvio della sequenza padre. Qualsiasi altro valore crea un offset tra il momento di avvio della riproduzione della sequenza temporale padre e quello della sequenza temporale figlio. Un momento di avvio di due secondi indica ad esempio che la riproduzione della sequenza temporale viene avviata quando la sequenza temporale padre ha raggiunto un valore di due secondi. Per impostazione predefinita, il momento di avvio di tutte le sequenze temporali è pari a zero secondi. È inoltre possibile impostare una sequenza temporale l'ora di inizio `null`, che impedisce l'avvio la sequenza temporale. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], specificare null tramite il [estensione di Markup X:null](../../../../docs/framework/xaml-services/x-null-markup-extension.md).  
   
- Si noti che il momento di avvio non viene applicato a ogni ripetizione di una sequenza temporale a causa dell'impostazione di <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.  Se si crea un'animazione con una proprietà <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> pari a 10 secondi e un oggetto <xref:System.Windows.Media.Animation.RepeatBehavior> di <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, si ha un ritardo di 10 secondi prima della prima riproduzione dell'animazione, ma non a ogni successiva ripetizione.  Tuttavia, se la sequenza temporale padre dell'animazione venisse riavviata o ripetuta, verrebbe applicato il ritardo di 10 secondi.  
+ Si noti che l'ora di inizio non è applicato ogni volta che si ripete una sequenza temporale perché il relativo <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> impostazione. Se si crea un'animazione con un <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> di 10 secondi e un <xref:System.Windows.Media.Animation.RepeatBehavior> di <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, non vi sarà un ritardo di 10 secondi prima che l'animazione riprodotto per la prima volta, ma non a ogni ripetizione successivi. Se la sequenza temporale padre dell'animazione tuttavia venisse riavviata o ripetuta, verrebbe applicato il ritardo di 10 secondi.  
   
- La proprietà <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> è utile per scaglionare le sequenze temporali.  Nell'esempio riportato di seguito viene creato un oggetto <xref:System.Windows.Media.Animation.Storyboard> con due oggetti <xref:System.Windows.Media.Animation.DoubleAnimation> figlio.  La proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> della prima animazione è pari a cinque secondi, mentre la proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> della seconda è pari a tre secondi.  Nell'esempio la proprietà <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> del secondo oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> viene impostata su cinque secondi, per consentire l'avvio della riproduzione alla fine di quella del primo oggetto <xref:System.Windows.Media.Animation.DoubleAnimation>.  
+ Il <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> proprietà è utile per scaglionare le sequenze temporali. Nell'esempio seguente viene creato un <xref:System.Windows.Media.Animation.Storyboard> che ha due figlio <xref:System.Windows.Media.Animation.DoubleAnimation> oggetti. La prima animazione è un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di cinque secondi, mentre la seconda è una <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di 3 secondi. Nell'esempio viene impostata la <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> del secondo <xref:System.Windows.Media.Animation.DoubleAnimation> su 5 secondi, in modo che non viene avviata la riproduzione dopo il primo <xref:System.Windows.Media.Animation.DoubleAnimation> termina.  
   
-  
+ [!code-xaml[animation_ovws_snippet#TBBeginTimeExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbbegintimeexampleinline)]  
   
 <a name="fillbehaviorproperty"></a>   
-## Proprietà FillBehavior  
- Quando un oggetto <xref:System.Windows.Media.Animation.Timeline> raggiunge la fine della durata attiva totale, la proprietà <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> specifica se tale oggetto viene interrotto o se mantiene l'ultimo valore.  Un'animazione con una proprietà <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> pari a <xref:System.Windows.Media.Animation.FillBehavior> mantiene il valore di output, ovvero la proprietà animata conserva l'ultimo valore dell'animazione.  Con un valore pari a <xref:System.Windows.Media.Animation.FillBehavior> viene interrotto l'effetto dell'animazione sulla proprietà di destinazione al termine della riproduzione.  
+## <a name="the-fillbehavior-property"></a>Proprietà FillBehavior  
+ Quando un <xref:System.Windows.Media.Animation.Timeline> raggiunge la fine della durata totale attiva, la <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> proprietà consente di specificare se si arresta o mantiene l'ultimo valore. Un'animazione con un <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> di <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd> "contiene" il valore di output: proprietà da animare conserva l'ultimo valore dell'animazione. Il valore <xref:System.Windows.Media.Animation.FillBehavior.Stop> che provoca l'arresto di animazione effetto sulla proprietà di destinazione dopo la scadenza.  
   
- Nell'esempio riportato di seguito viene creato un oggetto <xref:System.Windows.Media.Animation.Storyboard> con due oggetti <xref:System.Windows.Media.Animation.DoubleAnimation> figlio.  Entrambi gli oggetti <xref:System.Windows.Media.Animation.DoubleAnimation> animano la proprietà <xref:System.Windows.FrameworkElement.Width%2A> di un oggetto <xref:System.Windows.Shapes.Rectangle> da 0 a 100.  Gli elementi <xref:System.Windows.Shapes.Rectangle> hanno valori <xref:System.Windows.FrameworkElement.Width%2A> non animati pari a 500 [pixel indipendenti dal dispositivo](GTMT).  
+ Nell'esempio seguente viene creato un <xref:System.Windows.Media.Animation.Storyboard> che ha due figlio <xref:System.Windows.Media.Animation.DoubleAnimation> oggetti. Entrambi <xref:System.Windows.Media.Animation.DoubleAnimation> animano oggetti di <xref:System.Windows.FrameworkElement.Width%2A> di un <xref:System.Windows.Shapes.Rectangle> da 0 a 100. Il <xref:System.Windows.Shapes.Rectangle> elementi hanno non animati <xref:System.Windows.FrameworkElement.Width%2A> valori pari a 500 [device independent pixel].  
   
--   La proprietà <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> del primo oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> viene impostata su <xref:System.Windows.Media.Animation.FillBehavior>, ovvero sul valore predefinito.  Di conseguenza, la larghezza del rettangolo mantiene il valore di 100 al termine della riproduzione di <xref:System.Windows.Media.Animation.DoubleAnimation>.  
+-   Il <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> proprietà del primo <xref:System.Windows.Media.Animation.DoubleAnimation> è impostato su <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, il valore predefinito. Di conseguenza, la larghezza del rettangolo rimane su 100 dopo il <xref:System.Windows.Media.Animation.DoubleAnimation> termina.  
   
--   La proprietà <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> del secondo oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> viene impostata su <xref:System.Windows.Media.Animation.FillBehavior>.  Di conseguenza, la proprietà <xref:System.Windows.FrameworkElement.Width%2A> del secondo oggetto <xref:System.Windows.Shapes.Rectangle> ritorna a 500 al termine della riproduzione di <xref:System.Windows.Media.Animation.DoubleAnimation>.  
+-   Il <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> la proprietà del secondo <xref:System.Windows.Media.Animation.DoubleAnimation> è impostato su <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Di conseguenza, il <xref:System.Windows.FrameworkElement.Width%2A> del secondo <xref:System.Windows.Shapes.Rectangle> ritorna a 500 dopo il <xref:System.Windows.Media.Animation.DoubleAnimation> termina.  
   
-  
+ [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
 <a name="speedproperties"></a>   
-## Proprietà che controllano la velocità di una sequenza temporale  
- La classe <xref:System.Windows.Media.Animation.Timeline> fornisce tre proprietà per la specifica della velocità:  
+## <a name="properties-that-control-the-speed-of-a-timeline"></a>Proprietà che controllano la velocità di una sequenza temporale  
+ La <xref:System.Windows.Media.Animation.Timeline> classe fornisce tre proprietà per specificare la velocità:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>: specifica la velocità, relativa alla sequenza padre, alla quale avanza il tempo per un oggetto <xref:System.Windows.Media.Animation.Timeline>.  I valori superiori a uno aumentano la velocità di <xref:System.Windows.Media.Animation.Timeline> e dei relativi oggetti <xref:System.Windows.Media.Animation.Timeline> figlio, mentre i valori compresi tra zero e uno la rallentano.  Un valore pari a uno indica che <xref:System.Windows.Media.Animation.Timeline> avanza alla stessa velocità della sequenza padre.  L'impostazione di <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> per una sequenza temporale contenitore ha effetto anche su tutti i relativi oggetti <xref:System.Windows.Media.Animation.Timeline> figlio.  
+-   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>: Specifica la velocità, rispetto al padre, l'avanzamento del tempo un <xref:System.Windows.Media.Animation.Timeline>. I valori maggiori di uno di aumentare la velocità del <xref:System.Windows.Media.Animation.Timeline> e del relativo figlio <xref:System.Windows.Media.Animation.Timeline> oggetti, i valori compresi tra zero e uno subire rallentamenti. Il valore 1 indica che <xref:System.Windows.Media.Animation.Timeline> avanza alla stessa velocità del relativo oggetto padre. Il <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> di una sequenza temporale contenitore avrà effetto su tutti del relativo figlio <xref:System.Windows.Media.Animation.Timeline> anche gli oggetti.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>: specifica la percentuale di <xref:System.Windows.Media.Animation.Timeline.Duration%2A> impiegata da una sequenza temporale per l'accelerazione.  Per un esempio, vedere [Accelerare o decelerare un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>-Specifica la percentuale del <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale trascorsa. Per un esempio, vedere [procedura: velocizzare o rallentare un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>: specifica la percentuale di <xref:System.Windows.Media.Animation.Timeline.Duration%2A> impiegata da una sequenza temporale per la decelerazione.  Per un esempio, vedere [Accelerare o decelerare un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>-Specifica la percentuale di <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale trascorsa. Per un esempio, vedere [procedura: velocizzare o rallentare un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
-## Vedere anche  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Cenni preliminari sull'animazione e sul sistema di temporizzazione](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)   
- [Cenni preliminari sugli eventi di tempo](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)   
- [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Cenni preliminari sull'animazione e sul sistema di temporizzazione](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [Cenni preliminari sugli eventi di tempo](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
+ [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
  [Esempio di comportamento temporale di un'animazione](http://go.microsoft.com/fwlink/?LinkID=159970)

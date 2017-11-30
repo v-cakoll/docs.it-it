@@ -1,63 +1,71 @@
 ---
-title: "&lt;caches&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;memorizza nella cache&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f0c46532cb7716f4dc066f0e96c14534d7fa0b42
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;caches&gt;
-Registra le cache utilizzate per i token di sessione e token di tipo replay.  
+# <a name="ltcachesgt"></a>&lt;memorizza nella cache&gt;
+Registra le cache usate per i token di sessione e il rilevamento riproduzione token.  
   
-## Sintassi  
+ \<System. IdentityModel >  
+\<identityConfiguration >  
+\<memorizza nella cache >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <caches>  
-    </caches>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <caches>  
+    </caches>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
- Nessuno  
+### <a name="attributes"></a>Attributi  
+ Nessuna  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<sessionSecurityTokenCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|Registra una cache per i token di sessione con un servizio o un insieme di gestore del token di protezione.|  
-|[\<tokenReplayCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|Registra una cache di riesecuzione del token con un servizio o un insieme di gestore del token di protezione.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per un insieme di protezione gestori dei token.|  
+|-------------|-----------------|  
+|[\<sessionSecurityTokenCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|Registra una cache per i token di sessione con un servizio o una raccolta di gestore del token di sicurezza.|  
+|[\<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|Registra una cache di riproduzione token con un servizio o una raccolta di gestore del token di sicurezza.|  
   
-## Note  
- A `<caches>` elemento può essere specificata a livello di servizio sotto il `<identityConfiguration>` elemento o il livello di insieme del gestore del token di protezione nel `<securityTokenHandlerConfiguration>` elemento.  Le impostazioni di un insieme di gestore del token sostituiscono quelli specificati dal servizio.  
+### <a name="parent-elements"></a>Elementi padre  
   
- Il `<caches>` elemento è rappresentato dal <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> classe.  Le cache di configurazione sono rappresentate dal <xref:System.IdentityModel.Configuration.IdentityModelCaches> classe.  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di sicurezza gestori di token.|  
   
-## Esempio  
- Il codice XML riportato di seguito viene illustrata la configurazione di una cache personalizzata per contenere i token di protezione di sessione \(<xref:System.IdentityModel.Tokens.SessionSecurityToken>\).  Da cui proviene la configurazione di `ClaimsAwareWebFarm` campione.  
+## <a name="remarks"></a>Note  
+ A `<caches>` elemento può essere specificato a livello di servizio sotto il `<identityConfiguration>` elemento o a livello di raccolta gestore dei token di sicurezza nel `<securityTokenHandlerConfiguration>` elemento. Le impostazioni in una raccolta di gestore del token sostituiscono quelle specificate nel servizio.  
   
-```  
+ Il `<caches>` elemento è rappresentato dalla <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> classe. Le cache configurate sono rappresentate dalla <xref:System.IdentityModel.Configuration.IdentityModelCaches> classe.  
+  
+## <a name="example"></a>Esempio  
+ Il codice XML seguente viene illustrata la configurazione di una cache personalizzata per la sessione come token di sicurezza (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). Da cui proviene la configurazione di `ClaimsAwareWebFarm` esempio.  
+  
+```xml  
 <caches>  
   <sessionSecurityTokenCache type="CacheLibrary.SharedSessionSecurityTokenCache, CacheLibrary">  
     <!--cacheServiceAddress points to the centralized session security token cache service running in the web farm.-->  

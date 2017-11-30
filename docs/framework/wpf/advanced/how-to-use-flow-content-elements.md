@@ -1,52 +1,55 @@
 ---
-title: "Procedura: utilizzare elementi di contenuto dinamico | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "documenti, elementi di contenuto del flusso"
-  - "elementi di contenuto del flusso"
+title: 'Procedura: Usare elementi di contenuto dinamico'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flow content elements [WPF]
+- documents [WPF], flow content elements
 ms.assetid: 70fa11cd-5fa7-4872-a1cc-04d80f1132be
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1350a380e97631ac290e57de64fec696535fecc
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: utilizzare elementi di contenuto dinamico
-Nell'esempio riportato di seguito viene illustrato l'utilizzo dichiarativo di vari elementi di contenuto dinamico e degli attributi associati.  Tra gli elementi e gli attributi illustrati sono inclusi:  
+# <a name="how-to-use-flow-content-elements"></a>Procedura: Usare elementi di contenuto dinamico
+L'esempio seguente illustra l'uso dichiarativo di vari elementi di contenuto dinamico degli attributi associati.  Gli elementi e gli attributi illustrati includono:  
   
--   Elemento <xref:System.Windows.Documents.Bold>  
+-   elemento <xref:System.Windows.Documents.Bold>  
   
 -   Attributo <xref:System.Windows.Documents.Block.BreakPageBefore%2A>  
   
 -   Attributo <xref:System.Windows.Documents.TextElement.FontSize%2A>  
   
--   Elemento <xref:System.Windows.Documents.Italic>  
+-   elemento <xref:System.Windows.Documents.Italic>  
   
--   Elemento <xref:System.Windows.Documents.LineBreak>  
+-   elemento <xref:System.Windows.Documents.LineBreak>  
   
--   Elemento <xref:System.Windows.Documents.List>  
+-   elemento <xref:System.Windows.Documents.List>  
   
--   Elemento <xref:System.Windows.Documents.ListItem>  
+-   elemento <xref:System.Windows.Documents.ListItem>  
   
--   Elemento <xref:System.Windows.Documents.Paragraph>  
+-   elemento <xref:System.Windows.Documents.Paragraph>  
   
--   Elemento <xref:System.Windows.Documents.Run>  
+-   elemento <xref:System.Windows.Documents.Run>  
   
--   Elemento <xref:System.Windows.Documents.Section>  
+-   elemento <xref:System.Windows.Documents.Section>  
   
--   Elemento <xref:System.Windows.Documents.Span>  
+-   elemento <xref:System.Windows.Documents.Span>  
   
--   Attributo <xref:System.Windows.Documents.Typography.Variants%2A> \(apice e pedice\)  
+-   <xref:System.Windows.Documents.Typography.Variants%2A>attributo (apice e pedice)  
   
--   Elemento <xref:System.Windows.Documents.Underline>  
+-   elemento <xref:System.Windows.Documents.Underline>  
   
-## Esempio  
- [!code-xml[FlowDocInlineSnippets#_InlineElementsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]
+## <a name="example"></a>Esempio  
+ [!code-xaml[FlowDocInlineSnippets#_InlineElementsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]

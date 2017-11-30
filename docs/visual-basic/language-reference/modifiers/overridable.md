@@ -1,70 +1,69 @@
 ---
-title: "Overridable (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Overridable"
-  - "vb.Overridable"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "elements, concrete"
-  - "properties [Visual Basic], redefining"
-  - "overriding, Overridable keyword"
-  - "elements, virtual"
-  - "virtual elements"
-  - "procedures, overriding"
-  - "concrete elements"
-  - "procedures, redefining"
-  - "Overridable keyword"
-  - "properties [Visual Basic], overriding"
+title: Overridable (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Overridable
+- vb.Overridable
+helpviewer_keywords:
+- elements [Visual Basic], concrete
+- properties [Visual Basic], redefining
+- overriding, Overridable keyword
+- elements [Visual Basic], virtual
+- virtual [elements VB]
+- procedures [Visual Basic], overriding
+- concrete [elements VB]
+- procedures [Visual Basic], redefining
+- Overridable keyword [Visual Basic]
+- properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Overridable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Specifica che a una routine o a una proprietà omonima di una classe derivata è consentito eseguire l'override di una routine o una proprietà definita.  
+# <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
+Specifica che una proprietà o routine può essere sottoposto a override da una stesso nome di proprietà o routine in una classe derivata.  
   
-## Note  
- `Overridable` il modificatore consente una proprietà o un metodo in una classe di cui eseguire l'override in una classe derivata.  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) il modificatore impedisce una proprietà o un metodo venga sottoposto a override in una classe derivata.  Per ulteriori informazioni, vedere [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+## <a name="remarks"></a>Note  
+ Il `Overridable` modificatore consente a una proprietà o metodo in una classe per eseguire l'override in una classe derivata. Il [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modificatore impedisce una proprietà o metodo di override in una classe derivata.  Per altre informazioni, vedere [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- se `Overridable` o  `NotOverridable` il modificatore non viene specificato, per impostazione predefinita dipende dal fatto che la proprietà o il metodo esegue l'override di una proprietà o un metodo di classe base.  Se la proprietà o il metodo esegue l'override di una proprietà o un metodo di classe base, l'impostazione predefinita è `Overridable`; in caso contrario, viene  `NotOverridable`.  
+ Se il `Overridable` o `NotOverridable` modificatore non è specificato, l'impostazione predefinita varia a seconda se la proprietà o il metodo esegue l'override di metodo o una proprietà di classe di base. Se la proprietà o il metodo esegue l'override di una proprietà della classe base o un metodo, l'impostazione predefinita è `Overridable`; in caso contrario, è `NotOverridable`.  
   
- È possibile eseguire lo shadow e l'override per ridefinire un elemento ereditato, ma tra i due approcci esistono differenze notevoli.  Per ulteriori informazioni, vedere [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ È possibile nascondere o sottoporre a override per ridefinire un elemento ereditato, ma esistono differenze significative tra i due approcci. Per ulteriori informazioni, vedere [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- Un elemento sottoponibile a override è talvolta definito *virtuale*.  Se può essere sottoposto a override, ma non è necessario che l'override venga eseguito, talvolta viene definito anche elemento *concreto*.  
+ Un elemento che può essere sottoposto a override è talvolta detta un *virtuale* elemento. Se è possibile eseguire l'override, ma non deve essere, viene chiamato a volte un *concreta* elemento.  
   
- È possibile utilizzare `Overridable` solo in un'istruzione per la dichiarazione di proprietà o routine.  
+ È possibile usare `Overridable` solo in un'istruzione per la dichiarazione di proprietà o routine.  
   
-## modificatori combinati  
- Non è possibile specificare `Overridable` o  `NotOverridable` per una proprietà  `Private` metodo.  
+## <a name="combined-modifiers"></a>Modificatori combinati  
+ Non è possibile specificare `Overridable` o `NotOverridable` per un `Private` metodo.  
   
- Non è possibile specificare `Overridable` insieme a `MustOverride`, `NotOverridable` o `Shared` nella stessa dichiarazione.  
+ Non è possibile specificare `Overridable` con `MustOverride`, `NotOverridable`, o `Shared` nella stessa dichiarazione.  
   
  Poiché un elemento che esegue l'override può essere implicitamente sottoposto a override, non è possibile combinare `Overridable` e `Overrides`.  
   
-## Utilizzo  
- Il modificatore `Overridable` può essere utilizzato nei seguenti contesti:  
+## <a name="usage"></a>Utilizzo  
+ Il modificatore `Overridable` può essere usato nei contesti seguenti:  
   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vedere anche  
- [Modifiers](../../../visual-basic/language-reference/modifiers/index.md)   
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modificatori](../../../visual-basic/language-reference/modifiers/index.md)  
+ [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)  
  [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

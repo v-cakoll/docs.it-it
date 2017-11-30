@@ -1,24 +1,28 @@
 ---
-title: "Classe di base NativeActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Classe di base NativeActivity
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 22c9557c53c15fef3ca8dee4a0f665d333c5ffe4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Classe di base NativeActivity
-<xref:System.Activities.NativeActivity> è una classe astratta con un costruttore protetto.Come l'oggetto <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> viene utilizzato per la scrittura del comportamento imperativo implementando un metodo <xref:System.Activities.NativeActivity.Execute%2A>.A differenza dell'oggetto <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> dispone di accesso a tutte le funzionalità esposte dell'esecuzione del flusso di lavoro tramite l'oggetto <xref:System.Activities.NativeActivityContext> passato al metodo <xref:System.Activities.NativeActivity.Execute%2A>.  
+# <a name="nativeactivity-base-class"></a>Classe di base NativeActivity
+<xref:System.Activities.NativeActivity> è una classe astratta con un costruttore protetto. Come l'oggetto <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> viene usato per la scrittura del comportamento imperativo implementando un metodo <xref:System.Activities.NativeActivity.Execute%2A>. A differenza dell'oggetto <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> dispone di accesso a tutte le funzionalità esposte dell'esecuzione del flusso di lavoro tramite l'oggetto <xref:System.Activities.NativeActivityContext> passato al metodo <xref:System.Activities.NativeActivity.Execute%2A>.  
   
-## Utilizzo di NativeActivityContext  
- L'accesso a funzionalità dell'esecuzione del flusso di lavoro può essere eseguito dall'interno del metodo <xref:System.Activities.NativeActivity.Execute%2A> tramite i membri del parametro `context`, di tipo <xref:System.Activities.NativeActivityContext>.Tra le funzionalità disponibili tramite l'oggetto <xref:System.Activities.NativeActivityContext> sono incluse le seguenti:  
+## <a name="using-nativeactivitycontext"></a>Uso di NativeActivityContext  
+ L'accesso a funzionalità dell'esecuzione del flusso di lavoro può essere eseguito dall'interno del metodo <xref:System.Activities.NativeActivity.Execute%2A> tramite i membri del parametro `context`, di tipo <xref:System.Activities.NativeActivityContext>. Tra le funzionalità disponibili tramite l'oggetto <xref:System.Activities.NativeActivityContext> sono incluse le seguenti:  
   
 -   Recupero e impostazione di argomenti e variabili.  
   
@@ -36,15 +40,15 @@ caps.handback.revision: 8
   
 -   Pianificazione di azioni e funzioni di attività tramite <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> e <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.  
   
-#### Per creare un'attività personalizzata che eredita da NativeActivity  
+#### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Per creare un'attività personalizzata che eredita da NativeActivity  
   
 1.  Aprire [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Scegliere **File**, **Nuovo**, quindi **Progetto**.Selezionare **Workflow 4.0** sotto **Visual C\#** nella finestra **Tipi progetto** e scegliere il nodo **v2010**.Selezionare **Libreria attività**  nella finestra **Modelli**.Assegnare al nuovo progetto il nome HelloActivity.  
+2.  Selezionare **File**, **nuova**e quindi **progetto**. Selezionare **Workflow 4.0** in **Visual c#** nel **tipi di progetto** window e selezionare il **v2010** nodo. Selezionare **libreria attività** nel **modelli** finestra. Assegnare al nuovo progetto il nome HelloActivity.  
   
-3.  Fare clic con il pulsante destro del mouse su Activity1.xaml nel progetto HelloActivity e selezionare **Elimina**.  
+3.  Fare doppio clic su Activity1 nel progetto HelloActivity e selezionare **eliminare**.  
   
-4.  Fare clic con il pulsante destro del mouse sul progetto HelloActivity e selezionare **Aggiungi**, quindi **Classe**.Assegnare alla nuova classe il nome HelloActivity.cs.  
+4.  Fare clic sul progetto HelloActivity e selezionare **Aggiungi**e quindi **classe**. Assegnare alla nuova classe il nome HelloActivity.cs.  
   
 5.  Nel file HelloActivity.cs aggiungere le seguenti istruzioni `using`.  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 8
     using System.Activities.Statements;  
     ```  
   
-6.  Assicurarsi che la nuova classe erediti da <xref:System.Activities.NativeActivity> aggiungendo una classe di base alla dichiarazione della classe.  
+6.  Assicurarsi che la nuova classe erediti dall'oggetto <xref:System.Activities.NativeActivity> aggiungendo una classe base alla dichiarazione di classe.  
   
     ```csharp  
     class HelloActivity : NativeActivity  
@@ -68,9 +72,9 @@ caps.handback.revision: 8
     }  
     ```  
   
-8.  Eseguire l'override del metodo <xref:System.Activities.NativeActivity.CacheMetadata%2A> e chiamare il metodo Add appropriato per inviare al runtime del flusso di lavoro le informazioni sulle variabili, gli argomenti, gli elementi figlio e i delegati dell'attività personalizzata.Per ulteriori informazioni, vedere la classe <xref:System.Activities.NativeActivityMetadata>.  
+8.  Eseguire l'override del metodo <xref:System.Activities.NativeActivity.CacheMetadata%2A> e chiamare il metodo Add appropriato per inviare al runtime del flusso di lavoro le informazioni sulle variabili, gli argomenti, gli elementi figlio e i delegati dell'attività personalizzata. Per altre informazioni, vedere la classe <xref:System.Activities.NativeActivityMetadata>.  
   
-9. Utilizzare l'oggetto <xref:System.Activities.NativeActivityContext> per pianificare un segnalibro.Per informazioni dettagliate sulla creazione, pianificazione e ripresa di un segnalibro, vedere <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.  
+9. Usare l'oggetto <xref:System.Activities.NativeActivityContext> per pianificare un segnalibro. Per informazioni dettagliate sulla creazione, pianificazione e ripresa di un segnalibro, vedere <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.  
   
     ```  
     protected override void Execute(NativeActivityContext context)  
@@ -79,5 +83,4 @@ caps.handback.revision: 8
             context.CreateBookmark(BookmarkName.Get(context),   
                 new BookmarkCallback(OnResumeBookmark));  
         }  
-  
     ```

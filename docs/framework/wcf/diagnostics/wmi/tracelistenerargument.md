@@ -1,25 +1,28 @@
 ---
-title: "TraceListenerArgument | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TraceListenerArgument
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b6c84090-bf96-43f4-9fb0-1ce8fd9c8efe
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8b12a3f95110b4767777ec0825057996fdd333b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# TraceListenerArgument
+# <a name="tracelistenerargument"></a>TraceListenerArgument
 TraceListenerArgument  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class TraceListenerArgument  
@@ -29,28 +32,28 @@ class TraceListenerArgument
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe TraceListenerArgument non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe TraceListenerArgument dispone delle proprietà seguenti:  
   
-### Nome  
+### <a name="name"></a>Nome  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Nome dell'argomento.  
   
-### Valore  
+### <a name="value"></a>Valore  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Valore dell'argomento.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|
